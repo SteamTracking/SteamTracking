@@ -1807,7 +1807,7 @@
         var e = document.createElement("a");
         e.href = i.BASE_URL;
         var a = e.pathname;
-        return a.endsWith("/") || (a += "/"), (a += "applications/dpc");
+        return (a.endsWith("/") || (a += "/"), (a += "applications/dpc"));
       }
       var m = t(9526),
         g = t(565),
@@ -1884,8 +1884,8 @@
         }
       }
       var h, y, k, b, v, E, f, C, N, S, B, T, P, L, I, R, G;
-      !(function (e) {
-        (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
+      (!(function (e) {
+        ((e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
           (e[(e.k_EConnectivityTestResult_Connected = 1)] =
             "k_EConnectivityTestResult_Connected"),
@@ -1898,10 +1898,10 @@
           (e[(e.k_EConnectivityTestResult_WifiDisabled = 5)] =
             "k_EConnectivityTestResult_WifiDisabled"),
           (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
-            "k_EConnectivityTestResult_NoLAN");
+            "k_EConnectivityTestResult_NoLAN"));
       })(h || (h = {})),
         (function (e) {
-          (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
+          ((e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
             "k_ENetFakeLocalSystemState_Normal"),
             (e[(e.k_ENetFakeLocalSystemState_NoLAN = 1)] =
               "k_ENetFakeLocalSystemState_NoLAN"),
@@ -1912,10 +1912,10 @@
             (e[(e.k_ENetFakeLocalSystemState_NoInternet = 4)] =
               "k_ENetFakeLocalSystemState_NoInternet"),
             (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
-              "k_ENetFakeLocalSystemState_NoSteam");
+              "k_ENetFakeLocalSystemState_NoSteam"));
         })(y || (y = {})),
         (function (e) {
-          (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
+          ((e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
             "k_ESuspendResumeProgressState_Invalid"),
             (e[(e.k_ESuspendResumeProgressState_Complete = 1)] =
               "k_ESuspendResumeProgressState_Complete"),
@@ -1926,44 +1926,44 @@
             (e[(e.k_ESuspendResumeProgressState_WaitingForApp = 4)] =
               "k_ESuspendResumeProgressState_WaitingForApp"),
             (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
-              "k_ESuspendResumeProgressState_Working");
+              "k_ESuspendResumeProgressState_Working"));
         })(k || (k = {})),
         (function (e) {
-          (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
+          ((e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
             "k_EFloatingGamepadTextInputModeModeSingleLine"),
             (e[(e.k_EFloatingGamepadTextInputModeModeMultipleLines = 1)] =
               "k_EFloatingGamepadTextInputModeModeMultipleLines"),
             (e[(e.k_EFloatingGamepadTextInputModeModeEmail = 2)] =
               "k_EFloatingGamepadTextInputModeModeEmail"),
             (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
-              "k_EFloatingGamepadTextInputModeModeNumeric");
+              "k_EFloatingGamepadTextInputModeModeNumeric"));
         })(b || (b = {})),
         (function (e) {
-          (e[(e.k_EAppUpdateContentType_Content = 0)] =
+          ((e[(e.k_EAppUpdateContentType_Content = 0)] =
             "k_EAppUpdateContentType_Content"),
             (e[(e.k_EAppUpdateContentType_Workshop = 1)] =
               "k_EAppUpdateContentType_Workshop"),
             (e[(e.k_EAppUpdateContentType_Shader = 2)] =
               "k_EAppUpdateContentType_Shader"),
             (e[(e.k_EAppUpdateContentType_Max = 3)] =
-              "k_EAppUpdateContentType_Max");
+              "k_EAppUpdateContentType_Max"));
         })(v || (v = {})),
         (function (e) {
-          (e[(e.k_EOverlayToStoreFlag_None = 0)] =
+          ((e[(e.k_EOverlayToStoreFlag_None = 0)] =
             "k_EOverlayToStoreFlag_None"),
             (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
               "k_EOverlayToStoreFlag_AddToCart"),
             (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
-              "k_EOverlayToStoreFlag_AddToCartAndShow");
+              "k_EOverlayToStoreFlag_AddToCartAndShow"));
         })(E || (E = {})),
         (function (e) {
-          (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
+          ((e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
-              "k_EActivateGameOverlayToWebPageMode_Modal");
+              "k_EActivateGameOverlayToWebPageMode_Modal"));
         })(f || (f = {})),
         (function (e) {
-          (e[(e.k_EGamingDeviceType_Unknown = 0)] =
+          ((e[(e.k_EGamingDeviceType_Unknown = 0)] =
             "k_EGamingDeviceType_Unknown"),
             (e[(e.k_EGamingDeviceType_StandardPC = 1)] =
               "k_EGamingDeviceType_StandardPC"),
@@ -1977,16 +1977,16 @@
             (e[(e.k_EGamingDeviceType_Phone = 528)] =
               "k_EGamingDeviceType_Phone"),
             (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
-              "k_EGamingDeviceType_SteamDeck");
+              "k_EGamingDeviceType_SteamDeck"));
         })(C || (C = {})),
         (function (e) {
-          (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
+          ((e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
             (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
               "k_ELoginUIStyleNewWithoutQRCode"),
-            (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
+            (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew"));
         })(N || (N = {})),
         (function (e) {
-          (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
+          ((e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
             "k_ECommunityProfileItemProperty_ImageSmall"),
             (e[(e.k_ECommunityProfileItemProperty_ImageLarge = 1)] =
               "k_ECommunityProfileItemProperty_ImageLarge"),
@@ -2009,25 +2009,25 @@
             (e[(e.k_ECommunityProfileItemProperty_MovieWebMSmall = 10)] =
               "k_ECommunityProfileItemProperty_MovieWebMSmall"),
             (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
-              "k_ECommunityProfileItemProperty_MovieMP4Small");
+              "k_ECommunityProfileItemProperty_MovieMP4Small"));
         })(S || (S = {})),
         (function (e) {
-          (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
+          ((e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
             "k_ERaiseGameWindowResult_NotRunning"),
             (e[(e.k_ERaiseGameWindowResult_Success = 2)] =
               "k_ERaiseGameWindowResult_Success"),
             (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
-              "k_ERaiseGameWindowResult_Failure");
+              "k_ERaiseGameWindowResult_Failure"));
         })(B || (B = {})),
         (function (e) {
-          (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
+          ((e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
             (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
             (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
             (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
-            (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
+            (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight"));
         })(T || (T = {})),
         (function (e) {
-          (e[(e.k_EAppReleaseState_Unknown = 0)] =
+          ((e[(e.k_EAppReleaseState_Unknown = 0)] =
             "k_EAppReleaseState_Unknown"),
             (e[(e.k_EAppReleaseState_Unavailable = 1)] =
               "k_EAppReleaseState_Unavailable"),
@@ -2038,16 +2038,16 @@
             (e[(e.k_EAppReleaseState_Released = 4)] =
               "k_EAppReleaseState_Released"),
             (e[(e.k_EAppReleaseState_Disabled = 5)] =
-              "k_EAppReleaseState_Disabled");
+              "k_EAppReleaseState_Disabled"));
         })(P || (P = {})),
         (function (e) {
-          (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
+          ((e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
             (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
-            (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
+            (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P"));
         })(L || (L = {})),
         (function (e) {
-          (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
+          ((e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
             (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
             (e[(e.k_EInstallMgrStateWaitLicense = 2)] =
               "k_EInstallMgrStateWaitLicense"),
@@ -2077,26 +2077,26 @@
               "k_EInstallMgrStateComplete"),
             (e[(e.k_EInstallMgrStateFailed = 15)] = "k_EInstallMgrStateFailed"),
             (e[(e.k_EInstallMgrStateCanceled = 16)] =
-              "k_EInstallMgrStateCanceled");
+              "k_EInstallMgrStateCanceled"));
         })(I || (I = {})),
         (function (e) {
-          (e[(e.k_EWindowBringToFrontInvalid = 0)] =
+          ((e[(e.k_EWindowBringToFrontInvalid = 0)] =
             "k_EWindowBringToFrontInvalid"),
             (e[(e.k_EWindowBringToFrontAndForceOS = 1)] =
               "k_EWindowBringToFrontAndForceOS"),
             (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
-              "k_EWindowBringToFrontWithoutForcingOS");
+              "k_EWindowBringToFrontWithoutForcingOS"));
         })(R || (R = {})),
         (function (e) {
-          (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
+          ((e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
             (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
-            (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-        })(G || (G = {}));
+            (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina"));
+        })(G || (G = {})));
       !(function () {
         function e() {
           this.m_rgHandles = [];
         }
-        (e.prototype.Add = function (e) {
+        ((e.prototype.Add = function (e) {
           e && this.m_rgHandles.push(e);
         }),
           (e.prototype.Unregister = function () {
@@ -2106,20 +2106,20 @@
               var r = t[a];
               r && r.unregister();
             }
-          });
+          }));
       })();
       function D() {
         return !!window.document;
       }
       var A;
       function M() {
-        if (!D()) return A || (A = w()), A;
+        if (!D()) return (A || (A = w()), A);
         var e = (function (e) {
           if (!D() || !window.document.cookie) return null;
           var a = document.cookie.match("(^|; )" + e + "=([^;]*)");
           return a && a[2] ? decodeURIComponent(a[2]) : null;
         })("sessionid");
-        return e || (e = w()), e;
+        return (e || (e = w()), e);
       }
       function w() {
         var e = (function () {
@@ -2138,8 +2138,8 @@
               var o = "";
               if (void 0 !== t && t) {
                 var n = new Date();
-                n.setTime(n.getTime() + 864e5 * t),
-                  (o = "; expires=" + n.toUTCString());
+                (n.setTime(n.getTime() + 864e5 * t),
+                  (o = "; expires=" + n.toUTCString()));
               }
               document.cookie =
                 encodeURIComponent(e) +
@@ -2283,16 +2283,16 @@
           })(function () {}),
           (function () {
             function e(e, a) {
-              (this.m_callbacks = new W()),
+              ((this.m_callbacks = new W()),
                 (this.m_currentValue = e),
-                (this.m_fnEquals = a);
+                (this.m_fnEquals = a));
             }
             return (
               (e.prototype.Set = function (e) {
                 if (this.m_fnEquals) {
                   if (this.m_fnEquals(this.m_currentValue, e)) return;
                 } else if (this.m_currentValue === e) return;
-                (this.m_currentValue = e), this.m_callbacks.Dispatch(e);
+                ((this.m_currentValue = e), this.m_callbacks.Dispatch(e));
               }),
               Object.defineProperty(e.prototype, "Value", {
                 get: function () {
@@ -2309,12 +2309,12 @@
           })());
       !(function () {
         function e(e, a, t) {
-          (this.m_subscriptionRefCount = 0),
+          ((this.m_subscriptionRefCount = 0),
             (this.m_originalSubscribableValue = e),
             (this.m_mappedSubscribableValue = new x(a(e.Value), t)),
-            (this.m_fnMap = a);
+            (this.m_fnMap = a));
         }
-        Object.defineProperty(e.prototype, "Value", {
+        (Object.defineProperty(e.prototype, "Value", {
           get: function () {
             var e;
             return null === (e = this.m_mappedSubscribableValue) || void 0 === e
@@ -2338,20 +2338,20 @@
                 : a.Subscribe(e);
             return {
               Unsubscribe: function () {
-                r.Unsubscribe(),
+                (r.Unsubscribe(),
                   0 == --t.m_subscriptionRefCount &&
                     (t.m_mappedUnsubscribe.Unsubscribe(),
-                    (t.m_mappedUnsubscribe = null));
+                    (t.m_mappedUnsubscribe = null)));
               },
             };
-          });
+          }));
       })();
-      (function () {
+      ((function () {
         function e() {}
-        (e.prototype.Schedule = function (e, a) {
-          this.IsScheduled() && this.Cancel(),
+        ((e.prototype.Schedule = function (e, a) {
+          (this.IsScheduled() && this.Cancel(),
             (this.m_fnCallback = a),
-            (this.m_schTimer = window.setTimeout(this.ScheduledInternal, e));
+            (this.m_schTimer = window.setTimeout(this.ScheduledInternal, e)));
         }),
           (e.prototype.IsScheduled = function () {
             return void 0 !== this.m_schTimer;
@@ -2363,17 +2363,17 @@
           (e.prototype.ScheduledInternal = function () {
             this.m_schTimer = void 0;
             var e = this.m_fnCallback;
-            (this.m_fnCallback = void 0), e();
+            ((this.m_fnCallback = void 0), e());
           }),
-          (0, r.gn)([H], e.prototype, "ScheduledInternal", null);
+          (0, r.gn)([H], e.prototype, "ScheduledInternal", null));
       })(),
         (function () {
           function e() {
             this.m_rgListeners = [];
           }
-          (e.prototype.AddEventListener = function (e, a, t) {
-            e.addEventListener(a, t),
-              this.m_rgListeners.push({ element: e, type: a, listener: t });
+          ((e.prototype.AddEventListener = function (e, a, t) {
+            (e.addEventListener(a, t),
+              this.m_rgListeners.push({ element: e, type: a, listener: t }));
           }),
             (e.prototype.Unregister = function () {
               for (var e = 0, a = this.m_rgListeners; e < a.length; e++) {
@@ -2381,14 +2381,14 @@
                 t.element.removeEventListener(t.type, t.listener);
               }
               this.m_rgListeners = [];
-            });
-        })();
+            }));
+        })());
       var Y;
       !(function () {
         function e() {
           this.m_vecCallbacks = [];
         }
-        (e.prototype.Push = function (e) {
+        ((e.prototype.Push = function (e) {
           this.m_vecCallbacks.push(e);
         }),
           (e.prototype.PushArrayRemove = function (e, a) {
@@ -2405,21 +2405,21 @@
           (e.prototype.GetUnregisterFunc = function () {
             return this.Unregister;
           }),
-          (0, r.gn)([H], e.prototype, "Unregister", null);
+          (0, r.gn)([H], e.prototype, "Unregister", null));
       })();
       !(function (e) {
-        (e[(e.None = 0)] = "None"),
+        ((e[(e.None = 0)] = "None"),
           (e[(e.Ago = 1)] = "Ago"),
-          (e[(e.Remaining = 2)] = "Remaining");
+          (e[(e.Remaining = 2)] = "Remaining"));
       })(Y || (Y = {}));
       new Map();
-      new Map(), new Map();
-      new Map(), new Map(), new Map(), new Map(), new Map(), new Map();
+      (new Map(), new Map());
+      (new Map(), new Map(), new Map(), new Map(), new Map(), new Map());
       var V = (function () {
         function e() {
-          (this.m_mapTokens = new Map()),
+          ((this.m_mapTokens = new Map()),
             (this.m_mapFallbackTokens = new Map()),
-            (this.m_cbkTokensChanged = new W());
+            (this.m_cbkTokensChanged = new W()));
         }
         return (
           (e.InstallErrorReportingStore = function (e) {
@@ -2451,24 +2451,24 @@
             n || this.m_mapTokens.clear();
             var i = (0, r.pi)((0, r.pi)({}, t || {}), e),
               l = (0, r.pi)((0, r.pi)({}, o || {}), a || {});
-            this.AddTokens(i, l), this.m_cbkTokensChanged.Dispatch();
+            (this.AddTokens(i, l), this.m_cbkTokensChanged.Dispatch());
           }),
           (e.prototype.InitDirect = function (e, a) {
-            this.m_mapTokens.clear(),
+            (this.m_mapTokens.clear(),
               this.m_mapFallbackTokens.clear(),
               this.AddTokens(e, a),
-              this.m_cbkTokensChanged.Dispatch();
+              this.m_cbkTokensChanged.Dispatch());
           }),
           (e.prototype.AddTokens = function (e, a) {
             var t = this;
-            Object.keys(e).forEach(function (a) {
+            (Object.keys(e).forEach(function (a) {
               t.m_mapTokens.set(a, e[a]);
             }),
               a &&
                 Object.keys(a).forEach(function (e) {
-                  t.m_mapTokens.has(e) || t.m_mapTokens.set(e, a[e]),
-                    t.m_mapFallbackTokens.set(e, a[e]);
-                });
+                  (t.m_mapTokens.has(e) || t.m_mapTokens.set(e, a[e]),
+                    t.m_mapFallbackTokens.set(e, a[e]));
+                }));
           }),
           (e.prototype.GetTokensChangedCallbackList = function () {
             return this.m_cbkTokensChanged;
@@ -2549,19 +2549,19 @@
       }
       !(function () {
         function e() {}
-        (e.Set = function (e, a, t) {
+        ((e.Set = function (e, a, t) {
           if (e.length <= a) {
             if (a >= 31) return e;
-            (o = a + 1),
+            ((o = a + 1),
               (n = null),
               (r = e) ||
                 console.error(
                   "array should be defined for us to fill in the missing indexes",
                 ),
-              (e = r.length < o ? r.concat(Array(o - r.length).fill(n)) : r);
+              (e = r.length < o ? r.concat(Array(o - r.length).fill(n)) : r));
           }
           var r, o, n;
-          return (e[a] = t), e;
+          return ((e[a] = t), e);
         }),
           (e.Get = function (e, a) {
             return (e && e.length > a && e[a]) || "";
@@ -2570,25 +2570,25 @@
             return a
               ? e.Get(a, t) || e.Get(a, V.GetELanguageFallback(t))
               : null;
-          });
+          }));
       })();
       var K,
         Z,
         X = new V();
-      (window.LocalizationManager = X),
+      ((window.LocalizationManager = X),
         (function (e) {
-          (e[(e.LeagueSelect = 0)] = "LeagueSelect"),
+          ((e[(e.LeagueSelect = 0)] = "LeagueSelect"),
             (e[(e.RegionSelect = 1)] = "RegionSelect"),
             (e[(e.Roster = 2)] = "Roster"),
             (e[(e.PlayerSelect = 3)] = "PlayerSelect"),
             (e[(e.Scores = 4)] = "Scores"),
-            (e[(e.Leaderboard = 5)] = "Leaderboard");
+            (e[(e.Leaderboard = 5)] = "Leaderboard"));
         })(K || (K = {})),
         (function (e) {
-          (e[(e.Teams = 0)] = "Teams"),
+          ((e[(e.Teams = 0)] = "Teams"),
             (e[(e.Standings = 1)] = "Standings"),
-            (e[(e.Matchups = 2)] = "Matchups");
-        })(Z || (Z = {}));
+            (e[(e.Matchups = 2)] = "Matchups"));
+        })(Z || (Z = {})));
       const J = function () {
           return "/feed";
         },
@@ -2656,24 +2656,30 @@
         };
       function me() {
         for (var e = [], a = 0; a < arguments.length; a++) e[a] = arguments[a];
-        return e.reduce(function (e, a) {
-          return a
-            ? "string" == typeof a
-              ? e
-                ? "".concat(e, " ").concat(a)
-                : a
-              : "object" == typeof a
+        return e.reduce(
+          function (e, a) {
+            return a
+              ? "string" == typeof a
                 ? e
-                  ? "".concat(e, " ").concat(ge(a))
-                  : ge(a)
-                : e
-            : e;
-        }, "");
+                  ? "".concat(e, " ").concat(a)
+                  : a
+                : "object" == typeof a
+                  ? e
+                    ? "".concat(e, " ").concat(ge(a))
+                    : ge(a)
+                  : e
+              : e;
+          },
+          "",
+        );
       }
       function ge(e) {
-        return Object.keys(e).reduce(function (a, t) {
-          return e[t] ? (a ? "".concat(a, " ").concat(t) : t) : a;
-        }, "");
+        return Object.keys(e).reduce(
+          function (a, t) {
+            return e[t] ? (a ? "".concat(a, " ").concat(t) : t) : a;
+          },
+          "",
+        );
       }
       var _e = [
           {
@@ -2710,7 +2716,7 @@
         de = (function (e) {
           function a() {
             var a = (null !== e && e.apply(this, arguments)) || this;
-            return (a.state = { strActivePath: void 0 }), a;
+            return ((a.state = { strActivePath: void 0 }), a);
           }
           return (
             (0, r.ZT)(a, e),
@@ -2792,7 +2798,7 @@
       !(function () {
         function e(e) {
           var a = this;
-          (this.m_bNeedSort = !1),
+          ((this.m_bNeedSort = !1),
             (this.m_bOffsetsInvalidated = !1),
             (this.m_rgChildren = []),
             (this.RecomputeVisibility = function () {
@@ -2809,12 +2815,12 @@
                   n.fnCallback(!0);
                 }
               }
-              (a.m_nLastYMin = e), (a.m_nLastYMax = t);
+              ((a.m_nLastYMin = e), (a.m_nLastYMax = t));
             }),
-            (this.m_nBufferPx = e);
+            (this.m_nBufferPx = e));
         }
-        (e.prototype.SetParent = function (e) {
-          this.m_elParent &&
+        ((e.prototype.SetParent = function (e) {
+          (this.m_elParent &&
             this.m_elParent.ownerDocument.defaultView.removeEventListener(
               "resize",
               this.RecomputeVisibility,
@@ -2824,10 +2830,10 @@
               this.m_elParent.ownerDocument.defaultView.addEventListener(
                 "resize",
                 this.RecomputeVisibility,
-              );
+              ));
         }),
           (e.prototype.InvalidateOffsetsAndRecompute = function () {
-            (this.m_bOffsetsInvalidated = !0), this.RecomputeVisibility();
+            ((this.m_bOffsetsInvalidated = !0), this.RecomputeVisibility());
           }),
           (e.prototype.EnsureSort = function () {
             if (this.m_bOffsetsInvalidated) {
@@ -2843,7 +2849,7 @@
               (this.m_bNeedSort = !1));
           }),
           (e.prototype.RegisterChild = function (e, a) {
-            this.m_rgChildren.push({
+            (this.m_rgChildren.push({
               element: e,
               yOffset: e.offsetTop,
               fnCallback: a,
@@ -2853,13 +2859,13 @@
                 void 0 !== this.m_nLastYMax &&
                 e.offsetTop >= this.m_nLastYMin &&
                 e.offsetTop <= this.m_nLastYMax &&
-                a(!0);
+                a(!0));
           }),
           (e.prototype.UnregisterChild = function (e) {
             U(this.m_rgChildren, function (a) {
               return a.element == e;
             });
-          });
+          }));
       })();
       var be = t(4636),
         ve = function (e) {
@@ -3380,7 +3386,7 @@
           return (
             (0, r.ZT)(a, e),
             (a.prototype.onTouchStart = function (e) {
-              this.setState({ touching: !0 }), e.stopPropagation();
+              (this.setState({ touching: !0 }), e.stopPropagation());
             }),
             (a.prototype.onTouchEnd = function (e) {
               if (be.isIOS) {
@@ -3388,8 +3394,8 @@
                     this.refHelpPages.current.scrollLeft +
                     10 * this.lastScrollDelta,
                   t = Math.round(a / this.refHelpPages.current.clientWidth);
-                this.setState({ touching: !1, pageNum: t }),
-                  e.stopPropagation();
+                (this.setState({ touching: !1, pageNum: t }),
+                  e.stopPropagation());
               }
             }),
             (a.prototype.updateScrollPos = function () {
@@ -3408,24 +3414,30 @@
             }),
             (a.prototype.componentDidMount = function () {
               var e = this;
-              this.refHelpPages.current.addEventListener("scroll", function () {
-                e.updateScrollPos();
-              }),
+              (this.refHelpPages.current.addEventListener(
+                "scroll",
+                function () {
+                  e.updateScrollPos();
+                },
+              ),
                 be.isIOS &&
-                  (this.intervalHandle = setInterval(function () {
-                    if (er.shouldShowHelp(e.props.helpPage)) {
-                      var a = Date.now(),
-                        t = (a - e.lastScrollUpdate) / 1e3;
-                      if (((e.lastScrollUpdate = a), !e.state.touching)) {
-                        var r =
-                            e.state.pageNum *
-                            e.refHelpPages.current.clientWidth,
-                          o = e.refHelpPages.current.scrollLeft,
-                          n = (r - o) * t * 10;
-                        e.refHelpPages.current.scrollTo({ left: o + n });
+                  (this.intervalHandle = setInterval(
+                    function () {
+                      if (er.shouldShowHelp(e.props.helpPage)) {
+                        var a = Date.now(),
+                          t = (a - e.lastScrollUpdate) / 1e3;
+                        if (((e.lastScrollUpdate = a), !e.state.touching)) {
+                          var r =
+                              e.state.pageNum *
+                              e.refHelpPages.current.clientWidth,
+                            o = e.refHelpPages.current.scrollLeft,
+                            n = (r - o) * t * 10;
+                          e.refHelpPages.current.scrollTo({ left: o + n });
+                        }
                       }
-                    }
-                  }, 5));
+                    },
+                    5,
+                  )));
             }),
             (a.prototype.componentWillUnmount = function () {
               clearInterval(this.intervalHandle);
@@ -3663,9 +3675,12 @@
           (0, m.useEffect)(
             function () {
               if (!s) {
-                var e = setTimeout(function () {
-                  return g(!0);
-                }, i);
+                var e = setTimeout(
+                  function () {
+                    return g(!0);
+                  },
+                  i,
+                );
                 return function () {
                   return clearTimeout(e);
                 };
@@ -3716,9 +3731,12 @@
           (0, m.useEffect)(
             function () {
               if (!s) {
-                var e = setTimeout(function () {
-                  return g(!0);
-                }, i);
+                var e = setTimeout(
+                  function () {
+                    return g(!0);
+                  },
+                  i,
+                );
                 return function () {
                   return clearTimeout(e);
                 };
@@ -3999,9 +4017,9 @@
         Ke = t(8913),
         Ze = t.n(Ke);
       !(function (e) {
-        (e[(e.Large = 0)] = "Large"),
+        ((e[(e.Large = 0)] = "Large"),
           (e[(e.Medium = 1)] = "Medium"),
-          (e[(e.Small = 2)] = "Small");
+          (e[(e.Small = 2)] = "Small"));
       })(Ve || (Ve = {}));
       var Xe = (function (e) {
         function a() {
@@ -4081,7 +4099,7 @@
       const Je = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
-          return (t.state = { bVisible: !1 }), t;
+          return ((t.state = { bVisible: !1 }), t);
         }
         return (
           (0, r.ZT)(a, e),
@@ -4136,7 +4154,7 @@
               }));
             var d = 0,
               p = 0;
-            for (var u in o) (d = Math.max(d, o[u])), (p += o[u]);
+            for (var u in o) ((d = Math.max(d, o[u])), (p += o[u]));
             return (
               ((0 == e.series_type && 1 == d) ||
                 (1 == e.series_type && 2 == d) ||
@@ -4220,7 +4238,7 @@
       const je = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
-          return (t.state = { bVisible: !1 }), t;
+          return ((t.state = { bVisible: !1 }), t);
         }
         return (
           (0, r.ZT)(a, e),
@@ -4365,8 +4383,8 @@
         var a = e % 100,
           t = "#LOC_Ordinal_Prefix_" + a,
           r = q(t);
-        r === t && (r = q("#LOC_Ordinal_Prefix_Default")),
-          "<none>" === r && (r = "");
+        (r === t && (r = q("#LOC_Ordinal_Prefix_Default")),
+          "<none>" === r && (r = ""));
         var o = "#LOC_Ordinal_Suffix_" + a,
           n = q(o);
         return (
@@ -4401,7 +4419,7 @@
       const ta = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
-          return (t.state = { bVisible: !1 }), t;
+          return ((t.state = { bVisible: !1 }), t);
         }
         return (
           (0, r.ZT)(a, e),
@@ -4520,7 +4538,7 @@
       const ra = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
-          return (t.state = { bVisible: !1 }), t;
+          return ((t.state = { bVisible: !1 }), t);
         }
         return (
           (0, r.ZT)(a, e),
@@ -4690,7 +4708,7 @@
       const oa = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
-          return (t.state = { bVisible: !1 }), t;
+          return ((t.state = { bVisible: !1 }), t);
         }
         return (
           (0, r.ZT)(a, e),
@@ -4837,14 +4855,14 @@
       })(m.Component);
       var na;
       !(function (e) {
-        (e[(e.Add = 0)] = "Add"),
+        ((e[(e.Add = 0)] = "Add"),
           (e[(e.Remove = 1)] = "Remove"),
-          (e[(e.Disband = 2)] = "Disband");
+          (e[(e.Disband = 2)] = "Disband"));
       })(na || (na = {}));
       var ia = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
-          return (t.state = { bVisible: !1 }), t;
+          return ((t.state = { bVisible: !1 }), t);
         }
         return (
           (0, r.ZT)(a, e),
@@ -4872,7 +4890,7 @@
                 case na.Disband:
                   o = q("#TeamRoster_Disband", e.name);
               }
-              r.push(
+              (r.push(
                 m.createElement(
                   "div",
                   {
@@ -4891,7 +4909,7 @@
                     },
                     o,
                   ),
-                );
+                ));
             }
             return r;
           }),
@@ -4933,7 +4951,7 @@
               n = !1;
             switch (this.props.type) {
               case 1:
-                (a = Me().backgroundColorOrange),
+                ((a = Me().backgroundColorOrange),
                   (t = q("#Feed_SeriesResult")),
                   (r = "feed_dota.png"),
                   (e = m.createElement(Je, {
@@ -4945,10 +4963,10 @@
                       this.props.series_id,
                     nLeagueID: this.props.league_id,
                     nSeriesID: this.props.series_id,
-                  }));
+                  })));
                 break;
               case 2:
-                (a = Me().backgroundColorBrightBlue),
+                ((a = Me().backgroundColorBrightBlue),
                   (t = q("#Feed_PopularMatch")),
                   (r = "feed_star.png"),
                   (e = m.createElement(je, {
@@ -4960,10 +4978,10 @@
                       this.props.match_id,
                     leagueID: this.props.league_id,
                     matchID: this.props.match_id,
-                  }));
+                  })));
                 break;
               case 3:
-                (a = Me().backgroundColorOrange),
+                ((a = Me().backgroundColorOrange),
                   (t = q("#Feed_UpcomingMatch")),
                   (r = "feed_dota.png"),
                   (e = m.createElement(ra, {
@@ -4976,10 +4994,10 @@
                     leagueID: this.props.league_id,
                     nodeID: this.props.node_id,
                   })),
-                  (o = !0);
+                  (o = !0));
                 break;
               case 4:
-                (a = Me().backgroundColorBrightPurple),
+                ((a = Me().backgroundColorBrightPurple),
                   (t = q("#Feed_TournamentResult")),
                   (r = "feed_cup.png"),
                   (e = m.createElement(ta, {
@@ -4994,10 +5012,10 @@
                     standing: this.props.data_1,
                     points: this.props.data_2,
                     winnings: this.props.data_3,
-                  }));
+                  })));
                 break;
               case 5:
-                (a = Me().backgroundColorBrightGreen),
+                ((a = Me().backgroundColorBrightGreen),
                   (t = q("#Feed_TeamRosterChange")),
                   (r = "feed_news.png"),
                   (e = m.createElement(ia, {
@@ -5010,10 +5028,10 @@
                     teamID: this.props.team_id,
                     action: na.Add,
                     accountID: this.props.account_id,
-                  }));
+                  })));
                 break;
               case 6:
-                (a = Me().backgroundColorBrightGreen),
+                ((a = Me().backgroundColorBrightGreen),
                   (t = q("#Feed_TeamRosterChange")),
                   (r = "feed_news.png"),
                   (e = m.createElement(ia, {
@@ -5026,10 +5044,10 @@
                     teamID: this.props.team_id,
                     action: na.Remove,
                     accountID: this.props.account_id,
-                  }));
+                  })));
                 break;
               case 7:
-                (a = Me().backgroundColorBrightGreen),
+                ((a = Me().backgroundColorBrightGreen),
                   (t = q("#Feed_TeamDisband")),
                   (r = "feed_news.png"),
                   (e = m.createElement(ia, {
@@ -5041,35 +5059,35 @@
                       this.props.account_id,
                     teamID: this.props.team_id,
                     action: na.Disband,
-                  }));
+                  })));
                 break;
               case 8:
-                (a = Me().backgroundColorBrightPurple),
+                ((a = Me().backgroundColorBrightPurple),
                   (t = q("#Feed_LeagueUpcoming")),
-                  (r = "feed_cup.png");
+                  (r = "feed_cup.png"));
                 break;
               case 9:
-                (a = Me().backgroundColorBrightPurple),
+                ((a = Me().backgroundColorBrightPurple),
                   (t = q("#Feed_LeagueConcluded")),
-                  (r = "feed_cup.png");
+                  (r = "feed_cup.png"));
                 break;
               case 10:
-                (a = Me().backgroundColorBrightOrange),
+                ((a = Me().backgroundColorBrightOrange),
                   (t = q("#Feed_DPCStandings")),
-                  (r = "feed_international.png");
+                  (r = "feed_international.png"));
                 break;
               case 11:
-                (a = Me().backgroundColorBrightGreen),
+                ((a = Me().backgroundColorBrightGreen),
                   (t = q("#Feed_AlertPredictions")),
-                  (r = "feed_news.png");
+                  (r = "feed_news.png"));
                 break;
               case 12:
-                (a = Me().backgroundColorBrightGreen),
+                ((a = Me().backgroundColorBrightGreen),
                   (t = q("#Feed_AlertFantasy")),
-                  (r = "feed_news.png");
+                  (r = "feed_news.png"));
                 break;
               case 13:
-                (a = Me().backgroundColorOrange),
+                ((a = Me().backgroundColorOrange),
                   (t = q("#Feed_LiveMatch")),
                   (r = "feed_dota.png"),
                   (e = m.createElement(oa, {
@@ -5086,10 +5104,10 @@
                     serverSteamID: this.props.server_steam_id,
                     nodeID: this.props.data_3,
                   })),
-                  (n = !0);
+                  (n = !0));
                 break;
               case 14:
-                (a = Me().backgroundColorOrange),
+                ((a = Me().backgroundColorOrange),
                   (t = q("#Feed_LiveSeries")),
                   (r = "feed_dota.png"),
                   (e = m.createElement(ra, {
@@ -5102,7 +5120,7 @@
                     leagueID: this.props.league_id,
                     nodeID: this.props.node_id,
                   })),
-                  (n = !0);
+                  (n = !0));
             }
             var l = "",
               c = Date.now() / 1e3;
@@ -5231,14 +5249,14 @@
         da = (function (e) {
           function a() {
             var a = (null !== e && e.apply(this, arguments)) || this;
-            return (a.state = { bError: !1, bFallbackError: !1 }), a;
+            return ((a.state = { bError: !1, bFallbackError: !1 }), a);
           }
           return (
             (0, r.ZT)(a, e),
             (a.prototype.componentDidUpdate = function (e) {
-              e.src != this.props.src && this.setState({ bError: !1 }),
+              (e.src != this.props.src && this.setState({ bError: !1 }),
                 e.fallbackSrc != this.props.fallbackSrc &&
-                  this.setState({ bFallbackError: !1 });
+                  this.setState({ bFallbackError: !1 }));
             }),
             (a.prototype.render = function () {
               var e = this.props,
@@ -5261,12 +5279,12 @@
                     );
             }),
             (a.prototype.HandleError = function (e) {
-              this.setState({ bError: !0 }),
-                this.props.onError && this.props.onError(e);
+              (this.setState({ bError: !0 }),
+                this.props.onError && this.props.onError(e));
             }),
             (a.prototype.HandleFallbackError = function (e) {
-              this.setState({ bFallbackError: !0 }),
-                this.props.onError && this.props.onError(e);
+              (this.setState({ bFallbackError: !0 }),
+                this.props.onError && this.props.onError(e));
             }),
             (0, r.gn)([H], a.prototype, "HandleError", null),
             (0, r.gn)([H], a.prototype, "HandleFallbackError", null),
@@ -5697,8 +5715,8 @@
                     ) * this.props.stepSize
                   ).toFixed(0),
                 );
-                this.setState({ currValue: o, pipPosition: a + (t - a) * r }),
-                  this.props.onValueChanged && this.props.onValueChanged(o);
+                (this.setState({ currValue: o, pipPosition: a + (t - a) * r }),
+                  this.props.onValueChanged && this.props.onValueChanged(o));
               }
             }),
             (a.prototype.OnChange = function (e) {
@@ -5736,7 +5754,7 @@
         Pa = (function (e) {
           function a(a) {
             var t = e.call(this, a) || this;
-            return (t.state = { selectedTeam: 0, wagerAmount: 0 }), t;
+            return ((t.state = { selectedTeam: 0, wagerAmount: 0 }), t);
           }
           return (
             (0, r.ZT)(a, e),
@@ -5847,10 +5865,10 @@
                   this.props.demoMode)
                 ) {
                   case 3:
-                    (r.teams[0].games_won = 2), (r.teams[1].games_won = 1);
+                    ((r.teams[0].games_won = 2), (r.teams[1].games_won = 1));
                     break;
                   case 4:
-                    (r.teams[0].games_won = 1), (r.teams[1].games_won = 2);
+                    ((r.teams[0].games_won = 1), (r.teams[1].games_won = 2));
                 }
                 2 == this.props.demoMode &&
                   (a = {
@@ -5863,7 +5881,7 @@
                     state: Kt.STATE_INCOMPLETE,
                   });
               } else
-                (e = er.getProPrediction(
+                ((e = er.getProPrediction(
                   this.props.leagueId,
                   this.props.match.nodeId,
                 )),
@@ -5871,7 +5889,7 @@
                   (t = er.getProPredictionError(
                     this.props.leagueId,
                     this.props.match.nodeId,
-                  ));
+                  )));
               if (!e) return m.createElement("div", null);
               var o = null;
               switch (e.state) {
@@ -5885,8 +5903,8 @@
                   o = Na().TiedPrediction;
               }
               var n = [];
-              n.push(m.createElement("div", { className: Na().TeamStatus })),
-                n.push(m.createElement("div", { className: Na().TeamStatus }));
+              (n.push(m.createElement("div", { className: Na().TeamStatus })),
+                n.push(m.createElement("div", { className: Na().TeamStatus })));
               for (var l = 0; l < 2; ++l)
                 if (e.state == Kt.STATE_INCOMPLETE)
                   a &&
@@ -5910,12 +5928,12 @@
                       ));
                 else if (r.teams[l].games_won > r.teams[1 - l].games_won) {
                   var c = null;
-                  e.state == Kt.STATE_WON && (c = Na().TeamWinner),
+                  (e.state == Kt.STATE_WON && (c = Na().TeamWinner),
                     (n[l] = m.createElement(
                       "div",
                       { className: me(Na().TeamStatus, c) },
                       m.createElement("div", null, q("#Predictions_Winner")),
-                    ));
+                    )));
                 }
               var s,
                 _,
@@ -5987,7 +6005,7 @@
                   ),
                   m.createElement("div", { className: Na().BottomPadding }),
                 );
-              (s =
+              ((s =
                 0 == r.actualMatchTime
                   ? m.createElement(
                       "div",
@@ -6058,7 +6076,7 @@
                     ),
                     n[1],
                   ),
-                ));
+                )));
               var h = null;
               null == this.props.demoMode && (h = Na().NotDemoMode);
               var y = null,
@@ -6280,23 +6298,25 @@
                   f = 0;
                 switch (e.state) {
                   case Kt.STATE_INCOMPLETE:
-                    (E = "#Predictions_Pays"), (f = e.payoutAmount);
+                    ((E = "#Predictions_Pays"), (f = e.payoutAmount));
                     break;
                   case Kt.STATE_WON:
-                    (E = "#Predictions_Won"),
+                    ((E = "#Predictions_Won"),
                       (v = { color: "#76ca65" }),
-                      (f = e.payoutAmount);
+                      (f = e.payoutAmount));
                     break;
                   case Kt.STATE_LOST:
-                    (E = "#Predictions_Lost"),
+                    ((E = "#Predictions_Lost"),
                       (v = { color: "#FF5050" }),
-                      (f = e.wagerAmount);
+                      (f = e.wagerAmount));
                     break;
                   case Kt.STATE_TIED:
-                    (E = "#Predictions_Tied"), (v = { color: "cyan" }), (f = 0);
+                    ((E = "#Predictions_Tied"),
+                      (v = { color: "cyan" }),
+                      (f = 0));
                 }
                 var C = q("#Predictions_InvalidTeam");
-                e.teamPicked == r.teams[0].teamId
+                (e.teamPicked == r.teams[0].teamId
                   ? (C = r.teams[0].name)
                   : e.teamPicked == r.teams[1].teamId && (C = r.teams[1].name),
                   (y = m.createElement(
@@ -6364,7 +6384,7 @@
                         ),
                       ),
                     ),
-                  ));
+                  )));
               }
               return r.seriesID
                 ? m.createElement(
@@ -6398,24 +6418,30 @@
       const Ia = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
-          return (t.state = { isStaleOdds: !1, upcomingMatchData: null }), t;
+          return ((t.state = { isStaleOdds: !1, upcomingMatchData: null }), t);
         }
         return (
           (0, r.ZT)(a, e),
           (a.prototype.componentDidMount = function () {
             var e = this,
               a = 1e3 * er.getRecentAndUpcomingMatchesRefreshInterval();
-            (this.intervalHandle = setInterval(function () {
-              e.setState({ isStaleOdds: !0 });
-              var a = e;
-              setTimeout(function () {
-                a.setState({
-                  upcomingMatchData: er.getRecentAndUpcomingMatches(),
-                }),
-                  a.setState({ isStaleOdds: !1 });
-              }, 3e3);
-            }, a)),
-              er.triggerShowHelpPage(qt.Predictions);
+            ((this.intervalHandle = setInterval(
+              function () {
+                e.setState({ isStaleOdds: !0 });
+                var a = e;
+                setTimeout(
+                  function () {
+                    (a.setState({
+                      upcomingMatchData: er.getRecentAndUpcomingMatches(),
+                    }),
+                      a.setState({ isStaleOdds: !1 }));
+                  },
+                  3e3,
+                );
+              },
+              a,
+            )),
+              er.triggerShowHelpPage(qt.Predictions));
           }),
           (a.prototype.componentWillUnmount = function () {
             clearInterval(this.intervalHandle);
@@ -6589,7 +6615,7 @@
             (a.prototype.GetLeagueList = function () {
               var e = [],
                 a = er.getFantasyLeagueStatus();
-              if (!a) return e.push(this.GetLoadingThrobber()), e;
+              if (!a) return (e.push(this.GetLoadingThrobber()), e);
               var t = this.props.section != K.LeagueSelect;
               for (var r in (e.push(
                 m.createElement(
@@ -6632,7 +6658,7 @@
                     p = Ga().StatusConcluded;
                 }
                 var u = void 0;
-                0 == o.status || 1 == o.status
+                (0 == o.status || 1 == o.status
                   ? (u = K.Roster)
                   : (2 != o.status && 3 != o.status) || (u = K.Scores),
                   _
@@ -6686,7 +6712,7 @@
                             q("#Fantasy_LeagueStatus_" + o.status),
                           ),
                         ),
-                      );
+                      ));
                 var h = this.props.section == K.Roster,
                   y = this.props.section == K.Scores,
                   k = this.props.section == K.Leaderboard;
@@ -6761,7 +6787,7 @@
                         ),
                       ];
                     case 1:
-                      return e.sent(), [2];
+                      return (e.sent(), [2]);
                   }
                 });
               });
@@ -6793,7 +6819,7 @@
                 var n = er.getPlayersInRole(t, o),
                   l = er.getFantasyLineup(t);
                 if (void 0 === n || void 0 === l)
-                  return e.push(this.GetLoadingThrobber()), e;
+                  return (e.push(this.GetLoadingThrobber()), e);
                 if (!n)
                   return (
                     e.push(
@@ -6919,7 +6945,7 @@
                   }
               }
               if ((o && (e = er.getFantasyLineup(r)), !e))
-                return o && a.push(this.GetLoadingThrobber()), a;
+                return (o && a.push(this.GetLoadingThrobber()), a);
               for (
                 var s = function (a) {
                     var o = 0 == e.rgRosterSlots[a].nAccountID,
@@ -7081,7 +7107,7 @@
               var c = this.state.bSelectingDay,
                 s = er.getFantasyDayScore(n, o ? l : 0, !o),
                 _ = er.getFantasyLeagueStatus();
-              if (!_) return o && a.push(this.GetLoadingThrobber()), a;
+              if (!_) return (o && a.push(this.GetLoadingThrobber()), a);
               for (var d in _.league_infos) {
                 var p = _.league_infos[d];
                 if (p.league_id == n) {
@@ -7387,10 +7413,10 @@
                 var n = parseInt(this.props.match.params.leagueID),
                   i = parseInt(this.props.match.params.slot),
                   l = er.getFantasyLineup(n);
-                console.log((0, La.ZN)(l)),
+                (console.log((0, La.ZN)(l)),
                   l &&
                     er.isFantasyRosterSlotLocked(n, i) &&
-                    this.props.history.goBack();
+                    this.props.history.goBack());
               }
               return m.createElement(
                 "div",
@@ -7913,7 +7939,7 @@
                 if (l.team_id) {
                   var c = new Date(1e3 * l.start_timestamp),
                     s = null;
-                  l.end_timestamp && (s = new Date(1e3 * l.end_timestamp)),
+                  (l.end_timestamp && (s = new Date(1e3 * l.end_timestamp)),
                     n.unshift(
                       m.createElement(
                         "div",
@@ -7960,7 +7986,7 @@
                             q("#Player_PresentTime"),
                           ),
                       ),
-                    );
+                    ));
                 }
               }
             return m.createElement(
@@ -8370,7 +8396,7 @@
       const Za = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
-          return (t.state = { strTeamColor1: "", strTeamColor2: "" }), t;
+          return ((t.state = { strTeamColor1: "", strTeamColor2: "" }), t);
         }
         return (
           (0, r.ZT)(a, e),
@@ -8495,16 +8521,16 @@
             }
             switch (r.series_type) {
               case 0:
-                1 == h[r.team_1.team_id] && (d = r.team_1),
-                  1 == h[r.team_2.team_id] && (d = r.team_2);
+                (1 == h[r.team_1.team_id] && (d = r.team_1),
+                  1 == h[r.team_2.team_id] && (d = r.team_2));
                 break;
               case 1:
-                2 == h[r.team_1.team_id] && (d = r.team_1),
-                  2 == h[r.team_2.team_id] && (d = r.team_2);
+                (2 == h[r.team_1.team_id] && (d = r.team_1),
+                  2 == h[r.team_2.team_id] && (d = r.team_2));
                 break;
               case 2:
-                3 == h[r.team_1.team_id] && (d = r.team_1),
-                  3 == h[r.team_2.team_id] && (d = r.team_2);
+                (3 == h[r.team_1.team_id] && (d = r.team_1),
+                  3 == h[r.team_2.team_id] && (d = r.team_2));
             }
             d &&
               ((p = q("#Series_Winner", d.team_name)),
@@ -8544,7 +8570,7 @@
                       ? E.tourney.radiant_team_id
                       : E.tourney.dire_team_id,
                   w = r.team_1.team_id == M ? 0 : 1;
-                -1 == G[w].indexOf(A.account_id) && G[w].push(A.account_id),
+                (-1 == G[w].indexOf(A.account_id) && G[w].push(A.account_id),
                   A.kills > S &&
                     ((S = A.kills),
                     (N = A.account_id),
@@ -8554,11 +8580,11 @@
                     ((L = A.assists),
                     (P = A.account_id),
                     (I = A.hero_id),
-                    (R = A.pro_name));
+                    (R = A.pro_name)));
               }
             }
             var O = [];
-            O.push([]), O.push([]);
+            (O.push([]), O.push([]));
             for (var F = 0; F < 2; F++)
               for (var D in G[F]) {
                 var U = er.getPlayerData(G[F][D]);
@@ -8787,7 +8813,7 @@
       const ja = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
-          return (t.state = { strTeamColor1: "", strTeamColor2: "" }), t;
+          return ((t.state = { strTeamColor1: "", strTeamColor2: "" }), t);
         }
         return (
           (0, r.ZT)(a, e),
@@ -8869,7 +8895,7 @@
                 b < v.length;
                 b++
               ) {
-                (y = v[b]), (k = er.getPlayerData(y));
+                ((y = v[b]), (k = er.getPlayerData(y)));
                 p[1].push(
                   m.createElement(
                     g.rU,
@@ -9018,8 +9044,8 @@
               for (var l in t.metadata.teams[0].graph_net_worth) {
                 var c = parseInt(t.metadata.teams[0].graph_net_worth[l]),
                   s = parseInt(t.metadata.teams[1].graph_net_worth[l]);
-                !o && Math.abs(c - s) > 30 && ((o = !0), (n = parseInt(l))),
-                  o && r.push({ value: c - s });
+                (!o && Math.abs(c - s) > 30 && ((o = !0), (n = parseInt(l))),
+                  o && r.push({ value: c - s }));
               }
               for (
                 var _ = [],
@@ -9141,7 +9167,7 @@
               );
             }
             var B = [];
-            B.push([]), B.push([]);
+            (B.push([]), B.push([]));
             for (var T = 0; T < 10; T++)
               if (!(T >= t.match.players.length)) {
                 var P = t.match.players[T];
@@ -9253,7 +9279,7 @@
                 );
               }
             var L = [];
-            L.push([]), L.push([]);
+            (L.push([]), L.push([]));
             for (T = 0; T < 10; T++)
               if (!(T >= t.match.players.length)) {
                 var I;
@@ -9304,10 +9330,10 @@
                 );
               }
             var R = [];
-            R.push([]), R.push([]);
+            (R.push([]), R.push([]));
             for (var G, D = [], A = 0; A < t.match.picks_bans.length; A++) {
               var M = t.match.picks_bans[A];
-              A % 2 == 1 &&
+              (A % 2 == 1 &&
                 (M.is_pick
                   ? D.push(
                       m.createElement(
@@ -9355,7 +9381,7 @@
                       q("#Hero_" + M.hero_id),
                     ),
                   ),
-                );
+                ));
             }
             return (
               2 == t.match.match_outcome
@@ -9651,7 +9677,7 @@
             }
             var b = 100 * (1.1 * y.x + 0.5) - 3 + "%",
               v = 100 * (1.1 * y.y + 0.5) - 4 + "%";
-            p.push(
+            (p.push(
               m.createElement("img", {
                 key: "buildingicon_" + h,
                 src: k,
@@ -9664,7 +9690,7 @@
                 ),
               }),
             ),
-              u--;
+              u--);
           }
           return m.createElement(
             "div",
@@ -9691,8 +9717,8 @@
             i = 0;
           for (var l in r) {
             var c = parseInt(r[l]);
-            !n && Math.abs(c) > 30 && ((n = !0), (i = parseInt(l))),
-              n && o.push({ value: c });
+            (!n && Math.abs(c) > 30 && ((n = !0), (i = parseInt(l))),
+              n && o.push({ value: c }));
           }
           for (
             var s = [], g = i / r.length, _ = 1 - g, d = g * t, p = 1;
@@ -9871,7 +9897,7 @@
               return m.createElement("div", null);
           }
           var o = [];
-          o.push([]), o.push([]);
+          (o.push([]), o.push([]));
           for (var n = 0; n < 2; n++)
             for (var i = 0 == n ? t.players : r.players, l = 0; l < 5; l++)
               if (!(l >= i.length)) {
@@ -9930,7 +9956,7 @@
               return m.createElement("div", null);
           }
           var o = [];
-          o.push([]), o.push([]);
+          (o.push([]), o.push([]));
           for (var n = 0; n < 2; n++)
             for (var i = 0 == n ? t.players : r.players, l = 0; l < 5; l++)
               if (!(l >= i.length)) {
@@ -9969,7 +9995,7 @@
           if (1 == a) return m.createElement("div", null);
           if (!t || !r) return m.createElement("div", null);
           var o = [];
-          o.push([]), o.push([]);
+          (o.push([]), o.push([]));
           for (
             var n = [],
               l = 1,
@@ -9982,7 +10008,7 @@
             _++
           ) {
             if (d[_]) {
-              n.push(
+              (n.push(
                 m.createElement(
                   "div",
                   {
@@ -9992,7 +10018,7 @@
                   q("#Match_Ban"),
                 ),
               ),
-                (g += 1);
+                (g += 1));
               for (var p = 0; p < 2; p += 1) {
                 if (c < r.length) {
                   var u = r[c];
@@ -10017,10 +10043,10 @@
                     ),
                   );
                 }
-                (c += 1), (l += 1);
+                ((c += 1), (l += 1));
               }
             } else {
-              n.push(
+              (n.push(
                 m.createElement(
                   "div",
                   {
@@ -10030,11 +10056,11 @@
                   q("#Match_Pick"),
                 ),
               ),
-                (g += 1);
+                (g += 1));
               for (p = 0; p < 2; p += 1)
                 if (s < t.length) {
                   var h = t[s];
-                  o[2 == h.team ? 0 : 1].push(
+                  (o[2 == h.team ? 0 : 1].push(
                     m.createElement(
                       "div",
                       {
@@ -10055,7 +10081,7 @@
                     ),
                   ),
                     (s += 1),
-                    (l += 1);
+                    (l += 1));
                 }
             }
           }
@@ -10092,10 +10118,13 @@
           (0, r.ZT)(a, e),
           (a.prototype.componentDidMount = function () {
             var e = this;
-            er.getRealtimeMatchStats(this.props.match.params.serverSteamID),
-              (this.intervalHandle = setInterval(function () {
-                er.getRealtimeMatchStats(e.props.match.params.serverSteamID);
-              }, 2e3));
+            (er.getRealtimeMatchStats(this.props.match.params.serverSteamID),
+              (this.intervalHandle = setInterval(
+                function () {
+                  er.getRealtimeMatchStats(e.props.match.params.serverSteamID);
+                },
+                2e3,
+              )));
           }),
           (a.prototype.componentWillUnmount = function () {
             clearInterval(this.intervalHandle);
@@ -10180,7 +10209,7 @@
       const kt = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
-          (t.activeTouches = []),
+          ((t.activeTouches = []),
             (t.refPanPinchZoom = m.createRef()),
             (t.onTouchStart = function (e) {
               for (var a = 0; a < e.changedTouches.length; a++) {
@@ -10248,14 +10277,14 @@
                           });
                         }
                       }
-                    (n.x = r.clientX), (n.y = r.clientY);
+                    ((n.x = r.clientX), (n.y = r.clientY));
                   }
                 }
-            });
+            }));
           var r = t.props.initialScale ? t.props.initialScale : 1,
             o = t.props.initialOffsetX ? t.props.initialOffsetX : 0,
             n = t.props.initialOffsetY ? t.props.initialOffsetY : 0;
-          return (t.state = { scale: r, offsetX: o, offsetY: n }), t;
+          return ((t.state = { scale: r, offsetX: o, offsetY: n }), t);
         }
         return (
           (0, r.ZT)(a, e),
@@ -10606,7 +10635,7 @@
           return (
             (0, r.ZT)(a, e),
             (a.prototype.render = function () {
-              for (var e = 1; e < this.props.nodeGroup.team_count; ) e *= 2;
+              for (var e = 1; e < this.props.nodeGroup.team_count;) e *= 2;
               var a = "",
                 t = 0,
                 r = 0,
@@ -10623,22 +10652,22 @@
                     g = 0;
                   switch (l) {
                     case 0:
-                      (s = 0), (g = 0);
+                      ((s = 0), (g = 0));
                       break;
                     case 1:
-                      (s = 0), (g = 146);
+                      ((s = 0), (g = 146));
                       break;
                     case 2:
-                      (s = 316), (g = 74);
+                      ((s = 316), (g = 74));
                       break;
                     case 3:
-                      (s = 632), (g = 212);
+                      ((s = 632), (g = 212));
                       break;
                     case 4:
-                      (s = 0), (g = 352);
+                      ((s = 0), (g = 352));
                       break;
                     case 5:
-                      (s = 316), (g = 352);
+                      ((s = 316), (g = 352));
                   }
                   var _ = er.getTeamData(c.team_id_1),
                     d = er.getTeamData(c.team_id_2);
@@ -10695,7 +10724,7 @@
           return (
             (0, r.ZT)(a, e),
             (a.prototype.render = function () {
-              for (var e = 1; e < this.props.nodeGroup.team_count; ) e *= 2;
+              for (var e = 1; e < this.props.nodeGroup.team_count;) e *= 2;
               var a = "",
                 t = 0,
                 r = 0,
@@ -10713,34 +10742,34 @@
                       g = 0;
                     switch (l) {
                       case 0:
-                        (s = 315), (g = 0);
+                        ((s = 315), (g = 0));
                         break;
                       case 1:
-                        (s = 315), (g = 146);
+                        ((s = 315), (g = 146));
                         break;
                       case 2:
-                        (s = 948), (g = 74);
+                        ((s = 948), (g = 74));
                         break;
                       case 3:
-                        (s = 1263), (g = 231);
+                        ((s = 1263), (g = 231));
                         break;
                       case 4:
-                        (s = 0), (g = 314);
+                        ((s = 0), (g = 314));
                         break;
                       case 5:
-                        (s = 0), (g = 462);
+                        ((s = 0), (g = 462));
                         break;
                       case 6:
-                        (s = 315), (g = 315);
+                        ((s = 315), (g = 315));
                         break;
                       case 7:
-                        (s = 315), (g = 462);
+                        ((s = 315), (g = 462));
                         break;
                       case 8:
-                        (s = 632), (g = 389);
+                        ((s = 632), (g = 389));
                         break;
                       case 9:
-                        (s = 948), (g = 389);
+                        ((s = 948), (g = 389));
                     }
                     var _ = er.getTeamData(c.team_id_1),
                       d = er.getTeamData(c.team_id_2),
@@ -10774,83 +10803,83 @@
                   (t = 2180),
                   (r = 1198),
                   this.props.nodeGroup.nodes)) {
-                    (l = parseInt(n)),
+                    ((l = parseInt(n)),
                       (c = this.props.nodeGroup.nodes[n]),
                       (s = 0),
-                      (g = 0);
+                      (g = 0));
                     switch (l) {
                       case 0:
-                        (s = 315), (g = 0);
+                        ((s = 315), (g = 0));
                         break;
                       case 1:
-                        (s = 315), (g = 146);
+                        ((s = 315), (g = 146));
                         break;
                       case 2:
-                        (s = 315), (g = 315);
+                        ((s = 315), (g = 315));
                         break;
                       case 3:
-                        (s = 315), (g = 462);
+                        ((s = 315), (g = 462));
                         break;
                       case 4:
-                        (s = 948), (g = 74);
+                        ((s = 948), (g = 74));
                         break;
                       case 5:
-                        (s = 948), (g = 390);
+                        ((s = 948), (g = 390));
                         break;
                       case 6:
-                        (s = 1580), (g = 231);
+                        ((s = 1580), (g = 231));
                         break;
                       case 7:
-                        (s = 1898), (g = 542);
+                        ((s = 1898), (g = 542));
                         break;
                       case 8:
-                        (s = 0), (g = 618);
+                        ((s = 0), (g = 618));
                         break;
                       case 9:
-                        (s = 0), (g = 764);
+                        ((s = 0), (g = 764));
                         break;
                       case 10:
-                        (s = 0), (g = 930);
+                        ((s = 0), (g = 930));
                         break;
                       case 11:
-                        (s = 0), (g = 1078);
+                        ((s = 0), (g = 1078));
                         break;
                       case 12:
-                        (s = 315), (g = 618);
+                        ((s = 315), (g = 618));
                         break;
                       case 13:
-                        (s = 315), (g = 764);
+                        ((s = 315), (g = 764));
                         break;
                       case 14:
-                        (s = 315), (g = 930);
+                        ((s = 315), (g = 930));
                         break;
                       case 15:
-                        (s = 315), (g = 1078);
+                        ((s = 315), (g = 1078));
                         break;
                       case 16:
-                        (s = 634), (g = 692);
+                        ((s = 634), (g = 692));
                         break;
                       case 17:
-                        (s = 634), (g = 1004);
+                        ((s = 634), (g = 1004));
                         break;
                       case 18:
-                        (s = 946), (g = 692);
+                        ((s = 946), (g = 692));
                         break;
                       case 19:
-                        (s = 946), (g = 1004);
+                        ((s = 946), (g = 1004));
                         break;
                       case 20:
-                        (s = 1264), (g = 852);
+                        ((s = 1264), (g = 852));
                         break;
                       case 21:
-                        (s = 1582), (g = 852);
+                        ((s = 1582), (g = 852));
                     }
-                    (_ = er.getTeamData(c.team_id_1)),
+                    ((_ = er.getTeamData(c.team_id_1)),
                       (d = er.getTeamData(c.team_id_2)),
                       (p = 0 == c.team_id_1 ? q("#Feed_TBD") : _ ? _.name : ""),
                       (u = 0 == c.team_id_2 ? q("#Feed_TBD") : d ? d.name : ""),
                       (h = _ ? _.url_logo : i.IMG_URL + "team_unkown.png"),
-                      (y = d ? d.url_logo : i.IMG_URL + "team_unkown.png");
+                      (y = d ? d.url_logo : i.IMG_URL + "team_unkown.png"));
                     o.push(
                       m.createElement(Et, {
                         key: "node_" + n,
@@ -10903,7 +10932,7 @@
           return (
             (0, r.ZT)(a, e),
             (a.prototype.render = function () {
-              for (var e = 1; e < this.props.nodeGroup.team_count; ) e *= 2;
+              for (var e = 1; e < this.props.nodeGroup.team_count;) e *= 2;
               var a = "",
                 t = 0,
                 r = 0,
@@ -10920,13 +10949,13 @@
                     g = 0;
                   switch (l) {
                     case 0:
-                      (s = 0), (g = 0);
+                      ((s = 0), (g = 0));
                       break;
                     case 1:
-                      (s = 0), (g = 146);
+                      ((s = 0), (g = 146));
                       break;
                     case 2:
-                      (s = 316), (g = 74);
+                      ((s = 316), (g = 74));
                   }
                   var _ = er.getTeamData(c.team_id_1),
                     d = er.getTeamData(c.team_id_2),
@@ -10994,19 +11023,19 @@
                   l = 0;
                 switch (r) {
                   case 0:
-                    (n = 0), (l = 0);
+                    ((n = 0), (l = 0));
                     break;
                   case 1:
-                    (n = 0), (l = 146);
+                    ((n = 0), (l = 146));
                     break;
                   case 2:
-                    (n = 316), (l = 74);
+                    ((n = 316), (l = 74));
                     break;
                   case 3:
-                    (n = 0), (l = 353);
+                    ((n = 0), (l = 353));
                     break;
                   case 4:
-                    (n = 316), (l = 323);
+                    ((n = 316), (l = 323));
                 }
                 var c = er.getTeamData(o.team_id_1),
                   s = er.getTeamData(o.team_id_2),
@@ -11169,7 +11198,7 @@
                   var s = a.results[c];
                   if (s.standing <= i) {
                     var g = 5 == t.info.tier ? 0 : s.points;
-                    r.push(
+                    (r.push(
                       m.createElement(Tt, {
                         key: "team_" + s.teamid + "_" + i,
                         standing: s.standing,
@@ -11181,7 +11210,7 @@
                       }),
                     ),
                       (n = c + 1),
-                      (l = !0);
+                      (l = !0));
                     break;
                   }
                 }
@@ -11375,16 +11404,19 @@
         Lt = (function (e) {
           function a(a) {
             var t = e.call(this, a) || this;
-            return (t.state = { liveMatches: null }), t;
+            return ((t.state = { liveMatches: null }), t);
           }
           return (
             (0, r.ZT)(a, e),
             (a.prototype.componentDidMount = function () {
               var e = this;
-              er.getLiveMatches(parseInt(this.props.match.params.leagueID)),
-                (this.intervalHandle = setInterval(function () {
-                  er.getLiveMatches(parseInt(e.props.match.params.leagueID));
-                }, 3e4));
+              (er.getLiveMatches(parseInt(this.props.match.params.leagueID)),
+                (this.intervalHandle = setInterval(
+                  function () {
+                    er.getLiveMatches(parseInt(e.props.match.params.leagueID));
+                  },
+                  3e4,
+                )));
             }),
             (a.prototype.componentWillUnmount = function () {
               clearInterval(this.intervalHandle);
@@ -11461,10 +11493,10 @@
                 );
               }
               var _ = [];
-              this.getUpcomingMatches(e, a, _),
+              (this.getUpcomingMatches(e, a, _),
                 _.sort(function (e, a) {
                   return e[1] - a[1];
-                });
+                }));
               for (var d = 0, p = _; d < p.length; d++) {
                 var u = p[d];
                 r.push(
@@ -11622,20 +11654,20 @@
               var e, a;
               switch (this.props.type) {
                 case Xt.Player:
-                  (e = m.createElement(da, {
+                  ((e = m.createElement(da, {
                     className: me(Gt().Icon, Gt().Player),
                     src: er.getPlayerImageURL(this.props.id),
                     fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                   })),
-                    (a = re(this.props.id));
+                    (a = re(this.props.id)));
                   break;
                 case Xt.Team:
-                  (e = m.createElement(da, {
+                  ((e = m.createElement(da, {
                     className: me(Gt().Icon, Gt().Team),
                     src: this.props.url,
                     fallbackSrc: i.IMG_URL + "team_unknown.png",
                   })),
-                    (a = te(this.props.id));
+                    (a = te(this.props.id)));
                 case Xt.League:
               }
               var t = er.isFavorite(this.props.type, this.props.id);
@@ -11683,21 +11715,21 @@
             this.setState({ sSearchString: e.target.value });
           }),
           (a.prototype.handleSubmit = function (e) {
-            er.requestSearchResults(this.state.sSearchString),
+            (er.requestSearchResults(this.state.sSearchString),
               e.preventDefault(),
               this.setState({
                 bWasEmptySearch: 0 == this.state.sSearchString.length,
                 bSearchPending: !0,
-              });
+              }));
           }),
           (a.prototype.handleClear = function () {
-            this.setState({ sSearchString: "", bWasEmptySearch: !0 }),
-              er.requestSearchResults("");
+            (this.setState({ sSearchString: "", bWasEmptySearch: !0 }),
+              er.requestSearchResults(""));
           }),
           (a.prototype.componentDidMount = function () {
             return (0, r.mG)(this, void 0, void 0, function () {
               return (0, r.Jh)(this, function (e) {
-                return er.requestSearchResults(this.state.sSearchString), [2];
+                return (er.requestSearchResults(this.state.sSearchString), [2]);
               });
             });
           }),
@@ -11731,7 +11763,7 @@
                       s++
                     ) {
                       var _ = g[s];
-                      e.push(
+                      (e.push(
                         m.createElement(Dt, {
                           key: c.type + "_" + _.id,
                           type: c.type,
@@ -11740,7 +11772,7 @@
                           url: _.url,
                         }),
                       ),
-                        (r = !0);
+                        (r = !0));
                     }
                   }
                 }
@@ -12095,12 +12127,12 @@
                       if (i.status)
                         switch (i.status) {
                           case 1:
-                            (l = wt().ClinchedInvite), (t = !0);
+                            ((l = wt().ClinchedInvite), (t = !0));
                             break;
                           case 2:
-                            (l = wt().Eliminated), (t = !0);
+                            ((l = wt().Eliminated), (t = !0));
                         }
-                      a.push(
+                      (a.push(
                         m.createElement(
                           g.rU,
                           {
@@ -12140,7 +12172,7 @@
                           ),
                         ),
                       ),
-                        (r += 1);
+                        (r += 1));
                     }
                   }
               else
@@ -12284,19 +12316,19 @@
         Yt = t.n(xt),
         Vt = t(3961);
       !(function (e) {
-        (e[(e.Unrequested = 0)] = "Unrequested"),
+        ((e[(e.Unrequested = 0)] = "Unrequested"),
           (e[(e.Pending = 1)] = "Pending"),
           (e[(e.Valid = 2)] = "Valid"),
           (e[(e.Failed = 3)] = "Failed"),
-          (e[(e.Rerequest = 4)] = "Rerequest");
+          (e[(e.Rerequest = 4)] = "Rerequest"));
       })(Wt || (Wt = {}));
       var qt,
         zt = (function () {
           function e() {
-            (this.data = void 0),
+            ((this.data = void 0),
               (this.eState = Wt.Unrequested),
               (this.nExpirationTime = 0),
-              (0, La.rC)(this);
+              (0, La.rC)(this));
           }
           return (
             (e.prototype.getData = function (e, a, t) {
@@ -12325,9 +12357,9 @@
             }),
             (e.prototype.clearData = function () {
               var e = Date.now() / 1e3;
-              (this.eState = Wt.Unrequested),
+              ((this.eState = Wt.Unrequested),
                 (this.data = null),
-                (this.nExpirationTime = e);
+                (this.nExpirationTime = e));
             }),
             (e.prototype.expireData = function () {
               var e = Date.now() / 1e3;
@@ -12379,14 +12411,14 @@
           );
         })();
       !(function (e) {
-        (e[(e.Main = 0)] = "Main"),
+        ((e[(e.Main = 0)] = "Main"),
           (e[(e.Predictions = 1)] = "Predictions"),
-          (e[(e.Fantasy = 2)] = "Fantasy");
+          (e[(e.Fantasy = 2)] = "Fantasy"));
       })(qt || (qt = {}));
       var Xt,
         Jt = (function () {
           function e() {
-            (this.m_rgStandingsAsync = new zt()),
+            ((this.m_rgStandingsAsync = new zt()),
               (this.m_rgLeagueInfoListAsync = new zt()),
               (this.m_mapLeagueDataAsync = new Map()),
               (this.m_mapLeagueNodeDataAsync = new Map()),
@@ -12440,7 +12472,7 @@
               this.m_mapHelpState.set(qt.Fantasy, {
                 bHasAlreadyShown: !0,
                 sLocalStorage: "helpHasAlreadyShownFantasy",
-              });
+              }));
           }
           return (
             (e.prototype.triggerShowHelpPage = function (e) {
@@ -12456,13 +12488,13 @@
             }),
             (e.prototype.setHelpShown = function (e) {
               var a = this.m_mapHelpState.get(e);
-              (a.bHasAlreadyShown = !0),
-                localStorage.setItem(a.sLocalStorage, "true");
+              ((a.bHasAlreadyShown = !0),
+                localStorage.setItem(a.sLocalStorage, "true"));
             }),
             (e.prototype.resetHelpShown = function (e) {
               var a = this.m_mapHelpState.get(e);
-              (a.bHasAlreadyShown = !1),
-                localStorage.removeItem(a.sLocalStorage);
+              ((a.bHasAlreadyShown = !1),
+                localStorage.removeItem(a.sLocalStorage));
             }),
             (e.prototype.doUserGet = function (e, a) {
               return (0, r.mG)(this, void 0, void 0, function () {
@@ -12527,7 +12559,7 @@
               });
             }),
             (e.prototype.getOrCreateFromMap = function (e, a) {
-              return e.has(a) || e.set(a, new zt()), e.get(a);
+              return (e.has(a) || e.set(a, new zt()), e.get(a));
             }),
             (e.prototype.getSteamPlayerInfo = function () {
               var e = this;
@@ -12567,7 +12599,7 @@
               });
             }),
             (e.prototype.setNotification = function (e, a) {
-              this.doPost("SetNotificationDisabled", { id: e, disabled: a }),
+              (this.doPost("SetNotificationDisabled", { id: e, disabled: a }),
                 a
                   ? this.m_playerProfileInfo.data.disabled_notifications.push(e)
                   : this.m_playerProfileInfo.data.disabled_notifications.splice(
@@ -12575,7 +12607,7 @@
                         e,
                       ),
                       1,
-                    );
+                    ));
             }),
             (e.prototype.getLeagueInfoInternal = function () {
               var e = this;
@@ -12747,10 +12779,10 @@
             }),
             (e.prototype.requestSearchResults = function (e) {
               var a = this;
-              this.m_rgSearchResultsAsync.clearData(),
+              (this.m_rgSearchResultsAsync.clearData(),
                 this.m_rgSearchResultsAsync.getData(1, function () {
                   return a.doAnonymousGet("GetDPCSearchResults", { search: e });
-                });
+                }));
             }),
             (e.prototype.getSearchResults = function (e) {
               return this.m_rgSearchResultsAsync.data;
@@ -12763,7 +12795,7 @@
             }),
             (e.prototype.toggleFavorite = function (e, a, t, r) {
               var o = this;
-              this.m_rgFavoritesAsync.delayNewData(2),
+              (this.m_rgFavoritesAsync.delayNewData(2),
                 er.doPost("ToggleDPCFavorite", {
                   favorite_type: e,
                   favorite_id: a,
@@ -12782,7 +12814,7 @@
                       id: a,
                       name: t,
                       url: r,
-                    });
+                    }));
             }),
             (e.prototype.isFavorite = function (e, a) {
               var t = this,
@@ -12824,7 +12856,7 @@
                             if (
                               i.nodeId == e.m_selectedPrediction.leagueNodeId
                             ) {
-                              (e.m_selectedPrediction.payout =
+                              ((e.m_selectedPrediction.payout =
                                 e.m_selectedPrediction.teamPicked ==
                                 i.teams[0].teamId
                                   ? i.teams[0].payout
@@ -12833,7 +12865,7 @@
                                   Math.floor(
                                     e.m_selectedPrediction.payout *
                                       e.m_selectedPrediction.wagerAmount,
-                                  ));
+                                  )));
                               break;
                             }
                           }
@@ -12887,11 +12919,11 @@
               ) {
                 var n = t.predictions[o];
                 if (n.tournamentId == e && n.nodeId == a) {
-                  (r.wagerAmount = n.tokensUsed),
+                  ((r.wagerAmount = n.tokensUsed),
                     (r.teamPicked = n.teamId),
                     (r.payout = n.payoutOdds),
                     (r.payoutAmount = n.payoutAmount),
-                    (r.state = n.state);
+                    (r.state = n.state));
                   break;
                 }
               }
@@ -12941,10 +12973,10 @@
               this.selectProPredictionToMake(0, 0, 0, 0, 0);
             }),
             (e.prototype.setSelectedPredictionWagerAmount = function (e) {
-              (this.m_selectedPrediction.wagerAmount = e),
+              ((this.m_selectedPrediction.wagerAmount = e),
                 (this.m_selectedPrediction.payoutAmount = Math.floor(
                   e * this.m_selectedPrediction.payout,
-                ));
+                )));
             }),
             (e.prototype.getSelectedProPrediction = function () {
               return this.m_selectedPrediction;
@@ -12968,11 +13000,11 @@
                         0 == this.m_selectedPrediction.teamPicked ||
                         0 == this.m_selectedPrediction.wagerAmount
                       )
-                        return this.clearProPredictionToMake(), [2];
-                      (e =
+                        return (this.clearProPredictionToMake(), [2]);
+                      ((e =
                         (this.m_selectedPrediction.leagueId << 16) |
                         this.m_selectedPrediction.leagueNodeId),
-                        (r.label = 1);
+                        (r.label = 1));
                     case 1:
                       return (
                         r.trys.push([1, 3, , 4]),
@@ -13164,7 +13196,7 @@
             }),
             (e.prototype.setFantasyRosterSlot = function (e, a, t, r, o) {
               var n = this.getOrCreateFromMap(this.m_rgFantasyLineupsAsync, e);
-              (n.data.rgRosterSlots[t] = {
+              ((n.data.rgRosterSlots[t] = {
                 nAccountID: a,
                 strName: r,
                 strTeamLogoURL: o,
@@ -13172,11 +13204,11 @@
                 bNeedsSubmission: !0,
                 bInitialized: !0,
               }),
-                (n.data.bRosterNeedsSubmission = !0);
+                (n.data.bRosterNeedsSubmission = !0));
             }),
             (e.prototype.isFantasyRosterSlotLocked = function (e, a) {
               var t = this.getOrCreateFromMap(this.m_rgFantasyLineupsAsync, e);
-              return console.log(a), t.data.rgRosterSlots[a].bLocked;
+              return (console.log(a), t.data.rgRosterSlots[a].bLocked);
             }),
             (e.prototype.clearFantasyRosterSlot = function (e, a) {
               var t = this.getOrCreateFromMap(this.m_rgFantasyLineupsAsync, e);
@@ -13312,22 +13344,22 @@
             e
           );
         })();
-      !(function (e) {
-        (e[(e.Any = 0)] = "Any"),
+      (!(function (e) {
+        ((e[(e.Any = 0)] = "Any"),
           (e[(e.Player = 1)] = "Player"),
           (e[(e.Team = 2)] = "Team"),
-          (e[(e.League = 3)] = "League");
+          (e[(e.League = 3)] = "League"));
       })(Xt || (Xt = {})),
         (t.g.ClearBackgroundInterval = t.g.clearInterval),
         (t.g.ClearBackgroundTimeout = t.g.clearTimeout),
         (t.g.SetBackgroundInterval = t.g.setInterval),
-        (t.g.SetBackgroundTimeout = t.g.setTimeout);
+        (t.g.SetBackgroundTimeout = t.g.setTimeout));
       var jt,
         Qt,
         $t,
         er = new Jt();
-      document.addEventListener("DOMContentLoaded", function () {
-        c(), er.Init();
+      (document.addEventListener("DOMContentLoaded", function () {
+        (c(), er.Init());
       }),
         (window.LocalizationReady = function (e, a, t) {
           if ("english" !== a)
@@ -13338,19 +13370,19 @@
               o = null,
               n = void 0,
               i = null;
-            void 0 !== jt ? ((r = jt), (o = t)) : (r = t),
+            (void 0 !== jt ? ((r = jt), (o = t)) : (r = t),
               void 0 !== Qt ? ((n = Qt), (i = $t)) : (n = $t),
               X.InitFromObjects(r, o, n, i),
               (jt = void 0),
               (Qt = void 0),
-              ($t = void 0);
+              ($t = void 0));
           }
-        });
+        }));
     },
   },
   (e) => {
     e.O(0, [250], () => {
-      return (a = 7479), e((e.s = a));
+      return ((a = 7479), e((e.s = a)));
       var a;
     });
     e.O();

@@ -117,7 +117,7 @@ var m = i(r()),
       this.m_listeners.Unregister();
     }
     constructor(e) {
-      super(e),
+      (super(e),
         (this.state = {
           curLeftPosPct: this.props.xPosPct,
           curTopPosPct: this.props.yPosPct,
@@ -135,13 +135,13 @@ var m = i(r()),
         (this.m_aspectRatio =
           this.props.heightPct > 0 && this.props.widthPct > 0
             ? this.props.widthPct / this.props.heightPct
-            : 1);
+            : 1));
     }
     LinkRegionBoxRef(e) {
       this.m_elLinkRegionBox = e;
     }
     OnMouseDown(e, t) {
-      this.m_elLinkRegionBox?.parentElement &&
+      (this.m_elLinkRegionBox?.parentElement &&
         this.m_elLinkRegionBox.ownerDocument.defaultView &&
         ((this.m_fnMouseUp = (e) => {
           this.OnMouseUp(e, t);
@@ -173,7 +173,7 @@ var m = i(r()),
           this.m_fnMouseUp,
         )),
         e.preventDefault(),
-        e.stopPropagation();
+        e.stopPropagation());
     }
     OnMouseMove(t, n) {
       if (this.state.EdgeDown !== void 0) {
@@ -238,7 +238,7 @@ var m = i(r()),
             break;
           }
         }
-        t.preventDefault(), t.stopPropagation();
+        (t.preventDefault(), t.stopPropagation());
       }
     }
     IsValidPct(e) {
@@ -269,12 +269,12 @@ var m = i(r()),
           this.props.heightMinPct || 0,
           this.props.heightMaxPct || 100,
         );
-      this.props.bLockAspectRatio &&
+      (this.props.bLockAspectRatio &&
         (t.curLeftPosPct !== void 0 || t.curRightPosPct !== void 0
           ? (s = o / this.m_aspectRatio)
           : (o = s * this.m_aspectRatio)),
         t.curLeftPosPct === void 0 ? (a = 100 - (i + o)) : (i = 100 - a - o),
-        t.curTopPosPct === void 0 ? (r = 100 - (n + s)) : (n = 100 - r - s);
+        t.curTopPosPct === void 0 ? (r = 100 - (n + s)) : (n = 100 - r - s));
       let c = 100 - a - i,
         l = 100 - r - n;
       this.IsValidPct(i) &&
@@ -319,7 +319,7 @@ var m = i(r()),
       return e(100 - (this.GetYPercent(t) + this.state.curHeightPct), 0, 100);
     }
     OnMouseUp(e, t) {
-      this.setState({
+      (this.setState({
         curWidthPct: 100 - this.state.curRightPosPct - this.state.curLeftPosPct,
       }),
         this.setState({
@@ -335,7 +335,7 @@ var m = i(r()),
           link_url: this.state.text_link_url,
           link_description: this.state.text_link_description,
         }),
-        this.m_listeners.Unregister();
+        this.m_listeners.Unregister());
     }
     async HandleDelete() {
       this.props.deleteFn && this.props.deleteFn(this.props.index);
@@ -358,7 +358,7 @@ var m = i(r()),
       );
     }
     OnSaveLink() {
-      (this.m_strDescription = this.state.text_link_description ?? ``),
+      ((this.m_strDescription = this.state.text_link_description ?? ``),
         this.setState({ bEditingLink: !this.state.bEditingLink }),
         this.props.updateFn(this.props.index, {
           xPosPct: this.state.curLeftPosPct,
@@ -367,7 +367,7 @@ var m = i(r()),
           heightPct: this.state.curHeightPct,
           link_url: this.state.text_link_url,
           link_description: this.state.text_link_description,
-        });
+        }));
     }
     OnEditLink() {
       this.setState({ bEditingLink: !this.state.bEditingLink });
@@ -517,7 +517,7 @@ var m = i(r()),
       );
     }
   };
-n([o], K.prototype, `LinkRegionBoxRef`, null),
+(n([o], K.prototype, `LinkRegionBoxRef`, null),
   n([o], K.prototype, `OnMouseDown`, null),
   n([o], K.prototype, `OnMouseMove`, null),
   n([o], K.prototype, `OnMouseUp`, null),
@@ -526,5 +526,5 @@ n([o], K.prototype, `LinkRegionBoxRef`, null),
   n([o], K.prototype, `OnSetLinkDescriptionChange`, null),
   n([o], K.prototype, `OnSaveLink`, null),
   n([o], K.prototype, `OnEditLink`, null),
-  (K = n([p], K));
+  (K = n([p], K)));
 export { K as t };

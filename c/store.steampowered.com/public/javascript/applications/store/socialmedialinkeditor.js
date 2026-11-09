@@ -62,25 +62,25 @@ function _(_) {
         (_(_.current.firstElementChild.getBoundingClientRect().height),
         _(_.current.firstElementChild.getBoundingClientRect().width));
     };
-  _.useEffect(() => {
+  (_.useEffect(() => {
     _();
   }, []),
-    _.useEffect(() => () => _.cancel(`ReorderableList unmounting`), [_]);
+    _.useEffect(() => () => _.cancel(`ReorderableList unmounting`), [_]));
   let _ = (_, _) => {
       let _ = _.current[_]?.current;
       if (!_) {
         console.error(`start element grab missing element at index ` + _);
         return;
       }
-      _(!0), _(_), _(void 0), _(_);
+      (_(!0), _(_), _(void 0), _(_));
       let _ = _.clientX - _.getBoundingClientRect().left;
       _(_);
       let _ = _.clientY - _.getBoundingClientRect().top;
-      _(_),
+      (_(_),
         (_.style.position = `fixed`),
         (_.style.left = _.clientX - _ + `px`),
         (_.style.top = _.clientY - _ + `px`),
-        (_.style.zIndex = `1`);
+        (_.style.zIndex = `1`));
     },
     _ = _.useCallback(
       (_) => {
@@ -94,13 +94,13 @@ function _(_) {
     ),
     _ = _.useCallback(() => {
       let _ = _.current[_]?.current;
-      _
+      (_
         ? ((_.style.position = ``), (_.style.zIndex = ``))
         : console.error(`end element drag missing element`),
         _(!1),
         _(-1),
         _(void 0),
-        _(void 0);
+        _(void 0));
     }, [_]),
     _ = (_, _) => {
       _.token.reason ||
@@ -132,16 +132,16 @@ function _(_) {
             _ = _;
             break;
           }
-        _(_ ?? _.current.length), _(_);
+        (_(_ ?? _.current.length), _(_));
       },
       [_, _, _],
     );
-  _(window, `mousemove`, _ ? _ : void 0),
+  (_(window, `mousemove`, _ ? _ : void 0),
     _(window, `mouseup`, _ ? _ : void 0),
     _.useEffect(() => {
       for (let _ = _.current.length; _ < _.length; _++)
-        _.current.push(_.createRef()), _.current.push(_.createRef());
-    }, [_.length]);
+        (_.current.push(_.createRef()), _.current.push(_.createRef()));
+    }, [_.length]));
   let _ = (_) => {
       _(void 0);
       let _ = _?.trim(),
@@ -216,7 +216,7 @@ function _(_) {
                   onChange: (_) => _(_.target.value),
                   onKeyDown: (_) => _(_, _),
                   onFocus: (_) => {
-                    _(_), _(_.target.value);
+                    (_(_), _(_.target.value));
                   },
                   onBlur: () => _(_),
                 }),
@@ -290,11 +290,11 @@ function _(_) {
     ),
     _ = (_) => {
       let _ = _.slice();
-      _.splice(_, 1), _(_);
+      (_.splice(_, 1), _(_));
     },
     _ = (_, _) => {
       let _ = _.slice();
-      _(_, _, _), _(_);
+      (_(_, _, _), _(_));
     },
     _ = (_, _) => {
       let _ = _.map((_, _) =>
@@ -313,11 +313,11 @@ function _(_) {
         options: _,
         onAddLink: (_) => {
           let _ = _.slice();
-          _.push({
+          (_.push({
             type: _,
             link: ``,
           }),
-            _(_);
+            _(_));
         },
       }),
       (0, _.jsx)(_, {
@@ -465,11 +465,11 @@ function _(_) {
                 className: `btnv6_blue_hoverfade btn_medium`,
                 href: `#`,
                 onClick: (_) => {
-                  _.preventDefault(),
+                  (_.preventDefault(),
                     window.g_StoreLocHelper?.SaveFields([`tagline`]),
                     window.UpdateCuratorFromForm?.(
                       document.getElementById(`listform`),
-                    );
+                    ));
                 },
                 children: (0, _.jsx)(`span`, {
                   children: _(`#Button_Save`),

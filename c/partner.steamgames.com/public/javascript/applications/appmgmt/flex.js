@@ -128,4 +128,3 @@ var _ = [
 function _(_) {
   return /^(between|around|evenly)$/.test(_) ? `space-${_}` : _;
 }
-export { _, _, _ };

@@ -240,4 +240,3 @@ function _(_) {
     children: _(_),
   });
 }
-export { _ };

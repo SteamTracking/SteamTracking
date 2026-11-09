@@ -113,9 +113,9 @@ var C = class n {
       (i.m_bUsePartnerAPI = !!r),
       (i.m_bInitialized = !0),
       () => {
-        (i.m_serviceTransport = void 0),
+        ((i.m_serviceTransport = void 0),
           (i.m_bUsePartnerAPI = !1),
-          (i.m_bInitialized = !1);
+          (i.m_bInitialized = !1));
       }
     );
   }
@@ -132,9 +132,9 @@ var C = class n {
     return this.m_bReturnUnavailableItems;
   }
   async ResetCache() {
-    (this.m_bActivelyResettingCache = !0), this.FlushPendingInfo();
+    ((this.m_bActivelyResettingCache = !0), this.FlushPendingInfo());
     let e = [];
-    this.m_mapAppsInFlight.forEach((t) => {
+    (this.m_mapAppsInFlight.forEach((t) => {
       e.push(t.promise);
     }),
       this.m_mapBundleInFlight.forEach((t) => {
@@ -159,7 +159,7 @@ var C = class n {
       this.m_mapTagsInFlight.clear(),
       this.m_mapCreatorsInFlight.clear(),
       this.m_mapHubCategoriesInFlight.clear(),
-      (this.m_bActivelyResettingCache = !1);
+      (this.m_bActivelyResettingCache = !1));
   }
   static BIsInitialized() {
     return n.Get().m_bInitialized;
@@ -343,7 +343,7 @@ var C = class n {
       a = Array.from(this.m_setPendingCreatorInfo),
       o = Array.from(this.m_setPendingHubCategoryInfo),
       s = this.m_setPendingDataRequest;
-    (this.m_PendingInfoPromise = void 0),
+    ((this.m_PendingInfoPromise = void 0),
       (this.m_PendingInfoResolve = void 0),
       this.m_setPendingAppInfo.clear(),
       this.m_setPendingBundleInfo.clear(),
@@ -353,7 +353,7 @@ var C = class n {
       this.m_setPendingHubCategoryInfo.clear(),
       (this.m_setPendingDataRequest = {}),
       (this.m_PendingTimer = void 0),
-      this.HintLoadStoreItems(t, n, r, i, a, o, s).then((t) => e(t));
+      this.HintLoadStoreItems(t, n, r, i, a, o, s).then((t) => e(t)));
   }
   async HintLoadStoreApps(e, t) {
     return this.HintLoadStoreItems(e, null, null, null, null, null, t);
@@ -396,19 +396,19 @@ var C = class n {
       c = new Promise((e) => (s = e)),
       l = [],
       d = [];
-    (e || []).forEach((e) => {
+    ((e || []).forEach((e) => {
       let t = this.GetPreviousSupersetLoadPromise(e, 0, o);
       if (t) d.push(t);
       else {
         l.push(u.fromObject({ appid: e }));
         let t = x(this.GetStoreItemDataRequest(e, 0), o),
           n = this.m_mapAppsInFlight.get(e);
-        (t = x(n?.dataRequest, t)),
+        ((t = x(n?.dataRequest, t)),
           n && d.push(n.promise),
           this.m_mapAppsInFlight.set(e, {
             promise: n ? S(n.promise, c) : c,
             dataRequest: t,
-          });
+          }));
       }
     }),
       (t || []).forEach((e) => {
@@ -418,12 +418,12 @@ var C = class n {
           l.push(u.fromObject({ packageid: e }));
           let t = x(this.GetStoreItemDataRequest(e, 1), o),
             n = this.m_mapPackageInFlight.get(e);
-          (t = x(n?.dataRequest, t)),
+          ((t = x(n?.dataRequest, t)),
             n && d.push(n.promise),
             this.m_mapPackageInFlight.set(e, {
               promise: n ? S(n.promise, c) : c,
               dataRequest: t,
-            });
+            }));
         }
       }),
       (n || []).forEach((e) => {
@@ -433,12 +433,12 @@ var C = class n {
           l.push(u.fromObject({ bundleid: e }));
           let t = x(this.GetStoreItemDataRequest(e, 2), o),
             n = this.m_mapBundleInFlight.get(e);
-          (t = x(n?.dataRequest, t)),
+          ((t = x(n?.dataRequest, t)),
             n && d.push(n.promise),
             this.m_mapBundleInFlight.set(e, {
               promise: n ? S(n.promise, c) : c,
               dataRequest: t,
-            });
+            }));
         }
       }),
       (r || []).forEach((e) => {
@@ -448,12 +448,12 @@ var C = class n {
           l.push(u.fromObject({ tagid: e }));
           let t = x(this.GetStoreItemDataRequest(e, 4), o),
             n = this.m_mapTagsInFlight.get(e);
-          (t = x(n?.dataRequest, t)),
+          ((t = x(n?.dataRequest, t)),
             n && d.push(n.promise),
             this.m_mapTagsInFlight.set(e, {
               promise: n ? S(n.promise, c) : c,
               dataRequest: t,
-            });
+            }));
         }
       }),
       (i || []).forEach((e) => {
@@ -463,12 +463,12 @@ var C = class n {
           l.push(u.fromObject({ creatorid: e }));
           let t = x(this.GetStoreItemDataRequest(e, 5), o),
             n = this.m_mapCreatorsInFlight.get(e);
-          (t = x(n?.dataRequest, t)),
+          ((t = x(n?.dataRequest, t)),
             n && d.push(n.promise),
             this.m_mapCreatorsInFlight.set(e, {
               promise: n ? S(n.promise, c) : c,
               dataRequest: t,
-            });
+            }));
         }
       }),
       (a || []).forEach((e) => {
@@ -478,14 +478,14 @@ var C = class n {
           l.push(u.fromObject({ hubcategoryid: e }));
           let t = x(this.GetStoreItemDataRequest(e, 6), o),
             n = this.m_mapHubCategoriesInFlight.get(e);
-          (t = x(n?.dataRequest, t)),
+          ((t = x(n?.dataRequest, t)),
             n && d.push(n.promise),
             this.m_mapHubCategoriesInFlight.set(e, {
               promise: n ? S(n.promise, c) : c,
               dataRequest: t,
-            });
+            }));
         }
-      });
+      }));
     let f = 1;
     if (
       (l.length > 0 && (f = await this.InternalHandleLoadStoreItems(l, o)),
@@ -563,31 +563,31 @@ var C = class n {
   }
   async InternalHandleLoadStoreItems(e, n) {
     let a = 1;
-    (e = this.SortStoreItems(e)),
+    ((e = this.SortStoreItems(e)),
       n.include_included_items &&
         (n = {
           ...n,
           included_item_data_request: { ...n, include_included_items: !1 },
-        });
+        }));
     let u = [];
     try {
       let m = [];
-      for (; e.length > 0; ) {
+      for (; e.length > 0;) {
         let t = e.splice(0, this.k_nMaxBatchSize);
         if ((u.push(t), this.m_bUsePartnerAPI)) {
           let e = i.Init(o);
           e.Body().set_include_unpublished(!1);
           let r = e.Body().getitems_request(!0);
-          r.set_context(f(this.m_bUsePartnerAPI)),
+          (r.set_context(f(this.m_bUsePartnerAPI)),
             r.set_data_request(l.fromObject(n)),
             r.set_ids(t),
-            m.push(s.GetItems(this.GetServiceTransport(), e));
+            m.push(s.GetItems(this.GetServiceTransport(), e)));
         } else {
           let e = i.Init(c);
-          p(e, this.m_bUsePartnerAPI),
+          (p(e, this.m_bUsePartnerAPI),
             h(e, n),
             e.Body().set_ids(t),
-            m.push(d.GetItems(this.GetServiceTransport(), e));
+            m.push(d.GetItems(this.GetServiceTransport(), e)));
         }
       }
       (await Promise.all(m)).forEach((i, o) => {
@@ -604,28 +604,28 @@ var C = class n {
                 else {
                   switch (o) {
                     case 0:
-                      this.m_setUnavailableApps.add(a),
-                        this.m_mapApps.delete(a);
+                      (this.m_setUnavailableApps.add(a),
+                        this.m_mapApps.delete(a));
                       break;
                     case 1:
-                      this.m_setUnavailablePackages.add(a),
-                        this.m_mapPackages.delete(a);
+                      (this.m_setUnavailablePackages.add(a),
+                        this.m_mapPackages.delete(a));
                       break;
                     case 2:
-                      this.m_setUnavailableBundles.add(a),
-                        this.m_mapBundles.delete(a);
+                      (this.m_setUnavailableBundles.add(a),
+                        this.m_mapBundles.delete(a));
                       break;
                     case 4:
-                      this.m_setUnavailableTags.add(a),
-                        this.m_mapTags.delete(a);
+                      (this.m_setUnavailableTags.add(a),
+                        this.m_mapTags.delete(a));
                       break;
                     case 5:
-                      this.m_setUnavailableCreators.add(a),
-                        this.m_mapCreators.delete(a);
+                      (this.m_setUnavailableCreators.add(a),
+                        this.m_mapCreators.delete(a));
                       break;
                     case 6:
-                      this.m_setUnavailableHubCategories.add(a),
-                        this.m_mapHubCategories.delete(a);
+                      (this.m_setUnavailableHubCategories.add(a),
+                        this.m_mapHubCategories.delete(a));
                       break;
                     default:
                       console.error(
@@ -779,7 +779,7 @@ var C = class n {
       case 6:
         return this.BIsHubCategoryMissing(e);
       default:
-        return console.error(`BStoreItemMissing invalid type`, t), !0;
+        return (console.error(`BStoreItemMissing invalid type`, t), !0);
     }
   }
   BIsAppMissing(e) {
@@ -819,7 +819,7 @@ var C = class n {
           !0
         );
       default:
-        return console.error(`BStoreItemMissing invalid type`, t), !0;
+        return (console.error(`BStoreItemMissing invalid type`, t), !0);
     }
   }
   BIsAppUnavailableDueToCountryRestriction(e) {
@@ -840,7 +840,7 @@ var C = class n {
     let n = e.item_type(),
       r = null;
     if (n === void 0)
-      return console.warn(`Failed to load item data: ${e.success()}`), null;
+      return (console.warn(`Failed to load item data: ${e.success()}`), null);
     switch (n) {
       case 0:
         r = this.m_mapApps;
@@ -861,7 +861,7 @@ var C = class n {
         r = this.m_mapHubCategories;
         break;
       default:
-        return console.error(`Invalid item type: ${n}`), null;
+        return (console.error(`Invalid item type: ${n}`), null);
     }
     let i = r.get(e.id());
     if (

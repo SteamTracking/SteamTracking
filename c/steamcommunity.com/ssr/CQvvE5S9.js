@@ -140,7 +140,7 @@ function _(_, _) {
 var _ = (0, _.createContext)(null);
 function _() {
   let _ = (0, _.useContext)(_);
-  return _(!!_, `Must be used within a parent BucketContinuous!`), _;
+  return (_(!!_, `Must be used within a parent BucketContinuous!`), _);
 }
 var _ = [
   {
@@ -368,13 +368,13 @@ function _(_, _, _) {
     _ = _ - 2 * _,
     _ = (_, _) => Math.min(Math.trunc((_ - _) / (1 + _)), _),
     _ = _(_(_ + _, 0), _, _);
-  _.bSteamFeeCapped != _.bPublisherFeeCapped &&
+  (_.bSteamFeeCapped != _.bPublisherFeeCapped &&
     (_.bPublisherFeeCapped
       ? (_ = _(_(_, _.nPublisherFee), _, _))
       : _.bSteamFeeCapped && (_ = _(_(_, _.nSteamFee), _, _))),
     _.bPublisherFeeCapped &&
       _.bSteamFeeCapped &&
-      (_ = _(_ - (_.nSteamFee + _.nPublisherFee), _, _));
+      (_ = _(_ - (_.nSteamFee + _.nPublisherFee), _, _)));
   for (let _ = 0; _ < 3 && _.nTotal != _; _++)
     if (_.nTotal < _) _ = _(_.nBasePrice + _, _, _);
     else {
@@ -622,7 +622,7 @@ function _(_) {
       }),
       (0, _.jsx)(`form`, {
         onSubmit: (_) => {
-          _.preventDefault(), _ && _();
+          (_.preventDefault(), _ && _());
         },
         children: (0, _.jsx)(_, {
           direction: `column`,
@@ -950,7 +950,7 @@ function _(_ = `buy`) {
       (_) => {
         _(_);
         let _ = new URLSearchParams(location.search);
-        _ ? _.set(_, `1`) : _.delete(_), _(`?${_.toString()}`);
+        (_ ? _.set(_, `1`) : _.delete(_), _(`?${_.toString()}`));
       },
     ]
   );
@@ -958,11 +958,11 @@ function _(_ = `buy`) {
 function _(_) {
   let { confirmation: _, onRetry: _, serverInfo: _ } = _,
     _ = (0, _.useRef)(_);
-  (_.current = _),
+  ((_.current = _),
     (0, _.useEffect)(() => {
       let _ = setTimeout(() => _.current(), 1500);
       return () => clearTimeout(_);
-    }, [_]);
+    }, [_]));
   let _ = _(_.confirmation_type);
   return (0, _.jsxs)(_, {
     background: `dull-5`,
@@ -1127,7 +1127,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1152,12 +1152,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CMobilePerAccount_GetSettings_Request`;
@@ -1166,9 +1166,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.has_settings || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1219,7 +1219,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1240,14 +1240,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CMobilePerAccount_GetSettings_Response`;
@@ -1256,9 +1256,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.allow_sale_push || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1304,7 +1304,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1325,14 +1325,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CMobilePerAccount_SetSettings_Request`;
@@ -1341,7 +1341,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1366,12 +1366,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CMobilePerAccount_SetSettings_Response`;
@@ -1380,9 +1380,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.deviceid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1437,7 +1437,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1458,14 +1458,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CMobileDevice_RegisterMobileDevice_Request`;
@@ -1474,9 +1474,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.unique_deviceid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1496,7 +1496,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1517,14 +1517,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CMobileDevice_RegisterMobileDevice_Response`;
@@ -1533,9 +1533,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.deviceid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1555,7 +1555,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1576,14 +1576,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CMobileDevice_DeregisterMobileDevice_Notification`;
@@ -1592,9 +1592,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.app_type || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1629,7 +1629,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1650,14 +1650,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CMobileDevice_HasMobileDevice_Request`;
@@ -1666,9 +1666,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.found_device || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1698,7 +1698,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1719,14 +1719,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CMobileDevice_HasMobileDevice_Response`;
@@ -1735,9 +1735,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.authenticator_gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1762,7 +1762,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1783,14 +1783,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CMobileApp_GetMobileSummary_Request`;
@@ -1799,9 +1799,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.stale_time_seconds || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1846,7 +1846,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1867,14 +1867,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CMobileApp_GetMobileSummary_Response`;
@@ -2337,4 +2337,3 @@ function _(_) {
     ),
   });
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _ };

@@ -9,7 +9,7 @@ function _(_) {
     ),
     _ = (0, _.useMemo)(() => {
       let _ = window.location.href.split(`#`)[0];
-      return _.gidcomment !== null && (_ += `#c` + _.gidcomment), _;
+      return (_.gidcomment !== null && (_ += `#c` + _.gidcomment), _);
     }, [_.gidcomment]);
   return (0, _.jsx)(_, {
     text: _,

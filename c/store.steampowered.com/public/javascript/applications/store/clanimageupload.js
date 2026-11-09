@@ -103,13 +103,13 @@ var _ = _(_()),
         ) {
           for (let _ of _.data.images) _.clanAccountID = _;
           _(() => {
-            this.m_mapClanImageLoadState.set(_, {
+            (this.m_mapClanImageLoadState.set(_, {
               loaded: !0,
             }),
               this.m_mapClanToImages.set(_, _.data.images),
               this.GetImageListCallbackForClanAccountIDInternal(_).Dispatch(
                 _.data.images,
-              );
+              ));
           });
         }
       }
@@ -189,12 +189,12 @@ var _ = _(_()),
       return this.DeleteClanImageByID(_, _.imageid);
     }
   };
-_([_], _.prototype, `m_mapClanToImages`, void 0),
-  _([_], _.prototype, `m_mapClanImageLoadState`, void 0);
+(_([_], _.prototype, `m_mapClanToImages`, void 0),
+  _([_], _.prototype, `m_mapClanImageLoadState`, void 0));
 var _ = new _();
 function _(_) {
   let [_, _] = (0, _.useState)(_.GetClanImagesByAccount(_));
-  return _(_.GetImageListCallbackForClanAccountID(_), _), _;
+  return (_(_.GetImageListCallbackForClanAccountID(_), _), _);
 }
 function _(_) {
   let _ = _.InitFromClanID(_, _.EUNIVERSE),
@@ -644,7 +644,7 @@ var _ = `A5DZIArSiNc-`,
     };
     async OnCrop() {
       let _ = this.props.uploadFile.GetCanvasImageSource();
-      _ &&
+      (_ &&
         (await _(
           this.props.uploadFile,
           _,
@@ -656,7 +656,7 @@ var _ = `A5DZIArSiNc-`,
           this.GetDestHeight(),
           this.props.fileType,
         )),
-        this.props.closeModal?.();
+        this.props.closeModal?.());
     }
     UpdateCrop(_, _) {
       this.setState({
@@ -790,7 +790,7 @@ var _ = `A5DZIArSiNc-`,
       });
     }
   };
-_([_], _.prototype, `OnCrop`, null), _([_], _.prototype, `UpdateCrop`, null);
+(_([_], _.prototype, `OnCrop`, null), _([_], _.prototype, `UpdateCrop`, null));
 async function _(_, _, _, _, _, _, _, _, _) {
   return new Promise((_, _) => {
     let _ = _(_);
@@ -799,7 +799,7 @@ async function _(_, _, _, _, _, _, _, _, _) {
       return;
     }
     let _ = document.createElement(`canvas`);
-    (_.width = _),
+    ((_.width = _),
       (_.height = _),
       _.getContext(`2d`)?.drawImage(_, _, _, _, _, 0, 0, _, _),
       _.toBlob((_) => {
@@ -815,7 +815,7 @@ async function _(_, _, _, _, _, _, _, _, _) {
               (_.bCropped = !0),
               _())
             : _(`Unable to apply crop into image`);
-      });
+      }));
   });
 }
 function _(_) {
@@ -860,7 +860,7 @@ var _ = class {
   uploadTime;
   fileType;
   constructor(_, _, _, _, _) {
-    _(this),
+    (_(this),
       (this.file = _),
       (this.filename = _),
       (this.fileType = _(_) ?? 0),
@@ -871,21 +871,21 @@ var _ = class {
       (this.height = _.height),
       (this.width = _.width),
       (this.m_originalDataUrl = _),
-      (this.dataUrl = _);
+      (this.dataUrl = _));
   }
   ResetImage() {
-    (this.height = this.m_originalSize.height),
+    ((this.height = this.m_originalSize.height),
       (this.width = this.m_originalSize.width),
-      (this.dataUrl = this.m_originalDataUrl);
+      (this.dataUrl = this.m_originalDataUrl));
   }
   GetImageOptionLabel() {}
 };
-_([_], _.prototype, `dataUrl`, void 0),
+(_([_], _.prototype, `dataUrl`, void 0),
   _([_], _.prototype, `width`, void 0),
   _([_], _.prototype, `height`, void 0),
   _([_], _.prototype, `status`, void 0),
   _([_.ref], _.prototype, `message`, void 0),
-  _([_], _.prototype, `language`, void 0);
+  _([_], _.prototype, `language`, void 0));
 var _ = 960,
   _ = 311,
   _ = 480,
@@ -895,7 +895,7 @@ var _ = 960,
     m_currentImageOption = void 0;
     m_currentImageOptionKey = void 0;
     constructor(_, _, _, _, _, _) {
-      super(_, _, _, _, _), _(this), (this.m_rgImageOptions = _);
+      (super(_, _, _, _, _), _(this), (this.m_rgImageOptions = _));
     }
     IsValidAssetType(_, _) {
       let _ = 0,
@@ -907,7 +907,7 @@ var _ = 960,
           this.m_rgImageOptions.some(
             (_) => _.sKey == this.GetCurrentImageOption()?.sKey,
           );
-      if (_) (_ = _.width), (_ = _.height), (_ = !0);
+      if (_) ((_ = _.width), (_ = _.height), (_ = !0));
       else if (this.GetCurrentImageOption()) {
         let _ = _[this.GetCurrentImageOption().artworkType];
         _ &&
@@ -984,20 +984,21 @@ var _ = 960,
       return this.m_currentImageOption ?? this.ComputeDefaultImageOption();
     }
     SetCurrentImageOption(_) {
-      (this.m_currentImageOption = _), (this.m_currentImageOptionKey = _?.sKey);
+      ((this.m_currentImageOption = _),
+        (this.m_currentImageOptionKey = _?.sKey));
     }
   };
-_([_], _.prototype, `m_currentImageOption`, void 0),
-  _([_], _.prototype, `m_currentImageOptionKey`, void 0);
+(_([_], _.prototype, `m_currentImageOption`, void 0),
+  _([_], _.prototype, `m_currentImageOptionKey`, void 0));
 var _ = class extends _ {
   bCropped = !1;
   localizedImageGroupPrimaryImage;
   media;
   constructor(_, _, _, _, _, _, _, _) {
-    super(_, _, _, _, _, _),
+    (super(_, _, _, _, _, _),
       _(this),
       (this.media = _),
-      (this.localizedImageGroupPrimaryImage = _);
+      (this.localizedImageGroupPrimaryImage = _));
   }
   IsValidAssetType(_, _) {
     return (
@@ -1055,7 +1056,7 @@ function _(_, _, _) {
   });
   return (
     _.forEach((_) => {
-      (_.status = `waiting`), (_.message = ``);
+      ((_.status = `waiting`), (_.message = ``));
     }),
     _
   );
@@ -1066,13 +1067,13 @@ async function _(_, _, _, _, _) {
   for (let _ of _) {
     _.status = `uploading`;
     let _ = await _(_, _.filename, _.language ?? -1, _);
-    (_.status = _.bSuccess ? `success` : `failed`),
+    ((_.status = _.bSuccess ? `success` : `failed`),
       (_.message = !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ``),
       _.push({
         bSuccess: _.bSuccess,
         image: _,
         uploadResult: _.result,
-      });
+      }));
   }
   return _;
 }
@@ -1081,17 +1082,17 @@ async function _(_, _, _, _, _, _) {
     _ = [],
     _ = 0,
     _ = async () => {
-      for (; _ < _.length; ) {
+      for (; _ < _.length;) {
         let _ = _++,
           _ = _[_];
         _.status = `uploading`;
         let _ = await _(_, _.filename, _.language ?? -1, _);
-        (_.status = _.bSuccess ? `success` : `failed`),
+        ((_.status = _.bSuccess ? `success` : `failed`),
           (_.message = !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ``),
           (_[_] = {
             image: _,
             uploadResult: _,
-          });
+          }));
       }
     },
     _ = Array.from(
@@ -1207,12 +1208,12 @@ var _ = class extends _ {
   m_localizedImageGroupPrimaryImage;
   m_lastError = void 0;
   constructor(_, _, _, _) {
-    super(),
+    (super(),
       _(this),
       (this.m_clanSteamID = _),
       (this.m_rgImageOptions = _(_)),
       (this.m_localizedImageGroupPrimaryImage = _),
-      (this.m_clanImagesV2 = _ ?? !1);
+      (this.m_clanImagesV2 = _ ?? !1));
   }
   GetClanSteamID() {
     return this.m_clanSteamID;
@@ -1235,7 +1236,7 @@ var _ = class extends _ {
       _,
       this.m_localizedImageGroupPrimaryImage,
     );
-    return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+    return ((this.m_filesToUpload = [...this.m_filesToUpload, _]), !0);
   }
   async AddExistingClanImage(_, _ = 0) {
     let _ = _.GetHashAndExt(_);
@@ -1250,8 +1251,8 @@ var _ = class extends _ {
     return await this.AddImage(_, _);
   }
   DeleteUploadImageByIndex(_) {
-    this.m_filesToUpload.splice(_, 1),
-      (this.m_filesToUpload = [...this.m_filesToUpload]);
+    (this.m_filesToUpload.splice(_, 1),
+      (this.m_filesToUpload = [...this.m_filesToUpload]));
   }
   DeleteUploadImage(_) {
     let _ = this.m_filesToUpload.findIndex(
@@ -1293,7 +1294,7 @@ var _ = class extends _ {
     return this.m_filesCompleted.indexOf(_) != -1;
   }
   RetryAllFailedUploads() {
-    this.CancelAllUploads(), this.UploadAllImages();
+    (this.CancelAllUploads(), this.UploadAllImages());
   }
   async handleUploadRefresh(_) {
     await _.LoadClanImages(this.m_clanSteamID, !0, _);
@@ -1306,13 +1307,13 @@ var _ = class extends _ {
       _ = _.GetCurrentImageOption(),
       _ = _.GetResizeDimension(),
       _ = new FormData();
-    _.append(`clanimage`, _, _),
+    (_.append(`clanimage`, _, _),
       _.append(`sessionid`, _()),
       this.m_clanImagesV2 && _.append(`clan_images_v2`, `1`),
       _?.artworkType && _.append(`arttype`, _.artworkType),
       _ &&
         _.length > 0 &&
-        _.append(`resize`, _.map((_) => _.width + `x` + _.height).join(`,`));
+        _.append(`resize`, _.map((_) => _.width + `x` + _.height).join(`,`)));
     let _ = `/uploadimage/`,
       _ = this.m_localizedImageGroupPrimaryImage;
     _ &&
@@ -1340,15 +1341,15 @@ var _ = class extends _ {
       _,
       _ = !0;
     try {
-      (_ = await _.default.post(_, _, _)), this.m_filesCompleted.push(_);
+      ((_ = await _.default.post(_, _, _)), this.m_filesCompleted.push(_));
     } catch (_) {
-      (_ = !1),
+      ((_ = !1),
         (this.m_lastError = {
           file: _,
           status: _.response ? _.response.status : 500,
           message: _(_).strErrorMsg,
         }),
-        (_ = _.response);
+        (_ = _.response));
     }
     return (
       _ || (await this.handleUploadRefresh(_)),
@@ -1359,14 +1360,14 @@ var _ = class extends _ {
     );
   }
 };
-_([_], _.prototype, `m_filesToUpload`, void 0),
+(_([_], _.prototype, `m_filesToUpload`, void 0),
   _([_], _.prototype, `m_filesCompleted`, void 0),
   _([_], _.prototype, `m_lastError`, void 0),
   _([_], _.prototype, `AddImage`, null),
   _([_], _.prototype, `AddExistingClanImage`, null),
   _([_], _.prototype, `DeleteUploadImageByIndex`, null),
   _([_], _.prototype, `DeleteUploadImage`, null),
-  _([_], _.prototype, `ClearImages`, null);
+  _([_], _.prototype, `ClearImages`, null));
 var _ = class extends _ {
   constructor(_, _, _) {
     super(_, _, _, !1);
@@ -1396,4 +1397,3 @@ function _(_, _, _) {
     _ = _.ConvertTo64BitString();
   return _.useMemo(() => new _(_, _, _), [_, _]);
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

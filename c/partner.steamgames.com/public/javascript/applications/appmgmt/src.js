@@ -2,18 +2,18 @@ import { _, _, _, _, _, _, _, _, _ } from "./mobx.esm.js";
 function _(_, _ = 0, _ = Math.random) {
   if (_?.length > 1) {
     let _ = _ > 0 ? Math.min(_, _.length) : _.length;
-    for (; _ !== 0; ) {
+    for (; _ !== 0;) {
       let _ = Math.floor(_() * _);
       --_;
       let _ = _[_];
-      (_[_] = _[_]), (_[_] = _);
+      ((_[_] = _[_]), (_[_] = _));
     }
   }
   return _;
 }
 function _(_, _) {
   let _ = _.slice();
-  return _(_), _.slice(0, _);
+  return (_(_), _.slice(0, _));
 }
 function _(_, _, _) {
   if (_ >= 0 && _ >= 0) {
@@ -32,7 +32,7 @@ function _(_, _) {
 function _(_, _) {
   let _ = 0,
     _ = _.length - 1;
-  for (; _ <= _; ) {
+  for (; _ <= _;) {
     let _ = Math.floor((_ + _) / 2),
       _ = _(_[_]);
     if (_ > 0) _ = _ + 1;
@@ -127,7 +127,7 @@ var _ = class {
       return new Promise((_) => {
         let _ = [],
           _ = () => {
-            _.forEach((_) => _.Unregister()), _();
+            (_.forEach((_) => _.Unregister()), _());
           };
         for (let _ of _) _.push(_.Register(_));
       });
@@ -176,9 +176,9 @@ var _ = class {
     m_sName;
     m_fnIdGenerator = void 0;
     constructor(_, _) {
-      (this.m_sName = _),
+      ((this.m_sName = _),
         (this.m_fnIdGenerator = _),
-        _.Get().RegisterLogName(_);
+        _.Get().RegisterLogName(_));
     }
     Debug(..._) {
       this.Log(0, ..._);
@@ -209,11 +209,11 @@ var _ = class {
       _(_, _, _, _, _, this.m_sName, ..._);
     }
   };
-_([_], _.prototype, `Debug`, null),
+(_([_], _.prototype, `Debug`, null),
   _([_], _.prototype, `Info`, null),
   _([_], _.prototype, `Warning`, null),
   _([_], _.prototype, `Error`, null),
-  _([_], _.prototype, `Assert`, null);
+  _([_], _.prototype, `Assert`, null));
 var _ = class _ {
   static k_EnabledLogNames_StorageKey = `EnabledWebLogs`;
   static k_IncludeBacktraceInLog_StorageKey = `IncludeBacktraceInLog`;
@@ -247,14 +247,14 @@ var _ = class _ {
         return _;
       }
     };
-    (this.m_bIncludeBacktraceInLog = !!_(
+    ((this.m_bIncludeBacktraceInLog = !!_(
       _.k_IncludeBacktraceInLog_StorageKey,
       !1,
     )),
       (this.m_bAllowCSSInLogStyling = !!_(
         _.k_AllowCSSInLogColors_StorageKey,
         !0,
-      ));
+      )));
     let _ = _(_.k_EnabledLogNames_StorageKey, void 0);
     if (Array.isArray(_)) {
       this.m_setEnabledDebugLogs = new Set(_);
@@ -264,10 +264,10 @@ var _ = class _ {
         Array.from(this.m_setEnabledDebugLogs),
       );
     }
-    (this.m_bLoading = !1), this.m_SettingsChangedCallback.Dispatch();
+    ((this.m_bLoading = !1), this.m_SettingsChangedCallback.Dispatch());
   }
   async SaveSettings() {
-    localStorage.setItem(
+    (localStorage.setItem(
       _.k_EnabledLogNames_StorageKey,
       JSON.stringify(Array.from(this.m_setEnabledDebugLogs)),
     ),
@@ -282,10 +282,10 @@ var _ = class _ {
       this.LogAsLogManager(
         `Saved enabled debug log names. Will print log messages for:`,
         Array.from(this.m_setEnabledDebugLogs),
-      );
+      ));
   }
   PrintEnabledLogs(..._) {
-    _ &&
+    (_ &&
       _.length > 0 &&
       console.warn(
         `Use DebugLogEnable( '${_.join(`', '`)}' ) to enable a log. This function tells you what's enabled.`,
@@ -293,7 +293,7 @@ var _ = class _ {
       this.LogAsLogManager(
         `Will print log messages for:`,
         Array.from(this.m_setEnabledDebugLogs),
-      );
+      ));
   }
   static Get() {
     return (
@@ -335,11 +335,11 @@ var _ = class _ {
     _.forEach((_) => this.SetDebugLogEnabled(_, _));
   }
   async SetAllDebugLogsEnabled(_) {
-    (this.m_setEnabledDebugLogs = _
+    ((this.m_setEnabledDebugLogs = _
       ? new Set(this.m_setKnownDebugLogs)
       : new Set()),
       this.m_SettingsChangedCallback.Dispatch(),
-      await this.SaveSettings();
+      await this.SaveSettings());
   }
   RegisterForSettingsChanges(_) {
     return this.m_SettingsChangedCallback.Register(_);
@@ -348,17 +348,17 @@ var _ = class _ {
     return this.m_bIncludeBacktraceInLog;
   }
   async SetIncludeBacktraceInLog(_) {
-    (this.m_bIncludeBacktraceInLog = _),
+    ((this.m_bIncludeBacktraceInLog = _),
       this.m_SettingsChangedCallback.Dispatch(),
-      await this.SaveSettings();
+      await this.SaveSettings());
   }
   get AllowCSSInLogStyling() {
     return this.m_bAllowCSSInLogStyling;
   }
   async SetAllowCSSInLogStyling(_) {
-    (this.m_bAllowCSSInLogStyling = _),
+    ((this.m_bAllowCSSInLogStyling = _),
       this.m_SettingsChangedCallback.Dispatch(),
-      await this.SaveSettings();
+      await this.SaveSettings());
   }
   GetLogNames() {
     return Array.from(this.LogNames).sort();
@@ -406,9 +406,9 @@ function _(_, _, _, _, _, _, ..._) {
     ];
   } else _ = [`${_}:`, ..._];
   if (_)
-    console.groupCollapsed(..._),
+    (console.groupCollapsed(..._),
       console.trace(`Callstack`),
-      console.groupEnd();
+      console.groupEnd());
   else
     switch (_) {
       case 0:
@@ -422,7 +422,7 @@ function _(_, _, _, _, _, _, ..._) {
         console.clogerror ? console.clogerror(3, ..._) : console.error(..._);
     }
 }
-(window.DebugLogEnable = (..._) => _.Get().SetDebugLogsEnabled(!0, ..._)),
+((window.DebugLogEnable = (..._) => _.Get().SetDebugLogsEnabled(!0, ..._)),
   (window.DebugLogDisable = (..._) => _.Get().SetDebugLogsEnabled(!1, ..._)),
   (window.DebugLogEnableAll = () => _.Get().SetAllDebugLogsEnabled(!0)),
   (window.DebugLogDisableAll = () => _.Get().SetAllDebugLogsEnabled(!1)),
@@ -432,7 +432,7 @@ function _(_, _, _, _, _, _, ..._) {
   (window.DebugLogNames = () => _.Get().GetLogNames()),
   (window.DebugLogEnabled = (..._) => _.Get().PrintEnabledLogs(..._)),
   (window.EnableSteamConsole = (_ = !0) =>
-    _.Get().SetDebugLogEnabled(`SteamClient`, _));
+    _.Get().SetDebugLogEnabled(`SteamClient`, _)));
 var _ = (function (_) {
   return (
     (_[(_.INVALID = 0)] = `INVALID`),
@@ -490,7 +490,7 @@ function _(..._) {
 function _(_, _) {
   let _ = _.useRef(void 0);
   return _.useCallback((_) => {
-    _.current && _.current(), (_.current = _(_));
+    (_.current && _.current(), (_.current = _(_)));
   }, _);
 }
 function _(_) {
@@ -502,7 +502,7 @@ function _(_) {
 }
 function _(_, _) {
   let _ = _.useRef(!1);
-  _.useLayoutEffect(
+  (_.useLayoutEffect(
     () => () => {
       _.current && _(_, void 0);
     },
@@ -510,7 +510,7 @@ function _(_, _) {
   ),
     _.useLayoutEffect(() => {
       (_ || _.current) && (_(_, _), (_.current = !!_));
-    }, [_, _]);
+    }, [_, _]));
 }
 function _(_) {
   return typeof _ == `object` && !!_ && `value` in _;
@@ -532,9 +532,9 @@ var _ = (function (_) {
     _
   );
 })({});
-_._, _.CANCEL, _.SECONDARY, _.OPTIONS, _.START;
+(_._, _.CANCEL, _.SECONDARY, _.OPTIONS, _.START);
 function _(_, _, _) {
-  return _.addEventListener(_, _), () => _(_, _, _);
+  return (_.addEventListener(_, _), () => _(_, _, _));
 }
 function _(_, _, _) {
   _.removeEventListener(_, _);
@@ -629,13 +629,13 @@ var _ = _(),
     static RestoreSerializedNavState(_, _, _ = 0) {
       let { root: _, bHadFocus: _ } = _;
       _.Tree.Controller.RestoreHistoryTransaction(() => {
-        _.RestoreSerializedNavNode(_, _),
-          (_ == 1 || (_ == 0 && _)) && _.BTakeFocus(_.APPLICATION);
+        (_.RestoreSerializedNavNode(_, _),
+          (_ == 1 || (_ == 0 && _)) && _.BTakeFocus(_.APPLICATION));
       });
     }
     static RestoreSerializedNavNode(_, _, _ = 0) {
       let { sNavKey: _, iActiveChild: _ = -1, rgChildren: _ } = _;
-      _ && _(_ == _.NavKey, `navkey mismatch`), _.SetActiveChild(_);
+      (_ && _(_ == _.NavKey, `navkey mismatch`), _.SetActiveChild(_));
       let _ = _.IsDebugEnabled() ? `[${_.Tree._}]${_(_)}` : ``;
       if (_ && _.length) {
         let [_] = _.GetChildren();
@@ -656,18 +656,18 @@ var _ = _(),
         }
         if (_ != -1 && _[_]?.sNavKey) {
           let _ = _.get(_[_].sNavKey);
-          _(
+          (_(
             `${_}Restoring node ${_.NavKey}, child with focus: ${_[_].sNavKey} ${_ === void 0 ? `MISSING!!` : ``}`,
           ),
-            _ && _.SetActiveChild(_.indexOf(_));
+            _ && _.SetActiveChild(_.indexOf(_)));
         }
         let _ = 0,
           _ = 0;
-        for (; _ < _.length && _ < _.length; ) {
-          for (; _ < _.length && _[_].NavKey; ) _++;
-          for (; _ < _.length && _[_].sNavKey; ) _++;
+        for (; _ < _.length && _ < _.length;) {
+          for (; _ < _.length && _[_].NavKey;) _++;
+          for (; _ < _.length && _[_].sNavKey;) _++;
           if (_ >= _.length || _ >= _.length) break;
-          _.RestoreSerializedNavNode(_[_], _[_], _ + 1), _++, _++;
+          (_.RestoreSerializedNavNode(_[_], _[_], _ + 1), _++, _++);
         }
       }
     }
@@ -706,7 +706,7 @@ function _(_) {
   if (_ == 0) return ``;
   let _ = ``;
   for (let _ = 0; _ < _; _++) _ += `*`;
-  return (_ += ` `), _;
+  return ((_ += ` `), _);
 }
 function _(_) {
   return _ != null && _.focus !== void 0;
@@ -726,11 +726,11 @@ function _(_, _) {
 }
 function _(_) {
   let _;
-  return _ && (_ = _.ownerDocument.defaultView), _;
+  return (_ && (_ = _.ownerDocument.defaultView), _);
 }
 function _(_, _) {
   let _ = _?.parentElement;
-  for (; _; ) {
+  for (; _;) {
     if (_(_)) {
       let _ = window.getComputedStyle(_);
       if (
@@ -748,7 +748,7 @@ function _(_, _) {
 }
 function _(_, _) {
   let _ = _;
-  for (; _; ) {
+  for (; _;) {
     if (_(_)) return _;
     _ = _.parentElement;
   }
@@ -790,23 +790,23 @@ var _ = class {
     return this.Value;
   }
 };
-_([_], _.prototype, `SyncStore`, null), _([_], _.prototype, `GetValue`, null);
+(_([_], _.prototype, `SyncStore`, null), _([_], _.prototype, `GetValue`, null));
 var _ = class extends _ {},
   _ = class extends _ {
     m_callbacks;
     m_currentValue;
     m_fnEquals;
     constructor(_, _) {
-      super(),
+      (super(),
         (this.m_callbacks = new _()),
         (this.m_currentValue = _),
-        (this.m_fnEquals = _);
+        (this.m_fnEquals = _));
     }
     Set(_) {
       if (this.m_fnEquals) {
         if (this.m_fnEquals(this.m_currentValue, _)) return !1;
       } else if (this.m_currentValue === _) return !1;
-      return (this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0;
+      return ((this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0);
     }
     get Value() {
       return this.m_currentValue;
@@ -828,16 +828,16 @@ var _ = class {
   m_fnCallback;
   m_fnOnCancel;
   Schedule(_, _) {
-    this.IsScheduled() && this.Cancel(),
+    (this.IsScheduled() && this.Cancel(),
       (this.m_fnCallback = _),
-      (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _));
+      (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _)));
   }
   AsyncSchedule(_, _) {
     return new Promise((_, _) => {
-      this.Schedule(_, () => {
-        _(), _();
+      (this.Schedule(_, () => {
+        (_(), _());
       }),
-        (this.m_fnOnCancel = _);
+        (this.m_fnOnCancel = _));
     });
   }
   IsScheduled() {
@@ -846,29 +846,29 @@ var _ = class {
   Cancel() {
     if (this.m_schTimer) {
       let _ = this.m_fnOnCancel;
-      clearTimeout(this.m_schTimer), this.Reset(), _ && _();
+      (clearTimeout(this.m_schTimer), this.Reset(), _ && _());
     }
   }
   Reset() {
-    (this.m_schTimer = void 0),
+    ((this.m_schTimer = void 0),
       (this.m_fnCallback = void 0),
-      (this.m_fnOnCancel = void 0);
+      (this.m_fnOnCancel = void 0));
   }
   ScheduledInternal() {
     let _ = this.m_fnCallback;
-    this.Reset(), _?.();
+    (this.Reset(), _?.());
   }
 };
 _([_], _.prototype, `ScheduledInternal`, null);
 var _ = class {
     m_rgListeners = [];
     AddEventListener(_, _, _) {
-      _.addEventListener(_, _),
+      (_.addEventListener(_, _),
         this.m_rgListeners.push({
           element: _,
           type: _,
           listener: _,
-        });
+        }));
     }
     Unregister() {
       for (let _ of this.m_rgListeners)
@@ -943,7 +943,7 @@ function _(_) {
 }
 function _(_, _) {
   let _ = _;
-  for (; _; ) {
+  for (; _;) {
     if (
       (_.parentNode?.nodeType == Node.DOCUMENT_FRAGMENT_NODE &&
         (_ = _.parentNode.host),
@@ -978,7 +978,7 @@ function _(_, _) {
 function _(_) {
   let _ = 1,
     _ = _;
-  for (; _ != null && _.tagName != `HTML`; ) {
+  for (; _ != null && _.tagName != `HTML`;) {
     let _ = getComputedStyle(_);
     if (_.zoom) {
       let _ = Number.parseFloat(_.zoom);
@@ -997,16 +997,16 @@ function _(_) {
 }
 function _(_) {
   let _;
-  return _ && (_ = _.ownerDocument.defaultView), _;
+  return (_ && (_ = _.ownerDocument.defaultView), _);
 }
 function _(_) {
   let _ = window.top ?? window,
     _ = _.document,
     _ = _.createElement(`textarea`);
-  (_.textContent = _),
+  ((_.textContent = _),
     (_.style.position = `fixed`),
     _.body.appendChild(_),
-    _.select();
+    _.select());
   try {
     if (
       (_(_, `Browser.NotifyUserActivation`) &&
@@ -1021,7 +1021,7 @@ function _(_) {
   }
 }
 function _(_) {
-  _.startsWith(`steam://openurl/`) && (_ = _.slice(16)), _(_);
+  (_.startsWith(`steam://openurl/`) && (_ = _.slice(16)), _(_));
 }
 function _(_) {
   let _ = _.ownerDocument;
@@ -1066,12 +1066,12 @@ function _(_, _) {
 }
 function _(_, _, _) {
   let _ = _.parentElement;
-  for (; _ && _ !== _ && !_.hasAttribute(_); ) _ = _.parentElement;
+  for (; _ && _ !== _ && !_.hasAttribute(_);) _ = _.parentElement;
   return _ || _;
 }
 function _(_, _) {
   let _ = _?.parentElement;
-  for (; _; ) {
+  for (; _;) {
     if (_(_)) {
       if (!_ || _ == `x`) {
         let _ = window.getComputedStyle(_);
@@ -1098,7 +1098,7 @@ function _(_, _) {
 }
 function _(_, _) {
   let _ = _;
-  for (; _; ) {
+  for (; _;) {
     if (_(_)) return _;
     _ = _.parentElement;
   }
@@ -1137,7 +1137,7 @@ function _(_, _, _) {
     }
     _.push(_);
   }
-  return _.prepend(..._), _;
+  return (_.prepend(..._), _);
 }
 function _(_, _, _) {
   if (_.type === `childList`) {
@@ -1310,15 +1310,15 @@ var _ = class {
     m_fnBoundAnimationFunc = void 0;
     m_window;
     constructor(_, _) {
-      (this.m_window = _),
+      ((this.m_window = _),
         (this.m_options = {
           timing: `sine`,
           ..._,
-        });
+        }));
     }
     Start() {
-      (this.m_msStart = performance.now()),
-        (this.m_msEnd = this.m_msStart + this.m_options.msDuration);
+      ((this.m_msStart = performance.now()),
+        (this.m_msEnd = this.m_msStart + this.m_options.msDuration));
       let _;
       switch (this.m_options.timing) {
         case `linear`:
@@ -1338,9 +1338,9 @@ var _ = class {
             return 0.5 - Math.cos(_ * Math._) / 2;
           };
       }
-      (this.m_bActive = !0),
+      ((this.m_bActive = !0),
         (this.m_fnBoundAnimationFunc = this.OnInterval.bind(this, _)),
-        this.m_window.requestAnimationFrame(this.m_fnBoundAnimationFunc);
+        this.m_window.requestAnimationFrame(this.m_fnBoundAnimationFunc));
     }
     BIsActive() {
       return this.m_bActive;
@@ -1350,7 +1350,7 @@ var _ = class {
         try {
           this.Update(1);
         } catch {}
-        this.ClearInterval(), this.FireOnComplete();
+        (this.ClearInterval(), this.FireOnComplete());
       }
     }
     FireOnComplete() {
@@ -1379,7 +1379,7 @@ var _ = class {
   _ = class extends _ {
     m_fnCallback;
     constructor(_, _, _) {
-      super(_, _), (this.m_fnCallback = _);
+      (super(_, _), (this.m_fnCallback = _));
     }
     Update(_) {
       this.m_fnCallback(_);
@@ -1390,9 +1390,9 @@ var _ = class {
     m_propTargets;
     m_props = {};
     constructor(_, _, _) {
-      super(`ownerDocument` in _ ? _(_) : _, _),
+      (super(`ownerDocument` in _ ? _(_) : _, _),
         (this.m_object = _),
-        (this.m_propTargets = _);
+        (this.m_propTargets = _));
     }
     Start() {
       this.m_props = {};
@@ -1441,7 +1441,7 @@ function _(_, _, _, _, _) {
       for (let _ = _.length - 1; _ >= 0 && _[_].eScrollType === void 0; _--)
         _[_].eScrollType = _;
   }
-  for (; _.length; ) {
+  for (; _.length;) {
     let { node: _, eScrollType: _ } = _.pop(),
       _ = _.length == 0;
     if (
@@ -1453,7 +1453,7 @@ function _(_, _, _, _, _) {
     let _ = _.m_element,
       _ = _ == _.NoTransform || _ == _.NoTransformSparseContent || !_;
     if (!_ && _ !== _.GAMEPAD)
-      _(`No previous element for scrolling, will jump`),
+      (_(`No previous element for scrolling, will jump`),
         _
           ? _(_, _, `auto`)
           : (_(`Scrolling Into View ('auto' via browser scrollIntoView):`, _),
@@ -1461,7 +1461,7 @@ function _(_, _, _, _, _) {
               behavior: `auto`,
               block: `nearest`,
               inline: `nearest`,
-            }));
+            })));
     else {
       let _ = _ ? _(_) : _.getBoundingClientRect(),
         _ = _.ownerDocument.defaultView.innerHeight,
@@ -1475,7 +1475,7 @@ function _(_, _, _, _, _) {
             `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_} + ${_} `,
           ));
       let _ = _ ? `auto` : `smooth`;
-      _ && (_ = performance.now()),
+      (_ && (_ = performance.now()),
         _.Tree.Controller.BIsRestoringHistory() && (_ = `auto`),
         _
           ? _(_, _, _)
@@ -1483,7 +1483,7 @@ function _(_, _, _, _, _) {
             _.scrollIntoView({
               behavior: _,
               block: `nearest`,
-            }));
+            })));
     }
   }
   _(_, _);
@@ -1550,14 +1550,14 @@ function _(_) {
   let _ = 0,
     _ = 0,
     _ = _;
-  for (; _; ) {
+  for (; _;) {
     if (`ownerDocument` in _) {
       let _ = window.getComputedStyle(_);
       if (_.position === `fixed` || _.position === `sticky`) break;
     }
-    (_ += _.offsetTop), (_ += _.offsetLeft), (_ = _.offsetParent);
+    ((_ += _.offsetTop), (_ += _.offsetLeft), (_ = _.offsetParent));
   }
-  for (_ = _?.parentElement; _; ) {
+  for (_ = _?.parentElement; _;) {
     let { scrollTop: _, scrollLeft: _ } = _(_);
     if (((_ -= _), (_ -= _), `ownerDocument` in _)) {
       let _ = window.getComputedStyle(_);
@@ -1644,15 +1644,15 @@ function _(_) {
   return _ > -1 && _ < 1;
 }
 function _(_, _, _, _, _) {
-  _(
+  (_(
     `----------------------------------------------------------------------------------`,
   ),
-    _(`Scrolling Into View (NoTransform):`, _);
+    _(`Scrolling Into View (NoTransform):`, _));
   let _ = [],
     _ = _,
     _ = _(_),
     _ = _ ?? Number.MAX_VALUE;
-  for (; _; ) {
+  for (; _;) {
     let _ = _(_);
     _ ||= _(_);
     let _ = _(_),
@@ -1695,13 +1695,13 @@ function _(_, _, _, _, _) {
       break;
     let _ = window.getComputedStyle(_);
     if (_.position === `fixed` || _.position === `sticky`) break;
-    (_ = _),
+    ((_ = _),
       (_ = {
         top: _.top - _.top,
         right: _.right - _.left,
         bottom: _.bottom - _.top,
         left: _.left - _.left,
-      });
+      }));
   }
   let _ = !1;
   for (let _ of _) {
@@ -1709,7 +1709,7 @@ function _(_, _, _, _, _) {
     let _ = _(_.element),
       _ = _.scrollTop + _.top,
       _ = _.scrollLeft + _.left;
-    (_ = _(_, 0, _.MaxScrollLeft())),
+    ((_ = _(_, 0, _.MaxScrollLeft())),
       (_ = _(_, 0, _.MaxScrollTop())),
       !(_(_.scrollLeft - _) && _(_.scrollTop - _)) &&
         (_.scrollTo({
@@ -1718,7 +1718,7 @@ function _(_, _, _, _, _) {
           behavior: _,
         }),
         (_ ||= (_(`Scrolling:`), !0)),
-        _(`- ${_.top},${_.left} => ${_}, ${_}, behavior: ${_}`, _.element));
+        _(`- ${_.top},${_.left} => ${_}, ${_}, behavior: ${_}`, _.element)));
   }
 }
 var _ = class {
@@ -1743,17 +1743,17 @@ var _ = class {
       : ((this.m_window = _), (this.m_element = _.document.documentElement));
   }
   ResetScrollState() {
-    (this.m_scrollTopTarget = void 0),
+    ((this.m_scrollTopTarget = void 0),
       (this.m_scrollLeftTarget = void 0),
-      this.m_window || (this.m_element.style.scrollSnapType = ``);
+      this.m_window || (this.m_element.style.scrollSnapType = ``));
   }
   scrollTo(_) {
     if (_?.behavior != `smooth`)
-      (this.m_animation &&= (this.m_animation.Cancel(), void 0)),
+      ((this.m_animation &&= (this.m_animation.Cancel(), void 0)),
         this.m_window
           ? this.m_window.scrollTo(_)
           : this.m_fnOriginalScrollTo?.apply(this.m_element, [_]),
-        this.ResetScrollState();
+        this.ResetScrollState());
     else {
       let _ = _.left ?? this.scrollLeft,
         _ = _.top ?? this.scrollTop,
@@ -1781,7 +1781,7 @@ var _ = class {
             });
           });
         } else
-          (this.m_element.style.scrollSnapType = `initial`),
+          ((this.m_element.style.scrollSnapType = `initial`),
             (this.m_animation = new _(
               this.m_element,
               {
@@ -1789,10 +1789,10 @@ var _ = class {
                 scrollLeft: _,
               },
               _,
-            ));
-        (this.m_scrollLeftTarget = _),
+            )));
+        ((this.m_scrollLeftTarget = _),
           (this.m_scrollTopTarget = _),
-          this.m_animation.Start();
+          this.m_animation.Start());
       }
     }
   }
@@ -1835,7 +1835,7 @@ _([_], _.prototype, `ResetScrollState`, null);
 var _ = new WeakMap();
 function _(_) {
   let _ = _.get(_);
-  return _ || ((_ = new _(_)), _.set(_, _)), _;
+  return (_ || ((_ = new _(_)), _.set(_, _)), _);
 }
 function _(_) {
   let _ = _.get(_);
@@ -1909,10 +1909,10 @@ var _ = new _(`FocusNavigationMovement`),
     m_rgNavigationHandlers = [];
     m_rgFocusHandlers = [];
     constructor(_, _, _) {
-      (this.m_Tree = _),
+      ((this.m_Tree = _),
         (this.m_Parent = _),
         (this.m_FocusRing = _),
-        (this.m_nDepth = _ ? _.m_nDepth + 1 : 0);
+        (this.m_nDepth = _ ? _.m_nDepth + 1 : 0));
     }
     CreateHandle() {
       return new _(this);
@@ -1947,7 +1947,7 @@ var _ = new _(`FocusNavigationMovement`),
         ),
         _ = this.m_Properties?.focusableIfEmpty,
         _ = this.m_Properties?.noFocusRing;
-      (this.m_Properties = _ || {}),
+      ((this.m_Properties = _ || {}),
         _ && this.m_ActionDescriptionsChangedCallbackList.Dispatch(),
         this.m_Properties.focusableIfEmpty && !_
           ? this.PropagateFocusableIfEmptyAncestorToDescendants(this)
@@ -1962,7 +1962,7 @@ var _ = new _(`FocusNavigationMovement`),
             _ &&
             this.BHasFocus() &&
             this.m_FocusRing?.OnFocus(_.APPLICATION, this, this),
-        this.m_element && this.RegisterDOMEvents();
+        this.m_element && this.RegisterDOMEvents());
     }
     BWantsAutoFocus() {
       return this.m_Properties?.autoFocus || this.m_bAutoFocusChild;
@@ -2048,7 +2048,7 @@ var _ = new _(`FocusNavigationMovement`),
           : _;
     }
     AddChild(_) {
-      this.m_rgChildren.push(_),
+      (this.m_rgChildren.push(_),
         (this.m_bChildrenSorted = !1),
         this.m_element && this.RegisterDOMEvents(),
         this.m_Properties?.focusableIfEmpty
@@ -2061,22 +2061,22 @@ var _ = new _(`FocusNavigationMovement`),
             !this.m_ActiveChild && this.BFocusWithin(),
             `Invalid focus state in AddChild`,
           ),
-          this.SetActiveChild(this.m_rgChildren.length - 1));
+          this.SetActiveChild(this.m_rgChildren.length - 1)));
     }
     OnMount(_) {
-      (this.m_element = _),
+      ((this.m_element = _),
         this.m_Parent
           ? this.m_Parent.AddChild(this)
           : _(this == this.m_Tree.Root, `Only root should have no parent`),
         (this.m_bMounted = !0),
-        this.RegisterDOMEvents();
+        this.RegisterDOMEvents());
       let _ =
           this.m_FocusableIfEmptyAncestor &&
           this.m_FocusableIfEmptyAncestor.BHasFocus(),
         _ = this.m_Properties?.autoFocus || _;
       if (this.BWantsAutoFocus() || _) {
         let _ = -1;
-        this.m_rgChildren.length &&
+        (this.m_rgChildren.length &&
           (this.EnsureChildrenSorted(),
           (_ = this.m_rgChildren.findIndex((_) => _.BWantsAutoFocus()))),
           (this.m_Properties?.autoFocus || _ || _ !== -1) &&
@@ -2091,7 +2091,7 @@ var _ = new _(`FocusNavigationMovement`),
                     },
                   )
                 : this.Tree.DeferredFocus.RequestFocus(this)
-              : (this.m_Parent.m_bAutoFocusChild = !0));
+              : (this.m_Parent.m_bAutoFocusChild = !0)));
       } else if (this.m_rgChildren.length) {
         let _ = this.m_rgChildren.findIndex((_) => _.BFocusWithin());
         _ != -1 &&
@@ -2104,13 +2104,13 @@ var _ = new _(`FocusNavigationMovement`),
     }
     DEV_SetDebugPropsOnElement() {}
     OnUnmount() {
-      this.m_Properties?.focusableIfEmpty &&
+      (this.m_Properties?.focusableIfEmpty &&
         this.PropagateFocusableIfEmptyAncestorToDescendants(
           this.m_FocusableIfEmptyAncestor,
         ),
-        (this.m_bMounted = !1);
+        (this.m_bMounted = !1));
       let _ = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
-      (this.BHasFocus() || _) &&
+      ((this.BHasFocus() || _) &&
         (_(
           `The focused node is unmounting, ${this.m_FocusableIfEmptyAncestor ? `will transfer to retain focus ancestor` : `will blur`}.`,
         ),
@@ -2121,10 +2121,10 @@ var _ = new _(`FocusNavigationMovement`),
         this.UnregisterDOMEvents(),
         this.m_Parent
           ? this.m_Parent.RemoveChild(this)
-          : _(this == this.m_Tree.Root, `Only root should have no parent`);
+          : _(this == this.m_Tree.Root, `Only root should have no parent`));
     }
     RegisterDOMEvents() {
-      !this.m_rgNavigationHandlers.length &&
+      (!this.m_rgNavigationHandlers.length &&
         this.m_element &&
         (this.m_rgChildren.length >= 2 ||
           this.m_Properties?.layout != 0 ||
@@ -2142,22 +2142,22 @@ var _ = new _(`FocusNavigationMovement`),
             (this.m_element?.addEventListener(`focus`, this.OnDOMFocus),
             this.m_element?.addEventListener(`blur`, this.OnDOMBlur),
             this.m_rgFocusHandlers.push(() => {
-              this.m_element?.removeEventListener(`focus`, this.OnDOMFocus),
-                this.m_element?.removeEventListener(`blur`, this.OnDOMBlur);
-            })));
+              (this.m_element?.removeEventListener(`focus`, this.OnDOMFocus),
+                this.m_element?.removeEventListener(`blur`, this.OnDOMBlur));
+            }))));
     }
     RemoveChild(_) {
       let _ = this.m_rgChildren.indexOf(_);
-      _(_ !== -1, `Child was not found to remove`),
+      (_(_ !== -1, `Child was not found to remove`),
         _ !== -1 &&
           (this.m_ActiveChild == _ && (this.m_ActiveChild = void 0),
-          this.m_rgChildren.splice(_, 1));
+          this.m_rgChildren.splice(_, 1)));
     }
     UnregisterDOMEvents() {
-      this.m_rgNavigationHandlers.forEach((_) => _()),
+      (this.m_rgNavigationHandlers.forEach((_) => _()),
         (this.m_rgNavigationHandlers = []),
         this.m_rgFocusHandlers.forEach((_) => _()),
-        (this.m_rgFocusHandlers = []);
+        (this.m_rgFocusHandlers = []));
     }
     GetActiveDescendant() {
       let _ = this.GetActiveChild();
@@ -2216,12 +2216,12 @@ var _ = new _(`FocusNavigationMovement`),
         if (this.GetFocusable() == `children`) {
           let _ = this.FindFocusableDescendant();
           if (_ && _ !== this) {
-            _(
+            (_(
               `Browser gave node focus but we are marked focusableIfEmpty, transfering focus to descendant.`,
               this.m_element,
               _.m_element,
             ),
-              this.m_Tree.TransferFocus(_.BROWSER, _);
+              this.m_Tree.TransferFocus(_.BROWSER, _));
             return;
           }
         }
@@ -2313,11 +2313,11 @@ var _ = new _(`FocusNavigationMovement`),
                 _.GetBoundingRect(),
                 _,
               );
-            _(
+            (_(
               `Taking focus while preserving ${_ && _[_]} preserved: ${_} movement: ${_}, node:`,
               _,
             ),
-              (_ = this.FindClosestFocusableNodeToRect(_, _));
+              (_ = this.FindClosestFocusableNodeToRect(_, _)));
           } else if (_ != _[_]) {
             let _ = this.ComputeRelativeDirection(_, 5),
               _ = _ == 2 ? this.m_rgChildren.length : -1;
@@ -2325,7 +2325,7 @@ var _ = new _(`FocusNavigationMovement`),
           }
         } else if (_ == 4) {
           let _ = this.m_rgChildren;
-          for (; _.length; ) {
+          for (; _.length;) {
             let _ = [];
             for (let _ of _) {
               if (
@@ -2476,7 +2476,7 @@ var _ = new _(`FocusNavigationMovement`),
             );
         }
       }
-      return this.m_Tree.TransferFocus(_.GAMEPAD, _, _), !0;
+      return (this.m_Tree.TransferFocus(_.GAMEPAD, _, _), !0);
     }
     GetScrollIntoViewType() {
       return this.m_Properties?.scrollIntoViewType !== void 0 &&
@@ -2566,7 +2566,7 @@ var _ = new _(`FocusNavigationMovement`),
         _)
       ) {
         let _ = _;
-        for (; _ != -1; ) {
+        for (; _ != -1;) {
           let _ = this.ScanChildren(
             this.AdvanceIndex(_, _),
             _,
@@ -2676,13 +2676,13 @@ var _ = new _(`FocusNavigationMovement`),
         if (_) {
           let _ = _(_, _),
             _;
-          (_ = _ == 1 ? _.min - _.max : _.min - _.max),
+          ((_ = _ == 1 ? _.min - _.max : _.min - _.max),
             _ >= 0 &&
               _.push({
                 child: _,
                 overlap: _(_[_], _, _),
                 dist: _,
-              });
+              }));
         }
       }
       if (
@@ -2711,7 +2711,7 @@ var _ = new _(`FocusNavigationMovement`),
       let _ = [];
       if (!_) return null;
       let _ = _(_);
-      this.ScanChildren(_, _, (_) => {
+      (this.ScanChildren(_, _, (_) => {
         let _ = _.GetBoundingRect();
         return _
           ? _ && !_(_[_], _, _)
@@ -2728,7 +2728,7 @@ var _ = new _(`FocusNavigationMovement`),
         _.sort((_, _) => {
           let _ = _.overlap - _.overlap;
           return _ == 0 ? _.dist - _.dist : _;
-        });
+        }));
       for (let { child: _ } of _) {
         let _ = _.FindFocusableNode(_, _);
         if (_) return _;
@@ -2754,9 +2754,9 @@ var _ = new _(`FocusNavigationMovement`),
       return this.m_nDepth;
     }
     SetFocusableIfEmptyAncestor(_) {
-      (this.m_FocusableIfEmptyAncestor = _),
+      ((this.m_FocusableIfEmptyAncestor = _),
         this.m_Properties?.focusableIfEmpty ||
-          this.PropagateFocusableIfEmptyAncestorToDescendants(_);
+          this.PropagateFocusableIfEmptyAncestorToDescendants(_));
     }
     PropagateFocusableIfEmptyAncestorToDescendants(_) {
       for (let _ = 0; _ < this.m_rgChildren.length; _++)
@@ -2768,7 +2768,7 @@ var _ = new _(`FocusNavigationMovement`),
       });
     }
     SetDOMFocusAndScroll(_, _, _, _) {
-      this.UpdateParentActiveChild(),
+      (this.UpdateParentActiveChild(),
         this.m_Tree.OnChildActivated(_),
         this.m_Tree.BIsActiveFocus()
           ? (_(
@@ -2782,12 +2782,12 @@ var _ = new _(`FocusNavigationMovement`),
             _(
               `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
             ),
-        this.m_Tree.BIsActive() && _(this, _, _, _, _);
+        this.m_Tree.BIsActive() && _(this, _, _, _, _));
     }
   };
-_([_], _.prototype, `OnDOMFocus`, null),
+(_([_], _.prototype, `OnDOMFocus`, null),
   _([_], _.prototype, `OnDOMBlur`, null),
-  _([_], _.prototype, `OnNavigationEvent`, null);
+  _([_], _.prototype, `OnNavigationEvent`, null));
 function _(_, _ = window) {
   return _[_];
 }
@@ -2820,14 +2820,14 @@ var _ = class {
     return this.m_node.NavKey;
   }
   PushState() {
-    (this.m_History ||= new _(this.m_node)), this.m_History.PushState();
+    ((this.m_History ||= new _(this.m_node)), this.m_History.PushState());
   }
   PopState(_ = 0) {
     this.m_History && this.m_History.PopState(_);
   }
   SaveState(_) {
-    (this.m_StateHistory ||= new _(this.m_node)),
-      this.m_StateHistory.SaveState(_);
+    ((this.m_StateHistory ||= new _(this.m_node)),
+      this.m_StateHistory.SaveState(_));
   }
   RestoreState(_, _ = 0) {
     return this.m_StateHistory ? this.m_StateHistory.RestoreState(_, _) : !1;
@@ -2938,14 +2938,14 @@ function _(_) {
 }
 function _(_, _, _ = [], _ = !0) {
   let _ = _.useRef(_);
-  (_.current = _),
+  ((_.current = _),
     _.useEffect(() => {
       if (!_.current || !_) return;
       let _ = setInterval(() => {
         _.current && _.current();
       }, _);
       return () => clearInterval(_);
-    }, [_, _, ..._]);
+    }, [_, _, ..._]));
 }
 function _() {
   let [, _] = _.useState(0);
@@ -2957,12 +2957,12 @@ function _(_) {
     fnLatestCallback: null,
     nTimeoutHandle: 0,
     fnExecuteLatestCallback() {
-      this.fnLatestCallback != null &&
+      (this.fnLatestCallback != null &&
         (this.fnLatestCallback(),
         (this.fnLatestCallback = null),
         (this.flLastExecutionTimeMs = performance.now())),
         window.clearTimeout(this.nTimeoutHandle),
-        (this.nTimeoutHandle = 0);
+        (this.nTimeoutHandle = 0));
     },
   });
   return (
@@ -2976,11 +2976,11 @@ function _(_) {
         _.fnLatestCallback = _;
         let _ = performance.now() - _.flLastExecutionTimeMs,
           _ = Math.max(_ - _, 0);
-        window.clearTimeout(_.nTimeoutHandle),
+        (window.clearTimeout(_.nTimeoutHandle),
           (_.nTimeoutHandle = window.setTimeout(
             () => _.fnExecuteLatestCallback(),
             _,
-          ));
+          )));
       },
       [_],
     )
@@ -3103,7 +3103,7 @@ var _ = (function (_) {
   })(),
   _ = new _(`GamepadEvents`).Debug;
 function _(_, _, _) {
-  _ === void 0 &&
+  (_ === void 0 &&
     (_ = [
       _.onButtonDown,
       _.onButtonUp,
@@ -3133,16 +3133,16 @@ function _(_, _, _) {
           _.onGamepadBlur && _.push(_(_, _.onGamepadBlur))),
         () => _.forEach((_) => _())
       );
-    }, _);
+    }, _));
 }
 function _(_) {
-  return _.stopPropagation(), !1;
+  return (_.stopPropagation(), !1);
 }
 function _(_, _, _) {
   let { onButtonDown: _, ..._ } = _,
     _ = _.useCallback(
       (_) => {
-        _ && _(_),
+        (_ && _(_),
           _(
             `Gamepad Event fired:`,
             _.detail.button,
@@ -3151,11 +3151,11 @@ function _(_, _, _) {
             `, propagation stopped:`,
             _.cancelBubble,
           ),
-          !_.cancelBubble && _.OnRootButtonDown(_);
+          !_.cancelBubble && _.OnRootButtonDown(_));
       },
       [_, _],
     );
-  _(_, _),
+  (_(_, _),
     _(
       {
         onButtonDown: _,
@@ -3171,7 +3171,7 @@ function _(_, _, _) {
       },
       _,
       [_],
-    );
+    ));
 }
 function _(_) {
   if (!_) return _.NONE;
@@ -3189,7 +3189,7 @@ function _(_) {
     case `geometric`:
       return _.GEOMETRIC;
     default:
-      return _(_, `Unhandled flow-children: ${_}`), _.NONE;
+      return (_(_, `Unhandled flow-children: ${_}`), _.NONE);
   }
 }
 function _(_) {
@@ -3280,7 +3280,7 @@ function _(_, _) {
 function _(_) {
   let _ = _.useRef(void 0),
     _ = _.useContext(_);
-  return (_.current ||= _(_ || {})), _.current;
+  return ((_.current ||= _(_ || {})), _.current);
 }
 function _(_) {
   let {
@@ -3402,7 +3402,7 @@ function _(_) {
       historyMode: _,
       excludeTreeFromScrollRegionSearch: _,
     });
-  _(_.OnActivateCallbacks, _),
+  (_(_.OnActivateCallbacks, _),
     _(_.OnDeactivateCallbacks, _),
     _(_, _, _),
     _.useLayoutEffect(() => {
@@ -3411,7 +3411,7 @@ function _(_) {
         ..._,
         layout: _,
       });
-    });
+    }));
   let _ = _(_, _.props.ref);
   return (0, _.jsx)(_, {
     tree: _ ? null : _,
@@ -3483,18 +3483,18 @@ function _(_) {
     _ = _(_?.SubscribableIsMounted) ?? !1;
   _.useEffect(() => {
     if (!_) {
-      _(!1), _(!1);
+      (_(!1), _(!1));
       return;
     }
-    _(_.BIsActive()), _(_.BIsActiveWithinWindow());
+    (_(_.BIsActive()), _(_.BIsActiveWithinWindow()));
     let _ = _.OnActiveStateChangedCallbacks.Register(() => {
-        _(_.BIsActive()), _(_.BIsActiveWithinWindow());
+        (_(_.BIsActive()), _(_.BIsActiveWithinWindow()));
       }),
       _ = _.OnActiveWithinWindowChangedCallbacks.Register(() =>
         _(_.BIsActiveWithinWindow()),
       );
     return () => {
-      _.Unregister(), _.Unregister();
+      (_.Unregister(), _.Unregister());
     };
   }, [_]);
   let _ = _.useMemo(
@@ -3542,7 +3542,7 @@ function _(_) {
       };
     }, [_, _, _]),
     _.useLayoutEffect(() => {
-      if (_ && _) return _(_, _.CreateHandle()), () => _(_, null);
+      if (_ && _) return (_(_, _.CreateHandle()), () => _(_, null));
     }, [_, _]),
     {
       ref: _,
@@ -3750,13 +3750,13 @@ function _(_, _, _, _, _) {
     layout: _(_),
     ..._,
   });
-  _.onOKButton ||
+  (_.onOKButton ||
     (((`onClick` in _ && _.onClick) || (_ && (_ === !0 || _(_)))) &&
       (_.onOKButton = _)),
     _.focusable && !_
       ? (_.tabIndex = _.tabIndex || 0)
       : !_.focusable && _ && (_.tabIndex = _.tabIndex ?? -1),
-    _(_, _);
+    _(_, _));
   let _ = _(_, _, _(_)),
     _ = (0, _.useContext)(_)?.Component,
     _ = {
@@ -3838,7 +3838,7 @@ var _ = _(`div`, {
   }),
   _ = _(`input`),
   _ = _(`textarea`);
-_(`img`, {
+(_(`img`, {
   bDOMElementFocusByDefault: !1,
 }),
   _(`label`, {
@@ -3850,7 +3850,7 @@ _(`img`, {
   }),
   _(`form`, {
     bFocusableByDefault: !1,
-  });
+  }));
 var _ = _(`summary`, {
   bActivateByDefault: !0,
 });
@@ -3870,7 +3870,7 @@ function _(_, _) {
       let _ = _(_.ownerDocument.defaultView, (_) => {
         _(_[0]);
       });
-      return _.observe(_), () => _.unobserve(_);
+      return (_.observe(_), () => _.unobserve(_));
     },
     [_, _],
   );
@@ -3900,7 +3900,7 @@ function _(_, _) {
 }
 function _(_, ..._) {
   let _ = new _.ownerDocument.defaultView.ResizeObserver(..._);
-  return _.observe(_), _;
+  return (_.observe(_), _);
 }
 function _(_) {
   return function (_) {
@@ -3914,10 +3914,10 @@ function _(_) {
 var _ = class extends _.Component {
   state = {};
   constructor(_) {
-    super(_), (this.state.lastErrorKey = _.errorKey);
+    (super(_), (this.state.lastErrorKey = _.errorKey));
   }
   componentDidCatch(_, _) {
-    _()
+    (_()
       .ReportError(_, {
         strComponentStack: _.componentStack || void 0,
       })
@@ -3934,7 +3934,7 @@ var _ = class extends _.Component {
           info: _,
         },
         lastErrorKey: this.props.errorKey,
-      });
+      }));
   }
   Reset() {
     this.setState({
@@ -4028,7 +4028,7 @@ var _ = ({ error: _, onDismiss: _ }) => {
           cursor: `pointer`,
         },
         onClick: (_) => {
-          _.preventDefault(), _();
+          (_.preventDefault(), _());
         },
         children: _,
       })
@@ -4094,12 +4094,12 @@ try {
   ).exports;
 } catch {}
 function _(_, _, _) {
-  (this.low = _ | 0), (this.high = _ | 0), (this.unsigned = !!_);
+  ((this.low = _ | 0), (this.high = _ | 0), (this.unsigned = !!_));
 }
-_.prototype.__isLong__,
+(_.prototype.__isLong__,
   Object.defineProperty(_.prototype, "__isLong__", {
     value: !0,
-  });
+  }));
 function _(_) {
   return (_ && _.__isLong__) === !0;
 }
@@ -4157,9 +4157,9 @@ function _(_, _, _) {
     if (_ < 8) {
       var _ = _(_(_, _));
       _ = _.mul(_).add(_(_));
-    } else (_ = _.mul(_)), (_ = _.add(_(_)));
+    } else ((_ = _.mul(_)), (_ = _.add(_(_))));
   }
-  return (_.unsigned = _), _;
+  return ((_.unsigned = _), _);
 }
 _.fromString = _;
 function _(_, _) {
@@ -4193,7 +4193,7 @@ _.MAX_UNSIGNED_VALUE = _;
 var _ = _(0, -2147483648, !1);
 _.MIN_VALUE = _;
 var _ = _.prototype;
-(_.toInt = function () {
+((_.toInt = function () {
   return this.unsigned ? this.low >>> 0 : this.low;
 }),
   (_.toNumber = function () {
@@ -4213,11 +4213,11 @@ var _ = _.prototype;
       }
       return `-` + this.neg().toString(_);
     }
-    for (var _ = _(_(_, 6), this.unsigned), _ = this, _ = ``; ; ) {
+    for (var _ = _(_(_, 6), this.unsigned), _ = this, _ = ``; ;) {
       var _ = _.div(_),
         _ = (_.sub(_.mul(_)).toInt() >>> 0).toString(_);
       if (((_ = _), _.isZero())) return _ + _;
-      for (; _.length < 6; ) _ = `0` + _;
+      for (; _.length < 6;) _ = `0` + _;
       _ = `` + _ + _;
     }
   }),
@@ -4351,7 +4351,7 @@ var _ = _.prototype;
     );
   }),
   (_.subtract = function (_) {
-    return _(_) || (_ = _(_)), this.add(_.neg());
+    return (_(_) || (_ = _(_)), this.add(_.neg()));
   }),
   (_.sub = _.subtract),
   (_.multiply = function (_) {
@@ -4451,7 +4451,7 @@ var _ = _.prototype;
       if (_.isNegative()) return this.div(_.neg()).neg();
       _ = _;
     }
-    for (_ = this; _.gte(_); ) {
+    for (_ = this; _.gte(_);) {
       _ = Math.max(1, Math.floor(_.toNumber() / _.toNumber()));
       for (
         var _ = Math.ceil(Math.log(_) / Math.LN2),
@@ -4460,8 +4460,8 @@ var _ = _.prototype;
           _ = _.mul(_);
         _.isNegative() || _._(_);
       )
-        (_ -= _), (_ = _(_, this.unsigned)), (_ = _.mul(_));
-      _.isZero() && (_ = _), (_ = _.add(_)), (_ = _.sub(_));
+        ((_ -= _), (_ = _(_, this.unsigned)), (_ = _.mul(_)));
+      (_.isZero() && (_ = _), (_ = _.add(_)), (_ = _.sub(_)));
     }
     return _;
   }),
@@ -4677,7 +4677,7 @@ var _ = _.prototype;
       return (
         (BigInt(this.unsigned ? this.high >>> 0 : this.high) << BigInt(32)) | _
       );
-    }));
+    })));
 var _ = class _ {
   m_ulSteamID = _.UZERO;
   constructor(_ = 0, _, _, _) {
@@ -4838,110 +4838,4 @@ var _ = class _ {
       _ = _ | 0;
     this.m_ulSteamID = new _(_, _, !0);
   }
-};
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
 };

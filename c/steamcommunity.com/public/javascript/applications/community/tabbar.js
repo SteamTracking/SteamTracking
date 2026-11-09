@@ -43,10 +43,10 @@ function _(_) {
   }, [_, _.key, _.bDisableRouting, _]);
   let _ = _.useCallback(
       (_) => {
-        _(_.key),
+        (_(_.key),
           _ || _(_, `tab`, _.key),
           _?.(_.key),
-          _.onClick && _.onClick(_);
+          _.onClick && _.onClick(_));
       },
       [_, _, _],
     ),
@@ -150,4 +150,3 @@ function _(_) {
     }),
   });
 }
-export { _, _ };

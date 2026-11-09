@@ -28,8 +28,8 @@ function y(e) {
           .writeText(y.current.value)
           .then(() => x(d(`#EventDisplay_Share_CopiedToClipboard`)))
           .catch((e) => {
-            x(d(`#EventDisplay_Share_FailedToCopyToClipboard`)),
-              console.error(`Failed to copy link to clipboard:`, e);
+            (x(d(`#EventDisplay_Share_FailedToCopyToClipboard`)),
+              console.error(`Failed to copy link to clipboard:`, e));
           });
     };
   return (0, v.jsxs)(`div`, {

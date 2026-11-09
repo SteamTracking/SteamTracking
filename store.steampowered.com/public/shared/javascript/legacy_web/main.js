@@ -12,13 +12,13 @@ const __vite__mapDeps = (
     ]),
 ) => i.map((i) => d[i]);
 
-`VALVE_PUBLIC_PATH` in window
+(`VALVE_PUBLIC_PATH` in window
   ? (globalThis.__webpack_public_path__ = window.VALVE_PUBLIC_PATH)
   : console.error(
       `VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet`,
     ),
   Array.from(new Set([123]))[0] !== 123 &&
-    console.error(`Should not include prototypejs.`);
+    console.error(`Should not include prototypejs.`));
 var e = jQuery;
 function t(e, t) {
   return n(e, (e) => t == e);
@@ -64,7 +64,7 @@ var i = class {
       return new Promise((t) => {
         let n = [],
           r = () => {
-            n.forEach((e) => e.Unregister()), t();
+            (n.forEach((e) => e.Unregister()), t());
           };
         for (let t of e) n.push(t.Register(r));
       });
@@ -78,14 +78,14 @@ var i = class {
       this.m_config = e;
     }
     Reset() {
-      (this.m_ActiveInputId = void 0),
+      ((this.m_ActiveInputId = void 0),
         this.m_ActiveInputTimeout != null &&
           (clearInterval(this.m_ActiveInputTimeout),
-          (this.m_ActiveInputTimeout = void 0));
+          (this.m_ActiveInputTimeout = void 0)));
     }
     HandleInputButtonDown(e, t) {
       if (this.m_ActiveInputId !== e && t != null) {
-        this.Reset(), (this.m_ActiveInputId = e);
+        (this.Reset(), (this.m_ActiveInputId = e));
         let n = () => {
           this.m_ActiveInputTimeout = window.setInterval(() => {
             t();
@@ -95,7 +95,7 @@ var i = class {
         this.m_config.firstRepeatInterval_ms === this.m_config.repeatInterval_ms
           ? n()
           : (this.m_ActiveInputTimeout = window.setTimeout(() => {
-              t(), n();
+              (t(), n());
             }, this.m_config.firstRepeatInterval_ms));
       }
     }
@@ -106,13 +106,13 @@ var i = class {
     m_repeatOnAxis = 0;
     m_fnRepeatAllowed = () => !0;
     constructor(e) {
-      (this.m_config = e), (this.m_inputRepeatGenerator = new a(e));
+      ((this.m_config = e), (this.m_inputRepeatGenerator = new a(e)));
     }
     Reset() {
       this.m_inputRepeatGenerator.Reset();
     }
     SetRepeatAllowed(e) {
-      (e ||= () => !0), (this.m_fnRepeatAllowed = e);
+      ((e ||= () => !0), (this.m_fnRepeatAllowed = e));
     }
     HandleInputButtonDown(e, t, n) {
       this.m_fnRepeatAllowed() && this.m_config.inputsThatRepeat.has(e)
@@ -222,8 +222,8 @@ var u = class {
     return this.m_eNavigationSourceType;
   }
   SetControllerActive(e) {
-    (this.m_nLastActiveControllerIndex = e),
-      (this.m_fLastActiveTime = Date.now());
+    ((this.m_nLastActiveControllerIndex = e),
+      (this.m_fLastActiveTime = Date.now()));
   }
   GetActiveControllerIndex() {
     return this.m_nLastActiveControllerIndex;
@@ -235,28 +235,28 @@ var u = class {
     this.m_ButtonRepeatHandler.SetRepeatAllowed(e);
   }
   OnGamepadDetected() {
-    console.log(`Gamepad detected`),
+    (console.log(`Gamepad detected`),
       (this.m_bGamepadDetected = !0),
-      this.m_OnGamepadDetectedCallbacks.Dispatch();
+      this.m_OnGamepadDetectedCallbacks.Dispatch());
   }
   OnButtonDown(e, t, n, r) {
-    t === void 0 && (t = -1),
+    (t === void 0 && (t = -1),
       this.SetControllerActive(t),
       this.m_ButtonRepeatHandler.HandleInputButtonDown(
         e,
         () => this.DispatchButtonDown(e, !1, n, r),
         () => this.DispatchButtonDown(e, !0, n, r),
-      );
+      ));
   }
   OnButtonUp(e, t) {
-    t === void 0 && (t = -1),
+    (t === void 0 && (t = -1),
       this.SetControllerActive(t),
       this.m_ButtonRepeatHandler.HandleInputButtonUp(e),
       this.m_ButtonUpCallbacks.Dispatch(
         e,
         this.m_eNavigationSourceType,
         this.m_nLastActiveControllerIndex,
-      );
+      ));
   }
   DispatchButtonDown(e, t, n, r) {
     this.m_ButtonDownCallbacks.Dispatch(
@@ -269,14 +269,14 @@ var u = class {
     );
   }
   OnAnalogPad(e, t, n, r) {
-    r === void 0 && (r = -1),
+    (r === void 0 && (r = -1),
       this.SetControllerActive(r),
       this.m_AnalogCallbacks.Dispatch(
         e,
         this.m_nLastActiveControllerIndex,
         t,
         n,
-      );
+      ));
   }
   OnNavigationTypeChanged(e) {
     this.m_NavigationTypeChangeCallbacks.Dispatch(e);
@@ -292,7 +292,7 @@ function d(e, t, n, r) {
   else
     for (var s = e.length - 1; s >= 0; s--)
       (o = e[s]) && (a = (i < 3 ? o(a) : i > 3 ? o(t, n, a) : o(t, n)) || a);
-  return i > 3 && a && Object.defineProperty(t, n, a), a;
+  return (i > 3 && a && Object.defineProperty(t, n, a), a);
 }
 var f = [
     { index: 0, type: s.OK, category: `action` },
@@ -317,12 +317,12 @@ var f = [
   p = class extends u {
     m_rgGamepadStatus = [];
     constructor() {
-      super(),
+      (super(),
         this.SetSourceType(c.GAMEPAD),
         window.addEventListener(`gamepadconnected`, (e) => {
           this.m_bGamepadDetected ||
             (this.OnGamepadDetected(), this.PollGamepads());
-        });
+        }));
     }
     PollGamepads() {
       let e = navigator.getGamepads();
@@ -393,7 +393,7 @@ var _ = (function () {
         throw ((e[t] = void 0), n);
       },
     );
-    return (e[t] = i), i;
+    return ((e[t] = i), i);
   },
   S = function (e, t, n) {
     let r = Promise.resolve();
@@ -428,8 +428,8 @@ var _ = (function () {
                 let t = document.getElementsByTagName(`link`);
                 for (let n = t.length - 1; n >= 0; n--) {
                   let r = t[n];
-                  e.all.add(r.href),
-                    r.rel === `stylesheet` && e.styles.add(r.href);
+                  (e.all.add(r.href),
+                    r.rel === `stylesheet` && e.styles.add(r.href));
                 }
               }
               if ((i ? e.styles : e.all).has(r.href)) return;
@@ -444,10 +444,10 @@ var _ = (function () {
                 i)
               )
                 return new Promise((e, n) => {
-                  t.addEventListener(`load`, e),
+                  (t.addEventListener(`load`, e),
                     t.addEventListener(`error`, () =>
                       n(Error(`Unable to preload CSS for ${r}`)),
-                    );
+                    ));
                 });
             });
           })

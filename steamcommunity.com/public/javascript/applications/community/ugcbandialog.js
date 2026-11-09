@@ -22,7 +22,7 @@ import {
   vf as y,
 } from "./main.js";
 var b = {};
-(b.arabic = () =>
+((b.arabic = () =>
   d(() => import(`./workshop_ui_arabic.js`), [], import.meta.url)),
   (b.brazilian = () =>
     d(() => import(`./workshop_ui_brazilian.js`), [], import.meta.url)),
@@ -85,7 +85,7 @@ var b = {};
   (b.ukrainian = () =>
     d(() => import(`./workshop_ui_ukrainian.js`), [], import.meta.url)),
   (b.vietnamese = () =>
-    d(() => import(`./workshop_ui_vietnamese.js`), [], import.meta.url));
+    d(() => import(`./workshop_ui_vietnamese.js`), [], import.meta.url)));
 async function x(e) {
   if (b[e]) return await b[e]();
 }
@@ -151,9 +151,9 @@ function M(e) {
         children: (0, T.jsx)(a, {
           reasons: p(),
           onSelect: (e) => {
-            e !== null &&
+            (e !== null &&
               ((!M.trim() || (P !== null && M === j(P))) && N(j(e)), F(e)),
-              L(!1);
+              L(!1));
           },
         }),
       })
@@ -204,10 +204,10 @@ function M(e) {
                       selectedValue: null,
                       placeholder: S.Localize(H[0].labelToken),
                       onSelectionChange: (e) => {
-                        N(e.reasonToken ? S.Localize(e.reasonToken) : ``),
+                        (N(e.reasonToken ? S.Localize(e.reasonToken) : ``),
                           e.eModerationReason !== void 0 &&
                             P === null &&
-                            F(e.eModerationReason);
+                            F(e.eModerationReason));
                       },
                     }),
                   ],
@@ -236,10 +236,10 @@ function M(e) {
                         let t = S.Localize(
                           `#Workshop_ItemAdmin_Ban_Preset_CopyrightReason`,
                         );
-                        e == `copyright` && M.trim().length === 0
+                        (e == `copyright` && M.trim().length === 0
                           ? N(t)
                           : M === t && N(``),
-                          z(e);
+                          z(e));
                       },
                     }),
                   ],
@@ -277,7 +277,7 @@ function M(e) {
                   V(!0);
                   let e = R == `malware` ? 16 : (P ?? 0);
                   Promise.resolve(g(M.trim(), e)).then(y, (e) => {
-                    V(!1), _?.(e);
+                    (V(!1), _?.(e));
                   });
                 },
                 autoFocus: !0,

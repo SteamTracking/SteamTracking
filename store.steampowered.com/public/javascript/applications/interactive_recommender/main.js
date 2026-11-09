@@ -9,12 +9,12 @@
       i < n.length;
       i++
     )
-      (a = n[i]),
+      ((a = n[i]),
         Object.prototype.hasOwnProperty.call(u, a) && u[a] && s.push(u[a][0]),
-        (u[a] = 0);
+        (u[a] = 0));
     for (t in r) Object.prototype.hasOwnProperty.call(r, t) && (c[t] = r[t]);
-    for (_ && _(e); s.length; ) s.shift()();
-    return p.push.apply(p, o || []), l();
+    for (_ && _(e); s.length;) s.shift()();
+    return (p.push.apply(p, o || []), l());
   }
   function l() {
     for (var e, t = 0; t < p.length; t++) {
@@ -32,18 +32,18 @@
   function i(e) {
     if (a[e]) return a[e].exports;
     var t = (a[e] = { i: e, l: !1, exports: {} });
-    return c[e].call(t.exports, t, t.exports, i), (t.l = !0), t.exports;
+    return (c[e].call(t.exports, t, t.exports, i), (t.l = !0), t.exports);
   }
-  (i.m = c),
+  ((i.m = c),
     (i.c = a),
     (i.d = function (e, t, a) {
       i.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: a });
     }),
     (i.r = function (e) {
-      "undefined" != typeof Symbol &&
+      ("undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
-        Object.defineProperty(e, "__esModule", { value: !0 });
+        Object.defineProperty(e, "__esModule", { value: !0 }));
     }),
     (i.t = function (t, e) {
       if ((1 & e && (t = i(t)), 8 & e)) return t;
@@ -73,18 +73,18 @@
           : function () {
               return e;
             };
-      return i.d(t, "a", t), t;
+      return (i.d(t, "a", t), t);
     }),
     (i.o = function (e, t) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
-    (i.p = "");
+    (i.p = ""));
   var t = (window.webpackJsonp = window.webpackJsonp || []),
     n = t.push.bind(t);
-  (t.push = e), (t = t.slice());
+  ((t.push = e), (t = t.slice()));
   for (var r = 0; r < t.length; r++) e(t[r]);
   var _ = n;
-  p.push(["gfbn", 0]), l();
+  (p.push(["gfbn", 0]), l());
 })({
   "2i24": function (e, t, a) {
     e.exports = {
@@ -326,8 +326,8 @@
         var r = "";
         if (void 0 !== a && a) {
           var o = new Date();
-          o.setTime(o.getTime() + 864e5 * a),
-            (r = "; expires=" + o.toUTCString());
+          (o.setTime(o.getTime() + 864e5 * a),
+            (r = "; expires=" + o.toUTCString()));
         }
         document.cookie =
           encodeURIComponent(e) +
@@ -356,8 +356,8 @@
               a)
             ) {
               var n = s("app_impressions") || "";
-              0 < n.length && (n += "|"),
-                c("app_impressions", (n += e + "@" + t));
+              (0 < n.length && (n += "|"),
+                c("app_impressions", (n += e + "@" + t)));
             }
           }),
           e
@@ -564,7 +564,7 @@
           return t;
       }
     }
-    ((f = v || (v = {}))[(f.k_EOtherEvent = 1)] = "k_EOtherEvent"),
+    (((f = v || (v = {}))[(f.k_EOtherEvent = 1)] = "k_EOtherEvent"),
       (f[(f.k_EGameEvent = 2)] = "k_EGameEvent"),
       (f[(f.k_EPartyEvent = 3)] = "k_EPartyEvent"),
       (f[(f.k_EMeetingEvent = 4)] = "k_EMeetingEvent"),
@@ -596,9 +596,9 @@
       (f[(f.k_EFreeTrial = 31)] = "k_EFreeTrial"),
       (f[(f.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
       (f[(f.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
-      (f[(f.k_EInGameEventGeneral = 35)] = "k_EInGameEventGeneral");
+      (f[(f.k_EInGameEventGeneral = 35)] = "k_EInGameEventGeneral"));
     var T, y;
-    v.k_EOtherEvent,
+    (v.k_EOtherEvent,
       v.k_EGameEvent,
       v.k_EPartyEvent,
       v.k_EMeetingEvent,
@@ -629,8 +629,8 @@
       v.k_EFreeTrial,
       v.k_ESeasonRelease,
       v.k_ECrosspostEvent,
-      v.k_EInGameEventGeneral;
-    ((y = T || (T = {}))[(y.k_ELaunchSource_None = 0)] =
+      v.k_EInGameEventGeneral);
+    (((y = T || (T = {}))[(y.k_ELaunchSource_None = 0)] =
       "k_ELaunchSource_None"),
       (y[(y.k_ELaunchSource_2ftLibraryDetails = 100)] =
         "k_ELaunchSource_2ftLibraryDetails"),
@@ -685,7 +685,7 @@
       (y[(y.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
         "k_ELaunchSource_DiscoveredAlreadyRunning"),
       (y[(y.k_ELaunchSource_GameActionJoinParty = 900)] =
-        "k_ELaunchSource_GameActionJoinParty");
+        "k_ELaunchSource_GameActionJoinParty"));
     var L,
       k = {
         EUNIVERSE: 0,
@@ -722,7 +722,7 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function () {
-            if (!u()) return L || (L = R()), L;
+            if (!u()) return (L || (L = R()), L);
             var e = s("sessionid");
             e || (e = R());
             return e;
@@ -743,16 +743,17 @@
           Math.floor(Math.random() * (t - e + 1)) + e).toString(36);
         return a;
       })();
-      return c("sessionid", e, 0), e;
+      return (c("sessionid", e, 0), e);
     }
     var C = (function () {
       function e() {
-        (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
+        ((this.m_mapTokens = new Map()),
+          (this.m_mapFallbackTokens = new Map()));
       }
       return (
         (e.prototype.InitFromObjects = function (a, n, r, o, e) {
           var i = this;
-          e || this.m_mapTokens.clear(),
+          (e || this.m_mapTokens.clear(),
             r &&
               Object.keys(r).forEach(function (e, t) {
                 i.m_mapTokens.set(e, r[e]);
@@ -762,28 +763,28 @@
             }),
             n &&
               Object.keys(n).forEach(function (e, t) {
-                i.m_mapTokens.has(e) || i.m_mapTokens.set(e, n[e]),
-                  i.m_mapFallbackTokens.set(e, n[e]);
+                (i.m_mapTokens.has(e) || i.m_mapTokens.set(e, n[e]),
+                  i.m_mapFallbackTokens.set(e, n[e]));
               }),
             o &&
               Object.keys(o).forEach(function (e, t) {
-                i.m_mapTokens.has(e) || i.m_mapTokens.set(e, o[e]),
+                (i.m_mapTokens.has(e) || i.m_mapTokens.set(e, o[e]),
                   i.m_mapFallbackTokens.has(e) ||
-                    i.m_mapFallbackTokens.set(e, o[e]);
-              });
+                    i.m_mapFallbackTokens.set(e, o[e]));
+              }));
         }),
         (e.prototype.InitDirect = function (a, n) {
           var r = this;
-          this.m_mapTokens.clear(),
+          (this.m_mapTokens.clear(),
             this.m_mapFallbackTokens.clear(),
             Object.keys(a).forEach(function (e, t) {
               r.m_mapTokens.set(e, a[e]);
             }),
             n &&
               Object.keys(n).forEach(function (e, t) {
-                r.m_mapTokens.has(e) || r.m_mapTokens.set(e, n[e]),
-                  r.m_mapFallbackTokens.set(e, n[e]);
-              });
+                (r.m_mapTokens.has(e) || r.m_mapTokens.set(e, n[e]),
+                  r.m_mapFallbackTokens.set(e, n[e]));
+              }));
         }),
         (e.prototype.GetPreferredLocales = function () {
           return this.m_rgLocalesToUse
@@ -851,7 +852,7 @@
     }
     var O = new Map();
     new Map();
-    new Map(), new Map(), new Map(), new Map();
+    (new Map(), new Map(), new Map(), new Map());
     var A = new C();
     window.LocalizationManager = A;
     var I,
@@ -999,7 +1000,7 @@
       Y = (function (a) {
         function e(e) {
           var t = a.call(this, e) || this;
-          return (t.state = {}), t;
+          return ((t.state = {}), t);
         }
         return (
           Object(_.d)(e, a),
@@ -1175,14 +1176,14 @@
               }
             }
             var o = this.state.selected;
-            a ||
+            (a ||
               (o.push(t.suggestion.id), this.props.onAddTag(t.suggestion.id)),
-              this.setState({ value: "", selected: o });
+              this.setState({ value: "", selected: o }));
           }),
           (e.prototype.onRemoveSelectedTag = function (e) {
             for (var t = this.state.selected, a = 0; a < t.length; a++)
               if (t[a] == e) {
-                this.props.onRemoveTag(t[a]), t.splice(a, 1);
+                (this.props.onRemoveTag(t[a]), t.splice(a, 1));
                 break;
               }
             this.setState({ selected: t });
@@ -1372,14 +1373,14 @@
             this.setState({ hovered: !0 });
           }),
           (e.prototype.OnUnHover = function () {
-            this.setState({ hovered: !1 }),
+            (this.setState({ hovered: !1 }),
               this.m_videoRef &&
                 this.m_videoRef.current &&
                 ((this.m_videoRef.current.currentTime = 0),
-                this.m_videoRef.current.pause());
+                this.m_videoRef.current.pause()));
           }),
           (e.prototype.onMuteToggle = function (e) {
-            ce.shouldMute()
+            (ce.shouldMute()
               ? (ce.onUnMuteClicked(),
                 this.m_videoRef &&
                   this.m_videoRef.current &&
@@ -1389,21 +1390,21 @@
                   this.m_videoRef.current &&
                   (this.m_videoRef.current.muted = !0)),
               e.preventDefault(),
-              e.stopPropagation();
+              e.stopPropagation());
           }),
           (e.prototype.onAddToWishlist = function (e) {
-            ce.onAddToWishlist(this.props.appID, this.props.rank),
+            (ce.onAddToWishlist(this.props.appID, this.props.rank),
               this.setState({ wishlisted: !0 }),
               e.preventDefault(),
-              e.stopPropagation();
+              e.stopPropagation());
           }),
           (e.prototype.onGoToWishlist = function (e) {
-            ce.onGoToWishlist(), e.preventDefault(), e.stopPropagation();
+            (ce.onGoToWishlist(), e.preventDefault(), e.stopPropagation());
           }),
           (e.prototype.onAddToCart = function (e) {
-            ce.onAddToCart(this.props.appID, this.props.rank),
+            (ce.onAddToCart(this.props.appID, this.props.rank),
               e.preventDefault(),
-              e.stopPropagation();
+              e.stopPropagation());
           }),
           (e.prototype.render = function () {
             var t = this,
@@ -1728,7 +1729,7 @@
       J = (function (a) {
         function e(e) {
           var t = a.call(this, e) || this;
-          return (t.state = { sortedRecommendedApps: [] }), t;
+          return ((t.state = { sortedRecommendedApps: [] }), t);
         }
         return (
           Object(_.d)(e, a),
@@ -1744,10 +1745,10 @@
               c = 1 - (o - i),
               l = 1 - c,
               u = [];
-            u.push({ index: i * N.NUM_RECENCY_STEPS + t, weight: c * n }),
+            (u.push({ index: i * N.NUM_RECENCY_STEPS + t, weight: c * n }),
               u.push({ index: s * N.NUM_RECENCY_STEPS + t, weight: l * n }),
               u.push({ index: i * N.NUM_RECENCY_STEPS + a, weight: c * r }),
-              u.push({ index: s * N.NUM_RECENCY_STEPS + a, weight: l * r });
+              u.push({ index: s * N.NUM_RECENCY_STEPS + a, weight: l * r }));
             var p = new Map(),
               _ = 0,
               d = ce.getRecommendations(),
@@ -1801,7 +1802,7 @@
                 R < C.length;
                 R++
               ) {
-                (C[R].rank = k), k++;
+                ((C[R].rank = k), k++);
               }
               for (
                 var O = 0,
@@ -1856,7 +1857,7 @@
       Z = (function (a) {
         function e(e) {
           var t = a.call(this, e) || this;
-          return (t.state = { width: window.innerWidth }), t;
+          return ((t.state = { width: window.innerWidth }), t);
         }
         return (
           Object(_.d)(e, a),
@@ -1927,7 +1928,7 @@
                             var r, o = [], i = /(.*?)%(\d+)\$s/g, s = 0;
                             (r = i.exec(n));
                           ) {
-                            (s += r[0].length), o.push(r[1]);
+                            ((s += r[0].length), o.push(r[1]));
                             var c = parseInt(r[2]);
                             1 <= c && c <= t.length && o.push(t[c - 1]);
                           }
@@ -1966,16 +1967,16 @@
       })(D.a.Component),
       $ = a("2vnA"),
       ee = a("i8i4");
-    ((G = I || (I = {}))[(G.Unrequested = 0)] = "Unrequested"),
+    (((G = I || (I = {}))[(G.Unrequested = 0)] = "Unrequested"),
       (G[(G.Pending = 1)] = "Pending"),
       (G[(G.Valid = 2)] = "Valid"),
       (G[(G.Failed = 3)] = "Failed"),
-      (G[(G.Rerequest = 4)] = "Rerequest");
+      (G[(G.Rerequest = 4)] = "Rerequest"));
     var te,
       ae,
       ne = (function () {
         function e() {
-          (this.eState = I.Unrequested), (this.nExpirationTime = 0);
+          ((this.eState = I.Unrequested), (this.nExpirationTime = 0));
         }
         return (
           (e.prototype.getData = function (t, a, n) {
@@ -1988,7 +1989,7 @@
                 ((this.eState = I.Pending),
                 a().then(function (e) {
                   if (r.eState == I.Rerequest)
-                    return r.expireData(), void r.getData(t, a, n);
+                    return (r.expireData(), void r.getData(t, a, n));
                   r.eState = e
                     ? ((r.data = n ? n(e) : e),
                       (r.nExpirationTime = o + t),
@@ -2000,9 +2001,9 @@
           }),
           (e.prototype.clearData = function () {
             var e = Date.now() / 1e3;
-            (this.eState = I.Unrequested),
+            ((this.eState = I.Unrequested),
               (this.data = null),
-              (this.nExpirationTime = e);
+              (this.nExpirationTime = e));
           }),
           (e.prototype.expireData = function () {
             var e = Date.now() / 1e3;
@@ -2024,13 +2025,13 @@
           e
         );
       })();
-    ((ae = te || (te = {}))[(ae.ClickThrough = 1)] = "ClickThrough"),
+    (((ae = te || (te = {}))[(ae.ClickThrough = 1)] = "ClickThrough"),
       (ae[(ae.AddToWishlist = 2)] = "AddToWishlist"),
-      (ae[(ae.AddToCart = 3)] = "AddToCart");
+      (ae[(ae.AddToCart = 3)] = "AddToCart"));
     var re = (function () {
       function e() {
         var e = this;
-        (this.m_rgFilterTags = []),
+        ((this.m_rgFilterTags = []),
           (this.m_rgExcludeTags = []),
           (this.m_mapAppDetailsCache = new Map()),
           (this.m_ResultDataCache = new ne()),
@@ -2068,11 +2069,11 @@
               ((e.m_fPopularityValue = e.m_fQueuedPopularityValue),
               (e.m_fRecencyValue = e.m_fQueuedRecencyValue),
               (e.m_bStateUpdated = !0));
-          }, 400);
+          }, 400));
       }
       return (
         (e.prototype.Init = function () {
-          (this.m_fPopularityValue = N.DEFAULT_POPULARITY_SLIDER),
+          ((this.m_fPopularityValue = N.DEFAULT_POPULARITY_SLIDER),
             (this.m_fRecencyValue = N.DEFAULT_RECENCY_SLIDER),
             (this.m_rgExcludeTags = N.DEFAULT_EXCLUDED_TAGS),
             (this.m_rgFilterTags = N.DEFAULT_INCLUDED_TAGS),
@@ -2083,7 +2084,7 @@
             ee.render(
               l.createElement(Z, { app: this }),
               document.getElementById("recommender_root"),
-            );
+            ));
         }),
         (e.prototype.getDetails = function (t) {
           var e = this;
@@ -2266,7 +2267,7 @@
           );
         }),
         (e.prototype.getTagName = function (e) {
-          return this.getTags(), this.m_TagNameMap.get(e);
+          return (this.getTags(), this.m_TagNameMap.get(e));
         }),
         (e.prototype.getTagHeight = function () {
           return Math.max(
@@ -2307,8 +2308,8 @@
           return !1;
         }),
         (e.prototype.onExcludeWishlistedToggled = function (e) {
-          (this.m_bExcludeWishlisted = !this.m_bExcludeWishlisted),
-            (this.m_bStateUpdated = !0);
+          ((this.m_bExcludeWishlisted = !this.m_bExcludeWishlisted),
+            (this.m_bStateUpdated = !0));
         }),
         (e.prototype.onSaveUserSettings = function (e) {
           return Object(_.b)(this, void 0, void 0, function () {
@@ -2365,7 +2366,7 @@
                     ]
                   );
                 case 2:
-                  e.sent(), (e.label = 3);
+                  (e.sent(), (e.label = 3));
                 case 3:
                   return [2];
               }
@@ -2390,7 +2391,7 @@
           });
         }),
         (e.prototype.onUpdateWithIgnored = function () {
-          this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1);
+          (this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1));
         }),
         (e.prototype.onAppClicked = function (a, n) {
           return Object(_.b)(this, void 0, void 0, function () {
@@ -2418,7 +2419,7 @@
                     ]
                   );
                 case 1:
-                  return e.sent(), [2];
+                  return (e.sent(), [2]);
               }
             });
           });
@@ -2466,7 +2467,7 @@
                     ]
                   );
                 case 2:
-                  return e.sent(), [2, a];
+                  return (e.sent(), [2, a]);
               }
             });
           });
@@ -2574,8 +2575,8 @@
       ie,
       se,
       ce = new re();
-    document.addEventListener("DOMContentLoaded", function () {
-      o(), ce.Init();
+    (document.addEventListener("DOMContentLoaded", function () {
+      (o(), ce.Init());
     }),
       (window.LocalizationReady = function (e, t, a) {
         if ("english" !== t) "main" == e ? (oe = a) : "shared" == e && (ie = a);
@@ -2585,11 +2586,11 @@
             r = null,
             o = void 0,
             i = null;
-          void 0 !== oe ? ((n = oe), (r = a)) : (n = a),
+          (void 0 !== oe ? ((n = oe), (r = a)) : (n = a),
             void 0 !== ie ? ((o = ie), (i = se)) : (o = se),
             A.InitFromObjects(n, r, o, i),
-            (se = ie = oe = void 0);
+            (se = ie = oe = void 0));
         }
-      });
+      }));
   },
 });

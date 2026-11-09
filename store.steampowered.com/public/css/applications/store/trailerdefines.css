@@ -374,9 +374,9 @@
   position: relative;
   overflow: hidden;
 }
-@media screen and (aspect-ratio <= 10 / 9) {
+@media screen and (aspect-ratio <= 10/9) {
   .cHqcdcYARwo- {
-    grid-template: "video" "info" 1fr / 100%;
+    grid-template: "video" "info" 1fr/100%;
   }
 }
 .cHqcdcYARwo-:after {
@@ -395,7 +395,7 @@
   opacity: 1;
 }
 ._17ZH-YderNw- {
-  grid-template: "spacer spacer spacer" 1fr "leftArrow name rightArrow" 50px "leftArrow controls rightArrow" 50px "leftArrow content rightArrow" "leftArrow pips rightArrow" 50px "bottomspacer bottomspacer bottomspacer" 50px ". . ." 1fr / 1fr 80% 1fr;
+  grid-template: "spacer spacer spacer" 1fr "leftArrow name rightArrow" 50px "leftArrow controls rightArrow" 50px "leftArrow content rightArrow" "leftArrow pips rightArrow" 50px "bottomspacer bottomspacer bottomspacer" 50px ". . ." 1fr/1fr 80% 1fr;
   width: 100%;
   height: 100%;
   min-height: 100vh;
@@ -407,7 +407,7 @@
   display: grid;
   position: relative;
 }
-@media screen and (aspect-ratio >= 10 / 6) {
+@media screen and (aspect-ratio >= 10/6) {
   ._17ZH-YderNw- {
     grid-template-columns: 1fr min(100vw - 150px, 160vh) 1fr;
   }
@@ -418,7 +418,7 @@
 }
 @media screen and (height <= 500px) {
   ._17ZH-YderNw- {
-    grid-template: "leftArrow spacer rightArrow" 1fr "leftArrow controls rightArrow" 50px "leftArrow content rightArrow" "leftArrow pips rightArrow" 1fr / 5% 90% 5%;
+    grid-template: "leftArrow spacer rightArrow" 1fr "leftArrow controls rightArrow" 50px "leftArrow content rightArrow" "leftArrow pips rightArrow" 1fr/5% 90% 5%;
   }
 }
 @media screen and (width <= 500px) {
@@ -438,7 +438,7 @@
 .BasicUI .E5dDz0rMQn4- {
   padding-top: 39.7%;
 }
-@media screen and (aspect-ratio <= 10 / 9) {
+@media screen and (aspect-ratio <= 10/9) {
   .E5dDz0rMQn4- {
     padding-top: calc(56% + 35vh);
   }
@@ -513,7 +513,7 @@
   box-sizing: border-box;
   scrollbar-width: none;
   flex-grow: 1;
-  grid-template: "capsule appInfo" "tags tags" "review review" "relevance relevance" 1fr / 20% auto;
+  grid-template: "capsule appInfo" "tags tags" "review review" "relevance relevance" 1fr/20% auto;
   gap: 8px 16px;
   margin-bottom: 8px;
   padding: calc(8px + 0.6vw);
@@ -526,13 +526,13 @@
   grid-template-areas: "capsule capsule" "appInfo appInfo" "tags tags" "review review" "relevance relevance";
   padding: 12px;
 }
-@media screen and (aspect-ratio <= 10 / 9) {
+@media screen and (aspect-ratio <= 10/9) {
   .HX5vY-Q3jvw- ._0363ELeIufA- {
     grid-template-columns: 15% auto;
     grid-template-areas: "capsule appInfo" "capsule tags" "capsule review" "capsule relevance";
   }
 }
-@media screen and (aspect-ratio <= 10 / 9) and (width <= 600px) {
+@media screen and (aspect-ratio <= 10/9) and (width <= 600px) {
   .HX5vY-Q3jvw- ._0363ELeIufA- {
     grid-template-columns: 25% auto;
     grid-template-areas: "capsule appInfo" "capsule tags" "review review" "relevance relevance";
@@ -784,7 +784,7 @@
   user-select: none;
   flex-direction: column;
   flex: auto;
-  grid-area: 1 / 1 / 3 / 3;
+  grid-area: 1/1/3/3;
   justify-content: center;
   align-items: center;
   row-gap: 12px;

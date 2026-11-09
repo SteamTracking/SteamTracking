@@ -161,7 +161,7 @@ function _(_) {
           let _ = _.filter((_) => _.color != _);
           _ = _.length > 0 ? _[0].color : void 0;
         }
-        _
+        (_
           ? _[_ * 7 + _].current?.style.setProperty(`--note-color`, _)
           : _[_ * 7 + _].current?.style.removeProperty(`--note-color`),
           _
@@ -169,7 +169,7 @@ function _(_) {
             : _[_ * 7 + _].current?.style.removeProperty(`--day-color1`),
           (_ ?? _)
             ? _[_ * 7 + _].current?.style.setProperty(`--day-color2`, _ ?? _)
-            : _[_ * 7 + _].current?.style.removeProperty(`--day-color2`);
+            : _[_ * 7 + _].current?.style.removeProperty(`--day-color2`));
       }
     }
   }, [_, _, _, _, _]);
@@ -320,8 +320,8 @@ var _ = class {
     return this.m_rgHiddenIds;
   }
   SetHidden(_, _) {
-    _ ? this.m_rgHiddenIds.add(_) : this.m_rgHiddenIds.delete(_),
-      this.m_eventsChanged.Dispatch();
+    (_ ? this.m_rgHiddenIds.add(_) : this.m_rgHiddenIds.delete(_),
+      this.m_eventsChanged.Dispatch());
   }
   GetAdditionalEvents() {
     return Array.from(this.m_rgAdditionalEvents.values());
@@ -334,7 +334,7 @@ var _ = class {
     );
   }
   RemoveAdditionalEvent(_) {
-    this.m_rgAdditionalEvents.delete(_), this.m_eventsChanged.Dispatch();
+    (this.m_rgAdditionalEvents.delete(_), this.m_eventsChanged.Dispatch());
   }
 };
 function _(_) {
@@ -342,7 +342,7 @@ function _(_) {
     [_, _] = _.useState(0);
   return (
     _(_.EventsChanged(), () => {
-      _(_.GetAdditionalEvents()), _((_) => _ + 1);
+      (_(_.GetAdditionalEvents()), _((_) => _ + 1));
     }),
     _
   );
@@ -352,7 +352,7 @@ function _(_) {
     [_, _] = _.useState(0);
   return (
     _(_.EventsChanged(), () => {
-      _(_.GetHiddenIds()), _((_) => _ + 1);
+      (_(_.GetHiddenIds()), _((_) => _ + 1));
     }),
     _
   );
@@ -366,35 +366,35 @@ var _ = class _ {
   m_setDismisses = new Set();
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   async Init(_, _) {
-    (this.m_accountId = _),
+    ((this.m_accountId = _),
       (this.m_partnerId = _),
       (this.m_serviceTransport = _.Get()
         .GetPromotionTransport()
-        .GetServiceTransport());
+        .GetServiceTransport()));
     let _ = _.Init(_);
-    _.Body().set_accountid(this.m_accountId),
+    (_.Body().set_accountid(this.m_accountId),
       _.Body().set_partnerid(this.m_partnerId),
       _.Body().set_rtime_after(
         Math.floor(new Date().getTime() / 1e3 - 14 * _.PerDay),
-      );
+      ));
     let _ = await _.GetDismissTimeRange(this.m_serviceTransport, _);
     if (_.BSuccess()) {
       for (let _ of _.Body().dismiss_list())
         if (_.state() == 1) {
           let _ = this.m_rgDismisses.get(_.key_json()) ?? [];
-          _.push(_.dismiss_id()), this.m_rgDismisses.set(_.key_json(), _);
+          (_.push(_.dismiss_id()), this.m_rgDismisses.set(_.key_json(), _));
         }
       this.DismissesUpdated();
     }
   }
   DismissesUpdated() {
-    (this.m_setDismisses = new Set(
+    ((this.m_setDismisses = new Set(
       Array.from(this.m_rgDismisses).map(([_, _]) => _),
     )),
-      this.m_eventsChanged.Dispatch();
+      this.m_eventsChanged.Dispatch());
   }
   EventsChanged() {
     return this.m_eventsChanged;
@@ -410,21 +410,21 @@ var _ = class _ {
   async SetDismiss(_, _) {
     _(this.m_serviceTransport, `Must call Init first`);
     let _ = this.m_rgDismisses.get(_) ?? [];
-    _.push(null), this.m_rgDismisses.set(_, _), this.DismissesUpdated();
+    (_.push(null), this.m_rgDismisses.set(_, _), this.DismissesUpdated());
     let _ = _.Init(_),
       _ = new _();
-    _.set_accountid(this.m_accountId),
+    (_.set_accountid(this.m_accountId),
       _.set_partnerid(this.m_partnerId),
       _.set_key_json(_),
       _.set_state(1),
       _.set_rtime_create(Math.floor(new Date().getTime() / 1e3)),
       _.set_rtime_validity(Math.floor(_.getTime() / 1e3)),
-      _.Body().add_dismiss_list(_);
+      _.Body().add_dismiss_list(_));
     let _ = await _.CreateDismiss(this.m_serviceTransport, _);
     if (_.BSuccess() && _.Body().dismiss_list().length > 0) {
       let _ = (this.m_rgDismisses.get(_) ?? []).filter((_) => _ !== null);
-      _.push(_.Body().dismiss_list()[0].dismiss_id()),
-        this.m_rgDismisses.set(_, _);
+      (_.push(_.Body().dismiss_list()[0].dismiss_id()),
+        this.m_rgDismisses.set(_, _));
     }
   }
   async ClearDismiss(_) {
@@ -433,8 +433,8 @@ var _ = class _ {
     if ((this.m_rgDismisses.delete(_), this.DismissesUpdated(), _))
       for (let _ of _) {
         let _ = _.Init(_);
-        _.Body().set_dismiss_id(_),
-          await _.DeleteDismiss(this.m_serviceTransport, _);
+        (_.Body().set_dismiss_id(_),
+          await _.DeleteDismiss(this.m_serviceTransport, _));
       }
   }
 };
@@ -443,7 +443,7 @@ function _() {
     [_, _] = _.useState(0);
   return (
     _(_.Get().EventsChanged(), () => {
-      _(_.Get().GetDismissedEvents()), _((_) => _ + 1);
+      (_(_.Get().GetDismissedEvents()), _((_) => _ + 1));
     }),
     _
   );
@@ -637,13 +637,13 @@ var _ = `j-KLJ7Mtr80-`,
     m_rgOptInComputed = new Map();
     static async Construct() {
       let _ = new _();
-      return await _.Init(), _;
+      return (await _.Init(), _);
     }
     async Init() {
       let _ = await fetch(`${_.PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard`);
       try {
-        (this.m_rgOptIns = await _.json()),
-          this.m_rgOptIns && _.ExtractOptInDefinitions(this.m_rgOptIns);
+        ((this.m_rgOptIns = await _.json()),
+          this.m_rgOptIns && _.ExtractOptInDefinitions(this.m_rgOptIns));
       } catch {
         this.m_rgOptIns = {};
       }
@@ -652,7 +652,7 @@ var _ = `j-KLJ7Mtr80-`,
       for (let _ of Object.keys(_)) {
         let _ = _[_].description,
           _ = _(_?.jsondata);
-        delete _?.jsondata, _ && (_[_].description.definition = _);
+        (delete _?.jsondata, _ && (_[_].description.definition = _));
       }
     }
     GetInfo(_) {
@@ -673,7 +673,7 @@ var _ = `j-KLJ7Mtr80-`,
           rgRegisteredApps: _.summary?.apps_in,
           rgFeaturedApps: _.featured_appids,
         };
-      return this.m_rgOptInComputed.set(_, _), _;
+      return (this.m_rgOptInComputed.set(_, _), _);
     }
   };
 function _() {
@@ -778,7 +778,7 @@ var _ = class {
   getElement;
   getCapsuleElement;
   constructor(_, _, _, _, _, _, _, _, _, _, _, _, _, _) {
-    (this.m_partnerId = _),
+    ((this.m_partnerId = _),
       (this.valveOnly = _),
       (this.m_plan = _),
       (this.m_assetInput = _),
@@ -799,7 +799,7 @@ var _ = class {
       (this.getCapsuleElement = () =>
         _?.({
           eventData: this,
-        }));
+        })));
   }
   passesFilter = (_) => _ == 1;
   dataChanged() {
@@ -920,8 +920,8 @@ function _(_) {
       _.sale_clan_account,
       _.sale_clan_event_gid,
     );
-  (_ ??= !_ && _?.GetImageURL(`capsule`, _, _.capsule_main)),
-    (_ ??= !_ && _(_));
+  ((_ ??= !_ && _?.GetImageURL(`capsule`, _, _.capsule_main)),
+    (_ ??= !_ && _(_)));
   let _ = [];
   _.valveOnly &&
     (_.type != `seasonalsale` &&
@@ -1045,7 +1045,7 @@ function _(_) {
       ],
     });
   }
-  _(_), _(_);
+  (_(_), _(_));
   let _ = _?.description.start_date ?? _.start_date,
     _ = _?.description.end_date ?? _.end_date,
     _ = _?.description?.definition?.localized_optin_banner?.[_.LANGUAGE],
@@ -1123,11 +1123,11 @@ function _(_) {
             `#Dashboard_UpcomingEvents_EventType_PromotionPlan_registration_reminder`,
           ),
         );
-        (_.getElement = () =>
+        ((_.getElement = () =>
           (0, _.jsx)(_, {
             eventData: _,
           })),
-          (_ = _.AddAdditionalEvent(_));
+          (_ = _.AddAdditionalEvent(_)));
       }
     }
     return _;
@@ -1179,7 +1179,7 @@ function _(_) {
                 `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailer_Header`,
               ),
             );
-            (_.getElement = () =>
+            ((_.getElement = () =>
               (0, _.jsx)(_, {
                 eventData: _,
                 appId: _.appid,
@@ -1189,7 +1189,7 @@ function _(_) {
                     ? `trailer-seasonalsale`
                     : `trailer-themesale`,
               })),
-              _.push(_.AddAdditionalEvent(_));
+              _.push(_.AddAdditionalEvent(_)));
           }
         }
         if (_.m_plan.type == `seasonalsale`) {
@@ -1206,14 +1206,14 @@ function _(_) {
                 `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Header`,
               ),
             );
-            (_.getElement = () =>
+            ((_.getElement = () =>
               (0, _.jsx)(_, {
                 eventData: _,
                 appId: _.appid,
                 registerByDate: _,
                 registrationType: `registration`,
               })),
-              _.push(_.AddAdditionalEvent(_));
+              _.push(_.AddAdditionalEvent(_)));
           }
         }
       } else if (!_ && _.m_plan.type == `seasonalsale`) {
@@ -1231,14 +1231,14 @@ function _(_) {
               `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedDiscount_Header`,
             ),
           );
-          (_.getElement = () =>
+          ((_.getElement = () =>
             (0, _.jsx)(_, {
               eventData: _,
               appId: _.appid,
               registerByDate: _,
               registrationType: `discount`,
             })),
-            _.push(_.AddAdditionalEvent(_));
+            _.push(_.AddAdditionalEvent(_)));
         }
       }
     }
@@ -2006,24 +2006,24 @@ function _(_) {
     _ = null;
   switch (_) {
     case `trailer-seasonalsale`:
-      (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerSeasonalSale_Title`),
+      ((_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerSeasonalSale_Title`),
         (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerSeasonalSale_Body`),
-        (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerSeasonalSale_Action`);
+        (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerSeasonalSale_Action`));
       break;
     case `trailer-themesale`:
-      (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerThemeSale_Title`),
+      ((_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerThemeSale_Title`),
         (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerThemeSale_Body`),
-        (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerThemeSale_Action`);
+        (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerThemeSale_Action`));
       break;
     case `registration`:
-      (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Title`),
+      ((_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Title`),
         (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Body`),
-        (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Action`);
+        (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Action`));
       break;
     case `discount`:
-      (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedDiscount_Title`),
+      ((_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedDiscount_Title`),
         (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedDiscount_Body`),
-        (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Action`);
+        (_ = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Action`));
   }
   return (0, _.jsxs)(_, {
     hasImage: !!_,
@@ -2195,7 +2195,7 @@ function _(_) {
             _,
             void 0,
           );
-        return _(_(_, _), ``), _;
+        return (_(_(_, _), ``), _);
       },
       [_, _],
     );
@@ -2218,7 +2218,7 @@ function _() {
     _.setHours(0, 0, 0, 0);
     let _ = (_) => {
         let _ = new Date();
-        return _.setDate(_.getDate() + _), _;
+        return (_.setDate(_.getDate() + _), _);
       },
       _ = [
         {
@@ -3270,7 +3270,7 @@ function _() {
 }
 function _(_) {
   let _ = -1;
-  return _ == 1 ? (_ = 0) : _ == 2 ? (_ = 1) : _ == 5 && (_ = 2), _;
+  return (_ == 1 ? (_ = 0) : _ == 2 ? (_ = 1) : _ == 5 && (_ = 2), _);
 }
 function _(_) {
   let { marketingMessage: _ } = _,
@@ -3874,32 +3874,32 @@ function _(_) {
     [_] = _(`expanded`, !1),
     [_, _] = _.useState(!!_),
     _ = _.useCallback((_) => {
-      _(_), !_ && _.current.scrollIntoView();
+      (_(_), !_ && _.current.scrollIntoView());
     }, []),
     [_, _] = _.useState(!1),
     _ = _.useCallback(
       (_) => {
-        _(_), _ && _(!0);
+        (_(_), _ && _(!0));
       },
       [_, _],
     ),
     [_, _] = _.useState(!1),
     _ = _.useCallback(
       (_) => {
-        _(_), _ && _(!0);
+        (_(_), _ && _(!0));
       },
       [_, _],
     ),
     [_, _] = _.useState(``),
     _ = _.useCallback(
       (_) => {
-        _ && (_(!0), _(!0), _(!0)), _(_);
+        (_ && (_(!0), _(!0), _(!0)), _(_));
       },
       [_, _],
     ),
     [_, _] = _.useState(0),
     _ = () => {
-      _(0), _(``);
+      (_(0), _(``));
     },
     _ = _(),
     { rgShownEvents: _, nShouldBeShownCount: _ } = _(_, _, _, _),
@@ -3961,7 +3961,7 @@ function _(_) {
                     `#Dashboard_UpcomingEvents_Filter_DismissedAllDismissed`,
                     (0, _.jsx)(`a`, {
                       onClick: () => {
-                        _(3), _(``);
+                        (_(3), _(``));
                       },
                       children: _(
                         `#Dashboard_UpcomingEvents_Filter_DismissedAllDismissed_LinkText`,
@@ -4012,7 +4012,7 @@ function _(_, _, _, _, _, _) {
           let _ = _.filter((_) => _(_));
           return _.length > 1 ? _.filter((_) => !_(_)).concat(_(_)) : _;
         };
-        _ ||
+        (_ ||
           (_ = _(
             _,
             (_) => _(_, _),
@@ -4053,7 +4053,7 @@ function _(_, _, _, _, _, _) {
                     setExpanded: _,
                   }),
               }),
-            ));
+            )));
       }
       return _;
     }, [_, _, _, _, _, _, _])
@@ -4435,10 +4435,10 @@ function _(_) {
     _ = !1;
   switch (_.eventType) {
     case `deadline`:
-      (_ = `#cf980c`), (_ = !0);
+      ((_ = `#cf980c`), (_ = !0));
       break;
     case `deadline-urgent`:
-      (_ = `#cf520c`), (_ = !0);
+      ((_ = `#cf520c`), (_ = !0));
       break;
     case `release-game`:
       _ = `#426283`;
@@ -4467,7 +4467,7 @@ function _(_) {
       let _ = _.reduce((_, _) => {
         let _ = `${_.eventType}_${_.eventTypeName}`,
           _ = _.get(_) || [];
-        return _.set(_, [..._, _]), _;
+        return (_.set(_, [..._, _]), _);
       }, new Map());
       for (let _ of _.values()) _.sort(_);
       return Array.from(_).sort(([_, _], [_, _]) =>
@@ -4756,10 +4756,10 @@ function _(_) {
   let _ = Math.min(..._.keys()),
     _ = Math.max(..._.keys()),
     _ = new Date(_);
-  for (_.setMonth(_.getMonth() + 1); _.getTime() < _; )
-    _.has(_.getTime()) || _.set(_.getTime(), []),
+  for (_.setMonth(_.getMonth() + 1); _.getTime() < _;)
+    (_.has(_.getTime()) || _.set(_.getTime(), []),
       (_ = new Date(_)),
-      _.setMonth(_.getMonth() + 1);
+      _.setMonth(_.getMonth() + 1));
   return _;
 }
 function _(_, _) {
@@ -5044,7 +5044,7 @@ function _(_) {
       (0, _.jsx)(`button`, {
         className: _(_),
         onClick: () => {
-          typeof _ == `function` && _(), window.open(_, `_blank`);
+          (typeof _ == `function` && _(), window.open(_, `_blank`));
         },
         children: _,
       }),
@@ -5082,11 +5082,11 @@ function _(_) {
   let [_, _] = _.useState(!0);
   return (
     _.useEffect(() => {
-      _.Init(),
+      (_.Init(),
         _.Get(),
         (async () => {
-          await _.Get().Init(_.accountid, Number.isNaN(_) ? 0 : _), _(!1);
-        })();
+          (await _.Get().Init(_.accountid, Number.isNaN(_) ? 0 : _), _(!1));
+        })());
     }, [_]),
     _
   );

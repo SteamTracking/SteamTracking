@@ -63,42 +63,42 @@ function _(_) {
       break;
     case `#Sale_Reservation_MonthYear`:
     case `#Sale_Reservation_AfterMonthYear`:
-      (_ = _(`#Sale_Reservation_MonthNoun_` + _)), (_ = `` + _.getFullYear());
+      ((_ = _(`#Sale_Reservation_MonthNoun_` + _)), (_ = `` + _.getFullYear()));
       break;
     case `#Sale_Reservation_TwoMonthRangeYear`:
-      (_ = _(`#Sale_Reservation_MonthNoun_` + _(_, 1))),
+      ((_ = _(`#Sale_Reservation_MonthNoun_` + _(_, 1))),
         (_ = _(`#Sale_Reservation_MonthNoun_` + _)),
-        (_ = `` + _.getFullYear());
+        (_ = `` + _.getFullYear()));
       break;
     case `#Sale_Reservation_ThreeMonthRangeYear`:
-      (_ = _(`#Sale_Reservation_MonthNoun_` + _(_, 2))),
+      ((_ = _(`#Sale_Reservation_MonthNoun_` + _(_, 2))),
         (_ = _(`#Sale_Reservation_MonthNoun_` + _)),
-        (_ = `` + _.getFullYear());
+        (_ = `` + _.getFullYear()));
       break;
     case `#Sale_Reservation_FourMonthRangeYear`:
-      (_ = _(`#Sale_Reservation_MonthNoun_` + _(_, 3))),
+      ((_ = _(`#Sale_Reservation_MonthNoun_` + _(_, 3))),
         (_ = _(`#Sale_Reservation_MonthNoun_` + _)),
-        (_ = `` + _.getFullYear());
+        (_ = `` + _.getFullYear()));
       break;
     case `#Sale_Reservation_Quarter_ThreeMonths`:
-      (_ = `#Sale_Reservation_Quarter` + (Math.floor((_ - 1) / 3) + 1)),
-        (_ = `` + _.getFullYear());
+      ((_ = `#Sale_Reservation_Quarter` + (Math.floor((_ - 1) / 3) + 1)),
+        (_ = `` + _.getFullYear()));
       break;
     case `#Sale_Reservation_AfterQuarter_ThreeMonths`:
-      (_ = `#Sale_Reservation_AfterQuarter` + (Math.floor((_ - 1) / 3) + 1)),
+      ((_ = `#Sale_Reservation_AfterQuarter` + (Math.floor((_ - 1) / 3) + 1)),
         (_ = _(`#Sale_Reservation_MonthNoun_` + _)),
-        (_ = `` + _.getFullYear());
+        (_ = `` + _.getFullYear()));
       break;
     case `#Sale_Reservation_ByYear`:
       _ = `` + _.getFullYear();
       break;
     case `#Sale_Reservation_ByMonthYear`:
-      (_ = _(`#Sale_Reservation_MonthNoun_` + _)), (_ = `` + _.getFullYear());
+      ((_ = _(`#Sale_Reservation_MonthNoun_` + _)), (_ = `` + _.getFullYear()));
       break;
     case `#Sale_Reservation_BetweenNowAndLastDay`:
-      (_ = _(`#Sale_Reservation_MonthNoun_` + _)),
+      ((_ = _(`#Sale_Reservation_MonthNoun_` + _)),
         (_ = `` + new Date(_.getFullYear(), _.getMonth(), 0).getDate()),
-        (_ = `` + _.getFullYear());
+        (_ = `` + _.getFullYear()));
       break;
     case `#Sale_Reservation_RelativeWeekly`:
       {
@@ -221,11 +221,11 @@ var _ = class _ {
       );
     _.forEach((_) => {
       let _ = _.Body().add_settings();
-      _.set_edistributor(_.edistributor),
+      (_.set_edistributor(_.edistributor),
         _.set_product_identifier(_.product_identifier),
         _.set_start_queue_position(_.start_queue_position),
         _.set_rtime_estimated_notification(_.rtime_estimated_notification),
-        _.set_localization_token(_.localization_token);
+        _.set_localization_token(_.localization_token));
     });
     let _ = null;
     try {
@@ -238,16 +238,16 @@ var _ = class _ {
           _ = Math.floor(Date.now() / 1e3);
         return (
           _.forEach((_) => {
-            (_.accountid = _.accountid), (_.rtime_created = _);
+            ((_.accountid = _.accountid), (_.rtime_created = _));
             let _ = this.GetKey(_),
               _ = this.m_mapProductPositionMsgList.get(_),
               _ = _.findIndex(
                 (_) => _.start_queue_position == _.start_queue_position,
               ),
               _ = [..._];
-            _ >= 0 ? (_[_] = _) : (_.push(_), this.SortList(_)),
+            (_ >= 0 ? (_[_] = _) : (_.push(_), this.SortList(_)),
               this.m_mapProductPositionMsgList.set(_, _),
-              _.add(this.GetKey(_));
+              _.add(this.GetKey(_)));
           }),
           Array.from(_).forEach((_) => {
             this.GetPositionListViaKeyChangeCallback(_).Dispatch(
@@ -272,9 +272,9 @@ var _ = class _ {
   }
   async DeletePositionMessage(_) {
     let _ = _.Init(_);
-    _.Body().set_edistributor(_.edistributor),
+    (_.Body().set_edistributor(_.edistributor),
       _.Body().set_product_identifier(_.product_identifier),
-      _.Body().set_start_queue_position(_.start_queue_position);
+      _.Body().set_start_queue_position(_.start_queue_position));
     let _ = null;
     try {
       let _ = await _.DeleteReservationPositionMessage(
@@ -329,9 +329,9 @@ var _ = class _ {
     this.ValidateInputDefault(_) &&
       (_.map((_) => {
         let _ = this.GetKey(_);
-        this.m_mapProductPositionMsgList.has(_) ||
+        (this.m_mapProductPositionMsgList.has(_) ||
           this.m_mapProductPositionMsgList.set(_, []),
-          this.m_mapProductPositionMsgList.get(_).push(_);
+          this.m_mapProductPositionMsgList.get(_).push(_));
       }),
       this.m_mapProductPositionMsgList.forEach((_) => this.SortList(_)));
   }
@@ -349,17 +349,17 @@ var _ = class _ {
     );
   }
 };
-_([_], _.prototype, `AddProductID`, null),
+(_([_], _.prototype, `AddProductID`, null),
   _([_], _.prototype, `SetPositionMessages`, null),
   _([_], _.prototype, `DeletePositionMessage`, null),
-  _([_], _.prototype, `ReloadReservationPositionMessages`, null);
+  _([_], _.prototype, `ReloadReservationPositionMessages`, null));
 function _() {
   let [_, _] = (0, _.useState)(() => _.Get().GetAllProducts());
-  return _(_.Get().GetProductListChangeCallback(), _), _;
+  return (_(_.Get().GetProductListChangeCallback(), _), _);
 }
 function _(_) {
   let [_, _] = (0, _.useState)(() => _.Get().GetPositionMessagingForProduct(_));
-  return _(_.Get().GetPositionListChangeCallback(_), _), _;
+  return (_(_.Get().GetPositionListChangeCallback(_), _), _);
 }
 function _() {
   let _ = _.Get();
@@ -394,7 +394,7 @@ function _(_) {
         (0, _.jsxs)(_, {
           disabled: !_,
           onClick: () => {
-            _(_), _(null);
+            (_(_), _(null));
           },
           children: [
             `Add '`,
@@ -727,7 +727,7 @@ function _(_) {
         strDescription: `Are you sure, this action is no undo'able?`,
         onCancel: _,
         onOK: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _(_).then((_) => {
               _
                 ? (_.fnSetSuccess(!0),
@@ -736,7 +736,7 @@ function _(_) {
                   _.fnSetStrError(
                     `Failed, please check console logs and/or try again`,
                   ));
-            });
+            }));
         },
       });
 }

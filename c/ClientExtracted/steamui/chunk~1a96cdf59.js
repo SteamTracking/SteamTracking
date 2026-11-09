@@ -44,12 +44,12 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports),
+        (__webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
             BroadcastDetails: () => _,
             LinkOverlay: () => _,
             default: () => _,
-          });
+          }));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -89,7 +89,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         function _() {
           return (0, _.jsx)("div", {
@@ -103,10 +103,11 @@
           let _ = _._.Loading,
             _ = "";
           if (_) {
-            (_ = _.GetBroadcastState()), (_ = _.GetBroadcastStateDescription());
+            ((_ = _.GetBroadcastState()),
+              (_ = _.GetBroadcastStateDescription()));
             let _ = _.IsBuffering();
-            _ == _._.Unlocking && ((_ = _._.Loading), (_ = "")),
-              _ == _._.Ready && _ && ((_ = _._.Loading), (_ = ""));
+            (_ == _._.Unlocking && ((_ = _._.Loading), (_ = "")),
+              _ == _._.Ready && _ && ((_ = _._.Loading), (_ = "")));
           }
           if ((_ && _ != _._.Error && _.GetUserInputNeeded()) || _ == _._.Ready)
             return null;
@@ -153,7 +154,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         let _ = class extends _.Component {
           constructor(_) {
@@ -259,7 +260,7 @@
             });
           }
         };
-        _([_._], _.prototype, "HideStats", 1), (_ = _([_._], _));
+        (_([_._], _.prototype, "HideStats", 1), (_ = _([_._], _)));
         let _ = class extends _.Component {
           constructor(_) {
             super(_);
@@ -460,7 +461,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         class _ extends _.Component {
           m_elSettingsButton;
@@ -471,14 +472,14 @@
           m_elSubtitlesPanel = _.createRef();
           m_SubtitlesButtonPos;
           constructor(_) {
-            super(_),
+            (super(_),
               (this.state = {
                 bSettingsOpen: !1,
                 bSubtitlesOpen: !1,
-              });
+              }));
           }
           OnVideoControlClick(_) {
-            this.setState({
+            (this.setState({
               bSettingsOpen: !this.state.bSettingsOpen,
             }),
               (this.m_SettingsButtonPos = [
@@ -491,10 +492,10 @@
                 "mouseup",
                 this.OnMouseUp,
                 !0,
-              );
+              ));
           }
           OnSubtitlesClick(_) {
-            this.setState({
+            (this.setState({
               bSubtitlesOpen: !this.state.bSubtitlesOpen,
             }),
               (this.m_SubtitlesButtonPos = [
@@ -507,10 +508,10 @@
                 "mouseup",
                 this.OnMouseUp,
                 !0,
-              );
+              ));
           }
           OnMouseUp(_) {
-            this.m_elClickListener?.removeEventListener(
+            (this.m_elClickListener?.removeEventListener(
               "mouseup",
               this.OnMouseUp,
               !0,
@@ -522,7 +523,7 @@
               (0, _._)(this.m_elSubtitlesPanel.current, _.target) ||
                 this.setState({
                   bSubtitlesOpen: !1,
-                });
+                }));
           }
           bindSettingsButton(_) {
             this.m_elSettingsButton = _;
@@ -531,10 +532,10 @@
             this.m_elSettingsPanel = _;
           }
           OnShowStats(_) {
-            this.props.onShowStats(_),
+            (this.props.onShowStats(_),
               this.setState({
                 bSettingsOpen: !this.state.bSettingsOpen,
-              });
+              }));
           }
           render() {
             let _ = !1,
@@ -561,10 +562,10 @@
                     _._,
                     {
                       onClick: () => {
-                        this.props.video.SetVideoRepresentation(_),
+                        (this.props.video.SetVideoRepresentation(_),
                           this.setState({
                             bSettingsOpen: !this.state.bSettingsOpen,
-                          });
+                          }));
                       },
                       bChecked: _.selected,
                       children: _.displayName,
@@ -589,17 +590,17 @@
                 (_ = 0 - (_.length * 21 + _))),
               this.state.bSubtitlesOpen)
             ) {
-              (_ = !0),
+              ((_ = !0),
                 (_ = []),
                 _.push(
                   (0, _.jsx)(
                     _._,
                     {
                       onClick: () => {
-                        this.props.video.SetSubtitles(null),
+                        (this.props.video.SetSubtitles(null),
                           this.setState({
                             bSubtitlesOpen: !this.state.bSubtitlesOpen,
-                          });
+                          }));
                       },
                       className: "NoSubtitles",
                       bChecked: !1,
@@ -607,7 +608,7 @@
                     },
                     "none",
                   ),
-                );
+                ));
               for (
                 let _ = 0;
                 _ < this.props.video.ListSubtitles().length;
@@ -619,10 +620,10 @@
                     _._,
                     {
                       onClick: () => {
-                        this.props.video.SetSubtitles(_.language),
+                        (this.props.video.SetSubtitles(_.language),
                           this.setState({
                             bSubtitlesOpen: !this.state.bSubtitlesOpen,
-                          });
+                          }));
                       },
                       bChecked: _.mode === "showing",
                       children: _.label,
@@ -701,16 +702,16 @@
             });
           }
         }
-        _([_._], _.prototype, "OnVideoControlClick", 1),
+        (_([_._], _.prototype, "OnVideoControlClick", 1),
           _([_._], _.prototype, "OnSubtitlesClick", 1),
           _([_._], _.prototype, "OnMouseUp", 1),
           _([_._], _.prototype, "bindSettingsButton", 1),
           _([_._], _.prototype, "BindSettingsPanel", 1),
-          _([_._], _.prototype, "OnShowStats", 1);
+          _([_._], _.prototype, "OnShowStats", 1));
         const _ = !0;
         let _ = class extends _.Component {
           constructor(_) {
-            super(_), (0, _._)(this);
+            (super(_), (0, _._)(this));
           }
           k_nHideSliderTimeout = 1.5 * 1e3;
           m_bShowSlider = _;
@@ -723,18 +724,18 @@
           ToggleMute() {
             let _ = this.props.video,
               _ = _.IsMuted();
-            _.SetMute(!_), _.GetVolume() < 0.01 && _.SetVolume(0.5);
+            (_.SetMute(!_), _.GetVolume() < 0.01 && _.SetVolume(0.5));
           }
           OnMouseEnter(_) {
-            (this.m_bShowSlider = !0),
+            ((this.m_bShowSlider = !0),
               (this.m_bMouseOver = !0),
-              this.m_schHideSlider.Cancel();
+              this.m_schHideSlider.Cancel());
           }
           OnMouseLeave(_) {
-            (this.m_bMouseOver = !1), this.ScheduleHide();
+            ((this.m_bMouseOver = !1), this.ScheduleHide());
           }
           OnChildDrag(_) {
-            (this.m_bChildDragging = _), this.ScheduleHide();
+            ((this.m_bChildDragging = _), this.ScheduleHide());
           }
           ScheduleHide() {
             this.m_bMouseOver ||
@@ -782,21 +783,21 @@
             );
           }
         };
-        _([_._], _.prototype, "m_bShowSlider", 2),
+        (_([_._], _.prototype, "m_bShowSlider", 2),
           _([_._], _.prototype, "ToggleMute", 1),
           _([_._], _.prototype, "OnMouseEnter", 1),
           _([_._], _.prototype, "OnMouseLeave", 1),
           _([_._], _.prototype, "OnChildDrag", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         let _ = class extends _.Component {
           constructor(_) {
-            super(_), (0, _._)(this);
+            (super(_), (0, _._)(this));
           }
           m_elSlider = null;
           m_nVolumeStartOfDrag = 0;
           OnMouseDown(_) {
             let _ = _.currentTarget;
-            (this.m_elSlider = _),
+            ((this.m_elSlider = _),
               (this.m_nVolumeStartOfDrag = this.props.video.GetVolume()),
               this.SetVolumeWithCoord(_, _.clientX),
               _.ownerDocument.defaultView?.addEventListener(
@@ -807,7 +808,7 @@
                 "mouseup",
                 this.OnMouseUp,
               ),
-              this.props.onDrag(!0);
+              this.props.onDrag(!0));
           }
           OnMouseMove(_) {
             this.m_elSlider &&
@@ -817,7 +818,7 @@
             if (!this.m_elSlider) return;
             this.SetVolumeWithCoord(this.m_elSlider, _.clientX);
             let _ = this.props.video;
-            _.IsMuted() && _.SetVolume(this.m_nVolumeStartOfDrag),
+            (_.IsMuted() && _.SetVolume(this.m_nVolumeStartOfDrag),
               this.m_elSlider.ownerDocument.defaultView?.removeEventListener(
                 "mousemove",
                 this.OnMouseMove,
@@ -828,14 +829,14 @@
               ),
               (this.m_nVolumeStartOfDrag = 0),
               (this.m_elSlider = null),
-              this.props.onDrag(!1);
+              this.props.onDrag(!1));
           }
           SetVolumeWithCoord(_, _) {
             let _ = _.getBoundingClientRect(),
               _ = _._(_, _.left, _.right, 0, 1),
               _ = _._(_, 0, 1),
               _ = this.props.video;
-            _.SetMute(_ < 0.01), _.SetVolume(_);
+            (_.SetMute(_ < 0.01), _.SetVolume(_));
           }
           render() {
             let _ = this.props.video,
@@ -866,11 +867,11 @@
             });
           }
         };
-        _([_._], _.prototype, "OnMouseDown", 1),
+        (_([_._], _.prototype, "OnMouseDown", 1),
           _([_._], _.prototype, "OnMouseMove", 1),
           _([_._], _.prototype, "OnMouseUp", 1),
           _([_._], _.prototype, "SetVolumeWithCoord", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         var _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
@@ -881,7 +882,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         const _ = 3200,
           _ = 15;
@@ -894,7 +895,7 @@
           m_elMouseDown = null;
           m_listeners = new _._();
           constructor(_) {
-            super(_),
+            (super(_),
               (this.state = {
                 bMountControls: !1,
                 bControlsVisible: !1,
@@ -902,7 +903,7 @@
                 video: null,
                 nResizedHeight: null,
                 bFullscreen: !1,
-              });
+              }));
           }
           StopVideo() {
             let _ = this.state.video;
@@ -922,7 +923,7 @@
             _ && _.StopPlaybackTillUserInput();
           }
           componentDidUpdate(_, _) {
-            !_.bMountControls && this.state.bMountControls
+            (!_.bMountControls && this.state.bMountControls
               ? setTimeout(() => {
                   this.setState((_) => ({
                     bControlsVisible: _.bMountControls,
@@ -934,7 +935,7 @@
                 !this.state.video.IsPaused() &&
                 this.m_schUnmountControls.Schedule(2e3, this.UmountControls),
               this.props.steamIDBroadcast !== _.steamIDBroadcast &&
-                this.BindVideoRef(this.m_elVideo);
+                this.BindVideoRef(this.m_elVideo));
             const _ = this.props.nAppIDVOD;
             _ &&
               (_.strInitialCapsuleImageUrl === void 0 || _.nAppIDVOD != _) &&
@@ -952,13 +953,13 @@
                 });
           }
           componentWillUnmount() {
-            this.m_listeners.Unregister(),
+            (this.m_listeners.Unregister(),
               this.m_schHideControls.Cancel(),
               this.m_schUnmountControls.Cancel(),
-              this.StopVideo();
+              this.StopVideo());
           }
           BindBroadcastPlayerRef(_) {
-            this.m_listeners.Unregister(),
+            (this.m_listeners.Unregister(),
               (this.m_elBroadcastPlayer = _),
               _ &&
                 (this.m_listeners.AddEventListener(
@@ -980,11 +981,11 @@
                   _,
                   "msfullscreenchange",
                   this.OnFullscreenChange,
-                ));
+                )));
           }
           BindVideoRef(_) {
             let _ = null;
-            this.StopVideo(),
+            (this.StopVideo(),
               this.props.steamIDBroadcast
                 ? _ &&
                   (_ = _.BroadcastWatchStore.CreateBroadcastVideo(
@@ -1019,26 +1020,26 @@
                 video: _,
               }),
               this.props.fnSetBroadcastVideo?.(_),
-              (this.m_elVideo = _);
+              (this.m_elVideo = _));
           }
           OnMouseDown(_) {
-            (this.m_bMouseDown = !0),
+            ((this.m_bMouseDown = !0),
               (this.m_elMouseDown = _.currentTarget),
               this.m_elMouseDown.ownerDocument.defaultView?.addEventListener(
                 "mouseup",
                 this.OnMouseUp,
-              );
+              ));
           }
           OnMouseUp(_) {
-            (this.m_bMouseDown = !1),
+            ((this.m_bMouseDown = !1),
               this.m_elMouseDown?.ownerDocument.defaultView?.removeEventListener(
                 "mouseup",
                 this.OnMouseUp,
               ),
-              this.m_schHideControls.Schedule(_, this.HideControls);
+              this.m_schHideControls.Schedule(_, this.HideControls));
           }
           OnMouseMove(_) {
-            this.m_schHideControls.Cancel(),
+            (this.m_schHideControls.Cancel(),
               this.m_schUnmountControls.Cancel(),
               this.state.bMountControls
                 ? this.state.bControlsVisible ||
@@ -1048,7 +1049,7 @@
                 : this.setState({
                     bMountControls: !0,
                   }),
-              this.m_schHideControls.Schedule(_, this.HideControls);
+              this.m_schHideControls.Schedule(_, this.HideControls));
           }
           OnMouseLeave(_) {
             this.HideControls();
@@ -1102,7 +1103,7 @@
             let _ = _.GetBroadcastInfo();
             if (!_) return;
             let _ = (0, _._)(`${_._.STORE_BASE_URL}app/${_.m_strAppId}`);
-            this.props.onOpenLinkInNewWindow(_, _), _.stopPropagation();
+            (this.props.onOpenLinkInNewWindow(_, _), _.stopPropagation());
           }
           GetContextMenuItems() {
             let _ = [],
@@ -1183,12 +1184,12 @@
                 _ &&
                 this.state.strInitialCapsuleImageUrl;
             let _ = "videoContainer";
-            _ || (_ += " HidePlayerControls"),
+            (_ || (_ += " HidePlayerControls"),
               _ && (_ += " VideoPaused"),
               this.state.bFullscreen && (_ += " fullscreenVideo"),
-              this.props.classes && (_ += " " + this.props.classes);
+              this.props.classes && (_ += " " + this.props.classes));
             let _ = [];
-            !this.state.bFullscreen &&
+            (!this.state.bFullscreen &&
               this.props.actions &&
               (_ = _.concat(this.props.actions)),
               !this.state.bFullscreen &&
@@ -1214,7 +1215,7 @@
                   },
                   "FullscreenToggle",
                 ),
-              );
+              ));
             const _ = _ && !this.BHideVideoControls(),
               _ = _ && !this.state.bFullscreen,
               _ =
@@ -1304,7 +1305,7 @@
             });
           }
         };
-        _([_._], _.prototype, "BindBroadcastPlayerRef", 1),
+        (_([_._], _.prototype, "BindBroadcastPlayerRef", 1),
           _([_._], _.prototype, "BindVideoRef", 1),
           _([_._], _.prototype, "OnMouseDown", 1),
           _([_._], _.prototype, "OnMouseUp", 1),
@@ -1319,7 +1320,7 @@
           _([_._], _.prototype, "CloseStats", 1),
           _([_._], _.prototype, "OnToggleFullscreen", 1),
           _([_._], _.prototype, "OnFullscreenChange", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         let _ = class extends _.Component {
           render() {
             const { video: _ } = this.props;
@@ -1440,8 +1441,8 @@
             });
           }
         }
-        _([_._], _.prototype, "OnJumpBackward", 1),
-          _([_._], _.prototype, "OnJumpForward", 1);
+        (_([_._], _.prototype, "OnJumpBackward", 1),
+          _([_._], _.prototype, "OnJumpForward", 1));
         const _ = (0, _._)((_) => {
           if (_.video.IsBroadcastClip() || _.video.IsBroadcastVOD())
             return null;
@@ -1487,10 +1488,10 @@
             });
           }
         };
-        _([_._], _.prototype, "OnTogglePlayPause", 1), (_ = _([_._], _));
+        (_([_._], _.prototype, "OnTogglePlayPause", 1), (_ = _([_._], _)));
         let _ = class extends _.Component {
           constructor(_) {
-            super(_), (0, _._)(this), (this.video = _.video);
+            (super(_), (0, _._)(this), (this.video = _.video));
           }
           componentDidUpdate() {
             this.video = this.props.video;
@@ -1526,13 +1527,13 @@
             });
           }
         };
-        _([_._], _.prototype, "video", 2),
+        (_([_._], _.prototype, "video", 2),
           _([_._], _.prototype, "has_previous_marker", 1),
           _([_._], _.prototype, "OnJumpToPreviousMarkerClicked", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         let _ = class extends _.Component {
           constructor(_) {
-            super(_), (0, _._)(this), (this.video = _.video);
+            (super(_), (0, _._)(this), (this.video = _.video));
           }
           componentDidUpdate() {
             this.video = this.props.video;
@@ -1568,10 +1569,10 @@
             });
           }
         };
-        _([_._], _.prototype, "video", 2),
+        (_([_._], _.prototype, "video", 2),
           _([_._], _.prototype, "has_next_marker", 1),
           _([_._], _.prototype, "OnJumpToNextMarkerClicked", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         const _ = (_) => {
           let _ = () => _.onMouseEnter(_.pos);
           return (0, _.jsx)("div", {
@@ -1632,7 +1633,7 @@
           m_elSlider = _.createRef();
           m_rectSlider = void 0;
           constructor(_) {
-            super(_),
+            (super(_),
               (this.state = {
                 nGrabberMouseDownTime: 0,
                 bGrabberMouseDown: !1,
@@ -1641,14 +1642,14 @@
                 bStartMouseDown: !1,
                 bEndMouseDown: !1,
                 thumbnailURL: "",
-              });
+              }));
           }
           OnMouseDown(_, _) {
             const _ = this.m_elSlider.current;
             if (_) {
-              _.persist(), (this.m_rectSlider = _.getBoundingClientRect());
+              (_.persist(), (this.m_rectSlider = _.getBoundingClientRect()));
               let _ = {};
-              _ === "start"
+              (_ === "start"
                 ? ((_ = {
                     bStartMouseDown: !0,
                   }),
@@ -1669,14 +1670,14 @@
                 _.ownerDocument.defaultView?.addEventListener(
                   "mouseup",
                   this.OnMouseUp,
-                );
+                ));
             }
           }
           OnMouseMove(_) {
             this.AdjustSliderForClientX(_.clientX);
           }
           OnMouseUp(_) {
-            this.state.bStartMouseDown
+            (this.state.bStartMouseDown
               ? this.setState({
                   bStartMouseDown: !1,
                 })
@@ -1697,7 +1698,7 @@
                 this.m_elSlider.current.ownerDocument.defaultView?.removeEventListener(
                   "mouseup",
                   this.OnMouseUp,
-                ));
+                )));
           }
           OnKeyDown(_) {
             _.keyCode == _._
@@ -1782,13 +1783,13 @@
             let _ = (0, _._)(_.GetPlaybackTime()),
               _ = (0, _._)(this.state.nHoverValue ?? 0),
               _ = "STV_timelineContainer";
-            this.state.bGrabberMouseDown && (_ += " grabberDown"),
-              _.IsTimelineMapActive() && (_ += " minimapActive");
+            (this.state.bGrabberMouseDown && (_ += " grabberDown"),
+              _.IsTimelineMapActive() && (_ += " minimapActive"));
             let _ = "";
-            (_ = _ ? _ : _),
+            ((_ = _ ? _ : _),
               _ > 100
                 ? (_ = " grabberOffScreenRight grabberOffscreen")
-                : _ < 0 && (_ = " grabberOffScreenLeft grabberOffscreen");
+                : _ < 0 && (_ = " grabberOffScreenLeft grabberOffscreen"));
             let _ = [];
             _.GetTimelineMarkers().forEach((_, _) => {
               let _ = _.GetPercentOffsetFromTime(_.nTime, _._.Timeline);
@@ -1950,7 +1951,7 @@
             });
           }
         };
-        _([_._], _.prototype, "OnMouseDown", 1),
+        (_([_._], _.prototype, "OnMouseDown", 1),
           _([_._], _.prototype, "OnMouseMove", 1),
           _([_._], _.prototype, "OnMouseUp", 1),
           _([_._], _.prototype, "OnKeyDown", 1),
@@ -1960,7 +1961,7 @@
           _([_._], _.prototype, "OnSegmentClick", 1),
           _([_._], _.prototype, "OnMarkerMouseEnter", 1),
           _([_._], _.prototype, "OnMarkerMouseLeave", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         let _ = class extends _.Component {
           state = {
             info: null,
@@ -2124,14 +2125,14 @@
         _([_._], _.prototype, "showContextMenu", 1);
         let _ = class extends _.Component {
           constructor(_) {
-            super(_),
+            (super(_),
               (this.state = {
                 sizableRegion: [],
-              });
+              }));
           }
           async AddLinkRegion() {
             let _ = this.state.sizableRegion.length;
-            this.state.sizableRegion.push({
+            (this.state.sizableRegion.push({
               xPosPct: 2.5 + _,
               yPosPct: 2.5 + _,
               widthPct: 20,
@@ -2142,7 +2143,7 @@
                   sizableRegion: this.state.sizableRegion,
                 },
                 () => this.OnSaveRegions(),
-              );
+              ));
           }
           componentDidUpdate(_) {
             _.linkRegions.length == 0 &&
@@ -2152,7 +2153,7 @@
           }
           async LoadLinkRegion(_, _) {
             let _ = this.state.sizableRegion.length;
-            this.state.sizableRegion.push({
+            (this.state.sizableRegion.push({
               xPosPct: _.left,
               yPosPct: _.top,
               widthPct: _.width,
@@ -2163,7 +2164,7 @@
             }),
               await this.setState({
                 sizableRegion: this.state.sizableRegion,
-              });
+              }));
           }
           OnSaveRegions() {
             let _;
@@ -2172,7 +2173,7 @@
             };
             for (let _ = 0; _ < this.state.sizableRegion.length; _++) {
               let _;
-              (_ = {
+              ((_ = {
                 left: Math.floor(this.state.sizableRegion[_].xPosPct * 100),
                 top: Math.floor(this.state.sizableRegion[_].yPosPct * 100),
                 width: Math.floor(this.state.sizableRegion[_].widthPct * 100),
@@ -2181,29 +2182,29 @@
                 link_description: this.state.sizableRegion[_].link_description,
                 link_index: _,
               }),
-                _.links.push(_);
+                _.links.push(_));
             }
             this.props.onSaveLinkRegions?.(_);
           }
           async DeleteRegion(_) {
-            this.state.sizableRegion.splice(_, 1),
+            (this.state.sizableRegion.splice(_, 1),
               console.log("keys: ", this.state.sizableRegion.keys),
               this.setState(
                 {
                   sizableRegion: this.state.sizableRegion,
                 },
                 () => this.OnSaveRegions(),
-              );
+              ));
           }
           async UpdatePanel(_, _) {
             const _ = [...this.state.sizableRegion];
-            (_[_] = _),
+            ((_[_] = _),
               this.setState(
                 {
                   sizableRegion: _,
                 },
                 () => this.OnSaveRegions(),
-              );
+              ));
           }
           render() {
             return (0, _.jsxs)("div", {
@@ -2275,12 +2276,12 @@
             });
           }
         };
-        _([_._], _.prototype, "AddLinkRegion", 1),
+        (_([_._], _.prototype, "AddLinkRegion", 1),
           _([_._], _.prototype, "LoadLinkRegion", 1),
           _([_._], _.prototype, "OnSaveRegions", 1),
           _([_._], _.prototype, "DeleteRegion", 1),
           _([_._], _.prototype, "UpdatePanel", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -2307,7 +2308,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           },
           _ = ((_) => (
             (_.topleft = "topleft"),
@@ -2335,7 +2336,7 @@
             this.m_listeners.Unregister();
           }
           constructor(_) {
-            super(_),
+            (super(_),
               (this.state = {
                 curLeftPosPct: this.props.xPosPct,
                 curTopPosPct: this.props.yPosPct,
@@ -2355,13 +2356,13 @@
               (this.m_aspectRatio =
                 this.props.heightPct > 0 && this.props.widthPct > 0
                   ? this.props.widthPct / this.props.heightPct
-                  : 1);
+                  : 1));
           }
           LinkRegionBoxRef(_) {
             this.m_elLinkRegionBox = _;
           }
           OnMouseDown(_, _) {
-            this.m_elLinkRegionBox?.parentElement &&
+            (this.m_elLinkRegionBox?.parentElement &&
               this.m_elLinkRegionBox.ownerDocument.defaultView &&
               ((this.m_fnMouseUp = (_) => {
                 this.OnMouseUp(_, _);
@@ -2395,7 +2396,7 @@
                 this.m_fnMouseUp,
               )),
               _.preventDefault(),
-              _.stopPropagation();
+              _.stopPropagation());
           }
           OnMouseMove(_, _) {
             if (this.state.EdgeDown !== void 0) {
@@ -2477,7 +2478,7 @@
                 default:
                   break;
               }
-              _.preventDefault(), _.stopPropagation();
+              (_.preventDefault(), _.stopPropagation());
             }
           }
           IsValidPct(_) {
@@ -2510,7 +2511,7 @@
                 this.props.heightMinPct || 0,
                 this.props.heightMaxPct || 100,
               );
-            this.props.bLockAspectRatio &&
+            (this.props.bLockAspectRatio &&
               (_.curLeftPosPct !== void 0 || _.curRightPosPct !== void 0
                 ? (_ = _ / this.m_aspectRatio)
                 : (_ = _ * this.m_aspectRatio)),
@@ -2519,7 +2520,7 @@
                 : (_ = 100 - (_ + _)),
               _.curTopPosPct !== void 0
                 ? (_ = 100 - _ - _)
-                : (_ = 100 - (_ + _));
+                : (_ = 100 - (_ + _)));
             const _ = 100 - _ - _,
               _ = 100 - _ - _;
             this.IsValidPct(_) &&
@@ -2572,7 +2573,7 @@
             );
           }
           OnMouseUp(_, _) {
-            this.setState({
+            (this.setState({
               curWidthPct:
                 100 - this.state.curRightPosPct - this.state.curLeftPosPct,
             }),
@@ -2591,7 +2592,7 @@
                 link_url: this.state.text_link_url,
                 link_description: this.state.text_link_description,
               }),
-              this.m_listeners.Unregister();
+              this.m_listeners.Unregister());
           }
           async HandleDelete() {
             this.props.deleteFn && this.props.deleteFn(this.props.index);
@@ -2615,7 +2616,7 @@
               : !1;
           }
           OnSaveLink() {
-            (this.m_strDescription = this.state.text_link_description ?? ""),
+            ((this.m_strDescription = this.state.text_link_description ?? ""),
               this.setState({
                 bEditingLink: !this.state.bEditingLink,
               }),
@@ -2626,7 +2627,7 @@
                 heightPct: this.state.curHeightPct,
                 link_url: this.state.text_link_url,
                 link_description: this.state.text_link_description,
-              });
+              }));
           }
           OnEditLink() {
             this.setState({
@@ -2781,7 +2782,7 @@
             );
           }
         };
-        _([_._], _.prototype, "LinkRegionBoxRef", 1),
+        (_([_._], _.prototype, "LinkRegionBoxRef", 1),
           _([_._], _.prototype, "OnMouseDown", 1),
           _([_._], _.prototype, "OnMouseMove", 1),
           _([_._], _.prototype, "OnMouseUp", 1),
@@ -2790,7 +2791,7 @@
           _([_._], _.prototype, "OnSetLinkDescriptionChange", 1),
           _([_._], _.prototype, "OnSaveLink", 1),
           _([_._], _.prototype, "OnEditLink", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
       },
     },
   ]);

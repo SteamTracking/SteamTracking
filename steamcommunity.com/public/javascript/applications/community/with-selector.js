@@ -5,7 +5,7 @@ import { t as e } from "./rolldown-runtime.js";
 import { Pt as t } from "./libraries.js";
 var n = e((e) => {
     var n = t();
-    n.useSyncExternalStore, n.useRef, n.useEffect, n.useMemo, n.useDebugValue;
+    (n.useSyncExternalStore, n.useRef, n.useEffect, n.useMemo, n.useDebugValue);
   }),
   r = e((e, t) => {
     t.exports = n();

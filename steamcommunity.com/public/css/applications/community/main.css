@@ -116,7 +116,7 @@ html._75X6HzwBhoc- body {
 ._76JQCA2LSJ0-:hover,
 ._76JQCA2LSJ0-._1Zkw8Hwe0PE- {
   color: #b8c5c9;
-  --color-text-secondary:$darkGrey;
+  --color-text-secondary: $darkGrey;
   background: #5a6069;
 }
 ._76JQCA2LSJ0-.disabled,
@@ -1661,7 +1661,7 @@ dialog.djO4HBSaVEk-::backdrop {
 }
 .rLxoT9L8pa8- {
   background: radial-gradient(
-    201.11% 137.71% at .9% -3.76%,
+    201.11% 137.71% at 0.9% -3.76%,
     #343941 0%,
     #0e141b 40%
   );
@@ -2343,9 +2343,7 @@ button.VCubv9Yx4Q0-.DialogButton:enabled:active:hover:before {
 .kwxrGJQL5-4-.-EO4FT59VAE- {
   margin-inline: calc(-1 * var(--field-negative-horizontal-margin));
   padding-inline-start: calc(
-    var(--field-negative-horizontal-margin) +
-    var(--indent-level) *
-    20px
+    var(--field-negative-horizontal-margin) + var(--indent-level) * 20px
   );
   padding-inline-end: var(--field-negative-horizontal-margin);
 }
@@ -2357,10 +2355,7 @@ button.VCubv9Yx4Q0-.DialogButton:enabled:active:hover:before {
 .kwxrGJQL5-4-.-EO4FT59VAE-.Lp7SIUigpfY- {
   --field-row-children-spacing: 8px;
   margin-inline-start: calc(
-    -1 *
-    var(--field-negative-horizontal-margin) +
-    var(--indent-level) *
-    30px
+    -1 * var(--field-negative-horizontal-margin) + var(--indent-level) * 30px
   );
   padding: 10px 0;
 }
@@ -3269,15 +3264,13 @@ button.Cw4uxrkspko- svg {
 .HsioiS8tolM- {
   --inverse-normalized-value: calc(1 - var(--normalized-slider-value));
   --inverse-normalized-default-value: calc(
-    1 -
-    var(--normalized-slider-default-value)
+    1 - var(--normalized-slider-default-value)
   );
 }
 .HsioiS8tolM-:dir(rtl) {
   --inverse-normalized-value: calc(-1 * (1 - var(--normalized-slider-value)));
   --inverse-normalized-default-value: calc(
-    -1 *
-    (1 - var(--normalized-slider-default-value))
+    -1 * (1 - var(--normalized-slider-default-value))
   );
 }
 .HsioiS8tolM- {
@@ -3314,16 +3307,15 @@ button.Cw4uxrkspko- svg {
   content: "";
   --normalized-fill-start: calc(
     (100%) *
-    min(var(--normalized-slider-value), var(--normalized-slider-origin))
+      min(var(--normalized-slider-value), var(--normalized-slider-origin))
   );
   --normalized-fill-end: calc(
     (100% - var(--slider-extra-notch-padding) * 2) *
-    max(var(--normalized-slider-value), var(--normalized-slider-origin)) +
-    var(--slider-extra-notch-padding)
+      max(var(--normalized-slider-value), var(--normalized-slider-origin)) +
+      var(--slider-extra-notch-padding)
   );
   --normalized-width-handle: calc(
-    var(--normalized-fill-end) -
-    var(--normalized-fill-start)
+    var(--normalized-fill-end) - var(--normalized-fill-start)
   );
   inset-inline-start: var(--normalized-fill-start);
   inset-inline-end: 0;
@@ -3336,19 +3328,15 @@ button.Cw4uxrkspko- svg {
 }
 .L1H8c1tG81w- .bhfWNpXbH4Q-:before {
   --signed-normalized-slider-default-value: calc(
-    2 *
-    var(--normalized-slider-default-value) -
-    1
+    2 * var(--normalized-slider-default-value) - 1
   );
   --gradient-split-pct: calc(
-    100% *
-    var(--normalized-slider-default-value) /
-    var(--normalized-slider-value) -
-    (
-      var(--slider-handle-width) *
-      0.5 *
-      var(--signed-normalized-slider-default-value)
-    )
+    100% * var(--normalized-slider-default-value) /
+      var(--normalized-slider-value) -
+      (
+        var(--slider-handle-width) * 0.5 *
+          var(--signed-normalized-slider-default-value)
+      )
   );
 }
 .Q8VDUuiGgkQ- .bhfWNpXbH4Q-:before {
@@ -3382,10 +3370,8 @@ button.Cw4uxrkspko- svg {
   transform: translateX(
     calc(
       (-100% + var(--slider-extra-notch-padding) * 2) *
-      var(--inverse-normalized-value) +
-      var(--slider-handle-width) *
-      var(--inverse-normalized-value) -
-      var(--slider-extra-notch-padding)
+        var(--inverse-normalized-value) + var(--slider-handle-width) *
+        var(--inverse-normalized-value) - var(--slider-extra-notch-padding)
     )
   );
   margin: auto 0;
@@ -3717,10 +3703,8 @@ button.Cw4uxrkspko- svg {
   width: 100%;
   transform: translateX(
     calc(
-      -100% *
-      var(--inverse-normalized-default-value) +
-      var(--slider-handle-width) *
-      var(--inverse-normalized-default-value)
+      -100% * var(--inverse-normalized-default-value) +
+        var(--slider-handle-width) * var(--inverse-normalized-default-value)
     )
   );
   margin: auto 0;
@@ -7064,20 +7048,20 @@ button.Primary.jsVV3SMtv9Q- {
     margin: 0;
   }
   :where(.xtBr-L5Owus-):where(
-      address,
-      b,
-      cite,
-      code,
-      dfn,
-      em,
-      i,
-      kbd,
-      q,
-      samp,
-      small,
-      strong,
-      var
-    ) {
+    address,
+    b,
+    cite,
+    code,
+    dfn,
+    em,
+    i,
+    kbd,
+    q,
+    samp,
+    small,
+    strong,
+    var
+  ) {
     font: unset;
   }
   :where(.xtBr-L5Owus-):where(h1, h2, h3, h4, h5, h6) {
@@ -7089,17 +7073,17 @@ button.Primary.jsVV3SMtv9Q- {
     -webkit-tap-highlight-color: transparent;
   }
   :where(.xtBr-L5Owus-):where(
-      button,
-      select,
-      [type="button"],
-      [type="image"],
-      [type="reset"],
-      [type="submit"],
-      [type="checkbox"],
-      [type="color"],
-      [type="radio"],
-      [type="range"]
-    ) {
+    button,
+    select,
+    [type="button"],
+    [type="image"],
+    [type="reset"],
+    [type="submit"],
+    [type="checkbox"],
+    [type="color"],
+    [type="radio"],
+    [type="range"]
+  ) {
     all: unset;
     text-indent: initial;
     -webkit-tap-highlight-color: transparent;
@@ -7116,18 +7100,18 @@ button.Primary.jsVV3SMtv9Q- {
     font-weight: 400;
   }
   :where(.xtBr-L5Owus-):where(
-      textarea,
-      input:not(
-          [type="button"],
-          [type="image"],
-          [type="reset"],
-          [type="submit"],
-          [type="checkbox"],
-          [type="color"],
-          [type="radio"],
-          [type="range"]
-        )
-    ) {
+    textarea,
+    input:not(
+      [type="button"],
+      [type="image"],
+      [type="reset"],
+      [type="submit"],
+      [type="checkbox"],
+      [type="color"],
+      [type="radio"],
+      [type="range"]
+    )
+  ) {
     all: unset;
     text-align: start;
     width: -webkit-fill-available;
@@ -8292,7 +8276,7 @@ button.DialogButton {
   color: #dfe3e6;
   text-align: center;
   cursor: pointer;
-  background: #3d4450 99% 1% / 300% 300%;
+  background: #3d4450 99% 1%/300% 300%;
   border: 0;
   border-radius: 2px;
   width: 100%;
@@ -8966,15 +8950,15 @@ button.DialogButton.DialogButtonTall {
   padding-bottom: 16px;
 }
 button.DialogButton.Primary {
-  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 25% / 330% 100%;
+  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 25%/330% 100%;
 }
 button.DialogButton.GreenPlay {
-  background: linear-gradient(90deg, #8ac329 0%, #4a7a16 60%) 25% / 330% 100%;
+  background: linear-gradient(90deg, #8ac329 0%, #4a7a16 60%) 25%/330% 100%;
 }
 button.DialogButton.GreenPlay:hover,
 button.DialogButton.GreenPlay.gpfocus {
   color: #fff;
-  background: linear-gradient(90deg, #8ac329 0%, #4a7a16 60%) 0% / 330% 100%;
+  background: linear-gradient(90deg, #8ac329 0%, #4a7a16 60%) 0%/330% 100%;
 }
 button.DialogButton.GreenPlay:active,
 button.DialogButton.GreenPlay:active:hover,
@@ -9001,7 +8985,7 @@ button.DialogButton:enabled:active.gpfocus {
 button.DialogButton.Primary:hover,
 button.DialogButton.Primary.gpfocus:not(.Disabled) {
   color: #fff;
-  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 0% / 330% 100%;
+  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 0%/330% 100%;
 }
 button.DialogButton.Primary:enabled:active,
 button.DialogButton.Primary:enabled:hover:active,

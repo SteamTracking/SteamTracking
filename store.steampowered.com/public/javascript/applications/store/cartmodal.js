@@ -146,9 +146,9 @@ function ct() {
         : await t.RemoveObject(I);
     },
     onMutate: async (t) => {
-      await e.cancelQueries({ queryKey: [I] }),
+      (await e.cancelQueries({ queryKey: [I] }),
         (t &&= { ...t, rtCreated: Date.now() / 1e3 }),
-        e.setQueryData([I], t);
+        e.setQueryData([I], t));
     },
   });
 }
@@ -156,11 +156,11 @@ var L = e(t(), 1);
 async function lt(e, t, n, r, i, a) {
   if (E(t)) {
     let t = M.Init(rt);
-    t.Body().set_line_item_id(n),
+    (t.Body().set_line_item_id(n),
       t.Body().set_user_country(x.country_code),
       i && t.Body().set_gift_info(O.fromObject(i)),
       r && t.Body().set_flags(be.fromObject(r)),
-      a && t.Body().set_apply_gidcoupon(a);
+      a && t.Body().set_apply_gidcoupon(a));
     let o = await De.ModifyLineItem(e, t);
     return (
       o.BSuccess() ||
@@ -170,7 +170,7 @@ async function lt(e, t, n, r, i, a) {
   }
   {
     let a = M.Init(Te);
-    a.Body().set_gidlineitem(n),
+    (a.Body().set_gidlineitem(n),
       a.Body().set_gidshoppingcart(t.gid),
       i
         ? a.Body().set_gift_info(O.fromObject(i))
@@ -179,7 +179,7 @@ async function lt(e, t, n, r, i, a) {
             .Body()
             .set_gift_info(
               O.fromObject({ accountid_giftee: 0, email_giftee: `` }),
-            );
+            ));
     let o = await me.ModifyLineItem(e, a);
     return (
       o.BSuccess() ||
@@ -227,7 +227,7 @@ function ut() {
   });
 }
 var R = {};
-(R.arabic = () =>
+((R.arabic = () =>
   T(() => import(`./shoppingcart_arabic.js`), [], import.meta.url)),
   (R.brazilian = () =>
     T(() => import(`./shoppingcart_brazilian.js`), [], import.meta.url)),
@@ -290,7 +290,7 @@ var R = {};
   (R.ukrainian = () =>
     T(() => import(`./shoppingcart_ukrainian.js`), [], import.meta.url)),
   (R.vietnamese = () =>
-    T(() => import(`./shoppingcart_vietnamese.js`), [], import.meta.url));
+    T(() => import(`./shoppingcart_vietnamese.js`), [], import.meta.url)));
 async function dt(e) {
   if (R[e]) return await R[e]();
 }
@@ -337,12 +337,12 @@ function vt(e, t, n, r, i) {
 }
 async function yt(e, t, n, r, i, a) {
   let o = M.Init($e);
-  pe(t) || de(t) || ke(t)
+  (pe(t) || de(t) || ke(t)
     ? (o.Body().set_gidshoppingcart(t.gid),
       r && o.Body().set_gift_info(O.fromObject(r)))
     : Me(t) && o.Body().set_gidreplayoftransid(t.gid),
     Ne(n, o),
-    i && Fe(o, i);
+    i && Fe(o, i));
   let s = await Be.ValidateCart(e, o);
   if (
     (s.BSuccess() ||
@@ -802,7 +802,7 @@ function un(e, t) {
       o = !1;
     e?.cart_items?.forEach((e) => {
       let t = !!e.gift_info?.accountid_giftee;
-      e.errors && (o = !0),
+      (e.errors && (o = !0),
         e.errors?.duplicate_appids_in_cart?.length &&
           a(1, z.Localize(`#Cart_Error_DuplicateApps_FootNote`)),
         e.errors?.owned_appids?.length &&
@@ -832,7 +832,7 @@ function un(e, t) {
         e.warnings?.appids_in_mastersub?.length &&
           a(4, z.Localize(`#Cart_Error_MasterSubscription_FootNote`)),
         e.warnings?.price_has_changed &&
-          n.set(10, z.Localize(`#Cart_Warning_PriceChange_FootNote`));
+          n.set(10, z.Localize(`#Cart_Warning_PriceChange_FootNote`)));
     });
     let s = Array.from(n.values());
     return (
@@ -859,13 +859,13 @@ async function bn(e, t, n) {
     let t = M.Init(ce);
     t.Body().set_line_item_id(n);
     let r = await De.RemoveItemFromCart(e, t);
-    return Xe(), r.Body().toObject();
+    return (Xe(), r.Body().toObject());
   }
   {
     let r = M.Init(ue);
-    r.Body().set_gidlineitems([n]), r.Body().set_gidshoppingcart(t.gid);
+    (r.Body().set_gidlineitems([n]), r.Body().set_gidshoppingcart(t.gid));
     let i = await me.RemoveLineItems(e, r);
-    return Xe(), i.Body().toObject();
+    return (Xe(), i.Body().toObject());
   }
 }
 function $(e) {
@@ -1338,8 +1338,8 @@ function Rn(e) {
   let r = n.recurrence_info;
   if (!r) return null;
   let i = `#Package`;
-  r.billing_agreement_type === 2 && (i = `#GameBillingPackage`),
-    n.formatted_final_price && n.discount_pct && (i += `WithDiscount`);
+  (r.billing_agreement_type === 2 && (i = `#GameBillingPackage`),
+    n.formatted_final_price && n.discount_pct && (i += `WithDiscount`));
   let a = Ln[r.renewal_time_unit],
     o = i + `CostIncludesSubscriptionBy` + a;
   return (0, B.jsx)(X, {
@@ -1406,8 +1406,8 @@ function Vn(e) {
                   lineItemFlags: { ...t.flags, is_gift: e },
                   giftInfo: e ? t.gift_info : void 0,
                 });
-            p === `private` ? r(!1) : p === `gift` && i(!1),
-              e.data === `private` ? r(!0) : e.data === `gift` && i(!0);
+            (p === `private` ? r(!1) : p === `gift` && i(!1),
+              e.data === `private` ? r(!0) : e.data === `gift` && i(!0));
           },
           selectedValue: f.find((e) => e.data === p) ?? null,
           options: f,
@@ -1590,7 +1590,7 @@ function Kn(e) {
   )
     return null;
   let m = () => {
-      P()?.AddEvent(nt), l.mutate(null);
+      (P()?.AddEvent(nt), l.mutate(null));
     },
     h = () => {
       for (let e of n)
@@ -1600,7 +1600,7 @@ function Kn(e) {
           giftInfo: { ...e.gift_info, accountid_giftee: o.nGifteeAccountID },
           gidCoupon: e.gidcoupon_applied,
         });
-      l.mutate(o), a(!0), P()?.AddEvent(et);
+      (l.mutate(o), a(!0), P()?.AddEvent(et));
     },
     g = (0, B.jsxs)(`a`, {
       href: oe(s),

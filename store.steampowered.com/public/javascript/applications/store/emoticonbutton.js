@@ -54,7 +54,7 @@ var ue = `_6Ymd3Ej4NCU-`,
   T = r(),
   E = class extends C.Component {
     constructor(e) {
-      super(e), (this.state = { activeIndex: e.initialActiveIndex || 0 });
+      (super(e), (this.state = { activeIndex: e.initialActiveIndex || 0 }));
     }
     render() {
       let { config: e } = this.props,
@@ -308,7 +308,7 @@ var Te = i((e) => {
   R = class extends C.Component {
     m_disposeEmoticonStore;
     constructor(e) {
-      super(e), (this.state = { strSearchText: `` });
+      (super(e), (this.state = { strSearchText: `` }));
       let t = this.props.emoticonStore;
       t.is_initialized ||
         (t.UpdateEmoticonList(),
@@ -383,7 +383,7 @@ R = m([i], R);
 var Ee = class extends C.Component {
     m_disposeEmoticonStore;
     constructor(e) {
-      super(e), (this.state = { strSearchText: `` });
+      (super(e), (this.state = { strSearchText: `` }));
       let t = this.props.emoticonStore;
       t.is_initialized ||
         (t.UpdateEmoticonList(),
@@ -421,7 +421,7 @@ var Ee = class extends C.Component {
   De = class extends C.Component {
     m_disposeEmoticonStore;
     constructor(e) {
-      super(e), (this.state = { strSearchText: `` });
+      (super(e), (this.state = { strSearchText: `` }));
       let t = this.props.emoticonStore;
       t.is_initialized ||
         (t.UpdateEmoticonList(),
@@ -949,7 +949,7 @@ var Ne = `pvP8JT4e7EA-`,
         this.BHaveUnseenEmoticons() && r)
       ) {
         let e = this.GetNewestIndicatorTime();
-        (!e || e < Q) && (e = Q), r(`rtLastAckedNewEmoticons`, e);
+        ((!e || e < Q) && (e = Q), r(`rtLastAckedNewEmoticons`, e));
       }
     }
     GetNewestIndicatorTime() {
@@ -958,7 +958,7 @@ var Ne = `pvP8JT4e7EA-`,
         n = e.GetTimeReceivedNewestEmoticon();
       n && (t = n);
       let r = e.GetTimeReceivedForStickerOrEffect();
-      return (t = Math.max(r, t)), t > -(2 ** 53 - 1) ? t : void 0;
+      return ((t = Math.max(r, t)), t > -(2 ** 53 - 1) ? t : void 0);
     }
     BHaveUnseenEmoticons() {
       let { rtLastAckedNewEmoticons: e } = this.props,
@@ -1005,7 +1005,7 @@ var Ne = `pvP8JT4e7EA-`,
       );
     }
   };
-m([se], $.prototype, `OnEmoticonClick`, null), ($ = m([i], $));
+(m([se], $.prototype, `OnEmoticonClick`, null), ($ = m([i], $)));
 var Be = $;
 export {
   Z as a,

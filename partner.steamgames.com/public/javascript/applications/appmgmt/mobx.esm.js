@@ -10,29 +10,30 @@ var __create = Object.create,
   __esmMin = (t, n, r) => () => {
     if (r) throw r[0];
     try {
-      return t && (n = t((t = 0))), n;
+      return (t && (n = t((t = 0))), n);
     } catch (t) {
       throw ((r = [t]), t);
     }
   },
   __commonJSMin = (t, n) => () => (
-    n || (t((n = { exports: {} }).exports, n, n.exports), (t = null)), n.exports
+    n || (t((n = { exports: {} }).exports, n, n.exports), (t = null)),
+    n.exports
   ),
   __exportAll = (t, n) => {
     let r = {};
     for (var i in t) __defProp(r, i, { get: t[i], enumerable: !0 });
-    return n || __defProp(r, Symbol.toStringTag, { value: `Module` }), r;
+    return (n || __defProp(r, Symbol.toStringTag, { value: `Module` }), r);
   },
   __copyProps = (t, n, r, i) => {
     if ((n && typeof n == `object`) || typeof n == `function`)
       for (var o = __getOwnPropNames(n), s = 0, l = o.length, u; s < l; s++)
-        (u = o[s]),
+        ((u = o[s]),
           !__hasOwnProp.call(t, u) &&
             u !== r &&
             __defProp(t, u, {
               get: ((t) => n[t]).bind(null, u),
               enumerable: !(i = __getOwnPropDesc(n, u)) || i.enumerable,
-            });
+            }));
     return t;
   },
   __toESM = (t, n, r) => (
@@ -102,7 +103,7 @@ function BufferFromString(t) {
 }
 var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
     var $jscomp = $jscomp || {};
-    ($jscomp.scope = {}),
+    (($jscomp.scope = {}),
       ($jscomp.findInternal = function (t, n, r) {
         t instanceof String && (t = String(t));
         for (var i = t.length, o = 0; o < i; o++) {
@@ -137,9 +138,9 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             i++
           ) {
             var o = t[i];
-            o in r || (r[o] = {}), (r = r[o]);
+            (o in r || (r[o] = {}), (r = r[o]));
           }
-          (t = t[t.length - 1]),
+          ((t = t[t.length - 1]),
             (i = r[t]),
             (n = n(i)),
             n != i &&
@@ -148,7 +149,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                 configurable: !0,
                 writable: !0,
                 value: n,
-              });
+              }));
         }
       }),
       $jscomp.polyfill(
@@ -186,10 +187,10 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             t ||
             function (t, n) {
               var r = $jscomp.checkStringArgs(this, t, `endsWith`);
-              (t += ``),
+              ((t += ``),
                 n === void 0 && (n = r.length),
-                (n = Math.max(0, Math.min(n | 0, r.length)));
-              for (var i = t.length; 0 < i && 0 < n; )
+                (n = Math.max(0, Math.min(n | 0, r.length))));
+              for (var i = t.length; 0 < i && 0 < n;)
                 if (r[--n] != t[--i]) return !1;
               return 0 >= i;
             }
@@ -222,7 +223,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
               var i = r.length,
                 o = t.length;
               n = Math.max(0, Math.min(n | 0, r.length));
-              for (var s = 0; s < o && n < i; ) if (r[n++] != t[s++]) return !1;
+              for (var s = 0; s < o && n < i;) if (r[n++] != t[s++]) return !1;
               return s >= o;
             }
           );
@@ -240,22 +241,22 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
               if (0 > t || 1342177279 < t)
                 throw RangeError(`Invalid count value`);
               t |= 0;
-              for (var r = ``; t; ) t & 1 && (r += n), (t >>>= 1) && (n += n);
+              for (var r = ``; t;) (t & 1 && (r += n), (t >>>= 1) && (n += n));
               return r;
             }
           );
         },
         `es6`,
         `es3`,
-      );
+      ));
     var COMPILED = !0,
       goog = goog || {};
-    (goog.global = this$1 || self),
+    ((goog.global = this$1 || self),
       (goog.exportPath_ = function (t, n, r) {
-        (t = t.split(`.`)),
+        ((t = t.split(`.`)),
           (r ||= goog.global),
-          t[0] in r || r.execScript === void 0 || r.execScript(`var ` + t[0]);
-        for (var i; t.length && (i = t.shift()); )
+          t[0] in r || r.execScript === void 0 || r.execScript(`var ` + t[0]));
+        for (var i; t.length && (i = t.shift());)
           t.length || n === void 0
             ? (r = r[i] && r[i] !== Object.prototype[i] ? r[i] : (r[i] = {}))
             : (r[i] = n);
@@ -342,7 +343,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         if (!COMPILED) {
           if (t in goog.loadedModules_) return goog.loadedModules_[t].exports;
           if (!goog.implicitNamespaces_[t])
-            return (t = goog.getObjectByName(t)), t ?? null;
+            return ((t = goog.getObjectByName(t)), t ?? null);
         }
         return null;
       }),
@@ -400,22 +401,22 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             throw Error(
               `Module with namespace "` + t + `" has been loaded incorrectly.`,
             );
-          (n = n.require(n.getCurrentModulePath())),
+          ((n = n.require(n.getCurrentModulePath())),
             (goog.loadedModules_[t] = {
               exports: n,
               type: goog.ModuleType.ES6,
               moduleId: t,
-            });
+            }));
         }
       }),
       (goog.setTestOnly = function (t) {
         if (goog.DISALLOW_TEST_ONLY_CODE)
           throw (
-            ((t ||= ``),
+            (t ||= ``),
             Error(
               `Importing test-only code into non-debug environment` +
                 (t ? `: ` + t : `.`),
-            ))
+            )
           );
       }),
       (goog.forwardDeclare = function (t) {}),
@@ -428,7 +429,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         }),
         (goog.implicitNamespaces_ = { "goog.module": !0 })),
       (goog.getObjectByName = function (t, n) {
-        (t = t.split(`.`)), (n ||= goog.global);
+        ((t = t.split(`.`)), (n ||= goog.global));
         for (var r = 0; r < t.length; r++)
           if (((n = n[t[r]]), n == null)) return null;
         return n;
@@ -473,7 +474,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         throw Error(`unimplemented abstract method`);
       }),
       (goog.addSingletonGetter = function (t) {
-        (t.instance_ = void 0),
+        ((t.instance_ = void 0),
           (t.getInstance = function () {
             return t.instance_
               ? t.instance_
@@ -482,7 +483,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                     goog.instantiatedSingletons_.length
                   ] = t),
                 (t.instance_ = new t()));
-          });
+          }));
       }),
       (goog.instantiatedSingletons_ = []),
       (goog.LOAD_MODULE_USING_EVAL = !0),
@@ -529,13 +530,13 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           )
             var r = t.call(void 0, {});
           else if (typeof t == `string`)
-            goog.useSafari10Workaround() &&
+            (goog.useSafari10Workaround() &&
               (t = goog.workaroundSafari10EvalBug(t)),
-              (r = goog.loadModuleFromSource_.call(void 0, t));
+              (r = goog.loadModuleFromSource_.call(void 0, t)));
           else throw Error(`Invalid module definition`);
           var i = goog.moduleLoaderState_.moduleName;
           if (typeof i == `string` && i)
-            goog.moduleLoaderState_.declareLegacyNamespace
+            (goog.moduleLoaderState_.declareLegacyNamespace
               ? goog.constructNamespace_(i, r)
               : goog.SEAL_MODULE_EXPORTS &&
                 Object.seal &&
@@ -546,18 +547,18 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                 exports: r,
                 type: goog.ModuleType.GOOG,
                 moduleId: goog.moduleLoaderState_.moduleName,
-              });
+              }));
           else throw Error(`Invalid module name "` + i + `"`);
         } finally {
           goog.moduleLoaderState_ = n;
         }
       }),
       (goog.loadModuleFromSource_ = function (a) {
-        return eval(a), {};
+        return (eval(a), {});
       }),
       (goog.normalizePath_ = function (t) {
         t = t.split(`/`);
-        for (var n = 0; n < t.length; )
+        for (var n = 0; n < t.length;)
           t[n] == `.`
             ? t.splice(n, 1)
             : n && t[n] == `..` && t[n - 1] && t[n - 1] != `..`
@@ -604,10 +605,10 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                 `The transpiler did not properly export the "transpile" method. $gwtExport: ` +
                   JSON.stringify(goog.global.$gwtExport),
               );
-            (goog.global.$jscomp.transpile =
+            ((goog.global.$jscomp.transpile =
               goog.global.$gwtExport.$jscomp.transpile),
               (i = goog.global.$jscomp),
-              (o = i.transpile);
+              (o = i.transpile));
           }
         }
         return (
@@ -708,7 +709,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           var i = Array.prototype.slice.call(arguments, 2);
           return function () {
             var r = Array.prototype.slice.call(arguments);
-            return Array.prototype.unshift.apply(r, i), t.apply(n, r);
+            return (Array.prototype.unshift.apply(r, i), t.apply(n, r));
           };
         }
         return function () {
@@ -729,7 +730,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         var r = Array.prototype.slice.call(arguments, 1);
         return function () {
           var n = r.slice();
-          return n.push.apply(n, arguments), t.apply(this, n);
+          return (n.push.apply(n, arguments), t.apply(this, n));
         };
       }),
       (goog.mixin = function (t, n) {
@@ -758,11 +759,11 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           else {
             var n = goog.global.document,
               r = n.createElement(`script`);
-            (r.type = `text/javascript`),
+            ((r.type = `text/javascript`),
               (r.defer = !1),
               r.appendChild(n.createTextNode(t)),
               n.head.appendChild(r),
-              n.head.removeChild(r);
+              n.head.removeChild(r));
           }
         } else throw Error(`goog.globalEval not available`);
       }),
@@ -796,7 +797,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         );
       }),
       (goog.setCssNameMapping = function (t, n) {
-        (goog.cssNameMapping_ = t), (goog.cssNameMappingStyle_ = n);
+        ((goog.cssNameMapping_ = t), (goog.cssNameMappingStyle_ = n));
       }),
       !COMPILED &&
         goog.global.CLOSURE_CSS_NAME_MAPPING &&
@@ -822,7 +823,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       (goog.inherits = function (t, n) {
         function r() {}
-        (r.prototype = n.prototype),
+        ((r.prototype = n.prototype),
           (t.superClass_ = n.prototype),
           (t.prototype = new r()),
           (t.prototype.constructor = t),
@@ -834,7 +835,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             )
               o[s - 2] = arguments[s];
             return n.prototype[r].apply(t, o);
-          });
+          }));
       }),
       (goog.scope = function (t) {
         if (goog.isInModuleLoader_())
@@ -898,8 +899,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           i < goog.defineClass.OBJECT_PROTOTYPE_FIELDS_.length;
           i++
         )
-          (r = goog.defineClass.OBJECT_PROTOTYPE_FIELDS_[i]),
-            Object.prototype.hasOwnProperty.call(n, r) && (t[r] = n[r]);
+          ((r = goog.defineClass.OBJECT_PROTOTYPE_FIELDS_[i]),
+            Object.prototype.hasOwnProperty.call(n, r) && (t[r] = n[r]));
       }),
       (goog.tagUnsealableClass = function (t) {
         !COMPILED &&
@@ -946,8 +947,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         }),
         goog.findBasePath_(),
         (goog.Transpiler = function () {
-          (this.requiresTranspilation_ = null),
-            (this.transpilationTarget_ = goog.TRANSPILE_TO_LANGUAGE);
+          ((this.requiresTranspilation_ = null),
+            (this.transpilationTarget_ = goog.TRANSPILE_TO_LANGUAGE));
         }),
         (goog.Transpiler.prototype.createRequiresTranspilation_ = function () {
           function a(t, n) {
@@ -999,9 +1000,9 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           if (goog.TRANSPILE == `never`) return !1;
           if (!this.requiresTranspilation_) {
             var r = this.createRequiresTranspilation_();
-            (this.requiresTranspilation_ = r.map),
+            ((this.requiresTranspilation_ = r.map),
               (this.transpilationTarget_ =
-                this.transpilationTarget_ || r.target);
+                this.transpilationTarget_ || r.target));
           }
           if (t in this.requiresTranspilation_)
             return this.requiresTranspilation_[t]
@@ -1021,7 +1022,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           return t.replace(/<\/(SCRIPT)/gi, `\\x3c/$1`);
         }),
         (goog.DebugLoader_ = function () {
-          (this.dependencies_ = {}),
+          ((this.dependencies_ = {}),
             (this.idToPath_ = {}),
             (this.written_ = {}),
             (this.loadingDeps_ = []),
@@ -1029,7 +1030,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             (this.paused_ = !1),
             (this.factory_ = new goog.DependencyFactory(goog.transpiler_)),
             (this.deferredCallbacks_ = {}),
-            (this.deferredQueue_ = []);
+            (this.deferredQueue_ = []));
         }),
         (goog.DebugLoader_.prototype.bootstrap = function (t, n) {
           function r() {
@@ -1046,14 +1047,14 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             s = goog.require;
             var l = 0;
             for (o = 0; o < t.length; o++)
-              s(t[o]),
+              (s(t[o]),
                 n[o].onLoad(function () {
                   ++l == t.length && r();
-                });
+                }));
           } else r();
         }),
         (goog.DebugLoader_.prototype.loadClosureDeps = function () {
-          this.depsToLoad_.push(
+          (this.depsToLoad_.push(
             this.factory_.createDependency(
               goog.normalizePath_(goog.basePath + `deps.js`),
               `deps.js`,
@@ -1063,7 +1064,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
               !1,
             ),
           ),
-            this.loadDeps_();
+            this.loadDeps_());
         }),
         (goog.DebugLoader_.prototype.requested = function (t, n) {
           (t = this.getPathFromDeps_(t)) &&
@@ -1091,19 +1092,19 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                   r.push(t);
                 }
               };
-            i(t),
+            (i(t),
               (t = !!this.depsToLoad_.length),
               (this.depsToLoad_ = this.depsToLoad_.concat(r)),
-              this.paused_ || t || this.loadDeps_();
+              this.paused_ || t || this.loadDeps_());
           } else
             throw (
-              ((t = `goog.require could not find: ` + t),
+              (t = `goog.require could not find: ` + t),
               goog.logToConsole_(t),
-              Error(t))
+              Error(t)
             );
         }),
         (goog.DebugLoader_.prototype.loadDeps_ = function () {
-          for (var t = this, n = this.paused_; this.depsToLoad_.length && !n; )
+          for (var t = this, n = this.paused_; this.depsToLoad_.length && !n;)
             (function () {
               var r = !1,
                 i = t.depsToLoad_.shift(),
@@ -1120,7 +1121,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                 },
                 loaded: function () {
                   if (o) throw Error(`Double call to loaded.`);
-                  (o = !0), t.loaded_(i);
+                  ((o = !0), t.loaded_(i));
                 },
                 pending: function () {
                   for (var n = [], r = 0; r < t.loadingDeps_.length; r++)
@@ -1195,7 +1196,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             this.loadingDeps_.length == this.deferredQueue_.length &&
             !this.depsToLoad_.length
           )
-            for (; this.deferredQueue_.length; )
+            for (; this.deferredQueue_.length;)
               this.requested(this.deferredQueue_.shift(), !0);
           t.loaded();
         }),
@@ -1215,8 +1216,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
               : null;
         }),
         (goog.DebugLoader_.prototype.defer_ = function (t, n) {
-          (this.deferredCallbacks_[t.path] = n),
-            this.deferredQueue_.push(t.path);
+          ((this.deferredCallbacks_[t.path] = n),
+            this.deferredQueue_.push(t.path));
         }),
         (goog.LoadController = function () {}),
         (goog.LoadController.prototype.pause = function () {}),
@@ -1233,13 +1234,13 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         (goog.LoadController.prototype.defer = function (t) {}),
         (goog.LoadController.prototype.areDepsLoaded = function () {}),
         (goog.Dependency = function (t, n, r, i, o) {
-          (this.path = t),
+          ((this.path = t),
             (this.relativePath = n),
             (this.provides = r),
             (this.requires = i),
             (this.loadFlags = o),
             (this.loaded_ = !1),
-            (this.loadCallbacks_ = []);
+            (this.loadCallbacks_ = []));
         }),
         (goog.Dependency.prototype.getPathName = function () {
           var t = this.path,
@@ -1265,7 +1266,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         (goog.Dependency.callbackMap_ = {}),
         (goog.Dependency.registerCallback_ = function (t) {
           var n = Math.random().toString(32);
-          return (goog.Dependency.callbackMap_[n] = t), n;
+          return ((goog.Dependency.callbackMap_[n] = t), n);
         }),
         (goog.Dependency.unregisterCallback_ = function (t) {
           delete goog.Dependency.callbackMap_[t];
@@ -1318,7 +1319,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                   !goog.DebugLoader_.IS_OLD_IE_ && goog.getScriptNonce()
                     ? ` nonce="` + goog.getScriptNonce() + `"`
                     : ``;
-              (i =
+              ((i =
                 `<script src="` +
                 this.path +
                 `" ` +
@@ -1335,10 +1336,10 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                   goog.TRUSTED_TYPES_POLICY_
                     ? goog.TRUSTED_TYPES_POLICY_.createHTML(i)
                     : i,
-                );
+                ));
             } else {
               var o = n.createElement(`script`);
-              (o.defer = goog.Dependency.defer_),
+              ((o.defer = goog.Dependency.defer_),
                 (o.async = !1),
                 (o.type = `text/javascript`),
                 (i = goog.getScriptNonce()) && o.setAttribute(`nonce`, i),
@@ -1350,15 +1351,15 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                         (t.loaded(), t.resume());
                     }))
                   : (o.onload = function () {
-                      (o.onload = null), t.loaded();
+                      ((o.onload = null), t.loaded());
                     }),
                 (o.src = goog.TRUSTED_TYPES_POLICY_
                   ? goog.TRUSTED_TYPES_POLICY_.createScriptURL(this.path)
                   : this.path),
-                n.head.appendChild(o);
+                n.head.appendChild(o));
             }
           } else
-            goog.logToConsole_(
+            (goog.logToConsole_(
               `Cannot use default debug loader outside of HTML documents.`,
             ),
               this.relativePath == `deps.js`
@@ -1366,7 +1367,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                     `Consider setting CLOSURE_IMPORT_SCRIPT before loading base.js, or setting CLOSURE_NO_DEPS to true.`,
                   ),
                   t.loaded())
-                : t.pause();
+                : t.pause());
         }),
         (goog.Es6ModuleDependency = function (t, n, r, i, o) {
           goog.Dependency.call(this, t, n, r, i, o);
@@ -1374,23 +1375,23 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         goog.inherits(goog.Es6ModuleDependency, goog.Dependency),
         (goog.Es6ModuleDependency.prototype.load = function (t) {
           function n(t, n) {
-            (t = n
+            ((t = n
               ? `<script type="module" crossorigin>` + n + `<\/script>`
               : `<script type="module" crossorigin src="` + t + `"><\/script>`),
               i.write(
                 goog.TRUSTED_TYPES_POLICY_
                   ? goog.TRUSTED_TYPES_POLICY_.createHTML(t)
                   : t,
-              );
+              ));
           }
           function r(t, n) {
             var r = i.createElement(`script`);
-            (r.defer = !0),
+            ((r.defer = !0),
               (r.async = !1),
               (r.type = `module`),
-              r.setAttribute(`crossorigin`, !0);
+              r.setAttribute(`crossorigin`, !0));
             var o = goog.getScriptNonce();
-            o && r.setAttribute(`nonce`, o),
+            (o && r.setAttribute(`nonce`, o),
               n
                 ? (r.textContent = goog.TRUSTED_TYPES_POLICY_
                     ? goog.TRUSTED_TYPES_POLICY_.createScript(n)
@@ -1398,7 +1399,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                 : (r.src = goog.TRUSTED_TYPES_POLICY_
                     ? goog.TRUSTED_TYPES_POLICY_.createScriptURL(t)
                     : t),
-              i.head.appendChild(r);
+              i.head.appendChild(r));
           }
           if (goog.global.CLOSURE_IMPORT_SCRIPT)
             goog.global.CLOSURE_IMPORT_SCRIPT(this.path)
@@ -1412,18 +1413,18 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
               goog.Dependency.defer_ = !0;
             } else s = r;
             var l = goog.Dependency.registerCallback_(function () {
-              goog.Dependency.unregisterCallback_(l),
-                t.setModuleState(goog.ModuleType.ES6);
+              (goog.Dependency.unregisterCallback_(l),
+                t.setModuleState(goog.ModuleType.ES6));
             });
-            s(void 0, `goog.Dependency.callback_("` + l + `")`),
-              s(this.path, void 0);
+            (s(void 0, `goog.Dependency.callback_("` + l + `")`),
+              s(this.path, void 0));
             var u = goog.Dependency.registerCallback_(function (n) {
-              goog.Dependency.unregisterCallback_(u),
+              (goog.Dependency.unregisterCallback_(u),
                 t.registerEs6ModuleExports(
                   o.path,
                   n,
                   goog.moduleLoaderState_.moduleName,
-                );
+                ));
             });
             s(
               void 0,
@@ -1434,34 +1435,34 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                 `", m)`,
             );
             var p = goog.Dependency.registerCallback_(function () {
-              goog.Dependency.unregisterCallback_(p),
+              (goog.Dependency.unregisterCallback_(p),
                 t.clearModuleState(),
-                t.loaded();
+                t.loaded());
             });
             s(void 0, `goog.Dependency.callback_("` + p + `")`);
           } else
-            goog.logToConsole_(
+            (goog.logToConsole_(
               `Cannot use default debug loader outside of HTML documents.`,
             ),
-              t.pause();
+              t.pause());
         }),
         (goog.TransformedDependency = function (t, n, r, i, o) {
-          goog.Dependency.call(this, t, n, r, i, o),
+          (goog.Dependency.call(this, t, n, r, i, o),
             (this.contents_ = null),
             (this.lazyFetch_ =
               !goog.inHtmlDocument_() ||
-              !(`noModule` in goog.global.document.createElement(`script`)));
+              !(`noModule` in goog.global.document.createElement(`script`))));
         }),
         goog.inherits(goog.TransformedDependency, goog.Dependency),
         (goog.TransformedDependency.prototype.load = function (t) {
           function n() {
-            (o.contents_ = goog.loadFileSync_(o.path)),
+            ((o.contents_ = goog.loadFileSync_(o.path)),
               o.contents_ &&
                 ((o.contents_ = o.transform(o.contents_)),
                 o.contents_ &&
                   (o.contents_ +=
                     `
-//# sourceURL=` + o.path));
+//# sourceURL=` + o.path)));
           }
           function r() {
             if ((o.lazyFetch_ && n(), o.contents_)) {
@@ -1473,7 +1474,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
               } finally {
                 s && t.clearModuleState();
               }
-              s &&
+              (s &&
                 goog.global.$jscomp.require.ensure(
                   [o.getPathName()],
                   function () {
@@ -1484,13 +1485,13 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                     );
                   },
                 ),
-                t.loaded();
+                t.loaded());
             }
           }
           function i() {
             var t = goog.global.document,
               n = goog.Dependency.registerCallback_(function () {
-                goog.Dependency.unregisterCallback_(n), r();
+                (goog.Dependency.unregisterCallback_(n), r());
               }),
               i =
                 `<script type="text/javascript">` +
@@ -1506,11 +1507,11 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           }
           var o = this;
           if (goog.global.CLOSURE_IMPORT_SCRIPT)
-            n(),
+            (n(),
               this.contents_ &&
               goog.global.CLOSURE_IMPORT_SCRIPT(``, this.contents_)
                 ? ((this.contents_ = null), t.loaded())
-                : t.pause();
+                : t.pause());
           else {
             var s = this.loadFlags.module == goog.ModuleType.ES6;
             this.lazyFetch_ || n();
@@ -1529,12 +1530,12 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                 ((u = goog.inHtmlDocument_() && `ActiveXObject` in goog.global),
                 s && goog.inHtmlDocument_() && goog.isDocumentLoading_() && !u)
               ) {
-                (goog.Dependency.defer_ = !0), t.pause();
+                ((goog.Dependency.defer_ = !0), t.pause());
                 var m = p.onreadystatechange;
                 p.onreadystatechange = function () {
-                  p.readyState == `interactive` &&
+                  (p.readyState == `interactive` &&
                     ((p.onreadystatechange = m), r(), t.resume()),
-                    goog.isFunction(m) && m.apply(void 0, arguments);
+                    goog.isFunction(m) && m.apply(void 0, arguments));
                 };
               } else
                 !goog.DebugLoader_.IS_OLD_IE_ &&
@@ -1547,8 +1548,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         }),
         (goog.TransformedDependency.prototype.transform = function (t) {}),
         (goog.TranspiledDependency = function (t, n, r, i, o, s) {
-          goog.TransformedDependency.call(this, t, n, r, i, o),
-            (this.transpiler = s);
+          (goog.TransformedDependency.call(this, t, n, r, i, o),
+            (this.transpiler = s));
         }),
         goog.inherits(goog.TranspiledDependency, goog.TransformedDependency),
         (goog.TranspiledDependency.prototype.transform = function (t) {
@@ -1567,9 +1568,9 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           return t;
         }),
         (goog.GoogModuleDependency = function (t, n, r, i, o, s, l) {
-          goog.TransformedDependency.call(this, t, n, r, i, o),
+          (goog.TransformedDependency.call(this, t, n, r, i, o),
             (this.needsTranspile_ = s),
-            (this.transpiler_ = l);
+            (this.transpiler_ = l));
         }),
         goog.inherits(goog.GoogModuleDependency, goog.TransformedDependency),
         (goog.GoogModuleDependency.prototype.transform = function (t) {
@@ -1603,7 +1604,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           !goog.global.document.all
         )),
         (goog.DebugLoader_.prototype.addDependency = function (t, n, r, i) {
-          (n ||= []), (t = t.replace(/\\/g, `/`));
+          ((n ||= []), (t = t.replace(/\\/g, `/`)));
           var o = goog.normalizePath_(goog.basePath + t);
           for (
             (i && typeof i != `boolean`) ||
@@ -1768,7 +1769,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       (goog.object.remove = function (t, n) {
         var r;
-        return (r = n in t) && delete t[n], r;
+        return ((r = n in t) && delete t[n], r);
       }),
       (goog.object.add = function (t, n, r) {
         if (t !== null && n in t)
@@ -1822,8 +1823,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         for (var r, i, o = 1; o < arguments.length; o++) {
           for (r in ((i = arguments[o]), i)) t[r] = i[r];
           for (var s = 0; s < goog.object.PROTOTYPE_FIELDS_.length; s++)
-            (r = goog.object.PROTOTYPE_FIELDS_[s]),
-              Object.prototype.hasOwnProperty.call(i, r) && (t[r] = i[r]);
+            ((r = goog.object.PROTOTYPE_FIELDS_[s]),
+              Object.prototype.hasOwnProperty.call(i, r) && (t[r] = i[r]));
         }
       }),
       (goog.object.create = function (t) {
@@ -1870,9 +1871,9 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       (goog.object.getSuperClass = function (t) {
         return (t = Object.getPrototypeOf(t.prototype)) && t.constructor;
-      });
+      }));
     var jspb = { asserts: {} };
-    (jspb.asserts.doAssertFailure = function (t, n, r, i) {
+    ((jspb.asserts.doAssertFailure = function (t, n, r, i) {
       var o = `Assertion failed`;
       if (r) {
         o += `: ` + r;
@@ -1882,7 +1883,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
     }),
       (jspb.asserts.assert = function (t, n, r) {
         var i = [...arguments].slice(2);
-        return t || jspb.asserts.doAssertFailure(``, null, n, i), t;
+        return (t || jspb.asserts.doAssertFailure(``, null, n, i), t);
       }),
       (jspb.asserts.assertString = function (t, n, r) {
         var i = [...arguments].slice(2);
@@ -2027,7 +2028,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           var n = Error().stack;
           n && (this.stack = n);
         }
-        t && (this.message = String(t)), (this.reportErrorToServer = !0);
+        (t && (this.message = String(t)), (this.reportErrorToServer = !0));
       }),
       goog.inherits(goog.debug.Error, Error),
       (goog.debug.Error.prototype.name = `CustomError`),
@@ -2049,8 +2050,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       (goog.asserts = {}),
       (goog.asserts.ENABLE_ASSERTS = goog.DEBUG),
       (goog.asserts.AssertionError = function (t, n) {
-        goog.debug.Error.call(this, goog.asserts.subs_(t, n)),
-          (this.messagePattern = t);
+        (goog.debug.Error.call(this, goog.asserts.subs_(t, n)),
+          (this.messagePattern = t));
       }),
       goog.inherits(goog.asserts.AssertionError, goog.debug.Error),
       (goog.asserts.AssertionError.prototype.name = `AssertionError`),
@@ -2070,8 +2071,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           o += `: ` + r;
           var s = i;
         } else t && ((o += `: ` + t), (s = n));
-        (t = new goog.asserts.AssertionError(`` + o, s || [])),
-          goog.asserts.errorHandler_(t);
+        ((t = new goog.asserts.AssertionError(`` + o, s || [])),
+          goog.asserts.errorHandler_(t));
       }),
       (goog.asserts.setErrorHandler = function (t) {
         goog.asserts.ENABLE_ASSERTS && (goog.asserts.errorHandler_ = t);
@@ -2297,8 +2298,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         goog.NATIVE_ARRAY_PROTOTYPES &&
         (goog.array.ASSUME_NATIVE_FUNCTIONS || Array.prototype.forEach)
           ? function (t, n, r) {
-              goog.asserts.assert(t.length != null),
-                Array.prototype.forEach.call(t, n, r);
+              (goog.asserts.assert(t.length != null),
+                Array.prototype.forEach.call(t, n, r));
             }
           : function (t, n, r) {
               for (
@@ -2509,7 +2510,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       (goog.array.remove = function (t, n) {
         n = goog.array.indexOf(t, n);
         var r;
-        return (r = 0 <= n) && goog.array.removeAt(t, n), r;
+        return ((r = 0 <= n) && goog.array.removeAt(t, n), r);
       }),
       (goog.array.removeLast = function (t, n) {
         return (
@@ -2585,8 +2586,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             ? `o` + goog.getUid(t)
             : (typeof t).charAt(0) + t;
         };
-        (r ||= i), (i = {});
-        for (var o = 0, s = 0; s < t.length; ) {
+        ((r ||= i), (i = {}));
+        for (var o = 0, s = 0; s < t.length;) {
           var l = t[s++],
             u = r(l);
           Object.prototype.hasOwnProperty.call(i, u) ||
@@ -2606,7 +2607,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         return goog.array.binarySearch_(t, n, !0, void 0, r);
       }),
       (goog.array.binarySearch_ = function (t, n, r, i, o) {
-        for (var s = 0, l = t.length, u; s < l; ) {
+        for (var s = 0, l = t.length, u; s < l;) {
           var p = s + ((l - s) >>> 1),
             m = r ? n.call(o, t[p], p, t) : n(i, t[p]);
           0 < m ? (s = p + 1) : ((l = p), (u = !m));
@@ -2750,10 +2751,10 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         );
       }),
       (goog.array.moveItem = function (t, n, r) {
-        goog.asserts.assert(0 <= n && n < t.length),
+        (goog.asserts.assert(0 <= n && n < t.length),
           goog.asserts.assert(0 <= r && r < t.length),
           (n = Array.prototype.splice.call(t, n, 1)),
-          Array.prototype.splice.call(t, r, 0, n[0]);
+          Array.prototype.splice.call(t, r, 0, n[0]));
       }),
       (goog.array.zip = function (t) {
         if (!arguments.length) return [];
@@ -2775,7 +2776,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         for (var r = t.length - 1; 0 < r; r--) {
           var i = Math.floor(n() * (r + 1)),
             o = t[r];
-          (t[r] = t[i]), (t[i] = o);
+          ((t[r] = t[i]), (t[i] = o));
         }
       }),
       (goog.array.copyByIndex = function (t, n) {
@@ -2794,7 +2795,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       (goog.crypt.stringToByteArray = function (t) {
         for (var n = [], r = 0, i = 0; i < t.length; i++) {
           var o = t.charCodeAt(i);
-          255 < o && ((n[r++] = o & 255), (o >>= 8)), (n[r++] = o);
+          (255 < o && ((n[r++] = o & 255), (o >>= 8)), (n[r++] = o));
         }
         return n;
       }),
@@ -2809,7 +2810,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       (goog.crypt.byteArrayToHex = function (t, n) {
         return goog.array
           .map(t, function (t) {
-            return (t = t.toString(16)), 1 < t.length ? t : `0` + t;
+            return ((t = t.toString(16)), 1 < t.length ? t : `0` + t);
           })
           .join(n || ``);
       }),
@@ -2845,7 +2846,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         return n;
       }),
       (goog.crypt.utf8ByteArrayToString = function (t) {
-        for (var n = [], r = 0, i = 0; r < t.length; ) {
+        for (var n = [], r = 0, i = 0; r < t.length;) {
           var o = t[r++];
           if (128 > o) n[i++] = String.fromCharCode(o);
           else if (191 < o && 224 > o) {
@@ -2855,20 +2856,20 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             s = t[r++];
             var l = t[r++],
               u = t[r++];
-            (o =
+            ((o =
               (((o & 7) << 18) |
                 ((s & 63) << 12) |
                 ((l & 63) << 6) |
                 (u & 63)) -
               65536),
               (n[i++] = String.fromCharCode(55296 + (o >> 10))),
-              (n[i++] = String.fromCharCode(56320 + (o & 1023)));
+              (n[i++] = String.fromCharCode(56320 + (o & 1023))));
           } else
-            (s = t[r++]),
+            ((s = t[r++]),
               (l = t[r++]),
               (n[i++] = String.fromCharCode(
                 ((o & 15) << 12) | ((s & 63) << 6) | (l & 63),
-              ));
+              )));
         }
         return n.join(``);
       }),
@@ -3020,7 +3021,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         var r = Array.prototype.slice.call(arguments, 1);
         return function () {
           var n = Array.prototype.slice.call(arguments);
-          return n.push.apply(n, r), t.apply(this, n);
+          return (n.push.apply(n, r), t.apply(this, n));
         };
       }),
       (goog.functions.withReturnValue = function (t, n) {
@@ -3096,7 +3097,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         return function () {
           if (n) {
             var t = n;
-            (n = null), t();
+            ((n = null), t());
           }
         };
       }),
@@ -3115,13 +3116,13 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           o = !1,
           s = [],
           l = function () {
-            (i = 0), o && ((o = !1), u());
+            ((i = 0), o && ((o = !1), u()));
           },
           u = function () {
-            (i = goog.global.setTimeout(l, n)), t.apply(r, s);
+            ((i = goog.global.setTimeout(l, n)), t.apply(r, s));
           };
         return function (t) {
-          (s = arguments), i ? (o = !0) : u();
+          ((s = arguments), i ? (o = !0) : u());
         };
       }),
       (goog.functions.rateLimit = function (t, n, r) {
@@ -3303,24 +3304,22 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       (goog.string = {}),
       (goog.string.TypedString = function () {}),
       (goog.string.Const = function (t, n) {
-        (this.stringConstValueWithSecurityContract__googStringSecurityPrivate_ =
+        ((this.stringConstValueWithSecurityContract__googStringSecurityPrivate_ =
           (t === goog.string.Const.GOOG_STRING_CONSTRUCTOR_TOKEN_PRIVATE_ &&
             n) ||
           ``),
           (this.STRING_CONST_TYPE_MARKER__GOOG_STRING_SECURITY_PRIVATE_ =
-            goog.string.Const.TYPE_MARKER_);
+            goog.string.Const.TYPE_MARKER_));
       }),
       (goog.string.Const.prototype.implementsGoogStringTypedString = !0),
       (goog.string.Const.prototype.getTypedStringValue = function () {
-        return this
-          .stringConstValueWithSecurityContract__googStringSecurityPrivate_;
+        return this.stringConstValueWithSecurityContract__googStringSecurityPrivate_;
       }),
       goog.DEBUG &&
         (goog.string.Const.prototype.toString = function () {
           return (
             `Const{` +
-            this
-              .stringConstValueWithSecurityContract__googStringSecurityPrivate_ +
+            this.stringConstValueWithSecurityContract__googStringSecurityPrivate_ +
             `}`
           );
         }),
@@ -3345,9 +3344,9 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       (goog.string.Const.GOOG_STRING_CONSTRUCTOR_TOKEN_PRIVATE_ = {}),
       (goog.string.Const.EMPTY = goog.string.Const.from(``)),
       (goog.html.SafeScript = function () {
-        (this.privateDoNotAccessOrElseSafeScriptWrappedValue_ = ``),
+        ((this.privateDoNotAccessOrElseSafeScriptWrappedValue_ = ``),
           (this.SAFE_SCRIPT_TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ =
-            goog.html.SafeScript.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_);
+            goog.html.SafeScript.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_));
       }),
       (goog.html.SafeScript.prototype.implementsGoogStringTypedString = !0),
       (goog.html.SafeScript.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ = {}),
@@ -3754,12 +3753,12 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       (goog.i18n.bidi.DirectionalString = function () {}),
       (goog.html.TrustedResourceUrl = function (t, n) {
-        (this.privateDoNotAccessOrElseTrustedResourceUrlWrappedValue_ =
+        ((this.privateDoNotAccessOrElseTrustedResourceUrlWrappedValue_ =
           (t === goog.html.TrustedResourceUrl.CONSTRUCTOR_TOKEN_PRIVATE_ &&
             n) ||
           ``),
           (this.TRUSTED_RESOURCE_URL_TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ =
-            goog.html.TrustedResourceUrl.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_);
+            goog.html.TrustedResourceUrl.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_));
       }),
       (goog.html.TrustedResourceUrl.prototype.implementsGoogStringTypedString =
         !0),
@@ -3969,7 +3968,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             .replace(goog.string.internal.NULL_RE_, `&#0;`);
         else {
           if (!goog.string.internal.ALL_RE_.test(t)) return t;
-          t.indexOf(`&`) != -1 &&
+          (t.indexOf(`&`) != -1 &&
             (t = t.replace(goog.string.internal.AMP_RE_, `&amp;`)),
             t.indexOf(`<`) != -1 &&
               (t = t.replace(goog.string.internal.LT_RE_, `&lt;`)),
@@ -3980,7 +3979,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             t.indexOf(`'`) != -1 &&
               (t = t.replace(goog.string.internal.SINGLE_QUOTE_RE_, `&#39;`)),
             t.indexOf(`\0`) != -1 &&
-              (t = t.replace(goog.string.internal.NULL_RE_, `&#0;`));
+              (t = t.replace(goog.string.internal.NULL_RE_, `&#0;`)));
         }
         return t;
       }),
@@ -4002,8 +4001,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       (goog.string.internal.compareVersions = function (t, n) {
         var r = 0;
-        (t = goog.string.internal.trim(String(t)).split(`.`)),
-          (n = goog.string.internal.trim(String(n)).split(`.`));
+        ((t = goog.string.internal.trim(String(t)).split(`.`)),
+          (n = goog.string.internal.trim(String(n)).split(`.`)));
         for (
           var i = Math.max(t.length, n.length), o = 0;
           r == 0 && o < i;
@@ -4020,7 +4019,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
               break;
             r = s[1].length == 0 ? 0 : parseInt(s[1], 10);
             var u = l[1].length == 0 ? 0 : parseInt(l[1], 10);
-            (r =
+            ((r =
               goog.string.internal.compareElements_(r, u) ||
               goog.string.internal.compareElements_(
                 s[2].length == 0,
@@ -4028,7 +4027,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
               ) ||
               goog.string.internal.compareElements_(s[2], l[2])),
               (s = s[3]),
-              (l = l[3]);
+              (l = l[3]));
           } while (r == 0);
         }
         return r;
@@ -4037,10 +4036,10 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         return t < n ? -1 : +(t > n);
       }),
       (goog.html.SafeUrl = function (t, n) {
-        (this.privateDoNotAccessOrElseSafeUrlWrappedValue_ =
+        ((this.privateDoNotAccessOrElseSafeUrlWrappedValue_ =
           (t === goog.html.SafeUrl.CONSTRUCTOR_TOKEN_PRIVATE_ && n) || ``),
           (this.SAFE_URL_TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ =
-            goog.html.SafeUrl.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_);
+            goog.html.SafeUrl.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_));
       }),
       (goog.html.SafeUrl.INNOCUOUS_STRING = `about:invalid#zClosurez`),
       (goog.html.SafeUrl.prototype.implementsGoogStringTypedString = !0),
@@ -4265,9 +4264,9 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         )),
       (goog.html.SafeUrl.CONSTRUCTOR_TOKEN_PRIVATE_ = {}),
       (goog.html.SafeStyle = function () {
-        (this.privateDoNotAccessOrElseSafeStyleWrappedValue_ = ``),
+        ((this.privateDoNotAccessOrElseSafeStyleWrappedValue_ = ``),
           (this.SAFE_STYLE_TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ =
-            goog.html.SafeStyle.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_);
+            goog.html.SafeStyle.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_));
       }),
       (goog.html.SafeStyle.prototype.implementsGoogStringTypedString = !0),
       (goog.html.SafeStyle.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ = {}),
@@ -4455,7 +4454,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           var o = ``;
           return (
             (r = r.replace(/^(['"])(.*)\1$/, function (t, n, r) {
-              return (o = n), r;
+              return ((o = n), r);
             })),
             (t = goog.html.SafeUrl.sanitize(r).getTypedStringValue()),
             n + o + t + o + i
@@ -4479,9 +4478,9 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         );
       }),
       (goog.html.SafeStyleSheet = function () {
-        (this.privateDoNotAccessOrElseSafeStyleSheetWrappedValue_ = ``),
+        ((this.privateDoNotAccessOrElseSafeStyleSheetWrappedValue_ = ``),
           (this.SAFE_STYLE_SHEET_TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ =
-            goog.html.SafeStyleSheet.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_);
+            goog.html.SafeStyleSheet.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_));
       }),
       (goog.html.SafeStyleSheet.prototype.implementsGoogStringTypedString = !0),
       (goog.html.SafeStyleSheet.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ = {}),
@@ -4720,7 +4719,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       (goog.labs.userAgent.browser.getVersion = function () {
         function t(t) {
-          return (t = goog.array.find(t, i)), r[t] || ``;
+          return ((t = goog.array.find(t, i)), r[t] || ``);
         }
         var n = goog.labs.userAgent.util.getUserAgent();
         if (goog.labs.userAgent.browser.isIE())
@@ -4777,10 +4776,10 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         return n;
       }),
       (goog.html.SafeHtml = function () {
-        (this.privateDoNotAccessOrElseSafeHtmlWrappedValue_ = ``),
+        ((this.privateDoNotAccessOrElseSafeHtmlWrappedValue_ = ``),
           (this.SAFE_HTML_TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ =
             goog.html.SafeHtml.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_),
-          (this.dir_ = null);
+          (this.dir_ = null));
       }),
       (goog.html.SafeHtml.ENABLE_ERROR_MESSAGES = goog.DEBUG),
       (goog.html.SafeHtml.SUPPORT_STYLE_ATTRIBUTE = !0),
@@ -5093,7 +5092,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         );
       }),
       (goog.html.SafeHtml.createWithDir = function (t, n, r, i) {
-        return (n = goog.html.SafeHtml.create(n, r, i)), (n.dir_ = t), n;
+        return ((n = goog.html.SafeHtml.create(n, r, i)), (n.dir_ = t), n);
       }),
       (goog.html.SafeHtml.join = function (t, n) {
         t = goog.html.SafeHtml.htmlEscape(t);
@@ -5125,7 +5124,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       (goog.html.SafeHtml.concatWithDir = function (t, n) {
         var r = goog.html.SafeHtml.concat(goog.array.slice(arguments, 1));
-        return (r.dir_ = t), r;
+        return ((r.dir_ = t), r);
       }),
       (goog.html.SafeHtml.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ = {}),
       (goog.html.SafeHtml.createSafeHtmlSecurityPrivateDoNotAccessOrElse =
@@ -5193,11 +5192,11 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         var i = {},
           o;
         for (o in t)
-          goog.asserts.assert(o.toLowerCase() == o, `Must be lower case`),
-            (i[o] = t[o]);
+          (goog.asserts.assert(o.toLowerCase() == o, `Must be lower case`),
+            (i[o] = t[o]));
         for (o in n)
-          goog.asserts.assert(o.toLowerCase() == o, `Must be lower case`),
-            (i[o] = n[o]);
+          (goog.asserts.assert(o.toLowerCase() == o, `Must be lower case`),
+            (i[o] = n[o]));
         if (r)
           for (o in r) {
             var s = o.toLowerCase();
@@ -5213,7 +5212,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                       `"`
                   : ``,
               );
-            s in n && delete i[s], (i[o] = r[o]);
+            (s in n && delete i[s], (i[o] = r[o]));
           }
         return i;
       }),
@@ -5376,7 +5375,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         })),
       (goog.dom.safe.unsafeSetInnerHtmlDoNotUseOrElse = function (t, n) {
         if (goog.dom.safe.isInnerHtmlCleanupRecursive_())
-          for (; t.lastChild; ) t.removeChild(t.lastChild);
+          for (; t.lastChild;) t.removeChild(t.lastChild);
         t.innerHTML = goog.html.SafeHtml.unwrapTrustedHTML(n);
       }),
       (goog.dom.safe.setInnerHtml = function (t, n) {
@@ -5395,28 +5394,28 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         t.outerHTML = goog.html.SafeHtml.unwrapTrustedHTML(n);
       }),
       (goog.dom.safe.setFormElementAction = function (t, n) {
-        (n =
+        ((n =
           n instanceof goog.html.SafeUrl
             ? n
             : goog.html.SafeUrl.sanitizeAssertUnchanged(n)),
           (goog.dom.asserts.assertIsHTMLFormElement(t).action =
-            goog.html.SafeUrl.unwrap(n));
+            goog.html.SafeUrl.unwrap(n)));
       }),
       (goog.dom.safe.setButtonFormAction = function (t, n) {
-        (n =
+        ((n =
           n instanceof goog.html.SafeUrl
             ? n
             : goog.html.SafeUrl.sanitizeAssertUnchanged(n)),
           (goog.dom.asserts.assertIsHTMLButtonElement(t).formAction =
-            goog.html.SafeUrl.unwrap(n));
+            goog.html.SafeUrl.unwrap(n)));
       }),
       (goog.dom.safe.setInputFormAction = function (t, n) {
-        (n =
+        ((n =
           n instanceof goog.html.SafeUrl
             ? n
             : goog.html.SafeUrl.sanitizeAssertUnchanged(n)),
           (goog.dom.asserts.assertIsHTMLInputElement(t).formAction =
-            goog.html.SafeUrl.unwrap(n));
+            goog.html.SafeUrl.unwrap(n)));
       }),
       (goog.dom.safe.setStyle = function (t, n) {
         t.style.cssText = goog.html.SafeStyle.unwrap(n);
@@ -5425,12 +5424,12 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         t.write(goog.html.SafeHtml.unwrapTrustedHTML(n));
       }),
       (goog.dom.safe.setAnchorHref = function (t, n) {
-        goog.dom.asserts.assertIsHTMLAnchorElement(t),
+        (goog.dom.asserts.assertIsHTMLAnchorElement(t),
           (n =
             n instanceof goog.html.SafeUrl
               ? n
               : goog.html.SafeUrl.sanitizeAssertUnchanged(n)),
-          (t.href = goog.html.SafeUrl.unwrap(n));
+          (t.href = goog.html.SafeUrl.unwrap(n)));
       }),
       (goog.dom.safe.setImageSrc = function (t, n) {
         if (
@@ -5463,23 +5462,23 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         t.src = goog.html.SafeUrl.unwrap(n);
       }),
       (goog.dom.safe.setEmbedSrc = function (t, n) {
-        goog.dom.asserts.assertIsHTMLEmbedElement(t),
-          (t.src = goog.html.TrustedResourceUrl.unwrapTrustedScriptURL(n));
+        (goog.dom.asserts.assertIsHTMLEmbedElement(t),
+          (t.src = goog.html.TrustedResourceUrl.unwrapTrustedScriptURL(n)));
       }),
       (goog.dom.safe.setFrameSrc = function (t, n) {
-        goog.dom.asserts.assertIsHTMLFrameElement(t),
-          (t.src = goog.html.TrustedResourceUrl.unwrap(n));
+        (goog.dom.asserts.assertIsHTMLFrameElement(t),
+          (t.src = goog.html.TrustedResourceUrl.unwrap(n)));
       }),
       (goog.dom.safe.setIframeSrc = function (t, n) {
-        goog.dom.asserts.assertIsHTMLIFrameElement(t),
-          (t.src = goog.html.TrustedResourceUrl.unwrap(n));
+        (goog.dom.asserts.assertIsHTMLIFrameElement(t),
+          (t.src = goog.html.TrustedResourceUrl.unwrap(n)));
       }),
       (goog.dom.safe.setIframeSrcdoc = function (t, n) {
-        goog.dom.asserts.assertIsHTMLIFrameElement(t),
-          (t.srcdoc = goog.html.SafeHtml.unwrapTrustedHTML(n));
+        (goog.dom.asserts.assertIsHTMLIFrameElement(t),
+          (t.srcdoc = goog.html.SafeHtml.unwrapTrustedHTML(n)));
       }),
       (goog.dom.safe.setLinkHrefAndRel = function (t, n, r) {
-        goog.dom.asserts.assertIsHTMLLinkElement(t),
+        (goog.dom.asserts.assertIsHTMLLinkElement(t),
           (t.rel = r),
           goog.string.internal.caseInsensitiveContains(r, `stylesheet`)
             ? (goog.asserts.assert(
@@ -5494,44 +5493,44 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                     ? goog.html.SafeUrl.unwrap(n)
                     : goog.html.SafeUrl.unwrap(
                         goog.html.SafeUrl.sanitizeAssertUnchanged(n),
-                      ));
+                      )));
       }),
       (goog.dom.safe.setObjectData = function (t, n) {
-        goog.dom.asserts.assertIsHTMLObjectElement(t),
-          (t.data = goog.html.TrustedResourceUrl.unwrapTrustedScriptURL(n));
+        (goog.dom.asserts.assertIsHTMLObjectElement(t),
+          (t.data = goog.html.TrustedResourceUrl.unwrapTrustedScriptURL(n)));
       }),
       (goog.dom.safe.setScriptSrc = function (t, n) {
-        goog.dom.asserts.assertIsHTMLScriptElement(t),
+        (goog.dom.asserts.assertIsHTMLScriptElement(t),
           (t.src = goog.html.TrustedResourceUrl.unwrapTrustedScriptURL(n)),
-          (n = goog.getScriptNonce()) && t.setAttribute(`nonce`, n);
+          (n = goog.getScriptNonce()) && t.setAttribute(`nonce`, n));
       }),
       (goog.dom.safe.setScriptContent = function (t, n) {
-        goog.dom.asserts.assertIsHTMLScriptElement(t),
+        (goog.dom.asserts.assertIsHTMLScriptElement(t),
           (t.text = goog.html.SafeScript.unwrapTrustedScript(n)),
-          (n = goog.getScriptNonce()) && t.setAttribute(`nonce`, n);
+          (n = goog.getScriptNonce()) && t.setAttribute(`nonce`, n));
       }),
       (goog.dom.safe.setLocationHref = function (t, n) {
-        goog.dom.asserts.assertIsLocation(t),
+        (goog.dom.asserts.assertIsLocation(t),
           (n =
             n instanceof goog.html.SafeUrl
               ? n
               : goog.html.SafeUrl.sanitizeAssertUnchanged(n)),
-          (t.href = goog.html.SafeUrl.unwrap(n));
+          (t.href = goog.html.SafeUrl.unwrap(n)));
       }),
       (goog.dom.safe.assignLocation = function (t, n) {
-        goog.dom.asserts.assertIsLocation(t),
+        (goog.dom.asserts.assertIsLocation(t),
           (n =
             n instanceof goog.html.SafeUrl
               ? n
               : goog.html.SafeUrl.sanitizeAssertUnchanged(n)),
-          t.assign(goog.html.SafeUrl.unwrap(n));
+          t.assign(goog.html.SafeUrl.unwrap(n)));
       }),
       (goog.dom.safe.replaceLocation = function (t, n) {
-        (n =
+        ((n =
           n instanceof goog.html.SafeUrl
             ? n
             : goog.html.SafeUrl.sanitizeAssertUnchanged(n)),
-          t.replace(goog.html.SafeUrl.unwrap(n));
+          t.replace(goog.html.SafeUrl.unwrap(n)));
       }),
       (goog.dom.safe.openInWindow = function (t, n, r, i, o) {
         return (
@@ -5624,7 +5623,9 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         return t == ` `;
       }),
       (goog.string.isUnicodeChar = function (t) {
-        return (t.length == 1 && ` ` <= t && `~` >= t) || (`` <= t && `�` >= t);
+        return (
+          (t.length == 1 && ` ` <= t && `~` >= t) || (`` <= t && `�` >= t)
+        );
       }),
       (goog.string.stripNewlines = function (t) {
         return t.replace(/(\r\n|\r|\n)+/g, ` `);
@@ -5795,7 +5796,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             ((i = Math.floor(n / 2)),
             (o = t.length - i),
             (t = t.substring(0, i + (n % 2)) + `...` + t.substring(o)));
-        return r && (t = goog.string.htmlEscape(t)), t;
+        return (r && (t = goog.string.htmlEscape(t)), t);
       }),
       (goog.string.specialEscapeChars_ = {
         "\0": `\\0`,
@@ -5819,7 +5820,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             goog.string.specialEscapeChars_[i] ||
             (31 < o && 127 > o ? i : goog.string.escapeChar(i));
         }
-        return n.push(`"`), n.join(``);
+        return (n.push(`"`), n.join(``));
       }),
       (goog.string.escapeString = function (t) {
         for (var n = [], r = 0; r < t.length; r++)
@@ -5835,10 +5836,10 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         var n = t.charCodeAt(0);
         if (31 < n && 127 > n) var r = t;
         else
-          256 > n
+          (256 > n
             ? ((r = `\\x`), (16 > n || 256 < n) && (r += `0`))
             : ((r = `\\u`), 4096 > n && (r += `0`)),
-            (r += n.toString(16).toUpperCase());
+            (r += n.toString(16).toUpperCase()));
         return (goog.string.jsEscapeCache_[t] = r);
       }),
       (goog.string.contains = goog.string.internal.contains),
@@ -5963,8 +5964,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       (goog.string.splitLimit = function (t, n, r) {
         t = t.split(n);
-        for (var i = []; 0 < r && t.length; ) i.push(t.shift()), r--;
-        return t.length && i.push(t.join(n)), i;
+        for (var i = []; 0 < r && t.length;) (i.push(t.shift()), r--);
+        return (t.length && i.push(t.join(n)), i);
       }),
       (goog.string.lastComponent = function (t, n) {
         if (n) typeof n == `string` && (n = [n]);
@@ -6145,12 +6146,12 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         return t;
       }),
       (goog.reflect.sinkValue = function (t) {
-        return goog.reflect.sinkValue[` `](t), t;
+        return (goog.reflect.sinkValue[` `](t), t);
       }),
       (goog.reflect.sinkValue[` `] = goog.nullFunction),
       (goog.reflect.canAccessProperty = function (t, n) {
         try {
-          return goog.reflect.sinkValue(t[n]), !0;
+          return (goog.reflect.sinkValue(t[n]), !0);
         } catch {}
         return !1;
       }),
@@ -6413,13 +6414,13 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           !goog.userAgent.IE &&
           typeof goog.global.atob == `function`)),
       (goog.crypt.base64.encodeByteArray = function (t, n) {
-        goog.asserts.assert(
+        (goog.asserts.assert(
           goog.isArrayLike(t),
           `encodeByteArray takes an array as a parameter`,
         ),
           n === void 0 && (n = goog.crypt.base64.Alphabet.DEFAULT),
           goog.crypt.base64.init_(),
-          (n = goog.crypt.base64.byteToCharMaps_[n]);
+          (n = goog.crypt.base64.byteToCharMaps_[n]));
         for (var r = [], i = 0; i < t.length; i += 3) {
           var o = t[i],
             s = i + 1 < t.length,
@@ -6427,11 +6428,11 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             u = i + 2 < t.length,
             p = u ? t[i + 2] : 0,
             m = o >> 2;
-          (o = ((o & 3) << 4) | (l >> 4)),
+          ((o = ((o & 3) << 4) | (l >> 4)),
             (l = ((l & 15) << 2) | (p >> 6)),
             (p &= 63),
             u || ((p = 64), s || (l = 64)),
-            r.push(n[m], n[o], n[l] || ``, n[p] || ``);
+            r.push(n[m], n[o], n[l] || ``, n[p] || ``));
         }
         return r.join(``);
       }),
@@ -6485,7 +6486,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       (goog.crypt.base64.decodeStringInternal_ = function (t, n) {
         function r(n) {
-          for (; i < t.length; ) {
+          for (; i < t.length;) {
             var r = t.charAt(i++),
               o = goog.crypt.base64.charToByteMap_[r];
             if (o != null) return o;
@@ -6495,16 +6496,16 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           return n;
         }
         goog.crypt.base64.init_();
-        for (var i = 0; ; ) {
+        for (var i = 0; ;) {
           var o = r(-1),
             s = r(0),
             l = r(64),
             u = r(64);
           if (u === 64 && o === -1) break;
-          n((o << 2) | (s >> 4)),
+          (n((o << 2) | (s >> 4)),
             l != 64 &&
               (n(((s << 4) & 240) | (l >> 2)),
-              u != 64 && n(((l << 6) & 192) | u));
+              u != 64 && n(((l << 6) & 192) | u)));
         }
       }),
       (goog.crypt.base64.init_ = function () {
@@ -6534,37 +6535,37 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       (jspb.utils.split64High = 0),
       (jspb.utils.splitUint64 = function (t) {
         var n = t >>> 0;
-        (t = Math.floor((t - n) / jspb.BinaryConstants.TWO_TO_32) >>> 0),
+        ((t = Math.floor((t - n) / jspb.BinaryConstants.TWO_TO_32) >>> 0),
           (jspb.utils.split64Low = n),
-          (jspb.utils.split64High = t);
+          (jspb.utils.split64High = t));
       }),
       (jspb.utils.splitInt64 = function (t) {
         var n = 0 > t;
         t = Math.abs(t);
         var r = t >>> 0;
-        (t = Math.floor((t - r) / jspb.BinaryConstants.TWO_TO_32)),
+        ((t = Math.floor((t - r) / jspb.BinaryConstants.TWO_TO_32)),
           (t >>>= 0),
           n &&
             ((t = ~t >>> 0),
             (r = (~r >>> 0) + 1),
             4294967295 < r && ((r = 0), t++, 4294967295 < t && (t = 0))),
           (jspb.utils.split64Low = r),
-          (jspb.utils.split64High = t);
+          (jspb.utils.split64High = t));
       }),
       (jspb.utils.splitZigzag64 = function (t) {
         var n = 0 > t;
-        (t = 2 * Math.abs(t)),
+        ((t = 2 * Math.abs(t)),
           jspb.utils.splitUint64(t),
-          (t = jspb.utils.split64Low);
+          (t = jspb.utils.split64Low));
         var r = jspb.utils.split64High;
-        n &&
+        (n &&
           (t == 0
             ? r == 0
               ? (r = t = 4294967295)
               : (r--, (t = 4294967295))
             : t--),
           (jspb.utils.split64Low = t),
-          (jspb.utils.split64High = r);
+          (jspb.utils.split64High = r));
       }),
       (jspb.utils.splitFloat32 = function (t) {
         var n = +(0 > t);
@@ -6574,51 +6575,51 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             : ((jspb.utils.split64High = 0),
               (jspb.utils.split64Low = 2147483648));
         else if (isNaN(t))
-          (jspb.utils.split64High = 0), (jspb.utils.split64Low = 2147483647);
+          ((jspb.utils.split64High = 0), (jspb.utils.split64Low = 2147483647));
         else if (t > jspb.BinaryConstants.FLOAT32_MAX)
-          (jspb.utils.split64High = 0),
-            (jspb.utils.split64Low = ((n << 31) | 2139095040) >>> 0);
+          ((jspb.utils.split64High = 0),
+            (jspb.utils.split64Low = ((n << 31) | 2139095040) >>> 0));
         else if (t < jspb.BinaryConstants.FLOAT32_MIN)
-          (t = Math.round(t / 2 ** -149)),
+          ((t = Math.round(t / 2 ** -149)),
             (jspb.utils.split64High = 0),
-            (jspb.utils.split64Low = ((n << 31) | t) >>> 0);
+            (jspb.utils.split64Low = ((n << 31) | t) >>> 0));
         else {
           var r = Math.floor(Math.log(t) / Math.LN2);
-          (t *= 2 ** -r),
+          ((t *= 2 ** -r),
             (t = Math.round(t * jspb.BinaryConstants.TWO_TO_23)),
             16777216 <= t && ++r,
             (jspb.utils.split64High = 0),
             (jspb.utils.split64Low =
-              ((n << 31) | ((r + 127) << 23) | (t & 8388607)) >>> 0);
+              ((n << 31) | ((r + 127) << 23) | (t & 8388607)) >>> 0));
         }
       }),
       (jspb.utils.splitFloat64 = function (t) {
         var n = +(0 > t);
         if (((t = n ? -t : t), t === 0))
-          (jspb.utils.split64High = 0 < 1 / t ? 0 : 2147483648),
-            (jspb.utils.split64Low = 0);
+          ((jspb.utils.split64High = 0 < 1 / t ? 0 : 2147483648),
+            (jspb.utils.split64Low = 0));
         else if (isNaN(t))
-          (jspb.utils.split64High = 2147483647),
-            (jspb.utils.split64Low = 4294967295);
+          ((jspb.utils.split64High = 2147483647),
+            (jspb.utils.split64Low = 4294967295));
         else if (t > jspb.BinaryConstants.FLOAT64_MAX)
-          (jspb.utils.split64High = ((n << 31) | 2146435072) >>> 0),
-            (jspb.utils.split64Low = 0);
+          ((jspb.utils.split64High = ((n << 31) | 2146435072) >>> 0),
+            (jspb.utils.split64Low = 0));
         else if (t < jspb.BinaryConstants.FLOAT64_MIN) {
           var r = t / 2 ** -1074;
-          (t = r / jspb.BinaryConstants.TWO_TO_32),
+          ((t = r / jspb.BinaryConstants.TWO_TO_32),
             (jspb.utils.split64High = ((n << 31) | t) >>> 0),
-            (jspb.utils.split64Low = r >>> 0);
+            (jspb.utils.split64Low = r >>> 0));
         } else {
           r = t;
           var i = 0;
-          if (2 <= r) for (; 2 <= r && 1023 > i; ) i++, (r /= 2);
-          else for (; 1 > r && -1022 < i; ) (r *= 2), i--;
-          (r = t * 2 ** -i),
+          if (2 <= r) for (; 2 <= r && 1023 > i;) (i++, (r /= 2));
+          else for (; 1 > r && -1022 < i;) ((r *= 2), i--);
+          ((r = t * 2 ** -i),
             (t = (r * jspb.BinaryConstants.TWO_TO_20) & 1048575),
             (r = (r * jspb.BinaryConstants.TWO_TO_52) >>> 0),
             (jspb.utils.split64High =
               ((n << 31) | ((i + 1023) << 20) | t) >>> 0),
-            (jspb.utils.split64Low = r);
+            (jspb.utils.split64Low = r));
         }
       }),
       (jspb.utils.splitHash64 = function (t) {
@@ -6629,11 +6630,11 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           s = t.charCodeAt(4),
           l = t.charCodeAt(5),
           u = t.charCodeAt(6);
-        (t = t.charCodeAt(7)),
+        ((t = t.charCodeAt(7)),
           (jspb.utils.split64Low =
             (n + (r << 8) + (i << 16) + (o << 24)) >>> 0),
           (jspb.utils.split64High =
-            (s + (l << 8) + (u << 16) + (t << 24)) >>> 0);
+            (s + (l << 8) + (u << 16) + (t << 24)) >>> 0));
       }),
       (jspb.utils.joinUint64 = function (t, n) {
         return n * jspb.BinaryConstants.TWO_TO_32 + (t >>> 0);
@@ -6730,7 +6731,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         );
       }),
       (jspb.utils.hash64ToDecimalString = function (t, n) {
-        jspb.utils.splitHash64(t), (t = jspb.utils.split64Low);
+        (jspb.utils.splitHash64(t), (t = jspb.utils.split64Low));
         var r = jspb.utils.split64High;
         return n
           ? jspb.utils.joinSignedDecimalString(t, r)
@@ -6744,7 +6745,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       (jspb.utils.decimalStringToHash64 = function (t) {
         function n(t, n) {
           for (var r = 0; 8 > r && (t !== 1 || 0 < n); r++)
-            (n = t * o[r] + n), (o[r] = n & 255), (n >>>= 8);
+            ((n = t * o[r] + n), (o[r] = n & 255), (n >>>= 8));
         }
         function r() {
           for (var t = 0; 8 > t; t++) o[t] = ~o[t] & 255;
@@ -6754,7 +6755,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         t[0] === `-` && ((i = !0), (t = t.slice(1)));
         for (var o = [0, 0, 0, 0, 0, 0, 0, 0], s = 0; s < t.length; s++)
           n(10, t.charCodeAt(s) - jspb.utils.ZERO_CHAR_CODE_);
-        return i && (r(), n(1, 1)), goog.crypt.byteArrayToString(o);
+        return (i && (r(), n(1, 1)), goog.crypt.byteArrayToString(o));
       }),
       (jspb.utils.splitDecimalString = function (t) {
         jspb.utils.splitHash64(jspb.utils.decimalStringToHash64(t));
@@ -6773,19 +6774,19 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       (jspb.utils.hash64ToHexString = function (t) {
         var n = Array(18);
-        (n[0] = `0`), (n[1] = `x`);
+        ((n[0] = `0`), (n[1] = `x`));
         for (var r = 0; 8 > r; r++) {
           var i = t.charCodeAt(7 - r);
-          (n[2 * r + 2] = jspb.utils.toHexDigit_(i >> 4)),
-            (n[2 * r + 3] = jspb.utils.toHexDigit_(i & 15));
+          ((n[2 * r + 2] = jspb.utils.toHexDigit_(i >> 4)),
+            (n[2 * r + 3] = jspb.utils.toHexDigit_(i & 15)));
         }
         return n.join(``);
       }),
       (jspb.utils.hexStringToHash64 = function (t) {
-        (t = t.toLowerCase()),
+        ((t = t.toLowerCase()),
           jspb.asserts.assert(t.length == 18),
           jspb.asserts.assert(t[0] == `0`),
-          jspb.asserts.assert(t[1] == `x`);
+          jspb.asserts.assert(t[1] == `x`));
         for (var n = ``, r = 0; 8 > r; r++) {
           var i = jspb.utils.fromHexCharCode_(t.charCodeAt(2 * r + 2)),
             o = jspb.utils.fromHexCharCode_(t.charCodeAt(2 * r + 3));
@@ -6794,7 +6795,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         return n;
       }),
       (jspb.utils.hash64ToNumber = function (t, n) {
-        jspb.utils.splitHash64(t), (t = jspb.utils.split64Low);
+        (jspb.utils.splitHash64(t), (t = jspb.utils.split64Low));
         var r = jspb.utils.split64High;
         return n ? jspb.utils.joinInt64(t, r) : jspb.utils.joinUint64(t, r);
       }),
@@ -6811,33 +6812,33 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       (jspb.utils.countVarintFields = function (t, n, r, i) {
         var o = 0;
         if (((i = 8 * i + jspb.BinaryConstants.WireType.VARINT), 128 > i))
-          for (; n < r && t[n++] == i; )
-            for (o++; ; ) {
+          for (; n < r && t[n++] == i;)
+            for (o++; ;) {
               var s = t[n++];
               if (!(s & 128)) break;
             }
         else
-          for (; n < r; ) {
-            for (s = i; 128 < s; ) {
+          for (; n < r;) {
+            for (s = i; 128 < s;) {
               if (t[n] != ((s & 127) | 128)) return o;
-              n++, (s >>= 7);
+              (n++, (s >>= 7));
             }
             if (t[n++] != s) break;
-            for (o++; (s = t[n++]), s & 128; );
+            for (o++; (s = t[n++]), s & 128;);
           }
         return o;
       }),
       (jspb.utils.countFixedFields_ = function (t, n, r, i, o) {
         var s = 0;
-        if (128 > i) for (; n < r && t[n++] == i; ) s++, (n += o);
+        if (128 > i) for (; n < r && t[n++] == i;) (s++, (n += o));
         else
-          for (; n < r; ) {
-            for (var l = i; 128 < l; ) {
+          for (; n < r;) {
+            for (var l = i; 128 < l;) {
               if (t[n++] != ((l & 127) | 128)) return s;
               l >>= 7;
             }
             if (t[n++] != l) break;
-            s++, (n += o);
+            (s++, (n += o));
           }
         return s;
       }),
@@ -6861,8 +6862,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       (jspb.utils.countDelimitedFields = function (t, n, r, i) {
         var o = 0;
-        for (i = 8 * i + jspb.BinaryConstants.WireType.DELIMITED; n < r; ) {
-          for (var s = i; 128 < s; ) {
+        for (i = 8 * i + jspb.BinaryConstants.WireType.DELIMITED; n < r;) {
+          for (var s = i; 128 < s;) {
             if (t[n++] != ((s & 127) | 128)) return o;
             s >>= 7;
           }
@@ -6881,7 +6882,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         if (t) {
           t = jspb.utils.byteSourceToUint8Array(t);
           for (var r = 0; r < t.length; r++)
-            (n += `\\x`), 16 > t[r] && (n += `0`), (n += t[r].toString(16));
+            ((n += `\\x`), 16 > t[r] && (n += `0`), (n += t[r].toString(16)));
         }
         return n + `"`;
       }),
@@ -6912,23 +6913,23 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                   new Uint8Array());
       }),
       (jspb.BinaryDecoder = function (t, n, r) {
-        (this.bytes_ = null),
+        ((this.bytes_ = null),
           (this.cursor_ = this.end_ = this.start_ = 0),
           (this.error_ = !1),
-          t && this.setBlock(t, n, r);
+          t && this.setBlock(t, n, r));
       }),
       (jspb.BinaryDecoder.instanceCache_ = []),
       (jspb.BinaryDecoder.alloc = function (t, n, r) {
         if (jspb.BinaryDecoder.instanceCache_.length) {
           var i = jspb.BinaryDecoder.instanceCache_.pop();
-          return t && i.setBlock(t, n, r), i;
+          return (t && i.setBlock(t, n, r), i);
         }
         return new jspb.BinaryDecoder(t, n, r);
       }),
       (jspb.BinaryDecoder.prototype.free = function () {
-        this.clear(),
+        (this.clear(),
           100 > jspb.BinaryDecoder.instanceCache_.length &&
-            jspb.BinaryDecoder.instanceCache_.push(this);
+            jspb.BinaryDecoder.instanceCache_.push(this));
       }),
       (jspb.BinaryDecoder.prototype.clone = function () {
         return jspb.BinaryDecoder.alloc(
@@ -6938,18 +6939,18 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         );
       }),
       (jspb.BinaryDecoder.prototype.clear = function () {
-        (this.bytes_ = null),
+        ((this.bytes_ = null),
           (this.cursor_ = this.end_ = this.start_ = 0),
-          (this.error_ = !1);
+          (this.error_ = !1));
       }),
       (jspb.BinaryDecoder.prototype.getBuffer = function () {
         return this.bytes_;
       }),
       (jspb.BinaryDecoder.prototype.setBlock = function (t, n, r) {
-        (this.bytes_ = jspb.utils.byteSourceToUint8Array(t)),
+        ((this.bytes_ = jspb.utils.byteSourceToUint8Array(t)),
           (this.start_ = n === void 0 ? 0 : n),
           (this.end_ = r === void 0 ? this.bytes_.length : this.start_ + r),
-          (this.cursor_ = this.start_);
+          (this.cursor_ = this.start_));
       }),
       (jspb.BinaryDecoder.prototype.getEnd = function () {
         return this.end_;
@@ -6967,7 +6968,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         this.cursor_ = t;
       }),
       (jspb.BinaryDecoder.prototype.advance = function (t) {
-        (this.cursor_ += t), jspb.asserts.assert(this.cursor_ <= this.end_);
+        ((this.cursor_ += t), jspb.asserts.assert(this.cursor_ <= this.end_));
       }),
       (jspb.BinaryDecoder.prototype.atEnd = function () {
         return this.cursor_ == this.end_;
@@ -6980,7 +6981,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       (jspb.BinaryDecoder.prototype.readSplitVarint64 = function (t) {
         for (var n = 128, r = 0, i = 0, o = 0; 4 > o && 128 <= n; o++)
-          (n = this.bytes_[this.cursor_++]), (r |= (n & 127) << (7 * o));
+          ((n = this.bytes_[this.cursor_++]), (r |= (n & 127) << (7 * o)));
         if (
           (128 <= n &&
             ((n = this.bytes_[this.cursor_++]),
@@ -6989,10 +6990,11 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           128 <= n)
         )
           for (o = 0; 5 > o && 128 <= n; o++)
-            (n = this.bytes_[this.cursor_++]), (i |= (n & 127) << (7 * o + 3));
+            ((n = this.bytes_[this.cursor_++]),
+              (i |= (n & 127) << (7 * o + 3)));
         if (128 > n) return t(r >>> 0, i >>> 0);
-        jspb.asserts.fail(`Failed to read varint, encoding is invalid.`),
-          (this.error_ = !0);
+        (jspb.asserts.fail(`Failed to read varint, encoding is invalid.`),
+          (this.error_ = !0));
       }),
       (jspb.BinaryDecoder.prototype.readSplitZigzagVarint64 = function (t) {
         return this.readSplitVarint64(function (n, r) {
@@ -7004,15 +7006,15 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           r = this.cursor_;
         this.cursor_ += 8;
         for (var i = 0, o = 0, s = r + 7; s >= r; s--)
-          (i = (i << 8) | n[s]), (o = (o << 8) | n[s + 4]);
+          ((i = (i << 8) | n[s]), (o = (o << 8) | n[s + 4]));
         return t(i, o);
       }),
       (jspb.BinaryDecoder.prototype.skipVarint = function () {
-        for (; this.bytes_[this.cursor_] & 128; ) this.cursor_++;
+        for (; this.bytes_[this.cursor_] & 128;) this.cursor_++;
         this.cursor_++;
       }),
       (jspb.BinaryDecoder.prototype.unskipVarint = function (t) {
-        for (; 128 < t; ) this.cursor_--, (t >>>= 7);
+        for (; 128 < t;) (this.cursor_--, (t >>>= 7));
         this.cursor_--;
       }),
       (jspb.BinaryDecoder.prototype.readUnsignedVarint32 = function () {
@@ -7212,7 +7214,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           o.length >= 8192 &&
             ((s += String.fromCharCode.apply(null, o)), (o.length = 0));
         }
-        return (s += goog.crypt.byteArrayToString(o)), (this.cursor_ = i), s;
+        return ((s += goog.crypt.byteArrayToString(o)), (this.cursor_ = i), s);
       }),
       (jspb.BinaryDecoder.prototype.readStringWithLength = function () {
         var t = this.readUnsignedVarint32();
@@ -7250,30 +7252,30 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         );
       }),
       (jspb.BinaryReader = function (t, n, r) {
-        (this.decoder_ = jspb.BinaryDecoder.alloc(t, n, r)),
+        ((this.decoder_ = jspb.BinaryDecoder.alloc(t, n, r)),
           (this.fieldCursor_ = this.decoder_.getCursor()),
           (this.nextField_ = jspb.BinaryConstants.INVALID_FIELD_NUMBER),
           (this.nextWireType_ = jspb.BinaryConstants.WireType.INVALID),
           (this.error_ = !1),
-          (this.readCallbacks_ = null);
+          (this.readCallbacks_ = null));
       }),
       (jspb.BinaryReader.instanceCache_ = []),
       (jspb.BinaryReader.alloc = function (t, n, r) {
         if (jspb.BinaryReader.instanceCache_.length) {
           var i = jspb.BinaryReader.instanceCache_.pop();
-          return t && i.decoder_.setBlock(t, n, r), i;
+          return (t && i.decoder_.setBlock(t, n, r), i);
         }
         return new jspb.BinaryReader(t, n, r);
       }),
       (jspb.BinaryReader.prototype.alloc = jspb.BinaryReader.alloc),
       (jspb.BinaryReader.prototype.free = function () {
-        this.decoder_.clear(),
+        (this.decoder_.clear(),
           (this.nextField_ = jspb.BinaryConstants.INVALID_FIELD_NUMBER),
           (this.nextWireType_ = jspb.BinaryConstants.WireType.INVALID),
           (this.error_ = !1),
           (this.readCallbacks_ = null),
           100 > jspb.BinaryReader.instanceCache_.length &&
-            jspb.BinaryReader.instanceCache_.push(this);
+            jspb.BinaryReader.instanceCache_.push(this));
       }),
       (jspb.BinaryReader.prototype.getFieldCursor = function () {
         return this.fieldCursor_;
@@ -7315,14 +7317,14 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         return this.error_ || this.decoder_.getError();
       }),
       (jspb.BinaryReader.prototype.setBlock = function (t, n, r) {
-        this.decoder_.setBlock(t, n, r),
+        (this.decoder_.setBlock(t, n, r),
           (this.nextField_ = jspb.BinaryConstants.INVALID_FIELD_NUMBER),
-          (this.nextWireType_ = jspb.BinaryConstants.WireType.INVALID);
+          (this.nextWireType_ = jspb.BinaryConstants.WireType.INVALID));
       }),
       (jspb.BinaryReader.prototype.reset = function () {
-        this.decoder_.reset(),
+        (this.decoder_.reset(),
           (this.nextField_ = jspb.BinaryConstants.INVALID_FIELD_NUMBER),
-          (this.nextWireType_ = jspb.BinaryConstants.WireType.INVALID);
+          (this.nextWireType_ = jspb.BinaryConstants.WireType.INVALID));
       }),
       (jspb.BinaryReader.prototype.advance = function (t) {
         this.decoder_.advance(t);
@@ -7330,7 +7332,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       (jspb.BinaryReader.prototype.nextField = function () {
         if (this.decoder_.atEnd()) return !1;
         if (this.getError())
-          return jspb.asserts.fail(`Decoder hit an error`), !1;
+          return (jspb.asserts.fail(`Decoder hit an error`), !1);
         this.fieldCursor_ = this.decoder_.getCursor();
         var t = this.decoder_.readUnsignedVarint32(),
           n = t >>> 3;
@@ -7377,8 +7379,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       (jspb.BinaryReader.prototype.skipDelimitedField = function () {
         if (this.nextWireType_ != jspb.BinaryConstants.WireType.DELIMITED)
-          jspb.asserts.fail(`Invalid wire type for skipDelimitedField`),
-            this.skipField();
+          (jspb.asserts.fail(`Invalid wire type for skipDelimitedField`),
+            this.skipField());
         else {
           var t = this.decoder_.readUnsignedVarint32();
           this.decoder_.advance(t);
@@ -7400,8 +7402,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         var t = this.nextField_;
         do {
           if (!this.nextField()) {
-            jspb.asserts.fail(`Unmatched start-group tag: stream EOF`),
-              (this.error_ = !0);
+            (jspb.asserts.fail(`Unmatched start-group tag: stream EOF`),
+              (this.error_ = !0));
             break;
           }
           if (this.nextWireType_ == jspb.BinaryConstants.WireType.END_GROUP) {
@@ -7435,9 +7437,9 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         }
       }),
       (jspb.BinaryReader.prototype.registerReadCallback = function (t, n) {
-        this.readCallbacks_ === null && (this.readCallbacks_ = {}),
+        (this.readCallbacks_ === null && (this.readCallbacks_ = {}),
           jspb.asserts.assert(!this.readCallbacks_[t]),
-          (this.readCallbacks_[t] = n);
+          (this.readCallbacks_[t] = n));
       }),
       (jspb.BinaryReader.prototype.runReadCallback = function (t) {
         return (
@@ -7502,11 +7504,11 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         );
         var r = this.decoder_.getEnd(),
           i = this.decoder_.readUnsignedVarint32();
-        (i = this.decoder_.getCursor() + i),
+        ((i = this.decoder_.getCursor() + i),
           this.decoder_.setEnd(i),
           n(t, this),
           this.decoder_.setCursor(i),
-          this.decoder_.setEnd(r);
+          this.decoder_.setEnd(r));
       }),
       goog.exportProperty(
         jspb.BinaryReader.prototype,
@@ -7514,7 +7516,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         jspb.BinaryReader.prototype.readMessage,
       ),
       (jspb.BinaryReader.prototype.readGroup = function (t, n, r) {
-        jspb.asserts.assert(
+        (jspb.asserts.assert(
           this.nextWireType_ == jspb.BinaryConstants.WireType.START_GROUP,
         ),
           jspb.asserts.assert(this.nextField_ == t),
@@ -7524,7 +7526,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             (jspb.asserts.fail(
               `Group submessage did not end with an END_GROUP tag`,
             ),
-            (this.error_ = !0));
+            (this.error_ = !0)));
       }),
       goog.exportProperty(
         jspb.BinaryReader.prototype,
@@ -7870,7 +7872,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         );
         var n = this.decoder_.readUnsignedVarint32();
         n = this.decoder_.getCursor() + n;
-        for (var r = []; this.decoder_.getCursor() < n; )
+        for (var r = []; this.decoder_.getCursor() < n;)
           r.push(t.call(this.decoder_));
         return r;
       }),
@@ -8021,7 +8023,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       (jspb.BinaryEncoder.prototype.end = function () {
         var t = this.buffer_;
-        return (this.buffer_ = []), t;
+        return ((this.buffer_ = []), t);
       }),
       (jspb.BinaryEncoder.prototype.writeSplitVarint64 = function (t, n) {
         for (
@@ -8031,18 +8033,18 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             jspb.asserts.assert(0 <= n && n < jspb.BinaryConstants.TWO_TO_32);
           0 < n || 127 < t;
         )
-          this.buffer_.push((t & 127) | 128),
+          (this.buffer_.push((t & 127) | 128),
             (t = ((t >>> 7) | (n << 25)) >>> 0),
-            (n >>>= 7);
+            (n >>>= 7));
         this.buffer_.push(t);
       }),
       (jspb.BinaryEncoder.prototype.writeSplitFixed64 = function (t, n) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(n == Math.floor(n)),
           jspb.asserts.assert(0 <= t && t < jspb.BinaryConstants.TWO_TO_32),
           jspb.asserts.assert(0 <= n && n < jspb.BinaryConstants.TWO_TO_32),
           this.writeUint32(t),
-          this.writeUint32(n);
+          this.writeUint32(n));
       }),
       (jspb.BinaryEncoder.prototype.writeUnsignedVarint32 = function (t) {
         for (
@@ -8050,7 +8052,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             jspb.asserts.assert(0 <= t && t < jspb.BinaryConstants.TWO_TO_32);
           127 < t;
         )
-          this.buffer_.push((t & 127) | 128), (t >>>= 7);
+          (this.buffer_.push((t & 127) | 128), (t >>>= 7));
         this.buffer_.push(t);
       }),
       (jspb.BinaryEncoder.prototype.writeSignedVarint32 = function (t) {
@@ -8065,21 +8067,21 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           this.writeUnsignedVarint32(t);
         else {
           for (var n = 0; 9 > n; n++)
-            this.buffer_.push((t & 127) | 128), (t >>= 7);
+            (this.buffer_.push((t & 127) | 128), (t >>= 7));
           this.buffer_.push(1);
         }
       }),
       (jspb.BinaryEncoder.prototype.writeUnsignedVarint64 = function (t) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(0 <= t && t < jspb.BinaryConstants.TWO_TO_64),
           jspb.utils.splitInt64(t),
           this.writeSplitVarint64(
             jspb.utils.split64Low,
             jspb.utils.split64High,
-          );
+          ));
       }),
       (jspb.BinaryEncoder.prototype.writeSignedVarint64 = function (t) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(
             t >= -jspb.BinaryConstants.TWO_TO_63 &&
               t < jspb.BinaryConstants.TWO_TO_63,
@@ -8088,18 +8090,18 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           this.writeSplitVarint64(
             jspb.utils.split64Low,
             jspb.utils.split64High,
-          );
+          ));
       }),
       (jspb.BinaryEncoder.prototype.writeZigzagVarint32 = function (t) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(
             t >= -jspb.BinaryConstants.TWO_TO_31 &&
               t < jspb.BinaryConstants.TWO_TO_31,
           ),
-          this.writeUnsignedVarint32(((t << 1) ^ (t >> 31)) >>> 0);
+          this.writeUnsignedVarint32(((t << 1) ^ (t >> 31)) >>> 0));
       }),
       (jspb.BinaryEncoder.prototype.writeZigzagVarint64 = function (t) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(
             t >= -jspb.BinaryConstants.TWO_TO_63 &&
               t < jspb.BinaryConstants.TWO_TO_63,
@@ -8108,61 +8110,61 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           this.writeSplitVarint64(
             jspb.utils.split64Low,
             jspb.utils.split64High,
-          );
+          ));
       }),
       (jspb.BinaryEncoder.prototype.writeZigzagVarint64String = function (t) {
         this.writeZigzagVarintHash64(jspb.utils.decimalStringToHash64(t));
       }),
       (jspb.BinaryEncoder.prototype.writeZigzagVarintHash64 = function (t) {
         var n = this;
-        jspb.utils.splitHash64(t),
+        (jspb.utils.splitHash64(t),
           jspb.utils.toZigzag64(
             jspb.utils.split64Low,
             jspb.utils.split64High,
             function (t, r) {
               n.writeSplitVarint64(t >>> 0, r >>> 0);
             },
-          );
+          ));
       }),
       (jspb.BinaryEncoder.prototype.writeUint8 = function (t) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(0 <= t && 256 > t),
-          this.buffer_.push((t >>> 0) & 255);
+          this.buffer_.push((t >>> 0) & 255));
       }),
       (jspb.BinaryEncoder.prototype.writeUint16 = function (t) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(0 <= t && 65536 > t),
           this.buffer_.push((t >>> 0) & 255),
-          this.buffer_.push((t >>> 8) & 255);
+          this.buffer_.push((t >>> 8) & 255));
       }),
       (jspb.BinaryEncoder.prototype.writeUint32 = function (t) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(0 <= t && t < jspb.BinaryConstants.TWO_TO_32),
           this.buffer_.push((t >>> 0) & 255),
           this.buffer_.push((t >>> 8) & 255),
           this.buffer_.push((t >>> 16) & 255),
-          this.buffer_.push((t >>> 24) & 255);
+          this.buffer_.push((t >>> 24) & 255));
       }),
       (jspb.BinaryEncoder.prototype.writeUint64 = function (t) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(0 <= t && t < jspb.BinaryConstants.TWO_TO_64),
           jspb.utils.splitUint64(t),
           this.writeUint32(jspb.utils.split64Low),
-          this.writeUint32(jspb.utils.split64High);
+          this.writeUint32(jspb.utils.split64High));
       }),
       (jspb.BinaryEncoder.prototype.writeInt8 = function (t) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(-128 <= t && 128 > t),
-          this.buffer_.push((t >>> 0) & 255);
+          this.buffer_.push((t >>> 0) & 255));
       }),
       (jspb.BinaryEncoder.prototype.writeInt16 = function (t) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(-32768 <= t && 32768 > t),
           this.buffer_.push((t >>> 0) & 255),
-          this.buffer_.push((t >>> 8) & 255);
+          this.buffer_.push((t >>> 8) & 255));
       }),
       (jspb.BinaryEncoder.prototype.writeInt32 = function (t) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(
             t >= -jspb.BinaryConstants.TWO_TO_31 &&
               t < jspb.BinaryConstants.TWO_TO_31,
@@ -8170,28 +8172,34 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           this.buffer_.push((t >>> 0) & 255),
           this.buffer_.push((t >>> 8) & 255),
           this.buffer_.push((t >>> 16) & 255),
-          this.buffer_.push((t >>> 24) & 255);
+          this.buffer_.push((t >>> 24) & 255));
       }),
       (jspb.BinaryEncoder.prototype.writeInt64 = function (t) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(
             t >= -jspb.BinaryConstants.TWO_TO_63 &&
               t < jspb.BinaryConstants.TWO_TO_63,
           ),
           jspb.utils.splitInt64(t),
-          this.writeSplitFixed64(jspb.utils.split64Low, jspb.utils.split64High);
+          this.writeSplitFixed64(
+            jspb.utils.split64Low,
+            jspb.utils.split64High,
+          ));
       }),
       (jspb.BinaryEncoder.prototype.writeInt64String = function (t) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(
             +t >= -jspb.BinaryConstants.TWO_TO_63 &&
               +t < jspb.BinaryConstants.TWO_TO_63,
           ),
           jspb.utils.splitHash64(jspb.utils.decimalStringToHash64(t)),
-          this.writeSplitFixed64(jspb.utils.split64Low, jspb.utils.split64High);
+          this.writeSplitFixed64(
+            jspb.utils.split64Low,
+            jspb.utils.split64High,
+          ));
       }),
       (jspb.BinaryEncoder.prototype.writeFloat = function (t) {
-        jspb.asserts.assert(
+        (jspb.asserts.assert(
           t === 1 / 0 ||
             t === -1 / 0 ||
             isNaN(t) ||
@@ -8199,10 +8207,10 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
               t <= jspb.BinaryConstants.FLOAT32_MAX),
         ),
           jspb.utils.splitFloat32(t),
-          this.writeUint32(jspb.utils.split64Low);
+          this.writeUint32(jspb.utils.split64Low));
       }),
       (jspb.BinaryEncoder.prototype.writeDouble = function (t) {
-        jspb.asserts.assert(
+        (jspb.asserts.assert(
           t === 1 / 0 ||
             t === -1 / 0 ||
             isNaN(t) ||
@@ -8211,34 +8219,34 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         ),
           jspb.utils.splitFloat64(t),
           this.writeUint32(jspb.utils.split64Low),
-          this.writeUint32(jspb.utils.split64High);
+          this.writeUint32(jspb.utils.split64High));
       }),
       (jspb.BinaryEncoder.prototype.writeBool = function (t) {
-        jspb.asserts.assert(typeof t == `boolean` || typeof t == `number`),
-          this.buffer_.push(+!!t);
+        (jspb.asserts.assert(typeof t == `boolean` || typeof t == `number`),
+          this.buffer_.push(+!!t));
       }),
       (jspb.BinaryEncoder.prototype.writeEnum = function (t) {
-        jspb.asserts.assert(t == Math.floor(t)),
+        (jspb.asserts.assert(t == Math.floor(t)),
           jspb.asserts.assert(
             t >= -jspb.BinaryConstants.TWO_TO_31 &&
               t < jspb.BinaryConstants.TWO_TO_31,
           ),
-          this.writeSignedVarint32(t);
+          this.writeSignedVarint32(t));
       }),
       (jspb.BinaryEncoder.prototype.writeBytes = function (t) {
         this.buffer_.push.apply(this.buffer_, t);
       }),
       (jspb.BinaryEncoder.prototype.writeVarintHash64 = function (t) {
-        jspb.utils.splitHash64(t),
+        (jspb.utils.splitHash64(t),
           this.writeSplitVarint64(
             jspb.utils.split64Low,
             jspb.utils.split64High,
-          );
+          ));
       }),
       (jspb.BinaryEncoder.prototype.writeFixedHash64 = function (t) {
-        jspb.utils.splitHash64(t),
+        (jspb.utils.splitHash64(t),
           this.writeUint32(jspb.utils.split64Low),
-          this.writeUint32(jspb.utils.split64High);
+          this.writeUint32(jspb.utils.split64High));
       }),
       (jspb.BinaryEncoder.prototype.writeString = function (t) {
         var n = this.buffer_.length;
@@ -8247,8 +8255,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           var i = t.charCodeAt(r);
           if (128 > i) this.buffer_.push(i);
           else if (2048 > i)
-            this.buffer_.push((i >> 6) | 192),
-              this.buffer_.push((i & 63) | 128);
+            (this.buffer_.push((i >> 6) | 192),
+              this.buffer_.push((i & 63) | 128));
           else if (65536 > i) {
             if (55296 <= i && 56319 >= i && r + 1 < t.length) {
               var o = t.charCodeAt(r + 1);
@@ -8261,16 +8269,16 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                 this.buffer_.push((i & 63) | 128),
                 r++);
             } else
-              this.buffer_.push((i >> 12) | 224),
+              (this.buffer_.push((i >> 12) | 224),
                 this.buffer_.push(((i >> 6) & 63) | 128),
-                this.buffer_.push((i & 63) | 128);
+                this.buffer_.push((i & 63) | 128));
           }
         }
         return this.buffer_.length - n;
       }),
       (jspb.arith = {}),
       (jspb.arith.UInt64 = function (t, n) {
-        (this.lo = t), (this.hi = n);
+        ((this.lo = t), (this.hi = n));
       }),
       (jspb.arith.UInt64.prototype.cmp = function (t) {
         return this.hi < t.hi || (this.hi == t.hi && this.lo < t.lo)
@@ -8323,7 +8331,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             r = t * o + ((r * o) >>> 16) + ((t * i) >>> 16);
           4294967296 <= n;
         )
-          (n -= 4294967296), (r += 1);
+          ((n -= 4294967296), (r += 1));
         return new jspb.arith.UInt64(n >>> 0, r >>> 0);
       }),
       (jspb.arith.UInt64.prototype.mul = function (t) {
@@ -8340,21 +8348,21 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         var n = new jspb.arith.UInt64(0, 0),
           r = new jspb.arith.UInt64(this.lo, this.hi);
         t = new jspb.arith.UInt64(t, 0);
-        for (var i = new jspb.arith.UInt64(1, 0); !t.msb(); )
-          (t = t.leftShift()), (i = i.leftShift());
-        for (; !i.zero(); )
-          0 >= t.cmp(r) && ((n = n.add(i)), (r = r.sub(t))),
+        for (var i = new jspb.arith.UInt64(1, 0); !t.msb();)
+          ((t = t.leftShift()), (i = i.leftShift()));
+        for (; !i.zero();)
+          (0 >= t.cmp(r) && ((n = n.add(i)), (r = r.sub(t))),
             (t = t.rightShift()),
-            (i = i.rightShift());
+            (i = i.rightShift()));
         return [n, r];
       }),
       (jspb.arith.UInt64.prototype.toString = function () {
-        for (var t = ``, n = this; !n.zero(); ) {
+        for (var t = ``, n = this; !n.zero();) {
           n = n.div(10);
           var r = n[0];
-          (t = n[1].lo + t), (n = r);
+          ((t = n[1].lo + t), (n = r));
         }
-        return t == `` && (t = `0`), t;
+        return (t == `` && (t = `0`), t);
       }),
       (jspb.arith.UInt64.fromString = function (t) {
         for (
@@ -8365,7 +8373,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           i++
         ) {
           if (`0` > t[i] || `9` < t[i]) return null;
-          (r.lo = parseInt(t[i], 10)), (n = n.mul(10).add(r));
+          ((r.lo = parseInt(t[i], 10)), (n = n.mul(10).add(r)));
         }
         return n;
       }),
@@ -8373,7 +8381,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         return new jspb.arith.UInt64(this.lo, this.hi);
       }),
       (jspb.arith.Int64 = function (t, n) {
-        (this.lo = t), (this.hi = n);
+        ((this.lo = t), (this.hi = n));
       }),
       (jspb.arith.Int64.prototype.add = function (t) {
         return new jspb.arith.Int64(
@@ -8411,16 +8419,16 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         );
       }),
       (jspb.BinaryWriter = function () {
-        (this.blocks_ = []),
+        ((this.blocks_ = []),
           (this.totalLength_ = 0),
           (this.encoder_ = new jspb.BinaryEncoder()),
-          (this.bookmarks_ = []);
+          (this.bookmarks_ = []));
       }),
       (jspb.BinaryWriter.prototype.appendUint8Array_ = function (t) {
         var n = this.encoder_.end();
-        this.blocks_.push(n),
+        (this.blocks_.push(n),
           this.blocks_.push(t),
-          (this.totalLength_ += n.length + t.length);
+          (this.totalLength_ += n.length + t.length));
       }),
       (jspb.BinaryWriter.prototype.beginDelimited_ = function (t) {
         return (
@@ -8439,8 +8447,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             jspb.asserts.assert(0 <= n);
           127 < n;
         )
-          t.push((n & 127) | 128), (n >>>= 7), this.totalLength_++;
-        t.push(n), this.totalLength_++;
+          (t.push((n & 127) | 128), (n >>>= 7), this.totalLength_++);
+        (t.push(n), this.totalLength_++);
       }),
       (jspb.BinaryWriter.prototype.writeSerializedMessage = function (t, n, r) {
         this.appendUint8Array_(t.subarray(n, r));
@@ -8456,10 +8464,10 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           this.writeSerializedMessage(t, n, r);
       }),
       (jspb.BinaryWriter.prototype.reset = function () {
-        (this.blocks_ = []),
+        ((this.blocks_ = []),
           this.encoder_.end(),
           (this.totalLength_ = 0),
-          (this.bookmarks_ = []);
+          (this.bookmarks_ = []));
       }),
       (jspb.BinaryWriter.prototype.getResultBuffer = function () {
         jspb.asserts.assert(this.bookmarks_.length == 0);
@@ -8473,7 +8481,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           o++
         ) {
           var s = n[o];
-          t.set(s, i), (i += s.length);
+          (t.set(s, i), (i += s.length));
         }
         return (
           (n = this.encoder_.end()),
@@ -8496,12 +8504,12 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         this.bookmarks_.push(this.beginDelimited_(t));
       }),
       (jspb.BinaryWriter.prototype.endSubMessage = function () {
-        jspb.asserts.assert(0 <= this.bookmarks_.length),
-          this.endDelimited_(this.bookmarks_.pop());
+        (jspb.asserts.assert(0 <= this.bookmarks_.length),
+          this.endDelimited_(this.bookmarks_.pop()));
       }),
       (jspb.BinaryWriter.prototype.writeFieldHeader_ = function (t, n) {
-        jspb.asserts.assert(1 <= t && t == Math.floor(t)),
-          this.encoder_.writeUnsignedVarint32(8 * t + n);
+        (jspb.asserts.assert(1 <= t && t == Math.floor(t)),
+          this.encoder_.writeUnsignedVarint32(8 * t + n));
       }),
       (jspb.BinaryWriter.prototype.writeAny = function (t, n, r) {
         var i = jspb.BinaryConstants.FieldType;
@@ -8891,12 +8899,12 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           this.encoder_.writeVarintHash64(n));
       }),
       (jspb.BinaryWriter.prototype.writeSplitFixed64 = function (t, n, r) {
-        this.writeFieldHeader_(t, jspb.BinaryConstants.WireType.FIXED64),
-          this.encoder_.writeSplitFixed64(n, r);
+        (this.writeFieldHeader_(t, jspb.BinaryConstants.WireType.FIXED64),
+          this.encoder_.writeSplitFixed64(n, r));
       }),
       (jspb.BinaryWriter.prototype.writeSplitVarint64 = function (t, n, r) {
-        this.writeFieldHeader_(t, jspb.BinaryConstants.WireType.VARINT),
-          this.encoder_.writeSplitVarint64(n, r);
+        (this.writeFieldHeader_(t, jspb.BinaryConstants.WireType.VARINT),
+          this.encoder_.writeSplitVarint64(n, r));
       }),
       (jspb.BinaryWriter.prototype.writeSplitZigzagVarint64 = function (
         t,
@@ -9134,7 +9142,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         if (n != null)
           for (var i = 0; i < n.length; i++) {
             var o = this.beginDelimited_(t);
-            r(n[i], this), this.endDelimited_(o);
+            (r(n[i], this), this.endDelimited_(o));
           }
       }),
       goog.exportProperty(
@@ -9145,7 +9153,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       (jspb.BinaryWriter.prototype.writeRepeatedGroup = function (t, n, r) {
         if (n != null)
           for (var i = 0; i < n.length; i++)
-            this.writeFieldHeader_(
+            (this.writeFieldHeader_(
               t,
               jspb.BinaryConstants.WireType.START_GROUP,
             ),
@@ -9153,7 +9161,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
               this.writeFieldHeader_(
                 t,
                 jspb.BinaryConstants.WireType.END_GROUP,
-              );
+              ));
       }),
       goog.exportProperty(
         jspb.BinaryWriter.prototype,
@@ -9509,11 +9517,11 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         }
       }),
       (jspb.Map = function (t, n) {
-        (this.arr_ = t),
+        ((this.arr_ = t),
           (this.valueCtor_ = n),
           (this.map_ = {}),
           (this.arrClean = !0),
-          0 < this.arr_.length && this.loadFromArray_();
+          0 < this.arr_.length && this.loadFromArray_());
       }),
       goog.exportSymbol(`jspb.Map`, jspb.Map),
       (jspb.Map.prototype.loadFromArray_ = function () {
@@ -9542,8 +9550,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
             n++
           ) {
             var i = this.map_[t[n]];
-            (r = i.valueWrapper) && r.toArray(),
-              this.arr_.push([i.key, i.value]);
+            ((r = i.valueWrapper) && r.toArray(),
+              this.arr_.push([i.key, i.value]));
           }
           this.arrClean = !0;
         }
@@ -9581,7 +9589,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       goog.exportProperty(jspb.Map, `fromObject`, jspb.Map.fromObject),
       (jspb.Map.ArrayIteratorIterable_ = function (t) {
-        (this.idx_ = 0), (this.arr_ = t);
+        ((this.idx_ = 0), (this.arr_ = t));
       }),
       (jspb.Map.ArrayIteratorIterable_.prototype.next = function () {
         return this.idx_ < this.arr_.length
@@ -9602,7 +9610,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         jspb.Map.prototype.getLength,
       ),
       (jspb.Map.prototype.clear = function () {
-        (this.map_ = {}), (this.arrClean = !1);
+        ((this.map_ = {}), (this.arrClean = !1));
       }),
       goog.exportProperty(
         jspb.Map.prototype,
@@ -9612,7 +9620,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       (jspb.Map.prototype.del = function (t) {
         t = t.toString();
         var n = this.map_.hasOwnProperty(t);
-        return delete this.map_[t], (this.arrClean = !1), n;
+        return (delete this.map_[t], (this.arrClean = !1), n);
       }),
       goog.exportProperty(jspb.Map.prototype, `del`, jspb.Map.prototype.del),
       (jspb.Map.prototype.getEntryList = function () {
@@ -9709,12 +9717,12 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         s.sort();
         for (var l = 0; l < s.length; l++) {
           var u = this.map_[s[l]];
-          n.beginSubMessage(t),
+          (n.beginSubMessage(t),
             r.call(n, 1, u.key),
             this.valueCtor_
               ? i.call(n, 2, this.wrapEntry_(u), o)
               : i.call(n, 2, u.value),
-            n.endSubMessage();
+            n.endSubMessage());
         }
       }),
       goog.exportProperty(
@@ -9723,7 +9731,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         jspb.Map.prototype.serializeBinary,
       ),
       (jspb.Map.deserializeBinary = function (t, n, r, i, o, s, l) {
-        for (; n.nextField() && !n.isEndGroup(); ) {
+        for (; n.nextField() && !n.isEndGroup();) {
           var u = n.getFieldNumber();
           u == 1
             ? (s = r.call(n))
@@ -9734,9 +9742,9 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                   i.call(n, l, o))
                 : (l = i.call(n)));
         }
-        jspb.asserts.assert(s != null),
+        (jspb.asserts.assert(s != null),
           jspb.asserts.assert(l != null),
-          t.set(s, l);
+          t.set(s, l));
       }),
       goog.exportProperty(
         jspb.Map,
@@ -9751,23 +9759,23 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         return n;
       }),
       (jspb.Map.Entry_ = function (t, n) {
-        (this.key = t), (this.value = n), (this.valueWrapper = void 0);
+        ((this.key = t), (this.value = n), (this.valueWrapper = void 0));
       }),
       (jspb.ExtensionFieldInfo = function (t, n, r, i, o) {
-        (this.fieldIndex = t),
+        ((this.fieldIndex = t),
           (this.fieldName = n),
           (this.ctor = r),
           (this.toObjectFn = i),
-          (this.isRepeated = o);
+          (this.isRepeated = o));
       }),
       goog.exportSymbol(`jspb.ExtensionFieldInfo`, jspb.ExtensionFieldInfo),
       (jspb.ExtensionFieldBinaryInfo = function (t, n, r, i, o, s) {
-        (this.fieldInfo = t),
+        ((this.fieldInfo = t),
           (this.binaryReaderFn = n),
           (this.binaryWriterFn = r),
           (this.binaryMessageSerializeFn = i),
           (this.binaryMessageDeserializeFn = o),
-          (this.isPacked = s);
+          (this.isPacked = s));
       }),
       goog.exportSymbol(
         `jspb.ExtensionFieldBinaryInfo`,
@@ -9828,7 +9836,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           o)
         )
           for (n = 0; n < o.length; n++)
-            (r = o[n]),
+            ((r = o[n]),
               r < t.pivot_
                 ? ((r = jspb.Message.getIndex_(t, r)),
                   (t.array[r] =
@@ -9836,7 +9844,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
                 : (jspb.Message.maybeInitEmptyExtensionObject_(t),
                   (t.extensionObject_[r] =
                     t.extensionObject_[r] ||
-                    jspb.Message.EMPTY_LIST_SENTINEL_));
+                    jspb.Message.EMPTY_LIST_SENTINEL_)));
         if (s && s.length)
           for (n = 0; n < s.length; n++) jspb.Message.computeOneofCase(t, s[n]);
       }),
@@ -9979,7 +9987,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         jspb.Message.getRepeatedField,
       ),
       (jspb.Message.getOptionalFloatingPointField = function (t, n) {
-        return (t = jspb.Message.getField(t, n)), t == null ? t : +t;
+        return ((t = jspb.Message.getField(t, n)), t == null ? t : +t);
       }),
       goog.exportProperty(
         jspb.Message,
@@ -9987,7 +9995,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         jspb.Message.getOptionalFloatingPointField,
       ),
       (jspb.Message.getBooleanField = function (t, n) {
-        return (t = jspb.Message.getField(t, n)), t == null ? t : !!t;
+        return ((t = jspb.Message.getField(t, n)), t == null ? t : !!t);
       }),
       goog.exportProperty(
         jspb.Message,
@@ -10089,7 +10097,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         }
       }),
       (jspb.Message.getFieldWithDefault = function (t, n, r) {
-        return (t = jspb.Message.getField(t, n)), t ?? r;
+        return ((t = jspb.Message.getField(t, n)), t ?? r);
       }),
       goog.exportProperty(
         jspb.Message,
@@ -10097,7 +10105,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         jspb.Message.getFieldWithDefault,
       ),
       (jspb.Message.getBooleanFieldWithDefault = function (t, n, r) {
-        return (t = jspb.Message.getBooleanField(t, n)), t ?? r;
+        return ((t = jspb.Message.getBooleanField(t, n)), t ?? r);
       }),
       goog.exportProperty(
         jspb.Message,
@@ -10105,7 +10113,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         jspb.Message.getBooleanFieldWithDefault,
       ),
       (jspb.Message.getFloatingPointFieldWithDefault = function (t, n, r) {
-        return (t = jspb.Message.getOptionalFloatingPointField(t, n)), t ?? r;
+        return ((t = jspb.Message.getOptionalFloatingPointField(t, n)), t ?? r);
       }),
       goog.exportProperty(
         jspb.Message,
@@ -10123,7 +10131,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         var o = jspb.Message.getField(t, n);
         if (!o) {
           if (r) return;
-          (o = []), jspb.Message.setField(t, n, o);
+          ((o = []), jspb.Message.setField(t, n, o));
         }
         return (t.wrappers_[n] = new jspb.Map(o, i));
       }),
@@ -10290,9 +10298,9 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         }
       }),
       (jspb.Message.setWrapperField = function (t, n, r) {
-        jspb.asserts.assertInstanceof(t, jspb.Message), (t.wrappers_ ||= {});
+        (jspb.asserts.assertInstanceof(t, jspb.Message), (t.wrappers_ ||= {}));
         var i = r && r.toArray();
-        return (t.wrappers_[n] = r), jspb.Message.setField(t, n, i);
+        return ((t.wrappers_[n] = r), jspb.Message.setField(t, n, i));
       }),
       goog.exportProperty(
         jspb.Message,
@@ -10300,9 +10308,9 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         jspb.Message.setWrapperField,
       ),
       (jspb.Message.setOneofWrapperField = function (t, n, r, i) {
-        jspb.asserts.assertInstanceof(t, jspb.Message), (t.wrappers_ ||= {});
+        (jspb.asserts.assertInstanceof(t, jspb.Message), (t.wrappers_ ||= {}));
         var o = i && i.toArray();
-        return (t.wrappers_[n] = i), jspb.Message.setOneofField(t, n, r, o);
+        return ((t.wrappers_[n] = i), jspb.Message.setOneofField(t, n, r, o));
       }),
       goog.exportProperty(
         jspb.Message,
@@ -10310,11 +10318,11 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         jspb.Message.setOneofWrapperField,
       ),
       (jspb.Message.setRepeatedWrapperField = function (t, n, r) {
-        jspb.asserts.assertInstanceof(t, jspb.Message),
+        (jspb.asserts.assertInstanceof(t, jspb.Message),
           (t.wrappers_ ||= {}),
-          (r ||= []);
+          (r ||= []));
         for (var i = [], o = 0; o < r.length; o++) i[o] = r[o].toArray();
-        return (t.wrappers_[n] = r), jspb.Message.setField(t, n, i);
+        return ((t.wrappers_[n] = r), jspb.Message.setField(t, n, i));
       }),
       goog.exportProperty(
         jspb.Message,
@@ -10355,7 +10363,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
           }
       }),
       (jspb.Message.prototype.toArray = function () {
-        return this.syncMapFields_(), this.array;
+        return (this.syncMapFields_(), this.array);
       }),
       goog.exportProperty(
         jspb.Message.prototype,
@@ -10364,7 +10372,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       ),
       jspb.Message.GENERATE_TO_STRING &&
         (jspb.Message.prototype.toString = function () {
-          return this.syncMapFields_(), this.array.toString();
+          return (this.syncMapFields_(), this.array.toString());
         }),
       (jspb.Message.prototype.getExtension = function (t) {
         if (this.extensionObject_) {
@@ -10398,8 +10406,8 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         jspb.Message.prototype.getExtension,
       ),
       (jspb.Message.prototype.setExtension = function (t, n) {
-        (this.wrappers_ ||= {}),
-          jspb.Message.maybeInitEmptyExtensionObject_(this);
+        ((this.wrappers_ ||= {}),
+          jspb.Message.maybeInitEmptyExtensionObject_(this));
         var r = t.fieldIndex;
         return (
           t.isRepeated
@@ -10449,7 +10457,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       }),
       goog.exportProperty(jspb.Message, `equals`, jspb.Message.equals),
       (jspb.Message.compareExtensions = function (t, n) {
-        (t ||= {}), (n ||= {});
+        ((t ||= {}), (n ||= {}));
         var r = {},
           i;
         for (i in t) r[i] = 0;
@@ -10536,20 +10544,21 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         return new t.constructor(jspb.Message.clone_(t.toArray()));
       }),
       (jspb.Message.copyInto = function (t, n) {
-        jspb.asserts.assertInstanceof(t, jspb.Message),
+        (jspb.asserts.assertInstanceof(t, jspb.Message),
           jspb.asserts.assertInstanceof(n, jspb.Message),
           jspb.asserts.assert(
             t.constructor == n.constructor,
             `Copy source and target message should have the same type.`,
           ),
-          (t = jspb.Message.clone(t));
+          (t = jspb.Message.clone(t)));
         for (
           var r = n.toArray(), i = t.toArray(), o = (r.length = 0);
           o < i.length;
           o++
         )
           r[o] = i[o];
-        (n.wrappers_ = t.wrappers_), (n.extensionObject_ = t.extensionObject_);
+        ((n.wrappers_ = t.wrappers_),
+          (n.extensionObject_ = t.extensionObject_));
       }),
       goog.exportProperty(jspb.Message, `copyInto`, jspb.Message.copyInto),
       (jspb.Message.clone_ = function (t) {
@@ -10567,12 +10576,12 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         if (jspb.Message.SUPPORTS_UINT8ARRAY_ && t instanceof Uint8Array)
           return new Uint8Array(t);
         for (r in ((n = {}), t))
-          (i = t[r]),
+          ((i = t[r]),
             i != null &&
               (n[r] =
                 typeof i == `object`
                   ? jspb.Message.clone_(jspb.asserts.assert(i))
-                  : i);
+                  : i));
         return n;
       }),
       (jspb.Message.registerMessageType = function (t, n) {
@@ -10596,7 +10605,7 @@ var require_google_protobuf = __commonJSMin((exports, module, this$1) => {
         (exports.exportSymbol = goog.exportSymbol),
         (exports.inherits = goog.inherits),
         (exports.object = { extend: goog.object.extend }),
-        (exports.typeOf = goog.typeOf));
+        (exports.typeOf = goog.typeOf)));
   }),
   import_google_protobuf = __toESM(require_google_protobuf(), 1),
   ReaderProto = import_google_protobuf.BinaryReader.prototype,
@@ -10655,16 +10664,16 @@ function ToObject(t, n, r) {
       (n !== null || m) && (s[t] = n);
     }
   }
-  return n && (s.$jspbMessageInstance = r), s;
+  return (n && (s.$jspbMessageInstance = r), s);
 }
 function DeserializeBinary(t, n, r) {
-  for (; r.nextField() && !r.isEndGroup(); ) {
+  for (; r.nextField() && !r.isEndGroup();) {
     let i = t[r.getFieldNumber()];
     if (i) {
       let { n: t, c: o, r: s, d: l, q: u, br: p } = i;
       if (o) {
         let i = new o();
-        r.readMessage(i, o.deserializeBinaryFromReader),
+        (r.readMessage(i, o.deserializeBinaryFromReader),
           s
             ? import_google_protobuf.Message.addToRepeatedWrapperField(
                 n,
@@ -10672,18 +10681,18 @@ function DeserializeBinary(t, n, r) {
                 i,
                 o,
               )
-            : import_google_protobuf.Message.setWrapperField(n, t, i);
+            : import_google_protobuf.Message.setWrapperField(n, t, i));
       } else if (p) {
         let i = p.call(r);
         s
           ? import_google_protobuf.Message.addToRepeatedField(n, t, i)
           : import_google_protobuf.Message.setField(n, t, i);
       } else
-        console.assert(
+        (console.assert(
           !!p,
           `Reader func not set for field number ${t} in class ${o}`,
         ),
-          r.skipField();
+          r.skipField());
     } else r.skipField();
   }
   return n;
@@ -10716,7 +10725,7 @@ function AddAccessors(t) {
   for (let r in t.fields) {
     let i = t.fields[r],
       { n: o, c: s, r: l, d: u, q: p } = i;
-    Object.prototype.hasOwnProperty.call(i, `d`)
+    (Object.prototype.hasOwnProperty.call(i, `d`)
       ? (n.prototype[r] = MakeBasicGetter(
           import_google_protobuf.Message.getFieldWithDefault,
           o,
@@ -10748,7 +10757,7 @@ function AddAccessors(t) {
             import_google_protobuf.Message.setField,
             o,
           )),
-      l && (n.prototype[`add_${r}`] = MakeAdder(o, s));
+      l && (n.prototype[`add_${r}`] = MakeAdder(o, s)));
   }
 }
 function MakeBasicGetter(t, ...n) {
@@ -10781,12 +10790,21 @@ function MakeAdder(t, n) {
         import_google_protobuf.Message.addToRepeatedField(this, t, n, r);
       };
 }
-var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_protobuf.Message {
+var CClientMetrics_ClientBootstrap_RequestInfo = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.original_hostname || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -10851,7 +10869,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -10872,25 +10890,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ClientBootstrap_RequestInfo`;
     }
   },
-  CClientMetrics_ClientBootstrap_Summary = class t extends import_google_protobuf.Message {
+  CClientMetrics_ClientBootstrap_Summary = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.launcher_type || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, [7, 8], null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          [7, 8],
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -10942,7 +10969,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -10963,25 +10990,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ClientBootstrap_Summary`;
     }
   },
-  CClientMetrics_ContentDownloadResponse_Counts = class t extends import_google_protobuf.Message {
+  CClientMetrics_ContentDownloadResponse_Counts = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.class_100 || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -11031,7 +11067,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -11052,25 +11088,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ContentDownloadResponse_Counts`;
     }
   },
-  CClientMetrics_ContentDownloadResponse_HostCounts = class t extends import_google_protobuf.Message {
+  CClientMetrics_ContentDownloadResponse_HostCounts = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.hostname || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -11096,7 +11141,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -11117,25 +11162,27 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ContentDownloadResponse_HostCounts`;
     }
   },
-  CClientMetrics_ContentDownloadResponse_Hosts = class t extends import_google_protobuf.Message {
+  CClientMetrics_ContentDownloadResponse_Hosts = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.hosts || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, [1], null);
+        import_google_protobuf.Message.initialize(this, n, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -11156,7 +11203,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -11177,14 +11224,14 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ContentDownloadResponse_Hosts`;
@@ -11193,9 +11240,16 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
   CMsgIPAddress = class t extends import_google_protobuf.Message {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.v4 || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -11216,7 +11270,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -11237,14 +11291,14 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CMsgIPAddress`;
@@ -11253,9 +11307,16 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
   CMsgGCRoutingProtoBufHeader = class t extends import_google_protobuf.Message {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.dst_gcid_queue || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -11280,7 +11341,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -11301,14 +11362,14 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CMsgGCRoutingProtoBufHeader`;
@@ -11317,7 +11378,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
   CMsgProtoBufHeader = class t extends import_google_protobuf.Message {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.steamid || AddAccessors(t.M()),
         import_google_protobuf.Message.initialize(
           this,
@@ -11326,7 +11387,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
           -1,
           [27, 41],
           null,
-        );
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -11572,7 +11633,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -11593,14 +11654,14 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CMsgProtoBufHeader`;
@@ -11609,7 +11670,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
   CCDDBAppDetailCommon = class t extends import_google_protobuf.Message {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.appid || AddAccessors(t.M()),
         import_google_protobuf.Message.initialize(
           this,
@@ -11618,7 +11679,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
           -1,
           [17, 18],
           null,
-        );
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -11711,7 +11772,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -11732,14 +11793,14 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CCDDBAppDetailCommon`;
@@ -11748,9 +11809,16 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
   CLocalizationToken = class t extends import_google_protobuf.Message {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.language || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -11775,7 +11843,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -11796,14 +11864,14 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CLocalizationToken`;
@@ -11812,9 +11880,16 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
   CClanEventUserNewsTuple = class t extends import_google_protobuf.Message {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.clanid || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -11879,7 +11954,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -11900,14 +11975,14 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClanEventUserNewsTuple`;
@@ -11916,9 +11991,9 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
   CClanMatchEventByRange = class t extends import_google_protobuf.Message {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.rtime_before || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, [4], null);
+        import_google_protobuf.Message.initialize(this, n, 0, -1, [4], null));
     }
     static sm_m;
     static sm_mbf;
@@ -11949,7 +12024,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -11970,14 +12045,14 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClanMatchEventByRange`;
@@ -11986,9 +12061,16 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
   CPackageReservationStatus = class t extends import_google_protobuf.Message {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.packageid || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -12088,7 +12170,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -12109,14 +12191,14 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CPackageReservationStatus`;
@@ -12125,9 +12207,16 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
   CMsgKeyValuePair = class t extends import_google_protobuf.Message {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.name || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -12152,7 +12241,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -12173,14 +12262,14 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CMsgKeyValuePair`;
@@ -12189,9 +12278,9 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
   CMsgKeyValueSet = class t extends import_google_protobuf.Message {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.pairs || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, [1], null);
+        import_google_protobuf.Message.initialize(this, n, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -12205,7 +12294,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -12226,25 +12315,27 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CMsgKeyValueSet`;
     }
   },
-  UserContentDescriptorPreferences = class t extends import_google_protobuf.Message {
+  UserContentDescriptorPreferences = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.content_descriptors_to_exclude || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, [1], null);
+        import_google_protobuf.Message.initialize(this, n, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -12265,7 +12356,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -12286,25 +12377,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `UserContentDescriptorPreferences`;
     }
   },
-  UserContentDescriptorPreferences_ContentDescriptor = class t extends import_google_protobuf.Message {
+  UserContentDescriptorPreferences_ContentDescriptor = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.content_descriptorid || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -12329,7 +12429,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -12350,14 +12450,14 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `UserContentDescriptorPreferences_ContentDescriptor`;
@@ -12366,9 +12466,16 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
   UserSystemInformation = class t extends import_google_protobuf.Message {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.manufacturer || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -12478,7 +12585,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -12499,14 +12606,14 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `UserSystemInformation`;
@@ -12515,9 +12622,16 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
   GamePerformanceSettings = class t extends import_google_protobuf.Message {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.setting || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -12547,7 +12661,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -12568,25 +12682,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `GamePerformanceSettings`;
     }
   },
-  CClientMetrics_AppInterfaceCreation = class t extends import_google_protobuf.Message {
+  CClientMetrics_AppInterfaceCreation = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.raw_version || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -12611,7 +12734,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -12632,25 +12755,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_AppInterfaceCreation`;
     }
   },
-  CClientMetrics_AppInterfaceMethodCounts = class t extends import_google_protobuf.Message {
+  CClientMetrics_AppInterfaceMethodCounts = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.interface_name || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -12680,7 +12812,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -12701,25 +12833,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_AppInterfaceMethodCounts`;
     }
   },
-  CClientMetrics_AppInterfaceStats_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_AppInterfaceStats_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.game_id || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, [2, 3], null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          [2, 3],
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -12756,7 +12897,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -12777,25 +12918,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_AppInterfaceStats_Notification`;
     }
   },
-  CClientMetrics_IPv6Connectivity_Result = class t extends import_google_protobuf.Message {
+  CClientMetrics_IPv6Connectivity_Result = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.protocol_tested || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -12820,7 +12970,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -12841,25 +12991,27 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_IPv6Connectivity_Result`;
     }
   },
-  CClientMetrics_IPv6Connectivity_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_IPv6Connectivity_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.cell_id || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, [2], null);
+        import_google_protobuf.Message.initialize(this, n, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -12890,7 +13042,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -12911,23 +13063,25 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_IPv6Connectivity_Notification`;
     }
   },
-  CClientMetrics_ReportReactUsage_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_ReportReactUsage_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.product || AddAccessors(t.M()),
         import_google_protobuf.Message.initialize(
           this,
@@ -12936,7 +13090,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
           -1,
           [3, 4, 5],
           null,
-        );
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -12979,7 +13133,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -13000,25 +13154,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ReportReactUsage_Notification`;
     }
   },
-  CClientMetrics_ReportReactUsage_Notification_RouteData = class t extends import_google_protobuf.Message {
+  CClientMetrics_ReportReactUsage_Notification_RouteData = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.route || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -13043,7 +13206,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -13064,25 +13227,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ReportReactUsage_Notification_RouteData`;
     }
   },
-  CClientMetrics_ReportReactUsage_Notification_ComponentData = class t extends import_google_protobuf.Message {
+  CClientMetrics_ReportReactUsage_Notification_ComponentData = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.component || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -13107,7 +13279,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -13128,25 +13300,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ReportReactUsage_Notification_ComponentData`;
     }
   },
-  CClientMetrics_ReportReactUsage_Notification_ActionData = class t extends import_google_protobuf.Message {
+  CClientMetrics_ReportReactUsage_Notification_ActionData = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.action || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -13171,7 +13352,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -13192,25 +13373,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ReportReactUsage_Notification_ActionData`;
     }
   },
-  CClientMetrics_ReportClientError_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_ReportClientError_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.product || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, [3, 4], null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          [3, 4],
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -13248,7 +13438,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -13269,25 +13459,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ReportClientError_Notification`;
     }
   },
-  CClientMetrics_ReportClientError_Notification_Error = class t extends import_google_protobuf.Message {
+  CClientMetrics_ReportClientError_Notification_Error = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.identifier || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -13327,7 +13526,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -13348,25 +13547,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ReportClientError_Notification_Error`;
     }
   },
-  CClientMetrics_SteamPipeWorkStats_Operation = class t extends import_google_protobuf.Message {
+  CClientMetrics_SteamPipeWorkStats_Operation = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.type || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -13412,7 +13620,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -13433,25 +13641,27 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_SteamPipeWorkStats_Operation`;
     }
   },
-  CClientMetrics_SteamPipeWorkStats_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_SteamPipeWorkStats_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.appid || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, [4], null);
+        import_google_protobuf.Message.initialize(this, n, 0, -1, [4], null));
     }
     static sm_m;
     static sm_mbf;
@@ -13492,7 +13702,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -13513,25 +13723,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_SteamPipeWorkStats_Notification`;
     }
   },
-  CClientMetrics_ClientBootstrap_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_ClientBootstrap_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.summary || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -13547,7 +13766,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -13568,25 +13787,27 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ClientBootstrap_Notification`;
     }
   },
-  CClientMetrics_DownloadRates_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_DownloadRates_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.cell_id || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, [2], null);
+        import_google_protobuf.Message.initialize(this, n, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -13627,7 +13848,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -13648,25 +13869,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_DownloadRates_Notification`;
     }
   },
-  CClientMetrics_DownloadRates_Notification_StatsInfo = class t extends import_google_protobuf.Message {
+  CClientMetrics_DownloadRates_Notification_StatsInfo = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.source_type || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -13751,7 +13981,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -13772,25 +14002,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_DownloadRates_Notification_StatsInfo`;
     }
   },
-  CClientMetrics_ContentValidation_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_ContentValidation_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.validation_result || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -13855,7 +14094,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -13876,25 +14115,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ContentValidation_Notification`;
     }
   },
-  CClientMetrics_CloudAppSyncStats_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_CloudAppSyncStats_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.app_id || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -14014,7 +14262,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -14035,25 +14283,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_CloudAppSyncStats_Notification`;
     }
   },
-  CClientMetrics_ContentDownloadResponse_Counts_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_ContentDownloadResponse_Counts_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.cell_id || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -14074,7 +14331,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -14095,25 +14352,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ContentDownloadResponse_Counts_Notification`;
     }
   },
-  CClientMetrics_ClipShare_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_ClipShare_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.eresult || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -14154,7 +14420,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -14175,25 +14441,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ClipShare_Notification`;
     }
   },
-  CClientMetrics_ClipRange_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_ClipRange_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.original_range_method || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -14231,7 +14506,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -14252,25 +14527,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ClipRange_Notification`;
     }
   },
-  CClientMetrics_ClipRange_Notification_RelativeRangeEdge = class t extends import_google_protobuf.Message {
+  CClientMetrics_ClipRange_Notification_RelativeRangeEdge = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.original_range_method || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -14300,7 +14584,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -14321,25 +14605,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ClipRange_Notification_RelativeRangeEdge`;
     }
   },
-  CClientMetrics_EndGameRecording_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_EndGameRecording_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.recording_type || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -14379,7 +14672,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -14400,25 +14693,27 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_EndGameRecording_Notification`;
     }
   },
-  CClientMetrics_GamePerformance_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_GamePerformance_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.frame_rates || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, [2], null);
+        import_google_protobuf.Message.initialize(this, n, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -14440,7 +14735,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -14461,25 +14756,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_GamePerformance_Notification`;
     }
   },
-  CClientMetrics_GamePerformance_Notification_FrameRate = class t extends import_google_protobuf.Message {
+  CClientMetrics_GamePerformance_Notification_FrameRate = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.gameid || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -14525,7 +14829,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -14546,25 +14850,27 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_GamePerformance_Notification_FrameRate`;
     }
   },
-  CClientMetrics_ReportClientArgs_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_ReportClientArgs_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.client_args || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, [1], null);
+        import_google_protobuf.Message.initialize(this, n, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -14631,7 +14937,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -14652,25 +14958,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ReportClientArgs_Notification`;
     }
   },
-  CClientMetrics_ReportAccessibilitySettings_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_ReportAccessibilitySettings_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.accessibility_desktop_ui_scale || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -14710,7 +15025,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -14731,25 +15046,34 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ReportAccessibilitySettings_Notification`;
     }
   },
-  CClientMetrics_ReportLinuxStats_Notification = class t extends import_google_protobuf.Message {
+  CClientMetrics_ReportLinuxStats_Notification = class t
+    extends import_google_protobuf.Message
+  {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
-      super(),
+      (super(),
         t.prototype.glibc_version_major || AddAccessors(t.M()),
-        import_google_protobuf.Message.initialize(this, n, 0, -1, void 0, null);
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -14804,7 +15128,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
       );
     }
     static MBF() {
-      return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
     }
     toObject(n = !1) {
       return t.toObject(n, this);
@@ -14825,14 +15149,14 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t extends import_google_p
     }
     serializeBinary() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
     }
     static serializeBinaryToWriter(n, r) {
       SerializeBinary(t.M(), n, r);
     }
     serializeBase64String() {
       var n = new import_google_protobuf.BinaryWriter();
-      return t.serializeBinaryToWriter(this, n), n.getResultBase64String();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
     }
     getClassName() {
       return `CClientMetrics_ReportLinuxStats_Notification`;
@@ -15056,12 +15380,12 @@ var require_react_production = __commonJSMin((t) => {
       x = Object.assign,
       S = {};
     function C(t, n, r) {
-      (this.props = t),
+      ((this.props = t),
         (this.context = n),
         (this.refs = S),
-        (this.updater = r || y);
+        (this.updater = r || y));
     }
-    (C.prototype.isReactComponent = {}),
+    ((C.prototype.isReactComponent = {}),
       (C.prototype.setState = function (t, n) {
         if (typeof t != `object` && typeof t != `function` && t != null)
           throw Error(
@@ -15071,17 +15395,17 @@ var require_react_production = __commonJSMin((t) => {
       }),
       (C.prototype.forceUpdate = function (t) {
         this.updater.enqueueForceUpdate(this, t, `forceUpdate`);
-      });
+      }));
     function w() {}
     w.prototype = C.prototype;
     function T(t, n, r) {
-      (this.props = t),
+      ((this.props = t),
         (this.context = n),
         (this.refs = S),
-        (this.updater = r || y);
+        (this.updater = r || y));
     }
     var E = (T.prototype = new w());
-    (E.constructor = T), x(E, C.prototype), (E.isPureReactComponent = !0);
+    ((E.constructor = T), x(E, C.prototype), (E.isPureReactComponent = !0));
     var D = Array.isArray,
       O = { H: null, A: null, T: null, S: null, V: null },
       k = Object.prototype.hasOwnProperty;
@@ -15163,7 +15487,7 @@ var require_react_production = __commonJSMin((t) => {
                 p = !0;
                 break;
               case g:
-                return (p = t._init), R(p(t._payload), i, o, s, l);
+                return ((p = t._init), R(p(t._payload), i, o, s, l));
             }
         }
       if (p)
@@ -15193,21 +15517,21 @@ var require_react_production = __commonJSMin((t) => {
       var m = s === `` ? `.` : s + `:`;
       if (D(t))
         for (var h = 0; h < t.length; h++)
-          (s = t[h]), (u = m + F(s, h)), (p += R(s, i, o, u, l));
+          ((s = t[h]), (u = m + F(s, h)), (p += R(s, i, o, u, l)));
       else if (((h = v(t)), typeof h == `function`))
-        for (t = h.call(t), h = 0; !(s = t.next()).done; )
-          (s = s.value), (u = m + F(s, h++)), (p += R(s, i, o, u, l));
+        for (t = h.call(t), h = 0; !(s = t.next()).done;)
+          ((s = s.value), (u = m + F(s, h++)), (p += R(s, i, o, u, l)));
       else if (u === `object`) {
         if (typeof t.then == `function`) return R(L(t), i, o, s, l);
         throw (
-          ((i = String(t)),
+          (i = String(t)),
           Error(
             `Objects are not valid as a React child (found: ` +
               (i === `[object Object]`
                 ? `object with keys {` + Object.keys(t).join(`, `) + `}`
                 : i) +
               `). If you meant to render a collection of children, use an array instead.`,
-          ))
+          )
         );
       }
       return p;
@@ -15226,7 +15550,7 @@ var require_react_production = __commonJSMin((t) => {
     function B(t) {
       if (t._status === -1) {
         var n = t._result;
-        (n = n()),
+        ((n = n()),
           n.then(
             function (n) {
               (t._status === 0 || t._status === -1) &&
@@ -15237,7 +15561,7 @@ var require_react_production = __commonJSMin((t) => {
                 ((t._status = 2), (t._result = n));
             },
           ),
-          t._status === -1 && ((t._status = 0), (t._result = n));
+          t._status === -1 && ((t._status = 0), (t._result = n)));
       }
       if (t._status === 1) return t._result.default;
       throw t._result;
@@ -15270,7 +15594,7 @@ var require_react_production = __commonJSMin((t) => {
             console.error(t);
           };
     function H() {}
-    (t.Children = {
+    ((t.Children = {
       map: z,
       forEach: function (t, n, r) {
         z(
@@ -15405,11 +15729,11 @@ var require_react_production = __commonJSMin((t) => {
         try {
           var i = t(),
             o = O.S;
-          o !== null && o(r, i),
+          (o !== null && o(r, i),
             typeof i == `object` &&
               i &&
               typeof i.then == `function` &&
-              i.then(H, V);
+              i.then(H, V));
         } catch (t) {
           V(t);
         } finally {
@@ -15476,7 +15800,7 @@ var require_react_production = __commonJSMin((t) => {
       (t.useTransition = function () {
         return O.H.useTransition();
       }),
-      (t.version = `19.1.1`);
+      (t.version = `19.1.1`));
   }),
   require_react = __commonJSMin((t, n) => {
     n.exports = require_react_production();
@@ -15497,7 +15821,7 @@ var require_react_production = __commonJSMin((t) => {
   bReportingEnabled = !0,
   AssertionError = class extends Error {
     constructor(...t) {
-      super(...t), (this.name = `Assertion Failed`);
+      (super(...t), (this.name = `Assertion Failed`));
     }
   };
 {
@@ -15514,15 +15838,15 @@ var require_react_production = __commonJSMin((t) => {
     t.apply(console, [n, r, ...i]);
   };
   let n = console.error;
-  (console.error = (t, ...r) => {
+  ((console.error = (t, ...r) => {
     let i = GetReactComponentStack();
-    g_onReportableError(Error(ConvertConsoleParams(t, ...r)), 1, i),
-      n.apply(console, [t, ...r]);
+    (g_onReportableError(Error(ConvertConsoleParams(t, ...r)), 1, i),
+      n.apply(console, [t, ...r]));
   }),
     (console.clogerror = (t, r, ...i) => {
       let o = GetReactComponentStack();
-      g_onReportableError(Error(ConvertConsoleParams(r, ...i)), t + 1, o),
-        n.apply(console, [r, ...i]);
+      (g_onReportableError(Error(ConvertConsoleParams(r, ...i)), t + 1, o),
+        n.apply(console, [r, ...i]));
     }),
     addEventListener(`error`, (t) => {
       g_onReportableError(t.error, 0);
@@ -15531,8 +15855,8 @@ var require_react_production = __commonJSMin((t) => {
       g_onReportableError(t.reason, 0);
     }),
     (g_unCollectionTimer = window.setTimeout(() => {
-      (g_rgPreInitQueue = []), (g_onReportableError = () => {});
-    }, 3e4));
+      ((g_rgPreInitQueue = []), (g_onReportableError = () => {}));
+    }, 3e4)));
 }
 var g_defaultErrorReportOptions = {
     cCallsitesToIgnore: 0,
@@ -15574,7 +15898,7 @@ var CErrorReportingStore = class {
   m_bEnabled = !0;
   m_bInitialized = !1;
   constructor(t = !0) {
-    t
+    (t
       ? (g_rgPreInitQueue.forEach(
           ({ error: t, cCallsitesToIgnore: n, strComponentStack: r }) =>
             this.ReportError(t, {
@@ -15590,10 +15914,10 @@ var CErrorReportingStore = class {
       window.setTimeout(() => {
         this.m_bInitialized ||
           ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
-      }, 3e4);
+      }, 3e4));
   }
   Init(t, n, r, i = {}) {
-    (this.m_bInitialized = !0),
+    ((this.m_bInitialized = !0),
       (this.m_strProduct = t),
       (this.m_strVersion = n),
       (this.m_transport = r),
@@ -15609,7 +15933,7 @@ var CErrorReportingStore = class {
         !0)),
       this.m_rgErrorQueue.length &&
         (this.SendErrorReports(this.m_rgErrorQueue),
-        (this.m_rgErrorQueue = []));
+        (this.m_rgErrorQueue = [])));
   }
   SetGetURL(t) {
     this.m_fnGetURL = t;
@@ -15635,20 +15959,20 @@ var CErrorReportingStore = class {
           i)
         : null;
     } catch (t) {
-      return console.log(`Failed to report error: ${t}`), null;
+      return (console.log(`Failed to report error: ${t}`), null);
     }
   }
   PauseReportingForDuration(t) {
-    this.PauseReporting(),
-      (this.m_pauseTimer = window.setTimeout(() => this.ResumeReporting(), t));
+    (this.PauseReporting(),
+      (this.m_pauseTimer = window.setTimeout(() => this.ResumeReporting(), t)));
   }
   PauseReporting() {
-    (this.m_bReportingPaused = !0), window.clearTimeout(this.m_pauseTimer);
+    ((this.m_bReportingPaused = !0), window.clearTimeout(this.m_pauseTimer));
   }
   ResumeReporting() {
-    (this.m_bReportingPaused = !1),
+    ((this.m_bReportingPaused = !1),
       window.clearTimeout(this.m_pauseTimer),
-      this.ScheduleSend();
+      this.ScheduleSend());
   }
   BIsBlacklisted(t) {
     for (let n of t.message) {
@@ -15656,7 +15980,7 @@ var CErrorReportingStore = class {
       for (let n of g_rgBlacklistPatterns) {
         let i = new RegExp(n);
         if (r.match(i))
-          return console.warn(`Report`, t, `matched regex`, n), !0;
+          return (console.warn(`Report`, t, `matched regex`, n), !0);
       }
     }
     return !1;
@@ -15666,13 +15990,14 @@ var CErrorReportingStore = class {
       (this.m_transport ? this.QueueReport(t) : this.m_rgErrorQueue.push(t));
   }
   QueueReport(t) {
-    this.m_rgErrorQueue.push(t), this.m_bReportingPaused || this.ScheduleSend();
+    (this.m_rgErrorQueue.push(t),
+      this.m_bReportingPaused || this.ScheduleSend());
   }
   ScheduleSend() {
     this.m_sendTimer ||= window.setTimeout(() => {
-      this.SendErrorReports(this.m_rgErrorQueue),
+      (this.SendErrorReports(this.m_rgErrorQueue),
         (this.m_rgErrorQueue = []),
-        (this.m_sendTimer = null);
+        (this.m_sendTimer = null));
     }, this.m_fnGetReportingInterval());
   }
   SendErrorReports(t) {
@@ -15690,9 +16015,9 @@ var CErrorReportingStore = class {
       i = Object.keys(r).map((t) => {
         let { report: n, count: i } = r[t],
           o = new CClientMetrics_ReportClientError_Notification_Error();
-        o.set_count(i),
+        (o.set_count(i),
           o.set_identifier(n.identifier + ` ` + n.identifierHash),
-          o.set_message(JSON.stringify(n.message));
+          o.set_message(JSON.stringify(n.message)));
         let s;
         return (
           n.strComponentStack &&
@@ -15704,9 +16029,9 @@ var CErrorReportingStore = class {
           o
         );
       });
-    n.Body().set_product(this.m_strProduct),
+    (n.Body().set_product(this.m_strProduct),
       n.Body().set_version(this.m_strVersion),
-      n.Body().set_errors(i);
+      n.Body().set_errors(i));
     for (let t of this.m_fnGetReportTags()) n.Body().add_tags(t);
     ClientMetricsService.ReportClientError(this.m_transport, n);
   }
@@ -15727,7 +16052,7 @@ function ConvertConsoleParams(t, ...n) {
         .map((t) => {
           try {
             let n = String(t);
-            return n == `[object Object]` && (n = JSON.stringify(t)), n;
+            return (n == `[object Object]` && (n = JSON.stringify(t)), n);
           } catch {
             return `[Stringify Error]`;
           }
@@ -15754,7 +16079,7 @@ function NormalizeStack(t, n) {
               !0)),
             null);
   } catch (t) {
-    return console.warn(`Failed to normalize error stack: ${t}`), null;
+    return (console.warn(`Failed to normalize error stack: ${t}`), null);
   }
 }
 async function NormalizeV8LikeStack(t, n) {
@@ -15837,8 +16162,8 @@ async function NormalizeReactNativeLikeStack(t, n) {
     s = o[i],
     l = s.split(`/`),
     u = l[l.length - 1];
-  s.indexOf(`@`) > -1 && (u = s.split(`@`)[0] + `@` + u),
-    r && (u = `${u} ${t.message}`);
+  (s.indexOf(`@`) > -1 && (u = s.split(`@`)[0] + `@` + u),
+    r && (u = `${u} ${t.message}`));
   let p = o
     .map((t) => {
       let n = t.match(/(.*@)?(.*):(\d+):(\d+)/);
@@ -15916,7 +16241,7 @@ var k_EMsgInvalid = 0,
     m_iGet;
     m_iPut;
     constructor(t, n = 0, r) {
-      (this.m_nOffset = n || 0),
+      ((this.m_nOffset = n || 0),
         t instanceof Uint8Array || t instanceof DataView
           ? ((this.m_nLength = r || t.byteLength - this.m_nOffset),
             (this.m_nOffset += t.byteOffset),
@@ -15937,7 +16262,7 @@ var k_EMsgInvalid = 0,
           this.m_viewPacket.byteLength,
         )),
         (this.m_iGet = 0),
-        (this.m_iPut = 0);
+        (this.m_iPut = 0));
     }
     TellGet() {
       return this.m_iGet + this.m_viewPacket.byteOffset;
@@ -15950,7 +16275,7 @@ var k_EMsgInvalid = 0,
     }
     GetUint32(t = !0) {
       let n = this.m_viewPacket.getUint32(this.m_iGet, t);
-      return (this.m_iGet += 4), n;
+      return ((this.m_iGet += 4), n);
     }
     SeekGetHead(t = 0) {
       this.m_iGet = t || 0;
@@ -15968,10 +16293,10 @@ var k_EMsgInvalid = 0,
       this.m_viewPacket.setUint8(this.m_iPut++, t);
     }
     PutUint32(t, n = !0) {
-      this.m_viewPacket.setUint32(this.m_iPut, t, n), (this.m_iPut += 4);
+      (this.m_viewPacket.setUint32(this.m_iPut, t, n), (this.m_iPut += 4));
     }
     PutBytes(t) {
-      this.m_rgubPacket.set(t, this.m_iPut), (this.m_iPut += t.length);
+      (this.m_rgubPacket.set(t, this.m_iPut), (this.m_iPut += t.length));
     }
     SeekPut(t) {
       this.m_iPut += t;
@@ -16019,13 +16344,13 @@ var k_uFixedHeaderSize = 8,
     m_body;
     constructor(t, n, r, i, o, s) {
       if (i)
-        (this.m_eMsg = i.m_eMsg),
+        ((this.m_eMsg = i.m_eMsg),
           (this.m_bValid = i.m_bValid),
           this.m_bValid &&
             ((this.m_netPacket = i.m_netPacket),
             (this.m_cubHeader = i.m_cubHeader),
             (this.m_header = i.m_header),
-            this.InitForType(r));
+            this.InitForType(r)));
       else {
         if (
           ((this.m_header = new CMsgProtoBufHeader(null)),
@@ -16038,10 +16363,10 @@ var k_uFixedHeaderSize = 8,
             (this.m_eMsg = this.m_netPacket.GetUint32()),
             this.m_eMsg & 2147483648)
           ) {
-            (this.m_eMsg &= 2147483647),
-              (this.m_cubHeader = this.m_netPacket.GetUint32());
+            ((this.m_eMsg &= 2147483647),
+              (this.m_cubHeader = this.m_netPacket.GetUint32()));
             try {
-              CMsgProtoBufHeader.deserializeBinaryFromReader(
+              (CMsgProtoBufHeader.deserializeBinaryFromReader(
                 this.m_header,
                 new import_google_protobuf.BinaryReader(
                   this.m_netPacket.GetPacket(),
@@ -16050,25 +16375,25 @@ var k_uFixedHeaderSize = 8,
                 ),
               ),
                 this.m_netPacket.SeekGetCurrent(this.m_cubHeader),
-                r && this.InitForType(r);
+                r && this.InitForType(r));
             } catch (t) {
-              console.error(`Exception deserializing protobuf`, t),
-                (this.m_bValid = !1);
+              (console.error(`Exception deserializing protobuf`, t),
+                (this.m_bValid = !1));
             }
           } else this.m_bValid = !1;
         } else
-          t && (this.m_eMsg = t),
+          (t && (this.m_eMsg = t),
             s && r
               ? (this.m_body = r.fromObject(s))
-              : r && (this.m_body = new r());
+              : r && (this.m_body = new r()));
         o && this.m_header.set_jobid_target(o.Hdr().jobid_target());
       }
     }
     InitForType(t) {
-      (this.m_body = new t()),
+      ((this.m_body = new t()),
         this.m_netPacket &&
           (this.m_netPacket.SeekGetHead(8 + this.m_cubHeader),
-          this.ReadBodyFromBuffer(t, this.m_netPacket));
+          this.ReadBodyFromBuffer(t, this.m_netPacket)));
     }
     ReadBodyFromBuffer(t, n) {
       try {
@@ -16084,9 +16409,9 @@ var k_uFixedHeaderSize = 8,
         this.m_bValid = !1;
         let n = ErrorReportingStore(),
           r = `Exception parsing protobuf message body of type ${this.m_eMsg}.  Definitions may be out of sync with server version.`;
-        n && n.ReportError(Error(r), { bIncludeMessageInIdentifier: !0 }),
+        (n && n.ReportError(Error(r), { bIncludeMessageInIdentifier: !0 }),
           console.warn(r),
-          console.log(t.stack || t);
+          console.log(t.stack || t));
       }
     }
     BIsValid() {
@@ -16096,7 +16421,7 @@ var k_uFixedHeaderSize = 8,
       return this.m_body;
     }
     SetBodyJSON(t) {
-      (t.toObject = () => t), (this.m_body = t);
+      ((t.toObject = () => t), (this.m_body = t));
     }
     Hdr() {
       return this.m_header;
@@ -16131,7 +16456,7 @@ var k_uFixedHeaderSize = 8,
     SerializeBody() {
       let t = this.m_body.serializeBinary(),
         n = new Uint8Array(t.length);
-      return new CUtlBuffer(n).PutBytes(t), n;
+      return (new CUtlBuffer(n).PutBytes(t), n);
     }
     DEBUG_ToObject() {
       return {};
@@ -16192,7 +16517,7 @@ var require_react_jsx_runtime_production = __commonJSMin((t) => {
         { $$typeof: n, type: t, key: o, ref: r === void 0 ? null : r, props: i }
       );
     }
-    (t.Fragment = r), (t.jsx = i), (t.jsxs = i);
+    ((t.Fragment = r), (t.jsx = i), (t.jsxs = i));
   }),
   require_jsx_runtime = __commonJSMin((t, n) => {
     n.exports = require_react_jsx_runtime_production();
@@ -16769,7 +17094,7 @@ function SetCookie(t, n, r, i) {
   let o = ``;
   if (r !== void 0 && r) {
     let t = new Date();
-    t.setTime(t.getTime() + 864e5 * r), (o = `; expires=` + t.toUTCString());
+    (t.setTime(t.getTime() + 864e5 * r), (o = `; expires=` + t.toUTCString()));
   }
   document.cookie =
     encodeURIComponent(t) + `=` + encodeURIComponent(n) + o + `;path=` + i;
@@ -16810,7 +17135,7 @@ function GetSessionID() {
       (g_fallbackSessionID ||= GenerateNewSessionID()), g_fallbackSessionID
     );
   let t = GetCookie(`sessionid`);
-  return (t ||= GenerateNewSessionID()), t;
+  return ((t ||= GenerateNewSessionID()), t);
 }
 function GenerateSessionID() {
   let t = ``;
@@ -16819,7 +17144,7 @@ function GenerateSessionID() {
 }
 function GenerateNewSessionID() {
   let t = GenerateSessionID();
-  return SetCookie(`sessionid`, t, 0), t;
+  return (SetCookie(`sessionid`, t, 0), t);
 }
 function InitConfig(t = CONFIG_ELEMENT_ID) {
   let n = {},
@@ -16869,9 +17194,9 @@ var Config = window.Config ?? Config$1,
   WaitForConfigReady = window.Config
     ? () => Promise.resolve()
     : WaitForConfigLoad;
-window.Config && Object.assign(Config$1, window.Config),
+(window.Config && Object.assign(Config$1, window.Config),
   window.UserConfig && Object.assign(UserConfig$1, window.UserConfig),
-  window.WebConfig && Object.assign(Config$1, window.WebConfig);
+  window.WebConfig && Object.assign(Config$1, window.WebConfig));
 var SteamUIConfig = {
   LAUNCHER_TYPE: 0,
   ON_FRAME: !1,
@@ -16924,10 +17249,10 @@ var g_bInitialized = !1,
   g_bIsIOS = !1,
   g_bIsMacOS = !1;
 function BIsAndroid() {
-  return g_bInitialized || Init(), g_bIsAndroid;
+  return (g_bInitialized || Init(), g_bIsAndroid);
 }
 function BIsIOS() {
-  return g_bInitialized || Init(), g_bIsIOS;
+  return (g_bInitialized || Init(), g_bIsIOS);
 }
 function BIsMobile() {
   return BIsIOS() || BIsAndroid();
@@ -16951,7 +17276,7 @@ function _CheckAgent(t, n) {
 function Init() {
   let t = navigator,
     n = t && t.maxTouchPoints && t.maxTouchPoints > 1;
-  (g_bUserInTenfootBrowser = _CheckAgent(
+  ((g_bUserInTenfootBrowser = _CheckAgent(
     `Valve Steam Tenfoot`,
     `force_tenfoot_client_view`,
   )),
@@ -16965,7 +17290,7 @@ function Init() {
       _CheckAgent(`ipod`, `force_ios_view`) ||
       (_CheckAgent(`macintosh`, `force_ios_view`) && n)),
     (g_bIsAndroid = _CheckAgent(`android`, `force_android_view`)),
-    (g_bInitialized = !0);
+    (g_bInitialized = !0));
 }
 var ConfigContext = import_react.createContext({}),
   useConfigContext = (t) => {
@@ -17017,7 +17342,7 @@ function BBaseURLMatches(t, n) {
 var UNKNOWN_BASE_URL = `unknown`;
 function GET_BASE_URL() {
   if (!window || !window.location || !window.location.href)
-    return console.warn(`Unable to determine base url!`), UNKNOWN_BASE_URL;
+    return (console.warn(`Unable to determine base url!`), UNKNOWN_BASE_URL);
   let t = window.location.href;
   return BBaseURLMatches(t, Config$1.STORE_BASE_URL)
     ? Config$1.STORE_BASE_URL
@@ -17077,7 +17402,7 @@ function __decorate(t, n, r, i) {
   else
     for (var u = t.length - 1; u >= 0; u--)
       (l = t[u]) && (s = (o < 3 ? l(s) : o > 3 ? l(n, r, s) : l(n, r)) || s);
-  return o > 3 && s && Object.defineProperty(n, r, s), s;
+  return (o > 3 && s && Object.defineProperty(n, r, s), s);
 }
 function die(t) {
   var n = [...arguments].slice(1);
@@ -17118,7 +17443,7 @@ function assertProxies() {
 function once(t) {
   var n = !1;
   return function () {
-    if (!n) return (n = !0), t.apply(this, arguments);
+    if (!n) return ((n = !0), t.apply(this, arguments));
   };
 }
 var noop = function () {};
@@ -17231,7 +17556,7 @@ function getFlag(t, n) {
   return !!(t & n);
 }
 function setFlag(t, n, r) {
-  return r ? (t |= n) : (t &= ~n), t;
+  return (r ? (t |= n) : (t &= ~n), t);
 }
 function _arrayLikeToArray(t, n) {
   (n == null || n > t.length) && (n = t.length);
@@ -17241,10 +17566,10 @@ function _arrayLikeToArray(t, n) {
 function _defineProperties(t, n) {
   for (var r = 0; r < n.length; r++) {
     var i = n[r];
-    (i.enumerable = i.enumerable || !1),
+    ((i.enumerable = i.enumerable || !1),
       (i.configurable = !0),
       `value` in i && (i.writable = !0),
-      Object.defineProperty(t, _toPropertyKey(i.key), i);
+      Object.defineProperty(t, _toPropertyKey(i.key), i));
   }
 }
 function _createClass(t, n, r) {
@@ -17287,16 +17612,16 @@ function _extends() {
   );
 }
 function _inheritsLoose(t, n) {
-  (t.prototype = Object.create(n.prototype)),
+  ((t.prototype = Object.create(n.prototype)),
     (t.prototype.constructor = t),
-    _setPrototypeOf(t, n);
+    _setPrototypeOf(t, n));
 }
 function _setPrototypeOf(t, n) {
   return (
     (_setPrototypeOf = Object.setPrototypeOf
       ? Object.setPrototypeOf.bind()
       : function (t, n) {
-          return (t.__proto__ = n), t;
+          return ((t.__proto__ = n), t);
         }),
     _setPrototypeOf(t, n)
   );
@@ -17339,13 +17664,13 @@ function createDecoratorAnnotation(t) {
   return Object.assign(n, t);
 }
 function storeAnnotation(t, n, r) {
-  hasProp(t, storedAnnotationsSymbol) ||
+  (hasProp(t, storedAnnotationsSymbol) ||
     addHiddenProp(
       t,
       storedAnnotationsSymbol,
       _extends({}, t[storedAnnotationsSymbol]),
     ),
-    isOverride(r) || (t[storedAnnotationsSymbol][n] = r);
+    isOverride(r) || (t[storedAnnotationsSymbol][n] = r));
 }
 function collectStoredAnnotations(t) {
   return (
@@ -17364,7 +17689,7 @@ function is20223Decorator(t) {
 var $mobx = Symbol(`mobx administration`),
   Atom = (function () {
     function t(t) {
-      t === void 0 && (t = `Atom`),
+      (t === void 0 && (t = `Atom`),
         (this.name_ = void 0),
         (this.flags_ = 0),
         (this.observers_ = new Set()),
@@ -17372,7 +17697,7 @@ var $mobx = Symbol(`mobx administration`),
         (this.lowestObserverState_ = IDerivationState_.NOT_TRACKING_),
         (this.onBOL = void 0),
         (this.onBUOL = void 0),
-        (this.name_ = t);
+        (this.name_ = t));
     }
     var n = t.prototype;
     return (
@@ -17392,7 +17717,7 @@ var $mobx = Symbol(`mobx administration`),
         return reportObserved(this);
       }),
       (n.reportChanged = function () {
-        startBatch(), propagateChanged(this), endBatch();
+        (startBatch(), propagateChanged(this), endBatch());
       }),
       (n.toString = function () {
         return this.name_;
@@ -17432,12 +17757,12 @@ var $mobx = Symbol(`mobx administration`),
       ])
     );
   })();
-(Atom.isBeingObservedMask_ = 1),
+((Atom.isBeingObservedMask_ = 1),
   (Atom.isPendingUnobservationMask_ = 2),
-  (Atom.diffValueMask_ = 4);
+  (Atom.diffValueMask_ = 4));
 var isAtom = createInstanceofPredicate(`Atom`, Atom);
 function createAtom(t, n, r) {
-  n === void 0 && (n = noop), r === void 0 && (r = noop);
+  (n === void 0 && (n = noop), r === void 0 && (r = noop));
   var i = new Atom(t);
   return (
     n !== noop && onBecomeObserved(i, n),
@@ -17570,7 +17895,7 @@ function decorate_20223_$1(t, n) {
         o(function () {
           var t = this,
             n = t[i].bind(t);
-          (n.isMobxAction = !0), (t[i] = n);
+          ((n.isMobxAction = !0), (t[i] = n));
         }),
       t
     );
@@ -17590,12 +17915,12 @@ function decorate_20223_$1(t, n) {
   );
 }
 function assertActionDescriptor(t, n, r, i) {
-  n.annotationType_, i.value;
+  (n.annotationType_, i.value);
 }
 function createActionDescriptor(t, n, r, i, o) {
   var s, l, u, p, m, h, g;
-  o === void 0 && (o = globalState.safeDescriptors),
-    assertActionDescriptor(t, n, r, i);
+  (o === void 0 && (o = globalState.safeDescriptors),
+    assertActionDescriptor(t, n, r, i));
   var _ = i.value;
   if ((s = n.options_) != null && s.bound) {
     var v;
@@ -17654,21 +17979,21 @@ function decorate_20223_$2(t, n) {
       o(function () {
         var t = this,
           n = t[i].bind(t);
-        (n.isMobXFlow = !0), (t[i] = n);
+        ((n.isMobXFlow = !0), (t[i] = n));
       }),
     t
   );
 }
 function assertFlowDescriptor(t, n, r, i) {
-  n.annotationType_, i.value;
+  (n.annotationType_, i.value);
 }
 function createFlowDescriptor(t, n, r, i, o, s) {
-  s === void 0 && (s = globalState.safeDescriptors),
-    assertFlowDescriptor(t, n, r, i);
+  (s === void 0 && (s = globalState.safeDescriptors),
+    assertFlowDescriptor(t, n, r, i));
   var l = i.value;
   if ((isFlow(l) || (l = flow(l)), o)) {
     var u;
-    (l = l.bind(t.proxy_ ?? t.target_)), (l.isMobXFlow = !0);
+    ((l = l.bind(t.proxy_ ?? t.target_)), (l.isMobXFlow = !0));
   }
   return {
     value: l,
@@ -17707,8 +18032,8 @@ function decorate_20223_$3(t, n) {
     o(function () {
       var n = asObservableObject(this)[$mobx],
         o = _extends({}, r.options_, { get: t, context: this });
-      (o.name ||= `ObservableObject.` + i.toString()),
-        n.values_.set(i, new ComputedValue(o));
+      ((o.name ||= `ObservableObject.` + i.toString()),
+        n.values_.set(i, new ComputedValue(o)));
     }),
     function () {
       return this[$mobx].getObservablePropValue_(i);
@@ -17716,7 +18041,7 @@ function decorate_20223_$3(t, n) {
   );
 }
 function assertComputedDescriptor(t, n, r, i) {
-  n.annotationType_, i.get;
+  (n.annotationType_, i.get);
 }
 function createObservableAnnotation(t, n) {
   return {
@@ -17757,7 +18082,7 @@ function decorate_20223_$4(t, n) {
         `ObservableObject.` + o.toString(),
         !1,
       );
-    u.values_.set(o, p), s.add(t);
+    (u.values_.set(o, p), s.add(t));
   }
   if (i == `accessor`)
     return {
@@ -17773,7 +18098,7 @@ function decorate_20223_$4(t, n) {
         );
       },
       init: function (t) {
-        return s.has(this) || l(this, t), t;
+        return (s.has(this) || l(this, t), t);
       },
     };
 }
@@ -17973,10 +18298,10 @@ var observable = assign(createObservable, {
     if (isPlainObject(t))
       return createDecoratorAnnotation(createComputedAnnotation(COMPUTED, t));
     var r = isPlainObject(n) ? n : {};
-    return (r.get = t), (r.name ||= t.name || ``), new ComputedValue(r);
+    return ((r.get = t), (r.name ||= t.name || ``), new ComputedValue(r));
   };
-Object.assign(computed, computedAnnotation),
-  (computed.struct = createDecoratorAnnotation(computedStructAnnotation));
+(Object.assign(computed, computedAnnotation),
+  (computed.struct = createDecoratorAnnotation(computedStructAnnotation)));
 var _getDescriptor$config,
   _getDescriptor,
   currentActionId = 0,
@@ -18037,17 +18362,17 @@ function _startAction(t, n, r, i) {
       actionId_: nextActionId++,
       parentActionId_: currentActionId,
     };
-  return (currentActionId = h.actionId_), h;
+  return ((currentActionId = h.actionId_), h);
 }
 function _endAction(t) {
-  currentActionId !== t.actionId_ && die(30),
+  (currentActionId !== t.actionId_ && die(30),
     (currentActionId = t.parentActionId_),
     t.error_ !== void 0 && (globalState.suppressReactionErrors = !0),
     allowStateChangesEnd(t.prevAllowStateChanges_),
     allowStateReadsEnd(t.prevAllowStateReads_),
     endBatch(),
     t.runAsAction_ && untrackedEnd(t.prevDerivation_),
-    (globalState.suppressReactionErrors = !1);
+    (globalState.suppressReactionErrors = !1));
 }
 function allowStateChanges(t, n) {
   var r = allowStateChangesStart(t);
@@ -18059,7 +18384,7 @@ function allowStateChanges(t, n) {
 }
 function allowStateChangesStart(t) {
   var n = globalState.allowStateChanges;
-  return (globalState.allowStateChanges = t), n;
+  return ((globalState.allowStateChanges = t), n);
 }
 function allowStateChangesEnd(t) {
   globalState.allowStateChanges = t;
@@ -18094,9 +18419,9 @@ var ObservableValue = (function (t) {
         return this.dehancer === void 0 ? t : this.dehancer(t);
       }),
       (r.set = function (t) {
-        this.value_,
+        (this.value_,
           (t = this.prepareNewValue_(t)),
-          t !== globalState.UNCHANGED && this.setNewValue_(t);
+          t !== globalState.UNCHANGED && this.setNewValue_(t));
       }),
       (r.prepareNewValue_ = function (t) {
         if (hasInterceptors(this)) {
@@ -18115,7 +18440,7 @@ var ObservableValue = (function (t) {
       }),
       (r.setNewValue_ = function (t) {
         var n = this.value_;
-        (this.value_ = t),
+        ((this.value_ = t),
           this.reportChanged(),
           hasListeners(this) &&
             notifyListeners(this, {
@@ -18123,10 +18448,10 @@ var ObservableValue = (function (t) {
               object: this,
               newValue: t,
               oldValue: n,
-            });
+            }));
       }),
       (r.get = function () {
-        return this.reportObserved(), this.dehanceValue(this.value_);
+        return (this.reportObserved(), this.dehanceValue(this.value_));
       }),
       (r.intercept_ = function (t) {
         return registerInterceptor(this, t);
@@ -18169,7 +18494,7 @@ var ObservableValue = (function (t) {
   ),
   ComputedValue = (function () {
     function t(t) {
-      (this.dependenciesState_ = IDerivationState_.NOT_TRACKING_),
+      ((this.dependenciesState_ = IDerivationState_.NOT_TRACKING_),
         (this.observing_ = []),
         (this.newObserving_ = null),
         (this.observers_ = new Set()),
@@ -18201,7 +18526,7 @@ var ObservableValue = (function (t) {
             : comparer.default)),
         (this.scope_ = t.context),
         (this.requiresReaction_ = t.requiresReaction),
-        (this.keepAlive_ = !!t.keepAlive);
+        (this.keepAlive_ = !!t.keepAlive));
     }
     var n = t.prototype;
     return (
@@ -18234,9 +18559,9 @@ var ObservableValue = (function (t) {
             endBatch());
         else if ((reportObserved(this), shouldCompute(this))) {
           var t = globalState.trackingContext;
-          this.keepAlive_ && !t && (globalState.trackingContext = this),
+          (this.keepAlive_ && !t && (globalState.trackingContext = this),
             this.trackAndCompute() && propagateChangeConfirmed(this),
-            (globalState.trackingContext = t);
+            (globalState.trackingContext = t));
         }
         var n = this.value_;
         if (isCaughtException(n)) throw n.cause;
@@ -18244,8 +18569,8 @@ var ObservableValue = (function (t) {
       }),
       (n.set = function (t) {
         if (this.setter_) {
-          this.isRunningSetter && die(33, this.name_),
-            (this.isRunningSetter = !0);
+          (this.isRunningSetter && die(33, this.name_),
+            (this.isRunningSetter = !0));
           try {
             this.setter_.call(this.scope_, t);
           } finally {
@@ -18262,7 +18587,7 @@ var ObservableValue = (function (t) {
             isCaughtException(t) ||
             isCaughtException(r) ||
             !this.equals_(t, r);
-        return i && (this.value_ = r), i;
+        return (i && (this.value_ = r), i);
       }),
       (n.computeValue_ = function (t) {
         this.isComputing = !0;
@@ -18277,7 +18602,7 @@ var ObservableValue = (function (t) {
           } catch (t) {
             r = new CaughtException(t);
           }
-        return allowStateChangesEnd(n), (this.isComputing = !1), r;
+        return (allowStateChangesEnd(n), (this.isComputing = !1), r);
       }),
       (n.suspend_ = function () {
         this.keepAlive_ || (clearObserving(this), (this.value_ = void 0));
@@ -18290,7 +18615,7 @@ var ObservableValue = (function (t) {
           var s = r.get();
           if (!i || n) {
             var l = untrackedStart();
-            t({
+            (t({
               observableKind: `computed`,
               debugObjectName: r.name_,
               type: UPDATE,
@@ -18298,9 +18623,9 @@ var ObservableValue = (function (t) {
               newValue: s,
               oldValue: o,
             }),
-              untrackedEnd(l);
+              untrackedEnd(l));
           }
-          (i = !1), (o = s);
+          ((i = !1), (o = s));
         });
       }),
       (n.warnAboutUntrackedRead_ = function () {}),
@@ -18366,27 +18691,27 @@ var ObservableValue = (function (t) {
       ])
     );
   })();
-(ComputedValue.isComputingMask_ = 1),
+((ComputedValue.isComputingMask_ = 1),
   (ComputedValue.isRunningSetterMask_ = 2),
   (ComputedValue.isBeingObservedMask_ = 4),
   (ComputedValue.isPendingUnobservationMask_ = 8),
-  (ComputedValue.diffValueMask_ = 16);
+  (ComputedValue.diffValueMask_ = 16));
 var isComputedValue = createInstanceofPredicate(`ComputedValue`, ComputedValue),
   IDerivationState_;
 (function (t) {
-  (t[(t.NOT_TRACKING_ = -1)] = `NOT_TRACKING_`),
+  ((t[(t.NOT_TRACKING_ = -1)] = `NOT_TRACKING_`),
     (t[(t.UP_TO_DATE_ = 0)] = `UP_TO_DATE_`),
     (t[(t.POSSIBLY_STALE_ = 1)] = `POSSIBLY_STALE_`),
-    (t[(t.STALE_ = 2)] = `STALE_`);
+    (t[(t.STALE_ = 2)] = `STALE_`));
 })((IDerivationState_ ||= {}));
 var TraceMode;
 (function (t) {
-  (t[(t.NONE = 0)] = `NONE`),
+  ((t[(t.NONE = 0)] = `NONE`),
     (t[(t.LOG = 1)] = `LOG`),
-    (t[(t.BREAK = 2)] = `BREAK`);
+    (t[(t.BREAK = 2)] = `BREAK`));
 })((TraceMode ||= {}));
 var CaughtException = function (t) {
-  (this.cause = void 0), (this.cause = t);
+  ((this.cause = void 0), (this.cause = t));
 };
 function isCaughtException(t) {
   return t instanceof CaughtException;
@@ -18415,10 +18740,10 @@ function shouldCompute(t) {
             try {
               l.get();
             } catch {
-              return untrackedEnd(r), allowStateReadsEnd(n), !0;
+              return (untrackedEnd(r), allowStateReadsEnd(n), !0);
             }
           if (t.dependenciesState_ === IDerivationState_.STALE_)
-            return untrackedEnd(r), allowStateReadsEnd(n), !0;
+            return (untrackedEnd(r), allowStateReadsEnd(n), !0);
         }
       }
       return (
@@ -18434,12 +18759,12 @@ function isComputingDerivation() {
 }
 function trackDerivedFunction(t, n, r) {
   var i = allowStateReadsStart(!0);
-  changeDependenciesStateTo0(t),
+  (changeDependenciesStateTo0(t),
     (t.newObserving_ = Array(t.runId_ === 0 ? 100 : t.observing_.length)),
     (t.unboundDepsCount_ = 0),
-    (t.runId_ = ++globalState.runId);
+    (t.runId_ = ++globalState.runId));
   var o = globalState.trackingDerivation;
-  (globalState.trackingDerivation = t), globalState.inBatch++;
+  ((globalState.trackingDerivation = t), globalState.inBatch++);
   var s;
   if (globalState.disableErrorBoundaries === !0) s = n.call(r);
   else
@@ -18468,14 +18793,14 @@ function bindDependencies(t) {
     l++
   ) {
     var u = r[l];
-    u.diffValue === 0 && ((u.diffValue = 1), o !== l && (r[o] = u), o++),
-      u.dependenciesState_ > i && (i = u.dependenciesState_);
+    (u.diffValue === 0 && ((u.diffValue = 1), o !== l && (r[o] = u), o++),
+      u.dependenciesState_ > i && (i = u.dependenciesState_));
   }
-  for (r.length = o, t.newObserving_ = null, s = n.length; s--; ) {
+  for (r.length = o, t.newObserving_ = null, s = n.length; s--;) {
     var p = n[s];
-    p.diffValue === 0 && removeObserver(p, t), (p.diffValue = 0);
+    (p.diffValue === 0 && removeObserver(p, t), (p.diffValue = 0));
   }
-  for (; o--; ) {
+  for (; o--;) {
     var m = r[o];
     m.diffValue === 1 && ((m.diffValue = 0), addObserver(m, t));
   }
@@ -18485,7 +18810,7 @@ function bindDependencies(t) {
 function clearObserving(t) {
   var n = t.observing_;
   t.observing_ = [];
-  for (var r = n.length; r--; ) removeObserver(n[r], t);
+  for (var r = n.length; r--;) removeObserver(n[r], t);
   t.dependenciesState_ = IDerivationState_.NOT_TRACKING_;
 }
 function untracked(t) {
@@ -18498,14 +18823,14 @@ function untracked(t) {
 }
 function untrackedStart() {
   var t = globalState.trackingDerivation;
-  return (globalState.trackingDerivation = null), t;
+  return ((globalState.trackingDerivation = null), t);
 }
 function untrackedEnd(t) {
   globalState.trackingDerivation = t;
 }
 function allowStateReadsStart(t) {
   var n = globalState.allowStateReads;
-  return (globalState.allowStateReads = t), n;
+  return ((globalState.allowStateReads = t), n);
 }
 function allowStateReadsEnd(t) {
   globalState.allowStateReads = t;
@@ -18513,12 +18838,12 @@ function allowStateReadsEnd(t) {
 function changeDependenciesStateTo0(t) {
   if (t.dependenciesState_ !== IDerivationState_.UP_TO_DATE_) {
     t.dependenciesState_ = IDerivationState_.UP_TO_DATE_;
-    for (var n = t.observing_, r = n.length; r--; )
+    for (var n = t.observing_, r = n.length; r--;)
       n[r].lowestObserverState_ = IDerivationState_.UP_TO_DATE_;
   }
 }
 var MobXGlobals = function () {
-    (this.version = 6),
+    ((this.version = 6),
       (this.UNCHANGED = {}),
       (this.trackingDerivation = null),
       (this.trackingContext = null),
@@ -18540,7 +18865,7 @@ var MobXGlobals = function () {
       (this.suppressReactionErrors = !1),
       (this.useProxies = !0),
       (this.verifyProxies = !1),
-      (this.safeDescriptors = !0);
+      (this.safeDescriptors = !0));
   },
   canMergeGlobalState = !0,
   isolateCalled = !1,
@@ -18575,17 +18900,17 @@ function isolateGlobalState() {
     canMergeGlobalState)
   ) {
     var t = getGlobal();
-    --t.__mobxInstanceCount === 0 && (t.__mobxGlobals = void 0),
-      (globalState = new MobXGlobals());
+    (--t.__mobxInstanceCount === 0 && (t.__mobxGlobals = void 0),
+      (globalState = new MobXGlobals()));
   }
 }
 function addObserver(t, n) {
-  t.observers_.add(n),
+  (t.observers_.add(n),
     t.lowestObserverState_ > n.dependenciesState_ &&
-      (t.lowestObserverState_ = n.dependenciesState_);
+      (t.lowestObserverState_ = n.dependenciesState_));
 }
 function removeObserver(t, n) {
-  t.observers_.delete(n), t.observers_.size === 0 && queueForUnobservation(t);
+  (t.observers_.delete(n), t.observers_.size === 0 && queueForUnobservation(t));
 }
 function queueForUnobservation(t) {
   t.isPendingUnobservation === !1 &&
@@ -18600,10 +18925,10 @@ function endBatch() {
     runReactions();
     for (var t = globalState.pendingUnobservations, n = 0; n < t.length; n++) {
       var r = t[n];
-      (r.isPendingUnobservation = !1),
+      ((r.isPendingUnobservation = !1),
         r.observers_.size === 0 &&
           (r.isBeingObserved && ((r.isBeingObserved = !1), r.onBUO()),
-          r instanceof ComputedValue && r.suspend_());
+          r instanceof ComputedValue && r.suspend_()));
     }
     globalState.pendingUnobservations = [];
   }
@@ -18627,9 +18952,9 @@ function propagateChanged(t) {
   t.lowestObserverState_ !== IDerivationState_.STALE_ &&
     ((t.lowestObserverState_ = IDerivationState_.STALE_),
     t.observers_.forEach(function (t) {
-      t.dependenciesState_ === IDerivationState_.UP_TO_DATE_ &&
+      (t.dependenciesState_ === IDerivationState_.UP_TO_DATE_ &&
         t.onBecomeStale_(),
-        (t.dependenciesState_ = IDerivationState_.STALE_);
+        (t.dependenciesState_ = IDerivationState_.STALE_));
     }));
 }
 function propagateChangeConfirmed(t) {
@@ -18653,7 +18978,7 @@ function propagateMaybeChanged(t) {
 }
 var Reaction = (function () {
   function t(t, n, r, i) {
-    t === void 0 && (t = `Reaction`),
+    (t === void 0 && (t = `Reaction`),
       (this.name_ = void 0),
       (this.onInvalidate_ = void 0),
       (this.errorHandler_ = void 0),
@@ -18668,7 +18993,7 @@ var Reaction = (function () {
       (this.name_ = t),
       (this.onInvalidate_ = n),
       (this.errorHandler_ = r),
-      (this.requiresObservable_ = i);
+      (this.requiresObservable_ = i));
   }
   var n = t.prototype;
   return (
@@ -18683,7 +19008,7 @@ var Reaction = (function () {
     }),
     (n.runReaction_ = function () {
       if (!this.isDisposed) {
-        startBatch(), (this.isScheduled = !1);
+        (startBatch(), (this.isScheduled = !1));
         var t = globalState.trackingContext;
         if (((globalState.trackingContext = this), shouldCompute(this))) {
           this.isTrackPending = !0;
@@ -18693,21 +19018,21 @@ var Reaction = (function () {
             this.reportExceptionInDerivation_(t);
           }
         }
-        (globalState.trackingContext = t), endBatch();
+        ((globalState.trackingContext = t), endBatch());
       }
     }),
     (n.track = function (t) {
       if (!this.isDisposed) {
-        startBatch(), (this.isRunning = !0);
+        (startBatch(), (this.isRunning = !0));
         var n = globalState.trackingContext;
         globalState.trackingContext = this;
         var r = trackDerivedFunction(this, t, void 0);
-        (globalState.trackingContext = n),
+        ((globalState.trackingContext = n),
           (this.isRunning = !1),
           (this.isTrackPending = !1),
           this.isDisposed && clearObserving(this),
           isCaughtException(r) && this.reportExceptionInDerivation_(r.cause),
-          endBatch();
+          endBatch());
       }
     }),
     (n.reportExceptionInDerivation_ = function (t) {
@@ -18716,10 +19041,10 @@ var Reaction = (function () {
       else {
         if (globalState.disableErrorBoundaries) throw t;
         var r = `[mobx] uncaught error in '` + this + `'`;
-        globalState.suppressReactionErrors || console.error(r, t),
+        (globalState.suppressReactionErrors || console.error(r, t),
           globalState.globalReactionErrorHandlers.forEach(function (r) {
             return r(t, n);
-          });
+          }));
       }
     }),
     (n.dispose = function () {
@@ -18730,10 +19055,10 @@ var Reaction = (function () {
     (n.getDisposer_ = function (t) {
       var n = this,
         r = function r() {
-          n.dispose(),
+          (n.dispose(),
             t == null ||
               t.removeEventListener == null ||
-              t.removeEventListener(`abort`, r);
+              t.removeEventListener(`abort`, r));
         };
       return (
         t == null ||
@@ -18801,11 +19126,11 @@ var Reaction = (function () {
     ])
   );
 })();
-(Reaction.isDisposedMask_ = 1),
+((Reaction.isDisposedMask_ = 1),
   (Reaction.isScheduledMask_ = 2),
   (Reaction.isTrackPendingMask_ = 4),
   (Reaction.isRunningMask_ = 8),
-  (Reaction.diffValueMask_ = 16);
+  (Reaction.diffValueMask_ = 16));
 var MAX_REACTION_ITERATIONS = 100,
   reactionScheduler = function (t) {
     return t();
@@ -18817,7 +19142,7 @@ function runReactions() {
 }
 function runReactionsHelper() {
   globalState.isRunningReactions = !0;
-  for (var t = globalState.pendingReactions, n = 0; t.length > 0; ) {
+  for (var t = globalState.pendingReactions, n = 0; t.length > 0;) {
     ++n === MAX_REACTION_ITERATIONS &&
       (console.error(`[mobx] cycle in reaction: ` + t[0]), t.splice(0));
     for (var r = t.splice(0), i = 0, o = r.length; i < o; i++)
@@ -18877,9 +19202,9 @@ function createActionFactory(t) {
 var action = createActionFactory(!1);
 Object.assign(action, actionAnnotation);
 var autoAction = createActionFactory(!0);
-Object.assign(autoAction, autoActionAnnotation),
+(Object.assign(autoAction, autoActionAnnotation),
   (action.bound = createDecoratorAnnotation(actionBoundAnnotation)),
-  (autoAction.bound = createDecoratorAnnotation(autoActionBoundAnnotation));
+  (autoAction.bound = createDecoratorAnnotation(autoActionBoundAnnotation)));
 function runInAction(t) {
   return executeAction(t.name || DEFAULT_ACTION_NAME, !1, t, this, void 0);
 }
@@ -18910,7 +19235,7 @@ function autorun(t, n) {
         h ||
           ((h = !0),
           m(function () {
-            (h = !1), p.isDisposed || p.track(g);
+            ((h = !1), p.isDisposed || p.track(g));
           }));
       },
       n.onError,
@@ -18962,14 +19287,14 @@ function reaction(t, n, r) {
     if (((g = !1), !y.isDisposed)) {
       var n = !1,
         i = _;
-      y.track(function () {
+      (y.track(function () {
         var r = allowStateChanges(!1, function () {
           return t(y);
         });
-        (n = h || !v(_, r)), (_ = r);
+        ((n = h || !v(_, r)), (_ = r));
       }),
         ((h && r.fireImmediately) || (!h && n)) && u(_, i, y),
-        (h = !1);
+        (h = !1));
     }
   }
   return (
@@ -19021,10 +19346,10 @@ function configure(t) {
     r !== void 0)
   ) {
     var i = r === ALWAYS ? ALWAYS : r === OBSERVED;
-    (globalState.enforceActions = i),
-      (globalState.allowStateChanges = i !== !0 && i !== ALWAYS);
+    ((globalState.enforceActions = i),
+      (globalState.allowStateChanges = i !== !0 && i !== ALWAYS));
   }
-  [
+  ([
     `computedRequiresReaction`,
     `reactionRequiresObservable`,
     `observableRequiresReaction`,
@@ -19034,7 +19359,7 @@ function configure(t) {
     n in t && (globalState[n] = !!t[n]);
   }),
     (globalState.allowStateReads = !globalState.observableRequiresReaction),
-    t.reactionScheduler && setReactionScheduler(t.reactionScheduler);
+    t.reactionScheduler && setReactionScheduler(t.reactionScheduler));
 }
 function extendObservable(t, n, r, i) {
   var o = getOwnPropertyDescriptors(n);
@@ -19126,9 +19451,9 @@ var flowAnnotation = createFlowAnnotation(`flow`),
               u && cancelPromise(u);
               var t = s.return(void 0),
                 n = Promise.resolve(t.value);
-              n.then(noop, noop),
+              (n.then(noop, noop),
                 cancelPromise(n),
-                l(new FlowCancellationError());
+                l(new FlowCancellationError()));
             } catch (t) {
               l(t);
             }
@@ -19136,7 +19461,7 @@ var flowAnnotation = createFlowAnnotation(`flow`),
           p
         );
       };
-    return (o.isMobXFlow = !0), o;
+    return ((o.isMobXFlow = !0), o);
   }, flowAnnotation);
 flow.bound = createDecoratorAnnotation(flowBoundAnnotation);
 function cancelPromise(t) {
@@ -19199,7 +19524,7 @@ function observeObservableProperty(t, n, r, i) {
   return getAdministration(t, n).observe_(r, i);
 }
 function cache(t, n, r) {
-  return t.set(n, r), r;
+  return (t.set(n, r), r);
 }
 function toJSHelper(t, n) {
   if (typeof t != `object` || !t || t instanceof Date || !isObservable(t))
@@ -19246,7 +19571,7 @@ function toJS(t, n) {
   return toJSHelper(t, new Map());
 }
 function transaction(t, n) {
-  n === void 0 && (n = void 0), startBatch();
+  (n === void 0 && (n = void 0), startBatch());
   try {
     return t.apply(n);
   } finally {
@@ -19289,16 +19614,16 @@ function whenPromise(t, n) {
     s = new Promise(function (r, s) {
       var l,
         u = _when(t, r, _extends({}, n, { onError: s }));
-      (i = function () {
-        u(), s(Error(`WHEN_CANCELLED`));
+      ((i = function () {
+        (u(), s(Error(`WHEN_CANCELLED`)));
       }),
         (o = function () {
-          u(), s(Error(`WHEN_ABORTED`));
+          (u(), s(Error(`WHEN_ABORTED`)));
         }),
         n == null ||
           (l = n.signal) == null ||
           l.addEventListener == null ||
-          l.addEventListener(`abort`, o);
+          l.addEventListener(`abort`, o));
     }).finally(function () {
       var t;
       return n == null ||
@@ -19307,7 +19632,7 @@ function whenPromise(t, n) {
         ? void 0
         : t.removeEventListener(`abort`, o);
     });
-  return (s.cancel = i), s;
+  return ((s.cancel = i), s);
 }
 function getAdm(t) {
   return t[$mobx];
@@ -19398,10 +19723,10 @@ function makeObservable(t, n, r) {
   return (
     initObservable(function () {
       var i = asObservableObject(t, r)[$mobx];
-      (n ??= collectStoredAnnotations(t)),
+      ((n ??= collectStoredAnnotations(t)),
         ownKeys(n).forEach(function (t) {
           return i.make_(t, n[t]);
-        });
+        }));
     }),
     t
   );
@@ -19415,9 +19740,9 @@ function makeAutoObservable(t, n, r) {
         if (!t[keysSymbol]) {
           var o = Object.getPrototypeOf(t),
             s = new Set([].concat(ownKeys(t), ownKeys(o)));
-          s.delete(`constructor`),
+          (s.delete(`constructor`),
             s.delete($mobx),
-            addHiddenProp(o, keysSymbol, s);
+            addHiddenProp(o, keysSymbol, s));
         }
         t[keysSymbol].forEach(function (t) {
           return i.make_(t, n && t in n ? n[t] : !0);
@@ -19455,7 +19780,7 @@ var SPLICE = `splice`,
   },
   ObservableArrayAdministration = (function () {
     function t(t, n, r, i) {
-      t === void 0 && (t = `ObservableArray`),
+      (t === void 0 && (t = `ObservableArray`),
         (this.owned_ = void 0),
         (this.legacyMode_ = void 0),
         (this.atom_ = void 0),
@@ -19471,7 +19796,7 @@ var SPLICE = `splice`,
         (this.atom_ = new Atom(t)),
         (this.enhancer_ = function (t, r) {
           return n(t, r, `ObservableArray[..]`);
-        });
+        }));
     }
     var n = t.prototype;
     return (
@@ -19505,7 +19830,7 @@ var SPLICE = `splice`,
         );
       }),
       (n.getArrayLength_ = function () {
-        return this.atom_.reportObserved(), this.values_.length;
+        return (this.atom_.reportObserved(), this.values_.length);
       }),
       (n.setArrayLength_ = function (t) {
         (typeof t != `number` || isNaN(t) || t < 0) &&
@@ -19519,9 +19844,9 @@ var SPLICE = `splice`,
         }
       }),
       (n.updateArrayLength_ = function (t, n) {
-        t !== this.lastKnownLength_ && die(16),
+        (t !== this.lastKnownLength_ && die(16),
           (this.lastKnownLength_ += n),
-          this.legacyMode_ && n > 0 && reserveArrayBuffer(t + n + 1);
+          this.legacyMode_ && n > 0 && reserveArrayBuffer(t + n + 1));
       }),
       (n.spliceWithArray_ = function (t, n, r) {
         var i = this;
@@ -19550,7 +19875,7 @@ var SPLICE = `splice`,
             added: r,
           });
           if (!s) return EMPTY_ARRAY;
-          (n = s.removedCount), (r = s.added);
+          ((n = s.removedCount), (r = s.added));
         }
         if (
           ((r =
@@ -19598,7 +19923,7 @@ var SPLICE = `splice`,
                   oldValue: r,
                 }
               : null;
-        this.atom_.reportChanged(), o && notifyListeners(this, s);
+        (this.atom_.reportChanged(), o && notifyListeners(this, s));
       }),
       (n.notifyArraySplice_ = function (t, n, r) {
         var i = !this.owned_ && isSpyEnabled(),
@@ -19617,7 +19942,7 @@ var SPLICE = `splice`,
                   addedCount: n.length,
                 }
               : null;
-        this.atom_.reportChanged(), o && notifyListeners(this, s);
+        (this.atom_.reportChanged(), o && notifyListeners(this, s));
       }),
       (n.get_ = function (t) {
         if (this.legacyMode_ && t >= this.values_.length)
@@ -19645,12 +19970,12 @@ var SPLICE = `splice`,
             if (!o) return;
             n = o.newValue;
           }
-          (n = this.enhancer_(n, i)),
-            n !== i && ((r[t] = n), this.notifyArrayChildUpdate_(t, n, i));
+          ((n = this.enhancer_(n, i)),
+            n !== i && ((r[t] = n), this.notifyArrayChildUpdate_(t, n, i)));
         } else {
           for (var s = Array(t + 1 - r.length), l = 0; l < s.length - 1; l++)
             s[l] = void 0;
-          (s[s.length - 1] = n), this.spliceWithArray_(r.length, 0, s);
+          ((s[s.length - 1] = n), this.spliceWithArray_(r.length, 0, s));
         }
       }),
       t
@@ -19665,7 +19990,7 @@ function createObservableArray(t, n, r, i) {
       var o = new ObservableArrayAdministration(r, n, i, !1);
       addHiddenFinalProp(o.values_, $mobx, o);
       var s = new Proxy(o.values_, arrayTraps);
-      return (o.proxy_ = s), t && t.length && o.spliceWithArray_(0, 0, t), s;
+      return ((o.proxy_ = s), t && t.length && o.spliceWithArray_(0, 0, t), s);
     })
   );
 }
@@ -19699,7 +20024,7 @@ var arrayExtensions = {
   push: function () {
     var t = this[$mobx],
       n = [...arguments];
-    return t.spliceWithArray_(t.values_.length, 0, n), t.values_.length;
+    return (t.spliceWithArray_(t.values_.length, 0, n), t.values_.length);
   },
   pop: function () {
     return this.splice(Math.max(this[$mobx].values_.length - 1, 0), 1)[0];
@@ -19710,7 +20035,7 @@ var arrayExtensions = {
   unshift: function () {
     var t = this[$mobx],
       n = [...arguments];
-    return t.spliceWithArray_(0, 0, n), t.values_.length;
+    return (t.spliceWithArray_(0, 0, n), t.values_.length);
   },
   reverse: function () {
     return (
@@ -19722,7 +20047,7 @@ var arrayExtensions = {
   sort: function () {
     globalState.trackingDerivation && die(37, `sort`);
     var t = this.slice();
-    return t.sort.apply(t, arguments), this.replace(t), this;
+    return (t.sort.apply(t, arguments), this.replace(t), this);
   },
   remove: function (t) {
     var n = this[$mobx],
@@ -19730,7 +20055,7 @@ var arrayExtensions = {
     return r > -1 && (this.splice(r, 1), !0);
   },
 };
-addArrayExtension(`at`, simpleFunc),
+(addArrayExtension(`at`, simpleFunc),
   addArrayExtension(`concat`, simpleFunc),
   addArrayExtension(`flat`, simpleFunc),
   addArrayExtension(`includes`, simpleFunc),
@@ -19755,7 +20080,7 @@ addArrayExtension(`at`, simpleFunc),
   addArrayExtension(`some`, mapLikeFunc),
   addArrayExtension(`toReversed`, mapLikeFunc),
   addArrayExtension(`reduce`, reduceLikeFunc),
-  addArrayExtension(`reduceRight`, reduceLikeFunc);
+  addArrayExtension(`reduceRight`, reduceLikeFunc));
 function addArrayExtension(t, n) {
   typeof Array.prototype[t] == `function` && (arrayExtensions[t] = n(t));
 }
@@ -19807,7 +20132,7 @@ var ObservableMapMarker = {},
   ObservableMap = (function () {
     function t(t, n, r) {
       var i = this;
-      n === void 0 && (n = deepEnhancer),
+      (n === void 0 && (n = deepEnhancer),
         r === void 0 && (r = `ObservableMap`),
         (this.enhancer_ = void 0),
         (this.name_ = void 0),
@@ -19822,11 +20147,11 @@ var ObservableMapMarker = {},
         (this.name_ = r),
         isFunction(Map) || die(18),
         initObservable(function () {
-          (i.keysAtom_ = createAtom(`ObservableMap.keys()`)),
+          ((i.keysAtom_ = createAtom(`ObservableMap.keys()`)),
             (i.data_ = new Map()),
             (i.hasMap_ = new Map()),
-            t && i.merge(t);
-        });
+            t && i.merge(t));
+        }));
     }
     var n = t.prototype;
     return (
@@ -19844,10 +20169,10 @@ var ObservableMapMarker = {},
             `ObservableMap.key?`,
             !1,
           ));
-          this.hasMap_.set(t, i),
+          (this.hasMap_.set(t, i),
             onBecomeUnobserved(i, function () {
               return n.hasMap_.delete(t);
-            });
+            }));
         }
         return r.get();
       }),
@@ -19863,7 +20188,7 @@ var ObservableMapMarker = {},
           if (!i) return this;
           n = i.newValue;
         }
-        return r ? this.updateValue_(t, n) : this.addValue_(t, n), this;
+        return (r ? this.updateValue_(t, n) : this.addValue_(t, n), this);
       }),
       (n.delete = function (t) {
         var n = this;
@@ -19890,10 +20215,10 @@ var ObservableMapMarker = {},
           return (
             transaction(function () {
               var r;
-              n.keysAtom_.reportChanged(),
+              (n.keysAtom_.reportChanged(),
                 (r = n.hasMap_.get(t)) == null || r.setNewValue_(!1),
                 n.data_.get(t).setNewValue_(void 0),
-                n.data_.delete(t);
+                n.data_.delete(t));
             }),
             i && notifyListeners(this, o),
             !0
@@ -19918,20 +20243,20 @@ var ObservableMapMarker = {},
                     newValue: n,
                   }
                 : null;
-          r.setNewValue_(n), o && notifyListeners(this, s);
+          (r.setNewValue_(n), o && notifyListeners(this, s));
         }
       }),
       (n.addValue_ = function (t, n) {
         var r = this;
-        this.keysAtom_,
+        (this.keysAtom_,
           transaction(function () {
             var i,
               o = new ObservableValue(n, r.enhancer_, `ObservableMap.key`, !1);
-            r.data_.set(t, o),
+            (r.data_.set(t, o),
               (n = o.value_),
               (i = r.hasMap_.get(t)) == null || i.setNewValue_(!0),
-              r.keysAtom_.reportChanged();
-          });
+              r.keysAtom_.reportChanged());
+          }));
         var i = isSpyEnabled(),
           o = hasListeners(this),
           s =
@@ -19956,7 +20281,7 @@ var ObservableMapMarker = {},
         return this.dehancer === void 0 ? t : this.dehancer(t);
       }),
       (n.keys = function () {
-        return this.keysAtom_.reportObserved(), this.data_.keys();
+        return (this.keysAtom_.reportObserved(), this.data_.keys());
       }),
       (n.values = function () {
         var t = this,
@@ -20066,7 +20391,7 @@ var ObservableMapMarker = {},
                 y = n.data_.has(_);
               if ((n.set(_, v), n.data_.has(_))) {
                 var x = n.data_.get(_);
-                i.set(_, x), y || (o = !0);
+                (i.set(_, x), y || (o = !0));
               }
             }
             if (!o) {
@@ -20083,7 +20408,7 @@ var ObservableMapMarker = {},
                     n.keysAtom_.reportChanged();
                     break;
                   }
-                  (w = S.next()), (T = C.next());
+                  ((w = S.next()), (T = C.next()));
                 }
             }
             n.data_ = i;
@@ -20107,7 +20432,7 @@ var ObservableMapMarker = {},
         {
           key: `size`,
           get: function () {
-            return this.keysAtom_.reportObserved(), this.data_.size;
+            return (this.keysAtom_.reportObserved(), this.data_.size);
           },
         },
         {
@@ -20121,7 +20446,7 @@ var ObservableMapMarker = {},
   })(),
   isObservableMap = createInstanceofPredicate(`ObservableMap`, ObservableMap);
 function makeIterableForMap(t) {
-  return (t[Symbol.toStringTag] = `MapIterator`), makeIterable(t);
+  return ((t[Symbol.toStringTag] = `MapIterator`), makeIterable(t));
 }
 function convertToMap(t) {
   if (isES6Map(t) || isObservableMap(t)) return t;
@@ -20137,7 +20462,7 @@ var ObservableSetMarker = {},
   ObservableSet = (function () {
     function t(t, n, r) {
       var i = this;
-      n === void 0 && (n = deepEnhancer),
+      (n === void 0 && (n = deepEnhancer),
         r === void 0 && (r = `ObservableSet`),
         (this.name_ = void 0),
         (this[$mobx] = ObservableSetMarker),
@@ -20153,8 +20478,8 @@ var ObservableSetMarker = {},
           return n(t, i, r);
         }),
         initObservable(function () {
-          (i.atom_ = createAtom(i.name_)), t && i.replace(t);
-        });
+          ((i.atom_ = createAtom(i.name_)), t && i.replace(t));
+        }));
     }
     var n = t.prototype;
     return (
@@ -20197,7 +20522,7 @@ var ObservableSetMarker = {},
         }
         if (!this.has(t)) {
           transaction(function () {
-            n.data_.add(n.enhancer_(t, void 0)), n.atom_.reportChanged();
+            (n.data_.add(n.enhancer_(t, void 0)), n.atom_.reportChanged());
           });
           var i = !1,
             o = hasListeners(this),
@@ -20235,7 +20560,7 @@ var ObservableSetMarker = {},
               : null;
           return (
             transaction(function () {
-              n.atom_.reportChanged(), n.data_.delete(t);
+              (n.atom_.reportChanged(), n.data_.delete(t));
             }),
             i && notifyListeners(this, o),
             !0
@@ -20340,7 +20665,7 @@ var ObservableSetMarker = {},
         {
           key: `size`,
           get: function () {
-            return this.atom_.reportObserved(), this.data_.size;
+            return (this.atom_.reportObserved(), this.data_.size);
           },
         },
         {
@@ -20354,13 +20679,13 @@ var ObservableSetMarker = {},
   })(),
   isObservableSet = createInstanceofPredicate(`ObservableSet`, ObservableSet);
 function makeIterableForSet(t) {
-  return (t[Symbol.toStringTag] = `SetIterator`), makeIterable(t);
+  return ((t[Symbol.toStringTag] = `SetIterator`), makeIterable(t));
 }
 var descriptorCache = Object.create(null),
   REMOVE = `remove`,
   ObservableObjectAdministration = (function () {
     function t(t, n, r, i) {
-      n === void 0 && (n = new Map()),
+      (n === void 0 && (n = new Map()),
         i === void 0 && (i = autoAnnotation),
         (this.target_ = void 0),
         (this.values_ = void 0),
@@ -20378,7 +20703,7 @@ var descriptorCache = Object.create(null),
         (this.name_ = r),
         (this.defaultAnnotation_ = i),
         (this.keysAtom_ = new Atom(`ObservableObject.keys`)),
-        (this.isPlainObject_ = isPlainObject(this.target_));
+        (this.isPlainObject_ = isPlainObject(this.target_)));
     }
     var n = t.prototype;
     return (
@@ -20387,7 +20712,7 @@ var descriptorCache = Object.create(null),
       }),
       (n.setObservablePropValue_ = function (t, n) {
         var r = this.values_.get(t);
-        if (r instanceof ComputedValue) return r.set(n), !0;
+        if (r instanceof ComputedValue) return (r.set(n), !0);
         if (hasInterceptors(this)) {
           var i = interceptChange(this, {
             type: UPDATE,
@@ -20411,7 +20736,7 @@ var descriptorCache = Object.create(null),
                   newValue: n,
                 }
               : null;
-          r.setNewValue_(n), o && notifyListeners(this, s);
+          (r.setNewValue_(n), o && notifyListeners(this, s));
         }
         return !0;
       }),
@@ -20464,7 +20789,7 @@ var descriptorCache = Object.create(null),
               return;
             die(1, n.annotationType_, this.name_ + `.` + t.toString());
           }
-          for (var i = this.target_; i && i !== objectPrototype; ) {
+          for (var i = this.target_; i && i !== objectPrototype;) {
             var o = getDescriptor(i, t);
             if (o) {
               var s = n.make_(this, t, o, i);
@@ -20484,10 +20809,10 @@ var descriptorCache = Object.create(null),
         )
           return this.defineProperty_(t, n, i);
         var o = r.extend_(this, t, n, i);
-        return o && recordAnnotationApplied(this, r, t), o;
+        return (o && recordAnnotationApplied(this, r, t), o);
       }),
       (n.defineProperty_ = function (t, n, r) {
-        r === void 0 && (r = !1), this.keysAtom_;
+        (r === void 0 && (r = !1), this.keysAtom_);
         try {
           startBatch();
           var i = this.delete_(t);
@@ -20513,7 +20838,7 @@ var descriptorCache = Object.create(null),
         return !0;
       }),
       (n.defineObservableProperty_ = function (t, n, r, i) {
-        i === void 0 && (i = !1), this.keysAtom_;
+        (i === void 0 && (i = !1), this.keysAtom_);
         try {
           startBatch();
           var o = this.delete_(t);
@@ -20539,14 +20864,14 @@ var descriptorCache = Object.create(null),
             if (!Reflect.defineProperty(this.target_, t, u)) return !1;
           } else defineProperty(this.target_, t, u);
           var p = new ObservableValue(n, r, `ObservableObject.key`, !1);
-          this.values_.set(t, p), this.notifyPropertyAddition_(t, p.value_);
+          (this.values_.set(t, p), this.notifyPropertyAddition_(t, p.value_));
         } finally {
           endBatch();
         }
         return !0;
       }),
       (n.defineComputedProperty_ = function (t, n, r) {
-        r === void 0 && (r = !1), this.keysAtom_;
+        (r === void 0 && (r = !1), this.keysAtom_);
         try {
           startBatch();
           var i = this.delete_(t);
@@ -20561,8 +20886,8 @@ var descriptorCache = Object.create(null),
             })
           )
             return null;
-          (n.name ||= `ObservableObject.key`),
-            (n.context = this.proxy_ || this.target_);
+          ((n.name ||= `ObservableObject.key`),
+            (n.context = this.proxy_ || this.target_));
           var o = getCachedObservablePropDescriptor(t),
             s = {
               configurable: !globalState.safeDescriptors || this.isPlainObject_,
@@ -20573,8 +20898,8 @@ var descriptorCache = Object.create(null),
           if (r) {
             if (!Reflect.defineProperty(this.target_, t, s)) return !1;
           } else defineProperty(this.target_, t, s);
-          this.values_.set(t, new ComputedValue(n)),
-            this.notifyPropertyAddition_(t, void 0);
+          (this.values_.set(t, new ComputedValue(n)),
+            this.notifyPropertyAddition_(t, void 0));
         } finally {
           endBatch();
         }
@@ -20657,14 +20982,14 @@ var descriptorCache = Object.create(null),
             : null;
           i && notifyListeners(this, s);
         }
-        (r = this.pendingKeys_) == null || (r = r.get(t)) == null || r.set(!0),
-          this.keysAtom_.reportChanged();
+        ((r = this.pendingKeys_) == null || (r = r.get(t)) == null || r.set(!0),
+          this.keysAtom_.reportChanged());
       }),
       (n.ownKeys_ = function () {
-        return this.keysAtom_.reportObserved(), ownKeys(this.target_);
+        return (this.keysAtom_.reportObserved(), ownKeys(this.target_));
       }),
       (n.keys_ = function () {
-        return this.keysAtom_.reportObserved(), Object.keys(this.target_);
+        return (this.keysAtom_.reportObserved(), Object.keys(this.target_));
       }),
       t
     );
@@ -20744,11 +21069,11 @@ var LegacyObservableArray = (function (t) {
       (s = t.call(this) || this),
       initObservable(function () {
         var t = new ObservableArrayAdministration(i, r, o, !0);
-        (t.proxy_ = s),
+        ((t.proxy_ = s),
           addHiddenFinalProp(s, $mobx, t),
           n && n.length && s.spliceWithArray(0, 0, n),
           safariPrototypeSetterInheritanceBug &&
-            Object.defineProperty(s, "0", ENTRY_0);
+            Object.defineProperty(s, "0", ENTRY_0));
       }),
       s
     );
@@ -20833,17 +21158,17 @@ function createLegacyArray(t, n, r) {
 }
 function getAtom(t, n) {
   if (typeof t == `object` && t) {
-    if (isObservableArray(t)) return n !== void 0 && die(23), t[$mobx].atom_;
+    if (isObservableArray(t)) return (n !== void 0 && die(23), t[$mobx].atom_);
     if (isObservableSet(t)) return t.atom_;
     if (isObservableMap(t)) {
       if (n === void 0) return t.keysAtom_;
       var r = t.data_.get(n) || t.hasMap_.get(n);
-      return r || die(25, n, getDebugName(t)), r;
+      return (r || die(25, n, getDebugName(t)), r);
     }
     if (isObservableObject(t)) {
       if (!n) return die(26);
       var i = t[$mobx].values_.get(n);
-      return i || die(27, n, getDebugName(t)), i;
+      return (i || die(27, n, getDebugName(t)), i);
     }
     if (isAtom(t) || isComputedValue(t) || isReaction(t)) return t;
   } else if (isFunction(t) && isReaction(t[$mobx])) return t[$mobx];
@@ -20880,12 +21205,12 @@ function initObservable(t) {
   try {
     return t();
   } finally {
-    endBatch(), allowStateChangesEnd(r), untrackedEnd(n);
+    (endBatch(), allowStateChangesEnd(r), untrackedEnd(n));
   }
 }
 var toString = objectPrototype.toString;
 function deepEqual(t, n, r) {
-  return r === void 0 && (r = -1), eq(t, n, r);
+  return (r === void 0 && (r = -1), eq(t, n, r));
 }
 function eq(t, n, r, i, o) {
   if (t === n) return t !== 0 || 1 / t == 1 / n;
@@ -20912,7 +21237,7 @@ function eq(t, n, r, i, o) {
     case `[object Set]`:
       r >= 0 && r++;
   }
-  (t = unwrap(t)), (n = unwrap(n));
+  ((t = unwrap(t)), (n = unwrap(n)));
   var u = l === `[object Array]`;
   if (!u) {
     if (typeof t != `object` || typeof n != `object`) return !1;
@@ -20927,11 +21252,11 @@ function eq(t, n, r, i, o) {
       return !1;
   }
   if (r === 0) return !1;
-  r < 0 && (r = -1), (i ||= []), (o ||= []);
-  for (var h = i.length; h--; ) if (i[h] === t) return o[h] === n;
+  (r < 0 && (r = -1), (i ||= []), (o ||= []));
+  for (var h = i.length; h--;) if (i[h] === t) return o[h] === n;
   if ((i.push(t), o.push(n), u)) {
     if (((h = t.length), h !== n.length)) return !1;
-    for (; h--; ) if (!eq(t[h], n[h], r - 1, i, o)) return !1;
+    for (; h--;) if (!eq(t[h], n[h], r - 1, i, o)) return !1;
   } else {
     var g = Object.keys(t),
       _ = g.length;
@@ -20941,7 +21266,7 @@ function eq(t, n, r, i, o) {
       if (!(hasProp(n, y) && eq(t[y], n[y], r - 1, i, o))) return !1;
     }
   }
-  return i.pop(), o.pop(), !0;
+  return (i.pop(), o.pop(), !0);
 }
 function unwrap(t) {
   return isObservableArray(t)
@@ -20962,7 +21287,7 @@ function makeIterable(t) {
 function getSelf() {
   return this;
 }
-[`Symbol`, `Map`, `Set`].forEach(function (t) {
+([`Symbol`, `Map`, `Set`].forEach(function (t) {
   getGlobal()[t] === void 0 &&
     die(`MobX requires global '` + t + `' to be available or polyfilled`);
 }),
@@ -20971,7 +21296,7 @@ function getSelf() {
       spy,
       extras: { getDebugName },
       $mobx,
-    });
+    }));
 export {
   GetCookie as $,
   AssertMsg as $t,

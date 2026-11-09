@@ -22,7 +22,7 @@ var _ = _((_, _, _) => {
         _ = 0,
         _ = {};
       function _(_) {
-        (this._handle = null),
+        ((this._handle = null),
           (this._finished = !1),
           (this._completed = !1),
           (this._halted = !1),
@@ -40,26 +40,26 @@ var _ = _((_, _, _) => {
           }),
           function (_) {
             var _ = _(_);
-            (_.chunkSize = parseInt(_.chunkSize)),
+            ((_.chunkSize = parseInt(_.chunkSize)),
               _.step || _.chunk || (_.chunkSize = null),
               (this._handle = new _(_)),
-              ((this._handle.streamer = this)._config = _);
+              ((this._handle.streamer = this)._config = _));
           }.call(this, _),
           (this.parseChunk = function (_, _) {
             var _ = parseInt(this._config.skipFirstNLines) || 0;
             if (this.isFirstChunk && 0 < _) {
               let _ = this._config.newline;
-              (_ ||=
+              ((_ ||=
                 ((_ = this._config.quoteChar || `"`),
                 this._handle.guessLineEndings(_, _))),
-                (_ = [..._.split(_).slice(_)].join(_));
+                (_ = [..._.split(_).slice(_)].join(_)));
             }
-            this.isFirstChunk &&
+            (this.isFirstChunk &&
               _(this._config.beforeFirstChunk) &&
               (_ = this._config.beforeFirstChunk(_)) !== void 0 &&
               (_ = _),
               (this.isFirstChunk = !1),
-              (this._halted = !1);
+              (this._halted = !1));
             var _ = this._partialLine + _,
               _ =
                 ((this._partialLine = ``),
@@ -120,21 +120,21 @@ var _ = _((_, _, _) => {
                   error: _,
                   finished: !1,
                 });
-          });
+          }));
       }
       function _(_) {
         var _;
-        (_ ||= {}).chunkSize || (_.chunkSize = _.RemoteChunkSize),
+        ((_ ||= {}).chunkSize || (_.chunkSize = _.RemoteChunkSize),
           _.call(this, _),
           (this._nextChunk = _
             ? function () {
-                this._readChunk(), this._chunkLoaded();
+                (this._readChunk(), this._chunkLoaded());
               }
             : function () {
                 this._readChunk();
               }),
           (this.stream = function (_) {
-            (this._input = _), this._nextChunk();
+            ((this._input = _), this._nextChunk());
           }),
           (this._readChunk = function () {
             if (this._finished) this._chunkLoaded();
@@ -185,23 +185,23 @@ var _ = _((_, _, _) => {
                   this.parseChunk(_.responseText)));
           }),
           (this._chunkError = function (_) {
-            (_ = _.statusText || _), this._sendError(Error(_));
-          });
+            ((_ = _.statusText || _), this._sendError(Error(_)));
+          }));
       }
       function _(_) {
-        (_ ||= {}).chunkSize || (_.chunkSize = _.LocalChunkSize),
-          _.call(this, _);
+        ((_ ||= {}).chunkSize || (_.chunkSize = _.LocalChunkSize),
+          _.call(this, _));
         var _,
           _,
           _ = typeof FileReader < `u`;
-        (this.stream = function (_) {
-          (this._input = _),
+        ((this.stream = function (_) {
+          ((this._input = _),
             (_ = _.slice || _.webkitSlice || _.mozSlice),
             _
               ? (((_ = new FileReader()).onload = _(this._chunkLoaded, this)),
                 (_.onerror = _(this._chunkError, this)))
               : (_ = new FileReaderSync()),
-            this._nextChunk();
+            this._nextChunk());
         }),
           (this._nextChunk = function () {
             this._finished ||
@@ -227,20 +227,20 @@ var _ = _((_, _, _) => {
               });
           }),
           (this._chunkLoaded = function (_) {
-            (this._start += this._config.chunkSize),
+            ((this._start += this._config.chunkSize),
               (this._finished =
                 !this._config.chunkSize || this._start >= this._input.size),
-              this.parseChunk(_.target.result);
+              this.parseChunk(_.target.result));
           }),
           (this._chunkError = function () {
             this._sendError(_.error);
-          });
+          }));
       }
       function _(_) {
         var _;
-        _.call(this, (_ ||= {})),
+        (_.call(this, (_ ||= {})),
           (this.stream = function (_) {
-            return (_ = _), this._nextChunk();
+            return ((_ = _), this._nextChunk());
           }),
           (this._nextChunk = function () {
             var _, _;
@@ -253,56 +253,56 @@ var _ = _((_, _, _) => {
                 (this._finished = !_),
                 this.parseChunk(_)
               );
-          });
+          }));
       }
       function _(_) {
         _.call(this, (_ ||= {}));
         var _ = [],
           _ = !0,
           _ = !1;
-        (this.pause = function () {
-          _.prototype.pause.apply(this, arguments), this._input.pause();
+        ((this.pause = function () {
+          (_.prototype.pause.apply(this, arguments), this._input.pause());
         }),
           (this.resume = function () {
-            _.prototype.resume.apply(this, arguments), this._input.resume();
+            (_.prototype.resume.apply(this, arguments), this._input.resume());
           }),
           (this.stream = function (_) {
-            (this._input = _),
+            ((this._input = _),
               this._input._(`data`, this._streamData),
               this._input._(`end`, this._streamEnd),
-              this._input._(`error`, this._streamError);
+              this._input._(`error`, this._streamError));
           }),
           (this._checkIsFinished = function () {
             _ && _.length === 1 && (this._finished = !0);
           }),
           (this._nextChunk = function () {
-            this._checkIsFinished(),
-              _.length ? this.parseChunk(_.shift()) : (_ = !0);
+            (this._checkIsFinished(),
+              _.length ? this.parseChunk(_.shift()) : (_ = !0));
           }),
           (this._streamData = _(function (_) {
             try {
-              _.push(
+              (_.push(
                 typeof _ == `string` ? _ : _.toString(this._config.encoding),
               ),
                 _ &&
                   ((_ = !1),
                   this._checkIsFinished(),
-                  this.parseChunk(_.shift()));
+                  this.parseChunk(_.shift())));
             } catch (_) {
               this._streamError(_);
             }
           }, this)),
           (this._streamError = _(function (_) {
-            this._streamCleanUp(), this._sendError(_);
+            (this._streamCleanUp(), this._sendError(_));
           }, this)),
           (this._streamEnd = _(function () {
-            this._streamCleanUp(), (_ = !0), this._streamData(``);
+            (this._streamCleanUp(), (_ = !0), this._streamData(``));
           }, this)),
           (this._streamCleanUp = _(function () {
-            this._input.removeListener(`data`, this._streamData),
+            (this._input.removeListener(`data`, this._streamData),
               this._input.removeListener(`end`, this._streamEnd),
-              this._input.removeListener(`error`, this._streamError);
-          }, this));
+              this._input.removeListener(`error`, this._streamError));
+          }, this)));
       }
       function _(_) {
         var _,
@@ -356,7 +356,8 @@ var _ = _((_, _, _) => {
               } else _.data.forEach(_);
             }
             function _(_, _) {
-              _(_.transformHeader) && (_ = _.transformHeader(_, _)), _.push(_);
+              (_(_.transformHeader) && (_ = _.transformHeader(_, _)),
+                _.push(_));
             }
           }
           function _(_, _) {
@@ -438,18 +439,18 @@ var _ = _((_, _, _) => {
           return _.header && _.length === 0;
         }
         function _(_, _, _, _) {
-          (_ = {
+          ((_ = {
             type: _,
             code: _,
             message: _,
           }),
             _ !== void 0 && (_.row = _),
-            _.errors.push(_);
+            _.errors.push(_));
         }
-        _(_.step) &&
+        (_(_.step) &&
           ((_ = _.step),
           (_.step = function (_) {
-            (_ = _),
+            ((_ = _),
               _()
                 ? _()
                 : (_(),
@@ -457,7 +458,7 @@ var _ = _((_, _, _) => {
                     ((_ += _.data.length),
                     _.preview && _ > _.preview
                       ? _.abort()
-                      : ((_.data = _.data[0]), _(_, _))));
+                      : ((_.data = _.data[0]), _(_, _)))));
           })),
           (this.parse = function (_, _, _) {
             var _ = _.quoteChar || `"`,
@@ -497,11 +498,11 @@ var _ = _((_, _, _) => {
                               _ === void 0
                                 ? (_ = _)
                                 : 0 < _ && ((_ += Math.abs(_ - _)), (_ = _)));
-                        0 < _.data.length && (_ /= _.data.length - _),
+                        (0 < _.data.length && (_ /= _.data.length - _),
                           (_ === void 0 || _ <= _) &&
                             (_ === void 0 || _ < _) &&
                             1.99 < _ &&
-                            ((_ = _), (_ = _), (_ = _));
+                            ((_ = _), (_ = _), (_ = _)));
                       }
                       return {
                         successful: !!(_.delimiter = _),
@@ -541,9 +542,9 @@ var _ = _((_, _, _) => {
             return _;
           }),
           (this.pause = function () {
-            (_ = !0),
+            ((_ = !0),
               _.abort(),
-              (_ = _(_.chunk) ? `` : _.substring(_.getCharIndex()));
+              (_ = _(_.chunk) ? `` : _.substring(_.getCharIndex())));
           }),
           (this.resume = function () {
             _.streamer._halted
@@ -554,11 +555,11 @@ var _ = _((_, _, _) => {
             return _;
           }),
           (this.abort = function () {
-            (_ = !0),
+            ((_ = !0),
               _.abort(),
               (_.meta.aborted = !0),
               _(_.complete) && _.complete(_),
-              (_ = ``);
+              (_ = ``));
           }),
           (this.guessLineEndings = function (_, _) {
             _ = _.substring(0, 1048576);
@@ -578,7 +579,7 @@ var _ = _((_, _, _) => {
               ? `\r
 `
               : `\r`;
-          });
+          }));
       }
       function _(_) {
         return _.replace(/[.*+?^${}()|[\]\\]/g, `\\$&`);
@@ -601,7 +602,7 @@ var _ = _((_, _, _) => {
           _ === _)
         )
           throw Error(`Comment character same as delimiter`);
-        !0 === _
+        (!0 === _
           ? (_ = `#`)
           : (typeof _ != `string` || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
             (_ = !1),
@@ -613,10 +614,10 @@ var _ = _((_, _, _) => {
               `\r
 ` &&
             (_ = `
-`);
+`));
         var _ = 0,
           _ = !1;
-        (this.parse = function (_, _, _) {
+        ((this.parse = function (_, _, _) {
           if (typeof _ != `string`) throw Error(`Input must be a string`);
           var _ = _.length,
             _ = _.length,
@@ -637,7 +638,7 @@ var _ = _((_, _, _) => {
                 if (_) {
                   if (((_ = []), _(_.split(_)), _(), _)) return _();
                 } else _(_.split(_));
-                if (_ && _ <= _) return (_ = _.slice(0, _)), _(!0);
+                if (_ && _ <= _) return ((_ = _.slice(0, _)), _(!0));
               }
             }
             return _();
@@ -650,7 +651,7 @@ var _ = _((_, _, _) => {
             ;
           )
             if (_[_] === _)
-              for (_ = _, _++; ; ) {
+              for (_ = _, _++; ;) {
                 if ((_ = _.indexOf(_, _ + 1)) === -1)
                   return (
                     _ ||
@@ -673,10 +674,10 @@ var _ = _((_, _, _) => {
                       : Math.min(_, _),
                   );
                   if (_.substr(_ + 1 + _, _) === _) {
-                    _.push(_.substring(_, _).replace(_, _)),
+                    (_.push(_.substring(_, _).replace(_, _)),
                       _[(_ = _ + 1 + _ + _)] !== _ && (_ = _.indexOf(_, _)),
                       (_ = _.indexOf(_, _)),
-                      (_ = _.indexOf(_, _));
+                      (_ = _.indexOf(_, _)));
                     break;
                   }
                   if (
@@ -693,21 +694,21 @@ var _ = _((_, _, _) => {
                     if (_ && _.length >= _) return _(!0);
                     break;
                   }
-                  _.push({
+                  (_.push({
                     type: `Quotes`,
                     code: `InvalidQuotes`,
                     message: `Trailing quote on quoted field is malformed`,
                     row: _.length,
                     index: _,
                   }),
-                    _++;
+                    _++);
                 }
               }
             else if (_ && _.length === 0 && _.substring(_, _ + _) === _) {
               if (_ === -1) return _();
-              (_ = _ + _), (_ = _.indexOf(_, _)), (_ = _.indexOf(_, _));
+              ((_ = _ + _), (_ = _.indexOf(_, _)), (_ = _.indexOf(_, _)));
             } else if (_ !== -1 && (_ < _ || _ === -1))
-              _.push(_.substring(_, _)), (_ = _ + _), (_ = _.indexOf(_, _));
+              (_.push(_.substring(_, _)), (_ = _ + _), (_ = _.indexOf(_, _)));
             else {
               if (_ === -1) break;
               if ((_.push(_.substring(_, _)), _(_ + _), _ && (_(), _)))
@@ -716,7 +717,7 @@ var _ = _((_, _, _) => {
             }
           return _();
           function _(_) {
-            _.push(_), (_ = _);
+            (_.push(_), (_ = _));
           }
           function _(_) {
             var _ = 0;
@@ -737,7 +738,7 @@ var _ = _((_, _, _) => {
             );
           }
           function _(_) {
-            (_ = _), _(_), (_ = []), (_ = _.indexOf(_, _));
+            ((_ = _), _(_), (_ = []), (_ = _.indexOf(_, _)));
           }
           function _(_) {
             if (_.header && !_ && _.length && !_) {
@@ -752,17 +753,17 @@ var _ = _((_, _, _) => {
                 ) {
                   let _,
                     _ = _[_];
-                  for (; (_ = _ + `_` + _), _++, _.has(_); );
-                  _.add(_),
+                  for (; (_ = _ + `_` + _), _++, _.has(_););
+                  (_.add(_),
                     (_[_] = _),
                     _[_]++,
                     (_ = !0),
-                    ((_ = _ === null ? {} : _)[_] = _);
-                } else (_[_] = 1), (_[_] = _);
+                    ((_ = _ === null ? {} : _)[_] = _));
+                } else ((_[_] = 1), (_[_] = _));
                 _.add(_);
               }
-              _ && console.warn(`Duplicate headers found and renamed.`),
-                (_ = !0);
+              (_ && console.warn(`Duplicate headers found and renamed.`),
+                (_ = !0));
             }
             return {
               data: _,
@@ -778,7 +779,7 @@ var _ = _((_, _, _) => {
             };
           }
           function _() {
-            _(_()), (_ = []), (_ = []);
+            (_(_()), (_ = []), (_ = []));
           }
         }),
           (this.abort = function () {
@@ -786,7 +787,7 @@ var _ = _((_, _, _) => {
           }),
           (this.getCharIndex = function () {
             return _;
-          });
+          }));
       }
       function _(_) {
         var _ = _.data,
@@ -796,14 +797,14 @@ var _ = _((_, _, _) => {
         else if (_.results && _.results.data) {
           var _ = {
             abort: function () {
-              (_ = !0),
+              ((_ = !0),
                 _(_.workerId, {
                   data: [],
                   errors: [],
                   meta: {
                     aborted: !0,
                   },
-                });
+                }));
             },
             pause: _,
             resume: _,
@@ -832,7 +833,7 @@ var _ = _((_, _, _) => {
       }
       function _(_, _) {
         var _ = _[_];
-        _(_.userComplete) && _.userComplete(_), _.terminate(), delete _[_];
+        (_(_.userComplete) && _.userComplete(_), _.terminate(), delete _[_]);
       }
       function _() {
         throw Error(`Not implemented.`);
@@ -875,7 +876,7 @@ var _ = _((_, _, _) => {
                     (_ = new _(_)),
               _.stream(_)
             );
-          ((_ = (() => {
+          (((_ = (() => {
             var _;
             return (
               !!_.WORKERS_SUPPORTED &&
@@ -913,7 +914,7 @@ var _ = _((_, _, _) => {
               input: _,
               config: _,
               workerId: _._,
-            });
+            }));
         }),
         (_.unparse = function (_, _) {
           var _ = !1,
@@ -951,12 +952,12 @@ var _ = _((_, _, _) => {
                       throw Error(`Option columns is empty`);
                     _ = _.columns;
                   }
-                  _.escapeChar !== void 0 && (_ = _.escapeChar + _),
+                  (_.escapeChar !== void 0 && (_ = _.escapeChar + _),
                     _.escapeFormulae instanceof RegExp
                       ? (_ = _.escapeFormulae)
                       : typeof _.escapeFormulae == `boolean` &&
                         _.escapeFormulae &&
-                        (_ = /^[=+\-@\t\r].*$/);
+                        (_ = /^[=+\-@\t\r].*$/));
                 }
               })(),
               new RegExp(_(_), `g`));
@@ -989,7 +990,7 @@ var _ = _((_, _, _) => {
               _ = !Array.isArray(_[0]);
             if (_ && _) {
               for (var _ = 0; _ < _.length; _++)
-                0 < _ && (_ += _), (_ += _(_[_], _));
+                (0 < _ && (_ += _), (_ += _(_[_], _)));
               0 < _.length && (_ += _);
             }
             for (var _ = 0; _ < _.length; _++) {
@@ -1133,19 +1134,19 @@ var _ = _((_, _, _) => {
                   } else if (_ === `skip`) return void _();
                 }
                 var _ = _.instanceConfig.complete;
-                (_.instanceConfig.complete = function (_) {
-                  _(_) && _(_, _.file, _.inputElem), _();
+                ((_.instanceConfig.complete = function (_) {
+                  (_(_) && _(_, _.file, _.inputElem), _());
                 }),
-                  _.parse(_.file, _.instanceConfig);
+                  _.parse(_.file, _.instanceConfig));
               }
             }
             function _() {
-              _.splice(0, 1), _();
+              (_.splice(0, 1), _());
             }
           }),
         _ &&
           (_.onmessage = function (_) {
-            (_ = _.data),
+            ((_ = _.data),
               _.WORKER_ID === void 0 && _ && (_.WORKER_ID = _.workerId),
               typeof _.input == `string`
                 ? _.postMessage({
@@ -1160,7 +1161,7 @@ var _ = _((_, _, _) => {
                     workerId: _.WORKER_ID,
                     results: _,
                     finished: !0,
-                  });
+                  }));
           }),
         ((_.prototype = Object.create(_.prototype)).constructor = _),
         ((_.prototype = Object.create(_.prototype)).constructor = _),
@@ -1190,16 +1191,16 @@ var _ = _((_, _, _) => {
     static ReadFile(_) {
       return new Promise((_, _) => {
         let _ = new FileReader();
-        (_.onload = () => _(_.result ?? ``)), _.readAsText(_);
+        ((_.onload = () => _(_.result ?? ``)), _.readAsText(_));
       });
     }
     static WriteFile(_, _) {
       let _ = document.createElement(`a`);
-      navigator.msSaveBlob
+      (navigator.msSaveBlob
         ? navigator.msSaveBlob(_, _)
         : (_.href = window.URL.createObjectURL(_)),
         _.setAttribute(`download`, _),
-        _.click();
+        _.click());
       try {
         document.removeChild(_);
       } catch {}
@@ -1236,13 +1237,12 @@ var _ = _((_, _, _) => {
           _() +
           `>
 `;
-      (_ += new XMLSerializer().serializeToString(_)),
+      ((_ += new XMLSerializer().serializeToString(_)),
         _.WriteFile(
           new Blob([_], {
             type: `application/xml:charset=utf-8;`,
           }),
           _,
-        );
+        ));
     }
   };
-export { _, _ };

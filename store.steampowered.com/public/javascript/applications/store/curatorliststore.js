@@ -31,7 +31,7 @@ function S(e) {
       (e.list_jsondata = {}));
 }
 function C(e, t) {
-  (t.localized_flat_title = u([], 32, null)),
+  ((t.localized_flat_title = u([], 32, null)),
     (t.localized_flat_blurb = u([], 32, null)),
     (t.localized_flat_link = u([], 32, null)),
     t.title !== `0` && (t.localized_flat_title[e] = t.title),
@@ -48,7 +48,7 @@ function C(e, t) {
     t.link_localization.forEach((e) => {
       e.localized_string?.length > 0 &&
         (t.localized_flat_link[e.language] = e.localized_string);
-    });
+    }));
 }
 var w = class e {
   m_mapList = new Map();
@@ -142,20 +142,20 @@ var w = class e {
         let e = [];
         return (
           r(() => {
-            n.data.matches &&
+            (n.data.matches &&
               n.data.matches.forEach((t) => {
                 t.multi_detail_lists.forEach((n) => {
-                  this.m_mapListIDToClanAccount.set(
+                  (this.m_mapListIDToClanAccount.set(
                     n.listid,
                     t.clan_account_id,
                   ),
                     S(n),
                     C(t.curation_language, n),
                     this.m_mapList.set(n.listid, n),
-                    e.push(n);
+                    e.push(n));
                 });
               }),
-              this.m_mapEventGIDToLists.set(a, e);
+              this.m_mapEventGIDToLists.set(a, e));
           }),
           e
         );
@@ -168,7 +168,7 @@ var w = class e {
   }
   static s_Singleton;
   static Get() {
-    return (e.s_Singleton ||= new e()), e.s_Singleton;
+    return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
   constructor() {
     i(this);
@@ -177,7 +177,7 @@ var w = class e {
       r(() => {
         e.forEach((e) => {
           e.multi_detail_lists.forEach((t) => {
-            S(t), C(e.curation_language, t), this.m_mapList.set(t.listid, t);
+            (S(t), C(e.curation_language, t), this.m_mapList.set(t.listid, t));
           });
         });
       });
@@ -211,7 +211,7 @@ function T(e, t) {
                 let n = t?.recommended_app?.appid;
                 n && e.push({ id: n, type: `game` });
               }
-              o(e, { ...s, include_assets: !0, include_release: !0 }), n();
+              (o(e, { ...s, include_assets: !0, include_release: !0 }), n());
             } else console.error(`Found no list data`);
           }
         })(),
@@ -249,13 +249,13 @@ function O(e) {
       let i = b.default.CancelToken.source();
       return (
         (async () => {
-          c.Init(),
+          (c.Init(),
             await c.LoadPartnerEventFromClanEventGIDAndClanSteamID(
               new d(e.sale_clan_steamid),
               n,
               0,
             ),
-            !i.token.reason && t();
+            !i.token.reason && t());
         })(),
         () => i.cancel(`unmounting CuratorList`)
       );

@@ -739,7 +739,7 @@ import { _, _ } from "./cloudlocalizedartdisplay.js";
 var _ = class extends Error {
   eResult;
   constructor(_, _) {
-    super(_ ? `EResult ${_}: ${_}` : `EResult ${_}`), (this.eResult = _);
+    (super(_ ? `EResult ${_}: ${_}` : `EResult ${_}`), (this.eResult = _));
   }
 };
 function _(_) {
@@ -843,11 +843,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -935,7 +935,7 @@ var _ = 32,
         });
       if (_.isValidElement(_.legendIcon)) {
         var _ = _({}, _);
-        return delete _.legendIcon, _.cloneElement(_.legendIcon, _);
+        return (delete _.legendIcon, _.cloneElement(_.legendIcon, _));
       }
       return _.createElement(_, {
         fill: _,
@@ -1032,14 +1032,14 @@ var _ = 32,
       );
     }
   };
-_(_, `displayName`, `Legend`),
+(_(_, `displayName`, `Legend`),
   _(_, `defaultProps`, {
     align: `center`,
     iconSize: 14,
     inactiveColor: `#ccc`,
     layout: `horizontal`,
     verticalAlign: `middle`,
-  });
+  }));
 function _() {
   return _(_);
 }
@@ -1062,11 +1062,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -1120,10 +1120,10 @@ function _(_, _) {
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
     for (_ = 0; _ < _.length; _++)
-      (_ = _[_]),
+      ((_ = _[_]),
         _.indexOf(_) === -1 &&
           {}.propertyIsEnumerable.call(_, _) &&
-          (_[_] = _[_]);
+          (_[_] = _[_]));
   }
   return _;
 }
@@ -1295,14 +1295,14 @@ var _ = class extends _.PureComponent {
     return _.createElement(_, this.props);
   }
 };
-_(_, `displayName`, `Legend`),
+(_(_, `displayName`, `Legend`),
   _(_, `defaultProps`, {
     align: `center`,
     iconSize: 14,
     itemSorter: `value`,
     layout: `horizontal`,
     verticalAlign: `bottom`,
-  });
+  }));
 function _() {
   return (
     (_ = Object.assign
@@ -1336,11 +1336,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -1440,11 +1440,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -1674,7 +1674,7 @@ var _ = class extends _.Component {
     return _.createElement(_, this.props);
   }
 };
-_(_, `displayName`, `ReferenceLine`),
+(_(_, `displayName`, `ReferenceLine`),
   _(_, `defaultProps`, {
     ifOverflow: `discard`,
     xAxisId: 0,
@@ -1684,7 +1684,7 @@ _(_, `displayName`, `ReferenceLine`),
     fillOpacity: 1,
     strokeWidth: 1,
     position: `middle`,
-  });
+  }));
 var _ = (_, _, _, _) => _(_, `xAxis`, _, _),
   _ = (_, _, _, _) => _(_, `xAxis`, _, _),
   _ = (_, _, _, _) => _(_, `yAxis`, _, _),
@@ -1768,11 +1768,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -1826,10 +1826,10 @@ function _(_, _) {
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
     for (_ = 0; _ < _.length; _++)
-      (_ = _[_]),
+      ((_ = _[_]),
         _.indexOf(_) === -1 &&
           {}.propertyIsEnumerable.call(_, _) &&
-          (_[_] = _[_]);
+          (_[_] = _[_]));
   }
   return _;
 }
@@ -2095,10 +2095,10 @@ function _(_) {
     [_, _] = (0, _.useState)(!1),
     _ = !_,
     _ = (0, _.useCallback)(() => {
-      typeof _ == `function` && _(), _(!1);
+      (typeof _ == `function` && _(), _(!1));
     }, [_]),
     _ = (0, _.useCallback)(() => {
-      typeof _ == `function` && _(), _(!0);
+      (typeof _ == `function` && _(), _(!0));
     }, [_]),
     _ = _(_.current),
     _ = _.current;
@@ -2786,10 +2786,10 @@ var _ = _(function (_) {
         window.scrollTo(0, _);
       },
       _ = (0, _.useCallback)(() => {
-        _.UpdateFilter(), _?.();
+        (_.UpdateFilter(), _?.());
       }, [_, _]),
       _ = (_) => {
-        _(_.target.value), _.SetFacetValueSearchString(_.target.value, _, _);
+        (_(_.target.value), _.SetFacetValueSearchString(_.target.value, _, _));
       };
     _.useEffect(() => {
       !_ && _ && _();
@@ -2923,7 +2923,7 @@ var _ = _(function (_) {
     return (0, _.jsxs)(`a`, {
       className: _,
       onClick: (_) => {
-        _.preventDefault(), (_.bEnabled = !1), _ && _();
+        (_.preventDefault(), (_.bEnabled = !1), _ && _());
       },
       children: [
         (0, _.jsx)(_, {}),
@@ -3062,10 +3062,10 @@ var _ = _(function (_) {
         color: _ || `white`,
       });
     let _ = (_) => {
-        _.preventDefault(),
+        (_.preventDefault(),
           _(() => {
             _ || ((_.bEnabled = !_.bEnabled), _?.());
-          });
+          }));
       },
       _ = (_) => {
         _(() => {
@@ -3074,7 +3074,7 @@ var _ = _(function (_) {
       },
       _ = () => {
         _(() => {
-          (_.bEnabled = _.nPriceStopIndex !== _.length - 1), _?.();
+          ((_.bEnabled = _.nPriceStopIndex !== _.length - 1), _?.());
         });
       },
       _ = _,
@@ -3236,9 +3236,9 @@ function _(_) {
 var _ = 100;
 async function _(_, _) {
   let _ = new URLSearchParams();
-  _.set(`event_gids`, [...new Set(_)].sort().join(`,`)),
+  (_.set(`event_gids`, [...new Set(_)].sort().join(`,`)),
     _.set(`lang_list`, _(_)),
-    _.set(`origin`, location.origin);
+    _.set(`origin`, location.origin));
   let _ =
       _.STORE_BASE_URL + `events/ajaxgetbatchedpartnerevent/?` + _.toString(),
     _ = await fetch(_);
@@ -3510,7 +3510,7 @@ var _ = _((_) => {
       strLinkButtonClasses: _,
       bSmallButton: _,
     } = _(_);
-    _ &&
+    (_ &&
       (_ =
         _ && _
           ? (0, _.jsx)(_, {
@@ -3536,7 +3536,7 @@ var _ = _((_) => {
         url: _,
         bFocusable: !_,
         children: _,
-      }));
+      })));
   }
   return (0, _.jsxs)(`div`, {
     className: _(_, `SaleSectionLabelCtn`),
@@ -3700,7 +3700,7 @@ var _ = new Set([
   ]),
   _ = new Set([`dailydeal`, `assetrequest`]),
   _ = new Map();
-_.set(`midweek`, `Midweek Deal`),
+(_.set(`midweek`, `Midweek Deal`),
   _.set(`weekenddeal`, `Weekend Deal`),
   _.set(`saleevent`, `Sale Event`),
   _.set(`themesale`, `Theme Sale`),
@@ -3712,16 +3712,16 @@ _.set(`midweek`, `Midweek Deal`),
   _.set(`vacation`, `Vacation/PTO`),
   _.set(`important`, `Takeover / Takeunder`),
   _.set(`preload`, `Pre-load`),
-  _.set(`assetrequest`, `Asset Request Only`);
+  _.set(`assetrequest`, `Asset Request Only`));
 var _ = new Set();
-_.add(`seasonalsale`),
+(_.add(`seasonalsale`),
   _.add(`themesale`),
   _.add(`nextfest`),
-  new Set().add(`vacation`);
+  new Set().add(`vacation`));
 var _ = new Set();
 _.add(`important`);
 var _ = new Map();
-_.set(`midweek`, `#254069`),
+(_.set(`midweek`, `#254069`),
   _.set(`weekenddeal`, `#254069`),
   _.set(`saleevent`, `#819c8a`),
   _.set(`themesale`, `#819c8a`),
@@ -3733,9 +3733,9 @@ _.set(`midweek`, `#254069`),
   _.set(`vacation`, `#6f7485`),
   _.set(`important`, `#40ccfd`),
   _.set(`preload`, `#A47332`),
-  _.set(`assetrequest`, `#80875D`);
+  _.set(`assetrequest`, `#80875D`));
 var _ = new Map();
-_.set(`midweek`, `#discount_desc_preset_midweek`),
+(_.set(`midweek`, `#discount_desc_preset_midweek`),
   _.set(`weekenddeal`, `#discount_desc_preset_weekend`),
   _.set(`saleevent`, `#discount_desc_preset_special`),
   _.set(`themesale`, `#discount_desc_preset_special`),
@@ -3745,12 +3745,12 @@ _.set(`midweek`, `#discount_desc_preset_midweek`),
   _.set(`dailydeal`, `#discount_desc_preset_daily`),
   _.set(`vacation`, `#discount_desc_limited_time_date`),
   _.set(`important`, `#discount_desc_limited_time_date`),
-  _.set(`preload`, `#discount_desc_limited_time_date`);
+  _.set(`preload`, `#discount_desc_limited_time_date`));
 var _ = new Map();
-_.set(`midweek`, [`Midweek`, `Midweek Deal`]),
-  _.set(`weekenddeal`, [`Weekend`, `Weekend Deal`]);
+(_.set(`midweek`, [`Midweek`, `Midweek Deal`]),
+  _.set(`weekenddeal`, [`Weekend`, `Weekend Deal`]));
 var _ = new Map();
-_.set(`none`, ``),
+(_.set(`none`, ``),
   _.set(`takeover`, `Takeover`),
   _.set(`takeunder`, `Takeunder`),
   _.set(`hub_takeover`, `Hub`),
@@ -3758,7 +3758,7 @@ _.set(`none`, ``),
   _.set(`f2p`, `F2P`),
   _.set(`ea`, `EA`),
   _.set(`steamchina_takeover`, `SC Takeover`),
-  _.set(`steamchina_only`, `SC`);
+  _.set(`steamchina_only`, `SC`));
 var _ = [
     `marketingmessage_art`,
     `marketingmessage_art_2`,
@@ -3974,8 +3974,10 @@ function _(_, _) {
           pri: _ ? _.get(_) : void 0,
         };
       });
-    _.sort((_, _) => (_.pri ?? Number.MAX_VALUE) - (_.pri ?? Number.MAX_VALUE)),
-      (_ = _.map((_) => _.facet));
+    (_.sort(
+      (_, _) => (_.pri ?? Number.MAX_VALUE) - (_.pri ?? Number.MAX_VALUE),
+    ),
+      (_ = _.map((_) => _.facet)));
   }
   return _;
 }
@@ -3991,7 +3993,7 @@ function _(_) {
       if (_)
         for (let _ of _) {
           let _ = _.get(_);
-          _ || ((_ = []), _.set(_, _)), _.push(_);
+          (_ || ((_ = []), _.set(_, _)), _.push(_));
         }
     }),
     _
@@ -4015,24 +4017,24 @@ function _(_) {
     };
   for (let _ of _) {
     let _ = [];
-    _.set(_, _), _ === `theme_mood` ? (_(_, `theme`), _(_, `mood`)) : _(_, _);
+    (_.set(_, _), _ === `theme_mood` ? (_(_, `theme`), _(_, `mood`)) : _(_, _));
   }
   return _;
 }
 function _(_) {
   let _ = new Map();
-  _.set(`supergenre`, `#App_Taxonomy_Survey_QSuperGenreTitle`),
+  (_.set(`supergenre`, `#App_Taxonomy_Survey_QSuperGenreTitle`),
     _.set(`genre`, `#App_Taxonomy_Survey_QGenreTitle`),
     _.set(`subgenre`, `#App_Taxonomy_Survey_QSubGenreTitle`),
     _.set(`visuals`, `#App_Taxonomy_Survey_QVisualsTitle`),
     _.set(`theme_mood`, `#App_Taxonomy_Survey_QThemeMoodTitle`),
     _.set(`feature`, `#App_Taxonomy_Survey_QFeaturesTitle`),
-    _.set(`players`, `#App_Taxonomy_Survey_QPlayersTitle`);
+    _.set(`players`, `#App_Taxonomy_Survey_QPlayersTitle`));
   let _ = new Map();
   return (
     _.mapLocalizedCategoryNames.forEach((_, _) => {
       let _ = Array(32);
-      (_[0] = _.get(_) ?? ``), _.set(_, _);
+      ((_[0] = _.get(_) ?? ``), _.set(_, _));
     }),
     _
   );
@@ -4043,14 +4045,14 @@ function _(_) {
     _.mapLocalizedTagNames.forEach((_, _) => {
       let _ = _,
         _ = Array(32);
-      _.fill(``),
+      (_.fill(``),
         _.rgLanguages.forEach((_, _) => {
           let _ = _(_, -1);
           _ === -1
             ? console.warn(`Unrecognized language: ` + _)
             : 0 <= _ && _ < 32 && (_[_] = _[_]);
         }),
-        _.set(_, _);
+        _.set(_, _));
     }),
     _
   );
@@ -4093,12 +4095,12 @@ function _(_, _, _) {
         };
         _.facetValues.push(_);
       }
-      _.length > 0 &&
+      (_.length > 0 &&
         console.warn(
           `No name information found for tag count ` + _.length + `, skipping.`,
           _,
         ),
-        _.push(_);
+        _.push(_));
     }),
     _
   );
@@ -4111,7 +4113,7 @@ function _(_, _) {
     for (let _ of _.facetValues) {
       let _ = _.nAtomicStoreTagID ?? 0,
         _ = [_(String(_.get(_)))];
-      (_.type = _.k_ESaleTagFilter),
+      ((_.type = _.k_ESaleTagFilter),
         (_.filter = {
           clauses: [
             {
@@ -4119,7 +4121,7 @@ function _(_, _) {
               or_tags: _,
             },
           ],
-        });
+        }));
     }
 }
 function _(_) {
@@ -4165,7 +4167,7 @@ function _(_) {
     logical_and: !1,
     single_selection: !0,
   };
-  _.facetValues.push({
+  (_.facetValues.push({
     name: [`#Platform_Windows`],
     type: _.k_ESaleTagFilter,
     filter: {
@@ -4204,7 +4206,7 @@ function _(_) {
       },
       rgStoreTagFilter: null,
     }),
-    _.push(_);
+    _.push(_));
 }
 function _(_) {
   let _ = {
@@ -4228,7 +4230,7 @@ function _(_) {
     facetValues: [],
     logical_and: !1,
   };
-  _.facetValues.push({
+  (_.facetValues.push({
     name: [`#ContentDescriptor_GeneralMatureContent`],
     type: _.k_EContentDescriptor,
     contentDescriptor: 5,
@@ -4263,14 +4265,14 @@ function _(_) {
       filter: null,
       rgStoreTagFilter: null,
     }),
-    _.push(_);
+    _.push(_));
 }
 function _(_) {
   let _ = {
     name: [`#Sale_Preferences`],
     facetValues: [],
   };
-  _.facetValues.push({
+  (_.facetValues.push({
     name: [`#UserPreference_HideOwnedItems`],
     type: _.k_EUserPreference,
     userPreference: _.k_EHideOwnedItems,
@@ -4292,7 +4294,7 @@ function _(_) {
       filter: null,
       rgStoreTagFilter: null,
     }),
-    _.push(_);
+    _.push(_));
 }
 function _(_) {
   let _ = {
@@ -4486,18 +4488,18 @@ function _(_, _, _, _, _, _) {
       this.m_rgPriceStops = _;
     },
     SetViewer(_) {
-      (this.m_viewer = _), this.PruneFacets();
+      ((this.m_viewer = _), this.PruneFacets());
     },
     SetCapsulesRemovedByUserPreferenceFilters(_) {
       this.m_setCapsulesRemovedByUserPreferenceFilters = _;
     },
     Reset() {
-      this.m_facets.forEach((_) => {
+      (this.m_facets.forEach((_) => {
         _.facetValues.forEach((_) => {
           _.bEnabled = !!_.facetValue.bEnabledByDefault;
         });
       }),
-        this.UpdateFilter();
+        this.UpdateFilter());
     },
     SetFromURLParam(_) {
       _ !== this.m_strURLParam &&
@@ -4512,9 +4514,9 @@ function _(_, _, _, _, _, _) {
           _[1].split(`|`).forEach((_) => {
             if (_.includes(`_`)) {
               let _ = _.split(`_`);
-              (this.m_facets[_].facetValues[Number(_[0])].bEnabled = !0),
+              ((this.m_facets[_].facetValues[Number(_[0])].bEnabled = !0),
                 (this.m_facets[_].facetValues[Number(_[0])].nPriceStopIndex =
-                  Number(_[1]));
+                  Number(_[1])));
             } else
               this.m_facets[_].facetValues[Number(_)].bEnabled =
                 !this.m_facets[_].facetValues[Number(_)].facetValue
@@ -4559,10 +4561,10 @@ function _(_, _, _, _, _, _) {
             ) || (_.bHiddenBySearch = !0);
     },
     UpdateFilter() {
-      this.UpdateQuery(),
+      (this.UpdateQuery(),
         this.UpdateURLParam(),
         this.UpdateSelectedOptionsCount(),
-        this.UpdateUserPreferenceFilters();
+        this.UpdateUserPreferenceFilters());
     },
     UpdateFacetDefinitionHash(_) {
       this.m_strFacetDefinitionHash = String(_(_(_)));
@@ -4580,7 +4582,7 @@ function _(_, _, _, _, _, _) {
             : _.k_EStoreFilterClauseTypeOr,
           rgSubexpressions: [],
         };
-        _.facetValues.forEach((_) => {
+        (_.facetValues.forEach((_) => {
           let _ = _.facetValue.rgStoreTagFilter;
           if (_.bEnabled && _) {
             if (_.facetValue.type === _.k_EUserPreference) return;
@@ -4598,14 +4600,14 @@ function _(_, _, _, _, _, _) {
               _.rgSubexpressions.push(_);
           }
         }),
-          _.rgSubexpressions.length !== 0 && _.rgSubexpressions.push(_);
+          _.rgSubexpressions.length !== 0 && _.rgSubexpressions.push(_));
       });
       let _ = _(_);
       this.m_strQuery = _ ? JSON.stringify(_) : ``;
     },
     UpdateURLParam() {
       let _ = [];
-      this.m_facets.forEach((_, _) => {
+      (this.m_facets.forEach((_, _) => {
         let _ = [];
         if (
           (_.facetValues.forEach((_, _) => {
@@ -4620,43 +4622,43 @@ function _(_, _, _, _, _, _) {
         let _ = _.join(`|`);
         _.push(_ + `:` + _);
       }),
-        (this.m_strURLParam = _.length > 0 ? _.join(`,`) : void 0);
+        (this.m_strURLParam = _.length > 0 ? _.join(`,`) : void 0));
     },
     UpdateSelectedOptionsCount() {
-      (this.m_nSelectedOptions = 0),
+      ((this.m_nSelectedOptions = 0),
         this.m_facets.forEach((_) => {
           _.facetValues.forEach((_) => {
             _.bEnabled !== !!_.facetValue.bEnabledByDefault &&
               ++this.m_nSelectedOptions;
           });
-        });
+        }));
     },
     UpdateUserPreferenceFilters() {
-      (this.m_userPreferences = new Set()),
+      ((this.m_userPreferences = new Set()),
         this.m_facets.forEach((_) => {
           _.facetValues.forEach((_) => {
             _.facetValue.type === _.k_EUserPreference &&
               _.bEnabled &&
               this.m_userPreferences.add(_.facetValue.userPreference);
           });
-        });
+        }));
     },
     PruneFacets() {
-      (this.m_prunedFacets = []),
+      ((this.m_prunedFacets = []),
         this.m_facets.forEach((_) => {
-          _.facetValues.forEach((_) => {
-            (_.bDeactivated = !1), (_.nMatchingFilteredCapsules = void 0);
+          (_.facetValues.forEach((_) => {
+            ((_.bDeactivated = !1), (_.nMatchingFilteredCapsules = void 0));
           }),
             this.m_prunedFacets.push({
               facet: _,
               facetValues: _.facetValues,
-            });
+            }));
         }),
-        this.PruneFacetsForCurrentUser();
+        this.PruneFacetsForCurrentUser());
     },
     PruneFacetsForCurrentUser() {
       let _ = this.m_viewer;
-      this.m_prunedFacets.forEach((_) => {
+      (this.m_prunedFacets.forEach((_) => {
         _.facetValues = _.facetValues.filter((_) =>
           _.facetValue.type === _.k_EContentDescriptor
             ? !_ ||
@@ -4676,7 +4678,7 @@ function _(_, _, _, _, _, _) {
       }),
         (this.m_prunedFacets = this.m_prunedFacets.filter(
           (_) => _.facetValues.length > 0,
-        ));
+        )));
     },
     UpdateMatchingFilteredCapsuleCounts() {
       this.m_prunedFacets.forEach((_) => {
@@ -4772,7 +4774,7 @@ function _(_, _, _, _, _, _) {
       return _;
     },
     DeactivateFacetValues() {
-      this.m_prunedFacets.forEach((_) => {
+      (this.m_prunedFacets.forEach((_) => {
         _.facetValues.forEach((_) => {
           _.bDeactivated = !1;
         });
@@ -4787,15 +4789,15 @@ function _(_, _, _, _, _, _) {
               _ === 0 &&
               _.facetValue.type !== _.k_EUserPreference;
           });
-        });
+        }));
     },
     SortFacets() {
-      this.UpdateMatchingFilteredCapsuleCounts(),
+      (this.UpdateMatchingFilteredCapsuleCounts(),
         this.DeactivateFacetValues(),
         (this.m_sortedFacets = []),
         this.m_prunedFacets.forEach((_) => {
           let _ = _.facetValues.slice();
-          _.sort((_, _) => {
+          (_.sort((_, _) => {
             if (
               _.facetValue.type === _.k_EPrice &&
               _.facetValue.type !== _.k_EPrice
@@ -4836,23 +4838,23 @@ function _(_, _, _, _, _, _) {
             this.m_sortedFacets.push({
               ..._,
               facetValues: _,
-            });
-        });
+            }));
+        }));
     },
     UpdateMatchCount(_, _) {
-      _
+      (_
         ? ((this.m_nFilteredCapsuleCount = this.m_nSolrMatchCount),
           (this.m_nFilteredCapsuleCount -=
             this.m_setCapsulesRemovedByUserPreferenceFilters?.size || 0))
         : (this.m_nFilteredCapsuleCount = _),
-        this.SortFacets();
+        this.SortFacets());
     },
   };
   return (
     _(_),
     _.forEach((_) => {
       let _ = [];
-      _.facetValues.forEach((_) => {
+      (_.facetValues.forEach((_) => {
         _.push({
           facetValue: _,
           bEnabled: !!_.bEnabledByDefault,
@@ -4867,7 +4869,7 @@ function _(_, _, _, _, _, _) {
           facetValues: _,
           matchingCapsules: null,
           matchingCapsulesInOtherFacets: null,
-        });
+        }));
     }),
     _.PruneFacets(),
     _.UpdateFacetDefinitionHash(_),
@@ -4927,7 +4929,7 @@ async function _(_, _, _) {
       ]));
   }
   let _ = new Set();
-  _?.forEach((_) => {
+  (_?.forEach((_) => {
     _.Get()
       .GetBundle(_)
       ?.GetIncludedAppIDs()
@@ -4938,7 +4940,7 @@ async function _(_, _, _) {
         .GetPackage(_)
         ?.GetIncludedAppIDs()
         .forEach((_) => _.add(_));
-    });
+    }));
   let _ = Array.from(_).filter((_) => !_.Get().BHasApp(_, _));
   if (
     (_.length > 0 && (await _.Get().QueueMultipleAppRequests(_, _)),
@@ -5032,10 +5034,10 @@ async function _(_, _, _, _, _, _, _) {
     if (!_) continue;
     let _ = _?.GetIncludedAppIDsOrSelf(),
       _ = !1;
-    _ && (_ ||= _.every((_) => _.Get().BIsGameOwned(_))),
+    (_ && (_ ||= _.every((_) => _.Get().BIsGameOwned(_))),
       _ && (_ ||= _.every((_) => _.Get().BIsGameWishlisted(_))),
       _ && (_ ||= _.every((_) => _.Get().BIsGameIgnored(_))),
-      _ ? _ && _.push(_) : _.push(_);
+      _ ? _ && _.push(_) : _.push(_));
   }
   return _;
 }
@@ -5396,7 +5398,7 @@ var _ = `dN7XyOPtpDA-`,
         _ = this.state.nStartScrollLeft - _,
         _ = Math.abs(_ - this.state.nStartScrollLeft),
         _ = this.props.minDragPixels || _.knDefaultMinDragPixels;
-      !this.state.bInScroll &&
+      (!this.state.bInScroll &&
         _ >= _ &&
         ((_.scrollLeft = _),
         this.setState({
@@ -5405,7 +5407,7 @@ var _ = `dN7XyOPtpDA-`,
         document.body.classList.add(_),
         this.props.dragClassName && _.classList.add(this.props.dragClassName),
         _.setPointerCapture(_.pointerId)),
-        this.state.bInScroll && (_.scrollLeft = _);
+        this.state.bInScroll && (_.scrollLeft = _));
     }
     render() {
       return (0, _.jsx)(_, {
@@ -5417,9 +5419,9 @@ var _ = `dN7XyOPtpDA-`,
       });
     }
   };
-_([_], _.prototype, `OnPointerDown`, null),
+(_([_], _.prototype, `OnPointerDown`, null),
   _([_], _.prototype, `OnPointerUp`, null),
-  _([_], _.prototype, `OnPointerMove`, null);
+  _([_], _.prototype, `OnPointerMove`, null));
 var _ = `FQuVIvXzECY-`,
   _ = `EtG3bD1IPJE-`,
   _ = `_25-ogODAwZc-`,
@@ -5469,10 +5471,10 @@ function _(_) {
 function _(_, _) {
   for (var _ = 0; _ < _.length; _++) {
     var _ = _[_];
-    (_.enumerable = _.enumerable || !1),
+    ((_.enumerable = _.enumerable || !1),
       (_.configurable = !0),
       `value` in _ && (_.writable = !0),
-      Object.defineProperty(_, _(_.key), _);
+      Object.defineProperty(_, _(_.key), _));
   }
 }
 function _(_, _, _) {
@@ -5504,7 +5506,7 @@ function _(_) {
 function _(_, _) {
   if (typeof _ != `function` && _ !== null)
     throw TypeError(`Super expression must either be null or a function`);
-  (_.prototype = Object.create(_ && _.prototype, {
+  ((_.prototype = Object.create(_ && _.prototype, {
     constructor: {
       value: _,
       writable: !0,
@@ -5514,7 +5516,7 @@ function _(_, _) {
     Object.defineProperty(_, "prototype", {
       writable: !1,
     }),
-    _ && _(_, _);
+    _ && _(_, _));
 }
 function _(_, _, _) {
   return (
@@ -5543,17 +5545,17 @@ function _(_, _) {
   try {
     var _ = this.props,
       _ = this.state;
-    (this.props = _),
+    ((this.props = _),
       (this.state = _),
       (this.__reactInternalSnapshotFlag = !0),
-      (this.__reactInternalSnapshot = this.getSnapshotBeforeUpdate(_, _));
+      (this.__reactInternalSnapshot = this.getSnapshotBeforeUpdate(_, _)));
   } finally {
-    (this.props = _), (this.state = _);
+    ((this.props = _), (this.state = _));
   }
 }
-(_.__suppressDeprecationWarning = !0),
+((_.__suppressDeprecationWarning = !0),
   (_.__suppressDeprecationWarning = !0),
-  (_.__suppressDeprecationWarning = !0);
+  (_.__suppressDeprecationWarning = !0));
 function _(_) {
   var _ = _.prototype;
   if (!_ || !_.isReactComponent)
@@ -5645,10 +5647,10 @@ function _(_, _) {
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
     for (_ = 0; _ < _.length; _++)
-      (_ = _[_]),
+      ((_ = _[_]),
         _.indexOf(_) === -1 &&
           {}.propertyIsEnumerable.call(_, _) &&
-          (_[_] = _[_]);
+          (_[_] = _[_]));
   }
   return _;
 }
@@ -5716,7 +5718,7 @@ function _(_, _) {
           _ = !0
         );
     } catch (_) {
-      (_ = !0), (_ = _);
+      ((_ = !0), (_ = _));
     } finally {
       try {
         if (!_ && _.return != null && ((_ = _.return()), Object(_) !== _))
@@ -6325,7 +6327,7 @@ function _(_) {
   });
 }
 var _ = new Map();
-_.set(`midweek`, {
+(_.set(`midweek`, {
   nMaxSlots: 6,
   rtStartModifier: _.PerHour * 10,
   rtEndModifier: _.PerDay * 3 + _.PerHour * 10,
@@ -6334,7 +6336,7 @@ _.set(`midweek`, {
     _.setHours(10);
     let _ = Math.floor(_.getTime() / 1e3),
       _ = _(_);
-    return _(_), _ + `: ` + _ + (_ == 1 ? ` slot` : ` slots`);
+    return (_(_), _ + `: ` + _ + (_ == 1 ? ` slot` : ` slots`));
   },
   nDaysDiscountEvent: 7,
   rtDays: 3,
@@ -6348,11 +6350,11 @@ _.set(`midweek`, {
       _.setHours(10);
       let _ = Math.floor(_.getTime() / 1e3),
         _ = _(_);
-      return _(_), _ + `: ` + _ + (_ == 1 ? ` slot` : ` slots`);
+      return (_(_), _ + `: ` + _ + (_ == 1 ? ` slot` : ` slots`));
     },
     nDaysDiscountEvent: 7,
     rtDays: 4,
-  });
+  }));
 var _ = [`midweek`, `weekenddeal`];
 new Set(_);
 function _(_, _, _) {
@@ -6465,10 +6467,10 @@ function _(_) {
             if (!_ || _.length == 0) return [];
             let _ = [..._],
               _ = [];
-            for (; _.length > 0; ) {
+            for (; _.length > 0;) {
               let _ = new FormData(),
                 _ = _.splice(0, 250);
-              _.append(`sessionid`, _()),
+              (_.append(`sessionid`, _()),
                 _.append(`rgAppIDs`, _.join(`,`)),
                 _.append(`bExcludeExpired`, _.bExcludeExpired ? `1` : `0`),
                 _.append(
@@ -6481,7 +6483,7 @@ function _(_) {
                   _.default.post(_, _, {
                     withCredentials: !0,
                   }),
-                );
+                ));
             }
             return (
               (await Promise.all(_)).forEach((_) => {
@@ -6538,10 +6540,10 @@ function _(_) {
             if (!_ || _.length == 0) return [];
             let _ = [..._],
               _ = [];
-            for (; _.length > 0; ) {
+            for (; _.length > 0;) {
               let _ = _.splice(0, 100),
                 _ = new FormData();
-              _.append(`sessionid`, _()),
+              (_.append(`sessionid`, _()),
                 _.append(`rgBundleIDs`, _.join(`,`)),
                 _.append(`bExcludeExpired`, _.bExcludeExpired ? `1` : `0`),
                 _.nPartnerID &&
@@ -6550,7 +6552,7 @@ function _(_) {
                   _.default.post(_, _, {
                     withCredentials: !0,
                   }),
-                );
+                ));
             }
             return (
               (await Promise.all(_)).forEach((_) => {
@@ -6587,7 +6589,7 @@ function _(_) {
 var _ = new Map(),
   _ = new Map(),
   _ = {};
-(_.arabic = () =>
+((_.arabic = () =>
   _(() => import(`./partner_optin_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
     _(() => import(`./partner_optin_brazilian.js`), [], import.meta.url)),
@@ -6650,7 +6652,7 @@ var _ = new Map(),
   (_.ukrainian = () =>
     _(() => import(`./partner_optin_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./partner_optin_vietnamese.js`), [], import.meta.url));
+    _(() => import(`./partner_optin_vietnamese.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -6685,7 +6687,7 @@ function _(_) {
 function _(_, _) {
   let _ = [],
     _ = _;
-  for (let _ = 0; _ < _; _++) (_ = _(_)), _.push(_);
+  for (let _ = 0; _ < _; _++) ((_ = _(_)), _.push(_));
   return _;
 }
 function _(_) {
@@ -6837,9 +6839,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.promotion_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -6919,7 +6921,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -6940,14 +6942,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlan`;
@@ -6956,9 +6958,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.plan || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -6977,7 +6979,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -6998,14 +7000,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_CreatePlan_Request`;
@@ -7014,9 +7016,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.promotion_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -7041,7 +7043,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7062,14 +7064,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_CreatePlan_Response`;
@@ -7078,9 +7080,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.plan || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -7104,7 +7106,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7125,14 +7127,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_UpdatePlan_Request`;
@@ -7141,7 +7143,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7166,12 +7168,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_UpdatePlan_Response`;
@@ -7180,9 +7182,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.promotion_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -7202,7 +7204,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7223,14 +7225,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetPlan_Request`;
@@ -7239,9 +7241,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.plan || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -7260,7 +7262,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7281,14 +7283,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetPlan_Response`;
@@ -7297,7 +7299,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7322,12 +7324,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetAllActivePlan_Request`;
@@ -7336,9 +7338,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.plan || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -7359,7 +7361,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7380,14 +7382,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetAllActivePlan_Response`;
@@ -7396,9 +7398,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.oldest_rtime || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [3], null);
+        _.Message.initialize(this, _, 0, -1, [3], null));
     }
     static sm_m;
     static sm_mbf;
@@ -7430,7 +7432,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7451,14 +7453,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetPlanCompletedInDateRange_Request`;
@@ -7467,9 +7469,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.plans || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -7490,7 +7492,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7511,14 +7513,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetPlanCompletedInDateRange_Response`;
@@ -7527,9 +7529,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.type || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -7559,7 +7561,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7580,14 +7582,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromoAssociation`;
@@ -7596,9 +7598,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.requested || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -7619,7 +7621,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7640,14 +7642,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetPlanByAssociationID_Request`;
@@ -7656,9 +7658,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.matching || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1, 2], null);
+        _.Message.initialize(this, _, 0, -1, [1, 2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -7685,7 +7687,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7706,14 +7708,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetPlanByAssociationID_Response`;
@@ -7722,9 +7724,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.rtime || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -7749,7 +7751,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7770,14 +7772,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetPlansUpdatedSince_Request`;
@@ -7786,9 +7788,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.plans || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1, 2], null);
+        _.Message.initialize(this, _, 0, -1, [1, 2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -7817,7 +7819,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7838,14 +7840,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetPlansUpdatedSince_Response`;
@@ -7854,9 +7856,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.promotion_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -7876,7 +7878,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7897,14 +7899,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_DeletePlan_Request`;
@@ -7913,7 +7915,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7938,12 +7940,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_DeletePlan_Response`;
@@ -7952,9 +7954,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.token || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -7974,7 +7976,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -7995,14 +7997,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_SearchPlan_Request`;
@@ -8011,9 +8013,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.plan || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -8034,7 +8036,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8055,14 +8057,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_SearchPlan_Response`;
@@ -8071,9 +8073,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.appids || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -8106,7 +8108,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8127,14 +8129,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetAllPlansForApps_Request`;
@@ -8143,9 +8145,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.plans || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1, 2], null);
+        _.Message.initialize(this, _, 0, -1, [1, 2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -8172,7 +8174,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8193,14 +8195,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetAllPlansForApps_Response`;
@@ -8209,9 +8211,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.appids || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -8239,7 +8241,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8260,14 +8262,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetAllPlansForApps_Response_CAppIncludedInSales`;
@@ -8276,9 +8278,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.input_access_key || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -8298,7 +8300,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8319,14 +8321,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetPlanByInputAccessKey_Request`;
@@ -8335,9 +8337,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.plan || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -8356,7 +8358,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8377,14 +8379,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetPlanByInputAccessKey_Response`;
@@ -8393,9 +8395,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.promotion_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -8420,7 +8422,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8441,14 +8443,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_MarkLocalizationAssetComplete_Request`;
@@ -8457,7 +8459,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8482,12 +8484,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_MarkLocalizationAssetComplete_Response`;
@@ -8496,9 +8498,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.promotion_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -8528,7 +8530,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8549,14 +8551,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_SendNotification_Request`;
@@ -8565,7 +8567,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8590,12 +8592,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_SendNotification_Response`;
@@ -8604,9 +8606,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.promotion_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -8631,7 +8633,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8652,14 +8654,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetSentNotification_Request`;
@@ -8668,9 +8670,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.results || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -8691,7 +8693,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8712,14 +8714,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetSentNotification_Response`;
@@ -8728,9 +8730,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.notification_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -8780,7 +8782,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8801,14 +8803,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionNotificationResults`;
@@ -8817,9 +8819,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.promotion_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -8844,7 +8846,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8865,14 +8867,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_ResendNotification_Request`;
@@ -8881,7 +8883,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8906,12 +8908,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_ResendNotification_Response`;
@@ -8920,9 +8922,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.promotion_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -8952,7 +8954,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -8973,14 +8975,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_SetPromotionEmailTarget_Request`;
@@ -8989,7 +8991,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -9014,12 +9016,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_SetPromotionEmailTarget_Response`;
@@ -9028,9 +9030,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clan_account_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -9090,7 +9092,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -9111,14 +9113,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlan_CreateSalePageForPromo_Request`;
@@ -9127,9 +9129,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clan_account_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -9174,7 +9176,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -9195,14 +9197,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlan_CreateSalePageForPromo_Response`;
@@ -9211,9 +9213,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.total_gross_sales_usdx100 || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -9303,7 +9305,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -9324,14 +9326,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlan_SummarySaleResult`;
@@ -9340,9 +9342,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.promotionids || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -9370,7 +9372,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -9391,14 +9393,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlan_GetPromotionPlanSalesDaily_Request`;
@@ -9407,9 +9409,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.sales || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -9435,7 +9437,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -9456,14 +9458,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlan_GetPromotionPlanSalesDaily_Response`;
@@ -9472,9 +9474,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.rtime_date || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -9503,7 +9505,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -9524,14 +9526,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlan_GetPromotionPlanSalesDaily_Response_DailyPromotionSales`;
@@ -9540,9 +9542,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.appid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [5], null);
+        _.Message.initialize(this, _, 0, -1, [5], null));
     }
     static sm_m;
     static sm_mbf;
@@ -9587,7 +9589,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -9608,14 +9610,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlan_GetPromotionPlanSalesDaily_Response_Product`;
@@ -9624,9 +9626,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.promotionid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [2, 4], null);
+        _.Message.initialize(this, _, 0, -1, [2, 4], null));
     }
     static sm_m;
     static sm_mbf;
@@ -9667,7 +9669,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -9688,14 +9690,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlan_GetPromotionPlanSalesDaily_Response_PromotionSaleData`;
@@ -9704,9 +9706,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.request_list || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -9727,7 +9729,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -9748,14 +9750,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetPromotionPlanForSalePages_Request`;
@@ -9764,9 +9766,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clan_account_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -9791,7 +9793,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -9812,14 +9814,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetPromotionPlanForSalePages_Request_CSalePage`;
@@ -9828,9 +9830,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.plans || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -9851,7 +9853,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -9872,14 +9874,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetPromotionPlanForSalePages_Response`;
@@ -9888,9 +9890,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.rtstart || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -9926,7 +9928,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -9947,14 +9949,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetUpcomingScheduledDiscounts_Request`;
@@ -9963,9 +9965,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.package_details || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1, 2], null);
+        _.Message.initialize(this, _, 0, -1, [1, 2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -9992,7 +9994,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -10013,14 +10015,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetUpcomingScheduledDiscounts_Response`;
@@ -10029,9 +10031,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.package_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -10086,7 +10088,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -10107,14 +10109,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetUpcomingScheduledDiscounts_Response_CUpcomingPackageDiscountInfo`;
@@ -10123,9 +10125,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.appid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -10195,7 +10197,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -10216,14 +10218,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetUpcomingScheduledDiscounts_Response_CUpcomingAppDiscountInfo`;
@@ -10232,9 +10234,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.account_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -10259,7 +10261,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -10280,14 +10282,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetSalePageCandidatesForPromo_Request`;
@@ -10296,9 +10298,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clans || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -10319,7 +10321,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -10340,14 +10342,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetSalePageCandidatesForPromo_Response`;
@@ -10356,9 +10358,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clan_account_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -10408,7 +10410,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -10429,14 +10431,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetSalePageCandidatesForPromo_Response_salepage`;
@@ -10445,9 +10447,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clan_account_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [4], null);
+        _.Message.initialize(this, _, 0, -1, [4], null));
     }
     static sm_m;
     static sm_mbf;
@@ -10483,7 +10485,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -10504,14 +10506,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetSalePageCandidatesForPromo_Response_clan`;
@@ -10520,9 +10522,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.partner_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -10542,7 +10544,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -10563,14 +10565,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetAdvertisingAppsForPartner_Request`;
@@ -10579,9 +10581,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.advertising_apps || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -10602,7 +10604,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -10623,14 +10625,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetAdvertisingAppsForPartner_Response`;
@@ -10639,9 +10641,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.appid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -10671,7 +10673,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -10692,14 +10694,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionPlanning_GetAdvertisingAppsForPartner_Response_advertising_app`;
@@ -10708,9 +10710,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.spotlight_due_date || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -10740,7 +10742,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -10761,14 +10763,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionRequirements`;
@@ -10777,9 +10779,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.inviteid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [16], null);
+        _.Message.initialize(this, _, 0, -1, [16], null));
     }
     static sm_m;
     static sm_mbf;
@@ -10910,7 +10912,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -10931,14 +10933,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionEventInvitation`;
@@ -10947,9 +10949,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.invite || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -10973,7 +10975,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -10994,14 +10996,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionEventInvites_SetInvite_Request`;
@@ -11010,9 +11012,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.inviteid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -11032,7 +11034,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11053,14 +11055,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionEventInvites_SetInvite_Response`;
@@ -11069,9 +11071,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.inviteid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -11116,7 +11118,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11137,14 +11139,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionEventInvites_GetInvite_Request`;
@@ -11153,9 +11155,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.invites || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -11176,7 +11178,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11197,14 +11199,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionEventInvites_GetInvite_Response`;
@@ -11213,9 +11215,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.inviteid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -11240,7 +11242,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11261,14 +11263,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionEventInvites_ResendEmailInvite_Request`;
@@ -11277,7 +11279,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11302,12 +11304,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionEventInvites_ResendEmailInvite_Response`;
@@ -11316,9 +11318,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.inviteid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -11338,7 +11340,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11359,14 +11361,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionEventInvites_GetEmailTargets_Request`;
@@ -11375,9 +11377,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.accountid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -11407,7 +11409,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11428,14 +11430,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionEventInviteReceive`;
@@ -11444,9 +11446,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.targets || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
+        _.Message.initialize(this, _, 0, -1, [1, 2, 3], null));
     }
     static sm_m;
     static sm_mbf;
@@ -11487,7 +11489,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11508,14 +11510,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionEventInvites_GetEmailTargets_Response`;
@@ -11524,9 +11526,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.inviteid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -11566,7 +11568,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11587,14 +11589,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionEventInvites_AcceptInvite_Request`;
@@ -11603,9 +11605,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -11625,7 +11627,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11646,14 +11648,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionEventInvites_AcceptInvite_Response`;
@@ -11662,9 +11664,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.inviteid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -11684,7 +11686,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11705,14 +11707,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionEventInvites_CancelInvite_Request`;
@@ -11721,7 +11723,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11746,12 +11748,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionEventInvites_CancelInvite_Response`;
@@ -11760,9 +11762,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.opt_in_name || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -11787,7 +11789,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11808,14 +11810,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionStats_GetOptInDemoStats_Request`;
@@ -11824,9 +11826,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.stats || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1, 2], null);
+        _.Message.initialize(this, _, 0, -1, [1, 2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -11855,7 +11857,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11876,14 +11878,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionStats_GetOptInDemoStats_Response`;
@@ -11892,9 +11894,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.appid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -11959,7 +11961,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -11980,14 +11982,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPromotionStats_GetOptInDemoStats_Response_PerAppStats`;
@@ -12327,7 +12329,7 @@ function _(_, _) {
       queryKey: [`demostats_${_}_${_}`],
       queryFn: async () => {
         let _ = _.Init(_);
-        _.Body().set_opt_in_name(_), _.Body().set_partner_id(_);
+        (_.Body().set_opt_in_name(_), _.Body().set_partner_id(_));
         let _ = (await _.GetOptInDemoStats(_, _)).Body().toObject();
         return {
           stats: _.stats,
@@ -12345,17 +12347,17 @@ var _ = class {
   m_bDirty = !1;
   m_callback = new _();
   constructor(_, _) {
-    _(this), this.Reset(_, _);
+    (_(this), this.Reset(_, _));
   }
   Reset(_, _) {
-    (this.m_planID = _),
+    ((this.m_planID = _),
       (this.m_originalInput = JSON.parse(JSON.stringify(_))),
       (this.m_oInput = JSON.parse(JSON.stringify(_))),
-      (this.m_bDirty = !1);
+      (this.m_bDirty = !1));
   }
   SaveSuccessClearDirty() {
-    (this.m_originalInput = JSON.parse(JSON.stringify(this.m_oInput))),
-      (this.m_bDirty = !1);
+    ((this.m_originalInput = JSON.parse(JSON.stringify(this.m_oInput))),
+      (this.m_bDirty = !1));
   }
   GetInputPipeline() {
     return this.m_oInput;
@@ -12590,10 +12592,10 @@ var _ = class {
     return this.m_oInput.asset_request_contact_info || ``;
   }
   ClearInput() {
-    (this.m_oInput.preview_art = []),
+    ((this.m_oInput.preview_art = []),
       (this.m_oInput.input_artwork_url = void 0),
       (this.m_oInput.partner_note = void 0),
-      this.Dispatch();
+      this.Dispatch());
   }
   SetInputArtworkLink(_) {
     this.m_oInput.input_artwork_url != _ &&
@@ -12608,7 +12610,7 @@ var _ = class {
       if (_) this.m_oInput.art_requests.push(_);
       else {
         let _ = new Map();
-        _.set(`marketingmessage_art`, `marketingmessage_art_eventcapsule`),
+        (_.set(`marketingmessage_art`, `marketingmessage_art_eventcapsule`),
           _.set(
             `marketingmessage_art_2`,
             `marketingmessage_art_2_eventcapsule`,
@@ -12617,7 +12619,7 @@ var _ = class {
           _.set(
             `marketingmessage_art_2_eventcapsule`,
             `marketingmessage_art_2`,
-          );
+          ));
         let _ = this.m_oInput.art_requests.findIndex((_) => _ === _);
         if ((_ >= 0 && this.m_oInput.art_requests.splice(_, 1), _.has(_))) {
           let _ = _.get(_),
@@ -12655,10 +12657,10 @@ var _ = class {
       ((this.m_oInput.partner_note = _), this.Dispatch());
   }
   SetRequestedArt(_) {
-    (this.m_oInput.art_requests = [..._]), this.Dispatch();
+    ((this.m_oInput.art_requests = [..._]), this.Dispatch());
   }
   AddRequestedArt(_) {
-    this.m_oInput.art_requests.push(_), this.Dispatch();
+    (this.m_oInput.art_requests.push(_), this.Dispatch());
   }
   SetPreviewArt(_, _, _) {
     this.m_oInput.preview_art || (this.m_oInput.preview_art = []);
@@ -12689,14 +12691,15 @@ var _ = class {
         this.Dispatch());
   }
   SetArtApprovals(_) {
-    this.m_oInput.approvals_provided || (this.m_oInput.approvals_provided = []),
+    (this.m_oInput.approvals_provided ||
+      (this.m_oInput.approvals_provided = []),
       this.m_oInput.approvals_provided.findIndex((_) => _.type == _) < 0 &&
         (this.m_oInput.approvals_provided.push({
           type: _,
           approval_accountid: _.accountid,
           approval_time: Math.floor(Date.now() / 1e3),
         }),
-        this.Dispatch());
+        this.Dispatch()));
   }
   SetContentHubTakeover(_) {
     this.m_oInput.content_hub_takeover != _ &&
@@ -12712,15 +12715,15 @@ var _ = class {
       this.Dispatch());
   }
   RevertChanges() {
-    (this.m_oInput = JSON.parse(JSON.stringify(this.m_originalInput))),
+    ((this.m_oInput = JSON.parse(JSON.stringify(this.m_originalInput))),
       (this.m_bDirty = !1),
-      this.m_callback.Dispatch(this);
+      this.m_callback.Dispatch(this));
   }
   Dispatch() {
-    (this.m_bDirty = !0), this.m_callback.Dispatch(this);
+    ((this.m_bDirty = !0), this.m_callback.Dispatch(this));
   }
 };
-_([_], _.prototype, `m_bDirty`, void 0),
+(_([_], _.prototype, `m_bDirty`, void 0),
   _([_], _.prototype, `ClearInput`, null),
   _([_], _.prototype, `SetInputArtworkLink`, null),
   _([_], _.prototype, `SetAssetRequestContactInfo`, null),
@@ -12737,7 +12740,7 @@ _([_], _.prototype, `m_bDirty`, void 0),
   _([_], _.prototype, `SetArtApprovals`, null),
   _([_], _.prototype, `SetContentHubTakeover`, null),
   _([_], _.prototype, `SetUpdateEvent`, null),
-  _([_], _.prototype, `RevertChanges`, null);
+  _([_], _.prototype, `RevertChanges`, null));
 var _ = class _ {
   m_model = null;
   m_SteamInterface = null;
@@ -12759,8 +12762,8 @@ var _ = class _ {
   async UpdateInputPlanPartnerInfo(_) {
     let _ = _.Init(_),
       _ = this.m_model.GetModel();
-    (_.submitting_accountid = _.accountid),
-      (_.submitting_rtime = Math.floor(Date.now() / 1e3));
+    ((_.submitting_accountid = _.accountid),
+      (_.submitting_rtime = Math.floor(Date.now() / 1e3)));
     let _ = {
       promotion_id: this.m_model.GetPlanID(),
       input_jsondata: JSON.stringify(_),
@@ -12769,8 +12772,8 @@ var _ = class _ {
       partner_jsondata: JSON.stringify({}),
       input_access_key: _,
     };
-    _.Body().set_plan(_.fromObject(_)),
-      _.Body().set_promotion_id(_.promotion_id);
+    (_.Body().set_plan(_.fromObject(_)),
+      _.Body().set_promotion_id(_.promotion_id));
     let _ = null;
     try {
       let _ = null;
@@ -12786,7 +12789,7 @@ var _ = class _ {
             )),
         _.GetEResult() == 1)
       )
-        return this.m_model.SaveSuccessClearDirty(), !0;
+        return (this.m_model.SaveSuccessClearDirty(), !0);
       _ = _(_);
     } catch (_) {
       _ = _(_);
@@ -12830,7 +12833,7 @@ function _() {
     [_, _] = _.useState(_.Get().GetPromotionPlanToEdit());
   return (
     _(_?.GetCallback(), (_) => {
-      _(_), _();
+      (_(_), _());
     }),
     _
   );
@@ -13044,10 +13047,10 @@ var _ = class {
   m_callback = new _();
   m_storeItemKey = null;
   constructor(_, _) {
-    _(this), this.Reset(_, _);
+    (_(this), this.Reset(_, _));
   }
   Reset(_, _) {
-    (this.m_originalPromotionPlan = JSON.parse(JSON.stringify(_))),
+    ((this.m_originalPromotionPlan = JSON.parse(JSON.stringify(_))),
       (this.m_oPromotionPlan = JSON.parse(JSON.stringify(_))),
       (this.m_bDirty = !1),
       (this.m_nOriginalPartnerID = _),
@@ -13068,14 +13071,14 @@ var _ = class {
       (this.m_oPromotionPlan.contenthub_takeover_types =
         this.m_oPromotionPlan.contenthub_takeover_types ?? []),
       (this.m_oPromotionPlan.contenthub_takeover_reviewed =
-        this.m_oPromotionPlan.contenthub_takeover_reviewed ?? []);
+        this.m_oPromotionPlan.contenthub_takeover_reviewed ?? []));
   }
   SaveSuccessClearDirty() {
-    (this.m_originalPromotionPlan = JSON.parse(
+    ((this.m_originalPromotionPlan = JSON.parse(
       JSON.stringify(this.m_oPromotionPlan),
     )),
       (this.m_bDirty = !1),
-      (this.m_nOriginalPartnerID = this.m_nPartnerID);
+      (this.m_nOriginalPartnerID = this.m_nPartnerID));
   }
   GetPlan() {
     return this.m_oPromotionPlan;
@@ -13199,7 +13202,7 @@ var _ = class {
       case `app_main_capsule`:
         return this.BHasAdvertisingAppID();
     }
-    return _(!1, `Unexpected artwork promo type; ` + _), !1;
+    return (_(!1, `Unexpected artwork promo type; ` + _), !1);
   }
   BHasSpotlightIDs(_) {
     return _ >= 0 && this.m_oPromotionPlan.spotlight_ids?.length > _
@@ -13770,12 +13773,12 @@ var _ = class {
       this.Dispatch());
   }
   AddTakeUnderID(_) {
-    this.m_oPromotionPlan.takeunder_ids ||
+    (this.m_oPromotionPlan.takeunder_ids ||
       ((this.m_oPromotionPlan.takeunder_ids = []),
       (this.m_oPromotionPlan.takeover_reviewed = [])),
       this.m_oPromotionPlan.takeunder_ids.push(_),
       this.m_oPromotionPlan.takeover_reviewed.push(null),
-      this.Dispatch();
+      this.Dispatch());
   }
   SetTakeunderID(_, _) {
     this.m_oPromotionPlan.takeunder_ids
@@ -13794,10 +13797,10 @@ var _ = class {
         this.Dispatch());
   }
   AddContentHubTakeoverID(_, _) {
-    this.m_oPromotionPlan.contenthub_takeover_ids.push(_),
+    (this.m_oPromotionPlan.contenthub_takeover_ids.push(_),
       this.m_oPromotionPlan.contenthub_takeover_types.push(_),
       this.m_oPromotionPlan.contenthub_takeover_reviewed.push(null),
-      this.Dispatch();
+      this.Dispatch());
   }
   SetContentHubTakeoverID(_, _, _) {
     (this.m_oPromotionPlan.contenthub_takeover_ids[_] !== _ ||
@@ -13820,12 +13823,12 @@ var _ = class {
         this.Dispatch());
   }
   AddSteamChinaTakeoverID(_) {
-    this.m_oPromotionPlan.steamchina_takeover_ids ||
+    (this.m_oPromotionPlan.steamchina_takeover_ids ||
       ((this.m_oPromotionPlan.steamchina_takeover_ids = []),
       (this.m_oPromotionPlan.steamchina_takeover_reviewed = [])),
       this.m_oPromotionPlan.steamchina_takeover_ids.push(_),
       this.m_oPromotionPlan.steamchina_takeover_reviewed.push(null),
-      this.Dispatch();
+      this.Dispatch());
   }
   SetSteamChinaTakeoverID(_, _) {
     this.m_oPromotionPlan.steamchina_takeover_ids
@@ -13890,12 +13893,12 @@ var _ = class {
     }
   }
   AddTakeoverID(_) {
-    this.m_oPromotionPlan.takeover_ids ||
+    (this.m_oPromotionPlan.takeover_ids ||
       ((this.m_oPromotionPlan.takeover_ids = []),
       (this.m_oPromotionPlan.takeover_reviewed = [])),
       this.m_oPromotionPlan.takeover_ids.push(_),
       this.m_oPromotionPlan.takeover_reviewed.push(null),
-      this.Dispatch();
+      this.Dispatch());
   }
   SetTakeoverID(_, _) {
     this.m_oPromotionPlan.takeover_ids
@@ -13912,12 +13915,12 @@ var _ = class {
         this.Dispatch());
   }
   AddMarketingMessageID(_) {
-    this.m_oPromotionPlan.marketing_message_ids ||
+    (this.m_oPromotionPlan.marketing_message_ids ||
       ((this.m_oPromotionPlan.marketing_message_ids = []),
       (this.m_oPromotionPlan.marketing_message_reviewed = [])),
       this.m_oPromotionPlan.marketing_message_ids.push(_),
       this.m_oPromotionPlan.marketing_message_reviewed.push(null),
-      this.Dispatch();
+      this.Dispatch());
   }
   SetMarketingMessageID(_, _) {
     this.m_oPromotionPlan.marketing_message_ids
@@ -13938,11 +13941,11 @@ var _ = class {
         this.Dispatch());
   }
   AddSpotlightID(_) {
-    this.m_oPromotionPlan.spotlight_ids ||
+    (this.m_oPromotionPlan.spotlight_ids ||
       ((this.m_oPromotionPlan.spotlight_ids = []),
       (this.m_oPromotionPlan.spotlight_reviewed = [])),
       this.m_oPromotionPlan.spotlight_ids.push(_),
-      this.m_oPromotionPlan.spotlight_reviewed.push(null);
+      this.m_oPromotionPlan.spotlight_reviewed.push(null));
   }
   SetSpotlightID(_, _) {
     this.m_oPromotionPlan.spotlight_ids
@@ -14039,7 +14042,7 @@ var _ = class {
   RemoveFromWatchList(_) {
     if (this.BOnWatchList(_)) {
       let _ = this.m_oPromotionPlan.watch_list.findIndex((_) => _ == _);
-      this.m_oPromotionPlan.watch_list.splice(_, 1), this.Dispatch();
+      (this.m_oPromotionPlan.watch_list.splice(_, 1), this.Dispatch());
     }
   }
   SetArtworkLocalizationSteamChinaOnly(_) {
@@ -14054,32 +14057,32 @@ var _ = class {
   }
   ToggleArtworkLocalizationRequest(_, _) {
     if (_ && !this.BHasArtworkLocalizationRequest(_))
-      this.m_oPromotionPlan.artwork_localization_request_items ||
+      (this.m_oPromotionPlan.artwork_localization_request_items ||
         (this.m_oPromotionPlan.artwork_localization_request_items = []),
         this.m_oPromotionPlan.artwork_localization_request_items.push(_),
-        this.Dispatch();
+        this.Dispatch());
     else if (!_ && this.BHasArtworkLocalizationRequest(_)) {
       let _ =
         this.m_oPromotionPlan.artwork_localization_request_items.findIndex(
           (_) => _ == _,
         );
-      this.m_oPromotionPlan.artwork_localization_request_items.splice(_, 1),
-        this.Dispatch();
+      (this.m_oPromotionPlan.artwork_localization_request_items.splice(_, 1),
+        this.Dispatch());
     }
   }
   RevertChanges() {
-    (this.m_oPromotionPlan = JSON.parse(
+    ((this.m_oPromotionPlan = JSON.parse(
       JSON.stringify(this.m_originalPromotionPlan),
     )),
       (this.m_nPartnerID = this.m_nOriginalPartnerID),
       (this.m_bDirty = !1),
-      this.m_callback.Dispatch(this);
+      this.m_callback.Dispatch(this));
   }
   Dispatch() {
-    (this.m_bDirty = !0), this.m_callback.Dispatch(this);
+    ((this.m_bDirty = !0), this.m_callback.Dispatch(this));
   }
 };
-_([_], _.prototype, `m_nPartnerID`, void 0),
+(_([_], _.prototype, `m_nPartnerID`, void 0),
   _([_], _.prototype, `m_nOriginalPartnerID`, void 0),
   _([_], _.prototype, `m_bDirty`, void 0),
   _([_], _.prototype, `GetSpotlightReviewed`, null),
@@ -14178,7 +14181,7 @@ _([_], _.prototype, `m_nPartnerID`, void 0),
   _([_], _.prototype, `SetArtworkLocalizationSteamChinaOnly`, null),
   _([_], _.prototype, `SetArtworkProductionTeamDueDate`, null),
   _([_], _.prototype, `ToggleArtworkLocalizationRequest`, null),
-  _([_], _.prototype, `RevertChanges`, null);
+  _([_], _.prototype, `RevertChanges`, null));
 var _ = class _ {
   m_model = null;
   InitPromotionPlanToEdit(_, _, _ = !1) {
@@ -14198,7 +14201,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -14213,7 +14216,7 @@ function _() {
     [_, _] = _.useState(_.Get().GetPromotionPlanToEdit());
   return (
     _(_?.GetCallback(), (_) => {
-      _(_), _();
+      (_(_), _());
     }),
     _
   );
@@ -14327,21 +14330,21 @@ var _ = class _ {
     let _ = _.promotion_id(),
       _ = _.toObject(),
       _ = JSON.parse(_.admin_jsondata);
-    return (_._ = _), (_.admin_jsondata = JSON.stringify(_)), _;
+    return ((_._ = _), (_.admin_jsondata = JSON.stringify(_)), _);
   }
   AddPlansIntoMemory(_) {
     let _ = this.InternalEnsureIDsMatch(_);
-    (_.input_jsondata ||= JSON.stringify({})),
-      (_.partner_jsondata ||= JSON.stringify({}));
+    ((_.input_jsondata ||= JSON.stringify({})),
+      (_.partner_jsondata ||= JSON.stringify({})));
     let _ = _.promotion_id,
       _ = _.input_access_key;
-    this.m_mapPlans.set(_, _),
+    (this.m_mapPlans.set(_, _),
       this.m_mapPlanByAccessKey.set(_, _),
       this.m_rgActivePlanIDs.push(_),
       this.GetPlanChangeCallback(_).Dispatch(JSON.parse(_.admin_jsondata)),
       this.GetPipelineInputChangeCallback(_).Dispatch(
         JSON.parse(_.input_jsondata),
-      );
+      ));
   }
   async InternalLoadAllActivePlans() {
     let _ = _.Init(_),
@@ -14389,8 +14392,8 @@ var _ = class _ {
     let _ = _.Init(_),
       _ = 2592e3,
       _ = _();
-    _.Body().set_newest_rtime(_ - _ * _),
-      _.Body().set_oldest_rtime(_ - (_ + 6) * _);
+    (_.Body().set_newest_rtime(_ - _ * _),
+      _.Body().set_oldest_rtime(_ - (_ + 6) * _));
     let _ = null;
     try {
       let _ = await _.GetPlanCompletedInDateRange(
@@ -14405,7 +14408,7 @@ var _ = class _ {
             .forEach((_) => {
               let _ = this.InternalEnsureIDsMatch(_),
                 _ = _.input_access_key;
-              this.m_mapPlans.set(_.promotion_id, _),
+              (this.m_mapPlans.set(_.promotion_id, _),
                 this.m_mapPlanByAccessKey.set(_, _),
                 (_.input_jsondata ||= JSON.stringify({})),
                 (_.partner_jsondata ||= JSON.stringify({})),
@@ -14415,7 +14418,7 @@ var _ = class _ {
                 ),
                 this.GetPipelineInputChangeCallback(_).Dispatch(
                   JSON.parse(_.input_jsondata),
-                );
+                ));
             }),
           !0
         );
@@ -14515,14 +14518,14 @@ var _ = class _ {
         blog_post_clan_accountid: void 0,
         create_time: _,
       };
-    _ && (_.spotlight_ids = [_]),
+    (_ && (_.spotlight_ids = [_]),
       _ && (_.marketing_message_ids = [_]),
       _ && (_.takeover_ids = [_]),
       _ && (_.takeunder_ids = [_]),
       _ && (_.dailydeal_ids = [_]),
       _ && (_.advertising_appid = _),
       _ && (_.sale_clan_account = _),
-      _ && (_.sale_clan_event_gid = _);
+      _ && (_.sale_clan_event_gid = _));
     let _ = {
       admin_jsondata: JSON.stringify(_),
       partner_jsondata: JSON.stringify({}),
@@ -14576,7 +14579,7 @@ var _ = class _ {
         ),
         !1
       );
-    _?.enable_input &&
+    (_?.enable_input &&
       ((_.requested_promotion_name = _.name),
       _.store_item_id &&
         ((_.requested_store_item_id = _.store_item_id),
@@ -14599,7 +14602,7 @@ var _ = class _ {
         (_.input_jsondata = JSON.stringify(_))),
       (_.partner_id = _),
       _.Body().set_plan(_.fromObject(_)),
-      _.Body().set_promotion_id(_._);
+      _.Body().set_promotion_id(_._));
     let _ = null;
     try {
       let _ = await _.UpdatePlan(
@@ -14607,7 +14610,7 @@ var _ = class _ {
         _,
       );
       if (_.GetEResult() == 1)
-        return this.GetPlanChangeCallback(_._).Dispatch(_), !0;
+        return (this.GetPlanChangeCallback(_._).Dispatch(_), !0);
       _ = _(_);
     } catch (_) {
       _ = _(_);
@@ -14648,11 +14651,11 @@ var _ = class _ {
     );
   }
   DeletePlanFromMemory(_) {
-    this.m_mapPlans.delete(_), this.GetPlanChangeCallback(_).Dispatch(null);
+    (this.m_mapPlans.delete(_), this.GetPlanChangeCallback(_).Dispatch(null));
   }
   async RefreshPlans(_, _) {
     let _ = _.Init(_);
-    _.Body().set_rtime(_), _ && _.Body().set_upto_rtime(_);
+    (_.Body().set_rtime(_), _ && _.Body().set_upto_rtime(_));
     let _ = null;
     try {
       let _ = await _.GetPlansUpdatedSince(
@@ -14693,10 +14696,10 @@ var _ = class _ {
     let _ = _(`promotion_plans`, `application_config`);
     this.BIsValidPlanList(_) &&
       _.forEach((_) => {
-        this.m_mapPlans.set(_.promotion_id, _),
+        (this.m_mapPlans.set(_.promotion_id, _),
           _.input_access_key &&
             this.m_mapPlanByAccessKey.set(_.input_access_key, _),
-          this.m_rgActivePlanIDs.push(_.promotion_id);
+          this.m_rgActivePlanIDs.push(_.promotion_id));
       });
   }
   BIsValidPlanList(_) {
@@ -14711,7 +14714,7 @@ var _ = class _ {
       this.m_rgActivePlanIDs.push(_.promotion_id));
   }
 };
-_([_], _.prototype, `LoadAllActivePlans`, null),
+(_([_], _.prototype, `LoadAllActivePlans`, null),
   _([_], _.prototype, `AddPlansIntoMemory`, null),
   _([_], _.prototype, `LoadPastMonthPlans`, null),
   _([_], _.prototype, `LoadPlanByID`, null),
@@ -14720,7 +14723,7 @@ _([_], _.prototype, `LoadAllActivePlans`, null),
   _([_], _.prototype, `UpdateAdminPlan`, null),
   _([_], _.prototype, `DeletePlan`, null),
   _([_], _.prototype, `DeletePlanFromMemory`, null),
-  _([_], _.prototype, `RefreshPlans`, null);
+  _([_], _.prototype, `RefreshPlans`, null));
 function _() {
   let [_, _] = _.useState(_.Get().GetAllPlans());
   return (
@@ -14752,7 +14755,7 @@ function _(_, _) {
             _ ? _(_.Get().GetPlanByID(_)) : _(!0);
           })
           .catch((_) => {
-            console.error(`usePromotionPlanContainer error: ` + _(_)), _(!0);
+            (console.error(`usePromotionPlanContainer error: ` + _(_)), _(!0));
           });
     }, [_, _, _]),
     _(_.Get().GetPlanChangeCallback(_), (_) => {
@@ -14784,7 +14787,7 @@ function _(_, _) {
         _ = new Date();
       _.setDate(_.getDate() - _.getDay() + 1);
       let _ = _(_(_));
-      _.forEach((_) => {
+      (_.forEach((_) => {
         let _ = [];
         for (let _ = 0; _ <= _; ++_)
           _.push({
@@ -14801,7 +14804,7 @@ function _(_, _) {
             _ < _.length && _[_].rgPlans.push(_);
           }
         }),
-        _(_);
+        _(_));
     }, [_, _, _]),
     _
   );
@@ -14885,7 +14888,7 @@ function _(_) {
             let _ = !_;
             if (_)
               try {
-                (_ = await _(
+                ((_ = await _(
                   _.GetPartnerID(),
                   _.GetModel(),
                   void 0,
@@ -14898,7 +14901,7 @@ function _(_) {
                       _.SaveSuccessClearDirty())
                     : _.fnSetStrError(
                         `Save failed. Please try again later (check consoles for details)`,
-                      );
+                      ));
               } catch {
                 _.fnSetSuccess(!1);
               }
@@ -14906,7 +14909,7 @@ function _(_) {
           }
         },
         onCancel: () => {
-          _.onCancel && _.onCancel(), _.closeModal && _.closeModal();
+          (_.onCancel && _.onCancel(), _.closeModal && _.closeModal());
         },
         children: _.children,
       });
@@ -14941,8 +14944,8 @@ var _ = class _ {
         .messages()
         .forEach((_) => {
           let _ = _.toObject();
-          _.push(_),
-            this.m_mapMessages.has(_.gid) || this.m_mapMessages.set(_.gid, _);
+          (_.push(_),
+            this.m_mapMessages.has(_.gid) || this.m_mapMessages.set(_.gid, _));
         }),
       _
     );
@@ -14995,7 +14998,7 @@ var _ = class _ {
     let _ = null;
     try {
       let _ = _.Init(_);
-      _.Body().set_lookup_type(1), _.Body().set_gid(_);
+      (_.Body().set_lookup_type(1), _.Body().set_gid(_));
       let _ = await _.FindMarketingMessages(
         this.m_steamInterface.GetServiceTransport(),
         _,
@@ -15004,8 +15007,8 @@ var _ = class _ {
         let _ = this.HandleFindMessageRseponse(_);
         if (_.length > 0) {
           let _ = _[0];
-          this.m_mapMessages.set(_.gid, _),
-            this.GetCallbackForMarketingMessage(_.gid).Dispatch(_);
+          (this.m_mapMessages.set(_.gid, _),
+            this.GetCallbackForMarketingMessage(_.gid).Dispatch(_));
         }
         return this.m_mapMessages.get(_);
       }
@@ -15026,7 +15029,7 @@ var _ = class _ {
     let _ = null;
     try {
       let _ = _.Init(_);
-      _.Body().set_message_type(_),
+      (_.Body().set_message_type(_),
         _ === void 0
           ? (_.Body().set_lookup_type(3),
             _?.trim().length > 0
@@ -15034,7 +15037,7 @@ var _ = class _ {
                 _.charAt(_.length - 1) != `%` && (_ += `%`),
                 _.Body().set_title(_.trim()))
               : _.Body().set_title(`%`))
-          : (_.Body().set_lookup_type(5), _.Body().set_associated_id(_));
+          : (_.Body().set_lookup_type(5), _.Body().set_associated_id(_)));
       let _ = await _.FindMarketingMessages(
         this.m_steamInterface.GetServiceTransport(),
         _,
@@ -15059,7 +15062,7 @@ var _ = class _ {
     let _ = null;
     try {
       let _ = _.Init(_);
-      _.Body().set_message(_.fromObject(_)), _.Body().set_from_json(_);
+      (_.Body().set_message(_.fromObject(_)), _.Body().set_from_json(_));
       let _ = await _.CreateMarketingMessage(
         this.m_steamInterface.GetServiceTransport(),
         _,
@@ -15093,9 +15096,9 @@ var _ = class _ {
     try {
       let _ = _.Init(_),
         _ = _.PrepareMessageModelForUpdate();
-      _.Body().set_message(_.fromObject(_)),
+      (_.Body().set_message(_.fromObject(_)),
         _.Body().set_from_json(!0),
-        _.Body().set_gid(_.gid);
+        _.Body().set_gid(_.gid));
       let _ = await _.UpdateMarketingMessage(
         this.m_steamInterface.GetServiceTransport(),
         _,
@@ -15162,7 +15165,7 @@ var _ = class _ {
     let _ = _(`marketing_messages`, `application_config`);
     this.BIsValidPlanList(_) &&
       _.forEach((_) => {
-        this.m_mapMessages.set(_.gid, _), (this.m_rgActiveMessages = _);
+        (this.m_mapMessages.set(_.gid, _), (this.m_rgActiveMessages = _));
       });
   }
   BIsValidPlanList(_) {
@@ -15173,10 +15176,10 @@ var _ = class _ {
     return this.m_steamInterface;
   }
 };
-_([_], _.prototype, `Search`, null),
+(_([_], _.prototype, `Search`, null),
   _([_], _.prototype, `CreateMarketingMessage`, null),
   _([_], _.prototype, `UpdateMarketingMessage`, null),
-  _([_], _.prototype, `DeleteMarketingMessage`, null);
+  _([_], _.prototype, `DeleteMarketingMessage`, null));
 function _() {
   return _.Get().GetSteamInterface();
 }
@@ -15229,15 +15232,15 @@ function _(_, _, _ = 0) {
     queryKey: [`usePastMarketingMessage`, _, _],
     queryFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_start_past_days(_), _.Body().set_upto_past_days(_);
+      (_.Body().set_start_past_days(_), _.Body().set_upto_past_days(_));
       let _ = await _.GetPastMarketingMessages(_, _);
       if (_.GetEResult() !== 1)
         throw (
-          (console.error(
+          console.error(
             `Received error from GetPastMarketingMessages`,
             _.GetEResult(),
           ),
-          Error(`Error from GetPastMarketingMessages: ${_.GetEResult()}`))
+          Error(`Error from GetPastMarketingMessages: ${_.GetEResult()}`)
         );
       return _.Body()
         .messages()
@@ -15313,7 +15316,7 @@ var _ = class _ {
       let _ =
           _.PARTNER_BASE_URL + `promotion/spotlights/ajaxcreatenewspotlight`,
         _ = new FormData();
-      _.append(`sessionid`, _()), _.append(`spotlight`, JSON.stringify(_));
+      (_.append(`sessionid`, _()), _.append(`spotlight`, JSON.stringify(_)));
       let _ = _.association;
       _?.appid && _.association_type == `application`
         ? _.append(`nAppID`, `` + _.appid)
@@ -15347,11 +15350,11 @@ var _ = class _ {
   }
   SetSpotlight(_) {
     let _ = this.m_rgSpotlights.findIndex((_) => _._ == _._);
-    this.m_mapSpotlights.set(_._, _),
+    (this.m_mapSpotlights.set(_._, _),
       _ >= 0 &&
         ((this.m_rgSpotlights[_] = _),
         this.GetCallbackForSpotlightList().Dispatch(this.m_rgSpotlights)),
-      this.GetCallbackForSpotlightID(_._).Dispatch(_);
+      this.GetCallbackForSpotlightID(_._).Dispatch(_));
   }
   static s_Singleton;
   static Get() {
@@ -15362,7 +15365,7 @@ var _ = class _ {
   }
   constructor() {}
   InternalAddSpotlight(_) {
-    this.m_mapSpotlights.set(_._, _), this.m_rgSpotlights.push(_);
+    (this.m_mapSpotlights.set(_._, _), this.m_rgSpotlights.push(_));
   }
   Init() {
     let _ = _(`spotlightinfo`, `application_config`);
@@ -15377,12 +15380,12 @@ var _ = class _ {
       : !1;
   }
 };
-_([_], _.prototype, `LoadSpotlight`, null),
+(_([_], _.prototype, `LoadSpotlight`, null),
   _([_], _.prototype, `AddSpotlight`, null),
-  _([_], _.prototype, `InternalAddSpotlight`, null);
+  _([_], _.prototype, `InternalAddSpotlight`, null));
 function _() {
   let [_, _] = _.useState(_.Get().GetAllSpotlights());
-  return _(_.Get().GetCallbackForSpotlightList(), _), _;
+  return (_(_.Get().GetCallbackForSpotlightList(), _), _);
 }
 function _() {
   return {
@@ -15563,9 +15566,9 @@ function _(_) {
 var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -15660,7 +15663,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -15681,14 +15684,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDealDetails`;
@@ -15697,9 +15700,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.daily_deal || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -15728,7 +15731,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -15749,14 +15752,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDeal_CreateDailyDeal_Request`;
@@ -15765,9 +15768,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -15787,7 +15790,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -15808,14 +15811,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDeal_CreateDailyDeal_Response`;
@@ -15824,9 +15827,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.daily_deal || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -15850,7 +15853,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -15871,14 +15874,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDeal_UpdateDailyDeal_Request`;
@@ -15887,7 +15890,7 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -15912,12 +15915,12 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDeal_UpdateDailyDeal_Response`;
@@ -15926,9 +15929,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -15948,7 +15951,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -15969,14 +15972,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDeal_DeleteDailyDeal_Request`;
@@ -15985,7 +15988,7 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -16010,12 +16013,12 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDeal_DeleteDailyDeal_Response`;
@@ -16024,9 +16027,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -16046,7 +16049,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -16067,14 +16070,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDeal_CancelDailyDeal_Request`;
@@ -16083,7 +16086,7 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -16108,12 +16111,12 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDeal_CancelDailyDeal_Response`;
@@ -16122,9 +16125,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -16174,7 +16177,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -16195,14 +16198,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDeal_GetDailyDeals_Request`;
@@ -16211,9 +16214,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.daily_deals || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1, 2, 3, 4, 5], null);
+        _.Message.initialize(this, _, 0, -1, [1, 2, 3, 4, 5], null));
     }
     static sm_m;
     static sm_mbf;
@@ -16262,7 +16265,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -16283,14 +16286,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDeal_GetDailyDeals_Response`;
@@ -16299,9 +16302,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.date || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -16326,7 +16329,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -16347,14 +16350,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDeal_GetDailyDeals_Response_DailyDealBlockedDate`;
@@ -16363,9 +16366,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.date || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -16390,7 +16393,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -16411,14 +16414,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDeal_GetDailyDeals_Response_DailyDealScheduledSlot`;
@@ -16427,9 +16430,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.appids || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -16452,7 +16455,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -16473,14 +16476,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDeal_GetDailyDealsForApps_Request`;
@@ -16489,9 +16492,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.daily_deals || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -16512,7 +16515,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -16533,14 +16536,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CDailyDeal_GetDailyDealsForApps_Response`;
@@ -16603,7 +16606,7 @@ var _ = class {
   m_jsonPartner;
   m_nCreatorID;
   constructor(_) {
-    _(this), this.Reset(_);
+    (_(this), this.Reset(_));
   }
   CalculateStoreItemKey() {
     switch (this.m_oDailyDeal.store_item_type) {
@@ -16616,7 +16619,7 @@ var _ = class {
     }
   }
   Reset(_) {
-    (this.m_originalDailyDeal = JSON.parse(JSON.stringify(_))),
+    ((this.m_originalDailyDeal = JSON.parse(JSON.stringify(_))),
       (this.m_oDailyDeal = JSON.parse(JSON.stringify(_))),
       (this.m_bDirty = !1),
       (this.m_storeItemKey = this.CalculateStoreItemKey()),
@@ -16629,7 +16632,7 @@ var _ = class {
       (this.m_jsonPartner = _.partner_jsondata
         ? JSON.parse(_.partner_jsondata)
         : {}),
-      (this.m_nCreatorID = _.creator_id);
+      (this.m_nCreatorID = _.creator_id));
   }
   BIsDirty() {
     return this.m_bDirty;
@@ -16716,13 +16719,13 @@ var _ = class {
   AddRemoveHubTarget(_, _) {
     let _ = this.GetHubTargets();
     if (_ && !_?.includes(_))
-      this.m_jsonTemplate.hasOwnProperty(`location`) ||
+      (this.m_jsonTemplate.hasOwnProperty(`location`) ||
         (this.m_jsonTemplate.location = []),
         this.m_jsonTemplate.location.hasOwnProperty(`hubTargets`) ||
           (this.m_jsonTemplate.hubTargets = []),
         this.m_jsonTemplate.location.hubTargets.push(_),
         (this.m_oDailyDeal.template_json = JSON.stringify(this.m_jsonTemplate)),
-        this.Dispatch();
+        this.Dispatch());
     else if (!_ && _?.includes(_)) {
       let _ = _.indexOf(_);
       _ >= 0 &&
@@ -16732,9 +16735,9 @@ var _ = class {
     }
   }
   RevertChanges() {
-    this.Reset(this.m_originalDailyDeal),
+    (this.Reset(this.m_originalDailyDeal),
       (this.m_bDirty = !1),
-      this.m_callback.Dispatch(this);
+      this.m_callback.Dispatch(this));
   }
   SetNotes(_) {
     this.m_jsonInternal?.notes != _ &&
@@ -16759,7 +16762,7 @@ var _ = class {
       this.Dispatch());
   }
   Dispatch() {
-    (this.m_bDirty = !0), this.m_callback.Dispatch(this);
+    ((this.m_bDirty = !0), this.m_callback.Dispatch(this));
   }
   BHasGenreTarget(_) {
     return !1;
@@ -16794,10 +16797,10 @@ var _ = class {
       this.Dispatch());
   }
   ClearSalePage() {
-    (this.m_jsonPartner.sale_clan_account = void 0),
+    ((this.m_jsonPartner.sale_clan_account = void 0),
       (this.m_jsonPartner.sale_clan_event_gid = void 0),
       (this.m_oDailyDeal.partner_jsondata = JSON.stringify(this.m_jsonPartner)),
-      this.Dispatch();
+      this.Dispatch());
   }
   BRequiresSalePage() {
     return this.m_jsonPartner.require_sale_page;
@@ -16821,13 +16824,13 @@ var _ = class {
   AddRemoveGenreTarget(_, _) {}
   AddRemoveCategoryTarget(_, _) {}
 };
-_([_], _.prototype, `m_bDirty`, void 0),
+(_([_], _.prototype, `m_bDirty`, void 0),
   _([_], _.prototype, `SetVisiblity`, null),
   _([_], _.prototype, `RevertChanges`, null),
   _([_], _.prototype, `SetSaleEvent`, null),
   _([_], _.prototype, `ClearSalePage`, null),
   _([_], _.prototype, `SetRequiresSalePage`, null),
-  _([_], _.prototype, `SetRequiresSalePageType`, null);
+  _([_], _.prototype, `SetRequiresSalePageType`, null));
 var _ = new RegExp(
     /(?:steampowered\.com|valve\.org\/store|steam\.dev\/store)\/sale\/([a-zA-Z0-9\-_&]+)/i,
   ),
@@ -16839,7 +16842,7 @@ function _(_) {
     _ = _.exec(_);
   _ && _.length > 1 && (_ = _);
   let _ = _.exec(_);
-  return _ && _.length > 1 && (_ = _), _ ? _[1].toLowerCase() : null;
+  return (_ && _.length > 1 && (_ = _), _ ? _[1].toLowerCase() : null);
 }
 var _ = class _ {
   constructor() {
@@ -16896,33 +16899,33 @@ var _ = class _ {
     let _ = _(`steampagefeaturing`, `application_config`);
     this.ValidateStoreDefault(_) &&
       _.forEach((_) => {
-        this.m_rgMapCluster.set(_.cluster_name, _.clusters),
+        (this.m_rgMapCluster.set(_.cluster_name, _.clusters),
           this.m_rgFeatureNames.push(_.cluster_name),
           _.clusters &&
             _.clusters.length > 0 &&
             this.m_rgActiveFeatureNames.push(_.cluster_name),
           _.clusters.forEach((_) => {
-            _.page_bg_url &&
+            (_.page_bg_url &&
               this.InsertVanityToForceFeature(_(_.page_bg_url), _, _),
               _.expanded_capsules &&
                 _.expanded_capsules.forEach((_) => {
                   _.website &&
                     _.type == `Advertising` &&
                     this.InsertVanityToForceFeature(_(_.website), _, _);
-                });
-          });
+                }));
+          }));
       });
     let _ = _(`spotlightfeaturing`, `application_config`);
     this.ValidateSpotlightDefault(_) &&
       ((this.m_rgSpotlights = _),
       this.m_rgSpotlights &&
         this.m_rgSpotlights.forEach((_) => {
-          _.associated_url &&
+          (_.associated_url &&
             this.InsertVanityToSpotlight(_(_.associated_url), _),
             _.associated_app &&
               _.associated_app.type == `Advertising` &&
               _.associated_app.website &&
-              this.InsertVanityToSpotlight(_(_.associated_app.website), _);
+              this.InsertVanityToSpotlight(_(_.associated_app.website), _));
         }));
     let _ = _(`marketingmsg`, `application_config`);
     this.ValidateIMDefault(_) &&
@@ -17000,7 +17003,7 @@ function _(_) {
     _ = !!_,
     _ = !_,
     _ = () => {
-      _(null), _();
+      (_(null), _());
     },
     _ = (_, _) => {
       let _ = Math.max(_, _.rtStartDate);
@@ -17014,12 +17017,12 @@ function _(_) {
         let _ = _(_);
         _(_.name);
         let _ = _(_, _.end_date);
-        _(Math.floor((_.end_date - _.start_date + _ * _.PerHour) / _.PerDay)),
-          _(_.start_date, _);
+        (_(Math.floor((_.end_date - _.start_date + _ * _.PerHour) / _.PerDay)),
+          _(_.start_date, _));
       } else _ && (_(``), _(7), _(_(_.rtStartDate), _));
     },
     _ = (_) => {
-      _(_), _(null, null);
+      (_(_), _(null, null));
     },
     _ = (_) => {
       let _ = _.target.value,
@@ -17476,7 +17479,7 @@ function _(_) {
                 strSearchKey: _,
                 rgSearchResults: _,
                 onSelect: (_) => {
-                  _(``), _(null), _(_);
+                  (_(``), _(null), _(_));
                 },
               }),
             ],
@@ -17552,7 +17555,7 @@ function _() {
         _(_.GetID().toString(), _),
         _.GetIncludedAppIDs()?.forEach((_) => {
           let _ = _.Get().GetApp(_);
-          _(_?.GetName(), _), _(_.toString(), _);
+          (_(_?.GetName(), _), _(_.toString(), _));
         }));
     }
     return _;
@@ -17681,7 +17684,7 @@ function _(_) {
   _.dynamic_sections?.forEach((_) => {
     _.lists?.forEach((_) => {
       _.options?.forEach((_, _) => {
-        _(_.text), _(_.tooltip);
+        (_(_.text), _(_.tooltip));
       });
     });
   });
@@ -17745,7 +17748,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -17808,7 +17811,7 @@ var _ = `XsLjbTtd6dM-`,
     }
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
     constructor() {}
   };
@@ -17817,7 +17820,7 @@ function _() {
     [_, _] = _.useState(_.Get().GetDailyDealToEdit());
   return (
     _(_?.GetCallback(), (_) => {
-      _(_), _();
+      (_(_), _());
     }),
     _
   );
@@ -17962,11 +17965,11 @@ _(
     m_rgRecommendedAppIDs;
     m_nSaleItemCount;
     constructor(_) {
-      _(this),
+      (_(this),
         (this.m_message = _),
-        (this.m_templateVars = _(_.template_vars_json()));
+        (this.m_templateVars = _(_.template_vars_json())));
       let _ = _.associated_item(!1);
-      (this.m_associatedItemKey = _
+      ((this.m_associatedItemKey = _
         ? _({
             item_type: _.item_type(),
             _: _._(),
@@ -17975,7 +17978,7 @@ _(
         (this.m_rgRecommendedAppIDs = _.recommended_items()
           .map((_) => _.appid())
           .filter(Boolean)),
-        (this.m_nSaleItemCount = _.sale_item_count());
+        (this.m_nSaleItemCount = _.sale_item_count()));
     }
     get id() {
       return this.m_message.gid();
@@ -18098,10 +18101,10 @@ _(
       return this.m_message.gid();
     }
     SetDLCAppIDOverride(_) {
-      (this.m_templateVars.additional_featuring = _.map((_) => ({
+      ((this.m_templateVars.additional_featuring = _.map((_) => ({
         appid: _,
       }))),
-        (this.m_templateVars.custom_display = `dlc_override`);
+        (this.m_templateVars.custom_display = `dlc_override`));
     }
     GetRecommendedAppIDs() {
       return this.m_rgRecommendedAppIDs;
@@ -18218,7 +18221,7 @@ function _(_, _, _, _, _, _, _, _, _, _, _, _) {
     _ = _(_, `.mp4`) && _(_, `.webm`);
     for (let _ = 0; _ < 32; ++_) {
       let _ = _(_);
-      _ && _[_] && (_ += 1), _ && _[_] && (_ += 1);
+      (_ && _[_] && (_ += 1), _ && _[_] && (_ += 1));
     }
   }
   let _ = _;
@@ -18637,10 +18640,10 @@ function _(_, _) {
         (_.children = []));
   else {
     let _ = _;
-    (_.filter_type = parseInt(`` + _.filter_type)),
+    ((_.filter_type = parseInt(`` + _.filter_type)),
       (_.id_list = Array.isArray(_.id_list)
         ? _.id_list.map((_) => parseInt(`` + _))
-        : []);
+        : []));
   }
 }
 function _(_, _, _) {
@@ -18768,7 +18771,7 @@ var _ = class _ {
   };
   static sm_nTempIDCounter = 1;
   constructor(_) {
-    _(this), this.Reset(_);
+    (_(this), this.Reset(_));
   }
   Reset(_) {
     switch (
@@ -18786,7 +18789,7 @@ var _ = class _ {
       case 2:
         this.m_eSteamRealms = [_.k_ESteamRealmGlobal, _.k_ESteamRealmChina];
     }
-    (this.m_oTemplateVars = _(_.template_vars_json) || {}),
+    ((this.m_oTemplateVars = _(_.template_vars_json) || {}),
       (this.m_oAdditionalRestrictions = _(
         _.gid,
         _.additional_restrictions_json,
@@ -18794,14 +18797,14 @@ var _ = class _ {
       this.m_oTemplateVars.custom_display === `featured_video` &&
         (this.m_oTemplateVars.background ||
           (this.m_oTemplateVars.background = {})),
-      this.SetupStoreItemKey();
+      this.SetupStoreItemKey());
   }
   RecursivelyCleanupTempIDForSerialized(_) {
-    (_.temp_id = void 0),
+    ((_.temp_id = void 0),
       `children` in _ &&
         _.children.forEach((_) =>
           this.RecursivelyCleanupTempIDForSerialized(_),
-        );
+        ));
   }
   PrepareMessageModelForUpdate() {
     let _ = JSON.parse(JSON.stringify(this.m_oMessage)),
@@ -18815,11 +18818,11 @@ var _ = class _ {
     );
   }
   SetupStoreItemKey() {
-    (this.m_storeItemKey = _(
+    ((this.m_storeItemKey = _(
       this.m_oMessage.association_type,
       this.m_oMessage.associated_id,
     )),
-      (this.m_storeItemID = _(this.m_storeItemKey));
+      (this.m_storeItemID = _(this.m_storeItemKey)));
   }
   bHasAssociatedItem() {
     return (
@@ -19161,17 +19164,17 @@ var _ = class _ {
     return this.m_oTemplateVars.update_event_gid;
   }
   SaveSuccessClearDirty() {
-    (this.m_originalMessage = JSON.parse(JSON.stringify(this.m_oMessage))),
-      (this.m_bDirty = !1);
+    ((this.m_originalMessage = JSON.parse(JSON.stringify(this.m_oMessage))),
+      (this.m_bDirty = !1));
   }
   ClearAllLegacyRestrictions() {
-    (this.m_oMessage.must_own_appid = 0),
+    ((this.m_oMessage.must_own_appid = 0),
       (this.m_oMessage.must_not_own_appid = 0),
       (this.m_oMessage.must_own_packageid = 0),
       (this.m_oMessage.must_not_own_packageid = 0),
       (this.m_oMessage.must_have_launched_appid = 0),
       (this.m_oMessage.ownership_restrictions_overridden = !1),
-      this.Dispatch();
+      this.Dispatch());
   }
   SetExplicitNoLegalPartnerNeeded(_) {
     this.m_oAdditionalRestrictions.explicit_no_partner_name_needed !== _ &&
@@ -19204,13 +19207,13 @@ var _ = class _ {
         case 5:
         case 2:
         case 0:
-          (this.m_oMessage.association_type = _),
+          ((this.m_oMessage.association_type = _),
             (this.m_oMessage.associated_id = _),
             (this.m_oMessage.associated_name = ``),
             this.SetupStoreItemKey(),
             this.ClearSalePage(),
             (this.m_oAdditionalRestrictions.requires_sale_page = void 0),
-            this.Dispatch();
+            this.Dispatch());
           break;
         case 4:
         case 3:
@@ -19220,14 +19223,14 @@ var _ = class _ {
       }
   }
   ClearAssociation() {
-    (this.m_storeItemID = null),
+    ((this.m_storeItemID = null),
       (this.m_storeItemKey = null),
       (this.m_oMessage.association_type = void 0),
       (this.m_oMessage.associated_id = void 0),
       (this.m_oMessage.associated_name = ``),
       this.ClearSalePage(),
       (this.m_oAdditionalRestrictions.requires_sale_page = void 0),
-      this.Dispatch();
+      this.Dispatch());
   }
   SetMessageTime(_, _) {
     (this.m_oMessage.start_date !== _ || this.m_oMessage.end_date !== _) &&
@@ -19252,9 +19255,9 @@ var _ = class _ {
       ((this.m_oMessage.country_deny = _), this.Dispatch());
   }
   ClearCountryRestrictions() {
-    (this.m_oMessage.country_allow = void 0),
+    ((this.m_oMessage.country_allow = void 0),
       (this.m_oMessage.country_deny = void 0),
-      this.Dispatch();
+      this.Dispatch());
   }
   SetAndConvertURL(_, _) {
     this.m_oTemplateVars.linkurl &&
@@ -19349,13 +19352,13 @@ var _ = class _ {
       this.Dispatch());
   }
   AddToWatchList(_) {
-    this.m_oAdditionalRestrictions.watchlist ||
+    (this.m_oAdditionalRestrictions.watchlist ||
       (this.m_oAdditionalRestrictions.watchlist = []),
       this.m_oAdditionalRestrictions.watchlist.includes(_) ||
-        (this.m_oAdditionalRestrictions.watchlist.push(_), this.Dispatch());
+        (this.m_oAdditionalRestrictions.watchlist.push(_), this.Dispatch()));
   }
   ClearWatchList(_) {
-    (this.m_oAdditionalRestrictions.watchlist = void 0), this.Dispatch();
+    ((this.m_oAdditionalRestrictions.watchlist = void 0), this.Dispatch());
   }
   RemoveFromWatchList(_) {
     if (
@@ -19371,15 +19374,15 @@ var _ = class _ {
     }
   }
   ClearUserDynamicFilter() {
-    (this.m_oAdditionalRestrictions.user_filters = void 0),
+    ((this.m_oAdditionalRestrictions.user_filters = void 0),
       (this.m_oAdditionalRestrictions.no_filters_required = !1),
-      this.Dispatch();
+      this.Dispatch());
   }
   ReplaceUserFilter(_) {
-    (this.m_oAdditionalRestrictions.no_filters_required = !1),
+    ((this.m_oAdditionalRestrictions.no_filters_required = !1),
       (this.m_oAdditionalRestrictions.user_filters = _),
       _(this.GetGID(), this.m_oAdditionalRestrictions.user_filters),
-      this.Dispatch();
+      this.Dispatch());
   }
   AddNewAndUserFilter(
     _ = {
@@ -19387,27 +19390,27 @@ var _ = class _ {
       id_list: [],
     },
   ) {
-    (this.m_oAdditionalRestrictions ||= {}),
+    ((this.m_oAdditionalRestrictions ||= {}),
       this.m_oAdditionalRestrictions.user_filters ||
         (this.m_oAdditionalRestrictions.user_filters = {
           clause: `and`,
           children: [],
           temp_id: `and_` + ++_.sm_nTempIDCounter,
         }),
-      (_.temp_id = `filter_` + ++_.sm_nTempIDCounter);
+      (_.temp_id = `filter_` + ++_.sm_nTempIDCounter));
     let _ = {
       clause: `or`,
       children: [_],
       temp_id: `or_` + ++_.sm_nTempIDCounter,
     };
-    this.m_oAdditionalRestrictions.user_filters.children.push(_),
-      this.Dispatch();
+    (this.m_oAdditionalRestrictions.user_filters.children.push(_),
+      this.Dispatch());
   }
   RemoveAndUserFilter(_) {
-    this.m_oAdditionalRestrictions.user_filters.children.splice(_, 1),
+    (this.m_oAdditionalRestrictions.user_filters.children.splice(_, 1),
       this.m_oAdditionalRestrictions.user_filters.children.length == 0 &&
         (this.m_oAdditionalRestrictions.user_filters = void 0),
-      this.Dispatch();
+      this.Dispatch());
   }
   BHasSomeIDForAndUserFilter(_) {
     return (
@@ -19423,30 +19426,30 @@ var _ = class _ {
     },
   ) {
     let _ = this.m_oAdditionalRestrictions.user_filters;
-    _(`children` in _.children[_], `or clauses broken`),
+    (_(`children` in _.children[_], `or clauses broken`),
       `children` in _.children[_] &&
         ((_.temp_id = `filter_` + ++_.sm_nTempIDCounter),
         _.children[_].children.push(_),
-        this.Dispatch());
+        this.Dispatch()));
   }
   RemoveOrUserFilterAt(_, _) {
-    this.m_oAdditionalRestrictions.user_filters.children[_].children.splice(
+    (this.m_oAdditionalRestrictions.user_filters.children[_].children.splice(
       _,
       1,
     ),
       this.m_oAdditionalRestrictions.user_filters.children[_].children.length ==
       0
         ? this.RemoveAndUserFilter(_)
-        : this.Dispatch();
+        : this.Dispatch());
   }
   UpdateUserFilter(_, _, _) {
     let _ = this.m_oAdditionalRestrictions.user_filters;
-    _(`children` in _.children[_], `or clauses broken`),
+    (_(`children` in _.children[_], `or clauses broken`),
       `children` in _.children[_] &&
         JSON.stringify(_.children[_].children[_]) != JSON.stringify(_) &&
         ((_.temp_id = `filter_` + ++_.sm_nTempIDCounter),
         (_.children[_].children[_] = _),
-        this.Dispatch());
+        this.Dispatch()));
   }
   SetButtonToken(_) {
     this.m_oTemplateVars.button_text != _ &&
@@ -19471,7 +19474,7 @@ var _ = class _ {
       this.Dispatch());
   }
   ClearAllAssetObjects(_) {
-    (this.m_oTemplateVars[_] = {}), this.Dispatch();
+    ((this.m_oTemplateVars[_] = {}), this.Dispatch());
   }
   DeleteAssetObjectLang(_, _) {
     let _ = _(_);
@@ -19479,7 +19482,7 @@ var _ = class _ {
       (delete this.m_oTemplateVars[_][_], this.Dispatch());
   }
   ClearUserFilters() {
-    (this.m_oAdditionalRestrictions.user_filters = void 0), this.Dispatch();
+    ((this.m_oAdditionalRestrictions.user_filters = void 0), this.Dispatch());
   }
   SetInternalAssetURL(_) {
     this.m_oAdditionalRestrictions.internal_asset_url !== _ &&
@@ -19594,13 +19597,13 @@ var _ = class _ {
       this.Dispatch());
   }
   SetAltText(_, _) {
-    (this.m_oTemplateVars.localized_alt_text = _(
+    ((this.m_oTemplateVars.localized_alt_text = _(
       this.m_oTemplateVars.localized_alt_text || [],
       32,
       null,
     )),
       this.m_oTemplateVars.localized_alt_text[_] != _ &&
-        ((this.m_oTemplateVars.localized_alt_text[_] = _), this.Dispatch());
+        ((this.m_oTemplateVars.localized_alt_text[_] = _), this.Dispatch()));
   }
   SetUpdateEvent(_, _) {
     (this.m_oTemplateVars.update_event_gid !== _ ||
@@ -19616,7 +19619,7 @@ var _ = class _ {
       this.Dispatch());
   }
   SetUpdateEventReviewAndMeetsBar(_) {
-    _
+    (_
       ? ((this.m_oAdditionalRestrictions.major_update_ticket_reviewed_and_meets_bar =
           !0),
         (this.m_oAdditionalRestrictions.major_update_ticket_reviewed_accountid =
@@ -19629,17 +19632,17 @@ var _ = class _ {
           void 0),
         (this.m_oAdditionalRestrictions.major_update_ticket_reviewed_rtime =
           void 0)),
-      this.Dispatch();
+      this.Dispatch());
   }
   RevertChanges() {
-    this.Reset(JSON.parse(JSON.stringify(this.m_originalMessage))),
-      this.m_callback.Dispatch(this);
+    (this.Reset(JSON.parse(JSON.stringify(this.m_originalMessage))),
+      this.m_callback.Dispatch(this));
   }
   Dispatch() {
-    (this.m_bDirty = !0), this.m_callback.Dispatch(this);
+    ((this.m_bDirty = !0), this.m_callback.Dispatch(this));
   }
 };
-_([_], _.prototype, `m_bDirty`, void 0),
+(_([_], _.prototype, `m_bDirty`, void 0),
   _([_], _.prototype, `GetAltTextRaw`, null),
   _([_], _.prototype, `ClearAllLegacyRestrictions`, null),
   _([_], _.prototype, `SetExplicitNoLegalPartnerNeeded`, null),
@@ -19703,7 +19706,7 @@ _([_], _.prototype, `m_bDirty`, void 0),
   _([_], _.prototype, `ClearUpdateEvent`, null),
   _([_], _.prototype, `SetUpdateEventReviewAndMeetsBar`, null),
   _([_], _.prototype, `RevertChanges`, null),
-  _([_.bound], _.prototype, `Dispatch`, null);
+  _([_.bound], _.prototype, `Dispatch`, null));
 var _ = class _ {
   m_mapEditModel = new Map();
   m_callback = new Map();
@@ -19711,9 +19714,9 @@ var _ = class _ {
     if (this.m_mapEditModel.has(_) && !_) this.m_mapEditModel.get(_).Reset(_);
     else {
       let _ = new _(_);
-      this.m_mapEditModel.set(_, _),
+      (this.m_mapEditModel.set(_, _),
         _.GetCallback().Register((_) => this.GetCallback(_).Dispatch(_)),
-        _ && this.GetCallback(_).Dispatch(_);
+        _ && this.GetCallback(_).Dispatch(_));
     }
     return this.m_mapEditModel.get(_);
   }
@@ -19734,7 +19737,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -19744,13 +19747,13 @@ function _(_) {
     _ = _(_);
   return (
     _.useEffect(() => {
-      _ &&
+      (_ &&
         !_.Get().BHasMarketingMessageToEdit(_.gid) &&
         _.Get().InitMarketingMessageToEdit(_.gid, _),
-        _(_.Get().GetMarketingMessageToEdit(_?.gid));
+        _(_.Get().GetMarketingMessageToEdit(_?.gid)));
     }, [_]),
     _(_.Get().GetCallback(_), (_) => {
-      _(_), _();
+      (_(_), _());
     }),
     _?.GetGID() == _ ? _ : null
   );
@@ -19805,8 +19808,8 @@ var _ = class _ {
     if (this.ValidateStoreDefault(_)) {
       let _ = Math.floor(Date.now() / 1e3),
         _ = _ - 7776e3;
-      _.forEach((_) => {
-        _.bVisible && _.rtEndTime && _.rtEndTime < _
+      (_.forEach((_) => {
+        (_.bVisible && _.rtEndTime && _.rtEndTime < _
           ? this.m_rgArchive.push(_)
           : _.bVisible && _.rtStartTime > _
             ? this.m_rgUpcoming.push(_)
@@ -19815,10 +19818,10 @@ var _ = class _ {
               : _.rtLastModifiedTime > _ && _.rtEndTime > _
                 ? this.m_rgDraft.push(_)
                 : this.m_rgOldDraft.push(_),
-          _.bFeaturedNextSeasonalSale && this.m_rgSeasonFeatured.push(_);
+          _.bFeaturedNextSeasonalSale && this.m_rgSeasonFeatured.push(_));
       }),
         this.m_rgActive.sort((_, _) => _.rtStartTime - _.rtStartTime),
-        this.m_rgDraft.sort((_, _) => _.rtStartTime - _.rtStartTime);
+        this.m_rgDraft.sort((_, _) => _.rtStartTime - _.rtStartTime));
     }
   }
   ValidateStoreDefault(_) {
@@ -19831,12 +19834,12 @@ var _ = class _ {
   async CreateSalePartnerEvent(_, _, _, _, _, _) {
     let _ = _.PARTNER_BASE_URL + `sales/ajaxcreatesalepartnerevent`,
       _ = new FormData();
-    _.append(`sessionid`, _()),
+    (_.append(`sessionid`, _()),
       _.append(`clanAccountID`, `` + _),
       _.append(`eventName`, _),
       _.append(`vanity`, _),
       _.append(`rtStartTime`, `` + _),
-      _.append(`rtEndTime`, `` + _);
+      _.append(`rtEndTime`, `` + _));
     try {
       let _ = await _.default.post(_, _, {
         cancelToken: _.token,
@@ -19892,8 +19895,8 @@ var _ = `new_event_gid`,
               ..._,
               jsonData: _,
             };
-          this.m_mapPrivateData.set(this.m_gidDirty, _),
-            this.DispatchUpdate(this.m_clanAccountIDDirty, this.m_gidDirty);
+          (this.m_mapPrivateData.set(this.m_gidDirty, _),
+            this.DispatchUpdate(this.m_clanAccountIDDirty, this.m_gidDirty));
         }
         return (
           (_.jsonData = _),
@@ -19922,14 +19925,14 @@ var _ = `new_event_gid`,
       if (this.m_gidDirty) {
         let _ = this.m_clanAccountIDDirty,
           _ = this.m_gidDirty;
-        (this.m_clanAccountIDDirty = null), (this.m_gidDirty = null);
+        ((this.m_clanAccountIDDirty = null), (this.m_gidDirty = null));
         let _ = this.m_mapPrivateData.get(_),
           _ = this.m_mapOriginalJSON.get(_);
-        this.m_mapPrivateData.set(_, {
+        (this.m_mapPrivateData.set(_, {
           ..._,
           jsonData: _,
         }),
-          this.DispatchUpdate(_, _);
+          this.DispatchUpdate(_, _));
       }
     }
     DispatchUpdate(_, _) {
@@ -20057,10 +20060,10 @@ var _ = `new_event_gid`,
       if (this.BIsEqual(_, this.m_mapOriginalJSON.get(_))) return 1;
       try {
         let _ = new FormData();
-        _.append(`sessionid`, _()),
+        (_.append(`sessionid`, _()),
           _.append(`clanAccountID`, `` + _.GetAccountID()),
           _.append(`gidClanEvent`, `` + _),
-          _.append(`jsonData`, JSON.stringify(_));
+          _.append(`jsonData`, JSON.stringify(_)));
         let _ =
             _() == `partner`
               ? _.PARTNER_BASE_URL + `partnerevents/ajaxsetprivatedata`
@@ -20117,8 +20120,8 @@ var _ = `new_event_gid`,
             nAccountLastUpdate: _.data.account_writer,
             jsonData: _.data.json_data || {},
           };
-          this.m_mapOriginalJSON.set(_.gid, _.jsonData),
-            this.m_mapPrivateData.set(_.gid, _);
+          (this.m_mapOriginalJSON.set(_.gid, _.jsonData),
+            this.m_mapPrivateData.set(_.gid, _));
         });
     }
     ValidateStoreDefault(_) {
@@ -20130,9 +20133,9 @@ var _ = `new_event_gid`,
         : !1;
     }
   };
-_([_], _.prototype, `BIsEventDirty`, null),
+(_([_], _.prototype, `BIsEventDirty`, null),
   _([_], _.prototype, `DiscardChanges`, null),
-  _([_], _.prototype, `SaveDirtyChanges`, null);
+  _([_], _.prototype, `SaveDirtyChanges`, null));
 function _(_, _) {
   let _ = _.Get(),
     [_, _] = (0, _.useState)(_.GetPrivateDataCopy(_, _));
@@ -20143,7 +20146,7 @@ function _(_, _) {
       if (!_.BLoaded(_, _)) {
         let _ = _.InitFromClanID(_, _.EUNIVERSE);
         _.LoadPrivateData(_, _).then((_) => {
-          _(_), _(!1);
+          (_(_), _(!1));
         });
       }
     }, [_, _, _]),
@@ -20361,14 +20364,14 @@ function _(_) {
     [_, _] = (0, _.useState)(_);
   return (
     _(_, () => {
-      _(_), _(_);
+      (_(_), _(_));
     }),
     (0, _.jsxs)(_.Fragment, {
       children: [
         (0, _.jsx)(_, {
           checked: _ ? _ : !_ || _,
           onChange: (_) => {
-            _(_), _ || _(_);
+            (_(_), _ || _(_));
           },
           label: `Require Approval by Valve Admin in order to publish this sales events`,
           tooltip: `They will see a warning indicating they cannot publish until Valve approves the page. Approval is done by Valve Admin in the same place.`,
@@ -20376,7 +20379,7 @@ function _(_) {
         (0, _.jsx)(_, {
           checked: _ ? _ : _,
           onChange: (_) => {
-            _(_), _ || _(_);
+            (_(_), _ || _(_));
           },
           label: _(`#SalePresented_By_Admin`),
           tooltip: _(`#SalePresneted_By_Admin_ttip`),
@@ -20403,9 +20406,9 @@ var _ = `KoQBt-5Be2g-`,
       _ = (0, _.useRef)(void 0);
     (0, _.useEffect)(
       () => () => {
-        window.clearTimeout(_.current),
+        (window.clearTimeout(_.current),
           _.current && _.current(`SearchForCurator: unmounting`),
-          _.current && _.current.Hide();
+          _.current && _.current.Hide());
       },
       [],
     );
@@ -20507,13 +20510,13 @@ var _ = `KoQBt-5Be2g-`,
       [_, _] = (0, _.useState)(``),
       [_, _] = (0, _.useState)(``),
       _ = new Date();
-    _.setHours(10), _.setMinutes(0), _.setSeconds(0);
+    (_.setHours(10), _.setMinutes(0), _.setSeconds(0));
     let [_, _] = (0, _.useState)(Math.floor(_.getTime() / 1e3)),
       _ = new Date();
-    _.setDate(_.getDate() + 1),
+    (_.setDate(_.getDate() + 1),
       _.setHours(10),
       _.setMinutes(0),
-      _.setSeconds(0);
+      _.setSeconds(0));
     let [_, _] = (0, _.useState)(Math.floor(_.getTime() / 1e3)),
       [_, _] = (0, _.useState)(null),
       [_, _] = (0, _.useState)(null),
@@ -20620,7 +20623,7 @@ var _ = `KoQBt-5Be2g-`,
         ),
       );
       let _ = _.GetClanSteamID();
-      _.push(
+      (_.push(
         (0, _.jsx)(
           _,
           {
@@ -20637,7 +20640,7 @@ var _ = `KoQBt-5Be2g-`,
           `saleinput`,
         ),
       ),
-        (_ = _.trim().length > 0 && _.trim().length > 0 && _ > 0 && _ > _);
+        (_ = _.trim().length > 0 && _.trim().length > 0 && _ > 0 && _ > _));
     }
     return (0, _.jsx)(_, {
       children: (0, _.jsx)(_, {
@@ -20737,7 +20740,7 @@ var _ = `KoQBt-5Be2g-`,
           }),
           (0, _.jsx)(_, {
             onClick: async () => {
-              _(!0), await _.EnablePartnerEventEditorFlag(), _(!1);
+              (_(!0), await _.EnablePartnerEventEditorFlag(), _(!1));
             },
             children: _(`#Button_Accept`),
           }),
@@ -20871,7 +20874,7 @@ function _(_) {
       });
 }
 var _ = {};
-(_.arabic = () =>
+((_.arabic = () =>
   _(() => import(`./partnershared_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
     _(() => import(`./partnershared_brazilian.js`), [], import.meta.url)),
@@ -20934,7 +20937,7 @@ var _ = {};
   (_.ukrainian = () =>
     _(() => import(`./partnershared_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./partnershared_vietnamese.js`), [], import.meta.url));
+    _(() => import(`./partnershared_vietnamese.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -20959,7 +20962,7 @@ function _(_) {
           url: `${_.PARTNER_BASE_URL}apps/landing/${_}`,
         },
       ];
-      return _ && _.length > 0 && _.push(..._), _;
+      return (_ && _.length > 0 && _.push(..._), _);
     }, [_, _, _]);
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -20996,7 +20999,7 @@ var _ = class _ {
     let _ = null;
     try {
       let _ = new FormData();
-      _.append(`rgAppIDs`, _.join(`,`)), _.append(`sessionid`, _());
+      (_.append(`rgAppIDs`, _.join(`,`)), _.append(`sessionid`, _()));
       let _ = _.PARTNER_BASE_URL + `sales/ajaxgetsalerank`,
         _ = await _.default.post(_, _, {
           withCredentials: !0,
@@ -21027,22 +21030,22 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
 };
-_([_], _.prototype, `bHasLoadedLongTermSalesRankForApp`, null),
+(_([_], _.prototype, `bHasLoadedLongTermSalesRankForApp`, null),
   _([_], _.prototype, `bHasSomeLongTermSaleRankForApp`, null),
-  _([_], _.prototype, `GetLongTermSaleRankForApp`, null);
+  _([_], _.prototype, `GetLongTermSaleRankForApp`, null));
 function _(_) {
   let [_, _] = (0, _.useState)(!0);
   return (
     (0, _.useEffect)(() => {
-      _(!0),
+      (_(!0),
         _ &&
           _?.length > 0 &&
           _.Get()
             .LoadLongTermSalesRank(_)
-            .finally(() => _(!1));
+            .finally(() => _(!1)));
     }, [_]),
     {
       bLoading: _,
@@ -21104,7 +21107,7 @@ var _ = class _ {
       });
       if (_?.data?.success == 1 && _.data.details) {
         let _ = _.data.details;
-        return this.m_mapSaleDetails.set(_, _), _;
+        return (this.m_mapSaleDetails.set(_, _), _);
       }
       _ = _(_?.data);
     } catch (_) {
@@ -21297,7 +21300,7 @@ function _(_) {
 }
 var _ = class {
   constructor(_) {
-    _(this),
+    (_(this),
       (this.m_stats = {
         event_gid: `0`,
         library_overview_shown: 0,
@@ -21334,10 +21337,10 @@ var _ = class {
         this.m_stats.community_hub_read +
         this.m_stats.news_hub_read +
         this.m_stats.event_scroller_read),
-      (this.m_lastUpdateTime = _ ? Math.floor(Date.now() / 1e3) : 0);
+      (this.m_lastUpdateTime = _ ? Math.floor(Date.now() / 1e3) : 0));
   }
   reset(_) {
-    (this.m_stats.library_overview_shown = _.library_overview_shown),
+    ((this.m_stats.library_overview_shown = _.library_overview_shown),
       (this.m_stats.library_overview_read = _.library_overview_read),
       (this.m_stats.app_details_spotlight_shown =
         _.app_details_spotlight_shown),
@@ -21370,13 +21373,13 @@ var _ = class {
         _.community_hub_read +
         _.news_hub_read +
         _.event_scroller_read),
-      (this.m_lastUpdateTime = Date.now() / 1e3);
+      (this.m_lastUpdateTime = Date.now() / 1e3));
   }
   m_stats = void 0;
   m_lastUpdateTime = void 0;
 };
-_([_], _.prototype, `m_stats`, void 0),
-  _([_], _.prototype, `m_lastUpdateTime`, void 0);
+(_([_], _.prototype, `m_stats`, void 0),
+  _([_], _.prototype, `m_lastUpdateTime`, void 0));
 var _ = 3600,
   _ = class {
     m_mapPerEventStats = new Map();
@@ -21391,13 +21394,13 @@ var _ = 3600,
         this.ValidateStoreDefault(_) &&
           this.m_mapSummaryStats.set(_.clan_account_id, new _(_));
         let _ = _(`trackingdataevents`, `application_config`);
-        this.ValidateStoreDefaultList(_) &&
+        (this.ValidateStoreDefaultList(_) &&
           _.forEach((_) => {
             let _ = _.InitFromClanID(_.clan_account_id, _.EUNIVERSE),
               _ = this.GetKey(_, _.event_gid);
             this.m_mapPerEventStats.set(_, new _(_));
           }),
-          (this.m_bLoadedFromConfig = !0);
+          (this.m_bLoadedFromConfig = !0));
       }
     }
     ValidateStoreDefault(_) {
@@ -21455,13 +21458,16 @@ var _ = 3600,
         });
         return (
           _(() => {
-            this.m_mapSummaryStats.set(_.GetAccountID(), new _(_.data.summary)),
+            (this.m_mapSummaryStats.set(
+              _.GetAccountID(),
+              new _(_.data.summary),
+            ),
               _.data.events_detail.forEach((_) => {
                 let _ = this.GetKey(_, _.event_gid);
                 this.m_mapPerEventStats.has(_)
                   ? this.m_mapPerEventStats.get(_).reset(_)
                   : this.m_mapPerEventStats.set(_, new _(_));
-              });
+              }));
           }),
           !0
         );
@@ -21478,9 +21484,9 @@ var _ = 3600,
       return !!(_ && _.m_stats);
     }
   };
-_([_], _.prototype, `m_mapPerEventStats`, void 0),
+(_([_], _.prototype, `m_mapPerEventStats`, void 0),
   _([_], _.prototype, `m_mapSummaryStats`, void 0),
-  _([_], _.prototype, `LazyInit`, null);
+  _([_], _.prototype, `LazyInit`, null));
 var _ = new _(),
   _ = new _(`SalePage`),
   _ = 50,
@@ -21492,24 +21498,24 @@ var _ = new _(),
     static s_singleton;
     constructor() {}
     static Get() {
-      return (_.s_singleton ||= new _()), _.s_singleton;
+      return ((_.s_singleton ||= new _()), _.s_singleton);
     }
     async GetItemsSoFar(_, _, _, _, _, _, _, _, _, _) {
       let _;
       if (_ === _?.nNextSolrIndex) {
         let _ = await this.GetItemsFiltered(_, _, _, _, _, _, _, _, _);
-        (_ = {
+        ((_ = {
           ..._,
           rgItems: this.DedupeItems(_.rgItems.concat(_.rgItems)),
         }),
           _.Debug(
             `GetItemsSoFar (continuing) start ${_} count ${_} items ${_.rgItems.length} next ${_.nNextSolrIndex}`,
-          );
+          ));
       } else
-        (_ = await this.GetItemsFiltered(_, _, _, _, _, _, _, _, _)),
+        ((_ = await this.GetItemsFiltered(_, _, _, _, _, _, _, _, _)),
           _.Debug(
             `GetItemsSoFar (new) start ${_} count ${_} items ${_.rgItems.length} next ${_.nNextSolrIndex}`,
-          );
+          ));
       return _;
     }
     async GetItemsFiltered(_, _, _, _, _, _, _, _, _) {
@@ -21536,7 +21542,7 @@ var _ = new _(),
             Math.floor((_ + _ - 1) / _) - _ + 1 > _)
         )
           break;
-        (_ = _.nNextSolrIndex), (_ = _ - _.rgItems.length);
+        ((_ = _.nNextSolrIndex), (_ = _ - _.rgItems.length));
       }
       return (
         _.Debug(
@@ -21705,7 +21711,7 @@ var _ = new _(),
             this.m_mapResults.get(_)
           );
         }
-        this.m_mapPromises.delete(_), (_ = _(_));
+        (this.m_mapPromises.delete(_), (_ = _(_)));
       } catch (_) {
         if ((this.m_mapPromises.delete(_), (_ = _(_)), _.default.isCancel(_)))
           return (
@@ -21776,7 +21782,7 @@ var _ = new _(),
       return (this.m_nExpirationTime + _) * 1e3;
     }
     IncrementalSectionNeedingReveal(_, _, _) {
-      _(
+      (_(
         !this.m_clanSteamID ||
           this.m_clanSteamID.GetAccountID() == _.GetAccountID(),
         `mismatch clan steam id`,
@@ -21792,36 +21798,36 @@ var _ = new _(),
         this.m_nActiveSectionCount > 0 &&
           !this.m_timer.IsScheduled() &&
           ((this.m_nTimeStartedMS = Date.now()),
-          this.m_timer.Schedule(this.GetTimerWaitTimeMS(), this.TimerAction));
+          this.m_timer.Schedule(this.GetTimerWaitTimeMS(), this.TimerAction)));
     }
     DecrementSectionNeedingReveal() {
-      --this.m_nActiveSectionCount,
-        this.m_nActiveSectionCount <= 0 && this.m_timer.Cancel();
+      (--this.m_nActiveSectionCount,
+        this.m_nActiveSectionCount <= 0 && this.m_timer.Cancel());
     }
     AddSaleCapsules(_, _) {
       let _ = this.m_mapSectionToExistingCapsules.has(_)
         ? this.m_mapSectionToExistingCapsules.get(_)
         : [];
-      _?.forEach((_) => {
+      (_?.forEach((_) => {
         _.findIndex((_) => _._ == _._ && _.type == _.type) < 0 &&
           !_(_) &&
           _.push(_);
       }),
         this.m_mapSectionToExistingCapsules.has(_) ||
-          this.m_mapSectionToExistingCapsules.set(_, _);
+          this.m_mapSectionToExistingCapsules.set(_, _));
     }
     AddEvents(_, _) {
       let _ = this.m_mapSectionToExistingClanEventGIDs.has(_)
         ? this.m_mapSectionToExistingClanEventGIDs.get(_)
         : [];
-      _?.forEach((_) => {
+      (_?.forEach((_) => {
         !_.includes(_) && _.BHasClanEventModel(_) && _.push(_);
       }),
         this.m_mapSectionToExistingClanEventGIDs.has(_) ||
-          this.m_mapSectionToExistingClanEventGIDs.set(_, _);
+          this.m_mapSectionToExistingClanEventGIDs.set(_, _));
     }
     SetTestMode(_, _) {
-      _.WEBAPI_BASE_URL == `dev` &&
+      (_.WEBAPI_BASE_URL == `dev` &&
         console.log(
           `CDynamicRevealStore Test Mode Cur ${this.m_bTestMode.get(_)} setting to ${_}`,
         ),
@@ -21829,17 +21835,17 @@ var _ = new _(),
         this.m_mapSectionToExistingCapsules.has(_) &&
           this.m_mapSectionToExistingCapsules.set(_, []),
         this.m_mapSectionToExistingClanEventGIDs.has(_) &&
-          this.m_mapSectionToExistingClanEventGIDs.set(_, []);
+          this.m_mapSectionToExistingClanEventGIDs.set(_, []));
     }
     BIsInTestMode(_) {
       return this.m_bTestMode.get(_);
     }
     FireRequestNow() {
-      _(
+      (_(
         this.m_bTestMode,
         `We should only use CDynamicRevealStore::FireRequestNow in test mode`,
       ),
-        this.TimerAction();
+        this.TimerAction());
     }
     TimerAction() {
       this.m_nActiveSectionCount > 0 &&
@@ -21898,20 +21904,20 @@ var _ = new _(),
                   );
                 _(_, _).then(() => {
                   let _ = [];
-                  _.forEach((_) => {
+                  (_.forEach((_) => {
                     _(_) || _.push(_);
                   }),
-                    this.m_mapSectionToNewCapsules.set(_.unique_id, _);
+                    this.m_mapSectionToNewCapsules.set(_.unique_id, _));
                 });
               }
             });
           })
           .finally(() => {
-            (this.m_nTimeStartedMS = Date.now()),
+            ((this.m_nTimeStartedMS = Date.now()),
               this.m_timer.Schedule(
                 this.GetTimerWaitTimeMS(),
                 this.TimerAction,
-              );
+              ));
           }));
     }
     async LoadRevealedItems(_, _) {
@@ -21950,16 +21956,16 @@ var _ = new _(),
     }
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
     constructor() {
       _(this);
     }
   };
-_([_], _.prototype, `m_mapSectionToNewCapsules`, void 0),
+(_([_], _.prototype, `m_mapSectionToNewCapsules`, void 0),
   _([_], _.prototype, `m_mapSectionToNewEvents`, void 0),
   _([_], _.prototype, `FireRequestNow`, null),
-  _([_], _.prototype, `TimerAction`, null);
+  _([_], _.prototype, `TimerAction`, null));
 function _(_, _ = null) {
   return _?.BUsesContentHubForItemSource() ? _.Get().BIsStoreItemOwned(_) : !1;
 }
@@ -22022,7 +22028,7 @@ var _ = new (class {
     if (this.m_categories) return this.m_categories;
     let _ = await this.Load();
     if (!_) throw Error(`Unable to load tag category data`);
-    return (this.m_categories = _(_)), this.m_categories;
+    return ((this.m_categories = _(_)), this.m_categories);
   }
   async Load() {
     let _ = null;
@@ -22076,16 +22082,16 @@ var _ = _(_()),
       super(_);
     }
     componentDidMount() {
-      window.addEventListener(`resize`, this.OnResize), this.LoadCapsules();
+      (window.addEventListener(`resize`, this.OnResize), this.LoadCapsules());
       let { displayStyle: _ } = this.props;
       this.setState({
         bCompactViewMode: this.BDisplayStyleIsCompact(_),
       });
     }
     componentWillUnmount() {
-      this.m_timerForChange.Cancel(),
+      (this.m_timerForChange.Cancel(),
         this.m_cancelSignal.cancel(`SaleItemBrowser component unmounted`),
-        _.Debug(`componentWillUnmount: Cancelled`);
+        _.Debug(`componentWillUnmount: Cancelled`));
     }
     componentDidUpdate(_, _) {
       let _ = this.props.section
@@ -22096,7 +22102,7 @@ var _ = _(_()),
         let _ = _(this.props.history, `flavor`);
         _(_) && this.GetFlavorsForActiveTab()?.includes(_) && (_ = _);
       }
-      ((0, _.default)(this.props.browseInfo, _.browseInfo) &&
+      (((0, _.default)(this.props.browseInfo, _.browseInfo) &&
         this.props.event == _.event &&
         (0, _.default)(this.props.section, _.section) &&
         this.props.activeTab?.GetActiveTabUniqueID() ==
@@ -22130,10 +22136,10 @@ var _ = _(_()),
             bCompactViewMode: this.BDisplayStyleIsCompact(
               this.props.displayStyle,
             ),
-          });
+          }));
     }
     ShowMoreRows() {
-      this.m_timerForChange.Cancel(),
+      (this.m_timerForChange.Cancel(),
         !this.m_cancelSignal.token.reason &&
           (_(
             this.props.history,
@@ -22147,7 +22153,7 @@ var _ = _(_()),
               bAwaitingMoreRowsLoading: !0,
             },
             () => this.LoadCapsules(),
-          ));
+          )));
     }
     SetViewMode(_) {
       this.setState({
@@ -22161,11 +22167,11 @@ var _ = _(_()),
           _: _._,
           type: _.type === 0 ? `game` : _(_.type),
         }));
-      await _(_, _),
+      (await _(_, _),
         !this.state.strSearchQuery &&
           !_.BUsesContentHubForItemSource() &&
           (_ = _.filter((_) => !_ || _.ShouldShowCapsule(_))),
-        (_ = await _(_, _, this.state.strSearchQuery ? void 0 : _, _));
+        (_ = await _(_, _, this.state.strSearchQuery ? void 0 : _, _)));
       let _ = [];
       _?.enable_faceted_browsing && _ && (_ = await _(_, _, !1, _));
       let _ = !!_?.enable_faceted_browsing && _(_);
@@ -22192,13 +22198,13 @@ var _ = _(_()),
           facetFilterState: _,
         } = this.state,
         _ = this.m_loadCapsulesDebugGeneration + 1;
-      _.Debug(`LoadCapsules[${_}]: starting`), this.m_cancelSignal.cancel();
+      (_.Debug(`LoadCapsules[${_}]: starting`), this.m_cancelSignal.cancel());
       let _ = _.default.CancelToken.source();
-      (this.m_cancelSignal = _),
+      ((this.m_cancelSignal = _),
         this.m_loadCapsulesDebugGeneration++,
         _.Debug(
           `LoadCapsules[${_}]: now in generation ${this.m_loadCapsulesDebugGeneration}`,
-        );
+        ));
       let _ = this.context.eLocation == 2;
       if ((await Promise.all([_.Get().HintLoad(), _(_, _)]), _.token.reason)) {
         _.Debug(`LoadCapsules[${_}]: Cancellation flipped after precache`);
@@ -22224,7 +22230,7 @@ var _ = _(_()),
           },
           _ = _ ? `search` : _,
           _ = Math.max(_.cap_item_count ?? 0, _);
-        _ > 0 && (_.show_more_count ?? 0) > 0 && (_ = _.show_more_count),
+        (_ > 0 && (_.show_more_count ?? 0) > 0 && (_ = _.show_more_count),
           (_ = await _.Get().GetItemsSoFar(
             this.state.results,
             _,
@@ -22241,7 +22247,7 @@ var _ = _(_()),
             _: _._,
             type: _.type === 0 ? `game` : _(_.type),
           }))),
-          (_ = _.bMoreAvailable);
+          (_ = _.bMoreAvailable));
       } catch (_) {
         _.token.reason ||
           (_.Info(
@@ -22272,12 +22278,12 @@ var _ = _(_()),
           ));
     }
     OnFlavorLabelClick(_) {
-      this.m_timerForChange.Cancel(),
+      (this.m_timerForChange.Cancel(),
         !this.m_cancelSignal.token.reason &&
           _(this.props.history, {
             flavor: _,
             offset: void 0,
-          });
+          }));
     }
     GetFlavorsForActiveTab() {
       let { activeTab: _, browseInfo: _ } = this.props,
@@ -22363,10 +22369,10 @@ var _ = _(_()),
     OnUpdateSearch(_) {
       if (this.m_cancelSignal.token.reason) return;
       let _ = _.target.value && _.target.value.trim().toLocaleLowerCase();
-      this.setState({
+      (this.setState({
         strRawSearch: _.target.value,
       }),
-        this.m_timerForChange.Schedule(200, () => this.OnApplySearch(_));
+        this.m_timerForChange.Schedule(200, () => this.OnApplySearch(_)));
     }
     GetSNRFeature() {
       if (this.state.strRawSearch) return `saleitemsearch`;
@@ -22451,7 +22457,7 @@ var _ = _(_()),
         _ =
           _ > 0
             ? () => {
-                _(this.props.history, `offset`, void 0),
+                (_(this.props.history, `offset`, void 0),
                   this.setState(
                     {
                       bInitialLoadComplete: !1,
@@ -22463,7 +22469,7 @@ var _ = _(_()),
                       bAwaitingMoreRowsLoading: !0,
                     },
                     () => this.LoadCapsules(),
-                  );
+                  ));
               }
             : void 0,
         _ = (0, _.jsxs)(_.Fragment, {
@@ -22513,7 +22519,7 @@ var _ = _(_()),
           fnOnUpdateFilter: this.OnUpdateFacetFilter,
           onInitFilter: async () => {
             let _ = this.props.section.facets;
-            _.Debug(`FacetedSaleSection.onInitFilter', rgFacet`),
+            (_.Debug(`FacetedSaleSection.onInitFilter', rgFacet`),
               !_ &&
                 this.props.section.facet_auto_generate_options &&
                 ((_ = await _(this.props.section.facet_auto_generate_options)),
@@ -22530,7 +22536,7 @@ var _ = _(_()),
                   _(),
                   _(),
                 ),
-              });
+              }));
           },
           ...this.state.results,
           children: _,
@@ -22603,14 +22609,14 @@ var _ = _(_()),
       });
     }
   };
-_([_], _.prototype, `ShowMoreRows`, null),
+(_([_], _.prototype, `ShowMoreRows`, null),
   _([_], _.prototype, `SetViewMode`, null),
   _([_], _.prototype, `FilterItems`, null),
   _([_], _.prototype, `OnUpdateSearch`, null),
   _([_], _.prototype, `OnUpdateFacetFilter`, null),
   _([_], _.prototype, `OnResize`, null),
   _([_], _.prototype, `BDisplayStyleIsCompact`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 function _(_) {
   let { value: _, onChange: _, className: _, tooltip: _, children: _ } = _;
   return (0, _.jsx)(_, {
@@ -22694,7 +22700,7 @@ function _(_) {
       ref: _,
       className: _,
       onClick: (_) => {
-        _ && _(), _.preventDefault(), _.stopPropagation();
+        (_ && _(), _.preventDefault(), _.stopPropagation());
       },
       children: [
         (0, _.jsx)(_, {}),
@@ -22872,7 +22878,7 @@ function _(_) {
       placeholder: `type at least 2 characters..`,
       onChange: (_) => {
         let _ = String(_.target.value).toLocaleLowerCase();
-        (!_ || _.trim().length < 2) && _(null), _(_.trim());
+        ((!_ || _.trim().length < 2) && _(null), _(_.trim()));
       },
     })
   );
@@ -23030,7 +23036,7 @@ var _ = `NHLuBDx93u4-`,
         _ =
           Number(_.rgNavMetrics[_]?.total_views || 0) -
           Number(_?.owner_total_views || 0);
-      (_ = {
+      ((_ = {
         appid: _,
         gross_sales_usd: _.rgAppSaleSummaries[_]?.gross_sales_usd || 0,
         gross_units_sold: _.rgAppSaleSummaries[_]?.gross_units_sold || 0,
@@ -23040,7 +23046,7 @@ var _ = `NHLuBDx93u4-`,
         views: _?.total_views || `0`,
         no_views: _,
       }),
-        _.push(_);
+        _.push(_));
     }
     let _ = Date.now() / 1e3,
       _ = _(_ - _.rtime_written),
@@ -23376,8 +23382,8 @@ function _(_, _) {
     let _ = _.rgPackageDiscounts[Number(_)];
     if (_?.length)
       for (let _ of _)
-        (_ === void 0 || _ > _.percentage) && (_ = _.percentage),
-          (_ === void 0 || _ < _.percentage) && (_ = _.percentage);
+        ((_ === void 0 || _ > _.percentage) && (_ = _.percentage),
+          (_ === void 0 || _ < _.percentage) && (_ = _.percentage));
   }
   return _ === void 0
     ? _(`#Sale_Stats_NoDiscounts`)
@@ -23401,7 +23407,7 @@ function _(_) {
 }
 var _;
 function _(_) {
-  return (_ ||= new Intl.NumberFormat(`en-US`)), _.format(Number(_));
+  return ((_ ||= new Intl.NumberFormat(`en-US`)), _.format(Number(_)));
 }
 function _(_) {
   return _(_.getValue());
@@ -23473,8 +23479,8 @@ var _ = class _ {
       });
       if (_?.data?.success == 1) {
         for (let _ of _.data.users)
-          this.m_mapUsersBySteamID.set(_.steamid, _),
-            this.GetUserInfoCallbackup(_.steamid).Dispatch(_);
+          (this.m_mapUsersBySteamID.set(_.steamid, _),
+            this.GetUserInfoCallbackup(_.steamid).Dispatch(_));
         return;
       }
       _ = _(_?.data);
@@ -23696,10 +23702,10 @@ function _(_) {
           _.QueueLoadPartnerEvent(_.clanAccountID, _.clanEventGID, !0),
           _.LoadClanInfoForClanSteamID(_),
         ];
-      !_ &&
+      (!_ &&
         _(_) &&
         _.push(_.Get().FetchSalePageDetails(_.clanAccountID, _.clanEventGID)),
-        Promise.all(_).then(() => _(!1));
+        Promise.all(_).then(() => _(!1)));
     }, [_, _]),
     _)
   )
@@ -24517,13 +24523,13 @@ var _ = class _ extends _ {
   m_bTwoPhaseUpload = !1;
   m_bDirectTempStorageUpload = !1;
   constructor(_, _, _, _, _) {
-    super(),
+    (super(),
       _(this),
       (this.m_strUploadPath = _),
       (this.m_rgImageOptions = _(_)),
       (this.m_bSynchronousUpload = _),
       (this.m_bTwoPhaseUpload = _),
-      (this.m_bDirectTempStorageUpload = _);
+      (this.m_bDirectTempStorageUpload = _));
   }
   GetUploadPath() {
     return this.m_strUploadPath;
@@ -24569,11 +24575,11 @@ var _ = class _ extends _ {
           _,
           void 0,
         );
-        return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+        return ((this.m_filesToUpload = [...this.m_filesToUpload, _]), !0);
       }
       if (_ instanceof HTMLVideoElement) {
         let _ = new _(_, _.name, _, this.m_rgImageOptions, _.src, _(_), _);
-        return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+        return ((this.m_filesToUpload = [...this.m_filesToUpload, _]), !0);
       }
     } else if (_.isSubtitleTextFile(_))
       return (
@@ -24587,9 +24593,9 @@ var _ = class _ extends _ {
   }
   async UploadSingleImage(_, _, _, _) {
     let _ = new FormData();
-    _.append(`sessionid`, _()),
+    (_.append(`sessionid`, _()),
       _.append(`elanguage`, `` + _),
-      _.append(`originalname`, _);
+      _.append(`originalname`, _));
     let _ = _.GetCurrentImageOption();
     _?.artworkType && _.append(`arttype`, _.artworkType);
     let _ = _(_);
@@ -24700,7 +24706,7 @@ var _ = class _ extends _ {
   }
   async HandleDirectUploadToTempFromBrowser(_, _) {
     let _ = new FormData();
-    _.append(`filesize`, `` + _.file.size), _.append(`sessionid`, _());
+    (_.append(`filesize`, `` + _.file.size), _.append(`sessionid`, _()));
     let _ =
         _(this.m_strUploadPath, `ajax`, `uploadurl`) || this.m_strUploadPath,
       _ = await _.default.post(_, _, {
@@ -24737,11 +24743,11 @@ var _ = class _ extends _ {
     };
   }
 };
-_([_], _.prototype, `m_filesToUpload`, void 0),
+(_([_], _.prototype, `m_filesToUpload`, void 0),
   _([_], _.prototype, `GetUploadImages`, null),
   _([_], _.prototype, `ClearImages`, null),
   _([_], _.prototype, `DeleteUploadImage`, null),
-  _([_], _.prototype, `AddImageForLanguage`, null);
+  _([_], _.prototype, `AddImageForLanguage`, null));
 function _(_, _, _, _, _) {
   let _ = _(_ instanceof Array ? _ : [_]);
   return _.useMemo(() => new _(_, _, _, _, _), [_, _, _, _, _]);
@@ -24814,8 +24820,8 @@ function _(_) {
     [_] = _(`inputaccesskey`, null),
     _ = (0, _.useCallback)(
       (_, _, _, _, _) => {
-        _(_ != null && _ >= 0 && _ < 32, `Unexpected value for elang: ` + _),
-          _.SetPreviewArt(_, _, _ + _(_));
+        (_(_ != null && _ >= 0 && _ < 32, `Unexpected value for elang: ` + _),
+          _.SetPreviewArt(_, _, _ + _(_)));
       },
       [_, _],
     ),
@@ -25215,14 +25221,14 @@ function _(_) {
     _ = `https://partner.steamgames.com/doc/store/assets/promos`;
   switch (_.type) {
     case `midweek`:
-      (_ = _(`#AssetRequest_Type_` + _.type)),
+      ((_ = _(`#AssetRequest_Type_` + _.type)),
         (_ = _(`#AssetRequest_MoreInfo_` + _.type)),
-        (_ = `https://partner.steamgames.com/doc/store/promo/midweek`);
+        (_ = `https://partner.steamgames.com/doc/store/promo/midweek`));
       break;
     case `weekenddeal`:
-      (_ = _(`#AssetRequest_Type_` + _.type)),
+      ((_ = _(`#AssetRequest_Type_` + _.type)),
         (_ = _(`#AssetRequest_MoreInfo_` + _.type)),
-        (_ = `https://partner.steamgames.com/doc/store/promo/weekend`);
+        (_ = `https://partner.steamgames.com/doc/store/promo/weekend`));
   }
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -25499,8 +25505,8 @@ var _ = class _ {
       });
   }
 };
-_([_], _.prototype, `LoadAppPackages`, null),
-  _([_], _.prototype, `InternalLoadAppPackages`, null);
+(_([_], _.prototype, `LoadAppPackages`, null),
+  _([_], _.prototype, `InternalLoadAppPackages`, null));
 function _(_) {
   let _ = _();
   return (
@@ -25537,7 +25543,7 @@ function _(_) {
 }
 function _(_) {
   let _ = _();
-  return _(_.Get().GetPackageListUpdateCallback(_), () => _()), _(_);
+  return (_(_.Get().GetPackageListUpdateCallback(_), () => _()), _(_));
 }
 var _ = `_3iE-NyyA6WM-`,
   _ = `fzrd75b9gws-`,
@@ -26621,8 +26627,8 @@ function _(_) {
         onCancel: _,
         onOK: async () => {
           if ((_.fnSetLoading(!0), _))
-            _.SetUpdateEvent(1, `fakegiddonnotsave`, _.accountid, _),
-              _.fnSetSuccess(!0);
+            (_.SetUpdateEvent(1, `fakegiddonnotsave`, _.accountid, _),
+              _.fnSetSuccess(!0));
           else {
             let _ = await _(_.GetPlanID(), _);
             _ &&
@@ -26688,7 +26694,7 @@ function _() {
 }
 async function _(_, _) {
   let _ = new FormData();
-  _.append(`sessionid`, _()), _.append(`gid_promotionplan`, _);
+  (_.append(`sessionid`, _()), _.append(`gid_promotionplan`, _));
   let _ =
     _.PARTNER_BASE_URL + `partnerevents/ajaxcreatemarketingmessagemajorevent`;
   try {
@@ -26696,22 +26702,22 @@ async function _(_, _) {
       withCredentials: !0,
     });
     if (_?.data?.success == 1) return _.data;
-    console.error(
+    (console.error(
       `OnSubmitCreateMarketingMessageMajorUpdate error code  ` +
         _?.data?.success +
         ` msg: ` +
         _?.data?.msg,
     ),
       _.fnSetStrError(_?.data?.msg),
-      _.fnSetError(!0);
+      _.fnSetError(!0));
   } catch (_) {
     let _ = _(_);
-    console.error(
+    (console.error(
       `OnSubmitCreateMarketingMessageMajorUpdate ` + _.strErrorMsg,
       _,
     ),
       _.fnSetStrError(_.strErrorMsg),
-      _.fnSetError(!0);
+      _.fnSetError(!0));
   }
   return null;
 }
@@ -26748,16 +26754,16 @@ function _(_) {
         strDescription: _(`#Dialog_AreYouSure`),
         onCancel: _,
         onOK: async () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             (await _(_.GetPlanID(), _)) &&
               (_.fnSetSuccess(!0),
-              _.fnSetStrSuccess(`Reload page to verify unlink succeeded`));
+              _.fnSetStrSuccess(`Reload page to verify unlink succeeded`)));
         },
       });
 }
 async function _(_, _) {
   let _ = new FormData();
-  _.append(`sessionid`, _()), _.append(`gid_promotionplan`, _);
+  (_.append(`sessionid`, _()), _.append(`gid_promotionplan`, _));
   let _ =
     _.PARTNER_BASE_URL + `partnerevents/ajaxremovemarketingmessagemajorevent`;
   try {
@@ -26765,19 +26771,19 @@ async function _(_, _) {
       withCredentials: !0,
     });
     if (_?.data?.success == 1) return _.data;
-    console.error(
+    (console.error(
       `OnSubmitRemoveUpdateFromInputPipeline error code  ` +
         _?.data?.success +
         ` msg: ` +
         _?.data?.msg,
     ),
       _.fnSetStrError(_?.data?.msg),
-      _.fnSetError(!0);
+      _.fnSetError(!0));
   } catch (_) {
     let _ = _(_);
-    console.error(`OnSubmitRemoveUpdateFromInputPipeline ` + _.strErrorMsg, _),
+    (console.error(`OnSubmitRemoveUpdateFromInputPipeline ` + _.strErrorMsg, _),
       _.fnSetStrError(_.strErrorMsg),
-      _.fnSetError(!0);
+      _.fnSetError(!0));
   }
   return null;
 }
@@ -27287,7 +27293,7 @@ function _(_) {
         strTitle: _(`#AssetRequest_Submit_Title`),
         onCancel: _,
         onOK: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _(_)
               .then((_) => {
                 _
@@ -27298,9 +27304,9 @@ function _(_) {
                     _.fnSetStrError(_(`#Error_ErrorCommunicatingWithNetwork`)));
               })
               .catch(() => {
-                _.fnSetError(!0),
-                  _.fnSetStrError(_(`#Error_ErrorCommunicatingWithNetwork`));
-              });
+                (_.fnSetError(!0),
+                  _.fnSetStrError(_(`#Error_ErrorCommunicatingWithNetwork`)));
+              }));
         },
         children: (0, _.jsx)(`div`, {
           children: _(`#AssetRequest_SubmitLink`),
@@ -27477,7 +27483,7 @@ function _(_) {
         strDescription: `By clicking confirm, this will unlock the asset request for this marketing message only. It will create an assert request only promotion plan for the rest of operations and artwork workflow.`,
         onCancel: _,
         onOK: async () => {
-          _.fnSetLoading(!0), await _(_, _, _, _);
+          (_.fnSetLoading(!0), await _(_, _, _, _));
         },
       });
 }
@@ -27578,10 +27584,10 @@ function _(_) {
                 strDailyDealID: _.GetDealID(),
                 inputPipelineModel: _,
               };
-            _?.GetAppType() == 14 && (_.nAdvertisingAppID = _._),
+            (_?.GetAppType() == 14 && (_.nAdvertisingAppID = _._),
               _.BRequiresSalePage() &&
                 ((_.nSaleClanAccountID = _.GetSaleClanAccountID()),
-                (_.strSaleClanEventGID = _.GetSaleClanEventGID()));
+                (_.strSaleClanEventGID = _.GetSaleClanEventGID())));
             let _ = await _(_);
             _
               ? (_.SetPromotionPlanAssetRequestID(_),
@@ -27646,7 +27652,7 @@ function _(_) {
         };
       try {
         let _ = await _(_);
-        if (_) return _.Get().InitDailyDealToEdit(_, !0), _;
+        if (_) return (_.Get().InitDailyDealToEdit(_, !0), _);
       } catch {}
       return !1;
     },
@@ -28064,7 +28070,7 @@ function _(_) {
           _.setDate(_.getDate() + 7);
           let _ = Math.floor(_.getTime() / 1e3),
             _ = _(_);
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _ && _ != 0
               ? _(
                   _,
@@ -28081,7 +28087,7 @@ function _(_) {
                       `Discount Event Creation Failed: ` + _(_).strErrorMsg,
                     );
                   })
-              : _(_, _, _, null);
+              : _(_, _, _, null));
         },
         onCancel: _,
         bOKDisabled: !_ || !_ || !_ || !_ || _.bLoading,
@@ -28091,7 +28097,7 @@ function _(_) {
             (0, _.jsx)(_, {
               oChoice: _,
               fnSetChoice: (_) => {
-                _(_), _(0);
+                (_(_), _(0));
               },
             }),
             !!_ &&
@@ -28480,13 +28486,13 @@ var _ = class _ {
     return this.m_listEvents;
   }
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {
     _(this);
   }
   ClearAllSolrEvents() {
-    (this.m_mapEventGIDToSolrData = new Map()), (this.m_listEvents = []);
+    ((this.m_mapEventGIDToSolrData = new Map()), (this.m_listEvents = []));
   }
   async LoadPartnerEventForQueryIncremental(
     _,
@@ -28537,9 +28543,9 @@ var _ = class _ {
     return _.data ? _.data.docs : [];
   }
 };
-_([_], _.prototype, `m_mapEventGIDToSolrData`, void 0),
+(_([_], _.prototype, `m_mapEventGIDToSolrData`, void 0),
   _([_], _.prototype, `m_listEvents`, void 0),
-  _([_], _.prototype, `ClearAllSolrEvents`, null);
+  _([_], _.prototype, `ClearAllSolrEvents`, null));
 var _ = `qmAnWYfXGFA-`,
   _ = `YbDiwWqWeBs-`;
 function _(_) {
@@ -28565,7 +28571,7 @@ function _(_) {
                 _,
                 {
                   onSelected: () => {
-                    (_.current.element.value = ``), _(_);
+                    ((_.current.element.value = ``), _(_));
                   },
                   children: (0, _.jsxs)(`div`, {
                     style: {
@@ -28643,17 +28649,20 @@ function _(_) {
             _ = null,
             _ = null,
             _ = null;
-          if (_ && _?.length >= 3) (_ = Number.parseInt(_[1])), (_ = _[2]);
-          else if (_ && _?.length >= 3) (_ = Number.parseInt(_[1])), (_ = _[2]);
-          else if (_ && _?.length >= 3) (_ = _[1]), (_ = _[2]);
-          else if (_ && _.length >= 3) (_ = Number.parseInt(_[1])), (_ = _[2]);
+          if (_ && _?.length >= 3) ((_ = Number.parseInt(_[1])), (_ = _[2]));
+          else if (_ && _?.length >= 3)
+            ((_ = Number.parseInt(_[1])), (_ = _[2]));
+          else if (_ && _?.length >= 3) ((_ = _[1]), (_ = _[2]));
+          else if (_ && _.length >= 3)
+            ((_ = Number.parseInt(_[1])), (_ = _[2]));
           else if (_ && _.length >= 3) {
             let _ = _[1];
             _ = _[2];
             let _ = await _.LoadOGGClanInfoForIdentifier(_);
             _ && (_ = _.appid);
-          } else if (_ && _.length >= 3) (_ = _[1]), (_ = _[2]);
-          else if (_ && _.length >= 3) (_ = Number.parseInt(_[1])), (_ = _[2]);
+          } else if (_ && _.length >= 3) ((_ = _[1]), (_ = _[2]));
+          else if (_ && _.length >= 3)
+            ((_ = Number.parseInt(_[1])), (_ = _[2]));
           else if (_ && _.length >= 3) {
             let _ = _[1];
             _ = _[2];
@@ -28689,14 +28698,14 @@ function _(_) {
                 ));
           }
           if (_) {
-            _.push({
+            (_.push({
               name: _.GetNameWithFallback(_) ?? ``,
               type: _.GetEventType(),
               clanSteamID: _.clanSteamID,
               gidClanAnnouncement: _.GetAnnouncementGID(),
               gidClanEvent: _.GID,
             }),
-              _(_);
+              _(_));
             return;
           }
           _.current &&= (window.clearTimeout(_.current), null);
@@ -28916,7 +28925,7 @@ var _ = `yZW8qA5Ld6Y-`,
     async CreateCluster(_, _, _, _, _, _, _) {
       let _ = `${_.PARTNER_BASE_URL}cluster/ajaxcreatecluster`,
         _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`pageid`, _(_)),
         _.append(`name`, _),
         _.append(`layout`, _(_)),
@@ -28924,7 +28933,7 @@ var _ = `yZW8qA5Ld6Y-`,
         _ && _.append(`rtEndTime`, `` + _),
         _ && _.append(`targetURL`, _),
         _ &&
-          (_.append(`storeItemID`, `` + _), _.append(`storeItemType`, `` + _));
+          (_.append(`storeItemID`, `` + _), _.append(`storeItemType`, `` + _)));
       let _ = null;
       try {
         let _ = await _.default.post(_, _, {
@@ -28950,7 +28959,7 @@ var _ = `yZW8qA5Ld6Y-`,
     }
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
   };
 _([_], _.prototype, `CreateCluster`, null);
@@ -29114,7 +29123,7 @@ function _(_) {
             let _ = _.GetStartDate(),
               _ = _.GetType(),
               _ = _.GetEndDate();
-            _.has(_) && (_ = _ + _.get(_).nDaysDiscountEvent * _.PerDay),
+            (_.has(_) && (_ = _ + _.get(_).nDaysDiscountEvent * _.PerDay),
               await _(
                 _,
                 _,
@@ -29139,9 +29148,9 @@ function _(_) {
                     `Discount Event Creation Failed: ` +
                     _(_).strErrorMsg +
                     `. `;
-                  console.log(`discount event create failed`, _(_), _),
-                    _.fnSetStrError(_);
-                });
+                  (console.log(`discount event create failed`, _(_), _),
+                    _.fnSetStrError(_));
+                }));
           },
           children: [
             (0, _.jsx)(`br`, {}),
@@ -29173,8 +29182,8 @@ function _(_) {
   (0, _.useEffect)(() => {
     if (_) {
       let _ = new Set();
-      _.forEach((_) => _.appids?.forEach((_) => _.add(_))),
-        _.Get().QueueMultipleAppRequests(Array.from(_), {});
+      (_.forEach((_) => _.appids?.forEach((_) => _.add(_))),
+        _.Get().QueueMultipleAppRequests(Array.from(_), {}));
     }
   }, [_]);
   let _ = (0, _.useMemo)(
@@ -29249,11 +29258,11 @@ var _ = class _ {
     let [_] = await Promise.all([
       _(() => import(`./marketing_english.js`), [], import.meta.url),
     ]);
-    return (this.m_marketingTokens = _), this.m_marketingTokens;
+    return ((this.m_marketingTokens = _), this.m_marketingTokens);
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
 };
 function _() {
@@ -29324,8 +29333,8 @@ function _(_) {
         tooltip: `Checking this to on will show to all users in the Steam Realm. This will also clear any dynamic filters associated with the marketing messages including legacy filter settings.`,
         checked: _,
         onChange: (_) => {
-          _.SetNoFiltersRequired(_),
-            _ && (_.ClearUserFilters(), _.ClearAllLegacyRestrictions());
+          (_.SetNoFiltersRequired(_),
+            _ && (_.ClearUserFilters(), _.ClearAllLegacyRestrictions()));
         },
       }),
     ],
@@ -29595,8 +29604,8 @@ function _(_) {
                 readonly: !_.canModifyStoreItems,
                 fnRemoveItem: () => {
                   let _ = _.id_list.findIndex((_) => _ == _);
-                  _(_ >= 0, `Did not find ${_} in list`),
-                    _.id_list.splice(_, 1);
+                  (_(_ >= 0, `Did not find ${_} in list`),
+                    _.id_list.splice(_, 1));
                   let _ = {
                     filter_type: _.filter_type,
                     id_list: [..._.id_list],
@@ -29944,10 +29953,10 @@ function _(_, _, _, _, _, _) {
   if (_)
     switch (_.eStoreItemType) {
       case 0:
-        (_ = `${_.STORE_BASE_URL}app/${_.nID}`), (_ = 2);
+        ((_ = `${_.STORE_BASE_URL}app/${_.nID}`), (_ = 2));
         break;
       case 1:
-        (_ = `${_.STORE_BASE_URL}sub/${_.nID}`), (_ = 4);
+        ((_ = `${_.STORE_BASE_URL}sub/${_.nID}`), (_ = 4));
         break;
       case 2:
         _ = `${_.STORE_BASE_URL}bundle/${_.nID}`;
@@ -29962,7 +29971,7 @@ function _(_, _, _, _, _, _) {
   };
   switch (_) {
     case 10:
-      (_.type = `partner_event`), (_.custom_display = `partner_event`);
+      ((_.type = `partner_event`), (_.custom_display = `partner_event`));
       break;
     default:
       _(_?.eAppType, _) && (_.custom_display = `mm_auto_render`);
@@ -30069,8 +30078,8 @@ function _(_) {
               .catch((_) => {
                 let _ =
                   `marketing message Event Failed: ` + _(_).strErrorMsg + `. `;
-                console.log(`marketing message create failed`, _(_), _),
-                  _.fnSetStrError(_);
+                (console.log(`marketing message create failed`, _(_), _),
+                  _.fnSetStrError(_));
               });
           },
           children: [
@@ -30149,7 +30158,7 @@ function _(_) {
       _((_) => {
         if (_.get(_) === _) return _;
         let _ = new Map(_);
-        return _.set(_, _), _;
+        return (_.set(_, _), _);
       });
     }, []),
     _ = (0, _.useMemo)(() => {
@@ -30398,8 +30407,8 @@ function _(_) {
               })
               .catch((_) => {
                 let _ = `spotlight Creation Failed: ` + _(_).strErrorMsg + `. `;
-                console.log(`spotlight create failed`, _(_), _),
-                  _.fnSetStrError(_);
+                (console.log(`spotlight create failed`, _(_), _),
+                  _.fnSetStrError(_));
               });
           },
           children: [
@@ -30638,7 +30647,7 @@ function _(_) {
           let _ = !0;
           if (_) {
             let _ = new _(_(_));
-            (_ = await _(_, _, _, _, _)), (_ = _.GetPlanAssetRequestGID());
+            ((_ = await _(_, _, _, _, _)), (_ = _.GetPlanAssetRequestGID()));
           }
           _ &&
             _.fnSetElSuccess(
@@ -30897,9 +30906,11 @@ function _(_) {
     [_, _] = _.useState(_ == `important`),
     [_, _] = _.useState(`#spotlight_midweek_deal`);
   (0, _.useEffect)(() => {
-    _(_ == `important`),
+    (_(_ == `important`),
       _(_ == `important`),
-      _(_ == `midweek` ? `#spotlight_midweek_deal` : `#spotlight_weekend_deal`);
+      _(
+        _ == `midweek` ? `#spotlight_midweek_deal` : `#spotlight_weekend_deal`,
+      ));
   }, [_]);
   let [_, _] = (0, _.useState)(null),
     [_, _] = (0, _.useState)(!1),
@@ -30909,7 +30920,7 @@ function _(_) {
       include_platforms: !0,
     }),
     _ = (_) => {
-      _ == `assetrequest` && _(!1), _(_);
+      (_ == `assetrequest` && _(!1), _(_));
     },
     _ = (0, _.useCallback)(
       (_, _, _, _, _, _, _, _, _, _, _, _, _, _) => {
@@ -30984,9 +30995,9 @@ function _(_) {
           )
             .then((_) => (_ = _._))
             .catch((_) => {
-              (_ =
+              ((_ =
                 `Discount Event Creation Failed: ` + _(_).strErrorMsg + `. `),
-                _(_);
+                _(_));
             });
         }
         if (_ && (_ || _) && !_ && !_) {
@@ -31051,7 +31062,7 @@ function _(_) {
               _(`Marketing Message Creation Failed: ` + _(_).strErrorMsg),
             );
         }
-        _ &&
+        (_ &&
           !_ &&
           !_ &&
           (await _(_.k_ConfigPage_Takeover, _, _, _)
@@ -31094,7 +31105,7 @@ function _(_) {
             _,
             _,
             _ || _ == `saleevent` || _ == `themesale`,
-          );
+          ));
       },
       children: (0, _.jsxs)(`div`, {
         className: _({
@@ -31499,7 +31510,7 @@ function _(_) {
         let _ = _.get(_),
           _ = _?.get(_)?.find((_) => {
             let _ = new Date((_.rtWeekStart + _.rtStartModifier) * 1e3);
-            return _.setHours(10), Math.floor(_.getTime() / 1e3) == _;
+            return (_.setHours(10), Math.floor(_.getTime() / 1e3) == _);
           }),
           _ = _.nMaxSlots - _?.rgPlans?.length;
         _(_ <= 0);
@@ -31516,7 +31527,7 @@ function _(_) {
           selectedOption: _,
           onChange: (_) => {
             let _ = _.get(_);
-            _(_.data), _(_.data + _.rtDays * _.PerDay);
+            (_(_.data), _(_.data + _.rtDays * _.PerDay));
           },
         }),
         _ != _ &&
@@ -31576,12 +31587,12 @@ var _ = _(
           else {
             var _ = [_, _, _, _, _, _],
               _ = 0;
-            (_ = Error(
+            ((_ = Error(
               _.replace(/%s/g, function () {
                 return _[_++];
               }),
             )),
-              (_.name = `Invariant Violation`);
+              (_.name = `Invariant Violation`));
           }
           throw ((_.framesToPop = 1), _);
         }
@@ -31623,7 +31634,7 @@ function _(_, _, _) {
     function _() {
       var _,
         _ = [...arguments];
-      (_ = _.call.apply(_, [this].concat(_)) || this),
+      ((_ = _.call.apply(_, [this].concat(_)) || this),
         (_.handlers = Object.create(null)),
         _.forEach(function (_) {
           var _ = _[_],
@@ -31632,7 +31643,7 @@ function _(_, _, _) {
                 var _;
                 _._notifying = !0;
                 var _ = [...arguments].slice(1);
-                (_ = _.props)[_].apply(_, [_].concat(_)), (_._notifying = !1);
+                ((_ = _.props)[_].apply(_, [_].concat(_)), (_._notifying = !1));
               }
               _.unmounted ||
                 _.setState(function (_) {
@@ -31652,7 +31663,7 @@ function _(_, _, _) {
         _.length &&
           (_.attachRef = function (_) {
             _.inner = _;
-          });
+          }));
       var _ = Object.create(null);
       return (
         _.forEach(function (_) {
@@ -31679,8 +31690,8 @@ function _(_, _, _) {
           };
         return (
           _.forEach(function (_) {
-            (_.prevProps[_] = _[_]),
-              !_(_, _) && _(_, _) && (_.values[_] = _[_(_)]);
+            ((_.prevProps[_] = _[_]),
+              !_(_, _) && _(_, _) && (_.values[_] = _[_(_)]));
           }),
           _
         );
@@ -31713,7 +31724,7 @@ function _(_, _, _) {
       _
     );
   })(_.Component);
-  _(_),
+  (_(_),
     (_.displayName = `Uncontrolled(` + _ + `)`),
     (_.propTypes = _(
       {
@@ -31726,7 +31737,7 @@ function _(_, _, _) {
         var _;
         return (_ = this.inner)[_].apply(_, arguments);
       };
-    });
+    }));
   var _ = _;
   return (
     _.forwardRef &&
@@ -31746,7 +31757,7 @@ function _(_, _, _) {
       (_.propTypes = _.propTypes)),
     (_.ControlledComponent = _),
     (_.deferControlTo = function (_, _, _) {
-      return _ === void 0 && (_ = {}), _(_, _({}, _, _), _);
+      return (_ === void 0 && (_ = {}), _(_, _({}, _, _), _));
     }),
     _
   );
@@ -31837,7 +31848,7 @@ function _(_, _) {
     _ = _ % 12,
     _ = Math.min(_, _(_)[_]),
     _ = new Date(_);
-  return _.setFullYear(_), _.setDate(1), _.setMonth(_), _.setDate(_), _;
+  return (_.setFullYear(_), _.setDate(1), _.setMonth(_), _.setDate(_), _);
 }
 function _(_, _) {
   var _ = _.getTimezoneOffset(),
@@ -31879,7 +31890,7 @@ function _(_, _, _) {
     case _:
     case _:
     case _:
-      (_ = _(_, 1, _)), (_ = _(_, 1, _)), _.setHours(23, 59, 59, 999);
+      ((_ = _(_, 1, _)), (_ = _(_, 1, _)), _.setHours(23, 59, 59, 999));
       break;
     case _:
       _.setHours(23, 59, 59, 999);
@@ -31887,7 +31898,7 @@ function _(_, _, _) {
     case _:
     case _:
     case _:
-      (_ = _(_, 1, _)), (_ = _(_, 1, _));
+      ((_ = _(_, 1, _)), (_ = _(_, 1, _)));
   }
   return _;
 }
@@ -31916,7 +31927,7 @@ function _() {
   return new Date(Math.max.apply(Math, arguments));
 }
 function _(_, _, _, _) {
-  return (_ ||= `day`), (!_ || _(_, _, _)) && (!_ || _(_, _, _));
+  return ((_ ||= `day`), (!_ || _(_, _, _)) && (!_ || _(_, _, _)));
 }
 var _ = _(`Milliseconds`),
   _ = _(`Seconds`),
@@ -31990,7 +32001,7 @@ function _(_, _, _, _) {
     default:
       throw TypeError(`Invalid units: "` + _ + `"`);
   }
-  return (_ = _ / _), _ ? _ : Math.round(_);
+  return ((_ = _ / _), _ ? _ : Math.round(_));
 }
 function _(_) {
   var _ = (function (_) {
@@ -32030,12 +32041,12 @@ var _ = _((_, _) => {
     function _(_, _, _) {
       var _ = -1,
         _ = _.length;
-      _ < 0 && (_ = -_ > _ ? 0 : _ + _),
+      (_ < 0 && (_ = -_ > _ ? 0 : _ + _),
         (_ = _ > _ ? _ : _),
         _ < 0 && (_ += _),
         (_ = _ > _ ? 0 : (_ - _) >>> 0),
-        (_ >>>= 0);
-      for (var _ = Array(_); ++_ < _; ) _[_] = _[_ + _];
+        (_ >>>= 0));
+      for (var _ = Array(_); ++_ < _;) _[_] = _[_ + _];
       return _;
     }
     _.exports = _;
@@ -32072,7 +32083,7 @@ var _ = _((_, _) => {
         var _ = !0;
       } catch {}
       var _ = _.call(_);
-      return _ && (_ ? (_[_] = _) : delete _[_]), _;
+      return (_ && (_ ? (_[_] = _) : delete _[_]), _);
     }
     _.exports = _;
   }),
@@ -32170,7 +32181,7 @@ var _ = _((_, _) => {
   _ = _((_, _) => {
     var _ = /\s/;
     function _(_) {
-      for (var _ = _.length; _-- && _.test(_.charAt(_)); );
+      for (var _ = _.length; _-- && _.test(_.charAt(_)););
       return _;
     }
     _.exports = _;
@@ -32254,7 +32265,7 @@ var _ = _((_, _) => {
       _ = (_ ? _(_, _, _) : _ === void 0) ? 1 : _(_(_), 0);
       var _ = _ == null ? 0 : _.length;
       if (!_ || _ < 1) return [];
-      for (var _ = 0, _ = 0, _ = Array(_(_ / _)); _ < _; )
+      for (var _ = 0, _ = 0, _ = Array(_(_ / _)); _ < _;)
         _[_++] = _(_, _, (_ += _));
       return _;
     }
@@ -32288,7 +32299,7 @@ function _(_, _) {
     _ = ``;
   if (typeof _ == `string`)
     return _.style.getPropertyValue(_(_)) || _(_).getPropertyValue(_(_));
-  Object.keys(_).forEach((_) => {
+  (Object.keys(_).forEach((_) => {
     let _ = _[_];
     !_ && _ !== 0
       ? _.style.removeProperty(_(_))
@@ -32297,7 +32308,7 @@ function _(_, _) {
         : (_ += `${_(_)}: ${_};`);
   }),
     _ && (_ += `transform: ${_};`),
-    (_.style.cssText += `;${_}`);
+    (_.style.cssText += `;${_}`));
 }
 function _(_, _) {
   if (_.contains) return _.contains(_);
@@ -32347,7 +32358,7 @@ var _ = (_) => !!_ && `offsetParent` in _;
 function _(_) {
   let _ = _(_),
     _ = _ && _.offsetParent;
-  for (; _(_) && _.nodeName !== `HTML` && _(_, `position`) === `static`; )
+  for (; _(_) && _.nodeName !== `HTML` && _(_, `position`) === `static`;)
     _ = _.offsetParent;
   return _ || _.documentElement;
 }
@@ -32361,7 +32372,7 @@ function _(_, _) {
   if (_(_, `position`) === `fixed`) _ = _.getBoundingClientRect();
   else {
     let _ = _ || _(_);
-    (_ = _(_)), _(_) !== `html` && (_ = _(_));
+    ((_ = _(_)), _(_) !== `html` && (_ = _(_)));
     let _ = String(_(_, `borderTopWidth`) || 0);
     _.top += parseInt(_, 10) - _(_) || 0;
     let _ = String(_(_, `borderLeftWidth`) || 0);
@@ -32385,7 +32396,7 @@ function _(_) {
   let _ = new Date().getTime(),
     _ = Math.max(0, 16 - (_ - _)),
     _ = setTimeout(_, _);
-  return (_ = _), _;
+  return ((_ = _), _);
 }
 var _ = [``, `webkit`, `moz`, `o`, `ms`],
   _ = `clearTimeout`,
@@ -32423,15 +32434,15 @@ function _(_, _, _, _) {
     var _ = _.once,
       _ = _.capture,
       _ = _;
-    !_ &&
+    (!_ &&
       _ &&
       ((_ =
         _.__once ||
         function _(_) {
-          this.removeEventListener(_, _, _), _.call(this, _);
+          (this.removeEventListener(_, _, _), _.call(this, _));
         }),
       (_.__once = _)),
-      _.addEventListener(_, _, _ ? _ : _);
+      _.addEventListener(_, _, _ ? _ : _));
   }
   _.addEventListener(_, _, _);
 }
@@ -32550,7 +32561,7 @@ function _() {
   return !/^((?!chrome|android).)*safari/i.test(_());
 }
 function _(_, _, _) {
-  _ === void 0 && (_ = !1), _ === void 0 && (_ = !1);
+  (_ === void 0 && (_ = !1), _ === void 0 && (_ = !1));
   var _ = _.getBoundingClientRect(),
     _ = 1,
     _ = 1;
@@ -32627,7 +32638,7 @@ function _(_) {
   var _ = /firefox/i.test(_());
   if (/Trident/i.test(_()) && _(_) && _(_).position === `fixed`) return null;
   var _ = _(_);
-  for (_(_) && (_ = _.host); _(_) && [`html`, `body`].indexOf(_(_)) < 0; ) {
+  for (_(_) && (_ = _.host); _(_) && [`html`, `body`].indexOf(_(_)) < 0;) {
     var _ = _(_);
     if (
       _.transform !== `none` ||
@@ -32643,7 +32654,7 @@ function _(_) {
   return null;
 }
 function _(_) {
-  for (var _ = _(_), _ = _(_); _ && _(_) && _(_).position === `static`; )
+  for (var _ = _(_), _ = _(_); _ && _(_) && _(_).position === `static`;)
     _ = _(_);
   return _ &&
     (_(_) === `html` || (_(_) === `body` && _(_).position === `static`))
@@ -32673,7 +32684,7 @@ function _(_) {
 }
 function _(_, _) {
   return _.reduce(function (_, _) {
-    return (_[_] = _), _;
+    return ((_[_] = _), _);
   }, {});
 }
 var _ = function (_, _) {
@@ -32779,7 +32790,7 @@ function _(_) {
             _: _,
             _: _,
           };
-  (_ = _._), (_ = _._);
+  ((_ = _._), (_ = _._));
   var _ = _.hasOwnProperty(`x`),
     _ = _.hasOwnProperty(`y`),
     _ = _,
@@ -32800,12 +32811,12 @@ function _(_) {
     ) {
       _ = _;
       var _ = _ && _ === _ && _.visualViewport ? _.visualViewport.height : _[_];
-      (_ -= _ - _.height), (_ *= _ ? 1 : -1);
+      ((_ -= _ - _.height), (_ *= _ ? 1 : -1));
     }
     if (_ === `left` || ((_ === `top` || _ === `bottom`) && _ === `end`)) {
       _ = _;
       var _ = _ && _ === _ && _.visualViewport ? _.visualViewport.width : _[_];
-      (_ -= _ - _.width), (_ *= _ ? 1 : -1);
+      ((_ -= _ - _.width), (_ *= _ ? 1 : -1));
     }
   }
   var _ = Object.assign(
@@ -32869,7 +32880,7 @@ function _(_) {
       gpuAcceleration: _,
       isFixed: _.options.strategy === `fixed`,
     };
-  _.modifiersData.popperOffsets != null &&
+  (_.modifiersData.popperOffsets != null &&
     (_.styles.popper = Object.assign(
       {},
       _.styles.popper,
@@ -32897,7 +32908,7 @@ function _(_) {
       )),
     (_.attributes.popper = Object.assign({}, _.attributes.popper, {
       "data-popper-placement": _.placement,
-    }));
+    })));
 }
 var _ = {
     name: `computeStyles`,
@@ -32926,11 +32937,11 @@ function _(_) {
       }),
     _ && _.addEventListener(`resize`, _.update, _),
     function () {
-      _ &&
+      (_ &&
         _.forEach(function (_) {
           _.removeEventListener(`scroll`, _.update, _);
         }),
-        _ && _.removeEventListener(`resize`, _.update, _);
+        _ && _.removeEventListener(`resize`, _.update, _));
     }
   );
 }
@@ -32981,7 +32992,7 @@ function _(_, _) {
     _ = 0,
     _ = 0;
   if (_) {
-    (_ = _.width), (_ = _.height);
+    ((_ = _.width), (_ = _.height));
     var _ = _();
     (_ || (!_ && _ === `fixed`)) && ((_ = _.offsetLeft), (_ = _.offsetTop));
   }
@@ -33313,7 +33324,7 @@ function _(_) {
           return _;
         }))
       ) {
-        (_ = _), (_ = !1);
+        ((_ = _), (_ = !1));
         break;
       }
       _.set(_, _);
@@ -33329,7 +33340,7 @@ function _(_) {
                   return _;
                 });
             });
-            if (_) return (_ = _), `break`;
+            if (_) return ((_ = _), `break`);
           },
           _ = _;
         _ > 0 && _(_) !== `break`;
@@ -33385,7 +33396,7 @@ function _(_) {
     _ = _(_, _, _),
     _ = _(_),
     _ = _(_);
-  (_.modifiersData[_] = {
+  ((_.modifiersData[_] = {
     referenceClippingOffsets: _,
     popperEscapeOffsets: _,
     isReferenceHidden: _,
@@ -33394,7 +33405,7 @@ function _(_) {
     (_.attributes.popper = Object.assign({}, _.attributes.popper, {
       "data-popper-reference-hidden": _,
       "data-popper-escaped": _,
-    }));
+    })));
 }
 var _ = {
   name: `hide`,
@@ -33437,15 +33448,15 @@ function _(_) {
     _ = _.offset,
     _ = _ === void 0 ? [0, 0] : _,
     _ = _.reduce(function (_, _) {
-      return (_[_] = _(_, _.rects, _)), _;
+      return ((_[_] = _(_, _.rects, _)), _);
     }, {}),
     _ = _[_.placement],
     _ = _._,
     _ = _._;
-  _.modifiersData.popperOffsets != null &&
+  (_.modifiersData.popperOffsets != null &&
     ((_.modifiersData.popperOffsets._ += _),
     (_.modifiersData.popperOffsets._ += _)),
-    (_.modifiersData[_] = _);
+    (_.modifiersData[_] = _));
 }
 var _ = {
   name: `offset`,
@@ -33563,7 +33574,7 @@ function _(_) {
         _ = _ + _ - _ - _,
         _ = _ + _ - _,
         _ = _(_ ? _(_, _) : _, _, _ ? _(_, _) : _);
-      (_[_] = _), (_[_] = _ - _);
+      ((_[_] = _), (_[_] = _ - _));
     }
     if (_) {
       var _ = _ === `x` ? `top` : _,
@@ -33577,7 +33588,7 @@ function _(_) {
         _ = _ ? _ : _ - _[_] - _[_] - _ + _.altAxis,
         _ = _ ? _ + _[_] + _[_] - _ - _.altAxis : _,
         _ = _ && _ ? _(_, _, _) : _(_ ? _ : _, _, _ ? _ : _);
-      (_[_] = _), (_[_] = _ - _);
+      ((_[_] = _), (_[_] = _ - _));
     }
     _.modifiersData[_] = _;
   }
@@ -33640,7 +33651,7 @@ function _(_) {
     _.set(_.name, _);
   });
   function _(_) {
-    _.add(_.name),
+    (_.add(_.name),
       []
         .concat(_.requires || [], _.requiresIfExists || [])
         .forEach(function (_) {
@@ -33649,7 +33660,7 @@ function _(_) {
             _ && _(_);
           }
         }),
-      _.push(_);
+      _.push(_));
   }
   return (
     _.forEach(function (_) {
@@ -33674,7 +33685,7 @@ function _(_) {
     return (
       (_ ||= new Promise(function (_) {
         Promise.resolve().then(function () {
-          (_ = void 0), _(_());
+          ((_ = void 0), _(_()));
         });
       })),
       _
@@ -33735,7 +33746,7 @@ function _(_) {
         state: _,
         setOptions: function (_) {
           var _ = typeof _ == `function` ? _(_.options) : _;
-          _(),
+          (_(),
             (_.options = Object.assign({}, _, _.options, _)),
             (_.scrollParents = {
               reference: _(_)
@@ -33744,7 +33755,7 @@ function _(_) {
                   ? _(_.contextElement)
                   : [],
               popper: _(_),
-            });
+            }));
           var _ = _(_([].concat(_, _.options.modifiers)));
           return (
             (_.orderedModifiers = _.filter(function (_) {
@@ -33760,7 +33771,7 @@ function _(_) {
               _ = _.reference,
               _ = _.popper;
             if (_(_, _)) {
-              (_.rects = {
+              ((_.rects = {
                 reference: _(_, _(_), _.options.strategy === `fixed`),
                 popper: _(_),
               }),
@@ -33768,9 +33779,9 @@ function _(_) {
                 (_.placement = _.options.placement),
                 _.orderedModifiers.forEach(function (_) {
                   return (_.modifiersData[_.name] = Object.assign({}, _.data));
-                });
+                }));
               for (var _ = 0; _ < _.orderedModifiers.length; _++)
-                if (_.reset === !0) (_.reset = !1), (_ = -1);
+                if (_.reset === !0) ((_.reset = !1), (_ = -1));
                 else {
                   var _ = _.orderedModifiers[_],
                     _ = _._,
@@ -33791,11 +33802,11 @@ function _(_) {
         },
         update: _(function () {
           return new Promise(function (_) {
-            _.forceUpdate(), _(_);
+            (_.forceUpdate(), _(_));
           });
         }),
         destroy: function () {
-          _(), (_ = !0);
+          (_(), (_ = !0));
         },
       };
     if (!_(_, _)) return _;
@@ -33820,10 +33831,10 @@ function _(_) {
       });
     }
     function _() {
-      _.forEach(function (_) {
+      (_.forEach(function (_) {
         return _();
       }),
-        (_ = []);
+        (_ = []));
     }
     return _;
   };
@@ -33924,8 +33935,8 @@ function _(_, _, _) {
             var _ = _.state,
               _ = {},
               _ = {};
-            Object.keys(_.elements).forEach(function (_) {
-              (_[_] = _.styles[_]), (_[_] = _.attributes[_]);
+            (Object.keys(_.elements).forEach(function (_) {
+              ((_[_] = _.styles[_]), (_[_] = _.attributes[_]));
             }),
               _({
                 state: _,
@@ -33934,7 +33945,7 @@ function _(_, _, _) {
                 update: _,
                 forceUpdate: _,
                 placement: _.placement,
-              });
+              }));
           },
         };
       },
@@ -33993,8 +34004,8 @@ function _(_, _) {
 }
 function _(_, _, _, _) {
   var _ = _ && typeof _ != `boolean` ? _.capture : _;
-  _.removeEventListener(_, _, _),
-    _.__once && _.removeEventListener(_, _.__once, _);
+  (_.removeEventListener(_, _, _),
+    _.__once && _.removeEventListener(_, _.__once, _));
 }
 function _(_, _, _, _) {
   return (
@@ -34039,7 +34050,7 @@ function _(_, _, _) {
     _ = (0, _.useCallback)(
       function (_) {
         var _ = _(_);
-        (0, _.default)(
+        ((0, _.default)(
           !!_,
           `RootClose captured a close event but does not have a ref to compare it to. useRootClose(), should be passed a ref that resolves to a DOM node`,
         ),
@@ -34051,7 +34062,7 @@ function _(_, _, _) {
               _,
               (_.composedPath == null ? void 0 : _.composedPath()[0]) ??
                 _.target,
-            ));
+            )));
       },
       [_],
     ),
@@ -34080,12 +34091,12 @@ function _(_, _, _) {
               return _(_, `mousemove`, _);
             })),
           function () {
-            _(),
+            (_(),
               _(),
               _(),
               _.forEach(function (_) {
                 return _();
-              });
+              }));
           }
         );
       }
@@ -34108,7 +34119,7 @@ function _(_) {
     Array.isArray(_)
       ? _
       : Object.keys(_).map(function (_) {
-          return (_[_].name = _), _[_];
+          return ((_[_].name = _), _[_]);
         })
   );
 }
@@ -34214,7 +34225,7 @@ function _(_, _) {
   let _ = _(_),
     _ = _(_);
   return (_) => {
-    _ && _(_), _ && _(_);
+    (_ && _(_), _ && _(_));
   };
 }
 function _(_, _) {
@@ -34259,7 +34270,7 @@ var _ = _.forwardRef(function (_, _) {
     _ = _(_, [`styles`, `attributes`]);
   _.show ? _ && _(!1) : !_.transition && !_ && _(!0);
   var _ = function () {
-      _(!0), _.onExited && _.onExited.apply(_, arguments);
+      (_(!0), _.onExited && _.onExited.apply(_, arguments));
     },
     _ = _.show || (_ && !_);
   if (
@@ -34306,7 +34317,7 @@ var _ = _.forwardRef(function (_, _) {
   }
   return _ ? _.createPortal(_, _) : null;
 });
-(_.displayName = `Overlay`),
+((_.displayName = `Overlay`),
   (_.propTypes = {
     show: _.default.bool,
     placement: _.default.oneOf(_),
@@ -34334,17 +34345,17 @@ var _ = _.forwardRef(function (_, _) {
     onExit: _.default.func,
     onExiting: _.default.func,
     onExited: _.default.func,
-  });
+  }));
 var _ = _((_, _) => {
     function _() {
-      (this.__data__ = []), (this.size = 0);
+      ((this.__data__ = []), (this.size = 0));
     }
     _.exports = _;
   }),
   _ = _((_, _) => {
     var _ = _();
     function _(_, _) {
-      for (var _ = _.length; _--; ) if (_(_[_][0], _)) return _;
+      for (var _ = _.length; _--;) if (_(_[_][0], _)) return _;
       return -1;
     }
     _.exports = _;
@@ -34382,7 +34393,7 @@ var _ = _((_, _) => {
     function _(_, _) {
       var _ = this.__data__,
         _ = _(_, _);
-      return _ < 0 ? (++this.size, _.push([_, _])) : (_[_][1] = _), this;
+      return (_ < 0 ? (++this.size, _.push([_, _])) : (_[_][1] = _), this);
     }
     _.exports = _;
   }),
@@ -34395,22 +34406,22 @@ var _ = _((_, _) => {
     function _(_) {
       var _ = -1,
         _ = _ == null ? 0 : _.length;
-      for (this.clear(); ++_ < _; ) {
+      for (this.clear(); ++_ < _;) {
         var _ = _[_];
         this.set(_[0], _[1]);
       }
     }
-    (_.prototype.clear = _),
+    ((_.prototype.clear = _),
       (_.prototype.delete = _),
       (_.prototype.get = _),
       (_.prototype.has = _),
       (_.prototype.set = _),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     var _ = _();
     function _() {
-      (this.__data__ = new _()), (this.size = 0);
+      ((this.__data__ = new _()), (this.size = 0));
     }
     _.exports = _;
   }),
@@ -34418,7 +34429,7 @@ var _ = _((_, _) => {
     function _(_) {
       var _ = this.__data__,
         _ = _.delete(_);
-      return (this.size = _.size), _;
+      return ((this.size = _.size), _);
     }
     _.exports = _;
   }),
@@ -34513,14 +34524,14 @@ var _ = _((_, _) => {
   _ = _((_, _) => {
     var _ = _();
     function _() {
-      (this.__data__ = _ ? _(null) : {}), (this.size = 0);
+      ((this.__data__ = _ ? _(null) : {}), (this.size = 0));
     }
     _.exports = _;
   }),
   _ = _((_, _) => {
     function _(_) {
       var _ = this.has(_) && delete this.__data__[_];
-      return (this.size -= +!!_), _;
+      return ((this.size -= +!!_), _);
     }
     _.exports = _;
   }),
@@ -34567,29 +34578,29 @@ var _ = _((_, _) => {
     function _(_) {
       var _ = -1,
         _ = _ == null ? 0 : _.length;
-      for (this.clear(); ++_ < _; ) {
+      for (this.clear(); ++_ < _;) {
         var _ = _[_];
         this.set(_[0], _[1]);
       }
     }
-    (_.prototype.clear = _),
+    ((_.prototype.clear = _),
       (_.prototype.delete = _),
       (_.prototype.get = _),
       (_.prototype.has = _),
       (_.prototype.set = _),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     var _ = _(),
       _ = _(),
       _ = _();
     function _() {
-      (this.size = 0),
+      ((this.size = 0),
         (this.__data__ = {
           hash: new _(),
           map: new (_ || _)(),
           string: new _(),
-        });
+        }));
     }
     _.exports = _;
   }),
@@ -34614,7 +34625,7 @@ var _ = _((_, _) => {
     var _ = _();
     function _(_) {
       var _ = _(this, _).delete(_);
-      return (this.size -= +!!_), _;
+      return ((this.size -= +!!_), _);
     }
     _.exports = _;
   }),
@@ -34637,7 +34648,7 @@ var _ = _((_, _) => {
     function _(_, _) {
       var _ = _(this, _),
         _ = _.size;
-      return _.set(_, _), (this.size += _.size == _ ? 0 : 1), this;
+      return (_.set(_, _), (this.size += _.size == _ ? 0 : 1), this);
     }
     _.exports = _;
   }),
@@ -34650,17 +34661,17 @@ var _ = _((_, _) => {
     function _(_) {
       var _ = -1,
         _ = _ == null ? 0 : _.length;
-      for (this.clear(); ++_ < _; ) {
+      for (this.clear(); ++_ < _;) {
         var _ = _[_];
         this.set(_[0], _[1]);
       }
     }
-    (_.prototype.clear = _),
+    ((_.prototype.clear = _),
       (_.prototype.delete = _),
       (_.prototype.get = _),
       (_.prototype.has = _),
       (_.prototype.set = _),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     var _ = _(),
@@ -34672,10 +34683,10 @@ var _ = _((_, _) => {
       if (_ instanceof _) {
         var _ = _.__data__;
         if (!_ || _.length < _ - 1)
-          return _.push([_, _]), (this.size = ++_.size), this;
+          return (_.push([_, _]), (this.size = ++_.size), this);
         _ = this.__data__ = new _(_);
       }
-      return _.set(_, _), (this.size = _.size), this;
+      return (_.set(_, _), (this.size = _.size), this);
     }
     _.exports = _;
   }),
@@ -34690,16 +34701,16 @@ var _ = _((_, _) => {
       var _ = (this.__data__ = new _(_));
       this.size = _.size;
     }
-    (_.prototype.clear = _),
+    ((_.prototype.clear = _),
       (_.prototype.delete = _),
       (_.prototype.get = _),
       (_.prototype.has = _),
       (_.prototype.set = _),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     function _(_) {
-      return this.__data__.set(_, `__lodash_hash_undefined__`), this;
+      return (this.__data__.set(_, `__lodash_hash_undefined__`), this);
     }
     _.exports = _;
   }),
@@ -34716,15 +34727,15 @@ var _ = _((_, _) => {
     function _(_) {
       var _ = -1,
         _ = _ == null ? 0 : _.length;
-      for (this.__data__ = new _(); ++_ < _; ) this.add(_[_]);
+      for (this.__data__ = new _(); ++_ < _;) this.add(_[_]);
     }
-    (_.prototype.add = _.prototype.push = _),
+    ((_.prototype.add = _.prototype.push = _),
       (_.prototype.has = _),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     function _(_, _) {
-      for (var _ = -1, _ = _ == null ? 0 : _.length; ++_ < _; )
+      for (var _ = -1, _ = _ == null ? 0 : _.length; ++_ < _;)
         if (_(_[_], _, _)) return !0;
       return !1;
     }
@@ -34753,7 +34764,7 @@ var _ = _((_, _) => {
       var _ = -1,
         _ = !0,
         _ = _ & _ ? new _() : void 0;
-      for (_.set(_, _), _.set(_, _); ++_ < _; ) {
+      for (_.set(_, _), _.set(_, _); ++_ < _;) {
         var _ = _[_],
           _ = _[_];
         if (_) var _ = _ ? _(_, _, _, _, _, _) : _(_, _, _, _, _, _);
@@ -34776,7 +34787,7 @@ var _ = _((_, _) => {
           break;
         }
       }
-      return _.delete(_), _.delete(_), _;
+      return (_.delete(_), _.delete(_), _);
     }
     _.exports = _;
   }),
@@ -34836,7 +34847,7 @@ var _ = _((_, _) => {
         case _:
           if (_.byteLength != _.byteLength || _.byteOffset != _.byteOffset)
             return !1;
-          (_ = _.buffer), (_ = _.buffer);
+          ((_ = _.buffer), (_ = _.buffer));
         case _:
           return !(_.byteLength != _.byteLength || !_(new _(_), new _(_)));
         case _:
@@ -34855,9 +34866,9 @@ var _ = _((_, _) => {
           if (((_ ||= _), _.size != _.size && !_)) return !1;
           var _ = _.get(_);
           if (_) return _ == _;
-          (_ |= _), _.set(_, _);
+          ((_ |= _), _.set(_, _));
           var _ = _(_(_), _(_), _, _, _, _);
-          return _.delete(_), _;
+          return (_.delete(_), _);
         case _:
           if (_) return _.call(_) == _.call(_);
       }
@@ -34867,7 +34878,7 @@ var _ = _((_, _) => {
   }),
   _ = _((_, _) => {
     function _(_, _) {
-      for (var _ = -1, _ = _.length, _ = _.length; ++_ < _; ) _[_ + _] = _[_];
+      for (var _ = -1, _ = _.length, _ = _.length; ++_ < _;) _[_ + _] = _[_];
       return _;
     }
     _.exports = _;
@@ -34886,7 +34897,7 @@ var _ = _((_, _) => {
   }),
   _ = _((_, _) => {
     function _(_, _) {
-      for (var _ = -1, _ = _ == null ? 0 : _.length, _ = 0, _ = []; ++_ < _; ) {
+      for (var _ = -1, _ = _ == null ? 0 : _.length, _ = 0, _ = []; ++_ < _;) {
         var _ = _[_];
         _(_, _, _) && (_[_++] = _);
       }
@@ -34918,7 +34929,7 @@ var _ = _((_, _) => {
   }),
   _ = _((_, _) => {
     function _(_, _) {
-      for (var _ = -1, _ = Array(_); ++_ < _; ) _[_] = _(_);
+      for (var _ = -1, _ = Array(_); ++_ < _;) _[_] = _(_);
       return _;
     }
     _.exports = _;
@@ -34991,7 +35002,7 @@ var _ = _((_, _) => {
       _ = `[object Uint16Array]`,
       _ = `[object Uint32Array]`,
       _ = {};
-    (_[_] = _[_] = _[_] = _[_] = _[_] = _[_] = _[_] = _[_] = _[_] = !0),
+    ((_[_] = _[_] = _[_] = _[_] = _[_] = _[_] = _[_] = _[_] = _[_] = !0),
       (_[_] =
         _[_] =
         _[_] =
@@ -35007,7 +35018,7 @@ var _ = _((_, _) => {
         _[_] =
         _[_] =
         _[_] =
-          !1);
+          !1));
     function _(_) {
       return _(_) && _(_.length) && !!_[_(_)];
     }
@@ -35131,7 +35142,7 @@ var _ = _((_, _) => {
         _ = _(_),
         _ = _.length;
       if (_ != _(_).length && !_) return !1;
-      for (var _ = _; _--; ) {
+      for (var _ = _; _--;) {
         var _ = _[_];
         if (!(_ ? _ in _ : _.call(_, _))) return !1;
       }
@@ -35139,8 +35150,8 @@ var _ = _((_, _) => {
         _ = _.get(_);
       if (_ && _) return _ == _ && _ == _;
       var _ = !0;
-      _.set(_, _), _.set(_, _);
-      for (var _ = _; ++_ < _; ) {
+      (_.set(_, _), _.set(_, _));
+      for (var _ = _; ++_ < _;) {
         _ = _[_];
         var _ = _[_],
           _ = _[_];
@@ -35165,7 +35176,7 @@ var _ = _((_, _) => {
           ) &&
           (_ = !1);
       }
-      return _.delete(_), _.delete(_), _;
+      return (_.delete(_), _.delete(_), _);
     }
     _.exports = _;
   }),
@@ -35201,7 +35212,7 @@ var _ = _((_, _) => {
       _ = _(_),
       _ = _(_),
       _ = _;
-    ((_ && _(new _(new ArrayBuffer(1))) != _) ||
+    (((_ && _(new _(new ArrayBuffer(1))) != _) ||
       (_ && _(new _()) != _) ||
       (_ && _(_.resolve()) != _) ||
       (_ && _(new _()) != _) ||
@@ -35225,7 +35236,7 @@ var _ = _((_, _) => {
           }
         return _;
       }),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     var _ = _(),
@@ -35246,13 +35257,13 @@ var _ = _((_, _) => {
         _ = _(_),
         _ = _ ? _ : _(_),
         _ = _ ? _ : _(_);
-      (_ = _ == _ ? _ : _), (_ = _ == _ ? _ : _);
+      ((_ = _ == _ ? _ : _), (_ = _ == _ ? _ : _));
       var _ = _ == _,
         _ = _ == _,
         _ = _ == _;
       if (_ && _(_)) {
         if (!_(_)) return !1;
-        (_ = !0), (_ = !1);
+        ((_ = !0), (_ = !1));
       }
       if (_ && !_)
         return (
@@ -35265,7 +35276,7 @@ var _ = _((_, _) => {
         if (_ || _) {
           var _ = _ ? _.value() : _,
             _ = _ ? _.value() : _;
-          return (_ ||= new _()), _(_, _, _, _, _);
+          return ((_ ||= new _()), _(_, _, _, _, _));
         }
       }
       return _ ? ((_ ||= new _()), _(_, _, _, _, _, _)) : !1;
@@ -35341,22 +35352,22 @@ function _(_, _, _, _) {
   if (_ && typeof _ != `boolean` && !_) {
     let { once: _, capture: _ } = _,
       _ = _;
-    !_ &&
+    (!_ &&
       _ &&
       ((_ =
         _.__once ||
         function _(_) {
-          this.removeEventListener(_, _, _), _.call(this, _);
+          (this.removeEventListener(_, _, _), _.call(this, _));
         }),
       (_.__once = _)),
-      _.addEventListener(_, _, _ ? _ : _);
+      _.addEventListener(_, _, _ ? _ : _));
   }
   _.addEventListener(_, _, _);
 }
 function _(_, _, _, _) {
   let _ = _ && typeof _ != `boolean` ? _.capture : _;
-  _.removeEventListener(_, _, _),
-    _.__once && _.removeEventListener(_, _.__once, _);
+  (_.removeEventListener(_, _, _),
+    _.__once && _.removeEventListener(_, _.__once, _));
 }
 function _(_, _, _, _) {
   return (
@@ -35368,7 +35379,7 @@ function _(_, _, _, _) {
 }
 var _ = _((_, _) => {
     function _(_, _, _, _) {
-      for (var _ = _.length, _ = _ + (_ ? 1 : -1); _ ? _-- : ++_ < _; )
+      for (var _ = _.length, _ = _ + (_ ? 1 : -1); _ ? _-- : ++_ < _;)
         if (_(_[_], _, _)) return _;
       return -1;
     }
@@ -35384,11 +35395,11 @@ var _ = _((_, _) => {
         _ = _,
         _ = !_;
       if (_ == null) return !_;
-      for (_ = Object(_); _--; ) {
+      for (_ = Object(_); _--;) {
         var _ = _[_];
         if (_ && _[2] ? _[1] !== _[_[0]] : !(_[0] in _)) return !1;
       }
-      for (; ++_ < _; ) {
+      for (; ++_ < _;) {
         _ = _[_];
         var _ = _[0],
           _ = _[_],
@@ -35416,7 +35427,7 @@ var _ = _((_, _) => {
     var _ = _(),
       _ = _();
     function _(_) {
-      for (var _ = _(_), _ = _.length; _--; ) {
+      for (var _ = _(_), _ = _.length; _--;) {
         var _ = _[_],
           _ = _[_];
         _[_] = [_, _, _(_)];
@@ -35477,18 +35488,18 @@ var _ = _((_, _) => {
           _ = _.cache;
         if (_.has(_)) return _.get(_);
         var _ = _.apply(this, _);
-        return (_.cache = _.set(_, _) || _), _;
+        return ((_.cache = _.set(_, _) || _), _);
       };
-      return (_.cache = new (_.Cache || _)()), _;
+      return ((_.cache = new (_.Cache || _)()), _);
     }
-    (_.Cache = _), (_.exports = _);
+    ((_.Cache = _), (_.exports = _));
   }),
   _ = _((_, _) => {
     var _ = _(),
       _ = 500;
     function _(_) {
       var _ = _(_, function (_) {
-          return _.size === _ && _.clear(), _;
+          return (_.size === _ && _.clear(), _);
         }),
         _ = _.cache;
       return _;
@@ -35513,7 +35524,7 @@ var _ = _((_, _) => {
   }),
   _ = _((_, _) => {
     function _(_, _) {
-      for (var _ = -1, _ = _ == null ? 0 : _.length, _ = Array(_); ++_ < _; )
+      for (var _ = -1, _ = _ == null ? 0 : _.length, _ = Array(_); ++_ < _;)
         _[_] = _(_[_], _, _);
       return _;
     }
@@ -35568,7 +35579,7 @@ var _ = _((_, _) => {
       _ = _();
     function _(_, _) {
       _ = _(_, _);
-      for (var _ = 0, _ = _.length; _ != null && _ < _; ) _ = _[_(_[_++])];
+      for (var _ = 0, _ = _.length; _ != null && _ < _;) _ = _[_(_[_++])];
       return _ && _ == _ ? _ : void 0;
     }
     _.exports = _;
@@ -35596,7 +35607,7 @@ var _ = _((_, _) => {
       _ = _();
     function _(_, _, _) {
       _ = _(_, _);
-      for (var _ = -1, _ = _.length, _ = !1; ++_ < _; ) {
+      for (var _ = -1, _ = _.length, _ = !1; ++_ < _;) {
         var _ = _(_[_]);
         if (!(_ = _ != null && _(_, _))) break;
         _ = _[_];
@@ -35697,7 +35708,7 @@ var _ = _((_, _) => {
       var _ = _ == null ? 0 : _.length;
       if (!_) return -1;
       var _ = _ == null ? 0 : _(_);
-      return _ < 0 && (_ = _(_ + _, 0)), _(_, _(_, 3), _);
+      return (_ < 0 && (_ = _(_ + _, 0)), _(_, _(_, 3), _));
     }
     _.exports = _;
   }),
@@ -35705,8 +35716,8 @@ var _ = _((_, _) => {
     var _ = Math.ceil,
       _ = Math.max;
     function _(_, _, _, _) {
-      for (var _ = -1, _ = _(_((_ - _) / (_ || 1)), 0), _ = Array(_); _--; )
-        (_[_ ? _ : ++_] = _), (_ += _);
+      for (var _ = -1, _ = _(_((_ - _) / (_ || 1)), 0), _ = Array(_); _--;)
+        ((_[_ ? _ : ++_] = _), (_ += _));
       return _;
     }
     _.exports = _;
@@ -35787,7 +35798,7 @@ var _ = _((_, _) => {
     function _(_, _, _, _, _) {
       var _ = -1,
         _ = _.length;
-      for (_ ||= _, _ ||= []; ++_ < _; ) {
+      for (_ ||= _, _ ||= []; ++_ < _;) {
         var _ = _[_];
         _ > 0 && _(_)
           ? _ > 1
@@ -35802,7 +35813,7 @@ var _ = _((_, _) => {
   _ = _((_, _) => {
     function _(_) {
       return function (_, _, _) {
-        for (var _ = -1, _ = Object(_), _ = _(_), _ = _.length; _--; ) {
+        for (var _ = -1, _ = Object(_), _ = _(_), _ = _.length; _--;) {
           var _ = _[_ ? _ : ++_];
           if (_(_[_], _, _) === !1) break;
         }
@@ -35859,7 +35870,7 @@ var _ = _((_, _) => {
   _ = _((_, _) => {
     function _(_, _) {
       var _ = _.length;
-      for (_.sort(_); _--; ) _[_] = _[_].value;
+      for (_.sort(_); _--;) _[_] = _[_].value;
       return _;
     }
     _.exports = _;
@@ -35981,8 +35992,8 @@ var _ = _((_, _) => {
           )
             _[_] = _[_ + _];
           _ = -1;
-          for (var _ = Array(_ + 1); ++_ < _; ) _[_] = _[_];
-          return (_[_] = _(_)), _(_, this, _);
+          for (var _ = Array(_ + 1); ++_ < _;) _[_] = _[_];
+          return ((_[_] = _(_)), _(_, this, _));
         }
       );
     }
@@ -36001,7 +36012,7 @@ var _ = _((_, _) => {
     _.exports = (function () {
       try {
         var _ = _(Object, `defineProperty`);
-        return _({}, ``, {}), _;
+        return (_({}, ``, {}), _);
       } catch {}
     })();
   }),
@@ -36069,14 +36080,14 @@ var _ = _((_, _) => {
 function _(_) {
   if (((!_ && _ !== 0) || _) && _) {
     let _ = document.createElement(`div`);
-    (_.style.position = `absolute`),
+    ((_.style.position = `absolute`),
       (_.style.top = `-9999px`),
       (_.style.width = `50px`),
       (_.style.height = `50px`),
       (_.style.overflow = `scroll`),
       document.body.appendChild(_),
       (_ = _.offsetWidth - _.clientWidth),
-      document.body.removeChild(_);
+      document.body.removeChild(_));
   }
   return _;
 }
@@ -36158,8 +36169,8 @@ var _ = _((_, _) => {
       var _ = -1,
         _ = _.length,
         _ = _ > 2 ? _[2] : void 0;
-      for (_ && _(_[0], _[1], _) && (_ = 1); ++_ < _; )
-        for (var _ = _[_], _ = _(_), _ = -1, _ = _.length; ++_ < _; ) {
+      for (_ && _(_[0], _[1], _) && (_ = 1); ++_ < _;)
+        for (var _ = _[_], _ = _(_), _ = -1, _ = _.length; ++_ < _;) {
           var _ = _[_],
             _ = _[_];
           (_ === void 0 || (_(_, _[_]) && !_.call(_, _))) && (_[_] = _[_]);
@@ -36223,10 +36234,10 @@ var _ = _((_, _) => {
     function _(_, _, _, _) {
       var _ = !_;
       _ ||= {};
-      for (var _ = -1, _ = _.length; ++_ < _; ) {
+      for (var _ = -1, _ = _.length; ++_ < _;) {
         var _ = _[_],
           _ = _ ? _(_[_], _[_], _, _, _) : void 0;
-        _ === void 0 && (_ = _[_]), _ ? _(_, _, _) : _(_, _, _);
+        (_ === void 0 && (_ = _[_]), _ ? _(_, _, _) : _(_, _, _));
       }
       return _;
     }
@@ -36258,7 +36269,7 @@ var _ = _((_, _) => {
       if (_) return _.slice();
       var _ = _.length,
         _ = _ ? _(_) : new _.constructor(_);
-      return _.copy(_), _;
+      return (_.copy(_), _);
     }
     _.exports = _;
   }),
@@ -36266,7 +36277,7 @@ var _ = _((_, _) => {
     function _(_, _) {
       var _ = -1,
         _ = _.length;
-      for (_ ||= Array(_); ++_ < _; ) _[_] = _[_];
+      for (_ ||= Array(_); ++_ < _;) _[_] = _[_];
       return _;
     }
     _.exports = _;
@@ -36289,7 +36300,7 @@ var _ = _((_, _) => {
       _ = _();
     _.exports = Object.getOwnPropertySymbols
       ? function (_) {
-          for (var _ = []; _; ) _(_, _(_)), (_ = _(_));
+          for (var _ = []; _;) (_(_, _(_)), (_ = _(_)));
           return _;
         }
       : _;
@@ -36330,7 +36341,7 @@ var _ = _((_, _) => {
     var _ = _();
     function _(_) {
       var _ = new _.constructor(_.byteLength);
-      return new _(_).set(new _(_)), _;
+      return (new _(_).set(new _(_)), _);
     }
     _.exports = _;
   }),
@@ -36346,7 +36357,7 @@ var _ = _((_, _) => {
     var _ = /\w*$/;
     function _(_) {
       var _ = new _.constructor(_.source, _.exec(_));
-      return (_.lastIndex = _.lastIndex), _;
+      return ((_.lastIndex = _.lastIndex), _);
     }
     _.exports = _;
   }),
@@ -36437,7 +36448,7 @@ var _ = _((_, _) => {
         if (_) return _(_);
         _.prototype = _;
         var _ = new _();
-        return (_.prototype = void 0), _;
+        return ((_.prototype = void 0), _);
       };
     })();
   }),
@@ -36535,7 +36546,7 @@ var _ = _((_, _) => {
       _ = `[object Uint16Array]`,
       _ = `[object Uint32Array]`,
       _ = {};
-    (_[_] =
+    ((_[_] =
       _[_] =
       _[_] =
       _[_] =
@@ -36558,7 +36569,7 @@ var _ = _((_, _) => {
       _[_] =
       _[_] =
         !0),
-      (_[_] = _[_] = _[_] = !1);
+      (_[_] = _[_] = _[_] = !1));
     function _(_, _, _, _, _, _) {
       var _,
         _ = _ & _,
@@ -36584,7 +36595,7 @@ var _ = _((_, _) => {
       _ ||= new _();
       var _ = _.get(_);
       if (_) return _;
-      _.set(_, _),
+      (_.set(_, _),
         _(_)
           ? _.forEach(function (_) {
               _.add(_(_, _, _, _, _, _));
@@ -36592,11 +36603,11 @@ var _ = _((_, _) => {
           : _(_) &&
             _.forEach(function (_, _) {
               _.set(_, _(_, _, _, _, _, _));
-            });
+            }));
       var _ = _ ? void 0 : (_ ? (_ ? _ : _) : _ ? _ : _)(_);
       return (
         _(_ || _, function (_, _) {
-          _ && ((_ = _), (_ = _[_])), _(_, _, _(_, _, _, _, _, _));
+          (_ && ((_ = _), (_ = _[_])), _(_, _, _(_, _, _, _, _, _)));
         }),
         _
       );
@@ -36629,7 +36640,7 @@ var _ = _((_, _) => {
       var _ = -1,
         _ = _.length;
       if (!_) return !0;
-      for (; ++_ < _; ) {
+      for (; ++_ < _;) {
         var _ = _(_[_]);
         if (
           (_ === `__proto__` && !_.call(_, `__proto__`)) ||
@@ -36700,12 +36711,12 @@ var _ = _((_, _) => {
       var _ = {};
       if (_ == null) return _;
       var _ = !1;
-      (_ = _(_, function (_) {
-        return (_ = _(_, _)), (_ ||= _.length > 1), _;
+      ((_ = _(_, function (_) {
+        return ((_ = _(_, _)), (_ ||= _.length > 1), _);
       })),
         _(_, _(_), _),
-        _ && (_ = _(_, _ | _ | _, _));
-      for (var _ = _.length; _--; ) _(_, _[_]);
+        _ && (_ = _(_, _ | _ | _, _)));
+      for (var _ = _.length; _--;) _(_, _[_]);
       return _;
     });
   }),
@@ -36876,7 +36887,7 @@ var _ = _((_, _) => {
               ordinal: this.$locale().ordinal,
             };
           };
-        (_.localeData = function () {
+        ((_.localeData = function () {
           return _.bind(this)();
         }),
           (_.localeData = function () {
@@ -36921,7 +36932,7 @@ var _ = _((_, _) => {
           }),
           (_.weekdaysMin = function (_) {
             return _(_(), `weekdaysMin`, `weekdays`, 2, _);
-          });
+          }));
       };
     });
   }),
@@ -36947,7 +36958,7 @@ var _ = _((_, _) => {
       return function (_, _, _) {
         var _ = _.prototype,
           _ = _.format;
-        (_._.formats = _),
+        ((_._.formats = _),
           (_.format = function (_) {
             _ === void 0 && (_ = `YYYY-MM-DDTHH:mm:ssZ`);
             var _ = this.$locale().formats,
@@ -36971,7 +36982,7 @@ var _ = _((_, _) => {
                 );
               })(_, _ === void 0 ? {} : _);
             return _.call(this, _);
-          });
+          }));
       };
     });
   }),
@@ -36996,20 +37007,20 @@ var _ = _((_, _) => {
           )
             return null;
           var _;
-          _.length === 1 && _[0].length > 0 && (_ = _[0]),
+          (_.length === 1 && _[0].length > 0 && (_ = _[0]),
             (_ = (_ = _.filter(function (_) {
               return _;
-            }))[0]);
+            }))[0]));
           for (var _ = 1; _ < _.length; _ += 1)
             (_[_].isValid() && !_[_][_](_)) || (_ = _[_]);
           return _;
         };
-        (_.max = function () {
+        ((_.max = function () {
           return _(`isAfter`, [].slice.call(arguments, 0));
         }),
           (_.min = function () {
             return _(`isBefore`, [].slice.call(arguments, 0));
-          });
+          }));
       };
     });
   }),
@@ -37029,7 +37040,7 @@ var _ = _((_, _) => {
         _ = /([+-]|\d\d)/g;
       return function (_, _, _) {
         var _ = _.prototype;
-        (_.utc = function (_) {
+        ((_.utc = function (_) {
           return new _({
             date: _,
             utc: !0,
@@ -37048,25 +37059,25 @@ var _ = _((_, _) => {
               locale: this._,
               utc: !1,
             });
-          });
+          }));
         var _ = _.parse;
         _.parse = function (_) {
-          _.utc && (this._ = !0),
+          (_.utc && (this._ = !0),
             this.$utils()._(_.$offset) || (this.$offset = _.$offset),
-            _.call(this, _);
+            _.call(this, _));
         };
         var _ = _.init;
         _.init = function () {
           if (this._) {
             var _ = this._;
-            (this._ = _.getUTCFullYear()),
+            ((this._ = _.getUTCFullYear()),
               (this._ = _.getUTCMonth()),
               (this._ = _.getUTCDate()),
               (this._ = _.getUTCDay()),
               (this._ = _.getUTCHours()),
               (this._ = _.getUTCMinutes()),
               (this._ = _.getUTCSeconds()),
-              (this.$ms = _.getUTCMilliseconds());
+              (this.$ms = _.getUTCMilliseconds()));
           } else _.call(this);
         };
         var _ = _.utcOffset;
@@ -37091,7 +37102,7 @@ var _ = _((_, _) => {
           var _ = Math.abs(_) <= 16 ? 60 * _ : _;
           if (_ === 0) return this.utc(_);
           var _ = this.clone();
-          if (_) return (_.$offset = _), (_._ = !1), _;
+          if (_) return ((_.$offset = _), (_._ = !1), _);
           var _ = this._
             ? this.toDate().getTimezoneOffset()
             : -1 * this.utcOffset();
@@ -37102,7 +37113,7 @@ var _ = _((_, _) => {
           );
         };
         var _ = _.format;
-        (_.format = function (_) {
+        ((_.format = function (_) {
           var _ = _ || (this._ ? `YYYY-MM-DDTHH:mm:ss[Z]` : ``);
           return _.call(this, _);
         }),
@@ -37121,7 +37132,7 @@ var _ = _((_, _) => {
           }),
           (_.toString = function () {
             return this.toDate().toUTCString();
-          });
+          }));
         var _ = _.toDate;
         _.toDate = function (_) {
           return _ === `s` && this.$offset
@@ -37165,7 +37176,7 @@ var _ = _((_, _) => {
   _ = _(_()),
   _ = _(_()),
   _ = _(_());
-_(), _(), _(), _(), _(), _(), _(), _();
+(_(), _(), _(), _(), _(), _(), _(), _());
 function _(_) {
   return _.children;
 }
@@ -37185,7 +37196,7 @@ var _ = {
   _ = Object.keys(_).map(function (_) {
     return _[_];
   });
-_.default.oneOfType([_.default.string, _.default.func]),
+(_.default.oneOfType([_.default.string, _.default.func]),
   _.default.any,
   _.default.func,
   _.default.oneOfType([
@@ -37199,7 +37210,7 @@ _.default.oneOfType([_.default.string, _.default.func]),
   _.default.oneOfType([
     _.default.oneOf([`overlap`, `no-overlap`]),
     _.default.func,
-  ]);
+  ]));
 var _ = {
   seconds: 1e3,
   minutes: 6e4,
@@ -37213,8 +37224,8 @@ function _(_, _) {
   return _(_(_, `month`), `week`, _.startOfWeek());
 }
 function _(_, _) {
-  for (var _ = _(_, _), _ = _(_, _), _ = []; _(_, _, `day`); )
-    _.push(_), (_ = _(_, 1, `day`));
+  for (var _ = _(_, _), _ = _(_, _), _ = []; _(_, _, `day`);)
+    (_.push(_), (_ = _(_, 1, `day`)));
   return _;
 }
 function _(_, _) {
@@ -37229,7 +37240,7 @@ function _(_, _) {
       _ = [];
     _(_, _, _);
   )
-    _.push(_), (_ = _(_, 1, _));
+    (_.push(_), (_ = _(_, 1, _)));
   return _;
 }
 function _(_, _) {
@@ -37261,11 +37272,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -37351,7 +37362,7 @@ function _(_, _) {
 }
 var _ = _(function _(_) {
   var _ = this;
-  _(this, _),
+  (_(this, _),
     (0, _.default)(
       typeof _.format == `function`,
       "date localizer `format(..)` must be a function",
@@ -37403,7 +37414,7 @@ var _ = _(function _(_) {
     (this.inEventRange = _.inEventRange || _),
     (this.isSameDate = _.isSameDate || _),
     (this.startAndEndAreDateOnly = _.startAndEndAreDateOnly || _),
-    (this.segmentOffset = _.browserTZOffset ? _.browserTZOffset() : 0);
+    (this.segmentOffset = _.browserTZOffset ? _.browserTZOffset() : 0));
 });
 function _(_, _, _, _) {
   var _ = _(_({}, _.formats), _);
@@ -37548,11 +37559,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -37635,11 +37646,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -37676,7 +37687,7 @@ function _() {
 }
 var _ = (function (_) {
   function _() {
-    return _(this, _), _(this, _, arguments);
+    return (_(this, _), _(this, _, arguments));
   }
   return (
     _(_, _),
@@ -37856,7 +37867,7 @@ function _(_) {
     _ = _.popperRef,
     _ = _.target,
     _ = _.offset;
-  _({
+  (_({
     ref: _,
     callback: _,
   }),
@@ -37870,10 +37881,10 @@ function _(_) {
           }),
           _ = _.topOffset,
           _ = _.leftOffset;
-        (_.current.style.top = `${_}px`), (_.current.style.left = `${_}px`);
+        ((_.current.style.top = `${_}px`), (_.current.style.left = `${_}px`));
       },
       [_._, _._, _],
-    );
+    ));
   var _ = _.width,
     _ = {
       minWidth: _ + _ / 2,
@@ -38102,7 +38113,7 @@ var _ = 5,
         _ = _ === void 0 ? 250 : _,
         _ = _.validContainers,
         _ = _ === void 0 ? [] : _;
-      _(this, _),
+      (_(this, _),
         (this._initialEvent = null),
         (this.selecting = !1),
         (this.isDetached = !1),
@@ -38135,7 +38146,7 @@ var _ = 5,
           `dragover`,
           this._dragOverFromOutsideListener,
         )),
-        this._addInitialEventListener();
+        this._addInitialEventListener());
     }
     return _(_, [
       {
@@ -38169,7 +38180,7 @@ var _ = 5,
       {
         key: `teardown`,
         value: function () {
-          (this._initialEvent = null),
+          ((this._initialEvent = null),
             (this._initialEventData = null),
             (this._selectRect = null),
             (this.selecting = !1),
@@ -38188,7 +38199,7 @@ var _ = 5,
             this._removeDropFromOutsideListener &&
               this._removeDropFromOutsideListener(),
             this._removeDragOverFromOutsideListener &&
-              this._removeDragOverFromOutsideListener();
+              this._removeDragOverFromOutsideListener());
         },
       },
       {
@@ -38214,29 +38225,29 @@ var _ = 5,
             _ = null,
             _ = null,
             _ = function (_) {
-              (_ = setTimeout(function () {
-                _(), _(_);
+              ((_ = setTimeout(function () {
+                (_(), _(_));
               }, _.longPressThreshold)),
                 (_ = _(`touchmove`, function () {
                   return _();
                 })),
                 (_ = _(`touchend`, function () {
                   return _();
-                }));
+                })));
             },
             _ = _(`touchstart`, _),
             _ = function () {
-              _ && clearTimeout(_),
+              (_ && clearTimeout(_),
                 _ && _(),
                 _ && _(),
                 (_ = null),
                 (_ = null),
-                (_ = null);
+                (_ = null));
             };
           return (
             _ && _(_),
             function () {
-              _(), _();
+              (_(), _());
             }
           );
         },
@@ -38246,22 +38257,22 @@ var _ = 5,
         value: function () {
           var _ = this,
             _ = _(`mousedown`, function (_) {
-              _._removeInitialEventListener(),
+              (_._removeInitialEventListener(),
                 _._handleInitialEvent(_),
                 (_._removeInitialEventListener = _(
                   `mousedown`,
                   _._handleInitialEvent,
-                ));
+                )));
             }),
             _ = _(`touchstart`, function (_) {
-              _._removeInitialEventListener(),
+              (_._removeInitialEventListener(),
                 (_._removeInitialEventListener = _._addLongPressListener(
                   _._handleInitialEvent,
                   _,
-                ));
+                )));
             });
           this._removeInitialEventListener = function () {
-            _(), _();
+            (_(), _());
           };
         },
       },
@@ -38273,13 +38284,13 @@ var _ = 5,
             _ = _.pageY,
             _ = _.clientX,
             _ = _.clientY;
-          this.emit(`dropFromOutside`, {
+          (this.emit(`dropFromOutside`, {
             _: _,
             _: _,
             clientX: _,
             clientY: _,
           }),
-            _.preventDefault();
+            _.preventDefault());
         },
       },
       {
@@ -38290,13 +38301,13 @@ var _ = 5,
             _ = _.pageY,
             _ = _.clientX,
             _ = _.clientY;
-          this.emit(`dragOverFromOutside`, {
+          (this.emit(`dragOverFromOutside`, {
             _: _,
             _: _,
             clientX: _,
             clientY: _,
           }),
-            _.preventDefault();
+            _.preventDefault());
         },
       },
       {
@@ -38350,7 +38361,7 @@ var _ = 5,
               )
                 switch (_.type) {
                   case `mousedown`:
-                    (this._removeEndListener = _(
+                    ((this._removeEndListener = _(
                       `mouseup`,
                       this._handleTerminatingEvent,
                     )),
@@ -38361,10 +38372,10 @@ var _ = 5,
                       (this._removeMoveListener = _(
                         `mousemove`,
                         this._handleMoveEvent,
-                      ));
+                      )));
                     break;
                   case `touchstart`:
-                    this._handleMoveEvent(_),
+                    (this._handleMoveEvent(_),
                       (this._removeEndListener = _(
                         `touchend`,
                         this._handleTerminatingEvent,
@@ -38372,7 +38383,7 @@ var _ = 5,
                       (this._removeMoveListener = _(
                         `touchmove`,
                         this._handleMoveEvent,
-                      ));
+                      )));
                 }
             }
           }
@@ -38549,11 +38560,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -38619,10 +38630,10 @@ var _ = (function (_) {
       {
         key: `componentDidUpdate`,
         value: function (_) {
-          !_.selectable && this.props.selectable && this._selectable(),
+          (!_.selectable && this.props.selectable && this._selectable(),
             _.selectable &&
               !this.props.selectable &&
-              this._teardownSelectable();
+              this._teardownSelectable());
         },
       },
       {
@@ -38697,12 +38708,12 @@ var _ = (function (_) {
                   });
                 }
               }
-              (_._initial = {}),
+              ((_._initial = {}),
                 _.setState({
                   selecting: !1,
-                });
+                }));
             };
-          _._(`selecting`, function (_) {
+          (_._(`selecting`, function (_) {
             var _ = _.props,
               _ = _.range,
               _ = _.rtl,
@@ -38719,7 +38730,7 @@ var _ = (function (_) {
             ) {
               var _ = _(_),
                 _ = _(_._initial, _, _, _.length, _);
-              (_ = _.startIdx), (_ = _.endIdx);
+              ((_ = _.startIdx), (_ = _.endIdx));
             }
             _.setState({
               selecting: !0,
@@ -38738,7 +38749,7 @@ var _ = (function (_) {
               return _(_, `doubleClick`);
             }),
             _._(`select`, function (_) {
-              _._selectSlot(
+              (_._selectSlot(
                 _(
                   _({}, _.state),
                   {},
@@ -38752,8 +38763,8 @@ var _ = (function (_) {
                 _.setState({
                   selecting: !1,
                 }),
-                _(_.props.onSelectEnd, [_.state]);
-            });
+                _(_.props.onSelectEnd, [_.state]));
+            }));
         },
       },
       {
@@ -38858,11 +38869,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -38899,7 +38910,7 @@ function _() {
 }
 var _ = (function (_) {
   function _() {
-    return _(this, _), _(this, _, arguments);
+    return (_(this, _), _(this, _, arguments));
   }
   return (
     _(_, _),
@@ -38939,7 +38950,7 @@ var _ = (function (_) {
     ])
   );
 })(_.Component);
-(_.propTypes = {}), (_.defaultProps = _({}, _.defaultProps));
+((_.propTypes = {}), (_.defaultProps = _({}, _.defaultProps)));
 function _(_) {
   var _ = _.dateRange,
     _ = _.unit,
@@ -39052,11 +39063,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -39103,7 +39114,7 @@ var _ = function (_, _) {
   },
   _ = (function (_) {
     function _() {
-      return _(this, _), _(this, _, arguments);
+      return (_(this, _), _(this, _, arguments));
     }
     return (
       _(_, _),
@@ -39134,19 +39145,19 @@ var _ = function (_, _) {
                 var _ = Math.max(0, _ - _);
                 if (this.canRenderSlotEvent(_, _)) {
                   var _ = _.renderEvent(this.props, _);
-                  _ && _.push(_.renderSpan(_, _, _ + `_gap`)),
+                  (_ && _.push(_.renderSpan(_, _, _ + `_gap`)),
                     _.push(_.renderSpan(_, _, _, _)),
-                    (_ = _ = _ + 1);
+                    (_ = _ = _ + 1));
                 } else
-                  _ && _.push(_.renderSpan(_, _, _ + `_gap`)),
+                  (_ && _.push(_.renderSpan(_, _, _ + `_gap`)),
                     _.push(_.renderSpan(_, 1, _, this.renderShowMore(_, _))),
-                    (_ = _ += 1);
+                    (_ = _ += 1));
               } else {
                 if (this.getHiddenEventsForSlot(_, _).length > 0) {
                   var _ = _ - _;
-                  _ && _.push(_.renderSpan(_, _, _ + `_gap`)),
+                  (_ && _.push(_.renderSpan(_, _, _ + `_gap`)),
                     _.push(_.renderSpan(_, 1, _, this.renderShowMore(_, _))),
-                    (_ = _ += 1);
+                    (_ = _ += 1));
                   continue;
                 }
                 _++;
@@ -39232,15 +39243,15 @@ var _ = function (_, _) {
         {
           key: `showMore`,
           value: function (_, _) {
-            _.preventDefault(),
+            (_.preventDefault(),
               _.stopPropagation(),
-              this.props.onShowMore(_, _.target);
+              this.props.onShowMore(_, _.target));
           },
         },
       ])
     );
   })(_.Component);
-(_.propTypes = {}), (_.defaultProps = _({}, _.defaultProps));
+((_.propTypes = {}), (_.defaultProps = _({}, _.defaultProps)));
 var _ = function (_) {
   var _ = _.children;
   return _.createElement(
@@ -39255,11 +39266,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -39381,8 +39392,8 @@ var _ = (function (_) {
           _ = _.slotMetrics(_.props),
           _ = _(_.containerRef.current, `.rbc-row-bg`)[0],
           _;
-        _ && (_ = _.children[_ - 1]),
-          _(_.getEventsForSlot(_), _[_ - 1], _, _, _);
+        (_ && (_ = _.children[_ - 1]),
+          _(_.getEventsForSlot(_), _[_ - 1], _, _, _));
       }),
       (_.getContainer = function () {
         var _ = _.props.container;
@@ -39613,11 +39624,11 @@ var _ = (function (_) {
     ])
   );
 })(_.Component);
-(_.propTypes = {}),
+((_.propTypes = {}),
   (_.defaultProps = {
     minRows: 0,
     maxRows: 1 / 0,
-  });
+  }));
 var _ = function (_) {
   var _ = _.label;
   return _.createElement(
@@ -39756,16 +39767,16 @@ var _ = function (_, _, _, _, _) {
           );
         }),
         (_.handleSelectSlot = function (_, _) {
-          (_._pendingSelection = _._pendingSelection.concat(_)),
+          ((_._pendingSelection = _._pendingSelection.concat(_)),
             clearTimeout(_._selectTimer),
             (_._selectTimer = setTimeout(function () {
               return _.selectDates(_);
-            }));
+            })));
         }),
         (_.handleHeadingClick = function (_, _, _) {
-          _.preventDefault(),
+          (_.preventDefault(),
             _.clearSelection(),
-            _(_.props.onDrillDown, [_, _]);
+            _(_.props.onDrillDown, [_, _]));
         }),
         (_.handleSelectEvent = function () {
           _.clearSelection();
@@ -39829,20 +39840,20 @@ var _ = function (_, _, _, _, _) {
             value: function () {
               var _ = this,
                 _;
-              this.state.needLimitMeasure && this.measureRowLimit(this.props),
+              (this.state.needLimitMeasure && this.measureRowLimit(this.props),
                 window.addEventListener(
                   `resize`,
                   (this._resizeListener = function () {
                     _ ||
                       _(function () {
-                        (_ = !1),
+                        ((_ = !1),
                           _.setState({
                             needLimitMeasure: !0,
-                          });
+                          }));
                       });
                   }),
                   !1,
-                );
+                ));
             },
           },
           {
@@ -39964,13 +39975,13 @@ var _ = function (_, _, _, _, _) {
             key: `selectDates`,
             value: function (_) {
               var _ = this._pendingSelection.slice();
-              (this._pendingSelection = []),
+              ((this._pendingSelection = []),
                 _.sort(function (_, _) {
                   return +_ - _;
-                });
+                }));
               var _ = new Date(_[0]),
                 _ = new Date(_[_.length - 1]);
-              _.setDate(_[_.length - 1].getDate() + 1),
+              (_.setDate(_[_.length - 1].getDate() + 1),
                 _(this.props.onSelectSlot, {
                   slots: _,
                   start: _,
@@ -39978,13 +39989,13 @@ var _ = function (_, _, _, _, _) {
                   action: _.action,
                   bounds: _.bounds,
                   box: _.box,
-                });
+                }));
             },
           },
           {
             key: `clearSelection`,
             value: function () {
-              clearTimeout(this._selectTimer), (this._pendingSelection = []);
+              (clearTimeout(this._selectTimer), (this._pendingSelection = []));
             },
           },
         ],
@@ -40005,7 +40016,7 @@ var _ = function (_, _, _, _, _) {
       )
     );
   })(_.Component);
-(_.propTypes = {}),
+((_.propTypes = {}),
   (_.range = function (_, _) {
     var _ = _.localizer;
     return {
@@ -40026,7 +40037,7 @@ var _ = function (_, _, _, _, _) {
   }),
   (_.title = function (_, _) {
     return _.localizer.format(_, `monthHeaderFormat`);
-  });
+  }));
 var _ = function (_) {
   var _ = _.min,
     _ = _.max,
@@ -40088,7 +40099,7 @@ function _(_) {
             _.length - 1,
           )
         ];
-      return _._(_, _) && (_ = _.add(_, _, `minutes`)), _;
+      return (_._(_, _) && (_ = _.add(_, _, `minutes`)), _);
     },
     closestSlotToPosition: function (_) {
       return _[Math.min(_.length - 1, Math.max(0, Math.floor(_ * _)))];
@@ -40118,7 +40129,7 @@ function _(_) {
       return _._(_.merge(_, _), _, `minutes`);
     },
     getRange: function (_, _, _, _) {
-      _ || (_ = _.min(_, _.max(_, _))), _ || (_ = _.min(_, _.max(_, _)));
+      (_ || (_ = _.min(_, _.max(_, _))), _ || (_ = _.min(_, _.max(_, _))));
       var _ = _(_),
         _ = _(_),
         _ =
@@ -40151,13 +40162,13 @@ var _ = (function () {
       _ = _.endDate,
       _ = _.top,
       _ = _.height;
-    (this.start = _),
+    ((this.start = _),
       (this.end = _),
       (this.startMs = +_),
       (this.endMs = +_),
       (this.top = _),
       (this.height = _),
-      (this.data = _);
+      (this.data = _));
   }
   return _(_, [
     {
@@ -40250,7 +40261,7 @@ function _(_) {
           _ = _.find(function (_) {
             return _.end > _.start || Math.abs(_.start - _.start) < _;
           });
-        if (!_) return (_.rows = []), _.push(_), 1;
+        if (!_) return ((_.rows = []), _.push(_), 1);
         _.container = _;
         for (var _ = null, _ = _.rows.length - 1; !_ && _ >= 0; _--)
           _(_.rows[_], _, _) && (_ = _.rows[_]);
@@ -40276,7 +40287,7 @@ function _(_) {
 function _(_, _, _) {
   for (var _ = 0; _ < _.friends.length; ++_)
     if (!(_.indexOf(_.friends[_]) > -1)) {
-      (_ = _ > _.friends[_].idx ? _ : _.friends[_].idx), _.push(_.friends[_]);
+      ((_ = _ > _.friends[_].idx ? _ : _.friends[_].idx), _.push(_.friends[_]));
       var _ = _(_.friends[_], _, _);
       _ = _ > _ ? _ : _;
     }
@@ -40309,11 +40320,11 @@ function _(_) {
     );
   });
   for (var _ = 0; _ < _.length; ++_)
-    (_[_].friends = []),
+    ((_[_].friends = []),
       delete _[_].style.left,
       delete _[_].style.left,
       delete _[_].idx,
-      delete _[_].size;
+      delete _[_].size);
   for (var _ = 0; _ < _.length - 1; ++_)
     for (
       var _ = _[_],
@@ -40339,7 +40350,7 @@ function _(_) {
     var _ = 0;
     if (!_[_].size) {
       var _ = [];
-      (_ = 100 / (_(_[_], 0, _) + 1)), (_[_].size = _);
+      ((_ = 100 / (_(_[_], 0, _) + 1)), (_[_].size = _));
       for (var _ = 0; _ < _.length; ++_) _[_].size = _;
     }
   }
@@ -40352,9 +40363,9 @@ function _(_) {
     }
     _ <= _.idx && (_.size = 100 - _.idx * _.size);
     var _ = _.idx === 0 ? 0 : 3;
-    (_.style.width = `calc(${_.size}% - ${_}px)`),
+    ((_.style.width = `calc(${_.size}% - ${_}px)`),
       (_.style.height = `calc(${_.style.height}% - 2px)`),
-      (_.style.xOffset = `calc(${_.style.left}% + ${_}px)`);
+      (_.style.xOffset = `calc(${_.style.left}% + ${_}px)`));
   }
   return _;
 }
@@ -40366,10 +40377,10 @@ function _(_) {
   return !!(_ && _.constructor && _.call && _.apply);
 }
 function _(_) {
-  _.events, _.minimumStartDifference, _.slotMetrics, _.accessors;
+  (_.events, _.minimumStartDifference, _.slotMetrics, _.accessors);
   var _ = _.dayLayoutAlgorithm,
     _ = _;
-  return _ in _ && (_ = _[_]), _(_) ? _.apply(this, arguments) : [];
+  return (_ in _ && (_ = _[_]), _(_) ? _.apply(this, arguments) : []);
 }
 function _(_, _, _) {
   return (
@@ -40389,7 +40400,7 @@ function _() {
 }
 var _ = (function (_) {
   function _() {
-    return _(this, _), _(this, _, arguments);
+    return (_(this, _), _(this, _, arguments));
   }
   return (
     _(_, _),
@@ -40443,11 +40454,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -40589,11 +40600,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -40672,7 +40683,7 @@ var _ = (function (_) {
             _,
             _ = _.startsBeforeDay(_),
             _ = _.startsAfterDay(_);
-          _
+          (_
             ? (_ = `eventTimeRangeEndFormat`)
             : _ && (_ = `eventTimeRangeStartFormat`),
             (_ =
@@ -40684,7 +40695,7 @@ var _ = (function (_) {
                       end: _,
                     },
                     _,
-                  ));
+                  )));
           var _ = _ || _.startsBefore(_),
             _ = _ || _.startsAfter(_);
           return _.createElement(_, {
@@ -40793,7 +40804,7 @@ var _ = (function (_) {
               selecting: !1,
             });
           };
-        _._(`selecting`, _),
+        (_._(`selecting`, _),
           _._(`selectStart`, _),
           _._(`beforeSelect`, function (_) {
             if (_.props.selectable === `ignoreEvents`)
@@ -40826,7 +40837,7 @@ var _ = (function (_) {
               _.setState({
                 selecting: !1,
               });
-          });
+          }));
       }),
       (_._teardownSelectable = function () {
         _._selector && (_._selector.teardown(), (_._selector = null));
@@ -40842,7 +40853,7 @@ var _ = (function (_) {
             _ = [];
           _.props.localizer.lte(_, _);
         )
-          _.push(_), (_ = new Date(+_ + _.props.step * 60 * 1e3));
+          (_.push(_), (_ = new Date(+_ + _.props.step * 60 * 1e3)));
         _(_.props.onSelectSlot, {
           slots: _,
           start: _,
@@ -40876,23 +40887,23 @@ var _ = (function (_) {
       {
         key: `componentDidMount`,
         value: function () {
-          this.props.selectable && this._selectable(),
-            this.props.isNow && this.setTimeIndicatorPositionUpdateInterval();
+          (this.props.selectable && this._selectable(),
+            this.props.isNow && this.setTimeIndicatorPositionUpdateInterval());
         },
       },
       {
         key: `componentWillUnmount`,
         value: function () {
-          this._teardownSelectable(), this.clearTimeIndicatorInterval();
+          (this._teardownSelectable(), this.clearTimeIndicatorInterval());
         },
       },
       {
         key: `componentDidUpdate`,
         value: function (_, _) {
-          this.props.selectable && !_.selectable && this._selectable(),
+          (this.props.selectable && !_.selectable && this._selectable(),
             !this.props.selectable &&
               _.selectable &&
-              this._teardownSelectable();
+              this._teardownSelectable());
           var _ = this.props,
             _ = _.getNow,
             _ = _.isNow,
@@ -40920,19 +40931,19 @@ var _ = (function (_) {
         value: function () {
           var _ = this,
             _ = arguments.length > 0 && arguments[0] !== void 0 && arguments[0];
-          !this.intervalTriggered && !_ && this.positionTimeIndicator(),
+          (!this.intervalTriggered && !_ && this.positionTimeIndicator(),
             (this._timeIndicatorTimeout = window.setTimeout(function () {
-              (_.intervalTriggered = !0),
+              ((_.intervalTriggered = !0),
                 _.positionTimeIndicator(),
-                _.setTimeIndicatorPositionUpdateInterval();
-            }, 6e4));
+                _.setTimeIndicatorPositionUpdateInterval());
+            }, 6e4)));
         },
       },
       {
         key: `clearTimeIndicatorInterval`,
         value: function () {
-          (this.intervalTriggered = !1),
-            window.clearTimeout(this._timeIndicatorTimeout);
+          ((this.intervalTriggered = !1),
+            window.clearTimeout(this._timeIndicatorTimeout));
         },
       },
       {
@@ -40945,10 +40956,10 @@ var _ = (function (_) {
             _ = _();
           if (_ >= _ && _ <= _) {
             var _ = this.slotMetrics.getCurrentTimePosition(_);
-            (this.intervalTriggered = !0),
+            ((this.intervalTriggered = !0),
               this.setState({
                 timeIndicatorPosition: _,
-              });
+              }));
           } else this.clearTimeIndicatorInterval();
         },
       },
@@ -41061,11 +41072,11 @@ var _ = (function (_) {
     ])
   );
 })(_.Component);
-(_.propTypes = {}),
+((_.propTypes = {}),
   (_.defaultProps = {
     dragThroughEvents: !0,
     timeslots: 2,
-  });
+  }));
 var _ = function (_) {
   var _ = _.label;
   return _.createElement(_.Fragment, null, _);
@@ -41095,7 +41106,7 @@ var _ = (function (_) {
     return (
       (_ = _(this, _, [].concat(_))),
       (_.handleHeaderClick = function (_, _, _) {
-        _.preventDefault(), _(_.props.onDrillDown, [_, _]);
+        (_.preventDefault(), _(_.props.onDrillDown, [_, _]));
       }),
       (_.renderRow = function (_) {
         var _ = _.props,
@@ -41335,7 +41346,7 @@ var _ = (function (_) {
     return (
       (_ = _(this, _, [].concat(_))),
       (_.handleHeaderClick = function (_, _, _) {
-        _.preventDefault(), _(_.props.onDrillDown, [_, _]);
+        (_.preventDefault(), _(_.props.onDrillDown, [_, _]));
       }),
       _
     );
@@ -41660,11 +41671,11 @@ function _(_, _) {
             if (Array.isArray(_))
               _.forEach(function (_) {
                 var _ = _.get(_) || [];
-                _.push(_), _.set(_, _);
+                (_.push(_), _.set(_, _));
               });
             else {
               var _ = _.get(_) || [];
-              _.push(_), _.set(_, _);
+              (_.push(_), _.set(_, _));
             }
           }),
           _)
@@ -41676,11 +41687,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -41726,7 +41737,7 @@ var _ = (function (_) {
           (_.scrollRef.current.scrollLeft = _.target.scrollLeft);
       }),
       (_.handleResize = function () {
-        _(_.rafHandle), (_.rafHandle = _(_.checkOverflow));
+        (_(_.rafHandle), (_.rafHandle = _(_.checkOverflow)));
       }),
       (_.handleKeyPressEvent = function () {
         _.clearSelection();
@@ -41773,14 +41784,14 @@ var _ = (function (_) {
         var _ = _.props.onSelectSlot,
           _ = new Date(_[0]),
           _ = new Date(_[_.length - 1]);
-        _.setDate(_[_.length - 1].getDate() + 1),
+        (_.setDate(_[_.length - 1].getDate() + 1),
           _(_, {
             slots: _,
             start: _,
             end: _,
             action: _.action,
             resourceId: _.resourceId,
-          });
+          }));
       }),
       (_.overlayDisplay = function () {
         _.setState({
@@ -41826,27 +41837,27 @@ var _ = (function (_) {
       {
         key: `getSnapshotBeforeUpdate`,
         value: function () {
-          return this.checkOverflow(), null;
+          return (this.checkOverflow(), null);
         },
       },
       {
         key: `componentDidMount`,
         value: function () {
-          this.props.width ?? this.measureGutter(),
+          (this.props.width ?? this.measureGutter(),
             this.calculateScroll(),
             this.applyScroll(),
-            window.addEventListener(`resize`, this.handleResize);
+            window.addEventListener(`resize`, this.handleResize));
         },
       },
       {
         key: `componentWillUnmount`,
         value: function () {
-          window.removeEventListener(`resize`, this.handleResize),
+          (window.removeEventListener(`resize`, this.handleResize),
             _(this.rafHandle),
             this.measureGutterAnimationFrameRequest &&
               window.cancelAnimationFrame(
                 this.measureGutterAnimationFrameRequest,
-              );
+              ));
         },
       },
       {
@@ -41979,7 +41990,7 @@ var _ = (function (_) {
           var _ = [],
             _ = [],
             _ = [];
-          _.forEach(function (_) {
+          (_.forEach(function (_) {
             if (_(_, _, _, _, _)) {
               var _ = _.start(_),
                 _ = _.end(_);
@@ -41995,7 +42006,7 @@ var _ = (function (_) {
             }),
             _.sort(function (_, _) {
               return _(_, _, _, _);
-            });
+            }));
           var _ = {
             range: _,
             events: _,
@@ -42098,14 +42109,14 @@ var _ = (function (_) {
       {
         key: `clearSelection`,
         value: function () {
-          clearTimeout(this._selectTimer), (this._pendingSelection = []);
+          (clearTimeout(this._selectTimer), (this._pendingSelection = []));
         },
       },
       {
         key: `measureGutter`,
         value: function () {
           var _ = this;
-          this.measureGutterAnimationFrameRequest &&
+          (this.measureGutterAnimationFrameRequest &&
             window.cancelAnimationFrame(
               this.measureGutterAnimationFrameRequest,
             ),
@@ -42121,7 +42132,7 @@ var _ = (function (_) {
                   _.setState({
                     gutterWidth: _,
                   });
-              }));
+              })));
         },
       },
       {
@@ -42129,8 +42140,8 @@ var _ = (function (_) {
         value: function () {
           if (this._scrollRatio != null && this.props.enableAutoScroll === !0) {
             var _ = this.contentRef.current;
-            (_.scrollTop = _.scrollHeight * this._scrollRatio),
-              (this._scrollRatio = null);
+            ((_.scrollTop = _.scrollHeight * this._scrollRatio),
+              (this._scrollRatio = null));
           }
         },
       },
@@ -42153,12 +42164,12 @@ var _ = (function (_) {
     ])
   );
 })(_.Component);
-(_.propTypes = {}),
+((_.propTypes = {}),
   (_.defaultProps = {
     step: 30,
     timeslots: 2,
     resourceGroupingLayout: !1,
-  });
+  }));
 var _ = [`date`, `localizer`, `min`, `max`, `scrollToTime`, `enableAutoScroll`];
 function _(_, _, _) {
   return (
@@ -42178,7 +42189,7 @@ function _() {
 }
 var _ = (function (_) {
   function _() {
-    return _(this, _), _(this, _, arguments);
+    return (_(this, _), _(this, _, arguments));
   }
   return (
     _(_, _),
@@ -42218,7 +42229,7 @@ var _ = (function (_) {
     ])
   );
 })(_.Component);
-(_.propTypes = {}),
+((_.propTypes = {}),
   (_.range = function (_, _) {
     return [_.localizer.startOf(_, `day`)];
   }),
@@ -42235,7 +42246,7 @@ var _ = (function (_) {
   }),
   (_.title = function (_, _) {
     return _.localizer.format(_, `dayHeaderFormat`);
-  });
+  }));
 var _ = [`date`, `localizer`, `min`, `max`, `scrollToTime`, `enableAutoScroll`];
 function _(_, _) {
   (_ == null || _ > _.length) && (_ = _.length);
@@ -42260,7 +42271,7 @@ function _() {
 }
 var _ = (function (_) {
   function _() {
-    return _(this, _), _(this, _, arguments);
+    return (_(this, _), _(this, _, arguments));
   }
   return (
     _(_, _),
@@ -42298,7 +42309,7 @@ var _ = (function (_) {
     ])
   );
 })(_.Component);
-(_.propTypes = {}),
+((_.propTypes = {}),
   (_.defaultProps = _.defaultProps),
   (_.navigate = function (_, _, _) {
     var _ = _.localizer;
@@ -42334,7 +42345,7 @@ var _ = (function (_) {
       },
       `dayRangeHeaderFormat`,
     );
-  });
+  }));
 var _ = [`date`, `localizer`, `min`, `max`, `scrollToTime`, `enableAutoScroll`];
 function _(_, _) {
   (_ == null || _ > _.length) && (_ = _.length);
@@ -42364,7 +42375,7 @@ function _(_, _) {
 }
 var _ = (function (_) {
   function _() {
-    return _(this, _), _(this, _, arguments);
+    return (_(this, _), _(this, _, arguments));
   }
   return (
     _(_, _),
@@ -42402,7 +42413,7 @@ var _ = (function (_) {
     ])
   );
 })(_.Component);
-(_.propTypes = {}),
+((_.propTypes = {}),
   (_.defaultProps = _.defaultProps),
   (_.range = _),
   (_.navigate = _.navigate),
@@ -42422,7 +42433,7 @@ var _ = (function (_) {
       },
       `dayRangeHeaderFormat`,
     );
-  });
+  }));
 var _ = 30;
 function _(_) {
   var _ = _.accessors,
@@ -42555,14 +42566,14 @@ function _(_) {
           var _ = _.current.scrollHeight > _.current.clientHeight,
             _ = [],
             _ = _;
-          (_ = [_(_.children[0]), _(_.children[1])]),
+          ((_ = [_(_.children[0]), _(_.children[1])]),
             (_[0] !== _[0] || _[1] !== _[1]) &&
               ((_.current.style.width = _[0] + `px`),
               (_.current.style.width = _[1] + `px`)),
             _
               ? (_(_, `rbc-header-overflowing`),
                 (_.style.marginRight = _() + `px`))
-              : _(_, `rbc-header-overflowing`);
+              : _(_, `rbc-header-overflowing`));
         }
       }
     },
@@ -42656,7 +42667,7 @@ function _(_) {
     )
   );
 }
-(_.propTypes = {}),
+((_.propTypes = {}),
   (_.range = function (_, _) {
     var _ = _.length,
       _ = _ === void 0 ? _ : _;
@@ -42690,7 +42701,7 @@ function _(_) {
       },
       `agendaHeaderFormat`,
     );
-  });
+  }));
 var _ = _(
     _(_(_(_({}, _.MONTH, _), _.WEEK, _), _.WORK_WEEK, _), _.DAY, _),
     _.AGENDA,
@@ -42709,11 +42720,11 @@ function _(_, _) {
     case _.DATE:
       break;
     default:
-      (0, _.default)(
+      ((0, _.default)(
         _ && typeof _.navigate == `function`,
         "Calendar View components must implement a static `.navigate(date, action)` method.s",
       ),
-        (_ = _.navigate(_, _, _));
+        (_ = _.navigate(_, _, _)));
   }
   return _;
 }
@@ -42760,11 +42771,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -42867,7 +42878,7 @@ var _ = (function (_) {
           _ = _(_, _),
           _ = _.getView(),
           _ = _();
-        (_ = _(
+        ((_ = _(
           _,
           _(
             _({}, _),
@@ -42880,7 +42891,7 @@ var _ = (function (_) {
           ),
         )),
           _(_, _, _),
-          _.handleRangeChange(_, _);
+          _.handleRangeChange(_, _));
       }),
       (_.handleViewChange = function (_) {
         _ !== _.props.view && _(_, _.props) && _.props.onView(_);
@@ -42937,7 +42948,7 @@ var _ = (function (_) {
               _ = _.showMultiDayTimes,
               _ = _.onShowMore,
               _ = _.doShowMoreDrillDown;
-            _.components, _.formats, _.messages, _.culture;
+            (_.components, _.formats, _.messages, _.culture);
             var _ = _(_, _);
             _ ||= _();
             var _ = this.getView(),
@@ -43082,7 +43093,7 @@ var _ = (function (_) {
     )
   );
 })(_.Component);
-(_.defaultProps = {
+((_.defaultProps = {
   events: [],
   backgroundEvents: [],
   elementProps: {},
@@ -43110,7 +43121,7 @@ var _ = (function (_) {
   },
   dayLayoutAlgorithm: `overlap`,
 }),
-  (_.propTypes = {});
+  (_.propTypes = {}));
 var _ = _(_, {
     view: `onView`,
     date: `onNavigate`,
@@ -43160,7 +43171,7 @@ var _ = _(_, {
   };
 function _(_) {
   var _ = _ && _.toLowerCase();
-  return _ === `FullYear` ? (_ = `year`) : (_ ||= void 0), _;
+  return (_ === `FullYear` ? (_ = `year`) : (_ ||= void 0), _);
 }
 function _(_) {
   var _ = function (_, _) {
@@ -43277,7 +43288,7 @@ function _(_) {
         _ = [];
       _(_, _);
     )
-      _.push(_), (_ = _(_, 1, _));
+      (_.push(_), (_ = _(_, 1, _)));
     return _;
   }
   function _(_, _) {
@@ -43306,8 +43317,8 @@ function _(_) {
     return _(_).endOf(`month`).endOf(`week`).toDate();
   }
   function _(_) {
-    for (var _ = _(_), _ = _(_), _ = []; _(_, _); )
-      _.push(_), (_ = _(_, 1, `d`));
+    for (var _ = _(_), _ = _(_), _ = []; _(_, _);)
+      (_.push(_), (_ = _(_, 1, `d`)));
     return _;
   }
   function _(_, _, _) {
@@ -43547,7 +43558,7 @@ function _(_) {
         date: _,
         onNavigate: (_) => {
           let _ = _(new Date(), _);
-          _ < _ * 5 && _(_ * 5), _(_(new Date(), _));
+          (_ < _ * 5 && _(_ * 5), _(_(new Date(), _)));
         },
         events: _,
         dayPropGetter: _,
@@ -43626,13 +43637,13 @@ function _(_) {
           onChange: (_) => {
             let _ = new Set(_),
               _ = new URLSearchParams(window.location.search);
-            _
+            (_
               ? (_.add(_), _.has(_) ? _.set(_, `1`) : _.delete(_))
               : (_.delete(_), _.has(_) ? _.delete(_) : _.set(_, `0`)),
               window.history.replaceState({}, ``, `?` + _.toString()),
               _.delete(`month`),
               window.localStorage.setItem(_, `?` + _.toString()),
-              _(_);
+              _(_));
           },
         },
         _,
@@ -43647,10 +43658,10 @@ function _(_) {
   let { countDownUntil: _, fnCallbackOnZero: _, ..._ } = _,
     [_, _] = (0, _.useState)(Math.floor(Math.max(0, _.getTime() - _()) / 1e3)),
     _ = _.useRef(null);
-  _.useEffect(() => (_(_, _, _), () => _(_)), [_]),
+  (_.useEffect(() => (_(_, _, _), () => _(_)), [_]),
     _.useEffect(() => {
       _ == 0 && _ && _();
-    }, [_, _]);
+    }, [_, _]));
   let _ = Math.floor(_ / _.PerHour),
     _ = Math.floor((_ - _ * _.PerHour) / _.PerMinute),
     _ = Math.floor(_ - (_ * _.PerHour + _ * _.PerMinute));
@@ -43672,7 +43683,7 @@ function _(_, _, _) {
   _(_);
   let _ = _(),
     _ = Math.floor(Math.max(0, _.getTime() - _) / 1e3);
-  _(_), _ >= 0 && _ && (_.current = window.setTimeout(() => _(_, _, _), 1e3));
+  (_(_), _ >= 0 && _ && (_.current = window.setTimeout(() => _(_, _, _), 1e3)));
 }
 var _ = `xvXE8znd24g-`,
   _ = `BM6TPbK5AJk-`,
@@ -44128,12 +44139,12 @@ function _(_) {
     _ && (_(new Date(Date.now() + _ * 1e3)), _(!1));
   }, [_]);
   let _ = (0, _.useCallback)(async () => {
-    _(!0),
+    (_(!0),
       console.log(`refreshing promotion plans`),
       (await _(_()))
         ? _(new Date(Date.now() + _ * 1e3))
         : (console.error(`refreshing promotion plans failed`), _(!0)),
-      _(!1);
+      _(!1));
   }, [_]);
   return _
     ? (0, _.jsx)(`div`, {
@@ -44261,15 +44272,15 @@ function _(_) {
     [_, _] = _(`filter_account`, 0),
     [_, _] = (0, _.useState)(() => !_(_, _).has(`dailydeal`)),
     _ = _();
-  _(_?.map((_) => _._) || []),
+  (_(_?.map((_) => _._) || []),
     _.useEffect(() => {
-      _(), _();
-    }, [_, _]);
+      (_(), _());
+    }, [_, _]));
   let [_, _] = _(`month`, 0),
     _ = (0, _.useMemo)(() => {
       let _ = new Date(),
         _ = _.getMonth();
-      return _ != 0 && _.setDate(1), _.setMonth(_ + _), _;
+      return (_ != 0 && _.setDate(1), _.setMonth(_ + _), _);
     }, [_]),
     _ = _(),
     _ = (0, _.useMemo)(
@@ -44304,7 +44315,7 @@ function _(_) {
           let _ = !0;
           if (_?.trim().length > 0) {
             let _ = _.toLocaleLowerCase();
-            (_ =
+            ((_ =
               _.admin_notes?.toLocaleLowerCase().indexOf(_) >= 0 ||
               _.name?.toLocaleLowerCase().indexOf(_) >= 0 ||
               _(_.owner_account_id || _.creator_account_id)
@@ -44314,7 +44325,7 @@ function _(_) {
                 0 ||
               _(_.operator_account_id).toLocaleLowerCase().indexOf(_) >= 0 ||
               (`` + _.store_item_id).indexOf(_) >= 0),
-              _ && _.push(_._);
+              _ && _.push(_._));
           }
           if (_ && _.type != `vacation`) {
             let _ = Math.floor(Date.now() / 1e3);
@@ -44501,10 +44512,10 @@ function _(_) {
                   value: _,
                   bAlwaysShowClearAction: !0,
                   onChange: (_) => {
-                    _(_?.currentTarget?.value || ``),
+                    (_(_?.currentTarget?.value || ``),
                       _?.currentTarget?.value.trim().length > 0
                         ? _(`search`)
-                        : _(`current`);
+                        : _(`current`));
                   },
                 }),
                 (0, _.jsx)(_, {
@@ -44546,7 +44557,7 @@ function _(_) {
       (0, _.jsx)(_, {
         disabled: _,
         onClick: async () => {
-          _(!0), _(_ + 6), await _(_), _(!1);
+          (_(!0), _(_ + 6), await _(_), _(!1));
         },
         children: `Load 6 More Previous Months`,
       }),
@@ -45304,7 +45315,9 @@ function _(_) {
     }),
     _ = new URLSearchParams(),
     _ = _ ? _.GetName() : `type: ${_.item_type} id: ${_._}`;
-  _.set(`name`, _), _.set(`dailydealid`, _.GetDealID()), _.set(`start`, `` + _);
+  (_.set(`name`, _),
+    _.set(`dailydealid`, _.GetDealID()),
+    _.set(`start`, `` + _));
   let _ = [];
   return (
     _.BRequiresSalePage() &&
@@ -45515,7 +45528,7 @@ function _(_) {
           : `Are you sure you want to cancel this daily deal? A cancelled deal will no longer appear on the calendar, however, it will appear in the list of cancelled daily deals on the partner daily deal dashboard. Cancelled daily deals can no longer be edited.`,
         onCancel: _,
         onOK: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             (_ ? _(_.GetDealID()) : _(_.GetDealID()))
               .then((_) => {
                 _
@@ -45527,11 +45540,11 @@ function _(_) {
                     ));
               })
               .catch((_) => {
-                _.fnSetError(!0),
+                (_.fnSetError(!0),
                   _.fnSetStrError(
                     `Failed To ${_ ? `Delete` : `Cancel`}, check console`,
-                  );
-              });
+                  ));
+              }));
         },
         children: _
           ? (0, _.jsxs)(`div`, {
@@ -45749,7 +45762,7 @@ function _(_) {
 function _(_, _, _) {
   let { strLocal: _, strPacific: _ } = _(_, _, _),
     _ = _;
-  return _ && (_ += ` (` + _ + `)`), _;
+  return (_ && (_ += ` (` + _ + `)`), _);
 }
 function _(_) {
   let _ = ``;
@@ -45801,7 +45814,7 @@ function _(_) {
     [_, _] = _.useState(``),
     _ = (_) => {
       let _ = _(_.errorCode);
-      _(_?.gid), _(_);
+      (_(_?.gid), _(_));
     },
     _ = _.useCallback(async () => {
       let _ = _(_),
@@ -45822,10 +45835,10 @@ function _(_) {
         });
     }, [_, _, _.inviteid, _.primary_partnerid, _, _]),
     _ = _.useCallback(() => {
-      _(),
+      (_(),
         window.location.assign(
           `${_.PARTNER_BASE_URL}promotion${_.DailyDealDashboard()}`,
-        );
+        ));
     }, [_]),
     _ = _ < _ || _ > _,
     _ = _ && !!_ && !!_,
@@ -46097,9 +46110,9 @@ function _(_) {
     _ = _(_.GetTimeNowWithOverride()),
     [_, _] = _.useState(_ + _ * _.PerWeek * _),
     _ = (_) => {
-      window.sessionStorage.setItem(`dailyDealPageIndex`, `?page=${_}`),
+      (window.sessionStorage.setItem(`dailyDealPageIndex`, `?page=${_}`),
         _(_),
-        _(_ + _ * _.PerWeek * _);
+        _(_ + _ * _.PerWeek * _));
     };
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -46772,13 +46785,13 @@ var _ = class {
   m_bReadOnly = !1;
   m_sections = void 0;
   constructor(_, _) {
-    _(this),
+    (_(this),
       (this.m_strOptInName = _),
       (this.m_email = _),
       (this.m_sections = this.m_email.sections.map((_) => new _(_))),
       (this.m_email.custom_app_list = (this.m_email.custom_app_list || []).map(
         (_) => (typeof _ == `string` ? Number.parseInt(_) : _),
-      ));
+      )));
   }
   GetOwningOptInName() {
     return this.m_strOptInName;
@@ -46955,16 +46968,15 @@ var _ = class {
   AddSection(_) {
     if (this.m_bReadOnly) return;
     let _ = Math.floor(1 + Math.random() * 1e5);
-    for (; this.GetSectionByID(_ + _); )
-      _ = Math.floor(1 + Math.random() * 1e5);
+    for (; this.GetSectionByID(_ + _);) _ = Math.floor(1 + Math.random() * 1e5);
     let _ = {
       unique_id: _ + _,
       type: _,
     };
-    this.m_email.sections || (this.m_email.sections = []),
-      this.m_email.sections.push(_);
+    (this.m_email.sections || (this.m_email.sections = []),
+      this.m_email.sections.push(_));
     let _ = new _(this.m_email.sections[this.m_email.sections.length - 1]);
-    this.m_sections.push(_), _.Get().SetDirty(!0);
+    (this.m_sections.push(_), _.Get().SetDirty(!0));
   }
   RemoveSectionByIndex(_) {
     !this.m_bReadOnly &&
@@ -46981,7 +46993,7 @@ var _ = class {
       ((this.m_email.localized_email_image[_] = _), _.Get().SetDirty(!0));
   }
   SetAllEmailImages(_) {
-    (this.m_email.localized_email_image = _), _.Get().SetDirty(!0);
+    ((this.m_email.localized_email_image = _), _.Get().SetDirty(!0));
   }
   SetServerEmailDefID(_) {
     this.m_email.email_def_id != _ &&
@@ -47099,13 +47111,13 @@ var _ = class {
   SetSubject(_, _) {
     if (_(this.m_email.subject, _, void 0) != _ && !this.m_bReadOnly) {
       let _ = _(_, `english`);
-      this.m_email.subject || (this.m_email.subject = {}),
+      (this.m_email.subject || (this.m_email.subject = {}),
         (this.m_email.subject[_] = _),
-        _.Get().SetDirty(!0);
+        _.Get().SetDirty(!0));
     }
   }
   ClearSubjectText() {
-    (this.m_email.subject = {}), _.Get().SetDirty(!0);
+    ((this.m_email.subject = {}), _.Get().SetDirty(!0));
   }
   SetSubjectToken(_) {
     this.m_email.subject_token != _ &&
@@ -47115,9 +47127,9 @@ var _ = class {
       _.Get().SetDirty(!0));
   }
   AddAppToCustomList(_) {
-    this.m_email.custom_app_list || (this.m_email.custom_app_list = []),
+    (this.m_email.custom_app_list || (this.m_email.custom_app_list = []),
       this.m_email.custom_app_list.includes(_) ||
-        (this.m_email.custom_app_list.push(_), _.Get().SetDirty(!0));
+        (this.m_email.custom_app_list.push(_), _.Get().SetDirty(!0)));
   }
   RemoveAppToCustomList(_) {
     if (this.m_email.custom_app_list) {
@@ -47151,10 +47163,10 @@ var _ = class {
       !this.m_bReadOnly
     ) {
       let _ = _(_, `english`);
-      this.m_email.localized_generic_button_text ||
+      (this.m_email.localized_generic_button_text ||
         (this.m_email.localized_generic_button_text = {}),
         (this.m_email.localized_generic_button_text[_] = _),
-        _.Get().SetDirty(!0);
+        _.Get().SetDirty(!0));
     }
   }
   SetSteamAwardsAdvertisingApp(_) {
@@ -47163,7 +47175,7 @@ var _ = class {
       ((this.m_email.steam_awards_advertising_app = _), _.Get().SetDirty(!0));
   }
 };
-_([_], _.prototype, `m_email`, void 0),
+(_([_], _.prototype, `m_email`, void 0),
   _([_], _.prototype, `m_sections`, void 0),
   _([_], _.prototype, `BHasLanguageData`, null),
   _([_], _.prototype, `GetGenericActionButtonText`, null),
@@ -47203,12 +47215,12 @@ _([_], _.prototype, `m_email`, void 0),
   _([_.bound], _.prototype, `SetGenericActionLink`, null),
   _([_.bound], _.prototype, `SetGenericActionButtonLink`, null),
   _([_.bound], _.prototype, `SetGenericActionButtonText`, null),
-  _([_.bound], _.prototype, `SetSteamAwardsAdvertisingApp`, null);
+  _([_.bound], _.prototype, `SetSteamAwardsAdvertisingApp`, null));
 var _ = class {
   m_section = void 0;
   m_bReadOnly = !1;
   constructor(_) {
-    _(this), (this.m_section = _);
+    (_(this), (this.m_section = _));
   }
   SetReadOnly(_) {
     this.m_bReadOnly = _;
@@ -47252,26 +47264,26 @@ var _ = class {
   SetTitle(_, _) {
     if (_(this.m_section.title, _, void 0) != _ && !this.m_bReadOnly) {
       let _ = _(_, `english`);
-      this.m_section.title || (this.m_section.title = {}),
+      (this.m_section.title || (this.m_section.title = {}),
         (this.m_section.title[_] = _),
-        _.Get().SetDirty(!0);
+        _.Get().SetDirty(!0));
     }
   }
   SetDescription(_, _) {
     if (_(this.m_section.description, _, void 0) != _ && !this.m_bReadOnly) {
       let _ = _(_, `english`);
-      this.m_section.description || (this.m_section.description = {}),
+      (this.m_section.description || (this.m_section.description = {}),
         (this.m_section.description[_] = _),
-        _.Get().SetDirty(!0);
+        _.Get().SetDirty(!0));
     }
   }
 };
-_([_], _.prototype, `m_section`, void 0),
+(_([_], _.prototype, `m_section`, void 0),
   _([_], _.prototype, `GetTitle`, null),
   _([_], _.prototype, `GetDescription`, null),
   _([_.bound], _.prototype, `SetType`, null),
   _([_.bound], _.prototype, `SetTitle`, null),
-  _([_.bound], _.prototype, `SetDescription`, null);
+  _([_.bound], _.prototype, `SetDescription`, null));
 var _ = class _ {
   constructor() {
     _(this);
@@ -47313,7 +47325,7 @@ var _ = class _ {
   SetOptInDefinition(_) {
     this.m_optInDef.set(_.pageid.toLowerCase(), _);
     let _ = this.m_activeOptInDef.findIndex((_) => _.pageid == _.pageid);
-    _ != -1 &&
+    (_ != -1 &&
       (this.m_activeOptInDef.splice(_, 1), this.m_activeOptInDef.unshift(_)),
       (_ = this.m_draftOptInDef.findIndex((_) => _.pageid == _.pageid)),
       _ != -1 &&
@@ -47321,16 +47333,16 @@ var _ = class _ {
       (_ = this.m_archivedOptInDef.findIndex((_) => _.pageid == _.pageid)),
       _ != -1 &&
         (this.m_archivedOptInDef.splice(_, 1),
-        this.m_archivedOptInDef.unshift(_));
+        this.m_archivedOptInDef.unshift(_)));
   }
   RemoveOptinDefinition(_) {
     this.m_optInDef.delete(_);
     let _ = this.m_activeOptInDef.findIndex((_) => _.pageid == _);
-    _ != -1 && this.m_activeOptInDef.splice(_, 1),
+    (_ != -1 && this.m_activeOptInDef.splice(_, 1),
       (_ = this.m_draftOptInDef.findIndex((_) => _.pageid == _)),
       _ != -1 && this.m_draftOptInDef.splice(_, 1),
       (_ = this.m_archivedOptInDef.findIndex((_) => _.pageid == _)),
-      _ != -1 && this.m_archivedOptInDef.splice(_, 1);
+      _ != -1 && this.m_archivedOptInDef.splice(_, 1));
   }
   createdPageId;
   createPageErrMsg;
@@ -47377,18 +47389,18 @@ var _ = class _ {
     );
   }
   async CreatePage(_, _, _, _) {
-    (this.createdPageId = ``), (this.createPageErrMsg = ``);
+    ((this.createdPageId = ``), (this.createPageErrMsg = ``));
     let _ = _.PARTNER_BASE_URL + `/admin/store/pagecreate`,
       _ = _.trim()
         .toLowerCase()
         .replace(/^sale_/, ``),
       _ = new FormData();
-    _.append(`sessionid`, _()),
+    (_.append(`sessionid`, _()),
       _.append(`action`, `createsale`),
       _.append(`id`, _),
       _.append(`is_optin`, `true`),
       _ && _.append(`optin_kind`, _),
-      _ && _.append(`optin_type`, `` + _);
+      _ && _.append(`optin_type`, `` + _));
     try {
       let _ = await _.default.post(_, _, {
         withCredentials: !0,
@@ -47432,7 +47444,7 @@ var _ = class _ {
     let _ = Math.floor(Date.now() / 1e3),
       _ = _.optin_type === _.k_EOptInType_PartnerAddressRequest,
       _ = _ ? _.optin_deadline_date : _.event_end_date;
-    _ && _ < _
+    (_ && _ < _
       ? this.m_archivedOptInDef.push(_)
       : _.sale_optin_enabled
         ? this.m_activeOptInDef.push(_)
@@ -47442,7 +47454,7 @@ var _ = class _ {
           ? this.m_appReviewOptInDef.push(_)
           : _.sale_optin_enabled &&
             _.event_end_date > _ &&
-            this.m_appealsReviewOptInDef.push(_));
+            this.m_appealsReviewOptInDef.push(_)));
   }
   Init() {
     let _ = JSON.parse(
@@ -47496,7 +47508,7 @@ var _ = `section_`,
     m_EmailDefinitions = void 0;
     m_mapEmails = new Map();
     static Get() {
-      return (_.s_Editor ||= new _()), _.s_Editor;
+      return ((_.s_Editor ||= new _()), _.s_Editor);
     }
     m_activeStatsChange = new _();
     GetActiveStatsChangeCallaback() {
@@ -47544,9 +47556,9 @@ var _ = `section_`,
       return _ ? this.GetKVLang(_.text, _) : ``;
     }
     AddDemoPackage(_) {
-      this.m_model.demo_packages || (this.m_model.demo_packages = []),
+      (this.m_model.demo_packages || (this.m_model.demo_packages = []),
         this.m_model.demo_packages.push(_),
-        this.SetDirty(!0);
+        this.SetDirty(!0));
     }
     GetDemoPackages() {
       return this.m_model.demo_packages;
@@ -47720,12 +47732,12 @@ var _ = `section_`,
       return this.m_model.special_event_time_blocks?.length || 0;
     }
     AddSpecialEventBlock() {
-      this.m_model.special_event_time_blocks ||
+      (this.m_model.special_event_time_blocks ||
         (this.m_model.special_event_time_blocks = []),
         this.m_model.special_event_time_blocks.push({
           block_reason: {},
         }),
-        this.SetDirty(!0);
+        this.SetDirty(!0));
     }
     RemoveSpecialEventBlock(_) {
       return (
@@ -47882,11 +47894,11 @@ var _ = `section_`,
       this.SetOptInRegistrationTitle(_.Get().GetCurEditLanguage(), _);
     }
     SetOptInRegistrationTitle(_, _) {
-      this.m_model.opt_in_registration_title ||
+      (this.m_model.opt_in_registration_title ||
         (this.m_model.opt_in_registration_title = {}),
         Array.isArray(this.m_model.opt_in_registration_title) &&
           (this.m_model.opt_in_registration_title = {}),
-        this.SetKVLang(this.m_model.opt_in_registration_title, _, _);
+        this.SetKVLang(this.m_model.opt_in_registration_title, _, _));
     }
     GetCurOptInRegistrationCheckbox() {
       return (
@@ -47900,11 +47912,11 @@ var _ = `section_`,
       this.SetOptInRegistrationCheckbox(_.Get().GetCurEditLanguage(), _);
     }
     SetOptInRegistrationCheckbox(_, _) {
-      this.m_model.opt_in_registration_checkbox ||
+      (this.m_model.opt_in_registration_checkbox ||
         (this.m_model.opt_in_registration_checkbox = {}),
         Array.isArray(this.m_model.opt_in_registration_checkbox) &&
           (this.m_model.opt_in_registration_checkbox = {}),
-        this.SetKVLang(this.m_model.opt_in_registration_checkbox, _, _);
+        this.SetKVLang(this.m_model.opt_in_registration_checkbox, _, _));
     }
     BHasOptInRegistrationTitleOrCheckbox() {
       return (
@@ -47955,11 +47967,11 @@ var _ = `section_`,
       return this.m_model.deepest_discount || {};
     }
     SetDeepestDiscountField(_, _) {
-      (!this.m_model.deepest_discount ||
+      ((!this.m_model.deepest_discount ||
         Array.isArray(this.m_model.deepest_discount)) &&
         (this.m_model.deepest_discount = {}),
         _ !== this.m_model.deepest_discount[_] &&
-          ((this.m_model.deepest_discount[_] = _), this.SetDirty(!0));
+          ((this.m_model.deepest_discount[_] = _), this.SetDirty(!0)));
     }
     BShowAllEditorSections() {
       return this.m_bShowAllEditorSections;
@@ -48033,13 +48045,13 @@ var _ = `section_`,
       return this.m_model.shipping_countries;
     }
     SetShippingCountries(_, _) {
-      (this.m_model.shipping_countries = _.length
+      ((this.m_model.shipping_countries = _.length
         ? {
             mode: _,
             country_codes: _,
           }
         : void 0),
-        this.SetDirty(!0);
+        this.SetDirty(!0));
     }
     BIsInvitationOnly() {
       return this.m_model.invitation_only;
@@ -48130,13 +48142,13 @@ var _ = `section_`,
       return _;
     }
     OnChangeRequiredTags(_) {
-      (this.m_model.required_tags = {}),
+      ((this.m_model.required_tags = {}),
         _ &&
           _.forEach((_) => {
             let _ = parseInt(_.value);
             this.m_model.required_tags[_] = !0;
           }),
-        this.SetDirty(!0);
+        this.SetDirty(!0));
     }
     GetAppOfficialWeightedTagRankToInclude() {
       return this.m_model.app_official_weighted_tag_rank_to_include || 20;
@@ -48215,25 +48227,25 @@ var _ = `section_`,
       this.SetPruningCriteriaText(_.Get().GetCurEditLanguage(), _);
     }
     SetPruningCriteriaText(_, _) {
-      (this.m_model.eligibility_criteria = _), this.SetDirty(!0);
+      ((this.m_model.eligibility_criteria = _), this.SetDirty(!0));
     }
     GetLLMCriteriaText() {
       return this.m_model.llm_eligibility_criteria ?? ``;
     }
     SetLLMCriteriaText(_) {
-      (this.m_model.llm_eligibility_criteria = _), this.SetDirty(!0);
+      ((this.m_model.llm_eligibility_criteria = _), this.SetDirty(!0));
     }
     GetPointShopPriorityApps() {
       return this.m_model.point_shop_priority_appids;
     }
     SetPointShopPriorityApps(_) {
-      (this.m_model.point_shop_priority_appids = _), this.SetDirty(!0);
+      ((this.m_model.point_shop_priority_appids = _), this.SetDirty(!0));
     }
     GetPointShopIncludedApps() {
       return this.m_model.point_shop_included_appids;
     }
     SetPointShopIncludedApps(_) {
-      (this.m_model.point_shop_included_appids = _), this.SetDirty(!0);
+      ((this.m_model.point_shop_included_appids = _), this.SetDirty(!0));
     }
     GetPointShopAdvertisingAppID() {
       return this.m_model.point_shop_advertising_appid || 0;
@@ -48306,13 +48318,13 @@ var _ = `section_`,
       return _;
     }
     OnChangeCategoryTags(_) {
-      (this.m_model.categories.tags = {}),
+      ((this.m_model.categories.tags = {}),
         _ &&
           _.forEach((_) => {
             let _ = parseInt(_.value);
             this.m_model.categories.tags[_] = !0;
           }),
-        this.SetDirty(!0);
+        this.SetDirty(!0));
     }
     BIsArtistStatementEnabled() {
       return this.m_model.artist_statement.enabled || !1;
@@ -48400,7 +48412,7 @@ var _ = `section_`,
       );
     }
     SetStorePageText(_) {
-      this.m_model.build_store_page || (this.m_model.build_store_page = {}),
+      (this.m_model.build_store_page || (this.m_model.build_store_page = {}),
         Array.isArray(this.m_model.build_store_page) &&
           (this.m_model.build_store_page = {}),
         this.m_model.build_store_page.description ||
@@ -48411,7 +48423,7 @@ var _ = `section_`,
           this.m_model.build_store_page.description,
           _.Get().GetCurEditLanguage(),
           _,
-        );
+        ));
     }
     BIsTaggingWizardEnabled() {
       return this.m_model.tagging_wizard || !1;
@@ -48517,14 +48529,14 @@ var _ = `section_`,
       return _(_, _);
     }
     AddDynamicSection() {
-      this.m_model.dynamic_sections || (this.m_model.dynamic_sections = []),
-        this.m_model.dynamic_sections.push(_.CreateDefaultDynamicSection());
+      (this.m_model.dynamic_sections || (this.m_model.dynamic_sections = []),
+        this.m_model.dynamic_sections.push(_.CreateDefaultDynamicSection()));
       let _ = new _(
         this.m_model.dynamic_sections[this.m_model.dynamic_sections.length - 1],
       );
-      this.m_mapDynamicSection.set(_.GetUniqueID(), _),
+      (this.m_mapDynamicSection.set(_.GetUniqueID(), _),
         this.m_dynamicSections.push(_),
-        this.SetDirty(!0);
+        this.SetDirty(!0));
     }
     static CreateDefaultDynamicSection() {
       return {
@@ -48541,7 +48553,7 @@ var _ = `section_`,
     }
     DeleteDynamicSection(_) {
       let _ = this.GetDynamicSectionByID(_);
-      if (!_) return console.log(`Could not find section with ID ` + _), !1;
+      if (!_) return (console.log(`Could not find section with ID ` + _), !1);
       this.m_mapDynamicSection.delete(_.GetUniqueID());
       let _ = this.m_dynamicSections.findIndex((_) => _.GetUniqueID() == _);
       if (_ !== -1) this.m_dynamicSections.splice(_, 1);
@@ -48554,7 +48566,7 @@ var _ = `section_`,
       )
         this.m_model.dynamic_sections.splice(_, 1);
       else throw `dynamic section unique id ${_} missing: source model`;
-      return this.SetDirty(!0), !0;
+      return (this.SetDirty(!0), !0);
     }
     static GenerateUniqueID(_) {
       let _ = new Set();
@@ -48593,9 +48605,9 @@ var _ = `section_`,
           ..._
         } = this.m_model,
         _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`pageid`, this.m_model.pageid),
-        _.append(`jsondata`, JSON.stringify(_));
+        _.append(`jsondata`, JSON.stringify(_)));
       try {
         let _ = await _.default.post(_, _, {
           withCredentials: !0,
@@ -48619,7 +48631,7 @@ var _ = `section_`,
             _
           );
         }
-        _.Get().SetOptInDefinition(this.m_model), this.SetDirty(!1);
+        (_.Get().SetOptInDefinition(this.m_model), this.SetDirty(!1));
       } catch (_) {
         let _ = _(_);
         return (
@@ -48632,7 +48644,7 @@ var _ = `section_`,
     async Delete(_) {
       let _ = _.PARTNER_BASE_URL + `optin/ajaxadmindelete`,
         _ = new FormData();
-      _.append(`sessionid`, _()), _.append(`pageid`, this.m_model.pageid);
+      (_.append(`sessionid`, _()), _.append(`pageid`, this.m_model.pageid));
       try {
         let _ = await _.default.post(_, _, {
           withCredentials: !0,
@@ -48656,7 +48668,7 @@ var _ = `section_`,
             _
           );
         }
-        this.Reset(
+        (this.Reset(
           {
             pageid: this.m_model.pageid,
             opt_in_registration_only_show_save: !1,
@@ -48664,7 +48676,7 @@ var _ = `section_`,
           null,
         ),
           _.Get().RemoveOptinDefinition(this.m_model.pageid),
-          this.SetDirty(!1);
+          this.SetDirty(!1));
       } catch (_) {
         let _ = _(_);
         return (
@@ -48786,44 +48798,44 @@ var _ = `section_`,
         this.m_model && !this.m_model.event_start_date)
       ) {
         let _ = new Date();
-        _.setHours(10),
+        (_.setHours(10),
           _.setMinutes(0),
           _.setSeconds(0),
-          (this.m_model.event_start_date = Math.floor(_.getTime() / 1e3));
+          (this.m_model.event_start_date = Math.floor(_.getTime() / 1e3)));
       }
       if (this.m_model && !this.m_model.event_end_date) {
         let _ = new Date();
-        _.setDate(_.getDate() + 1),
+        (_.setDate(_.getDate() + 1),
           _.setHours(10),
           _.setMinutes(0),
           _.setSeconds(0),
-          (this.m_model.event_end_date = Math.floor(_.getTime() / 1e3));
+          (this.m_model.event_end_date = Math.floor(_.getTime() / 1e3)));
       }
-      (this.m_dynamicSections = []),
+      ((this.m_dynamicSections = []),
         (this.m_mapDynamicSection = new Map()),
         this.m_model &&
           this.m_model.dynamic_sections &&
           this.m_model.dynamic_sections.forEach((_) => {
             let _ = new _(_);
-            this.m_dynamicSections.push(_),
-              this.m_mapDynamicSection.set(_.GetUniqueID(), _);
+            (this.m_dynamicSections.push(_),
+              this.m_mapDynamicSection.set(_.GetUniqueID(), _));
           }),
         (this.m_EmailDefinitions = []),
         (this.m_mapEmails = new Map()),
         this.m_model?.emails?.length > 0 &&
           this.m_model.emails.forEach((_) => {
             let _ = new _(this.GetFullName(), _);
-            this.m_EmailDefinitions.push(_),
-              this.m_mapEmails.set(_.GetUniqueID(), _);
+            (this.m_EmailDefinitions.push(_),
+              this.m_mapEmails.set(_.GetUniqueID(), _));
           }),
-        this.LoadActiveStatsDetails();
+        this.LoadActiveStatsDetails());
     }
     AddEmailDraft(_) {
-      this.m_model.emails || (this.m_model.emails = []),
+      (this.m_model.emails || (this.m_model.emails = []),
         this.GetOptInType() === _.k_EOptInType_PartnerAddressRequest &&
           !_.targeting &&
           (_.targeting = _),
-        this.m_model.emails.push(_);
+        this.m_model.emails.push(_));
       let _ = new _(
         this.GetFullName(),
         this.m_model.emails[this.m_model.emails.length - 1],
@@ -48836,8 +48848,8 @@ var _ = `section_`,
       );
     }
     SetActiveStats(_) {
-      (this.rgActiveStats = _),
-        this.GetActiveStatsChangeCallaback().Dispatch(_);
+      ((this.rgActiveStats = _),
+        this.GetActiveStatsChangeCallaback().Dispatch(_));
     }
     GetActiveStats() {
       return this.rgActiveStats;
@@ -48874,7 +48886,7 @@ var _ = `section_`,
         return null;
       let _ = _.PARTNER_BASE_URL + `optin/ajaxrefreshoptinstats`,
         _ = new FormData();
-      _.append(`sessionid`, _()), _.append(`pageids`, this.m_model.pageid);
+      (_.append(`sessionid`, _()), _.append(`pageids`, this.m_model.pageid));
       try {
         let _ = await _.default.post(_, _, {
           withCredentials: !0,
@@ -48890,7 +48902,9 @@ var _ = `section_`,
             `Refresh optin stats error: (` +
             (_.data ? `result: ` + _.data.success : `status: ` + _.status) +
             `)`;
-          return console.log(`COptInAdminEditModel.RefresActiveStats: ` + _), _;
+          return (
+            console.log(`COptInAdminEditModel.RefresActiveStats: ` + _), _
+          );
         }
         if (_.data.msg) {
           let _ = _.data.msg ? JSON.parse(JSON.stringify(_.data.msg)) : null;
@@ -48986,12 +49000,12 @@ var _ = `section_`,
         this.SetDirty(!0));
     }
     ClearSalePage() {
-      (this.m_model.sale_clan_account = void 0),
+      ((this.m_model.sale_clan_account = void 0),
         (this.m_model.sale_clan_event_gid = void 0),
-        this.SetDirty(!0);
+        this.SetDirty(!0));
     }
     ClearSpecialEventCategory() {
-      (this.m_model.special_event_type = void 0),
+      ((this.m_model.special_event_type = void 0),
         (this.m_model.special_event_name = void 0),
         (this.m_model.special_event_description = void 0),
         (this.m_model.special_event_doc_link = void 0),
@@ -48999,10 +49013,10 @@ var _ = `section_`,
         (this.m_model.special_event_rt_start = void 0),
         (this.m_model.special_event_rt_end = void 0),
         (this.m_model.special_event_time_blocks = void 0),
-        this.SetDirty(!0);
+        this.SetDirty(!0));
     }
   };
-_([_], _.prototype, `m_model`, void 0),
+(_([_], _.prototype, `m_model`, void 0),
   _([_], _.prototype, `m_bDirty`, void 0),
   _([_], _.prototype, `m_bShowAllEditorSections`, void 0),
   _([_], _.prototype, `rgActiveStats`, void 0),
@@ -49228,11 +49242,11 @@ _([_], _.prototype, `m_model`, void 0),
   _([_], _.prototype, `SetRequiresSalePageType`, null),
   _([_], _.prototype, `SetSaleEvent`, null),
   _([_], _.prototype, `ClearSalePage`, null),
-  _([_], _.prototype, `ClearSpecialEventCategory`, null);
+  _([_], _.prototype, `ClearSpecialEventCategory`, null));
 var _ = class {
   m_section = void 0;
   constructor(_) {
-    _(this), (this.m_section = _);
+    (_(this), (this.m_section = _));
   }
   GetUniqueID() {
     return this.m_section.unique_id;
@@ -49285,17 +49299,17 @@ var _ = class {
   SetName(_, _) {
     if (_(this.m_section.name, _) != _) {
       let _ = _(_, `english`);
-      this.m_section.name || (this.m_section.name = {}),
+      (this.m_section.name || (this.m_section.name = {}),
         (this.m_section.name[_] = _),
-        _.Get().SetDirty(!0);
+        _.Get().SetDirty(!0));
     }
   }
   SetDescription(_, _) {
     if (_(this.m_section.description, _) != _) {
       let _ = _(_, `english`);
-      this.m_section.description || (this.m_section.description = {}),
+      (this.m_section.description || (this.m_section.description = {}),
         (this.m_section.description[_] = _),
-        _.Get().SetDirty(!0);
+        _.Get().SetDirty(!0));
     }
   }
   SetDescriptionWithCurLang(_) {
@@ -49332,10 +49346,10 @@ var _ = class {
         text: {},
         unique_id: _.GenerateUniqueIDForListItem(),
       };
-      (_.text[_] = _),
+      ((_.text[_] = _),
         _ && ((_.tooltip = {}), (_.tooltip[_] = _)),
         this.m_section.lists[_].options.push(_),
-        _.Get().SetDirty(!0);
+        _.Get().SetDirty(!0));
     } else throw `Adding item to a list that does not exist: ` + _;
   }
   RemoveListItemByID(_, _) {
@@ -49361,7 +49375,7 @@ var _ = class {
       _(this.m_section.lists[_].options[_].text, _) != _
     ) {
       let _ = _(_, `english`);
-      (this.m_section.lists[_].options[_].text[_] = _), _.Get().SetDirty(!0);
+      ((this.m_section.lists[_].options[_].text[_] = _), _.Get().SetDirty(!0));
     }
   }
   UpdateListItemTooltip(_, _, _, _) {
@@ -49372,10 +49386,10 @@ var _ = class {
       _(this.m_section.lists[_].options[_].tooltip, _) != _
     ) {
       let _ = _(_, `english`);
-      this.m_section.lists[_].options[_].tooltip ||
+      (this.m_section.lists[_].options[_].tooltip ||
         (this.m_section.lists[_].options[_].tooltip = {}),
         (this.m_section.lists[_].options[_].tooltip[_] = _),
-        _.Get().SetDirty(!0);
+        _.Get().SetDirty(!0));
     }
   }
   UpdateListItemTextByKV(_, _, _, _) {
@@ -49390,11 +49404,11 @@ var _ = class {
       for (let _ = 0; _ < 32; ++_) {
         if (_(_, _) != _(_.text, _)) {
           let _ = _(_);
-          (_.text[_] = _[_]), (_ = !0);
+          ((_.text[_] = _[_]), (_ = !0));
         }
         if (_ && ((_.tooltip ||= {}), _(_, _) != _(_.tooltip, _))) {
           let _ = _(_);
-          (_.tooltip[_] = _[_]), (_ = !0);
+          ((_.tooltip[_] = _[_]), (_ = !0));
         }
       }
       _ && _.Get().SetDirty(!0);
@@ -49405,7 +49419,7 @@ var _ = class {
       options: [],
       unique_id: _.GenerateUniqueIDForOptionListSection(),
     };
-    this.m_section.lists.push(_), _.Get().SetDirty(!0);
+    (this.m_section.lists.push(_), _.Get().SetDirty(!0));
   }
   DeleteOptionList(_) {
     let _ = this.m_section.lists.findIndex((_) => _.unique_id === _);
@@ -49431,14 +49445,14 @@ var _ = class {
       _(this.m_section.lists[_].option_title, _) != _
     ) {
       let _ = _(_, `english`);
-      this.m_section.lists[_].option_title ||
+      (this.m_section.lists[_].option_title ||
         (this.m_section.lists[_].option_title = {}),
         (this.m_section.lists[_].option_title[_] = _),
-        _.Get().SetDirty(!0);
+        _.Get().SetDirty(!0));
     }
   }
 };
-_([_], _.prototype, `GetName`, null),
+(_([_], _.prototype, `GetName`, null),
   _([_], _.prototype, `GetDescription`, null),
   _([_.bound], _.prototype, `SetName`, null),
   _([_.bound], _.prototype, `SetDescription`, null),
@@ -49457,10 +49471,10 @@ _([_], _.prototype, `GetName`, null),
   _([_.bound], _.prototype, `AddOptionList`, null),
   _([_], _.prototype, `DeleteOptionList`, null),
   _([_], _.prototype, `SetListTitle`, null),
-  _([_], _.prototype, `SetListTitleByListIndex`, null);
+  _([_], _.prototype, `SetListTitleByListIndex`, null));
 function _() {
   let [_, _] = (0, _.useState)(_.Get().GetActiveStats());
-  return _(_.Get().GetActiveStatsChangeCallaback(), _), _;
+  return (_(_.Get().GetActiveStatsChangeCallaback(), _), _);
 }
 function _() {
   let _ = _();
@@ -49564,7 +49578,7 @@ function _(_) {
         (0, _.jsx)(_, {
           _: `statsRefreshButton`,
           onClick: async () => {
-            _(!0), await _.RefreshActiveStats(), _(!1);
+            (_(!0), await _.RefreshActiveStats(), _(!1));
           },
           style: {
             marginTop: `10px`,
@@ -49599,12 +49613,12 @@ function _(_) {
   return (0, _.jsxs)(_, {
     strTitle: `Clone OptIn Definitions`,
     onOK: () => {
-      _(!0),
+      (_(!0),
         _(_, `sale_` + _, _)
           .then((_) => {
-            _(_), _ || _(`Failed to Clone: ` + _.pageid);
+            (_(_), _ || _(`Failed to Clone: ` + _.pageid));
           })
-          .catch(() => _(`Failed to Clone, exception caught, ` + _.pageid));
+          .catch(() => _(`Failed to Clone, exception caught, ` + _.pageid)));
     },
     onCancel: _,
     bOKDisabled: _ || _.trim().length == 0,
@@ -49692,9 +49706,9 @@ async function _(_, _, _) {
     _ = null;
   try {
     let _ = new FormData();
-    _.append(`sessionid`, _()),
+    (_.append(`sessionid`, _()),
       _.append(_ ? `strSourceOptInName` : `strOldOptInName`, _.pageid),
-      _.append(_ ? `strTargetOptInName` : `strNewOptInName`, _);
+      _.append(_ ? `strTargetOptInName` : `strNewOptInName`, _));
     let _ = await _.default.post(_, _, {
       withCredentials: !0,
     });
@@ -49870,7 +49884,7 @@ function _(_) {
       strThrobber: `Creating... Please be patient.`,
     });
   async function _() {
-    _.fnSetLoading(!0),
+    (_.fnSetLoading(!0),
       await _.CreatePage(_, _ ? _.None : _, _, _.token),
       _.GetCreatedPageId()
         ? (window.location.href =
@@ -49881,7 +49895,7 @@ function _(_) {
             ? _.fnSetStrError(_.GetCreatePageErrMsg())
             : _.fnSetStrError(
                 `Error occured when attempting to create page.  Please try again.`,
-              ));
+              )));
   }
   function _(_) {
     _(_.target.value);
@@ -50122,7 +50136,7 @@ var _ = class _ {
         this.m_steamInterface.GetServiceTransport(),
         _,
       );
-      (_ = _.GetEResult()),
+      ((_ = _.GetEResult()),
         _ == 1
           ? this.m_mapEmailToReach.set(_, _.Body().stats()?.toObject() || {})
           : console.error(
@@ -50130,7 +50144,7 @@ var _ = class _ {
               _,
               _,
               _,
-            );
+            ));
     } catch (_) {
       let _ = _(_);
       console.error(
@@ -50162,12 +50176,12 @@ var _ = class _ {
   }
   async CreateOptInEmail(_) {
     let _ = _.Init(_);
-    _.Body().set_opt_in_name(_.Get().GetFullName()),
+    (_.Body().set_opt_in_name(_.Get().GetFullName()),
       _.Body().set_targeting_flag(`` + (_.GetEmailTargeting() || 1)),
       _.Body().set_settings_flag(`` + this.ComputeSettingFlags(_)),
       _.Body().set_email_templates(_.GetUniqueID()),
       _.Body().set_start_rtime(0),
-      _.Body().set_end_rtime(0);
+      _.Body().set_end_rtime(0));
     let _ = 2;
     try {
       let _ = await _.CreatePartnerAppOptInEmails(
@@ -50191,31 +50205,31 @@ var _ = class _ {
         _,
       );
     }
-    return _(_.GetOwningOptInName()), _;
+    return (_(_.GetOwningOptInName()), _);
   }
   async UpdateOptInEmailMetaData(_, _) {
     let _ = _.Init(_);
-    _.Body().set_email_def_id(_.GetServerEmailDefID()),
+    (_.Body().set_email_def_id(_.GetServerEmailDefID()),
       _.Body().set_targeting_flag(`` + (_.GetEmailTargeting() || 1)),
       _.Body().set_settings_flag(`` + this.ComputeSettingFlags(_)),
       _.Body().set_email_templates(_.GetUniqueID()),
       _.Body().set_start_rtime(_?.rtStartAutomaticEmailType || 0),
       _.Body().set_end_rtime(_?.rtEndAutomaticEmail || 0),
-      _.Body().set_reviewed(_?.bReviewed || !1);
+      _.Body().set_reviewed(_?.bReviewed || !1));
     let _ = 2;
     try {
       let _ = await _.UpdatePartnerAppOptInEmails(
         this.m_steamInterface.GetServiceTransport(),
         _,
       );
-      (_ = _.GetEResult()),
+      ((_ = _.GetEResult()),
         _ != 1 &&
           console.error(
             `COptInEmailAdmin.UpdateOptInEmailMetaData: Update request failed:`,
             _,
             _,
             _,
-          );
+          ));
     } catch (_) {
       let _ = _(_);
       console.error(
@@ -50224,7 +50238,7 @@ var _ = class _ {
         _,
       );
     }
-    return _(_.GetOwningOptInName()), _;
+    return (_(_.GetOwningOptInName()), _);
   }
   async SetOptInEmailActive(_, _) {
     let _ = 2;
@@ -50259,12 +50273,12 @@ var _ = class _ {
     } catch (_) {
       console.error(`COptInEmailAdmin.SetOptInEmailActive: caught error`, _);
     }
-    return _(_.GetOwningOptInName()), _;
+    return (_(_.GetOwningOptInName()), _);
   }
   async SendManualEmail(_, _ = !1) {
     let _ = _.Init(_);
-    _.Body().set_email_def_id(_.GetServerEmailDefID()),
-      _ && _.Body().set_force_resend(!0);
+    (_.Body().set_email_def_id(_.GetServerEmailDefID()),
+      _ && _.Body().set_force_resend(!0));
     let _ = 2,
       _ = null;
     try {
@@ -50272,7 +50286,7 @@ var _ = class _ {
         this.m_steamInterface.GetServiceTransport(),
         _,
       );
-      (_ = _.GetEResult()),
+      ((_ = _.GetEResult()),
         _ == 1
           ? (_ = _.Body().results().toObject())
           : console.error(
@@ -50280,7 +50294,7 @@ var _ = class _ {
               _,
               _,
               _,
-            );
+            ));
     } catch (_) {
       let _ = _(_);
       console.error(
@@ -50305,23 +50319,23 @@ var _ = class _ {
   }
   async TestFireEmailToSelf(_, _ = 220, _) {
     let _ = _.Init(_);
-    _.Body().set_email_def_id(_.GetServerEmailDefID()),
+    (_.Body().set_email_def_id(_.GetServerEmailDefID()),
       _.Body().set_appid(_),
-      _.GetEmailTargeting() == 8192 && _.Body().set_partnerid(_());
+      _.GetEmailTargeting() == 8192 && _.Body().set_partnerid(_()));
     let _ = 2;
     try {
       let _ = await _.TestFirePartnerAppOptInEmail(
         this.m_steamInterface.GetServiceTransport(),
         _,
       );
-      (_ = _.GetEResult()),
+      ((_ = _.GetEResult()),
         _ !== 1 &&
           console.error(
             `COptInEmailAdmin.TestFireEmailToSelf: Create request failed:`,
             _,
             _,
             _,
-          );
+          ));
     } catch (_) {
       let _ = _(_);
       console.error(
@@ -50345,14 +50359,14 @@ var _ = class _ {
     this.m_steamInterface = _(new _(_.WEBAPI_BASE_URL));
   }
 };
-_([_], _.prototype, `m_mapOptInToEmailDef`, void 0),
+(_([_], _.prototype, `m_mapOptInToEmailDef`, void 0),
   _([_], _.prototype, `LoadEstimateEmailReach`, null),
   _([_], _.prototype, `CreateOptInEmail`, null),
   _([_], _.prototype, `UpdateOptInEmailMetaData`, null),
   _([_], _.prototype, `SetOptInEmailActive`, null),
   _([_], _.prototype, `SendManualEmail`, null),
   _([_], _.prototype, `TestFireEmailToSelf`, null),
-  _([_], _.prototype, `Init`, null);
+  _([_], _.prototype, `Init`, null));
 function _(_) {
   let _ = _({
     queryKey: [`OptInEamilDefAndStats`, _],
@@ -50373,7 +50387,7 @@ function _(_) {
   let _ = _.map((_) => _(_));
   if (_.some((_) => _.bLoading)) return null;
   let _ = new Map();
-  return _.forEach((_, _) => _.set(_, _[_].rgEmailDefAndStats)), _;
+  return (_.forEach((_, _) => _.set(_, _[_].rgEmailDefAndStats)), _);
 }
 function _(_) {
   let [_, _] = _.useState(!_.Get().BHasReachEstimateLoaded(_));
@@ -50399,10 +50413,10 @@ function _(_) {
         _ = new Set(),
         _ = new Set();
       _?.data?.forEach((_) => {
-        _.add(_.appid),
+        (_.add(_.appid),
           _.status == 1 && _.add(_.appid),
           _.partnerid &&
-            (_.add(_.partnerid), _.status == 1 && _.add(_.partnerid));
+            (_.add(_.partnerid), _.status == 1 && _.add(_.partnerid)));
       });
       let _ = Array.from(_).filter((_) => !_.has(_)),
         _ = Array.from(_).filter((_) => !_.has(_));
@@ -50616,7 +50630,7 @@ function _() {
         color: `dull`,
         disabled: !_ || _,
         onClick: async () => {
-          _(!0), _(null);
+          (_(!0), _(null));
           try {
             _({
               nAppID: _,
@@ -50678,7 +50692,7 @@ function _(_) {
         ),
       ),
     _ = async (_) => {
-      (_.current = !1), _(`running`);
+      ((_.current = !1), _(`running`));
       for (let _ of _) {
         if (_.current) break;
         _(_.nAppID, {
@@ -50701,7 +50715,7 @@ function _(_) {
       _(`done`);
     },
     _ = async () => {
-      _(`loading`), _(null), _([]);
+      (_(`loading`), _(null), _([]));
       let _ = new Map();
       try {
         for (let _ of _)
@@ -50713,22 +50727,22 @@ function _(_) {
                 rgOptInNames: [],
                 eState: `pending`,
               };
-              _.rgOptInNames.push(_.pageid), _.set(_.appid, _);
+              (_.rgOptInNames.push(_.pageid), _.set(_.appid, _));
             });
       } catch (_) {
-        _(
+        (_(
           `Failed to load the registered games: ` +
             (_?.message || `unknown error`),
         ),
-          _(`idle`);
+          _(`idle`));
         return;
       }
       let _ = Array.from(_.values()).sort((_, _) => _.nAppID - _.nAppID);
-      _(_), await _(_);
+      (_(_), await _(_));
     },
     _ = () => {
       let _ = _.filter((_) => _.eState == `failed`);
-      _((_) =>
+      (_((_) =>
         _.map((_) =>
           _.eState == `failed`
             ? {
@@ -50739,7 +50753,7 @@ function _(_) {
             : _,
         ),
       ),
-        _(_);
+        _(_));
     },
     _ = (_) => _.filter((_) => _.eState == _).length,
     _ = _ == `loading` || _ == `running`,
@@ -50925,7 +50939,7 @@ var _ = (_) => {
   let [_, _, _] = _(!1),
     [_, _, _] = _(!1);
   (0, _.useEffect)(() => {
-    _.Get(), _.Get().Reset(null, null);
+    (_.Get(), _.Get().Reset(null, null));
   }, []);
   let [_, _] = _(`tab`, `active`),
     _ = (_) => _(_.key),
@@ -51722,7 +51736,7 @@ var _ = `siDKpJnIDEc-`,
                 );
               },
               onMove: (_, _) => {
-                _(_.options, _, _), _.Get().SetDirty(!0);
+                (_(_.options, _, _), _.Get().SetDirty(!0));
               },
               render: (_) => {
                 let _ = _.listitem.tooltip && _(_.listitem.tooltip, _, void 0);
@@ -51753,8 +51767,8 @@ var _ = `siDKpJnIDEc-`,
       strTitle: `Edit Item`,
       strDescription: `Update the value and confirm to apply changes.`,
       onOK: () => {
-        _.section.UpdateListItemTextByKV(_.listIndex, _.itemIndex, _, _),
-          _.closeModal && _.closeModal();
+        (_.section.UpdateListItemTextByKV(_.listIndex, _.itemIndex, _, _),
+          _.closeModal && _.closeModal());
       },
       onCancel: _.closeModal,
       children: (0, _.jsxs)(`div`, {
@@ -51777,7 +51791,7 @@ var _ = `siDKpJnIDEc-`,
             value: _(_, _, ``),
             onChange: (_) => {
               let _ = JSON.parse(JSON.stringify(_));
-              (_[_(_)] = _.target.value), _(_);
+              ((_[_(_)] = _.target.value), _(_));
             },
           }),
           (0, _.jsx)(_, {
@@ -51787,7 +51801,7 @@ var _ = `siDKpJnIDEc-`,
             value: _(_, _, ``),
             onChange: (_) => {
               let _ = _ ? JSON.parse(JSON.stringify(_)) : {};
-              (_[_(_)] = _.target.value), _(_);
+              ((_[_(_)] = _.target.value), _(_));
             },
           }),
         ],
@@ -51802,8 +51816,8 @@ var _ = `siDKpJnIDEc-`,
       strTitle: `Add Option Item`,
       strDescription: `Add items for the user to select from. Adding for the language: ${_(_)}`,
       onOK: () => {
-        _.section.AddItemToListByIndex(_.listIndex, _, _, _),
-          _.closeModal && _.closeModal();
+        (_.section.AddItemToListByIndex(_.listIndex, _, _, _),
+          _.closeModal && _.closeModal());
       },
       bOKDisabled: _.trim().length == 0,
       onCancel: _.closeModal,
@@ -51972,8 +51986,8 @@ function _(_) {
     _ = (0, _.useMemo)(() => [_.k_ESteamRealmGlobal, _.k_ESteamRealmChina], []),
     _ = (0, _.useCallback)(
       (_, _, _, _, _) => {
-        _(_ != null && _ >= 0 && _ < 32, `Unexpected value for elang: ` + _),
-          _.SetLocalizedOptInBanner(_, _ + _(_));
+        (_(_ != null && _ >= 0 && _ < 32, `Unexpected value for elang: ` + _),
+          _.SetLocalizedOptInBanner(_, _ + _(_)));
       },
       [_],
     );
@@ -52418,8 +52432,8 @@ var _ = _((_) => {
       this.m_steamInterface = _(new _(_.WEBAPI_BASE_URL));
     }
   };
-_([_], _.prototype, `ChangeAppsAdditionalFeaturingState`, null),
-  _([_], _.prototype, `Init`, null);
+(_([_], _.prototype, `ChangeAppsAdditionalFeaturingState`, null),
+  _([_], _.prototype, `Init`, null));
 function _() {
   return {
     fnChangeAppAdditionalFeaturingState:
@@ -52440,7 +52454,7 @@ function _(_) {
       _.fnSetLoading(!0);
       let _ = _.replace(/\n/g, `|`).split(`|`),
         _ = [];
-      _.forEach((_) => {
+      (_.forEach((_) => {
         let _ = Number.parseInt(_);
         _ > 0 && _.push(_);
       }),
@@ -52454,7 +52468,7 @@ function _(_) {
                     `Failed to update ${_.length} apps error: ${_} `,
                   ));
             })
-          : (_.fnSetSuccess(!0), _.fnSetStrSuccess(`No new appids to invite`));
+          : (_.fnSetSuccess(!0), _.fnSetStrSuccess(`No new appids to invite`)));
     }, [_, _, _]);
   if (_.bLoading)
     return (0, _.jsx)(_, {
@@ -52614,12 +52628,12 @@ var _ = class _ {
           ),
           8
         );
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`opt_in_name`, _),
         _ && _.append(`appids`, JSON.stringify(_)),
         _.append(`add`, _ ? `1` : `0`),
         _.append(`pending_review`, _ ? `1` : `0`),
-        _.append(`prune`, _ ? `1` : `0`);
+        _.append(`prune`, _ ? `1` : `0`));
       let _ = await _.default.post(
         _.PARTNER_BASE_URL + `optin/ajaxinviteapps`,
         _,
@@ -52635,18 +52649,18 @@ var _ = class _ {
         (_ = _?.data?.success || 2));
     } catch (_) {
       let _ = _(_);
-      console.error(
+      (console.error(
         `COptinAdminInvitationStore.InternalUpdatePartnerOrAppInvitation failed add: ` +
           _.strErrorMsg,
         _,
       ),
-        (_ = 2);
+        (_ = 2));
     }
     return _;
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
   ValidateStoreDefault(_) {
@@ -52705,9 +52719,9 @@ var _ = `RQiiCbyKjEE-`,
     }
     async OnCreateInviteLink() {
       let _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`steamid_user`, _.steamid),
-        _.append(`duration`, `2592000`);
+        _.append(`duration`, `2592000`));
       let _ = await _.default.post(
         _.COMMUNITY_BASE_URL + `invites/ajaxcreate`,
         _,
@@ -52720,7 +52734,7 @@ var _ = `RQiiCbyKjEE-`,
         });
     }
     OnCopy(_, _) {
-      _ === `friend_code` &&
+      (_ === `friend_code` &&
         (this.setState({
           friend_code_copied: !0,
         }),
@@ -52742,13 +52756,13 @@ var _ = `RQiiCbyKjEE-`,
               }),
             1e3,
           )),
-        _(_);
+        _(_));
     }
     async OnAddFriend(_) {
       let _ = new FormData();
-      _.append(`sessionID`, _()),
+      (_.append(`sessionID`, _()),
         _.append(`steamid`, _),
-        _.append(`accept_invite`, `0`);
+        _.append(`accept_invite`, `0`));
       try {
         let _ = await _.default.post(
           _.COMMUNITY_BASE_URL + `actions/AddFriendAjax`,
@@ -52906,12 +52920,12 @@ var _ = `RQiiCbyKjEE-`,
       });
     }
   };
-_([_], _.prototype, `OnCreateInviteLink`, null),
+(_([_], _.prototype, `OnCreateInviteLink`, null),
   _([_], _.prototype, `OnCopy`, null),
   _([_], _.prototype, `OnAddFriend`, null),
   _([_], _.prototype, `OnSearchChange`, null),
   _([_], _.prototype, `OnSearchKeyDown`, null),
-  _([_], _.prototype, `OnSearchSubmit`, null);
+  _([_], _.prototype, `OnSearchSubmit`, null));
 var _ = class extends _.Component {
   state = {
     input_friend_code: ``,
@@ -52922,7 +52936,7 @@ var _ = class extends _.Component {
   m_currentRequest = 0;
   async OnFriendCodeChange(_) {
     let _ = _.target.value.split(`,`)[0];
-    this.setState({
+    (this.setState({
       input_friend_code: _,
       invite_status: `pending`,
     }),
@@ -52930,7 +52944,7 @@ var _ = class extends _.Component {
       (this.m_currentRequest = window.setTimeout(
         () => this.LoadProfile(_),
         500,
-      ));
+      )));
   }
   async LoadProfile(_) {
     if (_) {
@@ -52955,7 +52969,7 @@ var _ = class extends _.Component {
   }
   async OnActionClick(_) {
     let _ = new FormData();
-    _.append(`sessionID`, _()),
+    (_.append(`sessionID`, _()),
       _.append(`steamid`, _),
       _.append(`accept_invite`, `0`),
       this.setState({
@@ -52976,7 +52990,7 @@ var _ = class extends _.Component {
         : this.setState({
             invite_status: `failure`,
             disable_send_invite: !1,
-          });
+          }));
   }
   render() {
     return (0, _.jsxs)(`div`, {
@@ -53003,9 +53017,9 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnFriendCodeChange`, null),
+(_([_], _.prototype, `OnFriendCodeChange`, null),
   _([_], _.prototype, `LoadProfile`, null),
-  _([_], _.prototype, `OnActionClick`, null);
+  _([_], _.prototype, `OnActionClick`, null));
 var _ = (_) => {
   let { searchResult: _, invite_status: _, bShowStatus: _, children: _ } = _,
     _ = _();
@@ -53756,9 +53770,9 @@ var _ = _((_) => {
                   isMulti: !1,
                   placeholder: `Choose Event type`,
                   onChange: (_) => {
-                    _(_),
+                    (_(_),
                       _?.value &&
-                        _.SetSpecialEventType(Number.parseInt(_.value));
+                        _.SetSpecialEventType(Number.parseInt(_.value)));
                   },
                   value: _,
                   options: _,
@@ -53848,7 +53862,7 @@ function _(_) {
     closeModal: _,
     bAlertDialog: !0,
     onOK: () => {
-      _.ClearSpecialEventCategory(), _(!1);
+      (_.ClearSpecialEventCategory(), _(!1));
     },
   });
 }
@@ -54384,14 +54398,14 @@ function _(_) {
     _ = _.input_style == `radio`,
     _ = (_, _) => {
       let _;
-      (_ = _
+      ((_ = _
         ? [_]
         : _
           ? _.includes(_)
             ? _
             : [..._, _]
           : _.filter((_) => _ != _)),
-        _(_.unique_id ?? ``, _.unique_id, _);
+        _(_.unique_id ?? ``, _.unique_id, _));
     },
     _ = _.options ?? [],
     _ = Math.min(Math.max(_.columns || 1, 1), 3),
@@ -54560,9 +54574,9 @@ function _(_) {
   return _({
     mutationFn: async (_) => {
       let _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`appid`, `` + _),
-        _.append(`require`, _ ? `1` : `0`);
+        _.append(`require`, _ ? `1` : `0`));
       try {
         let _ = await fetch(
             `${_.PARTNER_BASE_URL}freetokeep/ajaxupdatedlcrequirebaseapp`,
@@ -54893,7 +54907,7 @@ function _(_) {
             strOKLabel: _.Localize(`#Button_Confirm`),
             strCancelLabel: _.Localize(`#Button_Cancel`),
             onOK: () => {
-              _.mutate(!_), _();
+              (_.mutate(!_), _());
             },
             onClose: _,
           }),
@@ -55093,14 +55107,14 @@ function _(_) {
   }, [_]);
   let _ = () => _(null),
     _ = () => {
-      _(`saving`),
+      (_(`saving`),
         _()
           .then((_) => {
-            _(_), _(_ ? `failed` : `saved`);
+            (_(_), _(_ ? `failed` : `saved`));
           })
           .catch(() => {
-            _(void 0), _(`failed`);
-          });
+            (_(void 0), _(`failed`));
+          }));
     },
     _ = _.Localize(`#PartnerOptIn_Collect_Dialog_Title`),
     _ = _.Localize(`#PartnerOptIn_Collect_Dialog_Close`),
@@ -55535,59 +55549,59 @@ function _(_, _) {
       return _.m_bOptInChoice;
     },
     SetOptInChoice(_) {
-      (_.m_bOptInChoice = _), (_.m_bDirty = !0);
+      ((_.m_bOptInChoice = _), (_.m_bDirty = !0));
     },
     HasCheckedTrailerUsage() {
       return _.jsondata.trailer_permission;
     },
     SetCheckedTrailerUsage(_) {
       let _ = _.jsondata;
-      (_.trailer_permission = _),
+      ((_.trailer_permission = _),
         (_.rtime_granting_trailer = _ ? _() : void 0),
         (_.accountid_granting_trailer = _ ? _ : void 0),
-        (_.m_bDirty = !0);
+        (_.m_bDirty = !0));
     },
     BHasCheckedDemoUsage() {
       return !!_.jsondata.demo_permission;
     },
     SetCheckedDemoUsage(_) {
       let _ = _.jsondata;
-      (_.demo_permission = _),
+      ((_.demo_permission = _),
         (_.rtime_granting_demo = _ ? _() : void 0),
         (_.accountid_granting_demo = _ ? _ : void 0),
-        (_.m_bDirty = !0);
+        (_.m_bDirty = !0));
     },
     BHasGameProfileIntent() {
       return !!_.jsondata.game_profile_intent;
     },
     SetGameProfileIntent(_) {
       let _ = _.jsondata;
-      (_.game_profile_intent = _),
+      ((_.game_profile_intent = _),
         (_.rtime_granting_profile = _ ? _() : void 0),
         (_.accountid_granting_profile = _ ? _ : void 0),
-        (_.m_bDirty = !0);
+        (_.m_bDirty = !0));
     },
     HasCheckedNoPlannedDiscounts() {
       return _(_.m_registration);
     },
     SetCheckedNoPlannedDiscounts(_) {
-      (_.m_registration.no_planned_discount = _),
+      ((_.m_registration.no_planned_discount = _),
         (_.jsondata.rtime_discount_intent = _()),
-        (_.m_bDirty = !0);
+        (_.m_bDirty = !0));
     },
     GetAskAgainSeason() {
       return _(_.m_registration);
     },
     SetAskAgainSeason(_) {
       let _ = _.jsondata;
-      _ === void 0
+      (_ === void 0
         ? ((_.ask_again_season = void 0),
           (_.ask_again_year = void 0),
           (_.rtime_ask_again = void 0))
         : ((_.ask_again_season = _?.season ?? 0),
           (_.ask_again_year = _?.year ?? 0),
           (_.rtime_ask_again = _())),
-        (_.m_bDirty = !0);
+        (_.m_bDirty = !0));
     },
     GetFirstSelectedItem(_, _) {
       return _.GetSelectedItems(_, _)[0] ?? null;
@@ -55596,8 +55610,13 @@ function _(_, _) {
       return _(_.jsondata.dynamic_selection, _, _);
     },
     SetSelectedItems(_, _, _) {
-      (_.jsondata.dynamic_selection = _(_.jsondata.dynamic_selection, _, _, _)),
-        (_.m_bDirty = !0);
+      ((_.jsondata.dynamic_selection = _(
+        _.jsondata.dynamic_selection,
+        _,
+        _,
+        _,
+      )),
+        (_.m_bDirty = !0));
     },
     SetFreeToKeepItemDrop(_) {
       let _ = {
@@ -55607,13 +55626,13 @@ function _(_, _) {
         let _ = _[_];
         _ == null ? delete _[_] : (_[_] = _);
       }
-      (_.jsondata.free_to_keep_item_drop = _), (_.m_bDirty = !0);
+      ((_.jsondata.free_to_keep_item_drop = _), (_.m_bDirty = !0));
     },
     SetRegistrationFields(_) {
-      Object.assign(_.jsondata, _), (_.m_bDirty = !0);
+      (Object.assign(_.jsondata, _), (_.m_bDirty = !0));
     },
   };
-  return _(_), _;
+  return (_(_), _);
 }
 var _ = [
   `category_tags`,
@@ -55642,11 +55661,11 @@ async function _(_) {
     _ = _.GetModel(),
     _ = _.jsondata ?? {},
     _ = new URLSearchParams();
-  _.set(`sessionid`, _), _.set(`opt_in_name`, _.replace(/^sale_/, ``));
+  (_.set(`sessionid`, _), _.set(`opt_in_name`, _.replace(/^sale_/, ``)));
   let _ = _ ? !0 : _.GetOptInChoice();
-  _ !== void 0 && _.set(`opt_in`, _ ? `1` : `0`),
+  (_ !== void 0 && _.set(`opt_in`, _ ? `1` : `0`),
     _.rtime_discount_intent &&
-      _.set(`no_planned_discount`, _.no_planned_discount ? `1` : `0`);
+      _.set(`no_planned_discount`, _.no_planned_discount ? `1` : `0`));
   for (let _ of _) _(_, _, _ == `category_tags` ? _(_.category_tags) : _[_]);
   try {
     let _ = await (
@@ -55677,10 +55696,10 @@ async function _(_) {
 async function _(_) {
   let { appid: _, pageid: _, form: _, strSessionID: _ } = _,
     _ = new URLSearchParams();
-  _.set(`sessionid`, _),
+  (_.set(`sessionid`, _),
     _.set(`appid`, String(_)),
     _.set(`opt_in_name`, _.replace(/^sale_/, ``)),
-    _.set(`jsondata`, JSON.stringify(_.GetModel().jsondata ?? {}));
+    _.set(`jsondata`, JSON.stringify(_.GetModel().jsondata ?? {})));
   try {
     let _ = await (
       await fetch(
@@ -55711,7 +55730,7 @@ async function _(_) {
 async function _(_) {
   let { appid: _, pageid: _, strSessionID: _ } = _,
     _ = new URLSearchParams();
-  _.set(`sessionid`, _), _.set(`opt_in_name`, _.replace(/^sale_/, ``));
+  (_.set(`sessionid`, _), _.set(`opt_in_name`, _.replace(/^sale_/, ``)));
   try {
     return (
       (
@@ -55725,7 +55744,7 @@ async function _(_) {
       ).success == 1
     );
   } catch (_) {
-    return console.error(`Inviting app ${_} to ${_} failed`, _), !1;
+    return (console.error(`Inviting app ${_} to ${_} failed`, _), !1);
   }
 }
 function _(_) {
@@ -56063,10 +56082,10 @@ function _(_) {
       let _ = {
         ..._,
       };
-      _ ? (_[_] = !0) : delete _[_],
+      (_ ? (_[_] = !0) : delete _[_],
         _({
           category_tags: _,
-        });
+        }));
     };
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -56121,7 +56140,7 @@ function _(_) {
             strName: _ && !_.startsWith(`#`) ? _ : _,
           };
         });
-      return _.sort((_, _) => _.strName.localeCompare(_.strName, _)), _;
+      return (_.sort((_, _) => _.strName.localeCompare(_.strName, _)), _);
     }, [_]);
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -56289,14 +56308,14 @@ function _(_) {
         className: _,
         disabled: _,
         onClick: async () => {
-          _(!0),
+          (_(!0),
             (await _({
               appid: _,
               pageid: _,
               strSessionID: _.fnGetSessionID(),
             }))
               ? _.onSaved(!1)
-              : (_(!1), _(!0));
+              : (_(!1), _(!0)));
         },
         children: (0, _.jsxs)(`span`, {
           children: [`Invite `, _, ` (`, _, `) to Register for `, _],
@@ -57596,7 +57615,7 @@ function _(_) {
     [_, _] = (0, _.useState)(!1),
     [_, _] = (0, _.useState)(``);
   async function _(_) {
-    _(!0), _(``);
+    (_(!0), _(``));
     try {
       await _(_, _ ? [_] : [], _ ? [] : [_]);
     } catch (_) {
@@ -57802,7 +57821,7 @@ function _() {
         _.SetShippingCountries(_, _.rgCodes);
     },
     _ = (_) => {
-      _(_), _.SetShippingCountries(_, _);
+      (_(_), _.SetShippingCountries(_, _));
     },
     _ = _.map((_) => ({
       strCode: _,
@@ -58027,14 +58046,14 @@ function _(_) {
     }
   }
   async function _() {
-    _(!0), _(``);
+    (_(!0), _(``));
     try {
-      await _(
+      (await _(
         _,
         _.map((_) => _.partnerid),
         [],
       ),
-        _(_.length);
+        _(_.length));
     } catch (_) {
       _(_.message);
     }
@@ -58059,7 +58078,7 @@ function _(_) {
                 disabled: _,
                 placeholder: `12345, 67890`,
                 onChange: (_) => {
-                  _(_.currentTarget.value), _(null);
+                  (_(_.currentTarget.value), _(null));
                 },
               }),
               _ &&
@@ -58187,9 +58206,9 @@ function _(_) {
     _ = _.filter((_) => _.has(_)),
     _ = _.filter((_) => !_.has(_));
   async function _() {
-    _(!0), _(``);
+    (_(!0), _(``));
     try {
-      await _(_, [], _), _(_.length);
+      (await _(_, [], _), _(_.length));
     } catch (_) {
       _(_.message);
     }
@@ -58470,7 +58489,7 @@ function _(_) {
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        _(_.unix()), _.current.Hide();
+        (_(_.unix()), _.current.Hide());
       },
       [_],
     ),
@@ -58502,7 +58521,7 @@ function _(_) {
       className: _,
       children: (0, _.jsx)(`div`, {
         onClick: (_) => {
-          _.preventDefault(), _.stopPropagation();
+          (_.preventDefault(), _.stopPropagation());
         },
         children: (0, _.jsx)(_.default, {
           ref: _,
@@ -59763,7 +59782,7 @@ function _() {
   return (
     _.useEffect(() => {
       let _ = _.default.CancelToken.source();
-      return (_.current = _), () => _.cancel();
+      return ((_.current = _), () => _.cancel());
     }, []),
     (0, _.jsxs)(_.Fragment, {
       children: [
@@ -59803,7 +59822,7 @@ function _() {
             onOK: async () => {
               _(!0);
               let _ = await _.Get().Delete(_.current.token);
-              _(_), _(!1), _ || (_(!1), _.push(_.OptinAdminDashboard()));
+              (_(_), _(!1), _ || (_(!1), _.push(_.OptinAdminDashboard())));
             },
             bOKDisabled: _,
             children: [
@@ -59872,11 +59891,11 @@ function _(_) {
       let _ = document.getElementById(`filter-field`),
         _ = document.getElementById(`filter-type`),
         _ = document.getElementById(`filter-value`);
-      (_.value = ``),
+      ((_.value = ``),
         (_.value = ``),
         (_.value = ``),
         _.current.resetColumnFilters(),
-        _.current.setColumnFilterFnOverride({});
+        _.current.setColumnFilterFnOverride({}));
     }, [_]),
     _ = (0, _.useCallback)(() => {
       let _ = document.getElementById(`filter-field`),
@@ -60099,9 +60118,9 @@ function _(_, _) {
     };
   return (
     _.forEach((_) => {
-      _.setOptedIn.has(_.appid) && (_.nTopOptedIn += 1),
+      (_.setOptedIn.has(_.appid) && (_.nTopOptedIn += 1),
         _.setOptedOut.has(_.appid) && (_.nTopOptedOut += 1),
-        _.setInvited.has(_.appid) && (_.nTopInvited += 1);
+        _.setInvited.has(_.appid) && (_.nTopInvited += 1));
       let _ = _?.get(_.appid);
       _ &&
         (_.is_free && (_.nTopFree += 1),
@@ -60268,11 +60287,11 @@ var _ = class _ {
           withCredentials: !0,
         });
       if (_?.status == 200 && _?.data?.success == 1)
-        _.data.app_with_demos?.forEach((_) => {
+        (_.data.app_with_demos?.forEach((_) => {
           _.set(_.appid, _);
         }),
           this.m_mapAppToDemoAppID.set(_, _),
-          this.GetLoadCallback(_, _).Dispatch(_);
+          this.GetLoadCallback(_, _).Dispatch(_));
       else {
         let _ = _(_);
         console.error(
@@ -60292,7 +60311,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {
     _(this);
@@ -60503,7 +60522,7 @@ function _(_) {
             _
           );
         });
-        return _(!1), _;
+        return (_(!1), _);
       }
       return _.jsonOptedIn;
     }, [_, _, _, _.jsonOptedIn]);
@@ -60551,7 +60570,7 @@ function _(_) {
                   _ = {
                     include_tag_count: _,
                   };
-                await _.Get().HintLoadStoreApps(_, _), _(!0);
+                (await _.Get().HintLoadStoreApps(_, _), _(!0));
               },
               children: [`Expand Tags to `, _, ` and load demo info`],
             }),
@@ -60778,7 +60797,7 @@ var _ = _.forwardRef((_, _) =>
     }
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
     constructor() {}
   };
@@ -60837,9 +60856,9 @@ var _ = (_) => {
             _.current = _.cancel;
             try {
               let _ = new FormData();
-              _.append(`sessionid`, _()),
+              (_.append(`sessionid`, _()),
                 _.append(`optInName`, _.GetFullName()),
-                _.append(`packageName`, _);
+                _.append(`packageName`, _));
               let _ = _.PARTNER_BASE_URL + `optin/ajaxcreatedemopackage`,
                 _ = await _.default.post(_, _, {
                   withCredentials: !0,
@@ -60867,7 +60886,7 @@ var _ = (_) => {
                 _ =
                   `DialogChoosePackageNameAndDynamicSetting error: ` +
                   _.strErrorMsg;
-              console.error(_, _), _.token.reason || _(_);
+              (console.error(_, _), _.token.reason || _(_));
             } finally {
               _.token.reason || _(!1);
             }
@@ -61180,7 +61199,7 @@ function _(_) {
             let _ = null;
             _ && (_ = await _.Get().LoadAppWithDemoAppIDs(_, _));
             let _ = [];
-            _.filter((_) => _.Get().BHasOptionOnRegistration(_.appid, _, _))
+            (_.filter((_) => _.Get().BHasOptionOnRegistration(_.appid, _, _))
               .filter((_) => !!(_ == null || _.get(_.appid)?.demo_appid))
               .forEach((_) => {
                 let _ = _.Get().GetRegistration(_.appid, _),
@@ -61208,9 +61227,9 @@ function _(_) {
                       ? (_[`category_choice_` + ++_] = _[0].label)
                       : (_[`category_choice_` + ++_] = _);
                   }
-                  for (; _ < 2; ) _[`category_choice_` + ++_] = ``;
+                  for (; _ < 2;) _[`category_choice_` + ++_] = ``;
                 }
-                _ &&
+                (_ &&
                   _.forEach((_, _) => {
                     let _ = _[_],
                       _ = _.GetListByID(_.list_id),
@@ -61220,20 +61239,20 @@ function _(_) {
                       _[_] = _?.length > 0 ? _[0] : ``;
                     else {
                       let _ = ``;
-                      _?.forEach((_) => {
+                      (_?.forEach((_) => {
                         let _ = _.Get().GetDynamicOptionByID({
                           ..._,
                           option_id: _,
                         });
-                        _.length > 0 && (_ += `|`), (_ += _.text.english);
+                        (_.length > 0 && (_ += `|`), (_ += _.text.english));
                       }),
-                        (_[_] = _);
+                        (_[_] = _));
                     }
                   }),
-                  _.push(_);
+                  _.push(_));
               }),
               _.WriteCSVToFile(_, `press_game_list.csv`),
-              _(!0);
+              _(!0));
           })(),
         () => _.current && _.current(`OptInStatsPressCSV: unmounting`)
       ),
@@ -61355,12 +61374,12 @@ function _(_) {
           ),
         ),
         _ = 1;
-      for (; _.length > 0; ) {
+      for (; _.length > 0;) {
         let _ = _.splice(0, 100);
         if (((_ = await _(_, _, !_, !1, _)), _ != 1)) break;
       }
-      _ != 1 && _(`Hit error on invite batch, check networks/console: ` + _),
-        _(!0);
+      (_ != 1 && _(`Hit error on invite batch, check networks/console: ` + _),
+        _(!0));
     }, [_, _, _, _, _, _, _]);
   return (0, _.jsxs)(_, {
     strTitle: `Move Eligible Apps To '${_ ? `Pending Review` : `Invited`}'`,
@@ -61477,18 +61496,18 @@ async function _(_, _, _, _, _) {
     let _ = await _.blob(),
       _ = window.URL.createObjectURL(_),
       _ = document.createElement(`a`);
-    (_.style.display = `none`),
+    ((_.style.display = `none`),
       (_.href = _),
       (_.download = _),
       document.body.appendChild(_),
       _.click(),
       window.URL.revokeObjectURL(_),
       _(_ + 1),
-      console.log(`Downloaded ` + _ + `:` + _ + ` size: ` + _.size);
+      console.log(`Downloaded ` + _ + `:` + _ + ` size: ` + _.size));
   } catch (_) {
     let _ = _(_);
-    console.log(`Download error` + _.strErrorMsg),
-      _(`Download failed ` + _.strErrorMsg);
+    (console.log(`Download error` + _.strErrorMsg),
+      _(`Download failed ` + _.strErrorMsg));
   }
 }
 async function _(_, _, _, _, _, _) {
@@ -61507,9 +61526,9 @@ async function _(_, _, _, _, _, _) {
       let _ = _.GetScreenshots(_ == 7);
       for (let _ = 0; _ < _.length; ++_) {
         let _ = _[_].split(`/`).pop().split(`?`)[0];
-        (_ = _.GetName().replace(/[^\w\s!?]/g, ``) + `_` + _ + `_` + _),
+        ((_ = _.GetName().replace(/[^\w\s!?]/g, ``) + `_` + _ + `_` + _),
           (_ = `${_.PARTNER_BASE_URL}gfxproxy/gfx/apps/${_}/${_}`),
-          await _(_, _, _, _, _);
+          await _(_, _, _, _, _));
       }
     } else {
       let _ = _.GetAssets().GetHeaderURL(),
@@ -61519,21 +61538,22 @@ async function _(_, _, _, _, _, _) {
         case 2:
           break;
         case 3:
-          (_ = _.GetAssets().GetSmallCapsuleURL()), (_ = `SmallCapsule`);
+          ((_ = _.GetAssets().GetSmallCapsuleURL()), (_ = `SmallCapsule`));
           break;
         case 4:
-          (_ = _.GetAssets().GetMainCapsuleURL()), (_ = `MainCapsule`);
+          ((_ = _.GetAssets().GetMainCapsuleURL()), (_ = `MainCapsule`));
           break;
         case 5:
-          (_ = _.GetAssets().GetHeroCapsuleURL()), (_ = `VerticalCapsule`);
+          ((_ = _.GetAssets().GetHeroCapsuleURL()), (_ = `VerticalCapsule`));
           break;
         case 6:
-          (_ = _.GetAssets().GetRawPageBackgroundURL()), (_ = `PageBackground`);
+          ((_ = _.GetAssets().GetRawPageBackgroundURL()),
+            (_ = `PageBackground`));
       }
-      (_ = _.GetName().replace(/[^\w\s!?]/g, ``) + `_` + _ + `_` + _),
+      ((_ = _.GetName().replace(/[^\w\s!?]/g, ``) + `_` + _ + `_` + _),
         console.log(`fetching indirectly `, _),
         await _(_, _, _, _, _),
-        _ >= 10 && (await _(200));
+        _ >= 10 && (await _(200)));
     }
     console.log(`Finished processing appid ${_.GetName()}`);
   }
@@ -61574,12 +61594,12 @@ function _(_) {
       strTitle: `Download Game Capsules or Trailers for ` + _.GetFullName(),
       strDescription: `Downloads all of the highest quality MP4 or PNG/JPG file for the 'first' trailers or game capsule that appears on the store page. One per opted in game. This has since been modified to support screenshots and any capsule format.`,
       onOK: async () => {
-        _(!0), await _(_, _, _, _, _, _);
+        (_(!0), await _(_, _, _, _, _, _));
       },
       bOKDisabled: _ || !_ || _ || _ == 0,
       bAllowFullSize: !0,
       onCancel: () => {
-        _.cancel(`cancel`), _ && _();
+        (_.cancel(`cancel`), _ && _());
       },
       closeModal: () => _.cancel(`cloased`),
       bDisableBackgroundDismiss: !0,
@@ -61726,11 +61746,11 @@ function _(_) {
                 onClick: () => {
                   let _ = _.replace(/\n/g, `|`).split(`|`),
                     _ = new Set();
-                  _.forEach((_) => {
+                  (_.forEach((_) => {
                     let _ = Number.parseInt(_);
                     _ > 0 && _.add(_);
                   }),
-                    _.size > 0 && _(_);
+                    _.size > 0 && _(_));
                 },
                 children: `AppID List Complete. Apply Filter`,
               }),
@@ -61774,20 +61794,20 @@ function _(_) {
           _.push(_);
           for (let _ of _) {
             let _ = [];
-            _.forEach((_, _) => {
+            (_.forEach((_, _) => {
               let _;
               if (`accessorKey` in _)
-                (_ = (_[_.accessorKey] ?? ``).toString()),
+                ((_ = (_[_.accessorKey] ?? ``).toString()),
                   _.accessorKey === `discount_info` &&
                     _ === `` &&
                     _.no_planned_discount === !1 &&
-                    (_ = _);
+                    (_ = _));
               else if (`accessorFn` in _)
                 _ = (_.accessorFn(_, _) ?? ``).toString();
               else return;
               _.push(_);
             }),
-              _.push(_);
+              _.push(_));
           }
           _.WriteCSVToFile(_, `data.csv`);
         },
@@ -62040,14 +62060,14 @@ function _(_, _, _, _, _, _) {
       _ &&
       _ &&
       _.forEach((_) => {
-        (_.long_term_sales_rank = _.fnbHasSomeLongTermSaleRankForApp(_.appid)
+        ((_.long_term_sales_rank = _.fnbHasSomeLongTermSaleRankForApp(_.appid)
           ? _.fnGetLongTermSaleRankForApp(_.appid)
           : 1e6),
           (_.discount_info = _(_.appid, _, _, _, _)),
           _.discount_info == `` &&
             _.no_planned_discount !== void 0 &&
             !_.no_planned_discount &&
-            (_.discount_info = _(`#DiscountEvent_Intent`));
+            (_.discount_info = _(`#DiscountEvent_Intent`)));
       }),
     _
   );
@@ -62172,7 +62192,7 @@ var _ = `edit_email`,
     }
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
   };
 _([_], _.prototype, `m_curSelection`, void 0);
@@ -62206,7 +62226,7 @@ function _(_) {
     strDescription: `Dialog to mark the email as reviewed.`,
     onCancel: _,
     onOK: () => {
-      _(!0),
+      (_(!0),
         _.Get()
           .UpdateOptInEmailMetaData(_, {
             rtStartAutomaticEmailType: _?.start_rtime || 0,
@@ -62220,7 +62240,7 @@ function _(_) {
           .catch(() =>
             _(`Failed to mark the email Reviewed. "p"lease try again later.`),
           )
-          .finally(() => _(!0));
+          .finally(() => _(!0)));
     },
     bOKDisabled: _,
     strCancelButtonText: _ ? `Close` : void 0,
@@ -62298,7 +62318,7 @@ function _(_) {
     bDisableBackgroundDismiss: !1,
     strCancelButtonText: _ ? `Close` : void 0,
     onOK: () => {
-      _(!0),
+      (_(!0),
         _.Get()
           .UpdateOptInEmailMetaData(_, {
             rtStartAutomaticEmailType: _,
@@ -62308,7 +62328,7 @@ function _(_) {
             _ != 1 && _(`Failed to Save setting, please try again later`);
           })
           .catch(() => _(`Failed to Save setting, please try again later`))
-          .finally(() => _(!0));
+          .finally(() => _(!0)));
     },
     bOKDisabled: _ || (_ == _ && _ == _),
     children: [
@@ -62370,7 +62390,7 @@ function _(_) {
     strDescription: `Removinmg the scheduling for firing this email? If you confirm, this will be manual mode only.`,
     onCancel: _,
     onOK: () => {
-      _(!0),
+      (_(!0),
         _.Get()
           .UpdateOptInEmailMetaData(_, {
             rtStartAutomaticEmailType: 0,
@@ -62380,7 +62400,7 @@ function _(_) {
             _ != 1 && _(`Failed to Reset Scheduling, please try again later`);
           })
           .catch(() => _(`Failed to Save setting, please try again later`))
-          .finally(() => _(!0));
+          .finally(() => _(!0)));
     },
     bOKDisabled: _,
     strCancelButtonText: _ ? `Close` : void 0,
@@ -62592,7 +62612,7 @@ var _ = new URL(
                       strTitle: `Are you sure?`,
                       strDescription: `This is not reversible`,
                       onOK: () => {
-                        _(), _();
+                        (_(), _());
                       },
                     }),
                     _(_),
@@ -62663,7 +62683,7 @@ var _ = new URL(
       _ = _.Get().GetOptInDeadlineTime() || _;
     switch (_.GetType()) {
       case _.k_AssetKit:
-        (_ = _(`#OptIn_EmailSection_Asset_Title`)),
+        ((_ = _(`#OptIn_EmailSection_Asset_Title`)),
           (_ = (0, _.jsx)(`div`, {
             children: _(
               `#OptIn_EmailSection_Asset_Body`,
@@ -62672,10 +62692,10 @@ var _ = new URL(
                 children: _(`#OptIn_EmailSection_Asset_Token`),
               }),
             ),
-          }));
+          })));
         break;
       case _.k_DemoPressPreview:
-        (_ = _(`#OptIn_EmailSection_Press_Title`)),
+        ((_ = _(`#OptIn_EmailSection_Press_Title`)),
           (_ = (0, _.jsx)(_.Fragment, {
             children: (0, _.jsx)(`div`, {
               className: _,
@@ -62688,10 +62708,10 @@ var _ = new URL(
                 _(_.GetDemoPressPreviewDate() || 0),
               ),
             }),
-          }));
+          })));
         break;
       case _.k_ScheduleLiveStream:
-        (_ = _(`#OptIn_EmailSection_schedlive_Title`)),
+        ((_ = _(`#OptIn_EmailSection_schedlive_Title`)),
           (_ = (0, _.jsxs)(`div`, {
             children: [
               _(
@@ -62714,10 +62734,10 @@ var _ = new URL(
                 }),
               ),
             ],
-          }));
+          })));
         break;
       case _.k_CancelSection:
-        (_ = _(`#OptIn_EmailSection_cancel_Title`)),
+        ((_ = _(`#OptIn_EmailSection_cancel_Title`)),
           (_ = (0, _.jsx)(`div`, {
             children: _(
               `#OptIn_EmailSection_cancel_Body`,
@@ -62728,20 +62748,20 @@ var _ = new URL(
                   bForce24HourClock: !1,
                 }),
             ),
-          }));
+          })));
         break;
       case _.k_DemoNotReady:
-        (_ = _(`#OptIn_EmailSection_notreadydemo_Title`)),
+        ((_ = _(`#OptIn_EmailSection_notreadydemo_Title`)),
           (_ = (0, _.jsx)(`div`, {
             children: _(
               `#OptIn_EmailSection_notreadydemo_Body`,
               _(_.GetCancelDate() || 0),
               _(_.GetNextEditionDate() || 0),
             ),
-          }));
+          })));
         break;
       case _.k_ReviewCategorization:
-        (_ = _(`#OptIn_EmailSection_reviewcategories_Title`)),
+        ((_ = _(`#OptIn_EmailSection_reviewcategories_Title`)),
           (_ = (0, _.jsxs)(`div`, {
             className: _,
             children: [
@@ -62785,10 +62805,10 @@ var _ = new URL(
                 ],
               }),
             ],
-          }));
+          })));
         break;
       case _.k_DemoReview:
-        (_ = _(`#OptIn_EmailSection_DemoReview_Title`)),
+        ((_ = _(`#OptIn_EmailSection_DemoReview_Title`)),
           (_ = (0, _.jsx)(`div`, {
             children: _(
               `#OptIn_EmailSection_DemoReview_Body`,
@@ -62797,13 +62817,13 @@ var _ = new URL(
                 children: _(`#OptIn_EmailSection_DemoReview_Token`),
               }),
             ),
-          }));
+          })));
         break;
       case _.k_DemoBuildReviewDeadline: {
         let _ = _.Get().GetNextFestPressPreviewSubmit(),
           _ = _.Get().GetNextFestAllItemsSubmit(),
           _ = (0, _.jsx)(_, {});
-        _ && _
+        (_ && _
           ? (_ = _(
               `#OptIn_EmailSection_DemoBuildReviewDeadline_Deadlines_Both`,
               (0, _.jsx)(`b`, {
@@ -62855,11 +62875,11 @@ var _ = new URL(
                 ),
               }),
             ],
-          }));
+          })));
         break;
       }
       case _.k_PressPreviewDetails:
-        (_ = _(`#OptIn_EmailSection_PressPreviewDetails_Title`)),
+        ((_ = _(`#OptIn_EmailSection_PressPreviewDetails_Title`)),
           (_ = (0, _.jsxs)(`div`, {
             className: _,
             children: [
@@ -62909,10 +62929,10 @@ var _ = new URL(
                 ],
               }),
             ],
-          }));
+          })));
         break;
       case _.k_MediaUsePermission:
-        (_ = _(`#OptIn_EmailSection_MediaPermission_Title`)),
+        ((_ = _(`#OptIn_EmailSection_MediaPermission_Title`)),
           (_ = (0, _.jsxs)(`div`, {
             children: [
               (0, _.jsx)(_, {}),
@@ -62938,10 +62958,10 @@ var _ = new URL(
                 ),
               }),
             ],
-          }));
+          })));
         break;
       case _.k_TrailerOrDemoPermissions:
-        (_ = _(`#OptIn_EmailSection_TrailerDemoPermission_title`)),
+        ((_ = _(`#OptIn_EmailSection_TrailerDemoPermission_title`)),
           (_ = (0, _.jsxs)(`div`, {
             children: [
               (0, _.jsx)(_, {}),
@@ -62999,10 +63019,10 @@ var _ = new URL(
                 ),
               }),
             ],
-          }));
+          })));
         break;
       case _.k_StatsSummary:
-        (_ = _(`#OptIn_EmailSection_StatsSummary_Title`)),
+        ((_ = _(`#OptIn_EmailSection_StatsSummary_Title`)),
           (_ = (0, _.jsxs)(`div`, {
             children: [
               (0, _.jsx)(`div`, {
@@ -63098,10 +63118,10 @@ var _ = new URL(
                 ],
               }),
             ],
-          }));
+          })));
         break;
       case _.k_SurveyButton:
-        (_ = `We'd like your feedback!`),
+        ((_ = `We'd like your feedback!`),
           (_ = (0, _.jsxs)(`div`, {
             children: [
               (0, _.jsx)(_, {}),
@@ -63114,10 +63134,10 @@ var _ = new URL(
                 }),
               }),
             ],
-          }));
+          })));
         break;
       case _.k_MeasureResults:
-        (_ = `Measuring Your Results`),
+        ((_ = `Measuring Your Results`),
           (_ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(`div`, {
@@ -63158,19 +63178,19 @@ var _ = new URL(
                 ],
               }),
             ],
-          }));
+          })));
         break;
       case _.k_MeasureResultsNextFest:
-        (_ = `Measuring Your Results`),
+        ((_ = `Measuring Your Results`),
           (_ = (0, _.jsx)(_.Fragment, {
             children: (0, _.jsx)(`div`, {
               className: _,
               children: `You can find a recap of your demo activity and wishlist additions here: https://partner.steamgames.com/recap/nextfest/<auto_fill_my_real_email_tech>`,
             }),
-          }));
+          })));
         break;
       case _.k_MeasureResultsFree:
-        (_ = `Measuring Your Results`),
+        ((_ = `Measuring Your Results`),
           (_ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(`div`, {
@@ -63200,10 +63220,10 @@ var _ = new URL(
                 ],
               }),
             ],
-          }));
+          })));
         break;
       case _.k_DemoLaunch:
-        (_ = _(`#OptIn_EmailSection_DemoRelease_Title`)),
+        ((_ = _(`#OptIn_EmailSection_DemoRelease_Title`)),
           (_ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(`div`, {
@@ -63221,10 +63241,10 @@ var _ = new URL(
                 children: `We recommend keeping your demo active for at least a week or two after Next Fest ends to make sure that players have time to try out all the great demos they discover during the Fest.`,
               }),
             ],
-          }));
+          })));
         break;
       case _.k_EnterDiscount:
-        (_ = `Discount`),
+        ((_ = `Discount`),
           (_ = (0, _.jsxs)(`div`, {
             children: [
               `If you’d like to offer a discount on your title throughout the `,
@@ -63258,10 +63278,10 @@ var _ = new URL(
               }),
               `. If you wish, you may delete conflicting custom offers you had planned. It's up to you to choose which events you participate in.`,
             ],
-          }));
+          })));
         break;
       case _.k_EnterDiscountReminder:
-        (_ = `Discount`),
+        ((_ = `Discount`),
           (_ = (0, _.jsxs)(`div`, {
             children: [
               `If you’d like to offer a discount on your title throughout the event, it’s not too late to do so. Enter your `,
@@ -63281,10 +63301,10 @@ var _ = new URL(
               }),
               ` to check your eligible games and enter your desired amounts.`,
             ],
-          }));
+          })));
         break;
       case _.k_LearnMore:
-        (_ = `Learn more`),
+        ((_ = `Learn more`),
           (_ = (0, _.jsxs)(`div`, {
             children: [
               `Visit our `,
@@ -63299,10 +63319,10 @@ var _ = new URL(
               }),
               `.`,
             ],
-          }));
+          })));
         break;
       case _.k_CallForRegistration:
-        (_ = _(`#OptIn_EmailSection_Register_Title`)),
+        ((_ = _(`#OptIn_EmailSection_Register_Title`)),
           (_ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_, {}),
@@ -63321,10 +63341,10 @@ var _ = new URL(
                 ),
               }),
             ],
-          }));
+          })));
         break;
       case _.k_NextFestReturns:
-        (_ = _(
+        ((_ = _(
           `#OptIn_EmailSection_NextFest_Returns_Title`,
           _(_.Get().GetEventStartTime() || 0),
         )),
@@ -63333,10 +63353,10 @@ var _ = new URL(
               className: _,
               children: _(`#OptIn_EmailSection_NextFest_Returns_Body`),
             }),
-          }));
+          })));
         break;
       case _.k_NextFestQASession:
-        (_ = _(`#OptIn_EmailSection_NextFest_QASession_Title`)),
+        ((_ = _(`#OptIn_EmailSection_NextFest_QASession_Title`)),
           (_ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(`div`, {
@@ -63366,10 +63386,10 @@ var _ = new URL(
                 ),
               }),
             ],
-          }));
+          })));
         break;
       case _.k_NextFestWhatNext:
-        (_ = _(`#OptIn_EmailSection_NextFest_WhatNext_Title`)),
+        ((_ = _(`#OptIn_EmailSection_NextFest_WhatNext_Title`)),
           (_ = (0, _.jsx)(_.Fragment, {
             children: (0, _.jsx)(`div`, {
               className: _,
@@ -63378,10 +63398,10 @@ var _ = new URL(
                 _(_.Get().GetEventStartTime() || 0),
               ),
             }),
-          }));
+          })));
         break;
       case _.k_NextFestRegisteredWhatNext:
-        (_ = _(`#OptIn_EmailSection_NextFest_RegisteredWhatNext_Title`)),
+        ((_ = _(`#OptIn_EmailSection_NextFest_RegisteredWhatNext_Title`)),
           (_ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(`div`, {
@@ -63406,10 +63426,10 @@ var _ = new URL(
                 ),
               }),
             ],
-          }));
+          })));
         break;
       case _.k_NextFestTips:
-        (_ = _(`#OptIn_EmailSection_NextFest_Tips_Title`)),
+        ((_ = _(`#OptIn_EmailSection_NextFest_Tips_Title`)),
           (_ = (0, _.jsx)(_.Fragment, {
             children: (0, _.jsx)(`div`, {
               className: _,
@@ -63427,28 +63447,28 @@ var _ = new URL(
                 }),
               ),
             }),
-          }));
+          })));
         break;
       case _.k_NextFestStartsNow:
-        (_ = _(`#OptIn_EmailSection_NextFest_StartsNow_Title`)),
+        ((_ = _(`#OptIn_EmailSection_NextFest_StartsNow_Title`)),
           (_ = (0, _.jsx)(_.Fragment, {
             children: (0, _.jsx)(`div`, {
               className: _,
               children: _(`#OptIn_EmailSection_NextFest_StartsNow_Body`),
             }),
-          }));
+          })));
         break;
       case _.k_NextFestThankYou:
-        (_ = _(`#OptIn_EmailSection_NextFest_ThankYou_Title`)),
+        ((_ = _(`#OptIn_EmailSection_NextFest_ThankYou_Title`)),
           (_ = (0, _.jsx)(_.Fragment, {
             children: (0, _.jsx)(`div`, {
               className: _,
               children: _(`#OptIn_EmailSection_NextFest_ThankYou_Body`),
             }),
-          }));
+          })));
         break;
       case _.k_MediaPermissionReminder:
-        (_ = _(`#OptIn_EmailSection_TrailerDemoPermission_Reminder1_Title`)),
+        ((_ = _(`#OptIn_EmailSection_TrailerDemoPermission_Reminder1_Title`)),
           (_ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_, {}),
@@ -63481,10 +63501,10 @@ var _ = new URL(
                 ),
               }),
             ],
-          }));
+          })));
         break;
       case _.k_NextFestMediaUsageIntended:
-        (_ = `Official Trailer and/or Livestream`),
+        ((_ = `Official Trailer and/or Livestream`),
           (_ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(`div`, {
@@ -63571,10 +63591,10 @@ var _ = new URL(
                 ],
               }),
             ],
-          }));
+          })));
         break;
       case _.k_NextFestMediaUsageIntendedTrailer:
-        (_ = `We need to know if you won’t be able to participate`),
+        ((_ = `We need to know if you won’t be able to participate`),
           (_ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(`div`, {
@@ -63658,10 +63678,10 @@ var _ = new URL(
                 ],
               }),
             ],
-          }));
+          })));
         break;
       case _.k_NextFestMediaUsageConfirmationTrailer:
-        (_ = `We need to know if you won’t be able to participate`),
+        ((_ = `We need to know if you won’t be able to participate`),
           (_ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsxs)(`div`, {
@@ -63741,10 +63761,10 @@ var _ = new URL(
                 ],
               }),
             ],
-          }));
+          })));
         break;
       case _.k_NextFestMediaUsageIntendedLivestream:
-        (_ = `We Need To Know If You Are Still In`),
+        ((_ = `We Need To Know If You Are Still In`),
           (_ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(`div`, {
@@ -63818,10 +63838,10 @@ var _ = new URL(
                 ],
               }),
             ],
-          }));
+          })));
         break;
       case _.k_NextFestTopGameWrapUp:
-        (_ = `Your Demo Was One of the Most Played!`),
+        ((_ = `Your Demo Was One of the Most Played!`),
           (_ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(`div`, {
@@ -63841,19 +63861,19 @@ var _ = new URL(
                 children: `Thanks for participating in Next Fest, and congrats on having one of the most-played demos of the week!`,
               }),
             ],
-          }));
+          })));
         break;
       case _.k_SaleThankYou:
-        (_ = _(`#OptIn_EmailSection_ThankYou_Title`)),
+        ((_ = _(`#OptIn_EmailSection_ThankYou_Title`)),
           (_ = (0, _.jsx)(_.Fragment, {
             children: (0, _.jsx)(`div`, {
               className: _,
               children: _(`#OptIn_EmailSection_ThankYou_Body`),
             }),
-          }));
+          })));
         break;
       case _.k_GenericActionLink:
-        (_ = null),
+        ((_ = null),
           (_ = (0, _.jsx)(_.Fragment, {
             children: (0, _.jsx)(`div`, {
               className: _,
@@ -63873,10 +63893,10 @@ var _ = new URL(
                     ) || ``,
                 }),
             }),
-          }));
+          })));
         break;
       case _.k_GenericActionButton:
-        (_ = null),
+        ((_ = null),
           (_ = (0, _.jsx)(`div`, {
             children:
               _.GetGenericActionButtonLink() &&
@@ -63892,10 +63912,10 @@ var _ = new URL(
                   children: _.GetGenericActionButtonText(_),
                 }),
               }),
-          }));
+          })));
         break;
       case _.k_SeasonalFeatureRequest:
-        (_ = _(`#OptIn_EmailSection_SeasonalFeaturing_Title`)),
+        ((_ = _(`#OptIn_EmailSection_SeasonalFeaturing_Title`)),
           (_ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_, {}),
@@ -63934,10 +63954,10 @@ var _ = new URL(
                 }),
               }),
             ],
-          }));
+          })));
         break;
       case _.k_SeasonalFeatureDiscount:
-        (_ = _(`#OptIn_EmailSection_SeasonalDiscounting_Title`)),
+        ((_ = _(`#OptIn_EmailSection_SeasonalDiscounting_Title`)),
           (_ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(`div`, {
@@ -63961,22 +63981,22 @@ var _ = new URL(
                 children: _(`#OptIn_EmailSection_SeasonalDiscounting_Body_3`),
               }),
             ],
-          }));
+          })));
         break;
       case _.k_SteamAwardsCategories:
-        (_ = _(`#OptIn_EmailSection_SteamAwardsCategories_Title`)),
+        ((_ = _(`#OptIn_EmailSection_SteamAwardsCategories_Title`)),
           (_ = (0, _.jsx)(_, {
             emailDef: _,
-          }));
+          })));
         break;
       case _.k_ImageBoxSection:
-        (_ = void 0),
+        ((_ = void 0),
           (_ = (0, _.jsx)(_, {
             emailDef: _,
-          }));
+          })));
         break;
       default:
-        (_ = `Unknown`),
+        ((_ = `Unknown`),
           (_ = (0, _.jsxs)(`div`, {
             children: [
               `Unknown type `,
@@ -63985,7 +64005,7 @@ var _ = new URL(
               _(_.GetType()),
               ` `,
             ],
-          }));
+          })));
     }
     return (0, _.jsxs)(`div`, {
       className: _,
@@ -64139,14 +64159,14 @@ function _(_) {
         rgRealmList: _,
         strUploadAjaxURL: `${_.PARTNER_BASE_URL}optin/ajaxuploadasset/${_}`,
         fnOnUploadSuccess: (_, _, _, _, _) => {
-          _(_ == `localized_email_image`, `unexpected artwork type`),
+          (_(_ == `localized_email_image`, `unexpected artwork type`),
             _((_) => {
               let _ = {
                   ..._,
                 },
                 _ = _(_);
-              return (_[_] = _ + _(_)), _;
-            });
+              return ((_[_] = _ + _(_)), _);
+            }));
         },
       }),
       (0, _.jsx)(_, {
@@ -64564,7 +64584,7 @@ var _ = _((_) => {
                         !_ &&
                           (0, _.jsx)(_, {
                             onClick: () => {
-                              _(!1), _.ClearSubjectText();
+                              (_(!1), _.ClearSubjectText());
                             },
                             children: `Switch to Preset Subject`,
                           }),
@@ -64886,7 +64906,7 @@ function _(_) {
       }),
       (0, _.jsx)(_, {
         onClick: () => {
-          _.SetSubjectToken(void 0), _(!0);
+          (_.SetSubjectToken(void 0), _(!0));
         },
         children: `Switch To Custom Subject`,
       }),
@@ -65536,7 +65556,7 @@ function _(_) {
                   (0, _.jsx)(`a`, {
                     href: `#`,
                     onClick: (_) => {
-                      _.preventDefault(), _();
+                      (_.preventDefault(), _());
                     },
                     children: `Check again`,
                   }),
@@ -65696,19 +65716,19 @@ function _(_) {
           _.bNeedDemoPressPreviewDate = !0;
           break;
         case _.k_ScheduleLiveStream:
-          (_.bNeedMaxItems = !0), (_.bNeedSalePreview = !0);
+          ((_.bNeedMaxItems = !0), (_.bNeedSalePreview = !0));
           break;
         case _.k_CancelSection:
           _.bNeedCancelDate = !0;
           break;
         case _.k_DemoNotReady:
-          (_.bNeedCancelDate = !0), (_.bNeedNextEditionDate = !0);
+          ((_.bNeedCancelDate = !0), (_.bNeedNextEditionDate = !0));
           break;
         case _.k_ReviewCategorization:
           _.bNeedSalePreview = !0;
           break;
         case _.k_PressPreviewDetails:
-          (_.bNeedPreviewDate = !0), (_.bNeedWikiDocumentation = !0);
+          ((_.bNeedPreviewDate = !0), (_.bNeedWikiDocumentation = !0));
           break;
         case _.k_SurveyButton:
           _.bNeedOptInSurveyEnabled = !0;
@@ -65720,44 +65740,44 @@ function _(_) {
           _.bNeedWikiDocumentation = !0;
           break;
         case _.k_MediaUsePermission:
-          (_.bNeedPermissionDate = !0), (_.bNeedOptInFeaturingSection = !0);
+          ((_.bNeedPermissionDate = !0), (_.bNeedOptInFeaturingSection = !0));
           break;
         case _.k_TrailerOrDemoPermissions:
-          (_.bNeedPermissionDate = !0),
+          ((_.bNeedPermissionDate = !0),
             (_.bNeedPressPreviewVisibleDate = !0),
-            (_.bNeedOptInFeaturingSection = !0);
+            (_.bNeedOptInFeaturingSection = !0));
           break;
         case _.k_NextFestQASession:
-          (_.bNeedQASessionDate = !0), (_.bNeedQASessionLink = !0);
+          ((_.bNeedQASessionDate = !0), (_.bNeedQASessionLink = !0));
           break;
         case _.k_NextFestTips:
           _.bNeedRecordedQASessionLink = !0;
           break;
         case _.k_NextFestRegisteredWhatNext:
-          (_.bNeedPreviewDate = !0), (_.bNeedWikiDocumentation = !0);
+          ((_.bNeedPreviewDate = !0), (_.bNeedWikiDocumentation = !0));
           break;
         case _.k_DemoBuildReviewDeadline:
           _.bNeedOptInNextFestSubmitDeadlines = !0;
           break;
         case _.k_MediaPermissionReminder:
-          (_.bNeedDemoTrailerRegLink = !0),
+          ((_.bNeedDemoTrailerRegLink = !0),
             (_.bNeedTrailerDemoDeadlineDate = !0),
-            (_.bNeedOptInFeaturingSection = !0);
+            (_.bNeedOptInFeaturingSection = !0));
           break;
         case _.k_NextFestMediaUsageIntended:
-          (_.bNeedTrailerLaunchDate = !0),
+          ((_.bNeedTrailerLaunchDate = !0),
             (_.bNeedLivestreamLaunchDate = !0),
             (_.bNeedCancelDate = !0),
-            (_.bNeedWikiDocumentation = !0);
+            (_.bNeedWikiDocumentation = !0));
           break;
         case _.k_NextFestMediaUsageIntendedTrailer:
-          (_.bNeedTrailerLaunchDate = !0), (_.bNeedCancelDate = !0);
+          ((_.bNeedTrailerLaunchDate = !0), (_.bNeedCancelDate = !0));
           break;
         case _.k_NextFestMediaUsageConfirmationTrailer:
-          (_.bNeedTrailerLaunchDate = !0), (_.bNeedCancelDate = !0);
+          ((_.bNeedTrailerLaunchDate = !0), (_.bNeedCancelDate = !0));
           break;
         case _.k_NextFestMediaUsageIntendedLivestream:
-          (_.bNeedLivestreamLaunchDate = !0), (_.bNeedCancelDate = !0);
+          ((_.bNeedLivestreamLaunchDate = !0), (_.bNeedCancelDate = !0));
           break;
         case _.k_NextFestTopGameWrapUp:
           break;
@@ -65765,8 +65785,8 @@ function _(_) {
           _.bNeedGenericActionLink = !0;
           break;
         case _.k_GenericActionButton:
-          (_.bNeedGenericActionButtonLink = !0),
-            (_.bNeedGenericActionButtonText = !0);
+          ((_.bNeedGenericActionButtonLink = !0),
+            (_.bNeedGenericActionButtonText = !0));
           break;
         case _.k_SteamAwardsCategories:
           _.bNeedSteamAwardsAdvertisingApp = !0;
@@ -65986,8 +66006,8 @@ var _ = (_) => {
                   strDescription: `Since this email is already staged. Updating the email targeting requires changing the email configuration. The target setting will be applied immediately. Proceed with the update?`,
                   onOK: () => {
                     _(() => {
-                      _.SetEmailTargeting(_.data),
-                        _.Get().UpdateOptInEmailMetaData(_);
+                      (_.SetEmailTargeting(_.data),
+                        _.Get().UpdateOptInEmailMetaData(_));
                     });
                   },
                   onCancel: () => {
@@ -66065,7 +66085,7 @@ function _(_) {
     onCancel: _,
     bAllowFullSize: !0,
     onOK: () => {
-      _.replace(/\n/g, `|`)
+      (_.replace(/\n/g, `|`)
         .split(`|`)
         .forEach((_) => {
           let _ = Number.parseInt(_);
@@ -66077,7 +66097,7 @@ function _(_) {
             let _ = Number.parseInt(_);
             _ > 0 && _.RemoveAppToCustomList(_);
           }),
-        _();
+        _());
     },
     children: [
       (0, _.jsx)(`div`, {
@@ -66152,12 +66172,12 @@ var _ = (_) => {
         : `Create Email On Steam Server`,
       _ = _(),
       _ = (0, _.useCallback)(() => {
-        _.fnSetLoading(!0),
+        (_.fnSetLoading(!0),
           _.Get()
             .CreateOptInEmail(_)
             .then((_) => {
               if (_ != 1)
-                _.fnSetError(!0),
+                (_.fnSetError(!0),
                   _ == 12
                     ? _.fnSetStrError(
                         `Error: Failed to create the email on the steam server because the opt-in event is not marked as live. Please tick live before creating the email: Eresult: ` +
@@ -66166,7 +66186,7 @@ var _ = (_) => {
                     : _.fnSetStrError(
                         `Error: Failed to create the email on the steam server: Eresult: ` +
                           _,
-                      );
+                      ));
               else {
                 let _ = _.default.CancelToken.source();
                 _.Get()
@@ -66187,12 +66207,12 @@ var _ = (_) => {
                         ));
                   })
                   .catch((_) => {
-                    _.fnSetError(!0),
+                    (_.fnSetError(!0),
                       _.fnSetStrError(`NOTE: The email failed to be created on beta
-`);
+`));
                   });
               }
-            });
+            }));
       }, [_, _, _]);
     return _.bLoading
       ? (0, _.jsx)(_, {
@@ -66259,7 +66279,7 @@ function _() {
       targeting: _,
     },
     _ = _.Get().AddEmailDraft(_);
-  return _.AddSection(_.k_LearnMore), _;
+  return (_.AddSection(_.k_LearnMore), _);
 }
 function _(_) {
   switch (_) {
@@ -66293,12 +66313,12 @@ function _(_) {
                       targeting: 32,
                     },
                     _ = _.Get().AddEmailDraft(_);
-                  _.AddSection(_.k_NextFestReturns),
+                  (_.AddSection(_.k_NextFestReturns),
                     _.AddSection(_.k_CallForRegistration),
                     _.AddSection(_.k_NextFestQASession),
-                    _.AddSection(_.k_LearnMore);
+                    _.AddSection(_.k_LearnMore));
                 }
-                _(), _();
+                (_(), _());
                 {
                   let _ = {
                     unique_id: _(),
@@ -66320,12 +66340,12 @@ function _(_) {
                       targeting: 1,
                     },
                     _ = _.Get().AddEmailDraft(_);
-                  _.AddSection(_.k_NextFestRegisteredWhatNext),
+                  (_.AddSection(_.k_NextFestRegisteredWhatNext),
                     _.AddSection(_.k_ReviewCategorization),
                     _.AddSection(_.k_PressPreviewDetails),
                     _.AddSection(_.k_NextFestTips),
                     _.AddSection(_.k_NextFestQASession),
-                    _.AddSection(_.k_DemoNotReady);
+                    _.AddSection(_.k_DemoNotReady));
                 }
                 {
                   let _ = {
@@ -66337,9 +66357,9 @@ function _(_) {
                       targeting: _,
                     },
                     _ = _.Get().AddEmailDraft(_);
-                  _.AddSection(_.k_DemoBuildReviewDeadline),
+                  (_.AddSection(_.k_DemoBuildReviewDeadline),
                     _.AddSection(_.k_LearnMore),
-                    _.AddSection(_.k_DemoNotReady);
+                    _.AddSection(_.k_DemoNotReady));
                 }
                 {
                   let _ = {
@@ -66351,8 +66371,8 @@ function _(_) {
                       targeting: 64,
                     },
                     _ = _.Get().AddEmailDraft(_);
-                  _.AddSection(_.k_MediaPermissionReminder),
-                    _.AddSection(_.k_LearnMore);
+                  (_.AddSection(_.k_MediaPermissionReminder),
+                    _.AddSection(_.k_LearnMore));
                 }
                 {
                   let _ = {
@@ -66364,8 +66384,8 @@ function _(_) {
                       targeting: 512,
                     },
                     _ = _.Get().AddEmailDraft(_);
-                  _.AddSection(_.k_NextFestMediaUsageIntendedTrailer),
-                    _.AddSection(_.k_LearnMore);
+                  (_.AddSection(_.k_NextFestMediaUsageIntendedTrailer),
+                    _.AddSection(_.k_LearnMore));
                 }
                 {
                   let _ = {
@@ -66377,8 +66397,8 @@ function _(_) {
                       targeting: 512,
                     },
                     _ = _.Get().AddEmailDraft(_);
-                  _.AddSection(_.k_NextFestMediaUsageConfirmationTrailer),
-                    _.AddSection(_.k_LearnMore);
+                  (_.AddSection(_.k_NextFestMediaUsageConfirmationTrailer),
+                    _.AddSection(_.k_LearnMore));
                 }
                 {
                   let _ = {
@@ -66390,14 +66410,14 @@ function _(_) {
                       targeting: 1,
                     },
                     _ = _.Get().AddEmailDraft(_);
-                  _.AddSection(_.k_PressPreviewDetails),
+                  (_.AddSection(_.k_PressPreviewDetails),
                     _.AddSection(_.k_DemoReview),
                     _.AddSection(_.k_DemoLaunch),
                     _.AddSection(_.k_ReviewCategorization),
                     _.AddSection(_.k_NextFestQASession),
                     _.AddSection(_.k_NextFestTips),
                     _.AddSection(_.k_AssetKit),
-                    _.AddSection(_.k_CancelSection);
+                    _.AddSection(_.k_CancelSection));
                 }
                 {
                   let _ = {
@@ -66409,9 +66429,9 @@ function _(_) {
                       targeting: 1,
                     },
                     _ = _.Get().AddEmailDraft(_);
-                  _.AddSection(_.k_NextFestStartsNow),
+                  (_.AddSection(_.k_NextFestStartsNow),
                     _.AddSection(_.k_DemoLaunch),
-                    _.AddSection(_.k_CancelSection);
+                    _.AddSection(_.k_CancelSection));
                 }
                 {
                   let _ = {
@@ -66436,9 +66456,9 @@ function _(_) {
                       targeting: 1,
                     },
                     _ = _.Get().AddEmailDraft(_);
-                  _.AddSection(_.k_NextFestThankYou),
+                  (_.AddSection(_.k_NextFestThankYou),
                     _.AddSection(_.k_SurveyButton),
-                    _.AddSection(_.k_MeasureResultsNextFest);
+                    _.AddSection(_.k_MeasureResultsNextFest));
                 }
                 _(!1);
               },
@@ -66761,7 +66781,7 @@ function _(_) {
     [_, _] = (0, _.useState)(null),
     _ = _ ? `Reactivate` : `Deactivate`,
     _ = (0, _.useCallback)(() => {
-      _(!0),
+      (_(!0),
         _.Get()
           .SetOptInEmailActive(_, _)
           .then((_) => {
@@ -66779,7 +66799,7 @@ function _(_) {
               `Failed to ${_.toLowerCase()} the email. Please try again later.`,
             ),
           )
-          .finally(() => _(!0));
+          .finally(() => _(!0)));
     }, [_, _, _]);
   return (0, _.jsxs)(_, {
     strTitle: `${_} Automatic Email`,
@@ -66834,7 +66854,7 @@ var _ = (_) => {
         strTitle: _ ? `Send This Email Again?` : `Send Manual OptIn Email Now?`,
         strOKButtonText: `Send Now`,
         onOK: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _.Get()
               .SendManualEmail(_, _)
               .then((_) => {
@@ -66851,7 +66871,7 @@ var _ = (_) => {
                       `Send Error: Failed to send the email from the Steam server: Eresult: ` +
                         _.eResult,
                     ));
-              });
+              }));
         },
         children: [
           _
@@ -66969,7 +66989,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -66993,13 +67013,13 @@ function _(_) {
         let _ = _.filter(Boolean).map((_) => _.Get().LoadPartnerContactList(_));
         Promise.all(_).then(() => {
           let _ = new Map();
-          _.forEach((_) => {
+          (_.forEach((_) => {
             if (_.Get().BHasPromotionContact(_)) {
               let _ = _.Get().GetAllPromotionContacts(_);
               _.set(_, _ ? [..._.keys()] : []);
             }
           }),
-            _(_);
+            _(_));
         });
       }
     }, [_]),
@@ -67036,19 +67056,19 @@ function _(_) {
       _ = new Set();
     if (_) {
       let _ = new Set(_?.map((_) => _.appid).filter(Boolean));
-      _.forEach((_) => {
+      (_.forEach((_) => {
         let _ = !1;
-        _.eligible_appids.has(_) && ((_ += 1), (_ = !0)),
+        (_.eligible_appids.has(_) && ((_ += 1), (_ = !0)),
           _.opted_in_appids.has(_) && ((_ += 1), (_ = !0)),
           _.opted_out_appids.has(_) && ((_ += 1), (_ = !0)),
           _.invited_appids.has(_) && ((_ += 1), (_ = !0)),
           _.pruned_appids.has(_) && ((_ += 1), (_ = !0)),
           _.featured_appids.has(_) && ((_ += 1), (_ = !0)),
-          _ || (_ += 1);
+          _ || (_ += 1));
       }),
         _.invited_appids.forEach((_) => {
           _ && !_.has(_) && _.add(_);
-        });
+        }));
     }
     return [_, _, _, _, _, _, _, _];
   }, [_, _]);
@@ -67283,7 +67303,7 @@ function _(_, _, _) {
     }),
     _ = new Set(_.map((_) => _.appid).filter(Boolean)),
     _ = _.invited_appids;
-  _.GetEmailTargeting() == 512 && (_ = new Set(_.GetCustomAppTargetList())),
+  (_.GetEmailTargeting() == 512 && (_ = new Set(_.GetCustomAppTargetList())),
     _?.forEach((_) => {
       if (_ && !_.has(_)) {
         let _ = _.Get().GetApp(_);
@@ -67303,7 +67323,7 @@ function _(_, _, _) {
         });
       }
     }),
-    _.WriteCSVToFile(_, `email_result_list.csv`);
+    _.WriteCSVToFile(_, `email_result_list.csv`));
 }
 function _(_, _, _) {
   let _ = (0, _.useMemo)(() => Array.from(_ || []), [_]),
@@ -67463,7 +67483,7 @@ function _(_, _) {
       rgRows: [],
     };
   for (let _ of _)
-    _.add(_.partnerid),
+    (_.add(_.partnerid),
       _.ignored_unverified_email || _.ignored_email_optout
         ? _.cUsersSkipped++
         : _.status == 0
@@ -67478,7 +67498,7 @@ function _(_, _) {
         result: _(_),
         time_notified: _(_.rtime_notified),
         time_sent: _(_.send_rtime),
-      });
+      }));
   for (let _ of _)
     _.invited &&
       !_.has(_.partnerid) &&
@@ -67487,7 +67507,7 @@ function _(_, _) {
         partner_name: _.partner_name || ``,
         result: _(_),
       });
-  return (_.cPartnersReached = _.size), _;
+  return ((_.cPartnersReached = _.size), _);
 }
 function _(_) {
   let { emailEditModel: _ } = _,
@@ -67578,7 +67598,7 @@ function _(_) {
 function _(_, _) {
   let _ = new Set(),
     _ = new Set();
-  for (let _ of _) _.add(_.partnerid), _.status != 2 && _.add(_.partnerid);
+  for (let _ of _) (_.add(_.partnerid), _.status != 2 && _.add(_.partnerid));
   let _ = {
     cNewPartners: 0,
     cRetryPartners: 0,
@@ -67703,12 +67723,12 @@ function _(_) {
                       targeting: 32,
                     },
                     _ = _.Get().AddEmailDraft(_);
-                  _.AddSection(_.k_Custom),
+                  (_.AddSection(_.k_Custom),
                     _.AddSection(_.k_CallForRegistration),
                     _.AddSection(_.k_EnterDiscount),
                     _.AddSection(_.k_LearnMore),
                     _.BHasPublicDocumentationWikiURL() &&
-                      _.SetWikiDocURL(_.GetPublicDocumentationWikiURL());
+                      _.SetWikiDocURL(_.GetPublicDocumentationWikiURL()));
                 }
                 {
                   let _ = {
@@ -67720,11 +67740,11 @@ function _(_) {
                       targeting: 512,
                     },
                     _ = _.Get().AddEmailDraft(_);
-                  _.AddSection(_.k_MediaUsePermission),
+                  (_.AddSection(_.k_MediaUsePermission),
                     _.AddSection(_.k_EnterDiscountReminder),
                     _.AddSection(_.k_LearnMore),
                     _.BHasPublicDocumentationWikiURL() &&
-                      _.SetWikiDocURL(_.GetPublicDocumentationWikiURL());
+                      _.SetWikiDocURL(_.GetPublicDocumentationWikiURL()));
                 }
                 {
                   let _ = {
@@ -67736,7 +67756,7 @@ function _(_) {
                       targeting: 1,
                     },
                     _ = _.Get().AddEmailDraft(_);
-                  _.AddSection(_.k_AssetKit),
+                  (_.AddSection(_.k_AssetKit),
                     _.AddSection(_.k_EnterDiscountReminder),
                     _.AddSection(_.k_LearnMore),
                     _.AddSection(_.k_CancelSection),
@@ -67745,7 +67765,7 @@ function _(_) {
                     _.BHasAssetSetDocFile() &&
                       _.SetAssetKitURL(_.GetAssetSetDocFile()),
                     _.GetEventStartTime() &&
-                      _.SetCancelDate(_.GetEventStartTime());
+                      _.SetCancelDate(_.GetEventStartTime()));
                 }
                 _(!1);
               },
@@ -68130,9 +68150,9 @@ var _ = _(
             sections: [],
           },
           _ = _.Get().AddEmailDraft(_);
-        _ && _.AddSection(_.k_Custom),
+        (_ && _.AddSection(_.k_Custom),
           _.Get().SetSelection(_, void 0, _.history),
-          _();
+          _());
       }, [_, _, _, _, _.history]);
     return (0, _.jsxs)(_, {
       title: `Create New Email Draft`,
@@ -68502,11 +68522,11 @@ var _ = _((_) => {
                   .writeText(_)
                   .then(() => _(`Copied`))
                   .catch((_) => {
-                    _(`Copy failed`),
+                    (_(`Copy failed`),
                       console.error(
                         `Failed to copy the email preview URL to the clipboard:`,
                         _,
-                      );
+                      ));
                   }),
               children: _ || `Copy URL`,
             }),
@@ -68527,7 +68547,7 @@ var _ = _((_) => {
 function _() {
   let _ = _.Get(),
     _ = Math.floor(1 + Math.random() * 1e5);
-  for (; _.GetEmailDefinitionByID(_ + _); )
+  for (; _.GetEmailDefinitionByID(_ + _);)
     _ = Math.floor(1 + Math.random() * 1e5);
   return _ + _;
 }
@@ -68586,10 +68606,10 @@ function _(_) {
                       label: _.internal_name + ` (` + _.unique_id + `)`,
                       onChange: (_) => {
                         let _ = JSON.parse(JSON.stringify(_));
-                        _
+                        (_
                           ? _.push(_.unique_id)
                           : _.splice(_.indexOf(_.unique_id), 1),
-                          _(_);
+                          _(_));
                       },
                       checked: _.indexOf(_.unique_id) >= 0,
                     },
@@ -68617,7 +68637,7 @@ function _(_) {
   return (0, _.jsx)(_, {
     fnOnImportLocData: (_, _) => {
       let _ = _(_.GetModel(), _, _);
-      return _ && _.SetDirty(!0), _;
+      return (_ && _.SetDirty(!0), _);
     },
   });
 }
@@ -68647,10 +68667,10 @@ var _ = `event_title`,
 function _(_, _, _) {
   let _ = new _();
   for (let _ = 0; _ < 32; ++_)
-    _ && _(_, _, _),
+    (_ && _(_, _, _),
       _.emails
         ?.filter((_) => _.indexOf(_.unique_id) >= 0)
-        .forEach((_) => _(_, _, _));
+        .forEach((_) => _(_, _, _)));
   return _;
 }
 function _(_, _, _) {
@@ -68661,7 +68681,7 @@ function _(_, _, _) {
     _.localized_generic_button_text &&
     _.localized_generic_button_text[_] &&
     _.localized_generic_button_text[_].length > 0;
-  (_ || _ == 0) &&
+  ((_ || _ == 0) &&
     _.SetLocalization(
       _ + _.unique_id,
       _,
@@ -68685,7 +68705,7 @@ function _(_, _, _) {
             _ ? _.description[_] : ``,
           );
       }
-    });
+    }));
 }
 function _(_, _, _) {
   let _ = _(_),
@@ -68705,10 +68725,10 @@ function _(_, _, _) {
   (_ || _ == 0) &&
     _.SetLocalization(_, _, _ ? _.opt_in_registration_checkbox[_] : ``);
   let _ = _.help_text && _.help_text[_] && _.help_text[_].length > 0;
-  (_ || _ == 0) && _.SetLocalization(_, _, _ ? _.help_text[_] : ``),
+  ((_ || _ == 0) && _.SetLocalization(_, _, _ ? _.help_text[_] : ``),
     ((_.appeals_text && _.appeals_text[_] && _.appeals_text[_].length > 0) ||
       _ == 0) &&
-      _.SetLocalization(_, _, _ ? _.appeals_text[_] : ``);
+      _.SetLocalization(_, _, _ ? _.appeals_text[_] : ``));
   let _ =
     _.special_event_name &&
     _.special_event_name[_] &&
@@ -68718,12 +68738,12 @@ function _(_, _, _) {
     _.special_event_description &&
     _.special_event_description[_] &&
     _.special_event_description[_].length > 0;
-  (_ || _ == 0) &&
+  ((_ || _ == 0) &&
     _.SetLocalization(_, _, _ ? _.special_event_description[_] : ``),
     _.special_event_time_blocks?.forEach((_, _) => {
       let _ = _.block_reason?.[_]?.length > 0;
       (_ || _ == 0) && _.SetLocalization(_ + _, _, _ ? _.block_reason[_] : ``);
-    });
+    }));
   let _ =
     _.artist_statement &&
     _.artist_statement.description &&
@@ -68736,7 +68756,7 @@ function _(_, _, _) {
     _.build_store_page.description &&
     _.build_store_page.description[_] &&
     _.build_store_page.description[_].length > 0;
-  (_ || _ == 0) &&
+  ((_ || _ == 0) &&
     _.SetLocalization(_, _, _ ? _.build_store_page.description[_] : ``),
     _.dynamic_sections &&
       _.dynamic_sections.forEach((_) => {
@@ -68745,7 +68765,7 @@ function _(_, _, _) {
           _.SetLocalization(_ + _.unique_id, _, _ ? _.name[_] : ``);
         let _ =
           _.description && _.description[_] && _.description[_].length > 0;
-        (_ || _ == 0) &&
+        ((_ || _ == 0) &&
           _.SetLocalization(_ + _.unique_id, _, _ ? _.description[_] : ``),
           _.lists &&
             _.lists.forEach((_) => {
@@ -68753,7 +68773,7 @@ function _(_, _, _) {
                 _.option_title &&
                 _.option_title[_] &&
                 _.option_title[_].length > 0;
-              (_ || _ == 0) &&
+              ((_ || _ == 0) &&
                 _.SetLocalization(
                   _ + _.unique_id + _.unique_id,
                   _,
@@ -68776,9 +68796,9 @@ function _(_, _, _) {
                         _,
                         _ ? _.tooltip[_] : ``,
                       );
-                  });
-            });
-      });
+                  }));
+            }));
+      }));
 }
 function _(_, _, _) {
   let _ = [],
@@ -68877,7 +68897,7 @@ function _(_, _, _) {
             if (
               ((_.dynamic_sections ||= []),
               _.dynamic_sections.forEach((_) => {
-                _ === _ + _.unique_id &&
+                (_ === _ + _.unique_id &&
                   ((_ || (_.name && _.name[_] && _.name[_].length > 0)) &&
                     ((_.name ||= {}),
                     _.name[_] != _ && ((_.name[_] = _), (_ = !0))),
@@ -68893,7 +68913,7 @@ function _(_, _, _) {
                     (_ = !0)),
                   _.lists
                     ? _.lists.forEach((_) => {
-                        _ == _ + _.unique_id + _.unique_id &&
+                        (_ == _ + _.unique_id + _.unique_id &&
                           ((_ ||
                             (_.option_title &&
                               _.option_title[_] &&
@@ -68904,7 +68924,7 @@ function _(_, _, _) {
                           (_ = !0)),
                           _.options
                             ? _.options.forEach((_) => {
-                                _ ==
+                                (_ ==
                                   _ + _.unique_id + _.unique_id + _.unique_id &&
                                   ((_ ||
                                     (_.text &&
@@ -68926,11 +68946,11 @@ function _(_, _, _) {
                                       ((_.tooltip ||= {}),
                                       _.tooltip[_] != _ &&
                                         ((_.tooltip[_] = _), (_ = !0))),
-                                    (_ = !0));
+                                    (_ = !0)));
                               })
-                            : (_.options = []);
+                            : (_.options = []));
                       })
-                    : (_.lists = []);
+                    : (_.lists = []));
               }),
               !_)
             ) {
@@ -68941,13 +68961,13 @@ function _(_, _, _) {
               if (_ || _) {
                 let _ = _.substr(21),
                   _ = _.CreateDefaultDynamicSection();
-                (_.lists = []),
+                ((_.lists = []),
                   (_.unique_id = _),
                   _
                     ? ((_.name = {}), (_.name[_] = _))
                     : ((_.description = {}), (_.description[_] = _)),
                   (_ = !0),
-                  _.dynamic_sections.push(_);
+                  _.dynamic_sections.push(_));
               } else if (_.startsWith(_)) {
                 let _ = _.substr(26),
                   _ = _.indexOf(_),
@@ -68960,9 +68980,9 @@ function _(_, _, _) {
                     options: [],
                     option_title: {},
                   };
-                  (_.option_title[_] = _),
+                  ((_.option_title[_] = _),
                     _.dynamic_sections[_].lists.push(_),
-                    (_ = !0);
+                    (_ = !0));
                 } else
                   console.log(
                     `Localization: Add missing: Could not find section: ` + _,
@@ -68985,11 +69005,11 @@ function _(_, _, _) {
                       unique_id: _,
                       text: {},
                     };
-                    _
+                    (_
                       ? (_.text[_] = _)
                       : ((_.tooltip = {}), (_.tooltip[_] = _)),
                       _.dynamic_sections[_].lists[_].options.push(_),
-                      (_ = !0);
+                      (_ = !0));
                   } else
                     console.log(
                       `Localization: Add missing: Could not find list under section ` +
@@ -69007,10 +69027,10 @@ function _(_, _, _) {
               }
             }
           }
-          _.startsWith(_) &&
+          (_.startsWith(_) &&
             ((_.emails ||= []),
             _.emails.forEach((_) => {
-              _ === _ + _.unique_id &&
+              (_ === _ + _.unique_id &&
                 (_ || (_.subject && _.subject[_] && _.subject[_].length > 0)) &&
                 ((_.subject ||= {}),
                 _.subject[_] != _ && ((_.subject[_] = _), (_ = !0))),
@@ -69039,9 +69059,9 @@ function _(_, _, _) {
                         ((_.description ||= {}),
                         _.description[_] != _ &&
                           ((_.description[_] = _), (_ = !0))));
-                  });
+                  }));
             })),
-            _ && _.findIndex((_) => _ == _) == -1 && _.push(_);
+            _ && _.findIndex((_) => _ == _) == -1 && _.push(_));
         });
       });
     }),
@@ -69329,7 +69349,7 @@ var _ = class _ {
         _.data.point_shop_advertising_appid
       ) {
         let _ = this.UpdateInternalModel(_, _);
-        return this.GetDefChangeList(_).Dispatch(_), _;
+        return (this.GetDefChangeList(_).Dispatch(_), _);
       }
       _ = _(_);
     } catch (_) {
@@ -69356,7 +69376,7 @@ var _ = class _ {
         withCredentials: !0,
       });
       if (_?.status == 200 && _?.data?.success == 1)
-        return await this.InternalLoadDefForOptIn(_), !0;
+        return (await this.InternalLoadDefForOptIn(_), !0);
       _ = _(_);
     } catch (_) {
       _ = _(_);
@@ -69398,13 +69418,13 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
-_([_], _.prototype, `InternalLoadDefForOptIn`, null),
+(_([_], _.prototype, `InternalLoadDefForOptIn`, null),
   _([_], _.prototype, `FixPointShopItemForOptIn`, null),
-  _([_], _.prototype, `UpdateInternalModel`, null);
+  _([_], _.prototype, `UpdateInternalModel`, null));
 function _(_) {
   let [_, _] = (0, _.useState)(() => _.Get().GetPointShopDefs(_));
   return (
@@ -69866,10 +69886,10 @@ async function _(_, _) {
   let _ = null;
   try {
     let _ = _.Init(_);
-    _.forEach((_) => _.Body().add_appids(_)),
+    (_.forEach((_) => _.Body().add_appids(_)),
       _.Body().set_language(`english`),
       _.Body().set_count(1e3),
-      _.Body().add_filters(1);
+      _.Body().add_filters(1));
     let _ = await _.QueryRewardItems(_, _);
     if (_.BSuccess() && _.GetEResult() == 1) {
       let _ = _.Body()
@@ -69950,11 +69970,11 @@ function _(_) {
         );
         let _ = await _(_.slice(_, _ + 25), _);
         if (_ == null) {
-          _.fnSetStrError(`Fail processing the appids, check console`),
-            _.fnSetError(!0);
+          (_.fnSetStrError(`Fail processing the appids, check console`),
+            _.fnSetError(!0));
           return;
         }
-        for (; _.length < _ && _.length > 0; ) {
+        for (; _.length < _ && _.length > 0;) {
           let _ = _.shift();
           _.push(_);
         }
@@ -69962,10 +69982,10 @@ function _(_) {
       } while (_.length < _ && _ < _.length);
       let _ = _.length,
         _ = _ ? [] : Array.from(_);
-      for (; _.length > 0; ) _.push(_.shift());
-      _.SetPointShopIncludedApps(_),
+      for (; _.length > 0;) _.push(_.shift());
+      (_.SetPointShopIncludedApps(_),
         _.fnSetSuccess(!0),
-        _.fnSetStrSuccess(`Completing processing, added ` + _);
+        _.fnSetStrSuccess(`Completing processing, added ` + _));
     },
     bOKDisabled: _ || _?.count_opted_in == 0,
     children: [
@@ -70030,11 +70050,12 @@ function _(_) {
         fnSaveSurveyResults: async (_) => {
           let _ = `${_.PARTNER_BASE_URL}optin/ajaxsubmitsurvey/${_}/${_.appid}`,
             _ = new FormData();
-          _.append(`sessionid`, _()), _.append(`surveyjson`, JSON.stringify(_));
+          (_.append(`sessionid`, _()),
+            _.append(`surveyjson`, JSON.stringify(_)));
           let _ = await _.default.post(_, _, {
             withCredentials: !0,
           });
-          _(!0), _(_?.status != 200);
+          (_(!0), _(_?.status != 200));
         },
         fnSetSurveyData: _,
       });
@@ -70157,7 +70178,7 @@ function _(_) {
     strTitle: _(`#OptIn_SubmitSurvey`),
     strDescription: _(`#OptIn_SubmitSurvey_desc`),
     onOK: async () => {
-      await _(_), _();
+      (await _(_), _());
     },
     onCancel: _,
   });
@@ -70392,11 +70413,11 @@ function _(_) {
                 rgOptions: _,
                 selectedOption: _,
                 onChange: (_) => {
-                  _.SetSurveyType(_.data),
+                  (_.SetSurveyType(_.data),
                     _({
                       ..._,
                       survey_type: _.data,
-                    });
+                    }));
                 },
               })
             : (0, _.jsx)(_, {
@@ -70639,11 +70660,11 @@ var _ = _((_) => {
             .then((_) => {
               if (_) {
                 let _ = [];
-                _.push(_), _(_);
+                (_.push(_), _(_));
               }
             })
             .finally(() => {
-              _.RefreshActiveStats(), _(!1);
+              (_.RefreshActiveStats(), _(!1));
             }),
           () => _.cancel(`OptInEditorSaveDialog unmounting`)
         );
@@ -71136,10 +71157,10 @@ var _ = (_) => {
       let _ = null;
       try {
         let _ = new FormData();
-        _.append(`sessionid`, _()),
+        (_.append(`sessionid`, _()),
           _.append(`appids`, JSON.stringify(_)),
           _.append(`opt_in_name`, _),
-          _.append(`prune`, _ ? `0` : `1`);
+          _.append(`prune`, _ ? `0` : `1`));
         let _ = _.PARTNER_BASE_URL + `optin/ajaxpruneapp`,
           _ = await _.default.post(_, _, {
             withCredentials: !0,
@@ -71149,16 +71170,16 @@ var _ = (_) => {
             _.forEach((_) => {
               if (this.m_nPendingReviewAppIDs.includes(_)) {
                 let _ = this.m_nPendingReviewAppIDs.findIndex((_) => _ == _);
-                this.m_nPendingReviewAppIDs.splice(_, 1),
+                (this.m_nPendingReviewAppIDs.splice(_, 1),
                   (this.m_nPendingReviewAppIDs = [
                     ...this.m_nPendingReviewAppIDs,
-                  ]);
+                  ]));
               }
               if (_) {
                 if (this.m_nInvitedAppIDs.includes(_)) {
                   let _ = this.m_nInvitedAppIDs.findIndex((_) => _ == _);
-                  this.m_nInvitedAppIDs.splice(_, 1),
-                    (this.m_nInvitedAppIDs = [...this.m_nInvitedAppIDs]);
+                  (this.m_nInvitedAppIDs.splice(_, 1),
+                    (this.m_nInvitedAppIDs = [...this.m_nInvitedAppIDs]));
                 }
                 if (
                   ((this.m_nPrunedAppIDs = [...this.m_nPrunedAppIDs, _]),
@@ -71167,16 +71188,16 @@ var _ = (_) => {
                   let _ = this.m_nAdditionalFeaturedppIDs.findIndex(
                     (_) => _ == _,
                   );
-                  this.m_nAdditionalFeaturedppIDs.splice(_, 1),
+                  (this.m_nAdditionalFeaturedppIDs.splice(_, 1),
                     (this.m_nAdditionalFeaturedppIDs = [
                       ...this.m_nAdditionalFeaturedppIDs,
-                    ]);
+                    ]));
                 }
               } else {
                 if (this.m_nPrunedAppIDs.includes(_)) {
                   let _ = this.m_nPrunedAppIDs.findIndex((_) => _ == _);
-                  this.m_nPrunedAppIDs.splice(_, 1),
-                    (this.m_nPrunedAppIDs = [...this.m_nPrunedAppIDs]);
+                  (this.m_nPrunedAppIDs.splice(_, 1),
+                    (this.m_nPrunedAppIDs = [...this.m_nPrunedAppIDs]));
                 }
                 this.m_nInvitedAppIDs = [...this.m_nInvitedAppIDs, _];
               }
@@ -71214,10 +71235,10 @@ var _ = (_) => {
       }
       try {
         let _ = new FormData();
-        _.append(`sessionid`, _()),
+        (_.append(`sessionid`, _()),
           _.append(`appids`, JSON.stringify(_)),
           _.append(`opt_in_name`, _),
-          _.append(`feature`, _ ? `1` : `0`);
+          _.append(`feature`, _ ? `1` : `0`));
         let _ = _.PARTNER_BASE_URL + `optin/ajaxupdateadditionalfeaturingapps`,
           _ = await _.default.post(_, _, {
             withCredentials: !0,
@@ -71235,10 +71256,10 @@ var _ = (_) => {
                 let _ = this.m_nAdditionalFeaturedppIDs.findIndex(
                   (_) => _ == _,
                 );
-                this.m_nAdditionalFeaturedppIDs.splice(_, 1),
+                (this.m_nAdditionalFeaturedppIDs.splice(_, 1),
                   this.GetStateForAppCallback(_).Dispatch(
                     this.GetStateForApp(_),
-                  );
+                  ));
               }
             }),
             this.m_listCallback.Dispatch(this.GetAsConsolidatedList()),
@@ -71259,7 +71280,7 @@ var _ = (_) => {
     }
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
     constructor() {
       let _ = JSON.parse(
@@ -71292,8 +71313,8 @@ var _ = (_) => {
       );
     }
   };
-_([_], _.prototype, `ChangeAppPruneState`, null),
-  _([_], _.prototype, `ChangeAppAdditionalFeaturingState`, null);
+(_([_], _.prototype, `ChangeAppPruneState`, null),
+  _([_], _.prototype, `ChangeAppAdditionalFeaturingState`, null));
 function _() {
   let [_, _] = _.useState(_.Get().GetAsConsolidatedList());
   return (
@@ -71318,7 +71339,7 @@ function _() {
 }
 function _(_) {
   let [_, _] = (0, _.useState)(_.Get().GetStateForApp(_));
-  return _(_.Get().GetStateForAppCallback(_), _), _;
+  return (_(_.Get().GetStateForAppCallback(_), _), _);
 }
 var _ = `aANW5DOKfPs-`,
   _ = `VnvUKOVhZ0A-`,
@@ -71435,13 +71456,13 @@ function _(_) {
                 placeholder: `search by app name, description`,
                 value: _,
                 onChange: (_) => {
-                  _(_.target.value), _(1);
+                  (_(_.target.value), _(1));
                 },
               }),
               (0, _.jsx)(_, {
                 setFilterTagIDs: _,
                 fnUpdateSetFilterTagIDs: (_) => {
-                  _(_), _(1);
+                  (_(_), _(1));
                 },
                 rgAppIDs: _,
                 bLoading: _,
@@ -71452,14 +71473,14 @@ function _(_) {
                 nEarliestTime: 0,
                 fnGetTimeToUpdate: () => _,
                 fnSetTimeToUpdate: (_) => {
-                  _(_), _(1);
+                  (_(_), _(1));
                 },
               }),
               _?.length > 0 &&
                 (0, _.jsx)(_, {
                   checked: _,
                   onChange: (_) => {
-                    _(_), _(1);
+                    (_(_), _(1));
                   },
                   tooltip: `This is a filter we only want to use in pruning that is done after we have notified partners about their inclusion. So if we communicated with a partner about the event, we don't want to be able to filter them out during a second round of pruning`,
                   label: `Filter out previously emailed apps from pruning`,
@@ -71582,12 +71603,12 @@ function _(_) {
     [_, _] = (0, _.useState)(void 0),
     [_, _] = (0, _.useState)(void 0),
     _ = (0, _.useCallback)(async () => {
-      _(!0),
+      (_(!0),
         _(_, _, !_)
           .then((_) => {
             _ || _(_(`#OptIn_AppReview_ErrorBatch`));
           })
-          .finally(() => _(!0));
+          .finally(() => _(!0)));
     }, [_, _, _, _]);
   return (0, _.jsxs)(_, {
     strTitle: _(
@@ -71630,7 +71651,7 @@ function _(_) {
         children: [
           (0, _.jsxs)(_, {
             onClick: () => {
-              _(_), _(!0);
+              (_(_), _(!0));
             },
             children: [`Export `, _.length, ` App IDs`],
           }),
@@ -71663,7 +71684,7 @@ function _(_) {
   )
     return null;
   let _ = (_) => {
-    _(_), _();
+    (_(_), _());
   };
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -71714,9 +71735,9 @@ function _(_) {
     closeModal: _,
     bOKDisabled: _ || !_.length,
     onOK: async () => {
-      _(!0), _(``);
+      (_(!0), _(``));
       let _ = await _(_, _, !_);
-      _(!1), _ ? _() : _(_(`#OptIn_AppReview_ErrorBatch`));
+      (_(!1), _ ? _() : _(_(`#OptIn_AppReview_ErrorBatch`)));
     },
     strOKButtonText: `${_ ? `Invite` : `Prune`} ${_.length} app(s)`,
     children: [
@@ -72022,11 +72043,11 @@ function _(_) {
         ),
         onCancel: _,
         onOK: async () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             (await _(_, _, _))
               ? _.fnSetSuccess(!0)
               : (_.fnSetError(!0),
-                _.fnSetStrError(`Check console or network tab for details.`));
+                _.fnSetStrError(`Check console or network tab for details.`)));
         },
       });
 }
@@ -72039,7 +72060,7 @@ function _(_) {
     _ = _.useMemo(() => {
       if (_) {
         let _ = new Map();
-        return _.forEach((_) => _.set(_.appid, _)), _;
+        return (_.forEach((_) => _.set(_.appid, _)), _);
       }
       return null;
     }, [_]),
@@ -72481,10 +72502,10 @@ function _(_) {
                 _.jsondata === `` || !_.jsondata ? {} : _.jsondata,
               ),
             );
-            (_.accountid_appealing = _.accountid),
+            ((_.accountid_appealing = _.accountid),
               (_.rtime_appeal_created = Math.floor(Date.now() / 1e3)),
               (_.appeal_message = _),
-              (_.opt_in_name = _.pageid);
+              (_.opt_in_name = _.pageid));
             let _ = await _(_.GetAppID(), _, !0);
             _ == null
               ? (_.fnSetSuccess(!0),
@@ -72504,13 +72525,13 @@ function _(_) {
                 ));
           } catch (_) {
             let _ = _(_);
-            console.error(
+            (console.error(
               `OptInAppealsCreateDialog error ` + _.strErrorMsg,
               _,
               _,
             ),
               _.fnSetError(!0),
-              _.fnSetStrError(_(`#OptIn_Appeals_Dialog_Failed`));
+              _.fnSetStrError(_(`#OptIn_Appeals_Dialog_Failed`)));
           }
         },
         children: (0, _.jsxs)(`div`, {
@@ -72588,7 +72609,7 @@ function _(_) {
                 _.jsondata === `` || !_.jsondata ? {} : _.jsondata,
               ),
             );
-            (_.accountid_appealing = void 0),
+            ((_.accountid_appealing = void 0),
               (_.rtime_appeal_created = void 0),
               (_.appeal_message = void 0),
               (_.opt_in_name = _.pageid),
@@ -72598,12 +72619,12 @@ function _(_) {
                 ? (_.fnSetSuccess(!0),
                   _.fnSetStrSuccess(_(`#OptIn_Appeals_Control_Submitted`)))
                 : (_.fnSetError(!0),
-                  _.fnSetStrError(_(`#OptIn_Appeals_Dialog_Failed`)));
+                  _.fnSetStrError(_(`#OptIn_Appeals_Dialog_Failed`))));
           } catch (_) {
             let _ = _(_);
-            console.error(`ClearAppealDialog error ` + _.strErrorMsg, _, _),
+            (console.error(`ClearAppealDialog error ` + _.strErrorMsg, _, _),
               _.fnSetError(!0),
-              _.fnSetStrError(_(`#OptIn_Appeals_Dialog_Failed`));
+              _.fnSetStrError(_(`#OptIn_Appeals_Dialog_Failed`)));
           }
         },
       });
@@ -72771,7 +72792,7 @@ function _(_) {
         strTitle: `Invite App to Participate`,
         onCancel: _,
         onOK: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _(_.pageid, [_.appid], !0, !1, !1)
               .then((_) => {
                 _ == 1
@@ -72793,7 +72814,7 @@ function _(_) {
               })
               .catch(() =>
                 _.fnSetStrError(`failed with exception, check console ouput.`),
-              );
+              ));
         },
         children: (0, _.jsxs)(`div`, {
           children: [
@@ -73760,7 +73781,7 @@ function _(_) {
       let _ = _.Get().GetDefinition(_);
       if (_) {
         let _ = _.Get().GetOptInStats()[_];
-        _.Get().Reset(_, _), _(_.Get());
+        (_.Get().Reset(_, _), _(_.Get()));
       } else
         _.Get()
           .LoadOptInAdminDef(_)
@@ -73768,7 +73789,7 @@ function _(_) {
             if (_) {
               let _ = _.Get().GetDefinition(_),
                 _ = _.Get().GetOptInStats()[_];
-              _.Get().Reset(_, _), _(_.Get());
+              (_.Get().Reset(_, _), _(_.Get()));
             }
           });
     }, [_]),
@@ -73794,7 +73815,7 @@ function _(_) {
             .then((_) => {
               if (_) {
                 let _ = _.Get().GetDefinition(_);
-                _.Get().Reset(_, null), _(_.Get());
+                (_.Get().Reset(_, null), _(_.Get()));
               }
             });
     }, [_]),
@@ -74075,9 +74096,9 @@ function _(_) {
         };
         return (
           _.data.forEach((_) => {
-            (_.accepted_appeals += _.accepted_appeals),
+            ((_.accepted_appeals += _.accepted_appeals),
               (_.open_appeals += _.open_appeals),
-              (_.reject_appeals += _.reject_appeals);
+              (_.reject_appeals += _.reject_appeals));
           }),
           _
         );
@@ -74478,7 +74499,7 @@ function _(_) {
     [],
   );
   let _ = async (_) => {
-    (_.current = !1), _(!1), _(`running`), _(null);
+    ((_.current = !1), _(!1), _(`running`), _(null));
     let _ = _,
       _ = 0,
       _ = `done`;
@@ -74490,7 +74511,7 @@ function _(_) {
       let _ = performance.now();
       try {
         let _ = await _(_, _, _, _);
-        (_ += _.nAppsUpdated),
+        ((_ += _.nAppsUpdated),
           _()?.DEV_MODE &&
             console.log(
               `Backfill ${_}: asked for ${_} games after appid ${_}, server counted ${_.nAppsUpdated} in ${Math.round(performance.now() - _)} ms, next appid ${_.nNextStartAfterAppID || `none (done)`}, ${_} counted this run, ${_.nAppsNotCounted ?? `unknown`} left${_ ? ` (only missing)` : ``}`,
@@ -74499,22 +74520,22 @@ function _(_) {
           _(_.bNoStats),
           _.nAppsNotCounted !== void 0 && _(_.nAppsNotCounted),
           (_ = _.nNextStartAfterAppID),
-          _(_);
+          _(_));
       } catch (_) {
-        _()?.DEV_MODE &&
+        (_()?.DEV_MODE &&
           console.log(
             `Backfill ${_}: batch of ${_} after appid ${_} failed after ${Math.round(performance.now() - _)} ms`,
             _,
           ),
           _(_?.message || `unknown error`),
-          (_ = `failed`);
+          (_ = `failed`));
         break;
       }
     } while (_ != 0);
-    _.invalidateQueries({
+    (_.invalidateQueries({
       predicate: (_) => String(_.queryKey[0]).startsWith(`demostats_${_}`),
     }),
-      _(_);
+      _(_));
   };
   return (0, _.jsxs)(_, {
     strTitle: `Backfill store page visits`,
@@ -74558,7 +74579,7 @@ function _(_) {
             color: `dull`,
             disabled: _ == `running` || !_,
             onClick: () => {
-              _(0), _(0), _(0);
+              (_(0), _(0), _(0));
             },
             children: _ == `done` ? `Run again` : `Start`,
           }),
@@ -74567,7 +74588,7 @@ function _(_) {
               color: `dull`,
               disabled: _,
               onClick: () => {
-                (_.current = !0), _(!0);
+                ((_.current = !0), _(!0));
               },
               children: _
                 ? `✔ Stopping after the current batch`
@@ -74648,7 +74669,7 @@ function _(_) {
       ],
       _ = _.data.stats.filter((_) => _.rt_last_update_time == _),
       _ = _(_);
-    _.forEach((_) => _.push(_.strCSVHeader)), _.push(_);
+    (_.forEach((_) => _.push(_.strCSVHeader)), _.push(_));
     for (let _ of _) {
       let _ = _.Get().GetApp(_.appid),
         _ = _.Get().GetApp(_.demo_appid);
@@ -74739,13 +74760,13 @@ function _(_) {
         _ = 0,
         _ = 0,
         _ = _.filter((_) => _.rt_end_time == _);
-      _.forEach((_) => {
-        (_ += 1),
+      (_.forEach((_) => {
+        ((_ += 1),
           (_ += _.demo_player_count),
           (_ += _.wishlist_count),
-          (_ += _.player_wishlist_count);
+          (_ += _.player_wishlist_count));
       }),
-        (_ += _?.length || 0);
+        (_ += _?.length || 0));
       let _ = _(_).map((_) => ({
         col: _,
         nTotal: _.reduce((_, _) => _ + (_[_.field] ?? 0), 0),
@@ -75830,7 +75851,7 @@ function _(_) {
   return (0, _.jsxs)(`form`, {
     className: _,
     onSubmit: (_) => {
-      _(), _.preventDefault();
+      (_(), _.preventDefault());
     },
     children: [
       (0, _.jsx)(_, {
@@ -75905,7 +75926,7 @@ function _(_) {
     },
     _ = () => {
       let _ = [];
-      _.push([`AppID`, `Name`, `Tags`, `Short Desc`, `Wishlists`, `Sales`]),
+      (_.push([`AppID`, `Name`, `Tags`, `Short Desc`, `Wishlists`, `Sales`]),
         new Map(_.flatMap((_) => _.rgItems).map((_) => [_.nAppID, _])).forEach(
           (_) =>
             _.push([
@@ -75918,7 +75939,7 @@ function _(_) {
             ]),
         ),
         _.sort((_, _) => Number(_[0]) - Number(_[0])),
-        _.WriteCSVToFile(_, `data.csv`);
+        _.WriteCSVToFile(_, `data.csv`));
     },
     _ = _?.length > 0 && !_.some((_) => _.rgItems == _),
     _ = _.length > 0;
@@ -76848,10 +76869,10 @@ function _(_) {
             if (!_ || _.length == 0) return [];
             let _ = [..._],
               _ = [];
-            for (; _.length > 0; ) {
+            for (; _.length > 0;) {
               let _ = new FormData(),
                 _ = _.splice(0, 20);
-              _.append(`sessionid`, _()),
+              (_.append(`sessionid`, _()),
                 _.append(`strPromotionIDs`, _.join(`,`)),
                 _.nPartnerID &&
                   _.append(`publisherid`, _.nPartnerID.toString()),
@@ -76859,7 +76880,7 @@ function _(_) {
                   _.default.post(_, _, {
                     withCredentials: !0,
                   }),
-                );
+                ));
             }
             return (
               (await Promise.all(_)).forEach((_) => {
@@ -77059,7 +77080,7 @@ function _(_) {
     [_, _] = (0, _.useState)(!1),
     _ = (_.products_missing_user_rights ?? 0) > 0,
     _ = (_) => {
-      _(_ == _ && !_), _(_);
+      (_(_ == _ && !_), _(_));
     },
     [_, _] = _.useMemo(() => {
       let _ = [];
@@ -77190,11 +77211,11 @@ function _(_) {
     [_, _] = (0, _.useState)(!1),
     _ = _(_),
     _ = (_) => {
-      _(_ == _ && !_), _(_);
+      (_(_ == _ && !_), _(_));
     },
     _ = _.useMemo(() => {
       let _ = [];
-      return _.marketing?.forEach((_) => _.push(_.appid)), _;
+      return (_.marketing?.forEach((_) => _.push(_.appid)), _);
     }, [_]),
     _ = _(`DealyDealHistorySales`);
   _.useEffect(() => {
@@ -77594,14 +77615,14 @@ function _(_) {
           params: _,
           withCredentials: !0,
         });
-      _?.status == 200 &&
+      (_?.status == 200 &&
         _.data?.success == 1 &&
         _(
           _.data.matches.sort(
             (_, _) => _.rtime32_start_time - _.rtime32_start_time,
           ),
         ),
-        _(!1);
+        _(!1));
     }, []),
     _ = _.useCallback(
       (_) => {
@@ -77967,11 +77988,11 @@ function _(_) {
     _ = 14;
   if (!_ && _?.rtConflictStart) {
     let _ = Math.floor((_.rtConflictStart + _.PerHour - _) / _.PerDay);
-    _(
+    (_(
       _.rtConflictStart > _ && _ > 0,
       `days until next cooldown conflict is not greater than 0`,
     ),
-      _ > 0 && (_ = Math.min(14, 7 + (_ - 1)));
+      _ > 0 && (_ = Math.min(14, 7 + (_ - 1))));
   }
   let _ = _ > _.GetTimeNowWithOverride(),
     _ = 6 - (_ + _),
@@ -78088,20 +78109,20 @@ function _(_) {
                   _.fnSetLoading(!0);
                   let _ = 1;
                   if (_ != _.primary_partnerid)
-                    (_ = 15),
+                    ((_ = 15),
                       console.error(
                         `AcceptInviteWithExistingDiscount: invite partner id ${_.primary_partnerid} does not match starting partnerid ${_}`,
-                      );
+                      ));
                   else
                     try {
                       _ = (await _(_, _, 0, ``, !0)).errorCode;
                     } catch (_) {
                       let _ = _(_);
-                      console.error(
+                      (console.error(
                         `AcceptInviteWithExistingDiscount hit error: ` +
                           _.strErrorMsg,
                       ),
-                        (_ = _.errorCode);
+                        (_ = _.errorCode));
                     }
                   _ == 1
                     ? _.fnSetSuccess(!0)
@@ -78321,7 +78342,7 @@ function _() {
     mutationFn: async (_) => {
       let _ = `${_.PARTNER_BASE_URL}apps/ajaxcreatenewapp/`,
         _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`name`, _.name),
         _.append(`type`, _.type),
         _.append(`range`, `` + (_.range || 10)),
@@ -78333,7 +78354,7 @@ function _() {
         _.append(`parentid`, `` + (_.parentid || 0)),
         _.append(`f2p`, _.f2p ? `1` : `0`),
         _.append(`f2ptext`, _.f2ptext ? `1` : `0`),
-        _.append(`auto_publish`, `` + (_.auto_publish || 0));
+        _.append(`auto_publish`, `` + (_.auto_publish || 0)));
       let _ = await _.default.post(_, _);
       if (_?.status == 200 && _.data?.success == 1 && _.data.appid)
         return _.data.appid;
@@ -78601,10 +78622,10 @@ function _(_) {
                     ));
             })
             .catch((_) => {
-              _.fnSetError(!0),
+              (_.fnSetError(!0),
                 _.fnSetStrError(
                   `Failed to create invitation - check console/network logs`,
-                );
+                ));
             });
         },
         onCancel: _,
@@ -78702,10 +78723,10 @@ function _(_) {
       });
     });
   let _ = (_) => {
-    _.invalidateQueries({
+    (_.invalidateQueries({
       queryKey: _(_),
     }),
-      _(_);
+      _(_));
   };
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -78780,7 +78801,7 @@ function _(_) {
         onCancel: _,
         bOKDisabled: !_,
         onOK: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _.mutateAsync()
               .then((_) => {
                 _
@@ -78796,7 +78817,7 @@ function _(_) {
                 _.fnSetStrError(
                   `Create advertising app failed ` + _(_).strErrorMsg,
                 );
-              });
+              }));
         },
         strOKButtonText: `Create`,
         children: [
@@ -78821,7 +78842,7 @@ function _(_) {
     [_, _] = (0, _.useState)(``),
     [_, _] = (0, _.useState)(0),
     { rgAppIDs: _, rgBundleIDs: _ } = _(null, _);
-  _(_, _), _(_, _);
+  (_(_, _), _(_, _));
   let _ = _.useMemo(() => {
       let _ = new Set(_.map((_) => _.invite_account));
       return Array.from(_);
@@ -79107,7 +79128,7 @@ function _(_) {
         strDescription: `Are you sure you want to cancel this invitation?  The Partner will no longer be able to schedule this promotion`,
         onCancel: _,
         onOK: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _(_.inviteid)
               .then((_) => {
                 _
@@ -79121,11 +79142,11 @@ function _(_) {
                     ));
               })
               .catch(() => {
-                _.fnSetError(!0),
+                (_.fnSetError(!0),
                   _.fnSetStrError(
                     `Failed to cancel invitation. Please check console for errors`,
-                  );
-              });
+                  ));
+              }));
         },
       });
 }
@@ -79144,7 +79165,7 @@ function _(_) {
         strDescription: `Are you sure you want to re-send this email? It will fire to the partner associated with the app to their user who opted in to receive communication`,
         onCancel: _,
         onOK: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _(_.inviteid)
               .then((_) => {
                 _
@@ -79158,11 +79179,11 @@ function _(_) {
                     ));
               })
               .catch(() => {
-                _.fnSetError(!0),
+                (_.fnSetError(!0),
                   _.fnSetStrError(
                     `Failed to resend invitation email. Please check console for errors`,
-                  );
-              });
+                  ));
+              }));
         },
       });
 }
@@ -79465,11 +79486,11 @@ function _(_) {
                       `#DailyDeals_PartnerDashboard_ArchiveSearch`,
                     ),
                     onChange: (_) => {
-                      window.clearTimeout(_.current),
+                      (window.clearTimeout(_.current),
                         (_.current = window.setTimeout(
                           () => _(_?.target?.value?.toLocaleLowerCase()),
                           500,
-                        ));
+                        )));
                     },
                   }),
                 }),
@@ -79809,7 +79830,7 @@ function _(_) {
     _ = _(_, _.discount_event_id?.toString());
   switch (_) {
     case _.InviteAccepted:
-      (_ = (0, _.jsx)(`div`, {
+      ((_ = (0, _.jsx)(`div`, {
         className: _,
         children: (0, _.jsx)(_, {
           rtime: _.rtime32_start_time,
@@ -79819,10 +79840,10 @@ function _(_) {
           className: _,
           onClick: () => window.location.assign(_),
           children: _(`#DailyDeals_Button_EnterDiscounts`),
-        }));
+        })));
       break;
     case _.DealReady:
-      (_ = (0, _.jsx)(_, {
+      ((_ = (0, _.jsx)(_, {
         deal: _,
         eDealState: _,
         dtDiscountStart: _,
@@ -79843,10 +79864,10 @@ function _(_) {
               children: _(`#DailyDeals_Button_EditDiscounts`),
             }),
           ],
-        }));
+        })));
       break;
     case _.DealLive:
-      (_ = (0, _.jsx)(_, {
+      ((_ = (0, _.jsx)(_, {
         deal: _,
         eDealState: _,
         dtDiscountStart: _,
@@ -79858,7 +79879,7 @@ function _(_) {
           children: (0, _.jsx)(_, {
             oDailyDeal: _,
           }),
-        }));
+        })));
   }
   return (0, _.jsx)(_, {
     inviteBody: _,
@@ -79921,7 +79942,7 @@ function _(_) {
   if (_) {
     if (_.require_sale_page) {
       let _ = _.require_sale_page_type || 1;
-      (_ = _
+      ((_ = _
         ? (0, _.jsx)(_, {
             className: _(_),
             label: _(_),
@@ -79940,17 +79961,17 @@ function _(_) {
           : (0, _.jsx)(_, {
               deal: _,
               eRequireSalePageType: _,
-            }));
+            })));
     }
   } else if (_?.require_sale_page) {
     let _ = _.require_sale_page_type || 1;
-    (_ = (0, _.jsx)(_, {
+    ((_ = (0, _.jsx)(_, {
       eRequireSalePageType: _,
     })),
       (_ = (0, _.jsx)(`div`, {
         className: _(_, _),
         children: _(_),
-      }));
+      })));
   }
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -80107,7 +80128,7 @@ function _(_) {
           onOK: async () => {
             _(!0);
             let [_, _] = await _(_.gid, _, _, _, _, _.store_item_id);
-            _(!1),
+            (_(!1),
               _
                 ? (_.invalidateQueries({
                     queryKey: _(_.accountid),
@@ -80115,7 +80136,7 @@ function _(_) {
                   _())
                 : _?.errorCode == 24
                   ? _(_(`#DailyDeals_SalePage_InsufficientPrivilege`))
-                  : _(_(`#DailyDeals_SalePage_ErrorCreatingSalePage`));
+                  : _(_(`#DailyDeals_SalePage_ErrorCreatingSalePage`)));
           },
           strOKText: _(`#Button_Continue`),
         }),
@@ -80573,7 +80594,7 @@ function _(_) {
 }
 async function _(_, _) {
   let _ = _.Init(_);
-  _.Body().set_rt_start_time(_ - 604800), _.Body().set_rt_end_time(_);
+  (_.Body().set_rt_start_time(_ - 604800), _.Body().set_rt_end_time(_));
   let _ = await _.GetMarketingMessagesViewerRangeStats(_, _);
   return (
     _(_),
@@ -80657,7 +80678,7 @@ function _(_) {
         _ = 0;
       return (
         _.forEach((_) => {
-          _.seen_count > _ && (_ = _.seen_count), (_ += _.seen_count);
+          (_.seen_count > _ && (_ = _.seen_count), (_ += _.seen_count));
         }),
         [_, _, _.sort((_, _) => _.rt_time_hour - _.rt_time_hour)]
       );
@@ -80731,7 +80752,7 @@ function _(_) {
         _ = 0;
       return (
         _.forEach((_) => {
-          _.seen_count > _ && (_ = _.seen_count), (_ += _.seen_count);
+          (_.seen_count > _ && (_ = _.seen_count), (_ += _.seen_count));
         }),
         [_, _, _.sort((_, _) => _.rt_time_hour - _.rt_time_hour)]
       );
@@ -80805,7 +80826,8 @@ function _(_) {
         _ = 0;
       return (
         _.forEach((_) => {
-          _.clicked_count > _ && (_ = _.clicked_count), (_ += _.clicked_count);
+          (_.clicked_count > _ && (_ = _.clicked_count),
+            (_ += _.clicked_count));
         }),
         [_, _, _.sort((_, _) => _.rt_time_hour - _.rt_time_hour)]
       );
@@ -80894,7 +80916,8 @@ function _(_) {
         _ = 0;
       return (
         _.forEach((_) => {
-          _.clicked_count > _ && (_ = _.clicked_count), (_ += _.clicked_count);
+          (_.clicked_count > _ && (_ = _.clicked_count),
+            (_ += _.clicked_count));
         }),
         [_, _, _.sort((_, _) => _.rt_time_hour - _.rt_time_hour)]
       );
@@ -81071,8 +81094,8 @@ function _(_) {
         _ = 0,
         _ = 0;
       _.forEach((_) => {
-        _.seen_count > _ && (_ = _.seen_count),
-          _.display_index > _ && (_ = _.display_index);
+        (_.seen_count > _ && (_ = _.seen_count),
+          _.display_index > _ && (_ = _.display_index));
       });
       for (let _ = 0; _ < _; ++_)
         _.findIndex((_) => _.display_index == _) < 0 &&
@@ -81264,10 +81287,10 @@ function _(_) {
         _ = 0,
         _ = 0;
       _.forEach((_) => {
-        _.seen_count > _ && (_ = _.seen_count),
+        (_.seen_count > _ && (_ = _.seen_count),
           _.display_index > 0 && (_ += _.seen_count),
           (_ += _.seen_count),
-          _.display_index > _ && (_ = _.display_index);
+          _.display_index > _ && (_ = _.display_index));
       });
       for (let _ = 0; _ < _; ++_)
         _.findIndex((_) => _.display_index == _) < 0 &&
@@ -81992,10 +82015,10 @@ function _(_) {
           }),
       (0, _.jsx)(_, {
         onClick: () => {
-          _(!0),
+          (_(!0),
             _(_, _, _ == `associatedid` ? _ : void 0).then((_) => {
-              _(!1), _(_);
-            });
+              (_(!1), _(_));
+            }));
         },
         children: `Search`,
       }),
@@ -82252,7 +82275,7 @@ function _(_) {
     _.useEffect(() => {
       _(_)
         .then((_) => {
-          _(_), _.SaveSuccessClearDirty();
+          (_(_), _.SaveSuccessClearDirty());
         })
         .catch((_) => _(!1))
         .finally(() => _(!1));
@@ -82287,13 +82310,13 @@ function _(_) {
     strDescription: `Only delete this message if it has never been shown to customers. Are you sure you want to remove the promotion plan for the following? This can't be undone, but a new one can be created if needed.  This only removes the record from the Steam database. If this message has already been published, the files published will remain on the web cluster.`,
     onCancel: _,
     onOK: () => {
-      _(!0),
+      (_(!0),
         _(_.GetModel()).then((_) => {
           _
             ? (window.location.href =
                 _.PARTNER_BASE_URL + `promotion/planning/dashboard`)
             : _(`Failed To Delete, check console`);
-        });
+        }));
     },
     bOKDisabled: _,
     children: [
@@ -82361,7 +82384,7 @@ function _(_) {
         if (!_) return;
         _(!0);
         let _ = new FileReader();
-        (_.onload = (_) => {
+        ((_.onload = (_) => {
           try {
             let _ = _.target?.result,
               _ = JSON.parse(_);
@@ -82373,13 +82396,13 @@ function _(_) {
             });
           } catch (_) {
             let _ = _(_);
-            console.error(`Failed to read or parse JSON:`, _, _.strErrorMsg),
-              _(_.strErrorMsg);
+            (console.error(`Failed to read or parse JSON:`, _, _.strErrorMsg),
+              _(_.strErrorMsg));
           } finally {
             _(!1);
           }
         }),
-          _.readAsText(_);
+          _.readAsText(_));
       },
       [_],
     );
@@ -82426,7 +82449,7 @@ function _(_) {
                     type: `text`,
                     value: _,
                     onChange: (_) => {
-                      _(_, _.currentTarget.value), _();
+                      (_(_, _.currentTarget.value), _());
                     },
                   }),
                 ],
@@ -82458,10 +82481,10 @@ function _(_) {
                         }),
                         _ = URL.createObjectURL(_),
                         _ = document.createElement(`a`);
-                      (_.href = _),
+                      ((_.href = _),
                         (_.download = `export.json`),
                         _.click(),
-                        URL.revokeObjectURL(_);
+                        URL.revokeObjectURL(_));
                     },
                     children: `Export JSON`,
                   }),
@@ -82574,7 +82597,7 @@ function _(_, _) {
       _.SetCustomTemplate(`partner_event`);
       break;
     case `mm_partner_event_animated`:
-      _.SetCustomTemplate(`partner_event`), _.SetAnimatedAssetsEnabled(!0);
+      (_.SetCustomTemplate(`partner_event`), _.SetAnimatedAssetsEnabled(!0));
       break;
     case `mm_year_in_review`:
       _.SetCustomTemplate(`replay${new Date().getFullYear()}`);
@@ -82637,7 +82660,7 @@ function _(_) {
         rgOptions: _,
         selectedOption: _,
         onChange: (_) => {
-          _(_, _.data), _(_.data);
+          (_(_, _.data), _(_.data));
         },
       }),
       _ == `mm_auto_render` &&
@@ -83058,9 +83081,9 @@ function _(_) {
     onCancel: _,
     bDestructiveWarning: !0,
     onOK: () => {
-      _.ReplaceUserFilter(_(_, _.GetType())),
+      (_.ReplaceUserFilter(_(_, _.GetType())),
         _(_, `mm_partner_event`),
-        _ && _();
+        _ && _());
     },
     children: (0, _.jsx)(`div`, {
       children: `Note: The user dynamic filter can be updated afterward too`,
@@ -83281,7 +83304,7 @@ function _(_) {
         rgOptions: _,
         selectedOption: _.GetRealm(),
         onChange: (_) => {
-          _.SetRealm(_.data),
+          (_.SetRealm(_.data),
             _.SetMustUseClientLanguage(void 0),
             _.SetCountryAllow(void 0),
             _.SetCountryDeny(void 0),
@@ -83293,7 +83316,7 @@ function _(_) {
               : _.SetAndConvertURL(
                   `https://store.steamchina.com`,
                   `https://store.steampowered.com`,
-                );
+                ));
         },
       }),
       (0, _.jsx)(_, {
@@ -83374,7 +83397,7 @@ function _(_) {
             rgOptions: _,
             selectedOption: _,
             onChange: (_) => {
-              _(_.data), _(_.data == 1, _);
+              (_(_.data), _(_.data == 1, _));
             },
           }),
           (0, _.jsxs)(`div`, {
@@ -83397,7 +83420,7 @@ function _(_) {
               (0, _.jsx)(`a`, {
                 href: `#`,
                 onClick: (_) => {
-                  _.preventDefault(), _(_, `CA,US,MX`);
+                  (_.preventDefault(), _(_, `CA,US,MX`));
                 },
                 children: `North America`,
               }),
@@ -83405,11 +83428,11 @@ function _(_) {
               (0, _.jsx)(`a`, {
                 href: `#`,
                 onClick: (_) => {
-                  _.preventDefault(),
+                  (_.preventDefault(),
                     _(
                       _,
                       `BS,PA,BZ,CR,SV,GT,HN,NI,VE,CO,GY,SR,GF,BR,PE,BO,PY,UY,AR,CL,EC`,
-                    );
+                    ));
                 },
                 children: `Central And South America`,
               }),
@@ -83417,11 +83440,11 @@ function _(_) {
               (0, _.jsx)(`a`, {
                 href: `#`,
                 onClick: (_) => {
-                  _.preventDefault(),
+                  (_.preventDefault(),
                     _(
                       _,
                       `AT,BE,BG,CY,CZ,DK,EE,FI,FR,GR,HU,IS,IE,IT,LV,LT,LU,MT,NL,NO,PL,RO,SK,SI,ES,SE,CH,UK,GB,PT`,
-                    );
+                    ));
                 },
                 children: `Europe`,
               }),
@@ -83429,8 +83452,8 @@ function _(_) {
               (0, _.jsx)(`a`, {
                 href: `#`,
                 onClick: (_) => {
-                  _.preventDefault(),
-                    _(_, `NO,SE,FI,DK,PT,ES,FR,IT,AT,CH,LU,LI,BE,NL,IE,UK,GB`);
+                  (_.preventDefault(),
+                    _(_, `NO,SE,FI,DK,PT,ES,FR,IT,AT,CH,LU,LI,BE,NL,IE,UK,GB`));
                 },
                 children: `Western Europe`,
               }),
@@ -83623,12 +83646,12 @@ var _ = class _ {
     } catch (_) {
       _ = _(_);
     }
-    (this.m_mapPlaytime = _),
+    ((this.m_mapPlaytime = _),
       _ &&
         console.error(
           `CDLCForYouStore.LoadPlaytime failed: ` + _.strErrorMsg,
           _,
-        );
+        ));
   }
   GetSortKey(_, _, _) {
     return `${_}_${_ || `*`}_${_ || `*`}`;
@@ -83651,12 +83674,12 @@ var _ = class _ {
     let _ = [],
       _ = null;
     try {
-      await Promise.all([this.LoadPlaytime(), _.Get().HintLoad()]),
+      (await Promise.all([this.LoadPlaytime(), _.Get().HintLoad()]),
         (_ = Array.from(this.m_mapPlaytime.keys())),
-        (_ = _.filter((_) => _.Get().BIsGameOwned(_)));
+        (_ = _.filter((_) => _.Get().BIsGameOwned(_))));
       let _ = [],
         _ = [];
-      _ &&
+      (_ &&
         ((_ = _.filter((_) => this.m_mapPlaytime.get(_).playtime < _ * 60)),
         (_ = _.filter((_) => this.m_mapPlaytime.get(_).playtime >= _ * 60))),
         _ &&
@@ -83702,16 +83725,16 @@ var _ = class _ {
                 this.m_mapPlaytime.get(_).last_played -
                 this.m_mapPlaytime.get(_).last_played,
             )),
-        (_ = _.concat(_).concat(_));
+        (_ = _.concat(_).concat(_)));
     } catch (_) {
       _ = _(_);
     }
-    this.m_mapOwnedApps.set(this.GetSortKey(_, _, _), _),
+    (this.m_mapOwnedApps.set(this.GetSortKey(_, _, _), _),
       _ &&
         console.error(
           `CDLCForYouStore.InternalLoadOwnedApps failed: ` + _.strErrorMsg,
           _,
-        );
+        ));
   }
   BIsDLCLoaded(_) {
     return this.m_mapDLC.has(JSON.stringify(_));
@@ -83774,12 +83797,12 @@ var _ = class _ {
     } catch (_) {
       _ = _(_);
     }
-    this.m_mapDLC.set(JSON.stringify(_), _),
+    (this.m_mapDLC.set(JSON.stringify(_), _),
       _ &&
         console.error(
           `CDLCForYouStore.InternalLoadDLC failed: ` + _.strErrorMsg,
           _,
-        );
+        ));
   }
   async InternalLoadDLCFromDiscoveryQueue(_) {
     let _ = [],
@@ -83826,18 +83849,18 @@ var _ = class _ {
           _.nTabID && _.strTabFilter)
         ) {
           let _ = _.Body().store_page_filter().add_store_filters();
-          _.set_filter_json(_.strTabFilter),
-            _.set_cache_key(_.strTabFilterCacheKey || _.nTabID.toString());
+          (_.set_filter_json(_.strTabFilter),
+            _.set_cache_key(_.strTabFilterCacheKey || _.nTabID.toString()));
         }
         if (_.nSectionID && _.strSectionFilter) {
           let _ = _.Body().store_page_filter().add_store_filters();
-          _.set_filter_json(_.strSectionFilter),
-            _.set_cache_key(_.nSectionID.toString());
+          (_.set_filter_json(_.strSectionFilter),
+            _.set_cache_key(_.nSectionID.toString()));
         }
         if (_.nFacetCount && _.strFacetURLParam && _.strFacetFilter) {
           let _ = _.Body().store_page_filter().add_store_filters();
-          _.set_filter_json(_.strFacetFilter),
-            _.set_cache_key(_.strFacetURLParam);
+          (_.set_filter_json(_.strFacetFilter),
+            _.set_cache_key(_.strFacetURLParam));
         }
       } else
         _.nSaleTagID &&
@@ -83853,12 +83876,12 @@ var _ = class _ {
     } catch (_) {
       _ = _(_);
     }
-    this.m_mapDLC.set(JSON.stringify(_), _),
+    (this.m_mapDLC.set(JSON.stringify(_), _),
       _ &&
         console.error(
           `CDLCForYouStore.InternalLoadDLC failed: ` + _.strErrorMsg,
           _,
-        );
+        ));
   }
   GetAppKey(_, _) {
     return JSON.stringify(_) + `_` + _;
@@ -83898,9 +83921,9 @@ var _ = class _ {
     try {
       await _.Get().HintLoad();
       let _ = _.Init(_);
-      _.Body().context().set_language(_.LANGUAGE),
+      (_.Body().context().set_language(_.LANGUAGE),
         _.Body().context().set_elanguage(_(_.LANGUAGE)),
-        _.Body().context().set_country_code(_.COUNTRY);
+        _.Body().context().set_country_code(_.COUNTRY));
       for (let _ of _) _.Body().add_appids(_);
       if (
         (_.Body().set_flavor(_.strFlavor || `popular`),
@@ -83923,18 +83946,18 @@ var _ = class _ {
           _.nTabID && _.strTabFilter)
         ) {
           let _ = _.Body().store_page_filter().add_store_filters();
-          _.set_filter_json(_.strTabFilter),
-            _.set_cache_key(_.strTabFilterCacheKey || _.nTabID.toString());
+          (_.set_filter_json(_.strTabFilter),
+            _.set_cache_key(_.strTabFilterCacheKey || _.nTabID.toString()));
         }
         if (_.nSectionID && _.strSectionFilter) {
           let _ = _.Body().store_page_filter().add_store_filters();
-          _.set_filter_json(_.strSectionFilter),
-            _.set_cache_key(_.nSectionID.toString());
+          (_.set_filter_json(_.strSectionFilter),
+            _.set_cache_key(_.nSectionID.toString()));
         }
         if (_.nFacetCount && _.strFacetURLParam && _.strFacetFilter) {
           let _ = _.Body().store_page_filter().add_store_filters();
-          _.set_filter_json(_.strFacetFilter),
-            _.set_cache_key(_.strFacetURLParam);
+          (_.set_filter_json(_.strFacetFilter),
+            _.set_cache_key(_.strFacetURLParam));
         }
       }
       let _ = await _.GetDLCForAppsSolr(this.m_anonymousServiceTransport, _);
@@ -84029,13 +84052,13 @@ var _ = class _ {
     } catch (_) {
       _ = _(_);
     }
-    this.m_mapPopularDLCByApp.set(JSON.stringify(_), _),
+    (this.m_mapPopularDLCByApp.set(JSON.stringify(_), _),
       _ &&
         console.error(
           `CDLCForYouStore.InternalLoadPopularDLCByApp failed: ` +
             _.strErrorMsg,
           _,
-        );
+        ));
   }
   BIsDLCStatsLoaded() {
     return !!this.m_dlcStats;
@@ -84070,23 +84093,23 @@ var _ = class _ {
     } catch (_) {
       _ = _(_);
     }
-    (this.m_dlcStats = _),
+    ((this.m_dlcStats = _),
       _ &&
         console.error(
           `CDLCForYouStore.LoadDLCStats failed: ` + _.strErrorMsg,
           _,
-        );
+        ));
   }
   constructor() {
     if (!this.m_serviceTransport) {
       let _ = _(`loyalty_webapi_token`, `application_config`),
         _ = _(new _(_.WEBAPI_BASE_URL, _ || void 0));
-      (this.m_serviceTransport = _.GetServiceTransport()),
-        (this.m_anonymousServiceTransport = _.GetAnonymousServiceTransport());
+      ((this.m_serviceTransport = _.GetServiceTransport()),
+        (this.m_anonymousServiceTransport = _.GetAnonymousServiceTransport()));
     }
   }
   static Get() {
-    return (_.s_singleton ||= new _()), _.s_singleton;
+    return ((_.s_singleton ||= new _()), _.s_singleton);
   }
 };
 function _(_, _ = 20) {
@@ -84307,7 +84330,7 @@ function _(_) {
     children: (0, _.jsx)(`a`, {
       href: `#`,
       onClick: (_) => {
-        _.preventDefault(),
+        (_.preventDefault(),
           console.log(`preview url clicked`, _),
           window
             .open(
@@ -84315,7 +84338,7 @@ function _(_) {
               `marketing_message`,
               `height=720,width=700,resize=yes,scrollbars=yes`,
             )
-            .focus();
+            .focus());
       },
       children: _,
     }),
@@ -84349,7 +84372,7 @@ function _(_) {
         let _ = _.Init(_);
         _.forEach((_) => {
           let _ = _.Body().add_requested();
-          _.set_gid(_.gid), _.set_type(_.type);
+          (_.set_gid(_.gid), _.set_type(_.type));
         });
         let _ = await _.GetPlanByAssociationID(_, _);
         if (!_.BSuccess())
@@ -84649,13 +84672,13 @@ function _(_) {
         className: _,
         children: (0, _.jsx)(_, {
           onClick: (_) => {
-            _.SetVisibility(1),
+            (_.SetVisibility(1),
               _(
                 (0, _.jsx)(_, {
                   oEditableMessage: _,
                 }),
                 _(_),
-              );
+              ));
           },
           children: `Set Private`,
         }),
@@ -84703,26 +84726,26 @@ function _(_) {
         children: [
           (0, _.jsx)(_, {
             onClick: (_) => {
-              _.SetVisibility(1),
+              (_.SetVisibility(1),
                 _(
                   (0, _.jsx)(_, {
                     oEditableMessage: _,
                   }),
                   _(_),
-                );
+                ));
             },
             children: `Retract Approval for Partner Self-Publishing`,
           }),
           (0, _.jsx)(_, {
             className: `Primary`,
             onClick: (_) => {
-              _.SetVisibility(2),
+              (_.SetVisibility(2),
                 _(
                   (0, _.jsx)(_, {
                     oEditableMessage: _,
                   }),
                   _(_),
-                );
+                ));
             },
             children: `Set Public`,
           }),
@@ -84794,13 +84817,13 @@ function _(_) {
                   children: [
                     (0, _.jsx)(_, {
                       onClick: (_) => {
-                        _.SetVisibility(2),
+                        (_.SetVisibility(2),
                           _(
                             (0, _.jsx)(_, {
                               oEditableMessage: _,
                             }),
                             _(_),
-                          );
+                          ));
                       },
                       className: `Primary`,
                       children: `Set Public`,
@@ -84808,13 +84831,13 @@ function _(_) {
                     _ &&
                       (0, _.jsx)(_, {
                         onClick: (_) => {
-                          _.SetVisibility(3),
+                          (_.SetVisibility(3),
                             _(
                               (0, _.jsx)(_, {
                                 oEditableMessage: _,
                               }),
                               _(_),
-                            );
+                            ));
                         },
                         className: `A7iQgcJarw4-`,
                         children: `Approve For Partner Publishing`,
@@ -84922,13 +84945,13 @@ function _(_) {
                 (0, _.jsx)(`br`, {}),
                 (0, _.jsxs)(_, {
                   onClick: (_) => {
-                    _.SetVisibility(3),
+                    (_.SetVisibility(3),
                       _(
                         (0, _.jsx)(_, {
                           oEditableMessage: _,
                         }),
                         _(_),
-                      );
+                      ));
                   },
                   className: `A7iQgcJarw4-`,
                   children: [
@@ -85560,11 +85583,11 @@ var _ = `_3UNarpHohs4-`,
       try {
         let _ = _.PARTNER_BASE_URL + `cluster/ajaxsaveclusterassets`,
           _ = new FormData();
-        _.append(`clustertype`, _(_)),
+        (_.append(`clustertype`, _(_)),
           _.append(`clusterid`, _),
           _.append(`clusterdata`, JSON.stringify(_)),
           _.append(`sessionid`, _()),
-          _ && _.append(`additional_params`, JSON.stringify(_));
+          _ && _.append(`additional_params`, JSON.stringify(_)));
         let _ = await _.default.post(_, _);
         if (_?.status == 200 && _.data?.success == 1 && _.data.cluster)
           return (
@@ -85599,8 +85622,8 @@ var _ = `_3UNarpHohs4-`,
       this.m_mapCluster.set(_, _);
     }
   };
-_([_], _.prototype, `LoadCluster`, null),
-  _([_], _.prototype, `SaveClusterAssets`, null);
+(_([_], _.prototype, `LoadCluster`, null),
+  _([_], _.prototype, `SaveClusterAssets`, null));
 function _(_, _) {
   return _.Get().GetKey(_, _);
 }
@@ -85794,7 +85817,7 @@ function _(_) {
     _ > 0 && _ > 0 && !_.bLoading)
   ) {
     let _ = !1;
-    ((_ == 0 && !_.rgAppIDs?.some((_) => _ == _)) ||
+    (((_ == 0 && !_.rgAppIDs?.some((_) => _ == _)) ||
       (_ &&
         _ != 0 &&
         !_.rgAppIDs?.some((_) => _.GetIncludedAppIDs()?.includes(_)))) &&
@@ -85802,9 +85825,9 @@ function _(_) {
       _ &&
         _.push(
           `Promotion has a partner ID set and a featured store item but the partner doesn't have access to the store item.`,
-        );
+        ));
   }
-  _?.startTime &&
+  (_?.startTime &&
     _.startTime < _ &&
     _ > _.startTime &&
     _.push(
@@ -85821,7 +85844,7 @@ function _(_) {
         _.association_type != _(_.GetStoreItemType())) &&
       _.push(
         `Marketing Message 2 featured item doesn't match the promotion plans featured item.`,
-      );
+      ));
   let _ = _
     ? {
         eStoreItemType: _.GetStoreItemType(),
@@ -85829,8 +85852,8 @@ function _(_) {
         bHasMainCapsule: !!_.GetAssets()?.GetMainCapsuleURL(),
         bHasHeroCapsule: !!_.GetAssets()?.GetHeroCapsuleURL(),
         nSafeScreenshotCount: _.GetScreenshots(!0).length,
-        nHighlightTrailerCount: _.GetAllTrailers().GetHighlightTrailers(!0)
-          .length,
+        nHighlightTrailerCount:
+          _.GetAllTrailers().GetHighlightTrailers(!0).length,
       }
     : void 0;
   return (
@@ -86913,7 +86936,7 @@ var _ = class _ {
   m_publisherID;
   async GetPartnerPreviewByID(_) {
     let _ = _.Init(_);
-    _.Body().set_gid(_), _.Body().set_partnerid(this.m_publisherID);
+    (_.Body().set_gid(_), _.Body().set_partnerid(this.m_publisherID));
     let _ = await _.GetPartnerMessagePreview(
       this.m_steamInterface.GetServiceTransport(),
       _,
@@ -86945,8 +86968,8 @@ var _ = class _ {
   constructor() {}
   Init() {
     let _ = _(`publisherid`, `application_config`);
-    (this.m_steamInterface = _(new _(_.WEBAPI_BASE_URL))),
-      (this.m_publisherID = _);
+    ((this.m_steamInterface = _(new _(_.WEBAPI_BASE_URL))),
+      (this.m_publisherID = _));
   }
 };
 function _(_) {
@@ -87145,9 +87168,9 @@ function _(_) {
     : (0, _.jsx)(_, {
         strTitle: _(`#MarketingMessage_PartnerPreview_ModalTitle`),
         onOK: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _(_).then((_) => {
-              _
+              (_
                 ? (_.fnSetSuccess(!0),
                   _.fnSetStrSuccess(
                     _(
@@ -87160,8 +87183,8 @@ function _(_) {
                       `#MarketingMessage_PartnerPreview_Button_SetPublicFailed`,
                     ),
                   )),
-                _();
-            });
+                _());
+            }));
         },
         onCancel: _,
       });
@@ -87214,7 +87237,7 @@ function _(_) {
     _ = 0;
   if (_.template_vars_json()) {
     let _ = JSON.parse(_.template_vars_json());
-    (_ = _.ll_image), (_ = _.last_asset_mtime || 0);
+    ((_ = _.ll_image), (_ = _.last_asset_mtime || 0));
   }
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -87279,14 +87302,14 @@ function _(_) {
               className: void 0,
               onClick: (_) => {
                 let _ = `${_.PARTNER_BASE_URL}marketingmessages/messagepreview/${_.gid()}/?cc=${_._}&l=${_.language}`;
-                _.preventDefault(),
+                (_.preventDefault(),
                   window
                     .open(
                       _,
                       `marketing_message`,
                       `height=720,width=700,resize=yes,scrollbars=yes`,
                     )
-                    .focus();
+                    .focus());
               },
               children: _.label,
             },
@@ -87569,12 +87592,12 @@ var _ = class {
   m_bDirty = !1;
   m_callback = new _();
   constructor(_) {
-    _(this), this.Reset(_);
+    (_(this), this.Reset(_));
   }
   Reset(_) {
-    (this.m_originalDiscountEvent = JSON.parse(JSON.stringify(_))),
+    ((this.m_originalDiscountEvent = JSON.parse(JSON.stringify(_))),
       (this.m_oDiscountEvent = JSON.parse(JSON.stringify(_))),
-      (this.m_bDirty = !1);
+      (this.m_bDirty = !1));
   }
   BIsDirty() {
     return this.m_bDirty;
@@ -87650,22 +87673,22 @@ var _ = class {
       ((this.m_oDiscountEvent.opt_in_name = _), this.Dispatch());
   }
   RevertChanges() {
-    (this.m_oDiscountEvent = JSON.parse(
+    ((this.m_oDiscountEvent = JSON.parse(
       JSON.stringify(this.m_originalDiscountEvent),
     )),
       (this.m_bDirty = !1),
-      this.m_callback.Dispatch(this);
+      this.m_callback.Dispatch(this));
   }
   Dispatch() {
-    (this.m_bDirty = !0), this.m_callback.Dispatch(this);
+    ((this.m_bDirty = !0), this.m_callback.Dispatch(this));
   }
 };
-_([_], _.prototype, `m_bDirty`, void 0),
+(_([_], _.prototype, `m_bDirty`, void 0),
   _([_], _.prototype, `SetName`, null),
   _([_], _.prototype, `SetStartDate`, null),
   _([_], _.prototype, `SetEndDate`, null),
   _([_], _.prototype, `SetOptInName`, null),
-  _([_], _.prototype, `RevertChanges`, null);
+  _([_], _.prototype, `RevertChanges`, null));
 var _ = class _ {
   m_model = null;
   InitDiscountEventToEdit(_, _ = !1) {
@@ -87685,7 +87708,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -87694,7 +87717,7 @@ function _() {
     [_, _] = _.useState(_.Get().GetDiscountEventToEdit());
   return (
     _(_?.GetCallback(), (_) => {
-      _(_), _();
+      (_(_), _());
     }),
     _
   );
@@ -87889,9 +87912,9 @@ function _(_) {
     (_ ||= new _.default(
       async (_) => {
         let _ = _.Init(_);
-        _.Body().set_appids([..._]),
+        (_.Body().set_appids([..._]),
           _.Body().set_exclude_direct_featuring(!0),
-          _.Body().set_exclude_sales(!1);
+          _.Body().set_exclude_sales(!1));
         let _ = await _.GetAllPlansForApps(_, _);
         if (!_.BSuccess())
           throw `Failed to load app featuring on promo plans details: ${_.GetErrorMessage()}`;
@@ -87976,9 +87999,9 @@ function _(_) {
     _ = (0, _.useRef)(void 0);
   (0, _.useEffect)(
     () => () => {
-      window.clearTimeout(_.current),
+      (window.clearTimeout(_.current),
         _.current && _.current(`SearchForPartner: unmounting`),
-        _.current && _.current.Hide();
+        _.current && _.current.Hide());
     },
     [],
   );
@@ -88072,9 +88095,9 @@ var _ = class _ {
   constructor() {}
   Init() {
     _(`app_paid_publishers`, `application_config`).forEach((_) => {
-      this.m_mapAppToPartners.has(_.appid) ||
+      (this.m_mapAppToPartners.has(_.appid) ||
         this.m_mapAppToPartners.set(_.appid, []),
-        this.m_mapAppToPartners.get(_.appid).push(..._.publisherid);
+        this.m_mapAppToPartners.get(_.appid).push(..._.publisherid));
     });
   }
 };
@@ -88182,7 +88205,7 @@ function _(_) {
         _ = _.findIndex((_) => _ == _.toString());
       if (_ && _ == -1) {
         let _ = _;
-        _.length > 0 && (_ += `,`), _(_ + _);
+        (_.length > 0 && (_ += `,`), _(_ + _));
       } else !_ && _ != -1 && (_.splice(_, 1), _(_.toString()));
     },
     _ = (_, _) => {
@@ -88192,13 +88215,13 @@ function _(_) {
       _(_, _, _, _);
     },
     _ = (_) => {
-      _(_), window.location.reload();
+      (_(_), window.location.reload());
     },
     _ = (_) => {
-      _(_), window.location.reload();
+      (_(_), window.location.reload());
     },
     _ = (_) => {
-      _(_), window.location.reload();
+      (_(_), window.location.reload());
     },
     [_, _] = (0, _.useMemo)(() => {
       if (_ && _ && _ && _ && _ && _ && !_ && _ && !_)
@@ -88568,7 +88591,7 @@ function _() {
   );
   return (0, _.useMemo)(() => {
     let _ = new Map();
-    return _?.length > 0 && _.forEach((_) => _.set(_.appid, _)), _;
+    return (_?.length > 0 && _.forEach((_) => _.set(_.appid, _)), _);
   }, [_]);
 }
 function _(_) {
@@ -88886,31 +88909,31 @@ function _(_) {
     _ = _;
   switch (_.reviews_filtered_score) {
     case 9:
-      (_ = _), (_ = `Overwhelmingly Positive`);
+      ((_ = _), (_ = `Overwhelmingly Positive`));
       break;
     case 8:
-      (_ = _), (_ = `Very Positive`);
+      ((_ = _), (_ = `Very Positive`));
       break;
     case 7:
-      (_ = _), (_ = `Positive`);
+      ((_ = _), (_ = `Positive`));
       break;
     case 6:
-      (_ = _), (_ = `Mostly Positive`);
+      ((_ = _), (_ = `Mostly Positive`));
       break;
     case 5:
-      (_ = _), (_ = `Mixed`);
+      ((_ = _), (_ = `Mixed`));
       break;
     case 4:
-      (_ = _), (_ = `Mostly Negative`);
+      ((_ = _), (_ = `Mostly Negative`));
       break;
     case 3:
-      (_ = _), (_ = `Negative`);
+      ((_ = _), (_ = `Negative`));
       break;
     case 2:
-      (_ = _), (_ = `Very Negative`);
+      ((_ = _), (_ = `Very Negative`));
       break;
     case 1:
-      (_ = _), (_ = `Overwhelmingly Negative`);
+      ((_ = _), (_ = `Overwhelmingly Negative`));
   }
   let _ = Math.trunc(
     (_.reviews_filtered_positive /
@@ -89742,14 +89765,14 @@ function _(_) {
     [_, _] = _.useState(!1),
     _ = _.useRef(!1),
     _ = (_, _) => {
-      _(
+      (_(
         _.join(`
 `).trim(),
       ),
         _(
           _.join(`
 `).trim(),
-        );
+        ));
     };
   return (0, _.jsxs)(_.Fragment, {
     children: [
@@ -89810,14 +89833,14 @@ function _(_) {
                       (0, _.jsx)(`button`, {
                         className: `jDOobI4gCtc-`,
                         onClick: () => {
-                          _(
+                          (_(
                             _.filter((_) => !!_._)
                               .map((_) => _._)
                               .join(`
 `)
                               .trim(),
                           ),
-                            _(``);
+                            _(``));
                         },
                         children: `Load IDs`,
                       }),
@@ -89825,7 +89848,7 @@ function _(_) {
                       (0, _.jsx)(`button`, {
                         className: `jDOobI4gCtc-`,
                         onClick: () => {
-                          _(!0), _(_, _, _, () => _(!1), _, _);
+                          (_(!0), _(_, _, _, () => _(!1), _, _));
                         },
                         children: `Start`,
                       }),
@@ -89848,7 +89871,7 @@ async function _(_, _, _, _, _, _) {
   _.current = !0;
   let _ = _.split(/,|\n/).filter((_) => _.trim().length > 0),
     _ = [];
-  for (console.log(`RefreshPromotionPlans`, _); _.length > 0 && _.current; ) {
+  for (console.log(`RefreshPromotionPlans`, _); _.length > 0 && _.current;) {
     console.log(`unprocessed`, _);
     let _ = _.slice(0, Math.min(4, _.length)),
       _ = _.map(async (_) => {
@@ -89860,9 +89883,9 @@ async function _(_, _, _, _, _, _) {
           _._,
         );
       });
-    await Promise.all(_), (_ = _.concat(_)), _.splice(0, _.length), _(_, _);
+    (await Promise.all(_), (_ = _.concat(_)), _.splice(0, _.length), _(_, _));
   }
-  (_.current = !1), _();
+  ((_.current = !1), _());
 }
 function _() {
   return _({
@@ -89941,10 +89964,10 @@ function _(_) {
                   ));
             })
             .catch(() => {
-              _.fnSetError(!0),
+              (_.fnSetError(!0),
                 _.fnSetStrError(
                   `Check console for errors and/or try again shortly`,
-                );
+                ));
             });
         },
         children: [
@@ -90040,7 +90063,7 @@ function _(_) {
       let _ = _.GetModel();
       _(_.GetPartnerID(), _.GetModel(), void 0, _)
         .then((_) => {
-          _(_), _.SaveSuccessClearDirty(), _.SaveSuccessClearDirty();
+          (_(_), _.SaveSuccessClearDirty(), _.SaveSuccessClearDirty());
         })
         .catch((_) => _(!1))
         .finally(() => _(!1));
@@ -90075,13 +90098,13 @@ function _(_) {
     strDescription: `Are you sure you want to remove the promotion plan for the following? This can't be undone, but a new one can be created if needed.  This will only delete the promotion plan itself; this has no effect on the discount event or other associated featuring of the plan.`,
     onCancel: _,
     onOK: () => {
-      _(!0),
+      (_(!0),
         _(_.GetModel()._).then((_) => {
           _
             ? (window.location.href =
                 _.PARTNER_BASE_URL + `promotion/planning/dashboard`)
             : _(`Failed To Delete, check console`);
-        });
+        }));
     },
     bOKDisabled: _,
     children: [
@@ -90186,10 +90209,10 @@ var _ = class {
   m_bDirty = !1;
   m_callback = new _();
   constructor(_) {
-    _(this), this.Reset(_);
+    (_(this), this.Reset(_));
   }
   Reset(_) {
-    (this.m_oSalePage = JSON.parse(JSON.stringify(_))),
+    ((this.m_oSalePage = JSON.parse(JSON.stringify(_))),
       this.m_oSalePage &&
         ((this.m_oSalePage.jsondata.localized_capsule_image = _(
           this.m_oSalePage.jsondata.localized_capsule_image || [],
@@ -90213,7 +90236,7 @@ var _ = class {
         )),
         (this.m_oSalePage.clanSteamID = new _(this.m_oSalePage.clanSteamID))),
       (this.m_originalSalePage = JSON.parse(JSON.stringify(_))),
-      (this.m_bDirty = !1);
+      (this.m_bDirty = !1));
   }
   BIsDirty() {
     return this.m_bDirty;
@@ -90285,31 +90308,31 @@ var _ = class {
     this.m_bDirty = _;
   }
   SetCurImage(_, _) {
-    this.SetImage(_, _.Get().GetCurEditLanguage(), _), this.Dispatch();
+    (this.SetImage(_, _.Get().GetCurEditLanguage(), _), this.Dispatch());
   }
   SetImage(_, _, _) {
-    (this.m_oSalePage.jsondata[_][_] = _), this.Dispatch();
+    ((this.m_oSalePage.jsondata[_][_] = _), this.Dispatch());
   }
   ClearAllAssetObjects(_) {
-    (this.m_oSalePage.jsondata[_] = _([], 32, null)), this.Dispatch();
+    ((this.m_oSalePage.jsondata[_] = _([], 32, null)), this.Dispatch());
   }
   DeleteAssetObjectLang(_, _) {
-    _(_), (this.m_oSalePage.jsondata[_][_] = null), this.Dispatch();
+    (_(_), (this.m_oSalePage.jsondata[_][_] = null), this.Dispatch());
   }
   Dispatch() {
-    (this.m_bDirty = !0), this.m_callback.Dispatch(this);
+    ((this.m_bDirty = !0), this.m_callback.Dispatch(this));
   }
   RevertChanges() {
-    this.Reset(this.m_originalSalePage), this.m_callback.Dispatch(this);
+    (this.Reset(this.m_originalSalePage), this.m_callback.Dispatch(this));
   }
 };
-_([_], _.prototype, `m_oSalePage`, void 0),
+(_([_], _.prototype, `m_oSalePage`, void 0),
   _([_], _.prototype, `m_bDirty`, void 0),
   _([_], _.prototype, `SetCurImage`, null),
   _([_.bound], _.prototype, `SetImage`, null),
   _([_], _.prototype, `ClearAllAssetObjects`, null),
   _([_], _.prototype, `DeleteAssetObjectLang`, null),
-  _([_], _.prototype, `RevertChanges`, null);
+  _([_], _.prototype, `RevertChanges`, null));
 var _ = class _ {
   m_mapEditModel = new Map();
   m_callback = new Map();
@@ -90318,9 +90341,9 @@ var _ = class _ {
       this.m_mapEditModel.get(_.GID).Reset(_);
     else {
       let _ = new _(_);
-      this.m_mapEditModel.set(_?.GID, _),
+      (this.m_mapEditModel.set(_?.GID, _),
         _.GetCallback().Register((_) => this.GetCallback(_?.GID).Dispatch(_)),
-        _ && this.GetCallback(_?.GID).Dispatch(_);
+        _ && this.GetCallback(_?.GID).Dispatch(_));
     }
     return this.m_mapEditModel.get(_?.GID);
   }
@@ -90341,7 +90364,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -90351,13 +90374,13 @@ function _(_, _) {
     [_, _] = _.useState(() => _.Get().GetSaleAssetsToEdit(_?.GID));
   return (
     _.useEffect(() => {
-      _ &&
+      (_ &&
         !_.Get().BHasSaleAssetsToEdit(_?.GID) &&
         _.Get().InitSaleAssetsToEdit(_),
-        _(_.Get().GetSaleAssetsToEdit(_?.GID));
+        _(_.Get().GetSaleAssetsToEdit(_?.GID)));
     }, [_]),
     _(_.Get().GetCallback(_?.GID), (_) => {
-      _(_), _();
+      (_(_), _());
     }),
     _
   );
@@ -90530,7 +90553,7 @@ function _(_) {
                   _(_, {
                     color: _,
                     onChange: (_) => {
-                      (_.sale_background_color = _), _();
+                      ((_.sale_background_color = _), _());
                     },
                   });
                 },
@@ -90542,7 +90565,7 @@ function _(_) {
               (0, _.jsx)(_, {
                 className: _,
                 onClick: (_) => {
-                  (_.sale_background_color = ``), _();
+                  ((_.sale_background_color = ``), _());
                 },
                 children: _(`#Sale_BackgroundColor_Reset`),
               }),
@@ -90883,11 +90906,11 @@ function _(_) {
           case `image/gif`:
           case `image/jpeg`:
           case `image/png`:
-            _.forEach((_) => {
+            (_.forEach((_) => {
               let _ = _(_);
               _(_, _, _) && (_ = _);
             }),
-              (_ ||= `localized_sale_header`);
+              (_ ||= `localized_sale_header`));
         }
         _ && _.SetImage(_, _, _ + _(_));
       },
@@ -91040,7 +91063,7 @@ function _(_) {
     bSaveDisabled: !1,
     fnOnSave: async () => {
       let _ = await _(_, _, _, _);
-      return _ && _.Reset(_.GetClanEventModel(_)), _;
+      return (_ && _.Reset(_.GetClanEventModel(_)), _);
     },
   });
 }
@@ -91060,12 +91083,12 @@ var _ = class {
   m_bDirty = !1;
   m_callback = new _();
   constructor(_) {
-    _(this), this.Reset(_);
+    (_(this), this.Reset(_));
   }
   Reset(_) {
-    (this.m_oSpotlight = JSON.parse(JSON.stringify(_))),
+    ((this.m_oSpotlight = JSON.parse(JSON.stringify(_))),
       (this.m_originalSpotlight = JSON.parse(JSON.stringify(_))),
-      (this.m_bDirty = !1);
+      (this.m_bDirty = !1));
   }
   BIsDirty() {
     return this.m_bDirty;
@@ -91152,17 +91175,17 @@ var _ = class {
     this.m_bDirty = _;
   }
   SetCurImage(_, _) {
-    this.SetImage(_.Get().GetCurEditLanguage(), _, _), this.Dispatch();
+    (this.SetImage(_.Get().GetCurEditLanguage(), _, _), this.Dispatch());
   }
   SetImage(_, _, _) {
-    this.m_oSpotlight[_] || (this.m_oSpotlight[_] = {}),
+    (this.m_oSpotlight[_] || (this.m_oSpotlight[_] = {}),
       Array.isArray(this.m_oSpotlight[_]) && (this.m_oSpotlight[_] = {}),
       this.SetKVLang(this.m_oSpotlight[_], _, _),
       (this.m_oSpotlight.asset_mtime = Math.floor(Date.now() / 1e3)),
-      this.Dispatch();
+      this.Dispatch());
   }
   ClearAllAssetObjects(_) {
-    (this.m_oSpotlight[_] = {}), this.Dispatch();
+    ((this.m_oSpotlight[_] = {}), this.Dispatch());
   }
   DeleteAssetObjectLang(_, _) {
     let _ = _(_);
@@ -91170,10 +91193,10 @@ var _ = class {
       (delete this.m_oSpotlight[_][_], this.Dispatch());
   }
   SetLocalizedAltText(_, _) {
-    this.m_oSpotlight.accessibility_label ||
+    (this.m_oSpotlight.accessibility_label ||
       (this.m_oSpotlight.accessibility_label = {}),
       this.SetKVLang(this.m_oSpotlight.accessibility_label, _, _),
-      this.Dispatch();
+      this.Dispatch());
   }
   SetKVLang(_, _, _) {
     _(_, _, _) && this.SetDirty(!0);
@@ -91182,22 +91205,22 @@ var _ = class {
     return _(_, _);
   }
   Dispatch() {
-    (this.m_bDirty = !0), this.m_callback.Dispatch(this);
+    ((this.m_bDirty = !0), this.m_callback.Dispatch(this));
   }
   RevertChanges() {
-    (this.m_oSpotlight = JSON.parse(JSON.stringify(this.m_originalSpotlight))),
+    ((this.m_oSpotlight = JSON.parse(JSON.stringify(this.m_originalSpotlight))),
       (this.m_bDirty = !1),
-      this.m_callback.Dispatch(this);
+      this.m_callback.Dispatch(this));
   }
 };
-_([_], _.prototype, `m_bDirty`, void 0),
+(_([_], _.prototype, `m_bDirty`, void 0),
   _([_], _.prototype, `GetLocalizedAltText`, null),
   _([_], _.prototype, `SetCurImage`, null),
   _([_.bound], _.prototype, `SetImage`, null),
   _([_], _.prototype, `ClearAllAssetObjects`, null),
   _([_], _.prototype, `DeleteAssetObjectLang`, null),
   _([_.bound], _.prototype, `SetLocalizedAltText`, null),
-  _([_], _.prototype, `RevertChanges`, null);
+  _([_], _.prototype, `RevertChanges`, null));
 var _ = class _ {
   m_mapEditModel = new Map();
   m_callback = new Map();
@@ -91205,9 +91228,9 @@ var _ = class _ {
     if (this.m_mapEditModel.has(_) && !_) this.m_mapEditModel.get(_).Reset(_);
     else {
       let _ = new _(_);
-      this.m_mapEditModel.set(_, _),
+      (this.m_mapEditModel.set(_, _),
         _.GetCallback().Register((_) => this.GetCallback(_).Dispatch(_)),
-        _ && this.GetCallback(_).Dispatch(_);
+        _ && this.GetCallback(_).Dispatch(_));
     }
     return this.m_mapEditModel.get(_);
   }
@@ -91228,7 +91251,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -91238,13 +91261,13 @@ function _(_) {
     _ = _(_);
   return (
     _.useEffect(() => {
-      _ &&
+      (_ &&
         !_.Get().BHasSpotlightToEdit(_._) &&
         _.Get().InitSpotlightToEdit(_._, _),
-        _(_.Get().GetSpotlightToEdit(_?._));
+        _(_.Get().GetSpotlightToEdit(_?._)));
     }, [_]),
     _(_.Get().GetCallback(_), (_) => {
-      _(_), _();
+      (_(_), _());
     }),
     _
   );
@@ -91494,7 +91517,7 @@ function _(_) {
       fnOnRevert: () => _.RevertChanges(),
       fnOnSave: async () => {
         let _ = await _(_.k_ConfigPage_Spotlight, _, _.GetAssetParams());
-        return _ && _.Reset(_(_.k_ConfigPage_Spotlight, _)), _;
+        return (_ && _.Reset(_(_.k_ConfigPage_Spotlight, _)), _);
       },
     })
   );
@@ -91564,13 +91587,13 @@ var _ = class {
   m_bDirty = !1;
   m_callback = new _();
   constructor(_, _) {
-    _(this), this.Reset(_, _);
+    (_(this), this.Reset(_, _));
   }
   Reset(_, _) {
-    (this.m_oTakeover = JSON.parse(JSON.stringify(_))),
+    ((this.m_oTakeover = JSON.parse(JSON.stringify(_))),
       (this.m_originalTakeover = JSON.parse(JSON.stringify(_))),
       (this.m_type = _),
-      (this.m_bDirty = !1);
+      (this.m_bDirty = !1));
   }
   BIsDirty() {
     return this.m_bDirty;
@@ -91620,7 +91643,7 @@ var _ = class {
   }
   GetAssetCount() {
     let _ = 0;
-    return _.forEach((_) => (_ += _(this.GetAssetsObject(_)))), _;
+    return (_.forEach((_) => (_ += _(this.GetAssetsObject(_)))), _);
   }
   GetAssetParams() {
     let _ = {};
@@ -91691,16 +91714,16 @@ var _ = class {
     this.m_bDirty = _;
   }
   SetCurImage(_, _) {
-    this.SetImage(_, _.Get().GetCurEditLanguage(), _), this.Dispatch();
+    (this.SetImage(_, _.Get().GetCurEditLanguage(), _), this.Dispatch());
   }
   SetImage(_, _, _) {
-    this.m_oTakeover[_] || (this.m_oTakeover[_] = {}),
+    (this.m_oTakeover[_] || (this.m_oTakeover[_] = {}),
       Array.isArray(this.m_oTakeover[_]) && (this.m_oTakeover[_] = {}),
       this.SetKVLang(this.m_oTakeover[_], _, _),
-      this.Dispatch();
+      this.Dispatch());
   }
   ClearAllAssetObjects(_) {
-    (this.m_oTakeover[_] = {}), this.Dispatch();
+    ((this.m_oTakeover[_] = {}), this.Dispatch());
   }
   DeleteAssetObjectLang(_, _) {
     let _ = _(_);
@@ -91735,9 +91758,9 @@ var _ = class {
       ((this.m_oTakeover.page_bg_color_right = _), this.Dispatch());
   }
   SetLocalizedAltText(_, _) {
-    this.m_oTakeover.accessibility_label ||
+    (this.m_oTakeover.accessibility_label ||
       (this.m_oTakeover.accessibility_label = {}),
-      this.SetKVLang(this.m_oTakeover.accessibility_label, _, _);
+      this.SetKVLang(this.m_oTakeover.accessibility_label, _, _));
   }
   SetKVLang(_, _, _) {
     _(_, _, _) && this.SetDirty(!0);
@@ -91746,15 +91769,15 @@ var _ = class {
     return _(_, _);
   }
   Dispatch() {
-    (this.m_bDirty = !0), this.m_callback.Dispatch(this);
+    ((this.m_bDirty = !0), this.m_callback.Dispatch(this));
   }
   RevertChanges() {
-    (this.m_oTakeover = JSON.parse(JSON.stringify(this.m_originalTakeover))),
+    ((this.m_oTakeover = JSON.parse(JSON.stringify(this.m_originalTakeover))),
       (this.m_bDirty = !1),
-      this.m_callback.Dispatch(this);
+      this.m_callback.Dispatch(this));
   }
 };
-_([_], _.prototype, `m_bDirty`, void 0),
+(_([_], _.prototype, `m_bDirty`, void 0),
   _([_], _.prototype, `GetLocalizedAltText`, null),
   _([_], _.prototype, `SetCurImage`, null),
   _([_.bound], _.prototype, `SetImage`, null),
@@ -91766,7 +91789,7 @@ _([_], _.prototype, `m_bDirty`, void 0),
   _([_], _.prototype, `SetColorLeft`, null),
   _([_], _.prototype, `SetColorRight`, null),
   _([_], _.prototype, `SetLocalizedAltText`, null),
-  _([_], _.prototype, `RevertChanges`, null);
+  _([_], _.prototype, `RevertChanges`, null));
 var _ = class _ {
   m_mapEditModel = new Map();
   m_callback = new Map();
@@ -91776,9 +91799,9 @@ var _ = class _ {
       this.m_mapEditModel.get(_).Reset(_, _);
     else {
       let _ = new _(_, _);
-      this.m_mapEditModel.set(_, _),
+      (this.m_mapEditModel.set(_, _),
         _.GetCallback().Register((_) => this.GetCallback(_).Dispatch(_)),
-        _ && this.GetCallback(_).Dispatch(_);
+        _ && this.GetCallback(_).Dispatch(_));
     }
     return this.m_mapEditModel.get(_);
   }
@@ -91802,7 +91825,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -91812,13 +91835,13 @@ function _(_, _) {
     _ = _(_, _);
   return (
     _.useEffect(() => {
-      _ &&
+      (_ &&
         !_.Get().BHasTakeoverToEdit(_, _) &&
         _.Get().InitTakeoverToEdit(_, _, _),
-        _(_.Get().GetTakeoverToEdit(_, _));
+        _(_.Get().GetTakeoverToEdit(_, _)));
     }, [_, _, _]),
     _(_.Get().GetCallback(_), (_) => {
-      _(_), _();
+      (_(_), _());
     }),
     _
   );
@@ -92342,7 +92365,7 @@ function _(_) {
     bSaveDisabled: _ == 0,
     fnOnSave: async () => {
       let _ = await _(_, _, _.GetAssetParams());
-      return _ && _.Reset(_(_, _), _), _;
+      return (_ && _.Reset(_(_, _), _), _);
     },
   });
 }
@@ -92380,13 +92403,13 @@ var _ = class {
   m_bDirty = !1;
   m_callback = new _();
   constructor(_) {
-    _(this), this.Reset(_);
+    (_(this), this.Reset(_));
   }
   Reset(_) {
-    (this.m_oTakeunder = JSON.parse(JSON.stringify(_))),
+    ((this.m_oTakeunder = JSON.parse(JSON.stringify(_))),
       (this.m_originalTakeover = JSON.parse(JSON.stringify(_))),
       (this.m_type = _.k_ConfigPage_Takeunder),
-      (this.m_bDirty = !1);
+      (this.m_bDirty = !1));
   }
   BIsDirty() {
     return this.m_bDirty;
@@ -92429,7 +92452,7 @@ var _ = class {
   }
   GetAssetCount() {
     let _ = 0;
-    return _.forEach((_) => (_ += _(this.GetAssetsObject(_)))), _;
+    return (_.forEach((_) => (_ += _(this.GetAssetsObject(_)))), _);
   }
   GetLocalizedAltText(_) {
     return (
@@ -92467,21 +92490,21 @@ var _ = class {
     this.m_bDirty = _;
   }
   SetCurImage(_, _) {
-    this.SetImage(_, _.Get().GetCurEditLanguage(), _), this.Dispatch();
+    (this.SetImage(_, _.Get().GetCurEditLanguage(), _), this.Dispatch());
   }
   SetImage(_, _, _) {
-    this.m_oTakeunder[_] || (this.m_oTakeunder[_] = {}),
+    (this.m_oTakeunder[_] || (this.m_oTakeunder[_] = {}),
       Array.isArray(this.m_oTakeunder[_]) && (this.m_oTakeunder[_] = {}),
       this.SetKVLang(this.m_oTakeunder[_], _, _),
-      this.Dispatch();
+      this.Dispatch());
   }
   SetLocalizedAltText(_, _) {
-    this.m_oTakeunder.accessibility_label ||
+    (this.m_oTakeunder.accessibility_label ||
       (this.m_oTakeunder.accessibility_label = {}),
-      this.SetKVLang(this.m_oTakeunder.accessibility_label, _, _);
+      this.SetKVLang(this.m_oTakeunder.accessibility_label, _, _));
   }
   ClearAllAssetObjects(_) {
-    (this.m_oTakeunder[_] = {}), this.Dispatch();
+    ((this.m_oTakeunder[_] = {}), this.Dispatch());
   }
   DeleteAssetObjectLang(_, _) {
     let _ = _(_);
@@ -92495,22 +92518,22 @@ var _ = class {
     return _(_, _);
   }
   Dispatch() {
-    (this.m_bDirty = !0), this.m_callback.Dispatch(this);
+    ((this.m_bDirty = !0), this.m_callback.Dispatch(this));
   }
   RevertChanges() {
-    (this.m_oTakeunder = JSON.parse(JSON.stringify(this.m_originalTakeover))),
+    ((this.m_oTakeunder = JSON.parse(JSON.stringify(this.m_originalTakeover))),
       (this.m_bDirty = !1),
-      this.m_callback.Dispatch(this);
+      this.m_callback.Dispatch(this));
   }
 };
-_([_], _.prototype, `m_bDirty`, void 0),
+(_([_], _.prototype, `m_bDirty`, void 0),
   _([_], _.prototype, `GetLocalizedAltText`, null),
   _([_], _.prototype, `SetCurImage`, null),
   _([_.bound], _.prototype, `SetImage`, null),
   _([_], _.prototype, `SetLocalizedAltText`, null),
   _([_], _.prototype, `ClearAllAssetObjects`, null),
   _([_], _.prototype, `DeleteAssetObjectLang`, null),
-  _([_], _.prototype, `RevertChanges`, null);
+  _([_], _.prototype, `RevertChanges`, null));
 var _ = class _ {
   m_mapEditModel = new Map();
   m_callback = new Map();
@@ -92518,9 +92541,9 @@ var _ = class _ {
     if (this.m_mapEditModel.has(_) && !_) this.m_mapEditModel.get(_).Reset(_);
     else {
       let _ = new _(_);
-      this.m_mapEditModel.set(_, _),
+      (this.m_mapEditModel.set(_, _),
         _.GetCallback().Register((_) => this.GetCallback(_).Dispatch(_)),
-        _ && this.m_mapEditModel.get(_).GetCallback().Dispatch(_);
+        _ && this.m_mapEditModel.get(_).GetCallback().Dispatch(_));
     }
     return this.m_mapEditModel.get(_);
   }
@@ -92541,7 +92564,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -92551,13 +92574,13 @@ function _(_) {
     _ = _(_.k_ConfigPage_Takeunder, _);
   return (
     _.useEffect(() => {
-      _ &&
+      (_ &&
         !_.Get().BHasTakeunderToEdit(_._) &&
         _.Get().InitTakeunderToEdit(_._, _),
-        _(_.Get().GetTakeunderToEdit(_?._));
+        _(_.Get().GetTakeunderToEdit(_?._)));
     }, [_, _]),
     _(_.Get().GetCallback(_), (_) => {
-      _(_), _();
+      (_(_), _());
     }),
     _
   );
@@ -92844,7 +92867,7 @@ function _(_) {
     fnOnRevert: () => _.RevertChanges(),
     fnOnSave: async () => {
       let _ = await _(_.k_ConfigPage_Takeunder, _, _.GetAssetParams());
-      return _ && _.Reset(_(_.k_ConfigPage_Takeunder, _)), _;
+      return (_ && _.Reset(_(_.k_ConfigPage_Takeunder, _)), _);
     },
   });
 }
@@ -92854,12 +92877,12 @@ var _ = class {
   m_bDirty = !1;
   m_callback = new _();
   constructor(_) {
-    _(this), this.Reset(_);
+    (_(this), this.Reset(_));
   }
   Reset(_) {
-    (this.m_oStoreAppAssets = JSON.parse(JSON.stringify(_))),
+    ((this.m_oStoreAppAssets = JSON.parse(JSON.stringify(_))),
       (this.m_originalStoreAppAssets = JSON.parse(JSON.stringify(_))),
-      (this.m_bDirty = !1);
+      (this.m_bDirty = !1));
   }
   BIsDirty() {
     return this.m_bDirty;
@@ -92893,8 +92916,8 @@ var _ = class {
     );
   }
 };
-_([_], _.prototype, `m_bDirty`, void 0),
-  _([_], _.prototype, `RevertChanges`, null);
+(_([_], _.prototype, `m_bDirty`, void 0),
+  _([_], _.prototype, `RevertChanges`, null));
 var _ = [`header_image`, `main_capsule`];
 function _(_) {
   switch (_) {
@@ -92980,7 +93003,7 @@ var _ = class _ {
     try {
       let _ = _.PARTNER_BASE_URL + `appsupport/ajaxpublishassets`,
         _ = new FormData();
-      _.append(`appid`, JSON.stringify(_)), _.append(`sessionid`, _());
+      (_.append(`appid`, JSON.stringify(_)), _.append(`sessionid`, _()));
       let _ = await _.default.post(_, _, {
         withCredentials: !0,
       });
@@ -93011,8 +93034,8 @@ var _ = class _ {
     this.m_mapAppAssets.set(_, _);
   }
 };
-_([_], _.prototype, `LoadAssets`, null),
-  _([_], _.prototype, `PublishAssets`, null);
+(_([_], _.prototype, `LoadAssets`, null),
+  _([_], _.prototype, `PublishAssets`, null));
 function _(_) {
   let [_, _] = (0, _.useState)(() => _.Get().GetAppAssetsByID(_));
   return (
@@ -93033,9 +93056,9 @@ var _ = class _ {
     if (this.m_mapEditModel.has(_) && !_) this.m_mapEditModel.get(_).Reset(_);
     else {
       let _ = new _(_);
-      this.m_mapEditModel.set(_, _),
+      (this.m_mapEditModel.set(_, _),
         _.GetCallback().Register((_) => this.GetCallback(_).Dispatch(_)),
-        _ && this.GetCallback(_).Dispatch(_);
+        _ && this.GetCallback(_).Dispatch(_));
     }
     return this.m_mapEditModel.get(_);
   }
@@ -93056,7 +93079,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -93066,14 +93089,14 @@ function _(_) {
     _ = _(_);
   return (
     _.useEffect(() => {
-      _ &&
+      (_ &&
         _ &&
         !_.Get().BHasAppAssetsToEdit(_) &&
         _.Get().InitAppAssetsToEdit(_, _),
-        _(_.Get().GetAppAssetsToEdit(_));
+        _(_.Get().GetAppAssetsToEdit(_)));
     }, [_, _]),
     _(_.Get().GetCallback(_), (_) => {
-      _(_), _();
+      (_(_), _());
     }),
     _
   );
@@ -93836,7 +93859,7 @@ function _(_) {
     _ = 0;
   return (
     _.forEach((_) => {
-      _ < 29 && (_ = !1), (_ += 29), (_ += _);
+      (_ < 29 && (_ = !1), (_ += 29), (_ += _));
     }),
     _
       ? (0, _.jsx)(`div`, {
@@ -93867,7 +93890,8 @@ function _() {
   let [_] = (0, _.useState)(() => _(`analysis_plan_ids`, `application_config`)),
     _ = _(_, 0);
   return (0, _.useMemo)(() => {
-    if (!_?.sales?.length) return console.warn(`No sales data available`), null;
+    if (!_?.sales?.length)
+      return (console.warn(`No sales data available`), null);
     let _ = new Map();
     _.sales.forEach((_) => {
       if (_) {
@@ -93893,15 +93917,15 @@ function _() {
       _.forEach((_) => {
         let _ = 0,
           _ = 0;
-        _.rgMidweeks &&
+        (_.rgMidweeks &&
           (_.rgMidweeks.forEach((_) => {
-            (_ +=
+            ((_ +=
               Number.parseInt(
                 _.promoSales.summary_sales.total_gross_sales_usdx100,
               ) / 1e4),
               (_ += Number.parseInt(
                 _.promoSales.summary_sales.steam_gross_units_sold,
-              ));
+              )));
           }),
           _.rgMidweeks.sort(
             (_, _) =>
@@ -93914,13 +93938,13 @@ function _() {
           )),
           _.rgWeekends &&
             (_.rgWeekends.forEach((_) => {
-              (_ +=
+              ((_ +=
                 Number.parseInt(
                   _.promoSales.summary_sales.total_gross_sales_usdx100,
                 ) / 1e4),
                 (_ += Number.parseInt(
                   _.promoSales.summary_sales.steam_gross_units_sold,
-                ));
+                )));
             }),
             _.rgWeekends.sort(
               (_, _) =>
@@ -93932,7 +93956,7 @@ function _() {
                 ),
             )),
           (_.summaryUSD = _),
-          (_.summaryUnits = _);
+          (_.summaryUnits = _));
       }),
       _.sort((_, _) => _.rtWeekStart - _.rtWeekStart),
       _
@@ -94669,7 +94693,7 @@ function _(_) {
             _ = Number(_.summary_sales.steam_gross_units_sold);
           if (_.has(_)) {
             let _ = _.get(_);
-            (_.gross_sales_usdx100 += _), (_.gross_units_sold += _);
+            ((_.gross_sales_usdx100 += _), (_.gross_units_sold += _));
           } else
             _.set(_, {
               productid: _,
@@ -94831,7 +94855,7 @@ function _(_) {
       (0, _.jsx)(_, {
         rgWeeklyPlanAndResults: _,
         fnSetSelectedWeek: (_) => {
-          _(_), _(_.rtWeekStart);
+          (_(_), _(_.rtWeekStart));
         },
       }),
       (0, _.jsx)(
@@ -95518,14 +95542,14 @@ function _(_) {
       _ && (window.location.href = _);
     },
     _ = () => {
-      _.closeModal(),
+      (_.closeModal(),
         _(
           (0, _.jsx)(_, {
             rgLocalPackageDiscountOverrides: _,
             fnOnSuccess: _,
           }),
           window,
-        );
+        ));
     };
   return (0, _.jsx)(_, {
     title: _,
@@ -95586,7 +95610,7 @@ function _(_) {
                 bOKDisabled: _ || _,
                 strUpdateText: _(`#PackageGrid_NavigateWithoutSavingButton`),
                 onUpdate: () => {
-                  _([]), _.closeModal(), _();
+                  (_([]), _.closeModal(), _());
                 },
                 onCancel: _.closeModal,
               })
@@ -95891,7 +95915,7 @@ function _(_) {
     strTitle: _(`#DiscountDashboard_OptIn_QuickRegistration_Title`),
     strOKButtonText: _(`#DiscountDashboard_OptIn_QuickRegistration_Title`),
     onOK: () => {
-      _(!0),
+      (_(!0),
         _.Get()
           .RegisterAppForOptIn(_.nBaseAppID, _)
           .then((_) => {
@@ -95907,7 +95931,7 @@ function _(_) {
                   }),
                   window,
                 ));
-          });
+          }));
     },
     onCancel: _,
     bOKDisabled: !!_,
@@ -95959,13 +95983,13 @@ function _(_) {
     _ = _.bChangedLocally;
   switch (_.eState) {
     case 0:
-      _.push(void 0), (_ = null);
+      (_.push(void 0), (_ = null));
       break;
     case 1:
       _.push(void 0);
       let _ = null,
         _ = _.discount?.nDiscountPct || 0;
-      _ > 0
+      (_ > 0
         ? (_.push(_),
           _ !== void 0 &&
             (_ = (0, _.jsx)(_, {
@@ -96025,67 +96049,67 @@ function _(_) {
                     strMessage: _(`#DiscountDashboard_OptIn_Grid_OptInLink`),
                   }),
               ],
-            }));
+            })));
       break;
     case 2:
-      _.push(_),
+      (_.push(_),
         (_ = (0, _.jsx)(_, {
           packageState: _,
           strMessage: _(`#DiscountDashboard_OptIn_Grid_OptInRequired`),
-        }));
+        })));
       break;
     case 3:
-      _.push(void 0),
+      (_.push(void 0),
         (_ = (0, _.jsx)(_, {
           packageState: _,
           strMessage: _(`#DiscountDashboard_OptIn_Grid_OptedOut`),
-        }));
+        })));
       break;
     case 4:
     case 10:
-      _.push(void 0),
+      (_.push(void 0),
         (_ = (0, _.jsx)(_, {
           className: _,
           toolTipContent: _(
             `#DiscountDashboard_OptIn_Grid_Ineligible_NA_tooltip`,
           ),
           children: _(`#DiscountDashboard_OptIn_Grid_Ineligible_NA`),
-        }));
+        })));
       break;
     case 5:
-      _.push(void 0),
+      (_.push(void 0),
         (_ = (0, _.jsx)(`div`, {
           className: _,
           children: _(`#DiscountDashboard_OptIn_Grid_Ineligible_NoBaseGame`),
-        }));
+        })));
       break;
     case 11:
-      _.push(void 0),
+      (_.push(void 0),
         (_ = (0, _.jsx)(`div`, {
           className: _,
           children: _(
             `#DiscountDashboard_OptIn_Grid_Ineligible_RegisterBaseGame`,
           ),
-        }));
+        })));
       break;
     case 6:
-      _.push(void 0),
+      (_.push(void 0),
         (_ = (0, _.jsx)(_, {
           packageState: _,
-        }));
+        })));
       break;
     case 7:
-      _.push(void 0),
+      (_.push(void 0),
         (_ = (0, _.jsx)(_, {
           packageState: _,
-        }));
+        })));
       break;
     case 8:
     case 9:
-      _.push(void 0),
+      (_.push(void 0),
         (_ = (0, _.jsx)(_, {
           packageState: _,
-        }));
+        })));
   }
   return (0, _.jsxs)(`div`, {
     className: _(..._),
@@ -96713,7 +96737,7 @@ function _(_) {
   _.useEffect(() => {
     if (!_) return;
     let _ = _.current;
-    return _.observe(_), () => _.unobserve(_);
+    return (_.observe(_), () => _.unobserve(_));
   }, [_]);
   let _ = (_) => {
       let _ = _.target.value,
@@ -96936,10 +96960,10 @@ function _(_) {
             _ = _.has(_._);
           }
           let _ = !0;
-          _?.columnVisibility &&
+          (_?.columnVisibility &&
             _.accessorKey in _.columnVisibility &&
             (_ = _.columnVisibility[_.accessorKey]),
-            _ == _ ? _ && _ && _.push(_) : _.toggleVisibility();
+            _ == _ ? _ && _ && _.push(_) : _.toggleVisibility());
         }),
         !_ &&
           _.length == 1 &&
@@ -96966,12 +96990,12 @@ function _(_) {
             .find((_) => _._ === `packageID`)
             .setFilterValue(!0));
       } else
-        _.current?.setColumnFilterFnOverride({}),
+        (_.current?.setColumnFilterFnOverride({}),
           _.current
             .getColumns()
             .find((_) => _._ === `packageID`)
-            .setFilterValue(void 0);
-      (_.current = _), (_.current = _), _(!1);
+            .setFilterValue(void 0));
+      ((_.current = _), (_.current = _), _(!1));
     }, [_]),
     _
   );
@@ -97263,7 +97287,7 @@ function _(_, _, _) {
     _ = new Set();
   for (let _ of _) {
     let _ = _(_);
-    _.has(_) && (_ = _ + `/` + _._), _.add(_), _.push(_);
+    (_.has(_) && (_ = _ + `/` + _._), _.add(_), _.push(_));
   }
   _.push(_);
   for (let _ of _) {
@@ -97284,14 +97308,14 @@ async function _(_, _) {
     let _ = _(_),
       _ = _.target.files[0],
       _ = await _.ParseCSVFile(_);
-    _(
+    (_(
       (0, _.jsx)(_, {
         strFilename: _.name,
         parseResult: _,
       }),
       _,
     ),
-      _();
+      _());
   }
 }
 function _(_, _, _, _, _) {
@@ -97343,7 +97367,7 @@ function _(_) {
         nPackagesImported: _,
         nDiscountEventsImported: _,
       } = _(_, _, _, _, _);
-      _(_), _(_), _(_);
+      (_(_), _(_), _(_));
     }, [_, _, _, _, _]),
     _ === null)
   )
@@ -97420,13 +97444,13 @@ function _(_) {
     [_, _] = _.useState(!1),
     [_, _] = _.useState(!1),
     [_, _] = _.useState(!1);
-  _.useEffect(() => {
-    _(_(`#DiscountDashboard_LoadingPackagesWithCount`, _.length)),
+  (_.useEffect(() => {
+    (_(_(`#DiscountDashboard_LoadingPackagesWithCount`, _.length)),
       _(_, _).then((_) => {
         _?.length > 0
           ? _(_)
           : _(_(`#DiscountDashboard_Error_CouldNotLoadPackages`));
-      });
+      }));
   }, [_, _]),
     _.useEffect(() => {
       _(_, _).then((_) => {
@@ -97466,9 +97490,9 @@ function _(_) {
     _.useEffect(() => {
       _ &&
         window.setTimeout(() => {
-          _(), _(), _(null), _(!0);
+          (_(), _(), _(null), _(!0));
         }, 0);
-    }, [_, _, _]);
+    }, [_, _, _]));
   let _ = _.PARTNER_BASE_URL + `doc/marketing/discounts`,
     _ = _.HELP_BASE_URL + `wizard/HelpWithPublishing?issueid=919`,
     _ = !!_;
@@ -97612,7 +97636,7 @@ function _(_) {
 }
 function _(_) {
   let _ = _.unix(_)._(`America/Los_Angeles`).day();
-  return (_ -= _.PerDay * _), _(_);
+  return ((_ -= _.PerDay * _), _(_));
 }
 function _(_) {
   let _ = _.unix(_)._(`America/Los_Angeles`);
@@ -97772,7 +97796,7 @@ var _ = class _ {
     let _ = null;
     try {
       let _ = _.Init(_);
-      _.Body().set_gid(_), _ && _.Body().set_partnerid(_);
+      (_.Body().set_gid(_), _ && _.Body().set_partnerid(_));
       let _ = await _.GetDailyDeals(
         this.m_SteamInterface.GetServiceTransport(),
         _,
@@ -97818,7 +97842,7 @@ var _ = class _ {
     );
   }
   CreateVanityToDailyDealMap() {
-    (this.m_mapSaleVanityDailyDeals = new Map()),
+    ((this.m_mapSaleVanityDailyDeals = new Map()),
       Array.from(this.m_mapCDailyDeals.values()).forEach((_) => {
         if (_.template_json?.includes(`override_url`)) {
           let _ = new _(_),
@@ -97831,7 +97855,7 @@ var _ = class _ {
                 ])
               : this.m_mapSaleVanityDailyDeals.set(_, [_.GetDealID()]));
         }
-      });
+      }));
   }
   GetDailyDealsBySalePageVanity(_) {
     return (
@@ -97872,15 +97896,15 @@ var _ = class _ {
     let _ = null;
     try {
       let _ = new _();
-      _.set_rtime32_start_time(_),
+      (_.set_rtime32_start_time(_),
         _.appid
           ? (_.set_store_item_type(0), _.set_store_item_id(_.appid))
           : _.packageid
             ? (_.set_store_item_type(1), _.set_store_item_id(_.packageid))
             : _.bundleid &&
-              (_.set_store_item_type(2), _.set_store_item_id(_.bundleid));
+              (_.set_store_item_type(2), _.set_store_item_id(_.bundleid)));
       let _ = {};
-      (_ = {
+      ((_ = {
         ..._,
         location: {
           hubTargets: [`main`],
@@ -97893,7 +97917,7 @@ var _ = class _ {
             override_url: _.trim(),
           }),
         _.set_template_json(JSON.stringify(_)),
-        _?.trim().length > 0 && _.set_discount_event_id(parseInt(_.trim()));
+        _?.trim().length > 0 && _.set_discount_event_id(parseInt(_.trim())));
       let _ = _.Init(_);
       _.Body().set_daily_deal(_);
       let _ = await _.CreateDailyDeal(
@@ -97926,10 +97950,10 @@ var _ = class _ {
     let _ = null;
     try {
       let _ = _.fromObject(_);
-      _.Info(`Saving:` + JSON.stringify(_)),
-        this.m_mapCDailyDeals.set(_.gid, _);
+      (_.Info(`Saving:` + JSON.stringify(_)),
+        this.m_mapCDailyDeals.set(_.gid, _));
       let _ = _.Init(_);
-      _.Body().set_gid(_.gid), _.Body().set_daily_deal(_);
+      (_.Body().set_gid(_.gid), _.Body().set_daily_deal(_));
       let _ = await _.UpdateDailyDeal(
         this.m_SteamInterface.GetServiceTransport(),
         _,
@@ -98008,8 +98032,8 @@ var _ = class _ {
       if (_.GetEResult() != 1) _ = _(_);
       else {
         let _ = this.m_mapCDailyDeals.get(_.gid);
-        (_.cancelled = !0),
-          (_.rtime32_cancel_time = Math.floor(Date.now() / 1e3));
+        ((_.cancelled = !0),
+          (_.rtime32_cancel_time = Math.floor(Date.now() / 1e3)));
         let _ = this.m_mapCDailyDealsByDay.get(_.rtime32_start_time);
         if (_) {
           let _ = _.findIndex((_) => _.gid == _);
@@ -98038,14 +98062,14 @@ var _ = class _ {
   }
   async SetDailyDealSalePage(_, _, _, _, _, _, _) {
     let _ = _.Init(_);
-    _.Body().set_clan_account_id(_),
+    (_.Body().set_clan_account_id(_),
       _.Body().set_daily_deal_gid(_),
       _.Body().set_partner_id(_),
       _.Body().set_rtime_sale_start(_),
       _.Body().set_rtime_sale_end(_),
       _.Body().set_create_asset_request(!0),
       _ && _.Body().set_advertising_appid(_),
-      _ && _.Body().set_clan_event_gid(_);
+      _ && _.Body().set_clan_event_gid(_));
     let _ = await _.CreateSalePageForPromo(
         this.m_SteamInterface.GetServiceTransport(),
         _,
@@ -98061,12 +98085,12 @@ var _ = class _ {
     try {
       let _ = new _();
       if (_) {
-        _.set_rtime32_start_time(_),
+        (_.set_rtime32_start_time(_),
           _.set_store_item_name(_),
           _.set_template_json(`{}`),
           _.set_store_item_type(-1),
           _.set_store_item_id(0),
-          _.set_discount_event_id(_);
+          _.set_discount_event_id(_));
         let _ = _.Init(_);
         _.Body().set_daily_deal(_);
         let _ = await _.CreateDailyDeal(
@@ -98170,7 +98194,7 @@ var _ = class _ {
       }));
     let _ = _(`blockout_dates`, `application_config`) || [],
       _ = _(`scheduled_slots`, `application_config`) || [];
-    _.length > 0 &&
+    (_.length > 0 &&
       _.forEach((_) =>
         this.HelperAddEDailyDealDisplayInfo(_, {
           eType: 2,
@@ -98182,18 +98206,18 @@ var _ = class _ {
             eType: 1,
             name: _.name,
           }),
-        );
+        ));
   }
   HelperAddEDailyDealDisplayInfo(_, _) {
-    this.m_mapCalendarMarkupByDay.has(_) ||
+    (this.m_mapCalendarMarkupByDay.has(_) ||
       this.m_mapCalendarMarkupByDay.set(_, []),
       this.m_mapCalendarMarkupByDay.set(_, [
         ...this.m_mapCalendarMarkupByDay.get(_),
         _,
-      ]);
+      ]));
   }
 };
-_([_], _.prototype, `LoadDailyDealByID`, null),
+(_([_], _.prototype, `LoadDailyDealByID`, null),
   _([_], _.prototype, `GetDailyDealsBySalePageVanity`, null),
   _([_], _.prototype, `AddDailyDeal`, null),
   _([_], _.prototype, `SaveDailyDeal`, null),
@@ -98201,10 +98225,10 @@ _([_], _.prototype, `LoadDailyDealByID`, null),
   _([_], _.prototype, `CancelDailyDeal`, null),
   _([_], _.prototype, `SetDailyDealSalePage`, null),
   _([_], _.prototype, `SetBlackoutDate`, null),
-  _([_], _.prototype, `InternalAddCDailyDeal`, null);
+  _([_], _.prototype, `InternalAddCDailyDeal`, null));
 function _() {
   let [_, _] = _.useState(_.Get().GetAllDailyDeals());
-  return _(_.Get().GetCallbackForDailyDealList(), _), _;
+  return (_(_.Get().GetCallbackForDailyDealList(), _), _);
 }
 function _(_, _) {
   let _ = _.Get(),
@@ -98226,7 +98250,7 @@ function _(_) {
 }
 function _(_) {
   let [_, _] = _.useState(() => _.Get().GetDailyDealByDay(_));
-  return _(_.Get().GetCallbackForDailyDealByDayList(_), _), _;
+  return (_(_.Get().GetCallbackForDailyDealByDayList(_), _), _);
 }
 function _() {
   return {
@@ -98272,13 +98296,13 @@ function _(_) {
           _ = _(_?.discount_event_id?.toString()),
           _ = _(_.packageid),
           _ = [];
-        _.store_item_type == 0
+        (_.store_item_type == 0
           ? (_ = _?.get(_.store_item_id)?.discounts ?? [])
           : _.store_item_type == 1
             ? (_ = _)
             : _.store_item_type == 2 &&
               (_ = _?.get(_.store_item_id)?.discounts ?? []),
-          _.push(_(_, _, _));
+          _.push(_(_, _, _)));
       }),
       _
     );
@@ -98325,10 +98349,10 @@ function _(_, _, _) {
       let _, _, _, _;
       return (
         _.forEach((_) => {
-          (_ == null || _ > _.nDiscountPct) && (_ = _.nDiscountPct),
+          ((_ == null || _ > _.nDiscountPct) && (_ = _.nDiscountPct),
             (_ == null || _ < _.nDiscountPct) && (_ = _.nDiscountPct),
             (_ == null || _ < _.rtStartDate) && (_ = _.rtStartDate),
-            (_ == null || _ > _.rtEndDate) && (_ = _.rtEndDate);
+            (_ == null || _ > _.rtEndDate) && (_ = _.rtEndDate));
         }),
         {
           nDiscountPercentHigh: _,
@@ -98412,12 +98436,12 @@ var _ = class _ {
       this.GetAllInvites().forEach((_) => {
         if (!_.accept_account) {
           let _ = null;
-          _.appid
+          (_.appid
             ? (_ = _(_.appid, 0))
             : _.bundleid
               ? (_ = _(_.bundleid, 2))
               : _.packageid && (_ = _(_.packageid, 1)),
-            _ && (_.has(_) ? _.get(_).push(_) : _.set(_, [_]));
+            _ && (_.has(_) ? _.get(_).push(_) : _.set(_, [_])));
         }
       }),
       _
@@ -98439,7 +98463,7 @@ var _ = class _ {
       _ = null;
     try {
       let _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.appid && _.append(`nAppID`, `` + _.appid),
         _.packageid && _.append(`nPackageID`, `` + _.packageid),
         _.bundleid && _.append(`nBundleID`, `` + _.bundleid),
@@ -98451,7 +98475,7 @@ var _ = class _ {
         _ && _.append(`bRequireMarketingBanner`, `` + _),
         _ && _.append(`bRequireDiscount`, `` + _),
         _.append(`nPromoType`, `` + _),
-        _.append(`rtExpireTime`, `` + _);
+        _.append(`rtExpireTime`, `` + _));
       let _ = _.PARTNER_BASE_URL + `promotion/invitation/ajaxinviteapptopromo`,
         _ = await _.default.post(_, _, {
           withCredentials: !0,
@@ -98469,8 +98493,8 @@ var _ = class _ {
               rtinvitetime: _,
               rtexpiretime: _,
             };
-          this.m_mapInvites.set(_.data.inviteid, _),
-            this.m_inviteAddRemoveCallback.Dispatch(_);
+          (this.m_mapInvites.set(_.data.inviteid, _),
+            this.m_inviteAddRemoveCallback.Dispatch(_));
         }
         return _.data?.success;
       }
@@ -98506,11 +98530,11 @@ var _ = class _ {
   }
   async AcceptInvitation(_, _, _, _, _) {
     let _ = _.Init(_);
-    _.Body().set_inviteid(_),
+    (_.Body().set_inviteid(_),
       _.Body().set_rtdatechosen(_),
       _
         ? _.Body().set_skip_discount_event(!0)
-        : (_.Body().set_discount_days(_), _.Body().set_discount_info(_));
+        : (_.Body().set_discount_days(_), _.Body().set_discount_info(_)));
     let _ = await _.AcceptInvite(
       this.m_SteamInterface.GetServiceTransport(),
       _,
@@ -98603,9 +98627,9 @@ var _ = class _ {
   }
   Init() {
     let _ = _(`promotioninvites`, `application_config`);
-    this.ValidateStoreDefault(_) &&
+    (this.ValidateStoreDefault(_) &&
       _.forEach((_) => this.m_mapInvites.set(_.inviteid, _)),
-      (this.m_SteamInterface = _(new _(_.WEBAPI_BASE_URL)));
+      (this.m_SteamInterface = _(new _(_.WEBAPI_BASE_URL))));
   }
   ValidateStoreDefault(_) {
     let _ = _;
@@ -98616,11 +98640,11 @@ var _ = class _ {
       : !1;
   }
 };
-_([_], _.prototype, `CreatePromoInvite`, null),
+(_([_], _.prototype, `CreatePromoInvite`, null),
   _([_], _.prototype, `CancelInvite`, null),
   _([_], _.prototype, `AcceptInvitation`, null),
   _([_], _.prototype, `ResendInvitationEmail`, null),
-  _([_], _.prototype, `LoadInviteByPromotionPlanID`, null);
+  _([_], _.prototype, `LoadInviteByPromotionPlanID`, null));
 function _(_) {
   let [_, _] = (0, _.useState)(() =>
     _
@@ -98644,7 +98668,9 @@ function _(_) {
 }
 function _(_) {
   let _ = _();
-  return _(_.Get().GetInviteChangeCallback(_), () => _()), _.Get().GetInvite(_);
+  return (
+    _(_.Get().GetInviteChangeCallback(_), () => _()), _.Get().GetInvite(_)
+  );
 }
 function _() {
   return {
@@ -98791,8 +98817,8 @@ function _(_) {
           strTitle: `Are you sure?`,
           strDescription: `This resets their submissions information so they can update and re-upload their content.`,
           onOK: () => {
-            (_.GetModel().submitting_accountid = void 0),
-              (_.GetModel().submitting_rtime = void 0);
+            ((_.GetModel().submitting_accountid = void 0),
+              (_.GetModel().submitting_rtime = void 0));
           },
           closeModal: _,
         }),
@@ -98845,10 +98871,10 @@ function _(_) {
                   ));
         })
         .catch((_) => {
-          _.fnSetError(!0),
+          (_.fnSetError(!0),
             _.fnSetStrError(
               `Failed to create invitation - check console/network logs`,
-            );
+            ));
         });
     }, [_, _, _, _, _]);
   if (_.bLoading || _.bLoading)
@@ -99340,7 +99366,7 @@ function _(_) {
             label: `Enable requesting featuring assets from partner?`,
             checked: !1,
             onChange: (_) => {
-              _.SetRequestedArt(
+              (_.SetRequestedArt(
                 _.filter((_) => !_.includes(_))
                   .filter((_) => !_.includes(_))
                   .filter((_) => _.BHasPromotionFeaturingForArtRequirement(_)),
@@ -99364,7 +99390,7 @@ function _(_) {
                   (_.GetModel().asset_request_discount_event_id_clone =
                     _.GetDiscountEventID()),
                 _.SetRequestEnabled(!0),
-                _(_);
+                _(_));
             },
           }),
           (0, _.jsx)(`br`, {}),
@@ -99481,9 +99507,9 @@ function _(_) {
   (0, _.useEffect)(() => {
     if (_) {
       let _ = _.GetStorePageURLWithOverride();
-      _ == _.k_ConfigPage_TakeoverSteamChina &&
+      (_ == _.k_ConfigPage_TakeoverSteamChina &&
         (_ = _.replace(/steampowered\.com/g, `steamchina.com`)),
-        _(_);
+        _(_));
     }
   }, [_, _]);
   let _ = _();
@@ -99549,7 +99575,7 @@ function _(_) {
     strTitle: `Update Item Featuring`,
     bDisableBackgroundDismiss: !0,
     onOK: () => {
-      _ && _(_(_), _(_)), _();
+      (_ && _(_(_), _(_)), _());
     },
     onCancel: _,
     children: [
@@ -99576,10 +99602,10 @@ var _ = class {
   m_callback = new _();
   m_storeItemKey = null;
   constructor(_, _) {
-    _(this), this.Reset(_, _);
+    (_(this), this.Reset(_, _));
   }
   Reset(_, _) {
-    (this.m_originalPlan = JSON.parse(JSON.stringify(_))),
+    ((this.m_originalPlan = JSON.parse(JSON.stringify(_))),
       (this.m_oRequest = JSON.parse(JSON.stringify(_))),
       (this.m_bDirty = !1),
       (this.m_planID = _),
@@ -99587,11 +99613,11 @@ var _ = class {
         (this.m_storeItemKey = _(
           this.m_oRequest.store_item_id,
           this.m_oRequest.store_item_type,
-        ));
+        )));
   }
   SaveSuccessClearDirty() {
-    (this.m_originalPlan = JSON.parse(JSON.stringify(this.m_oRequest))),
-      (this.m_bDirty = !1);
+    ((this.m_originalPlan = JSON.parse(JSON.stringify(this.m_oRequest))),
+      (this.m_bDirty = !1));
   }
   GetPlan() {
     return this.m_oRequest;
@@ -99659,21 +99685,21 @@ var _ = class {
       ((this.m_oRequest.request_notes = _), this.Dispatch());
   }
   RevertChanges() {
-    (this.m_oRequest = JSON.parse(JSON.stringify(this.m_originalPlan))),
+    ((this.m_oRequest = JSON.parse(JSON.stringify(this.m_originalPlan))),
       (this.m_bDirty = !1),
-      this.m_callback.Dispatch(this);
+      this.m_callback.Dispatch(this));
   }
   Dispatch() {
-    (this.m_bDirty = !0), this.m_callback.Dispatch(this);
+    ((this.m_bDirty = !0), this.m_callback.Dispatch(this));
   }
 };
-_([_], _.prototype, `m_bDirty`, void 0),
+(_([_], _.prototype, `m_bDirty`, void 0),
   _([_], _.prototype, `SetType`, null),
   _([_], _.prototype, `SetStartDate`, null),
   _([_], _.prototype, `SetEndDate`, null),
   _([_], _.prototype, `SetFeaturedStoreItem`, null),
   _([_], _.prototype, `SetRequestNote`, null),
-  _([_], _.prototype, `RevertChanges`, null);
+  _([_], _.prototype, `RevertChanges`, null));
 var _ = class _ {
   m_model = null;
   InitPromotionPlanToEdit(_, _, _ = !1) {
@@ -99693,7 +99719,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -99702,7 +99728,7 @@ function _() {
     [_, _] = _.useState(_.Get().GetPromotionPlanToEdit());
   return (
     _(_?.GetCallback(), (_) => {
-      _(_), _();
+      (_(_), _());
     }),
     _
   );
@@ -100106,11 +100132,11 @@ function _({ promotionID: _, displayType: _ }) {
         _.daily_promo_sales?.forEach((_) => {
           if (!_.date || !_.summary_sales) return;
           let _ = 0;
-          (_ =
+          ((_ =
             _ === `sales`
               ? parseInt(_.summary_sales.total_gross_sales_usdx100 ?? `0`) / 1e4
               : parseInt(_.summary_sales.steam_gross_units_sold ?? `0`)),
-            _.set(_.date, (_.get(_.date) || 0) + _);
+            _.set(_.date, (_.get(_.date) || 0) + _));
         });
       });
       let _ = Array.from(_, ([_, _]) => ({
@@ -100122,7 +100148,7 @@ function _({ promotionID: _, displayType: _ }) {
         _ = 0;
       return (
         _.forEach((_) => {
-          (_ += _.value), _.value > _ && (_ = _.value);
+          ((_ += _.value), _.value > _ && (_ = _.value));
         }),
         [_, _, _]
       );
@@ -101392,7 +101418,7 @@ function _(_) {
           bOKDisabled: _.trim().length == 0,
           bAllowFullSize: !0,
           onOK: async () => {
-            _.fnSetLoading(!0),
+            (_.fnSetLoading(!0),
               _.mutateAsync()
                 .then((_) => {
                   _
@@ -101405,8 +101431,8 @@ function _(_) {
                 })
                 .catch((_) => {
                   let _ = `ad app Creation Failed: ` + _(_).strErrorMsg + `. `;
-                  console.log(_, _), _.fnSetStrError(_);
-                });
+                  (console.log(_, _), _.fnSetStrError(_));
+                }));
           },
           children: [
             (0, _.jsx)(_, {
@@ -101597,7 +101623,7 @@ function _(_) {
     children: [
       (0, _.jsx)(_, {
         onClick: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _(),
             _.mutateAsync({
               sourceClanAccountID: _,
@@ -101606,15 +101632,15 @@ function _(_) {
               targetClanEventGID: _,
             })
               .then((_) => {
-                _.fnSetSuccess(!0),
-                  _.fnSetStrSuccess(`Images Copied; reload promotion plan.`);
+                (_.fnSetSuccess(!0),
+                  _.fnSetStrSuccess(`Images Copied; reload promotion plan.`));
               })
               .catch(() => {
-                _.fnSetError(!0),
+                (_.fnSetError(!0),
                   _.fnSetStrError(
                     `Failed to copy images, check console for errors.`,
-                  );
-              });
+                  ));
+              }));
         },
         disabled: !_,
         children: `Sync Event Capsule and Header from Sale Page`,
@@ -102002,11 +102028,11 @@ function _(_) {
                     storeItemID: _,
                     storeItemType: _,
                     fnSetStoreItemFeature: (_, _) => {
-                      _ &&
+                      (_ &&
                         _ == 0 &&
                         _.Get().GetApp(_)?.GetAppType() == 14 &&
                         _.SetAdvertisingAppID(_),
-                        _.SetFeaturedStoreItem(_, _);
+                        _.SetFeaturedStoreItem(_, _));
                     },
                   }),
                   _(_),
@@ -102722,7 +102748,7 @@ function _(_) {
     _ = (0, _.useMemo)(() => {
       if (!_?.length) return null;
       let _ = new Set();
-      return _.forEach((_) => _.add(_(_))), Array.from(_);
+      return (_.forEach((_) => _.add(_(_))), Array.from(_));
     }, [_]);
   return _?.length
     ? (0, _.jsxs)(`div`, {
@@ -102917,107 +102943,3 @@ function _(_) {
       }),
   });
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

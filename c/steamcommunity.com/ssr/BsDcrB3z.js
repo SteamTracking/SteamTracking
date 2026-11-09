@@ -42,8 +42,8 @@ function _(_, _, _ = !1) {
     enabled: !!_,
     queryFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_reported_content_id(_),
-        _ && _.Body().set_include_reporter_account_status(!0);
+      (_.Body().set_reported_content_id(_),
+        _ && _.Body().set_include_reporter_account_status(!0));
       let _ = await _.GetReportedContentByID(_, _);
       if (!_.BSuccess())
         throw Error(
@@ -80,10 +80,10 @@ function _(_) {
   return _({
     mutationFn: async (_) => {
       let _ = _.Init(_);
-      _.Body().set_reported_content_id(_),
+      (_.Body().set_reported_content_id(_),
         _.Body().set_new_level(_.eNewLevel),
         _.eReason && _.Body().set_reason(_.eReason),
-        _.strNote && _.Body().set_note(_.strNote);
+        _.strNote && _.Body().set_note(_.strNote));
       let _ = await _.EscalateSubjectByID(_, _);
       if (_.GetEResult() !== 1)
         throw Error(`Failed to escalate subject: ${_.GetEMsg()}`);
@@ -112,10 +112,10 @@ function _() {
       if (!_.BSuccess()) throw Error(`EResult ` + _.GetEResult());
     },
     onSuccess: async (_, _) => {
-      await _(_, _.reportedContentID),
+      (await _(_, _.reportedContentID),
         await _.invalidateQueries({
           queryKey: [`get_claimed`],
-        });
+        }));
     },
   });
 }
@@ -128,7 +128,7 @@ function _(_) {
       let _ = _.Init(_);
       for (let _ of _) {
         let _ = new _();
-        _.set_reported_content_id(_), _.Body().add_subjects_to_release(_);
+        (_.set_reported_content_id(_), _.Body().add_subjects_to_release(_));
       }
       let _ = await _.ReleaseSubjects(_, _);
       if (!_.BSuccess()) throw Error(`EResult ` + _.GetEResult());
@@ -152,7 +152,7 @@ function _(_, _) {
   return _({
     mutationFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_reported_content_id(_), _.Body().set_details(_);
+      (_.Body().set_reported_content_id(_), _.Body().set_details(_));
       let _ = await _.OwnerDisputeModeration(_, _);
       if (!_.BSuccess()) throw Error(`EResult ` + _.GetEResult());
     },
@@ -167,8 +167,8 @@ function _(_, _) {
   return _({
     mutationFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_reported_content_id(_),
-        _.Body().set_owner_dispute_details(_);
+      (_.Body().set_reported_content_id(_),
+        _.Body().set_owner_dispute_details(_));
       let _ = await _.UpdateSubjectByID(_, _);
       if (!_.BSuccess()) throw Error(`EResult ` + _.GetEResult());
     },
@@ -199,16 +199,16 @@ function _(_, _, _) {
   return _({
     mutationFn: async (_) => {
       let _ = _.Init(_);
-      _.Body().set_steamid(_),
+      (_.Body().set_steamid(_),
         _.Body().set_comment_thread_id(_),
         _.Body().set_gidcomment(_),
         _.Body().set_reason(_.reason),
-        _.Body().set_note(_.message);
+        _.Body().set_note(_.message));
       for (let _ of _.sanctions) {
         let _ = new _();
-        _.set_sanction(_.sanction),
+        (_.set_sanction(_.sanction),
           _.days && _.set_days(_.days),
-          _.Body().add_sanctions(_);
+          _.Body().add_sanctions(_));
       }
       let _ = await _.SanctionComment(_, _);
       if (!_.BSuccess())
@@ -229,12 +229,12 @@ function _(_, _, _) {
   return _({
     mutationFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_steamid(_),
+      (_.Body().set_steamid(_),
         _.Body().set_comment_thread_id(_),
         _.Body().set_gidcomment(_),
         _.Body().set_report_action(1),
         _.Body().set_resolve(!0),
-        await _.UpdateCommentReportState(_, _);
+        await _.UpdateCommentReportState(_, _));
     },
     onSuccess: async () => {
       await _.invalidateQueries({
@@ -243,4 +243,3 @@ function _(_, _, _) {
     },
   });
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

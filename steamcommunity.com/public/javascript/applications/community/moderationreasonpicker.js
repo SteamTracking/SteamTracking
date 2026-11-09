@@ -59,7 +59,7 @@ function g(e) {
                         onClick: () => {
                           if (c(t)) {
                             let e = [...g];
-                            e.push(r), _(e);
+                            (e.push(r), _(e));
                           } else if (u(t))
                             o(t.value) || f(t.value)
                               ? n(t.value)

@@ -19,10 +19,10 @@ var e = class {
       return Promise.resolve(localStorage.getItem(e));
     }
     StoreString(e, t) {
-      return localStorage.setItem(e, t), Promise.resolve();
+      return (localStorage.setItem(e, t), Promise.resolve());
     }
     RemoveObject(e) {
-      return localStorage.removeItem(e), Promise.resolve();
+      return (localStorage.removeItem(e), Promise.resolve());
     }
   };
 export { t };

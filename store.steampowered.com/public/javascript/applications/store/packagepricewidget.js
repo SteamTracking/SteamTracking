@@ -44,8 +44,8 @@ function w(e, t) {
       });
       if (n.GetEResult() != 1)
         throw (
-          (n.DEBUG_LogToConsole(),
-          new a(n.GetEResult(), `Failed to load equipped profile items`))
+          n.DEBUG_LogToConsole(),
+          new a(n.GetEResult(), `Failed to load equipped profile items`)
         );
       return n.Body().toObject();
     },
@@ -62,7 +62,7 @@ function D(e) {
     s = t[a];
   return (0, E.jsx)(`img`, {
     onError: (e) => {
-      o((e) => e + 1), n?.(e, s, a);
+      (o((e) => e + 1), n?.(e, s, a));
     },
     alt: r,
     ...i,

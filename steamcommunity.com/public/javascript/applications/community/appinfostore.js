@@ -63,11 +63,11 @@ var p = `061818254b2c99ac49e6626adb128ed1282a392f`,
         : r(t, `small`, `web`);
     }
     DeserializeFromMessage(e) {
-      (this.m_bInitialized = !0),
+      ((this.m_bInitialized = !0),
         (this.m_strName = e.name()),
         (this.m_strIconURL = e.icon()),
         (this.m_dtUpdatedFromServer = new Date()),
-        (this.m_eAppType = e.app_type());
+        (this.m_eAppType = e.app_type()));
     }
     DeserializeFromAppOverview(e) {
       e.icon_hash() && e.app_type() != 1073741824
@@ -80,11 +80,11 @@ var p = `061818254b2c99ac49e6626adb128ed1282a392f`,
     }
     DeserializeFromCacheObject(e) {
       try {
-        (this.m_strName = e.strName),
+        ((this.m_strName = e.strName),
           (this.m_strIconURL = e.strIconURL),
           (this.m_dtUpdatedFromServer = new Date(e.strUpdatedFromServer)),
           (this.m_eAppType = e.eAppType),
-          (this.m_bInitialized = !0);
+          (this.m_bInitialized = !0));
       } catch {}
     }
     SerializeToCacheObject() {
@@ -167,7 +167,7 @@ function _(e, t, n, r, i) {
       if (!a) return ``;
       e = e.replace(o, a);
     }
-  return (e = v(e, i)), e;
+  return ((e = v(e, i)), e);
 }
 function v(e, t) {
   let n = e.match(/%[A-Za-z0-9_:]+%/g);
@@ -224,7 +224,7 @@ var y = 1209600,
         !this.m_mapAppInfo.has(e))
       ) {
         let t = new m(e);
-        this.m_mapAppInfo.set(e, t), this.QueueAppInfoRequest(e);
+        (this.m_mapAppInfo.set(e, t), this.QueueAppInfoRequest(e));
       }
       return this.m_mapAppInfo.get(e);
     }
@@ -242,23 +242,23 @@ var y = 1209600,
     async FlushPendingAppInfo() {
       let e = this.m_PendingAppInfoResolve,
         t = Array.from(this.m_setPendingAppInfo);
-      (this.m_PendingAppInfoPromise = void 0),
+      ((this.m_PendingAppInfoPromise = void 0),
         (this.m_PendingAppInfoResolve = void 0),
         this.m_setPendingAppInfo.clear(),
         await this.LoadAppInfoBatch(t),
-        e?.();
+        e?.());
     }
     async LoadAppInfoBatch(e) {
       this.m_cAppInfoRequestsInFlight++;
       let t = await this.LoadAppInfoBatchFromLocalCache(e);
       if (t.length) {
-        console.log(`Loading batch of App Info from Steam: `, t),
-          await this.m_CMInterface?.WaitUntilLoggedOn();
+        (console.log(`Loading batch of App Info from Steam: `, t),
+          await this.m_CMInterface?.WaitUntilLoggedOn());
         let e = s.Init(c);
-        for (e.Body().set_language(d(u.LANGUAGE)); t.length > 0; ) {
+        for (e.Body().set_language(d(u.LANGUAGE)); t.length > 0;) {
           let n = Math.min(50, t.length),
             r = t.slice(0, n);
-          (t = t.slice(n)), e.Body().set_appids(r);
+          ((t = t.slice(n)), e.Body().set_appids(r));
           let i = await a.GetApps(this.m_CMInterface.GetServiceTransport(), e);
           i.GetEResult() == 1
             ? this.OnGetAppsResponse(i)
@@ -277,20 +277,20 @@ var y = 1209600,
       let t = [];
       for (let n of e.Body().apps()) {
         let e = this.m_mapAppInfo.get(n.appid());
-        l(e, `Got AppInfo response for unrequested AppID: ${n.appid()}`),
+        (l(e, `Got AppInfo response for unrequested AppID: ${n.appid()}`),
           e &&
             ((e = new m(n.appid())),
             e.DeserializeFromMessage(n),
             this.m_mapAppInfo.set(n.appid(), e),
-            t.push(e));
+            t.push(e)));
       }
       this.SaveAppInfoBatchToLocalCache(t);
     }
     OnAppOverviewChange(e) {
       for (let t of e) {
         let e = new m(t.appid());
-        e.DeserializeFromAppOverview(t),
-          e.is_initialized && this.m_mapAppInfo.set(t.appid(), e);
+        (e.DeserializeFromAppOverview(t),
+          e.is_initialized && this.m_mapAppInfo.set(t.appid(), e));
       }
     }
     async EnsureAppInfoForAppIDs(e) {
@@ -439,7 +439,7 @@ var y = 1209600,
       );
     }
   };
-i([n], b.prototype, `OnGetAppsResponse`, null),
-  i([n], b.prototype, `OnRichPresenceLocUpdate`, null);
+(i([n], b.prototype, `OnGetAppsResponse`, null),
+  i([n], b.prototype, `OnRichPresenceLocUpdate`, null));
 var x = new b();
 export { b as n, x as t };

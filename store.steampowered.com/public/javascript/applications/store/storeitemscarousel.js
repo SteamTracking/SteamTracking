@@ -60,8 +60,8 @@ function L(e) {
     let e = a.filter((e) => !p.Get().BIsStoreItemMissing(e, 0));
     if (g && v && !y && e.length > 0 && e[0] == a[0]) {
       let t = [e[0], P, ...e.slice(1)];
-      w(t), k(g), _?.(t.length);
-    } else w(e), _?.(e.length);
+      (w(t), k(g), _?.(t.length));
+    } else (w(e), _?.(e.length));
   }, [a, y, v, E, _, g]);
   let A = y;
   return (0, N.jsx)(r, {

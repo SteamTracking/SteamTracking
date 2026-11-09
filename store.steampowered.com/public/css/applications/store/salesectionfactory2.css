@@ -1054,7 +1054,7 @@ html.responsive.touch .tk4p68PGj1I- {
 }
 @media screen and (width <= 500px) {
   ._0AL4AZNHxZA- {
-    grid-template: "title title" "ignore button" / 1fr 1fr;
+    grid-template: "title title" "ignore button"/1fr 1fr;
     padding-top: 0;
     padding-bottom: 0;
     display: grid;
@@ -1371,7 +1371,7 @@ html.responsive.touch .FQuVIvXzECY- .EtG3bD1IPJE- ._25-ogODAwZc- .wvR9NvCjhik- {
 .FahnD6ZWvck- {
   top: calc(
     var(--store-menu-floating-height, 0px) +
-    var(--responsive-menu-floating-height, 0px)
+      var(--responsive-menu-floating-height, 0px)
   );
   z-index: 150;
   box-sizing: border-box;
@@ -1411,7 +1411,7 @@ html.responsive.touch .FQuVIvXzECY- .EtG3bD1IPJE- ._25-ogODAwZc- .wvR9NvCjhik- {
   html.responsive.responsive .FahnD6ZWvck- {
     top: calc(
       var(--store-menu-floating-height, 0px) +
-      var(--responsive-menu-floating-height, 0px)
+        var(--responsive-menu-floating-height, 0px)
     );
     z-index: 150;
     scroll-behavior: smooth;
@@ -2435,9 +2435,9 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
   position: relative;
   overflow: hidden;
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) {
   ._9Idw0Bbd2pg- {
-    grid-template: "video" "info" 100px / 100%;
+    grid-template: "video" "info" 100px/100%;
   }
 }
 .CqC2XVuTCxc- {
@@ -2465,7 +2465,7 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
   grid-area: info;
   display: flex;
   position: relative;
-  container: app-details / inline-size;
+  container: app-details/inline-size;
 }
 .IX0d42JL3W4- ._1ihFHPGMuJU- {
   display: flex;
@@ -2474,7 +2474,7 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) {
   .IX0d42JL3W4- .HsLNS2ZFh84- {
     display: none;
   }
@@ -2482,7 +2482,7 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
 .IX0d42JL3W4- ._2demPkupCc4- {
   display: none;
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) {
   .IX0d42JL3W4- ._2demPkupCc4- {
     position: unset;
     align-items: center;
@@ -2538,9 +2538,9 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
     display: -webkit-box !important;
   }
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) {
   .IX0d42JL3W4- {
-    grid-template: "arrow capsule info right-arrow" "arrow capsule actions right-arrow" / 70px 8% auto 70px;
+    grid-template: "arrow capsule info right-arrow" "arrow capsule actions right-arrow"/70px 8% auto 70px;
     display: grid;
     overflow: hidden;
   }
@@ -2563,9 +2563,7 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
     overflow-x: hidden;
   }
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) and (
-    width <= 700px
-  ) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) and (width <= 700px) {
   .IX0d42JL3W4- .eusVyRUbhSg- {
     text-align: center;
     justify-content: flex-end;
@@ -2573,7 +2571,7 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
     padding: 0;
   }
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) {
   .IX0d42JL3W4- .eusVyRUbhSg- .A8b41UrilKU- {
     -webkit-line-clamp: 2;
     line-clamp: 2;
@@ -2588,11 +2586,9 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
     padding: 4px;
   }
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) and (
-    width <= 700px
-  ) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) and (width <= 700px) {
   .IX0d42JL3W4- {
-    grid-template: "arrow info right-arrow" "arrow info right-arrow" "arrow actions right-arrow" 45px / 50px auto 50px;
+    grid-template: "arrow info right-arrow" "arrow info right-arrow" "arrow actions right-arrow" 45px/50px auto 50px;
   }
   .IX0d42JL3W4- ._1ihFHPGMuJU- {
     display: none;
@@ -2630,7 +2626,7 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
 .BasicUI .ygtIVX2WP-8- {
   padding: 0;
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) {
   .ygtIVX2WP-8- {
     height: fit-content;
     padding: unset;
@@ -2653,7 +2649,7 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
   transform: unset;
   width: 100%;
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) {
   .ygtIVX2WP-8- .JEr1QdMWTjI- {
     display: none;
   }
@@ -2663,7 +2659,7 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
   height: 100%;
   display: none;
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) {
   .ygtIVX2WP-8- .azlE8-h0HzU- {
     display: block;
   }
@@ -2715,18 +2711,18 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
   overflow: hidden;
   mask-image: linear-gradient(#000 94%, #0000);
 }
-@container app-details (width < 380px) {
+@container app-details (width<380px) {
   .Qk1XPTmq4Pw- .kGvFF7-ofHs- {
     -webkit-line-clamp: 2;
     line-clamp: 2;
   }
 }
-@container app-details (width < 346px) {
+@container app-details (width<346px) {
   .Qk1XPTmq4Pw- .kGvFF7-ofHs- {
     display: none;
   }
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) {
   .Qk1XPTmq4Pw- {
     display: none;
   }
@@ -2747,7 +2743,7 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
     display: none;
   }
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) {
   .AfmLaFPPMcw- {
     flex-direction: row;
     display: flex;
@@ -2844,9 +2840,7 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
 .BasicUI .KK3DL3vbFZU- {
   margin-inline-end: -12px;
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) and (
-    width <= 900px
-  ) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) and (width <= 900px) {
   .KK3DL3vbFZU- {
     display: none;
   }
@@ -2906,7 +2900,7 @@ html.responsive.touch .ao3TJifNHD0-::-webkit-scrollbar {
     right: -50px;
   }
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) {
   .DLM2-MZGpkc- {
     top: unset;
     z-index: 3;
@@ -5835,7 +5829,7 @@ html.responsive.GamepadMode
 ._66jhjHOve1w- .fIcqKHizFVw- {
   box-sizing: border-box;
   background: linear-gradient(#badff3 5%, #abdaf4 95%);
-  grid-template: "title discount" "title discount" / auto auto;
+  grid-template: "title discount" "title discount"/auto auto;
   width: 100%;
   height: 44px;
   padding: 3px 3px 3px 8px;
@@ -5932,7 +5926,7 @@ html.responsive.GamepadMode
     width: calc(100vw - 100px);
   }
 }
-@media screen and (width <= 910px) and (aspect-ratio <= 10 / 9) {
+@media screen and (width <= 910px) and (aspect-ratio <= 10/9) {
   .LaRmAL6eFHE- {
     width: 100%;
     max-width: 94vw;
@@ -6675,7 +6669,7 @@ html.responsive.touch ._1hIuuhBqjbc- .-VmLy3c0oEA- .hX2icG2WeQg- {
   width: 282px;
 }
 .I-ir9Mpq4kk- {
-  aspect-ratio: 1200 / 600;
+  aspect-ratio: 1200/600;
   box-sizing: border-box;
   background-image: radial-gradient(
     101.49% 168.36% at 1.01% 0,
@@ -6694,7 +6688,7 @@ html.responsive.touch ._1hIuuhBqjbc- .-VmLy3c0oEA- .hX2icG2WeQg- {
 }
 @media screen and (width <= 600px) {
   .I-ir9Mpq4kk- {
-    aspect-ratio: 1200 / 900;
+    aspect-ratio: 1200/900;
   }
 }
 .I-ir9Mpq4kk- .wTihSEXvIo4- {
@@ -6757,9 +6751,9 @@ html.responsive.touch ._1hIuuhBqjbc- .-VmLy3c0oEA- .hX2icG2WeQg- {
   }
 }
 .MO2Klg2WGQQ- {
-  aspect-ratio: 6 / 4.3;
+  aspect-ratio: 6/4.3;
   grid-gap: 10px;
-  grid-template: calc(50% - 10px) calc(50% - 10px) / auto auto;
+  grid-template: calc(50% - 10px) calc(50% - 10px)/auto auto;
   grid-auto-flow: row;
   height: 100%;
   margin: 0;

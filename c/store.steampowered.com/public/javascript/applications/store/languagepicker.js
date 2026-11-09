@@ -65,19 +65,19 @@ var _ = _(_()),
     }
     static s_globalSingletonStore;
     static Get() {
-      return (_.s_globalSingletonStore ||= new _()), _.s_globalSingletonStore;
+      return ((_.s_globalSingletonStore ||= new _()), _.s_globalSingletonStore);
     }
     constructor() {
       _(this);
     }
   };
-_([_], _.prototype, `m_eCurLang`, void 0),
+(_([_], _.prototype, `m_eCurLang`, void 0),
   _([_], _.prototype, `m_rgHasData`, void 0),
   _([_], _.prototype, `m_bHasLocalizationContext`, void 0),
   _([_], _.prototype, `GetCurEditLanguage`, null),
   _([_], _.prototype, `SetCurEditLanguage`, null),
   _([_.bound], _.prototype, `SetHasLanguage`, null),
-  _([_], _.prototype, `BHasLanguageData`, null);
+  _([_], _.prototype, `BHasLanguageData`, null));
 function _() {
   return _(() => _.Get().GetCurEditLanguage());
 }
@@ -93,7 +93,7 @@ var _ = `_1ZQxfdsiPgM-`,
       _ = () => _.closeModal && _.closeModal(),
       _ = _.GetFilteredClanImages(_, _),
       _ = (_) => {
-        _(_), _();
+        (_(_), _());
       };
     return (0, _.jsx)(_, {
       children: (0, _.jsx)(_, {
@@ -183,7 +183,7 @@ function _(_, _, _, _) {
   let _ = [];
   if (_.length > 0) {
     let _ = _.toLocaleLowerCase();
-    for (let _ = 0; _ < _.length; ) {
+    for (let _ = 0; _ < _.length;) {
       let _ = _.indexOf(_, _);
       if (_ < 0) {
         _.push(
@@ -197,7 +197,7 @@ function _(_, _, _, _) {
         );
         break;
       }
-      _ < _ &&
+      (_ < _ &&
         _.push(
           (0, _.jsx)(
             `span`,
@@ -217,7 +217,7 @@ function _(_, _, _, _) {
             _ + `_` + String(_),
           ),
         ),
-        (_ = _ + _.length);
+        (_ = _ + _.length));
     }
   } else
     _.push(
@@ -293,7 +293,7 @@ var _ = class extends _.Component {
       let _ = _ && _(_.eLang),
         _ = _ && _(_.eLang),
         _ = _.sLocName;
-      _ &&
+      (_ &&
         _ !== 0 &&
         ((_ += ` `),
         (_ += _(
@@ -319,7 +319,7 @@ var _ = class extends _.Component {
             },
             `langpicker` + _.eLang + (_ ? `_hasdata` : ``),
           ),
-        );
+        ));
     }
     return _;
   }
@@ -342,5 +342,4 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnLanguageChange`, null), (_ = _([_], _));
-export { _, _, _, _, _ };
+(_([_], _.prototype, `OnLanguageChange`, null), (_ = _([_], _)));

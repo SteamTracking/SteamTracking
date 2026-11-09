@@ -59,7 +59,7 @@ function l(e, t, n = !1) {
   for (let e in t)
     if (t.hasOwnProperty(e)) {
       let n = t[e];
-      r.delete(e), n != null && n != null && r.append(e, n);
+      (r.delete(e), n != null && n != null && r.append(e, n));
     }
   n
     ? e.replace(`?${r.toString()}`, { ...e.location.state })

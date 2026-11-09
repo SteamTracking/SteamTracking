@@ -400,7 +400,7 @@ async function K(e, t, n) {
       ]));
   }
   let o = new Set();
-  a?.forEach((e) => {
+  (a?.forEach((e) => {
     y.Get()
       .GetBundle(e)
       ?.GetIncludedAppIDs()
@@ -411,7 +411,7 @@ async function K(e, t, n) {
         .GetPackage(e)
         ?.GetIncludedAppIDs()
         .forEach((e) => o.add(e));
-    });
+    }));
   let c = Array.from(o).filter((e) => !y.Get().BHasApp(e, t));
   if (
     (c.length > 0 && (await y.Get().QueueMultipleAppRequests(c, t)),
@@ -511,10 +511,10 @@ async function we(e, t, n, r, i, a, o) {
     if (!t) continue;
     let i = t?.GetIncludedAppIDsOrSelf(),
       s = !1;
-    n && (s ||= i.every((e) => f.Get().BIsGameOwned(e))),
+    (n && (s ||= i.every((e) => f.Get().BIsGameOwned(e))),
       r && (s ||= i.every((e) => f.Get().BIsGameWishlisted(e))),
       a && (s ||= i.every((e) => f.Get().BIsGameIgnored(e))),
-      s ? o && o.push(e) : c.push(e);
+      s ? o && o.push(e) : c.push(e));
   }
   return c;
 }
@@ -565,7 +565,7 @@ var X = e(t()),
           t,
         i = await X.default.post(r, n);
       if (i.data.success != 1) throw i.data;
-      return this.RemoveGIDFromList(e, u + t), i.data;
+      return (this.RemoveGIDFromList(e, u + t), i.data);
     }
     static sm_Instance;
     static sm_SummaryInstance;
@@ -644,8 +644,8 @@ var X = e(t()),
         })
         .catch((e) => {
           let t = ne(e);
-          console.error(`EventInfiniteScrollModal failed ` + t.strErrorMsg, t),
-            this.setState({ bLoading: !1 });
+          (console.error(`EventInfiniteScrollModal failed ` + t.strErrorMsg, t),
+            this.setState({ bLoading: !1 }));
         });
     }
     async HandleReadEvent() {

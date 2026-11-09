@@ -430,7 +430,7 @@ async function _(_, _, _) {
       ]));
   }
   let _ = new Set();
-  _?.forEach((_) => {
+  (_?.forEach((_) => {
     _.Get()
       .GetBundle(_)
       ?.GetIncludedAppIDs()
@@ -441,7 +441,7 @@ async function _(_, _, _) {
         .GetPackage(_)
         ?.GetIncludedAppIDs()
         .forEach((_) => _.add(_));
-    });
+    }));
   let _ = Array.from(_).filter((_) => !_.Get().BHasApp(_, _));
   if (
     (_.length > 0 && (await _.Get().QueueMultipleAppRequests(_, _)),
@@ -540,10 +540,10 @@ async function _(_, _, _, _, _, _, _) {
     if (!_) continue;
     let _ = _?.GetIncludedAppIDsOrSelf(),
       _ = !1;
-    _ && (_ ||= _.every((_) => _.Get().BIsGameOwned(_))),
+    (_ && (_ ||= _.every((_) => _.Get().BIsGameOwned(_))),
       _ && (_ ||= _.every((_) => _.Get().BIsGameWishlisted(_))),
       _ && (_ ||= _.every((_) => _.Get().BIsGameIgnored(_))),
-      _ ? _ && _.push(_) : _.push(_);
+      _ ? _ && _.push(_) : _.push(_));
   }
   return _;
 }
@@ -594,7 +594,7 @@ var _ = _(_()),
           _,
         _ = await _.default.post(_, _);
       if (_.data.success != 1) throw _.data;
-      return this.RemoveGIDFromList(_, _ + _), _.data;
+      return (this.RemoveGIDFromList(_, _ + _), _.data);
     }
     static sm_Instance;
     static sm_SummaryInstance;
@@ -687,10 +687,10 @@ var _ = _(_()),
         })
         .catch((_) => {
           let _ = _(_);
-          console.error(`EventInfiniteScrollModal failed ` + _.strErrorMsg, _),
+          (console.error(`EventInfiniteScrollModal failed ` + _.strErrorMsg, _),
             this.setState({
               bLoading: !1,
-            });
+            }));
         });
     }
     async HandleReadEvent() {
@@ -757,4 +757,3 @@ var _ = _(_()),
     }
   };
 _ = _([_], _);
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

@@ -29,7 +29,7 @@ var _ = e(t()),
           t,
         i = await v.default.post(r, n);
       if (i.data.success != 1) throw i.data;
-      return this.RemoveGIDFromList(e, a + t), i.data;
+      return (this.RemoveGIDFromList(e, a + t), i.data);
     }
     static sm_Instance;
     static sm_SummaryInstance;
@@ -106,7 +106,7 @@ var w = class extends _.Component {
     });
   }
 };
-u([f], w.prototype, `escFunction`, null),
+(u([f], w.prototype, `escFunction`, null),
   u([f], w.prototype, `OnBackgroundClick`, null),
-  (w = u([r], w));
+  (w = u([r], w)));
 export { w as n, y as r, C as t };

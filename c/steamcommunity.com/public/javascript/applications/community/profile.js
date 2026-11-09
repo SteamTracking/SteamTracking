@@ -278,7 +278,7 @@ var _ = `tJCpCo5r9dY-`,
     m_rtLastLoad = 0;
     m_communityData = void 0;
     constructor(_) {
-      _(this), (this.m_accountid = _);
+      (_(this), (this.m_accountid = _));
     }
     get community_data() {
       return this.m_communityData;
@@ -299,7 +299,7 @@ var _ = `tJCpCo5r9dY-`,
       return this.m_communityData && this.m_communityData.profile_background;
     }
     Reload() {
-      (this.m_rtLastLoad = 0), this.EnsureCommunityDataLoaded();
+      ((this.m_rtLastLoad = 0), this.EnsureCommunityDataLoaded());
     }
     EnsureCommunityDataLoaded() {
       let _ = this.m_communityData || this.m_bLoadingData,
@@ -316,11 +316,11 @@ var _ = `tJCpCo5r9dY-`,
           )
           .then((_) => {
             let _ = _.data;
-            typeof _.level == `number` &&
+            (typeof _.level == `number` &&
               typeof _.level_class == `string` &&
               (this.m_communityData = _),
               (this.m_bLoadingData = !1),
-              (this.m_rtLastLoad = Date.now());
+              (this.m_rtLastLoad = Date.now()));
           })
           .catch((_) => {
             this.m_bLoadingData = !1;
@@ -519,7 +519,7 @@ var _ = class extends _.Component {
     let _ = !0,
       _ = !1,
       _ = !1;
-    _ || ((_ += ` ` + _), (_ = !1)), _ && ((_ += ` undefined`), (_ = !0));
+    (_ || ((_ += ` ` + _), (_ = !1)), _ && ((_ += ` undefined`), (_ = !0)));
     let _ = _ !== void 0,
       _ = _.is_awayOrSnooze,
       _;
@@ -760,16 +760,16 @@ var _ = ({ community_data: _, persona: _ }) => {
     m_rgPreviousAvatars = [];
     m_promiseLoading;
     constructor(_) {
-      _(this), (this.m_SteamInterface = _);
+      (_(this), (this.m_SteamInterface = _));
     }
     GetAvatarHistory() {
-      return this.StartLoadIfNeeded(), this.m_rgPreviousAvatars || [];
+      return (this.StartLoadIfNeeded(), this.m_rgPreviousAvatars || []);
     }
     RefreshAvatarHistory() {
       this.m_promiseLoading = this.LoadAvatarHistory();
     }
     async BWaitForLoad() {
-      return this.StartLoadIfNeeded(), this.m_promiseLoading;
+      return (this.StartLoadIfNeeded(), this.m_promiseLoading);
     }
     StartLoadIfNeeded() {
       this.m_promiseLoading ||= this.LoadAvatarHistory();
@@ -810,7 +810,7 @@ var _ = ({ community_data: _, persona: _ }) => {
     }
     async SelectAvatar(_, _) {
       let _ = new FormData();
-      _.append(`sessionid`, _()), _.append(`json`, `1`), _.append(`sha`, _);
+      (_.append(`sessionid`, _()), _.append(`json`, `1`), _.append(`sha`, _));
       let _ =
         (
           await _.default.post(
@@ -818,7 +818,7 @@ var _ = ({ community_data: _, persona: _ }) => {
             _,
           )
         ).data.success || 2;
-      return _ == 1 && _.CommitAvatarHash(), _;
+      return (_ == 1 && _.CommitAvatarHash(), _);
     }
   };
 _([_], _.prototype, `m_rgPreviousAvatars`, void 0);
@@ -847,7 +847,7 @@ var _ = class {
     );
   }
   async BWaitForLoad() {
-    return this.StartLoadIfNeeded(), this.m_promiseLoading;
+    return (this.StartLoadIfNeeded(), this.m_promiseLoading);
   }
   StartLoadIfNeeded() {
     this.m_promiseLoading ||= this.LoadOGGAvatars();
@@ -856,13 +856,13 @@ var _ = class {
     let _ = await _.default.get(
       `${_.COMMUNITY_BASE_URL}actions/GameAvatars/?json=1&l=${_.LANGUAGE}`,
     );
-    return (this.m_AvatarData = _.data || null), !!_.data;
+    return ((this.m_AvatarData = _.data || null), !!_.data);
   }
   async SetPlayerOGGAvatar(_) {
     let _ = _(this),
       _,
       _ = _.GetAvatarHash();
-    for (; (_ = _.next().value); ) {
+    for (; (_ = _.next().value);) {
       let _ = _.avatars.find((_) => _.avatar_hash == _);
       if (_) return this.SelectGameAvatar(_, _.appid, _.ordinal);
     }
@@ -870,13 +870,13 @@ var _ = class {
   }
   async SelectGameAvatar(_, _, _) {
     let _ = new FormData();
-    _.append(`sessionid`, _()),
+    (_.append(`sessionid`, _()),
       _.append(`json`, `1`),
-      _.append(`selectedAvatar`, `` + _);
+      _.append(`selectedAvatar`, `` + _));
     let _ =
       (await _.default.post(`${_.COMMUNITY_BASE_URL}ogg/${_}/selectAvatar`, _))
         .data.success || 2;
-    return _ == 1 && _.CommitAvatarHash(), _;
+    return (_ == 1 && _.CommitAvatarHash(), _);
   }
   UpdateAvatarsForGame(_, _) {
     let _ = [`rgRecentGames`, `rgOwnedGames`, `rgOtherGames`],
@@ -945,7 +945,7 @@ var _ = class {
   m_eSaveStateByKey = new Map();
   m_eCommentSaveState = 0;
   constructor(_, _) {
-    _(this), (this.m_PrivacySettings = _), (this.m_eCommentPermission = _);
+    (_(this), (this.m_PrivacySettings = _), (this.m_eCommentPermission = _));
   }
   GetPrivacySetting(_) {
     return _ == `PrivacyOwnedGames`
@@ -1033,8 +1033,8 @@ var _ = class {
               _.PrivacySettings &&
               _.eCommentPermission &&
               _(() => {
-                (this.m_PrivacySettings = _.PrivacySettings),
-                  (this.m_eCommentPermission = _.eCommentPermission);
+                ((this.m_PrivacySettings = _.PrivacySettings),
+                  (this.m_eCommentPermission = _.eCommentPermission));
               }),
             !0
           );
@@ -1051,10 +1051,10 @@ var _ = class {
     );
   }
 };
-_([_], _.prototype, `m_PrivacySettings`, void 0),
+(_([_], _.prototype, `m_PrivacySettings`, void 0),
   _([_], _.prototype, `m_eCommentPermission`, void 0),
   _([_], _.prototype, `m_eSaveStateByKey`, void 0),
-  _([_], _.prototype, `m_eCommentSaveState`, void 0);
+  _([_], _.prototype, `m_eCommentSaveState`, void 0));
 var _ = class {
   m_rgBadges = [];
   m_FavoriteBadge = void 0;
@@ -1062,18 +1062,19 @@ var _ = class {
   m_AppInfoStore;
   m_CMInterface;
   constructor(_, _, _) {
-    _(this), (this.m_CMInterface = _), (this.m_AppInfoStore = _);
+    (_(this), (this.m_CMInterface = _), (this.m_AppInfoStore = _));
     let _ = _.rgBadges,
       _ = _.FavoriteBadge;
     if (!Array.isArray(_))
       for (let _ in _) {
         let _ = _[_],
           _;
-        (_ = `communityitemid` in _ ? new _(_, this.m_AppInfoStore) : new _(_)),
+        ((_ =
+          `communityitemid` in _ ? new _(_, this.m_AppInfoStore) : new _(_)),
           this.m_rgBadges.push(_),
           _ &&
             _.BIsFavoriteBadge(_) &&
-            (this.m_CommittedFavoriteBadge = this.m_FavoriteBadge = _);
+            (this.m_CommittedFavoriteBadge = this.m_FavoriteBadge = _));
       }
   }
   get Badges() {
@@ -1125,17 +1126,17 @@ var _ = class {
       : null;
   }
 };
-_([_], _.prototype, `m_FavoriteBadge`, void 0),
+(_([_], _.prototype, `m_FavoriteBadge`, void 0),
   _([_], _.prototype, `SetFavoriteBadge`, null),
-  _([_], _.prototype, `RevertFavoriteBadge`, null);
+  _([_], _.prototype, `RevertFavoriteBadge`, null));
 var _ = class {
     m_strIconURL;
     m_strName;
     m_strXP;
     constructor(_) {
-      (this.m_strIconURL = _.icon),
+      ((this.m_strIconURL = _.icon),
         (this.m_strName = _.name),
-        (this.m_strXP = _._);
+        (this.m_strXP = _._));
     }
     GetIconURL() {
       return this.m_strIconURL;
@@ -1156,7 +1157,7 @@ var _ = class {
   _ = class extends _ {
     m_unBadgeID;
     constructor(_) {
-      super(_), (this.m_unBadgeID = _.badgeid);
+      (super(_), (this.m_unBadgeID = _.badgeid));
     }
     GetFavoriteBadgeID() {
       return {
@@ -1174,12 +1175,12 @@ var _ = class {
     m_unBorderColor;
     m_AppInfoStore;
     constructor(_, _) {
-      super(_),
+      (super(_),
         (this.m_ulCommunityItemID = _.communityitemid),
         (this.m_usItemType = _.item_type),
         (this.m_unAppID = _.appid),
         (this.m_unBorderColor = _.border_color),
-        (this.m_AppInfoStore = _);
+        (this.m_AppInfoStore = _));
     }
     GetFavoriteBadgeID() {
       return {
@@ -1229,7 +1230,7 @@ function _(_, _ = !1) {
     _ = _ ? _(_) : _(_);
   _ && (_[`video/webm`] = _);
   let _ = _ ? _(_) : _(_);
-  return _ && (_[`video/mp4`] = _), _;
+  return (_ && (_[`video/mp4`] = _), _);
 }
 function _(_) {
   return _ ? `${_.MEDIA_CDN_COMMUNITY_URL}images/${_}` : null;
@@ -1247,7 +1248,7 @@ var _ = class {
   m_OnAvatarEquipmentChangedCallbacks = new _();
   m_mapGoldenProfileConfigByAppID = new Map();
   constructor(_, _, _) {
-    _(this), (this.m_SteamInterface = _), (this.m_AppInfoStore = _);
+    (_(this), (this.m_SteamInterface = _), (this.m_AppInfoStore = _));
     for (let _ of _) this.m_mapGoldenProfileConfigByAppID.set(_.appid, _);
     this.Initialize();
   }
@@ -1306,10 +1307,10 @@ var _ = class {
         this.m_Backgrounds.m_EquippedItem.communityitemid
       ) {
         let _ = _.Init(_);
-        _.Body().set_communityitemid(
+        (_.Body().set_communityitemid(
           this.m_Backgrounds.m_EquippedItem.communityitemid,
         ),
-          _.Body().set_flags(this.m_Backgrounds.m_EquipFlags);
+          _.Body().set_flags(this.m_Backgrounds.m_EquipFlags));
         let _ = await _.SetEquippedProfileItemFlags(
           this.m_SteamInterface.GetServiceTransport(),
           _,
@@ -1320,7 +1321,7 @@ var _ = class {
           );
       }
     }
-    return this.m_Backgrounds.SetComitted(), 1;
+    return (this.m_Backgrounds.SetComitted(), 1);
   }
   RevertBackgroundChanges() {
     this.m_Backgrounds.Revert();
@@ -1381,22 +1382,22 @@ var _ = class {
     let _, _;
     if (this.m_Avatars.BIsUncomitted()) {
       let _ = _.Init(_);
-      _.Body().set_communityitemid(
+      (_.Body().set_communityitemid(
         this.m_Avatars.m_EquippedItem &&
           this.m_Avatars.m_EquippedItem.communityitemid,
       ),
         (_ = _.SetAnimatedAvatar(
           this.m_SteamInterface.GetServiceTransport(),
           _,
-        ));
+        )));
     }
     if (this.m_AvatarFrames.BIsUncomitted()) {
       let _ = _.Init(_);
-      _.Body().set_communityitemid(
+      (_.Body().set_communityitemid(
         this.m_AvatarFrames.m_EquippedItem &&
           this.m_AvatarFrames.m_EquippedItem.communityitemid,
       ),
-        (_ = _.SetAvatarFrame(this.m_SteamInterface.GetServiceTransport(), _));
+        (_ = _.SetAvatarFrame(this.m_SteamInterface.GetServiceTransport(), _)));
     }
     let [_, _] = await Promise.all([_, _]);
     return _ && _.GetEResult() != 1
@@ -1409,7 +1410,7 @@ var _ = class {
           1);
   }
   RevertAvatarChanges() {
-    this.m_Avatars.Revert(), this.m_AvatarFrames.Revert();
+    (this.m_Avatars.Revert(), this.m_AvatarFrames.Revert());
   }
   AddOnAvatarEquipmentChangedCallback(_) {
     this.m_OnAvatarEquipmentChangedCallbacks.Register(_);
@@ -1521,7 +1522,7 @@ var _ = class {
   }
   ReloadEquippedItems() {
     let _ = _.Init(_);
-    _.Body().set_steamid(_.steamid),
+    (_.Body().set_steamid(_.steamid),
       _.Body().set_language(_.LANGUAGE),
       (this.m_promiseEquipped = _.GetProfileItemsEquipped(
         this.m_SteamInterface.GetServiceTransport(),
@@ -1535,7 +1536,7 @@ var _ = class {
       this.GetEquippedBackground(),
       this.m_MiniProfileBackgrounds.SetEquipped(null, !0),
       (this.m_MiniProfileBackgrounds.m_bEquippedLoaded = !1),
-      this.GetEquippedMiniProfileBackground();
+      this.GetEquippedMiniProfileBackground());
   }
   async CommitProfileModifierChanges() {
     if (this.m_ProfileModifiers.BIsUncomitted()) {
@@ -1546,13 +1547,13 @@ var _ = class {
           this.m_ProfileModifiers.m_EquippedItem
       ) {
         let _ = _.Init(_);
-        _.Body().set_communityitemid(
+        (_.Body().set_communityitemid(
           this.m_ProfileModifiers.m_CommittedEquippedItem.communityitemid,
         ),
           _.Body().set_appid(
             this.m_ProfileModifiers.m_CommittedEquippedItem.appid,
           ),
-          _.Body().set_activate(!1);
+          _.Body().set_activate(!1));
         let _ = await _.ActivateProfileModifierItem(
           this.m_SteamInterface.GetServiceTransport(),
           _,
@@ -1562,11 +1563,11 @@ var _ = class {
       }
       if (this.m_ProfileModifiers.m_EquippedItem) {
         let _ = _.Init(_);
-        _.Body().set_communityitemid(
+        (_.Body().set_communityitemid(
           this.m_ProfileModifiers.m_EquippedItem.communityitemid,
         ),
           _.Body().set_appid(this.m_ProfileModifiers.m_EquippedItem.appid),
-          _.Body().set_activate(!0);
+          _.Body().set_activate(!0));
         let _ = await _.ActivateProfileModifierItem(
           this.m_SteamInterface.GetServiceTransport(),
           _,
@@ -1574,11 +1575,11 @@ var _ = class {
         if (_.GetEResult() != 1) return _.GetEResult();
         _ = !0;
       }
-      this.m_ProfileModifiers.SetComitted(),
+      (this.m_ProfileModifiers.SetComitted(),
         _ &&
           _(() => {
             this.ReloadEquippedItems();
-          });
+          }));
     }
     return 1;
   }
@@ -1605,24 +1606,24 @@ var _ = class {
   }
   async Initialize() {
     let _ = _.Init(_);
-    _.Body().set_language(_.LANGUAGE),
+    (_.Body().set_language(_.LANGUAGE),
       (this.m_promiseOwned = _.GetProfileItemsOwned(
         this.m_SteamInterface.GetServiceTransport(),
         _,
-      ));
+      )));
     let _ = _.Init(_);
-    _.Body().set_steamid(_.steamid),
+    (_.Body().set_steamid(_.steamid),
       _.Body().set_language(_.LANGUAGE),
       (this.m_promiseEquipped = _.GetProfileItemsEquipped(
         this.m_SteamInterface.GetServiceTransport(),
         _,
-      ));
+      )));
   }
 };
-_([_], _.prototype, `RevertBackgroundChanges`, null),
+(_([_], _.prototype, `RevertBackgroundChanges`, null),
   _([_], _.prototype, `RevertMiniProfileBackgroundChanges`, null),
   _([_], _.prototype, `RevertAvatarChanges`, null),
-  _([_], _.prototype, `ReloadEquippedItems`, null);
+  _([_], _.prototype, `ReloadEquippedItems`, null));
 var _ = class {
   m_cItemsOwned = void 0;
   m_bEquippedLoaded = !1;
@@ -1633,15 +1634,15 @@ var _ = class {
   m_rgOwnedItems;
   m_parent;
   constructor(_) {
-    _(this), (this.m_parent = _);
+    (_(this), (this.m_parent = _));
   }
   GetOwnedItemCount() {
     return this.m_cItemsOwned;
   }
   async SetItems(_) {
     let _ = _.map((_) => _.toObject());
-    (this.m_rgOwnedItems = (await this.FillAppNames(_)).reverse()),
-      (this.m_cItemsOwned = this.m_rgOwnedItems.length);
+    ((this.m_rgOwnedItems = (await this.FillAppNames(_)).reverse()),
+      (this.m_cItemsOwned = this.m_rgOwnedItems.length));
   }
   async LoadEquipped(_) {
     if (_ !== void 0 && _.communityitemid()) {
@@ -1649,15 +1650,15 @@ var _ = class {
       if (_) {
         let [_] = await this.FillAppNames([_]);
         _(() => {
-          (this.m_CommittedEquippedItem = this.m_EquippedItem = _),
-            (this.m_EquipFlags = _ && _.equipped_flags);
+          ((this.m_CommittedEquippedItem = this.m_EquippedItem = _),
+            (this.m_EquipFlags = _ && _.equipped_flags));
         });
       }
       this.m_bEquippedLoaded = !0;
     }
   }
   SetEquipped(_, _ = !1) {
-    (this.m_EquippedItem = _),
+    ((this.m_EquippedItem = _),
       (this.m_bEquippedLoaded = !0),
       _
         ? this.SetComitted()
@@ -1669,7 +1670,7 @@ var _ = class {
                 this.m_CommittedEquippedItem.equipped_flags !=
                   this.m_EquipFlags)) ||
             (!_ && this.m_CommittedEquippedItem)
-          ));
+          )));
   }
   SetEquippedFlags(_) {
     this.m_EquipFlags = _;
@@ -1678,16 +1679,16 @@ var _ = class {
     return this.m_bUnsavedChanges;
   }
   SetComitted() {
-    (this.m_bUnsavedChanges = !1),
+    ((this.m_bUnsavedChanges = !1),
       (this.m_CommittedEquippedItem = this.m_EquippedItem),
       this.m_CommittedEquippedItem &&
-        (this.m_CommittedEquippedItem.equipped_flags = this.m_EquipFlags);
+        (this.m_CommittedEquippedItem.equipped_flags = this.m_EquipFlags));
   }
   Revert() {
-    (this.m_EquippedItem = this.m_CommittedEquippedItem),
+    ((this.m_EquippedItem = this.m_CommittedEquippedItem),
       (this.m_EquipFlags =
         this.m_EquippedItem && this.m_EquippedItem.equipped_flags),
-      (this.m_bUnsavedChanges = !1);
+      (this.m_bUnsavedChanges = !1));
   }
   async FillAppNames(_) {
     await this.m_parent.AppInfoStore.EnsureAppInfoForAppIDs(
@@ -1700,14 +1701,14 @@ var _ = class {
     return _;
   }
 };
-_([_], _.prototype, `m_cItemsOwned`, void 0),
+(_([_], _.prototype, `m_cItemsOwned`, void 0),
   _([_], _.prototype, `m_bUnsavedChanges`, void 0),
   _([_], _.prototype, `m_CommittedEquippedItem`, void 0),
   _([_], _.prototype, `m_EquippedItem`, void 0),
   _([_], _.prototype, `m_EquipFlags`, void 0),
   _([_], _.prototype, `SetEquipped`, null),
   _([_], _.prototype, `SetEquippedFlags`, null),
-  _([_], _.prototype, `Revert`, null);
+  _([_], _.prototype, `Revert`, null));
 var _ = class {
   m_strDisplayCountry = void 0;
   m_strDisplayState = void 0;
@@ -1722,7 +1723,7 @@ var _ = class {
   m_bStateSelectionAvailable = !1;
   m_bCitySelectionAvailable = !1;
   constructor(_, _, _, _, _, _) {
-    _(this),
+    (_(this),
       (this.m_strDisplayCountry = _),
       (this.m_strDisplayState = _),
       (this.m_strDisplayCity = _),
@@ -1732,7 +1733,7 @@ var _ = class {
       this.m_strStateCode
         ? (this.m_bStateSelectionAvailable = !0)
         : this.m_strCountryCode && this.GetCountryList(),
-      (this.m_bCitySelectionAvailable = !!this.m_strStateCode);
+      (this.m_bCitySelectionAvailable = !!this.m_strStateCode));
   }
   get Country() {
     return this.m_strDisplayCountry;
@@ -1741,7 +1742,7 @@ var _ = class {
     return this.m_strCountryCode;
   }
   SetCountry(_, _) {
-    _ != this.m_strCountryCode &&
+    (_ != this.m_strCountryCode &&
       ((this.m_strStateCode = ``),
       (this.m_strDisplayState = ``),
       (this.m_strCityCode = ``),
@@ -1749,7 +1750,7 @@ var _ = class {
       (this.m_strCountryCode = _),
       (this.m_strDisplayCountry = _),
       this.FindAndSetActiveCountry(),
-      this.FindAndSetActiveState();
+      this.FindAndSetActiveState());
   }
   BIsStateSelectionAvailable() {
     return this.m_bStateSelectionAvailable;
@@ -1761,11 +1762,11 @@ var _ = class {
     return this.m_strStateCode;
   }
   SetState(_, _) {
-    _ != this.m_strStateCode &&
+    (_ != this.m_strStateCode &&
       ((this.m_strCityCode = ``), (this.m_strDisplayCity = ``)),
       (this.m_strStateCode = _),
       (this.m_strDisplayState = _),
-      this.FindAndSetActiveState();
+      this.FindAndSetActiveState());
   }
   BIsCitySelectionAvailable() {
     return this.m_bCitySelectionAvailable;
@@ -1777,7 +1778,7 @@ var _ = class {
     return this.m_strCityCode;
   }
   SetCity(_, _) {
-    (this.m_strCityCode = _), (this.m_strDisplayCity = _);
+    ((this.m_strCityCode = _), (this.m_strDisplayCity = _));
   }
   async GetCountryList() {
     return this.m_rgCountryList
@@ -1788,9 +1789,9 @@ var _ = class {
             .then((_) => _.data)),
           this.m_promiseLoadCountries.then(
             (_) => {
-              (this.m_rgCountryList = _),
+              ((this.m_rgCountryList = _),
                 (this.m_promiseLoadCountries = null),
-                this.FindAndSetActiveCountry();
+                this.FindAndSetActiveCountry());
             },
             () => {
               this.m_promiseLoadCountries = null;
@@ -1799,11 +1800,11 @@ var _ = class {
         this.m_promiseLoadCountries);
   }
   FindAndSetActiveCountry() {
-    (this.m_CountryCur =
+    ((this.m_CountryCur =
       this.m_strCountryCode &&
       this.m_rgCountryList.find((_) => _.countrycode == this.m_strCountryCode)),
       (this.m_bStateSelectionAvailable =
-        this.m_CountryCur && !!this.m_CountryCur.hasstates);
+        this.m_CountryCur && !!this.m_CountryCur.hasstates));
   }
   async GetStateList() {
     this.m_CountryCur || (await this.GetCountryList());
@@ -1820,9 +1821,9 @@ var _ = class {
               .then((_) => _.data)),
             _.stateloader.then(
               (_) => {
-                (_.states = _ || []),
+                ((_.states = _ || []),
                   delete _.stateloader,
-                  this.FindAndSetActiveState();
+                  this.FindAndSetActiveState());
               },
               () => {
                 delete _.stateloader;
@@ -1832,11 +1833,11 @@ var _ = class {
         : _.states;
   }
   FindAndSetActiveState() {
-    (this.m_StateCur =
+    ((this.m_StateCur =
       this.m_CountryCur &&
       this.m_CountryCur.states &&
       this.m_CountryCur.states.find((_) => _.statecode == this.m_strStateCode)),
-      (this.m_bCitySelectionAvailable = !!this.m_StateCur);
+      (this.m_bCitySelectionAvailable = !!this.m_StateCur));
   }
   async GetCityList() {
     this.m_StateCur || (await this.GetStateList());
@@ -1852,7 +1853,7 @@ var _ = class {
               .then((_) => _.data)),
             _.cityloader.then(
               (_) => {
-                (_.cities = _ || []), delete _.cityloader;
+                ((_.cities = _ || []), delete _.cityloader);
               },
               () => {
                 delete _.cityloader;
@@ -1863,7 +1864,7 @@ var _ = class {
       : [];
   }
 };
-_([_], _.prototype, `m_strDisplayCountry`, void 0),
+(_([_], _.prototype, `m_strDisplayCountry`, void 0),
   _([_], _.prototype, `m_strDisplayState`, void 0),
   _([_], _.prototype, `m_strDisplayCity`, void 0),
   _([_], _.prototype, `m_strCountryCode`, void 0),
@@ -1875,14 +1876,14 @@ _([_], _.prototype, `m_strDisplayCountry`, void 0),
   _([_], _.prototype, `SetState`, null),
   _([_], _.prototype, `SetCity`, null),
   _([_], _.prototype, `FindAndSetActiveCountry`, null),
-  _([_], _.prototype, `FindAndSetActiveState`, null);
+  _([_], _.prototype, `FindAndSetActiveState`, null));
 var _ = class {
   m_ActiveTheme = void 0;
   m_ComittedActiveTheme;
   m_rgAvailableThemes;
   m_CMInterface;
   constructor(_, _, _) {
-    _(this),
+    (_(this),
       (this.m_CMInterface = _),
       (this.m_rgAvailableThemes = _.map((_) => ({
         ..._,
@@ -1891,7 +1892,7 @@ var _ = class {
       }))),
       _ === void 0 || _.theme_id === ``
         ? this.SetActiveTheme(`Default`, !0)
-        : ((this.m_ActiveTheme = _), (this.m_ComittedActiveTheme = _));
+        : ((this.m_ActiveTheme = _), (this.m_ComittedActiveTheme = _)));
   }
   get ActiveTheme() {
     return this.m_ActiveTheme;
@@ -1902,7 +1903,7 @@ var _ = class {
   SetActiveTheme(_, _ = !1) {
     for (let _ of this.m_rgAvailableThemes)
       if (_ === _.theme_id) {
-        (this.m_ActiveTheme = _), _ && (this.m_ComittedActiveTheme = _);
+        ((this.m_ActiveTheme = _), _ && (this.m_ComittedActiveTheme = _));
         break;
       }
   }
@@ -1927,8 +1928,8 @@ var _ = class {
     );
   }
 };
-_([_], _.prototype, `m_ActiveTheme`, void 0),
-  _([_], _.prototype, `RevertActiveTheme`, null);
+(_([_], _.prototype, `m_ActiveTheme`, void 0),
+  _([_], _.prototype, `RevertActiveTheme`, null));
 async function _(_, _) {
   let _;
   if (_ instanceof FormData) _ = _;
@@ -1936,7 +1937,7 @@ async function _(_, _) {
     _ = new FormData();
     for (let _ in _) _.append(_, _[_]);
   }
-  _.append(`type`, _), _.append(`sessionID`, _()), _.append(`json`, `1`);
+  (_.append(`type`, _), _.append(`sessionID`, _()), _.append(`json`, `1`));
   let _ = `${_.ProfileURL}edit/`;
   try {
     let _ = await _.default.post(_, _);
@@ -1959,10 +1960,10 @@ var _ = class {
   m_bLoaded = !1;
   m_promiseLoading;
   constructor(_) {
-    _(this),
+    (_(this),
       _ &&
         (this.m_CommittedPrimaryGroup = this.m_PrimaryGroup =
-          new _(new _(_.steamid), _.name, _.avatarHash));
+          new _(new _(_.steamid), _.name, _.avatarHash)));
   }
   get PrimaryGroup() {
     return this.m_PrimaryGroup;
@@ -1977,10 +1978,10 @@ var _ = class {
     return this.m_rgUserGroups.length > 0;
   }
   GetUserGroups() {
-    return this.m_bLoaded || this.StartUserGroupLoad(), this.m_rgUserGroups;
+    return (this.m_bLoaded || this.StartUserGroupLoad(), this.m_rgUserGroups);
   }
   async BWaitForUserGroups() {
-    return this.StartUserGroupLoad(), this.m_promiseLoading;
+    return (this.StartUserGroupLoad(), this.m_promiseLoading);
   }
   StartUserGroupLoad() {
     this.m_promiseLoading ||= this.LoadUserGroups();
@@ -1991,11 +1992,11 @@ var _ = class {
     );
     return (
       _(() => {
-        _.data &&
+        (_.data &&
           (this.m_rgUserGroups = _.data.map(
             (_) => new _(new _(_.steamid), _.name, _.avatarHash),
           )),
-          (this.m_bLoaded = !0);
+          (this.m_bLoaded = !0));
       }),
       !!_.data
     );
@@ -2022,16 +2023,16 @@ var _ = class {
     this.m_PrimaryGroup = this.m_CommittedPrimaryGroup;
   }
 };
-_([_], _.prototype, `m_PrimaryGroup`, void 0),
+(_([_], _.prototype, `m_PrimaryGroup`, void 0),
   _([_], _.prototype, `m_bLoaded`, void 0),
   _([_], _.prototype, `SetPrimaryGroup`, null),
-  _([_], _.prototype, `RevertPrimaryGroupChanges`, null);
+  _([_], _.prototype, `RevertPrimaryGroupChanges`, null));
 var _ = class {
     m_steamID;
     m_strName;
     m_strAvatarHash;
     constructor(_, _, _) {
-      (this.m_steamID = _), (this.m_strName = _), (this.m_strAvatarHash = _);
+      ((this.m_steamID = _), (this.m_strName = _), (this.m_strAvatarHash = _));
     }
     GetSteamID() {
       return this.m_steamID;
@@ -2058,7 +2059,7 @@ var _ = class {
     m_WebAPI;
     m_AppInfoStore;
     constructor(_, _, _) {
-      (this.m_Profile = new _(_)),
+      ((this.m_Profile = new _(_)),
         (this.m_WebAPI = _),
         (this.m_AppInfoStore = new _()),
         this.m_AppInfoStore.Init(this.m_WebAPI),
@@ -2080,9 +2081,9 @@ var _ = class {
         )),
         (this.m_AvatarHistory = new _(this.m_WebAPI)),
         this.m_ProfileItems.AddOnAvatarEquipmentChangedCallback(() => {
-          this.m_Profile.MiniProfileData.Reload(),
-            this.m_AvatarHistory.RefreshAvatarHistory();
-        });
+          (this.m_Profile.MiniProfileData.Reload(),
+            this.m_AvatarHistory.RefreshAvatarHistory());
+        }));
     }
     get ServiceTransport() {
       return this.m_WebAPI.GetServiceTransport();
@@ -2141,7 +2142,7 @@ var _ = class {
     m_rtAvatarBannedUntil;
     m_Preferences = void 0;
     constructor(_) {
-      _(this),
+      (_(this),
         (this.m_strPersonaName = _.strPersonaName),
         (this.m_strFilteredPersonaName = _.strFilteredPersonaName),
         (this.m_strCustomURL = _.strCustomURL),
@@ -2151,7 +2152,7 @@ var _ = class {
         (this.m_Preferences = _.ProfilePreferences),
         this.SetBasicInfoChangesComitted(),
         (this.m_strCommittedAvatarHash = this.m_strAvatarHash =
-          _.strAvatarHash);
+          _.strAvatarHash));
       let {
         LocationData: {
           locCountry: _,
@@ -2162,10 +2163,10 @@ var _ = class {
           locCityCode: _,
         },
       } = _;
-      (this.m_Location = new _(_, _, _, _, _, _)),
-        (this.m_GroupList = new _(_.PrimaryGroup));
+      ((this.m_Location = new _(_, _, _, _, _, _)),
+        (this.m_GroupList = new _(_.PrimaryGroup)));
       let _ = new _(_.steamid);
-      (this.m_MiniProfileData = new _(_.GetAccountID())),
+      ((this.m_MiniProfileData = new _(_.GetAccountID())),
         (this.m_persona = new _(_)),
         _(() => {
           this.BuildPersonaStateObject();
@@ -2174,25 +2175,25 @@ var _ = class {
           _.rtPersonaNameBannedUntil || void 0),
         (this.m_rtProfileSummaryBannedUntil =
           _.rtProfileSummaryBannedUntil || void 0),
-        (this.m_rtAvatarBannedUntil = _.rtAvatarBannedUntil || void 0);
+        (this.m_rtAvatarBannedUntil = _.rtAvatarBannedUntil || void 0));
     }
     RevertBasicInfoChanges() {
-      (this.m_strPersonaName = this.m_strCommittedPersonaName),
+      ((this.m_strPersonaName = this.m_strCommittedPersonaName),
         (this.m_strFilteredPersonaName =
           this.m_strCommittedFilteredPersonaName),
         (this.m_strCustomURL = this.m_strComittedCustomURL),
         (this.m_strRealName = this.m_strComittedRealName),
         (this.m_strFilteredRealName = this.m_strCommittedFilteredRealName),
-        (this.m_strSummary = this.m_strComittedSummary);
+        (this.m_strSummary = this.m_strComittedSummary));
     }
     SetBasicInfoChangesComitted() {
-      (this.m_strCommittedPersonaName = this.m_strPersonaName),
+      ((this.m_strCommittedPersonaName = this.m_strPersonaName),
         (this.m_strCommittedFilteredPersonaName =
           this.m_strFilteredPersonaName),
         (this.m_strComittedCustomURL = this.m_strCustomURL),
         (this.m_strComittedRealName = this.m_strRealName),
         (this.m_strCommittedFilteredRealName = this.m_strFilteredRealName),
-        (this.m_strComittedSummary = this.m_strSummary);
+        (this.m_strComittedSummary = this.m_strSummary));
     }
     NotifyRNMobileAppStateChanged() {
       let _ = Reflect.get(window, `ReactNativeWebView`);
@@ -2211,7 +2212,7 @@ var _ = class {
       return this.m_strCommittedPersonaName;
     }
     SetPersonaName(_) {
-      (this.m_strPersonaName = _), (this.m_strFilteredPersonaName = _);
+      ((this.m_strPersonaName = _), (this.m_strFilteredPersonaName = _));
     }
     HasFilteredPersonaName() {
       return this.m_strPersonaName !== this.m_strFilteredPersonaName;
@@ -2220,7 +2221,7 @@ var _ = class {
       return this.m_strRealName;
     }
     SetRealName(_) {
-      (this.m_strRealName = _), (this.m_strFilteredRealName = _);
+      ((this.m_strRealName = _), (this.m_strFilteredRealName = _));
     }
     HasFilteredRealName() {
       return this.m_strRealName !== this.m_strFilteredRealName;
@@ -2276,18 +2277,18 @@ var _ = class {
       return this.m_persona;
     }
     BuildPersonaStateObject() {
-      (this.m_persona.m_strPlayerName = this.m_strPersonaName),
+      ((this.m_persona.m_strPlayerName = this.m_strPersonaName),
         (this.m_persona.m_strAvatarHash = this.m_strAvatarHash),
-        (this.m_persona.m_ePersonaState = 1);
+        (this.m_persona.m_ePersonaState = 1));
     }
     async UploadAvatar(_) {
       let _ = new FormData();
-      _.append(`avatar`, _),
+      (_.append(`avatar`, _),
         _.append(`type`, `player_avatar_image`),
         _.append(`sId`, _.steamid),
         _.append(`sessionid`, _()),
         _.append(`doSub`, `1`),
-        _.append(`json`, `1`);
+        _.append(`json`, `1`));
       let _ = !1,
         _ = ``;
       try {
@@ -2311,7 +2312,7 @@ var _ = class {
       };
     }
     SetAvatarHash(_, _ = !1) {
-      (this.m_strAvatarHash = _), _ && this.CommitAvatarHash();
+      ((this.m_strAvatarHash = _), _ && this.CommitAvatarHash());
     }
     BHasUncomittedAvatarChanges() {
       return this.m_strAvatarHash != this.m_strCommittedAvatarHash;
@@ -2340,16 +2341,12 @@ var _ = class {
     GetAvatarChangeCooldownEndRTime() {
       return this.m_rtAvatarBannedUntil;
     }
-    static k_strPersonaNameCooldownSupportURL =
-      `https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B`;
-    static k_strProfileSummaryCooldownSupportURL =
-      `https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B`;
-    static k_strAvatarCooldownSupportURL =
-      `https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B`;
-    static k_strNameFilteredSupportURL =
-      `https://help.steampowered.com/wizard/HelpWithSteamIssue/?issueid=415`;
+    static k_strPersonaNameCooldownSupportURL = `https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B`;
+    static k_strProfileSummaryCooldownSupportURL = `https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B`;
+    static k_strAvatarCooldownSupportURL = `https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B`;
+    static k_strNameFilteredSupportURL = `https://help.steampowered.com/wizard/HelpWithSteamIssue/?issueid=415`;
   };
-_([_], _.prototype, `m_strPersonaName`, void 0),
+(_([_], _.prototype, `m_strPersonaName`, void 0),
   _([_], _.prototype, `m_strCommittedPersonaName`, void 0),
   _([_], _.prototype, `m_strCustomURL`, void 0),
   _([_], _.prototype, `m_strRealName`, void 0),
@@ -2359,7 +2356,7 @@ _([_], _.prototype, `m_strPersonaName`, void 0),
   _([_], _.prototype, `m_Preferences`, void 0),
   _([_], _.prototype, `RevertBasicInfoChanges`, null),
   _([_], _.prototype, `SetAvatarHash`, null),
-  _([_], _.prototype, `RevertToComittedAvatarHash`, null);
+  _([_], _.prototype, `RevertToComittedAvatarHash`, null));
 var _ = `MgL-7khVeG4-`,
   _ = `zgXBEH3YPKg-`,
   _ = `BKFlxpkJD9Y-`,
@@ -2435,19 +2432,19 @@ var _ = class extends _.Component {
     };
   }
   async CommitChanges() {
-    this.setState({
+    (this.setState({
       bSaving: !0,
     }),
       await this.props.fnCommitChanges(this.state.activeItem),
       this.setState({
         bSaving: !1,
-      });
+      }));
   }
   async RevertChanges() {
-    this.setState({
+    (this.setState({
       activeItem: this.props.ActiveItem,
     }),
-      this.props.fnRevertChanges();
+      this.props.fnRevertChanges());
   }
   OnItemSelected(_) {
     this.setState({
@@ -2505,9 +2502,9 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `CommitChanges`, null),
+(_([_], _.prototype, `CommitChanges`, null),
   _([_], _.prototype, `RevertChanges`, null),
-  _([_], _.prototype, `OnItemSelected`, null);
+  _([_], _.prototype, `OnItemSelected`, null));
 function _(_) {
   return _ ? _.toLocaleLowerCase().replace(/\W/g, ``) : ``;
 }
@@ -2523,7 +2520,7 @@ var _ = class extends _.Component {
       let { getItems: _, getSearchFields: _, onItemSelected: _ } = this.props,
         _ = await _();
       this.m_fnSearchFieldsDisposer = _(() => {
-        (this.m_rgSearchableItems = _.map((_, _) => ({
+        ((this.m_rgSearchableItems = _.map((_, _) => ({
           key: `` + _,
           normalized_search_strings: _ && _(_).map(_),
           OnSelected: () => {
@@ -2540,7 +2537,7 @@ var _ = class extends _.Component {
               },
               item: null,
             }),
-          this.forceUpdate();
+          this.forceUpdate());
       });
     }
   }
@@ -2576,7 +2573,7 @@ var _ = class extends _.Component {
       };
       if (!_.strSearch && _) {
         let _ = this.m_refRootDiv.current.getBoundingClientRect();
-        (_.nHeight = _.height), (_.nWidth = _.width);
+        ((_.nHeight = _.height), (_.nWidth = _.width));
       } else _.strSearch && !_ && ((_.nHeight = null), (_.nWidth = null));
       return _;
     });
@@ -2742,28 +2739,28 @@ var _ = class extends _.Component {
   m_rgAvatars;
   async componentDidMount() {
     let _;
-    ([this.m_rgAvatars, _] = await Promise.all([
+    (([this.m_rgAvatars, _] = await Promise.all([
       this.props.ProfileItems.GetOwnedAvatars(),
       this.props.OGGAvatars.BWaitForLoad(),
     ])),
       this.setState({
         bReady: !0,
-      });
+      }));
   }
   SelectAnimatedAvatar(_) {
-    this.props.Profile.RevertToComittedAvatarHash(),
+    (this.props.Profile.RevertToComittedAvatarHash(),
       this.props.ProfileItems.SetEquippedAvatar(_),
-      this.props.fnOnCollapse();
+      this.props.fnOnCollapse());
   }
   SelectOGGAvatar(_) {
-    this.props.Profile.SetAvatarHash(_),
+    (this.props.Profile.SetAvatarHash(_),
       this.props.ProfileItems.SetEquippedAvatar(null),
-      this.props.fnOnCollapse();
+      this.props.fnOnCollapse());
   }
   SelectPreviousAvatar(_) {
-    this.props.Profile.SetAvatarHash(_),
+    (this.props.Profile.SetAvatarHash(_),
       this.props.ProfileItems.SetEquippedAvatar(null),
-      this.props.fnOnCollapse();
+      this.props.fnOnCollapse());
   }
   GetTopAvatars(_ = 4) {
     let _;
@@ -2886,10 +2883,10 @@ var _ = class extends _.Component {
     }
   }
 };
-_([_], _.prototype, `SelectAnimatedAvatar`, null),
+(_([_], _.prototype, `SelectAnimatedAvatar`, null),
   _([_], _.prototype, `SelectOGGAvatar`, null),
   _([_], _.prototype, `SelectPreviousAvatar`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = _,
   _ = ({ children: _ }) =>
     (0, _.jsx)(`div`, {
@@ -3087,7 +3084,7 @@ function _(_, _, _) {
       let _ = await (
         await fetch(`${_.COMMUNITY_BASE_URL}actions/GameAvatarsForGame/${_}`)
       ).json();
-      return _.UpdateAvatarsForGame(_, _), _;
+      return (_.UpdateAvatarsForGame(_, _), _);
     },
     enabled: _,
   });
@@ -3098,14 +3095,14 @@ var _ = class extends _.Component {
   };
   m_rgFrames;
   async componentDidMount() {
-    (this.m_rgFrames = await this.props.ProfileItems.GetOwnedAvatarFrames()),
+    ((this.m_rgFrames = await this.props.ProfileItems.GetOwnedAvatarFrames()),
       this.setState({
         bReady: !0,
-      });
+      }));
   }
   SelectFrame(_) {
-    this.props.ProfileItems.SetEquippedAvatarFrame(_),
-      this.props.fnOnCollapse();
+    (this.props.ProfileItems.SetEquippedAvatarFrame(_),
+      this.props.fnOnCollapse());
   }
   render() {
     if (!this.state.bReady) return !1;
@@ -3270,7 +3267,7 @@ var _ = _,
   _ = class extends _.Component {
     m_disposer;
     componentDidMount() {
-      document.querySelector(`.profile_small_header_avatar`).classList.add(_),
+      (document.querySelector(`.profile_small_header_avatar`).classList.add(_),
         (this.m_disposer = _(() => {
           let { Profile: _, ProfileItems: _ } = this.props,
             _ = _(
@@ -3284,13 +3281,13 @@ var _ = _,
           document
             .querySelectorAll(`.user_avatar > img`)
             .forEach((_) => (_.src = _));
-        }));
+        })));
     }
     componentWillUnmount() {
-      document
+      (document
         .querySelector(`.profile_small_header_avatar`)
         .classList.remove(_),
-        this.m_disposer();
+        this.m_disposer());
     }
     render() {
       let { Profile: _, ProfileItems: _ } = this.props;
@@ -3333,22 +3330,22 @@ var _ = _,
       });
     }
     Reset() {
-      (this.cropRef = _.createRef()),
+      ((this.cropRef = _.createRef()),
         this.setState({
           uploadImage: null,
           strUploadError: ``,
           bAvatarCollectionExpanded: !1,
           bFrameCollectionExpanded: !1,
           bHTMLError: !1,
-        });
+        }));
     }
     RevertChanges() {
-      this.props.ProfileItems.RevertAvatarChanges(),
+      (this.props.ProfileItems.RevertAvatarChanges(),
         this.props.Profile.RevertToComittedAvatarHash(),
-        this.Reset();
+        this.Reset());
     }
     async OnSave() {
-      this.setState({
+      (this.setState({
         bSaving: !0,
       }),
         this.state.uploadImage
@@ -3357,7 +3354,7 @@ var _ = _,
         this.setState({
           bSaving: !1,
         }),
-        this.props.Profile.NotifyRNMobileAppStateChanged();
+        this.props.Profile.NotifyRNMobileAppStateChanged());
     }
     async SaveUpload() {
       let { Profile: _, ProfileItems: _, AvatarHistory: _ } = this.props,
@@ -3393,10 +3390,10 @@ var _ = _,
             ? _.SetPreviousAvatar(_)
             : Promise.resolve(1),
         ]);
-      this.setState({
+      (this.setState({
         bHTMLError: _ !== 1 || (_ !== 1 && _ !== 1),
       }),
-        _.RefreshAvatarHistory();
+        _.RefreshAvatarHistory());
     }
     componentWillUnmount() {
       this.RevertChanges();
@@ -3510,14 +3507,14 @@ var _ = _,
       });
     }
   };
-_([_], _.prototype, `OnUploadSelected`, null),
+(_([_], _.prototype, `OnUploadSelected`, null),
   _([_], _.prototype, `OnShowAllAvatarsClicked`, null),
   _([_], _.prototype, `OnShowAllFramesClicked`, null),
   _([_], _.prototype, `Reset`, null),
   _([_], _.prototype, `RevertChanges`, null),
   _([_], _.prototype, `OnSave`, null),
   _([_], _.prototype, `SaveUpload`, null),
-  _([_], _.prototype, `CommitChanges`, null);
+  _([_], _.prototype, `CommitChanges`, null));
 var _ = ({ Profile: _, children: _ }) =>
   _.BIsAvatarChangeOnCooldown()
     ? (0, _.jsx)(_, {
@@ -3736,11 +3733,11 @@ function _(_) {
   }, [_.data, _.CountryCode]);
   let _ = _.useCallback(
     (_) => {
-      _.SetCountry(
+      (_.SetCountry(
         _.data?.strCode,
         _.data?.strCode ? _.data.strDisplayText : void 0,
       ),
-        _(_);
+        _(_));
     },
     [_],
   );
@@ -3795,11 +3792,11 @@ function _(_) {
   }, [_.data, _.StateCode]);
   let _ = _.useCallback(
       (_) => {
-        _.SetState(
+        (_.SetState(
           _.data?.strCode,
           _.data?.strCode ? _.data.strDisplayText : void 0,
         ),
-          _(_);
+          _(_));
       },
       [_],
     ),
@@ -3861,11 +3858,11 @@ function _(_) {
   }, [_.data, _.CityCode]);
   let _ = _.useCallback(
       (_) => {
-        _.SetCity(
+        (_.SetCity(
           _.data?.strCode,
           _.data?.strCode ? _.data.strDisplayText : void 0,
         ),
-          _(_);
+          _(_));
       },
       [_],
     ),
@@ -3912,7 +3909,7 @@ var _ = `oK53QBwGoIY-`,
       this.SetInputValue(_.currentTarget.value);
     }
     InsertEmoticon(_, _) {
-      _ || this.m_refTextInput.current.focus(), this.InsertAtCursor(`:${_}:`);
+      (_ || this.m_refTextInput.current.focus(), this.InsertAtCursor(`:${_}:`));
     }
     InsertAtCursor(_) {
       let _ = this.m_refTextInput.current.textarea,
@@ -3924,13 +3921,13 @@ var _ = `oK53QBwGoIY-`,
       });
     }
     SetInputValue(_, _) {
-      this.setState(
+      (this.setState(
         {
           strSummary: _,
         },
         _,
       ),
-        this.props.Profile.SetSummary(_);
+        this.props.Profile.SetSummary(_));
     }
     render() {
       let { EmoticonStore: _, Profile: _ } = this.props,
@@ -3964,8 +3961,8 @@ var _ = `oK53QBwGoIY-`,
       });
     }
   };
-_([_], _.prototype, `OnChange`, null),
-  _([_], _.prototype, `InsertEmoticon`, null);
+(_([_], _.prototype, `OnChange`, null),
+  _([_], _.prototype, `InsertEmoticon`, null));
 var _ = ({ Profile: _, children: _ }) =>
     _.BIsProfileSummaryChangeOnCooldown()
       ? (0, _.jsx)(_, {
@@ -3986,7 +3983,7 @@ var _ = ({ Profile: _, children: _ }) =>
       strHTMLError: ``,
     };
     OnSubmit(_) {
-      _.preventDefault(), this.CommitChanges(_.currentTarget);
+      (_.preventDefault(), this.CommitChanges(_.currentTarget));
     }
     async CommitChanges(_) {
       this.setState({
@@ -4011,10 +4008,10 @@ var _ = ({ Profile: _, children: _ }) =>
     }
     RevertChanges() {
       let { Profile: _ } = this.props;
-      _.RevertBasicInfoChanges(),
+      (_.RevertBasicInfoChanges(),
         this.setState({
           strHTMLError: ``,
-        });
+        }));
     }
     render() {
       let { Profile: _, EmoticonStore: _ } = this.props,
@@ -4119,8 +4116,8 @@ var _ = ({ Profile: _, children: _ }) =>
       });
     }
   };
-_([_], _.prototype, `OnSubmit`, null),
-  _([_], _.prototype, `RevertChanges`, null);
+(_([_], _.prototype, `OnSubmit`, null),
+  _([_], _.prototype, `RevertChanges`, null));
 var _ = class extends _.Component {
     render() {
       return (0, _.jsx)(`div`, {
@@ -4184,9 +4181,9 @@ var _ = class extends _.Component {
       });
     }
   };
-_([_], _.prototype, `OnPersonaNameChange`, null),
+(_([_], _.prototype, `OnPersonaNameChange`, null),
   _([_], _.prototype, `OnRealNameChange`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = ({ Profile: _, children: _ }) =>
     _.BIsPersonaNameChangeOnCooldown()
       ? (0, _.jsx)(_, {
@@ -4268,7 +4265,7 @@ var _ = ({ Profile: _, children: _ }) =>
       });
     }
   };
-_([_], _.prototype, `OnProfileURLChange`, null), (_ = _([_], _));
+(_([_], _.prototype, `OnProfileURLChange`, null), (_ = _([_], _)));
 var _ = class extends _.Component {
   m_disposer;
   componentDidMount() {
@@ -4292,7 +4289,7 @@ var _ = class extends _.Component {
     let { Profile: _ } = this.props,
       _ = _,
       _ = _.GetPreferences();
-    (_.hide_profile_awards = _), _.SetPreferences(_);
+    ((_.hide_profile_awards = _), _.SetPreferences(_));
   }
   render() {
     let { Profile: _ } = this.props,
@@ -4313,7 +4310,7 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnProfileAwardsCheckboxChecked`, null), (_ = _([_], _));
+(_([_], _.prototype, `OnProfileAwardsCheckboxChecked`, null), (_ = _([_], _)));
 var _ = `GhpgMs4LuzQ-`,
   _ = `yOrk2V0Iu-4-`,
   _ = `p8t4WX8LgAY-`,
@@ -4328,7 +4325,7 @@ var _ = `GhpgMs4LuzQ-`,
     };
     async CommitFavoriteBadge() {
       let _ = this.props.Badges;
-      this.setState({
+      (this.setState({
         bSaving: !0,
       }),
         (await _.CommitFavoriteBadgeChanges()) == 1
@@ -4340,13 +4337,13 @@ var _ = `GhpgMs4LuzQ-`,
             }),
         this.setState({
           bSaving: !1,
-        });
+        }));
     }
     RevertFavoriteBadge() {
-      this.props.Badges.RevertFavoriteBadge(),
+      (this.props.Badges.RevertFavoriteBadge(),
         this.setState({
           strHTMLError: ``,
-        });
+        }));
     }
     componentWillUnmount() {
       this.props.Badges.RevertFavoriteBadge();
@@ -4398,9 +4395,9 @@ var _ = `GhpgMs4LuzQ-`,
       });
     }
   };
-_([_], _.prototype, `CommitFavoriteBadge`, null),
+(_([_], _.prototype, `CommitFavoriteBadge`, null),
   _([_], _.prototype, `RevertFavoriteBadge`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = _,
   _ = ({ badge: _, children: _ }) =>
     (0, _.jsxs)(`div`, {
@@ -4495,7 +4492,7 @@ var _ = _,
         bSaving: !0,
       });
       let _ = await _.CommitPrimaryGroup();
-      _.strHTMLError
+      (_.strHTMLError
         ? this.setState({
             strHTMLError: _.strHTMLError,
           })
@@ -4504,13 +4501,13 @@ var _ = _,
           }),
         this.setState({
           bSaving: !1,
-        });
+        }));
     }
     RevertFavoriteGroup() {
-      this.props.Profile.GroupList.RevertPrimaryGroupChanges(),
+      (this.props.Profile.GroupList.RevertPrimaryGroupChanges(),
         this.setState({
           strHTMLError: ``,
-        });
+        }));
     }
     componentWillUnmount() {
       this.props.Profile.GroupList.RevertPrimaryGroupChanges();
@@ -4543,7 +4540,8 @@ var _ = _,
           (0, _.jsx)(_, {
             getSearchFields: _,
             getItems: async () => (
-              await _.BWaitForUserGroups(), _.GetUserGroups()
+              await _.BWaitForUserGroups(),
+              _.GetUserGroups()
             ),
             onItemSelected: (_) => {
               _.SetPrimaryGroup(_);
@@ -4559,9 +4557,9 @@ var _ = _,
       });
     }
   };
-_([_], _.prototype, `CommitFavoriteGroup`, null),
+(_([_], _.prototype, `CommitFavoriteGroup`, null),
   _([_], _.prototype, `RevertFavoriteGroup`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = _,
   _ = ({ group: _, children: _ }) =>
     (0, _.jsxs)(`div`, {
@@ -4679,7 +4677,7 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `RevertChanges`, null), (_ = _([_], _));
+(_([_], _.prototype, `RevertChanges`, null), (_ = _([_], _)));
 var _ = _,
   _ = _(
     ({
@@ -4696,7 +4694,8 @@ var _ = _,
           getSearchFields: _,
           getItems: () => _.GetOwnedMiniProfileBackgrounds(),
           fnCommitChanges: async (_) => (
-            _.SetEquippedMiniProfileBackground(_), _.CommitMiniProfileChanges()
+            _.SetEquippedMiniProfileBackground(_),
+            _.CommitMiniProfileChanges()
           ),
           ItemComponent: _,
           RenderDefaultComponent: ({ onSelected: _, active: _ }) =>
@@ -5119,10 +5118,10 @@ function _(_) {
 }
 var _ = class extends _.Component {
   constructor(_) {
-    super(_),
+    (super(_),
       (this.state = {
         eSaveState: 0,
-      });
+      }));
   }
   OnSettingChanged(_) {
     this.props.PrivacyStore.ChangeCommentPermission(_);
@@ -5148,7 +5147,7 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnSettingChanged`, null), (_ = _([_], _));
+(_([_], _.prototype, `OnSettingChanged`, null), (_ = _([_], _)));
 function _(_) {
   return (0, _.jsx)(`div`, {
     className: `ProfilePrivacyDropDown readonly`,
@@ -5262,7 +5261,7 @@ var _ = `QSRYwDyRJpA-`,
     SteamDeckTheme: _,
   },
   _ = ({ className: _, width: _, height: _, theme: _ }) => {
-    (_ ||= `Default`), (_ += `Theme`);
+    ((_ ||= `Default`), (_ += `Theme`));
     let [_, _] = _(),
       [_, _] = _();
     return (0, _.jsxs)(`svg`, {
@@ -5742,9 +5741,9 @@ var _ = `QSRYwDyRJpA-`,
       );
     }
   };
-_([_], _.prototype, `CommitChanges`, null),
+(_([_], _.prototype, `CommitChanges`, null),
   _([_], _.prototype, `RevertChanges`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = _,
   _ = ({ label: _, currentFlag: _, flag: _, onSelect: _ }) =>
     (0, _.jsx)(`div`, {
@@ -5784,7 +5783,7 @@ var _ = _,
       });
     }
   };
-_([_], _.prototype, `OnChange`, null), (_ = _([_], _));
+(_([_], _.prototype, `OnChange`, null), (_ = _([_], _)));
 var _ = _(({ Background: _, ProfileItems: _, theme: _ }) =>
     (0, _.jsxs)(`div`, {
       children: [
@@ -6090,9 +6089,9 @@ var _ = ({ root: _, currentPath: _, linksAvailable: _ }) => {
         : null;
     }
   };
-_([_], _.prototype, `ShowDialog`, null),
+(_([_], _.prototype, `ShowDialog`, null),
   _([_], _.prototype, `HideDialog`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = _,
   _ = _(({ ProfileItems: _ }) => {
     let _ = _.GetProfileModifierCSSURL();
@@ -6130,8 +6129,8 @@ var _ = _,
   },
   _ = class extends _.Component {
     OnDismiss() {
-      this.props.ProfileItems.RevertProfileModifierChanges(),
-        this.props.onDismiss();
+      (this.props.ProfileItems.RevertProfileModifierChanges(),
+        this.props.onDismiss());
     }
     render() {
       let { ProfileItems: _ } = this.props;
@@ -6148,7 +6147,8 @@ var _ = _,
             getSearchFields: _,
             getItems: () => _.GetOwnedProfileModifiers(),
             fnCommitChanges: async (_) => (
-              _.SetEquippedProfileModifier(_), _.CommitProfileModifierChanges()
+              _.SetEquippedProfileModifier(_),
+              _.CommitProfileModifierChanges()
             ),
             ItemComponent: _,
             RenderDefaultComponent: ({ onSelected: _, active: _ }) =>
@@ -6167,7 +6167,7 @@ var _ = _,
       });
     }
   };
-_([_], _.prototype, `OnDismiss`, null), (_ = _([_], _));
+(_([_], _.prototype, `OnDismiss`, null), (_ = _([_], _)));
 var _ = ({ Item: _, onSelected: _, children: _, active: _ }) =>
     (0, _.jsxs)(_, {
       className: _(_, _ && `YGzcD6kqN6Q-`),
@@ -6249,11 +6249,11 @@ var _ = ({ Item: _, onSelected: _, children: _, active: _ }) =>
     };
     async CommitChanges(_) {
       let { ProfileTheme: _ } = this.props;
-      this.setState({
+      (this.setState({
         bSaving: !0,
         strHTMLError: ``,
       }),
-        _.SetActiveTheme(_.theme_id);
+        _.SetActiveTheme(_.theme_id));
       let _ = await _.CommitActiveTheme();
       return (
         _ != 1 &&
@@ -6268,10 +6268,10 @@ var _ = ({ Item: _, onSelected: _, children: _, active: _ }) =>
     }
     RevertChanges() {
       let { ProfileTheme: _ } = this.props;
-      this.setState({
+      (this.setState({
         strHTMLError: ``,
       }),
-        _.RevertActiveTheme();
+        _.RevertActiveTheme());
     }
     render() {
       let { ProfileTheme: _, ProfileItems: _ } = this.props,
@@ -6308,9 +6308,9 @@ var _ = ({ Item: _, onSelected: _, children: _, active: _ }) =>
       });
     }
   };
-_([_], _.prototype, `CommitChanges`, null),
+(_([_], _.prototype, `CommitChanges`, null),
   _([_], _.prototype, `RevertChanges`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = _,
   _ = ({ Theme: _, children: _ }) => {
     let _;
@@ -6447,7 +6447,7 @@ var _ = _,
       strHTMLError: ``,
     };
     OnSubmit(_) {
-      _.preventDefault(), this.CommitChanges(_.currentTarget);
+      (_.preventDefault(), this.CommitChanges(_.currentTarget));
     }
     async CommitChanges(_) {
       this.setState({
@@ -6455,7 +6455,7 @@ var _ = _,
         strHTMLError: ``,
       });
       let _ = await _(`showcases`, new FormData(_));
-      _.strHTMLError
+      (_.strHTMLError
         ? this.setState({
             strHTMLError: _.strHTMLError,
           })
@@ -6464,7 +6464,7 @@ var _ = _,
           }),
         this.setState({
           bSaving: !1,
-        });
+        }));
     }
     RevertChanges() {
       window.location.href = _.ProfileURL;
@@ -6508,26 +6508,26 @@ var _ = _,
       });
     }
   };
-_([_], _.prototype, `OnSubmit`, null),
-  _([_], _.prototype, `RevertChanges`, null);
+(_([_], _.prototype, `OnSubmit`, null),
+  _([_], _.prototype, `RevertChanges`, null));
 var _, _, _;
 async function _(_) {
   let _ = _(`config`, `profile_config`);
-  _ && Object.assign(_, _),
+  (_ && Object.assign(_, _),
     (_ = new _(
       _(`profile-edit`, `profile_edit_config`),
       _(`profile-badges`, `profile_edit_config`),
       _,
     )),
     _(_.EREALM) || _.Profile.GroupList.GetUserGroups(),
-    (_ = document.getElementById(`showcases`));
+    (_ = document.getElementById(`showcases`)));
 }
 function _(_) {
   let [_, _] = _.useState(!1),
     _ = _();
   if (
     (_.useEffect(() => {
-      (_ ||= _(_)), _.then(() => _(!0));
+      ((_ ||= _(_)), _.then(() => _(!0)));
     }, [_]),
     _.useLayoutEffect(() => {
       if (_)
@@ -6663,18 +6663,18 @@ function _(_) {
         _ = parseInt(_) * 86400,
         _ = Math.floor(new Date().getTime() / 1e3) + _,
         _ = _.current?.checked ?? !1;
-      await _.mutateAsync({
+      (await _.mutateAsync({
         rtCooldownEnds: _,
         bClearOpenReports: _,
       }),
         _(!1),
-        _(!1);
+        _(!1));
     },
     _ = async () => {
-      await _.mutateAsync({
+      (await _.mutateAsync({
         rtCooldownEnds: 0,
       }),
-        _(!1);
+        _(!1));
     },
     _ = ``;
   if (_.isSuccess && _.data > 0) {
@@ -6794,10 +6794,10 @@ function _(_) {
   return _({
     mutationFn: async (_) => {
       let _ = _.Init(_);
-      _.Body().set_steamid(_),
+      (_.Body().set_steamid(_),
         _.Body().set_rtime_cooldown_ends(_.rtCooldownEnds),
         _.bClearOpenReports !== void 0 &&
-          _.Body().set_acquit_unresolved_reports(_.bClearOpenReports);
+          _.Body().set_acquit_unresolved_reports(_.bClearOpenReports));
       let _ = await _.UpdateReporterCooldown(_, _);
       if (!_.BSuccess()) throw Error(`EResult ` + _.GetEResult());
     },
@@ -6867,4 +6867,4 @@ function _(_) {
     ],
   });
 }
-export { _ as ProfileEditRoutes, _ as default, _, _ };
+export { _ as ProfileEditRoutes, _ as default };

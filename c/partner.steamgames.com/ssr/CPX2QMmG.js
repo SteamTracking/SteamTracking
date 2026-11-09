@@ -121,7 +121,7 @@ function _(_, _) {
   }
 }
 function _(_, _, _) {
-  for (; _.length < _; ) _ = _ + _;
+  for (; _.length < _;) _ = _ + _;
   return _;
 }
 function _(_) {
@@ -161,7 +161,9 @@ function _(_, _, _) {
       _ = _ ? `#Duration_MinuteSecondMillisecond` : `#Duration_MinuteSecond`;
     _ = _.Localize(_, _, _, _);
   }
-  return _ && (_ = _ ? _.Localize(`#Duration_WrittenNegation`, _) : `-` + _), _;
+  return (
+    _ && (_ = _ ? _.Localize(`#Duration_WrittenNegation`, _) : `-` + _), _
+  );
 }
 var _ = _(_()),
   _ = class _ {
@@ -191,29 +193,29 @@ var _ = _(_()),
       return _;
     }
     InitFromObjects(_, _, _, _) {
-      _ && (this.m_bReportIndividualMissingTokens = !1),
+      (_ && (this.m_bReportIndividualMissingTokens = !1),
         _ || this.m_mapTokens.clear(),
         this.AddTokens(_, _ || {}),
-        this.m_cbkTokensChanged.Dispatch();
+        this.m_cbkTokensChanged.Dispatch());
     }
     InitDirect(_, _) {
-      this.m_mapTokens.clear(),
+      (this.m_mapTokens.clear(),
         this.m_mapFallbackTokens.clear(),
         this.AddTokens(_, _),
-        this.m_cbkTokensChanged.Dispatch();
+        this.m_cbkTokensChanged.Dispatch());
     }
     SetReady(_) {
       this.m_bReady = _;
     }
     AddTokens(_, _) {
-      Object.keys(_).forEach((_) => {
+      (Object.keys(_).forEach((_) => {
         this.m_mapTokens.set(_, _[_]);
       }),
         _ &&
           Object.keys(_).forEach((_) => {
-            this.m_mapTokens.has(_) || this.m_mapTokens.set(_, _[_]),
-              this.m_mapFallbackTokens.set(_, _[_]);
-          });
+            (this.m_mapTokens.has(_) || this.m_mapTokens.set(_, _[_]),
+              this.m_mapFallbackTokens.set(_, _[_]));
+          }));
     }
     GetTokensChangedCallbackList() {
       return this.m_cbkTokensChanged;
@@ -298,12 +300,12 @@ function _(_, ..._) {
     _ = /(.*?)%(\d+)\$s/g,
     _ = 0,
     _;
-  for (; (_ = _.exec(_)); ) {
-    (_ += _[0].length), _.push(_[1]);
+  for (; (_ = _.exec(_));) {
+    ((_ += _[0].length), _.push(_[1]));
     let _ = parseInt(_[2]);
     _ >= 1 && _ <= _.length && _.push(_[_ - 1]);
   }
-  return _.push(_.substr(_)), _.createElement(_.Fragment, null, ..._);
+  return (_.push(_.substr(_)), _.createElement(_.Fragment, null, ..._));
 }
 function _(_, ..._) {
   let _ = _.LocalizeIfToken(_);
@@ -314,8 +316,8 @@ function _(_, ..._) {
     _ = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, `gs`),
     _ = 0,
     _;
-  for (; (_ = _.exec(_)); ) {
-    (_ += _[0].length), _.push(_[1]);
+  for (; (_ = _.exec(_));) {
+    ((_ += _[0].length), _.push(_[1]));
     let _ = parseInt(_[2]),
       _ = _[3] || ``,
       _ = _(_, ..._),
@@ -325,7 +327,7 @@ function _(_, ..._) {
           : _;
     _.push(_);
   }
-  return _.push(_.substr(_)), _.createElement(_.Fragment, null, ..._);
+  return (_.push(_.substr(_)), _.createElement(_.Fragment, null, ..._));
 }
 function _(_, _, ..._) {
   return _(_ === 1 || _ === `1` ? _ : _ + `_Plural`, _, ..._);
@@ -349,7 +351,7 @@ var _ = class _ {
         if (_ >= 32) return _;
         _ = _(_, _ + 1, null);
       }
-      return (_[_] = _), _;
+      return ((_[_] = _), _);
     }
     static Get(_, _) {
       return (_ && _.length > _ && _[_]) || ``;
@@ -469,4 +471,3 @@ function _(_) {
 }
 var _ = new _();
 window.LocalizationManager = _;
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

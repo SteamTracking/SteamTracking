@@ -23,8 +23,8 @@ function _(_) {
           .writeText(_.current.value)
           .then(() => _(_(`#EventDisplay_Share_CopiedToClipboard`)))
           .catch((_) => {
-            _(_(`#EventDisplay_Share_FailedToCopyToClipboard`)),
-              console.error(`Failed to copy link to clipboard:`, _);
+            (_(_(`#EventDisplay_Share_FailedToCopyToClipboard`)),
+              console.error(`Failed to copy link to clipboard:`, _));
           });
     };
   return (0, _.jsxs)(`div`, {
@@ -86,7 +86,7 @@ function _(_) {
     _ = _.useMemo(() => {
       if (!_) return ``;
       let _ = new URL(_);
-      return _.searchParams.set(_, _(_)), _.href;
+      return (_.searchParams.set(_, _(_)), _.href);
     }, [_, _]),
     _ = _.EREALM === _.k_ESteamRealmChina;
   return _

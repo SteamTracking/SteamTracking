@@ -60,7 +60,8 @@ import {
 } from "./saveprices.js";
 import { n as G, t as Ae } from "./localization4.js";
 var K = {};
-(K.arabic = () => d(() => import(`./currency_arabic.js`), [], import.meta.url)),
+((K.arabic = () =>
+  d(() => import(`./currency_arabic.js`), [], import.meta.url)),
   (K.brazilian = () =>
     d(() => import(`./currency_brazilian.js`), [], import.meta.url)),
   (K.bulgarian = () =>
@@ -116,7 +117,7 @@ var K = {};
   (K.ukrainian = () =>
     d(() => import(`./currency_ukrainian.js`), [], import.meta.url)),
   (K.vietnamese = () =>
-    d(() => import(`./currency_vietnamese.js`), [], import.meta.url));
+    d(() => import(`./currency_vietnamese.js`), [], import.meta.url)));
 async function je(e) {
   if (K[e]) return await K[e]();
 }
@@ -422,7 +423,7 @@ function qe(e) {
                   strDescription: p(`#Dialog_AreYouSure`),
                   closeModal: o,
                   onOK: async () => {
-                    u(!0), await s(), u(!1), window.location.reload();
+                    (u(!0), await s(), u(!1), window.location.reload());
                   },
                   children:
                     l &&

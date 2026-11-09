@@ -2,9 +2,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.descriptors || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1, 2, 6], null);
+        _.Message.initialize(this, _, 0, -1, [1, 2, 6], null));
     }
     static sm_m;
     static sm_mbf;
@@ -56,7 +56,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -77,14 +77,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `AppRatingAuxData`;
@@ -93,9 +93,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.rating_agency || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -149,7 +149,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -170,14 +170,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `AppRating`;
@@ -215,10 +215,10 @@ function _(_) {
     { data: _ } = _(_),
     _ = !!_ && !!_ && _.length > 0,
     _ = _.useCallback(() => {
-      _.mutate({
+      (_.mutate({
         rgCategoryIDs: _.reverse(),
       }),
-        _();
+        _());
     }, [_, _, _]);
   return (0, _.jsx)(_, {
     onClose: _,
@@ -277,7 +277,7 @@ function _(_, _, _, _) {
       _ = !1,
       _ = _.filter((_) => {
         let _ = _.name.toLocaleLowerCase();
-        return (_ ||= _ === _), _.indexOf(_) > -1;
+        return ((_ ||= _ === _), _.indexOf(_) > -1);
       });
     return (
       (_ = _(_, [])),
@@ -325,9 +325,9 @@ function _(_) {
         _(_));
     },
     _ = (_) => {
-      _.stopPropagation(),
+      (_.stopPropagation(),
         _.preventDefault(),
-        _ && _.length !== 0 && (_(``), _(_));
+        _ && _.length !== 0 && (_(``), _(_)));
     },
     { data: _ } = _(_, _),
     _ = _(_),
@@ -429,4 +429,3 @@ function _() {
     children: _(`#Wishlist_Categories_Max_Per_App_Reached`, _),
   });
 }
-export { _, _ };

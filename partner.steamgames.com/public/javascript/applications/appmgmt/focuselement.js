@@ -17,9 +17,9 @@ var d = n(t(), 1),
 function p(e) {
   let { children: t, "flow-children": n, ...p } = e,
     { gamepadEvents: m } = s(e);
-  n && (p.layout = r(n)),
+  (n && (p.layout = r(n)),
     m.onOKButton ||
-      (`onClick` in t.props && t.props.onClick && (m.onOKButton = c));
+      (`onClick` in t.props && t.props.onClick && (m.onOKButton = c)));
   let h;
   p.focusable && (h = t.props.tabIndex || 0);
   let { ref: g, node: _ } = o(p);

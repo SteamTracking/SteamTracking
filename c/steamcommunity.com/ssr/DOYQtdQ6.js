@@ -125,14 +125,14 @@ var _ = new Set([`img`, `noparse`, `url`, `dynamiclink`]),
     m_parentNode;
     m_fnRenderURL;
     constructor(_, _, _) {
-      super(_),
+      (super(_),
         (this.m_parentNode = _),
         (this.m_fnRenderURL =
           _ ??
           ((_) =>
             (0, _.jsx)(_, {
               strURL: _,
-            })));
+            }))));
     }
     AppendText(_, _ = !1) {
       if (this.m_parentNode && _.has(this.m_parentNode.tag)) {
@@ -141,9 +141,9 @@ var _ = new Set([`img`, `noparse`, `url`, `dynamiclink`]),
       }
       let _ = _;
       for (let _ = _.exec(_); _; _ = _.exec(_))
-        _.index > 0 && super.AppendText(_.slice(0, _.index), _),
+        (_.index > 0 && super.AppendText(_.slice(0, _.index), _),
           super.AppendNode(this.m_fnRenderURL(_[0])),
-          (_ = _.slice(_.index + _[0].length));
+          (_ = _.slice(_.index + _[0].length)));
       _.length > 0 && super.AppendText(_, _);
     }
   };
@@ -230,7 +230,7 @@ function _(_, _, _) {
   let _ =
       !_.fnBAllowCard || _.fnBAllowCard(_) ? _(_.rgDynamicLinks, _) : void 0,
     _ = _ && (!_.fnBTake || _.fnBTake()) ? _ : void 0;
-  return _.set(_, _), _;
+  return (_.set(_, _), _);
 }
 function _(_, _ = _) {
   if (!_.rgDynamicLinks.length) return _;
@@ -281,4 +281,3 @@ function _(_, _, _) {
       )
     : _;
 }
-export { _, _, _, _, _, _, _, _, _ };

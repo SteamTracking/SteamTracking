@@ -37,7 +37,7 @@ function _() {
 }
 function _(_) {
   let _ = {};
-  _.viewportWidth &&
+  (_.viewportWidth &&
     (_._ = {
       _: _.viewportWidth.value,
       _: _.viewportWidth.source,
@@ -47,7 +47,7 @@ function _(_) {
         _: _.viewportHeight.value,
         _: _.viewportHeight.source,
       }),
-    Object.keys(_).length === 0 ? _(_) : _(_, JSON.stringify(_));
+    Object.keys(_).length === 0 ? _(_) : _(_, JSON.stringify(_)));
 }
 function _(_, _) {
   if (!_ || typeof _ != `object`) return !1;
@@ -106,12 +106,12 @@ function _(_) {
       _();
       let _,
         _ = () => {
-          clearTimeout(_), (_ = setTimeout(_, 250));
+          (clearTimeout(_), (_ = setTimeout(_, 250)));
         };
       return (
         window.addEventListener(`resize`, _),
         () => {
-          clearTimeout(_), window.removeEventListener(`resize`, _);
+          (clearTimeout(_), window.removeEventListener(`resize`, _));
         }
       );
     }, [_]),
@@ -124,4 +124,3 @@ function _(_) {
 function _() {
   return (0, _.useContext)(_);
 }
-export { _, _ };

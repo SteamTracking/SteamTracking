@@ -142,10 +142,9 @@
   background-color: var(--color-dull-6);
 }
 :where(
-    ._4I3jMtMHJys-
-      ._9r9T-BENybY-[data-selected="false"]:not(.rADD4VAHKqM-):hover
-  ) {
-  background-color: rgb(from var(--color-dull-12) r g b / 60%);
+  ._4I3jMtMHJys- ._9r9T-BENybY-[data-selected="false"]:not(.rADD4VAHKqM-):hover
+) {
+  background-color: rgb(from var(--color-dull-12) r g b/60%);
 }
 :where(.oBernP4-8lg- ._9r9T-BENybY-[data-selected="false"]:hover) {
   background-color: var(--color-dull-7);

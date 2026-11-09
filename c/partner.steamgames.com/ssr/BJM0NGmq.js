@@ -1,6 +1,6 @@
 var _ = class extends _ {
     constructor(_ = {}) {
-      super(), (this.config = _), (this.#e = new Map());
+      (super(), (this.config = _), (this.#e = new Map()));
     }
     #e;
     build(_, _, _) {
@@ -90,16 +90,16 @@ var _ = class extends _ {
     #t;
     #n;
     constructor(_) {
-      super(),
+      (super(),
         (this.mutationId = _.mutationId),
         (this.#t = _.mutationCache),
         (this.#e = []),
         (this.state = _.state || _()),
         this.setOptions(_.options),
-        this.scheduleGc();
+        this.scheduleGc());
     }
     setOptions(_) {
-      (this.options = _), this.updateGcTime(this.options.gcTime);
+      ((this.options = _), this.updateGcTime(this.options.gcTime));
     }
     get meta() {
       return this.options.meta;
@@ -115,13 +115,13 @@ var _ = class extends _ {
         }));
     }
     removeObserver(_) {
-      (this.#e = this.#e.filter((_) => _ !== _)),
+      ((this.#e = this.#e.filter((_) => _ !== _)),
         this.scheduleGc(),
         this.#t.notify({
           type: `observerRemoved`,
           mutation: this,
           observer: _,
-        });
+        }));
     }
     optionalRemove() {
       this.#e.length ||
@@ -164,12 +164,12 @@ var _ = class extends _ {
         _ = !this.#n.canStart();
       try {
         if (!_) {
-          this.#r({
+          (this.#r({
             type: `pending`,
             variables: _,
             isPaused: _,
           }),
-            await this.#t.config.onMutate?.(_, this);
+            await this.#t.config.onMutate?.(_, this));
           let _ = await this.options.onMutate?.(_);
           _ !== this.state.context &&
             this.#r({
@@ -200,7 +200,7 @@ var _ = class extends _ {
       } catch (_) {
         try {
           throw (
-            (await this.#t.config.onError?.(_, _, this.state.context, this),
+            await this.#t.config.onError?.(_, _, this.state.context, this),
             await this.options.onError?.(_, _, this.state.context),
             await this.#t.config.onSettled?.(
               void 0,
@@ -210,7 +210,7 @@ var _ = class extends _ {
               this,
             ),
             await this.options.onSettled?.(void 0, _, _, this.state.context),
-            _)
+            _
           );
         } finally {
           this.#r({
@@ -276,17 +276,17 @@ var _ = class extends _ {
             };
         }
       };
-      (this.state = _(this.state)),
+      ((this.state = _(this.state)),
         _.batch(() => {
-          this.#e.forEach((_) => {
+          (this.#e.forEach((_) => {
             _.onMutationUpdate(_);
           }),
             this.#t.notify({
               mutation: this,
               type: `updated`,
               action: _,
-            });
-        });
+            }));
+        }));
     }
   };
 function _() {
@@ -304,7 +304,7 @@ function _() {
 }
 var _ = class extends _ {
   constructor(_ = {}) {
-    super(), (this.config = _), (this.#e = new Map()), (this.#t = Date.now());
+    (super(), (this.config = _), (this.#e = new Map()), (this.#t = Date.now()));
   }
   #e;
   #t;
@@ -315,17 +315,17 @@ var _ = class extends _ {
       options: _.defaultMutationOptions(_),
       state: _,
     });
-    return this.add(_), _;
+    return (this.add(_), _);
   }
   add(_) {
     let _ = _(_),
       _ = this.#e.get(_) ?? [];
-    _.push(_),
+    (_.push(_),
       this.#e.set(_, _),
       this.notify({
         type: `added`,
         mutation: _,
-      });
+      }));
   }
   remove(_) {
     let _ = _(_);
@@ -444,7 +444,7 @@ function _(_) {
             do {
               let _ = _ === 0 ? (_[0] ?? _.initialPageParam) : _(_, _);
               if (_ > 0 && _ == null) break;
-              (_ = await _(_, _)), _++;
+              ((_ = await _(_, _)), _++);
             } while (_ < _);
           }
           return _;
@@ -481,27 +481,27 @@ var _ = class {
     #o;
     #s;
     constructor(_ = {}) {
-      (this.#e = _.queryCache || new _()),
+      ((this.#e = _.queryCache || new _()),
         (this.#t = _.mutationCache || new _()),
         (this.#n = _.defaultOptions || {}),
         (this.#r = new Map()),
         (this.#i = new Map()),
-        (this.#a = 0);
+        (this.#a = 0));
     }
     mount() {
-      this.#a++,
+      (this.#a++,
         this.#a === 1 &&
           ((this.#o = _.subscribe(async (_) => {
             _ && (await this.resumePausedMutations(), this.#e.onFocus());
           })),
           (this.#s = _.subscribe(async (_) => {
             _ && (await this.resumePausedMutations(), this.#e.onOnline());
-          })));
+          }))));
     }
     unmount() {
-      this.#a--,
+      (this.#a--,
         this.#a === 0 &&
-          (this.#o?.(), (this.#o = void 0), this.#s?.(), (this.#s = void 0));
+          (this.#o?.(), (this.#o = void 0), this.#s?.(), (this.#s = void 0)));
     }
     isFetching(_) {
       return this.#e.findAll({
@@ -641,13 +641,13 @@ var _ = class {
       return this.fetchQuery(_).then(_).catch(_);
     }
     fetchInfiniteQuery(_) {
-      return (_.behavior = _(_.pages)), this.fetchQuery(_);
+      return ((_.behavior = _(_.pages)), this.fetchQuery(_));
     }
     prefetchInfiniteQuery(_) {
       return this.fetchInfiniteQuery(_).then(_).catch(_);
     }
     ensureInfiniteQueryData(_) {
-      return (_.behavior = _(_.pages)), this.ensureQueryData(_);
+      return ((_.behavior = _(_.pages)), this.ensureQueryData(_));
     }
     resumePausedMutations() {
       return _.isOnline() ? this.#t.resumePausedMutations() : Promise.resolve();
@@ -733,7 +733,7 @@ var _ = class {
           };
     }
     clear() {
-      this.#e.clear(), this.#t.clear();
+      (this.#e.clear(), this.#t.clear());
     }
   },
   _ = _(_(), 1),
@@ -782,4 +782,3 @@ var _ = {
   _ = new _({
     defaultOptions: _,
   });
-export { _, _, _ };

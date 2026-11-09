@@ -140,10 +140,10 @@ function _(_) {
         };
       _((_) => (!_ || !_(_, _) ? _ : _));
     }, [_, _, _]);
-  _.useLayoutEffect(() => _(), [_]),
+  (_.useLayoutEffect(() => _(), [_]),
     _.useLayoutEffect(() => {
       _();
-    }, [_]);
+    }, [_]));
   let _ = _;
   return (
     _ && _ && (_.BWantsFocusRing() || (_ = !1)),
@@ -152,9 +152,9 @@ function _(_) {
       let _ = performance.now(),
         _,
         _ = () => {
-          _(), performance.now() - _ <= 500 && (_ = requestAnimationFrame(_));
+          (_(), performance.now() - _ <= 500 && (_ = requestAnimationFrame(_)));
         };
-      return _(), () => cancelAnimationFrame(_);
+      return (_(), () => cancelAnimationFrame(_));
     }, [_, _, _, _]),
     !_ || !_
       ? null
@@ -199,8 +199,8 @@ function _(_, _) {
           _ = (_) =>
             _.getComputedStyle(_).display == `none` ||
             (_?.width == 0 && _.height == 0 && _._ == 0 && _._ == 0);
-        for (; _(_) && _?.parentElement; )
-          (_ = _.parentElement), (_ = _.getBoundingClientRect());
+        for (; _(_) && _?.parentElement;)
+          ((_ = _.parentElement), (_ = _.getBoundingClientRect()));
         let _ = _.Element != _;
         _(
           (_) => (
@@ -220,4 +220,3 @@ function _(_, _) {
     _
   );
 }
-export { _ };

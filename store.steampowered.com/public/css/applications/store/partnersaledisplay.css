@@ -311,7 +311,7 @@ html.ColorPickerSampling dialog::backdrop {
   font-size: 12px;
 }
 ._4rizx-X0oWo- {
-  aspect-ratio: 1200 / 460;
+  aspect-ratio: 1200/460;
   z-index: 1;
   flex-direction: row;
   justify-content: center;
@@ -517,7 +517,7 @@ html.ColorPickerSampling dialog::backdrop {
 }
 .wVGLukava5E- {
   color: #dfe3e6;
-  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 25% / 330% 100%;
+  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 25%/330% 100%;
   border-radius: 2px;
   padding: 8px 25px;
   line-height: 20px;
@@ -529,7 +529,7 @@ html.ColorPickerSampling dialog::backdrop {
 .wVGLukava5E-:hover {
   color: #fff;
   cursor: pointer;
-  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 0% / 330% 100%;
+  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 0%/330% 100%;
   box-shadow: 2px 2px 15px #00000080;
 }
 ._5RINCHFuy0Y- {
@@ -586,7 +586,7 @@ html.ColorPickerSampling dialog::backdrop {
   margin-bottom: 8px;
 }
 .dp7SyRphVOo- {
-  background: #000 50% / contain no-repeat;
+  background: #000 50%/contain no-repeat;
   height: 120px;
   margin-bottom: 8px;
 }
@@ -1350,15 +1350,14 @@ p a:hover {
 }
 .Kirdf-ZVux8- {
   pointer-events: none;
-  background:
-    linear-gradient(
+  background: linear-gradient(
       90deg,
       #0000 0% 11%,
       #000000b3 45%,
       #00000080 80%,
       #0000 100%
     )
-    0 0 / cover no-repeat;
+    0 0/cover no-repeat;
   flex-direction: column;
   justify-content: center;
   width: 100%;

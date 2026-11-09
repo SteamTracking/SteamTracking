@@ -73,7 +73,7 @@ function _(_) {
 }
 function _(_) {
   let _ = _(_);
-  for (; _(_) && !_(_); ) {
+  for (; _(_) && !_(_);) {
     if (_(_)) return _;
     if (_(_)) return null;
     _ = _(_);
@@ -116,7 +116,7 @@ function _(_) {
   return _(_) ? (_.ownerDocument || _).body : _(_) && _(_) ? _ : _(_);
 }
 function _(_, _, _) {
-  _ === void 0 && (_ = []), _ === void 0 && (_ = !0);
+  (_ === void 0 && (_ = []), _ === void 0 && (_ = !0));
   let _ = _(_),
     _ = _ === _.ownerDocument?.body,
     _ = _(_);
@@ -153,7 +153,7 @@ function _(_, _) {
   if (_.contains(_)) return !0;
   if (_ && _(_)) {
     let _ = _;
-    for (; _; ) {
+    for (; _;) {
       if (_ === _) return !0;
       _ = _.parentNode || _.host;
     }
@@ -213,7 +213,7 @@ function _() {
 }
 function _(_, _) {
   let _ = [`mouse`, `pen`];
-  return _ || _.push(``, void 0), _.includes(_);
+  return (_ || _.push(``, void 0), _.includes(_));
 }
 function _(_) {
   return `nativeEvent` in _;
@@ -242,7 +242,7 @@ function _(_) {
   );
 }
 function _(_) {
-  _.preventDefault(), _.stopPropagation();
+  (_.preventDefault(), _.stopPropagation());
 }
 function _(_) {
   return _ ? _.getAttribute(`role`) === `combobox` && _(_) : !1;
@@ -299,7 +299,7 @@ function _(_, _, _) {
         : _ === `start`
           ? `bottom`
           : `top`;
-  return _.reference[_] > _.floating[_] && (_ = _(_)), [_, _(_)];
+  return (_.reference[_] > _.floating[_] && (_ = _(_)), [_, _(_)]);
 }
 function _(_) {
   let _ = _(_);
@@ -396,10 +396,10 @@ var _ = _(),
   _ = function (_, _, _) {
     if (_(_)) return [];
     var _ = Array.prototype.slice.apply(_.querySelectorAll(_));
-    return _ && _.call(_, _) && _.unshift(_), (_ = _.filter(_)), _;
+    return (_ && _.call(_, _) && _.unshift(_), (_ = _.filter(_)), _);
   },
   _ = function _(_, _, _) {
-    for (var _ = [], _ = Array.from(_); _.length; ) {
+    for (var _ = [], _ = Array.from(_); _.length;) {
       var _ = _.shift();
       if (!_(_, !1)) {
         if (_.tagName === `SLOT`) {
@@ -517,13 +517,13 @@ var _ = _(),
         !_ && _;
       ) {
         var _, _;
-        (_ = _(_)),
+        ((_ = _(_)),
           (_ = _?.host),
           (_ = !!(
             (_ = _) != null &&
             (_ = _.ownerDocument) != null &&
             _.contains(_)
-          ));
+          )));
       }
     }
     return _;
@@ -542,7 +542,7 @@ var _ = _(),
     if (_.call(_, `details:not([open]) *`)) return !0;
     if (!_ || _ === `full` || _ === `legacy-full`) {
       if (typeof _ == `function`) {
-        for (var _ = _; _; ) {
+        for (var _ = _; _;) {
           var _ = _.parentElement,
             _ = _(_);
           if (_ && !_.shadowRoot && _(_) === !0) return _(_);
@@ -561,7 +561,7 @@ var _ = _(),
   },
   _ = function (_) {
     if (/^(INPUT|BUTTON|SELECT|TEXTAREA)$/.test(_.tagName))
-      for (var _ = _.parentElement; _; ) {
+      for (var _ = _.parentElement; _;) {
         if (_.tagName === `FIELDSET` && _.disabled) {
           for (var _ = 0; _ < _.children.length; _++) {
             var _ = _.children.item(_);
@@ -607,7 +607,9 @@ var _ = _(),
       }),
       _.sort(_)
         .reduce(function (_, _) {
-          return _.isScope ? _.push.apply(_, _.content) : _.push(_.content), _;
+          return (
+            _.isScope ? _.push.apply(_, _.content) : _.push(_.content), _
+          );
         }, [])
         .concat(_)
     );
@@ -675,7 +677,7 @@ function _(_, _, _) {
       };
   }
   let _ = _(_);
-  return _ && (_[_] += _ * (_ === `end` ? 1 : -1) * (_ && _ ? -1 : 1)), _;
+  return (_ && (_[_] += _ * (_ === `end` ? 1 : -1) * (_ && _ ? -1 : 1)), _);
 }
 async function _(_, _) {
   _ === void 0 && (_ = {});
@@ -784,7 +786,7 @@ var _ = 50,
             floating: _,
           },
         });
-      (_ = _ ?? _),
+      ((_ = _ ?? _),
         (_ = _ ?? _),
         (_[_] = {
           ..._[_],
@@ -805,7 +807,7 @@ var _ = 50,
                     })
                   : _.rects),
             ({ _: _, _: _ } = _(_, _, _))),
-          (_ = -1));
+          (_ = -1)));
     }
     return {
       _: _,
@@ -1022,7 +1024,7 @@ var _ = function (_) {
                 _,
                 _ - _[_ === `y` ? `bottom` : `right`],
               );
-          _ && (_ = _(_, _)), _ && (_ = _(_, _));
+          (_ && (_ = _(_, _)), _ && (_ = _(_, _)));
           let _ = _._({
             ..._,
             [_]: _,
@@ -1077,7 +1079,7 @@ var _ = function (_) {
             _ = !_,
             _ = _,
             _ = _;
-          _ != null && _.enabled._ && (_ = _),
+          (_ != null && _.enabled._ && (_ = _),
             _ != null && _.enabled._ && (_ = _),
             _ &&
               !_ &&
@@ -1088,7 +1090,7 @@ var _ = function (_) {
               ..._,
               availableWidth: _,
               availableHeight: _,
-            });
+            }));
           let _ = await _.getDimensions(_.floating);
           return _ !== _.width || _ !== _.height
             ? {
@@ -1148,10 +1150,10 @@ function _(_) {
       };
 }
 function _(_, _, _) {
-  return _ === void 0 && (_ = !1), !!_ && _ && _ === _(_);
+  return (_ === void 0 && (_ = !1), !!_ && _ && _ === _(_));
 }
 function _(_, _, _, _) {
-  _ === void 0 && (_ = !1), _ === void 0 && (_ = !1);
+  (_ === void 0 && (_ = !1), _ === void 0 && (_ = !1));
   let _ = _.getBoundingClientRect(),
     _ = _(_),
     _ = _(1);
@@ -1166,20 +1168,20 @@ function _(_, _, _, _) {
       _ = _(_) ? _(_) : _,
       _ = _,
       _ = _(_);
-    for (; _ && _ !== _; ) {
+    for (; _ && _ !== _;) {
       let _ = _(_),
         _ = _.getBoundingClientRect(),
         _ = _(_),
         _ = _.left + (_.clientLeft + parseFloat(_.paddingLeft)) * _._,
         _ = _.top + (_.clientTop + parseFloat(_.paddingTop)) * _._;
-      (_ *= _._),
+      ((_ *= _._),
         (_ *= _._),
         (_ *= _._),
         (_ *= _._),
         (_ += _),
         (_ += _),
         (_ = _(_)),
-        (_ = _(_));
+        (_ = _(_)));
     }
   }
   return _({
@@ -1215,7 +1217,7 @@ function _(_) {
     _ = _(_);
   if ((_ || !_) && ((_(_) !== `body` || _(_)) && (_ = _(_)), _)) {
     let _ = _(_);
-    (_ = _(_)), (_._ = _._ + _.clientLeft), (_._ = _._ + _.clientTop);
+    ((_ = _(_)), (_._ = _._ + _.clientLeft), (_._ = _._ + _.clientTop));
   }
   let _ = _ && !_ && !_ ? _(_, _) : _(0);
   return {
@@ -1319,16 +1321,16 @@ function _(_, _) {
     _ = null,
     _ = _(_).position === `fixed`,
     _ = _ ? _(_) : _;
-  for (; _(_) && !_(_); ) {
+  for (; _(_) && !_(_);) {
     let _ = _(_),
       _ = _(_),
       _ = _ ? _.position : _ ? `fixed` : ``;
-    !_ && (_ === `fixed` || (_ === `absolute` && _.position === `static`))
+    (!_ && (_ === `fixed` || (_ === `absolute` && _.position === `static`))
       ? (_ = _.filter((_) => _ !== _))
       : (_ = _),
-      (_ = _(_));
+      (_ = _(_)));
   }
-  return _.set(_, _), _;
+  return (_.set(_, _), _);
 }
 function _(_) {
   let { element: _, boundary: _, rootBoundary: _, strategy: _ } = _,
@@ -1347,10 +1349,10 @@ function _(_) {
     _ = _.left;
   for (let _ = 1; _ < _.length; _++) {
     let _ = _(_, _[_], _);
-    (_ = _(_.top, _)),
+    ((_ = _(_.top, _)),
       (_ = _(_.right, _)),
       (_ = _(_.bottom, _)),
-      (_ = _(_.left, _));
+      (_ = _(_.left, _)));
   }
   return {
     width: _ - _,
@@ -1378,7 +1380,7 @@ function _(_, _, _) {
     _ = _(0);
   if ((_ || !_) && ((_(_) !== `body` || _(_)) && (_ = _(_)), _)) {
     let _ = _(_, !0, _, _);
-    (_._ = _._ + _.clientLeft), (_._ = _._ + _.clientTop);
+    ((_._ = _._ + _.clientLeft), (_._ = _._ + _.clientTop));
   }
   !_ && _ && (_._ = _(_));
   let _ = _ && !_ && !_ ? _(_, _) : _(0);
@@ -1396,21 +1398,21 @@ function _(_, _) {
   if (!_(_) || _(_).position === `fixed`) return null;
   if (_) return _(_);
   let _ = _.offsetParent;
-  return _(_) === _ && (_ = _.ownerDocument.body), _;
+  return (_(_) === _ && (_ = _.ownerDocument.body), _);
 }
 function _(_, _) {
   let _ = _(_);
   if (_(_)) return _;
   if (!_(_)) {
     let _ = _(_);
-    for (; _ && !_(_); ) {
+    for (; _ && !_(_);) {
       if (_(_) && !_(_)) return _;
       _ = _(_);
     }
     return _;
   }
   let _ = _(_, _);
-  for (; _ && _(_) && _(_); ) _ = _(_, _);
+  for (; _ && _(_) && _(_);) _ = _(_, _);
   return _ && _(_) && _(_) && !_(_) ? _ : _ || _(_) || _;
 }
 var _ = async function (_) {
@@ -1453,10 +1455,10 @@ function _(_, _, _) {
     _ = _(_);
   function _() {
     var _;
-    clearTimeout(_), (_ = _) == null || _.disconnect(), (_ = null);
+    (clearTimeout(_), (_ = _) == null || _.disconnect(), (_ = null));
   }
   function _(_, _) {
-    _ === void 0 && (_ = !1), _ === void 0 && (_ = 1), _();
+    (_ === void 0 && (_ = !1), _ === void 0 && (_ = 1), _());
     let _ = _.getBoundingClientRect(),
       { left: _, top: _, width: _, height: _ } = _;
     if ((_ || _(), !_ || !_)) return;
@@ -1498,7 +1500,7 @@ function _(_, _, _) {
     _.addEventListener(`resize`, _),
     _(!0),
     () => {
-      _.removeEventListener(`resize`, _), _();
+      (_.removeEventListener(`resize`, _), _());
     }
   );
 }
@@ -1514,7 +1516,8 @@ function _(_, _, _, _) {
     _ = _(_),
     _ = _ || _ ? [...(_ ? _(_) : []), ...(_ ? _(_) : [])] : [];
   _.forEach((_) => {
-    _ && _.addEventListener(`scroll`, _), _ && _.addEventListener(`resize`, _);
+    (_ && _.addEventListener(`scroll`, _),
+      _ && _.addEventListener(`resize`, _));
   });
   let _ = _ && _ ? _(_, _, _) : null,
     _ = -1,
@@ -1522,7 +1525,7 @@ function _(_, _, _, _) {
   _ &&
     ((_ = new ResizeObserver((_) => {
       let [_] = _;
-      _ &&
+      (_ &&
         _.target === _ &&
         _ &&
         _ &&
@@ -1532,7 +1535,7 @@ function _(_, _, _, _) {
           var _;
           (_ = _) == null || _.observe(_);
         }))),
-        _();
+        _());
     })),
     _ && !_ && _.observe(_),
     _ && _.observe(_));
@@ -1541,20 +1544,20 @@ function _(_, _, _, _) {
   _ && _();
   function _() {
     let _ = _(_);
-    _ && !_(_, _) && _(), (_ = _), (_ = requestAnimationFrame(_));
+    (_ && !_(_, _) && _(), (_ = _), (_ = requestAnimationFrame(_)));
   }
   return (
     _(),
     () => {
       var _;
-      _.forEach((_) => {
-        _ && _.removeEventListener(`scroll`, _),
-          _ && _.removeEventListener(`resize`, _);
+      (_.forEach((_) => {
+        (_ && _.removeEventListener(`scroll`, _),
+          _ && _.removeEventListener(`resize`, _));
       }),
         _?.(),
         (_ = _) == null || _.disconnect(),
         (_ = null),
-        _ && cancelAnimationFrame(_);
+        _ && cancelAnimationFrame(_));
     }
   );
 }
@@ -1584,13 +1587,13 @@ function _(_, _) {
   if (_ && _ && typeof _ == `object`) {
     if (Array.isArray(_)) {
       if (((_ = _.length), _ !== _.length)) return !1;
-      for (_ = _; _-- !== 0; ) if (!_(_[_], _[_])) return !1;
+      for (_ = _; _-- !== 0;) if (!_(_[_], _[_])) return !1;
       return !0;
     }
     if (((_ = Object.keys(_)), (_ = _.length), _ !== Object.keys(_).length))
       return !1;
-    for (_ = _; _-- !== 0; ) if (!{}.hasOwnProperty.call(_, _[_])) return !1;
-    for (_ = _; _-- !== 0; ) {
+    for (_ = _; _-- !== 0;) if (!{}.hasOwnProperty.call(_, _[_])) return !1;
+    for (_ = _; _-- !== 0;) {
       let _ = _[_];
       if (!(_ === `_owner` && _.$$typeof) && !_(_[_], _[_])) return !1;
     }
@@ -1662,7 +1665,7 @@ function _(_) {
         strategy: _,
         middleware: _,
       };
-      _.current && (_.platform = _.current),
+      (_.current && (_.platform = _.current),
         _(_.current, _.current, _).then((_) => {
           let _ = {
             ..._,
@@ -1674,7 +1677,7 @@ function _(_) {
             _.flushSync(() => {
               _(_);
             }));
-        });
+        }));
     }, [_, _, _, _, _]);
   _(() => {
     _ === !1 &&
@@ -1686,7 +1689,7 @@ function _(_) {
       })));
   }, [_]);
   let _ = _.useRef(!1);
-  _(
+  (_(
     () => (
       (_.current = !0),
       () => {
@@ -1700,7 +1703,7 @@ function _(_) {
         if (_.current) return _.current(_, _, _);
         _();
       }
-    }, [_, _, _, _, _]);
+    }, [_, _, _, _, _]));
   let _ = _.useMemo(
       () => ({
         reference: _,
@@ -1798,8 +1801,8 @@ function _(_) {
       _.every((_) => _ == null)
         ? null
         : (_) => {
-            (_.current &&= (_.current(), void 0)),
-              _ != null && (_.current = _(_));
+            ((_.current &&= (_.current(), void 0)),
+              _ != null && (_.current = _(_)));
           },
     _,
   );
@@ -1908,7 +1911,7 @@ function _(_, _) {
     _ === `both`)
   ) {
     let _ = _(_ / _);
-    _.key === (_ ? _ : _) &&
+    (_.key === (_ ? _ : _) &&
       (_ && _(_),
       _ % _ === _ - 1
         ? _ &&
@@ -1948,7 +1951,7 @@ function _(_, _) {
                 decrement: !0,
                 disabledIndices: _,
               }))),
-        _(_, _, _) && (_ = _));
+        _(_, _, _) && (_ = _)));
     let _ = _(_ / _) === _;
     _(_, _) &&
       (_ =
@@ -1970,7 +1973,7 @@ function _(_, _, _) {
     _.forEach((_, _) => {
       let { width: _, height: _ } = _,
         _ = !1;
-      for (_ && (_ = 0); !_; ) {
+      for (_ && (_ = 0); !_;) {
         let _ = [];
         for (let _ = 0; _ < _; _++)
           for (let _ = 0; _ < _; _++) _.push(_ + _ + _ * _);
@@ -2040,7 +2043,7 @@ function _(_) {
     _ = _.useCallback((_) => {
       _((_) => {
         let _ = new Set(_);
-        return _.delete(_), _;
+        return (_.delete(_), _);
       });
     }, []),
     _ = _.useMemo(() => {
@@ -2198,7 +2201,7 @@ function _(_, _) {
       let _ = _.current.openEvent?.type;
       return _?.includes(`mouse`) && _ !== `mousedown`;
     }, [_]);
-  _.useEffect(() => {
+  (_.useEffect(() => {
     if (!_) return;
     function _(_) {
       let { open: _ } = _;
@@ -2223,10 +2226,10 @@ function _(_, _) {
           _.removeEventListener(`mouseleave`, _);
         }
       );
-    }, [_.floating, _, _, _, _, _]);
+    }, [_.floating, _, _, _, _, _]));
   let _ = _.useCallback(
       function (_, _, _) {
-        _ === void 0 && (_ = !0), _ === void 0 && (_ = `hover`);
+        (_ === void 0 && (_ = !0), _ === void 0 && (_ = `hover`));
         let _ = _(_.current, `close`, _.current);
         _ && !_.current
           ? (_(_), (_.current = window.setTimeout(() => _(!1, _, _), _)))
@@ -2235,12 +2238,12 @@ function _(_, _) {
       [_, _],
     ),
     _ = _(() => {
-      _.current(), (_.current = void 0);
+      (_.current(), (_.current = void 0));
     }),
     _ = _(() => {
       if (_.current) {
         let _ = _(_.floating).body;
-        (_.style.pointerEvents = ``), _.removeAttribute(_), (_.current = !1);
+        ((_.style.pointerEvents = ``), _.removeAttribute(_), (_.current = !1));
       }
     }),
     _ = _(() =>
@@ -2248,7 +2251,7 @@ function _(_, _) {
         ? [`click`, `mousedown`].includes(_.current.openEvent.type)
         : !1,
     );
-  _.useEffect(() => {
+  (_.useEffect(() => {
     if (!_) return;
     function _(_) {
       if (
@@ -2269,21 +2272,21 @@ function _(_, _) {
       _.current();
       let _ = _(_.floating);
       if ((_(_), (_.current = !1), _.current && _.current.floatingContext)) {
-        _ || _(_),
+        (_ || _(_),
           (_.current = _.current({
             ..._.current.floatingContext,
             tree: _,
             _: _.clientX,
             _: _.clientY,
             onClose() {
-              _(), _(), _() || _(_, !0, `safe-polygon`);
+              (_(), _(), _() || _(_, !0, `safe-polygon`));
             },
-          }));
+          })));
         let _ = _.current;
-        _.addEventListener(`mousemove`, _),
+        (_.addEventListener(`mousemove`, _),
           (_.current = () => {
             _.removeEventListener(`mousemove`, _);
-          });
+          }));
       } else (_.current === `touch` && _(_.floating, _.relatedTarget)) || _(_);
     }
     function _(_) {
@@ -2296,7 +2299,7 @@ function _(_, _) {
               _: _.clientX,
               _: _.clientY,
               onClose() {
-                _(), _(), _() || _(_);
+                (_(), _(), _() || _(_));
               },
             })(_)));
     }
@@ -2314,11 +2317,11 @@ function _(_, _) {
         _.addEventListener(`mouseleave`, _),
         () => {
           var _;
-          _ && _.removeEventListener(`mouseleave`, _),
+          (_ && _.removeEventListener(`mouseleave`, _),
             (_ = _.floating) == null || _.removeEventListener(`mouseleave`, _),
             _ && _.removeEventListener(`mousemove`, _),
             _.removeEventListener(`mouseenter`, _),
-            _.removeEventListener(`mouseleave`, _);
+            _.removeEventListener(`mouseleave`, _));
         }
       );
     }
@@ -2351,9 +2354,9 @@ function _(_, _) {
             (_.style.pointerEvents = `auto`),
             (_.style.pointerEvents = `auto`),
             () => {
-              (_.style.pointerEvents = ``),
+              ((_.style.pointerEvents = ``),
                 (_.style.pointerEvents = ``),
-                (_.style.pointerEvents = ``);
+                (_.style.pointerEvents = ``));
             }
           );
         }
@@ -2364,10 +2367,10 @@ function _(_, _) {
     }, [_, _, _]),
     _.useEffect(
       () => () => {
-        _(), _(_), _(_), _();
+        (_(), _(_), _(_), _());
       },
       [_, _.domReference, _, _],
-    );
+    ));
   let _ = _.useMemo(() => {
       function _(_) {
         _.current = _.pointerType;
@@ -2427,32 +2430,32 @@ function _(_, _) {
 function _(_, _) {
   let _ = [],
     _ = _.find((_) => _._ === _)?.parentId;
-  for (; _; ) {
+  for (; _;) {
     let _ = _.find((_) => _._ === _);
-    (_ = _?.parentId), _ && (_ = _.concat(_));
+    ((_ = _?.parentId), _ && (_ = _.concat(_)));
   }
   return _;
 }
 function _(_, _) {
   let _ = _.filter((_) => _.parentId === _ && _.context?.open),
     _ = _;
-  for (; _.length; )
-    (_ = _.filter((_) =>
+  for (; _.length;)
+    ((_ = _.filter((_) =>
       _?.some((_) => _.parentId === _._ && _.context?.open),
     )),
-      (_ = _.concat(_));
+      (_ = _.concat(_)));
   return _;
 }
 function _(_, _) {
   let _,
     _ = -1;
   function _(_, _) {
-    _ > _ && ((_ = _), (_ = _)),
+    (_ > _ && ((_ = _), (_ = _)),
       _(_, _).forEach((_) => {
         _(_._, _ + 1);
-      });
+      }));
   }
-  return _(_, 0), _.find((_) => _._ === _);
+  return (_(_, 0), _.find((_) => _._ === _));
 }
 var _ = new WeakMap(),
   _ = new WeakSet(),
@@ -2475,7 +2478,7 @@ function _(_, _, _, _) {
     _ = [];
   _[_] || (_[_] = new WeakMap());
   let _ = _[_];
-  _.forEach(_), _(_), _.clear();
+  (_.forEach(_), _(_), _.clear());
   function _(_) {
     _ && !_.has(_) && (_.add(_), _.parentNode && _(_.parentNode));
   }
@@ -2491,12 +2494,12 @@ function _(_, _, _, _) {
               _ = _.get(_) || 0,
               _ = _ ? _ + 1 : _,
               _ = (_.get(_) || 0) + 1;
-            _.set(_, _),
+            (_.set(_, _),
               _.set(_, _),
               _.push(_),
               _ === 1 && _ && _.add(_),
               _ === 1 && _.setAttribute(_, ``),
-              !_ && _ && _.setAttribute(_, `true`);
+              !_ && _ && _.setAttribute(_, `true`));
           }
         }
       });
@@ -2504,26 +2507,26 @@ function _(_, _, _, _) {
   return (
     _++,
     () => {
-      _.forEach((_) => {
+      (_.forEach((_) => {
         let _ = _.get(_) || 0,
           _ = _ ? _ - 1 : _,
           _ = (_.get(_) || 0) - 1;
-        _.set(_, _),
+        (_.set(_, _),
           _.set(_, _),
           _ || (!_.has(_) && _ && _.removeAttribute(_), _.delete(_)),
-          _ || _.removeAttribute(_);
+          _ || _.removeAttribute(_));
       }),
         _--,
         _ ||
           ((_ = new WeakMap()),
           (_ = new WeakMap()),
           (_ = new WeakSet()),
-          (_ = {}));
+          (_ = {})));
     }
   );
 }
 function _(_, _, _) {
-  _ === void 0 && (_ = !1), _ === void 0 && (_ = !1);
+  (_ === void 0 && (_ = !1), _ === void 0 && (_ = !1));
   let _ = _(_[0]).body;
   return _(_.concat(Array.from(_.querySelectorAll(`[aria-live]`))), _, _, _);
 }
@@ -2606,8 +2609,8 @@ function _(_) {
 var _ = 20,
   _ = [];
 function _(_) {
-  (_ = _.filter((_) => _.isConnected)),
-    _ && _(_) !== `body` && (_.push(_), _.length > _ && (_ = _.slice(-20)));
+  ((_ = _.filter((_) => _.isConnected)),
+    _ && _(_) !== `body` && (_.push(_), _.length > _ && (_ = _.slice(-20))));
 }
 function _() {
   return _.slice()
@@ -2668,7 +2671,7 @@ function _(_) {
     _ = _ != null,
     _ = _(_),
     _ = _(function (_) {
-      return _ === void 0 && (_ = _), _ ? _(_, _()) : [];
+      return (_ === void 0 && (_ = _), _ ? _(_, _()) : []);
     }),
     _ = _((_) => {
       let _ = _(_);
@@ -2679,20 +2682,20 @@ function _(_) {
         .filter(Boolean)
         .flat();
     });
-  _.useEffect(() => {
+  (_.useEffect(() => {
     if (_ || !_) return;
     function _(_) {
       if (_.key === `Tab`) {
         _(_, _(_(_))) && _().length === 0 && !_ && _(_);
         let _ = _(),
           _ = _(_);
-        _.current[0] === `reference` &&
+        (_.current[0] === `reference` &&
           _ === _ &&
           (_(_), _.shiftKey ? _(_[_.length - 1]) : _(_[1])),
           _.current[1] === `floating` &&
             _ === _ &&
             _.shiftKey &&
-            (_(_), _(_[0]));
+            (_(_), _(_[0])));
       }
     }
     let _ = _(_);
@@ -2720,10 +2723,10 @@ function _(_) {
     _.useEffect(() => {
       if (_ || !_) return;
       function _() {
-        (_.current = !0),
+        ((_.current = !0),
           setTimeout(() => {
             _.current = !1;
-          });
+          }));
       }
       function _(_) {
         let _ = _.relatedTarget;
@@ -2770,17 +2773,17 @@ function _(_) {
           _.addEventListener(`pointerdown`, _),
           _.addEventListener(`focusout`, _),
           () => {
-            _.removeEventListener(`focusout`, _),
+            (_.removeEventListener(`focusout`, _),
               _.removeEventListener(`pointerdown`, _),
-              _.removeEventListener(`focusout`, _);
+              _.removeEventListener(`focusout`, _));
           }
         );
-    }, [_, _, _, _, _, _, _, _, _, _, _, _, _]);
+    }, [_, _, _, _, _, _, _, _, _, _, _, _, _]));
   let _ = _.useRef(null),
     _ = _.useRef(null),
     _ = _([_, _?.beforeInsideRef]),
     _ = _([_, _?.afterInsideRef]);
-  _.useEffect(() => {
+  (_.useEffect(() => {
     var _;
     if (_ || !_) return;
     let _ = Array.from(
@@ -2843,25 +2846,25 @@ function _(_) {
             (_.current = !0),
           _ === `outside-press`)
         ) {
-          if (_) (_.current = !1), (_ = !0);
+          if (_) ((_.current = !1), (_ = !0));
           else if (_(_) || _(_)) _.current = !1;
           else {
             let _ = !1;
-            document.createElement(`div`).focus({
+            (document.createElement(`div`).focus({
               get preventScroll() {
-                return (_ = !0), !1;
+                return ((_ = !0), !1);
               },
             }),
-              _ ? ((_.current = !1), (_ = !0)) : (_.current = !0);
+              _ ? ((_.current = !1), (_ = !0)) : (_.current = !0));
           }
         }
       }
       _._(`openchange`, _);
       let _ = _.createElement(`span`);
-      _.setAttribute(`tabindex`, `-1`),
+      (_.setAttribute(`tabindex`, `-1`),
         _.setAttribute(`aria-hidden`, `true`),
         Object.assign(_.style, _),
-        _ && _ && _.insertAdjacentElement(`afterend`, _);
+        _ && _ && _.insertAdjacentElement(`afterend`, _));
       function _() {
         return typeof _.current == `boolean`
           ? _ && _
@@ -2882,14 +2885,14 @@ function _(_) {
         let _ = _();
         queueMicrotask(() => {
           let _ = _(_);
-          _.current &&
+          (_.current &&
             !_.current &&
             _(_) &&
             (_ === _ || _ === _.body || _) &&
             _.focus({
               preventScroll: _,
             }),
-            _.remove();
+            _.remove());
         });
       };
     }, [_, _, _, _, _, _, _, _, _, _]),
@@ -2920,10 +2923,10 @@ function _(_) {
           _ = _(),
           _ = _(_(_)),
           _ = _.indexOf(_);
-        _ !== -1 && (_.current = _),
+        (_ !== -1 && (_.current = _),
           _.current.includes(`floating`) || (_ !== _ && _.length === 0)
             ? _ !== `0` && _.setAttribute(`tabindex`, `0`)
-            : _ !== `-1` && _.setAttribute(`tabindex`, `-1`);
+            : _ !== `-1` && _.setAttribute(`tabindex`, `-1`));
       };
       _();
       let _ = new MutationObserver(_);
@@ -2937,7 +2940,7 @@ function _(_) {
           _.disconnect();
         }
       );
-    }, [_, _, _, _, _, _, _]);
+    }, [_, _, _, _, _, _, _]));
   function _(_) {
     return _ || !_ || !_
       ? null
@@ -3043,10 +3046,10 @@ function _(_, _) {
                 : _(!0, _.nativeEvent, `click`));
         },
         onKeyDown(_) {
-          (_.current = void 0),
+          ((_.current = void 0),
             !(_.defaultPrevented || !_ || _(_)) &&
               (_.key === ` ` && !_(_) && (_.preventDefault(), (_.current = !0)),
-              _.key === `Enter` && _(!(_ && _), _.nativeEvent, `click`));
+              _.key === `Enter` && _(!(_ && _), _.nativeEvent, `click`)));
         },
         onKeyUp(_) {
           _.defaultPrevented ||
@@ -3130,7 +3133,7 @@ function _(_, _) {
       var _;
       let _ = () => {
         var _;
-        _(_), (_ = _(_)) == null || _.removeEventListener(`keydown`, _);
+        (_(_), (_ = _(_)) == null || _.removeEventListener(`keydown`, _));
       };
       (_ = _(_)) == null || _.addEventListener(`keydown`, _);
     }),
@@ -3147,7 +3150,7 @@ function _(_, _) {
         _ = `[` + _(`inert`) + `]`,
         _ = _(_.floating).querySelectorAll(_),
         _ = _(_) ? _ : null;
-      for (; _ && !_(_); ) {
+      for (; _ && !_(_);) {
         let _ = _(_);
         if (_(_) || !_(_)) break;
         _ = _;
@@ -3205,19 +3208,19 @@ function _(_, _) {
       var _;
       let _ = () => {
         var _;
-        _(_), (_ = _(_)) == null || _.removeEventListener(_, _);
+        (_(_), (_ = _(_)) == null || _.removeEventListener(_, _));
       };
       (_ = _(_)) == null || _.addEventListener(_, _);
     });
-  _.useEffect(() => {
+  (_.useEffect(() => {
     if (!_ || !_) return;
-    (_.current.__escapeKeyBubbles = _), (_.current.__outsidePressBubbles = _);
+    ((_.current.__escapeKeyBubbles = _), (_.current.__outsidePressBubbles = _));
     let _ = -1;
     function _(_) {
       _(!1, _, `ancestor-scroll`);
     }
     function _() {
-      window.clearTimeout(_), (_.current = !0);
+      (window.clearTimeout(_), (_.current = !0));
     }
     function _() {
       _ = window.setTimeout(
@@ -3228,11 +3231,11 @@ function _(_, _) {
       );
     }
     let _ = _(_.floating);
-    _ &&
+    (_ &&
       (_.addEventListener(`keydown`, _ ? _ : _, _),
       _.addEventListener(`compositionstart`, _),
       _.addEventListener(`compositionend`, _)),
-      _ && _.addEventListener(_, _ ? _ : _, _);
+      _ && _.addEventListener(_, _ ? _ : _, _));
     let _ = [];
     return (
       _ &&
@@ -3249,7 +3252,7 @@ function _(_, _) {
         });
       }),
       () => {
-        _ &&
+        (_ &&
           (_.removeEventListener(`keydown`, _ ? _ : _, _),
           _.removeEventListener(`compositionstart`, _),
           _.removeEventListener(`compositionend`, _)),
@@ -3257,13 +3260,13 @@ function _(_, _) {
           _.forEach((_) => {
             _.removeEventListener(`scroll`, _);
           }),
-          window.clearTimeout(_);
+          window.clearTimeout(_));
       }
     );
   }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
     _.useEffect(() => {
       _.current = !1;
-    }, [_, _]);
+    }, [_, _]));
   let _ = _.useMemo(
       () => ({
         onKeyDown: _,
@@ -3314,14 +3317,14 @@ function _(_) {
     _ = _() != null,
     [_, _] = _.useState(_.reference),
     _ = _((_, _, _) => {
-      (_.current.openEvent = _ ? _ : void 0),
+      ((_.current.openEvent = _ ? _ : void 0),
         _.emit(`openchange`, {
           open: _,
           event: _,
           reason: _,
           nested: _,
         }),
-        _?.(_, _, _);
+        _?.(_, _, _));
     }),
     _ = _.useMemo(
       () => ({
@@ -3388,17 +3391,17 @@ function _(_) {
               contextElement: _,
             }
           : _;
-        _(_), _.refs.setReference(_);
+        (_(_), _.refs.setReference(_));
       },
       [_.refs],
     ),
     _ = _.useCallback(
       (_) => {
-        (_(_) || _ === null) && ((_.current = _), _(_)),
+        ((_(_) || _ === null) && ((_.current = _), _(_)),
           (_(_.refs.reference.current) ||
             _.refs.reference.current === null ||
             (_ !== null && !_(_))) &&
-            _.refs.setReference(_);
+            _.refs.setReference(_));
       },
       [_.refs],
     ),
@@ -3452,7 +3455,7 @@ function _(_, _) {
     _ = _.useRef(!1),
     _ = _.useRef(-1),
     _ = _.useRef(!0);
-  _.useEffect(() => {
+  (_.useEffect(() => {
     if (!_) return;
     let _ = _(_.domReference);
     function _() {
@@ -3468,8 +3471,8 @@ function _(_, _) {
       _.addEventListener(`blur`, _),
       _.addEventListener(`keydown`, _, !0),
       () => {
-        _.removeEventListener(`blur`, _),
-          _.removeEventListener(`keydown`, _, !0);
+        (_.removeEventListener(`blur`, _),
+          _.removeEventListener(`keydown`, _, !0));
       }
     );
   }, [_.domReference, _, _]),
@@ -3491,7 +3494,7 @@ function _(_, _) {
         _(_);
       },
       [],
-    );
+    ));
   let _ = _.useMemo(
     () => ({
       onPointerDown(_) {
@@ -3572,13 +3575,13 @@ function _(_, _, _) {
                 if (_.indexOf(`on`) === 0) {
                   if ((_.has(_) || _.set(_, []), typeof _ == `function`)) {
                     var _;
-                    (_ = _.get(_)) == null || _.push(_),
+                    ((_ = _.get(_)) == null || _.push(_),
                       (_[_] = function () {
                         var _ = [...arguments];
                         return _.get(_)
                           ?.map((_) => _(..._))
                           .find((_) => _ !== void 0);
-                      });
+                      }));
                   }
                 } else _[_] = _;
               }
@@ -3695,7 +3698,7 @@ function _(_, _) {
             });
       }
       let _ = _.current[_.current];
-      _ && _(_),
+      (_ && _(_),
         (_.current ? (_) => _() : requestAnimationFrame)(() => {
           let _ = _.current[_.current] || _;
           if (!_) return;
@@ -3713,9 +3716,9 @@ function _(_, _) {
                     }
                   : _,
               ));
-        });
+        }));
     });
-  _(() => {
+  (_(() => {
     _ &&
       (_ && _.floating
         ? _.current && _ != null && ((_.current = !0), (_.current = _), _())
@@ -3768,7 +3771,7 @@ function _(_, _) {
     _(() => {
       if (!_ || !_ || !_ || _) return;
       function _(_) {
-        _(_._), _ && (_.current = _);
+        (_(_._), _ && (_.current = _));
       }
       return (
         _.events._(`virtualfocus`, _),
@@ -3778,11 +3781,11 @@ function _(_, _) {
       );
     }, [_, _, _, _, _]),
     _(() => {
-      (_.current = _), (_.current = _), (_.current = !!_.floating);
+      ((_.current = _), (_.current = _), (_.current = !!_.floating));
     }),
     _(() => {
       _ || (_.current = null);
-    }, [_]);
+    }, [_]));
   let _ = _ != null,
     _ = _.useMemo(() => {
       function _(_) {
@@ -3793,7 +3796,7 @@ function _(_, _) {
       return {
         onFocus(_) {
           let { currentTarget: _ } = _;
-          (_.current = !0), _(_);
+          ((_.current = !0), _(_));
         },
         onClick: (_) => {
           let { currentTarget: _ } = _;
@@ -3804,7 +3807,7 @@ function _(_, _) {
         ...(_ && {
           onMouseMove(_) {
             let { currentTarget: _ } = _;
-            (_.current = !0), (_.current = !1), _(_);
+            ((_.current = !0), (_.current = !1), _(_));
           },
           onPointerLeave(_) {
             let { pointerType: _ } = _;
@@ -3831,12 +3834,12 @@ function _(_, _) {
       )
         return;
       if (_ && _(_.key, _, _, _)) {
-        _(_),
+        (_(_),
           _(!1, _.nativeEvent, `list-navigation`),
           _(_.domReference) &&
             (_
               ? _?.events.emit(`virtualfocus`, _.domReference)
-              : _.domReference.focus());
+              : _.domReference.focus()));
         return;
       }
       let _ = _.current,
@@ -3907,10 +3910,10 @@ function _(_, _) {
           (_(_),
           _ && !_ && _(_.currentTarget.ownerDocument) === _.currentTarget)
         ) {
-          (_.current = _(_.key, _, _) ? _ : _), _();
+          ((_.current = _(_.key, _, _) ? _ : _), _());
           return;
         }
-        _(_.key, _, _)
+        (_(_.key, _, _)
           ? _
             ? (_.current =
                 _ >= _
@@ -3948,7 +3951,7 @@ function _(_, _) {
                 }),
               )),
           _(_, _.current) && (_.current = -1),
-          _();
+          _());
       }
     }),
     _ = _.useMemo(
@@ -3976,7 +3979,7 @@ function _(_, _) {
         _ === `auto` && _(_.nativeEvent) && (_.current = !0);
       }
       function _(_) {
-        (_.current = _), _ === `auto` && _(_.nativeEvent) && (_.current = !0);
+        ((_.current = _), _ === `auto` && _(_.nativeEvent) && (_.current = !0));
       }
       return {
         ..._,
@@ -4024,9 +4027,9 @@ function _(_, _) {
                 _.currentTarget !== _.context.elements.domReference
               ) {
                 var _;
-                _(_),
+                (_(_),
                   (_ = _.context.elements.domReference) == null ||
-                    _.dispatchEvent(_);
+                    _.dispatchEvent(_));
                 return;
               }
             }
@@ -4190,12 +4193,12 @@ function _(_, _) {
     _ = _(_),
     _ = _(_),
     _ = _(_);
-  _(() => {
+  (_(() => {
     _ && (_(_), (_.current = null), (_.current = ``));
   }, [_]),
     _(() => {
       _ && _.current === `` && (_.current = _ ?? _ ?? -1);
-    }, [_, _, _]);
+    }, [_, _, _]));
   let _ = _((_) => {
       _
         ? _.current.typing || ((_.current.typing = _), _(_))
@@ -4224,7 +4227,7 @@ function _(_, _) {
           _.altKey)
       )
         return;
-      _ && _.key !== ` ` && (_(_), _(!0)),
+      (_ && _.key !== ` ` && (_(_), _(!0)),
         _.every(
           (_) => !_ || _[0]?.toLocaleLowerCase() !== _[1]?.toLocaleLowerCase(),
         ) &&
@@ -4233,8 +4236,8 @@ function _(_, _) {
         (_.current += _.key),
         _(_),
         (_.current = window.setTimeout(() => {
-          (_.current = ``), (_.current = _.current), _(!1);
-        }, _));
+          ((_.current = ``), (_.current = _.current), _(!1));
+        }, _)));
       let _ = _.current,
         _ = _(
           _,
@@ -4306,11 +4309,11 @@ function _(_) {
     let _ = performance.now(),
       _ = _ - _;
     if (_ === null || _ === null || _ === 0)
-      return (_ = _), (_ = _), (_ = _), null;
+      return ((_ = _), (_ = _), (_ = _), null);
     let _ = _ - _,
       _ = _ - _,
       _ = Math.sqrt(_ * _ + _ * _) / _;
-    return (_ = _), (_ = _), (_ = _), _;
+    return ((_ = _), (_ = _), (_ = _), _);
   }
   let _ = (_) => {
     let {
@@ -4324,7 +4327,7 @@ function _(_) {
     } = _;
     return function (_) {
       function _() {
-        clearTimeout(_), _();
+        (clearTimeout(_), _());
       }
       if (
         (clearTimeout(_),
@@ -4559,29 +4562,3 @@ function _(_) {
     ],
   });
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

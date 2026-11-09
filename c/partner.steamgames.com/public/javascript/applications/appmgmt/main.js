@@ -335,13 +335,13 @@ var _ = (_, _, _) => {
         );
       });
 };
-`VALVE_PUBLIC_PATH` in window
+(`VALVE_PUBLIC_PATH` in window
   ? (globalThis.__webpack_public_path__ = window.VALVE_PUBLIC_PATH)
   : console.error(
       `VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet`,
     ),
   Array.from(new Set([123]))[0] !== 123 &&
-    console.error(`Should not include prototypejs.`);
+    console.error(`Should not include prototypejs.`));
 var _ = _(_(), 1),
   _ = `_7u8JcHTlx8M-`,
   _ = `KWtRH19ERaI-`,
@@ -388,13 +388,13 @@ function _(_) {
   let _;
   typeof _ == `string` ? (_ = _) : _ && _(_, `dull`, _);
   let _;
-  typeof _ == `string` ? (_ = _) : _ && _(_, `body`, _),
+  (typeof _ == `string` ? (_ = _) : _ && _(_, `body`, _),
     _ && _(_, `success`, _),
     _ && _(_, `warning`, _),
     _ && _(_, `error`, _),
     _ && _(_, `success`, _),
     _ && _(_, `warning`, _),
-    _ && _(_, `error`, _);
+    _ && _(_, `error`, _));
   let _ = (0, _.jsx)(_, {
     variants: _,
     children: (0, _.jsx)(`div`, {
@@ -800,7 +800,7 @@ function _(_) {
     _ = null;
   _(() => {
     for (let _ = _; _ && _.visible; _ = _.submenu)
-      _.push(
+      (_.push(
         (0, _.jsx)(
           _,
           {
@@ -809,7 +809,7 @@ function _(_) {
           _.key,
         ),
       ),
-        (_ = _.label);
+        (_ = _.label));
   });
   let _ = _.useCallback(
     (_) => {
@@ -968,7 +968,7 @@ function _() {
 }
 async function _(_, _) {
   let _ = new FormData();
-  _.append(`sessionid`, _()), _.append(`keys`, JSON.stringify(_));
+  (_.append(`sessionid`, _()), _.append(`keys`, JSON.stringify(_)));
   let _ = `${_.PARTNER_BASE_URL}apps/requestkeys/${_}`,
     _ = await _.default.post(_, _);
   return _?.data?.message
@@ -1080,7 +1080,7 @@ function _(_) {
     });
   return (
     (0, _.useEffect)(() => {
-      _.fnSetLoading(!0), _.mutate();
+      (_.fnSetLoading(!0), _.mutate());
     }, []),
     (0, _.jsx)(_, {
       state: _,
@@ -1668,10 +1668,10 @@ function _(_) {
   return (
     _.useEffect(() => {
       let _ = _();
-      _ &&
+      (_ &&
         (document.documentElement.setAttribute(`lang`, _),
         _.SetPreferredLocales([_])),
-        _(!0);
+        _(!0));
     }, []),
     _
       ? (0, _.jsx)(_, {
@@ -1993,12 +1993,12 @@ function _() {
 }
 document.addEventListener(`DOMContentLoaded`, async function () {
   let _ = document.getElementById(`application_root`);
-  _(_ ? `application_config` : void 0),
+  (_(_ ? `application_config` : void 0),
     _().Init(`Partner`, CLSTAMP, new _().GetServiceTransport(), {
       fnGetReportTags: _,
     }),
     await _(_.LANGUAGE),
-    _ ? _.createRoot(_).render(_.createElement(_, {})) : _();
+    _ ? _.createRoot(_).render(_.createElement(_, {})) : _());
 });
 async function _(_) {
   let [_, _, _] = await Promise.all([
@@ -2510,10 +2510,11 @@ async function _(_) {
       _ = {
         ..._.default,
       };
-    _.InitFromObjects(_, _), _.AddTokens(_, _), _.AddTokens(_, _);
-  } else _.InitFromObjects(_, null), _.AddTokens(_, null), _.AddTokens(_, null);
+    (_.InitFromObjects(_, _), _.AddTokens(_, _), _.AddTokens(_, _));
+  } else
+    (_.InitFromObjects(_, null), _.AddTokens(_, null), _.AddTokens(_, null));
 }
 function _(_, _, _) {
-  _(_ === `manifest`, `Expected manifest not "${_}"`), _.InitDirect(_);
+  (_(_ === `manifest`, `Expected manifest not "${_}"`), _.InitDirect(_));
 }
 window.LocalizationManifestReady = _;

@@ -16,9 +16,9 @@ var _ = {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.getitems_request || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -42,7 +42,7 @@ var _ = {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -63,14 +63,14 @@ var _ = {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerStoreBrowse_GetItems_Request`;
@@ -79,9 +79,9 @@ var _ = {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.ids || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -102,7 +102,7 @@ var _ = {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -123,14 +123,14 @@ var _ = {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerStoreBrowse_GetCountryRestrictions_Request`;
@@ -139,9 +139,9 @@ var _ = {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.results || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1, 2], null);
+        _.Message.initialize(this, _, 0, -1, [1, 2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -168,7 +168,7 @@ var _ = {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -189,14 +189,14 @@ var _ = {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerStoreBrowse_GetCountryRestrictions_Response`;
@@ -205,9 +205,9 @@ var _ = {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype._ || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [3, 4], null);
+        _.Message.initialize(this, _, 0, -1, [3, 4], null));
     }
     static sm_m;
     static sm_mbf;
@@ -245,7 +245,7 @@ var _ = {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -266,14 +266,14 @@ var _ = {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerStoreBrowse_GetCountryRestrictions_Response_CCountryRestrictions`;
@@ -340,7 +340,7 @@ function _(_, _) {
     case -1:
       return ``;
     default:
-      return _(_, `Unknown EStoreItemType ${_} ${_(_)} `), ``;
+      return (_(_, `Unknown EStoreItemType ${_} ${_(_)} `), ``);
   }
 }
 var _ = /^(app|package|bundle|mtx|tag|creator|hubcategory|salepage)_(\d*)$/;
@@ -579,14 +579,14 @@ function _(_, _, _, _, _ = !1) {
       if (
         (_.forEach((_) => {
           let [_, _ = `default_info`] = _(_, `|`);
-          _.add(_),
+          (_.add(_),
             _.has(_) ||
               (_ == `top_tags`
                 ? (_.include_tag_count = 20)
                 : _ != `default_info` && (_[_] = !0),
-              _.add(_));
+              _.add(_)));
           let _ = _.get(_);
-          _ || ((_ = new Set()), _.set(_, _)), _.add(_);
+          (_ || ((_ = new Set()), _.set(_, _)), _.add(_));
         }),
         _.include_included_items)
       ) {
@@ -594,7 +594,7 @@ function _(_, _, _, _, _ = !1) {
         _.included_item_data_request = _;
       }
       let _ = _.Init(_);
-      _(_, _), _(_, _);
+      (_(_, _), _(_, _));
       let _ = [];
       _.forEach((_) => {
         let _ = _(_);
@@ -603,9 +603,9 @@ function _(_, _, _, _, _ = !1) {
       let _;
       if (_.bUsePartnerAPI) {
         let _ = _.Init(_);
-        _.Body().set_getitems_request(_.Body()),
+        (_.Body().set_getitems_request(_.Body()),
           _.Body().set_include_unpublished(!!_.bIncludeUnpublished),
-          (_ = await _.GetItems(_, _));
+          (_ = await _.GetItems(_, _)));
       } else _ = await _.GetItems(_, _);
       if (_ && !_.BSuccess())
         throw `Error loading store items: ${_.GetErrorMessage()}`;
@@ -637,7 +637,7 @@ function _(_, _, _, _, _ = !1) {
       ..._,
     },
   );
-  return (_.cacheScope = _(_)), _;
+  return ((_.cacheScope = _(_)), _);
 }
 function _(_, _, _, _, _) {
   _.forEach((_, _) => {
@@ -979,7 +979,7 @@ function _(_, _) {
 var _ = `StoreItem`;
 function _(_, _, _) {
   let _ = [_, _ && _(_), _];
-  return _ && _.push(_), _;
+  return (_ && _.push(_), _);
 }
 function _(_, _, _, _) {
   let _ = _(_);
@@ -1092,7 +1092,7 @@ function _(_) {
     _ = _(_),
     _ = _.useCallback(
       (_, _) => {
-        _(_, _.toObject(), _, _), _ && _(_, _);
+        (_(_, _.toObject(), _, _), _ && _(_, _));
       },
       [_, _, _],
     ),
@@ -1145,62 +1145,9 @@ function _(_) {
   return (_) => {
     let _,
       _ = performance.now() - _;
-    _ < _ && (_ = _ - _),
+    (_ < _ && (_ = _ - _),
       setTimeout(() => {
-        (_ = performance.now()), _();
-      }, _);
+        ((_ = performance.now()), _());
+      }, _));
   };
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

@@ -28,7 +28,7 @@ function u(e) {
             let s = [...e].sort(
               (e, t) => t.GetNumFollowers() - e.GetNumFollowers(),
             );
-            p(s), h(n);
+            (p(s), h(n));
           }
           u(!1);
         })();

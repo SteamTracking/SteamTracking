@@ -528,7 +528,7 @@ var _ = class _ extends _ {
           _,
         _ = await _.default.post(_, _);
       if (_.data.success != 1) throw _.data;
-      return this.RemoveGIDFromList(_, _ + _), _.data;
+      return (this.RemoveGIDFromList(_, _ + _), _.data);
     }
     static sm_Instance;
     static sm_SummaryInstance;
@@ -828,8 +828,8 @@ function _(_) {
   return _[_];
 }
 var _ = _(_(), 1);
-(0, _.default)(`2026-11-23T09:30:00-08:00`).unix(),
-  (0, _.default)(`2026-11-30T10:00:00-08:00`).unix();
+((0, _.default)(`2026-11-23T09:30:00-08:00`).unix(),
+  (0, _.default)(`2026-11-30T10:00:00-08:00`).unix());
 function _() {
   return 2025;
 }
@@ -853,8 +853,8 @@ function _() {
 function _() {
   return `${_.STORE_BASE_URL}steamawards/ajaxgetwidgetstyle`;
 }
-(0, _.default)(`2026-12-17T09:30:00-08:00`).unix(),
-  (0, _.default)(`2027-01-02T10:00:00-08:00`).unix();
+((0, _.default)(`2026-12-17T09:30:00-08:00`).unix(),
+  (0, _.default)(`2027-01-02T10:00:00-08:00`).unix());
 var _ = 5350740;
 function _(_, _) {
   return _.BIsEventActionEnabled(_) || _ < _.GetStartTimeAndDateUnixSeconds();
@@ -1928,14 +1928,14 @@ var _ = class extends _.Component {
   m_nPreviousRenderCount = 0;
   m_nCurrentRenderCount = 0;
   constructor(_) {
-    super(_),
+    (super(_),
       (this.m_loader = new _(this.props.partnerEventStore)),
       !this.props.bShowOnlyInitialEvent &&
         this.props.initialEvent &&
         this.m_loader.InitAroundEvent(
           this.props.initialEvent,
           this.props.additionalParams,
-        );
+        ));
   }
   FindCurrentlyViewedEventIndex() {
     let _ = this.m_refScroll.current;
@@ -1970,14 +1970,14 @@ var _ = class extends _.Component {
       timing: `cubic-in-out`,
       onComplete: this.OnScrollComplete,
     };
-    (this.m_scrollAnimation = new _(
+    ((this.m_scrollAnimation = new _(
       _,
       {
         scrollTop: _,
       },
       _,
     )),
-      this.m_scrollAnimation.Start();
+      this.m_scrollAnimation.Start());
   }
   ScrollToBottom() {
     this.m_refScroll.current &&
@@ -2005,7 +2005,7 @@ var _ = class extends _.Component {
         _ = _.offsetTop,
         _ = _ + _.clientHeight,
         _ = this.GetScrollTopForComparison(_);
-      (_ -= (_ - _) * 0.3), _ <= _ && (_ = _);
+      ((_ -= (_ - _) * 0.3), _ <= _ && (_ = _));
     }
     this.ScrollToEvent(_);
   }
@@ -2026,8 +2026,8 @@ var _ = class extends _.Component {
     let _ = this.m_refScroll.current;
     if (!_) return;
     let _ = _.clientHeight;
-    _.scrollHeight - (_.scrollTop + _) <= _ && this.m_loader.LoadMoreAtEnd(),
-      _.scrollTop <= _ && this.m_loader.LoadMoreAtBeginning();
+    (_.scrollHeight - (_.scrollTop + _) <= _ && this.m_loader.LoadMoreAtEnd(),
+      _.scrollTop <= _ && this.m_loader.LoadMoreAtBeginning());
   }
   getSnapshotBeforeUpdate(_) {
     let _ = this.m_nCurrentRenderCount != this.m_nPreviousRenderCount;
@@ -2044,9 +2044,9 @@ var _ = class extends _.Component {
   OnTouchMove(_) {
     if (!this.m_refScroll.current || _.touches.length == 0) return;
     let _ = 0;
-    this.m_nTouchStartClientY !== void 0 &&
+    (this.m_nTouchStartClientY !== void 0 &&
       (_ = this.m_nTouchStartClientY - _.touches[0].clientY),
-      this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(_, _);
+      this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(_, _));
   }
   OnWheel(_) {
     this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(_, _.deltaY);
@@ -2061,8 +2061,8 @@ var _ = class extends _.Component {
   }
   SetGlobalHeaderHidden(_) {
     let _ = document.getElementsByClassName(`responsive_header`);
-    _(_.length <= 1, `Must have at most one responsive_header`),
-      _.length >= 1 && (_[0].style.display = _ ? `none` : ``);
+    (_(_.length <= 1, `Must have at most one responsive_header`),
+      _.length >= 1 && (_[0].style.display = _ ? `none` : ``));
   }
   SetFooterPinnedToBottom(_) {
     let _ = document.getElementById(`footer`);
@@ -2072,7 +2072,7 @@ var _ = class extends _.Component {
     let _ = this.m_refScroll.current;
     _ && !_(_, _.ownerDocument.activeElement) && _.focus();
     let _ = this.m_refPage.current;
-    _ &&
+    (_ &&
       (_.addEventListener(`touchstart`, this.OnTouchStart),
       _.addEventListener(`touchmove`, this.OnTouchMove, {
         passive: !1,
@@ -2081,7 +2081,7 @@ var _ = class extends _.Component {
         passive: !1,
       })),
       this.props.showAppHeader && this.SetGlobalHeaderHidden(!0),
-      this.SetFooterPinnedToBottom(!0);
+      this.SetFooterPinnedToBottom(!0));
   }
   componentDidUpdate(_, _, _) {
     if (_ === null) return;
@@ -2095,12 +2095,12 @@ var _ = class extends _.Component {
   }
   componentWillUnmount() {
     let _ = this.m_refPage.current;
-    _ &&
+    (_ &&
       (_.removeEventListener(`touchstart`, this.OnTouchStart),
       _.removeEventListener(`touchmove`, this.OnTouchMove),
       _.removeEventListener(`wheel`, this.OnWheel)),
       this.props.showAppHeader && this.SetGlobalHeaderHidden(!1),
-      this.SetFooterPinnedToBottom(!1);
+      this.SetFooterPinnedToBottom(!1));
   }
   render() {
     let { initialEvent: _, bShowOnlyInitialEvent: _ } = this.props,
@@ -2112,7 +2112,7 @@ var _ = class extends _.Component {
     for (let _ of _) {
       let _ = _ !== void 0 && _.GID == _.GID,
         _ = _;
-      _.push(
+      (_.push(
         (0, _.jsx)(
           _,
           {
@@ -2131,7 +2131,7 @@ var _ = class extends _.Component {
         ),
       ),
         (_ ??= _.appid),
-        (_ ??= _.clanSteamID.GetAccountID());
+        (_ ??= _.clanSteamID.GetAccountID()));
     }
     return (
       (this.m_nCurrentRenderCount = _.length),
@@ -2237,7 +2237,7 @@ var _ = class extends _.Component {
     );
   }
 };
-_([_], _.prototype, `ScrollToNextEvent`, null),
+(_([_], _.prototype, `ScrollToNextEvent`, null),
   _([_], _.prototype, `ScrollToPrevEvent`, null),
   _([_], _.prototype, `OnScrollComplete`, null),
   _([_], _.prototype, `Close`, null),
@@ -2247,7 +2247,7 @@ _([_], _.prototype, `ScrollToNextEvent`, null),
   _([_], _.prototype, `OnTouchStart`, null),
   _([_], _.prototype, `OnTouchMove`, null),
   _([_], _.prototype, `OnWheel`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = _((_) => {
     let _ = _.loader.GetNewerState(),
       _ = _.loader.GetOlderState();
@@ -2287,8 +2287,8 @@ var _ = _((_) => {
       this.m_bSentRead ||
         this.m_sendReadInfo.IsScheduled() ||
         this.m_sendReadInfo.Schedule(750, () => {
-          this.props.tracker.RecordEventRead(this.props.event, 4),
-            (this.m_bSentRead = !0);
+          (this.props.tracker.RecordEventRead(this.props.event, 4),
+            (this.m_bSentRead = !0));
         });
     }
     OnLeaveVisible() {
@@ -2485,9 +2485,9 @@ var _ = _((_) => {
       );
     }
   };
-_([_], _.prototype, `OnEnterVisible`, null),
+(_([_], _.prototype, `OnEnterVisible`, null),
   _([_], _.prototype, `OnLeaveVisible`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 function _(_) {
   let {
       event: _,
@@ -2532,7 +2532,7 @@ var _ = class {
   m_eOlderDirection = 1;
   m_eNewerDirection = 1;
   constructor(_) {
-    _(this), (this.m_partnerEventStore = _);
+    (_(this), (this.m_partnerEventStore = _));
   }
   GetEvents() {
     return this.m_rgEvents;
@@ -2548,13 +2548,13 @@ var _ = class {
   }
   async InitAroundEvent(_, _) {
     let _ = this.m_partnerEventStore;
-    (this.m_nAppID = _.appid),
+    ((this.m_nAppID = _.appid),
       (this.m_clanSteamID = _.clanSteamID),
       (this.m_rgEvents = []),
       (this.m_eOlderDirection = 2),
       (this.m_eNewerDirection = 2),
       (this.m_additionalParams = _),
-      this.m_rgEvents.push(_);
+      this.m_rgEvents.push(_));
     let _;
     try {
       _ = await _.LoadAdjacentPartnerEventsByEvent(
@@ -2568,15 +2568,15 @@ var _ = class {
     } catch {}
     _(() => {
       if (!_ || _.length == 0) {
-        (this.m_eOlderDirection = 3), (this.m_eNewerDirection = 3);
+        ((this.m_eOlderDirection = 3), (this.m_eNewerDirection = 3));
         return;
       }
       let _ = _.findIndex((_) => _.GID == _.GID),
         _ = _,
         _ = _ >= 0 ? _.length - _ - 1 : 0;
-      (this.m_eNewerDirection = _ >= this.k_nMaxPerDirection ? 1 : 3),
+      ((this.m_eNewerDirection = _ >= this.k_nMaxPerDirection ? 1 : 3),
         (this.m_eOlderDirection = _ >= this.k_nMaxPerDirection ? 1 : 3),
-        (this.m_rgEvents = _);
+        (this.m_rgEvents = _));
     });
   }
   async LoadMoreAtEnd() {
@@ -2640,9 +2640,9 @@ var _ = class {
     });
   }
 };
-_([_.shallow], _.prototype, `m_rgEvents`, void 0),
+(_([_.shallow], _.prototype, `m_rgEvents`, void 0),
   _([_], _.prototype, `m_eOlderDirection`, void 0),
-  _([_], _.prototype, `m_eNewerDirection`, void 0);
+  _([_], _.prototype, `m_eNewerDirection`, void 0));
 var _ = `rde3mdS-0gs-`,
   _ = class extends _.Component {
     m_refFocus = _.createRef();
@@ -2686,9 +2686,9 @@ var _ = `rde3mdS-0gs-`,
       });
     }
   };
-_([_], _.prototype, `escFunction`, null),
+(_([_], _.prototype, `escFunction`, null),
   _([_], _.prototype, `OnBackgroundClick`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = `CTh2D28nj8Q-`,
   _ = `_6Et65dUyXmI-`,
   _ = `TBpCjwaivo4-`,
@@ -2711,7 +2711,7 @@ var _ = `CTh2D28nj8Q-`,
   _ = `zwvQr7NqKZg-`;
 function _(_, _, _) {
   let _ = _ && _.length > _ ? [..._] : _(_ || [], _ + 1, ``);
-  return (_[_] = _), _;
+  return ((_[_] = _), _);
 }
 function _(_, _) {
   return (_ && _.length > _ && _[_]) || ``;
@@ -2740,13 +2740,13 @@ async function _(_, _, _) {
   if (_(_, _)) return null;
   let _ = !!_(_, 29).trim(),
     _ = new FormData();
-  _.append(`sessionid`, _()),
+  (_.append(`sessionid`, _()),
     _.append(`appid`, `` + _),
     _.append(`post_steam_china`, `` + _),
     _.append(`titles`, JSON.stringify(_)),
     _.append(`descriptions`, JSON.stringify(_)),
     _.append(`build_id`, `` + _.Get().GetPostedBuildVersion()),
-    _.append(`build_branch`, _.Get().GetBuildBranch());
+    _.append(`build_branch`, _.Get().GetBuildBranch()));
   let _ = _.PARTNER_BASE_URL + `partnerevents/ajaxpublishpatchnotes`;
   try {
     let _ = await _.default.post(_, _, {
@@ -2767,19 +2767,19 @@ async function _(_, _, _) {
 }
 function _(_, _) {
   let _ = new _();
-  (_.GID = `PreviewPartnerEventRow_0`),
+  ((_.GID = `PreviewPartnerEventRow_0`),
     (_.clanSteamID = new _(_.steamid)),
     (_.postTime = Date.now() / 1e3),
     (_.startTime = Date.now() / 1e3),
     (_.createTime = Date.now() / 1e3),
-    (_.type = 12);
+    (_.type = 12));
   for (let _ = 0; _ < 32; _++)
-    _.name.set(_, _(_, _)), _.description.set(_, _(_, _));
+    (_.name.set(_, _(_, _)), _.description.set(_, _(_, _)));
   return _;
 }
 function _() {
   let _ = new URLSearchParams(window.location.search);
-  _.delete(`submittedbuild`), _.delete(`buildbranch`);
+  (_.delete(`submittedbuild`), _.delete(`buildbranch`));
   let _ = _.toString(),
     _ =
       window.location.origin +
@@ -2802,13 +2802,13 @@ var _ = class _ {
   }
   Init() {
     let _ = _(`build_notes`, `application_config`);
-    (this.m_nBuildVersion = _?.build_version || 0),
+    ((this.m_nBuildVersion = _?.build_version || 0),
       (this.m_bSteamChina = _?.steam_china || !1),
       (this.m_strBuildBranch = _?.build_branch || ``),
       (this.m_strBuildBranch = this.m_strBuildBranch
         .trim()
         .toLocaleLowerCase()),
-      this.m_strBuildBranch === "default" && (this.m_strBuildBranch = ``);
+      this.m_strBuildBranch === "default" && (this.m_strBuildBranch = ``));
   }
   GetPostedBuildVersion() {
     return this.m_nBuildVersion;
@@ -2836,7 +2836,7 @@ function _(_) {
     _ = (_) => !!(_(_, _) || _(_, _)),
     _ = () => _(null),
     _ = async () => {
-      _(null), _(`submitting`);
+      (_(null), _(`submitting`));
       let _ = await _(_.appId, _, _);
       _ ? (_(_.clan_event_gid), _(), _(`submitted`)) : _(`failed`);
     },
@@ -2847,9 +2847,9 @@ function _(_) {
       for (let _ of _) {
         let _ = _.GetLocalization(`Title`, _) || ``,
           _ = _.GetLocalization(`Description`, _) || ``;
-        (_ || _) && _.push(_), _ && (_ = _(_, _, _)), _ && (_ = _(_, _, _));
+        ((_ || _) && _.push(_), _ && (_ = _(_, _, _)), _ && (_ = _(_, _, _)));
       }
-      return _(_), _(_), _;
+      return (_(_), _(_), _);
     },
     _ = _.Get().BCanSubmitSteamChinaPatchNotes()
       ? [_.k_ESteamRealmChina, _.k_ESteamRealmGlobal]
@@ -2979,8 +2979,8 @@ var _ = (_) => {
                       _ = _(`#BuildNotes_SampleTitle`),
                       _ = _(`#BuildNotes_SampleDescription`);
                     for (let _ = 0; _ < 32; _++)
-                      _.SetLocalization(`Title`, _, _),
-                        _.SetLocalization(`Description`, _, _);
+                      (_.SetLocalization(`Title`, _, _),
+                        _.SetLocalization(`Description`, _, _));
                     _(
                       (0, _.jsx)(_, {
                         sampleLocData: _,

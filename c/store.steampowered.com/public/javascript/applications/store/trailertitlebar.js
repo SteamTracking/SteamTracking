@@ -191,7 +191,7 @@ var _ = 5,
     m_nVideoDuration = 0;
     m_nBufferedEndTime = 0;
     constructor(_) {
-      _(this), (this.m_persistState = _ || {});
+      (_(this), (this.m_persistState = _ || {}));
     }
     IsPaused() {
       return this.m_bPaused;
@@ -230,7 +230,7 @@ var _ = 5,
       return this.m_bShowingCaption;
     }
     Start(_, _, _, _, _) {
-      this.Stop(),
+      (this.Stop(),
         (this.m_strStatsURL = _ || ``),
         (this.m_elVideo = _),
         this.m_listeners.AddEventListener(
@@ -290,7 +290,7 @@ var _ = 5,
         ),
         this.m_listeners.AddEventListener(window, `pagehide`, this.SendStats),
         (this.m_player = new _(this.m_elVideo)),
-        this.m_player.SetTimeoutAfterFailedDownload(!1);
+        this.m_player.SetTimeoutAfterFailedDownload(!1));
       let _ =
         this.m_persistState.m_bAudioMuted !== void 0 &&
         this.m_persistState.m_bAudioMuted;
@@ -299,12 +299,12 @@ var _ = 5,
         this.m_persistState.m_nPlayerVolume === void 0
           ? 1
           : this.m_persistState.m_nPlayerVolume;
-      this.SetVolume(_, !0),
+      (this.SetVolume(_, !0),
         this.m_player.SetMuteOnAutoplayBlocked(this.m_bMuteWhenAutoplayBlocked),
-        this.m_player.PlayMPD(_, _, _);
+        this.m_player.PlayMPD(_, _, _));
     }
     Stop() {
-      this.SendStats(),
+      (this.SendStats(),
         this.m_listeners.Unregister(),
         this.m_player && this.m_player.Close(),
         (this.m_elVideo = null),
@@ -314,21 +314,21 @@ var _ = 5,
         (this.m_nPlaybackTime = 0),
         (this.m_nVideoStartTime = 0),
         (this.m_nVideoDuration = 0),
-        (this.m_nBufferedEndTime = 0);
+        (this.m_nBufferedEndTime = 0));
     }
     IsInitialized() {
       return !!this.m_player && !!this.m_elVideo;
     }
     OnVideoPlaying() {
       let _ = this.m_bPaused;
-      (this.m_bPaused = !1),
+      ((this.m_bPaused = !1),
         (this.m_bUserInputNeeded = !1),
-        _ && this.m_fnOnPlayPauseChange && this.m_fnOnPlayPauseChange(!0);
+        _ && this.m_fnOnPlayPauseChange && this.m_fnOnPlayPauseChange(!0));
     }
     OnVideoPause() {
       let _ = this.m_bPaused;
-      (this.m_bPaused = !0),
-        !_ && this.m_fnOnPlayPauseChange && this.m_fnOnPlayPauseChange(!1);
+      ((this.m_bPaused = !0),
+        !_ && this.m_fnOnPlayPauseChange && this.m_fnOnPlayPauseChange(!1));
     }
     OnVideoTimeUpdate() {
       this.IsInitialized() &&
@@ -350,8 +350,8 @@ var _ = 5,
       this.m_fnOnPlaybackEnd && this.m_fnOnPlaybackEnd();
     }
     OnDownloadFailed(_) {
-      console.log(`video download failed`, _.detail),
-        (this.m_eFailureReason = _.detail || _.PlaybackError);
+      (console.log(`video download failed`, _.detail),
+        (this.m_eFailureReason = _.detail || _.PlaybackError));
     }
     OnUserInputNeeded() {
       this.m_bUserInputNeeded = !0;
@@ -428,8 +428,8 @@ var _ = 5,
           _.m_bAudioMuted !== void 0 && this.SetMute(_.m_bAudioMuted, !0)));
     }
     SetMuteWhenAutoplayBlocked(_) {
-      (this.m_bMuteWhenAutoplayBlocked = _),
-        this.IsInitialized() && this.m_player.SetMuteOnAutoplayBlocked(_);
+      ((this.m_bMuteWhenAutoplayBlocked = _),
+        this.IsInitialized() && this.m_player.SetMuteOnAutoplayBlocked(_));
     }
     SetPlaybackEndCallback(_) {
       this.m_fnOnPlaybackEnd = _;
@@ -473,7 +473,7 @@ var _ = 5,
         (this.m_bSentStats = !0));
     }
   };
-_([_], _.prototype, `m_bPaused`, void 0),
+(_([_], _.prototype, `m_bPaused`, void 0),
   _([_], _.prototype, `m_bUserInputNeeded`, void 0),
   _([_], _.prototype, `m_bMuted`, void 0),
   _([_], _.prototype, `m_nVolume`, void 0),
@@ -499,14 +499,14 @@ _([_], _.prototype, `m_bPaused`, void 0),
   _([_.bound], _.prototype, `OnCaptionsChange`, null),
   _([_], _.prototype, `UserInputReceived`, null),
   _([_.bound], _.prototype, `SetMuteInternal`, null),
-  _([_], _.prototype, `SendStats`, null);
+  _([_], _.prototype, `SendStats`, null));
 function _(_, _, _, _, _, _, _) {
   let _ = _(),
     _ = (0, _.useRef)(void 0);
   _.current ||= new _(_);
   let _ = _(
     (_) => {
-      if (_) return _.current.Start(_, _, _, _, _), () => _.current.Stop();
+      if (_) return (_.current.Start(_, _, _, _, _), () => _.current.Stop());
     },
     [_, _, _, _],
   );
@@ -521,16 +521,16 @@ function _(_, _, _, _, _, _, _) {
       _.current.SetOnPlayPauseChangeCallback(_);
     }, [_]),
     (0, _.useEffect)(() => {
-      _.current.SetOnMuteChangeCallback(_), _ && _(_.current.GetMuted());
+      (_.current.SetOnMuteChangeCallback(_), _ && _(_.current.GetMuted()));
     }, [_]),
     [_, _.current]
   );
 }
 function _(_, _) {
-  (_ = !!_),
+  ((_ = !!_),
     (0, _.useEffect)(() => {
       _.SetMuteWhenAutoplayBlocked(_);
-    }, [_, _]);
+    }, [_, _]));
 }
 function _(_, _) {
   let _ = (0, _.useRef)(!1),
@@ -559,7 +559,7 @@ function _(_, _, _) {
     },
     _ = JSON.stringify(_),
     _ = new FormData();
-  _.append(`stats`, _), navigator.sendBeacon(_, _);
+  (_.append(`stats`, _), navigator.sendBeacon(_, _));
 }
 function _(_, _) {
   if (!_ || _(_) || _(_) || !_) return;
@@ -586,7 +586,7 @@ function _(_) {
     _ = (0, _.useRef)(null),
     _ = (0, _.useRef)(null),
     [_, _] = (0, _.useState)(`none`);
-  _(_ == `theater`), (_ = !!_), (_ = !!_);
+  (_(_ == `theater`), (_ = !!_), (_ = !!_));
   let _ = _(
       (_) => {
         if (((_.current = _), !_)) return;
@@ -629,7 +629,7 @@ function _(_) {
       (_) => {
         let _ = _.current,
           _ = _.current;
-        _ &&
+        (_ &&
           (_ != `fullscreen` && _(_) && _(_), _ == `fullscreen` && _(_, !!_)),
           _(_) &&
             (_ != `theater` && _.open && _.close(),
@@ -637,7 +637,7 @@ function _(_) {
           _(_) &&
             (_ != `theater` && _.matches(`:popover-open`) && _.hidePopover(),
             _ == `theater` && _.showPopover()),
-          _(_);
+          _(_));
       },
       [_],
     );
@@ -703,9 +703,9 @@ function _() {
       _.addEventListener(`transitionend`, _),
       _.addEventListener(`transitioncancel`, _),
       () => {
-        _.removeEventListener(`transitionstart`, _),
+        (_.removeEventListener(`transitionstart`, _),
           _.removeEventListener(`transitionend`, _),
-          _.removeEventListener(`transitioncancel`, _);
+          _.removeEventListener(`transitioncancel`, _));
       }
     );
   }, []);
@@ -746,7 +746,7 @@ function _() {
   let _ = _();
   _(_, `Missing controls context`);
   let _ = _.m_fnSetMenuVisible;
-  return (0, _.useEffect)(() => (_(!0), () => _(!1)), [_]), _.m_refMenuLayer;
+  return ((0, _.useEffect)(() => (_(!0), () => _(!1)), [_]), _.m_refMenuLayer);
 }
 function _(_, _) {
   let [_, _] = _(_);
@@ -783,12 +783,12 @@ function _(_) {
       },
       [_, _, _],
     );
-  _(_),
+  (_(_),
     _(
       _,
       (0, _.useCallback)(
         (_) => {
-          (_.current = _), _(_);
+          ((_.current = _), _(_));
         },
         [_, _],
       ),
@@ -798,7 +798,7 @@ function _(_) {
       (0, _.useCallback)(() => {
         _(_);
       }, [_]),
-    );
+    ));
   let _ = (0, _.useCallback)(
       (_) => {
         _.pointerType != `touch` && (_(_), _(_(_)));
@@ -844,7 +844,7 @@ function _(_) {
       onPointerUp: (0, _.useCallback)(
         (_) => {
           let _ = _.current;
-          (_.current = void 0), _.currentTarget == _ && _(_(_));
+          ((_.current = void 0), _.currentTarget == _ && _(_(_)));
         },
         [_],
       ),
@@ -855,7 +855,7 @@ function _(_) {
 function _(_) {
   let _ = _.target,
     _ = _.currentTarget;
-  for (; _ && _ != _; ) {
+  for (; _ && _ != _;) {
     if (_.dataset?.keepcontrols == `true`) return !0;
     _ = _.parentElement;
   }
@@ -881,7 +881,7 @@ function _(_) {
     onPointerUp: (0, _.useCallback)(
       (_) => {
         if (_.current != _.pointerId) return;
-        _.currentTarget.releasePointerCapture(_.pointerId), (_.current = _);
+        (_.currentTarget.releasePointerCapture(_.pointerId), (_.current = _));
         let _ = _.currentTarget.getBoundingClientRect(),
           { clientX: _, clientY: _ } = _;
         _ >= _.left && _ <= _.right && _ >= _.top && _ <= _.bottom && _(_);
@@ -895,9 +895,9 @@ function _() {
     _ = (0, _.useRef)(void 0),
     _ = (0, _.useCallback)(
       (_, _) => {
-        (_.current &&= (window.clearTimeout(_.current), void 0)),
+        ((_.current &&= (window.clearTimeout(_.current), void 0)),
           _(_),
-          _ && _ != 0 && (_.current = window.setTimeout(() => _(!1), _));
+          _ && _ != 0 && (_.current = window.setTimeout(() => _(!1), _)));
       },
       [_],
     );
@@ -916,7 +916,7 @@ function _(_, _) {
     _ = _(_);
   (0, _.useEffect)(() => {
     let _ = _.current;
-    (_.current = !1), (!_ || _) && _(_);
+    ((_.current = !1), (!_ || _) && _(_));
   }, [_, _, _]);
 }
 function _(_, _) {
@@ -924,7 +924,7 @@ function _(_, _) {
     _ = _(() => _.GetMuted());
   (0, _.useEffect)(() => {
     let _ = _.current;
-    (_.current = !1), !_ && _();
+    ((_.current = !1), !_ && _());
   }, [_, _, _]);
 }
 function _(_) {
@@ -934,7 +934,7 @@ function _(_) {
     _,
     (0, _.useCallback)(
       (_) => {
-        _.SetMute(!1), _.SetVolume(_);
+        (_.SetMute(!1), _.SetVolume(_));
       },
       [_],
     ),
@@ -1124,7 +1124,7 @@ function _(_) {
     _ = _(),
     _ = _.GetVideoRepresentations().map((_) => {
       let _ = () => {
-          _.SetVideoRepresentation(_), _();
+          (_.SetVideoRepresentation(_), _());
         },
         _ = _(_);
       return (0, _.jsx)(
@@ -1158,7 +1158,7 @@ function _(_) {
     _ = _(),
     _ = _.m_bAutoplayEnabled == 1,
     _ = (0, _.useCallback)(() => {
-      _.m_fnSetAutoplayEnabled && _.m_fnSetAutoplayEnabled(!_), _();
+      (_.m_fnSetAutoplayEnabled && _.m_fnSetAutoplayEnabled(!_), _());
     }, [_, _, _]);
   return (
     _.use(_.Ready()),
@@ -1182,16 +1182,16 @@ function _(_) {
     _ = (0, _.useMemo)(() => {
       let _ = [..._.GetCaptionRepresentations()],
         _ = _.findIndex((_) => _.m_eLanguage == _);
-      return _ > 0 && _(_, _, 0), _;
+      return (_ > 0 && _(_, _, 0), _);
     }, [_, _]),
     _ = [];
   for (let _ of _)
-    _.push(
+    (_.push(
       (0, _.jsx)(
         _,
         {
           onClick: () => {
-            _.SetCaptionRepresentation(_.m_eLanguage), _();
+            (_.SetCaptionRepresentation(_.m_eLanguage), _());
           },
           checked: !1,
           children: _.m_strLabel,
@@ -1199,7 +1199,7 @@ function _(_) {
         _.m_eLanguage,
       ),
     ),
-      _.m_eLanguage == _ && _.push((0, _.jsx)(_, {}));
+      _.m_eLanguage == _ && _.push((0, _.jsx)(_, {})));
   return _.length == 0
     ? null
     : (0, _.jsx)(_, {
@@ -1447,8 +1447,8 @@ function _() {
         passive: !1,
       }),
       () => {
-        _.removeEventListener(`touchstart`, _),
-          _.removeEventListener(`touchend`, _);
+        (_.removeEventListener(`touchstart`, _),
+          _.removeEventListener(`touchend`, _));
       }
     );
   }, []);
@@ -1529,9 +1529,9 @@ function _(_) {
     (_) => {
       let _ = _.currentTarget.getBoundingClientRect(),
         _ = (_.pageX - _.left) / (_.right - _.left);
-      _.Seek(_ * _.GetTimelineDuration()),
+      (_.Seek(_ * _.GetTimelineDuration()),
         _.preventDefault(),
-        _.stopPropagation();
+        _.stopPropagation());
     },
     [_],
   );
@@ -1571,7 +1571,7 @@ function _(_, _) {
           let _ = _.current;
           if (((_ ||= _.current), !_)) return;
           let _ = _(_, _.getBoundingClientRect(), _.clientX);
-          _(_),
+          (_(_),
             _.current &&
               _ &&
               _(
@@ -1581,7 +1581,7 @@ function _(_, _) {
                       nPlaybackSeconds: _.nPlaybackSeconds,
                     }
                   : null,
-              );
+              ));
         },
         [_, _, _, _, _],
       ),
@@ -1593,11 +1593,11 @@ function _(_, _) {
       ),
       onPointerDown: (0, _.useCallback)(
         (_) => {
-          (_.current = _.currentTarget),
+          ((_.current = _.currentTarget),
             _.current.setPointerCapture(_.pointerId),
-            (document.body.style.userSelect = `none`);
+            (document.body.style.userSelect = `none`));
           let _ = _(_, _.current.getBoundingClientRect(), _.clientX);
-          _(_),
+          (_(_),
             _ &&
               _(
                 _
@@ -1606,7 +1606,7 @@ function _(_, _) {
                       nPlaybackSeconds: _.nPlaybackSeconds,
                     }
                   : null,
-              );
+              ));
         },
         [_, _, _],
       ),
@@ -1698,7 +1698,7 @@ function _(_, _, _) {
   let _ = _(_),
     [_, _] = (0, _.useState)(``),
     _ = (0, _.useRef)(0);
-  (0, _.useEffect)(() => {
+  ((0, _.useEffect)(() => {
     _ &&
       !_ &&
       _ == `` &&
@@ -1707,7 +1707,7 @@ function _(_, _, _) {
     (0, _.useEffect)(() => {
       _ && (_(`complete`), window.clearTimeout(_.current));
     }, [_]),
-    (0, _.useEffect)(() => () => window.clearTimeout(_.current), []);
+    (0, _.useEffect)(() => () => window.clearTimeout(_.current), []));
   let _ = (0, _.useRef)(!1);
   return (
     _ == `complete` && !_ && (_.current = !0),
@@ -1840,7 +1840,7 @@ function _(_, _) {
           ..._,
         ]);
         let _ = () => {
-          (_.current = 0), _.TogglePlayPause();
+          ((_.current = 0), _.TogglePlayPause());
         };
         _.pointerType == `mouse`
           ? _.current
@@ -1859,7 +1859,7 @@ function _(_, _) {
   return (
     (0, _.useEffect)(
       () => () => {
-        window.clearTimeout(_.current), (_.current = 0);
+        (window.clearTimeout(_.current), (_.current = 0));
       },
       [_],
     ),
@@ -2081,7 +2081,7 @@ function _(_) {
 }
 function _(_, _, _) {
   let [_, _] = _(_, _);
-  return (_ ||= _), [_, _];
+  return ((_ ||= _), [_, _]);
 }
 function _(_, _) {
   let [_, _] = _(),
@@ -2091,7 +2091,7 @@ function _(_, _) {
   return (
     (0, _.useEffect)(() => {
       let _ = _.current;
-      (_.current = !1), (!_ || _) && _(!0, _ ? 0 : _);
+      ((_.current = !1), (!_ || _) && _(!0, _ ? 0 : _));
     }, [_, _, _]),
     [
       _,
@@ -2193,11 +2193,11 @@ function _(_) {
     _.useCallback(
       (_) => {
         let _ = _ ? _.thumbnail : null;
-        !_.IsPaused() && _ && ((_.current = !0), _.Pause()),
+        (!_.IsPaused() && _ && ((_.current = !0), _.Pause()),
           !_ && _.current && (_.Play(), (_.current = !1)),
           _.current && !_ && _.Seek(_.current.nPlaybackSeconds),
           (_.current = _),
-          _(_);
+          _(_));
       },
       [_, _, _],
     ),
@@ -2233,7 +2233,7 @@ function _(_) {
     _ = _(_),
     [_, _, _, _] = _(_),
     _ = (0, _.useCallback)(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]),
     _ = (0, _.useCallback)(
       (_) => {
@@ -2317,7 +2317,7 @@ function _(_, _) {
   return (
     (0, _.useEffect)(() => {
       let _ = _.current;
-      (_.current = !1), (!_ || _) && _(!0, _ ? 0 : _);
+      ((_.current = !1), (!_ || _) && _(!0, _ ? 0 : _));
     }, [_, _, _]),
     [
       _,
@@ -2332,10 +2332,10 @@ function _(_, _) {
     (_) => {
       if (_.detail.button == _.TRIGGER_LEFT && _) {
         let _ = Math.max(0, _.GetPlaybackTime() - 10);
-        _.Seek(_), _(), _.preventDefault(), _.stopPropagation();
+        (_.Seek(_), _(), _.preventDefault(), _.stopPropagation());
       } else if (_.detail.button == _.TRIGGER_RIGHT && _) {
         let _ = Math.min(_.GetTimelineDuration(), _.GetPlaybackTime() + 10);
-        _.Seek(_), _(), _.preventDefault(), _.stopPropagation();
+        (_.Seek(_), _(), _.preventDefault(), _.stopPropagation());
       }
     },
     [_, _],
@@ -2405,9 +2405,9 @@ function _(_) {
     localContext: _,
     focus: _,
   } = _;
-  (_ ||= ``), (_ ||= 0);
+  ((_ ||= ``), (_ ||= 0));
   let [_, _] = _(_, _, _, _, _, _, _);
-  _(_, _), _(_, !!_);
+  (_(_, _), _(_, !!_));
   let [_, _] = _(_),
     _ = _(),
     _ = _ && _ ? _.refFullscreen : null,
@@ -2417,10 +2417,10 @@ function _(_) {
     _ = {};
   _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`));
   let _ = _(() => _.IsBuffering());
-  _.useEffect(() => {
+  (_.useEffect(() => {
     _ || (_ && _());
   }, [_, _]),
-    _.use(_.Ready());
+    _.use(_.Ready()));
   let _ = _(_, _);
   return (0, _.jsxs)(`div`, {
     ref: _,
@@ -2493,8 +2493,8 @@ function _(_) {
         _ = _.current;
       if (!_ || !_) return;
       let [_, _] = _(_.nWidth, _.nHeight, _.nWidth, _.nHeight);
-      (_ = _.nWidth - _ < 2 ? _.nWidth : Math.ceil(_)),
-        (_ = _.nHeight - _ < 2 ? _.nHeight : Math.ceil(_));
+      ((_ = _.nWidth - _ < 2 ? _.nWidth : Math.ceil(_)),
+        (_ = _.nHeight - _ < 2 ? _.nHeight : Math.ceil(_)));
       let _ = _.current;
       (_ && _.nWidth == _ && _.nHeight == _) ||
         ((_.current = {
@@ -2507,18 +2507,18 @@ function _(_) {
     _,
     (0, _.useCallback)(
       (_) => {
-        (_.current = _), _();
+        ((_.current = _), _());
       },
       [_, _],
     ),
   );
   let _ = (0, _.useCallback)(
     (_) => {
-      (_.current = {
+      ((_.current = {
         nWidth: _.contentRect.width,
         nHeight: _.contentRect.height,
       }),
-        _();
+        _());
     },
     [_, _],
   );
@@ -2554,7 +2554,7 @@ function _(_) {
   let { player: _ } = _,
     [_, _] = (0, _.useState)(`norender`),
     _ = _(() => _.IsBuffering());
-  (0, _.useEffect)(() => {
+  ((0, _.useEffect)(() => {
     if (!_) return;
     let _ = window.setTimeout(() => _(`fadein`), 1e3);
     return () => {
@@ -2566,7 +2566,7 @@ function _(_) {
       _(`fadeout`);
       let _ = window.setTimeout(() => _(`norender`), 300);
       return () => window.clearTimeout(_);
-    }, [_, _]);
+    }, [_, _]));
   let _ = _ != `norender`,
     _ = _(_, _ == `fadein` && `ZxF0VUYsuGU-`);
   return (0, _.jsx)(`div`, {
@@ -2585,7 +2585,7 @@ function _(_) {
     _ = _(_, _),
     [_, _] = (0, _.useState)(!1),
     _ = _.useCallback(() => {
-      _.UserInputReceived(), _(!0);
+      (_.UserInputReceived(), _(!0));
     }, [_]);
   if (
     (_.useEffect(() => {
@@ -2658,4 +2658,3 @@ function _(_) {
     ),
   });
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

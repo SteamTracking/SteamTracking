@@ -149,7 +149,7 @@
       },
       21229: (H, Fe, i) => {
         "use strict";
-        i.r(Fe), i.d(Fe, { default: () => Ws });
+        (i.r(Fe), i.d(Fe, { default: () => Ws }));
         var t = i(62540),
           u = i(63696),
           ue = i(44727),
@@ -352,8 +352,8 @@
               n.addEventListener("play", s),
               n.addEventListener("pause", a),
               () => {
-                n.removeEventListener("play", s),
-                  n.removeEventListener("pause", a);
+                (n.removeEventListener("play", s),
+                  n.removeEventListener("pause", a));
               }
             );
           }, [e, n]);
@@ -411,14 +411,14 @@
             [B, L] = (0, u.useState)(null),
             { bCookieLoaded: G } = Ht(a, s, v),
             U = G;
-          u.useEffect(() => {
+          (u.useEffect(() => {
             s && U && S && !Q && C(!0);
           }, [S, U, s, Q]),
             u.useEffect(() => {
               Q && I && S && F();
-            }, [I, Q, S, F]);
+            }, [I, Q, S, F]));
           const le = (ce) => {
-              (0, ze.lc)(a ?? Ye, String(!ce), 365 * 10), v(ce), C(ce);
+              ((0, ze.lc)(a ?? Ye, String(!ce), 365 * 10), v(ce), C(ce));
             },
             X = Vt(A, C, B, P);
           u.useEffect(() => {
@@ -532,11 +532,11 @@
             [B, L] = (0, u.useState)(null),
             { data: G } = (0, oe.J$)(e),
             U = !!s;
-          u.useEffect(() => {
+          (u.useEffect(() => {
             let M = !1;
-            I && Q && U && (M = m === Y || (m === q && !f) || (m === _ && !A)),
+            (I && Q && U && (M = m === Y || (m === q && !f) || (m === _ && !A)),
               N(M),
-              c?.(D && M);
+              c?.(D && M));
           }, [c, m, A, f, I, D, Q, U]),
             Wt(B, R),
             u.useEffect(() => {
@@ -546,13 +546,13 @@
                 F(!1),
                 B && (B.pause(), (B.currentTime = 0)),
                 P && (P.Pause(), P.SeekToStart()));
-            }, [b, P, B, h]);
+            }, [b, P, B, h]));
           const le = u.useRef(!1);
-          u.useEffect(() => {
+          (u.useEffect(() => {
             if (I && m === Y)
               if ((F(!0), b)) {
                 if (P) {
-                  fe.Debug("Starting microtrailer"), h(q);
+                  (fe.Debug("Starting microtrailer"), h(q));
                   const M = () => Kt(le, h, P);
                   a || !B
                     ? M()
@@ -566,9 +566,9 @@
             u.useEffect(() => {
               I || C(!1);
             }, [I, C]),
-            Ot(!!d, m, B, f, P, A);
+            Ot(!!d, m, B, f, P, A));
           const X = (0, u.useCallback)((M) => {
-            v(M), L(M);
+            (v(M), L(M));
           }, []);
           return !G || !G.visible || !s
             ? null
@@ -594,7 +594,7 @@
                   (0, t.jsx)(Yt, {
                     trailer: s,
                     onRefChange: (M) => {
-                      Z(M), S(M);
+                      (Z(M), S(M));
                     },
                     eTrailerDisplay: m,
                     fadeRatio: o,
@@ -624,7 +624,7 @@
             S = Ke(!1, s);
           const v = (0, u.useMemo)(() => (0, Re.hg)(e), [e]),
             I = (0, u.useCallback)((g) => {
-              m(g), d(g);
+              (m(g), d(g));
             }, []),
             C = (0, u.useCallback)(() => {
               o(!0);
@@ -657,7 +657,7 @@
         }
         function Jt(n, e, s) {
           n.play().catch((a) => {
-            s(), fe.Warning(`Failed to play ${e}: `, a);
+            (s(), fe.Warning(`Failed to play ${e}: `, a));
           });
         }
         function Ke(n, e) {
@@ -681,7 +681,7 @@
           return (0, t.jsx)(t.Fragment, {
             children: (0, t.jsx)("div", {
               onClick: (d) => {
-                d.preventDefault(), d.stopPropagation();
+                (d.preventDefault(), d.stopPropagation());
               },
               className: W().AutoplayCheckboxCtn,
               children: (0, t.jsx)(
@@ -1691,10 +1691,13 @@
             const { appids: d, exhausted: l } = await J.aI
               .Get()
               .GetDiscoveryQueueAppsOfType(n, e, a);
-            (o = [...d]),
+            ((o = [...d]),
               (c = l),
               s && o.findIndex((m) => m === s) === -1 && o.unshift(s),
-              await Ae.A.Get().QueueMultipleAppRequests(o, { ...Qe, ...Gs.LB });
+              await Ae.A.Get().QueueMultipleAppRequests(o, {
+                ...Qe,
+                ...Gs.LB,
+              }));
           } catch (d) {
             console.error("Failed getting discovery queue apps", d);
           }
@@ -1705,7 +1708,7 @@
             a = (0, ye.KV)();
           return (
             (0, u.useEffect)(() => {
-              J.aI.Init(a), s(!0);
+              (J.aI.Init(a), s(!0));
             }, [a]),
             e ? (0, t.jsx)(Vs, { ...n }) : null
           );
@@ -1726,28 +1729,28 @@
             D = (0, k.ru)(nt),
             [b, w] = u.useState(0),
             N = (0, ct.b)();
-          (0, se.E)("ArrowLeft", () => R(!1), !0, !0),
+          ((0, se.E)("ArrowLeft", () => R(!1), !0, !0),
             (0, se.E)("Left", () => R(!1), !0, !0),
             (0, se.E)("ArrowRight", () => R(!0), !0, !0),
             (0, se.E)("Right", () => R(!0), !0, !0),
             (0, se.E)("Escape", () => s?.(), !0, !0),
-            (0, se.E)("Esc", () => s?.(), !0, !0);
+            (0, se.E)("Esc", () => s?.(), !0, !0));
           const Q = u.useMemo(() => g.innerWidth < Ms, [g]),
             { fnGetDiscoveryQueue: F, rgAppIDs: f } = Zs(e, o, a);
-          u.useEffect(() => {
-            F(!0), re.Fm.Get().HintLoad();
+          (u.useEffect(() => {
+            (F(!0), re.Fm.Get().HintLoad());
           }, []),
             u.useEffect(() => {
               const T = f[l];
               T != h && (T && T != z && N.AddImpression(T, D), S(T));
-            }, [N, l, h, f, D]);
+            }, [N, l, h, f, D]));
           const R = (T) => {
             const Be = xe.OQ(l + (T ? 1 : -1), 0, f.length - 1);
             Be != l &&
               (m(Be),
               st("New selected index: ", Be, " Prev selected index: ", l));
           };
-          u.useEffect(() => {
+          (u.useEffect(() => {
             f?.length &&
               f[l] !== z &&
               (w((T) => T + 1),
@@ -1759,7 +1762,7 @@
             u.useEffect(() => {
               f.length != v &&
                 (I(f.length), f.length > v && f[l] == z && m(l + 1));
-            }, [v, l, f]);
+            }, [v, l, f]));
           const [A] = u.useState(new Map()),
             y = (0, J.WX)(e, o),
             P = !(0, We.c5)() && l > 0,
@@ -1943,12 +1946,12 @@
             nDragOffset: a,
             nDragSelectedOffsetIndex: l,
             handleTouchStart: (g) => {
-              d(!0), (h.current = g.touches[0].clientX), o(0), m(0);
+              (d(!0), (h.current = g.touches[0].clientX), o(0), m(0));
             },
             handleTouchMove: (g) => {
               if (!c) return;
               const D = g.touches[0].clientX - h.current;
-              o(D), m(a > S ? 1 : a < -S ? -1 : 0);
+              (o(D), m(a > S ? 1 : a < -S ? -1 : 0));
             },
             handleTouchEnd: () => {
               c &&
@@ -2096,7 +2099,7 @@
                     .Get()
                     .LoadSkippedApps(e, l)
                     .then((L) => {
-                      N(L.reduce((G, U) => (f.has(U) ? G + 1 : G), 0)),
+                      (N(L.reduce((G, U) => (f.has(U) ? G + 1 : G), 0)),
                         F(
                           L.reduce(
                             (G, U) =>
@@ -2104,7 +2107,7 @@
                             0,
                           ),
                         ),
-                        g(!0);
+                        g(!0));
                     });
                 });
           }, [C, e, c, l, f]);

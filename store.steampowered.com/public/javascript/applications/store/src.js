@@ -31,7 +31,7 @@ function T() {
   return c(p) === `desktop`;
 }
 function E() {
-  T() && y(p), `location` in window && location.reload();
+  (T() && y(p), `location` in window && location.reload());
 }
 var D = e(t(), 1),
   O = e(n(), 1),
@@ -316,7 +316,7 @@ function V(e) {
       });
 }
 var H = {};
-(H.arabic = () =>
+((H.arabic = () =>
   h(() => import(`./globalfooter_arabic.js`), [], import.meta.url)),
   (H.brazilian = () =>
     h(() => import(`./globalfooter_brazilian.js`), [], import.meta.url)),
@@ -379,7 +379,7 @@ var H = {};
   (H.ukrainian = () =>
     h(() => import(`./globalfooter_ukrainian.js`), [], import.meta.url)),
   (H.vietnamese = () =>
-    h(() => import(`./globalfooter_vietnamese.js`), [], import.meta.url));
+    h(() => import(`./globalfooter_vietnamese.js`), [], import.meta.url)));
 async function U(e) {
   if (H[e]) return await H[e]();
 }

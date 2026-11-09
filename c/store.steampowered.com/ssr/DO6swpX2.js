@@ -20,10 +20,10 @@ var _ = (_, _, _) => {
         );
       });
 };
-_({
+(_({
   enforceActions: `never`,
 }),
-  _();
+  _());
 async function _(_) {
   let _ = _.GetLanguageFallback(_),
     _ = _ === _,

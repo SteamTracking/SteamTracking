@@ -71,11 +71,11 @@ function _(_, _) {
       _ ? _(_.Details(_)) : _(!0);
     }, [_, _]),
     _ = (0, _.useCallback)(async () => {
-      await _.mutate(void 0, {
+      (await _.mutate(void 0, {
         onError: _,
       }),
         _(!1),
-        setTimeout(_, 1e3);
+        setTimeout(_, 1e3));
     }, [_, _, _]),
     _ = (0, _.useCallback)(() => {
       _(!1);
@@ -124,4 +124,3 @@ function _(_, _) {
     ),
   };
 }
-export { _, _, _ };

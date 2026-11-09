@@ -135,7 +135,7 @@ function _(_, _) {
     queryKey: _(_),
     queryFn: async () => {
       let _ = await _(_);
-      return _(_, _?.creator_player_link_details ?? []), _;
+      return (_(_, _?.creator_player_link_details ?? []), _);
     },
     placeholderData: (_) => _,
     staleTime: 36e5,
@@ -147,7 +147,7 @@ function _(_) {
     queryKey: _(_),
     queryFn: async () => {
       let _ = await _(`/sharedfiles/actions`, `BrowseUserFiles`, _);
-      return _(_, _?.creator_player_link_details ?? []), _;
+      return (_(_, _?.creator_player_link_details ?? []), _);
     },
     placeholderData: (_) => _,
     staleTime: 36e5,
@@ -182,7 +182,7 @@ function _(_) {
       .sort()
       .reduce((_, _) => {
         let _ = _[_];
-        return _ !== void 0 && (_[_] = _), _;
+        return (_ !== void 0 && (_[_] = _), _);
       }, {}),
     _.EREALM,
   ];
@@ -260,11 +260,11 @@ function _(_, _, _, _) {
       }
     },
     onSuccess: (_) => {
-      _.setQueryData(_(_, _, _, _), _),
+      (_.setQueryData(_(_, _, _, _), _),
         _.invalidateQueries({
           queryKey: _(_),
         }),
-        _(_);
+        _(_));
     },
   });
 }
@@ -466,7 +466,7 @@ function _(_) {
 }
 function _(_, _, _) {
   let _ = [`ugc_changelog_entry`, _, _];
-  return _ !== void 0 && _.push(_), _;
+  return (_ !== void 0 && _.push(_), _);
 }
 function _(_) {
   return [`ugc_item_text`, _];
@@ -502,50 +502,3 @@ function _(_) {
 function _(_) {
   return [`workshop_item_legal_agreements`, _];
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

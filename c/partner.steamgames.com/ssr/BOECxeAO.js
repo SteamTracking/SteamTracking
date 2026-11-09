@@ -37,7 +37,7 @@ function _() {
 function _(_) {
   var _ = !1;
   return function () {
-    if (!_) return (_ = !0), _.apply(this, arguments);
+    if (!_) return ((_ = !0), _.apply(this, arguments));
   };
 }
 var _ = function () {};
@@ -150,7 +150,7 @@ function _(_, _) {
   return !!(_ & _);
 }
 function _(_, _, _) {
-  return _ ? (_ |= _) : (_ &= ~_), _;
+  return (_ ? (_ |= _) : (_ &= ~_), _);
 }
 function _(_, _) {
   (_ == null || _ > _.length) && (_ = _.length);
@@ -160,10 +160,10 @@ function _(_, _) {
 function _(_, _) {
   for (var _ = 0; _ < _.length; _++) {
     var _ = _[_];
-    (_.enumerable = _.enumerable || !1),
+    ((_.enumerable = _.enumerable || !1),
       (_.configurable = !0),
       `value` in _ && (_.writable = !0),
-      Object.defineProperty(_, _(_.key), _);
+      Object.defineProperty(_, _(_.key), _));
   }
 }
 function _(_, _, _) {
@@ -215,16 +215,16 @@ function _() {
   );
 }
 function _(_, _) {
-  (_.prototype = Object.create(_.prototype)),
+  ((_.prototype = Object.create(_.prototype)),
     (_.prototype.constructor = _),
-    _(_, _);
+    _(_, _));
 }
 function _(_, _) {
   return (
     (_ = Object.setPrototypeOf
       ? Object.setPrototypeOf.bind()
       : function (_, _) {
-          return (_.__proto__ = _), _;
+          return ((_.__proto__ = _), _);
         }),
     _(_, _)
   );
@@ -267,10 +267,10 @@ function _(_) {
   return Object.assign(_, _);
 }
 function _(_, _, _) {
-  _(_, _) || _(_, _, _({}, _[_])), _(_) || (_[_][_] = _);
+  (_(_, _) || _(_, _, _({}, _[_])), _(_) || (_[_][_] = _));
 }
 function _(_) {
-  return _(_, _) || _(_, _, _({}, _[_])), _[_];
+  return (_(_, _) || _(_, _, _({}, _[_])), _[_]);
 }
 function _(_) {
   return typeof _ == `object` && typeof _.kind == `string`;
@@ -278,7 +278,7 @@ function _(_) {
 var _ = Symbol(`mobx administration`),
   _ = (function () {
     function _(_) {
-      _ === void 0 && (_ = `Atom`),
+      (_ === void 0 && (_ = `Atom`),
         (this.name_ = void 0),
         (this.flags_ = 0),
         (this.observers_ = new Set()),
@@ -286,7 +286,7 @@ var _ = Symbol(`mobx administration`),
         (this.lowestObserverState_ = _.NOT_TRACKING_),
         (this.onBOL = void 0),
         (this.onBUOL = void 0),
-        (this.name_ = _);
+        (this.name_ = _));
     }
     var _ = _.prototype;
     return (
@@ -306,7 +306,7 @@ var _ = Symbol(`mobx administration`),
         return _(this);
       }),
       (_.reportChanged = function () {
-        _(), _(this), _();
+        (_(), _(this), _());
       }),
       (_.toString = function () {
         return this.name_;
@@ -342,14 +342,14 @@ var _ = Symbol(`mobx administration`),
       ])
     );
   })();
-(_.isBeingObservedMask_ = 1),
+((_.isBeingObservedMask_ = 1),
   (_.isPendingUnobservationMask_ = 2),
-  (_.diffValueMask_ = 4);
+  (_.diffValueMask_ = 4));
 var _ = _(`Atom`, _);
 function _(_, _, _) {
-  _ === void 0 && (_ = _), _ === void 0 && (_ = _);
+  (_ === void 0 && (_ = _), _ === void 0 && (_ = _));
   var _ = new _(_);
-  return _ !== _ && _(_, _), _ !== _ && _(_, _), _;
+  return (_ !== _ && _(_, _), _ !== _ && _(_, _), _);
 }
 function _(_, _) {
   return _ === _;
@@ -491,7 +491,7 @@ function _(_, _) {
         _(function () {
           var _ = this,
             _ = _[_].bind(_);
-          (_.isMobxAction = !0), (_[_] = _);
+          ((_.isMobxAction = !0), (_[_] = _));
         }),
       _
     );
@@ -511,11 +511,11 @@ function _(_, _) {
   );
 }
 function _(_, _, _, _) {
-  _.annotationType_, _.value;
+  (_.annotationType_, _.value);
 }
 function _(_, _, _, _, _) {
   var _, _;
-  _ === void 0 && (_ = _.safeDescriptors), _(_, _, _, _);
+  (_ === void 0 && (_ = _.safeDescriptors), _(_, _, _, _));
   var _ = _.value;
   return (
     (_ = _.options_) != null && _.bound && (_ = _.bind(_.proxy_ ?? _.target_)),
@@ -571,16 +571,16 @@ function _(_, _) {
       _(function () {
         var _ = this,
           _ = _[_].bind(_);
-        (_.isMobXFlow = !0), (_[_] = _);
+        ((_.isMobXFlow = !0), (_[_] = _));
       }),
     _
   );
 }
 function _(_, _, _, _) {
-  _.annotationType_, _.value;
+  (_.annotationType_, _.value);
 }
 function _(_, _, _, _, _, _) {
-  _ === void 0 && (_ = _.safeDescriptors), _(_, _, _, _);
+  (_ === void 0 && (_ = _.safeDescriptors), _(_, _, _, _));
   var _ = _.value;
   return (
     _(_) || (_ = _(_)),
@@ -629,8 +629,8 @@ function _(_, _) {
           get: _,
           context: this,
         });
-      (_.name ||= `ObservableObject.` + _.toString()),
-        _.values_.set(_, new _(_));
+      ((_.name ||= `ObservableObject.` + _.toString()),
+        _.values_.set(_, new _(_)));
     }),
     function () {
       return this[_].getObservablePropValue_(_);
@@ -638,7 +638,7 @@ function _(_, _) {
   );
 }
 function _(_, _, _, _) {
-  _.annotationType_, _.get;
+  (_.annotationType_, _.get);
 }
 function _(_, _) {
   return {
@@ -671,7 +671,7 @@ function _(_, _) {
         `ObservableObject.` + _.toString(),
         !1,
       );
-    _.values_.set(_, _), _.add(_);
+    (_.values_.set(_, _), _.add(_));
   }
   if (_ == `accessor`)
     return {
@@ -682,10 +682,12 @@ function _(_, _) {
         );
       },
       set: function (_) {
-        return _.has(this) || _(this, _), this[_].setObservablePropValue_(_, _);
+        return (
+          _.has(this) || _(this, _), this[_].setObservablePropValue_(_, _)
+        );
       },
       init: function (_) {
-        return _.has(this) || _(this, _), _;
+        return (_.has(this) || _(this, _), _);
       },
     };
 }
@@ -865,9 +867,9 @@ var _ = _(_, {
     if (_(_)) return _(_, _, _);
     if (_(_)) return _(_(_, _));
     var _ = _(_) ? _ : {};
-    return (_.get = _), (_.name ||= _.name || ``), new _(_);
+    return ((_.get = _), (_.name ||= _.name || ``), new _(_));
   };
-Object.assign(_, _), (_.struct = _(_));
+(Object.assign(_, _), (_.struct = _(_)));
 var _ = 0,
   _ = 1,
   _ = _(function () {}, `name`)?.configurable ?? !1,
@@ -920,17 +922,17 @@ function _(_, _, _, _) {
       actionId_: _++,
       parentActionId_: _,
     };
-  return (_ = _.actionId_), _;
+  return ((_ = _.actionId_), _);
 }
 function _(_) {
-  _ !== _.actionId_ && _(30),
+  (_ !== _.actionId_ && _(30),
     (_ = _.parentActionId_),
     _.error_ !== void 0 && (_.suppressReactionErrors = !0),
     _(_.prevAllowStateChanges_),
     _(_.prevAllowStateReads_),
     _(),
     _.runAsAction_ && _(_.prevDerivation_),
-    (_.suppressReactionErrors = !1);
+    (_.suppressReactionErrors = !1));
 }
 function _(_, _) {
   var _ = _(_);
@@ -942,7 +944,7 @@ function _(_, _) {
 }
 function _(_) {
   var _ = _.allowStateChanges;
-  return (_.allowStateChanges = _), _;
+  return ((_.allowStateChanges = _), _);
 }
 function _(_) {
   _.allowStateChanges = _;
@@ -977,9 +979,9 @@ var _ = (function (_) {
         return this.dehancer === void 0 ? _ : this.dehancer(_);
       }),
       (_.set = function (_) {
-        this.value_,
+        (this.value_,
           (_ = this.prepareNewValue_(_)),
-          _ !== _.UNCHANGED && this.setNewValue_(_);
+          _ !== _.UNCHANGED && this.setNewValue_(_));
       }),
       (_.prepareNewValue_ = function (_) {
         if (_(this)) {
@@ -998,7 +1000,7 @@ var _ = (function (_) {
       }),
       (_.setNewValue_ = function (_) {
         var _ = this.value_;
-        (this.value_ = _),
+        ((this.value_ = _),
           this.reportChanged(),
           _(this) &&
             _(this, {
@@ -1006,10 +1008,10 @@ var _ = (function (_) {
               object: this,
               newValue: _,
               oldValue: _,
-            });
+            }));
       }),
       (_.get = function () {
-        return this.reportObserved(), this.dehanceValue(this.value_);
+        return (this.reportObserved(), this.dehanceValue(this.value_));
       }),
       (_.intercept_ = function (_) {
         return _(this, _);
@@ -1048,7 +1050,7 @@ var _ = (function (_) {
   })(_),
   _ = (function () {
     function _(_) {
-      (this.dependenciesState_ = _.NOT_TRACKING_),
+      ((this.dependenciesState_ = _.NOT_TRACKING_),
         (this.observing_ = []),
         (this.newObserving_ = null),
         (this.observers_ = new Set()),
@@ -1078,7 +1080,7 @@ var _ = (function (_) {
           (_.compareStructural || _.struct ? _.structural : _.default)),
         (this.scope_ = _.context),
         (this.requiresReaction_ = _.requiresReaction),
-        (this.keepAlive_ = !!_.keepAlive);
+        (this.keepAlive_ = !!_.keepAlive));
     }
     var _ = _.prototype;
     return (
@@ -1109,9 +1111,9 @@ var _ = (function (_) {
             _());
         else if ((_(this), _(this))) {
           var _ = _.trackingContext;
-          this.keepAlive_ && !_ && (_.trackingContext = this),
+          (this.keepAlive_ && !_ && (_.trackingContext = this),
             this.trackAndCompute() && _(this),
-            (_.trackingContext = _);
+            (_.trackingContext = _));
         }
         var _ = this.value_;
         if (_(_)) throw _.cause;
@@ -1119,8 +1121,8 @@ var _ = (function (_) {
       }),
       (_.set = function (_) {
         if (this.setter_) {
-          this.isRunningSetter && _(33, this.name_),
-            (this.isRunningSetter = !0);
+          (this.isRunningSetter && _(33, this.name_),
+            (this.isRunningSetter = !0));
           try {
             this.setter_.call(this.scope_, _);
           } finally {
@@ -1133,7 +1135,7 @@ var _ = (function (_) {
           _ = this.dependenciesState_ === _.NOT_TRACKING_,
           _ = this.computeValue_(!0),
           _ = _ || _(_) || _(_) || !this.equals_(_, _);
-        return _ && (this.value_ = _), _;
+        return (_ && (this.value_ = _), _);
       }),
       (_.computeValue_ = function (_) {
         this.isComputing = !0;
@@ -1148,7 +1150,7 @@ var _ = (function (_) {
           } catch (_) {
             _ = new _(_);
           }
-        return _(_), (this.isComputing = !1), _;
+        return (_(_), (this.isComputing = !1), _);
       }),
       (_.suspend_ = function () {
         this.keepAlive_ || (_(this), (this.value_ = void 0));
@@ -1161,7 +1163,7 @@ var _ = (function (_) {
           var _ = _.get();
           if (!_ || _) {
             var _ = _();
-            _({
+            (_({
               observableKind: `computed`,
               debugObjectName: _.name_,
               type: _,
@@ -1169,9 +1171,9 @@ var _ = (function (_) {
               newValue: _,
               oldValue: _,
             }),
-              _(_);
+              _(_));
           }
-          (_ = !1), (_ = _);
+          ((_ = !1), (_ = _));
         });
       }),
       (_.warnAboutUntrackedRead_ = function () {}),
@@ -1233,27 +1235,27 @@ var _ = (function (_) {
       ])
     );
   })();
-(_.isComputingMask_ = 1),
+((_.isComputingMask_ = 1),
   (_.isRunningSetterMask_ = 2),
   (_.isBeingObservedMask_ = 4),
   (_.isPendingUnobservationMask_ = 8),
-  (_.diffValueMask_ = 16);
+  (_.diffValueMask_ = 16));
 var _ = _(`ComputedValue`, _),
   _;
 (function (_) {
-  (_[(_.NOT_TRACKING_ = -1)] = `NOT_TRACKING_`),
+  ((_[(_.NOT_TRACKING_ = -1)] = `NOT_TRACKING_`),
     (_[(_.UP_TO_DATE_ = 0)] = `UP_TO_DATE_`),
     (_[(_.POSSIBLY_STALE_ = 1)] = `POSSIBLY_STALE_`),
-    (_[(_.STALE_ = 2)] = `STALE_`);
+    (_[(_.STALE_ = 2)] = `STALE_`));
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_[(_.NONE = 0)] = `NONE`),
+  ((_[(_.NONE = 0)] = `NONE`),
     (_[(_.LOG = 1)] = `LOG`),
-    (_[(_.BREAK = 2)] = `BREAK`);
+    (_[(_.BREAK = 2)] = `BREAK`));
 })((_ ||= {}));
 var _ = function (_) {
-  (this.cause = void 0), (this.cause = _);
+  ((this.cause = void 0), (this.cause = _));
 };
 function _(_) {
   return _ instanceof _;
@@ -1278,22 +1280,22 @@ function _(_) {
             try {
               _.get();
             } catch {
-              return _(_), _(_), !0;
+              return (_(_), _(_), !0);
             }
-          if (_.dependenciesState_ === _.STALE_) return _(_), _(_), !0;
+          if (_.dependenciesState_ === _.STALE_) return (_(_), _(_), !0);
         }
       }
-      return _(_), _(_), _(_), !1;
+      return (_(_), _(_), _(_), !1);
   }
 }
 function _(_, _, _) {
   var _ = _(!0);
-  _(_),
+  (_(_),
     (_.newObserving_ = Array(_.runId_ === 0 ? 100 : _.observing_.length)),
     (_.unboundDepsCount_ = 0),
-    (_.runId_ = ++_.runId);
+    (_.runId_ = ++_.runId));
   var _ = _.trackingDerivation;
-  (_.trackingDerivation = _), _.inBatch++;
+  ((_.trackingDerivation = _), _.inBatch++);
   var _;
   if (_.disableErrorBoundaries === !0) _ = _.call(_);
   else
@@ -1302,7 +1304,7 @@ function _(_, _, _) {
     } catch (_) {
       _ = new _(_);
     }
-  return _.inBatch--, (_.trackingDerivation = _), _(_), _(_), _;
+  return (_.inBatch--, (_.trackingDerivation = _), _(_), _(_), _);
 }
 function _(_) {
   for (
@@ -1316,14 +1318,14 @@ function _(_) {
     _++
   ) {
     var _ = _[_];
-    _.diffValue === 0 && ((_.diffValue = 1), _ !== _ && (_[_] = _), _++),
-      _.dependenciesState_ > _ && (_ = _.dependenciesState_);
+    (_.diffValue === 0 && ((_.diffValue = 1), _ !== _ && (_[_] = _), _++),
+      _.dependenciesState_ > _ && (_ = _.dependenciesState_));
   }
-  for (_.length = _, _.newObserving_ = null, _ = _.length; _--; ) {
+  for (_.length = _, _.newObserving_ = null, _ = _.length; _--;) {
     var _ = _[_];
-    _.diffValue === 0 && _(_, _), (_.diffValue = 0);
+    (_.diffValue === 0 && _(_, _), (_.diffValue = 0));
   }
-  for (; _--; ) {
+  for (; _--;) {
     var _ = _[_];
     _.diffValue === 1 && ((_.diffValue = 0), _(_, _));
   }
@@ -1332,7 +1334,7 @@ function _(_) {
 function _(_) {
   var _ = _.observing_;
   _.observing_ = [];
-  for (var _ = _.length; _--; ) _(_[_], _);
+  for (var _ = _.length; _--;) _(_[_], _);
   _.dependenciesState_ = _.NOT_TRACKING_;
 }
 function _(_) {
@@ -1345,14 +1347,14 @@ function _(_) {
 }
 function _() {
   var _ = _.trackingDerivation;
-  return (_.trackingDerivation = null), _;
+  return ((_.trackingDerivation = null), _);
 }
 function _(_) {
   _.trackingDerivation = _;
 }
 function _(_) {
   var _ = _.allowStateReads;
-  return (_.allowStateReads = _), _;
+  return ((_.allowStateReads = _), _);
 }
 function _(_) {
   _.allowStateReads = _;
@@ -1360,12 +1362,12 @@ function _(_) {
 function _(_) {
   if (_.dependenciesState_ !== _.UP_TO_DATE_) {
     _.dependenciesState_ = _.UP_TO_DATE_;
-    for (var _ = _.observing_, _ = _.length; _--; )
+    for (var _ = _.observing_, _ = _.length; _--;)
       _[_].lowestObserverState_ = _.UP_TO_DATE_;
   }
 }
 var _ = function () {
-    (this.version = 6),
+    ((this.version = 6),
       (this.UNCHANGED = {}),
       (this.trackingDerivation = null),
       (this.trackingContext = null),
@@ -1387,7 +1389,7 @@ var _ = function () {
       (this.suppressReactionErrors = !1),
       (this.useProxies = !0),
       (this.verifyProxies = !1),
-      (this.safeDescriptors = !0);
+      (this.safeDescriptors = !0));
   },
   _ = !0,
   _ = !1,
@@ -1417,16 +1419,17 @@ function _() {
     _)
   ) {
     var _ = _();
-    --_.__mobxInstanceCount === 0 && (_.__mobxGlobals = void 0), (_ = new _());
+    (--_.__mobxInstanceCount === 0 && (_.__mobxGlobals = void 0),
+      (_ = new _()));
   }
 }
 function _(_, _) {
-  _.observers_.add(_),
+  (_.observers_.add(_),
     _.lowestObserverState_ > _.dependenciesState_ &&
-      (_.lowestObserverState_ = _.dependenciesState_);
+      (_.lowestObserverState_ = _.dependenciesState_));
 }
 function _(_, _) {
-  _.observers_.delete(_), _.observers_.size === 0 && _(_);
+  (_.observers_.delete(_), _.observers_.size === 0 && _(_));
 }
 function _(_) {
   _.isPendingUnobservation === !1 &&
@@ -1440,10 +1443,10 @@ function _() {
     _();
     for (var _ = _.pendingUnobservations, _ = 0; _ < _.length; _++) {
       var _ = _[_];
-      (_.isPendingUnobservation = !1),
+      ((_.isPendingUnobservation = !1),
         _.observers_.size === 0 &&
           (_.isBeingObserved && ((_.isBeingObserved = !1), _.onBUO()),
-          _ instanceof _ && _.suspend_());
+          _ instanceof _ && _.suspend_()));
     }
     _.pendingUnobservations = [];
   }
@@ -1464,8 +1467,8 @@ function _(_) {
   _.lowestObserverState_ !== _.STALE_ &&
     ((_.lowestObserverState_ = _.STALE_),
     _.observers_.forEach(function (_) {
-      _.dependenciesState_ === _.UP_TO_DATE_ && _.onBecomeStale_(),
-        (_.dependenciesState_ = _.STALE_);
+      (_.dependenciesState_ === _.UP_TO_DATE_ && _.onBecomeStale_(),
+        (_.dependenciesState_ = _.STALE_));
     }));
 }
 function _(_) {
@@ -1488,7 +1491,7 @@ function _(_) {
 }
 var _ = (function () {
   function _(_, _, _, _) {
-    _ === void 0 && (_ = `Reaction`),
+    (_ === void 0 && (_ = `Reaction`),
       (this.name_ = void 0),
       (this.onInvalidate_ = void 0),
       (this.errorHandler_ = void 0),
@@ -1503,7 +1506,7 @@ var _ = (function () {
       (this.name_ = _),
       (this.onInvalidate_ = _),
       (this.errorHandler_ = _),
-      (this.requiresObservable_ = _);
+      (this.requiresObservable_ = _));
   }
   var _ = _.prototype;
   return (
@@ -1516,7 +1519,7 @@ var _ = (function () {
     }),
     (_.runReaction_ = function () {
       if (!this.isDisposed) {
-        _(), (this.isScheduled = !1);
+        (_(), (this.isScheduled = !1));
         var _ = _.trackingContext;
         if (((_.trackingContext = this), _(this))) {
           this.isTrackPending = !0;
@@ -1526,21 +1529,21 @@ var _ = (function () {
             this.reportExceptionInDerivation_(_);
           }
         }
-        (_.trackingContext = _), _();
+        ((_.trackingContext = _), _());
       }
     }),
     (_.track = function (_) {
       if (!this.isDisposed) {
-        _(), (this.isRunning = !0);
+        (_(), (this.isRunning = !0));
         var _ = _.trackingContext;
         _.trackingContext = this;
         var _ = _(this, _, void 0);
-        (_.trackingContext = _),
+        ((_.trackingContext = _),
           (this.isRunning = !1),
           (this.isTrackPending = !1),
           this.isDisposed && _(this),
           _(_) && this.reportExceptionInDerivation_(_.cause),
-          _();
+          _());
       }
     }),
     (_.reportExceptionInDerivation_ = function (_) {
@@ -1549,10 +1552,10 @@ var _ = (function () {
       else {
         if (_.disableErrorBoundaries) throw _;
         var _ = `[mobx] uncaught error in '` + this + `'`;
-        _.suppressReactionErrors || console.error(_, _),
+        (_.suppressReactionErrors || console.error(_, _),
           _.globalReactionErrorHandlers.forEach(function (_) {
             return _(_, _);
-          });
+          }));
       }
     }),
     (_.dispose = function () {
@@ -1562,10 +1565,10 @@ var _ = (function () {
     (_.getDisposer_ = function (_) {
       var _ = this,
         _ = function _() {
-          _.dispose(),
+          (_.dispose(),
             _ == null ||
               _.removeEventListener == null ||
-              _.removeEventListener(`abort`, _);
+              _.removeEventListener(`abort`, _));
         };
       return (
         _ == null ||
@@ -1633,11 +1636,11 @@ var _ = (function () {
     ])
   );
 })();
-(_.isDisposedMask_ = 1),
+((_.isDisposedMask_ = 1),
   (_.isScheduledMask_ = 2),
   (_.isTrackPendingMask_ = 4),
   (_.isRunningMask_ = 8),
-  (_.diffValueMask_ = 16);
+  (_.diffValueMask_ = 16));
 var _ = 100,
   _ = function (_) {
     return _();
@@ -1647,7 +1650,7 @@ function _() {
 }
 function _() {
   _.isRunningReactions = !0;
-  for (var _ = _.pendingReactions, _ = 0; _.length > 0; ) {
+  for (var _ = _.pendingReactions, _ = 0; _.length > 0;) {
     ++_ === _ &&
       (console.error(`[mobx] cycle in reaction: ` + _[0]), _.splice(0));
     for (var _ = _.splice(0), _ = 0, _ = _.length; _ < _; _++)
@@ -1706,7 +1709,7 @@ function _(_) {
 var _ = _(!1);
 Object.assign(_, _);
 var _ = _(!0);
-Object.assign(_, _), (_.bound = _(_)), (_.bound = _(_));
+(Object.assign(_, _), (_.bound = _(_)), (_.bound = _(_)));
 function _(_) {
   return _(_.name || _, !1, _, this, void 0);
 }
@@ -1737,7 +1740,7 @@ function _(_, _) {
         _ ||
           ((_ = !0),
           _(function () {
-            (_ = !1), _.isDisposed || _.track(_);
+            ((_ = !1), _.isDisposed || _.track(_));
           }));
       },
       _.onError,
@@ -1798,9 +1801,9 @@ function _(_) {
     _ !== void 0)
   ) {
     var _ = _ === _ ? _ : _ === _;
-    (_.enforceActions = _), (_.allowStateChanges = _ !== !0 && _ !== _);
+    ((_.enforceActions = _), (_.allowStateChanges = _ !== !0 && _ !== _));
   }
-  [
+  ([
     `computedRequiresReaction`,
     `reactionRequiresObservable`,
     `observableRequiresReaction`,
@@ -1810,7 +1813,7 @@ function _(_) {
     _ in _ && (_[_] = !!_[_]);
   }),
     (_.allowStateReads = !_.observableRequiresReaction),
-    _.reactionScheduler && _(_.reactionScheduler);
+    _.reactionScheduler && _(_.reactionScheduler));
 }
 function _(_, _, _, _) {
   var _ = _(_);
@@ -1906,7 +1909,7 @@ var _ = _(`flow`),
               _ && _(_);
               var _ = _.return(void 0),
                 _ = Promise.resolve(_.value);
-              _.then(_, _), _(_), _(new _());
+              (_.then(_, _), _(_), _(new _()));
             } catch (_) {
               _(_);
             }
@@ -1914,7 +1917,7 @@ var _ = _(`flow`),
           _
         );
       };
-    return (_.isMobXFlow = !0), _;
+    return ((_.isMobXFlow = !0), _);
   }, _);
 _.bound = _(_);
 function _(_) {
@@ -1936,7 +1939,7 @@ function _(_) {
   return _(_);
 }
 function _(_, _) {
-  _ === void 0 && (_ = void 0), _();
+  (_ === void 0 && (_ = void 0), _());
   try {
     return _.apply(_);
   } finally {
@@ -1971,7 +1974,9 @@ var _ = {
 };
 function _(_, _) {
   var _;
-  return _(), (_ = _(_, _)), (_ = _[_]).proxy_ ?? (_.proxy_ = new Proxy(_, _));
+  return (
+    _(), (_ = _(_, _)), (_ = _[_]).proxy_ ?? (_.proxy_ = new Proxy(_, _))
+  );
 }
 function _(_) {
   return _.interceptors_ !== void 0 && _.interceptors_.length > 0;
@@ -2025,10 +2030,10 @@ function _(_, _, _) {
   return (
     _(function () {
       var _ = _(_, _)[_];
-      (_ ??= _(_)),
+      ((_ ??= _(_)),
         _(_).forEach(function (_) {
           return _.make_(_, _[_]);
-        });
+        }));
     }),
     _
   );
@@ -2042,7 +2047,7 @@ function _(_, _, _) {
         if (!_[_]) {
           var _ = Object.getPrototypeOf(_),
             _ = new Set([].concat(_(_), _(_)));
-          _.delete(`constructor`), _.delete(_), _(_, _, _);
+          (_.delete(`constructor`), _.delete(_), _(_, _, _));
         }
         _[_].forEach(function (_) {
           return _.make_(_, _ && _ in _ ? _[_] : !0);
@@ -2080,7 +2085,7 @@ var _ = `splice`,
   },
   _ = (function () {
     function _(_, _, _, _) {
-      _ === void 0 && (_ = `ObservableArray`),
+      (_ === void 0 && (_ = `ObservableArray`),
         (this.owned_ = void 0),
         (this.legacyMode_ = void 0),
         (this.atom_ = void 0),
@@ -2096,7 +2101,7 @@ var _ = `splice`,
         (this.atom_ = new _(_)),
         (this.enhancer_ = function (_, _) {
           return _(_, _, `ObservableArray[..]`);
-        });
+        }));
     }
     var _ = _.prototype;
     return (
@@ -2130,7 +2135,7 @@ var _ = `splice`,
         );
       }),
       (_.getArrayLength_ = function () {
-        return this.atom_.reportObserved(), this.values_.length;
+        return (this.atom_.reportObserved(), this.values_.length);
       }),
       (_.setArrayLength_ = function (_) {
         (typeof _ != `number` || isNaN(_) || _ < 0) && _(`Out of range: ` + _);
@@ -2143,9 +2148,9 @@ var _ = `splice`,
         }
       }),
       (_.updateArrayLength_ = function (_, _) {
-        _ !== this.lastKnownLength_ && _(16),
+        (_ !== this.lastKnownLength_ && _(16),
           (this.lastKnownLength_ += _),
-          this.legacyMode_ && _ > 0 && _(_ + _ + 1);
+          this.legacyMode_ && _ > 0 && _(_ + _ + 1));
       }),
       (_.spliceWithArray_ = function (_, _, _) {
         var _ = this;
@@ -2174,7 +2179,7 @@ var _ = `splice`,
             added: _,
           });
           if (!_) return _;
-          (_ = _.removedCount), (_ = _.added);
+          ((_ = _.removedCount), (_ = _.added));
         }
         if (
           ((_ =
@@ -2222,7 +2227,7 @@ var _ = `splice`,
                   oldValue: _,
                 }
               : null;
-        this.atom_.reportChanged(), _ && _(this, _);
+        (this.atom_.reportChanged(), _ && _(this, _));
       }),
       (_.notifyArraySplice_ = function (_, _, _) {
         var _ = !this.owned_ && _(),
@@ -2241,7 +2246,7 @@ var _ = `splice`,
                   addedCount: _.length,
                 }
               : null;
-        this.atom_.reportChanged(), _ && _(this, _);
+        (this.atom_.reportChanged(), _ && _(this, _));
       }),
       (_.get_ = function (_) {
         if (this.legacyMode_ && _ >= this.values_.length)
@@ -2268,12 +2273,12 @@ var _ = `splice`,
             if (!_) return;
             _ = _.newValue;
           }
-          (_ = this.enhancer_(_, _)),
-            _ !== _ && ((_[_] = _), this.notifyArrayChildUpdate_(_, _, _));
+          ((_ = this.enhancer_(_, _)),
+            _ !== _ && ((_[_] = _), this.notifyArrayChildUpdate_(_, _, _)));
         } else {
           for (var _ = Array(_ + 1 - _.length), _ = 0; _ < _.length - 1; _++)
             _[_] = void 0;
-          (_[_.length - 1] = _), this.spliceWithArray_(_.length, 0, _);
+          ((_[_.length - 1] = _), this.spliceWithArray_(_.length, 0, _));
         }
       }),
       _
@@ -2288,7 +2293,7 @@ function _(_, _, _, _) {
       var _ = new _(_, _, _, !1);
       _(_.values_, _, _);
       var _ = new Proxy(_.values_, _);
-      return (_.proxy_ = _), _ && _.length && _.spliceWithArray_(0, 0, _), _;
+      return ((_.proxy_ = _), _ && _.length && _.spliceWithArray_(0, 0, _), _);
     })
   );
 }
@@ -2322,7 +2327,7 @@ var _ = {
   push: function () {
     var _ = this[_],
       _ = [...arguments];
-    return _.spliceWithArray_(_.values_.length, 0, _), _.values_.length;
+    return (_.spliceWithArray_(_.values_.length, 0, _), _.values_.length);
   },
   pop: function () {
     return this.splice(Math.max(this[_].values_.length - 1, 0), 1)[0];
@@ -2333,7 +2338,7 @@ var _ = {
   unshift: function () {
     var _ = this[_],
       _ = [...arguments];
-    return _.spliceWithArray_(0, 0, _), _.values_.length;
+    return (_.spliceWithArray_(0, 0, _), _.values_.length);
   },
   reverse: function () {
     return (
@@ -2345,7 +2350,7 @@ var _ = {
   sort: function () {
     _.trackingDerivation && _(37, `sort`);
     var _ = this.slice();
-    return _.sort.apply(_, arguments), this.replace(_), this;
+    return (_.sort.apply(_, arguments), this.replace(_), this);
   },
   remove: function (_) {
     var _ = this[_],
@@ -2353,7 +2358,7 @@ var _ = {
     return _ > -1 && (this.splice(_, 1), !0);
   },
 };
-_(`at`, _),
+(_(`at`, _),
   _(`concat`, _),
   _(`flat`, _),
   _(`includes`, _),
@@ -2378,7 +2383,7 @@ _(`at`, _),
   _(`some`, _),
   _(`toReversed`, _),
   _(`reduce`, _),
-  _(`reduceRight`, _);
+  _(`reduceRight`, _));
 function _(_, _) {
   typeof Array.prototype[_] == `function` && (_[_] = _(_));
 }
@@ -2427,7 +2432,7 @@ var _ = {},
   _ = (function () {
     function _(_, _, _) {
       var _ = this;
-      _ === void 0 && (_ = _),
+      (_ === void 0 && (_ = _),
         _ === void 0 && (_ = `ObservableMap`),
         (this.enhancer_ = void 0),
         (this.name_ = void 0),
@@ -2442,11 +2447,11 @@ var _ = {},
         (this.name_ = _),
         _(Map) || _(18),
         _(function () {
-          (_.keysAtom_ = _(`ObservableMap.keys()`)),
+          ((_.keysAtom_ = _(`ObservableMap.keys()`)),
             (_.data_ = new Map()),
             (_.hasMap_ = new Map()),
-            _ && _.merge(_);
-        });
+            _ && _.merge(_));
+        }));
     }
     var _ = _.prototype;
     return (
@@ -2459,10 +2464,10 @@ var _ = {},
         var _ = this.hasMap_.get(_);
         if (!_) {
           var _ = (_ = new _(this.has_(_), _, `ObservableMap.key?`, !1));
-          this.hasMap_.set(_, _),
+          (this.hasMap_.set(_, _),
             _(_, function () {
               return _.hasMap_.delete(_);
-            });
+            }));
         }
         return _.get();
       }),
@@ -2478,7 +2483,7 @@ var _ = {},
           if (!_) return this;
           _ = _.newValue;
         }
-        return _ ? this.updateValue_(_, _) : this.addValue_(_, _), this;
+        return (_ ? this.updateValue_(_, _) : this.addValue_(_, _), this);
       }),
       (_.delete = function (_) {
         var _ = this;
@@ -2509,10 +2514,10 @@ var _ = {},
           return (
             _(function () {
               var _;
-              _.keysAtom_.reportChanged(),
+              (_.keysAtom_.reportChanged(),
                 (_ = _.hasMap_.get(_)) == null || _.setNewValue_(!1),
                 _.data_.get(_).setNewValue_(void 0),
-                _.data_.delete(_);
+                _.data_.delete(_));
             }),
             _ && _(this, _),
             !0
@@ -2537,20 +2542,20 @@ var _ = {},
                     newValue: _,
                   }
                 : null;
-          _.setNewValue_(_), _ && _(this, _);
+          (_.setNewValue_(_), _ && _(this, _));
         }
       }),
       (_.addValue_ = function (_, _) {
         var _ = this;
-        this.keysAtom_,
+        (this.keysAtom_,
           _(function () {
             var _,
               _ = new _(_, _.enhancer_, `ObservableMap.key`, !1);
-            _.data_.set(_, _),
+            (_.data_.set(_, _),
               (_ = _.value_),
               (_ = _.hasMap_.get(_)) == null || _.setNewValue_(!0),
-              _.keysAtom_.reportChanged();
-          });
+              _.keysAtom_.reportChanged());
+          }));
         var _ = _(),
           _ = _(this),
           _ =
@@ -2575,7 +2580,7 @@ var _ = {},
         return this.dehancer === void 0 ? _ : this.dehancer(_);
       }),
       (_.keys = function () {
-        return this.keysAtom_.reportObserved(), this.data_.keys();
+        return (this.keysAtom_.reportObserved(), this.data_.keys());
       }),
       (_.values = function () {
         var _ = this,
@@ -2611,7 +2616,7 @@ var _ = {},
         return this.entries();
       }),
       (_.forEach = function (_, _) {
-        for (var _ = _(this), _; !(_ = _()).done; ) {
+        for (var _ = _(this), _; !(_ = _()).done;) {
           var _ = _.value,
             _ = _[0],
             _ = _[1];
@@ -2647,7 +2652,7 @@ var _ = {},
         var _ = this;
         _(function () {
           _(function () {
-            for (var _ = _(_.keys()), _; !(_ = _()).done; ) {
+            for (var _ = _(_.keys()), _; !(_ = _()).done;) {
               var _ = _.value;
               _.delete(_);
             }
@@ -2671,14 +2676,14 @@ var _ = {},
                 }
               }
             }
-            for (var _ = _(_.entries()), _; !(_ = _()).done; ) {
+            for (var _ = _(_.entries()), _; !(_ = _()).done;) {
               var _ = _.value,
                 _ = _[0],
                 _ = _[1],
                 _ = _.data_.has(_);
               if ((_.set(_, _), _.data_.has(_))) {
                 var _ = _.data_.get(_);
-                _.set(_, _), _ || (_ = !0);
+                (_.set(_, _), _ || (_ = !0));
               }
             }
             if (!_) {
@@ -2695,7 +2700,7 @@ var _ = {},
                     _.keysAtom_.reportChanged();
                     break;
                   }
-                  (_ = _.next()), (_ = _.next());
+                  ((_ = _.next()), (_ = _.next()));
                 }
             }
             _.data_ = _;
@@ -2719,7 +2724,7 @@ var _ = {},
         {
           key: `size`,
           get: function () {
-            return this.keysAtom_.reportObserved(), this.data_.size;
+            return (this.keysAtom_.reportObserved(), this.data_.size);
           },
         },
         {
@@ -2733,7 +2738,7 @@ var _ = {},
   })(),
   _ = _(`ObservableMap`, _);
 function _(_) {
-  return (_[Symbol.toStringTag] = `MapIterator`), _(_);
+  return ((_[Symbol.toStringTag] = `MapIterator`), _(_));
 }
 function _(_) {
   if (_(_) || _(_)) return _;
@@ -2749,7 +2754,7 @@ var _ = {},
   _ = (function () {
     function _(_, _, _) {
       var _ = this;
-      _ === void 0 && (_ = _),
+      (_ === void 0 && (_ = _),
         _ === void 0 && (_ = `ObservableSet`),
         (this.name_ = void 0),
         (this[_] = _),
@@ -2765,8 +2770,8 @@ var _ = {},
           return _(_, _, _);
         }),
         _(function () {
-          (_.atom_ = _(_.name_)), _ && _.replace(_);
-        });
+          ((_.atom_ = _(_.name_)), _ && _.replace(_));
+        }));
     }
     var _ = _.prototype;
     return (
@@ -2777,7 +2782,7 @@ var _ = {},
         var _ = this;
         _(function () {
           _(function () {
-            for (var _ = _(_.data_.values()), _; !(_ = _()).done; ) {
+            for (var _ = _(_.data_.values()), _; !(_ = _()).done;) {
               var _ = _.value;
               _.delete(_);
             }
@@ -2785,7 +2790,7 @@ var _ = {},
         });
       }),
       (_.forEach = function (_, _) {
-        for (var _ = _(this), _; !(_ = _()).done; ) {
+        for (var _ = _(this), _; !(_ = _()).done;) {
           var _ = _.value;
           _.call(_, _, _, this);
         }
@@ -2803,7 +2808,7 @@ var _ = {},
         }
         if (!this.has(_)) {
           _(function () {
-            _.data_.add(_.enhancer_(_, void 0)), _.atom_.reportChanged();
+            (_.data_.add(_.enhancer_(_, void 0)), _.atom_.reportChanged());
           });
           var _ = _(this),
             _ = _
@@ -2843,7 +2848,7 @@ var _ = {},
               : null;
           return (
             _(function () {
-              _.atom_.reportChanged(), _.data_.delete(_);
+              (_.atom_.reportChanged(), _.data_.delete(_));
             }),
             _ && _(this, _),
             !0
@@ -2960,7 +2965,7 @@ var _ = {},
         {
           key: `size`,
           get: function () {
-            return this.atom_.reportObserved(), this.data_.size;
+            return (this.atom_.reportObserved(), this.data_.size);
           },
         },
         {
@@ -2974,13 +2979,13 @@ var _ = {},
   })(),
   _ = _(`ObservableSet`, _);
 function _(_) {
-  return (_[Symbol.toStringTag] = `SetIterator`), _(_);
+  return ((_[Symbol.toStringTag] = `SetIterator`), _(_));
 }
 var _ = Object.create(null),
   _ = `remove`,
   _ = (function () {
     function _(_, _, _, _) {
-      _ === void 0 && (_ = new Map()),
+      (_ === void 0 && (_ = new Map()),
         _ === void 0 && (_ = _),
         (this.target_ = void 0),
         (this.values_ = void 0),
@@ -2998,7 +3003,7 @@ var _ = Object.create(null),
         (this.name_ = _),
         (this.defaultAnnotation_ = _),
         (this.keysAtom_ = new _(`ObservableObject.keys`)),
-        (this.isPlainObject_ = _(this.target_));
+        (this.isPlainObject_ = _(this.target_)));
     }
     var _ = _.prototype;
     return (
@@ -3007,7 +3012,7 @@ var _ = Object.create(null),
       }),
       (_.setObservablePropValue_ = function (_, _) {
         var _ = this.values_.get(_);
-        if (_ instanceof _) return _.set(_), !0;
+        if (_ instanceof _) return (_.set(_), !0);
         if (_(this)) {
           var _ = _(this, {
             type: _,
@@ -3031,7 +3036,7 @@ var _ = Object.create(null),
                   newValue: _,
                 }
               : null;
-          _.setNewValue_(_), _ && _(this, _);
+          (_.setNewValue_(_), _ && _(this, _));
         }
         return !0;
       }),
@@ -3081,7 +3086,7 @@ var _ = Object.create(null),
             if ((_ = this.target_[_]) != null && _[_]) return;
             _(1, _.annotationType_, this.name_ + `.` + _.toString());
           }
-          for (var _ = this.target_; _ && _ !== _; ) {
+          for (var _ = this.target_; _ && _ !== _;) {
             var _ = _(_, _);
             if (_) {
               var _ = _.make_(this, _, _, _);
@@ -3101,10 +3106,10 @@ var _ = Object.create(null),
         )
           return this.defineProperty_(_, _, _);
         var _ = _.extend_(this, _, _, _);
-        return _ && _(this, _, _), _;
+        return (_ && _(this, _, _), _);
       }),
       (_.defineProperty_ = function (_, _, _) {
-        _ === void 0 && (_ = !1), this.keysAtom_;
+        (_ === void 0 && (_ = !1), this.keysAtom_);
         try {
           _();
           var _ = this.delete_(_);
@@ -3133,7 +3138,7 @@ var _ = Object.create(null),
         return !0;
       }),
       (_.defineObservableProperty_ = function (_, _, _, _) {
-        _ === void 0 && (_ = !1), this.keysAtom_;
+        (_ === void 0 && (_ = !1), this.keysAtom_);
         try {
           _();
           var _ = this.delete_(_);
@@ -3159,14 +3164,14 @@ var _ = Object.create(null),
             if (!Reflect.defineProperty(this.target_, _, _)) return !1;
           } else _(this.target_, _, _);
           var _ = new _(_, _, `ObservableObject.key`, !1);
-          this.values_.set(_, _), this.notifyPropertyAddition_(_, _.value_);
+          (this.values_.set(_, _), this.notifyPropertyAddition_(_, _.value_));
         } finally {
           _();
         }
         return !0;
       }),
       (_.defineComputedProperty_ = function (_, _, _) {
-        _ === void 0 && (_ = !1), this.keysAtom_;
+        (_ === void 0 && (_ = !1), this.keysAtom_);
         try {
           _();
           var _ = this.delete_(_);
@@ -3181,8 +3186,8 @@ var _ = Object.create(null),
             })
           )
             return null;
-          (_.name ||= `ObservableObject.key`),
-            (_.context = this.proxy_ || this.target_);
+          ((_.name ||= `ObservableObject.key`),
+            (_.context = this.proxy_ || this.target_));
           var _ = _(_),
             _ = {
               configurable: !_.safeDescriptors || this.isPlainObject_,
@@ -3193,8 +3198,8 @@ var _ = Object.create(null),
           if (_) {
             if (!Reflect.defineProperty(this.target_, _, _)) return !1;
           } else _(this.target_, _, _);
-          this.values_.set(_, new _(_)),
-            this.notifyPropertyAddition_(_, void 0);
+          (this.values_.set(_, new _(_)),
+            this.notifyPropertyAddition_(_, void 0));
         } finally {
           _();
         }
@@ -3267,14 +3272,14 @@ var _ = Object.create(null),
             : null;
           _ && _(this, _);
         }
-        (_ = this.pendingKeys_) == null || (_ = _.get(_)) == null || _.set(!0),
-          this.keysAtom_.reportChanged();
+        ((_ = this.pendingKeys_) == null || (_ = _.get(_)) == null || _.set(!0),
+          this.keysAtom_.reportChanged());
       }),
       (_.ownKeys_ = function () {
-        return this.keysAtom_.reportObserved(), _(this.target_);
+        return (this.keysAtom_.reportObserved(), _(this.target_));
       }),
       (_.keys_ = function () {
-        return this.keysAtom_.reportObserved(), Object.keys(this.target_);
+        return (this.keysAtom_.reportObserved(), Object.keys(this.target_));
       }),
       _
     );
@@ -3282,7 +3287,7 @@ var _ = Object.create(null),
 function _(_, _) {
   if (_(_, _)) return _;
   var _ = _?.name ?? `ObservableObject`;
-  return _(_, _, new _(_, new Map(), String(_), _(_))), _;
+  return (_(_, _, new _(_, new Map(), String(_), _(_))), _);
 }
 var _ = _(`ObservableObjectAdministration`, _);
 function _(_) {
@@ -3338,10 +3343,10 @@ var _ = (function (_) {
       (_ = _.call(this) || this),
       _(function () {
         var _ = new _(_, _, _, !0);
-        (_.proxy_ = _),
+        ((_.proxy_ = _),
           _(_, _, _),
           _ && _.length && _.spliceWithArray(0, 0, _),
-          _ && Object.defineProperty(_, "0", _);
+          _ && Object.defineProperty(_, "0", _));
       }),
       _
     );
@@ -3427,17 +3432,17 @@ function _(_, _, _) {
 }
 function _(_, _) {
   if (typeof _ == `object` && _) {
-    if (_(_)) return _ !== void 0 && _(23), _[_].atom_;
+    if (_(_)) return (_ !== void 0 && _(23), _[_].atom_);
     if (_(_)) return _.atom_;
     if (_(_)) {
       if (_ === void 0) return _.keysAtom_;
       var _ = _.data_.get(_) || _.hasMap_.get(_);
-      return _ || _(25, _, _(_)), _;
+      return (_ || _(25, _, _(_)), _);
     }
     if (_(_)) {
       if (!_) return _(26);
       var _ = _[_].values_.get(_);
-      return _ || _(27, _, _(_)), _;
+      return (_ || _(27, _, _(_)), _);
     }
     if (_(_) || _(_) || _(_)) return _;
   } else if (_(_) && _(_[_])) return _[_];
@@ -3463,12 +3468,12 @@ function _(_) {
   try {
     return _();
   } finally {
-    _(), _(_), _(_);
+    (_(), _(_), _(_));
   }
 }
 var _ = _.toString;
 function _(_, _, _) {
-  return _ === void 0 && (_ = -1), _(_, _, _);
+  return (_ === void 0 && (_ = -1), _(_, _, _));
 }
 function _(_, _, _, _, _) {
   if (_ === _) return _ !== 0 || 1 / _ == 1 / _;
@@ -3495,7 +3500,7 @@ function _(_, _, _, _, _) {
     case `[object Set]`:
       _ >= 0 && _++;
   }
-  (_ = _(_)), (_ = _(_));
+  ((_ = _(_)), (_ = _(_)));
   var _ = _ === `[object Array]`;
   if (!_) {
     if (typeof _ != `object` || typeof _ != `object`) return !1;
@@ -3510,11 +3515,11 @@ function _(_, _, _, _, _) {
       return !1;
   }
   if (_ === 0) return !1;
-  _ < 0 && (_ = -1), (_ ||= []), (_ ||= []);
-  for (var _ = _.length; _--; ) if (_[_] === _) return _[_] === _;
+  (_ < 0 && (_ = -1), (_ ||= []), (_ ||= []));
+  for (var _ = _.length; _--;) if (_[_] === _) return _[_] === _;
   if ((_.push(_), _.push(_), _)) {
     if (((_ = _.length), _ !== _.length)) return !1;
-    for (; _--; ) if (!_(_[_], _[_], _ - 1, _, _)) return !1;
+    for (; _--;) if (!_(_[_], _[_], _ - 1, _, _)) return !1;
   } else {
     var _ = Object.keys(_),
       _ = _.length;
@@ -3524,7 +3529,7 @@ function _(_, _, _, _, _) {
       if (!(_(_, _) && _(_[_], _[_], _ - 1, _, _))) return !1;
     }
   }
-  return _.pop(), _.pop(), !0;
+  return (_.pop(), _.pop(), !0);
 }
 function _(_) {
   return _(_)
@@ -3535,12 +3540,12 @@ function _(_) {
 }
 var _ = _().Iterator?.prototype || {};
 function _(_) {
-  return (_[Symbol.iterator] = _), Object.assign(Object.create(_), _);
+  return ((_[Symbol.iterator] = _), Object.assign(Object.create(_), _));
 }
 function _() {
   return this;
 }
-[`Symbol`, `Map`, `Set`].forEach(function (_) {
+([`Symbol`, `Map`, `Set`].forEach(function (_) {
   _()[_] === void 0 &&
     _(`MobX requires global '` + _ + `' to be available or polyfilled`);
 }),
@@ -3551,7 +3556,7 @@ function _() {
         getDebugName: _,
       },
       $mobx: _,
-    });
+    }));
 var _ = _(_());
 if (!_.useState)
   throw Error(`mobx-react-lite requires React with Hooks support`);
@@ -3564,10 +3569,10 @@ function _(_) {
   _();
 }
 function _(_) {
-  (_ ||= _),
+  ((_ ||= _),
     _({
       reactionScheduler: _,
-    });
+    }));
 }
 function _(_) {
   return _(_);
@@ -3581,7 +3586,7 @@ var _ = 1e4,
   _ = (function () {
     function _(_) {
       var _ = this;
-      Object.defineProperty(this, "finalize", {
+      (Object.defineProperty(this, "finalize", {
         enumerable: !0,
         configurable: !0,
         writable: !0,
@@ -3604,15 +3609,15 @@ var _ = 1e4,
           configurable: !0,
           writable: !0,
           value: function (_) {
-            _ === void 0 && (_ = _),
+            (_ === void 0 && (_ = _),
               clearTimeout(_.sweepTimeout),
-              (_.sweepTimeout = void 0);
+              (_.sweepTimeout = void 0));
             var _ = Date.now();
-            _.registrations.forEach(function (_, _) {
+            (_.registrations.forEach(function (_, _) {
               _ - _.registeredAt >= _ &&
                 (_.finalize(_.value), _.registrations.delete(_));
             }),
-              _.registrations.size > 0 && _.scheduleSweep();
+              _.registrations.size > 0 && _.scheduleSweep());
           },
         }),
         Object.defineProperty(this, "finalizeAllImmediately", {
@@ -3622,7 +3627,7 @@ var _ = 1e4,
           value: function () {
             _.sweep(0);
           },
-        });
+        }));
     }
     return (
       Object.defineProperty(_.prototype, "register", {
@@ -3630,11 +3635,11 @@ var _ = 1e4,
         configurable: !0,
         writable: !0,
         value: function (_, _, _) {
-          this.registrations.set(_, {
+          (this.registrations.set(_, {
             value: _,
             registeredAt: Date.now(),
           }),
-            this.scheduleSweep();
+            this.scheduleSweep());
         },
       }),
       Object.defineProperty(_.prototype, "unregister", {
@@ -3660,7 +3665,7 @@ var _ = 1e4,
   _ = new (typeof FinalizationRegistry < `u` ? FinalizationRegistry : _)(
     function (_) {
       var _;
-      (_ = _.reaction) == null || _.dispose(), (_.reaction = null);
+      ((_ = _.reaction) == null || _.dispose(), (_.reaction = null));
     },
   ),
   _ = _(),
@@ -3668,7 +3673,7 @@ var _ = 1e4,
 function _(_) {
   _.reaction = new _(`observer${_.name}`, function () {
     var _;
-    (_.stateVersion = Symbol()), (_ = _.onStoreChange) == null || _.call(_);
+    ((_.stateVersion = Symbol()), (_ = _.onStoreChange) == null || _.call(_));
   });
 }
 function _(_, _) {
@@ -3687,9 +3692,9 @@ function _(_, _) {
           _.reaction || (_(_), (_.stateVersion = Symbol())),
           function () {
             var _;
-            (_.onStoreChange = null),
+            ((_.onStoreChange = null),
               (_ = _.reaction) == null || _.dispose(),
-              (_.reaction = null);
+              (_.reaction = null));
           }
         );
       },
@@ -3700,9 +3705,9 @@ function _(_, _) {
     _.current = _;
   }
   var _ = _.current;
-  _.reaction || (_(_), _.register(_, _, _)),
+  (_.reaction || (_(_), _.register(_, _, _)),
     _.useDebugValue(_.reaction, _),
-    (0, _.useSyncExternalStore)(_.subscribe, _.getSnapshot, _);
+    (0, _.useSyncExternalStore)(_.subscribe, _.getSnapshot, _));
   var _, _;
   if (
     (_.reaction.track(function () {
@@ -3778,8 +3783,7 @@ function _(_, _) {
     _[_] || Object.defineProperty(_, _, Object.getOwnPropertyDescriptor(_, _));
   });
 }
-_(_.unstable_batchedUpdates), _.finalizeAllImmediately;
+(_(_.unstable_batchedUpdates), _.finalizeAllImmediately);
 function _(_, _) {
-  return _ === void 0 && (_ = `observed`), _(_, _);
+  return (_ === void 0 && (_ = `observed`), _(_, _));
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _ };

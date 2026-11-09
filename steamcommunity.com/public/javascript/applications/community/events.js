@@ -116,7 +116,7 @@ function Q(e) {
                         let t =
                           r && !v()
                             ? (t) => {
-                                r(e), t.stopPropagation(), t.preventDefault();
+                                (r(e), t.stopPropagation(), t.preventDefault());
                               }
                             : void 0;
                         return (0, W.jsx)(
@@ -166,7 +166,7 @@ function ne(e) {
           (0, W.jsx)(D, {
             className: K,
             onClick: (e) => {
-              r?.(), e.stopPropagation(), e.preventDefault();
+              (r?.(), e.stopPropagation(), e.preventDefault());
             },
             children: A(`#EventBrowse_MoreEventsBtn`),
           }),
@@ -180,7 +180,7 @@ function ne(e) {
           children: (0, W.jsx)(a, {
             event: i,
             onClick: (e) => {
-              r?.(), e.stopPropagation(), e.preventDefault();
+              (r?.(), e.stopPropagation(), e.preventDefault());
             },
           }),
         }),
@@ -234,11 +234,11 @@ var re = (e) =>
           });
         } else this.setState({ bLoadedLandingState: !1 });
       } else
-        console.error(
+        (console.error(
           `EventInfiniteScrollLanding: failed to load clan info for ` +
             this.props.match.params.appid_or_vanity_str,
         ),
-          this.setState({ bLoadedLandingState: !1 });
+          this.setState({ bLoadedLandingState: !1 }));
     }
     HideModal() {
       this.props.bPreventDismiss || this.setState({ bShowModal: !1 });
@@ -261,7 +261,7 @@ var re = (e) =>
           : (0, W.jsx)(`div`, {});
     }
   };
-C([E], $.prototype, `HideModal`, null), ($ = C([t], $));
+(C([E], $.prototype, `HideModal`, null), ($ = C([t], $)));
 function ie(e) {
   let {
       trackingLocation: t,
@@ -273,30 +273,30 @@ function ie(e) {
     [l, u] = (0, U.useState)(void 0),
     d = F(),
     f = (0, U.useCallback)(() => {
-      c(null), o();
+      (c(null), o());
     }, [o]),
     p = (0, U.useCallback)(
       (e) => {
-        t &&
+        (t &&
           e &&
           e.BIsPartnerEvent() &&
           d.MarkEventRead(e.GID, e.clanSteamID.GetAccountID(), t) &&
           d.Flush(),
           c(e),
           u(void 0),
-          a();
+          a());
       },
       [t, d, a],
     ),
     { last_update_event: m, rgEvents: h } = ae({ ...e, fnEventShowModal: p }),
     g = (0, U.useCallback)(() => {
       let { event_gid: e, announcement_gid: n, clan_account_id: r } = m;
-      t && e && d.MarkEventRead(e, r, t) && d.Flush(), u(n), c(null), a();
+      (t && e && d.MarkEventRead(e, r, t) && d.Flush(), u(n), c(null), a());
     }, [m, a, d, t]);
   (0, U.useEffect)(
     () => (
       (window.fnPartnerEvent_ShowInfiniteScroll = (e, t) => {
-        u(t), c(null), u(t), a();
+        (u(t), c(null), u(t), a());
       }),
       () => {
         window.fnPartnerEvent_ShowInfiniteScroll &&
@@ -363,18 +363,18 @@ function ae(e) {
       let e = f(`EventWebRowEmbed`),
         a = !1;
       if (oe(e)) {
-        (a = e.bPreLoaded), s(e.last_update_event);
+        ((a = e.bPreLoaded), s(e.last_update_event));
         let t = [];
-        e.announcementGIDList.forEach((e) => {
+        (e.announcementGIDList.forEach((e) => {
           let n = d.GetClanEventFromAnnouncementGID(e);
           n && t.push(n);
         }),
-          l(t);
+          l(t));
       }
       a ||
         (async () => {
           let e = await r.LoadAdjacentPartnerEvents(void 0, void 0, t, 0, 2, n);
-          l(e),
+          (l(e),
             i &&
               e &&
               e.length > 0 &&
@@ -383,7 +383,7 @@ function ae(e) {
                 .forEach((e) =>
                   p.MarkEventShown(e.GID, e.clanSteamID.GetAccountID(), i),
                 ),
-              p.Flush());
+              p.Flush()));
         })();
     }, [t, n, a, r, p, i]),
     (0, U.useEffect)(() => {
@@ -452,7 +452,7 @@ function le(e) {
   let [t, n] = U.useState(!0);
   return (
     U.useEffect(() => {
-      b.Init(O(new z(M.WEBAPI_BASE_URL))), d.Init(), n(!1);
+      (b.Init(O(new z(M.WEBAPI_BASE_URL))), d.Init(), n(!1));
     }, []),
     t
       ? null

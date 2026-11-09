@@ -30,7 +30,7 @@ function _(_) {
     _ = _(_),
     _ = 900,
     _ = _ - _;
-  return _ < 1350 && (_ = _ <= 60 ? 0 : 60), _(_) - _ < Date.now() / 1e3;
+  return (_ < 1350 && (_ = _ <= 60 ? 0 : 60), _(_) - _ < Date.now() / 1e3);
 }
 function _(_) {
   return atob(_.replace(/-/g, `+`).replace(/_/g, `/`));
@@ -47,7 +47,7 @@ var _ = class {
   m_dtLastExpireCheck = 0;
   m_strSpoofedSteamID = ``;
   constructor(_, _ = ``, _ = !1, _) {
-    (this.m_strWebAPIBaseURL = _),
+    ((this.m_strWebAPIBaseURL = _),
       (this.m_webApiAccessToken = _),
       (this.m_bJsonMode = _),
       (this.m_fnRequestNewAccessToken = _),
@@ -69,7 +69,7 @@ var _ = class {
           bSendAuth: !1,
         }),
         MakeReady: this.MakeReady.bind(this),
-      });
+      }));
     let _ = _(_);
     _ && /[0-9]+/g.test(_) && (this.m_strSpoofedSteamID = _);
   }
@@ -150,7 +150,7 @@ var _ = class {
     );
   }
   SendNotification(_, _, _, _) {
-    return this.Send(_, _, _, _), !0;
+    return (this.Send(_, _, _, _), !0);
   }
   Send(_, _, _, _) {
     let _ = this.CreateWebAPIURL(_),
@@ -227,4 +227,3 @@ var _ = class {
       }
   }
 };
-export { _ };

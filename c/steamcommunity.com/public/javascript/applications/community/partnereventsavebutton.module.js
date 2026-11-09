@@ -18,7 +18,7 @@ function _(_, _) {
     queryKey: [`crowdin_metadata_for_clan_event`, _.ConvertTo64BitString(), _],
     queryFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_steamid(_.ConvertTo64BitString()), _.Body().set_itemid(_);
+      (_.Body().set_steamid(_.ConvertTo64BitString()), _.Body().set_itemid(_));
       let _ = await _.GetClanEventCrowdInMetadata(_, _);
       return _.GetEResult() == 1 ? _.Body().toObject() : null;
     },
@@ -69,7 +69,7 @@ function _(_) {
 }
 async function _(_, _, _, _) {
   let _ = _.Init(_);
-  _.Body().set_language(_), _.Body().set_steamid(_), _.Body().set_itemid(_);
+  (_.Body().set_language(_), _.Body().set_steamid(_), _.Body().set_itemid(_));
   let _ = await _.FetchTranslationFromCrowdIn(_, _);
   if (_.GetEResult() != 1)
     throw Error(
@@ -94,4 +94,3 @@ var _ = `FIGxwNiJB6c-`,
   _ = `LjVG3nUy3Rc-`,
   _ = `_4ExFExQnGIY-`,
   _ = `x3PDBbckxnQ-`;
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

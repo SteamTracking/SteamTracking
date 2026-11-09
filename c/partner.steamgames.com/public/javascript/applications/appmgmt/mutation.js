@@ -4,16 +4,16 @@ var _ = class extends _ {
   #t;
   #n;
   constructor(_) {
-    super(),
+    (super(),
       (this.mutationId = _.mutationId),
       (this.#t = _.mutationCache),
       (this.#e = []),
       (this.state = _.state || _()),
       this.setOptions(_.options),
-      this.scheduleGc();
+      this.scheduleGc());
   }
   setOptions(_) {
-    (this.options = _), this.updateGcTime(this.options.gcTime);
+    ((this.options = _), this.updateGcTime(this.options.gcTime));
   }
   get meta() {
     return this.options.meta;
@@ -29,13 +29,13 @@ var _ = class extends _ {
       }));
   }
   removeObserver(_) {
-    (this.#e = this.#e.filter((_) => _ !== _)),
+    ((this.#e = this.#e.filter((_) => _ !== _)),
       this.scheduleGc(),
       this.#t.notify({
         type: `observerRemoved`,
         mutation: this,
         observer: _,
-      });
+      }));
   }
   optionalRemove() {
     this.#e.length ||
@@ -78,12 +78,12 @@ var _ = class extends _ {
       _ = !this.#n.canStart();
     try {
       if (!_) {
-        this.#r({
+        (this.#r({
           type: `pending`,
           variables: _,
           isPaused: _,
         }),
-          await this.#t.config.onMutate?.(_, this);
+          await this.#t.config.onMutate?.(_, this));
         let _ = await this.options.onMutate?.(_);
         _ !== this.state.context &&
           this.#r({
@@ -114,7 +114,7 @@ var _ = class extends _ {
     } catch (_) {
       try {
         throw (
-          (await this.#t.config.onError?.(_, _, this.state.context, this),
+          await this.#t.config.onError?.(_, _, this.state.context, this),
           await this.options.onError?.(_, _, this.state.context),
           await this.#t.config.onSettled?.(
             void 0,
@@ -124,7 +124,7 @@ var _ = class extends _ {
             this,
           ),
           await this.options.onSettled?.(void 0, _, _, this.state.context),
-          _)
+          _
         );
       } finally {
         this.#r({
@@ -190,17 +190,17 @@ var _ = class extends _ {
           };
       }
     };
-    (this.state = _(this.state)),
+    ((this.state = _(this.state)),
       _.batch(() => {
-        this.#e.forEach((_) => {
+        (this.#e.forEach((_) => {
           _.onMutationUpdate(_);
         }),
           this.#t.notify({
             mutation: this,
             type: `updated`,
             action: _,
-          });
-      });
+          }));
+      }));
   }
 };
 function _() {
@@ -216,4 +216,3 @@ function _() {
     submittedAt: 0,
   };
 }
-export { _, _ };

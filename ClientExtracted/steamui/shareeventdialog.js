@@ -116,7 +116,7 @@
       },
       66237: (O, Q, c) => {
         "use strict";
-        c.r(Q), c.d(Q, { ShareEventDialogBody: () => bi });
+        (c.r(Q), c.d(Q, { ShareEventDialogBody: () => bi }));
         var a = c(62540),
           k = c(94601),
           Z = c(41196),
@@ -165,7 +165,7 @@
               o--
             )
               (r = s[o]) && (n = (i ? r(e, t, n) : r(n)) || n);
-            return i && n && X(e, t, n), n;
+            return (i && n && X(e, t, n), n);
           };
         const Le = class Pe {
           m_eCurLang = (0, k.sfN)(T.TS.LANGUAGE);
@@ -210,13 +210,13 @@
             (0, g.Gn)(this);
           }
         };
-        he([g.sH], Le.prototype, "m_eCurLang", 2),
+        (he([g.sH], Le.prototype, "m_eCurLang", 2),
           he([g.sH], Le.prototype, "m_rgHasData", 2),
           he([g.sH], Le.prototype, "m_bHasLocalizationContext", 2),
           he([N.o], Le.prototype, "GetCurEditLanguage", 1),
           he([N.o], Le.prototype, "SetCurEditLanguage", 1),
           he([g.XI.bound], Le.prototype, "SetHasLanguage", 1),
-          he([N.o], Le.prototype, "BHasLanguageData", 1);
+          he([N.o], Le.prototype, "BHasLanguageData", 1));
         let _t = null;
         function Ni() {
           return useObserver(() => _t.Get().GetCurEditLanguage());
@@ -237,7 +237,7 @@
               o--
             )
               (r = s[o]) && (n = (i ? r(e, t, n) : r(n)) || n);
-            return i && n && Pt(e, t, n), n;
+            return (i && n && Pt(e, t, n), n);
           };
         let je = class extends I.Component {
           GenerateLanguageOptions() {
@@ -297,7 +297,7 @@
               const m = t && t(d.eLang),
                 w = i && i(d.eLang);
               let v = d.sLocName;
-              w &&
+              (w &&
                 w !== 0 &&
                 ((v += " "),
                 (v += (0, l.we)(
@@ -321,7 +321,7 @@
                     },
                     "langpicker" + d.eLang + (m ? "_hasdata" : ""),
                   ),
-                );
+                ));
             }
             return s;
           }
@@ -344,7 +344,8 @@
             });
           }
         };
-        it([u.oI], je.prototype, "OnLanguageChange", 1), (je = it([p.PA], je));
+        (it([u.oI], je.prototype, "OnLanguageChange", 1),
+          (je = it([p.PA], je)));
         function Oi(s) {
           const [e, t] = useObserver(() => [
             CEditorLocStore.Get().GetHasLocalizationContext(),
@@ -396,8 +397,10 @@
                     o((0, l.we)("#EventDisplay_Share_CopiedToClipboard")),
                   )
                   .catch((d) => {
-                    o((0, l.we)("#EventDisplay_Share_FailedToCopyToClipboard")),
-                      console.error("Failed to copy link to clipboard:", d);
+                    (o(
+                      (0, l.we)("#EventDisplay_Share_FailedToCopyToClipboard"),
+                    ),
+                      console.error("Failed to copy link to clipboard:", d));
                   });
             };
           return (0, a.jsxs)("div", {
@@ -459,7 +462,7 @@
               o--
             )
               (r = s[o]) && (n = (i ? r(e, t, n) : r(n)) || n);
-            return i && n && Zt(e, t, n), n;
+            return (i && n && Zt(e, t, n), n);
           };
         class Bi {
           success;
@@ -539,11 +542,11 @@
               ) {
                 for (let d of r.data.images) d.clanAccountID = n;
                 (0, g.h5)(() => {
-                  this.m_mapClanImageLoadState.set(n, { loaded: !0 }),
+                  (this.m_mapClanImageLoadState.set(n, { loaded: !0 }),
                     this.m_mapClanToImages.set(n, r.data.images),
                     this.GetImageListCallbackForClanAccountIDInternal(
                       n,
-                    ).Dispatch(r.data.images);
+                    ).Dispatch(r.data.images));
                 });
               }
             }
@@ -621,8 +624,8 @@
             return this.DeleteClanImageByID(e, t.imageid);
           }
         }
-        at([g.sH], Je.prototype, "m_mapClanToImages", 2),
-          at([g.sH], Je.prototype, "m_mapClanImageLoadState", 2);
+        (at([g.sH], Je.prototype, "m_mapClanToImages", 2),
+          at([g.sH], Je.prototype, "m_mapClanImageLoadState", 2));
         const ae = new Je();
         function ki(s) {
           const [e, t] = useState(ae.GetClanImagesByAccount(s));
@@ -718,7 +721,7 @@
               o--
             )
               (r = s[o]) && (n = (i ? r(e, t, n) : r(n)) || n);
-            return i && n && ss(e, t, n), n;
+            return (i && n && ss(e, t, n), n);
           };
         class se extends I.Component {
           descTextAreaRef = I.createRef();
@@ -727,11 +730,11 @@
           m_iMentionSearchStartOffset;
           m_iMentionSearchCancelledOffset;
           constructor(e) {
-            super(e),
+            (super(e),
               (this.state = {
                 mentionSearch: void 0,
                 activeSuggestSearchType: void 0,
-              });
+              }));
           }
           BindMentionDialog(e) {
             this.m_MentionDialog = e ?? void 0;
@@ -775,13 +778,13 @@
               r !== void 0)
             ) {
               let h = o.substr(0, r);
-              (h += t), (n >= o.length || o[n] != " ") && (h += " ");
+              ((h += t), (n >= o.length || o[n] != " ") && (h += " "));
               let d = h.length;
-              (h += o.substr(n)),
+              ((h += o.substr(n)),
                 (i.value = h),
                 (i.selectionStart = i.selectionEnd = d),
                 this.props.fnSetText(h),
-                this.FocusTextInput();
+                this.FocusTextInput());
             }
           }
           OnFocus(e) {
@@ -794,31 +797,31 @@
             this.UpdateAutoSearchState();
           }
           ClearMentionSearchState() {
-            (this.m_iMentionSearchStartOffset = void 0),
+            ((this.m_iMentionSearchStartOffset = void 0),
               this.state.activeSuggestSearchType &&
                 this.setState({
                   activeSuggestSearchType: void 0,
                   mentionSearch: void 0,
-                });
+                }));
           }
           OnEmoticonSuggestionSelected(e, t) {
             if (!t) {
-              (this.m_iMentionSearchCancelledOffset =
+              ((this.m_iMentionSearchCancelledOffset =
                 this.m_iMentionSearchStartOffset),
-                this.ClearMentionSearchState();
+                this.ClearMentionSearchState());
               return;
             }
-            this.ReplaceSuggestedText(":", ":" + t + ":"),
-              this.ClearMentionSearchState();
+            (this.ReplaceSuggestedText(":", ":" + t + ":"),
+              this.ClearMentionSearchState());
           }
           OnBBCodeSuggestionSelected(e, t) {
             if (!t) {
-              (this.m_iMentionSearchCancelledOffset =
+              ((this.m_iMentionSearchCancelledOffset =
                 this.m_iMentionSearchStartOffset),
-                this.ClearMentionSearchState();
+                this.ClearMentionSearchState());
               return;
             }
-            this.ReplaceSuggestedText("[", t), this.ClearMentionSearchState();
+            (this.ReplaceSuggestedText("[", t), this.ClearMentionSearchState());
           }
           FocusTextInput() {
             this.descTextAreaRef.current &&
@@ -868,8 +871,8 @@
               return;
             }
             let r = i.substr(n + 1, t - n - 1);
-            (this.m_iMentionSearchStartOffset = n),
-              this.setState({ activeSuggestSearchType: o, mentionSearch: r });
+            ((this.m_iMentionSearchStartOffset = n),
+              this.setState({ activeSuggestSearchType: o, mentionSearch: r }));
           }
           GetTextAreaRef() {
             return this.descTextAreaRef;
@@ -921,7 +924,7 @@
             });
           }
         }
-        oe([u.oI], se.prototype, "BindMentionDialog", 1),
+        (oe([u.oI], se.prototype, "BindMentionDialog", 1),
           oe([u.oI], se.prototype, "OnKeyDown", 1),
           oe([u.oI], se.prototype, "OnFocus", 1),
           oe([u.oI], se.prototype, "OnKeyPress", 1),
@@ -930,7 +933,7 @@
           oe([u.oI], se.prototype, "OnBBCodeSuggestionSelected", 1),
           oe([u.oI], se.prototype, "FocusTextInput", 1),
           oe([u.oI], se.prototype, "GetTextAreaRef", 1),
-          oe([u.oI], se.prototype, "GetTextAreaCurrent", 1);
+          oe([u.oI], se.prototype, "GetTextAreaCurrent", 1));
         var E = c(50777),
           ns = c(28767),
           ie = c(64243),
@@ -1390,7 +1393,7 @@
               o--
             )
               (r = s[o]) && (n = (i ? r(e, t, n) : r(n)) || n);
-            return i && n && js(e, t, n), n;
+            return (i && n && js(e, t, n), n);
           };
         class tt extends I.Component {
           state = {
@@ -1405,7 +1408,7 @@
           };
           async OnCrop() {
             const e = this.props.uploadFile.GetCanvasImageSource();
-            e &&
+            (e &&
               (await Ns(
                 this.props.uploadFile,
                 e,
@@ -1420,7 +1423,7 @@
                 this.GetDestHeight(),
                 this.props.fileType,
               )),
-              this.props.closeModal?.();
+              this.props.closeModal?.());
           }
           UpdateCrop(e, t) {
             this.setState({ region: t });
@@ -1548,8 +1551,8 @@
             });
           }
         }
-        Lt([u.oI], tt.prototype, "OnCrop", 1),
-          Lt([u.oI], tt.prototype, "UpdateCrop", 1);
+        (Lt([u.oI], tt.prototype, "OnCrop", 1),
+          Lt([u.oI], tt.prototype, "UpdateCrop", 1));
         async function Ns(s, e, t, i, n, o, r, h, d) {
           return new Promise((m, w) => {
             const v = Tt(d);
@@ -1558,7 +1561,7 @@
               return;
             }
             const x = document.createElement("canvas");
-            (x.width = r),
+            ((x.width = r),
               (x.height = h),
               x.getContext("2d")?.drawImage(e, t, i, n, o, 0, 0, r, h),
               x.toBlob((W) => {
@@ -1571,14 +1574,14 @@
                   w("Unable to apply crop into image");
                   return;
                 }
-                (s.file = (0, re.pE)(W, s.filename)),
+                ((s.file = (0, re.pE)(W, s.filename)),
                   (s.width = r),
                   (s.height = h),
                   (s.dataUrl = ye),
                   (s.uploadTime = Date.now()),
                   (s.bCropped = !0),
-                  m();
-              });
+                  m());
+              }));
           });
         }
         function Tt(s) {
@@ -1598,7 +1601,7 @@
               r = () => s.closeModal && s.closeModal(),
               h = ae.GetFilteredClanImages(e, i),
               d = (m) => {
-                t(m), r();
+                (t(m), r());
               };
             return (0, a.jsx)(Os.tH, {
               children: (0, a.jsx)(ie.x_, {
@@ -1688,7 +1691,7 @@
           let n = [];
           if (s.length > 0) {
             let o = e.toLocaleLowerCase();
-            for (let r = 0; r < e.length; ) {
+            for (let r = 0; r < e.length;) {
               let h = o.indexOf(s, r);
               if (h < 0) {
                 n.push(
@@ -1700,7 +1703,7 @@
                 );
                 break;
               } else
-                r < h &&
+                (r < h &&
                   n.push(
                     (0, a.jsx)(
                       "span",
@@ -1715,7 +1718,7 @@
                       t + "_" + String(r),
                     ),
                   ),
-                  (r = h + s.length);
+                  (r = h + s.length));
             }
           } else n.push((0, a.jsx)("span", { children: e }, t + "_null"));
           return n;
@@ -1734,7 +1737,7 @@
               o--
             )
               (r = s[o]) && (n = (i ? r(e, t, n) : r(n)) || n);
-            return i && n && Gs(e, t, n), n;
+            return (i && n && Gs(e, t, n), n);
           };
         function zi(s) {
           return s == "waiting" || s == "uploading" || s == "processing";
@@ -1753,7 +1756,7 @@
           uploadTime;
           fileType;
           constructor(e, t, i, n, o) {
-            (0, g.Gn)(this),
+            ((0, g.Gn)(this),
               (this.file = e),
               (this.filename = t),
               (this.fileType = (0, zs.yh)(t) ?? C.bg.w3),
@@ -1764,21 +1767,21 @@
               (this.height = o.height),
               (this.width = o.width),
               (this.m_originalDataUrl = n),
-              (this.dataUrl = n);
+              (this.dataUrl = n));
           }
           ResetImage() {
-            (this.height = this.m_originalSize.height),
+            ((this.height = this.m_originalSize.height),
               (this.width = this.m_originalSize.width),
-              (this.dataUrl = this.m_originalDataUrl);
+              (this.dataUrl = this.m_originalDataUrl));
           }
           GetImageOptionLabel() {}
         }
-        Me([g.sH], Ae.prototype, "dataUrl", 2),
+        (Me([g.sH], Ae.prototype, "dataUrl", 2),
           Me([g.sH], Ae.prototype, "width", 2),
           Me([g.sH], Ae.prototype, "height", 2),
           Me([g.sH], Ae.prototype, "status", 2),
           Me([g.sH.ref], Ae.prototype, "message", 2),
-          Me([g.sH], Ae.prototype, "language", 2);
+          Me([g.sH], Ae.prototype, "language", 2));
         var Fs = Object.defineProperty,
           Ys = Object.getOwnPropertyDescriptor,
           st = (s, e, t, i) => {
@@ -1788,7 +1791,7 @@
               o--
             )
               (r = s[o]) && (n = (i ? r(e, t, n) : r(n)) || n);
-            return i && n && Fs(e, t, n), n;
+            return (i && n && Fs(e, t, n), n);
           };
         const Ws = 960,
           Vs = 311,
@@ -1799,7 +1802,9 @@
           m_currentImageOption = void 0;
           m_currentImageOptionKey = void 0;
           constructor(e, t, i, n, o, r) {
-            super(e, t, i, o, r), (0, g.Gn)(this), (this.m_rgImageOptions = n);
+            (super(e, t, i, o, r),
+              (0, g.Gn)(this),
+              (this.m_rgImageOptions = n));
           }
           IsValidAssetType(e, t) {
             let i = 0,
@@ -1811,7 +1816,7 @@
                 this.m_rgImageOptions.some(
                   (_) => _.sKey == this.GetCurrentImageOption()?.sKey,
                 );
-            if (e) (i = e.width), (n = e.height), (o = !0);
+            if (e) ((i = e.width), (n = e.height), (o = !0));
             else if (this.GetCurrentImageOption()) {
               const _ = K[this.GetCurrentImageOption().artworkType];
               _ &&
@@ -1910,16 +1915,16 @@
             );
           }
           SetCurrentImageOption(e) {
-            (this.m_currentImageOption = e),
-              (this.m_currentImageOptionKey = e?.sKey);
+            ((this.m_currentImageOption = e),
+              (this.m_currentImageOptionKey = e?.sKey));
           }
         }
-        st([g.sH], Ne.prototype, "m_currentImageOption", 2),
-          st([g.sH], Ne.prototype, "m_currentImageOptionKey", 2);
+        (st([g.sH], Ne.prototype, "m_currentImageOption", 2),
+          st([g.sH], Ne.prototype, "m_currentImageOptionKey", 2));
         class Gi extends Ne {
           video;
           constructor(e, t, i, n, o, r, h) {
-            super(e, t, i, n, o, r), (this.video = h);
+            (super(e, t, i, n, o, r), (this.video = h));
           }
           BIsOriginalMinimumDimensions(e) {
             return qe(
@@ -1960,10 +1965,10 @@
           localizedImageGroupPrimaryImage;
           media;
           constructor(e, t, i, n, o, r, h, d) {
-            super(e, t, i, n, o, r),
+            (super(e, t, i, n, o, r),
               (0, g.Gn)(this),
               (this.media = h),
-              (this.localizedImageGroupPrimaryImage = d);
+              (this.localizedImageGroupPrimaryImage = d));
           }
           IsValidAssetType(e, t) {
             return (
@@ -2016,7 +2021,7 @@
           });
           return (
             i.forEach((n) => {
-              (n.status = "waiting"), (n.message = "");
+              ((n.status = "waiting"), (n.message = ""));
             }),
             i
           );
@@ -2027,14 +2032,14 @@
           for (const h of o) {
             h.status = "uploading";
             const d = await e(h, h.filename, h.language ?? k.xPp, n);
-            (h.status = d.bSuccess ? "success" : "failed"),
+            ((h.status = d.bSuccess ? "success" : "failed"),
               (h.message =
                 !d.bSuccess && d.elErrorMessage ? d.elErrorMessage : ""),
               r.push({
                 bSuccess: d.bSuccess,
                 image: h,
                 uploadResult: d.result,
-              });
+              }));
           }
           return r;
         }
@@ -2043,15 +2048,15 @@
             h = [];
           let d = 0;
           const m = async () => {
-              for (; d < r.length; ) {
+              for (; d < r.length;) {
                 const v = d++,
                   x = r[v];
                 x.status = "uploading";
                 const b = await t(x, x.filename, x.language ?? k.xPp, o);
-                (x.status = b.bSuccess ? "success" : "failed"),
+                ((x.status = b.bSuccess ? "success" : "failed"),
                   (x.message =
                     !b.bSuccess && b.elErrorMessage ? b.elErrorMessage : ""),
-                  (h[v] = { image: x, uploadResult: b });
+                  (h[v] = { image: x, uploadResult: b }));
               }
             },
             w = Array.from({ length: Math.floor(e) }, () => m());
@@ -2137,7 +2142,7 @@
               o--
             )
               (r = s[o]) && (n = (i ? r(e, t, n) : r(n)) || n);
-            return i && n && ti(e, t, n), n;
+            return (i && n && ti(e, t, n), n);
           };
         function vt(s, e, t) {
           const i = It(e.width, t),
@@ -2183,12 +2188,12 @@
           m_localizedImageGroupPrimaryImage;
           m_lastError = void 0;
           constructor(e, t, i, n) {
-            super(),
+            (super(),
               (0, g.Gn)(this),
               (this.m_clanSteamID = e),
               (this.m_rgImageOptions = ii(t)),
               (this.m_localizedImageGroupPrimaryImage = i),
-              (this.m_clanImagesV2 = n ?? !1);
+              (this.m_clanImagesV2 = n ?? !1));
           }
           GetClanSteamID() {
             return this.m_clanSteamID;
@@ -2212,7 +2217,7 @@
               i,
               this.m_localizedImageGroupPrimaryImage,
             );
-            return (this.m_filesToUpload = [...this.m_filesToUpload, n]), !0;
+            return ((this.m_filesToUpload = [...this.m_filesToUpload, n]), !0);
           }
           async AddExistingClanImage(e, t = k.Bhc) {
             const i = pe.zU.GetHashAndExt(e);
@@ -2226,8 +2231,8 @@
             return await this.AddImage(r, t);
           }
           DeleteUploadImageByIndex(e) {
-            this.m_filesToUpload.splice(e, 1),
-              (this.m_filesToUpload = [...this.m_filesToUpload]);
+            (this.m_filesToUpload.splice(e, 1),
+              (this.m_filesToUpload = [...this.m_filesToUpload]));
           }
           DeleteUploadImage(e) {
             let t = this.m_filesToUpload.findIndex(
@@ -2269,7 +2274,7 @@
             return this.m_filesCompleted.indexOf(e) != -1;
           }
           RetryAllFailedUploads() {
-            this.CancelAllUploads(), this.UploadAllImages();
+            (this.CancelAllUploads(), this.UploadAllImages());
           }
           async handleUploadRefresh(e) {
             await ae.LoadClanImages(this.m_clanSteamID, !0, e);
@@ -2282,7 +2287,7 @@
               r = e.GetCurrentImageOption(),
               h = e.GetResizeDimension(),
               d = new FormData();
-            d.append("clanimage", o, t),
+            (d.append("clanimage", o, t),
               d.append("sessionid", (0, T.KC)()),
               this.m_clanImagesV2 && d.append("clan_images_v2", "1"),
               r?.artworkType && d.append("arttype", r.artworkType),
@@ -2291,7 +2296,7 @@
                 d.append(
                   "resize",
                   h.map((W) => W.width + "x" + W.height).join(","),
-                );
+                ));
             let m = "/uploadimage/";
             const w = this.m_localizedImageGroupPrimaryImage;
             w &&
@@ -2317,15 +2322,15 @@
               G,
               _ = !0;
             try {
-              (G = await ue().post(x, d, b)), this.m_filesCompleted.push(o);
+              ((G = await ue().post(x, d, b)), this.m_filesCompleted.push(o));
             } catch (W) {
-              (_ = !1),
+              ((_ = !1),
                 (this.m_lastError = {
                   file: o,
                   status: W.response ? W.response.status : 500,
                   message: (0, At.H)(W).strErrorMsg,
                 }),
-                (G = W.response);
+                (G = W.response));
             }
             return (
               w || (await this.handleUploadRefresh(n)),
@@ -2333,14 +2338,14 @@
             );
           }
         }
-        me([g.sH], le.prototype, "m_filesToUpload", 2),
+        (me([g.sH], le.prototype, "m_filesToUpload", 2),
           me([g.sH], le.prototype, "m_filesCompleted", 2),
           me([g.sH], le.prototype, "m_lastError", 2),
           me([N.o], le.prototype, "AddImage", 1),
           me([N.o], le.prototype, "AddExistingClanImage", 1),
           me([N.o], le.prototype, "DeleteUploadImageByIndex", 1),
           me([N.o], le.prototype, "DeleteUploadImage", 1),
-          me([N.o], le.prototype, "ClearImages", 1);
+          me([N.o], le.prototype, "ClearImages", 1));
         class ni extends le {
           constructor(e, t, i) {
             super(e, t, i, !1);
@@ -2458,7 +2463,7 @@
                         thumb_url: _i,
                         uploaded_time: Date.now() / 1e3,
                       };
-                    d(jt), o(jt);
+                    (d(jt), o(jt));
                   }
                 }
               } finally {
@@ -2471,7 +2476,7 @@
           if (b && b.GetFilesToUpload().length > 0) {
             ge = b.GetUploadImages()[0];
             const V = ge.IsValidAssetType(r);
-            (be = V.error), (R = V.needsCrop);
+            ((be = V.error), (R = V.needsCrop));
           }
           return (0, a.jsxs)(a.Fragment, {
             children: [
@@ -2543,18 +2548,18 @@
               o--
             )
               (r = s[o]) && (n = (i ? r(e, t, n) : r(n)) || n);
-            return i && n && Mt(e, t, n), n;
+            return (i && n && Mt(e, t, n), n);
           },
           hi = (s, e, t) => li(s, typeof e != "symbol" ? e + "" : e, t);
         let Ie = class extends I.Component {
           m_cancelSignal = ue().CancelToken.source();
           constructor(s) {
-            super(s),
+            (super(s),
               (this.state = {
                 formattingHelp: {
                   __html: Ie.s_formattingHelp.get(s.formatType) ?? "",
                 },
-              });
+              }));
           }
           componentDidMount() {
             this.AjaxGetFormattingHelp().catch((s) => {
@@ -2579,12 +2584,12 @@
             if (this.state.formattingHelp.__html == "") {
               let s = { sessionid: (0, T.KC)() },
                 e;
-              (e = await ue().get(Ie.GetHelpURL(this.props.formatType, !0), {
+              ((e = await ue().get(Ie.GetHelpURL(this.props.formatType, !0), {
                 params: s,
                 cancelToken: this.m_cancelSignal.token,
               })),
                 Ie.s_formattingHelp.set(this.props.formatType, e.data),
-                this.setState({ formattingHelp: { __html: e.data } });
+                this.setState({ formattingHelp: { __html: e.data } }));
             }
           }
           render() {
@@ -2614,7 +2619,7 @@
                   });
           }
         };
-        hi(Ie, "s_formattingHelp", new Map()), (Ie = ci([p.PA], Ie));
+        (hi(Ie, "s_formattingHelp", new Map()), (Ie = ci([p.PA], Ie)));
         var St = c(79791),
           j = c(41542),
           pi = c(82228),
@@ -2636,13 +2641,13 @@
               o--
             )
               (r = s[o]) && (n = (i ? r(e, t, n) : r(n)) || n);
-            return i && n && yt(e, t, n), n;
+            return (i && n && yt(e, t, n), n);
           },
           ui = (s, e, t) => gi(s, typeof e != "symbol" ? e + "" : e, t);
         let xe = class extends I.Component {
           descAutoTextAreaRef = I.createRef();
           constructor(s) {
-            super(s), (this.state = { bShowDragTarget: !1 });
+            (super(s), (this.state = { bShowDragTarget: !1 }));
           }
           componentDidMount() {
             ae.AddClanImageDragListener(this.ClanImageDragListener);
@@ -2731,11 +2736,11 @@
             });
           }
         };
-        f([u.oI], xe.prototype, "ClanImageDragListener", 1),
+        (f([u.oI], xe.prototype, "ClanImageDragListener", 1),
           f([u.oI], xe.prototype, "onFocus", 1),
           f([u.oI], xe.prototype, "OnTextAreaDropListener", 1),
           f([u.oI], xe.prototype, "GetTextAreaRef", 1),
-          (xe = f([p.PA], xe));
+          (xe = f([p.PA], xe)));
         class y {
           static BIsFireFox() {
             return !!new RegExp(/Firefox\/([0-9\.]+)(?:\s|$)/i).exec(
@@ -2745,9 +2750,9 @@
           static replaceSelection(e, t) {
             if (!e) return;
             let i = e.selectionStart;
-            e.focus(),
+            (e.focus(),
               y.InsertTextAtSelect(t, e),
-              e.setSelectionRange(i, i + t.length);
+              e.setSelectionRange(i, i + t.length));
           }
           static getSelectedString(e) {
             return e
@@ -2761,10 +2766,10 @@
             if (!i) return;
             let n = y.getSelectedString(i),
               o = "";
-            n.indexOf(e) == 0 && n.lastIndexOf(t) == n.length - t.length
+            (n.indexOf(e) == 0 && n.lastIndexOf(t) == n.length - t.length
               ? (o = n.substr(e.length, n.length - e.length - t.length))
               : (o = e + n + t),
-              y.replaceSelection(i, o);
+              y.replaceSelection(i, o));
           }
           static append(e, t) {
             t &&
@@ -2798,8 +2803,8 @@
                 ? t.setRangeText(e, i, n, "preserve")
                 : (t.value = t.value.slice(0, i) + e + t.value.slice(n));
               const o = new Event("input", { bubbles: !0 });
-              t.dispatchEvent(o),
-                (t.selectionStart = t.selectionEnd = i + e.length);
+              (t.dispatchEvent(o),
+                (t.selectionStart = t.selectionEnd = i + e.length));
             }
             t.focus();
           }
@@ -2860,8 +2865,7 @@
                   n
                     .split(`
 `)
-                    .map((r) => (r.match(/\*+\s/) ? "[*]" : "[*] ") + r)
-                    .join(`
+                    .map((r) => (r.match(/\*+\s/) ? "[*]" : "[*] ") + r).join(`
 `) +
                   `
 ` +
@@ -2919,8 +2923,8 @@
           }
           OnEmoticonSelected(s, e = !1) {
             let t = `\u02D0${s}\u02D0`;
-            y.replaceSelection(this.props.fnTextareaRef()?.current, t),
-              this.props.fnTextareaRef()?.current?.focus();
+            (y.replaceSelection(this.props.fnTextareaRef()?.current, t),
+              this.props.fnTextareaRef()?.current?.focus());
           }
           BSupports(s) {
             return this.props.supportBBCodes.findIndex((e) => e == s) >= 0;
@@ -3088,7 +3092,7 @@
             );
           }
         };
-        f([u.oI], U.prototype, "onBold", 1),
+        (f([u.oI], U.prototype, "onBold", 1),
           f([u.oI], U.prototype, "onItalics", 1),
           f([u.oI], U.prototype, "onUnderline", 1),
           f([u.oI], U.prototype, "onStrikeThrough", 1),
@@ -3104,7 +3108,7 @@
           f([u.oI], U.prototype, "OnOpenImageDialog", 1),
           f([u.oI], U.prototype, "OnOpenSpeakerDialog", 1),
           f([u.oI], U.prototype, "OnEmoticonSelected", 1),
-          (U = f([p.PA], U));
+          (U = f([p.PA], U)));
         function Y(s) {
           return (0, a.jsx)("span", {
             onClick: s.onClick,
@@ -3308,14 +3312,14 @@
             });
           }
         };
-        f([u.oI], ce.prototype, "OnYoutubeInsertLink", 1),
+        (f([u.oI], ce.prototype, "OnYoutubeInsertLink", 1),
           f([u.oI], ce.prototype, "OnUrlChange", 1),
           f([u.oI], ce.prototype, "OnLeftSelected", 1),
           f([u.oI], ce.prototype, "OnRightSelected", 1),
           f([u.oI], ce.prototype, "OnFullSelected", 1),
           f([u.oI], ce.prototype, "OnSummarySelected", 1),
           f([u.oI], ce.prototype, "OnOuterDivClickPassDown", 1),
-          (ce = f([p.PA], ce));
+          (ce = f([p.PA], ce)));
         let fe = class extends I.Component {
           state = { textToDisplay: "", strURL: "" };
           LoadFromTextArea() {
@@ -3399,11 +3403,11 @@
             });
           }
         };
-        ui(fe, "m_regExp", new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i)),
+        (ui(fe, "m_regExp", new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i)),
           f([u.oI], fe.prototype, "onLinkTitleUpdate", 1),
           f([u.oI], fe.prototype, "onLinkURLUpdate", 1),
           f([u.oI], fe.prototype, "onInsertLink", 1),
-          (fe = f([p.PA], fe));
+          (fe = f([p.PA], fe)));
         let Se = class extends I.Component {
           refFirstInput = I.createRef();
           state = { imgURL: "", anchorURL: "" };
@@ -3414,10 +3418,12 @@
             const { anchorURL: s, imgURL: e } = this.state;
             let t = "",
               i = "";
-            s && s.length > 0 && ((t += "[url=" + s + "]"), (i = "[/url]" + i)),
+            (s &&
+              s.length > 0 &&
+              ((t += "[url=" + s + "]"), (i = "[/url]" + i)),
               (t += "[img]" + e),
               (i = "[/img]" + i),
-              y.wrapBBCode(t, i, this.props.textareaRef.current);
+              y.wrapBBCode(t, i, this.props.textareaRef.current));
           }
           OnImageURLChange(s) {
             this.state.imgURL != s.target.value &&
@@ -3497,10 +3503,10 @@
             });
           }
         };
-        f([u.oI], Se.prototype, "OnImageInsert", 1),
+        (f([u.oI], Se.prototype, "OnImageInsert", 1),
           f([u.oI], Se.prototype, "OnImageURLChange", 1),
           f([u.oI], Se.prototype, "OnAnchorURLChange", 1),
-          (Se = f([p.PA], Se));
+          (Se = f([p.PA], Se)));
         const mi = (s) => {
           const [e, t] = I.useState(""),
             [i, n] = I.useState(""),
@@ -3521,9 +3527,9 @@
                   St.lw + "/" + m.clanAccountID + "/" + pe.zU.GetHashAndExt(m);
                 R += ` photo="${ge}"`;
               }
-              v && (R += ` steamid="${v.ConvertTo64BitString()}"`),
+              (v && (R += ` steamid="${v.ConvertTo64BitString()}"`),
                 (R += `]${h}[/speaker]`),
-                y.replaceSelection(s.textareaRef.current, R);
+                y.replaceSelection(s.textareaRef.current, R));
             },
             ye = e.trim().length != 0 && h.trim().length != 0,
             be = 184;
@@ -3717,7 +3723,8 @@
           m_isMounted = !1;
           m_bAppend = !1;
           constructor(s) {
-            super(s), (this.state = { bPreserveNewLines: !1, strHTMLData: "" });
+            (super(s),
+              (this.state = { bPreserveNewLines: !1, strHTMLData: "" }));
           }
           componentDidMount() {
             this.m_isMounted = !0;
@@ -3726,10 +3733,10 @@
             this.m_isMounted = !1;
           }
           OnConvertAndOverriteHTML() {
-            (this.m_bAppend = !1), this.ConvertBBCode();
+            ((this.m_bAppend = !1), this.ConvertBBCode());
           }
           OnConvertAndAppendHTML() {
-            (this.m_bAppend = !0), this.ConvertBBCode();
+            ((this.m_bAppend = !0), this.ConvertBBCode());
           }
           async ConvertHtmlToBBCode(s, e) {
             let t = new URLSearchParams();
@@ -3745,7 +3752,7 @@
             );
           }
           ConvertBBCode() {
-            this.setState({ bConverting: !0 }),
+            (this.setState({ bConverting: !0 }),
               this.ConvertHtmlToBBCode(
                 this.state.strHTMLData,
                 this.state.bPreserveNewLines,
@@ -3774,7 +3781,7 @@
                     this.props.ownerWindow,
                     { strTitle: (0, l.we)("#EventEditor_ConvertHTML_Error") },
                   );
-                });
+                }));
           }
           OnCheckboxChange(s) {
             let e = s.target.checked;
@@ -3892,11 +3899,11 @@
                   });
           }
         };
-        f([u.oI], De.prototype, "OnConvertAndOverriteHTML", 1),
+        (f([u.oI], De.prototype, "OnConvertAndOverriteHTML", 1),
           f([u.oI], De.prototype, "OnConvertAndAppendHTML", 1),
           f([u.oI], De.prototype, "OnCheckboxChange", 1),
           f([u.oI], De.prototype, "OnTextAreaChange", 1),
-          (De = f([p.PA], De));
+          (De = f([p.PA], De)));
         var Ci = c(10799),
           Li = c(85968),
           Ti = c(15451),
@@ -3913,7 +3920,7 @@
         async function xi(s, e, t) {
           if (q.TS.IN_STEAMUI) {
             const r = zt.w.Init(nt.kVt);
-            r.Body().set_appid(e), r.Body().set_status_text(t);
+            (r.Body().set_appid(e), r.Body().set_status_text(t));
             const h = await nt.xtC.PostStatusToFriends(
               Ht.Vw.CMInterface.GetServiceTransport(),
               r,
@@ -3922,9 +3929,9 @@
             return;
           }
           const i = new FormData();
-          i.append("appid", String(e ?? 0)),
+          (i.append("appid", String(e ?? 0)),
             i.append("status_text", t),
-            i.append("sessionid", (0, Li.KC)());
+            i.append("sessionid", (0, Li.KC)()));
           const n = await fetch(s + "ajaxpostuserstatus", {
             method: "POST",
             body: i,
@@ -4076,7 +4083,7 @@
             x = I.useMemo(() => {
               if (!t) return "";
               const _ = new URL(t);
-              return _.searchParams.set(yi, (0, k.LgB)(r)), _.href;
+              return (_.searchParams.set(yi, (0, k.LgB)(r)), _.href);
             }, [r, t]),
             b = q.TS.EREALM === Z.TU.k_ESteamRealmChina,
             G = () => {
@@ -4242,7 +4249,7 @@
               J--
             )
               (X = p[J]) && (T = (N ? X(g, L, T) : X(T)) || T);
-            return N && T && ze(g, L, T), T;
+            return (N && T && ze(g, L, T), T);
           },
           Ge = ((p) => (
             (p.topleft = "topleft"),
@@ -4270,7 +4277,7 @@
             this.m_listeners.Unregister();
           }
           constructor(p) {
-            super(p),
+            (super(p),
               (this.state = {
                 curLeftPosPct: this.props.xPosPct,
                 curTopPosPct: this.props.yPosPct,
@@ -4290,13 +4297,13 @@
               (this.m_aspectRatio =
                 this.props.heightPct > 0 && this.props.widthPct > 0
                   ? this.props.widthPct / this.props.heightPct
-                  : 1);
+                  : 1));
           }
           LinkRegionBoxRef(p) {
             this.m_elLinkRegionBox = p;
           }
           OnMouseDown(p, g) {
-            this.m_elLinkRegionBox?.parentElement &&
+            (this.m_elLinkRegionBox?.parentElement &&
               this.m_elLinkRegionBox.ownerDocument.defaultView &&
               ((this.m_fnMouseUp = (L) => {
                 this.OnMouseUp(L, g);
@@ -4328,7 +4335,7 @@
                 this.m_fnMouseUp,
               )),
               p.preventDefault(),
-              p.stopPropagation();
+              p.stopPropagation());
           }
           OnMouseMove(p, g) {
             if (this.state.EdgeDown !== void 0) {
@@ -4410,7 +4417,7 @@
                 default:
                   break;
               }
-              p.preventDefault(), p.stopPropagation();
+              (p.preventDefault(), p.stopPropagation());
             }
           }
           IsValidPct(p) {
@@ -4443,7 +4450,7 @@
                 this.props.heightMinPct || 0,
                 this.props.heightMaxPct || 100,
               );
-            this.props.bLockAspectRatio &&
+            (this.props.bLockAspectRatio &&
               (p.curLeftPosPct !== void 0 || p.curRightPosPct !== void 0
                 ? (X = J / this.m_aspectRatio)
                 : (J = X * this.m_aspectRatio)),
@@ -4452,7 +4459,7 @@
                 : (T = 100 - (N + J)),
               p.curTopPosPct !== void 0
                 ? (g = 100 - L - X)
-                : (L = 100 - (g + X));
+                : (L = 100 - (g + X)));
             const He = 100 - T - N,
               he = 100 - L - g;
             this.IsValidPct(N) &&
@@ -4505,7 +4512,7 @@
             );
           }
           OnMouseUp(p, g) {
-            this.setState({
+            (this.setState({
               curWidthPct:
                 100 - this.state.curRightPosPct - this.state.curLeftPosPct,
             }),
@@ -4522,7 +4529,7 @@
                 link_url: this.state.text_link_url,
                 link_description: this.state.text_link_description,
               }),
-              this.m_listeners.Unregister();
+              this.m_listeners.Unregister());
           }
           async HandleDelete() {
             this.props.deleteFn && this.props.deleteFn(this.props.index);
@@ -4544,7 +4551,7 @@
               : !1;
           }
           OnSaveLink() {
-            (this.m_strDescription = this.state.text_link_description ?? ""),
+            ((this.m_strDescription = this.state.text_link_description ?? ""),
               this.setState({ bEditingLink: !this.state.bEditingLink }),
               this.props.updateFn(this.props.index, {
                 xPosPct: this.state.curLeftPosPct,
@@ -4553,7 +4560,7 @@
                 heightPct: this.state.curHeightPct,
                 link_url: this.state.text_link_url,
                 link_description: this.state.text_link_description,
-              });
+              }));
           }
           OnEditLink() {
             this.setState({ bEditingLink: !this.state.bEditingLink });
@@ -4706,7 +4713,7 @@
             );
           }
         };
-        ee([Z.oI], S.prototype, "LinkRegionBoxRef", 1),
+        (ee([Z.oI], S.prototype, "LinkRegionBoxRef", 1),
           ee([Z.oI], S.prototype, "OnMouseDown", 1),
           ee([Z.oI], S.prototype, "OnMouseMove", 1),
           ee([Z.oI], S.prototype, "OnMouseUp", 1),
@@ -4715,7 +4722,7 @@
           ee([Z.oI], S.prototype, "OnSetLinkDescriptionChange", 1),
           ee([Z.oI], S.prototype, "OnSaveLink", 1),
           ee([Z.oI], S.prototype, "OnEditLink", 1),
-          (S = ee([Be.PA], S));
+          (S = ee([Be.PA], S)));
       },
       30470: (O, Q, c) => {
         "use strict";

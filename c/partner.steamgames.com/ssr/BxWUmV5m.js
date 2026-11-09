@@ -86,4 +86,3 @@ function _(_, _) {
       : (console.error(`Attempt to render invalid heading level, "${_}".`),
         `h1`);
 }
-export { _, _ };

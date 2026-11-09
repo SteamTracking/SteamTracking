@@ -10,9 +10,11 @@
       var i = v[e];
       if (i !== void 0) return i.exports;
       var a = (v[e] = { id: e, loaded: !1, exports: {} });
-      return h[e].call(a.exports, a, a.exports, c), (a.loaded = !0), a.exports;
+      return (
+        h[e].call(a.exports, a, a.exports, c), (a.loaded = !0), a.exports
+      );
     }
-    (c.m = h),
+    ((c.m = h),
       (c.amdO = {}),
       (() => {
         var e = [];
@@ -40,7 +42,7 @@
       })(),
       (c.n = (e) => {
         var i = e && e.__esModule ? () => e.default : () => e;
-        return c.d(i, { a: i }), i;
+        return (c.d(i, { a: i }), i);
       }),
       (() => {
         var e = Object.getPrototypeOf
@@ -67,7 +69,7 @@
             f = e(f)
           )
             Object.getOwnPropertyNames(f).forEach((o) => (d[o] = () => a[o]));
-          return (d.default = () => a), c.d(b, d), b;
+          return ((d.default = () => a), c.d(b, d), b);
         };
       })(),
       (c.d = (e, i) => {
@@ -690,7 +692,7 @@
                 break;
               }
             }
-          f ||
+          (f ||
             ((o = !0),
             (f = document.createElement("script")),
             (f.charset = "utf-8"),
@@ -698,9 +700,9 @@
             c.nc && f.setAttribute("nonce", c.nc),
             f.setAttribute("data-webpack", i + b),
             (f.src = a)),
-            (e[a] = [t]);
+            (e[a] = [t]));
           var l = (g, u) => {
-              (f.onerror = f.onload = null), clearTimeout(p);
+              ((f.onerror = f.onload = null), clearTimeout(p));
               var m = e[a];
               if (
                 (delete e[a],
@@ -714,16 +716,16 @@
               l.bind(null, void 0, { type: "timeout", target: f }),
               12e4,
             );
-          (f.onerror = l.bind(null, f.onerror)),
+          ((f.onerror = l.bind(null, f.onerror)),
             (f.onload = l.bind(null, f.onload)),
-            o && document.head.appendChild(f);
+            o && document.head.appendChild(f));
         };
       })(),
       (c.r = (e) => {
-        typeof Symbol < "u" &&
+        (typeof Symbol < "u" &&
           Symbol.toStringTag &&
           Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
-          Object.defineProperty(e, "__esModule", { value: !0 });
+          Object.defineProperty(e, "__esModule", { value: !0 }));
       }),
       (c.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
       (c.p = ""),
@@ -731,7 +733,7 @@
         if (!(typeof document > "u")) {
           var e = (b, d, f, o, n) => {
               var r = document.createElement("link");
-              (r.rel = "stylesheet"), (r.type = "text/css");
+              ((r.rel = "stylesheet"), (r.type = "text/css"));
               var s = (l) => {
                 if (((r.onerror = r.onload = null), l.type === "load")) o();
                 else {
@@ -747,12 +749,12 @@
                         g +
                         ")",
                     );
-                  (u.name = "ChunkLoadError"),
+                  ((u.name = "ChunkLoadError"),
                     (u.code = "CSS_CHUNK_LOAD_FAILED"),
                     (u.type = p),
                     (u.request = g),
                     r.parentNode && r.parentNode.removeChild(r),
-                    n(u);
+                    n(u));
                 }
               };
               return (
@@ -841,7 +843,7 @@
       })(),
       (() => {
         var e = { 14556: 0 };
-        (c.f.j = (t, b) => {
+        ((c.f.j = (t, b) => {
           var d = c.o(e, t) ? e[t] : void 0;
           if (d !== 0)
             if (d) b.push(d[2]);
@@ -857,7 +859,7 @@
                   ) {
                     var l = s && (s.type === "load" ? "missing" : s.type),
                       p = s && s.target && s.target.src;
-                    (n.message =
+                    ((n.message =
                       "Loading chunk " +
                       t +
                       ` failed.
@@ -869,13 +871,13 @@
                       (n.name = "ChunkLoadError"),
                       (n.type = l),
                       (n.request = p),
-                      d[1](n);
+                      d[1](n));
                   }
                 };
               c.l(o, r, "chunk-" + t, t);
             } else e[t] = 0;
         }),
-          (c.O.j = (t) => e[t] === 0);
+          (c.O.j = (t) => e[t] === 0));
         var i = (t, b) => {
             var [d, f, o] = b,
               n,
@@ -886,11 +888,11 @@
               if (o) var l = o(c);
             }
             for (t && t(b); s < d.length; s++)
-              (r = d[s]), c.o(e, r) && e[r] && e[r][0](), (e[r] = 0);
+              ((r = d[s]), c.o(e, r) && e[r] && e[r][0](), (e[r] = 0));
             return c.O(l);
           },
           a = (self.webpackChunkdota_react = self.webpackChunkdota_react || []);
-        a.forEach(i.bind(null, 0)), (a.push = i.bind(null, a.push.bind(a)));
-      })();
+        (a.forEach(i.bind(null, 0)), (a.push = i.bind(null, a.push.bind(a))));
+      })());
   })();
 })();

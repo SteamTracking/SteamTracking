@@ -71,7 +71,12 @@
       #21364da6 80%,
       #1f314a73 95%
     ),
-    radial-gradient(circle at 10% 0, #5eaeff33 0%, #22354d0d 50%, #5eaeff00 90%),
+    radial-gradient(
+      circle at 10% 0,
+      #5eaeff33 0%,
+      #22354d0d 50%,
+      #5eaeff00 90%
+    ),
     radial-gradient(
       circle at 80% 100%,
       #5eaeff1a 0%,
@@ -187,7 +192,7 @@ html.responsive.touch .nHdn-Ea4zSg- .maxz19gKOQc- .rsPEubiF9HI- {
   position: relative;
 }
 .-UQT03dsikU- .e217oOT2n-w- {
-  aspect-ratio: 616 / 353;
+  aspect-ratio: 616/353;
   width: 100%;
   min-height: 0;
   transition-property: transform;

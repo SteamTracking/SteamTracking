@@ -63,15 +63,15 @@ function Z(e, t) {
 async function Q(e, t, i) {
   if (n.IN_STEAMUI) {
     let e = u.Init(R);
-    e.Body().set_appid(t), e.Body().set_status_text(i);
+    (e.Body().set_appid(t), e.Body().set_status_text(i));
     let n = await z.PostStatusToFriends(B.CMInterface.GetServiceTransport(), e);
     if (n.GetEResult() != 1) throw Error(String(n.GetEResult()));
     return;
   }
   let a = new FormData();
-  a.append(`appid`, String(t ?? 0)),
+  (a.append(`appid`, String(t ?? 0)),
     a.append(`status_text`, i),
-    a.append(`sessionid`, r());
+    a.append(`sessionid`, r()));
   let o = await fetch(e + `ajaxpostuserstatus`, {
       method: `POST`,
       body: a,
@@ -201,8 +201,8 @@ function ee(t) {
           .writeText(i.current.value)
           .then(() => o(h(`#EventDisplay_Share_CopiedToClipboard`)))
           .catch((e) => {
-            o(h(`#EventDisplay_Share_FailedToCopyToClipboard`)),
-              console.error(`Failed to copy link to clipboard:`, e);
+            (o(h(`#EventDisplay_Share_FailedToCopyToClipboard`)),
+              console.error(`Failed to copy link to clipboard:`, e));
           });
     };
   return (0, K.jsxs)(`div`, {
@@ -256,7 +256,7 @@ function re(r) {
     E = G.useMemo(() => {
       if (!c) return ``;
       let e = new URL(c);
-      return e.searchParams.set(te, a(m)), e.href;
+      return (e.searchParams.set(te, a(m)), e.href);
     }, [m, c]),
     D = n.EREALM === s.k_ESteamRealmChina;
   return x

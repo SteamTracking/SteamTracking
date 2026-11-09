@@ -23,10 +23,10 @@ var _ = `_6Ymd3Ej4NCU-`,
   _ = _(),
   _ = class extends _.Component {
     constructor(_) {
-      super(_),
+      (super(_),
         (this.state = {
           activeIndex: _.initialActiveIndex || 0,
-        });
+        }));
     }
     render() {
       let { config: _ } = this.props,
@@ -330,10 +330,10 @@ var _ = _((_) => {
   _ = class extends _.Component {
     m_disposeEmoticonStore;
     constructor(_) {
-      super(_),
+      (super(_),
         (this.state = {
           strSearchText: ``,
-        });
+        }));
       let _ = this.props.emoticonStore;
       _.is_initialized ||
         (_.UpdateEmoticonList(),
@@ -411,10 +411,10 @@ _ = _([_], _);
 var _ = class extends _.Component {
     m_disposeEmoticonStore;
     constructor(_) {
-      super(_),
+      (super(_),
         (this.state = {
           strSearchText: ``,
-        });
+        }));
       let _ = this.props.emoticonStore;
       _.is_initialized ||
         (_.UpdateEmoticonList(),
@@ -452,10 +452,10 @@ var _ = class extends _.Component {
   _ = class extends _.Component {
     m_disposeEmoticonStore;
     constructor(_) {
-      super(_),
+      (super(_),
         (this.state = {
           strSearchText: ``,
-        });
+        }));
       let _ = this.props.emoticonStore;
       _.is_initialized ||
         (_.UpdateEmoticonList(),
@@ -1089,7 +1089,7 @@ var _ = `pvP8JT4e7EA-`,
         this.BHaveUnseenEmoticons() && _)
       ) {
         let _ = this.GetNewestIndicatorTime();
-        (!_ || _ < _) && (_ = _), _(`rtLastAckedNewEmoticons`, _);
+        ((!_ || _ < _) && (_ = _), _(`rtLastAckedNewEmoticons`, _));
       }
     }
     GetNewestIndicatorTime() {
@@ -1098,7 +1098,7 @@ var _ = `pvP8JT4e7EA-`,
         _ = _.GetTimeReceivedNewestEmoticon();
       _ && (_ = _);
       let _ = _.GetTimeReceivedForStickerOrEffect();
-      return (_ = Math.max(_, _)), _ > -(2 ** 53 - 1) ? _ : void 0;
+      return ((_ = Math.max(_, _)), _ > -(2 ** 53 - 1) ? _ : void 0);
     }
     BHaveUnseenEmoticons() {
       let { rtLastAckedNewEmoticons: _ } = this.props,
@@ -1145,6 +1145,5 @@ var _ = `pvP8JT4e7EA-`,
       );
     }
   };
-_([_], _.prototype, `OnEmoticonClick`, null), (_ = _([_], _));
+(_([_], _.prototype, `OnEmoticonClick`, null), (_ = _([_], _)));
 var _ = _;
-export { _, _, _, _, _, _, _, _, _ };

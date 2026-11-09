@@ -1810,7 +1810,7 @@
         var _ = document.createElement("a");
         _.href = _.BASE_URL;
         var _ = _.pathname;
-        return _.endsWith("/") || (_ += "/"), (_ += "applications/dpc");
+        return (_.endsWith("/") || (_ += "/"), (_ += "applications/dpc"));
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1887,8 +1887,8 @@
         }
       }
       var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
-      !(function (_) {
-        (_[(_.k_EConnectivityTestResult_Unknown = 0)] =
+      (!(function (_) {
+        ((_[(_.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
           (_[(_.k_EConnectivityTestResult_Connected = 1)] =
             "k_EConnectivityTestResult_Connected"),
@@ -1901,10 +1901,10 @@
           (_[(_.k_EConnectivityTestResult_WifiDisabled = 5)] =
             "k_EConnectivityTestResult_WifiDisabled"),
           (_[(_.k_EConnectivityTestResult_NoLAN = 6)] =
-            "k_EConnectivityTestResult_NoLAN");
+            "k_EConnectivityTestResult_NoLAN"));
       })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_ENetFakeLocalSystemState_Normal = 0)] =
+          ((_[(_.k_ENetFakeLocalSystemState_Normal = 0)] =
             "k_ENetFakeLocalSystemState_Normal"),
             (_[(_.k_ENetFakeLocalSystemState_NoLAN = 1)] =
               "k_ENetFakeLocalSystemState_NoLAN"),
@@ -1915,10 +1915,10 @@
             (_[(_.k_ENetFakeLocalSystemState_NoInternet = 4)] =
               "k_ENetFakeLocalSystemState_NoInternet"),
             (_[(_.k_ENetFakeLocalSystemState_NoSteam = 5)] =
-              "k_ENetFakeLocalSystemState_NoSteam");
+              "k_ENetFakeLocalSystemState_NoSteam"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_ESuspendResumeProgressState_Invalid = 0)] =
+          ((_[(_.k_ESuspendResumeProgressState_Invalid = 0)] =
             "k_ESuspendResumeProgressState_Invalid"),
             (_[(_.k_ESuspendResumeProgressState_Complete = 1)] =
               "k_ESuspendResumeProgressState_Complete"),
@@ -1929,44 +1929,44 @@
             (_[(_.k_ESuspendResumeProgressState_WaitingForApp = 4)] =
               "k_ESuspendResumeProgressState_WaitingForApp"),
             (_[(_.k_ESuspendResumeProgressState_Working = 5)] =
-              "k_ESuspendResumeProgressState_Working");
+              "k_ESuspendResumeProgressState_Working"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
+          ((_[(_.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
             "k_EFloatingGamepadTextInputModeModeSingleLine"),
             (_[(_.k_EFloatingGamepadTextInputModeModeMultipleLines = 1)] =
               "k_EFloatingGamepadTextInputModeModeMultipleLines"),
             (_[(_.k_EFloatingGamepadTextInputModeModeEmail = 2)] =
               "k_EFloatingGamepadTextInputModeModeEmail"),
             (_[(_.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
-              "k_EFloatingGamepadTextInputModeModeNumeric");
+              "k_EFloatingGamepadTextInputModeModeNumeric"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_EAppUpdateContentType_Content = 0)] =
+          ((_[(_.k_EAppUpdateContentType_Content = 0)] =
             "k_EAppUpdateContentType_Content"),
             (_[(_.k_EAppUpdateContentType_Workshop = 1)] =
               "k_EAppUpdateContentType_Workshop"),
             (_[(_.k_EAppUpdateContentType_Shader = 2)] =
               "k_EAppUpdateContentType_Shader"),
             (_[(_.k_EAppUpdateContentType_Max = 3)] =
-              "k_EAppUpdateContentType_Max");
+              "k_EAppUpdateContentType_Max"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_EOverlayToStoreFlag_None = 0)] =
+          ((_[(_.k_EOverlayToStoreFlag_None = 0)] =
             "k_EOverlayToStoreFlag_None"),
             (_[(_.k_EOverlayToStoreFlag_AddToCart = 1)] =
               "k_EOverlayToStoreFlag_AddToCart"),
             (_[(_.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
-              "k_EOverlayToStoreFlag_AddToCartAndShow");
+              "k_EOverlayToStoreFlag_AddToCartAndShow"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
+          ((_[(_.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (_[(_.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
-              "k_EActivateGameOverlayToWebPageMode_Modal");
+              "k_EActivateGameOverlayToWebPageMode_Modal"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_EGamingDeviceType_Unknown = 0)] =
+          ((_[(_.k_EGamingDeviceType_Unknown = 0)] =
             "k_EGamingDeviceType_Unknown"),
             (_[(_.k_EGamingDeviceType_StandardPC = 1)] =
               "k_EGamingDeviceType_StandardPC"),
@@ -1980,16 +1980,16 @@
             (_[(_.k_EGamingDeviceType_Phone = 528)] =
               "k_EGamingDeviceType_Phone"),
             (_[(_.k_EGamingDeviceType_SteamDeck = 544)] =
-              "k_EGamingDeviceType_SteamDeck");
+              "k_EGamingDeviceType_SteamDeck"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
+          ((_[(_.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
             (_[(_.k_ELoginUIStyleNewWithoutQRCode = 1)] =
               "k_ELoginUIStyleNewWithoutQRCode"),
-            (_[(_.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
+            (_[(_.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
+          ((_[(_.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
             "k_ECommunityProfileItemProperty_ImageSmall"),
             (_[(_.k_ECommunityProfileItemProperty_ImageLarge = 1)] =
               "k_ECommunityProfileItemProperty_ImageLarge"),
@@ -2012,25 +2012,25 @@
             (_[(_.k_ECommunityProfileItemProperty_MovieWebMSmall = 10)] =
               "k_ECommunityProfileItemProperty_MovieWebMSmall"),
             (_[(_.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
-              "k_ECommunityProfileItemProperty_MovieMP4Small");
+              "k_ECommunityProfileItemProperty_MovieMP4Small"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_ERaiseGameWindowResult_NotRunning = 1)] =
+          ((_[(_.k_ERaiseGameWindowResult_NotRunning = 1)] =
             "k_ERaiseGameWindowResult_NotRunning"),
             (_[(_.k_ERaiseGameWindowResult_Success = 2)] =
               "k_ERaiseGameWindowResult_Success"),
             (_[(_.k_ERaiseGameWindowResult_Failure = 3)] =
-              "k_ERaiseGameWindowResult_Failure");
+              "k_ERaiseGameWindowResult_Failure"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
+          ((_[(_.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
             (_[(_.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
             (_[(_.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
             (_[(_.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
-            (_[(_.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
+            (_[(_.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_EAppReleaseState_Unknown = 0)] =
+          ((_[(_.k_EAppReleaseState_Unknown = 0)] =
             "k_EAppReleaseState_Unknown"),
             (_[(_.k_EAppReleaseState_Unavailable = 1)] =
               "k_EAppReleaseState_Unavailable"),
@@ -2041,16 +2041,16 @@
             (_[(_.k_EAppReleaseState_Released = 4)] =
               "k_EAppReleaseState_Released"),
             (_[(_.k_EAppReleaseState_Disabled = 5)] =
-              "k_EAppReleaseState_Disabled");
+              "k_EAppReleaseState_Disabled"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
+          ((_[(_.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (_[(_.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
             (_[(_.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
-            (_[(_.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
+            (_[(_.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
+          ((_[(_.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
             (_[(_.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
             (_[(_.k_EInstallMgrStateWaitLicense = 2)] =
               "k_EInstallMgrStateWaitLicense"),
@@ -2080,26 +2080,26 @@
               "k_EInstallMgrStateComplete"),
             (_[(_.k_EInstallMgrStateFailed = 15)] = "k_EInstallMgrStateFailed"),
             (_[(_.k_EInstallMgrStateCanceled = 16)] =
-              "k_EInstallMgrStateCanceled");
+              "k_EInstallMgrStateCanceled"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_EWindowBringToFrontInvalid = 0)] =
+          ((_[(_.k_EWindowBringToFrontInvalid = 0)] =
             "k_EWindowBringToFrontInvalid"),
             (_[(_.k_EWindowBringToFrontAndForceOS = 1)] =
               "k_EWindowBringToFrontAndForceOS"),
             (_[(_.k_EWindowBringToFrontWithoutForcingOS = 2)] =
-              "k_EWindowBringToFrontWithoutForcingOS");
+              "k_EWindowBringToFrontWithoutForcingOS"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
+          ((_[(_.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
             (_[(_.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
-            (_[(_.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-        })(_ || (_ = {}));
+            (_[(_.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina"));
+        })(_ || (_ = {})));
       !(function () {
         function _() {
           this.m_rgHandles = [];
         }
-        (_.prototype.Add = function (_) {
+        ((_.prototype.Add = function (_) {
           _ && this.m_rgHandles.push(_);
         }),
           (_.prototype.Unregister = function () {
@@ -2109,20 +2109,20 @@
               var _ = _[_];
               _ && _.unregister();
             }
-          });
+          }));
       })();
       function _() {
         return !!window.document;
       }
       var _;
       function _() {
-        if (!_()) return _ || (_ = _()), _;
+        if (!_()) return (_ || (_ = _()), _);
         var _ = (function (_) {
           if (!_() || !window.document.cookie) return null;
           var _ = document.cookie.match("(^|; )" + _ + "=([^;]*)");
           return _ && _[2] ? decodeURIComponent(_[2]) : null;
         })("sessionid");
-        return _ || (_ = _()), _;
+        return (_ || (_ = _()), _);
       }
       function _() {
         var _ = (function () {
@@ -2141,8 +2141,8 @@
               var _ = "";
               if (void 0 !== _ && _) {
                 var _ = new Date();
-                _.setTime(_.getTime() + 864e5 * _),
-                  (_ = "; expires=" + _.toUTCString());
+                (_.setTime(_.getTime() + 864e5 * _),
+                  (_ = "; expires=" + _.toUTCString()));
               }
               document.cookie =
                 encodeURIComponent(_) +
@@ -2288,16 +2288,16 @@
           })(function () {}),
           (function () {
             function _(_, _) {
-              (this.m_callbacks = new _()),
+              ((this.m_callbacks = new _()),
                 (this.m_currentValue = _),
-                (this.m_fnEquals = _);
+                (this.m_fnEquals = _));
             }
             return (
               (_.prototype.Set = function (_) {
                 if (this.m_fnEquals) {
                   if (this.m_fnEquals(this.m_currentValue, _)) return;
                 } else if (this.m_currentValue === _) return;
-                (this.m_currentValue = _), this.m_callbacks.Dispatch(_);
+                ((this.m_currentValue = _), this.m_callbacks.Dispatch(_));
               }),
               Object.defineProperty(_.prototype, "Value", {
                 get: function () {
@@ -2316,12 +2316,12 @@
           })());
       !(function () {
         function _(_, _, _) {
-          (this.m_subscriptionRefCount = 0),
+          ((this.m_subscriptionRefCount = 0),
             (this.m_originalSubscribableValue = _),
             (this.m_mappedSubscribableValue = new _(_(_.Value), _)),
-            (this.m_fnMap = _);
+            (this.m_fnMap = _));
         }
-        Object.defineProperty(_.prototype, "Value", {
+        (Object.defineProperty(_.prototype, "Value", {
           get: function () {
             var _;
             return null === (_ = this.m_mappedSubscribableValue) || void 0 === _
@@ -2347,20 +2347,20 @@
                 : _.Subscribe(_);
             return {
               Unsubscribe: function () {
-                _.Unsubscribe(),
+                (_.Unsubscribe(),
                   0 == --_.m_subscriptionRefCount &&
                     (_.m_mappedUnsubscribe.Unsubscribe(),
-                    (_.m_mappedUnsubscribe = null));
+                    (_.m_mappedUnsubscribe = null)));
               },
             };
-          });
+          }));
       })();
-      (function () {
+      ((function () {
         function _() {}
-        (_.prototype.Schedule = function (_, _) {
-          this.IsScheduled() && this.Cancel(),
+        ((_.prototype.Schedule = function (_, _) {
+          (this.IsScheduled() && this.Cancel(),
             (this.m_fnCallback = _),
-            (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _));
+            (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _)));
         }),
           (_.prototype.IsScheduled = function () {
             return void 0 !== this.m_schTimer;
@@ -2372,21 +2372,21 @@
           (_.prototype.ScheduledInternal = function () {
             this.m_schTimer = void 0;
             var _ = this.m_fnCallback;
-            (this.m_fnCallback = void 0), _();
+            ((this.m_fnCallback = void 0), _());
           }),
-          (0, _._)([_], _.prototype, "ScheduledInternal", null);
+          (0, _._)([_], _.prototype, "ScheduledInternal", null));
       })(),
         (function () {
           function _() {
             this.m_rgListeners = [];
           }
-          (_.prototype.AddEventListener = function (_, _, _) {
-            _.addEventListener(_, _),
+          ((_.prototype.AddEventListener = function (_, _, _) {
+            (_.addEventListener(_, _),
               this.m_rgListeners.push({
                 element: _,
                 type: _,
                 listener: _,
-              });
+              }));
           }),
             (_.prototype.Unregister = function () {
               for (var _ = 0, _ = this.m_rgListeners; _ < _.length; _++) {
@@ -2394,14 +2394,14 @@
                 _.element.removeEventListener(_.type, _.listener);
               }
               this.m_rgListeners = [];
-            });
-        })();
+            }));
+        })());
       var _;
       !(function () {
         function _() {
           this.m_vecCallbacks = [];
         }
-        (_.prototype.Push = function (_) {
+        ((_.prototype.Push = function (_) {
           this.m_vecCallbacks.push(_);
         }),
           (_.prototype.PushArrayRemove = function (_, _) {
@@ -2418,21 +2418,21 @@
           (_.prototype.GetUnregisterFunc = function () {
             return this.Unregister;
           }),
-          (0, _._)([_], _.prototype, "Unregister", null);
+          (0, _._)([_], _.prototype, "Unregister", null));
       })();
       !(function (_) {
-        (_[(_.None = 0)] = "None"),
+        ((_[(_.None = 0)] = "None"),
           (_[(_.Ago = 1)] = "Ago"),
-          (_[(_.Remaining = 2)] = "Remaining");
+          (_[(_.Remaining = 2)] = "Remaining"));
       })(_ || (_ = {}));
       new Map();
-      new Map(), new Map();
-      new Map(), new Map(), new Map(), new Map(), new Map(), new Map();
+      (new Map(), new Map());
+      (new Map(), new Map(), new Map(), new Map(), new Map(), new Map());
       var _ = (function () {
         function _() {
-          (this.m_mapTokens = new Map()),
+          ((this.m_mapTokens = new Map()),
             (this.m_mapFallbackTokens = new Map()),
-            (this.m_cbkTokensChanged = new _());
+            (this.m_cbkTokensChanged = new _()));
         }
         return (
           (_.InstallErrorReportingStore = function (_) {
@@ -2464,24 +2464,24 @@
             _ || this.m_mapTokens.clear();
             var _ = (0, _._)((0, _._)({}, _ || {}), _),
               _ = (0, _._)((0, _._)({}, _ || {}), _ || {});
-            this.AddTokens(_, _), this.m_cbkTokensChanged.Dispatch();
+            (this.AddTokens(_, _), this.m_cbkTokensChanged.Dispatch());
           }),
           (_.prototype.InitDirect = function (_, _) {
-            this.m_mapTokens.clear(),
+            (this.m_mapTokens.clear(),
               this.m_mapFallbackTokens.clear(),
               this.AddTokens(_, _),
-              this.m_cbkTokensChanged.Dispatch();
+              this.m_cbkTokensChanged.Dispatch());
           }),
           (_.prototype.AddTokens = function (_, _) {
             var _ = this;
-            Object.keys(_).forEach(function (_) {
+            (Object.keys(_).forEach(function (_) {
               _.m_mapTokens.set(_, _[_]);
             }),
               _ &&
                 Object.keys(_).forEach(function (_) {
-                  _.m_mapTokens.has(_) || _.m_mapTokens.set(_, _[_]),
-                    _.m_mapFallbackTokens.set(_, _[_]);
-                });
+                  (_.m_mapTokens.has(_) || _.m_mapTokens.set(_, _[_]),
+                    _.m_mapFallbackTokens.set(_, _[_]));
+                }));
           }),
           (_.prototype.GetTokensChangedCallbackList = function () {
             return this.m_cbkTokensChanged;
@@ -2565,19 +2565,19 @@
       }
       !(function () {
         function _() {}
-        (_.Set = function (_, _, _) {
+        ((_.Set = function (_, _, _) {
           if (_.length <= _) {
             if (_ >= 31) return _;
-            (_ = _ + 1),
+            ((_ = _ + 1),
               (_ = null),
               (_ = _) ||
                 console.error(
                   "array should be defined for us to fill in the missing indexes",
                 ),
-              (_ = _.length < _ ? _.concat(Array(_ - _.length).fill(_)) : _);
+              (_ = _.length < _ ? _.concat(Array(_ - _.length).fill(_)) : _));
           }
           var _, _, _;
-          return (_[_] = _), _;
+          return ((_[_] = _), _);
         }),
           (_.Get = function (_, _) {
             return (_ && _.length > _ && _[_]) || "";
@@ -2586,25 +2586,25 @@
             return _
               ? _.Get(_, _) || _.Get(_, _.GetELanguageFallback(_))
               : null;
-          });
+          }));
       })();
       var _,
         _,
         _ = new _();
-      (window.LocalizationManager = _),
+      ((window.LocalizationManager = _),
         (function (_) {
-          (_[(_.LeagueSelect = 0)] = "LeagueSelect"),
+          ((_[(_.LeagueSelect = 0)] = "LeagueSelect"),
             (_[(_.RegionSelect = 1)] = "RegionSelect"),
             (_[(_.Roster = 2)] = "Roster"),
             (_[(_.PlayerSelect = 3)] = "PlayerSelect"),
             (_[(_.Scores = 4)] = "Scores"),
-            (_[(_.Leaderboard = 5)] = "Leaderboard");
+            (_[(_.Leaderboard = 5)] = "Leaderboard"));
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.Teams = 0)] = "Teams"),
+          ((_[(_.Teams = 0)] = "Teams"),
             (_[(_.Standings = 1)] = "Standings"),
-            (_[(_.Matchups = 2)] = "Matchups");
-        })(_ || (_ = {}));
+            (_[(_.Matchups = 2)] = "Matchups"));
+        })(_ || (_ = {})));
       const _ = function () {
           return "/feed";
         },
@@ -2817,7 +2817,7 @@
       !(function () {
         function _(_) {
           var _ = this;
-          (this.m_bNeedSort = !1),
+          ((this.m_bNeedSort = !1),
             (this.m_bOffsetsInvalidated = !1),
             (this.m_rgChildren = []),
             (this.RecomputeVisibility = function () {
@@ -2834,12 +2834,12 @@
                   _.fnCallback(!0);
                 }
               }
-              (_.m_nLastYMin = _), (_.m_nLastYMax = _);
+              ((_.m_nLastYMin = _), (_.m_nLastYMax = _));
             }),
-            (this.m_nBufferPx = _);
+            (this.m_nBufferPx = _));
         }
-        (_.prototype.SetParent = function (_) {
-          this.m_elParent &&
+        ((_.prototype.SetParent = function (_) {
+          (this.m_elParent &&
             this.m_elParent.ownerDocument.defaultView.removeEventListener(
               "resize",
               this.RecomputeVisibility,
@@ -2849,10 +2849,10 @@
               this.m_elParent.ownerDocument.defaultView.addEventListener(
                 "resize",
                 this.RecomputeVisibility,
-              );
+              ));
         }),
           (_.prototype.InvalidateOffsetsAndRecompute = function () {
-            (this.m_bOffsetsInvalidated = !0), this.RecomputeVisibility();
+            ((this.m_bOffsetsInvalidated = !0), this.RecomputeVisibility());
           }),
           (_.prototype.EnsureSort = function () {
             if (this.m_bOffsetsInvalidated) {
@@ -2868,7 +2868,7 @@
               (this.m_bNeedSort = !1));
           }),
           (_.prototype.RegisterChild = function (_, _) {
-            this.m_rgChildren.push({
+            (this.m_rgChildren.push({
               element: _,
               yOffset: _.offsetTop,
               fnCallback: _,
@@ -2878,13 +2878,13 @@
                 void 0 !== this.m_nLastYMax &&
                 _.offsetTop >= this.m_nLastYMin &&
                 _.offsetTop <= this.m_nLastYMax &&
-                _(!0);
+                _(!0));
           }),
           (_.prototype.UnregisterChild = function (_) {
             _(this.m_rgChildren, function (_) {
               return _.element == _;
             });
-          });
+          }));
       })();
       var _ = __webpack_require__("chunkid"),
         _ = function (_) {
@@ -3638,10 +3638,10 @@
           return (
             (0, _._)(_, _),
             (_.prototype.onTouchStart = function (_) {
-              this.setState({
+              (this.setState({
                 touching: !0,
               }),
-                _.stopPropagation();
+                _.stopPropagation());
             }),
             (_.prototype.onTouchEnd = function (_) {
               if (_.isIOS) {
@@ -3649,11 +3649,11 @@
                     this.refHelpPages.current.scrollLeft +
                     10 * this.lastScrollDelta,
                   _ = Math.round(_ / this.refHelpPages.current.clientWidth);
-                this.setState({
+                (this.setState({
                   touching: !1,
                   pageNum: _,
                 }),
-                  _.stopPropagation();
+                  _.stopPropagation());
               }
             }),
             (_.prototype.updateScrollPos = function () {
@@ -3674,9 +3674,12 @@
             }),
             (_.prototype.componentDidMount = function () {
               var _ = this;
-              this.refHelpPages.current.addEventListener("scroll", function () {
-                _.updateScrollPos();
-              }),
+              (this.refHelpPages.current.addEventListener(
+                "scroll",
+                function () {
+                  _.updateScrollPos();
+                },
+              ),
                 _.isIOS &&
                   (this.intervalHandle = setInterval(function () {
                     if (_.shouldShowHelp(_.props.helpPage)) {
@@ -3693,7 +3696,7 @@
                         });
                       }
                     }
-                  }, 5));
+                  }, 5)));
             }),
             (_.prototype.componentWillUnmount = function () {
               clearInterval(this.intervalHandle);
@@ -4334,9 +4337,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       !(function (_) {
-        (_[(_.Large = 0)] = "Large"),
+        ((_[(_.Large = 0)] = "Large"),
           (_[(_.Medium = 1)] = "Medium"),
-          (_[(_.Small = 2)] = "Small");
+          (_[(_.Small = 2)] = "Small"));
       })(_ || (_ = {}));
       var _ = (function (_) {
         function _() {
@@ -4493,7 +4496,7 @@
               }));
             var _ = 0,
               _ = 0;
-            for (var _ in _) (_ = Math.max(_, _[_])), (_ += _[_]);
+            for (var _ in _) ((_ = Math.max(_, _[_])), (_ += _[_]));
             return (
               ((0 == _.series_type && 1 == _) ||
                 (1 == _.series_type && 2 == _) ||
@@ -4825,8 +4828,8 @@
         var _ = _ % 100,
           _ = "#LOC_Ordinal_Prefix_" + _,
           _ = _(_);
-        _ === _ && (_ = _("#LOC_Ordinal_Prefix_Default")),
-          "<none>" === _ && (_ = "");
+        (_ === _ && (_ = _("#LOC_Ordinal_Prefix_Default")),
+          "<none>" === _ && (_ = ""));
         var _ = "#LOC_Ordinal_Suffix_" + _,
           _ = _(_);
         return (
@@ -5401,9 +5404,9 @@
       })(_.Component);
       var _;
       !(function (_) {
-        (_[(_.Add = 0)] = "Add"),
+        ((_[(_.Add = 0)] = "Add"),
           (_[(_.Remove = 1)] = "Remove"),
-          (_[(_.Disband = 2)] = "Disband");
+          (_[(_.Disband = 2)] = "Disband"));
       })(_ || (_ = {}));
       var _ = (function (_) {
         function _(_) {
@@ -5447,7 +5450,7 @@
                 case _.Disband:
                   _ = _("#TeamRoster_Disband", _.name);
               }
-              _.push(
+              (_.push(
                 _.createElement(
                   "div",
                   {
@@ -5469,7 +5472,7 @@
                     },
                     _,
                   ),
-                );
+                ));
             }
             return _;
           }),
@@ -5518,7 +5521,7 @@
               _ = !1;
             switch (this.props.type) {
               case 1:
-                (_ = _().backgroundColorOrange),
+                ((_ = _().backgroundColorOrange),
                   (_ = _("#Feed_SeriesResult")),
                   (_ = "feed_dota.png"),
                   (_ = _.createElement(_, {
@@ -5530,10 +5533,10 @@
                       this.props.series_id,
                     nLeagueID: this.props.league_id,
                     nSeriesID: this.props.series_id,
-                  }));
+                  })));
                 break;
               case 2:
-                (_ = _().backgroundColorBrightBlue),
+                ((_ = _().backgroundColorBrightBlue),
                   (_ = _("#Feed_PopularMatch")),
                   (_ = "feed_star.png"),
                   (_ = _.createElement(_, {
@@ -5545,10 +5548,10 @@
                       this.props.match_id,
                     leagueID: this.props.league_id,
                     matchID: this.props.match_id,
-                  }));
+                  })));
                 break;
               case 3:
-                (_ = _().backgroundColorOrange),
+                ((_ = _().backgroundColorOrange),
                   (_ = _("#Feed_UpcomingMatch")),
                   (_ = "feed_dota.png"),
                   (_ = _.createElement(_, {
@@ -5561,10 +5564,10 @@
                     leagueID: this.props.league_id,
                     nodeID: this.props.node_id,
                   })),
-                  (_ = !0);
+                  (_ = !0));
                 break;
               case 4:
-                (_ = _().backgroundColorBrightPurple),
+                ((_ = _().backgroundColorBrightPurple),
                   (_ = _("#Feed_TournamentResult")),
                   (_ = "feed_cup.png"),
                   (_ = _.createElement(_, {
@@ -5579,10 +5582,10 @@
                     standing: this.props.data_1,
                     points: this.props.data_2,
                     winnings: this.props.data_3,
-                  }));
+                  })));
                 break;
               case 5:
-                (_ = _().backgroundColorBrightGreen),
+                ((_ = _().backgroundColorBrightGreen),
                   (_ = _("#Feed_TeamRosterChange")),
                   (_ = "feed_news.png"),
                   (_ = _.createElement(_, {
@@ -5595,10 +5598,10 @@
                     teamID: this.props.team_id,
                     action: _.Add,
                     accountID: this.props.account_id,
-                  }));
+                  })));
                 break;
               case 6:
-                (_ = _().backgroundColorBrightGreen),
+                ((_ = _().backgroundColorBrightGreen),
                   (_ = _("#Feed_TeamRosterChange")),
                   (_ = "feed_news.png"),
                   (_ = _.createElement(_, {
@@ -5611,10 +5614,10 @@
                     teamID: this.props.team_id,
                     action: _.Remove,
                     accountID: this.props.account_id,
-                  }));
+                  })));
                 break;
               case 7:
-                (_ = _().backgroundColorBrightGreen),
+                ((_ = _().backgroundColorBrightGreen),
                   (_ = _("#Feed_TeamDisband")),
                   (_ = "feed_news.png"),
                   (_ = _.createElement(_, {
@@ -5626,35 +5629,35 @@
                       this.props.account_id,
                     teamID: this.props.team_id,
                     action: _.Disband,
-                  }));
+                  })));
                 break;
               case 8:
-                (_ = _().backgroundColorBrightPurple),
+                ((_ = _().backgroundColorBrightPurple),
                   (_ = _("#Feed_LeagueUpcoming")),
-                  (_ = "feed_cup.png");
+                  (_ = "feed_cup.png"));
                 break;
               case 9:
-                (_ = _().backgroundColorBrightPurple),
+                ((_ = _().backgroundColorBrightPurple),
                   (_ = _("#Feed_LeagueConcluded")),
-                  (_ = "feed_cup.png");
+                  (_ = "feed_cup.png"));
                 break;
               case 10:
-                (_ = _().backgroundColorBrightOrange),
+                ((_ = _().backgroundColorBrightOrange),
                   (_ = _("#Feed_DPCStandings")),
-                  (_ = "feed_international.png");
+                  (_ = "feed_international.png"));
                 break;
               case 11:
-                (_ = _().backgroundColorBrightGreen),
+                ((_ = _().backgroundColorBrightGreen),
                   (_ = _("#Feed_AlertPredictions")),
-                  (_ = "feed_news.png");
+                  (_ = "feed_news.png"));
                 break;
               case 12:
-                (_ = _().backgroundColorBrightGreen),
+                ((_ = _().backgroundColorBrightGreen),
                   (_ = _("#Feed_AlertFantasy")),
-                  (_ = "feed_news.png");
+                  (_ = "feed_news.png"));
                 break;
               case 13:
-                (_ = _().backgroundColorOrange),
+                ((_ = _().backgroundColorOrange),
                   (_ = _("#Feed_LiveMatch")),
                   (_ = "feed_dota.png"),
                   (_ = _.createElement(_, {
@@ -5671,10 +5674,10 @@
                     serverSteamID: this.props.server_steam_id,
                     nodeID: this.props.data_3,
                   })),
-                  (_ = !0);
+                  (_ = !0));
                 break;
               case 14:
-                (_ = _().backgroundColorOrange),
+                ((_ = _().backgroundColorOrange),
                   (_ = _("#Feed_LiveSeries")),
                   (_ = "feed_dota.png"),
                   (_ = _.createElement(_, {
@@ -5687,7 +5690,7 @@
                     leagueID: this.props.league_id,
                     nodeID: this.props.node_id,
                   })),
-                  (_ = !0);
+                  (_ = !0));
             }
             var _ = "",
               _ = Date.now() / 1e3;
@@ -5847,14 +5850,14 @@
           return (
             (0, _._)(_, _),
             (_.prototype.componentDidUpdate = function (_) {
-              _.src != this.props.src &&
+              (_.src != this.props.src &&
                 this.setState({
                   bError: !1,
                 }),
                 _.fallbackSrc != this.props.fallbackSrc &&
                   this.setState({
                     bFallbackError: !1,
-                  });
+                  }));
             }),
             (_.prototype.render = function () {
               var _ = this.props,
@@ -5880,16 +5883,16 @@
                     );
             }),
             (_.prototype.HandleError = function (_) {
-              this.setState({
+              (this.setState({
                 bError: !0,
               }),
-                this.props.onError && this.props.onError(_);
+                this.props.onError && this.props.onError(_));
             }),
             (_.prototype.HandleFallbackError = function (_) {
-              this.setState({
+              (this.setState({
                 bFallbackError: !0,
               }),
-                this.props.onError && this.props.onError(_);
+                this.props.onError && this.props.onError(_));
             }),
             (0, _._)([_], _.prototype, "HandleError", null),
             (0, _._)([_], _.prototype, "HandleFallbackError", null),
@@ -6392,11 +6395,11 @@
                     ) * this.props.stepSize
                   ).toFixed(0),
                 );
-                this.setState({
+                (this.setState({
                   currValue: _,
                   pipPosition: _ + (_ - _) * _,
                 }),
-                  this.props.onValueChanged && this.props.onValueChanged(_);
+                  this.props.onValueChanged && this.props.onValueChanged(_));
               }
             }),
             (_.prototype.OnChange = function (_) {
@@ -6555,10 +6558,10 @@
                   this.props.demoMode)
                 ) {
                   case 3:
-                    (_.teams[0].games_won = 2), (_.teams[1].games_won = 1);
+                    ((_.teams[0].games_won = 2), (_.teams[1].games_won = 1));
                     break;
                   case 4:
-                    (_.teams[0].games_won = 1), (_.teams[1].games_won = 2);
+                    ((_.teams[0].games_won = 1), (_.teams[1].games_won = 2));
                 }
                 2 == this.props.demoMode &&
                   (_ = {
@@ -6571,7 +6574,7 @@
                     state: _.STATE_INCOMPLETE,
                   });
               } else
-                (_ = _.getProPrediction(
+                ((_ = _.getProPrediction(
                   this.props.leagueId,
                   this.props.match.nodeId,
                 )),
@@ -6579,7 +6582,7 @@
                   (_ = _.getProPredictionError(
                     this.props.leagueId,
                     this.props.match.nodeId,
-                  ));
+                  )));
               if (!_) return _.createElement("div", null);
               var _ = null;
               switch (_.state) {
@@ -6593,7 +6596,7 @@
                   _ = _().TiedPrediction;
               }
               var _ = [];
-              _.push(
+              (_.push(
                 _.createElement("div", {
                   className: _().TeamStatus,
                 }),
@@ -6602,7 +6605,7 @@
                   _.createElement("div", {
                     className: _().TeamStatus,
                   }),
-                );
+                ));
               for (var _ = 0; _ < 2; ++_)
                 if (_.state == _.STATE_INCOMPLETE)
                   _ &&
@@ -6630,14 +6633,14 @@
                       ));
                 else if (_.teams[_].games_won > _.teams[1 - _].games_won) {
                   var _ = null;
-                  _.state == _.STATE_WON && (_ = _().TeamWinner),
+                  (_.state == _.STATE_WON && (_ = _().TeamWinner),
                     (_[_] = _.createElement(
                       "div",
                       {
                         className: _(_().TeamStatus, _),
                       },
                       _.createElement("div", null, _("#Predictions_Winner")),
-                    ));
+                    )));
                 }
               var _,
                 _,
@@ -6731,7 +6734,7 @@
                     className: _().BottomPadding,
                   }),
                 );
-              (_ =
+              ((_ =
                 0 == _.actualMatchTime
                   ? _.createElement(
                       "div",
@@ -6818,7 +6821,7 @@
                     ),
                     _[1],
                   ),
-                ));
+                )));
               var _ = null;
               null == this.props.demoMode && (_ = _().NotDemoMode);
               var _ = null,
@@ -7074,31 +7077,31 @@
                   _ = 0;
                 switch (_.state) {
                   case _.STATE_INCOMPLETE:
-                    (_ = "#Predictions_Pays"), (_ = _.payoutAmount);
+                    ((_ = "#Predictions_Pays"), (_ = _.payoutAmount));
                     break;
                   case _.STATE_WON:
-                    (_ = "#Predictions_Won"),
+                    ((_ = "#Predictions_Won"),
                       (_ = {
                         color: "#76ca65",
                       }),
-                      (_ = _.payoutAmount);
+                      (_ = _.payoutAmount));
                     break;
                   case _.STATE_LOST:
-                    (_ = "#Predictions_Lost"),
+                    ((_ = "#Predictions_Lost"),
                       (_ = {
                         color: "#FF5050",
                       }),
-                      (_ = _.wagerAmount);
+                      (_ = _.wagerAmount));
                     break;
                   case _.STATE_TIED:
-                    (_ = "#Predictions_Tied"),
+                    ((_ = "#Predictions_Tied"),
                       (_ = {
                         color: "cyan",
                       }),
-                      (_ = 0);
+                      (_ = 0));
                 }
                 var _ = _("#Predictions_InvalidTeam");
-                _.teamPicked == _.teams[0].teamId
+                (_.teamPicked == _.teams[0].teamId
                   ? (_ = _.teams[0].name)
                   : _.teamPicked == _.teams[1].teamId && (_ = _.teams[1].name),
                   (_ = _.createElement(
@@ -7189,7 +7192,7 @@
                         ),
                       ),
                     ),
-                  ));
+                  )));
               }
               return _.seriesID
                 ? _.createElement(
@@ -7238,21 +7241,21 @@
           (_.prototype.componentDidMount = function () {
             var _ = this,
               _ = 1e3 * _.getRecentAndUpcomingMatchesRefreshInterval();
-            (this.intervalHandle = setInterval(function () {
+            ((this.intervalHandle = setInterval(function () {
               _.setState({
                 isStaleOdds: !0,
               });
               var _ = _;
               setTimeout(function () {
-                _.setState({
+                (_.setState({
                   upcomingMatchData: _.getRecentAndUpcomingMatches(),
                 }),
                   _.setState({
                     isStaleOdds: !1,
-                  });
+                  }));
               }, 3e3);
             }, _)),
-              _.triggerShowHelpPage(_.Predictions);
+              _.triggerShowHelpPage(_.Predictions));
           }),
           (_.prototype.componentWillUnmount = function () {
             clearInterval(this.intervalHandle);
@@ -7455,7 +7458,7 @@
             (_.prototype.GetLeagueList = function () {
               var _ = [],
                 _ = _.getFantasyLeagueStatus();
-              if (!_) return _.push(this.GetLoadingThrobber()), _;
+              if (!_) return (_.push(this.GetLoadingThrobber()), _);
               var _ = this.props.section != _.LeagueSelect;
               for (var _ in (_.push(
                 _.createElement(
@@ -7498,7 +7501,7 @@
                     _ = _().StatusConcluded;
                 }
                 var _ = void 0;
-                0 == _.status || 1 == _.status
+                (0 == _.status || 1 == _.status
                   ? (_ = _.Roster)
                   : (2 != _.status && 3 != _.status) || (_ = _.Scores),
                   _
@@ -7572,7 +7575,7 @@
                             _("#Fantasy_LeagueStatus_" + _.status),
                           ),
                         ),
-                      );
+                      ));
                 var _ = this.props.section == _.Roster,
                   _ = this.props.section == _.Scores,
                   _ = this.props.section == _.Leaderboard;
@@ -7651,7 +7654,7 @@
                         ),
                       ];
                     case 1:
-                      return _.sent(), [2];
+                      return (_.sent(), [2]);
                   }
                 });
               });
@@ -7683,7 +7686,7 @@
                 var _ = _.getPlayersInRole(_, _),
                   _ = _.getFantasyLineup(_);
                 if (void 0 === _ || void 0 === _)
-                  return _.push(this.GetLoadingThrobber()), _;
+                  return (_.push(this.GetLoadingThrobber()), _);
                 if (!_)
                   return (
                     _.push(
@@ -7820,7 +7823,7 @@
                   }
               }
               if ((_ && (_ = _.getFantasyLineup(_)), !_))
-                return _ && _.push(this.GetLoadingThrobber()), _;
+                return (_ && _.push(this.GetLoadingThrobber()), _);
               for (
                 var _ = function (_) {
                     var _ = 0 == _.rgRosterSlots[_].nAccountID,
@@ -7997,7 +8000,7 @@
               var _ = this.state.bSelectingDay,
                 _ = _.getFantasyDayScore(_, _ ? _ : 0, !_),
                 _ = _.getFantasyLeagueStatus();
-              if (!_) return _ && _.push(this.GetLoadingThrobber()), _;
+              if (!_) return (_ && _.push(this.GetLoadingThrobber()), _);
               for (var _ in _.league_infos) {
                 var _ = _.league_infos[_];
                 if (_.league_id == _) {
@@ -8334,10 +8337,10 @@
                 var _ = parseInt(this.props.match.params.leagueID),
                   _ = parseInt(this.props.match.params.slot),
                   _ = _.getFantasyLineup(_);
-                console.log((0, _._)(_)),
+                (console.log((0, _._)(_)),
                   _ &&
                     _.isFantasyRosterSlotLocked(_, _) &&
-                    this.props.history.goBack();
+                    this.props.history.goBack());
               }
               return _.createElement(
                 "div",
@@ -8994,7 +8997,7 @@
                 if (_.team_id) {
                   var _ = new Date(1e3 * _.start_timestamp),
                     _ = null;
-                  _.end_timestamp && (_ = new Date(1e3 * _.end_timestamp)),
+                  (_.end_timestamp && (_ = new Date(1e3 * _.end_timestamp)),
                     _.unshift(
                       _.createElement(
                         "div",
@@ -9056,7 +9059,7 @@
                             _("#Player_PresentTime"),
                           ),
                       ),
-                    );
+                    ));
                 }
               }
             return _.createElement(
@@ -9764,16 +9767,16 @@
             }
             switch (_.series_type) {
               case 0:
-                1 == _[_.team_1.team_id] && (_ = _.team_1),
-                  1 == _[_.team_2.team_id] && (_ = _.team_2);
+                (1 == _[_.team_1.team_id] && (_ = _.team_1),
+                  1 == _[_.team_2.team_id] && (_ = _.team_2));
                 break;
               case 1:
-                2 == _[_.team_1.team_id] && (_ = _.team_1),
-                  2 == _[_.team_2.team_id] && (_ = _.team_2);
+                (2 == _[_.team_1.team_id] && (_ = _.team_1),
+                  2 == _[_.team_2.team_id] && (_ = _.team_2));
                 break;
               case 2:
-                3 == _[_.team_1.team_id] && (_ = _.team_1),
-                  3 == _[_.team_2.team_id] && (_ = _.team_2);
+                (3 == _[_.team_1.team_id] && (_ = _.team_1),
+                  3 == _[_.team_2.team_id] && (_ = _.team_2));
             }
             _ &&
               ((_ = _("#Series_Winner", _.team_name)),
@@ -9813,7 +9816,7 @@
                       ? _.tourney.radiant_team_id
                       : _.tourney.dire_team_id,
                   _ = _.team_1.team_id == _ ? 0 : 1;
-                -1 == _[_].indexOf(_.account_id) && _[_].push(_.account_id),
+                (-1 == _[_].indexOf(_.account_id) && _[_].push(_.account_id),
                   _.kills > _ &&
                     ((_ = _.kills),
                     (_ = _.account_id),
@@ -9823,11 +9826,11 @@
                     ((_ = _.assists),
                     (_ = _.account_id),
                     (_ = _.hero_id),
-                    (_ = _.pro_name));
+                    (_ = _.pro_name)));
               }
             }
             var _ = [];
-            _.push([]), _.push([]);
+            (_.push([]), _.push([]));
             for (var _ = 0; _ < 2; _++)
               for (var _ in _[_]) {
                 var _ = _.getPlayerData(_[_][_]);
@@ -10256,7 +10259,7 @@
                 _ < _.length;
                 _++
               ) {
-                (_ = _[_]), (_ = _.getPlayerData(_));
+                ((_ = _[_]), (_ = _.getPlayerData(_)));
                 _[1].push(
                   _.createElement(
                     _._,
@@ -10457,11 +10460,11 @@
               for (var _ in _.metadata.teams[0].graph_net_worth) {
                 var _ = parseInt(_.metadata.teams[0].graph_net_worth[_]),
                   _ = parseInt(_.metadata.teams[1].graph_net_worth[_]);
-                !_ && Math.abs(_ - _) > 30 && ((_ = !0), (_ = parseInt(_))),
+                (!_ && Math.abs(_ - _) > 30 && ((_ = !0), (_ = parseInt(_))),
                   _ &&
                     _.push({
                       value: _ - _,
-                    });
+                    }));
               }
               for (
                 var _ = [],
@@ -10618,7 +10621,7 @@
               );
             }
             var _ = [];
-            _.push([]), _.push([]);
+            (_.push([]), _.push([]));
             for (var _ = 0; _ < 10; _++)
               if (!(_ >= _.match.players.length)) {
                 var _ = _.match.players[_];
@@ -10746,7 +10749,7 @@
                 );
               }
             var _ = [];
-            _.push([]), _.push([]);
+            (_.push([]), _.push([]));
             for (_ = 0; _ < 10; _++)
               if (!(_ >= _.match.players.length)) {
                 var _;
@@ -10801,10 +10804,10 @@
                 );
               }
             var _ = [];
-            _.push([]), _.push([]);
+            (_.push([]), _.push([]));
             for (var _, _ = [], _ = 0; _ < _.match.picks_bans.length; _++) {
               var _ = _.match.picks_bans[_];
-              _ % 2 == 1 &&
+              (_ % 2 == 1 &&
                 (_.is_pick
                   ? _.push(
                       _.createElement(
@@ -10860,7 +10863,7 @@
                       _("#Hero_" + _.hero_id),
                     ),
                   ),
-                );
+                ));
             }
             return (
               2 == _.match.match_outcome
@@ -11257,7 +11260,7 @@
             }
             var _ = 100 * (1.1 * _._ + 0.5) - 3 + "%",
               _ = 100 * (1.1 * _._ + 0.5) - 4 + "%";
-            _.push(
+            (_.push(
               _.createElement("img", {
                 key: "buildingicon_" + _,
                 src: _,
@@ -11274,7 +11277,7 @@
                 ),
               }),
             ),
-              _--;
+              _--);
           }
           return _.createElement(
             "div",
@@ -11303,11 +11306,11 @@
             _ = 0;
           for (var _ in _) {
             var _ = parseInt(_[_]);
-            !_ && Math.abs(_) > 30 && ((_ = !0), (_ = parseInt(_))),
+            (!_ && Math.abs(_) > 30 && ((_ = !0), (_ = parseInt(_))),
               _ &&
                 _.push({
                   value: _,
-                });
+                }));
           }
           for (
             var _ = [], _ = _ / _.length, _ = 1 - _, _ = _ * _, _ = 1;
@@ -11545,7 +11548,7 @@
               return _.createElement("div", null);
           }
           var _ = [];
-          _.push([]), _.push([]);
+          (_.push([]), _.push([]));
           for (var _ = 0; _ < 2; _++)
             for (var _ = 0 == _ ? _.players : _.players, _ = 0; _ < 5; _++)
               if (!(_ >= _.length)) {
@@ -11635,7 +11638,7 @@
               return _.createElement("div", null);
           }
           var _ = [];
-          _.push([]), _.push([]);
+          (_.push([]), _.push([]));
           for (var _ = 0; _ < 2; _++)
             for (var _ = 0 == _ ? _.players : _.players, _ = 0; _ < 5; _++)
               if (!(_ >= _.length)) {
@@ -11692,7 +11695,7 @@
           if (1 == _) return _.createElement("div", null);
           if (!_ || !_) return _.createElement("div", null);
           var _ = [];
-          _.push([]), _.push([]);
+          (_.push([]), _.push([]));
           for (
             var _ = [],
               _ = 1,
@@ -11705,7 +11708,7 @@
             _++
           ) {
             if (_[_]) {
-              _.push(
+              (_.push(
                 _.createElement(
                   "div",
                   {
@@ -11715,7 +11718,7 @@
                   _("#Match_Ban"),
                 ),
               ),
-                (_ += 1);
+                (_ += 1));
               for (var _ = 0; _ < 2; _ += 1) {
                 if (_ < _.length) {
                   var _ = _[_];
@@ -11748,10 +11751,10 @@
                     ),
                   );
                 }
-                (_ += 1), (_ += 1);
+                ((_ += 1), (_ += 1));
               }
             } else {
-              _.push(
+              (_.push(
                 _.createElement(
                   "div",
                   {
@@ -11761,11 +11764,11 @@
                   _("#Match_Pick"),
                 ),
               ),
-                (_ += 1);
+                (_ += 1));
               for (_ = 0; _ < 2; _ += 1)
                 if (_ < _.length) {
                   var _ = _[_];
-                  _[2 == _.team ? 0 : 1].push(
+                  (_[2 == _.team ? 0 : 1].push(
                     _.createElement(
                       "div",
                       {
@@ -11794,7 +11797,7 @@
                     ),
                   ),
                     (_ += 1),
-                    (_ += 1);
+                    (_ += 1));
                 }
             }
           }
@@ -11847,10 +11850,10 @@
           (0, _._)(_, _),
           (_.prototype.componentDidMount = function () {
             var _ = this;
-            _.getRealtimeMatchStats(this.props.match.params.serverSteamID),
+            (_.getRealtimeMatchStats(this.props.match.params.serverSteamID),
               (this.intervalHandle = setInterval(function () {
                 _.getRealtimeMatchStats(_.props.match.params.serverSteamID);
-              }, 2e3));
+              }, 2e3)));
           }),
           (_.prototype.componentWillUnmount = function () {
             clearInterval(this.intervalHandle);
@@ -11956,7 +11959,7 @@
       const _ = (function (_) {
         function _(_) {
           var _ = _.call(this, _) || this;
-          (_.activeTouches = []),
+          ((_.activeTouches = []),
             (_.refPanPinchZoom = _.createRef()),
             (_.onTouchStart = function (_) {
               for (var _ = 0; _ < _.changedTouches.length; _++) {
@@ -12027,10 +12030,10 @@
                           });
                         }
                       }
-                    (_._ = _.clientX), (_._ = _.clientY);
+                    ((_._ = _.clientX), (_._ = _.clientY));
                   }
                 }
-            });
+            }));
           var _ = _.props.initialScale ? _.props.initialScale : 1,
             _ = _.props.initialOffsetX ? _.props.initialOffsetX : 0,
             _ = _.props.initialOffsetY ? _.props.initialOffsetY : 0;
@@ -12474,7 +12477,7 @@
           return (
             (0, _._)(_, _),
             (_.prototype.render = function () {
-              for (var _ = 1; _ < this.props.nodeGroup.team_count; ) _ *= 2;
+              for (var _ = 1; _ < this.props.nodeGroup.team_count;) _ *= 2;
               var _ = "",
                 _ = 0,
                 _ = 0,
@@ -12491,22 +12494,22 @@
                     _ = 0;
                   switch (_) {
                     case 0:
-                      (_ = 0), (_ = 0);
+                      ((_ = 0), (_ = 0));
                       break;
                     case 1:
-                      (_ = 0), (_ = 146);
+                      ((_ = 0), (_ = 146));
                       break;
                     case 2:
-                      (_ = 316), (_ = 74);
+                      ((_ = 316), (_ = 74));
                       break;
                     case 3:
-                      (_ = 632), (_ = 212);
+                      ((_ = 632), (_ = 212));
                       break;
                     case 4:
-                      (_ = 0), (_ = 352);
+                      ((_ = 0), (_ = 352));
                       break;
                     case 5:
-                      (_ = 316), (_ = 352);
+                      ((_ = 316), (_ = 352));
                   }
                   var _ = _.getTeamData(_.team_id_1),
                     _ = _.getTeamData(_.team_id_2);
@@ -12576,7 +12579,7 @@
           return (
             (0, _._)(_, _),
             (_.prototype.render = function () {
-              for (var _ = 1; _ < this.props.nodeGroup.team_count; ) _ *= 2;
+              for (var _ = 1; _ < this.props.nodeGroup.team_count;) _ *= 2;
               var _ = "",
                 _ = 0,
                 _ = 0,
@@ -12594,34 +12597,34 @@
                       _ = 0;
                     switch (_) {
                       case 0:
-                        (_ = 315), (_ = 0);
+                        ((_ = 315), (_ = 0));
                         break;
                       case 1:
-                        (_ = 315), (_ = 146);
+                        ((_ = 315), (_ = 146));
                         break;
                       case 2:
-                        (_ = 948), (_ = 74);
+                        ((_ = 948), (_ = 74));
                         break;
                       case 3:
-                        (_ = 1263), (_ = 231);
+                        ((_ = 1263), (_ = 231));
                         break;
                       case 4:
-                        (_ = 0), (_ = 314);
+                        ((_ = 0), (_ = 314));
                         break;
                       case 5:
-                        (_ = 0), (_ = 462);
+                        ((_ = 0), (_ = 462));
                         break;
                       case 6:
-                        (_ = 315), (_ = 315);
+                        ((_ = 315), (_ = 315));
                         break;
                       case 7:
-                        (_ = 315), (_ = 462);
+                        ((_ = 315), (_ = 462));
                         break;
                       case 8:
-                        (_ = 632), (_ = 389);
+                        ((_ = 632), (_ = 389));
                         break;
                       case 9:
-                        (_ = 948), (_ = 389);
+                        ((_ = 948), (_ = 389));
                     }
                     var _ = _.getTeamData(_.team_id_1),
                       _ = _.getTeamData(_.team_id_2),
@@ -12655,83 +12658,83 @@
                   (_ = 2180),
                   (_ = 1198),
                   this.props.nodeGroup.nodes)) {
-                    (_ = parseInt(_)),
+                    ((_ = parseInt(_)),
                       (_ = this.props.nodeGroup.nodes[_]),
                       (_ = 0),
-                      (_ = 0);
+                      (_ = 0));
                     switch (_) {
                       case 0:
-                        (_ = 315), (_ = 0);
+                        ((_ = 315), (_ = 0));
                         break;
                       case 1:
-                        (_ = 315), (_ = 146);
+                        ((_ = 315), (_ = 146));
                         break;
                       case 2:
-                        (_ = 315), (_ = 315);
+                        ((_ = 315), (_ = 315));
                         break;
                       case 3:
-                        (_ = 315), (_ = 462);
+                        ((_ = 315), (_ = 462));
                         break;
                       case 4:
-                        (_ = 948), (_ = 74);
+                        ((_ = 948), (_ = 74));
                         break;
                       case 5:
-                        (_ = 948), (_ = 390);
+                        ((_ = 948), (_ = 390));
                         break;
                       case 6:
-                        (_ = 1580), (_ = 231);
+                        ((_ = 1580), (_ = 231));
                         break;
                       case 7:
-                        (_ = 1898), (_ = 542);
+                        ((_ = 1898), (_ = 542));
                         break;
                       case 8:
-                        (_ = 0), (_ = 618);
+                        ((_ = 0), (_ = 618));
                         break;
                       case 9:
-                        (_ = 0), (_ = 764);
+                        ((_ = 0), (_ = 764));
                         break;
                       case 10:
-                        (_ = 0), (_ = 930);
+                        ((_ = 0), (_ = 930));
                         break;
                       case 11:
-                        (_ = 0), (_ = 1078);
+                        ((_ = 0), (_ = 1078));
                         break;
                       case 12:
-                        (_ = 315), (_ = 618);
+                        ((_ = 315), (_ = 618));
                         break;
                       case 13:
-                        (_ = 315), (_ = 764);
+                        ((_ = 315), (_ = 764));
                         break;
                       case 14:
-                        (_ = 315), (_ = 930);
+                        ((_ = 315), (_ = 930));
                         break;
                       case 15:
-                        (_ = 315), (_ = 1078);
+                        ((_ = 315), (_ = 1078));
                         break;
                       case 16:
-                        (_ = 634), (_ = 692);
+                        ((_ = 634), (_ = 692));
                         break;
                       case 17:
-                        (_ = 634), (_ = 1004);
+                        ((_ = 634), (_ = 1004));
                         break;
                       case 18:
-                        (_ = 946), (_ = 692);
+                        ((_ = 946), (_ = 692));
                         break;
                       case 19:
-                        (_ = 946), (_ = 1004);
+                        ((_ = 946), (_ = 1004));
                         break;
                       case 20:
-                        (_ = 1264), (_ = 852);
+                        ((_ = 1264), (_ = 852));
                         break;
                       case 21:
-                        (_ = 1582), (_ = 852);
+                        ((_ = 1582), (_ = 852));
                     }
-                    (_ = _.getTeamData(_.team_id_1)),
+                    ((_ = _.getTeamData(_.team_id_1)),
                       (_ = _.getTeamData(_.team_id_2)),
                       (_ = 0 == _.team_id_1 ? _("#Feed_TBD") : _ ? _.name : ""),
                       (_ = 0 == _.team_id_2 ? _("#Feed_TBD") : _ ? _.name : ""),
                       (_ = _ ? _.url_logo : _.IMG_URL + "team_unkown.png"),
-                      (_ = _ ? _.url_logo : _.IMG_URL + "team_unkown.png");
+                      (_ = _ ? _.url_logo : _.IMG_URL + "team_unkown.png"));
                     _.push(
                       _.createElement(_, {
                         key: "node_" + _,
@@ -12797,7 +12800,7 @@
           return (
             (0, _._)(_, _),
             (_.prototype.render = function () {
-              for (var _ = 1; _ < this.props.nodeGroup.team_count; ) _ *= 2;
+              for (var _ = 1; _ < this.props.nodeGroup.team_count;) _ *= 2;
               var _ = "",
                 _ = 0,
                 _ = 0,
@@ -12814,13 +12817,13 @@
                     _ = 0;
                   switch (_) {
                     case 0:
-                      (_ = 0), (_ = 0);
+                      ((_ = 0), (_ = 0));
                       break;
                     case 1:
-                      (_ = 0), (_ = 146);
+                      ((_ = 0), (_ = 146));
                       break;
                     case 2:
-                      (_ = 316), (_ = 74);
+                      ((_ = 316), (_ = 74));
                   }
                   var _ = _.getTeamData(_.team_id_1),
                     _ = _.getTeamData(_.team_id_2),
@@ -12901,19 +12904,19 @@
                   _ = 0;
                 switch (_) {
                   case 0:
-                    (_ = 0), (_ = 0);
+                    ((_ = 0), (_ = 0));
                     break;
                   case 1:
-                    (_ = 0), (_ = 146);
+                    ((_ = 0), (_ = 146));
                     break;
                   case 2:
-                    (_ = 316), (_ = 74);
+                    ((_ = 316), (_ = 74));
                     break;
                   case 3:
-                    (_ = 0), (_ = 353);
+                    ((_ = 0), (_ = 353));
                     break;
                   case 4:
-                    (_ = 316), (_ = 323);
+                    ((_ = 316), (_ = 323));
                 }
                 var _ = _.getTeamData(_.team_id_1),
                   _ = _.getTeamData(_.team_id_2),
@@ -13127,7 +13130,7 @@
                   var _ = _.results[_];
                   if (_.standing <= _) {
                     var _ = 5 == _.info.tier ? 0 : _.points;
-                    _.push(
+                    (_.push(
                       _.createElement(_, {
                         key: "team_" + _.teamid + "_" + _,
                         standing: _.standing,
@@ -13139,7 +13142,7 @@
                       }),
                     ),
                       (_ = _ + 1),
-                      (_ = !0);
+                      (_ = !0));
                     break;
                   }
                 }
@@ -13360,10 +13363,10 @@
             (0, _._)(_, _),
             (_.prototype.componentDidMount = function () {
               var _ = this;
-              _.getLiveMatches(parseInt(this.props.match.params.leagueID)),
+              (_.getLiveMatches(parseInt(this.props.match.params.leagueID)),
                 (this.intervalHandle = setInterval(function () {
                   _.getLiveMatches(parseInt(_.props.match.params.leagueID));
-                }, 3e4));
+                }, 3e4)));
             }),
             (_.prototype.componentWillUnmount = function () {
               clearInterval(this.intervalHandle);
@@ -13442,10 +13445,10 @@
                 );
               }
               var _ = [];
-              this.getUpcomingMatches(_, _, _),
+              (this.getUpcomingMatches(_, _, _),
                 _.sort(function (_, _) {
                   return _[1] - _[1];
-                });
+                }));
               for (var _ = 0, _ = _; _ < _.length; _++) {
                 var _ = _[_];
                 _.push(
@@ -13624,20 +13627,20 @@
               var _, _;
               switch (this.props.type) {
                 case _.Player:
-                  (_ = _.createElement(_, {
+                  ((_ = _.createElement(_, {
                     className: _(_().Icon, _().Player),
                     src: _.getPlayerImageURL(this.props._),
                     fallbackSrc: _.IMG_URL + "portrait_unknown.png",
                   })),
-                    (_ = _(this.props._));
+                    (_ = _(this.props._)));
                   break;
                 case _.Team:
-                  (_ = _.createElement(_, {
+                  ((_ = _.createElement(_, {
                     className: _(_().Icon, _().Team),
                     src: this.props.url,
                     fallbackSrc: _.IMG_URL + "team_unknown.png",
                   })),
-                    (_ = _(this.props._));
+                    (_ = _(this.props._)));
                 case _.League:
               }
               var _ = _.isFavorite(this.props.type, this.props._);
@@ -13694,24 +13697,24 @@
             });
           }),
           (_.prototype.handleSubmit = function (_) {
-            _.requestSearchResults(this.state.sSearchString),
+            (_.requestSearchResults(this.state.sSearchString),
               _.preventDefault(),
               this.setState({
                 bWasEmptySearch: 0 == this.state.sSearchString.length,
                 bSearchPending: !0,
-              });
+              }));
           }),
           (_.prototype.handleClear = function () {
-            this.setState({
+            (this.setState({
               sSearchString: "",
               bWasEmptySearch: !0,
             }),
-              _.requestSearchResults("");
+              _.requestSearchResults(""));
           }),
           (_.prototype.componentDidMount = function () {
             return (0, _._)(this, void 0, void 0, function () {
               return (0, _._)(this, function (_) {
-                return _.requestSearchResults(this.state.sSearchString), [2];
+                return (_.requestSearchResults(this.state.sSearchString), [2]);
               });
             });
           }),
@@ -13751,7 +13754,7 @@
                       _++
                     ) {
                       var _ = _[_];
-                      _.push(
+                      (_.push(
                         _.createElement(_, {
                           key: _.type + "_" + _._,
                           type: _.type,
@@ -13760,7 +13763,7 @@
                           url: _.url,
                         }),
                       ),
-                        (_ = !0);
+                        (_ = !0));
                     }
                   }
                 }
@@ -14162,12 +14165,12 @@
                       if (_.status)
                         switch (_.status) {
                           case 1:
-                            (_ = _().ClinchedInvite), (_ = !0);
+                            ((_ = _().ClinchedInvite), (_ = !0));
                             break;
                           case 2:
-                            (_ = _().Eliminated), (_ = !0);
+                            ((_ = _().Eliminated), (_ = !0));
                         }
-                      _.push(
+                      (_.push(
                         _.createElement(
                           _._,
                           {
@@ -14219,7 +14222,7 @@
                           ),
                         ),
                       ),
-                        (_ += 1);
+                        (_ += 1));
                     }
                   }
               else
@@ -14407,19 +14410,19 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       !(function (_) {
-        (_[(_.Unrequested = 0)] = "Unrequested"),
+        ((_[(_.Unrequested = 0)] = "Unrequested"),
           (_[(_.Pending = 1)] = "Pending"),
           (_[(_.Valid = 2)] = "Valid"),
           (_[(_.Failed = 3)] = "Failed"),
-          (_[(_.Rerequest = 4)] = "Rerequest");
+          (_[(_.Rerequest = 4)] = "Rerequest"));
       })(_ || (_ = {}));
       var _,
         _ = (function () {
           function _() {
-            (this.data = void 0),
+            ((this.data = void 0),
               (this.eState = _.Unrequested),
               (this.nExpirationTime = 0),
-              (0, _._)(this);
+              (0, _._)(this));
           }
           return (
             (_.prototype.getData = function (_, _, _) {
@@ -14448,9 +14451,9 @@
             }),
             (_.prototype.clearData = function () {
               var _ = Date.now() / 1e3;
-              (this.eState = _.Unrequested),
+              ((this.eState = _.Unrequested),
                 (this.data = null),
-                (this.nExpirationTime = _);
+                (this.nExpirationTime = _));
             }),
             (_.prototype.expireData = function () {
               var _ = Date.now() / 1e3;
@@ -14502,14 +14505,14 @@
           );
         })();
       !(function (_) {
-        (_[(_.Main = 0)] = "Main"),
+        ((_[(_.Main = 0)] = "Main"),
           (_[(_.Predictions = 1)] = "Predictions"),
-          (_[(_.Fantasy = 2)] = "Fantasy");
+          (_[(_.Fantasy = 2)] = "Fantasy"));
       })(_ || (_ = {}));
       var _,
         _ = (function () {
           function _() {
-            (this.m_rgStandingsAsync = new _()),
+            ((this.m_rgStandingsAsync = new _()),
               (this.m_rgLeagueInfoListAsync = new _()),
               (this.m_mapLeagueDataAsync = new Map()),
               (this.m_mapLeagueNodeDataAsync = new Map()),
@@ -14563,7 +14566,7 @@
               this.m_mapHelpState.set(_.Fantasy, {
                 bHasAlreadyShown: !0,
                 sLocalStorage: "helpHasAlreadyShownFantasy",
-              });
+              }));
           }
           return (
             (_.prototype.triggerShowHelpPage = function (_) {
@@ -14579,13 +14582,13 @@
             }),
             (_.prototype.setHelpShown = function (_) {
               var _ = this.m_mapHelpState.get(_);
-              (_.bHasAlreadyShown = !0),
-                localStorage.setItem(_.sLocalStorage, "true");
+              ((_.bHasAlreadyShown = !0),
+                localStorage.setItem(_.sLocalStorage, "true"));
             }),
             (_.prototype.resetHelpShown = function (_) {
               var _ = this.m_mapHelpState.get(_);
-              (_.bHasAlreadyShown = !1),
-                localStorage.removeItem(_.sLocalStorage);
+              ((_.bHasAlreadyShown = !1),
+                localStorage.removeItem(_.sLocalStorage));
             }),
             (_.prototype.doUserGet = function (_, _) {
               return (0, _._)(this, void 0, void 0, function () {
@@ -14652,7 +14655,7 @@
               });
             }),
             (_.prototype.getOrCreateFromMap = function (_, _) {
-              return _.has(_) || _.set(_, new _()), _.get(_);
+              return (_.has(_) || _.set(_, new _()), _.get(_));
             }),
             (_.prototype.getSteamPlayerInfo = function () {
               var _ = this;
@@ -14692,7 +14695,7 @@
               });
             }),
             (_.prototype.setNotification = function (_, _) {
-              this.doPost("SetNotificationDisabled", {
+              (this.doPost("SetNotificationDisabled", {
                 _: _,
                 disabled: _,
               }),
@@ -14703,7 +14706,7 @@
                         _,
                       ),
                       1,
-                    );
+                    ));
             }),
             (_.prototype.getLeagueInfoInternal = function () {
               var _ = this;
@@ -14889,12 +14892,12 @@
             }),
             (_.prototype.requestSearchResults = function (_) {
               var _ = this;
-              this.m_rgSearchResultsAsync.clearData(),
+              (this.m_rgSearchResultsAsync.clearData(),
                 this.m_rgSearchResultsAsync.getData(1, function () {
                   return _.doAnonymousGet("GetDPCSearchResults", {
                     search: _,
                   });
-                });
+                }));
             }),
             (_.prototype.getSearchResults = function (_) {
               return this.m_rgSearchResultsAsync.data;
@@ -14907,7 +14910,7 @@
             }),
             (_.prototype.toggleFavorite = function (_, _, _, _) {
               var _ = this;
-              this.m_rgFavoritesAsync.delayNewData(2),
+              (this.m_rgFavoritesAsync.delayNewData(2),
                 _.doPost("ToggleDPCFavorite", {
                   favorite_type: _,
                   favorite_id: _,
@@ -14926,7 +14929,7 @@
                       _: _,
                       name: _,
                       url: _,
-                    });
+                    }));
             }),
             (_.prototype.isFavorite = function (_, _) {
               var _ = this,
@@ -14968,7 +14971,7 @@
                             if (
                               _.nodeId == _.m_selectedPrediction.leagueNodeId
                             ) {
-                              (_.m_selectedPrediction.payout =
+                              ((_.m_selectedPrediction.payout =
                                 _.m_selectedPrediction.teamPicked ==
                                 _.teams[0].teamId
                                   ? _.teams[0].payout
@@ -14977,7 +14980,7 @@
                                   Math.floor(
                                     _.m_selectedPrediction.payout *
                                       _.m_selectedPrediction.wagerAmount,
-                                  ));
+                                  )));
                               break;
                             }
                           }
@@ -15031,11 +15034,11 @@
               ) {
                 var _ = _.predictions[_];
                 if (_.tournamentId == _ && _.nodeId == _) {
-                  (_.wagerAmount = _.tokensUsed),
+                  ((_.wagerAmount = _.tokensUsed),
                     (_.teamPicked = _.teamId),
                     (_.payout = _.payoutOdds),
                     (_.payoutAmount = _.payoutAmount),
-                    (_.state = _.state);
+                    (_.state = _.state));
                   break;
                 }
               }
@@ -15085,10 +15088,10 @@
               this.selectProPredictionToMake(0, 0, 0, 0, 0);
             }),
             (_.prototype.setSelectedPredictionWagerAmount = function (_) {
-              (this.m_selectedPrediction.wagerAmount = _),
+              ((this.m_selectedPrediction.wagerAmount = _),
                 (this.m_selectedPrediction.payoutAmount = Math.floor(
                   _ * this.m_selectedPrediction.payout,
-                ));
+                )));
             }),
             (_.prototype.getSelectedProPrediction = function () {
               return this.m_selectedPrediction;
@@ -15112,11 +15115,11 @@
                         0 == this.m_selectedPrediction.teamPicked ||
                         0 == this.m_selectedPrediction.wagerAmount
                       )
-                        return this.clearProPredictionToMake(), [2];
-                      (_ =
+                        return (this.clearProPredictionToMake(), [2]);
+                      ((_ =
                         (this.m_selectedPrediction.leagueId << 16) |
                         this.m_selectedPrediction.leagueNodeId),
-                        (_.label = 1);
+                        (_.label = 1));
                     case 1:
                       return (
                         _.trys.push([1, 3, , 4]),
@@ -15310,7 +15313,7 @@
             }),
             (_.prototype.setFantasyRosterSlot = function (_, _, _, _, _) {
               var _ = this.getOrCreateFromMap(this.m_rgFantasyLineupsAsync, _);
-              (_.data.rgRosterSlots[_] = {
+              ((_.data.rgRosterSlots[_] = {
                 nAccountID: _,
                 strName: _,
                 strTeamLogoURL: _,
@@ -15318,11 +15321,11 @@
                 bNeedsSubmission: !0,
                 bInitialized: !0,
               }),
-                (_.data.bRosterNeedsSubmission = !0);
+                (_.data.bRosterNeedsSubmission = !0));
             }),
             (_.prototype.isFantasyRosterSlotLocked = function (_, _) {
               var _ = this.getOrCreateFromMap(this.m_rgFantasyLineupsAsync, _);
-              return console.log(_), _.data.rgRosterSlots[_].bLocked;
+              return (console.log(_), _.data.rgRosterSlots[_].bLocked);
             }),
             (_.prototype.clearFantasyRosterSlot = function (_, _) {
               var _ = this.getOrCreateFromMap(this.m_rgFantasyLineupsAsync, _);
@@ -15462,11 +15465,11 @@
             _
           );
         })();
-      !(function (_) {
-        (_[(_.Any = 0)] = "Any"),
+      (!(function (_) {
+        ((_[(_.Any = 0)] = "Any"),
           (_[(_.Player = 1)] = "Player"),
           (_[(_.Team = 2)] = "Team"),
-          (_[(_.League = 3)] = "League");
+          (_[(_.League = 3)] = "League"));
       })(_ || (_ = {})),
         (__webpack_require__._.ClearBackgroundInterval =
           __webpack_require__._.clearInterval),
@@ -15475,13 +15478,13 @@
         (__webpack_require__._.SetBackgroundInterval =
           __webpack_require__._.setInterval),
         (__webpack_require__._.SetBackgroundTimeout =
-          __webpack_require__._.setTimeout);
+          __webpack_require__._.setTimeout));
       var _,
         _,
         _,
         _ = new _();
-      document.addEventListener("DOMContentLoaded", function () {
-        _(), _.Init();
+      (document.addEventListener("DOMContentLoaded", function () {
+        (_(), _.Init());
       }),
         (window.LocalizationReady = function (_, _, _) {
           if ("english" !== _) "main" == _ ? (_ = _) : "shared" == _ && (_ = _);
@@ -15491,19 +15494,19 @@
               _ = null,
               _ = void 0,
               _ = null;
-            void 0 !== _ ? ((_ = _), (_ = _)) : (_ = _),
+            (void 0 !== _ ? ((_ = _), (_ = _)) : (_ = _),
               void 0 !== _ ? ((_ = _), (_ = _)) : (_ = _),
               _.InitFromObjects(_, _, _, _),
               (_ = void 0),
               (_ = void 0),
-              (_ = void 0);
+              (_ = void 0));
           }
-        });
+        }));
     },
   },
   (_) => {
     _._(0, [250], () => {
-      return (_ = 7479), _((_._ = _));
+      return ((_ = 7479), _((_._ = _)));
       var _;
     });
     _._();

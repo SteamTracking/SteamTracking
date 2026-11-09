@@ -74,7 +74,7 @@ function _(_, _, _, _) {
 }
 async function _(_, _, _, _) {
   let _ = _.Init(_);
-  _(_, _),
+  (_(_, _),
     _ && _(_, _.data_request),
     _.bIncludeDailyDeals && _.Body().set_include_dailydeals(!0),
     _.nIncludeTopNSpecials &&
@@ -85,7 +85,7 @@ async function _(_, _, _, _) {
       (_.Body().set_include_purchase_recommendations(!0),
       _.rgAdditionalRecommendationIDs.forEach((_) =>
         _.Body().add_additional_purchase_item_ids(_.fromObject(_)),
-      ));
+      )));
   let _ = await _.GetItemsToFeature(_, _);
   if (!_.BSuccess()) throw _.GetErrorMessage();
   if (_) {
@@ -95,7 +95,7 @@ async function _(_, _, _, _) {
         apply_user_filters: !0,
       },
       _ = (_) => _ && _(_, _);
-    _.Body()
+    (_.Body()
       .spotlights()
       .forEach((_) => _(_.associated_item(!1))),
       _.Body()
@@ -106,8 +106,7 @@ async function _(_, _, _, _) {
         .forEach((_) => _(_.item(!1))),
       _.Body()
         .purchase_recommendations()
-        .forEach((_) => _(_.item(!1)));
+        .forEach((_) => _(_.item(!1))));
   }
   return _.Body().toObject();
 }
-export { _, _, _ };

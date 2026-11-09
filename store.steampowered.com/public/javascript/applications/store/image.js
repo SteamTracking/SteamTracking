@@ -76,12 +76,12 @@ function S(e) {
     fnClose: l,
     bCircular: u,
   } = e;
-  r(`ArrowLeft`, () => c?.(), !0, !0),
+  (r(`ArrowLeft`, () => c?.(), !0, !0),
     r(`Left`, () => c?.(), !0, !0),
     r(`ArrowRight`, () => i?.(), !0, !0),
     r(`Right`, () => i?.(), !0, !0),
     r(`Escape`, () => l && l(), !0, !0),
-    r(`Esc`, () => l && l(), !0, !0);
+    r(`Esc`, () => l && l(), !0, !0));
   let f = n > 1;
   return (0, p.jsxs)(`div`, {
     className: v,
@@ -197,8 +197,8 @@ function k(e) {
     c != n.length && (l(n.length), d(0));
   }, [c, n.length]);
   let m = f.useCallback(() => {
-    e.onImageError && e.onImageError(e.srcs[u]),
-      u + 1 < e.srcs.length && d(u + 1);
+    (e.onImageError && e.onImageError(e.srcs[u]),
+      u + 1 < e.srcs.length && d(u + 1));
   }, [u, e]);
   return n.length == 0
     ? null

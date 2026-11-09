@@ -19,7 +19,7 @@ function f(e) {
     c = t[a];
   return (0, d.jsx)(`img`, {
     onError: (e) => {
-      o((e) => e + 1), n?.(e, c, a);
+      (o((e) => e + 1), n?.(e, c, a));
     },
     alt: r,
     ...i,

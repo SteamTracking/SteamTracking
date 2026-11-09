@@ -88,7 +88,7 @@ function j(e, t) {
   );
 }
 function Ne(e, t) {
-  (e ||= {}), (t ||= {});
+  ((e ||= {}), (t ||= {}));
   function n(n) {
     return n in t ? t[n] : e[n];
   }
@@ -185,8 +185,8 @@ var Ie =
     var r = t.prototype;
     return (
       (r.componentDidMount = function () {
-        (this.mounted = !0),
-          this.setState({ contextValue: { isMounting: !1 } });
+        ((this.mounted = !0),
+          this.setState({ contextValue: { isMounting: !1 } }));
       }),
       (r.componentWillUnmount = function () {
         this.mounted = !1;
@@ -206,7 +206,7 @@ var Ie =
           this.mounted &&
             this.setState(function (t) {
               var r = n({}, t.children);
-              return delete r[e.key], { children: r };
+              return (delete r[e.key], { children: r });
             }));
       }),
       (r.render = function () {
@@ -232,7 +232,7 @@ var Ie =
       t
     );
   })(A.Component);
-(N.propTypes = {}), (N.defaultProps = Le);
+((N.propTypes = {}), (N.defaultProps = Le));
 var P = d(),
   F = class extends A.Component {
     m_elCanvas = null;
@@ -270,15 +270,15 @@ var P = d(),
         a = Math.floor(
           this.m_elCanvas.clientHeight / this.props.reductionFactor,
         );
-      (this.m_elCanvas.width = i),
+      ((this.m_elCanvas.width = i),
         (this.m_elCanvas.height = a),
         (this.props.blurAmount ?? 0) > 0 &&
-          (r.filter = `blur(` + this.props.blurAmount + `px)`);
+          (r.filter = `blur(` + this.props.blurAmount + `px)`));
       let o = () => {
-        r.drawImage(t, 0, 0, i * e[0], a * e[1]),
-          n > 0 && this.m_schUpdate.Schedule(n, o);
+        (r.drawImage(t, 0, 0, i * e[0], a * e[1]),
+          n > 0 && this.m_schUpdate.Schedule(n, o));
       };
-      o(), (this.m_bSetupComplete = !0);
+      (o(), (this.m_bSetupComplete = !0));
     }
     render() {
       return (0, P.jsx)(`canvas`, {
@@ -290,8 +290,8 @@ var P = d(),
       });
     }
   };
-S([C], F.prototype, `BindCanvasRef`, null),
-  S([C], F.prototype, `updateCanvas`, null);
+(S([C], F.prototype, `BindCanvasRef`, null),
+  S([C], F.prototype, `updateCanvas`, null));
 var Re = 500,
   ze = class extends A.Component {
     render() {
@@ -351,10 +351,10 @@ var Ue = r((e) => {
     let n = y.Loading,
       r = ``;
     if (t) {
-      (n = t.GetBroadcastState()), (r = t.GetBroadcastStateDescription());
+      ((n = t.GetBroadcastState()), (r = t.GetBroadcastStateDescription()));
       let e = t.IsBuffering();
-      n == y.Unlocking && ((n = y.Loading), (r = ``)),
-        n == y.Ready && e && ((n = y.Loading), (r = ``));
+      (n == y.Unlocking && ((n = y.Loading), (r = ``)),
+        n == y.Ready && e && ((n = y.Loading), (r = ``)));
     }
     if ((t && n != y.Error && t.GetUserInputNeeded()) || n == y.Ready)
       return null;
@@ -492,7 +492,7 @@ var I = class extends A.Component {
     });
   }
 };
-S([C], I.prototype, `HideStats`, null), (I = S([r], I));
+(S([C], I.prototype, `HideStats`, null), (I = S([r], I)));
 var L = class extends A.Component {
   constructor(e) {
     super(e);
@@ -682,32 +682,32 @@ var R = class extends A.Component {
   m_elSubtitlesPanel = A.createRef();
   m_SubtitlesButtonPos;
   constructor(e) {
-    super(e), (this.state = { bSettingsOpen: !1, bSubtitlesOpen: !1 });
+    (super(e), (this.state = { bSettingsOpen: !1, bSubtitlesOpen: !1 }));
   }
   OnVideoControlClick(e) {
-    this.setState({ bSettingsOpen: !this.state.bSettingsOpen }),
+    (this.setState({ bSettingsOpen: !this.state.bSettingsOpen }),
       (this.m_SettingsButtonPos = [
         this.m_elSettingsButton.offsetLeft,
         this.m_elSettingsButton.offsetTop,
       ]),
       (this.m_elClickListener = e.currentTarget.ownerDocument.defaultView),
-      this.m_elClickListener?.addEventListener(`mouseup`, this.OnMouseUp, !0);
+      this.m_elClickListener?.addEventListener(`mouseup`, this.OnMouseUp, !0));
   }
   OnSubtitlesClick(e) {
-    this.setState({ bSubtitlesOpen: !this.state.bSubtitlesOpen }),
+    (this.setState({ bSubtitlesOpen: !this.state.bSubtitlesOpen }),
       (this.m_SubtitlesButtonPos = [
         this.m_elSubtitlesButton.current?.offsetLeft,
         this.m_elSubtitlesButton.current?.offsetTop,
       ]),
       (this.m_elClickListener = e.currentTarget.ownerDocument.defaultView),
-      this.m_elClickListener?.addEventListener(`mouseup`, this.OnMouseUp, !0);
+      this.m_elClickListener?.addEventListener(`mouseup`, this.OnMouseUp, !0));
   }
   OnMouseUp(e) {
-    this.m_elClickListener?.removeEventListener(`mouseup`, this.OnMouseUp, !0),
+    (this.m_elClickListener?.removeEventListener(`mouseup`, this.OnMouseUp, !0),
       le(this.m_elSettingsPanel, e.target) ||
         this.setState({ bSettingsOpen: !1 }),
       le(this.m_elSubtitlesPanel.current, e.target) ||
-        this.setState({ bSubtitlesOpen: !1 });
+        this.setState({ bSubtitlesOpen: !1 }));
   }
   bindSettingsButton(e) {
     this.m_elSettingsButton = e;
@@ -716,8 +716,8 @@ var R = class extends A.Component {
     this.m_elSettingsPanel = e;
   }
   OnShowStats(e) {
-    this.props.onShowStats(e),
-      this.setState({ bSettingsOpen: !this.state.bSettingsOpen });
+    (this.props.onShowStats(e),
+      this.setState({ bSettingsOpen: !this.state.bSettingsOpen }));
   }
   render() {
     let e = !1,
@@ -740,8 +740,8 @@ var R = class extends A.Component {
             O,
             {
               onClick: () => {
-                this.props.video.SetVideoRepresentation(e),
-                  this.setState({ bSettingsOpen: !this.state.bSettingsOpen });
+                (this.props.video.SetVideoRepresentation(e),
+                  this.setState({ bSettingsOpen: !this.state.bSettingsOpen }));
               },
               bChecked: e.selected,
               children: e.displayName,
@@ -763,15 +763,17 @@ var R = class extends A.Component {
         (o = 0 - (a.length * 21 + 32))),
       this.state.bSubtitlesOpen)
     ) {
-      (t = !0),
+      ((t = !0),
         (a = []),
         a.push(
           (0, P.jsx)(
             O,
             {
               onClick: () => {
-                this.props.video.SetSubtitles(null),
-                  this.setState({ bSubtitlesOpen: !this.state.bSubtitlesOpen });
+                (this.props.video.SetSubtitles(null),
+                  this.setState({
+                    bSubtitlesOpen: !this.state.bSubtitlesOpen,
+                  }));
               },
               className: `NoSubtitles`,
               bChecked: !1,
@@ -779,7 +781,7 @@ var R = class extends A.Component {
             },
             `none`,
           ),
-        );
+        ));
       for (let e = 0; e < this.props.video.ListSubtitles().length; e++) {
         let t = this.props.video.ListSubtitles()[e];
         a.push(
@@ -787,8 +789,10 @@ var R = class extends A.Component {
             O,
             {
               onClick: () => {
-                this.props.video.SetSubtitles(t.language),
-                  this.setState({ bSubtitlesOpen: !this.state.bSubtitlesOpen });
+                (this.props.video.SetSubtitles(t.language),
+                  this.setState({
+                    bSubtitlesOpen: !this.state.bSubtitlesOpen,
+                  }));
               },
               bChecked: t.mode === `showing`,
               children: t.label,
@@ -864,16 +868,16 @@ var R = class extends A.Component {
     });
   }
 };
-S([C], R.prototype, `OnVideoControlClick`, null),
+(S([C], R.prototype, `OnVideoControlClick`, null),
   S([C], R.prototype, `OnSubtitlesClick`, null),
   S([C], R.prototype, `OnMouseUp`, null),
   S([C], R.prototype, `bindSettingsButton`, null),
   S([C], R.prototype, `BindSettingsPanel`, null),
-  S([C], R.prototype, `OnShowStats`, null);
+  S([C], R.prototype, `OnShowStats`, null));
 var Ge = !0,
   z = class extends A.Component {
     constructor(e) {
-      super(e), i(this);
+      (super(e), i(this));
     }
     k_nHideSliderTimeout = 1500;
     m_bShowSlider = Ge;
@@ -886,18 +890,18 @@ var Ge = !0,
     ToggleMute() {
       let e = this.props.video,
         t = e.IsMuted();
-      e.SetMute(!t), e.GetVolume() < 0.01 && e.SetVolume(0.5);
+      (e.SetMute(!t), e.GetVolume() < 0.01 && e.SetVolume(0.5));
     }
     OnMouseEnter(e) {
-      (this.m_bShowSlider = !0),
+      ((this.m_bShowSlider = !0),
         (this.m_bMouseOver = !0),
-        this.m_schHideSlider.Cancel();
+        this.m_schHideSlider.Cancel());
     }
     OnMouseLeave(e) {
-      (this.m_bMouseOver = !1), this.ScheduleHide();
+      ((this.m_bMouseOver = !1), this.ScheduleHide());
     }
     OnChildDrag(e) {
-      (this.m_bChildDragging = e), this.ScheduleHide();
+      ((this.m_bChildDragging = e), this.ScheduleHide());
     }
     ScheduleHide() {
       this.m_bMouseOver ||
@@ -942,21 +946,21 @@ var Ge = !0,
       );
     }
   };
-S([c], z.prototype, `m_bShowSlider`, void 0),
+(S([c], z.prototype, `m_bShowSlider`, void 0),
   S([C], z.prototype, `ToggleMute`, null),
   S([C], z.prototype, `OnMouseEnter`, null),
   S([C], z.prototype, `OnMouseLeave`, null),
   S([C], z.prototype, `OnChildDrag`, null),
-  (z = S([r], z));
+  (z = S([r], z)));
 var B = class extends A.Component {
   constructor(e) {
-    super(e), i(this);
+    (super(e), i(this));
   }
   m_elSlider = null;
   m_nVolumeStartOfDrag = 0;
   OnMouseDown(e) {
     let t = e.currentTarget;
-    (this.m_elSlider = t),
+    ((this.m_elSlider = t),
       (this.m_nVolumeStartOfDrag = this.props.video.GetVolume()),
       this.SetVolumeWithCoord(t, e.clientX),
       t.ownerDocument.defaultView?.addEventListener(
@@ -964,7 +968,7 @@ var B = class extends A.Component {
         this.OnMouseMove,
       ),
       t.ownerDocument.defaultView?.addEventListener(`mouseup`, this.OnMouseUp),
-      this.props.onDrag(!0);
+      this.props.onDrag(!0));
   }
   OnMouseMove(e) {
     this.m_elSlider && this.SetVolumeWithCoord(this.m_elSlider, e.clientX);
@@ -973,7 +977,7 @@ var B = class extends A.Component {
     if (!this.m_elSlider) return;
     this.SetVolumeWithCoord(this.m_elSlider, e.clientX);
     let t = this.props.video;
-    t.IsMuted() && t.SetVolume(this.m_nVolumeStartOfDrag),
+    (t.IsMuted() && t.SetVolume(this.m_nVolumeStartOfDrag),
       this.m_elSlider.ownerDocument.defaultView?.removeEventListener(
         `mousemove`,
         this.OnMouseMove,
@@ -984,14 +988,14 @@ var B = class extends A.Component {
       ),
       (this.m_nVolumeStartOfDrag = 0),
       (this.m_elSlider = null),
-      this.props.onDrag(!1);
+      this.props.onDrag(!1));
   }
   SetVolumeWithCoord(e, t) {
     let n = e.getBoundingClientRect(),
       r = je(t, n.left, n.right, 0, 1),
       i = D(r, 0, 1),
       a = this.props.video;
-    a.SetMute(r < 0.01), a.SetVolume(i);
+    (a.SetMute(r < 0.01), a.SetVolume(i));
   }
   render() {
     let e = this.props.video,
@@ -1016,11 +1020,11 @@ var B = class extends A.Component {
     });
   }
 };
-S([C], B.prototype, `OnMouseDown`, null),
+(S([C], B.prototype, `OnMouseDown`, null),
   S([C], B.prototype, `OnMouseMove`, null),
   S([C], B.prototype, `OnMouseUp`, null),
   S([l], B.prototype, `SetVolumeWithCoord`, null),
-  (B = S([r], B));
+  (B = S([r], B)));
 var Ke = t({
     BroadcastDetails: () => Z,
     LinkOverlay: () => $,
@@ -1037,7 +1041,7 @@ var Ke = t({
     m_elMouseDown = null;
     m_listeners = new ie();
     constructor(e) {
-      super(e),
+      (super(e),
         (this.state = {
           bMountControls: !1,
           bControlsVisible: !1,
@@ -1045,7 +1049,7 @@ var Ke = t({
           video: null,
           nResizedHeight: null,
           bFullscreen: !1,
-        });
+        }));
     }
     StopVideo() {
       let e = this.state.video;
@@ -1063,7 +1067,7 @@ var Ke = t({
       e && e.StopPlaybackTillUserInput();
     }
     componentDidUpdate(e, t) {
-      !t.bMountControls && this.state.bMountControls
+      (!t.bMountControls && this.state.bMountControls
         ? setTimeout(() => {
             this.setState((e) => ({ bControlsVisible: e.bMountControls }));
           }, 15)
@@ -1073,7 +1077,7 @@ var Ke = t({
           !this.state.video.IsPaused() &&
           this.m_schUnmountControls.Schedule(2e3, this.UmountControls),
         this.props.steamIDBroadcast !== e.steamIDBroadcast &&
-          this.BindVideoRef(this.m_elVideo);
+          this.BindVideoRef(this.m_elVideo));
       let n = this.props.nAppIDVOD;
       n &&
         (t.strInitialCapsuleImageUrl === void 0 || e.nAppIDVOD != n) &&
@@ -1086,13 +1090,13 @@ var Ke = t({
           });
     }
     componentWillUnmount() {
-      this.m_listeners.Unregister(),
+      (this.m_listeners.Unregister(),
         this.m_schHideControls.Cancel(),
         this.m_schUnmountControls.Cancel(),
-        this.StopVideo();
+        this.StopVideo());
     }
     BindBroadcastPlayerRef(e) {
-      this.m_listeners.Unregister(),
+      (this.m_listeners.Unregister(),
         (this.m_elBroadcastPlayer = e),
         e &&
           (this.m_listeners.AddEventListener(
@@ -1114,11 +1118,11 @@ var Ke = t({
             e,
             `msfullscreenchange`,
             this.OnFullscreenChange,
-          ));
+          )));
     }
     BindVideoRef(e) {
       let t = null;
-      this.StopVideo(),
+      (this.StopVideo(),
         this.props.steamIDBroadcast
           ? e &&
             (t = x.CreateBroadcastVideo(
@@ -1149,32 +1153,32 @@ var Ke = t({
           this.props.bStartPaused ? t.StopPlaybackTillUserInput() : t.Play()),
         this.setState({ video: t }),
         this.props.fnSetBroadcastVideo?.(t),
-        (this.m_elVideo = e);
+        (this.m_elVideo = e));
     }
     OnMouseDown(e) {
-      (this.m_bMouseDown = !0),
+      ((this.m_bMouseDown = !0),
         (this.m_elMouseDown = e.currentTarget),
         this.m_elMouseDown.ownerDocument.defaultView?.addEventListener(
           `mouseup`,
           this.OnMouseUp,
-        );
+        ));
     }
     OnMouseUp(e) {
-      (this.m_bMouseDown = !1),
+      ((this.m_bMouseDown = !1),
         this.m_elMouseDown?.ownerDocument.defaultView?.removeEventListener(
           `mouseup`,
           this.OnMouseUp,
         ),
-        this.m_schHideControls.Schedule(qe, this.HideControls);
+        this.m_schHideControls.Schedule(qe, this.HideControls));
     }
     OnMouseMove(e) {
-      this.m_schHideControls.Cancel(),
+      (this.m_schHideControls.Cancel(),
         this.m_schUnmountControls.Cancel(),
         this.state.bMountControls
           ? this.state.bControlsVisible ||
             this.setState({ bControlsVisible: !0 })
           : this.setState({ bMountControls: !0 }),
-        this.m_schHideControls.Schedule(qe, this.HideControls);
+        this.m_schHideControls.Schedule(qe, this.HideControls));
     }
     OnMouseLeave(e) {
       this.HideControls();
@@ -1212,7 +1216,7 @@ var Ke = t({
       let n = t.GetBroadcastInfo();
       if (!n) return;
       let r = he(`${be.STORE_BASE_URL}app/${n.m_strAppId}`);
-      this.props.onOpenLinkInNewWindow(e, r), e.stopPropagation();
+      (this.props.onOpenLinkInNewWindow(e, r), e.stopPropagation());
     }
     GetContextMenuItems() {
       let e = [],
@@ -1285,12 +1289,12 @@ var Ke = t({
         s = e?.GetDASHPlayerStats(),
         c = e?.IsBroadcastVOD() && o && this.state.strInitialCapsuleImageUrl,
         l = `videoContainer`;
-      a || (l += ` HidePlayerControls`),
+      (a || (l += ` HidePlayerControls`),
         t && (l += ` VideoPaused`),
         this.state.bFullscreen && (l += ` fullscreenVideo`),
-        this.props.classes && (l += ` ` + this.props.classes);
+        this.props.classes && (l += ` ` + this.props.classes));
       let u = [];
-      !this.state.bFullscreen &&
+      (!this.state.bFullscreen &&
         this.props.actions &&
         (u = u.concat(this.props.actions)),
         !this.state.bFullscreen &&
@@ -1316,7 +1320,7 @@ var Ke = t({
             },
             `FullscreenToggle`,
           ),
-        );
+        ));
       let d = i && !this.BHideVideoControls(),
         f = i && !this.state.bFullscreen,
         p =
@@ -1385,7 +1389,7 @@ var Ke = t({
       });
     }
   };
-S([C], H.prototype, `BindBroadcastPlayerRef`, null),
+(S([C], H.prototype, `BindBroadcastPlayerRef`, null),
   S([C], H.prototype, `BindVideoRef`, null),
   S([C], H.prototype, `OnMouseDown`, null),
   S([C], H.prototype, `OnMouseUp`, null),
@@ -1400,7 +1404,7 @@ S([C], H.prototype, `BindBroadcastPlayerRef`, null),
   S([C], H.prototype, `CloseStats`, null),
   S([C], H.prototype, `OnToggleFullscreen`, null),
   S([C], H.prototype, `OnFullscreenChange`, null),
-  (H = S([r], H));
+  (H = S([r], H)));
 var U = H,
   W = class extends A.Component {
     render() {
@@ -1504,8 +1508,8 @@ var Je = class extends A.PureComponent {
       });
     }
   };
-S([C], G.prototype, `OnJumpBackward`, null),
-  S([C], G.prototype, `OnJumpForward`, null);
+(S([C], G.prototype, `OnJumpBackward`, null),
+  S([C], G.prototype, `OnJumpForward`, null));
 var Ye = r((e) => {
     if (e.video.IsBroadcastClip() || e.video.IsBroadcastVOD()) return null;
     let t = (t) => {
@@ -1547,10 +1551,10 @@ var Ye = r((e) => {
       });
     }
   };
-S([C], K.prototype, `OnTogglePlayPause`, null), (K = S([r], K));
+(S([C], K.prototype, `OnTogglePlayPause`, null), (K = S([r], K)));
 var q = class extends A.Component {
   constructor(e) {
-    super(e), i(this), (this.video = e.video);
+    (super(e), i(this), (this.video = e.video));
   }
   componentDidUpdate() {
     this.video = this.props.video;
@@ -1583,13 +1587,13 @@ var q = class extends A.Component {
     });
   }
 };
-S([c], q.prototype, `video`, void 0),
+(S([c], q.prototype, `video`, void 0),
   S([o], q.prototype, `has_previous_marker`, null),
   S([C], q.prototype, `OnJumpToPreviousMarkerClicked`, null),
-  (q = S([r], q));
+  (q = S([r], q)));
 var J = class extends A.Component {
   constructor(e) {
-    super(e), i(this), (this.video = e.video);
+    (super(e), i(this), (this.video = e.video));
   }
   componentDidUpdate() {
     this.video = this.props.video;
@@ -1622,10 +1626,10 @@ var J = class extends A.Component {
     });
   }
 };
-S([c], J.prototype, `video`, void 0),
+(S([c], J.prototype, `video`, void 0),
   S([o], J.prototype, `has_next_marker`, null),
   S([C], J.prototype, `OnJumpToNextMarkerClicked`, null),
-  (J = S([r], J));
+  (J = S([r], J)));
 var Y = (e) =>
   (0, P.jsx)(`div`, {
     className: `timelineMarker`,
@@ -1672,7 +1676,7 @@ var X = class extends A.Component {
   m_elSlider = A.createRef();
   m_rectSlider = void 0;
   constructor(e) {
-    super(e),
+    (super(e),
       (this.state = {
         nGrabberMouseDownTime: 0,
         bGrabberMouseDown: !1,
@@ -1681,14 +1685,14 @@ var X = class extends A.Component {
         bStartMouseDown: !1,
         bEndMouseDown: !1,
         thumbnailURL: ``,
-      });
+      }));
   }
   OnMouseDown(e, t) {
     let n = this.m_elSlider.current;
     if (n) {
-      e.persist(), (this.m_rectSlider = n.getBoundingClientRect());
+      (e.persist(), (this.m_rectSlider = n.getBoundingClientRect()));
       let r = {};
-      t === `start`
+      (t === `start`
         ? ((r = { bStartMouseDown: !0 }), e.stopPropagation())
         : t === `end`
           ? ((r = { bEndMouseDown: !0 }), e.stopPropagation())
@@ -1701,14 +1705,14 @@ var X = class extends A.Component {
         n.ownerDocument.defaultView?.addEventListener(
           `mouseup`,
           this.OnMouseUp,
-        );
+        ));
     }
   }
   OnMouseMove(e) {
     this.AdjustSliderForClientX(e.clientX);
   }
   OnMouseUp(e) {
-    this.state.bStartMouseDown
+    (this.state.bStartMouseDown
       ? this.setState({ bStartMouseDown: !1 })
       : this.state.bEndMouseDown
         ? this.setState({ bEndMouseDown: !1 })
@@ -1722,7 +1726,7 @@ var X = class extends A.Component {
         this.m_elSlider.current.ownerDocument.defaultView?.removeEventListener(
           `mouseup`,
           this.OnMouseUp,
-        ));
+        )));
   }
   OnKeyDown(e) {
     e.keyCode == 37
@@ -1753,8 +1757,9 @@ var X = class extends A.Component {
     let t = this.props.video,
       n = t.GetTimelineStartPos(),
       r = t.GetTimelineStartPos() + t.GetTimelineDuration();
-    (this.m_rectSlider = this.m_elSlider.current?.getBoundingClientRect()),
-      this.m_rectSlider && t.GetTimeAtMousePosition(e, this.m_rectSlider, n, r);
+    ((this.m_rectSlider = this.m_elSlider.current?.getBoundingClientRect()),
+      this.m_rectSlider &&
+        t.GetTimeAtMousePosition(e, this.m_rectSlider, n, r));
   }
   OnSegmentClick(e) {
     this.props.video.Seek(e);
@@ -1791,13 +1796,13 @@ var X = class extends A.Component {
     let f = re(e.GetPlaybackTime()),
       p = re(this.state.nHoverValue ?? 0),
       m = `STV_timelineContainer`;
-    this.state.bGrabberMouseDown && (m += ` grabberDown`),
-      e.IsTimelineMapActive() && (m += ` minimapActive`);
+    (this.state.bGrabberMouseDown && (m += ` grabberDown`),
+      e.IsTimelineMapActive() && (m += ` minimapActive`));
     let h = ``;
-    (n = t ? n : r),
+    ((n = t ? n : r),
       n > 100
         ? (h = ` grabberOffScreenRight grabberOffscreen`)
-        : n < 0 && (h = ` grabberOffScreenLeft grabberOffscreen`);
+        : n < 0 && (h = ` grabberOffScreenLeft grabberOffscreen`));
     let g = [];
     e.GetTimelineMarkers().forEach((t, n) => {
       let r = e.GetPercentOffsetFromTime(t.nTime, b.Timeline);
@@ -1945,7 +1950,7 @@ var X = class extends A.Component {
     });
   }
 };
-S([C], X.prototype, `OnMouseDown`, null),
+(S([C], X.prototype, `OnMouseDown`, null),
   S([C], X.prototype, `OnMouseMove`, null),
   S([C], X.prototype, `OnMouseUp`, null),
   S([C], X.prototype, `OnKeyDown`, null),
@@ -1955,7 +1960,7 @@ S([C], X.prototype, `OnMouseDown`, null),
   S([C], X.prototype, `OnSegmentClick`, null),
   S([C], X.prototype, `OnMarkerMouseEnter`, null),
   S([C], X.prototype, `OnMarkerMouseLeave`, null),
-  (X = S([r], X));
+  (X = S([r], X)));
 var Z = class extends A.Component {
   state = { info: null };
   static getDerivedStateFromProps(e, t) {
@@ -2091,11 +2096,11 @@ var Q = class extends A.Component {
 S([C], Q.prototype, `showContextMenu`, null);
 var $ = class extends A.Component {
   constructor(e) {
-    super(e), (this.state = { sizableRegion: [] });
+    (super(e), (this.state = { sizableRegion: [] }));
   }
   async AddLinkRegion() {
     let e = this.state.sizableRegion.length;
-    this.state.sizableRegion.push({
+    (this.state.sizableRegion.push({
       xPosPct: 2.5 + e,
       yPosPct: 2.5 + e,
       widthPct: 20,
@@ -2103,7 +2108,7 @@ var $ = class extends A.Component {
     }),
       this.setState({ sizableRegion: this.state.sizableRegion }, () =>
         this.OnSaveRegions(),
-      );
+      ));
   }
   componentDidUpdate(e) {
     e.linkRegions.length == 0 &&
@@ -2112,7 +2117,7 @@ var $ = class extends A.Component {
       });
   }
   async LoadLinkRegion(e, t) {
-    this.state.sizableRegion.length,
+    (this.state.sizableRegion.length,
       this.state.sizableRegion.push({
         xPosPct: e.left,
         yPosPct: e.top,
@@ -2122,13 +2127,13 @@ var $ = class extends A.Component {
         link_description: e.link_description,
         link_index: e.link_index,
       }),
-      await this.setState({ sizableRegion: this.state.sizableRegion });
+      await this.setState({ sizableRegion: this.state.sizableRegion }));
   }
   OnSaveRegions() {
     let e = { links: [] };
     for (let t = 0; t < this.state.sizableRegion.length; t++) {
       let n;
-      (n = {
+      ((n = {
         left: Math.floor(this.state.sizableRegion[t].xPosPct * 100),
         top: Math.floor(this.state.sizableRegion[t].yPosPct * 100),
         width: Math.floor(this.state.sizableRegion[t].widthPct * 100),
@@ -2137,20 +2142,21 @@ var $ = class extends A.Component {
         link_description: this.state.sizableRegion[t].link_description,
         link_index: t,
       }),
-        e.links.push(n);
+        e.links.push(n));
     }
     this.props.onSaveLinkRegions?.(e);
   }
   async DeleteRegion(e) {
-    this.state.sizableRegion.splice(e, 1),
+    (this.state.sizableRegion.splice(e, 1),
       console.log(`keys: `, this.state.sizableRegion.keys),
       this.setState({ sizableRegion: this.state.sizableRegion }, () =>
         this.OnSaveRegions(),
-      );
+      ));
   }
   async UpdatePanel(e, t) {
     let n = [...this.state.sizableRegion];
-    (n[e] = t), this.setState({ sizableRegion: n }, () => this.OnSaveRegions());
+    ((n[e] = t),
+      this.setState({ sizableRegion: n }, () => this.OnSaveRegions()));
   }
   render() {
     return (0, P.jsxs)(`div`, {
@@ -2222,10 +2228,10 @@ var $ = class extends A.Component {
     });
   }
 };
-S([C], $.prototype, `AddLinkRegion`, null),
+(S([C], $.prototype, `AddLinkRegion`, null),
   S([C], $.prototype, `LoadLinkRegion`, null),
   S([C], $.prototype, `OnSaveRegions`, null),
   S([C], $.prototype, `DeleteRegion`, null),
   S([C], $.prototype, `UpdatePanel`, null),
-  ($ = S([r], $));
+  ($ = S([r], $)));
 export { Ke as n, U as t };

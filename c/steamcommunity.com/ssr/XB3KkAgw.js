@@ -77,12 +77,12 @@ function _(_) {
     fnClose: _,
     bCircular: _,
   } = _;
-  _(`ArrowLeft`, () => _?.(), !0, !0),
+  (_(`ArrowLeft`, () => _?.(), !0, !0),
     _(`Left`, () => _?.(), !0, !0),
     _(`ArrowRight`, () => _?.(), !0, !0),
     _(`Right`, () => _?.(), !0, !0),
     _(`Escape`, () => _ && _(), !0, !0),
-    _(`Esc`, () => _ && _(), !0, !0);
+    _(`Esc`, () => _ && _(), !0, !0));
   let _ = _ > 1;
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -209,8 +209,8 @@ function _(_) {
     _ != _.length && (_(_.length), _(0));
   }, [_, _.length]);
   let _ = _.useCallback(() => {
-    _.onImageError && _.onImageError(_.srcs[_]),
-      _ + 1 < _.srcs.length && _(_ + 1);
+    (_.onImageError && _.onImageError(_.srcs[_]),
+      _ + 1 < _.srcs.length && _(_ + 1));
   }, [_, _]);
   return _.length == 0
     ? null
@@ -305,7 +305,7 @@ function _(_) {
 }
 function _(_, _) {
   let _ = [];
-  return _ && _(_, _, _), _.filter((_) => !!_);
+  return (_ && _(_, _, _), _.filter((_) => !!_));
 }
 function _(_, _) {
   return {
@@ -429,7 +429,6 @@ function _(_, _) {
     case `library`:
       return !!_.hero_capsule || !!_.library_capsule;
     default:
-      return _(_, `Unhandled imageType: ${_}`), !1;
+      return (_(_, `Unhandled imageType: ${_}`), !1);
   }
 }
-export { _, _, _, _, _ };

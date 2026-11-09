@@ -107,7 +107,7 @@ _(
     m_eventModel;
     m_entry;
     constructor(_, _) {
-      (this.m_eventModel = _), (this.m_entry = _);
+      ((this.m_eventModel = _), (this.m_entry = _));
     }
     GetEventStartTime() {
       return this.m_entry.rtime_start_specific
@@ -122,7 +122,7 @@ _(
 var _ = 99999,
   _ = `exploration`,
   _ = (function (_) {
-    return (_.Random = `r`), (_.Personalized = `p`), _;
+    return ((_.Random = `r`), (_.Personalized = `p`), _);
   })({});
 function _(_) {
   switch (_) {
@@ -558,7 +558,7 @@ var _ = {
     }
     static FromCClanEventData(_, _) {
       let _ = new _();
-      (_.GID = _.gid),
+      ((_.GID = _.gid),
         (_.clanSteamID = new _(_.clan_steamid)),
         _.name.set(_, _.event_name ?? ``),
         (_.type = _.event_type),
@@ -589,7 +589,7 @@ var _ = {
             _.broadcaster_accountid,
             _.EUNIVERSE,
           )),
-        (_.AnnouncementGID = _.announcement_body?.gid ?? `0`);
+        (_.AnnouncementGID = _.announcement_body?.gid ?? `0`));
       let _ = _.clan_steamid_original;
       return (
         _
@@ -720,12 +720,12 @@ var _ = {
     }
     GetDayIndexFromEventStart(_ = _()) {
       let _ = 0;
-      this.startTime !== void 0 &&
+      (this.startTime !== void 0 &&
         _ >= this.startTime &&
         (_ = Math.floor((_ - this.startTime) / 86400)),
         this.m_overrideCurrentDay !== void 0 &&
           this.m_overrideCurrentDay >= 0 &&
-          (_ = this.m_overrideCurrentDay);
+          (_ = this.m_overrideCurrentDay));
       let _ = this.GetLastReferencedSaleDay() || 0;
       return Math.min(_, _);
     }
@@ -1551,7 +1551,7 @@ var _ = {
       };
     }
   };
-_([_], _.prototype, `GID`, void 0),
+(_([_], _.prototype, `GID`, void 0),
   _([_], _.prototype, `AnnouncementGID`, void 0),
   _([_], _.prototype, `forumTopicGID`, void 0),
   _([_], _.prototype, `type`, void 0),
@@ -1585,65 +1585,7 @@ _([_], _.prototype, `GID`, void 0),
   _([_], _.prototype, `rtime32_moderator_reviewed`, void 0),
   _([_], _.prototype, `video_preview_type`, void 0),
   _([_], _.prototype, `video_preview_id`, void 0),
-  _([_], _.prototype, `m_overrideCurrentDay`, void 0);
+  _([_], _.prototype, `m_overrideCurrentDay`, void 0));
 function _(_) {
   if (_) return _?.replace(/[()]/g, `\\$&`);
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

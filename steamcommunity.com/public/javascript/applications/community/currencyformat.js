@@ -166,13 +166,13 @@ function i(e, t) {
     l = a && e % 100 == 0;
   c && (e = -e);
   let u = [];
-  for (let t = 0; t < 2; t++) l || u.push(e % 10), (e = Math.floor(e / 10));
+  for (let t = 0; t < 2; t++) (l || u.push(e % 10), (e = Math.floor(e / 10)));
   !l && o && u.push(o);
   let d = 0;
   do
-    d++ % 3 == 0 && d > 2 && s && u.push(s),
+    (d++ % 3 == 0 && d > 2 && s && u.push(s),
       u.push(e % 10),
-      (e = Math.floor(e / 10));
+      (e = Math.floor(e / 10)));
   while (e > 0);
   let f = u.reverse().join(``),
     p = i ? ` ` : ``,

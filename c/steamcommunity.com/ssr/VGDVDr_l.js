@@ -130,4 +130,3 @@ function _(_) {
     breadcrumbs: _,
   });
 }
-export { _, _ };

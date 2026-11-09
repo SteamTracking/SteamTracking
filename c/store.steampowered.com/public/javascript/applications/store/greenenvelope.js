@@ -239,7 +239,7 @@ function _(_) {
     } = _,
     [_, _] = _.useState(+!!_),
     [_, _] = _.useState(void 0);
-  _.useEffect(() => {
+  (_.useEffect(() => {
     _ == 1 && !_ ? _(2) : _ == 2 && _ && _(1);
   }, [_, _]),
     _.useEffect(() => {
@@ -250,10 +250,10 @@ function _(_) {
       _ && _ > 0 && _ !== `_78CF9aUvUeY-` && _ != 2 && _ != 1
         ? _(_)
         : !_ && _ == `_78CF9aUvUeY-` && _(_);
-    }, [_, _, _]);
+    }, [_, _, _]));
   let _ = _.onActivate;
-  (_ ||= () => console.log(`Missing activate function`)),
-    _ == 1 && (_ = void 0);
+  ((_ ||= () => console.log(`Missing activate function`)),
+    _ == 1 && (_ = void 0));
   let _ = _;
   _ == 4 ? (_ = _) : _ == 2 ? (_ = _) : (_ == 7 || _ == 3) && (_ = _);
   let _ = null;
@@ -411,7 +411,7 @@ function _(_) {
 function _(_, _) {
   return _.useCallback(
     (_) => {
-      _ && _(_), _ && _();
+      (_ && _(_), _ && _());
     },
     [_, _],
   );
@@ -1215,7 +1215,7 @@ function _(_) {
     _ = null;
   if (_) {
     let _ = _.name ?? ``;
-    (_ = _),
+    ((_ = _),
       _.count == 1
         ? _
           ? (_ = _(
@@ -1254,7 +1254,7 @@ function _(_) {
             : (_ = _(
                 `#SteamNotifications_Wishlist_OnSale_PlusMany`,
                 _.count - 1,
-              ));
+              )));
   } else _ = _(`#SteamNotifications_Wishlist_Generic`);
   return _
     ? (0, _.jsx)(_, {
@@ -1344,10 +1344,10 @@ function _(_) {
   return (0, _.jsx)(`div`, {
     className: _,
     onClick: (_) => {
-      _.onHide(), _.stopPropagation(), _.preventDefault();
+      (_.onHide(), _.stopPropagation(), _.preventDefault());
     },
     onMouseDown: (_) => {
-      _.stopPropagation(), _.preventDefault();
+      (_.stopPropagation(), _.preventDefault());
     },
     children: (0, _.jsx)(_, {}),
   });
@@ -1379,7 +1379,7 @@ function _() {
 }
 function _(_) {
   let _ = null;
-  return _(_) ? (_ = _) : _(_) ? (_ = _) : _[_] && (_ = _[_]), _;
+  return (_(_) ? (_ = _) : _(_) ? (_ = _) : _[_] && (_ = _[_]), _);
 }
 function _(_) {
   let { rollup: _, uimode: _, location: _ } = _,
@@ -1846,7 +1846,7 @@ var _ = {
     }, [_]);
     let _ = _();
     (0, _.useEffect)(() => {
-      _.setTransport(_), (window.RefreshSteamNotifications = () => _(_));
+      (_.setTransport(_), (window.RefreshSteamNotifications = () => _(_)));
     }, [_]);
     let _ = _();
     return _
@@ -1893,8 +1893,8 @@ function _(_) {
       )),
       _.current.Hide());
     let _ = document.getElementById(`header_notification_link`);
-    _ && (_.style.cssText = `background-color: rgba(0,0,0,0)`),
-      window.setTimeout(() => _(null), 2e3);
+    (_ && (_.style.cssText = `background-color: rgba(0,0,0,0)`),
+      window.setTimeout(() => _(null), 2e3));
   }, []);
   let _ = () => {
       _.current?.visible ||
@@ -1975,11 +1975,11 @@ var _ = (_) => {
     });
   };
 function _(_, _, _) {
-  _.read ||
+  (_.read ||
     (_ && _.button != 0 && _.button != 1) ||
     !_.notification_id ||
     _.MarkItemRead(_.notification_id),
-    _();
+    _());
 }
 function _() {
   let _ = _();

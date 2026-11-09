@@ -12,13 +12,13 @@ var t = e((e, t) => {
                 e +
                 `.`),
           );
-        (this._batchLoadFn = e),
+        ((this._batchLoadFn = e),
           (this._maxBatchSize = l(t)),
           (this._batchScheduleFn = u(t)),
           (this._cacheKeyFn = d(t)),
           (this._cacheMap = f(t)),
           (this._batch = null),
-          (this.name = p(t));
+          (this.name = p(t)));
       }
       var t = e.prototype;
       return (
@@ -46,7 +46,7 @@ var t = e((e, t) => {
           var s = new Promise(function (e, n) {
             t.callbacks.push({ resolve: e, reject: n });
           });
-          return n && n.set(r, s), s;
+          return (n && n.set(r, s), s);
         }),
         (t.loadMany = function (e) {
           if (!m(e))
@@ -72,7 +72,7 @@ var t = e((e, t) => {
         }),
         (t.clearAll = function () {
           var e = this._cacheMap;
-          return e && e.clear(), this;
+          return (e && e.clear(), this);
         }),
         (t.prime = function (e, t) {
           var n = this._cacheMap;
@@ -80,10 +80,10 @@ var t = e((e, t) => {
             var r = this._cacheKeyFn(e);
             if (n.get(r) === void 0) {
               var i;
-              t instanceof Error
+              (t instanceof Error
                 ? ((i = Promise.reject(t)), i.catch(function () {}))
                 : (i = Promise.resolve(t)),
-                n.set(r, i);
+                n.set(r, i));
             }
           }
           return this;
@@ -94,10 +94,10 @@ var t = e((e, t) => {
     r =
       typeof process == `object` && typeof process.nextTick == `function`
         ? function (e) {
-            (i ||= Promise.resolve()),
+            ((i ||= Promise.resolve()),
               i.then(function () {
                 process.nextTick(e);
-              });
+              }));
           }
         : typeof setImmediate == `function`
           ? function (e) {
@@ -180,7 +180,7 @@ Values:
   function s(e, t, n) {
     c(t);
     for (var r = 0; r < t.keys.length; r++)
-      e.clear(t.keys[r]), t.callbacks[r].reject(n);
+      (e.clear(t.keys[r]), t.callbacks[r].reject(n));
   }
   function c(e) {
     if (e.cacheHits)

@@ -179,13 +179,13 @@ var U = class {
   m_eStorageType = `session`;
   m_strStorageKey;
   constructor(e) {
-    i(this),
+    (i(this),
       n(() => {
-        e?.rgHiddenApps &&
+        (e?.rgHiddenApps &&
           e.rgHiddenApps.forEach((e) => this.m_mapHiddenApps.set(e, !0)),
           e?.rgHiddenClans &&
-            e.rgHiddenClans.forEach((e) => this.m_mapHiddenClans.set(e, !0));
-      });
+            e.rgHiddenClans.forEach((e) => this.m_mapHiddenClans.set(e, !0)));
+      }));
   }
   GetGameSources() {
     return Array.from(this.m_mapGameSources.keys());
@@ -216,25 +216,25 @@ var U = class {
     );
   }
   InitDefaultCheckboxes(e, t, n) {
-    (this.m_bInitializedForUpdatesOnly = t),
-      (this.m_mapEventTypeGroupsAllowed = H(t ? [`updates`] : B));
+    ((this.m_bInitializedForUpdatesOnly = t),
+      (this.m_mapEventTypeGroupsAllowed = H(t ? [`updates`] : B)));
     let r = w() ? R : L;
-    (this.m_mapGameSources = H(e ? r : z)),
-      n && this.m_mapGameSources.set(`featured`, !0);
+    ((this.m_mapGameSources = H(e ? r : z)),
+      n && this.m_mapGameSources.set(`featured`, !0));
   }
   Init(e, t, n, r, i) {
-    (this.m_eStorageType = i), (this.m_strStorageKey = r);
+    ((this.m_eStorageType = i), (this.m_strStorageKey = r));
     let a = this.GetStorageObject(),
       o = a ? a.getItem(this.GetPreferencesStorageKey()) : null;
     if (o) {
       let e = JSON.parse(o);
       if (e.rgEventTypeGroupsAllowed && e.rgGameSources) {
         let { rgEventTypeGroupsAllowed: t, rgGameSources: n } = e;
-        (this.m_mapEventTypeGroupsAllowed = H(t)),
+        ((this.m_mapEventTypeGroupsAllowed = H(t)),
           (this.m_mapGameSources = H(n)),
           e.bCuratorUnhideOnFollowDismissed !== void 0 &&
             (this.m_bCuratorUnhideOnFollowDialogDismissed =
-              e.bCuratorUnhideOnFollowDismissed);
+              e.bCuratorUnhideOnFollowDismissed));
         return;
       }
     }
@@ -255,7 +255,7 @@ var U = class {
   }
   RecordFilterChange() {
     let e = 0;
-    this.BIsGameSourceAllowed(`library`) && (e |= 1),
+    (this.BIsGameSourceAllowed(`library`) && (e |= 1),
       this.BIsGameSourceAllowed(`wishlist`) && (e |= 2),
       this.BIsGameSourceAllowed(`following`) && (e |= 4),
       this.BIsGameSourceAllowed(`recommended`) && (e |= 8),
@@ -268,14 +268,14 @@ var U = class {
       this.BIsEventTypeGroupAllowed(`updates`) && (e |= 8192),
       this.BIsEventTypeGroupAllowed(`releases`) && (e |= 16384),
       this.BIsEventTypeGroupAllowed(`sales`) && (e |= 32768),
-      ie(be, e);
+      ie(be, e));
   }
   BCuratorUnhideOnFollowDialogDismissed() {
     return this.m_bCuratorUnhideOnFollowDialogDismissed;
   }
   SetCuratorUnhideOnFollowDialogDismissed(e) {
-    (this.m_bCuratorUnhideOnFollowDialogDismissed = e),
-      this.SaveFilterPreferences();
+    ((this.m_bCuratorUnhideOnFollowDialogDismissed = e),
+      this.SaveFilterPreferences());
   }
   BIsEventTypeGroupAllowed(e) {
     return this.m_mapEventTypeGroupsAllowed.has(e);
@@ -286,14 +286,14 @@ var U = class {
       : this.m_mapGameSources.has(e);
   }
   SetEventTypeGroupAllowed(e, t) {
-    t
+    (t
       ? this.m_mapEventTypeGroupsAllowed.set(e, !0)
       : this.m_mapEventTypeGroupsAllowed.delete(e),
       this.SaveFilterPreferences(),
-      this.RecordFilterChange();
+      this.RecordFilterChange());
   }
   SetGameSourceAllowed(e, t) {
-    t
+    (t
       ? (this.m_mapGameSources.set(e, !0),
         e == `recent`
           ? this.m_mapGameSources.delete(`library`)
@@ -308,7 +308,7 @@ var U = class {
           ? this.m_mapGameSources.set(`library`, !0)
           : e == `library` && this.m_mapGameSources.delete(`recent`)),
       this.SaveFilterPreferences(),
-      this.RecordFilterChange();
+      this.RecordFilterChange());
   }
   BShouldDisplayEvent(e) {
     let t = e.GetSource(),
@@ -371,7 +371,7 @@ var U = class {
       : this.m_mapHiddenApps.has(e) || this.m_mapHiddenApps.set(e, !0);
   }
 };
-b([l], U.prototype, `m_mapEventTypeGroupsAllowed`, void 0),
+(b([l], U.prototype, `m_mapEventTypeGroupsAllowed`, void 0),
   b([l], U.prototype, `m_mapGameSources`, void 0),
   b([l], U.prototype, `m_bCuratorUnhideOnFollowDialogDismissed`, void 0),
   b([l], U.prototype, `m_mapHiddenApps`, void 0),
@@ -383,7 +383,7 @@ b([l], U.prototype, `m_mapEventTypeGroupsAllowed`, void 0),
     null,
   ),
   b([u], U.prototype, `SetEventTypeGroupAllowed`, null),
-  b([u], U.prototype, `SetGameSourceAllowed`, null);
+  b([u], U.prototype, `SetGameSourceAllowed`, null));
 var Te = (function (e) {
     return (
       (e.Default = `default`),
@@ -457,20 +457,20 @@ var Te = (function (e) {
           (e && !this.m_mapBlockedAppIds.has(t))
         )
           return !0;
-        e
+        (e
           ? this.m_mapBlockedAppIds.delete(t)
           : this.m_mapBlockedAppIds.set(t, !0),
-          i.append(`appId`, t.toString());
+          i.append(`appId`, t.toString()));
       } else if (n) {
         if (
           (!e && this.m_mapBlockedClanIds.has(n)) ||
           (e && !this.m_mapBlockedClanIds.has(n))
         )
           return !0;
-        e
+        (e
           ? this.m_mapBlockedClanIds.delete(n)
           : this.m_mapBlockedClanIds.set(n, !0),
-          i.append(`clanId`, n.toString());
+          i.append(`clanId`, n.toString()));
       } else
         return (
           T(!1, `BlockEventsFromCalenderEvent: Invalid AppID and ClanID`), !1
@@ -484,8 +484,8 @@ var Te = (function (e) {
       }
     }
   };
-b([l], W.prototype, `m_mapBlockedAppIds`, void 0),
-  b([l], W.prototype, `m_mapBlockedClanIds`, void 0);
+(b([l], W.prototype, `m_mapBlockedAppIds`, void 0),
+  b([l], W.prototype, `m_mapBlockedClanIds`, void 0));
 var Ee = 2500;
 function G(e, t, n, r) {
   return {
@@ -517,10 +517,10 @@ var K = class {
   m_key;
   m_collectionMetaData = void 0;
   constructor(e, t) {
-    i(this),
+    (i(this),
       (this.m_key = e),
       (this.m_visibilityStore = new U(t)),
-      m.Get().HintLoad();
+      m.Get().HintLoad());
   }
   GetNumEventsLoaded() {
     return this.m_mapCalendarEventsByGid.size;
@@ -667,34 +667,34 @@ var K = class {
     let r = new Date(e);
     r.setHours(0, 0, 0, 1);
     let i = r.getTime() / 1e3;
-    t.push(G(n, E(`#Time_Today`), i, n)), r.setDate(r.getDate() - 1);
+    (t.push(G(n, E(`#Time_Today`), i, n)), r.setDate(r.getDate() - 1));
     let a = i;
-    (i = r.getTime() / 1e3), t.push(G(n, E(`#Time_Yesterday`), i, a));
+    ((i = r.getTime() / 1e3), t.push(G(n, E(`#Time_Yesterday`), i, a)));
     let o =
         this.m_rgSortedCalendarEvents[this.m_rgSortedCalendarEvents.length - 1],
       s = o ? o.start_time : n,
       c = s > i;
     for (let e = 0; e < 5 && !c; e++)
-      r.setDate(r.getDate() - 1),
+      (r.setDate(r.getDate() - 1),
         (a = i),
         (i = r.getTime() / 1e3),
         t.push(G(n, D(r), i, a)),
-        (c = s > i);
+        (c = s > i));
     let l = new Date(r),
       u = i;
-    for (; l.getMonth() == e.getMonth() && l.getDate() != 1 && !c; ) {
+    for (; l.getMonth() == e.getMonth() && l.getDate() != 1 && !c;) {
       l.setDate(l.getDate() - 7);
       let e = l.getTime() / 1e3;
-      t.push(G(n, k(u - 1), e, u)), (c = s > e), (u = e);
+      (t.push(G(n, k(u - 1), e, u)), (c = s > e), (u = e));
     }
     let d = new Date(e);
-    d.setHours(0, 0, 0, 1), d.setDate(1);
+    (d.setHours(0, 0, 0, 1), d.setDate(1));
     let f = u;
     for (let r = 1; !c; r++) {
       let i = new Date(d);
       i.setMonth(e.getMonth() - r, 1);
       let a = i.getTime() / 1e3;
-      t.push(G(n, k(a), a, f)), (c = s > a), (f = a);
+      (t.push(G(n, k(a), a, f)), (c = s > a), (f = a));
     }
     this.m_rgCalendarSections.length > t.length
       ? this.m_rgCalendarSections.splice(
@@ -711,7 +711,7 @@ var K = class {
       n;
     this.m_key.rtCalendarEnd && (n = this.m_key.rtCalendarEnd);
     let r = this.m_rgSortedCalendarEvents[0];
-    r && (n = r.start_time), (n ||= e.getTime() / 1e3);
+    (r && (n = r.start_time), (n ||= e.getTime() / 1e3));
     let i = e.getTime() / 1e3,
       a = new Date(e);
     a.setHours(24, 0, 0, 0);
@@ -721,27 +721,27 @@ var K = class {
     );
     let s = n <= o,
       c = o;
-    a.setDate(a.getDate() + 1),
+    (a.setDate(a.getDate() + 1),
       (o = a.getTime() / 1e3),
       s || t.push(G(i, E(`#Time_Tomorrow`), c, o)),
-      (s = n <= o);
+      (s = n <= o));
     let l = 6 - (0, P.default)(e).weekday();
     for (let e = 2; e <= l && !s; e++) {
       c = o;
       let e = D(a);
-      a.setDate(a.getDate() + 1),
+      (a.setDate(a.getDate() + 1),
         (o = a.getTime() / 1e3),
         t.push(G(i, e, c, o)),
-        (s = n <= o);
+        (s = n <= o));
     }
     if (this.m_key.bSectionByDay)
-      for (; !s; ) {
+      for (; !s;) {
         c = o;
         let e = ve(a);
-        a.setDate(a.getDate() + 1),
+        (a.setDate(a.getDate() + 1),
           (o = a.getTime() / 1e3),
           t.push(G(i, e, c, o)),
-          (s = n <= o);
+          (s = n <= o));
       }
     else {
       let r = new Date(a),
@@ -750,22 +750,24 @@ var K = class {
       if (r.getMonth() == e.getMonth() && r.getDate() != l && !s) {
         r.setDate(r.getDate() + 7);
         let e = r.getTime() / 1e3;
-        t.push(G(i, E(`#EventCalendar_NextWeek`), c, e)), (s = n <= e), (c = e);
+        (t.push(G(i, E(`#EventCalendar_NextWeek`), c, e)),
+          (s = n <= e),
+          (c = e));
       }
       let u = new Date(e);
-      u.setMonth(u.getMonth() + 1), u.setDate(1), u.setHours(0, 0, 0, 0);
+      (u.setMonth(u.getMonth() + 1), u.setDate(1), u.setHours(0, 0, 0, 0));
       let d;
       if (r < u && !s) {
         let e = u.getTime() / 1e3;
-        t.push(G(i, E(`#EventCalendar_LaterThisMonth`), c, e)),
+        (t.push(G(i, E(`#EventCalendar_LaterThisMonth`), c, e)),
           (s = n <= e),
-          (d = e);
+          (d = e));
       } else d = c;
       for (let r = 2; !s; r++) {
         let a = new Date(u);
         a.setMonth(e.getMonth() + r);
         let o = a.getTime() / 1e3;
-        t.push(G(i, k(d), d, o)), (s = n <= o), (d = o);
+        (t.push(G(i, k(d), d, o)), (s = n <= o), (d = o));
       }
     }
     this.m_rgFutureSections.length > t.length
@@ -775,9 +777,9 @@ var K = class {
           .forEach((e) => this.m_rgFutureSections.push(e));
   }
   async RegisterCalendarEventsAndModels(e) {
-    await m.Get().HintLoad(),
+    (await m.Get().HintLoad(),
       n(() => {
-        this.RegisterCalendarApps(e.apps ?? []),
+        (this.RegisterCalendarApps(e.apps ?? []),
           this.RegisterCalendarClans(e.clans ?? []),
           this.RegisterCalendarEvents(e.documents ?? []),
           p.RegisterClanEvents(e.events ?? []),
@@ -791,21 +793,21 @@ var K = class {
             this.ValidateCollectionMetadata(e.metadatainfo)
               ? e.metadatainfo
               : void 0,
-          );
-      });
+          ));
+      }));
   }
   RegisterCalendarApps(e) {
     if (e)
       for (let t of e) {
         if (this.m_mapCalendarAppsByID.has(t.appid)) continue;
         let e = new xe();
-        (e.appid = t.appid),
+        ((e.appid = t.appid),
           (e.source = t.source),
           (e.playtime = t.playtime),
           (e.last_played = t.last_played),
           (e.wishlist_added = t.wishlist_added),
           this.m_mapCalendarAppsByID.set(t.appid, e),
-          t.hidden && this.m_visibilityStore.SetAppVisibility(t.appid, !1);
+          t.hidden && this.m_visibilityStore.SetAppVisibility(t.appid, !1));
       }
   }
   RegisterCalendarClans(e) {
@@ -813,10 +815,10 @@ var K = class {
       for (let t of e)
         if (!this.m_mapCalendarClansByID.has(t.clanid)) {
           let e = new Se();
-          (e.clanid = t.clanid),
+          ((e.clanid = t.clanid),
             (e.source = t.source),
             this.m_mapCalendarClansByID.set(t.clanid, e),
-            t.hidden && this.m_visibilityStore.SetClanVisibility(t.clanid, !1);
+            t.hidden && this.m_visibilityStore.SetClanVisibility(t.clanid, !1));
         }
     }
   }
@@ -877,14 +879,14 @@ var K = class {
       : this.m_backwardRequestInFlight;
   }
   SetRequestInFlight(e, t) {
-    T(
+    (T(
       !t || !this.GetRequestInFlight(e),
       `Already have a request in flight for`,
       e,
     ),
       e === `forward`
         ? (this.m_forwardRequestInFlight = t)
-        : (this.m_backwardRequestInFlight = t);
+        : (this.m_backwardRequestInFlight = t));
   }
   async LoadAdditionalEvents(e, t) {
     if (this.BHitEventHorizon(e)) return 1;
@@ -975,7 +977,7 @@ var K = class {
     if (this.m_mapCalendarEventsByGid.has(e.unique_id)) return !1;
     let t = this.m_mapCalendarAppsByID.get(e.appid),
       n = this.m_mapCalendarClansByID.get(e.clanid);
-    if (!t && !n) return console.log(`No AppInfo or ClanInfo For: `, e), !1;
+    if (!t && !n) return (console.log(`No AppInfo or ClanInfo For: `, e), !1);
     let r = new I();
     return (
       (r.clanid = e.clanid),
@@ -1017,7 +1019,7 @@ var K = class {
     return Array.from(this.m_mapCalendarAppsByID.keys());
   }
 };
-b([l], K.prototype, `m_mapCalendarAppsByID`, void 0),
+(b([l], K.prototype, `m_mapCalendarAppsByID`, void 0),
   b([l], K.prototype, `m_mapCalendarClansByID`, void 0),
   b([l], K.prototype, `m_mapCalendarEventsByGid`, void 0),
   b([l], K.prototype, `m_rgSortedCalendarEvents`, void 0),
@@ -1034,7 +1036,7 @@ b([l], K.prototype, `m_mapCalendarAppsByID`, void 0),
   b([u], K.prototype, `RegisterCalendarEvents`, null),
   b([C], K.prototype, `BHitEventHorizon`, null),
   b([u.bound], K.prototype, `LoadAdditionalEvents`, null),
-  b([u], K.prototype, `UpdateEventBlockFromCalendarEvent`, null);
+  b([u], K.prototype, `UpdateEventBlockFromCalendarEvent`, null));
 var q = class {
   m_rgLoadedEventsBox = l.box([]);
   m_lastLoadLatch = null;
@@ -1046,7 +1048,7 @@ var q = class {
   m_bAllowMutedAndIgnoredSources;
   m_rgAutorunDisposer;
   constructor(e, t, n, r, o, s) {
-    i(this),
+    (i(this),
       (this.m_fnGetUnfilteredEvents = e),
       (this.m_fnLoadAdditionalEvents = t),
       (this.m_fnBHitEventHorizon = n),
@@ -1071,7 +1073,7 @@ var q = class {
           this.m_lastLoadLatch = null;
         }
         this.m_rgLoadedEventsBox.set(e);
-      }));
+      })));
   }
   dispose() {
     this.m_rgAutorunDisposer();
@@ -1149,8 +1151,8 @@ var q = class {
       });
   }
 };
-b([s.struct], q.prototype, `viewFilteredEvents`, null),
-  b([s.struct], q.prototype, `filteredAndCheckedEvents`, null);
+(b([s.struct], q.prototype, `viewFilteredEvents`, null),
+  b([s.struct], q.prototype, `filteredAndCheckedEvents`, null));
 var J = l.box(null),
   Y = new Map();
 window.g_EventCalendarMap = Y;
@@ -1184,7 +1186,7 @@ function X(e, t) {
 }
 function Z() {
   let e = J.get();
-  return (e ??= X({})), Y.get(e);
+  return ((e ??= X({})), Y.get(e));
 }
 function De() {
   return J.get() !== null;
@@ -1247,9 +1249,9 @@ var Q = class extends j.Component {
     });
   }
 };
-b([C], Q.prototype, `escFunction`, null),
+(b([C], Q.prototype, `escFunction`, null),
   b([C], Q.prototype, `OnBackgroundClick`, null),
-  (Q = b([r], Q));
+  (Q = b([r], Q)));
 var je = class {
     m_bHasBeenTracked = !1;
     m_fnSubmit = null;
@@ -1263,14 +1265,14 @@ var je = class {
     StartTracking(e, t, n) {
       if (e.bOldAnnouncement) return;
       let r = this.m_mapEvents.get(e.GID);
-      r || ((r = new je()), this.m_mapEvents.set(e.GID, r)),
+      (r || ((r = new je()), this.m_mapEvents.set(e.GID, r)),
         r.m_bHasBeenTracked ||
           r.m_fnSubmit ||
           ((r.m_fnSubmit = new ue()),
           r.m_fnSubmit.Schedule(
             this.m_nImpressionDelayMS,
             this.ReportImpression.bind(this, e, t, n),
-          ));
+          )));
     }
     StopTracking(e) {
       let t = this.m_mapEvents.get(e.GID);

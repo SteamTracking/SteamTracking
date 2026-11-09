@@ -42,7 +42,7 @@ function _(_) {
   });
 }
 var _ = {};
-(_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.brazilian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.bulgarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.czech = () => _(() => import(`./chunk.js`), [], import.meta.url)),
@@ -73,7 +73,7 @@ var _ = {};
   (_.thai = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.turkish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.ukrainian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
-  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url));
+  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -129,12 +129,12 @@ function _(_) {
 }
 async function _(_, _, _, _, _, _) {
   let _ = _.Init(_);
-  _(_) || _(_) || _(_)
+  (_(_) || _(_) || _(_)
     ? (_.Body().set_gidshoppingcart(_.gid),
       _ && _.Body().set_gift_info(_.fromObject(_)))
     : _(_) && _.Body().set_gidreplayoftransid(_.gid),
     _(_, _),
-    _ && _(_, _);
+    _ && _(_, _));
   let _ = await _.ValidateCart(_, _);
   if (
     (_.BSuccess() ||
@@ -144,4 +144,3 @@ async function _(_, _, _, _, _, _) {
     for (let _ of _.Body().cart_items()) _(_.store_item(), _);
   return _.Body().toObject();
 }
-export { _, _, _, _, _, _, _, _ };

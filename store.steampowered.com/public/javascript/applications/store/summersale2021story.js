@@ -66,7 +66,7 @@ var p = `lzdS-shJ99Q-`,
         );
       if (e.has(r)) {
         let n = ``;
-        e.get(r).choice == 1
+        (e.get(r).choice == 1
           ? (n = t.strResultA + `_Summary`)
           : e.get(r).choice == 2 && (n = t.strResultB + `_Summary`),
           y.push(
@@ -83,10 +83,10 @@ var p = `lzdS-shJ99Q-`,
               },
               r,
             ),
-          );
+          ));
       } else {
         let e = ``;
-        T.length || (e = `next`),
+        (T.length || (e = `next`),
           T.push(
             (0, K.jsx)(
               Y,
@@ -102,7 +102,7 @@ var p = `lzdS-shJ99Q-`,
               },
               r,
             ),
-          );
+          ));
       }
     });
     let E = y.concat(T);

@@ -2838,18 +2838,18 @@ html.responsive.touch .KxbX2VmSNpY- {
   display: block;
 }
 :where(
-    ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(3),
-    ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(5),
-    ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(9),
-    ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(15),
-    ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(23),
-    ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(29),
-    ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(34),
-    ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(40),
-    ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(48),
-    ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(54)
-  ) {
-  grid-area: span 2 / span 2;
+  ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(3),
+  ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(5),
+  ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(9),
+  ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(15),
+  ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(23),
+  ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(29),
+  ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(34),
+  ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(40),
+  ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(48),
+  ._6LO5BaihEDc- > ._4Q73gvvwSoU-:nth-child(54)
+) {
+  grid-area: span 2/span 2;
 }
 :where(.bV66XEiP5a8- > ._4Q73gvvwSoU-) {
   opacity: 0;
@@ -4479,14 +4479,14 @@ div.QEvd6eyhjtk- ._8fQsxmA8PSo- {
   backdrop-filter: blur(8px);
   background: #fff3;
   border-radius: 4px;
-  grid-template: "location location" "warning warning" "dropdown button" / auto;
+  grid-template: "location location" "warning warning" "dropdown button"/auto;
   gap: 8px;
   padding: 16px 22px;
   display: grid;
 }
 @media screen and (width <= 500px) {
   html.responsive.responsive .PmXhnAChGR0- {
-    grid-template: "location" "warning" "dropdown" "button" / auto;
+    grid-template: "location" "warning" "dropdown" "button"/auto;
     gap: 8px;
   }
 }
@@ -5017,7 +5017,7 @@ div.QEvd6eyhjtk- ._8fQsxmA8PSo- {
 }
 @media screen and (width <= 500px) {
   .WoxdMMqJPdU- .YZ3SbPJqfpo- .DT0tk4O37yI- {
-    grid-template: "feed feed feed" "fb tw rd" / 1fr 1fr 1fr;
+    grid-template: "feed feed feed" "fb tw rd"/1fr 1fr 1fr;
     gap: 8px;
     display: grid;
   }
@@ -5388,7 +5388,7 @@ div.VliP-d3rrOA- .ljhBLkfoQoA- {
   box-sizing: border-box;
   background: #fff3;
   flex-direction: row;
-  grid-column: 1 / 5;
+  grid-column: 1/5;
   justify-content: center;
   align-items: center;
   height: auto;

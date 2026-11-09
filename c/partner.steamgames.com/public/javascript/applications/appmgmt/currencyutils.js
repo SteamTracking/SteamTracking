@@ -294,7 +294,7 @@ function _(_) {
     case `ZA`:
       return 28;
     default:
-      return console.assert(!1, `Unhandled country code: ${_}`), 1;
+      return (console.assert(!1, `Unhandled country code: ${_}`), 1);
   }
 }
 function _(_) {
@@ -735,4 +735,3 @@ function _(_) {
 function _(_) {
   return `${_(_(_.toUpperCase()))} (${_})`;
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _ };

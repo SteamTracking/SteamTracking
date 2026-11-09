@@ -15,9 +15,9 @@ function a(e) {
       }, i);
     }, [e]),
     s = (0, r.useCallback)(() => {
-      (a.current &&= (clearTimeout(a.current), null)),
-        e.current && t.current && (e.current.play(), (t.current = !1));
+      ((a.current &&= (clearTimeout(a.current), null)),
+        e.current && t.current && (e.current.play(), (t.current = !1)));
     }, [e]);
-  n(window, `blur`, o), n(window, `focus`, s);
+  (n(window, `blur`, o), n(window, `focus`, s));
 }
 export { a as t };

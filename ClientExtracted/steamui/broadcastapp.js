@@ -4,7 +4,7 @@
     [7653],
     {
       87570: (Y, b, r) => {
-        r.r(b), r.d(b, { default: () => H });
+        (r.r(b), r.d(b, { default: () => H }));
         var a = r(62540),
           p = r(63696),
           C = r(75938),
@@ -26,7 +26,7 @@
               i--
             )
               (c = t[i]) && (n = (o ? c(e, s, n) : c(n)) || n);
-            return o && n && E(e, s, n), n;
+            return (o && n && E(e, s, n), n);
           };
         const G = ({ group: t, onClick: e }) => {
           const s = t.watching_broadcast_steamid;
@@ -80,13 +80,13 @@
               broadcastChannelID: n,
               broadcastTabId: i,
             } = this.props;
-            this.Close(),
+            (this.Close(),
               n
                 ? e.SetChatRoomGroupWatchingBroadcast(void 0, n)
-                : e.SetChatRoomGroupWatchingBroadcast(s);
+                : e.SetChatRoomGroupWatchingBroadcast(s));
             const c = g.xm.UIStore.ShowAndOrActivateChatRoomGroup(o, e, !0);
-            i && g.xm.UIStore.CloseTabByID(i),
-              this.props.bIsNewSteamTVDialog || c.ShowBroadcast();
+            (i && g.xm.UIStore.CloseTabByID(i),
+              this.props.bIsNewSteamTVDialog || c.ShowBroadcast());
           }
           Close() {
             const { closeModal: e } = this.props;
@@ -178,8 +178,8 @@
             });
           }
         }
-        y([d.oI], D.prototype, "WatchAlone", 1),
-          y([d.oI], D.prototype, "Close", 1);
+        (y([d.oI], D.prototype, "WatchAlone", 1),
+          y([d.oI], D.prototype, "Close", 1));
         function U(t, e, s, o) {
           (0, L.HT)(
             (0, a.jsx)(O.zw, {
@@ -229,7 +229,7 @@
               i--
             )
               (c = t[i]) && (n = (o ? c(e, s, n) : c(n)) || n);
-            return o && n && rt(e, s, n), n;
+            return (o && n && rt(e, s, n), n);
           };
         const ct = 2500;
         var lt = ((t) => (
@@ -248,7 +248,7 @@
           m_steamID = void 0;
           m_reactRoot;
           Init(e) {
-            (this.m_fnLaunchChat = e),
+            ((this.m_fnLaunchChat = e),
               (this.m_steamID = h.GP.steamid),
               window.addEventListener("message", this.HandlePostMessage),
               (this.m_reactRoot = J.createRoot(
@@ -257,14 +257,14 @@
               this.m_reactRoot.render(p.createElement(j, { app: this })),
               (this.m_iTimeoutLogin = window.setTimeout(() => {
                 this.m_eLogonState == 0 && (this.m_eLogonState = 1);
-              }, ct));
+              }, ct)));
           }
           LaunchChat() {
-            this.m_reactRoot.unmount(),
+            (this.m_reactRoot.unmount(),
               window.removeEventListener("message", this.HandlePostMessage),
               window.clearTimeout(this.m_iTimeoutLogin),
               (0, C.xT)(h.GP.steamid),
-              this.m_fnLaunchChat();
+              this.m_fnLaunchChat());
           }
           GetLoginURL() {
             return `${h.TS.STORE_BASE_URL}login/?steamtv`;
@@ -294,8 +294,8 @@
             let s = e.data;
             if (s) {
               if (s.msg == "OnLoginButtonClicked")
-                console.log("Login button clicked"),
-                  (window.location.href = Z());
+                (console.log("Login button clicked"),
+                  (window.location.href = Z()));
               else if (s.command == "LoginNeeded") this.m_eLogonState = 2;
               else if (s.command == "LogonComplete") {
                 this.LaunchChat();
@@ -304,18 +304,18 @@
             }
           }
         }
-        l([S.sH], M.prototype, "m_eLogonState", 2),
+        (l([S.sH], M.prototype, "m_eLogonState", 2),
           l([S.sH], M.prototype, "m_steamID", 2),
           l([S.XI], M.prototype, "LaunchChat", 1),
-          l([S.XI.bound], M.prototype, "HandlePostMessage", 1);
+          l([S.XI.bound], M.prototype, "HandlePostMessage", 1));
         let j = class extends p.Component {
           m_broadcastInfo = null;
           constructor(t) {
-            super(t),
+            (super(t),
               (this.m_broadcastInfo = v.BroadcastWatchStore.StartInfo(
                 this.props.app.GetSteamIDWatched(),
               )),
-              (this.state = { bChatCollapsed: !1, bTheaterMode: !1 });
+              (this.state = { bChatCollapsed: !1, bTheaterMode: !1 }));
           }
           componentWillUnmount() {
             this.m_broadcastInfo &&
@@ -388,9 +388,9 @@
             });
           }
         };
-        l([d.oI], j.prototype, "ToggleChat", 1),
+        (l([d.oI], j.prototype, "ToggleChat", 1),
           l([d.oI], j.prototype, "ToggleTheaterMode", 1),
-          (j = l([T.PA], j));
+          (j = l([T.PA], j)));
         function dt() {
           const t = (0, h.Fd)("loyalty_webapi_token", "application_config");
           return new et.D(h.TS.WEBAPI_BASE_URL, t);
@@ -456,8 +456,8 @@
             let e = this.props.broadcastView
               .GetSteamID()
               .ConvertTo64BitString();
-            (this.m_broadcastInfo = v.BroadcastWatchStore.StartInfo(e)),
-              (this.state = { bChatCollapsed: !1 });
+            ((this.m_broadcastInfo = v.BroadcastWatchStore.StartInfo(e)),
+              (this.state = { bChatCollapsed: !1 }));
           }
           componentWillUnmount() {
             this.m_broadcastInfo &&
@@ -528,16 +528,16 @@
             });
           }
         };
-        l([d.oI], I.prototype, "OnWatchWithFriends", 1),
+        (l([d.oI], I.prototype, "OnWatchWithFriends", 1),
           l([d.oI], I.prototype, "ToggleChat", 1),
           l([d.oI], I.prototype, "ToggleTheaterMode", 1),
-          (I = l([T.PA], I));
+          (I = l([T.PA], I)));
         let u = class extends p.Component {
           m_strLocalSteamID = "";
           m_refBroadcastContainer = p.createRef();
           m_elMainContent;
           constructor(t) {
-            super(t), (0, S.Gn)(this), (this.state = { info: null });
+            (super(t), (0, S.Gn)(this), (this.state = { info: null }));
           }
           componentDidMount() {
             w.td.stream["76561198208088121"] && h.TS.LANGUAGE === "chinese"
@@ -578,20 +578,20 @@
                 o.height = `${W}%`;
               }
             } else
-              (o.width = s ? `${s}%` : "66%"),
+              ((o.width = s ? `${s}%` : "66%"),
                 (o.minWidth = s ? `${s}%` : "66%"),
                 (o.maxWidth = "calc( 100% - 316px )"),
-                (o.overflowY = "auto");
+                (o.overflowY = "auto"));
             return o;
           }
           OnGrabberMouseDown(t) {
             let e = t.currentTarget.ownerDocument.defaultView;
-            e.addEventListener("mousemove", this.HandleMouseMove),
+            (e.addEventListener("mousemove", this.HandleMouseMove),
               e.addEventListener("mouseup", this.UnregisterDragEvents),
-              this.setState({ bDraggingChatGrabber: !0 });
+              this.setState({ bDraggingChatGrabber: !0 }));
           }
           HandleMouseMove(t) {
-            t.preventDefault(), t.stopPropagation();
+            (t.preventDefault(), t.stopPropagation());
             let e =
                 this.m_refBroadcastContainer.current.getBoundingClientRect(),
               s =
@@ -607,9 +607,9 @@
             C.ZM.SetUIDisplayPref(W, P);
           }
           UnregisterDragEvents(t) {
-            t.view.removeEventListener("mousemove", this.HandleMouseMove),
+            (t.view.removeEventListener("mousemove", this.HandleMouseMove),
               t.view.removeEventListener("mouseup", this.UnregisterDragEvents),
-              this.setState({ bDraggingChatGrabber: !1 });
+              this.setState({ bDraggingChatGrabber: !1 }));
           }
           render() {
             let { steamID: t, children: e } = this.props,
@@ -617,8 +617,8 @@
               n = this.state.info.m_bIsOnline,
               i = null;
             const c = this.CalculateBroadcastSectionStyles(!1);
-            (c.flexGrow = this.props.bHideChat ? 1 : null),
-              w.td.bValid && (i = (0, a.jsx)(pt, { info: w.td }));
+            ((c.flexGrow = this.props.bHideChat ? 1 : null),
+              w.td.bValid && (i = (0, a.jsx)(pt, { info: w.td })));
             const P = (0, a.jsx)("div", {
                 className: "LoginDiv",
                 children: (0, a.jsx)("a", {
@@ -694,13 +694,13 @@
             });
           }
         };
-        l([S.sH], u.prototype, "m_strLocalSteamID", 2),
+        (l([S.sH], u.prototype, "m_strLocalSteamID", 2),
           l([d.oI], u.prototype, "OnLocalStreamChange", 1),
           l([d.oI], u.prototype, "SetMainContentRef", 1),
           l([d.oI], u.prototype, "OnGrabberMouseDown", 1),
           l([d.oI], u.prototype, "HandleMouseMove", 1),
           l([d.oI], u.prototype, "UnregisterDragEvents", 1),
-          (u = l([T.PA], u));
+          (u = l([T.PA], u)));
         function pt(t) {
           let e = `url( "${h.TS.CHAT_BASE_URL + t.info.offlineImage}" )`;
           return (0, a.jsx)("div", {
@@ -721,7 +721,7 @@
               i--
             )
               (c = t[i]) && (n = (o ? c(e, s, n) : c(n)) || n);
-            return o && n && ut(e, s, n), n;
+            return (o && n && ut(e, s, n), n);
           };
         let H = class extends p.Component {
           render() {
@@ -741,7 +741,7 @@
         H = ft([T.PA], H);
       },
       22758: (Y, b, r) => {
-        r.r(b), r.d(b, { default: () => L });
+        (r.r(b), r.d(b, { default: () => L }));
         var a = r(62540),
           p = r(63696),
           C = r(44613),

@@ -65,7 +65,7 @@ var E = c.memo(function (e) {
           a = H;
           break;
         default:
-          return i(e, `Unhandled steam os category: ${e}`), null;
+          return (i(e, `Unhandled steam os category: ${e}`), null);
       }
     } else {
       let e;
@@ -93,7 +93,7 @@ var E = c.memo(function (e) {
           a = H;
           break;
         default:
-          return i(e, `Unhandled deck compat category: ${e}`), null;
+          return (i(e, `Unhandled deck compat category: ${e}`), null);
       }
     }
     return (0, C.jsxs)(`span`, {

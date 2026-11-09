@@ -37,7 +37,7 @@ var _ = _(_()),
     }
     SetLocalization(_, _, _) {
       let _ = this.m_mapTokens.get(_);
-      _ || ((_ = _([], 32, null)), this.m_mapTokens.set(_, _)), (_[_] = _);
+      (_ || ((_ = _([], 32, null)), this.m_mapTokens.set(_, _)), (_[_] = _));
     }
     GetSortedTokenList() {
       let _ = [];
@@ -158,21 +158,21 @@ var _ = _(_()),
     }
     WriteLocalizationData_CSV_TokenAndLanguageColumns(_, _) {
       let _ = [];
-      _.GetSortedTokenList().forEach((_) => {
+      (_.GetSortedTokenList().forEach((_) => {
         for (let _ of this.GetExportLanguages()) {
           let _ = {
             field: _,
           };
-          (_.language = _(_(_))),
+          ((_.language = _(_(_))),
             (_.value = _.GetLocalization(_, _)),
-            _.push(_);
+            _.push(_));
         }
       }),
-        _.WriteCSVToFile(_, _);
+        _.WriteCSVToFile(_, _));
     }
     WriteLocalizationData_CSV_LanguageColumns(_, _) {
       let _ = [];
-      _.GetSortedTokenList().forEach((_) => {
+      (_.GetSortedTokenList().forEach((_) => {
         let _ = {
           field: _,
         };
@@ -180,35 +180,35 @@ var _ = _(_()),
           _[_(_(_))] = _.GetLocalization(_, _);
         _.push(_);
       }),
-        _.WriteCSVToFile(_, _);
+        _.WriteCSVToFile(_, _));
     }
     WriteLocalizationData_CSV_LanguageRows(_, _) {
       let _ = [];
       for (let _ of this.GetExportLanguages())
-        _.length <= _ - 1 &&
+        (_.length <= _ - 1 &&
           _.push({
             language: ``,
           }),
           _.push({
             language: _(_(_)),
-          });
-      _.GetSortedTokenList().forEach((_) => {
+          }));
+      (_.GetSortedTokenList().forEach((_) => {
         for (let _ of this.GetExportLanguages()) {
           let _ = _.GetLocalization(_, _);
           _[_][_] = _;
         }
       }),
-        _.WriteCSVToFile(_, _);
+        _.WriteCSVToFile(_, _));
     }
     WriteLocalizationData_XML_SingleLanguage(_, _, _) {
       let _ = document.implementation.createDocument(null, `content`, null);
-      _.GetSortedTokenList().forEach((_) => {
+      (_.GetSortedTokenList().forEach((_) => {
         let _ = _.createElement(`string`);
-        _.setAttribute(`id`, _),
+        (_.setAttribute(`id`, _),
           _.appendChild(_.createTextNode(_.GetLocalization(_, _) || ``)),
-          _.documentElement.append(_);
+          _.documentElement.append(_));
       }),
-        _.WriteXMLToFile(_, _);
+        _.WriteXMLToFile(_, _));
     }
   },
   _ = `QKQ8f-Zg3Cs-`,
@@ -270,7 +270,7 @@ var _ = _(_()),
   _ = (_) => {
     let [_, _] = (0, _.useState)(!1),
       _ = (_, _) => {
-        _(!1),
+        (_(!1),
           console.log(
             `ImportLocalizationAction: On Handle Parse error: ` + _.message,
             _,
@@ -289,13 +289,13 @@ var _ = _(_()),
               }),
             }),
             window,
-          );
+          ));
       },
       _ = (_) => {
         _(!1);
         let _ = ``;
-        _.forEach((_) => {
-          _.length > 0 && (_ += `, `), (_ += _(`#Language_` + _(_)));
+        (_.forEach((_) => {
+          (_.length > 0 && (_ += `, `), (_ += _(`#Language_` + _(_))));
         }),
           _(
             (0, _.jsx)(_, {
@@ -309,7 +309,7 @@ var _ = _(_()),
               }),
             }),
             window,
-          );
+          ));
       },
       _ = async (_) => {
         let _ = _.target.files;
@@ -445,7 +445,7 @@ function _(_) {
         ? `https://valve.crowdin.com/editor/${_.data.crowdin_project_id}/${_.data.crowdin_file_id}`
         : null,
     _ = (_) => {
-      _.SetPushSourceToCrowdInAutomatically(_), _();
+      (_.SetPushSourceToCrowdInAutomatically(_), _());
     },
     _ = _(_.ConvertTo64BitString(), _, _);
   return _.isLoading
@@ -494,15 +494,15 @@ function _(_) {
               (0, _.jsx)(`div`, {
                 className: _,
                 onClick: () => {
-                  _(!0),
+                  (_(!0),
                     _.mutateAsync()
                       .then(() => window.location.reload())
                       .catch((_) => {
-                        _(_.toString()), _(!1);
+                        (_(_.toString()), _(!1));
                       })
                       .then(() => {
                         _(null);
-                      });
+                      }));
                 },
                 children: _(`#EventEditor_Localization_FetchLocalization`),
               }),
@@ -545,4 +545,3 @@ function _(_) {
     ],
   });
 }
-export { _, _, _, _, _, _, _, _, _, _, _ };

@@ -8,7 +8,7 @@
     __esmMin = (_, _, _) => () => {
       if (_) throw _[0];
       try {
-        return _ && (_ = _((_ = 0))), _;
+        return (_ && (_ = _((_ = 0))), _);
       } catch (_) {
         throw ((_ = [_]), _);
       }
@@ -43,13 +43,13 @@
     __copyProps = (_, _, _, _) => {
       if ((_ && typeof _ == `object`) || typeof _ == `function`)
         for (var _ = __getOwnPropNames(_), _ = 0, _ = _.length, _; _ < _; _++)
-          (_ = _[_]),
+          ((_ = _[_]),
             !__hasOwnProp.call(_, _) &&
               _ !== _ &&
               __defProp(_, _, {
                 get: ((_) => _[_]).bind(null, _),
                 enumerable: !(_ = __getOwnPropDesc(_, _)) || _.enumerable,
-              });
+              }));
       return _;
     },
     __toESM = (_, _, _) => (
@@ -156,7 +156,7 @@
   var ErrorWithEResult = class extends Error {
       eResult;
       constructor(_, _) {
-        super(_ ? `EResult ${_}: ${_}` : `EResult ${_}`), (this.eResult = _);
+        (super(_ ? `EResult ${_}: ${_}` : `EResult ${_}`), (this.eResult = _));
       }
     },
     CCallbackList = class {
@@ -184,7 +184,7 @@
         return new Promise((_) => {
           let _ = [],
             _ = () => {
-              _.forEach((_) => _.Unregister()), _();
+              (_.forEach((_) => _.Unregister()), _());
             };
           for (let _ of _) _.push(_.Register(_));
         });
@@ -192,7 +192,7 @@
     },
     require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       var $jscomp = $jscomp || {};
-      ($jscomp.scope = {}),
+      (($jscomp.scope = {}),
         ($jscomp.findInternal = function (_, _, _) {
           _ instanceof String && (_ = String(_));
           for (var _ = _.length, _ = 0; _ < _; _++) {
@@ -236,9 +236,9 @@
               _++
             ) {
               var _ = _[_];
-              _ in _ || (_[_] = {}), (_ = _[_]);
+              (_ in _ || (_[_] = {}), (_ = _[_]));
             }
-            (_ = _[_.length - 1]),
+            ((_ = _[_.length - 1]),
               (_ = _[_]),
               (_ = _(_)),
               _ != _ &&
@@ -247,7 +247,7 @@
                   configurable: !0,
                   writable: !0,
                   value: _,
-                });
+                }));
           }
         }),
         $jscomp.polyfill(
@@ -285,10 +285,10 @@
               _ ||
               function (_, _) {
                 var _ = $jscomp.checkStringArgs(this, _, `endsWith`);
-                (_ += ``),
+                ((_ += ``),
                   _ === void 0 && (_ = _.length),
-                  (_ = Math.max(0, Math.min(_ | 0, _.length)));
-                for (var _ = _.length; 0 < _ && 0 < _; )
+                  (_ = Math.max(0, Math.min(_ | 0, _.length))));
+                for (var _ = _.length; 0 < _ && 0 < _;)
                   if (_[--_] != _[--_]) return !1;
                 return 0 >= _;
               }
@@ -321,7 +321,7 @@
                 var _ = _.length,
                   _ = _.length;
                 _ = Math.max(0, Math.min(_ | 0, _.length));
-                for (var _ = 0; _ < _ && _ < _; )
+                for (var _ = 0; _ < _ && _ < _;)
                   if (_[_++] != _[_++]) return !1;
                 return _ >= _;
               }
@@ -340,22 +340,25 @@
                 if (0 > _ || 1342177279 < _)
                   throw RangeError(`Invalid count value`);
                 _ |= 0;
-                for (var _ = ``; _; ) _ & 1 && (_ += _), (_ >>>= 1) && (_ += _);
+                for (var _ = ``; _;)
+                  (_ & 1 && (_ += _), (_ >>>= 1) && (_ += _));
                 return _;
               }
             );
           },
           `es6`,
           `es3`,
-        );
+        ));
       var COMPILED = !0,
         goog = goog || {};
-      (goog.global = this$1 || self),
+      ((goog.global = this$1 || self),
         (goog.exportPath_ = function (_, _, _) {
-          (_ = _.split(`.`)),
+          ((_ = _.split(`.`)),
             (_ ||= goog.global),
-            _[0] in _ || _.execScript === void 0 || _.execScript(`var ` + _[0]);
-          for (var _; _.length && (_ = _.shift()); )
+            _[0] in _ ||
+              _.execScript === void 0 ||
+              _.execScript(`var ` + _[0]));
+          for (var _; _.length && (_ = _.shift());)
             _.length || _ === void 0
               ? (_ = _[_] && _[_] !== Object.prototype[_] ? _[_] : (_[_] = {}))
               : (_[_] = _);
@@ -446,7 +449,7 @@
           if (!COMPILED) {
             if (_ in goog.loadedModules_) return goog.loadedModules_[_].exports;
             if (!goog.implicitNamespaces_[_])
-              return (_ = goog.getObjectByName(_)), _ ?? null;
+              return ((_ = goog.getObjectByName(_)), _ ?? null);
           }
           return null;
         }),
@@ -509,22 +512,22 @@
                   _ +
                   `" has been loaded incorrectly.`,
               );
-            (_ = _.require(_.getCurrentModulePath())),
+            ((_ = _.require(_.getCurrentModulePath())),
               (goog.loadedModules_[_] = {
                 exports: _,
                 type: goog.ModuleType.ES6,
                 moduleId: _,
-              });
+              }));
           }
         }),
         (goog.setTestOnly = function (_) {
           if (goog.DISALLOW_TEST_ONLY_CODE)
             throw (
-              ((_ ||= ``),
+              (_ ||= ``),
               Error(
                 `Importing test-only code into non-debug environment` +
                   (_ ? `: ` + _ : `.`),
-              ))
+              )
             );
         }),
         (goog.forwardDeclare = function (_) {}),
@@ -539,7 +542,7 @@
             "goog.module": !0,
           })),
         (goog.getObjectByName = function (_, _) {
-          (_ = _.split(`.`)), (_ ||= goog.global);
+          ((_ = _.split(`.`)), (_ ||= goog.global));
           for (var _ = 0; _ < _.length; _++)
             if (((_ = _[_[_]]), _ == null)) return null;
           return _;
@@ -584,7 +587,7 @@
           throw Error(`unimplemented abstract method`);
         }),
         (goog.addSingletonGetter = function (_) {
-          (_.instance_ = void 0),
+          ((_.instance_ = void 0),
             (_.getInstance = function () {
               return _.instance_
                 ? _.instance_
@@ -593,7 +596,7 @@
                       goog.instantiatedSingletons_.length
                     ] = _),
                   (_.instance_ = new _()));
-            });
+            }));
         }),
         (goog.instantiatedSingletons_ = []),
         (goog.LOAD_MODULE_USING_EVAL = !0),
@@ -640,13 +643,13 @@
             )
               var _ = _.call(void 0, {});
             else if (typeof _ == `string`)
-              goog.useSafari10Workaround() &&
+              (goog.useSafari10Workaround() &&
                 (_ = goog.workaroundSafari10EvalBug(_)),
-                (_ = goog.loadModuleFromSource_.call(void 0, _));
+                (_ = goog.loadModuleFromSource_.call(void 0, _)));
             else throw Error(`Invalid module definition`);
             var _ = goog.moduleLoaderState_.moduleName;
             if (typeof _ == `string` && _)
-              goog.moduleLoaderState_.declareLegacyNamespace
+              (goog.moduleLoaderState_.declareLegacyNamespace
                 ? goog.constructNamespace_(_, _)
                 : goog.SEAL_MODULE_EXPORTS &&
                   Object.seal &&
@@ -657,18 +660,18 @@
                   exports: _,
                   type: goog.ModuleType.GOOG,
                   moduleId: goog.moduleLoaderState_.moduleName,
-                });
+                }));
             else throw Error(`Invalid module name "` + _ + `"`);
           } finally {
             goog.moduleLoaderState_ = _;
           }
         }),
         (goog.loadModuleFromSource_ = function (_) {
-          return eval(_), {};
+          return (eval(_), {});
         }),
         (goog.normalizePath_ = function (_) {
           _ = _.split(`/`);
-          for (var _ = 0; _ < _.length; )
+          for (var _ = 0; _ < _.length;)
             _[_] == `.`
               ? _.splice(_, 1)
               : _ && _[_] == `..` && _[_ - 1] && _[_ - 1] != `..`
@@ -715,10 +718,10 @@
                   `The transpiler did not properly export the "transpile" method. $gwtExport: ` +
                     JSON.stringify(goog.global.$gwtExport),
                 );
-              (goog.global.$jscomp.transpile =
+              ((goog.global.$jscomp.transpile =
                 goog.global.$gwtExport.$jscomp.transpile),
                 (_ = goog.global.$jscomp),
-                (_ = _.transpile);
+                (_ = _.transpile));
             }
           }
           return (
@@ -819,7 +822,7 @@
             var _ = Array.prototype.slice.call(arguments, 2);
             return function () {
               var _ = Array.prototype.slice.call(arguments);
-              return Array.prototype.unshift.apply(_, _), _.apply(_, _);
+              return (Array.prototype.unshift.apply(_, _), _.apply(_, _));
             };
           }
           return function () {
@@ -840,7 +843,7 @@
           var _ = Array.prototype.slice.call(arguments, 1);
           return function () {
             var _ = _.slice();
-            return _.push.apply(_, arguments), _.apply(this, _);
+            return (_.push.apply(_, arguments), _.apply(this, _));
           };
         }),
         (goog.mixin = function (_, _) {
@@ -869,11 +872,11 @@
             else {
               var _ = goog.global.document,
                 _ = _.createElement(`script`);
-              (_.type = `text/javascript`),
+              ((_.type = `text/javascript`),
                 (_.defer = !1),
                 _.appendChild(_.createTextNode(_)),
                 _.head.appendChild(_),
-                _.head.removeChild(_);
+                _.head.removeChild(_));
             }
           } else throw Error(`goog.globalEval not available`);
         }),
@@ -907,7 +910,7 @@
           );
         }),
         (goog.setCssNameMapping = function (_, _) {
-          (goog.cssNameMapping_ = _), (goog.cssNameMappingStyle_ = _);
+          ((goog.cssNameMapping_ = _), (goog.cssNameMappingStyle_ = _));
         }),
         !COMPILED &&
           goog.global.CLOSURE_CSS_NAME_MAPPING &&
@@ -933,7 +936,7 @@
         }),
         (goog.inherits = function (_, _) {
           function _() {}
-          (_.prototype = _.prototype),
+          ((_.prototype = _.prototype),
             (_.superClass_ = _.prototype),
             (_.prototype = new _()),
             (_.prototype.constructor = _),
@@ -945,7 +948,7 @@
               )
                 _[_ - 2] = arguments[_];
               return _.prototype[_].apply(_, _);
-            });
+            }));
         }),
         (goog.scope = function (_) {
           if (goog.isInModuleLoader_())
@@ -1011,8 +1014,8 @@
             _ < goog.defineClass.OBJECT_PROTOTYPE_FIELDS_.length;
             _++
           )
-            (_ = goog.defineClass.OBJECT_PROTOTYPE_FIELDS_[_]),
-              Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]);
+            ((_ = goog.defineClass.OBJECT_PROTOTYPE_FIELDS_[_]),
+              Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]));
         }),
         (goog.tagUnsealableClass = function (_) {
           !COMPILED &&
@@ -1061,8 +1064,8 @@
           }),
           goog.findBasePath_(),
           (goog.Transpiler = function () {
-            (this.requiresTranspilation_ = null),
-              (this.transpilationTarget_ = goog.TRANSPILE_TO_LANGUAGE);
+            ((this.requiresTranspilation_ = null),
+              (this.transpilationTarget_ = goog.TRANSPILE_TO_LANGUAGE));
           }),
           (goog.Transpiler.prototype.createRequiresTranspilation_ =
             function () {
@@ -1124,9 +1127,9 @@
             if (goog.TRANSPILE == `never`) return !1;
             if (!this.requiresTranspilation_) {
               var _ = this.createRequiresTranspilation_();
-              (this.requiresTranspilation_ = _.map),
+              ((this.requiresTranspilation_ = _.map),
                 (this.transpilationTarget_ =
-                  this.transpilationTarget_ || _.target);
+                  this.transpilationTarget_ || _.target));
             }
             if (_ in this.requiresTranspilation_)
               return this.requiresTranspilation_[_]
@@ -1146,7 +1149,7 @@
             return _.replace(/<\/(SCRIPT)/gi, `\\x3c/$1`);
           }),
           (goog.DebugLoader_ = function () {
-            (this.dependencies_ = {}),
+            ((this.dependencies_ = {}),
               (this.idToPath_ = {}),
               (this.written_ = {}),
               (this.loadingDeps_ = []),
@@ -1154,7 +1157,7 @@
               (this.paused_ = !1),
               (this.factory_ = new goog.DependencyFactory(goog.transpiler_)),
               (this.deferredCallbacks_ = {}),
-              (this.deferredQueue_ = []);
+              (this.deferredQueue_ = []));
           }),
           (goog.DebugLoader_.prototype.bootstrap = function (_, _) {
             function _() {
@@ -1171,14 +1174,14 @@
               _ = goog.require;
               var _ = 0;
               for (_ = 0; _ < _.length; _++)
-                _(_[_]),
+                (_(_[_]),
                   _[_].onLoad(function () {
                     ++_ == _.length && _();
-                  });
+                  }));
             } else _();
           }),
           (goog.DebugLoader_.prototype.loadClosureDeps = function () {
-            this.depsToLoad_.push(
+            (this.depsToLoad_.push(
               this.factory_.createDependency(
                 goog.normalizePath_(goog.basePath + `deps.js`),
                 `deps.js`,
@@ -1188,7 +1191,7 @@
                 !1,
               ),
             ),
-              this.loadDeps_();
+              this.loadDeps_());
           }),
           (goog.DebugLoader_.prototype.requested = function (_, _) {
             (_ = this.getPathFromDeps_(_)) &&
@@ -1216,22 +1219,19 @@
                     _.push(_);
                   }
                 };
-              _(_),
+              (_(_),
                 (_ = !!this.depsToLoad_.length),
                 (this.depsToLoad_ = this.depsToLoad_.concat(_)),
-                this.paused_ || _ || this.loadDeps_();
+                this.paused_ || _ || this.loadDeps_());
             } else
               throw (
-                ((_ = `goog.require could not find: ` + _),
+                (_ = `goog.require could not find: ` + _),
                 goog.logToConsole_(_),
-                Error(_))
+                Error(_)
               );
           }),
           (goog.DebugLoader_.prototype.loadDeps_ = function () {
-            for (
-              var _ = this, _ = this.paused_;
-              this.depsToLoad_.length && !_;
-            )
+            for (var _ = this, _ = this.paused_; this.depsToLoad_.length && !_;)
               (function () {
                 var _ = !1,
                   _ = _.depsToLoad_.shift(),
@@ -1248,7 +1248,7 @@
                   },
                   loaded: function () {
                     if (_) throw Error(`Double call to loaded.`);
-                    (_ = !0), _.loaded_(_);
+                    ((_ = !0), _.loaded_(_));
                   },
                   pending: function () {
                     for (var _ = [], _ = 0; _ < _.loadingDeps_.length; _++)
@@ -1323,7 +1323,7 @@
               this.loadingDeps_.length == this.deferredQueue_.length &&
               !this.depsToLoad_.length
             )
-              for (; this.deferredQueue_.length; )
+              for (; this.deferredQueue_.length;)
                 this.requested(this.deferredQueue_.shift(), !0);
             _.loaded();
           }),
@@ -1346,8 +1346,8 @@
                 : null;
           }),
           (goog.DebugLoader_.prototype.defer_ = function (_, _) {
-            (this.deferredCallbacks_[_.path] = _),
-              this.deferredQueue_.push(_.path);
+            ((this.deferredCallbacks_[_.path] = _),
+              this.deferredQueue_.push(_.path));
           }),
           (goog.LoadController = function () {}),
           (goog.LoadController.prototype.pause = function () {}),
@@ -1364,13 +1364,13 @@
           (goog.LoadController.prototype.defer = function (_) {}),
           (goog.LoadController.prototype.areDepsLoaded = function () {}),
           (goog.Dependency = function (_, _, _, _, _) {
-            (this.path = _),
+            ((this.path = _),
               (this.relativePath = _),
               (this.provides = _),
               (this.requires = _),
               (this.loadFlags = _),
               (this.loaded_ = !1),
-              (this.loadCallbacks_ = []);
+              (this.loadCallbacks_ = []));
           }),
           (goog.Dependency.prototype.getPathName = function () {
             var _ = this.path,
@@ -1396,7 +1396,7 @@
           (goog.Dependency.callbackMap_ = {}),
           (goog.Dependency.registerCallback_ = function (_) {
             var _ = Math.random().toString(32);
-            return (goog.Dependency.callbackMap_[_] = _), _;
+            return ((goog.Dependency.callbackMap_[_] = _), _);
           }),
           (goog.Dependency.unregisterCallback_ = function (_) {
             delete goog.Dependency.callbackMap_[_];
@@ -1449,7 +1449,7 @@
                     !goog.DebugLoader_.IS_OLD_IE_ && goog.getScriptNonce()
                       ? ` nonce="` + goog.getScriptNonce() + `"`
                       : ``;
-                (_ =
+                ((_ =
                   `<script src="` +
                   this.path +
                   `" ` +
@@ -1466,10 +1466,10 @@
                     goog.TRUSTED_TYPES_POLICY_
                       ? goog.TRUSTED_TYPES_POLICY_.createHTML(_)
                       : _,
-                  );
+                  ));
               } else {
                 var _ = _.createElement(`script`);
-                (_.defer = goog.Dependency.defer_),
+                ((_.defer = goog.Dependency.defer_),
                   (_.async = !1),
                   (_.type = `text/javascript`),
                   (_ = goog.getScriptNonce()) && _.setAttribute(`nonce`, _),
@@ -1481,15 +1481,15 @@
                           (_.loaded(), _.resume());
                       }))
                     : (_.onload = function () {
-                        (_.onload = null), _.loaded();
+                        ((_.onload = null), _.loaded());
                       }),
                   (_.src = goog.TRUSTED_TYPES_POLICY_
                     ? goog.TRUSTED_TYPES_POLICY_.createScriptURL(this.path)
                     : this.path),
-                  _.head.appendChild(_);
+                  _.head.appendChild(_));
               }
             } else
-              goog.logToConsole_(
+              (goog.logToConsole_(
                 `Cannot use default debug loader outside of HTML documents.`,
               ),
                 this.relativePath == `deps.js`
@@ -1497,7 +1497,7 @@
                       `Consider setting CLOSURE_IMPORT_SCRIPT before loading base.js, or setting CLOSURE_NO_DEPS to true.`,
                     ),
                     _.loaded())
-                  : _.pause();
+                  : _.pause());
           }),
           (goog.Es6ModuleDependency = function (_, _, _, _, _) {
             goog.Dependency.call(this, _, _, _, _, _);
@@ -1505,7 +1505,7 @@
           goog.inherits(goog.Es6ModuleDependency, goog.Dependency),
           (goog.Es6ModuleDependency.prototype.load = function (_) {
             function _(_, _) {
-              (_ = _
+              ((_ = _
                 ? `<script type="module" crossorigin>` + _ + `<\/script>`
                 : `<script type="module" crossorigin src="` +
                   _ +
@@ -1514,16 +1514,16 @@
                   goog.TRUSTED_TYPES_POLICY_
                     ? goog.TRUSTED_TYPES_POLICY_.createHTML(_)
                     : _,
-                );
+                ));
             }
             function _(_, _) {
               var _ = _.createElement(`script`);
-              (_.defer = !0),
+              ((_.defer = !0),
                 (_.async = !1),
                 (_.type = `module`),
-                _.setAttribute(`crossorigin`, !0);
+                _.setAttribute(`crossorigin`, !0));
               var _ = goog.getScriptNonce();
-              _ && _.setAttribute(`nonce`, _),
+              (_ && _.setAttribute(`nonce`, _),
                 _
                   ? (_.textContent = goog.TRUSTED_TYPES_POLICY_
                       ? goog.TRUSTED_TYPES_POLICY_.createScript(_)
@@ -1531,7 +1531,7 @@
                   : (_.src = goog.TRUSTED_TYPES_POLICY_
                       ? goog.TRUSTED_TYPES_POLICY_.createScriptURL(_)
                       : _),
-                _.head.appendChild(_);
+                _.head.appendChild(_));
             }
             if (goog.global.CLOSURE_IMPORT_SCRIPT)
               goog.global.CLOSURE_IMPORT_SCRIPT(this.path)
@@ -1545,18 +1545,18 @@
                 goog.Dependency.defer_ = !0;
               } else _ = _;
               var _ = goog.Dependency.registerCallback_(function () {
-                goog.Dependency.unregisterCallback_(_),
-                  _.setModuleState(goog.ModuleType.ES6);
+                (goog.Dependency.unregisterCallback_(_),
+                  _.setModuleState(goog.ModuleType.ES6));
               });
-              _(void 0, `goog.Dependency.callback_("` + _ + `")`),
-                _(this.path, void 0);
+              (_(void 0, `goog.Dependency.callback_("` + _ + `")`),
+                _(this.path, void 0));
               var _ = goog.Dependency.registerCallback_(function (_) {
-                goog.Dependency.unregisterCallback_(_),
+                (goog.Dependency.unregisterCallback_(_),
                   _.registerEs6ModuleExports(
                     _.path,
                     _,
                     goog.moduleLoaderState_.moduleName,
-                  );
+                  ));
               });
               _(
                 void 0,
@@ -1567,34 +1567,34 @@
                   `", m)`,
               );
               var _ = goog.Dependency.registerCallback_(function () {
-                goog.Dependency.unregisterCallback_(_),
+                (goog.Dependency.unregisterCallback_(_),
                   _.clearModuleState(),
-                  _.loaded();
+                  _.loaded());
               });
               _(void 0, `goog.Dependency.callback_("` + _ + `")`);
             } else
-              goog.logToConsole_(
+              (goog.logToConsole_(
                 `Cannot use default debug loader outside of HTML documents.`,
               ),
-                _.pause();
+                _.pause());
           }),
           (goog.TransformedDependency = function (_, _, _, _, _) {
-            goog.Dependency.call(this, _, _, _, _, _),
+            (goog.Dependency.call(this, _, _, _, _, _),
               (this.contents_ = null),
               (this.lazyFetch_ =
                 !goog.inHtmlDocument_() ||
-                !(`noModule` in goog.global.document.createElement(`script`)));
+                !(`noModule` in goog.global.document.createElement(`script`))));
           }),
           goog.inherits(goog.TransformedDependency, goog.Dependency),
           (goog.TransformedDependency.prototype.load = function (_) {
             function _() {
-              (_.contents_ = goog.loadFileSync_(_.path)),
+              ((_.contents_ = goog.loadFileSync_(_.path)),
                 _.contents_ &&
                   ((_.contents_ = _.transform(_.contents_)),
                   _.contents_ &&
                     (_.contents_ +=
                       `
-//# sourceURL=` + _.path));
+//# sourceURL=` + _.path)));
             }
             function _() {
               if ((_.lazyFetch_ && _(), _.contents_)) {
@@ -1606,7 +1606,7 @@
                 } finally {
                   _ && _.clearModuleState();
                 }
-                _ &&
+                (_ &&
                   goog.global.$jscomp.require.ensure(
                     [_.getPathName()],
                     function () {
@@ -1617,13 +1617,13 @@
                       );
                     },
                   ),
-                  _.loaded();
+                  _.loaded());
               }
             }
             function _() {
               var _ = goog.global.document,
                 _ = goog.Dependency.registerCallback_(function () {
-                  goog.Dependency.unregisterCallback_(_), _();
+                  (goog.Dependency.unregisterCallback_(_), _());
                 }),
                 _ =
                   `<script type="text/javascript">` +
@@ -1639,11 +1639,11 @@
             }
             var _ = this;
             if (goog.global.CLOSURE_IMPORT_SCRIPT)
-              _(),
+              (_(),
                 this.contents_ &&
                 goog.global.CLOSURE_IMPORT_SCRIPT(``, this.contents_)
                   ? ((this.contents_ = null), _.loaded())
-                  : _.pause();
+                  : _.pause());
             else {
               var _ = this.loadFlags.module == goog.ModuleType.ES6;
               this.lazyFetch_ || _();
@@ -1667,12 +1667,12 @@
                     goog.isDocumentLoading_() &&
                     !_)
                 ) {
-                  (goog.Dependency.defer_ = !0), _.pause();
+                  ((goog.Dependency.defer_ = !0), _.pause());
                   var _ = _.onreadystatechange;
                   _.onreadystatechange = function () {
-                    _.readyState == `interactive` &&
+                    (_.readyState == `interactive` &&
                       ((_.onreadystatechange = _), _(), _.resume()),
-                      goog.isFunction(_) && _.apply(void 0, arguments);
+                      goog.isFunction(_) && _.apply(void 0, arguments));
                   };
                 } else
                   !goog.DebugLoader_.IS_OLD_IE_ &&
@@ -1685,8 +1685,8 @@
           }),
           (goog.TransformedDependency.prototype.transform = function (_) {}),
           (goog.TranspiledDependency = function (_, _, _, _, _, _) {
-            goog.TransformedDependency.call(this, _, _, _, _, _),
-              (this.transpiler = _);
+            (goog.TransformedDependency.call(this, _, _, _, _, _),
+              (this.transpiler = _));
           }),
           goog.inherits(goog.TranspiledDependency, goog.TransformedDependency),
           (goog.TranspiledDependency.prototype.transform = function (_) {
@@ -1704,9 +1704,9 @@
               return _;
             }),
           (goog.GoogModuleDependency = function (_, _, _, _, _, _, _) {
-            goog.TransformedDependency.call(this, _, _, _, _, _),
+            (goog.TransformedDependency.call(this, _, _, _, _, _),
               (this.needsTranspile_ = _),
-              (this.transpiler_ = _);
+              (this.transpiler_ = _));
           }),
           goog.inherits(goog.GoogModuleDependency, goog.TransformedDependency),
           (goog.GoogModuleDependency.prototype.transform = function (_) {
@@ -1740,7 +1740,7 @@
             !goog.global.document.all
           )),
           (goog.DebugLoader_.prototype.addDependency = function (_, _, _, _) {
-            (_ ||= []), (_ = _.replace(/\\/g, `/`));
+            ((_ ||= []), (_ = _.replace(/\\/g, `/`)));
             var _ = goog.normalizePath_(goog.basePath + _);
             for (
               (_ && typeof _ != `boolean`) ||
@@ -1910,7 +1910,7 @@
         }),
         (goog.object.remove = function (_, _) {
           var _;
-          return (_ = _ in _) && delete _[_], _;
+          return ((_ = _ in _) && delete _[_], _);
         }),
         (goog.object.add = function (_, _, _) {
           if (_ !== null && _ in _)
@@ -1964,8 +1964,8 @@
           for (var _, _, _ = 1; _ < arguments.length; _++) {
             for (_ in ((_ = arguments[_]), _)) _[_] = _[_];
             for (var _ = 0; _ < goog.object.PROTOTYPE_FIELDS_.length; _++)
-              (_ = goog.object.PROTOTYPE_FIELDS_[_]),
-                Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]);
+              ((_ = goog.object.PROTOTYPE_FIELDS_[_]),
+                Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]));
           }
         }),
         (goog.object.create = function (_) {
@@ -2018,11 +2018,11 @@
         }),
         (goog.object.getSuperClass = function (_) {
           return (_ = Object.getPrototypeOf(_.prototype)) && _.constructor;
-        });
+        }));
       var jspb = {
         asserts: {},
       };
-      (jspb.asserts.doAssertFailure = function (_, _, _, _) {
+      ((jspb.asserts.doAssertFailure = function (_, _, _, _) {
         var _ = `Assertion failed`;
         if (_) {
           _ += `: ` + _;
@@ -2033,7 +2033,7 @@
         (jspb.asserts.assert = function (_, _, _) {
           for (var _ = [], _ = 2; _ < arguments.length; ++_)
             _[_ - 2] = arguments[_];
-          return _ || jspb.asserts.doAssertFailure(``, null, _, _), _;
+          return (_ || jspb.asserts.doAssertFailure(``, null, _, _), _);
         }),
         (jspb.asserts.assertString = function (_, _, _) {
           for (var _ = [], _ = 2; _ < arguments.length; ++_)
@@ -2182,7 +2182,7 @@
             var _ = Error().stack;
             _ && (this.stack = _);
           }
-          _ && (this.message = String(_)), (this.reportErrorToServer = !0);
+          (_ && (this.message = String(_)), (this.reportErrorToServer = !0));
         }),
         goog.inherits(goog.debug.Error, Error),
         (goog.debug.Error.prototype.name = `CustomError`),
@@ -2204,8 +2204,8 @@
         (goog.asserts = {}),
         (goog.asserts.ENABLE_ASSERTS = goog.DEBUG),
         (goog.asserts.AssertionError = function (_, _) {
-          goog.debug.Error.call(this, goog.asserts.subs_(_, _)),
-            (this.messagePattern = _);
+          (goog.debug.Error.call(this, goog.asserts.subs_(_, _)),
+            (this.messagePattern = _));
         }),
         goog.inherits(goog.asserts.AssertionError, goog.debug.Error),
         (goog.asserts.AssertionError.prototype.name = `AssertionError`),
@@ -2225,8 +2225,8 @@
             _ += `: ` + _;
             var _ = _;
           } else _ && ((_ += `: ` + _), (_ = _));
-          (_ = new goog.asserts.AssertionError(`` + _, _ || [])),
-            goog.asserts.errorHandler_(_);
+          ((_ = new goog.asserts.AssertionError(`` + _, _ || [])),
+            goog.asserts.errorHandler_(_));
         }),
         (goog.asserts.setErrorHandler = function (_) {
           goog.asserts.ENABLE_ASSERTS && (goog.asserts.errorHandler_ = _);
@@ -2452,8 +2452,8 @@
           goog.NATIVE_ARRAY_PROTOTYPES &&
           (goog.array.ASSUME_NATIVE_FUNCTIONS || Array.prototype.forEach)
             ? function (_, _, _) {
-                goog.asserts.assert(_.length != null),
-                  Array.prototype.forEach.call(_, _, _);
+                (goog.asserts.assert(_.length != null),
+                  Array.prototype.forEach.call(_, _, _));
               }
             : function (_, _, _) {
                 for (
@@ -2664,7 +2664,7 @@
         (goog.array.remove = function (_, _) {
           _ = goog.array.indexOf(_, _);
           var _;
-          return (_ = 0 <= _) && goog.array.removeAt(_, _), _;
+          return ((_ = 0 <= _) && goog.array.removeAt(_, _), _);
         }),
         (goog.array.removeLast = function (_, _) {
           return (
@@ -2740,8 +2740,8 @@
               ? `o` + goog.getUid(_)
               : (typeof _).charAt(0) + _;
           };
-          (_ ||= _), (_ = {});
-          for (var _ = 0, _ = 0; _ < _.length; ) {
+          ((_ ||= _), (_ = {}));
+          for (var _ = 0, _ = 0; _ < _.length;) {
             var _ = _[_++],
               _ = _(_);
             Object.prototype.hasOwnProperty.call(_, _) ||
@@ -2761,7 +2761,7 @@
           return goog.array.binarySearch_(_, _, !0, void 0, _);
         }),
         (goog.array.binarySearch_ = function (_, _, _, _, _) {
-          for (var _ = 0, _ = _.length, _; _ < _; ) {
+          for (var _ = 0, _ = _.length, _; _ < _;) {
             var _ = _ + ((_ - _) >>> 1),
               _ = _ ? _.call(_, _[_], _, _) : _(_, _[_]);
             0 < _ ? (_ = _ + 1) : ((_ = _), (_ = !_));
@@ -2908,10 +2908,10 @@
           );
         }),
         (goog.array.moveItem = function (_, _, _) {
-          goog.asserts.assert(0 <= _ && _ < _.length),
+          (goog.asserts.assert(0 <= _ && _ < _.length),
             goog.asserts.assert(0 <= _ && _ < _.length),
             (_ = Array.prototype.splice.call(_, _, 1)),
-            Array.prototype.splice.call(_, _, 0, _[0]);
+            Array.prototype.splice.call(_, _, 0, _[0]));
         }),
         (goog.array.zip = function (_) {
           if (!arguments.length) return [];
@@ -2933,7 +2933,7 @@
           for (var _ = _.length - 1; 0 < _; _--) {
             var _ = Math.floor(_() * (_ + 1)),
               _ = _[_];
-            (_[_] = _[_]), (_[_] = _);
+            ((_[_] = _[_]), (_[_] = _));
           }
         }),
         (goog.array.copyByIndex = function (_, _) {
@@ -2952,7 +2952,7 @@
         (goog.crypt.stringToByteArray = function (_) {
           for (var _ = [], _ = 0, _ = 0; _ < _.length; _++) {
             var _ = _.charCodeAt(_);
-            255 < _ && ((_[_++] = _ & 255), (_ >>= 8)), (_[_++] = _);
+            (255 < _ && ((_[_++] = _ & 255), (_ >>= 8)), (_[_++] = _));
           }
           return _;
         }),
@@ -2967,7 +2967,7 @@
         (goog.crypt.byteArrayToHex = function (_, _) {
           return goog.array
             .map(_, function (_) {
-              return (_ = _.toString(16)), 1 < _.length ? _ : `0` + _;
+              return ((_ = _.toString(16)), 1 < _.length ? _ : `0` + _);
             })
             .join(_ || ``);
         }),
@@ -3003,7 +3003,7 @@
           return _;
         }),
         (goog.crypt.utf8ByteArrayToString = function (_) {
-          for (var _ = [], _ = 0, _ = 0; _ < _.length; ) {
+          for (var _ = [], _ = 0, _ = 0; _ < _.length;) {
             var _ = _[_++];
             if (128 > _) _[_++] = String.fromCharCode(_);
             else if (191 < _ && 224 > _) {
@@ -3013,20 +3013,20 @@
               _ = _[_++];
               var _ = _[_++],
                 _ = _[_++];
-              (_ =
+              ((_ =
                 (((_ & 7) << 18) |
                   ((_ & 63) << 12) |
                   ((_ & 63) << 6) |
                   (_ & 63)) -
                 65536),
                 (_[_++] = String.fromCharCode(55296 + (_ >> 10))),
-                (_[_++] = String.fromCharCode(56320 + (_ & 1023)));
+                (_[_++] = String.fromCharCode(56320 + (_ & 1023))));
             } else
-              (_ = _[_++]),
+              ((_ = _[_++]),
                 (_ = _[_++]),
                 (_[_++] = String.fromCharCode(
                   ((_ & 15) << 12) | ((_ & 63) << 6) | (_ & 63),
-                ));
+                )));
           }
           return _.join(``);
         }),
@@ -3181,7 +3181,7 @@
           var _ = Array.prototype.slice.call(arguments, 1);
           return function () {
             var _ = Array.prototype.slice.call(arguments);
-            return _.push.apply(_, _), _.apply(this, _);
+            return (_.push.apply(_, _), _.apply(this, _));
           };
         }),
         (goog.functions.withReturnValue = function (_, _) {
@@ -3257,7 +3257,7 @@
           return function () {
             if (_) {
               var _ = _;
-              (_ = null), _();
+              ((_ = null), _());
             }
           };
         }),
@@ -3276,13 +3276,13 @@
             _ = !1,
             _ = [],
             _ = function () {
-              (_ = 0), _ && ((_ = !1), _());
+              ((_ = 0), _ && ((_ = !1), _()));
             },
             _ = function () {
-              (_ = goog.global.setTimeout(_, _)), _.apply(_, _);
+              ((_ = goog.global.setTimeout(_, _)), _.apply(_, _));
             };
           return function (_) {
-            (_ = arguments), _ ? (_ = !0) : _();
+            ((_ = arguments), _ ? (_ = !0) : _());
           };
         }),
         (goog.functions.rateLimit = function (_, _, _) {
@@ -3464,24 +3464,22 @@
         (goog.string = {}),
         (goog.string.TypedString = function () {}),
         (goog.string.Const = function (_, _) {
-          (this.stringConstValueWithSecurityContract__googStringSecurityPrivate_ =
+          ((this.stringConstValueWithSecurityContract__googStringSecurityPrivate_ =
             (_ === goog.string.Const.GOOG_STRING_CONSTRUCTOR_TOKEN_PRIVATE_ &&
               _) ||
             ``),
             (this.STRING_CONST_TYPE_MARKER__GOOG_STRING_SECURITY_PRIVATE_ =
-              goog.string.Const.TYPE_MARKER_);
+              goog.string.Const.TYPE_MARKER_));
         }),
         (goog.string.Const.prototype.implementsGoogStringTypedString = !0),
         (goog.string.Const.prototype.getTypedStringValue = function () {
-          return this
-            .stringConstValueWithSecurityContract__googStringSecurityPrivate_;
+          return this.stringConstValueWithSecurityContract__googStringSecurityPrivate_;
         }),
         goog.DEBUG &&
           (goog.string.Const.prototype.toString = function () {
             return (
               `Const{` +
-              this
-                .stringConstValueWithSecurityContract__googStringSecurityPrivate_ +
+              this.stringConstValueWithSecurityContract__googStringSecurityPrivate_ +
               `}`
             );
           }),
@@ -3506,9 +3504,9 @@
         (goog.string.Const.GOOG_STRING_CONSTRUCTOR_TOKEN_PRIVATE_ = {}),
         (goog.string.Const.EMPTY = goog.string.Const.from(``)),
         (goog.html.SafeScript = function () {
-          (this.privateDoNotAccessOrElseSafeScriptWrappedValue_ = ``),
+          ((this.privateDoNotAccessOrElseSafeScriptWrappedValue_ = ``),
             (this.SAFE_SCRIPT_TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ =
-              goog.html.SafeScript.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_);
+              goog.html.SafeScript.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_));
         }),
         (goog.html.SafeScript.prototype.implementsGoogStringTypedString = !0),
         (goog.html.SafeScript.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ = {}),
@@ -3927,12 +3925,12 @@
         }),
         (goog.i18n.bidi.DirectionalString = function () {}),
         (goog.html.TrustedResourceUrl = function (_, _) {
-          (this.privateDoNotAccessOrElseTrustedResourceUrlWrappedValue_ =
+          ((this.privateDoNotAccessOrElseTrustedResourceUrlWrappedValue_ =
             (_ === goog.html.TrustedResourceUrl.CONSTRUCTOR_TOKEN_PRIVATE_ &&
               _) ||
             ``),
             (this.TRUSTED_RESOURCE_URL_TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ =
-              goog.html.TrustedResourceUrl.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_);
+              goog.html.TrustedResourceUrl.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_));
         }),
         (goog.html.TrustedResourceUrl.prototype.implementsGoogStringTypedString =
           !0),
@@ -4149,7 +4147,7 @@
               .replace(goog.string.internal.NULL_RE_, `&#0;`);
           else {
             if (!goog.string.internal.ALL_RE_.test(_)) return _;
-            _.indexOf(`&`) != -1 &&
+            (_.indexOf(`&`) != -1 &&
               (_ = _.replace(goog.string.internal.AMP_RE_, `&amp;`)),
               _.indexOf(`<`) != -1 &&
                 (_ = _.replace(goog.string.internal.LT_RE_, `&lt;`)),
@@ -4160,7 +4158,7 @@
               _.indexOf(`'`) != -1 &&
                 (_ = _.replace(goog.string.internal.SINGLE_QUOTE_RE_, `&#39;`)),
               _.indexOf(`\0`) != -1 &&
-                (_ = _.replace(goog.string.internal.NULL_RE_, `&#0;`));
+                (_ = _.replace(goog.string.internal.NULL_RE_, `&#0;`)));
           }
           return _;
         }),
@@ -4188,8 +4186,8 @@
         }),
         (goog.string.internal.compareVersions = function (_, _) {
           var _ = 0;
-          (_ = goog.string.internal.trim(String(_)).split(`.`)),
-            (_ = goog.string.internal.trim(String(_)).split(`.`));
+          ((_ = goog.string.internal.trim(String(_)).split(`.`)),
+            (_ = goog.string.internal.trim(String(_)).split(`.`)));
           for (
             var _ = Math.max(_.length, _.length), _ = 0;
             _ == 0 && _ < _;
@@ -4206,7 +4204,7 @@
                 break;
               _ = _[1].length == 0 ? 0 : parseInt(_[1], 10);
               var _ = _[1].length == 0 ? 0 : parseInt(_[1], 10);
-              (_ =
+              ((_ =
                 goog.string.internal.compareElements_(_, _) ||
                 goog.string.internal.compareElements_(
                   _[2].length == 0,
@@ -4214,7 +4212,7 @@
                 ) ||
                 goog.string.internal.compareElements_(_[2], _[2])),
                 (_ = _[3]),
-                (_ = _[3]);
+                (_ = _[3]));
             } while (_ == 0);
           }
           return _;
@@ -4223,10 +4221,10 @@
           return _ < _ ? -1 : +(_ > _);
         }),
         (goog.html.SafeUrl = function (_, _) {
-          (this.privateDoNotAccessOrElseSafeUrlWrappedValue_ =
+          ((this.privateDoNotAccessOrElseSafeUrlWrappedValue_ =
             (_ === goog.html.SafeUrl.CONSTRUCTOR_TOKEN_PRIVATE_ && _) || ``),
             (this.SAFE_URL_TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ =
-              goog.html.SafeUrl.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_);
+              goog.html.SafeUrl.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_));
         }),
         (goog.html.SafeUrl.INNOCUOUS_STRING = `about:invalid#zClosurez`),
         (goog.html.SafeUrl.prototype.implementsGoogStringTypedString = !0),
@@ -4455,9 +4453,9 @@
           )),
         (goog.html.SafeUrl.CONSTRUCTOR_TOKEN_PRIVATE_ = {}),
         (goog.html.SafeStyle = function () {
-          (this.privateDoNotAccessOrElseSafeStyleWrappedValue_ = ``),
+          ((this.privateDoNotAccessOrElseSafeStyleWrappedValue_ = ``),
             (this.SAFE_STYLE_TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ =
-              goog.html.SafeStyle.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_);
+              goog.html.SafeStyle.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_));
         }),
         (goog.html.SafeStyle.prototype.implementsGoogStringTypedString = !0),
         (goog.html.SafeStyle.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ = {}),
@@ -4644,7 +4642,7 @@
             var _ = ``;
             return (
               (_ = _.replace(/^(['"])(.*)\1$/, function (_, _, _) {
-                return (_ = _), _;
+                return ((_ = _), _);
               })),
               (_ = goog.html.SafeUrl.sanitize(_).getTypedStringValue()),
               _ + _ + _ + _ + _
@@ -4668,9 +4666,9 @@
           );
         }),
         (goog.html.SafeStyleSheet = function () {
-          (this.privateDoNotAccessOrElseSafeStyleSheetWrappedValue_ = ``),
+          ((this.privateDoNotAccessOrElseSafeStyleSheetWrappedValue_ = ``),
             (this.SAFE_STYLE_SHEET_TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ =
-              goog.html.SafeStyleSheet.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_);
+              goog.html.SafeStyleSheet.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_));
         }),
         (goog.html.SafeStyleSheet.prototype.implementsGoogStringTypedString =
           !0),
@@ -4921,7 +4919,7 @@
         }),
         (goog.labs.userAgent.browser.getVersion = function () {
           function _(_) {
-            return (_ = goog.array.find(_, _)), _[_] || ``;
+            return ((_ = goog.array.find(_, _)), _[_] || ``);
           }
           var _ = goog.labs.userAgent.util.getUserAgent();
           if (goog.labs.userAgent.browser.isIE())
@@ -4978,10 +4976,10 @@
           return _;
         }),
         (goog.html.SafeHtml = function () {
-          (this.privateDoNotAccessOrElseSafeHtmlWrappedValue_ = ``),
+          ((this.privateDoNotAccessOrElseSafeHtmlWrappedValue_ = ``),
             (this.SAFE_HTML_TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ =
               goog.html.SafeHtml.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_),
-            (this.dir_ = null);
+            (this.dir_ = null));
         }),
         (goog.html.SafeHtml.ENABLE_ERROR_MESSAGES = goog.DEBUG),
         (goog.html.SafeHtml.SUPPORT_STYLE_ATTRIBUTE = !0),
@@ -5317,7 +5315,7 @@
           );
         }),
         (goog.html.SafeHtml.createWithDir = function (_, _, _, _) {
-          return (_ = goog.html.SafeHtml.create(_, _, _)), (_.dir_ = _), _;
+          return ((_ = goog.html.SafeHtml.create(_, _, _)), (_.dir_ = _), _);
         }),
         (goog.html.SafeHtml.join = function (_, _) {
           _ = goog.html.SafeHtml.htmlEscape(_);
@@ -5349,7 +5347,7 @@
         }),
         (goog.html.SafeHtml.concatWithDir = function (_, _) {
           var _ = goog.html.SafeHtml.concat(goog.array.slice(arguments, 1));
-          return (_.dir_ = _), _;
+          return ((_.dir_ = _), _);
         }),
         (goog.html.SafeHtml.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ = {}),
         (goog.html.SafeHtml.createSafeHtmlSecurityPrivateDoNotAccessOrElse =
@@ -5417,11 +5415,11 @@
           var _ = {},
             _;
           for (_ in _)
-            goog.asserts.assert(_.toLowerCase() == _, `Must be lower case`),
-              (_[_] = _[_]);
+            (goog.asserts.assert(_.toLowerCase() == _, `Must be lower case`),
+              (_[_] = _[_]));
           for (_ in _)
-            goog.asserts.assert(_.toLowerCase() == _, `Must be lower case`),
-              (_[_] = _[_]);
+            (goog.asserts.assert(_.toLowerCase() == _, `Must be lower case`),
+              (_[_] = _[_]));
           if (_)
             for (_ in _) {
               var _ = _.toLowerCase();
@@ -5437,7 +5435,7 @@
                         `"`
                     : ``,
                 );
-              _ in _ && delete _[_], (_[_] = _[_]);
+              (_ in _ && delete _[_], (_[_] = _[_]));
             }
           return _;
         }),
@@ -5600,7 +5598,7 @@
           })),
         (goog.dom.safe.unsafeSetInnerHtmlDoNotUseOrElse = function (_, _) {
           if (goog.dom.safe.isInnerHtmlCleanupRecursive_())
-            for (; _.lastChild; ) _.removeChild(_.lastChild);
+            for (; _.lastChild;) _.removeChild(_.lastChild);
           _.innerHTML = goog.html.SafeHtml.unwrapTrustedHTML(_);
         }),
         (goog.dom.safe.setInnerHtml = function (_, _) {
@@ -5619,28 +5617,28 @@
           _.outerHTML = goog.html.SafeHtml.unwrapTrustedHTML(_);
         }),
         (goog.dom.safe.setFormElementAction = function (_, _) {
-          (_ =
+          ((_ =
             _ instanceof goog.html.SafeUrl
               ? _
               : goog.html.SafeUrl.sanitizeAssertUnchanged(_)),
             (goog.dom.asserts.assertIsHTMLFormElement(_).action =
-              goog.html.SafeUrl.unwrap(_));
+              goog.html.SafeUrl.unwrap(_)));
         }),
         (goog.dom.safe.setButtonFormAction = function (_, _) {
-          (_ =
+          ((_ =
             _ instanceof goog.html.SafeUrl
               ? _
               : goog.html.SafeUrl.sanitizeAssertUnchanged(_)),
             (goog.dom.asserts.assertIsHTMLButtonElement(_).formAction =
-              goog.html.SafeUrl.unwrap(_));
+              goog.html.SafeUrl.unwrap(_)));
         }),
         (goog.dom.safe.setInputFormAction = function (_, _) {
-          (_ =
+          ((_ =
             _ instanceof goog.html.SafeUrl
               ? _
               : goog.html.SafeUrl.sanitizeAssertUnchanged(_)),
             (goog.dom.asserts.assertIsHTMLInputElement(_).formAction =
-              goog.html.SafeUrl.unwrap(_));
+              goog.html.SafeUrl.unwrap(_)));
         }),
         (goog.dom.safe.setStyle = function (_, _) {
           _.style.cssText = goog.html.SafeStyle.unwrap(_);
@@ -5649,12 +5647,12 @@
           _.write(goog.html.SafeHtml.unwrapTrustedHTML(_));
         }),
         (goog.dom.safe.setAnchorHref = function (_, _) {
-          goog.dom.asserts.assertIsHTMLAnchorElement(_),
+          (goog.dom.asserts.assertIsHTMLAnchorElement(_),
             (_ =
               _ instanceof goog.html.SafeUrl
                 ? _
                 : goog.html.SafeUrl.sanitizeAssertUnchanged(_)),
-            (_.href = goog.html.SafeUrl.unwrap(_));
+            (_.href = goog.html.SafeUrl.unwrap(_)));
         }),
         (goog.dom.safe.setImageSrc = function (_, _) {
           if (
@@ -5687,23 +5685,23 @@
           _.src = goog.html.SafeUrl.unwrap(_);
         }),
         (goog.dom.safe.setEmbedSrc = function (_, _) {
-          goog.dom.asserts.assertIsHTMLEmbedElement(_),
-            (_.src = goog.html.TrustedResourceUrl.unwrapTrustedScriptURL(_));
+          (goog.dom.asserts.assertIsHTMLEmbedElement(_),
+            (_.src = goog.html.TrustedResourceUrl.unwrapTrustedScriptURL(_)));
         }),
         (goog.dom.safe.setFrameSrc = function (_, _) {
-          goog.dom.asserts.assertIsHTMLFrameElement(_),
-            (_.src = goog.html.TrustedResourceUrl.unwrap(_));
+          (goog.dom.asserts.assertIsHTMLFrameElement(_),
+            (_.src = goog.html.TrustedResourceUrl.unwrap(_)));
         }),
         (goog.dom.safe.setIframeSrc = function (_, _) {
-          goog.dom.asserts.assertIsHTMLIFrameElement(_),
-            (_.src = goog.html.TrustedResourceUrl.unwrap(_));
+          (goog.dom.asserts.assertIsHTMLIFrameElement(_),
+            (_.src = goog.html.TrustedResourceUrl.unwrap(_)));
         }),
         (goog.dom.safe.setIframeSrcdoc = function (_, _) {
-          goog.dom.asserts.assertIsHTMLIFrameElement(_),
-            (_.srcdoc = goog.html.SafeHtml.unwrapTrustedHTML(_));
+          (goog.dom.asserts.assertIsHTMLIFrameElement(_),
+            (_.srcdoc = goog.html.SafeHtml.unwrapTrustedHTML(_)));
         }),
         (goog.dom.safe.setLinkHrefAndRel = function (_, _, _) {
-          goog.dom.asserts.assertIsHTMLLinkElement(_),
+          (goog.dom.asserts.assertIsHTMLLinkElement(_),
             (_.rel = _),
             goog.string.internal.caseInsensitiveContains(_, `stylesheet`)
               ? (goog.asserts.assert(
@@ -5718,44 +5716,44 @@
                       ? goog.html.SafeUrl.unwrap(_)
                       : goog.html.SafeUrl.unwrap(
                           goog.html.SafeUrl.sanitizeAssertUnchanged(_),
-                        ));
+                        )));
         }),
         (goog.dom.safe.setObjectData = function (_, _) {
-          goog.dom.asserts.assertIsHTMLObjectElement(_),
-            (_.data = goog.html.TrustedResourceUrl.unwrapTrustedScriptURL(_));
+          (goog.dom.asserts.assertIsHTMLObjectElement(_),
+            (_.data = goog.html.TrustedResourceUrl.unwrapTrustedScriptURL(_)));
         }),
         (goog.dom.safe.setScriptSrc = function (_, _) {
-          goog.dom.asserts.assertIsHTMLScriptElement(_),
+          (goog.dom.asserts.assertIsHTMLScriptElement(_),
             (_.src = goog.html.TrustedResourceUrl.unwrapTrustedScriptURL(_)),
-            (_ = goog.getScriptNonce()) && _.setAttribute(`nonce`, _);
+            (_ = goog.getScriptNonce()) && _.setAttribute(`nonce`, _));
         }),
         (goog.dom.safe.setScriptContent = function (_, _) {
-          goog.dom.asserts.assertIsHTMLScriptElement(_),
+          (goog.dom.asserts.assertIsHTMLScriptElement(_),
             (_.text = goog.html.SafeScript.unwrapTrustedScript(_)),
-            (_ = goog.getScriptNonce()) && _.setAttribute(`nonce`, _);
+            (_ = goog.getScriptNonce()) && _.setAttribute(`nonce`, _));
         }),
         (goog.dom.safe.setLocationHref = function (_, _) {
-          goog.dom.asserts.assertIsLocation(_),
+          (goog.dom.asserts.assertIsLocation(_),
             (_ =
               _ instanceof goog.html.SafeUrl
                 ? _
                 : goog.html.SafeUrl.sanitizeAssertUnchanged(_)),
-            (_.href = goog.html.SafeUrl.unwrap(_));
+            (_.href = goog.html.SafeUrl.unwrap(_)));
         }),
         (goog.dom.safe.assignLocation = function (_, _) {
-          goog.dom.asserts.assertIsLocation(_),
+          (goog.dom.asserts.assertIsLocation(_),
             (_ =
               _ instanceof goog.html.SafeUrl
                 ? _
                 : goog.html.SafeUrl.sanitizeAssertUnchanged(_)),
-            _.assign(goog.html.SafeUrl.unwrap(_));
+            _.assign(goog.html.SafeUrl.unwrap(_)));
         }),
         (goog.dom.safe.replaceLocation = function (_, _) {
-          (_ =
+          ((_ =
             _ instanceof goog.html.SafeUrl
               ? _
               : goog.html.SafeUrl.sanitizeAssertUnchanged(_)),
-            _.replace(goog.html.SafeUrl.unwrap(_));
+            _.replace(goog.html.SafeUrl.unwrap(_)));
         }),
         (goog.dom.safe.openInWindow = function (_, _, _, _, _) {
           return (
@@ -6029,7 +6027,7 @@
               ((_ = Math.floor(_ / 2)),
               (_ = _.length - _),
               (_ = _.substring(0, _ + (_ % 2)) + `...` + _.substring(_)));
-          return _ && (_ = goog.string.htmlEscape(_)), _;
+          return (_ && (_ = goog.string.htmlEscape(_)), _);
         }),
         (goog.string.specialEscapeChars_ = {
           "\0": `\\0`,
@@ -6055,7 +6053,7 @@
               goog.string.specialEscapeChars_[_] ||
               (31 < _ && 127 > _ ? _ : goog.string.escapeChar(_));
           }
-          return _.push(`"`), _.join(``);
+          return (_.push(`"`), _.join(``));
         }),
         (goog.string.escapeString = function (_) {
           for (var _ = [], _ = 0; _ < _.length; _++)
@@ -6071,10 +6069,10 @@
           var _ = _.charCodeAt(0);
           if (31 < _ && 127 > _) var _ = _;
           else
-            256 > _
+            (256 > _
               ? ((_ = `\\x`), (16 > _ || 256 < _) && (_ += `0`))
               : ((_ = `\\u`), 4096 > _ && (_ += `0`)),
-              (_ += _.toString(16).toUpperCase());
+              (_ += _.toString(16).toUpperCase()));
           return (goog.string.jsEscapeCache_[_] = _);
         }),
         (goog.string.contains = goog.string.internal.contains),
@@ -6200,8 +6198,8 @@
         }),
         (goog.string.splitLimit = function (_, _, _) {
           _ = _.split(_);
-          for (var _ = []; 0 < _ && _.length; ) _.push(_.shift()), _--;
-          return _.length && _.push(_.join(_)), _;
+          for (var _ = []; 0 < _ && _.length;) (_.push(_.shift()), _--);
+          return (_.length && _.push(_.join(_)), _);
         }),
         (goog.string.lastComponent = function (_, _) {
           if (_) typeof _ == `string` && (_ = [_]);
@@ -6382,12 +6380,12 @@
           return _;
         }),
         (goog.reflect.sinkValue = function (_) {
-          return goog.reflect.sinkValue[` `](_), _;
+          return (goog.reflect.sinkValue[` `](_), _);
         }),
         (goog.reflect.sinkValue[` `] = goog.nullFunction),
         (goog.reflect.canAccessProperty = function (_, _) {
           try {
-            return goog.reflect.sinkValue(_[_]), !0;
+            return (goog.reflect.sinkValue(_[_]), !0);
           } catch {}
           return !1;
         }),
@@ -6650,13 +6648,13 @@
             !goog.userAgent._ &&
             typeof goog.global.atob == `function`)),
         (goog.crypt.base64.encodeByteArray = function (_, _) {
-          goog.asserts.assert(
+          (goog.asserts.assert(
             goog.isArrayLike(_),
             `encodeByteArray takes an array as a parameter`,
           ),
             _ === void 0 && (_ = goog.crypt.base64.Alphabet.DEFAULT),
             goog.crypt.base64.init_(),
-            (_ = goog.crypt.base64.byteToCharMaps_[_]);
+            (_ = goog.crypt.base64.byteToCharMaps_[_]));
           for (var _ = [], _ = 0; _ < _.length; _ += 3) {
             var _ = _[_],
               _ = _ + 1 < _.length,
@@ -6664,11 +6662,11 @@
               _ = _ + 2 < _.length,
               _ = _ ? _[_ + 2] : 0,
               _ = _ >> 2;
-            (_ = ((_ & 3) << 4) | (_ >> 4)),
+            ((_ = ((_ & 3) << 4) | (_ >> 4)),
               (_ = ((_ & 15) << 2) | (_ >> 6)),
               (_ &= 63),
               _ || ((_ = 64), _ || (_ = 64)),
-              _.push(_[_], _[_], _[_] || ``, _[_] || ``);
+              _.push(_[_], _[_], _[_] || ``, _[_] || ``));
           }
           return _.join(``);
         }),
@@ -6722,7 +6720,7 @@
         }),
         (goog.crypt.base64.decodeStringInternal_ = function (_, _) {
           function _(_) {
-            for (; _ < _.length; ) {
+            for (; _ < _.length;) {
               var _ = _.charAt(_++),
                 _ = goog.crypt.base64.charToByteMap_[_];
               if (_ != null) return _;
@@ -6732,16 +6730,16 @@
             return _;
           }
           goog.crypt.base64.init_();
-          for (var _ = 0; ; ) {
+          for (var _ = 0; ;) {
             var _ = _(-1),
               _ = _(0),
               _ = _(64),
               _ = _(64);
             if (_ === 64 && _ === -1) break;
-            _((_ << 2) | (_ >> 4)),
+            (_((_ << 2) | (_ >> 4)),
               _ != 64 &&
                 (_(((_ << 4) & 240) | (_ >> 2)),
-                _ != 64 && _(((_ << 6) & 192) | _));
+                _ != 64 && _(((_ << 6) & 192) | _)));
           }
         }),
         (goog.crypt.base64.init_ = function () {
@@ -6771,37 +6769,37 @@
         (jspb.utils.split64High = 0),
         (jspb.utils.splitUint64 = function (_) {
           var _ = _ >>> 0;
-          (_ = Math.floor((_ - _) / jspb.BinaryConstants.TWO_TO_32) >>> 0),
+          ((_ = Math.floor((_ - _) / jspb.BinaryConstants.TWO_TO_32) >>> 0),
             (jspb.utils.split64Low = _),
-            (jspb.utils.split64High = _);
+            (jspb.utils.split64High = _));
         }),
         (jspb.utils.splitInt64 = function (_) {
           var _ = 0 > _;
           _ = Math.abs(_);
           var _ = _ >>> 0;
-          (_ = Math.floor((_ - _) / jspb.BinaryConstants.TWO_TO_32)),
+          ((_ = Math.floor((_ - _) / jspb.BinaryConstants.TWO_TO_32)),
             (_ >>>= 0),
             _ &&
               ((_ = ~_ >>> 0),
               (_ = (~_ >>> 0) + 1),
               4294967295 < _ && ((_ = 0), _++, 4294967295 < _ && (_ = 0))),
             (jspb.utils.split64Low = _),
-            (jspb.utils.split64High = _);
+            (jspb.utils.split64High = _));
         }),
         (jspb.utils.splitZigzag64 = function (_) {
           var _ = 0 > _;
-          (_ = 2 * Math.abs(_)),
+          ((_ = 2 * Math.abs(_)),
             jspb.utils.splitUint64(_),
-            (_ = jspb.utils.split64Low);
+            (_ = jspb.utils.split64Low));
           var _ = jspb.utils.split64High;
-          _ &&
+          (_ &&
             (_ == 0
               ? _ == 0
                 ? (_ = _ = 4294967295)
                 : (_--, (_ = 4294967295))
               : _--),
             (jspb.utils.split64Low = _),
-            (jspb.utils.split64High = _);
+            (jspb.utils.split64High = _));
         }),
         (jspb.utils.splitFloat32 = function (_) {
           var _ = +(0 > _);
@@ -6811,51 +6809,52 @@
               : ((jspb.utils.split64High = 0),
                 (jspb.utils.split64Low = 2147483648));
           else if (isNaN(_))
-            (jspb.utils.split64High = 0), (jspb.utils.split64Low = 2147483647);
+            ((jspb.utils.split64High = 0),
+              (jspb.utils.split64Low = 2147483647));
           else if (_ > jspb.BinaryConstants.FLOAT32_MAX)
-            (jspb.utils.split64High = 0),
-              (jspb.utils.split64Low = ((_ << 31) | 2139095040) >>> 0);
+            ((jspb.utils.split64High = 0),
+              (jspb.utils.split64Low = ((_ << 31) | 2139095040) >>> 0));
           else if (_ < jspb.BinaryConstants.FLOAT32_MIN)
-            (_ = Math.round(_ / 2 ** -149)),
+            ((_ = Math.round(_ / 2 ** -149)),
               (jspb.utils.split64High = 0),
-              (jspb.utils.split64Low = ((_ << 31) | _) >>> 0);
+              (jspb.utils.split64Low = ((_ << 31) | _) >>> 0));
           else {
             var _ = Math.floor(Math.log(_) / Math.LN2);
-            (_ *= 2 ** -_),
+            ((_ *= 2 ** -_),
               (_ = Math.round(_ * jspb.BinaryConstants.TWO_TO_23)),
               16777216 <= _ && ++_,
               (jspb.utils.split64High = 0),
               (jspb.utils.split64Low =
-                ((_ << 31) | ((_ + 127) << 23) | (_ & 8388607)) >>> 0);
+                ((_ << 31) | ((_ + 127) << 23) | (_ & 8388607)) >>> 0));
           }
         }),
         (jspb.utils.splitFloat64 = function (_) {
           var _ = +(0 > _);
           if (((_ = _ ? -_ : _), _ === 0))
-            (jspb.utils.split64High = 0 < 1 / _ ? 0 : 2147483648),
-              (jspb.utils.split64Low = 0);
+            ((jspb.utils.split64High = 0 < 1 / _ ? 0 : 2147483648),
+              (jspb.utils.split64Low = 0));
           else if (isNaN(_))
-            (jspb.utils.split64High = 2147483647),
-              (jspb.utils.split64Low = 4294967295);
+            ((jspb.utils.split64High = 2147483647),
+              (jspb.utils.split64Low = 4294967295));
           else if (_ > jspb.BinaryConstants.FLOAT64_MAX)
-            (jspb.utils.split64High = ((_ << 31) | 2146435072) >>> 0),
-              (jspb.utils.split64Low = 0);
+            ((jspb.utils.split64High = ((_ << 31) | 2146435072) >>> 0),
+              (jspb.utils.split64Low = 0));
           else if (_ < jspb.BinaryConstants.FLOAT64_MIN) {
             var _ = _ / 2 ** -1074;
-            (_ = _ / jspb.BinaryConstants.TWO_TO_32),
+            ((_ = _ / jspb.BinaryConstants.TWO_TO_32),
               (jspb.utils.split64High = ((_ << 31) | _) >>> 0),
-              (jspb.utils.split64Low = _ >>> 0);
+              (jspb.utils.split64Low = _ >>> 0));
           } else {
             _ = _;
             var _ = 0;
-            if (2 <= _) for (; 2 <= _ && 1023 > _; ) _++, (_ /= 2);
-            else for (; 1 > _ && -1022 < _; ) (_ *= 2), _--;
-            (_ = _ * 2 ** -_),
+            if (2 <= _) for (; 2 <= _ && 1023 > _;) (_++, (_ /= 2));
+            else for (; 1 > _ && -1022 < _;) ((_ *= 2), _--);
+            ((_ = _ * 2 ** -_),
               (_ = (_ * jspb.BinaryConstants.TWO_TO_20) & 1048575),
               (_ = (_ * jspb.BinaryConstants.TWO_TO_52) >>> 0),
               (jspb.utils.split64High =
                 ((_ << 31) | ((_ + 1023) << 20) | _) >>> 0),
-              (jspb.utils.split64Low = _);
+              (jspb.utils.split64Low = _));
           }
         }),
         (jspb.utils.splitHash64 = function (_) {
@@ -6866,11 +6865,11 @@
             _ = _.charCodeAt(4),
             _ = _.charCodeAt(5),
             _ = _.charCodeAt(6);
-          (_ = _.charCodeAt(7)),
+          ((_ = _.charCodeAt(7)),
             (jspb.utils.split64Low =
               (_ + (_ << 8) + (_ << 16) + (_ << 24)) >>> 0),
             (jspb.utils.split64High =
-              (_ + (_ << 8) + (_ << 16) + (_ << 24)) >>> 0);
+              (_ + (_ << 8) + (_ << 16) + (_ << 24)) >>> 0));
         }),
         (jspb.utils.joinUint64 = function (_, _) {
           return _ * jspb.BinaryConstants.TWO_TO_32 + (_ >>> 0);
@@ -6967,7 +6966,7 @@
           );
         }),
         (jspb.utils.hash64ToDecimalString = function (_, _) {
-          jspb.utils.splitHash64(_), (_ = jspb.utils.split64Low);
+          (jspb.utils.splitHash64(_), (_ = jspb.utils.split64Low));
           var _ = jspb.utils.split64High;
           return _
             ? jspb.utils.joinSignedDecimalString(_, _)
@@ -6981,7 +6980,7 @@
         (jspb.utils.decimalStringToHash64 = function (_) {
           function _(_, _) {
             for (var _ = 0; 8 > _ && (_ !== 1 || 0 < _); _++)
-              (_ = _ * _[_] + _), (_[_] = _ & 255), (_ >>>= 8);
+              ((_ = _ * _[_] + _), (_[_] = _ & 255), (_ >>>= 8));
           }
           function _() {
             for (var _ = 0; 8 > _; _++) _[_] = ~_[_] & 255;
@@ -6991,7 +6990,7 @@
           _[0] === `-` && ((_ = !0), (_ = _.slice(1)));
           for (var _ = [0, 0, 0, 0, 0, 0, 0, 0], _ = 0; _ < _.length; _++)
             _(10, _.charCodeAt(_) - jspb.utils.ZERO_CHAR_CODE_);
-          return _ && (_(), _(1, 1)), goog.crypt.byteArrayToString(_);
+          return (_ && (_(), _(1, 1)), goog.crypt.byteArrayToString(_));
         }),
         (jspb.utils.splitDecimalString = function (_) {
           jspb.utils.splitHash64(jspb.utils.decimalStringToHash64(_));
@@ -7010,19 +7009,19 @@
         }),
         (jspb.utils.hash64ToHexString = function (_) {
           var _ = Array(18);
-          (_[0] = `0`), (_[1] = `x`);
+          ((_[0] = `0`), (_[1] = `x`));
           for (var _ = 0; 8 > _; _++) {
             var _ = _.charCodeAt(7 - _);
-            (_[2 * _ + 2] = jspb.utils.toHexDigit_(_ >> 4)),
-              (_[2 * _ + 3] = jspb.utils.toHexDigit_(_ & 15));
+            ((_[2 * _ + 2] = jspb.utils.toHexDigit_(_ >> 4)),
+              (_[2 * _ + 3] = jspb.utils.toHexDigit_(_ & 15)));
           }
           return _.join(``);
         }),
         (jspb.utils.hexStringToHash64 = function (_) {
-          (_ = _.toLowerCase()),
+          ((_ = _.toLowerCase()),
             jspb.asserts.assert(_.length == 18),
             jspb.asserts.assert(_[0] == `0`),
-            jspb.asserts.assert(_[1] == `x`);
+            jspb.asserts.assert(_[1] == `x`));
           for (var _ = ``, _ = 0; 8 > _; _++) {
             var _ = jspb.utils.fromHexCharCode_(_.charCodeAt(2 * _ + 2)),
               _ = jspb.utils.fromHexCharCode_(_.charCodeAt(2 * _ + 3));
@@ -7031,7 +7030,7 @@
           return _;
         }),
         (jspb.utils.hash64ToNumber = function (_, _) {
-          jspb.utils.splitHash64(_), (_ = jspb.utils.split64Low);
+          (jspb.utils.splitHash64(_), (_ = jspb.utils.split64Low));
           var _ = jspb.utils.split64High;
           return _ ? jspb.utils.joinInt64(_, _) : jspb.utils.joinUint64(_, _);
         }),
@@ -7048,33 +7047,33 @@
         (jspb.utils.countVarintFields = function (_, _, _, _) {
           var _ = 0;
           if (((_ = 8 * _ + jspb.BinaryConstants.WireType.VARINT), 128 > _))
-            for (; _ < _ && _[_++] == _; )
-              for (_++; ; ) {
+            for (; _ < _ && _[_++] == _;)
+              for (_++; ;) {
                 var _ = _[_++];
                 if (!(_ & 128)) break;
               }
           else
-            for (; _ < _; ) {
-              for (_ = _; 128 < _; ) {
+            for (; _ < _;) {
+              for (_ = _; 128 < _;) {
                 if (_[_] != ((_ & 127) | 128)) return _;
-                _++, (_ >>= 7);
+                (_++, (_ >>= 7));
               }
               if (_[_++] != _) break;
-              for (_++; (_ = _[_++]), _ & 128; );
+              for (_++; (_ = _[_++]), _ & 128;);
             }
           return _;
         }),
         (jspb.utils.countFixedFields_ = function (_, _, _, _, _) {
           var _ = 0;
-          if (128 > _) for (; _ < _ && _[_++] == _; ) _++, (_ += _);
+          if (128 > _) for (; _ < _ && _[_++] == _;) (_++, (_ += _));
           else
-            for (; _ < _; ) {
-              for (var _ = _; 128 < _; ) {
+            for (; _ < _;) {
+              for (var _ = _; 128 < _;) {
                 if (_[_++] != ((_ & 127) | 128)) return _;
                 _ >>= 7;
               }
               if (_[_++] != _) break;
-              _++, (_ += _);
+              (_++, (_ += _));
             }
           return _;
         }),
@@ -7098,8 +7097,8 @@
         }),
         (jspb.utils.countDelimitedFields = function (_, _, _, _) {
           var _ = 0;
-          for (_ = 8 * _ + jspb.BinaryConstants.WireType.DELIMITED; _ < _; ) {
-            for (var _ = _; 128 < _; ) {
+          for (_ = 8 * _ + jspb.BinaryConstants.WireType.DELIMITED; _ < _;) {
+            for (var _ = _; 128 < _;) {
               if (_[_++] != ((_ & 127) | 128)) return _;
               _ >>= 7;
             }
@@ -7118,7 +7117,7 @@
           if (_) {
             _ = jspb.utils.byteSourceToUint8Array(_);
             for (var _ = 0; _ < _.length; _++)
-              (_ += `\\x`), 16 > _[_] && (_ += `0`), (_ += _[_].toString(16));
+              ((_ += `\\x`), 16 > _[_] && (_ += `0`), (_ += _[_].toString(16)));
           }
           return _ + `"`;
         }),
@@ -7149,23 +7148,23 @@
                     new Uint8Array());
         }),
         (jspb.BinaryDecoder = function (_, _, _) {
-          (this.bytes_ = null),
+          ((this.bytes_ = null),
             (this.cursor_ = this.end_ = this.start_ = 0),
             (this.error_ = !1),
-            _ && this.setBlock(_, _, _);
+            _ && this.setBlock(_, _, _));
         }),
         (jspb.BinaryDecoder.instanceCache_ = []),
         (jspb.BinaryDecoder.alloc = function (_, _, _) {
           if (jspb.BinaryDecoder.instanceCache_.length) {
             var _ = jspb.BinaryDecoder.instanceCache_.pop();
-            return _ && _.setBlock(_, _, _), _;
+            return (_ && _.setBlock(_, _, _), _);
           }
           return new jspb.BinaryDecoder(_, _, _);
         }),
         (jspb.BinaryDecoder.prototype.free = function () {
-          this.clear(),
+          (this.clear(),
             100 > jspb.BinaryDecoder.instanceCache_.length &&
-              jspb.BinaryDecoder.instanceCache_.push(this);
+              jspb.BinaryDecoder.instanceCache_.push(this));
         }),
         (jspb.BinaryDecoder.prototype.clone = function () {
           return jspb.BinaryDecoder.alloc(
@@ -7175,18 +7174,18 @@
           );
         }),
         (jspb.BinaryDecoder.prototype.clear = function () {
-          (this.bytes_ = null),
+          ((this.bytes_ = null),
             (this.cursor_ = this.end_ = this.start_ = 0),
-            (this.error_ = !1);
+            (this.error_ = !1));
         }),
         (jspb.BinaryDecoder.prototype.getBuffer = function () {
           return this.bytes_;
         }),
         (jspb.BinaryDecoder.prototype.setBlock = function (_, _, _) {
-          (this.bytes_ = jspb.utils.byteSourceToUint8Array(_)),
+          ((this.bytes_ = jspb.utils.byteSourceToUint8Array(_)),
             (this.start_ = _ === void 0 ? 0 : _),
             (this.end_ = _ === void 0 ? this.bytes_.length : this.start_ + _),
-            (this.cursor_ = this.start_);
+            (this.cursor_ = this.start_));
         }),
         (jspb.BinaryDecoder.prototype.getEnd = function () {
           return this.end_;
@@ -7204,7 +7203,7 @@
           this.cursor_ = _;
         }),
         (jspb.BinaryDecoder.prototype.advance = function (_) {
-          (this.cursor_ += _), jspb.asserts.assert(this.cursor_ <= this.end_);
+          ((this.cursor_ += _), jspb.asserts.assert(this.cursor_ <= this.end_));
         }),
         (jspb.BinaryDecoder.prototype.atEnd = function () {
           return this.cursor_ == this.end_;
@@ -7217,7 +7216,7 @@
         }),
         (jspb.BinaryDecoder.prototype.readSplitVarint64 = function (_) {
           for (var _ = 128, _ = 0, _ = 0, _ = 0; 4 > _ && 128 <= _; _++)
-            (_ = this.bytes_[this.cursor_++]), (_ |= (_ & 127) << (7 * _));
+            ((_ = this.bytes_[this.cursor_++]), (_ |= (_ & 127) << (7 * _)));
           if (
             (128 <= _ &&
               ((_ = this.bytes_[this.cursor_++]),
@@ -7226,11 +7225,11 @@
             128 <= _)
           )
             for (_ = 0; 5 > _ && 128 <= _; _++)
-              (_ = this.bytes_[this.cursor_++]),
-                (_ |= (_ & 127) << (7 * _ + 3));
+              ((_ = this.bytes_[this.cursor_++]),
+                (_ |= (_ & 127) << (7 * _ + 3)));
           if (128 > _) return _(_ >>> 0, _ >>> 0);
-          jspb.asserts.fail(`Failed to read varint, encoding is invalid.`),
-            (this.error_ = !0);
+          (jspb.asserts.fail(`Failed to read varint, encoding is invalid.`),
+            (this.error_ = !0));
         }),
         (jspb.BinaryDecoder.prototype.readSplitZigzagVarint64 = function (_) {
           return this.readSplitVarint64(function (_, _) {
@@ -7242,15 +7241,15 @@
             _ = this.cursor_;
           this.cursor_ += 8;
           for (var _ = 0, _ = 0, _ = _ + 7; _ >= _; _--)
-            (_ = (_ << 8) | _[_]), (_ = (_ << 8) | _[_ + 4]);
+            ((_ = (_ << 8) | _[_]), (_ = (_ << 8) | _[_ + 4]));
           return _(_, _);
         }),
         (jspb.BinaryDecoder.prototype.skipVarint = function () {
-          for (; this.bytes_[this.cursor_] & 128; ) this.cursor_++;
+          for (; this.bytes_[this.cursor_] & 128;) this.cursor_++;
           this.cursor_++;
         }),
         (jspb.BinaryDecoder.prototype.unskipVarint = function (_) {
-          for (; 128 < _; ) this.cursor_--, (_ >>>= 7);
+          for (; 128 < _;) (this.cursor_--, (_ >>>= 7));
           this.cursor_--;
         }),
         (jspb.BinaryDecoder.prototype.readUnsignedVarint32 = function () {
@@ -7457,7 +7456,9 @@
             _.length >= 8192 &&
               ((_ += String.fromCharCode.apply(null, _)), (_.length = 0));
           }
-          return (_ += goog.crypt.byteArrayToString(_)), (this.cursor_ = _), _;
+          return (
+            (_ += goog.crypt.byteArrayToString(_)), (this.cursor_ = _), _
+          );
         }),
         (jspb.BinaryDecoder.prototype.readStringWithLength = function () {
           var _ = this.readUnsignedVarint32();
@@ -7497,30 +7498,30 @@
           );
         }),
         (jspb.BinaryReader = function (_, _, _) {
-          (this.decoder_ = jspb.BinaryDecoder.alloc(_, _, _)),
+          ((this.decoder_ = jspb.BinaryDecoder.alloc(_, _, _)),
             (this.fieldCursor_ = this.decoder_.getCursor()),
             (this.nextField_ = jspb.BinaryConstants.INVALID_FIELD_NUMBER),
             (this.nextWireType_ = jspb.BinaryConstants.WireType.INVALID),
             (this.error_ = !1),
-            (this.readCallbacks_ = null);
+            (this.readCallbacks_ = null));
         }),
         (jspb.BinaryReader.instanceCache_ = []),
         (jspb.BinaryReader.alloc = function (_, _, _) {
           if (jspb.BinaryReader.instanceCache_.length) {
             var _ = jspb.BinaryReader.instanceCache_.pop();
-            return _ && _.decoder_.setBlock(_, _, _), _;
+            return (_ && _.decoder_.setBlock(_, _, _), _);
           }
           return new jspb.BinaryReader(_, _, _);
         }),
         (jspb.BinaryReader.prototype.alloc = jspb.BinaryReader.alloc),
         (jspb.BinaryReader.prototype.free = function () {
-          this.decoder_.clear(),
+          (this.decoder_.clear(),
             (this.nextField_ = jspb.BinaryConstants.INVALID_FIELD_NUMBER),
             (this.nextWireType_ = jspb.BinaryConstants.WireType.INVALID),
             (this.error_ = !1),
             (this.readCallbacks_ = null),
             100 > jspb.BinaryReader.instanceCache_.length &&
-              jspb.BinaryReader.instanceCache_.push(this);
+              jspb.BinaryReader.instanceCache_.push(this));
         }),
         (jspb.BinaryReader.prototype.getFieldCursor = function () {
           return this.fieldCursor_;
@@ -7562,14 +7563,14 @@
           return this.error_ || this.decoder_.getError();
         }),
         (jspb.BinaryReader.prototype.setBlock = function (_, _, _) {
-          this.decoder_.setBlock(_, _, _),
+          (this.decoder_.setBlock(_, _, _),
             (this.nextField_ = jspb.BinaryConstants.INVALID_FIELD_NUMBER),
-            (this.nextWireType_ = jspb.BinaryConstants.WireType.INVALID);
+            (this.nextWireType_ = jspb.BinaryConstants.WireType.INVALID));
         }),
         (jspb.BinaryReader.prototype.reset = function () {
-          this.decoder_.reset(),
+          (this.decoder_.reset(),
             (this.nextField_ = jspb.BinaryConstants.INVALID_FIELD_NUMBER),
-            (this.nextWireType_ = jspb.BinaryConstants.WireType.INVALID);
+            (this.nextWireType_ = jspb.BinaryConstants.WireType.INVALID));
         }),
         (jspb.BinaryReader.prototype.advance = function (_) {
           this.decoder_.advance(_);
@@ -7577,7 +7578,7 @@
         (jspb.BinaryReader.prototype.nextField = function () {
           if (this.decoder_.atEnd()) return !1;
           if (this.getError())
-            return jspb.asserts.fail(`Decoder hit an error`), !1;
+            return (jspb.asserts.fail(`Decoder hit an error`), !1);
           this.fieldCursor_ = this.decoder_.getCursor();
           var _ = this.decoder_.readUnsignedVarint32(),
             _ = _ >>> 3;
@@ -7626,8 +7627,8 @@
         }),
         (jspb.BinaryReader.prototype.skipDelimitedField = function () {
           if (this.nextWireType_ != jspb.BinaryConstants.WireType.DELIMITED)
-            jspb.asserts.fail(`Invalid wire type for skipDelimitedField`),
-              this.skipField();
+            (jspb.asserts.fail(`Invalid wire type for skipDelimitedField`),
+              this.skipField());
           else {
             var _ = this.decoder_.readUnsignedVarint32();
             this.decoder_.advance(_);
@@ -7649,8 +7650,8 @@
           var _ = this.nextField_;
           do {
             if (!this.nextField()) {
-              jspb.asserts.fail(`Unmatched start-group tag: stream EOF`),
-                (this.error_ = !0);
+              (jspb.asserts.fail(`Unmatched start-group tag: stream EOF`),
+                (this.error_ = !0));
               break;
             }
             if (this.nextWireType_ == jspb.BinaryConstants.WireType.END_GROUP) {
@@ -7684,9 +7685,9 @@
           }
         }),
         (jspb.BinaryReader.prototype.registerReadCallback = function (_, _) {
-          this.readCallbacks_ === null && (this.readCallbacks_ = {}),
+          (this.readCallbacks_ === null && (this.readCallbacks_ = {}),
             jspb.asserts.assert(!this.readCallbacks_[_]),
-            (this.readCallbacks_[_] = _);
+            (this.readCallbacks_[_] = _));
         }),
         (jspb.BinaryReader.prototype.runReadCallback = function (_) {
           return (
@@ -7753,11 +7754,11 @@
           );
           var _ = this.decoder_.getEnd(),
             _ = this.decoder_.readUnsignedVarint32();
-          (_ = this.decoder_.getCursor() + _),
+          ((_ = this.decoder_.getCursor() + _),
             this.decoder_.setEnd(_),
             _(_, this),
             this.decoder_.setCursor(_),
-            this.decoder_.setEnd(_);
+            this.decoder_.setEnd(_));
         }),
         goog.exportProperty(
           jspb.BinaryReader.prototype,
@@ -7765,7 +7766,7 @@
           jspb.BinaryReader.prototype.readMessage,
         ),
         (jspb.BinaryReader.prototype.readGroup = function (_, _, _) {
-          jspb.asserts.assert(
+          (jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.START_GROUP,
           ),
             jspb.asserts.assert(this.nextField_ == _),
@@ -7775,7 +7776,7 @@
               (jspb.asserts.fail(
                 `Group submessage did not end with an END_GROUP tag`,
               ),
-              (this.error_ = !0));
+              (this.error_ = !0)));
         }),
         goog.exportProperty(
           jspb.BinaryReader.prototype,
@@ -8121,7 +8122,7 @@
           );
           var _ = this.decoder_.readUnsignedVarint32();
           _ = this.decoder_.getCursor() + _;
-          for (var _ = []; this.decoder_.getCursor() < _; )
+          for (var _ = []; this.decoder_.getCursor() < _;)
             _.push(_.call(this.decoder_));
           return _;
         }),
@@ -8276,7 +8277,7 @@
         }),
         (jspb.BinaryEncoder.prototype.end = function () {
           var _ = this.buffer_;
-          return (this.buffer_ = []), _;
+          return ((this.buffer_ = []), _);
         }),
         (jspb.BinaryEncoder.prototype.writeSplitVarint64 = function (_, _) {
           for (
@@ -8286,18 +8287,18 @@
               jspb.asserts.assert(0 <= _ && _ < jspb.BinaryConstants.TWO_TO_32);
             0 < _ || 127 < _;
           )
-            this.buffer_.push((_ & 127) | 128),
+            (this.buffer_.push((_ & 127) | 128),
               (_ = ((_ >>> 7) | (_ << 25)) >>> 0),
-              (_ >>>= 7);
+              (_ >>>= 7));
           this.buffer_.push(_);
         }),
         (jspb.BinaryEncoder.prototype.writeSplitFixed64 = function (_, _) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(0 <= _ && _ < jspb.BinaryConstants.TWO_TO_32),
             jspb.asserts.assert(0 <= _ && _ < jspb.BinaryConstants.TWO_TO_32),
             this.writeUint32(_),
-            this.writeUint32(_);
+            this.writeUint32(_));
         }),
         (jspb.BinaryEncoder.prototype.writeUnsignedVarint32 = function (_) {
           for (
@@ -8305,7 +8306,7 @@
               jspb.asserts.assert(0 <= _ && _ < jspb.BinaryConstants.TWO_TO_32);
             127 < _;
           )
-            this.buffer_.push((_ & 127) | 128), (_ >>>= 7);
+            (this.buffer_.push((_ & 127) | 128), (_ >>>= 7));
           this.buffer_.push(_);
         }),
         (jspb.BinaryEncoder.prototype.writeSignedVarint32 = function (_) {
@@ -8320,21 +8321,21 @@
             this.writeUnsignedVarint32(_);
           else {
             for (var _ = 0; 9 > _; _++)
-              this.buffer_.push((_ & 127) | 128), (_ >>= 7);
+              (this.buffer_.push((_ & 127) | 128), (_ >>= 7));
             this.buffer_.push(1);
           }
         }),
         (jspb.BinaryEncoder.prototype.writeUnsignedVarint64 = function (_) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(0 <= _ && _ < jspb.BinaryConstants.TWO_TO_64),
             jspb.utils.splitInt64(_),
             this.writeSplitVarint64(
               jspb.utils.split64Low,
               jspb.utils.split64High,
-            );
+            ));
         }),
         (jspb.BinaryEncoder.prototype.writeSignedVarint64 = function (_) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(
               _ >= -jspb.BinaryConstants.TWO_TO_63 &&
                 _ < jspb.BinaryConstants.TWO_TO_63,
@@ -8343,18 +8344,18 @@
             this.writeSplitVarint64(
               jspb.utils.split64Low,
               jspb.utils.split64High,
-            );
+            ));
         }),
         (jspb.BinaryEncoder.prototype.writeZigzagVarint32 = function (_) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(
               _ >= -jspb.BinaryConstants.TWO_TO_31 &&
                 _ < jspb.BinaryConstants.TWO_TO_31,
             ),
-            this.writeUnsignedVarint32(((_ << 1) ^ (_ >> 31)) >>> 0);
+            this.writeUnsignedVarint32(((_ << 1) ^ (_ >> 31)) >>> 0));
         }),
         (jspb.BinaryEncoder.prototype.writeZigzagVarint64 = function (_) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(
               _ >= -jspb.BinaryConstants.TWO_TO_63 &&
                 _ < jspb.BinaryConstants.TWO_TO_63,
@@ -8363,61 +8364,61 @@
             this.writeSplitVarint64(
               jspb.utils.split64Low,
               jspb.utils.split64High,
-            );
+            ));
         }),
         (jspb.BinaryEncoder.prototype.writeZigzagVarint64String = function (_) {
           this.writeZigzagVarintHash64(jspb.utils.decimalStringToHash64(_));
         }),
         (jspb.BinaryEncoder.prototype.writeZigzagVarintHash64 = function (_) {
           var _ = this;
-          jspb.utils.splitHash64(_),
+          (jspb.utils.splitHash64(_),
             jspb.utils.toZigzag64(
               jspb.utils.split64Low,
               jspb.utils.split64High,
               function (_, _) {
                 _.writeSplitVarint64(_ >>> 0, _ >>> 0);
               },
-            );
+            ));
         }),
         (jspb.BinaryEncoder.prototype.writeUint8 = function (_) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(0 <= _ && 256 > _),
-            this.buffer_.push((_ >>> 0) & 255);
+            this.buffer_.push((_ >>> 0) & 255));
         }),
         (jspb.BinaryEncoder.prototype.writeUint16 = function (_) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(0 <= _ && 65536 > _),
             this.buffer_.push((_ >>> 0) & 255),
-            this.buffer_.push((_ >>> 8) & 255);
+            this.buffer_.push((_ >>> 8) & 255));
         }),
         (jspb.BinaryEncoder.prototype.writeUint32 = function (_) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(0 <= _ && _ < jspb.BinaryConstants.TWO_TO_32),
             this.buffer_.push((_ >>> 0) & 255),
             this.buffer_.push((_ >>> 8) & 255),
             this.buffer_.push((_ >>> 16) & 255),
-            this.buffer_.push((_ >>> 24) & 255);
+            this.buffer_.push((_ >>> 24) & 255));
         }),
         (jspb.BinaryEncoder.prototype.writeUint64 = function (_) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(0 <= _ && _ < jspb.BinaryConstants.TWO_TO_64),
             jspb.utils.splitUint64(_),
             this.writeUint32(jspb.utils.split64Low),
-            this.writeUint32(jspb.utils.split64High);
+            this.writeUint32(jspb.utils.split64High));
         }),
         (jspb.BinaryEncoder.prototype.writeInt8 = function (_) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(-128 <= _ && 128 > _),
-            this.buffer_.push((_ >>> 0) & 255);
+            this.buffer_.push((_ >>> 0) & 255));
         }),
         (jspb.BinaryEncoder.prototype.writeInt16 = function (_) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(-32768 <= _ && 32768 > _),
             this.buffer_.push((_ >>> 0) & 255),
-            this.buffer_.push((_ >>> 8) & 255);
+            this.buffer_.push((_ >>> 8) & 255));
         }),
         (jspb.BinaryEncoder.prototype.writeInt32 = function (_) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(
               _ >= -jspb.BinaryConstants.TWO_TO_31 &&
                 _ < jspb.BinaryConstants.TWO_TO_31,
@@ -8425,10 +8426,10 @@
             this.buffer_.push((_ >>> 0) & 255),
             this.buffer_.push((_ >>> 8) & 255),
             this.buffer_.push((_ >>> 16) & 255),
-            this.buffer_.push((_ >>> 24) & 255);
+            this.buffer_.push((_ >>> 24) & 255));
         }),
         (jspb.BinaryEncoder.prototype.writeInt64 = function (_) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(
               _ >= -jspb.BinaryConstants.TWO_TO_63 &&
                 _ < jspb.BinaryConstants.TWO_TO_63,
@@ -8437,10 +8438,10 @@
             this.writeSplitFixed64(
               jspb.utils.split64Low,
               jspb.utils.split64High,
-            );
+            ));
         }),
         (jspb.BinaryEncoder.prototype.writeInt64String = function (_) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(
               +_ >= -jspb.BinaryConstants.TWO_TO_63 &&
                 +_ < jspb.BinaryConstants.TWO_TO_63,
@@ -8449,10 +8450,10 @@
             this.writeSplitFixed64(
               jspb.utils.split64Low,
               jspb.utils.split64High,
-            );
+            ));
         }),
         (jspb.BinaryEncoder.prototype.writeFloat = function (_) {
-          jspb.asserts.assert(
+          (jspb.asserts.assert(
             _ === 1 / 0 ||
               _ === -1 / 0 ||
               isNaN(_) ||
@@ -8460,10 +8461,10 @@
                 _ <= jspb.BinaryConstants.FLOAT32_MAX),
           ),
             jspb.utils.splitFloat32(_),
-            this.writeUint32(jspb.utils.split64Low);
+            this.writeUint32(jspb.utils.split64Low));
         }),
         (jspb.BinaryEncoder.prototype.writeDouble = function (_) {
-          jspb.asserts.assert(
+          (jspb.asserts.assert(
             _ === 1 / 0 ||
               _ === -1 / 0 ||
               isNaN(_) ||
@@ -8472,34 +8473,34 @@
           ),
             jspb.utils.splitFloat64(_),
             this.writeUint32(jspb.utils.split64Low),
-            this.writeUint32(jspb.utils.split64High);
+            this.writeUint32(jspb.utils.split64High));
         }),
         (jspb.BinaryEncoder.prototype.writeBool = function (_) {
-          jspb.asserts.assert(typeof _ == `boolean` || typeof _ == `number`),
-            this.buffer_.push(+!!_);
+          (jspb.asserts.assert(typeof _ == `boolean` || typeof _ == `number`),
+            this.buffer_.push(+!!_));
         }),
         (jspb.BinaryEncoder.prototype.writeEnum = function (_) {
-          jspb.asserts.assert(_ == Math.floor(_)),
+          (jspb.asserts.assert(_ == Math.floor(_)),
             jspb.asserts.assert(
               _ >= -jspb.BinaryConstants.TWO_TO_31 &&
                 _ < jspb.BinaryConstants.TWO_TO_31,
             ),
-            this.writeSignedVarint32(_);
+            this.writeSignedVarint32(_));
         }),
         (jspb.BinaryEncoder.prototype.writeBytes = function (_) {
           this.buffer_.push.apply(this.buffer_, _);
         }),
         (jspb.BinaryEncoder.prototype.writeVarintHash64 = function (_) {
-          jspb.utils.splitHash64(_),
+          (jspb.utils.splitHash64(_),
             this.writeSplitVarint64(
               jspb.utils.split64Low,
               jspb.utils.split64High,
-            );
+            ));
         }),
         (jspb.BinaryEncoder.prototype.writeFixedHash64 = function (_) {
-          jspb.utils.splitHash64(_),
+          (jspb.utils.splitHash64(_),
             this.writeUint32(jspb.utils.split64Low),
-            this.writeUint32(jspb.utils.split64High);
+            this.writeUint32(jspb.utils.split64High));
         }),
         (jspb.BinaryEncoder.prototype.writeString = function (_) {
           var _ = this.buffer_.length;
@@ -8508,8 +8509,8 @@
             var _ = _.charCodeAt(_);
             if (128 > _) this.buffer_.push(_);
             else if (2048 > _)
-              this.buffer_.push((_ >> 6) | 192),
-                this.buffer_.push((_ & 63) | 128);
+              (this.buffer_.push((_ >> 6) | 192),
+                this.buffer_.push((_ & 63) | 128));
             else if (65536 > _) {
               if (55296 <= _ && 56319 >= _ && _ + 1 < _.length) {
                 var _ = _.charCodeAt(_ + 1);
@@ -8522,16 +8523,16 @@
                   this.buffer_.push((_ & 63) | 128),
                   _++);
               } else
-                this.buffer_.push((_ >> 12) | 224),
+                (this.buffer_.push((_ >> 12) | 224),
                   this.buffer_.push(((_ >> 6) & 63) | 128),
-                  this.buffer_.push((_ & 63) | 128);
+                  this.buffer_.push((_ & 63) | 128));
             }
           }
           return this.buffer_.length - _;
         }),
         (jspb.arith = {}),
         (jspb.arith.UInt64 = function (_, _) {
-          (this._ = _), (this._ = _);
+          ((this._ = _), (this._ = _));
         }),
         (jspb.arith.UInt64.prototype.cmp = function (_) {
           return this._ < _._ || (this._ == _._ && this._ < _._)
@@ -8584,7 +8585,7 @@
               _ = _ * _ + ((_ * _) >>> 16) + ((_ * _) >>> 16);
             4294967296 <= _;
           )
-            (_ -= 4294967296), (_ += 1);
+            ((_ -= 4294967296), (_ += 1));
           return new jspb.arith.UInt64(_ >>> 0, _ >>> 0);
         }),
         (jspb.arith.UInt64.prototype.mul = function (_) {
@@ -8601,21 +8602,21 @@
           var _ = new jspb.arith.UInt64(0, 0),
             _ = new jspb.arith.UInt64(this._, this._);
           _ = new jspb.arith.UInt64(_, 0);
-          for (var _ = new jspb.arith.UInt64(1, 0); !_.msb(); )
-            (_ = _.leftShift()), (_ = _.leftShift());
-          for (; !_.zero(); )
-            0 >= _.cmp(_) && ((_ = _.add(_)), (_ = _.sub(_))),
+          for (var _ = new jspb.arith.UInt64(1, 0); !_.msb();)
+            ((_ = _.leftShift()), (_ = _.leftShift()));
+          for (; !_.zero();)
+            (0 >= _.cmp(_) && ((_ = _.add(_)), (_ = _.sub(_))),
               (_ = _.rightShift()),
-              (_ = _.rightShift());
+              (_ = _.rightShift()));
           return [_, _];
         }),
         (jspb.arith.UInt64.prototype.toString = function () {
-          for (var _ = ``, _ = this; !_.zero(); ) {
+          for (var _ = ``, _ = this; !_.zero();) {
             _ = _.div(10);
             var _ = _[0];
-            (_ = _[1]._ + _), (_ = _);
+            ((_ = _[1]._ + _), (_ = _));
           }
-          return _ == `` && (_ = `0`), _;
+          return (_ == `` && (_ = `0`), _);
         }),
         (jspb.arith.UInt64.fromString = function (_) {
           for (
@@ -8626,7 +8627,7 @@
             _++
           ) {
             if (`0` > _[_] || `9` < _[_]) return null;
-            (_._ = parseInt(_[_], 10)), (_ = _.mul(10).add(_));
+            ((_._ = parseInt(_[_], 10)), (_ = _.mul(10).add(_)));
           }
           return _;
         }),
@@ -8634,7 +8635,7 @@
           return new jspb.arith.UInt64(this._, this._);
         }),
         (jspb.arith.Int64 = function (_, _) {
-          (this._ = _), (this._ = _);
+          ((this._ = _), (this._ = _));
         }),
         (jspb.arith.Int64.prototype.add = function (_) {
           return new jspb.arith.Int64(
@@ -8672,16 +8673,16 @@
           );
         }),
         (jspb.BinaryWriter = function () {
-          (this.blocks_ = []),
+          ((this.blocks_ = []),
             (this.totalLength_ = 0),
             (this.encoder_ = new jspb.BinaryEncoder()),
-            (this.bookmarks_ = []);
+            (this.bookmarks_ = []));
         }),
         (jspb.BinaryWriter.prototype.appendUint8Array_ = function (_) {
           var _ = this.encoder_.end();
-          this.blocks_.push(_),
+          (this.blocks_.push(_),
             this.blocks_.push(_),
-            (this.totalLength_ += _.length + _.length);
+            (this.totalLength_ += _.length + _.length));
         }),
         (jspb.BinaryWriter.prototype.beginDelimited_ = function (_) {
           return (
@@ -8700,8 +8701,8 @@
               jspb.asserts.assert(0 <= _);
             127 < _;
           )
-            _.push((_ & 127) | 128), (_ >>>= 7), this.totalLength_++;
-          _.push(_), this.totalLength_++;
+            (_.push((_ & 127) | 128), (_ >>>= 7), this.totalLength_++);
+          (_.push(_), this.totalLength_++);
         }),
         (jspb.BinaryWriter.prototype.writeSerializedMessage = function (
           _,
@@ -8721,10 +8722,10 @@
             this.writeSerializedMessage(_, _, _);
         }),
         (jspb.BinaryWriter.prototype.reset = function () {
-          (this.blocks_ = []),
+          ((this.blocks_ = []),
             this.encoder_.end(),
             (this.totalLength_ = 0),
-            (this.bookmarks_ = []);
+            (this.bookmarks_ = []));
         }),
         (jspb.BinaryWriter.prototype.getResultBuffer = function () {
           jspb.asserts.assert(this.bookmarks_.length == 0);
@@ -8738,7 +8739,7 @@
             _++
           ) {
             var _ = _[_];
-            _.set(_, _), (_ += _.length);
+            (_.set(_, _), (_ += _.length));
           }
           return (
             (_ = this.encoder_.end()),
@@ -8761,12 +8762,12 @@
           this.bookmarks_.push(this.beginDelimited_(_));
         }),
         (jspb.BinaryWriter.prototype.endSubMessage = function () {
-          jspb.asserts.assert(0 <= this.bookmarks_.length),
-            this.endDelimited_(this.bookmarks_.pop());
+          (jspb.asserts.assert(0 <= this.bookmarks_.length),
+            this.endDelimited_(this.bookmarks_.pop()));
         }),
         (jspb.BinaryWriter.prototype.writeFieldHeader_ = function (_, _) {
-          jspb.asserts.assert(1 <= _ && _ == Math.floor(_)),
-            this.encoder_.writeUnsignedVarint32(8 * _ + _);
+          (jspb.asserts.assert(1 <= _ && _ == Math.floor(_)),
+            this.encoder_.writeUnsignedVarint32(8 * _ + _));
         }),
         (jspb.BinaryWriter.prototype.writeAny = function (_, _, _) {
           var _ = jspb.BinaryConstants.FieldType;
@@ -9167,12 +9168,12 @@
             this.encoder_.writeVarintHash64(_));
         }),
         (jspb.BinaryWriter.prototype.writeSplitFixed64 = function (_, _, _) {
-          this.writeFieldHeader_(_, jspb.BinaryConstants.WireType.FIXED64),
-            this.encoder_.writeSplitFixed64(_, _);
+          (this.writeFieldHeader_(_, jspb.BinaryConstants.WireType.FIXED64),
+            this.encoder_.writeSplitFixed64(_, _));
         }),
         (jspb.BinaryWriter.prototype.writeSplitVarint64 = function (_, _, _) {
-          this.writeFieldHeader_(_, jspb.BinaryConstants.WireType.VARINT),
-            this.encoder_.writeSplitVarint64(_, _);
+          (this.writeFieldHeader_(_, jspb.BinaryConstants.WireType.VARINT),
+            this.encoder_.writeSplitVarint64(_, _));
         }),
         (jspb.BinaryWriter.prototype.writeSplitZigzagVarint64 = function (
           _,
@@ -9426,7 +9427,7 @@
           if (_ != null)
             for (var _ = 0; _ < _.length; _++) {
               var _ = this.beginDelimited_(_);
-              _(_[_], this), this.endDelimited_(_);
+              (_(_[_], this), this.endDelimited_(_));
             }
         }),
         goog.exportProperty(
@@ -9437,7 +9438,7 @@
         (jspb.BinaryWriter.prototype.writeRepeatedGroup = function (_, _, _) {
           if (_ != null)
             for (var _ = 0; _ < _.length; _++)
-              this.writeFieldHeader_(
+              (this.writeFieldHeader_(
                 _,
                 jspb.BinaryConstants.WireType.START_GROUP,
               ),
@@ -9445,7 +9446,7 @@
                 this.writeFieldHeader_(
                   _,
                   jspb.BinaryConstants.WireType.END_GROUP,
-                );
+                ));
         }),
         goog.exportProperty(
           jspb.BinaryWriter.prototype,
@@ -9843,11 +9844,11 @@
           }
         }),
         (jspb.Map = function (_, _) {
-          (this.arr_ = _),
+          ((this.arr_ = _),
             (this.valueCtor_ = _),
             (this.map_ = {}),
             (this.arrClean = !0),
-            0 < this.arr_.length && this.loadFromArray_();
+            0 < this.arr_.length && this.loadFromArray_());
         }),
         goog.exportSymbol(`jspb.Map`, jspb.Map),
         (jspb.Map.prototype.loadFromArray_ = function () {
@@ -9876,8 +9877,8 @@
               _++
             ) {
               var _ = this.map_[_[_]];
-              (_ = _.valueWrapper) && _.toArray(),
-                this.arr_.push([_.key, _.value]);
+              ((_ = _.valueWrapper) && _.toArray(),
+                this.arr_.push([_.key, _.value]));
             }
             this.arrClean = !0;
           }
@@ -9915,7 +9916,7 @@
         }),
         goog.exportProperty(jspb.Map, `fromObject`, jspb.Map.fromObject),
         (jspb.Map.ArrayIteratorIterable_ = function (_) {
-          (this.idx_ = 0), (this.arr_ = _);
+          ((this.idx_ = 0), (this.arr_ = _));
         }),
         (jspb.Map.ArrayIteratorIterable_.prototype.next = function () {
           return this.idx_ < this.arr_.length
@@ -9942,7 +9943,7 @@
           jspb.Map.prototype.getLength,
         ),
         (jspb.Map.prototype.clear = function () {
-          (this.map_ = {}), (this.arrClean = !1);
+          ((this.map_ = {}), (this.arrClean = !1));
         }),
         goog.exportProperty(
           jspb.Map.prototype,
@@ -9952,7 +9953,7 @@
         (jspb.Map.prototype.del = function (_) {
           _ = _.toString();
           var _ = this.map_.hasOwnProperty(_);
-          return delete this.map_[_], (this.arrClean = !1), _;
+          return (delete this.map_[_], (this.arrClean = !1), _);
         }),
         goog.exportProperty(jspb.Map.prototype, `del`, jspb.Map.prototype.del),
         (jspb.Map.prototype.getEntryList = function () {
@@ -10054,12 +10055,12 @@
           _.sort();
           for (var _ = 0; _ < _.length; _++) {
             var _ = this.map_[_[_]];
-            _.beginSubMessage(_),
+            (_.beginSubMessage(_),
               _.call(_, 1, _.key),
               this.valueCtor_
                 ? _.call(_, 2, this.wrapEntry_(_), _)
                 : _.call(_, 2, _.value),
-              _.endSubMessage();
+              _.endSubMessage());
           }
         }),
         goog.exportProperty(
@@ -10068,7 +10069,7 @@
           jspb.Map.prototype.serializeBinary,
         ),
         (jspb.Map.deserializeBinary = function (_, _, _, _, _, _, _) {
-          for (; _.nextField() && !_.isEndGroup(); ) {
+          for (; _.nextField() && !_.isEndGroup();) {
             var _ = _.getFieldNumber();
             _ == 1
               ? (_ = _.call(_))
@@ -10079,9 +10080,9 @@
                     _.call(_, _, _))
                   : (_ = _.call(_)));
           }
-          jspb.asserts.assert(_ != null),
+          (jspb.asserts.assert(_ != null),
             jspb.asserts.assert(_ != null),
-            _.set(_, _);
+            _.set(_, _));
         }),
         goog.exportProperty(
           jspb.Map,
@@ -10096,23 +10097,23 @@
           return _;
         }),
         (jspb.Map.Entry_ = function (_, _) {
-          (this.key = _), (this.value = _), (this.valueWrapper = void 0);
+          ((this.key = _), (this.value = _), (this.valueWrapper = void 0));
         }),
         (jspb.ExtensionFieldInfo = function (_, _, _, _, _) {
-          (this.fieldIndex = _),
+          ((this.fieldIndex = _),
             (this.fieldName = _),
             (this.ctor = _),
             (this.toObjectFn = _),
-            (this.isRepeated = _);
+            (this.isRepeated = _));
         }),
         goog.exportSymbol(`jspb.ExtensionFieldInfo`, jspb.ExtensionFieldInfo),
         (jspb.ExtensionFieldBinaryInfo = function (_, _, _, _, _, _) {
-          (this.fieldInfo = _),
+          ((this.fieldInfo = _),
             (this.binaryReaderFn = _),
             (this.binaryWriterFn = _),
             (this.binaryMessageSerializeFn = _),
             (this.binaryMessageDeserializeFn = _),
-            (this.isPacked = _);
+            (this.isPacked = _));
         }),
         goog.exportSymbol(
           `jspb.ExtensionFieldBinaryInfo`,
@@ -10173,7 +10174,7 @@
             _)
           )
             for (_ = 0; _ < _.length; _++)
-              (_ = _[_]),
+              ((_ = _[_]),
                 _ < _.pivot_
                   ? ((_ = jspb.Message.getIndex_(_, _)),
                     (_.array[_] =
@@ -10181,7 +10182,7 @@
                   : (jspb.Message.maybeInitEmptyExtensionObject_(_),
                     (_.extensionObject_[_] =
                       _.extensionObject_[_] ||
-                      jspb.Message.EMPTY_LIST_SENTINEL_));
+                      jspb.Message.EMPTY_LIST_SENTINEL_)));
           if (_ && _.length)
             for (_ = 0; _ < _.length; _++)
               jspb.Message.computeOneofCase(_, _[_]);
@@ -10335,7 +10336,7 @@
           jspb.Message.getRepeatedField,
         ),
         (jspb.Message.getOptionalFloatingPointField = function (_, _) {
-          return (_ = jspb.Message.getField(_, _)), _ == null ? _ : +_;
+          return ((_ = jspb.Message.getField(_, _)), _ == null ? _ : +_);
         }),
         goog.exportProperty(
           jspb.Message,
@@ -10343,7 +10344,7 @@
           jspb.Message.getOptionalFloatingPointField,
         ),
         (jspb.Message.getBooleanField = function (_, _) {
-          return (_ = jspb.Message.getField(_, _)), _ == null ? _ : !!_;
+          return ((_ = jspb.Message.getField(_, _)), _ == null ? _ : !!_);
         }),
         goog.exportProperty(
           jspb.Message,
@@ -10449,7 +10450,7 @@
           }
         }),
         (jspb.Message.getFieldWithDefault = function (_, _, _) {
-          return (_ = jspb.Message.getField(_, _)), _ ?? _;
+          return ((_ = jspb.Message.getField(_, _)), _ ?? _);
         }),
         goog.exportProperty(
           jspb.Message,
@@ -10457,7 +10458,7 @@
           jspb.Message.getFieldWithDefault,
         ),
         (jspb.Message.getBooleanFieldWithDefault = function (_, _, _) {
-          return (_ = jspb.Message.getBooleanField(_, _)), _ ?? _;
+          return ((_ = jspb.Message.getBooleanField(_, _)), _ ?? _);
         }),
         goog.exportProperty(
           jspb.Message,
@@ -10465,7 +10466,9 @@
           jspb.Message.getBooleanFieldWithDefault,
         ),
         (jspb.Message.getFloatingPointFieldWithDefault = function (_, _, _) {
-          return (_ = jspb.Message.getOptionalFloatingPointField(_, _)), _ ?? _;
+          return (
+            (_ = jspb.Message.getOptionalFloatingPointField(_, _)), _ ?? _
+          );
         }),
         goog.exportProperty(
           jspb.Message,
@@ -10483,7 +10486,7 @@
           var _ = jspb.Message.getField(_, _);
           if (!_) {
             if (_) return;
-            (_ = []), jspb.Message.setField(_, _, _);
+            ((_ = []), jspb.Message.setField(_, _, _));
           }
           return (_.wrappers_[_] = new jspb.Map(_, _));
         }),
@@ -10651,9 +10654,10 @@
           }
         }),
         (jspb.Message.setWrapperField = function (_, _, _) {
-          jspb.asserts.assertInstanceof(_, jspb.Message), (_.wrappers_ ||= {});
+          (jspb.asserts.assertInstanceof(_, jspb.Message),
+            (_.wrappers_ ||= {}));
           var _ = _ && _.toArray();
-          return (_.wrappers_[_] = _), jspb.Message.setField(_, _, _);
+          return ((_.wrappers_[_] = _), jspb.Message.setField(_, _, _));
         }),
         goog.exportProperty(
           jspb.Message,
@@ -10661,9 +10665,10 @@
           jspb.Message.setWrapperField,
         ),
         (jspb.Message.setOneofWrapperField = function (_, _, _, _) {
-          jspb.asserts.assertInstanceof(_, jspb.Message), (_.wrappers_ ||= {});
+          (jspb.asserts.assertInstanceof(_, jspb.Message),
+            (_.wrappers_ ||= {}));
           var _ = _ && _.toArray();
-          return (_.wrappers_[_] = _), jspb.Message.setOneofField(_, _, _, _);
+          return ((_.wrappers_[_] = _), jspb.Message.setOneofField(_, _, _, _));
         }),
         goog.exportProperty(
           jspb.Message,
@@ -10671,11 +10676,11 @@
           jspb.Message.setOneofWrapperField,
         ),
         (jspb.Message.setRepeatedWrapperField = function (_, _, _) {
-          jspb.asserts.assertInstanceof(_, jspb.Message),
+          (jspb.asserts.assertInstanceof(_, jspb.Message),
             (_.wrappers_ ||= {}),
-            (_ ||= []);
+            (_ ||= []));
           for (var _ = [], _ = 0; _ < _.length; _++) _[_] = _[_].toArray();
-          return (_.wrappers_[_] = _), jspb.Message.setField(_, _, _);
+          return ((_.wrappers_[_] = _), jspb.Message.setField(_, _, _));
         }),
         goog.exportProperty(
           jspb.Message,
@@ -10716,7 +10721,7 @@
             }
         }),
         (jspb.Message.prototype.toArray = function () {
-          return this.syncMapFields_(), this.array;
+          return (this.syncMapFields_(), this.array);
         }),
         goog.exportProperty(
           jspb.Message.prototype,
@@ -10725,7 +10730,7 @@
         ),
         jspb.Message.GENERATE_TO_STRING &&
           (jspb.Message.prototype.toString = function () {
-            return this.syncMapFields_(), this.array.toString();
+            return (this.syncMapFields_(), this.array.toString());
           }),
         (jspb.Message.prototype.getExtension = function (_) {
           if (this.extensionObject_) {
@@ -10759,8 +10764,8 @@
           jspb.Message.prototype.getExtension,
         ),
         (jspb.Message.prototype.setExtension = function (_, _) {
-          (this.wrappers_ ||= {}),
-            jspb.Message.maybeInitEmptyExtensionObject_(this);
+          ((this.wrappers_ ||= {}),
+            jspb.Message.maybeInitEmptyExtensionObject_(this));
           var _ = _.fieldIndex;
           return (
             _.isRepeated
@@ -10814,7 +10819,7 @@
         }),
         goog.exportProperty(jspb.Message, `equals`, jspb.Message.equals),
         (jspb.Message.compareExtensions = function (_, _) {
-          (_ ||= {}), (_ ||= {});
+          ((_ ||= {}), (_ ||= {}));
           var _ = {},
             _;
           for (_ in _) _[_] = 0;
@@ -10904,21 +10909,21 @@
           return new _.constructor(jspb.Message.clone_(_.toArray()));
         }),
         (jspb.Message.copyInto = function (_, _) {
-          jspb.asserts.assertInstanceof(_, jspb.Message),
+          (jspb.asserts.assertInstanceof(_, jspb.Message),
             jspb.asserts.assertInstanceof(_, jspb.Message),
             jspb.asserts.assert(
               _.constructor == _.constructor,
               `Copy source and target message should have the same type.`,
             ),
-            (_ = jspb.Message.clone(_));
+            (_ = jspb.Message.clone(_)));
           for (
             var _ = _.toArray(), _ = _.toArray(), _ = (_.length = 0);
             _ < _.length;
             _++
           )
             _[_] = _[_];
-          (_.wrappers_ = _.wrappers_),
-            (_.extensionObject_ = _.extensionObject_);
+          ((_.wrappers_ = _.wrappers_),
+            (_.extensionObject_ = _.extensionObject_));
         }),
         goog.exportProperty(jspb.Message, `copyInto`, jspb.Message.copyInto),
         (jspb.Message.clone_ = function (_) {
@@ -10936,12 +10941,12 @@
           if (jspb.Message.SUPPORTS_UINT8ARRAY_ && _ instanceof Uint8Array)
             return new Uint8Array(_);
           for (_ in ((_ = {}), _))
-            (_ = _[_]),
+            ((_ = _[_]),
               _ != null &&
                 (_[_] =
                   typeof _ == `object`
                     ? jspb.Message.clone_(jspb.asserts.assert(_))
-                    : _);
+                    : _));
           return _;
         }),
         (jspb.Message.registerMessageType = function (_, _) {
@@ -10967,7 +10972,7 @@
           (exports.object = {
             extend: goog.object.extend,
           }),
-          (exports.typeOf = goog.typeOf));
+          (exports.typeOf = goog.typeOf)));
     }),
     import_google_protobuf = __toESM(require_google_protobuf(), 1),
     ReaderProto = import_google_protobuf.BinaryReader.prototype,
@@ -11030,16 +11035,16 @@
         (_ !== null || _) && (_[_] = _);
       }
     }
-    return _ && (_.$jspbMessageInstance = _), _;
+    return (_ && (_.$jspbMessageInstance = _), _);
   }
   function DeserializeBinary(_, _, _) {
-    for (; _.nextField() && !_.isEndGroup(); ) {
+    for (; _.nextField() && !_.isEndGroup();) {
       let _ = _[_.getFieldNumber()];
       if (_) {
         let { _: _, _: _, _: _, _: _, _: _, _: _ } = _;
         if (_) {
           let _ = new _();
-          _.readMessage(_, _.deserializeBinaryFromReader),
+          (_.readMessage(_, _.deserializeBinaryFromReader),
             _
               ? import_google_protobuf.Message.addToRepeatedWrapperField(
                   _,
@@ -11047,18 +11052,18 @@
                   _,
                   _,
                 )
-              : import_google_protobuf.Message.setWrapperField(_, _, _);
+              : import_google_protobuf.Message.setWrapperField(_, _, _));
         } else if (_) {
           let _ = _.call(_);
           _
             ? import_google_protobuf.Message.addToRepeatedField(_, _, _)
             : import_google_protobuf.Message.setField(_, _, _);
         } else
-          console.assert(
+          (console.assert(
             !!_,
             `Reader func not set for field number ${_} in class ${_}`,
           ),
-            _.skipField();
+            _.skipField());
       } else _.skipField();
     }
     return _;
@@ -11095,7 +11100,7 @@
     for (let _ in _.fields) {
       let _ = _.fields[_],
         { _: _, _: _, _: _, _: _, _: _ } = _;
-      Object.prototype.hasOwnProperty.call(_, `d`)
+      (Object.prototype.hasOwnProperty.call(_, `d`)
         ? (_.prototype[_] = MakeBasicGetter(
             import_google_protobuf.Message.getFieldWithDefault,
             _,
@@ -11127,7 +11132,7 @@
               import_google_protobuf.Message.setField,
               _,
             )),
-        _ && (_.prototype[`add_${_}`] = MakeAdder(_, _));
+        _ && (_.prototype[`add_${_}`] = MakeAdder(_, _)));
     }
   }
   function MakeBasicGetter(_, ..._) {
@@ -11160,10 +11165,12 @@
           import_google_protobuf.Message.addToRepeatedField(this, _, _, _);
         };
   }
-  var CMsgGCRoutingProtoBufHeader = class _ extends import_google_protobuf.Message {
+  var CMsgGCRoutingProtoBufHeader = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.dst_gcid_queue || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -11172,7 +11179,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -11197,7 +11204,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -11218,14 +11225,14 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CMsgGCRoutingProtoBufHeader`;
@@ -11234,7 +11241,7 @@
     CMsgProtoBufHeader = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.steamid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -11243,7 +11250,7 @@
             -1,
             [27, 41],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -11492,7 +11499,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -11513,14 +11520,14 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CMsgProtoBufHeader`;
@@ -11529,7 +11536,7 @@
     CLocalizationToken = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.language || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -11538,7 +11545,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -11563,7 +11570,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -11584,14 +11591,14 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CLocalizationToken`;
@@ -11600,7 +11607,7 @@
     UserSystemInformation = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.manufacturer || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -11609,7 +11616,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -11719,7 +11726,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -11740,14 +11747,14 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `UserSystemInformation`;
@@ -11756,7 +11763,7 @@
     GamePerformanceSettings = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.setting || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -11765,7 +11772,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -11795,7 +11802,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -11816,14 +11823,14 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `GamePerformanceSettings`;
@@ -11837,7 +11844,7 @@
       m_iGet;
       m_iPut;
       constructor(_, _ = 0, _) {
-        (this.m_nOffset = _ || 0),
+        ((this.m_nOffset = _ || 0),
           _ instanceof Uint8Array || _ instanceof DataView
             ? ((this.m_nLength = _ || _.byteLength - this.m_nOffset),
               (this.m_nOffset += _.byteOffset),
@@ -11858,7 +11865,7 @@
             this.m_viewPacket.byteLength,
           )),
           (this.m_iGet = 0),
-          (this.m_iPut = 0);
+          (this.m_iPut = 0));
       }
       TellGet() {
         return this.m_iGet + this.m_viewPacket.byteOffset;
@@ -11871,7 +11878,7 @@
       }
       GetUint32(_ = !0) {
         let _ = this.m_viewPacket.getUint32(this.m_iGet, _);
-        return (this.m_iGet += 4), _;
+        return ((this.m_iGet += 4), _);
       }
       SeekGetHead(_ = 0) {
         this.m_iGet = _ || 0;
@@ -11889,10 +11896,10 @@
         this.m_viewPacket.setUint8(this.m_iPut++, _);
       }
       PutUint32(_, _ = !0) {
-        this.m_viewPacket.setUint32(this.m_iPut, _, _), (this.m_iPut += 4);
+        (this.m_viewPacket.setUint32(this.m_iPut, _, _), (this.m_iPut += 4));
       }
       PutBytes(_) {
-        this.m_rgubPacket.set(_, this.m_iPut), (this.m_iPut += _.length);
+        (this.m_rgubPacket.set(_, this.m_iPut), (this.m_iPut += _.length));
       }
       SeekPut(_) {
         this.m_iPut += _;
@@ -11914,13 +11921,13 @@
       m_body;
       constructor(_, _, _, _, _, _) {
         if (_)
-          (this.m_eMsg = _.m_eMsg),
+          ((this.m_eMsg = _.m_eMsg),
             (this.m_bValid = _.m_bValid),
             this.m_bValid &&
               ((this.m_netPacket = _.m_netPacket),
               (this.m_cubHeader = _.m_cubHeader),
               (this.m_header = _.m_header),
-              this.InitForType(_));
+              this.InitForType(_)));
         else {
           if (
             ((this.m_header = new CMsgProtoBufHeader(null)),
@@ -11933,10 +11940,10 @@
               (this.m_eMsg = this.m_netPacket.GetUint32()),
               this.m_eMsg & 2147483648)
             ) {
-              (this.m_eMsg &= 2147483647),
-                (this.m_cubHeader = this.m_netPacket.GetUint32());
+              ((this.m_eMsg &= 2147483647),
+                (this.m_cubHeader = this.m_netPacket.GetUint32()));
               try {
-                CMsgProtoBufHeader.deserializeBinaryFromReader(
+                (CMsgProtoBufHeader.deserializeBinaryFromReader(
                   this.m_header,
                   new import_google_protobuf.BinaryReader(
                     this.m_netPacket.GetPacket(),
@@ -11945,25 +11952,25 @@
                   ),
                 ),
                   this.m_netPacket.SeekGetCurrent(this.m_cubHeader),
-                  _ && this.InitForType(_);
+                  _ && this.InitForType(_));
               } catch (_) {
-                console.error(`Exception deserializing protobuf`, _),
-                  (this.m_bValid = !1);
+                (console.error(`Exception deserializing protobuf`, _),
+                  (this.m_bValid = !1));
               }
             } else this.m_bValid = !1;
           } else
-            _ && (this.m_eMsg = _),
+            (_ && (this.m_eMsg = _),
               _ && _
                 ? (this.m_body = _.fromObject(_))
-                : _ && (this.m_body = new _());
+                : _ && (this.m_body = new _()));
           _ && this.m_header.set_jobid_target(_.Hdr().jobid_target());
         }
       }
       InitForType(_) {
-        (this.m_body = new _()),
+        ((this.m_body = new _()),
           this.m_netPacket &&
             (this.m_netPacket.SeekGetHead(8 + this.m_cubHeader),
-            this.ReadBodyFromBuffer(_, this.m_netPacket));
+            this.ReadBodyFromBuffer(_, this.m_netPacket)));
       }
       ReadBodyFromBuffer(_, _) {
         try {
@@ -11979,12 +11986,12 @@
           this.m_bValid = !1;
           let _ = ErrorReportingStore(),
             _ = `Exception parsing protobuf message body of type ${this.m_eMsg}.  Definitions may be out of sync with server version.`;
-          _ &&
+          (_ &&
             _.ReportError(Error(_), {
               bIncludeMessageInIdentifier: !0,
             }),
             console.warn(_),
-            console.log(_.stack || _);
+            console.log(_.stack || _));
         }
       }
       BIsValid() {
@@ -11994,7 +12001,7 @@
         return this.m_body;
       }
       SetBodyJSON(_) {
-        (_.toObject = () => _), (this.m_body = _);
+        ((_.toObject = () => _), (this.m_body = _));
       }
       Hdr() {
         return this.m_header;
@@ -12029,7 +12036,7 @@
       SerializeBody() {
         let _ = this.m_body.serializeBinary(),
           _ = new Uint8Array(_.length);
-        return new CUtlBuffer(_).PutBytes(_), _;
+        return (new CUtlBuffer(_).PutBytes(_), _);
       }
       DEBUG_ToObject() {
         return {};
@@ -12074,10 +12081,12 @@
       _
     );
   }
-  var CClientMetrics_ClientBootstrap_RequestInfo = class _ extends import_google_protobuf.Message {
+  var CClientMetrics_ClientBootstrap_RequestInfo = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.original_hostname || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -12086,7 +12095,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -12151,7 +12160,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -12172,23 +12181,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ClientBootstrap_RequestInfo`;
       }
     },
-    CClientMetrics_ClientBootstrap_Summary = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ClientBootstrap_Summary = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.launcher_type || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -12197,7 +12208,7 @@
             -1,
             [7, 8],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -12249,7 +12260,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -12270,23 +12281,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ClientBootstrap_Summary`;
       }
     },
-    CClientMetrics_ContentDownloadResponse_Counts = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ContentDownloadResponse_Counts = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.class_100 || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -12295,7 +12308,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -12345,7 +12358,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -12366,23 +12379,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ContentDownloadResponse_Counts`;
       }
     },
-    CClientMetrics_ContentDownloadResponse_HostCounts = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ContentDownloadResponse_HostCounts = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.hostname || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -12391,7 +12406,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -12420,7 +12435,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -12441,25 +12456,27 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ContentDownloadResponse_HostCounts`;
       }
     },
-    CClientMetrics_ContentDownloadResponse_Hosts = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ContentDownloadResponse_Hosts = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.hosts || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null));
       }
       static sm_m;
       static sm_mbf;
@@ -12480,7 +12497,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -12501,23 +12518,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ContentDownloadResponse_Hosts`;
       }
     },
-    CClientMetrics_AppInterfaceCreation = class _ extends import_google_protobuf.Message {
+    CClientMetrics_AppInterfaceCreation = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.raw_version || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -12526,7 +12545,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -12551,7 +12570,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -12572,23 +12591,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_AppInterfaceCreation`;
       }
     },
-    CClientMetrics_AppInterfaceMethodCounts = class _ extends import_google_protobuf.Message {
+    CClientMetrics_AppInterfaceMethodCounts = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.interface_name || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -12597,7 +12618,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -12627,7 +12648,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -12648,23 +12669,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_AppInterfaceMethodCounts`;
       }
     },
-    CClientMetrics_AppInterfaceStats_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_AppInterfaceStats_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.game_id || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -12673,7 +12696,7 @@
             -1,
             [2, 3],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -12710,7 +12733,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -12731,23 +12754,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_AppInterfaceStats_Notification`;
       }
     },
-    CClientMetrics_IPv6Connectivity_Result = class _ extends import_google_protobuf.Message {
+    CClientMetrics_IPv6Connectivity_Result = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.protocol_tested || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -12756,7 +12781,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -12781,7 +12806,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -12802,25 +12827,27 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_IPv6Connectivity_Result`;
       }
     },
-    CClientMetrics_IPv6Connectivity_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_IPv6Connectivity_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.cell_id || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null));
       }
       static sm_m;
       static sm_mbf;
@@ -12851,7 +12878,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -12872,23 +12899,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_IPv6Connectivity_Notification`;
       }
     },
-    CClientMetrics_ReportReactUsage_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ReportReactUsage_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.product || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -12897,7 +12926,7 @@
             -1,
             [3, 4, 5],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -12940,7 +12969,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -12961,23 +12990,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ReportReactUsage_Notification`;
       }
     },
-    CClientMetrics_ReportReactUsage_Notification_RouteData = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ReportReactUsage_Notification_RouteData = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.route || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -12986,7 +13017,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -13011,7 +13042,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -13032,23 +13063,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ReportReactUsage_Notification_RouteData`;
       }
     },
-    CClientMetrics_ReportReactUsage_Notification_ComponentData = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ReportReactUsage_Notification_ComponentData = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.component || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -13057,7 +13090,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -13082,7 +13115,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -13103,23 +13136,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ReportReactUsage_Notification_ComponentData`;
       }
     },
-    CClientMetrics_ReportReactUsage_Notification_ActionData = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ReportReactUsage_Notification_ActionData = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.action || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -13128,7 +13163,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -13153,7 +13188,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -13174,23 +13209,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ReportReactUsage_Notification_ActionData`;
       }
     },
-    CClientMetrics_ReportClientError_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ReportClientError_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.product || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -13199,7 +13236,7 @@
             -1,
             [3, 4],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -13237,7 +13274,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -13258,23 +13295,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ReportClientError_Notification`;
       }
     },
-    CClientMetrics_ReportClientError_Notification_Error = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ReportClientError_Notification_Error = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.identifier || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -13283,7 +13322,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -13323,7 +13362,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -13344,23 +13383,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ReportClientError_Notification_Error`;
       }
     },
-    CClientMetrics_SteamPipeWorkStats_Operation = class _ extends import_google_protobuf.Message {
+    CClientMetrics_SteamPipeWorkStats_Operation = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.type || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -13369,7 +13410,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -13419,7 +13460,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -13440,25 +13481,27 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_SteamPipeWorkStats_Operation`;
       }
     },
-    CClientMetrics_SteamPipeWorkStats_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_SteamPipeWorkStats_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.appid || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [4], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [4], null));
       }
       static sm_m;
       static sm_mbf;
@@ -13499,7 +13542,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -13520,23 +13563,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_SteamPipeWorkStats_Notification`;
       }
     },
-    CClientMetrics_ClientBootstrap_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ClientBootstrap_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.summary || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -13545,7 +13590,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -13564,7 +13609,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -13585,25 +13630,27 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ClientBootstrap_Notification`;
       }
     },
-    CClientMetrics_DownloadRates_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_DownloadRates_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.cell_id || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null));
       }
       static sm_m;
       static sm_mbf;
@@ -13644,7 +13691,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -13665,23 +13712,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_DownloadRates_Notification`;
       }
     },
-    CClientMetrics_DownloadRates_Notification_StatsInfo = class _ extends import_google_protobuf.Message {
+    CClientMetrics_DownloadRates_Notification_StatsInfo = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.source_type || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -13690,7 +13739,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -13775,7 +13824,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -13796,23 +13845,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_DownloadRates_Notification_StatsInfo`;
       }
     },
-    CClientMetrics_ContentValidation_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ContentValidation_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.validation_result || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -13821,7 +13872,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -13886,7 +13937,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -13907,23 +13958,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ContentValidation_Notification`;
       }
     },
-    CClientMetrics_CloudAppSyncStats_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_CloudAppSyncStats_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.app_id || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -13932,7 +13985,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -14052,7 +14105,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -14073,23 +14126,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_CloudAppSyncStats_Notification`;
       }
     },
-    CClientMetrics_ContentDownloadResponse_Counts_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ContentDownloadResponse_Counts_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.cell_id || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -14098,7 +14153,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -14122,7 +14177,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -14143,23 +14198,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ContentDownloadResponse_Counts_Notification`;
       }
     },
-    CClientMetrics_ClipShare_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ClipShare_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.eresult || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -14168,7 +14225,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -14209,7 +14266,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -14230,23 +14287,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ClipShare_Notification`;
       }
     },
-    CClientMetrics_ClipRange_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ClipRange_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.original_range_method || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -14255,7 +14314,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -14293,7 +14352,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -14314,23 +14373,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ClipRange_Notification`;
       }
     },
-    CClientMetrics_ClipRange_Notification_RelativeRangeEdge = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ClipRange_Notification_RelativeRangeEdge = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.original_range_method || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -14339,7 +14400,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -14369,7 +14430,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -14390,23 +14451,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ClipRange_Notification_RelativeRangeEdge`;
       }
     },
-    CClientMetrics_EndGameRecording_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_EndGameRecording_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.recording_type || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -14415,7 +14478,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -14455,7 +14518,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -14476,25 +14539,27 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_EndGameRecording_Notification`;
       }
     },
-    CClientMetrics_GamePerformance_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_GamePerformance_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.frame_rates || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null));
       }
       static sm_m;
       static sm_mbf;
@@ -14519,7 +14584,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -14540,23 +14605,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_GamePerformance_Notification`;
       }
     },
-    CClientMetrics_GamePerformance_Notification_FrameRate = class _ extends import_google_protobuf.Message {
+    CClientMetrics_GamePerformance_Notification_FrameRate = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.gameid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -14565,7 +14632,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -14614,7 +14681,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -14635,25 +14702,27 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_GamePerformance_Notification_FrameRate`;
       }
     },
-    CClientMetrics_ReportClientArgs_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ReportClientArgs_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.client_args || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null));
       }
       static sm_m;
       static sm_mbf;
@@ -14720,7 +14789,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -14741,23 +14810,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ReportClientArgs_Notification`;
       }
     },
-    CClientMetrics_ReportAccessibilitySettings_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ReportAccessibilitySettings_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.accessibility_desktop_ui_scale || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -14766,7 +14837,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -14806,7 +14877,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -14827,23 +14898,25 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ReportAccessibilitySettings_Notification`;
       }
     },
-    CClientMetrics_ReportLinuxStats_Notification = class _ extends import_google_protobuf.Message {
+    CClientMetrics_ReportLinuxStats_Notification = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.glibc_version_major || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -14852,7 +14925,7 @@
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -14907,7 +14980,7 @@
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -14928,14 +15001,14 @@
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CClientMetrics_ReportLinuxStats_Notification`;
@@ -15201,12 +15274,12 @@
         _ = Object.assign,
         _ = {};
       function _(_, _, _) {
-        (this.props = _),
+        ((this.props = _),
           (this.context = _),
           (this.refs = _),
-          (this.updater = _ || _);
+          (this.updater = _ || _));
       }
-      (_.prototype.isReactComponent = {}),
+      ((_.prototype.isReactComponent = {}),
         (_.prototype.setState = function (_, _) {
           if (typeof _ != `object` && typeof _ != `function` && _ != null)
             throw Error(
@@ -15216,17 +15289,17 @@
         }),
         (_.prototype.forceUpdate = function (_) {
           this.updater.enqueueForceUpdate(this, _, `forceUpdate`);
-        });
+        }));
       function _() {}
       _.prototype = _.prototype;
       function _(_, _, _) {
-        (this.props = _),
+        ((this.props = _),
           (this.context = _),
           (this.refs = _),
-          (this.updater = _ || _);
+          (this.updater = _ || _));
       }
       var _ = (_.prototype = new _());
-      (_.constructor = _), _(_, _.prototype), (_.isPureReactComponent = !0);
+      ((_.constructor = _), _(_, _.prototype), (_.isPureReactComponent = !0));
       var _ = Array.isArray,
         _ = {
           _: null,
@@ -15323,7 +15396,7 @@
                   _ = !0;
                   break;
                 case _:
-                  return (_ = _._init), _(_(_._payload), _, _, _, _);
+                  return ((_ = _._init), _(_(_._payload), _, _, _, _));
               }
           }
         if (_)
@@ -15353,21 +15426,21 @@
         var _ = _ === `` ? `.` : _ + `:`;
         if (_(_))
           for (var _ = 0; _ < _.length; _++)
-            (_ = _[_]), (_ = _ + _(_, _)), (_ += _(_, _, _, _, _));
+            ((_ = _[_]), (_ = _ + _(_, _)), (_ += _(_, _, _, _, _)));
         else if (((_ = _(_)), typeof _ == `function`))
-          for (_ = _.call(_), _ = 0; !(_ = _.next()).done; )
-            (_ = _.value), (_ = _ + _(_, _++)), (_ += _(_, _, _, _, _));
+          for (_ = _.call(_), _ = 0; !(_ = _.next()).done;)
+            ((_ = _.value), (_ = _ + _(_, _++)), (_ += _(_, _, _, _, _)));
         else if (_ === `object`) {
           if (typeof _.then == `function`) return _(_(_), _, _, _, _);
           throw (
-            ((_ = String(_)),
+            (_ = String(_)),
             Error(
               `Objects are not valid as a React child (found: ` +
                 (_ === `[object Object]`
                   ? `object with keys {` + Object.keys(_).join(`, `) + `}`
                   : _) +
                 `). If you meant to render a collection of children, use an array instead.`,
-            ))
+            )
           );
         }
         return _;
@@ -15386,7 +15459,7 @@
       function _(_) {
         if (_._status === -1) {
           var _ = _._result;
-          (_ = _()),
+          ((_ = _()),
             _.then(
               function (_) {
                 (_._status === 0 || _._status === -1) &&
@@ -15397,7 +15470,7 @@
                   ((_._status = 2), (_._result = _));
               },
             ),
-            _._status === -1 && ((_._status = 0), (_._result = _));
+            _._status === -1 && ((_._status = 0), (_._result = _)));
         }
         if (_._status === 1) return _._result.default;
         throw _._result;
@@ -15430,7 +15503,7 @@
               console.error(_);
             };
       function _() {}
-      (_.Children = {
+      ((_.Children = {
         map: _,
         forEach: function (_, _, _) {
           _(
@@ -15585,11 +15658,11 @@
           try {
             var _ = _(),
               _ = _._;
-            _ !== null && _(_, _),
+            (_ !== null && _(_, _),
               typeof _ == `object` &&
                 _ &&
                 typeof _.then == `function` &&
-                _.then(_, _);
+                _.then(_, _));
           } catch (_) {
             _(_);
           } finally {
@@ -15656,7 +15729,7 @@
         (_.useTransition = function () {
           return _._.useTransition();
         }),
-        (_.version = `19.1.1`);
+        (_.version = `19.1.1`));
     }),
     require_react = __commonJSMin((_, _) => {
       _.exports = require_react_production();
@@ -15677,7 +15750,7 @@
     bReportingEnabled = !0,
     AssertionError = class extends Error {
       constructor(..._) {
-        super(..._), (this.name = `Assertion Failed`);
+        (super(..._), (this.name = `Assertion Failed`));
       }
     };
   {
@@ -15694,15 +15767,15 @@
       _.apply(console, [_, _, ..._]);
     };
     let _ = console.error;
-    (console.error = (_, ..._) => {
+    ((console.error = (_, ..._) => {
       let _ = GetReactComponentStack();
-      g_onReportableError(Error(ConvertConsoleParams(_, ..._)), 1, _),
-        _.apply(console, [_, ..._]);
+      (g_onReportableError(Error(ConvertConsoleParams(_, ..._)), 1, _),
+        _.apply(console, [_, ..._]));
     }),
       (console.clogerror = (_, _, ..._) => {
         let _ = GetReactComponentStack();
-        g_onReportableError(Error(ConvertConsoleParams(_, ..._)), _ + 1, _),
-          _.apply(console, [_, ..._]);
+        (g_onReportableError(Error(ConvertConsoleParams(_, ..._)), _ + 1, _),
+          _.apply(console, [_, ..._]));
       }),
       addEventListener(`error`, (_) => {
         g_onReportableError(_.error, 0);
@@ -15711,8 +15784,8 @@
         g_onReportableError(_.reason, 0);
       }),
       (g_unCollectionTimer = window.setTimeout(() => {
-        (g_rgPreInitQueue = []), (g_onReportableError = () => {});
-      }, 3e4));
+        ((g_rgPreInitQueue = []), (g_onReportableError = () => {}));
+      }, 3e4)));
   }
   var g_defaultErrorReportOptions = {
       cCallsitesToIgnore: 0,
@@ -15754,7 +15827,7 @@
     m_bEnabled = !0;
     m_bInitialized = !1;
     constructor(_ = !0) {
-      _
+      (_
         ? (g_rgPreInitQueue.forEach(
             ({ error: _, cCallsitesToIgnore: _, strComponentStack: _ }) =>
               this.ReportError(_, {
@@ -15773,10 +15846,10 @@
         window.setTimeout(() => {
           this.m_bInitialized ||
             ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
-        }, 3e4);
+        }, 3e4));
     }
     Init(_, _, _, _ = {}) {
-      (this.m_bInitialized = !0),
+      ((this.m_bInitialized = !0),
         (this.m_strProduct = _),
         (this.m_strVersion = _),
         (this.m_transport = _),
@@ -15792,7 +15865,7 @@
           !0)),
         this.m_rgErrorQueue.length &&
           (this.SendErrorReports(this.m_rgErrorQueue),
-          (this.m_rgErrorQueue = []));
+          (this.m_rgErrorQueue = [])));
     }
     SetGetURL(_) {
       this.m_fnGetURL = _;
@@ -15821,23 +15894,23 @@
             _)
           : null;
       } catch (_) {
-        return console.log(`Failed to report error: ${_}`), null;
+        return (console.log(`Failed to report error: ${_}`), null);
       }
     }
     PauseReportingForDuration(_) {
-      this.PauseReporting(),
+      (this.PauseReporting(),
         (this.m_pauseTimer = window.setTimeout(
           () => this.ResumeReporting(),
           _,
-        ));
+        )));
     }
     PauseReporting() {
-      (this.m_bReportingPaused = !0), window.clearTimeout(this.m_pauseTimer);
+      ((this.m_bReportingPaused = !0), window.clearTimeout(this.m_pauseTimer));
     }
     ResumeReporting() {
-      (this.m_bReportingPaused = !1),
+      ((this.m_bReportingPaused = !1),
         window.clearTimeout(this.m_pauseTimer),
-        this.ScheduleSend();
+        this.ScheduleSend());
     }
     BIsBlacklisted(_) {
       for (let _ of _.message) {
@@ -15845,7 +15918,7 @@
         for (let _ of g_rgBlacklistPatterns) {
           let _ = new RegExp(_);
           if (_.match(_))
-            return console.warn(`Report`, _, `matched regex`, _), !0;
+            return (console.warn(`Report`, _, `matched regex`, _), !0);
         }
       }
       return !1;
@@ -15855,14 +15928,14 @@
         (this.m_transport ? this.QueueReport(_) : this.m_rgErrorQueue.push(_));
     }
     QueueReport(_) {
-      this.m_rgErrorQueue.push(_),
-        this.m_bReportingPaused || this.ScheduleSend();
+      (this.m_rgErrorQueue.push(_),
+        this.m_bReportingPaused || this.ScheduleSend());
     }
     ScheduleSend() {
       this.m_sendTimer ||= window.setTimeout(() => {
-        this.SendErrorReports(this.m_rgErrorQueue),
+        (this.SendErrorReports(this.m_rgErrorQueue),
           (this.m_rgErrorQueue = []),
-          (this.m_sendTimer = null);
+          (this.m_sendTimer = null));
       }, this.m_fnGetReportingInterval());
     }
     SendErrorReports(_) {
@@ -15883,9 +15956,9 @@
         _ = Object.keys(_).map((_) => {
           let { report: _, count: _ } = _[_],
             _ = new CClientMetrics_ReportClientError_Notification_Error();
-          _.set_count(_),
+          (_.set_count(_),
             _.set_identifier(_.identifier + ` ` + _.identifierHash),
-            _.set_message(JSON.stringify(_.message));
+            _.set_message(JSON.stringify(_.message)));
           let _;
           return (
             _.strComponentStack &&
@@ -15897,9 +15970,9 @@
             _
           );
         });
-      _.Body().set_product(this.m_strProduct),
+      (_.Body().set_product(this.m_strProduct),
         _.Body().set_version(this.m_strVersion),
-        _.Body().set_errors(_);
+        _.Body().set_errors(_));
       for (let _ of this.m_fnGetReportTags()) _.Body().add_tags(_);
       ClientMetricsService.ReportClientError(this.m_transport, _);
     }
@@ -15920,7 +15993,7 @@
           .map((_) => {
             try {
               let _ = String(_);
-              return _ == `[object Object]` && (_ = JSON.stringify(_)), _;
+              return (_ == `[object Object]` && (_ = JSON.stringify(_)), _);
             } catch {
               return `[Stringify Error]`;
             }
@@ -15947,7 +16020,7 @@
                 !0)),
               null);
     } catch (_) {
-      return console.warn(`Failed to normalize error stack: ${_}`), null;
+      return (console.warn(`Failed to normalize error stack: ${_}`), null);
     }
   }
   async function NormalizeV8LikeStack(_, _) {
@@ -16026,8 +16099,8 @@
       _ = _[_],
       _ = _.split(`/`),
       _ = _[_.length - 1];
-    _.indexOf(`@`) > -1 && (_ = _.split(`@`)[0] + `@` + _),
-      _ && (_ = `${_} ${_.message}`);
+    (_.indexOf(`@`) > -1 && (_ = _.split(`@`)[0] + `@` + _),
+      _ && (_ = `${_} ${_.message}`));
     let _ = _.map((_) => {
       let _ = _.match(/(.*@)?(.*):(\d+):(\d+)/);
       if (!_) return _;
@@ -16069,15 +16142,15 @@
   }
   var Subscribable = class {
       constructor() {
-        (this.listeners = new Set()),
-          (this.subscribe = this.subscribe.bind(this));
+        ((this.listeners = new Set()),
+          (this.subscribe = this.subscribe.bind(this)));
       }
       subscribe(_) {
         return (
           this.listeners.add(_),
           this.onSubscribe(),
           () => {
-            this.listeners.delete(_), this.onUnsubscribe();
+            (this.listeners.delete(_), this.onUnsubscribe());
           }
         );
       }
@@ -16237,7 +16310,7 @@
       #t;
       #n;
       constructor() {
-        super(),
+        (super(),
           (this.#n = (_) => {
             if (!isServer && window.addEventListener) {
               let _ = () => _();
@@ -16248,7 +16321,7 @@
                 }
               );
             }
-          });
+          }));
       }
       onSubscribe() {
         this.#t || this.setEventListener(this.#n);
@@ -16257,11 +16330,11 @@
         this.hasListeners() || (this.#t?.(), (this.#t = void 0));
       }
       setEventListener(_) {
-        (this.#n = _),
+        ((this.#n = _),
           this.#t?.(),
           (this.#t = _((_) => {
             typeof _ == `boolean` ? this.setFocused(_) : this.onFocus();
-          }));
+          })));
       }
       setFocused(_) {
         this.#e !== _ && ((this.#e = _), this.onFocus());
@@ -16284,7 +16357,7 @@
       #t;
       #n;
       constructor() {
-        super(),
+        (super(),
           (this.#n = (_) => {
             if (!isServer && window.addEventListener) {
               let _ = () => _(!0),
@@ -16293,12 +16366,12 @@
                 window.addEventListener(`online`, _, !1),
                 window.addEventListener(`offline`, _, !1),
                 () => {
-                  window.removeEventListener(`online`, _),
-                    window.removeEventListener(`offline`, _);
+                  (window.removeEventListener(`online`, _),
+                    window.removeEventListener(`offline`, _));
                 }
               );
             }
-          });
+          }));
       }
       onSubscribe() {
         this.#t || this.setEventListener(this.#n);
@@ -16307,7 +16380,7 @@
         this.hasListeners() || (this.#t?.(), (this.#t = void 0));
       }
       setEventListener(_) {
-        (this.#n = _), this.#t?.(), (this.#t = _(this.setOnline.bind(this)));
+        ((this.#n = _), this.#t?.(), (this.#t = _(this.setOnline.bind(this))));
       }
       setOnline(_) {
         this.#e !== _ &&
@@ -16325,26 +16398,26 @@
     let _,
       _,
       _ = new Promise((_, _) => {
-        (_ = _), (_ = _);
+        ((_ = _), (_ = _));
       });
-    (_.status = `pending`), _.catch(() => {});
+    ((_.status = `pending`), _.catch(() => {}));
     function _(_) {
-      Object.assign(_, _), delete _.resolve, delete _.reject;
+      (Object.assign(_, _), delete _.resolve, delete _.reject);
     }
     return (
       (_.resolve = (_) => {
-        _({
+        (_({
           status: `fulfilled`,
           value: _,
         }),
-          _(_);
+          _(_));
       }),
       (_.reject = (_) => {
-        _({
+        (_({
           status: `rejected`,
           reason: _,
         }),
-          _(_);
+          _(_));
       }),
       _
     );
@@ -16357,9 +16430,9 @@
   }
   var CancelledError = class extends Error {
     constructor(_) {
-      super(`CancelledError`),
+      (super(`CancelledError`),
         (this.revert = _?.revert),
-        (this.silent = _?.silent);
+        (this.silent = _?.silent));
     }
   };
   function isCancelledError(_) {
@@ -16393,12 +16466,12 @@
       },
       _ = () =>
         new Promise((_) => {
-          (_ = (_) => {
+          ((_ = (_) => {
             (_ || _()) && _(_);
           }),
-            _.onPause?.();
+            _.onPause?.());
         }).then(() => {
-          (_ = void 0), _ || _.onContinue?.();
+          ((_ = void 0), _ || _.onContinue?.());
         }),
       _ = () => {
         if (_) return;
@@ -16460,7 +16533,7 @@
       },
       _ = () => {
         let _ = _;
-        (_ = []),
+        ((_ = []),
           _.length &&
             _(() => {
               _(() => {
@@ -16468,7 +16541,7 @@
                   _(_);
                 });
               });
-            });
+            }));
       };
     return {
       batch: (_) => {
@@ -16477,7 +16550,7 @@
         try {
           _ = _();
         } finally {
-          _--, _ || _();
+          (_--, _ || _());
         }
         return _;
       },
@@ -16507,11 +16580,11 @@
         this.clearGcTimeout();
       }
       scheduleGc() {
-        this.clearGcTimeout(),
+        (this.clearGcTimeout(),
           isValidTimeout(this.gcTime) &&
             (this.#e = setTimeout(() => {
               this.optionalRemove();
-            }, this.gcTime));
+            }, this.gcTime)));
       }
       updateGcTime(_) {
         this.gcTime = Math.max(this.gcTime || 0, _ ?? (isServer ? 1 / 0 : 3e5));
@@ -16528,7 +16601,7 @@
       #i;
       #a;
       constructor(_) {
-        super(),
+        (super(),
           (this.#a = !1),
           (this.#i = _.defaultOptions),
           this.setOptions(_.options),
@@ -16538,7 +16611,7 @@
           (this.queryHash = _.queryHash),
           (this.#e = getDefaultState$1(this.options)),
           (this.state = _.state ?? this.#e),
-          this.scheduleGc();
+          this.scheduleGc());
       }
       get meta() {
         return this.options.meta;
@@ -16547,11 +16620,11 @@
         return this.#r?.promise;
       }
       setOptions(_) {
-        (this.options = {
+        ((this.options = {
           ...this.#i,
           ..._,
         }),
-          this.updateGcTime(this.options.gcTime);
+          this.updateGcTime(this.options.gcTime));
       }
       optionalRemove() {
         !this.observers.length &&
@@ -16585,13 +16658,13 @@
         );
       }
       destroy() {
-        super.destroy(),
+        (super.destroy(),
           this.cancel({
             silent: !0,
-          });
+          }));
       }
       reset() {
-        this.destroy(), this.setState(this.#e);
+        (this.destroy(), this.setState(this.#e));
       }
       isActive() {
         return this.observers.some(
@@ -16619,20 +16692,20 @@
         );
       }
       onFocus() {
-        this.observers
+        (this.observers
           .find((_) => _.shouldFetchOnWindowFocus())
           ?.refetch({
             cancelRefetch: !1,
           }),
-          this.#r?.continue();
+          this.#r?.continue());
       }
       onOnline() {
-        this.observers
+        (this.observers
           .find((_) => _.shouldFetchOnReconnect())
           ?.refetch({
             cancelRefetch: !1,
           }),
-          this.#r?.continue();
+          this.#r?.continue());
       }
       addObserver(_) {
         this.observers.includes(_) ||
@@ -16676,7 +16749,7 @@
             this.cancel({
               silent: !0,
             });
-          else if (this.#r) return this.#r.continueRetry(), this.#r.promise;
+          else if (this.#r) return (this.#r.continueRetry(), this.#r.promise);
         }
         if ((_ && this.setOptions(_), !this.options.queryFn)) {
           let _ = this.observers.find((_) => _.options.queryFn);
@@ -16709,7 +16782,7 @@
               );
             },
           };
-        _(_),
+        (_(_),
           this.options.behavior?.onFetch(_, this),
           (this.#t = this.state),
           (this.state.fetchStatus === `idle` ||
@@ -16717,9 +16790,9 @@
             this.#o({
               type: `fetch`,
               meta: _.fetchOptions?.meta,
-            });
+            }));
         let _ = (_) => {
-          (isCancelledError(_) && _.silent) ||
+          ((isCancelledError(_) && _.silent) ||
             this.#o({
               type: `error`,
               error: _,
@@ -16727,7 +16800,7 @@
             isCancelledError(_) ||
               (this.#n.config.onError?.(_, this),
               this.#n.config.onSettled?.(this.state.data, _, this)),
-            this.scheduleGc();
+            this.scheduleGc());
         };
         return (
           (this.#r = createRetryer({
@@ -16743,9 +16816,9 @@
                   _(_);
                   return;
                 }
-                this.#n.config.onSuccess?.(_, this),
+                (this.#n.config.onSuccess?.(_, this),
                   this.#n.config.onSettled?.(_, this.state.error, this),
-                  this.scheduleGc();
+                  this.scheduleGc());
               }
             },
             onError: _,
@@ -16843,17 +16916,17 @@
               };
           }
         };
-        (this.state = _(this.state)),
+        ((this.state = _(this.state)),
           notifyManager.batch(() => {
-            this.observers.forEach((_) => {
+            (this.observers.forEach((_) => {
               _.onQueryUpdate();
             }),
               this.#n.notify({
                 query: this,
                 type: `updated`,
                 action: _,
-              });
-          });
+              }));
+          }));
       }
     };
   function fetchState(_, _) {
@@ -16893,7 +16966,7 @@
   }
   var QueryCache = class extends Subscribable {
       constructor(_ = {}) {
-        super(), (this.config = _), (this.#e = new Map());
+        (super(), (this.config = _), (this.#e = new Map()));
       }
       #e;
       build(_, _, _) {
@@ -16985,16 +17058,16 @@
       #t;
       #n;
       constructor(_) {
-        super(),
+        (super(),
           (this.mutationId = _.mutationId),
           (this.#t = _.mutationCache),
           (this.#e = []),
           (this.state = _.state || getDefaultState()),
           this.setOptions(_.options),
-          this.scheduleGc();
+          this.scheduleGc());
       }
       setOptions(_) {
-        (this.options = _), this.updateGcTime(this.options.gcTime);
+        ((this.options = _), this.updateGcTime(this.options.gcTime));
       }
       get meta() {
         return this.options.meta;
@@ -17010,13 +17083,13 @@
           }));
       }
       removeObserver(_) {
-        (this.#e = this.#e.filter((_) => _ !== _)),
+        ((this.#e = this.#e.filter((_) => _ !== _)),
           this.scheduleGc(),
           this.#t.notify({
             type: `observerRemoved`,
             mutation: this,
             observer: _,
-          });
+          }));
       }
       optionalRemove() {
         this.#e.length ||
@@ -17059,12 +17132,12 @@
           _ = !this.#n.canStart();
         try {
           if (!_) {
-            this.#r({
+            (this.#r({
               type: `pending`,
               variables: _,
               isPaused: _,
             }),
-              await this.#t.config.onMutate?.(_, this);
+              await this.#t.config.onMutate?.(_, this));
             let _ = await this.options.onMutate?.(_);
             _ !== this.state.context &&
               this.#r({
@@ -17095,7 +17168,7 @@
         } catch (_) {
           try {
             throw (
-              (await this.#t.config.onError?.(_, _, this.state.context, this),
+              await this.#t.config.onError?.(_, _, this.state.context, this),
               await this.options.onError?.(_, _, this.state.context),
               await this.#t.config.onSettled?.(
                 void 0,
@@ -17105,7 +17178,7 @@
                 this,
               ),
               await this.options.onSettled?.(void 0, _, _, this.state.context),
-              _)
+              _
             );
           } finally {
             this.#r({
@@ -17171,17 +17244,17 @@
               };
           }
         };
-        (this.state = _(this.state)),
+        ((this.state = _(this.state)),
           notifyManager.batch(() => {
-            this.#e.forEach((_) => {
+            (this.#e.forEach((_) => {
               _.onMutationUpdate(_);
             }),
               this.#t.notify({
                 mutation: this,
                 type: `updated`,
                 action: _,
-              });
-          });
+              }));
+          }));
       }
     };
   function getDefaultState() {
@@ -17199,7 +17272,10 @@
   }
   var MutationCache = class extends Subscribable {
     constructor(_ = {}) {
-      super(), (this.config = _), (this.#e = new Map()), (this.#t = Date.now());
+      (super(),
+        (this.config = _),
+        (this.#e = new Map()),
+        (this.#t = Date.now()));
     }
     #e;
     #t;
@@ -17210,17 +17286,17 @@
         options: _.defaultMutationOptions(_),
         state: _,
       });
-      return this.add(_), _;
+      return (this.add(_), _);
     }
     add(_) {
       let _ = scopeFor(_),
         _ = this.#e.get(_) ?? [];
-      _.push(_),
+      (_.push(_),
         this.#e.set(_, _),
         this.notify({
           type: `added`,
           mutation: _,
-        });
+        }));
     }
     remove(_) {
       let _ = scopeFor(_);
@@ -17346,7 +17422,7 @@
                     ? (_[0] ?? _.initialPageParam)
                     : getNextPageParam(_, _);
                 if (_ > 0 && _ == null) break;
-                (_ = await _(_, _)), _++;
+                ((_ = await _(_, _)), _++);
               } while (_ < _);
             }
             return _;
@@ -17383,27 +17459,27 @@
       #o;
       #s;
       constructor(_ = {}) {
-        (this.#e = _.queryCache || new QueryCache()),
+        ((this.#e = _.queryCache || new QueryCache()),
           (this.#t = _.mutationCache || new MutationCache()),
           (this.#n = _.defaultOptions || {}),
           (this.#r = new Map()),
           (this.#i = new Map()),
-          (this.#a = 0);
+          (this.#a = 0));
       }
       mount() {
-        this.#a++,
+        (this.#a++,
           this.#a === 1 &&
             ((this.#o = focusManager.subscribe(async (_) => {
               _ && (await this.resumePausedMutations(), this.#e.onFocus());
             })),
             (this.#s = onlineManager.subscribe(async (_) => {
               _ && (await this.resumePausedMutations(), this.#e.onOnline());
-            })));
+            }))));
       }
       unmount() {
-        this.#a--,
+        (this.#a--,
           this.#a === 0 &&
-            (this.#o?.(), (this.#o = void 0), this.#s?.(), (this.#s = void 0));
+            (this.#o?.(), (this.#o = void 0), this.#s?.(), (this.#s = void 0)));
       }
       isFetching(_) {
         return this.#e.findAll({
@@ -17645,12 +17721,12 @@
             };
       }
       clear() {
-        this.#e.clear(), this.#t.clear();
+        (this.#e.clear(), this.#t.clear());
       }
     },
     QueryObserver = class extends Subscribable {
       constructor(_, _) {
-        super(),
+        (super(),
           (this.options = _),
           (this.#e = _),
           (this.#s = null),
@@ -17662,7 +17738,7 @@
               ),
             ),
           this.bindMethods(),
-          this.setOptions(_);
+          this.setOptions(_));
       }
       #e;
       #t = void 0;
@@ -17708,10 +17784,10 @@
         );
       }
       destroy() {
-        (this.listeners = new Set()),
+        ((this.listeners = new Set()),
           this.#b(),
           this.#x(),
-          this.#t.removeObserver(this);
+          this.#t.removeObserver(this));
       }
       setOptions(_, _) {
         let _ = this.options,
@@ -17726,7 +17802,7 @@
           throw Error(
             `Expected enabled to be a boolean or a callback that returns a boolean`,
           );
-        this.#S(),
+        (this.#S(),
           this.#t.setOptions(this.options),
           _._defaulted &&
             !shallowEqualObjects(this.options, _) &&
@@ -17734,9 +17810,9 @@
               type: `observerOptionsUpdated`,
               query: this.#t,
               observer: this,
-            });
+            }));
         let _ = this.hasListeners();
-        _ && shouldFetchOptionally(this.#t, _, this.options, _) && this.#h(),
+        (_ && shouldFetchOptionally(this.#t, _, this.options, _) && this.#h(),
           this.updateResult(_),
           _ &&
             (this.#t !== _ ||
@@ -17744,7 +17820,7 @@
                 resolveEnabled(_.enabled, this.#t) ||
               resolveStaleTime(this.options.staleTime, this.#t) !==
                 resolveStaleTime(_.staleTime, this.#t)) &&
-            this.#g();
+            this.#g());
         let _ = this.#_();
         _ &&
           (this.#t !== _ ||
@@ -17805,7 +17881,7 @@
       #h(_) {
         this.#S();
         let _ = this.#t.fetch(this.options, _);
-        return _?.throwOnError || (_ = _.catch(noop$1)), _;
+        return (_?.throwOnError || (_ = _.catch(noop$1)), _);
       }
       #g() {
         this.#b();
@@ -17824,7 +17900,7 @@
         );
       }
       #v(_) {
-        this.#x(),
+        (this.#x(),
           (this.#p = _),
           !isServer &&
             resolveEnabled(this.options.enabled, this.#t) !== !1 &&
@@ -17834,10 +17910,10 @@
               (this.options.refetchIntervalInBackground ||
                 focusManager.isFocused()) &&
                 this.#h();
-            }, this.#p));
+            }, this.#p)));
       }
       #y() {
-        this.#g(), this.#v(this.#_());
+        (this.#g(), this.#v(this.#_()));
       }
       #b() {
         this.#d &&= (clearTimeout(this.#d), void 0);
@@ -17862,23 +17938,23 @@
           let _ = this.hasListeners(),
             _ = !_ && shouldFetchOnMount(_, _),
             _ = _ && shouldFetchOptionally(_, _, _, _);
-          (_ || _) &&
+          ((_ || _) &&
             (_ = {
               ..._,
               ...fetchState(_.data, _.options),
             }),
-            _._optimisticResults === `isRestoring` && (_.fetchStatus = `idle`);
+            _._optimisticResults === `isRestoring` && (_.fetchStatus = `idle`));
         }
         let { error: _, errorUpdatedAt: _, status: _ } = _;
         if (_.select && _.data !== void 0) {
           if (_ && _.data === _?.data && _.select === this.#c) _ = this.#l;
           else
             try {
-              (this.#c = _.select),
+              ((this.#c = _.select),
                 (_ = _.select(_.data)),
                 (_ = replaceData(_?.data, _, _)),
                 (this.#l = _),
-                (this.#s = null);
+                (this.#s = null));
             } catch (_) {
               this.#s = _;
             }
@@ -17895,7 +17971,7 @@
             _.select && _ !== void 0)
           )
             try {
-              (_ = _.select(_)), (this.#s = null);
+              ((_ = _.select(_)), (this.#s = null));
             } catch (_) {
               this.#s = _;
             }
@@ -17974,7 +18050,7 @@
           return;
         this.#r = _;
         let _ = {};
-        _?.listeners !== !1 &&
+        (_?.listeners !== !1 &&
           (() => {
             if (!_) return !0;
             let { notifyOnChangeProps: _ } = this.options,
@@ -17993,29 +18069,30 @@
           this.#C({
             ..._,
             ..._,
-          });
+          }));
       }
       #S() {
         let _ = this.#e.getQueryCache().build(this.#e, this.options);
         if (_ === this.#t) return;
         let _ = this.#t;
-        (this.#t = _),
+        ((this.#t = _),
           (this.#n = _.state),
-          this.hasListeners() && (_?.removeObserver(this), _.addObserver(this));
+          this.hasListeners() &&
+            (_?.removeObserver(this), _.addObserver(this)));
       }
       onQueryUpdate() {
-        this.updateResult(), this.hasListeners() && this.#y();
+        (this.updateResult(), this.hasListeners() && this.#y());
       }
       #C(_) {
         notifyManager.batch(() => {
-          _.listeners &&
+          (_.listeners &&
             this.listeners.forEach((_) => {
               _(this.#r);
             }),
             this.#e.getQueryCache().notify({
               query: this.#t,
               type: `observerResultsUpdated`,
-            });
+            }));
         });
       }
     };
@@ -18060,7 +18137,7 @@
   }
   function replaceAt(_, _, _) {
     let _ = _.slice(0);
-    return (_[_] = _), _;
+    return ((_[_] = _), _);
   }
   var QueriesObserver = class extends Subscribable {
       #e;
@@ -18072,13 +18149,13 @@
       #o;
       #s;
       constructor(_, _, _) {
-        super(),
+        (super(),
           (this.#e = _),
           (this.#r = _),
           (this.#n = []),
           (this.#i = []),
           (this.#t = []),
-          this.setQueries(_);
+          this.setQueries(_));
       }
       onSubscribe() {
         this.listeners.size === 1 &&
@@ -18092,13 +18169,13 @@
         this.listeners.size || this.destroy();
       }
       destroy() {
-        (this.listeners = new Set()),
+        ((this.listeners = new Set()),
           this.#i.forEach((_) => {
             _.destroy();
-          });
+          }));
       }
       setQueries(_, _, _) {
-        (this.#n = _),
+        ((this.#n = _),
           (this.#r = _),
           notifyManager.batch(() => {
             let _ = this.#i,
@@ -18120,7 +18197,7 @@
                   });
                 }),
                 this.#f()));
-          });
+          }));
       }
       getCurrentResult() {
         return this.#t;
@@ -18216,7 +18293,7 @@
           }
         );
       }
-      (_.Fragment = _), (_.jsx = _), (_.jsxs = _);
+      ((_.Fragment = _), (_.jsx = _), (_.jsxs = _));
     }),
     require_jsx_runtime = __commonJSMin((_, _) => {
       _.exports = require_react_jsx_runtime_production();
@@ -18260,9 +18337,8 @@
       isReset: () => _,
     };
   }
-  var QueryErrorResetBoundaryContext = import_react.createContext(
-      createValue(),
-    ),
+  var QueryErrorResetBoundaryContext =
+      import_react.createContext(createValue()),
     useQueryErrorResetBoundary = () =>
       import_react.useContext(QueryErrorResetBoundaryContext);
   function shouldThrowError(_, _) {
@@ -18308,17 +18384,19 @@
         () =>
           _.map((_) => {
             let _ = _.defaultQueryOptions(_);
-            return (_._optimisticResults = _ ? `isRestoring` : `optimistic`), _;
+            return (
+              (_._optimisticResults = _ ? `isRestoring` : `optimistic`), _
+            );
           }),
         [_, _, _],
       );
-    _.forEach((_) => {
-      ensureSuspenseTimers(_), ensurePreventErrorBoundaryRetry(_, _);
+    (_.forEach((_) => {
+      (ensureSuspenseTimers(_), ensurePreventErrorBoundaryRetry(_, _));
     }),
-      useClearResetErrorBoundary(_);
+      useClearResetErrorBoundary(_));
     let [_] = import_react.useState(() => new QueriesObserver(_, _, _)),
       [_, _, _] = _.getOptimisticResult(_, _.combine);
-    import_react.useSyncExternalStore(
+    (import_react.useSyncExternalStore(
       import_react.useCallback(
         (_) => (_ ? noop : _.subscribe(notifyManager.batchCalls(_))),
         [_, _],
@@ -18330,7 +18408,7 @@
         _.setQueries(_, _, {
           listeners: !1,
         });
-      }, [_, _, _]);
+      }, [_, _, _]));
     let _ = _.some((_, _) => shouldSuspend(_[_], _))
       ? _.flatMap((_, _) => {
           let _ = _[_];
@@ -18386,7 +18464,7 @@
           throw ((_[_] = void 0), _);
         },
       );
-      return (_[_] = _), _;
+      return ((_[_] = _), _);
     },
     __vitePreload = function (_, _, _) {
       let _ = Promise.resolve();
@@ -18451,10 +18529,10 @@
       function _(_, _) {
         var _ = _.length;
         _.push(_);
-        _: for (; 0 < _; ) {
+        _: for (; 0 < _;) {
           var _ = (_ - 1) >>> 1,
             _ = _[_];
-          if (0 < _(_, _)) (_[_] = _), (_[_] = _), (_ = _);
+          if (0 < _(_, _)) ((_[_] = _), (_[_] = _), (_ = _));
           else break _;
         }
       }
@@ -18467,7 +18545,7 @@
           _ = _.pop();
         if (_ !== _) {
           _[0] = _;
-          _: for (var _ = 0, _ = _.length, _ = _ >>> 1; _ < _; ) {
+          _: for (var _ = 0, _ = _.length, _ = _ >>> 1; _ < _;) {
             var _ = 2 * (_ + 1) - 1,
               _ = _[_],
               _ = _ + 1,
@@ -18476,7 +18554,7 @@
               _ < _ && 0 > _(_, _)
                 ? ((_[_] = _), (_[_] = _), (_ = _))
                 : ((_[_] = _), (_[_] = _), (_ = _));
-            else if (_ < _ && 0 > _(_, _)) (_[_] = _), (_[_] = _), (_ = _);
+            else if (_ < _ && 0 > _(_, _)) ((_[_] = _), (_[_] = _), (_ = _));
             else break _;
           }
         }
@@ -18514,17 +18592,17 @@
         _ = typeof clearTimeout == `function` ? clearTimeout : null,
         _ = typeof setImmediate < `u` ? setImmediate : null;
       function _(_) {
-        for (var _ = _(_); _ !== null; ) {
+        for (var _ = _(_); _ !== null;) {
           if (_.callback === null) _(_);
           else if (_.startTime <= _)
-            _(_), (_.sortIndex = _.expirationTime), _(_, _);
+            (_(_), (_.sortIndex = _.expirationTime), _(_, _));
           else break;
           _ = _(_);
         }
       }
       function _(_) {
         if (((_ = !1), _(_), !_)) {
-          if (_(_) !== null) (_ = !0), _ || ((_ = !0), _());
+          if (_(_) !== null) ((_ = !0), _ || ((_ = !0), _()));
           else {
             var _ = _(_);
             _ !== null && _(_, _.startTime - _);
@@ -18545,7 +18623,7 @@
           var _ = !0;
           try {
             _: {
-              (_ = !1), _ && ((_ = !1), _(_), (_ = -1)), (_ = !0);
+              ((_ = !1), _ && ((_ = !1), _(_), (_ = -1)), (_ = !0));
               var _ = _;
               try {
                 _: {
@@ -18555,25 +18633,25 @@
                   ) {
                     var _ = _.callback;
                     if (typeof _ == `function`) {
-                      (_.callback = null), (_ = _.priorityLevel);
+                      ((_.callback = null), (_ = _.priorityLevel));
                       var _ = _(_.expirationTime <= _);
                       if (((_ = _.unstable_now()), typeof _ == `function`)) {
-                        (_.callback = _), _(_), (_ = !0);
+                        ((_.callback = _), _(_), (_ = !0));
                         break _;
                       }
-                      _ === _(_) && _(_), _(_);
+                      (_ === _(_) && _(_), _(_));
                     } else _(_);
                     _ = _(_);
                   }
                   if (_ !== null) _ = !0;
                   else {
                     var _ = _(_);
-                    _ !== null && _(_, _.startTime - _), (_ = !1);
+                    (_ !== null && _(_, _.startTime - _), (_ = !1));
                   }
                 }
                 break _;
               } finally {
-                (_ = null), (_ = _), (_ = !1);
+                ((_ = null), (_ = _), (_ = !1));
               }
               _ = void 0;
             }
@@ -18590,10 +18668,10 @@
       else if (typeof MessageChannel < `u`) {
         var _ = new MessageChannel(),
           _ = _.port2;
-        (_.port1.onmessage = _),
+        ((_.port1.onmessage = _),
           (_ = function () {
             _.postMessage(null);
-          });
+          }));
       } else
         _ = function () {
           _(_, 0);
@@ -18603,7 +18681,7 @@
           _(_.unstable_now());
         }, _);
       }
-      (_.unstable_IdlePriority = 5),
+      ((_.unstable_IdlePriority = 5),
         (_.unstable_ImmediatePriority = 1),
         (_.unstable_LowPriority = 4),
         (_.unstable_NormalPriority = 3),
@@ -18719,7 +18797,7 @@
               _ = _;
             }
           };
-        });
+        }));
     }),
     require_scheduler = __commonJSMin((_, _) => {
       _.exports = require_scheduler_production();
@@ -18776,7 +18854,7 @@
         if (_ === `font`) return ``;
         if (typeof _ == `string`) return _ === `use-credentials` ? _ : ``;
       }
-      (_.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = _),
+      ((_.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = _),
         (_.createPortal = function (_, _) {
           var _ =
             2 < arguments.length && arguments[2] !== void 0
@@ -18792,7 +18870,7 @@
           try {
             if (((_._ = null), (_._ = 2), _)) return _();
           } finally {
-            (_._ = _), (_._ = _), _._._();
+            ((_._ = _), (_._ = _), _._._());
           }
         }),
         (_.preconnect = function (_, _) {
@@ -18902,7 +18980,7 @@
         (_.useFormStatus = function () {
           return _._.useHostTransitionStatus();
         }),
-        (_.version = `19.1.1`);
+        (_.version = `19.1.1`));
     }),
     require_react_dom = __commonJSMin((_, _) => {
       function _() {
@@ -18916,7 +18994,7 @@
             console.error(_);
           }
       }
-      _(), (_.exports = require_react_dom_production());
+      (_(), (_.exports = require_react_dom_production()));
     }),
     require_react_dom_client_production = __commonJSMin((_) => {
       var _ = require_scheduler(),
@@ -18946,10 +19024,10 @@
       function _(_) {
         var _ = _,
           _ = _;
-        if (_.alternate) for (; _.return; ) _ = _.return;
+        if (_.alternate) for (; _.return;) _ = _.return;
         else {
           _ = _;
-          do (_ = _), _.flags & 4098 && (_ = _.return), (_ = _.return);
+          do ((_ = _), _.flags & 4098 && (_ = _.return), (_ = _.return));
           while (_);
         }
         return _.tag === 3 ? _ : null;
@@ -18975,7 +19053,7 @@
           if (((_ = _(_)), _ === null)) throw Error(_(188));
           return _ === _ ? _ : null;
         }
-        for (var _ = _, _ = _; ; ) {
+        for (var _ = _, _ = _; ;) {
           var _ = _.return;
           if (_ === null) break;
           var _ = _.alternate;
@@ -18987,34 +19065,34 @@
             break;
           }
           if (_.child === _.child) {
-            for (_ = _.child; _; ) {
-              if (_ === _) return _(_), _;
-              if (_ === _) return _(_), _;
+            for (_ = _.child; _;) {
+              if (_ === _) return (_(_), _);
+              if (_ === _) return (_(_), _);
               _ = _.sibling;
             }
             throw Error(_(188));
           }
-          if (_.return !== _.return) (_ = _), (_ = _);
+          if (_.return !== _.return) ((_ = _), (_ = _));
           else {
-            for (var _ = !1, _ = _.child; _; ) {
+            for (var _ = !1, _ = _.child; _;) {
               if (_ === _) {
-                (_ = !0), (_ = _), (_ = _);
+                ((_ = !0), (_ = _), (_ = _));
                 break;
               }
               if (_ === _) {
-                (_ = !0), (_ = _), (_ = _);
+                ((_ = !0), (_ = _), (_ = _));
                 break;
               }
               _ = _.sibling;
             }
             if (!_) {
-              for (_ = _.child; _; ) {
+              for (_ = _.child; _;) {
                 if (_ === _) {
-                  (_ = !0), (_ = _), (_ = _);
+                  ((_ = !0), (_ = _), (_ = _));
                   break;
                 }
                 if (_ === _) {
-                  (_ = !0), (_ = _), (_ = _);
+                  ((_ = !0), (_ = _), (_ = _));
                   break;
                 }
                 _ = _.sibling;
@@ -19030,7 +19108,7 @@
       function _(_) {
         var _ = _.tag;
         if (_ === 5 || _ === 26 || _ === 27 || _ === 6) return _;
-        for (_ = _.child; _ !== null; ) {
+        for (_ = _.child; _ !== null;) {
           if (((_ = _(_)), _ !== null)) return _;
           _ = _.sibling;
         }
@@ -19103,7 +19181,7 @@
                 _ === null ? _(_.type) || `Memo` : _
               );
             case _:
-              (_ = _._payload), (_ = _._init);
+              ((_ = _._payload), (_ = _._init));
               try {
                 return _(_(_));
               } catch {}
@@ -19130,7 +19208,7 @@
         0 > _ || ((_.current = _[_]), (_[_] = null), _--);
       }
       function _(_, _) {
-        _++, (_[_] = _.current), (_.current = _);
+        (_++, (_[_] = _.current), (_.current = _));
       }
       var _ = _(null),
         _ = _(null),
@@ -19144,7 +19222,7 @@
             break;
           default:
             if (((_ = _.tagName), (_ = _.namespaceURI)))
-              (_ = _(_)), (_ = _(_, _));
+              ((_ = _(_)), (_ = _(_, _)));
             else
               switch (_) {
                 case `svg`:
@@ -19157,10 +19235,10 @@
                   _ = 0;
               }
         }
-        _(_), _(_, _);
+        (_(_), _(_, _));
       }
       function _() {
-        _(_), _(_), _(_);
+        (_(_), _(_), _(_));
       }
       function _(_) {
         _.memoizedState !== null && _(_, _);
@@ -19169,8 +19247,8 @@
         _ !== _ && (_(_, _), _(_, _));
       }
       function _(_) {
-        _.current === _ && (_(_), _(_)),
-          _.current === _ && (_(_), (_._currentValue = _));
+        (_.current === _ && (_(_), _(_)),
+          _.current === _ && (_(_), (_._currentValue = _)));
       }
       var _ = Object.prototype.hasOwnProperty,
         _ = _.unstable_scheduleCallback,
@@ -19201,7 +19279,7 @@
         _ = Math.log,
         _ = Math.LN2;
       function _(_) {
-        return (_ >>>= 0), _ === 0 ? 32 : (31 - ((_(_) / _) | 0)) | 0;
+        return ((_ >>>= 0), _ === 0 ? 32 : (31 - ((_(_) / _) | 0)) | 0);
       }
       var _ = 256,
         _ = 4194304;
@@ -19342,38 +19420,38 @@
       }
       function _() {
         var _ = _;
-        return (_ <<= 1), !(_ & 4194048) && (_ = 256), _;
+        return ((_ <<= 1), !(_ & 4194048) && (_ = 256), _);
       }
       function _() {
         var _ = _;
-        return (_ <<= 1), !(_ & 62914560) && (_ = 4194304), _;
+        return ((_ <<= 1), !(_ & 62914560) && (_ = 4194304), _);
       }
       function _(_) {
         for (var _ = [], _ = 0; 31 > _; _++) _.push(_);
         return _;
       }
       function _(_, _) {
-        (_.pendingLanes |= _),
+        ((_.pendingLanes |= _),
           _ !== 268435456 &&
-            ((_.suspendedLanes = 0), (_.pingedLanes = 0), (_.warmLanes = 0));
+            ((_.suspendedLanes = 0), (_.pingedLanes = 0), (_.warmLanes = 0)));
       }
       function _(_, _, _, _, _, _) {
         var _ = _.pendingLanes;
-        (_.pendingLanes = _),
+        ((_.pendingLanes = _),
           (_.suspendedLanes = 0),
           (_.pingedLanes = 0),
           (_.warmLanes = 0),
           (_.expiredLanes &= _),
           (_.entangledLanes &= _),
           (_.errorRecoveryDisabledLanes &= _),
-          (_.shellSuspendCounter = 0);
+          (_.shellSuspendCounter = 0));
         var _ = _.entanglements,
           _ = _.expirationTimes,
           _ = _.hiddenUpdates;
-        for (_ = _ & ~_; 0 < _; ) {
+        for (_ = _ & ~_; 0 < _;) {
           var _ = 31 - _(_),
             _ = 1 << _;
-          (_[_] = 0), (_[_] = -1);
+          ((_[_] = 0), (_[_] = -1));
           var _ = _[_];
           if (_ !== null)
             for (_[_] = null, _ = 0; _ < _.length; _++) {
@@ -19382,25 +19460,25 @@
             }
           _ &= ~_;
         }
-        _ !== 0 && _(_, _, 0),
+        (_ !== 0 && _(_, _, 0),
           _ !== 0 &&
             _ === 0 &&
             _.tag !== 0 &&
-            (_.suspendedLanes |= _ & ~(_ & ~_));
+            (_.suspendedLanes |= _ & ~(_ & ~_)));
       }
       function _(_, _, _) {
-        (_.pendingLanes |= _), (_.suspendedLanes &= ~_);
+        ((_.pendingLanes |= _), (_.suspendedLanes &= ~_));
         var _ = 31 - _(_);
-        (_.entangledLanes |= _),
+        ((_.entangledLanes |= _),
           (_.entanglements[_] =
-            _.entanglements[_] | 1073741824 | (_ & 4194090));
+            _.entanglements[_] | 1073741824 | (_ & 4194090)));
       }
       function _(_, _) {
         var _ = (_.entangledLanes |= _);
-        for (_ = _.entanglements; _; ) {
+        for (_ = _.entanglements; _;) {
           var _ = 31 - _(_),
             _ = 1 << _;
-          (_ & _) | (_[_] & _) && (_[_] |= _), (_ &= ~_);
+          ((_ & _) | (_[_] & _) && (_[_] |= _), (_ &= ~_));
         }
       }
       function _(_) {
@@ -19456,7 +19534,7 @@
       function _(_, _) {
         var _ = _._;
         try {
-          return (_._ = _), _();
+          return ((_._ = _), _());
         } finally {
           _._ = _;
         }
@@ -19471,24 +19549,24 @@
         _ = `__reactResources$` + _,
         _ = `__reactMarker$` + _;
       function _(_) {
-        delete _[_], delete _[_], delete _[_], delete _[_], delete _[_];
+        (delete _[_], delete _[_], delete _[_], delete _[_], delete _[_]);
       }
       function _(_) {
         var _ = _[_];
         if (_) return _;
-        for (var _ = _.parentNode; _; ) {
+        for (var _ = _.parentNode; _;) {
           if ((_ = _[_] || _[_])) {
             if (
               ((_ = _.alternate),
               _.child !== null || (_ !== null && _.child !== null))
             )
-              for (_ = _(_); _ !== null; ) {
+              for (_ = _(_); _ !== null;) {
                 if ((_ = _[_])) return _;
                 _ = _(_);
               }
             return _;
           }
-          (_ = _), (_ = _.parentNode);
+          ((_ = _), (_ = _.parentNode));
         }
         return null;
       }
@@ -19522,7 +19600,7 @@
       var _ = new Set(),
         _ = {};
       function _(_, _) {
-        _(_, _), _(_ + `Capture`, _);
+        (_(_, _), _(_ + `Capture`, _));
       }
       function _(_, _) {
         for (_[_] = _, _ = 0; _ < _.length; _++) _.add(_[_]);
@@ -19597,7 +19675,7 @@
             throw Error();
           } catch (_) {
             var _ = _.stack.trim().match(/\n( *(at )?)/);
-            (_ = (_ && _[1]) || ``),
+            ((_ = (_ && _[1]) || ``),
               (_ =
                 -1 <
                 _.stack.indexOf(`
@@ -19605,7 +19683,7 @@
                   ? ` (<anonymous>)`
                   : -1 < _.stack.indexOf(`@`)
                     ? `@unknown:0:0`
-                    : ``);
+                    : ``));
           }
         return (
           `
@@ -19722,7 +19800,7 @@
               }
           }
         } finally {
-          (_ = !1), (Error.prepareStackTrace = _);
+          ((_ = !1), (Error.prepareStackTrace = _));
         }
         return (_ = _ ? _.displayName || _.name : ``) ? _(_) : ``;
       }
@@ -19754,7 +19832,7 @@
       function _(_) {
         try {
           var _ = ``;
-          do (_ += _(_)), (_ = _.return);
+          do ((_ += _(_)), (_ = _.return));
           while (_);
           return _;
         } catch (_) {
@@ -19809,7 +19887,7 @@ Error generating stack: ` +
                 return _.call(this);
               },
               set: function (_) {
-                (_ = `` + _), _.call(this, _);
+                ((_ = `` + _), _.call(this, _));
               },
             }),
             Object.defineProperty(_, _, {
@@ -19823,7 +19901,7 @@ Error generating stack: ` +
                 _ = `` + _;
               },
               stopTracking: function () {
-                (_._valueTracker = null), delete _[_];
+                ((_._valueTracker = null), delete _[_]);
               },
             }
           );
@@ -19860,7 +19938,7 @@ Error generating stack: ` +
         });
       }
       function _(_, _, _, _, _, _, _, _) {
-        (_.name = ``),
+        ((_.name = ``),
           _ != null &&
           typeof _ != `function` &&
           typeof _ != `symbol` &&
@@ -19886,7 +19964,7 @@ Error generating stack: ` +
           typeof _ != `symbol` &&
           typeof _ != `boolean`
             ? (_.name = `` + _(_))
-            : _.removeAttribute(`name`);
+            : _.removeAttribute(`name`));
       }
       function _(_, _, _, _, _, _, _, _) {
         if (
@@ -19898,12 +19976,12 @@ Error generating stack: ` +
           _ != null || _ != null)
         ) {
           if (!((_ !== `submit` && _ !== `reset`) || _ != null)) return;
-          (_ = _ == null ? `` : `` + _(_)),
+          ((_ = _ == null ? `` : `` + _(_)),
             (_ = _ == null ? _ : `` + _(_)),
             _ || _ === _.value || (_.value = _),
-            (_.defaultValue = _);
+            (_.defaultValue = _));
         }
-        (_ ??= _),
+        ((_ ??= _),
           (_ = typeof _ != `function` && typeof _ != `symbol` && !!_),
           (_.checked = _ ? _.checked : !!_),
           (_.defaultChecked = !!_),
@@ -19911,7 +19989,7 @@ Error generating stack: ` +
             typeof _ != `function` &&
             typeof _ != `symbol` &&
             typeof _ != `boolean` &&
-            (_.name = _);
+            (_.name = _));
       }
       function _(_, _, _) {
         (_ === `number` && _(_.ownerDocument) === _) ||
@@ -19923,13 +20001,13 @@ Error generating stack: ` +
           _ = {};
           for (var _ = 0; _ < _.length; _++) _[`$` + _[_]] = !0;
           for (_ = 0; _ < _.length; _++)
-            (_ = _.hasOwnProperty(`$` + _[_].value)),
+            ((_ = _.hasOwnProperty(`$` + _[_].value)),
               _[_].selected !== _ && (_[_].selected = _),
-              _ && _ && (_[_].defaultSelected = !0);
+              _ && _ && (_[_].defaultSelected = !0));
         } else {
           for (_ = `` + _(_), _ = null, _ = 0; _ < _.length; _++) {
             if (_[_].value === _) {
-              (_[_].selected = !0), _ && (_[_].defaultSelected = !0);
+              ((_[_].selected = !0), _ && (_[_].defaultSelected = !0));
               return;
             }
             _ !== null || _[_].disabled || (_ = _[_]);
@@ -19953,12 +20031,12 @@ Error generating stack: ` +
             }
             _ = _;
           }
-          (_ ??= ``), (_ = _);
+          ((_ ??= ``), (_ = _));
         }
-        (_ = _(_)),
+        ((_ = _(_)),
           (_.defaultValue = _),
           (_ = _.textContent),
-          _ === _ && _ !== `` && _ !== null && (_.value = _);
+          _ === _ && _ !== `` && _ !== null && (_.value = _));
       }
       function _(_, _) {
         if (_) {
@@ -20003,7 +20081,7 @@ Error generating stack: ` +
                   ? (_.cssFloat = ``)
                   : (_[_] = ``));
           for (var _ in _)
-            (_ = _[_]), _.hasOwnProperty(_) && _[_] !== _ && _(_, _, _);
+            ((_ = _[_]), _.hasOwnProperty(_) && _[_] !== _ && _(_, _, _));
         } else for (var _ in _) _.hasOwnProperty(_) && _(_, _, _[_]);
       }
       function _(_) {
@@ -20139,7 +20217,7 @@ Error generating stack: ` +
                 (_ = _.name),
                 _.type === `radio` && _ != null)
               ) {
-                for (_ = _; _.parentNode; ) _ = _.parentNode;
+                for (_ = _; _.parentNode;) _ = _.parentNode;
                 for (
                   _ = _.querySelectorAll(
                     `input[name="` + _(`` + _) + `"][type="radio"]`,
@@ -20165,14 +20243,14 @@ Error generating stack: ` +
                   }
                 }
                 for (_ = 0; _ < _.length; _++)
-                  (_ = _[_]), _.form === _.form && _(_);
+                  ((_ = _[_]), _.form === _.form && _(_));
               }
               break _;
             case `textarea`:
               _(_, _.value, _.defaultValue);
               break _;
             case `select`:
-              (_ = _.value), _ != null && _(_, !!_.multiple, _, !1);
+              ((_ = _.value), _ != null && _(_, !!_.multiple, _, !1));
           }
         }
       }
@@ -20209,14 +20287,14 @@ Error generating stack: ` +
           case `onMouseUp`:
           case `onMouseUpCapture`:
           case `onMouseEnter`:
-            (_ = !_.disabled) ||
+            ((_ = !_.disabled) ||
               ((_ = _.type),
               (_ =
                 _ !== `button` &&
                 _ !== `input` &&
                 _ !== `select` &&
                 _ !== `textarea`)),
-              (_ = !_);
+              (_ = !_));
             break _;
           default:
             _ = !1;
@@ -20233,13 +20311,13 @@ Error generating stack: ` +
       if (_)
         try {
           var _ = {};
-          Object.defineProperty(_, "passive", {
+          (Object.defineProperty(_, "passive", {
             get: function () {
               _ = !0;
             },
           }),
             window.addEventListener(`test`, _, _),
-            window.removeEventListener(`test`, _, _);
+            window.removeEventListener(`test`, _, _));
         } catch {
           _ = !1;
         }
@@ -20610,7 +20688,7 @@ Error generating stack: ` +
           case `keypress`:
             return _.which === 32 ? ((_ = !0), _) : null;
           case `textInput`:
-            return (_ = _.data), _ === _ && _ ? null : _;
+            return ((_ = _.data), _ === _ && _ ? null : _);
           default:
             return null;
         }
@@ -20660,14 +20738,14 @@ Error generating stack: ` +
         return _ === `input` ? !!_[_.type] : _ === `textarea`;
       }
       function _(_, _, _, _) {
-        _ ? (_ ? _.push(_) : (_ = [_])) : (_ = _),
+        (_ ? (_ ? _.push(_) : (_ = [_])) : (_ = _),
           (_ = _(_, `onChange`)),
           0 < _.length &&
             ((_ = new _(`onChange`, `change`, null, _, _)),
             _.push({
               event: _,
               listeners: _,
-            }));
+            })));
       }
       var _ = null,
         _ = null;
@@ -20687,8 +20765,8 @@ Error generating stack: ` +
           var _ = `oninput` in document;
           if (!_) {
             var _ = document.createElement(`div`);
-            _.setAttribute(`oninput`, `return;`),
-              (_ = typeof _.oninput == `function`);
+            (_.setAttribute(`oninput`, `return;`),
+              (_ = typeof _.oninput == `function`));
           }
           _ = _;
         } else _ = !1;
@@ -20700,7 +20778,7 @@ Error generating stack: ` +
       function _(_) {
         if (_.propertyName === `value` && _(_)) {
           var _ = [];
-          _(_, _, _, _(_)), _(_, _);
+          (_(_, _, _, _(_)), _(_, _));
         }
       }
       function _(_, _, _) {
@@ -20735,13 +20813,13 @@ Error generating stack: ` +
         return !0;
       }
       function _(_) {
-        for (; _ && _.firstChild; ) _ = _.firstChild;
+        for (; _ && _.firstChild;) _ = _.firstChild;
         return _;
       }
       function _(_, _) {
         var _ = _(_);
         _ = 0;
-        for (var _; _; ) {
+        for (var _; _;) {
           if (_.nodeType === 3) {
             if (((_ = _ + _.textContent.length), _ <= _ && _ >= _))
               return {
@@ -20751,7 +20829,7 @@ Error generating stack: ` +
             _ = _;
           }
           _: {
-            for (; _; ) {
+            for (; _;) {
               if (_.nextSibling) {
                 _ = _.nextSibling;
                 break _;
@@ -20785,7 +20863,7 @@ Error generating stack: ` +
           _.ownerDocument.defaultView != null
             ? _.ownerDocument.defaultView
             : window;
-        for (var _ = _(_.document); _ instanceof _.HTMLIFrameElement; ) {
+        for (var _ = _(_.document); _ instanceof _.HTMLIFrameElement;) {
           try {
             var _ = typeof _.contentWindow.location.href == `string`;
           } catch {
@@ -20898,7 +20976,7 @@ Error generating stack: ` +
           );
       _.push(`scrollEnd`);
       function _(_, _) {
-        _.set(_, _), _(_, [_]);
+        (_.set(_, _), _(_, [_]));
       }
       var _ = new WeakMap();
       function _(_, _) {
@@ -20924,7 +21002,7 @@ Error generating stack: ` +
         _ = 0,
         _ = 0;
       function _() {
-        for (var _ = _, _ = (_ = _ = 0); _ < _; ) {
+        for (var _ = _, _ = (_ = _ = 0); _ < _;) {
           var _ = _[_];
           _[_++] = null;
           var _ = _[_];
@@ -20934,40 +21012,40 @@ Error generating stack: ` +
           var _ = _[_];
           if (((_[_++] = null), _ !== null && _ !== null)) {
             var _ = _.pending;
-            _ === null ? (_.next = _) : ((_.next = _.next), (_.next = _)),
-              (_.pending = _);
+            (_ === null ? (_.next = _) : ((_.next = _.next), (_.next = _)),
+              (_.pending = _));
           }
           _ !== 0 && _(_, _, _);
         }
       }
       function _(_, _, _, _) {
-        (_[_++] = _),
+        ((_[_++] = _),
           (_[_++] = _),
           (_[_++] = _),
           (_[_++] = _),
           (_ |= _),
           (_.lanes |= _),
           (_ = _.alternate),
-          _ !== null && (_.lanes |= _);
+          _ !== null && (_.lanes |= _));
       }
       function _(_, _, _, _) {
-        return _(_, _, _, _), _(_);
+        return (_(_, _, _, _), _(_));
       }
       function _(_, _) {
-        return _(_, null, null, _), _(_);
+        return (_(_, null, null, _), _(_));
       }
       function _(_, _, _) {
         _.lanes |= _;
         var _ = _.alternate;
         _ !== null && (_.lanes |= _);
-        for (var _ = !1, _ = _.return; _ !== null; )
-          (_.childLanes |= _),
+        for (var _ = !1, _ = _.return; _ !== null;)
+          ((_.childLanes |= _),
             (_ = _.alternate),
             _ !== null && (_.childLanes |= _),
             _.tag === 22 &&
               ((_ = _.stateNode), _ === null || _._visibility & 1 || (_ = !0)),
             (_ = _),
-            (_ = _.return);
+            (_ = _.return));
         return _.tag === 3
           ? ((_ = _.stateNode),
             _ &&
@@ -20982,12 +21060,12 @@ Error generating stack: ` +
       }
       function _(_) {
         if (50 < _) throw ((_ = 0), (_ = null), Error(_(185)));
-        for (var _ = _.return; _ !== null; ) (_ = _), (_ = _.return);
+        for (var _ = _.return; _ !== null;) ((_ = _), (_ = _.return));
         return _.tag === 3 ? _.stateNode : null;
       }
       var _ = {};
       function _(_, _, _, _) {
-        (this.tag = _),
+        ((this.tag = _),
           (this.key = _),
           (this.sibling =
             this.child =
@@ -21008,13 +21086,13 @@ Error generating stack: ` +
           (this.subtreeFlags = this.flags = 0),
           (this.deletions = null),
           (this.childLanes = this.lanes = 0),
-          (this.alternate = null);
+          (this.alternate = null));
       }
       function _(_, _, _, _) {
         return new _(_, _, _, _);
       }
       function _(_) {
-        return (_ = _.prototype), !(!_ || !_.isReactComponent);
+        return ((_ = _.prototype), !(!_ || !_.isReactComponent));
       }
       function _(_, _) {
         var _ = _.alternate;
@@ -21105,7 +21183,7 @@ Error generating stack: ` +
             case _:
               return _(_.children, _, _, _);
             case _:
-              (_ = 8), (_ |= 24);
+              ((_ = 8), (_ |= 24));
               break;
             case _:
               return (
@@ -21136,12 +21214,12 @@ Error generating stack: ` +
                     _ = 14;
                     break _;
                   case _:
-                    (_ = 16), (_ = null);
+                    ((_ = 16), (_ = null));
                     break _;
                 }
-              (_ = 29),
+              ((_ = 29),
                 (_ = Error(_(130, _ === null ? `null` : typeof _, ``))),
-                (_ = null);
+                (_ = null));
           }
         return (
           (_ = _(_, _, _, _)),
@@ -21152,10 +21230,10 @@ Error generating stack: ` +
         );
       }
       function _(_, _, _, _) {
-        return (_ = _(7, _, _, _)), (_.lanes = _), _;
+        return ((_ = _(7, _, _, _)), (_.lanes = _), _);
       }
       function _(_, _, _) {
-        return (_ = _(6, _, null, _)), (_.lanes = _), _;
+        return ((_ = _(6, _, null, _)), (_.lanes = _), _);
       }
       function _(_, _, _) {
         return (
@@ -21179,37 +21257,37 @@ Error generating stack: ` +
         _ = 1,
         _ = ``;
       function _(_, _) {
-        (_[_++] = _), (_[_++] = _), (_ = _), (_ = _);
+        ((_[_++] = _), (_[_++] = _), (_ = _), (_ = _));
       }
       function _(_, _, _) {
-        (_[_++] = _), (_[_++] = _), (_[_++] = _), (_ = _);
+        ((_[_++] = _), (_[_++] = _), (_[_++] = _), (_ = _));
         var _ = _;
         _ = _;
         var _ = 32 - _(_) - 1;
-        (_ &= ~(1 << _)), (_ += 1);
+        ((_ &= ~(1 << _)), (_ += 1));
         var _ = 32 - _(_) + _;
         if (30 < _) {
           var _ = _ - (_ % 5);
-          (_ = (_ & ((1 << _) - 1)).toString(32)),
+          ((_ = (_ & ((1 << _) - 1)).toString(32)),
             (_ >>= _),
             (_ -= _),
             (_ = (1 << (32 - _(_) + _)) | (_ << _) | _),
-            (_ = _ + _);
-        } else (_ = (1 << _) | (_ << _) | _), (_ = _);
+            (_ = _ + _));
+        } else ((_ = (1 << _) | (_ << _) | _), (_ = _));
       }
       function _(_) {
         _.return !== null && (_(_, 1), _(_, 1, 0));
       }
       function _(_) {
-        for (; _ === _; )
-          (_ = _[--_]), (_[_] = null), (_ = _[--_]), (_[_] = null);
-        for (; _ === _; )
-          (_ = _[--_]),
+        for (; _ === _;)
+          ((_ = _[--_]), (_[_] = null), (_ = _[--_]), (_[_] = null));
+        for (; _ === _;)
+          ((_ = _[--_]),
             (_[_] = null),
             (_ = _[--_]),
             (_[_] = null),
             (_ = _[--_]),
-            (_[_] = null);
+            (_[_] = null));
       }
       var _ = null,
         _ = null,
@@ -21226,7 +21304,7 @@ Error generating stack: ` +
           _ = _.memoizedProps;
         switch (((_[_] = _), (_[_] = _), _)) {
           case `dialog`:
-            _(`cancel`, _), _(`close`, _);
+            (_(`cancel`, _), _(`close`, _));
             break;
           case `iframe`:
           case `object`:
@@ -21243,13 +21321,13 @@ Error generating stack: ` +
           case `img`:
           case `image`:
           case `link`:
-            _(`error`, _), _(`load`, _);
+            (_(`error`, _), _(`load`, _));
             break;
           case `details`:
             _(`toggle`, _);
             break;
           case `input`:
-            _(`invalid`, _),
+            (_(`invalid`, _),
               _(
                 _,
                 _.value,
@@ -21260,15 +21338,15 @@ Error generating stack: ` +
                 _.name,
                 !0,
               ),
-              _(_);
+              _(_));
             break;
           case `select`:
             _(`invalid`, _);
             break;
           case `textarea`:
-            _(`invalid`, _), _(_, _.value, _.defaultValue, _.children), _(_);
+            (_(`invalid`, _), _(_, _.value, _.defaultValue, _.children), _(_));
         }
-        (_ = _.children),
+        ((_ = _.children),
           (typeof _ != `string` &&
             typeof _ != `number` &&
             typeof _ != `bigint`) ||
@@ -21281,10 +21359,10 @@ Error generating stack: ` +
               _.onClick != null && (_.onclick = _),
               (_ = !0))
             : (_ = !1),
-          _ || _(_);
+          _ || _(_));
       }
       function _(_) {
-        for (_ = _.return; _; )
+        for (_ = _.return; _;)
           switch (_.tag) {
             case 5:
             case 13:
@@ -21300,7 +21378,7 @@ Error generating stack: ` +
       }
       function _(_) {
         if (_ !== _) return !1;
-        if (!_) return _(_), (_ = !0), !1;
+        if (!_) return (_(_), (_ = !0), !1);
         var _ = _.tag,
           _;
         if (
@@ -21319,7 +21397,7 @@ Error generating stack: ` +
           )
             throw Error(_(317));
           _: {
-            for (_ = _.nextSibling, _ = 0; _; ) {
+            for (_ = _.nextSibling, _ = 0; _;) {
               if (_.nodeType === 8) {
                 if (((_ = _.data), _ === `/$`)) {
                   if (_ === 0) {
@@ -21340,7 +21418,7 @@ Error generating stack: ` +
         return !0;
       }
       function _() {
-        (_ = _ = null), (_ = !1);
+        ((_ = _ = null), (_ = !1));
       }
       function _() {
         var _ = _;
@@ -21356,13 +21434,13 @@ Error generating stack: ` +
         _ = null,
         _ = null;
       function _(_, _, _) {
-        _(_, _._currentValue), (_._currentValue = _);
+        (_(_, _._currentValue), (_._currentValue = _));
       }
       function _(_) {
-        (_._currentValue = _.current), _(_);
+        ((_._currentValue = _.current), _(_));
       }
       function _(_, _, _) {
-        for (; _ !== null; ) {
+        for (; _ !== null;) {
           var _ = _.alternate;
           if (
             ((_.childLanes & _) === _
@@ -21376,42 +21454,42 @@ Error generating stack: ` +
       }
       function _(_, _, _, _) {
         var _ = _.child;
-        for (_ !== null && (_.return = _); _ !== null; ) {
+        for (_ !== null && (_.return = _); _ !== null;) {
           var _ = _.dependencies;
           if (_ !== null) {
             var _ = _.child;
             _ = _.firstContext;
-            _: for (; _ !== null; ) {
+            _: for (; _ !== null;) {
               var _ = _;
               _ = _;
               for (var _ = 0; _ < _.length; _++)
                 if (_.context === _[_]) {
-                  (_.lanes |= _),
+                  ((_.lanes |= _),
                     (_ = _.alternate),
                     _ !== null && (_.lanes |= _),
                     _(_.return, _, _),
-                    _ || (_ = null);
+                    _ || (_ = null));
                   break _;
                 }
               _ = _.next;
             }
           } else if (_.tag === 18) {
             if (((_ = _.return), _ === null)) throw Error(_(341));
-            (_.lanes |= _),
+            ((_.lanes |= _),
               (_ = _.alternate),
               _ !== null && (_.lanes |= _),
               _(_, _, _),
-              (_ = null);
+              (_ = null));
           } else _ = _.child;
           if (_ !== null) _.return = _;
           else
-            for (_ = _; _ !== null; ) {
+            for (_ = _; _ !== null;) {
               if (_ === _) {
                 _ = null;
                 break;
               }
               if (((_ = _.sibling), _ !== null)) {
-                (_.return = _.return), (_ = _);
+                ((_.return = _.return), (_ = _));
                 break;
               }
               _ = _.return;
@@ -21421,7 +21499,7 @@ Error generating stack: ` +
       }
       function _(_, _, _, _) {
         _ = null;
-        for (var _ = _, _ = !1; _ !== null; ) {
+        for (var _ = _, _ = !1; _ !== null;) {
           if (!_) {
             if (_.flags & 524288) _ = !0;
             else if (_.flags & 262144) break;
@@ -21441,26 +21519,26 @@ Error generating stack: ` +
           }
           _ = _.return;
         }
-        _ !== null && _(_, _, _, _), (_.flags |= 262144);
+        (_ !== null && _(_, _, _, _), (_.flags |= 262144));
       }
       function _(_) {
-        for (_ = _.firstContext; _ !== null; ) {
+        for (_ = _.firstContext; _ !== null;) {
           if (!_(_.context._currentValue, _.memoizedValue)) return !0;
           _ = _.next;
         }
         return !1;
       }
       function _(_) {
-        (_ = _),
+        ((_ = _),
           (_ = null),
           (_ = _.dependencies),
-          _ !== null && (_.firstContext = null);
+          _ !== null && (_.firstContext = null));
       }
       function _(_) {
         return _(_, _);
       }
       function _(_, _) {
-        return _ === null && _(_), _(_, _);
+        return (_ === null && _(_), _(_, _));
       }
       function _(_, _) {
         var _ = _._currentValue;
@@ -21473,12 +21551,12 @@ Error generating stack: ` +
           _ === null)
         ) {
           if (_ === null) throw Error(_(308));
-          (_ = _),
+          ((_ = _),
             (_.dependencies = {
               lanes: 0,
               firstContext: _,
             }),
-            (_.flags |= 524288);
+            (_.flags |= 524288));
         } else _ = _.next = _;
         return _;
       }
@@ -21494,10 +21572,10 @@ Error generating stack: ` +
                     },
                   });
                 this.abort = function () {
-                  (_.aborted = !0),
+                  ((_.aborted = !0),
                     _.forEach(function (_) {
                       return _();
-                    });
+                    }));
                 };
               },
         _ = _.unstable_scheduleCallback,
@@ -21518,11 +21596,11 @@ Error generating stack: ` +
         };
       }
       function _(_) {
-        _.refCount--,
+        (_.refCount--,
           _.refCount === 0 &&
             _(_, function () {
               _.controller.abort();
-            });
+            }));
       }
       var _ = null,
         _ = 0,
@@ -21531,7 +21609,7 @@ Error generating stack: ` +
       function _(_, _) {
         if (_ === null) {
           var _ = (_ = []);
-          (_ = 0),
+          ((_ = 0),
             (_ = _()),
             (_ = {
               status: `pending`,
@@ -21539,15 +21617,15 @@ Error generating stack: ` +
               then: function (_) {
                 _.push(_);
               },
-            });
+            }));
         }
-        return _++, _.then(_, _), _;
+        return (_++, _.then(_, _), _);
       }
       function _() {
         if (--_ === 0 && _ !== null) {
           _ !== null && (_.status = `fulfilled`);
           var _ = _;
-          (_ = null), (_ = 0), (_ = null);
+          ((_ = null), (_ = 0), (_ = null));
           for (var _ = 0; _ < _.length; _++) (0, _[_])();
         }
       }
@@ -21564,7 +21642,7 @@ Error generating stack: ` +
         return (
           _.then(
             function () {
-              (_.status = `fulfilled`), (_.value = _);
+              ((_.status = `fulfilled`), (_.value = _));
               for (var _ = 0; _ < _.length; _++) (0, _[_])(_);
             },
             function (_) {
@@ -21581,8 +21659,8 @@ Error generating stack: ` +
       }
       var _ = _._;
       _._ = function (_, _) {
-        typeof _ == `object` && _ && typeof _.then == `function` && _(_, _),
-          _ !== null && _(_, _);
+        (typeof _ == `object` && _ && typeof _.then == `function` && _(_, _),
+          _ !== null && _(_, _));
       };
       var _ = _(null);
       function _() {
@@ -21608,7 +21686,7 @@ Error generating stack: ` +
           then: function () {},
         };
       function _(_) {
-        return (_ = _.status), _ === `fulfilled` || _ === `rejected`;
+        return ((_ = _.status), _ === `fulfilled` || _ === `rejected`);
       }
       function _() {}
       function _(_, _, _) {
@@ -21626,22 +21704,22 @@ Error generating stack: ` +
             else {
               if (((_ = _), _ !== null && 100 < _.shellSuspendCounter))
                 throw Error(_(482));
-              (_ = _),
+              ((_ = _),
                 (_.status = `pending`),
                 _.then(
                   function (_) {
                     if (_.status === `pending`) {
                       var _ = _;
-                      (_.status = `fulfilled`), (_.value = _);
+                      ((_.status = `fulfilled`), (_.value = _));
                     }
                   },
                   function (_) {
                     if (_.status === `pending`) {
                       var _ = _;
-                      (_.status = `rejected`), (_.reason = _);
+                      ((_.status = `rejected`), (_.reason = _));
                     }
                   },
-                );
+                ));
             }
             switch (_.status) {
               case `fulfilled`:
@@ -21656,7 +21734,7 @@ Error generating stack: ` +
       function _() {
         if (_ === null) throw Error(_(459));
         var _ = _;
-        return (_ = null), _;
+        return ((_ = null), _);
       }
       function _(_) {
         if (_ === _ || _ === _) throw Error(_(483));
@@ -21676,7 +21754,7 @@ Error generating stack: ` +
         };
       }
       function _(_, _) {
-        (_ = _.updateQueue),
+        ((_ = _.updateQueue),
           _.updateQueue === _ &&
             (_.updateQueue = {
               baseState: _.baseState,
@@ -21684,7 +21762,7 @@ Error generating stack: ` +
               lastBaseUpdate: _.lastBaseUpdate,
               shared: _.shared,
               callbacks: null,
-            });
+            }));
       }
       function _(_) {
         return {
@@ -21708,14 +21786,14 @@ Error generating stack: ` +
             _
           );
         }
-        return _(_, _, _, _), _(_);
+        return (_(_, _, _, _), _(_));
       }
       function _(_, _, _) {
         if (
           ((_ = _.updateQueue), _ !== null && ((_ = _.shared), _ & 4194048))
         ) {
           var _ = _.lanes;
-          (_ &= _.pendingLanes), (_ |= _), (_.lanes = _), _(_, _);
+          ((_ &= _.pendingLanes), (_ |= _), (_.lanes = _), _(_, _));
         }
       }
       function _(_, _) {
@@ -21733,22 +21811,22 @@ Error generating stack: ` +
                 callback: null,
                 next: null,
               };
-              _ === null ? (_ = _ = _) : (_ = _.next = _), (_ = _.next);
+              (_ === null ? (_ = _ = _) : (_ = _.next = _), (_ = _.next));
             } while (_ !== null);
             _ === null ? (_ = _ = _) : (_ = _.next = _);
           } else _ = _ = _;
-          (_ = {
+          ((_ = {
             baseState: _.baseState,
             firstBaseUpdate: _,
             lastBaseUpdate: _,
             shared: _.shared,
             callbacks: _.callbacks,
           }),
-            (_.updateQueue = _);
+            (_.updateQueue = _));
         } else
-          (_ = _.lastBaseUpdate),
+          ((_ = _.lastBaseUpdate),
             _ === null ? (_.firstBaseUpdate = _) : (_.next = _),
-            (_.lastBaseUpdate = _);
+            (_.lastBaseUpdate = _));
       }
       var _ = !1;
       function _() {
@@ -21768,7 +21846,7 @@ Error generating stack: ` +
           _.shared.pending = null;
           var _ = _,
             _ = _.next;
-          (_.next = null), _ === null ? (_ = _) : (_.next = _), (_ = _);
+          ((_.next = null), _ === null ? (_ = _) : (_.next = _), (_ = _));
           var _ = _.alternate;
           _ !== null &&
             ((_ = _.updateQueue),
@@ -21779,12 +21857,12 @@ Error generating stack: ` +
         }
         if (_ !== null) {
           var _ = _.baseState;
-          (_ = 0), (_ = _ = _ = null), (_ = _);
+          ((_ = 0), (_ = _ = _ = null), (_ = _));
           do {
             var _ = _.lane & -536870913,
               _ = _ !== _.lane;
             if (_ ? (_ & _) === _ : (_ & _) === _) {
-              _ !== 0 && _ === _ && (_ = !0),
+              (_ !== 0 && _ === _ && (_ = !0),
                 _ !== null &&
                   (_ = _.next =
                     {
@@ -21793,7 +21871,7 @@ Error generating stack: ` +
                       payload: _.payload,
                       callback: null,
                       next: null,
-                    });
+                    }));
               _: {
                 var _ = _,
                   _ = _;
@@ -21822,14 +21900,14 @@ Error generating stack: ` +
                     _ = !0;
                 }
               }
-              (_ = _.callback),
+              ((_ = _.callback),
                 _ !== null &&
                   ((_.flags |= 64),
                   _ && (_.flags |= 8192),
                   (_ = _.callbacks),
-                  _ === null ? (_.callbacks = [_]) : _.push(_));
+                  _ === null ? (_.callbacks = [_]) : _.push(_)));
             } else
-              (_ = {
+              ((_ = {
                 lane: _,
                 tag: _.tag,
                 payload: _.payload,
@@ -21837,24 +21915,24 @@ Error generating stack: ` +
                 next: null,
               }),
                 _ === null ? ((_ = _ = _), (_ = _)) : (_ = _.next = _),
-                (_ |= _);
+                (_ |= _));
             if (((_ = _.next), _ === null)) {
               if (((_ = _.shared.pending), _ === null)) break;
-              (_ = _),
+              ((_ = _),
                 (_ = _.next),
                 (_.next = null),
                 (_.lastBaseUpdate = _),
-                (_.shared.pending = null);
+                (_.shared.pending = null));
             }
           } while (1);
-          _ === null && (_ = _),
+          (_ === null && (_ = _),
             (_.baseState = _),
             (_.firstBaseUpdate = _),
             (_.lastBaseUpdate = _),
             _ === null && (_.shared.lanes = 0),
             (_ |= _),
             (_.lanes = _),
-            (_.memoizedState = _);
+            (_.memoizedState = _));
         }
       }
       function _(_, _) {
@@ -21869,13 +21947,13 @@ Error generating stack: ` +
       var _ = _(null),
         _ = _(0);
       function _(_, _) {
-        (_ = _), _(_, _), _(_, _), (_ = _ | _.baseLanes);
+        ((_ = _), _(_, _), _(_, _), (_ = _ | _.baseLanes));
       }
       function _() {
-        _(_, _), _(_, _.current);
+        (_(_, _), _(_, _.current));
       }
       function _() {
-        (_ = _.current), _(_), _(_);
+        ((_ = _.current), _(_), _(_));
       }
       var _ = 0,
         _ = null,
@@ -21930,12 +22008,12 @@ Error generating stack: ` +
             throw Error(_(301));
           if (((_ += 1), (_ = _ = null), _.updateQueue != null)) {
             var _ = _.updateQueue;
-            (_.lastEffect = null),
+            ((_.lastEffect = null),
               (_.events = null),
               (_.stores = null),
-              _.memoCache != null && (_.memoCache.index = 0);
+              _.memoCache != null && (_.memoCache.index = 0));
           }
-          (_._ = _), (_ = _(_, _));
+          ((_._ = _), (_ = _(_, _)));
         } while (_);
         return _;
       }
@@ -21951,20 +22029,20 @@ Error generating stack: ` +
       }
       function _() {
         var _ = _ !== 0;
-        return (_ = 0), _;
+        return ((_ = 0), _);
       }
       function _(_, _, _) {
-        (_.updateQueue = _.updateQueue), (_.flags &= -2053), (_.lanes &= ~_);
+        ((_.updateQueue = _.updateQueue), (_.flags &= -2053), (_.lanes &= ~_));
       }
       function _(_) {
         if (_) {
-          for (_ = _.memoizedState; _ !== null; ) {
+          for (_ = _.memoizedState; _ !== null;) {
             var _ = _.queue;
-            _ !== null && (_.pending = null), (_ = _.next);
+            (_ !== null && (_.pending = null), (_ = _.next));
           }
           _ = !1;
         }
-        (_ = 0), (_ = _ = _ = null), (_ = !1), (_ = _ = 0), (_ = null);
+        ((_ = 0), (_ = _ = _ = null), (_ = !1), (_ = _ = 0), (_ = null));
       }
       function _() {
         var _ = {
@@ -21974,7 +22052,7 @@ Error generating stack: ` +
           queue: null,
           next: null,
         };
-        return _ === null ? (_.memoizedState = _ = _) : (_ = _.next = _), _;
+        return (_ === null ? (_.memoizedState = _ = _) : (_ = _.next = _), _);
       }
       function _() {
         if (_ === null) {
@@ -21982,11 +22060,11 @@ Error generating stack: ` +
           _ = _ === null ? null : _.memoizedState;
         } else _ = _.next;
         var _ = _ === null ? _.memoizedState : _.next;
-        if (_ !== null) (_ = _), (_ = _);
+        if (_ !== null) ((_ = _), (_ = _));
         else {
           if (_ === null)
             throw _.alternate === null ? Error(_(467)) : Error(_(310));
-          (_ = _),
+          ((_ = _),
             (_ = {
               memoizedState: _.memoizedState,
               baseState: _.baseState,
@@ -21994,7 +22072,7 @@ Error generating stack: ` +
               queue: _.queue,
               next: null,
             }),
-            _ === null ? (_.memoizedState = _ = _) : (_ = _.next = _);
+            _ === null ? (_.memoizedState = _ = _) : (_ = _.next = _));
         }
         return _;
       }
@@ -22054,7 +22132,7 @@ Error generating stack: ` +
           _ === void 0)
         )
           for (_ = _.data[_.index] = Array(_), _ = 0; _ < _; _++) _[_] = _;
-        return _.index++, _;
+        return (_.index++, _);
       }
       function _(_, _) {
         return typeof _ == `function` ? _(_) : _;
@@ -22071,9 +22149,9 @@ Error generating stack: ` +
         if (_ !== null) {
           if (_ !== null) {
             var _ = _.next;
-            (_.next = _.next), (_.next = _);
+            ((_.next = _.next), (_.next = _));
           }
-          (_.baseQueue = _ = _), (_.pending = null);
+          ((_.baseQueue = _ = _), (_.pending = null));
         }
         if (((_ = _.baseState), _ === null)) _.memoizedState = _;
         else {
@@ -22087,7 +22165,7 @@ Error generating stack: ` +
             if (_ === _.lane ? (_ & _) === _ : (_ & _) === _) {
               var _ = _.revertLane;
               if (_ === 0)
-                _ !== null &&
+                (_ !== null &&
                   (_ = _.next =
                     {
                       lane: 0,
@@ -22097,12 +22175,12 @@ Error generating stack: ` +
                       eagerState: _.eagerState,
                       next: null,
                     }),
-                  _ === _ && (_ = !0);
+                  _ === _ && (_ = !0));
               else if ((_ & _) === _) {
-                (_ = _.next), _ === _ && (_ = !0);
+                ((_ = _.next), _ === _ && (_ = !0));
                 continue;
               } else
-                (_ = {
+                ((_ = {
                   lane: 0,
                   revertLane: _.revertLane,
                   action: _.action,
@@ -22112,12 +22190,12 @@ Error generating stack: ` +
                 }),
                   _ === null ? ((_ = _ = _), (_ = _)) : (_ = _.next = _),
                   (_.lanes |= _),
-                  (_ |= _);
-              (_ = _.action),
+                  (_ |= _));
+              ((_ = _.action),
                 _ && _(_, _),
-                (_ = _.hasEagerState ? _.eagerState : _(_, _));
+                (_ = _.hasEagerState ? _.eagerState : _(_, _)));
             } else
-              (_ = {
+              ((_ = {
                 lane: _,
                 revertLane: _.revertLane,
                 action: _.action,
@@ -22127,7 +22205,7 @@ Error generating stack: ` +
               }),
                 _ === null ? ((_ = _ = _), (_ = _)) : (_ = _.next = _),
                 (_.lanes |= _),
-                (_ |= _);
+                (_ |= _));
             _ = _.next;
           } while (_ !== null && _ !== _);
           if (
@@ -22135,12 +22213,12 @@ Error generating stack: ` +
             !_(_, _.memoizedState) && ((_ = !0), _ && ((_ = _), _ !== null)))
           )
             throw _;
-          (_.memoizedState = _),
+          ((_.memoizedState = _),
             (_.baseState = _),
             (_.baseQueue = _),
-            (_.lastRenderedState = _);
+            (_.lastRenderedState = _));
         }
-        return _ === null && (_.lanes = 0), [_.memoizedState, _.dispatch];
+        return (_ === null && (_.lanes = 0), [_.memoizedState, _.dispatch]);
       }
       function _(_) {
         var _ = _(),
@@ -22153,12 +22231,12 @@ Error generating stack: ` +
         if (_ !== null) {
           _.pending = null;
           var _ = (_ = _.next);
-          do (_ = _(_, _.action)), (_ = _.next);
+          do ((_ = _(_, _.action)), (_ = _.next));
           while (_ !== _);
-          _(_, _.memoizedState) || (_ = !0),
+          (_(_, _.memoizedState) || (_ = !0),
             (_.memoizedState = _),
             _.baseQueue === null && (_.baseState = _),
-            (_.lastRenderedState = _);
+            (_.lastRenderedState = _));
         }
         return [_, _];
       }
@@ -22188,7 +22266,7 @@ Error generating stack: ` +
         return _;
       }
       function _(_, _, _) {
-        (_.flags |= 16384),
+        ((_.flags |= 16384),
           (_ = {
             getSnapshot: _,
             value: _,
@@ -22196,10 +22274,10 @@ Error generating stack: ` +
           (_ = _.updateQueue),
           _ === null
             ? ((_ = _()), (_.updateQueue = _), (_.stores = [_]))
-            : ((_ = _.stores), _ === null ? (_.stores = [_]) : _.push(_));
+            : ((_ = _.stores), _ === null ? (_.stores = [_]) : _.push(_)));
       }
       function _(_, _, _, _) {
-        (_.value = _), (_.getSnapshot = _), _(_) && _(_);
+        ((_.value = _), (_.getSnapshot = _), _(_) && _(_));
       }
       function _(_, _, _) {
         return _(function () {
@@ -22246,7 +22324,7 @@ Error generating stack: ` +
         );
       }
       function _(_, _, _, _) {
-        return (_.baseState = _), _(_, _, typeof _ == `function` ? _ : _);
+        return ((_.baseState = _), _(_, _, typeof _ == `function` ? _ : _));
       }
       function _(_, _, _, _, _) {
         if (_(_)) throw Error(_(485));
@@ -22264,12 +22342,12 @@ Error generating stack: ` +
               _.listeners.push(_);
             },
           };
-          _._ === null ? (_.isTransition = !1) : _(!0),
+          (_._ === null ? (_.isTransition = !1) : _(!0),
             _(_),
             (_ = _.pending),
             _ === null
               ? ((_.next = _.pending = _), _(_, _))
-              : ((_.next = _.next), (_.pending = _.next = _));
+              : ((_.next = _.next), (_.pending = _.next = _)));
         }
       }
       function _(_, _) {
@@ -22283,7 +22361,7 @@ Error generating stack: ` +
           try {
             var _ = _(_, _),
               _ = _._;
-            _ !== null && _(_, _), _(_, _, _);
+            (_ !== null && _(_, _), _(_, _, _));
           } catch (_) {
             _(_, _, _);
           } finally {
@@ -22291,7 +22369,7 @@ Error generating stack: ` +
           }
         } else
           try {
-            (_ = _(_, _)), _(_, _, _);
+            ((_ = _(_, _)), _(_, _, _));
           } catch (_) {
             _(_, _, _);
           }
@@ -22309,7 +22387,7 @@ Error generating stack: ` +
           : _(_, _, _);
       }
       function _(_, _, _) {
-        (_.status = `fulfilled`),
+        ((_.status = `fulfilled`),
           (_.value = _),
           _(_),
           (_.state = _),
@@ -22318,13 +22396,13 @@ Error generating stack: ` +
             ((_ = _.next),
             _ === _
               ? (_.pending = null)
-              : ((_ = _.next), (_.next = _), _(_, _)));
+              : ((_ = _.next), (_.next = _), _(_, _))));
       }
       function _(_, _, _) {
         var _ = _.pending;
         if (((_.pending = null), _ !== null)) {
           _ = _.next;
-          do (_.status = `rejected`), (_.reason = _), _(_), (_ = _.next);
+          do ((_.status = `rejected`), (_.reason = _), _(_), (_ = _.next));
           while (_ !== _);
         }
         _.action = null;
@@ -22345,15 +22423,15 @@ Error generating stack: ` +
               if (_) {
                 if (_) {
                   _: {
-                    for (var _ = _, _ = _; _.nodeType !== 8; )
+                    for (var _ = _, _ = _; _.nodeType !== 8;)
                       if (!_ || ((_ = _(_.nextSibling)), _ === null)) {
                         _ = null;
                         break _;
                       }
-                    (_ = _.data), (_ = _ === `F!` || _ === `F` ? _ : null);
+                    ((_ = _.data), (_ = _ === `F!` || _ === `F` ? _ : null));
                   }
                   if (_) {
-                    (_ = _(_.nextSibling)), (_ = _.data === `F!`);
+                    ((_ = _(_.nextSibling)), (_ = _.data === `F!`));
                     break _;
                   }
                 }
@@ -22424,9 +22502,9 @@ Error generating stack: ` +
         var _ = _(),
           _ = _;
         if (_ !== null) return _(_, _, _);
-        _(), (_ = _.memoizedState), (_ = _());
+        (_(), (_ = _.memoizedState), (_ = _()));
         var _ = _.queue.dispatch;
-        return (_.memoizedState = _), [_, _, !1];
+        return ((_.memoizedState = _), [_, _, !1]);
       }
       function _(_, _, _, _) {
         return (
@@ -22457,9 +22535,9 @@ Error generating stack: ` +
       }
       function _(_, _, _, _) {
         var _ = _();
-        (_ = _ === void 0 ? null : _),
+        ((_ = _ === void 0 ? null : _),
           (_.flags |= _),
-          (_.memoizedState = _(1 | _, _(), _, _));
+          (_.memoizedState = _(1 | _, _(), _, _)));
       }
       function _(_, _, _, _) {
         var _ = _();
@@ -22499,7 +22577,8 @@ Error generating stack: ` +
           );
       }
       function _(_, _, _) {
-        (_ = _ == null ? null : _.concat([_])), _(4, 4, _.bind(null, _, _), _);
+        ((_ = _ == null ? null : _.concat([_])),
+          _(4, 4, _.bind(null, _, _), _));
       }
       function _() {}
       function _(_, _) {
@@ -22523,7 +22602,7 @@ Error generating stack: ` +
             _(!1);
           }
         }
-        return (_.memoizedState = [_, _]), _;
+        return ((_.memoizedState = [_, _]), _);
       }
       function _(_, _, _) {
         return _ === void 0 || _ & 1073741824
@@ -22544,14 +22623,14 @@ Error generating stack: ` +
         _._ = _ !== 0 && 8 > _ ? _ : 8;
         var _ = _._,
           _ = {};
-        (_._ = _), _(_, !1, _, _);
+        ((_._ = _), _(_, !1, _, _));
         try {
           var _ = _(),
             _ = _._;
-          _ !== null && _(_, _),
+          (_ !== null && _(_, _),
             typeof _ == `object` && _ && typeof _.then == `function`
               ? _(_, _, _(_, _), _(_))
-              : _(_, _, _, _(_));
+              : _(_, _, _, _(_)));
         } catch (_) {
           _(
             _,
@@ -22564,7 +22643,7 @@ Error generating stack: ` +
             _(),
           );
         } finally {
-          (_._ = _), (_._ = _);
+          ((_._ = _), (_._ = _));
         }
       }
       function _() {}
@@ -22579,7 +22658,7 @@ Error generating stack: ` +
           _ === null
             ? _
             : function () {
-                return _(_), _(_);
+                return (_(_), _(_));
               },
         );
       }
@@ -22634,18 +22713,18 @@ Error generating stack: ` +
         return _().memoizedState;
       }
       function _(_) {
-        for (var _ = _.return; _ !== null; ) {
+        for (var _ = _.return; _ !== null;) {
           switch (_.tag) {
             case 24:
             case 3:
               var _ = _();
               _ = _(_);
               var _ = _(_, _, _);
-              _ !== null && (_(_, _, _), _(_, _, _)),
+              (_ !== null && (_(_, _, _), _(_, _, _)),
                 (_ = {
                   cache: _(),
                 }),
-                (_.payload = _);
+                (_.payload = _));
               return;
           }
           _ = _.return;
@@ -22653,7 +22732,7 @@ Error generating stack: ` +
       }
       function _(_, _, _) {
         var _ = _();
-        (_ = {
+        ((_ = {
           lane: _,
           revertLane: 0,
           action: _,
@@ -22663,7 +22742,7 @@ Error generating stack: ` +
         }),
           _(_)
             ? _(_, _)
-            : ((_ = _(_, _, _, _)), _ !== null && (_(_, _, _), _(_, _, _)));
+            : ((_ = _(_, _, _, _)), _ !== null && (_(_, _, _), _(_, _, _))));
       }
       function _(_, _, _) {
         _(_, _, _, _());
@@ -22689,10 +22768,10 @@ Error generating stack: ` +
               var _ = _.lastRenderedState,
                 _ = _(_, _);
               if (((_.hasEagerState = !0), (_.eagerState = _), _(_, _)))
-                return _(_, _, _, 0), _ === null && _(), !1;
+                return (_(_, _, _, 0), _ === null && _(), !1);
             } catch {}
           if (((_ = _(_, _, _, _)), _ !== null))
-            return _(_, _, _), _(_, _, _), !0;
+            return (_(_, _, _), _(_, _, _), !0);
         }
         return !1;
       }
@@ -22709,7 +22788,7 @@ Error generating stack: ` +
           _(_))
         ) {
           if (_) throw Error(_(479));
-        } else (_ = _(_, _, _, 2)), _ !== null && _(_, _, 2);
+        } else ((_ = _(_, _, _, 2)), _ !== null && _(_, _, 2));
       }
       function _(_) {
         var _ = _.alternate;
@@ -22718,13 +22797,13 @@ Error generating stack: ` +
       function _(_, _) {
         _ = _ = !0;
         var _ = _.pending;
-        _ === null ? (_.next = _) : ((_.next = _.next), (_.next = _)),
-          (_.pending = _);
+        (_ === null ? (_.next = _) : ((_.next = _.next), (_.next = _)),
+          (_.pending = _));
       }
       function _(_, _, _) {
         if (_ & 4194048) {
           var _ = _.lanes;
-          (_ &= _.pendingLanes), (_ |= _), (_.lanes = _), _(_, _);
+          ((_ &= _.pendingLanes), (_ |= _), (_.lanes = _), _(_, _));
         }
       }
       var _ = {
@@ -22756,13 +22835,13 @@ Error generating stack: ` +
           readContext: _,
           use: _,
           useCallback: function (_, _) {
-            return (_().memoizedState = [_, _ === void 0 ? null : _]), _;
+            return ((_().memoizedState = [_, _ === void 0 ? null : _]), _);
           },
           useContext: _,
           useEffect: _,
           useImperativeHandle: function (_, _, _) {
-            (_ = _ == null ? null : _.concat([_])),
-              _(4194308, 4, _.bind(null, _, _), _);
+            ((_ = _ == null ? null : _.concat([_])),
+              _(4194308, 4, _.bind(null, _, _), _));
           },
           useLayoutEffect: function (_, _) {
             return _(4194308, 4, _, _);
@@ -22782,7 +22861,7 @@ Error generating stack: ` +
                 _(!1);
               }
             }
-            return (_.memoizedState = [_, _]), _;
+            return ((_.memoizedState = [_, _]), _);
           },
           useReducer: function (_, _, _) {
             var _ = _();
@@ -22824,7 +22903,7 @@ Error generating stack: ` +
             _ = _(_);
             var _ = _.queue,
               _ = _.bind(null, _, _);
-            return (_.dispatch = _), [_.memoizedState, _];
+            return ((_.dispatch = _), [_.memoizedState, _]);
           },
           useDebugValue: _,
           useDeferredValue: function (_, _) {
@@ -22867,12 +22946,12 @@ Error generating stack: ` +
             if (_) {
               var _ = _,
                 _ = _;
-              (_ = (_ & ~(1 << (32 - _(_) - 1))).toString(32) + _),
+              ((_ = (_ & ~(1 << (32 - _(_) - 1))).toString(32) + _),
                 (_ = `«` + _ + `R` + _),
                 (_ = _++),
                 0 < _ && (_ += `H` + _.toString(32)),
-                (_ += `»`);
-            } else (_ = _++), (_ = `«` + _ + `r` + _.toString(32) + `»`);
+                (_ += `»`));
+            } else ((_ = _++), (_ = `«` + _ + `r` + _.toString(32) + `»`));
             return (_.memoizedState = _);
           },
           useHostTransitionStatus: _,
@@ -22978,10 +23057,10 @@ Error generating stack: ` +
         _ = 0;
       function _(_) {
         var _ = _;
-        return (_ += 1), _ === null && (_ = []), _(_, _, _);
+        return ((_ += 1), _ === null && (_ = []), _(_, _, _));
       }
       function _(_, _) {
-        (_ = _.props.ref), (_.ref = _ === void 0 ? null : _);
+        ((_ = _.props.ref), (_.ref = _ === void 0 ? null : _));
       }
       function _(_, _) {
         throw _.$$typeof === _
@@ -23009,17 +23088,17 @@ Error generating stack: ` +
         }
         function _(_, _) {
           if (!_) return null;
-          for (; _ !== null; ) _(_, _), (_ = _.sibling);
+          for (; _ !== null;) (_(_, _), (_ = _.sibling));
           return null;
         }
         function _(_) {
-          for (var _ = new Map(); _ !== null; )
-            _.key === null ? _.set(_.index, _) : _.set(_.key, _),
-              (_ = _.sibling);
+          for (var _ = new Map(); _ !== null;)
+            (_.key === null ? _.set(_.index, _) : _.set(_.key, _),
+              (_ = _.sibling));
           return _;
         }
         function _(_, _) {
-          return (_ = _(_, _)), (_.index = 0), (_.sibling = null), _;
+          return ((_ = _(_, _)), (_.index = 0), (_.sibling = null), _);
         }
         function _(_, _, _) {
           return (
@@ -23033,7 +23112,7 @@ Error generating stack: ` +
           );
         }
         function _(_) {
-          return _ && _.alternate === null && (_.flags |= 67108866), _;
+          return (_ && _.alternate === null && (_.flags |= 67108866), _);
         }
         function _(_, _, _, _) {
           return _ === null || _.tag !== 6
@@ -23075,7 +23154,7 @@ Error generating stack: ` +
             typeof _ == `number` ||
             typeof _ == `bigint`
           )
-            return (_ = _(`` + _, _.mode, _)), (_.return = _), _;
+            return ((_ = _(`` + _, _.mode, _)), (_.return = _), _);
           if (typeof _ == `object` && _) {
             switch (_.$$typeof) {
               case _:
@@ -23086,13 +23165,13 @@ Error generating stack: ` +
                   _
                 );
               case _:
-                return (_ = _(_, _.mode, _)), (_.return = _), _;
+                return ((_ = _(_, _.mode, _)), (_.return = _), _);
               case _:
                 var _ = _._init;
-                return (_ = _(_._payload)), _(_, _, _);
+                return ((_ = _(_._payload)), _(_, _, _));
             }
             if (_(_) || _(_))
-              return (_ = _(_, _.mode, _, null)), (_.return = _), _;
+              return ((_ = _(_, _.mode, _, null)), (_.return = _), _);
             if (typeof _.then == `function`) return _(_, _(_), _);
             if (_.$$typeof === _) return _(_, _(_, _), _);
             _(_, _);
@@ -23114,7 +23193,7 @@ Error generating stack: ` +
               case _:
                 return _.key === _ ? _(_, _, _, _) : null;
               case _:
-                return (_ = _._init), (_ = _(_._payload)), _(_, _, _, _);
+                return ((_ = _._init), (_ = _(_._payload)), _(_, _, _, _));
             }
             if (_(_) || _(_)) return _ === null ? _(_, _, _, _, null) : null;
             if (typeof _.then == `function`) return _(_, _, _(_), _);
@@ -23129,7 +23208,7 @@ Error generating stack: ` +
             typeof _ == `number` ||
             typeof _ == `bigint`
           )
-            return (_ = _.get(_) || null), _(_, _, `` + _, _);
+            return ((_ = _.get(_) || null), _(_, _, `` + _, _));
           if (typeof _ == `object` && _) {
             switch (_.$$typeof) {
               case _:
@@ -23142,10 +23221,10 @@ Error generating stack: ` +
                 );
               case _:
                 var _ = _._init;
-                return (_ = _(_._payload)), _(_, _, _, _, _);
+                return ((_ = _(_._payload)), _(_, _, _, _, _));
             }
             if (_(_) || _(_))
-              return (_ = _.get(_) || null), _(_, _, _, _, null);
+              return ((_ = _.get(_) || null), _(_, _, _, _, null));
             if (typeof _.then == `function`) return _(_, _, _, _(_), _);
             if (_.$$typeof === _) return _(_, _, _, _(_, _), _);
             _(_, _);
@@ -23164,31 +23243,31 @@ Error generating stack: ` +
               _ === null && (_ = _);
               break;
             }
-            _ && _ && _.alternate === null && _(_, _),
+            (_ && _ && _.alternate === null && _(_, _),
               (_ = _(_, _, _)),
               _ === null ? (_ = _) : (_.sibling = _),
               (_ = _),
-              (_ = _);
+              (_ = _));
           }
-          if (_ === _.length) return _(_, _), _ && _(_, _), _;
+          if (_ === _.length) return (_(_, _), _ && _(_, _), _);
           if (_ === null) {
             for (; _ < _.length; _++)
-              (_ = _(_, _[_], _)),
+              ((_ = _(_, _[_], _)),
                 _ !== null &&
                   ((_ = _(_, _, _)),
                   _ === null ? (_ = _) : (_.sibling = _),
-                  (_ = _));
-            return _ && _(_, _), _;
+                  (_ = _)));
+            return (_ && _(_, _), _);
           }
           for (_ = _(_); _ < _.length; _++)
-            (_ = _(_, _, _, _[_], _)),
+            ((_ = _(_, _, _, _[_], _)),
               _ !== null &&
                 (_ &&
                   _.alternate !== null &&
                   _.delete(_.key === null ? _ : _.key),
                 (_ = _(_, _, _)),
                 _ === null ? (_ = _) : (_.sibling = _),
-                (_ = _));
+                (_ = _)));
           return (
             _ &&
               _.forEach(function (_) {
@@ -23211,31 +23290,31 @@ Error generating stack: ` +
               _ === null && (_ = _);
               break;
             }
-            _ && _ && _.alternate === null && _(_, _),
+            (_ && _ && _.alternate === null && _(_, _),
               (_ = _(_, _, _)),
               _ === null ? (_ = _) : (_.sibling = _),
               (_ = _),
-              (_ = _);
+              (_ = _));
           }
-          if (_.done) return _(_, _), _ && _(_, _), _;
+          if (_.done) return (_(_, _), _ && _(_, _), _);
           if (_ === null) {
             for (; !_.done; _++, _ = _.next())
-              (_ = _(_, _.value, _)),
+              ((_ = _(_, _.value, _)),
                 _ !== null &&
                   ((_ = _(_, _, _)),
                   _ === null ? (_ = _) : (_.sibling = _),
-                  (_ = _));
-            return _ && _(_, _), _;
+                  (_ = _)));
+            return (_ && _(_, _), _);
           }
           for (_ = _(_); !_.done; _++, _ = _.next())
-            (_ = _(_, _, _, _.value, _)),
+            ((_ = _(_, _, _, _.value, _)),
               _ !== null &&
                 (_ &&
                   _.alternate !== null &&
                   _.delete(_.key === null ? _ : _.key),
                 (_ = _(_, _, _)),
                 _ === null ? (_ = _) : (_.sibling = _),
-                (_ = _));
+                (_ = _)));
           return (
             _ &&
               _.forEach(function (_) {
@@ -23257,14 +23336,14 @@ Error generating stack: ` +
             switch (_.$$typeof) {
               case _:
                 _: {
-                  for (var _ = _.key; _ !== null; ) {
+                  for (var _ = _.key; _ !== null;) {
                     if (_.key === _) {
                       if (((_ = _.type), _ === _)) {
                         if (_.tag === 7) {
-                          _(_, _.sibling),
+                          (_(_, _.sibling),
                             (_ = _(_, _.props.children)),
                             (_.return = _),
-                            (_ = _);
+                            (_ = _));
                           break _;
                         }
                       } else if (
@@ -23274,17 +23353,17 @@ Error generating stack: ` +
                           _.$$typeof === _ &&
                           _(_) === _.type)
                       ) {
-                        _(_, _.sibling),
+                        (_(_, _.sibling),
                           (_ = _(_, _.props)),
                           _(_, _),
                           (_.return = _),
-                          (_ = _);
+                          (_ = _));
                         break _;
                       }
                       _(_, _);
                       break;
                     }
-                    _(_, _), (_ = _.sibling);
+                    (_(_, _), (_ = _.sibling));
                   }
                   _.type === _
                     ? ((_ = _(_.props.children, _.mode, _, _.key)),
@@ -23298,34 +23377,34 @@ Error generating stack: ` +
                 return _(_);
               case _:
                 _: {
-                  for (_ = _.key; _ !== null; ) {
+                  for (_ = _.key; _ !== null;) {
                     if (_.key === _) {
                       if (
                         _.tag === 4 &&
                         _.stateNode.containerInfo === _.containerInfo &&
                         _.stateNode.implementation === _.implementation
                       ) {
-                        _(_, _.sibling),
+                        (_(_, _.sibling),
                           (_ = _(_, _.children || [])),
                           (_.return = _),
-                          (_ = _);
+                          (_ = _));
                         break _;
                       }
                       _(_, _);
                       break;
                     }
-                    _(_, _), (_ = _.sibling);
+                    (_(_, _), (_ = _.sibling));
                   }
-                  (_ = _(_, _.mode, _)), (_.return = _), (_ = _);
+                  ((_ = _(_, _.mode, _)), (_.return = _), (_ = _));
                 }
                 return _(_);
               case _:
-                return (_ = _._init), (_ = _(_._payload)), _(_, _, _, _);
+                return ((_ = _._init), (_ = _(_._payload)), _(_, _, _, _));
             }
             if (_(_)) return _(_, _, _, _);
             if (_(_)) {
               if (((_ = _(_)), typeof _ != `function`)) throw Error(_(150));
-              return (_ = _.call(_)), _(_, _, _, _);
+              return ((_ = _.call(_)), _(_, _, _, _));
             }
             if (typeof _.then == `function`) return _(_, _, _(_), _);
             if (_.$$typeof === _) return _(_, _, _(_, _), _);
@@ -23345,11 +23424,11 @@ Error generating stack: ` +
           try {
             _ = 0;
             var _ = _(_, _, _, _);
-            return (_ = null), _;
+            return ((_ = null), _);
           } catch (_) {
             if (_ === _ || _ === _) throw _;
             var _ = _(29, _, null, _.mode);
-            return (_.lanes = _), (_.return = _), _;
+            return ((_.lanes = _), (_.return = _), _);
           }
         };
       }
@@ -23359,11 +23438,11 @@ Error generating stack: ` +
         _ = null;
       function _(_) {
         var _ = _.alternate;
-        _(_, _.current & 1),
+        (_(_, _.current & 1),
           _(_, _),
           _ === null &&
             (_ === null || _.current !== null || _.memoizedState !== null) &&
-            (_ = _);
+            (_ = _));
       }
       function _(_) {
         if (_.tag === 22) {
@@ -23374,14 +23453,14 @@ Error generating stack: ` +
         } else _(_);
       }
       function _() {
-        _(_, _.current), _(_, _.current);
+        (_(_, _.current), _(_, _.current));
       }
       function _(_) {
-        _(_), _ === _ && (_ = null), _(_);
+        (_(_), _ === _ && (_ = null), _(_));
       }
       var _ = _(0);
       function _(_) {
-        for (var _ = _; _ !== null; ) {
+        for (var _ = _; _ !== null;) {
           if (_.tag === 13) {
             var _ = _.memoizedState;
             if (
@@ -23392,53 +23471,53 @@ Error generating stack: ` +
           } else if (_.tag === 19 && _.memoizedProps.revealOrder !== void 0) {
             if (_.flags & 128) return _;
           } else if (_.child !== null) {
-            (_.child.return = _), (_ = _.child);
+            ((_.child.return = _), (_ = _.child));
             continue;
           }
           if (_ === _) break;
-          for (; _.sibling === null; ) {
+          for (; _.sibling === null;) {
             if (_.return === null || _.return === _) return null;
             _ = _.return;
           }
-          (_.sibling.return = _.return), (_ = _.sibling);
+          ((_.sibling.return = _.return), (_ = _.sibling));
         }
         return null;
       }
       function _(_, _, _, _) {
-        (_ = _.memoizedState),
+        ((_ = _.memoizedState),
           (_ = _(_, _)),
           (_ = _ == null ? _ : _({}, _, _)),
           (_.memoizedState = _),
-          _.lanes === 0 && (_.updateQueue.baseState = _);
+          _.lanes === 0 && (_.updateQueue.baseState = _));
       }
       var _ = {
         enqueueSetState: function (_, _, _) {
           _ = _._reactInternals;
           var _ = _(),
             _ = _(_);
-          (_.payload = _),
+          ((_.payload = _),
             _ != null && (_.callback = _),
             (_ = _(_, _, _)),
-            _ !== null && (_(_, _, _), _(_, _, _));
+            _ !== null && (_(_, _, _), _(_, _, _)));
         },
         enqueueReplaceState: function (_, _, _) {
           _ = _._reactInternals;
           var _ = _(),
             _ = _(_);
-          (_.tag = 1),
+          ((_.tag = 1),
             (_.payload = _),
             _ != null && (_.callback = _),
             (_ = _(_, _, _)),
-            _ !== null && (_(_, _, _), _(_, _, _));
+            _ !== null && (_(_, _, _), _(_, _, _)));
         },
         enqueueForceUpdate: function (_, _) {
           _ = _._reactInternals;
           var _ = _(),
             _ = _(_);
-          (_.tag = 2),
+          ((_.tag = 2),
             _ != null && (_.callback = _),
             (_ = _(_, _, _)),
-            _ !== null && (_(_, _, _), _(_, _, _));
+            _ !== null && (_(_, _, _), _(_, _, _)));
         },
       };
       function _(_, _, _, _, _, _, _) {
@@ -23452,12 +23531,12 @@ Error generating stack: ` +
         );
       }
       function _(_, _, _, _) {
-        (_ = _.state),
+        ((_ = _.state),
           typeof _.componentWillReceiveProps == `function` &&
             _.componentWillReceiveProps(_, _),
           typeof _.UNSAFE_componentWillReceiveProps == `function` &&
             _.UNSAFE_componentWillReceiveProps(_, _),
-          _.state !== _ && _.enqueueReplaceState(_, _.state, null);
+          _.state !== _ && _.enqueueReplaceState(_, _.state, null));
       }
       function _(_, _) {
         var _ = _;
@@ -23543,26 +23622,26 @@ Error generating stack: ` +
         );
       }
       function _(_) {
-        return (_ = _(_)), (_.tag = 3), _;
+        return ((_ = _(_)), (_.tag = 3), _);
       }
       function _(_, _, _, _) {
         var _ = _.type.getDerivedStateFromError;
         if (typeof _ == `function`) {
           var _ = _.value;
-          (_.payload = function () {
+          ((_.payload = function () {
             return _(_);
           }),
             (_.callback = function () {
               _(_, _, _);
-            });
+            }));
         }
         var _ = _.stateNode;
         _ !== null &&
           typeof _.componentDidCatch == `function` &&
           (_.callback = function () {
-            _(_, _, _),
+            (_(_, _, _),
               typeof _ != `function` &&
-                (_ === null ? (_ = new Set([this])) : _.add(this));
+                (_ === null ? (_ = new Set([this])) : _.add(this)));
             var _ = _.stack;
             this.componentDidCatch(_.value, {
               componentStack: _ === null ? `` : _,
@@ -23617,7 +23696,7 @@ Error generating stack: ` +
             }
             throw Error(_(435, _.tag));
           }
-          return _(_, _, _), _(), !1;
+          return (_(_, _, _), _(), !1);
         }
         if (_)
           return (
@@ -23656,7 +23735,7 @@ Error generating stack: ` +
           _ === null)
         )
           return !0;
-        (_ = _(_, _)), (_ = _);
+        ((_ = _(_, _)), (_ = _));
         do {
           switch (_.tag) {
             case 3:
@@ -23749,7 +23828,7 @@ Error generating stack: ` +
           if (_(_, _) && _.ref === _.ref) {
             if (((_ = !1), (_.pendingProps = _ = _), _(_, _)))
               _.flags & 131072 && (_ = !0);
-            else return (_.lanes = _.lanes), _(_, _, _);
+            else return ((_.lanes = _.lanes), _(_, _, _));
           }
         }
         return _(_, _, _, _, _);
@@ -23761,20 +23840,20 @@ Error generating stack: ` +
         if (_.mode === `hidden`) {
           if (_.flags & 128) {
             if (((_ = _ === null ? _ : _.baseLanes | _), _ !== null)) {
-              for (_ = _.child = _.child, _ = 0; _ !== null; )
-                (_ = _ | _.lanes | _.childLanes), (_ = _.sibling);
+              for (_ = _.child = _.child, _ = 0; _ !== null;)
+                ((_ = _ | _.lanes | _.childLanes), (_ = _.sibling));
               _.childLanes = _ & ~_;
-            } else (_.childLanes = 0), (_.child = null);
+            } else ((_.childLanes = 0), (_.child = null));
             return _(_, _, _, _);
           }
           if (_ & 536870912)
-            (_.memoizedState = {
+            ((_.memoizedState = {
               baseLanes: 0,
               cachePool: null,
             }),
               _ !== null && _(_, _ === null ? null : _.cachePool),
               _ === null ? _() : _(_, _),
-              _(_);
+              _(_));
           else
             return (
               (_.lanes = _.childLanes = 536870912),
@@ -23784,7 +23863,7 @@ Error generating stack: ` +
           _ === null
             ? (_ !== null && _(_, null), _(), _(_))
             : (_(_, _.cachePool), _(_, _), _(_), (_.memoizedState = null));
-        return _(_, _, _, _), _.child;
+        return (_(_, _, _, _), _.child);
       }
       function _(_, _, _, _) {
         var _ = _();
@@ -23842,7 +23921,7 @@ Error generating stack: ` +
         if ((_(_), _.stateNode === null)) {
           var _ = _,
             _ = _.contextType;
-          typeof _ == `object` && _ && (_ = _(_)),
+          (typeof _ == `object` && _ && (_ = _(_)),
             (_ = new _(_, _)),
             (_.memoizedState =
               _.state !== null && _.state !== void 0 ? _.state : null),
@@ -23874,7 +23953,7 @@ Error generating stack: ` +
               _(),
               (_.state = _.memoizedState)),
             typeof _.componentDidMount == `function` && (_.flags |= 4194308),
-            (_ = !0);
+            (_ = !0));
         } else if (_ === null) {
           _ = _.stateNode;
           var _ = _.memoizedProps,
@@ -23882,9 +23961,9 @@ Error generating stack: ` +
           _.props = _;
           var _ = _.context,
             _ = _.contextType;
-          (_ = _), typeof _ == `object` && _ && (_ = _(_));
+          ((_ = _), typeof _ == `object` && _ && (_ = _(_)));
           var _ = _.getDerivedStateFromProps;
-          (_ =
+          ((_ =
             typeof _ == `function` ||
             typeof _.getSnapshotBeforeUpdate == `function`),
             (_ = _.pendingProps !== _),
@@ -23892,9 +23971,9 @@ Error generating stack: ` +
               (typeof _.UNSAFE_componentWillReceiveProps != `function` &&
                 typeof _.componentWillReceiveProps != `function`) ||
               ((_ || _ !== _) && _(_, _, _, _)),
-            (_ = !1);
+            (_ = !1));
           var _ = _.memoizedState;
-          (_.state = _),
+          ((_.state = _),
             _(_, _, _, _),
             _(),
             (_ = _.memoizedState),
@@ -23921,9 +24000,9 @@ Error generating stack: ` +
                 (_ = _))
               : (typeof _.componentDidMount == `function` &&
                   (_.flags |= 4194308),
-                (_ = !1));
+                (_ = !1)));
         } else {
-          (_ = _.stateNode),
+          ((_ = _.stateNode),
             _(_, _),
             (_ = _.memoizedProps),
             (_ = _(_, _)),
@@ -23944,7 +24023,7 @@ Error generating stack: ` +
             (_ = _.memoizedState),
             (_.state = _),
             _(_, _, _, _),
-            _();
+            _());
           var _ = _.memoizedState;
           _ !== _ ||
           _ !== _ ||
@@ -24007,7 +24086,7 @@ Error generating stack: ` +
         );
       }
       function _(_, _, _, _) {
-        return _(), (_.flags |= 256), _(_, _, _, _), _.child;
+        return (_(), (_.flags |= 256), _(_, _, _, _), _.child);
       }
       var _ = {
         dehydrated: null,
@@ -24022,7 +24101,7 @@ Error generating stack: ` +
         };
       }
       function _(_, _, _) {
-        return (_ = _ === null ? 0 : _.childLanes & ~_), _ && (_ |= _), _;
+        return ((_ = _ === null ? 0 : _.childLanes & ~_), _ && (_ |= _), _);
       }
       function _(_, _, _) {
         var _ = _.pendingProps,
@@ -24044,7 +24123,7 @@ Error generating stack: ` +
                 _;
               if ((_ = _)) {
                 _: {
-                  for (_ = _, _ = _; _.nodeType !== 8; )
+                  for (_ = _, _ = _; _.nodeType !== 8;)
                     if (!_ || ((_ = _(_.nextSibling)), _ === null)) {
                       _ = null;
                       break _;
@@ -24079,7 +24158,7 @@ Error generating stack: ` +
               ((_ = _.memoizedState),
               _ !== null && ((_ = _.dehydrated), _ !== null))
             )
-              return _(_) ? (_.lanes = 32) : (_.lanes = 536870912), null;
+              return (_(_) ? (_.lanes = 32) : (_.lanes = 536870912), null);
             _(_);
           }
           return (
@@ -24142,7 +24221,7 @@ Error generating stack: ` +
           else if ((_(_), _(_))) {
             if (((_ = _.nextSibling && _.nextSibling.dataset), _))
               var _ = _.dgst;
-            (_ = _),
+            ((_ = _),
               (_ = Error(_(419))),
               (_.stack = ``),
               (_.digest = _),
@@ -24151,7 +24230,7 @@ Error generating stack: ` +
                 source: null,
                 stack: null,
               }),
-              (_ = _(_, _, _));
+              (_ = _(_, _, _)));
           } else if (
             (_ || _(_, _, _, !1), (_ = (_ & _.childLanes) !== 0), _ || _)
           ) {
@@ -24164,7 +24243,7 @@ Error generating stack: ` +
                 _ !== 0 && _ !== _.retryLane))
             )
               throw ((_.retryLane = _), _(_, _), _(_, _, _), _);
-            _.data === `$?` || _(), (_ = _(_, _, _));
+            (_.data === `$?` || _(), (_ = _(_, _, _)));
           } else
             _.data === `$?`
               ? ((_.flags |= 192), (_.child = _.child), (_ = null))
@@ -24281,7 +24360,7 @@ Error generating stack: ` +
       function _(_, _, _) {
         _.lanes |= _;
         var _ = _.alternate;
-        _ !== null && (_.lanes |= _), _(_.return, _, _);
+        (_ !== null && (_.lanes |= _), _(_.return, _, _));
       }
       function _(_, _, _, _, _) {
         var _ = _.memoizedState;
@@ -24306,44 +24385,44 @@ Error generating stack: ` +
           _ = _.revealOrder,
           _ = _.tail;
         if ((_(_, _, _.children, _), (_ = _.current), _ & 2))
-          (_ = (_ & 1) | 2), (_.flags |= 128);
+          ((_ = (_ & 1) | 2), (_.flags |= 128));
         else {
           if (_ !== null && _.flags & 128)
-            _: for (_ = _.child; _ !== null; ) {
+            _: for (_ = _.child; _ !== null;) {
               if (_.tag === 13) _.memoizedState !== null && _(_, _, _);
               else if (_.tag === 19) _(_, _, _);
               else if (_.child !== null) {
-                (_.child.return = _), (_ = _.child);
+                ((_.child.return = _), (_ = _.child));
                 continue;
               }
               if (_ === _) break _;
-              for (; _.sibling === null; ) {
+              for (; _.sibling === null;) {
                 if (_.return === null || _.return === _) break _;
                 _ = _.return;
               }
-              (_.sibling.return = _.return), (_ = _.sibling);
+              ((_.sibling.return = _.return), (_ = _.sibling));
             }
           _ &= 1;
         }
         switch ((_(_, _), _)) {
           case `forwards`:
-            for (_ = _.child, _ = null; _ !== null; )
-              (_ = _.alternate),
+            for (_ = _.child, _ = null; _ !== null;)
+              ((_ = _.alternate),
                 _ !== null && _(_) === null && (_ = _),
-                (_ = _.sibling);
-            (_ = _),
+                (_ = _.sibling));
+            ((_ = _),
               _ === null
                 ? ((_ = _.child), (_.child = null))
                 : ((_ = _.sibling), (_.sibling = null)),
-              _(_, !1, _, _, _);
+              _(_, !1, _, _, _));
             break;
           case `backwards`:
-            for (_ = null, _ = _.child, _.child = null; _ !== null; ) {
+            for (_ = null, _ = _.child, _.child = null; _ !== null;) {
               if (((_ = _.alternate), _ !== null && _(_) === null)) {
                 _.child = _;
                 break;
               }
-              (_ = _.sibling), (_.sibling = _), (_ = _), (_ = _);
+              ((_ = _.sibling), (_.sibling = _), (_ = _), (_ = _));
             }
             _(_, !0, _, null, _);
             break;
@@ -24371,9 +24450,9 @@ Error generating stack: ` +
             _ = _.child, _ = _(_, _.pendingProps), _.child = _, _.return = _;
             _.sibling !== null;
           )
-            (_ = _.sibling),
+            ((_ = _.sibling),
               (_ = _.sibling = _(_, _.pendingProps)),
-              (_.return = _);
+              (_.return = _));
           _.sibling = null;
         }
         return _.child;
@@ -24386,9 +24465,9 @@ Error generating stack: ` +
       function _(_, _, _) {
         switch (_.tag) {
           case 3:
-            _(_, _.stateNode.containerInfo),
+            (_(_, _.stateNode.containerInfo),
               _(_, _, _.memoizedState.cache),
-              _();
+              _());
             break;
           case 27:
           case 5:
@@ -24431,7 +24510,7 @@ Error generating stack: ` +
             return null;
           case 22:
           case 23:
-            return (_.lanes = 0), _(_, _, _);
+            return ((_.lanes = 0), _(_, _, _));
           case 24:
             _(_, _, _.memoizedState.cache);
         }
@@ -24441,10 +24520,10 @@ Error generating stack: ` +
         if (_ !== null) {
           if (_.memoizedProps !== _.pendingProps) _ = !0;
           else {
-            if (!_(_, _) && !(_.flags & 128)) return (_ = !1), _(_, _, _);
+            if (!_(_, _) && !(_.flags & 128)) return ((_ = !1), _(_, _, _));
             _ = !!(_.flags & 131072);
           }
-        } else (_ = !1), _ && _.flags & 1048576 && _(_, _, _.index);
+        } else ((_ = !1), _ && _.flags & 1048576 && _(_, _, _.index));
         switch (((_.lanes = 0), _.tag)) {
           case 16:
             _: {
@@ -24458,11 +24537,11 @@ Error generating stack: ` +
               else {
                 if (_ != null) {
                   if (((_ = _.$$typeof), _ === _)) {
-                    (_.tag = 11), (_ = _(null, _, _, _, _));
+                    ((_.tag = 11), (_ = _(null, _, _, _, _)));
                     break _;
                   }
                   if (_ === _) {
-                    (_.tag = 14), (_ = _(null, _, _, _, _));
+                    ((_.tag = 14), (_ = _(null, _, _, _, _)));
                     break _;
                   }
                 }
@@ -24473,14 +24552,14 @@ Error generating stack: ` +
           case 0:
             return _(_, _, _.type, _.pendingProps, _);
           case 1:
-            return (_ = _.type), (_ = _(_, _.pendingProps)), _(_, _, _, _, _);
+            return ((_ = _.type), (_ = _(_, _.pendingProps)), _(_, _, _, _, _));
           case 3:
             _: {
               if ((_(_, _.stateNode.containerInfo), _ === null))
                 throw Error(_(387));
               _ = _.pendingProps;
               var _ = _.memoizedState;
-              (_ = _.element), _(_, _), _(_, _, null, _);
+              ((_ = _.element), _(_, _), _(_, _, null, _));
               var _ = _.memoizedState;
               if (
                 ((_ = _.cache),
@@ -24504,7 +24583,7 @@ Error generating stack: ` +
                   break _;
                 }
                 if (_ !== _) {
-                  (_ = _(Error(_(424)), _)), _(_), (_ = _(_, _, _, _));
+                  ((_ = _(Error(_(424)), _)), _(_), (_ = _(_, _, _, _)));
                   break _;
                 }
                 switch (((_ = _.stateNode.containerInfo), _.nodeType)) {
@@ -24524,7 +24603,7 @@ Error generating stack: ` +
                     _.child = _;
                   _;
                 )
-                  (_.flags = (_.flags & -3) | 4096), (_ = _.sibling);
+                  ((_.flags = (_.flags & -3) | 4096), (_ = _.sibling));
               } else {
                 if ((_(), _ === _)) {
                   _ = _(_, _, _);
@@ -24623,11 +24702,11 @@ Error generating stack: ` +
           case 11:
             return _(_, _, _.type, _.pendingProps, _);
           case 7:
-            return _(_, _, _.pendingProps, _), _.child;
+            return (_(_, _, _.pendingProps, _), _.child);
           case 8:
-            return _(_, _, _.pendingProps.children, _), _.child;
+            return (_(_, _, _.pendingProps.children, _), _.child);
           case 12:
-            return _(_, _, _.pendingProps.children, _), _.child;
+            return (_(_, _, _.pendingProps.children, _), _.child);
           case 10:
             return (
               (_ = _.pendingProps),
@@ -24736,23 +24815,23 @@ Error generating stack: ` +
         }
       }
       function _(_, _) {
-        _ !== null && (_.flags |= 4),
+        (_ !== null && (_.flags |= 4),
           _.flags & 16384 &&
-            ((_ = _.tag === 22 ? 536870912 : _()), (_.lanes |= _), (_ |= _));
+            ((_ = _.tag === 22 ? 536870912 : _()), (_.lanes |= _), (_ |= _)));
       }
       function _(_, _) {
         if (!_)
           switch (_.tailMode) {
             case `hidden`:
               _ = _.tail;
-              for (var _ = null; _ !== null; )
-                _.alternate !== null && (_ = _), (_ = _.sibling);
+              for (var _ = null; _ !== null;)
+                (_.alternate !== null && (_ = _), (_ = _.sibling));
               _ === null ? (_.tail = null) : (_.sibling = null);
               break;
             case `collapsed`:
               _ = _.tail;
-              for (var _ = null; _ !== null; )
-                _.alternate !== null && (_ = _), (_ = _.sibling);
+              for (var _ = null; _ !== null;)
+                (_.alternate !== null && (_ = _), (_ = _.sibling));
               _ === null
                 ? _ || _.tail === null
                   ? (_.tail = null)
@@ -24765,20 +24844,20 @@ Error generating stack: ` +
           _ = 0,
           _ = 0;
         if (_)
-          for (var _ = _.child; _ !== null; )
-            (_ |= _.lanes | _.childLanes),
+          for (var _ = _.child; _ !== null;)
+            ((_ |= _.lanes | _.childLanes),
               (_ |= _.subtreeFlags & 65011712),
               (_ |= _.flags & 65011712),
               (_.return = _),
-              (_ = _.sibling);
+              (_ = _.sibling));
         else
-          for (_ = _.child; _ !== null; )
-            (_ |= _.lanes | _.childLanes),
+          for (_ = _.child; _ !== null;)
+            ((_ |= _.lanes | _.childLanes),
               (_ |= _.subtreeFlags),
               (_ |= _.flags),
               (_.return = _),
-              (_ = _.sibling);
-        return (_.subtreeFlags |= _), (_.childLanes = _), _;
+              (_ = _.sibling));
+        return ((_.subtreeFlags |= _), (_.childLanes = _), _);
       }
       function _(_, _, _) {
         var _ = _.pendingProps;
@@ -24793,9 +24872,9 @@ Error generating stack: ` +
           case 12:
           case 9:
           case 14:
-            return _(_), null;
+            return (_(_), null);
           case 1:
-            return _(_), null;
+            return (_(_), null);
           case 3:
             return (
               (_ = _.stateNode),
@@ -24831,26 +24910,26 @@ Error generating stack: ` +
               null
             );
           case 27:
-            _(_), (_ = _.current);
+            (_(_), (_ = _.current));
             var _ = _.type;
             if (_ !== null && _.stateNode != null)
               _.memoizedProps !== _ && _(_);
             else {
               if (!_) {
                 if (_.stateNode === null) throw Error(_(166));
-                return _(_), null;
+                return (_(_), null);
               }
-              (_ = _.current),
-                _(_) ? _(_, _) : ((_ = _(_, _, _)), (_.stateNode = _), _(_));
+              ((_ = _.current),
+                _(_) ? _(_, _) : ((_ = _(_, _, _)), (_.stateNode = _), _(_)));
             }
-            return _(_), null;
+            return (_(_), null);
           case 5:
             if ((_(_), (_ = _.type), _ !== null && _.stateNode != null))
               _.memoizedProps !== _ && _(_);
             else {
               if (!_) {
                 if (_.stateNode === null) throw Error(_(166));
-                return _(_), null;
+                return (_(_), null);
               }
               if (((_ = _.current), _(_))) _(_, _);
               else {
@@ -24876,12 +24955,12 @@ Error generating stack: ` +
                         );
                         break;
                       case `script`:
-                        (_ = _.createElement(`div`)),
+                        ((_ = _.createElement(`div`)),
                           (_.innerHTML = `<script><\/script>`),
-                          (_ = _.removeChild(_.firstChild));
+                          (_ = _.removeChild(_.firstChild)));
                         break;
                       case `select`:
-                        (_ =
+                        ((_ =
                           typeof _._ == `string`
                             ? _.createElement(`select`, {
                                 _: _._,
@@ -24889,7 +24968,7 @@ Error generating stack: ` +
                             : _.createElement(`select`)),
                           _.multiple
                             ? (_.multiple = !0)
-                            : _.size && (_.size = _.size);
+                            : _.size && (_.size = _.size));
                         break;
                       default:
                         _ =
@@ -24900,19 +24979,19 @@ Error generating stack: ` +
                             : _.createElement(_);
                     }
                 }
-                (_[_] = _), (_[_] = _);
-                _: for (_ = _.child; _ !== null; ) {
+                ((_[_] = _), (_[_] = _));
+                _: for (_ = _.child; _ !== null;) {
                   if (_.tag === 5 || _.tag === 6) _.appendChild(_.stateNode);
                   else if (_.tag !== 4 && _.tag !== 27 && _.child !== null) {
-                    (_.child.return = _), (_ = _.child);
+                    ((_.child.return = _), (_ = _.child));
                     continue;
                   }
                   if (_ === _) break _;
-                  for (; _.sibling === null; ) {
+                  for (; _.sibling === null;) {
                     if (_.return === null || _.return === _) break _;
                     _ = _.return;
                   }
-                  (_.sibling.return = _.return), (_ = _.sibling);
+                  ((_.sibling.return = _.return), (_ = _.sibling));
                 }
                 _.stateNode = _;
                 _: switch ((_(_, _, _), _)) {
@@ -24931,7 +25010,7 @@ Error generating stack: ` +
                 _ && _(_);
               }
             }
-            return _(_), (_.flags &= -16777217), null;
+            return (_(_), (_.flags &= -16777217), null);
           case 6:
             if (_ && _.stateNode != null) _.memoizedProps !== _ && _(_);
             else {
@@ -24950,17 +25029,17 @@ Error generating stack: ` +
                     case 5:
                       _ = _.memoizedProps;
                   }
-                (_[_] = _),
+                ((_[_] = _),
                   (_ = !!(
                     _.nodeValue === _ ||
                     (_ !== null && !0 === _.suppressHydrationWarning) ||
                     _(_.nodeValue, _)
                   )),
-                  _ || _(_);
+                  _ || _(_));
               } else
-                (_ = _(_).createTextNode(_)), (_[_] = _), (_.stateNode = _);
+                ((_ = _(_).createTextNode(_)), (_[_] = _), (_.stateNode = _));
             }
-            return _(_), null;
+            return (_(_), null);
           case 13:
             if (
               ((_ = _.memoizedState),
@@ -24979,35 +25058,35 @@ Error generating stack: ` +
                     throw Error(_(317));
                   _[_] = _;
                 } else
-                  _(),
+                  (_(),
                     !(_.flags & 128) && (_.memoizedState = null),
-                    (_.flags |= 4);
-                _(_), (_ = !1);
+                    (_.flags |= 4));
+                (_(_), (_ = !1));
               } else
-                (_ = _()),
+                ((_ = _()),
                   _ !== null &&
                     _.memoizedState !== null &&
                     (_.memoizedState.hydrationErrors = _),
-                  (_ = !0);
+                  (_ = !0));
               if (!_) return _.flags & 256 ? (_(_), _) : (_(_), null);
             }
-            if ((_(_), _.flags & 128)) return (_.lanes = _), _;
+            if ((_(_), _.flags & 128)) return ((_.lanes = _), _);
             if (
               ((_ = _ !== null),
               (_ = _ !== null && _.memoizedState !== null),
               _)
             ) {
-              (_ = _.child),
+              ((_ = _.child),
                 (_ = null),
                 _.alternate !== null &&
                   _.alternate.memoizedState !== null &&
                   _.alternate.memoizedState.cachePool !== null &&
-                  (_ = _.alternate.memoizedState.cachePool.pool);
+                  (_ = _.alternate.memoizedState.cachePool.pool));
               var _ = null;
-              _.memoizedState !== null &&
+              (_.memoizedState !== null &&
                 _.memoizedState.cachePool !== null &&
                 (_ = _.memoizedState.cachePool.pool),
-                _ !== _ && (_.flags |= 2048);
+                _ !== _ && (_.flags |= 2048));
             }
             return (
               _ !== _ && _ && (_.child.flags |= 8192),
@@ -25016,16 +25095,18 @@ Error generating stack: ` +
               null
             );
           case 4:
-            return _(), _ === null && _(_.stateNode.containerInfo), _(_), null;
+            return (
+              _(), _ === null && _(_.stateNode.containerInfo), _(_), null
+            );
           case 10:
-            return _(_.type), _(_), null;
+            return (_(_.type), _(_), null);
           case 19:
-            if ((_(_), (_ = _.memoizedState), _ === null)) return _(_), null;
+            if ((_(_), (_ = _.memoizedState), _ === null)) return (_(_), null);
             if (((_ = !!(_.flags & 128)), (_ = _.rendering), _ === null)) {
               if (_) _(_, !1);
               else {
                 if (_ !== 0 || (_ !== null && _.flags & 128))
-                  for (_ = _.child; _ !== null; ) {
+                  for (_ = _.child; _ !== null;) {
                     if (((_ = _(_)), _ !== null)) {
                       for (
                         _.flags |= 128,
@@ -25038,8 +25119,8 @@ Error generating stack: ` +
                           _ = _.child;
                         _ !== null;
                       )
-                        _(_, _), (_ = _.sibling);
-                      return _(_, (_.current & 1) | 2), _.child;
+                        (_(_, _), (_ = _.sibling));
+                      return (_(_, (_.current & 1) | 2), _.child);
                     }
                     _ = _.sibling;
                   }
@@ -25062,7 +25143,7 @@ Error generating stack: ` +
                       !_.alternate &&
                       !_)
                   )
-                    return _(_), null;
+                    return (_(_), null);
                 } else
                   2 * _() - _.renderingStartTime > _ &&
                     _ !== 536870912 &&
@@ -25148,7 +25229,7 @@ Error generating stack: ` +
           case 26:
           case 27:
           case 5:
-            return _(_), null;
+            return (_(_), null);
           case 13:
             if (
               (_(_), (_ = _.memoizedState), _ !== null && _.dehydrated !== null)
@@ -25161,11 +25242,11 @@ Error generating stack: ` +
               _ & 65536 ? ((_.flags = (_ & -65537) | 128), _) : null
             );
           case 19:
-            return _(_), null;
+            return (_(_), null);
           case 4:
-            return _(), null;
+            return (_(), null);
           case 10:
-            return _(_.type), null;
+            return (_(_.type), null);
           case 22:
           case 23:
             return (
@@ -25176,7 +25257,7 @@ Error generating stack: ` +
               _ & 65536 ? ((_.flags = (_ & -65537) | 128), _) : null
             );
           case 24:
-            return _(_), null;
+            return (_(_), null);
           case 25:
             return null;
           default:
@@ -25186,7 +25267,7 @@ Error generating stack: ` +
       function _(_, _) {
         switch ((_(_), _.tag)) {
           case 3:
-            _(_), _();
+            (_(_), _());
             break;
           case 26:
           case 27:
@@ -25207,7 +25288,7 @@ Error generating stack: ` +
             break;
           case 22:
           case 23:
-            _(_), _(), _ !== null && _(_);
+            (_(_), _(), _ !== null && _(_));
             break;
           case 24:
             _(_);
@@ -25225,7 +25306,7 @@ Error generating stack: ` +
                 _ = void 0;
                 var _ = _.create,
                   _ = _.inst;
-                (_ = _()), (_.destroy = _);
+                ((_ = _()), (_.destroy = _));
               }
               _ = _.next;
             } while (_ !== _);
@@ -25246,7 +25327,7 @@ Error generating stack: ` +
                 var _ = _.inst,
                   _ = _.destroy;
                 if (_ !== void 0) {
-                  (_.destroy = void 0), (_ = _);
+                  ((_.destroy = void 0), (_ = _));
                   var _ = _,
                     _ = _;
                   try {
@@ -25275,7 +25356,7 @@ Error generating stack: ` +
         }
       }
       function _(_, _, _) {
-        (_.props = _(_.type, _.memoizedProps)), (_.state = _.memoizedState);
+        ((_.props = _(_.type, _.memoizedProps)), (_.state = _.memoizedState));
         try {
           _.componentWillUnmount();
         } catch (_) {
@@ -25314,9 +25395,9 @@ Error generating stack: ` +
             } catch (_) {
               _(_, _, _);
             } finally {
-              (_.refCleanup = null),
+              ((_.refCleanup = null),
                 (_ = _.alternate),
-                _ != null && (_.refCleanup = null);
+                _ != null && (_.refCleanup = null));
             }
           else if (typeof _ == `function`)
             try {
@@ -25349,7 +25430,7 @@ Error generating stack: ` +
       function _(_, _, _) {
         try {
           var _ = _.stateNode;
-          _(_, _.type, _, _), (_[_] = _);
+          (_(_, _.type, _, _), (_[_] = _));
         } catch (_) {
           _(_, _.return, _);
         }
@@ -25365,7 +25446,7 @@ Error generating stack: ` +
       }
       function _(_) {
         _: for (;;) {
-          for (; _.sibling === null; ) {
+          for (; _.sibling === null;) {
             if (_.return === null || _(_.return)) return null;
             _ = _.return;
           }
@@ -25380,7 +25461,7 @@ Error generating stack: ` +
               _.tag === 4
             )
               continue _;
-            (_.child.return = _), (_ = _.child);
+            ((_.child.return = _), (_ = _.child));
           }
           if (!(_.flags & 2)) return _.stateNode;
         }
@@ -25388,7 +25469,7 @@ Error generating stack: ` +
       function _(_, _, _) {
         var _ = _.tag;
         if (_ === 5 || _ === 6)
-          (_ = _.stateNode),
+          ((_ = _.stateNode),
             _
               ? (_.nodeType === 9
                   ? _.body
@@ -25404,36 +25485,36 @@ Error generating stack: ` +
                       : _),
                 _.appendChild(_),
                 (_ = _._reactRootContainer),
-                _ != null || _.onclick !== null || (_.onclick = _));
+                _ != null || _.onclick !== null || (_.onclick = _)));
         else if (
           _ !== 4 &&
           (_ === 27 && _(_.type) && ((_ = _.stateNode), (_ = null)),
           (_ = _.child),
           _ !== null)
         )
-          for (_(_, _, _), _ = _.sibling; _ !== null; )
-            _(_, _, _), (_ = _.sibling);
+          for (_(_, _, _), _ = _.sibling; _ !== null;)
+            (_(_, _, _), (_ = _.sibling));
       }
       function _(_, _, _) {
         var _ = _.tag;
         if (_ === 5 || _ === 6)
-          (_ = _.stateNode), _ ? _.insertBefore(_, _) : _.appendChild(_);
+          ((_ = _.stateNode), _ ? _.insertBefore(_, _) : _.appendChild(_));
         else if (
           _ !== 4 &&
           (_ === 27 && _(_.type) && (_ = _.stateNode),
           (_ = _.child),
           _ !== null)
         )
-          for (_(_, _, _), _ = _.sibling; _ !== null; )
-            _(_, _, _), (_ = _.sibling);
+          for (_(_, _, _), _ = _.sibling; _ !== null;)
+            (_(_, _, _), (_ = _.sibling));
       }
       function _(_) {
         var _ = _.stateNode,
           _ = _.memoizedProps;
         try {
-          for (var _ = _.type, _ = _.attributes; _.length; )
+          for (var _ = _.type, _ = _.attributes; _.length;)
             _.removeAttributeNode(_[0]);
-          _(_, _, _), (_[_] = _), (_[_] = _);
+          (_(_, _, _), (_[_] = _), (_[_] = _));
         } catch (_) {
           _(_, _.return, _);
         }
@@ -25460,7 +25541,7 @@ Error generating stack: ` +
                   _ = _.focusNode;
                 _ = _.focusOffset;
                 try {
-                  _.nodeType, _.nodeType;
+                  (_.nodeType, _.nodeType);
                 } catch {
                   _ = null;
                   break _;
@@ -25480,7 +25561,7 @@ Error generating stack: ` +
                       _.nodeType === 3 && (_ += _.nodeValue.length),
                       (_ = _.firstChild) !== null;
                   )
-                    (_ = _), (_ = _);
+                    ((_ = _), (_ = _));
                   for (;;) {
                     if (_ === _) break _;
                     if (
@@ -25489,7 +25570,7 @@ Error generating stack: ` +
                       (_ = _.nextSibling) !== null)
                     )
                       break;
-                    (_ = _), (_ = _.parentNode);
+                    ((_ = _), (_ = _.parentNode));
                   }
                   _ = _;
                 }
@@ -25517,9 +25598,9 @@ Error generating stack: ` +
           _ !== null;
         )
           if (((_ = _), (_ = _.child), _.subtreeFlags & 1024 && _ !== null))
-            (_.return = _), (_ = _);
+            ((_.return = _), (_ = _));
           else
-            for (; _ !== null; ) {
+            for (; _ !== null;) {
               switch (((_ = _), (_ = _.alternate), (_ = _.flags), _.tag)) {
                 case 0:
                   break;
@@ -25528,15 +25609,15 @@ Error generating stack: ` +
                   break;
                 case 1:
                   if (_ & 1024 && _ !== null) {
-                    (_ = void 0),
+                    ((_ = void 0),
                       (_ = _),
                       (_ = _.memoizedProps),
                       (_ = _.memoizedState),
-                      (_ = _.stateNode);
+                      (_ = _.stateNode));
                     try {
                       var _ = _(_.type, _, _.elementType === _.type);
-                      (_ = _.getSnapshotBeforeUpdate(_, _)),
-                        (_.__reactInternalSnapshotBeforeUpdate = _);
+                      ((_ = _.getSnapshotBeforeUpdate(_, _)),
+                        (_.__reactInternalSnapshotBeforeUpdate = _));
                     } catch (_) {
                       _(_, _.return, _);
                     }
@@ -25573,7 +25654,7 @@ Error generating stack: ` +
                   if (_ & 1024) throw Error(_(163));
               }
               if (((_ = _.sibling), _ !== null)) {
-                (_.return = _.return), (_ = _);
+                ((_.return = _.return), (_ = _));
                 break;
               }
               _ = _.return;
@@ -25585,7 +25666,7 @@ Error generating stack: ` +
           case 0:
           case 11:
           case 15:
-            _(_, _), _ & 4 && _(5, _);
+            (_(_, _), _ & 4 && _(5, _));
             break;
           case 1:
             if ((_(_, _), _ & 4)) {
@@ -25609,7 +25690,7 @@ Error generating stack: ` +
                 }
               }
             }
-            _ & 64 && _(_), _ & 512 && _(_, _.return);
+            (_ & 64 && _(_), _ & 512 && _(_, _.return));
             break;
           case 3:
             if ((_(_, _), _ & 64 && ((_ = _.updateQueue), _ !== null))) {
@@ -25633,28 +25714,28 @@ Error generating stack: ` +
             _ === null && _ & 4 && _(_);
           case 26:
           case 5:
-            _(_, _), _ === null && _ & 4 && _(_), _ & 512 && _(_, _.return);
+            (_(_, _), _ === null && _ & 4 && _(_), _ & 512 && _(_, _.return));
             break;
           case 12:
             _(_, _);
             break;
           case 13:
-            _(_, _),
+            (_(_, _),
               _ & 4 && _(_, _),
               _ & 64 &&
                 ((_ = _.memoizedState),
                 _ !== null &&
                   ((_ = _.dehydrated),
-                  _ !== null && ((_ = _.bind(null, _)), _(_, _))));
+                  _ !== null && ((_ = _.bind(null, _)), _(_, _)))));
             break;
           case 22:
             if (((_ = _.memoizedState !== null || _), !_)) {
-              (_ = (_ !== null && _.memoizedState !== null) || _), (_ = _);
+              ((_ = (_ !== null && _.memoizedState !== null) || _), (_ = _));
               var _ = _;
-              (_ = _),
+              ((_ = _),
                 (_ = _) && !_ ? _(_, _, !!(_.subtreeFlags & 8772)) : _(_, _),
                 (_ = _),
-                (_ = _);
+                (_ = _));
             }
             break;
           case 30:
@@ -25665,7 +25746,7 @@ Error generating stack: ` +
       }
       function _(_) {
         var _ = _.alternate;
-        _ !== null && ((_.alternate = null), _(_)),
+        (_ !== null && ((_.alternate = null), _(_)),
           (_.child = null),
           (_.deletions = null),
           (_.sibling = null),
@@ -25677,12 +25758,12 @@ Error generating stack: ` +
           (_.memoizedState = null),
           (_.pendingProps = null),
           (_.stateNode = null),
-          (_.updateQueue = null);
+          (_.updateQueue = null));
       }
       var _ = null,
         _ = !1;
       function _(_, _, _) {
-        for (_ = _.child; _ !== null; ) _(_, _, _), (_ = _.sibling);
+        for (_ = _.child; _ !== null;) (_(_, _, _), (_ = _.sibling));
       }
       function _(_, _, _) {
         if (_ && typeof _.onCommitFiberUnmount == `function`)
@@ -25691,22 +25772,22 @@ Error generating stack: ` +
           } catch {}
         switch (_.tag) {
           case 26:
-            _ || _(_, _),
+            (_ || _(_, _),
               _(_, _, _),
               _.memoizedState
                 ? _.memoizedState.count--
                 : _.stateNode &&
-                  ((_ = _.stateNode), _.parentNode.removeChild(_));
+                  ((_ = _.stateNode), _.parentNode.removeChild(_)));
             break;
           case 27:
             _ || _(_, _);
             var _ = _,
               _ = _;
-            _(_.type) && ((_ = _.stateNode), (_ = !1)),
+            (_(_.type) && ((_ = _.stateNode), (_ = !1)),
               _(_, _, _),
               _(_.stateNode),
               (_ = _),
-              (_ = _);
+              (_ = _));
             break;
           case 5:
             _ || _(_, _);
@@ -25755,32 +25836,32 @@ Error generating stack: ` +
                 : _(_, _.stateNode));
             break;
           case 4:
-            (_ = _),
+            ((_ = _),
               (_ = _),
               (_ = _.stateNode.containerInfo),
               (_ = !0),
               _(_, _, _),
               (_ = _),
-              (_ = _);
+              (_ = _));
             break;
           case 0:
           case 11:
           case 14:
           case 15:
-            _ || _(2, _, _), _ || _(4, _, _), _(_, _, _);
+            (_ || _(2, _, _), _ || _(4, _, _), _(_, _, _));
             break;
           case 1:
-            _ ||
+            (_ ||
               (_(_, _),
               (_ = _.stateNode),
               typeof _.componentWillUnmount == `function` && _(_, _, _)),
-              _(_, _, _);
+              _(_, _, _));
             break;
           case 21:
             _(_, _, _);
             break;
           case 22:
-            (_ = (_ = _) || _.memoizedState !== null), _(_, _, _), (_ = _);
+            ((_ = (_ = _) || _.memoizedState !== null), _(_, _, _), (_ = _));
             break;
           default:
             _(_, _, _);
@@ -25805,7 +25886,7 @@ Error generating stack: ` +
           case 13:
           case 19:
             var _ = _.stateNode;
-            return _ === null && (_ = _.stateNode = new _()), _;
+            return (_ === null && (_ = _.stateNode = new _()), _);
           case 22:
             return (
               (_ = _.stateNode),
@@ -25832,34 +25913,34 @@ Error generating stack: ` +
               _ = _,
               _ = _,
               _ = _;
-            _: for (; _ !== null; ) {
+            _: for (; _ !== null;) {
               switch (_.tag) {
                 case 27:
                   if (_(_.type)) {
-                    (_ = _.stateNode), (_ = !1);
+                    ((_ = _.stateNode), (_ = !1));
                     break _;
                   }
                   break;
                 case 5:
-                  (_ = _.stateNode), (_ = !1);
+                  ((_ = _.stateNode), (_ = !1));
                   break _;
                 case 3:
                 case 4:
-                  (_ = _.stateNode.containerInfo), (_ = !0);
+                  ((_ = _.stateNode.containerInfo), (_ = !0));
                   break _;
               }
               _ = _.return;
             }
             if (_ === null) throw Error(_(160));
-            _(_, _, _),
+            (_(_, _, _),
               (_ = null),
               (_ = !1),
               (_ = _.alternate),
               _ !== null && (_.return = null),
-              (_.return = null);
+              (_.return = null));
           }
         if (_.subtreeFlags & 13878)
-          for (_ = _.child; _ !== null; ) _(_, _), (_ = _.sibling);
+          for (_ = _.child; _ !== null;) (_(_, _), (_ = _.sibling));
       }
       var _ = null;
       function _(_, _) {
@@ -25870,12 +25951,12 @@ Error generating stack: ` +
           case 11:
           case 14:
           case 15:
-            _(_, _),
+            (_(_, _),
               _(_),
-              _ & 4 && (_(3, _, _.return), _(3, _), _(5, _, _.return));
+              _ & 4 && (_(3, _, _.return), _(3, _), _(5, _, _.return)));
             break;
           case 1:
-            _(_, _),
+            (_(_, _),
               _(_),
               _ & 512 && (_ || _ === null || _(_, _.return)),
               _ & 64 &&
@@ -25886,7 +25967,7 @@ Error generating stack: ` +
                   _ !== null &&
                     ((_ = _.shared.hiddenCallbacks),
                     (_.shared.hiddenCallbacks =
-                      _ === null ? _ : _.concat(_)))));
+                      _ === null ? _ : _.concat(_))))));
             break;
           case 26:
             var _ = _;
@@ -25901,12 +25982,12 @@ Error generating stack: ` +
                 if (_ === null) {
                   if (_.stateNode === null) {
                     _: {
-                      (_ = _.type),
+                      ((_ = _.type),
                         (_ = _.memoizedProps),
-                        (_ = _.ownerDocument || _);
+                        (_ = _.ownerDocument || _));
                       _: switch (_) {
                         case `title`:
-                          (_ = _.getElementsByTagName(`title`)[0]),
+                          ((_ = _.getElementsByTagName(`title`)[0]),
                             (!_ ||
                               _[_] ||
                               _[_] ||
@@ -25920,7 +26001,7 @@ Error generating stack: ` +
                             _(_, _, _),
                             (_[_] = _),
                             _(_),
-                            (_ = _);
+                            (_ = _));
                           break _;
                         case `link`:
                           var _ = _(`link`, `href`, _).get(_ + (_.href || ``));
@@ -25945,9 +26026,9 @@ Error generating stack: ` +
                                 break _;
                               }
                           }
-                          (_ = _.createElement(_)),
+                          ((_ = _.createElement(_)),
                             _(_, _, _),
-                            _.head.appendChild(_);
+                            _.head.appendChild(_));
                           break;
                         case `meta`:
                           if (
@@ -25975,14 +26056,14 @@ Error generating stack: ` +
                                 break _;
                               }
                           }
-                          (_ = _.createElement(_)),
+                          ((_ = _.createElement(_)),
                             _(_, _, _),
-                            _.head.appendChild(_);
+                            _.head.appendChild(_));
                           break;
                         default:
                           throw Error(_(468, _));
                       }
-                      (_[_] = _), _(_), (_ = _);
+                      ((_[_] = _), _(_), (_ = _));
                     }
                     _.stateNode = _;
                   } else _(_, _.type, _.stateNode);
@@ -26002,10 +26083,10 @@ Error generating stack: ` +
             }
             break;
           case 27:
-            _(_, _),
+            (_(_, _),
               _(_),
               _ & 512 && (_ || _ === null || _(_, _.return)),
-              _ !== null && _ & 4 && _(_, _.memoizedProps, _.memoizedProps);
+              _ !== null && _ & 4 && _(_, _.memoizedProps, _.memoizedProps));
             break;
           case 5:
             if (
@@ -26021,16 +26102,16 @@ Error generating stack: ` +
                 _(_, _.return, _);
               }
             }
-            _ & 4 &&
+            (_ & 4 &&
               _.stateNode != null &&
               ((_ = _.memoizedProps),
               _(_, _, _ === null ? _ : _.memoizedProps)),
-              _ & 1024 && (_ = !0);
+              _ & 1024 && (_ = !0));
             break;
           case 6:
             if ((_(_, _), _(_), _ & 4)) {
               if (_.stateNode === null) throw Error(_(162));
-              (_ = _.memoizedProps), (_ = _.stateNode);
+              ((_ = _.memoizedProps), (_ = _.stateNode));
               try {
                 _.nodeValue = _;
               } catch (_) {
@@ -26056,13 +26137,17 @@ Error generating stack: ` +
             _ && ((_ = !1), _(_));
             break;
           case 4:
-            (_ = _), (_ = _(_.stateNode.containerInfo)), _(_, _), _(_), (_ = _);
+            ((_ = _),
+              (_ = _(_.stateNode.containerInfo)),
+              _(_, _),
+              _(_),
+              (_ = _));
             break;
           case 12:
-            _(_, _), _(_);
+            (_(_, _), _(_));
             break;
           case 13:
-            _(_, _),
+            (_(_, _),
               _(_),
               _.child.flags & 8192 &&
                 (_.memoizedState !== null) !=
@@ -26070,7 +26155,7 @@ Error generating stack: ` +
                 (_ = _()),
               _ & 4 &&
                 ((_ = _.updateQueue),
-                _ !== null && ((_.updateQueue = null), _(_, _)));
+                _ !== null && ((_.updateQueue = null), _(_, _))));
             break;
           case 22:
             _ = _.memoizedState !== null;
@@ -26099,10 +26184,10 @@ Error generating stack: ` +
                     _ = _ = _;
                     try {
                       if (((_ = _.stateNode), _))
-                        (_ = _.style),
+                        ((_ = _.style),
                           typeof _.setProperty == `function`
                             ? _.setProperty(`display`, `none`, `important`)
-                            : (_.display = `none`);
+                            : (_.display = `none`));
                       else {
                         _ = _.stateNode;
                         var _ = _.memoizedProps.style,
@@ -26134,17 +26219,17 @@ Error generating stack: ` +
                     _ === _) &&
                   _.child !== null
                 ) {
-                  (_.child.return = _), (_ = _.child);
+                  ((_.child.return = _), (_ = _.child));
                   continue;
                 }
                 if (_ === _) break _;
-                for (; _.sibling === null; ) {
+                for (; _.sibling === null;) {
                   if (_.return === null || _.return === _) break _;
-                  _ === _ && (_ = null), (_ = _.return);
+                  (_ === _ && (_ = null), (_ = _.return));
                 }
-                _ === _ && (_ = null),
+                (_ === _ && (_ = null),
                   (_.sibling.return = _.return),
-                  (_ = _.sibling);
+                  (_ = _.sibling));
               }
             _ & 4 &&
               ((_ = _.updateQueue),
@@ -26153,25 +26238,25 @@ Error generating stack: ` +
                 _ !== null && ((_.retryQueue = null), _(_, _))));
             break;
           case 19:
-            _(_, _),
+            (_(_, _),
               _(_),
               _ & 4 &&
                 ((_ = _.updateQueue),
-                _ !== null && ((_.updateQueue = null), _(_, _)));
+                _ !== null && ((_.updateQueue = null), _(_, _))));
             break;
           case 30:
             break;
           case 21:
             break;
           default:
-            _(_, _), _(_);
+            (_(_, _), _(_));
         }
       }
       function _(_) {
         var _ = _.flags;
         if (_ & 2) {
           try {
-            for (var _, _ = _.return; _ !== null; ) {
+            for (var _, _ = _.return; _ !== null;) {
               if (_(_)) {
                 _ = _;
                 break;
@@ -26186,7 +26271,7 @@ Error generating stack: ` +
                 break;
               case 5:
                 var _ = _.stateNode;
-                _.flags & 32 && (_(_, ``), (_.flags &= -33)), _(_, _(_), _);
+                (_.flags & 32 && (_(_, ``), (_.flags &= -33)), _(_, _(_), _));
                 break;
               case 3:
               case 4:
@@ -26205,38 +26290,39 @@ Error generating stack: ` +
       }
       function _(_) {
         if (_.subtreeFlags & 1024)
-          for (_ = _.child; _ !== null; ) {
+          for (_ = _.child; _ !== null;) {
             var _ = _;
-            _(_),
+            (_(_),
               _.tag === 5 && _.flags & 1024 && _.stateNode.reset(),
-              (_ = _.sibling);
+              (_ = _.sibling));
           }
       }
       function _(_, _) {
         if (_.subtreeFlags & 8772)
-          for (_ = _.child; _ !== null; ) _(_, _.alternate, _), (_ = _.sibling);
+          for (_ = _.child; _ !== null;)
+            (_(_, _.alternate, _), (_ = _.sibling));
       }
       function _(_) {
-        for (_ = _.child; _ !== null; ) {
+        for (_ = _.child; _ !== null;) {
           var _ = _;
           switch (_.tag) {
             case 0:
             case 11:
             case 14:
             case 15:
-              _(4, _, _.return), _(_);
+              (_(4, _, _.return), _(_));
               break;
             case 1:
               _(_, _.return);
               var _ = _.stateNode;
-              typeof _.componentWillUnmount == `function` && _(_, _.return, _),
-                _(_);
+              (typeof _.componentWillUnmount == `function` && _(_, _.return, _),
+                _(_));
               break;
             case 27:
               _(_.stateNode);
             case 26:
             case 5:
-              _(_, _.return), _(_);
+              (_(_, _.return), _(_));
               break;
             case 22:
               _.memoizedState === null && _(_);
@@ -26251,7 +26337,7 @@ Error generating stack: ` +
         }
       }
       function _(_, _, _) {
-        for (_ &&= !!(_.subtreeFlags & 8772), _ = _.child; _ !== null; ) {
+        for (_ &&= !!(_.subtreeFlags & 8772), _ = _.child; _ !== null;) {
           var _ = _.alternate,
             _ = _,
             _ = _,
@@ -26260,7 +26346,7 @@ Error generating stack: ` +
             case 0:
             case 11:
             case 15:
-              _(_, _, _), _(4, _);
+              (_(_, _, _), _(4, _));
               break;
             case 1:
               if (
@@ -26289,22 +26375,22 @@ Error generating stack: ` +
                   _(_, _.return, _);
                 }
               }
-              _ && _ & 64 && _(_), _(_, _.return);
+              (_ && _ & 64 && _(_), _(_, _.return));
               break;
             case 27:
               _(_);
             case 26:
             case 5:
-              _(_, _, _), _ && _ === null && _ & 4 && _(_), _(_, _.return);
+              (_(_, _, _), _ && _ === null && _ & 4 && _(_), _(_, _.return));
               break;
             case 12:
               _(_, _, _);
               break;
             case 13:
-              _(_, _, _), _ && _ & 4 && _(_, _);
+              (_(_, _, _), _ && _ & 4 && _(_, _));
               break;
             case 22:
-              _.memoizedState === null && _(_, _, _), _(_, _.return);
+              (_.memoizedState === null && _(_, _, _), _(_, _.return));
               break;
             case 30:
               break;
@@ -26316,7 +26402,7 @@ Error generating stack: ` +
       }
       function _(_, _) {
         var _ = null;
-        _ !== null &&
+        (_ !== null &&
           _.memoizedState !== null &&
           _.memoizedState.cachePool !== null &&
           (_ = _.memoizedState.cachePool.pool),
@@ -26324,17 +26410,17 @@ Error generating stack: ` +
           _.memoizedState !== null &&
             _.memoizedState.cachePool !== null &&
             (_ = _.memoizedState.cachePool.pool),
-          _ !== _ && (_ != null && _.refCount++, _ != null && _(_));
+          _ !== _ && (_ != null && _.refCount++, _ != null && _(_)));
       }
       function _(_, _) {
-        (_ = null),
+        ((_ = null),
           _.alternate !== null && (_ = _.alternate.memoizedState.cache),
           (_ = _.memoizedState.cache),
-          _ !== _ && (_.refCount++, _ != null && _(_));
+          _ !== _ && (_.refCount++, _ != null && _(_)));
       }
       function _(_, _, _, _) {
         if (_.subtreeFlags & 10256)
-          for (_ = _.child; _ !== null; ) _(_, _, _, _), (_ = _.sibling);
+          for (_ = _.child; _ !== null;) (_(_, _, _, _), (_ = _.sibling));
       }
       function _(_, _, _, _) {
         var _ = _.flags;
@@ -26342,22 +26428,22 @@ Error generating stack: ` +
           case 0:
           case 11:
           case 15:
-            _(_, _, _, _), _ & 2048 && _(9, _);
+            (_(_, _, _, _), _ & 2048 && _(9, _));
             break;
           case 1:
             _(_, _, _, _);
             break;
           case 3:
-            _(_, _, _, _),
+            (_(_, _, _, _),
               _ & 2048 &&
                 ((_ = null),
                 _.alternate !== null && (_ = _.alternate.memoizedState.cache),
                 (_ = _.memoizedState.cache),
-                _ !== _ && (_.refCount++, _ != null && _(_)));
+                _ !== _ && (_.refCount++, _ != null && _(_))));
             break;
           case 12:
             if (_ & 2048) {
-              _(_, _, _, _), (_ = _.stateNode);
+              (_(_, _, _, _), (_ = _.stateNode));
               try {
                 var _ = _.memoizedProps,
                   _ = _._,
@@ -26380,7 +26466,7 @@ Error generating stack: ` +
           case 23:
             break;
           case 22:
-            (_ = _.stateNode),
+            ((_ = _.stateNode),
               (_ = _.alternate),
               _.memoizedState === null
                 ? _._visibility & 2
@@ -26390,17 +26476,17 @@ Error generating stack: ` +
                 : _._visibility & 2
                   ? _(_, _, _, _)
                   : _(_, _),
-              _ & 2048 && _(_, _);
+              _ & 2048 && _(_, _));
             break;
           case 24:
-            _(_, _, _, _), _ & 2048 && _(_.alternate, _);
+            (_(_, _, _, _), _ & 2048 && _(_.alternate, _));
             break;
           default:
             _(_, _, _, _);
         }
       }
       function _(_, _, _, _, _) {
-        for (_ &&= !!(_.subtreeFlags & 10256), _ = _.child; _ !== null; ) {
+        for (_ &&= !!(_.subtreeFlags & 10256), _ = _.child; _ !== null;) {
           var _ = _,
             _ = _,
             _ = _,
@@ -26410,21 +26496,21 @@ Error generating stack: ` +
             case 0:
             case 11:
             case 15:
-              _(_, _, _, _, _), _(8, _);
+              (_(_, _, _, _, _), _(8, _));
               break;
             case 23:
               break;
             case 22:
               var _ = _.stateNode;
-              _.memoizedState === null
+              (_.memoizedState === null
                 ? ((_._visibility |= 2), _(_, _, _, _, _))
                 : _._visibility & 2
                   ? _(_, _, _, _, _)
                   : _(_, _),
-                _ && _ & 2048 && _(_.alternate, _);
+                _ && _ & 2048 && _(_.alternate, _));
               break;
             case 24:
-              _(_, _, _, _, _), _ && _ & 2048 && _(_.alternate, _);
+              (_(_, _, _, _, _), _ && _ & 2048 && _(_.alternate, _));
               break;
             default:
               _(_, _, _, _, _);
@@ -26434,16 +26520,16 @@ Error generating stack: ` +
       }
       function _(_, _) {
         if (_.subtreeFlags & 10256)
-          for (_ = _.child; _ !== null; ) {
+          for (_ = _.child; _ !== null;) {
             var _ = _,
               _ = _,
               _ = _.flags;
             switch (_.tag) {
               case 22:
-                _(_, _), _ & 2048 && _(_.alternate, _);
+                (_(_, _), _ & 2048 && _(_.alternate, _));
                 break;
               case 24:
-                _(_, _), _ & 2048 && _(_.alternate, _);
+                (_(_, _), _ & 2048 && _(_.alternate, _));
                 break;
               default:
                 _(_, _);
@@ -26454,15 +26540,15 @@ Error generating stack: ` +
       var _ = 8192;
       function _(_) {
         if (_.subtreeFlags & _)
-          for (_ = _.child; _ !== null; ) _(_), (_ = _.sibling);
+          for (_ = _.child; _ !== null;) (_(_), (_ = _.sibling));
       }
       function _(_) {
         switch (_.tag) {
           case 26:
-            _(_),
+            (_(_),
               _.flags & _ &&
                 _.memoizedState !== null &&
-                _(_, _.memoizedState, _.memoizedProps);
+                _(_, _.memoizedState, _.memoizedProps));
             break;
           case 5:
             _(_);
@@ -26470,7 +26556,7 @@ Error generating stack: ` +
           case 3:
           case 4:
             var _ = _;
-            (_ = _(_.stateNode.containerInfo)), _(_), (_ = _);
+            ((_ = _(_.stateNode.containerInfo)), _(_), (_ = _));
             break;
           case 22:
             _.memoizedState === null &&
@@ -26487,7 +26573,7 @@ Error generating stack: ` +
         var _ = _.alternate;
         if (_ !== null && ((_ = _.child), _ !== null)) {
           _.child = null;
-          do (_ = _.sibling), (_.sibling = null), (_ = _);
+          do ((_ = _.sibling), (_.sibling = null), (_ = _));
           while (_ !== null);
         }
       }
@@ -26497,19 +26583,19 @@ Error generating stack: ` +
           if (_ !== null)
             for (var _ = 0; _ < _.length; _++) {
               var _ = _[_];
-              (_ = _), _(_, _);
+              ((_ = _), _(_, _));
             }
           _(_);
         }
         if (_.subtreeFlags & 10256)
-          for (_ = _.child; _ !== null; ) _(_), (_ = _.sibling);
+          for (_ = _.child; _ !== null;) (_(_), (_ = _.sibling));
       }
       function _(_) {
         switch (_.tag) {
           case 0:
           case 11:
           case 15:
-            _(_), _.flags & 2048 && _(9, _, _.return);
+            (_(_), _.flags & 2048 && _(9, _, _.return));
             break;
           case 3:
             _(_);
@@ -26535,20 +26621,20 @@ Error generating stack: ` +
           if (_ !== null)
             for (var _ = 0; _ < _.length; _++) {
               var _ = _[_];
-              (_ = _), _(_, _);
+              ((_ = _), _(_, _));
             }
           _(_);
         }
-        for (_ = _.child; _ !== null; ) {
+        for (_ = _.child; _ !== null;) {
           switch (((_ = _), _.tag)) {
             case 0:
             case 11:
             case 15:
-              _(8, _, _.return), _(_);
+              (_(8, _, _.return), _(_));
               break;
             case 22:
-              (_ = _.stateNode),
-                _._visibility & 2 && ((_._visibility &= -3), _(_));
+              ((_ = _.stateNode),
+                _._visibility & 2 && ((_._visibility &= -3), _(_)));
               break;
             default:
               _(_);
@@ -26557,7 +26643,7 @@ Error generating stack: ` +
         }
       }
       function _(_, _) {
-        for (; _ !== null; ) {
+        for (; _ !== null;) {
           var _ = _;
           switch (_.tag) {
             case 0:
@@ -26578,9 +26664,9 @@ Error generating stack: ` +
             case 24:
               _(_.memoizedState.cache);
           }
-          if (((_ = _.child), _ !== null)) (_.return = _), (_ = _);
+          if (((_ = _.child), _ !== null)) ((_.return = _), (_ = _));
           else
-            _: for (_ = _; _ !== null; ) {
+            _: for (_ = _; _ !== null;) {
               _ = _;
               var _ = _.sibling,
                 _ = _.return;
@@ -26589,7 +26675,7 @@ Error generating stack: ` +
                 break _;
               }
               if (_ !== null) {
-                (_.return = _), (_ = _);
+                ((_.return = _), (_ = _));
                 break _;
               }
               _ = _;
@@ -26600,7 +26686,7 @@ Error generating stack: ` +
           getCacheForType: function (_) {
             var _ = _(_),
               _ = _.data.get(_);
-            return _ === void 0 && ((_ = _()), _.data.set(_, _)), _;
+            return (_ === void 0 && ((_ = _()), _.data.set(_, _)), _);
           },
         },
         _ = typeof WeakMap == `function` ? WeakMap : Map,
@@ -26647,15 +26733,16 @@ Error generating stack: ` +
       function _() {
         _ === 0 && (_ = !(_ & 536870912) || _ ? _() : 536870912);
         var _ = _.current;
-        return _ !== null && (_.flags |= 32), _;
+        return (_ !== null && (_.flags |= 32), _);
       }
       function _(_, _, _) {
-        ((_ === _ && (_ === 2 || _ === 9)) || _.cancelPendingCommit !== null) &&
+        (((_ === _ && (_ === 2 || _ === 9)) ||
+          _.cancelPendingCommit !== null) &&
           (_(_, 0), _(_, _, _, !1)),
           _(_, _),
           (_ & 2 && _ === _) ||
             (_ === _ && (!(_ & 2) && (_ |= _), _ === 4 && _(_, _, _, !1)),
-            _(_));
+            _(_)));
       }
       function _(_, _, _) {
         if (_ & 6) throw Error(_(327));
@@ -26668,13 +26755,13 @@ Error generating stack: ` +
             break;
           }
           if (((_ = _.current.alternate), _ && !_(_)))
-            (_ = _(_, _, !1)), (_ = !1);
+            ((_ = _(_, _, !1)), (_ = !1));
           else {
             if (_ === 2) {
               if (((_ = _), _.errorRecoveryDisabledLanes & _)) var _ = 0;
               else
-                (_ = _.pendingLanes & -536870913),
-                  (_ = _ === 0 ? (_ & 536870912 ? 536870912 : 0) : _);
+                ((_ = _.pendingLanes & -536870913),
+                  (_ = _ === 0 ? (_ & 536870912 ? 536870912 : 0) : _));
               if (_ !== 0) {
                 _ = _;
                 _: {
@@ -26685,12 +26772,13 @@ Error generating stack: ` +
                     (_ && (_(_, _).flags |= 256), (_ = _(_, _, !1)), _ !== 2)
                   ) {
                     if (_ && !_) {
-                      (_.errorRecoveryDisabledLanes |= _), (_ |= _), (_ = 4);
+                      ((_.errorRecoveryDisabledLanes |= _), (_ |= _), (_ = 4));
                       break _;
                     }
-                    (_ = _),
+                    ((_ = _),
                       (_ = _),
-                      _ !== null && (_ === null ? (_ = _) : _.push.apply(_, _));
+                      _ !== null &&
+                        (_ === null ? (_ = _) : _.push.apply(_, _)));
                   }
                   _ = _;
                 }
@@ -26698,7 +26786,7 @@ Error generating stack: ` +
               }
             }
             if (_ === 1) {
-              _(_, 0), _(_, _, 0, !0);
+              (_(_, 0), _(_, _, 0, !0));
               break;
             }
             _: {
@@ -26736,7 +26824,7 @@ Error generating stack: ` +
         _(_);
       }
       function _(_, _, _, _, _, _, _, _, _, _, _, _, _, _) {
-        (_.timeoutHandle = -1),
+        ((_.timeoutHandle = -1),
           (_ = _.subtreeFlags),
           (_ & 8192 || (_ & 16785408) == 16785408) &&
           ((_ = {
@@ -26751,10 +26839,10 @@ Error generating stack: ` +
                 _.bind(null, _, _, _, _, _, _, _, _, _, _, 1, _, _),
               )),
               _(_, _, _, !_))
-            : _(_, _, _, _, _, _, _, _, _);
+            : _(_, _, _, _, _, _, _, _, _));
       }
       function _(_) {
-        for (var _ = _; ; ) {
+        for (var _ = _; ;) {
           var _ = _.tag;
           if (
             (_ === 0 || _ === 11 || _ === 15) &&
@@ -26772,29 +26860,29 @@ Error generating stack: ` +
               }
             }
           if (((_ = _.child), _.subtreeFlags & 16384 && _ !== null))
-            (_.return = _), (_ = _);
+            ((_.return = _), (_ = _));
           else {
             if (_ === _) break;
-            for (; _.sibling === null; ) {
+            for (; _.sibling === null;) {
               if (_.return === null || _.return === _) return !0;
               _ = _.return;
             }
-            (_.sibling.return = _.return), (_ = _.sibling);
+            ((_.sibling.return = _.return), (_ = _.sibling));
           }
         }
         return !0;
       }
       function _(_, _, _, _) {
-        (_ &= ~_),
+        ((_ &= ~_),
           (_ &= ~_),
           (_.suspendedLanes |= _),
           (_.pingedLanes &= ~_),
           _ && (_.warmLanes |= _),
-          (_ = _.expirationTimes);
-        for (var _ = _; 0 < _; ) {
+          (_ = _.expirationTimes));
+        for (var _ = _; 0 < _;) {
           var _ = 31 - _(_),
             _ = 1 << _;
-          (_[_] = -1), (_ &= ~_);
+          ((_[_] = -1), (_ &= ~_));
         }
         _ !== 0 && _(_, _, _);
       }
@@ -26804,14 +26892,14 @@ Error generating stack: ` +
       function _() {
         if (_ !== null) {
           if (_ === 0) var _ = _.return;
-          else (_ = _), (_ = _ = null), _(_), (_ = null), (_ = 0), (_ = _);
-          for (; _ !== null; ) _(_.alternate, _), (_ = _.return);
+          else ((_ = _), (_ = _ = null), _(_), (_ = null), (_ = 0), (_ = _));
+          for (; _ !== null;) (_(_.alternate, _), (_ = _.return));
           _ = null;
         }
       }
       function _(_, _) {
         var _ = _.timeoutHandle;
-        _ !== -1 && ((_.timeoutHandle = -1), _(_)),
+        (_ !== -1 && ((_.timeoutHandle = -1), _(_)),
           (_ = _.cancelPendingCommit),
           _ !== null && ((_.cancelPendingCommit = null), _()),
           _(),
@@ -26826,18 +26914,18 @@ Error generating stack: ` +
           (_ = _ = _ = _ = _ = _ = 0),
           (_ = _ = null),
           (_ = !1),
-          _ & 8 && (_ |= _ & 32);
+          _ & 8 && (_ |= _ & 32));
         var _ = _.entangledLanes;
         if (_ !== 0)
-          for (_ = _.entanglements, _ &= _; 0 < _; ) {
+          for (_ = _.entanglements, _ &= _; 0 < _;) {
             var _ = 31 - _(_),
               _ = 1 << _;
-            (_ |= _[_]), (_ &= ~_);
+            ((_ |= _[_]), (_ &= ~_));
           }
-        return (_ = _), _(), _;
+        return ((_ = _), _(), _);
       }
       function _(_, _) {
-        (_ = null),
+        ((_ = null),
           (_._ = _),
           _ === _ || _ === _
             ? ((_ = _()), (_ = 3))
@@ -26850,29 +26938,29 @@ Error generating stack: ` +
                       ? 6
                       : 1),
           (_ = _),
-          _ === null && ((_ = 1), _(_, _(_, _.current)));
+          _ === null && ((_ = 1), _(_, _(_, _.current))));
       }
       function _() {
         var _ = _._;
-        return (_._ = _), _ === null ? _ : _;
+        return ((_._ = _), _ === null ? _ : _);
       }
       function _() {
         var _ = _._;
-        return (_._ = _), _;
+        return ((_._ = _), _);
       }
       function _() {
-        (_ = 4),
+        ((_ = 4),
           _ || ((_ & 4194048) !== _ && _.current !== null) || (_ = !0),
           (!(_ & 134217727) && !(_ & 134217727)) ||
             _ === null ||
-            _(_, _, _, !1);
+            _(_, _, _, !1));
       }
       function _(_, _, _) {
         var _ = _;
         _ |= 2;
         var _ = _(),
           _ = _();
-        (_ !== _ || _ !== _) && ((_ = null), _(_, _)), (_ = !1);
+        ((_ !== _ || _ !== _) && ((_ = null), _(_, _)), (_ = !1));
         var _ = _;
         _: do
           try {
@@ -26881,7 +26969,7 @@ Error generating stack: ` +
                 _ = _;
               switch (_) {
                 case 8:
-                  _(), (_ = 6);
+                  (_(), (_ = 6));
                   break _;
                 case 3:
                 case 2:
@@ -26895,10 +26983,10 @@ Error generating stack: ` +
                   }
                   break;
                 default:
-                  (_ = _), (_ = 0), (_ = null), _(_, _, _, _);
+                  ((_ = _), (_ = 0), (_ = null), _(_, _, _, _));
               }
             }
-            _(), (_ = _);
+            (_(), (_ = _));
             break;
           } catch (_) {
             _(_, _);
@@ -26915,7 +27003,7 @@ Error generating stack: ` +
         );
       }
       function _() {
-        for (; _ !== null; ) _(_);
+        for (; _ !== null;) _(_);
       }
       function _(_, _) {
         var _ = _;
@@ -26932,18 +27020,18 @@ Error generating stack: ` +
               var _ = _;
               _: switch (_) {
                 case 1:
-                  (_ = 0), (_ = null), _(_, _, _, 1);
+                  ((_ = 0), (_ = null), _(_, _, _, 1));
                   break;
                 case 2:
                 case 9:
                   if (_(_)) {
-                    (_ = 0), (_ = null), _(_);
+                    ((_ = 0), (_ = null), _(_));
                     break;
                   }
-                  (_ = function () {
-                    (_ !== 2 && _ !== 9) || _ !== _ || (_ = 7), _(_);
+                  ((_ = function () {
+                    ((_ !== 2 && _ !== 9) || _ !== _ || (_ = 7), _(_));
                   }),
-                    _.then(_, _);
+                    _.then(_, _));
                   break _;
                 case 3:
                   _ = 7;
@@ -26965,7 +27053,7 @@ Error generating stack: ` +
                     case 27:
                       var _ = _;
                       if (!_ || _(_)) {
-                        (_ = 0), (_ = null);
+                        ((_ = 0), (_ = null));
                         var _ = _.sibling;
                         if (_ !== null) _ = _;
                         else {
@@ -26975,13 +27063,13 @@ Error generating stack: ` +
                         break _;
                       }
                   }
-                  (_ = 0), (_ = null), _(_, _, _, 5);
+                  ((_ = 0), (_ = null), _(_, _, _, 5));
                   break;
                 case 6:
-                  (_ = 0), (_ = null), _(_, _, _, 6);
+                  ((_ = 0), (_ = null), _(_, _, _, 6));
                   break;
                 case 8:
-                  _(), (_ = 6);
+                  (_(), (_ = 6));
                   break _;
                 default:
                   throw Error(_(462));
@@ -27002,11 +27090,11 @@ Error generating stack: ` +
         );
       }
       function _() {
-        for (; _ !== null && !_(); ) _(_);
+        for (; _ !== null && !_();) _(_);
       }
       function _(_) {
         var _ = _(_.alternate, _, _);
-        (_.memoizedProps = _.pendingProps), _ === null ? _(_) : (_ = _);
+        ((_.memoizedProps = _.pendingProps), _ === null ? _(_) : (_ = _));
       }
       function _(_) {
         var _ = _,
@@ -27022,21 +27110,21 @@ Error generating stack: ` +
           case 5:
             _(_);
           default:
-            _(_, _), (_ = _ = _(_, _)), (_ = _(_, _, _));
+            (_(_, _), (_ = _ = _(_, _)), (_ = _(_, _, _)));
         }
-        (_.memoizedProps = _.pendingProps), _ === null ? _(_) : (_ = _);
+        ((_.memoizedProps = _.pendingProps), _ === null ? _(_) : (_ = _));
       }
       function _(_, _, _, _) {
-        (_ = _ = null), _(_), (_ = null), (_ = 0);
+        ((_ = _ = null), _(_), (_ = null), (_ = 0));
         var _ = _.return;
         try {
           if (_(_, _, _, _, _)) {
-            (_ = 1), _(_, _(_, _.current)), (_ = null);
+            ((_ = 1), _(_, _(_, _.current)), (_ = null));
             return;
           }
         } catch (_) {
           if (_ !== null) throw ((_ = _), _);
-          (_ = 1), _(_, _(_, _.current)), (_ = null);
+          ((_ = 1), _(_, _(_, _.current)), (_ = null));
           return;
         }
         _.flags & 32768
@@ -27076,7 +27164,7 @@ Error generating stack: ` +
         do {
           var _ = _(_.alternate, _);
           if (_ !== null) {
-            (_.flags &= 32767), (_ = _);
+            ((_.flags &= 32767), (_ = _));
             return;
           }
           if (
@@ -27090,7 +27178,7 @@ Error generating stack: ` +
           }
           _ = _ = _;
         } while (_ !== null);
-        (_ = 6), (_ = null);
+        ((_ = 6), (_ = null));
       }
       function _(_, _, _, _, _, _, _, _, _) {
         _.cancelPendingCommit = null;
@@ -27114,20 +27202,20 @@ Error generating stack: ` +
               ? ((_.callbackNode = null),
                 (_.callbackPriority = 0),
                 _(_, function () {
-                  return _(!0), null;
+                  return (_(!0), null);
                 }))
               : ((_.callbackNode = null), (_.callbackPriority = 0)),
             (_ = !!(_.flags & 13878)),
             _.subtreeFlags & 13878 || _)
           ) {
-            (_ = _._), (_._ = null), (_ = _._), (_._ = 2), (_ = _), (_ |= 4);
+            ((_ = _._), (_._ = null), (_ = _._), (_._ = 2), (_ = _), (_ |= 4));
             try {
               _(_, _, _);
             } finally {
-              (_ = _), (_._ = _), (_._ = _);
+              ((_ = _), (_._ = _), (_._ = _));
             }
           }
-          (_ = 1), _(), _(), _();
+          ((_ = 1), _(), _(), _());
         }
       }
       function _() {
@@ -27137,7 +27225,7 @@ Error generating stack: ` +
             _ = _,
             _ = !!(_.flags & 13878);
           if (_.subtreeFlags & 13878 || _) {
-            (_ = _._), (_._ = null);
+            ((_ = _._), (_._ = null));
             var _ = _._;
             _._ = 2;
             var _ = _;
@@ -27158,8 +27246,8 @@ Error generating stack: ` +
                   var _ = _.start,
                     _ = _.end;
                   if ((_ === void 0 && (_ = _), `selectionStart` in _))
-                    (_.selectionStart = _),
-                      (_.selectionEnd = Math.min(_, _.value.length));
+                    ((_.selectionStart = _),
+                      (_.selectionEnd = Math.min(_, _.value.length)));
                   else {
                     var _ = _.ownerDocument || document,
                       _ = (_ && _.defaultView) || window;
@@ -27181,16 +27269,16 @@ Error generating stack: ` +
                           _.focusOffset !== _.offset)
                       ) {
                         var _ = _.createRange();
-                        _.setStart(_.node, _.offset),
+                        (_.setStart(_.node, _.offset),
                           _.removeAllRanges(),
                           _ > _
                             ? (_.addRange(_), _.extend(_.node, _.offset))
-                            : (_.setEnd(_.node, _.offset), _.addRange(_));
+                            : (_.setEnd(_.node, _.offset), _.addRange(_)));
                       }
                     }
                   }
                 }
-                for (_ = [], _ = _; (_ = _.parentNode); )
+                for (_ = [], _ = _; (_ = _.parentNode);)
                   _.nodeType === 1 &&
                     _.push({
                       element: _,
@@ -27203,16 +27291,16 @@ Error generating stack: ` +
                   _++
                 ) {
                   var _ = _[_];
-                  (_.element.scrollLeft = _.left),
-                    (_.element.scrollTop = _.top);
+                  ((_.element.scrollLeft = _.left),
+                    (_.element.scrollTop = _.top));
                 }
               }
-              (_ = !!_), (_ = _ = null);
+              ((_ = !!_), (_ = _ = null));
             } finally {
-              (_ = _), (_._ = _), (_._ = _);
+              ((_ = _), (_._ = _), (_._ = _));
             }
           }
-          (_.current = _), (_ = 2);
+          ((_.current = _), (_ = 2));
         }
       }
       function _() {
@@ -27222,7 +27310,7 @@ Error generating stack: ` +
             _ = _,
             _ = !!(_.flags & 8772);
           if (_.subtreeFlags & 8772 || _) {
-            (_ = _._), (_._ = null);
+            ((_ = _._), (_._ = null));
             var _ = _._;
             _._ = 2;
             var _ = _;
@@ -27230,7 +27318,7 @@ Error generating stack: ` +
             try {
               _(_, _.alternate, _);
             } finally {
-              (_ = _), (_._ = _), (_._ = _);
+              ((_ = _), (_._ = _), (_._ = _));
             }
           }
           _ = 3;
@@ -27238,7 +27326,7 @@ Error generating stack: ` +
       }
       function _() {
         if (_ === 4 || _ === 3) {
-          (_ = 0), _();
+          ((_ = 0), _());
           var _ = _,
             _ = _,
             _ = _,
@@ -27257,7 +27345,7 @@ Error generating stack: ` +
               _.onCommitFiberRoot(_, _, void 0, (_.current.flags & 128) == 128);
             } catch {}
           if (_ !== null) {
-            (_ = _._), (_ = _._), (_._ = 2), (_._ = null);
+            ((_ = _._), (_ = _._), (_._ = 2), (_._ = null));
             try {
               for (var _ = _.onRecoverableError, _ = 0; _ < _.length; _++) {
                 var _ = _[_];
@@ -27266,10 +27354,10 @@ Error generating stack: ` +
                 });
               }
             } finally {
-              (_._ = _), (_._ = _);
+              ((_._ = _), (_._ = _));
             }
           }
-          _ & 3 && _(),
+          (_ & 3 && _(),
             _(_),
             (_ = _.pendingLanes),
             _ & 4194090 && _ & 42
@@ -27277,7 +27365,7 @@ Error generating stack: ` +
                 ? _++
                 : ((_ = 0), (_ = _))
               : (_ = 0),
-            _(0, !1);
+            _(0, !1));
         }
       }
       function _(_, _) {
@@ -27285,7 +27373,7 @@ Error generating stack: ` +
           ((_ = _.pooledCache), _ != null && ((_.pooledCache = null), _(_)));
       }
       function _(_) {
-        return _(), _(), _(), _(_);
+        return (_(), _(), _(), _(_));
       }
       function _() {
         if (_ !== 5) return !1;
@@ -27296,7 +27384,7 @@ Error generating stack: ` +
           _ = _._,
           _ = _._;
         try {
-          (_._ = 32 > _ ? 32 : _), (_._ = null), (_ = _), (_ = null);
+          ((_._ = 32 > _ ? 32 : _), (_._ = null), (_ = _), (_ = null));
           var _ = _,
             _ = _;
           if (((_ = 0), (_ = _ = null), (_ = 0), _ & 6)) throw Error(_(331));
@@ -27314,19 +27402,19 @@ Error generating stack: ` +
             } catch {}
           return !0;
         } finally {
-          (_._ = _), (_._ = _), _(_, _);
+          ((_._ = _), (_._ = _), _(_, _));
         }
       }
       function _(_, _, _) {
-        (_ = _(_, _)),
+        ((_ = _(_, _)),
           (_ = _(_.stateNode, _, 2)),
           (_ = _(_, _, 2)),
-          _ !== null && (_(_, 2), _(_));
+          _ !== null && (_(_, 2), _(_)));
       }
       function _(_, _, _) {
         if (_.tag === 3) _(_, _, _);
         else
-          for (; _ !== null; ) {
+          for (; _ !== null;) {
             if (_.tag === 3) {
               _(_, _, _);
               break;
@@ -27338,10 +27426,10 @@ Error generating stack: ` +
                 (typeof _.componentDidCatch == `function` &&
                   (_ === null || !_.has(_)))
               ) {
-                (_ = _(_, _)),
+                ((_ = _(_, _)),
                   (_ = _(2)),
                   (_ = _(_, _, 2)),
-                  _ !== null && (_(_, _, _, _), _(_, 2), _(_));
+                  _ !== null && (_(_, _, _, _), _(_, 2), _(_)));
                 break;
               }
             }
@@ -27354,13 +27442,13 @@ Error generating stack: ` +
           _ = _.pingCache = new _();
           var _ = new Set();
           _.set(_, _);
-        } else (_ = _.get(_)), _ === void 0 && ((_ = new Set()), _.set(_, _));
+        } else ((_ = _.get(_)), _ === void 0 && ((_ = new Set()), _.set(_, _)));
         _.has(_) ||
           ((_ = !0), _.add(_), (_ = _.bind(null, _, _, _)), _.then(_, _));
       }
       function _(_, _, _) {
         var _ = _.pingCache;
-        _ !== null && _.delete(_),
+        (_ !== null && _.delete(_),
           (_.pingedLanes |= _.suspendedLanes & _),
           (_.warmLanes &= ~_),
           _ === _ &&
@@ -27369,15 +27457,15 @@ Error generating stack: ` +
               ? !(_ & 2) && _(_, 0)
               : (_ |= _),
             _ === _ && (_ = 0)),
-          _(_);
+          _(_));
       }
       function _(_, _) {
-        _ === 0 && (_ = _()), (_ = _(_, _)), _ !== null && (_(_, _), _(_));
+        (_ === 0 && (_ = _()), (_ = _(_, _)), _ !== null && (_(_, _), _(_)));
       }
       function _(_) {
         var _ = _.memoizedState,
           _ = 0;
-        _ !== null && (_ = _.retryLane), _(_, _);
+        (_ !== null && (_ = _.retryLane), _(_, _));
       }
       function _(_, _) {
         var _ = 0;
@@ -27396,7 +27484,7 @@ Error generating stack: ` +
           default:
             throw Error(_(314));
         }
-        _ !== null && _.delete(_), _(_, _);
+        (_ !== null && _.delete(_), _(_, _));
       }
       function _(_, _) {
         return _(_, _);
@@ -27408,17 +27496,17 @@ Error generating stack: ` +
         _ = !1,
         _ = 0;
       function _(_) {
-        _ !== _ &&
+        (_ !== _ &&
           _.next === null &&
           (_ === null ? (_ = _ = _) : (_ = _.next = _)),
           (_ = !0),
-          _ || ((_ = !0), _());
+          _ || ((_ = !0), _()));
       }
       function _(_, _) {
         if (!_ && _) {
           _ = !0;
           do
-            for (var _ = !1, _ = _; _ !== null; ) {
+            for (var _ = !1, _ = _; _ !== null;) {
               if (!_) {
                 if (_ !== 0) {
                   var _ = _.pendingLanes;
@@ -27426,19 +27514,20 @@ Error generating stack: ` +
                   else {
                     var _ = _.suspendedLanes,
                       _ = _.pingedLanes;
-                    (_ = (1 << (31 - _(42 | _) + 1)) - 1),
+                    ((_ = (1 << (31 - _(42 | _) + 1)) - 1),
                       (_ &= _ & ~(_ & ~_)),
-                      (_ = _ & 201326741 ? (_ & 201326741) | 1 : _ ? _ | 2 : 0);
+                      (_ =
+                        _ & 201326741 ? (_ & 201326741) | 1 : _ ? _ | 2 : 0));
                   }
                   _ !== 0 && ((_ = !0), _(_, _));
                 } else
-                  (_ = _),
+                  ((_ = _),
                     (_ = _(
                       _,
                       _ === _ ? _ : 0,
                       _.cancelPendingCommit !== null || _.timeoutHandle !== -1,
                     )),
-                    !(_ & 3) || _(_, _) || ((_ = !0), _(_, _));
+                    !(_ & 3) || _(_, _) || ((_ = !0), _(_, _)));
               }
               _ = _.next;
             }
@@ -27453,15 +27542,15 @@ Error generating stack: ` +
         _ = _ = !1;
         var _ = 0;
         _ !== 0 && (_() && (_ = _), (_ = 0));
-        for (var _ = _(), _ = null, _ = _; _ !== null; ) {
+        for (var _ = _(), _ = null, _ = _; _ !== null;) {
           var _ = _.next,
             _ = _(_, _);
-          _ === 0
+          (_ === 0
             ? ((_.next = null),
               _ === null ? (_ = _) : (_.next = _),
               _ === null && (_ = _))
             : ((_ = _), (_ !== 0 || _ & 3) && (_ = !0)),
-            (_ = _);
+            (_ = _));
         }
         _(_, !1);
       }
@@ -27476,10 +27565,10 @@ Error generating stack: ` +
           var _ = 31 - _(_),
             _ = 1 << _,
             _ = _[_];
-          _ === -1
+          (_ === -1
             ? ((_ & _) === 0 || (_ & _) !== 0) && (_[_] = _(_, _))
             : _ <= _ && (_.expiredLanes |= _),
-            (_ &= ~_);
+            (_ &= ~_));
         }
         if (
           ((_ = _),
@@ -27532,7 +27621,7 @@ Error generating stack: ` +
       }
       function _(_, _) {
         if (_ !== 0 && _ !== 5)
-          return (_.callbackNode = null), (_.callbackPriority = 0), null;
+          return ((_.callbackNode = null), (_.callbackPriority = 0), null);
         var _ = _.callbackNode;
         if (_(!0) && _.callbackNode !== _) return null;
         var _ = _;
@@ -27561,7 +27650,7 @@ Error generating stack: ` +
         });
       }
       function _() {
-        return _ === 0 && (_ = _()), _;
+        return (_ === 0 && (_ = _()), _);
       }
       function _(_) {
         return _ == null || typeof _ == `symbol` || typeof _ == `boolean`
@@ -27639,7 +27728,7 @@ Error generating stack: ` +
         var _ = _[_];
         _(_.toLowerCase(), `on` + (_[0].toUpperCase() + _.slice(1)));
       }
-      _(_, `onAnimationEnd`),
+      (_(_, `onAnimationEnd`),
         _(_, `onAnimationIteration`),
         _(_, `onAnimationStart`),
         _(`dblclick`, `onDoubleClick`),
@@ -27686,7 +27775,7 @@ Error generating stack: ` +
           `compositionupdate focusout keydown keypress keyup mousedown`.split(
             ` `,
           ),
-        );
+        ));
       var _ =
           `abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange resize seeked seeking stalled suspend timeupdate volumechange waiting`.split(
             ` `,
@@ -27711,13 +27800,13 @@ Error generating stack: ` +
                   _ = _.currentTarget;
                 if (((_ = _.listener), _ !== _ && _.isPropagationStopped()))
                   break _;
-                (_ = _), (_.currentTarget = _);
+                ((_ = _), (_.currentTarget = _));
                 try {
                   _(_);
                 } catch (_) {
                   _(_);
                 }
-                (_.currentTarget = null), (_ = _);
+                ((_.currentTarget = null), (_ = _));
               }
             else
               for (_ = 0; _ < _.length; _++) {
@@ -27729,13 +27818,13 @@ Error generating stack: ` +
                   _ !== _ && _.isPropagationStopped())
                 )
                   break _;
-                (_ = _), (_.currentTarget = _);
+                ((_ = _), (_.currentTarget = _));
                 try {
                   _(_);
                 } catch (_) {
                   _(_);
                 }
-                (_.currentTarget = null), (_ = _);
+                ((_.currentTarget = null), (_ = _));
               }
           }
         }
@@ -27748,15 +27837,15 @@ Error generating stack: ` +
       }
       function _(_, _, _) {
         var _ = 0;
-        _ && (_ |= 4), _(_, _, _, _);
+        (_ && (_ |= 4), _(_, _, _, _));
       }
       var _ = `_reactListening` + Math.random().toString(36).slice(2);
       function _(_) {
         if (!_[_]) {
-          (_[_] = !0),
+          ((_[_] = !0),
             _.forEach(function (_) {
               _ !== `selectionchange` && (_.has(_) || _(_, !1, _), _(_, !0, _));
-            });
+            }));
           var _ = _.nodeType === 9 ? _ : _.ownerDocument;
           _ === null || _[_] || ((_[_] = !0), _(`selectionchange`, !1, _));
         }
@@ -27772,7 +27861,7 @@ Error generating stack: ` +
           default:
             _ = _;
         }
-        (_ = _.bind(null, _, _, _)),
+        ((_ = _.bind(null, _, _, _)),
           (_ = void 0),
           !_ ||
             (_ !== `touchstart` && _ !== `touchmove` && _ !== `wheel`) ||
@@ -27788,7 +27877,7 @@ Error generating stack: ` +
               ? _.addEventListener(_, _, !1)
               : _.addEventListener(_, _, {
                   passive: _,
-                });
+                }));
       }
       function _(_, _, _, _, _) {
         var _ = _;
@@ -27800,13 +27889,13 @@ Error generating stack: ` +
               var _ = _.stateNode.containerInfo;
               if (_ === _) break;
               if (_ === 4)
-                for (_ = _.return; _ !== null; ) {
+                for (_ = _.return; _ !== null;) {
                   var _ = _.tag;
                   if ((_ === 3 || _ === 4) && _.stateNode.containerInfo === _)
                     return;
                   _ = _.return;
                 }
-              for (; _ !== null; ) {
+              for (; _ !== null;) {
                 if (((_ = _(_)), _ === null)) return;
                 if (((_ = _.tag), _ === 5 || _ === 6 || _ === 26 || _ === 27)) {
                   _ = _ = _;
@@ -27834,10 +27923,10 @@ Error generating stack: ` +
                   _ = _;
                   break;
                 case `focusin`:
-                  (_ = `focus`), (_ = _);
+                  ((_ = `focus`), (_ = _));
                   break;
                 case `focusout`:
-                  (_ = `blur`), (_ = _);
+                  ((_ = `blur`), (_ = _));
                   break;
                 case `beforeblur`:
                 case `afterblur`:
@@ -27909,7 +27998,7 @@ Error generating stack: ` +
                 _ = !_ && (_ === `scroll` || _ === `scrollend`),
                 _ = _ ? (_ === null ? null : _ + `Capture`) : _;
               _ = [];
-              for (var _ = _, _; _ !== null; ) {
+              for (var _ = _, _; _ !== null;) {
                 var _ = _;
                 if (
                   ((_ = _.stateNode),
@@ -27989,17 +28078,17 @@ Error generating stack: ` +
                   _: {
                     for (_ = _, _ = _, _ = 0, _ = _; _; _ = _(_)) _++;
                     for (_ = 0, _ = _; _; _ = _(_)) _++;
-                    for (; 0 < _ - _; ) (_ = _(_)), _--;
-                    for (; 0 < _ - _; ) (_ = _(_)), _--;
-                    for (; _--; ) {
+                    for (; 0 < _ - _;) ((_ = _(_)), _--);
+                    for (; 0 < _ - _;) ((_ = _(_)), _--);
+                    for (; _--;) {
                       if (_ === _ || (_ !== null && _ === _.alternate)) break _;
-                      (_ = _(_)), (_ = _(_));
+                      ((_ = _(_)), (_ = _(_)));
                     }
                     _ = null;
                   }
                 else _ = null;
-                _ !== null && _(_, _, _, _, !1),
-                  _ !== null && _ !== null && _(_, _, _, _, !0);
+                (_ !== null && _(_, _, _, _, !1),
+                  _ !== null && _ !== null && _(_, _, _, _, !0));
               }
             }
             _: {
@@ -28016,22 +28105,22 @@ Error generating stack: ` +
                   var _ = _;
                 }
               } else
-                (_ = _.nodeName),
+                ((_ = _.nodeName),
                   !_ ||
                   _.toLowerCase() !== `input` ||
                   (_.type !== `checkbox` && _.type !== `radio`)
                     ? _ && _(_.elementType) && (_ = _)
-                    : (_ = _);
+                    : (_ = _));
               if ((_ &&= _(_, _))) {
                 _(_, _, _, _);
                 break _;
               }
-              _ && _(_, _, _),
+              (_ && _(_, _, _),
                 _ === `focusout` &&
                   _ &&
                   _.type === `number` &&
                   _.memoizedProps.value != null &&
-                  _(_, `number`, _.value);
+                  _(_, `number`, _.value));
             }
             switch (((_ = _ ? _(_) : window), _)) {
               case `focusin`:
@@ -28047,7 +28136,7 @@ Error generating stack: ` +
               case `contextmenu`:
               case `mouseup`:
               case `dragend`:
-                (_ = !1), _(_, _, _);
+                ((_ = !1), _(_, _, _));
                 break;
               case `selectionchange`:
                 if (_) break;
@@ -28077,7 +28166,7 @@ Error generating stack: ` +
                 : _ === `keydown` &&
                   _.keyCode === 229 &&
                   (_ = `onCompositionStart`);
-            _ &&
+            (_ &&
               (_ &&
                 _.locale !== `ko` &&
                 (_ || _ !== `onCompositionStart`
@@ -28102,7 +28191,7 @@ Error generating stack: ` +
                     listeners: _,
                   }),
                   (_.data = _))),
-              _(_, _, _, _, _);
+              _(_, _, _, _, _));
           }
           _(_, _);
         });
@@ -28115,7 +28204,7 @@ Error generating stack: ` +
         };
       }
       function _(_, _) {
-        for (var _ = _ + `Capture`, _ = []; _ !== null; ) {
+        for (var _ = _ + `Capture`, _ = []; _ !== null;) {
           var _ = _,
             _ = _.stateNode;
           if (
@@ -28140,18 +28229,18 @@ Error generating stack: ` +
         return _ || null;
       }
       function _(_, _, _, _, _) {
-        for (var _ = _._reactName, _ = []; _ !== null && _ !== _; ) {
+        for (var _ = _._reactName, _ = []; _ !== null && _ !== _;) {
           var _ = _,
             _ = _.alternate,
             _ = _.stateNode;
           if (((_ = _.tag), _ !== null && _ === _)) break;
-          (_ !== 5 && _ !== 26 && _ !== 27) ||
+          ((_ !== 5 && _ !== 26 && _ !== 27) ||
             _ === null ||
             ((_ = _),
             _
               ? ((_ = _(_, _)), _ != null && _.unshift(_(_, _, _)))
               : _ || ((_ = _(_, _)), _ != null && _.push(_(_, _, _)))),
-            (_ = _.return);
+            (_ = _.return));
         }
         _.length !== 0 &&
           _.push({
@@ -28171,7 +28260,7 @@ Error generating stack: ` +
           .replace(_, ``);
       }
       function _(_, _) {
-        return (_ = _(_)), _(_) === _;
+        return ((_ = _(_)), _(_) === _);
       }
       function _() {}
       function _(_, _, _, _, _, _) {
@@ -28216,7 +28305,7 @@ Error generating stack: ` +
               _.removeAttribute(_);
               break;
             }
-            (_ = _(`` + _)), _.setAttribute(_, _);
+            ((_ = _(`` + _)), _.setAttribute(_, _));
             break;
           case `action`:
           case `formAction`:
@@ -28242,7 +28331,7 @@ Error generating stack: ` +
               _.removeAttribute(_);
               break;
             }
-            (_ = _(`` + _)), _.setAttribute(_, _);
+            ((_ = _(`` + _)), _.setAttribute(_, _));
             break;
           case `onClick`:
             _ != null && (_.onclick = _);
@@ -28287,8 +28376,12 @@ Error generating stack: ` +
               _.removeAttribute(`xlink:href`);
               break;
             }
-            (_ = _(`` + _)),
-              _.setAttributeNS(`http://www.w3.org/1999/xlink`, `xlink:href`, _);
+            ((_ = _(`` + _)),
+              _.setAttributeNS(
+                `http://www.w3.org/1999/xlink`,
+                `xlink:href`,
+                _,
+              ));
             break;
           case `contentEditable`:
           case `spellCheck`:
@@ -28362,7 +28455,7 @@ Error generating stack: ` +
               : _.setAttribute(_, _);
             break;
           case `popover`:
-            _(`beforetoggle`, _), _(`toggle`, _), _(_, `popover`, _);
+            (_(`beforetoggle`, _), _(`toggle`, _), _(_, `popover`, _));
             break;
           case `xlinkActuate`:
             _(_, `http://www.w3.org/1999/xlink`, `xlink:actuate`, _);
@@ -28453,12 +28546,12 @@ Error generating stack: ` +
                   typeof _ == `function` && _.removeEventListener(_, _, _),
                   typeof _ == `function`)
                 ) {
-                  typeof _ != `function` &&
+                  (typeof _ != `function` &&
                     _ !== null &&
                     (_ in _
                       ? (_[_] = null)
                       : _.hasAttribute(_) && _.removeAttribute(_)),
-                    _.addEventListener(_, _, _);
+                    _.addEventListener(_, _, _));
                   break _;
                 }
                 _ in _
@@ -28481,7 +28574,7 @@ Error generating stack: ` +
           case `li`:
             break;
           case `img`:
-            _(`error`, _), _(`load`, _);
+            (_(`error`, _), _(`load`, _));
             var _ = !1,
               _ = !1,
               _;
@@ -28503,8 +28596,8 @@ Error generating stack: ` +
                       _(_, _, _, _, _, null);
                   }
               }
-            _ && _(_, _, `srcSet`, _.srcSet, _, null),
-              _ && _(_, _, `src`, _.src, _, null);
+            (_ && _(_, _, `srcSet`, _.srcSet, _, null),
+              _ && _(_, _, `src`, _.src, _, null));
             return;
           case `input`:
             _(`invalid`, _);
@@ -28542,7 +28635,7 @@ Error generating stack: ` +
                       _(_, _, _, _, _, null);
                   }
               }
-            _(_, _, _, _, _, _, _, !1), _(_);
+            (_(_, _, _, _, _, _, _, !1), _(_));
             return;
           case `select`:
             for (_ in (_(`invalid`, _), (_ = _ = _ = null), _))
@@ -28559,10 +28652,10 @@ Error generating stack: ` +
                   default:
                     _(_, _, _, _, _, null);
                 }
-            (_ = _),
+            ((_ = _),
               (_ = _),
               (_.multiple = !!_),
-              _ == null ? _ != null && _(_, !!_, _, !0) : _(_, !!_, _, !1);
+              _ == null ? _ != null && _(_, !!_, _, !0) : _(_, !!_, _, !1));
             return;
           case `textarea`:
             for (_ in (_(`invalid`, _), (_ = _ = _ = null), _))
@@ -28583,7 +28676,7 @@ Error generating stack: ` +
                   default:
                     _(_, _, _, _, _, null);
                 }
-            _(_, _, _, _), _(_);
+            (_(_, _, _, _), _(_));
             return;
           case `option`:
             for (_ in _)
@@ -28598,7 +28691,10 @@ Error generating stack: ` +
                 }
             return;
           case `dialog`:
-            _(`beforetoggle`, _), _(`toggle`, _), _(`cancel`, _), _(`close`, _);
+            (_(`beforetoggle`, _),
+              _(`toggle`, _),
+              _(`cancel`, _),
+              _(`close`, _));
             break;
           case `iframe`:
           case `object`:
@@ -28609,7 +28705,7 @@ Error generating stack: ` +
             for (_ = 0; _ < _.length; _++) _(_[_], _);
             break;
           case `image`:
-            _(`error`, _), _(`load`, _);
+            (_(`error`, _), _(`load`, _));
             break;
           case `details`:
             _(`toggle`, _);
@@ -28617,7 +28713,7 @@ Error generating stack: ` +
           case `embed`:
           case `source`:
           case `link`:
-            _(`error`, _), _(`load`, _);
+            (_(`error`, _), _(`load`, _));
           case `area`:
           case `base`:
           case `br`:
@@ -28745,13 +28841,13 @@ Error generating stack: ` +
                   default:
                     _ !== _ && _(_, _, _, _, _, _);
                 }
-            (_ = _),
+            ((_ = _),
               (_ = _),
               (_ = _),
               _ == null
                 ? !!_ != !!_ &&
                   (_ == null ? _(_, !!_, _ ? [] : ``, !1) : _(_, !!_, _, !0))
-                : _(_, !!_, _, !1);
+                : _(_, !!_, _, !1));
             return;
           case `textarea`:
             for (_ in ((_ = _ = null), _))
@@ -28834,11 +28930,11 @@ Error generating stack: ` +
           case `wbr`:
           case `menuitem`:
             for (var _ in _)
-              (_ = _[_]),
+              ((_ = _[_]),
                 _.hasOwnProperty(_) &&
                   _ != null &&
                   !_.hasOwnProperty(_) &&
-                  _(_, _, _, null, _, _);
+                  _(_, _, _, null, _, _));
             for (_ in _)
               if (
                 ((_ = _[_]),
@@ -28857,34 +28953,34 @@ Error generating stack: ` +
           default:
             if (_(_)) {
               for (var _ in _)
-                (_ = _[_]),
+                ((_ = _[_]),
                   _.hasOwnProperty(_) &&
                     _ !== void 0 &&
                     !_.hasOwnProperty(_) &&
-                    _(_, _, _, void 0, _, _);
+                    _(_, _, _, void 0, _, _));
               for (_ in _)
-                (_ = _[_]),
+                ((_ = _[_]),
                   (_ = _[_]),
                   !_.hasOwnProperty(_) ||
                     _ === _ ||
                     (_ === void 0 && _ === void 0) ||
-                    _(_, _, _, _, _, _);
+                    _(_, _, _, _, _, _));
               return;
             }
         }
         for (var _ in _)
-          (_ = _[_]),
+          ((_ = _[_]),
             _.hasOwnProperty(_) &&
               _ != null &&
               !_.hasOwnProperty(_) &&
-              _(_, _, _, null, _, _);
+              _(_, _, _, null, _, _));
         for (_ in _)
-          (_ = _[_]),
+          ((_ = _[_]),
             (_ = _[_]),
             !_.hasOwnProperty(_) ||
               _ === _ ||
               (_ == null && _ == null) ||
-              _(_, _, _, _, _, _);
+              _(_, _, _, _, _, _));
       }
       var _ = null,
         _ = null;
@@ -28963,19 +29059,19 @@ Error generating stack: ` +
                 _ = _;
                 var _ = _.ownerDocument;
                 if ((_ & 1 && _(_.documentElement), _ & 2 && _(_.body), _ & 4))
-                  for (_ = _.head, _(_), _ = _.firstChild; _; ) {
+                  for (_ = _.head, _(_), _ = _.firstChild; _;) {
                     var _ = _.nextSibling,
                       _ = _.nodeName;
-                    _[_] ||
+                    (_[_] ||
                       _ === `SCRIPT` ||
                       _ === `STYLE` ||
                       (_ === `LINK` && _.rel.toLowerCase() === `stylesheet`) ||
                       _.removeChild(_),
-                      (_ = _);
+                      (_ = _));
                   }
               }
               if (_ === 0) {
-                _.removeChild(_), _(_);
+                (_.removeChild(_), _(_));
                 return;
               }
               _--;
@@ -28990,13 +29086,13 @@ Error generating stack: ` +
       }
       function _(_) {
         var _ = _.firstChild;
-        for (_ && _.nodeType === 10 && (_ = _.nextSibling); _; ) {
+        for (_ && _.nodeType === 10 && (_ = _.nextSibling); _;) {
           var _ = _;
           switch (((_ = _.nextSibling), _.nodeName)) {
             case `HTML`:
             case `HEAD`:
             case `BODY`:
-              _(_), _(_);
+              (_(_), _(_));
               continue;
             case `SCRIPT`:
             case `STYLE`:
@@ -29008,7 +29104,7 @@ Error generating stack: ` +
         }
       }
       function _(_, _, _, _) {
-        for (; _.nodeType === 1; ) {
+        for (; _.nodeType === 1;) {
           var _ = _;
           if (_.nodeName.toLowerCase() !== _.toLowerCase()) {
             if (!_ && (_.nodeName !== `INPUT` || _.type !== `hidden`)) break;
@@ -29062,7 +29158,7 @@ Error generating stack: ` +
       }
       function _(_, _, _) {
         if (_ === ``) return null;
-        for (; _.nodeType !== 3; )
+        for (; _.nodeType !== 3;)
           if (
             ((_.nodeType !== 1 ||
               _.nodeName !== `INPUT` ||
@@ -29084,9 +29180,9 @@ Error generating stack: ` +
         if (_.data !== `$?` || _.readyState === `complete`) _();
         else {
           var _ = function () {
-            _(), _.removeEventListener(`DOMContentLoaded`, _);
+            (_(), _.removeEventListener(`DOMContentLoaded`, _));
           };
-          _.addEventListener(`DOMContentLoaded`, _), (_._reactRetry = _);
+          (_.addEventListener(`DOMContentLoaded`, _), (_._reactRetry = _));
         }
       }
       function _(_) {
@@ -29107,7 +29203,7 @@ Error generating stack: ` +
       var _ = null;
       function _(_) {
         _ = _.previousSibling;
-        for (var _ = 0; _; ) {
+        for (var _ = 0; _;) {
           if (_.nodeType === 8) {
             var _ = _.data;
             if (_ === `$` || _ === `$!` || _ === `$?`) {
@@ -29135,7 +29231,7 @@ Error generating stack: ` +
         }
       }
       function _(_) {
-        for (var _ = _.attributes; _.length; ) _.removeAttributeNode(_[0]);
+        for (var _ = _.attributes; _.length;) _.removeAttributeNode(_[0]);
         _(_);
       }
       var _ = new Map(),
@@ -29173,7 +29269,7 @@ Error generating stack: ` +
         var _ = _;
         if (_ && typeof _ == `string` && _) {
           var _ = _(_);
-          (_ = `link[rel="` + _ + `"][href="` + _ + `"]`),
+          ((_ = `link[rel="` + _ + `"][href="` + _ + `"]`),
             typeof _ == `string` && (_ += `[crossorigin="` + _ + `"]`),
             _.has(_) ||
               (_.add(_),
@@ -29186,14 +29282,14 @@ Error generating stack: ` +
                 ((_ = _.createElement(`link`)),
                 _(_, `link`, _),
                 _(_),
-                _.head.appendChild(_)));
+                _.head.appendChild(_))));
         }
       }
       function _(_) {
-        _._(_), _(`dns-prefetch`, _, null);
+        (_._(_), _(`dns-prefetch`, _, null));
       }
       function _(_, _) {
-        _._(_, _), _(`preconnect`, _, _);
+        (_._(_, _), _(`preconnect`, _, _));
       }
       function _(_, _, _) {
         _._(_, _, _);
@@ -29274,10 +29370,10 @@ Error generating stack: ` +
               case `script`:
                 if (_.querySelector(_(_))) return;
             }
-            (_ = _.createElement(`link`)),
+            ((_ = _.createElement(`link`)),
               _(_, `link`, _),
               _(_),
-              _.head.appendChild(_);
+              _.head.appendChild(_));
           }
         }
       }
@@ -29296,7 +29392,7 @@ Error generating stack: ` +
             };
             if ((_ = _.querySelector(_(_)))) _.loading = 5;
             else {
-              (_ = _(
+              ((_ = _(
                 {
                   rel: `stylesheet`,
                   href: _,
@@ -29304,12 +29400,12 @@ Error generating stack: ` +
                 },
                 _,
               )),
-                (_ = _.get(_)) && _(_, _);
+                (_ = _.get(_)) && _(_, _));
               var _ = (_ = _.createElement(`link`));
-              _(_),
+              (_(_),
                 _(_, `link`, _),
                 (_._ = new Promise(function (_, _) {
-                  (_.onload = _), (_.onerror = _);
+                  ((_.onload = _), (_.onerror = _));
                 })),
                 _.addEventListener(`load`, function () {
                   _.loading |= 1;
@@ -29318,15 +29414,15 @@ Error generating stack: ` +
                   _.loading |= 2;
                 }),
                 (_.loading |= 4),
-                _(_, _, _);
+                _(_, _, _));
             }
-            (_ = {
+            ((_ = {
               type: `stylesheet`,
               instance: _,
               count: 1,
               state: _,
             }),
-              _.set(_, _);
+              _.set(_, _));
           }
         }
       }
@@ -29534,7 +29630,7 @@ Error generating stack: ` +
           switch (_.type) {
             case `style`:
               var _ = _.querySelector(`style[data-href~="` + _(_.href) + `"]`);
-              if (_) return (_.instance = _), _(_), _;
+              if (_) return ((_.instance = _), _(_), _);
               var _ = _({}, _, {
                 "data-href": _.href,
                 "data-precedence": _.precedence,
@@ -29551,15 +29647,15 @@ Error generating stack: ` +
             case `stylesheet`:
               _ = _(_.href);
               var _ = _.querySelector(_(_));
-              if (_) return (_.state.loading |= 4), (_.instance = _), _(_), _;
-              (_ = _(_)),
+              if (_) return ((_.state.loading |= 4), (_.instance = _), _(_), _);
+              ((_ = _(_)),
                 (_ = _.get(_)) && _(_, _),
                 (_ = (_.ownerDocument || _).createElement(`link`)),
-                _(_);
+                _(_));
               var _ = _;
               return (
                 (_._ = new Promise(function (_, _) {
-                  (_.onload = _), (_.onerror = _);
+                  ((_.onload = _), (_.onerror = _));
                 })),
                 _(_, `link`, _),
                 (_.state.loading |= 4),
@@ -29612,14 +29708,14 @@ Error generating stack: ` +
             _.insertBefore(_, _.firstChild));
       }
       function _(_, _) {
-        (_.crossOrigin ??= _.crossOrigin),
+        ((_.crossOrigin ??= _.crossOrigin),
           (_.referrerPolicy ??= _.referrerPolicy),
-          (_.title ??= _.title);
+          (_.title ??= _.title));
       }
       function _(_, _) {
-        (_.crossOrigin ??= _.crossOrigin),
+        ((_.crossOrigin ??= _.crossOrigin),
           (_.referrerPolicy ??= _.referrerPolicy),
-          (_.integrity ??= _.integrity);
+          (_.integrity ??= _.integrity));
       }
       var _ = null;
       function _(_, _, _) {
@@ -29627,7 +29723,7 @@ Error generating stack: ` +
           var _ = new Map(),
             _ = (_ = new Map());
           _.set(_, _);
-        } else (_ = _), (_ = _.get(_)), _ || ((_ = new Map()), _.set(_, _));
+        } else ((_ = _), (_ = _.get(_)), _ || ((_ = new Map()), _.set(_, _)));
         if (_.has(_)) return _;
         for (
           _.set(_, null), _ = _.getElementsByTagName(_), _ = 0;
@@ -29652,11 +29748,11 @@ Error generating stack: ` +
         return _;
       }
       function _(_, _, _) {
-        (_ = _.ownerDocument || _),
+        ((_ = _.ownerDocument || _),
           _.head.insertBefore(
             _,
             _ === `title` ? _.querySelector(`head > title`) : null,
-          );
+          ));
       }
       function _(_, _, _) {
         if (_ === 1 || _.itemProp != null) return !1;
@@ -29720,36 +29816,36 @@ Error generating stack: ` +
             var _ = _(_.href),
               _ = _.querySelector(_(_));
             if (_) {
-              (_ = _._),
+              ((_ = _._),
                 typeof _ == `object` &&
                   _ &&
                   typeof _.then == `function` &&
                   (_.count++, (_ = _.bind(_)), _.then(_, _)),
                 (_.state.loading |= 4),
                 (_.instance = _),
-                _(_);
+                _(_));
               return;
             }
-            (_ = _.ownerDocument || _),
+            ((_ = _.ownerDocument || _),
               (_ = _(_)),
               (_ = _.get(_)) && _(_, _),
               (_ = _.createElement(`link`)),
-              _(_);
+              _(_));
             var _ = _;
-            (_._ = new Promise(function (_, _) {
-              (_.onload = _), (_.onerror = _);
+            ((_._ = new Promise(function (_, _) {
+              ((_.onload = _), (_.onerror = _));
             })),
               _(_, `link`, _),
-              (_.instance = _);
+              (_.instance = _));
           }
-          _.stylesheets === null && (_.stylesheets = new Map()),
+          (_.stylesheets === null && (_.stylesheets = new Map()),
             _.stylesheets.set(_, _),
             (_ = _.state.preload) &&
               !(_.state.loading & 3) &&
               (_.count++,
               (_ = _.bind(_)),
               _.addEventListener(`load`, _),
-              _.addEventListener(`error`, _));
+              _.addEventListener(`error`, _)));
         }
       }
       function _() {
@@ -29762,13 +29858,13 @@ Error generating stack: ` +
                 var _ = setTimeout(function () {
                   if ((_.stylesheets && _(_, _.stylesheets), _.unsuspend)) {
                     var _ = _.unsuspend;
-                    (_.unsuspend = null), _();
+                    ((_.unsuspend = null), _());
                   }
                 }, 6e4);
                 return (
                   (_.unsuspend = _),
                   function () {
-                    (_.unsuspend = null), clearTimeout(_);
+                    ((_.unsuspend = null), clearTimeout(_));
                   }
                 );
               }
@@ -29780,26 +29876,26 @@ Error generating stack: ` +
           if (this.stylesheets) _(this, this.stylesheets);
           else if (this.unsuspend) {
             var _ = this.unsuspend;
-            (this.unsuspend = null), _();
+            ((this.unsuspend = null), _());
           }
         }
       }
       var _ = null;
       function _(_, _) {
-        (_.stylesheets = null),
+        ((_.stylesheets = null),
           _.unsuspend !== null &&
             (_.count++,
             (_ = new Map()),
             _.forEach(_, _),
             (_ = null),
-            _.call(_));
+            _.call(_)));
       }
       function _(_, _) {
         if (!(_.state.loading & 4)) {
           var _ = _.get(_);
           if (_) var _ = _.get(null);
           else {
-            (_ = new Map()), _.set(_, _);
+            ((_ = new Map()), _.set(_, _));
             for (
               var _ = _.querySelectorAll(
                   `link[data-precedence],style[data-precedence]`,
@@ -29815,7 +29911,7 @@ Error generating stack: ` +
             }
             _ && _.set(null, _);
           }
-          (_ = _.instance),
+          ((_ = _.instance),
             (_ = _.getAttribute(`data-precedence`)),
             (_ = _.get(_) || _),
             _ === _ && _.set(null, _),
@@ -29828,7 +29924,7 @@ Error generating stack: ` +
               ? _.parentNode.insertBefore(_, _.nextSibling)
               : ((_ = _.nodeType === 9 ? _.head : _),
                 _.insertBefore(_, _.firstChild)),
-            (_.state.loading |= 4);
+            (_.state.loading |= 4));
         }
       }
       var _ = {
@@ -29840,7 +29936,7 @@ Error generating stack: ` +
         _threadCount: 0,
       };
       function _(_, _, _, _, _, _, _, _) {
-        (this.tag = 1),
+        ((this.tag = 1),
           (this.containerInfo = _),
           (this.pingCache = this.current = this.pendingChildren = null),
           (this.timeoutHandle = -1),
@@ -29870,7 +29966,7 @@ Error generating stack: ` +
           (this.pooledCache = null),
           (this.pooledCacheLanes = 0),
           (this.formState = _),
-          (this.incompleteTransitions = new Map());
+          (this.incompleteTransitions = new Map()));
       }
       function _(_, _, _, _, _, _, _, _, _, _, _, _) {
         return (
@@ -29897,7 +29993,7 @@ Error generating stack: ` +
         return _ ? ((_ = _), _) : _;
       }
       function _(_, _, _, _, _, _) {
-        (_ = _(_)),
+        ((_ = _(_)),
           _.context === null ? (_.context = _) : (_.pendingContext = _),
           (_ = _(_)),
           (_.payload = {
@@ -29906,7 +30002,7 @@ Error generating stack: ` +
           (_ = _ === void 0 ? null : _),
           _ !== null && (_.callback = _),
           (_ = _(_, _, _)),
-          _ !== null && (_(_, _, _), _(_, _, _));
+          _ !== null && (_(_, _, _), _(_, _, _)));
       }
       function _(_, _) {
         if (((_ = _.memoizedState), _ !== null && _.dehydrated !== null)) {
@@ -29915,12 +30011,12 @@ Error generating stack: ` +
         }
       }
       function _(_, _) {
-        _(_, _), (_ = _.alternate) && _(_, _);
+        (_(_, _), (_ = _.alternate) && _(_, _));
       }
       function _(_) {
         if (_.tag === 13) {
           var _ = _(_, 67108864);
-          _ !== null && _(_, _, 67108864), _(_, 67108864);
+          (_ !== null && _(_, _, 67108864), _(_, 67108864));
         }
       }
       var _ = !0;
@@ -29929,9 +30025,9 @@ Error generating stack: ` +
         _._ = null;
         var _ = _._;
         try {
-          (_._ = 2), _(_, _, _, _);
+          ((_._ = 2), _(_, _, _, _));
         } finally {
-          (_._ = _), (_._ = _);
+          ((_._ = _), (_._ = _));
         }
       }
       function _(_, _, _, _) {
@@ -29939,18 +30035,18 @@ Error generating stack: ` +
         _._ = null;
         var _ = _._;
         try {
-          (_._ = 8), _(_, _, _, _);
+          ((_._ = 8), _(_, _, _, _));
         } finally {
-          (_._ = _), (_._ = _);
+          ((_._ = _), (_._ = _));
         }
       }
       function _(_, _, _, _) {
         if (_) {
           var _ = _(_);
-          if (_ === null) _(_, _, _, _, _), _(_, _);
+          if (_ === null) (_(_, _, _, _, _), _(_, _));
           else if (_(_, _, _, _, _)) _.stopPropagation();
           else if ((_(_, _), _ & 4 && -1 < _.indexOf(_))) {
-            for (; _ !== null; ) {
+            for (; _ !== null;) {
               var _ = _(_);
               if (_ !== null)
                 switch (_.tag) {
@@ -29961,16 +30057,16 @@ Error generating stack: ` +
                       var _ = _(_.pendingLanes);
                       if (_ !== 0) {
                         var _ = _;
-                        for (_.pendingLanes |= 2, _.entangledLanes |= 2; _; ) {
+                        for (_.pendingLanes |= 2, _.entangledLanes |= 2; _;) {
                           var _ = 1 << (31 - _(_));
-                          (_.entanglements[1] |= _), (_ &= ~_);
+                          ((_.entanglements[1] |= _), (_ &= ~_));
                         }
-                        _(_), !(_ & 6) && ((_ = _() + 500), _(0, !1));
+                        (_(_), !(_ & 6) && ((_ = _() + 500), _(0, !1)));
                       }
                     }
                     break;
                   case 13:
-                    (_ = _(_, 2)), _ !== null && _(_, _, 2), _(), _(_, 2);
+                    ((_ = _(_, 2)), _ !== null && _(_, _, 2), _(), _(_, 2));
                 }
               if (((_ = _(_)), _ === null && _(_, _, _, _, _), _ === _)) break;
               _ = _;
@@ -29980,7 +30076,7 @@ Error generating stack: ` +
         }
       }
       function _(_) {
-        return (_ = _(_)), _(_);
+        return ((_ = _(_)), _(_));
       }
       var _ = null;
       function _(_) {
@@ -29999,7 +30095,7 @@ Error generating stack: ` +
             } else _ !== _ && (_ = null);
           }
         }
-        return (_ = _), null;
+        return ((_ = _), null);
       }
       function _(_) {
         switch (_) {
@@ -30147,14 +30243,14 @@ Error generating stack: ` +
       function _(_, _, _, _, _) {
         switch (_) {
           case `focusin`:
-            return (_ = _(_, _, _, _, _, _)), !0;
+            return ((_ = _(_, _, _, _, _, _)), !0);
           case `dragenter`:
-            return (_ = _(_, _, _, _, _, _)), !0;
+            return ((_ = _(_, _, _, _, _, _)), !0);
           case `mouseover`:
-            return (_ = _(_, _, _, _, _, _)), !0;
+            return ((_ = _(_, _, _, _, _, _)), !0);
           case `pointerover`:
             var _ = _.pointerId;
-            return _.set(_, _(_.get(_) || null, _, _, _, _, _)), !0;
+            return (_.set(_, _(_.get(_) || null, _, _, _, _, _)), !0);
           case `gotpointercapture`:
             return (
               (_ = _.pointerId),
@@ -30171,15 +30267,15 @@ Error generating stack: ` +
           if (_ !== null) {
             if (((_ = _.tag), _ === 13)) {
               if (((_ = _(_)), _ !== null)) {
-                (_.blockedOn = _),
+                ((_.blockedOn = _),
                   _(_.priority, function () {
                     if (_.tag === 13) {
                       var _ = _();
                       _ = _(_);
                       var _ = _(_, _);
-                      _ !== null && _(_, _, _), _(_, _);
+                      (_ !== null && _(_, _, _), _(_, _));
                     }
-                  });
+                  }));
                 return;
               }
             } else if (
@@ -30195,13 +30291,13 @@ Error generating stack: ` +
       }
       function _(_) {
         if (_.blockedOn !== null) return !1;
-        for (var _ = _.targetContainers; 0 < _.length; ) {
+        for (var _ = _.targetContainers; 0 < _.length;) {
           var _ = _(_.nativeEvent);
           if (_ === null) {
             _ = _.nativeEvent;
             var _ = new _.constructor(_.type, _);
-            (_ = _), _.target.dispatchEvent(_), (_ = null);
-          } else return (_ = _(_)), _ !== null && _(_), (_.blockedOn = _), !1;
+            ((_ = _), _.target.dispatchEvent(_), (_ = null));
+          } else return ((_ = _(_)), _ !== null && _(_), (_.blockedOn = _), !1);
           _.shift();
         }
         return !0;
@@ -30210,12 +30306,12 @@ Error generating stack: ` +
         _(_) && _.delete(_);
       }
       function _() {
-        (_ = !1),
+        ((_ = !1),
           _ !== null && _(_) && (_ = null),
           _ !== null && _(_) && (_ = null),
           _ !== null && _(_) && (_ = null),
           _.forEach(_),
-          _.forEach(_);
+          _.forEach(_));
       }
       function _(_, _) {
         _.blockedOn === _ &&
@@ -30260,17 +30356,17 @@ Error generating stack: ` +
         function _(_) {
           return _(_, _);
         }
-        _ !== null && _(_, _),
+        (_ !== null && _(_, _),
           _ !== null && _(_, _),
           _ !== null && _(_, _),
           _.forEach(_),
-          _.forEach(_);
+          _.forEach(_));
         for (var _ = 0; _ < _.length; _++) {
           var _ = _[_];
           _.blockedOn === _ && (_.blockedOn = null);
         }
-        for (; 0 < _.length && ((_ = _[0]), _.blockedOn === null); )
-          _(_), _.blockedOn === null && _.shift();
+        for (; 0 < _.length && ((_ = _[0]), _.blockedOn === null);)
+          (_(_), _.blockedOn === null && _.shift());
         if (((_ = (_.ownerDocument || _).$$reactFormReplay), _ != null))
           for (_ = 0; _ < _.length; _ += 3) {
             var _ = _[_],
@@ -30283,17 +30379,17 @@ Error generating stack: ` +
                 if (((_ = _), (_ = _[_] || null))) _ = _.formAction;
                 else if (_(_) !== null) continue;
               } else _ = _.action;
-              typeof _ == `function`
+              (typeof _ == `function`
                 ? (_[_ + 1] = _)
                 : (_.splice(_, 3), (_ -= 3)),
-                _(_);
+                _(_));
             }
           }
       }
       function _(_) {
         this._internalRoot = _;
       }
-      (_.prototype.render = _.prototype.render =
+      ((_.prototype.render = _.prototype.render =
         function (_) {
           var _ = this._internalRoot;
           if (_ === null) throw Error(_(409));
@@ -30306,9 +30402,9 @@ Error generating stack: ` +
             if (_ !== null) {
               this._internalRoot = null;
               var _ = _.containerInfo;
-              _(_.current, 2, null, _, null, null), _(), (_[_] = null);
+              (_(_.current, 2, null, _, null, null), _(), (_[_] = null));
             }
-          });
+          }));
       function _(_) {
         this._internalRoot = _;
       }
@@ -30321,7 +30417,7 @@ Error generating stack: ` +
             priority: _,
           };
           for (var _ = 0; _ < _.length && _ !== 0 && _ < _[_].priority; _++);
-          _.splice(_, 0, _), _ === 0 && _(_);
+          (_.splice(_, 0, _), _ === 0 && _(_));
         }
       };
       var _ = _.version;
@@ -30350,7 +30446,7 @@ Error generating stack: ` +
         var _ = __REACT_DEVTOOLS_GLOBAL_HOOK__;
         if (!_.isDisabled && _.supportsFiber)
           try {
-            (_ = _.inject(_)), (_ = _);
+            ((_ = _.inject(_)), (_ = _));
           } catch {}
       }
       _.createRoot = function (_, _) {
@@ -30389,7 +30485,7 @@ Error generating stack: ` +
             console.error(_);
           }
       }
-      _(), (_.exports = require_react_dom_client_production());
+      (_(), (_.exports = require_react_dom_client_production()));
     }),
     ESteamRealm = (function (_) {
       return (
@@ -30406,7 +30502,7 @@ Error generating stack: ` +
     SteamAward_Localization = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.title || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -30415,7 +30511,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -30435,7 +30531,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -30456,14 +30552,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `SteamAward_Localization`;
@@ -30472,7 +30568,7 @@ Error generating stack: ` +
     SteamAward = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.voteid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -30481,7 +30577,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -30510,7 +30606,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -30531,14 +30627,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `SteamAward`;
@@ -30547,7 +30643,7 @@ Error generating stack: ` +
     CSeasonPassDateAndDisplay = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.rtime || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -30556,7 +30652,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -30581,7 +30677,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -30602,14 +30698,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CSeasonPassDateAndDisplay`;
@@ -30618,7 +30714,7 @@ Error generating stack: ` +
     CSeasonPassMilestone = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.milestone_id || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -30627,7 +30723,7 @@ Error generating stack: ` +
             -1,
             [2, 5, 9, 10],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -30701,7 +30797,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -30722,14 +30818,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CSeasonPassMilestone`;
@@ -30738,9 +30834,9 @@ Error generating stack: ` +
     CSeasonPass = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.appid || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null));
       }
       static sm_m;
       static sm_mbf;
@@ -30766,7 +30862,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -30787,14 +30883,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CSeasonPass`;
@@ -30803,9 +30899,9 @@ Error generating stack: ` +
     CStorePageFilter = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.sale_filter || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [3], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [3], null));
       }
       static sm_m;
       static sm_mbf;
@@ -30834,7 +30930,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -30855,23 +30951,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStorePageFilter`;
       }
     },
-    CStorePageFilter_SalePageFilter = class _ extends import_google_protobuf.Message {
+    CStorePageFilter_SalePageFilter = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.sale_tagid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -30880,7 +30978,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -30905,7 +31003,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -30926,23 +31024,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStorePageFilter_SalePageFilter`;
       }
     },
-    CStorePageFilter_ContentHubFilter = class _ extends import_google_protobuf.Message {
+    CStorePageFilter_ContentHubFilter = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.hub_type || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -30951,7 +31051,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -30990,7 +31090,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -31011,23 +31111,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStorePageFilter_ContentHubFilter`;
       }
     },
-    CStorePageFilter_ContentHubFilter_OptInInfo = class _ extends import_google_protobuf.Message {
+    CStorePageFilter_ContentHubFilter_OptInInfo = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.name || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -31036,7 +31138,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -31071,7 +31173,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -31092,23 +31194,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStorePageFilter_ContentHubFilter_OptInInfo`;
       }
     },
-    CStorePageFilter_StoreFilter = class _ extends import_google_protobuf.Message {
+    CStorePageFilter_StoreFilter = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.filter_json || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -31117,7 +31221,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -31142,7 +31246,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -31163,14 +31267,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStorePageFilter_StoreFilter`;
@@ -31179,7 +31283,7 @@ Error generating stack: ` +
     StoreGameRating = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.type || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -31188,7 +31292,7 @@ Error generating stack: ` +
             -1,
             [3, 9, 12],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -31291,7 +31395,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -31312,14 +31416,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreGameRating`;
@@ -31328,7 +31432,7 @@ Error generating stack: ` +
     StoreItem = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.item_type || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -31337,7 +31441,7 @@ Error generating stack: ` +
             -1,
             [11, 12, 20, 21, 25, 41, 52, 71, 74, 77, 78],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -31599,7 +31703,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -31620,14 +31724,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem`;
@@ -31636,7 +31740,7 @@ Error generating stack: ` +
     StoreItem_Demo = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.appid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -31645,7 +31749,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -31675,7 +31779,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -31696,14 +31800,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Demo`;
@@ -31712,7 +31816,7 @@ Error generating stack: ` +
     StoreItem_Playtest = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.appid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -31721,7 +31825,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -31746,7 +31850,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -31767,14 +31871,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Playtest`;
@@ -31783,7 +31887,7 @@ Error generating stack: ` +
     StoreItem_RelatedF2P = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.appid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -31792,7 +31896,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -31822,7 +31926,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -31843,14 +31947,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_RelatedF2P`;
@@ -31859,7 +31963,7 @@ Error generating stack: ` +
     StoreItem_RelatedItems = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.parent_appid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -31868,7 +31972,7 @@ Error generating stack: ` +
             -1,
             [2, 3, 4, 5, 6, 9],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -31934,7 +32038,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -31955,14 +32059,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_RelatedItems`;
@@ -31971,7 +32075,7 @@ Error generating stack: ` +
     StoreItem_IncludedItems = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.included_apps || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -31980,7 +32084,7 @@ Error generating stack: ` +
             -1,
             [1, 2, 3, 4],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -32019,7 +32123,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -32040,14 +32144,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_IncludedItems`;
@@ -32056,7 +32160,7 @@ Error generating stack: ` +
     StoreItem_Categories = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.supported_player_categoryids || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -32065,7 +32169,7 @@ Error generating stack: ` +
             -1,
             [2, 3, 4],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -32104,7 +32208,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -32125,14 +32229,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Categories`;
@@ -32141,7 +32245,7 @@ Error generating stack: ` +
     StoreItem_Reviews = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.summary_filtered || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -32150,7 +32254,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -32177,7 +32281,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -32198,23 +32302,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Reviews`;
       }
     },
-    StoreItem_Reviews_StoreReviewSummary = class _ extends import_google_protobuf.Message {
+    StoreItem_Reviews_StoreReviewSummary = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.review_count || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -32223,7 +32329,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -32258,7 +32364,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -32279,14 +32385,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Reviews_StoreReviewSummary`;
@@ -32295,7 +32401,7 @@ Error generating stack: ` +
     StoreItem_BasicInfo = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.short_description || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -32304,7 +32410,7 @@ Error generating stack: ` +
             -1,
             [2, 3, 4],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -32347,7 +32453,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -32368,23 +32474,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_BasicInfo`;
       }
     },
-    StoreItem_BasicInfo_CreatorHomeLink = class _ extends import_google_protobuf.Message {
+    StoreItem_BasicInfo_CreatorHomeLink = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.name || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -32393,7 +32501,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -32418,7 +32526,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -32439,14 +32547,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_BasicInfo_CreatorHomeLink`;
@@ -32455,7 +32563,7 @@ Error generating stack: ` +
     StoreItem_Tag = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.tagid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -32464,7 +32572,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -32489,7 +32597,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -32510,14 +32618,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Tag`;
@@ -32526,7 +32634,7 @@ Error generating stack: ` +
     StoreItem_Assets = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.asset_url_format || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -32535,7 +32643,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -32660,7 +32768,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -32681,14 +32789,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Assets`;
@@ -32697,7 +32805,7 @@ Error generating stack: ` +
     StoreItem_ReleaseInfo = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.steam_release_date || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -32706,7 +32814,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -32796,7 +32904,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -32817,14 +32925,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ReleaseInfo`;
@@ -32833,7 +32941,7 @@ Error generating stack: ` +
     StoreItem_Platforms = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.windows || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -32842,7 +32950,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -32896,7 +33004,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -32917,23 +33025,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Platforms`;
       }
     },
-    StoreItem_Platforms_VRSupport = class _ extends import_google_protobuf.Message {
+    StoreItem_Platforms_VRSupport = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.vrhmd || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -32942,7 +33052,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -32992,7 +33102,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -33013,14 +33123,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Platforms_VRSupport`;
@@ -33029,9 +33139,16 @@ Error generating stack: ` +
     StoreItem_PurchaseOption = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.packageid || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [20], null);
+          import_google_protobuf.Message.initialize(
+            this,
+            _,
+            0,
+            -1,
+            [20],
+            null,
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -33211,7 +33328,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -33232,23 +33349,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_PurchaseOption`;
       }
     },
-    StoreItem_PurchaseOption_Discount = class _ extends import_google_protobuf.Message {
+    StoreItem_PurchaseOption_Discount = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.discount_amount || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -33257,7 +33376,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -33292,7 +33411,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -33313,23 +33432,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_PurchaseOption_Discount`;
       }
     },
-    StoreItem_PurchaseOption_RecurrenceInfo = class _ extends import_google_protobuf.Message {
+    StoreItem_PurchaseOption_RecurrenceInfo = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.packageid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -33338,7 +33459,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -33383,7 +33504,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -33404,14 +33525,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_PurchaseOption_RecurrenceInfo`;
@@ -33420,7 +33541,7 @@ Error generating stack: ` +
     StoreItem_Screenshots = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.all_ages_screenshots || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -33429,7 +33550,7 @@ Error generating stack: ` +
             -1,
             [2, 3],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -33456,7 +33577,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -33477,23 +33598,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Screenshots`;
       }
     },
-    StoreItem_Screenshots_Screenshot = class _ extends import_google_protobuf.Message {
+    StoreItem_Screenshots_Screenshot = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.filename || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -33502,7 +33625,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -33537,7 +33660,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -33558,14 +33681,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Screenshots_Screenshot`;
@@ -33574,7 +33697,7 @@ Error generating stack: ` +
     StoreItem_Trailers = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.highlights || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -33583,7 +33706,7 @@ Error generating stack: ` +
             -1,
             [1, 2],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -33610,7 +33733,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -33631,23 +33754,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Trailers`;
       }
     },
-    StoreItem_Trailers_VideoSource = class _ extends import_google_protobuf.Message {
+    StoreItem_Trailers_VideoSource = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.filename || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -33656,7 +33781,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -33681,7 +33806,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -33702,23 +33827,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Trailers_VideoSource`;
       }
     },
-    StoreItem_Trailers_AdaptiveTrailer = class _ extends import_google_protobuf.Message {
+    StoreItem_Trailers_AdaptiveTrailer = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.cdn_path || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -33727,7 +33854,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -33752,7 +33879,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -33773,23 +33900,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Trailers_AdaptiveTrailer`;
       }
     },
-    StoreItem_Trailers_Trailer = class _ extends import_google_protobuf.Message {
+    StoreItem_Trailers_Trailer = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.trailer_name || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -33798,7 +33927,7 @@ Error generating stack: ` +
             -1,
             [5, 6],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -33875,7 +34004,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -33896,23 +34025,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Trailers_Trailer`;
       }
     },
-    StoreItem_SupportedLanguage = class _ extends import_google_protobuf.Message {
+    StoreItem_SupportedLanguage = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.elanguage || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -33921,7 +34052,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -33963,7 +34094,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -33984,14 +34115,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_SupportedLanguage`;
@@ -34000,7 +34131,7 @@ Error generating stack: ` +
     StoreItem_FreeWeekend = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.start_time || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -34009,7 +34140,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -34044,7 +34175,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -34065,14 +34196,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_FreeWeekend`;
@@ -34081,7 +34212,7 @@ Error generating stack: ` +
     StoreItem_Link = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.link_type || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -34090,7 +34221,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -34120,7 +34251,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -34141,14 +34272,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_Link`;
@@ -34157,7 +34288,7 @@ Error generating stack: ` +
     StoreItem_PackageGroup = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.name || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -34166,7 +34297,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -34206,7 +34337,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -34227,14 +34358,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_PackageGroup`;
@@ -34243,7 +34374,7 @@ Error generating stack: ` +
     StoreItem_ExtraDetails = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.steam_award || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -34252,7 +34383,7 @@ Error generating stack: ` +
             -1,
             [1, 10, 13, 15, 18, 31, 36],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -34445,7 +34576,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -34466,23 +34597,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails`;
       }
     },
-    StoreItem_ExtraDetails_Anticheat = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_Anticheat = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.kernel_mode || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -34491,7 +34624,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -34536,7 +34669,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -34557,23 +34690,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_Anticheat`;
       }
     },
-    StoreItem_ExtraDetails_Eula = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_Eula = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.name || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -34582,7 +34717,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -34607,7 +34742,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -34628,23 +34763,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_Eula`;
       }
     },
-    StoreItem_ExtraDetails_AIGeneratedContentService = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_AIGeneratedContentService = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.name || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -34653,7 +34790,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -34678,7 +34815,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -34699,23 +34836,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_AIGeneratedContentService`;
       }
     },
-    StoreItem_ExtraDetails_PageSection = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_PageSection = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.label || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -34724,7 +34863,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -34754,7 +34893,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -34775,23 +34914,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_PageSection`;
       }
     },
-    StoreItem_ExtraDetails_PressReview = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_PressReview = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.quote || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -34800,7 +34941,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -34835,7 +34976,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -34856,23 +34997,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_PressReview`;
       }
     },
-    StoreItem_ExtraDetails_EarlyAccess = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_EarlyAccess = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.why_bbcode || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -34881,7 +35024,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -34931,7 +35074,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -34952,23 +35095,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_EarlyAccess`;
       }
     },
-    StoreItem_ExtraDetails_LinksAndInfo = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_LinksAndInfo = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.website || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -34977,7 +35122,7 @@ Error generating stack: ` +
             -1,
             [6, 7, 8],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -35050,7 +35195,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -35071,23 +35216,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_LinksAndInfo`;
       }
     },
-    StoreItem_ExtraDetails_Metacritic = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_Metacritic = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.score || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -35096,7 +35243,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -35126,7 +35273,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -35147,23 +35294,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_Metacritic`;
       }
     },
-    StoreItem_ExtraDetails_CastAndCrew = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_CastAndCrew = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.directors || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -35172,7 +35321,7 @@ Error generating stack: ` +
             -1,
             [1, 2, 3, 4, 5],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -35222,7 +35371,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -35243,25 +35392,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_CastAndCrew`;
       }
     },
-    StoreItem_ExtraDetails_SystemRequirements = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_SystemRequirements = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.platforms || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null));
       }
       static sm_m;
       static sm_mbf;
@@ -35282,7 +35433,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -35303,23 +35454,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_SystemRequirements`;
       }
     },
-    StoreItem_ExtraDetails_SystemRequirements_Size = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_SystemRequirements_Size = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.amount || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -35328,7 +35481,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -35353,7 +35506,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -35374,23 +35527,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_SystemRequirements_Size`;
       }
     },
-    StoreItem_ExtraDetails_SystemRequirements_Requirements = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_SystemRequirements_Requirements = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.os_version || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -35399,7 +35554,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -35476,7 +35631,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -35497,23 +35652,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_SystemRequirements_Requirements`;
       }
     },
-    StoreItem_ExtraDetails_SystemRequirements_PlatformRequirements = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_SystemRequirements_PlatformRequirements = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.platform || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -35522,7 +35679,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -35565,7 +35722,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -35586,23 +35743,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_SystemRequirements_PlatformRequirements`;
       }
     },
-    StoreItem_ExtraDetails_Episode = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_Episode = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.number || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -35611,7 +35770,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -35641,7 +35800,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -35662,25 +35821,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_Episode`;
       }
     },
-    StoreItem_ExtraDetails_Season = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_Season = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.index || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [3], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [3], null));
       }
       static sm_m;
       static sm_mbf;
@@ -35713,7 +35874,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -35734,23 +35895,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_Season`;
       }
     },
-    StoreItem_ExtraDetails_EventSpotlight = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_EventSpotlight = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.clan_account_id || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -35759,7 +35922,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -35789,7 +35952,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -35810,25 +35973,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_EventSpotlight`;
       }
     },
-    StoreItem_ExtraDetails_MusicAlbum = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_MusicAlbum = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.tracks || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null));
       }
       static sm_m;
       static sm_mbf;
@@ -35869,7 +36034,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -35890,23 +36055,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_MusicAlbum`;
       }
     },
-    StoreItem_ExtraDetails_MusicAlbum_Track = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_MusicAlbum_Track = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.disc_number || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -35915,7 +36082,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -35955,7 +36122,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -35976,23 +36143,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_MusicAlbum_Track`;
       }
     },
-    StoreItem_ExtraDetails_SalePage = class _ extends import_google_protobuf.Message {
+    StoreItem_ExtraDetails_SalePage = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.clan_account_id || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -36001,7 +36170,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -36026,7 +36195,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -36047,25 +36216,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_ExtraDetails_SalePage`;
       }
     },
-    StoreItem_OptInRegistrationTags = class _ extends import_google_protobuf.Message {
+    StoreItem_OptInRegistrationTags = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.optin_name || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null));
       }
       static sm_m;
       static sm_mbf;
@@ -36092,7 +36263,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -36113,14 +36284,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_OptInRegistrationTags`;
@@ -36129,7 +36300,7 @@ Error generating stack: ` +
     StoreItem_PurchaseNote = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.type || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -36138,7 +36309,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -36168,7 +36339,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -36189,23 +36360,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItem_PurchaseNote`;
       }
     },
-    StoreBrowseItemDataRequest = class _ extends import_google_protobuf.Message {
+    StoreBrowseItemDataRequest = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.include_assets || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -36214,7 +36387,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -36329,7 +36502,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -36350,14 +36523,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreBrowseItemDataRequest`;
@@ -36366,7 +36539,7 @@ Error generating stack: ` +
     StoreBrowseContext = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.language || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -36375,7 +36548,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -36405,7 +36578,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -36426,14 +36599,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreBrowseContext`;
@@ -36442,7 +36615,7 @@ Error generating stack: ` +
     StoreItemID = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.appid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -36451,7 +36624,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -36501,7 +36674,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -36522,25 +36695,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreItemID`;
       }
     },
-    CStoreBrowse_GetItems_Request = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetItems_Request = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.ids || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null));
       }
       static sm_m;
       static sm_mbf;
@@ -36569,7 +36744,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -36590,25 +36765,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetItems_Request`;
       }
     },
-    CStoreBrowse_GetItems_Response = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetItems_Response = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.store_items || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null));
       }
       static sm_m;
       static sm_mbf;
@@ -36629,7 +36806,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -36650,23 +36827,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetItems_Response`;
       }
     },
-    CStoreBrowse_GetStoreCategories_Request = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetStoreCategories_Request = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.language || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -36675,7 +36854,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -36701,7 +36880,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -36722,25 +36901,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetStoreCategories_Request`;
       }
     },
-    CStoreBrowse_GetStoreCategories_Response = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetStoreCategories_Response = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.categories || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null));
       }
       static sm_m;
       static sm_mbf;
@@ -36761,7 +36942,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -36782,23 +36963,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetStoreCategories_Response`;
       }
     },
-    CStoreBrowse_GetStoreCategories_Response_Category = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetStoreCategories_Response_Category = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.categoryid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -36807,7 +36990,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -36867,7 +37050,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -36888,25 +37071,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetStoreCategories_Response_Category`;
       }
     },
-    CStoreBrowse_GetContentHubConfig_Request = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetContentHubConfig_Request = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.context || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null));
       }
       static sm_m;
       static sm_mbf;
@@ -36933,7 +37118,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -36954,25 +37139,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetContentHubConfig_Request`;
       }
     },
-    CStoreBrowse_GetContentHubConfig_Response = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetContentHubConfig_Response = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.hubconfigs || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null));
       }
       static sm_m;
       static sm_mbf;
@@ -36993,7 +37180,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -37014,23 +37201,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetContentHubConfig_Response`;
       }
     },
-    CStoreBrowse_GetContentHubConfig_Response_ContentHubConfig = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetContentHubConfig_Response_ContentHubConfig = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.hubcategoryid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -37039,7 +37228,7 @@ Error generating stack: ` +
             -1,
             [6, 7, 8, 9],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -37116,7 +37305,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -37137,23 +37326,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetContentHubConfig_Response_ContentHubConfig`;
       }
     },
-    CStoreBrowse_GetPriceStops_Request = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetPriceStops_Request = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.country_code || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -37162,7 +37353,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -37187,7 +37378,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -37208,25 +37399,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetPriceStops_Request`;
       }
     },
-    CStoreBrowse_GetPriceStops_Response = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetPriceStops_Response = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.price_stops || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null));
       }
       static sm_m;
       static sm_mbf;
@@ -37252,7 +37445,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -37273,23 +37466,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetPriceStops_Response`;
       }
     },
-    CStoreBrowse_GetPriceStops_Response_PriceStop = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetPriceStops_Response_PriceStop = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.formatted_amount || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -37298,7 +37493,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -37323,7 +37518,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -37344,25 +37539,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetPriceStops_Response_PriceStop`;
       }
     },
-    CStoreBrowse_GetDLCForApps_Request = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetDLCForApps_Request = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.context || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [3], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [3], null));
       }
       static sm_m;
       static sm_mbf;
@@ -37396,7 +37593,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -37417,23 +37614,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetDLCForApps_Request`;
       }
     },
-    CStoreBrowse_GetDLCForApps_Response = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetDLCForApps_Response = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.dlc_data || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -37442,7 +37641,7 @@ Error generating stack: ` +
             -1,
             [1, 2],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -37469,7 +37668,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -37490,23 +37689,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetDLCForApps_Response`;
       }
     },
-    CStoreBrowse_GetDLCForApps_Response_DLCData = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetDLCForApps_Response_DLCData = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.appid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -37515,7 +37716,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -37565,7 +37766,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -37586,23 +37787,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetDLCForApps_Response_DLCData`;
       }
     },
-    CStoreBrowse_GetDLCForApps_Response_PlaytimeForApp = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetDLCForApps_Response_PlaytimeForApp = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.appid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -37611,7 +37814,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -37641,7 +37844,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -37662,25 +37865,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetDLCForApps_Response_PlaytimeForApp`;
       }
     },
-    CStoreBrowse_GetDLCForAppsSolr_Request = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetDLCForAppsSolr_Request = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.context || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null));
       }
       static sm_m;
       static sm_mbf;
@@ -37721,7 +37926,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -37742,25 +37947,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetDLCForAppsSolr_Request`;
       }
     },
-    CStoreBrowse_GetDLCForAppsSolr_Response = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetDLCForAppsSolr_Response = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.dlc_lists || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null));
       }
       static sm_m;
       static sm_mbf;
@@ -37781,7 +37988,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -37802,25 +38009,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetDLCForAppsSolr_Response`;
       }
     },
-    CStoreBrowse_GetDLCForAppsSolr_Response_DLCList = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetDLCForAppsSolr_Response_DLCList = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.parent_appid || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [2], null));
       }
       static sm_m;
       static sm_mbf;
@@ -37848,7 +38057,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -37869,25 +38078,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetDLCForAppsSolr_Response_DLCList`;
       }
     },
-    CStoreBrowse_GetHardwareItems_Request = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetHardwareItems_Request = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.packageid || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null));
       }
       static sm_m;
       static sm_mbf;
@@ -37914,7 +38125,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -37935,14 +38146,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetHardwareItems_Request`;
@@ -37951,7 +38162,7 @@ Error generating stack: ` +
     CHardwarePackageDetails = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.packageid || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -37960,7 +38171,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -38105,7 +38316,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -38126,25 +38337,27 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CHardwarePackageDetails`;
       }
     },
-    CStoreBrowse_GetHardwareItems_Response = class _ extends import_google_protobuf.Message {
+    CStoreBrowse_GetHardwareItems_Response = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.details || AddAccessors(_._()),
-          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null);
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null));
       }
       static sm_m;
       static sm_mbf;
@@ -38165,7 +38378,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -38186,14 +38399,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CStoreBrowse_GetHardwareItems_Response`;
@@ -38202,7 +38415,7 @@ Error generating stack: ` +
     StoreBrowseFilterFailure = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.filter_failure || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -38211,7 +38424,7 @@ Error generating stack: ` +
             -1,
             [21, 30],
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -38308,7 +38521,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -38329,14 +38542,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `StoreBrowseFilterFailure`;
@@ -38630,9 +38843,9 @@ Error generating stack: ` +
     WaitForConfigReady = window.Config
       ? () => Promise.resolve()
       : WaitForConfigLoad;
-  window.Config && Object.assign(Config$1, window.Config),
+  (window.Config && Object.assign(Config$1, window.Config),
     window.UserConfig && Object.assign(UserConfig$1, window.UserConfig),
-    window.WebConfig && Object.assign(Config$1, window.WebConfig);
+    window.WebConfig && Object.assign(Config$1, window.WebConfig));
   var WebConfig = InitWebConfig();
   function InitWebConfig() {
     return window.WebConfig
@@ -38683,10 +38896,12 @@ Error generating stack: ` +
   function useInGamepadUI(_) {
     return useConfigContext(_)?.IN_GAMEPADUI;
   }
-  var CAccountPrivacyCookiePreferences = class _ extends import_google_protobuf.Message {
+  var CAccountPrivacyCookiePreferences = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.version || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -38695,7 +38910,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -38742,7 +38957,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -38763,23 +38978,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CAccountPrivacyCookiePreferences`;
       }
     },
-    CAccountPrivacyCookiePreferences_ContentCustomization = class _ extends import_google_protobuf.Message {
+    CAccountPrivacyCookiePreferences_ContentCustomization = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.recentapps || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -38788,7 +39005,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -38808,7 +39025,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -38829,23 +39046,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CAccountPrivacyCookiePreferences_ContentCustomization`;
       }
     },
-    CAccountPrivacyCookiePreferences_ValveAnalytics = class _ extends import_google_protobuf.Message {
+    CAccountPrivacyCookiePreferences_ValveAnalytics = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.product_impressions_tracking || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -38854,7 +39073,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -38874,7 +39093,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -38895,23 +39114,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CAccountPrivacyCookiePreferences_ValveAnalytics`;
       }
     },
-    CAccountPrivacyCookiePreferences_ThirdPartyAnalytics = class _ extends import_google_protobuf.Message {
+    CAccountPrivacyCookiePreferences_ThirdPartyAnalytics = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.google_analytics || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -38920,7 +39141,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -38940,7 +39161,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -38961,23 +39182,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CAccountPrivacyCookiePreferences_ThirdPartyAnalytics`;
       }
     },
-    CAccountPrivacyCookiePreferences_ThirdPartyContent = class _ extends import_google_protobuf.Message {
+    CAccountPrivacyCookiePreferences_ThirdPartyContent = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.youtube || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -38986,7 +39209,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -39021,7 +39244,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -39042,23 +39265,25 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CAccountPrivacyCookiePreferences_ThirdPartyContent`;
       }
     },
-    CAccountPrivacy_GetCookiePreferences_Request = class _ extends import_google_protobuf.Message {
+    CAccountPrivacy_GetCookiePreferences_Request = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           import_google_protobuf.Message.initialize(
             this,
             _,
@@ -39066,7 +39291,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -39091,21 +39316,23 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {}
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CAccountPrivacy_GetCookiePreferences_Request`;
       }
     },
-    CAccountPrivacy_GetCookiePreferences_Response = class _ extends import_google_protobuf.Message {
+    CAccountPrivacy_GetCookiePreferences_Response = class _
+      extends import_google_protobuf.Message
+    {
       static ImplementsStaticInterface() {}
       constructor(_ = null) {
-        super(),
+        (super(),
           _.prototype.preferences || AddAccessors(_._()),
           import_google_protobuf.Message.initialize(
             this,
@@ -39114,7 +39341,7 @@ Error generating stack: ` +
             -1,
             void 0,
             null,
-          );
+          ));
       }
       static sm_m;
       static sm_mbf;
@@ -39133,7 +39360,7 @@ Error generating stack: ` +
         );
       }
       static MBF() {
-        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
       }
       toObject(_ = !1) {
         return _.toObject(_, this);
@@ -39154,14 +39381,14 @@ Error generating stack: ` +
       }
       serializeBinary() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
       }
       static serializeBinaryToWriter(_, _) {
         SerializeBinary(_._(), _, _);
       }
       serializeBase64String() {
         var _ = new import_google_protobuf.BinaryWriter();
-        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
       }
       getClassName() {
         return `CAccountPrivacy_GetCookiePreferences_Response`;
@@ -39217,7 +39444,7 @@ Error generating stack: ` +
     if (!(`document` in globalThis) || !IsCookieAllowedByPreferences(_)) return;
     let _ = _.options?.path ?? `/`,
       _ = ``;
-    _.options?.expires
+    (_.options?.expires
       ? (_ += `;expires=` + _.options.expires.toUTCString())
       : _.options?.maxAge &&
         (_ += `;max-age=` + Math.floor(_.options.maxAge / 1e3)),
@@ -39228,7 +39455,7 @@ Error generating stack: ` +
         encodeURIComponent(_) +
         _ +
         `;path=` +
-        _);
+        _));
   }
   function ClearCookie(_) {
     return WriteCookie(
@@ -39282,7 +39509,7 @@ Error generating stack: ` +
   function useRefCallbackWithCleanup(_, _) {
     let _ = import_react.useRef(void 0);
     return import_react.useCallback((_) => {
-      _.current && _.current(), (_.current = _(_));
+      (_.current && _.current(), (_.current = _(_)));
     }, _);
   }
   function IsHTMLElement$1(_) {
@@ -39303,11 +39530,11 @@ Error generating stack: ` +
   }
   function GetOwningWindowForElement(_) {
     let _;
-    return _ && (_ = _.ownerDocument.defaultView), _;
+    return (_ && (_ = _.ownerDocument.defaultView), _);
   }
   function FindScrollableAncestor$1(_, _) {
     let _ = _?.parentElement;
-    for (; _; ) {
+    for (; _;) {
       if (IsHTMLElement$1(_)) {
         let _ = window.getComputedStyle(_);
         if (
@@ -39348,7 +39575,7 @@ Error generating stack: ` +
     else
       for (var _ = _.length - 1; _ >= 0; _--)
         (_ = _[_]) && (_ = (_ < 3 ? _(_) : _ > 3 ? _(_, _, _) : _(_, _)) || _);
-    return _ > 3 && _ && Object.defineProperty(_, _, _), _;
+    return (_ > 3 && _ && Object.defineProperty(_, _, _), _);
   }
   var IReadonlySubscribableValue = class {
     SyncStore(_) {
@@ -39358,24 +39585,24 @@ Error generating stack: ` +
       return this.Value;
     }
   };
-  __decorate([bind], IReadonlySubscribableValue.prototype, `SyncStore`, null),
-    __decorate([bind], IReadonlySubscribableValue.prototype, `GetValue`, null);
+  (__decorate([bind], IReadonlySubscribableValue.prototype, `SyncStore`, null),
+    __decorate([bind], IReadonlySubscribableValue.prototype, `GetValue`, null));
   var ISubscribableValue = class extends IReadonlySubscribableValue {},
     CSubscribableValue = class extends ISubscribableValue {
       m_callbacks;
       m_currentValue;
       m_fnEquals;
       constructor(_, _) {
-        super(),
+        (super(),
           (this.m_callbacks = new CCallbackList()),
           (this.m_currentValue = _),
-          (this.m_fnEquals = _);
+          (this.m_fnEquals = _));
       }
       Set(_) {
         if (this.m_fnEquals) {
           if (this.m_fnEquals(this.m_currentValue, _)) return !1;
         } else if (this.m_currentValue === _) return !1;
-        return (this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0;
+        return ((this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0);
       }
       get Value() {
         return this.m_currentValue;
@@ -39397,16 +39624,16 @@ Error generating stack: ` +
     m_fnCallback;
     m_fnOnCancel;
     Schedule(_, _) {
-      this.IsScheduled() && this.Cancel(),
+      (this.IsScheduled() && this.Cancel(),
         (this.m_fnCallback = _),
-        (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _));
+        (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _)));
     }
     AsyncSchedule(_, _) {
       return new Promise((_, _) => {
-        this.Schedule(_, () => {
-          _(), _();
+        (this.Schedule(_, () => {
+          (_(), _());
         }),
-          (this.m_fnOnCancel = _);
+          (this.m_fnOnCancel = _));
       });
     }
     IsScheduled() {
@@ -39415,17 +39642,17 @@ Error generating stack: ` +
     Cancel() {
       if (this.m_schTimer) {
         let _ = this.m_fnOnCancel;
-        clearTimeout(this.m_schTimer), this.Reset(), _ && _();
+        (clearTimeout(this.m_schTimer), this.Reset(), _ && _());
       }
     }
     Reset() {
-      (this.m_schTimer = void 0),
+      ((this.m_schTimer = void 0),
         (this.m_fnCallback = void 0),
-        (this.m_fnOnCancel = void 0);
+        (this.m_fnOnCancel = void 0));
     }
     ScheduledInternal() {
       let _ = this.m_fnCallback;
-      this.Reset(), _?.();
+      (this.Reset(), _?.());
     }
   };
   __decorate([bind], CScheduledFunc.prototype, `ScheduledInternal`, null);
@@ -39450,9 +39677,9 @@ Error generating stack: ` +
     m_sName;
     m_fnIdGenerator = void 0;
     constructor(_, _) {
-      (this.m_sName = _),
+      ((this.m_sName = _),
         (this.m_fnIdGenerator = _),
-        CLogManager.Get().RegisterLogName(_);
+        CLogManager.Get().RegisterLogName(_));
     }
     Debug(..._) {
       this.Log(0, ..._);
@@ -39483,11 +39710,11 @@ Error generating stack: ` +
       printStyledLogLine(_, _, _, _, _, this.m_sName, ..._);
     }
   };
-  __decorate([bind], CLog.prototype, `Debug`, null),
+  (__decorate([bind], CLog.prototype, `Debug`, null),
     __decorate([bind], CLog.prototype, `Info`, null),
     __decorate([bind], CLog.prototype, `Warning`, null),
     __decorate([bind], CLog.prototype, `Error`, null),
-    __decorate([bind], CLog.prototype, `Assert`, null);
+    __decorate([bind], CLog.prototype, `Assert`, null));
   var CLogManager = class _ {
     static k_EnabledLogNames_StorageKey = `EnabledWebLogs`;
     static k_IncludeBacktraceInLog_StorageKey = `IncludeBacktraceInLog`;
@@ -39521,14 +39748,14 @@ Error generating stack: ` +
           return _;
         }
       };
-      (this.m_bIncludeBacktraceInLog = !!_(
+      ((this.m_bIncludeBacktraceInLog = !!_(
         _.k_IncludeBacktraceInLog_StorageKey,
         !1,
       )),
         (this.m_bAllowCSSInLogStyling = !!_(
           _.k_AllowCSSInLogColors_StorageKey,
           !0,
-        ));
+        )));
       let _ = _(_.k_EnabledLogNames_StorageKey, void 0);
       if (Array.isArray(_)) {
         this.m_setEnabledDebugLogs = new Set(_);
@@ -39538,10 +39765,10 @@ Error generating stack: ` +
           Array.from(this.m_setEnabledDebugLogs),
         );
       }
-      (this.m_bLoading = !1), this.m_SettingsChangedCallback.Dispatch();
+      ((this.m_bLoading = !1), this.m_SettingsChangedCallback.Dispatch());
     }
     async SaveSettings() {
-      localStorage.setItem(
+      (localStorage.setItem(
         _.k_EnabledLogNames_StorageKey,
         JSON.stringify(Array.from(this.m_setEnabledDebugLogs)),
       ),
@@ -39556,10 +39783,10 @@ Error generating stack: ` +
         this.LogAsLogManager(
           `Saved enabled debug log names. Will print log messages for:`,
           Array.from(this.m_setEnabledDebugLogs),
-        );
+        ));
     }
     PrintEnabledLogs(..._) {
-      _ &&
+      (_ &&
         _.length > 0 &&
         console.warn(
           `Use DebugLogEnable( '${_.join(`', '`)}' ) to enable a log. This function tells you what's enabled.`,
@@ -39567,7 +39794,7 @@ Error generating stack: ` +
         this.LogAsLogManager(
           `Will print log messages for:`,
           Array.from(this.m_setEnabledDebugLogs),
-        );
+        ));
     }
     static Get() {
       return (
@@ -39609,11 +39836,11 @@ Error generating stack: ` +
       _.forEach((_) => this.SetDebugLogEnabled(_, _));
     }
     async SetAllDebugLogsEnabled(_) {
-      (this.m_setEnabledDebugLogs = _
+      ((this.m_setEnabledDebugLogs = _
         ? new Set(this.m_setKnownDebugLogs)
         : new Set()),
         this.m_SettingsChangedCallback.Dispatch(),
-        await this.SaveSettings();
+        await this.SaveSettings());
     }
     RegisterForSettingsChanges(_) {
       return this.m_SettingsChangedCallback.Register(_);
@@ -39622,17 +39849,17 @@ Error generating stack: ` +
       return this.m_bIncludeBacktraceInLog;
     }
     async SetIncludeBacktraceInLog(_) {
-      (this.m_bIncludeBacktraceInLog = _),
+      ((this.m_bIncludeBacktraceInLog = _),
         this.m_SettingsChangedCallback.Dispatch(),
-        await this.SaveSettings();
+        await this.SaveSettings());
     }
     get AllowCSSInLogStyling() {
       return this.m_bAllowCSSInLogStyling;
     }
     async SetAllowCSSInLogStyling(_) {
-      (this.m_bAllowCSSInLogStyling = _),
+      ((this.m_bAllowCSSInLogStyling = _),
         this.m_SettingsChangedCallback.Dispatch(),
-        await this.SaveSettings();
+        await this.SaveSettings());
     }
     GetLogNames() {
       return Array.from(this.LogNames).sort();
@@ -39680,9 +39907,9 @@ Error generating stack: ` +
       ];
     } else _ = [`${_}:`, ..._];
     if (_)
-      console.groupCollapsed(..._),
+      (console.groupCollapsed(..._),
         console.trace(`Callstack`),
-        console.groupEnd();
+        console.groupEnd());
     else
       switch (_) {
         case 0:
@@ -39696,7 +39923,7 @@ Error generating stack: ` +
           console.clogerror ? console.clogerror(3, ..._) : console.error(..._);
       }
   }
-  (window.DebugLogEnable = (..._) =>
+  ((window.DebugLogEnable = (..._) =>
     CLogManager.Get().SetDebugLogsEnabled(!0, ..._)),
     (window.DebugLogDisable = (..._) =>
       CLogManager.Get().SetDebugLogsEnabled(!1, ..._)),
@@ -39712,7 +39939,7 @@ Error generating stack: ` +
     (window.DebugLogEnabled = (..._) =>
       CLogManager.Get().PrintEnabledLogs(..._)),
     (window.EnableSteamConsole = (_ = !0) =>
-      CLogManager.Get().SetDebugLogEnabled(`SteamClient`, _));
+      CLogManager.Get().SetDebugLogEnabled(`SteamClient`, _)));
   function ShallowCompareObjects(_, _, _) {
     return _ == null || _ == null
       ? _ === _
@@ -39787,7 +40014,7 @@ Error generating stack: ` +
       [EGamepadButton.START]: `vgp_onmenu`,
     };
   function RegisterGamepadEvent(_, _, _) {
-    return _.addEventListener(_, _), () => UnregisterGamepadEvent(_, _, _);
+    return (_.addEventListener(_, _), () => UnregisterGamepadEvent(_, _, _));
   }
   function UnregisterGamepadEvent(_, _, _) {
     _.removeEventListener(_, _);
@@ -39911,13 +40138,14 @@ Error generating stack: ` +
       static RestoreSerializedNavState(_, _, _ = 0) {
         let { root: _, bHadFocus: _ } = _;
         _.Tree.Controller.RestoreHistoryTransaction(() => {
-          _.RestoreSerializedNavNode(_, _),
-            (_ == 1 || (_ == 0 && _)) && _.BTakeFocus(EFocusSource.APPLICATION);
+          (_.RestoreSerializedNavNode(_, _),
+            (_ == 1 || (_ == 0 && _)) &&
+              _.BTakeFocus(EFocusSource.APPLICATION));
         });
       }
       static RestoreSerializedNavNode(_, _, _ = 0) {
         let { sNavKey: _, iActiveChild: _ = -1, rgChildren: _ } = _;
-        _ && AssertMsg(_ == _.NavKey, `navkey mismatch`), _.SetActiveChild(_);
+        (_ && AssertMsg(_ == _.NavKey, `navkey mismatch`), _.SetActiveChild(_));
         let _ = Logger$1.IsDebugEnabled()
           ? `[${_.Tree._}]${PrefixStars(_)}`
           : ``;
@@ -39940,18 +40168,18 @@ Error generating stack: ` +
           }
           if (_ != -1 && _[_]?.sNavKey) {
             let _ = _.get(_[_].sNavKey);
-            Log$3(
+            (Log$3(
               `${_}Restoring node ${_.NavKey}, child with focus: ${_[_].sNavKey} ${_ === void 0 ? `MISSING!!` : ``}`,
             ),
-              _ && _.SetActiveChild(_.indexOf(_));
+              _ && _.SetActiveChild(_.indexOf(_)));
           }
           let _ = 0,
             _ = 0;
-          for (; _ < _.length && _ < _.length; ) {
-            for (; _ < _.length && _[_].NavKey; ) _++;
-            for (; _ < _.length && _[_].sNavKey; ) _++;
+          for (; _ < _.length && _ < _.length;) {
+            for (; _ < _.length && _[_].NavKey;) _++;
+            for (; _ < _.length && _[_].sNavKey;) _++;
             if (_ >= _.length || _ >= _.length) break;
-            _.RestoreSerializedNavNode(_[_], _[_], _ + 1), _++, _++;
+            (_.RestoreSerializedNavNode(_[_], _[_], _ + 1), _++, _++);
           }
         }
       }
@@ -39999,7 +40227,7 @@ Error generating stack: ` +
     if (_ == 0) return ``;
     let _ = ``;
     for (let _ = 0; _ < _; _++) _ += `*`;
-    return (_ += ` `), _;
+    return ((_ += ` `), _);
   }
   function IsHTMLElement(_) {
     return _ != null && _.focus !== void 0;
@@ -40019,7 +40247,7 @@ Error generating stack: ` +
   }
   function FindScrollableAncestor(_, _) {
     let _ = _?.parentElement;
-    for (; _; ) {
+    for (; _;) {
       if (IsHTMLElement(_)) {
         if (!_ || _ == `x`) {
           let _ = window.getComputedStyle(_);
@@ -40082,15 +40310,15 @@ Error generating stack: ` +
       return this.m_node.NavKey;
     }
     PushState() {
-      (this.m_History ||= new CFocusNavHistory(this.m_node)),
-        this.m_History.PushState();
+      ((this.m_History ||= new CFocusNavHistory(this.m_node)),
+        this.m_History.PushState());
     }
     PopState(_ = 0) {
       this.m_History && this.m_History.PopState(_);
     }
     SaveState(_) {
-      (this.m_StateHistory ||= new CNamedFocusNavHistory(this.m_node)),
-        this.m_StateHistory.SaveState(_);
+      ((this.m_StateHistory ||= new CNamedFocusNavHistory(this.m_node)),
+        this.m_StateHistory.SaveState(_));
     }
     RestoreState(_, _ = 0) {
       return this.m_StateHistory ? this.m_StateHistory.RestoreState(_, _) : !1;
@@ -40362,15 +40590,15 @@ Error generating stack: ` +
       m_fnBoundAnimationFunc = void 0;
       m_window;
       constructor(_, _) {
-        (this.m_window = _),
+        ((this.m_window = _),
           (this.m_options = {
             timing: `sine`,
             ..._,
-          });
+          }));
       }
       Start() {
-        (this.m_msStart = performance.now()),
-          (this.m_msEnd = this.m_msStart + this.m_options.msDuration);
+        ((this.m_msStart = performance.now()),
+          (this.m_msEnd = this.m_msStart + this.m_options.msDuration));
         let _;
         switch (this.m_options.timing) {
           case `linear`:
@@ -40390,9 +40618,9 @@ Error generating stack: ` +
               return 0.5 - Math.cos(_ * Math._) / 2;
             };
         }
-        (this.m_bActive = !0),
+        ((this.m_bActive = !0),
           (this.m_fnBoundAnimationFunc = this.OnInterval.bind(this, _)),
-          this.m_window.requestAnimationFrame(this.m_fnBoundAnimationFunc);
+          this.m_window.requestAnimationFrame(this.m_fnBoundAnimationFunc));
       }
       BIsActive() {
         return this.m_bActive;
@@ -40402,7 +40630,7 @@ Error generating stack: ` +
           try {
             this.Update(1);
           } catch {}
-          this.ClearInterval(), this.FireOnComplete();
+          (this.ClearInterval(), this.FireOnComplete());
         }
       }
       FireOnComplete() {
@@ -40431,7 +40659,7 @@ Error generating stack: ` +
     CAnimationFunc = class extends CAnimation {
       m_fnCallback;
       constructor(_, _, _) {
-        super(_, _), (this.m_fnCallback = _);
+        (super(_, _), (this.m_fnCallback = _));
       }
       Update(_) {
         this.m_fnCallback(_);
@@ -40442,9 +40670,9 @@ Error generating stack: ` +
       m_propTargets;
       m_props = {};
       constructor(_, _, _) {
-        super(`ownerDocument` in _ ? GetOwningWindowForElement(_) : _, _),
+        (super(`ownerDocument` in _ ? GetOwningWindowForElement(_) : _, _),
           (this.m_object = _),
-          (this.m_propTargets = _);
+          (this.m_propTargets = _));
       }
       Start() {
         this.m_props = {};
@@ -40494,7 +40722,7 @@ Error generating stack: ` +
         for (let _ = _.length - 1; _ >= 0 && _[_].eScrollType === void 0; _--)
           _[_].eScrollType = _;
     }
-    for (; _.length; ) {
+    for (; _.length;) {
       let { node: _, eScrollType: _ } = _.pop(),
         _ = _.length == 0;
       if (
@@ -40512,7 +40740,7 @@ Error generating stack: ` +
           _ == EScrollIntoViewType.NoTransformSparseContent ||
           !_;
       if (!_ && _ !== EFocusSource.GAMEPAD)
-        Log$2(`No previous element for scrolling, will jump`),
+        (Log$2(`No previous element for scrolling, will jump`),
           _
             ? ScrollIntoViewNoTransforms(_, _, `auto`)
             : (Log$2(
@@ -40523,7 +40751,7 @@ Error generating stack: ` +
                 behavior: `auto`,
                 block: `nearest`,
                 inline: `nearest`,
-              }));
+              })));
       else {
         let _ = _ ? GetBoundingRectNoTransform(_) : _.getBoundingClientRect(),
           _ = _.ownerDocument.defaultView.innerHeight,
@@ -40541,7 +40769,7 @@ Error generating stack: ` +
               `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_} + ${_} `,
             ));
         let _ = _ ? `auto` : `smooth`;
-        _ && (g_tsDisableSmoothScrolling = performance.now()),
+        (_ && (g_tsDisableSmoothScrolling = performance.now()),
           _.Tree.Controller.BIsRestoringHistory() && (_ = `auto`),
           _
             ? ScrollIntoViewNoTransforms(_, _, _)
@@ -40552,7 +40780,7 @@ Error generating stack: ` +
               _.scrollIntoView({
                 behavior: _,
                 block: `nearest`,
-              }));
+              })));
       }
     }
     CheckScrollRegionToStartOrEnd(_, _);
@@ -40622,14 +40850,14 @@ Error generating stack: ` +
     let _ = 0,
       _ = 0,
       _ = _;
-    for (; _; ) {
+    for (; _;) {
       if (`ownerDocument` in _) {
         let _ = window.getComputedStyle(_);
         if (_.position === `fixed` || _.position === `sticky`) break;
       }
-      (_ += _.offsetTop), (_ += _.offsetLeft), (_ = _.offsetParent);
+      ((_ += _.offsetTop), (_ += _.offsetLeft), (_ = _.offsetParent));
     }
-    for (_ = _?.parentElement; _; ) {
+    for (_ = _?.parentElement; _;) {
       let { scrollTop: _, scrollLeft: _ } = GetAdjustedScrollForElement(_);
       if (((_ -= _), (_ -= _), `ownerDocument` in _)) {
         let _ = window.getComputedStyle(_);
@@ -40716,15 +40944,15 @@ Error generating stack: ` +
     return _ > -1 && _ < 1;
   }
   function ScrollIntoViewNoTransforms(_, _, _, _, _) {
-    Log$2(
+    (Log$2(
       `----------------------------------------------------------------------------------`,
     ),
-      Log$2(`Scrolling Into View (NoTransform):`, _);
+      Log$2(`Scrolling Into View (NoTransform):`, _));
     let _ = [],
       _ = _,
       _ = GetBoundingRectNoTransform(_),
       _ = _ ?? Number.MAX_VALUE;
-    for (; _; ) {
+    for (; _;) {
       let _ = FindScrollableAncestor$1(_);
       _ ||= GetOwningWindowForElement(_);
       let _ = GetScrollMargin(_),
@@ -40771,13 +40999,13 @@ Error generating stack: ` +
         break;
       let _ = window.getComputedStyle(_);
       if (_.position === `fixed` || _.position === `sticky`) break;
-      (_ = _),
+      ((_ = _),
         (_ = {
           top: _.top - _.top,
           right: _.right - _.left,
           bottom: _.bottom - _.top,
           left: _.left - _.left,
-        });
+        }));
     }
     let _ = !1;
     for (let _ of _) {
@@ -40785,7 +41013,7 @@ Error generating stack: ` +
       let _ = GetScrollValues(_.element),
         _ = _.scrollTop + _.top,
         _ = _.scrollLeft + _.left;
-      (_ = Clamp(_, 0, _.MaxScrollLeft())),
+      ((_ = Clamp(_, 0, _.MaxScrollLeft())),
         (_ = Clamp(_, 0, _.MaxScrollTop())),
         !(WithinOne(_.scrollLeft - _) && WithinOne(_.scrollTop - _)) &&
           (_.scrollTo({
@@ -40797,7 +41025,7 @@ Error generating stack: ` +
           Log$2(
             `- ${_.top},${_.left} => ${_}, ${_}, behavior: ${_}`,
             _.element,
-          ));
+          )));
     }
   }
   var CScrollValues = class {
@@ -40822,17 +41050,17 @@ Error generating stack: ` +
         : ((this.m_window = _), (this.m_element = _.document.documentElement));
     }
     ResetScrollState() {
-      (this.m_scrollTopTarget = void 0),
+      ((this.m_scrollTopTarget = void 0),
         (this.m_scrollLeftTarget = void 0),
-        this.m_window || (this.m_element.style.scrollSnapType = ``);
+        this.m_window || (this.m_element.style.scrollSnapType = ``));
     }
     scrollTo(_) {
       if (_?.behavior != `smooth`)
-        (this.m_animation &&= (this.m_animation.Cancel(), void 0)),
+        ((this.m_animation &&= (this.m_animation.Cancel(), void 0)),
           this.m_window
             ? this.m_window.scrollTo(_)
             : this.m_fnOriginalScrollTo?.apply(this.m_element, [_]),
-          this.ResetScrollState();
+          this.ResetScrollState());
       else {
         let _ = _.left ?? this.scrollLeft,
           _ = _.top ?? this.scrollTop,
@@ -40860,7 +41088,7 @@ Error generating stack: ` +
               });
             });
           } else
-            (this.m_element.style.scrollSnapType = `initial`),
+            ((this.m_element.style.scrollSnapType = `initial`),
               (this.m_animation = new CPropertyAnimation(
                 this.m_element,
                 {
@@ -40868,10 +41096,10 @@ Error generating stack: ` +
                   scrollLeft: _,
                 },
                 _,
-              ));
-          (this.m_scrollLeftTarget = _),
+              )));
+          ((this.m_scrollLeftTarget = _),
             (this.m_scrollTopTarget = _),
-            this.m_animation.Start();
+            this.m_animation.Start());
         }
       }
     }
@@ -40982,10 +41210,10 @@ Error generating stack: ` +
       m_rgNavigationHandlers = [];
       m_rgFocusHandlers = [];
       constructor(_, _, _) {
-        (this.m_Tree = _),
+        ((this.m_Tree = _),
           (this.m_Parent = _),
           (this.m_FocusRing = _),
-          (this.m_nDepth = _ ? _.m_nDepth + 1 : 0);
+          (this.m_nDepth = _ ? _.m_nDepth + 1 : 0));
       }
       CreateHandle() {
         return new FocusNavHandle(this);
@@ -41020,7 +41248,7 @@ Error generating stack: ` +
           ),
           _ = this.m_Properties?.focusableIfEmpty,
           _ = this.m_Properties?.noFocusRing;
-        (this.m_Properties = _ || {}),
+        ((this.m_Properties = _ || {}),
           _ && this.m_ActionDescriptionsChangedCallbackList.Dispatch(),
           this.m_Properties.focusableIfEmpty && !_
             ? this.PropagateFocusableIfEmptyAncestorToDescendants(this)
@@ -41035,7 +41263,7 @@ Error generating stack: ` +
               _ &&
               this.BHasFocus() &&
               this.m_FocusRing?.OnFocus(EFocusSource.APPLICATION, this, this),
-          this.m_element && this.RegisterDOMEvents();
+          this.m_element && this.RegisterDOMEvents());
       }
       BWantsAutoFocus() {
         return this.m_Properties?.autoFocus || this.m_bAutoFocusChild;
@@ -41121,7 +41349,7 @@ Error generating stack: ` +
             : _;
       }
       AddChild(_) {
-        this.m_rgChildren.push(_),
+        (this.m_rgChildren.push(_),
           (this.m_bChildrenSorted = !1),
           this.m_element && this.RegisterDOMEvents(),
           this.m_Properties?.focusableIfEmpty
@@ -41134,10 +41362,10 @@ Error generating stack: ` +
               !this.m_ActiveChild && this.BFocusWithin(),
               `Invalid focus state in AddChild`,
             ),
-            this.SetActiveChild(this.m_rgChildren.length - 1));
+            this.SetActiveChild(this.m_rgChildren.length - 1)));
       }
       OnMount(_) {
-        (this.m_element = _),
+        ((this.m_element = _),
           this.m_Parent
             ? this.m_Parent.AddChild(this)
             : AssertMsg(
@@ -41145,14 +41373,14 @@ Error generating stack: ` +
                 `Only root should have no parent`,
               ),
           (this.m_bMounted = !0),
-          this.RegisterDOMEvents();
+          this.RegisterDOMEvents());
         let _ =
             this.m_FocusableIfEmptyAncestor &&
             this.m_FocusableIfEmptyAncestor.BHasFocus(),
           _ = this.m_Properties?.autoFocus || _;
         if (this.BWantsAutoFocus() || _) {
           let _ = -1;
-          this.m_rgChildren.length &&
+          (this.m_rgChildren.length &&
             (this.EnsureChildrenSorted(),
             (_ = this.m_rgChildren.findIndex((_) => _.BWantsAutoFocus()))),
             (this.m_Properties?.autoFocus || _ || _ !== -1) &&
@@ -41167,7 +41395,7 @@ Error generating stack: ` +
                       },
                     )
                   : this.Tree.DeferredFocus.RequestFocus(this)
-                : (this.m_Parent.m_bAutoFocusChild = !0));
+                : (this.m_Parent.m_bAutoFocusChild = !0)));
         } else if (this.m_rgChildren.length) {
           let _ = this.m_rgChildren.findIndex((_) => _.BFocusWithin());
           _ != -1 &&
@@ -41180,13 +41408,13 @@ Error generating stack: ` +
       }
       DEV_SetDebugPropsOnElement() {}
       OnUnmount() {
-        this.m_Properties?.focusableIfEmpty &&
+        (this.m_Properties?.focusableIfEmpty &&
           this.PropagateFocusableIfEmptyAncestorToDescendants(
             this.m_FocusableIfEmptyAncestor,
           ),
-          (this.m_bMounted = !1);
+          (this.m_bMounted = !1));
         let _ = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
-        (this.BHasFocus() || _) &&
+        ((this.BHasFocus() || _) &&
           (Log$1(
             `The focused node is unmounting, ${this.m_FocusableIfEmptyAncestor ? `will transfer to retain focus ancestor` : `will blur`}.`,
           ),
@@ -41201,10 +41429,10 @@ Error generating stack: ` +
             : AssertMsg(
                 this == this.m_Tree.Root,
                 `Only root should have no parent`,
-              );
+              ));
       }
       RegisterDOMEvents() {
-        !this.m_rgNavigationHandlers.length &&
+        (!this.m_rgNavigationHandlers.length &&
           this.m_element &&
           (this.m_rgChildren.length >= 2 ||
             this.m_Properties?.layout != 0 ||
@@ -41225,22 +41453,22 @@ Error generating stack: ` +
               (this.m_element?.addEventListener(`focus`, this.OnDOMFocus),
               this.m_element?.addEventListener(`blur`, this.OnDOMBlur),
               this.m_rgFocusHandlers.push(() => {
-                this.m_element?.removeEventListener(`focus`, this.OnDOMFocus),
-                  this.m_element?.removeEventListener(`blur`, this.OnDOMBlur);
-              })));
+                (this.m_element?.removeEventListener(`focus`, this.OnDOMFocus),
+                  this.m_element?.removeEventListener(`blur`, this.OnDOMBlur));
+              }))));
       }
       RemoveChild(_) {
         let _ = this.m_rgChildren.indexOf(_);
-        AssertMsg(_ !== -1, `Child was not found to remove`),
+        (AssertMsg(_ !== -1, `Child was not found to remove`),
           _ !== -1 &&
             (this.m_ActiveChild == _ && (this.m_ActiveChild = void 0),
-            this.m_rgChildren.splice(_, 1));
+            this.m_rgChildren.splice(_, 1)));
       }
       UnregisterDOMEvents() {
-        this.m_rgNavigationHandlers.forEach((_) => _()),
+        (this.m_rgNavigationHandlers.forEach((_) => _()),
           (this.m_rgNavigationHandlers = []),
           this.m_rgFocusHandlers.forEach((_) => _()),
-          (this.m_rgFocusHandlers = []);
+          (this.m_rgFocusHandlers = []));
       }
       GetActiveDescendant() {
         let _ = this.GetActiveChild();
@@ -41300,12 +41528,12 @@ Error generating stack: ` +
           if (this.GetFocusable() == `children`) {
             let _ = this.FindFocusableDescendant();
             if (_ && _ !== this) {
-              Log$1(
+              (Log$1(
                 `Browser gave node focus but we are marked focusableIfEmpty, transfering focus to descendant.`,
                 this.m_element,
                 _.m_element,
               ),
-                this.m_Tree.TransferFocus(EFocusSource.BROWSER, _);
+                this.m_Tree.TransferFocus(EFocusSource.BROWSER, _));
               return;
             }
           }
@@ -41405,11 +41633,11 @@ Error generating stack: ` +
                   _.GetBoundingRect(),
                   _,
                 );
-              Log$1(
+              (Log$1(
                 `Taking focus while preserving ${_ && ENavPreferPosition[_]} preserved: ${_} movement: ${_}, node:`,
                 _,
               ),
-                (_ = this.FindClosestFocusableNodeToRect(_, _));
+                (_ = this.FindClosestFocusableNodeToRect(_, _)));
             } else if (_ != TangentAxis2[_]) {
               let _ = this.ComputeRelativeDirection(_, 5),
                 _ = _ == 2 ? this.m_rgChildren.length : -1;
@@ -41417,7 +41645,7 @@ Error generating stack: ` +
             }
           } else if (_ == 4) {
             let _ = this.m_rgChildren;
-            for (; _.length; ) {
+            for (; _.length;) {
               let _ = [];
               for (let _ of _) {
                 if (
@@ -41578,7 +41806,7 @@ Error generating stack: ` +
               );
           }
         }
-        return this.m_Tree.TransferFocus(EFocusSource.GAMEPAD, _, _), !0;
+        return (this.m_Tree.TransferFocus(EFocusSource.GAMEPAD, _, _), !0);
       }
       GetScrollIntoViewType() {
         return this.m_Properties?.scrollIntoViewType !== void 0 &&
@@ -41668,7 +41896,7 @@ Error generating stack: ` +
           _)
         ) {
           let _ = _;
-          for (; _ != -1; ) {
+          for (; _ != -1;) {
             let _ = this.ScanChildren(
               this.AdvanceIndex(_, _),
               _,
@@ -41778,13 +42006,13 @@ Error generating stack: ` +
           if (_) {
             let _ = BoundsOfRectOnAxis(_, _),
               _;
-            (_ = _ == 1 ? _.min - _.max : _.min - _.max),
+            ((_ = _ == 1 ? _.min - _.max : _.min - _.max),
               _ >= 0 &&
                 _.push({
                   child: _,
                   overlap: RectOverlapOnAxis(TangentAxis2[_], _, _),
                   dist: _,
-                });
+                }));
           }
         }
         if (
@@ -41813,7 +42041,7 @@ Error generating stack: ` +
         let _ = [];
         if (!_) return null;
         let _ = LeadingCornerOfRect(_);
-        this.ScanChildren(_, _, (_) => {
+        (this.ScanChildren(_, _, (_) => {
           let _ = _.GetBoundingRect();
           return _
             ? _ && !BOverlapOnAxis(TangentAxis2[_], _, _)
@@ -41830,7 +42058,7 @@ Error generating stack: ` +
           _.sort((_, _) => {
             let _ = _.overlap - _.overlap;
             return _ == 0 ? _.dist - _.dist : _;
-          });
+          }));
         for (let { child: _ } of _) {
           let _ = _.FindFocusableNode(_, _);
           if (_) return _;
@@ -41856,9 +42084,9 @@ Error generating stack: ` +
         return this.m_nDepth;
       }
       SetFocusableIfEmptyAncestor(_) {
-        (this.m_FocusableIfEmptyAncestor = _),
+        ((this.m_FocusableIfEmptyAncestor = _),
           this.m_Properties?.focusableIfEmpty ||
-            this.PropagateFocusableIfEmptyAncestorToDescendants(_);
+            this.PropagateFocusableIfEmptyAncestorToDescendants(_));
       }
       PropagateFocusableIfEmptyAncestorToDescendants(_) {
         for (let _ = 0; _ < this.m_rgChildren.length; _++)
@@ -41870,7 +42098,7 @@ Error generating stack: ` +
         });
       }
       SetDOMFocusAndScroll(_, _, _, _) {
-        this.UpdateParentActiveChild(),
+        (this.UpdateParentActiveChild(),
           this.m_Tree.OnChildActivated(_),
           this.m_Tree.BIsActiveFocus()
             ? (AssertMsg(
@@ -41884,12 +42112,12 @@ Error generating stack: ` +
               Log$1(
                 `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
               ),
-          this.m_Tree.BIsActive() && HandleNavScroll(this, _, _, _, _);
+          this.m_Tree.BIsActive() && HandleNavScroll(this, _, _, _, _));
       }
     };
-  __decorate([bind], CFocusNavNode.prototype, `OnDOMFocus`, null),
+  (__decorate([bind], CFocusNavNode.prototype, `OnDOMFocus`, null),
     __decorate([bind], CFocusNavNode.prototype, `OnDOMBlur`, null),
-    __decorate([bind], CFocusNavNode.prototype, `OnNavigationEvent`, null);
+    __decorate([bind], CFocusNavNode.prototype, `OnNavigationEvent`, null));
   function PanelFlowChildrenToNavLayout(_) {
     if (!_) return ENavLayout.NONE;
     switch (_) {
@@ -41906,7 +42134,9 @@ Error generating stack: ` +
       case `geometric`:
         return ENavLayout.GEOMETRIC;
       default:
-        return AssertNever(_, `Unhandled flow-children: ${_}`), ENavLayout.NONE;
+        return (
+          AssertNever(_, `Unhandled flow-children: ${_}`), ENavLayout.NONE
+        );
     }
   }
   function useDocumentDimension(_) {
@@ -42035,7 +42265,7 @@ Error generating stack: ` +
     AudioStore = new CAudioStore(),
     Log = new CLog(`GamepadEvents`).Debug;
   function useGamepadEvents(_, _, _) {
-    _ === void 0 &&
+    (_ === void 0 &&
       (_ = [
         _.onButtonDown,
         _.onButtonUp,
@@ -42076,16 +42306,16 @@ Error generating stack: ` +
               _.push(RegisterGamepadBlurEvent(_, _.onGamepadBlur))),
           () => _.forEach((_) => _())
         );
-      }, _);
+      }, _));
   }
   function StopGamepadEventPropagation(_) {
-    return _.stopPropagation(), !1;
+    return (_.stopPropagation(), !1);
   }
   function useRootGamepadEvents(_, _, _) {
     let { onButtonDown: _, ..._ } = _,
       _ = import_react.useCallback(
         (_) => {
-          _ && _(_),
+          (_ && _(_),
             Log(
               `Gamepad Event fired:`,
               _.detail.button,
@@ -42094,11 +42324,11 @@ Error generating stack: ` +
               `, propagation stopped:`,
               _.cancelBubble,
             ),
-            !_.cancelBubble && _.OnRootButtonDown(_);
+            !_.cancelBubble && _.OnRootButtonDown(_));
         },
         [_, _],
       );
-    useGamepadEvents(_, _),
+    (useGamepadEvents(_, _),
       useGamepadEvents(
         {
           onButtonDown: _,
@@ -42114,7 +42344,7 @@ Error generating stack: ` +
         },
         _,
         [_],
-      );
+      ));
   }
   function CreateVirtualKeyboardRef(_) {
     return {
@@ -42209,7 +42439,7 @@ Error generating stack: ` +
   function useVirtualKeyboardReference(_) {
     let _ = import_react.useRef(void 0),
       _ = import_react.useContext(VirtualKeyboardRefFactory);
-    return (_.current ||= _(_ || {})), _.current;
+    return ((_.current ||= _(_ || {})), _.current);
   }
   function ExpandVirtualKeyboardProps(_) {
     let {
@@ -42331,7 +42561,7 @@ Error generating stack: ` +
         historyMode: _,
         excludeTreeFromScrollRegionSearch: _,
       });
-    useCallbackList(_.OnActivateCallbacks, _),
+    (useCallbackList(_.OnActivateCallbacks, _),
       useCallbackList(_.OnDeactivateCallbacks, _),
       useRootGamepadEvents(_, _, _),
       import_react.useLayoutEffect(() => {
@@ -42340,7 +42570,7 @@ Error generating stack: ` +
           ..._,
           layout: _,
         });
-      });
+      }));
     let _ = useMultipleRefs(_, _.props.ref);
     return (0, import_jsx_runtime.jsx)(ActiveTreeContextRoot, {
       tree: _ ? null : _,
@@ -42418,18 +42648,18 @@ Error generating stack: ` +
       _ = useSubscribableValue(_?.SubscribableIsMounted) ?? !1;
     import_react.useEffect(() => {
       if (!_) {
-        _(!1), _(!1);
+        (_(!1), _(!1));
         return;
       }
-      _(_.BIsActive()), _(_.BIsActiveWithinWindow());
+      (_(_.BIsActive()), _(_.BIsActiveWithinWindow()));
       let _ = _.OnActiveStateChangedCallbacks.Register(() => {
-          _(_.BIsActive()), _(_.BIsActiveWithinWindow());
+          (_(_.BIsActive()), _(_.BIsActiveWithinWindow()));
         }),
         _ = _.OnActiveWithinWindowChangedCallbacks.Register(() =>
           _(_.BIsActiveWithinWindow()),
         );
       return () => {
-        _.Unregister(), _.Unregister();
+        (_.Unregister(), _.Unregister());
       };
     }, [_]);
     let _ = import_react.useMemo(
@@ -42483,7 +42713,7 @@ Error generating stack: ` +
         };
       }, [_, _, _]),
       import_react.useLayoutEffect(() => {
-        if (_ && _) return setRef(_, _.CreateHandle()), () => setRef(_, null);
+        if (_ && _) return (setRef(_, _.CreateHandle()), () => setRef(_, null));
       }, [_, _]),
       {
         ref: _,
@@ -42699,13 +42929,13 @@ Error generating stack: ` +
       layout: PanelFlowChildrenToNavLayout(_),
       ..._,
     });
-    _.onOKButton ||
+    (_.onOKButton ||
       (((`onClick` in _ && _.onClick) || (_ && (_ === !0 || _(_)))) &&
         (_.onOKButton = DefaultOKHandler)),
       _.focusable && !_
         ? (_.tabIndex = _.tabIndex || 0)
         : !_.focusable && _ && (_.tabIndex = _.tabIndex ?? -1),
-      useGamepadEvents(_, _);
+      useGamepadEvents(_, _));
     let _ = useMultipleRefs(_, _, useHandleRequestFocusEvent(_)),
       _ = (0, import_react.useContext)(FocusReactiveElementWrapper)?.Component,
       _ = {
@@ -44912,7 +45142,7 @@ Error generating stack: ` +
         );
         _ = _ ?? _.depth ?? null;
         let _ = _.EncodeEventComponent(_.feature);
-        return _ && ((_ += `_` + _), _ && (_ += `_` + _)), _;
+        return (_ && ((_ += `_` + _), _ && (_ += `_` + _)), _);
       }
       static GetCuratorClanIDParam(_) {
         return _.curator_clanid ?? null;
@@ -44928,7 +45158,7 @@ Error generating stack: ` +
             _.origin + _.pathname + `?` + _.toString() + _.hash
           );
         } catch (_) {
-          return console.error(_, _), _;
+          return (console.error(_, _), _);
         }
       }
       static ComputeLinkPrefix(_, _, _, _) {
@@ -45084,8 +45314,11 @@ Error generating stack: ` +
     LanguageNameToISOMap = new Map();
   for (let [_, _] of ISOLanguageNameMap.entries())
     LanguageNameToISOMap.set(_, _);
-  LanguageNameToISOMap.set(`sc_schinese`, LanguageNameToISOMap.get(`schinese`)),
-    LanguageNameToISOMap.set(`korean`, LanguageNameToISOMap.get(`koreana`));
+  (LanguageNameToISOMap.set(
+    `sc_schinese`,
+    LanguageNameToISOMap.get(`schinese`),
+  ),
+    LanguageNameToISOMap.set(`korean`, LanguageNameToISOMap.get(`koreana`)));
   function GetFallbackForLanguage(_) {
     if (_ !== `english`) return _ === `sc_schinese` ? `schinese` : `english`;
   }
@@ -45106,9 +45339,9 @@ Error generating stack: ` +
   locLoadPromises ??= new Set();
   var cachedLocReady = void 0;
   function RegisterLocLoadPromise(_) {
-    (locLoadPromises ??= new Set()),
+    ((locLoadPromises ??= new Set()),
       locLoadPromises.add(_),
-      Promise.all(locLoadPromises);
+      Promise.all(locLoadPromises));
   }
   var k_mapOptionalAppTypeSuffixes = {
     5: `_Guide`,
@@ -45158,10 +45391,10 @@ Error generating stack: ` +
     let _ = _(),
       _ = !1,
       _ = !1;
-    _.then(() => (_ = !0)).catch((_) => {
-      console.error(`LoadStrings error`, _), (_ = !0);
+    (_.then(() => (_ = !0)).catch((_) => {
+      (console.error(`LoadStrings error`, _), (_ = !0));
     }),
-      RegisterLocLoadPromise(_);
+      RegisterLocLoadPromise(_));
     function _(_, _) {
       let [_, ..._] = _,
         _ =
@@ -45218,8 +45451,8 @@ Error generating stack: ` +
           _ = /(.*?)%(\d+)\$s/g,
           _ = 0,
           _;
-        for (; (_ = _.exec(_)); ) {
-          (_ += _[0].length), _.push(_[1]);
+        for (; (_ = _.exec(_));) {
+          ((_ += _[0].length), _.push(_[1]));
           let _ = parseInt(_[2]);
           _ >= 1 && _ <= _.length && _.push(_[_ - 1]);
         }
@@ -45274,8 +45507,8 @@ Error generating stack: ` +
       _ = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, `gs`),
       _ = 0,
       _;
-    for (; (_ = _.exec(_)); ) {
-      (_ += _[0].length), _.push(_[1]);
+    for (; (_ = _.exec(_));) {
+      ((_ += _[0].length), _.push(_[1]));
       let _ = parseInt(_[2]),
         _ = _[3] || ``,
         _ = InlineReactElements(_, ..._),
@@ -45376,7 +45609,7 @@ Error generating stack: ` +
         : _;
   }
   function nearestInclusiveOpenPopover(_) {
-    for (; _; ) {
+    for (; _;) {
       if (
         _ instanceof HTMLElement &&
         _.popover === `auto` &&
@@ -45392,7 +45625,7 @@ Error generating stack: ` +
     }
   }
   function nearestInclusiveTargetPopoverForInvoker(_) {
-    for (; _; ) {
+    for (; _;) {
       let _ = _.popoverTargetElement;
       if (_ instanceof HTMLElement) return _;
       if (
@@ -45407,8 +45640,8 @@ Error generating stack: ` +
     let _ = new Map(),
       _ = 0,
       _ = _.ownerDocument;
-    for (let _ of autoPopoverList.get(_) || []) _.set(_, _), (_ += 1);
-    _.set(_, _), (_ += 1);
+    for (let _ of autoPopoverList.get(_) || []) (_.set(_, _), (_ += 1));
+    (_.set(_, _), (_ += 1));
     let _ = null;
     function _(_) {
       let _ = nearestInclusiveOpenPopover(_);
@@ -45416,7 +45649,7 @@ Error generating stack: ` +
       let _ = _.get(_);
       (_ === null || _.get(_) < _) && (_ = _);
     }
-    return _(_?.parentElement), _;
+    return (_(_?.parentElement), _);
   }
   function isFocusable(_) {
     return _.hidden ||
@@ -45453,7 +45686,7 @@ Error generating stack: ` +
     }
     let _ = _.ownerDocument.createTreeWalker(_, NodeFilter.SHOW_ELEMENT),
       _ = _.currentNode;
-    for (; _; ) {
+    for (; _;) {
       if (isFocusable(_)) return _;
       _ = _.nextNode();
     }
@@ -45484,9 +45717,9 @@ Error generating stack: ` +
       )
         return;
     }
-    topMostAutoPopover(_) || (_ = !0), previouslyFocusedElements.delete(_);
+    (topMostAutoPopover(_) || (_ = !0), previouslyFocusedElements.delete(_));
     let _ = _.activeElement;
-    _.classList.add(`:popover-open`),
+    (_.classList.add(`:popover-open`),
       visibilityState.set(_, `showing`),
       topLayerElements.has(_) || topLayerElements.set(_, new Set()),
       topLayerElements.get(_).add(_),
@@ -45496,7 +45729,7 @@ Error generating stack: ` +
         autoPopoverList.get(_).add(_),
         setInvokerAriaExpanded(popoverInvoker.get(_), !0)),
       _ && _ && _.popover === `auto` && previouslyFocusedElements.set(_, _),
-      queuePopoverToggleEventTask(_, `closed`, `open`);
+      queuePopoverToggleEventTask(_, `closed`, `open`));
   }
   function hidePopover(_, _ = !1, _ = !1) {
     if (!checkPopoverValidity(_, !0)) return;
@@ -45516,17 +45749,17 @@ Error generating stack: ` +
         !checkPopoverValidity(_, !0)))
     )
       return;
-    topLayerElements.get(_)?.delete(_),
+    (topLayerElements.get(_)?.delete(_),
       autoPopoverList.get(_)?.delete(_),
       _.classList.remove(`:popover-open`),
       visibilityState.set(_, `hidden`),
-      _ && queuePopoverToggleEventTask(_, `open`, `closed`);
+      _ && queuePopoverToggleEventTask(_, `open`, `closed`));
     let _ = previouslyFocusedElements.get(_);
     _ && (previouslyFocusedElements.delete(_), _ && _.focus());
   }
   function closeAllOpenPopovers(_, _ = !1, _ = !1) {
     let _ = topMostAutoPopover(_);
-    for (; _; ) hidePopover(_, _, _), (_ = topMostAutoPopover(_));
+    for (; _;) (hidePopover(_, _, _), (_ = topMostAutoPopover(_)));
   }
   function hideAllPopoversUntil(_, _, _) {
     let _ = _.ownerDocument || _;
@@ -45558,8 +45791,8 @@ Error generating stack: ` +
     if (_ && _.type === `pointerdown`) popoverPointerDownTargets.set(_, _);
     else if (_.type === `pointerup`) {
       let _ = popoverPointerDownTargets.get(_) === _;
-      popoverPointerDownTargets.delete(_),
-        _ && hideAllPopoversUntil(_ || _, !1, !0);
+      (popoverPointerDownTargets.delete(_),
+        _ && hideAllPopoversUntil(_ || _, !1, !0));
     }
   }
   function setInvokerAriaExpanded(_, _ = !1) {
@@ -45594,15 +45827,15 @@ Error generating stack: ` +
   function injectStyles(_) {
     if (popoverStyleSheet === null)
       try {
-        (popoverStyleSheet = new CSSStyleSheet()),
-          popoverStyleSheet.replaceSync(styles);
+        ((popoverStyleSheet = new CSSStyleSheet()),
+          popoverStyleSheet.replaceSync(styles));
       } catch {
         popoverStyleSheet = !1;
       }
     if (popoverStyleSheet === !1) {
       let _ = document.createElement(`style`);
-      (_.textContent = styles),
-        _ instanceof Document ? _.head.prepend(_) : _.prepend(_);
+      ((_.textContent = styles),
+        _ instanceof Document ? _.head.prepend(_) : _.prepend(_));
     } else _.adoptedStyleSheets = [popoverStyleSheet, ..._.adoptedStyleSheets];
   }
   function apply() {
@@ -45614,7 +45847,7 @@ Error generating stack: ` +
         _
       );
     }
-    patchSelectorFn(Document.prototype, `querySelector`, _),
+    (patchSelectorFn(Document.prototype, `querySelector`, _),
       patchSelectorFn(Document.prototype, `querySelectorAll`, _),
       patchSelectorFn(Element.prototype, `querySelector`, _),
       patchSelectorFn(Element.prototype, `querySelectorAll`, _),
@@ -45659,7 +45892,7 @@ Error generating stack: ` +
               : (_ === void 0 || _ === !0) && showPopover(this);
           },
         },
-      });
+      }));
     let _ = Element.prototype.attachShadow;
     _ &&
       Object.defineProperties(Element.prototype, {
@@ -45669,7 +45902,7 @@ Error generating stack: ` +
           writable: !0,
           value(_) {
             let _ = _.call(this, _);
-            return injectStyles(_), _;
+            return (injectStyles(_), _);
           },
         },
       });
@@ -45682,7 +45915,7 @@ Error generating stack: ` +
           writable: !0,
           value() {
             let _ = _.call(this);
-            return _.shadowRoot && injectStyles(_.shadowRoot), _;
+            return (_.shadowRoot && injectStyles(_.shadowRoot), _);
           },
         },
       });
@@ -45694,9 +45927,9 @@ Error generating stack: ` +
           configurable: !0,
           set(_) {
             if (_ === null)
-              this.removeAttribute(`popovertarget`), _.delete(this);
+              (this.removeAttribute(`popovertarget`), _.delete(this));
             else if (_ instanceof Element)
-              this.setAttribute(`popovertarget`, ``), _.set(this, _);
+              (this.setAttribute(`popovertarget`, ``), _.set(this, _));
             else
               throw TypeError(
                 `popoverTargetElement must be an element or null`,
@@ -45715,7 +45948,7 @@ Error generating stack: ` +
               return null;
             let _ = _.get(this);
             if (_ && _.isConnected) return _;
-            if (_ && !_.isConnected) return _.delete(this), null;
+            if (_ && !_.isConnected) return (_.delete(this), null);
             let _ = getRootNode(this),
               _ = this.getAttribute(`popovertarget`);
             return (
@@ -45741,7 +45974,7 @@ Error generating stack: ` +
         },
       });
     }
-    _(HTMLButtonElement), _(HTMLInputElement);
+    (_(HTMLButtonElement), _(HTMLInputElement));
     let _ = (_) => {
         let _ = _.composedPath()[0];
         if (!(_ instanceof Element) || _?.shadowRoot) return;
@@ -45758,13 +45991,13 @@ Error generating stack: ` +
           (_ === `Escape` || _ === `Esc`) &&
           hideAllPopoversUntil(_.ownerDocument, !0, !0);
       };
-    ((_) => {
-      _.addEventListener(`click`, _),
+    (((_) => {
+      (_.addEventListener(`click`, _),
         _.addEventListener(`keydown`, _),
         _.addEventListener(`pointerdown`, lightDismissOpenPopovers),
-        _.addEventListener(`pointerup`, lightDismissOpenPopovers);
+        _.addEventListener(`pointerup`, lightDismissOpenPopovers));
     })(document),
-      injectStyles(document);
+      injectStyles(document));
   }
   var ToggleEvent,
     popoverToggleTaskQueue,
@@ -45782,13 +46015,13 @@ Error generating stack: ` +
     styles,
     popoverStyleSheet,
     init_popover_fn = __esmMin(() => {
-      (ToggleEvent = class extends Event {
+      ((ToggleEvent = class extends Event {
         oldState;
         newState;
         constructor(_, { oldState: _ = ``, newState: _ = ``, ..._ } = {}) {
-          super(_, _),
+          (super(_, _),
             (this.oldState = String(_ || ``)),
-            (this.newState = String(_ || ``));
+            (this.newState = String(_ || ``)));
         }
       }),
         (popoverToggleTaskQueue = new WeakMap()),
@@ -45860,7 +46093,7 @@ Error generating stack: ` +
     display: none;
   }
 `),
-        (popoverStyleSheet = null);
+        (popoverStyleSheet = null));
     });
   function BNeedsPolyfill() {
     return !(
@@ -45910,9 +46143,9 @@ Error generating stack: ` +
           _ = _.current.getBoundingClientRect(),
           _ = _,
           _ = _.current.matches(`:dir(rtl)`);
-        _ && (_ === `left` ? (_ = `right`) : _ === `right` && (_ = `left`)),
+        (_ && (_ === `left` ? (_ = `right`) : _ === `right` && (_ = `left`)),
           _.current.style.setProperty(`--parentWidth`, `${_.width}px`),
-          _.current.style.setProperty(`--parentHeight`, `${_.height}px`);
+          _.current.style.setProperty(`--parentHeight`, `${_.height}px`));
         let _ = 0;
         if (!_) {
           if (_.width) {
@@ -45923,11 +46156,11 @@ Error generating stack: ` +
               let _ = _ ? _.left : _.right;
               _ = document.body.clientWidth - (_ + _.width);
             }
-            _ === void 0 &&
+            (_ === void 0 &&
               (_ = _
                 ? _.right - _.width
                 : document.body.clientWidth - (_.left + _.width)),
-              (_ = Math.min(_, 0));
+              (_ = Math.min(_, 0)));
           }
           _ === `left`
             ? _
@@ -45979,8 +46212,8 @@ Error generating stack: ` +
             _?.addEventListener(`scroll`, _),
             window.addEventListener(`scroll`, _),
             () => {
-              _?.removeEventListener(`scroll`, _),
-                window.addEventListener(`scroll`, _);
+              (_?.removeEventListener(`scroll`, _),
+                window.addEventListener(`scroll`, _));
             })
           : (window.sessionStorage.getItem(`DEBUG_StickyContextMenus`) !=
               `true` && _.current?.hidePopover(),
@@ -45988,28 +46221,13 @@ Error generating stack: ` +
       [_, _, _],
     );
     let _ = (0, import_react.useCallback)(() => {
-        _(), _(!0), (_.current = !0);
+        (_(), _(!0), (_.current = !0));
       }, [_]),
       _ = (0, import_react.useCallback)(() => {
-        (_.current = !1), _.current || _(!1);
+        ((_.current = !1), _.current || _(!1));
       }, []),
       _ = (0, import_react.useCallback)(() => {
-        (_.current = !0), _(!0);
-      }, []),
-      _ = (0, import_react.useCallback)(
-        (_) => {
-          _.current?.contains(_.target) && _();
-        },
-        [_],
-      ),
-      _ = (0, import_react.useCallback)(
-        (_) => {
-          _.current?.contains(_.target) && _();
-        },
-        [_],
-      ),
-      _ = (0, import_react.useCallback)(() => {
-        (_.current = !1), _.current || _(!1);
+        ((_.current = !0), _(!0));
       }, []),
       _ = (0, import_react.useCallback)(
         (_) => {
@@ -46017,8 +46235,23 @@ Error generating stack: ` +
         },
         [_],
       ),
+      _ = (0, import_react.useCallback)(
+        (_) => {
+          _.current?.contains(_.target) && _();
+        },
+        [_],
+      ),
       _ = (0, import_react.useCallback)(() => {
-        _(), _();
+        ((_.current = !1), _.current || _(!1));
+      }, []),
+      _ = (0, import_react.useCallback)(
+        (_) => {
+          _.current?.contains(_.target) && _();
+        },
+        [_],
+      ),
+      _ = (0, import_react.useCallback)(() => {
+        (_(), _());
       }, [_, _]),
       _ = (0, import_react.useCallback)(
         (_) => {
@@ -46065,7 +46298,7 @@ Error generating stack: ` +
       _;
     _ === 0 && !_
       ? (_ = (_) => {
-          _.preventDefault(), _();
+          (_.preventDefault(), _());
         })
       : _ === 1 && (_ = _ ? _ : _);
     let _ = {
@@ -46197,7 +46430,7 @@ Error generating stack: ` +
             });
         let _ = _.current.tsScheduledTimeout - performance.now(),
           _ = window.setTimeout(() => {
-            (_.current = void 0), _(_);
+            ((_.current = void 0), _(_));
           }, _);
         return () => window.clearTimeout(_);
       }, [_, _, _, _]),
@@ -46501,7 +46734,7 @@ Error generating stack: ` +
     Aria_Navigation$61,
     partner_menu_arabic_default,
     init_partner_menu_arabic = __esmMin(() => {
-      (Header_Global_Documentation$30 = `الوثائق`),
+      ((Header_Global_Documentation$30 = `الوثائق`),
         (Header_Global_Documentation_Home$30 = `الصفحة الرئيسية`),
         (Header_Global_Documentation_GettingStarted$30 = `دليل البداية`),
         (Header_Global_Documentation_StorePresence$30 = `واجهة العرض في المتجر`),
@@ -46777,7 +47010,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$30,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$30,
           Aria_Navigation: Aria_Navigation$61,
-        });
+        }));
     }),
     partner_menu_brazilian_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$29,
@@ -47067,7 +47300,7 @@ Error generating stack: ` +
     Aria_Navigation$60,
     partner_menu_brazilian_default,
     init_partner_menu_brazilian = __esmMin(() => {
-      (Header_Global_Documentation$29 = `Documentação`),
+      ((Header_Global_Documentation$29 = `Documentação`),
         (Header_Global_Documentation_Home$29 = `Início`),
         (Header_Global_Documentation_GettingStarted$29 = `Primeiros passos`),
         (Header_Global_Documentation_StorePresence$29 = `Presença na loja`),
@@ -47343,7 +47576,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$29,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$29,
           Aria_Navigation: Aria_Navigation$60,
-        });
+        }));
     }),
     partner_menu_bulgarian_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$28,
@@ -47633,7 +47866,7 @@ Error generating stack: ` +
     Aria_Navigation$59,
     partner_menu_bulgarian_default,
     init_partner_menu_bulgarian = __esmMin(() => {
-      (Header_Global_Documentation$28 = `Документация`),
+      ((Header_Global_Documentation$28 = `Документация`),
         (Header_Global_Documentation_Home$28 = `Начална страница`),
         (Header_Global_Documentation_GettingStarted$28 = `Как да започнете`),
         (Header_Global_Documentation_StorePresence$28 = `Присъствие в магазина`),
@@ -47910,7 +48143,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$28,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$28,
           Aria_Navigation: Aria_Navigation$59,
-        });
+        }));
     }),
     partner_menu_czech_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$27,
@@ -48200,7 +48433,7 @@ Error generating stack: ` +
     Aria_Navigation$58,
     partner_menu_czech_default,
     init_partner_menu_czech = __esmMin(() => {
-      (Header_Global_Documentation$27 = `Dokumentace`),
+      ((Header_Global_Documentation$27 = `Dokumentace`),
         (Header_Global_Documentation_Home$27 = `Úvodní stránka`),
         (Header_Global_Documentation_GettingStarted$27 = `Začínáme`),
         (Header_Global_Documentation_StorePresence$27 = `Obchod`),
@@ -48475,7 +48708,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$27,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$27,
           Aria_Navigation: Aria_Navigation$58,
-        });
+        }));
     }),
     partner_menu_danish_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$26,
@@ -48765,7 +48998,7 @@ Error generating stack: ` +
     Aria_Navigation$57,
     partner_menu_danish_default,
     init_partner_menu_danish = __esmMin(() => {
-      (Header_Global_Documentation$26 = `Dokumentation`),
+      ((Header_Global_Documentation$26 = `Dokumentation`),
         (Header_Global_Documentation_Home$26 = `Startside`),
         (Header_Global_Documentation_GettingStarted$26 = `Kom i gang`),
         (Header_Global_Documentation_StorePresence$26 = `Butikstilstedeværelse`),
@@ -49040,7 +49273,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$26,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$26,
           Aria_Navigation: Aria_Navigation$57,
-        });
+        }));
     }),
     partner_menu_dutch_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$25,
@@ -49330,7 +49563,7 @@ Error generating stack: ` +
     Aria_Navigation$56,
     partner_menu_dutch_default,
     init_partner_menu_dutch = __esmMin(() => {
-      (Header_Global_Documentation$25 = `Documentatie`),
+      ((Header_Global_Documentation$25 = `Documentatie`),
         (Header_Global_Documentation_Home$25 = `Startpagina`),
         (Header_Global_Documentation_GettingStarted$25 = `Aan de slag`),
         (Header_Global_Documentation_StorePresence$25 = `Winkelaanwezigheid`),
@@ -49605,7 +49838,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$25,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$25,
           Aria_Navigation: Aria_Navigation$56,
-        });
+        }));
     }),
     partner_menu_english_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$24,
@@ -49895,7 +50128,7 @@ Error generating stack: ` +
     Aria_Navigation$55,
     partner_menu_english_default,
     init_partner_menu_english = __esmMin(() => {
-      (Header_Global_Documentation$24 = `Documentation`),
+      ((Header_Global_Documentation$24 = `Documentation`),
         (Header_Global_Documentation_Home$24 = `Home`),
         (Header_Global_Documentation_GettingStarted$24 = `Getting Started`),
         (Header_Global_Documentation_StorePresence$24 = `Store Presence`),
@@ -50170,7 +50403,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$24,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$24,
           Aria_Navigation: Aria_Navigation$55,
-        });
+        }));
     }),
     partner_menu_finnish_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$23,
@@ -50460,7 +50693,7 @@ Error generating stack: ` +
     Aria_Navigation$54,
     partner_menu_finnish_default,
     init_partner_menu_finnish = __esmMin(() => {
-      (Header_Global_Documentation$23 = `Dokumentaatio`),
+      ((Header_Global_Documentation$23 = `Dokumentaatio`),
         (Header_Global_Documentation_Home$23 = `Kotisivu`),
         (Header_Global_Documentation_GettingStarted$23 = `Alkuun pääseminen`),
         (Header_Global_Documentation_StorePresence$23 = `Näkyvyys kaupassa`),
@@ -50737,7 +50970,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$23,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$23,
           Aria_Navigation: Aria_Navigation$54,
-        });
+        }));
     }),
     partner_menu_french_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$22,
@@ -51026,7 +51259,7 @@ Error generating stack: ` +
     Aria_Navigation$53,
     partner_menu_french_default,
     init_partner_menu_french = __esmMin(() => {
-      (Header_Global_Documentation$22 = `Documentation`),
+      ((Header_Global_Documentation$22 = `Documentation`),
         (Header_Global_Documentation_Home$22 = `Accueil`),
         (Header_Global_Documentation_GettingStarted$22 = `Pour commencer`),
         (Header_Global_Documentation_StorePresence$22 = `Présence sur le magasin`),
@@ -51298,7 +51531,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$22,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$22,
           Aria_Navigation: Aria_Navigation$53,
-        });
+        }));
     }),
     partner_menu_german_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$21,
@@ -51588,7 +51821,7 @@ Error generating stack: ` +
     Aria_Navigation$52,
     partner_menu_german_default,
     init_partner_menu_german = __esmMin(() => {
-      (Header_Global_Documentation$21 = `Dokumentation`),
+      ((Header_Global_Documentation$21 = `Dokumentation`),
         (Header_Global_Documentation_Home$21 = `Startseite`),
         (Header_Global_Documentation_GettingStarted$21 = `Erste Schritte`),
         (Header_Global_Documentation_StorePresence$21 = `Shopauftritt`),
@@ -51864,7 +52097,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$21,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$21,
           Aria_Navigation: Aria_Navigation$52,
-        });
+        }));
     }),
     partner_menu_greek_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$20,
@@ -52154,7 +52387,7 @@ Error generating stack: ` +
     Aria_Navigation$51,
     partner_menu_greek_default,
     init_partner_menu_greek = __esmMin(() => {
-      (Header_Global_Documentation$20 = `Τεκμηρίωση`),
+      ((Header_Global_Documentation$20 = `Τεκμηρίωση`),
         (Header_Global_Documentation_Home$20 = `Αρχική σελίδα`),
         (Header_Global_Documentation_GettingStarted$20 = `Πρώτα βήματα`),
         (Header_Global_Documentation_StorePresence$20 = `Παρουσία Καταστήματος`),
@@ -52430,7 +52663,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$20,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$20,
           Aria_Navigation: Aria_Navigation$51,
-        });
+        }));
     }),
     partner_menu_hungarian_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$19,
@@ -52720,7 +52953,7 @@ Error generating stack: ` +
     Aria_Navigation$50,
     partner_menu_hungarian_default,
     init_partner_menu_hungarian = __esmMin(() => {
-      (Header_Global_Documentation$19 = `Dokumentáció`),
+      ((Header_Global_Documentation$19 = `Dokumentáció`),
         (Header_Global_Documentation_Home$19 = `Kezdőoldal`),
         (Header_Global_Documentation_GettingStarted$19 = `Első lépések`),
         (Header_Global_Documentation_StorePresence$19 = `Áruházi jelenlét`),
@@ -52995,7 +53228,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$19,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$19,
           Aria_Navigation: Aria_Navigation$50,
-        });
+        }));
     }),
     partner_menu_indonesian_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$18,
@@ -53285,7 +53518,7 @@ Error generating stack: ` +
     Aria_Navigation$49,
     partner_menu_indonesian_default,
     init_partner_menu_indonesian = __esmMin(() => {
-      (Header_Global_Documentation$18 = `Dokumentasi`),
+      ((Header_Global_Documentation$18 = `Dokumentasi`),
         (Header_Global_Documentation_Home$18 = `Beranda`),
         (Header_Global_Documentation_GettingStarted$18 = `Permulaan`),
         (Header_Global_Documentation_StorePresence$18 = `Presensi Toko`),
@@ -53560,7 +53793,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$18,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$18,
           Aria_Navigation: Aria_Navigation$49,
-        });
+        }));
     }),
     partner_menu_italian_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$17,
@@ -53850,7 +54083,7 @@ Error generating stack: ` +
     Aria_Navigation$48,
     partner_menu_italian_default,
     init_partner_menu_italian = __esmMin(() => {
-      (Header_Global_Documentation$17 = `Documentazione`),
+      ((Header_Global_Documentation$17 = `Documentazione`),
         (Header_Global_Documentation_Home$17 = `Pagina principale`),
         (Header_Global_Documentation_GettingStarted$17 = `Per iniziare`),
         (Header_Global_Documentation_StorePresence$17 = `Presenza sul Negozio`),
@@ -54125,7 +54358,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$17,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$17,
           Aria_Navigation: Aria_Navigation$48,
-        });
+        }));
     }),
     partner_menu_japanese_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$16,
@@ -54415,7 +54648,7 @@ Error generating stack: ` +
     Aria_Navigation$47,
     partner_menu_japanese_default,
     init_partner_menu_japanese = __esmMin(() => {
-      (Header_Global_Documentation$16 = `ドキュメント`),
+      ((Header_Global_Documentation$16 = `ドキュメント`),
         (Header_Global_Documentation_Home$16 = `ホーム`),
         (Header_Global_Documentation_GettingStarted$16 = `はじめに`),
         (Header_Global_Documentation_StorePresence$16 = `ストアプレゼンス`),
@@ -54690,7 +54923,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$16,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$16,
           Aria_Navigation: Aria_Navigation$47,
-        });
+        }));
     }),
     partner_menu_koreana_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$15,
@@ -54979,7 +55212,7 @@ Error generating stack: ` +
     Aria_Navigation$46,
     partner_menu_koreana_default,
     init_partner_menu_koreana = __esmMin(() => {
-      (Header_Global_Documentation$15 = `문서`),
+      ((Header_Global_Documentation$15 = `문서`),
         (Header_Global_Documentation_GettingStarted$15 = `시작하기`),
         (Header_Global_Documentation_StorePresence$15 = `상점 페이지`),
         (Header_Global_Documentation_Features$15 = `기능`),
@@ -55254,7 +55487,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$15,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$15,
           Aria_Navigation: Aria_Navigation$46,
-        });
+        }));
     }),
     partner_menu_latam_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$14,
@@ -55544,7 +55777,7 @@ Error generating stack: ` +
     Aria_Navigation$45,
     partner_menu_latam_default,
     init_partner_menu_latam = __esmMin(() => {
-      (Header_Global_Documentation$14 = `Documentación`),
+      ((Header_Global_Documentation$14 = `Documentación`),
         (Header_Global_Documentation_Home$14 = `Inicio`),
         (Header_Global_Documentation_GettingStarted$14 = `Primeros pasos`),
         (Header_Global_Documentation_StorePresence$14 = `Presencia en la tienda`),
@@ -55819,7 +56052,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$14,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$14,
           Aria_Navigation: Aria_Navigation$45,
-        });
+        }));
     }),
     partner_menu_malay_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$13,
@@ -56109,7 +56342,7 @@ Error generating stack: ` +
     Aria_Navigation$44,
     partner_menu_malay_default,
     init_partner_menu_malay = __esmMin(() => {
-      (Header_Global_Documentation$13 = `Dokumentasi`),
+      ((Header_Global_Documentation$13 = `Dokumentasi`),
         (Header_Global_Documentation_Home$13 = `Utama`),
         (Header_Global_Documentation_GettingStarted$13 = `Bermula`),
         (Header_Global_Documentation_StorePresence$13 = `Kehadiran Gedung`),
@@ -56384,7 +56617,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$13,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$13,
           Aria_Navigation: Aria_Navigation$44,
-        });
+        }));
     }),
     partner_menu_norwegian_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$12,
@@ -56674,7 +56907,7 @@ Error generating stack: ` +
     Aria_Navigation$43,
     partner_menu_norwegian_default,
     init_partner_menu_norwegian = __esmMin(() => {
-      (Header_Global_Documentation$12 = `Dokumentasjon`),
+      ((Header_Global_Documentation$12 = `Dokumentasjon`),
         (Header_Global_Documentation_Home$12 = `Startside`),
         (Header_Global_Documentation_GettingStarted$12 = `Kom i gang`),
         (Header_Global_Documentation_StorePresence$12 = `Tilstedeværelse i butikken`),
@@ -56951,7 +57184,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$12,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$12,
           Aria_Navigation: Aria_Navigation$43,
-        });
+        }));
     }),
     partner_menu_polish_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$11,
@@ -57241,7 +57474,7 @@ Error generating stack: ` +
     Aria_Navigation$42,
     partner_menu_polish_default,
     init_partner_menu_polish = __esmMin(() => {
-      (Header_Global_Documentation$11 = `Dokumentacja`),
+      ((Header_Global_Documentation$11 = `Dokumentacja`),
         (Header_Global_Documentation_Home$11 = `Strona główna`),
         (Header_Global_Documentation_GettingStarted$11 = `Pierwsze kroki`),
         (Header_Global_Documentation_StorePresence$11 = `Obecność w sklepie`),
@@ -57516,7 +57749,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$11,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$11,
           Aria_Navigation: Aria_Navigation$42,
-        });
+        }));
     }),
     partner_menu_portuguese_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$10,
@@ -57806,7 +58039,7 @@ Error generating stack: ` +
     Aria_Navigation$41,
     partner_menu_portuguese_default,
     init_partner_menu_portuguese = __esmMin(() => {
-      (Header_Global_Documentation$10 = `Documentação`),
+      ((Header_Global_Documentation$10 = `Documentação`),
         (Header_Global_Documentation_Home$10 = `Início`),
         (Header_Global_Documentation_GettingStarted$10 = `Primeiros passos`),
         (Header_Global_Documentation_StorePresence$10 = `Presença na loja`),
@@ -58081,7 +58314,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$10,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$10,
           Aria_Navigation: Aria_Navigation$41,
-        });
+        }));
     }),
     partner_menu_romanian_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$9,
@@ -58371,7 +58604,7 @@ Error generating stack: ` +
     Aria_Navigation$40,
     partner_menu_romanian_default,
     init_partner_menu_romanian = __esmMin(() => {
-      (Header_Global_Documentation$9 = `Documentație`),
+      ((Header_Global_Documentation$9 = `Documentație`),
         (Header_Global_Documentation_Home$9 = `Pagina principală`),
         (Header_Global_Documentation_GettingStarted$9 = `Primii pași`),
         (Header_Global_Documentation_StorePresence$9 = `Prezența în magazin`),
@@ -58646,7 +58879,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$9,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$9,
           Aria_Navigation: Aria_Navigation$40,
-        });
+        }));
     }),
     partner_menu_russian_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$8,
@@ -58936,7 +59169,7 @@ Error generating stack: ` +
     Aria_Navigation$39,
     partner_menu_russian_default,
     init_partner_menu_russian = __esmMin(() => {
-      (Header_Global_Documentation$8 = `Документация`),
+      ((Header_Global_Documentation$8 = `Документация`),
         (Header_Global_Documentation_Home$8 = `Главная страница`),
         (Header_Global_Documentation_GettingStarted$8 = `Подготовка к работе`),
         (Header_Global_Documentation_StorePresence$8 = `Облик в магазине`),
@@ -59213,7 +59446,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$8,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$8,
           Aria_Navigation: Aria_Navigation$39,
-        });
+        }));
     }),
     partner_menu_sc_schinese_exports = __exportAll({
       default: () => partner_menu_sc_schinese_default,
@@ -59510,7 +59743,7 @@ Error generating stack: ` +
     Aria_Navigation$38,
     partner_menu_schinese_default,
     init_partner_menu_schinese = __esmMin(() => {
-      (Header_Global_Documentation$7 = `文献库`),
+      ((Header_Global_Documentation$7 = `文献库`),
         (Header_Global_Documentation_Home$7 = `主页`),
         (Header_Global_Documentation_GettingStarted$7 = `入门指南`),
         (Header_Global_Documentation_StorePresence$7 = `商店状态`),
@@ -59786,7 +60019,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$7,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$7,
           Aria_Navigation: Aria_Navigation$38,
-        });
+        }));
     }),
     partner_menu_spanish_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$6,
@@ -60076,7 +60309,7 @@ Error generating stack: ` +
     Aria_Navigation$37,
     partner_menu_spanish_default,
     init_partner_menu_spanish = __esmMin(() => {
-      (Header_Global_Documentation$6 = `Documentación`),
+      ((Header_Global_Documentation$6 = `Documentación`),
         (Header_Global_Documentation_Home$6 = `Página principal`),
         (Header_Global_Documentation_GettingStarted$6 = `Primeros pasos`),
         (Header_Global_Documentation_StorePresence$6 = `Presencia en la tienda`),
@@ -60351,7 +60584,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$6,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$6,
           Aria_Navigation: Aria_Navigation$37,
-        });
+        }));
     }),
     partner_menu_swedish_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$5,
@@ -60641,7 +60874,7 @@ Error generating stack: ` +
     Aria_Navigation$36,
     partner_menu_swedish_default,
     init_partner_menu_swedish = __esmMin(() => {
-      (Header_Global_Documentation$5 = `Dokumentation`),
+      ((Header_Global_Documentation$5 = `Dokumentation`),
         (Header_Global_Documentation_Home$5 = `Startsida`),
         (Header_Global_Documentation_GettingStarted$5 = `Kom i gång`),
         (Header_Global_Documentation_StorePresence$5 = `Butiksnärvaro`),
@@ -60916,7 +61149,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$5,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$5,
           Aria_Navigation: Aria_Navigation$36,
-        });
+        }));
     }),
     partner_menu_tchinese_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$4,
@@ -61206,7 +61439,7 @@ Error generating stack: ` +
     Aria_Navigation$35,
     partner_menu_tchinese_default,
     init_partner_menu_tchinese = __esmMin(() => {
-      (Header_Global_Documentation$4 = `文獻`),
+      ((Header_Global_Documentation$4 = `文獻`),
         (Header_Global_Documentation_Home$4 = `首頁`),
         (Header_Global_Documentation_GettingStarted$4 = `新手上路`),
         (Header_Global_Documentation_StorePresence$4 = `商店狀態`),
@@ -61483,7 +61716,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$4,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$4,
           Aria_Navigation: Aria_Navigation$35,
-        });
+        }));
     }),
     partner_menu_thai_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$3,
@@ -61773,7 +62006,7 @@ Error generating stack: ` +
     Aria_Navigation$34,
     partner_menu_thai_default,
     init_partner_menu_thai = __esmMin(() => {
-      (Header_Global_Documentation$3 = `เอกสาร`),
+      ((Header_Global_Documentation$3 = `เอกสาร`),
         (Header_Global_Documentation_Home$3 = `หน้าหลัก`),
         (Header_Global_Documentation_GettingStarted$3 = `เริ่มต้น`),
         (Header_Global_Documentation_StorePresence$3 = `การนำเสนอบนร้านค้า`),
@@ -62050,7 +62283,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$3,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$3,
           Aria_Navigation: Aria_Navigation$34,
-        });
+        }));
     }),
     partner_menu_turkish_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$2,
@@ -62340,7 +62573,7 @@ Error generating stack: ` +
     Aria_Navigation$33,
     partner_menu_turkish_default,
     init_partner_menu_turkish = __esmMin(() => {
-      (Header_Global_Documentation$2 = `Belgeler`),
+      ((Header_Global_Documentation$2 = `Belgeler`),
         (Header_Global_Documentation_Home$2 = `Ana Sayfa`),
         (Header_Global_Documentation_GettingStarted$2 = `Başlarken`),
         (Header_Global_Documentation_StorePresence$2 = `Mağaza Görünümü`),
@@ -62615,7 +62848,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$2,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$2,
           Aria_Navigation: Aria_Navigation$33,
-        });
+        }));
     }),
     partner_menu_ukrainian_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$1,
@@ -62905,7 +63138,7 @@ Error generating stack: ` +
     Aria_Navigation$32,
     partner_menu_ukrainian_default,
     init_partner_menu_ukrainian = __esmMin(() => {
-      (Header_Global_Documentation$1 = `Документація`),
+      ((Header_Global_Documentation$1 = `Документація`),
         (Header_Global_Documentation_Home$1 = `Головна`),
         (Header_Global_Documentation_GettingStarted$1 = `Перші кроки`),
         (Header_Global_Documentation_StorePresence$1 = `Присутність у крамниці`),
@@ -63182,7 +63415,7 @@ Error generating stack: ` +
           AppType_TitleCase_Beta: AppType_TitleCase_Beta$1,
           AppType_TitleCase_DLC_SeasonPass: AppType_TitleCase_DLC_SeasonPass$1,
           Aria_Navigation: Aria_Navigation$32,
-        });
+        }));
     }),
     partner_menu_vietnamese_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising,
@@ -63465,7 +63698,7 @@ Error generating stack: ` +
     Aria_Navigation$31,
     partner_menu_vietnamese_default,
     init_partner_menu_vietnamese = __esmMin(() => {
-      (Header_Global_Documentation = `Tài liệu`),
+      ((Header_Global_Documentation = `Tài liệu`),
         (Header_Global_Documentation_Home = `Trang chủ`),
         (Header_Global_Documentation_GettingStarted = `Bắt đầu`),
         (Header_Global_Documentation_StorePresence = `Diện mạo cửa hàng`),
@@ -63708,10 +63941,10 @@ Error generating stack: ` +
           AppType_TitleCase_Beta,
           AppType_TitleCase_DLC_SeasonPass,
           Aria_Navigation: Aria_Navigation$31,
-        });
+        }));
     }),
     paths$1 = {};
-  (paths$1.arabic = () =>
+  ((paths$1.arabic = () =>
     __vitePreload(
       () =>
         Promise.resolve().then(
@@ -63725,7 +63958,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_partner_menu_brazilian(), partner_menu_brazilian_exports
+              init_partner_menu_brazilian(),
+              partner_menu_brazilian_exports
             ),
           ),
         void 0,
@@ -63736,7 +63970,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_partner_menu_bulgarian(), partner_menu_bulgarian_exports
+              init_partner_menu_bulgarian(),
+              partner_menu_bulgarian_exports
             ),
           ),
         void 0,
@@ -63819,7 +64054,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_partner_menu_hungarian(), partner_menu_hungarian_exports
+              init_partner_menu_hungarian(),
+              partner_menu_hungarian_exports
             ),
           ),
         void 0,
@@ -63830,7 +64066,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_partner_menu_indonesian(), partner_menu_indonesian_exports
+              init_partner_menu_indonesian(),
+              partner_menu_indonesian_exports
             ),
           ),
         void 0,
@@ -63886,7 +64123,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_partner_menu_norwegian(), partner_menu_norwegian_exports
+              init_partner_menu_norwegian(),
+              partner_menu_norwegian_exports
             ),
           ),
         void 0,
@@ -63906,7 +64144,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_partner_menu_portuguese(), partner_menu_portuguese_exports
+              init_partner_menu_portuguese(),
+              partner_menu_portuguese_exports
             ),
           ),
         void 0,
@@ -63935,7 +64174,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_partner_menu_sc_schinese(), partner_menu_sc_schinese_exports
+              init_partner_menu_sc_schinese(),
+              partner_menu_sc_schinese_exports
             ),
           ),
         void 0,
@@ -64000,7 +64240,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_partner_menu_ukrainian(), partner_menu_ukrainian_exports
+              init_partner_menu_ukrainian(),
+              partner_menu_ukrainian_exports
             ),
           ),
         void 0,
@@ -64011,12 +64252,13 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_partner_menu_vietnamese(), partner_menu_vietnamese_exports
+              init_partner_menu_vietnamese(),
+              partner_menu_vietnamese_exports
             ),
           ),
         void 0,
         {}.url,
-      ));
+      )));
   async function LoadStrings$1(_) {
     if (paths$1[_]) return await paths$1[_]();
   }
@@ -64045,8 +64287,8 @@ Error generating stack: ` +
       (0, import_react.useLayoutEffect)(() => {
         if (!_.current || !_.current) return;
         let _ = _.current.getBoundingClientRect();
-        (_.current.style.top = `${_.bottom}px`),
-          (_.current.style.right = `${_ - _.right}px`);
+        ((_.current.style.top = `${_.bottom}px`),
+          (_.current.style.right = `${_ - _.right}px`));
       }, [_, _, _]),
       _
         ? (0, import_jsx_runtime.jsx)(`dialog`, {
@@ -64062,12 +64304,12 @@ Error generating stack: ` +
                     let _ = parseInt(_.dataset.index) + 1,
                       _ = _.current?.querySelector(`[data-index="${_}"]`);
                     if (_) {
-                      _.focus(), _.preventDefault();
+                      (_.focus(), _.preventDefault());
                       return;
                     }
                   }
-                  _.current?.querySelector(`[data-index="0"]`)?.focus(),
-                    _.preventDefault();
+                  (_.current?.querySelector(`[data-index="0"]`)?.focus(),
+                    _.preventDefault());
                 }
                 if (_.key === `ArrowUp`) {
                   let _ = document.activeElement;
@@ -64075,16 +64317,16 @@ Error generating stack: ` +
                     let _ = parseInt(_.dataset.index) - 1,
                       _ = _.current?.querySelector(`[data-index="${_}"]`);
                     if (_) {
-                      _.focus(), _.preventDefault();
+                      (_.focus(), _.preventDefault());
                       return;
                     }
                   }
-                  _.current
+                  (_.current
                     ?.querySelector(
                       `[data-index="${(_?.data?.length ?? 0) - 1}"]`,
                     )
                     ?.focus(),
-                    _.preventDefault();
+                    _.preventDefault());
                 }
               }
             },
@@ -64174,7 +64416,7 @@ Error generating stack: ` +
           className: SearchBox,
           value: _,
           onChange: (_) => {
-            _(_.target.value), _(!0);
+            (_(_.target.value), _(!0));
           },
           placeholder: PartnerMenuLocalization.Localize(
             `#Header_Search_By_Appid`,
@@ -64196,7 +64438,7 @@ Error generating stack: ` +
             term: _,
             inputRef: _,
             fnDismiss: () => {
-              _.current?.focus(), _(!1);
+              (_.current?.focus(), _(!1));
             },
             firstItemRef: _,
             ref: _,
@@ -64221,7 +64463,7 @@ Error generating stack: ` +
       _ ? _.current?.showModal() : _.current?.close();
     }, [_]);
     async function _(_) {
-      _(!0), ChangePrimaryPublisher(_);
+      (_(!0), ChangePrimaryPublisher(_));
     }
     let _ = Object.entries(_.action_parameters?.affiliatedPublishers ?? {});
     return (0, import_jsx_runtime.jsx)(`dialog`, {
@@ -64316,7 +64558,7 @@ Error generating stack: ` +
       _ = _[_];
     return (0, import_jsx_runtime.jsx)(`img`, {
       onError: (_) => {
-        _((_) => _ + 1), _?.(_, _, _);
+        (_((_) => _ + 1), _?.(_, _, _));
       },
       alt: _,
       ..._,
@@ -64336,9 +64578,9 @@ Error generating stack: ` +
     let _ = `0000000000000000000000000000000000000000`;
     typeof _ == `string` ? (_ = _) : _ && (_ = ConvertUInt8ToHexString(_) || _);
     let _ = `.jpg`;
-    _ === `0000000000000000000000000000000000000000` &&
+    (_ === `0000000000000000000000000000000000000000` &&
       (_ = DEFAULT_AVATAR_HASH),
-      _.length == 44 && ((_ = _.slice(-4)), (_ = _.slice(0, 40)));
+      _.length == 44 && ((_ = _.slice(-4)), (_ = _.slice(0, 40))));
     let _ = Config.AVATAR_BASE_URL;
     switch (
       (_ ||
@@ -64359,7 +64601,7 @@ Error generating stack: ` +
       case `FillArea`:
         _ += `_full`;
     }
-    return (_ += _), _;
+    return ((_ += _), _);
   }
   function ConvertUInt8ToHexString(_) {
     return _
@@ -64533,7 +64775,7 @@ Error generating stack: ` +
     beta_tag$30,
     global_header_arabic_default,
     init_global_header_arabic = __esmMin(() => {
-      (language$31 = `english (الإنجليزية)`),
+      ((language$31 = `english (الإنجليزية)`),
         (Aria_Steam_Home_Link$31 = `رابط إلى صفحة Steam الرئيسية`),
         (global_menu_install_steam$31 = `تثبيت Steam`),
         (global_menu_login$30 = `تسجيل الدخول`),
@@ -64594,7 +64836,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$30,
           Aria_Navigation: Aria_Navigation$30,
           beta_tag: beta_tag$30,
-        });
+        }));
     }),
     global_header_brazilian_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$29,
@@ -64662,7 +64904,7 @@ Error generating stack: ` +
     beta_tag$29,
     global_header_brazilian_default,
     init_global_header_brazilian = __esmMin(() => {
-      (language$30 = `brazilian`),
+      ((language$30 = `brazilian`),
         (Aria_Steam_Home_Link$30 = `Link para a página inicial do Steam`),
         (global_menu_install_steam$30 = `Instale o Steam`),
         (global_menu_login$29 = `iniciar sessão`),
@@ -64723,7 +64965,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$29,
           Aria_Navigation: Aria_Navigation$29,
           beta_tag: beta_tag$29,
-        });
+        }));
     }),
     global_header_bulgarian_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$28,
@@ -64791,7 +65033,7 @@ Error generating stack: ` +
     beta_tag$28,
     global_header_bulgarian_default,
     init_global_header_bulgarian = __esmMin(() => {
-      (language$29 = `bulgarian`),
+      ((language$29 = `bulgarian`),
         (Aria_Steam_Home_Link$29 = `Връзка към началната страница на Steam`),
         (global_menu_install_steam$29 = `Инсталирайте Steam`),
         (global_menu_login$28 = `вписване`),
@@ -64852,7 +65094,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$28,
           Aria_Navigation: Aria_Navigation$28,
           beta_tag: beta_tag$28,
-        });
+        }));
     }),
     global_header_czech_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$27,
@@ -64920,7 +65162,7 @@ Error generating stack: ` +
     beta_tag$27,
     global_header_czech_default,
     init_global_header_czech = __esmMin(() => {
-      (language$28 = `czech`),
+      ((language$28 = `czech`),
         (Aria_Steam_Home_Link$28 = `Odkaz na domovskou stránku`),
         (global_menu_install_steam$28 = `Nainstalovat Steam`),
         (global_menu_login$27 = `přihlásit se`),
@@ -64981,7 +65223,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$27,
           Aria_Navigation: Aria_Navigation$27,
           beta_tag: beta_tag$27,
-        });
+        }));
     }),
     global_header_danish_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$26,
@@ -65049,7 +65291,7 @@ Error generating stack: ` +
     beta_tag$26,
     global_header_danish_default,
     init_global_header_danish = __esmMin(() => {
-      (language$27 = `danish`),
+      ((language$27 = `danish`),
         (Aria_Steam_Home_Link$27 = `Link til Steam-forsiden`),
         (global_menu_install_steam$27 = `Installer Steam`),
         (global_menu_login$26 = `log på`),
@@ -65109,7 +65351,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$26,
           Aria_Navigation: Aria_Navigation$26,
           beta_tag: beta_tag$26,
-        });
+        }));
     }),
     global_header_dutch_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$25,
@@ -65177,7 +65419,7 @@ Error generating stack: ` +
     beta_tag$25,
     global_header_dutch_default,
     init_global_header_dutch = __esmMin(() => {
-      (language$26 = `dutch`),
+      ((language$26 = `dutch`),
         (Aria_Steam_Home_Link$26 = `Link naar de Steam-startpagina`),
         (global_menu_install_steam$26 = `Steam installeren`),
         (global_menu_login$25 = `inloggen`),
@@ -65238,7 +65480,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$25,
           Aria_Navigation: Aria_Navigation$25,
           beta_tag: beta_tag$25,
-        });
+        }));
     }),
     global_header_english_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$24,
@@ -65306,7 +65548,7 @@ Error generating stack: ` +
     beta_tag$24,
     global_header_english_default,
     init_global_header_english = __esmMin(() => {
-      (language$25 = `english`),
+      ((language$25 = `english`),
         (Aria_Steam_Home_Link$25 = `Link to the Steam Homepage`),
         (global_menu_install_steam$25 = `Install Steam`),
         (global_menu_login$24 = `sign in`),
@@ -65366,7 +65608,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$24,
           Aria_Navigation: Aria_Navigation$24,
           beta_tag: beta_tag$24,
-        });
+        }));
     }),
     global_header_finnish_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$23,
@@ -65434,7 +65676,7 @@ Error generating stack: ` +
     beta_tag$23,
     global_header_finnish_default,
     init_global_header_finnish = __esmMin(() => {
-      (language$24 = `finnish`),
+      ((language$24 = `finnish`),
         (Aria_Steam_Home_Link$24 = `Linkki Steamin kotisivulle`),
         (global_menu_install_steam$24 = `Asenna Steam`),
         (global_menu_login$23 = `Kirjaudu sisään`),
@@ -65495,7 +65737,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$23,
           Aria_Navigation: Aria_Navigation$23,
           beta_tag: beta_tag$23,
-        });
+        }));
     }),
     global_header_french_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$22,
@@ -65563,7 +65805,7 @@ Error generating stack: ` +
     beta_tag$22,
     global_header_french_default,
     init_global_header_french = __esmMin(() => {
-      (language$23 = `french`),
+      ((language$23 = `french`),
         (Aria_Steam_Home_Link$23 = `Lien vers la page d'accueil Steam`),
         (global_menu_install_steam$23 = `Installer Steam`),
         (global_menu_login$22 = `se connecter\xA0`),
@@ -65624,7 +65866,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$22,
           Aria_Navigation: Aria_Navigation$22,
           beta_tag: beta_tag$22,
-        });
+        }));
     }),
     global_header_german_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$21,
@@ -65692,7 +65934,7 @@ Error generating stack: ` +
     beta_tag$21,
     global_header_german_default,
     init_global_header_german = __esmMin(() => {
-      (language$22 = `german`),
+      ((language$22 = `german`),
         (Aria_Steam_Home_Link$22 = `Zur Steam-Startseite verlinken`),
         (global_menu_install_steam$22 = `Steam installieren`),
         (global_menu_login$21 = `anmelden`),
@@ -65752,7 +65994,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$21,
           Aria_Navigation: Aria_Navigation$21,
           beta_tag: beta_tag$21,
-        });
+        }));
     }),
     global_header_greek_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$20,
@@ -65820,7 +66062,7 @@ Error generating stack: ` +
     beta_tag$20,
     global_header_greek_default,
     init_global_header_greek = __esmMin(() => {
-      (language$21 = `greek`),
+      ((language$21 = `greek`),
         (Aria_Steam_Home_Link$21 = `Σύνδεσμος προς την αρχική σελίδα του Steam`),
         (global_menu_install_steam$21 = `Εγκατάσταση Steam`),
         (global_menu_login$20 = `σύνδεση`),
@@ -65881,7 +66123,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$20,
           Aria_Navigation: Aria_Navigation$20,
           beta_tag: beta_tag$20,
-        });
+        }));
     }),
     global_header_hungarian_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$19,
@@ -65949,7 +66191,7 @@ Error generating stack: ` +
     beta_tag$19,
     global_header_hungarian_default,
     init_global_header_hungarian = __esmMin(() => {
-      (language$20 = `hungarian`),
+      ((language$20 = `hungarian`),
         (Aria_Steam_Home_Link$20 = `Hivatkozás a Steam kezdőoldalhoz`),
         (global_menu_install_steam$20 = `Steam telepítése`),
         (global_menu_login$19 = `bejelentkezés`),
@@ -66009,7 +66251,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$19,
           Aria_Navigation: Aria_Navigation$19,
           beta_tag: beta_tag$19,
-        });
+        }));
     }),
     global_header_indonesian_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$18,
@@ -66077,7 +66319,7 @@ Error generating stack: ` +
     beta_tag$18,
     global_header_indonesian_default,
     init_global_header_indonesian = __esmMin(() => {
-      (language$19 = `indonesian`),
+      ((language$19 = `indonesian`),
         (Aria_Steam_Home_Link$19 = `Tautan ke Halaman Beranda Steam`),
         (global_menu_install_steam$19 = `Instal Steam`),
         (global_menu_login$18 = `login`),
@@ -66138,7 +66380,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$18,
           Aria_Navigation: Aria_Navigation$18,
           beta_tag: beta_tag$18,
-        });
+        }));
     }),
     global_header_italian_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$17,
@@ -66206,7 +66448,7 @@ Error generating stack: ` +
     beta_tag$17,
     global_header_italian_default,
     init_global_header_italian = __esmMin(() => {
-      (language$18 = `italian`),
+      ((language$18 = `italian`),
         (Aria_Steam_Home_Link$18 = `Link della pagina iniziale di Steam`),
         (global_menu_install_steam$18 = `Installa Steam`),
         (global_menu_login$17 = `Accedi`),
@@ -66267,7 +66509,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$17,
           Aria_Navigation: Aria_Navigation$17,
           beta_tag: beta_tag$17,
-        });
+        }));
     }),
     global_header_japanese_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$16,
@@ -66335,7 +66577,7 @@ Error generating stack: ` +
     beta_tag$16,
     global_header_japanese_default,
     init_global_header_japanese = __esmMin(() => {
-      (language$17 = `japanese`),
+      ((language$17 = `japanese`),
         (Aria_Steam_Home_Link$17 = `Steamホームページへのリンク`),
         (global_menu_install_steam$17 = `Steamをインストール`),
         (global_menu_login$16 = `サインイン`),
@@ -66395,7 +66637,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$16,
           Aria_Navigation: Aria_Navigation$16,
           beta_tag: beta_tag$16,
-        });
+        }));
     }),
     global_header_koreana_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$15,
@@ -66463,7 +66705,7 @@ Error generating stack: ` +
     beta_tag$15,
     global_header_koreana_default,
     init_global_header_koreana = __esmMin(() => {
-      (language$16 = `korean`),
+      ((language$16 = `korean`),
         (Aria_Steam_Home_Link$16 = `Steam 홈페이지 링크`),
         (global_menu_install_steam$16 = `Steam 설치`),
         (global_menu_login$15 = `로그인`),
@@ -66524,7 +66766,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$15,
           Aria_Navigation: Aria_Navigation$15,
           beta_tag: beta_tag$15,
-        });
+        }));
     }),
     global_header_latam_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$14,
@@ -66592,7 +66834,7 @@ Error generating stack: ` +
     beta_tag$14,
     global_header_latam_default,
     init_global_header_latam = __esmMin(() => {
-      (language$15 = `latam`),
+      ((language$15 = `latam`),
         (Aria_Steam_Home_Link$15 = `Enlace a la página de inicio de Steam`),
         (global_menu_install_steam$15 = `Instalar Steam`),
         (global_menu_login$14 = `iniciar sesión`),
@@ -66653,7 +66895,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$14,
           Aria_Navigation: Aria_Navigation$14,
           beta_tag: beta_tag$14,
-        });
+        }));
     }),
     global_header_malay_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$13,
@@ -66721,7 +66963,7 @@ Error generating stack: ` +
     beta_tag$13,
     global_header_malay_default,
     init_global_header_malay = __esmMin(() => {
-      (language$14 = `malay`),
+      ((language$14 = `malay`),
         (Aria_Steam_Home_Link$14 = `Pautan ke Laman Utama Steam`),
         (global_menu_install_steam$14 = `Pasang Steam`),
         (global_menu_login$13 = `daftar masuk`),
@@ -66782,7 +67024,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$13,
           Aria_Navigation: Aria_Navigation$13,
           beta_tag: beta_tag$13,
-        });
+        }));
     }),
     global_header_norwegian_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$12,
@@ -66850,7 +67092,7 @@ Error generating stack: ` +
     beta_tag$12,
     global_header_norwegian_default,
     init_global_header_norwegian = __esmMin(() => {
-      (language$13 = `norwegian`),
+      ((language$13 = `norwegian`),
         (Aria_Steam_Home_Link$13 = `Lenke til Steams startside`),
         (global_menu_install_steam$13 = `Installer Steam`),
         (global_menu_login$12 = `logg inn`),
@@ -66911,7 +67153,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$12,
           Aria_Navigation: Aria_Navigation$12,
           beta_tag: beta_tag$12,
-        });
+        }));
     }),
     global_header_polish_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$11,
@@ -66979,7 +67221,7 @@ Error generating stack: ` +
     beta_tag$11,
     global_header_polish_default,
     init_global_header_polish = __esmMin(() => {
-      (language$12 = `polish`),
+      ((language$12 = `polish`),
         (Aria_Steam_Home_Link$12 = `Link do strony głównej Steam`),
         (global_menu_install_steam$12 = `Zainstaluj Steam`),
         (global_menu_login$11 = `zaloguj się`),
@@ -67040,7 +67282,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$11,
           Aria_Navigation: Aria_Navigation$11,
           beta_tag: beta_tag$11,
-        });
+        }));
     }),
     global_header_portuguese_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$10,
@@ -67108,7 +67350,7 @@ Error generating stack: ` +
     beta_tag$10,
     global_header_portuguese_default,
     init_global_header_portuguese = __esmMin(() => {
-      (language$11 = `portuguese`),
+      ((language$11 = `portuguese`),
         (Aria_Steam_Home_Link$11 = `Link para a página inicial do Steam`),
         (global_menu_install_steam$11 = `Instalar o Steam`),
         (global_menu_login$10 = `iniciar sessão`),
@@ -67169,7 +67411,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$10,
           Aria_Navigation: Aria_Navigation$10,
           beta_tag: beta_tag$10,
-        });
+        }));
     }),
     global_header_romanian_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$9,
@@ -67237,7 +67479,7 @@ Error generating stack: ` +
     beta_tag$9,
     global_header_romanian_default,
     init_global_header_romanian = __esmMin(() => {
-      (language$10 = `romanian`),
+      ((language$10 = `romanian`),
         (Aria_Steam_Home_Link$10 = `Link către pagina principală Steam`),
         (global_menu_install_steam$10 = `Instalează Steam`),
         (global_menu_login$9 = `conectează-te`),
@@ -67297,7 +67539,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$9,
           Aria_Navigation: Aria_Navigation$9,
           beta_tag: beta_tag$9,
-        });
+        }));
     }),
     global_header_russian_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$8,
@@ -67365,7 +67607,7 @@ Error generating stack: ` +
     beta_tag$8,
     global_header_russian_default,
     init_global_header_russian = __esmMin(() => {
-      (language$9 = `russian`),
+      ((language$9 = `russian`),
         (Aria_Steam_Home_Link$9 = `Ссылка на главную страницу Steam`),
         (global_menu_install_steam$9 = `Установить Steam`),
         (global_menu_login$8 = `вход`),
@@ -67426,7 +67668,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$8,
           Aria_Navigation: Aria_Navigation$8,
           beta_tag: beta_tag$8,
-        });
+        }));
     }),
     global_header_sc_schinese_exports = __exportAll({
       Aria_Steam_Home_Link: () => Aria_Steam_Home_Link$8,
@@ -67443,7 +67685,7 @@ Error generating stack: ` +
     global_menu_getmobileapp$8,
     global_header_sc_schinese_default,
     init_global_header_sc_schinese = __esmMin(() => {
-      (language$8 = `schinese`),
+      ((language$8 = `schinese`),
         (Aria_Steam_Home_Link$8 = `蒸汽平台主页链接`),
         (global_menu_install_steam$8 = `安装蒸汽平台`),
         (Common_Footer_SSA$8 = `蒸汽平台订户协议`),
@@ -67454,7 +67696,7 @@ Error generating stack: ` +
           global_menu_install_steam: global_menu_install_steam$8,
           Common_Footer_SSA: Common_Footer_SSA$8,
           global_menu_getmobileapp: global_menu_getmobileapp$8,
-        });
+        }));
     }),
     global_header_schinese_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$7,
@@ -67522,7 +67764,7 @@ Error generating stack: ` +
     beta_tag$7,
     global_header_schinese_default,
     init_global_header_schinese = __esmMin(() => {
-      (language$7 = `schinese`),
+      ((language$7 = `schinese`),
         (Aria_Steam_Home_Link$7 = `Steam 主页链接`),
         (global_menu_install_steam$7 = `安装 Steam`),
         (global_menu_login$7 = `登录`),
@@ -67583,7 +67825,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$7,
           Aria_Navigation: Aria_Navigation$7,
           beta_tag: beta_tag$7,
-        });
+        }));
     }),
     global_header_spanish_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$6,
@@ -67651,7 +67893,7 @@ Error generating stack: ` +
     beta_tag$6,
     global_header_spanish_default,
     init_global_header_spanish = __esmMin(() => {
-      (language$6 = `spanish`),
+      ((language$6 = `spanish`),
         (Aria_Steam_Home_Link$6 = `Enlace a la página principal de Steam`),
         (global_menu_install_steam$6 = `Instalar Steam`),
         (global_menu_login$6 = `iniciar sesión`),
@@ -67712,7 +67954,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$6,
           Aria_Navigation: Aria_Navigation$6,
           beta_tag: beta_tag$6,
-        });
+        }));
     }),
     global_header_swedish_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$5,
@@ -67780,7 +68022,7 @@ Error generating stack: ` +
     beta_tag$5,
     global_header_swedish_default,
     init_global_header_swedish = __esmMin(() => {
-      (language$5 = `swedish`),
+      ((language$5 = `swedish`),
         (Aria_Steam_Home_Link$5 = `Länk till Steams startsida`),
         (global_menu_install_steam$5 = `Installera Steam`),
         (global_menu_login$5 = `logga in`),
@@ -67841,7 +68083,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$5,
           Aria_Navigation: Aria_Navigation$5,
           beta_tag: beta_tag$5,
-        });
+        }));
     }),
     global_header_tchinese_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$4,
@@ -67909,7 +68151,7 @@ Error generating stack: ` +
     beta_tag$4,
     global_header_tchinese_default,
     init_global_header_tchinese = __esmMin(() => {
-      (language$4 = `tchinese`),
+      ((language$4 = `tchinese`),
         (Aria_Steam_Home_Link$4 = `Steam 首頁連結`),
         (global_menu_install_steam$4 = `安裝 Steam`),
         (global_menu_login$4 = `登入`),
@@ -67970,7 +68212,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$4,
           Aria_Navigation: Aria_Navigation$4,
           beta_tag: beta_tag$4,
-        });
+        }));
     }),
     global_header_thai_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$3,
@@ -68038,7 +68280,7 @@ Error generating stack: ` +
     beta_tag$3,
     global_header_thai_default,
     init_global_header_thai = __esmMin(() => {
-      (language$3 = `thai`),
+      ((language$3 = `thai`),
         (Aria_Steam_Home_Link$3 = `ลิงก์ไปยังหน้าหลักของ Steam`),
         (global_menu_install_steam$3 = `ติดตั้ง Steam`),
         (global_menu_login$3 = `เข้าสู่ระบบ`),
@@ -68099,7 +68341,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$3,
           Aria_Navigation: Aria_Navigation$3,
           beta_tag: beta_tag$3,
-        });
+        }));
     }),
     global_header_turkish_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$2,
@@ -68167,7 +68409,7 @@ Error generating stack: ` +
     beta_tag$2,
     global_header_turkish_default,
     init_global_header_turkish = __esmMin(() => {
-      (language$2 = `turkish`),
+      ((language$2 = `turkish`),
         (Aria_Steam_Home_Link$2 = `Steam Ana Sayfası Bağlantısı`),
         (global_menu_install_steam$2 = `Steam'i Yükle`),
         (global_menu_login$2 = `giriş yap`),
@@ -68227,7 +68469,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$2,
           Aria_Navigation: Aria_Navigation$2,
           beta_tag: beta_tag$2,
-        });
+        }));
     }),
     global_header_ukrainian_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation$1,
@@ -68295,7 +68537,7 @@ Error generating stack: ` +
     beta_tag$1,
     global_header_ukrainian_default,
     init_global_header_ukrainian = __esmMin(() => {
-      (language$1 = `ukrainian`),
+      ((language$1 = `ukrainian`),
         (Aria_Steam_Home_Link$1 = `Посилання на головну сторінку Steam`),
         (global_menu_install_steam$1 = `Інсталювати Steam`),
         (global_menu_login$1 = `увійти`),
@@ -68356,7 +68598,7 @@ Error generating stack: ` +
           SuperNav_Notifications: SuperNav_Notifications$1,
           Aria_Navigation: Aria_Navigation$1,
           beta_tag: beta_tag$1,
-        });
+        }));
     }),
     global_header_vietnamese_exports = __exportAll({
       Aria_Navigation: () => Aria_Navigation,
@@ -68423,7 +68665,7 @@ Error generating stack: ` +
     beta_tag,
     global_header_vietnamese_default,
     init_global_header_vietnamese = __esmMin(() => {
-      (language = `vietnamese`),
+      ((language = `vietnamese`),
         (Aria_Steam_Home_Link = `Liên kết đến trang chủ Steam`),
         (global_menu_install_steam = `Cài đặt Steam`),
         (global_menu_login = `đăng nhập`),
@@ -68482,10 +68724,10 @@ Error generating stack: ` +
           SuperNav_Notifications,
           Aria_Navigation,
           beta_tag,
-        });
+        }));
     }),
     paths = {};
-  (paths.arabic = () =>
+  ((paths.arabic = () =>
     __vitePreload(
       () =>
         Promise.resolve().then(
@@ -68499,7 +68741,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_global_header_brazilian(), global_header_brazilian_exports
+              init_global_header_brazilian(),
+              global_header_brazilian_exports
             ),
           ),
         void 0,
@@ -68510,7 +68753,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_global_header_bulgarian(), global_header_bulgarian_exports
+              init_global_header_bulgarian(),
+              global_header_bulgarian_exports
             ),
           ),
         void 0,
@@ -68593,7 +68837,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_global_header_hungarian(), global_header_hungarian_exports
+              init_global_header_hungarian(),
+              global_header_hungarian_exports
             ),
           ),
         void 0,
@@ -68604,7 +68849,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_global_header_indonesian(), global_header_indonesian_exports
+              init_global_header_indonesian(),
+              global_header_indonesian_exports
             ),
           ),
         void 0,
@@ -68624,7 +68870,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_global_header_japanese(), global_header_japanese_exports
+              init_global_header_japanese(),
+              global_header_japanese_exports
             ),
           ),
         void 0,
@@ -68662,7 +68909,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_global_header_norwegian(), global_header_norwegian_exports
+              init_global_header_norwegian(),
+              global_header_norwegian_exports
             ),
           ),
         void 0,
@@ -68682,7 +68930,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_global_header_portuguese(), global_header_portuguese_exports
+              init_global_header_portuguese(),
+              global_header_portuguese_exports
             ),
           ),
         void 0,
@@ -68693,7 +68942,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_global_header_romanian(), global_header_romanian_exports
+              init_global_header_romanian(),
+              global_header_romanian_exports
             ),
           ),
         void 0,
@@ -68725,7 +68975,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_global_header_schinese(), global_header_schinese_exports
+              init_global_header_schinese(),
+              global_header_schinese_exports
             ),
           ),
         void 0,
@@ -68754,7 +69005,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_global_header_tchinese(), global_header_tchinese_exports
+              init_global_header_tchinese(),
+              global_header_tchinese_exports
             ),
           ),
         void 0,
@@ -68783,7 +69035,8 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_global_header_ukrainian(), global_header_ukrainian_exports
+              init_global_header_ukrainian(),
+              global_header_ukrainian_exports
             ),
           ),
         void 0,
@@ -68794,12 +69047,13 @@ Error generating stack: ` +
         () =>
           Promise.resolve().then(
             () => (
-              init_global_header_vietnamese(), global_header_vietnamese_exports
+              init_global_header_vietnamese(),
+              global_header_vietnamese_exports
             ),
           ),
         void 0,
         {}.url,
-      ));
+      )));
   async function LoadStrings(_) {
     if (paths[_]) return await paths[_]();
   }
@@ -68853,7 +69107,7 @@ Error generating stack: ` +
       try {
         await ChangeLanguage(_, _);
       } catch (_) {
-        console.error(_), _(!1);
+        (console.error(_), _(!1));
         return;
       }
       _ && !_
@@ -68909,10 +69163,10 @@ Error generating stack: ` +
   }
   function LogOutCurrentUser(_ = `/logout/`) {
     let _ = document.createElement(`form`);
-    (_.action = _),
+    ((_.action = _),
       (_.method = `POST`),
       document.body.appendChild(_),
-      _.submit();
+      _.submit());
   }
   var k_EPartnerAction_Logout = 1,
     k_EPartnerAction_ChangeLanguage = 2,
@@ -69413,7 +69667,7 @@ Error generating stack: ` +
           (0, import_jsx_runtime.jsx)(`button`, {
             className: void 0,
             onClick: () => {
-              ClearCookie(k_spoofedSteamIDCookie), window.location.reload();
+              (ClearCookie(k_spoofedSteamIDCookie), window.location.reload());
             },
             children: `End Spoofing`,
           }),
@@ -69660,7 +69914,7 @@ Error generating stack: ` +
   var container = document.getElementById(`headerContainer`);
   if (container.dataset.headerdata) {
     let _ = ComplexTypeAwareJSONParse(container.dataset.headerdata);
-    InitConfig(`headerContainer`),
+    (InitConfig(`headerContainer`),
       (0, import_client.createRoot)(container).render(
         (0, import_jsx_runtime.jsx)(ReactQueryRoot, {
           children: (0, import_jsx_runtime.jsx)(ConfigContextRoot, {
@@ -69676,6 +69930,6 @@ Error generating stack: ` +
             }),
           }),
         }),
-      );
+      ));
   }
 })();

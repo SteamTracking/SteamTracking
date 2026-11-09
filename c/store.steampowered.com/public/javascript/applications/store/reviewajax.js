@@ -45,4 +45,3 @@ async function _(_, _, _) {
     _,
   );
 }
-export { _, _, _, _ };

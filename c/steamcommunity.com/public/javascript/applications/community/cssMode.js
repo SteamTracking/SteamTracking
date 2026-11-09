@@ -20,7 +20,7 @@ _(_, _);
 var _ = 12e4,
   _ = class {
     constructor(_) {
-      (this._defaults = _),
+      ((this._defaults = _),
         (this._worker = null),
         (this._client = null),
         (this._idleCheckInterval = window.setInterval(
@@ -30,15 +30,16 @@ var _ = 12e4,
         (this._lastUsedTime = 0),
         (this._configChangeListener = this._defaults.onDidChange(() =>
           this._stopWorker(),
-        ));
+        )));
     }
     _stopWorker() {
-      (this._worker &&= (this._worker.dispose(), null)), (this._client = null);
+      ((this._worker &&= (this._worker.dispose(), null)),
+        (this._client = null));
     }
     dispose() {
-      clearInterval(this._idleCheckInterval),
+      (clearInterval(this._idleCheckInterval),
         this._configChangeListener.dispose(),
-        this._stopWorker();
+        this._stopWorker());
     }
     _checkIfIdle() {
       this._worker && Date.now() - this._lastUsedTime > _ && this._stopWorker();
@@ -87,7 +88,7 @@ var _;
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.MIN_VALUE = -2147483648), (_.MAX_VALUE = 2147483647);
+  ((_.MIN_VALUE = -2147483648), (_.MAX_VALUE = 2147483647));
   function _(_) {
     return typeof _ == `number` && _.MIN_VALUE <= _ && _ <= _.MAX_VALUE;
   }
@@ -95,7 +96,7 @@ var _;
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.MIN_VALUE = 0), (_.MAX_VALUE = 2147483647);
+  ((_.MIN_VALUE = 0), (_.MAX_VALUE = 2147483647));
   function _(_) {
     return typeof _ == `number` && _.MIN_VALUE <= _ && _ <= _.MAX_VALUE;
   }
@@ -248,7 +249,7 @@ var _;
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.Comment = `comment`), (_.Imports = `imports`), (_.Region = `region`);
+  ((_.Comment = `comment`), (_.Imports = `imports`), (_.Region = `region`));
 })((_ ||= {}));
 var _;
 (function (_) {
@@ -296,11 +297,11 @@ var _;
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.Error = 1), (_.Warning = 2), (_.Information = 3), (_.Hint = 4);
+  ((_.Error = 1), (_.Warning = 2), (_.Information = 3), (_.Hint = 4));
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.Unnecessary = 1), (_.Deprecated = 2);
+  ((_.Unnecessary = 1), (_.Deprecated = 2));
 })((_ ||= {}));
 var _;
 (function (_) {
@@ -349,7 +350,7 @@ var _;
       title: _,
       command: _,
     };
-    return _.defined(_) && _.length > 0 && (_.arguments = _), _;
+    return (_.defined(_) && _.length > 0 && (_.arguments = _), _);
   }
   _.create = _;
   function _(_) {
@@ -655,7 +656,7 @@ var _;
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.PlainText = `plaintext`), (_.Markdown = `markdown`);
+  ((_.PlainText = `plaintext`), (_.Markdown = `markdown`));
   function _(_) {
     let _ = _;
     return _ === _.PlainText || _ === _.Markdown;
@@ -672,7 +673,7 @@ var _;
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.Text = 1),
+  ((_.Text = 1),
     (_.Method = 2),
     (_.Function = 3),
     (_.Constructor = 4),
@@ -696,11 +697,11 @@ var _;
     (_.Struct = 22),
     (_.Event = 23),
     (_.Operator = 24),
-    (_.TypeParameter = 25);
+    (_.TypeParameter = 25));
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.PlainText = 1), (_.Snippet = 2);
+  ((_.PlainText = 1), (_.Snippet = 2));
 })((_ ||= {}));
 var _;
 (function (_) {
@@ -724,7 +725,7 @@ var _;
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.asIs = 1), (_.adjustIndentation = 2);
+  ((_.asIs = 1), (_.adjustIndentation = 2));
 })((_ ||= {}));
 var _;
 (function (_) {
@@ -815,7 +816,7 @@ var _;
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.Text = 1), (_.Read = 2), (_.Write = 3);
+  ((_.Text = 1), (_.Read = 2), (_.Write = 3));
 })((_ ||= {}));
 var _;
 (function (_) {
@@ -823,13 +824,13 @@ var _;
     let _ = {
       range: _,
     };
-    return _.number(_) && (_.kind = _), _;
+    return (_.number(_) && (_.kind = _), _);
   }
   _.create = _;
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.File = 1),
+  ((_.File = 1),
     (_.Module = 2),
     (_.Namespace = 3),
     (_.Package = 4),
@@ -854,7 +855,7 @@ var _;
     (_.Struct = 23),
     (_.Event = 24),
     (_.Operator = 25),
-    (_.TypeParameter = 26);
+    (_.TypeParameter = 26));
 })((_ ||= {}));
 var _;
 (function (_) {
@@ -871,7 +872,7 @@ var _;
         range: _,
       },
     };
-    return _ && (_.containerName = _), _;
+    return (_ && (_.containerName = _), _);
   }
   _.create = _;
 })((_ ||= {}));
@@ -907,7 +908,7 @@ var _;
       range: _,
       selectionRange: _,
     };
-    return _ !== void 0 && (_.children = _), _;
+    return (_ !== void 0 && (_.children = _), _);
   }
   _.create = _;
   function _(_) {
@@ -928,7 +929,7 @@ var _;
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.Empty = ``),
+  ((_.Empty = ``),
     (_.QuickFix = `quickfix`),
     (_.Refactor = `refactor`),
     (_.RefactorExtract = `refactor.extract`),
@@ -936,11 +937,11 @@ var _;
     (_.RefactorRewrite = `refactor.rewrite`),
     (_.Source = `source`),
     (_.SourceOrganizeImports = `source.organizeImports`),
-    (_.SourceFixAll = `source.fixAll`);
+    (_.SourceFixAll = `source.fixAll`));
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.Invoked = 1), (_.Automatic = 2);
+  ((_.Invoked = 1), (_.Automatic = 2));
 })((_ ||= {}));
 var _;
 (function (_) {
@@ -948,7 +949,7 @@ var _;
     let _ = {
       diagnostics: _,
     };
-    return _ != null && (_.only = _), _ != null && (_.triggerKind = _), _;
+    return (_ != null && (_.only = _), _ != null && (_.triggerKind = _), _);
   }
   _.create = _;
   function _(_) {
@@ -1003,7 +1004,7 @@ var _;
     let _ = {
       range: _,
     };
-    return _.defined(_) && (_.data = _), _;
+    return (_.defined(_) && (_.data = _), _);
   }
   _.create = _;
   function _(_) {
@@ -1070,7 +1071,7 @@ var _;
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.namespace = `namespace`),
+  ((_.namespace = `namespace`),
     (_.type = `type`),
     (_.class = `class`),
     (_.enum = `enum`),
@@ -1092,11 +1093,11 @@ var _;
     (_.number = `number`),
     (_.regexp = `regexp`),
     (_.operator = `operator`),
-    (_.decorator = `decorator`);
+    (_.decorator = `decorator`));
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.declaration = `declaration`),
+  ((_.declaration = `declaration`),
     (_.definition = `definition`),
     (_.readonly = `readonly`),
     (_.static = `static`),
@@ -1105,7 +1106,7 @@ var _;
     (_.async = `async`),
     (_.modification = `modification`),
     (_.documentation = `documentation`),
-    (_.defaultLibrary = `defaultLibrary`);
+    (_.defaultLibrary = `defaultLibrary`));
 })((_ ||= {}));
 var _;
 (function (_) {
@@ -1192,7 +1193,7 @@ var _;
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.Type = 1), (_.Parameter = 2);
+  ((_.Type = 1), (_.Parameter = 2));
   function _(_) {
     return _ === 1 || _ === 2;
   }
@@ -1224,7 +1225,7 @@ var _;
       position: _,
       label: _,
     };
-    return _ !== void 0 && (_.kind = _), _;
+    return (_ !== void 0 && (_.kind = _), _);
   }
   _.create = _;
   function _(_) {
@@ -1276,7 +1277,7 @@ var _;
 })((_ ||= {}));
 var _;
 (function (_) {
-  (_.Invoked = 0), (_.Automatic = 1);
+  ((_.Invoked = 0), (_.Automatic = 1));
 })((_ ||= {}));
 var _;
 (function (_) {
@@ -1348,24 +1349,24 @@ var _;
     let _ = (_.length / 2) | 0,
       _ = _.slice(0, _),
       _ = _.slice(_);
-    _(_, _), _(_, _);
+    (_(_, _), _(_, _));
     let _ = 0,
       _ = 0,
       _ = 0;
-    for (; _ < _.length && _ < _.length; )
+    for (; _ < _.length && _ < _.length;)
       _(_[_], _[_]) <= 0 ? (_[_++] = _[_++]) : (_[_++] = _[_++]);
-    for (; _ < _.length; ) _[_++] = _[_++];
-    for (; _ < _.length; ) _[_++] = _[_++];
+    for (; _ < _.length;) _[_++] = _[_++];
+    for (; _ < _.length;) _[_++] = _[_++];
     return _;
   }
 })((_ ||= {}));
 var _ = class {
     constructor(_, _, _, _) {
-      (this._uri = _),
+      ((this._uri = _),
         (this._languageId = _),
         (this._version = _),
         (this._content = _),
-        (this._lineOffsets = void 0);
+        (this._lineOffsets = void 0));
     }
     get uri() {
       return this._uri;
@@ -1385,9 +1386,9 @@ var _ = class {
       return this._content;
     }
     update(_, _) {
-      (this._content = _.text),
+      ((this._content = _.text),
         (this._version = _),
-        (this._lineOffsets = void 0);
+        (this._lineOffsets = void 0));
     }
     getLineOffsets() {
       if (this._lineOffsets === void 0) {
@@ -1397,7 +1398,7 @@ var _ = class {
         for (let _ = 0; _ < _.length; _++) {
           _ &&= (_.push(_), !1);
           let _ = _.charAt(_);
-          (_ =
+          ((_ =
             _ === `\r` ||
             _ ===
               `
@@ -1407,9 +1408,9 @@ var _ = class {
               _.charAt(_ + 1) ===
                 `
 ` &&
-              _++;
+              _++);
         }
-        _ && _.length > 0 && _.push(_.length), (this._lineOffsets = _);
+        (_ && _.length > 0 && _.push(_.length), (this._lineOffsets = _));
       }
       return this._lineOffsets;
     }
@@ -1419,7 +1420,7 @@ var _ = class {
         _ = 0,
         _ = _.length;
       if (_ === 0) return _.create(0, _);
-      for (; _ < _; ) {
+      for (; _ < _;) {
         let _ = Math.floor((_ + _) / 2);
         _[_] > _ ? (_ = _) : (_ = _ + 1);
       }
@@ -1490,19 +1491,19 @@ var _ = class {
 })((_ ||= {}));
 var _ = class {
   constructor(_, _, _) {
-    (this._languageId = _),
+    ((this._languageId = _),
       (this._worker = _),
       (this._disposables = []),
-      (this._listener = Object.create(null));
+      (this._listener = Object.create(null)));
     let _ = (_) => {
         let _ = _.getLanguageId();
         if (_ !== this._languageId) return;
         let _;
-        (this._listener[_.uri.toString()] = _.onDidChangeContent(() => {
-          window.clearTimeout(_),
-            (_ = window.setTimeout(() => this._doValidate(_.uri, _), 500));
+        ((this._listener[_.uri.toString()] = _.onDidChangeContent(() => {
+          (window.clearTimeout(_),
+            (_ = window.setTimeout(() => this._doValidate(_.uri, _), 500)));
         })),
-          this._doValidate(_.uri, _);
+          this._doValidate(_.uri, _));
       },
       _ = (_) => {
         _.editor.setModelMarkers(_, this._languageId, []);
@@ -1510,11 +1511,11 @@ var _ = class {
           _ = this._listener[_];
         _ && (_.dispose(), delete this._listener[_]);
       };
-    this._disposables.push(_.editor.onDidCreateModel(_)),
+    (this._disposables.push(_.editor.onDidCreateModel(_)),
       this._disposables.push(_.editor.onWillDisposeModel(_)),
       this._disposables.push(
         _.editor.onDidChangeModelLanguage((_) => {
-          _(_.model), _(_.model);
+          (_(_.model), _(_.model));
         }),
       ),
       this._disposables.push(
@@ -1530,11 +1531,11 @@ var _ = class {
           for (let _ in this._listener) this._listener[_].dispose();
         },
       }),
-      _.editor.getModels().forEach(_);
+      _.editor.getModels().forEach(_));
   }
   dispose() {
-    this._disposables.forEach((_) => _ && _.dispose()),
-      (this._disposables.length = 0);
+    (this._disposables.forEach((_) => _ && _.dispose()),
+      (this._disposables.length = 0));
   }
   _doValidate(_, _) {
     this._worker(_)
@@ -1578,7 +1579,7 @@ function _(_, _) {
 }
 var _ = class {
   constructor(_, _) {
-    (this._worker = _), (this._triggerCharacters = _);
+    ((this._worker = _), (this._triggerCharacters = _));
   }
   get triggerCharacters() {
     return this._triggerCharacters;
@@ -1974,7 +1975,7 @@ var _ = class {
   },
   _ = class {
     constructor(_) {
-      (this._worker = _), (this.canFormatMultipleRanges = !1);
+      ((this._worker = _), (this.canFormatMultipleRanges = !1));
     }
     provideDocumentRangeFormattingEdits(_, _, _, _) {
       let _ = _.uri;
@@ -2042,7 +2043,7 @@ var _ = class {
                 start: _.startLine + 1,
                 end: _.endLine + 1,
               };
-              return _.kind !== void 0 && (_.kind = _(_.kind)), _;
+              return (_.kind !== void 0 && (_.kind = _(_.kind)), _);
             });
         });
     }
@@ -2069,11 +2070,11 @@ var _ = class {
         if (_)
           return _.map((_) => {
             let _ = [];
-            for (; _; )
-              _.push({
+            for (; _;)
+              (_.push({
                 range: _(_.range),
               }),
-                (_ = _.parent);
+                (_ = _.parent));
             return _;
           });
       });
@@ -2087,7 +2088,7 @@ function _(_) {
   let _ = (..._) => _.getLanguageServiceWorker(..._);
   function _() {
     let { languageId: _, modeConfiguration: _ } = _;
-    _(_),
+    (_(_),
       _.completionItems &&
         _.push(
           _.languages.registerCompletionItemProvider(
@@ -2116,9 +2117,9 @@ function _(_) {
       _.documentRangeFormattingEdits &&
         _.push(
           _.languages.registerDocumentRangeFormattingEditProvider(_, new _(_)),
-        );
+        ));
   }
-  return _(), _.push(_(_)), _(_);
+  return (_(), _.push(_(_)), _(_));
 }
 function _(_) {
   return {
@@ -2126,7 +2127,7 @@ function _(_) {
   };
 }
 function _(_) {
-  for (; _.length; ) _.pop().dispose();
+  for (; _.length;) _.pop().dispose();
 }
 export {
   _ as CompletionAdapter,

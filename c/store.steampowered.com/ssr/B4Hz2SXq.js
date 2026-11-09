@@ -16,4 +16,3 @@ function _() {
     (document.cookie = `timezoneName=${_};expires=${new Date(Date.now() + 31536e6).toUTCString()};path=/;Secure;SameSite=None;`);
 }
 _();
-export { _, _ };

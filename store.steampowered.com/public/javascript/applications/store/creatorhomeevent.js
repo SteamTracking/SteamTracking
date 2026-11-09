@@ -22,7 +22,7 @@ function p(e) {
     d.useEffect(() => {
       if (!m && !p) {
         let e = new URL(window.location.href);
-        e.searchParams.set(`v1`, `1`), window.location.replace(e.toString());
+        (e.searchParams.set(`v1`, `1`), window.location.replace(e.toString()));
       }
     }, [m, p]),
     p

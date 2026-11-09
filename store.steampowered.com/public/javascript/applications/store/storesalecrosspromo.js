@@ -105,7 +105,7 @@ function q(e, t, n, r) {
 function se(e) {
   let { capsules: t } = e,
     n = z();
-  return a({ queries: (t ?? []).map((e) => L(n, w(e))), combine: ce }), null;
+  return (a({ queries: (t ?? []).map((e) => L(n, w(e))), combine: ce }), null);
 }
 function ce() {
   return null;
@@ -355,9 +355,9 @@ function Oe(e) {
   d.current = a;
   let f = W.useCallback((e) => {
       let t = u.current?.rgSales[e];
-      `${e}${t?.strEventGID}${t?.clanAccountID}`,
+      (`${e}${t?.strEventGID}${t?.clanAccountID}`,
         d.current,
-        l((t) => (t.has(e) ? t : new Set([...t, e])));
+        l((t) => (t.has(e) ? t : new Set([...t, e]))));
     }, []),
     p = W.useMemo(() => n?.rgSales[0] && $(n.rgSales[0], []), [n]);
   if (!n || !i || !p) return null;
@@ -477,7 +477,7 @@ function $(e, t) {
       show_as_carousel: !0,
       carousel_rows: 1,
     };
-  return (r.jsondata.sale_sections = [a]), { event: r, section: a };
+  return ((r.jsondata.sale_sections = [a]), { event: r, section: a });
 }
 var Me = `_7J8FxbBVGEM-`;
 function Ne(e) {
@@ -486,7 +486,7 @@ function Ne(e) {
     o = Te();
   return (
     W.useEffect(() => {
-      o(t, n, r), a(!0);
+      (o(t, n, r), a(!0));
     }, [t, n, r, o]),
     i
       ? (0, J.jsx)(B, {

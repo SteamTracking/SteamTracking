@@ -7528,7 +7528,7 @@
   .matchpage_HeroStatsSection_3ElBk
   .matchpage_HeroStats_3ZNG7
   .matchpage_TeamHeroStats_oG3Rm.matchpage_Radiant_3yWEc
-  .matchpage_SingleHeroStats_dCRzn:nth-child(2n - 1) {
+  .matchpage_SingleHeroStats_dCRzn:nth-child(2n-1) {
   border-top: 2px solid #26353e;
   background-color: #161d22;
 }

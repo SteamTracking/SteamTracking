@@ -23,7 +23,7 @@
   border-radius: 80px;
   padding: 8px 16px;
   font:
-    700 12px / 1.4 Motiva Sans,
+    700 12px/1.4 Motiva Sans,
     Arial,
     sans-serif;
   text-decoration: none;
@@ -38,9 +38,8 @@
   background-color: #678ba670;
 }
 .kHLroHJHwyA-.gamepadui-searchtab {
-  background:
-    url("data:image/svg+xml,%3csvg%20width='36'%20height='36'%20viewBox='0%200%2036%2036'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M27.4999%2024C29.4972%2021.1283%2030.347%2017.6129%2029.8822%2014.146C29.4174%2010.679%2027.6715%207.5117%2024.9883%205.26751C22.3052%203.02332%2018.8791%201.86488%2015.3846%202.02023C11.8901%202.17559%208.5803%203.63349%206.10686%206.10692C3.63343%208.58036%202.17553%2011.8901%202.02017%2015.3846C1.86482%2018.8792%203.02326%2022.3052%205.26745%2024.9884C7.51164%2027.6716%2010.679%2029.4174%2014.1459%2029.8823C17.6129%2030.3471%2021.1282%2029.4972%2023.9999%2027.5L30.2599%2033.77L30.6199%2033.41L33.4399%2030.59L33.7999%2030.23L27.4999%2024ZM15.9999%2025C14.2199%2025%2012.4799%2024.4722%2010.9998%2023.4832C9.51977%2022.4943%208.36622%2021.0887%207.68503%2019.4442C7.00384%2017.7996%206.82561%2015.99%207.17288%2014.2442C7.52015%2012.4984%208.37731%2010.8947%209.63598%209.63605C10.8947%208.37737%2012.4983%207.52021%2014.2441%207.17294C15.99%206.82567%2017.7996%207.0039%2019.4441%207.68509C21.0886%208.36628%2022.4942%209.51983%2023.4832%2010.9999C24.4721%2012.4799%2024.9999%2014.22%2024.9999%2016C24.9999%2018.387%2024.0517%2020.6761%2022.3639%2022.364C20.6761%2024.0518%2018.3869%2025%2015.9999%2025V25Z'%20fill='%237C8EA3'/%3e%3c/svg%3e")
-    8px / 18px 18px no-repeat;
+  background: url("data:image/svg+xml,%3csvg%20width='36'%20height='36'%20viewBox='0%200%2036%2036'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M27.4999%2024C29.4972%2021.1283%2030.347%2017.6129%2029.8822%2014.146C29.4174%2010.679%2027.6715%207.5117%2024.9883%205.26751C22.3052%203.02332%2018.8791%201.86488%2015.3846%202.02023C11.8901%202.17559%208.5803%203.63349%206.10686%206.10692C3.63343%208.58036%202.17553%2011.8901%202.02017%2015.3846C1.86482%2018.8792%203.02326%2022.3052%205.26745%2024.9884C7.51164%2027.6716%2010.679%2029.4174%2014.1459%2029.8823C17.6129%2030.3471%2021.1282%2029.4972%2023.9999%2027.5L30.2599%2033.77L30.6199%2033.41L33.4399%2030.59L33.7999%2030.23L27.4999%2024ZM15.9999%2025C14.2199%2025%2012.4799%2024.4722%2010.9998%2023.4832C9.51977%2022.4943%208.36622%2021.0887%207.68503%2019.4442C7.00384%2017.7996%206.82561%2015.99%207.17288%2014.2442C7.52015%2012.4984%208.37731%2010.8947%209.63598%209.63605C10.8947%208.37737%2012.4983%207.52021%2014.2441%207.17294C15.99%206.82567%2017.7996%207.0039%2019.4441%207.68509C21.0886%208.36628%2022.4942%209.51983%2023.4832%2010.9999C24.4721%2012.4799%2024.9999%2014.22%2024.9999%2016C24.9999%2018.387%2024.0517%2020.6761%2022.3639%2022.364C20.6761%2024.0518%2018.3869%2025%2015.9999%2025V25Z'%20fill='%237C8EA3'/%3e%3c/svg%3e")
+    8px/18px 18px no-repeat;
   padding-left: 32px;
 }
 .kHLroHJHwyA-.gpfocus {
@@ -63,7 +62,7 @@
 .nlTg10o51PM- {
   box-sizing: border-box;
   z-index: 100;
-  background: linear-gradient(90.85deg, #333840 .58%, #25282e 74.92%);
+  background: linear-gradient(90.85deg, #333840 0.58%, #25282e 74.92%);
   border-left: 2px solid #0cf;
   width: 90%;
   max-width: 980px;
@@ -102,7 +101,7 @@
   outline: 2px solid #fff;
 }
 .Z0Fc4o3bNoI- {
-  background: linear-gradient(90deg, #47bfff 5%, #1a44c2 60%) 25% / 330% 100%;
+  background: linear-gradient(90deg, #47bfff 5%, #1a44c2 60%) 25%/330% 100%;
 }
 .Z0Fc4o3bNoI-:hover {
   color: #fff;
@@ -738,9 +737,8 @@ body {
 }
 .v3B63V0zBTo-.XnZs-FpxSXU- {
   height: calc(
-    100vh -
-    var(--responsive-menu-floating-height, 0px) -
-    var(--global-header-height, 0px)
+    100vh - var(--responsive-menu-floating-height, 0px) -
+      var(--global-header-height, 0px)
   );
 }
 .v3B63V0zBTo-.XnZs-FpxSXU-.POoDtdN1A2U- {
@@ -750,8 +748,7 @@ body {
   color: #dcdedf;
   backdrop-filter: blur(10px);
   z-index: 1;
-  background:
-    radial-gradient(
+  background: radial-gradient(
       107.95% 57.49% at 50% 100%,
       #18253533 0%,
       #18253585 5%,
@@ -759,7 +756,7 @@ body {
       #182535 60%,
       #192330 100%
     )
-    0 0 / 101% 101% no-repeat;
+    0 0/101% 101% no-repeat;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -793,8 +790,7 @@ html.client .WCG-2-OYepA- {
 }
 @media screen and (width <= 730px) {
   html.responsive .x4-PBPanWEY- .WCG-2-OYepA- {
-    background:
-      radial-gradient(
+    background: radial-gradient(
         100% 100% at 5% 100%,
         #18253585 0%,
         #1825359e 5%,
@@ -802,7 +798,7 @@ html.client .WCG-2-OYepA- {
         #23262e 60%,
         #171a21 100%
       )
-      bottom / 101% 250%;
+      bottom/101% 250%;
   }
 }
 .WCG-2-OYepA-,
@@ -966,8 +962,7 @@ button.EYF1OQwj3TE- .oWSo9BvK7oY- {
   font-weight: 400;
   line-height: normal;
 }
-@supports (hanging-punctuation: first) and
-  (font: -apple-system-body) and
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and
   (appearance: none) {
   a.EYF1OQwj3TE- .oWSo9BvK7oY-._1ycoUq2K-Kw-,
   button.EYF1OQwj3TE- .oWSo9BvK7oY-._1ycoUq2K-Kw- {
@@ -978,8 +973,7 @@ a.EYF1OQwj3TE-.u5g6D3cfJ40- svg,
 button.EYF1OQwj3TE-.u5g6D3cfJ40- svg {
   margin-bottom: unset;
 }
-@supports (hanging-punctuation: first) and
-  (font: -apple-system-body) and
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and
   (appearance: none) {
   a.EYF1OQwj3TE-.u5g6D3cfJ40-._1ycoUq2K-Kw-,
   button.EYF1OQwj3TE-.u5g6D3cfJ40-._1ycoUq2K-Kw- {
@@ -1022,8 +1016,7 @@ a.EYF1OQwj3TE-.iXv7KYShgr4- .oWSo9BvK7oY-,
 button.EYF1OQwj3TE-.iXv7KYShgr4- .oWSo9BvK7oY- {
   color: #fff;
 }
-@supports (hanging-punctuation: first) and
-  (font: -apple-system-body) and
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and
   (appearance: none) {
   a.EYF1OQwj3TE-.iXv7KYShgr4- ._1ycoUq2K-Kw-,
   button.EYF1OQwj3TE-.iXv7KYShgr4- ._1ycoUq2K-Kw- {
@@ -1458,7 +1451,7 @@ button.EYF1OQwj3TE-.NmzlVu-XMK4- .XjqMC1cYnuc- .SSKzoqpi1KQ- .IG5AcX8yPdI- {
   display: flex;
 }
 .QtOF4NTnTmU- .npQclyzVwIk- img {
-  aspect-ratio: 92 / 43;
+  aspect-ratio: 92/43;
   width: 190px;
 }
 ._9nnAWrjSUZE- > .QtOF4NTnTmU- {
@@ -1473,7 +1466,7 @@ button.EYF1OQwj3TE-.NmzlVu-XMK4- .XjqMC1cYnuc- .SSKzoqpi1KQ- .IG5AcX8yPdI- {
   }
 }
 ._9nnAWrjSUZE- > .QtOF4NTnTmU- .npQclyzVwIk- img {
-  aspect-ratio: 92 / 43;
+  aspect-ratio: 92/43;
   width: 115px;
 }
 ._5MF0-gyeLoA- {
@@ -1920,7 +1913,7 @@ html.touch ._8gSfHm4xLbA- {
   background: linear-gradient(270deg, #0e141b99 0%, #a3bad399 100%);
 }
 .cO0trRuLfzA- .JImNxATJ1xc- {
-  aspect-ratio: 77 / 29;
+  aspect-ratio: 77/29;
   background: #0003;
   width: 148px;
 }

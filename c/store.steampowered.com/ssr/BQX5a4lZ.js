@@ -56,15 +56,14 @@ function _() {
         : await _.RemoveObject(_);
     },
     onMutate: async (_) => {
-      await _.cancelQueries({
+      (await _.cancelQueries({
         queryKey: [_],
       }),
         (_ &&= {
           ..._,
           rtCreated: Date.now() / 1e3,
         }),
-        _.setQueryData([_], _);
+        _.setQueryData([_], _));
     },
   });
 }
-export { _, _ };

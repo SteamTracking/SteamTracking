@@ -73,7 +73,7 @@ function _(_) {
     _ = _.host_role == `peer` ? `Peer` : `Client`,
     _ = null;
   if (_.data_center)
-    (_ = `Gameserver`),
+    ((_ = `Gameserver`),
       (_ = (0, _.jsxs)(_.Fragment, {
         children: [
           (0, _.jsx)(`span`, {
@@ -86,7 +86,7 @@ function _(_) {
             children: _.data_center,
           }),
         ],
-      }));
+      })));
   else if (_.steam_persona) {
     let _ = _.COMMUNITY_BASE_URL + `/profiles/` + _._;
     _ = (0, _.jsxs)(_.Fragment, {
@@ -181,7 +181,7 @@ function _(_) {
       let _ = parseFloat(_);
       if (_ >= 5 && _ <= 95) {
         let _ = _.ping_pctile[_];
-        _ < _ && (_ = _), _ > _ && (_ = _);
+        (_ < _ && (_ = _), _ > _ && (_ = _));
       }
     }
   return [_, _];
@@ -463,17 +463,17 @@ function _(_) {
     for (let _ = 0; _ < _.length; ++_)
       _[_][1] > 0 && ((_ ??= _), (_ = _ + 1), (_ += _[_][1]));
     if (_ > 0) {
-      (_ = Math.max(0, _ - 2)), (_ = Math.min(_.length, _ + 2));
+      ((_ = Math.max(0, _ - 2)), (_ = Math.min(_.length, _ + 2)));
       let _ = [];
       for (let _ = _; _ < _; ++_) {
         let [_, _] = _[_];
         _ == _ && _ == 0 && (_ = 0);
         let _;
-        (_ =
+        ((_ =
           _ + 1 >= _.length || (_ + 1 >= _ && _ == 0)
             ? _(_) + `+`
             : _ + `-` + _(_[_ + 1][0])),
-          _.push(_(_, _, _));
+          _.push(_(_, _, _)));
       }
       _ = (0, _.jsx)(`table`, {
         className: _,
@@ -799,7 +799,9 @@ function _(_) {
   if (_) {
     let _ = function (_) {
         let _ = [..._];
-        return _.sort((_, _) => (_.active_time || 0) - (_.active_time || 0)), _;
+        return (
+          _.sort((_, _) => (_.active_time || 0) - (_.active_time || 0)), _
+        );
       },
       _ = _.client_sessions && _.client_sessions.length > 0,
       _ = _.peer_sessions && _.peer_sessions.length > 0;
@@ -903,7 +905,7 @@ function _(_) {
       _ = _.get(`app_name1`) || ``,
       _ = _.get(`app_value1`) || ``;
     if ((_(_), _(_), _(_), _(_), _(_), !_.toString() && _ == 0)) return;
-    _(!0), _(``), _ > 0 && _.set(`appid`, `` + _);
+    (_(!0), _(``), _ > 0 && _.set(`appid`, `` + _));
     let _ = _.PARTNER_BASE_URL + `sdr/ajaxsessionsearch?` + _.toString();
     (async () => {
       try {
@@ -919,22 +921,22 @@ function _(_) {
             _(_?.data?.success + ` msg: ` + _?.data?.msg));
       } catch (_) {
         let _ = _(_);
-        console.error(`sdrsessionsearch: OnPerformSearch ` + _.strErrorMsg, _),
-          _(_.strErrorMsg);
+        (console.error(`sdrsessionsearch: OnPerformSearch ` + _.strErrorMsg, _),
+          _(_.strErrorMsg));
       }
       _(!1);
     })();
   }, [_, _.location, _]);
   let _ = () => {
       let _ = new URLSearchParams();
-      _ && _.set(`client_id`, _),
+      (_ && _.set(`client_id`, _),
         _ && _.set(`peer_id`, _),
         _ && _.set(`kind`, _),
-        _ && _ && (_.set(`app_name1`, _), _.set(`app_value1`, _));
+        _ && _ && (_.set(`app_name1`, _), _.set(`app_value1`, _)));
       let _ = {
         ..._.location,
       };
-      (_.search = _.toString()), _ != _.location && _.push(_), _(_ + 1);
+      ((_.search = _.toString()), _ != _.location && _.push(_), _(_ + 1));
     },
     _ = null;
   if (_ !== void 0) {

@@ -196,7 +196,7 @@ function _(_, _) {
   return _({
     mutationFn: _,
     onSuccess: () => {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: _(_),
       }),
         _.invalidateQueries({
@@ -207,7 +207,7 @@ function _(_, _) {
         }),
         _.invalidateQueries({
           queryKey: _(_),
-        });
+        }));
     },
   });
 }
@@ -224,12 +224,12 @@ function _(_) {
 }
 function _(_, _) {
   let _ = document.createElement(`a`);
-  (_.href = _),
+  ((_.href = _),
     (_.download = _),
     (_.style.display = `none`),
     document.body.appendChild(_),
     _.click(),
-    document.body.removeChild(_);
+    document.body.removeChild(_));
 }
 function _(_) {
   let _ = _(_.creator);
@@ -440,10 +440,10 @@ function _(_) {
     ),
     _ = (_, _) => {
       let _ = new Set(_);
-      _
+      (_
         ? (_.add(_), _(_).forEach((_) => _.add(_)))
         : (_.delete(_), _(_).forEach((_) => _.delete(_))),
-        _(_);
+        _(_));
     };
   return (0, _.jsxs)(_.Fragment, {
     children: [
@@ -494,7 +494,7 @@ function _(_) {
                         },
                         {
                           onSuccess: () => {
-                            (_.onSaved ?? _)(), _();
+                            ((_.onSaved ?? _)(), _());
                           },
                           onError: _,
                         },
@@ -536,29 +536,3 @@ function _(_) {
     [_],
   );
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

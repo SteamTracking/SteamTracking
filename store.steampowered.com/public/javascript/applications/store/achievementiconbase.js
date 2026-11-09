@@ -19,7 +19,7 @@ var l = e(t(), 1),
   d = `dc7pWlMQLmU-`,
   f = `gKxbRyrbiIU-`,
   p = {};
-(p.arabic = () =>
+((p.arabic = () =>
   a(() => import(`./achievements_arabic.js`), [], import.meta.url)),
   (p.brazilian = () =>
     a(() => import(`./achievements_brazilian.js`), [], import.meta.url)),
@@ -82,7 +82,7 @@ var l = e(t(), 1),
   (p.ukrainian = () =>
     a(() => import(`./achievements_ukrainian.js`), [], import.meta.url)),
   (p.vietnamese = () =>
-    a(() => import(`./achievements_vietnamese.js`), [], import.meta.url));
+    a(() => import(`./achievements_vietnamese.js`), [], import.meta.url)));
 async function m(e) {
   if (p[e]) return await p[e]();
 }

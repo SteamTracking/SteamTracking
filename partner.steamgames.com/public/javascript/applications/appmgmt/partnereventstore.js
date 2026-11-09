@@ -29,7 +29,7 @@ import { t as D } from "./debugglobal.js";
 import { h as O, n as k, t as A } from "./partnereventutils.js";
 import "./steamid.js";
 var j = f(u(), 1);
-o(), (0, j.createContext)(!1);
+(o(), (0, j.createContext)(!1));
 function M() {
   return !0;
 }
@@ -105,7 +105,8 @@ function H(e, t, n) {
                 n,
               );
             } catch (e) {
-              c(e?.response?.data?.err_msg), u(e?.response?.data?.success || 2);
+              (c(e?.response?.data?.err_msg),
+                u(e?.response?.data?.success || 2));
             }
             f.token.reason || i(a);
           }
@@ -120,7 +121,7 @@ function H(e, t, n) {
 function U(e) {
   let t = `` + e,
     n = x.GetELanguageFallback(e);
-  return e != n && (t += `_` + n), t;
+  return (e != n && (t += `_` + n), t);
 }
 var W = class {
     appid;
@@ -129,7 +130,7 @@ var W = class {
     playtime;
     announcementid;
     constructor(t) {
-      e(
+      (e(
         typeof t.appid == `number`,
         `AJAX updated app returned a non-numeric AppID! Did the PHP change?`,
       ),
@@ -137,12 +138,12 @@ var W = class {
         (this.date = t.date),
         (this.can_play = t.can_play),
         (this.playtime = t.playtime),
-        (this.announcementid = t.announcementid);
+        (this.announcementid = t.announcementid));
     }
   },
   G = class {
     constructor(e = !1) {
-      p(this), (this.m_bOnlySummary = e);
+      (p(this), (this.m_bOnlySummary = e));
     }
     m_bOnlySummary = !1;
     m_mapExistingEvents = new Map();
@@ -186,7 +187,7 @@ var W = class {
             }
           });
         let r = n(`partnereventadjacents`, `application_config`);
-        this.ValidateAdjacentEvent(r) &&
+        (this.ValidateAdjacentEvent(r) &&
           r.forEach((e) => {
             e &&
               this.m_mapAdjacentAnnouncementGIDs.set(
@@ -194,7 +195,7 @@ var W = class {
                 e.adjacents,
               );
           }),
-          (this.m_bLoadedFromConfig = !0);
+          (this.m_bLoadedFromConfig = !0));
       }
     }
     ValidateStoreDefault(e) {
@@ -279,7 +280,7 @@ var W = class {
         let t = this.GetClanEventModel(e);
         t && n.push(t);
       }
-      return n.sort(this.DefaultEventSortFunction), n;
+      return (n.sort(this.DefaultEventSortFunction), n);
     }
     InsertEventModelFromClanEventData(e, t) {
       let n = k(e, t);
@@ -313,23 +314,23 @@ var W = class {
     }
     async QueueLoadPartnerEvent(e, t, n) {
       if (this.m_mapExistingEvents.has(t)) return;
-      this.m_rgQueuedEventsClanIDs.push(e),
+      (this.m_rgQueuedEventsClanIDs.push(e),
         this.m_rgQueuedEventsUniqueIDs.push(t),
         this.m_rgQueuedEventsForEditFlags.push(!!n),
         (this.m_PendingInfoPromise ||= new Promise(
           (e) => (this.m_PendingInfoResolve = e),
-        ));
+        )));
       let r = this.m_PendingInfoPromise,
         i = () => {
           let e = this.m_PendingInfoResolve,
             t = this.m_rgQueuedEventsClanIDs,
             n = this.m_rgQueuedEventsUniqueIDs,
             r = this.m_rgQueuedEventsForEditFlags;
-          (this.m_PendingInfoPromise = void 0),
+          ((this.m_PendingInfoPromise = void 0),
             (this.m_rgQueuedEventsClanIDs = []),
             (this.m_rgQueuedEventsUniqueIDs = []),
             (this.m_rgQueuedEventsForEditFlags = []),
-            this.InternalLoadPartnerEventList(t, n, r).then(() => e?.());
+            this.InternalLoadPartnerEventList(t, n, r).then(() => e?.()));
         };
       return (
         this.m_rgQueuedEventsClanIDs.length >= 30
@@ -492,7 +493,7 @@ var W = class {
       } else {
         let e = this.m_mapAdjacentAnnouncementGIDs.get(n),
           t = [];
-        e?.forEach((e) => {
+        (e?.forEach((e) => {
           if (this.m_mapAnnouncementBodyToEvent.has(e)) {
             let t = this.m_mapAnnouncementBodyToEvent.get(e);
             t &&
@@ -507,7 +508,7 @@ var W = class {
                 t,
                 u,
               )
-            ).forEach((e) => f.push(e));
+            ).forEach((e) => f.push(e)));
       }
       return f;
     }
@@ -580,9 +581,9 @@ var W = class {
     async LoadImportantEventsAroundToday(e, t, n, r, a, o) {
       let s = [],
         c = [];
-      c.push({ priority: 0, appids: t }),
+      (c.push({ priority: 0, appids: t }),
         n && c.push({ priority: 1, appids: n }),
-        r && c.push({ priority: 2, appids: r });
+        r && c.push({ priority: 2, appids: r }));
       let l = {
           count: e,
           strAppIDPriority: JSON.stringify({ prioritized_apps: c }),
@@ -613,15 +614,17 @@ var W = class {
       let r = this.m_mapClanToGIDs.get(e);
       r ||= (this.m_mapClanToGIDs.set(e, []), this.m_mapClanToGIDs.get(e));
       let i = this.m_mapAppIDToGIDs.get(t);
-      (i ||= (this.m_mapAppIDToGIDs.set(t, []), this.m_mapAppIDToGIDs.get(t))),
-        r.indexOf(n) == -1 && (r.push(n), i.push(n));
+      ((i ||= (this.m_mapAppIDToGIDs.set(t, []), this.m_mapAppIDToGIDs.get(t))),
+        r.indexOf(n) == -1 && (r.push(n), i.push(n)));
     }
     ResetModel() {}
     async DeleteClanEvent(e, t) {
       this.m_mapExistingEvents.has(t) &&
         (this.m_mapExistingEvents.get(t).deleteInProgress = !0);
       let n = new URLSearchParams();
-      n.append(`sessionid`, a()), n.append(`bDelete`, `1`), n.append(`gid`, t);
+      (n.append(`sessionid`, a()),
+        n.append(`bDelete`, `1`),
+        n.append(`gid`, t));
       let r = await z.default.post(
         d.COMMUNITY_BASE_URL +
           `/gid/` +
@@ -629,7 +632,7 @@ var W = class {
           `/ajaxcreateupdatedeletepartnerevents/`,
         n,
       );
-      return this.RemoveGIDFromList(e, t), r.data;
+      return (this.RemoveGIDFromList(e, t), r.data);
     }
     RemoveGIDFromList(e, t) {
       if (
@@ -653,10 +656,10 @@ var W = class {
           this.m_mapAnnouncementBodyToEvent.has(t)))
       ) {
         let e = this.m_mapAnnouncementBodyToEvent.get(t);
-        e &&
+        (e &&
           this.m_mapExistingEvents.has(e) &&
           this.m_mapExistingEvents.delete(e),
-          this.m_mapAnnouncementBodyToEvent.delete(t);
+          this.m_mapAnnouncementBodyToEvent.delete(t));
       }
     }
     async InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID(
@@ -683,7 +686,7 @@ var W = class {
         p = null;
       if (c) {
         let e = t();
-        e === `community`
+        (e === `community`
           ? ((p = d.COMMUNITY_BASE_URL),
             (p += n ? `gid/` + n.ConvertTo64BitString() : `ogg/` + r),
             (p += `/`))
@@ -692,10 +695,10 @@ var W = class {
                 ? d.PARTNER_BASE_URL + `sales/`
                 : d.STORE_BASE_URL + `events/`),
           (p += `ajaxgetpartnereventforedit`),
-          (f = { params: u, withCredentials: !0 });
+          (f = { params: u, withCredentials: !0 }));
       } else
-        (p = d.STORE_BASE_URL + `events/ajaxgetpartnerevent`),
-          (f = { params: u, withCredentials: !1 });
+        ((p = d.STORE_BASE_URL + `events/ajaxgetpartnerevent`),
+          (f = { params: u, withCredentials: !1 }));
       try {
         let t = await z.default.get(p, f);
         if (t.data.success !== 1) return;
@@ -855,17 +858,17 @@ var W = class {
         l = null;
       if (e) {
         let t = [];
-        e.forEach((e) => {
+        (e.forEach((e) => {
           this.m_mapExistingEvents.has(e)
             ? r.push(this.m_mapExistingEvents.get(e))
             : t.push(e);
         }),
           t.sort(),
-          (c = t);
+          (c = t));
       }
       if (t) {
         let e = [];
-        t.forEach((t) => {
+        (t.forEach((t) => {
           if (
             this.m_mapAnnouncementBodyToEvent.has(t) &&
             this.m_mapAnnouncementBodyToEvent.get(t) &&
@@ -881,11 +884,11 @@ var W = class {
           } else e.push(t);
         }),
           e.sort(),
-          (l = e);
+          (l = e));
       }
       if (!c && !l) return r;
       let u = [];
-      for (; (c?.length ?? 0) > 0 || (l?.length ?? 0) > 0; ) {
+      for (; (c?.length ?? 0) > 0 || (l?.length ?? 0) > 0;) {
         let e = {
           event_gids:
             (c?.length ?? 0) > 0 ? c?.splice(0, 100).join(`,`) : void 0,
@@ -939,10 +942,10 @@ var W = class {
       try {
         let o = `${d.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
           s = new FormData();
-        s.append(`sessionid`, a()),
+        (s.append(`sessionid`, a()),
           s.append(`gidclanevent`, t),
           s.append(`json`, JSON.stringify(n)),
-          s.append(`pageStyles`, JSON.stringify(r));
+          s.append(`pageStyles`, JSON.stringify(r)));
         let c = await z.default.post(o, s, { withCredentials: !0 });
         if (c?.data?.success == 1) {
           let e = this.m_mapExistingEvents.get(t);
@@ -954,7 +957,7 @@ var W = class {
                 i !== void 0 && r !== void 0 && (e.jsondata[r] = i);
               }
           }
-          return this.GetPartnerEventChangeCallback(t).Dispatch(e), !0;
+          return (this.GetPartnerEventChangeCallback(t).Dispatch(e), !0);
         }
         i = T(c);
       } catch (e) {
@@ -973,7 +976,7 @@ var W = class {
       return this.m_bOnlySummary;
     }
   };
-l([r], G.prototype, `m_mapExistingEvents`, void 0),
+(l([r], G.prototype, `m_mapExistingEvents`, void 0),
   l([r], G.prototype, `m_mapAnnouncementBodyToEvent`, void 0),
   l([r], G.prototype, `m_mapClanToGIDs`, void 0),
   l([r], G.prototype, `m_mapAppIDToGIDs`, void 0),
@@ -985,7 +988,7 @@ l([r], G.prototype, `m_mapExistingEvents`, void 0),
   l([c], G.prototype, `DeleteClanEvent`, null),
   l([c], G.prototype, `RemoveGIDFromList`, null),
   l([c], G.prototype, `FlushEventFromCache`, null),
-  l([g], G.prototype, `SavePartnerEventSaleAssets`, null);
+  l([g], G.prototype, `SavePartnerEventSaleAssets`, null));
 var K = new G();
 D(`g_PartnerEventStore`, K);
 var q = new G(!0);

@@ -17,7 +17,7 @@
       },
       27082: (X, k, l) => {
         "use strict";
-        l.r(k), l.d(k, { default: () => t });
+        (l.r(k), l.d(k, { default: () => t }));
         var F = l(62540),
           $ = l(63696),
           D = l(40326),
@@ -39,7 +39,7 @@
           const W = async () => {
             w(!0);
             const { eResult: J, strURL: e } = await b(B.clip_id, "", "", q.wY0);
-            z(e), w(!1);
+            (z(e), w(!1));
           };
           return (0, F.jsxs)("div", {
             className: n.ClipUploadStatus,
@@ -89,11 +89,11 @@
       },
       62625: (X, k, l) => {
         "use strict";
-        l.r(k),
+        (l.r(k),
           l.d(k, {
             default: () => tr,
             useTimelineLoaderForCommunityClip: () => G,
-          });
+          }));
         var F = l(62540),
           $ = l(63696),
           D = l(60869),
@@ -110,9 +110,9 @@
         class f extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               f.prototype.representation_name || t.Sg(f.M()),
-              n.Message.initialize(this, r, 0, -1, [11], null);
+              n.Message.initialize(this, r, 0, -1, [11], null));
           }
           static sm_m;
           static sm_mbf;
@@ -170,7 +170,7 @@
             );
           }
           static MBF() {
-            return f.sm_mbf || (f.sm_mbf = t.w0(f.M())), f.sm_mbf;
+            return (f.sm_mbf || (f.sm_mbf = t.w0(f.M())), f.sm_mbf);
           }
           toObject(r = !1) {
             return f.toObject(r, this);
@@ -191,7 +191,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return f.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (f.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(f.M(), r, i);
@@ -209,9 +209,9 @@
         class B extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               B.prototype.component_name || t.Sg(B.M()),
-              n.Message.initialize(this, r, 0, -1, [5], null);
+              n.Message.initialize(this, r, 0, -1, [5], null));
           }
           static sm_m;
           static sm_mbf;
@@ -248,7 +248,7 @@
             );
           }
           static MBF() {
-            return B.sm_mbf || (B.sm_mbf = t.w0(B.M())), B.sm_mbf;
+            return (B.sm_mbf || (B.sm_mbf = t.w0(B.M())), B.sm_mbf);
           }
           toObject(r = !1) {
             return B.toObject(r, this);
@@ -269,7 +269,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return B.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (B.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(B.M(), r, i);
@@ -287,9 +287,9 @@
         class z extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               z.prototype.steamid || t.Sg(z.M()),
-              n.Message.initialize(this, r, 0, -1, [7], null);
+              n.Message.initialize(this, r, 0, -1, [7], null));
           }
           static sm_m;
           static sm_mbf;
@@ -342,7 +342,7 @@
             );
           }
           static MBF() {
-            return z.sm_mbf || (z.sm_mbf = t.w0(z.M())), z.sm_mbf;
+            return (z.sm_mbf || (z.sm_mbf = t.w0(z.M())), z.sm_mbf);
           }
           toObject(r = !1) {
             return z.toObject(r, this);
@@ -363,7 +363,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return z.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (z.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(z.M(), r, i);
@@ -381,9 +381,9 @@
         class u extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               u.prototype.segment_number || t.Sg(u.M()),
-              n.Message.initialize(this, r, 0, -1, void 0, null);
+              n.Message.initialize(this, r, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -419,7 +419,7 @@
             );
           }
           static MBF() {
-            return u.sm_mbf || (u.sm_mbf = t.w0(u.M())), u.sm_mbf;
+            return (u.sm_mbf || (u.sm_mbf = t.w0(u.M())), u.sm_mbf);
           }
           toObject(r = !1) {
             return u.toObject(r, this);
@@ -440,7 +440,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return u.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (u.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(u.M(), r, i);
@@ -458,9 +458,9 @@
         class w extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               w.prototype.segment_info || t.Sg(w.M()),
-              n.Message.initialize(this, r, 0, -1, [5], null);
+              n.Message.initialize(this, r, 0, -1, [5], null));
           }
           static sm_m;
           static sm_mbf;
@@ -489,7 +489,7 @@
             );
           }
           static MBF() {
-            return w.sm_mbf || (w.sm_mbf = t.w0(w.M())), w.sm_mbf;
+            return (w.sm_mbf || (w.sm_mbf = t.w0(w.M())), w.sm_mbf);
           }
           toObject(r = !1) {
             return w.toObject(r, this);
@@ -510,7 +510,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return w.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (w.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(w.M(), r, i);
@@ -528,9 +528,9 @@
         class j extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               j.prototype.name || t.Sg(j.M()),
-              n.Message.initialize(this, r, 0, -1, void 0, null);
+              n.Message.initialize(this, r, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -548,7 +548,7 @@
             );
           }
           static MBF() {
-            return j.sm_mbf || (j.sm_mbf = t.w0(j.M())), j.sm_mbf;
+            return (j.sm_mbf || (j.sm_mbf = t.w0(j.M())), j.sm_mbf);
           }
           toObject(r = !1) {
             return j.toObject(r, this);
@@ -569,7 +569,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return j.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (j.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(j.M(), r, i);
@@ -587,9 +587,9 @@
         class c extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               c.prototype.video_manager_clip_id || t.Sg(c.M()),
-              n.Message.initialize(this, r, 0, -1, void 0, null);
+              n.Message.initialize(this, r, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -635,7 +635,7 @@
             );
           }
           static MBF() {
-            return c.sm_mbf || (c.sm_mbf = t.w0(c.M())), c.sm_mbf;
+            return (c.sm_mbf || (c.sm_mbf = t.w0(c.M())), c.sm_mbf);
           }
           toObject(r = !1) {
             return c.toObject(r, this);
@@ -656,7 +656,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return c.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (c.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(c.M(), r, i);
@@ -674,9 +674,9 @@
         class b extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               b.prototype.clip_id || t.Sg(b.M()),
-              n.Message.initialize(this, r, 0, -1, [9], null);
+              n.Message.initialize(this, r, 0, -1, [9], null));
           }
           static sm_m;
           static sm_mbf;
@@ -728,7 +728,7 @@
             );
           }
           static MBF() {
-            return b.sm_mbf || (b.sm_mbf = t.w0(b.M())), b.sm_mbf;
+            return (b.sm_mbf || (b.sm_mbf = t.w0(b.M())), b.sm_mbf);
           }
           toObject(r = !1) {
             return b.toObject(r, this);
@@ -749,7 +749,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return b.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (b.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(b.M(), r, i);
@@ -767,9 +767,9 @@
         class v extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               v.prototype.clip || t.Sg(v.M()),
-              n.Message.initialize(this, r, 0, -1, [3], null);
+              n.Message.initialize(this, r, 0, -1, [3], null));
           }
           static sm_m;
           static sm_mbf;
@@ -787,7 +787,7 @@
             );
           }
           static MBF() {
-            return v.sm_mbf || (v.sm_mbf = t.w0(v.M())), v.sm_mbf;
+            return (v.sm_mbf || (v.sm_mbf = t.w0(v.M())), v.sm_mbf);
           }
           toObject(r = !1) {
             return v.toObject(r, this);
@@ -808,7 +808,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return v.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (v.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(v.M(), r, i);
@@ -826,9 +826,9 @@
         class M extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               M.prototype.clip || t.Sg(M.M()),
-              n.Message.initialize(this, r, 0, -1, void 0, null);
+              n.Message.initialize(this, r, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -840,7 +840,7 @@
             );
           }
           static MBF() {
-            return M.sm_mbf || (M.sm_mbf = t.w0(M.M())), M.sm_mbf;
+            return (M.sm_mbf || (M.sm_mbf = t.w0(M.M())), M.sm_mbf);
           }
           toObject(r = !1) {
             return M.toObject(r, this);
@@ -861,7 +861,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return M.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (M.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(M.M(), r, i);
@@ -879,9 +879,9 @@
         class W extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               W.prototype.clip_id || t.Sg(W.M()),
-              n.Message.initialize(this, r, 0, -1, void 0, null);
+              n.Message.initialize(this, r, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -902,7 +902,7 @@
             );
           }
           static MBF() {
-            return W.sm_mbf || (W.sm_mbf = t.w0(W.M())), W.sm_mbf;
+            return (W.sm_mbf || (W.sm_mbf = t.w0(W.M())), W.sm_mbf);
           }
           toObject(r = !1) {
             return W.toObject(r, this);
@@ -923,7 +923,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return W.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (W.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(W.M(), r, i);
@@ -941,7 +941,7 @@
         class J extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(), n.Message.initialize(this, r, 0, -1, void 0, null);
+            (super(), n.Message.initialize(this, r, 0, -1, void 0, null));
           }
           toObject(r = !1) {
             return J.toObject(r, this);
@@ -962,7 +962,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return J.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (J.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {}
           serializeBase64String() {
@@ -978,9 +978,9 @@
         class e extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               e.prototype.clip_id || t.Sg(e.M()),
-              n.Message.initialize(this, r, 0, -1, void 0, null);
+              n.Message.initialize(this, r, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -1001,7 +1001,7 @@
             );
           }
           static MBF() {
-            return e.sm_mbf || (e.sm_mbf = t.w0(e.M())), e.sm_mbf;
+            return (e.sm_mbf || (e.sm_mbf = t.w0(e.M())), e.sm_mbf);
           }
           toObject(r = !1) {
             return e.toObject(r, this);
@@ -1022,7 +1022,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return e.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (e.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(e.M(), r, i);
@@ -1040,9 +1040,9 @@
         class O extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               O.prototype.clip || t.Sg(O.M()),
-              n.Message.initialize(this, r, 0, -1, void 0, null);
+              n.Message.initialize(this, r, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -1054,7 +1054,7 @@
             );
           }
           static MBF() {
-            return O.sm_mbf || (O.sm_mbf = t.w0(O.M())), O.sm_mbf;
+            return (O.sm_mbf || (O.sm_mbf = t.w0(O.M())), O.sm_mbf);
           }
           toObject(r = !1) {
             return O.toObject(r, this);
@@ -1075,7 +1075,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return O.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (O.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(O.M(), r, i);
@@ -1093,9 +1093,9 @@
         class E extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               E.prototype.recording_id || t.Sg(E.M()),
-              n.Message.initialize(this, r, 0, -1, [4], null);
+              n.Message.initialize(this, r, 0, -1, [4], null));
           }
           static sm_m;
           static sm_mbf;
@@ -1127,7 +1127,7 @@
             );
           }
           static MBF() {
-            return E.sm_mbf || (E.sm_mbf = t.w0(E.M())), E.sm_mbf;
+            return (E.sm_mbf || (E.sm_mbf = t.w0(E.M())), E.sm_mbf);
           }
           toObject(r = !1) {
             return E.toObject(r, this);
@@ -1148,7 +1148,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return E.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (E.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(E.M(), r, i);
@@ -1166,9 +1166,9 @@
         class T extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               T.prototype.segments_needed || t.Sg(T.M()),
-              n.Message.initialize(this, r, 0, -1, [1], null);
+              n.Message.initialize(this, r, 0, -1, [1], null));
           }
           static sm_m;
           static sm_mbf;
@@ -1186,7 +1186,7 @@
             );
           }
           static MBF() {
-            return T.sm_mbf || (T.sm_mbf = t.w0(T.M())), T.sm_mbf;
+            return (T.sm_mbf || (T.sm_mbf = t.w0(T.M())), T.sm_mbf);
           }
           toObject(r = !1) {
             return T.toObject(r, this);
@@ -1207,7 +1207,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return T.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (T.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(T.M(), r, i);
@@ -1225,9 +1225,9 @@
         class P extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               P.prototype.recording_id || t.Sg(P.M()),
-              n.Message.initialize(this, r, 0, -1, void 0, null);
+              n.Message.initialize(this, r, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -1273,7 +1273,7 @@
             );
           }
           static MBF() {
-            return P.sm_mbf || (P.sm_mbf = t.w0(P.M())), P.sm_mbf;
+            return (P.sm_mbf || (P.sm_mbf = t.w0(P.M())), P.sm_mbf);
           }
           toObject(r = !1) {
             return P.toObject(r, this);
@@ -1294,7 +1294,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return P.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (P.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(P.M(), r, i);
@@ -1312,7 +1312,7 @@
         class Q extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(), n.Message.initialize(this, r, 0, -1, void 0, null);
+            (super(), n.Message.initialize(this, r, 0, -1, void 0, null));
           }
           toObject(r = !1) {
             return Q.toObject(r, this);
@@ -1333,7 +1333,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return Q.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (Q.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {}
           serializeBase64String() {
@@ -1349,9 +1349,9 @@
         class x extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               x.prototype.recording_id || t.Sg(x.M()),
-              n.Message.initialize(this, r, 0, -1, void 0, null);
+              n.Message.initialize(this, r, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -1372,7 +1372,7 @@
             );
           }
           static MBF() {
-            return x.sm_mbf || (x.sm_mbf = t.w0(x.M())), x.sm_mbf;
+            return (x.sm_mbf || (x.sm_mbf = t.w0(x.M())), x.sm_mbf);
           }
           toObject(r = !1) {
             return x.toObject(r, this);
@@ -1393,7 +1393,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return x.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (x.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(x.M(), r, i);
@@ -1411,9 +1411,9 @@
         class h extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               h.prototype.segments_needed || t.Sg(h.M()),
-              n.Message.initialize(this, r, 0, -1, [1], null);
+              n.Message.initialize(this, r, 0, -1, [1], null));
           }
           static sm_m;
           static sm_mbf;
@@ -1428,7 +1428,7 @@
             );
           }
           static MBF() {
-            return h.sm_mbf || (h.sm_mbf = t.w0(h.M())), h.sm_mbf;
+            return (h.sm_mbf || (h.sm_mbf = t.w0(h.M())), h.sm_mbf);
           }
           toObject(r = !1) {
             return h.toObject(r, this);
@@ -1449,7 +1449,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return h.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (h.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(h.M(), r, i);
@@ -1467,9 +1467,9 @@
         class m extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(),
+            (super(),
               m.prototype.recording_id || t.Sg(m.M()),
-              n.Message.initialize(this, r, 0, -1, [2], null);
+              n.Message.initialize(this, r, 0, -1, [2], null));
           }
           static sm_m;
           static sm_mbf;
@@ -1491,7 +1491,7 @@
             );
           }
           static MBF() {
-            return m.sm_mbf || (m.sm_mbf = t.w0(m.M())), m.sm_mbf;
+            return (m.sm_mbf || (m.sm_mbf = t.w0(m.M())), m.sm_mbf);
           }
           toObject(r = !1) {
             return m.toObject(r, this);
@@ -1512,7 +1512,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return m.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (m.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {
             t.i0(m.M(), r, i);
@@ -1530,7 +1530,7 @@
         class Z extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(), n.Message.initialize(this, r, 0, -1, void 0, null);
+            (super(), n.Message.initialize(this, r, 0, -1, void 0, null));
           }
           toObject(r = !1) {
             return Z.toObject(r, this);
@@ -1551,7 +1551,7 @@
           }
           serializeBinary() {
             var r = new (s().BinaryWriter)();
-            return Z.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return (Z.serializeBinaryToWriter(this, r), r.getResultBuffer());
           }
           static serializeBinaryToWriter(r, i) {}
           serializeBase64String() {
@@ -1686,23 +1686,23 @@
               const a = await V.GetSingleSharedClip(r, i);
               if (a.GetEResult() != R.R)
                 throw (
-                  ((0, o.ZI)("GetSingleSharedClip failed"),
+                  (0, o.ZI)("GetSingleSharedClip failed"),
                   a.DEBUG_LogToConsole(),
                   new Error(
                     `Failed to load clip with result: ${a.GetEResult()}`,
-                  ))
+                  )
                 );
               let K = a.Body().toObject().clip,
                 L = [];
               if (K.video_ids.length == 0)
                 throw (
-                  ((0, o.ZI)("No video ids in clip", y),
+                  (0, o.ZI)("No video ids in clip", y),
                   a.DEBUG_LogToConsole(),
-                  new Error("No video ids in clip"))
+                  new Error("No video ids in clip")
                 );
               let A;
               for (let N of K.video_ids)
-                (!A || A.timeline_id != N.server_timeline_id) &&
+                ((!A || A.timeline_id != N.server_timeline_id) &&
                   ((A = ir(K, N)), L.push(A)),
                   A.recordings.push({
                     recording_id: N.video_manager_video_id,
@@ -1710,7 +1710,7 @@
                     duration_ms: N.duration_ms.toFixed(0),
                     recording_type: S.kO,
                     cdn_manifest_url: N.manifest_url,
-                  });
+                  }));
               return { clip_id: K.clip_id, game_id: K.gameid, timelines: L };
             },
           });

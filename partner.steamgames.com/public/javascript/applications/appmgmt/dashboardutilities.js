@@ -39,7 +39,7 @@ function b(t) {
       k || (s(e.target.value), b && b(e));
     },
     F = () => {
-      s(``), c && c();
+      (s(``), c && c());
     },
     I = !!a && _,
     L = I ? (0, y.jsx)(p, { onClick: F, cursor: `pointer`, hitSlop: !0 }) : E,
@@ -163,7 +163,7 @@ function E(e, t) {
       },
     },
     a = n;
-  return e in i ? (a = i[e]) : t || (a = r), a;
+  return (e in i ? (a = i[e]) : t || (a = r), a);
 }
 function D(e) {
   if (e.type == `seasonalsale`) {

@@ -154,13 +154,13 @@ function z(e) {
       setOpen: (e) => {
         if (e) {
           let e = null;
-          (e = r.multiselect
+          ((e = r.multiselect
             ? Array.isArray(r.selectedValue)
               ? r.selectedValue[0]
               : null
             : r.selectedValue),
             d(e),
-            r.onInputChange(``);
+            r.onInputChange(``));
         }
         r.setOpen(e);
       },
@@ -425,19 +425,19 @@ function q(e, t) {
     g = m.length > 0,
     _ = (0, D.useCallback)(
       (e) => {
-        e && !h && g && p(0), l(e);
+        (e && !h && g && p(0), l(e));
       },
       [h, g],
     ),
     v = (0, D.useCallback)(
       (e) => {
-        e || _(``), d(e);
+        (e || _(``), d(e));
       },
       [_],
     ),
     y = (0, D.useCallback)(
       (e) => {
-        o(e), t || v(!1);
+        (o(e), t || v(!1));
       },
       [t, o, v],
     );
@@ -461,7 +461,7 @@ function q(e, t) {
       [y, a, t],
     ),
     onClear: (e) => {
-      y(t ? [] : null), e?.stopPropagation(), e?.preventDefault();
+      (y(t ? [] : null), e?.stopPropagation(), e?.preventDefault());
     },
     inputValue: c,
     onInputChange: _,
@@ -589,7 +589,7 @@ var pe = Object.assign(Z, J),
   Q = (0, D.createContext)(null);
 function $(e) {
   let t = (0, D.useContext)(Q);
-  return t || console.error(`${e} must be used within a <Combobox>!`), t;
+  return (t || console.error(`${e} must be used within a <Combobox>!`), t);
 }
 function me(e) {
   let {
@@ -647,7 +647,7 @@ var _e = o((e, t) => {
       var r, i, a;
       if (Array.isArray(t)) {
         if (((r = t.length), r != n.length)) return !1;
-        for (i = r; i-- !== 0; ) if (!e(t[i], n[i])) return !1;
+        for (i = r; i-- !== 0;) if (!e(t[i], n[i])) return !1;
         return !0;
       }
       if (t.constructor === RegExp)
@@ -658,9 +658,9 @@ var _e = o((e, t) => {
         return t.toString() === n.toString();
       if (((a = Object.keys(t)), (r = a.length), r !== Object.keys(n).length))
         return !1;
-      for (i = r; i-- !== 0; )
+      for (i = r; i-- !== 0;)
         if (!Object.prototype.hasOwnProperty.call(n, a[i])) return !1;
-      for (i = r; i-- !== 0; ) {
+      for (i = r; i-- !== 0;) {
         var o = a[i];
         if (!e(t[o], n[o])) return !1;
       }

@@ -10,4 +10,3 @@ var _ = _(_.Debug),
   _ = _(_.Warning),
   _ = _(_.Error),
   _ = _;
-export { _, _, _, _, _ };

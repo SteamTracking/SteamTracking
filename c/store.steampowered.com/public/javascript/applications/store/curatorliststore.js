@@ -17,7 +17,7 @@ function _(_) {
       (_.list_jsondata = {}));
 }
 function _(_, _) {
-  (_.localized_flat_title = _([], 32, null)),
+  ((_.localized_flat_title = _([], 32, null)),
     (_.localized_flat_blurb = _([], 32, null)),
     (_.localized_flat_link = _([], 32, null)),
     _.title !== `0` && (_.localized_flat_title[_] = _.title),
@@ -34,7 +34,7 @@ function _(_, _) {
     _.link_localization.forEach((_) => {
       _.localized_string?.length > 0 &&
         (_.localized_flat_link[_.language] = _.localized_string);
-    });
+    }));
 }
 var _ = class _ {
   m_mapList = new Map();
@@ -138,20 +138,20 @@ var _ = class _ {
         let _ = [];
         return (
           _(() => {
-            _.data.matches &&
+            (_.data.matches &&
               _.data.matches.forEach((_) => {
                 _.multi_detail_lists.forEach((_) => {
-                  this.m_mapListIDToClanAccount.set(
+                  (this.m_mapListIDToClanAccount.set(
                     _.listid,
                     _.clan_account_id,
                   ),
                     _(_),
                     _(_.curation_language, _),
                     this.m_mapList.set(_.listid, _),
-                    _.push(_);
+                    _.push(_));
                 });
               }),
-              this.m_mapEventGIDToLists.set(_, _);
+              this.m_mapEventGIDToLists.set(_, _));
           }),
           _
         );
@@ -164,7 +164,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {
     _(this);
@@ -173,7 +173,7 @@ var _ = class _ {
       _(() => {
         _.forEach((_) => {
           _.multi_detail_lists.forEach((_) => {
-            _(_), _(_.curation_language, _), this.m_mapList.set(_.listid, _);
+            (_(_), _(_.curation_language, _), this.m_mapList.set(_.listid, _));
           });
         });
       });
@@ -211,12 +211,12 @@ function _(_, _) {
                     type: `game`,
                   });
               }
-              _(_, {
+              (_(_, {
                 ..._,
                 include_assets: !0,
                 include_release: !0,
               }),
-                _();
+                _());
             } else console.error(`Found no list data`);
           }
         })(),
@@ -254,13 +254,13 @@ function _(_) {
       let _ = _.default.CancelToken.source();
       return (
         (async () => {
-          _.Init(),
+          (_.Init(),
             await _.LoadPartnerEventFromClanEventGIDAndClanSteamID(
               new _(_.sale_clan_steamid),
               _,
               0,
             ),
-            !_.token.reason && _();
+            !_.token.reason && _());
         })(),
         () => _.cancel(`unmounting CuratorList`)
       );
@@ -268,4 +268,3 @@ function _(_) {
     _
   );
 }
-export { _, _, _, _, _ };

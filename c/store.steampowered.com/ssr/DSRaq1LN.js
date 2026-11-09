@@ -280,7 +280,7 @@ function _(_) {
     case `ZA`:
       return 28;
     default:
-      return console.assert(!1, `Unhandled country code: ${_}`), 1;
+      return (console.assert(!1, `Unhandled country code: ${_}`), 1);
   }
 }
 function _(_, _) {
@@ -299,13 +299,13 @@ function _(_, _) {
     _ = _ && _ % 100 == 0;
   _ && (_ = -_);
   let _ = [];
-  for (let _ = 0; _ < 2; _++) _ || _.push(_ % 10), (_ = Math.floor(_ / 10));
+  for (let _ = 0; _ < 2; _++) (_ || _.push(_ % 10), (_ = Math.floor(_ / 10)));
   !_ && _ && _.push(_);
   let _ = 0;
   do
-    _++ % 3 == 0 && _ > 2 && _ && _.push(_),
+    (_++ % 3 == 0 && _ > 2 && _ && _.push(_),
       _.push(_ % 10),
-      (_ = Math.floor(_ / 10));
+      (_ = Math.floor(_ / 10)));
   while (_ > 0);
   let _ = _.reverse().join(``),
     _ = _ ? ` ` : ``,
@@ -335,7 +335,7 @@ async function _(_, _) {
 function _(_, _ = !1) {
   if (_.is_coming_soon && !_) return 0;
   let _ = _.steam_release_date;
-  return (_ ||= _.original_release_date), _;
+  return ((_ ||= _.original_release_date), _);
 }
 var _ = 7;
 function _(_, _) {
@@ -412,6 +412,5 @@ function _(_) {
     return _ ? (_.is_abridged_release_date ? _(new Date(_ * 1e3)) : _(_)) : ``;
   }
   let _ = _.steam_release_date;
-  return (_ ||= _.original_release_date), _ ? _(_) : ``;
+  return ((_ ||= _.original_release_date), _ ? _(_) : ``);
 }
-export { _, _, _, _, _, _, _, _, _, _, _ };

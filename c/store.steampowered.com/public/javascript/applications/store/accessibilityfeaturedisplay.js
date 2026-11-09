@@ -121,7 +121,7 @@ function _(_) {
   let _ = {};
   _.forEach((_) => {
     let _ = _[_];
-    (_[_] ??= []), _[_].push(_);
+    ((_[_] ??= []), _[_].push(_));
   });
   let _ = Object.keys(_).length > 1;
   return (0, _.jsxs)(`details`, {
@@ -285,4 +285,3 @@ function _(_) {
     }),
   });
 }
-export { _, _, _ };

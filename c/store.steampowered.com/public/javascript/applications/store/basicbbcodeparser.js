@@ -58,8 +58,8 @@ var _ = _(_(), 1),
   _ = class {
     m_decoratedAccumulator;
     constructor(_) {
-      _(_, `decorated accumulator cannot be null`),
-        (this.m_decoratedAccumulator = _);
+      (_(_, `decorated accumulator cannot be null`),
+        (this.m_decoratedAccumulator = _));
     }
     AppendText(_, _ = !1) {
       this.m_decoratedAccumulator.AppendText(_, _);
@@ -85,22 +85,22 @@ var _ = _(_(), 1),
         _ = _.indexOf(`
 `)
       )
-        _.push(_.substr(0, _)),
+        (_.push(_.substr(0, _)),
           _.push(_.createElement(`br`)),
-          (_ = _.substr(_ + 1));
-      _.length && _.push(_),
+          (_ = _.substr(_ + 1)));
+      (_.length && _.push(_),
         _.forEach((_) => {
           super.AppendNode(_);
-        });
+        }));
     }
   },
   _ = class {
     m_fnAccumulatorFactory;
     m_dictComponents;
     constructor(_, _) {
-      (this.m_dictComponents =
+      ((this.m_dictComponents =
         _ instanceof Map ? _ : new Map(Object.entries(_))),
-        (this.m_fnAccumulatorFactory = _);
+        (this.m_fnAccumulatorFactory = _));
     }
     Parse(_, _, _ = !0) {
       let _ = _(_ || ``, _);
@@ -124,26 +124,26 @@ var _ = _(_(), 1),
                 rawargs: _.node.rawargs,
               },
               _ = _(_.Constructor, _, ..._.GetElements());
-            (_ = _.accumulator),
+            ((_ = _.accumulator),
               Array.isArray(_)
                 ? _.forEach((_) => _.AppendNode(_))
                 : _.AppendNode(_),
               (_ = !!_.skipFollowingNewline),
-              (_ = _.bWrapTextForCopying);
+              (_ = _.bWrapTextForCopying));
           } else if (_) {
             let _ = _.accumulator;
-            _.AppendText(`[` + _.node.text + `]`, !1),
+            (_.AppendText(`[` + _.node.text + `]`, !1),
               _.GetElements().forEach((_) => _.AppendNode(_)),
               _.AppendText(`[/` + _.text + `]`, !1),
               (_ = _),
-              (_ = _.bWrapTextForCopying);
+              (_ = _.bWrapTextForCopying));
           }
         };
       for (
         _.forEach((_, _) => {
           if (_.type == 1) {
             let _ = _ ? _.text.replace(/^[\t\r ]*\n/g, ``) : _.text;
-            _.AppendText(_, _), (_ = !1);
+            (_.AppendText(_, _), (_ = !1));
           } else if (_.type == 2) {
             let _ = _.get(_.tag);
             if (!_) _.AppendText(`[` + _.text + `]`, _.length == 0);
@@ -153,18 +153,18 @@ var _ = _(_(), 1),
                 let _ = _.get(_.node.tag);
                 _ && _.autocloses && _.tag === _.node.tag && _(_.pop(), _.node);
               }
-              _.push({
+              (_.push({
                 accumulator: _,
                 node: _,
                 bWrapTextForCopying: _,
               }),
                 (_ = this.m_fnAccumulatorFactory(_)),
                 (_ = !!_.skipInternalNewline),
-                (_ = _.allowWrapTextForCopying ?? !1);
+                (_ = _.allowWrapTextForCopying ?? !1));
             }
           } else if (_.type == 3) {
             let _ = _.text.toLowerCase();
-            for (; _() && _().node.tag !== _ && _(_().node); ) {
+            for (; _() && _().node.tag !== _ && _(_().node);) {
               let _ = _.pop();
               _(_, _.node);
             }
@@ -191,7 +191,7 @@ function _(_, _, _ = 0) {
     let _,
       _,
       _ = ``;
-    _ > 0
+    (_ > 0
       ? ((_ = _.substr(0, _).toLocaleLowerCase()),
         (_ = _.substr(_)),
         (_ = _(_)))
@@ -202,7 +202,7 @@ function _(_, _, _ = 0) {
         tag: _,
         args: _,
         rawargs: _,
-      });
+      }));
   } else
     _ != 0 &&
       _.push({
@@ -243,18 +243,18 @@ function _(_, _) {
         break;
       case 2:
       case 3:
-        if (_ == `/` && _) (_.type = 3), (_.text = ``), (_ = !1);
-        else if (_ == `[` && !_) (_ = _(_, _(_), 2)), (_ = !0);
+        if (_ == `/` && _) ((_.type = 3), (_.text = ``), (_ = !1));
+        else if (_ == `[` && !_) ((_ = _(_, _(_), 2)), (_ = !0));
         else if (_ == `]` && !_) {
           let _ = _.type == 2 && _.text?.toLocaleLowerCase() == `noparse`,
             _ = _.type == 3 && _.text?.toLocaleLowerCase() == `noparse`;
-          _ || (_ && !_)
+          (_ || (_ && !_)
             ? ((_ = _(_)), (_.text += _))
             : _
               ? (_ = !0)
               : _ && (_ = !1),
             (_ = _(_, _)),
-            (_ = !1);
+            (_ = !1));
         } else
           _ == `\\` && _
             ? ((_.text += _), (_ = !_), (_ = !1))
@@ -323,13 +323,13 @@ function _(_) {
     }
     _ && ((_[_] = _), (_ = ``), (_ = ``));
   }
-  return _ != 0 && (_[_] = _), _;
+  return (_ != 0 && (_[_] = _), _);
 }
 var _ = class extends _ {
   m_renderingLanguage;
   constructor(_, _, _) {
-    super(_, _ ?? (() => new _())),
-      (this.m_renderingLanguage = typeof _ == `string` ? _(_) : _);
+    (super(_, _ ?? (() => new _())),
+      (this.m_renderingLanguage = typeof _ == `string` ? _(_) : _));
   }
   UpdateOverrideLanguage(_) {
     this.m_renderingLanguage = _;
@@ -421,7 +421,7 @@ var _ = class _ {
       return this.m_bUserHasVolumePreference;
     }
     SetVolumePreference(_) {
-      (this.m_flVolumePreference = _), (this.m_bUserHasVolumePreference = !0);
+      ((this.m_flVolumePreference = _), (this.m_bUserHasVolumePreference = !0));
     }
     GetVolumePreference() {
       return this.m_flVolumePreference;
@@ -431,7 +431,7 @@ var _ = class _ {
     }
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
   },
   _ = (0, _.forwardRef)(function (_, _) {
@@ -1620,7 +1620,7 @@ function _(_) {
   try {
     let _ = `BEGIN:VCALENDAR\r
 `;
-    (_ += `VERSION:2.0\r
+    ((_ += `VERSION:2.0\r
 `),
       (_ += `BEGIN:VEVENT\r
 `),
@@ -1647,14 +1647,14 @@ function _(_) {
 `),
       (_ += `END:VCALENDAR\r
 `),
-      (_ = `data:text/calendar;charset=utf-8;base64,${_.fromByteArray(new TextEncoder().encode(_))}`);
+      (_ = `data:text/calendar;charset=utf-8;base64,${_.fromByteArray(new TextEncoder().encode(_))}`));
   } catch (_) {
     console.error(_);
   }
   let _ = `https://calendar.google.com/calendar/render?action=TEMPLATE`;
-  (_ += `&text=${encodeURI(_)}`),
+  ((_ += `&text=${encodeURI(_)}`),
     (_ += `&details=${encodeURI(_)}`),
-    (_ += `&dates=${encodeURI(_ + `/` + _)}`);
+    (_ += `&dates=${encodeURI(_ + `/` + _)}`));
   let _ = (_) => {
     if (`ReactNativeWebView` in window) {
       let _ = window.ReactNativeWebView,
@@ -1666,7 +1666,7 @@ function _(_) {
           strNotes: _,
           strLocation: _,
         };
-      _.postMessage(JSON.stringify(_)), _.preventDefault();
+      (_.postMessage(JSON.stringify(_)), _.preventDefault());
     }
   };
   return (0, _.jsxs)(`div`, {
@@ -1710,47 +1710,3 @@ function _(_) {
     children: _.ParseBBCode(_, {}),
   });
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

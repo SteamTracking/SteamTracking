@@ -458,7 +458,7 @@ div.koPooBe-lCQ- {
     local(Jolly Lodger),
     local(JollyLodger),
     url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lUODS7Zw.woff2)
-    format("woff2");
+      format("woff2");
   unicode-range:
     U+100-24F, U+259, U+1E??, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113,
     U+2C60-2C7F, U+A720-A7FF;
@@ -522,9 +522,10 @@ div.koPooBe-lCQ- {
     local(Jolly Lodger),
     local(JollyLodger),
     url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lXuDS.woff2)
-    format("woff2");
+      format("woff2");
   unicode-range:
-    U+??, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    U+??, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074,
+    U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
   font-family: New Rocker fallback;
@@ -585,7 +586,7 @@ div.koPooBe-lCQ- {
     local(New Rocker),
     local(NewRocker-Regular),
     url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGofiIlP.woff2)
-    format("woff2");
+      format("woff2");
   unicode-range:
     U+100-24F, U+259, U+1E??, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113,
     U+2C60-2C7F, U+A720-A7FF;
@@ -649,9 +650,10 @@ div.koPooBe-lCQ- {
     local(New Rocker),
     local(NewRocker-Regular),
     url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGQfiA.woff2)
-    format("woff2");
+      format("woff2");
   unicode-range:
-    U+??, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    U+??, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074,
+    U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
   font-family: Chonburi fallback;
@@ -712,7 +714,7 @@ div.koPooBe-lCQ- {
     local(Chonburi),
     local(Chonburi-Regular),
     url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWJHLzriA.woff2)
-    format("woff2");
+      format("woff2");
   unicode-range: U+E01-E5B, U+200C-200D, U+25CC;
 }
 @font-face {
@@ -774,7 +776,7 @@ div.koPooBe-lCQ- {
     local(Chonburi),
     local(Chonburi-Regular),
     url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2)
-    format("woff2");
+      format("woff2");
   unicode-range: U+102-103, U+110-111, U+1EA0-1EF9, U+20AB;
 }
 @font-face {
@@ -835,7 +837,7 @@ div.koPooBe-lCQ- {
     local(Sigmar One Regular),
     local(SigmarOne-Regular),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6vppkDi.woff2)
-    format("woff2");
+      format("woff2");
   unicode-range: U+102-103, U+110-111, U+1EA0-1EF9, U+20AB;
 }
 @font-face {
@@ -896,7 +898,7 @@ div.koPooBe-lCQ- {
     local(Sigmar One Regular),
     local(SigmarOne-Regular),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6rppkDi.woff2)
-    format("woff2");
+      format("woff2");
   unicode-range:
     U+100-24F, U+259, U+1E??, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113,
     U+2C60-2C7F, U+A720-A7FF;
@@ -959,9 +961,10 @@ div.koPooBe-lCQ- {
     local(Sigmar One Regular),
     local(SigmarOne-Regular),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tppg.woff2)
-    format("woff2");
+      format("woff2");
   unicode-range:
-    U+??, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    U+??, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074,
+    U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 .SppL95yx9BU- {
   color: #fff;
@@ -1053,12 +1056,12 @@ html.responsive.touch .vZlB-C6RUio- {
   padding-bottom: 12px;
 }
 .SZeormjSwYo- {
-  aspect-ratio: 460 / 215;
+  aspect-ratio: 460/215;
   background: #ffffff1a;
   border-radius: 5px;
 }
 .SZeormjSwYo-._9Xrgw1NkKg8- {
-  aspect-ratio: 600 / 900;
+  aspect-ratio: 600/900;
 }
 .SZeormjSwYo-.hbaqi-sk8nE- {
   aspect-ratio: 4;
@@ -1710,7 +1713,7 @@ html.responsive.touch .FQuVIvXzECY- .EtG3bD1IPJE- ._25-ogODAwZc- .wvR9NvCjhik- {
   box-sizing: border-box;
   background: linear-gradient(90deg, #2c2e35, #25272c, #2c2e35);
   border-top: 1px solid #2c2e35;
-  grid-template: "title group group" "dates contact contact" "info info info" / 3fr 1fr 1fr;
+  grid-template: "title group group" "dates contact contact" "info info info"/3fr 1fr 1fr;
   width: 100%;
   min-height: 189px;
   margin-bottom: 8px;
@@ -5431,7 +5434,7 @@ button.rbc-input::-moz-focus-inner {
   padding-left: 5px;
 }
 .YoBVCX86YoY- {
-  grid-template: "image info" "button button" / 200px auto;
+  grid-template: "image info" "button button"/200px auto;
   display: grid;
 }
 .YoBVCX86YoY-._5qDk0VgQpVc- {
@@ -5713,7 +5716,7 @@ button.rbc-input::-moz-focus-inner {
   color: #fff;
   background: #2c2e35;
   border-radius: 3px;
-  grid-template: "title title" 36px "image info" "button button" / 200px auto;
+  grid-template: "title title" 36px "image info" "button button"/200px auto;
   margin: 5px 0;
   padding: 10px;
   font-size: 14px;
@@ -6034,7 +6037,7 @@ button.rbc-input::-moz-focus-inner {
 .T-ZiEV9r7fg- .ky0gRF-v3Nw- .heqiY0qkCSc- {
   color: #000;
   background-color: orange;
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   padding: 3px 5px;
 }
 .T-ZiEV9r7fg- .e1vJnQaWh58- {
@@ -7000,7 +7003,7 @@ table.cKYrmNuEAQs- td {
 }
 .q5bOkaVrtKE- > span {
   text-shadow: 1px 1px #0000004d;
-  background: linear-gradient(90deg, #47bfff 5%, #1a44c2 60%) 25% / 330% 100%;
+  background: linear-gradient(90deg, #47bfff 5%, #1a44c2 60%) 25%/330% 100%;
   border-radius: 2px;
   padding: 0 15px;
   font-size: 15px;

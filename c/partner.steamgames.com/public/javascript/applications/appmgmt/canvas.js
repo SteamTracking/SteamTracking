@@ -38,15 +38,15 @@ var _ = _(_()),
         _ = Math.floor(
           this.m_elCanvas.clientHeight / this.props.reductionFactor,
         );
-      (this.m_elCanvas.width = _),
+      ((this.m_elCanvas.width = _),
         (this.m_elCanvas.height = _),
         (this.props.blurAmount ?? 0) > 0 &&
-          (_.filter = `blur(` + this.props.blurAmount + `px)`);
+          (_.filter = `blur(` + this.props.blurAmount + `px)`));
       let _ = () => {
-        _.drawImage(_, 0, 0, _ * _[0], _ * _[1]),
-          _ > 0 && this.m_schUpdate.Schedule(_, _);
+        (_.drawImage(_, 0, 0, _ * _[0], _ * _[1]),
+          _ > 0 && this.m_schUpdate.Schedule(_, _));
       };
-      _(), (this.m_bSetupComplete = !0);
+      (_(), (this.m_bSetupComplete = !0));
     }
     render() {
       return (0, _.jsx)(`canvas`, {
@@ -58,6 +58,5 @@ var _ = _(_()),
       });
     }
   };
-_([_], _.prototype, `BindCanvasRef`, null),
-  _([_], _.prototype, `updateCanvas`, null);
-export { _ };
+(_([_], _.prototype, `BindCanvasRef`, null),
+  _([_], _.prototype, `updateCanvas`, null));

@@ -72,12 +72,12 @@ function _(_) {
     fnClose: _,
     bCircular: _,
   } = _;
-  _(`ArrowLeft`, () => _?.(), !0, !0),
+  (_(`ArrowLeft`, () => _?.(), !0, !0),
     _(`Left`, () => _?.(), !0, !0),
     _(`ArrowRight`, () => _?.(), !0, !0),
     _(`Right`, () => _?.(), !0, !0),
     _(`Escape`, () => _ && _(), !0, !0),
-    _(`Esc`, () => _ && _(), !0, !0);
+    _(`Esc`, () => _ && _(), !0, !0));
   let _ = _ > 1;
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -204,8 +204,8 @@ function _(_) {
     _ != _.length && (_(_.length), _(0));
   }, [_, _.length]);
   let _ = _.useCallback(() => {
-    _.onImageError && _.onImageError(_.srcs[_]),
-      _ + 1 < _.srcs.length && _(_ + 1);
+    (_.onImageError && _.onImageError(_.srcs[_]),
+      _ + 1 < _.srcs.length && _(_ + 1));
   }, [_, _]);
   return _.length == 0
     ? null
@@ -259,4 +259,3 @@ function _(_) {
         alt: _,
       });
 }
-export { _, _, _, _, _, _ };

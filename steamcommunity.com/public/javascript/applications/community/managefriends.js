@@ -63,12 +63,12 @@ var S = e(r()),
       a.data &&
         a.status == 200 &&
         a.data.forEach((e) => {
-          (e.avatar_hash = e.avatar_url),
+          ((e.avatar_hash = e.avatar_url),
             (e.avatar_url_medium = o(e.avatar_url, `medium`)),
             (e.avatar_url_full = o(e.avatar_url, `full`)),
             (e.avatar_url = o(e.avatar_url)),
             this.m_mapProfiles.set(e.steamid, e),
-            this.m_mapProfilesLoading.delete(e.steamid);
+            this.m_mapProfilesLoading.delete(e.steamid));
         });
     }
     GetProfile(e) {
@@ -130,9 +130,9 @@ var H = new V(),
     }
     async OnCreateInviteLink() {
       let e = new FormData();
-      e.append(`sessionid`, _()),
+      (e.append(`sessionid`, _()),
         e.append(`steamid_user`, y.steamid),
-        e.append(`duration`, `2592000`);
+        e.append(`duration`, `2592000`));
       let t = await C.default.post(
         v.COMMUNITY_BASE_URL + `invites/ajaxcreate`,
         e,
@@ -143,19 +143,19 @@ var H = new V(),
         this.setState({ invite_token: t.data.invite.invite_token });
     }
     OnCopy(e, t) {
-      e === `friend_code` &&
+      (e === `friend_code` &&
         (this.setState({ friend_code_copied: !0 }),
         setTimeout(() => this.setState({ friend_code_copied: !1 }), 1e3)),
         e === `invite` &&
           (this.setState({ invite_copied: !0 }),
           setTimeout(() => this.setState({ invite_copied: !1 }), 1e3)),
-        g(t);
+        g(t));
     }
     async OnAddFriend(e) {
       let t = new FormData();
-      t.append(`sessionID`, _()),
+      (t.append(`sessionID`, _()),
         t.append(`steamid`, e),
-        t.append(`accept_invite`, `0`);
+        t.append(`accept_invite`, `0`));
       try {
         let e = await C.default.post(
           v.COMMUNITY_BASE_URL + `actions/AddFriendAjax`,
@@ -306,12 +306,12 @@ var H = new V(),
       });
     }
   };
-s([l], W.prototype, `OnCreateInviteLink`, null),
+(s([l], W.prototype, `OnCreateInviteLink`, null),
   s([l], W.prototype, `OnCopy`, null),
   s([l], W.prototype, `OnAddFriend`, null),
   s([l], W.prototype, `OnSearchChange`, null),
   s([l], W.prototype, `OnSearchKeyDown`, null),
-  s([l], W.prototype, `OnSearchSubmit`, null);
+  s([l], W.prototype, `OnSearchSubmit`, null));
 var G = class extends S.Component {
   state = {
     input_friend_code: ``,
@@ -322,12 +322,12 @@ var G = class extends S.Component {
   m_currentRequest = 0;
   async OnFriendCodeChange(e) {
     let t = e.target.value.split(`,`)[0];
-    this.setState({ input_friend_code: t, invite_status: `pending` }),
+    (this.setState({ input_friend_code: t, invite_status: `pending` }),
       window.clearTimeout(this.m_currentRequest),
       (this.m_currentRequest = window.setTimeout(
         () => this.LoadProfile(t),
         500,
-      ));
+      )));
   }
   async LoadProfile(e) {
     if (e) {
@@ -347,14 +347,14 @@ var G = class extends S.Component {
   }
   async OnActionClick(e) {
     let t = new FormData();
-    t.append(`sessionID`, _()),
+    (t.append(`sessionID`, _()),
       t.append(`steamid`, e),
       t.append(`accept_invite`, `0`),
       this.setState({ disable_send_invite: !0 }),
       (await this.props.onButtonClick(e))
         ? (this.setState({ input_friend_code: ``, invite_status: `success` }),
           setTimeout(() => this.setState({ searchResult: null }), 3e3))
-        : this.setState({ invite_status: `failure`, disable_send_invite: !1 });
+        : this.setState({ invite_status: `failure`, disable_send_invite: !1 }));
   }
   render() {
     return (0, U.jsxs)(`div`, {
@@ -381,9 +381,9 @@ var G = class extends S.Component {
     });
   }
 };
-s([l], G.prototype, `OnFriendCodeChange`, null),
+(s([l], G.prototype, `OnFriendCodeChange`, null),
   s([l], G.prototype, `LoadProfile`, null),
-  s([l], G.prototype, `OnActionClick`, null);
+  s([l], G.prototype, `OnActionClick`, null));
 var K = (e) => {
   let { searchResult: t, invite_status: n, bShowStatus: r, children: i } = e,
     a = d();

@@ -32,13 +32,13 @@ function _(_) {
   let _;
   typeof _ == `string` ? (_ = _) : _ && _(_, `dull`, _);
   let _;
-  typeof _ == `string` ? (_ = _) : _ && _(_, `body`, _),
+  (typeof _ == `string` ? (_ = _) : _ && _(_, `body`, _),
     _ && _(_, `success`, _),
     _ && _(_, `warning`, _),
     _ && _(_, `error`, _),
     _ && _(_, `success`, _),
     _ && _(_, `warning`, _),
-    _ && _(_, `error`, _);
+    _ && _(_, `error`, _));
   let _ = (0, _.jsx)(_, {
     variants: _,
     children: (0, _.jsx)(`div`, {
@@ -79,4 +79,3 @@ function _(_, _, _) {
     for (let _ of _) _[`--color-text-${_}-${_}`] = `var(--color-${_}-${_})`;
   else for (let [_, _] of Object.entries(_)) _[`--color-text-${_}-${_}`] = _;
 }
-export { _, _ };

@@ -644,7 +644,7 @@ var Ut = () => {
   Z = `bFuJQ7DqoCY-`,
   Xt = class extends F.Component {
     constructor(e) {
-      super(e), u.Get().GetLoyaltyRewardsSummary();
+      (super(e), u.Get().GetLoyaltyRewardsSummary());
     }
     render() {
       return M(A.EREALM)
@@ -1059,9 +1059,9 @@ var Q = e(o(), 1),
   en = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.accountid || C(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null);
+        Q.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1096,7 +1096,7 @@ var Q = e(o(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1117,14 +1117,14 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       T(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_Bid`;
@@ -1133,9 +1133,9 @@ var Q = e(o(), 1),
   tn = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.auctiondescriptionid || C(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [12], null);
+        Q.Message.initialize(this, t, 0, -1, [12], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1193,7 +1193,7 @@ var Q = e(o(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1214,14 +1214,14 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       T(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_Item`;
@@ -1230,9 +1230,9 @@ var Q = e(o(), 1),
   nn = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.auctiondescriptionid || C(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null);
+        Q.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1258,7 +1258,7 @@ var Q = e(o(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1279,14 +1279,14 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       T(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_PlaceBid_Request`;
@@ -1295,7 +1295,7 @@ var Q = e(o(), 1),
   rn = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), Q.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), Q.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1316,12 +1316,12 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_PlaceBid_Response`;
@@ -1330,9 +1330,9 @@ var Q = e(o(), 1),
   an = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.auctiondescriptionid || C(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null);
+        Q.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1352,7 +1352,7 @@ var Q = e(o(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1373,14 +1373,14 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       T(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_CancelBid_Request`;
@@ -1389,9 +1389,9 @@ var Q = e(o(), 1),
   on = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.amount_returned || C(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null);
+        Q.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1411,7 +1411,7 @@ var Q = e(o(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1432,14 +1432,14 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       T(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_CancelBid_Response`;
@@ -1448,9 +1448,9 @@ var Q = e(o(), 1),
   sn = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.steamid || C(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null);
+        Q.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1470,7 +1470,7 @@ var Q = e(o(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1491,14 +1491,14 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       T(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_GetBidsForUser_Request`;
@@ -1507,9 +1507,9 @@ var Q = e(o(), 1),
   cn = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.bids || C(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [1], null);
+        Q.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1523,7 +1523,7 @@ var Q = e(o(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1544,14 +1544,14 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       T(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_GetBidsForUser_Response`;
@@ -1560,9 +1560,9 @@ var Q = e(o(), 1),
   ln = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.auctiondescriptionid || C(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null);
+        Q.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1582,7 +1582,7 @@ var Q = e(o(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1603,14 +1603,14 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       T(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_GetBidsForItem_Request`;
@@ -1619,9 +1619,9 @@ var Q = e(o(), 1),
   un = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.item || C(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [4], null);
+        Q.Message.initialize(this, t, 0, -1, [4], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1640,7 +1640,7 @@ var Q = e(o(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1661,14 +1661,14 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       T(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_GetBidsForItem_Response`;
@@ -1677,9 +1677,9 @@ var Q = e(o(), 1),
   dn = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.auctiondescriptionid || C(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null);
+        Q.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1699,7 +1699,7 @@ var Q = e(o(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1720,14 +1720,14 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       T(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_GetUserBidForItem_Request`;
@@ -1736,9 +1736,9 @@ var Q = e(o(), 1),
   fn = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.bid || C(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null);
+        Q.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1748,7 +1748,7 @@ var Q = e(o(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1769,14 +1769,14 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       T(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_GetUserBidForItem_Response`;
@@ -1785,9 +1785,9 @@ var Q = e(o(), 1),
   pn = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.auctiondescriptionid || C(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null);
+        Q.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1807,7 +1807,7 @@ var Q = e(o(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1828,14 +1828,14 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       T(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_GetItemDetails_Request`;
@@ -1844,9 +1844,9 @@ var Q = e(o(), 1),
   mn = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.item || C(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null);
+        Q.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1856,7 +1856,7 @@ var Q = e(o(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1877,14 +1877,14 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       T(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_GetItemDetails_Response`;
@@ -1893,7 +1893,7 @@ var Q = e(o(), 1),
   hn = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), Q.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), Q.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1914,12 +1914,12 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_GetAllItems_Request`;
@@ -1928,9 +1928,9 @@ var Q = e(o(), 1),
   gn = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.items || C(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [1], null);
+        Q.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1944,7 +1944,7 @@ var Q = e(o(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1965,14 +1965,14 @@ var Q = e(o(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       T(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAuction_GetAllItems_Response`;
@@ -2038,11 +2038,11 @@ var _n = class e {
   m_bLoadedAllItems = !1;
   m_mapAuctionItems = new Map();
   static Get() {
-    return (this.s_Singleton ||= new e()), this.s_Singleton;
+    return ((this.s_Singleton ||= new e()), this.s_Singleton);
   }
   Init(e) {
-    (this.m_transport = e.GetServiceTransport()),
-      (this.m_anonymousTransport = e.GetAnonymousServiceTransport());
+    ((this.m_transport = e.GetServiceTransport()),
+      (this.m_anonymousTransport = e.GetAnonymousServiceTransport()));
   }
   async LoadCurrentUserBids() {
     if (!u.Get().BIsLoggedIn()) return [];
@@ -2104,7 +2104,7 @@ var _n = class e {
   async PlaceBid(e, t, n) {
     let r = { eResult: 2, strMessage: `` };
     if (!u.Get().BIsLoggedIn())
-      return (r = { eResult: 21, strMessage: `Not logged on` }), r;
+      return ((r = { eResult: 21, strMessage: `Not logged on` }), r);
     let i = O.Init(nn);
     i.SetBodyFields({
       auctiondescriptionid: e,
@@ -2126,7 +2126,7 @@ var _n = class e {
   async CancelBid(e) {
     let t = { eResult: 2, strMessage: `` };
     if (!u.Get().BIsLoggedIn())
-      return (t = { eResult: 21, strMessage: `Not logged on` }), t;
+      return ((t = { eResult: 21, strMessage: `Not logged on` }), t);
     let n = O.Init(an);
     n.SetBodyFields({ auctiondescriptionid: e });
     let r = await $.CancelBid(this.m_transport, n);
@@ -2142,8 +2142,8 @@ var _n = class e {
     );
   }
 };
-_([t], _n.prototype, `m_rgCurrentUserBids`, void 0),
-  _([t], _n.prototype, `m_mapAuctionItems`, void 0);
+(_([t], _n.prototype, `m_rgCurrentUserBids`, void 0),
+  _([t], _n.prototype, `m_mapAuctionItems`, void 0));
 async function vn() {
   let e = A.LANGUAGE,
     t = Be.GetLanguageFallback(e),
@@ -2337,7 +2337,7 @@ var yn = class extends F.Component {
 async function bn() {
   let e = Oe(`loyaltystore`, `application_config`),
     t = je(Te());
-  Ce.Init(t), await vn(), await ze.Get().HintLoad(), u.Get().Init(t, e);
+  (Ce.Init(t), await vn(), await ze.Get().HintLoad(), u.Get().Init(t, e));
 }
 var xn = bn();
 export { yn as default };

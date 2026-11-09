@@ -42,8 +42,8 @@ var k = e(n(), 1),
 function ce(e) {
   return se[e];
 }
-(0, A.default)(`2026-11-23T09:30:00-08:00`).unix(),
-  (0, A.default)(`2026-11-30T10:00:00-08:00`).unix();
+((0, A.default)(`2026-11-23T09:30:00-08:00`).unix(),
+  (0, A.default)(`2026-11-30T10:00:00-08:00`).unix());
 function j() {
   return 2025;
 }
@@ -67,8 +67,8 @@ function le() {
 function ue() {
   return `${b.STORE_BASE_URL}steamawards/ajaxgetwidgetstyle`;
 }
-(0, A.default)(`2026-12-17T09:30:00-08:00`).unix(),
-  (0, A.default)(`2027-01-02T10:00:00-08:00`).unix();
+((0, A.default)(`2026-12-17T09:30:00-08:00`).unix(),
+  (0, A.default)(`2027-01-02T10:00:00-08:00`).unix());
 var N = 5350740;
 function P(e, t) {
   return e.BIsEventActionEnabled(t) || t < e.GetStartTimeAndDateUnixSeconds();

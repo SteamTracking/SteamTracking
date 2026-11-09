@@ -187,19 +187,19 @@ function wn([e, t, n]) {
     o,
     s;
   if (r !== 0) s = (r - i) / r;
-  else return (s = 0), (o = 0), [o, s, a];
+  else return ((s = 0), (o = 0), [o, s, a]);
   if (s === 0) o = 0;
   else {
     let a = r - i;
-    (o = e === r ? (t - n) / a : t === r ? 2 + (n - e) / a : 4 + (e - t) / a),
+    ((o = e === r ? (t - n) / a : t === r ? 2 + (n - e) / a : 4 + (e - t) / a),
       (o *= 60),
-      o < 0 && (o += 360);
+      o < 0 && (o += 360));
   }
   return [o, s, a];
 }
 function Tn([e, t, n]) {
   if (t === 0) return [n, n, n];
-  (e = ((e % 360) + 360) % 360), (e /= 60);
+  ((e = ((e % 360) + 360) % 360), (e /= 60));
   let r = Math.floor(e),
     i = e - r,
     a = n * (1 - t),
@@ -333,15 +333,15 @@ function Rn(e) {
   if (typeof CSS > `u` || !CSS.supports(`color`, e)) return;
   if (Ln === void 0) {
     let e = document.createElement(`canvas`);
-    (e.width = e.height = 1),
-      (Ln = e.getContext(`2d`, { willReadFrequently: !0 }));
+    ((e.width = e.height = 1),
+      (Ln = e.getContext(`2d`, { willReadFrequently: !0 })));
   }
   let t = Ln;
   if (!t) return;
-  t.clearRect(0, 0, 1, 1),
+  (t.clearRect(0, 0, 1, 1),
     (t.fillStyle = `#000000`),
     (t.fillStyle = e),
-    t.fillRect(0, 0, 1, 1);
+    t.fillRect(0, 0, 1, 1));
   let [n, r, i, a] = t.getImageData(0, 0, 1, 1).data;
   return { r: n, g: r, b: i, a: J(a / 255) };
 }
@@ -397,7 +397,7 @@ function ur(e) {
         let t = i ? { ...e, a: 1 } : e;
         c(t);
         let r = Mn(t);
-        (l.current = r), n(Pn(r));
+        ((l.current = r), n(Pn(r)));
       },
       [i, n],
     ),
@@ -557,7 +557,7 @@ function _r(e) {
       i && r(i);
     },
     p = (e) => {
-      o(e), l(void 0);
+      (o(e), l(void 0));
     };
   return (0, Y.jsxs)(`div`, {
     className: Kn,
@@ -685,12 +685,12 @@ function xr(e) {
   d.current = { color: t, onChange: n, fnRestoreChanges: s, bLivePreview: o };
   let f = (0, q.useCallback)(
       (e) => {
-        (l.current = e), o && n(e);
+        ((l.current = e), o && n(e));
       },
       [o, n],
     ),
     p = (0, q.useCallback)(() => {
-      (u.current = !0), !o && l.current !== void 0 && n(l.current), r();
+      ((u.current = !0), !o && l.current !== void 0 && n(l.current), r());
     }, [o, n, r]);
   return (
     (0, q.useEffect)(
@@ -698,7 +698,7 @@ function xr(e) {
         let e = d.current;
         if (!u.current && e.bLivePreview && l.current !== void 0)
           try {
-            e.onChange(e.color), e.fnRestoreChanges?.();
+            (e.onChange(e.color), e.fnRestoreChanges?.());
           } catch (e) {
             console.error(`Color picker: could not undo a previewed color`, e);
           }
@@ -717,8 +717,8 @@ function xr(e) {
         e.addEventListener(`pointerdown`, t, !0),
         e.addEventListener(`keydown`, n, !0),
         () => {
-          e.removeEventListener(`pointerdown`, t, !0),
-            e.removeEventListener(`keydown`, n, !0);
+          (e.removeEventListener(`pointerdown`, t, !0),
+            e.removeEventListener(`keydown`, n, !0));
         }
       );
     }, [r]),
@@ -899,11 +899,11 @@ function Nr(e) {
   q.useEffect(() => {
     if (!s) return;
     let e = new Image();
-    (e.onload = () => {
+    ((e.onload = () => {
       let t = (100 * e.width) / 950 + `%`;
       o.current && o.current.style.setProperty(`--background-scale`, t);
     }),
-      (e.src = s);
+      (e.src = s));
   }, [s]);
   let l = t.jsondata.sale_sections?.some(
       (e) => e.section_type === `contenthubmaincarousel`,
@@ -1218,7 +1218,7 @@ function si(e) {
             (0, Y.jsx)(B, {
               className: `kqyJu6iojzM-`,
               onClick: () => {
-                o(void 0), c(``);
+                (o(void 0), c(``));
               },
               children: `Reset to page's order`,
             }),
@@ -1317,9 +1317,9 @@ function di(e, t, n) {
           ++e, ++c
         ) {
           let r = t[c].unique_id;
-          s.push(r),
+          (s.push(r),
             i.set(r, n.background_id),
-            e === 0 && a.set(r, n.background_id);
+            e === 0 && a.set(r, n.background_id));
         }
         if (
           (r.set(n.background_id, {
@@ -1361,7 +1361,7 @@ function di(e, t, n) {
               : --r;
           }
           let d = e;
-          for (; d < t.length && !pe(n, t[d]); ) d += 1;
+          for (; d < t.length && !pe(n, t[d]);) d += 1;
           if (
             (r.set(s.background_id, {
               nBackgroundGroupID: s.background_id,
@@ -1590,7 +1590,7 @@ var gi = class {
       return this.m_curLocImageGroup?.primaryImage;
     }
     ClearImageGroup() {
-      (this.m_curLocImageGroup = null), (this.m_curLocImageGroupType = null);
+      ((this.m_curLocImageGroup = null), (this.m_curLocImageGroupType = null));
     }
     GetLocalizedImageGroupForEdit() {
       return this.m_curLocImageGroup;
@@ -1712,11 +1712,11 @@ function Di(e) {
       onDragOver: t ? Oi : void 0,
       onDrop: q.useCallback(
         (t) => {
-          t.dataTransfer.files?.length &&
+          (t.dataTransfer.files?.length &&
             (e(t.dataTransfer.files, t),
             t.preventDefault(),
             t.stopPropagation()),
-            n(!1);
+            n(!1));
         },
         [e],
       ),
@@ -1799,7 +1799,7 @@ function Hi(e) {
             { language: a } = wt(i?.name, c);
           try {
             let n = bt(a, c, o);
-            (r = await t.AddImageForLanguage(i, n)),
+            ((r = await t.AddImageForLanguage(i, n)),
               r ||
                 (console.error(
                   `ImageUploaderPanel.OnDropFiles: failed on i=` +
@@ -1812,10 +1812,10 @@ function Hi(e) {
                     strDescription: I(`#ImagePicker_Error`, i.name),
                   }),
                   window,
-                ));
+                )));
           } catch (e) {
             let t = Ft(e);
-            console.error(
+            (console.error(
               `ImageUploaderPanel.OnDropFiles: ` + t.strErrorMsg,
               t,
             ),
@@ -1824,7 +1824,7 @@ function Hi(e) {
                   strDescription: I(`#EventError_Code`, t.strErrorMsg ?? ``),
                 }),
                 window,
-              );
+              ));
           }
         }
         return r;
@@ -1928,10 +1928,10 @@ function Gi(e) {
     a = n.ImageOptions?.map((e) => {
       let t = e?.fnGetLabelText(),
         r;
-      e.bEnforceDimensions && (t += ` - ${e.width}x${e.height}`),
+      (e.bEnforceDimensions && (t += ` - ${e.width}x${e.height}`),
         e.bDeprecated &&
           ((t += ` ${I(`#ImageUpload_Deprecated`)}`),
-          (r = I(`#ImageUpload_Deprecated_ttip`)));
+          (r = I(`#ImageUpload_Deprecated_ttip`))));
       let i;
       return (
         (n.BIsOriginalMinimumDimensions(e) && n.FileTypeMatchesImageTypes(e)) ||
@@ -2237,7 +2237,7 @@ function ua(e) {
       );
     },
     g = (e) => {
-      console.log(`ClanImageWrapper on delete error: ` + e),
+      (console.log(`ClanImageWrapper on delete error: ` + e),
         P(
           (0, Y.jsx)(Nt, {
             strTitle: I(`#Error_FailureNotice`),
@@ -2245,17 +2245,17 @@ function ua(e) {
             children: (0, Y.jsx)(`p`, { children: e }),
           }),
           window,
-        );
+        ));
     },
     _ = () => {
       c(!0);
       let e = M.InitFromClanID(t.clanAccountID, G.EUNIVERSE);
       O.DeleteClanImage(e, t)
         .then((e) => {
-          e.success != 1 && g(Ft(e).strErrorMsg), c(!1);
+          (e.success != 1 && g(Ft(e).strErrorMsg), c(!1));
         })
         .catch((e) => {
-          g(Ft(e).strErrorMsg), c(!1);
+          (g(Ft(e).strErrorMsg), c(!1));
         });
     },
     v = () => {},
@@ -2353,7 +2353,7 @@ function pa(e) {
   let { clanSteamID: t, closeModal: n, OnClanImageSelected: r } = e,
     i = q.useCallback(
       (e, t) => {
-        r?.(e, t), n?.();
+        (r?.(e, t), n?.());
       },
       [r, n],
     ),
@@ -2429,13 +2429,13 @@ function ha(e) {
             await l.AddExistingClanImage(e, n);
           } catch (e) {
             let t = Ft(e);
-            console.error(`AddExistingClanImage: ` + t.strErrorMsg, t),
+            (console.error(`AddExistingClanImage: ` + t.strErrorMsg, t),
               P(
                 (0, Y.jsx)(Nt, {
                   strDescription: I(`#EventError_Code`, t.strErrorMsg ?? ``),
                 }),
                 window,
-              );
+              ));
           }
           d(!1);
         }
@@ -2635,7 +2635,7 @@ function Ia(e) {
           n.lang,
         ));
       let a = ba;
-      return r != n.lang && (a = n.imgHash ? ya : xa), [i, a];
+      return (r != n.lang && (a = n.imgHash ? ya : xa), [i, a]);
     });
   return (0, Y.jsxs)(`div`, {
     id: n.strLang,
@@ -2767,7 +2767,7 @@ function Ya(e) {
     s = Ue(),
     c = q.useCallback(
       (e) => {
-        e.preventDefault(), r && r(t);
+        (e.preventDefault(), r && r(t));
       },
       [t, r],
     ),
@@ -2962,17 +2962,17 @@ function uo(e) {
 }
 function fo(e, t) {
   let n = document.createElement(`canvas`);
-  (n.width = 780), (n.height = 200);
+  ((n.width = 780), (n.height = 200));
   let r = n.getContext(`2d`);
   for (let e = 0; e < 200; e += 20)
     for (let t = 0; t < 780; t += 20)
-      (r.fillStyle = (t / 20 + e / 20) % 2 == 0 ? `#a405e3ff` : `#000000`),
-        r.fillRect(t, e, 20, 20);
+      ((r.fillStyle = (t / 20 + e / 20) % 2 == 0 ? `#a405e3ff` : `#000000`),
+        r.fillRect(t, e, 20, 20));
   let i = r.createLinearGradient(0, 0, 780, 0);
-  i.addColorStop(0, `rgba(32,32,32,0.8)`),
+  (i.addColorStop(0, `rgba(32,32,32,0.8)`),
     i.addColorStop(1, `rgba(60,60,60,0.8)`),
     (r.fillStyle = i),
-    r.fillRect(0, 0, 780, 200);
+    r.fillRect(0, 0, 780, 200));
   let a = r.createRadialGradient(390, 100, 0, 390, 100, 650);
   return (
     a.addColorStop(0, `rgba(0,0,0,0)`),
@@ -3561,7 +3561,7 @@ function So(e) {
     strTitle: I(`#Sale_RemoveAll`),
     strDescription: I(`#ImageUpload_DeleteAll_Confirm`),
     onOK: () => {
-      t?.(), n?.();
+      (t?.(), n?.());
     },
     onCancel: n,
   });
@@ -3584,21 +3584,21 @@ function Co(e) {
     g = q.useCallback(
       (e, t, n) => {
         let r = [];
-        m.find((t) => t.clanImage.imageid == e.imageid)
+        (m.find((t) => t.clanImage.imageid == e.imageid)
           ? (r = m.map((n) =>
               n.clanImage.imageid == e.imageid ? { clanImage: e, lang: t } : n,
             ))
           : n && (r = m.concat({ clanImage: e, lang: t })),
-          h(r);
+          h(r));
       },
       [m],
     ),
     _ = q.useCallback(
       (e, n, r) => {
         s(() => {
-          Na(a(t, n) ?? ``) == e.image_hash && o(t, null, n),
+          (Na(a(t, n) ?? ``) == e.image_hash && o(t, null, n),
             o(t, e, r),
-            g(e, r, !1);
+            g(e, r, !1));
         });
       },
       [a, t, o, g],
@@ -3704,7 +3704,7 @@ var $ = class extends q.Component {
     return (0, Y.jsx)(`div`, { className: ja, children: t });
   }
 };
-Ht([Kt], $.prototype, `ShowLangChangeDialog`, null), ($ = Ht([l], $));
+(Ht([Kt], $.prototype, `ShowLangChangeDialog`, null), ($ = Ht([l], $)));
 function wo(e) {
   let {
       clanSteamID: t,
@@ -3723,7 +3723,7 @@ function wo(e) {
     g = t.GetAccountID(),
     [_] = f(() => [h.GetFilesToUpload().length - h.GetCompletedFiles()]);
   (0, q.useEffect)(() => {
-    p(!1),
+    (p(!1),
       Z.ClearImageGroup(),
       a?.forEach((e, t) => {
         let n = M.InitFromClanID(g, G.EUNIVERSE);
@@ -3734,7 +3734,7 @@ function wo(e) {
         }
         Z.SetLocalizedImageGroupAtLang(t, n, e ?? null);
       }),
-      p(!0);
+      p(!0));
   }, [a, g, o]);
   let v = (0, q.useCallback)(
       (e, t, n = 0) => {
@@ -3780,7 +3780,7 @@ function wo(e) {
           );
         } else l(o, null, e);
       }
-      Z.ClearImageGroup(), e.onOK ? e.onOK() : c?.();
+      (Z.ClearImageGroup(), e.onOK ? e.onOK() : c?.());
     },
     strOKButtonText: _ > 0 ? I(`#ImagePickerLoc_DismissWarning`) : void 0,
     children: [
@@ -4132,7 +4132,7 @@ function jo(e) {
           label: I(`#BackgroundGroups_Setting`),
           checked: a,
           onChange: (e) => {
-            o(e), t.SetBackgroundImageEnabled(e);
+            (o(e), t.SetBackgroundImageEnabled(e));
           },
         }),
         a
@@ -4164,7 +4164,7 @@ function jo(e) {
                     ),
                     bDestructiveWarning: !0,
                     onOK: () => {
-                      t.ClearAllBackgroundImageGroupSettings(), o(!1);
+                      (t.ClearAllBackgroundImageGroupSettings(), o(!1));
                     },
                     closeModal: l,
                   }),
@@ -4485,7 +4485,7 @@ function Ro(e) {
             r !== void 0 && t)
           ) {
             let n = t.SetTabEnabled(r, e);
-            U(!!n, `Failed to create model TabID ${r}backgroundModel`), a(n);
+            (U(!!n, `Failed to create model TabID ${r}backgroundModel`), a(n));
           } else
             console.error(
               `Failed to enable table group, edit mode: ${!!t}, TabID: ${r}.`,
@@ -4541,7 +4541,7 @@ function zo(e) {
     ) {
       let e = document.getElementsByTagName(`HEAD`)[0],
         t = document.createElement(`style`);
-      (t.innerText = Zt(n.jsondata.sale_custom_css)), d(t), e.appendChild(t);
+      ((t.innerText = Zt(n.jsondata.sale_custom_css)), d(t), e.appendChild(t));
     }
     let e = document.getElementsByClassName(`react_landing_background`);
     return (
@@ -4713,7 +4713,7 @@ function Ho(e) {
     [c, l] = q.useState(st()),
     u = q.useMemo(() => new gi(), []),
     d = q.useCallback(() => l(st()), []);
-  q.useEffect(
+  (q.useEffect(
     () => (
       window.addEventListener(`resize`, d),
       () => window.removeEventListener(`resize`, d)
@@ -4733,10 +4733,10 @@ function Ho(e) {
       return (
         window.addEventListener(`hashchange`, t),
         () => {
-          clearTimeout(n), window.removeEventListener(`hashchange`, t);
+          (clearTimeout(n), window.removeEventListener(`hashchange`, t));
         }
       );
-    }, []);
+    }, []));
   let p = n(),
     m = (e, t) => {
       We(p, { ...(t || {}), tab: e.toString() });
@@ -4767,7 +4767,7 @@ function Ho(e) {
       let t = v.findIndex((t) => t.section_anchor === e);
       return t > -1 ? t : void 0;
     }, [v]);
-  v.forEach((n, i) => {
+  (v.forEach((n, i) => {
     let l = x[x.length - 1].activeTab;
     if (l && !l.ShouldShowSection(n)) return;
     let d = fe
@@ -4787,7 +4787,7 @@ function Ho(e) {
         let t = n.diable_tab_id_filtering
           ? new de(void 0, l && l.GetSaleDay())
           : l;
-        n.section_type == `tabs` &&
+        (n.section_type == `tabs` &&
           n.tabs?.some((e) => e.unique_id == o?.GetActiveTabUniqueID()) &&
           x.push({ activeTab: o, elements: [] }),
           (p = (0, Y.jsx)(ce, {
@@ -4800,7 +4800,7 @@ function Ho(e) {
             expanded: f,
             controllerCategory: h,
             setControllerCategory: g,
-          }));
+          })));
       }
     }
     ee && (p = (0, Y.jsx)(Ir, { nSectionID: n.unique_id, children: p }));
@@ -4820,7 +4820,7 @@ function Ho(e) {
         `SaleSectionIndex_` + n.unique_id + `_` + i,
       ),
       T = _.mapSectionToGroup.get(n.unique_id);
-    S &&
+    (S &&
       S.groupID != T &&
       (x[x.length - 1].elements.push(
         fi(t, S, a, o && o?.GetActiveTabUniqueID()),
@@ -4833,13 +4833,13 @@ function Ho(e) {
             derivedGroupInfo: _.mapGroupToSections.get(T),
           }),
           S.elSaleSections.push(y))
-        : x[x.length - 1].elements.push(y);
+        : x[x.length - 1].elements.push(y));
   }),
     (S &&=
       (x[x.length - 1].elements.push(
         fi(t, S, a, o && o?.GetActiveTabUniqueID()),
       ),
-      null));
+      null)));
   let ae = x.map((e, t) =>
     (0, Y.jsx)(
       `div`,

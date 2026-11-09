@@ -51,10 +51,10 @@ var x = a(r()),
     m_bStatusInitialized = !1;
     m_strProfileURL = void 0;
     constructor(e) {
-      o(this), (this.m_steamid = e);
+      (o(this), (this.m_steamid = e));
     }
     Reset() {
-      (this.m_ePersonaState = 0),
+      ((this.m_ePersonaState = 0),
         (this.m_unGamePlayedAppID = 0),
         (this.m_gameid = `0`),
         (this.m_strGameExtraInfo = ``),
@@ -67,7 +67,7 @@ var x = a(r()),
         (this.m_broadcastAppId = void 0),
         (this.m_broadcastViewerCount = void 0),
         (this.m_strBroadcastTitle = void 0),
-        (this.m_eGamingDeviceType = 0);
+        (this.m_eGamingDeviceType = 0));
     }
     GetAccountID() {
       return this.m_steamid.GetAccountID();
@@ -175,7 +175,7 @@ var x = a(r()),
       let e = 3600,
         t = 1e3,
         n = b.CMInterface.GetServerRTime32() - this.last_seen_online;
-      return (t *= n > 86400 ? e : n > 2 * e ? 60 : 15), t;
+      return ((t *= n > 86400 ? e : n > 2 * e ? 60 : 15), t);
     }
     GetOfflineStatusTime() {
       if (this.last_seen_online == 0) return f(`#PersonaStateOffline`);
@@ -269,7 +269,7 @@ var x = a(r()),
         : `${i.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
     }
   };
-n([e], S.prototype, `m_bInitialized`, void 0),
+(n([e], S.prototype, `m_bInitialized`, void 0),
   n([e], S.prototype, `m_ePersonaState`, void 0),
   n([e], S.prototype, `m_unGamePlayedAppID`, void 0),
   n([e], S.prototype, `m_gameid`, void 0),
@@ -291,7 +291,7 @@ n([e], S.prototype, `m_bInitialized`, void 0),
   n([e], S.prototype, `m_strBroadcastTitle`, void 0),
   n([e], S.prototype, `m_bCommunityBanned`, void 0),
   n([e], S.prototype, `m_eGamingDeviceType`, void 0),
-  n([e], S.prototype, `m_bNameInitialized`, void 0);
+  n([e], S.prototype, `m_bNameInitialized`, void 0));
 var C = a(g(), 1);
 function w(e, t) {
   return new C.default(

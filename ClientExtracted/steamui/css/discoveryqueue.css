@@ -32,7 +32,7 @@
   grid-template-areas: "video info";
   position: relative;
 }
-@media screen and (max-aspect-ratio: 10 / 9) {
+@media screen and (max-aspect-ratio: 10/9) {
   ._1xJSMubUWBlahkrtb4IFTc {
     grid-template-columns: 100%;
     grid-template-rows: auto 1fr;
@@ -72,7 +72,7 @@
   animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
   animation-delay: 0s;
 }
-@media screen and (min-aspect-ratio: 10 / 6) {
+@media screen and (min-aspect-ratio: 10/6) {
   ._2BYaxM7mBfooJbZYzhEv4D {
     grid-template-columns: 1fr min(100vw - 150px, 160vh) 1fr;
   }
@@ -105,7 +105,7 @@
 .BasicUI ._3q6eNRFBrPSFSGEn8uRFZ3 {
   padding-top: 39.7%;
 }
-@media screen and (max-aspect-ratio: 10 / 9) {
+@media screen and (max-aspect-ratio: 10/9) {
   ._3q6eNRFBrPSFSGEn8uRFZ3 {
     padding-top: calc(56% + 35vh);
   }
@@ -199,13 +199,13 @@
   grid-template-rows: auto auto auto auto 1fr;
   grid-template-areas: "capsule capsule" "appInfo appInfo" "tags tags" "review review" "relevance relevance";
 }
-@media screen and (max-aspect-ratio: 10 / 9) {
+@media screen and (max-aspect-ratio: 10/9) {
   ._2Zwt2P5vy4W9Ha5ePOv54U ._3TkhdqIi1gqwMzexQDS8Ab {
     grid-template-columns: 15% auto;
     grid-template-areas: "capsule appInfo" "capsule tags" "capsule review" "capsule relevance";
   }
 }
-@media screen and (max-aspect-ratio: 10 / 9) and (max-width: 600px) {
+@media screen and (max-aspect-ratio: 10/9) and (max-width: 600px) {
   ._2Zwt2P5vy4W9Ha5ePOv54U ._3TkhdqIi1gqwMzexQDS8Ab {
     gap: 8px;
     grid-template-columns: 25% auto;

@@ -40,7 +40,7 @@ var j = e(t()),
     }
     SetLocalization(e, t, n) {
       let r = this.m_mapTokens.get(e);
-      r || ((r = _([], 32, null)), this.m_mapTokens.set(e, r)), (r[t] = n);
+      (r || ((r = _([], 32, null)), this.m_mapTokens.set(e, r)), (r[t] = n));
     }
     GetSortedTokenList() {
       let e = [];
@@ -161,48 +161,48 @@ var j = e(t()),
     }
     WriteLocalizationData_CSV_TokenAndLanguageColumns(e, t) {
       let n = [];
-      e.GetSortedTokenList().forEach((t) => {
+      (e.GetSortedTokenList().forEach((t) => {
         for (let r of this.GetExportLanguages()) {
           let i = { field: t };
-          (i.language = p(u(r))),
+          ((i.language = p(u(r))),
             (i.value = e.GetLocalization(t, r)),
-            n.push(i);
+            n.push(i));
         }
       }),
-        o.WriteCSVToFile(n, t);
+        o.WriteCSVToFile(n, t));
     }
     WriteLocalizationData_CSV_LanguageColumns(e, t) {
       let n = [];
-      e.GetSortedTokenList().forEach((t) => {
+      (e.GetSortedTokenList().forEach((t) => {
         let r = { field: t };
         for (let n of this.GetExportLanguages())
           r[p(u(n))] = e.GetLocalization(t, n);
         n.push(r);
       }),
-        o.WriteCSVToFile(n, t);
+        o.WriteCSVToFile(n, t));
     }
     WriteLocalizationData_CSV_LanguageRows(e, t) {
       let n = [];
       for (let e of this.GetExportLanguages())
-        n.length <= e - 1 && n.push({ language: `` }),
-          n.push({ language: p(u(e)) });
-      e.GetSortedTokenList().forEach((t) => {
+        (n.length <= e - 1 && n.push({ language: `` }),
+          n.push({ language: p(u(e)) }));
+      (e.GetSortedTokenList().forEach((t) => {
         for (let r of this.GetExportLanguages()) {
           let i = e.GetLocalization(t, r);
           n[r][t] = i;
         }
       }),
-        o.WriteCSVToFile(n, t);
+        o.WriteCSVToFile(n, t));
     }
     WriteLocalizationData_XML_SingleLanguage(e, t, n) {
       let r = document.implementation.createDocument(null, `content`, null);
-      e.GetSortedTokenList().forEach((n) => {
+      (e.GetSortedTokenList().forEach((n) => {
         let i = r.createElement(`string`);
-        i.setAttribute(`id`, n),
+        (i.setAttribute(`id`, n),
           i.appendChild(r.createTextNode(e.GetLocalization(n, t) || ``)),
-          r.documentElement.append(i);
+          r.documentElement.append(i));
       }),
-        o.WriteXMLToFile(r, n);
+        o.WriteXMLToFile(r, n));
     }
   },
   F = `QKQ8f-Zg3Cs-`,
@@ -264,7 +264,7 @@ var j = e(t()),
   z = (e) => {
     let [t, n] = (0, j.useState)(!1),
       a = (e, t) => {
-        n(!1),
+        (n(!1),
           console.log(
             `ImportLocalizationAction: On Handle Parse error: ` + e.message,
             e,
@@ -279,13 +279,13 @@ var j = e(t()),
               }),
             }),
             window,
-          );
+          ));
       },
       o = (e) => {
         n(!1);
         let t = ``;
-        e.forEach((e) => {
-          t.length > 0 && (t += `, `), (t += x(`#Language_` + u(e)));
+        (e.forEach((e) => {
+          (t.length > 0 && (t += `, `), (t += x(`#Language_` + u(e))));
         }),
           b(
             (0, L.jsx)(v, {
@@ -299,7 +299,7 @@ var j = e(t()),
               }),
             }),
             window,
-          );
+          ));
       },
       s = async (t) => {
         let r = t.target.files;
@@ -430,7 +430,7 @@ function Y(e) {
         ? `https://valve.crowdin.com/editor/${m.data.crowdin_project_id}/${m.data.crowdin_file_id}`
         : null,
     y = (e) => {
-      t.SetPushSourceToCrowdInAutomatically(e), _();
+      (t.SetPushSourceToCrowdInAutomatically(e), _());
     },
     b = A(f.ConvertTo64BitString(), p, n);
   return m.isLoading
@@ -471,16 +471,16 @@ function Y(e) {
               (0, L.jsx)(`div`, {
                 className: h,
                 onClick: () => {
-                  o(!0),
+                  (o(!0),
                     b
                       .mutateAsync()
                       .then(() => window.location.reload())
                       .catch((e) => {
-                        u(e.toString()), o(!1);
+                        (u(e.toString()), o(!1));
                       })
                       .then(() => {
                         u(null);
-                      });
+                      }));
                 },
                 children: x(`#EventEditor_Localization_FetchLocalization`),
               }),

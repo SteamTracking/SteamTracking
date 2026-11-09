@@ -41,44 +41,46 @@ function _() {
   return new _(null);
 }
 function _(_, _, _, _, _, _) {
-  for (; --_ >= 0; ) {
+  for (; --_ >= 0;) {
     var _ = _ * this[_++] + _[_] + _;
-    (_ = Math.floor(_ / 67108864)), (_[_++] = _ & 67108863);
+    ((_ = Math.floor(_ / 67108864)), (_[_++] = _ & 67108863));
   }
   return _;
 }
 function _(_, _, _, _, _, _) {
-  for (var _ = _ & 32767, _ = _ >> 15; --_ >= 0; ) {
+  for (var _ = _ & 32767, _ = _ >> 15; --_ >= 0;) {
     var _ = this[_] & 32767,
       _ = this[_++] >> 15,
       _ = _ * _ + _ * _;
-    (_ = _ * _ + ((_ & 32767) << 15) + _[_] + (_ & 1073741823)),
+    ((_ = _ * _ + ((_ & 32767) << 15) + _[_] + (_ & 1073741823)),
       (_ = (_ >>> 30) + (_ >>> 15) + _ * _ + (_ >>> 30)),
-      (_[_++] = _ & 1073741823);
+      (_[_++] = _ & 1073741823));
   }
   return _;
 }
 function _(_, _, _, _, _, _) {
-  for (var _ = _ & 16383, _ = _ >> 14; --_ >= 0; ) {
+  for (var _ = _ & 16383, _ = _ >> 14; --_ >= 0;) {
     var _ = this[_] & 16383,
       _ = this[_++] >> 14,
       _ = _ * _ + _ * _;
-    (_ = _ * _ + ((_ & 16383) << 14) + _[_] + _),
+    ((_ = _ * _ + ((_ & 16383) << 14) + _[_] + _),
       (_ = (_ >> 28) + (_ >> 14) + _ * _),
-      (_[_++] = _ & 268435455);
+      (_[_++] = _ & 268435455));
   }
   return _;
 }
-_ && navigator.appName == `Microsoft Internet Explorer`
+(_ && navigator.appName == `Microsoft Internet Explorer`
   ? ((_.prototype._ = _), (_ = 30))
   : _ && navigator.appName != `Netscape`
     ? ((_.prototype._ = _), (_ = 26))
     : ((_.prototype._ = _), (_ = 28)),
   (_.prototype._ = _),
   (_.prototype._ = (1 << _) - 1),
-  (_.prototype._ = 1 << _);
+  (_.prototype._ = 1 << _));
 var _ = 52;
-(_.prototype._ = 2 ** _), (_.prototype._ = _ - _), (_.prototype._ = 2 * _ - _);
+((_.prototype._ = 2 ** _),
+  (_.prototype._ = _ - _),
+  (_.prototype._ = 2 * _ - _));
 for (
   var _ = `0123456789abcdefghijklmnopqrstuvwxyz`, _ = [], _ = 48, _ = 0;
   _ <= 9;
@@ -95,16 +97,16 @@ function _(_, _) {
 }
 function _(_) {
   for (var _ = this._ - 1; _ >= 0; --_) _[_] = this[_];
-  (_._ = this._), (_._ = this._);
+  ((_._ = this._), (_._ = this._));
 }
 function _(_) {
-  (this._ = 1),
+  ((this._ = 1),
     (this._ = _ < 0 ? -1 : 0),
-    _ > 0 ? (this[0] = _) : _ < -1 ? (this[0] = _ + _) : (this._ = 0);
+    _ > 0 ? (this[0] = _) : _ < -1 ? (this[0] = _ + _) : (this._ = 0));
 }
 function _(_) {
   var _ = _();
-  return _.fromInt(_), _;
+  return (_.fromInt(_), _);
 }
 function _(_, _) {
   var _;
@@ -118,8 +120,8 @@ function _(_, _) {
     this.fromRadix(_, _);
     return;
   }
-  (this._ = 0), (this._ = 0);
-  for (var _ = _.length, _ = !1, _ = 0; --_ >= 0; ) {
+  ((this._ = 0), (this._ = 0));
+  for (var _ = _.length, _ = !1, _ = 0; --_ >= 0;) {
     var _ = _ == 8 ? _[_] & 255 : _(_, _);
     _ < 0
       ? _.charAt(_) == `-` && (_ = !0)
@@ -133,15 +135,15 @@ function _(_, _) {
         (_ += _),
         _ >= this._ && (_ -= this._));
   }
-  _ == 8 &&
+  (_ == 8 &&
     _[0] & 128 &&
     ((this._ = -1),
     _ > 0 && (this[this._ - 1] |= ((1 << (this._ - _)) - 1) << _)),
     this.clamp(),
-    _ && _.ZERO.subTo(this, this);
+    _ && _.ZERO.subTo(this, this));
 }
 function _() {
-  for (var _ = this._ & this._; this._ > 0 && this[this._ - 1] == _; ) --this._;
+  for (var _ = this._ & this._; this._ > 0 && this[this._ - 1] == _;) --this._;
 }
 function _(_) {
   if (this._ < 0) return `-` + this.negate().toString(_);
@@ -163,17 +165,17 @@ function _(_) {
       _ < this._ && (_ = this[_] >> _) > 0 && ((_ = !0), (_ = _(_)));
       _ >= 0;
     )
-      _ < _
+      (_ < _
         ? ((_ = (this[_] & ((1 << _) - 1)) << (_ - _)),
           (_ |= this[--_] >> (_ += this._ - _)))
         : ((_ = (this[_] >> (_ -= _)) & _), _ <= 0 && ((_ += this._), --_)),
         _ > 0 && (_ = !0),
-        _ && (_ += _(_));
+        _ && (_ += _(_)));
   return _ ? _ : `0`;
 }
 function _() {
   var _ = _();
-  return _.ZERO.subTo(this, _), _;
+  return (_.ZERO.subTo(this, _), _);
 }
 function _() {
   return this._ < 0 ? this.negate() : this;
@@ -183,7 +185,7 @@ function _(_) {
   if (_ != 0) return _;
   var _ = this._;
   if (((_ = _ - _._), _ != 0)) return _;
-  for (; --_ >= 0; ) if ((_ = this[_] - _[_]) != 0) return _;
+  for (; --_ >= 0;) if ((_ = this[_] - _[_]) != 0) return _;
   return 0;
 }
 function _(_) {
@@ -206,11 +208,11 @@ function _() {
 function _(_, _) {
   for (var _ = this._ - 1; _ >= 0; --_) _[_ + _] = this[_];
   for (_ = _ - 1; _ >= 0; --_) _[_] = 0;
-  (_._ = this._ + _), (_._ = this._);
+  ((_._ = this._ + _), (_._ = this._));
 }
 function _(_, _) {
   for (var _ = _; _ < this._; ++_) _[_ - _] = this[_];
-  (_._ = Math.max(this._ - _, 0)), (_._ = this._);
+  ((_._ = Math.max(this._ - _, 0)), (_._ = this._));
 }
 function _(_, _) {
   for (
@@ -223,9 +225,9 @@ function _(_, _) {
     _ >= 0;
     --_
   )
-    (_[_ + _ + 1] = (this[_] >> _) | _), (_ = (this[_] & _) << _);
+    ((_[_ + _ + 1] = (this[_] >> _) | _), (_ = (this[_] & _) << _));
   for (_ = _ - 1; _ >= 0; --_) _[_] = 0;
-  (_[_] = _), (_._ = this._ + _ + 1), (_._ = this._), _.clamp();
+  ((_[_] = _), (_._ = this._ + _ + 1), (_._ = this._), _.clamp());
 }
 function _(_, _) {
   _._ = this._;
@@ -237,51 +239,53 @@ function _(_, _) {
       _ = (1 << _) - 1;
     _[0] = this[_] >> _;
     for (var _ = _ + 1; _ < this._; ++_)
-      (_[_ - _ - 1] |= (this[_] & _) << _), (_[_ - _] = this[_] >> _);
-    _ > 0 && (_[this._ - _ - 1] |= (this._ & _) << _),
+      ((_[_ - _ - 1] |= (this[_] & _) << _), (_[_ - _] = this[_] >> _));
+    (_ > 0 && (_[this._ - _ - 1] |= (this._ & _) << _),
       (_._ = this._ - _),
-      _.clamp();
+      _.clamp());
   }
 }
 function _(_, _) {
-  for (var _ = 0, _ = 0, _ = Math.min(_._, this._); _ < _; )
-    (_ += this[_] - _[_]), (_[_++] = _ & this._), (_ >>= this._);
+  for (var _ = 0, _ = 0, _ = Math.min(_._, this._); _ < _;)
+    ((_ += this[_] - _[_]), (_[_++] = _ & this._), (_ >>= this._));
   if (_._ < this._) {
-    for (_ -= _._; _ < this._; )
-      (_ += this[_]), (_[_++] = _ & this._), (_ >>= this._);
+    for (_ -= _._; _ < this._;)
+      ((_ += this[_]), (_[_++] = _ & this._), (_ >>= this._));
     _ += this._;
   } else {
-    for (_ += this._; _ < _._; )
-      (_ -= _[_]), (_[_++] = _ & this._), (_ >>= this._);
+    for (_ += this._; _ < _._;)
+      ((_ -= _[_]), (_[_++] = _ & this._), (_ >>= this._));
     _ -= _._;
   }
-  (_._ = _ < 0 ? -1 : 0),
+  ((_._ = _ < 0 ? -1 : 0),
     _ < -1 ? (_[_++] = this._ + _) : _ > 0 && (_[_++] = _),
     (_._ = _),
-    _.clamp();
+    _.clamp());
 }
 function _(_, _) {
   var _ = this.abs(),
     _ = _.abs(),
     _ = _._;
-  for (_._ = _ + _._; --_ >= 0; ) _[_] = 0;
+  for (_._ = _ + _._; --_ >= 0;) _[_] = 0;
   for (_ = 0; _ < _._; ++_) _[_ + _._] = _._(0, _[_], _, _, 0, _._);
-  (_._ = 0), _.clamp(), this._ != _._ && _.ZERO.subTo(_, _);
+  ((_._ = 0), _.clamp(), this._ != _._ && _.ZERO.subTo(_, _));
 }
 function _(_) {
-  for (var _ = this.abs(), _ = (_._ = 2 * _._); --_ >= 0; ) _[_] = 0;
+  for (var _ = this.abs(), _ = (_._ = 2 * _._); --_ >= 0;) _[_] = 0;
   for (_ = 0; _ < _._ - 1; ++_) {
     var _ = _._(_, _[_], _, 2 * _, 0, 1);
     (_[_ + _._] += _._(_ + 1, 2 * _[_], _, 2 * _ + 1, _, _._ - _ - 1)) >= _._ &&
       ((_[_ + _._] -= _._), (_[_ + _._ + 1] = 1));
   }
-  _._ > 0 && (_[_._ - 1] += _._(_, _[_], _, 2 * _, 0, 1)), (_._ = 0), _.clamp();
+  (_._ > 0 && (_[_._ - 1] += _._(_, _[_], _, 2 * _, 0, 1)),
+    (_._ = 0),
+    _.clamp());
 }
 function _(_, _, _) {
   var _ = _.abs();
   if (!(_._ <= 0)) {
     var _ = this.abs();
-    if (_._ < _._) _?.fromInt(0), _ != null && this.copyTo(_);
+    if (_._ < _._) (_?.fromInt(0), _ != null && this.copyTo(_));
     else {
       _ ??= _();
       var _ = _(),
@@ -307,17 +311,17 @@ function _(_, _, _) {
           _._ < _;
         )
           _[_._++] = 0;
-        for (; --_ >= 0; ) {
+        for (; --_ >= 0;) {
           var _ =
             _[--_] == _ ? this._ : Math.floor(_[_] * _ + (_[_ - 1] + _) * _);
           if ((_[_] += _._(0, _, _, _, 0, _)) < _)
-            for (_.dlShiftTo(_, _), _.subTo(_, _); _[_] < --_; ) _.subTo(_, _);
+            for (_.dlShiftTo(_, _), _.subTo(_, _); _[_] < --_;) _.subTo(_, _);
         }
-        _ != null && (_.drShiftTo(_, _), _ != _ && _.ZERO.subTo(_, _)),
+        (_ != null && (_.drShiftTo(_, _), _ != _ && _.ZERO.subTo(_, _)),
           (_._ = _),
           _.clamp(),
           _ > 0 && _.rShiftTo(_, _),
-          _ < 0 && _.ZERO.subTo(_, _);
+          _ < 0 && _.ZERO.subTo(_, _));
       }
     }
   }
@@ -343,16 +347,16 @@ function _(_) {
   _.divRemTo(this._, null, _);
 }
 function _(_, _, _) {
-  _.multiplyTo(_, _), this.reduce(_);
+  (_.multiplyTo(_, _), this.reduce(_));
 }
 function _(_, _) {
-  _.squareTo(_), this.reduce(_);
+  (_.squareTo(_), this.reduce(_));
 }
-(_.prototype.convert = _),
+((_.prototype.convert = _),
   (_.prototype.revert = _),
   (_.prototype.reduce = _),
   (_.prototype.mulTo = _),
-  (_.prototype.sqrTo = _);
+  (_.prototype.sqrTo = _));
 function _() {
   if (this._ < 1) return 0;
   var _ = this[0];
@@ -367,12 +371,12 @@ function _() {
   );
 }
 function _(_) {
-  (this._ = _),
+  ((this._ = _),
     (this._ = _.invDigit()),
     (this.mpl = this._ & 32767),
     (this.mph = this._ >> 15),
     (this._ = (1 << (_._ - 15)) - 1),
-    (this.mt2 = 2 * _._);
+    (this.mt2 = 2 * _._));
 }
 function _(_) {
   var _ = _();
@@ -385,10 +389,10 @@ function _(_) {
 }
 function _(_) {
   var _ = _();
-  return _.copyTo(_), this.reduce(_), _;
+  return (_.copyTo(_), this.reduce(_), _);
 }
 function _(_) {
-  for (; _._ <= this.mt2; ) _[_._++] = 0;
+  for (; _._ <= this.mt2;) _[_._++] = 0;
   for (var _ = 0; _ < this._._; ++_) {
     var _ = _[_] & 32767,
       _ =
@@ -399,23 +403,23 @@ function _(_) {
       _ = _ + this._._, _[_] += this._._(0, _, _, _, 0, this._._);
       _[_] >= _._;
     )
-      (_[_] -= _._), _[++_]++;
+      ((_[_] -= _._), _[++_]++);
   }
-  _.clamp(),
+  (_.clamp(),
     _.drShiftTo(this._._, _),
-    _.compareTo(this._) >= 0 && _.subTo(this._, _);
+    _.compareTo(this._) >= 0 && _.subTo(this._, _));
 }
 function _(_, _) {
-  _.squareTo(_), this.reduce(_);
+  (_.squareTo(_), this.reduce(_));
 }
 function _(_, _, _) {
-  _.multiplyTo(_, _), this.reduce(_);
+  (_.multiplyTo(_, _), this.reduce(_));
 }
-(_.prototype.convert = _),
+((_.prototype.convert = _),
   (_.prototype.revert = _),
   (_.prototype.reduce = _),
   (_.prototype.mulTo = _),
-  (_.prototype.sqrTo = _);
+  (_.prototype.sqrTo = _));
 function _() {
   return (this._ > 0 ? this[0] & 1 : this._) == 0;
 }
@@ -425,11 +429,11 @@ function _(_, _) {
     _ = _(),
     _ = _.convert(this),
     _ = _(_) - 1;
-  for (_.copyTo(_); --_ >= 0; )
+  for (_.copyTo(_); --_ >= 0;)
     if ((_.sqrTo(_, _), (_ & (1 << _)) > 0)) _.mulTo(_, _, _);
     else {
       var _ = _;
-      (_ = _), (_ = _);
+      ((_ = _), (_ = _));
     }
   return _.revert(_);
 }
@@ -437,7 +441,7 @@ function _(_, _) {
   var _ = _ < 256 || _.isEven() ? new _(_) : new _(_);
   return this.exp(_, _);
 }
-(_.prototype.copyTo = _),
+((_.prototype.copyTo = _),
   (_.prototype.fromInt = _),
   (_.prototype.fromString = _),
   (_.prototype.clamp = _),
@@ -460,10 +464,10 @@ function _(_, _) {
   (_.prototype.mod = _),
   (_.prototype.modPowInt = _),
   (_.ZERO = _(0)),
-  (_.ONE = _(1));
+  (_.ONE = _(1)));
 function _() {
   var _ = _();
-  return this.copyTo(_), _;
+  return (this.copyTo(_), _);
 }
 function _() {
   if (this._ < 0) {
@@ -493,12 +497,12 @@ function _(_) {
     _ = _(),
     _ = _(),
     _ = ``;
-  for (this.divRemTo(_, _, _); _.signum() > 0; )
-    (_ = (_ + _.intValue()).toString(_).substr(1) + _), _.divRemTo(_, _, _);
+  for (this.divRemTo(_, _, _); _.signum() > 0;)
+    ((_ = (_ + _.intValue()).toString(_).substr(1) + _), _.divRemTo(_, _, _));
   return _.intValue().toString(_) + _;
 }
 function _(_, _) {
-  this.fromInt(0), (_ ??= 10);
+  (this.fromInt(0), (_ ??= 10));
   for (
     var _ = this.chunkSize(_), _ = _ ** +_, _ = !1, _ = 0, _ = 0, _ = 0;
     _ < _.length;
@@ -511,8 +515,8 @@ function _(_, _) {
         ++_ >= _ &&
           (this.dMultiply(_), this.dAddOffset(_, 0), (_ = 0), (_ = 0)));
   }
-  _ > 0 && (this.dMultiply(_ ** +_), this.dAddOffset(_, 0)),
-    _ && _.ZERO.subTo(this, this);
+  (_ > 0 && (this.dMultiply(_ ** +_), this.dAddOffset(_, 0)),
+    _ && _.ZERO.subTo(this, this));
 }
 function _(_, _, _) {
   if (typeof _ == `number`) {
@@ -525,15 +529,15 @@ function _(_, _, _) {
           this.isEven() && this.dAddOffset(1, 0);
         !this.isProbablePrime(_);
       )
-        this.dAddOffset(2, 0),
-          this.bitLength() > _ && this.subTo(_.ONE.shiftLeft(_ - 1), this);
+        (this.dAddOffset(2, 0),
+          this.bitLength() > _ && this.subTo(_.ONE.shiftLeft(_ - 1), this));
   } else {
     var _ = [],
       _ = _ & 7;
-    (_.length = (_ >> 3) + 1),
+    ((_.length = (_ >> 3) + 1),
       _.nextBytes(_),
       _ > 0 ? (_[0] &= (1 << _) - 1) : (_[0] = 0),
-      this.fromString(_, 256);
+      this.fromString(_, 256));
   }
 }
 function _() {
@@ -550,13 +554,13 @@ function _() {
       (_[_++] = _ | (this._ << (this._ - _)));
       _ >= 0;
     )
-      _ < 8
+      (_ < 8
         ? ((_ = (this[_] & ((1 << _) - 1)) << (8 - _)),
           (_ |= this[--_] >> (_ += this._ - 8)))
         : ((_ = (this[_] >> (_ -= 8)) & 255), _ <= 0 && ((_ += this._), --_)),
         _ & 128 && (_ |= -256),
         _ == 0 && (this._ & 128) != (_ & 128) && ++_,
-        (_ > 0 || _ != this._) && (_[_++] = _);
+        (_ > 0 || _ != this._) && (_[_++] = _));
   return _;
 }
 function _(_) {
@@ -580,47 +584,47 @@ function _(_, _, _) {
     for (_ = this._ & this._, _ = _; _ < _._; ++_) _[_] = _(_, _[_]);
     _._ = _._;
   }
-  (_._ = _(this._, _._)), _.clamp();
+  ((_._ = _(this._, _._)), _.clamp());
 }
 function _(_, _) {
   return _ & _;
 }
 function _(_) {
   var _ = _();
-  return this.bitwiseTo(_, _, _), _;
+  return (this.bitwiseTo(_, _, _), _);
 }
 function _(_, _) {
   return _ | _;
 }
 function _(_) {
   var _ = _();
-  return this.bitwiseTo(_, _, _), _;
+  return (this.bitwiseTo(_, _, _), _);
 }
 function _(_, _) {
   return _ ^ _;
 }
 function _(_) {
   var _ = _();
-  return this.bitwiseTo(_, _, _), _;
+  return (this.bitwiseTo(_, _, _), _);
 }
 function _(_, _) {
   return _ & ~_;
 }
 function _(_) {
   var _ = _();
-  return this.bitwiseTo(_, _, _), _;
+  return (this.bitwiseTo(_, _, _), _);
 }
 function _() {
   for (var _ = _(), _ = 0; _ < this._; ++_) _[_] = this._ & ~this[_];
-  return (_._ = this._), (_._ = ~this._), _;
+  return ((_._ = this._), (_._ = ~this._), _);
 }
 function _(_) {
   var _ = _();
-  return _ < 0 ? this.rShiftTo(-_, _) : this.lShiftTo(_, _), _;
+  return (_ < 0 ? this.rShiftTo(-_, _) : this.lShiftTo(_, _), _);
 }
 function _(_) {
   var _ = _();
-  return _ < 0 ? this.lShiftTo(-_, _) : this.rShiftTo(_, _), _;
+  return (_ < 0 ? this.lShiftTo(-_, _) : this.rShiftTo(_, _), _);
 }
 function _(_) {
   if (_ == 0) return -1;
@@ -640,7 +644,7 @@ function _() {
   return this._ < 0 ? this._ * this._ : -1;
 }
 function _(_) {
-  for (var _ = 0; _ != 0; ) (_ &= _ - 1), ++_;
+  for (var _ = 0; _ != 0;) ((_ &= _ - 1), ++_);
   return _;
 }
 function _() {
@@ -654,7 +658,7 @@ function _(_) {
 }
 function _(_, _) {
   var _ = _.ONE.shiftLeft(_);
-  return this.bitwiseTo(_, _, _), _;
+  return (this.bitwiseTo(_, _, _), _);
 }
 function _(_) {
   return this.changeBit(_, _);
@@ -666,54 +670,56 @@ function _(_) {
   return this.changeBit(_, _);
 }
 function _(_, _) {
-  for (var _ = 0, _ = 0, _ = Math.min(_._, this._); _ < _; )
-    (_ += this[_] + _[_]), (_[_++] = _ & this._), (_ >>= this._);
+  for (var _ = 0, _ = 0, _ = Math.min(_._, this._); _ < _;)
+    ((_ += this[_] + _[_]), (_[_++] = _ & this._), (_ >>= this._));
   if (_._ < this._) {
-    for (_ += _._; _ < this._; )
-      (_ += this[_]), (_[_++] = _ & this._), (_ >>= this._);
+    for (_ += _._; _ < this._;)
+      ((_ += this[_]), (_[_++] = _ & this._), (_ >>= this._));
     _ += this._;
   } else {
-    for (_ += this._; _ < _._; )
-      (_ += _[_]), (_[_++] = _ & this._), (_ >>= this._);
+    for (_ += this._; _ < _._;)
+      ((_ += _[_]), (_[_++] = _ & this._), (_ >>= this._));
     _ += _._;
   }
-  (_._ = _ < 0 ? -1 : 0),
+  ((_._ = _ < 0 ? -1 : 0),
     _ > 0 ? (_[_++] = _) : _ < -1 && (_[_++] = this._ + _),
     (_._ = _),
-    _.clamp();
+    _.clamp());
 }
 function _(_) {
   var _ = _();
-  return this.addTo(_, _), _;
+  return (this.addTo(_, _), _);
 }
 function _(_) {
   var _ = _();
-  return this.subTo(_, _), _;
+  return (this.subTo(_, _), _);
 }
 function _(_) {
   var _ = _();
-  return this.multiplyTo(_, _), _;
+  return (this.multiplyTo(_, _), _);
 }
 function _(_) {
   var _ = _();
-  return this.divRemTo(_, _, null), _;
+  return (this.divRemTo(_, _, null), _);
 }
 function _(_) {
   var _ = _();
-  return this.divRemTo(_, null, _), _;
+  return (this.divRemTo(_, null, _), _);
 }
 function _(_) {
   var _ = _(),
     _ = _();
-  return this.divRemTo(_, _, _), [_, _];
+  return (this.divRemTo(_, _, _), [_, _]);
 }
 function _(_) {
-  (this[this._] = this._(0, _ - 1, this, 0, 0, this._)), ++this._, this.clamp();
+  ((this[this._] = this._(0, _ - 1, this, 0, 0, this._)),
+    ++this._,
+    this.clamp());
 }
 function _(_, _) {
-  for (; this._ <= _; ) this[this._++] = 0;
-  for (this[_] += _; this[_] >= this._; )
-    (this[_] -= this._), ++_ >= this._ && (this[this._++] = 0), ++this[_];
+  for (; this._ <= _;) this[this._++] = 0;
+  for (this[_] += _; this[_] >= this._;)
+    ((this[_] -= this._), ++_ >= this._ && (this[this._++] = 0), ++this[_]);
 }
 function _() {}
 function _(_) {
@@ -725,16 +731,16 @@ function _(_, _, _) {
 function _(_, _) {
   _.squareTo(_);
 }
-(_.prototype.convert = _),
+((_.prototype.convert = _),
   (_.prototype.revert = _),
   (_.prototype.mulTo = _),
-  (_.prototype.sqrTo = _);
+  (_.prototype.sqrTo = _));
 function _(_) {
   return this.exp(_, new _());
 }
 function _(_, _, _) {
   var _ = Math.min(this._ + _._, _);
-  for (_._ = 0, _._ = _; _ > 0; ) _[--_] = 0;
+  for (_._ = 0, _._ = _; _ > 0;) _[--_] = 0;
   for (var _ = _._ - this._; _ < _; ++_)
     _[_ + this._] = this._(0, _[_], _, _, 0, this._);
   for (_ = Math.min(_._, _); _ < _; ++_) this._(0, _[_], _, _, 0, _ - _);
@@ -743,23 +749,23 @@ function _(_, _, _) {
 function _(_, _, _) {
   --_;
   var _ = (_._ = this._ + _._ - _);
-  for (_._ = 0; --_ >= 0; ) _[_] = 0;
+  for (_._ = 0; --_ >= 0;) _[_] = 0;
   for (_ = Math.max(_ - this._, 0); _ < _._; ++_)
     _[this._ + _ - _] = this._(_ - _, _[_], _, 0, 0, this._ + _ - _);
-  _.clamp(), _.drShiftTo(1, _);
+  (_.clamp(), _.drShiftTo(1, _));
 }
 function _(_) {
-  (this._ = _()),
+  ((this._ = _()),
     (this._ = _()),
     _.ONE.dlShiftTo(2 * _._, this._),
     (this._ = this._.divide(_)),
-    (this._ = _);
+    (this._ = _));
 }
 function _(_) {
   if (_._ < 0 || _._ > 2 * this._._) return _.mod(this._);
   if (_.compareTo(this._) < 0) return _;
   var _ = _();
-  return _.copyTo(_), this.reduce(_), _;
+  return (_.copyTo(_), this.reduce(_), _);
 }
 function _(_) {
   return _;
@@ -773,42 +779,42 @@ function _(_) {
     _.compareTo(this._) < 0;
   )
     _.dAddOffset(1, this._._ + 1);
-  for (_.subTo(this._, _); _.compareTo(this._) >= 0; ) _.subTo(this._, _);
+  for (_.subTo(this._, _); _.compareTo(this._) >= 0;) _.subTo(this._, _);
 }
 function _(_, _) {
-  _.squareTo(_), this.reduce(_);
+  (_.squareTo(_), this.reduce(_));
 }
 function _(_, _, _) {
-  _.multiplyTo(_, _), this.reduce(_);
+  (_.multiplyTo(_, _), this.reduce(_));
 }
-(_.prototype.convert = _),
+((_.prototype.convert = _),
   (_.prototype.revert = _),
   (_.prototype.reduce = _),
   (_.prototype.mulTo = _),
-  (_.prototype.sqrTo = _);
+  (_.prototype.sqrTo = _));
 function _(_, _) {
   var _ = _.bitLength(),
     _,
     _ = _(1),
     _;
   if (_ <= 0) return _;
-  (_ = _ < 18 ? 1 : _ < 48 ? 3 : _ < 144 ? 4 : _ < 768 ? 5 : 6),
-    (_ = _ < 8 ? new _(_) : _.isEven() ? new _(_) : new _(_));
+  ((_ = _ < 18 ? 1 : _ < 48 ? 3 : _ < 144 ? 4 : _ < 768 ? 5 : 6),
+    (_ = _ < 8 ? new _(_) : _.isEven() ? new _(_) : new _(_)));
   var _ = [],
     _ = 3,
     _ = _ - 1,
     _ = (1 << _) - 1;
   if (((_[1] = _.convert(this)), _ > 1)) {
     var _ = _();
-    for (_.sqrTo(_[1], _); _ <= _; )
-      (_[_] = _()), _.mulTo(_, _[_ - 2], _[_]), (_ += 2);
+    for (_.sqrTo(_[1], _); _ <= _;)
+      ((_[_] = _()), _.mulTo(_, _[_ - 2], _[_]), (_ += 2));
   }
   var _ = _._ - 1,
     _,
     _ = !0,
     _ = _(),
     _;
-  for (_ = _(_[_]) - 1; _ >= 0; ) {
+  for (_ = _(_[_]) - 1; _ >= 0;) {
     for (
       _ >= _
         ? (_ = (_[_] >> (_ - _)) & _)
@@ -817,18 +823,19 @@ function _(_, _) {
         _ = _;
       !(_ & 1);
     )
-      (_ >>= 1), --_;
-    if (((_ -= _) < 0 && ((_ += this._), --_), _)) _[_].copyTo(_), (_ = !1);
+      ((_ >>= 1), --_);
+    if (((_ -= _) < 0 && ((_ += this._), --_), _)) (_[_].copyTo(_), (_ = !1));
     else {
-      for (; _ > 1; ) _.sqrTo(_, _), _.sqrTo(_, _), (_ -= 2);
-      _ > 0 ? _.sqrTo(_, _) : ((_ = _), (_ = _), (_ = _)), _.mulTo(_, _[_], _);
+      for (; _ > 1;) (_.sqrTo(_, _), _.sqrTo(_, _), (_ -= 2));
+      (_ > 0 ? _.sqrTo(_, _) : ((_ = _), (_ = _), (_ = _)),
+        _.mulTo(_, _[_], _));
     }
-    for (; _ >= 0 && !(_[_] & (1 << _)); )
-      _.sqrTo(_, _),
+    for (; _ >= 0 && !(_[_] & (1 << _));)
+      (_.sqrTo(_, _),
         (_ = _),
         (_ = _),
         (_ = _),
-        --_ < 0 && ((_ = this._ - 1), --_);
+        --_ < 0 && ((_ = this._ - 1), --_));
   }
   return _.revert(_);
 }
@@ -837,7 +844,7 @@ function _(_) {
     _ = _._ < 0 ? _.negate() : _.clone();
   if (_.compareTo(_) < 0) {
     var _ = _;
-    (_ = _), (_ = _);
+    ((_ = _), (_ = _));
   }
   var _ = _.getLowestSetBit(),
     _ = _.getLowestSetBit();
@@ -846,12 +853,12 @@ function _(_) {
     _ < _ && (_ = _), _ > 0 && (_.rShiftTo(_, _), _.rShiftTo(_, _));
     _.signum() > 0;
   )
-    (_ = _.getLowestSetBit()) > 0 && _.rShiftTo(_, _),
+    ((_ = _.getLowestSetBit()) > 0 && _.rShiftTo(_, _),
       (_ = _.getLowestSetBit()) > 0 && _.rShiftTo(_, _),
       _.compareTo(_) >= 0
         ? (_.subTo(_, _), _.rShiftTo(1, _))
-        : (_.subTo(_, _), _.rShiftTo(1, _));
-  return _ > 0 && _.lShiftTo(_, _), _;
+        : (_.subTo(_, _), _.rShiftTo(1, _)));
+  return (_ > 0 && _.lShiftTo(_, _), _);
 }
 function _(_) {
   if (_ <= 0) return 0;
@@ -870,20 +877,20 @@ function _(_) {
     var _ = _.clone(), _ = this.clone(), _ = _(1), _ = _(0), _ = _(0), _ = _(1);
     _.signum() != 0;
   ) {
-    for (; _.isEven(); )
-      _.rShiftTo(1, _),
+    for (; _.isEven();)
+      (_.rShiftTo(1, _),
         _
           ? ((_.isEven() && _.isEven()) || (_.addTo(this, _), _.subTo(_, _)),
             _.rShiftTo(1, _))
           : _.isEven() || _.subTo(_, _),
-        _.rShiftTo(1, _);
-    for (; _.isEven(); )
-      _.rShiftTo(1, _),
+        _.rShiftTo(1, _));
+    for (; _.isEven();)
+      (_.rShiftTo(1, _),
         _
           ? ((_.isEven() && _.isEven()) || (_.addTo(this, _), _.subTo(_, _)),
             _.rShiftTo(1, _))
           : _.isEven() || _.subTo(_, _),
-        _.rShiftTo(1, _);
+        _.rShiftTo(1, _));
     _.compareTo(_) >= 0
       ? (_.subTo(_, _), _ && _.subTo(_, _), _.subTo(_, _))
       : (_.subTo(_, _), _ && _.subTo(_, _), _.subTo(_, _));
@@ -912,9 +919,9 @@ function _(_) {
     return !1;
   }
   if (_.isEven()) return !1;
-  for (_ = 1; _ < _.length; ) {
-    for (var _ = _[_], _ = _ + 1; _ < _.length && _ < _; ) _ *= _[_++];
-    for (_ = _.modInt(_); _ < _; ) if (_ % _[_++] == 0) return !1;
+  for (_ = 1; _ < _.length;) {
+    for (var _ = _[_], _ = _ + 1; _ < _.length && _ < _;) _ *= _[_++];
+    for (_ = _.modInt(_); _ < _;) if (_ % _[_++] == 0) return !1;
   }
   return _.millerRabin(_);
 }
@@ -923,19 +930,19 @@ function _(_) {
     _ = _.getLowestSetBit();
   if (_ <= 0) return !1;
   var _ = _.shiftRight(_);
-  (_ = (_ + 1) >> 1), _ > _.length && (_ = _.length);
+  ((_ = (_ + 1) >> 1), _ > _.length && (_ = _.length));
   for (var _ = _(), _ = 0; _ < _; ++_) {
     _.fromInt(_[_]);
     var _ = _.modPow(_, this);
     if (_.compareTo(_.ONE) != 0 && _.compareTo(_) != 0) {
-      for (var _ = 1; _++ < _ && _.compareTo(_) != 0; )
+      for (var _ = 1; _++ < _ && _.compareTo(_) != 0;)
         if (((_ = _.modPowInt(2, this)), _.compareTo(_.ONE) == 0)) return !1;
       if (_.compareTo(_) != 0) return !1;
     }
   }
   return !0;
 }
-(_.prototype.chunkSize = _),
+((_.prototype.chunkSize = _),
   (_.prototype.toRadix = _),
   (_.prototype.fromRadix = _),
   (_.prototype.fromNumber = _),
@@ -980,9 +987,9 @@ function _(_) {
   (_.prototype.modInverse = _),
   (_.prototype.pow = _),
   (_.prototype.gcd = _),
-  (_.prototype.isProbablePrime = _);
+  (_.prototype.isProbablePrime = _));
 var _ = function (_, _) {
-    (this.modulus = new _(_, 16)), (this.encryptionExponent = new _(_, 16));
+    ((this.modulus = new _(_, 16)), (this.encryptionExponent = new _(_, 16)));
   },
   _ = {
     base64: `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=`,
@@ -998,7 +1005,7 @@ var _ = function (_, _) {
         _,
         _ = 0;
       do
-        (_ = _.charCodeAt(_++)),
+        ((_ = _.charCodeAt(_++)),
           (_ = _.charCodeAt(_++)),
           (_ = _.charCodeAt(_++)),
           (_ = _ >> 2),
@@ -1010,7 +1017,7 @@ var _ = function (_, _) {
             this.base64.charAt(_) +
             this.base64.charAt(_) +
             this.base64.charAt(_) +
-            this.base64.charAt(_));
+            this.base64.charAt(_)));
       while (_ < _.length);
       return _;
     },
@@ -1024,13 +1031,13 @@ var _ = function (_, _) {
         _,
         _ = 0;
       do
-        (_ = this.base64.indexOf(_.charAt(_++))),
+        ((_ = this.base64.indexOf(_.charAt(_++))),
           (_ = this.base64.indexOf(_.charAt(_++))),
           (_ = this.base64.indexOf(_.charAt(_++))),
           (_ = this.base64.indexOf(_.charAt(_++))),
           (_ += String.fromCharCode((_ << 2) | (_ >> 4))),
           _ != 64 && (_ += String.fromCharCode(((_ & 15) << 4) | (_ >> 2))),
-          _ != 64 && (_ += String.fromCharCode(((_ & 3) << 6) | _));
+          _ != 64 && (_ += String.fromCharCode(((_ & 3) << 6) | _)));
       while (_ < _.length);
       return _;
     },
@@ -1043,8 +1050,8 @@ var _ = function (_, _) {
         _,
         _ = 0;
       do
-        (_ = _.charCodeAt(_++)),
-          (_ += this.hex.charAt((_ >> 4) & 15) + this.hex.charAt(_ & 15));
+        ((_ = _.charCodeAt(_++)),
+          (_ += this.hex.charAt((_ >> 4) & 15) + this.hex.charAt(_ & 15)));
       while (_ < _.length);
       return _;
     },
@@ -1077,10 +1084,10 @@ var _ = function (_, _) {
     },
     pkcs1pad2: function (_, _) {
       if (_ < _.length + 11) return null;
-      for (var _ = [], _ = _.length - 1; _ >= 0 && _ > 0; )
+      for (var _ = [], _ = _.length - 1; _ >= 0 && _ > 0;)
         _[--_] = _.charCodeAt(_--);
-      for (_[--_] = 0; _ > 2; ) _[--_] = Math.floor(Math.random() * 254) + 1;
-      return (_[--_] = 2), (_[--_] = 0), new _(_);
+      for (_[--_] = 0; _ > 2;) _[--_] = Math.floor(Math.random() * 254) + 1;
+      return ((_[--_] = 2), (_[--_] = 0), new _(_));
     },
   },
   _ = new _(`Login`),
@@ -1153,7 +1160,7 @@ var _ = class {
     return this.m_strChallengeURLValue;
   }
   set m_strChallengeURL(_) {
-    (this.m_strChallengeURLValue = _), this.NotifyChanged();
+    ((this.m_strChallengeURLValue = _), this.NotifyChanged());
   }
   m_onShowAgreement;
   m_bRemoteInteractionValue = !1;
@@ -1161,7 +1168,7 @@ var _ = class {
     return this.m_bRemoteInteractionValue;
   }
   set m_bRemoteInteraction(_) {
-    (this.m_bRemoteInteractionValue = _), this.NotifyChanged();
+    ((this.m_bRemoteInteractionValue = _), this.NotifyChanged());
   }
   m_onCompleteCallback;
   m_eFailureStateValue = 0;
@@ -1169,21 +1176,21 @@ var _ = class {
     return this.m_eFailureStateValue;
   }
   set m_eFailureState(_) {
-    (this.m_eFailureStateValue = _), this.NotifyChanged();
+    ((this.m_eFailureStateValue = _), this.NotifyChanged());
   }
   m_strExtendedErrorMessageValue = ``;
   get m_strExtendedErrorMessage() {
     return this.m_strExtendedErrorMessageValue;
   }
   set m_strExtendedErrorMessage(_) {
-    (this.m_strExtendedErrorMessageValue = _), this.NotifyChanged();
+    ((this.m_strExtendedErrorMessageValue = _), this.NotifyChanged());
   }
   m_onDeviceDetailsCallback;
   constructor(_, _, _, _) {
-    (this.m_transport = _),
+    ((this.m_transport = _),
       (this.m_onCompleteCallback = _),
       (this.m_onDeviceDetailsCallback = _),
-      (this.m_onShowAgreement = _);
+      (this.m_onShowAgreement = _));
   }
   Subscribe(_) {
     return (
@@ -1209,25 +1216,26 @@ var _ = class {
       }));
   }
   StartPolling(_ = !0) {
-    this.m_activeTimerID != null && this.StopPolling(),
+    (this.m_activeTimerID != null && this.StopPolling(),
       _
         ? this.PollForUpdate()
         : (this.m_activeTimerID = window.setTimeout(
             this.PollForUpdate,
             this.m_msPollInterval,
-          ));
+          )));
   }
   StopPolling() {
-    window.clearTimeout(this.m_activeTimerID), (this.m_activeTimerID = void 0);
+    (window.clearTimeout(this.m_activeTimerID),
+      (this.m_activeTimerID = void 0));
   }
   async PollForUpdate() {
     try {
       let _ = _.Init(_);
-      _.SetEMsg(_),
+      (_.SetEMsg(_),
         _.Body().set_client_id(this.m_strClientID),
         _.Body().set_request_id(this.m_rgRequestID),
         this.m_strTokenToRevoke &&
-          _.Body().set_token_to_revoke(this.m_strTokenToRevoke);
+          _.Body().set_token_to_revoke(this.m_strTokenToRevoke));
       let _ = await _.PollAuthSessionStatus(this.m_transport, _),
         _ = _.GetEResult();
       if (_ !== 1) {
@@ -1239,7 +1247,7 @@ var _ = class {
             ),
             _ === 2 || _ === 3)
           )
-            return this.m_transport.MakeReady(), this.StartPolling(!1), 1;
+            return (this.m_transport.MakeReady(), this.StartPolling(!1), 1);
         }
         if (_ === 9 || _ === 27) this.m_eFailureState = 2;
         else if (_ === 84) this.m_eFailureState = 5;
@@ -1261,8 +1269,8 @@ var _ = class {
             _
           );
         } else
-          _(`Failed to poll auth session. Result: ${_}`),
-            (this.m_eFailureState = 1);
+          (_(`Failed to poll auth session. Result: ${_}`),
+            (this.m_eFailureState = 1));
         return (
           this.m_onCompleteCallback({
             bSuccess: !1,
@@ -1327,18 +1335,18 @@ var _ = class {
     return _.fromObject(_);
   }
 };
-_([_], _.prototype, `Subscribe`, null),
+(_([_], _.prototype, `Subscribe`, null),
   _([_], _.prototype, `GetSnapshot`, null),
   _([_], _.prototype, `PollForUpdate`, null),
-  _([_], _.prototype, `SetTokenToRevoke`, null);
+  _([_], _.prototype, `SetTokenToRevoke`, null));
 function _(_) {
   let _ = new FormData();
-  _.append(`nonce`, _), _.append(`sessionid`, _(_) ?? ``);
+  (_.append(`nonce`, _), _.append(`sessionid`, _(_) ?? ``));
   let _ = new URL(location.href),
     _ = new URLSearchParams(_.search);
-  _.has(`need_password`) &&
+  (_.has(`need_password`) &&
     (_.delete(`need_password`), (_.search = _.toString())),
-    _.append(`redir`, _.toString());
+    _.append(`redir`, _.toString()));
   let _ = `${_.LOGIN_BASE_URL}jwt/finalizelogin`;
   return _.default
     .post(_, _, {
@@ -1353,7 +1361,7 @@ function _(_) {
           !_.steamID ||
           !Array.isArray(_.transfer_info)
         )
-          return _(`Result of finalizelogin does not match expectations!`), 1;
+          return (_(`Result of finalizelogin does not match expectations!`), 1);
         let { transfer_info: _, steamID: _, primary_domain: _ } = _;
         return Promise.all(
           _.map(({ url: _, params: _ }) =>
@@ -1399,7 +1407,7 @@ async function _(_, _) {
       : (_(`Transfer login to ${_.host} failed with status code: ${_.status}`),
         (_ = !1));
   } catch (_) {
-    _(`Transfer login to ${_.host} failed: "${_}"`), (_ = !1);
+    (_(`Transfer login to ${_.host} failed: "${_}"`), (_ = !1));
   }
   return {
     bSuccess: _,
@@ -1413,7 +1421,7 @@ var _ = _(_(), 1),
       return this.m_eStatusValue;
     }
     set m_eStatus(_) {
-      (this.m_eStatusValue = _), this.NotifyChanged();
+      ((this.m_eStatusValue = _), this.NotifyChanged());
     }
     m_steamid;
     m_strAccountName;
@@ -1428,18 +1436,18 @@ var _ = _(_(), 1),
       return this.m_strErrorReferenceValue;
     }
     set m_strErrorReference(_) {
-      (this.m_strErrorReferenceValue = _), this.NotifyChanged();
+      ((this.m_strErrorReferenceValue = _), this.NotifyChanged());
     }
     m_onLoginComplete;
     constructor(_) {
-      super(
+      (super(
         _.transport,
         (_) => this.onAuthComplete(_),
         _.onDeviceDetails,
         _.onShowAgreement,
       ),
         (this.m_onLoginComplete = _.onComplete),
-        (this.m_onGetMachineAuth = _.onGetMachineAuth);
+        (this.m_onGetMachineAuth = _.onGetMachineAuth));
     }
     BuildSnapshot() {
       return {
@@ -1471,7 +1479,7 @@ var _ = _(_(), 1),
         (this.m_bUsingCodeOverride = !1),
         _ == `anonymous`)
       )
-        return this.SetFailureState(_.AnonymousLogin, _.EResult(12)), 12;
+        return (this.SetFailureState(_.AnonymousLogin, _.EResult(12)), 12);
       try {
         let _ = await _(this.m_transport, _);
         if (!_)
@@ -1482,18 +1490,18 @@ var _ = _(_(), 1),
           );
         let _ = _(_, _),
           _ = _.Init(_);
-        _.SetEMsg(_),
+        (_.SetEMsg(_),
           _.Body().set_account_name(_),
           _.Body().set_encrypted_password(_ ?? void 0),
           _.Body().set_encryption_timestamp(_.timestamp),
           _.Body().set_remember_login(!!_),
-          _.Body().set_persistence(+!!_);
+          _.Body().set_persistence(+!!_));
         let _ = _();
         _ && _.Body().set_website_id(_.WEBSITE_ID);
         try {
           _.Body().set_device_details(await this.GetDeviceDetails());
         } catch (_) {
-          _(`Failed to GetDeviceDetails`), _(_);
+          (_(`Failed to GetDeviceDetails`), _(_));
         }
         if (
           (_.Body().set_language(_(_.LANGUAGE)),
@@ -1510,12 +1518,14 @@ var _ = _(_(), 1),
         if (_ !== 1)
           switch (_) {
             case 5:
-              return (this.m_eStatus = 2), _;
+              return ((this.m_eStatus = 2), _);
             case 20:
             case 3:
-              return this.SetFailureState(_.Network, _.EResult(20)), _;
+              return (this.SetFailureState(_.Network, _.EResult(20)), _);
             case 84:
-              return this.SetFailureState(_.RateLimitExceeded, _.EResult(_)), _;
+              return (
+                this.SetFailureState(_.RateLimitExceeded, _.EResult(_)), _
+              );
             case 118: {
               let _ = _.Body().agreement_session_url();
               if (
@@ -1572,7 +1582,7 @@ var _ = _(_(), 1),
           _.find(({ confirmation_type: _ }) => _ === 6))
         ) {
           let _ = new FormData();
-          _.append(`clientid`, _), _.append(`steamid`, _);
+          (_.append(`clientid`, _), _.append(`steamid`, _));
           let _ = `${_.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
           try {
             if (
@@ -1585,7 +1595,7 @@ var _ = _(_(), 1),
                 })
               ).data.result == 1
             )
-              return (this.m_eStatus = 4), this.StartPolling(!0), 1;
+              return ((this.m_eStatus = 4), this.StartPolling(!0), 1);
           } catch (_) {
             if (
               (_(`checkdevice ajax to ${_} failed: ${_.message}`),
@@ -1600,7 +1610,7 @@ var _ = _(_(), 1),
                   20)
                 : (this.SetFailureState(_.Network, _.AjaxFailureNoCode()), 20);
             }
-            return this.SetFailureState(_.Network, _.EResult(79)), 79;
+            return (this.SetFailureState(_.Network, _.EResult(79)), 79);
           }
         }
         let _ = _(
@@ -1622,18 +1632,18 @@ var _ = _(_(), 1),
           _)
         ) {
           case 1:
-            return (this.m_eStatus = 13), this.StartPolling(), _;
+            return ((this.m_eStatus = 13), this.StartPolling(), _);
           case 2:
             this.m_eStatus = 3;
             break;
           case 5:
-            (this.m_eStatus = 4), this.StartPolling(!1);
+            ((this.m_eStatus = 4), this.StartPolling(!1));
             break;
           case 3:
-            (this.m_eStatus = 5), this.StartPolling(!1);
+            ((this.m_eStatus = 5), this.StartPolling(!1));
             break;
           case 4:
-            (this.m_eStatus = 6), this.StartPolling(!1);
+            ((this.m_eStatus = 6), this.StartPolling(!1));
         }
         return _;
       } catch (_) {
@@ -1649,7 +1659,7 @@ var _ = _(_(), 1),
       }
     }
     Stop() {
-      this.StopPolling(), (this.m_eStatus = 16);
+      (this.StopPolling(), (this.m_eStatus = 16));
     }
     GetStatus() {
       return this.m_eStatus;
@@ -1690,11 +1700,11 @@ var _ = _(_(), 1),
         await this.m_transport.MakeReady();
         let _ = this.m_eStatus === 3 || this.m_eStatus === 10,
           _ = _.Init(_);
-        _.SetEMsg(_),
+        (_.SetEMsg(_),
           _.Body().set_client_id(this.m_strClientID),
           _.Body().set_steamid(this.m_steamid),
           _.Body().set_code(_),
-          _.Body().set_code_type(_ ? 2 : 3);
+          _.Body().set_code_type(_ ? 2 : 3));
         let _ = await _.UpdateAuthSessionWithSteamGuardCode(
             this.m_transport,
             _,
@@ -1711,7 +1721,7 @@ var _ = _(_(), 1),
           switch (_) {
             case 65:
             case 88:
-              return (this.m_eStatus = _ ? 10 : 11), _;
+              return ((this.m_eStatus = _ ? 10 : 11), _);
             case 27:
               return (
                 this.SetFailureState(_.Expired, _.EResult(_)),
@@ -1758,7 +1768,7 @@ var _ = _(_(), 1),
               );
           }
         }
-        return (this.m_eStatus = 13), this.StartPolling(), _;
+        return ((this.m_eStatus = 13), this.StartPolling(), _);
       } catch (_) {
         return (
           _(`Failed to update auth session with SG code. ${_}`),
@@ -1773,10 +1783,10 @@ var _ = _(_(), 1),
     UseCodeOverride() {
       switch (this.m_eStatus) {
         case 6:
-          (this.m_bUsingCodeOverride = !0), (this.m_eStatus = 5);
+          ((this.m_bUsingCodeOverride = !0), (this.m_eStatus = 5));
           return;
         case 4:
-          (this.m_bUsingCodeOverride = !0), (this.m_eStatus = 3);
+          ((this.m_bUsingCodeOverride = !0), (this.m_eStatus = 3));
           return;
         default:
           _(
@@ -1811,8 +1821,8 @@ var _ = _(_(), 1),
               _.EResult(_.GetEResult()),
             ));
       } catch (_) {
-        _(`An unexpected error occured while moving an authenticator`, _),
-          this.SetFailureState(_.MoveAuthenticator, _.EResult(2));
+        (_(`An unexpected error occured while moving an authenticator`, _),
+          this.SetFailureState(_.MoveAuthenticator, _.EResult(2)));
       }
     }
     async ResendMoveCode() {
@@ -1825,13 +1835,13 @@ var _ = _(_(), 1),
           this.m_weakAuthWebInterface.GetServiceTransport(),
           _,
         );
-      _.GetEResult() != 1 &&
+      (_.GetEResult() != 1 &&
         (_.DEBUG_LogToConsole(),
         _(
           `An unexpected error occured while adding an authenticator`,
           _.GetEResult(),
         )),
-        (this.m_eStatus = 8);
+        (this.m_eStatus = 8));
     }
     async FinishMoveAuthenticator(_) {
       _(
@@ -1839,28 +1849,28 @@ var _ = _(_(), 1),
         `Finishing authenticator move before StartMoveAuthenticator`,
       );
       let _ = _.Init(_);
-      _.Body().set_sms_code(_),
+      (_.Body().set_sms_code(_),
         _.Body().set_generate_new_token(!0),
-        _.Body().set_version(2);
+        _.Body().set_version(2));
       let _ = await _.RemoveAuthenticatorViaChallengeContinue(
         this.m_weakAuthWebInterface.GetServiceTransport(),
         _,
       );
       if (_.GetEResult() == 94) this.m_eStatus = 12;
       else if (!_.Body().success())
-        _.DEBUG_LogToConsole(),
+        (_.DEBUG_LogToConsole(),
           _(
             `Error when calling RemoveAuthenticatorViaChallengeContinue`,
             _.GetEResult(),
           ),
-          this.SetFailureState(_.MoveAuthenticator, _.EResult(_.GetEResult()));
+          this.SetFailureState(_.MoveAuthenticator, _.EResult(_.GetEResult())));
       else {
         _.DEBUG_LogToConsole();
         let _ = _.Body().replacement_token();
-        _(!!_, `Missing replacement token on successful authenticator move`),
+        (_(!!_, `Missing replacement token on successful authenticator move`),
           (this.m_replacementAuthenticator = _(_.toObject())),
           (this.m_eStatus = 9),
-          (this.m_bUsingCodeOverride = !1);
+          (this.m_bUsingCodeOverride = !1));
       }
     }
     FinishMoveRecovery() {
@@ -1909,15 +1919,15 @@ var _ = _(_(), 1),
       }
     }
     SetFailureState(_, _, _ = ``) {
-      (this.m_eStatus = 15),
+      ((this.m_eStatus = 15),
         (this.m_eFailureState = _),
         (this.m_strErrorReference = _),
-        (this.m_strExtendedErrorMessage = _);
+        (this.m_strExtendedErrorMessage = _));
     }
     onAuthComplete = (_) => {
       this.m_eStatus = _.bSuccess ? 14 : 15;
       let _;
-      _.bSuccess
+      (_.bSuccess
         ? (_(
             !!this.m_strAccountName && !!this.m_steamid,
             `Missing account name or steamid on auth success`,
@@ -1930,13 +1940,13 @@ var _ = _(_(), 1),
         : (_ = {
             bSuccess: !1,
           }),
-        this.m_onLoginComplete && this.m_onLoginComplete(_);
+        this.m_onLoginComplete && this.m_onLoginComplete(_));
     };
     SetOnLoginComplete(_) {
       this.m_onLoginComplete = _;
     }
   };
-_([_], _.prototype, `Start`, null),
+(_([_], _.prototype, `Start`, null),
   _([_], _.prototype, `SendSteamGuardCode`, null),
   _([_], _.prototype, `UseCodeOverride`, null),
   _([_], _.prototype, `CantAccessCode`, null),
@@ -1945,15 +1955,15 @@ _([_], _.prototype, `Start`, null),
   _([_], _.prototype, `FinishMoveAuthenticator`, null),
   _([_], _.prototype, `FinishMoveRecovery`, null),
   _([_], _.prototype, `GoBack`, null),
-  _([_], _.prototype, `SetOnLoginComplete`, null);
+  _([_], _.prototype, `SetOnLoginComplete`, null));
 async function _(_, _) {
   let _ = _.Init(_);
-  _.Body().set_account_name(_), _.SetEMsg(_);
+  (_.Body().set_account_name(_), _.SetEMsg(_));
   try {
     await _.MakeReady();
     let _ = await _.GetPasswordRSAPublicKey(_, _);
     if ((_.DEBUG_LogToConsole(), _.GetEResult() !== 1))
-      return _(`Failed to get RSA key with EResult: ${_.GetEResult()}`), null;
+      return (_(`Failed to get RSA key with EResult: ${_.GetEResult()}`), null);
     let {
       publickey_exp: _,
       publickey_mod: _,
@@ -1974,13 +1984,13 @@ async function _(_, _) {
           timestamp: _,
         };
   } catch (_) {
-    return _(`Failed to get RSA key: ${JSON.stringify(_)}`), null;
+    return (_(`Failed to get RSA key: ${JSON.stringify(_)}`), null);
   }
 }
 var _ = [4, 3, 2, 1, 0, 5].reduce((_, _, _) => ((_[_] = _), _), {});
 function _(_) {
   let _ = _[0] || 0;
-  return _.length > 1 && (_ = _.sort((_, _) => _[_] - _[_])[0]), _;
+  return (_.length > 1 && (_ = _.sort((_, _) => _[_] - _[_])[0]), _);
 }
 function _(_) {
   let [_, _] = (0, _.useState)(() => new _(_));
@@ -2026,14 +2036,14 @@ var _ = {
       return this.m_eStatusValue;
     }
     set m_eStatus(_) {
-      (this.m_eStatusValue = _), this.NotifyChanged();
+      ((this.m_eStatusValue = _), this.NotifyChanged());
     }
     m_bPreloaded = !1;
     constructor(_) {
-      super(
+      (super(
         _.transport,
         (_) => {
-          (this.m_eStatus = _.bSuccess ? 3 : 4), _.onComplete(_);
+          ((this.m_eStatus = _.bSuccess ? 3 : 4), _.onComplete(_));
         },
         _.onDeviceDetails,
       ),
@@ -2043,7 +2053,7 @@ var _ = {
           (this.m_strChallengeURL = _.preloaded.strChallengeURL),
           (this.m_msPollInterval = _.preloaded.msPollInterval),
           (this.m_rgRequestID = _.preloaded.rgRequestID),
-          (this.m_bPreloaded = !0));
+          (this.m_bPreloaded = !0)));
     }
     BuildSnapshot() {
       return {
@@ -2077,7 +2087,7 @@ var _ = {
         try {
           _.Body().set_device_details(await this.GetDeviceDetails());
         } catch (_) {
-          console.error(`Failed to GetDeviceDetails`), console.log(_);
+          (console.error(`Failed to GetDeviceDetails`), console.log(_));
         }
         let _ = _();
         _ && _.Body().set_website_id(_.WEBSITE_ID);
@@ -2123,7 +2133,7 @@ var _ = {
       }
     }
     Stop() {
-      this.StopPolling(), (this.m_eStatus = 5);
+      (this.StopPolling(), (this.m_eStatus = 5));
     }
     GetChallengeURL() {
       return this.m_strChallengeURL;
@@ -2236,15 +2246,15 @@ function _(_) {
       onPasswordChange: _,
       bRememberMe: _,
       onRememberMeChange: (_) => {
-        _(_), localStorage?.setItem(_, _ ? `1` : `0`);
+        (_(_), localStorage?.setItem(_, _ ? `1` : `0`));
       },
       onPasswordSubmit: () =>
         !_ || !_ ? Promise.resolve(8) : _.start(_, _, _),
       bInPasswordFlow: _,
       onTryOffline: () => {
-        _(`Logging in offline with username ${_}`),
+        (_(`Logging in offline with username ${_}`),
           SteamClient.User.SetLoginCredentials(_, _, _),
-          SteamClient.User.StartOffline(!0);
+          SteamClient.User.StartOffline(!0));
       },
     }
   );
@@ -2297,7 +2307,7 @@ function _(_, _ = ``) {
         description: _.Localize(`#Login_Error_Default_Description`),
       };
   }
-  return _ && (_.description = _), _;
+  return (_ && (_.description = _), _);
 }
 var _ = `ZhRwp4aSW-8-`,
   _ = `QV15rhpdkBI-`,
@@ -2396,7 +2406,7 @@ function _(_) {
       let _ = _.target.value;
       if (_ && _ && !_(_)) return;
       let _ = _.target.nextElementSibling;
-      _.target.value && _ && _.focus(), _();
+      (_.target.value && _ && _.focus(), _());
     },
     _ = (_) => {
       _.current.findIndex((_) => !!_.value) === -1
@@ -2434,9 +2444,9 @@ function _(_) {
       let _ = _.clipboardData.getData(`Text`),
         _ = _.target,
         _ = 0;
-      for (; _ && _ < _.length; )
-        _.focus(), (_.value = _.charAt(_)), (_ = _.nextElementSibling), _++;
-      _(), _.preventDefault(), _ && _();
+      for (; _ && _ < _.length;)
+        (_.focus(), (_.value = _.charAt(_)), (_ = _.nextElementSibling), _++);
+      (_(), _.preventDefault(), _ && _());
     },
     _ = [];
   for (let _ = 0; _ < _; _++)
@@ -2556,9 +2566,9 @@ var _ = new URL(
   _ = _((_, _) => {
     var _ = _();
     function _(_) {
-      (this.mode = _.MODE_8BIT_BYTE), (this.data = _);
+      ((this.mode = _.MODE_8BIT_BYTE), (this.data = _));
     }
-    (_.prototype = {
+    ((_.prototype = {
       getLength: function (_) {
         return this.data.length;
       },
@@ -2567,7 +2577,7 @@ var _ = new URL(
           _.put(this.data.charCodeAt(_), 8);
       },
     }),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     _.exports = {
@@ -2580,9 +2590,9 @@ var _ = new URL(
   _ = _((_, _) => {
     var _ = _();
     function _(_, _) {
-      (this.totalCount = _), (this.dataCount = _);
+      ((this.totalCount = _), (this.dataCount = _));
     }
-    (_.RS_BLOCK_TABLE = [
+    ((_.RS_BLOCK_TABLE = [
       [1, 26, 19],
       [1, 26, 16],
       [1, 26, 13],
@@ -2773,13 +2783,13 @@ var _ = new URL(
             return;
         }
       }),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     function _() {
-      (this.buffer = []), (this.length = 0);
+      ((this.buffer = []), (this.length = 0));
     }
-    (_.prototype = {
+    ((_.prototype = {
       get: function (_) {
         var _ = Math.floor(_ / 8);
         return ((this.buffer[_] >>> (7 - (_ % 8))) & 1) == 1;
@@ -2792,12 +2802,12 @@ var _ = new URL(
       },
       putBit: function (_) {
         var _ = Math.floor(this.length / 8);
-        this.buffer.length <= _ && this.buffer.push(0),
+        (this.buffer.length <= _ && this.buffer.push(0),
           _ && (this.buffer[_] |= 128 >>> (this.length % 8)),
-          this.length++;
+          this.length++);
       },
     }),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     for (
@@ -2807,8 +2817,8 @@ var _ = new URL(
             return _.LOG_TABLE[_];
           },
           gexp: function (_) {
-            for (; _ < 0; ) _ += 255;
-            for (; _ >= 256; ) _ -= 255;
+            for (; _ < 0;) _ += 255;
+            for (; _ >= 256;) _ -= 255;
             return _.EXP_TABLE[_];
           },
           EXP_TABLE: Array(256),
@@ -2832,11 +2842,11 @@ var _ = new URL(
     var _ = _();
     function _(_, _) {
       if (_.length == null) throw Error(_.length + `/` + _);
-      for (var _ = 0; _ < _.length && _[_] == 0; ) _++;
+      for (var _ = 0; _ < _.length && _[_] == 0;) _++;
       this.num = Array(_.length - _ + _);
       for (var _ = 0; _ < _.length - _; _++) this.num[_] = _[_ + _];
     }
-    (_.prototype = {
+    ((_.prototype = {
       get: function (_) {
         return this.num[_];
       },
@@ -2868,7 +2878,7 @@ var _ = new URL(
         return new _(_, 0).mod(_);
       },
     }),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     var _ = _(),
@@ -2931,17 +2941,17 @@ var _ = new URL(
         G18: 7973,
         G15_MASK: 21522,
         getBCHTypeInfo: function (_) {
-          for (var _ = _ << 10; _.getBCHDigit(_) - _.getBCHDigit(_.G15) >= 0; )
+          for (var _ = _ << 10; _.getBCHDigit(_) - _.getBCHDigit(_.G15) >= 0;)
             _ ^= _.G15 << (_.getBCHDigit(_) - _.getBCHDigit(_.G15));
           return ((_ << 10) | _) ^ _.G15_MASK;
         },
         getBCHTypeNumber: function (_) {
-          for (var _ = _ << 12; _.getBCHDigit(_) - _.getBCHDigit(_.G18) >= 0; )
+          for (var _ = _ << 12; _.getBCHDigit(_) - _.getBCHDigit(_.G18) >= 0;)
             _ ^= _.G18 << (_.getBCHDigit(_) - _.getBCHDigit(_.G18));
           return (_ << 12) | _;
         },
         getBCHDigit: function (_) {
-          for (var _ = 0; _ != 0; ) _++, (_ >>>= 1);
+          for (var _ = 0; _ != 0;) (_++, (_ >>>= 1));
           return _;
         },
         getPatternPosition: function (_) {
@@ -3032,11 +3042,11 @@ var _ = new URL(
           for (var _ = 0; _ < _ - 1; _++)
             for (var _ = 0; _ < _ - 1; _++) {
               var _ = 0;
-              _.isDark(_, _) && _++,
+              (_.isDark(_, _) && _++,
                 _.isDark(_ + 1, _) && _++,
                 _.isDark(_, _ + 1) && _++,
                 _.isDark(_ + 1, _ + 1) && _++,
-                (_ == 0 || _ == 4) && (_ += 3);
+                (_ == 0 || _ == 4) && (_ += 3));
             }
           for (var _ = 0; _ < _; _++)
             for (var _ = 0; _ < _ - 6; _++)
@@ -3061,7 +3071,7 @@ var _ = new URL(
           for (var _ = 0, _ = 0; _ < _; _++)
             for (var _ = 0; _ < _; _++) _.isDark(_, _) && _++;
           var _ = Math.abs((100 * _) / _ / _ - 50) / 5;
-          return (_ += _ * 10), _;
+          return ((_ += _ * 10), _);
         },
       };
     _.exports = _;
@@ -3073,17 +3083,17 @@ var _ = new URL(
       _ = _(),
       _ = _();
     function _(_, _) {
-      (this.typeNumber = _),
+      ((this.typeNumber = _),
         (this.errorCorrectLevel = _),
         (this.modules = null),
         (this.moduleCount = 0),
         (this.dataCache = null),
-        (this.dataList = []);
+        (this.dataList = []));
     }
     var _ = _.prototype;
-    (_.addData = function (_) {
+    ((_.addData = function (_) {
       var _ = new _(_);
-      this.dataList.push(_), (this.dataCache = null);
+      (this.dataList.push(_), (this.dataCache = null));
     }),
       (_.isDark = function (_, _) {
         if (_ < 0 || this.moduleCount <= _ || _ < 0 || this.moduleCount <= _)
@@ -3108,9 +3118,9 @@ var _ = new URL(
               _ += _[_].dataCount;
             for (var _ = 0; _ < this.dataList.length; _++) {
               var _ = this.dataList[_];
-              _.put(_.mode, 4),
+              (_.put(_.mode, 4),
                 _.put(_.getLength(), _.getLengthInBits(_.mode, _)),
-                _.write(_);
+                _.write(_));
             }
             if (_.getLengthInBits() <= _ * 8) break;
           }
@@ -3119,13 +3129,13 @@ var _ = new URL(
         this.makeImpl(!1, this.getBestMaskPattern());
       }),
       (_.makeImpl = function (_, _) {
-        (this.moduleCount = this.typeNumber * 4 + 17),
-          (this.modules = Array(this.moduleCount));
+        ((this.moduleCount = this.typeNumber * 4 + 17),
+          (this.modules = Array(this.moduleCount)));
         for (var _ = 0; _ < this.moduleCount; _++) {
           this.modules[_] = Array(this.moduleCount);
           for (var _ = 0; _ < this.moduleCount; _++) this.modules[_][_] = null;
         }
-        this.setupPositionProbePattern(0, 0),
+        (this.setupPositionProbePattern(0, 0),
           this.setupPositionProbePattern(this.moduleCount - 7, 0),
           this.setupPositionProbePattern(0, this.moduleCount - 7),
           this.setupPositionAdjustPattern(),
@@ -3137,7 +3147,7 @@ var _ = new URL(
             this.errorCorrectLevel,
             this.dataList,
           )),
-          this.mapData(this.dataCache, _);
+          this.mapData(this.dataCache, _));
       }),
       (_.setupPositionProbePattern = function (_, _) {
         for (var _ = -1; _ <= 7; _++)
@@ -3246,18 +3256,18 @@ var _ = new URL(
           _ > 0;
           _ -= 2
         )
-          for (_ == 6 && _--; ; ) {
+          for (_ == 6 && _--; ;) {
             for (var _ = 0; _ < 2; _++)
               if (this.modules[_][_ - _] == null) {
                 var _ = !1;
-                _ < _.length && (_ = ((_[_] >>> _) & 1) == 1),
+                (_ < _.length && (_ = ((_[_] >>> _) & 1) == 1),
                   _.getMask(_, _, _ - _) && (_ = !_),
                   (this.modules[_][_ - _] = _),
                   _--,
-                  _ == -1 && (_++, (_ = 7));
+                  _ == -1 && (_++, (_ = 7)));
               }
             if (((_ += _), _ < 0 || this.moduleCount <= _)) {
-              (_ -= _), (_ = -_);
+              ((_ -= _), (_ = -_));
               break;
             }
           }
@@ -3271,9 +3281,9 @@ var _ = new URL(
           _++
         ) {
           var _ = _[_];
-          _.put(_.mode, 4),
+          (_.put(_.mode, 4),
             _.put(_.getLength(), _.getLengthInBits(_.mode, _)),
-            _.write(_);
+            _.write(_));
         }
         for (var _ = 0, _ = 0; _ < _.length; _++) _ += _[_].dataCount;
         if (_.getLengthInBits() > _ * 8)
@@ -3308,7 +3318,7 @@ var _ = new URL(
         ) {
           var _ = _[_].dataCount,
             _ = _[_].totalCount - _;
-          (_ = Math.max(_, _)), (_ = Math.max(_, _)), (_[_] = Array(_));
+          ((_ = Math.max(_, _)), (_ = Math.max(_, _)), (_[_] = Array(_)));
           for (var _ = 0; _ < _[_].length; _++) _[_][_] = 255 & _.buffer[_ + _];
           _ += _;
           var _ = _.getErrorCorrectPolynomial(_),
@@ -3328,7 +3338,7 @@ var _ = new URL(
             _ < _[_].length && (_[_++] = _[_][_]);
         return _;
       }),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     var _ = _(),
@@ -3336,9 +3346,9 @@ var _ = new URL(
       _ = function (_, _) {
         _ ||= {};
         var _ = new _(_.typeNumber || -1, _.errorCorrectLevel || _._);
-        return _.addData(_), _.make(), _;
+        return (_.addData(_), _.make(), _);
       };
-    (_.ErrorCorrectLevel = _), (_.exports = _);
+    ((_.ErrorCorrectLevel = _), (_.exports = _));
   }),
   _ = `RuVnOcF9yRI-`,
   _ = `QhysrBJX1dU-`,
@@ -3358,7 +3368,7 @@ function _(_, _, _) {
     _ = (_ + 2) * _,
     _ = new Uint8Array(40 + _),
     _ = 0;
-  (_[_++] = 71),
+  ((_[_++] = 71),
     (_[_++] = 73),
     (_[_++] = 70),
     (_[_++] = 56),
@@ -3406,12 +3416,12 @@ function _(_, _, _) {
     (_[_++] = _),
     (_[_++] = 0),
     (_[_++] = 0),
-    (_[_++] = 7);
+    (_[_++] = 7));
   for (let _ = 0; _ < _.length; _++) {
-    (_[_++] = _ + 1), (_[_++] = 128);
+    ((_[_++] = _ + 1), (_[_++] = 128));
     for (let _ = 0; _ < _.length; _++) _[_++] = +!_[_][_];
   }
-  return (_[_++] = 1), (_[_++] = 129), (_[_++] = 0), (_[_++] = 59), _;
+  return ((_[_++] = 1), (_[_++] = 129), (_[_++] = 0), (_[_++] = 59), _);
 }
 function _(
   _,
@@ -4093,7 +4103,7 @@ function _(_) {
         }),
         value: _,
         onChange: (_) => {
-          _(!0), _(_);
+          (_(!0), _(_));
         },
         autoFocus: _,
         disabled: _,
@@ -4107,7 +4117,7 @@ function _(_) {
         }),
         value: _,
         onChange: (_) => {
-          _(!0), _(_);
+          (_(!0), _(_));
         },
         type: `password`,
         autoFocus: _,
@@ -4593,13 +4603,13 @@ function _(_) {
     _ = _.join(``),
     _ = _(_, _),
     _ = (_) => {
-      _(!0),
+      (_(!0),
         _(_).then(() => {
-          _(!1), _(!1);
-        });
+          (_(!1), _(!1));
+        }));
     },
     _ = (_) => {
-      _ || _(!0), _(_);
+      (_ || _(!0), _(_));
       let _ = _.join(``);
       _(_, _) && _(_);
     },
@@ -4607,7 +4617,7 @@ function _(_) {
       _ && _(_);
     },
     _ = () => {
-      _(!_), _([]), _(``), _(_ + 1);
+      (_(!_), _([]), _(``), _(_ + 1));
     },
     _ = !_ && (_ === 11 || _ === 10),
     _,
@@ -4971,7 +4981,7 @@ function _(_) {
     length: _(_),
     backupCode: _,
     onChange: (_) => {
-      (_ = _.map((_) => _.toUpperCase())), _(_.join(``).trim(), _) && _(_);
+      ((_ = _.map((_) => _.toUpperCase())), _(_.join(``).trim(), _) && _(_));
     },
     autoFocus: !0,
     ..._,
@@ -5190,14 +5200,14 @@ function _() {
 }
 function _(_) {
   let _ = (0, _.useRef)(_);
-  (_.current = _),
+  ((_.current = _),
     (0, _.useEffect)(() => {
       new URLSearchParams(location.search).get(`need_password`) ||
         (_.current &&
           _(_.current).catch((_) => {
             _(`PerformRefresh exception`, _);
           }));
-    }, [_]);
+    }, [_]));
 }
 async function _(_) {
   let _ = new FormData();
@@ -5213,7 +5223,7 @@ async function _(_) {
   Object.entries(_).forEach(([_, _]) => _.append(_, _));
   let _ = await _.default.post(_, _),
     _ = _.status === 200 && _.data.result === 1;
-  return _ && window.location.assign(_), _;
+  return (_ && window.location.assign(_), _);
 }
 function _() {
   let _ = (0, _.useRef)(!0);
@@ -5227,4 +5237,3 @@ function _() {
     (0, _.useCallback)(() => _.current, [_])
   );
 }
-export { _, _, _, _ };

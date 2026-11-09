@@ -94,7 +94,7 @@ function ye(e) {
 function be(e) {
   let { viewBox: t, ...n } = e,
     r = { className: n.size ? void 0 : M, ...n };
-  return t && (r.viewBox = xe(t)), m(r, ve);
+  return (t && (r.viewBox = xe(t)), m(r, ve));
 }
 function xe(e) {
   if (e)
@@ -197,8 +197,8 @@ function Oe(e) {
               break;
             case `dropdown`: {
               let e = r.reference.width;
-              r.floating.width > e && e < 200 && (e = r.floating.width),
-                (o.width = `${e}px`);
+              (r.floating.width > e && e < 200 && (e = r.floating.width),
+                (o.width = `${e}px`));
             }
           }
           typeof e.width == `function` &&
@@ -207,7 +207,7 @@ function Oe(e) {
               unTargetWidth: r.reference.width,
             }));
           let s = typeof t == `number` ? `${t}px` : `var(--spacing-${t})`;
-          (o.maxHeight =
+          ((o.maxHeight =
             typeof e.maxHeight == `function`
               ? e.maxHeight({ unAvailableHeight: a, gutter: s })
               : typeof e.maxHeight == `number`
@@ -216,7 +216,7 @@ function Oe(e) {
                   ? `${a - t}px`
                   : `calc( ${a}px - var(--spacing-${t}) )`),
             Object.assign(i.floating.style, o),
-            i.floating.style.setProperty(`--popover-max-height`, o.maxHeight);
+            i.floating.style.setProperty(`--popover-max-height`, o.maxHeight));
         },
       }),
     ),
@@ -625,7 +625,7 @@ function at(e) {
   });
 }
 var $ = {};
-($.arabic = () => c(() => import(`./baseui_arabic.js`), [], import.meta.url)),
+(($.arabic = () => c(() => import(`./baseui_arabic.js`), [], import.meta.url)),
   ($.brazilian = () =>
     c(() => import(`./baseui_brazilian.js`), [], import.meta.url)),
   ($.bulgarian = () =>
@@ -677,7 +677,7 @@ var $ = {};
   ($.ukrainian = () =>
     c(() => import(`./baseui_ukrainian.js`), [], import.meta.url)),
   ($.vietnamese = () =>
-    c(() => import(`./baseui_vietnamese.js`), [], import.meta.url));
+    c(() => import(`./baseui_vietnamese.js`), [], import.meta.url)));
 async function ot(e) {
   if ($[e]) return await $[e]();
 }

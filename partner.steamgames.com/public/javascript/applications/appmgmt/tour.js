@@ -37,15 +37,15 @@ var h = a(i()),
       if (this.m_storage) return;
       this.m_storage = e;
       let t = await O(e);
-      Object.keys(t || {}).forEach((e) => {
+      (Object.keys(t || {}).forEach((e) => {
         let n = !!t[e];
         this.m_tours[e] = { ...(this.m_tours[e] || { stops: {} }), bSeen: n };
       }),
-        (this.m_bReady = !0);
+        (this.m_bReady = !0));
     }
     UpdateStop(e, t, n, r) {
-      this.m_tours[e] || (this.m_tours[e] = { bSeen: !1, stops: {} }),
-        (this.m_tours[e].stops[t] = { options: n, elem: r });
+      (this.m_tours[e] || (this.m_tours[e] = { bSeen: !1, stops: {} }),
+        (this.m_tours[e].stops[t] = { options: n, elem: r }));
     }
     BHasSeenTour(e) {
       return !this.m_bReady || (this.m_tours[e] && this.m_tours[e].bSeen);
@@ -54,10 +54,10 @@ var h = a(i()),
       return this.m_tours[e]?.stops || {};
     }
     ActivateTour(e) {
-      this.m_strActiveTour &&
+      (this.m_strActiveTour &&
         this.m_strActiveTour !== e &&
         this.DismissTour(this.m_strActiveTour),
-        (this.m_strActiveTour = e);
+        (this.m_strActiveTour = e));
     }
     DismissTour(e) {
       this.m_tours[e] &&
@@ -72,12 +72,12 @@ var h = a(i()),
       return k(this.m_storage, e, void 0);
     }
   };
-r([e], E.prototype, `m_tours`, void 0),
+(r([e], E.prototype, `m_tours`, void 0),
   r([e], E.prototype, `m_strActiveTour`, void 0),
   r([e], E.prototype, `m_bReady`, void 0),
   r([n.bound], E.prototype, `UpdateStop`, null),
   r([n], E.prototype, `ActivateTour`, null),
-  r([n], E.prototype, `DismissTour`, null);
+  r([n], E.prototype, `DismissTour`, null));
 var D = `tour_history`;
 async function O(e) {
   let t = await e.GetObject(D);
@@ -122,7 +122,7 @@ function P(e) {
     [c, l] = (0, h.useState)(0);
   if (!i || !t || c >= r.length) return null;
   let f = () => {
-      l(c + 1), a();
+      (l(c + 1), a());
     },
     { id: p, title: m, content: g } = r[c],
     _ = s[p];
@@ -277,18 +277,18 @@ function H(e, t) {
   let n = { width: `${B}px`, height: `${V}px` };
   switch (e) {
     case `right`:
-      (n.left = `0px`), (n.top = `${Math.max(t.height / 2 - V, V)}px`);
+      ((n.left = `0px`), (n.top = `${Math.max(t.height / 2 - V, V)}px`));
       break;
     case `left`:
-      (n.right = `0px`), (n.top = `${Math.max(t.height / 2 - V, V)}px`);
+      ((n.right = `0px`), (n.top = `${Math.max(t.height / 2 - V, V)}px`));
       break;
     case `above`:
-      (n.bottom = `-10px`),
-        (n.insetInlineStart = `${Math.max(t.width / 2 - V, V)}px`);
+      ((n.bottom = `-10px`),
+        (n.insetInlineStart = `${Math.max(t.width / 2 - V, V)}px`));
       break;
     case `below`:
-      (n.top = `-10px`),
-        (n.insetInlineStart = `${Math.max(t.width / 2 - V, V)}px`);
+      ((n.top = `-10px`),
+        (n.insetInlineStart = `${Math.max(t.width / 2 - V, V)}px`));
   }
   return n;
 }

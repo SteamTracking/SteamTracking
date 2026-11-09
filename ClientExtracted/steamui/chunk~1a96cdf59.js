@@ -44,12 +44,12 @@
       },
       44613: ($, Y, c) => {
         "use strict";
-        c.r(Y),
+        (c.r(Y),
           c.d(Y, {
             BroadcastDetails: () => se,
             LinkOverlay: () => I,
             default: () => C,
-          });
+          }));
         var t = c(62540),
           B = c(89193),
           f = c(41230),
@@ -89,7 +89,7 @@
               h--
             )
               (u = e[h]) && (r = (o ? u(s, i, r) : u(r)) || r);
-            return o && r && Oe(s, i, r), r;
+            return (o && r && Oe(s, i, r), r);
           };
         function ke() {
           return (0, t.jsx)("div", {
@@ -103,10 +103,11 @@
           let i = v.fK.Loading,
             o = "";
           if (s) {
-            (i = s.GetBroadcastState()), (o = s.GetBroadcastStateDescription());
+            ((i = s.GetBroadcastState()),
+              (o = s.GetBroadcastStateDescription()));
             let h = s.IsBuffering();
-            i == v.fK.Unlocking && ((i = v.fK.Loading), (o = "")),
-              i == v.fK.Ready && h && ((i = v.fK.Loading), (o = ""));
+            (i == v.fK.Unlocking && ((i = v.fK.Loading), (o = "")),
+              i == v.fK.Ready && h && ((i = v.fK.Loading), (o = "")));
           }
           if (
             (s && i != v.fK.Error && s.GetUserInputNeeded()) ||
@@ -154,7 +155,7 @@
               h--
             )
               (u = e[h]) && (r = (o ? u(s, i, r) : u(r)) || r);
-            return o && r && ye(s, i, r), r;
+            return (o && r && ye(s, i, r), r);
           };
         let q = class extends P.Component {
           constructor(e) {
@@ -258,7 +259,7 @@
             });
           }
         };
-        ae([l.oI], q.prototype, "HideStats", 1), (q = ae([f.PA], q));
+        (ae([l.oI], q.prototype, "HideStats", 1), (q = ae([f.PA], q)));
         let le = class extends P.Component {
           constructor(e) {
             super(e);
@@ -451,7 +452,7 @@
               h--
             )
               (u = e[h]) && (r = (o ? u(s, i, r) : u(r)) || r);
-            return o && r && Te(s, i, r), r;
+            return (o && r && Te(s, i, r), r);
           };
         class A extends P.Component {
           m_elSettingsButton;
@@ -462,10 +463,11 @@
           m_elSubtitlesPanel = P.createRef();
           m_SubtitlesButtonPos;
           constructor(s) {
-            super(s), (this.state = { bSettingsOpen: !1, bSubtitlesOpen: !1 });
+            (super(s),
+              (this.state = { bSettingsOpen: !1, bSubtitlesOpen: !1 }));
           }
           OnVideoControlClick(s) {
-            this.setState({ bSettingsOpen: !this.state.bSettingsOpen }),
+            (this.setState({ bSettingsOpen: !this.state.bSettingsOpen }),
               (this.m_SettingsButtonPos = [
                 this.m_elSettingsButton.offsetLeft,
                 this.m_elSettingsButton.offsetTop,
@@ -476,10 +478,10 @@
                 "mouseup",
                 this.OnMouseUp,
                 !0,
-              );
+              ));
           }
           OnSubtitlesClick(s) {
-            this.setState({ bSubtitlesOpen: !this.state.bSubtitlesOpen }),
+            (this.setState({ bSubtitlesOpen: !this.state.bSubtitlesOpen }),
               (this.m_SubtitlesButtonPos = [
                 this.m_elSubtitlesButton.current?.offsetLeft,
                 this.m_elSubtitlesButton.current?.offsetTop,
@@ -490,10 +492,10 @@
                 "mouseup",
                 this.OnMouseUp,
                 !0,
-              );
+              ));
           }
           OnMouseUp(s) {
-            this.m_elClickListener?.removeEventListener(
+            (this.m_elClickListener?.removeEventListener(
               "mouseup",
               this.OnMouseUp,
               !0,
@@ -501,7 +503,7 @@
               (0, b.id)(this.m_elSettingsPanel, s.target) ||
                 this.setState({ bSettingsOpen: !1 }),
               (0, b.id)(this.m_elSubtitlesPanel.current, s.target) ||
-                this.setState({ bSubtitlesOpen: !1 });
+                this.setState({ bSubtitlesOpen: !1 }));
           }
           bindSettingsButton(s) {
             this.m_elSettingsButton = s;
@@ -510,8 +512,8 @@
             this.m_elSettingsPanel = s;
           }
           OnShowStats(s) {
-            this.props.onShowStats(s),
-              this.setState({ bSettingsOpen: !this.state.bSettingsOpen });
+            (this.props.onShowStats(s),
+              this.setState({ bSettingsOpen: !this.state.bSettingsOpen }));
           }
           render() {
             let s = !1,
@@ -536,10 +538,10 @@
                     ee.n,
                     {
                       onClick: () => {
-                        this.props.video.SetVideoRepresentation(O),
+                        (this.props.video.SetVideoRepresentation(O),
                           this.setState({
                             bSettingsOpen: !this.state.bSettingsOpen,
-                          });
+                          }));
                       },
                       bChecked: O.selected,
                       children: O.displayName,
@@ -564,17 +566,17 @@
                 (D = 0 - (u.length * 21 + j))),
               this.state.bSubtitlesOpen)
             ) {
-              (i = !0),
+              ((i = !0),
                 (u = []),
                 u.push(
                   (0, t.jsx)(
                     ee.n,
                     {
                       onClick: () => {
-                        this.props.video.SetSubtitles(null),
+                        (this.props.video.SetSubtitles(null),
                           this.setState({
                             bSubtitlesOpen: !this.state.bSubtitlesOpen,
-                          });
+                          }));
                       },
                       className: "NoSubtitles",
                       bChecked: !1,
@@ -582,7 +584,7 @@
                     },
                     "none",
                   ),
-                );
+                ));
               for (
                 let O = 0;
                 O < this.props.video.ListSubtitles().length;
@@ -594,10 +596,10 @@
                     ee.n,
                     {
                       onClick: () => {
-                        this.props.video.SetSubtitles(N.language),
+                        (this.props.video.SetSubtitles(N.language),
                           this.setState({
                             bSubtitlesOpen: !this.state.bSubtitlesOpen,
-                          });
+                          }));
                       },
                       bChecked: N.mode === "showing",
                       children: N.label,
@@ -674,16 +676,16 @@
             });
           }
         }
-        M([l.oI], A.prototype, "OnVideoControlClick", 1),
+        (M([l.oI], A.prototype, "OnVideoControlClick", 1),
           M([l.oI], A.prototype, "OnSubtitlesClick", 1),
           M([l.oI], A.prototype, "OnMouseUp", 1),
           M([l.oI], A.prototype, "bindSettingsButton", 1),
           M([l.oI], A.prototype, "BindSettingsPanel", 1),
-          M([l.oI], A.prototype, "OnShowStats", 1);
+          M([l.oI], A.prototype, "OnShowStats", 1));
         const ge = !0;
         let E = class extends P.Component {
           constructor(e) {
-            super(e), (0, B.Gn)(this);
+            (super(e), (0, B.Gn)(this));
           }
           k_nHideSliderTimeout = 1.5 * 1e3;
           m_bShowSlider = ge;
@@ -696,18 +698,18 @@
           ToggleMute() {
             let e = this.props.video,
               s = e.IsMuted();
-            e.SetMute(!s), e.GetVolume() < 0.01 && e.SetVolume(0.5);
+            (e.SetMute(!s), e.GetVolume() < 0.01 && e.SetVolume(0.5));
           }
           OnMouseEnter(e) {
-            (this.m_bShowSlider = !0),
+            ((this.m_bShowSlider = !0),
               (this.m_bMouseOver = !0),
-              this.m_schHideSlider.Cancel();
+              this.m_schHideSlider.Cancel());
           }
           OnMouseLeave(e) {
-            (this.m_bMouseOver = !1), this.ScheduleHide();
+            ((this.m_bMouseOver = !1), this.ScheduleHide());
           }
           OnChildDrag(e) {
-            (this.m_bChildDragging = e), this.ScheduleHide();
+            ((this.m_bChildDragging = e), this.ScheduleHide());
           }
           ScheduleHide() {
             this.m_bMouseOver ||
@@ -752,21 +754,21 @@
             );
           }
         };
-        M([B.sH], E.prototype, "m_bShowSlider", 2),
+        (M([B.sH], E.prototype, "m_bShowSlider", 2),
           M([l.oI], E.prototype, "ToggleMute", 1),
           M([l.oI], E.prototype, "OnMouseEnter", 1),
           M([l.oI], E.prototype, "OnMouseLeave", 1),
           M([l.oI], E.prototype, "OnChildDrag", 1),
-          (E = M([f.PA], E));
+          (E = M([f.PA], E)));
         let H = class extends P.Component {
           constructor(e) {
-            super(e), (0, B.Gn)(this);
+            (super(e), (0, B.Gn)(this));
           }
           m_elSlider = null;
           m_nVolumeStartOfDrag = 0;
           OnMouseDown(e) {
             let s = e.currentTarget;
-            (this.m_elSlider = s),
+            ((this.m_elSlider = s),
               (this.m_nVolumeStartOfDrag = this.props.video.GetVolume()),
               this.SetVolumeWithCoord(s, e.clientX),
               s.ownerDocument.defaultView?.addEventListener(
@@ -777,7 +779,7 @@
                 "mouseup",
                 this.OnMouseUp,
               ),
-              this.props.onDrag(!0);
+              this.props.onDrag(!0));
           }
           OnMouseMove(e) {
             this.m_elSlider &&
@@ -787,7 +789,7 @@
             if (!this.m_elSlider) return;
             this.SetVolumeWithCoord(this.m_elSlider, e.clientX);
             let s = this.props.video;
-            s.IsMuted() && s.SetVolume(this.m_nVolumeStartOfDrag),
+            (s.IsMuted() && s.SetVolume(this.m_nVolumeStartOfDrag),
               this.m_elSlider.ownerDocument.defaultView?.removeEventListener(
                 "mousemove",
                 this.OnMouseMove,
@@ -798,14 +800,14 @@
               ),
               (this.m_nVolumeStartOfDrag = 0),
               (this.m_elSlider = null),
-              this.props.onDrag(!1);
+              this.props.onDrag(!1));
           }
           SetVolumeWithCoord(e, s) {
             let i = e.getBoundingClientRect(),
               o = x.Fu(s, i.left, i.right, 0, 1),
               r = x.OQ(o, 0, 1),
               h = this.props.video;
-            h.SetMute(o < 0.01), h.SetVolume(r);
+            (h.SetMute(o < 0.01), h.SetVolume(r));
           }
           render() {
             let e = this.props.video,
@@ -830,11 +832,11 @@
             });
           }
         };
-        M([l.oI], H.prototype, "OnMouseDown", 1),
+        (M([l.oI], H.prototype, "OnMouseDown", 1),
           M([l.oI], H.prototype, "OnMouseMove", 1),
           M([l.oI], H.prototype, "OnMouseUp", 1),
           M([B.XI], H.prototype, "SetVolumeWithCoord", 1),
-          (H = M([f.PA], H));
+          (H = M([f.PA], H)));
         var Ve = c(26795),
           Ie = Object.defineProperty,
           Re = Object.getOwnPropertyDescriptor,
@@ -845,7 +847,7 @@
               h--
             )
               (u = e[h]) && (r = (o ? u(s, i, r) : u(r)) || r);
-            return o && r && Ie(s, i, r), r;
+            return (o && r && Ie(s, i, r), r);
           };
         const fe = 3200,
           U = 15;
@@ -858,7 +860,7 @@
           m_elMouseDown = null;
           m_listeners = new g.Ji();
           constructor(e) {
-            super(e),
+            (super(e),
               (this.state = {
                 bMountControls: !1,
                 bControlsVisible: !1,
@@ -866,7 +868,7 @@
                 video: null,
                 nResizedHeight: null,
                 bFullscreen: !1,
-              });
+              }));
           }
           StopVideo() {
             let e = this.state.video;
@@ -884,7 +886,7 @@
             e && e.StopPlaybackTillUserInput();
           }
           componentDidUpdate(e, s) {
-            !s.bMountControls && this.state.bMountControls
+            (!s.bMountControls && this.state.bMountControls
               ? setTimeout(() => {
                   this.setState((o) => ({
                     bControlsVisible: o.bMountControls,
@@ -896,7 +898,7 @@
                 !this.state.video.IsPaused() &&
                 this.m_schUnmountControls.Schedule(2e3, this.UmountControls),
               this.props.steamIDBroadcast !== e.steamIDBroadcast &&
-                this.BindVideoRef(this.m_elVideo);
+                this.BindVideoRef(this.m_elVideo));
             const i = this.props.nAppIDVOD;
             i &&
               (s.strInitialCapsuleImageUrl === void 0 || e.nAppIDVOD != i) &&
@@ -912,13 +914,13 @@
                 });
           }
           componentWillUnmount() {
-            this.m_listeners.Unregister(),
+            (this.m_listeners.Unregister(),
               this.m_schHideControls.Cancel(),
               this.m_schUnmountControls.Cancel(),
-              this.StopVideo();
+              this.StopVideo());
           }
           BindBroadcastPlayerRef(e) {
-            this.m_listeners.Unregister(),
+            (this.m_listeners.Unregister(),
               (this.m_elBroadcastPlayer = e),
               e &&
                 (this.m_listeners.AddEventListener(
@@ -940,11 +942,11 @@
                   e,
                   "msfullscreenchange",
                   this.OnFullscreenChange,
-                ));
+                )));
           }
           BindVideoRef(e) {
             let s = null;
-            this.StopVideo(),
+            (this.StopVideo(),
               this.props.steamIDBroadcast
                 ? e &&
                   (s = v.BroadcastWatchStore.CreateBroadcastVideo(
@@ -977,32 +979,32 @@
                   : s.Play()),
               this.setState({ video: s }),
               this.props.fnSetBroadcastVideo?.(s),
-              (this.m_elVideo = e);
+              (this.m_elVideo = e));
           }
           OnMouseDown(e) {
-            (this.m_bMouseDown = !0),
+            ((this.m_bMouseDown = !0),
               (this.m_elMouseDown = e.currentTarget),
               this.m_elMouseDown.ownerDocument.defaultView?.addEventListener(
                 "mouseup",
                 this.OnMouseUp,
-              );
+              ));
           }
           OnMouseUp(e) {
-            (this.m_bMouseDown = !1),
+            ((this.m_bMouseDown = !1),
               this.m_elMouseDown?.ownerDocument.defaultView?.removeEventListener(
                 "mouseup",
                 this.OnMouseUp,
               ),
-              this.m_schHideControls.Schedule(fe, this.HideControls);
+              this.m_schHideControls.Schedule(fe, this.HideControls));
           }
           OnMouseMove(e) {
-            this.m_schHideControls.Cancel(),
+            (this.m_schHideControls.Cancel(),
               this.m_schUnmountControls.Cancel(),
               this.state.bMountControls
                 ? this.state.bControlsVisible ||
                   this.setState({ bControlsVisible: !0 })
                 : this.setState({ bMountControls: !0 }),
-              this.m_schHideControls.Schedule(fe, this.HideControls);
+              this.m_schHideControls.Schedule(fe, this.HideControls));
           }
           OnMouseLeave(e) {
             this.HideControls();
@@ -1045,7 +1047,7 @@
             let i = s.GetBroadcastInfo();
             if (!i) return;
             let o = (0, G.k2)(`${re.TS.STORE_BASE_URL}app/${i.m_strAppId}`);
-            this.props.onOpenLinkInNewWindow(e, o), e.stopPropagation();
+            (this.props.onOpenLinkInNewWindow(e, o), e.stopPropagation());
           }
           GetContextMenuItems() {
             let e = [],
@@ -1124,12 +1126,12 @@
                 u &&
                 this.state.strInitialCapsuleImageUrl;
             let T = "videoContainer";
-            h || (T += " HidePlayerControls"),
+            (h || (T += " HidePlayerControls"),
               s && (T += " VideoPaused"),
               this.state.bFullscreen && (T += " fullscreenVideo"),
-              this.props.classes && (T += " " + this.props.classes);
+              this.props.classes && (T += " " + this.props.classes));
             let j = [];
-            !this.state.bFullscreen &&
+            (!this.state.bFullscreen &&
               this.props.actions &&
               (j = j.concat(this.props.actions)),
               !this.state.bFullscreen &&
@@ -1155,7 +1157,7 @@
                   },
                   "FullscreenToggle",
                 ),
-              );
+              ));
             const X = r && !this.BHideVideoControls(),
               K = r && !this.state.bFullscreen,
               O =
@@ -1233,7 +1235,7 @@
             });
           }
         };
-        d([l.oI], C.prototype, "BindBroadcastPlayerRef", 1),
+        (d([l.oI], C.prototype, "BindBroadcastPlayerRef", 1),
           d([l.oI], C.prototype, "BindVideoRef", 1),
           d([l.oI], C.prototype, "OnMouseDown", 1),
           d([l.oI], C.prototype, "OnMouseUp", 1),
@@ -1248,7 +1250,7 @@
           d([l.oI], C.prototype, "CloseStats", 1),
           d([l.oI], C.prototype, "OnToggleFullscreen", 1),
           d([l.oI], C.prototype, "OnFullscreenChange", 1),
-          (C = d([f.PA], C));
+          (C = d([f.PA], C)));
         let de = class extends P.Component {
           render() {
             const { video: e } = this.props;
@@ -1358,8 +1360,8 @@
             });
           }
         }
-        d([l.oI], ce.prototype, "OnJumpBackward", 1),
-          d([l.oI], ce.prototype, "OnJumpForward", 1);
+        (d([l.oI], ce.prototype, "OnJumpBackward", 1),
+          d([l.oI], ce.prototype, "OnJumpForward", 1));
         const Ne = (0, f.PA)((e) => {
           if (e.video.IsBroadcastClip() || e.video.IsBroadcastVOD())
             return null;
@@ -1405,10 +1407,10 @@
             });
           }
         };
-        d([l.oI], te.prototype, "OnTogglePlayPause", 1), (te = d([f.PA], te));
+        (d([l.oI], te.prototype, "OnTogglePlayPause", 1), (te = d([f.PA], te)));
         let F = class extends P.Component {
           constructor(e) {
-            super(e), (0, B.Gn)(this), (this.video = e.video);
+            (super(e), (0, B.Gn)(this), (this.video = e.video));
           }
           componentDidUpdate() {
             this.video = this.props.video;
@@ -1444,13 +1446,13 @@
             });
           }
         };
-        d([B.sH], F.prototype, "video", 2),
+        (d([B.sH], F.prototype, "video", 2),
           d([B.EW], F.prototype, "has_previous_marker", 1),
           d([l.oI], F.prototype, "OnJumpToPreviousMarkerClicked", 1),
-          (F = d([f.PA], F));
+          (F = d([f.PA], F)));
         let W = class extends P.Component {
           constructor(e) {
-            super(e), (0, B.Gn)(this), (this.video = e.video);
+            (super(e), (0, B.Gn)(this), (this.video = e.video));
           }
           componentDidUpdate() {
             this.video = this.props.video;
@@ -1486,10 +1488,10 @@
             });
           }
         };
-        d([B.sH], W.prototype, "video", 2),
+        (d([B.sH], W.prototype, "video", 2),
           d([B.EW], W.prototype, "has_next_marker", 1),
           d([l.oI], W.prototype, "OnJumpToNextMarkerClicked", 1),
-          (W = d([f.PA], W));
+          (W = d([f.PA], W)));
         const he = (e) => {
           let s = () => e.onMouseEnter(e.pos);
           return (0, t.jsx)("div", {
@@ -1538,7 +1540,7 @@
           m_elSlider = P.createRef();
           m_rectSlider = void 0;
           constructor(e) {
-            super(e),
+            (super(e),
               (this.state = {
                 nGrabberMouseDownTime: 0,
                 bGrabberMouseDown: !1,
@@ -1547,14 +1549,14 @@
                 bStartMouseDown: !1,
                 bEndMouseDown: !1,
                 thumbnailURL: "",
-              });
+              }));
           }
           OnMouseDown(e, s) {
             const i = this.m_elSlider.current;
             if (i) {
-              e.persist(), (this.m_rectSlider = i.getBoundingClientRect());
+              (e.persist(), (this.m_rectSlider = i.getBoundingClientRect()));
               let o = {};
-              s === "start"
+              (s === "start"
                 ? ((o = { bStartMouseDown: !0 }), e.stopPropagation())
                 : s === "end"
                   ? ((o = { bEndMouseDown: !0 }), e.stopPropagation())
@@ -1567,14 +1569,14 @@
                 i.ownerDocument.defaultView?.addEventListener(
                   "mouseup",
                   this.OnMouseUp,
-                );
+                ));
             }
           }
           OnMouseMove(e) {
             this.AdjustSliderForClientX(e.clientX);
           }
           OnMouseUp(e) {
-            this.state.bStartMouseDown
+            (this.state.bStartMouseDown
               ? this.setState({ bStartMouseDown: !1 })
               : this.state.bEndMouseDown
                 ? this.setState({ bEndMouseDown: !1 })
@@ -1591,7 +1593,7 @@
                 this.m_elSlider.current.ownerDocument.defaultView?.removeEventListener(
                   "mouseup",
                   this.OnMouseUp,
-                ));
+                )));
           }
           OnKeyDown(e) {
             e.keyCode == R.ek
@@ -1671,13 +1673,13 @@
             let K = (0, me.ap)(e.GetPlaybackTime()),
               O = (0, me.ap)(this.state.nHoverValue ?? 0),
               N = "STV_timelineContainer";
-            this.state.bGrabberMouseDown && (N += " grabberDown"),
-              e.IsTimelineMapActive() && (N += " minimapActive");
+            (this.state.bGrabberMouseDown && (N += " grabberDown"),
+              e.IsTimelineMapActive() && (N += " minimapActive"));
             let ue = "";
-            (i = s ? i : o),
+            ((i = s ? i : o),
               i > 100
                 ? (ue = " grabberOffScreenRight grabberOffscreen")
-                : i < 0 && (ue = " grabberOffScreenLeft grabberOffscreen");
+                : i < 0 && (ue = " grabberOffScreenLeft grabberOffscreen"));
             let be = [];
             e.GetTimelineMarkers().forEach((V, pe) => {
               let J = e.GetPercentOffsetFromTime(V.nTime, v.a0.Timeline);
@@ -1834,7 +1836,7 @@
             });
           }
         };
-        d([l.oI], k.prototype, "OnMouseDown", 1),
+        (d([l.oI], k.prototype, "OnMouseDown", 1),
           d([l.oI], k.prototype, "OnMouseMove", 1),
           d([l.oI], k.prototype, "OnMouseUp", 1),
           d([l.oI], k.prototype, "OnKeyDown", 1),
@@ -1844,7 +1846,7 @@
           d([l.oI], k.prototype, "OnSegmentClick", 1),
           d([l.oI], k.prototype, "OnMarkerMouseEnter", 1),
           d([l.oI], k.prototype, "OnMarkerMouseLeave", 1),
-          (k = d([f.PA], k));
+          (k = d([f.PA], k)));
         let se = class extends P.Component {
           state = { info: null };
           static getDerivedStateFromProps(e, s) {
@@ -1990,11 +1992,11 @@
         d([l.oI], Pe.prototype, "showContextMenu", 1);
         let I = class extends P.Component {
           constructor(e) {
-            super(e), (this.state = { sizableRegion: [] });
+            (super(e), (this.state = { sizableRegion: [] }));
           }
           async AddLinkRegion() {
             let e = this.state.sizableRegion.length;
-            this.state.sizableRegion.push({
+            (this.state.sizableRegion.push({
               xPosPct: 2.5 + e,
               yPosPct: 2.5 + e,
               widthPct: 20,
@@ -2002,7 +2004,7 @@
             }),
               this.setState({ sizableRegion: this.state.sizableRegion }, () =>
                 this.OnSaveRegions(),
-              );
+              ));
           }
           componentDidUpdate(e) {
             e.linkRegions.length == 0 &&
@@ -2012,7 +2014,7 @@
           }
           async LoadLinkRegion(e, s) {
             let i = this.state.sizableRegion.length;
-            this.state.sizableRegion.push({
+            (this.state.sizableRegion.push({
               xPosPct: e.left,
               yPosPct: e.top,
               widthPct: e.width,
@@ -2021,14 +2023,14 @@
               link_description: e.link_description,
               link_index: e.link_index,
             }),
-              await this.setState({ sizableRegion: this.state.sizableRegion });
+              await this.setState({ sizableRegion: this.state.sizableRegion }));
           }
           OnSaveRegions() {
             let e;
             e = { links: [] };
             for (let s = 0; s < this.state.sizableRegion.length; s++) {
               let i;
-              (i = {
+              ((i = {
                 left: Math.floor(this.state.sizableRegion[s].xPosPct * 100),
                 top: Math.floor(this.state.sizableRegion[s].yPosPct * 100),
                 width: Math.floor(this.state.sizableRegion[s].widthPct * 100),
@@ -2037,21 +2039,21 @@
                 link_description: this.state.sizableRegion[s].link_description,
                 link_index: s,
               }),
-                e.links.push(i);
+                e.links.push(i));
             }
             this.props.onSaveLinkRegions?.(e);
           }
           async DeleteRegion(e) {
-            this.state.sizableRegion.splice(e, 1),
+            (this.state.sizableRegion.splice(e, 1),
               console.log("keys: ", this.state.sizableRegion.keys),
               this.setState({ sizableRegion: this.state.sizableRegion }, () =>
                 this.OnSaveRegions(),
-              );
+              ));
           }
           async UpdatePanel(e, s) {
             const i = [...this.state.sizableRegion];
-            (i[e] = s),
-              this.setState({ sizableRegion: i }, () => this.OnSaveRegions());
+            ((i[e] = s),
+              this.setState({ sizableRegion: i }, () => this.OnSaveRegions()));
           }
           render() {
             return (0, t.jsxs)("div", {
@@ -2123,12 +2125,12 @@
             });
           }
         };
-        d([l.oI], I.prototype, "AddLinkRegion", 1),
+        (d([l.oI], I.prototype, "AddLinkRegion", 1),
           d([l.oI], I.prototype, "LoadLinkRegion", 1),
           d([l.oI], I.prototype, "OnSaveRegions", 1),
           d([l.oI], I.prototype, "DeleteRegion", 1),
           d([l.oI], I.prototype, "UpdatePanel", 1),
-          (I = d([f.PA], I));
+          (I = d([f.PA], I)));
       },
       14596: ($, Y, c) => {
         "use strict";
@@ -2153,7 +2155,7 @@
               L--
             )
               (x = n[L]) && (a = (b ? x(g, p, a) : x(a)) || a);
-            return b && a && ie(g, p, a), a;
+            return (b && a && ie(g, p, a), a);
           },
           ne = ((n) => (
             (n.topleft = "topleft"),
@@ -2181,7 +2183,7 @@
             this.m_listeners.Unregister();
           }
           constructor(n) {
-            super(n),
+            (super(n),
               (this.state = {
                 curLeftPosPct: this.props.xPosPct,
                 curTopPosPct: this.props.yPosPct,
@@ -2201,13 +2203,13 @@
               (this.m_aspectRatio =
                 this.props.heightPct > 0 && this.props.widthPct > 0
                   ? this.props.widthPct / this.props.heightPct
-                  : 1);
+                  : 1));
           }
           LinkRegionBoxRef(n) {
             this.m_elLinkRegionBox = n;
           }
           OnMouseDown(n, g) {
-            this.m_elLinkRegionBox?.parentElement &&
+            (this.m_elLinkRegionBox?.parentElement &&
               this.m_elLinkRegionBox.ownerDocument.defaultView &&
               ((this.m_fnMouseUp = (p) => {
                 this.OnMouseUp(p, g);
@@ -2239,7 +2241,7 @@
                 this.m_fnMouseUp,
               )),
               n.preventDefault(),
-              n.stopPropagation();
+              n.stopPropagation());
           }
           OnMouseMove(n, g) {
             if (this.state.EdgeDown !== void 0) {
@@ -2321,7 +2323,7 @@
                 default:
                   break;
               }
-              n.preventDefault(), n.stopPropagation();
+              (n.preventDefault(), n.stopPropagation());
             }
           }
           IsValidPct(n) {
@@ -2354,7 +2356,7 @@
                 this.props.heightMinPct || 0,
                 this.props.heightMaxPct || 100,
               );
-            this.props.bLockAspectRatio &&
+            (this.props.bLockAspectRatio &&
               (n.curLeftPosPct !== void 0 || n.curRightPosPct !== void 0
                 ? (x = L / this.m_aspectRatio)
                 : (L = x * this.m_aspectRatio)),
@@ -2363,7 +2365,7 @@
                 : (a = 100 - (b + L)),
               n.curTopPosPct !== void 0
                 ? (g = 100 - p - x)
-                : (p = 100 - (g + x));
+                : (p = 100 - (g + x)));
             const l = 100 - a - b,
               re = 100 - p - g;
             this.IsValidPct(b) &&
@@ -2416,7 +2418,7 @@
             );
           }
           OnMouseUp(n, g) {
-            this.setState({
+            (this.setState({
               curWidthPct:
                 100 - this.state.curRightPosPct - this.state.curLeftPosPct,
             }),
@@ -2433,7 +2435,7 @@
                 link_url: this.state.text_link_url,
                 link_description: this.state.text_link_description,
               }),
-              this.m_listeners.Unregister();
+              this.m_listeners.Unregister());
           }
           async HandleDelete() {
             this.props.deleteFn && this.props.deleteFn(this.props.index);
@@ -2455,7 +2457,7 @@
               : !1;
           }
           OnSaveLink() {
-            (this.m_strDescription = this.state.text_link_description ?? ""),
+            ((this.m_strDescription = this.state.text_link_description ?? ""),
               this.setState({ bEditingLink: !this.state.bEditingLink }),
               this.props.updateFn(this.props.index, {
                 xPosPct: this.state.curLeftPosPct,
@@ -2464,7 +2466,7 @@
                 heightPct: this.state.curHeightPct,
                 link_url: this.state.text_link_url,
                 link_description: this.state.text_link_description,
-              });
+              }));
           }
           OnEditLink() {
             this.setState({ bEditingLink: !this.state.bEditingLink });
@@ -2617,7 +2619,7 @@
             );
           }
         };
-        y([f.oI], S.prototype, "LinkRegionBoxRef", 1),
+        (y([f.oI], S.prototype, "LinkRegionBoxRef", 1),
           y([f.oI], S.prototype, "OnMouseDown", 1),
           y([f.oI], S.prototype, "OnMouseMove", 1),
           y([f.oI], S.prototype, "OnMouseUp", 1),
@@ -2626,7 +2628,7 @@
           y([f.oI], S.prototype, "OnSetLinkDescriptionChange", 1),
           y([f.oI], S.prototype, "OnSaveLink", 1),
           y([f.oI], S.prototype, "OnEditLink", 1),
-          (S = y([P.PA], S));
+          (S = y([P.PA], S)));
       },
     },
   ]);

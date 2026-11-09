@@ -324,8 +324,8 @@ function Ve(e) {
               break;
             case `dropdown`: {
               let e = r.reference.width;
-              r.floating.width > e && e < 200 && (e = r.floating.width),
-                (o.width = `${e}px`);
+              (r.floating.width > e && e < 200 && (e = r.floating.width),
+                (o.width = `${e}px`));
             }
           }
           typeof e.width == `function` &&
@@ -334,7 +334,7 @@ function Ve(e) {
               unTargetWidth: r.reference.width,
             }));
           let s = typeof t == `number` ? `${t}px` : `var(--spacing-${t})`;
-          (o.maxHeight =
+          ((o.maxHeight =
             typeof e.maxHeight == `function`
               ? e.maxHeight({ unAvailableHeight: a, gutter: s })
               : typeof e.maxHeight == `number`
@@ -343,7 +343,7 @@ function Ve(e) {
                   ? `${a - t}px`
                   : `calc( ${a}px - var(--spacing-${t}) )`),
             Object.assign(i.floating.style, o),
-            i.floating.style.setProperty(`--popover-max-height`, o.maxHeight);
+            i.floating.style.setProperty(`--popover-max-height`, o.maxHeight));
         },
       }),
     ),
@@ -556,7 +556,7 @@ function kt() {
   return o(_) === `desktop`;
 }
 function At() {
-  kt() && s(_), `location` in window && location.reload();
+  (kt() && s(_), `location` in window && location.reload());
 }
 var jt = `K8SI0hUSiGE-`,
   Mt = `BhYfjDaMWFs-`,
@@ -577,7 +577,7 @@ function Ft(e) {
     interactions: {
       hover: (e) => {
         let t = { ...e, delay: { open: r, close: 0 } };
-        return i && (t = { ...t, handleClose: null }), t;
+        return (i && (t = { ...t, handleClose: null }), t);
       },
     },
     presentation: `anchor`,
@@ -864,7 +864,7 @@ function Ht(e) {
       });
 }
 var Y = {};
-(Y.arabic = () =>
+((Y.arabic = () =>
   a(() => import(`./globalfooter_arabic.js`), [], import.meta.url)),
   (Y.brazilian = () =>
     a(() => import(`./globalfooter_brazilian.js`), [], import.meta.url)),
@@ -927,7 +927,7 @@ var Y = {};
   (Y.ukrainian = () =>
     a(() => import(`./globalfooter_ukrainian.js`), [], import.meta.url)),
   (Y.vietnamese = () =>
-    a(() => import(`./globalfooter_vietnamese.js`), [], import.meta.url));
+    a(() => import(`./globalfooter_vietnamese.js`), [], import.meta.url)));
 async function Ut(e) {
   if (Y[e]) return await Y[e]();
 }

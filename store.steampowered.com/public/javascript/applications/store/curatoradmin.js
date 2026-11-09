@@ -10,7 +10,7 @@ var c = e(r()),
   u = class extends c.Component {
     state = { bIsLoading: !0 };
     componentDidMount() {
-      s.Get(), this.setState({ bIsLoading: !1 });
+      (s.Get(), this.setState({ bIsLoading: !1 }));
     }
     render() {
       return this.state.bIsLoading

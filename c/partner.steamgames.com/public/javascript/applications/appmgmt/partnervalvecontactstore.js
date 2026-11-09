@@ -8,22 +8,22 @@ import { _ } from "./axiosutils.js";
 import { _ } from "./importexport.js";
 function _(_) {
   let _ = new Date(_.getTime());
-  return _.setHours(0, 0, 0, 0), _;
+  return (_.setHours(0, 0, 0, 0), _);
 }
 function _(_) {
   let _ = new Date(_.getTime());
-  return _.setDate(1), _.setHours(0, 0, 0, 0), _;
+  return (_.setDate(1), _.setHours(0, 0, 0, 0), _);
 }
 function _(_, _) {
   let _ = new Date(_);
-  return _.setDate(_.getDate() + _), _;
+  return (_.setDate(_.getDate() + _), _);
 }
 function _(_, _) {
   return _.reduce((_, _) => {
     let _ = _(_),
       _ = Math.floor(_.getTime() / 1e3),
       _ = _.get(_) || [];
-    return _.set(_, [..._, _]), _;
+    return (_.set(_, [..._, _]), _);
   }, new Map());
 }
 var _ = _(_());
@@ -118,9 +118,9 @@ var _ = class _ {
       });
     return _?.status == 200 && _?.data.success == 1
       ? (_.data.contacts.forEach((_) => {
-          this.m_mapPartnerToContactInfo.has(_.partnerid) ||
+          (this.m_mapPartnerToContactInfo.has(_.partnerid) ||
             this.m_mapPartnerToContactInfo.set(_.partnerid, []),
-            this.m_mapPartnerToContactInfo.get(_.partnerid).push(_);
+            this.m_mapPartnerToContactInfo.get(_.partnerid).push(_));
         }),
         _.data.contacts)
       : [];
@@ -228,4 +228,3 @@ function _(_) {
     enabled: !!(_ && _.length > 0),
   });
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

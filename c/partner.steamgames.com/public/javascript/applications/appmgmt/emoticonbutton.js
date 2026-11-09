@@ -105,8 +105,8 @@ var _ = _(_(), 1),
   _ = class {
     m_decoratedAccumulator;
     constructor(_) {
-      _(_, `decorated accumulator cannot be null`),
-        (this.m_decoratedAccumulator = _);
+      (_(_, `decorated accumulator cannot be null`),
+        (this.m_decoratedAccumulator = _));
     }
     AppendText(_, _ = !1) {
       this.m_decoratedAccumulator.AppendText(_, _);
@@ -132,20 +132,20 @@ var _ = _(_(), 1),
         _ = _.indexOf(`
 `)
       )
-        _.push(_.substr(0, _)),
+        (_.push(_.substr(0, _)),
           _.push(_.createElement(`br`)),
-          (_ = _.substr(_ + 1));
-      _.length && _.push(_),
+          (_ = _.substr(_ + 1)));
+      (_.length && _.push(_),
         _.forEach((_) => {
           super.AppendNode(_);
-        });
+        }));
     }
   },
   _ = class extends _ {
     m_renderingLanguage;
     constructor(_, _, _) {
-      super(_, _ ?? (() => new _())),
-        (this.m_renderingLanguage = typeof _ == `string` ? _(_) : _);
+      (super(_, _ ?? (() => new _())),
+        (this.m_renderingLanguage = typeof _ == `string` ? _(_) : _));
     }
     UpdateOverrideLanguage(_) {
       this.m_renderingLanguage = _;
@@ -189,7 +189,7 @@ var _ = class _ {
       return this.m_bUserHasVolumePreference;
     }
     SetVolumePreference(_) {
-      (this.m_flVolumePreference = _), (this.m_bUserHasVolumePreference = !0);
+      ((this.m_flVolumePreference = _), (this.m_bUserHasVolumePreference = !0));
     }
     GetVolumePreference() {
       return this.m_flVolumePreference;
@@ -199,7 +199,7 @@ var _ = class _ {
     }
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
   },
   _ = (0, _.forwardRef)(function (_, _) {
@@ -984,7 +984,7 @@ function _(_) {
       let _ = document.createElement(`script`);
       _.src = `https://www.youtube.com/iframe_api`;
       let _ = document.getElementsByTagName(`script`)[0];
-      _.parentNode?.insertBefore(_, _), (window.onYouTubeIframeAPIReady = _);
+      (_.parentNode?.insertBefore(_, _), (window.onYouTubeIframeAPIReady = _));
     }
     _ && (_.includes(_) || _.push(_));
   }
@@ -1004,14 +1004,14 @@ var _ = class _ extends _.Component {
   m_bPlayerReady = !1;
   static s_nPlayerIndex = 0;
   constructor(_) {
-    super(_),
+    (super(_),
       (this.m_strPlayerID = `YoutubePlayer_` + _.s_nPlayerIndex++),
       (this.state = {
         bYoutubeLoaded: !1,
-      });
+      }));
   }
   componentWillUnmount() {
-    this.DestroyPlayer(), _(this.OnYoutubeScriptsReady);
+    (this.DestroyPlayer(), _(this.OnYoutubeScriptsReady));
   }
   shouldComponentUpdate(_, _) {
     if (!this.m_player) return !1;
@@ -1043,8 +1043,8 @@ var _ = class _ extends _.Component {
   DestroyPlayer() {
     if (this.m_player)
       try {
-        this.m_player.stopVideo && this.m_player.stopVideo(),
-          this.m_player.destroy && this.m_player.destroy();
+        (this.m_player.stopVideo && this.m_player.stopVideo(),
+          this.m_player.destroy && this.m_player.destroy());
       } catch {
       } finally {
         this.m_player = null;
@@ -1091,7 +1091,7 @@ var _ = class _ extends _.Component {
         },
       },
       _ = this.m_playerContainer.firstElementChild;
-    (this.m_bPlayerReady = !1), (this.m_player = new _.Player(_, _));
+    ((this.m_bPlayerReady = !1), (this.m_player = new _.Player(_, _)));
   }
   OnPlayerReady(_) {
     if (
@@ -1104,18 +1104,18 @@ var _ = class _ extends _.Component {
           strTitle: ``,
           strVideoID: ``,
         };
-      _.author && (_.strAuthor = _.author),
+      (_.author && (_.strAuthor = _.author),
         _.title && (_.strTitle = _.title),
         _.video_id && (_.strVideoID = _.video_id),
-        this.props.onVideoInfoChanged(_);
+        this.props.onVideoInfoChanged(_));
     }
-    this.props.width &&
+    (this.props.width &&
       this.props.height &&
       this.m_player?.setSize(this.props.width, this.props.height),
       this.props.forcePause
         ? this.ApplyForcePause()
         : this.props.autoplay && this.m_player?.playVideo(),
-      this.props.onPlayerReady && this.props.onPlayerReady();
+      this.props.onPlayerReady && this.props.onPlayerReady());
   }
   OnPlayerStateChange(_) {
     switch (_.data) {
@@ -1135,8 +1135,8 @@ var _ = class _ extends _.Component {
     }
   }
   OnError(_) {
-    console.log(`Youtube: Playback failed`, _),
-      this.props.onError && this.props.onError(_);
+    (console.log(`Youtube: Playback failed`, _),
+      this.props.onError && this.props.onError(_));
   }
   OnPlayerLeftView() {
     this.props.autopause &&
@@ -1167,14 +1167,14 @@ var _ = class _ extends _.Component {
     });
   }
 };
-_([_], _.prototype, `BindPlayerContainer`, null),
+(_([_], _.prototype, `BindPlayerContainer`, null),
   _([_], _.prototype, `OnYoutubeScriptsReady`, null),
   _([_], _.prototype, `CreatePlayer`, null),
   _([_], _.prototype, `OnPlayerReady`, null),
   _([_], _.prototype, `OnPlayerStateChange`, null),
   _([_], _.prototype, `OnError`, null),
   _([_], _.prototype, `OnPlayerLeftView`, null),
-  _([_], _.prototype, `PlayVideo`, null);
+  _([_], _.prototype, `PlayVideo`, null));
 function _(_) {
   let { video: _, children: _ } = _;
   return _(`youtube`)
@@ -1217,7 +1217,7 @@ function _(_) {
       return (
         _ && _(_),
         () => {
-          _(_), (_.current = null);
+          (_(_), (_.current = null));
         }
       );
     }, [_]),
@@ -2115,7 +2115,7 @@ function _(_) {
   try {
     let _ = `BEGIN:VCALENDAR\r
 `;
-    (_ += `VERSION:2.0\r
+    ((_ += `VERSION:2.0\r
 `),
       (_ += `BEGIN:VEVENT\r
 `),
@@ -2142,14 +2142,14 @@ function _(_) {
 `),
       (_ += `END:VCALENDAR\r
 `),
-      (_ = `data:text/calendar;charset=utf-8;base64,${_.fromByteArray(new TextEncoder().encode(_))}`);
+      (_ = `data:text/calendar;charset=utf-8;base64,${_.fromByteArray(new TextEncoder().encode(_))}`));
   } catch (_) {
     console.error(_);
   }
   let _ = `https://calendar.google.com/calendar/render?action=TEMPLATE`;
-  (_ += `&text=${encodeURI(_)}`),
+  ((_ += `&text=${encodeURI(_)}`),
     (_ += `&details=${encodeURI(_)}`),
-    (_ += `&dates=${encodeURI(_ + `/` + _)}`);
+    (_ += `&dates=${encodeURI(_ + `/` + _)}`));
   let _ = (_) => {
     if (`ReactNativeWebView` in window) {
       let _ = window.ReactNativeWebView,
@@ -2161,7 +2161,7 @@ function _(_) {
           strNotes: _,
           strLocation: _,
         };
-      _.postMessage(JSON.stringify(_)), _.preventDefault();
+      (_.postMessage(JSON.stringify(_)), _.preventDefault());
     }
   };
   return (0, _.jsxs)(`div`, {
@@ -2202,8 +2202,7 @@ function _(_) {
   if (
     ((_ =
       _ instanceof Array
-        ? _.map((_) => (_ ? _.toString() : ``))
-            .filter((_) => _.length > 0)
+        ? _.map((_) => (_ ? _.toString() : ``)).filter((_) => _.length > 0)
             .join(`
 `)
         : _.toString()),
@@ -2435,7 +2434,7 @@ var _ = `L3HaktJsWWA-`,
           target: _,
         },
         _ = `presenter-hover-` + Math.floor(Math.random() * 1e8);
-      (this.m_fnHidePopup = () =>
+      ((this.m_fnHidePopup = () =>
         _.sm_embeddedElements.HideElement(_.ownerDocument, _)),
         window.addEventListener(`scroll`, this.OnScroll),
         (this.m_nScrollPosAtHoverStart = window.scrollY),
@@ -2450,7 +2449,7 @@ var _ = `L3HaktJsWWA-`,
             }),
           }),
           _,
-        );
+        ));
     }
     OnLeave(_) {
       this.ClosePopup();
@@ -2467,10 +2466,10 @@ var _ = `L3HaktJsWWA-`,
       });
     }
   };
-_([_], _.prototype, `ClosePopup`, null),
+(_([_], _.prototype, `ClosePopup`, null),
   _([_], _.prototype, `OnScroll`, null),
   _([_], _.prototype, `OnHover`, null),
-  _([_], _.prototype, `OnLeave`, null);
+  _([_], _.prototype, `OnLeave`, null));
 function _(_) {
   let {
       photo: _,
@@ -2546,10 +2545,10 @@ var _ = `_6Ymd3Ej4NCU-`,
   _ = `nCS2TzxRijY-`,
   _ = class extends _.Component {
     constructor(_) {
-      super(_),
+      (super(_),
         (this.state = {
           activeIndex: _.initialActiveIndex || 0,
-        });
+        }));
     }
     render() {
       let { config: _ } = this.props,
@@ -2853,10 +2852,10 @@ var _ = _((_) => {
   _ = class extends _.Component {
     m_disposeEmoticonStore;
     constructor(_) {
-      super(_),
+      (super(_),
         (this.state = {
           strSearchText: ``,
-        });
+        }));
       let _ = this.props.emoticonStore;
       _.is_initialized ||
         (_.UpdateEmoticonList(),
@@ -2934,10 +2933,10 @@ _ = _([_], _);
 var _ = class extends _.Component {
     m_disposeEmoticonStore;
     constructor(_) {
-      super(_),
+      (super(_),
         (this.state = {
           strSearchText: ``,
-        });
+        }));
       let _ = this.props.emoticonStore;
       _.is_initialized ||
         (_.UpdateEmoticonList(),
@@ -2975,10 +2974,10 @@ var _ = class extends _.Component {
   _ = class extends _.Component {
     m_disposeEmoticonStore;
     constructor(_) {
-      super(_),
+      (super(_),
         (this.state = {
           strSearchText: ``,
-        });
+        }));
       let _ = this.props.emoticonStore;
       _.is_initialized ||
         (_.UpdateEmoticonList(),
@@ -3615,7 +3614,7 @@ var _ = 1576780700,
         this.BHaveUnseenEmoticons() && _)
       ) {
         let _ = this.GetNewestIndicatorTime();
-        (!_ || _ < _) && (_ = _), _(`rtLastAckedNewEmoticons`, _);
+        ((!_ || _ < _) && (_ = _), _(`rtLastAckedNewEmoticons`, _));
       }
     }
     GetNewestIndicatorTime() {
@@ -3624,7 +3623,7 @@ var _ = 1576780700,
         _ = _.GetTimeReceivedNewestEmoticon();
       _ && (_ = _);
       let _ = _.GetTimeReceivedForStickerOrEffect();
-      return (_ = Math.max(_, _)), _ > -(2 ** 53 - 1) ? _ : void 0;
+      return ((_ = Math.max(_, _)), _ > -(2 ** 53 - 1) ? _ : void 0);
     }
     BHaveUnseenEmoticons() {
       let { rtLastAckedNewEmoticons: _ } = this.props,
@@ -3671,56 +3670,5 @@ var _ = 1576780700,
       );
     }
   };
-_([_], _.prototype, `OnEmoticonClick`, null), (_ = _([_], _));
+(_([_], _.prototype, `OnEmoticonClick`, null), (_ = _([_], _)));
 var _ = _;
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

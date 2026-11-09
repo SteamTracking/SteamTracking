@@ -8,4 +8,3 @@ function _() {
   let _ = window.GetUsabilityTracker;
   if (_) return _();
 }
-export { _, _, _, _, _, _, _ };

@@ -10,7 +10,7 @@ var i = e((e, i) => {
     function n(r) {
       if (t[r]) return t[r].exports;
       var i = (t[r] = { i: r, l: !1, exports: {} });
-      return e[r].call(i.exports, i, i.exports, n), (i.l = !0), i.exports;
+      return (e[r].call(i.exports, i, i.exports, n), (i.l = !0), i.exports);
     }
     return (
       (n.m = e),
@@ -19,10 +19,10 @@ var i = e((e, i) => {
         n.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r });
       }),
       (n.r = function (e) {
-        typeof Symbol < `u` &&
+        (typeof Symbol < `u` &&
           Symbol.toStringTag &&
           Object.defineProperty(e, Symbol.toStringTag, { value: `Module` }),
-          Object.defineProperty(e, "__esModule", { value: !0 });
+          Object.defineProperty(e, "__esModule", { value: !0 }));
       }),
       (n.t = function (e, t) {
         if (
@@ -55,7 +55,7 @@ var i = e((e, i) => {
             : function () {
                 return e;
               };
-        return n.d(t, `a`, t), t;
+        return (n.d(t, `a`, t), t);
       }),
       (n.o = function (e, t) {
         return Object.prototype.hasOwnProperty.call(e, t);
@@ -83,7 +83,7 @@ var i = e((e, i) => {
       var r = n(6);
       function i() {}
       function a() {}
-      (a.resetWarningCache = i),
+      ((a.resetWarningCache = i),
         (e.exports = function () {
           function e(e, t, n, i, a, o) {
             if (o !== r) {
@@ -120,8 +120,8 @@ var i = e((e, i) => {
             checkPropTypes: a,
             resetWarningCache: i,
           };
-          return (n.PropTypes = n), n;
-        });
+          return ((n.PropTypes = n), n);
+        }));
     },
     function (e, t, n) {
       e.exports = `SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED`;
@@ -195,17 +195,17 @@ var i = e((e, i) => {
       function d(e, t) {
         for (var n = 0; n < t.length; n++) {
           var r = t[n];
-          (r.enumerable = r.enumerable || !1),
+          ((r.enumerable = r.enumerable || !1),
             (r.configurable = !0),
             `value` in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
+            Object.defineProperty(e, r.key, r));
         }
       }
       function f(e, t) {
         return (f = Object.setPrototypeOf
           ? Object.setPrototypeOf.bind()
           : function (e, t) {
-              return (e.__proto__ = t), e;
+              return ((e.__proto__ = t), e);
             })(e, t);
       }
       function ne(e) {
@@ -279,11 +279,11 @@ var i = e((e, i) => {
             throw TypeError(
               `Super expression must either be null or a function`,
             );
-          (e.prototype = Object.create(t && t.prototype, {
+          ((e.prototype = Object.create(t && t.prototype, {
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
             Object.defineProperty(e, "prototype", { writable: !1 }),
-            t && f(e, t);
+            t && f(e, t));
         })(a, e);
         var t,
           n,
@@ -382,8 +382,8 @@ var i = e((e, i) => {
                   r = [[], [], [], [], [], []],
                   i = e.clone().subtract(1, `months`);
                 i.date(i.daysInMonth()).startOf(`week`);
-                for (var a = i.clone().add(42, `d`), o = 0; i.isBefore(a); )
-                  ie(r, o++).push(this.renderDay(i, t, n)), i.add(1, `d`);
+                for (var a = i.clone().add(42, `d`), o = 0; i.isBefore(a);)
+                  (ie(r, o++).push(this.renderDay(i, t, n)), i.add(1, `d`));
                 return r.map(function (e, t) {
                   return c.a.createElement(
                     `tr`,
@@ -477,17 +477,17 @@ var i = e((e, i) => {
       function se(e, t) {
         for (var n = 0; n < t.length; n++) {
           var r = t[n];
-          (r.enumerable = r.enumerable || !1),
+          ((r.enumerable = r.enumerable || !1),
             (r.configurable = !0),
             `value` in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
+            Object.defineProperty(e, r.key, r));
         }
       }
       function ce(e, t) {
         return (ce = Object.setPrototypeOf
           ? Object.setPrototypeOf.bind()
           : function (e, t) {
-              return (e.__proto__ = t), e;
+              return ((e.__proto__ = t), e);
             })(e, t);
       }
       function le(e) {
@@ -569,11 +569,11 @@ var i = e((e, i) => {
             throw TypeError(
               `Super expression must either be null or a function`,
             );
-          (e.prototype = Object.create(t && t.prototype, {
+          ((e.prototype = Object.create(t && t.prototype, {
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
             Object.defineProperty(e, "prototype", { writable: !1 }),
-            t && ce(e, t);
+            t && ce(e, t));
         })(a, e);
         var t,
           n,
@@ -652,13 +652,13 @@ var i = e((e, i) => {
                 var t,
                   n = this.props.selectedDate,
                   r = `rdtMonth`;
-                this.isDisabledMonth(e)
+                (this.isDisabledMonth(e)
                   ? (r += ` rdtDisabled`)
                   : (t = this._updateSelectedMonth),
                   n &&
                     n.year() === this.props.viewDate.year() &&
                     n.month() === e &&
-                    (r += ` rdtActive`);
+                    (r += ` rdtActive`));
                 var i = { key: e, className: r, "data-value": e, onClick: t };
                 return this.props.renderMonth
                   ? this.props.renderMonth(
@@ -728,17 +728,17 @@ var i = e((e, i) => {
       function y(e, t) {
         for (var n = 0; n < t.length; n++) {
           var r = t[n];
-          (r.enumerable = r.enumerable || !1),
+          ((r.enumerable = r.enumerable || !1),
             (r.configurable = !0),
             `value` in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
+            Object.defineProperty(e, r.key, r));
         }
       }
       function b(e, t) {
         return (b = Object.setPrototypeOf
           ? Object.setPrototypeOf.bind()
           : function (e, t) {
-              return (e.__proto__ = t), e;
+              return ((e.__proto__ = t), e);
             })(e, t);
       }
       function ge(e) {
@@ -812,11 +812,11 @@ var i = e((e, i) => {
             throw TypeError(
               `Super expression must either be null or a function`,
             );
-          (e.prototype = Object.create(t && t.prototype, {
+          ((e.prototype = Object.create(t && t.prototype, {
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
             Object.defineProperty(e, "prototype", { writable: !1 }),
-            t && b(e, t);
+            t && b(e, t));
         })(a, e);
         var t,
           n,
@@ -899,10 +899,10 @@ var i = e((e, i) => {
                 var t,
                   n = this.getSelectedYear(),
                   r = `rdtYear`;
-                this.isDisabledYear(e)
+                (this.isDisabledYear(e)
                   ? (r += ` rdtDisabled`)
                   : (t = this._updateSelectedYear),
-                  n === e && (r += ` rdtActive`);
+                  n === e && (r += ` rdtActive`));
                 var i = { key: e, className: r, "data-value": e, onClick: t };
                 return this.props.renderYear(
                   i,
@@ -937,8 +937,8 @@ var i = e((e, i) => {
                     i = r.endOf(`year`).dayOfYear() + 1;
                   i-- > 1;
                 )
-                  if (n(r.dayOfYear(i))) return (t[e] = !1), !1;
-                return (t[e] = !0), !0;
+                  if (n(r.dayOfYear(i))) return ((t[e] = !1), !1);
+                return ((t[e] = !0), !0);
               },
             },
           ]) && y(t.prototype, n),
@@ -968,17 +968,17 @@ var i = e((e, i) => {
       function E(e, t) {
         for (var n = 0; n < t.length; n++) {
           var r = t[n];
-          (r.enumerable = r.enumerable || !1),
+          ((r.enumerable = r.enumerable || !1),
             (r.configurable = !0),
             `value` in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
+            Object.defineProperty(e, r.key, r));
         }
       }
       function D(e, t) {
         return (D = Object.setPrototypeOf
           ? Object.setPrototypeOf.bind()
           : function (e, t) {
-              return (e.__proto__ = t), e;
+              return ((e.__proto__ = t), e);
             })(e, t);
       }
       function ye(e) {
@@ -1036,11 +1036,11 @@ var i = e((e, i) => {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
-          t &&
+          (t &&
             (r = r.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
         }
         return n;
       }
@@ -1093,11 +1093,11 @@ var i = e((e, i) => {
               throw TypeError(
                 `Super expression must either be null or a function`,
               );
-            (e.prototype = Object.create(t && t.prototype, {
+            ((e.prototype = Object.create(t && t.prototype, {
               constructor: { value: e, writable: !0, configurable: !0 },
             })),
               Object.defineProperty(e, "prototype", { writable: !1 }),
-              t && D(e, t);
+              t && D(e, t));
           })(a, e);
           var t,
             n,
@@ -1132,7 +1132,7 @@ var i = e((e, i) => {
                     n = this.state;
                   return (
                     this.getCounters().forEach(function (r, i) {
-                      i &&
+                      (i &&
                         r !== `ampm` &&
                         t.push(
                           c.a.createElement(
@@ -1144,7 +1144,7 @@ var i = e((e, i) => {
                             `:`,
                           ),
                         ),
-                        t.push(e.renderCounter(r, n[r]));
+                        t.push(e.renderCounter(r, n[r])));
                     }),
                     c.a.createElement(
                       `div`,
@@ -1253,22 +1253,28 @@ var i = e((e, i) => {
                     if (n === `ampm`) return this.toggleDayPart();
                     var i = {},
                       a = document.body;
-                    (i[n] = this[t](n)),
+                    ((i[n] = this[t](n)),
                       this.setState(i),
-                      (this.timer = setTimeout(function () {
-                        r.increaseTimer = setInterval(function () {
-                          (i[n] = r[t](n)), r.setState(i);
-                        }, 70);
-                      }, 500)),
+                      (this.timer = setTimeout(
+                        function () {
+                          r.increaseTimer = setInterval(
+                            function () {
+                              ((i[n] = r[t](n)), r.setState(i));
+                            },
+                            70,
+                          );
+                        },
+                        500,
+                      )),
                       (this.mouseUpListener = function () {
-                        clearTimeout(r.timer),
+                        (clearTimeout(r.timer),
                           clearInterval(r.increaseTimer),
                           r.props.setTime(n, parseInt(r.state[n], 10)),
                           a.removeEventListener(`mouseup`, r.mouseUpListener),
-                          a.removeEventListener(`touchend`, r.mouseUpListener);
+                          a.removeEventListener(`touchend`, r.mouseUpListener));
                       }),
                       a.addEventListener(`mouseup`, this.mouseUpListener),
-                      a.addEventListener(`touchend`, this.mouseUpListener);
+                      a.addEventListener(`touchend`, this.mouseUpListener));
                   }
                 },
               },
@@ -1276,8 +1282,8 @@ var i = e((e, i) => {
                 key: `toggleDayPart`,
                 value: function () {
                   var e = parseInt(this.state.hours, 10);
-                  e >= 12 ? (e -= 12) : (e += 12),
-                    this.props.setTime(`hours`, e);
+                  (e >= 12 ? (e -= 12) : (e += 12),
+                    this.props.setTime(`hours`, e));
                 },
               },
               {
@@ -1285,7 +1291,9 @@ var i = e((e, i) => {
                 value: function (e) {
                   var t = this.constraints[e],
                     n = parseInt(this.state[e], 10) + t.step;
-                  return n > t.max && (n = t.min + (n - (t.max + 1))), M(e, n);
+                  return (
+                    n > t.max && (n = t.min + (n - (t.max + 1))), M(e, n)
+                  );
                 },
               },
               {
@@ -1293,7 +1301,7 @@ var i = e((e, i) => {
                 value: function (e) {
                   var t = this.constraints[e],
                     n = parseInt(this.state[e], 10) - t.step;
-                  return n < t.min && (n = t.max + 1 - (t.min - n)), M(e, n);
+                  return (n < t.min && (n = t.max + 1 - (t.min - n)), M(e, n));
                 },
               },
               {
@@ -1365,7 +1373,7 @@ var i = e((e, i) => {
         return (N =
           Object.setPrototypeOf ||
           function (e, t) {
-            return (e.__proto__ = t), e;
+            return ((e.__proto__ = t), e);
           })(e, t);
       }
       function P(e) {
@@ -1438,7 +1446,7 @@ var i = e((e, i) => {
                   }),
                   (r.enableOnClickOutside = function () {
                     if (typeof document < `u` && !R[r._uid]) {
-                      I === void 0 &&
+                      (I === void 0 &&
                         (I = (function () {
                           if (
                             typeof window < `u` &&
@@ -1466,9 +1474,9 @@ var i = e((e, i) => {
                             );
                           }
                         })()),
-                        (R[r._uid] = !0);
+                        (R[r._uid] = !0));
                       var e = r.props.eventTypes;
-                      e.forEach || (e = [e]),
+                      (e.forEach || (e = [e]),
                         (L[r._uid] = function (e) {
                           var t;
                           r.componentNode !== null &&
@@ -1482,7 +1490,7 @@ var i = e((e, i) => {
                                   t.clientY)) ||
                               ((function (e, t, n) {
                                 if (e === t) return !0;
-                                for (; e.parentNode || e.host; ) {
+                                for (; e.parentNode || e.host;) {
                                   if (e.parentNode && we(e, t, n)) return !0;
                                   e = e.parentNode || e.host;
                                 }
@@ -1499,7 +1507,7 @@ var i = e((e, i) => {
                         }),
                         e.forEach(function (e) {
                           document.addEventListener(e, L[r._uid], z(P(r), e));
-                        });
+                        }));
                     }
                   }),
                   (r.disableOnClickOutside = function () {
@@ -1507,11 +1515,11 @@ var i = e((e, i) => {
                     var e = L[r._uid];
                     if (e && typeof document < `u`) {
                       var t = r.props.eventTypes;
-                      t.forEach || (t = [t]),
+                      (t.forEach || (t = [t]),
                         t.forEach(function (t) {
                           return document.removeEventListener(t, e, z(P(r), t));
                         }),
-                        delete L[r._uid];
+                        delete L[r._uid]);
                     }
                   }),
                   (r.getRef = function (e) {
@@ -1521,10 +1529,10 @@ var i = e((e, i) => {
                   r
                 );
               }
-              (a = n),
+              ((a = n),
                 ((r = o).prototype = Object.create(a.prototype)),
                 (r.prototype.constructor = r),
-                N(r, a);
+                N(r, a));
               var c = o.prototype;
               return (
                 (c.getInstance = function () {
@@ -1547,9 +1555,9 @@ var i = e((e, i) => {
                           i +
                           ` lacks a function for processing outside click events specified by the handleClickOutside config option.`,
                       );
-                    (this.componentNode = this.__getComponentNode()),
+                    ((this.componentNode = this.__getComponentNode()),
                       this.props.disableOnClickOutside ||
-                        this.enableOnClickOutside();
+                        this.enableOnClickOutside());
                   }
                 }),
                 (c.componentDidUpdate = function () {
@@ -1568,7 +1576,7 @@ var i = e((e, i) => {
                       i = {},
                       a = Object.keys(e);
                     for (r = 0; r < a.length; r++)
-                      (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                      ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                   })(t, [`excludeScrollbar`]);
                   return (
@@ -1616,11 +1624,11 @@ var i = e((e, i) => {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
-          t &&
+          (t &&
             (r = r.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
         }
         return n;
       }
@@ -1650,10 +1658,10 @@ var i = e((e, i) => {
       function Ae(e, t) {
         for (var n = 0; n < t.length; n++) {
           var r = t[n];
-          (r.enumerable = r.enumerable || !1),
+          ((r.enumerable = r.enumerable || !1),
             (r.configurable = !0),
             `value` in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
+            Object.defineProperty(e, r.key, r));
         }
       }
       function je(e, t, n) {
@@ -1667,17 +1675,17 @@ var i = e((e, i) => {
       function Me(e, t) {
         if (typeof t != `function` && t !== null)
           throw TypeError(`Super expression must either be null or a function`);
-        (e.prototype = Object.create(t && t.prototype, {
+        ((e.prototype = Object.create(t && t.prototype, {
           constructor: { value: e, writable: !0, configurable: !0 },
         })),
           Object.defineProperty(e, "prototype", { writable: !1 }),
-          t && Ne(e, t);
+          t && Ne(e, t));
       }
       function Ne(e, t) {
         return (Ne = Object.setPrototypeOf
           ? Object.setPrototypeOf.bind()
           : function (e, t) {
-              return (e.__proto__ = t), e;
+              return ((e.__proto__ = t), e);
             })(e, t);
       }
       function Pe(e) {
@@ -1820,14 +1828,14 @@ var i = e((e, i) => {
                 var t = r.state.currentView,
                   n = r.getUpdateOn(r.getFormat(`date`)),
                   i = r.state.viewDate.clone();
-                i[r.viewToMethod[t]](
+                (i[r.viewToMethod[t]](
                   parseInt(e.target.getAttribute(`data-value`), 10),
                 ),
                   t === `days` &&
                     (i.month(parseInt(e.target.getAttribute(`data-month`), 10)),
-                    i.year(parseInt(e.target.getAttribute(`data-year`), 10)));
+                    i.year(parseInt(e.target.getAttribute(`data-year`), 10))));
                 var a = { viewDate: i };
-                t === n
+                (t === n
                   ? ((a.selectedDate = i.clone()),
                     (a.inputValue = i.format(r.getFormat(`datetime`))),
                     r.props.open === void 0 &&
@@ -1836,26 +1844,26 @@ var i = e((e, i) => {
                       r._closeCalendar(),
                     r.props.onChange(i.clone()))
                   : r._showView(r.nextView[t], i),
-                  r.setState(a);
+                  r.setState(a));
               }),
               W(H(r), `_viewNavigate`, function (e, t) {
                 var n = r.state.viewDate.clone();
-                n.add(e, t),
+                (n.add(e, t),
                   e > 0
                     ? r.props.onNavigateForward(e, t)
                     : r.props.onNavigateBack(-e, t),
-                  r.setState({ viewDate: n });
+                  r.setState({ viewDate: n }));
               }),
               W(H(r), `_setTime`, function (e, t) {
                 var n = (r.getSelectedDate() || r.state.viewDate).clone();
-                n[e](t),
+                (n[e](t),
                   r.props.value ||
                     r.setState({
                       selectedDate: n,
                       viewDate: n.clone(),
                       inputValue: n.format(r.getFormat(`datetime`)),
                     }),
-                  r.props.onChange(n);
+                  r.props.onChange(n));
               }),
               W(H(r), `_openCalendar`, function () {
                 r.isOpen() || r.setState({ open: !0 }, r.props.onOpen);
@@ -1883,13 +1891,13 @@ var i = e((e, i) => {
                   var t = e.target ? e.target.value : e,
                     n = r.localMoment(t, r.getFormat(`datetime`)),
                     i = { inputValue: t };
-                  n.isValid()
+                  (n.isValid()
                     ? ((i.selectedDate = n),
                       (i.viewDate = n.clone().startOf(`month`)))
                     : (i.selectedDate = null),
                     r.setState(i, function () {
                       r.props.onChange(n.isValid() ? n : r.state.inputValue);
-                    });
+                    }));
                 }
               }),
               W(H(r), `_onInputKeyDown`, function (e) {
@@ -2012,7 +2020,7 @@ var i = e((e, i) => {
                 key: `getInitialDate`,
                 value: function () {
                   var e = this.localMoment();
-                  return e.hour(0).minute(0).second(0).millisecond(0), e;
+                  return (e.hour(0).minute(0).second(0).millisecond(0), e);
                 },
               },
               {
@@ -2116,7 +2124,7 @@ var i = e((e, i) => {
                 value: function (e, t, n, r) {
                   var i = {},
                     a = r ? `selectedDate` : `viewDate`;
-                  (i[a] = this.state[a].clone()[e](t, n)), this.setState(i);
+                  ((i[a] = this.state[a].clone()[e](t, n)), this.setState(i));
                 },
               },
               {
@@ -2156,7 +2164,7 @@ var i = e((e, i) => {
                   if (e !== this.props) {
                     var t = !1,
                       n = this.props;
-                    [
+                    ([
                       `locale`,
                       `utc`,
                       `displayZone`,
@@ -2169,7 +2177,7 @@ var i = e((e, i) => {
                       n.value &&
                         n.value !== e.value &&
                         this.setViewDate(n.value),
-                      this.checkTZ();
+                      this.checkTZ());
                   }
                 },
               },
@@ -2181,18 +2189,18 @@ var i = e((e, i) => {
                     n =
                       this.state.selectedDate &&
                       this.state.selectedDate.clone();
-                  e.locale && (t.locale(e.locale), n && n.locale(e.locale)),
+                  (e.locale && (t.locale(e.locale), n && n.locale(e.locale)),
                     e.utc
                       ? (t.utc(), n && n.utc())
                       : e.displayTimeZone
                         ? (t.tz(e.displayTimeZone),
                           n && n.tz(e.displayTimeZone))
-                        : (t.locale(), n && n.locale());
+                        : (t.locale(), n && n.locale()));
                   var r = { viewDate: t, selectedDate: n };
-                  n &&
+                  (n &&
                     n.isValid() &&
                     (r.inputValue = n.format(this.getFormat(`datetime`))),
-                    this.setState(r);
+                    this.setState(r));
                 },
               },
               {
@@ -2270,7 +2278,7 @@ var i = e((e, i) => {
         var n = typeof window < `u` && window.console;
         n && ((t ||= `warn`), n[t](`***react-datetime:` + e));
       }
-      W(Q, `propTypes`, {
+      (W(Q, `propTypes`, {
         value: Z,
         initialValue: Z,
         initialViewDate: Z,
@@ -2332,7 +2340,7 @@ var i = e((e, i) => {
             return t();
           },
         }),
-        W(Q, `moment`, o.a);
+        W(Q, `moment`, o.a));
       var Ie = De(
         (function (e) {
           Me(n, e);

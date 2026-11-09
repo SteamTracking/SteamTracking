@@ -623,7 +623,8 @@ import {
 import { _, _, _ } from "./collapseablesection.js";
 function _(_) {
   return () => (
-    (_ = (_ * 1664525 + 1013904223) % 4294967296), (_ >>> 0) / 4294967296
+    (_ = (_ * 1664525 + 1013904223) % 4294967296),
+    (_ >>> 0) / 4294967296
   );
 }
 function _() {
@@ -646,7 +647,7 @@ function _() {
         window.addEventListener(`popstate`, _),
         _(location.search),
         () => {
-          _.delete(_), window.removeEventListener(`popstate`, _);
+          (_.delete(_), window.removeEventListener(`popstate`, _));
         }
       );
     }, []),
@@ -676,7 +677,7 @@ function _(_, _) {
           if (!_.has(_)) return;
           _.delete(_);
         }
-        _
+        (_
           ? history.replaceState(
               history.state,
               ``,
@@ -687,7 +688,7 @@ function _(_, _) {
               ``,
               decodeURIComponent(`${window.location.pathname}?${_}`),
             ),
-          (0, _.startTransition)(_);
+          (0, _.startTransition)(_));
       },
       [_],
     ),
@@ -735,7 +736,7 @@ function _(_) {
           let _ = _[_];
           if (_.dataset.radioId && _.dataset.radioId === _) {
             let _ = _[(_ + _ + _.length) % _.length];
-            _.click(), _.focus();
+            (_.click(), _.focus());
           }
         }
     }, []),
@@ -807,15 +808,15 @@ function _(_) {
         if (!_)
           switch (_.key) {
             case ` `:
-              _(), _.preventDefault(), _.stopPropagation();
+              (_(), _.preventDefault(), _.stopPropagation());
               break;
             case `ArrowRight`:
             case `ArrowDown`:
-              _(_), _.preventDefault(), _.stopPropagation();
+              (_(_), _.preventDefault(), _.stopPropagation());
               break;
             case `ArrowLeft`:
             case `ArrowUp`:
-              _(_), _.preventDefault(), _.stopPropagation();
+              (_(_), _.preventDefault(), _.stopPropagation());
           }
       },
       tabIndex: _ || _ === null ? 0 : -1,
@@ -856,7 +857,7 @@ function _({ fnOnSetDirty: _, section: _, property: _, color: _ }) {
     _(_, {
       color: _,
       onChange: (_) => {
-        (_[_] = _), _(_);
+        ((_[_] = _), _(_));
       },
     });
   };
@@ -1039,7 +1040,7 @@ function _(_) {
                     ..._,
                   }
                 : {};
-              (_.collection_time_term_and_conditions_url = _), _(_);
+              ((_.collection_time_term_and_conditions_url = _), _(_));
             },
           }),
           (0, _.jsx)(_, {
@@ -1052,7 +1053,7 @@ function _(_) {
                     ..._,
                   }
                 : {};
-              (_.collection_time_learn_more_url = _), _(_);
+              ((_.collection_time_learn_more_url = _), _(_));
             },
           }),
           (0, _.jsx)(_, {
@@ -1065,7 +1066,7 @@ function _(_) {
                     ..._,
                   }
                 : {};
-              (_.collection_rtime_end = _), _(_);
+              ((_.collection_rtime_end = _), _(_));
             },
           }),
           (0, _.jsxs)(_, {
@@ -1076,7 +1077,7 @@ function _(_) {
                     ..._,
                   }
                 : {};
-              (_.collection_time_allow_multiple_models = _), _(_);
+              ((_.collection_time_allow_multiple_models = _), _(_));
             },
             children: [
               `Allow Signing Up For Multiple Models`,
@@ -1099,7 +1100,7 @@ function _(_) {
                     ..._,
                   }
                 : {};
-              (_.waiting_learn_more_url = _), _(_);
+              ((_.waiting_learn_more_url = _), _(_));
             },
           }),
         ],
@@ -1130,9 +1131,9 @@ function _(_) {
         let _ = {
           ..._,
         };
-        (_.localized_callout = _(_.localized_callout || [], 32, null)),
+        ((_.localized_callout = _(_.localized_callout || [], 32, null)),
           (_.localized_callout[_] = _),
-          _(_);
+          _(_));
       },
       [_, _, _],
     ),
@@ -1378,9 +1379,9 @@ function _(_) {
 var _ = 100;
 async function _(_, _) {
   let _ = new URLSearchParams();
-  _.set(`event_gids`, [...new Set(_)].sort().join(`,`)),
+  (_.set(`event_gids`, [...new Set(_)].sort().join(`,`)),
     _.set(`lang_list`, _(_)),
-    _.set(`origin`, location.origin);
+    _.set(`origin`, location.origin));
   let _ =
       _.STORE_BASE_URL + `events/ajaxgetbatchedpartnerevent/?` + _.toString(),
     _ = await fetch(_);
@@ -1664,7 +1665,7 @@ var _ = _((_) => {
       strLinkButtonClasses: _,
       bSmallButton: _,
     } = _(_);
-    _ &&
+    (_ &&
       (_ =
         _ && _
           ? (0, _.jsx)(_, {
@@ -1690,7 +1691,7 @@ var _ = _((_) => {
         url: _,
         bFocusable: !_,
         children: _,
-      }));
+      })));
   }
   return (0, _.jsxs)(`div`, {
     className: _(_, `SaleSectionLabelCtn`),
@@ -1771,8 +1772,8 @@ function _(_) {
   let { saleSection: _, editLanguage: _, eventModel: _, index: _ } = _,
     _ = _(),
     _;
-  (_ = _(() => _(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation))),
-    (_ ||= _(`#Sale_Section_Header`, _ + 1));
+  ((_ = _(() => _(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation))),
+    (_ ||= _(`#Sale_Section_Header`, _ + 1)));
   let _ = `#Sale_Section_Type_` + _.section_type,
     _ = _(_);
   return _ === _
@@ -1808,7 +1809,7 @@ function _(_) {
 }
 function _(_, _, _) {
   let _ = _(_).filter((_) => _ != _);
-  return _.push(_), _(_);
+  return (_.push(_), _(_));
 }
 function _(_) {
   let { value: _, onValueChange: _, type: _, label: _, tooltip: _ } = _,
@@ -2602,7 +2603,7 @@ function _(_) {
 }
 function _(_) {
   _?.forEach((_) => {
-    (_.unique_id = _(_)), _(_.rgChildren);
+    ((_.unique_id = _(_)), _(_.rgChildren));
   });
 }
 function _(_) {
@@ -2772,11 +2773,11 @@ function _(_) {
   _.useEffect(() => {
     if (_ && !_.current) {
       let _ = window.setTimeout(() => {
-        (_.current = !0), _(!0);
+        ((_.current = !0), _(!0));
       }, 500);
       return () => window.clearTimeout(_);
     }
-    return _(_ || _), () => {};
+    return (_(_ || _), () => {});
   }, [_, _]);
   let { data: _ } = _(),
     _ = !!_?.preferences?.disable_microtrailers,
@@ -3135,8 +3136,10 @@ function _(_, _) {
           pri: _ ? _.get(_) : void 0,
         };
       });
-    _.sort((_, _) => (_.pri ?? Number.MAX_VALUE) - (_.pri ?? Number.MAX_VALUE)),
-      (_ = _.map((_) => _.facet));
+    (_.sort(
+      (_, _) => (_.pri ?? Number.MAX_VALUE) - (_.pri ?? Number.MAX_VALUE),
+    ),
+      (_ = _.map((_) => _.facet)));
   }
   return _;
 }
@@ -3152,7 +3155,7 @@ function _(_) {
       if (_)
         for (let _ of _) {
           let _ = _.get(_);
-          _ || ((_ = []), _.set(_, _)), _.push(_);
+          (_ || ((_ = []), _.set(_, _)), _.push(_));
         }
     }),
     _
@@ -3176,24 +3179,24 @@ function _(_) {
     };
   for (let _ of _) {
     let _ = [];
-    _.set(_, _), _ === `theme_mood` ? (_(_, `theme`), _(_, `mood`)) : _(_, _);
+    (_.set(_, _), _ === `theme_mood` ? (_(_, `theme`), _(_, `mood`)) : _(_, _));
   }
   return _;
 }
 function _(_) {
   let _ = new Map();
-  _.set(`supergenre`, `#App_Taxonomy_Survey_QSuperGenreTitle`),
+  (_.set(`supergenre`, `#App_Taxonomy_Survey_QSuperGenreTitle`),
     _.set(`genre`, `#App_Taxonomy_Survey_QGenreTitle`),
     _.set(`subgenre`, `#App_Taxonomy_Survey_QSubGenreTitle`),
     _.set(`visuals`, `#App_Taxonomy_Survey_QVisualsTitle`),
     _.set(`theme_mood`, `#App_Taxonomy_Survey_QThemeMoodTitle`),
     _.set(`feature`, `#App_Taxonomy_Survey_QFeaturesTitle`),
-    _.set(`players`, `#App_Taxonomy_Survey_QPlayersTitle`);
+    _.set(`players`, `#App_Taxonomy_Survey_QPlayersTitle`));
   let _ = new Map();
   return (
     _.mapLocalizedCategoryNames.forEach((_, _) => {
       let _ = Array(32);
-      (_[0] = _.get(_) ?? ``), _.set(_, _);
+      ((_[0] = _.get(_) ?? ``), _.set(_, _));
     }),
     _
   );
@@ -3204,14 +3207,14 @@ function _(_) {
     _.mapLocalizedTagNames.forEach((_, _) => {
       let _ = _,
         _ = Array(32);
-      _.fill(``),
+      (_.fill(``),
         _.rgLanguages.forEach((_, _) => {
           let _ = _(_, -1);
           _ === -1
             ? console.warn(`Unrecognized language: ` + _)
             : 0 <= _ && _ < 32 && (_[_] = _[_]);
         }),
-        _.set(_, _);
+        _.set(_, _));
     }),
     _
   );
@@ -3254,12 +3257,12 @@ function _(_, _, _) {
         };
         _.facetValues.push(_);
       }
-      _.length > 0 &&
+      (_.length > 0 &&
         console.warn(
           `No name information found for tag count ` + _.length + `, skipping.`,
           _,
         ),
-        _.push(_);
+        _.push(_));
     }),
     _
   );
@@ -3272,7 +3275,7 @@ function _(_, _) {
     for (let _ of _.facetValues) {
       let _ = _.nAtomicStoreTagID ?? 0,
         _ = [_(String(_.get(_)))];
-      (_.type = _.k_ESaleTagFilter),
+      ((_.type = _.k_ESaleTagFilter),
         (_.filter = {
           clauses: [
             {
@@ -3280,7 +3283,7 @@ function _(_, _) {
               or_tags: _,
             },
           ],
-        });
+        }));
     }
 }
 function _(_) {
@@ -3326,7 +3329,7 @@ function _(_) {
     logical_and: !1,
     single_selection: !0,
   };
-  _.facetValues.push({
+  (_.facetValues.push({
     name: [`#Platform_Windows`],
     type: _.k_ESaleTagFilter,
     filter: {
@@ -3365,7 +3368,7 @@ function _(_) {
       },
       rgStoreTagFilter: null,
     }),
-    _.push(_);
+    _.push(_));
 }
 function _(_) {
   let _ = {
@@ -3389,7 +3392,7 @@ function _(_) {
     facetValues: [],
     logical_and: !1,
   };
-  _.facetValues.push({
+  (_.facetValues.push({
     name: [`#ContentDescriptor_GeneralMatureContent`],
     type: _.k_EContentDescriptor,
     contentDescriptor: 5,
@@ -3424,14 +3427,14 @@ function _(_) {
       filter: null,
       rgStoreTagFilter: null,
     }),
-    _.push(_);
+    _.push(_));
 }
 function _(_) {
   let _ = {
     name: [`#Sale_Preferences`],
     facetValues: [],
   };
-  _.facetValues.push({
+  (_.facetValues.push({
     name: [`#UserPreference_HideOwnedItems`],
     type: _.k_EUserPreference,
     userPreference: _.k_EHideOwnedItems,
@@ -3453,7 +3456,7 @@ function _(_) {
       filter: null,
       rgStoreTagFilter: null,
     }),
-    _.push(_);
+    _.push(_));
 }
 function _(_) {
   let _ = {
@@ -3865,13 +3868,13 @@ function _(_, _) {
   {
     let _ = _.single_item_style ? _.single_item_style : _,
       _;
-    `overrideNavigation` in _ &&
+    (`overrideNavigation` in _ &&
       (_ = (_) => (
         _.overrideNavigation(_),
         _ && (_.preventDefault(), _.stopPropagation()),
         !1
       )),
-      _() && (_ == `library` || _ == `animated`) && (_ = `bordered`);
+      _() && (_ == `library` || _ == `animated`) && (_ = `bordered`));
     let _ = _({
       [_]: !_ && _ == `bordered`,
       [_]: _ && _ == `bordered`,
@@ -4023,7 +4026,7 @@ function _(_, _, _, _, _, _, _, _, _, _) {
   else {
     let _ = _(_),
       _ = !0;
-    if (_) (_ = _), (_ = _);
+    if (_) ((_ = _), (_ = _));
     else if (_ == 0 && _ > 0) {
       let _ = 0,
         _ = 0;
@@ -4051,7 +4054,7 @@ function _(_, _, _, _, _, _, _, _, _, _) {
             };
           _ = Math.max(_ === `tall` ? 3 : 2, _);
         }
-        _.push(
+        (_.push(
           (0, _.jsx)(
             _,
             {
@@ -4062,11 +4065,11 @@ function _(_, _, _, _, _, _, _, _, _, _) {
             `Row_` + _,
           ),
         ),
-          (_ += _);
+          (_ += _));
       }
       if (_ || (_ >= _.length && _.length === 0)) break;
       let _ = _.length || void 0;
-      _.push(
+      (_.push(
         (0, _.jsx)(
           `div`,
           {
@@ -4079,7 +4082,7 @@ function _(_, _, _, _, _, _, _, _, _, _) {
           `Page_${_}`,
         ),
       ),
-        (_ = []);
+        (_ = []));
     }
     _.length == 0
       ? ((_ = _.length > _),
@@ -4164,10 +4167,10 @@ var _ = (_) => {
     _ = null;
   if (_ > 0) {
     let _ = Math.floor((_ + 1) / 2);
-    (_ = []), (_ = []);
+    ((_ = []), (_ = []));
     for (let _ = 0; _ < _; _++)
-      _.push((0, _.jsx)(`div`, {}, `front_` + _)),
-        _.push((0, _.jsx)(`div`, {}, `back_` + _));
+      (_.push((0, _.jsx)(`div`, {}, `front_` + _)),
+        _.push((0, _.jsx)(`div`, {}, `back_` + _)));
   }
   return (0, _.jsxs)(`div`, {
     className: _(
@@ -5005,7 +5008,7 @@ var _ = (typeof Symbol == `function` && Symbol.observable) || `@@observable`,
 function _(_) {
   if (typeof _ != `object` || !_) return !1;
   let _ = _;
-  for (; Object.getPrototypeOf(_) !== null; ) _ = Object.getPrototypeOf(_);
+  for (; Object.getPrototypeOf(_) !== null;) _ = Object.getPrototypeOf(_);
   return Object.getPrototypeOf(_) === _ || Object.getPrototypeOf(_) === null;
 }
 function _(_, _, _) {
@@ -5050,7 +5053,7 @@ function _(_, _, _) {
       function () {
         if (_) {
           if (_) throw Error(_(6));
-          (_ = !1), _(), _.delete(_), (_ = null);
+          ((_ = !1), _(), _.delete(_), (_ = null));
         }
       }
     );
@@ -5061,7 +5064,7 @@ function _(_, _, _) {
     if (typeof _.type != `string`) throw Error(_(17));
     if (_) throw Error(_(9));
     try {
-      (_ = !0), (_ = _(_, _));
+      ((_ = !0), (_ = _(_, _)));
     } finally {
       _ = !1;
     }
@@ -5074,10 +5077,10 @@ function _(_, _, _) {
   }
   function _(_) {
     if (typeof _ != `function`) throw Error(_(10));
-    (_ = _),
+    ((_ = _),
       _({
         type: _.REPLACE,
-      });
+      }));
   }
   function _() {
     let _ = _;
@@ -5246,12 +5249,12 @@ function _(
   function _() {
     let _ = _(_, _),
       _ = !_(_, _);
-    return (_ = _), _ && (_ = _(_, _, _)), _;
+    return ((_ = _), _ && (_ = _(_, _, _)), _);
   }
   function _(_, _) {
     let _ = !_(_, _),
       _ = !_(_, _, _, _);
-    return (_ = _), (_ = _), _ && _ ? _() : _ ? _() : _ ? _() : _;
+    return ((_ = _), (_ = _), _ && _ ? _() : _ ? _() : _ ? _() : _);
   }
   return function (_, _) {
     return _ ? _(_, _) : _(_, _);
@@ -5282,7 +5285,7 @@ function _(_) {
     function _() {
       return _;
     }
-    return (_.dependsOnOwnProps = !1), _;
+    return ((_.dependsOnOwnProps = !1), _);
   };
 }
 function _(_) {
@@ -5296,7 +5299,7 @@ function _(_, _) {
     return (
       (_.dependsOnOwnProps = !0),
       (_.mapToProps = function (_, _) {
-        (_.mapToProps = _), (_.dependsOnOwnProps = _(_));
+        ((_.mapToProps = _), (_.dependsOnOwnProps = _(_)));
         let _ = _(_, _);
         return (
           typeof _ == `function` &&
@@ -5346,7 +5349,7 @@ function _(_) {
       _;
     return function (_, _, _) {
       let _ = _(_, _, _);
-      return _ ? _(_, _) || (_ = _) : ((_ = !0), (_ = _)), _;
+      return (_ ? _(_, _) || (_ = _) : ((_ = !0), (_ = _)), _);
     };
   };
 }
@@ -5361,18 +5364,18 @@ function _() {
     _ = null;
   return {
     clear() {
-      (_ = null), (_ = null);
+      ((_ = null), (_ = null));
     },
     notify() {
       _(() => {
         let _ = _;
-        for (; _; ) _.callback(), (_ = _.next);
+        for (; _;) (_.callback(), (_ = _.next));
       });
     },
     get() {
       let _ = [],
         _ = _;
-      for (; _; ) _.push(_), (_ = _.next);
+      for (; _;) (_.push(_), (_ = _.next));
       return _;
     },
     subscribe(_) {
@@ -5422,10 +5425,10 @@ function _(_, _) {
     return _;
   }
   function _() {
-    _++, _ || ((_ = _ ? _.addNestedSub(_) : _.subscribe(_)), (_ = _()));
+    (_++, _ || ((_ = _ ? _.addNestedSub(_) : _.subscribe(_)), (_ = _())));
   }
   function _() {
-    _--, _ && _ === 0 && (_(), (_ = void 0), _.clear(), (_ = _));
+    (_--, _ && _ === 0 && (_(), (_ = void 0), _.clear(), (_ = _)));
   }
   function _() {
     _ || ((_ = !0), _());
@@ -5542,7 +5545,7 @@ function _() {
   if (!_.createContext) return {};
   let _ = (_[_] ??= new Map()),
     _ = _.get(_.createContext);
-  return _ || ((_ = _.createContext(null)), _.set(_.createContext, _)), _;
+  return (_ || ((_ = _.createContext(null)), _.set(_.createContext, _)), _);
 }
 var _ = _(),
   _ = [null, null];
@@ -5550,7 +5553,7 @@ function _(_, _, _) {
   _(() => _(..._), _);
 }
 function _(_, _, _, _, _, _) {
-  (_.current = _), (_.current = !1), _.current && ((_.current = null), _());
+  ((_.current = _), (_.current = !1), _.current && ((_.current = null), _()));
 }
 function _(_, _, _, _, _, _, _, _, _, _, _) {
   if (!_) return () => {};
@@ -5564,12 +5567,12 @@ function _(_, _, _, _, _, _, _, _, _, _, _) {
       try {
         _ = _(_, _.current);
       } catch (_) {
-        (_ = _), (_ = _);
+        ((_ = _), (_ = _));
       }
-      _ || (_ = null),
+      (_ || (_ = null),
         _ === _.current
           ? _.current || _()
-          : ((_.current = _), (_.current = _), (_.current = !0), _());
+          : ((_.current = _), (_.current = _), (_.current = !0), _()));
     };
   return (
     (_.onStateChange = _),
@@ -5625,7 +5628,7 @@ function _(
         }, [_]),
         _ = _.useMemo(() => {
           let _ = _;
-          return _?.Consumer, _;
+          return (_?.Consumer, _);
         }, [_, _]),
         _ = _.useContext(_),
         _ = !!_.store && !!_.store.getState && !!_.store.dispatch,
@@ -5678,17 +5681,17 @@ function _(
         _ = _.useSyncExternalStore(_, _, _ ? () => _(_(), _) : _);
       } catch (_) {
         throw (
-          (_.current &&
+          _.current &&
             (_.message += `
 The error may be correlated with this previous error:
 ${_.current.stack}
 
 `),
-          _)
+          _
         );
       }
       _(() => {
-        (_.current = void 0), (_.current = void 0), (_.current = _);
+        ((_.current = void 0), (_.current = void 0), (_.current = _));
       });
       let _ = _.useMemo(
         () =>
@@ -5720,7 +5723,7 @@ ${_.current.stack}
           reactReduxForwardedRef: _,
         });
       });
-      return (_.displayName = _), (_.WrappedComponent = _), _(_, _);
+      return ((_.displayName = _), (_.WrappedComponent = _), _(_, _));
     }
     return _(_, _);
   };
@@ -5744,7 +5747,7 @@ function _(_) {
       _.trySubscribe(),
       _ !== _.getState() && _.notifyNestedSubs(),
       () => {
-        _.tryUnsubscribe(), (_.onStateChange = void 0);
+        (_.tryUnsubscribe(), (_.onStateChange = void 0));
       }
     );
   }, [_, _]);
@@ -5833,7 +5836,7 @@ var _ = _,
     var _ = _.slice(0, -2);
     if (_.slice(-2) !== `px`) return 0;
     var _ = Number(_);
-    return isNaN(_) && _(!1), _;
+    return (isNaN(_) && _(!1), _);
   },
   _ = function () {
     return {
@@ -5854,7 +5857,7 @@ var _ = _,
     });
   },
   _ = function (_, _) {
-    return _ === void 0 && (_ = _()), _(_, _);
+    return (_ === void 0 && (_ = _()), _(_, _));
   },
   _ = function (_, _) {
     return _({
@@ -5886,11 +5889,11 @@ var _ = _,
     var _ = [],
       _ = null,
       _ = function () {
-        (_ = [...arguments]),
+        ((_ = [...arguments]),
           !_ &&
             (_ = requestAnimationFrame(function () {
-              (_ = null), _.apply(void 0, _);
-            }));
+              ((_ = null), _.apply(void 0, _));
+            })));
       };
     return (
       (_.cancel = function () {
@@ -5901,7 +5904,7 @@ var _ = _,
   },
   _ = _(_());
 function _(_, _) {}
-_.bind(null, `warn`), _.bind(null, `error`);
+(_.bind(null, `warn`), _.bind(null, `error`));
 function _() {}
 function _(_, _) {
   return {
@@ -5935,13 +5938,13 @@ function _(_, _) {
 }
 var _ = class extends _.Component {
     constructor(..._) {
-      super(..._),
+      (super(..._),
         (this.callbacks = null),
         (this.unbind = _),
         (this.onWindowError = (_) => {
           let _ = this.getCallbacks();
-          _.isDragging() && _.tryAbort(),
-            _.error instanceof _ && _.preventDefault();
+          (_.isDragging() && _.tryAbort(),
+            _.error instanceof _ && _.preventDefault());
         }),
         (this.getCallbacks = () => {
           if (!this.callbacks)
@@ -5950,7 +5953,7 @@ var _ = class extends _.Component {
         }),
         (this.setCallbacks = (_) => {
           this.callbacks = _;
-        });
+        }));
     }
     componentDidMount() {
       this.unbind = _(window, [
@@ -6071,7 +6074,7 @@ function _(_, _) {
           };
   return (
     (0, _.useEffect)(() => {
-      (_.current = !1), (_.current = _);
+      ((_.current = !1), (_.current = _));
     }, [_]),
     _.result
   );
@@ -6397,12 +6400,12 @@ function _({
           withDroppableDisplacement: !0,
         }))
       )
-        return (_.invisible[_.descriptor._] = !0), _;
+        return ((_.invisible[_.descriptor._] = !0), _);
       let _ = {
         draggableId: _,
         shouldAnimate: _(_, _, _),
       };
-      return (_.visible[_] = _), _;
+      return ((_.visible[_] = _), _);
     },
     {
       all: [],
@@ -6848,7 +6851,7 @@ var _ = ({
   },
   _ = (_) => {
     let _ = _.subject.active;
-    return !_ && _(), _;
+    return (!_ && _(), _);
   },
   _ = ({
     isMovingForward: _,
@@ -6954,7 +6957,7 @@ var _ = ({
   }),
   _ = (_, _, _) => {
     let _ = _.frame;
-    _(_, _) && _(), _.subject.withPlaceholder && _();
+    (_(_, _) && _(), _.subject.withPlaceholder && _());
     let _ = _(_.axis, _.displaceBy).point,
       _ = _(_, _, _),
       _ = {
@@ -7591,7 +7594,7 @@ var _ = ({
   },
   _ = (_) => {
     let _ = _.frame;
-    return !_ && _(), _;
+    return (!_ && _(), _);
   },
   _ = ({ additions: _, updatedDroppables: _, viewport: _ }) => {
     let _ = _.scroll.diff.value;
@@ -7823,7 +7826,7 @@ var _ = {
     }
     if (_.type === `MOVE_BY_WINDOW_SCROLL`) {
       if (_.phase === `DROP_PENDING` || _.phase === `DROP_ANIMATING`) return _;
-      !_(_) && _(), !_.isWindowScrollAllowed && _();
+      (!_(_) && _(), !_.isWindowScrollAllowed && _());
       let _ = _.payload.newScroll;
       if (_(_.viewport.scroll.current, _)) return _(_);
       let _ = _(_.viewport, _);
@@ -8007,7 +8010,7 @@ var _ = (_) => ({
       }
       let { _: _, clientSelection: _, movementMode: _ } = _.payload,
         _ = _();
-      _.phase === `DROP_ANIMATING` &&
+      (_.phase === `DROP_ANIMATING` &&
         _(
           _({
             completed: _.completed,
@@ -8020,7 +8023,7 @@ var _ = (_) => ({
             draggableId: _,
             movementMode: _,
           }),
-        );
+        ));
       let _ = {
           draggableId: _,
           scrollOptions: {
@@ -8039,10 +8042,10 @@ var _ = (_) => ({
       );
     },
   _ = (_) => () => (_) => (_) => {
-    _(_, `INITIAL_PUBLISH`) && _.dragging(),
+    (_(_, `INITIAL_PUBLISH`) && _.dragging(),
       _(_, `DROP_ANIMATE`) && _.dropping(_.payload.completed.result.reason),
       (_(_, `FLUSH`) || _(_, `DROP_COMPLETE`)) && _.resting(),
-      _(_);
+      _(_));
   },
   _ = {
     outOfTheWay: `cubic-bezier(0.2, 0, 0, 1)`,
@@ -8166,8 +8169,8 @@ var _ = (_) => ({
         return;
       }
       if (_.phase === `IDLE`) return;
-      _.phase === `DROP_PENDING` && _.isWaiting && _(),
-        _.phase !== `DRAGGING` && _.phase !== `DROP_PENDING` && _();
+      (_.phase === `DROP_PENDING` && _.isWaiting && _(),
+        _.phase !== `DRAGGING` && _.phase !== `DROP_PENDING` && _());
       let _ = _.critical,
         _ = _.dimensions,
         _ = _.draggables[_.critical.draggable._],
@@ -8253,10 +8256,10 @@ function _({ onWindowScroll: _ }) {
     return _ !== _;
   }
   function _() {
-    _() && _(), (_ = _(window, [_]));
+    (_() && _(), (_ = _(window, [_])));
   }
   function _() {
-    !_() && _(), _.cancel(), _(), (_ = _);
+    (!_() && _(), _.cancel(), _(), (_ = _));
   }
   return {
     start: _,
@@ -8276,9 +8279,9 @@ var _ = (_) => _(_, `DROP_COMPLETE`) || _(_, `DROP_ANIMATE`) || _(_, `FLUSH`),
       },
     });
     return (_) => (_) => {
-      !_.isActive() && _(_, `INITIAL_PUBLISH`) && _.start(),
+      (!_.isActive() && _(_, `INITIAL_PUBLISH`) && _.start(),
         _.isActive() && _(_) && _.stop(),
-        _(_);
+        _(_));
     };
   },
   _ = (_) => {
@@ -8290,7 +8293,7 @@ var _ = (_) => _(_, `DROP_COMPLETE`) || _(_, `DROP_ANIMATE`) || _(_, `FLUSH`),
       _ = (_) => {
         _ || _ || ((_ = !0), _(_), clearTimeout(_));
       };
-    return (_.wasCalled = () => _), _;
+    return ((_.wasCalled = () => _), _);
   },
   _ = () => {
     let _ = [],
@@ -8312,10 +8315,10 @@ var _ = (_) => _(_, `DROP_COMPLETE`) || _(_, `DROP_ANIMATE`) || _(_, `FLUSH`),
       flush: () => {
         if (!_.length) return;
         let _ = [..._];
-        (_.length = 0),
+        ((_.length = 0),
           _.forEach((_) => {
-            clearTimeout(_.timerId), _.callback();
-          });
+            (clearTimeout(_.timerId), _.callback());
+          }));
       },
     };
   },
@@ -8361,16 +8364,16 @@ function _(_, _, _, _) {
     return;
   }
   let _ = _(_);
-  _(_, {
+  (_(_, {
     announce: _,
   }),
-    _.wasCalled() || _(_(_));
+    _.wasCalled() || _(_(_)));
 }
 var _ = (_, _) => {
     let _ = _(),
       _ = null,
       _ = (_, _) => {
-        _ && _(),
+        (_ && _(),
           _(`onBeforeCapture`, () => {
             let _ = _().onBeforeCapture;
             _ &&
@@ -8378,19 +8381,19 @@ var _ = (_, _) => {
                 draggableId: _,
                 mode: _,
               });
-          });
+          }));
       },
       _ = (_, _) => {
-        _ && _(),
+        (_ && _(),
           _(`onBeforeDragStart`, () => {
             let _ = _().onBeforeDragStart;
             _ && _(_(_, _));
-          });
+          }));
       },
       _ = (_, _) => {
         _ && _();
         let _ = _(_, _);
-        (_ = {
+        ((_ = {
           mode: _,
           lastCritical: _,
           lastLocation: _.source,
@@ -8398,7 +8401,7 @@ var _ = (_, _) => {
         }),
           _.add(() => {
             _(`onDragStart`, () => _(_().onDragStart, _, _, _.onDragStart));
-          });
+          }));
       },
       _ = (_, _) => {
         let _ = _(_),
@@ -8420,12 +8423,12 @@ var _ = (_, _) => {
         });
       },
       _ = () => {
-        !_ && _(), _.flush();
+        (!_ && _(), _.flush());
       },
       _ = (_) => {
-        !_ && _(),
+        (!_ && _(),
           (_ = null),
-          _(`onDragEnd`, () => _(_().onDragEnd, _, _, _.onDragEnd));
+          _(`onDragEnd`, () => _(_().onDragEnd, _, _, _.onDragEnd)));
       };
     return {
       beforeCapture: _,
@@ -8455,14 +8458,14 @@ var _ = (_, _) => {
       }
       if (_(_, `INITIAL_PUBLISH`)) {
         let _ = _.payload.critical;
-        _.beforeStart(_, _.payload.movementMode),
+        (_.beforeStart(_, _.payload.movementMode),
           _(_),
-          _.start(_, _.payload.movementMode);
+          _.start(_, _.payload.movementMode));
         return;
       }
       if (_(_, `DROP_COMPLETE`)) {
         let _ = _.payload.completed.result;
-        _.flush(), _(_), _.drop(_);
+        (_.flush(), _(_), _.drop(_));
         return;
       }
       if ((_(_), _(_, `FLUSH`))) {
@@ -8479,18 +8482,18 @@ var _ = (_, _) => {
       return;
     }
     let _ = _.getState();
-    _.phase !== `DROP_ANIMATING` && _(),
+    (_.phase !== `DROP_ANIMATING` && _(),
       _.dispatch(
         _({
           completed: _.completed,
         }),
-      );
+      ));
   },
   _ = (_) => {
     let _ = null,
       _ = null;
     function _() {
-      (_ &&= (cancelAnimationFrame(_), null)), (_ &&= (_(), null));
+      ((_ &&= (cancelAnimationFrame(_), null)), (_ &&= (_(), null)));
     }
     return (_) => (_) => {
       if (
@@ -8514,42 +8517,42 @@ var _ = (_, _) => {
         },
       };
       _ = requestAnimationFrame(() => {
-        (_ = null), (_ = _(window, [_]));
+        ((_ = null), (_ = _(window, [_])));
       });
     };
   },
   _ = (_) => () => (_) => (_) => {
-    (_(_, `DROP_COMPLETE`) || _(_, `FLUSH`) || _(_, `DROP_ANIMATE`)) &&
+    ((_(_, `DROP_COMPLETE`) || _(_, `FLUSH`) || _(_, `DROP_ANIMATE`)) &&
       _.stopPublishing(),
-      _(_);
+      _(_));
   },
   _ = (_) => {
     let _ = !1;
     return () => (_) => (_) => {
       if (_(_, `INITIAL_PUBLISH`))
-        (_ = !0),
+        ((_ = !0),
           _.tryRecordFocus(_.payload.critical.draggable._),
           _(_),
-          _.tryRestoreFocusRecorded();
+          _.tryRestoreFocusRecorded());
       else if ((_(_), _)) {
-        if (_(_, `FLUSH`)) (_ = !1), _.tryRestoreFocusRecorded();
+        if (_(_, `FLUSH`)) ((_ = !1), _.tryRestoreFocusRecorded());
         else if (_(_, `DROP_COMPLETE`)) {
           _ = !1;
           let _ = _.payload.completed.result;
-          _.combine && _.tryShiftRecord(_.draggableId, _.combine.draggableId),
-            _.tryRestoreFocusRecorded();
+          (_.combine && _.tryShiftRecord(_.draggableId, _.combine.draggableId),
+            _.tryRestoreFocusRecorded());
         }
       }
     };
   },
   _ = (_) => _(_, `DROP_COMPLETE`) || _(_, `DROP_ANIMATE`) || _(_, `FLUSH`),
   _ = (_) => (_) => (_) => (_) => {
-    if (_(_)) _.stop(), _(_);
+    if (_(_)) (_.stop(), _(_));
     else if (_(_, `INITIAL_PUBLISH`)) {
       _(_);
       let _ = _.getState();
-      _.phase !== `DRAGGING` && _(), _.start(_);
-    } else _(_), _.scroll(_.getState());
+      (_.phase !== `DRAGGING` && _(), _.start(_));
+    } else (_(_), _.scroll(_.getState()));
   },
   _ = (_) => (_) => (_) => {
     if ((_(_), !_(_, `PUBLISH_WHILE_DRAGGING`))) return;
@@ -8597,23 +8600,23 @@ function _({ registry: _, callbacks: _ }) {
               removals: Object.keys(_),
               modified: _,
             };
-          (_ = _()), _.publish(_);
+          ((_ = _()), _.publish(_));
         }));
     };
   return {
     add: (_) => {
       let _ = _.descriptor._;
-      (_.additions[_] = _),
+      ((_.additions[_] = _),
         (_.modified[_.descriptor.droppableId] = !0),
         _.removals[_] && delete _.removals[_],
-        _();
+        _());
     },
     remove: (_) => {
       let _ = _.descriptor;
-      (_.removals[_._] = !0),
+      ((_.removals[_._] = !0),
         (_.modified[_.droppableId] = !0),
         _.additions[_._] && delete _.additions[_._],
-        _();
+        _());
     },
     stop: () => {
       _ && (cancelAnimationFrame(_), (_ = null), (_ = _()));
@@ -8638,7 +8641,7 @@ var _ = ({ scrollHeight: _, scrollWidth: _, height: _, width: _ }) => {
   },
   _ = (_ = window) => {
     let _ = _.document.documentElement;
-    return !_ && _(), _;
+    return (!_ && _(), _);
   },
   _ = (_ = window) => {
     let _ = _(_);
@@ -8712,12 +8715,12 @@ var _ = (_, _, _) => {
         registry: _,
       }),
       _ = (_, _) => {
-        !_.droppable.exists(_) && _(),
+        (!_.droppable.exists(_) && _(),
           _ &&
             _.updateDroppableIsEnabled({
               _: _,
               isEnabled: _,
-            });
+            }));
       },
       _ = (_, _) => {
         _ &&
@@ -8742,17 +8745,17 @@ var _ = (_, _, _) => {
         if (!_) return;
         _.stop();
         let _ = _.critical.droppable;
-        _.droppable
+        (_.droppable
           .getAllByType(_.type)
           .forEach((_) => _.callbacks.dragStopped()),
           _.unsubscribe(),
-          (_ = null);
+          (_ = null));
       },
       _ = (_) => {
         !_ && _();
         let _ = _.critical.draggable;
-        _.type === `ADDITION` && _(_, _, _.value) && _.add(_.value),
-          _.type === `REMOVAL` && _(_, _, _.value) && _.remove(_.value);
+        (_.type === `ADDITION` && _(_, _, _.value) && _.add(_.value),
+          _.type === `REMOVAL` && _(_, _, _.value) && _.remove(_.value));
       };
     return {
       updateDroppableIsEnabled: _,
@@ -9115,7 +9118,7 @@ var _ = (_, _, _) => {
           _ = () => {
             _ = !0;
           };
-        _({
+        (_({
           state: _,
           dragStartTime: 0,
           shouldUseTimeDampening: !1,
@@ -9127,7 +9130,7 @@ var _ = (_, _, _) => {
             dragStartTime: _,
             shouldUseTimeDampening: _,
           }),
-          _ && _(_);
+          _ && _(_));
       },
       stop: () => {
         _ &&= (_.cancel(), _.cancel(), null);
@@ -9144,16 +9147,16 @@ var _ = (_, _, _) => {
       _ = (_, _) => {
         if (!_(_, _)) return _;
         let _ = _(_, _);
-        if (!_) return _(_.descriptor._, _), null;
+        if (!_) return (_(_.descriptor._, _), null);
         let _ = _(_, _);
-        return _(_.descriptor._, _), _(_, _);
+        return (_(_.descriptor._, _), _(_, _));
       },
       _ = (_, _, _) => {
         if (!_ || !_(_, _)) return _;
         let _ = _(_, _);
-        if (!_) return _(_), null;
+        if (!_) return (_(_), null);
         let _ = _(_, _);
-        return _(_), _(_, _);
+        return (_(_), _(_, _));
       };
     return (_) => {
       let _ = _.scrollJumpRequest;
@@ -9303,11 +9306,11 @@ var _ = (_, _, _) => {
       : _.useEffect,
   _ = (_) => {
     let _ = _ || document.querySelector(`head`);
-    return !_ && _(), _;
+    return (!_ && _(), _);
   },
   _ = (_) => {
     let _ = document.createElement(`style`);
-    return _ && _.setAttribute(`nonce`, _), (_.type = `text/css`), _;
+    return (_ && _.setAttribute(`nonce`, _), (_.type = `text/css`), _);
   };
 function _(_, _, _) {
   let _ = _(() => _(_), [_]),
@@ -9316,22 +9319,22 @@ function _(_, _, _) {
     _ = _(
       _((_) => {
         let _ = _.current;
-        !_ && _(), (_.textContent = _);
+        (!_ && _(), (_.textContent = _));
       }),
       [],
     ),
     _ = _((_) => {
       let _ = _.current;
-      !_ && _(), (_.textContent = _);
+      (!_ && _(), (_.textContent = _));
     }, []);
   _(() => {
     (_.current || _.current) && _();
     let _ = _(_),
       _ = _(_);
-    (_.current = _),
+    ((_.current = _),
       (_.current = _),
       _.setAttribute(`${_}-always`, _),
-      _.setAttribute(`${_}-dynamic`, _);
+      _.setAttribute(`${_}-dynamic`, _));
     let _ = _(_);
     return (
       _.appendChild(_),
@@ -9341,9 +9344,9 @@ function _(_, _, _) {
       () => {
         let _ = (_) => {
           let _ = _.current;
-          !_ && _(), _.removeChild(_), (_.current = null);
+          (!_ && _(), _.removeChild(_), (_.current = null));
         };
-        _(_), _(_);
+        (_(_), _(_));
       }
     );
   }, [_, _, _, _.always, _.resting, _, _]);
@@ -9488,15 +9491,15 @@ function _() {
   }
   function _(_) {
     let _ = _(_);
-    return !_ && _(), _;
+    return (!_ && _(), _);
   }
   let _ = {
     register: (_) => {
-      (_.draggables[_.descriptor._] = _),
+      ((_.draggables[_.descriptor._] = _),
         _({
           type: `ADDITION`,
           value: _,
-        });
+        }));
     },
     update: (_, _) => {
       let _ = _.draggables[_.descriptor._];
@@ -9528,7 +9531,7 @@ function _() {
   }
   function _(_) {
     let _ = _(_);
-    return !_ && _(), _;
+    return (!_ && _(), _);
   }
   let _ = {
     register: (_) => {
@@ -9545,7 +9548,7 @@ function _() {
       Object.values(_.droppables).filter((_) => _.descriptor.type === _),
   };
   function _() {
-    (_.draggables = {}), (_.droppables = {}), (_.length = 0);
+    ((_.draggables = {}), (_.droppables = {}), (_.length = 0));
   }
   return {
     draggable: _,
@@ -9570,7 +9573,7 @@ function _() {
 var _ = _.createContext(null),
   _ = () => {
     let _ = document.body;
-    return !_ && _(), _;
+    return (!_ && _(), _);
   },
   _ = {
     position: `absolute`,
@@ -9601,8 +9604,8 @@ function _(_) {
           function () {
             setTimeout(function () {
               let _ = _();
-              _.contains(_) && _.removeChild(_),
-                _ === _.current && (_.current = null);
+              (_.contains(_) && _.removeChild(_),
+                _ === _.current && (_.current = null));
             });
           }
         );
@@ -9680,10 +9683,10 @@ function _() {
     let _ = {
       abandon: _,
     };
-    return (_ = _), _;
+    return ((_ = _), _);
   }
   function _() {
-    !_ && _(), (_ = null);
+    (!_ && _(), (_ = null));
   }
   function _() {
     _ && (_.abandon(), _());
@@ -9747,7 +9750,7 @@ function _({ cancel: _, completed: _, getPhase: _, setPhase: _ }) {
           },
           _ = _();
         if (_.type === `DRAGGING`) {
-          _.preventDefault(), _.actions.move(_);
+          (_.preventDefault(), _.actions.move(_));
           return;
         }
         _.type !== `PENDING` && _();
@@ -9776,7 +9779,7 @@ function _({ cancel: _, completed: _, getPhase: _, setPhase: _ }) {
     {
       eventName: `mousedown`,
       _: (_) => {
-        _().type === `DRAGGING` && _.preventDefault(), _();
+        (_().type === `DRAGGING` && _.preventDefault(), _());
       },
     },
     {
@@ -9807,8 +9810,8 @@ function _({ cancel: _, completed: _, getPhase: _, setPhase: _ }) {
       eventName: `webkitmouseforcedown`,
       _: (_) => {
         let _ = _();
-        _.type === `IDLE` && _(),
-          _.actions.shouldRespectForcePress() ? _() : _.preventDefault();
+        (_.type === `IDLE` && _(),
+          _.actions.shouldRespectForcePress() ? _() : _.preventDefault());
       },
     },
     {
@@ -9844,7 +9847,7 @@ function _(_) {
             _: _.clientX,
             _: _.clientY,
           };
-          _.current(), _(_, _);
+          (_.current(), _(_, _));
         },
       }),
       [_],
@@ -9878,12 +9881,12 @@ function _(_) {
     }, [_]),
     _ = _(() => {
       let _ = _.current;
-      _(),
+      (_(),
         _.type === `DRAGGING` &&
           _.actions.cancel({
             shouldBlockNextClick: !0,
           }),
-        _.type === `PENDING` && _.actions.abort();
+        _.type === `PENDING` && _.actions.abort());
     }, [_]),
     _ = _(
       function () {
@@ -9905,13 +9908,13 @@ function _(_) {
     ),
     _ = _(
       function (_, _) {
-        _.current.type !== `IDLE` && _(),
+        (_.current.type !== `IDLE` && _(),
           (_.current = {
             type: `PENDING`,
             point: _,
             actions: _,
           }),
-          _();
+          _());
       },
       [_],
     );
@@ -9936,10 +9939,10 @@ var _ = {
 };
 function _(_, _) {
   function _() {
-    _(), _.cancel();
+    (_(), _.cancel());
   }
   function _() {
-    _(), _.drop();
+    (_(), _.drop());
   }
   return [
     {
@@ -10013,7 +10016,7 @@ function _(_) {
             _ = _.snapLift();
           _.current();
           function _() {
-            !_ && _(), (_ = !1), _.current(), _();
+            (!_ && _(), (_ = !1), _.current(), _());
           }
           _.current = _(_.getWindow(), _(_, _), {
             capture: !0,
@@ -10068,7 +10071,7 @@ function _({ cancel: _, getPhase: _ }) {
     {
       eventName: `keydown`,
       _: (_) => {
-        _().type === `DRAGGING` && _.keyCode === _ && _.preventDefault(), _();
+        (_().type === `DRAGGING` && _.keyCode === _ && _.preventDefault(), _());
       },
     },
     {
@@ -10096,7 +10099,7 @@ function _({ cancel: _, completed: _, getPhase: _ }) {
             _: _,
             _: _,
           };
-        _.preventDefault(), _.actions.move(_);
+        (_.preventDefault(), _.actions.move(_));
       },
     },
     {
@@ -10115,7 +10118,7 @@ function _({ cancel: _, completed: _, getPhase: _ }) {
     {
       eventName: `touchcancel`,
       _: (_) => {
-        _().type === `DRAGGING` && _.preventDefault(), _();
+        (_().type === `DRAGGING` && _.preventDefault(), _());
       },
     },
     {
@@ -10167,7 +10170,7 @@ function _(_) {
               _: _,
               _: _,
             };
-          _.current(), _(_, _);
+          (_.current(), _(_, _));
         },
       }),
       [_],
@@ -10191,12 +10194,12 @@ function _(_) {
     }, [_, _]),
     _ = _(() => {
       let _ = _.current;
-      _(),
+      (_(),
         _.type === `DRAGGING` &&
           _.actions.cancel({
             shouldBlockNextClick: !0,
           }),
-        _.type === `PENDING` && _.actions.abort();
+        _.type === `PENDING` && _.actions.abort());
     }, [_]),
     _ = _(
       function () {
@@ -10212,7 +10215,7 @@ function _(_) {
           _ = _(_.getWindow(), _(_), _),
           _ = _(_.getWindow(), _(_), _);
         _.current = function () {
-          _(), _();
+          (_(), _());
         };
       },
       [_, _, _, _],
@@ -10234,17 +10237,17 @@ function _(_) {
       function (_, _) {
         _().type !== `IDLE` && _();
         let _ = setTimeout(_, _);
-        _({
+        (_({
           type: `PENDING`,
           point: _,
           actions: _,
           longPressTimerId: _,
         }),
-          _();
+          _());
       },
       [_, _, _, _],
     );
-  _(
+  (_(
     function () {
       return (
         _(),
@@ -10271,7 +10274,7 @@ function _(_) {
         ]);
       },
       [_],
-    );
+    ));
 }
 var _ = [
   `input`,
@@ -10385,11 +10388,11 @@ function _({
   let _ = _.bind(null, `DRAGGING`);
   function _(_) {
     function _() {
-      _.release(), (_ = `COMPLETED`);
+      (_.release(), (_ = `COMPLETED`));
     }
-    _ !== `PRE_DRAG` && (_(), _()),
+    (_ !== `PRE_DRAG` && (_(), _()),
       _.dispatch(_(_.liftActionArgs)),
-      (_ = `DRAGGING`);
+      (_ = `DRAGGING`));
     function _(
       _,
       _ = {
@@ -10410,12 +10413,12 @@ function _({
         ]);
         setTimeout(_);
       }
-      _(),
+      (_(),
         _.dispatch(
           _({
             reason: _,
           }),
-        );
+        ));
     }
     return {
       isActive: () =>
@@ -10509,17 +10512,17 @@ function _({
       },
       [_],
     );
-  _(
+  (_(
     function () {
       let _ = _.getState();
       return _.subscribe(() => {
         let _ = _.getState();
-        _(_, _), (_ = _);
+        (_(_, _), (_ = _));
       });
     },
     [_, _, _],
   ),
-    _(() => _.tryAbandon, [_.tryAbandon]);
+    _(() => _.tryAbandon, [_.tryAbandon]));
   let _ = _(
       (_) =>
         _({
@@ -10594,7 +10597,7 @@ var _ = (_) => ({
     },
   });
 function _(_) {
-  return !_.current && _(), _.current;
+  return (!_.current && _(), _.current);
 }
 function _(_) {
   let {
@@ -10833,7 +10836,7 @@ function _(_) {
     _ = _(
       (_) => {
         let _ = _();
-        return !_ && _(), _(_, _, _);
+        return (!_ && _(), _(_, _, _));
       },
       [_, _],
     ),
@@ -10848,9 +10851,10 @@ function _(_) {
     ),
     _ = (0, _.useRef)(_),
     _ = (0, _.useRef)(!0);
-  _(
+  (_(
     () => (
-      _.draggable.register(_.current), () => _.draggable.unregister(_.current)
+      _.draggable.register(_.current),
+      () => _.draggable.unregister(_.current)
     ),
     [_.draggable],
   ),
@@ -10860,13 +10864,13 @@ function _(_) {
         return;
       }
       let _ = _.current;
-      (_.current = _), _.draggable.update(_, _);
-    }, [_, _.draggable]);
+      ((_.current = _), _.draggable.update(_, _));
+    }, [_, _.draggable]));
 }
 var _ = _.createContext(null);
 function _(_) {
   let _ = (0, _.useContext)(_);
-  return !_ && _(), _;
+  return (!_ && _(), _);
 }
 function _(_) {
   _.preventDefault();
@@ -11341,7 +11345,7 @@ function _(_) {
     _ = _(() => {
       let _ = _.current,
         _ = _(_);
-      !(_ && _) && _(), _.scrollOptions.shouldPublishImmediately ? _() : _();
+      (!(_ && _) && _(), _.scrollOptions.shouldPublishImmediately ? _() : _());
     }, [_, _]),
     _ = _(
       (_, _) => {
@@ -11380,23 +11384,23 @@ function _(_) {
     _ = _(() => {
       let _ = _.current,
         _ = _(_);
-      return !(_ && _) && _(), _(_);
+      return (!(_ && _) && _(), _(_));
     }, []),
     _ = _(() => {
       let _ = _.current;
       !_ && _();
       let _ = _(_);
-      (_.current = null),
+      ((_.current = null),
         _ &&
           (_.cancel(),
           _.removeAttribute(_.contextId),
-          _.removeEventListener(`scroll`, _, _(_.scrollOptions)));
+          _.removeEventListener(`scroll`, _, _(_.scrollOptions))));
     }, [_, _]),
     _ = _((_) => {
       let _ = _.current;
       !_ && _();
       let _ = _(_);
-      !_ && _(), (_.scrollTop += _._), (_.scrollLeft += _._);
+      (!_ && _(), (_.scrollTop += _._), (_.scrollLeft += _._));
     }, []),
     _ = _(
       () => ({
@@ -11415,12 +11419,12 @@ function _(_) {
       }),
       [_, _, _],
     );
-  _(
+  (_(
     () => (
       (_.current = _.descriptor),
       _.droppable.register(_),
       () => {
-        _.current && _(), _.droppable.unregister(_);
+        (_.current && _(), _.droppable.unregister(_));
       }
     ),
     [_, _, _, _, _, _.droppable],
@@ -11431,7 +11435,7 @@ function _(_) {
     _(() => {
       _.current &&
         _.updateDroppableIsCombineEnabled(_.current._, _.isCombineEnabled);
-    }, [_.isCombineEnabled, _]);
+    }, [_.isCombineEnabled, _]));
 }
 function _() {}
 var _ = {
@@ -11482,7 +11486,7 @@ var _ = {
             ? _.current
               ? _
               : ((_.current = setTimeout(() => {
-                  (_.current = null), _(!1);
+                  ((_.current = null), _(!1));
                 })),
                 _)
             : (_(), _(!1), _)
@@ -11509,7 +11513,7 @@ var _ = {
   }),
   _ = class extends _.PureComponent {
     constructor(..._) {
-      super(..._),
+      (super(..._),
         (this.state = {
           isVisible: !!this.props._,
           data: this.props._,
@@ -11520,7 +11524,7 @@ var _ = {
             this.setState({
               isVisible: !1,
             });
-        });
+        }));
     }
     static getDerivedStateFromProps(_, _) {
       return _.shouldAnimate
@@ -11670,7 +11674,7 @@ var _ = {
     );
   };
 function _() {
-  return !document.body && _(), document.body;
+  return (!document.body && _(), document.body);
 }
 var _ = {
     mode: `standard`,
@@ -11824,7 +11828,7 @@ function _(_) {
     } = _,
     [_, _, _] = _();
   _.useCallback(() => {
-    _(), _();
+    (_(), _());
   }, [_, _]);
   let _ = _.GetClanSteamID(),
     _ = _.useMemo(() => {
@@ -11951,7 +11955,7 @@ function _(_) {
       [_],
     ),
     _ = _.useCallback(() => {
-      _(_, _), _();
+      (_(_, _), _());
     }, [_, _, _, _]),
     _ = _.useCallback((_) => {
       _.destination &&
@@ -12115,7 +12119,7 @@ var _ = (function (_) {
   _ = class {
     m_setting = void 0;
     constructor(_) {
-      _(this), (this.m_setting = _);
+      (_(this), (this.m_setting = _));
     }
     BIsEnableEnabled() {
       return this.m_setting.bEnable;
@@ -12248,12 +12252,12 @@ var _ = (function (_) {
       );
     }
   };
-_([_], _.prototype, `m_setting`, void 0),
-  _([_], _.prototype, `BHasSomeLanguage`, null);
+(_([_], _.prototype, `m_setting`, void 0),
+  _([_], _.prototype, `BHasSomeLanguage`, null));
 var _ = class {
   m_section = void 0;
   constructor(_) {
-    _(this), (this.m_section = _);
+    (_(this), (this.m_section = _));
   }
   BHasHeadline() {
     return this.m_section.localized_headline !== void 0;
@@ -12293,7 +12297,7 @@ var _ = class {
   GetHeadlineWithFallback(_) {
     let _ = this.GetHeadline(_),
       _ = _.GetELanguageFallback(_);
-    return _.length == 0 && _ != _ && (_ = this.GetHeadline(_)), _;
+    return (_.length == 0 && _ != _ && (_ = this.GetHeadline(_)), _);
   }
   GetBody(_) {
     return this.m_section.localized_body &&
@@ -12305,7 +12309,7 @@ var _ = class {
   GetBodyWithFallback(_) {
     let _ = this.GetBody(_),
       _ = _.GetELanguageFallback(_);
-    return _.length == 0 && _ != _ && (_ = this.GetBody(_)), _;
+    return (_.length == 0 && _ != _ && (_ = this.GetBody(_)), _);
   }
   GetImageHashAndExtRaw(_) {
     return this.m_section.localized_image &&
@@ -12321,7 +12325,7 @@ var _ = class {
   GetImageHashAndExtWithFallback(_) {
     let _ = this.GetImageHashAndExtRaw(_),
       _ = _.GetELanguageFallback(_);
-    return _ === void 0 && _ != _ && (_ = this.GetImageHashAndExtRaw(_)), _;
+    return (_ === void 0 && _ != _ && (_ = this.GetImageHashAndExtRaw(_)), _);
   }
   RemoveImage(_) {
     this.m_section.localized_image &&
@@ -12386,7 +12390,7 @@ var _ = _(_()),
     m_mapOptInData = new Map();
     static s_Singleton;
     static Get() {
-      return (this.s_Singleton ||= new _()), this.s_Singleton;
+      return ((this.s_Singleton ||= new _()), this.s_Singleton);
     }
     async ForceLoadOptInPage(_) {
       let _ = {
@@ -12407,7 +12411,7 @@ var _ = _(_()),
       } catch (_) {
         console.error(`Failed getting opt in summary: ` + _(_).strErrorMsg);
       }
-      return this.AddOptInPageToCache(_, _), _;
+      return (this.AddOptInPageToCache(_, _), _);
     }
     AddOptInPageToCache(_, _) {
       let _ = new Map();
@@ -12464,7 +12468,7 @@ var _ = _(_()),
     constructor() {}
     static s_singleton;
     static Get() {
-      return (_.s_singleton ||= new _()), _.s_singleton;
+      return ((_.s_singleton ||= new _()), _.s_singleton);
     }
   };
 function _() {
@@ -12472,10 +12476,10 @@ function _() {
     [_, _] = (0, _.useState)(!0);
   return (
     (0, _.useEffect)(() => {
-      _(!0),
+      (_(!0),
         _.LoadOptIns().then(() => {
           _(!1);
-        });
+        }));
     }, [_]),
     {
       bLoading: _,
@@ -12487,7 +12491,7 @@ async function _(_) {
   let _ = _?.GetEventModel()?.jsondata,
     _ = _?.prune_list_optin_name;
   if (_ == null || _.length === 0) {
-    (_.optin_tagid = void 0), (_.optin_prune_tagid = void 0);
+    ((_.optin_tagid = void 0), (_.optin_prune_tagid = void 0));
     return;
   }
   let _ = _.COMMUNITY_BASE_URL + `saleoptin/ajaxgetoptintagids`,
@@ -12503,8 +12507,8 @@ async function _(_) {
       withCredentials: !0,
     });
     if (_?.data?.success === 1) {
-      (_.optin_tagid = _.data.tagid),
-        (_.optin_prune_tagid = _.data.prune_tagid);
+      ((_.optin_tagid = _.data.tagid),
+        (_.optin_prune_tagid = _.data.prune_tagid));
       return;
     }
     _ = _(_);
@@ -12678,7 +12682,7 @@ var _ = new (class {
     if (this.m_categories) return this.m_categories;
     let _ = await this.Load();
     if (!_) throw Error(`Unable to load tag category data`);
-    return (this.m_categories = _(_)), this.m_categories;
+    return ((this.m_categories = _(_)), this.m_categories);
   }
   async Load() {
     let _ = null;
@@ -12741,7 +12745,7 @@ async function _(_, _, _, _, _) {
     _ = [];
   _ && _ && _.push(_.Get().HintLoadOptInPageData(_));
   let _;
-  _ && (_ = await _(_, _, `english`)), await Promise.all(_);
+  (_ && (_ = await _(_, _, `english`)), await Promise.all(_));
   let _ = !1,
     _ = _ && _ ? _.Get().GetOptInPageData(_) : null,
     _ = new Map();
@@ -12773,9 +12777,9 @@ async function _(_, _, _, _, _) {
           }
           _(_, Array.from(_), _.Store) && (_ = !0);
         }
-        _ && _(_, _(_.capsule), _.Feature) && (_ = !0),
+        (_ && _(_, _(_.capsule), _.Feature) && (_ = !0),
           _ && _(_, _(_.capsule), _.AppType) && (_ = !0),
-          _ && (_(_.GetEventModel().jsondata.auto_item_tags, _), (_ = !0));
+          _ && (_(_.GetEventModel().jsondata.auto_item_tags, _), (_ = !0)));
       }
     }),
     _
@@ -12793,15 +12797,15 @@ async function _(_, _, _, _) {
     },
     tags: [],
   };
-  await _(_, [_]), _.push(_), _(_), _.SetDirty(_.jsondata_sales);
+  (await _(_, [_]), _.push(_), _(_), _.SetDirty(_.jsondata_sales));
 }
 function _(_, _) {
-  (_.manually_added_tags &&= _.manually_added_tags.filter(
+  ((_.manually_added_tags &&= _.manually_added_tags.filter(
     (_) => _.toLocaleLowerCase() != _,
   )),
     (_.manually_removed_tags &&= _.manually_removed_tags.filter(
       (_) => _.toLocaleLowerCase() != _,
-    ));
+    )));
 }
 function _(_, _) {
   let _ = !1,
@@ -12818,10 +12822,10 @@ function _(_, _) {
   }
   return (
     _.forEach((_, _) => {
-      _(_, _),
+      (_(_, _),
         (_.manually_removed_tags ||= []),
         _.manually_removed_tags.push(_),
-        (_ = !0);
+        (_ = !0));
     }),
     _ && (_.tags = _),
     _
@@ -12849,7 +12853,7 @@ function _(_) {
 }
 function _(_) {
   let _ = new Set();
-  return _.forEach((_) => _.add(_.toLocaleLowerCase())), _;
+  return (_.forEach((_) => _.add(_.toLocaleLowerCase())), _);
 }
 function _(_, _) {
   if (_ && _.clauses)
@@ -12966,7 +12970,7 @@ function _(_, _, _) {
     _ === void 0 ? _.push(_.capsule) : _ === !1 && _.set(_, !0);
   }
   let _ = _.filter((_) => _.get(_.type + _._));
-  return _.push(..._), _;
+  return (_.push(..._), _);
 }
 function _(_) {
   _(() => {
@@ -13018,11 +13022,11 @@ function _(_) {
   let _ = [],
     _ = _.Get().GetApp(_._);
   if (_) {
-    _.BHasDemo() && _.push(`Has Demo`),
+    (_.BHasDemo() && _.push(`Has Demo`),
       _.BIsComingSoon() && _.push(`Coming Soon`),
-      _.BIsEarlyAccess() && _.push(`Early Access`);
+      _.BIsEarlyAccess() && _.push(`Early Access`));
     let _ = _.GetPlatforms();
-    _ &&
+    (_ &&
       (_.steamos_linux && _.push(`Linux`),
       _.mac && _.push(`Mac`),
       _.vr_support?.vrhmd && _.push(`VR`),
@@ -13040,9 +13044,9 @@ function _(_) {
         (_.GetBestPurchaseOption()?.bundle_discount_pct &&
           _.GetBestPurchaseOption()?.bundle_discount_pct > 0)) &&
         _.push(`Discounted`),
-      _.BIsFree() && _.push(`Free`);
+      _.BIsFree() && _.push(`Free`));
     let _ = _.GetAppType();
-    _ === 11 && _.push(`Soundtrack`),
+    (_ === 11 && _.push(`Soundtrack`),
       _ == 4 && _.push(`DLC`),
       _ == 12 && _.push(`PlayTest`),
       _.HasContentDescriptorID(3) && _.push(`Adult Only Sexual Content`),
@@ -13067,7 +13071,7 @@ function _(_) {
         _.push(`Remote Play`),
       _.BHasStoreCategory(44) && _.push(`Remote Play Together`),
       _.BHasStoreCategory(61) && _.push(`HDR`),
-      _.BHasTrailers(!1) && _.push(`Has Trailer`);
+      _.BHasTrailers(!1) && _.push(`Has Trailer`));
   } else console.log(`Could not load storeinfo for`, _.type, _._);
   return _;
 }
@@ -13096,14 +13100,14 @@ var _ = class _ {
   m_sLastEventModelJson;
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {
-    _(this),
+    (_(this),
       window.addEventListener(`message`, this.HandleMessage),
       window.addEventListener(`beforeunload`, () =>
         this.m_previewWindow?.close(),
-      );
+      ));
   }
   BIsConnected() {
     return this.m_bIsConnected;
@@ -13113,18 +13117,18 @@ var _ = class _ {
       (this.m_previewWindow && this.m_bReceivedClientReady) ?? !1;
   }
   async ShowPreviewWindow(_, _, _, _, _) {
-    this.m_previewWindow &&
+    (this.m_previewWindow &&
       (this.m_previewWindow.close(),
       (this.m_bReceivedClientReady = !1),
       this.UpdateConnectedState()),
-      this.ExtractLastEventModelData(_);
+      this.ExtractLastEventModelData(_));
     let _ = new URL(_);
     if (
       (_.searchParams.set(`livepreview`, `1`),
       _.searchParams.set(`parentOrigin`, window.location.origin),
       _)
     ) {
-      _?.forEach((_) => _.searchParams.set(_.key, _.value)),
+      (_?.forEach((_) => _.searchParams.set(_.key, _.value)),
         (_ ??= {
           width: 1500,
           height: 1100,
@@ -13135,34 +13139,34 @@ var _ = class _ {
           `toolbar=yes,location=yes,resizable=yes,scrollbars=yes,width=${_.width},height=${_.height}`,
         )),
         (this.m_sPreviewWindowOrigin = _.origin),
-        await this.WaitForLoad(this.m_previewWindow);
+        await this.WaitForLoad(this.m_previewWindow));
       let _ = this.m_previewWindow,
         _ = _.width + (_.outerWidth - _.innerWidth),
         _ = _.height + (_.outerHeight - _.innerHeight);
       _.resizeTo(Math.round(_), Math.round(_));
     } else
-      (this.m_previewWindow = window.open(_, `_blank`)),
+      ((this.m_previewWindow = window.open(_, `_blank`)),
         (this.m_sPreviewWindowOrigin = _.origin),
-        await this.WaitForLoad(this.m_previewWindow);
+        await this.WaitForLoad(this.m_previewWindow));
   }
   WaitForLoad(_) {
     let { promise: _, resolve: _ } = _();
-    if (_.document?.readyState === `complete`) return _(), _;
+    if (_.document?.readyState === `complete`) return (_(), _);
     let _ = () => {
-        _(), _();
+        (_(), _());
       },
       _ = () => {
         _.document?.readyState === `complete` && (_(), _());
       };
     function _() {
       try {
-        _.removeEventListener(`load`, _),
-          _.document?.removeEventListener(`readystatechange`, _);
+        (_.removeEventListener(`load`, _),
+          _.document?.removeEventListener(`readystatechange`, _));
       } catch {}
     }
     try {
-      _.addEventListener(`load`, _),
-        _.document?.addEventListener(`readystatechange`, _);
+      (_.addEventListener(`load`, _),
+        _.document?.addEventListener(`readystatechange`, _));
     } catch {
       setTimeout(() => _(), 300);
     }
@@ -13185,15 +13189,15 @@ var _ = class _ {
     _(() => (this.m_jumpToSection = void 0));
   }
   PostMessage(_) {
-    _(
+    (_(
       this.BIsConnected(),
       `PostMessage called when not connected. BIsConnected should be checked early before sending messages`,
     ),
-      this.m_previewWindow.postMessage(_, this.m_sPreviewWindowOrigin);
+      this.m_previewWindow.postMessage(_, this.m_sPreviewWindowOrigin));
   }
   UpdatePreview(_) {
-    this.m_previewWindow && this.ExtractLastEventModelData(_),
-      this.UpdatePreviewInternal();
+    (this.m_previewWindow && this.ExtractLastEventModelData(_),
+      this.UpdatePreviewInternal());
   }
   ExtractLastEventModelData(_) {
     this.m_sLastEventModelJson = JSON.stringify(_.toJSON());
@@ -13251,12 +13255,12 @@ var _ = class _ {
     if (_)
       switch (_.message) {
         case `PartnerEventEditor_ClientReady`:
-          (this.m_bReceivedClientReady = !0),
+          ((this.m_bReceivedClientReady = !0),
             this.UpdateConnectedState(),
-            this.m_sLastEventModelJson && this.UpdatePreviewInternal();
+            this.m_sLastEventModelJson && this.UpdatePreviewInternal());
           break;
         case `PartnerEventEditor_ClientUnready`:
-          (this.m_bReceivedClientReady = !1), this.UpdateConnectedState();
+          ((this.m_bReceivedClientReady = !1), this.UpdateConnectedState());
           break;
         case `PartnerEventEditor_MouseOverViewSection`:
           if (`nSectionID` in _) {
@@ -13286,11 +13290,11 @@ var _ = class _ {
       }
   }
 };
-_([_], _.prototype, `m_bIsConnected`, void 0),
+(_([_], _.prototype, `m_bIsConnected`, void 0),
   _([_], _.prototype, `m_setMouseOverSectionID`, void 0),
   _([_], _.prototype, `m_setMouseOverSubsectionID`, void 0),
   _([_], _.prototype, `m_jumpToSection`, void 0),
-  _([_], _.prototype, `HandleMessage`, null);
+  _([_], _.prototype, `HandleMessage`, null));
 function _() {
   return _(() => _.Get().BIsConnected());
 }
@@ -13308,7 +13312,7 @@ function _(_, _) {
 function _(_, _ = _.k_HorizontalMediaFirst) {
   let _ = _ + Math.floor(Math.random() * 1e6),
     _ = _.media_container.media_rows;
-  for (; _(_, _); ) _ = _ + Math.floor(Math.random() * 1e6);
+  for (; _(_, _);) _ = _ + Math.floor(Math.random() * 1e6);
   return {
     unique_id: _,
     media_type: _.k_MediaImage,
@@ -13337,7 +13341,7 @@ function _(_, _, _, _ = 1) {
     let _ = _(_, _ > 1 ? _.k_MediaTitleDesc : _.k_HorizontalMediaFirst);
     _.media_columns.push(_);
   }
-  (_.media_container.media_rows = [..._.media_container.media_rows, _]), _();
+  ((_.media_container.media_rows = [..._.media_container.media_rows, _]), _());
 }
 var _ = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC`;
 function _(_) {
@@ -13369,25 +13373,25 @@ function _(_) {
         (_(_.current.firstElementChild.getBoundingClientRect().height),
         _(_.current.firstElementChild.getBoundingClientRect().width));
     };
-  _.useEffect(() => {
+  (_.useEffect(() => {
     _();
   }, []),
-    _.useEffect(() => () => _.cancel(`ReorderableList unmounting`), [_]);
+    _.useEffect(() => () => _.cancel(`ReorderableList unmounting`), [_]));
   let _ = (_, _) => {
       let _ = _.current[_]?.current;
       if (!_) {
         console.error(`start element grab missing element at index ` + _);
         return;
       }
-      _(!0), _(_), _(void 0), _(_);
+      (_(!0), _(_), _(void 0), _(_));
       let _ = _.clientX - _.getBoundingClientRect().left;
       _(_);
       let _ = _.clientY - _.getBoundingClientRect().top;
-      _(_),
+      (_(_),
         (_.style.position = `fixed`),
         (_.style.left = _.clientX - _ + `px`),
         (_.style.top = _.clientY - _ + `px`),
-        (_.style.zIndex = `1`);
+        (_.style.zIndex = `1`));
     },
     _ = _.useCallback(
       (_) => {
@@ -13401,13 +13405,13 @@ function _(_) {
     ),
     _ = _.useCallback(() => {
       let _ = _.current[_]?.current;
-      _
+      (_
         ? ((_.style.position = ``), (_.style.zIndex = ``))
         : console.error(`end element drag missing element`),
         _(!1),
         _(-1),
         _(void 0),
-        _(void 0);
+        _(void 0));
     }, [_]),
     _ = (_, _) => {
       _.token.reason ||
@@ -13439,16 +13443,16 @@ function _(_) {
             _ = _;
             break;
           }
-        _(_ ?? _.current.length), _(_);
+        (_(_ ?? _.current.length), _(_));
       },
       [_, _, _],
     );
-  _(window, `mousemove`, _ ? _ : void 0),
+  (_(window, `mousemove`, _ ? _ : void 0),
     _(window, `mouseup`, _ ? _ : void 0),
     _.useEffect(() => {
       for (let _ = _.current.length; _ < _.length; _++)
-        _.current.push(_.createRef()), _.current.push(_.createRef());
-    }, [_.length]);
+        (_.current.push(_.createRef()), _.current.push(_.createRef()));
+    }, [_.length]));
   let _ = (_) => {
       _(void 0);
       let _ = _?.trim(),
@@ -13523,7 +13527,7 @@ function _(_) {
                   onChange: (_) => _(_.target.value),
                   onKeyDown: (_) => _(_, _),
                   onFocus: (_) => {
-                    _(_), _(_.target.value);
+                    (_(_), _(_.target.value));
                   },
                   onBlur: () => _(_),
                 }),
@@ -13666,9 +13670,9 @@ var _ = `_8TDxbSoMrZ8-`,
       let _ = _.GetGID();
       if (this.m_setLoaded.has(_)) return;
       let _ = _(`esmin-${_}`) || {};
-      this.m_mapMinimizedState.set(_, _),
+      (this.m_mapMinimizedState.set(_, _),
         this.m_setLoaded.add(_),
-        this.SetSoloMode(_, _(`saleeditor-solomode`) ?? !0);
+        this.SetSoloMode(_, _(`saleeditor-solomode`) ?? !0));
     }
     IsMinimized(_, _, _) {
       let _ = this.m_mapMinimizedState.get(_.GetGID()),
@@ -13678,7 +13682,7 @@ var _ = `_8TDxbSoMrZ8-`,
     SetMinimized(_, _, _) {
       this.m_bSoloMode && !_ && _(_).includes(_) && _();
       let _ = this.m_mapMinimizedState.get(_.GetGID()) || {};
-      (_[_] = _), _(`esmin-${_.GetGID()}`, _);
+      ((_[_] = _), _(`esmin-${_.GetGID()}`, _));
     }
     ToggleMinimized(_, _, _) {
       let _ = (this.m_mapMinimizedState.get(_.GetGID()) || {})[_],
@@ -13699,7 +13703,7 @@ var _ = `_8TDxbSoMrZ8-`,
     SetSoloMode(_, _) {
       if (((this.m_bSoloMode = _), _(`saleeditor-solomode`, _), _)) {
         let _ = _(_).find((_) => !_(_));
-        _(), _ && _(_);
+        (_(), _ && _(_));
       }
     }
     m_mapMinimizedState = new Map();
@@ -13707,15 +13711,15 @@ var _ = `_8TDxbSoMrZ8-`,
     m_bSoloMode = !1;
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
   };
-_([_], _.prototype, `EnsureLoaded`, null),
+(_([_], _.prototype, `EnsureLoaded`, null),
   _([_], _.prototype, `SetMinimized`, null),
   _([_], _.prototype, `ToggleMinimized`, null),
   _([_], _.prototype, `SetMinimizedList`, null),
   _([_], _.prototype, `m_mapMinimizedState`, void 0),
-  _([_], _.prototype, `m_bSoloMode`, void 0);
+  _([_], _.prototype, `m_bSoloMode`, void 0));
 function _(_) {
   let _ = [];
   return (
@@ -13851,7 +13855,7 @@ var _ = class _ {
       return this.m_eventDetailsMap.get(_);
     }
     static Get() {
-      return (_.s_DiscountEvent ||= new _()), _.s_DiscountEvent;
+      return ((_.s_DiscountEvent ||= new _()), _.s_DiscountEvent);
     }
     constructor() {
       window.g_discountEventStore = this;
@@ -13876,9 +13880,9 @@ var _ = class _ {
         _.apply(null, arguments)
       );
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     function _(_) {
@@ -13902,9 +13906,9 @@ var _ = class _ {
         _(_)
       );
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     var _ = _().default;
@@ -13918,9 +13922,9 @@ var _ = class _ {
       }
       return (_ === `string` ? String : Number)(_);
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     var _ = _().default,
@@ -13929,9 +13933,9 @@ var _ = class _ {
       var _ = _(_, `string`);
       return _(_) == `symbol` ? _ : _ + ``;
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     var _ = _();
@@ -13948,9 +13952,9 @@ var _ = class _ {
         _
       );
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     var _ = _();
@@ -13958,11 +13962,11 @@ var _ = class _ {
       var _ = Object.keys(_);
       if (Object.getOwnPropertySymbols) {
         var _ = Object.getOwnPropertySymbols(_);
-        _ &&
+        (_ &&
           (_ = _.filter(function (_) {
             return Object.getOwnPropertyDescriptor(_, _).enumerable;
           })),
-          _.push.apply(_, _);
+          _.push.apply(_, _));
       }
       return _;
     }
@@ -13985,28 +13989,28 @@ var _ = class _ {
       }
       return _;
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     function _(_, _) {
       if (!(_ instanceof _))
         throw TypeError(`Cannot call a class as a function`);
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     var _ = _();
     function _(_, _) {
       for (var _ = 0; _ < _.length; _++) {
         var _ = _[_];
-        (_.enumerable = _.enumerable || !1),
+        ((_.enumerable = _.enumerable || !1),
           (_.configurable = !0),
           `value` in _ && (_.writable = !0),
-          Object.defineProperty(_, _(_.key), _);
+          Object.defineProperty(_, _(_.key), _));
       }
     }
     function _(_, _, _) {
@@ -14019,9 +14023,9 @@ var _ = class _ {
         _
       );
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     function _(_, _) {
@@ -14030,23 +14034,23 @@ var _ = class _ {
           Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (_, _) {
-                return (_.__proto__ = _), _;
+                return ((_.__proto__ = _), _);
               }),
         (_.exports.__esModule = !0),
         (_.exports.default = _.exports),
         _(_, _)
       );
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     var _ = _();
     function _(_, _) {
       if (typeof _ != `function` && _ !== null)
         throw TypeError(`Super expression must either be null or a function`);
-      (_.prototype = Object.create(_ && _.prototype, {
+      ((_.prototype = Object.create(_ && _.prototype, {
         constructor: {
           value: _,
           writable: !0,
@@ -14056,11 +14060,11 @@ var _ = class _ {
         Object.defineProperty(_, "prototype", {
           writable: !1,
         }),
-        _ && _(_, _);
+        _ && _(_, _));
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     function _(_) {
@@ -14076,9 +14080,9 @@ var _ = class _ {
         _(_)
       );
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     function _() {
@@ -14094,9 +14098,9 @@ var _ = class _ {
       (_.exports.__esModule = !0),
       (_.exports.default = _.exports))();
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     function _(_) {
@@ -14106,9 +14110,9 @@ var _ = class _ {
         );
       return _;
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     var _ = _().default,
@@ -14121,9 +14125,9 @@ var _ = class _ {
         );
       return _(_);
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     var _ = _(),
@@ -14141,9 +14145,9 @@ var _ = class _ {
         return _(this, _);
       };
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     function _(_, _) {
@@ -14151,18 +14155,18 @@ var _ = class _ {
       for (var _ = 0, _ = Array(_); _ < _; _++) _[_] = _[_];
       return _;
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     var _ = _();
     function _(_) {
       if (Array.isArray(_)) return _(_);
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     function _(_) {
@@ -14172,9 +14176,9 @@ var _ = class _ {
       )
         return Array.from(_);
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     var _ = _();
@@ -14193,18 +14197,18 @@ var _ = class _ {
         );
       }
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     function _() {
       throw TypeError(`Invalid attempt to spread non-iterable instance.
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     var _ = _(),
@@ -14214,9 +14218,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function _(_) {
       return _(_) || _(_) || _(_) || _();
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_) => {
     Object.defineProperty(_, "__esModule", {
@@ -14241,7 +14245,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     _.StyleSheet = (function () {
       function _(_) {
         var _ = this;
-        (this._insertTag = function (_) {
+        ((this._insertTag = function (_) {
           var _ =
             _.tags.length === 0
               ? _.insertionPoint
@@ -14250,7 +14254,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   ? _.container.firstChild
                   : _.before
               : _.tags[_.tags.length - 1].nextSibling;
-          _.container.insertBefore(_, _), _.tags.push(_);
+          (_.container.insertBefore(_, _), _.tags.push(_));
         }),
           (this.isSpeedy = _.speedy === void 0 || _.speedy),
           (this.tags = []),
@@ -14260,7 +14264,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           (this.container = _.container),
           (this.prepend = _.prepend),
           (this.insertionPoint = _.insertionPoint),
-          (this.before = null);
+          (this.before = null));
       }
       var _ = _.prototype;
       return (
@@ -14280,11 +14284,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           this.ctr++;
         }),
         (_.flush = function () {
-          this.tags.forEach(function (_) {
+          (this.tags.forEach(function (_) {
             return _.parentNode && _.parentNode.removeChild(_);
           }),
             (this.tags = []),
-            (this.ctr = 0);
+            (this.ctr = 0));
         }),
         _
       );
@@ -14354,17 +14358,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return _.length;
       }
       function _(_, _) {
-        return _.push(_), _;
+        return (_.push(_), _);
       }
       function _(_, _) {
         return _.map(_).join(``);
       }
-      (_.line = 1),
+      ((_.line = 1),
         (_.column = 1),
         (_.length = 0),
         (_.position = 0),
         (_.character = 0),
-        (_.characters = ``);
+        (_.characters = ``));
       function _(_, _, _, _, _, _, _) {
         return {
           value: _,
@@ -14459,7 +14463,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         );
       }
       function _(_) {
-        return (_.characters = ``), _;
+        return ((_.characters = ``), _);
       }
       function _(_) {
         return _(_(_.position - 1, _(_ === 91 ? _ + 2 : _ === 40 ? _ + 1 : _)));
@@ -14468,11 +14472,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return _(_(_(_)));
       }
       function _(_) {
-        for (; (_.character = _()) && _.character < 33; ) _();
+        for (; (_.character = _()) && _.character < 33;) _();
         return _(_) > 2 || _(_.character) > 3 ? `` : ` `;
       }
       function _(_) {
-        for (; _(); )
+        for (; _();)
           switch (_(_.character)) {
             case 0:
               _(_(_.position - 1), _);
@@ -14500,7 +14504,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return _(_, _() + (_ < 6 && _() == 32 && _() == 32));
       }
       function _(_) {
-        for (; _(); )
+        for (; _();)
           switch (_.character) {
             case _:
               return _.position;
@@ -14526,7 +14530,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return `/*` + _(_, _.position - 1) + `*` + _(_ === 47 ? _ : _());
       }
       function _(_) {
-        for (; !_(_()); ) _();
+        for (; !_(_());) _();
         return _(_, _.position);
       }
       function _(_) {
@@ -14591,7 +14595,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 case 125:
                   _ = 0;
                 case 59 + _:
-                  _ == -1 && (_ = _(_, /\f/g, ``)),
+                  (_ == -1 && (_ = _(_, /\f/g, ``)),
                     _ > 0 &&
                       _(_) - _ &&
                       _(
@@ -14599,7 +14603,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           ? _(_ + `;`, _, _, _ - 1)
                           : _(_(_, ` `, ``) + `;`, _, _, _ - 2),
                         _,
-                      );
+                      ));
                   break;
                 case 59:
                   _ += `;`;
@@ -14636,10 +14640,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       }
                   }
               }
-              (_ = _ = _ = 0), (_ = _ = 1), (_ = _ = ``), (_ = _);
+              ((_ = _ = _ = 0), (_ = _ = 1), (_ = _ = ``), (_ = _));
               break;
             case 58:
-              (_ = 1 + _(_)), (_ = _);
+              ((_ = 1 + _(_)), (_ = _));
             default:
               if (_ < 1) {
                 if (_ == 123) --_;
@@ -14650,13 +14654,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   _ = _ > 0 ? 1 : ((_ += `\f`), -1);
                   break;
                 case 44:
-                  (_[_++] = (_(_) - 1) * _), (_ = 1);
+                  ((_[_++] = (_(_) - 1) * _), (_ = 1));
                   break;
                 case 64:
-                  _() === 45 && (_ += _(_())),
+                  (_() === 45 && (_ += _(_())),
                     (_ = _()),
                     (_ = _ = _((_ = _ += _(_())))),
-                    _++;
+                    _++);
                   break;
                 case 45:
                   _ === 45 && _(_) == 2 && (_ = 0);
@@ -14820,7 +14824,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           case 3616:
             return _ &&
               _.some(function (_, _) {
-                return (_ = _), _(_.props, /grid-\w+-end/);
+                return ((_ = _), _(_.props, /grid-\w+-end/));
               })
               ? ~_(_ + (_ = _[_].value), `span`)
                 ? _
@@ -15035,7 +15039,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   default:
                     switch (_) {
                       case 0:
-                        return (_ = _), _(_) > 1 ? `` : _;
+                        return ((_ = _), _(_) > 1 ? `` : _);
                       case (_ = _(_) - 1):
                       case 2:
                         return _ === 2 ? _ + _ + _ : _ + _;
@@ -15047,7 +15051,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             });
         }
       }
-      (_.CHARSET = _),
+      ((_.CHARSET = _),
         (_.COMMENT = _),
         (_.COUNTER_STYLE = _),
         (_.DECLARATION = _),
@@ -15113,11 +15117,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         (_.whitespace = _),
         Object.defineProperty(_, "__esModule", {
           value: !0,
-        });
+        }));
     });
   }),
   _ = _((_) => {
-    Object.defineProperty(_, "__esModule", {
+    (Object.defineProperty(_, "__esModule", {
       value: !0,
     }),
       (_.default = function (_) {
@@ -15125,9 +15129,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return function (_) {
           if (_.has(_)) return _.get(_);
           var _ = _(_);
-          return _.set(_, _), _;
+          return (_.set(_, _), _);
         };
-      });
+      }));
   }),
   _ = _((_, _) => {
     _.exports = _();
@@ -15139,7 +15143,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function _(_) {
       var _ = Object.create(null);
       return function (_) {
-        return _[_] === void 0 && (_[_] = _(_)), _[_];
+        return (_[_] === void 0 && (_[_] = _(_)), _[_]);
       };
     }
     _.default = _;
@@ -15181,15 +15185,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         do
           switch (_.token(_)) {
             case 0:
-              _ === 38 && _.peek() === 12 && (_[_] = 1),
-                (_[_] += _(_.position - 1, _, _));
+              (_ === 38 && _.peek() === 12 && (_[_] = 1),
+                (_[_] += _(_.position - 1, _, _)));
               break;
             case 2:
               _[_] += _.delimit(_);
               break;
             case 4:
               if (_ === 44) {
-                (_[++_] = _.peek() === 58 ? `&\f` : ``), (_[_] = _[_].length);
+                ((_[++_] = _.peek() === 58 ? `&\f` : ``), (_[_] = _[_].length));
                 break;
               }
             default:
@@ -15569,9 +15573,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             return _.serialize(_.compile(_), _);
           };
         _ = function (_, _, _, _) {
-          (_ = _),
+          ((_ = _),
             _(_ ? _ + `{` + _.styles + `}` : _.styles),
-            _ && (_.inserted[_.name] = !0);
+            _ && (_.inserted[_.name] = !0));
         };
       } else {
         var _ = [_.stringify],
@@ -15591,7 +15595,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         _ = function (_, _, _, _) {
           var _ = _.name,
             _ = _(_, _);
-          if (_.compat === void 0) return _ && (_.inserted[_] = !0), _;
+          if (_.compat === void 0) return (_ && (_.inserted[_] = !0), _);
           if (_) _.inserted[_] = _;
           else return _;
         };
@@ -15611,7 +15615,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         registered: {},
         insert: _,
       };
-      return _.sheet.hydrate(_), _;
+      return (_.sheet.hydrate(_), _);
     };
   }),
   _ = _((_, _) => {
@@ -15654,7 +15658,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         _.registered[_] === void 0 &&
         (_.registered[_] = _.styles);
     };
-    (_.getRegisteredStyles = _),
+    ((_.getRegisteredStyles = _),
       (_.insertStyles = function (_, _, _) {
         _(_, _, _);
         var _ = _.key + `-` + _.name;
@@ -15663,12 +15667,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             _ = _;
           do {
             var _ = _.insert(_ === _ ? `.` + _ : ``, _, _.sheet, !0);
-            !_ && _ !== void 0 && (_ += _), (_ = _.next);
+            (!_ && _ !== void 0 && (_ += _), (_ = _.next));
           } while (_ !== void 0);
           if (!_ && _.length !== 0) return _;
         }
       }),
-      (_.registerStyles = _);
+      (_.registerStyles = _));
   }),
   _ = _((_, _) => {
     _.exports = _();
@@ -15679,7 +15683,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     });
     function _(_) {
       for (var _ = 0, _, _ = 0, _ = _.length; _ >= 4; ++_, _ -= 4)
-        (_ =
+        ((_ =
           (_.charCodeAt(_) & 255) |
           ((_.charCodeAt(++_) & 255) << 8) |
           ((_.charCodeAt(++_) & 255) << 16) |
@@ -15688,15 +15692,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           (_ ^= _ >>> 24),
           (_ =
             ((_ & 65535) * 1540483477 + (((_ >>> 16) * 59797) << 16)) ^
-            ((_ & 65535) * 1540483477 + (((_ >>> 16) * 59797) << 16)));
+            ((_ & 65535) * 1540483477 + (((_ >>> 16) * 59797) << 16))));
       switch (_) {
         case 3:
           _ ^= (_.charCodeAt(_ + 2) & 255) << 16;
         case 2:
           _ ^= (_.charCodeAt(_ + 1) & 255) << 8;
         case 1:
-          (_ ^= _.charCodeAt(_) & 255),
-            (_ = (_ & 65535) * 1540483477 + (((_ >>> 16) * 59797) << 16));
+          ((_ ^= _.charCodeAt(_) & 255),
+            (_ = (_ & 65535) * 1540483477 + (((_ >>> 16) * 59797) << 16)));
       }
       return (
         (_ ^= _ >>> 13),
@@ -15710,7 +15714,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     _.exports = _();
   }),
   _ = _((_) => {
-    Object.defineProperty(_, "__esModule", {
+    (Object.defineProperty(_, "__esModule", {
       value: !0,
     }),
       (_.default = {
@@ -15760,7 +15764,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         strokeMiterlimit: 1,
         strokeOpacity: 1,
         strokeWidth: 1,
-      });
+      }));
   }),
   _ = _((_, _) => {
     _.exports = _();
@@ -15832,13 +15836,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           if (_.styles !== void 0) {
             var _ = _.next;
             if (_ !== void 0)
-              for (; _ !== void 0; )
-                (_ = {
+              for (; _ !== void 0;)
+                ((_ = {
                   name: _.name,
                   styles: _.styles,
                   next: _,
                 }),
-                  (_ = _.next);
+                  (_ = _.next));
             return _.styles + `;`;
           }
           return _(_, _, _);
@@ -15846,7 +15850,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           if (_ !== void 0) {
             var _ = _,
               _ = _(_);
-            return (_ = _), _(_, _, _);
+            return ((_ = _), _(_, _, _));
           }
       }
       if (_ == null) return _;
@@ -15902,9 +15906,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       _ == null || _.raw === void 0
         ? ((_ = !1), (_ += _(_, _, _)))
         : (_ += _[0]);
-      for (var _ = 1; _ < _.length; _++) (_ += _(_, _, _[_])), _ && (_ += _[_]);
+      for (var _ = 1; _ < _.length; _++)
+        ((_ += _(_, _, _[_])), _ && (_ += _[_]));
       _.lastIndex = 0;
-      for (var _ = ``, _; (_ = _.exec(_)) !== null; ) _ += `-` + _[1];
+      for (var _ = ``, _; (_ = _.exec(_)) !== null;) _ += `-` + _[1];
       return {
         name: _.default(_) + _,
         styles: _,
@@ -15954,8 +15959,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       _ = _.useInsertionEffect ? _.useInsertionEffect : !1,
       _ = (_ && _) || _,
       _ = _ || _.useLayoutEffect;
-    (_.useInsertionEffectAlwaysWithSyncFallback = _),
-      (_.useInsertionEffectWithLayoutFallback = _);
+    ((_.useInsertionEffectAlwaysWithSyncFallback = _),
+      (_.useInsertionEffectWithLayoutFallback = _));
   }),
   _ = _((_, _) => {
     _.exports = _();
@@ -16018,7 +16023,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       _ = function () {
         return _.useContext(_);
       };
-    (_.withEmotionCache = function (_) {
+    ((_.withEmotionCache = function (_) {
       return _.forwardRef(function (_, _) {
         return _(_, _.useContext(_), _);
       });
@@ -16040,7 +16045,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 ))
               : _(_, _);
           };
-        });
+        }));
     var _ = _.createContext({}),
       _ = function () {
         return _.useContext(_);
@@ -16081,13 +16086,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             ),
           );
         });
-      return (_.displayName = `WithTheme(` + _ + `)`), _.default(_, _);
+      return ((_.displayName = `WithTheme(` + _ + `)`), _.default(_, _));
     }
     var _ = `__EMOTION_TYPE_PLEASE_DO_NOT_USE__`,
       _ = function (_, _) {
         var _ = {};
         for (var _ in _) _.call(_, _) && (_[_] = _[_]);
-        return (_[_] = _), _;
+        return ((_[_] = _), _);
       },
       _ = function (_) {
         var _ = _.cache,
@@ -16098,8 +16103,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           return _.insertStyles(_, _, _);
         });
         if (!_ && _ !== void 0) {
-          for (var _, _ = _.name, _ = _.next; _ !== void 0; )
-            (_ += ` ` + _.name), (_ = _.next);
+          for (var _, _ = _.name, _ = _.next; _ !== void 0;)
+            ((_ += ` ` + _.name), (_ = _.next));
           return _.createElement(
             `style`,
             ((_ = {}),
@@ -16144,7 +16149,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           )
         );
       });
-    (_.CacheProvider = _),
+    ((_.CacheProvider = _),
       (_.Emotion = _),
       (_.ThemeContext = _),
       (_.ThemeProvider = _),
@@ -16153,7 +16158,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       (_.hasOwnProperty = _),
       (_.isBrowser = _),
       (_.useTheme = _),
-      (_.withTheme = _);
+      (_.withTheme = _));
   }),
   _ = _((_) => {
     Object.defineProperty(_, "__esModule", {
@@ -16164,7 +16169,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       _ = _(),
       _ = _(),
       _ = _();
-    _(), _(), _(), _(), _();
+    (_(), _(), _(), _(), _());
     function _(_) {
       if (_ && _.__esModule) return _;
       var _ = Object.create(null);
@@ -16198,7 +16203,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           return _.createElement.apply(void 0, _);
         var _ = _.length,
           _ = Array(_);
-        (_[0] = _.Emotion), (_[1] = _.createEmotionProps(_, _));
+        ((_[0] = _.Emotion), (_[1] = _.createEmotionProps(_, _)));
         for (var _ = 2; _ < _; _++) _[_] = _[_];
         return _.createElement.apply(null, _);
       },
@@ -16206,8 +16211,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         var _ = _.styles,
           _ = _.serializeStyles([_], void 0, _.useContext(_.ThemeContext));
         if (!_.isBrowser) {
-          for (var _, _ = _.name, _ = _.styles, _ = _.next; _ !== void 0; )
-            (_ += ` ` + _.name), (_ += _.styles), (_ = _.next);
+          for (var _, _ = _.name, _ = _.styles, _ = _.next; _ !== void 0;)
+            ((_ += ` ` + _.name), (_ += _.styles), (_ = _.next));
           var _ = _.compat === !0,
             _ = _.insert(
               ``,
@@ -16353,7 +16358,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           _ = function () {
             var _ = [...arguments],
               _ = _.serializeStyles(_, _.registered);
-            return _.push(_), _.registerStyles(_, _, !1), _.key + `-` + _.name;
+            return (
+              _.push(_), _.registerStyles(_, _, !1), _.key + `-` + _.name
+            );
           },
           _ = {
             css: _,
@@ -16374,7 +16381,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           _,
         );
       });
-    (_.CacheProvider = _.CacheProvider),
+    ((_.CacheProvider = _.CacheProvider),
       (_.ThemeContext = _.ThemeContext),
       (_.ThemeProvider = _.ThemeProvider),
       (_.__unsafe_useEmotionCache = _.__unsafe_useEmotionCache),
@@ -16391,7 +16398,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       (_.createElement = _),
       (_.css = _),
       (_.jsx = _),
-      (_.keyframes = _);
+      (_.keyframes = _));
   }),
   _ = _((_, _) => {
     _.exports = _();
@@ -16400,9 +16407,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function _(_) {
       if (Array.isArray(_)) return _;
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     function _(_, _) {
@@ -16429,7 +16436,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               _ = !0
             );
         } catch (_) {
-          (_ = !0), (_ = _);
+          ((_ = !0), (_ = _));
         } finally {
           try {
             if (!_ && _.return != null && ((_ = _.return()), Object(_) !== _))
@@ -16441,18 +16448,18 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return _;
       }
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     function _() {
       throw TypeError(`Invalid attempt to destructure non-iterable instance.
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     var _ = _(),
@@ -16462,9 +16469,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function _(_, _) {
       return _(_) || _(_, _) || _(_, _) || _();
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     function _(_, _) {
@@ -16477,9 +16484,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }
       return _;
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     var _ = _();
@@ -16491,16 +16498,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       if (Object.getOwnPropertySymbols) {
         var _ = Object.getOwnPropertySymbols(_);
         for (_ = 0; _ < _.length; _++)
-          (_ = _[_]),
+          ((_ = _[_]),
             _.indexOf(_) === -1 &&
               {}.propertyIsEnumerable.call(_, _) &&
-              (_[_] = _[_]);
+              (_[_] = _[_]));
       }
       return _;
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _) => {
     function _(_, _) {
@@ -16515,9 +16522,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         )
       );
     }
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.__esModule = !0),
-      (_.exports.default = _.exports);
+      (_.exports.default = _.exports));
   }),
   _ = _((_, _, _) => {
     (function (_, _) {
@@ -16577,7 +16584,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               : _ === `start`
                 ? `bottom`
                 : `top`;
-        return _.reference[_] > _.floating[_] && (_ = _(_)), [_, _(_)];
+        return (_.reference[_] > _.floating[_] && (_ = _(_)), [_, _(_)]);
       }
       function _(_) {
         let _ = _(_);
@@ -16690,7 +16697,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             };
         }
         let _ = _(_);
-        return _ && (_[_] += _ * (_ === `end` ? 1 : -1) * (_ && _ ? -1 : 1)), _;
+        return (
+          _ && (_[_] += _ * (_ === `end` ? 1 : -1) * (_ && _ ? -1 : 1)), _
+        );
       }
       async function _(_, _) {
         _ === void 0 && (_ = {});
@@ -16798,7 +16807,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   floating: _,
                 },
               });
-            (_ = _ ?? _),
+            ((_ = _ ?? _),
               (_ = _ ?? _),
               (_[_] = {
                 ..._[_],
@@ -16819,7 +16828,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           })
                         : _.rects),
                   ({ _: _, _: _ } = _(_, _, _))),
-                (_ = -1));
+                (_ = -1)));
           }
           return {
             _: _,
@@ -17166,10 +17175,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           _ = null;
         for (let _ = 0; _ < _.length; _++) {
           let _ = _[_];
-          !_ || _._ - _._ > _.height / 2
+          (!_ || _._ - _._ > _.height / 2
             ? _.push([_])
             : _[_.length - 1].push(_),
-            (_ = _);
+            (_ = _));
         }
         return _.map((_) => _(_(_)));
       }
@@ -17302,7 +17311,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               }
         );
       }
-      (_.arrow = _),
+      ((_.arrow = _),
         (_.autoPlacement = _),
         (_.computePosition = _),
         (_.detectOverflow = _),
@@ -17439,7 +17448,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       _,
                       _ - _[_ === `y` ? `bottom` : `right`],
                     );
-                _ && (_ = _(_, _)), _ && (_ = _(_, _));
+                (_ && (_ = _(_, _)), _ && (_ = _(_, _)));
                 let _ = _._({
                   ..._,
                   [_]: _,
@@ -17494,7 +17503,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   _ = !_,
                   _ = _,
                   _ = _;
-                _ != null && _.enabled._ && (_ = _),
+                (_ != null && _.enabled._ && (_ = _),
                   _ != null && _.enabled._ && (_ = _),
                   _ &&
                     !_ &&
@@ -17505,7 +17514,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     ..._,
                     availableWidth: _,
                     availableHeight: _,
-                  });
+                  }));
                 let _ = await _.getDimensions(_.floating);
                 return _ !== _.width || _ !== _.height
                   ? {
@@ -17517,7 +17526,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               },
             }
           );
-        });
+        }));
     });
   }),
   _ = _((_, _, _) => {
@@ -17611,7 +17620,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       }
       function _(_) {
         let _ = _(_);
-        for (; _(_) && !_(_); ) {
+        for (; _(_) && !_(_);) {
           if (_(_)) return _;
           if (_(_)) return null;
           _ = _(_);
@@ -17654,7 +17663,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return _(_) ? (_.ownerDocument || _).body : _(_) && _(_) ? _ : _(_);
       }
       function _(_, _, _) {
-        _ === void 0 && (_ = []), _ === void 0 && (_ = !0);
+        (_ === void 0 && (_ = []), _ === void 0 && (_ = !0));
         let _ = _(_),
           _ = _ === _.ownerDocument?.body,
           _ = _(_);
@@ -17721,10 +17730,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             };
       }
       function _(_, _, _) {
-        return _ === void 0 && (_ = !1), !!_ && _ && _ === _(_);
+        return (_ === void 0 && (_ = !1), !!_ && _ && _ === _(_));
       }
       function _(_, _, _, _) {
-        _ === void 0 && (_ = !1), _ === void 0 && (_ = !1);
+        (_ === void 0 && (_ = !1), _ === void 0 && (_ = !1));
         let _ = _.getBoundingClientRect(),
           _ = _(_),
           _ = _(1);
@@ -17739,20 +17748,20 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             _ = _(_) ? _(_) : _,
             _ = _,
             _ = _(_);
-          for (; _ && _ !== _; ) {
+          for (; _ && _ !== _;) {
             let _ = _(_),
               _ = _.getBoundingClientRect(),
               _ = _(_),
               _ = _.left + (_.clientLeft + parseFloat(_.paddingLeft)) * _._,
               _ = _.top + (_.clientTop + parseFloat(_.paddingTop)) * _._;
-            (_ *= _._),
+            ((_ *= _._),
               (_ *= _._),
               (_ *= _._),
               (_ *= _._),
               (_ += _),
               (_ += _),
               (_ = _(_)),
-              (_ = _(_));
+              (_ = _(_)));
           }
         }
         return _.rectToClientRect({
@@ -17788,7 +17797,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           _ = _(_);
         if ((_ || !_) && ((_(_) !== `body` || _(_)) && (_ = _(_)), _)) {
           let _ = _(_);
-          (_ = _(_)), (_._ = _._ + _.clientLeft), (_._ = _._ + _.clientTop);
+          ((_ = _(_)), (_._ = _._ + _.clientLeft), (_._ = _._ + _.clientTop));
         }
         let _ = _ && !_ && !_ ? _(_, _) : _(0);
         return {
@@ -17894,16 +17903,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           _ = null,
           _ = _(_).position === `fixed`,
           _ = _ ? _(_) : _;
-        for (; _(_) && !_(_); ) {
+        for (; _(_) && !_(_);) {
           let _ = _(_),
             _ = _(_),
             _ = _ ? _.position : _ ? `fixed` : ``;
-          !_ && (_ === `fixed` || (_ === `absolute` && _.position === `static`))
+          (!_ &&
+          (_ === `fixed` || (_ === `absolute` && _.position === `static`))
             ? (_ = _.filter((_) => _ !== _))
             : (_ = _),
-            (_ = _(_));
+            (_ = _(_)));
         }
-        return _.set(_, _), _;
+        return (_.set(_, _), _);
       }
       function _(_) {
         let { element: _, boundary: _, rootBoundary: _, strategy: _ } = _,
@@ -17922,10 +17932,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           _ = _.left;
         for (let _ = 1; _ < _.length; _++) {
           let _ = _(_, _[_], _);
-          (_ = _(_.top, _)),
+          ((_ = _(_.top, _)),
             (_ = _(_.right, _)),
             (_ = _(_.bottom, _)),
-            (_ = _(_.left, _));
+            (_ = _(_.left, _)));
         }
         return {
           width: _ - _,
@@ -17953,7 +17963,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           _ = _(0);
         if ((_ || !_) && ((_(_) !== `body` || _(_)) && (_ = _(_)), _)) {
           let _ = _(_, !0, _, _);
-          (_._ = _._ + _.clientLeft), (_._ = _._ + _.clientTop);
+          ((_._ = _._ + _.clientLeft), (_._ = _._ + _.clientTop));
         }
         !_ && _ && (_._ = _(_));
         let _ = _ && !_ && !_ ? _(_, _) : _(0);
@@ -17971,21 +17981,21 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         if (!_(_) || _(_).position === `fixed`) return null;
         if (_) return _(_);
         let _ = _.offsetParent;
-        return _(_) === _ && (_ = _.ownerDocument.body), _;
+        return (_(_) === _ && (_ = _.ownerDocument.body), _);
       }
       function _(_, _) {
         let _ = _(_);
         if (_(_)) return _;
         if (!_(_)) {
           let _ = _(_);
-          for (; _ && !_(_); ) {
+          for (; _ && !_(_);) {
             if (_(_) && !_(_)) return _;
             _ = _(_);
           }
           return _;
         }
         let _ = _(_, _);
-        for (; _ && _(_) && _(_); ) _ = _(_, _);
+        for (; _ && _(_) && _(_);) _ = _(_, _);
         return _ && _(_) && _(_) && !_(_) ? _ : _ || _(_) || _;
       }
       let _ = async function (_) {
@@ -18031,10 +18041,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           _ = _(_);
         function _() {
           var _;
-          clearTimeout(_), (_ = _) == null || _.disconnect(), (_ = null);
+          (clearTimeout(_), (_ = _) == null || _.disconnect(), (_ = null));
         }
         function _(_, _) {
-          _ === void 0 && (_ = !1), _ === void 0 && (_ = 1), _();
+          (_ === void 0 && (_ = !1), _ === void 0 && (_ = 1), _());
           let _ = _.getBoundingClientRect(),
             { left: _, top: _, width: _, height: _ } = _;
           if ((_ || _(), !_ || !_)) return;
@@ -18076,7 +18086,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           _.addEventListener(`resize`, _),
           _(!0),
           () => {
-            _.removeEventListener(`resize`, _), _();
+            (_.removeEventListener(`resize`, _), _());
           }
         );
       }
@@ -18092,8 +18102,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           _ = _(_),
           _ = _ || _ ? [...(_ ? _(_) : []), ...(_ ? _(_) : [])] : [];
         _.forEach((_) => {
-          _ && _.addEventListener(`scroll`, _),
-            _ && _.addEventListener(`resize`, _);
+          (_ && _.addEventListener(`scroll`, _),
+            _ && _.addEventListener(`resize`, _));
         });
         let _ = _ && _ ? _(_, _, _) : null,
           _ = -1,
@@ -18101,7 +18111,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         _ &&
           ((_ = new ResizeObserver((_) => {
             let [_] = _;
-            _ &&
+            (_ &&
               _.target === _ &&
               _ &&
               _ &&
@@ -18111,7 +18121,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 var _;
                 (_ = _) == null || _.observe(_);
               }))),
-              _();
+              _());
           })),
           _ && !_ && _.observe(_),
           _ && _.observe(_));
@@ -18120,20 +18130,20 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         _ && _();
         function _() {
           let _ = _(_);
-          _ && !_(_, _) && _(), (_ = _), (_ = requestAnimationFrame(_));
+          (_ && !_(_, _) && _(), (_ = _), (_ = requestAnimationFrame(_)));
         }
         return (
           _(),
           () => {
             var _;
-            _.forEach((_) => {
-              _ && _.removeEventListener(`scroll`, _),
-                _ && _.removeEventListener(`resize`, _);
+            (_.forEach((_) => {
+              (_ && _.removeEventListener(`scroll`, _),
+                _ && _.removeEventListener(`resize`, _));
             }),
               _?.(),
               (_ = _) == null || _.disconnect(),
               (_ = null),
-              _ && cancelAnimationFrame(_);
+              _ && cancelAnimationFrame(_));
           }
         );
       }
@@ -18147,7 +18157,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         _ = _.arrow,
         _ = _.inline,
         _ = _.limitShift;
-      (_.arrow = _),
+      ((_.arrow = _),
         (_.autoPlacement = _),
         (_.autoUpdate = _),
         (_.computePosition = (_, _, _) => {
@@ -18172,14 +18182,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         (_.offset = _),
         (_.platform = _),
         (_.shift = _),
-        (_.size = _);
+        (_.size = _));
     });
   }),
   _ = _((_) => {
-    Object.defineProperty(_, "__esModule", {
+    (Object.defineProperty(_, "__esModule", {
       value: !0,
     }),
-      (_.default = _().useLayoutEffect);
+      (_.default = _().useLayoutEffect));
   }),
   _ = _((_) => {
     var _ = _(),
@@ -18295,7 +18305,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         _ = _.position === `absolute`,
         _ = /(auto|scroll)/;
       if (_.position === `fixed`) return document.documentElement;
-      for (var _ = _; (_ = _.parentElement); )
+      for (var _ = _; (_ = _.parentElement);)
         if (
           ((_ = getComputedStyle(_)),
           !(_ && _.position === `static`) &&
@@ -18316,9 +18326,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         _ = 10,
         _ = 0;
       function _() {
-        (_ += _),
+        ((_ += _),
           _(_, _(_, _, _, _)),
-          _ < _ ? window.requestAnimationFrame(_) : _(_);
+          _ < _ ? window.requestAnimationFrame(_) : _(_));
       }
       _();
     }
@@ -18349,7 +18359,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     }
     function _() {
       try {
-        return document.createEvent(`TouchEvent`), !0;
+        return (document.createEvent(`TouchEvent`), !0);
       } catch {
         return !1;
       }
@@ -18399,7 +18409,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           .reduce(function (_, _) {
             var _ = _(_, 2),
               _ = _[0];
-            return (_[_] = _[1]), _;
+            return ((_[_] = _[1]), _);
           }, {});
       },
       _ = [`children`, `innerProps`],
@@ -18584,7 +18594,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     isFixedPosition: _,
                     controlHeight: _,
                   });
-                _(_.maxHeight), _(_.placement), _?.(_.placement);
+                (_(_.maxHeight), _(_.placement), _?.(_.placement));
               }
             },
             [_, _, _, _, _, _, _],
@@ -18793,12 +18803,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         );
         var _ = _.useCallback(
           function () {
-            typeof _.current == `function` && (_.current(), (_.current = null)),
+            (typeof _.current == `function` &&
+              (_.current(), (_.current = null)),
               _ &&
                 _.current &&
                 (_.current = _.autoUpdate(_, _.current, _, {
                   elementResize: `ResizeObserver` in window,
-                }));
+                })));
           },
           [_, _],
         );
@@ -18810,7 +18821,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         );
         var _ = _.useCallback(
           function (_) {
-            (_.current = _), _();
+            ((_.current = _), _());
           },
           [_],
         );
@@ -19730,7 +19741,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         },
         ValueContainer: _,
       };
-    (_.MenuPlacer = _),
+    ((_.MenuPlacer = _),
       (_.classNames = _),
       (_.cleanValue = _),
       (_.clearIndicatorCSS = _),
@@ -19770,7 +19781,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       (_.singleValueAsValue = _),
       (_.supportsPassiveEvents = _),
       (_.valueContainerCSS = _),
-      (_.valueTernary = _);
+      (_.valueTernary = _));
   }),
   _ = _({
     default: () => _,
@@ -20550,7 +20561,7 @@ var _,
       );
     }
     var _ = function (_) {
-      _.cancelable && _.preventDefault(), _.stopPropagation();
+      (_.cancelable && _.preventDefault(), _.stopPropagation());
     };
     function _(_) {
       var _ = _.isEnabled,
@@ -20573,7 +20584,7 @@ var _,
                 _ = _ > 0,
                 _ = _ - _ - _,
                 _ = !1;
-              _ > _ && _.current && (_ && _(_), (_.current = !1)),
+              (_ > _ && _.current && (_ && _(_), (_.current = !1)),
                 _ && _.current && (_ && _(_), (_.current = !1)),
                 _ && _ > _
                   ? (_ && !_.current && _(_),
@@ -20586,7 +20597,7 @@ var _,
                     (_.scrollTop = 0),
                     (_ = !0),
                     (_.current = !0)),
-                _ && _(_);
+                _ && _(_));
             }
           },
           [_, _, _, _],
@@ -20614,9 +20625,9 @@ var _,
                     passive: !1,
                   }
                 : !1;
-              _.addEventListener(`wheel`, _, _),
+              (_.addEventListener(`wheel`, _, _),
                 _.addEventListener(`touchstart`, _, _),
-                _.addEventListener(`touchmove`, _, _);
+                _.addEventListener(`touchmove`, _, _));
             }
           },
           [_, _, _],
@@ -20704,19 +20715,19 @@ var _,
                 var _ = parseInt(_.current.paddingRight, 10) || 0,
                   _ = document.body ? document.body.clientWidth : 0,
                   _ = window.innerWidth - _ + _ || 0;
-                Object.keys(_).forEach(function (_) {
+                (Object.keys(_).forEach(function (_) {
                   var _ = _[_];
                   _ && (_[_] = _);
                 }),
-                  _ && (_.paddingRight = `${_}px`);
+                  _ && (_.paddingRight = `${_}px`));
               }
-              _ &&
+              (_ &&
                 _() &&
                 (_.addEventListener(`touchmove`, _, _),
                 _ &&
                   (_.addEventListener(`touchstart`, _, _),
                   _.addEventListener(`touchmove`, _, _))),
-                (_ += 1);
+                (_ += 1));
             }
           },
           [_],
@@ -20726,7 +20737,7 @@ var _,
             if (_) {
               var _ = document.body,
                 _ = _ && _.style;
-              (_ = Math.max(_ - 1, 0)),
+              ((_ = Math.max(_ - 1, 0)),
                 _ &&
                   _ < 1 &&
                   _.forEach(function (_) {
@@ -20738,7 +20749,7 @@ var _,
                   (_.removeEventListener(`touchmove`, _, _),
                   _ &&
                     (_.removeEventListener(`touchstart`, _, _),
-                    _.removeEventListener(`touchmove`, _, _)));
+                    _.removeEventListener(`touchmove`, _, _))));
             }
           },
           [_],
@@ -20801,7 +20812,7 @@ var _,
             css: _,
           }),
         _(function (_) {
-          _(_), _(_);
+          (_(_), _(_));
         }),
       );
     }
@@ -21178,14 +21189,14 @@ var _,
             (_.onChange = function (_, _) {
               var _ = _.props,
                 _ = _.onChange;
-              (_.name = _.name), _.ariaOnChange(_, _), _(_, _);
+              ((_.name = _.name), _.ariaOnChange(_, _), _(_, _));
             }),
             (_.setValue = function (_, _, _) {
               var _ = _.props,
                 _ = _.closeMenuOnSelect,
                 _ = _.isMulti,
                 _ = _.inputValue;
-              _.onInputChange(``, {
+              (_.onInputChange(``, {
                 action: `set-value`,
                 prevInputValue: _,
               }),
@@ -21200,7 +21211,7 @@ var _,
                 _.onChange(_, {
                   action: _,
                   option: _,
-                });
+                }));
             }),
             (_.selectOption = function (_) {
               var _ = _.props,
@@ -21247,11 +21258,11 @@ var _,
                   return _.getOptionValue(_) !== _;
                 }),
                 _ = _.valueTernary(_, _, _[0] || null);
-              _.onChange(_, {
+              (_.onChange(_, {
                 action: `remove-value`,
                 removedValue: _,
               }),
-                _.focusInput();
+                _.focusInput());
             }),
             (_.clearValue = function () {
               var _ = _.state.selectValue;
@@ -21346,7 +21357,7 @@ var _,
             (_.onControlMouseDown = function (_) {
               if (!_.defaultPrevented) {
                 var _ = _.props.openMenuOnClick;
-                _.state.isFocused
+                (_.state.isFocused
                   ? _.props.menuIsOpen
                     ? _.target.tagName !== `INPUT` &&
                       _.target.tagName !== `TEXTAREA` &&
@@ -21355,7 +21366,7 @@ var _,
                   : (_ && (_.openAfterFocus = !0), _.focusInput()),
                   _.target.tagName !== `INPUT` &&
                     _.target.tagName !== `TEXTAREA` &&
-                    _.preventDefault();
+                    _.preventDefault());
               }
             }),
             (_.onDropdownIndicatorMouseDown = function (_) {
@@ -21366,14 +21377,14 @@ var _,
                 var _ = _.props,
                   _ = _.isMulti,
                   _ = _.menuIsOpen;
-                _.focusInput(),
+                (_.focusInput(),
                   _
                     ? (_.setState({
                         inputIsHiddenAfterUpdate: !_,
                       }),
                       _.onMenuClose())
                     : _.openMenu(`first`),
-                  _.preventDefault();
+                  _.preventDefault());
               }
             }),
             (_.onClearIndicatorMouseDown = function (_) {
@@ -21442,24 +21453,24 @@ var _,
             (_.handleInputChange = function (_) {
               var _ = _.props.inputValue,
                 _ = _.currentTarget.value;
-              _.setState({
+              (_.setState({
                 inputIsHiddenAfterUpdate: !1,
               }),
                 _.onInputChange(_, {
                   action: `input-change`,
                   prevInputValue: _,
                 }),
-                _.props.menuIsOpen || _.onMenuOpen();
+                _.props.menuIsOpen || _.onMenuOpen());
             }),
             (_.onInputFocus = function (_) {
-              _.props.onFocus && _.props.onFocus(_),
+              (_.props.onFocus && _.props.onFocus(_),
                 _.setState({
                   inputIsHiddenAfterUpdate: !1,
                   isFocused: !0,
                 }),
                 (_.openAfterFocus || _.props.openMenuOnFocus) &&
                   _.openMenu(`first`),
-                (_.openAfterFocus = !1);
+                (_.openAfterFocus = !1));
             }),
             (_.onInputBlur = function (_) {
               var _ = _.props.inputValue;
@@ -21489,7 +21500,7 @@ var _,
               return _(_.props);
             }),
             (_.onValueInputFocus = function (_) {
-              _.preventDefault(), _.stopPropagation(), _.focus();
+              (_.preventDefault(), _.stopPropagation(), _.focus());
             }),
             (_.onKeyDown = function (_) {
               var _ = _.props,
@@ -21606,9 +21617,9 @@ var _,
             var _ = _.getFocusableOptionsWithIds(),
               _ = _.buildFocusableOptions(),
               _ = _.indexOf(_.state.selectValue[0]);
-            (_.state.focusableOptionsWithIds = _),
+            ((_.state.focusableOptionsWithIds = _),
               (_.state.focusedOption = _[_]),
-              (_.state.focusedOptionId = _(_, _[_]));
+              (_.state.focusedOptionId = _(_, _[_])));
           }
           return _;
         }
@@ -21619,7 +21630,7 @@ var _,
               {
                 key: `componentDidMount`,
                 value: function () {
-                  this.startListeningComposition(),
+                  (this.startListeningComposition(),
                     this.startListeningToTouch(),
                     this.props.closeMenuOnScroll &&
                       document &&
@@ -21630,7 +21641,10 @@ var _,
                       this.state.focusedOption &&
                       this.menuListRef &&
                       this.focusedOptionRef &&
-                      _.scrollIntoView(this.menuListRef, this.focusedOptionRef);
+                      _.scrollIntoView(
+                        this.menuListRef,
+                        this.focusedOptionRef,
+                      ));
                 },
               },
               {
@@ -21640,7 +21654,7 @@ var _,
                     _ = _.isDisabled,
                     _ = _.menuIsOpen,
                     _ = this.state.isFocused;
-                  ((_ && !_ && _.isDisabled) || (_ && _ && !_.menuIsOpen)) &&
+                  (((_ && !_ && _.isDisabled) || (_ && _ && !_.menuIsOpen)) &&
                     this.focusInput(),
                     _ && _ && !_.isDisabled
                       ? this.setState(
@@ -21663,15 +21677,15 @@ var _,
                         this.menuListRef,
                         this.focusedOptionRef,
                       ),
-                      (this.scrollToFocusedOptionOnUpdate = !1));
+                      (this.scrollToFocusedOptionOnUpdate = !1)));
                 },
               },
               {
                 key: `componentWillUnmount`,
                 value: function () {
-                  this.stopListeningComposition(),
+                  (this.stopListeningComposition(),
                     this.stopListeningToTouch(),
-                    document.removeEventListener(`scroll`, this.onScroll, !0);
+                    document.removeEventListener(`scroll`, this.onScroll, !0));
                 },
               },
               {
@@ -21683,11 +21697,11 @@ var _,
               {
                 key: `onMenuClose`,
                 value: function () {
-                  this.onInputChange(``, {
+                  (this.onInputChange(``, {
                     action: `menu-close`,
                     prevInputValue: this.props.inputValue,
                   }),
-                    this.props.onMenuClose();
+                    this.props.onMenuClose());
                 },
               },
               {
@@ -21721,7 +21735,7 @@ var _,
                     var _ = _.indexOf(_[0]);
                     _ > -1 && (_ = _);
                   }
-                  (this.scrollToFocusedOptionOnUpdate = !(
+                  ((this.scrollToFocusedOptionOnUpdate = !(
                     _ && this.menuListRef
                   )),
                     this.setState(
@@ -21734,7 +21748,7 @@ var _,
                       function () {
                         return _.onMenuOpen();
                       },
-                    );
+                    ));
                 },
               },
               {
@@ -21780,7 +21794,7 @@ var _,
                   if (_.length) {
                     var _ = 0,
                       _ = _.indexOf(_);
-                    _ || (_ = -1),
+                    (_ || (_ = -1),
                       _ === `up`
                         ? (_ = _ > 0 ? _ - 1 : _.length - 1)
                         : _ === `down`
@@ -21796,7 +21810,7 @@ var _,
                         focusedOption: _[_],
                         focusedValue: null,
                         focusedOptionId: this.getFocusedOptionId(_[_]),
-                      });
+                      }));
                   }
                 },
               },
@@ -22393,7 +22407,7 @@ var _,
                                 _,
                                 _({}, _, {
                                   innerRef: function (_) {
-                                    _.getMenuListRef(_), _(_);
+                                    (_.getMenuListRef(_), _(_));
                                   },
                                   innerProps: {
                                     role: `listbox`,
@@ -22643,14 +22657,14 @@ var _,
           _
         );
       })(_.Component);
-    (_.defaultProps = _),
+    ((_.defaultProps = _),
       (_.Select = _),
       (_.createFilter = _),
       (_.defaultProps = _),
       (_.defaultTheme = _),
       (_.getOptionLabel = _),
       (_.getOptionValue = _),
-      (_.mergeStyles = _);
+      (_.mergeStyles = _));
   }),
   _ = _((_) => {
     var _ = _(),
@@ -22695,26 +22709,26 @@ var _,
         _ = _[1],
         _ = _.useCallback(
           function (_, _) {
-            typeof _ == `function` && _(_, _), _(_);
+            (typeof _ == `function` && _(_, _), _(_));
           },
           [_],
         ),
         _ = _.useCallback(
           function (_, _) {
             var _;
-            typeof _ == `function` && (_ = _(_, _)), _(_ === void 0 ? _ : _);
+            (typeof _ == `function` && (_ = _(_, _)), _(_ === void 0 ? _ : _));
           },
           [_],
         ),
         _ = _.useCallback(
           function () {
-            typeof _ == `function` && _(), _(!0);
+            (typeof _ == `function` && _(), _(!0));
           },
           [_],
         ),
         _ = _.useCallback(
           function () {
-            typeof _ == `function` && _(), _(!1);
+            (typeof _ == `function` && _(), _(!1));
           },
           [_],
         ),
@@ -22872,7 +22886,7 @@ var _,
       _ = _(),
       _ = _(),
       _ = _();
-    _(),
+    (_(),
       _(),
       _(),
       _(),
@@ -22888,7 +22902,7 @@ var _,
       _(),
       _(),
       _(),
-      _();
+      _());
     function _(_) {
       if (_ && _.__esModule) return _;
       var _ = Object.create(null);
@@ -22929,7 +22943,7 @@ var _,
           ),
         );
       });
-    (_.useCreatable = _.useCreatable), (_.default = _);
+    ((_.useCreatable = _.useCreatable), (_.default = _));
   }),
   _ = _((_, _) => {
     _.exports = _();
@@ -22973,7 +22987,7 @@ var _,
                 bOKDisabled: !_,
                 strOKText: _(`#Sale_New_CreateEvent`),
                 onOK: () => {
-                  _.Get().UpdateSaleSection(_), _();
+                  (_.Get().UpdateSaleSection(_), _());
                 },
               }),
             }),
@@ -23060,9 +23074,9 @@ var _,
       _ = (0, _.useRef)(null);
     if (
       ((0, _.useEffect)(() => {
-        _(!0),
+        (_(!0),
           _.current &&
-            _.current(`SelectAppsAndPackagesFromDiscountEvent reloading`);
+            _.current(`SelectAppsAndPackagesFromDiscountEvent reloading`));
         let _ = _.default.CancelToken.source();
         return (
           (_.current = _.cancel),
@@ -23074,7 +23088,7 @@ var _,
                 let _ = _.Get().GetDiscountEventDetails(_);
                 if (_ && !_.token.reason) {
                   let _ = [];
-                  _.apps,
+                  (_.apps,
                     _.packages.map((_) =>
                       _.push(
                         typeof _.subid == `string`
@@ -23082,7 +23096,7 @@ var _,
                           : _.subid,
                       ),
                     ),
-                    _(!1);
+                    _(!1));
                 }
               } catch (_) {
                 let _ = _(_);
@@ -23205,16 +23219,16 @@ var _,
       return this.m_selectedSubs.has(_);
     }
     AddApp(_) {
-      this.m_selectedApps.add(_), this.UpdateSelected();
+      (this.m_selectedApps.add(_), this.UpdateSelected());
     }
     AddPackage(_) {
-      this.m_selectedSubs.add(_), this.UpdateSelected();
+      (this.m_selectedSubs.add(_), this.UpdateSelected());
     }
     RemoveApp(_) {
-      this.m_selectedApps.delete(_), this.UpdateSelected();
+      (this.m_selectedApps.delete(_), this.UpdateSelected());
     }
     RemovePackage(_) {
-      this.m_selectedSubs.delete(_), this.UpdateSelected();
+      (this.m_selectedSubs.delete(_), this.UpdateSelected());
     }
     UpdateApp(_, _) {
       _ ? this.AddApp(_) : this.RemoveApp(_);
@@ -23235,15 +23249,15 @@ var _,
       return this.m_nTotalSelected;
     }
     SelectAllApps(_) {
-      _.forEach((_) => this.m_selectedApps.add(_)), this.UpdateSelected();
+      (_.forEach((_) => this.m_selectedApps.add(_)), this.UpdateSelected());
     }
     Reset() {
-      this.m_selectedApps.clear(),
+      (this.m_selectedApps.clear(),
         this.m_selectedSubs.clear(),
-        this.UpdateSelected();
+        this.UpdateSelected());
     }
     ClearAllSelectedApps() {
-      this.m_selectedApps.clear(), this.UpdateSelected();
+      (this.m_selectedApps.clear(), this.UpdateSelected());
     }
     UpdateSelected() {
       let _ = this.AppCount() + this.PackageCount();
@@ -23265,9 +23279,9 @@ var _,
       _(this);
     }
   };
-_([_], _.prototype, `m_nTotalSelected`, void 0),
+(_([_], _.prototype, `m_nTotalSelected`, void 0),
   _([_], _.prototype, `SelectAllApps`, null),
-  _([_], _.prototype, `ClearAllSelectedApps`, null);
+  _([_], _.prototype, `ClearAllSelectedApps`, null));
 var _ = (_) => {
     let { appid: _, strFilter: _ } = _,
       [_] = _(typeof _ == `string` ? Number.parseInt(_) : _, {});
@@ -23319,7 +23333,7 @@ var _ = (_) => {
       _ = _(),
       _ = _(),
       _ = _();
-    _(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _();
+    (_(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _());
     function _(_) {
       return _ && _.__esModule
         ? _
@@ -23367,7 +23381,7 @@ var _ = (_) => {
           ),
         );
       });
-    (_.useStateManager = _.useStateManager),
+    ((_.useStateManager = _.useStateManager),
       (_.createFilter = _.createFilter),
       (_.defaultTheme = _.defaultTheme),
       (_.mergeStyles = _.mergeStyles),
@@ -23393,7 +23407,7 @@ var _ = (_) => {
           _,
         );
       }),
-      (_.default = _);
+      (_.default = _));
   }),
   _ = _((_, _) => {
     _.exports = _();
@@ -23445,7 +23459,7 @@ var _ = (_) => {
     static s_singleton;
     constructor() {}
     static Get() {
-      return (_.s_singleton ||= new _()), _.s_singleton;
+      return ((_.s_singleton ||= new _()), _.s_singleton);
     }
   };
 function _() {
@@ -23466,7 +23480,7 @@ function _() {
   );
 }
 var _ = _((_) => {
-    (_.read = function (_, _, _, _, _) {
+    ((_.read = function (_, _, _, _, _) {
       var _,
         _,
         _ = _ * 8 - _ - 1,
@@ -23488,7 +23502,7 @@ var _ = _((_) => {
       );
       if (_ === 0) _ = 1 - _;
       else if (_ === _) return _ ? NaN : (_ ? -1 : 1) * (1 / 0);
-      else (_ += 2 ** _), (_ -= _);
+      else ((_ += 2 ** _), (_ -= _));
       return (_ ? -1 : 1) * _ * 2 ** (_ - _);
     }),
       (_.write = function (_, _, _, _, _, _) {
@@ -23524,7 +23538,7 @@ var _ = _((_) => {
           _[_ + _] = _ & 255, _ += _, _ /= 256, _ -= 8
         );
         _[_ + _ - _] |= _ * 128;
-      });
+      }));
   }),
   _ = _((_) => {
     var _ = _(),
@@ -23533,16 +23547,16 @@ var _ = _((_) => {
         typeof Symbol == `function` && typeof Symbol.for == `function`
           ? Symbol.for(`nodejs.util.inspect.custom`)
           : null;
-    (_.Buffer = _), (_.SlowBuffer = _), (_.INSPECT_MAX_BYTES = 50);
+    ((_.Buffer = _), (_.SlowBuffer = _), (_.INSPECT_MAX_BYTES = 50));
     var _ = 2147483647;
-    (_.kMaxLength = _),
+    ((_.kMaxLength = _),
       (_.TYPED_ARRAY_SUPPORT = _()),
       !_.TYPED_ARRAY_SUPPORT &&
         typeof console < `u` &&
         typeof console.error == `function` &&
         console.error(
           "This browser lacks typed array (Uint8Array) support which is required by `buffer` v5.x. Use `buffer` v4.x if you require old browser support.",
-        );
+        ));
     function _() {
       try {
         let _ = new Uint8Array(1),
@@ -23560,7 +23574,7 @@ var _ = _((_) => {
         return !1;
       }
     }
-    Object.defineProperty(_.prototype, "parent", {
+    (Object.defineProperty(_.prototype, "parent", {
       enumerable: !0,
       get: function () {
         if (_.isBuffer(this)) return this.buffer;
@@ -23571,12 +23585,12 @@ var _ = _((_) => {
         get: function () {
           if (_.isBuffer(this)) return this.byteOffset;
         },
-      });
+      }));
     function _(_) {
       if (_ > _)
         throw RangeError(`The value "` + _ + `" is invalid for option "size"`);
       let _ = new Uint8Array(_);
-      return Object.setPrototypeOf(_, _.prototype), _;
+      return (Object.setPrototypeOf(_, _.prototype), _);
     }
     function _(_, _, _) {
       if (typeof _ == `number`) {
@@ -23623,11 +23637,11 @@ var _ = _((_) => {
           typeof _,
       );
     }
-    (_.from = function (_, _, _) {
+    ((_.from = function (_, _, _) {
       return _(_, _, _);
     }),
       Object.setPrototypeOf(_.prototype, Uint8Array.prototype),
-      Object.setPrototypeOf(_, Uint8Array);
+      Object.setPrototypeOf(_, Uint8Array));
     function _(_) {
       if (typeof _ != `number`)
         throw TypeError(`"size" argument must be of type number`);
@@ -23648,14 +23662,14 @@ var _ = _((_) => {
       return _(_, _, _);
     };
     function _(_) {
-      return _(_), _(_ < 0 ? 0 : _(_) | 0);
+      return (_(_), _(_ < 0 ? 0 : _(_) | 0));
     }
-    (_.allocUnsafe = function (_) {
+    ((_.allocUnsafe = function (_) {
       return _(_);
     }),
       (_.allocUnsafeSlow = function (_) {
         return _(_);
-      });
+      }));
     function _(_, _) {
       if (
         ((typeof _ != `string` || _ === ``) && (_ = `utf8`), !_.isEncoding(_))
@@ -23664,7 +23678,7 @@ var _ = _((_) => {
       let _ = _(_, _) | 0,
         _ = _(_),
         _ = _.write(_, _);
-      return _ !== _ && (_ = _.slice(0, _)), _;
+      return (_ !== _ && (_ = _.slice(0, _)), _);
     }
     function _(_) {
       let _ = _.length < 0 ? 0 : _(_.length) | 0,
@@ -23700,7 +23714,7 @@ var _ = _((_) => {
       if (_.isBuffer(_)) {
         let _ = _(_.length) | 0,
           _ = _(_);
-        return _.length === 0 || _.copy(_, 0, 0, _), _;
+        return (_.length === 0 || _.copy(_, 0, 0, _), _);
       }
       if (_.length !== void 0)
         return typeof _.length != `number` || _(_.length) ? _(0) : _(_);
@@ -23716,9 +23730,9 @@ var _ = _((_) => {
       return _ | 0;
     }
     function _(_) {
-      return +_ != _ && (_ = 0), _.alloc(+_);
+      return (+_ != _ && (_ = 0), _.alloc(+_));
     }
-    (_.isBuffer = function (_) {
+    ((_.isBuffer = function (_) {
       return _ != null && _._isBuffer === !0 && _ !== _.prototype;
     }),
       (_.compare = function (_, _) {
@@ -23735,7 +23749,7 @@ var _ = _((_) => {
           _ = _.length;
         for (let _ = 0, _ = Math.min(_, _); _ < _; ++_)
           if (_[_] !== _[_]) {
-            (_ = _[_]), (_ = _[_]);
+            ((_ = _[_]), (_ = _[_]));
             break;
           }
         return _ < _ ? -1 : +(_ < _);
@@ -23778,7 +23792,7 @@ var _ = _((_) => {
           _ += _.length;
         }
         return _;
-      });
+      }));
     function _(_, _) {
       if (_.isBuffer(_)) return _.length;
       if (ArrayBuffer.isView(_) || _(_, ArrayBuffer)) return _.byteLength;
@@ -23811,7 +23825,7 @@ var _ = _((_) => {
             return _(_).length;
           default:
             if (_) return _ ? -1 : _(_).length;
-            (_ = (`` + _).toLowerCase()), (_ = !0);
+            ((_ = (`` + _).toLowerCase()), (_ = !0));
         }
     }
     _.byteLength = _;
@@ -23824,7 +23838,7 @@ var _ = _((_) => {
           ((_ >>>= 0), (_ >>>= 0), _ <= _))
       )
         return ``;
-      for (_ ||= `utf8`; ; )
+      for (_ ||= `utf8`; ;)
         switch (_) {
           case `hex`:
             return _(this, _, _);
@@ -23845,15 +23859,15 @@ var _ = _((_) => {
             return _(this, _, _);
           default:
             if (_) throw TypeError(`Unknown encoding: ` + _);
-            (_ = (_ + ``).toLowerCase()), (_ = !0);
+            ((_ = (_ + ``).toLowerCase()), (_ = !0));
         }
     }
     _.prototype._isBuffer = !0;
     function _(_, _, _) {
       let _ = _[_];
-      (_[_] = _[_]), (_[_] = _);
+      ((_[_] = _[_]), (_[_] = _));
     }
-    (_.prototype.swap16 = function () {
+    ((_.prototype.swap16 = function () {
       let _ = this.length;
       if (_ % 2 != 0)
         throw RangeError(`Buffer size must be a multiple of 16-bits`);
@@ -23864,7 +23878,8 @@ var _ = _((_) => {
         let _ = this.length;
         if (_ % 4 != 0)
           throw RangeError(`Buffer size must be a multiple of 32-bits`);
-        for (let _ = 0; _ < _; _ += 4) _(this, _, _ + 3), _(this, _ + 1, _ + 2);
+        for (let _ = 0; _ < _; _ += 4)
+          (_(this, _, _ + 3), _(this, _ + 1, _ + 2));
         return this;
       }),
       (_.prototype.swap64 = function () {
@@ -23872,10 +23887,10 @@ var _ = _((_) => {
         if (_ % 8 != 0)
           throw RangeError(`Buffer size must be a multiple of 64-bits`);
         for (let _ = 0; _ < _; _ += 8)
-          _(this, _, _ + 7),
+          (_(this, _, _ + 7),
             _(this, _ + 1, _ + 6),
             _(this, _ + 2, _ + 5),
-            _(this, _ + 3, _ + 4);
+            _(this, _ + 3, _ + 4));
         return this;
       }),
       (_.prototype.toString = function () {
@@ -23932,11 +23947,11 @@ var _ = _((_) => {
           _ = _.slice(_, _);
         for (let _ = 0; _ < _; ++_)
           if (_[_] !== _[_]) {
-            (_ = _[_]), (_ = _[_]);
+            ((_ = _[_]), (_ = _[_]));
             break;
           }
         return _ < _ ? -1 : +(_ < _);
-      });
+      }));
     function _(_, _, _, _, _) {
       if (_.length === 0) return -1;
       if (
@@ -23979,7 +23994,7 @@ var _ = _((_) => {
         _ === `ucs2` || _ === `ucs-2` || _ === `utf16le` || _ === `utf-16le`)
       ) {
         if (_.length < 2 || _.length < 2) return -1;
-        (_ = 2), (_ /= 2), (_ /= 2), (_ /= 2);
+        ((_ = 2), (_ /= 2), (_ /= 2), (_ /= 2));
       }
       function _(_, _) {
         return _ === 1 ? _[_] : _.readUInt16BE(_ * _);
@@ -23990,7 +24005,7 @@ var _ = _((_) => {
         for (_ = _; _ < _; _++)
           if (_(_, _) === _(_, _ === -1 ? 0 : _ - _)) {
             if ((_ === -1 && (_ = _), _ - _ + 1 === _)) return _ * _;
-          } else _ !== -1 && (_ -= _ - _), (_ = -1);
+          } else (_ !== -1 && (_ -= _ - _), (_ = -1));
       } else
         for (_ + _ > _ && (_ = _ - _), _ = _; _ >= 0; _--) {
           let _ = !0;
@@ -24003,7 +24018,7 @@ var _ = _((_) => {
         }
       return -1;
     }
-    (_.prototype.includes = function (_, _, _) {
+    ((_.prototype.includes = function (_, _, _) {
       return this.indexOf(_, _, _) !== -1;
     }),
       (_.prototype.indexOf = function (_, _, _) {
@@ -24011,7 +24026,7 @@ var _ = _((_) => {
       }),
       (_.prototype.lastIndexOf = function (_, _, _) {
         return _(this, _, _, _, !1);
-      });
+      }));
     function _(_, _, _, _) {
       _ = Number(_) || 0;
       let _ = _.length - _;
@@ -24038,15 +24053,15 @@ var _ = _((_) => {
     function _(_, _, _, _) {
       return _(_(_, _.length - _), _, _, _);
     }
-    (_.prototype.write = function (_, _, _, _) {
-      if (_ === void 0) (_ = `utf8`), (_ = this.length), (_ = 0);
+    ((_.prototype.write = function (_, _, _, _) {
+      if (_ === void 0) ((_ = `utf8`), (_ = this.length), (_ = 0));
       else if (_ === void 0 && typeof _ == `string`)
-        (_ = _), (_ = this.length), (_ = 0);
+        ((_ = _), (_ = this.length), (_ = 0));
       else if (isFinite(_))
-        (_ >>>= 0),
+        ((_ >>>= 0),
           isFinite(_)
             ? ((_ >>>= 0), _ === void 0 && (_ = `utf8`))
-            : ((_ = _), (_ = void 0));
+            : ((_ = _), (_ = void 0)));
       else
         throw Error(
           `Buffer.write(string, encoding, offset[, length]) is no longer supported`,
@@ -24079,7 +24094,7 @@ var _ = _((_) => {
             return _(this, _, _, _);
           default:
             if (_) throw TypeError(`Unknown encoding: ` + _);
-            (_ = (`` + _).toLowerCase()), (_ = !0);
+            ((_ = (`` + _).toLowerCase()), (_ = !0));
         }
     }),
       (_.prototype.toJSON = function () {
@@ -24087,7 +24102,7 @@ var _ = _((_) => {
           type: `Buffer`,
           data: Array.prototype.slice.call(this._arr || this, 0),
         };
-      });
+      }));
     function _(_, _, _) {
       return _ === 0 && _ === _.length
         ? _.fromByteArray(_)
@@ -24097,7 +24112,7 @@ var _ = _((_) => {
       _ = Math.min(_.length, _);
       let _ = [],
         _ = _;
-      for (; _ < _; ) {
+      for (; _ < _;) {
         let _ = _[_],
           _ = null,
           _ = _ > 239 ? 4 : _ > 223 ? 3 : _ > 191 ? 2 : 1;
@@ -24108,20 +24123,20 @@ var _ = _((_) => {
               _ < 128 && (_ = _);
               break;
             case 2:
-              (_ = _[_ + 1]),
+              ((_ = _[_ + 1]),
                 (_ & 192) == 128 &&
-                  ((_ = ((_ & 31) << 6) | (_ & 63)), _ > 127 && (_ = _));
+                  ((_ = ((_ & 31) << 6) | (_ & 63)), _ > 127 && (_ = _)));
               break;
             case 3:
-              (_ = _[_ + 1]),
+              ((_ = _[_ + 1]),
                 (_ = _[_ + 2]),
                 (_ & 192) == 128 &&
                   (_ & 192) == 128 &&
                   ((_ = ((_ & 15) << 12) | ((_ & 63) << 6) | (_ & 63)),
-                  _ > 2047 && (_ < 55296 || _ > 57343) && (_ = _));
+                  _ > 2047 && (_ < 55296 || _ > 57343) && (_ = _)));
               break;
             case 4:
-              (_ = _[_ + 1]),
+              ((_ = _[_ + 1]),
                 (_ = _[_ + 2]),
                 (_ = _[_ + 3]),
                 (_ & 192) == 128 &&
@@ -24132,17 +24147,17 @@ var _ = _((_) => {
                     ((_ & 63) << 12) |
                     ((_ & 63) << 6) |
                     (_ & 63)),
-                  _ > 65535 && _ < 1114112 && (_ = _));
+                  _ > 65535 && _ < 1114112 && (_ = _)));
           }
         }
-        _ === null
+        (_ === null
           ? ((_ = 65533), (_ = 1))
           : _ > 65535 &&
             ((_ -= 65536),
             _.push(((_ >>> 10) & 1023) | 55296),
             (_ = 56320 | (_ & 1023))),
           _.push(_),
-          (_ += _);
+          (_ += _));
       }
       return _(_);
     }
@@ -24152,7 +24167,7 @@ var _ = _((_) => {
       if (_ <= _) return String.fromCharCode.apply(String, _);
       let _ = ``,
         _ = 0;
-      for (; _ < _; )
+      for (; _ < _;)
         _ += String.fromCharCode.apply(String, _.slice(_, (_ += _)));
       return _;
     }
@@ -24170,7 +24185,7 @@ var _ = _((_) => {
     }
     function _(_, _, _) {
       let _ = _.length;
-      (!_ || _ < 0) && (_ = 0), (!_ || _ < 0 || _ > _) && (_ = _);
+      ((!_ || _ < 0) && (_ = 0), (!_ || _ < 0 || _ > _) && (_ = _));
       let _ = ``;
       for (let _ = _; _ < _; ++_) _ += _[_[_]];
       return _;
@@ -24184,38 +24199,38 @@ var _ = _((_) => {
     }
     _.prototype.slice = function (_, _) {
       let _ = this.length;
-      (_ = ~~_),
+      ((_ = ~~_),
         (_ = _ === void 0 ? _ : ~~_),
         _ < 0 ? ((_ += _), _ < 0 && (_ = 0)) : _ > _ && (_ = _),
         _ < 0 ? ((_ += _), _ < 0 && (_ = 0)) : _ > _ && (_ = _),
-        _ < _ && (_ = _);
+        _ < _ && (_ = _));
       let _ = this.subarray(_, _);
-      return Object.setPrototypeOf(_, _.prototype), _;
+      return (Object.setPrototypeOf(_, _.prototype), _);
     };
     function _(_, _, _) {
       if (_ % 1 != 0 || _ < 0) throw RangeError(`offset is not uint`);
       if (_ + _ > _) throw RangeError(`Trying to access beyond buffer length`);
     }
-    (_.prototype.readUintLE = _.prototype.readUIntLE =
+    ((_.prototype.readUintLE = _.prototype.readUIntLE =
       function (_, _, _) {
-        (_ >>>= 0), (_ >>>= 0), _ || _(_, _, this.length);
+        ((_ >>>= 0), (_ >>>= 0), _ || _(_, _, this.length));
         let _ = this[_],
           _ = 1,
           _ = 0;
-        for (; ++_ < _ && (_ *= 256); ) _ += this[_ + _] * _;
+        for (; ++_ < _ && (_ *= 256);) _ += this[_ + _] * _;
         return _;
       }),
       (_.prototype.readUintBE = _.prototype.readUIntBE =
         function (_, _, _) {
-          (_ >>>= 0), (_ >>>= 0), _ || _(_, _, this.length);
+          ((_ >>>= 0), (_ >>>= 0), _ || _(_, _, this.length));
           let _ = this[_ + --_],
             _ = 1;
-          for (; _ > 0 && (_ *= 256); ) _ += this[_ + --_] * _;
+          for (; _ > 0 && (_ *= 256);) _ += this[_ + --_] * _;
           return _;
         }),
       (_.prototype.readUint8 = _.prototype.readUInt8 =
         function (_, _) {
-          return (_ >>>= 0), _ || _(_, 1, this.length), this[_];
+          return ((_ >>>= 0), _ || _(_, 1, this.length), this[_]);
         }),
       (_.prototype.readUint16LE = _.prototype.readUInt16LE =
         function (_, _) {
@@ -24248,7 +24263,7 @@ var _ = _((_) => {
           );
         }),
       (_.prototype.readBigUInt64LE = _(function (_) {
-        (_ >>>= 0), _(_, `offset`);
+        ((_ >>>= 0), _(_, `offset`));
         let _ = this[_],
           _ = this[_ + 7];
         (_ === void 0 || _ === void 0) && _(_, this.length - 8);
@@ -24257,7 +24272,7 @@ var _ = _((_) => {
         return BigInt(_) + (BigInt(_) << BigInt(32));
       })),
       (_.prototype.readBigUInt64BE = _(function (_) {
-        (_ >>>= 0), _(_, `offset`);
+        ((_ >>>= 0), _(_, `offset`));
         let _ = this[_],
           _ = this[_ + 7];
         (_ === void 0 || _ === void 0) && _(_, this.length - 8);
@@ -24266,20 +24281,20 @@ var _ = _((_) => {
         return (BigInt(_) << BigInt(32)) + BigInt(_);
       })),
       (_.prototype.readIntLE = function (_, _, _) {
-        (_ >>>= 0), (_ >>>= 0), _ || _(_, _, this.length);
+        ((_ >>>= 0), (_ >>>= 0), _ || _(_, _, this.length));
         let _ = this[_],
           _ = 1,
           _ = 0;
-        for (; ++_ < _ && (_ *= 256); ) _ += this[_ + _] * _;
-        return (_ *= 128), _ >= _ && (_ -= 2 ** (8 * _)), _;
+        for (; ++_ < _ && (_ *= 256);) _ += this[_ + _] * _;
+        return ((_ *= 128), _ >= _ && (_ -= 2 ** (8 * _)), _);
       }),
       (_.prototype.readIntBE = function (_, _, _) {
-        (_ >>>= 0), (_ >>>= 0), _ || _(_, _, this.length);
+        ((_ >>>= 0), (_ >>>= 0), _ || _(_, _, this.length));
         let _ = _,
           _ = 1,
           _ = this[_ + --_];
-        for (; _ > 0 && (_ *= 256); ) _ += this[_ + --_] * _;
-        return (_ *= 128), _ >= _ && (_ -= 2 ** (8 * _)), _;
+        for (; _ > 0 && (_ *= 256);) _ += this[_ + --_] * _;
+        return ((_ *= 128), _ >= _ && (_ -= 2 ** (8 * _)), _);
       }),
       (_.prototype.readInt8 = function (_, _) {
         return (
@@ -24289,12 +24304,12 @@ var _ = _((_) => {
         );
       }),
       (_.prototype.readInt16LE = function (_, _) {
-        (_ >>>= 0), _ || _(_, 2, this.length);
+        ((_ >>>= 0), _ || _(_, 2, this.length));
         let _ = this[_] | (this[_ + 1] << 8);
         return _ & 32768 ? _ | 4294901760 : _;
       }),
       (_.prototype.readInt16BE = function (_, _) {
-        (_ >>>= 0), _ || _(_, 2, this.length);
+        ((_ >>>= 0), _ || _(_, 2, this.length));
         let _ = this[_ + 1] | (this[_] << 8);
         return _ & 32768 ? _ | 4294901760 : _;
       }),
@@ -24319,7 +24334,7 @@ var _ = _((_) => {
         );
       }),
       (_.prototype.readBigInt64LE = _(function (_) {
-        (_ >>>= 0), _(_, `offset`);
+        ((_ >>>= 0), _(_, `offset`));
         let _ = this[_],
           _ = this[_ + 7];
         (_ === void 0 || _ === void 0) && _(_, this.length - 8);
@@ -24333,7 +24348,7 @@ var _ = _((_) => {
         );
       })),
       (_.prototype.readBigInt64BE = _(function (_) {
-        (_ >>>= 0), _(_, `offset`);
+        ((_ >>>= 0), _(_, `offset`));
         let _ = this[_],
           _ = this[_ + 7];
         (_ === void 0 || _ === void 0) && _(_, this.length - 8);
@@ -24364,14 +24379,14 @@ var _ = _((_) => {
         return (
           (_ >>>= 0), _ || _(_, 8, this.length), _.read(this, _, !1, 52, 8)
         );
-      });
+      }));
     function _(_, _, _, _, _, _) {
       if (!_.isBuffer(_))
         throw TypeError(`"buffer" argument must be a Buffer instance`);
       if (_ > _ || _ < _) throw RangeError(`"value" argument is out of bounds`);
       if (_ + _ > _.length) throw RangeError(`Index out of range`);
     }
-    (_.prototype.writeUintLE = _.prototype.writeUIntLE =
+    ((_.prototype.writeUintLE = _.prototype.writeUIntLE =
       function (_, _, _, _) {
         if (((_ = +_), (_ >>>= 0), (_ >>>= 0), !_)) {
           let _ = 2 ** (8 * _) - 1;
@@ -24379,7 +24394,7 @@ var _ = _((_) => {
         }
         let _ = 1,
           _ = 0;
-        for (this[_] = _ & 255; ++_ < _ && (_ *= 256); )
+        for (this[_] = _ & 255; ++_ < _ && (_ *= 256);)
           this[_ + _] = (_ / _) & 255;
         return _ + _;
       }),
@@ -24391,7 +24406,7 @@ var _ = _((_) => {
           }
           let _ = _ - 1,
             _ = 1;
-          for (this[_ + _] = _ & 255; --_ >= 0 && (_ *= 256); )
+          for (this[_ + _] = _ & 255; --_ >= 0 && (_ *= 256);)
             this[_ + _] = (_ / _) & 255;
           return _ + _;
         }),
@@ -24452,17 +24467,17 @@ var _ = _((_) => {
             (this[_ + 3] = _ & 255),
             _ + 4
           );
-        });
+        }));
     function _(_, _, _, _, _) {
       _(_, _, _, _, _, 7);
       let _ = Number(_ & BigInt(4294967295));
-      (_[_++] = _),
+      ((_[_++] = _),
         (_ >>= 8),
         (_[_++] = _),
         (_ >>= 8),
         (_[_++] = _),
         (_ >>= 8),
-        (_[_++] = _);
+        (_[_++] = _));
       let _ = Number((_ >> BigInt(32)) & BigInt(4294967295));
       return (
         (_[_++] = _),
@@ -24478,13 +24493,13 @@ var _ = _((_) => {
     function _(_, _, _, _, _) {
       _(_, _, _, _, _, 7);
       let _ = Number(_ & BigInt(4294967295));
-      (_[_ + 7] = _),
+      ((_[_ + 7] = _),
         (_ >>= 8),
         (_[_ + 6] = _),
         (_ >>= 8),
         (_[_ + 5] = _),
         (_ >>= 8),
-        (_[_ + 4] = _);
+        (_[_ + 4] = _));
       let _ = Number((_ >> BigInt(32)) & BigInt(4294967295));
       return (
         (_[_ + 3] = _),
@@ -24497,7 +24512,7 @@ var _ = _((_) => {
         _ + 8
       );
     }
-    (_.prototype.writeBigUInt64LE = _(function (_, _ = 0) {
+    ((_.prototype.writeBigUInt64LE = _(function (_, _ = 0) {
       return _(this, _, _, BigInt(0), BigInt(`0xffffffffffffffff`));
     })),
       (_.prototype.writeBigUInt64BE = _(function (_, _ = 0) {
@@ -24511,9 +24526,9 @@ var _ = _((_) => {
         let _ = 0,
           _ = 1,
           _ = 0;
-        for (this[_] = _ & 255; ++_ < _ && (_ *= 256); )
-          _ < 0 && _ === 0 && this[_ + _ - 1] !== 0 && (_ = 1),
-            (this[_ + _] = (((_ / _) | 0) - _) & 255);
+        for (this[_] = _ & 255; ++_ < _ && (_ *= 256);)
+          (_ < 0 && _ === 0 && this[_ + _ - 1] !== 0 && (_ = 1),
+            (this[_ + _] = (((_ / _) | 0) - _) & 255));
         return _ + _;
       }),
       (_.prototype.writeIntBE = function (_, _, _, _) {
@@ -24524,9 +24539,9 @@ var _ = _((_) => {
         let _ = _ - 1,
           _ = 1,
           _ = 0;
-        for (this[_ + _] = _ & 255; --_ >= 0 && (_ *= 256); )
-          _ < 0 && _ === 0 && this[_ + _ + 1] !== 0 && (_ = 1),
-            (this[_ + _] = (((_ / _) | 0) - _) & 255);
+        for (this[_ + _] = _ & 255; --_ >= 0 && (_ *= 256);)
+          (_ < 0 && _ === 0 && this[_ + _ + 1] !== 0 && (_ = 1),
+            (this[_ + _] = (((_ / _) | 0) - _) & 255));
         return _ + _;
       }),
       (_.prototype.writeInt8 = function (_, _, _) {
@@ -24601,7 +24616,7 @@ var _ = _((_) => {
           -BigInt(`0x8000000000000000`),
           BigInt(`0x7fffffffffffffff`),
         );
-      }));
+      })));
     function _(_, _, _, _, _, _) {
       if (_ + _ > _.length || _ < 0) throw RangeError(`Index out of range`);
     }
@@ -24614,12 +24629,12 @@ var _ = _((_) => {
         _ + 4
       );
     }
-    (_.prototype.writeFloatLE = function (_, _, _) {
+    ((_.prototype.writeFloatLE = function (_, _, _) {
       return _(this, _, _, !0, _);
     }),
       (_.prototype.writeFloatBE = function (_, _, _) {
         return _(this, _, _, !1, _);
-      });
+      }));
     function _(_, _, _, _, _) {
       return (
         (_ = +_),
@@ -24629,7 +24644,7 @@ var _ = _((_) => {
         _ + 8
       );
     }
-    (_.prototype.writeDoubleLE = function (_, _, _) {
+    ((_.prototype.writeDoubleLE = function (_, _, _) {
       return _(this, _, _, !0, _);
     }),
       (_.prototype.writeDoubleBE = function (_, _, _) {
@@ -24649,8 +24664,8 @@ var _ = _((_) => {
         if (_ < 0) throw RangeError(`targetStart out of bounds`);
         if (_ < 0 || _ >= this.length) throw RangeError(`Index out of range`);
         if (_ < 0) throw RangeError(`sourceEnd out of bounds`);
-        _ > this.length && (_ = this.length),
-          _.length - _ < _ - _ && (_ = _.length - _ + _);
+        (_ > this.length && (_ = this.length),
+          _.length - _ < _ - _ && (_ = _.length - _ + _));
         let _ = _ - _;
         return (
           this === _ && typeof Uint8Array.prototype.copyWithin == `function`
@@ -24681,7 +24696,7 @@ var _ = _((_) => {
         if (_ < 0 || this.length < _ || this.length < _)
           throw RangeError(`Out of range index`);
         if (_ <= _) return this;
-        (_ >>>= 0), (_ = _ === void 0 ? this.length : _ >>> 0), (_ ||= 0);
+        ((_ >>>= 0), (_ = _ === void 0 ? this.length : _ >>> 0), (_ ||= 0));
         let _;
         if (typeof _ == `number`) for (_ = _; _ < _; ++_) this[_] = _;
         else {
@@ -24694,12 +24709,12 @@ var _ = _((_) => {
           for (_ = 0; _ < _ - _; ++_) this[_ + _] = _[_ % _];
         }
         return this;
-      });
+      }));
     var _ = {};
     function _(_, _, _) {
       _[_] = class extends _ {
         constructor() {
-          super(),
+          (super(),
             Object.defineProperty(this, "message", {
               value: _.apply(this, arguments),
               writable: !0,
@@ -24707,7 +24722,7 @@ var _ = _((_) => {
             }),
             (this.name = `${this.name} [${_}]`),
             this.stack,
-            delete this.name;
+            delete this.name);
         }
         get code() {
           return _;
@@ -24725,7 +24740,7 @@ var _ = _((_) => {
         }
       };
     }
-    _(
+    (_(
       `ERR_BUFFER_OUT_OF_BOUNDS`,
       function (_) {
         return _
@@ -24760,7 +24775,7 @@ var _ = _((_) => {
           );
         },
         RangeError,
-      );
+      ));
     function _(_) {
       let _ = ``,
         _ = _.length,
@@ -24769,21 +24784,21 @@ var _ = _((_) => {
       return `${_.slice(0, _)}${_}`;
     }
     function _(_, _, _) {
-      _(_, `offset`),
-        (_[_] === void 0 || _[_ + _] === void 0) && _(_, _.length - (_ + 1));
+      (_(_, `offset`),
+        (_[_] === void 0 || _[_ + _] === void 0) && _(_, _.length - (_ + 1)));
     }
     function _(_, _, _, _, _, _) {
       if (_ > _ || _ < _) {
         let _ = typeof _ == `bigint` ? `n` : ``,
           _;
         throw (
-          ((_ =
+          (_ =
             _ > 3
               ? _ === 0 || _ === BigInt(0)
                 ? `>= 0${_} and < 2${_} ** ${(_ + 1) * 8}${_}`
                 : `>= -(2${_} ** ${(_ + 1) * 8 - 1}${_}) and < 2 ** ${(_ + 1) * 8 - 1}${_}`
               : `>= ${_}${_} and <= ${_}${_}`),
-          new _.ERR_OUT_OF_RANGE(`value`, _, _))
+          new _.ERR_OUT_OF_RANGE(`value`, _, _)
         );
       }
       _(_, _, _);
@@ -24803,7 +24818,7 @@ var _ = _((_) => {
     function _(_) {
       if (((_ = _.split(`=`)[0]), (_ = _.trim().replace(_, ``)), _.length < 2))
         return ``;
-      for (; _.length % 4 != 0; ) _ += `=`;
+      for (; _.length % 4 != 0;) _ += `=`;
       return _;
     }
     function _(_, _) {
@@ -24823,7 +24838,7 @@ var _ = _((_) => {
             continue;
           }
           if (_ < 56320) {
-            (_ -= 3) > -1 && _.push(239, 191, 189), (_ = _);
+            ((_ -= 3) > -1 && _.push(239, 191, 189), (_ = _));
             continue;
           }
           _ = (((_ - 55296) << 10) | (_ - 56320)) + 65536;
@@ -24860,11 +24875,11 @@ var _ = _((_) => {
         _,
         _ = [];
       for (let _ = 0; _ < _.length && !((_ -= 2) < 0); ++_)
-        (_ = _.charCodeAt(_)),
+        ((_ = _.charCodeAt(_)),
           (_ = _ >> 8),
           (_ = _ % 256),
           _.push(_),
-          _.push(_);
+          _.push(_));
       return _;
     }
     function _(_) {
@@ -24905,7 +24920,7 @@ var _ = _((_) => {
     }
   }),
   _ = (function (_) {
-    return (_.k_EventData_SubMenu = `submenu`), _;
+    return ((_.k_EventData_SubMenu = `submenu`), _);
   })({}),
   _ = class _ extends _ {
     m_filesToUpload = _.array();
@@ -24916,13 +24931,13 @@ var _ = _((_) => {
     m_bTwoPhaseUpload = !1;
     m_bDirectTempStorageUpload = !1;
     constructor(_, _, _, _, _) {
-      super(),
+      (super(),
         _(this),
         (this.m_strUploadPath = _),
         (this.m_rgImageOptions = _(_)),
         (this.m_bSynchronousUpload = _),
         (this.m_bTwoPhaseUpload = _),
-        (this.m_bDirectTempStorageUpload = _);
+        (this.m_bDirectTempStorageUpload = _));
     }
     GetUploadPath() {
       return this.m_strUploadPath;
@@ -24968,11 +24983,11 @@ var _ = _((_) => {
             _,
             void 0,
           );
-          return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+          return ((this.m_filesToUpload = [...this.m_filesToUpload, _]), !0);
         }
         if (_ instanceof HTMLVideoElement) {
           let _ = new _(_, _.name, _, this.m_rgImageOptions, _.src, _(_), _);
-          return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+          return ((this.m_filesToUpload = [...this.m_filesToUpload, _]), !0);
         }
       } else if (_.isSubtitleTextFile(_))
         return (
@@ -24986,9 +25001,9 @@ var _ = _((_) => {
     }
     async UploadSingleImage(_, _, _, _) {
       let _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`elanguage`, `` + _),
-        _.append(`originalname`, _);
+        _.append(`originalname`, _));
       let _ = _.GetCurrentImageOption();
       _?.artworkType && _.append(`arttype`, _.artworkType);
       let _ = _(_);
@@ -25099,7 +25114,7 @@ var _ = _((_) => {
     }
     async HandleDirectUploadToTempFromBrowser(_, _) {
       let _ = new FormData();
-      _.append(`filesize`, `` + _.file.size), _.append(`sessionid`, _());
+      (_.append(`filesize`, `` + _.file.size), _.append(`sessionid`, _()));
       let _ =
           _(this.m_strUploadPath, `ajax`, `uploadurl`) || this.m_strUploadPath,
         _ = await _.default.post(_, _, {
@@ -25136,11 +25151,11 @@ var _ = _((_) => {
       };
     }
   };
-_([_], _.prototype, `m_filesToUpload`, void 0),
+(_([_], _.prototype, `m_filesToUpload`, void 0),
   _([_], _.prototype, `GetUploadImages`, null),
   _([_], _.prototype, `ClearImages`, null),
   _([_], _.prototype, `DeleteUploadImage`, null),
-  _([_], _.prototype, `AddImageForLanguage`, null);
+  _([_], _.prototype, `AddImageForLanguage`, null));
 function _(_, _, _, _, _) {
   let _ = _(_ instanceof Array ? _ : [_]);
   return _.useMemo(() => new _(_, _, _, _, _), [_, _, _, _, _]);
@@ -25164,12 +25179,12 @@ function _() {
     [
       _,
       (0, _.useCallback)((_) => {
-        window.clearTimeout(_.current),
+        (window.clearTimeout(_.current),
           _((_) => ({
             eToast: _,
             nShowCount: (_?.nShowCount ?? 0) + 1,
           })),
-          (_.current = window.setTimeout(() => _(void 0), _));
+          (_.current = window.setTimeout(() => _(void 0), _)));
       }, []),
     ]
   );
@@ -25334,7 +25349,7 @@ function _(_) {
     } else if (Array.isArray(_)) for (let _ of _) _(_);
     else if (_ && typeof _ == `object`) for (let _ of Object.keys(_)) _(_[_]);
   }
-  return _(_), Array.from(_);
+  return (_(_), Array.from(_));
 }
 function _(_) {
   let { dataToPaste: _ } = _,
@@ -25367,7 +25382,7 @@ function _(_) {
             ),
             _ = _.contents,
             _ = _ + 1;
-          for (; _.GetSaleSectionByID(_); ) _++;
+          for (; _.GetSaleSectionByID(_);) _++;
           if (
             ((_.unique_id = _),
             (_.GetEventModel().jsondata.sale_sections[_] = _),
@@ -25484,18 +25499,18 @@ function _(_) {
                   _ = new File([_], _, {
                     type: _.type,
                   });
-                _.fnSetThrobber(
+                (_.fnSetThrobber(
                   _(`#Template_Copy_Assets_UploadConvert`, _, _.length),
                 ),
                   await _.AddImageForLanguage(_, 0),
                   await _.UploadAllImages(),
                   _.fnSetLoading(!1),
-                  _.fnSetSuccess(!0);
+                  _.fnSetSuccess(!0));
               }
             } catch (_) {
-              console.error(`fail to upload assets `, _),
+              (console.error(`fail to upload assets `, _),
                 _.fnSetLoading(!1),
-                _.fnSetError(!0);
+                _.fnSetError(!0));
             }
           } else _.fnSetSuccess(!0);
         },
@@ -25519,14 +25534,14 @@ function _(_) {
 }
 function _(_, _, _) {
   let _ = () => {
-    _(),
+    (_(),
       window.setTimeout(() => {
         let _ = _.GetEventModel().jsondata.sale_sections.findIndex(
           (_) => _ == _,
         );
-        _.GetEventModel().jsondata.sale_sections.splice(_, 1),
-          _.SetDirty(_.jsondata_sales);
-      }, 500);
+        (_.GetEventModel().jsondata.sale_sections.splice(_, 1),
+          _.SetDirty(_.jsondata_sales));
+      }, 500));
   };
   _(
     (0, _.jsx)(_, {
@@ -25576,8 +25591,8 @@ var _ = `new_event_gid`,
               ..._,
               jsonData: _,
             };
-          this.m_mapPrivateData.set(this.m_gidDirty, _),
-            this.DispatchUpdate(this.m_clanAccountIDDirty, this.m_gidDirty);
+          (this.m_mapPrivateData.set(this.m_gidDirty, _),
+            this.DispatchUpdate(this.m_clanAccountIDDirty, this.m_gidDirty));
         }
         return (
           (_.jsonData = _),
@@ -25606,14 +25621,14 @@ var _ = `new_event_gid`,
       if (this.m_gidDirty) {
         let _ = this.m_clanAccountIDDirty,
           _ = this.m_gidDirty;
-        (this.m_clanAccountIDDirty = null), (this.m_gidDirty = null);
+        ((this.m_clanAccountIDDirty = null), (this.m_gidDirty = null));
         let _ = this.m_mapPrivateData.get(_),
           _ = this.m_mapOriginalJSON.get(_);
-        this.m_mapPrivateData.set(_, {
+        (this.m_mapPrivateData.set(_, {
           ..._,
           jsonData: _,
         }),
-          this.DispatchUpdate(_, _);
+          this.DispatchUpdate(_, _));
       }
     }
     DispatchUpdate(_, _) {
@@ -25741,10 +25756,10 @@ var _ = `new_event_gid`,
       if (this.BIsEqual(_, this.m_mapOriginalJSON.get(_))) return 1;
       try {
         let _ = new FormData();
-        _.append(`sessionid`, _()),
+        (_.append(`sessionid`, _()),
           _.append(`clanAccountID`, `` + _.GetAccountID()),
           _.append(`gidClanEvent`, `` + _),
-          _.append(`jsonData`, JSON.stringify(_));
+          _.append(`jsonData`, JSON.stringify(_)));
         let _ =
             _() == `partner`
               ? _.PARTNER_BASE_URL + `partnerevents/ajaxsetprivatedata`
@@ -25801,8 +25816,8 @@ var _ = `new_event_gid`,
             nAccountLastUpdate: _.data.account_writer,
             jsonData: _.data.json_data || {},
           };
-          this.m_mapOriginalJSON.set(_.gid, _.jsonData),
-            this.m_mapPrivateData.set(_.gid, _);
+          (this.m_mapOriginalJSON.set(_.gid, _.jsonData),
+            this.m_mapPrivateData.set(_.gid, _));
         });
     }
     ValidateStoreDefault(_) {
@@ -25814,9 +25829,9 @@ var _ = `new_event_gid`,
         : !1;
     }
   };
-_([_], _.prototype, `BIsEventDirty`, null),
+(_([_], _.prototype, `BIsEventDirty`, null),
   _([_], _.prototype, `DiscardChanges`, null),
-  _([_], _.prototype, `SaveDirtyChanges`, null);
+  _([_], _.prototype, `SaveDirtyChanges`, null));
 function _(_, _) {
   let _ = _.Get(),
     [_, _] = (0, _.useState)(_.GetPrivateDataCopy(_, _));
@@ -25827,7 +25842,7 @@ function _(_, _) {
       if (!_.BLoaded(_, _)) {
         let _ = _.InitFromClanID(_, _.EUNIVERSE);
         _.LoadPrivateData(_, _).then((_) => {
-          _(_), _(!1);
+          (_(_), _(!1));
         });
       }
     }, [_, _, _]),
@@ -26133,13 +26148,13 @@ var _ = (function (_) {
       return this.m_listEvents;
     }
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
     constructor() {
       _(this);
     }
     ClearAllSolrEvents() {
-      (this.m_mapEventGIDToSolrData = new Map()), (this.m_listEvents = []);
+      ((this.m_mapEventGIDToSolrData = new Map()), (this.m_listEvents = []));
     }
     async LoadPartnerEventForModerationIncremental(_, _ = 30) {
       let _ =
@@ -26213,19 +26228,19 @@ var _ = (function (_) {
     async UpdatePartnerEventType(_, _, _, _) {
       let _ = _.STORE_BASE_URL + `events_admin/ajaxupdateeventtype`,
         _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`clan_accountid`, `` + _.GetAccountID()),
         _.append(`gid_event`, _),
         _.append(`new_event_type`, `` + _),
         await _.default.post(_, _, {
           withCredentials: !0,
           cancelToken: _.token,
-        });
+        }));
     }
   };
-_([_], _.prototype, `m_mapEventGIDToSolrData`, void 0),
+(_([_], _.prototype, `m_mapEventGIDToSolrData`, void 0),
   _([_], _.prototype, `m_listEvents`, void 0),
-  _([_], _.prototype, `ClearAllSolrEvents`, null);
+  _([_], _.prototype, `ClearAllSolrEvents`, null));
 var _ = `iQE696qa-gQ-`;
 function _(_) {
   let { accountID: _, locToken: _ } = _,
@@ -26456,7 +26471,7 @@ function _(_, _, _) {
       ) {
         let _ = _?.data?.versions[0],
           _ = _.jsondata;
-        return (_.jsondata = JSON.parse(_)), _;
+        return ((_.jsondata = JSON.parse(_)), _);
       }
       return (
         console.error(`EventHistorySingleDetail failed to load`, _(_), _), null
@@ -26764,7 +26779,7 @@ var _ = `nZ4Fa2ZECh0-`,
       let _ = _(_, void 0, 1, void 0, _.undefinedBehavior).split(`
 `);
       for (let _ = 0; _ < _.length; _++)
-        _.push({
+        (_.push({
           level: _,
           type: `equal`,
           text: ``,
@@ -26773,14 +26788,14 @@ var _ = `nZ4Fa2ZECh0-`,
             level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
             type: `add`,
             text: _[_].replace(/^\s+/, ``).replace(/,$/g, ``),
-          });
+          }));
       return [_, _];
     }
     if (_ == null) {
       let _ = _(_, void 0, 1, void 0, _.undefinedBehavior).split(`
 `);
       for (let _ = 0; _ < _.length; _++)
-        _.push({
+        (_.push({
           level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
           type: `remove`,
           text: _[_].replace(/^\s+/, ``).replace(/,$/g, ``),
@@ -26789,13 +26804,13 @@ var _ = `nZ4Fa2ZECh0-`,
             level: _,
             type: `equal`,
             text: ``,
-          });
+          }));
       return [_, _];
     }
     let _ = Object.keys(_),
       _ = Object.keys(_),
       _ = new Map();
-    if (!_.preserveKeyOrder) _(_, _), _(_, _);
+    if (!_.preserveKeyOrder) (_(_, _), _(_, _));
     else if (_.preserveKeyOrder === `before`) {
       for (let _ = 0; _ < _.length; _++) _.set(_[_], _);
       for (let _ = 0; _ < _.length; _++)
@@ -26811,7 +26826,7 @@ var _ = `nZ4Fa2ZECh0-`,
       ignoreCase: _.ignoreCaseForKey,
       keyOrdersMap: _,
     };
-    for (; _.length || _.length; ) {
+    for (; _.length || _.length;) {
       let _ = _[0],
         _ = _[0],
         _ = _(_, _, _);
@@ -26819,9 +26834,9 @@ var _ = `nZ4Fa2ZECh0-`,
         if (_(_[_]) !== _(_[_])) _(_, _, _, _, _[_], _[_], _, _);
         else if (Array.isArray(_[_])) {
           let [_, _] = _([..._[_]], [..._[_]], _, _, _, _, [], []);
-          (_ = _(_, _)), (_ = _(_, _));
+          ((_ = _(_, _)), (_ = _(_, _)));
         } else if (_[_] === null)
-          _.push({
+          (_.push({
             level: _,
             type: `equal`,
             text: `"${_}": null`,
@@ -26830,10 +26845,10 @@ var _ = `nZ4Fa2ZECh0-`,
               level: _,
               type: `equal`,
               text: `"${_}": null`,
-            });
+            }));
         else if (typeof _[_] == `object`) {
           let _ = _(_[_], _[_], _ + 1, _, _);
-          _.push({
+          (_.push({
             level: _,
             type: `equal`,
             text: `"${_}": {`,
@@ -26854,7 +26869,7 @@ var _ = `nZ4Fa2ZECh0-`,
               level: _,
               type: `equal`,
               text: `}`,
-            });
+            }));
         } else _(_, _, _, _, _[_], _[_], _, _);
       } else if (_.length && _.length) {
         if (_ < 0) {
@@ -26862,7 +26877,7 @@ var _ = `nZ4Fa2ZECh0-`,
 `);
           for (let _ = 0; _ < _.length; _++) {
             let _ = _[_].replace(/^\s+/, ``).replace(/,$/g, ``);
-            _.push({
+            (_.push({
               level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
               type: `remove`,
               text: _ ? _ : `"${_}": ${_}`,
@@ -26871,14 +26886,14 @@ var _ = `nZ4Fa2ZECh0-`,
                 level: _,
                 type: `equal`,
                 text: ``,
-              });
+              }));
           }
         } else {
           let _ = _(_[_], void 0, 1, void 0, _.undefinedBehavior).split(`
 `);
           for (let _ = 0; _ < _.length; _++) {
             let _ = _[_].replace(/^\s+/, ``).replace(/,$/g, ``);
-            _.push({
+            (_.push({
               level: _,
               type: `equal`,
               text: ``,
@@ -26887,7 +26902,7 @@ var _ = `nZ4Fa2ZECh0-`,
                 level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                 type: `add`,
                 text: _ ? _ : `"${_}": ${_}`,
-              });
+              }));
           }
         }
       } else if (_.length) {
@@ -26895,7 +26910,7 @@ var _ = `nZ4Fa2ZECh0-`,
 `);
         for (let _ = 0; _ < _.length; _++) {
           let _ = _[_].replace(/^\s+/, ``).replace(/,$/g, ``);
-          _.push({
+          (_.push({
             level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
             type: `remove`,
             text: _ ? _ : `"${_}": ${_}`,
@@ -26904,14 +26919,14 @@ var _ = `nZ4Fa2ZECh0-`,
               level: _,
               type: `equal`,
               text: ``,
-            });
+            }));
         }
       } else if (_.length) {
         let _ = _(_[_], void 0, 1, void 0, _.undefinedBehavior).split(`
 `);
         for (let _ = 0; _ < _.length; _++) {
           let _ = _[_].replace(/^\s+/, ``).replace(/,$/g, ``);
-          _.push({
+          (_.push({
             level: _,
             type: `equal`,
             text: ``,
@@ -26920,7 +26935,7 @@ var _ = `nZ4Fa2ZECh0-`,
               level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
               type: `add`,
               text: _ ? _ : `"${_}": ${_}`,
-            });
+            }));
         }
       }
       _
@@ -26940,7 +26955,7 @@ var _ = `nZ4Fa2ZECh0-`,
     return [_, _];
   };
 function _() {
-  (this.__data__ = []), (this.size = 0);
+  ((this.__data__ = []), (this.size = 0));
 }
 var _ = _;
 function _(_, _) {
@@ -26949,7 +26964,7 @@ function _(_, _) {
 var _ = _,
   _ = _;
 function _(_, _) {
-  for (var _ = _.length; _--; ) if (_(_[_][0], _)) return _;
+  for (var _ = _.length; _--;) if (_(_[_][0], _)) return _;
   return -1;
 }
 var _ = _,
@@ -26979,7 +26994,7 @@ var _ = _,
 function _(_, _) {
   var _ = this.__data__,
     _ = _(_, _);
-  return _ < 0 ? (++this.size, _.push([_, _])) : (_[_][1] = _), this;
+  return (_ < 0 ? (++this.size, _.push([_, _])) : (_[_][1] = _), this);
 }
 var _ = _,
   _ = _,
@@ -26990,26 +27005,26 @@ var _ = _,
 function _(_) {
   var _ = -1,
     _ = _ == null ? 0 : _.length;
-  for (this.clear(); ++_ < _; ) {
+  for (this.clear(); ++_ < _;) {
     var _ = _[_];
     this.set(_[0], _[1]);
   }
 }
-(_.prototype.clear = _),
+((_.prototype.clear = _),
   (_.prototype.delete = _),
   (_.prototype.get = _),
   (_.prototype.has = _),
-  (_.prototype.set = _);
+  (_.prototype.set = _));
 var _ = _,
   _ = _;
 function _() {
-  (this.__data__ = new _()), (this.size = 0);
+  ((this.__data__ = new _()), (this.size = 0));
 }
 var _ = _;
 function _(_) {
   var _ = this.__data__,
     _ = _.delete(_);
-  return (this.size = _.size), _;
+  return ((this.size = _.size), _);
 }
 var _ = _;
 function _(_) {
@@ -27048,7 +27063,7 @@ function _(_) {
     var _ = !0;
   } catch {}
   var _ = _.call(_);
-  return _ && (_ ? (_[_] = _) : delete _[_]), _;
+  return (_ && (_ ? (_[_] = _) : delete _[_]), _);
 }
 var _ = _,
   _ = Object.prototype.toString;
@@ -27144,12 +27159,12 @@ var _ = _,
   _ = _(Object, `create`),
   _ = _;
 function _() {
-  (this.__data__ = _ ? _(null) : {}), (this.size = 0);
+  ((this.__data__ = _ ? _(null) : {}), (this.size = 0));
 }
 var _ = _;
 function _(_) {
   var _ = this.has(_) && delete this.__data__[_];
-  return (this.size -= +!!_), _;
+  return ((this.size -= +!!_), _);
 }
 var _ = _,
   _ = _,
@@ -27175,7 +27190,9 @@ var _ = _,
   _ = `__lodash_hash_undefined__`;
 function _(_, _) {
   var _ = this.__data__;
-  return (this.size += +!this.has(_)), (_[_] = _ && _ === void 0 ? _ : _), this;
+  return (
+    (this.size += +!this.has(_)), (_[_] = _ && _ === void 0 ? _ : _), this
+  );
 }
 var _ = _,
   _ = _,
@@ -27186,26 +27203,26 @@ var _ = _,
 function _(_) {
   var _ = -1,
     _ = _ == null ? 0 : _.length;
-  for (this.clear(); ++_ < _; ) {
+  for (this.clear(); ++_ < _;) {
     var _ = _[_];
     this.set(_[0], _[1]);
   }
 }
-(_.prototype.clear = _),
+((_.prototype.clear = _),
   (_.prototype.delete = _),
   (_.prototype.get = _),
   (_.prototype.has = _),
-  (_.prototype.set = _);
+  (_.prototype.set = _));
 var _ = _,
   _ = _,
   _ = _;
 function _() {
-  (this.size = 0),
+  ((this.size = 0),
     (this.__data__ = {
       hash: new _(),
       map: new (_ || _)(),
       string: new _(),
-    });
+    }));
 }
 var _ = _;
 function _(_) {
@@ -27223,7 +27240,7 @@ var _ = _,
   _ = _;
 function _(_) {
   var _ = _(this, _).delete(_);
-  return (this.size -= +!!_), _;
+  return ((this.size -= +!!_), _);
 }
 var _ = _,
   _ = _;
@@ -27240,7 +27257,7 @@ var _ = _,
 function _(_, _) {
   var _ = _(this, _),
     _ = _.size;
-  return _.set(_, _), (this.size += _.size == _ ? 0 : 1), this;
+  return (_.set(_, _), (this.size += _.size == _ ? 0 : 1), this);
 }
 var _ = _,
   _ = _,
@@ -27251,16 +27268,16 @@ var _ = _,
 function _(_) {
   var _ = -1,
     _ = _ == null ? 0 : _.length;
-  for (this.clear(); ++_ < _; ) {
+  for (this.clear(); ++_ < _;) {
     var _ = _[_];
     this.set(_[0], _[1]);
   }
 }
-(_.prototype.clear = _),
+((_.prototype.clear = _),
   (_.prototype.delete = _),
   (_.prototype.get = _),
   (_.prototype.has = _),
-  (_.prototype.set = _);
+  (_.prototype.set = _));
 var _ = _,
   _ = _,
   _ = _,
@@ -27271,10 +27288,10 @@ function _(_, _) {
   if (_ instanceof _) {
     var _ = _.__data__;
     if (!_ || _.length < _ - 1)
-      return _.push([_, _]), (this.size = ++_.size), this;
+      return (_.push([_, _]), (this.size = ++_.size), this);
     _ = this.__data__ = new _(_);
   }
-  return _.set(_, _), (this.size = _.size), this;
+  return (_.set(_, _), (this.size = _.size), this);
 }
 var _ = _,
   _ = _,
@@ -27287,15 +27304,15 @@ function _(_) {
   var _ = (this.__data__ = new _(_));
   this.size = _.size;
 }
-(_.prototype.clear = _),
+((_.prototype.clear = _),
   (_.prototype.delete = _),
   (_.prototype.get = _),
   (_.prototype.has = _),
-  (_.prototype.set = _);
+  (_.prototype.set = _));
 var _ = _,
   _ = `__lodash_hash_undefined__`;
 function _(_) {
-  return this.__data__.set(_, _), this;
+  return (this.__data__.set(_, _), this);
 }
 var _ = _;
 function _(_) {
@@ -27308,12 +27325,12 @@ var _ = _,
 function _(_) {
   var _ = -1,
     _ = _ == null ? 0 : _.length;
-  for (this.__data__ = new _(); ++_ < _; ) this.add(_[_]);
+  for (this.__data__ = new _(); ++_ < _;) this.add(_[_]);
 }
-(_.prototype.add = _.prototype.push = _), (_.prototype.has = _);
+((_.prototype.add = _.prototype.push = _), (_.prototype.has = _));
 var _ = _;
 function _(_, _) {
-  for (var _ = -1, _ = _ == null ? 0 : _.length; ++_ < _; )
+  for (var _ = -1, _ = _ == null ? 0 : _.length; ++_ < _;)
     if (_(_[_], _, _)) return !0;
   return !1;
 }
@@ -27338,7 +27355,7 @@ function _(_, _, _, _, _, _) {
   var _ = -1,
     _ = !0,
     _ = _ & _ ? new _() : void 0;
-  for (_.set(_, _), _.set(_, _); ++_ < _; ) {
+  for (_.set(_, _), _.set(_, _); ++_ < _;) {
     var _ = _[_],
       _ = _[_];
     if (_) var _ = _ ? _(_, _, _, _, _, _) : _(_, _, _, _, _, _);
@@ -27361,7 +27378,7 @@ function _(_, _, _, _, _, _) {
       break;
     }
   }
-  return _.delete(_), _.delete(_), _;
+  return (_.delete(_), _.delete(_), _);
 }
 var _ = _,
   _ = _.Uint8Array;
@@ -27413,7 +27430,7 @@ function _(_, _, _, _, _, _, _) {
     case _:
       if (_.byteLength != _.byteLength || _.byteOffset != _.byteOffset)
         return !1;
-      (_ = _.buffer), (_ = _.buffer);
+      ((_ = _.buffer), (_ = _.buffer));
     case _:
       return !(_.byteLength != _.byteLength || !_(new _(_), new _(_)));
     case _:
@@ -27432,9 +27449,9 @@ function _(_, _, _, _, _, _, _) {
       if (((_ ||= _), _.size != _.size && !_)) return !1;
       var _ = _.get(_);
       if (_) return _ == _;
-      (_ |= _), _.set(_, _);
+      ((_ |= _), _.set(_, _));
       var _ = _(_(_), _(_), _, _, _, _);
-      return _.delete(_), _;
+      return (_.delete(_), _);
     case _:
       if (_) return _.call(_) == _.call(_);
   }
@@ -27442,7 +27459,7 @@ function _(_, _, _, _, _, _, _) {
 }
 var _ = _;
 function _(_, _) {
-  for (var _ = -1, _ = _.length, _ = _.length; ++_ < _; ) _[_ + _] = _[_];
+  for (var _ = -1, _ = _.length, _ = _.length; ++_ < _;) _[_ + _] = _[_];
   return _;
 }
 var _ = _,
@@ -27455,7 +27472,7 @@ function _(_, _, _) {
 }
 var _ = _;
 function _(_, _) {
-  for (var _ = -1, _ = _ == null ? 0 : _.length, _ = 0, _ = []; ++_ < _; ) {
+  for (var _ = -1, _ = _ == null ? 0 : _.length, _ = 0, _ = []; ++_ < _;) {
     var _ = _[_];
     _(_, _, _) && (_[_++] = _);
   }
@@ -27481,7 +27498,7 @@ var _ = _,
       }
     : _;
 function _(_, _) {
-  for (var _ = -1, _ = Array(_); ++_ < _; ) _[_] = _(_);
+  for (var _ = -1, _ = Array(_); ++_ < _;) _[_] = _(_);
   return _;
 }
 var _ = _;
@@ -27571,7 +27588,7 @@ var _ = _,
   _ = `[object Uint16Array]`,
   _ = `[object Uint32Array]`,
   _ = {};
-(_[_] = _[_] = _[_] = _[_] = _[_] = _[_] = _[_] = _[_] = _[_] = !0),
+((_[_] = _[_] = _[_] = _[_] = _[_] = _[_] = _[_] = _[_] = _[_] = !0),
   (_[_] =
     _[_] =
     _[_] =
@@ -27587,7 +27604,7 @@ var _ = _,
     _[_] =
     _[_] =
     _[_] =
-      !1);
+      !1));
 function _(_) {
   return _(_) && _(_.length) && !!_[_(_)];
 }
@@ -27697,7 +27714,7 @@ function _(_, _, _, _, _, _) {
     _ = _(_),
     _ = _.length;
   if (_ != _(_).length && !_) return !1;
-  for (var _ = _; _--; ) {
+  for (var _ = _; _--;) {
     var _ = _[_];
     if (!(_ ? _ in _ : _.call(_, _))) return !1;
   }
@@ -27705,8 +27722,8 @@ function _(_, _, _, _, _, _) {
     _ = _.get(_);
   if (_ && _) return _ == _ && _ == _;
   var _ = !0;
-  _.set(_, _), _.set(_, _);
-  for (var _ = _; ++_ < _; ) {
+  (_.set(_, _), _.set(_, _));
+  for (var _ = _; ++_ < _;) {
     _ = _[_];
     var _ = _[_],
       _ = _[_];
@@ -27731,7 +27748,7 @@ function _(_, _, _, _, _, _) {
       ) &&
       (_ = !1);
   }
-  return _.delete(_), _.delete(_), _;
+  return (_.delete(_), _.delete(_), _);
 }
 var _ = _,
   _ = _(_, `DataView`),
@@ -27800,13 +27817,13 @@ function _(_, _, _, _, _, _) {
     _ = _(_),
     _ = _ ? _ : _(_),
     _ = _ ? _ : _(_);
-  (_ = _ == _ ? _ : _), (_ = _ == _ ? _ : _);
+  ((_ = _ == _ ? _ : _), (_ = _ == _ ? _ : _));
   var _ = _ == _,
     _ = _ == _,
     _ = _ == _;
   if (_ && _(_)) {
     if (!_(_)) return !1;
-    (_ = !0), (_ = !1);
+    ((_ = !0), (_ = !1));
   }
   if (_ && !_)
     return (
@@ -27818,7 +27835,7 @@ function _(_, _, _, _, _, _) {
     if (_ || _) {
       var _ = _ ? _.value() : _,
         _ = _ ? _.value() : _;
-      return (_ ||= new _()), _(_, _, _, _, _);
+      return ((_ ||= new _()), _(_, _, _, _, _));
     }
   }
   return _ ? ((_ ||= new _()), _(_, _, _, _, _, _)) : !1;
@@ -27894,7 +27911,7 @@ var _ = _,
         }));
   },
   _ = (_, _, _) => {
-    _.push({
+    (_.push({
       level: _,
       type: `equal`,
       text: `]`,
@@ -27903,10 +27920,10 @@ var _ = _,
         level: _,
         type: `equal`,
         text: `]`,
-      });
+      }));
   },
   _ = (_, _, _) => {
-    _.push({
+    (_.push({
       level: _ + 1,
       type: `equal`,
       text: `...`,
@@ -27915,7 +27932,7 @@ var _ = _,
         level: _ + 1,
         type: `equal`,
         text: `...`,
-      });
+      }));
   },
   _ = (_, _, _, _, _, _) => {
     let _ = Array(_.length + 1)
@@ -27947,7 +27964,7 @@ var _ = _,
       _ = _.length,
       _ = [],
       _ = [];
-    for (; _ > 0 || _ > 0; )
+    for (; _ > 0 || _ > 0;)
       if (_[_][_] === `diag`) {
         let _ = _(_[_ - 1]);
         if (
@@ -27957,15 +27974,15 @@ var _ = _,
         ) {
           let _ = [],
             _ = [];
-          _(_, _, ``, ``, _[_ - 1], _[_ - 1], _ + 1, _),
+          (_(_, _, ``, ``, _[_ - 1], _[_ - 1], _ + 1, _),
             (_ = _(_, _.reverse(), !0)),
-            (_ = _(_, _.reverse(), !0));
+            (_ = _(_, _.reverse(), !0)));
         } else if (_ === `array`) {
           let [_, _] = _(_[_ - 1], _[_ - 1], _, _, _ + 1, _);
-          (_ = _(_, _.reverse(), !0)), (_ = _(_, _.reverse(), !0));
+          ((_ = _(_, _.reverse(), !0)), (_ = _(_, _.reverse(), !0)));
         } else if (_ === `object`) {
           let [_, _] = _(_[_ - 1], _[_ - 1], _ + 2, _, _);
-          _.unshift({
+          (_.unshift({
             level: _ + 1,
             type: `equal`,
             text: `}`,
@@ -27986,25 +28003,25 @@ var _ = _,
               level: _ + 1,
               type: `equal`,
               text: `{`,
-            });
+            }));
         } else {
           let _ = [],
             _ = [];
-          _(_, _, ``, ``, _[_ - 1], _[_ - 1], _ + 1, _),
+          (_(_, _, ``, ``, _[_ - 1], _[_ - 1], _ + 1, _),
             (_ = _(_, _.reverse(), !0)),
-            (_ = _(_, _.reverse(), !0));
+            (_ = _(_, _.reverse(), !0)));
         }
-        _--, _--;
+        (_--, _--);
       } else if (_[_][_] === `up`) {
         if (_.showModifications && _ > 1 && _[_ - 1][_] === `left`) {
           let _ = _(_[_ - 1]);
           if (_ === _(_[_ - 1])) {
             if (_ === `array`) {
               let [_, _] = _(_[_ - 1], _[_ - 1], _, _, _ + 1, _);
-              (_ = _(_, _.reverse(), !0)), (_ = _(_, _.reverse(), !0));
+              ((_ = _(_, _.reverse(), !0)), (_ = _(_, _.reverse(), !0)));
             } else if (_ === `object`) {
               let [_, _] = _(_[_ - 1], _[_ - 1], _ + 2, _, _);
-              _.unshift({
+              (_.unshift({
                 level: _ + 1,
                 type: `equal`,
                 text: `}`,
@@ -28025,9 +28042,9 @@ var _ = _,
                   level: _ + 1,
                   type: `equal`,
                   text: `{`,
-                });
+                }));
             } else
-              _.unshift({
+              (_.unshift({
                 level: _ + 1,
                 type: `modify`,
                 text: _(_[_ - 1], void 0, void 0, _.undefinedBehavior),
@@ -28036,20 +28053,20 @@ var _ = _,
                   level: _ + 1,
                   type: `modify`,
                   text: _(_[_ - 1], void 0, void 0, _.undefinedBehavior),
-                });
+                }));
           } else {
             let _ = [],
               _ = [];
-            _(_, _, ``, ``, _[_ - 1], _[_ - 1], _ + 1, _),
+            (_(_, _, ``, ``, _[_ - 1], _[_ - 1], _ + 1, _),
               (_ = _(_, _.reverse(), !0)),
-              (_ = _(_, _.reverse(), !0));
+              (_ = _(_, _.reverse(), !0)));
           }
-          _--, _--;
+          (_--, _--);
         } else {
           let _ = _(_[_ - 1], void 0, 1, void 0, _.undefinedBehavior).split(`
 `);
           for (let _ = _.length - 1; _ >= 0; _--)
-            _.unshift({
+            (_.unshift({
               level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
               type: `remove`,
               text: _[_].replace(/^\s+/, ``).replace(/,$/g, ``),
@@ -28058,14 +28075,14 @@ var _ = _,
                 level: _ + 1,
                 type: `equal`,
                 text: ``,
-              });
+              }));
           _--;
         }
       } else {
         let _ = _(_[_ - 1], void 0, 1, void 0, _.undefinedBehavior).split(`
 `);
         for (let _ = _.length - 1; _ >= 0; _--)
-          _.unshift({
+          (_.unshift({
             level: _ + 1,
             type: `equal`,
             text: ``,
@@ -28074,7 +28091,7 @@ var _ = _,
               level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
               type: `add`,
               text: _[_].replace(/^\s+/, ``).replace(/,$/g, ``),
-            });
+            }));
         _--;
       }
     return [_, _];
@@ -28083,9 +28100,9 @@ var _ = _,
     if ((_(_, _, _, _, _), _ >= (_.maxDepth || 1 / 0))) _(_, _, _);
     else {
       let [_, _] = _(_, _, _, _, _, _);
-      (_ = _(_, _)), (_ = _(_, _));
+      ((_ = _(_, _)), (_ = _(_, _)));
     }
-    return _(_, _, _), [_, _];
+    return (_(_, _, _), [_, _]);
   };
 function _(_, _) {
   for (let _ of _)
@@ -28125,7 +28142,7 @@ function _(_, _, _, _, _, _, _ = [], _ = []) {
           _ = _(_);
         if (_ !== _(_)) _(_, _, ``, ``, _, _, _ + 1, _);
         else if (_ === `object`) {
-          _.push({
+          (_.push({
             level: _ + 1,
             type: `equal`,
             text: `{`,
@@ -28134,14 +28151,14 @@ function _(_, _, _, _, _, _, _ = [], _ = []) {
               level: _ + 1,
               type: `equal`,
               text: `{`,
-            });
+            }));
           let _ = Array.from(new Set([...Object.keys(_), ...Object.keys(_)]));
           for (let _ of _) {
             let _ = _[_],
               _ = _[_];
             if (Array.isArray(_) && Array.isArray(_)) {
               let [_, _] = _(_, _, _, _, _ + 2, _, [], []);
-              (_ = _(_, _)), (_ = _(_, _));
+              ((_ = _(_, _)), (_ = _(_, _)));
             } else if (Array.isArray(_) || Array.isArray(_))
               _(_, _, _, _, _, _, _ + 2, _);
             else {
@@ -28156,10 +28173,10 @@ function _(_, _, _, _, _, _, _ = [], _ = []) {
                 _,
                 _,
               );
-              (_ = _(_, _)), (_ = _(_, _));
+              ((_ = _(_, _)), (_ = _(_, _)));
             }
           }
-          _.push({
+          (_.push({
             level: _ + 1,
             type: `equal`,
             text: `}`,
@@ -28168,10 +28185,10 @@ function _(_, _, _, _, _, _, _ = [], _ = []) {
               level: _ + 1,
               type: `equal`,
               text: `}`,
-            });
+            }));
         } else if (_ === `array`) {
           let [_, _] = _(_, _, ``, ``, _ + 1, _, [], []);
-          (_ = _(_, _)), (_ = _(_, _));
+          ((_ = _(_, _)), (_ = _(_, _)));
         } else
           _(_, _, _)
             ? (_.push({
@@ -28215,7 +28232,7 @@ function _(_, _, _, _, _, _, _ = [], _ = []) {
                   type: `add`,
                   text: _(_, void 0, void 0, _.undefinedBehavior),
                 }));
-        _.add(_), _.add(_);
+        (_.add(_), _.add(_));
       }
     }
     for (let _ = 0; _ < _.length; _++) {
@@ -28224,7 +28241,7 @@ function _(_, _, _, _, _, _, _ = [], _ = []) {
         _ = _(_, void 0, 1, void 0, _.undefinedBehavior).split(`
 `);
       for (let _ = 0; _ < _.length; _++)
-        _.push({
+        (_.push({
           level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
           type: `remove`,
           text: _[_].replace(/^\s+/, ``).replace(/,$/g, ``),
@@ -28233,7 +28250,7 @@ function _(_, _, _, _, _, _, _ = [], _ = []) {
             level: _ + 1,
             type: `equal`,
             text: ``,
-          });
+          }));
     }
     for (let _ = 0; _ < _.length; _++) {
       if (_.has(_)) continue;
@@ -28241,7 +28258,7 @@ function _(_, _, _, _, _, _, _ = [], _ = []) {
         _ = _(_, void 0, 1, void 0, _.undefinedBehavior).split(`
 `);
       for (let _ = 0; _ < _.length; _++)
-        _.push({
+        (_.push({
           level: _ + 1,
           type: `equal`,
           text: ``,
@@ -28250,10 +28267,10 @@ function _(_, _, _, _, _, _, _ = [], _ = []) {
             level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
             type: `add`,
             text: _[_].replace(/^\s+/, ``).replace(/,$/g, ``),
-          });
+          }));
     }
   }
-  return _(_, _, _), [_, _];
+  return (_(_, _, _), [_, _]);
 }
 var _ = _;
 function _(_, _, _, _, _, _, _) {
@@ -28271,10 +28288,10 @@ function _(_, _, _, _, _, _, _) {
       _(_, _.compareKey)
     ) {
       let [_, _] = _(_, _, ``, ``, _ + 2, _, [], []);
-      (_ = _(_, _)), (_ = _(_, _));
+      ((_ = _(_, _)), (_ = _(_, _)));
     } else if (Array.isArray(_) && Array.isArray(_)) {
       let [_, _] = _(_, _, ``, ``, _ + 2, _, [], []);
-      (_ = _(_, _)), (_ = _(_, _));
+      ((_ = _(_, _)), (_ = _(_, _)));
     } else if (Array.isArray(_) || Array.isArray(_))
       _(_, _, _, _, _, _, _ + 2, _);
     else {
@@ -28289,7 +28306,7 @@ function _(_, _, _, _, _, _, _) {
         _,
         _,
       );
-      (_ = _(_, _)), (_ = _(_, _));
+      ((_ = _(_, _)), (_ = _(_, _)));
     }
   }
   return [_, _];
@@ -28300,7 +28317,7 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
     )
       _(_, _, _);
     else
-      for (; _.length || _.length; ) {
+      for (; _.length || _.length;) {
         let _ = _[0],
           _ = _[0],
           _ = _(_),
@@ -28314,7 +28331,7 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
           )
             _(_, _, ``, ``, _, _, _ + 1, _);
           else if (_ === `object`) {
-            _.push({
+            (_.push({
               level: _ + 1,
               type: `equal`,
               text: `{`,
@@ -28323,9 +28340,9 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
                 level: _ + 1,
                 type: `equal`,
                 text: `{`,
-              });
+              }));
             let _, _;
-            _.arrayDiffMethod === `compare-key`
+            (_.arrayDiffMethod === `compare-key`
               ? ([_, _] = _(_, _, _, _, _, _, _))
               : ([_, _] = _(_, _, _ + 2, _, _)),
               (_ = _(_, _)),
@@ -28339,14 +28356,14 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
                 level: _ + 1,
                 type: `equal`,
                 text: `}`,
-              });
+              }));
           } else if (_ === `array`) {
             if (_.compareKey && _(_, _.compareKey) && _(_, _.compareKey)) {
               let [_, _] = _(_, _, ``, ``, _ + 1, _, [], []);
-              (_ = _(_, _)), (_ = _(_, _));
+              ((_ = _(_, _)), (_ = _(_, _)));
             } else {
               let [_, _] = _(_, _, ``, ``, _ + 1, _, [], []);
-              (_ = _(_, _)), (_ = _(_, _));
+              ((_ = _(_, _)), (_ = _(_, _)));
             }
           } else
             _(_, _, {
@@ -28393,12 +28410,12 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
                     type: `add`,
                     text: _(_, void 0, void 0, _.undefinedBehavior),
                   }));
-          _.shift(), _.shift();
+          (_.shift(), _.shift());
         } else if (_.length) {
           let _ = _(_, void 0, !0, _.undefinedBehavior).split(`
 `);
           for (let _ = 0; _ < _.length; _++)
-            _.push({
+            (_.push({
               level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
               type: `remove`,
               text: _[_].replace(/^\s+/, ``).replace(/,$/g, ``),
@@ -28407,13 +28424,13 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
                 level: _ + 1,
                 type: `equal`,
                 text: ``,
-              });
+              }));
           _.shift();
         } else if (_.length) {
           let _ = _(_, void 0, !0, _.undefinedBehavior).split(`
 `);
           for (let _ = 0; _ < _.length; _++)
-            _.push({
+            (_.push({
               level: _ + 1,
               type: `equal`,
               text: ``,
@@ -28422,11 +28439,11 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
                 level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
                 type: `add`,
                 text: _[_].replace(/^\s+/, ``).replace(/,$/g, ``),
-              });
+              }));
           _.shift();
         }
       }
-    return _(_, _, _), [_, _];
+    return (_(_, _, _), [_, _]);
   },
   _ = (_, _) => {
     if (!_ || typeof _ != `object`) return _;
@@ -28487,9 +28504,9 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
             _[_ - 1].type === `add`
           ) {
             let _ = _[_ - 1];
-            (_[_ - 1] = _[_]), (_[_] = _);
+            ((_[_ - 1] = _[_]), (_[_] = _));
             let _ = _[_ - 1];
-            (_[_ - 1] = _[_]), (_[_] = _), (_ = !0);
+            ((_[_ - 1] = _[_]), (_[_] = _), (_ = !0));
           }
         if (!_) break;
       }
@@ -28511,18 +28528,18 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
           (_[_].comma = !0);
     }
     diff(_, _) {
-      this.detectCircular(_),
+      (this.detectCircular(_),
         this.detectCircular(_),
         (this.options.arrayDiffMethod === `unorder-normal` ||
           this.options.arrayDiffMethod === `unorder-lcs`) &&
           ((_ = _(_, this.options)), (_ = _(_, this.options))),
         this.options.undefinedBehavior === `ignore` &&
-          ((_ = _(_) ?? null), (_ = _(_) ?? null));
+          ((_ = _(_) ?? null), (_ = _(_) ?? null)));
       let _ = [],
         _ = [],
         _ = _(_);
       if (_ !== _(_)) {
-        (_ = _(
+        ((_ = _(
           _,
           void 0,
           1,
@@ -28551,10 +28568,10 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
               type: `add`,
               text: _.replace(/^\s+/, ``).replace(/,$/g, ``),
               comma: _.endsWith(`,`),
-            })));
+            }))));
         let _ = _.length,
           _ = _.length;
-        (_ = _(
+        ((_ = _(
           _,
           Array(_)
             .fill(0)
@@ -28570,7 +28587,7 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
                 ..._,
               })),
             !0,
-          ));
+          )));
       } else
         _ === `object`
           ? (([_, _] = _(_, _, 1, this.options, this.arrayDiffFunc)),
@@ -28713,7 +28730,7 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
       compareKey: _,
       undefinedBehavior: _ = `stringify`,
     } = {}) {
-      (this.options = {
+      ((this.options = {
         detectCircular: _,
         maxDepth: _,
         showModifications: _,
@@ -28726,7 +28743,11 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
         undefinedBehavior: _,
       }),
         (this.arrayDiffFunc =
-          _ === `compare-key` ? _ : _ === `lcs` || _ === `unorder-lcs` ? _ : _);
+          _ === `compare-key`
+            ? _
+            : _ === `lcs` || _ === `unorder-lcs`
+              ? _
+              : _));
     }
   },
   _ = (_) => `hasLinesBefore` in _ || `hasLinesAfter` in _,
@@ -28749,38 +28770,38 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
       ) {
         if (_.start === _.start) {
           let _ = Math.min(_.end, _.end);
-          _.push({
+          (_.push({
             ..._,
             ..._,
             end: _,
           }),
-            (_.start = _.start = _);
+            (_.start = _.start = _));
         } else if (_.start < _.start) {
           let _ = Math.min(_.end, _.start);
-          _.push({
+          (_.push({
             ..._,
             ..._,
             end: _,
           }),
-            (_.start = _);
+            (_.start = _));
         } else {
           let _ = Math.min(_.start, _.end);
-          _.push({
+          (_.push({
             ..._,
             ..._,
             end: _,
           }),
-            (_.start = _);
+            (_.start = _));
         }
         if (!_.length || !_.length) break;
-        _.start === _.end &&
+        (_.start === _.end &&
           (_ = {
             ..._.shift(),
           }),
           _.start === _.end &&
             (_ = {
               ..._.shift(),
-            });
+            }));
       }
     return (
       _.length ||
@@ -28801,7 +28822,7 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
       _ = _[_];
     _ = _(_) ? _[_] : _[_] + (_ - _.start) * _;
     let _ = _[_];
-    return (_ = _(_) ? _ - _[_] - _ : _ - _[_] - (_ - _.start) * _), [_, _];
+    return ((_ = _(_) ? _ - _[_] - _ : _ - _[_] - (_ - _.start) * _), [_, _]);
   },
   _ = (_, _, _, _, _, _) => {
     if (!_.length) return [0, 0, 0, 0];
@@ -28837,17 +28858,17 @@ var _ = (_, _, _, _, _, _, _ = [], _ = []) => {
     );
   },
   _ = {};
-Object.defineProperty(_, "__esModule", {
+(Object.defineProperty(_, "__esModule", {
   value: !0,
 }),
-  (_.applyPatch = _.calcPatch = _ = _.lcs = _.diff = _.diff_core = void 0);
+  (_.applyPatch = _.calcPatch = _ = _.lcs = _.diff = _.diff_core = void 0));
 function _(_, _) {
   let { _: _, _: _, stack_base: _ } = _,
     { _: _, _: _, _: _, _: _, _: _, stack_top: _ } = _;
   for (;;)
     switch (_) {
       case 0:
-        Z_block: for (; _ > 0 && _ > 0; ) {
+        Z_block: for (; _ > 0 && _ > 0;) {
           _.fill(0, 0, 2 * _);
           let _ = _ - _,
             _ = _ + _,
@@ -28866,7 +28887,7 @@ function _(_, _) {
                 _ = _ - _,
                 _ = _,
                 _ = _;
-              for (; _ < _ && _ < _ && _(_ + _, _ + _); ) _++, _++;
+              for (; _ < _ && _ < _ && _(_ + _, _ + _);) (_++, _++);
               if (
                 ((_[_ - _ * Math.floor(_ / _)] = _),
                 _ === 1 &&
@@ -28875,13 +28896,13 @@ function _(_, _) {
                   _ + _[_ + _ - _ * Math.floor(_ / _)] >= _)
               ) {
                 if (_ > 1 || _ !== _) {
-                  (_[_++] = _ + _),
+                  ((_[_++] = _ + _),
                     (_[_++] = _ - _),
                     (_[_++] = _ + _),
                     (_[_++] = _ - _),
                     (_ = _),
                     (_ = _),
-                    (_ = 2 * (Math.min(_, _) + 1));
+                    (_ = 2 * (Math.min(_, _) + 1)));
                   continue Z_block;
                 }
                 break h_loop;
@@ -28894,7 +28915,7 @@ function _(_, _) {
                 _ = _ - _,
                 _ = _,
                 _ = _;
-              for (; _ < _ && _ < _ && _(_ - _, _ - _); ) _++, _++;
+              for (; _ < _ && _ < _ && _(_ - _, _ - _);) (_++, _++);
               if (
                 ((_[_ + _ - _ * Math.floor(_ / _)] = _),
                 _ === 0 &&
@@ -28903,13 +28924,13 @@ function _(_, _) {
                   _ + _[_ - _ * Math.floor(_ / _)] >= _)
               ) {
                 if (_ > 0 || _ !== _) {
-                  (_[_++] = _ + _ - _),
+                  ((_[_++] = _ + _ - _),
                     (_[_++] = _),
                     (_[_++] = _ + _ - _),
                     (_[_++] = _),
                     (_ -= _),
                     (_ -= _),
-                    (_ = 2 * (Math.min(_, _) + 1));
+                    (_ = 2 * (Math.min(_, _) + 1)));
                   continue Z_block;
                 }
                 break h_loop;
@@ -28924,7 +28945,7 @@ function _(_, _) {
           }
         }
         if (_ + _ !== 0) {
-          if (_.pxe === _ || _.pye === _) (_.pxe = _ + _), (_.pye = _ + _);
+          if (_.pxe === _ || _.pye === _) ((_.pxe = _ + _), (_.pye = _ + _));
           else {
             let _ = _.pxs;
             if (
@@ -28951,12 +28972,12 @@ function _(_, _) {
         }
       case 1:
         if (_ === 0) return 2;
-        (_ = _[--_]),
+        ((_ = _[--_]),
           (_ = _[--_]),
           (_ = _[--_]),
           (_ = _[--_]),
           (_ = 2 * (Math.min(_, _) + 1)),
-          (_ = 0);
+          (_ = 0));
     }
 }
 var _ = class {
@@ -28965,7 +28986,7 @@ var _ = class {
   }
   next() {
     let { state: _, result: _ } = this;
-    if (this._ > 1) return (_.done = !0), (_.value = void 0), _;
+    if (this._ > 1) return ((_.done = !0), (_.value = void 0), _);
     let _ = _(_, this._);
     return (
       (this._ = _),
@@ -28977,12 +28998,12 @@ var _ = class {
     );
   }
   constructor(_) {
-    (this.state = _),
+    ((this.state = _),
       (this._ = 0),
       (this.result = {
         value: null,
         done: !1,
-      });
+      }));
   }
 };
 function _(_, _, _, _, _) {
@@ -29013,9 +29034,9 @@ function _(_, _, _, _, _) {
 _.diff_core = _;
 function _(_, _) {
   let [_, _, _] = [0, _.length, _.length];
-  for (; _ < _ && _ < _ && _[_] === _[_]; ) _++;
+  for (; _ < _ && _ < _ && _[_] === _[_];) _++;
   if (_ === _ && _ === _) return [][Symbol.iterator]();
-  for (; _[--_] === _[--_] && _ > _ && _ > _; );
+  for (; _[--_] === _[--_] && _ > _ && _ > _;);
   return _(_, _ + 1 - _, _, _ + 1 - _, (_, _) => _[_] === _[_]);
 }
 _.diff = _;
@@ -29044,7 +29065,7 @@ var _ = class {
     );
   }
   constructor(_, _) {
-    (this.diff = _), (this._ = _), (this._ = 0), (this._ = 0);
+    ((this.diff = _), (this._ = _), (this._ = 0), (this._ = 0));
   }
 };
 function _(_, _) {
@@ -29053,22 +29074,22 @@ function _(_, _) {
 var _ = (_.lcs = _);
 function* _(_, _) {
   let _ = ArrayBuffer.isView(_) ? Uint8Array.prototype.subarray : _.slice;
-  for (let _ of _(_, _)) (_[2] = _.call(_, _[2], _[3])), yield _;
+  for (let _ of _(_, _)) ((_[2] = _.call(_, _[2], _[3])), yield _);
 }
 _.calcPatch = _;
 function* _(_, _) {
   let _ = 0,
     _ = ArrayBuffer.isView(_) ? Uint8Array.prototype.subarray : _.slice;
   for (let [_, _, _] of _)
-    _ < _ && (yield _.call(_, _, _)), _.length > 0 && (yield _), (_ = _);
+    (_ < _ && (yield _.call(_, _, _)), _.length > 0 && (yield _), (_ = _));
   _ < _.length && (yield _.call(_, _));
 }
 _.applyPatch = _;
 var _ = (_, _) => {
     let _ = [],
       _ = 0;
-    for (let _ of _) _.push(_), (_ += _.length + _);
-    return _.push(_ - _), _;
+    for (let _ of _) (_.push(_), (_ += _.length + _));
+    return (_.push(_ - _), _);
   },
   _ = (_) => _.filter((_) => _.end > _.start),
   _ = (_, _, _) => {
@@ -29085,7 +29106,7 @@ var _ = (_, _) => {
         _ = _(_, _),
         _ = _(_, _);
       for (let [_, _, _] of _)
-        _ > _ &&
+        (_ > _ &&
           _.push({
             type: `remove`,
             start: _[_],
@@ -29106,7 +29127,7 @@ var _ = (_, _) => {
           _.push({
             start: _[_],
             end: _[_],
-          });
+          }));
       return (
         _.length > _ &&
           _.push({
@@ -29127,7 +29148,7 @@ var _ = (_, _) => {
     }
     let _ = _(_, _);
     for (let [_, _, _] of _)
-      _ > _ &&
+      (_ > _ &&
         _.push({
           type: `remove`,
           start: _,
@@ -29148,7 +29169,7 @@ var _ = (_, _) => {
         _.push({
           start: _,
           end: _,
-        });
+        }));
     return (
       _.length > _ &&
         _.push({
@@ -29242,7 +29263,7 @@ var _ = (_, _) => {
           },
         ];
       let _ = 1;
-      for (; _ < _.length && _[_] !== `"`; ) _[_] === `\\` && ++_, ++_;
+      for (; _ < _.length && _[_] !== `"`;) (_[_] === `\\` && ++_, ++_);
       return _ === _.length - 1
         ? [
             {
@@ -29435,8 +29456,8 @@ var _ = (_, _) => {
         }
         _({});
       };
-    _.useEffect(() => {
-      (_.current = _), (_.current = _), (_.current = _(_, _, _, _)), _();
+    (_.useEffect(() => {
+      ((_.current = _), (_.current = _), (_.current = _(_, _, _, _)), _());
     }, [_, _, _]),
       _.useEffect(() => {
         if (!_.virtual || !_) return;
@@ -29447,11 +29468,11 @@ var _ = (_, _) => {
             _.removeEventListener(`scroll`, _);
           }
         );
-      }, [_.virtual, _]);
+      }, [_.virtual, _]));
     let _ = (_) => (_) => {
         let _ = [..._.current],
           _ = _[_];
-        (_[_] = {
+        ((_[_] = {
           ..._,
           end: Math.max(_.end - _, _.start),
         }),
@@ -29461,12 +29482,12 @@ var _ = (_, _) => {
               start: Math.max(_.end - _, _.start),
             }),
           (_.current = _),
-          _();
+          _());
       },
       _ = (_) => (_) => {
         let _ = [..._.current],
           _ = _[_];
-        (_[_] = {
+        ((_[_] = {
           ..._,
           start: Math.min(_.start + _, _.end),
         }),
@@ -29476,12 +29497,12 @@ var _ = (_, _) => {
               end: Math.min(_.start + _, _.end),
             }),
           (_.current = _),
-          _();
+          _());
       },
       _ = (_) => () => {
         let _ = [..._.current],
           _ = _[_];
-        (_[_] = {
+        ((_[_] = {
           ..._,
           start: _.start,
           end: _.start,
@@ -29496,7 +29517,7 @@ var _ = (_, _) => {
                 end: _.end,
               }),
           (_.current = _),
-          _();
+          _());
       },
       _ = (_, _ = [], _ = !1, _ = !1) =>
         _.createElement(
@@ -29689,8 +29710,8 @@ var _ = (_, _) => {
           _ = _ + _,
           _ = _.current,
           _ = _?.offsetTop ?? 0;
-        for (; _?.offsetParent && _?.offsetParent !== _; )
-          (_ = _.offsetParent), (_ += _.offsetTop);
+        for (; _?.offsetParent && _?.offsetParent !== _;)
+          ((_ = _.offsetParent), (_ += _.offsetTop));
         if (_ > _ || _ + _.current < _)
           return _.createElement(
             `tr`,
@@ -29817,7 +29838,7 @@ function _(_) {
           (0, _.jsxs)(_, {
             className: _,
             onClick: () => {
-              _?.(), _();
+              (_?.(), _());
             },
             children: [
               _(`#EventEditor_ShowDiff`),
@@ -29831,7 +29852,7 @@ function _(_) {
             active: _,
             children: (0, _.jsx)(_, {
               closeModal: () => {
-                _?.(), _();
+                (_?.(), _());
               },
               bAlertDialog: !0,
               bAllowFullSize: !0,
@@ -30172,7 +30193,7 @@ var _ = (_) => {
       [_, _] = _.useState(`rollback`);
     _.useEffect(() => {
       let _ = new URLSearchParams();
-      _.append(`version_id`, _), _.append(`event_gid`, _.GetGID());
+      (_.append(`version_id`, _), _.append(`event_gid`, _.GetGID()));
       let _ =
         _.COMMUNITY_BASE_URL +
         `gid/${_.GetClanSteamID().ConvertTo64BitString()}/ajaxrollbackevent`;
@@ -30249,10 +30270,10 @@ function _(_, _, _, _) {
     for (let _ of _.data.groups) {
       let _ = _.splice(0, _.nCount),
         _ = _(_.nSeed);
-      _(_, Math.min(_, _.length), _),
+      (_(_, Math.min(_, _.length), _),
         (_ -= Math.min(_, _.length)),
         _.push(..._),
-        _.push(_);
+        _.push(_));
     }
   if (_.length > 0) {
     if (_ > 0) {
@@ -30261,12 +30282,12 @@ function _(_, _, _, _) {
           nSeed: _(),
         },
         _ = _(_.nSeed);
-      _(_, _, _),
+      (_(_, _, _),
         _.push(..._),
         _.push(_),
         _(_, _.rtime32_last_modified, {
           groups: _,
-        });
+        }));
     } else _.push(..._);
   }
   return _;
@@ -30356,8 +30377,8 @@ function _(_, _, _, _) {
     rtLastModified: _,
     data: _,
   };
-  _ > 0 && (_.rtExpires = Math.floor(Date.now() / 1e3) + _),
-    window.sessionStorage.setItem(_, JSON.stringify(_));
+  (_ > 0 && (_.rtExpires = Math.floor(Date.now() / 1e3) + _),
+    window.sessionStorage.setItem(_, JSON.stringify(_)));
 }
 function _(_) {
   return (_.IN_CLIENT ? `library-` : _() + `-`) + _;
@@ -30415,7 +30436,7 @@ function _() {
 function _(_, _, _) {
   let _ = _(_, _),
     _ = 0;
-  for (; _ > 0; ) (_ -= _[_ % _.length]), _++;
+  for (; _ > 0;) ((_ -= _[_ % _.length]), _++);
   return _;
 }
 function _(_, _, _) {
@@ -30805,7 +30826,7 @@ function _(_, _, _, _) {
         if (_.length === 1) {
           let _ = _,
             _ = _.length;
-          _.splice(+!!_), _.push(_.replace(`%1$s`, `` + _)), (_[_] = _);
+          (_.splice(+!!_), _.push(_.replace(`%1$s`, `` + _)), (_[_] = _));
         } else _[_] = _.map((_) => _(_, _.slice(1).join(`.`), _, _));
       } else
         _[_] =
@@ -30820,7 +30841,7 @@ function _(_) {
     for (let _ in _)
       if (Array.isArray(_[_])) {
         let _ = -1;
-        _[_].forEach((_, _) => {
+        (_[_].forEach((_, _) => {
           _ != null &&
             _ !== `` &&
             ((_ = _), typeof _ == `object` && (_[_][_] = _(_)));
@@ -30828,7 +30849,7 @@ function _(_) {
           _ == -1
             ? (_[_] = `[all empty array]`)
             : _ < _[_].length - 1 &&
-              (_[_].splice(_ + 1), _[_].push(`... rest are empty ...`));
+              (_[_].splice(_ + 1), _[_].push(`... rest are empty ...`)));
       } else typeof _[_] == `object` && (_[_] = _(_[_]));
     return _;
   };
@@ -30867,7 +30888,7 @@ var _ = _((_) => {
     ),
     _ = new Map(Object.entries(_).map(([_, _]) => [_, _(_)])),
     _ = _.GetEventModel().jsondata;
-  _ && (_ = _(_)),
+  (_ && (_ = _(_)),
     _
       ? (_ = _(
           _,
@@ -30907,7 +30928,7 @@ var _ = _((_) => {
         `sale_sections.facets.facetValues.matchingCapsules`,
         `... %1$s facet sale items hidden ...`,
         !1,
-      )));
+      ))));
   let _ = _.GetCreatorUserSteamID(),
     _ = _.GetLastUpdater(),
     [_, _] = _(_.GetEventModel());
@@ -31389,7 +31410,7 @@ var _ = (_) => {
         onChange: _,
       } = _,
       _ = (_) => {
-        (_[_] = _), _.SetDirty(_.jsondata_sales), _ && _(_, _);
+        ((_[_] = _), _.SetDirty(_.jsondata_sales), _ && _(_, _));
       };
     return _
       ? (0, _.jsx)(_, {
@@ -31979,11 +32000,11 @@ function _(_, _, _, _) {
       strTitle: _(`#Sale_Section_ShowOnTabs_DialogTitle`),
       strDescription: _(`#Sale_Section_ShowOnTabs_DialogDesc`),
       onOK: () => {
-        _
+        (_
           ? _(Array.from(_.keys()))
           : ((_.show_on_tabs = Array.from(_.keys())),
             _.show_on_tabs.length == 0 && (_.reverse_show_on_tabs = void 0)),
-          _.SetDirty(_.jsondata_sales);
+          _.SetDirty(_.jsondata_sales));
       },
       children: (0, _.jsx)(`div`, {
         className: _,
@@ -32055,14 +32076,14 @@ function _(_) {
               (0, _.jsx)(`div`, {
                 className: _,
                 onClick: () => {
-                  _(),
+                  (_(),
                     _.item_browse_section_data.tabs ||
                       (_.item_browse_section_data.tabs = []),
                     (_.item_browse_section_data.tabs = [
                       ..._.item_browse_section_data.tabs,
                       _,
                     ]),
-                    _.SetDirty(_.jsondata_sales);
+                    _.SetDirty(_.jsondata_sales));
                 },
                 children: (0, _.jsx)(_, {}),
               }),
@@ -32082,9 +32103,9 @@ function _(_) {
         label: _(`#Sale_Section_EnableSearch`),
         tooltip: _(`#Sale_Section_EnableSearch_ttip`),
         onChange: (_) => {
-          _(),
+          (_(),
             (_.item_browse_section_data.enable_search = _),
-            _.SetDirty(_.jsondata_sales);
+            _.SetDirty(_.jsondata_sales));
         },
         checked: _.enable_search,
       }),
@@ -32092,9 +32113,9 @@ function _(_) {
         label: _(`#Sale_Section_UseDemoLayout`),
         tooltip: _(`#Sale_Section_UseDemoLayout_ttip`),
         onChange: (_) => {
-          _(),
+          (_(),
             (_.item_browse_section_data.show_as_demos = _),
-            _.SetDirty(_.jsondata_sales);
+            _.SetDirty(_.jsondata_sales));
         },
         checked: _.show_as_demos,
       }),
@@ -32102,9 +32123,9 @@ function _(_) {
         label: _(`#Sale_Section_PreferDemoStorePage`),
         tooltip: _(`#Sale_Section_PreferDemoStorePage_tooltip`),
         onChange: (_) => {
-          _(),
+          (_(),
             (_.item_browse_section_data.prefer_demo_store_page = _),
-            _.SetDirty(_.jsondata_sales);
+            _.SetDirty(_.jsondata_sales));
         },
         checked: _.prefer_demo_store_page,
       }),
@@ -32113,9 +32134,9 @@ function _(_) {
           label: _(`#Sale_Section_ShowDeckCompatibility`),
           tooltip: _(`#Sale_Section_ShowDeckCompatibility_ttip`),
           onChange: (_) => {
-            _(),
+            (_(),
               (_.item_browse_section_data.show_deck_compability_details = _),
-              _.SetDirty(_.jsondata_sales);
+              _.SetDirty(_.jsondata_sales));
           },
           checked: _,
         }),
@@ -32124,10 +32145,10 @@ function _(_) {
         label: _(`#Sale_BrowseSection_SubscriptionID`),
         tooltip: _(`#Sale_BrowseSection_SubscriptionID_ttip`),
         onChange: (_) => {
-          _(),
+          (_(),
             (_.item_browse_section_data.master_subscription =
               Number.parseInt(_.target.value) || 0),
-            _.SetDirty(_.jsondata_sales);
+            _.SetDirty(_.jsondata_sales));
         },
         value: _,
       }),
@@ -32138,10 +32159,10 @@ function _(_) {
         rgOptions: _,
         selectedOption: _,
         onChange: (_) => {
-          _(),
+          (_(),
             (_.item_browse_section_data.display_hw_compatibility_details =
               _.data),
-            _.SetDirty(_.jsondata_sales);
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       (0, _.jsx)(_, {
@@ -32251,20 +32272,20 @@ function _(_) {
         (0, _.jsxs)(`a`, {
           className: `YQe2NmzcuNY-`,
           onClick: (_) => {
-            _.preventDefault(),
+            (_.preventDefault(),
               _.stopPropagation(),
               _(
                 _,
                 _,
                 () => (_ && _[_]) || [],
                 (_) => {
-                  _.item_browse_section_data.show_flavor_on_sale_tabs ||
+                  (_.item_browse_section_data.show_flavor_on_sale_tabs ||
                     (_.item_browse_section_data.show_flavor_on_sale_tabs = {}),
                     (_.item_browse_section_data.show_flavor_on_sale_tabs[_] =
                       _),
-                    _();
+                    _());
                 },
-              );
+              ));
           },
           children: [_(`#Sale_Section_ShowOnTabs`), _(_, _, _, _)],
         }),
@@ -32377,7 +32398,7 @@ function _(_) {
                     max: 3,
                     value: _,
                     onChange: (_) => {
-                      (_.carousel_rows = _), _.SetDirty(_.jsondata_sales);
+                      ((_.carousel_rows = _), _.SetDirty(_.jsondata_sales));
                     },
                     tooltip: _(`#Sale_Section_CarouselRows_Tooltip`),
                   },
@@ -32430,10 +32451,10 @@ function _(_) {
                       tooltip: _(`#Sale_Section_CapSectionContentCount_hint`),
                       onChange: (_) => {
                         let _ = Number(_.currentTarget.value);
-                        _ > 0 &&
+                        (_ > 0 &&
                           ((_.cap_section_row_count = _),
                           _.SetDirty(_.jsondata_sales)),
-                          _(_.currentTarget.value);
+                          _(_.currentTarget.value));
                       },
                       value: _,
                     }),
@@ -32637,13 +32658,13 @@ function _(_) {
 function _(_) {
   let { saleSection: _, editModel: _ } = _,
     _ = (_) => {
-      (_.show_as_carousel = !0),
+      ((_.show_as_carousel = !0),
         (_.capsules_per_row_array = [2, 3, 4, 3]),
         (_.carousel_rows = 2),
         (_.single_item_style = void 0),
         (_.capsule_style_per_row_array = null),
         _(),
-        _.SetDirty(_.jsondata_sales);
+        _.SetDirty(_.jsondata_sales));
     },
     _ = [
       {
@@ -32652,10 +32673,10 @@ function _(_) {
           arrows: !0,
         }),
         action: () => {
-          (_.show_as_carousel = !0),
+          ((_.show_as_carousel = !0),
             (_.carousel_rows = 1),
             (_.capsules_per_row_array = [1]),
-            (_.single_item_style = `library`);
+            (_.single_item_style = `library`));
         },
       },
       {
@@ -32664,9 +32685,9 @@ function _(_) {
           arrows: !0,
         }),
         action: () => {
-          (_.capsules_per_row_array = [3]),
+          ((_.capsules_per_row_array = [3]),
             (_.capsule_style_per_row_array = [`tall`]),
-            (_.carousel_rows = 1);
+            (_.carousel_rows = 1));
         },
       },
       {
@@ -32675,7 +32696,7 @@ function _(_) {
           arrows: !0,
         }),
         action: () => {
-          (_.capsules_per_row_array = [4]), (_.carousel_rows = 1);
+          ((_.capsules_per_row_array = [4]), (_.carousel_rows = 1));
         },
       },
       {
@@ -32865,7 +32886,7 @@ function _(_) {
       (0, _.jsx)(_, {
         varName: `use_random_order`,
         onChange: (_, _) => {
-          _ || (_.cap_item_count = 0), _(_(_).toString());
+          (_ || (_.cap_item_count = 0), _(_(_).toString()));
         },
         editModel: _,
         section: _,
@@ -33053,10 +33074,10 @@ var _ = _((_) => {
             label: _(`#Sale_Section_AllowCompactBrowserItemSwitch`),
             tooltip: _(`#Sale_Section_AllowCompactBrowserItemSwitch_ttip`),
             onChange: (_) => {
-              _(),
+              (_(),
                 (_.item_browse_section_data.item_browser_has_compact_toggle =
                   _),
-                _.SetDirty(_.jsondata_sales);
+                _.SetDirty(_.jsondata_sales));
             },
             checked: _,
           }),
@@ -33139,9 +33160,9 @@ function _(_) {
     _ = _.useCallback(
       (_, _) => {
         let { rows: _, styles: _ } = _(_);
-        (_.capsules_per_row_array = _),
+        ((_.capsules_per_row_array = _),
           (_.capsule_style_per_row_array = !_ || !_.length ? null : _),
-          _.SetDirty(_.jsondata_sales);
+          _.SetDirty(_.jsondata_sales));
       },
       [_],
     ),
@@ -33215,10 +33236,10 @@ function _(_) {
   let [_] = _(() => [_.discovery_queue_localized_desc?.[_] ?? ``]),
     _ = (0, _.useCallback)(
       (_) => {
-        _.discovery_queue_localized_desc ||
+        (_.discovery_queue_localized_desc ||
           ((_.discovery_queue_localized_desc = _([], 32, null)), _()),
           _ != _.discovery_queue_localized_desc[_] &&
-            ((_.discovery_queue_localized_desc[_] = _), _());
+            ((_.discovery_queue_localized_desc[_] = _), _()));
       },
       [_, _, _],
     );
@@ -33262,8 +33283,8 @@ var _ = _((_) =>
           tooltip: _(`#Sale_Section_CarouselRows_Tooltip`),
           value: _.section.carousel_rows || 2,
           onChange: (_) => {
-            (_.section.carousel_rows = _),
-              _.editModel.SetDirty(_.jsondata_sales);
+            ((_.section.carousel_rows = _),
+              _.editModel.SetDirty(_.jsondata_sales));
           },
         }),
       }),
@@ -33432,12 +33453,12 @@ var _ = class extends _.Component {
         _: _,
         type: this.state.type,
       }));
-    await _(_, _),
+    (await _(_, _),
       _.forEach((_) => this.props.fnAddCapsule(_, this.state.type)),
       this.setState({
         bImporting: !1,
       }),
-      this.props.closeModal();
+      this.props.closeModal());
   }
   OnTypeChange(_) {
     this.setState({
@@ -33533,11 +33554,11 @@ var _ = class extends _.Component {
     );
   }
 };
-_([_], _.prototype, `OnImportAction`, null),
+(_([_], _.prototype, `OnImportAction`, null),
   _([_], _.prototype, `DoImport`, null),
   _([_], _.prototype, `OnTypeChange`, null),
   _([_], _.prototype, `OnImportChange`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 function _(_) {
   let { info: _ } = _,
     _ = _.label;
@@ -33641,7 +33662,7 @@ function _(_) {
     rgOptions: _ ?? [],
     selectedOption: _,
     onChange: (_) => {
-      (_.smart_section_creator_listid = _.data), _.SetDirty(_.jsondata_sales);
+      ((_.smart_section_creator_listid = _.data), _.SetDirty(_.jsondata_sales));
     },
     contextMenuPositionOptions: {
       bDisablePopTop: !0,
@@ -34072,8 +34093,8 @@ function _(_) {
     value: _,
     onChange: (_) => {
       let _ = Number.parseInt(_.target.value);
-      (_.smart_section_max_apps = _ > 0 ? _ : void 0),
-        _.SetDirty(_.jsondata_sales);
+      ((_.smart_section_max_apps = _ > 0 ? _ : void 0),
+        _.SetDirty(_.jsondata_sales));
     },
   });
 }
@@ -34106,9 +34127,9 @@ function _(_) {
       value: _,
       onChange: (_) => {
         let _ = Number.parseInt(_.target.value);
-        (_.smart_section_min_discount_percent =
+        ((_.smart_section_min_discount_percent =
           _ > 0 ? Math.min(_, 99) : void 0),
-          _.SetDirty(_.jsondata_sales);
+          _.SetDirty(_.jsondata_sales));
       },
     }),
   });
@@ -34155,8 +34176,8 @@ function _(_) {
           rgOptions: _,
           selectedOption: _,
           onChange: (_) => {
-            (_.smart_section_category = Number(_.data)),
-              _.SetDirty(_.jsondata_sales);
+            ((_.smart_section_category = Number(_.data)),
+              _.SetDirty(_.jsondata_sales));
           },
           contextMenuPositionOptions: {
             bDisablePopTop: !0,
@@ -34196,10 +34217,10 @@ function _(_) {
       rgOptions: _,
       selectedValue: _,
       onSelectionChange: (_) => {
-        _(_, _, _.data == `linked_app_list`),
+        (_(_, _, _.data == `linked_app_list`),
           (_.smart_section_type =
             _.data == `linked_app_list` ? void 0 : _.data),
-          _.SetDirty(_.jsondata_sales);
+          _.SetDirty(_.jsondata_sales));
       },
       filter: (_, _) =>
         _(_).toLocaleLowerCase().includes(_.toLocaleLowerCase()),
@@ -34243,13 +34264,13 @@ function _(_) {
 function _(_, _, _) {
   if (_) {
     let _ = _(_);
-    (_.sale_tag_filter = {
+    ((_.sale_tag_filter = {
       clauses: [],
     }),
-      (_.capsules = _(_, _.sale_tag_filter, _.capsules));
+      (_.capsules = _(_, _.sale_tag_filter, _.capsules)));
   } else
-    _.sale_tag_filter?.clauses?.length || (_.capsules = []),
-      (_.sale_tag_filter = null);
+    (_.sale_tag_filter?.clauses?.length || (_.capsules = []),
+      (_.sale_tag_filter = null));
 }
 function _(_) {
   let { saleSection: _, editModel: _ } = _,
@@ -34321,8 +34342,8 @@ function _(_) {
         ].filter((_) => !!_),
         selectedOption: _,
         onChange: (_) => {
-          (_.smart_section_personalized_carousel_sort = _.data),
-            _.SetDirty(_.jsondata_sales);
+          ((_.smart_section_personalized_carousel_sort = _.data),
+            _.SetDirty(_.jsondata_sales));
         },
         contextMenuPositionOptions: {
           bDisablePopTop: !0,
@@ -34336,8 +34357,8 @@ function _(_) {
         tooltip: _(`#Sale_SmartSection_PersonalizedCarousel_MinCount_ttip`),
         value: _,
         onChange: (_) => {
-          (_.smart_section_personalized_carousel_min_items = _),
-            _.SetDirty(_.jsondata_sales);
+          ((_.smart_section_personalized_carousel_min_items = _),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       (0, _.jsx)(_, {
@@ -34345,8 +34366,8 @@ function _(_) {
         tooltip: _(`#Sale_SmartSection_PersonalizedCarousel_Randomize_ttip`),
         checked: _,
         onChange: (_) => {
-          (_.smart_section_personalized_carousel_randomize = _),
-            _.SetDirty(_.jsondata_sales);
+          ((_.smart_section_personalized_carousel_randomize = _),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       _ > 0 &&
@@ -34387,14 +34408,14 @@ function _(_) {
                 (0, _.jsx)(_, {
                   fnAddCapsule: (_, _) => {
                     _(() => {
-                      (_.capsules = [
+                      ((_.capsules = [
                         {
                           _: _,
                           type: _,
                         },
                       ]),
                         _(_, _),
-                        _.SetDirty(_.jsondata_sales);
+                        _.SetDirty(_.jsondata_sales));
                     });
                   },
                 }),
@@ -34437,8 +34458,8 @@ function _(_) {
     ],
     selectedOption: _ || 3,
     onChange: (_) => {
-      (_.smart_section_deck_compatibility = _.data),
-        _.SetDirty(_.jsondata_sales);
+      ((_.smart_section_deck_compatibility = _.data),
+        _.SetDirty(_.jsondata_sales));
     },
     contextMenuPositionOptions: {
       bDisablePopTop: !0,
@@ -34501,7 +34522,8 @@ function _(_) {
         ],
         selectedOption: _ || `library`,
         onChange: (_) => {
-          (_.smart_section_data_source = _.data), _.SetDirty(_.jsondata_sales);
+          ((_.smart_section_data_source = _.data),
+            _.SetDirty(_.jsondata_sales));
         },
         contextMenuPositionOptions: {
           bDisablePopTop: !0,
@@ -34561,9 +34583,9 @@ function _(_) {
                         _,
                         {
                           onSelected: () => {
-                            (_.current.element.value = ``),
+                            ((_.current.element.value = ``),
                               (_.smart_section_tag = Number(_._)),
-                              _.SetDirty(_.jsondata_sales);
+                              _.SetDirty(_.jsondata_sales));
                           },
                           children: (0, _.jsxs)(`div`, {
                             style: {
@@ -34632,16 +34654,16 @@ function _(_) {
     [_, _, _] = _(() => [_.GetEventType(), _.capsules?.length || 0, _(_)]),
     _ = _ == 36,
     _ = (_) => {
-      _(_),
+      (_(_),
         _(() => {
-          _ && (_.capsules = []),
+          (_ && (_.capsules = []),
             (_.smart_section = _),
             (_.smart_section_type = _ ? (_ ? `all_released` : _) : void 0),
             !_.smart_section_max_apps && _ && (_.smart_section_max_apps = _),
             _(_, _, _ && _.smart_section_type == null),
             _ || _(_),
-            _.SetDirty(_.jsondata_sales);
-        });
+            _.SetDirty(_.jsondata_sales));
+        }));
     },
     _ = (_) => {
       _ != _ && ((_ ? _ > 0 : _.length > 0) ? (_(_), _()) : _(_));
@@ -34799,11 +34821,11 @@ function _(_) {
         (0, _.jsx)(_, {
           strFlavor: _,
           fnSetFlavor: (_) => {
-            (_.dlc_for_you_data = {
+            ((_.dlc_for_you_data = {
               ..._.dlc_for_you_data,
               filter: _,
             }),
-              _.SetDirty(_.jsondata_sales);
+              _.SetDirty(_.jsondata_sales));
           },
         }),
         (0, _.jsx)(_, {
@@ -34811,11 +34833,11 @@ function _(_) {
           tooltip: _(`#Sale_DLCForYou_GroupByParentApp_ttip`),
           checked: _,
           onChange: (_) => {
-            (_.dlc_for_you_data = {
+            ((_.dlc_for_you_data = {
               ..._.dlc_for_you_data,
               group_by_parent_app: _,
             }),
-              _.SetDirty(_.jsondata_sales);
+              _.SetDirty(_.jsondata_sales));
           },
         }),
         !_ &&
@@ -34824,11 +34846,11 @@ function _(_) {
             tooltip: _(`#Sale_DLCForYou_HideDLCStats_ttip`),
             checked: _,
             onChange: (_) => {
-              (_.dlc_for_you_data = {
+              ((_.dlc_for_you_data = {
                 ..._.dlc_for_you_data,
                 hide_dlc_stats: _,
               }),
-                _.SetDirty(_.jsondata_sales);
+                _.SetDirty(_.jsondata_sales));
             },
           }),
         _ &&
@@ -34837,8 +34859,8 @@ function _(_) {
               (0, _.jsx)(_, {
                 items: _,
                 onDelete: (_) => {
-                  _.dlc_for_you_data.parent_app_sorts.splice(_, 1),
-                    _.SetDirty(_.jsondata_sales);
+                  (_.dlc_for_you_data.parent_app_sorts.splice(_, 1),
+                    _.SetDirty(_.jsondata_sales));
                 },
                 onReorder: () => {
                   _.SetDirty(_.jsondata_sales);
@@ -34849,18 +34871,18 @@ function _(_) {
                     rgOptions: _,
                     selectedOption: _.value,
                     onChange: (_) => {
-                      (_.value = _.data), _.SetDirty(_.jsondata_sales);
+                      ((_.value = _.data), _.SetDirty(_.jsondata_sales));
                     },
                   }),
               }),
               (0, _.jsx)(_, {
                 onClick: () => {
-                  _.dlc_for_you_data.parent_app_sorts ||
+                  (_.dlc_for_you_data.parent_app_sorts ||
                     (_.dlc_for_you_data.parent_app_sorts = []),
                     _.dlc_for_you_data.parent_app_sorts.push({
                       value: `last_played`,
                     }),
-                    _.SetDirty(_.jsondata_sales);
+                    _.SetDirty(_.jsondata_sales));
                 },
                 children: `Add Sort Order Tab`,
               }),
@@ -34873,11 +34895,11 @@ function _(_) {
           rangeMin: 0,
           value: _,
           onChange: (_) => {
-            (_.dlc_for_you_data = {
+            ((_.dlc_for_you_data = {
               ..._.dlc_for_you_data,
               max_last_played: Number(_.target.value),
             }),
-              _.SetDirty(_.jsondata_sales);
+              _.SetDirty(_.jsondata_sales));
           },
         }),
         (0, _.jsx)(_, {
@@ -34887,11 +34909,11 @@ function _(_) {
           rangeMin: 0,
           value: _,
           onChange: (_) => {
-            (_.dlc_for_you_data = {
+            ((_.dlc_for_you_data = {
               ..._.dlc_for_you_data,
               min_playtime: Number(_.target.value),
             }),
-              _.SetDirty(_.jsondata_sales);
+              _.SetDirty(_.jsondata_sales));
           },
         }),
         (0, _.jsx)(_, {
@@ -34902,11 +34924,11 @@ function _(_) {
           rangeMin: 0,
           value: _,
           onChange: (_) => {
-            (_.dlc_for_you_data = {
+            ((_.dlc_for_you_data = {
               ..._.dlc_for_you_data,
               parent_app_page_size: Number(_.target.value),
             }),
-              _.SetDirty(_.jsondata_sales);
+              _.SetDirty(_.jsondata_sales));
           },
         }),
       ],
@@ -34963,7 +34985,7 @@ function _(_) {
     [_] = _(() => [_.media_layout?.layout_type]),
     _ = (0, _.useCallback)(
       (_) => {
-        (_.media_layout.layout_type = _),
+        ((_.media_layout.layout_type = _),
           (_ === _.DoubleMedia || _ === _.QuadMedia) &&
             _.media_layout.media_content.length < 2 &&
             _.media_layout.media_content.push({
@@ -34986,7 +35008,7 @@ function _(_) {
                 localized_media_desc: [],
               }),
           _(),
-          _();
+          _());
       },
       [_, _, _],
     );
@@ -35037,37 +35059,37 @@ function _(_) {
     _ = _(() => _.Get().GetCurEditLanguage()),
     _ = (0, _.useCallback)(
       (_, _) => {
-        (_[_].media_type = _), _(), _();
+        ((_[_].media_type = _), _(), _());
       },
       [_, _, _],
     ),
     _ = (0, _.useCallback)(
       (_, _) => {
-        (_[_].video_webm_src = _), _(), _();
+        ((_[_].video_webm_src = _), _(), _());
       },
       [_, _, _],
     ),
     _ = (0, _.useCallback)(
       (_, _) => {
-        (_[_].video_mp4_src = _), _(), _();
+        ((_[_].video_mp4_src = _), _(), _());
       },
       [_, _, _],
     ),
     _ = (0, _.useCallback)(
       (_, _) => {
-        (_[_].video_poster_image = _), _(), _();
+        ((_[_].video_poster_image = _), _(), _());
       },
       [_, _, _],
     ),
     _ = (0, _.useCallback)(
       (_, _) => {
-        (_[_].image_source = _), _(), _();
+        ((_[_].image_source = _), _(), _());
       },
       [_, _, _],
     ),
     _ = (0, _.useCallback)(
       (_, _) => {
-        (_[_].localized_media_desc[_] = _), _(), _();
+        ((_[_].localized_media_desc[_] = _), _(), _());
       },
       [_, _, _, _],
     ),
@@ -35465,8 +35487,8 @@ var _ = _(_()),
       initialSaleJSON: _(),
     },
   };
-(0, _.default)(`2022-02-21T10:00:00-08:00`).unix(),
-  (0, _.default)(`2022-02-28T10:00:00-08:00`).unix();
+((0, _.default)(`2022-02-21T10:00:00-08:00`).unix(),
+  (0, _.default)(`2022-02-28T10:00:00-08:00`).unix());
 var _ = class _ {
   m_mapOptInSpecialEventDef = new Map();
   m_mapOptInSpecialEventDefPromises = new Map();
@@ -35532,7 +35554,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -35564,7 +35586,7 @@ function _(_) {
     _ = _.GetAccountID(),
     [_] = _(() => [_.GetFilesToUpload().length - _.GetCompletedFiles()]);
   (0, _.useEffect)(() => {
-    _(!1),
+    (_(!1),
       _.ClearImageGroup(),
       _?.forEach((_, _) => {
         let _ = _.InitFromClanID(_, _.EUNIVERSE);
@@ -35575,7 +35597,7 @@ function _(_) {
         }
         _.SetLocalizedImageGroupAtLang(_, _, _ ?? null);
       }),
-      _(!0);
+      _(!0));
   }, [_, _, _]);
   let _ = (0, _.useCallback)(
       (_, _, _ = 0) => {
@@ -35621,7 +35643,7 @@ function _(_) {
           );
         } else _(_, null, _);
       }
-      _.ClearImageGroup(), _.onOK ? _.onOK() : _?.();
+      (_.ClearImageGroup(), _.onOK ? _.onOK() : _?.());
     },
     strOKButtonText: _ > 0 ? _(`#ImagePickerLoc_DismissWarning`) : void 0,
     children: [
@@ -35679,7 +35701,7 @@ var _ = `KMppINq9bGg-`,
           _: !1,
           exports: {},
         });
-        return _[_].call(_.exports, _, _.exports, _), (_._ = !0), _.exports;
+        return (_[_].call(_.exports, _, _.exports, _), (_._ = !0), _.exports);
       }
       return (
         (_._ = _),
@@ -35692,14 +35714,14 @@ var _ = `KMppINq9bGg-`,
             });
         }),
         (_._ = function (_) {
-          typeof Symbol < `u` &&
+          (typeof Symbol < `u` &&
             Symbol.toStringTag &&
             Object.defineProperty(_, Symbol.toStringTag, {
               value: `Module`,
             }),
             Object.defineProperty(_, "__esModule", {
               value: !0,
-            });
+            }));
         }),
         (_._ = function (_, _) {
           if (
@@ -35735,7 +35757,7 @@ var _ = `KMppINq9bGg-`,
               : function () {
                   return _;
                 };
-          return _._(_, `a`, _), _;
+          return (_._(_, `a`, _), _);
         }),
         (_._ = function (_, _) {
           return Object.prototype.hasOwnProperty.call(_, _);
@@ -35763,7 +35785,7 @@ var _ = `KMppINq9bGg-`,
         var _ = _(6);
         function _() {}
         function _() {}
-        (_.resetWarningCache = _),
+        ((_.resetWarningCache = _),
           (_.exports = function () {
             function _(_, _, _, _, _, _) {
               if (_ !== _) {
@@ -35800,8 +35822,8 @@ var _ = `KMppINq9bGg-`,
               checkPropTypes: _,
               resetWarningCache: _,
             };
-            return (_.PropTypes = _), _;
-          });
+            return ((_.PropTypes = _), _);
+          }));
       },
       function (_, _, _) {
         _.exports = `SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED`;
@@ -35888,17 +35910,17 @@ var _ = `KMppINq9bGg-`,
         function _(_, _) {
           for (var _ = 0; _ < _.length; _++) {
             var _ = _[_];
-            (_.enumerable = _.enumerable || !1),
+            ((_.enumerable = _.enumerable || !1),
               (_.configurable = !0),
               `value` in _ && (_.writable = !0),
-              Object.defineProperty(_, _.key, _);
+              Object.defineProperty(_, _.key, _));
           }
         }
         function _(_, _) {
           return (_ = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (_, _) {
-                return (_.__proto__ = _), _;
+                return ((_.__proto__ = _), _);
               })(_, _);
         }
         function _(_) {
@@ -35972,7 +35994,7 @@ var _ = `KMppINq9bGg-`,
               throw TypeError(
                 `Super expression must either be null or a function`,
               );
-            (_.prototype = Object.create(_ && _.prototype, {
+            ((_.prototype = Object.create(_ && _.prototype, {
               constructor: {
                 value: _,
                 writable: !0,
@@ -35982,7 +36004,7 @@ var _ = `KMppINq9bGg-`,
               Object.defineProperty(_, "prototype", {
                 writable: !1,
               }),
-              _ && _(_, _);
+              _ && _(_, _));
           })(_, _);
           var _,
             _,
@@ -36088,8 +36110,8 @@ var _ = `KMppINq9bGg-`,
                     _ = [[], [], [], [], [], []],
                     _ = _.clone().subtract(1, `months`);
                   _.date(_.daysInMonth()).startOf(`week`);
-                  for (var _ = _.clone().add(42, `d`), _ = 0; _.isBefore(_); )
-                    _(_, _++).push(this.renderDay(_, _, _)), _.add(1, `d`);
+                  for (var _ = _.clone().add(42, `d`), _ = 0; _.isBefore(_);)
+                    (_(_, _++).push(this.renderDay(_, _, _)), _.add(1, `d`));
                   return _.map(function (_, _) {
                     return _._.createElement(
                       `tr`,
@@ -36187,17 +36209,17 @@ var _ = `KMppINq9bGg-`,
         function _(_, _) {
           for (var _ = 0; _ < _.length; _++) {
             var _ = _[_];
-            (_.enumerable = _.enumerable || !1),
+            ((_.enumerable = _.enumerable || !1),
               (_.configurable = !0),
               `value` in _ && (_.writable = !0),
-              Object.defineProperty(_, _.key, _);
+              Object.defineProperty(_, _.key, _));
           }
         }
         function _(_, _) {
           return (_ = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (_, _) {
-                return (_.__proto__ = _), _;
+                return ((_.__proto__ = _), _);
               })(_, _);
         }
         function _(_) {
@@ -36279,7 +36301,7 @@ var _ = `KMppINq9bGg-`,
               throw TypeError(
                 `Super expression must either be null or a function`,
               );
-            (_.prototype = Object.create(_ && _.prototype, {
+            ((_.prototype = Object.create(_ && _.prototype, {
               constructor: {
                 value: _,
                 writable: !0,
@@ -36289,7 +36311,7 @@ var _ = `KMppINq9bGg-`,
               Object.defineProperty(_, "prototype", {
                 writable: !1,
               }),
-              _ && _(_, _);
+              _ && _(_, _));
           })(_, _);
           var _,
             _,
@@ -36376,13 +36398,13 @@ var _ = `KMppINq9bGg-`,
                   var _,
                     _ = this.props.selectedDate,
                     _ = `rdtMonth`;
-                  this.isDisabledMonth(_)
+                  (this.isDisabledMonth(_)
                     ? (_ += ` rdtDisabled`)
                     : (_ = this._updateSelectedMonth),
                     _ &&
                       _.year() === this.props.viewDate.year() &&
                       _.month() === _ &&
-                      (_ += ` rdtActive`);
+                      (_ += ` rdtActive`));
                   var _ = {
                     key: _,
                     className: _,
@@ -36461,17 +36483,17 @@ var _ = `KMppINq9bGg-`,
         function _(_, _) {
           for (var _ = 0; _ < _.length; _++) {
             var _ = _[_];
-            (_.enumerable = _.enumerable || !1),
+            ((_.enumerable = _.enumerable || !1),
               (_.configurable = !0),
               `value` in _ && (_.writable = !0),
-              Object.defineProperty(_, _.key, _);
+              Object.defineProperty(_, _.key, _));
           }
         }
         function _(_, _) {
           return (_ = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (_, _) {
-                return (_.__proto__ = _), _;
+                return ((_.__proto__ = _), _);
               })(_, _);
         }
         function _(_) {
@@ -36545,7 +36567,7 @@ var _ = `KMppINq9bGg-`,
               throw TypeError(
                 `Super expression must either be null or a function`,
               );
-            (_.prototype = Object.create(_ && _.prototype, {
+            ((_.prototype = Object.create(_ && _.prototype, {
               constructor: {
                 value: _,
                 writable: !0,
@@ -36555,7 +36577,7 @@ var _ = `KMppINq9bGg-`,
               Object.defineProperty(_, "prototype", {
                 writable: !1,
               }),
-              _ && _(_, _);
+              _ && _(_, _));
           })(_, _);
           var _,
             _,
@@ -36646,10 +36668,10 @@ var _ = `KMppINq9bGg-`,
                   var _,
                     _ = this.getSelectedYear(),
                     _ = `rdtYear`;
-                  this.isDisabledYear(_)
+                  (this.isDisabledYear(_)
                     ? (_ += ` rdtDisabled`)
                     : (_ = this._updateSelectedYear),
-                    _ === _ && (_ += ` rdtActive`);
+                    _ === _ && (_ += ` rdtActive`));
                   var _ = {
                     key: _,
                     className: _,
@@ -36691,8 +36713,8 @@ var _ = `KMppINq9bGg-`,
                       _ = _.endOf(`year`).dayOfYear() + 1;
                     _-- > 1;
                   )
-                    if (_(_.dayOfYear(_))) return (_[_] = !1), !1;
-                  return (_[_] = !0), !0;
+                    if (_(_.dayOfYear(_))) return ((_[_] = !1), !1);
+                  return ((_[_] = !0), !0);
                 },
               },
             ]) && _(_.prototype, _),
@@ -36724,17 +36746,17 @@ var _ = `KMppINq9bGg-`,
         function _(_, _) {
           for (var _ = 0; _ < _.length; _++) {
             var _ = _[_];
-            (_.enumerable = _.enumerable || !1),
+            ((_.enumerable = _.enumerable || !1),
               (_.configurable = !0),
               `value` in _ && (_.writable = !0),
-              Object.defineProperty(_, _.key, _);
+              Object.defineProperty(_, _.key, _));
           }
         }
         function _(_, _) {
           return (_ = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (_, _) {
-                return (_.__proto__ = _), _;
+                return ((_.__proto__ = _), _);
               })(_, _);
         }
         function _(_) {
@@ -36792,11 +36814,11 @@ var _ = `KMppINq9bGg-`,
           var _ = Object.keys(_);
           if (Object.getOwnPropertySymbols) {
             var _ = Object.getOwnPropertySymbols(_);
-            _ &&
+            (_ &&
               (_ = _.filter(function (_) {
                 return Object.getOwnPropertyDescriptor(_, _).enumerable;
               })),
-              _.push.apply(_, _);
+              _.push.apply(_, _));
           }
           return _;
         }
@@ -36868,7 +36890,7 @@ var _ = `KMppINq9bGg-`,
                 throw TypeError(
                   `Super expression must either be null or a function`,
                 );
-              (_.prototype = Object.create(_ && _.prototype, {
+              ((_.prototype = Object.create(_ && _.prototype, {
                 constructor: {
                   value: _,
                   writable: !0,
@@ -36878,7 +36900,7 @@ var _ = `KMppINq9bGg-`,
                 Object.defineProperty(_, "prototype", {
                   writable: !1,
                 }),
-                _ && _(_, _);
+                _ && _(_, _));
             })(_, _);
             var _,
               _,
@@ -36913,7 +36935,7 @@ var _ = `KMppINq9bGg-`,
                       _ = this.state;
                     return (
                       this.getCounters().forEach(function (_, _) {
-                        _ &&
+                        (_ &&
                           _ !== `ampm` &&
                           _.push(
                             _._.createElement(
@@ -36925,7 +36947,7 @@ var _ = `KMppINq9bGg-`,
                               `:`,
                             ),
                           ),
-                          _.push(_.renderCounter(_, _[_]));
+                          _.push(_.renderCounter(_, _[_])));
                       }),
                       _._.createElement(
                         `div`,
@@ -37047,25 +37069,25 @@ var _ = `KMppINq9bGg-`,
                       if (_ === `ampm`) return this.toggleDayPart();
                       var _ = {},
                         _ = document.body;
-                      (_[_] = this[_](_)),
+                      ((_[_] = this[_](_)),
                         this.setState(_),
                         (this.timer = setTimeout(function () {
                           _.increaseTimer = setInterval(function () {
-                            (_[_] = _[_](_)), _.setState(_);
+                            ((_[_] = _[_](_)), _.setState(_));
                           }, 70);
                         }, 500)),
                         (this.mouseUpListener = function () {
-                          clearTimeout(_.timer),
+                          (clearTimeout(_.timer),
                             clearInterval(_.increaseTimer),
                             _.props.setTime(_, parseInt(_.state[_], 10)),
                             _.removeEventListener(`mouseup`, _.mouseUpListener),
                             _.removeEventListener(
                               `touchend`,
                               _.mouseUpListener,
-                            );
+                            ));
                         }),
                         _.addEventListener(`mouseup`, this.mouseUpListener),
-                        _.addEventListener(`touchend`, this.mouseUpListener);
+                        _.addEventListener(`touchend`, this.mouseUpListener));
                     }
                   },
                 },
@@ -37073,8 +37095,8 @@ var _ = `KMppINq9bGg-`,
                   key: `toggleDayPart`,
                   value: function () {
                     var _ = parseInt(this.state.hours, 10);
-                    _ >= 12 ? (_ -= 12) : (_ += 12),
-                      this.props.setTime(`hours`, _);
+                    (_ >= 12 ? (_ -= 12) : (_ += 12),
+                      this.props.setTime(`hours`, _));
                   },
                 },
                 {
@@ -37092,7 +37114,9 @@ var _ = `KMppINq9bGg-`,
                   value: function (_) {
                     var _ = this.constraints[_],
                       _ = parseInt(this.state[_], 10) - _.step;
-                    return _ < _.min && (_ = _.max + 1 - (_.min - _)), _(_, _);
+                    return (
+                      _ < _.min && (_ = _.max + 1 - (_.min - _)), _(_, _)
+                    );
                   },
                 },
                 {
@@ -37173,7 +37197,7 @@ var _ = `KMppINq9bGg-`,
           return (_ =
             Object.setPrototypeOf ||
             function (_, _) {
-              return (_.__proto__ = _), _;
+              return ((_.__proto__ = _), _);
             })(_, _);
         }
         function _(_) {
@@ -37248,7 +37272,7 @@ var _ = `KMppINq9bGg-`,
                     }),
                     (_.enableOnClickOutside = function () {
                       if (typeof document < `u` && !_[_._uid]) {
-                        _ === void 0 &&
+                        (_ === void 0 &&
                           (_ = (function () {
                             if (
                               typeof window < `u` &&
@@ -37276,9 +37300,9 @@ var _ = `KMppINq9bGg-`,
                               );
                             }
                           })()),
-                          (_[_._uid] = !0);
+                          (_[_._uid] = !0));
                         var _ = _.props.eventTypes;
-                        _.forEach || (_ = [_]),
+                        (_.forEach || (_ = [_]),
                           (_[_._uid] = function (_) {
                             var _;
                             _.componentNode !== null &&
@@ -37292,7 +37316,7 @@ var _ = `KMppINq9bGg-`,
                                     _.clientY)) ||
                                 ((function (_, _, _) {
                                   if (_ === _) return !0;
-                                  for (; _.parentNode || _.host; ) {
+                                  for (; _.parentNode || _.host;) {
                                     if (_.parentNode && _(_, _, _)) return !0;
                                     _ = _.parentNode || _.host;
                                   }
@@ -37309,7 +37333,7 @@ var _ = `KMppINq9bGg-`,
                           }),
                           _.forEach(function (_) {
                             document.addEventListener(_, _[_._uid], _(_(_), _));
-                          });
+                          }));
                       }
                     }),
                     (_.disableOnClickOutside = function () {
@@ -37317,7 +37341,7 @@ var _ = `KMppINq9bGg-`,
                       var _ = _[_._uid];
                       if (_ && typeof document < `u`) {
                         var _ = _.props.eventTypes;
-                        _.forEach || (_ = [_]),
+                        (_.forEach || (_ = [_]),
                           _.forEach(function (_) {
                             return document.removeEventListener(
                               _,
@@ -37325,7 +37349,7 @@ var _ = `KMppINq9bGg-`,
                               _(_(_), _),
                             );
                           }),
-                          delete _[_._uid];
+                          delete _[_._uid]);
                       }
                     }),
                     (_.getRef = function (_) {
@@ -37335,10 +37359,10 @@ var _ = `KMppINq9bGg-`,
                     _
                   );
                 }
-                (_ = _),
+                ((_ = _),
                   ((_ = _).prototype = Object.create(_.prototype)),
                   (_.prototype.constructor = _),
-                  _(_, _);
+                  _(_, _));
                 var _ = _.prototype;
                 return (
                   (_.getInstance = function () {
@@ -37362,9 +37386,9 @@ var _ = `KMppINq9bGg-`,
                             _ +
                             ` lacks a function for processing outside click events specified by the handleClickOutside config option.`,
                         );
-                      (this.componentNode = this.__getComponentNode()),
+                      ((this.componentNode = this.__getComponentNode()),
                         this.props.disableOnClickOutside ||
-                          this.enableOnClickOutside();
+                          this.enableOnClickOutside());
                     }
                   }),
                   (_.componentDidUpdate = function () {
@@ -37383,7 +37407,7 @@ var _ = `KMppINq9bGg-`,
                         _ = {},
                         _ = Object.keys(_);
                       for (_ = 0; _ < _.length; _++)
-                        (_ = _[_]), _.indexOf(_) >= 0 || (_[_] = _[_]);
+                        ((_ = _[_]), _.indexOf(_) >= 0 || (_[_] = _[_]));
                       return _;
                     })(_, [`excludeScrollbar`]);
                     return (
@@ -37431,11 +37455,11 @@ var _ = `KMppINq9bGg-`,
           var _ = Object.keys(_);
           if (Object.getOwnPropertySymbols) {
             var _ = Object.getOwnPropertySymbols(_);
-            _ &&
+            (_ &&
               (_ = _.filter(function (_) {
                 return Object.getOwnPropertyDescriptor(_, _).enumerable;
               })),
-              _.push.apply(_, _);
+              _.push.apply(_, _));
           }
           return _;
         }
@@ -37468,10 +37492,10 @@ var _ = `KMppINq9bGg-`,
         function _(_, _) {
           for (var _ = 0; _ < _.length; _++) {
             var _ = _[_];
-            (_.enumerable = _.enumerable || !1),
+            ((_.enumerable = _.enumerable || !1),
               (_.configurable = !0),
               `value` in _ && (_.writable = !0),
-              Object.defineProperty(_, _.key, _);
+              Object.defineProperty(_, _.key, _));
           }
         }
         function _(_, _, _) {
@@ -37489,7 +37513,7 @@ var _ = `KMppINq9bGg-`,
             throw TypeError(
               `Super expression must either be null or a function`,
             );
-          (_.prototype = Object.create(_ && _.prototype, {
+          ((_.prototype = Object.create(_ && _.prototype, {
             constructor: {
               value: _,
               writable: !0,
@@ -37499,13 +37523,13 @@ var _ = `KMppINq9bGg-`,
             Object.defineProperty(_, "prototype", {
               writable: !1,
             }),
-            _ && _(_, _);
+            _ && _(_, _));
         }
         function _(_, _) {
           return (_ = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (_, _) {
-                return (_.__proto__ = _), _;
+                return ((_.__proto__ = _), _);
               })(_, _);
         }
         function _(_) {
@@ -37651,18 +37675,20 @@ var _ = `KMppINq9bGg-`,
                   var _ = _.state.currentView,
                     _ = _.getUpdateOn(_.getFormat(`date`)),
                     _ = _.state.viewDate.clone();
-                  _[_.viewToMethod[_]](
+                  (_[_.viewToMethod[_]](
                     parseInt(_.target.getAttribute(`data-value`), 10),
                   ),
                     _ === `days` &&
                       (_.month(
                         parseInt(_.target.getAttribute(`data-month`), 10),
                       ),
-                      _.year(parseInt(_.target.getAttribute(`data-year`), 10)));
+                      _.year(
+                        parseInt(_.target.getAttribute(`data-year`), 10),
+                      )));
                   var _ = {
                     viewDate: _,
                   };
-                  _ === _
+                  (_ === _
                     ? ((_.selectedDate = _.clone()),
                       (_.inputValue = _.format(_.getFormat(`datetime`))),
                       _.props.open === void 0 &&
@@ -37671,28 +37697,28 @@ var _ = `KMppINq9bGg-`,
                         _._closeCalendar(),
                       _.props.onChange(_.clone()))
                     : _._showView(_.nextView[_], _),
-                    _.setState(_);
+                    _.setState(_));
                 }),
                 _(_(_), `_viewNavigate`, function (_, _) {
                   var _ = _.state.viewDate.clone();
-                  _.add(_, _),
+                  (_.add(_, _),
                     _ > 0
                       ? _.props.onNavigateForward(_, _)
                       : _.props.onNavigateBack(-_, _),
                     _.setState({
                       viewDate: _,
-                    });
+                    }));
                 }),
                 _(_(_), `_setTime`, function (_, _) {
                   var _ = (_.getSelectedDate() || _.state.viewDate).clone();
-                  _[_](_),
+                  (_[_](_),
                     _.props.value ||
                       _.setState({
                         selectedDate: _,
                         viewDate: _.clone(),
                         inputValue: _.format(_.getFormat(`datetime`)),
                       }),
-                    _.props.onChange(_);
+                    _.props.onChange(_));
                 }),
                 _(_(_), `_openCalendar`, function () {
                   _.isOpen() ||
@@ -37735,13 +37761,13 @@ var _ = `KMppINq9bGg-`,
                       _ = {
                         inputValue: _,
                       };
-                    _.isValid()
+                    (_.isValid()
                       ? ((_.selectedDate = _),
                         (_.viewDate = _.clone().startOf(`month`)))
                       : (_.selectedDate = null),
                       _.setState(_, function () {
                         _.props.onChange(_.isValid() ? _ : _.state.inputValue);
-                      });
+                      }));
                   }
                 }),
                 _(_(_), `_onInputKeyDown`, function (_) {
@@ -37866,7 +37892,7 @@ var _ = `KMppINq9bGg-`,
                   key: `getInitialDate`,
                   value: function () {
                     var _ = this.localMoment();
-                    return _.hour(0).minute(0).second(0).millisecond(0), _;
+                    return (_.hour(0).minute(0).second(0).millisecond(0), _);
                   },
                 },
                 {
@@ -37970,7 +37996,7 @@ var _ = `KMppINq9bGg-`,
                   value: function (_, _, _, _) {
                     var _ = {},
                       _ = _ ? `selectedDate` : `viewDate`;
-                    (_[_] = this.state[_].clone()[_](_, _)), this.setState(_);
+                    ((_[_] = this.state[_].clone()[_](_, _)), this.setState(_));
                   },
                 },
                 {
@@ -38010,7 +38036,7 @@ var _ = `KMppINq9bGg-`,
                     if (_ !== this.props) {
                       var _ = !1,
                         _ = this.props;
-                      [
+                      ([
                         `locale`,
                         `utc`,
                         `displayZone`,
@@ -38023,7 +38049,7 @@ var _ = `KMppINq9bGg-`,
                         _.value &&
                           _.value !== _.value &&
                           this.setViewDate(_.value),
-                        this.checkTZ();
+                        this.checkTZ());
                     }
                   },
                 },
@@ -38035,21 +38061,21 @@ var _ = `KMppINq9bGg-`,
                       _ =
                         this.state.selectedDate &&
                         this.state.selectedDate.clone();
-                    _.locale && (_.locale(_.locale), _ && _.locale(_.locale)),
+                    (_.locale && (_.locale(_.locale), _ && _.locale(_.locale)),
                       _.utc
                         ? (_.utc(), _ && _.utc())
                         : _.displayTimeZone
                           ? (_._(_.displayTimeZone),
                             _ && _._(_.displayTimeZone))
-                          : (_.locale(), _ && _.locale());
+                          : (_.locale(), _ && _.locale()));
                     var _ = {
                       viewDate: _,
                       selectedDate: _,
                     };
-                    _ &&
+                    (_ &&
                       _.isValid() &&
                       (_.inputValue = _.format(this.getFormat(`datetime`))),
-                      this.setState(_);
+                      this.setState(_));
                   },
                 },
                 {
@@ -38129,7 +38155,7 @@ var _ = `KMppINq9bGg-`,
           var _ = typeof window < `u` && window.console;
           _ && ((_ ||= `warn`), _[_](`***react-datetime:` + _));
         }
-        _(_, `propTypes`, {
+        (_(_, `propTypes`, {
           value: _,
           initialValue: _,
           initialViewDate: _,
@@ -38191,7 +38217,7 @@ var _ = `KMppINq9bGg-`,
               return _();
             },
           }),
-          _(_, `moment`, _._);
+          _(_, `moment`, _._));
         var _ = _(
           (function (_) {
             _(_, _);
@@ -38284,7 +38310,7 @@ function _(_) {
     _;
   if (_ && _ && _ == _ && _ > _.GetTimeNowWithOverride()) {
     let _ = _.default.unix(_);
-    (_ = {
+    ((_ = {
       hours: {
         max: _.hour(),
         min: _.hour(),
@@ -38306,7 +38332,7 @@ function _(_) {
         step: 0,
       },
     }),
-      (_ = _);
+      (_ = _));
   }
   let _;
   !_ && _ && !_ && (_ = _.default.unix(_));
@@ -38324,12 +38350,12 @@ function _(_) {
         _(null);
         let _ = _(),
           _ = _.default.unix(_ || _.GetTimeNowWithOverride());
-        (_ = _.clone()),
+        ((_ = _.clone()),
           _.hour(_.hour()),
           _.minute(_.minute()),
           _.second(0),
           _(_.unix()),
-          _(_);
+          _(_));
       },
       _,
     ),
@@ -38351,13 +38377,13 @@ function _(_) {
             60 * _.minutes();
         else {
           let _ = _.default.unix(_);
-          (_ = _.clone()),
+          ((_ = _.clone()),
             _.year(_.year()),
             _.month(_.month()),
             _.date(_.date()),
-            (_ = _.unix());
+            (_ = _.unix()));
         }
-        _(_), _(_.default.unix(_));
+        (_(_), _(_.default.unix(_)));
       },
       _,
     ),
@@ -38485,7 +38511,7 @@ function _(_, _, _) {
   let [_, _] = _.useState(!1);
   return {
     fnOnInput: (_) => {
-      _(_), _(!0);
+      (_(_), _(!0));
     },
     fnOnInputBlur: (_) => {
       if (_) {
@@ -38528,7 +38554,7 @@ function _(_, _, _, _) {
     let _ = _.default.unix(_).hour(23).minute(59).seconds(59);
     _ = _.unix() <= _.unix();
   }
-  return _ && _ && (_.weekday() == 0 || _.weekday() == 6) && (_ = !1), _;
+  return (_ && _ && (_.weekday() == 0 || _.weekday() == 6) && (_ = !1), _);
 }
 function _(_, _, _, _, _) {
   let _ = _ && _(),
@@ -38561,13 +38587,13 @@ var _ = class _ {
     return this.m_listEvents;
   }
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {
     _(this);
   }
   ClearAllSolrEvents() {
-    (this.m_mapEventGIDToSolrData = new Map()), (this.m_listEvents = []);
+    ((this.m_mapEventGIDToSolrData = new Map()), (this.m_listEvents = []));
   }
   async LoadPartnerEventForQueryIncremental(
     _,
@@ -38618,9 +38644,9 @@ var _ = class _ {
     return _.data ? _.data.docs : [];
   }
 };
-_([_], _.prototype, `m_mapEventGIDToSolrData`, void 0),
+(_([_], _.prototype, `m_mapEventGIDToSolrData`, void 0),
   _([_], _.prototype, `m_listEvents`, void 0),
-  _([_], _.prototype, `ClearAllSolrEvents`, null);
+  _([_], _.prototype, `ClearAllSolrEvents`, null));
 var _ = `qmAnWYfXGFA-`,
   _ = `YbDiwWqWeBs-`;
 function _(_) {
@@ -38646,7 +38672,7 @@ function _(_) {
                 _,
                 {
                   onSelected: () => {
-                    (_.current.element.value = ``), _(_);
+                    ((_.current.element.value = ``), _(_));
                   },
                   children: (0, _.jsxs)(`div`, {
                     style: {
@@ -38724,17 +38750,20 @@ function _(_) {
             _ = null,
             _ = null,
             _ = null;
-          if (_ && _?.length >= 3) (_ = Number.parseInt(_[1])), (_ = _[2]);
-          else if (_ && _?.length >= 3) (_ = Number.parseInt(_[1])), (_ = _[2]);
-          else if (_ && _?.length >= 3) (_ = _[1]), (_ = _[2]);
-          else if (_ && _.length >= 3) (_ = Number.parseInt(_[1])), (_ = _[2]);
+          if (_ && _?.length >= 3) ((_ = Number.parseInt(_[1])), (_ = _[2]));
+          else if (_ && _?.length >= 3)
+            ((_ = Number.parseInt(_[1])), (_ = _[2]));
+          else if (_ && _?.length >= 3) ((_ = _[1]), (_ = _[2]));
+          else if (_ && _.length >= 3)
+            ((_ = Number.parseInt(_[1])), (_ = _[2]));
           else if (_ && _.length >= 3) {
             let _ = _[1];
             _ = _[2];
             let _ = await _.LoadOGGClanInfoForIdentifier(_);
             _ && (_ = _.appid);
-          } else if (_ && _.length >= 3) (_ = _[1]), (_ = _[2]);
-          else if (_ && _.length >= 3) (_ = Number.parseInt(_[1])), (_ = _[2]);
+          } else if (_ && _.length >= 3) ((_ = _[1]), (_ = _[2]));
+          else if (_ && _.length >= 3)
+            ((_ = Number.parseInt(_[1])), (_ = _[2]));
           else if (_ && _.length >= 3) {
             let _ = _[1];
             _ = _[2];
@@ -38770,14 +38799,14 @@ function _(_) {
                 ));
           }
           if (_) {
-            _.push({
+            (_.push({
               name: _.GetNameWithFallback(_) ?? ``,
               type: _.GetEventType(),
               clanSteamID: _.clanSteamID,
               gidClanAnnouncement: _.GetAnnouncementGID(),
               gidClanEvent: _.GID,
             }),
-              _(_);
+              _(_));
             return;
           }
           _.current &&= (window.clearTimeout(_.current), null);
@@ -38856,7 +38885,7 @@ function _(_) {
   }, [_, _.events]);
   let _ = _.useCallback(
       async (_) => {
-        _.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+        (_.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
           _.clanSteamID,
           _.gidClanAnnouncement,
           null,
@@ -38866,7 +38895,7 @@ function _(_) {
             clan_steamid: _.clanSteamID.ConvertTo64BitString(),
             event_gid: _.gidClanEvent,
           }),
-          _.SetDirty(_.jsondata_sales);
+          _.SetDirty(_.jsondata_sales));
       },
       [_, _.events],
     ),
@@ -38914,12 +38943,12 @@ function _(_) {
       items: _,
       onDelete: (_) => {
         _(() => {
-          (_.events = _), _.events.splice(_, 1), _.SetDirty(_.jsondata_sales);
+          ((_.events = _), _.events.splice(_, 1), _.SetDirty(_.jsondata_sales));
         });
       },
       onMove: (_, _) => {
         _(() => {
-          (_.events = _), _(_.events, _, _), _.SetDirty(_.jsondata_sales);
+          ((_.events = _), _(_.events, _, _), _.SetDirty(_.jsondata_sales));
         });
       },
       render: (_) => {
@@ -39056,10 +39085,10 @@ function _(_) {
   (0, _.useEffect)(() => {
     if (((_.event_schedule_categories ||= []), !_.event_schedule_rtime_start)) {
       let _ = new Date();
-      _.setHours(10),
+      (_.setHours(10),
         _.setMinutes(0),
         _.setSeconds(0),
-        (_.event_schedule_rtime_start = Math.floor(_.getTime() / 1e3));
+        (_.event_schedule_rtime_start = Math.floor(_.getTime() / 1e3)));
     }
     _.event_schedule_rtime_end ||= _.event_schedule_rtime_start + 3600;
   }, [_]);
@@ -39097,16 +39126,16 @@ function _(_) {
         elSetStartTime: (0, _.jsx)(_, {
           disabled: _.GetEventStartTime() == 0,
           onClick: () => {
-            (_.event_schedule_rtime_start = _.GetEventStartTime()),
-              _.SetDirty(_.jsondata_sales);
+            ((_.event_schedule_rtime_start = _.GetEventStartTime()),
+              _.SetDirty(_.jsondata_sales));
           },
           children: _(`#EventEditor_SaleEventSchedule_SetToStart`),
         }),
         elSetEndTime: (0, _.jsx)(_, {
           disabled: _.GetEventEndTime() == 0,
           onClick: () => {
-            (_.event_schedule_rtime_end = _.GetEventEndTime()),
-              _.SetDirty(_.jsondata_sales);
+            ((_.event_schedule_rtime_end = _.GetEventEndTime()),
+              _.SetDirty(_.jsondata_sales));
           },
           children: _(`#EventEditor_SaleEventSchedule_SetToEnd`),
         }),
@@ -39139,9 +39168,9 @@ function _(_) {
         tooltip: _(`#EventEditor_SaleEventSchedule_ShowApps_ttip`),
         checked: !_,
         onChange: (_) => {
-          (_.event_schedule_prevent_apps = !_),
+          ((_.event_schedule_prevent_apps = !_),
             _.event_schedule_prevent_apps && (_.event_schedule_categories = []),
-            _.SetDirty(_.jsondata_sales);
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       !_ &&
@@ -39322,9 +39351,9 @@ var _ = (_) => {
                     strTitle: _(`#EventSchedule_DeletePrompt_Title`),
                     strDescription: _(`#EventSchedule_DeletePrompt_Body`),
                     onOK: () => {
-                      _.event_schedule_tracks.splice(_, 1),
+                      (_.event_schedule_tracks.splice(_, 1),
                         _.SetDirty(_.jsondata_sales),
-                        _(null);
+                        _(null));
                     },
                   }),
                   window,
@@ -39353,12 +39382,12 @@ var _ = (_) => {
                   (_, _) => Math.max(_, _.unique_id),
                   0,
                 );
-                _.event_schedule_tracks.push({
+                (_.event_schedule_tracks.push({
                   unique_id: _ + 1,
                   localized_track_image: [],
                   events: [],
                 }),
-                  _.SetDirty(_.jsondata_sales);
+                  _.SetDirty(_.jsondata_sales));
               },
               children: _(`#EventSchedule_AddTrack`),
             }),
@@ -39377,7 +39406,7 @@ function _(_, _, _, _, _) {
   _(_, {
     color: _[_],
     onChange: (_) => {
-      (_[_] = _), _.SetDirty(_.jsondata_sales);
+      ((_[_] = _), _.SetDirty(_.jsondata_sales));
     },
   });
 }
@@ -39623,10 +39652,10 @@ function _(_) {
           let _ = _.STORE_BASE_URL + `events_admin/ajaxupdatetags`,
             _ = new _(_.clan_steamid),
             _ = new FormData();
-          _.append(`sessionid`, _()),
+          (_.append(`sessionid`, _()),
             _.append(`clan_accountid`, `` + _.GetAccountID()),
             _.append(`gid_announcement`, _.announcement_gid),
-            _.append(`add_tags`, _);
+            _.append(`add_tags`, _));
           let _ = await _.default.post(_, _, {
               withCredentials: !0,
             }),
@@ -39639,7 +39668,7 @@ function _(_) {
           );
         }),
         _ = await Promise.all(_);
-      _(_.filter(Boolean).length), _(!0), _(!1);
+      (_(_.filter(Boolean).length), _(!0), _(!1));
     },
     strCancelButtonText: _ ? _(`#Done`) : void 0,
     closeModal: _,
@@ -39668,7 +39697,7 @@ function _(_) {
 }
 var _ = (_) => {
     let _ = new Date(_ * 1e3);
-    return _.setSeconds(0), Math.floor(_.getTime() / 1e3);
+    return (_.setSeconds(0), Math.floor(_.getTime() / 1e3));
   },
   _ = _((_) => {
     let { saleSection: _, editModel: _, bSetDefaultIfMissing: _ } = _;
@@ -39678,11 +39707,11 @@ var _ = (_) => {
           _(() => {
             if (!_.event_schedule_rtime_start) {
               let _ = new Date();
-              _.setHours(10),
+              (_.setHours(10),
                 _.setMinutes(0),
                 _.setSeconds(0),
                 (_.event_schedule_rtime_start = Math.floor(_.getTime() / 1e3)),
-                _.SetDirty(_.jsondata_sales);
+                _.SetDirty(_.jsondata_sales));
             }
             _.event_schedule_rtime_end ||
               ((_.event_schedule_rtime_end =
@@ -39709,8 +39738,8 @@ var _ = (_) => {
                     label: `Start date (in number of weeks ago)`,
                     value: _.event_schedule_start_weeks,
                     onChange: (_) => {
-                      (_.event_schedule_start_weeks = Number(_.target.value)),
-                        _.SetDirty(_.jsondata_sales);
+                      ((_.event_schedule_start_weeks = Number(_.target.value)),
+                        _.SetDirty(_.jsondata_sales));
                     },
                   }),
                   (0, _.jsx)(_, {
@@ -39719,8 +39748,8 @@ var _ = (_) => {
                     label: `End date (in number of weeks from now)`,
                     value: _.event_schedule_end_weeks,
                     onChange: (_) => {
-                      (_.event_schedule_end_weeks = Number(_.target.value)),
-                        _.SetDirty(_.jsondata_sales);
+                      ((_.event_schedule_end_weeks = Number(_.target.value)),
+                        _.SetDirty(_.jsondata_sales));
                     },
                   }),
                 ],
@@ -39732,12 +39761,12 @@ var _ = (_) => {
                     nEarliestTime: 0,
                     fnGetTimeToUpdate: () => _.event_schedule_rtime_start,
                     fnSetTimeToUpdate: (_) => {
-                      (_ = _(_)),
+                      ((_ = _(_)),
                         _.event_schedule_rtime_start != _ &&
                           ((_.event_schedule_rtime_start = _),
                           _.event_schedule_rtime_end < _ &&
                             (_.event_schedule_rtime_end = _ + 3600),
-                          _.SetDirty(_.jsondata_sales));
+                          _.SetDirty(_.jsondata_sales)));
                     },
                     fnIsValidDateTime: () => !0,
                     bShowTimeZone: !0,
@@ -39753,14 +39782,14 @@ var _ = (_) => {
                     nEarliestTime: 0,
                     fnGetTimeToUpdate: () => _.event_schedule_rtime_end,
                     fnSetTimeToUpdate: (_) => {
-                      (_ = _(_)),
+                      ((_ = _(_)),
                         _.event_schedule_rtime_end != _ &&
                           ((_.event_schedule_rtime_end = _),
                           _.event_schedule_rtime_end <
                             _.event_schedule_rtime_start &&
                             (_.event_schedule_rtime_end =
                               _.event_schedule_rtime_start + 3600),
-                          _.SetDirty(_.jsondata_sales));
+                          _.SetDirty(_.jsondata_sales)));
                     },
                     fnIsValidDateTime: () => !0,
                     bShowTimeZone: !0,
@@ -39793,9 +39822,9 @@ function _(_) {
     } = _,
     _ = (0, _.useCallback)(
       (_) => {
-        (_.localized_description = _(_.localized_description || [], 32, null)),
+        ((_.localized_description = _(_.localized_description || [], 32, null)),
           (_.localized_description[_] = _),
-          _();
+          _());
       },
       [_, _, _],
     ),
@@ -39806,9 +39835,9 @@ function _(_) {
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        (_.text_section_contents = _(_.text_section_contents || [], 32, null)),
+        ((_.text_section_contents = _(_.text_section_contents || [], 32, null)),
           (_.text_section_contents[_] = _),
-          _();
+          _());
       },
       [_, _, _],
     ),
@@ -39821,9 +39850,9 @@ function _(_) {
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        (_.localized_title = _(_.localized_title || [], 32, null)),
+        ((_.localized_title = _(_.localized_title || [], 32, null)),
           (_.localized_title[_] = _),
-          _();
+          _());
       },
       [_, _, _],
     );
@@ -39947,7 +39976,7 @@ function _(_, _, _) {
 function _(_, _, _) {
   let _ = _(_);
   for (let _ of _)
-    _.forEach((_) => _(_, _, _)), _ && _(_) && _.forEach((_) => _(_, _, _));
+    (_.forEach((_) => _(_, _, _)), _ && _(_) && _.forEach((_) => _(_, _, _)));
   _.SetDirty(_.jsondata_sales);
 }
 var _ = _((_) => {
@@ -40038,7 +40067,8 @@ var _ = _((_) => {
                       clanSteamID: _.GetClanSteamID(),
                       OnClanImageSelected: async (_, _) => {
                         let _ = _.GetHashAndExt(_);
-                        (_.background_image = _), _.SetDirty(_.jsondata_sales);
+                        ((_.background_image = _),
+                          _.SetDirty(_.jsondata_sales));
                       },
                     },
                     `salesection_clanimageupload`,
@@ -40047,7 +40077,7 @@ var _ = _((_) => {
                 onDropFiles: async (_) => {
                   if (_ && _.length > 0) {
                     if (!(await _.AddImage(_[0], 0)))
-                      console.error(
+                      (console.error(
                         `SaleSection.OnDropFiles: failed file=` + _[0].name,
                       ),
                         _(
@@ -40055,18 +40085,18 @@ var _ = _((_) => {
                             strDescription: _(`#ImagePicker_Error`, _[0].name),
                           }),
                           window,
-                        );
+                        ));
                     else {
                       let _ = (await _.UploadAllImages())[0].uploadResult,
                         _ = _.GetHashAndExt(_);
-                      (_.background_image = _), _.SetDirty(_.jsondata_sales);
+                      ((_.background_image = _), _.SetDirty(_.jsondata_sales));
                     }
                   }
                 },
               }),
               (0, _.jsx)(_, {
                 onClick: () => {
-                  (_.background_image = null), _.SetDirty(_.jsondata_sales);
+                  ((_.background_image = null), _.SetDirty(_.jsondata_sales));
                 },
                 className: `ized0rR3LUQ-`,
                 children: _(`#Sale_Section_Background_Clear`),
@@ -40119,7 +40149,7 @@ function _(_) {
     ]),
     _ = (0, _.useCallback)(
       (_) => {
-        (_.background_color = void 0),
+        ((_.background_color = void 0),
           (_.background_gradient_bottom = void 0),
           (_.background_gradient_top = void 0),
           (_.background_repeat = void 0),
@@ -40129,7 +40159,7 @@ function _(_) {
           (_.label_color = void 0),
           (_.collapse_header_space = void 0),
           _ && _(),
-          _();
+          _());
       },
       [_, _, _],
     );
@@ -40186,7 +40216,7 @@ function _(_) {
     { openColorPicker: _ } = _(),
     _ = (0, _.useCallback)(
       (_, _, _) => {
-        (_[_] = _), _();
+        ((_[_] = _), _());
       },
       [_],
     ),
@@ -40205,11 +40235,11 @@ function _(_) {
         label: _(`#Sale_Section_Background_border`),
         checked: _,
         onChange: (_) => {
-          _
+          (_
             ? ((_.border_width = 1),
               (_.border_color = _.label_color || `black`))
             : ((_.border_color = void 0), (_.border_width = void 0)),
-            _();
+            _());
         },
       }),
       !!_ &&
@@ -40258,9 +40288,9 @@ function _(_) {
         type: `text`,
         label: `MP4 URL`,
         onChange: (_) => {
-          _.video_info.mp4_url != _?.currentTarget?.value &&
+          (_.video_info.mp4_url != _?.currentTarget?.value &&
             (_.video_info.mp4_url = _?.currentTarget?.value || ``),
-            _();
+            _());
         },
         placeholder: `https://<MP4 URL?`,
         value: _,
@@ -40269,9 +40299,9 @@ function _(_) {
         type: `text`,
         label: `WebM URL`,
         onChange: (_) => {
-          _.video_info.webm_url != _?.currentTarget?.value &&
+          (_.video_info.webm_url != _?.currentTarget?.value &&
             (_.video_info.webm_url = _?.currentTarget?.value || ``),
-            _();
+            _());
         },
         placeholder: `https://<WebM URL>`,
         value: _,
@@ -40280,7 +40310,7 @@ function _(_) {
         type: `text`,
         label: `Poster Image URL`,
         onChange: (_) => {
-          _.localized_poster_url?.length !== 32 &&
+          (_.localized_poster_url?.length !== 32 &&
             (_.localized_poster_url = _(
               _.localized_poster_url || [],
               32,
@@ -40288,7 +40318,7 @@ function _(_) {
             )),
             _.localized_poster_url[0] !== (_?.currentTarget?.value || ``) &&
               ((_.localized_poster_url[0] = _?.currentTarget?.value || ``),
-              _());
+              _()));
         },
         placeholder: `https://<poster url>`,
         value: _,
@@ -40393,23 +40423,23 @@ function _(_) {
 }
 function _(_, _) {
   let _ = _ + Math.floor(Math.random() * 1e6);
-  for (; _.quiz.questions.find((_) => _.unique_id == _); )
+  for (; _.quiz.questions.find((_) => _.unique_id == _);)
     _ = _ + Math.floor(Math.random() * 1e6);
   let _ = {
     unique_id: _,
     localized_question: [],
     answers: [],
   };
-  (_.quiz.questions = [..._.quiz.questions, _]), _();
+  ((_.quiz.questions = [..._.quiz.questions, _]), _());
 }
 function _(_, _, _) {
   let _ = _.quiz.questions.filter((_, _) => _ !== _);
-  (_.quiz.questions = _), _();
+  ((_.quiz.questions = _), _());
 }
 function _(_, _, _, _) {
-  (_.localized_question = _(_.localized_question || [], 32, null)),
+  ((_.localized_question = _(_.localized_question || [], 32, null)),
     (_.localized_question[_] = _),
-    _();
+    _());
 }
 function _(_, _) {
   return _.localized_question?.length > _ ? _.localized_question[_] : ``;
@@ -40417,21 +40447,18 @@ function _(_, _) {
 function _(_, _, _) {
   _.answers ||= [];
   let _ = _ + Math.floor(Math.random() * 1e6);
-  for (
-    ;
-    _.quiz.questions.some((_) => _.answers.find((_) => _.unique_id == _));
-  )
+  for (; _.quiz.questions.some((_) => _.answers.find((_) => _.unique_id == _));)
     _ = _ + Math.floor(Math.random() * 1e6);
-  _.answers.push({
+  (_.answers.push({
     unique_id: _,
     localized_answer: [],
   }),
-    _();
+    _());
 }
 function _(_, _, _, _) {
-  (_.localized_answer = _(_.localized_answer || [], 32, null)),
+  ((_.localized_answer = _(_.localized_answer || [], 32, null)),
     (_.localized_answer[_] = _),
-    _();
+    _());
 }
 function _(_, _) {
   return _?.localized_answer?.length > _ ? _.localized_answer[_] : ``;
@@ -40511,11 +40538,11 @@ function _(_) {
                   type: `text`,
                   label: _(`#Sale_Section_Quiz_Reveal_Footer`),
                   onChange: (_) => {
-                    _.quiz.last_revealed_footer_img_url !=
+                    (_.quiz.last_revealed_footer_img_url !=
                       _?.currentTarget?.value &&
                       (_.quiz.last_revealed_footer_img_url =
                         _?.currentTarget?.value || ``),
-                      _();
+                      _());
                   },
                   placeholder: `https://<Image URL?`,
                   value: _,
@@ -40574,7 +40601,7 @@ function _(_) {
   let { question: _, fnOnDirty: _, language: _, saleSection: _ } = _,
     _ = (0, _.useCallback)(
       (_) => {
-        _.answers.splice(_, 1), _();
+        (_.answers.splice(_, 1), _());
       },
       [_, _.answers],
     ),
@@ -40706,7 +40733,7 @@ function _(_) {
             isClearable: !0,
             onChange: (_) => {
               let _ = _?.map((_) => _.value) || [];
-              (_.category_ids = _), _();
+              ((_.category_ids = _), _());
             },
             value: _.map((_) => _.find((_) => _.value == _)),
             options: _,
@@ -40765,7 +40792,7 @@ function _(_) {
 function _(_) {
   let { item: _, fnOnDirty: _, buttonToken: _, tooltipToken: _ } = _,
     _ = (0, _.useCallback)(() => {
-      (_.associated_video ||= {
+      ((_.associated_video ||= {
         video_info: {},
       }),
         _(
@@ -40774,7 +40801,7 @@ function _(_) {
             fnOnDirty: _,
           }),
           window,
-        );
+        ));
     }, [_, _]),
     _ = _(
       () =>
@@ -40805,20 +40832,20 @@ function _(_) {
     _ = _(),
     _ = (0, _.useCallback)(() => {
       let _ = _ + Math.floor(Math.random() * 1e6);
-      for (; _.quiz.questions.find((_) => _.unique_id == _); )
+      for (; _.quiz.questions.find((_) => _.unique_id == _);)
         _ = _ + Math.floor(Math.random() * 1e6);
-      _.quiz.answer_categories || (_.quiz.answer_categories = []),
+      (_.quiz.answer_categories || (_.quiz.answer_categories = []),
         _.quiz.answer_categories.push({
           category_id: _,
           category_name: ``,
           door_index: 0,
         }),
         _(),
-        _();
+        _());
     }, [_, _, _]),
     _ = (0, _.useCallback)(
       (_) => {
-        _.quiz.answer_categories.splice(_, 1), _();
+        (_.quiz.answer_categories.splice(_, 1), _());
       },
       [_, _.quiz.answer_categories],
     ),
@@ -40890,9 +40917,9 @@ function _(_) {
         label: _(`#Sale_Section_Quiz_Category_Name`),
         tooltip: _(`#Sale_Section_Quiz_Category_Name_ttip`),
         onChange: (_) => {
-          _ != _?.currentTarget?.value &&
+          (_ != _?.currentTarget?.value &&
             (_.category_name = _?.currentTarget?.value || ``),
-            _();
+            _());
         },
         value: _,
       }),
@@ -40904,7 +40931,7 @@ function _(_) {
         value: _,
         onChange: (_) => {
           let _ = Number.parseInt(_.target.value);
-          _ != _ && (_.door_index = _), _();
+          (_ != _ && (_.door_index = _), _());
         },
       }),
     ],
@@ -40943,40 +40970,40 @@ function _(_) {
     ]),
     _ = (0, _.useCallback)(
       (_) => {
-        _ != _.badge_progress.localized_initial_description[_] &&
+        (_ != _.badge_progress.localized_initial_description[_] &&
           (_.badge_progress.localized_initial_description[_] = _),
-          _();
+          _());
       },
       [_, _, _.badge_progress.localized_initial_description],
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        _ != _.badge_progress.localized_progress_description[_] &&
+        (_ != _.badge_progress.localized_progress_description[_] &&
           (_.badge_progress.localized_progress_description[_] = _),
-          _();
+          _());
       },
       [_, _, _.badge_progress.localized_progress_description],
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        _ != _.badge_progress.localized_maxtier_description[_] &&
+        (_ != _.badge_progress.localized_maxtier_description[_] &&
           (_.badge_progress.localized_maxtier_description[_] = _),
-          _();
+          _());
       },
       [_, _, _.badge_progress.localized_maxtier_description],
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        _.badge_progress.levels.splice(_, 1), _();
+        (_.badge_progress.levels.splice(_, 1), _());
       },
       [_, _.badge_progress.levels],
     ),
     _ = (0, _.useCallback)(() => {
-      _.badge_progress.levels.push({
+      (_.badge_progress.levels.push({
         level: 1,
         badge_icon_url: ``,
       }),
-        _();
+        _());
     }, [_, _.badge_progress.levels]);
   return (0, _.jsxs)(`div`, {
     children: [
@@ -41002,11 +41029,11 @@ function _(_) {
         type: `text`,
         label: _(`#Sale_Section_BadgeProgress_Name`),
         onChange: (_) => {
-          _.badge_progress.localized_name[_] !=
+          (_.badge_progress.localized_name[_] !=
             (_?.currentTarget?.value || ``) &&
             (_.badge_progress.localized_name[_] =
               _?.currentTarget?.value || ``),
-            _();
+            _());
         },
         placeholder: _(`#Sale_Section_BadgeProgress_Name`),
         value: _,
@@ -41016,7 +41043,7 @@ function _(_) {
         tooltip: _(`#Sale_Section_BadgeProgress_DiscoveryQueue_ttip`),
         checked: _,
         onChange: (_) => {
-          (_.badge_progress.granted_by_discovery_queue = _), _();
+          ((_.badge_progress.granted_by_discovery_queue = _), _());
         },
       }),
       (0, _.jsx)(_, {
@@ -41132,7 +41159,7 @@ function _(_) {
     _ = _(() => _.Get().GetCurEditLanguage()),
     _ = (0, _.useCallback)(
       (_) => {
-        (_.claim_item_section_data ||= {
+        ((_.claim_item_section_data ||= {
           localized_claim_button: _([], 32, null),
         }),
           (_.claim_item_section_data.localized_claim_button = _(
@@ -41141,7 +41168,7 @@ function _(_) {
             null,
           )),
           (_.claim_item_section_data.localized_claim_button[_] = _),
-          _();
+          _());
       },
       [_, _, _],
     ),
@@ -41241,14 +41268,14 @@ function _(_, _) {
   let _ = (_, _) => {
     if (_) {
       let _ = _(_);
-      (_.sale_tag_filter = {
+      ((_.sale_tag_filter = {
         clauses: [],
       }),
-        (_.capsules = _(_, _.sale_tag_filter, _.capsules));
+        (_.capsules = _(_, _.sale_tag_filter, _.capsules)));
     } else
-      _.sale_tag_filter?.clauses?.length || (_.capsules = []),
-        (_.sale_tag_filter = null);
-    _?.(), _.SetDirty(_.jsondata_sales);
+      (_.sale_tag_filter?.clauses?.length || (_.capsules = []),
+        (_.sale_tag_filter = null));
+    (_?.(), _.SetDirty(_.jsondata_sales));
   };
   return (_, _) => {
     if (_) {
@@ -41395,8 +41422,8 @@ var _ = _((_) => {
           return (
             _.capsules.forEach((_) => {
               if (_?.visibility_index !== void 0) {
-                for (; _.length <= _.visibility_index; ) _.push(0);
-                (_ = !0), (_[_.visibility_index] += 1);
+                for (; _.length <= _.visibility_index;) _.push(0);
+                ((_ = !0), (_[_.visibility_index] += 1));
               }
             }),
             _ ? _ : void 0
@@ -41407,7 +41434,7 @@ var _ = _((_) => {
     if (_) {
       let _ = `CountFilter_Sale` + _,
         _ = `CountFilter_Sale` + _ + `_day_all`;
-      _.push(
+      (_.push(
         (0, _.jsxs)(
           `div`,
           {
@@ -41459,10 +41486,10 @@ var _ = _((_) => {
               `CountFilter_sale` + _ + `_` + _,
             ),
           );
-        });
+        }));
     }
     let _ = (_) => {
-        _(
+        (_(
           _ >= 0 && _ < (_.capsules?.length ?? 0),
           `Remove capsule called outside of range: ` +
             _ +
@@ -41471,7 +41498,7 @@ var _ = _((_) => {
         ),
           _ >= 0 &&
             _ < (_.capsules?.length ?? 0) &&
-            (_.capsules.splice(_, 1), _.SetDirty(_.jsondata_sales));
+            (_.capsules.splice(_, 1), _.SetDirty(_.jsondata_sales)));
       },
       _ = (_, _) => {
         let _ = {
@@ -41479,7 +41506,7 @@ var _ = _((_) => {
           type: _,
           visibility_index: _ == _ ? void 0 : _,
         };
-        _.capsules.push(_), _([_], _), _.SetDirty(_.jsondata_sales);
+        (_.capsules.push(_), _([_], _), _.SetDirty(_.jsondata_sales));
       },
       _ = (_) => {
         _(
@@ -41500,7 +41527,7 @@ var _ = _((_) => {
         );
       },
       _ = () => {
-        (_.capsules = []), _.SetDirty(_.jsondata_sales);
+        ((_.capsules = []), _.SetDirty(_.jsondata_sales));
       },
       _ = (_) => {
         _(
@@ -41516,7 +41543,7 @@ var _ = _((_) => {
           (0, _.jsx)(_, {
             onDiscountEventSelected: (_, _) => {
               let _ = _ == _ ? void 0 : _;
-              _.forEach((_) => {
+              (_.forEach((_) => {
                 if (!_.capsules.find((_) => _._ === _ && _.type !== `sub`)) {
                   let _ = _.Get().GetApp(_),
                     _ = _(_?.GetStoreItemType(), _?.GetAppType());
@@ -41535,7 +41562,7 @@ var _ = _((_) => {
                       visibility_index: _,
                     });
                 }),
-                _.SetDirty(_.jsondata_sales);
+                _.SetDirty(_.jsondata_sales));
             },
           }),
           _(_),
@@ -41690,11 +41717,11 @@ var _ = _((_) => {
         if (!_) continue;
         let _ = _.Get().GetStoreItem(_._, _(_.type))?.GetName() || ``,
           _ = `${_._}\t${_.type}`;
-        _.visibility_index === void 0
+        (_.visibility_index === void 0
           ? _ && (_ += `	`)
           : (_ += `\tDay ${_.visibility_index}`),
           _ && (_ += `\t\"${_}\"`),
-          (_ += `${_}\n`);
+          (_ += `${_}\n`));
       }
       return _;
     }
@@ -41713,7 +41740,7 @@ var _ = _((_) => {
         );
       _ && ((_.type = _[1]), (_ = _[2]));
       let _ = /^day\s+(\d+)\W+/i.exec(_);
-      return _ && (_.visibility_index = parseInt(_[1])), _;
+      return (_ && (_.visibility_index = parseInt(_[1])), _);
     }
     OnCompleteEdit() {
       this.setState(
@@ -41741,14 +41768,14 @@ var _ = _((_) => {
           _ = _(`#Sale_EditRaw_Error_InvalidDay`, _._, _.visibility_index);
           break;
         }
-      this.setState({
+      (this.setState({
         bImporting: !1,
         errMsg: _,
       }),
         _ ||
           (JSON.stringify(_.capsules) !== JSON.stringify(_) &&
             ((_.capsules = _), _.SetDirty(_.jsondata_sales)),
-          this.props.closeModal());
+          this.props.closeModal()));
     }
     OnTextChange(_) {
       this.setState({
@@ -41828,10 +41855,10 @@ var _ = _((_) => {
       });
     }
   };
-_([_], _.prototype, `OnCompleteEdit`, null),
+(_([_], _.prototype, `OnCompleteEdit`, null),
   _([_], _.prototype, `DoImport`, null),
   _([_], _.prototype, `OnTextChange`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 function _(_) {
   let { saleSection: _, editModel: _ } = _;
   return (0, _.jsx)(_, {
@@ -41894,19 +41921,19 @@ function _(_) {
   }, [_]);
   let _ = (0, _.useCallback)(
       (_) => {
-        _(), _(_), (_.calendar_section_data.day_count = parseInt(_)), _();
+        (_(), _(_), (_.calendar_section_data.day_count = parseInt(_)), _());
       },
       [_, _, _, _],
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        _(), _(_), (_.calendar_section_data.height = parseInt(_)), _();
+        (_(), _(_), (_.calendar_section_data.height = parseInt(_)), _());
       },
       [_, _, _, _],
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        _(), _(_), (_.calendar_section_data.forward = _), _();
+        (_(), _(_), (_.calendar_section_data.forward = _), _());
       },
       [_, _, _, _],
     ),
@@ -41971,7 +41998,7 @@ function _(_) {
       (_.list_jsondata = {}));
 }
 function _(_, _) {
-  (_.localized_flat_title = _([], 32, null)),
+  ((_.localized_flat_title = _([], 32, null)),
     (_.localized_flat_blurb = _([], 32, null)),
     (_.localized_flat_link = _([], 32, null)),
     _.title !== `0` && (_.localized_flat_title[_] = _.title),
@@ -41988,7 +42015,7 @@ function _(_, _) {
     _.link_localization.forEach((_) => {
       _.localized_string?.length > 0 &&
         (_.localized_flat_link[_.language] = _.localized_string);
-    });
+    }));
 }
 var _ = class _ {
   m_mapList = new Map();
@@ -42092,20 +42119,20 @@ var _ = class _ {
         let _ = [];
         return (
           _(() => {
-            _.data.matches &&
+            (_.data.matches &&
               _.data.matches.forEach((_) => {
                 _.multi_detail_lists.forEach((_) => {
-                  this.m_mapListIDToClanAccount.set(
+                  (this.m_mapListIDToClanAccount.set(
                     _.listid,
                     _.clan_account_id,
                   ),
                     _(_),
                     _(_.curation_language, _),
                     this.m_mapList.set(_.listid, _),
-                    _.push(_);
+                    _.push(_));
                 });
               }),
-              this.m_mapEventGIDToLists.set(_, _);
+              this.m_mapEventGIDToLists.set(_, _));
           }),
           _
         );
@@ -42118,7 +42145,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {
     _(this);
@@ -42127,7 +42154,7 @@ var _ = class _ {
       _(() => {
         _.forEach((_) => {
           _.multi_detail_lists.forEach((_) => {
-            _(_), _(_.curation_language, _), this.m_mapList.set(_.listid, _);
+            (_(_), _(_.curation_language, _), this.m_mapList.set(_.listid, _));
           });
         });
       });
@@ -42547,16 +42574,16 @@ var _ = `dYe9VMwheKM-`,
       });
     }
   };
-_([_], _.prototype, `OnShowOnlySaleWhiteListedBroadcasts`, null),
-  (_ = _([_], _));
+(_([_], _.prototype, `OnShowOnlySaleWhiteListedBroadcasts`, null),
+  (_ = _([_], _)));
 var _ = class extends _.Component {
   m_currentRequest = 0;
   m_searchResultsMenu;
   m_refInput;
   m_cancelSignal = _.default.CancelToken.source();
   componentWillUnmount() {
-    this.m_cancelSignal.cancel(`CuratorSaleSection component unmounted`),
-      window.clearTimeout(this.m_currentRequest);
+    (this.m_cancelSignal.cancel(`CuratorSaleSection component unmounted`),
+      window.clearTimeout(this.m_currentRequest));
   }
   SetCurator(_) {
     this.props.saleSection.curator_clan_id != _.GetClanAccountID() &&
@@ -42648,9 +42675,9 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `SetCurator`, null),
+(_([_], _.prototype, `SetCurator`, null),
   _([_], _.prototype, `UpdateCuratorSuggestions`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = _((_) => {
     let { editModel: _, index: _ } = _,
       _ = _.GetEventModel();
@@ -42677,14 +42704,14 @@ var _ = _((_) => {
         let _ = null;
         if (_) {
           if (((_ = _.default.CancelToken.source()), !_.featured_curator_list))
-            (_.featured_curator_list = []), _(!1);
+            ((_.featured_curator_list = []), _(!1));
           else {
             let _ = [];
-            _.featured_curator_list.forEach((_) => {
+            (_.featured_curator_list.forEach((_) => {
               let _ = _.InitFromClanID(_.clanAccountID, _.EUNIVERSE);
               _.push(_.Get().LoadListDetails(_, _.listID, _));
             }),
-              Promise.all(_).then(() => _(!1));
+              Promise.all(_).then(() => _(!1)));
           }
         }
         return () => _?.cancel(`CuratorRecommendationWidgetEditor: unmounting`);
@@ -42715,10 +42742,10 @@ var _ = _((_) => {
           fnGetTimeToUpdate: () =>
             _.featured_curator_list_rtime_start || _.GetEventStartTime(),
           fnSetTimeToUpdate: (_) => {
-            (_ = _(_)),
+            ((_ = _(_)),
               _.featured_curator_list_rtime_start != _ &&
                 ((_.featured_curator_list_rtime_start = _),
-                _.SetDirty(_.jsondata_sales));
+                _.SetDirty(_.jsondata_sales)));
           },
           fnIsValidDateTime: () => !0,
           bShowTimeZone: !0,
@@ -42735,7 +42762,8 @@ var _ = _((_) => {
         (0, _.jsx)(_, {
           items: _.featured_curator_list,
           onDelete: (_) => {
-            _.featured_curator_list.splice(_, 1), _.SetDirty(_.jsondata_sales);
+            (_.featured_curator_list.splice(_, 1),
+              _.SetDirty(_.jsondata_sales));
           },
           onReorder: () => _.SetDirty(_.jsondata_sales),
           render: (_) =>
@@ -42815,12 +42843,12 @@ var _ = _((_) => {
               .then((_) => {
                 if (_?.length > 0) {
                   let _ = [];
-                  _.forEach((_) => {
+                  (_.forEach((_) => {
                     let _ = _.Get().GetClanAccountFromListID(_.listid),
                       _ = _.InitFromClanID(_, _.EUNIVERSE);
                     _.push(_.LoadClanInfoForClanSteamID(_));
                   }),
-                    Promise.all(_).then(() => _(!1));
+                    Promise.all(_).then(() => _(!1)));
                 }
               }))
           : _(!1),
@@ -42907,12 +42935,12 @@ var _ = _((_) => {
                 bOKDisabled: _ == null,
                 onOK: () => {
                   let _ = _.value;
-                  _.featured_curator_list.push({
+                  (_.featured_curator_list.push({
                     clanAccountID: _.Get().GetClanAccountFromListID(_),
                     listID: _,
                   }),
                     _.SetDirty(_.jsondata_sales),
-                    _();
+                    _());
                 },
               }),
             }),
@@ -42965,8 +42993,8 @@ function _(_) {
 }
 function _(_) {
   let _ = (_) => {
-      _.saleSection.itemdefs.splice(_, 1),
-        _.editModel.SetDirty(_.jsondata_sales);
+      (_.saleSection.itemdefs.splice(_, 1),
+        _.editModel.SetDirty(_.jsondata_sales));
     },
     _ = _(() => _.saleSection.itemdefs);
   return (0, _.jsx)(_, {
@@ -42998,7 +43026,7 @@ function _(_) {
     _ += +!!_;
   });
   let _ = (_, _) => {
-    _.preventDefault(),
+    (_.preventDefault(),
       _.stopPropagation(),
       _(
         (0, _.jsx)(_, {
@@ -43021,7 +43049,7 @@ function _(_) {
           artworkType: `link_capsule`,
         }),
         _(_),
-      );
+      ));
   };
   return _
     ? (0, _.jsxs)(`div`, {
@@ -43106,12 +43134,12 @@ function _(_) {
       (0, _.jsx)(_, {
         disabled: _ == 0 || _ == 0,
         onClick: () => {
-          _.saleSection.itemdefs || (_.saleSection.itemdefs = []),
+          (_.saleSection.itemdefs || (_.saleSection.itemdefs = []),
             _.saleSection.itemdefs.push({
               nAppID: _,
               nItemDefID: _,
             }),
-            _.editModel.SetDirty(_.jsondata_sales);
+            _.editModel.SetDirty(_.jsondata_sales));
         },
         children: _(`#Sale_ItemDef_Add`),
       }),
@@ -43134,8 +43162,10 @@ function _(_) {
           !!_ &&
             (0, _.jsx)(_, {
               onClick: (_) => {
-                _?.currentTarget?.focus(),
-                  _.k_HeaderFullWidth == _ ? _(void 0) : _(_.k_HeaderFullWidth);
+                (_?.currentTarget?.focus(),
+                  _.k_HeaderFullWidth == _
+                    ? _(void 0)
+                    : _(_.k_HeaderFullWidth));
               },
               toggled: _ == _.k_HeaderFullWidth,
               tooltip: _(`#FormattingToolbar_FullWidth`),
@@ -43147,7 +43177,7 @@ function _(_) {
               {
                 tooltip: _(_),
                 onClick: (_) => {
-                  _?.currentTarget?.focus(), _(_ == _ ? void 0 : _);
+                  (_?.currentTarget?.focus(), _(_ == _ ? void 0 : _));
                 },
                 toggled: _ == _,
                 children: _(`#Template_Section_Header_` + _),
@@ -43192,7 +43222,7 @@ function _(_) {
               children: (0, _.jsx)(`div`, {
                 children: (0, _.jsx)(_, {
                   onClick: (_) => {
-                    _?.currentTarget?.focus(), _(_);
+                    (_?.currentTarget?.focus(), _(_));
                   },
                   toggled: _ == _,
                   children: (0, _.jsx)(_, {
@@ -43297,7 +43327,7 @@ var _ = _.memo(function (_) {
                 )
                   if (_.nodeName == `A` && `getBoundingClientRect` in _) {
                     let _ = _.getBoundingClientRect();
-                    _(_.left + _.width / 2), _(_.bottom + 2), _(_);
+                    (_(_.left + _.width / 2), _(_.bottom + 2), _(_));
                     return;
                   }
                 _(void 0);
@@ -43352,7 +43382,7 @@ var _ = `bkkuDr2zbWs-`,
   _ = `g68KM8JsaU4-`,
   _ = _.memo(function (_) {
     let { strPlaceholder: _ } = _;
-    return _(_.useMemo(() => (_ ? _(_) : void 0), [_])), null;
+    return (_(_.useMemo(() => (_ ? _(_) : void 0), [_])), null);
   });
 function _(_) {
   return new _({
@@ -44085,7 +44115,7 @@ function _(_, _) {
   return _.useCallback(
     (..._) => {
       let _ = `default`;
-      return _ && (_ = _(..._)), _ == "default" && _ && (_ = _(..._)), _;
+      return (_ && (_ = _(..._)), _ == "default" && _ && (_ = _(..._)), _);
     },
     [_, _],
   );
@@ -44327,7 +44357,7 @@ function _(_) {
               checked: _,
               controlled: !0,
               onChange: () => {
-                (_.title_image_selected = `image`), _();
+                ((_.title_image_selected = `image`), _());
               },
               label: _(`#Sale_Section_Media_Layout_ContentTypeImage`),
             }),
@@ -44336,7 +44366,7 @@ function _(_) {
               checked: !_,
               controlled: !0,
               onChange: () => {
-                (_.title_image_selected = `title`), _();
+                ((_.title_image_selected = `title`), _());
               },
               label: _(`#Sale_Section_Media_Layout_ContentTypeText`),
             }),
@@ -44367,10 +44397,10 @@ function _(_) {
         label: _(`#Sale_TitleHeader_title`),
         value: _,
         onChange: (_) => {
-          (_.localized_label ||= _([], 32, null)),
+          ((_.localized_label ||= _([], 32, null)),
             _.currentTarget.value != _.localized_label[_] &&
               ((_.localized_label[_] = _.currentTarget.value),
-              _.SetDirty(_.jsondata_sales));
+              _.SetDirty(_.jsondata_sales)));
         },
       }),
       (0, _.jsx)(_, {
@@ -44378,10 +44408,10 @@ function _(_) {
         label: _(`#Sale_TitleHeader_subtitle`),
         value: _,
         onChange: (_) => {
-          (_.localized_subtitle ||= _([], 32, null)),
+          ((_.localized_subtitle ||= _([], 32, null)),
             _.currentTarget.value != _.localized_subtitle[_] &&
               ((_.localized_subtitle[_] = _.currentTarget.value),
-              _.SetDirty(_.jsondata_sales));
+              _.SetDirty(_.jsondata_sales)));
         },
       }),
     ],
@@ -44453,7 +44483,7 @@ function _(_) {
       (0, _.jsx)(_, {
         items: _,
         onDelete: (_) => {
-          _.links.splice(_, 1), _.SetDirty(_.jsondata_sales), _();
+          (_.links.splice(_, 1), _.SetDirty(_.jsondata_sales), _());
         },
         onReorder: () => _.SetDirty(_.jsondata_sales),
         render: (_) =>
@@ -44464,12 +44494,12 @@ function _(_) {
       }),
       (0, _.jsx)(_, {
         onClick: (_) => {
-          _.links.push({
+          (_.links.push({
             url: null,
             localized_link_capsule: _([], 32, null),
           }),
             _.SetDirty(_.jsondata_sales),
-            _();
+            _());
         },
         children: _(`#Sale_AddImage`),
       }),
@@ -44493,8 +44523,8 @@ function _(_) {
     clanSteamID: _,
     fnSetImageURL: (_, _, _ = 0) => {
       let _ = _.GetHashAndExt(_);
-      (_.localized_link_capsule = _.Set(_.localized_link_capsule || [], _, _)),
-        _.SetDirty(_.jsondata_sales);
+      ((_.localized_link_capsule = _.Set(_.localized_link_capsule || [], _, _)),
+        _.SetDirty(_.jsondata_sales));
     },
     fnLangHasData: (_) => _.BHas(_.localized_link_capsule || [], _),
     fnGetImageHash: (_, _) => _.localized_link_capsule?.[_],
@@ -44587,8 +44617,8 @@ function _(_) {
     bOKDisabled: !(_ || _) || !(!_ || _),
     closeModal: _,
     onOK: () => {
-      _.url != _ && ((_.url = _), _.SetDirty(_.jsondata_sales)),
-        _.sc_url != _ && ((_.sc_url = _), _.SetDirty(_.jsondata_sales));
+      (_.url != _ && ((_.url = _), _.SetDirty(_.jsondata_sales)),
+        _.sc_url != _ && ((_.sc_url = _), _.SetDirty(_.jsondata_sales)));
     },
     bAllowFullSize: !0,
     children: [
@@ -44701,24 +44731,24 @@ function _(_) {
     _ = (0, _.useCallback)(
       (_) => {
         let _ = _ + Math.floor(Math.random() * 1e6);
-        for (; _.quest.door_info.find((_) => _.unique_id == _); )
+        for (; _.quest.door_info.find((_) => _.unique_id == _);)
           _ = _ + Math.floor(Math.random() * 1e6);
         let _ = {
           unique_id: _,
           localized_closed_door_description: [],
           localized_open_door_description: [],
         };
-        _ || _.quest.door_info.length === 0
+        (_ || _.quest.door_info.length === 0
           ? _.quest.door_info.push(_)
           : (_.quest.door_info = [_, ..._.quest.door_info]),
           _(),
-          _();
+          _());
       },
       [_, _, _],
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        _.quest.door_info.splice(_, 1), _();
+        (_.quest.door_info.splice(_, 1), _());
       },
       [_, _.quest?.door_info],
     );
@@ -44782,13 +44812,13 @@ function _(_) {
   let { questInfo: _, fnOnDirty: _, language: _, saleSection: _, index: _ } = _,
     _ = (0, _.useCallback)(
       (_) => {
-        (_.localized_closed_door_description = _(
+        ((_.localized_closed_door_description = _(
           _.localized_closed_door_description || [],
           32,
           null,
         )),
           (_.localized_closed_door_description[_] = _),
-          _();
+          _());
       },
       [_, _, _],
     ),
@@ -44801,13 +44831,13 @@ function _(_) {
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        (_.localized_open_door_description = _(
+        ((_.localized_open_door_description = _(
           _.localized_open_door_description || [],
           32,
           null,
         )),
           (_.localized_open_door_description[_] = _),
-          _();
+          _());
       },
       [_, _, _],
     ),
@@ -44927,7 +44957,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -45026,9 +45056,9 @@ var _ = class _ {
     let _ = _.Init(_),
       _ = null;
     try {
-      _.Body().set_eventid(_), _.Body().set_action(1);
+      (_.Body().set_eventid(_), _.Body().set_action(1));
       let _ = _.Body().add_itemsdefs();
-      _.set_eventid(_),
+      (_.set_eventid(_),
         _.set_active(!0),
         _.set_item_bucket(_),
         _.set_rarity(1),
@@ -45041,7 +45071,7 @@ var _ = class _ {
         _.set_loyalty_reward_defid(_ || 0),
         _.set_loyalty_point_type(0),
         _.set_user_badge_level(0),
-        _.set_user_badge_to_grant(0);
+        _.set_user_badge_to_grant(0));
       let _ = await _.SetVirtualItemRewardDefinition(
         this.m_SteamInterface.GetServiceTransport(),
         _,
@@ -45072,9 +45102,9 @@ var _ = class _ {
     let _ = _.Init(_),
       _ = null;
     try {
-      _.Body().set_eventid(_), _.Body().set_action(3);
+      (_.Body().set_eventid(_), _.Body().set_action(3));
       let _ = _.Body().add_itemsdefs();
-      _.set_eventid(_), _.set_virtual_item_def_id(_);
+      (_.set_eventid(_), _.set_virtual_item_def_id(_));
       let _ = await _.SetVirtualItemRewardDefinition(
         this.m_SteamInterface.GetServiceTransport(),
         _,
@@ -45111,12 +45141,12 @@ var _ = class _ {
   constructor() {}
   Init() {
     let _ = _(`promotion_operation_token`, `application_config`);
-    _(_, `CVirtualItemRewardDefStore: promotion operation token is missing`),
-      (this.m_SteamInterface = new _(new _(_.WEBAPI_BASE_URL, _)));
+    (_(_, `CVirtualItemRewardDefStore: promotion operation token is missing`),
+      (this.m_SteamInterface = new _(new _(_.WEBAPI_BASE_URL, _))));
   }
 };
-_([_], _.prototype, `CreateNewVirtualItemRewardDef`, null),
-  _([_], _.prototype, `MarkVirtualItemRewardInactive`, null);
+(_([_], _.prototype, `CreateNewVirtualItemRewardDef`, null),
+  _([_], _.prototype, `MarkVirtualItemRewardInactive`, null));
 function _(_) {
   let [_, _] = (0, _.useState)(_.Get().GetVirtualItemDefsForEventID(_));
   return (
@@ -45208,11 +45238,11 @@ var _ = class _ {
     try {
       _.Body().set_action(_);
       let _ = _.Body().add_definitions();
-      _.set_virtual_item_reward_event_id(_.virtual_item_reward_event_id),
+      (_.set_virtual_item_reward_event_id(_.virtual_item_reward_event_id),
         _.set_appid(_.appid),
         _.set_rtime_start_time(_.rtime_start_time),
         _.set_rtime_end_time(_.rtime_end_time),
-        _ != 1 && _.set_sale_reward_def_id(_.sale_reward_def_id);
+        _ != 1 && _.set_sale_reward_def_id(_.sale_reward_def_id));
       let _ = await _.SetRewardDefinitions(
         this.m_SteamInterface.GetServiceTransport(),
         _,
@@ -45250,11 +45280,11 @@ var _ = class _ {
   constructor() {}
   Init() {
     let _ = _(`promotion_operation_token`, `application_config`);
-    _(
+    (_(
       _,
       `CSaleItemRewardsDefinitionStore: promotion operation token is missing`,
     ),
-      (this.m_SteamInterface = new _(new _(_.WEBAPI_BASE_URL, _)));
+      (this.m_SteamInterface = new _(new _(_.WEBAPI_BASE_URL, _))));
   }
 };
 _([_], _.prototype, `SetSaleItemRewardDef`, null);
@@ -45433,7 +45463,7 @@ function _(_) {
           bDisableBackgroundDismiss: !0,
           bAllowFullSize: !0,
           onOK: () => {
-            _.fnSetLoading(!0),
+            (_.fnSetLoading(!0),
               _(
                 {
                   appid: _,
@@ -45446,7 +45476,7 @@ function _(_) {
                 .then((_) => {
                   _ == 1 ? _.fnSetSuccess(!0) : _.fnSetError(!0);
                 })
-                .catch((_) => _.fnSetError(!0));
+                .catch((_) => _.fnSetError(!0)));
           },
           children: [
             (0, _.jsx)(_, {
@@ -45509,7 +45539,7 @@ function _(_) {
     ]),
     _ = (0, _.useCallback)(
       (_) => {
-        _.rewards.reward_items.splice(_, 1), _();
+        (_.rewards.reward_items.splice(_, 1), _());
       },
       [_, _.rewards?.reward_items],
     );
@@ -45650,7 +45680,7 @@ function _(_) {
     (0, _.useEffect)(() => {
       if (_) {
         let _ = [];
-        _.forEach((_) => {
+        (_.forEach((_) => {
           (_ && _.user_badge_to_grant) ||
             _.push({
               virtual_item_reward_def_id: _.virtual_item_def_id,
@@ -45665,7 +45695,7 @@ function _(_) {
           (_.rewards.rtime_last_sycned = Math.floor(
             new Date().getTime() / 1e3,
           )),
-          _.SetDirty(_.jsondata_sales);
+          _.SetDirty(_.jsondata_sales));
       }
     }, [_, _, _.rewards, _]),
     (0, _.jsx)(_, {
@@ -45725,13 +45755,13 @@ function _(_) {
     })),
     _ = (0, _.useCallback)(
       (_) => {
-        (_.localized_reward_description = _(
+        ((_.localized_reward_description = _(
           _.localized_reward_description || [],
           32,
           null,
         )),
           (_.localized_reward_description[_] = _),
-          _();
+          _());
       },
       [_, _, _],
     ),
@@ -45760,7 +45790,7 @@ function _(_) {
                 rgOptions: _,
                 selectedOption: _.community_class || 0,
                 onChange: (_) => {
-                  (_.community_class = _.data), _();
+                  ((_.community_class = _.data), _());
                 },
                 bDisableMouseOverlay: !0,
                 contextMenuPositionOptions: {
@@ -45874,13 +45904,13 @@ function _(_) {
     strTitle: _(`#Sale_Section_RewardShelf_AddItem`),
     onCancel: _,
     onOK: () => {
-      _.fnSetLoading(!0),
+      (_.fnSetLoading(!0),
         _(
           _[_].item_class == 1 || _,
           `Unexpected, we expected item to have layalty reward definition ID`,
           _(_[_]),
         ),
-        _(_, _[_], _, _).then((_) => _(_, _));
+        _(_, _[_], _, _).then((_) => _(_, _)));
     },
     bOKDisabled: _ == null || _ >= _.length || _ || !_,
     strOKButtonText: _
@@ -46021,9 +46051,9 @@ function _(_, _, _, _) {
     _ = new Set();
   (_ ?? []).forEach((_) => {
     let _ = `${_.appid}:${_.community_item_type}`;
-    _.has(_) || _.set(_, new Set()),
+    (_.has(_) || _.set(_, new Set()),
       _.get(_).add(_.item_bucket),
-      _.active && _.add(_.item_bucket);
+      _.active && _.add(_.item_bucket));
   });
   let _ = Array(_.length).fill(-1),
     _ = new Set();
@@ -46034,7 +46064,7 @@ function _(_, _, _, _) {
       (_, _) => !_.has(_) && !_.get(`${_}:${_.item_type}`)?.has(_),
     );
     if (_ < 0) return null;
-    (_[_] = _), _.add(_);
+    ((_[_] = _), _.add(_));
   }
   return _;
 }
@@ -46046,13 +46076,13 @@ function _(_) {
     _ = [];
   if (_.length == 0) return _;
   let _ = new Map();
-  _.forEach((_) => _.set(_.item_bucket, 1 + (_.get(_.item_bucket) ?? 0))),
+  (_.forEach((_) => _.set(_.item_bucket, 1 + (_.get(_.item_bucket) ?? 0))),
     _.forEach((_, _) => {
       _ > 1 &&
         _.push(
           `Bucket ${_} holds ${_} items. Opening the door only grants one of them, picked at random.`,
         );
-    });
+    }));
   for (let _ = 0; _ < _.size; ++_)
     _.has(_) ||
       _.push(
@@ -46170,8 +46200,8 @@ function _(_) {
         onCancel: _,
         bOKDisabled: _.bLoading,
         onOK: () => {
-          _.fnSetLoading(!0),
-            _(_, _.virtual_item_reward_def_id).then((_) => _(_, _));
+          (_.fnSetLoading(!0),
+            _(_, _.virtual_item_reward_def_id).then((_) => _(_, _)));
         },
       });
 }
@@ -46482,7 +46512,7 @@ var _ = class extends _.Component {
               label: _,
             }));
       }
-      return _.sort((_, _) => _.label.localeCompare(_.label)), [_, _, ..._];
+      return (_.sort((_, _) => _.label.localeCompare(_.label)), [_, _, ..._]);
     }
     static IsValidTitleOption(_, _) {
       return (
@@ -46491,26 +46521,26 @@ var _ = class extends _.Component {
     }
     OnTitleChange(_) {
       let _ = _.IsValidTitleOption(_.value, this.GetNameType()) ? _.value : ``;
-      this.props.default_label !== _ && this.props.onSetDefaultLabel(_),
+      (this.props.default_label !== _ && this.props.onSetDefaultLabel(_),
         this.setState({
           bSelectedCustomTitle:
             _.value === _.GetCustomLabelToken(this.GetNameType()),
-        });
+        }));
     }
     OnCustomTitleChange(_) {
       let _ = [...(this.state.rgLocalizedLabel ?? [])];
-      (_[this.props.editModel.GetCurEditLanguage()] = _.target.value),
+      ((_[this.props.editModel.GetCurEditLanguage()] = _.target.value),
         this.setState({
           rgLocalizedLabel: _,
           bSelectedCustomTitle: this.state.bSelectedCustomTitle,
-        });
+        }));
     }
     OnClearCustomTitle() {
-      this.setState({
+      (this.setState({
         bSelectedCustomTitle: !1,
         rgLocalizedLabel: null,
       }),
-        this.props.onClearCustomTitle();
+        this.props.onClearCustomTitle());
     }
     OnSaveCustomTitle() {
       this.props.onSetCustomTitle(
@@ -46630,11 +46660,11 @@ var _ = class extends _.Component {
       });
     }
   });
-_([_], _.prototype, `OnTitleChange`, null),
+(_([_], _.prototype, `OnTitleChange`, null),
   _([_], _.prototype, `OnCustomTitleChange`, null),
   _([_], _.prototype, `OnClearCustomTitle`, null),
   _([_], _.prototype, `OnSaveCustomTitle`, null),
-  (_ = _ = _([_], _));
+  (_ = _ = _([_], _)));
 function _(_, _) {
   return _.filter((_) => _.visibility_index == null || _.visibility_index == _);
 }
@@ -46697,7 +46727,7 @@ var _ = class _ {
     m_tagSelection;
     m_tagStoreFilter;
     constructor(_, _, _ = !0, _, _) {
-      (this.m_nSaleDay = _),
+      ((this.m_nSaleDay = _),
         (this.m_tagSelection = _),
         (this.m_tagStoreFilter = _(_, _?.tab_tag_filter, _)),
         _ &&
@@ -46708,7 +46738,7 @@ var _ = class _ {
             : ((this.m_capsuleFilter = new Set()),
               (_ ? _(_.capsules, _) : _.capsules).forEach((_) => {
                 this.m_capsuleFilter.add(Number(_._));
-              })));
+              }))));
     }
     GetSaleDay() {
       return this.m_nSaleDay;
@@ -46898,11 +46928,11 @@ function _(_) {
               onChange: (_) => {
                 if (_.currentTarget.value) {
                   let _ = _.currentTarget.value.trim();
-                  _.length == 0
+                  (_.length == 0
                     ? (_.country_allow_list = void 0)
                     : (_.country_allow_list = _),
-                    _();
-                } else (_.country_allow_list = void 0), _();
+                    _());
+                } else ((_.country_allow_list = void 0), _());
               },
             }),
             (0, _.jsx)(_, {
@@ -46913,11 +46943,11 @@ function _(_) {
               onChange: (_) => {
                 if (_.currentTarget.value) {
                   let _ = _.currentTarget.value.trim();
-                  _.length == 0
+                  (_.length == 0
                     ? (_.country_deny_list = void 0)
                     : (_.country_deny_list = _),
-                    _();
-                } else (_.country_deny_list = void 0), _();
+                    _());
+                } else ((_.country_deny_list = void 0), _());
               },
             }),
           ],
@@ -46944,14 +46974,14 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {
     _(this);
   }
 };
-_([_], _.prototype, `m_nShowOnTab`, void 0),
-  _([_], _.prototype, `SetFilterTab`, null);
+(_([_], _.prototype, `m_nShowOnTab`, void 0),
+  _([_], _.prototype, `SetFilterTab`, null));
 function _(_) {
   _.Get().SetFilterTab(_);
 }
@@ -47108,16 +47138,16 @@ function _(_) {
 function _(_) {
   return new Promise((_) => {
     let _ = new Image();
-    (_.onload = () => _(!0)), (_.onerror = () => _(!1)), (_.src = _);
+    ((_.onload = () => _(!0)), (_.onerror = () => _(!1)), (_.src = _));
   });
 }
 function _(_) {
   return new Promise((_) => {
     let _ = document.createElement(`video`);
-    (_.preload = `metadata`),
+    ((_.preload = `metadata`),
       (_.onloadedmetadata = () => _(!0)),
       (_.onerror = () => _(!1)),
-      (_.src = _);
+      (_.src = _));
   });
 }
 function _(_) {
@@ -47183,7 +47213,7 @@ function _(_) {
                 href: `#`,
                 className: `oyKuVDO21ZA-`,
                 onClick: (_) => {
-                  _(), _.preventDefault();
+                  (_(), _.preventDefault());
                 },
                 children: _(`#Button_DeleteAll`),
               }),
@@ -47215,7 +47245,7 @@ function _(_) {
         (0, _.jsx)(`a`, {
           href: `#`,
           onClick: (_) => {
-            _.preventDefault(), _(_);
+            (_.preventDefault(), _(_));
           },
           children:
             _ === _
@@ -47230,7 +47260,7 @@ function _(_) {
         (0, _.jsx)(`a`, {
           href: `#`,
           onClick: (_) => {
-            _.preventDefault(), _(_);
+            (_.preventDefault(), _(_));
           },
           children: (0, _.jsx)(_, {}),
         }),
@@ -47342,13 +47372,13 @@ function _(_) {
     _ = _(),
     _ = (0, _.useCallback)(
       (_, _, _, _, _, _, _) => {
-        _(_ != null && _ >= 0 && _ < 32, `Unexpected value for elang: ` + _),
-          _(_ === `template_asset`, `Unexpected artwork type ` + _);
+        (_(_ != null && _ >= 0 && _ < 32, `Unexpected value for elang: ` + _),
+          _(_ === `template_asset`, `Unexpected artwork type ` + _));
         let _ = _(_, _);
         if (_) {
           _.aspect_ratio = _(_, _);
           let _ = _([...(_.localized_media || [])], 32, null);
-          (_[_] = _), (_.localized_media = _), _();
+          ((_[_] = _), (_.localized_media = _), _());
         }
       },
       [_, _],
@@ -47376,11 +47406,11 @@ function _(_) {
         fnDeletAssetLang: (_) => {
           if (_.localized_media) {
             let _ = [...(_.localized_media || [])];
-            (_[_] = null), (_.localized_media = _), _();
+            ((_[_] = null), (_.localized_media = _), _());
           }
         },
         fnDeleteAllAssets: () => {
-          (_.localized_media = _([], 32, null)), _();
+          ((_.localized_media = _([], 32, null)), _());
         },
         fnGetAssetUrl: (_) => {
           if (_.localized_media && _.localized_media[_]) {
@@ -47402,7 +47432,7 @@ function _(_) {
     ]),
     _ = (0, _.useCallback)(() => _.SetDirty(_.jsondata_sales), [_]),
     _ = (0, _.useCallback)(() => {
-      (_.GetEventModel().jsondata.sale_sub_menu = void 0), _();
+      ((_.GetEventModel().jsondata.sale_sub_menu = void 0), _());
     }, [_, _]),
     _ = (0, _.useCallback)(() => {
       _.GetEventModel().jsondata.sale_sub_menu ||
@@ -47467,7 +47497,7 @@ function _(_) {
             subMenuSection: _,
           }),
           fnOnClearSettings: () => {
-            (_.selected_label_color = void 0), (_.hover_label_color = void 0);
+            ((_.selected_label_color = void 0), (_.hover_label_color = void 0));
           },
         }),
       },
@@ -47547,7 +47577,7 @@ function _(_) {
         ? (0, _.jsx)(_, {
             items: _,
             onDelete: (_) => {
-              _(_), _();
+              (_(_), _());
             },
             onReorder: _,
             render: (_) =>
@@ -47578,16 +47608,16 @@ function _(_) {
       (0, _.jsx)(_, {
         onClick: (_) => {
           let _ = Math.floor(Math.random() * 1e6);
-          for (; _.menu_items.find((_) => _.unique_id == _); )
+          for (; _.menu_items.find((_) => _.unique_id == _);)
             _ = Math.floor(Math.random() * 1e6);
-          _.menu_items.push({
+          (_.menu_items.push({
             unique_id: _,
             sub_menu_icon: {
               media_type: _.k_MediaImage,
             },
           }),
             _(),
-            _();
+            _());
         },
         children: _(_ ?? `#Sale_SubMenu_AddItems`),
       }),
@@ -47705,10 +47735,10 @@ function _(_) {
             strTitle: _(_ ?? `#Sale_SubMenu_Clear`),
             strDescription: _(_ ?? `#Sale_SubMenu_warning`),
             onOK: () => {
-              _?.current?.setState({
+              (_?.current?.setState({
                 checked: !1,
               }),
-                _(!0);
+                _(!0));
             },
             closeModal: _,
           }),
@@ -47757,7 +47787,7 @@ function _(_) {
       _.SetDirty(_.jsondata_sales);
     }, [_]),
     _ = (0, _.useCallback)(() => {
-      (_.tab_jump_list = void 0), _();
+      ((_.tab_jump_list = void 0), _());
     }, [_, _]),
     _ = (0, _.useCallback)(() => {
       _.tab_jump_list ||
@@ -47887,13 +47917,13 @@ function _(_) {
     _ = _(_),
     _ = (0, _.useCallback)(
       (_) => {
-        (_.tab_tag_filter =
+        ((_.tab_tag_filter =
           _.length > 0
             ? {
                 rgNodes: _,
               }
             : void 0),
-          _.SetDirty(_.jsondata_sales);
+          _.SetDirty(_.jsondata_sales));
       },
       [_, _],
     ),
@@ -48024,11 +48054,11 @@ function _(_) {
     [_, _] = _.useState([]),
     _ = (_) => {
       let _ = _.map((_, _) => !!_[_]);
-      _(_), _(_);
+      (_(_), _(_));
     },
     _ = () => _([..._, _(`storetag`, _ ? [] : void 0)]),
     _ = (_) => {
-      _(_.filter((_, _) => _ !== _)), _((_) => _.splice(_, 1));
+      (_(_.filter((_, _) => _ !== _)), _((_) => _.splice(_, 1)));
     },
     _ = (_, _) => {
       _
@@ -48043,7 +48073,7 @@ function _(_) {
         : _(_);
     },
     _ = (_, _) => {
-      _(_([..._], _, _)), _((_) => _(_, _, _));
+      (_(_([..._], _, _)), _((_) => _(_, _, _)));
     },
     _ = (_, _) => _(_.map((_, _) => (_ === _ ? _ : _)));
   return (0, _.jsxs)(`div`, {
@@ -48431,7 +48461,7 @@ var _ = _((_) => {
 });
 function _(_, _) {
   let _ = _(_, _);
-  return (_ ||= _(`#Sale_Tabs_UnnamedTab`, _.unique_id)), _;
+  return ((_ ||= _(`#Sale_Tabs_UnnamedTab`, _.unique_id)), _);
 }
 var _ = _((_) => {
     let { tab: _ } = _,
@@ -48474,9 +48504,9 @@ var _ = _((_) => {
         localized_label: null,
         capsules: [],
       };
-      this.props.saleSection.tabs.push(_),
+      (this.props.saleSection.tabs.push(_),
         this.props.editModel.SetDirty(_.jsondata_sales),
-        this.forceUpdate();
+        this.forceUpdate());
     }
     OnDeleteTabPrompt(_) {
       let _ = this.props.saleSection.tabs[_];
@@ -48496,11 +48526,11 @@ var _ = _((_) => {
       this.props.onTabSelected(_);
     }
     OnDeleteTabConfirmed(_) {
-      (this.props.saleSection.tabs = this.props.saleSection.tabs.filter(
+      ((this.props.saleSection.tabs = this.props.saleSection.tabs.filter(
         (_) => _ != _,
       )),
         this.props.editModel.SetDirty(_.jsondata_sales),
-        this.props.selectedTab === _ && this.OnSelectTab(null);
+        this.props.selectedTab === _ && this.OnSelectTab(null));
     }
     RenderTab(_, _, _, _) {
       let _ = _ === _;
@@ -48573,11 +48603,11 @@ var _ = _((_) => {
       });
     }
   };
-_([_], _.prototype, `OnAddTab`, null),
+(_([_], _.prototype, `OnAddTab`, null),
   _([_], _.prototype, `OnDeleteTabPrompt`, null),
   _([_], _.prototype, `OnSelectTab`, null),
   _([_], _.prototype, `RenderTab`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 function _(_) {
   let { tab: _, editLanguage: _, editModel: _ } = _,
     [_, _] = _.useState(
@@ -48617,7 +48647,7 @@ function _(_) {
           onClearCustomTitle: () => _.SetSaleSectionTabName(_, _, ``),
           onSetCustomTitle: (_) => _.SetSaleSectionTabName(_, _, _),
           onSetDefaultLabel: (_) => {
-            (_.default_label = _), _.SetDirty(_.jsondata_sales);
+            ((_.default_label = _), _.SetDirty(_.jsondata_sales));
           },
         },
         `TabName` + _.unique_id,
@@ -48771,7 +48801,7 @@ function _(_) {
           _(_, {
             color: _.tab_highlight_label_color,
             onChange: (_) => {
-              (_.tab_highlight_label_color = _), _.SetDirty(_.jsondata_sales);
+              ((_.tab_highlight_label_color = _), _.SetDirty(_.jsondata_sales));
             },
           }),
         className: _,
@@ -48820,7 +48850,7 @@ var _ = _((_) => {
               clanSteamID: _.GetClanSteamID(),
               OnClanImageSelected: async (_, _) => {
                 let _ = _.GetHashAndExt(_);
-                (_.tab_bar_bg_image = _), _.SetDirty(_.jsondata_sales);
+                ((_.tab_bar_bg_image = _), _.SetDirty(_.jsondata_sales));
               },
             },
             `saletabeditor_` + _.unique_id,
@@ -48831,7 +48861,7 @@ var _ = _((_) => {
             _(!0);
             try {
               if (!(await _.AddImage(_[0], 0)))
-                console.error(
+                (console.error(
                   `TabSaleBackgroundImageEditor.OnDropFiles: failed file=` +
                     _[0].name,
                 ),
@@ -48840,12 +48870,12 @@ var _ = _((_) => {
                       strDescription: _(`#ImagePicker_Error`, _[0].name),
                     }),
                     window,
-                  );
+                  ));
               else {
                 let _ = (await _.UploadAllImages())[0],
                   _ = _ ? _.GetExtensionString(_.uploadResult) : null,
                   _ = _ ? _.uploadResult.image_hash + _ : null;
-                (_.tab_bar_bg_image = _), _.SetDirty(_.jsondata_sales);
+                ((_.tab_bar_bg_image = _), _.SetDirty(_.jsondata_sales));
               }
             } catch (_) {
               let _ = _(_);
@@ -49047,9 +49077,9 @@ function _(_) {
     } = _,
     _ = (0, _.useCallback)(() => {
       let _ = _ + Math.floor(Math.random() * 1e6);
-      for (; _.social_share.content_options.find((_) => _.unique_id == _); )
+      for (; _.social_share.content_options.find((_) => _.unique_id == _);)
         _ = _ + Math.floor(Math.random() * 1e6);
-      _.social_share.content_options.push({
+      (_.social_share.content_options.push({
         unique_id: _,
         door: void 0,
         twitter_card: _.SummaryLargeImage,
@@ -49061,11 +49091,11 @@ function _(_) {
         },
       }),
         _(),
-        _();
+        _());
     }, [_, _, _]),
     _ = (0, _.useCallback)(
       (_) => {
-        _.social_share?.content_options.splice(_, 1), _();
+        (_.social_share?.content_options.splice(_, 1), _());
       },
       [_, _.social_share?.content_options],
     );
@@ -49133,14 +49163,14 @@ function _(_) {
     _ = (_) =>
       (0, _.useCallback)(
         (_) => {
-          (_.localized_option_fields[_] = _(
+          ((_.localized_option_fields[_] = _(
             _.localized_option_fields[_] || [],
             32,
             null,
           )),
             (_.localized_option_fields[_][_] = _),
             _(),
-            _();
+            _());
         },
         [_],
       ),
@@ -49157,17 +49187,17 @@ function _(_) {
         ? _.localized_option_fields.localized_header[_]
         : ``,
     _ = (_) => {
-      (_.localized_option_fields.localized_header = _(
+      ((_.localized_option_fields.localized_header = _(
         _.localized_option_fields.localized_header || [],
         32,
         null,
       )),
         (_.localized_option_fields.localized_header[_] = _),
         _(),
-        _();
+        _());
     },
     _ = (_) => {
-      (_.door = parseInt(_.target.value)), _();
+      ((_.door = parseInt(_.target.value)), _());
     },
     _ = [
       {
@@ -49251,7 +49281,7 @@ function _(_) {
               rgOptions: _,
               selectedOption: _.twitter_card,
               onChange: (_) => {
-                (_.twitter_card = _.data), _();
+                ((_.twitter_card = _.data), _());
               },
             }),
           ],
@@ -49298,7 +49328,7 @@ function _(_) {
       [_, _, _.localized_media],
     ),
     _ = (0, _.useCallback)(async () => {
-      _(!0), _(await _(_.GetClanSteamID(), _)), _(!1);
+      (_(!0), _(await _(_.GetClanSteamID(), _)), _(!1));
     }, [_, _]);
   if (!_) return null;
   let _ = _ && _ !== `none` ? _ : void 0,
@@ -49372,7 +49402,7 @@ function _(_) {
 }
 async function _(_, _) {
   let _ = new URLSearchParams();
-  _.append(`sessionid`, _()), _.append(`filename`, _);
+  (_.append(`sessionid`, _()), _.append(`filename`, _));
   try {
     let _ = await fetch(_(_), {
       method: `POST`,
@@ -49446,9 +49476,9 @@ function _(_) {
                 tooltip: _(`#Template_Section_Alternative_Text_ttip`),
                 value: _,
                 onChange: (_) => {
-                  (_.localized_alt_text ||= _([], 32, null)),
+                  ((_.localized_alt_text ||= _([], 32, null)),
                     _.localized_alt_text[_] != _.currentTarget.value &&
-                      ((_.localized_alt_text[_] = _.currentTarget.value), _());
+                      ((_.localized_alt_text[_] = _.currentTarget.value), _()));
                 },
               }),
             ],
@@ -49632,14 +49662,14 @@ function _(_) {
             toggled: _ && _ == _.k_MediaImage,
             tooltip: _(`#Sale_Section_Media_Layout_Title_ContentTypeMedia`),
             onClick: () => {
-              _.title_media
+              (_.title_media
                 ? (_.title_media.media_type = _.k_MediaImage)
                 : ((_.title_media = {
                     media_type: _.k_MediaImage,
                   }),
                   (_.title_media.localized_media = _([], 32, null))),
                 (_.is_title_as_image = !0),
-                _();
+                _());
             },
             children: (0, _.jsx)(_, {}),
           }),
@@ -49685,13 +49715,14 @@ function _(_) {
           value: _,
           onChange: (_) => {
             let _ = _;
-            _ && (_ = 100 - _), _.text_scale != _ && ((_.text_scale = _), _());
+            (_ && (_ = 100 - _),
+              _.text_scale != _ && ((_.text_scale = _), _()));
           },
         }),
         _ !== _ &&
           (0, _.jsx)(_, {
             onClick: () => {
-              (_.text_scale = void 0), _();
+              ((_.text_scale = void 0), _());
             },
             children: _(`#Template_SEction_Slider_Reset`),
           }),
@@ -49722,7 +49753,7 @@ function _(_) {
               children: (0, _.jsx)(`div`, {
                 children: (0, _.jsx)(_, {
                   onClick: (_) => {
-                    _?.currentTarget?.focus(), _(_);
+                    (_?.currentTarget?.focus(), _(_));
                   },
                   toggled: _ == _,
                   children: (0, _.jsx)(_, {
@@ -49773,9 +49804,9 @@ function _(_) {
     _ = _.useCallback(() => _.localized_media_title?.[_] || ``, [_, _]),
     _ = _.useCallback(
       (_) => {
-        (_.localized_media_title ??= _([], 32, null)),
+        ((_.localized_media_title ??= _([], 32, null)),
           _.localized_media_title[_] != _ &&
-            ((_.localized_media_title[_] = _), _());
+            ((_.localized_media_title[_] = _), _()));
       },
       [_, _, _],
     );
@@ -49830,9 +49861,9 @@ function _(_) {
     _ = _.useCallback(() => _.localized_media_subtitle?.[_] || ``, [_, _]),
     _ = _.useCallback(
       (_) => {
-        (_.localized_media_subtitle ??= _([], 32, null)),
+        ((_.localized_media_subtitle ??= _([], 32, null)),
           _.localized_media_subtitle?.[_] != _ &&
-            ((_.localized_media_subtitle[_] = _), _());
+            ((_.localized_media_subtitle[_] = _), _()));
       },
       [_, _, _],
     );
@@ -50087,7 +50118,7 @@ function _(_) {
         children: (0, _.jsx)(_, {
           className: _,
           onClick: () => {
-            _(() =>
+            (_(() =>
               Array.from(
                 {
                   length: _.length,
@@ -50095,7 +50126,7 @@ function _(_) {
                 (_, _) => _,
               ),
             ),
-              _();
+              _());
           },
           children: _,
         }),
@@ -50156,9 +50187,9 @@ function _(_) {
             { row: _, col: _ } = _(_.droppableId),
             { row: _, col: _ } = _(_.droppableId),
             _ = _[_].media_columns[_];
-          (_[_].media_columns[_] = _[_].media_columns[_]),
+          ((_[_].media_columns[_] = _[_].media_columns[_]),
             (_[_].media_columns[_] = _),
-            _(_);
+            _(_));
         }
         _(null);
       },
@@ -50357,10 +50388,10 @@ function _(_) {
                   _.media_columns.length < _)
                 ) {
                   let _ = [..._.media_columns];
-                  _.splice(_, 0, null),
+                  (_.splice(_, 0, null),
                     (_.media_columns = _),
                     _.media_columns.length == _ && (_.grow_index = void 0),
-                    _(_, _);
+                    _(_, _));
                 }
               },
               children: (0, _.jsx)(_, {}),
@@ -50388,10 +50419,10 @@ function _(_) {
                 disabled: !_,
                 className: `bs1zSy4ck64-`,
                 onClick: (_) => {
-                  _.preventDefault(),
+                  (_.preventDefault(),
                     _.stopPropagation(),
                     _ == _ ? (_.grow_index = void 0) : (_.grow_index = _),
-                    _(_, _);
+                    _(_, _));
                 },
                 children: [
                   (0, _.jsx)(_, {}),
@@ -50405,7 +50436,7 @@ function _(_) {
               children: (0, _.jsx)(`button`, {
                 className: `REN-0fTbjKo-`,
                 onClick: (_) => {
-                  _(), _.stopPropagation();
+                  (_(), _.stopPropagation());
                 },
                 children: _(`#Sale_Debug_LivePreview_GoTo`),
               }),
@@ -50452,12 +50483,12 @@ function _(_) {
     } = _,
     [_, _, _] = _(!1),
     _ = (0, _.useCallback)(() => {
-      _.media_columns.splice(_, 1),
+      (_.media_columns.splice(_, 1),
         (_.media_columns = [..._.media_columns]),
         (_.media_columns.length < 2 ||
           _.grow_index >= _.media_columns.length) &&
           (_.grow_index = void 0),
-        _(_, _ - 1 >= 0 ? _ - 1 : 0);
+        _(_, _ - 1 >= 0 ? _ - 1 : 0));
     }, [_, _, _]),
     [_] = _(() => [_ > 1 || _.media_columns.length > 1]);
   return (0, _.jsxs)(_.Fragment, {
@@ -50518,7 +50549,7 @@ function _(_) {
           children: (0, _.jsx)(_, {
             className: _,
             onClick: (_) => {
-              _.preventDefault(), _.stopPropagation(), _();
+              (_.preventDefault(), _.stopPropagation(), _());
             },
             children: (0, _.jsx)(_, {}),
           }),
@@ -50595,7 +50626,7 @@ function _(_) {
             selectedMedia: _,
             fnUpdateColumnsOfMediaRow: (_, _) => {
               let _ = _.media_container.media_rows.findIndex((_) => _ === _);
-              _.media_columns.length == 0
+              (_.media_columns.length == 0
                 ? (_.media_container.media_rows.splice(_, 1),
                   (_.media_container.media_rows = [
                     ..._.media_container.media_rows,
@@ -50609,7 +50640,7 @@ function _(_) {
                       row: _,
                       col: _,
                     })),
-                _();
+                _());
             },
             fnUpdateMediaRows: _,
           }),
@@ -50655,7 +50686,7 @@ function _(_) {
                 }),
                 onClick: () => _(_),
                 onDoubleClick: () => {
-                  _(_, _, _, _), _();
+                  (_(_, _, _, _), _());
                 },
                 children: (0, _.jsx)(_, {
                   nColCount: _,
@@ -50970,30 +51001,30 @@ function _(_) {
           (0, _.jsx)(_, {
             bHasMobileOrTabletVersion: !!_,
             fnOnDeleteMobileOrTablet: () => {
-              (_.media_overlay_mobile_content_varient = void 0), _();
+              ((_.media_overlay_mobile_content_varient = void 0), _());
             },
             fnOnCreateMobileOrTablet: () => {
-              (_.media_overlay_mobile_content_varient = JSON.parse(
+              ((_.media_overlay_mobile_content_varient = JSON.parse(
                 JSON.stringify(_),
               )),
                 (_.media_overlay_mobile_content_varient.display_order =
                   _.k_OverlayMedia),
-                _();
+                _());
             },
             bIsMobile: !0,
           }),
           (0, _.jsx)(_, {
             bHasMobileOrTabletVersion: !!_,
             fnOnDeleteMobileOrTablet: () => {
-              (_.media_overlay_tablet_content_varient = void 0), _();
+              ((_.media_overlay_tablet_content_varient = void 0), _());
             },
             fnOnCreateMobileOrTablet: () => {
-              (_.media_overlay_tablet_content_varient = JSON.parse(
+              ((_.media_overlay_tablet_content_varient = JSON.parse(
                 JSON.stringify(_),
               )),
                 (_.media_overlay_tablet_content_varient.display_order =
                   _.k_OverlayMedia),
-                _();
+                _());
             },
             bIsMobile: !1,
           }),
@@ -51186,7 +51217,7 @@ function _(_) {
         : null,
     _ = (0, _.useCallback)(
       (_) => {
-        (_.media_container.media_rows = _), _();
+        ((_.media_container.media_rows = _), _());
       },
       [_, _.media_container],
     ),
@@ -51329,30 +51360,30 @@ function _(_) {
           (0, _.jsx)(_, {
             bHasMobileOrTabletVersion: !!_,
             fnOnCreateMobileOrTablet: () => {
-              (_.mobile_content_varient = _(_, [
+              ((_.mobile_content_varient = _(_, [
                 `unique_id`,
                 `mobile_content_varient`,
                 `internal_name`,
               ])),
-                _();
+                _());
             },
             fnOnDeleteMobileOrTablet: () => {
-              (_.mobile_content_varient = void 0), _();
+              ((_.mobile_content_varient = void 0), _());
             },
             bIsMobile: !0,
           }),
           (0, _.jsx)(_, {
             bHasMobileOrTabletVersion: !!_,
             fnOnCreateMobileOrTablet: () => {
-              (_.tablet_content_varient = _(_, [
+              ((_.tablet_content_varient = _(_, [
                 `unique_id`,
                 `tablet_content_varient`,
                 `internal_name`,
               ])),
-                _();
+                _());
             },
             fnOnDeleteMobileOrTablet: () => {
-              (_.tablet_content_varient = void 0), _();
+              ((_.tablet_content_varient = void 0), _());
             },
             bIsMobile: !1,
           }),
@@ -51610,9 +51641,9 @@ function _(_) {
     _ = _.useCallback(() => _.localized_media_description?.[_] || ``, [_, _]),
     _ = _.useCallback(
       (_) => {
-        (_.localized_media_description ??= _([], 32, null)),
+        ((_.localized_media_description ??= _([], 32, null)),
           _.localized_media_description[_] != _ &&
-            ((_.localized_media_description[_] = _), _());
+            ((_.localized_media_description[_] = _), _()));
       },
       [_, _, _],
     );
@@ -51654,7 +51685,7 @@ function _(_) {
   let { saleSection: _, editModel: _ } = _,
     _ = (0, _.useCallback)(
       (_) => {
-        (_.steam_review_section_data = _), _.SetDirty(_.jsondata_sales);
+        ((_.steam_review_section_data = _), _.SetDirty(_.jsondata_sales));
       },
       [_, _],
     );
@@ -51665,27 +51696,27 @@ function _(_) {
 }
 function _(_, _) {
   let _ = _ + Math.floor(Math.random() * 1e6);
-  for (; _.tech_specs.tech_spec_block_list.find((_) => _.unique_id == _); )
+  for (; _.tech_specs.tech_spec_block_list.find((_) => _.unique_id == _);)
     _ = _ + Math.floor(Math.random() * 1e6);
   let _ = {
     unique_id: _,
     localized_block_title: [],
     spec_list: [],
   };
-  (_.tech_specs.tech_spec_block_list = [
+  ((_.tech_specs.tech_spec_block_list = [
     ..._.tech_specs.tech_spec_block_list,
     _,
   ]),
-    _();
+    _());
 }
 function _(_, _, _) {
   let _ = _.tech_specs.tech_spec_block_list.filter((_, _) => _ !== _);
-  (_.tech_specs.tech_spec_block_list = _), _();
+  ((_.tech_specs.tech_spec_block_list = _), _());
 }
 function _(_, _, _, _) {
-  (_.localized_block_title = _(_.localized_block_title || [], 32, null)),
+  ((_.localized_block_title = _(_.localized_block_title || [], 32, null)),
     (_.localized_block_title[_] = _),
-    _();
+    _());
 }
 function _(_, _) {
   return _.localized_block_title?.length > _ ? _.localized_block_title[_] : ``;
@@ -51705,27 +51736,27 @@ function _(_, _, _) {
     localized_spec_name: [],
     localized_spec_description: [],
   };
-  (_.spec_list = [..._.spec_list, _]), _();
+  ((_.spec_list = [..._.spec_list, _]), _());
 }
 function _(_, _, _) {
-  (_.spec_list = _.spec_list.filter((_, _) => _ !== _)), _();
+  ((_.spec_list = _.spec_list.filter((_, _) => _ !== _)), _());
 }
 function _(_, _, _, _) {
-  (_.localized_spec_name = _(_.localized_spec_name || [], 32, null)),
+  ((_.localized_spec_name = _(_.localized_spec_name || [], 32, null)),
     (_.localized_spec_name[_] = _),
-    _();
+    _());
 }
 function _(_, _) {
   return _.localized_spec_name?.length > _ ? _.localized_spec_name[_] : ``;
 }
 function _(_, _, _, _) {
-  (_.localized_spec_description = _(
+  ((_.localized_spec_description = _(
     _.localized_spec_description || [],
     32,
     null,
   )),
     (_.localized_spec_description[_] = _),
-    _();
+    _());
 }
 function _(_, _) {
   return _.localized_spec_description?.length > _
@@ -51952,8 +51983,8 @@ function _(_) {
         rgOptions: _,
         selectedOption: _.recent_tagged_events_source,
         onChange: (_) => {
-          (_.recent_tagged_events_source = _.data),
-            _.SetDirty(_.jsondata_sales);
+          ((_.recent_tagged_events_source = _.data),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
     ],
@@ -51995,7 +52026,8 @@ function _(_) {
         rgOptions: _,
         selectedOption: _.recent_tagged_events_sort,
         onChange: (_) => {
-          (_.recent_tagged_events_sort = _.data), _.SetDirty(_.jsondata_sales);
+          ((_.recent_tagged_events_sort = _.data),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
     ],
@@ -52045,13 +52077,13 @@ var _ = _((_) => {
         label: `Show events newer than (in number of weeks ago)`,
         value: _.event_schedule_start_weeks ?? 4,
         onChange: (_) => {
-          (_.event_schedule_start_weeks = Number.isFinite(
+          ((_.event_schedule_start_weeks = Number.isFinite(
             Number(_.target.value),
           )
             ? Number(_.target.value)
             : 0),
             (_.event_schedule_use_relative_time = !0),
-            _.SetDirty(_.jsondata_sales);
+            _.SetDirty(_.jsondata_sales));
         },
       }),
     ],
@@ -52144,7 +52176,7 @@ function _(_) {
             onDelete:
               _.length > 1
                 ? (_) => {
-                    _.splice(_, 1), _.SetDirty(_.jsondata_sales);
+                    (_.splice(_, 1), _.SetDirty(_.jsondata_sales));
                   }
                 : void 0,
             render: (_) =>
@@ -52156,11 +52188,11 @@ function _(_) {
           }),
         (0, _.jsx)(_, {
           onClick: () => {
-            (_.sale_page_cross_promo_sales = [
+            ((_.sale_page_cross_promo_sales = [
               ...(_.sale_page_cross_promo_sales ?? []),
               {},
             ]),
-              _.SetDirty(_.jsondata_sales);
+              _.SetDirty(_.jsondata_sales));
           },
           children: _(`#Sale_CrossPromoSale_AddSale`),
         }),
@@ -52338,7 +52370,7 @@ function _(_) {
             (0, _.jsx)(`a`, {
               href: `#`,
               onClick: (_) => {
-                _.preventDefault(), _.stopPropagation(), _();
+                (_.preventDefault(), _.stopPropagation(), _());
               },
             }),
           ),
@@ -52358,14 +52390,14 @@ function _(_) {
                 let _ = _.match(/\/([^\/]+\.(png|jpg|gif))/i);
                 if (_) {
                   let _ = _[1];
-                  (_.section_type = `title_image`),
+                  ((_.section_type = `title_image`),
                     (_.localized_label_image = void 0),
                     (_.links = [
                       {
                         url: null,
                         localized_link_capsule: _([_], 32, null),
                       },
-                    ]);
+                    ]));
                 }
               },
             }),
@@ -52511,7 +52543,7 @@ function _(_) {
     _ = (0, _.useCallback)(
       (_) => {
         let _ = _(_ || [], 32, null);
-        (_[_] = _), _(_);
+        ((_[_] = _), _(_));
       },
       [_, _, _],
     ),
@@ -52584,13 +52616,13 @@ function _(_) {
         );
       )
         _ = `reservation_` + Math.floor(Math.random() * 1e6);
-      _.internal_section_data.reservation_options.push({
+      (_.internal_section_data.reservation_options.push({
         unique_id: _,
         localized_reservation_desc: [],
         localized_out_of_stock_override: [],
         localized_delivery_override_desc: [],
       }),
-        _();
+        _());
     }, [_, _.internal_section_data]),
     [_, _] = (0, _.useState)(null),
     [_, _, _] = _();
@@ -52611,7 +52643,7 @@ function _(_) {
       (0, _.jsx)(_, {
         settings: _,
         fnOnUpdate: (_) => {
-          (_.internal_section_data.reservation_advanced = _), _();
+          ((_.internal_section_data.reservation_advanced = _), _());
         },
       }),
       (0, _.jsxs)(_, {
@@ -52622,7 +52654,7 @@ function _(_) {
           (0, _.jsx)(_, {
             items: _,
             onDelete: (_) => {
-              _(_), _();
+              (_(_), _());
             },
             onReorder: _,
             render: (_) =>
@@ -52674,13 +52706,13 @@ function _(_) {
       (0, _.jsx)(_, {
         value: _,
         onTextChange: (_) => {
-          (_.internal_section_data ||= {
+          ((_.internal_section_data ||= {
             internal_type: `reservation_widget`,
           }),
             _
               ? (_.internal_section_data.reservation_learn_more_link = _)
               : (_.internal_section_data.reservation_learn_more_link = void 0),
-            _();
+            _());
         },
         clearable: !0,
         placeholder: `Optional url... start with https://`,
@@ -52695,13 +52727,13 @@ function _(_) {
     children: (0, _.jsx)(_, {
       value: _,
       onValueChange: (_) => {
-        (_.internal_section_data ||= {
+        ((_.internal_section_data ||= {
           internal_type: `reservation_widget`,
         }),
           _
             ? (_.internal_section_data.reservation_appid_wishlist = _)
             : (_.internal_section_data.reservation_appid_wishlist = void 0),
-          _();
+          _());
       },
       label: `AppID for Wishlists`,
       tooltip: `Only a single appid can be selected for the entire reservation widget. This is only used for collecting wishlists from users`,
@@ -52770,10 +52802,10 @@ function _(_) {
     strEditTitle: _(`#Sale_ReserveEditor_EditTitle`),
     strEditDesc: _(`#Sale_ReserveEditor_EditDesc`),
     fnSetUsePackageDescription: (_) => {
-      (_.use_package_description = _), _();
+      ((_.use_package_description = _), _());
     },
     fnSetLocalizedDesc: (_) => {
-      (_.localized_reservation_desc = _), _();
+      ((_.localized_reservation_desc = _), _());
     },
     children: [
       (0, _.jsxs)(_, {
@@ -52792,10 +52824,10 @@ function _(_) {
       (0, _.jsx)(_, {
         callout: _,
         fnOnChange: (_) => {
-          (_.callout = {
+          ((_.callout = {
             ..._,
           }),
-            _();
+            _());
         },
       }),
     ],
@@ -52817,9 +52849,9 @@ function _(_) {
       _.purchase_requires_owned_appid ?? 0,
     ]),
     _ = (0, _.useCallback)(() => {
-      (_.purchase_requires_purchasable_packages ||= []),
+      ((_.purchase_requires_purchasable_packages ||= []),
         _.purchase_requires_purchasable_packages.push(0),
-        _();
+        _());
     }, [_, _]);
   return (0, _.jsxs)(_.Fragment, {
     children: [
@@ -52848,10 +52880,10 @@ function _(_) {
               }),
               (0, _.jsxs)(_, {
                 onClick: () => {
-                  (_.purchase_requires_purchasable_packages = _.filter(
+                  ((_.purchase_requires_purchasable_packages = _.filter(
                     (_, _) => _ !== _,
                   )),
-                    _();
+                    _());
                 },
                 children: [`Remove Package `, _ + 1],
               }),
@@ -52905,13 +52937,13 @@ function _(_) {
     [_, _] = (0, _.useState)(() => _.length > 0),
     _ = (0, _.useCallback)(
       (_) => {
-        (_.localized_out_of_stock_override = _(
+        ((_.localized_out_of_stock_override = _(
           _.localized_out_of_stock_override || [],
           32,
           null,
         )),
           (_.localized_out_of_stock_override[_] = _),
-          _();
+          _());
       },
       [_, _, _],
     );
@@ -52928,7 +52960,7 @@ function _(_) {
             }),
             (0, _.jsx)(_, {
               onClick: () => {
-                (_.localized_out_of_stock_override = []), _(!1), _();
+                ((_.localized_out_of_stock_override = []), _(!1), _());
               },
               children: `Clear Override`,
             }),
@@ -52957,13 +52989,13 @@ function _(_) {
     [_, _] = (0, _.useState)(_.length > 0),
     _ = (0, _.useCallback)(
       (_) => {
-        (_.localized_delivery_override_desc = _(
+        ((_.localized_delivery_override_desc = _(
           _.localized_delivery_override_desc || [],
           32,
           null,
         )),
           (_.localized_delivery_override_desc[_] = _),
-          _();
+          _());
       },
       [_, _, _],
     );
@@ -52992,15 +53024,15 @@ function _(_) {
               label: `Only override delivery when out-of-stock`,
               tooltip: `By default, we will override delivery all of the time. If check, we only override when out of stock`,
               onChange: (_) => {
-                (_.override_delivery_only_out_of_stock = _), _();
+                ((_.override_delivery_only_out_of_stock = _), _());
               },
             }),
             (0, _.jsx)(_, {
               onClick: () => {
-                (_.localized_delivery_override_desc = []),
+                ((_.localized_delivery_override_desc = []),
                   (_.override_delivery_only_out_of_stock = !1),
                   _(!1),
-                  _();
+                  _());
               },
               children: `Clear Delivery Msg Override`,
             }),
@@ -53031,15 +53063,15 @@ function _(_) {
         );
       )
         _ = `last_` + Math.floor(Math.random() * 1e6);
-      _.internal_section_data.while_supplies_last_option.push({
+      (_.internal_section_data.while_supplies_last_option.push({
         unique_id: _,
         localized_supply_desc: [],
       }),
-        _();
+        _());
     }, [_, _.internal_section_data]),
     _ = (0, _.useCallback)(
       (_) => {
-        _.splice(_, 1), _();
+        (_.splice(_, 1), _());
       },
       [_, _],
     );
@@ -53103,10 +53135,10 @@ function _(_) {
         strEditTitle: _(`#Sale_WhileSuppliesLastEditor_EditTitle`),
         strEditDesc: _(`#Sale_WhileSuppliesLastEditor_EditDesc`),
         fnSetUsePackageDescription: (_) => {
-          (_.use_package_description = _), _();
+          ((_.use_package_description = _), _());
         },
         fnSetLocalizedDesc: (_) => {
-          (_.localized_supply_desc = _), _();
+          ((_.localized_supply_desc = _), _());
         },
       }),
       !_ &&
@@ -53120,14 +53152,14 @@ var _ = _((_) => {
     let { editModel: _, saleSection: _, index: _ } = _,
       { internal_section_data: _ } = _,
       _ = (_) => {
-        (_.internal_type = _.data), _.SetDirty(_.jsondata_sales);
+        ((_.internal_type = _.data), _.SetDirty(_.jsondata_sales));
       },
       _ = (_) => {
-        (_.subscription_logo_image = _.target.value),
-          _.SetDirty(_.jsondata_sales);
+        ((_.subscription_logo_image = _.target.value),
+          _.SetDirty(_.jsondata_sales));
       },
       _ = (_) => {
-        (_.cyoa_story_genre = _.data), _.SetDirty(_.jsondata_sales);
+        ((_.cyoa_story_genre = _.data), _.SetDirty(_.jsondata_sales));
       },
       _ = [
         {
@@ -53253,8 +53285,8 @@ function _(_) {
             label: _(`#Sale_TrailerCarouselType_IntroVideo`),
             tooltip: _(`#Sale_TrailerCarouselType_IntroVideo_ttip`),
             onChange: (_) => {
-              (_.trailer_carousel_intro_video_appid = _.target.value),
-                _.SetDirty(_.jsondata_sales);
+              ((_.trailer_carousel_intro_video_appid = _.target.value),
+                _.SetDirty(_.jsondata_sales));
             },
             value: _ || ``,
           }),
@@ -53263,8 +53295,8 @@ function _(_) {
             label: _(`#Sale_TrailerCarouselType_IntroTrailer`),
             tooltip: _(`#Sale_TrailerCarouselType_IntroTrailer_ttip`),
             onChange: (_) => {
-              (_.trailer_carousel_intro_trailer_base_id = _.target.value),
-                _.SetDirty(_.jsondata_sales);
+              ((_.trailer_carousel_intro_trailer_base_id = _.target.value),
+                _.SetDirty(_.jsondata_sales));
             },
             value: _ || ``,
           }),
@@ -53592,10 +53624,10 @@ function _(_) {
     [_, _] = _.useState(_?.length > 0),
     _ = new Set(_),
     _ = (_) => {
-      _(_), _.clear(), (_.hardware_allow_list = [..._]), _();
+      (_(_), _.clear(), (_.hardware_allow_list = [..._]), _());
     },
     _ = (_, _) => {
-      _ ? _.add(_) : _.delete(_), (_.hardware_allow_list = [..._]), _();
+      (_ ? _.add(_) : _.delete(_), (_.hardware_allow_list = [..._]), _());
     };
   return (0, _.jsxs)(_.Fragment, {
     children: [
@@ -53700,8 +53732,8 @@ function _(_) {
           value: _ || 0,
           onChange: (_) => {
             let _ = Number.parseInt(_.target.value);
-            _ != _ && (_.door_index_visibility = _),
-              _.SetDirty(_.jsondata_sales);
+            (_ != _ && (_.door_index_visibility = _),
+              _.SetDirty(_.jsondata_sales));
           },
         }),
     ],
@@ -53751,7 +53783,8 @@ function _(_) {
               nEarliestTime: 0,
               fnGetTimeToUpdate: () => _,
               fnSetTimeToUpdate: (_) => {
-                (_.hide_section_before_rtime = _), _.SetDirty(_.jsondata_sales);
+                ((_.hide_section_before_rtime = _),
+                  _.SetDirty(_.jsondata_sales));
               },
             }),
             _(`#Sale_Section_Visibility_TimeZone`),
@@ -53777,7 +53810,8 @@ function _(_) {
               nEarliestTime: 0,
               fnGetTimeToUpdate: () => _,
               fnSetTimeToUpdate: (_) => {
-                (_.hide_section_after_rtime = _), _.SetDirty(_.jsondata_sales);
+                ((_.hide_section_after_rtime = _),
+                  _.SetDirty(_.jsondata_sales));
               },
             }),
             _(`#Sale_Section_Visibility_TimeZone`),
@@ -53990,7 +54024,7 @@ function _(_) {
       (0, _.jsx)(_, {
         items: _,
         onDelete: (_) => {
-          _(_), _();
+          (_(_), _());
         },
         onReorder: _,
         render: (_) =>
@@ -54004,7 +54038,7 @@ function _(_) {
         onClick: () => {
           _.product_configs ||= [];
           let _ = Math.floor(1 + Math.random() * 1e5);
-          for (; _.product_configs.find((_) => _.unique_id == _); )
+          for (; _.product_configs.find((_) => _.unique_id == _);)
             _ = Math.floor(1 + Math.random() * 1e5);
           _.product_configs = [
             ..._.product_configs,
@@ -54105,14 +54139,14 @@ function _(_) {
               null,
             ));
           let _ = [..._.localized_product_config_title];
-          (_[_] = _), (_.localized_product_config_title = _), _();
+          ((_[_] = _), (_.localized_product_config_title = _), _());
         },
         placeholder: `Category name like Model or bundle...`,
       }),
       (0, _.jsx)(_, {
         items: _,
         onDelete: (_) => {
-          _(_), _();
+          (_(_), _());
         },
         onReorder: _,
         render: (_) =>
@@ -54126,7 +54160,7 @@ function _(_) {
           _.variations ||= [];
           let _ = Math.floor(1 + Math.random() * 1e5),
             _ = _.flatMap((_) => _.variations ?? []);
-          for (; _.find((_) => _.unique_id == _); )
+          for (; _.find((_) => _.unique_id == _);)
             _ = Math.floor(1 + Math.random() * 1e5);
           _.variations = [
             ..._.variations,
@@ -54175,7 +54209,7 @@ function _(_) {
               null,
             ));
           let _ = [..._.localized_variation_name];
-          (_[_] = _), (_.localized_variation_name = _), _();
+          ((_[_] = _), (_.localized_variation_name = _), _());
         },
         placeholder: `Enter the variable name...`,
       }),
@@ -54232,7 +54266,7 @@ function _(_) {
       ),
       (0, _.jsx)(_, {
         onClick: () => {
-          (_.package_to_config_tuple = []), _();
+          ((_.package_to_config_tuple = []), _());
         },
         children: `Reset Variation to Package Mapping`,
       }),
@@ -54432,8 +54466,8 @@ function _(_) {
             ..._,
           };
         for (let _ of Object.keys(_)) _[_] || delete _[_];
-        (_.while_supplies_last_row_style = Object.keys(_).length ? _ : void 0),
-          _.SetDirty(_.jsondata_sales);
+        ((_.while_supplies_last_row_style = Object.keys(_).length ? _ : void 0),
+          _.SetDirty(_.jsondata_sales));
       },
       [_, _.internal_section_data],
     );
@@ -54608,8 +54642,8 @@ function _(_, _, _, _, _, _, _, _, _, _, _) {
           children: (0, _.jsx)(_, {
             value: _.contenthub_override_section,
             onChange: (_) => {
-              (_.contenthub_override_section = _.target.value.trim()),
-                _.SetDirty(_.jsondata_sales);
+              ((_.contenthub_override_section = _.target.value.trim()),
+                _.SetDirty(_.jsondata_sales));
             },
             label: `Section override ID (for content hubs only)`,
             tooltip: `Set this to any string value. When rendering a content hub, if this sale event is a time-bound override, then this section will be shown in place of the section with the same override ID in the "normal" content hub sale page.`,
@@ -54683,15 +54717,19 @@ var _ = `ASrRByRF-bQ-`,
                 localized_label: _,
                 editModel: _.editModel,
                 onClearCustomTitle: () => {
-                  (_.localized_label = _.Set(_.localized_label || [], _, null)),
-                    _.SetDirty(_.jsondata_sales);
+                  ((_.localized_label = _.Set(
+                    _.localized_label || [],
+                    _,
+                    null,
+                  )),
+                    _.SetDirty(_.jsondata_sales));
                 },
                 onSetCustomTitle: (_) => {
-                  (_.localized_label = _.Set(_.localized_label || [], _, _)),
-                    _.SetDirty(_.jsondata_sales);
+                  ((_.localized_label = _.Set(_.localized_label || [], _, _)),
+                    _.SetDirty(_.jsondata_sales));
                 },
                 onSetDefaultLabel: (_) => {
-                  (_.default_label = _), _.SetDirty(_.jsondata_sales);
+                  ((_.default_label = _), _.SetDirty(_.jsondata_sales));
                 },
               }),
             ],
@@ -54710,7 +54748,7 @@ var _ = `ASrRByRF-bQ-`,
                 className: `-ZSejjJJ5yU-`,
                 children: (0, _.jsx)(_, {
                   onClick: (_) => {
-                    _.preventDefault(),
+                    (_.preventDefault(),
                       _.stopPropagation(),
                       _(
                         (0, _.jsx)(_, {
@@ -54730,7 +54768,7 @@ var _ = `ASrRByRF-bQ-`,
                           },
                         }),
                         _(_),
-                      );
+                      ));
                   },
                   children:
                     _ > 0
@@ -54750,7 +54788,8 @@ var _ = `ASrRByRF-bQ-`,
                 tooltip: _(`#Sale_LinkURL_title_hint`),
                 placeholder: _(`#Sale_LinkURL`),
                 onChange: (_) => {
-                  (_.label_link = _.target.value), _.SetDirty(_.jsondata_sales);
+                  ((_.label_link = _.target.value),
+                    _.SetDirty(_.jsondata_sales));
                 },
                 value: _,
               }),
@@ -54773,23 +54812,23 @@ var _ = `ASrRByRF-bQ-`,
                 localized_label: _,
                 editModel: _,
                 onClearCustomTitle: () => {
-                  (_.localized_subtitle = _.Set(
+                  ((_.localized_subtitle = _.Set(
                     _.localized_subtitle || [],
                     _,
                     null,
                   )),
-                    _.SetDirty(_.jsondata_sales);
+                    _.SetDirty(_.jsondata_sales));
                 },
                 onSetCustomTitle: (_) => {
-                  (_.localized_subtitle = _.Set(
+                  ((_.localized_subtitle = _.Set(
                     _.localized_subtitle || [],
                     _,
                     _,
                   )),
-                    _.SetDirty(_.jsondata_sales);
+                    _.SetDirty(_.jsondata_sales));
                 },
                 onSetDefaultLabel: (_) => {
-                  (_.default_subtitle = _), _.SetDirty(_.jsondata_sales);
+                  ((_.default_subtitle = _), _.SetDirty(_.jsondata_sales));
                 },
               }),
             ],
@@ -54856,8 +54895,8 @@ function _(_) {
         clanSteamID: _.GetClanSteamID(),
         children: (0, _.jsx)(_, {
           onChange: (_) => {
-            (_.label_link_style = _ ? `browseall` : void 0),
-              _.SetDirty(_.jsondata_sales);
+            ((_.label_link_style = _ ? `browseall` : void 0),
+              _.SetDirty(_.jsondata_sales));
           },
           label: `(VO) ` + _(`#Sale_Section_TitleLink_BrowseAll`),
           tooltip: _(`#Sale_Section_TitleLink_BrowseAll_ttip`),
@@ -54876,10 +54915,10 @@ function _(_) {
           (0, _.jsx)(`div`, {
             className: _,
             onClick: (_) => {
-              _(JSON.parse(JSON.stringify(_))),
+              (_(JSON.parse(JSON.stringify(_))),
                 _(),
                 _.stopPropagation(),
-                _.preventDefault();
+                _.preventDefault());
             },
             children: (0, _.jsx)(_, {}),
           }),
@@ -54892,7 +54931,7 @@ function _(_) {
                 strTitle: _(`#Sale_Section_EditTitle`),
                 onCancel: () => {
                   for (let _ of Object.keys(_)) _ in _ || delete _[_];
-                  Object.assign(_, _), _.SetDirty(_.jsondata_sales), _();
+                  (Object.assign(_, _), _.SetDirty(_.jsondata_sales), _());
                 },
                 closeModal: _,
                 children: (0, _.jsx)(_, {
@@ -55164,7 +55203,7 @@ var _ = _((_) => {
     let _ = new Set(),
       _ = new Set(),
       _ = new Set();
-    _.capsules?.forEach((_) => {
+    (_.capsules?.forEach((_) => {
       _ &&
         (_.type === `bundle`
           ? _.add(Number(_._))
@@ -55180,11 +55219,11 @@ var _ = _((_) => {
         _.events
           .filter((_) => !!_?.announcement_gid)
           .map((_) => _.announcement_gid),
-      );
+      ));
   }, [_]);
   let _ = (_) => {
-      _.SetSaleSectionType(_.GetEventType(), _, _),
-        _.SetDirty(_.jsondata_sales);
+      (_.SetSaleSectionType(_.GetEventType(), _, _),
+        _.SetDirty(_.jsondata_sales));
     },
     _ = (_) => _(_(_), _),
     _ = (_) => {
@@ -55195,7 +55234,7 @@ var _ = _((_) => {
     _ = _(_),
     [_, _] = _.useState(!1),
     _ = () => {
-      _ && _(!0), _.current?.scrollIntoView(), _(!0);
+      (_ && _(!0), _.current?.scrollIntoView(), _(!0));
     },
     _ = _(),
     { bHighlighted: _, fnJumpTo: _ } = _(_.unique_id, _, _),
@@ -55250,7 +55289,7 @@ var _ = _((_) => {
                 children: (0, _.jsx)(`button`, {
                   className: `OeL3uQRIdtI-`,
                   onClick: (_) => {
-                    _(), _.stopPropagation();
+                    (_(), _.stopPropagation());
                   },
                   children: _(`#Sale_Debug_LivePreview_GoTo`),
                 }),
@@ -55498,9 +55537,9 @@ var _ = (_) => {
             category: _.GetEventModel().GetContentHubCategory(),
             tagid: _.GetEventModel().GetContentHubTag(),
           };
-          (_.GetEventModel().jsondata.source_content_hub = _),
+          ((_.GetEventModel().jsondata.source_content_hub = _),
             _.GetEventModel().jsondata.bAutoUpdateVanityURLForContentHub &&
-              _(_, _);
+              _(_, _));
         }
         _.SetDirty(_.jsondata_sales);
       },
@@ -55571,7 +55610,7 @@ function _(_, _) {
     );
   else {
     let _ = `contenthubsalepage_`;
-    _.GetEventModel().jsondata.sale_defines_specific_contenthub
+    (_.GetEventModel().jsondata.sale_defines_specific_contenthub
       ? ((_ += _.type),
         _.type === `category`
           ? (_ += `_` + _.category)
@@ -55579,7 +55618,7 @@ function _(_, _) {
       : (_ += `default`),
       _.GetEventModel().jsondata.sale_defines_temporary_contenthub &&
         (_ = `override_` + _),
-      (_.GetEventModel().jsondata.sale_vanity_id = _);
+      (_.GetEventModel().jsondata.sale_vanity_id = _));
   }
 }
 function _(_) {
@@ -55631,7 +55670,7 @@ function _(_) {
     _ = _ ? _?.filter((_) => (_.title() ?? ``).toLowerCase().includes(_)) : _,
     _ = !!_ && _.length >= _,
     _ = () => {
-      _(_ === _ ? void 0 : _), _?.();
+      (_(_ === _ ? void 0 : _), _?.());
     },
     _ = (_) => {
       let _ =
@@ -55813,8 +55852,8 @@ function _(_) {
           closeModal: _,
           onSelect: (_) => {
             _(() => {
-              (_.GetEventModel().jsondata.sale_creator_home_filter_listid = _),
-                _.SetDirty(_.jsondata_sales);
+              ((_.GetEventModel().jsondata.sale_creator_home_filter_listid = _),
+                _.SetDirty(_.jsondata_sales));
             });
           },
         }),
@@ -55889,7 +55928,7 @@ var _ = (_) =>
     m_storageKey;
     m_Tags = [];
     constructor(_) {
-      _(this), (this.m_storageKey = `RecentTags_` + _);
+      (_(this), (this.m_storageKey = `RecentTags_` + _));
       let _ = window.localStorage.getItem(this.m_storageKey);
       this.m_Tags = _ ? JSON.parse(_) : [];
     }
@@ -55957,7 +55996,7 @@ function _(_) {
     _ = _.useRef(0),
     _ = _.useRef(void 0),
     _ = (_, _) => {
-      (_.current.element.value = ``), _(_, _);
+      ((_.current.element.value = ``), _(_, _));
     };
   return (0, _.jsx)(`div`, {
     className: _,
@@ -56055,9 +56094,9 @@ function _(_) {
     _ = _(() => _.sale_tag_filter),
     _ = (_) => {
       let _ = _(_);
-      (_.sale_tag_filter = _),
+      ((_.sale_tag_filter = _),
         (_.capsules = _(_, _, _.capsules)),
-        _.SetDirty(_.jsondata_sales);
+        _.SetDirty(_.jsondata_sales));
     };
   return (0, _.jsx)(`div`, {
     className: _,
@@ -56246,7 +56285,7 @@ function _(_) {
         let _ = [],
           _ = [],
           _ = [];
-        _.forEach((_) => {
+        (_.forEach((_) => {
           _.capsule.type == `bundle`
             ? _.push(_.capsule._)
             : _.capsule.type == `sub`
@@ -56257,7 +56296,7 @@ function _(_) {
             .HintLoadStoreItems(_, _, _, null, null, null, _)
             .finally(() => {
               _.token?.reason || _(!1);
-            });
+            }));
       }
       return () => _.cancel(`TagItemEditor: unmounting`);
     }, []),
@@ -56569,9 +56608,9 @@ function _(_) {
           filter: _,
           title: _(`#Sale_TagFilter_EditFilter`),
           onApplyFilter: (_) => {
-            (_.GetEventModel().jsondata.tagged_item_filter = _),
+            ((_.GetEventModel().jsondata.tagged_item_filter = _),
               _(_),
-              _.SetDirty(_.jsondata_sales);
+              _.SetDirty(_.jsondata_sales));
           },
           ignoreEventFilter: !0,
         }),
@@ -56597,7 +56636,7 @@ function _(_) {
         (0, _.jsx)(_, {
           onDiscountEventSelected: async (_, _) => {
             let _ = [];
-            _.forEach((_) => {
+            (_.forEach((_) => {
               if (
                 !_.find((_) => _.capsule._ === _ && _.capsule.type !== `sub`)
               ) {
@@ -56627,7 +56666,7 @@ function _(_) {
                 _.GetEventModel()
                   .GetTaggedItems()
                   .push(..._),
-                _.SetDirty(_.jsondata_sales));
+                _.SetDirty(_.jsondata_sales)));
           },
         }),
         window,
@@ -56890,7 +56929,7 @@ var _ = _((_) => {
           .GetSaleSections()
           .forEach((_, _) => {
             let _ = !1;
-            _.sale_tag_filter
+            (_.sale_tag_filter
               ? (_ = _(_, _.sale_tag_filter))
               : _.capsules &&
                 (_ = !!_.capsules.find(
@@ -56905,7 +56944,7 @@ var _ = _((_) => {
                     _.GetEventModel(),
                     _,
                   ),
-                );
+                ));
           }),
         _.sort((_, _) => _.localeCompare(_)),
         _
@@ -56922,11 +56961,11 @@ var _ = _((_) => {
       let _ = new Map();
       for (let _ of this.props.editModel.GetEventModel().GetTaggedItems())
         _.tags && _.tags.forEach((_) => _.set(_.toLocaleLowerCase(), _));
-      _.forEach((_) => _.set(_.toLocaleLowerCase(), _)),
+      (_.forEach((_) => _.set(_.toLocaleLowerCase(), _)),
         this.setState({
           defaultTags: _,
           otherTags: _,
-        });
+        }));
     }
     UpdateTagList(_) {
       this.setState({
@@ -56949,10 +56988,10 @@ var _ = _((_) => {
       )
         return;
       let _ = this.state.otherTags.get(_);
-      _ && (_ = _), this.UpdateTagList([..._, _]);
+      (_ && (_ = _), this.UpdateTagList([..._, _]));
     }
     OnOK() {
-      _(this.props.item, this.state.currentTags) &&
+      (_(this.props.item, this.state.currentTags) &&
         (_(
           this.props.editModel.GetEventModel().jsondata.auto_item_tags,
           this.props.item,
@@ -56960,7 +56999,7 @@ var _ = _((_) => {
         _(this.props.editModel),
         this.props.onTagsModified && this.props.onTagsModified(),
         this.props.editModel.SetDirty(_.jsondata_sales)),
-        this.props.closeModal();
+        this.props.closeModal());
     }
     RenderSectionList() {
       let { startingSections: _, includedSections: _ } = this.state;
@@ -56998,10 +57037,10 @@ var _ = _((_) => {
           );
         }),
         _ = [];
-      _.forEach((_, _) => {
+      (_.forEach((_, _) => {
         _.has(_) || _.push(_);
       }),
-        _.sort((_, _) => _.localeCompare(_));
+        _.sort((_, _) => _.localeCompare(_)));
       let _ = [];
       _.forEach((_) => {
         if (_.has(_)) {
@@ -57188,10 +57227,10 @@ var _ = _((_) => {
       });
     }
   };
-_([_], _.prototype, `RemoveTag`, null),
+(_([_], _.prototype, `RemoveTag`, null),
   _([_], _.prototype, `AddTag`, null),
   _([_], _.prototype, `OnOK`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class extends _.Component {
   m_timerForChange = new _();
   state = {
@@ -57209,7 +57248,7 @@ var _ = class extends _.Component {
   }
   CloneModifiedTags() {
     let _ = new Map();
-    return this.state.modifiedTags.forEach((_, _) => _.set(_, _)), _;
+    return (this.state.modifiedTags.forEach((_, _) => _.set(_, _)), _);
   }
   OnApplyFilter(_) {
     let _ = _(this.props.editModel.GetEventModel().GetTaggedItems(), _),
@@ -57270,7 +57309,7 @@ var _ = class extends _.Component {
   }
   OnOK() {
     let _ = !1;
-    this.state.modifiedTags.forEach((_, _) => {
+    (this.state.modifiedTags.forEach((_, _) => {
       _(_, _) &&
         ((_ = !0),
         _(this.props.editModel.GetEventModel().jsondata.auto_item_tags, _));
@@ -57278,7 +57317,7 @@ var _ = class extends _.Component {
       _ &&
         (_(this.props.editModel),
         this.props.editModel.SetDirty(_.jsondata_sales)),
-      this.props.closeModal();
+      this.props.closeModal());
   }
   UpdateCurrentTagToItemMap() {
     let _ = new Map();
@@ -57298,32 +57337,32 @@ var _ = class extends _.Component {
       _.add(Number(_[1]));
     }
     let _ = this.props.editModel.GetEventModel().GetTaggedItems();
-    _.size > 0 && (_ = _.filter((_) => _.has(_.capsule._))),
+    (_.size > 0 && (_ = _.filter((_) => _.has(_.capsule._))),
       this.setState(
         {
           editItems: _,
         },
         () => this.UpdateCurrentTagToItemMap(),
-      );
+      ));
   }
   OnTextChanged(_) {
-    this.setState({
+    (this.setState({
       editText: _,
     }),
       this.m_timerForChange.Cancel(),
-      this.m_timerForChange.Schedule(300, this.OnUpdateItemListFromText);
+      this.m_timerForChange.Schedule(300, this.OnUpdateItemListFromText));
   }
   render() {
     let { closeModal: _ } = this.props,
       { editItems: _, currentTags: _, otherTags: _ } = this.state,
       _ = [];
-    _.forEach((_, _) => {
+    (_.forEach((_, _) => {
       _.push({
         tag: _.properCaseString,
         count: _.items.length,
       });
     }),
-      _.sort((_, _) => _.tag.localeCompare(_.tag));
+      _.sort((_, _) => _.tag.localeCompare(_.tag)));
     let _ = _.map((_) => {
         let _ = _(_, _);
         return (0, _.jsx)(
@@ -57337,10 +57376,10 @@ var _ = class extends _.Component {
         );
       }),
       _ = [];
-    _.forEach((_, _) => {
+    (_.forEach((_, _) => {
       _.push(_.properCaseString);
     }),
-      _.sort((_, _) => _.localeCompare(_));
+      _.sort((_, _) => _.localeCompare(_)));
     let _ = [];
     _.Get(this.props.editModel)
       .GetRecentTags()
@@ -57547,14 +57586,14 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnApplyFilter`, null),
+(_([_], _.prototype, `OnApplyFilter`, null),
   _([_], _.prototype, `OnPopulateFromFilter`, null),
   _([_], _.prototype, `RemoveTag`, null),
   _([_], _.prototype, `AddTag`, null),
   _([_], _.prototype, `OnOK`, null),
   _([_], _.prototype, `OnUpdateItemListFromText`, null),
   _([_], _.prototype, `OnTextChanged`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 function _(_) {
   let {
       onClauseChanged: _,
@@ -57604,7 +57643,7 @@ function _(_) {
         });
         let _ = _ ? _ : _(_, _),
           _ = new Set(_.map((_) => _.capsule._));
-        _.forEach((_) => {
+        (_.forEach((_) => {
           _.clauses[_].or_tags[_] = _.properCaseString;
           let _ = 0,
             _ = 0;
@@ -57625,7 +57664,7 @@ function _(_) {
         }),
           (_.clauses[_].or_tags[_] = _),
           _.sort((_, _) => _.value.localeCompare(_.value)),
-          _(_);
+          _(_));
       }
     },
     onMenuClose: () => {
@@ -57799,13 +57838,13 @@ var _ = class extends _.Component {
   }
   SetupInitialFilter() {
     let _ = _(this.props.filter);
-    this.SanitizeFilter(_),
+    (this.SanitizeFilter(_),
       (_.clauses ||= []),
       _.clauses.length === 0 &&
         _.clauses.push({
           type: `Must have`,
           or_tags: [``],
-        });
+        }));
     for (let _ of _.clauses)
       (_.or_tags && _.or_tags.length !== 0) || (_.or_tags = [``]);
     return _;
@@ -57941,7 +57980,7 @@ var _ = class extends _.Component {
   RenderTagBreakdown(_, _) {
     let { tagHighlight: _ } = this.state,
       _ = [];
-    _.forEach((_) =>
+    (_.forEach((_) =>
       _.push({
         tag: _.properCaseString,
         count: _.items.length,
@@ -57949,7 +57988,7 @@ var _ = class extends _.Component {
     ),
       _.sort((_, _) =>
         _.count == _.count ? _.tag.localeCompare(_.tag) : _.count - _.count,
-      );
+      ));
     let _ = _.map((_) =>
       (0, _.jsxs)(
         `div`,
@@ -57996,11 +58035,11 @@ var _ = class extends _.Component {
   }
   ModifyFilter(_) {
     let _ = _(this.state.currentFilter);
-    _(_),
+    (_(_),
       this.setState({
         currentFilter: _,
         ...this.CalculateItemsAndTags(_, this.state.startingUnreferencedItems),
-      });
+      }));
   }
   OnChangeClauseType(_, _) {
     this.ModifyFilter((_) => (_.clauses[_].type = _));
@@ -58055,9 +58094,9 @@ var _ = class extends _.Component {
   OnOK() {
     if (this.props.onApplyFilter) {
       let _ = _(this.state.currentFilter);
-      this.SanitizeFilter(_), this.props.onApplyFilter(_);
+      (this.SanitizeFilter(_), this.props.onApplyFilter(_));
     }
-    this.props.editModel.SetDirty(_.jsondata_sales), this.props.closeModal();
+    (this.props.editModel.SetDirty(_.jsondata_sales), this.props.closeModal());
   }
   render() {
     let { editModel: _, closeModal: _, title: _ } = this.props,
@@ -58229,7 +58268,7 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnChangeClauseType`, null),
+(_([_], _.prototype, `OnChangeClauseType`, null),
   _([_], _.prototype, `OnChangeClauseTag`, null),
   _([_], _.prototype, `OnAddClause`, null),
   _([_], _.prototype, `OnRemoveClause`, null),
@@ -58240,7 +58279,7 @@ _([_], _.prototype, `OnChangeClauseType`, null),
   _([_], _.prototype, `OnSetViewMode`, null),
   _([_], _.prototype, `OnTagsModified`, null),
   _([_], _.prototype, `UpdateSearchText`, null),
-  _([_], _.prototype, `OnOK`, null);
+  _([_], _.prototype, `OnOK`, null));
 function _(_, _) {
   let _ = _.GetEventModel(),
     _ = _.GetClanInfoByClanAccountID(_.clanSteamID.GetAccountID());
@@ -58288,7 +58327,7 @@ var _ = class extends _.Component {
         _ = (_ ? _.filter((_) => _(_, _)) : _).join(`;`);
       _ += `\t\"${_}\"`;
       let _ = _?.GetName() || ``;
-      _ && (_ += `\t// \"${_}\"`), (_ += `${_}\n`);
+      (_ && (_ += `\t// \"${_}\"`), (_ += `${_}\n`));
     }
     return _;
   }
@@ -58307,7 +58346,7 @@ var _ = class extends _.Component {
       /^(game|software|dlc|bundle|video|sub|event|tag|music)[\'\,\"\s]+(.*)/i.exec(
         _,
       );
-    if (_) (_.type = _[1]), (_ = _[2]);
+    if (_) ((_.type = _[1]), (_ = _[2]));
     else
       for (let _ of this.props.editModel.GetEventModel().GetTaggedItems())
         if (_.capsule._ === _._) {
@@ -58360,17 +58399,17 @@ var _ = class extends _.Component {
         _.tags.some((_) => _(_, _.Store)) || _.push(_);
       },
       _ = !0;
-    _ &&
+    (_ &&
       _.forEach((_) => {
         _.tags.some((_) => !!_(_)) && (_ = !1);
       }),
       _(() => {
-        (_.tagged_items ||= []),
+        ((_.tagged_items ||= []),
           _ &&
             (_.tagged_items = _.tagged_items.filter((_) => {
               let _ = _.get(_.capsule._)?.capsule.type;
               return _.capsule.type === _;
-            }));
+            })));
         for (let _ of _.tagged_items) {
           let _ = _.get(_.capsule._);
           _ &&
@@ -58382,9 +58421,9 @@ var _ = class extends _.Component {
             _.delete(_.capsule._));
         }
         _.forEach((_) => {
-          _(_.auto_item_tags, _),
+          (_(_.auto_item_tags, _),
             _.tagged_items.push(_),
-            _(_.tagged_items[_.tagged_items.length - 1]);
+            _(_.tagged_items[_.tagged_items.length - 1]));
         });
       }),
       _.length > 0 && (await this.props.UpdateDefaultTagsForItems(_, _)),
@@ -58394,7 +58433,7 @@ var _ = class extends _.Component {
       }),
       _.SetDirty(_.jsondata_sales),
       _(_),
-      this.props.closeModal();
+      this.props.closeModal());
   }
   OnTextChange(_) {
     this.setState({
@@ -58474,10 +58513,10 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnCompleteEdit`, null),
+(_([_], _.prototype, `OnCompleteEdit`, null),
   _([_], _.prototype, `DoImport`, null),
   _([_], _.prototype, `OnTextChange`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = {
     include_release: !0,
   },
@@ -58548,7 +58587,7 @@ var _ = {
         _(() => {
           _ = _.filter((_) => {
             let _ = !!_.has(_.capsule._);
-            return (_ ||= !_), _;
+            return ((_ ||= !_), _);
           });
         });
         let _ = [];
@@ -58562,11 +58601,11 @@ var _ = {
               capsule: this.ConvertToCapsule(_.appid),
               tags: [],
             };
-            _.push(_), (_ = !0);
+            (_.push(_), (_ = !0));
           }
-        await this.props.UpdateDefaultTagsForItems(_, _), _.push(..._);
+        (await this.props.UpdateDefaultTagsForItems(_, _), _.push(..._));
       }
-      return _ && (_.GetEventModel().jsondata.tagged_items = _), _;
+      return (_ && (_.GetEventModel().jsondata.tagged_items = _), _);
     }
     async DoImport() {
       let {
@@ -58580,7 +58619,7 @@ var _ = {
         _ = !1;
       (_ || _) && (_ = (await this.ImportOptInPage(_, _, _)) || _);
       let _ = this.props.editModel.GetEventModel().GetTaggedItems();
-      this.setState({
+      (this.setState({
         statusMsg: _(`#Sale_SyncTaggedItems_Progress_LoadingStore`, _.length),
       }),
         (_ || _ || _) &&
@@ -58603,7 +58642,7 @@ var _ = {
           bImporting: !1,
           errMsg: ``,
         }),
-        this.props.closeModal();
+        this.props.closeModal());
     }
     OnPerformSync() {
       this.setState(
@@ -58734,9 +58773,9 @@ var _ = {
       });
     }
   };
-_([_], _.prototype, `ImportOptInPage`, null),
+(_([_], _.prototype, `ImportOptInPage`, null),
   _([_], _.prototype, `OnPerformSync`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 function _(_) {
   let _ = new Set();
   for (let _ of _) {
@@ -58759,10 +58798,10 @@ var _ = (_) => {
             clauses: [],
           },
         };
-        _([..._, _]), _(!1);
+        (_([..._, _]), _(!1));
       },
       _ = () => {
-        _ &&
+        (_ &&
           _ &&
           _(() => {
             _.auto_item_tags = _;
@@ -58770,13 +58809,13 @@ var _ = (_) => {
               _(_.auto_item_tags, _);
             _.SetDirty(_.jsondata_sales);
           }),
-          _.closeModal();
+          _.closeModal());
       },
       _ = () => {
-        _(_(_)), _(!0);
+        (_(_(_)), _(!0));
       },
       _ = (_) => {
-        _(_.filter((_, _) => _ != _)), _(_(_));
+        (_(_.filter((_, _) => _ != _)), _(_(_)));
       },
       _ = _.map((_, _) =>
         (0, _.jsx)(
@@ -58826,12 +58865,12 @@ var _ = (_) => {
     let [_, _] = _.useState(_.autoTag.tag_name),
       [_, _] = _.useState(_.autoTag.filter),
       _ = (_) => {
-        _(_.target.value),
+        (_(_.target.value),
           (_.autoTag.tag_name = _.target.value.trim()),
-          _.fnOnEdited();
+          _.fnOnEdited());
       },
       _ = (_) => {
-        (_.autoTag.filter = _), _.fnOnEdited(), _(_);
+        ((_.autoTag.filter = _), _.fnOnEdited(), _(_));
       };
     return (0, _.jsxs)(`div`, {
       className: _,
@@ -58890,7 +58929,7 @@ var _ = (_) => {
                   _,
                 )
                 .then(() => {
-                  _(_), _(!1);
+                  (_(_), _(!1));
                 })
             : _(!1);
         });
@@ -59098,7 +59137,7 @@ var _ = _((_) => {
         _();
       },
       _ = (_) => {
-        (_.filter = _), _();
+        ((_.filter = _), _());
       },
       _ = () => {
         _(
@@ -59166,7 +59205,7 @@ var _ = _((_) => {
               rgOptions: _,
               selectedOption: _.type || _.k_ESaleTagFilter,
               onChange: (_) => {
-                (_.type = _.data),
+                ((_.type = _.data),
                   _.type === _.k_ELanguage &&
                     _.language == null &&
                     (_.language = _(_.LANGUAGE)),
@@ -59179,7 +59218,7 @@ var _ = _((_) => {
                   _.type === _.k_EAppType &&
                     _.appType == null &&
                     (_.appType = `game`),
-                  _();
+                  _());
               },
             }),
           ],
@@ -59233,7 +59272,7 @@ var _ = _((_) => {
                     children: (0, _.jsx)(_, {
                       selectedLang: _.language || _(_.LANGUAGE),
                       fnOnLanguageChanged: (_) => {
-                        (_.language = _), _();
+                        ((_.language = _), _());
                       },
                     }),
                   }),
@@ -59250,7 +59289,7 @@ var _ = _((_) => {
                       rgOptions: _,
                       selectedOption: _.contentDescriptor || 5,
                       onChange: (_) => {
-                        (_.contentDescriptor = _.data), _();
+                        ((_.contentDescriptor = _.data), _());
                       },
                     }),
                   }),
@@ -59267,7 +59306,7 @@ var _ = _((_) => {
                       rgOptions: _,
                       selectedOption: _.userPreference || _.k_EHideOwnedItems,
                       onChange: (_) => {
-                        (_.userPreference = _.data), _();
+                        ((_.userPreference = _.data), _());
                       },
                     }),
                   }),
@@ -59284,7 +59323,7 @@ var _ = _((_) => {
                       rgOptions: _,
                       selectedOption: _.appType || `game`,
                       onChange: (_) => {
-                        (_.appType = _.data), _();
+                        ((_.appType = _.data), _());
                       },
                     }),
                   }),
@@ -59298,7 +59337,7 @@ var _ = _((_) => {
               label: _(`#FacetedBrowseEditor_EnabledByDefault`),
               checked: _.bEnabledByDefault,
               onChange: (_) => {
-                (_.bEnabledByDefault = _), _();
+                ((_.bEnabledByDefault = _), _());
               },
             }),
           }),
@@ -59331,7 +59370,7 @@ var _ = _((_) => {
             (0, _.jsx)(_, {
               bIsMinimized: !_,
               fnToggleMinimize: () => {
-                _(!_), _(!_);
+                (_(!_), _(!_));
               },
             }),
           ],
@@ -59342,7 +59381,7 @@ var _ = _((_) => {
               (0, _.jsx)(_, {
                 items: _,
                 onDelete: (_, _) => {
-                  _.splice(_, 1), _();
+                  (_.splice(_, 1), _());
                 },
                 onReorder: () => {
                   _();
@@ -59358,7 +59397,7 @@ var _ = _((_) => {
               }),
               (0, _.jsx)(_, {
                 onClick: (_) => {
-                  _.push({
+                  (_.push({
                     unique_id: _.GenerateFacetValueUniqueID(_),
                     name: [],
                     subtitle: [],
@@ -59367,7 +59406,7 @@ var _ = _((_) => {
                     },
                     rgStoreTagFilter: null,
                   }),
-                    _();
+                    _());
                 },
                 children: _(`#FacetedBrowseEditor_AddFacetValue`),
               }),
@@ -59410,7 +59449,7 @@ var _ = _((_) => {
               tooltip: _(`#FacetedBrowseEditor_LogicalAND_Tooltip`),
               checked: _.logical_and,
               onChange: (_) => {
-                (_.logical_and = _), _();
+                ((_.logical_and = _), _());
               },
             }),
             (0, _.jsx)(_, {
@@ -59418,7 +59457,7 @@ var _ = _((_) => {
               tooltip: _(`#FacetedBrowseEditor_InitiallyExpanded_Tooltip`),
               checked: _.bInitiallyExpanded,
               onChange: (_) => {
-                (_.bInitiallyExpanded = _), _();
+                ((_.bInitiallyExpanded = _), _());
               },
             }),
             (0, _.jsx)(_, {
@@ -59426,7 +59465,7 @@ var _ = _((_) => {
               tooltip: _(`#FacetedBrowseEditor_SingleSelect_Tooltip`),
               checked: _.single_selection,
               onChange: (_) => {
-                (_.single_selection = _), _();
+                ((_.single_selection = _), _());
               },
             }),
           ],
@@ -59483,7 +59522,7 @@ var _ = _((_) => {
               (0, _.jsx)(_, {
                 items: _,
                 onDelete: (_, _) => {
-                  _.splice(_, 1), _();
+                  (_.splice(_, 1), _());
                 },
                 onReorder: () => {
                   _();
@@ -59501,12 +59540,12 @@ var _ = _((_) => {
               }),
               (0, _.jsx)(_, {
                 onClick: (_) => {
-                  _.push({
+                  (_.push({
                     unique_id: _.GenerateFacetUniqueID(_),
                     name: [],
                     facetValues: [],
                   }),
-                    _();
+                    _());
                 },
                 children: _(`#FacetedBrowseEditor_AddFacet`),
               }),
@@ -59524,18 +59563,19 @@ var _ = _((_) => {
       } = _,
       [_, _] = (0, _.useState)(!1),
       _ = (_) => {
-        (_.enable_faceted_browsing = _),
+        ((_.enable_faceted_browsing = _),
           _ && !_.facets && (_.facets = []),
-          _.SetDirty(_.jsondata_sales);
+          _.SetDirty(_.jsondata_sales));
       },
       _ = () => {
         _.SetDirty(_.jsondata_sales);
       },
       _ = (_) => {
-        (_.min_capsule_matches_for_facet_values = Number(_.target.value)), _();
+        ((_.min_capsule_matches_for_facet_values = Number(_.target.value)),
+          _());
       },
       _ = (_) => {
-        (_.max_facet_values_for_facet = Number(_.target.value)), _();
+        ((_.max_facet_values_for_facet = Number(_.target.value)), _());
       },
       _ = [
         {
@@ -59555,18 +59595,18 @@ var _ = _((_) => {
         },
       ],
       _ = (_) => {
-        (_.facet_sort_order = _.data), _();
+        ((_.facet_sort_order = _.data), _());
       },
       _ = (_) => {
-        (_.facets_generate_debug_info = _), _();
+        ((_.facets_generate_debug_info = _), _());
       },
       _ = () => {
         let _ = async (_) => {
             _(!0);
             try {
-              (_.facets = await _(_)),
+              ((_.facets = await _(_)),
                 _ && (await _()),
-                _.SetDirty(_.jsondata_sales);
+                _.SetDirty(_.jsondata_sales));
             } finally {
               _(!1);
             }
@@ -59659,7 +59699,7 @@ var _ = _((_) => {
                             _(_, {
                               color: _.highlighted_facet_color,
                               onChange: (_) => {
-                                (_.highlighted_facet_color = _), _();
+                                ((_.highlighted_facet_color = _), _());
                               },
                             });
                           },
@@ -59681,7 +59721,7 @@ var _ = _((_) => {
                             _(_, {
                               color: _.heading_color,
                               onChange: (_) => {
-                                (_.heading_color = _), _();
+                                ((_.heading_color = _), _());
                               },
                             });
                           },
@@ -59896,7 +59936,7 @@ var _ = _((_) => {
         children: [
           (0, _.jsx)(_, {
             onClick: () => {
-              _(_()), _();
+              (_(_()), _());
             },
             children: _(`#Button_OK`),
           }),
@@ -59933,18 +59973,18 @@ async function _(_) {
       try {
         _ = _(_.sale_tag_filter, _, _);
       } catch (_) {
-        console.error(
+        (console.error(
           `Unable to convert section filter for section ` +
             _.unique_id +
             ` to store filter format: ` +
             _,
         ),
           (_ = null),
-          (_ = !0);
+          (_ = !0));
       }
       _ || (_.store_filter = _);
     } else _.store_filter &&= void 0;
-    _.section_type === `tabs` &&
+    (_.section_type === `tabs` &&
       _.tabs &&
       _.tabs.forEach((_) => {
         if (_.sale_tag_filter) {
@@ -59953,20 +59993,20 @@ async function _(_) {
           try {
             _ = _(_.sale_tag_filter, _, _);
           } catch (_) {
-            console.error(
+            (console.error(
               `Unable to convert tab filter for tab ` +
                 _.unique_id +
                 ` to store filter format: ` +
                 _,
             ),
               (_ = null),
-              (_ = !0);
+              (_ = !0));
           }
           _ || (_.store_filter = _);
         } else _.store_filter &&= void 0;
       }),
       _.enable_faceted_browsing &&
-        (_(_, _, _), _(_, _, _, _), (_.metadata_matching_capsules &&= void 0));
+        (_(_, _, _), _(_, _, _, _), (_.metadata_matching_capsules &&= void 0)));
   }
 }
 function _(_) {
@@ -60106,7 +60146,7 @@ function _(_, _, _) {
         try {
           _ = _(_.filter, _, _);
         } catch (_) {
-          console.error(
+          (console.error(
             `Unable to convert facet value filter for facet ` +
               _.unique_id +
               `, facet value ` +
@@ -60115,7 +60155,7 @@ function _(_, _, _) {
               _,
           ),
             (_ = null),
-            (_ = !0);
+            (_ = !0));
         }
         _ || (_.set(_, _), _.set(_, _(_.filter, _)));
       }
@@ -60166,10 +60206,10 @@ function _(_, _, _, _) {
   });
 }
 var _ = (function (_) {
-    return (_.k_ENow = `now`), (_.k_ESpecified = `specified`), _;
+    return ((_.k_ENow = `now`), (_.k_ESpecified = `specified`), _);
   })({}),
   _ = (function (_) {
-    return (_.k_EDuration = `duration`), (_.k_ESpecified = `specified`), _;
+    return ((_.k_EDuration = `duration`), (_.k_ESpecified = `specified`), _);
   })({}),
   _ = (function (_) {
     return (
@@ -60189,7 +60229,7 @@ var _ = (function (_) {
     );
   })({}),
   _ = (function (_) {
-    return (_.k_EHour = `hour`), (_.k_EDay = `day`), (_.k_EWeek = `week`), _;
+    return ((_.k_EHour = `hour`), (_.k_EDay = `day`), (_.k_EWeek = `week`), _);
   })({}),
   _ = 1e3,
   _ = (function (_) {
@@ -60226,19 +60266,19 @@ var _ = class _ {
   m_editDurationValue = void 0;
   m_schPreviewUpdate = new _();
   constructor(_) {
-    _(this),
+    (_(this),
       (this.m_originalEvent = _),
       this.SetCurrentModel(_.clone(!0)),
       this.DeriveTimeEditChoices(),
       this.DeriveVisibilitySetting(),
       this.EnsureCurrentLanguageValid(),
       _.BIsOGGEvent() && _.LoadOGGClanInfoForAppID(_.appid),
-      this.ClearDirty();
+      this.ClearDirty());
   }
   SetCurrentModel(_) {
-    (_.fnGetLocalizedGroupImages = () =>
+    ((_.fnGetLocalizedGroupImages = () =>
       _.GetAllLocalizedGroupImageHashAndExts()),
-      (this.m_curModel = _);
+      (this.m_curModel = _));
   }
   GetCreatorUserSteamID() {
     return new _(this.m_originalEvent.creator_steamid);
@@ -60785,13 +60825,13 @@ var _ = class _ {
       ((this.visibilitySetting = _), this.SetDirty(16));
   }
   SetGIDs(_, _, _) {
-    (this.m_curModel.clanSteamID = _),
+    ((this.m_curModel.clanSteamID = _),
       _(
         this.m_curModel.clanSteamID && this.m_curModel.clanSteamID.BIsValid(),
         `Invalid Clan SteamID: ` + _.ConvertTo64BitString(),
       ),
       (this.m_curModel.GID = _),
-      (this.m_curModel.AnnouncementGID = _);
+      (this.m_curModel.AnnouncementGID = _));
   }
   SetVisibilityState(_) {
     this.m_curModel.visibility_state != _ &&
@@ -60838,7 +60878,7 @@ var _ = class _ {
   }
   PrepareAsClone(_) {
     let _ = _.GID;
-    this.SetCurrentModel(_),
+    (this.SetCurrentModel(_),
       (this.m_curModel.GID = void 0),
       (this.m_curModel.AnnouncementGID = void 0),
       (this.m_curModel.visibility_state = _.k_EEventStateUnpublished),
@@ -60859,7 +60899,7 @@ var _ = class _ {
       this.DeriveTimeEditChoices(),
       this.DeriveVisibilitySetting(),
       this.EnsureCurrentLanguageValid(),
-      this.m_curModel.timestamp_loc_updated.clear();
+      this.m_curModel.timestamp_loc_updated.clear());
     for (let _ = this.m_curModel.vecTags.length - 1; _ >= 0; --_) {
       let _ = this.m_curModel.vecTags[_];
       (_.startsWith(`mod_`) ||
@@ -60870,10 +60910,10 @@ var _ = class _ {
         _ == `autocreate_promotools`) &&
         this.m_curModel.vecTags.splice(_, 1);
     }
-    (this.m_originalEvent = new _()),
+    ((this.m_originalEvent = new _()),
       (this.m_originalEvent.loadedAllLanguages = !0),
       _(this.m_curModel.GetEventType(), this.m_curModel.jsondata, _),
-      this.SetDirty(239);
+      this.SetDirty(239));
   }
   setEventType(_) {
     this.m_curModel.type != _ && ((this.m_curModel.type = _), this.SetDirty(1));
@@ -60919,30 +60959,30 @@ var _ = class _ {
       ((this.m_curModel.visibilityStartTime = _), this.SetDirty(16));
   }
   ResetSetVisibilityStartTime() {
-    this.SetVisibilityStartTime(this.m_originalEvent.visibilityStartTime),
-      this.DeriveVisibilitySetting();
+    (this.SetVisibilityStartTime(this.m_originalEvent.visibilityStartTime),
+      this.DeriveVisibilitySetting());
   }
   SetVisibilityEndTime(_) {
     this.m_curModel.visibilityEndTime != _ &&
       ((this.m_curModel.visibilityEndTime = _), this.SetDirty(16));
   }
   SetActionEndTime(_) {
-    (this.m_curModel.jsondata.action_end_time = _), this.SetDirty(32);
+    ((this.m_curModel.jsondata.action_end_time = _), this.SetDirty(32));
   }
   BIsDirty() {
     return this.m_bChanged;
   }
   ClearDirty() {
-    (this.m_bChanged = !1), (this.m_changes = 0);
+    ((this.m_bChanged = !1), (this.m_changes = 0));
   }
   SetDirty(_) {
-    !this.m_bChanged && _ != 0 && (this.m_bChanged = !0),
+    (!this.m_bChanged && _ != 0 && (this.m_bChanged = !0),
       (this.m_changes & _) != _ && (this.m_changes |= _),
       (this.m_curModel.rtime32_last_local_modification = Date.now() / 1e3),
       _.Get().BIsConnected() &&
         this.m_schPreviewUpdate.Schedule(_, () =>
           _(this).then(() => _.Get().UpdatePreview(this.GetEventModel())),
-        );
+        ));
   }
   GetChangeTypes() {
     return this.m_changes;
@@ -60954,7 +60994,7 @@ var _ = class _ {
     };
   }
   RestoreChangeState(_) {
-    (this.m_bChanged = _.bChanged), (this.m_changes = _.changes);
+    ((this.m_bChanged = _.bChanged), (this.m_changes = _.changes));
   }
   BIsDirtyType(_) {
     return !!(this.m_changes & _);
@@ -60962,12 +61002,12 @@ var _ = class _ {
   DeriveTimeEditChoices() {
     let _ = this.ComputeDurationSetting(),
       _ = _ != null;
-    (_ ??= this.ComputeDefaultDuration()),
+    ((_ ??= this.ComputeDefaultDuration()),
       this.SetEndEditDurationType(_.durationType),
       this.SetEndEditDurationValue(_.value),
       !this.BPublished() &&
         this.GetEventStartTime() < _.GetTimeNowWithOverride() &&
-        this.SetEventStartTime(0);
+        this.SetEventStartTime(0));
     let _ =
         !this.GetEventStartTime() || this.GetEventStartTime() <= 1
           ? `now`
@@ -60976,7 +61016,7 @@ var _ = class _ {
         !this.GetEventEndTime() || this.GetEventEndTime() <= 1 || _
           ? `duration`
           : `specified`;
-    this.SetStartTimeEditChoice(_), this.SetEndTimeEditChoice(_);
+    (this.SetStartTimeEditChoice(_), this.SetEndTimeEditChoice(_));
   }
   DeriveVisibilitySetting() {
     this.BHidden() &&
@@ -60988,7 +61028,7 @@ var _ = class _ {
   }
   static ComputeVisibilitySetting(_, _) {
     let _ = 2;
-    return !_ || _ <= 1 ? (_ = 0) : _ == _ && (_ = 1), _;
+    return (!_ || _ <= 1 ? (_ = 0) : _ == _ && (_ = 1), _);
   }
   static CalculateEndTimeFromStartAndDuration(_, _, _) {
     return _ == `week`
@@ -61010,11 +61050,11 @@ var _ = class _ {
     this.m_curModel.jsondata.bResyncableTagsStripped = void 0;
   }
   OnPreSave() {
-    this.RemoveNullCapsules(),
+    (this.RemoveNullCapsules(),
       this.PreSaveEventTimeAssignment(),
       this.FixupTabVisibilitySettings(),
       this.FixupMediaRowUniqueID(),
-      this.BTagsNeedResync() || _(this);
+      this.BTagsNeedResync() || _(this));
   }
   FixupMediaRowUniqueID() {
     for (let _ of this.GetSaleSections())
@@ -61026,12 +61066,12 @@ var _ = class _ {
   FixupTabVisibilitySettings() {
     let _ = null;
     for (let _ of this.GetSaleSections())
-      _.show_on_tabs &&
+      (_.show_on_tabs &&
         ((_.show_on_tabs = _.show_on_tabs.filter(
           (_) => _ && _.tabs.some((_) => _ === _.unique_id),
         )),
         _.show_on_tabs.length === 0 && (_.show_on_tabs = void 0)),
-        _.section_type === `tabs` && _.tabs && _.tabs.length > 0 && (_ = _);
+        _.section_type === `tabs` && _.tabs && _.tabs.length > 0 && (_ = _));
   }
   PreSaveEventTimeAssignment() {
     let _ = _.GetTimeNowWithOverride();
@@ -61063,7 +61103,7 @@ var _ = class _ {
   ComputeVisibilityStartTime(_, _) {
     switch (this.visibilitySetting) {
       default:
-        return console.error(`Unexpected: ` + this.visibilitySetting), 0;
+        return (console.error(`Unexpected: ` + this.visibilitySetting), 0);
       case 0:
         return 0;
       case 1:
@@ -61134,19 +61174,19 @@ var _ = class _ {
     let _ = _.GetHashAndExt(_),
       _ = this.m_curModel.jsondata;
     if (_ === `background` && _.localized_title_image[_] !== _)
-      (_.localized_title_image[_] = _), this.SetDirty(64);
+      ((_.localized_title_image[_] = _), this.SetDirty(64));
     else if (_ === `capsule` && _.localized_capsule_image[_] !== _)
-      (_.localized_capsule_image[_] = _), this.SetDirty(64);
+      ((_.localized_capsule_image[_] = _), this.SetDirty(64));
     else if (_ === `spotlight` && _.localized_spotlight_image[_] !== _)
-      (_.localized_spotlight_image[_] = _),
+      ((_.localized_spotlight_image[_] = _),
         this.GetImageURL(`spotlight`, 0) || (_.library_spotlight = !1),
-        this.SetDirty(64);
+        this.SetDirty(64));
     else if (
       _ === `localized_store_app_spotlight` &&
       (!_.localized_store_app_spotlight ||
         _.localized_store_app_spotlight[_] !== _)
     )
-      (_.localized_store_app_spotlight ||= _(
+      ((_.localized_store_app_spotlight ||= _(
         _.localized_store_app_spotlight || [],
         32,
         null,
@@ -61154,13 +61194,13 @@ var _ = class _ {
         (_.localized_store_app_spotlight[_] = _),
         this.GetImageURL(`localized_store_app_spotlight`, 0) ||
           (_.library_spotlight = !1),
-        this.SetDirty(64);
+        this.SetDirty(64));
     else if (
       _ === `localized_store_app_spotlight_mobile` &&
       (!_.localized_store_app_spotlight_mobile ||
         _.localized_store_app_spotlight_mobile[_] !== _)
     )
-      (_.localized_store_app_spotlight_mobile ||= _(
+      ((_.localized_store_app_spotlight_mobile ||= _(
         _.localized_store_app_spotlight_mobile || [],
         32,
         null,
@@ -61168,26 +61208,26 @@ var _ = class _ {
         (_.localized_store_app_spotlight_mobile[_] = _),
         this.GetImageURL(`localized_store_app_spotlight_mobile`, 0) ||
           (_.library_spotlight = !1),
-        this.SetDirty(64);
+        this.SetDirty(64));
     else if (
       _ === `broadcast_left` &&
       _.localized_broadcast_left_image[_] !== _
     )
-      (_.localized_broadcast_left_image[_] = _), this.SetDirty(64);
+      ((_.localized_broadcast_left_image[_] = _), this.SetDirty(64));
     else if (
       _ === `broadcast_right` &&
       _.localized_broadcast_right_image[_] !== _
     )
-      (_.localized_broadcast_right_image[_] = _), this.SetDirty(64);
+      ((_.localized_broadcast_right_image[_] = _), this.SetDirty(64));
     else if (_ === `sale_header`) {
       let _;
-      (_ =
+      ((_ =
         _.sale_num_headers > 1
           ? _.localized_per_day_sales_header[
               this.m_curModel.GetDayIndexFromEventStart()
             ]
           : _.localized_sale_header),
-        _[_] !== _ && ((_[_] = _), this.SetDirty(64));
+        _[_] !== _ && ((_[_] = _), this.SetDirty(64)));
     } else
       _ === `sale_logo` && _.Get(_.localized_sale_logo, _) !== _
         ? ((_.localized_sale_logo = _.Set(_.localized_sale_logo || [], _, _)),
@@ -61437,10 +61477,10 @@ var _ = class _ {
   }
   ToggleTag(_) {
     let _ = this.m_curModel.vecTags.indexOf(_);
-    _ == -1
+    (_ == -1
       ? this.m_curModel.vecTags.push(_)
       : this.m_curModel.vecTags.splice(_, 1),
-      this.SetDirty(16);
+      this.SetDirty(16));
   }
   SetTag(_, _) {
     _ ? this.AddTag(_) : this.ClearTags([_]);
@@ -61465,15 +61505,15 @@ var _ = class _ {
     });
   }
   SetSteamAwardCategory(_) {
-    (this.m_curModel.jsondata.steam_award_category_suggestion = _),
-      this.SetDirty(32);
+    ((this.m_curModel.jsondata.steam_award_category_suggestion = _),
+      this.SetDirty(32));
   }
   GetSteamAwardCategory() {
     return this.m_curModel.GetSteamAwardCategory();
   }
   SetSteamAwardNomineeVoteIDs(_) {
-    (this.m_curModel.jsondata.steam_award_category_voteids = _),
-      this.SetDirty(32);
+    ((this.m_curModel.jsondata.steam_award_category_voteids = _),
+      this.SetDirty(32));
   }
   GetSteamAwareNomineeVoteIDs() {
     return this.m_curModel.GetSteamAwardNomineeCategories();
@@ -61490,7 +61530,7 @@ var _ = class _ {
   BDoesSupportLanguage(_) {
     if (this.m_curModel && this.m_curModel.appid) {
       let _ = _.Get().GetApp(this.m_curModel.appid);
-      if (_) return _ === 29 && (_ = 6), _(_), _.BHasSomeLanguageSupport(_);
+      if (_) return (_ === 29 && (_ = 6), _(_), _.BHasSomeLanguageSupport(_));
     }
     return !1;
   }
@@ -61550,7 +61590,7 @@ var _ = class _ {
       : this.m_curModel.jsondata.sale_num_headers;
   }
   SetNumSalesBackgroundHeader(_) {
-    _ !== void 0 && _ <= 1 && (_ = void 0),
+    (_ !== void 0 && _ <= 1 && (_ = void 0),
       this.m_curModel.jsondata.sale_num_headers !== _ &&
         (this.m_curModel.jsondata.sale_num_headers === void 0 &&
           (this.m_curModel.jsondata.localized_sale_header.forEach(
@@ -61564,11 +61604,11 @@ var _ = class _ {
         _ !== void 0 &&
           ((this.m_curModel.jsondata.localized_per_day_sales_header = void 0),
           _.HelperInitializeNumSalesHeaderArray(this.m_curModel)),
-        this.SetDirty(512));
+        this.SetDirty(512)));
   }
   MarkUpdateSuccessful(_, _) {
-    (this.m_originalEvent.last_update_steamid = _),
-      (this.m_originalEvent.rtime32_last_modified = _);
+    ((this.m_originalEvent.last_update_steamid = _),
+      (this.m_originalEvent.rtime32_last_modified = _));
   }
   GetSaleSectionCount(_) {
     return _
@@ -61598,16 +61638,16 @@ var _ = class _ {
       _?.capsules && _.capsules.forEach(_);
     });
     let _ = this.GetTabSaleSection();
-    return _ && _.tabs.forEach((_) => _.capsules.forEach(_)), _;
+    return (_ && _.tabs.forEach((_) => _.capsules.forEach(_)), _);
   }
   GenerateBackgroundImageGroupUniqueID() {
     let _ = _();
-    for (; this.GetBackgroundImageGroupByID(_); ) _ = _();
+    for (; this.GetBackgroundImageGroupByID(_);) _ = _();
     return _;
   }
   GenerateSaleSectionUniqueID() {
     let _ = _();
-    for (; this.GetSaleSectionByID(_); ) _ = _();
+    for (; this.GetSaleSectionByID(_);) _ = _();
     return _;
   }
   GetFacetByID(_, _) {
@@ -61618,12 +61658,12 @@ var _ = class _ {
   }
   GenerateFacetUniqueID(_) {
     let _ = Math.floor(1 + Math.random() * 1e5);
-    for (; this.GetFacetByID(_, _); ) _ = Math.floor(1 + Math.random() * 1e5);
+    for (; this.GetFacetByID(_, _);) _ = Math.floor(1 + Math.random() * 1e5);
     return _;
   }
   GenerateFacetValueUniqueID(_) {
     let _ = Math.floor(1 + Math.random() * 1e5);
-    for (; this.GetFacetValueByID(_, _); )
+    for (; this.GetFacetValueByID(_, _);)
       _ = Math.floor(1 + Math.random() * 1e5);
     return _;
   }
@@ -61639,7 +61679,7 @@ var _ = class _ {
     return this.m_curModel.jsondata.bInvisibleGameOptIn;
   }
   SetOptedInForOGGWithoutVisibleStorePage(_) {
-    (this.m_curModel.jsondata.bInvisibleGameOptIn = _), this.SetDirty(32);
+    ((this.m_curModel.jsondata.bInvisibleGameOptIn = _), this.SetDirty(32));
   }
   SetMigrated(_) {
     this.m_curModel.jsondata.rt_migrated_time = _;
@@ -61650,20 +61690,20 @@ var _ = class _ {
       this.m_curModel.jsondata.sale_sections.forEach((_, _) => {
         if (!_.unique_id) {
           let _ = _ + 1;
-          for (; this.GetSaleSectionByID(_); ) _++;
+          for (; this.GetSaleSectionByID(_);) _++;
           this.m_curModel.jsondata.sale_sections[_].unique_id = _;
         }
         _.enable_faceted_browsing &&
           _.facets.forEach((_, _) => {
             if (!_.unique_id) {
               let _ = _ + 1;
-              for (; this.GetFacetByID(_, _); ) _++;
+              for (; this.GetFacetByID(_, _);) _++;
               this.m_curModel.jsondata.sale_sections[_].facets[_].unique_id = _;
             }
             _.facetValues.forEach((_, _) => {
               if (!_.unique_id) {
                 let _ = _ + 1;
-                for (; this.GetFacetValueByID(_, _); ) _++;
+                for (; this.GetFacetValueByID(_, _);) _++;
                 this.m_curModel.jsondata.sale_sections[_].facets[_].facetValues[
                   _
                 ].unique_id = _;
@@ -61700,14 +61740,14 @@ var _ = class _ {
     };
   }
   SetBackgroundImageEnabled(_) {
-    this.m_curModel.jsondata.sale_background_img_groups ||
+    (this.m_curModel.jsondata.sale_background_img_groups ||
       (this.m_curModel.jsondata.sale_background_img_groups = {
         enabled: _,
         groups: [this.CreateAndReturnNewDefaultBackgroundImageGroup()],
         last_group_until_cover_section_until_end: !1,
       }),
       (this.m_curModel.jsondata.sale_background_img_groups.enabled = _),
-      this.SetDirty(512);
+      this.SetDirty(512));
   }
   SetSalePageBackgroundGroup(_, _) {
     for (
@@ -61717,8 +61757,8 @@ var _ = class _ {
       this.m_curModel.jsondata.sale_background_img_groups.groups.push({
         num_sections: 1,
       });
-    (this.m_curModel.jsondata.sale_background_img_groups.groups[_] = _),
-      this.SetDirty(512);
+    ((this.m_curModel.jsondata.sale_background_img_groups.groups[_] = _),
+      this.SetDirty(512));
   }
   AddSalePageBackgroundGroup() {
     this.SetSalePageBackgroundGroup(
@@ -61732,16 +61772,16 @@ var _ = class _ {
       _ < this.m_curModel.jsondata.sale_background_img_groups?.groups?.length
     ) {
       let _ = [...this.m_curModel.jsondata.sale_background_img_groups.groups];
-      _.splice(_, 1),
+      (_.splice(_, 1),
         (this.m_curModel.jsondata.sale_background_img_groups.groups = _),
-        this.SetDirty(512);
+        this.SetDirty(512));
     }
   }
   SetSalePageLastCoverSectionUntilEnd(_) {
-    this.SetBackgroundImageEnabled(!0),
+    (this.SetBackgroundImageEnabled(!0),
       (this.m_curModel.jsondata.sale_background_img_groups.last_group_until_cover_section_until_end =
         _),
-      this.SetDirty(512);
+      this.SetDirty(512));
   }
   ClearAllBackgroundImageGroupSettings() {
     this.m_curModel.jsondata.sale_background_img_groups = void 0;
@@ -61786,11 +61826,11 @@ var _ = class _ {
   SetTabBackgroundGroup(_, _, _) {
     let _ = this.GetTabDefintionByID(_);
     if (_) {
-      for (; _.tab_background_img_groups?.groups?.length <= _; )
+      for (; _.tab_background_img_groups?.groups?.length <= _;)
         _.tab_background_img_groups.groups.push({
           num_sections: 1,
         });
-      (_.tab_background_img_groups.groups[_] = _), this.SetDirty(512);
+      ((_.tab_background_img_groups.groups[_] = _), this.SetDirty(512));
     }
   }
   AddTabBackgroundGroup(_) {
@@ -61804,27 +61844,27 @@ var _ = class _ {
     let _ = this.GetTabDefintionByID(_);
     if (_ && _ > 0 && _ < _.tab_background_img_groups?.groups?.length) {
       let _ = [..._.tab_background_img_groups.groups];
-      _.splice(_, 1),
+      (_.splice(_, 1),
         (_.tab_background_img_groups.groups = _),
-        this.SetDirty(512);
+        this.SetDirty(512));
     }
   }
   SetTabLastCoverSectionUntilEnd(_, _) {
     this.SetTabEnabled(_, !0);
     let _ = this.GetTabDefintionByID(_);
-    (_.tab_background_img_groups.last_group_until_cover_section_until_end = _),
-      this.SetDirty(512);
+    ((_.tab_background_img_groups.last_group_until_cover_section_until_end = _),
+      this.SetDirty(512));
   }
   GetTabLastCoverSectionUntilEnd(_) {
     return this.GetTabDefintionByID(_)?.tab_background_img_groups
       ?.last_group_until_cover_section_until_end;
   }
   ReplaceFrom(_) {
-    (this.m_curModel.name = _.m_curModel.name),
+    ((this.m_curModel.name = _.m_curModel.name),
       (this.m_curModel.description = _.m_curModel.description),
       (this.m_curModel.m_nBuildID = _.m_curModel.m_nBuildID),
       (this.m_curModel.m_strBuildBranch = _.m_curModel.m_strBuildBranch),
-      (this.m_curModel.broadcaster = _.m_curModel.broadcaster);
+      (this.m_curModel.broadcaster = _.m_curModel.broadcaster));
     let _ = this.m_curModel.jsondata.sale_vanity_id,
       _ =
         this.m_curModel.jsondata.sale_vanity_id_valve_approved_for_sale_subpath,
@@ -61832,7 +61872,7 @@ var _ = class _ {
       _ = this.m_curModel.jsondata.valve_access_log,
       _ = this.m_curModel.jsondata.clone_from_event_gid,
       _ = this.m_curModel.jsondata.rt_migrated_time;
-    (this.m_curModel.jsondata = JSON.parse(
+    ((this.m_curModel.jsondata = JSON.parse(
       JSON.stringify(_.m_curModel.jsondata),
     )),
       (this.m_curModel.jsondata.sale_vanity_id = _),
@@ -61841,10 +61881,10 @@ var _ = class _ {
       (this.m_curModel.jsondata.sale_update_landing_page_vanity_id = _),
       (this.m_curModel.jsondata.valve_access_log = _),
       (this.m_curModel.jsondata.clone_from_event_gid = _),
-      (this.m_curModel.jsondata.rt_migrated_time = _);
+      (this.m_curModel.jsondata.rt_migrated_time = _));
   }
 };
-_([_], _.prototype, `m_curModel`, void 0),
+(_([_], _.prototype, `m_curModel`, void 0),
   _([_], _.prototype, `m_bChanged`, void 0),
   _([_], _.prototype, `m_changes`, void 0),
   _([_], _.prototype, `m_bEnglishTextChanged`, void 0),
@@ -61927,7 +61967,7 @@ _([_], _.prototype, `m_curModel`, void 0),
   _([_.bound], _.prototype, `SetTabBackgroundGroup`, null),
   _([_.bound], _.prototype, `AddTabBackgroundGroup`, null),
   _([_.bound], _.prototype, `RemoveTabBackgroundGroup`, null),
-  _([_.bound], _.prototype, `SetTabLastCoverSectionUntilEnd`, null);
+  _([_.bound], _.prototype, `SetTabLastCoverSectionUntilEnd`, null));
 var _ = {
     capability: 1,
     appids: [],
@@ -61940,7 +61980,7 @@ var _ = {
     m_editModel;
     m_sections = void 0;
     constructor(_) {
-      super(_.GetEmailSettings()),
+      (super(_.GetEmailSettings()),
         _(this),
         (this.m_editModel = _),
         (this.m_sections = []),
@@ -61953,7 +61993,7 @@ var _ = {
               (this.m_setting.internal_targeting.partnerids = [])
             : (this.m_setting.internal_targeting = {
                 ..._,
-              }));
+              })));
     }
     BSameEditModel(_) {
       return _ === this.m_editModel;
@@ -61990,78 +62030,78 @@ var _ = {
       }
     }
     SetFilterIRTopN(_) {
-      this.EnsureFilteringExists(),
+      (this.EnsureFilteringExists(),
         this.m_setting.filtering.ir_topn !== _ &&
           ((this.m_setting.filtering.ir_topn = _),
-          this.m_editModel.SetDirty(_.jsondata_email));
+          this.m_editModel.SetDirty(_.jsondata_email)));
     }
     SetFilterWishlist(_) {
-      this.EnsureFilteringExists(),
+      (this.EnsureFilteringExists(),
         this.m_setting.filtering.wishlist !== _ &&
           ((this.m_setting.filtering.wishlist = _),
-          this.m_editModel.SetDirty(_.jsondata_email));
+          this.m_editModel.SetDirty(_.jsondata_email)));
     }
     SetControlGroupPercent(_) {
-      _(_ >= 0 && _ <= 99, `SetControlGroupPercent outside of bounds: ` + _),
+      (_(_ >= 0 && _ <= 99, `SetControlGroupPercent outside of bounds: ` + _),
         (!_ || _ <= 0) && (_ = 0),
         _ > 99 && (_ = 99),
         this.EnsureFilteringExists(),
         this.m_setting.filtering.control_group_percent !== _ &&
           ((this.m_setting.filtering.control_group_percent = _),
-          this.m_editModel.SetDirty(_.jsondata_email));
+          this.m_editModel.SetDirty(_.jsondata_email)));
     }
     SetTargetingExistingPlayer(_) {
-      this.EnsureTargetingExists(),
+      (this.EnsureTargetingExists(),
         this.m_setting.targeting.game_players !== _ &&
           ((this.m_setting.targeting.game_players = _),
           _ && (this.m_setting.targeting.game_owner_with_no_playtime = !1),
-          this.m_editModel.SetDirty(_.jsondata_email));
+          this.m_editModel.SetDirty(_.jsondata_email)));
     }
     SetTargetingGameWishlist(_) {
-      this.EnsureTargetingExists(),
+      (this.EnsureTargetingExists(),
         this.m_setting.targeting.game_wishlister !== _ &&
           ((this.m_setting.targeting.game_wishlister = _),
-          this.m_editModel.SetDirty(_.jsondata_email));
+          this.m_editModel.SetDirty(_.jsondata_email)));
     }
     SetExcludeGameOwners(_) {
-      this.EnsureTargetingExists(),
+      (this.EnsureTargetingExists(),
         this.m_setting.targeting.game_exclude_owners !== _ &&
           ((this.m_setting.targeting.game_exclude_owners = _),
           _ && (this.m_setting.targeting.game_owner_with_no_playtime = !1),
-          this.m_editModel.SetDirty(_.jsondata_email));
+          this.m_editModel.SetDirty(_.jsondata_email)));
     }
     SetOwnersWithNoPlaytime(_) {
-      this.EnsureTargetingExists(),
+      (this.EnsureTargetingExists(),
         this.m_setting.targeting.game_owner_with_no_playtime !== _ &&
           ((this.m_setting.targeting.game_owner_with_no_playtime = _),
           _ &&
             ((this.m_setting.targeting.game_exclude_owners = !1),
             (this.m_setting.targeting.game_players = !1),
             (this.m_setting.targeting.creator_home_player = void 0)),
-          this.m_editModel.SetDirty(_.jsondata_email));
+          this.m_editModel.SetDirty(_.jsondata_email)));
     }
     SetTargetingGameFollower(_) {
-      this.EnsureTargetingExists(),
+      (this.EnsureTargetingExists(),
         this.m_setting.targeting.game_followers !== _ &&
           ((this.m_setting.targeting.game_followers = _),
-          this.m_editModel.SetDirty(_.jsondata_email));
+          this.m_editModel.SetDirty(_.jsondata_email)));
     }
     SetTargetingCreator(_, _) {
-      this.EnsureTargetingExists(),
+      (this.EnsureTargetingExists(),
         (this.m_setting.targeting.creator_home = _ ? [_] : void 0),
         this.m_setting.targeting.creator_home_player &&
           this.m_setting.targeting.creator_home_player[0] != _ &&
           (this.m_setting.targeting.creator_home_player = void 0),
-        this.m_editModel.SetDirty(_.jsondata_email);
+        this.m_editModel.SetDirty(_.jsondata_email));
     }
     SetTargetingCreatorPlayer(_, _) {
-      this.EnsureTargetingExists(),
+      (this.EnsureTargetingExists(),
         (this.m_setting.targeting.creator_home_player = _ ? [_] : void 0),
         this.m_setting.targeting.creator_home &&
           this.m_setting.targeting.creator_home[0] != _ &&
           (this.m_setting.targeting.creator_home = void 0),
         _ && (this.m_setting.targeting.game_owner_with_no_playtime = !1),
-        this.m_editModel.SetDirty(_.jsondata_email);
+        this.m_editModel.SetDirty(_.jsondata_email));
     }
     SetForceFeatureID(_) {
       this.m_setting.force_feature_id != _ &&
@@ -62091,7 +62131,7 @@ var _ = {
         this.m_editModel.SetDirty(_.jsondata_email));
     }
     AddSection(_) {
-      this.m_setting.sections.push({
+      (this.m_setting.sections.push({
         ..._,
       }),
         this.m_sections.push(
@@ -62100,7 +62140,7 @@ var _ = {
             this.m_editModel,
           ),
         ),
-        this.m_editModel.SetDirty(_.jsondata_email);
+        this.m_editModel.SetDirty(_.jsondata_email));
     }
     SetInternalTargetPriority(_) {
       this.m_setting.internal_targeting.priority !== _ &&
@@ -62127,15 +62167,15 @@ var _ = {
         this.m_editModel.SetDirty(_.jsondata_email));
     }
     SetInternalAppIDs(_) {
-      (this.m_setting.internal_targeting.appids = _),
-        this.m_editModel.SetDirty(_.jsondata_email);
+      ((this.m_setting.internal_targeting.appids = _),
+        this.m_editModel.SetDirty(_.jsondata_email));
     }
     SetInternalPublisherIDs(_) {
-      (this.m_setting.internal_targeting.partnerids = _),
-        this.m_editModel.SetDirty(_.jsondata_email);
+      ((this.m_setting.internal_targeting.partnerids = _),
+        this.m_editModel.SetDirty(_.jsondata_email));
     }
   };
-_([_], _.prototype, `m_sections`, void 0),
+(_([_], _.prototype, `m_sections`, void 0),
   _([_], _.prototype, `SetFilterIRTopN`, null),
   _([_], _.prototype, `SetFilterWishlist`, null),
   _([_], _.prototype, `SetControlGroupPercent`, null),
@@ -62155,11 +62195,11 @@ _([_], _.prototype, `m_sections`, void 0),
   _([_], _.prototype, `UpdateInternalTargetPublisherRights`, null),
   _([_], _.prototype, `UpdateInternalTargetAppRights`, null),
   _([_], _.prototype, `SetInternalAppIDs`, null),
-  _([_], _.prototype, `SetInternalPublisherIDs`, null);
+  _([_], _.prototype, `SetInternalPublisherIDs`, null));
 var _ = class _ extends _ {
   m_editModel = void 0;
   constructor(_, _) {
-    super(_), _(this), (this.m_editModel = _);
+    (super(_), _(this), (this.m_editModel = _));
   }
   SetHeadline(_, _) {
     return this.m_section.localized_headline.length < _ ||
@@ -62267,7 +62307,7 @@ var _ = class _ extends _ {
     );
   }
 };
-_([_], _.prototype, `SetHeadline`, null),
+(_([_], _.prototype, `SetHeadline`, null),
   _([_], _.prototype, `SetBody`, null),
   _([_], _.prototype, `SetVideoLink`, null),
   _([_], _.prototype, `SetVideoHashAndExt`, null),
@@ -62276,7 +62316,7 @@ _([_], _.prototype, `SetHeadline`, null),
   _([_], _.prototype, `SetButtonDestination`, null),
   _([_.bound], _.prototype, `SetButtonDestinationStoreURL`, null),
   _([_], _.prototype, `SetButtonAppOverride`, null),
-  _([_], _.prototype, `RemoveSubSection`, null);
+  _([_], _.prototype, `RemoveSubSection`, null));
 var _ = 100,
   _ = 100,
   _ = {
@@ -62284,37 +62324,37 @@ var _ = 100,
       let _,
         _ = null,
         _ = new Image();
-      (_.crossOrigin = `anonymous`),
+      ((_.crossOrigin = `anonymous`),
         (_.onerror = (_) => {
-          (_ = `Load fail on url ` + _ + ` with error: ` + _(_).strErrorMsg),
-            console.error(_);
+          ((_ = `Load fail on url ` + _ + ` with error: ` + _(_).strErrorMsg),
+            console.error(_));
         }),
         (_.onload = () => {
           let _ = new Image();
-          (_.crossOrigin = `anonymous`),
+          ((_.crossOrigin = `anonymous`),
             (_.onerror = (_) => {
-              (_ =
+              ((_ =
                 `Load fail on url ` + _ + ` with error: ` + _(_).strErrorMsg),
-                console.error(_);
+                console.error(_));
             }),
             (_.onload = () => {
               try {
                 let _ = document.createElement(`canvas`),
                   _ = _.getContext(`2d`);
-                (_.width = _), (_.height = _), _?.drawImage(_, 0, 0, _, _);
+                ((_.width = _), (_.height = _), _?.drawImage(_, 0, 0, _, _));
                 let _ = (_ - _.width) / 2,
                   _ = (_ - _.height) / 2;
-                _?.drawImage(_, _, _), _.toBlob((_) => (_ = _), `image/jpeg`);
+                (_?.drawImage(_, _, _), _.toBlob((_) => (_ = _), `image/jpeg`));
               } catch (_) {
                 _ = `Failed during image processing for ` + _ + ` with ` + _;
               }
             }),
-            (_.src = _);
+            (_.src = _));
         }),
-        (_.src = _);
+        (_.src = _));
       let _ = 0,
         _ = _;
-      for (; _ === void 0 && _ < _; ) await _(_), (_ += 1);
+      for (; _ === void 0 && _ < _;) (await _(_), (_ += 1));
       if (
         (_ >= _ &&
           _ === void 0 &&
@@ -62322,11 +62362,11 @@ var _ = 100,
         _)
       )
         throw (
-          (console.log(_),
+          console.log(_),
           {
             success: 2,
             err_msg: _,
-          })
+          }
         );
       let _ = new _(_, void 0),
         _ = new _(
@@ -62353,7 +62393,7 @@ var _ = 100,
   },
   _ = class _ extends _ {
     constructor(_ = !1) {
-      super(_), _(this);
+      (super(_), _(this));
     }
     m_editModel;
     m_curHoverCategoryType = void 0;
@@ -62365,8 +62405,8 @@ var _ = 100,
       };
     }
     SetCurHoverCategory(_, _) {
-      this.m_curHoverCategoryType !== _ && (this.m_curHoverCategoryType = _),
-        this.m_curHoverCategoryTags !== _ && (this.m_curHoverCategoryTags = _);
+      (this.m_curHoverCategoryType !== _ && (this.m_curHoverCategoryType = _),
+        this.m_curHoverCategoryTags !== _ && (this.m_curHoverCategoryTags = _));
     }
     BHasEditModel() {
       return this.m_editModel != null;
@@ -62385,7 +62425,7 @@ var _ = 100,
     }
     ResetModel(_, _) {
       let _ = new _();
-      (_.GID = _),
+      ((_.GID = _),
         (_.clanSteamID = _ || _.InitFromClanID(_.CLANACCOUNTID, _.EUNIVERSE)),
         _(
           _.clanSteamID && _.clanSteamID.BIsValid(),
@@ -62410,7 +62450,7 @@ var _ = 100,
             include_supported_languages: !0,
             include_release: !0,
             include_platforms: !0,
-          });
+          }));
     }
     async LoadEditorModel(_, _) {
       if (
@@ -62421,7 +62461,7 @@ var _ = 100,
         )
       ) {
         if (_) {
-          this.ResetModel(_, _), await this.LoadHiddenPartnerEvent(_, _);
+          (this.ResetModel(_, _), await this.LoadHiddenPartnerEvent(_, _));
           let _ = this.GetClanEventModel(_);
           _ &&
             (this.m_editModel.Refresh(_),
@@ -62435,7 +62475,7 @@ var _ = 100,
     }
     CreateClone() {
       let _ = this.GetEditModel().GetEventModel().clone();
-      return this.m_editModel.PrepareAsClone(_), this.m_editModel;
+      return (this.m_editModel.PrepareAsClone(_), this.m_editModel);
     }
     async PublishModel(_, _) {
       let _ = await this.InternalSaveAction(_, !0, !1, _);
@@ -62610,7 +62650,7 @@ var _ = 100,
             this.m_editModel.SetName(0, _ || _);
           }
         }
-        _.append(`hidden`, `` + this.m_editModel.BHidden()),
+        (_.append(`hidden`, `` + this.m_editModel.BHidden()),
           _.append(`published`, `` + this.m_editModel.BPublished()),
           _.append(`appid`, `` + this.m_editModel.GetAppID()),
           _.append(`event_name`, this.m_editModel.GetName(0)),
@@ -62643,7 +62683,7 @@ var _ = 100,
             _.append(
               `broadcaster_accountid`,
               `` + this.m_editModel.GetBroadcaster().GetAccountID(),
-            );
+            ));
         for (let _ = 0; _ < 32; ++_)
           this.m_editModel.BHasLanguage(_) &&
             (_.append(
@@ -62675,7 +62715,7 @@ var _ = 100,
             _.data.success != 1 && console.error(`InternalSaveAction`, _.data),
             this.m_editModel.GetGID() == _)
           ) {
-            this.m_editModel.ClearDirty(),
+            (this.m_editModel.ClearDirty(),
               _
                 ? (this.m_editModel.UpdateVisibilityState(
                     _.data.published,
@@ -62697,9 +62737,10 @@ var _ = 100,
                       this.m_editModel
                         .GetEventModel()
                         .timestamp_loc_updated.set(_.lang, _.timestamp_updated);
-                    }));
+                    })));
             let _ = this.m_editModel.GetEventModel();
-            this.m_mapExistingEvents.set(_.GID, _), this.m_editModel.Refresh(_);
+            (this.m_mapExistingEvents.set(_.GID, _),
+              this.m_editModel.Refresh(_));
           }
         });
         let _ = await _.GetLastUpdateTimeForEvent(
@@ -62745,12 +62786,12 @@ var _ = 100,
               _(() => {
                 _.loadedAllLanguages = !0;
                 for (let _ of _)
-                  _.name.set(_.language, _.headline),
+                  (_.name.set(_.language, _.headline),
                     _.description.set(_.language, _.body),
                     _.timestamp_loc_updated.set(
                       _.language,
                       _.timestamp_updated,
-                    );
+                    ));
                 this.m_editModel.Refresh(_);
               });
           },
@@ -62801,9 +62842,9 @@ var _ = 100,
     async SetupPartnerEmailCampaign(_, _, _) {
       let _ = _.COMMUNITY_BASE_URL + `eventemail/ajaxsetuppartneremail`,
         _ = new URLSearchParams();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`clanid`, `` + _.GetAccountID()),
-        _.append(`gidevent`, _);
+        _.append(`gidevent`, _));
       let _ = await _.default.post(_, _, {
         withCredentials: !0,
         cancelToken: _.token,
@@ -62873,7 +62914,7 @@ var _ = 100,
     async SetupInternalPartnerCommunication(_, _, _, _) {
       let _ = _.COMMUNITY_BASE_URL + `eventadmin/ajaxupdatepartneremailtarget`,
         _ = new URLSearchParams();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`clan_accountid`, `` + _.GetAccountID()),
         _.append(`gid_event`, _),
         _.append(`partner_capability`, `` + _.capability),
@@ -62881,7 +62922,7 @@ var _ = 100,
         _.append(`publisher_right_flags`, `` + _.pub_rights),
         _.append(`mark_urgent`, `` + _.priority),
         _.append(`appids`, _.appids.join(`,`)),
-        _.append(`publisherids`, _.partnerids.join(`,`));
+        _.append(`publisherids`, _.partnerids.join(`,`)));
       let _ = await _.default.post(_, _, {
         withCredentials: !0,
         cancelToken: _.token,
@@ -62902,10 +62943,10 @@ var _ = 100,
       );
     }
   };
-_([_], _.prototype, `m_curHoverCategoryType`, void 0),
+(_([_], _.prototype, `m_curHoverCategoryType`, void 0),
   _([_], _.prototype, `m_curHoverCategoryTags`, void 0),
   _([_], _.prototype, `ResetModel`, null),
-  _([_], _.prototype, `LoadClanEventLocalization`, null);
+  _([_], _.prototype, `LoadClanEventLocalization`, null));
 function _(_) {
   return `U${_.accountid || `anon`}-${_}`;
 }
@@ -62975,8 +63016,8 @@ function _(_, _) {
       let _ = await _(_);
       if (_?.success == 1) {
         let _ = [];
-        _.announcement_gids?.forEach((_) => _.push(_(_, _, _))),
-          _.hidden_announcement_gids?.forEach((_) => _.push(_(_, _, _)));
+        (_.announcement_gids?.forEach((_) => _.push(_(_, _, _))),
+          _.hidden_announcement_gids?.forEach((_) => _.push(_(_, _, _))));
         let _ = await Promise.all(_);
         return {
           rgEventModels: _(_),
@@ -63062,7 +63103,7 @@ function _(_) {
       nodeAttrs: _,
     }),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]),
     _ = _.useCallback((_) => _(_(_)), [_]),
     [_, _] = _(_, {
@@ -63082,10 +63123,10 @@ function _(_) {
       let _ = {
         ..._.attrs,
       };
-      `style` in _ && _.style === `inline`
+      (`style` in _ && _.style === `inline`
         ? delete _.style
         : (_.style = `inline`),
-        _(_.type.create(_, _.content, _.marks));
+        _(_.type.create(_, _.content, _.marks)));
     }, [_.attrs, _.content, _.marks, _.type, _]),
     _ = {
       createCarousel: _ ? _ : void 0,
@@ -63255,7 +63296,7 @@ function _(_) {
     } = _,
     [_, _] = _.useState(),
     _ = _.useCallback(() => {
-      _(void 0), _ && _();
+      (_(void 0), _ && _());
     }, [_]);
   return {
     showInsertImageModal: _.useCallback(() => {
@@ -63314,26 +63355,26 @@ function _(_) {
     ),
     _ = _.useCallback(
       (_) => {
-        _(
+        (_(
           {
             src: _,
           },
           _,
         ),
-          _();
+          _());
       },
       [_, _, _],
     ),
     _ = _.useCallback(
       (_) => {
-        _(
+        (_(
           {
             ..._,
             ..._,
           },
           _,
         ),
-          _();
+          _());
       },
       [_, _, _, _],
     ),
@@ -63341,7 +63382,7 @@ function _(_) {
     _ = null,
     _;
   if (_ == `image`)
-    (_ = (0, _.jsx)(_, {
+    ((_ = (0, _.jsx)(_, {
       active: _ == `hotlink`,
       bIsEdit: _,
       hideModal: _,
@@ -63352,17 +63393,17 @@ function _(_) {
         _
           ? `#EventEditor_ReplaceImage_Title`
           : `#EventEditor_InsertImage_Title`,
-      ));
+      )));
   else if (_ == `video`)
-    (_ = (0, _.jsx)(_, {
+    ((_ = (0, _.jsx)(_, {
       active: _ == `hotlink`,
       bIsEdit: _,
       hideModal: _,
       attrs: _,
       setAttrs: _,
     })),
-      (_ = _(`#EventEditor_EditVideo_Title`));
-  else return _(_, `Unhandled type`), null;
+      (_ = _(`#EventEditor_EditVideo_Title`)));
+  else return (_(_, `Unhandled type`), null);
   return (0, _.jsxs)(_, {
     active: !0,
     onDismiss: _,
@@ -63452,7 +63493,7 @@ function _(_) {
     }, [_]),
     (0, _.jsxs)(_, {
       onSubmit: (_) => {
-        _({
+        (_({
           ..._,
           mp4: _(_) || void 0,
           webm: _(_) || void 0,
@@ -63460,7 +63501,7 @@ function _(_) {
           autoplay: _,
           controls: _,
         }),
-          _();
+          _());
       },
       children: [
         (0, _.jsxs)(_, {
@@ -63538,7 +63579,7 @@ function _(_) {
     ),
     _ = _.useCallback(
       (_, _) => {
-        _(_), _ && _(_);
+        (_(_), _ && _(_));
       },
       [_],
     );
@@ -63664,7 +63705,7 @@ function _(_, _, _, _, _) {
           break;
         case _.k_eInsertVideo:
           let _;
-          _.file_type == 4
+          (_.file_type == 4
             ? (_ = {
                 mp4: _(_),
               })
@@ -63672,7 +63713,7 @@ function _(_, _, _, _, _) {
               (_ = {
                 webm: _(_),
               }),
-            _ && _ && (_ = _.create(_));
+            _ && _ && (_ = _.create(_)));
           break;
         case _.k_eShowImageGroup:
           break;
@@ -63681,7 +63722,7 @@ function _(_, _, _, _, _) {
       }
       if (_) {
         let _ = _.state._;
-        _.selection.replaceWith(_, _), _.dispatch(_);
+        (_.selection.replaceWith(_, _), _.dispatch(_));
       }
     };
     return (
@@ -63743,20 +63784,20 @@ var _ = _((_) => {
                   _.BIsVisibleEvent() &&
                   (_.RecordEventRead(_, _), (_ = !0));
               }
-              _.length > 0 &&
+              (_.length > 0 &&
                 (_.filter((_) => _.BIsPartnerEvent()).forEach((_) =>
                   _.RecordEventShown(_, _),
                 ),
                 (_ = !0)),
-                _ && _.Flush();
+                _ && _.Flush());
             }
           }
         })().catch((_) => {
-          console.error(
+          (console.error(
             `PartnerEventRow: loading the adjacent events failed`,
             _,
           ),
-            _(!1);
+            _(!1));
         }),
         () => {
           _.current && _.current(`PartnerEventRow: unmounting`);
@@ -63785,290 +63826,3 @@ var _ = _((_) => {
         })
   );
 });
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

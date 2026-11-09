@@ -3,20 +3,20 @@
     margin: 0;
   }
   :where(.xtBr-L5Owus-):where(
-      address,
-      b,
-      cite,
-      code,
-      dfn,
-      em,
-      i,
-      kbd,
-      q,
-      samp,
-      small,
-      strong,
-      var
-    ) {
+    address,
+    b,
+    cite,
+    code,
+    dfn,
+    em,
+    i,
+    kbd,
+    q,
+    samp,
+    small,
+    strong,
+    var
+  ) {
     font: unset;
   }
   :where(.xtBr-L5Owus-):where(h1, h2, h3, h4, h5, h6) {
@@ -28,17 +28,17 @@
     -webkit-tap-highlight-color: transparent;
   }
   :where(.xtBr-L5Owus-):where(
-      button,
-      select,
-      [type="button"],
-      [type="image"],
-      [type="reset"],
-      [type="submit"],
-      [type="checkbox"],
-      [type="color"],
-      [type="radio"],
-      [type="range"]
-    ) {
+    button,
+    select,
+    [type="button"],
+    [type="image"],
+    [type="reset"],
+    [type="submit"],
+    [type="checkbox"],
+    [type="color"],
+    [type="radio"],
+    [type="range"]
+  ) {
     all: unset;
     text-indent: initial;
     -webkit-tap-highlight-color: transparent;
@@ -55,18 +55,18 @@
     font-weight: 400;
   }
   :where(.xtBr-L5Owus-):where(
-      textarea,
-      input:not(
-          [type="button"],
-          [type="image"],
-          [type="reset"],
-          [type="submit"],
-          [type="checkbox"],
-          [type="color"],
-          [type="radio"],
-          [type="range"]
-        )
-    ) {
+    textarea,
+    input:not(
+      [type="button"],
+      [type="image"],
+      [type="reset"],
+      [type="submit"],
+      [type="checkbox"],
+      [type="color"],
+      [type="radio"],
+      [type="range"]
+    )
+  ) {
     all: unset;
     text-align: start;
     width: -webkit-fill-available;

@@ -22,4 +22,3 @@ function _(_) {
 function _() {
   return Math.floor(Date.now() / 1e3);
 }
-export { _, _, _, _, _ };

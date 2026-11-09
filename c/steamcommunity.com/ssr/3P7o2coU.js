@@ -1760,7 +1760,7 @@ function _(_) {
         _ = _.state === void 0 || _.state == `locked`,
         _ = _ && _.hidden.length > 0,
         _ = [];
-      _ &&
+      (_ &&
         _.push({
           section: `unlocked`,
           achievements: _.unlocked,
@@ -1794,14 +1794,14 @@ function _(_) {
               _(_.hidden.length),
             ),
             dividerWhenEmpty: !1,
-          });
+          }));
       let _ = !0,
         _ = () => {
           let _ = {
             groupid: _,
             first: _,
           };
-          return (_ = !1), _;
+          return ((_ = !1), _);
         },
         _ = `none`;
       _.forEach(
@@ -1816,7 +1816,7 @@ function _(_) {
           _,
         ) => {
           if (_ == `hidden` && !_.has(_)) {
-            _.push({
+            (_.push({
               key: `s${_}:${_}`,
               type: `section`,
               placement: _(),
@@ -1832,12 +1832,12 @@ function _(_) {
                 groupid: _,
                 count: _.length,
               }),
-              (_ = `table`);
+              (_ = `table`));
             return;
           }
           let _ = _(_.filter(_), _, _, _),
             _ = _.length == 0;
-          _.push({
+          (_.push({
             key: `s${_}:${_}`,
             type: `section`,
             placement: _(),
@@ -1864,7 +1864,7 @@ function _(_) {
                 type: `filtered`,
                 placement: _(),
                 count: _.length - _.length,
-              });
+              }));
         },
       );
     }
@@ -2642,7 +2642,7 @@ function _(_) {
         onClick:
           _ &&
           ((_) => {
-            _.preventDefault(), _(_, _);
+            (_.preventDefault(), _(_, _));
           }),
         className: _(_, _),
         children: (0, _.jsxs)(_, {
@@ -2815,7 +2815,7 @@ function _(_) {
     _ = _?.minutes_played_forever ?? 0;
   if (!_ || (!_.owned && _ == 0)) return null;
   let _ = (_) => {
-      _(_), _(_ ? [_] : []);
+      (_(_), _(_ ? [_] : []));
     },
     _ = _(_?.unlocked.total ?? 0),
     _ = _(_?.achievements.total ?? 0),

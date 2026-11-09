@@ -40,8 +40,8 @@ function o(e, t, n = !0) {
     r = r.substring(0, t);
     let e = r.replace(/^(.*([.!?])) .*$/, `$1`),
       i = e.length;
-    (i < t * 0.6 || i == t) && (e = r.replace(/ [^ ]*$/, `...`)),
-      (r = n ? e.replace(/(\r\n|\n|\r)/gm, ``) : e);
+    ((i < t * 0.6 || i == t) && (e = r.replace(/ [^ ]*$/, `...`)),
+      (r = n ? e.replace(/(\r\n|\n|\r)/gm, ``) : e));
   }
   return r;
 }
@@ -51,7 +51,7 @@ function s(e) {
     r;
   if (e.length === 0) return t;
   for (n = 0; n < e.length; n++)
-    (r = e.charCodeAt(n)), (t = (t << 5) - t + r), (t |= 0);
+    ((r = e.charCodeAt(n)), (t = (t << 5) - t + r), (t |= 0));
   return t;
 }
 function c(e) {

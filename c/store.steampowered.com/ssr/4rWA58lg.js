@@ -111,7 +111,7 @@ function _(_, _, _, _) {
   let _ = ``;
   if (_ !== void 0 && _) {
     let _ = new Date();
-    _.setTime(_.getTime() + 864e5 * _), (_ = `; expires=` + _.toUTCString());
+    (_.setTime(_.getTime() + 864e5 * _), (_ = `; expires=` + _.toUTCString()));
   }
   document.cookie =
     encodeURIComponent(_) + `=` + encodeURIComponent(_) + _ + `;path=` + _;
@@ -147,9 +147,9 @@ function _(_, _ = _, _) {
 }
 var _;
 function _() {
-  if (!_()) return (_ ||= _()), _;
+  if (!_()) return ((_ ||= _()), _);
   let _ = _(`sessionid`);
-  return (_ ||= _()), _;
+  return ((_ ||= _()), _);
 }
 function _() {
   let _ = ``;
@@ -158,7 +158,7 @@ function _() {
 }
 function _() {
   let _ = _();
-  return _(`sessionid`, _, 0), _;
+  return (_(`sessionid`, _, 0), _);
 }
 var _ = new Set();
 function _() {
@@ -169,7 +169,7 @@ function _() {
 var _ = `presentation_mode`;
 function _() {
   let _ = null;
-  return _() && (_ = _(_)), !!(_ && Number.parseInt(_) === 1);
+  return (_() && (_ = _(_)), !!(_ && Number.parseInt(_) === 1));
 }
 function _(_) {
   return _ == 3 || _ == 6;
@@ -540,9 +540,9 @@ function _(_) {
 var _ = window.Config ?? _,
   _ = window.UserConfig ?? _,
   _ = window.Config ? () => Promise.resolve() : _;
-window.Config && Object.assign(_, window.Config),
+(window.Config && Object.assign(_, window.Config),
   window.UserConfig && Object.assign(_, window.UserConfig),
-  window.WebConfig && Object.assign(_, window.WebConfig);
+  window.WebConfig && Object.assign(_, window.WebConfig));
 var _ = {
   LAUNCHER_TYPE: 0,
   ON_FRAME: !1,
@@ -587,38 +587,3 @@ function _(_) {
     _.IN_STEAMUI ? void 0 : _
   );
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

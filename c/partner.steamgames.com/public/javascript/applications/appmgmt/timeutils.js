@@ -10,4 +10,3 @@ function _(_) {
     _.unix()
   );
 }
-export { _, _ };

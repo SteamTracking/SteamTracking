@@ -19,7 +19,7 @@ function _(_) {
     _.useEffect(() => {
       if (!_ && !_) {
         let _ = new URL(window.location.href);
-        _.searchParams.set(`v1`, `1`), window.location.replace(_.toString());
+        (_.searchParams.set(`v1`, `1`), window.location.replace(_.toString()));
       }
     }, [_, _]),
     _

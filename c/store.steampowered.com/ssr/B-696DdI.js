@@ -7,11 +7,11 @@ function _(_, _, _, _, _, _) {
 }
 async function _(_, _, _, _, _, _) {
   let _ = _.Init(_);
-  _(_, _),
+  (_(_, _),
     _ && _(_, _.data_request),
     _ && _.Body().set_override_country_code(_),
     _.Body().set_query(_.fromObject(_)),
-    _.Body().set_query_name(_);
+    _.Body().set_query_name(_));
   let _ = await _.Query(_, _);
   if (_.GetEResult() != 1)
     throw `Error executing StoreQuery "${_}": ${_.GetErrorMessage()}`;
@@ -26,4 +26,3 @@ async function _(_, _, _, _, _, _) {
     }
   );
 }
-export { _, _ };

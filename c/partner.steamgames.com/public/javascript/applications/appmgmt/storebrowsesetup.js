@@ -49,4 +49,3 @@ function _() {
 function _(_) {
   return _.Initialize(_.GetServiceTransport(), _.is_partner_member);
 }
-export { _, _ };

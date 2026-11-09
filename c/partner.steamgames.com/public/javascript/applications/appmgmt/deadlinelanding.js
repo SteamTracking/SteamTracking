@@ -232,8 +232,8 @@ function _() {
   _.useEffect(() => () => window.clearTimeout(_.current), []);
   let _ = (_) => {
       let _ = Number(_.currentTarget.value);
-      window.clearTimeout(_.current),
-        (_.current = window.setTimeout(() => _(_), 1e3));
+      (window.clearTimeout(_.current),
+        (_.current = window.setTimeout(() => _(_), 1e3)));
     },
     _ = _.useMemo(() => {
       let _ = new Map();
@@ -245,10 +245,10 @@ function _() {
           return new Date(_?.CreatedOn).getTime() - _.getTime();
         })?.forEach((_) => {
           let _;
-          _.has(_.data.gid)
+          (_.has(_.data.gid)
             ? (_ = _.get(_.data.gid))
             : ((_ = []), _.set(_.data.gid, _)),
-            _.push(_.data);
+            _.push(_.data));
         }),
         _
       );
@@ -461,9 +461,9 @@ function _(_, _) {
     queryFn: async () => {
       if (_ && _ < 0) return;
       let _ = new FormData();
-      _.append(`type`, _.toString()),
+      (_.append(`type`, _.toString()),
         _.append(`sessionid`, _()),
-        _ && _.append(`partnerid`, _.toString());
+        _ && _.append(`partnerid`, _.toString()));
       let _ = `${_.PARTNER_BASE_URL}deadlines/ajaxgetdeadlines`,
         _ = await _.default.post(_, _, {
           withCredentials: !0,

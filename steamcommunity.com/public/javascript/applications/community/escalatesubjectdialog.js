@@ -562,7 +562,7 @@ function J(e) {
           }),
           (0, N.jsx)(g, {
             onClick: async () => {
-              await l.mutateAsync({ eNewLevel: o, strNote: u }), n();
+              (await l.mutateAsync({ eNewLevel: o, strNote: u }), n());
             },
             disabled: a.length == 0,
             loading: l.isPending,

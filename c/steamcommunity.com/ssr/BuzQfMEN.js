@@ -1,5 +1,5 @@
 var _ = {};
-(_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.brazilian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.bulgarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.czech = () => _(() => import(`./chunk.js`), [], import.meta.url)),
@@ -30,7 +30,7 @@ var _ = {};
   (_.thai = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.turkish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.ukrainian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
-  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url));
+  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -45,4 +45,3 @@ function _() {
     height: 36,
   });
 }
-export { _, _, _ };

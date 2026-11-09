@@ -49,9 +49,9 @@ var _ = _(_(), 1),
         let _ = {
           root: this.FindScrollableAncestor(_),
         };
-        this.props.rootMargin && (_.rootMargin = this.props.rootMargin),
+        (this.props.rootMargin && (_.rootMargin = this.props.rootMargin),
           this.props.thresholds && (_.threshold = this.props.thresholds),
-          (this.m_observer = _(_, this.OnIntersection, _));
+          (this.m_observer = _(_, this.OnIntersection, _)));
       }
       this.m_observer &&
         _ &&
@@ -71,8 +71,8 @@ var _ = _(_(), 1),
       });
     }
     HandleRef = (_) => {
-      _(this.m_refElement, _),
-        this.props.containerRef && _(this.props.containerRef, _);
+      (_(this.m_refElement, _),
+        this.props.containerRef && _(this.props.containerRef, _));
     };
     OnIntersection = (_) => {
       let _ = !1;
@@ -102,4 +102,3 @@ var _ = _(_(), 1),
       });
     }
   };
-export { _ };

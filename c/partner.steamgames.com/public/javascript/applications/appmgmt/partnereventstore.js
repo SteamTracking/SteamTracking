@@ -11,7 +11,7 @@ import { _ } from "./debugglobal.js";
 import { _, _, _ } from "./partnereventutils.js";
 import "./steamid.js";
 var _ = _(_(), 1);
-_(), (0, _.createContext)(!1);
+(_(), (0, _.createContext)(!1));
 function _() {
   return !0;
 }
@@ -90,7 +90,8 @@ function _(_, _, _) {
                 _,
               );
             } catch (_) {
-              _(_?.response?.data?.err_msg), _(_?.response?.data?.success || 2);
+              (_(_?.response?.data?.err_msg),
+                _(_?.response?.data?.success || 2));
             }
             _.token.reason || _(_);
           }
@@ -110,7 +111,7 @@ function _(_, _, _) {
 function _(_) {
   let _ = `` + _,
     _ = _.GetELanguageFallback(_);
-  return _ != _ && (_ += `_` + _), _;
+  return (_ != _ && (_ += `_` + _), _);
 }
 var _ = class {
     appid;
@@ -119,7 +120,7 @@ var _ = class {
     playtime;
     announcementid;
     constructor(_) {
-      _(
+      (_(
         typeof _.appid == `number`,
         `AJAX updated app returned a non-numeric AppID! Did the PHP change?`,
       ),
@@ -127,12 +128,12 @@ var _ = class {
         (this.date = _.date),
         (this.can_play = _.can_play),
         (this.playtime = _.playtime),
-        (this.announcementid = _.announcementid);
+        (this.announcementid = _.announcementid));
     }
   },
   _ = class {
     constructor(_ = !1) {
-      _(this), (this.m_bOnlySummary = _);
+      (_(this), (this.m_bOnlySummary = _));
     }
     m_bOnlySummary = !1;
     m_mapExistingEvents = new Map();
@@ -176,7 +177,7 @@ var _ = class {
             }
           });
         let _ = _(`partnereventadjacents`, `application_config`);
-        this.ValidateAdjacentEvent(_) &&
+        (this.ValidateAdjacentEvent(_) &&
           _.forEach((_) => {
             _ &&
               this.m_mapAdjacentAnnouncementGIDs.set(
@@ -184,7 +185,7 @@ var _ = class {
                 _.adjacents,
               );
           }),
-          (this.m_bLoadedFromConfig = !0);
+          (this.m_bLoadedFromConfig = !0));
       }
     }
     ValidateStoreDefault(_) {
@@ -269,7 +270,7 @@ var _ = class {
         let _ = this.GetClanEventModel(_);
         _ && _.push(_);
       }
-      return _.sort(this.DefaultEventSortFunction), _;
+      return (_.sort(this.DefaultEventSortFunction), _);
     }
     InsertEventModelFromClanEventData(_, _) {
       let _ = _(_, _);
@@ -303,23 +304,23 @@ var _ = class {
     }
     async QueueLoadPartnerEvent(_, _, _) {
       if (this.m_mapExistingEvents.has(_)) return;
-      this.m_rgQueuedEventsClanIDs.push(_),
+      (this.m_rgQueuedEventsClanIDs.push(_),
         this.m_rgQueuedEventsUniqueIDs.push(_),
         this.m_rgQueuedEventsForEditFlags.push(!!_),
         (this.m_PendingInfoPromise ||= new Promise(
           (_) => (this.m_PendingInfoResolve = _),
-        ));
+        )));
       let _ = this.m_PendingInfoPromise,
         _ = () => {
           let _ = this.m_PendingInfoResolve,
             _ = this.m_rgQueuedEventsClanIDs,
             _ = this.m_rgQueuedEventsUniqueIDs,
             _ = this.m_rgQueuedEventsForEditFlags;
-          (this.m_PendingInfoPromise = void 0),
+          ((this.m_PendingInfoPromise = void 0),
             (this.m_rgQueuedEventsClanIDs = []),
             (this.m_rgQueuedEventsUniqueIDs = []),
             (this.m_rgQueuedEventsForEditFlags = []),
-            this.InternalLoadPartnerEventList(_, _, _).then(() => _?.());
+            this.InternalLoadPartnerEventList(_, _, _).then(() => _?.()));
         };
       return (
         this.m_rgQueuedEventsClanIDs.length >= 30
@@ -488,7 +489,7 @@ var _ = class {
       } else {
         let _ = this.m_mapAdjacentAnnouncementGIDs.get(_),
           _ = [];
-        _?.forEach((_) => {
+        (_?.forEach((_) => {
           if (this.m_mapAnnouncementBodyToEvent.has(_)) {
             let _ = this.m_mapAnnouncementBodyToEvent.get(_);
             _ &&
@@ -503,7 +504,7 @@ var _ = class {
                 _,
                 _,
               )
-            ).forEach((_) => _.push(_));
+            ).forEach((_) => _.push(_)));
       }
       return _;
     }
@@ -578,7 +579,7 @@ var _ = class {
     async LoadImportantEventsAroundToday(_, _, _, _, _, _) {
       let _ = [],
         _ = [];
-      _.push({
+      (_.push({
         priority: 0,
         appids: _,
       }),
@@ -591,7 +592,7 @@ var _ = class {
           _.push({
             priority: 2,
             appids: _,
-          });
+          }));
       let _ = {
           count: _,
           strAppIDPriority: JSON.stringify({
@@ -624,15 +625,17 @@ var _ = class {
       let _ = this.m_mapClanToGIDs.get(_);
       _ ||= (this.m_mapClanToGIDs.set(_, []), this.m_mapClanToGIDs.get(_));
       let _ = this.m_mapAppIDToGIDs.get(_);
-      (_ ||= (this.m_mapAppIDToGIDs.set(_, []), this.m_mapAppIDToGIDs.get(_))),
-        _.indexOf(_) == -1 && (_.push(_), _.push(_));
+      ((_ ||= (this.m_mapAppIDToGIDs.set(_, []), this.m_mapAppIDToGIDs.get(_))),
+        _.indexOf(_) == -1 && (_.push(_), _.push(_)));
     }
     ResetModel() {}
     async DeleteClanEvent(_, _) {
       this.m_mapExistingEvents.has(_) &&
         (this.m_mapExistingEvents.get(_).deleteInProgress = !0);
       let _ = new URLSearchParams();
-      _.append(`sessionid`, _()), _.append(`bDelete`, `1`), _.append(`gid`, _);
+      (_.append(`sessionid`, _()),
+        _.append(`bDelete`, `1`),
+        _.append(`gid`, _));
       let _ = await _.default.post(
         _.COMMUNITY_BASE_URL +
           `/gid/` +
@@ -640,7 +643,7 @@ var _ = class {
           `/ajaxcreateupdatedeletepartnerevents/`,
         _,
       );
-      return this.RemoveGIDFromList(_, _), _.data;
+      return (this.RemoveGIDFromList(_, _), _.data);
     }
     RemoveGIDFromList(_, _) {
       if (
@@ -664,10 +667,10 @@ var _ = class {
           this.m_mapAnnouncementBodyToEvent.has(_)))
       ) {
         let _ = this.m_mapAnnouncementBodyToEvent.get(_);
-        _ &&
+        (_ &&
           this.m_mapExistingEvents.has(_) &&
           this.m_mapExistingEvents.delete(_),
-          this.m_mapAnnouncementBodyToEvent.delete(_);
+          this.m_mapAnnouncementBodyToEvent.delete(_));
       }
     }
     async InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID(
@@ -694,7 +697,7 @@ var _ = class {
         _ = null;
       if (_) {
         let _ = _();
-        _ === `community`
+        (_ === `community`
           ? ((_ = _.COMMUNITY_BASE_URL),
             (_ += _ ? `gid/` + _.ConvertTo64BitString() : `ogg/` + _),
             (_ += `/`))
@@ -706,13 +709,13 @@ var _ = class {
           (_ = {
             params: _,
             withCredentials: !0,
-          });
+          }));
       } else
-        (_ = _.STORE_BASE_URL + `events/ajaxgetpartnerevent`),
+        ((_ = _.STORE_BASE_URL + `events/ajaxgetpartnerevent`),
           (_ = {
             params: _,
             withCredentials: !1,
-          });
+          }));
       try {
         let _ = await _.default.get(_, _);
         if (_.data.success !== 1) return;
@@ -879,17 +882,17 @@ var _ = class {
         _ = null;
       if (_) {
         let _ = [];
-        _.forEach((_) => {
+        (_.forEach((_) => {
           this.m_mapExistingEvents.has(_)
             ? _.push(this.m_mapExistingEvents.get(_))
             : _.push(_);
         }),
           _.sort(),
-          (_ = _);
+          (_ = _));
       }
       if (_) {
         let _ = [];
-        _.forEach((_) => {
+        (_.forEach((_) => {
           if (
             this.m_mapAnnouncementBodyToEvent.has(_) &&
             this.m_mapAnnouncementBodyToEvent.get(_) &&
@@ -905,11 +908,11 @@ var _ = class {
           } else _.push(_);
         }),
           _.sort(),
-          (_ = _);
+          (_ = _));
       }
       if (!_ && !_) return _;
       let _ = [];
-      for (; (_?.length ?? 0) > 0 || (_?.length ?? 0) > 0; ) {
+      for (; (_?.length ?? 0) > 0 || (_?.length ?? 0) > 0;) {
         let _ = {
           event_gids:
             (_?.length ?? 0) > 0 ? _?.splice(0, 100).join(`,`) : void 0,
@@ -966,10 +969,10 @@ var _ = class {
       try {
         let _ = `${_.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${_}`,
           _ = new FormData();
-        _.append(`sessionid`, _()),
+        (_.append(`sessionid`, _()),
           _.append(`gidclanevent`, _),
           _.append(`json`, JSON.stringify(_)),
-          _.append(`pageStyles`, JSON.stringify(_));
+          _.append(`pageStyles`, JSON.stringify(_)));
         let _ = await _.default.post(_, _, {
           withCredentials: !0,
         });
@@ -983,7 +986,7 @@ var _ = class {
                 _ !== void 0 && _ !== void 0 && (_.jsondata[_] = _);
               }
           }
-          return this.GetPartnerEventChangeCallback(_).Dispatch(_), !0;
+          return (this.GetPartnerEventChangeCallback(_).Dispatch(_), !0);
         }
         _ = _(_);
       } catch (_) {
@@ -1002,7 +1005,7 @@ var _ = class {
       return this.m_bOnlySummary;
     }
   };
-_([_], _.prototype, `m_mapExistingEvents`, void 0),
+(_([_], _.prototype, `m_mapExistingEvents`, void 0),
   _([_], _.prototype, `m_mapAnnouncementBodyToEvent`, void 0),
   _([_], _.prototype, `m_mapClanToGIDs`, void 0),
   _([_], _.prototype, `m_mapAppIDToGIDs`, void 0),
@@ -1014,7 +1017,7 @@ _([_], _.prototype, `m_mapExistingEvents`, void 0),
   _([_], _.prototype, `DeleteClanEvent`, null),
   _([_], _.prototype, `RemoveGIDFromList`, null),
   _([_], _.prototype, `FlushEventFromCache`, null),
-  _([_], _.prototype, `SavePartnerEventSaleAssets`, null);
+  _([_], _.prototype, `SavePartnerEventSaleAssets`, null));
 var _ = new _();
 _(`g_PartnerEventStore`, _);
 var _ = new _(!0);
@@ -1044,4 +1047,3 @@ function _() {
     fnSaveSaleAssets: _.SavePartnerEventSaleAssets,
   };
 }
-export { _, _, _, _, _, _, _, _ };

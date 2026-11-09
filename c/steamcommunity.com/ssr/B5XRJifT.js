@@ -50,7 +50,7 @@ var _ = _((_) => {
       if (_ === `font`) return ``;
       if (typeof _ == `string`) return _ === `use-credentials` ? _ : ``;
     }
-    (_.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = _),
+    ((_.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = _),
       (_.createPortal = function (_, _) {
         var _ =
           2 < arguments.length && arguments[2] !== void 0 ? arguments[2] : null;
@@ -64,7 +64,7 @@ var _ = _((_) => {
         try {
           if (((_._ = null), (_._ = 2), _)) return _();
         } finally {
-          (_._ = _), (_._ = _), _._._();
+          ((_._ = _), (_._ = _), _._._());
         }
       }),
       (_.preconnect = function (_, _) {
@@ -172,7 +172,7 @@ var _ = _((_) => {
       (_.useFormStatus = function () {
         return _._.useHostTransitionStatus();
       }),
-      (_.version = `19.1.1`);
+      (_.version = `19.1.1`));
   }),
   _ = _((_, _) => {
     function _() {
@@ -186,6 +186,5 @@ var _ = _((_) => {
           console.error(_);
         }
     }
-    _(), (_.exports = _());
+    (_(), (_.exports = _()));
   });
-export { _ };

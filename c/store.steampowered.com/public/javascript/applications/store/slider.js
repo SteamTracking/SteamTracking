@@ -76,7 +76,7 @@ function _(_) {
           let _ = {
             ..._,
           };
-          return _[_]?.node === _ && delete _[_], _;
+          return (_[_]?.node === _ && delete _[_], _);
         }),
       [],
     ),
@@ -101,7 +101,7 @@ function _(_) {
         for (let _ = 1; _ <= _; _++) {
           let [_, _] = _[(((_ + _ * _) % _) + _) % _];
           if (!_.bDisabled) {
-            _ !== _ && _(_), _.stopPropagation(), _.preventDefault();
+            (_ !== _ && _(_), _.stopPropagation(), _.preventDefault());
             break;
           }
         }
@@ -164,7 +164,7 @@ function _(_) {
   let { value: _, onValueChange: _ } = _,
     _ = _ === _,
     _ = (_) => {
-      _.stopPropagation(), _.preventDefault(), !(_ || _) && _(_);
+      (_.stopPropagation(), _.preventDefault(), !(_ || _) && _(_));
     },
     _ = _ === void 0 ? _ : _;
   return (0, _.jsx)(_, {
@@ -193,7 +193,7 @@ function _(_) {
     ),
   });
 }
-(_.Item = _), (_.Root = _);
+((_.Item = _), (_.Root = _));
 function _(_) {
   let { radius: _, color: _ } = _;
   return (0, _.jsx)(_, {
@@ -336,11 +336,11 @@ function _(_) {
               step: _,
             }),
             _ = [..._];
-          (_[_.current.activeValueIndex] = _),
+          ((_[_.current.activeValueIndex] = _),
             _.sort((_, _) => _ - _),
             (_.current.activeValueIndex = _.indexOf(_)),
             (_.current.bMoved = !0),
-            _(_);
+            _(_));
         }
       },
       onClick: (_) => {
@@ -355,7 +355,7 @@ function _(_) {
           }),
           _ = _(_, _),
           _ = [..._];
-        (_[_] = _), _(_), _ && _(_);
+        ((_[_] = _), _(_), _ && _(_));
       },
       children: (0, _.jsx)(`div`, {
         className: _,
@@ -453,11 +453,11 @@ function _(_) {
               step: _,
             }),
             _ = [..._];
-          (_[_] = _(_, _, _)),
+          ((_[_] = _(_, _, _)),
             _(_),
             _ && _(_),
             _.preventDefault(),
-            _.stopPropagation();
+            _.stopPropagation());
           break;
         }
         case `PageUp`:
@@ -471,11 +471,11 @@ function _(_) {
               step: _,
             }),
             _ = [..._];
-          (_[_] = _(_, _, _)),
+          ((_[_] = _(_, _, _)),
             _(_),
             _ && _(_),
             _.preventDefault(),
-            _.stopPropagation();
+            _.stopPropagation());
           break;
         }
       }
@@ -516,4 +516,3 @@ function _(_) {
 function _(_, _, _) {
   return ((_ - _) / (_ - _)) * 100;
 }
-export { _, _, _ };

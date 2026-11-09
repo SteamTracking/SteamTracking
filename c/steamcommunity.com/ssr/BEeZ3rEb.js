@@ -20,10 +20,10 @@ function _(_) {
     _ = (0, _.useRef)(!1),
     _ = _.Localize(`#Workshop_Menu_Search`, _),
     _ = (_) => {
-      _.preventDefault(),
+      (_.preventDefault(),
         _({
           search_text: _,
-        });
+        }));
     },
     _ = (0, _.useCallback)(
       (_) => {
@@ -62,11 +62,11 @@ function _(_) {
   }, [_, _]);
   let _ = [0, 1, 2],
     _ = (_) => {
-      _(_),
+      (_(_),
         _({
           search_text_target: _,
           page: 1,
-        });
+        }));
     },
     _ = (_) => _.Localize(_[_]);
   _();
@@ -256,4 +256,3 @@ function _(_) {
     ],
   });
 }
-export { _ };

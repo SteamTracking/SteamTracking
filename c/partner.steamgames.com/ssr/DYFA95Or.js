@@ -11,7 +11,7 @@ function _(_, _, _) {
       _,
     _ = _.mutations || [],
     _ = _.queries || [];
-  _.forEach(({ state: _, ..._ }) => {
+  (_.forEach(({ state: _, ..._ }) => {
     _.build(
       _,
       {
@@ -57,7 +57,7 @@ function _(_, _, _) {
           });
         }
       },
-    );
+    ));
 }
 var _ = _(_(), 1),
   _ = ({ children: _, options: _ = {}, state: _, queryClient: _ }) => {
@@ -84,7 +84,7 @@ var _ = _(_(), 1),
                 _.push(_);
             }
           }
-          _.length > 0 &&
+          (_.length > 0 &&
             _(
               _,
               {
@@ -92,7 +92,7 @@ var _ = _(_(), 1),
               },
               _.current,
             ),
-            _.length > 0 && _((_) => (_ ? [..._, ..._] : _));
+            _.length > 0 && _((_) => (_ ? [..._, ..._] : _)));
         }
       }, [_, _, _]),
       _.useEffect(() => {
@@ -121,7 +121,7 @@ function _() {
       let _ = _(history.state);
       if (_ && _.loaderData)
         try {
-          await _(_, _.signal), _ == _ && (_ = void 0);
+          (await _(_, _.signal), _ == _ && (_ = void 0));
           return;
         } catch (_) {
           console.error(_);
@@ -130,14 +130,14 @@ function _() {
       try {
         await _(_.pathname + _.search + _.hash, _?.signal);
       } catch (_) {
-        console.error(_), _.signal.aborted || location.reload();
+        (console.error(_), _.signal.aborted || location.reload());
       }
       _ == _ && (_ = void 0);
     }
     return (
       window.addEventListener(`popstate`, _),
       () => {
-        _?.abort(), window.removeEventListener(`popstate`, _);
+        (_?.abort(), window.removeEventListener(`popstate`, _));
       }
     );
   }, []);
@@ -157,11 +157,11 @@ async function _(_, _ = !1) {
   if (!_ && !_(_)) location.assign(_);
   else if (_) _(_);
   else {
-    _?.abort(), (_ = new AbortController());
+    (_?.abort(), (_ = new AbortController()));
     try {
       await _(_, _.signal);
     } catch (_) {
-      console.error(_), (location.href = _);
+      (console.error(_), (location.href = _));
     }
     _ = void 0;
   }
@@ -171,8 +171,8 @@ function _(_) {
   let [_, _] = (0, _.useState)(!1);
   return (
     (0, _.useEffect)(() => {
-      window.SSR && (window.SSR.hydrated = !0),
-        (0, _.startTransition)(() => _(!0));
+      (window.SSR && (window.SSR.hydrated = !0),
+        (0, _.startTransition)(() => _(!0)));
     }, []),
     (0, _.jsx)(_.Provider, {
       value: _,
@@ -278,7 +278,7 @@ function _(_) {
 function _(_, _, _, _, _, _, _, _) {
   let _ = _.filter((_) => _.route?.Component).map((_) => _.route);
   if (_.length === 0) throw `no routemodule with a component, can't render`;
-  (window.SSR ??= {}),
+  ((window.SSR ??= {}),
     (window.SSR.clientAssets = _),
     _.startTransition(() => {
       window.SSR?.reactRoot?.render(
@@ -299,7 +299,7 @@ function _(_, _, _, _, _, _, _, _) {
         let _ = _.onNavigate;
         _(_);
       }
-    });
+    }));
 }
 async function _(_, _, _ = !1) {
   let _,
@@ -308,14 +308,14 @@ async function _(_, _, _ = !1) {
     _,
     _,
     _ = [];
-  (_ &&= (clearInterval(_), void 0)), (_ &&= (clearTimeout(_), void 0));
+  ((_ &&= (clearInterval(_), void 0)), (_ &&= (clearTimeout(_), void 0)));
   let _ = 0;
-  _(_),
+  (_(_),
     (_ = window.setTimeout(() => {
       _ = window.setInterval(() => {
-        (_ += Math.random() * 0.01), _(_);
+        ((_ += Math.random() * 0.01), _(_));
       }, 50);
-    }, 200));
+    }, 200)));
   let _ = [],
     _ = 0;
   try {
@@ -323,7 +323,7 @@ async function _(_, _, _ = !1) {
       if (!_) {
         _ = JSON.parse(_);
         let _ = await _(_);
-        (_ = _.cssPromises), (_ = _.routeModules), (_ = _.routeCount);
+        ((_ = _.cssPromises), (_ = _.routeModules), (_ = _.routeCount));
       } else if (_ === void 0) _ = JSON.parse(_);
       else if (_ === void 0) _ = JSON.parse(_);
       else if (_ === void 0) {
@@ -335,13 +335,13 @@ async function _(_, _, _ = !1) {
           ))
         )
           throw Error(`Request languages changed navigating to ${_}`);
-      } else _.push(_), (_ = _.length / (_ || 1)), _(_);
-    await Promise.all(_), _(1);
+      } else (_.push(_), (_ = _.length / (_ || 1)), _(_));
+    (await Promise.all(_), _(1));
   } catch (_) {
     if ((_(1), !(_ instanceof DOMException && _.name === `AbortError`)))
       throw _;
   } finally {
-    (_ &&= (clearInterval(_), void 0)), (_ &&= (clearTimeout(_), void 0));
+    ((_ &&= (clearInterval(_), void 0)), (_ &&= (clearTimeout(_), void 0)));
   }
   if (_?.aborted) return;
   let _ = await Promise.all(_.map(_)),
@@ -357,7 +357,7 @@ async function _(_, _, _ = !1) {
       renderContext: _,
       scrollPosition: _,
     };
-  _ ? _(_) : _(_, _), await new Promise((_) => _(_, _, _, _, _, _, _, _));
+  (_ ? _(_) : _(_, _), await new Promise((_) => _(_, _, _, _, _, _, _, _)));
 }
 function _(_, _) {
   return (
@@ -403,23 +403,23 @@ async function _(_) {
           )
             return _();
           let _ = document.createElement(`link`);
-          (_.rel = `preload`),
+          ((_.rel = `preload`),
             (_._ = `style`),
             (_.href = _),
             (_.integrity = _.integrity),
-            (_.crossOrigin = `anonymous`);
+            (_.crossOrigin = `anonymous`));
           function _() {
-            document.head.removeChild(_), _();
+            (document.head.removeChild(_), _());
           }
-          _.addEventListener(`load`, _),
+          (_.addEventListener(`load`, _),
             _.addEventListener(`error`, _),
-            document.head.appendChild(_);
+            document.head.appendChild(_));
         }),
     ),
     _ = await Promise.all(
       _._.map(async (_) => {
         let _ = await import(_.href);
-        return `route` in _ && _++, _;
+        return (`route` in _ && _++, _);
       }),
     );
   return (
@@ -433,7 +433,8 @@ async function _(_) {
 }
 var _;
 function _(_) {
-  (_ = _), _ && window.navigation.addEventListener(`navigate`, (_) => _(_, _));
+  ((_ = _),
+    _ && window.navigation.addEventListener(`navigate`, (_) => _(_, _)));
 }
 function _(_) {
   window.navigation.navigate(_, {
@@ -463,14 +464,14 @@ async function _(_, _, _) {
     await _();
   } catch (_) {
     if (_.signal.aborted) throw _;
-    console.error(_),
+    (console.error(_),
       window.navigation.navigate(_, {
         history: `replace`,
         info: {
           SSR: !0,
           bFullLoad: !0,
         },
-      });
+      }));
   }
 }
 function _(_, _) {
@@ -487,12 +488,12 @@ function _(_, _) {
         _(_, location.pathname, _) && (_ = `${_.pathname}${_.search}`);
       }
       if (_?.bSkipFetch) {
-        _(),
+        (_(),
           _.intercept({
             scroll: `manual`,
             focusReset: `manual`,
             async handler() {},
-          });
+          }));
         return;
       }
       _ &&
@@ -626,7 +627,7 @@ async function _() {
       _: 0,
     },
   };
-  _(_),
+  (_(_),
     (window.SSR.reactRoot = (0, _.hydrateRoot)(
       document,
       (0, _.jsx)(_, {
@@ -637,6 +638,5 @@ async function _() {
         renderContext: _,
         snr: _.snr,
       }),
-    ));
+    )));
 }
-export { _, _, _, _ };

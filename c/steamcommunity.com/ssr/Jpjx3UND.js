@@ -119,12 +119,12 @@ var _ = _((_, _) => {
       );
     }
     function _(_) {
-      return _.charCodeAt(0) === 65279 && (_ = _.slice(1)), _;
+      return (_.charCodeAt(0) === 65279 && (_ = _.slice(1)), _);
     }
     function _(_, _, _, _) {
-      (_.prototype = Object.create(_.prototype, _)),
+      ((_.prototype = Object.create(_.prototype, _)),
         (_.prototype.constructor = _),
-        _ && Object.assign(_.prototype, _);
+        _ && Object.assign(_.prototype, _));
     }
     function _(_, _, _) {
       var _,
@@ -133,16 +133,16 @@ var _ = _((_, _) => {
         _ = {};
       _ ||= {};
       do {
-        for (_ = Object.getOwnPropertyNames(_), _ = _.length; _-- > 0; )
-          (_ = _[_]), _[_] || ((_[_] = _[_]), (_[_] = !0));
+        for (_ = Object.getOwnPropertyNames(_), _ = _.length; _-- > 0;)
+          ((_ = _[_]), _[_] || ((_[_] = _[_]), (_[_] = !0)));
         _ = Object.getPrototypeOf(_);
       } while (_ && (!_ || _(_, _)) && _ !== Object.prototype);
       return _;
     }
     function _(_, _, _) {
-      (_ = String(_)),
+      ((_ = String(_)),
         (_ === void 0 || _ > _.length) && (_ = _.length),
-        (_ -= _.length);
+        (_ -= _.length));
       var _ = _.indexOf(_, _);
       return _ !== -1 && _ === _;
     }
@@ -150,7 +150,7 @@ var _ = _((_, _) => {
       if (!_) return null;
       var _ = _.length;
       if (_(_)) return null;
-      for (var _ = Array(_); _-- > 0; ) _[_] = _[_];
+      for (var _ = Array(_); _-- > 0;) _[_] = _[_];
       return _;
     }
     _.exports = {
@@ -208,22 +208,22 @@ var _ = _((_, _) => {
       else if (_.isURLSearchParams(_)) _ = _.toString();
       else {
         var _ = [];
-        _.forEach(_, function (_, _) {
+        (_.forEach(_, function (_, _) {
           _ != null &&
             (_.isArray(_) ? (_ += `[]`) : (_ = [_]),
             _.forEach(_, function (_) {
-              _.isDate(_)
+              (_.isDate(_)
                 ? (_ = _.toISOString())
                 : _.isObject(_) && (_ = JSON.stringify(_)),
-                _.push(_(_) + `=` + _(_));
+                _.push(_(_) + `=` + _(_)));
             }));
         }),
-          (_ = _.join(`&`));
+          (_ = _.join(`&`)));
       }
       if (_) {
         var _ = _.indexOf(`#`);
-        _ !== -1 && (_ = _.slice(0, _)),
-          (_ += (_.indexOf(`?`) === -1 ? `?` : `&`) + _);
+        (_ !== -1 && (_ = _.slice(0, _)),
+          (_ += (_.indexOf(`?`) === -1 ? `?` : `&`) + _));
       }
       return _;
     };
@@ -233,7 +233,7 @@ var _ = _((_, _) => {
     function _() {
       this.handlers = [];
     }
-    (_.prototype.use = function (_, _, _) {
+    ((_.prototype.use = function (_, _, _) {
       return (
         this.handlers.push({
           fulfilled: _,
@@ -252,7 +252,7 @@ var _ = _((_, _) => {
           _ !== null && _(_);
         });
       }),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     var _ = _();
@@ -267,13 +267,13 @@ var _ = _((_, _) => {
   _ = _((_, _) => {
     var _ = _();
     function _(_, _, _, _, _) {
-      Error.call(this),
+      (Error.call(this),
         (this.message = _),
         (this.name = `AxiosError`),
         _ && (this.code = _),
         _ && (this.config = _),
         _ && (this.request = _),
-        _ && (this.response = _);
+        _ && (this.response = _));
     }
     _.inherits(_, Error, {
       toJSON: function () {
@@ -295,7 +295,7 @@ var _ = _((_, _) => {
     });
     var _ = _.prototype,
       _ = {};
-    [
+    ([
       `ERR_BAD_OPTION_VALUE`,
       `ERR_BAD_OPTION`,
       `ECONNABORTED`,
@@ -327,7 +327,7 @@ var _ = _((_, _) => {
           _
         );
       }),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     _.exports = {
@@ -356,7 +356,7 @@ var _ = _((_, _) => {
         if (_.isPlainObject(_) || _.isArray(_)) {
           if (_.indexOf(_) !== -1)
             throw Error(`Circular reference detected in ` + _);
-          _.push(_),
+          (_.push(_),
             _.forEach(_, function (_, _) {
               if (!_.isUndefined(_)) {
                 var _ = _ ? _ + `.` + _ : _,
@@ -373,10 +373,10 @@ var _ = _((_, _) => {
                 _(_, _);
               }
             }),
-            _.pop();
+            _.pop());
         } else _.append(_, _(_));
       }
-      return _(_), _;
+      return (_(_), _);
     }
     _.exports = _;
   }),
@@ -406,12 +406,12 @@ var _ = _((_, _) => {
           return {
             write: function (_, _, _, _, _, _) {
               var _ = [];
-              _.push(_ + `=` + encodeURIComponent(_)),
+              (_.push(_ + `=` + encodeURIComponent(_)),
                 _.isNumber(_) && _.push(`expires=` + new Date(_).toGMTString()),
                 _.isString(_) && _.push(`path=` + _),
                 _.isString(_) && _.push(`domain=` + _),
                 _ === !0 && _.push(`secure`),
-                (document.cookie = _.join(`; `));
+                (document.cookie = _.join(`; `)));
             },
             read: function (_) {
               var _ = document.cookie.match(
@@ -543,13 +543,13 @@ var _ = _((_, _) => {
     var _ = _(),
       _ = _();
     function _(_) {
-      _.call(this, _ ?? `canceled`, _.ERR_CANCELED),
-        (this.name = `CanceledError`);
+      (_.call(this, _ ?? `canceled`, _.ERR_CANCELED),
+        (this.name = `CanceledError`));
     }
-    _.inherits(_, _, {
+    (_.inherits(_, _, {
       __CANCEL__: !0,
     }),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     _.exports = function (_) {
@@ -576,8 +576,8 @@ var _ = _((_, _) => {
           _ = _.responseType,
           _;
         function _() {
-          _.cancelToken && _.cancelToken.unsubscribe(_),
-            _.signal && _.signal.removeEventListener(`abort`, _);
+          (_.cancelToken && _.cancelToken.unsubscribe(_),
+            _.signal && _.signal.removeEventListener(`abort`, _));
         }
         _.isFormData(_) && _.isStandardBrowserEnv() && delete _[`Content-Type`];
         var _ = new XMLHttpRequest();
@@ -589,20 +589,20 @@ var _ = _((_, _) => {
           _.Authorization = `Basic ` + btoa(_ + `:` + _);
         }
         var _ = _(_.baseURL, _.url);
-        _.open(_.method.toUpperCase(), _(_, _.params, _.paramsSerializer), !0),
-          (_.timeout = _.timeout);
+        (_.open(_.method.toUpperCase(), _(_, _.params, _.paramsSerializer), !0),
+          (_.timeout = _.timeout));
         function _() {
           if (_) {
             var _ =
               `getAllResponseHeaders` in _
                 ? _(_.getAllResponseHeaders())
                 : null;
-            _(
+            (_(
               function (_) {
-                _(_), _();
+                (_(_), _());
               },
               function (_) {
-                _(_), _();
+                (_(_), _());
               },
               {
                 data:
@@ -616,7 +616,7 @@ var _ = _((_, _) => {
                 request: _,
               },
             ),
-              (_ = null);
+              (_ = null));
           }
         }
         if (
@@ -633,14 +633,14 @@ var _ = _((_, _) => {
             _ &&= (_(new _(`Request aborted`, _.ECONNABORTED, _, _)), null);
           }),
           (_.onerror = function () {
-            _(new _(`Network Error`, _.ERR_NETWORK, _, _, _)), (_ = null);
+            (_(new _(`Network Error`, _.ERR_NETWORK, _, _, _)), (_ = null));
           }),
           (_.ontimeout = function () {
             var _ = _.timeout
                 ? `timeout of ` + _.timeout + `ms exceeded`
                 : `timeout exceeded`,
               _ = _.transitional || _;
-            _.timeoutErrorMessage && (_ = _.timeoutErrorMessage),
+            (_.timeoutErrorMessage && (_ = _.timeoutErrorMessage),
               _(
                 new _(
                   _,
@@ -649,7 +649,7 @@ var _ = _((_, _) => {
                   _,
                 ),
               ),
-              (_ = null);
+              (_ = null));
           }),
           _.isStandardBrowserEnv())
         ) {
@@ -659,7 +659,7 @@ var _ = _((_, _) => {
               : void 0;
           _ && (_[_.xsrfHeaderName] = _);
         }
-        `setRequestHeader` in _ &&
+        (`setRequestHeader` in _ &&
           _.forEach(_, function (_, _) {
             _ === void 0 && _.toLowerCase() === `content-type`
               ? delete _[_]
@@ -680,7 +680,7 @@ var _ = _((_, _) => {
             _.cancelToken && _.cancelToken.subscribe(_),
             _.signal &&
               (_.signal.aborted ? _() : _.signal.addEventListener(`abort`, _))),
-          (_ ||= null);
+          (_ ||= null));
         var _ = _(_);
         _ && [`http`, `https`, `file`].indexOf(_) === -1
           ? _(new _(`Unsupported protocol ` + _ + `:`, _.ERR_BAD_REQUEST, _))
@@ -718,7 +718,7 @@ var _ = _((_, _) => {
     function _(_, _, _) {
       if (_.isString(_))
         try {
-          return (_ || JSON.parse)(_), _.trim(_);
+          return ((_ || JSON.parse)(_), _.trim(_));
         } catch (_) {
           if (_.name !== `SyntaxError`) throw _;
         }
@@ -800,13 +800,13 @@ var _ = _((_, _) => {
         },
       },
     };
-    _.forEach([`delete`, `get`, `head`], function (_) {
+    (_.forEach([`delete`, `get`, `head`], function (_) {
       _.headers[_] = {};
     }),
       _.forEach([`post`, `put`, `patch`], function (_) {
         _.headers[_] = _.merge(_);
       }),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     var _ = _(),
@@ -1004,7 +1004,7 @@ var _ = _((_, _) => {
     function _(_, _, _) {
       if (typeof _ != `object`)
         throw new _(`options must be an object`, _.ERR_BAD_OPTION_VALUE);
-      for (var _ = Object.keys(_), _ = _.length; _-- > 0; ) {
+      for (var _ = Object.keys(_), _ = _.length; _-- > 0;) {
         var _ = _[_],
           _ = _[_];
         if (_) {
@@ -1034,20 +1034,20 @@ var _ = _((_, _) => {
       _ = _(),
       _ = _.validators;
     function _(_) {
-      (this.defaults = _),
+      ((this.defaults = _),
         (this.interceptors = {
           request: new _(),
           response: new _(),
-        });
+        }));
     }
-    (_.prototype.request = function (_, _) {
-      typeof _ == `string` ? ((_ ||= {}), (_.url = _)) : (_ = _ || {}),
+    ((_.prototype.request = function (_, _) {
+      (typeof _ == `string` ? ((_ ||= {}), (_.url = _)) : (_ = _ || {}),
         (_ = _(this.defaults, _)),
         _.method
           ? (_.method = _.method.toLowerCase())
           : this.defaults.method
             ? (_.method = this.defaults.method.toLowerCase())
-            : (_.method = `get`);
+            : (_.method = `get`));
       var _ = _.transitional;
       _ !== void 0 &&
         _.assertOptions(
@@ -1081,7 +1081,7 @@ var _ = _((_, _) => {
           _ = _.then(_.shift(), _.shift());
         return _;
       }
-      for (var _ = _; _.length; ) {
+      for (var _ = _; _.length;) {
         var _ = _.shift(),
           _ = _.shift();
         try {
@@ -1096,7 +1096,7 @@ var _ = _((_, _) => {
       } catch (_) {
         return Promise.reject(_);
       }
-      for (; _.length; ) _ = _.then(_.shift(), _.shift());
+      for (; _.length;) _ = _.then(_.shift(), _.shift());
       return _;
     }),
       (_.prototype.getUri = function (_) {
@@ -1133,9 +1133,9 @@ var _ = _((_, _) => {
             );
           };
         }
-        (_.prototype[_] = _()), (_.prototype[_ + `Form`] = _(!0));
+        ((_.prototype[_] = _()), (_.prototype[_ + `Form`] = _(!0)));
       }),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     var _ = _();
@@ -1147,7 +1147,7 @@ var _ = _((_, _) => {
         _ = _;
       });
       var _ = this;
-      this.promise.then(function (_) {
+      (this.promise.then(function (_) {
         if (_._listeners) {
           var _,
             _ = _._listeners.length;
@@ -1158,7 +1158,7 @@ var _ = _((_, _) => {
         (this.promise.then = function (_) {
           var _,
             _ = new Promise(function (_) {
-              _.subscribe(_), (_ = _);
+              (_.subscribe(_), (_ = _));
             }).then(_);
           return (
             (_.cancel = function () {
@@ -1169,9 +1169,9 @@ var _ = _((_, _) => {
         }),
         _(function (_) {
           _.reason || ((_.reason = new _(_)), _(_.reason));
-        });
+        }));
     }
-    (_.prototype.throwIfRequested = function () {
+    ((_.prototype.throwIfRequested = function () {
       if (this.reason) throw this.reason;
     }),
       (_.prototype.subscribe = function (_) {
@@ -1196,7 +1196,7 @@ var _ = _((_, _) => {
           cancel: _,
         };
       }),
-      (_.exports = _);
+      (_.exports = _));
   }),
   _ = _((_, _) => {
     _.exports = function (_) {
@@ -1230,7 +1230,7 @@ var _ = _((_, _) => {
       );
     }
     var _ = _(_);
-    (_.Axios = _),
+    ((_.Axios = _),
       (_.CanceledError = _()),
       (_.CancelToken = _()),
       (_.isCancel = _()),
@@ -1244,9 +1244,8 @@ var _ = _((_, _) => {
       (_.spread = _()),
       (_.isAxiosError = _()),
       (_.exports = _),
-      (_.exports.default = _);
+      (_.exports.default = _));
   }),
   _ = _((_, _) => {
     _.exports = _();
   });
-export { _ };

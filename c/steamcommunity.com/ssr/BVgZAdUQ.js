@@ -28,11 +28,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -224,7 +224,7 @@ var _ = class extends _.Component {
     return _.createElement(_, this.props);
   }
 };
-_(_, `displayName`, `ReferenceArea`),
+(_(_, `displayName`, `ReferenceArea`),
   _(_, `defaultProps`, {
     ifOverflow: `discard`,
     xAxisId: 0,
@@ -234,14 +234,14 @@ _(_, `displayName`, `ReferenceArea`),
     fillOpacity: 0.5,
     stroke: `none`,
     strokeWidth: 1,
-  });
+  }));
 function _(_, _, _ = NaN) {
   let { strSymbol: _, strDecimalSymbol: _, strThousandsSeparator: _ } = _(_);
-  (_ = _.replace(_, ``)
+  ((_ = _.replace(_, ``)
     .replace(`.--`, `.00`)
     .replace(/ /g, ``)
     .replace(_(_), ``)),
-    _ !== `.` && (_ = _.replace(_(_), `.`));
+    _ !== `.` && (_ = _.replace(_(_), `.`)));
   let _ = _.indexOf(`.`),
     _ = _.lastIndexOf(`.`);
   if (_ !== -1 && _ !== _) {
@@ -450,11 +450,11 @@ function _(_) {
   let _ = 0,
     _ = [];
   for (let _ of _)
-    (_ += _.quantity),
+    ((_ += _.quantity),
       _.push({
         price: _.price,
         cumulative: _,
-      });
+      }));
   return _;
 }
 var _ = 86400,
@@ -540,7 +540,7 @@ function _(_) {
     }),
     _ = !!_,
     _ = (_) => {
-      _(null), _ && _(_);
+      (_(null), _ && _(_));
     },
     _ = !_(`sm`),
     _ =
@@ -818,7 +818,7 @@ function _(_, _) {
   let _ = Math.floor(_.getTime() / 1e3);
   for (let _ of _.prices || []) {
     let _ = _(_);
-    _.time >= _ && _.week.push(_), _.time >= _ && _.month.push(_);
+    (_.time >= _ && _.week.push(_), _.time >= _ && _.month.push(_));
     let _ = !!_ && _(_.time, _.time);
     if (_.time >= _) {
       if (!_) _.year.push(_);
@@ -855,13 +855,13 @@ function _(_, _) {
     let _ = _[_ - 1],
       _ = _[_],
       _ = _.time + _[_];
-    for (; _ < _.time && !_(_, _.time, _); )
-      _.push({
+    for (; _ < _.time && !_(_, _.time, _);)
+      (_.push({
         time: _,
         price: void 0,
         purchases: 0,
       }),
-        (_ += _[_]);
+        (_ += _[_]));
     _.push(_);
   }
   return _;
@@ -871,13 +871,13 @@ function _(_, _, _) {
   if (!_.length || _(_, _[0].time, _)) return [];
   let _ = _[0].time - _[_],
     _ = [];
-  for (; _ >= _; )
-    _.push({
+  for (; _ >= _;)
+    (_.push({
       time: _,
       price: void 0,
       purchases: 0,
     }),
-      (_ -= _[_]);
+      (_ -= _[_]));
   return _.reverse();
 }
 function _(_, _, _) {
@@ -885,13 +885,13 @@ function _(_, _, _) {
   let _ = _,
     _ = [],
     _ = _[_.length - 1].time;
-  for (; _ > _ && !_(_, _, _); )
-    _.push({
+  for (; _ > _ && !_(_, _, _);)
+    (_.push({
       time: _,
       price: void 0,
       purchases: 0,
     }),
-      (_ -= _[_]);
+      (_ -= _[_]));
   return _.reverse();
 }
 function _(_, _, _) {
@@ -903,7 +903,7 @@ function _(_, _, _) {
     case `week`:
       return _(_, _);
     default:
-      return _(_, `Unhandled time scale "${_}"`), !1;
+      return (_(_, `Unhandled time scale "${_}"`), !1);
   }
 }
 function _(_, _) {
@@ -1038,7 +1038,7 @@ function _(_, _) {
   let _ = [],
     _ = _.reduce((_, _) => Math.min(_, _.data[0].time), 1 / 0),
     _ = Array(_.length).fill(0);
-  for (; _.some((_, _) => _ < _[_].data.length); ) {
+  for (; _.some((_, _) => _ < _[_].data.length);) {
     let _ = 1 / 0,
       _ = {
         time: _,
@@ -1048,14 +1048,14 @@ function _(_, _) {
       let _ = _[_];
       if (_[_] >= _.data.length) continue;
       let _ = _.data[_[_]];
-      _(_, _.time, _) &&
+      (_(_, _.time, _) &&
         (_.purchases &&
           ((_.purchases += _.purchases),
           (_[`${_._}_purchases`] = _.purchases),
           (_[`${_._}_price`] = _.price),
           (_.price = Math.max(_.price ?? 0, _.price ?? 0))),
         _[_]++),
-        _[_] < _.data.length && (_ = Math.min(_, _.data[_[_]].time));
+        _[_] < _.data.length && (_ = Math.min(_, _.data[_[_]].time)));
     }
     if ((_.push(_), (_ = _), _ === 1 / 0)) break;
   }
@@ -1167,7 +1167,7 @@ function _(_) {
         let _ = {
           ..._.facets,
         };
-        delete _.Exterior,
+        (delete _.Exterior,
           _(
             {
               ..._,
@@ -1175,7 +1175,7 @@ function _(_) {
               facets: _,
             },
             !0,
-          );
+          ));
       }
     },
     _ = _.properties[_._],
@@ -1194,7 +1194,7 @@ function _(_) {
         let _ = {
           ..._.properties,
         };
-        delete _[_._], (_.properties = _);
+        (delete _[_._], (_.properties = _));
       } else {
         let _ = _
           ? {
@@ -1203,12 +1203,12 @@ function _(_) {
           : {
               property_id: _._,
             };
-        (_.float_max = _[1]),
+        ((_.float_max = _[1]),
           (_.float_min = _[0]),
           (_.properties = {
             ..._.properties,
             [_._]: _,
-          });
+          }));
       }
       _(_, _);
     },
@@ -1232,7 +1232,7 @@ function _(_) {
     _ = _ === 1 ? Object.keys(_)[0] : null,
     _ = (_) => (_) => {
       let _ = [..._];
-      (_[_] = _), _(!0)(_);
+      ((_[_] = _), _(!0)(_));
     };
   return (0, _.jsxs)(_, {
     direction: `column`,
@@ -1415,14 +1415,14 @@ function _(_) {
         let _ = {
           ..._.properties,
         };
-        delete _[_],
+        (delete _[_],
           _(
             {
               ..._,
               properties: _,
             },
             _,
-          );
+          ));
       } else {
         let _ = _
           ? {
@@ -1431,7 +1431,7 @@ function _(_) {
           : {
               property_id: _,
             };
-        (_.float_max = _[1]),
+        ((_.float_max = _[1]),
           (_.float_min = _[0]),
           _(
             {
@@ -1442,7 +1442,7 @@ function _(_) {
               },
             },
             _,
-          );
+          ));
       }
     },
     _ = [_?.float_min ?? _, _?.float_max ?? _],
@@ -1451,7 +1451,7 @@ function _(_) {
     _ = _ && _,
     _ = (_) => (_) => {
       let _ = [..._];
-      (_[_] = _), _(!0)(_);
+      ((_[_] = _), _(!0)(_));
     };
   return (0, _.jsxs)(_, {
     direction: `column`,
@@ -1513,14 +1513,14 @@ function _(_) {
         let _ = {
           ..._.properties,
         };
-        delete _[_],
+        (delete _[_],
           _(
             {
               ..._,
               properties: _,
             },
             _,
-          );
+          ));
       } else {
         let _ = _
           ? {
@@ -1529,7 +1529,7 @@ function _(_) {
           : {
               property_id: _,
             };
-        (_.int_max = _[1].toString()),
+        ((_.int_max = _[1].toString()),
           (_.int_min = _[0].toString()),
           _(
             {
@@ -1540,7 +1540,7 @@ function _(_) {
               },
             },
             _,
-          );
+          ));
       }
     },
     _ = [parseInt(_?.int_min ?? _), parseInt(_?.int_max ?? _)],
@@ -1549,7 +1549,7 @@ function _(_) {
     _ = _ && _,
     _ = (_) => (_) => {
       let _ = [..._];
-      (_[_] = _), _(!0)(_);
+      ((_[_] = _), _(!0)(_));
     };
   return (0, _.jsxs)(_, {
     direction: `column`,
@@ -1749,7 +1749,7 @@ function _(_, _) {
   let _ = {
     ..._,
   };
-  return delete _.Exterior, delete _.Quality, _;
+  return (delete _.Exterior, delete _.Quality, _);
 }
 function _(_, _) {
   return _(_) ? _.filter((_) => _._ !== 2) : _;
@@ -1984,14 +1984,14 @@ function _(_, _, _, _, _) {
               _: _.confirmation.confirmation_id,
               cAttempts: _ ? _.cAttempts + 1 : 0,
             };
-            _(_), _.confirmation_type == 2 && _(12, _._);
+            (_(_), _.confirmation_type == 2 && _(12, _._));
           } else if (_)
             throw (
-              (_(null),
+              _(null),
               {
                 bFatal: !0,
                 message: _.Localize(`#PurchaseDialog_Error_NoConfirmation`),
-              })
+              }
             );
           else
             throw _?.message
@@ -2077,12 +2077,12 @@ function _(_) {
     [_, _] = (0, _.useState)(null),
     _ = (_) => {
       let _ = _(_, _);
-      _(_),
+      (_(_),
         isNaN(_) ||
           _({
             ..._,
             price: _,
-          });
+          }));
     },
     _ = () => _(null),
     _ = (_) => {
@@ -2310,7 +2310,7 @@ function _(_) {
       queryKey: [`market`, `buyorderstatus`, _],
       queryFn: async () => {
         let _ = new URLSearchParams();
-        _.set(`sessionid`, _()), _.set(`buy_orderid`, _);
+        (_.set(`sessionid`, _()), _.set(`buy_orderid`, _));
         let _ = await fetch(`/market/getbuyorderstatus/?${_.toString()}`);
         if (!_._) throw _.Localize(`#BuyOrderDialog_Status_GenericError`);
         let _ = await _.json();
@@ -2494,7 +2494,7 @@ function _(_ = {}) {
     mutationKey: [`market`, `cancelbuyorder`],
     mutationFn: async (_) => {
       let _ = new FormData();
-      _.set(`sessionid`, _()), _.set(`buy_orderid`, _._);
+      (_.set(`sessionid`, _()), _.set(`buy_orderid`, _._));
       let _ = await fetch(`/market/cancelbuyorder/`, {
         method: `POST`,
         credentials: `include`,
@@ -3296,11 +3296,11 @@ function _() {
     [_, _] = (0, _.useState)();
   return (
     (0, _.useEffect)(() => {
-      _(!1), _(_);
+      (_(!1), _(_));
     }, [_]),
     {
       flash: (0, _.useCallback)(() => {
-        _(!0), _(void 0);
+        (_(!0), _(void 0));
       }, []),
       strClassName: _,
     }
@@ -3355,9 +3355,9 @@ function _(_) {
 async function _(_, _) {
   try {
     let _ = new FormData();
-    _.set(`appid`, _.toString()),
+    (_.set(`appid`, _.toString()),
       _.set(`market_hash_name`, _),
-      _.set(`sessionid`, _());
+      _.set(`sessionid`, _()));
     let _ = await fetch(`${_.COMMUNITY_BASE_URL}market/cancelalllistings/`, {
         method: `POST`,
         body: _,
@@ -3377,9 +3377,9 @@ async function _(_, _) {
 async function _(_, _) {
   try {
     let _ = new FormData();
-    _.set(`appid`, _.toString()),
+    (_.set(`appid`, _.toString()),
       _.set(`market_hash_name`, _),
-      _.set(`sessionid`, _());
+      _.set(`sessionid`, _()));
     let _ = await fetch(`${_.COMMUNITY_BASE_URL}market/deleteitembucket`, {
         method: `POST`,
         body: _,
@@ -3490,13 +3490,13 @@ function _(_) {
           ..._.facets,
         },
       };
-      _ === _.tag
+      (_ === _.tag
         ? (delete _.facets[_.category], _(null))
         : ((_.facets[_.category] = {
             [_.tag]: !0,
           }),
           _[_] && _(_[_]._)),
-        _(_);
+        _(_));
     },
     _ = (_, _) => {
       let _ = {
@@ -4475,11 +4475,11 @@ function _(_) {
     _ = (0, _.useRef)(!0);
   return (
     (0, _.useEffect)(() => {
-      _.current &&
+      (_.current &&
         !_.current &&
         _.current.getBoundingClientRect().top < 0 &&
         _.current.scrollIntoView(!0),
-        (_.current = !1);
+        (_.current = !1));
     }, [_]),
     (0, _.jsxs)(_, {
       ref: _,
@@ -4908,7 +4908,7 @@ function _(_) {
     _ = (0, _.useCallback)(
       (_) => {
         let _ = new URL(window.location.href);
-        (_.search = _(_, _.maxPrice).toString()),
+        ((_.search = _(_, _.maxPrice).toString()),
           _(
             (_) => ({
               ..._,
@@ -4916,7 +4916,7 @@ function _(_) {
             }),
             _,
           ),
-          _(_);
+          _(_));
       },
       [_],
     ),
@@ -4937,7 +4937,7 @@ function _(_) {
       return;
     }
     let _ = new URL(window.location.href);
-    _.sort
+    (_.sort
       ? (_.searchParams.set(`sort`, _.sort.field.toString()),
         _.sort.direction === void 0
           ? _.searchParams.delete(`dir`)
@@ -4963,16 +4963,16 @@ function _(_) {
           itemSortDir: void 0,
           itemSortProperty: void 0,
         }))),
-      _(_);
+      _(_));
   }, [_.sort, _]);
   let [_, _] = (0, _.useState)(() => _(_, _)),
     _ = (0, _.useCallback)(
       (_) => {
-        _({
+        (_({
           ..._,
           ..._(_.strItemName, _, _),
         }),
-          _(_);
+          _(_));
       },
       [_, _, _],
     ),
@@ -5440,7 +5440,7 @@ function _(_, _) {
           _ && _.set(`detail`, _.listingid);
         } else _.delete(`detail`);
         let _ = _.toString();
-        _(`?${_}`), _(_);
+        (_(`?${_}`), _(_));
       },
       [_],
     ),
@@ -5687,13 +5687,13 @@ var _ = _.memo(function (_) {
             let _ = _[_][_]._,
               { color: _, label: _ } = _[_],
               _ = `--graphcolor-${_}`;
-            _.push([_, _, _]),
+            (_.push([_, _, _]),
               _.push({
                 _: _,
                 color: `var(${_})`,
                 label: _,
                 priceHistory: _[_],
-              });
+              }));
           }
         return {
           rgGraphGroups: _,
@@ -5926,7 +5926,7 @@ function _(_, _) {
     if (_.startsWith(`accessory_`)) {
       let _ = _.slice(10);
       if (!_.length) continue;
-      for (let _ of _) _ in _ || (_[_] = {}), (_[_][_] = !0);
+      for (let _ of _) (_ in _ || (_[_] = {}), (_[_][_] = !0));
     }
   let _ = {};
   for (let [_, _] of Object.entries(_.filters || {}))
@@ -5986,4 +5986,3 @@ function _() {
     children: _.Localize(`#Item_CountryBuyRestricted`),
   });
 }
-export { _, _, _, _, _, _, _, _ };

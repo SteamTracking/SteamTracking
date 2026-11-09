@@ -286,10 +286,10 @@ function i(e) {
     case `ZA`:
       return 28;
     default:
-      return console.assert(!1, `Unhandled country code: ${e}`), 1;
+      return (console.assert(!1, `Unhandled country code: ${e}`), 1);
   }
 }
-e(), t();
+(e(), t());
 function a(e, t, i) {
   return r(e ? `${n.STORE_BASE_URL}${e.store_url_path}` : void 0, t, i);
 }

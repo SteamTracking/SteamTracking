@@ -135,7 +135,7 @@ var _ = _(_()),
   _ = class {
     m_Preferences = void 0;
     constructor(_) {
-      _(this),
+      (_(this),
         (this.m_Preferences = _),
         (!this.m_Preferences.content_customization ||
           Array.isArray(this.m_Preferences.content_customization)) &&
@@ -162,7 +162,7 @@ var _ = _(_()),
           (this.m_Preferences.third_party_content.twitter = !0),
           (this.m_Preferences.third_party_content.vimeo = !0),
           (this.m_Preferences.third_party_content.youtube = !0)),
-        this.m_Preferences.version == 0 && (this.m_Preferences.version = 1);
+        this.m_Preferences.version == 0 && (this.m_Preferences.version = 1));
     }
     GetVersion() {
       return this.m_Preferences.version;
@@ -183,14 +183,14 @@ var _ = _(_()),
       if (this.m_Preferences.preference_state != _) {
         if (((this.m_Preferences.preference_state = _), _ == 1 || _ == 2)) {
           let _ = _ == 1;
-          (this.m_Preferences.content_customization.recentapps = _),
+          ((this.m_Preferences.content_customization.recentapps = _),
             (this.m_Preferences.third_party_analytics.google_analytics = _),
             (this.m_Preferences.third_party_content.sketchfab = _),
             (this.m_Preferences.third_party_content.twitter = _),
             (this.m_Preferences.third_party_content.vimeo = _),
             (this.m_Preferences.third_party_content.youtube = _),
             (this.m_Preferences.valve_analytics.product_impressions_tracking =
-              _);
+              _));
         }
         this.PostCookieSettings();
       }
@@ -199,57 +199,57 @@ var _ = _(_()),
       return this.m_Preferences.content_customization.recentapps;
     }
     ToggleRecentApps() {
-      (this.m_Preferences.content_customization.recentapps =
+      ((this.m_Preferences.content_customization.recentapps =
         !this.m_Preferences.content_customization.recentapps),
-        this.ProcessToggle();
+        this.ProcessToggle());
     }
     GetImpressions() {
       return this.m_Preferences.valve_analytics.product_impressions_tracking;
     }
     ToggleImpressions() {
-      (this.m_Preferences.valve_analytics.product_impressions_tracking =
+      ((this.m_Preferences.valve_analytics.product_impressions_tracking =
         !this.m_Preferences.valve_analytics.product_impressions_tracking),
-        this.ProcessToggle();
+        this.ProcessToggle());
     }
     GetSketchfab() {
       return this.m_Preferences.third_party_content.sketchfab;
     }
     ToggleSketchfab() {
-      (this.m_Preferences.third_party_content.sketchfab =
+      ((this.m_Preferences.third_party_content.sketchfab =
         !this.m_Preferences.third_party_content.sketchfab),
-        this.ProcessToggle();
+        this.ProcessToggle());
     }
     GetVimeo() {
       return this.m_Preferences.third_party_content.vimeo;
     }
     ToggleVimeo() {
-      (this.m_Preferences.third_party_content.vimeo =
+      ((this.m_Preferences.third_party_content.vimeo =
         !this.m_Preferences.third_party_content.vimeo),
-        this.ProcessToggle();
+        this.ProcessToggle());
     }
     GetYouTube() {
       return this.m_Preferences.third_party_content.youtube;
     }
     ToggleYouTube() {
-      (this.m_Preferences.third_party_content.youtube =
+      ((this.m_Preferences.third_party_content.youtube =
         !this.m_Preferences.third_party_content.youtube),
-        this.ProcessToggle();
+        this.ProcessToggle());
     }
     GetUTMEnabled() {
       return this.m_Preferences.utm_enabled;
     }
     ToggleUTMEnabled() {
-      (this.m_Preferences.utm_enabled = !this.m_Preferences.utm_enabled),
-        this.PostCookieSettings();
+      ((this.m_Preferences.utm_enabled = !this.m_Preferences.utm_enabled),
+        this.PostCookieSettings());
     }
     ProcessToggle() {
-      (this.m_Preferences.preference_state = 3), this.PostCookieSettings();
+      ((this.m_Preferences.preference_state = 3), this.PostCookieSettings());
     }
     async PostCookieSettings() {
       let _ = _.STORE_BASE_URL + `account/ajaxsetcookiepreferences`,
         _ = new FormData();
-      _.set(`sessionid`, _()),
-        _.append(`cookiepreferences`, JSON.stringify(this.m_Preferences));
+      (_.set(`sessionid`, _()),
+        _.append(`cookiepreferences`, JSON.stringify(this.m_Preferences)));
       try {
         let _ = await _.default.post(_, _, {
           withCredentials: !0,
@@ -297,15 +297,15 @@ var _ = `VK34WouHuaw-`,
   _ = class {
     m_Preferences = void 0;
     constructor(_) {
-      _(this), (this.m_Preferences = _);
+      (_(this), (this.m_Preferences = _));
     }
     SetDeckFeedback(_) {
-      (this.m_Preferences.provide_deck_feedback = _),
-        this.PostStorePreferences();
+      ((this.m_Preferences.provide_deck_feedback = _),
+        this.PostStorePreferences());
     }
     SetGameFrameRateReporting(_) {
-      (this.m_Preferences.game_frame_rate_reporting = _),
-        this.PostStorePreferences();
+      ((this.m_Preferences.game_frame_rate_reporting = _),
+        this.PostStorePreferences());
     }
     GetProvideDeckFeedbackEnabled() {
       return this.m_Preferences.provide_deck_feedback == 1;
@@ -314,19 +314,19 @@ var _ = `VK34WouHuaw-`,
       return this.m_Preferences.game_frame_rate_reporting == 2;
     }
     ToggleProvideDeckFeeback() {
-      (this.m_Preferences.provide_deck_feedback =
+      ((this.m_Preferences.provide_deck_feedback =
         this.m_Preferences.provide_deck_feedback == 1 ? 2 : 1),
-        this.PostStorePreferences();
+        this.PostStorePreferences());
     }
     ToggleGameFrameRateReporting() {
-      (this.m_Preferences.game_frame_rate_reporting =
+      ((this.m_Preferences.game_frame_rate_reporting =
         this.m_Preferences.game_frame_rate_reporting == 2 ? 1 : 2),
-        this.PostStorePreferences();
+        this.PostStorePreferences());
     }
     async PostStorePreferences() {
       let _ = _.STORE_BASE_URL + `account/savepreferences`,
         _ = new FormData();
-      _.set(`sessionid`, _()),
+      (_.set(`sessionid`, _()),
         _.set(
           `provide_deck_feedback`,
           this.m_Preferences.provide_deck_feedback.toString(),
@@ -334,7 +334,7 @@ var _ = `VK34WouHuaw-`,
         _.set(
           `game_frame_rate_reporting`,
           this.m_Preferences.game_frame_rate_reporting.toString(),
-        );
+        ));
       try {
         let _ = await _.default.post(_, _, {
           withCredentials: !0,
@@ -433,7 +433,7 @@ var _ = _();
 function _(_) {
   let { _: _, closeModal: _ } = _,
     _ = _.useCallback(() => {
-      _.Get().DeleteHardware(_.hardware_id), _();
+      (_.Get().DeleteHardware(_.hardware_id), _());
     }, [_, _.hardware_id]);
   return (0, _.jsx)(_, {
     bDisableBackgroundDismiss: !0,
@@ -448,7 +448,7 @@ function _(_) {
   let { _: _, closeModal: _ } = _,
     [_, _] = _.useState(_.friendly_name),
     _ = _.useCallback(() => {
-      _.Get().RenameHardware(_.hardware_id, _.trim()), _();
+      (_.Get().RenameHardware(_.hardware_id, _.trim()), _());
     }, [_, _, _.hardware_id]);
   return (0, _.jsx)(_, {
     bDisableBackgroundDismiss: !0,
@@ -558,11 +558,11 @@ var _ = _((_) => {
         window.location.reload();
       }, []),
       _ = _.useCallback(() => {
-        window.SteamClient.BrowserView.RegisterForMessageFromParent(_),
+        (window.SteamClient.BrowserView.RegisterForMessageFromParent(_),
           SteamClient.BrowserView.PostMessageToParent(
             `ShowSavedHardwareDialog`,
             ``,
-          );
+          ));
       }, [_]);
     return (0, _.jsxs)(`div`, {
       className: _,
@@ -1332,7 +1332,7 @@ var _ = class _ {
     );
   }
   Init() {
-    (this.m_rgActiveDevices = _(`active_devices`, `application_config`)),
+    ((this.m_rgActiveDevices = _(`active_devices`, `application_config`)),
       (this.m_rgRevokedDevices = _(`revoked_devices`, `application_config`)),
       (this.m_strAccountName = _(`accountName`, `application_config`)),
       (this.m_strPhoneHint = _(`phone_hint`, `application_config`)),
@@ -1344,7 +1344,7 @@ var _ = class _ {
       (this.m_strLatestAndroidAppVersion = _(
         `latest_android_app_version`,
         `application_config`,
-      ));
+      )));
   }
   GetActiveDevices() {
     return this.m_rgActiveDevices;
@@ -1368,8 +1368,8 @@ var _ = class _ {
     return this.m_strLatestAndroidAppVersion;
   }
 };
-_([_], _.prototype, `m_rgActiveDevices`, void 0),
-  _([_], _.prototype, `m_rgRevokedDevices`, void 0);
+(_([_], _.prototype, `m_rgActiveDevices`, void 0),
+  _([_], _.prototype, `m_rgRevokedDevices`, void 0));
 var _ = new URL(
     `../../../images/applications/store/sg_shield_off.png?v=valveisgoodatcaching`,
     import.meta.url,
@@ -1459,13 +1459,13 @@ var _ = new URL(
             );
         },
         _ = function (_, _) {
-          for (var _ = 0, _, _, _, _, _, _; _ < _.length && !_; ) {
+          for (var _ = 0, _, _, _, _, _, _; _ < _.length && !_;) {
             var _ = _[_],
               _ = _[_ + 1];
-            for (_ = _ = 0; _ < _.length && !_ && _[_]; )
+            for (_ = _ = 0; _ < _.length && !_ && _[_];)
               if (((_ = _[_++].exec(_)), _))
                 for (_ = 0; _ < _.length; _++)
-                  (_ = _[++_]),
+                  ((_ = _[++_]),
                     (_ = _[_]),
                     typeof _ == _ && _.length > 0
                       ? _.length === 2
@@ -1480,7 +1480,7 @@ var _ = new URL(
                             (this[_[0]] = _
                               ? _[3].call(this, _.replace(_[1], _[2]))
                               : _)
-                      : (this[_] = _ || _);
+                      : (this[_] = _ || _));
             _ += 2;
           }
         },
@@ -2196,7 +2196,7 @@ var _ = new URL(
             }),
             (this.getCPU = function () {
               var _ = {};
-              return (_[_] = _), _.call(_, _, _.cpu), _;
+              return ((_[_] = _), _.call(_, _, _.cpu), _);
             }),
             (this.getDevice = function () {
               var _ = {};
@@ -2218,7 +2218,7 @@ var _ = new URL(
             }),
             (this.getEngine = function () {
               var _ = {};
-              return (_[_] = _), (_[_] = _), _.call(_, _, _.engine), _;
+              return ((_[_] = _), (_[_] = _), _.call(_, _, _.engine), _);
             }),
             (this.getOS = function () {
               var _ = {};
@@ -2259,7 +2259,7 @@ var _ = new URL(
             this
           );
         };
-      (_.VERSION = _),
+      ((_.VERSION = _),
         (_.BROWSER = _([_, _, _])),
         (_.CPU = _([_])),
         (_.DEVICE = _([_, _, _, _, _, _, _, _, _])),
@@ -2271,11 +2271,11 @@ var _ = new URL(
               })
             : typeof _ !== _ && (_.UAParser = _)
           : (typeof _ !== _ && _.exports && (_ = _.exports = _),
-            (_.UAParser = _));
+            (_.UAParser = _)));
       var _ = typeof _ !== _ && (_.jQuery || _.Zepto);
       if (_ && !_._) {
         var _ = new _();
-        (_._ = _.getResult()),
+        ((_._ = _.getResult()),
           (_._.get = function () {
             return _.getUA();
           }),
@@ -2283,7 +2283,7 @@ var _ = new URL(
             _.setUA(_);
             var _ = _.getResult();
             for (var _ in _) _._[_] = _[_];
-          });
+          }));
       }
     })(typeof window == `object` ? window : _);
   })(),
@@ -2894,21 +2894,22 @@ function _(_) {
                 strOKText: _(`#authorized_devices_deauthorize_proceed`),
                 onOK: async () => {
                   let _ = new FormData();
-                  _.set(`action`, `deauthorize`),
+                  (_.set(`action`, `deauthorize`),
                     _.set(`sessionid`, _()),
                     await _.default.post(
                       _.STORE_BASE_URL + `twofactor/manage_action`,
                       _,
-                    );
+                    ));
                   let _ = document.createElement(`form`);
-                  (_.method = `POST`), (_.action = _.STORE_BASE_URL + `logout`);
+                  ((_.method = `POST`),
+                    (_.action = _.STORE_BASE_URL + `logout`));
                   let _ = document.createElement(`input`);
-                  (_.type = `hidden`),
+                  ((_.type = `hidden`),
                     (_.name = `sessionid`),
                     (_.value = _()),
                     _.appendChild(_),
                     document.body.appendChild(_),
-                    _.submit();
+                    _.submit());
                 },
                 onCancel: _,
               }),
@@ -3204,7 +3205,7 @@ function _(_) {
 function _(_, _) {
   let _ = _.GetLanguageFallback(_.LANGUAGE),
     _ = [_ + _.LANGUAGE + _];
-  return _.LANGUAGE != _ && _.push(_ + _ + _), _;
+  return (_.LANGUAGE != _ && _.push(_ + _ + _), _);
 }
 function _(_) {
   let _ = _.Get(),

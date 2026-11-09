@@ -174,7 +174,7 @@ var B = class {
   }
   add(e) {
     let t = JSON.stringify(e);
-    return this.rgSet.add(t), this;
+    return (this.rgSet.add(t), this);
   }
   delete(e) {
     let t = JSON.stringify(e);
@@ -224,7 +224,7 @@ function xe(t) {
         t instanceof File && e.set(n, t);
       });
       let t = [];
-      c.forEach((e, n) => {
+      (c.forEach((e, n) => {
         d.has(n) || t.push(n);
       }),
         m.mutate({
@@ -233,13 +233,13 @@ function xe(t) {
           mapAltText: l,
           rgGraphicsToDelete: t,
         }),
-        r(`alert`);
+        r(`alert`));
     },
     S = () => {
-      s(new B(a)), r(`closed`);
+      (s(new B(a)), r(`closed`));
     },
     C = () => {
-      r(`refreshing`), window.location.reload();
+      (r(`refreshing`), window.location.reload());
     },
     w = O.useId();
   return (0, k.jsxs)(k.Fragment, {
@@ -426,10 +426,10 @@ function Ce(t) {
   let [s, c] = (0, O.useState)(``),
     l = (e, t) => (r) => {
       let i = new B(n);
-      r.target.checked
+      (r.target.checked
         ? i.add(e === `package` ? { packageid: t } : { bundleid: t })
         : i.delete(e === `package` ? { packageid: t } : { bundleid: t }),
-        a(i);
+        a(i));
     },
     u = (e) => {
       let t = e.target.value;
@@ -560,20 +560,20 @@ function we(e) {
           return;
         }
         let a = new Map(n);
-        a.set(u, t), r(a), c(null);
+        (a.set(u, t), r(a), c(null));
       }
     },
     y = (e) => {
       let t = new Map(i);
-      t.set(u, e.target.value), a(t);
+      (t.set(u, e.target.value), a(t));
     },
     b = (e) => {
-      d(e.target.value), c(null);
+      (d(e.target.value), c(null));
     },
     x = () => {
       if (n.has(u)) {
         let e = new Map(n);
-        e.delete(u), r(e), c(null);
+        (e.delete(u), r(e), c(null));
       }
     },
     S = (e) => (n.has(e) && n.get(e) instanceof File ? A : n.has(e) ? j : M);
@@ -640,7 +640,7 @@ function we(e) {
               return;
             }
             let a = new Map(n);
-            a.set(u, t), r(a), c(null);
+            (a.set(u, t), r(a), c(null));
           }
         },
         children: p
@@ -747,7 +747,7 @@ function We(e) {
     l = o?.strReleaseState == `prerelease`,
     u = O.useCallback(
       (e, n) => {
-        w.invalidateQueries({ queryKey: [`ReleaseRequest`, t] }), r(e, n, l);
+        (w.invalidateQueries({ queryKey: [`ReleaseRequest`, t] }), r(e, n, l));
       },
       [t, r, l],
     ),
@@ -793,7 +793,7 @@ var Ke = O.memo(function (e) {
     [f, m] = O.useState(`none`),
     [g, _] = O.useState(),
     v = O.useCallback((e) => {
-      _(e), m(`none`);
+      (_(e), m(`none`));
     }, []),
     x = O.useCallback(() => {
       c
@@ -806,7 +806,7 @@ var Ke = O.memo(function (e) {
               strComingSoonDisplay: u,
             })
               .then(() => {
-                m(`refreshing`), s(c, u);
+                (m(`refreshing`), s(c, u));
               })
               .catch((e) => {
                 v(e);
@@ -999,9 +999,9 @@ async function Ze(e) {
   let { unAppID: n, rtReleaseDate: r, strComingSoonDisplay: a } = e,
     o = `${i.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${n}`,
     s = new FormData();
-  s.append(`sessionid`, t()),
+  (s.append(`sessionid`, t()),
     r && s.append(`release_date`, r.toString()),
-    s.append(`coming_soon_display`, a);
+    s.append(`coming_soon_display`, a));
   let c = await L.default.post(o, s);
   if (!c.data || c.data.success != 1)
     throw h(
@@ -1044,7 +1044,7 @@ function tt(t) {
     p = O.useCallback(() => u(!0), []),
     m = O.useCallback(() => u(!1), []),
     g = O.useCallback((e, t, n) => {
-      o(e), c(t), u(!1), n && f(!0);
+      (o(e), c(t), u(!1), n && f(!0));
     }, []);
   return (0, k.jsxs)(k.Fragment, {
     children: [
@@ -1118,11 +1118,11 @@ function $(e) {
 function nt(e) {
   let { appid: t, bIsGameEdit: n, closeModal: r } = e,
     i = O.useCallback(() => {
-      n
+      (n
         ? (window.TabSelect(`tab_publish`), window.scrollTo(0, 0))
         : (window.location.href =
             Z.GameEditByAppID(t.toString()) + `?activetab=tab_publish`),
-        r();
+        r());
     }, [t, n, r]);
   return (0, k.jsx)(E, {
     active: !0,

@@ -153,11 +153,11 @@ function _t(e) {
   q.useEffect(() => {
     if (g && !b.current) {
       let e = window.setTimeout(() => {
-        (b.current = !0), y(!0);
+        ((b.current = !0), y(!0));
       }, 500);
       return () => window.clearTimeout(e);
     }
-    return y(g || m), () => {};
+    return (y(g || m), () => {});
   }, [g, m]);
   let { data: S } = re(),
     C = !!S?.preferences?.disable_microtrailers,
@@ -396,8 +396,8 @@ function Ct(e, t) {
   let n = `0000000000000000000000000000000000000000`;
   typeof e == `string` ? (n = e) : e && (n = wt(e) || n);
   let i = `.jpg`;
-  n === `0000000000000000000000000000000000000000` && (n = St),
-    n.length == 44 && ((i = n.slice(-4)), (n = n.slice(0, 40)));
+  (n === `0000000000000000000000000000000000000000` && (n = St),
+    n.length == 44 && ((i = n.slice(-4)), (n = n.slice(0, 40))));
   let a = r.AVATAR_BASE_URL;
   switch (
     (a ||
@@ -418,7 +418,7 @@ function Ct(e, t) {
     case `FillArea`:
       a += `_full`;
   }
-  return (a += i), a;
+  return ((a += i), a);
 }
 function wt(e) {
   return e
@@ -637,7 +637,7 @@ var Y = class e {
   }
   static s_Singleton;
   static Get() {
-    return (e.s_Singleton ||= new e()), e.s_Singleton;
+    return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
   constructor() {}
 };
@@ -670,10 +670,10 @@ function At(e) {
         let t = e.map((e) => Y.Get().LoadStoreItemPartnerInfo(e, 0));
         Promise.all(t).then(() => {
           let t = new Map();
-          e.forEach((e) => {
+          (e.forEach((e) => {
             Y.Get().BHasInfoForApp(e) && t.set(e, Y.Get().GetInfoForApp(e));
           }),
-            n(t);
+            n(t));
         });
       }
     }, [e]),
@@ -919,13 +919,13 @@ function Ht(e) {
             a = `${c.PARTNER_BASE_URL}bundles/suggestbundle`;
             break;
           default:
-            f ? (n.includedlc = !0) : t === !1 && (n.includedlc = !1),
+            (f ? (n.includedlc = !0) : t === !1 && (n.includedlc = !1),
               m &&
                 ((n.bfilterappids = !0),
-                (n.rgParentAppIds = JSON.stringify(m)));
+                (n.rgParentAppIds = JSON.stringify(m))));
         }
         let o = await K.default.get(a, { params: n, withCredentials: !0 });
-        o?.status == 200 && o.data?.success == 1
+        (o?.status == 200 && o.data?.success == 1
           ? i
             ? (E(o.data.matches?.filter((e) => i(e.id)) || []),
               O(o.data.package_matches?.filter((e) => i(e.packageid)) || []),
@@ -934,13 +934,13 @@ function Ht(e) {
               O(o.data.package_matches || []),
               A(o.data.bundle_matches || []))
           : (E([]), O([]), A([])),
-          S(!1);
+          S(!1));
       },
       [i, r, l, f, m],
     ),
     P = (0, q.useCallback)(
       (e) => {
-        b(e), N(j.current?.value, e);
+        (b(e), N(j.current?.value, e));
       },
       [N, j],
     ),
@@ -1014,7 +1014,7 @@ function Ht(e) {
                   is_visible: !0,
                   type: 0,
                   fnSetItemID: () => {
-                    E([]), t(e.id, e.itemid);
+                    (E([]), t(e.id, e.itemid));
                   },
                 },
                 e.id,
@@ -1030,7 +1030,7 @@ function Ht(e) {
                   type: 1,
                   is_visible: e.is_visible,
                   fnSetItemID: () => {
-                    O([]), t(e.packageid);
+                    (O([]), t(e.packageid));
                   },
                 },
                 e.packageid,
@@ -1046,7 +1046,7 @@ function Ht(e) {
                   type: 2,
                   is_visible: e.is_visible,
                   fnSetItemID: () => {
-                    A([]), t(e.bundleid);
+                    (A([]), t(e.bundleid));
                   },
                 },
                 e.bundleid,

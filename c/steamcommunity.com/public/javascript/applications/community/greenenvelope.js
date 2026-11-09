@@ -52,7 +52,7 @@ var _ = _(_()),
     }, [_]);
     let _ = _();
     (0, _.useEffect)(() => {
-      _.setTransport(_), (window.RefreshSteamNotifications = () => _(_));
+      (_.setTransport(_), (window.RefreshSteamNotifications = () => _(_)));
     }, [_]);
     let _ = _();
     return _
@@ -99,8 +99,8 @@ function _(_) {
       )),
       _.current.Hide());
     let _ = document.getElementById(`header_notification_link`);
-    _ && (_.style.cssText = `background-color: rgba(0,0,0,0)`),
-      window.setTimeout(() => _(null), 2e3);
+    (_ && (_.style.cssText = `background-color: rgba(0,0,0,0)`),
+      window.setTimeout(() => _(null), 2e3));
   }, []);
   let _ = () => {
       _.current?.visible ||
@@ -181,11 +181,11 @@ var _ = (_) => {
     });
   };
 function _(_, _, _) {
-  _.read ||
+  (_.read ||
     (_ && _.button != 0 && _.button != 1) ||
     !_.notification_id ||
     _.MarkItemRead(_.notification_id),
-    _();
+    _());
 }
 function _() {
   let _ = _();

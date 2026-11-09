@@ -140,7 +140,7 @@ function _() {
             (0, _.jsx)(_, {
               state: _,
               onChange: (_, _) => {
-                _(_), _ && (_.push(_(_)), _(_));
+                (_(_), _ && (_.push(_(_)), _(_)));
               },
             }),
             _.data &&
@@ -157,7 +157,7 @@ function _() {
                       },
                     ],
                   };
-                  _(_), _.push(_(_)), _(_);
+                  (_(_), _.push(_(_)), _(_));
                 },
               }),
           ],
@@ -267,7 +267,7 @@ function _(_) {
           _ = (100 - _ - _) / (_.length - +!_),
           _ = _.reduce((_, _) => _ + Math.max(0, _ + _ - 100), 0),
           _ = _.reduce((_, _) => _ + Math.min(0, _ + _), 0);
-        (_ += Math.floor(_ / (_.length - 1))),
+        ((_ += Math.floor(_ / (_.length - 1))),
           (_ += Math.floor(_ / (_.length - 1))),
           (_ = _.map((_) => ({
             nAppID: _.nAppID,
@@ -280,7 +280,7 @@ function _(_) {
               arrSelectedAppInfos: _,
             },
             _,
-          );
+          ));
       } else
         _.onChange(
           {
@@ -608,7 +608,7 @@ var _ = _.forwardRef(function (_, _) {
         _ != _ && (_(_), _(Date.now()), setTimeout(_, 300));
       },
       _ = (_) => {
-        _.fnSelectAppID(_), _(``), _(0), _([]), _(Date.now());
+        (_.fnSelectAppID(_), _(``), _(0), _([]), _(Date.now()));
       },
       _ = (_) => {
         switch (_) {

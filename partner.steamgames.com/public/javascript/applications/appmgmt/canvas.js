@@ -41,15 +41,15 @@ var o = r(n()),
         a = Math.floor(
           this.m_elCanvas.clientHeight / this.props.reductionFactor,
         );
-      (this.m_elCanvas.width = i),
+      ((this.m_elCanvas.width = i),
         (this.m_elCanvas.height = a),
         (this.props.blurAmount ?? 0) > 0 &&
-          (r.filter = `blur(` + this.props.blurAmount + `px)`);
+          (r.filter = `blur(` + this.props.blurAmount + `px)`));
       let o = () => {
-        r.drawImage(t, 0, 0, i * e[0], a * e[1]),
-          n > 0 && this.m_schUpdate.Schedule(n, o);
+        (r.drawImage(t, 0, 0, i * e[0], a * e[1]),
+          n > 0 && this.m_schUpdate.Schedule(n, o));
       };
-      o(), (this.m_bSetupComplete = !0);
+      (o(), (this.m_bSetupComplete = !0));
     }
     render() {
       return (0, s.jsx)(`canvas`, {
@@ -61,6 +61,6 @@ var o = r(n()),
       });
     }
   };
-t([i], c.prototype, `BindCanvasRef`, null),
-  t([i], c.prototype, `updateCanvas`, null);
+(t([i], c.prototype, `BindCanvasRef`, null),
+  t([i], c.prototype, `updateCanvas`, null));
 export { c as t };

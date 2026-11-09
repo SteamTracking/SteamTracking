@@ -73,7 +73,7 @@ function _(_) {
         replaces_tags: _,
         content_descriptors: _,
       } = _;
-    _ &&
+    (_ &&
       (_.must = Array.isArray(_)
         ? _.map((_) => ({
             _: Number(_),
@@ -116,7 +116,7 @@ function _(_) {
       _ &&
         typeof _ == `string` &&
         (_.content_descriptors = _.split(`,`).map((_) => parseInt(_))),
-      _.push(_);
+      _.push(_));
   }
   return _;
 }
@@ -134,7 +134,7 @@ function _() {
 async function _(_) {
   let _ = {};
   for (let _ of _)
-    (_[_.handle] = {
+    ((_[_.handle] = {
       handle: _.handle,
       type: _.type,
       loc_token: _.loc_token,
@@ -156,26 +156,26 @@ async function _(_) {
       _[_.handle].mustnot?.length === 1 &&
         (_[_.handle].mustnot = _[_.handle].mustnot[0]),
       _[_.handle].replaces_tags?.length === 1 &&
-        (_[_.handle].replaces_tags = _[_.handle].replaces_tags[0]);
+        (_[_.handle].replaces_tags = _[_.handle].replaces_tags[0]));
   let _ =
       _.PARTNER_BASE_URL +
       `admin/store/contenthub/ajaxsavecontenthubcategorieskv`,
     _ = new FormData();
-  _.append(`sessionid`, _()),
+  (_.append(`sessionid`, _()),
     _.append(`origin`, self.origin),
-    _.append(`json`, JSON.stringify(_));
+    _.append(`json`, JSON.stringify(_)));
   let _ = null;
   try {
     let _ = await _.default.post(_, _, {
       withCredentials: !0,
     });
     if (_.status === 200 && _.data?.success === 1)
-      return _.Get().ClearDirty(), null;
+      return (_.Get().ClearDirty(), null);
     _ = _(_);
   } catch (_) {
     _ = _(_);
   }
-  return console.error(`SaveCategoriesKV failed: ` + _.strErrorMsg, _), _;
+  return (console.error(`SaveCategoriesKV failed: ` + _.strErrorMsg, _), _);
 }
 async function _() {
   let _ =
@@ -232,7 +232,7 @@ var _ = class _ {
     return this.m_mapStoreCategories;
   }
   async HintLoad() {
-    return (this.m_promise ||= this.Load()), this.m_promise;
+    return ((this.m_promise ||= this.Load()), this.m_promise);
   }
   async Load() {
     let _ =
@@ -249,19 +249,19 @@ var _ = class _ {
         params: _,
       });
       if (_.status === 200 && _.data?.success === 1) {
-        (this.m_rgTags = _.data.tags),
+        ((this.m_rgTags = _.data.tags),
           (this.m_rgCategories = _.data.categories),
           (this.m_mapStoreTags = new Map()),
           this.m_rgTags.forEach((_) => this.m_mapStoreTags.set(_.tagid, _)),
           (this.m_mapStoreCategories = new Map()),
           this.m_rgCategories.forEach((_) =>
             this.m_mapStoreCategories.set(_.categoryid, _),
-          );
+          ));
         return;
       }
-      (this.m_promise = null), (_ = _(_));
+      ((this.m_promise = null), (_ = _(_)));
     } catch (_) {
-      (this.m_promise = null), (_ = _(_));
+      ((this.m_promise = null), (_ = _(_)));
     }
     console.error(
       `CStoreTagsAndCategoriesStore.Load failed: ` + _.strErrorMsg,
@@ -269,10 +269,11 @@ var _ = class _ {
     );
   }
   static Get() {
-    return (_.s_singleton ||= new _()), _.s_singleton;
+    return ((_.s_singleton ||= new _()), _.s_singleton);
   }
 };
-_([_], _.prototype, `m_bDirty`, void 0), _([_], _.prototype, `SetDirty`, null);
+(_([_], _.prototype, `m_bDirty`, void 0),
+  _([_], _.prototype, `SetDirty`, null));
 function _() {
   return _.Get().BIsDirty();
 }
@@ -285,7 +286,7 @@ function _() {
         _.Get()
           .HintLoad()
           .then(() => {
-            _(_.Get().GetTags()), _(_.Get().GetCategories());
+            (_(_.Get().GetTags()), _(_.Get().GetCategories()));
           });
     }, [_, _]),
     {
@@ -303,7 +304,7 @@ function _() {
         _.Get()
           .HintLoad()
           .then(() => {
-            _(_.Get().GetStoreTagMap()), _(_.Get().GetStoreCategoryMap());
+            (_(_.Get().GetStoreTagMap()), _(_.Get().GetStoreCategoryMap()));
           });
     }, [_, _]),
     {
@@ -351,18 +352,18 @@ var _ = 5e3,
             gross_units_sold: 0,
           }),
           this.m_mapAppSaleSummary.forEach((_) => {
-            (this.m_totalSummary.net_sales_usd += _.net_sales_usd),
+            ((this.m_totalSummary.net_sales_usd += _.net_sales_usd),
               (this.m_totalSummary.net_units_sold += _.net_units_sold),
               (this.m_totalSummary.gross_sales_usd += _.gross_sales_usd),
-              (this.m_totalSummary.gross_units_sold += _.gross_units_sold);
+              (this.m_totalSummary.gross_units_sold += _.gross_units_sold));
           })),
         this.m_totalSummary
       );
     }
     SetAppSaleSummary(_) {
-      this.m_mapAppSaleSummary.set(_.appid, _),
+      (this.m_mapAppSaleSummary.set(_.appid, _),
         this.m_mapAppSaleSummaryChange.has(_.appid) &&
-          this.m_mapAppSaleSummaryChange.get(_.appid).Dispatch(_);
+          this.m_mapAppSaleSummaryChange.get(_.appid).Dispatch(_));
     }
     GetTopNApps(_) {
       let _ = Array.from(this.m_mapAppSaleSummary.values());
@@ -375,7 +376,7 @@ var _ = 5e3,
       let _ = [..._],
         _ = [],
         _ = [];
-      for (; _.length > 0; ) {
+      for (; _.length > 0;) {
         _ = _.filter(
           (_) =>
             !this.m_mapAppToLoadPromises.has(_) ||
@@ -383,7 +384,9 @@ var _ = 5e3,
         );
         let _ = _.splice(0, _),
           _ = this.InternalLoadAppBatch(_);
-        _.push(_), _.push(_), _.length > 0 && (await Promise.all(_), (_ = []));
+        (_.push(_),
+          _.push(_),
+          _.length > 0 && (await Promise.all(_), (_ = [])));
       }
       await Promise.all(_);
     }
@@ -391,10 +394,10 @@ var _ = 5e3,
       let _;
       try {
         let _ = new FormData();
-        _.append(`sessionid`, _()),
+        (_.append(`sessionid`, _()),
           _.append(`rgAppIDs`, _.join(`,`)),
           _.append(`rtimeStart`, `` + this.m_rtStartTime),
-          _.append(`rtimeEnd`, `` + this.m_rtEndTime);
+          _.append(`rtimeEnd`, `` + this.m_rtEndTime));
         let _ = `${_.PARTNER_BASE_URL}promotion/planning/ajaxgetappsalesummaries`,
           _ = await _.default.post(_, _, {
             withCredentials: !0,
@@ -414,7 +417,7 @@ var _ = 5e3,
                 net_sales_usd: 0,
                 net_units_sold: 0,
               };
-              _.forEach((_) => {
+              (_.forEach((_) => {
                 let _ = this.m_mapPackageSummary.get(_);
                 _ &&
                   ((_.gross_sales_usd += _.gross_sales_usd),
@@ -424,7 +427,7 @@ var _ = 5e3,
               }),
                 this.m_mapAppSaleSummary.set(_.appid, _),
                 this.BHasAppSaleSummaryChangeCallback(_.appid) &&
-                  this.GetAppSaleSummaryChangeCallback(_.appid).Dispatch(_);
+                  this.GetAppSaleSummaryChangeCallback(_.appid).Dispatch(_));
             }),
             !0
           );
@@ -441,16 +444,16 @@ var _ = 5e3,
       );
     }
     constructor(_, _) {
-      if (_) (this.m_rtStartTime = _), (this.m_rtEndTime = _);
+      if (_) ((this.m_rtStartTime = _), (this.m_rtEndTime = _));
       else {
         let _ = new Date();
-        _.setUTCHours(0),
+        (_.setUTCHours(0),
           _.setUTCMinutes(0),
           _.setUTCSeconds(0),
-          _.setUTCMilliseconds(0);
+          _.setUTCMilliseconds(0));
         let _ = Math.floor(_.getTime() / 1e3);
-        (this.m_rtEndTime = _ - 86400),
-          (this.m_rtStartTime = _ - (_ + 1) * 24 * 60 * 60);
+        ((this.m_rtEndTime = _ - 86400),
+          (this.m_rtStartTime = _ - (_ + 1) * 24 * 60 * 60));
       }
     }
   },
@@ -523,16 +526,16 @@ var _ = 5e3,
           net_units_sold: 0,
         },
         _ = [];
-      _.forEach((_) => {
+      (_.forEach((_) => {
         let _ = this.m_appAndPackagesSummuries.GetAppSaleSummary(_);
-        _ &&
+        (_ &&
           ((_.gross_sales_usd += _.gross_sales_usd),
           (_.gross_units_sold += _.gross_units_sold),
           (_.net_sales_usd += _.net_sales_usd),
           (_.net_units_sold += _.net_units_sold)),
-          _.push(_);
+          _.push(_));
       }),
-        _.sort((_, _) => _.gross_sales_usd - _.gross_sales_usd);
+        _.sort((_, _) => _.gross_sales_usd - _.gross_sales_usd));
       let _ = {
         gross_sales_usd: 0,
         gross_units_sold: 0,
@@ -541,10 +544,10 @@ var _ = 5e3,
       };
       return (
         _.slice(0, 10).forEach((_) => {
-          (_.gross_sales_usd += _.gross_sales_usd),
+          ((_.gross_sales_usd += _.gross_sales_usd),
             (_.gross_units_sold += _.gross_units_sold),
             (_.net_sales_usd += _.net_sales_usd),
-            (_.net_units_sold += _.net_units_sold);
+            (_.net_units_sold += _.net_units_sold));
         }),
         this.m_mapContentHubTopAppSaleSummary.set(_, _),
         this.m_mapContentHubSummary.set(_, _),
@@ -578,14 +581,14 @@ var _ = 5e3,
         });
       if (_.status == 200 && _.data?.cache?.length > 0) {
         let _ = [];
-        _.data.cache.forEach((_) => {
+        (_.data.cache.forEach((_) => {
           let _ = JSON.parse(_),
             _ = {
               handle: _.handle,
               type: _.type,
             },
             _ = this.GetKey(_);
-          this.m_mapContentHubTopAppSaleSummary.set(_, _.topAppSummary),
+          (this.m_mapContentHubTopAppSaleSummary.set(_, _.topAppSummary),
             this.m_mapContentHubSummary.set(_, _.hubSummary),
             this.m_mapContentHubToAppCount.set(_, _.appCount),
             _.topApps.forEach((_) =>
@@ -597,10 +600,10 @@ var _ = 5e3,
               this.m_mapContentHubTopAppSaleSummaryChange
                 .get(_)
                 .Dispatch(_.topAppSummary),
-            _.push(this.BuildAnalysis(_));
+            _.push(this.BuildAnalysis(_)));
         }),
           (this.m_rgSummaries = _),
-          this.m_summaryAnalysisChange.Dispatch(_);
+          this.m_summaryAnalysisChange.Dispatch(_));
       }
       return null;
     }
@@ -633,7 +636,7 @@ var _ = 5e3,
           appCount: _,
         },
         _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(
           `rtStartTime`,
           `` + this.m_appAndPackagesSummuries.GetRTStartTime(),
@@ -644,7 +647,7 @@ var _ = 5e3,
         ),
         _.append(`bClear`, `false`),
         _.append(`key`, this.GetKey(_)),
-        _.append(`rgStats`, JSON.stringify(_));
+        _.append(`rgStats`, JSON.stringify(_)));
       let _ = `${_.PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats`,
         _ = await _.default.post(_, _, {
           withCredentials: !0,
@@ -654,7 +657,7 @@ var _ = 5e3,
     }
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
   };
 _([_], _.prototype, `LoadCachedSaleSummaries`, null);
@@ -784,7 +787,7 @@ function _(_, _, _) {
       };
     }, [_, _, _]),
     [_, _] = (0, _.useState)(_.Get().GetTopAppSummary(_));
-  return _(_.Get().GetContentHubTopAppSaleSummaryChangeCallback(_), _), _;
+  return (_(_.Get().GetContentHubTopAppSaleSummaryChangeCallback(_), _), _);
 }
 function _(_) {
   let _ = _(_),
@@ -807,7 +810,7 @@ function _(_) {
 }
 function _(_) {
   let [_, _] = (0, _.useState)(_.Get().GetTopAppSummary(_));
-  return _(_.Get().GetContentHubTopAppSaleSummaryChangeCallback(_), _), _;
+  return (_(_.Get().GetContentHubTopAppSaleSummaryChangeCallback(_), _), _);
 }
 function _() {
   let [_, _] = (0, _.useState)(_.Get().GetSummaryAnalysis());
@@ -1254,4 +1257,3 @@ function _(_) {
     children: `Export CSV`,
   });
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

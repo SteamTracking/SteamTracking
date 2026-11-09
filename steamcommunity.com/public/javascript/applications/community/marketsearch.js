@@ -41,6 +41,6 @@ function u(e) {
   });
 }
 function d(e) {
-  return c.use(r.Ready()), e.children;
+  return (c.use(r.Ready()), e.children);
 }
 export { u as default };

@@ -119,7 +119,7 @@ function Ee(e) {
     bAlertDialog: !0,
     strTitle: B.Localize(`#PricingDashboard_ApplyConversion_Method`),
     onOK: () => {
-      a(), n && n();
+      (a(), n && n());
     },
     strOKButtonText: b(
       i
@@ -440,13 +440,13 @@ function mt(e) {
     [o, s] = V.useState(!1);
   return {
     fnPublish: V.useCallback(async () => {
-      r(1), a(void 0), s(!1);
+      (r(1), a(void 0), s(!1));
       let n = await t(e);
       if (n.success != 1) {
         let e = n.success == 40;
-        return a(e ? n.msg : void 0), s(e && !!n.cooldown), r(3), !1;
+        return (a(e ? n.msg : void 0), s(e && !!n.cooldown), r(3), !1);
       }
-      return r(2), !0;
+      return (r(2), !0);
     }, [r, t, e]),
     ePublishState: n,
     strPublishError: i,
@@ -826,7 +826,7 @@ function $(e) {
   for (let e of i) {
     let { packageID: t, strPriceKey: n, nPriceInCents: r } = e,
       { nMinPriceInCents: i, nMaxPriceInCents: a } = ae(t, n);
-    r < i
+    (r < i
       ? h.push({
           packageID: t,
           strPriceKey: n,
@@ -845,7 +845,7 @@ function $(e) {
         }),
       e.nPriceInCents > e.nOldPriceInCents &&
         (v.add(e.strPriceKey), P(t) && y.add(e.strPriceKey)),
-      S.add(e.packageID);
+      S.add(e.packageID));
   }
   let C = Array.from(v),
     w = Array.from(y),
@@ -906,7 +906,7 @@ function $(e) {
                 bOKDisabled: k,
                 strUpdateText: b(`#PackageGrid_NavigateWithoutSavingButton`),
                 onUpdate: () => {
-                  a(), e.closeModal(), A(!0);
+                  (a(), e.closeModal(), A(!0));
                 },
                 onCancel: e.closeModal,
               })
@@ -1115,7 +1115,7 @@ function Pt(e) {
             return;
           }
         }
-        c(e.length), r(), t();
+        (c(e.length), r(), t());
       })();
     }, []),
     d

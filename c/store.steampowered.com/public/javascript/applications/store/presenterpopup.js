@@ -15,8 +15,7 @@ function _(_) {
   if (
     ((_ =
       _ instanceof Array
-        ? _.map((_) => (_ ? _.toString() : ``))
-            .filter((_) => _.length > 0)
+        ? _.map((_) => (_ ? _.toString() : ``)).filter((_) => _.length > 0)
             .join(`
 `)
         : _.toString()),
@@ -235,7 +234,7 @@ var _ = ({ target: _, title: _, subtitle: _, children: _ }) =>
           target: _,
         },
         _ = `presenter-hover-` + Math.floor(Math.random() * 1e8);
-      (this.m_fnHidePopup = () =>
+      ((this.m_fnHidePopup = () =>
         _.sm_embeddedElements.HideElement(_.ownerDocument, _)),
         window.addEventListener(`scroll`, this.OnScroll),
         (this.m_nScrollPosAtHoverStart = window.scrollY),
@@ -250,7 +249,7 @@ var _ = ({ target: _, title: _, subtitle: _, children: _ }) =>
             }),
           }),
           _,
-        );
+        ));
     }
     OnLeave(_) {
       this.ClosePopup();
@@ -267,10 +266,10 @@ var _ = ({ target: _, title: _, subtitle: _, children: _ }) =>
       });
     }
   };
-_([_], _.prototype, `ClosePopup`, null),
+(_([_], _.prototype, `ClosePopup`, null),
   _([_], _.prototype, `OnScroll`, null),
   _([_], _.prototype, `OnHover`, null),
-  _([_], _.prototype, `OnLeave`, null);
+  _([_], _.prototype, `OnLeave`, null));
 function _(_) {
   let {
       photo: _,
@@ -329,4 +328,3 @@ function _(_) {
     }),
   });
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

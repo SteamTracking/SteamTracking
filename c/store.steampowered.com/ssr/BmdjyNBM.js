@@ -23,4 +23,3 @@ function _() {
     throw Error(`called useActiveAccount outside of ActiveAccountProvider`);
   return _.useActiveAccount();
 }
-export { _, _ };

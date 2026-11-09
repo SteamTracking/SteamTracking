@@ -17,8 +17,8 @@ function _(_) {
           .writeText(_.current.value)
           .then(() => _(_(`#EventDisplay_Share_CopiedToClipboard`)))
           .catch((_) => {
-            _(_(`#EventDisplay_Share_FailedToCopyToClipboard`)),
-              console.error(`Failed to copy link to clipboard:`, _);
+            (_(_(`#EventDisplay_Share_FailedToCopyToClipboard`)),
+              console.error(`Failed to copy link to clipboard:`, _));
           });
     };
   return (0, _.jsxs)(`div`, {
@@ -58,4 +58,3 @@ function _(_) {
     ],
   });
 }
-export { _ };

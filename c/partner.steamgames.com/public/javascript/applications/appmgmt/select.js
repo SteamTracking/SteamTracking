@@ -37,8 +37,8 @@ function _(_) {
       refPopover: _,
       popoverLabel: _,
       setOpen: (_) => {
-        _ && _(_.multiselect ? _.selectedValue[0] : _.selectedValue),
-          _.setOpen(_);
+        (_ && _(_.multiselect ? _.selectedValue[0] : _.selectedValue),
+          _.setOpen(_));
       },
       focusedIndex: _,
       onFocusedIndexChange: _,
@@ -209,13 +209,13 @@ function _(_, _) {
     [_, _] = (0, _.useState)(!1),
     _ = (0, _.useCallback)(
       (_) => {
-        _(_), _ || _(!1);
+        (_(_), _ || _(!1));
       },
       [_, _],
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        _(_ ? [] : null), _?.stopPropagation(), _?.preventDefault();
+        (_(_ ? [] : null), _?.stopPropagation(), _?.preventDefault());
       },
       [_, _],
     );
@@ -374,6 +374,5 @@ var _ = Object.assign(_, _),
   _ = (0, _.createContext)(null);
 function _(_) {
   let _ = (0, _.useContext)(_);
-  return _ || console.error(`${_} must be used within a <Select>!`), _;
+  return (_ || console.error(`${_} must be used within a <Select>!`), _);
 }
-export { _, _, _ };

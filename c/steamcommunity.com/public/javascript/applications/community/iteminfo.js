@@ -164,7 +164,7 @@ function _(_, _) {
     _.g_mapPendingItemInfo?.has(_))
   ) {
     let { description: _, asset: _ } = _.g_mapPendingItemInfo.get(_);
-    _(_, _), _.g_mapPendingItemInfo.delete(_);
+    (_(_, _), _.g_mapPendingItemInfo.delete(_));
   }
   return (
     _.set(_, _),

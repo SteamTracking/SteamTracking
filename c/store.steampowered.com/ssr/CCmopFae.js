@@ -6,7 +6,7 @@ function _(_, _) {
       let _ = _(_.ownerDocument.defaultView, (_) => {
         _(_[0]);
       });
-      return _.observe(_), () => _.unobserve(_);
+      return (_.observe(_), () => _.unobserve(_));
     },
     [_, _],
   );
@@ -36,6 +36,5 @@ function _(_, _) {
 }
 function _(_, ..._) {
   let _ = new _.ownerDocument.defaultView.ResizeObserver(..._);
-  return _.observe(_), _;
+  return (_.observe(_), _);
 }
-export { _, _, _ };

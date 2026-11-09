@@ -48,7 +48,7 @@ var f = class n {
                 i.PARTNER_BASE_URL + `pub/publisher/${e.publisherid}/`,
               contacts: e.contacts,
             };
-            this.m_mapOptInToPartners.set(e.publisherid, t), n.push(t);
+            (this.m_mapOptInToPartners.set(e.publisherid, t), n.push(t));
           })
         : console.log(
             `CPartnerInfoStore.FindPartnerByName failed with status ${o?.status} eresult ${o?.data?.success} and msg ${o?.data?.msg}`,
@@ -80,7 +80,7 @@ var f = class n {
   }
   static s_Singleton;
   static Get() {
-    return (n.s_Singleton ||= new n()), n.s_Singleton;
+    return ((n.s_Singleton ||= new n()), n.s_Singleton);
   }
   constructor() {
     let e = JSON.parse(JSON.stringify(t(`partner_info`, `application_config`)));

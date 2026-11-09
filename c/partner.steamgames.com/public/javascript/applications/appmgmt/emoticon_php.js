@@ -99,7 +99,7 @@ var _ = 50,
       );
     }
     GetTimeReceivedNewestEmoticon() {
-      return this.UpdateEmoticonList(), this.m_rtMostRecentEmoticon;
+      return (this.UpdateEmoticonList(), this.m_rtMostRecentEmoticon);
     }
     GetTimeReceivedForStickerOrEffect() {
       return this.m_rtLastStickerOrEffect;
@@ -108,13 +108,13 @@ var _ = 50,
       this.m_bInitialized || this.RequestEmoticonList();
     }
     get emoticon_list() {
-      return this.UpdateEmoticonList(), this.m_rgEmoticons;
+      return (this.UpdateEmoticonList(), this.m_rgEmoticons);
     }
     BHasEmoticon(_) {
       return this.m_setEmoticonOwned.has(_);
     }
     get flair_list() {
-      return this.UpdateEmoticonList(), this.m_rgFlairs;
+      return (this.UpdateEmoticonList(), this.m_rgFlairs);
     }
     GetStickerList() {
       return this.m_rgStickers;
@@ -143,7 +143,7 @@ var _ = 50,
       let _ = new Map(),
         _ = /\[emoticon\]([^[]*)/g,
         _;
-      for (; (_ = _.exec(_)); ) {
+      for (; (_ = _.exec(_));) {
         let _ = _.get(_[1]) || 0;
         _.set(_[1], _ + 1);
       }
@@ -223,10 +223,10 @@ var _ = 50,
       );
     }
     OnEmoticonListReceived(_) {
-      (this.m_rgFlairs = []),
+      ((this.m_rgFlairs = []),
         (this.m_rgEmoticons = []),
         (this.m_rgRecentEmoticons = void 0),
-        (this.m_rtMostRecentEmoticon = void 0);
+        (this.m_rtMostRecentEmoticon = void 0));
       let _ = this.GetServerTime() - _;
       for (let _ of _) {
         let _ = _.name;
@@ -241,25 +241,25 @@ var _ = 50,
             });
         } else {
           let _ = _.time_received;
-          !_.last_used && _ && _ > _
+          (!_.last_used && _ && _ > _
             ? (!this.m_rtMostRecentEmoticon ||
                 _ > this.m_rtMostRecentEmoticon) &&
               (this.m_rtMostRecentEmoticon = _)
             : delete _.time_received,
-            this.m_rgEmoticons.push(_);
+            this.m_rgEmoticons.push(_));
         }
       }
-      (this.m_setEmoticonOwned = new Set(
+      ((this.m_setEmoticonOwned = new Set(
         this.m_rgEmoticons.map((_) => _.name_normalized || _.name),
       )),
         (this.m_bInitialized = !0),
-        (this.m_bEmoticonListRequested = !1);
+        (this.m_bEmoticonListRequested = !1));
     }
   };
-_([_], _.prototype, `m_bInitialized`, void 0),
+(_([_], _.prototype, `m_bInitialized`, void 0),
   _([_], _.prototype, `m_rtMostRecentEmoticon`, void 0),
   _([_], _.prototype, `m_rtLastStickerOrEffect`, void 0),
-  _([_], _.prototype, `TrackEmoticonUsage`, null);
+  _([_], _.prototype, `TrackEmoticonUsage`, null));
 var _ = _(_()),
   _ = class extends _ {
     constructor() {
@@ -290,12 +290,12 @@ var _ = _(_()),
                     name: _.substr(1, _.length - 2),
                   },
                   _ = _.name.toLowerCase();
-                _ != _.name && (_.name_normalized = _),
+                (_ != _.name && (_.name_normalized = _),
                   _.time_last_used && (_.last_used = _.time_last_used),
                   _.use_count && (_.use_count = _.use_count),
                   _.time_received && (_.time_received = _.time_received),
                   _.appid && (_.appid = _.appid),
-                  _.push(_);
+                  _.push(_));
               }
             }
           }
@@ -305,4 +305,3 @@ var _ = _(_()),
       this.OnEmoticonListReceived(_);
     }
   };
-export { _, _, _ };

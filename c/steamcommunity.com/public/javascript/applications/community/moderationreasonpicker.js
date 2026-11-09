@@ -45,7 +45,7 @@ function _(_) {
                         onClick: () => {
                           if (_(_)) {
                             let _ = [..._];
-                            _.push(_), _(_);
+                            (_.push(_), _(_));
                           } else if (_(_))
                             _(_.value) || _(_.value)
                               ? _(_.value)
@@ -135,4 +135,3 @@ function _(_) {
     ],
   });
 }
-export { _ };

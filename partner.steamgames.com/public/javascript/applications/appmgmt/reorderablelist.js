@@ -50,25 +50,25 @@ function b(n) {
         (te(V.current.firstElementChild.getBoundingClientRect().height),
         I(V.current.firstElementChild.getBoundingClientRect().width));
     };
-  g.useEffect(() => {
+  (g.useEffect(() => {
     G();
   }, []),
-    g.useEffect(() => () => W.cancel(`ReorderableList unmounting`), [W]);
+    g.useEffect(() => () => W.cancel(`ReorderableList unmounting`), [W]));
   let K = (e, t) => {
       let n = H.current[e]?.current;
       if (!n) {
         console.error(`start element grab missing element at index ` + e);
         return;
       }
-      T(!0), j(e), R(void 0), N(e);
+      (T(!0), j(e), R(void 0), N(e));
       let r = t.clientX - n.getBoundingClientRect().left;
       D(r);
       let i = t.clientY - n.getBoundingClientRect().top;
-      k(i),
+      (k(i),
         (n.style.position = `fixed`),
         (n.style.left = t.clientX - r + `px`),
         (n.style.top = t.clientY - i + `px`),
-        (n.style.zIndex = `1`);
+        (n.style.zIndex = `1`));
     },
     q = g.useCallback(
       (e) => {
@@ -82,13 +82,13 @@ function b(n) {
     ),
     J = g.useCallback(() => {
       let e = H.current[A]?.current;
-      e
+      (e
         ? ((e.style.position = ``), (e.style.zIndex = ``))
         : console.error(`end element drag missing element`),
         T(!1),
         j(-1),
         R(void 0),
-        N(void 0);
+        N(void 0));
     }, [A]),
     Y = (e, t) => {
       W.token.reason ||
@@ -120,16 +120,16 @@ function b(n) {
             n = e;
             break;
           }
-        N(n ?? U.current.length), q(e);
+        (N(n ?? U.current.length), q(e));
       },
       [w, W, q],
     );
-  o(window, `mousemove`, w ? ne : void 0),
+  (o(window, `mousemove`, w ? ne : void 0),
     o(window, `mouseup`, w ? Z : void 0),
     g.useEffect(() => {
       for (let e = H.current.length; e < r.length; e++)
-        H.current.push(g.createRef()), U.current.push(g.createRef());
-    }, [r.length]);
+        (H.current.push(g.createRef()), U.current.push(g.createRef()));
+    }, [r.length]));
   let Q = (e) => {
       R(void 0);
       let t = z?.trim(),
@@ -201,7 +201,7 @@ function b(n) {
                   onChange: (e) => B(e.target.value),
                   onKeyDown: (e) => re(e, n),
                   onFocus: (e) => {
-                    R(n), B(e.target.value);
+                    (R(n), B(e.target.value));
                   },
                   onBlur: () => Q(n),
                 }),

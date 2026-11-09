@@ -246,7 +246,7 @@ var _ = _(_()),
             withCredentials: !0,
           });
         if (_?.status == 200 && _.data?.success == 1 && _.data?.results)
-          return this.AddCompatabilityResult(_.data.results), !0;
+          return (this.AddCompatabilityResult(_.data.results), !0);
         _ = _(_);
       } catch (_) {
         _ = _(_);
@@ -262,7 +262,7 @@ var _ = _(_()),
     }
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
     constructor() {
       if (document.getElementById(`application_config`)) {
@@ -397,7 +397,7 @@ var _ = class _ {
   }
   BFromActiveNavTree(_, _) {
     let _ = _?.Tree;
-    return (_ ||= _?.Tree), _ && _.Controller.IsActiveFocusNavTree(_);
+    return ((_ ||= _?.Tree), _ && _.Controller.IsActiveFocusNavTree(_));
   }
   OnFocusNavigationChanged(_, _, _) {
     this.BFromActiveNavTree(_, _) && this.UpdateForFocusedNode(_);
@@ -470,9 +470,9 @@ var _ = class _ {
     _ && this.Notify();
   }
   ClearActions() {
-    _.Log(`ClearActionDescriptions`),
+    (_.Log(`ClearActionDescriptions`),
       this.m_boundActions.clear(),
-      this.Notify();
+      this.Notify());
   }
   SetActionsFromMap(_) {
     let _ = !1,
@@ -518,9 +518,9 @@ var _ = class _ {
     );
   }
 };
-_([_], _.prototype, `OnFocusNavigationChanged`, null),
+(_([_], _.prototype, `OnFocusNavigationChanged`, null),
   _([_], _.prototype, `OnActiveNavTreeChanged`, null),
-  _([_], _.prototype, `SetActionDescriptionsFromMap`, null);
+  _([_], _.prototype, `SetActionDescriptionsFromMap`, null));
 var _ = `_6t-T9facds8-`,
   _ = `_9ltdnbqRBVs-`,
   _ = `KMiaP3xxJic-`,
@@ -1993,10 +1993,10 @@ function _(_) {
   }, [_, _.key, _.bDisableRouting, _]);
   let _ = _.useCallback(
       (_) => {
-        _(_.key),
+        (_(_.key),
           _ || _(_, `tab`, _.key),
           _?.(_.key),
-          _.onClick && _.onClick(_);
+          _.onClick && _.onClick(_));
       },
       [_, _, _],
     ),
@@ -2104,9 +2104,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.appid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -2126,7 +2126,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -2147,14 +2147,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CGamePerformanceStats_GetGameFrameRateStats_Request`;
@@ -2163,9 +2163,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.frame_rates || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -2186,7 +2186,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -2207,14 +2207,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CGamePerformanceStats_GetGameFrameRateStats_Response`;
@@ -2223,9 +2223,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clusterid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [8], null);
+        _.Message.initialize(this, _, 0, -1, [8], null));
     }
     static sm_m;
     static sm_mbf;
@@ -2278,7 +2278,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -2299,21 +2299,21 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CGamePerformanceStats_GetGameFrameRateStats_Response_FrameRate`;
     }
   },
   _;
-(function (_) {
+((function (_) {
   function _(_, _, _) {
     return _.SendMsg(
       `GamePerformanceStats.GetGameFrameRateStats#1`,
@@ -2329,7 +2329,7 @@ var _ = _(_(), 1),
   }
   _.GetGameFrameRateStats = _;
 })((_ ||= {})),
-  _();
+  _());
 function _(_) {
   let {
     results: _,
@@ -3011,26 +3011,26 @@ function _(_) {
     _ = null;
   if (_ == 4) {
     let _ = _.steam_frame_compat_category || 0;
-    (_ = (0, _.jsx)(_, {
+    ((_ = (0, _.jsx)(_, {
       category: _,
     })),
       (_ = _.Localize(
         `#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI`,
-      ));
+      )));
   } else if (_ == 3) {
     let _ = _.steam_machine_compat_category || 0;
-    (_ = (0, _.jsx)(_, {
+    ((_ = (0, _.jsx)(_, {
       category: _,
     })),
       (_ = _.Localize(
         `#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI`,
-      ));
+      )));
   } else {
     let _ = _.steam_deck_compat_category || 0;
-    (_ = (0, _.jsx)(_, {
+    ((_ = (0, _.jsx)(_, {
       category: _,
     })),
-      (_ = _.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_Desktop`));
+      (_ = _.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_Desktop`)));
   }
   return (0, _.jsxs)(`div`, {
     className: _(_, `LearnMoreCtn`),
@@ -3038,7 +3038,7 @@ function _(_) {
       _,
       (0, _.jsx)(_, {
         onClick: (_) => {
-          _.preventDefault(), (_ ?? _)();
+          (_.preventDefault(), (_ ?? _)());
         },
         children: (0, _.jsx)(`span`, {
           className: _,
@@ -3161,13 +3161,13 @@ function _(_) {
     _ = null;
   switch (_) {
     case 3:
-      (_ = `#SteamDeckVerified_DescriptionHeader_Verified`), (_ = _);
+      ((_ = `#SteamDeckVerified_DescriptionHeader_Verified`), (_ = _));
       break;
     case 2:
-      (_ = `#SteamDeckVerified_DescriptionHeader_Playable`), (_ = _);
+      ((_ = `#SteamDeckVerified_DescriptionHeader_Playable`), (_ = _));
       break;
     case 1:
-      (_ = `#SteamDeckVerified_DescriptionHeader_Unsupported`), (_ = _);
+      ((_ = `#SteamDeckVerified_DescriptionHeader_Unsupported`), (_ = _));
   }
   let _ = (0, _.jsx)(`span`, {
       className: _,
@@ -3211,10 +3211,10 @@ function _(_) {
     _ = null;
   switch (_) {
     case 2:
-      (_ = `#SteamOSCompatibility_DescriptionHeader_Compatible`), (_ = _);
+      ((_ = `#SteamOSCompatibility_DescriptionHeader_Compatible`), (_ = _));
       break;
     case 1:
-      (_ = `#SteamOSCompatibility_DescriptionHeader_Unsupported`), (_ = _);
+      ((_ = `#SteamOSCompatibility_DescriptionHeader_Unsupported`), (_ = _));
   }
   let _ = (0, _.jsx)(`span`, {
       className: _,
@@ -3258,13 +3258,13 @@ function _(_) {
     _ = null;
   switch (_) {
     case 3:
-      (_ = `#SteamMachineVerified_DescriptionHeader_Verified`), (_ = _);
+      ((_ = `#SteamMachineVerified_DescriptionHeader_Verified`), (_ = _));
       break;
     case 2:
-      (_ = `#SteamMachineVerified_DescriptionHeader_Playable`), (_ = _);
+      ((_ = `#SteamMachineVerified_DescriptionHeader_Playable`), (_ = _));
       break;
     case 1:
-      (_ = `#SteamMachineVerified_DescriptionHeader_Unsupported`), (_ = _);
+      ((_ = `#SteamMachineVerified_DescriptionHeader_Unsupported`), (_ = _));
   }
   let _ = (0, _.jsx)(`span`, {
       className: _,
@@ -3308,13 +3308,13 @@ function _(_) {
     _ = null;
   switch (_) {
     case 3:
-      (_ = `#SteamFrameVerified_DescriptionHeader_Verified`), (_ = _);
+      ((_ = `#SteamFrameVerified_DescriptionHeader_Verified`), (_ = _));
       break;
     case 2:
-      (_ = `#SteamFrameVerified_DescriptionHeader_Playable`), (_ = _);
+      ((_ = `#SteamFrameVerified_DescriptionHeader_Playable`), (_ = _));
       break;
     case 1:
-      (_ = `#SteamFrameVerified_DescriptionHeader_Unsupported`), (_ = _);
+      ((_ = `#SteamFrameVerified_DescriptionHeader_Unsupported`), (_ = _));
   }
   let _ = (0, _.jsx)(`span`, {
       className: _,
@@ -3362,4 +3362,3 @@ function _(_) {
       return `#SteamOSCompatibility_Category_Unknown`;
   }
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _ };

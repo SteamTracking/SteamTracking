@@ -5,7 +5,7 @@ function _() {
   let _, _;
   return {
     promise: new Promise((_, _) => {
-      (_ = _), (_ = _);
+      ((_ = _), (_ = _));
     }),
     resolve: _,
     reject: _,
@@ -51,8 +51,8 @@ function _(_) {
   return (
     (_.onload = () => _.resolve(_)),
     (_.onerror = (_) => {
-      console.error(`LoadImage failed to load the image, details`, _),
-        _.resolve(void 0);
+      (console.error(`LoadImage failed to load the image, details`, _),
+        _.resolve(void 0));
     }),
     (_.src = _),
     _.promise
@@ -65,8 +65,8 @@ function _(_) {
     (_.preload = `metadata`),
     _.addEventListener(`loadedmetadata`, () => _.resolve(_)),
     (_.onerror = (_) => {
-      console.error(`LoadVideo failed to load the video, details`, _),
-        _.resolve(void 0);
+      (console.error(`LoadVideo failed to load the video, details`, _),
+        _.resolve(void 0));
     }),
     (_.src = _),
     _.promise
@@ -83,15 +83,15 @@ async function _(_, _) {
   {
     let _ = _(),
       _ = new FileReader();
-    (_.onload = () => _.resolve(_.result ?? void 0)),
+    ((_.onload = () => _.resolve(_.result ?? void 0)),
       (_.onerror = () => {
-        console.error(
+        (console.error(
           `GetMediaElementFromFile failed to load the image, details`,
           _.error,
         ),
-          _.resolve(void 0);
+          _.resolve(void 0));
       }),
-      _.readAsDataURL(_);
+      _.readAsDataURL(_));
     let _ = await _.promise;
     return _ ? _(_.toString()) : void 0;
   }
@@ -139,7 +139,7 @@ function _(_, _, _ = 0, _) {
     let _ = _.GetLocalizedClanImageFileNames(_, _).map(
       (_) => _ + _ + `/` + _ + `?t=` + _,
     );
-    return _.push(_), _;
+    return (_.push(_), _);
   }
   return _;
 }
@@ -185,7 +185,7 @@ var _ = {
       let _ = this.GetHashFromHashAndExt(_),
         _ = this.GetExtStringFromHashAndExt(_),
         _ = [_ + `/` + _(_) + _];
-      return _ == 4 && _.push(_ + `/` + _(_(_)) + _), _;
+      return (_ == 4 && _.push(_ + `/` + _(_(_)) + _), _);
     },
     GenerateURLFromHashAndExt(_, _, _ = _.full) {
       return this.GenerateURLFromHashAndExtAndLang(_, _, _, -1, void 0);
@@ -217,7 +217,7 @@ var _ = {
         _.ConvertTo64BitString() +
         `/showclanimage/?image_hash_and_ext=` +
         _;
-      return _ && (_ += `&lang=` + _), _;
+      return (_ && (_ += `&lang=` + _), _);
     },
     GetMimeType(_) {
       return _(_);
@@ -234,23 +234,23 @@ var _ = {
     async AsyncGetImageResolutionInternal(_, _, _) {
       let _ = _(),
         _ = new Image();
-      (_.crossOrigin = `anonymous`),
+      ((_.crossOrigin = `anonymous`),
         (_.onerror = (_) => {
           let _ = {
             success: 2,
           };
-          _ ||
+          (_ ||
             ((_.err_msg =
               `Load fail on url ` + _ + ` with error: ` + _(_).strErrorMsg),
             console.error(_.err_msg)),
             (_.success = 2),
-            _.resolve(_);
+            _.resolve(_));
         }),
         (_.onload = () => {
           let _ = {
             success: 2,
           };
-          (_.width = _.width),
+          ((_.width = _.width),
             (_.height = _.height),
             !(_.width > 0) || !(_.height > 0)
               ? (_(
@@ -259,16 +259,16 @@ var _ = {
                 ),
                 (_.err_msg = `No resolution reported for url ` + _),
                 _.resolve(_))
-              : ((_.success = 1), _.resolve(_));
+              : ((_.success = 1), _.resolve(_)));
         }),
         (_.src = _),
         _.token.promise.catch(() => {
-          (_.onload = () => {}),
+          ((_.onload = () => {}),
             (_.onerror = () => {}),
             _.resolve({
               success: 52,
-            });
-        });
+            }));
+        }));
       let _,
         _ = new Promise((_, _) => {
           _ = setTimeout(() => _(), 1e4);
@@ -309,4 +309,3 @@ var _ = {
     `schedule_track_art`,
     `localized_background_art`,
   ];
-export { _, _, _, _, _, _, _, _, _, _, _, _ };

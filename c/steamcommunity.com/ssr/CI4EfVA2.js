@@ -3,9 +3,9 @@ var _ = class extends _ {
     super(_, _);
   }
   bindMethods() {
-    super.bindMethods(),
+    (super.bindMethods(),
       (this.fetchNextPage = this.fetchNextPage.bind(this)),
-      (this.fetchPreviousPage = this.fetchPreviousPage.bind(this));
+      (this.fetchPreviousPage = this.fetchPreviousPage.bind(this)));
   }
   setOptions(_, _) {
     super.setOptions(
@@ -17,7 +17,7 @@ var _ = class extends _ {
     );
   }
   getOptimisticResult(_) {
-    return (_.behavior = _()), super.getOptimisticResult(_);
+    return ((_.behavior = _()), super.getOptimisticResult(_));
   }
   fetchNextPage(_) {
     return this.fetch({
@@ -66,4 +66,3 @@ var _ = class extends _ {
 function _(_, _) {
   return _(_, _, _);
 }
-export { _ };

@@ -24,10 +24,10 @@ function _(_) {
         _(),
         _.addEventListener(`change`, _),
         () => {
-          (_ = !1),
+          ((_ = !1),
             _.removeEventListener(`change`, _),
             _[_].refCount--,
-            _[_].refCount === 0 && delete _[_];
+            _[_].refCount === 0 && delete _[_]);
         }
       );
     }, [_]),
@@ -216,14 +216,10 @@ function _(_) {
     `margin-top`,
     `margin-right`,
     `margin-bottom`,
-  ]
-    .map((_) =>
-      Object.keys(_.spacing)
-        .map((_) => _(_, _, _.spacing[_]))
-        .join(`
+  ].map((_) =>
+    Object.keys(_.spacing).map((_) => _(_, _, _.spacing[_])).join(`
 `),
-    )
-    .join(`
+  ).join(`
 `);
 }
 var _ = (_, _) => `${_}-${_}`,
@@ -266,4 +262,3 @@ function _(_) {
     ..._,
   });
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _ };

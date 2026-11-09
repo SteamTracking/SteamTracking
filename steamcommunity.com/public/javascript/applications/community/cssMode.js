@@ -23,7 +23,7 @@ o(s, e);
 var c = 12e4,
   l = class {
     constructor(e) {
-      (this._defaults = e),
+      ((this._defaults = e),
         (this._worker = null),
         (this._client = null),
         (this._idleCheckInterval = window.setInterval(
@@ -33,15 +33,16 @@ var c = 12e4,
         (this._lastUsedTime = 0),
         (this._configChangeListener = this._defaults.onDidChange(() =>
           this._stopWorker(),
-        ));
+        )));
     }
     _stopWorker() {
-      (this._worker &&= (this._worker.dispose(), null)), (this._client = null);
+      ((this._worker &&= (this._worker.dispose(), null)),
+        (this._client = null));
     }
     dispose() {
-      clearInterval(this._idleCheckInterval),
+      (clearInterval(this._idleCheckInterval),
         this._configChangeListener.dispose(),
-        this._stopWorker();
+        this._stopWorker());
     }
     _checkIfIdle() {
       this._worker && Date.now() - this._lastUsedTime > c && this._stopWorker();
@@ -90,7 +91,7 @@ var d;
 })((d ||= {}));
 var f;
 (function (e) {
-  (e.MIN_VALUE = -2147483648), (e.MAX_VALUE = 2147483647);
+  ((e.MIN_VALUE = -2147483648), (e.MAX_VALUE = 2147483647));
   function t(t) {
     return typeof t == `number` && e.MIN_VALUE <= t && t <= e.MAX_VALUE;
   }
@@ -98,7 +99,7 @@ var f;
 })((f ||= {}));
 var p;
 (function (e) {
-  (e.MIN_VALUE = 0), (e.MAX_VALUE = 2147483647);
+  ((e.MIN_VALUE = 0), (e.MAX_VALUE = 2147483647));
   function t(t) {
     return typeof t == `number` && e.MIN_VALUE <= t && t <= e.MAX_VALUE;
   }
@@ -226,7 +227,7 @@ var ne;
 })((ne ||= {}));
 var v;
 (function (e) {
-  (e.Comment = `comment`), (e.Imports = `imports`), (e.Region = `region`);
+  ((e.Comment = `comment`), (e.Imports = `imports`), (e.Region = `region`));
 })((v ||= {}));
 var re;
 (function (e) {
@@ -268,11 +269,11 @@ var y;
 })((y ||= {}));
 var b;
 (function (e) {
-  (e.Error = 1), (e.Warning = 2), (e.Information = 3), (e.Hint = 4);
+  ((e.Error = 1), (e.Warning = 2), (e.Information = 3), (e.Hint = 4));
 })((b ||= {}));
 var ie;
 (function (e) {
-  (e.Unnecessary = 1), (e.Deprecated = 2);
+  ((e.Unnecessary = 1), (e.Deprecated = 2));
 })((ie ||= {}));
 var ae;
 (function (e) {
@@ -315,7 +316,7 @@ var S;
 (function (e) {
   function t(e, t, ...n) {
     let r = { title: e, command: t };
-    return V.defined(n) && n.length > 0 && (r.arguments = n), r;
+    return (V.defined(n) && n.length > 0 && (r.arguments = n), r);
   }
   e.create = t;
   function n(e) {
@@ -566,7 +567,7 @@ var ue;
 })((ue ||= {}));
 var j;
 (function (e) {
-  (e.PlainText = `plaintext`), (e.Markdown = `markdown`);
+  ((e.PlainText = `plaintext`), (e.Markdown = `markdown`));
   function t(t) {
     let n = t;
     return n === e.PlainText || n === e.Markdown;
@@ -583,7 +584,7 @@ var M;
 })((M ||= {}));
 var N;
 (function (e) {
-  (e.Text = 1),
+  ((e.Text = 1),
     (e.Method = 2),
     (e.Function = 3),
     (e.Constructor = 4),
@@ -607,11 +608,11 @@ var N;
     (e.Struct = 22),
     (e.Event = 23),
     (e.Operator = 24),
-    (e.TypeParameter = 25);
+    (e.TypeParameter = 25));
 })((N ||= {}));
 var P;
 (function (e) {
-  (e.PlainText = 1), (e.Snippet = 2);
+  ((e.PlainText = 1), (e.Snippet = 2));
 })((P ||= {}));
 var de;
 (function (e) {
@@ -631,7 +632,7 @@ var fe;
 })((fe ||= {}));
 var pe;
 (function (e) {
-  (e.asIs = 1), (e.adjustIndentation = 2);
+  ((e.asIs = 1), (e.adjustIndentation = 2));
 })((pe ||= {}));
 var me;
 (function (e) {
@@ -710,19 +711,19 @@ var ye;
 })((ye ||= {}));
 var I;
 (function (e) {
-  (e.Text = 1), (e.Read = 2), (e.Write = 3);
+  ((e.Text = 1), (e.Read = 2), (e.Write = 3));
 })((I ||= {}));
 var be;
 (function (e) {
   function t(e, t) {
     let n = { range: e };
-    return V.number(t) && (n.kind = t), n;
+    return (V.number(t) && (n.kind = t), n);
   }
   e.create = t;
 })((be ||= {}));
 var L;
 (function (e) {
-  (e.File = 1),
+  ((e.File = 1),
     (e.Module = 2),
     (e.Namespace = 3),
     (e.Package = 4),
@@ -747,7 +748,7 @@ var L;
     (e.Struct = 23),
     (e.Event = 24),
     (e.Operator = 25),
-    (e.TypeParameter = 26);
+    (e.TypeParameter = 26));
 })((L ||= {}));
 var xe;
 (function (e) {
@@ -757,7 +758,7 @@ var Se;
 (function (e) {
   function t(e, t, n, r, i) {
     let a = { name: e, kind: t, location: { uri: r, range: n } };
-    return i && (a.containerName = i), a;
+    return (i && (a.containerName = i), a);
   }
   e.create = t;
 })((Se ||= {}));
@@ -774,7 +775,7 @@ var we;
 (function (e) {
   function t(e, t, n, r, i, a) {
     let o = { name: e, detail: t, kind: n, range: r, selectionRange: i };
-    return a !== void 0 && (o.children = a), o;
+    return (a !== void 0 && (o.children = a), o);
   }
   e.create = t;
   function n(e) {
@@ -795,7 +796,7 @@ var we;
 })((we ||= {}));
 var Te;
 (function (e) {
-  (e.Empty = ``),
+  ((e.Empty = ``),
     (e.QuickFix = `quickfix`),
     (e.Refactor = `refactor`),
     (e.RefactorExtract = `refactor.extract`),
@@ -803,17 +804,17 @@ var Te;
     (e.RefactorRewrite = `refactor.rewrite`),
     (e.Source = `source`),
     (e.SourceOrganizeImports = `source.organizeImports`),
-    (e.SourceFixAll = `source.fixAll`);
+    (e.SourceFixAll = `source.fixAll`));
 })((Te ||= {}));
 var R;
 (function (e) {
-  (e.Invoked = 1), (e.Automatic = 2);
+  ((e.Invoked = 1), (e.Automatic = 2));
 })((R ||= {}));
 var Ee;
 (function (e) {
   function t(e, t, n) {
     let r = { diagnostics: e };
-    return t != null && (r.only = t), n != null && (r.triggerKind = n), r;
+    return (t != null && (r.only = t), n != null && (r.triggerKind = n), r);
   }
   e.create = t;
   function n(e) {
@@ -864,7 +865,7 @@ var Oe;
 (function (e) {
   function t(e, t) {
     let n = { range: e };
-    return V.defined(t) && (n.data = t), n;
+    return (V.defined(t) && (n.data = t), n);
   }
   e.create = t;
   function n(e) {
@@ -923,7 +924,7 @@ var je;
 })((je ||= {}));
 var Me;
 (function (e) {
-  (e.namespace = `namespace`),
+  ((e.namespace = `namespace`),
     (e.type = `type`),
     (e.class = `class`),
     (e.enum = `enum`),
@@ -945,11 +946,11 @@ var Me;
     (e.number = `number`),
     (e.regexp = `regexp`),
     (e.operator = `operator`),
-    (e.decorator = `decorator`);
+    (e.decorator = `decorator`));
 })((Me ||= {}));
 var Ne;
 (function (e) {
-  (e.declaration = `declaration`),
+  ((e.declaration = `declaration`),
     (e.definition = `definition`),
     (e.readonly = `readonly`),
     (e.static = `static`),
@@ -958,7 +959,7 @@ var Ne;
     (e.async = `async`),
     (e.modification = `modification`),
     (e.documentation = `documentation`),
-    (e.defaultLibrary = `defaultLibrary`);
+    (e.defaultLibrary = `defaultLibrary`));
 })((Ne ||= {}));
 var Pe;
 (function (e) {
@@ -1032,7 +1033,7 @@ var Re;
 })((Re ||= {}));
 var z;
 (function (e) {
-  (e.Type = 1), (e.Parameter = 2);
+  ((e.Type = 1), (e.Parameter = 2));
   function t(e) {
     return e === 1 || e === 2;
   }
@@ -1059,7 +1060,7 @@ var ze;
 (function (e) {
   function t(e, t, n) {
     let r = { position: e, label: t };
-    return n !== void 0 && (r.kind = n), r;
+    return (n !== void 0 && (r.kind = n), r);
   }
   e.create = t;
   function n(e) {
@@ -1101,7 +1102,7 @@ var He;
 })((He ||= {}));
 var Ue;
 (function (e) {
-  (e.Invoked = 0), (e.Automatic = 1);
+  ((e.Invoked = 0), (e.Automatic = 1));
 })((Ue ||= {}));
 var We;
 (function (e) {
@@ -1167,24 +1168,24 @@ var qe;
     let n = (e.length / 2) | 0,
       r = e.slice(0, n),
       a = e.slice(n);
-    i(r, t), i(a, t);
+    (i(r, t), i(a, t));
     let o = 0,
       s = 0,
       c = 0;
-    for (; o < r.length && s < a.length; )
+    for (; o < r.length && s < a.length;)
       t(r[o], a[s]) <= 0 ? (e[c++] = r[o++]) : (e[c++] = a[s++]);
-    for (; o < r.length; ) e[c++] = r[o++];
-    for (; s < a.length; ) e[c++] = a[s++];
+    for (; o < r.length;) e[c++] = r[o++];
+    for (; s < a.length;) e[c++] = a[s++];
     return e;
   }
 })((qe ||= {}));
 var Je = class {
     constructor(e, t, n, r) {
-      (this._uri = e),
+      ((this._uri = e),
         (this._languageId = t),
         (this._version = n),
         (this._content = r),
-        (this._lineOffsets = void 0);
+        (this._lineOffsets = void 0));
     }
     get uri() {
       return this._uri;
@@ -1204,9 +1205,9 @@ var Je = class {
       return this._content;
     }
     update(e, t) {
-      (this._content = e.text),
+      ((this._content = e.text),
         (this._version = t),
-        (this._lineOffsets = void 0);
+        (this._lineOffsets = void 0));
     }
     getLineOffsets() {
       if (this._lineOffsets === void 0) {
@@ -1216,7 +1217,7 @@ var Je = class {
         for (let r = 0; r < t.length; r++) {
           n &&= (e.push(r), !1);
           let i = t.charAt(r);
-          (n =
+          ((n =
             i === `\r` ||
             i ===
               `
@@ -1226,9 +1227,9 @@ var Je = class {
               t.charAt(r + 1) ===
                 `
 ` &&
-              r++;
+              r++);
         }
-        n && t.length > 0 && e.push(t.length), (this._lineOffsets = e);
+        (n && t.length > 0 && e.push(t.length), (this._lineOffsets = e));
       }
       return this._lineOffsets;
     }
@@ -1238,7 +1239,7 @@ var Je = class {
         n = 0,
         r = t.length;
       if (r === 0) return m.create(0, e);
-      for (; n < r; ) {
+      for (; n < r;) {
         let i = Math.floor((n + r) / 2);
         t[i] > e ? (r = i) : (n = i + 1);
       }
@@ -1309,19 +1310,19 @@ var Je = class {
 })((V ||= {}));
 var H = class {
   constructor(e, t, n) {
-    (this._languageId = e),
+    ((this._languageId = e),
       (this._worker = t),
       (this._disposables = []),
-      (this._listener = Object.create(null));
+      (this._listener = Object.create(null)));
     let r = (e) => {
         let t = e.getLanguageId();
         if (t !== this._languageId) return;
         let n;
-        (this._listener[e.uri.toString()] = e.onDidChangeContent(() => {
-          window.clearTimeout(n),
-            (n = window.setTimeout(() => this._doValidate(e.uri, t), 500));
+        ((this._listener[e.uri.toString()] = e.onDidChangeContent(() => {
+          (window.clearTimeout(n),
+            (n = window.setTimeout(() => this._doValidate(e.uri, t), 500)));
         })),
-          this._doValidate(e.uri, t);
+          this._doValidate(e.uri, t));
       },
       i = (e) => {
         s.editor.setModelMarkers(e, this._languageId, []);
@@ -1329,11 +1330,11 @@ var H = class {
           n = this._listener[t];
         n && (n.dispose(), delete this._listener[t]);
       };
-    this._disposables.push(s.editor.onDidCreateModel(r)),
+    (this._disposables.push(s.editor.onDidCreateModel(r)),
       this._disposables.push(s.editor.onWillDisposeModel(i)),
       this._disposables.push(
         s.editor.onDidChangeModelLanguage((e) => {
-          i(e.model), r(e.model);
+          (i(e.model), r(e.model));
         }),
       ),
       this._disposables.push(
@@ -1349,11 +1350,11 @@ var H = class {
           for (let e in this._listener) this._listener[e].dispose();
         },
       }),
-      s.editor.getModels().forEach(r);
+      s.editor.getModels().forEach(r));
   }
   dispose() {
-    this._disposables.forEach((e) => e && e.dispose()),
-      (this._disposables.length = 0);
+    (this._disposables.forEach((e) => e && e.dispose()),
+      (this._disposables.length = 0));
   }
   _doValidate(e, t) {
     this._worker(e)
@@ -1397,7 +1398,7 @@ function Xe(e, t) {
 }
 var U = class {
   constructor(e, t) {
-    (this._worker = e), (this._triggerCharacters = t);
+    ((this._worker = e), (this._triggerCharacters = t));
   }
   get triggerCharacters() {
     return this._triggerCharacters;
@@ -1747,7 +1748,7 @@ var ut = class {
   },
   ft = class {
     constructor(e) {
-      (this._worker = e), (this.canFormatMultipleRanges = !1);
+      ((this._worker = e), (this.canFormatMultipleRanges = !1));
     }
     provideDocumentRangeFormattingEdits(e, t, n, r) {
       let i = e.uri;
@@ -1803,7 +1804,7 @@ var pt = class {
           if (e)
             return e.map((e) => {
               let t = { start: e.startLine + 1, end: e.endLine + 1 };
-              return e.kind !== void 0 && (t.kind = ht(e.kind)), t;
+              return (e.kind !== void 0 && (t.kind = ht(e.kind)), t);
             });
         });
     }
@@ -1830,7 +1831,7 @@ var gt = class {
         if (e)
           return e.map((e) => {
             let t = [];
-            for (; e; ) t.push({ range: K(e.range) }), (e = e.parent);
+            for (; e;) (t.push({ range: K(e.range) }), (e = e.parent));
             return t;
           });
       });
@@ -1844,7 +1845,7 @@ function _t(e) {
   let i = (...e) => r.getLanguageServiceWorker(...e);
   function a() {
     let { languageId: t, modeConfiguration: r } = e;
-    yt(n),
+    (yt(n),
       r.completionItems &&
         n.push(
           s.languages.registerCompletionItemProvider(
@@ -1875,15 +1876,15 @@ function _t(e) {
       r.documentRangeFormattingEdits &&
         n.push(
           s.languages.registerDocumentRangeFormattingEditProvider(t, new ft(i)),
-        );
+        ));
   }
-  return a(), t.push(vt(n)), vt(t);
+  return (a(), t.push(vt(n)), vt(t));
 }
 function vt(e) {
   return { dispose: () => yt(e) };
 }
 function yt(e) {
-  for (; e.length; ) e.pop().dispose();
+  for (; e.length;) e.pop().dispose();
 }
 export {
   U as CompletionAdapter,

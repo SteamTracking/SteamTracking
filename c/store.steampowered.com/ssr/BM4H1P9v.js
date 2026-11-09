@@ -8,4 +8,3 @@ function _(_) {
     children: _.Localize(`#PlayGameButton_PlayNow`),
   });
 }
-export { _ };

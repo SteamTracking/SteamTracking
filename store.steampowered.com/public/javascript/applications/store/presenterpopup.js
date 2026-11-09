@@ -26,9 +26,7 @@ function y(e) {
   if (
     ((i =
       t instanceof Array
-        ? t
-            .map((e) => (e ? e.toString() : ``))
-            .filter((e) => e.length > 0)
+        ? t.map((e) => (e ? e.toString() : ``)).filter((e) => e.length > 0)
             .join(`
 `)
         : t.toString()),
@@ -206,7 +204,7 @@ var R = ({ target: e, title: t, subtitle: n, children: r }) =>
           target: n,
         },
         i = `presenter-hover-` + Math.floor(Math.random() * 1e8);
-      (this.m_fnHidePopup = () =>
+      ((this.m_fnHidePopup = () =>
         e.sm_embeddedElements.HideElement(n.ownerDocument, i)),
         window.addEventListener(`scroll`, this.OnScroll),
         (this.m_nScrollPosAtHoverStart = window.scrollY),
@@ -218,7 +216,7 @@ var R = ({ target: e, title: t, subtitle: n, children: r }) =>
             children: (0, v.jsx)(G, { ...this.props, fnClose: this.OnLeave }),
           }),
           i,
-        );
+        ));
     }
     OnLeave(e) {
       this.ClosePopup();
@@ -235,10 +233,10 @@ var R = ({ target: e, title: t, subtitle: n, children: r }) =>
       });
     }
   };
-d([p], K.prototype, `ClosePopup`, null),
+(d([p], K.prototype, `ClosePopup`, null),
   d([p], K.prototype, `OnScroll`, null),
   d([p], K.prototype, `OnHover`, null),
-  d([p], K.prototype, `OnLeave`, null);
+  d([p], K.prototype, `OnLeave`, null));
 function q(e) {
   let {
       photo: t,

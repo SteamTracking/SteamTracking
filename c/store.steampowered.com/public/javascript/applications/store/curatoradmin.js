@@ -9,10 +9,10 @@ var _ = _(_()),
       bIsLoading: !0,
     };
     componentDidMount() {
-      _.Get(),
+      (_.Get(),
         this.setState({
           bIsLoading: !1,
-        });
+        }));
     }
     render() {
       return this.state.bIsLoading

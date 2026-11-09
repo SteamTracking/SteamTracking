@@ -17,7 +17,7 @@ function _(_) {
         return (
           (_.current = _.key),
           () => {
-            _(null), _(!1), _.Close(), _.Unregister(), _.Unregister();
+            (_(null), _(!1), _.Close(), _.Unregister(), _.Unregister());
           }
         );
       }
@@ -36,4 +36,3 @@ function _(_) {
     _.createPortal(_, _)
   );
 }
-export { _ };

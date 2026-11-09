@@ -481,7 +481,7 @@ function W(e) {
       let e = document.createElement(`script`);
       e.src = `https://www.youtube.com/iframe_api`;
       let t = document.getElementsByTagName(`script`)[0];
-      t.parentNode?.insertBefore(e, t), (window.onYouTubeIframeAPIReady = q);
+      (t.parentNode?.insertBefore(e, t), (window.onYouTubeIframeAPIReady = q));
     }
     e && (U.includes(e) || U.push(e));
   }
@@ -507,12 +507,12 @@ var J = class e extends R.Component {
   m_bPlayerReady = !1;
   static s_nPlayerIndex = 0;
   constructor(t) {
-    super(t),
+    (super(t),
       (this.m_strPlayerID = `YoutubePlayer_` + e.s_nPlayerIndex++),
-      (this.state = { bYoutubeLoaded: !1 });
+      (this.state = { bYoutubeLoaded: !1 }));
   }
   componentWillUnmount() {
-    this.DestroyPlayer(), K(this.OnYoutubeScriptsReady);
+    (this.DestroyPlayer(), K(this.OnYoutubeScriptsReady));
   }
   shouldComponentUpdate(e, t) {
     if (!this.m_player) return !1;
@@ -544,8 +544,8 @@ var J = class e extends R.Component {
   DestroyPlayer() {
     if (this.m_player)
       try {
-        this.m_player.stopVideo && this.m_player.stopVideo(),
-          this.m_player.destroy && this.m_player.destroy();
+        (this.m_player.stopVideo && this.m_player.stopVideo(),
+          this.m_player.destroy && this.m_player.destroy());
       } catch {
       } finally {
         this.m_player = null;
@@ -592,7 +592,7 @@ var J = class e extends R.Component {
         },
       },
       s = this.m_playerContainer.firstElementChild;
-    (this.m_bPlayerReady = !1), (this.m_player = new YT.Player(s, o));
+    ((this.m_bPlayerReady = !1), (this.m_player = new YT.Player(s, o)));
   }
   OnPlayerReady(e) {
     if (
@@ -601,18 +601,18 @@ var J = class e extends R.Component {
     ) {
       let e = this.m_player.getVideoData(),
         t = { strAuthor: ``, strTitle: ``, strVideoID: `` };
-      e.author && (t.strAuthor = e.author),
+      (e.author && (t.strAuthor = e.author),
         e.title && (t.strTitle = e.title),
         e.video_id && (t.strVideoID = e.video_id),
-        this.props.onVideoInfoChanged(t);
+        this.props.onVideoInfoChanged(t));
     }
-    this.props.width &&
+    (this.props.width &&
       this.props.height &&
       this.m_player?.setSize(this.props.width, this.props.height),
       this.props.forcePause
         ? this.ApplyForcePause()
         : this.props.autoplay && this.m_player?.playVideo(),
-      this.props.onPlayerReady && this.props.onPlayerReady();
+      this.props.onPlayerReady && this.props.onPlayerReady());
   }
   OnPlayerStateChange(e) {
     switch (e.data) {
@@ -632,8 +632,8 @@ var J = class e extends R.Component {
     }
   }
   OnError(e) {
-    console.log(`Youtube: Playback failed`, e),
-      this.props.onError && this.props.onError(e);
+    (console.log(`Youtube: Playback failed`, e),
+      this.props.onError && this.props.onError(e));
   }
   OnPlayerLeftView() {
     this.props.autopause &&
@@ -662,14 +662,14 @@ var J = class e extends R.Component {
     });
   }
 };
-u([p], J.prototype, `BindPlayerContainer`, null),
+(u([p], J.prototype, `BindPlayerContainer`, null),
   u([p], J.prototype, `OnYoutubeScriptsReady`, null),
   u([p], J.prototype, `CreatePlayer`, null),
   u([p], J.prototype, `OnPlayerReady`, null),
   u([p], J.prototype, `OnPlayerStateChange`, null),
   u([p], J.prototype, `OnError`, null),
   u([p], J.prototype, `OnPlayerLeftView`, null),
-  u([p], J.prototype, `PlayVideo`, null);
+  u([p], J.prototype, `PlayVideo`, null));
 function Y(e) {
   let { video: t, children: n } = e;
   return T(`youtube`)
@@ -710,7 +710,7 @@ function Z(e) {
       return (
         n && W(e),
         () => {
-          K(e), (i.current = null);
+          (K(e), (i.current = null));
         }
       );
     }, [n]),

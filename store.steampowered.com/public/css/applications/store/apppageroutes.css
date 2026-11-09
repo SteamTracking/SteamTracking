@@ -357,7 +357,7 @@ textarea.WKhffzvaq2A- {
   align-items: center;
   margin: 10px 8px;
   display: flex;
-  container: follow-container / inline-size;
+  container: follow-container/inline-size;
 }
 .Y2-ks0gaz6E- .-XvC9GcZR28- .BiCc1c0dnlc- {
   backdrop-filter: blur(16px);
@@ -370,7 +370,7 @@ textarea.WKhffzvaq2A- {
   padding: 0 2% 0 4%;
   display: flex;
 }
-@container follow-container (width < 200px) {
+@container follow-container (width<200px) {
   .Y2-ks0gaz6E- .-XvC9GcZR28- .BiCc1c0dnlc- {
     display: none;
   }
@@ -1514,7 +1514,7 @@ button.DialogButton.yRMbWy4dNRQ- {
 }
 .zveLzqpea5Q- {
   scroll-snap-align: center;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16/9;
   background-color: #0003;
   width: 60vw;
   min-width: 60vw;
@@ -1631,9 +1631,9 @@ button.DialogButton.yRMbWy4dNRQ- {
   display: contents;
 }
 :is(
-    .Z16CPxiJR6U-:not(:popover-open) .zINzcHjlPXg-,
-    .Z16CPxiJR6U-:not(:popover-open) ._6JPEf-8jLkY-
-  ) {
+  .Z16CPxiJR6U-:not(:popover-open) .zINzcHjlPXg-,
+  .Z16CPxiJR6U-:not(:popover-open) ._6JPEf-8jLkY-
+) {
   display: none;
 }
 .Z16CPxiJR6U-:popover-open {
@@ -1685,7 +1685,7 @@ button.DialogButton.yRMbWy4dNRQ- {
   display: flex;
 }
 .zD-Om9FDHYQ- {
-  aspect-ratio: 600 / 338;
+  aspect-ratio: 600/338;
   background-color: #0003;
   display: none;
 }
@@ -1693,7 +1693,7 @@ button.DialogButton.yRMbWy4dNRQ- {
   display: block;
 }
 .V3qCIVA6veU- {
-  aspect-ratio: 600 / 338;
+  aspect-ratio: 600/338;
   outline: none;
   position: relative;
   overflow: hidden;
@@ -1706,7 +1706,7 @@ button.DialogButton.yRMbWy4dNRQ- {
   color: #ffffff80;
   width: 3%;
   max-width: 30px;
-  padding: max(.6%, 6px);
+  padding: max(0.6%, 6px);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1724,10 +1724,10 @@ button.DialogButton.yRMbWy4dNRQ- {
   pointer-events: auto;
 }
 .V3qCIVA6veU- .eUqFFnnOpaE-._3De1jkvoS8c- {
-  inset-inline-end: min(.25%, 8px);
+  inset-inline-end: min(0.25%, 8px);
 }
 .V3qCIVA6veU- .eUqFFnnOpaE-._5CHYrerXt9w- {
-  inset-inline-start: min(.25%, 8px);
+  inset-inline-start: min(0.25%, 8px);
 }
 .V3qCIVA6veU- .eUqFFnnOpaE-:dir(rtl) {
   transform: translateY(-50%) scaleX(-1);
@@ -2484,7 +2484,7 @@ button.DialogButton.yRMbWy4dNRQ- {
   color: #c6d4df;
   background: linear-gradient(-60deg, #e2f4ff4d 5%, #546b734d 95%);
   border-radius: 4px;
-  grid-area: 1 / 1;
+  grid-area: 1/1;
   padding: 16px 16px 26px;
   font-size: 13px;
   position: relative;
@@ -2547,7 +2547,7 @@ button.DialogButton.yRMbWy4dNRQ- {
 }
 .V88-l-UtA-I-:has(> :nth-child(3):last-child) .alRCY87ae-s-:last-child {
   max-height: unset;
-  grid-area: 1 / 2 / 3;
+  grid-area: 1/2/3;
 }
 .alRCY87ae-s- {
   background-color: #0e141b80;
@@ -3106,7 +3106,7 @@ button.DialogButton.yRMbWy4dNRQ- {
 }
 .YIjhJAb5kRs- span {
   white-space: nowrap;
-  grid-area: 1 / 1;
+  grid-area: 1/1;
 }
 .YIjhJAb5kRs- .x8REL9YrNUs- {
   visibility: hidden;

@@ -157,4 +157,3 @@ function _(_, _, _, _) {
     _ = _.utcOffset() - _.utcOffset();
   return _(_ + _ * 60, _ + _ * 60, !0) + (_ ? `` : ` ` + _.format(`z`));
 }
-export { _, _, _, _, _, _, _, _, _, _ };

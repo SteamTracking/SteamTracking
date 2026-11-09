@@ -29,4 +29,3 @@ function _(_, _) {
   let _ = _(_);
   return !_ || _ === "default" ? _ : _;
 }
-export { _, _ };

@@ -41,7 +41,7 @@
   function supportsSharedArrayBuffer() {
     if (sharedArrayBufferSupported_ === void 0)
       try {
-        new SharedArrayBuffer(16), (sharedArrayBufferSupported_ = !0);
+        (new SharedArrayBuffer(16), (sharedArrayBufferSupported_ = !0));
       } catch {
         sharedArrayBufferSupported_ = !1;
       }
@@ -64,7 +64,7 @@
           return _;
         if (_ instanceof ArrayBuffer) {
           let _ = cloneArrayBuffer(_, 0, _.byteLength);
-          return objectCloneMemo.set(_, _), _;
+          return (objectCloneMemo.set(_, _), _);
         }
         if (ArrayBuffer.isView(_)) {
           let _ = cloneValue(_.buffer),
@@ -128,12 +128,12 @@
     };
     return (
       (_.promise = new Promise(function (_, _) {
-        (_.resolve = function (_) {
-          (_.state = 1), _(_);
+        ((_.resolve = function (_) {
+          ((_.state = 1), _(_));
         }),
           (_.reject = function (_) {
-            (_.state = 2), _(_);
-          });
+            ((_.state = 2), _(_));
+          }));
       })),
       _
     );
@@ -141,15 +141,15 @@
   const CHUNK_SIZE = 16384;
   class QueueImpl {
     constructor() {
-      (this.chunks_ = [[]]),
+      ((this.chunks_ = [[]]),
         (this.readChunk_ = this.writeChunk_ = this.chunks_[0]),
-        (this.length_ = 0);
+        (this.length_ = 0));
     }
     push(_) {
-      this.writeChunk_.push(_),
+      (this.writeChunk_.push(_),
         (this.length_ += 1),
         this.writeChunk_.length === CHUNK_SIZE &&
-          ((this.writeChunk_ = []), this.chunks_.push(this.writeChunk_));
+          ((this.writeChunk_ = []), this.chunks_.push(this.writeChunk_)));
     }
     front() {
       if (this.length_ !== 0) return this.readChunk_[0];
@@ -174,22 +174,22 @@
   function dequeueValue(_) {
     let _ = _[queue_].shift(),
       _ = _[queueTotalSize_] - _.size;
-    return (_[queueTotalSize_] = Math.max(0, _)), _.value;
+    return ((_[queueTotalSize_] = Math.max(0, _)), _.value);
   }
   function enqueueValueWithSize(_, _, _) {
     if (!isFiniteNonNegativeNumber(_))
       throw RangeError(`Chunk size must be a non-negative, finite numbers`);
-    _[queue_].push({
+    (_[queue_].push({
       value: _,
       size: _,
     }),
-      (_[queueTotalSize_] += _);
+      (_[queueTotalSize_] += _));
   }
   function peekQueueValue(_) {
     return _[queue_].front().value;
   }
   function resetQueue(_) {
-    (_[queue_] = new QueueImpl()), (_[queueTotalSize_] = 0);
+    ((_[queue_] = new QueueImpl()), (_[queueTotalSize_] = 0));
   }
   const controlledReadableStream_ = Symbol(`controlledReadableStream_`),
     pullAlgorithm_ = Symbol(`pullAlgorithm_`),
@@ -217,10 +217,10 @@
     reader_ = Symbol(`reader_`),
     readableStreamController_ = Symbol(`readableStreamController_`);
   function initializeReadableStream(_) {
-    (_[state_] = `readable`),
+    ((_[state_] = `readable`),
       (_[reader_] = void 0),
       (_[storedError_] = void 0),
-      (_[readableStreamController_] = void 0);
+      (_[readableStreamController_] = void 0));
   }
   function isReadableStream(_) {
     return typeof _ == `object` && !!_ && readableStreamController_ in _;
@@ -238,17 +238,17 @@
   }
   function readableStreamCreateReadResult(_, _, _) {
     let _ = Object.create(_ ? Object.prototype : null);
-    return (_.value = _), (_.done = _), _;
+    return ((_.value = _), (_.done = _), _);
   }
   function readableStreamAddReadIntoRequest(_, _) {
     let _ = _[reader_],
       _ = createControlledPromise();
-    return (_.forAuthorCode = _), _[readIntoRequests_].push(_), _.promise;
+    return ((_.forAuthorCode = _), _[readIntoRequests_].push(_), _.promise);
   }
   function readableStreamAddReadRequest(_, _) {
     let _ = _[reader_],
       _ = createControlledPromise();
-    return (_.forAuthorCode = _), _[readRequests_].push(_), _.promise;
+    return ((_.forAuthorCode = _), _[readRequests_].push(_), _.promise);
   }
   function readableStreamHasBYOBReader(_) {
     return isReadableStreamBYOBReader(_[reader_]);
@@ -281,7 +281,7 @@
   function readableStreamError(_, _) {
     if (_[state_] !== `readable`)
       throw RangeError(`Stream is in an invalid state`);
-    (_[state_] = `errored`), (_[storedError_] = _);
+    ((_[state_] = `errored`), (_[storedError_] = _));
     let _ = _[reader_];
     if (_ !== void 0) {
       if ((_[closedPromise_].reject(_), isReadableStreamDefaultReader(_))) {
@@ -301,23 +301,24 @@
     return typeof _ == `object` && !!_ && readIntoRequests_ in _;
   }
   function readableStreamReaderGenericInitialize(_, _) {
-    (_[ownerReadableStream_] = _), (_[reader_] = _);
+    ((_[ownerReadableStream_] = _), (_[reader_] = _));
     let _ = _[state_];
-    (_[closedPromise_] = createControlledPromise()),
+    ((_[closedPromise_] = createControlledPromise()),
       _ === `readable` ||
         (_ === `closed`
           ? _[closedPromise_].resolve(void 0)
           : (_[closedPromise_].reject(_[storedError_]),
-            _[closedPromise_].promise.catch(() => {})));
+            _[closedPromise_].promise.catch(() => {}))));
   }
   function readableStreamReaderGenericRelease(_) {
     let _ = _[ownerReadableStream_];
     if (_ === void 0) throw TypeError(`Reader is in an inconsistent state`);
-    _[state_] === `readable` || (_[closedPromise_] = createControlledPromise()),
+    (_[state_] === `readable` ||
+      (_[closedPromise_] = createControlledPromise()),
       _[closedPromise_].reject(TypeError()),
       _[closedPromise_].promise.catch(() => {}),
       (_[reader_] = void 0),
-      (_[ownerReadableStream_] = void 0);
+      (_[ownerReadableStream_] = void 0));
   }
   function readableStreamBYOBReaderRead(_, _, _ = !1) {
     let _ = _[ownerReadableStream_];
@@ -346,7 +347,7 @@
     _.resolve(readableStreamCreateReadResult(_, _, _.forAuthorCode));
   }
   function setUpReadableStreamDefaultController(_, _, _, _, _, _, _) {
-    (_[controlledReadableStream_] = _),
+    ((_[controlledReadableStream_] = _),
       resetQueue(_),
       (_[started_] = !1),
       (_[closeRequested_] = !1),
@@ -356,11 +357,12 @@
       (_[strategyHWM_] = _),
       (_[pullAlgorithm_] = _),
       (_[cancelAlgorithm_] = _),
-      (_[readableStreamController_] = _);
+      (_[readableStreamController_] = _));
     let _ = _();
     Promise.resolve(_).then(
       (_) => {
-        (_[started_] = !0), readableStreamDefaultControllerCallPullIfNeeded(_);
+        ((_[started_] = !0),
+          readableStreamDefaultControllerCallPullIfNeeded(_));
       },
       (_) => {
         readableStreamDefaultControllerError(_, _);
@@ -424,18 +426,18 @@
       else {
         if (_[pullAgain_])
           throw RangeError(`Stream controller is in an invalid state.`);
-        (_[pulling_] = !0),
+        ((_[pulling_] = !0),
           _[pullAlgorithm_](_).then(
             (_) => {
-              (_[pulling_] = !1),
+              ((_[pulling_] = !1),
                 _[pullAgain_] &&
                   ((_[pullAgain_] = !1),
-                  readableStreamDefaultControllerCallPullIfNeeded(_));
+                  readableStreamDefaultControllerCallPullIfNeeded(_)));
             },
             (_) => {
               readableStreamDefaultControllerError(_, _);
             },
-          );
+          ));
       }
     }
   }
@@ -453,9 +455,9 @@
     return _ > 0;
   }
   function readableStreamDefaultControllerClearAlgorithms(_) {
-    (_[pullAlgorithm_] = void 0),
+    ((_[pullAlgorithm_] = void 0),
       (_[cancelAlgorithm_] = void 0),
-      (_[strategySizeAlgorithm_] = void 0);
+      (_[strategySizeAlgorithm_] = void 0));
   }
   function setUpReadableByteStreamController(_, _, _, _, _, _, _) {
     if (_[readableStreamController_] !== void 0)
@@ -464,7 +466,7 @@
       throw RangeError(
         `autoAllocateChunkSize must be a positive, finite integer`,
       );
-    (_[controlledReadableByteStream_] = _),
+    ((_[controlledReadableByteStream_] = _),
       (_[pullAgain_] = !1),
       (_[pulling_] = !1),
       readableByteStreamControllerClearPendingPullIntos(_),
@@ -476,11 +478,11 @@
       (_[cancelAlgorithm_] = _),
       (_[autoAllocateChunkSize_] = _),
       (_[pendingPullIntos_] = []),
-      (_[readableStreamController_] = _);
+      (_[readableStreamController_] = _));
     let _ = _();
     Promise.resolve(_).then(
       (_) => {
-        (_[started_] = !0), readableByteStreamControllerCallPullIfNeeded(_);
+        ((_[started_] = !0), readableByteStreamControllerCallPullIfNeeded(_));
       },
       (_) => {
         readableByteStreamControllerError(_, _);
@@ -504,10 +506,10 @@
         : ((_[pulling_] = !0),
           _[pullAlgorithm_](_).then(
             (_) => {
-              (_[pulling_] = !1),
+              ((_[pulling_] = !1),
                 _[pullAgain_] &&
                   ((_[pullAgain_] = !1),
-                  readableByteStreamControllerCallPullIfNeeded(_));
+                  readableByteStreamControllerCallPullIfNeeded(_)));
             },
             (_) => {
               readableByteStreamControllerError(_, _);
@@ -515,11 +517,11 @@
           )));
   }
   function readableByteStreamControllerClearAlgorithms(_) {
-    (_[pullAlgorithm_] = void 0), (_[cancelAlgorithm_] = void 0);
+    ((_[pullAlgorithm_] = void 0), (_[cancelAlgorithm_] = void 0));
   }
   function readableByteStreamControllerClearPendingPullIntos(_) {
-    readableByteStreamControllerInvalidateBYOBRequest(_),
-      (_[pendingPullIntos_] = []);
+    (readableByteStreamControllerInvalidateBYOBRequest(_),
+      (_[pendingPullIntos_] = []));
   }
   function readableByteStreamControllerClose(_) {
     let _ = _[controlledReadableByteStream_];
@@ -532,7 +534,7 @@
         let _ = TypeError();
         throw (readableByteStreamControllerError(_, _), _);
       }
-      readableByteStreamControllerClearAlgorithms(_), readableStreamClose(_);
+      (readableByteStreamControllerClearAlgorithms(_), readableStreamClose(_));
     }
   }
   function readableByteStreamControllerCommitPullIntoDescriptor(_, _) {
@@ -551,7 +553,7 @@
     let _ = _[controlledReadableByteStream_],
       { buffer: _, byteOffset: _, byteLength: _ } = _,
       _ = transferArrayBuffer(_);
-    readableStreamHasDefaultReader(_)
+    (readableStreamHasDefaultReader(_)
       ? readableStreamGetNumReadRequests(_) === 0
         ? readableByteStreamControllerEnqueueChunkToQueue(_, _, _, _)
         : readableStreamFulfillReadRequest(_, new Uint8Array(_, _, _), !1)
@@ -559,15 +561,15 @@
         ? (readableByteStreamControllerEnqueueChunkToQueue(_, _, _, _),
           readableByteStreamControllerProcessPullIntoDescriptorsUsingQueue(_))
         : readableByteStreamControllerEnqueueChunkToQueue(_, _, _, _),
-      readableByteStreamControllerCallPullIfNeeded(_);
+      readableByteStreamControllerCallPullIfNeeded(_));
   }
   function readableByteStreamControllerEnqueueChunkToQueue(_, _, _, _) {
-    _[queue_].push({
+    (_[queue_].push({
       buffer: _,
       byteOffset: _,
       byteLength: _,
     }),
-      (_[queueTotalSize_] += _);
+      (_[queueTotalSize_] += _));
   }
   function readableByteStreamControllerError(_, _) {
     let _ = _[controlledReadableByteStream_];
@@ -578,7 +580,8 @@
       readableStreamError(_, _));
   }
   function readableByteStreamControllerFillHeadPullIntoDescriptor(_, _, _) {
-    readableByteStreamControllerInvalidateBYOBRequest(_), (_.bytesFilled += _);
+    (readableByteStreamControllerInvalidateBYOBRequest(_),
+      (_.bytesFilled += _));
   }
   function readableByteStreamControllerFillPullIntoDescriptorFromQueue(_, _) {
     let _ = _.elementSize,
@@ -590,17 +593,17 @@
       _ = !1;
     _ > _ && ((_ = _ - _.bytesFilled), (_ = !0));
     let _ = _[queue_];
-    for (; _ > 0; ) {
+    for (; _ > 0;) {
       let _ = _.front(),
         _ = Math.min(_, _.byteLength),
         _ = _.byteOffset + _.bytesFilled;
-      copyDataBlockBytes(_.buffer, _, _.buffer, _.byteOffset, _),
+      (copyDataBlockBytes(_.buffer, _, _.buffer, _.byteOffset, _),
         _.byteLength === _
           ? _.shift()
           : ((_.byteOffset += _), (_.byteLength -= _)),
         (_[queueTotalSize_] -= _),
         readableByteStreamControllerFillHeadPullIntoDescriptor(_, _, _),
-        (_ -= _);
+        (_ -= _));
     }
     return _;
   }
@@ -627,7 +630,7 @@
   }
   function readableByteStreamControllerProcessPullIntoDescriptorsUsingQueue(_) {
     let _ = _[pendingPullIntos_];
-    for (; _.length > 0; ) {
+    for (; _.length > 0;) {
       if (_[queueTotalSize_] === 0) return;
       let _ = _[0];
       readableByteStreamControllerFillPullIntoDescriptorFromQueue(_, _) &&
@@ -671,12 +674,12 @@
       }
       if (_[closeRequested_]) {
         let _ = TypeError();
-        return readableByteStreamControllerError(_, _), Promise.reject(_);
+        return (readableByteStreamControllerError(_, _), Promise.reject(_));
       }
     }
     _[pendingPullIntos_].push(_);
     let _ = readableStreamAddReadIntoRequest(_, _);
-    return readableByteStreamControllerCallPullIfNeeded(_), _;
+    return (readableByteStreamControllerCallPullIfNeeded(_), _);
   }
   function readableByteStreamControllerRespond(_, _) {
     if (!isFiniteNonNegativeNumber((_ = Number(_))))
@@ -687,7 +690,7 @@
     _.buffer = transferArrayBuffer(_.buffer);
     let _ = _[controlledReadableByteStream_];
     if (readableStreamHasBYOBReader(_))
-      for (; readableStreamGetNumReadIntoRequests(_) > 0; )
+      for (; readableStreamGetNumReadIntoRequests(_) > 0;)
         readableByteStreamControllerCommitPullIntoDescriptor(
           _,
           readableByteStreamControllerShiftPendingPullInto(_),
@@ -707,13 +710,13 @@
         _ = cloneArrayBuffer(_.buffer, _ - _, _);
       readableByteStreamControllerEnqueueChunkToQueue(_, _, 0, _.byteLength);
     }
-    (_.buffer = transferArrayBuffer(_.buffer)),
+    ((_.buffer = transferArrayBuffer(_.buffer)),
       (_.bytesFilled -= _),
       readableByteStreamControllerCommitPullIntoDescriptor(
         _[controlledReadableByteStream_],
         _,
       ),
-      readableByteStreamControllerProcessPullIntoDescriptorsUsingQueue(_);
+      readableByteStreamControllerProcessPullIntoDescriptorsUsingQueue(_));
   }
   function readableByteStreamControllerRespondInternal(_, _) {
     let _ = _[pendingPullIntos_][0];
@@ -730,12 +733,12 @@
       _.byteLength !== _.byteLength
     )
       throw RangeError();
-    (_.buffer = _.buffer),
-      readableByteStreamControllerRespondInternal(_, _.byteLength);
+    ((_.buffer = _.buffer),
+      readableByteStreamControllerRespondInternal(_, _.byteLength));
   }
   function readableByteStreamControllerShiftPendingPullInto(_) {
     let _ = _[pendingPullIntos_].shift();
-    return readableByteStreamControllerInvalidateBYOBRequest(_), _;
+    return (readableByteStreamControllerInvalidateBYOBRequest(_), _);
   }
   function readableByteStreamControllerShouldCallPull(_) {
     let _ = _[controlledReadableByteStream_];
@@ -751,7 +754,7 @@
   function setUpReadableStreamBYOBRequest(_, _, _) {
     if (!isReadableByteStreamController(_) || !ArrayBuffer.isView(_))
       throw TypeError();
-    (_[associatedReadableByteStreamController_] = _), (_[view_] = _);
+    ((_[associatedReadableByteStreamController_] = _), (_[view_] = _));
   }
   const backpressure_ = Symbol(`backpressure_`),
     closeRequest_ = Symbol(`closeRequest_`),
@@ -774,7 +777,7 @@
     errorSteps_ = Symbol(`errorSteps_`),
     abortSteps_ = Symbol(`abortSteps_`);
   function initializeWritableStream(_) {
-    (_[state_] = `writable`),
+    ((_[state_] = `writable`),
       (_[storedError_] = void 0),
       (_[writer_] = void 0),
       (_[writableStreamController_] = void 0),
@@ -783,7 +786,7 @@
       (_[inFlightCloseRequest_] = void 0),
       (_[pendingAbortRequest_] = void 0),
       (_[writeRequests_] = []),
-      (_[backpressure_] = !1);
+      (_[backpressure_] = !1));
   }
   function isWritableStream(_) {
     return typeof _ == `object` && !!_ && writableStreamController_ in _;
@@ -797,13 +800,13 @@
     let _ = _[pendingAbortRequest_];
     if (_ !== void 0) return _.promise;
     let _ = !1;
-    _ === `erroring` && ((_ = !0), (_ = void 0)),
+    (_ === `erroring` && ((_ = !0), (_ = void 0)),
       (_ = {
         reason: _,
         wasAlreadyErroring: _,
-      });
+      }));
     let _ = new Promise((_, _) => {
-      (_.resolve = _), (_.reject = _);
+      ((_.resolve = _), (_.reject = _));
     });
     return (
       (_.promise = _),
@@ -814,7 +817,7 @@
   }
   function writableStreamAddWriteRequest(_) {
     let _ = createControlledPromise();
-    return _[writeRequests_].push(_), _.promise;
+    return (_[writeRequests_].push(_), _.promise);
   }
   function writableStreamDealWithRejection(_, _) {
     _[state_] === `writable`
@@ -823,12 +826,13 @@
   }
   function writableStreamStartErroring(_, _) {
     let _ = _[writableStreamController_];
-    (_[state_] = `erroring`), (_[storedError_] = _);
+    ((_[state_] = `erroring`), (_[storedError_] = _));
     let _ = _[writer_];
-    _ !== void 0 && writableStreamDefaultWriterEnsureReadyPromiseRejected(_, _),
+    (_ !== void 0 &&
+      writableStreamDefaultWriterEnsureReadyPromiseRejected(_, _),
       !writableStreamHasOperationMarkedInFlight(_) &&
         _[started_$1] &&
-        writableStreamFinishErroring(_);
+        writableStreamFinishErroring(_));
   }
   function writableStreamFinishErroring(_) {
     _[state_] = `errored`;
@@ -846,40 +850,40 @@
       );
     _[abortSteps_](_.reason).then(
       (_) => {
-        _.resolve(), writableStreamRejectCloseAndClosedPromiseIfNeeded(_);
+        (_.resolve(), writableStreamRejectCloseAndClosedPromiseIfNeeded(_));
       },
       (_) => {
-        _.reject(_), writableStreamRejectCloseAndClosedPromiseIfNeeded(_);
+        (_.reject(_), writableStreamRejectCloseAndClosedPromiseIfNeeded(_));
       },
     );
   }
   function writableStreamFinishInFlightWrite(_) {
-    _[inFlightWriteRequest_].resolve(void 0),
-      (_[inFlightWriteRequest_] = void 0);
+    (_[inFlightWriteRequest_].resolve(void 0),
+      (_[inFlightWriteRequest_] = void 0));
   }
   function writableStreamFinishInFlightWriteWithError(_, _) {
-    _[inFlightWriteRequest_].reject(_),
+    (_[inFlightWriteRequest_].reject(_),
       (_[inFlightWriteRequest_] = void 0),
-      writableStreamDealWithRejection(_, _);
+      writableStreamDealWithRejection(_, _));
   }
   function writableStreamFinishInFlightClose(_) {
-    _[inFlightCloseRequest_].resolve(void 0),
+    (_[inFlightCloseRequest_].resolve(void 0),
       (_[inFlightCloseRequest_] = void 0),
       _[state_] === `erroring` &&
         ((_[storedError_] = void 0),
         _[pendingAbortRequest_] !== void 0 &&
           (_[pendingAbortRequest_].resolve(),
           (_[pendingAbortRequest_] = void 0))),
-      (_[state_] = `closed`);
+      (_[state_] = `closed`));
     let _ = _[writer_];
     _ !== void 0 && _[closedPromise_$1].resolve(void 0);
   }
   function writableStreamFinishInFlightCloseWithError(_, _) {
-    _[inFlightCloseRequest_].reject(_),
+    (_[inFlightCloseRequest_].reject(_),
       (_[inFlightCloseRequest_] = void 0),
       _[pendingAbortRequest_] !== void 0 &&
         (_[pendingAbortRequest_].reject(_), (_[pendingAbortRequest_] = void 0)),
-      writableStreamDealWithRejection(_, _);
+      writableStreamDealWithRejection(_, _));
   }
   function writableStreamCloseQueuedOrInFlight(_) {
     return _[closeRequest_] !== void 0 || _[inFlightCloseRequest_] !== void 0;
@@ -890,7 +894,8 @@
     );
   }
   function writableStreamMarkCloseRequestInFlight(_) {
-    (_[inFlightCloseRequest_] = _[closeRequest_]), (_[closeRequest_] = void 0);
+    ((_[inFlightCloseRequest_] = _[closeRequest_]),
+      (_[closeRequest_] = void 0));
   }
   function writableStreamMarkFirstWriteRequestInFlight(_) {
     let _ = _[writeRequests_].shift();
@@ -906,12 +911,12 @@
   }
   function writableStreamUpdateBackpressure(_, _) {
     let _ = _[writer_];
-    _ !== void 0 &&
+    (_ !== void 0 &&
       _ !== _[backpressure_] &&
       (_
         ? (_[readyPromise_] = createControlledPromise())
         : _[readyPromise_].resolve(void 0)),
-      (_[backpressure_] = _);
+      (_[backpressure_] = _));
   }
   function isWritableStreamDefaultWriter(_) {
     return typeof _ == `object` && !!_ && ownerWritableStream_ in _;
@@ -945,19 +950,19 @@
   }
   function writableStreamDefaultWriterEnsureClosedPromiseRejected(_, _) {
     let _ = _[closedPromise_$1];
-    _.state === 0
+    (_.state === 0
       ? _.reject(_)
       : ((_[closedPromise_$1] = createControlledPromise()),
         _[closedPromise_$1].reject(_)),
-      _[closedPromise_$1].promise.catch(() => {});
+      _[closedPromise_$1].promise.catch(() => {}));
   }
   function writableStreamDefaultWriterEnsureReadyPromiseRejected(_, _) {
     let _ = _[readyPromise_];
-    _.state === 0
+    (_.state === 0
       ? _.reject(_)
       : ((_[readyPromise_] = createControlledPromise()),
         _[readyPromise_].reject(_)),
-      _[readyPromise_].promise.catch(() => {});
+      _[readyPromise_].promise.catch(() => {}));
   }
   function writableStreamDefaultWriterGetDesiredSize(_) {
     let _ = _[ownerWritableStream_],
@@ -973,10 +978,10 @@
   function writableStreamDefaultWriterRelease(_) {
     let _ = _[ownerWritableStream_],
       _ = TypeError();
-    writableStreamDefaultWriterEnsureReadyPromiseRejected(_, _),
+    (writableStreamDefaultWriterEnsureReadyPromiseRejected(_, _),
       writableStreamDefaultWriterEnsureClosedPromiseRejected(_, _),
       (_[writer_] = void 0),
-      (_[ownerWritableStream_] = void 0);
+      (_[ownerWritableStream_] = void 0));
   }
   function writableStreamDefaultWriterWrite(_, _) {
     let _ = _[ownerWritableStream_],
@@ -991,12 +996,12 @@
       );
     if (_ === `erroring`) return Promise.reject(_[storedError_]);
     let _ = writableStreamAddWriteRequest(_);
-    return writableStreamDefaultControllerWrite(_, _, _), _;
+    return (writableStreamDefaultControllerWrite(_, _, _), _);
   }
   function setUpWritableStreamDefaultController(_, _, _, _, _, _, _, _) {
     if (!isWritableStream(_) || _[writableStreamController_] !== void 0)
       throw TypeError();
-    (_[controlledWritableStream_] = _),
+    ((_[controlledWritableStream_] = _),
       (_[writableStreamController_] = _),
       resetQueue(_),
       (_[started_$1] = !1),
@@ -1008,15 +1013,15 @@
       writableStreamUpdateBackpressure(
         _,
         writableStreamDefaultControllerGetBackpressure(_),
-      );
+      ));
     let _ = _();
     Promise.resolve(_).then(
       (_) => {
-        (_[started_$1] = !0),
-          writableStreamDefaultControllerAdvanceQueueIfNeeded(_);
+        ((_[started_$1] = !0),
+          writableStreamDefaultControllerAdvanceQueueIfNeeded(_));
       },
       (_) => {
-        (_[started_$1] = !0), writableStreamDealWithRejection(_, _);
+        ((_[started_$1] = !0), writableStreamDealWithRejection(_, _));
       },
     );
   }
@@ -1024,21 +1029,21 @@
     return typeof _ == `object` && !!_ && controlledWritableStream_ in _;
   }
   function writableStreamDefaultControllerClearAlgorithms(_) {
-    (_[writeAlgorithm_] = void 0),
+    ((_[writeAlgorithm_] = void 0),
       (_[closeAlgorithm_] = void 0),
       (_[abortAlgorithm_] = void 0),
-      (_[strategySizeAlgorithm_$1] = void 0);
+      (_[strategySizeAlgorithm_$1] = void 0));
   }
   function writableStreamDefaultControllerClose(_) {
-    enqueueValueWithSize(_, `close`, 0),
-      writableStreamDefaultControllerAdvanceQueueIfNeeded(_);
+    (enqueueValueWithSize(_, `close`, 0),
+      writableStreamDefaultControllerAdvanceQueueIfNeeded(_));
   }
   function writableStreamDefaultControllerGetChunkSize(_, _) {
     let _;
     try {
       _ = _[strategySizeAlgorithm_$1](_);
     } catch (_) {
-      writableStreamDefaultControllerErrorIfNeeded(_, _), (_ = 1);
+      (writableStreamDefaultControllerErrorIfNeeded(_, _), (_ = 1));
     }
     return _;
   }
@@ -1059,13 +1064,13 @@
       return;
     }
     let _ = _[controlledWritableStream_];
-    !writableStreamCloseQueuedOrInFlight(_) &&
+    (!writableStreamCloseQueuedOrInFlight(_) &&
       _[state_] === `writable` &&
       writableStreamUpdateBackpressure(
         _,
         writableStreamDefaultControllerGetBackpressure(_),
       ),
-      writableStreamDefaultControllerAdvanceQueueIfNeeded(_);
+      writableStreamDefaultControllerAdvanceQueueIfNeeded(_));
   }
   function writableStreamDefaultControllerAdvanceQueueIfNeeded(_) {
     if (!_[started_$1]) return;
@@ -1086,9 +1091,9 @@
   }
   function writableStreamDefaultControllerProcessClose(_) {
     let _ = _[controlledWritableStream_];
-    writableStreamMarkCloseRequestInFlight(_), dequeueValue(_);
+    (writableStreamMarkCloseRequestInFlight(_), dequeueValue(_));
     let _ = _[closeAlgorithm_]();
-    writableStreamDefaultControllerClearAlgorithms(_),
+    (writableStreamDefaultControllerClearAlgorithms(_),
       _.then(
         (_) => {
           writableStreamFinishInFlightClose(_);
@@ -1096,11 +1101,11 @@
         (_) => {
           writableStreamFinishInFlightCloseWithError(_, _);
         },
-      );
+      ));
   }
   function writableStreamDefaultControllerProcessWrite(_, _) {
     let _ = _[controlledWritableStream_];
-    writableStreamMarkFirstWriteRequestInFlight(_),
+    (writableStreamMarkFirstWriteRequestInFlight(_),
       _[writeAlgorithm_](_).then(
         (_) => {
           writableStreamFinishInFlightWrite(_);
@@ -1115,26 +1120,26 @@
           writableStreamDefaultControllerAdvanceQueueIfNeeded(_);
         },
         (_) => {
-          _[state_] === `writable` &&
+          (_[state_] === `writable` &&
             writableStreamDefaultControllerClearAlgorithms(_),
-            writableStreamFinishInFlightWriteWithError(_, _);
+            writableStreamFinishInFlightWriteWithError(_, _));
         },
-      );
+      ));
   }
   function writableStreamDefaultControllerGetBackpressure(_) {
     return writableStreamDefaultControllerGetDesiredSize(_) <= 0;
   }
   function writableStreamDefaultControllerError(_, _) {
     let _ = _[controlledWritableStream_];
-    writableStreamDefaultControllerClearAlgorithms(_),
-      writableStreamStartErroring(_, _);
+    (writableStreamDefaultControllerClearAlgorithms(_),
+      writableStreamStartErroring(_, _));
   }
   class ReadableStreamDefaultReader {
     constructor(_) {
       if (!isReadableStream(_)) throw TypeError();
       if (isReadableStreamLocked(_)) throw TypeError(`The stream is locked.`);
-      readableStreamReaderGenericInitialize(this, _),
-        (this[readRequests_] = []);
+      (readableStreamReaderGenericInitialize(this, _),
+        (this[readRequests_] = []));
     }
     get closed() {
       return isReadableStreamDefaultReader(this)
@@ -1170,23 +1175,23 @@
       if (!isWritableStream(_)) throw TypeError();
       if (isWritableStreamLocked(_))
         throw TypeError(`Stream is already locked`);
-      (this[ownerWritableStream_] = _), (_[writer_] = this);
+      ((this[ownerWritableStream_] = _), (_[writer_] = this));
       let _ = createControlledPromise(),
         _ = createControlledPromise();
-      (this[readyPromise_] = _), (this[closedPromise_$1] = _);
+      ((this[readyPromise_] = _), (this[closedPromise_$1] = _));
       let _ = _[state_];
       if (_ === `writable`)
         (!writableStreamCloseQueuedOrInFlight(_) && _[backpressure_]) ||
           _.resolve(void 0);
       else if (_ === `erroring`)
-        _.reject(_[storedError_]), _.promise.catch(() => {});
-      else if (_ === `closed`) _.resolve(void 0), _.resolve(void 0);
+        (_.reject(_[storedError_]), _.promise.catch(() => {}));
+      else if (_ === `closed`) (_.resolve(void 0), _.resolve(void 0));
       else {
         let _ = _[storedError_];
-        _.reject(_),
+        (_.reject(_),
           _.promise.catch(() => {}),
           _.reject(_),
-          _.promise.catch(() => {});
+          _.promise.catch(() => {}));
       }
     }
     abort(_) {
@@ -1253,7 +1258,7 @@
         ((_ = () => {
           let _ = new DOMException(`Aborted`, `AbortError`),
             _ = [];
-          !1 === _ &&
+          (!1 === _ &&
             _.push(() =>
               _[state_] === `writable`
                 ? writableStreamAbort(_, _)
@@ -1267,7 +1272,7 @@
               ),
             _(() => Promise.all(_.map((_) => _())).then((_) => {}), {
               actualError: _,
-            });
+            }));
         }),
         !0 === _.aborted ? _() : _.addEventListener(`abort`, _)),
       _(_, _[closedPromise_].promise, (_) => {
@@ -1314,15 +1319,15 @@
             }),
         );
       }
-      (_ = !0), _ === void 0 && (_ = () => Promise.resolve());
+      ((_ = !0), _ === void 0 && (_ = () => Promise.resolve()));
       let _ = _();
       _ ? _.then(_) : _();
     }
     function _(_) {
-      writableStreamDefaultWriterRelease(_),
+      (writableStreamDefaultWriterRelease(_),
         readableStreamReaderGenericRelease(_),
         _ && _ && _.removeEventListener(`abort`, _),
-        _ ? _.reject(_.actualError) : _.resolve(void 0);
+        _ ? _.reject(_.actualError) : _.resolve(void 0));
     }
     return (
       (function _() {
@@ -1373,7 +1378,7 @@
     [cancelSteps_](_) {
       resetQueue(this);
       let _ = this[cancelAlgorithm_](_);
-      return readableStreamDefaultControllerClearAlgorithms(this), _;
+      return (readableStreamDefaultControllerClearAlgorithms(this), _);
     }
     [pullSteps_](_) {
       let _ = this[controlledReadableStream_];
@@ -1388,7 +1393,7 @@
         );
       }
       let _ = readableStreamAddReadRequest(_, _);
-      return readableStreamDefaultControllerCallPullIfNeeded(this), _;
+      return (readableStreamDefaultControllerCallPullIfNeeded(this), _);
     }
   }
   function setUpReadableStreamDefaultControllerFromUnderlyingSource(
@@ -1455,7 +1460,7 @@
             _.byteLength - _.bytesFilled,
           ),
           _ = Object.create(ReadableStreamBYOBRequest.prototype);
-        setUpReadableStreamBYOBRequest(_, this, _), (this[byobRequest_] = _);
+        (setUpReadableStreamBYOBRequest(_, this, _), (this[byobRequest_] = _));
       }
       return this[byobRequest_];
     }
@@ -1484,18 +1489,18 @@
       readableByteStreamControllerError(this, _);
     }
     [cancelSteps_](_) {
-      this[pendingPullIntos_].length > 0 &&
+      (this[pendingPullIntos_].length > 0 &&
         (this[pendingPullIntos_][0].bytesFilled = 0),
-        resetQueue(this);
+        resetQueue(this));
       let _ = this[cancelAlgorithm_](_);
-      return readableByteStreamControllerClearAlgorithms(this), _;
+      return (readableByteStreamControllerClearAlgorithms(this), _);
     }
     [pullSteps_](_) {
       let _ = this[controlledReadableByteStream_];
       if (this[queueTotalSize_] > 0) {
         let _ = this[queue_].shift();
-        (this[queueTotalSize_] -= _.byteLength),
-          readableByteStreamControllerHandleQueueDrain(this);
+        ((this[queueTotalSize_] -= _.byteLength),
+          readableByteStreamControllerHandleQueueDrain(this));
         let _ = new Uint8Array(_.buffer, _.byteOffset, _.byteLength);
         return Promise.resolve(readableStreamCreateReadResult(_, !1, _));
       }
@@ -1519,7 +1524,7 @@
         this[pendingPullIntos_].push(_);
       }
       let _ = readableStreamAddReadRequest(_, _);
-      return readableByteStreamControllerCallPullIfNeeded(this), _;
+      return (readableByteStreamControllerCallPullIfNeeded(this), _);
     }
   }
   function setUpReadableByteStreamControllerFromUnderlyingSource(_, _, _) {
@@ -1549,8 +1554,8 @@
       )
         throw TypeError();
       if (isReadableStreamLocked(_)) throw TypeError(`The stream is locked.`);
-      readableStreamReaderGenericInitialize(this, _),
-        (this[readIntoRequests_] = []);
+      (readableStreamReaderGenericInitialize(this, _),
+        (this[readIntoRequests_] = []));
     }
     get closed() {
       return isReadableStreamBYOBReader(this)
@@ -1651,7 +1656,7 @@
         throw TypeError(`Cannot pipeThrough on a locked stream`);
       if (isWritableStreamLocked(_))
         throw TypeError(`Cannot pipeThrough to a locked stream`);
-      return pipeTo(this, _, _).catch(() => {}), _;
+      return (pipeTo(this, _, _).catch(() => {}), _);
     }
     pipeTo(_, _ = {}) {
       return isReadableStream(this)
@@ -1670,7 +1675,7 @@
     }
   }
   function createReadableStream(_, _, _, _, _) {
-    _ === void 0 && (_ = 1), _ === void 0 && (_ = () => 1);
+    (_ === void 0 && (_ = 1), _ === void 0 && (_ = () => 1));
     let _ = Object.create(SDReadableStream.prototype);
     return (
       initializeReadableStream(_),
@@ -1717,7 +1722,7 @@
             return;
           let _ = _,
             _ = _;
-          _ ||
+          (_ ||
             readableStreamDefaultControllerEnqueue(
               _[readableStreamController_],
               _,
@@ -1727,7 +1732,7 @@
               readableStreamDefaultControllerEnqueue(
                 _[readableStreamController_],
                 _,
-              ));
+              )));
         }),
       _ = () => {};
     return (
@@ -1768,7 +1773,7 @@
     }
     [abortSteps_](_) {
       let _ = this[abortAlgorithm_](_);
-      return writableStreamDefaultControllerClearAlgorithms(this), _;
+      return (writableStreamDefaultControllerClearAlgorithms(this), _);
     }
     [errorSteps_]() {
       resetQueue(this);
@@ -1821,7 +1826,7 @@
     }
   }
   function createWritableStream(_, _, _, _, _, _) {
-    _ === void 0 && (_ = 1), _ === void 0 && (_ = () => 1);
+    (_ === void 0 && (_ = 1), _ === void 0 && (_ = () => 1));
     let _ = Object.create(WritableStream.prototype);
     return (
       initializeWritableStream(_),
@@ -1853,7 +1858,7 @@
     let _ = function () {
       return _;
     };
-    (_[writable_] = createWritableStream(
+    ((_[writable_] = createWritableStream(
       _,
       function (_) {
         return transformStreamDefaultSinkWriteAlgorithm(_, _);
@@ -1884,42 +1889,42 @@
       (_[backpressure_$1] = void 0),
       (_[backpressureChangePromise_] = void 0),
       transformStreamSetBackpressure(_, !0),
-      (_[transformStreamController_] = void 0);
+      (_[transformStreamController_] = void 0));
   }
   function transformStreamError(_, _) {
-    readableStreamDefaultControllerError(
+    (readableStreamDefaultControllerError(
       _[readable_][readableStreamController_],
       _,
     ),
-      transformStreamErrorWritableAndUnblockWrite(_, _);
+      transformStreamErrorWritableAndUnblockWrite(_, _));
   }
   function transformStreamErrorWritableAndUnblockWrite(_, _) {
-    transformStreamDefaultControllerClearAlgorithms(
+    (transformStreamDefaultControllerClearAlgorithms(
       _[transformStreamController_],
     ),
       writableStreamDefaultControllerErrorIfNeeded(
         _[writable_][writableStreamController_],
         _,
       ),
-      _[backpressure_$1] && transformStreamSetBackpressure(_, !1);
+      _[backpressure_$1] && transformStreamSetBackpressure(_, !1));
   }
   function transformStreamSetBackpressure(_, _) {
-    _[backpressure_$1] !== void 0 &&
+    (_[backpressure_$1] !== void 0 &&
       _[backpressureChangePromise_].resolve(void 0),
       (_[backpressureChangePromise_] = createControlledPromise()),
-      (_[backpressure_$1] = _);
+      (_[backpressure_$1] = _));
   }
   function isTransformStreamDefaultController(_) {
     return typeof _ == `object` && !!_ && controlledTransformStream_ in _;
   }
   function setUpTransformStreamDefaultController(_, _, _, _) {
-    (_[controlledTransformStream_] = _),
+    ((_[controlledTransformStream_] = _),
       (_[transformStreamController_] = _),
       (_[transformAlgorithm_] = _),
-      (_[flushAlgorithm_] = _);
+      (_[flushAlgorithm_] = _));
   }
   function transformStreamDefaultControllerClearAlgorithms(_) {
-    (_[transformAlgorithm_] = void 0), (_[flushAlgorithm_] = void 0);
+    ((_[transformAlgorithm_] = void 0), (_[flushAlgorithm_] = void 0));
   }
   function transformStreamDefaultControllerEnqueue(_, _) {
     let _ = _[controlledTransformStream_],
@@ -1929,8 +1934,8 @@
       readableStreamDefaultControllerEnqueue(_, _);
     } catch (_) {
       throw (
-        (transformStreamErrorWritableAndUnblockWrite(_, _),
-        _[readable_][storedError_])
+        transformStreamErrorWritableAndUnblockWrite(_, _),
+        _[readable_][storedError_]
       );
     }
     readableStreamDefaultControllerHasBackpressure(_) !== _[backpressure_$1] &&
@@ -1947,12 +1952,12 @@
   function transformStreamDefaultControllerTerminate(_) {
     let _ = _[controlledTransformStream_],
       _ = _[readable_][readableStreamController_];
-    readableStreamDefaultControllerCanCloseOrEnqueue(_) &&
+    (readableStreamDefaultControllerCanCloseOrEnqueue(_) &&
       readableStreamDefaultControllerClose(_),
       transformStreamErrorWritableAndUnblockWrite(
         _,
         TypeError(`The transform stream has been terminated`),
-      );
+      ));
   }
   function transformStreamDefaultSinkWriteAlgorithm(_, _) {
     let _ = _[transformStreamController_];
@@ -1965,7 +1970,7 @@
       : transformStreamDefaultControllerPerformTransform(_, _);
   }
   function transformStreamDefaultSinkAbortAlgorithm(_, _) {
-    return transformStreamError(_, _), Promise.resolve(void 0);
+    return (transformStreamError(_, _), Promise.resolve(void 0));
   }
   function transformStreamDefaultSinkCloseAlgorithm(_) {
     let _ = _[readable_],
@@ -2034,8 +2039,8 @@
       let _ = makeSizeAlgorithmFromSizeFunction(_),
         _ = validateAndNormalizeHighWaterMark(_ === void 0 ? 0 : _),
         _ = createControlledPromise();
-      initializeTransformStream(this, _.promise, _, _, _, _),
-        setUpTransformStreamDefaultControllerFromTransformer(this, _);
+      (initializeTransformStream(this, _.promise, _, _, _, _),
+        setUpTransformStreamDefaultControllerFromTransformer(this, _));
       let _ = invokeOrNoop(_, `start`, [this[transformStreamController_]]);
       _.resolve(_);
     }
@@ -2090,10 +2095,10 @@
     let _;
     return new _({
       start(_) {
-        (_ = _.getReader()),
+        ((_ = _.getReader()),
           _.closed.catch((_) => {
             _.error(_);
-          });
+          }));
       },
       pull: (_) =>
         _.read().then(
@@ -2171,11 +2176,11 @@
               },
             });
           } else
-            (_.body = new _({
+            ((_.body = new _({
               pull: (_) =>
                 _.arrayBuffer().then(
                   (_) => {
-                    _.enqueue(new Uint8Array(_)), _.close();
+                    (_.enqueue(new Uint8Array(_)), _.close());
                   },
                   (_) => {
                     _.error(_);
@@ -2187,7 +2192,7 @@
                 return (
                   (_.body = _), createResponseProxyWithStreamBody(_, _, _, _)
                 );
-              });
+              }));
           return _;
         }),
       );
@@ -2201,12 +2206,12 @@
           ({ value: _, done: _ }) => {
             _
               ? (function () {
-                  _.length === 0 && _.push(new Uint8Array()),
+                  (_.length === 0 && _.push(new Uint8Array()),
                     _(
                       new Blob(_, {
                         type: _,
                       }),
-                    );
+                    ));
                 })()
               : _ instanceof Uint8Array
                 ? (_.push(_), _())
@@ -2269,7 +2274,7 @@
       }
       clone() {
         let [_, _] = _(_, !0);
-        return (_ = _), createResponseProxyWithStreamBody(_, _, _, _);
+        return ((_ = _), createResponseProxyWithStreamBody(_, _, _, _));
       }
       get body() {
         return _;
@@ -2303,7 +2308,7 @@
       }
       return new _(_, _);
     };
-    return (_.prototype = _.prototype), _;
+    return ((_.prototype = _.prototype), _);
   }
   const decDecoder = Symbol(`decDecoder`),
     decTransform = Symbol(`decTransform`);
@@ -2326,10 +2331,10 @@
   }
   class TextDecoderStream {
     constructor(_, _) {
-      (this[decDecoder] = new TextDecoder(_, _)),
+      ((this[decDecoder] = new TextDecoder(_, _)),
         (this[decTransform] = new TransformStream(
           new TextDecodeTransformer(this[decDecoder]),
-        ));
+        )));
     }
     get encoding() {
       return this[decDecoder].encoding;
@@ -2351,7 +2356,7 @@
     encTransform = Symbol(`encTransform`);
   class TextEncodeTransformer {
     constructor(_) {
-      (this.encoder_ = _), (this.partial_ = void 0);
+      ((this.encoder_ = _), (this.partial_ = void 0));
     }
     transform(_, _) {
       let _ = String(_);
@@ -2372,10 +2377,10 @@
   }
   class TextEncoderStream {
     constructor() {
-      (this[encEncoder] = new TextEncoder()),
+      ((this[encEncoder] = new TextEncoder()),
         (this[encTransform] = new TransformStream(
           new TextEncodeTransformer(this[encEncoder]),
-        ));
+        )));
     }
     get encoding() {
       return this[encEncoder].encoding;
@@ -2422,11 +2427,11 @@
     _ &= 65535;
     let _ = _.length,
       _ = 0;
-    for (; _ >= NMAX; ) {
+    for (; _ >= NMAX;) {
       _ -= NMAX;
       let _ = NMAX / 16;
       do
-        (_ += _ += _[_++]),
+        ((_ += _ += _[_++]),
           (_ += _ += _[_++]),
           (_ += _ += _[_++]),
           (_ += _ += _[_++]),
@@ -2441,13 +2446,13 @@
           (_ += _ += _[_++]),
           (_ += _ += _[_++]),
           (_ += _ += _[_++]),
-          (_ += _ += _[_++]);
+          (_ += _ += _[_++]));
       while (--_);
-      (_ %= BASE), (_ += BASE);
+      ((_ %= BASE), (_ += BASE));
     }
     if (_) {
-      for (; _ >= 16; )
-        (_ -= 16),
+      for (; _ >= 16;)
+        ((_ -= 16),
           (_ += _ += _[_++]),
           (_ += _ += _[_++]),
           (_ += _ += _[_++]),
@@ -2463,9 +2468,9 @@
           (_ += _ += _[_++]),
           (_ += _ += _[_++]),
           (_ += _ += _[_++]),
-          (_ += _ += _[_++]);
-      for (; _--; ) _ += _ += _[_++];
-      (_ %= BASE), (_ %= BASE);
+          (_ += _ += _[_++]));
+      for (; _--;) _ += _ += _[_++];
+      ((_ %= BASE), (_ %= BASE));
     }
     return _ | (_ << 16);
   }
@@ -2486,11 +2491,11 @@
       _ = crcTables[1],
       _ = crcTables[2],
       _ = crcTables[3];
-    for (; _ && 3 & _; ) (_ = _[255 & (_ ^ _[_++])] ^ (_ >>> 8)), _--, _++;
+    for (; _ && 3 & _;) ((_ = _[255 & (_ ^ _[_++])] ^ (_ >>> 8)), _--, _++);
     let _ = new Uint32Array(_.buffer, _, _ >>> 2),
       _ = 0;
-    for (; _ >= 32; )
-      (_ ^= _[_++]),
+    for (; _ >= 32;)
+      ((_ ^= _[_++]),
         (_ =
           _[255 & _] ^ _[(_ >>> 8) & 255] ^ _[(_ >>> 16) & 255] ^ _[_ >>> 24]),
         (_ ^= _[_++]),
@@ -2514,18 +2519,18 @@
         (_ ^= _[_++]),
         (_ =
           _[255 & _] ^ _[(_ >>> 8) & 255] ^ _[(_ >>> 16) & 255] ^ _[_ >>> 24]),
-        (_ -= 32);
-    for (; _ >= 4; )
-      (_ ^= _[_++]),
+        (_ -= 32));
+    for (; _ >= 4;)
+      ((_ ^= _[_++]),
         (_ =
           _[255 & _] ^ _[(_ >>> 8) & 255] ^ _[(_ >>> 16) & 255] ^ _[_ >>> 24]),
-        (_ -= 4);
+        (_ -= 4));
     if (_) {
       _ += 4 * _;
       do _ = _[255 & (_ ^ _[_++])] ^ (_ >>> 8);
       while (--_);
     }
-    return (_ = ~_), _;
+    return ((_ = ~_), _);
   }
   function computeCRC32Big(_, _ = 0) {
     let _ = ~swap32(_),
@@ -2536,11 +2541,11 @@
       _ = crcTables[5],
       _ = crcTables[6],
       _ = crcTables[7];
-    for (; _ && 3 & _; ) (_ = _[(_ >>> 24) ^ _[_++]] ^ (_ << 8)), _--, _++;
+    for (; _ && 3 & _;) ((_ = _[(_ >>> 24) ^ _[_++]] ^ (_ << 8)), _--, _++);
     let _ = new Uint32Array(_.buffer, _, _ >>> 2),
       _ = 0;
-    for (; _ >= 32; )
-      (_ ^= _[_++]),
+    for (; _ >= 32;)
+      ((_ ^= _[_++]),
         (_ =
           _[255 & _] ^ _[(_ >>> 8) & 255] ^ _[(_ >>> 16) & 255] ^ _[_ >>> 24]),
         (_ ^= _[_++]),
@@ -2564,18 +2569,18 @@
         (_ ^= _[_++]),
         (_ =
           _[255 & _] ^ _[(_ >>> 8) & 255] ^ _[(_ >>> 16) & 255] ^ _[_ >>> 24]),
-        (_ -= 32);
-    for (; _ >= 4; )
-      (_ ^= _[_++]),
+        (_ -= 32));
+    for (; _ >= 4;)
+      ((_ ^= _[_++]),
         (_ =
           _[255 & _] ^ _[(_ >>> 8) & 255] ^ _[(_ >>> 16) & 255] ^ _[_ >>> 24]),
-        (_ -= 4);
+        (_ -= 4));
     if (_) {
       _ += 4 * _;
       do _ = _[(_ >>> 24) ^ _[_++]] ^ (_ << 8);
       while (--_);
     }
-    return (_ = ~_), swap32(_);
+    return ((_ = ~_), swap32(_));
   }
   function makeCRCTables() {
     let _ = new ArrayBuffer(8192),
@@ -2592,14 +2597,14 @@
     for (let _ = 0; _ < 256; _++) {
       let _ = _;
       for (let _ = 0; _ < 8; _++) _ = 1 & _ ? 3988292384 ^ (_ >>> 1) : _ >>> 1;
-      (_[0][_] = _), (_[4][_] = swap32(_));
+      ((_[0][_] = _), (_[4][_] = swap32(_)));
     }
     for (let _ = 0; _ < 256; _++) {
       let _ = _[0][_];
       for (let _ = 1; _ < 4; _++)
-        (_ = _[0][255 & _] ^ (_ >>> 8)),
+        ((_ = _[0][255 & _] ^ (_ >>> 8)),
           (_[_][_] = _),
-          (_[_ + 4][_] = swap32(_));
+          (_[_ + 4][_] = swap32(_)));
     }
     return _;
   }
@@ -2607,16 +2612,18 @@
     OUTPUT_BUFSIZE = 16384;
   class ZStream {
     constructor() {
-      (this.avail_in = 0),
+      ((this.avail_in = 0),
         (this.next_in_index = 0),
         (this.next_out = new Uint8Array(OUTPUT_BUFSIZE)),
         (this.avail_out = this.next_out.byteLength),
         (this.next_out_index = 0),
         (this.total_in = this.total_out = 0),
-        (this.msg = ``);
+        (this.msg = ``));
     }
     append(_) {
-      (this.next_in = _), (this.avail_in = _.length), (this.next_in_index = 0);
+      ((this.next_in = _),
+        (this.avail_in = _.length),
+        (this.next_in_index = 0));
     }
     read_buf(_, _) {
       return this.next_in.subarray(_, _ + _);
@@ -2639,7 +2646,7 @@
     }
     flush_pending(_) {
       var _ = _.pending;
-      _ > this.avail_out && (_ = this.avail_out),
+      (_ > this.avail_out && (_ = this.avail_out),
         _ !== 0 &&
           (this.next_out.set(
             _.pending_buf.subarray(_.pending_out, _.pending_out + _),
@@ -2650,7 +2657,7 @@
           (this.total_out += _),
           (this.avail_out -= _),
           (_.pending -= _),
-          _.pending === 0 && (_.pending_out = 0));
+          _.pending === 0 && (_.pending_out = 0)));
     }
   }
   function InfCodes() {
@@ -2670,16 +2677,16 @@
       _ = 0;
     function _(_, _, _, _, _, _, _, _) {
       let _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
-      (_ = _.next_in_index),
+      ((_ = _.next_in_index),
         (_ = _.avail_in),
         (_ = _.bitb),
         (_ = _.bitk),
         (_ = _.write),
         (_ = _ < _.read ? _.read - _ - 1 : _.end - _),
         (_ = inflate_mask[_]),
-        (_ = inflate_mask[_]);
+        (_ = inflate_mask[_]));
       do {
-        for (; _ < 20; ) _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8);
+        for (; _ < 20;) (_--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8));
         if (
           ((_ = _ & _),
           (_ = _),
@@ -2694,11 +2701,11 @@
                 _ &= 15, _ = _[_ + 2] + (_ & inflate_mask[_]), _ >>= _, _ -= _;
                 _ < 15;
               )
-                _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8);
-              for (_ = _ & _, _ = _, _ = _, _ = 3 * (_ + _), _ = _[_]; ; ) {
+                (_--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8));
+              for (_ = _ & _, _ = _, _ = _, _ = 3 * (_ + _), _ = _[_]; ;) {
                 if (((_ >>= _[_ + 1]), (_ -= _[_ + 1]), 16 & _)) {
-                  for (_ &= 15; _ < _; )
-                    _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8);
+                  for (_ &= 15; _ < _;)
+                    (_--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8));
                   if (
                     ((_ = _[_ + 2] + (_ & inflate_mask[_])),
                     (_ >>= _),
@@ -2706,10 +2713,10 @@
                     (_ -= _),
                     _ >= _)
                   )
-                    (_ = _ - _),
+                    ((_ = _ - _),
                       (_.window[_++] = _.window[_++]),
                       (_.window[_++] = _.window[_++]),
-                      (_ -= 2);
+                      (_ -= 2));
                   else {
                     _ = _ - _;
                     do _ += _.end;
@@ -2741,10 +2748,10 @@
                     (_.write = _),
                     -3
                   );
-                (_ += _[_ + 2]),
+                ((_ += _[_ + 2]),
                   (_ += _ & inflate_mask[_]),
                   (_ = 3 * (_ + _)),
-                  (_ = _[_]);
+                  (_ = _[_]));
               }
               break;
             }
@@ -2782,14 +2789,15 @@
               (_ = _[_]),
               _ === 0)
             ) {
-              (_ >>= _[_ + 1]),
+              ((_ >>= _[_ + 1]),
                 (_ -= _[_ + 1]),
                 (_.window[_++] = _[_ + 2]),
-                _--;
+                _--);
               break;
             }
           }
-        else (_ >>= _[_ + 1]), (_ -= _[_ + 1]), (_.window[_++] = _[_ + 2]), _--;
+        else
+          ((_ >>= _[_ + 1]), (_ -= _[_ + 1]), (_.window[_++] = _[_ + 2]), _--);
       } while (_ >= 258 && _ >= 10);
       return (
         (_ = _.avail_in - _),
@@ -2808,7 +2816,7 @@
     }
     return {
       init: function (_, _, _, _, _, _) {
-        (_ = 0), (_ = _), (_ = _), (_ = _), (_ = _), (_ = _), (_ = _);
+        ((_ = 0), (_ = _), (_ = _), (_ = _), (_ = _), (_ = _), (_ = _));
       },
       proc: function (_, _, _) {
         let _,
@@ -2853,9 +2861,9 @@
                 _ = _ === 1 ? 7 : 9;
                 break;
               }
-              (_ = _), (_ = _), (_ = _), (_ = 1);
+              ((_ = _), (_ = _), (_ = _), (_ = 1));
             case 1:
-              for (_ = _; _ < _; ) {
+              for (_ = _; _ < _;) {
                 if (_ === 0)
                   return (
                     (_.bitb = _),
@@ -2866,7 +2874,7 @@
                     (_.write = _),
                     _.inflate_flush(_, _)
                   );
-                (_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8);
+                ((_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8));
               }
               if (
                 ((_ = 3 * (_ + (_ & inflate_mask[_]))),
@@ -2875,15 +2883,15 @@
                 (_ = _[_]),
                 _ === 0)
               ) {
-                (_ = _[_ + 2]), (_ = 6);
+                ((_ = _[_ + 2]), (_ = 6));
                 break;
               }
               if (16 & _) {
-                (_ = 15 & _), (_ = _[_ + 2]), (_ = 2);
+                ((_ = 15 & _), (_ = _[_ + 2]), (_ = 2));
                 break;
               }
               if (!(64 & _)) {
-                (_ = _), (_ = _ / 3 + _[_ + 2]);
+                ((_ = _), (_ = _ / 3 + _[_ + 2]));
                 break;
               }
               if (32 & _) {
@@ -2903,7 +2911,7 @@
                 _.inflate_flush(_, _)
               );
             case 2:
-              for (_ = _; _ < _; ) {
+              for (_ = _; _ < _;) {
                 if (_ === 0)
                   return (
                     (_.bitb = _),
@@ -2914,17 +2922,17 @@
                     (_.write = _),
                     _.inflate_flush(_, _)
                   );
-                (_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8);
+                ((_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8));
               }
-              (_ += _ & inflate_mask[_]),
+              ((_ += _ & inflate_mask[_]),
                 (_ >>= _),
                 (_ -= _),
                 (_ = _),
                 (_ = _),
                 (_ = _),
-                (_ = 3);
+                (_ = 3));
             case 3:
-              for (_ = _; _ < _; ) {
+              for (_ = _; _ < _;) {
                 if (_ === 0)
                   return (
                     (_.bitb = _),
@@ -2935,7 +2943,7 @@
                     (_.write = _),
                     _.inflate_flush(_, _)
                   );
-                (_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8);
+                ((_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8));
               }
               if (
                 ((_ = 3 * (_ + (_ & inflate_mask[_]))),
@@ -2944,11 +2952,11 @@
                 (_ = _[_]),
                 16 & _)
               ) {
-                (_ = 15 & _), (_ = _[_ + 2]), (_ = 4);
+                ((_ = 15 & _), (_ = _[_ + 2]), (_ = 4));
                 break;
               }
               if (!(64 & _)) {
-                (_ = _), (_ = _ / 3 + _[_ + 2]);
+                ((_ = _), (_ = _ / 3 + _[_ + 2]));
                 break;
               }
               return (
@@ -2964,7 +2972,7 @@
                 _.inflate_flush(_, _)
               );
             case 4:
-              for (_ = _; _ < _; ) {
+              for (_ = _; _ < _;) {
                 if (_ === 0)
                   return (
                     (_.bitb = _),
@@ -2975,12 +2983,12 @@
                     (_.write = _),
                     _.inflate_flush(_, _)
                   );
-                (_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8);
+                ((_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8));
               }
-              (_ += _ & inflate_mask[_]), (_ >>= _), (_ -= _), (_ = 5);
+              ((_ += _ & inflate_mask[_]), (_ >>= _), (_ -= _), (_ = 5));
             case 5:
-              for (_ = _ - _; _ < 0; ) _ += _.end;
-              for (; _ !== 0; ) {
+              for (_ = _ - _; _ < 0;) _ += _.end;
+              for (; _ !== 0;) {
                 if (
                   _ === 0 &&
                   (_ === _.end &&
@@ -3005,10 +3013,10 @@
                     (_.write = _),
                     _.inflate_flush(_, _)
                   );
-                (_.window[_++] = _.window[_++]),
+                ((_.window[_++] = _.window[_++]),
                   _--,
                   _ === _.end && (_ = 0),
-                  _--;
+                  _--);
               }
               _ = 0;
               break;
@@ -3037,7 +3045,7 @@
                   (_.write = _),
                   _.inflate_flush(_, _)
                 );
-              (_ = 0), (_.window[_++] = _), _--, (_ = 0);
+              ((_ = 0), (_.window[_++] = _), _--, (_ = 0));
               break;
             case 7:
               if (
@@ -3206,27 +3214,27 @@
     _ = new Int32Array(BMAX + 1);
   function huft_build(_, _, _, _, _, _, _, _, _, _, _) {
     let _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
-    (_ = 0), (_ = _);
-    do _[_[_ + _]]++, _++, _--;
+    ((_ = 0), (_ = _));
+    do (_[_[_ + _]]++, _++, _--);
     while (_ !== 0);
-    if (_[0] === _) return (_[0] = -1), (_[0] = 0), 0;
+    if (_[0] === _) return ((_[0] = -1), (_[0] = 0), 0);
     for (_ = _[0], _ = 1; _ <= BMAX && _[_] === 0; _++);
     for (_ = _, _ < _ && (_ = _), _ = BMAX; _ !== 0 && _[_] === 0; _--);
     for (_ = _, _ > _ && (_ = _), _[0] = _, _ = 1 << _; _ < _; _++, _ <<= 1)
       if (((_ -= _[_]), _ < 0)) return -3;
     if (((_ -= _[_]), _ < 0)) return -3;
-    for (_[_] += _, _[1] = _ = 0, _ = 1, _ = 2; --_ != 0; )
-      (_[_] = _ += _[_]), _++, _++;
-    (_ = 0), (_ = 0);
-    do (_ = _[_ + _]), _ !== 0 && (_[_[_]++] = _), _++;
+    for (_[_] += _, _[1] = _ = 0, _ = 1, _ = 2; --_ != 0;)
+      ((_[_] = _ += _[_]), _++, _++);
+    ((_ = 0), (_ = 0));
+    do ((_ = _[_ + _]), _ !== 0 && (_[_[_]++] = _), _++);
     while (++_ < _);
     for (
       _ = _[_], _[0] = _ = 0, _ = 0, _ = -1, _ = -_, _[0] = 0, _ = 0, _ = 0;
       _ <= _;
       _++
     )
-      for (_ = _[_]; _-- != 0; ) {
-        for (; _ > _ + _; ) {
+      for (_ = _[_]; _-- != 0;) {
+        for (; _ > _ + _;) {
           if (
             (_++,
             (_ += _),
@@ -3235,9 +3243,9 @@
             (_ = 1 << (_ = _ - _)),
             _ > _ + 1 && ((_ -= _ + 1), (_ = _), _ < _))
           )
-            for (; ++_ < _ && ((_ <<= 1), !(_ <= _[++_])); ) _ -= _[_];
+            for (; ++_ < _ && ((_ <<= 1), !(_ <= _[++_]));) _ -= _[_];
           if (((_ = 1 << _), _[0] + _ > 1400)) return -3;
-          (_[_] = _ = _[0]),
+          ((_[_] = _ = _[0]),
             (_[0] += _),
             _ === 0
               ? (_[0] = _)
@@ -3246,7 +3254,7 @@
                 (_[1] = _),
                 (_ = _ >>> (_ - _)),
                 (_[2] = _ - _[_ - 1] - _),
-                _.set(_, 3 * (_[_ - 1] + _)));
+                _.set(_, 3 * (_[_ - 1] + _))));
         }
         for (
           _[1] = _ - _,
@@ -3262,18 +3270,18 @@
         )
           _.set(_, 3 * (_ + _));
         for (_ = 1 << (_ - 1); (_ & _) != 0; _ >>>= 1) _ ^= _;
-        for (_ ^= _, _ = (1 << _) - 1; (_ & _) !== _[_]; )
-          _--, (_ -= _), (_ = (1 << _) - 1);
+        for (_ ^= _, _ = (1 << _) - 1; (_ & _) !== _[_];)
+          (_--, (_ -= _), (_ = (1 << _) - 1));
       }
     return _ !== 0 && _ !== 1 ? -5 : 0;
   }
   function initWorkArea(_) {
     _ = new Int32Array(_);
-    for (let _ = 0; _ < BMAX + 1; _++) (_[_] = 0), (_[_] = 0), (_[_] = 0);
+    for (let _ = 0; _ < BMAX + 1; _++) ((_[_] = 0), (_[_] = 0), (_[_] = 0));
     for (let _ = 0; _ < 3; _++) _[_] = 0;
   }
   function inflate_trees_bits(_, _, _, _, _) {
-    initWorkArea(19), (_[0] = 0);
+    (initWorkArea(19), (_[0] = 0));
     let _ = huft_build(_, 0, 19, 19, null, null, _, _, _, _, _);
     return (
       _ === -3
@@ -3284,7 +3292,7 @@
     );
   }
   function inflate_trees_dynamic(_, _, _, _, _, _, _, _, _) {
-    initWorkArea(288), (_[0] = 0);
+    (initWorkArea(288), (_[0] = 0));
     let _ = huft_build(_, 0, _, 257, cplens, cplext, _, _, _, _, _);
     return _ !== 0 || _[0] === 0
       ? (_ === -3
@@ -3316,7 +3324,7 @@
   ];
   class InfBlocks {
     constructor(_) {
-      (this.codes = InfCodes()),
+      ((this.codes = InfCodes()),
         (this.hufts = new Int32Array(4200)),
         (this.mode = 0),
         (this.bitk = 0),
@@ -3325,14 +3333,14 @@
         (this.write = 0),
         (this.last = 0),
         (this.end = _),
-        (this.window = new Uint8Array(_));
+        (this.window = new Uint8Array(_)));
     }
     reset() {
-      (this.bitk = 0),
+      ((this.bitk = 0),
         (this.bitb = 0),
         (this.read = 0),
         (this.write = 0),
-        (this.last = 0);
+        (this.last = 0));
     }
     inflate_flush(_, _) {
       let _, _, _;
@@ -3392,7 +3400,7 @@
         switch (this.mode) {
           case 0:
             if (this.last) return 1;
-            for (; _ < 3; ) {
+            for (; _ < 3;) {
               if (_ === 0)
                 return (
                   (this.bitb = _),
@@ -3403,30 +3411,30 @@
                   (this.write = _),
                   this.inflate_flush(_, _)
                 );
-              (_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8);
+              ((_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8));
             }
             switch (((_ = 7 & _), (this.last = 1 & _), _ >>> 1)) {
               case 0:
-                (_ >>>= 3),
+                ((_ >>>= 3),
                   (_ -= 3),
                   (_ = 7 & _),
                   (_ >>>= _),
                   (_ -= _),
-                  (this.mode = 1);
+                  (this.mode = 1));
                 break;
               case 1:
                 let _ = [0],
                   _ = [0],
                   _ = [[]],
                   _ = [[]];
-                inflate_trees_fixed(_, _, _, _),
+                (inflate_trees_fixed(_, _, _, _),
                   _.init(_[0], _[0], _[0], 0, _[0], 0),
                   (_ >>>= 3),
                   (_ -= 3),
-                  (this.mode = 6);
+                  (this.mode = 6));
                 break;
               case 2:
-                (_ >>>= 3), (_ -= 3), (this.mode = 3);
+                ((_ >>>= 3), (_ -= 3), (this.mode = 3));
                 break;
               case 3:
                 return (
@@ -3446,7 +3454,7 @@
             }
             break;
           case 1:
-            for (; _ < 32; ) {
+            for (; _ < 32;) {
               if (_ === 0)
                 return (
                   (this.bitb = _),
@@ -3457,7 +3465,7 @@
                   (this.write = _),
                   this.inflate_flush(_, _)
                 );
-              (_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8);
+              ((_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8));
             }
             if (((~_ >>> 16) & 65535) != (65535 & _))
               return (
@@ -3472,9 +3480,9 @@
                 (this.write = _),
                 this.inflate_flush(_, _)
               );
-            (_ = 65535 & _),
+            ((_ = 65535 & _),
               (_ = _ = 0),
-              (this.mode = _ === 0 ? (this.last === 0 ? 0 : 7) : 2);
+              (this.mode = _ === 0 ? (this.last === 0 ? 0 : 7) : 2));
             break;
           case 2:
             if (
@@ -3521,7 +3529,7 @@
             this.mode = this.last === 0 ? 0 : 7;
             break;
           case 3:
-            for (; _ < 14; ) {
+            for (; _ < 14;) {
               if (_ === 0)
                 return (
                   (this.bitb = _),
@@ -3532,7 +3540,7 @@
                   (this.write = _),
                   this.inflate_flush(_, _)
                 );
-              (_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8);
+              ((_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8));
             }
             if (((_ = _ = 16383 & _), (31 & _) > 29 || ((_ >> 5) & 31) > 29))
               return (
@@ -3553,7 +3561,7 @@
               _ >>>= 14, _ -= 14, _ = 0, this.mode = 4;
               _ < 4 + (_ >>> 10);
             ) {
-              for (; _ < 3; ) {
+              for (; _ < 3;) {
                 if (_ === 0)
                   return (
                     (this.bitb = _),
@@ -3564,11 +3572,11 @@
                     (this.write = _),
                     this.inflate_flush(_, _)
                   );
-                (_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8);
+                ((_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8));
               }
-              (_[border[_++]] = 7 & _), (_ >>>= 3), (_ -= 3);
+              ((_[border[_++]] = 7 & _), (_ >>>= 3), (_ -= 3));
             }
-            for (; _ < 19; ) _[border[_++]] = 0;
+            for (; _ < 19;) _[border[_++]] = 0;
             if (((_[0] = 7), (_ = inflate_trees_bits(_, _, _, _, _)), _ !== 0))
               return (
                 (_ = _) === -3 && (this.mode = 9),
@@ -3585,7 +3593,7 @@
               (_ = _), !(_ >= 258 + (31 & _) + ((_ >> 5) & 31));
             ) {
               let _, _;
-              for (_ = _[0]; _ < _; ) {
+              for (_ = _[0]; _ < _;) {
                 if (_ === 0)
                   return (
                     (this.bitb = _),
@@ -3596,14 +3604,14 @@
                     (this.write = _),
                     this.inflate_flush(_, _)
                   );
-                (_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8);
+                ((_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8));
               }
               if (
                 ((_ = _[3 * (_[0] + (_ & inflate_mask[_])) + 1]),
                 (_ = _[3 * (_[0] + (_ & inflate_mask[_])) + 2]),
                 _ < 16)
               )
-                (_ >>>= _), (_ -= _), (_[_++] = _);
+                ((_ >>>= _), (_ -= _), (_[_++] = _));
               else {
                 for (
                   _ = _ === 18 ? 7 : _ - 14, _ = _ === 18 ? 11 : 3;
@@ -3619,7 +3627,7 @@
                       (this.write = _),
                       this.inflate_flush(_, _)
                     );
-                  (_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8);
+                  ((_ = 0), _--, (_ |= (255 & _.next_in[_++]) << _), (_ += 8));
                 }
                 if (
                   ((_ >>>= _),
@@ -3680,7 +3688,7 @@
                 (this.write = _),
                 this.inflate_flush(_, _)
               );
-            _.init(_[0], _[0], _, _[0], _, _[0]), (this.mode = 6);
+            (_.init(_[0], _[0], _, _[0], _, _[0]), (this.mode = 6));
           case 6:
             if (
               ((this.bitb = _),
@@ -3760,12 +3768,12 @@
         }
     }
     set_dictionary(_, _, _) {
-      this.window.set(_.subarray(_, _ + _), 0), (this.read = this.write = _);
+      (this.window.set(_.subarray(_, _ + _), 0), (this.read = this.write = _));
     }
   }
   class Inflate {
     constructor(_) {
-      (this.isGZip = !1),
+      ((this.isGZip = !1),
         (this.method = 0),
         (this.gflags = 0),
         (this.name = ``),
@@ -3777,7 +3785,7 @@
         (this.wbits = 0),
         (this.wbits = 15),
         (this.blocks = new InfBlocks(1 << this.wbits)),
-        (this.mode = _ ? 22 : 0);
+        (this.mode = _ ? 22 : 0));
     }
     get isComplete() {
       let { blocks: _ } = this,
@@ -3811,11 +3819,11 @@
               this.mode = 2;
               break;
             }
-            (this.mode = 1),
+            ((this.mode = 1),
               (_ = 0),
               _.avail_in--,
               _.total_in++,
-              _.next_in_index++;
+              _.next_in_index++);
           case 1:
             if (_.avail_in === 0) return _;
             if (
@@ -3825,10 +3833,10 @@
               (_ = _.next_in[_.next_in_index++]),
               _ !== GZIP_ID2)
             ) {
-              (this.mode = 32), (_.msg = `invalid gzip id`);
+              ((this.mode = 32), (_.msg = `invalid gzip id`));
               break;
             }
-            (this.isGZip = !0), (this.mode = 2);
+            ((this.isGZip = !0), (this.mode = 2));
           case 2:
             if (_.avail_in === 0) return _;
             if (
@@ -3838,11 +3846,11 @@
               (this.method = _.next_in[_.next_in_index++]),
               (15 & this.method) !== Z_DEFLATED)
             ) {
-              (this.mode = 32), (_.msg = `unknown compression method`);
+              ((this.mode = 32), (_.msg = `unknown compression method`));
               break;
             }
             if (8 + (this.method >> 4) > this.wbits) {
-              (this.mode = 32), (_.msg = `invalid window size`);
+              ((this.mode = 32), (_.msg = `invalid window size`));
               break;
             }
             this.mode = 3;
@@ -3855,11 +3863,11 @@
               (_ = 255 & _.next_in[_.next_in_index++]),
               this.isGZip)
             ) {
-              (this.gflags = _), (this.mode = 9);
+              ((this.gflags = _), (this.mode = 9));
               break;
             }
             if (((this.method << 8) + _) % 31 != 0) {
-              (this.mode = 32), (_.msg = `incorrect header check`);
+              ((this.mode = 32), (_.msg = `incorrect header check`));
               break;
             }
             if ((_ & PRESET_DICT) == 0) {
@@ -3869,28 +3877,28 @@
             this.mode = 4;
           case 4:
             if (_.avail_in === 0) return _;
-            (_ = 0),
+            ((_ = 0),
               _.avail_in--,
               _.total_in++,
               (this.dictChecksum =
                 ((255 & _.next_in[_.next_in_index++]) << 24) & 4278190080),
-              (this.mode = 5);
+              (this.mode = 5));
           case 5:
             if (_.avail_in === 0) return _;
-            (_ = 0),
+            ((_ = 0),
               _.avail_in--,
               _.total_in++,
               (this.dictChecksum |=
                 ((255 & _.next_in[_.next_in_index++]) << 16) & 16711680),
-              (this.mode = 6);
+              (this.mode = 6));
           case 6:
             if (_.avail_in === 0) return _;
-            (_ = 0),
+            ((_ = 0),
               _.avail_in--,
               _.total_in++,
               (this.dictChecksum |=
                 ((255 & _.next_in[_.next_in_index++]) << 8) & 65280),
-              (this.mode = 7);
+              (this.mode = 7));
           case 7:
             return _.avail_in === 0
               ? _
@@ -3901,7 +3909,7 @@
                 (this.mode = 8),
                 2);
           case 8:
-            return (this.mode = 32), (_.msg = `need dictionary`), -2;
+            return ((this.mode = 32), (_.msg = `need dictionary`), -2);
           case 9:
           case 10:
           case 11:
@@ -3924,7 +3932,7 @@
           case 20:
           case 21:
             if (_.avail_in === 0) return _;
-            (_ = 0),
+            ((_ = 0),
               _.avail_in--,
               _.total_in++,
               _.next_in_index++,
@@ -3939,7 +3947,7 @@
                           : 2 & this.gflags
                             ? 20
                             : 22)
-                : this.mode++;
+                : this.mode++);
             break;
           case 15:
           case 16:
@@ -3956,7 +3964,7 @@
             this.xlen >>>= 16;
           case 17:
             if (_.avail_in === 0) return _;
-            (_ = 0),
+            ((_ = 0),
               _.avail_in--,
               _.total_in++,
               _.next_in_index++,
@@ -3969,12 +3977,12 @@
                       ? 19
                       : 2 & this.gflags
                         ? 20
-                        : 22);
+                        : 22));
             break;
           case 18:
           case 19:
             if (_.avail_in === 0) return _;
-            (_ = 0),
+            ((_ = 0),
               _.avail_in--,
               _.total_in++,
               (_ = 255 & _.next_in[_.next_in_index++]),
@@ -3985,7 +3993,7 @@
                       : 2 & this.gflags
                         ? 20
                         : 22)
-                : this.mode === 18 && (this.name += String.fromCharCode(_));
+                : this.mode === 18 && (this.name += String.fromCharCode(_)));
             break;
           case 22:
             if (((_ = this.blocks.proc(_, _)), _ === -3)) {
@@ -4003,7 +4011,7 @@
           case 25:
           case 26:
             if (_.avail_in === 0) return _;
-            (_ = 0),
+            ((_ = 0),
               _.avail_in--,
               _.total_in++,
               (_ = 255 & _.next_in[_.next_in_index++]),
@@ -4011,19 +4019,19 @@
                 ? (this.fullChecksum >>> 8) | (_ << 24)
                 : (this.fullChecksum << 8) | _),
               this.mode++,
-              this.mode !== 27 || this.isGZip || (this.mode = 31);
+              this.mode !== 27 || this.isGZip || (this.mode = 31));
             break;
           case 27:
           case 28:
           case 29:
           case 30:
             if (_.avail_in === 0) return _;
-            (_ = 0),
+            ((_ = 0),
               _.avail_in--,
               _.total_in++,
               (_ = 255 & _.next_in[_.next_in_index++]),
               (this.inflatedSize = (this.inflatedSize >>> 8) | (_ << 24)),
-              this.mode++;
+              this.mode++);
             break;
           case 31:
             return 1;
@@ -4066,7 +4074,7 @@
           );
         this.customDict = _;
       }
-      (this.inflate = new Inflate(_)), (this._ = new ZStream());
+      ((this.inflate = new Inflate(_)), (this._ = new ZStream()));
     }
     append(_) {
       let _ = u8ArrayFromBufferSource(_);
@@ -4078,9 +4086,9 @@
         _ = !1;
       _.append(_);
       do {
-        (_.next_out_index = 0),
+        ((_.next_out_index = 0),
           (_.avail_out = OUTPUT_BUFSIZE),
-          _.avail_in !== 0 || _ || ((_.next_in_index = 0), (_ = !0));
+          _.avail_in !== 0 || _ || ((_.next_in_index = 0), (_ = !0)));
         let _ = _.inflate(_);
         if (_ && _ === -5) {
           if (_.avail_in !== 0) throw Error(`inflate error: bad input`);
@@ -4095,11 +4103,11 @@
         if (_.next_out_index) {
           let _ = new Uint8Array(_.next_out.subarray(0, _.next_out_index)),
             _ = _.containerFormat === 2;
-          this.checksum === void 0 && (this.checksum = +!_),
+          (this.checksum === void 0 && (this.checksum = +!_),
             (this.checksum = _
               ? crc32(_, this.checksum)
               : adler32(_, this.checksum)),
-            _.push(_);
+            _.push(_));
         }
       } while (_.avail_in > 0 || _.avail_out === 0);
       return _;
@@ -4160,7 +4168,7 @@
     ];
   class Tree {
     constructor(_, _) {
-      (this.dyn_tree = _), (this.stat_desc = _), (this.max_code = 0);
+      ((this.dyn_tree = _), (this.stat_desc = _), (this.max_code = 0));
     }
     gen_bitlen(_) {
       var _,
@@ -4181,7 +4189,7 @@
         _ < HEAP_SIZE;
         _++
       )
-        (_ = _[2 * _[2 * (_ = _.heap[_]) + 1] + 1] + 1) > _ && ((_ = _), _++),
+        ((_ = _[2 * _[2 * (_ = _.heap[_]) + 1] + 1] + 1) > _ && ((_ = _), _++),
           (_[2 * _ + 1] = _),
           _ > this.max_code ||
             (_.bl_count[_]++,
@@ -4189,14 +4197,17 @@
             _ >= _ && (_ = _[_ - _]),
             (_ = _[2 * _]),
             (_.opt_len += _ * (_ + _)),
-            _ && (_.static_len += _ * (_[2 * _ + 1] + _)));
+            _ && (_.static_len += _ * (_[2 * _ + 1] + _))));
       if (_ !== 0) {
         do {
-          for (_ = _ - 1; _.bl_count[_] === 0; ) _--;
-          _.bl_count[_]--, (_.bl_count[_ + 1] += 2), _.bl_count[_]--, (_ -= 2);
+          for (_ = _ - 1; _.bl_count[_] === 0;) _--;
+          (_.bl_count[_]--,
+            (_.bl_count[_ + 1] += 2),
+            _.bl_count[_]--,
+            (_ -= 2));
         } while (_ > 0);
         for (_ = _; _ !== 0; _--)
-          for (_ = _.bl_count[_]; _ !== 0; )
+          for (_ = _.bl_count[_]; _ !== 0;)
             (_ = _.heap[--_]) > this.max_code ||
               (_[2 * _ + 1] != _ &&
                 ((_.opt_len += (_ - _[2 * _ + 1]) * _[2 * _]),
@@ -4206,7 +4217,7 @@
     }
     bi_reverse(_, _) {
       let _ = 0;
-      do (_ |= 1 & _), (_ >>>= 1), (_ <<= 1);
+      do ((_ |= 1 & _), (_ >>>= 1), (_ <<= 1));
       while (--_ > 0);
       return _ >>> 1;
     }
@@ -4231,16 +4242,16 @@
         _[2 * _] === 0
           ? (_[2 * _ + 1] = 0)
           : ((_.heap[++_.heap_len] = _ = _), (_.depth[_] = 0));
-      for (; _.heap_len < 2; )
-        (_[2 * (_ = _.heap[++_.heap_len] = _ < 2 ? ++_ : 0)] = 1),
+      for (; _.heap_len < 2;)
+        ((_[2 * (_ = _.heap[++_.heap_len] = _ < 2 ? ++_ : 0)] = 1),
           (_.depth[_] = 0),
           _.opt_len--,
-          _ && (_.static_len -= _[2 * _ + 1]);
+          _ && (_.static_len -= _[2 * _ + 1]));
       for (this.max_code = _, _ = Math.floor(_.heap_len / 2); _ >= 1; _--)
         _.pqdownheap(_, _);
       _ = _;
       do
-        (_ = _.heap[1]),
+        ((_ = _.heap[1]),
           (_.heap[1] = _.heap[_.heap_len--]),
           _.pqdownheap(_, 1),
           (_ = _.heap[1]),
@@ -4250,17 +4261,17 @@
           (_.depth[_] = Math.max(_.depth[_], _.depth[_]) + 1),
           (_[2 * _ + 1] = _[2 * _ + 1] = _),
           (_.heap[1] = _++),
-          _.pqdownheap(_, 1);
+          _.pqdownheap(_, 1));
       while (_.heap_len >= 2);
-      (_.heap[--_.heap_max] = _.heap[1]),
+      ((_.heap[--_.heap_max] = _.heap[1]),
         this.gen_bitlen(_),
-        this.gen_codes(_, this.max_code, _.bl_count);
+        this.gen_codes(_, this.max_code, _.bl_count));
     }
     static d_code(_) {
       return _ < 256 ? _dist_code[_] : _dist_code[256 + (_ >>> 7)];
     }
   }
-  (Tree._length_code = [
+  ((Tree._length_code = [
     0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13,
     13, 13, 14, 14, 14, 14, 15, 15, 15, 15, 16, 16, 16, 16, 16, 16, 16, 16, 17,
     17, 17, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 19, 19, 19, 19,
@@ -4297,17 +4308,17 @@
     ]),
     (Tree.bl_order = [
       16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15,
-    ]);
+    ]));
   class StaticTree {
     constructor(_, _, _, _, _) {
-      (this.static_tree = _),
+      ((this.static_tree = _),
         (this.extra_bits = _),
         (this.extra_base = _),
         (this.elems = _),
-        (this.max_length = _);
+        (this.max_length = _));
     }
   }
-  (StaticTree.static_ltree = new Uint16Array([
+  ((StaticTree.static_ltree = new Uint16Array([
     12, 8, 140, 8, 76, 8, 204, 8, 44, 8, 172, 8, 108, 8, 236, 8, 28, 8, 156, 8,
     92, 8, 220, 8, 60, 8, 188, 8, 124, 8, 252, 8, 2, 8, 130, 8, 66, 8, 194, 8,
     34, 8, 162, 8, 98, 8, 226, 8, 18, 8, 146, 8, 82, 8, 210, 8, 50, 8, 178, 8,
@@ -4363,7 +4374,7 @@
       0,
       BL_CODES,
       MAX_BL_BITS,
-    ));
+    )));
   const makeConfig = (_, _, _, _, _) => ({
       good_length: _,
       max_lazy: _,
@@ -4447,25 +4458,25 @@
         _ < 0 || _ > 9 || _ < 0 || _ > 2)
       )
         throw RangeError(`level or strategy is out of range`);
-      (this.strm = _),
+      ((this.strm = _),
         (this.level = _),
         (this.strategy = _),
         (_.msg = ``),
         (_.total_in = _.total_out = 0),
-        this.init_block();
+        this.init_block());
       for (let _ = 0; _ < hash_size; ++_) this.head[_] = 0;
-      (this.max_lazy_match = config_table[_].max_lazy),
+      ((this.max_lazy_match = config_table[_].max_lazy),
         (this.good_match = config_table[_].good_length),
         (this.nice_match = config_table[_].nice_length),
-        (this.max_chain_length = config_table[_].max_chain);
+        (this.max_chain_length = config_table[_].max_chain));
     }
     init_block() {
       for (let _ = 0; _ < L_CODES; _++) this.dyn_ltree[2 * _] = 0;
       for (let _ = 0; _ < D_CODES; _++) this.dyn_dtree[2 * _] = 0;
       for (let _ = 0; _ < BL_CODES; _++) this.bl_tree[2 * _] = 0;
-      (this.dyn_ltree[2 * END_BLOCK] = 1),
+      ((this.dyn_ltree[2 * END_BLOCK] = 1),
         (this.opt_len = this.static_len = 0),
-        (this.last_lit = this.matches = 0);
+        (this.last_lit = this.matches = 0));
     }
     pqdownheap(_, _) {
       let _ = this.heap,
@@ -4477,7 +4488,7 @@
         (_ < this.heap_len && smaller(_, _[_ + 1], _[_], this.depth) && _++,
         !smaller(_, _, _[_], this.depth));
       )
-        (_[_] = _[_]), (_ = _), (_ <<= 1);
+        ((_[_] = _[_]), (_ = _), (_ <<= 1));
       _[_] = _;
     }
     scan_tree(_, _) {
@@ -4487,9 +4498,9 @@
         _ = 0,
         _ = 7,
         _ = 4;
-      _ === 0 && ((_ = 138), (_ = 3)), (_[2 * (_ + 1) + 1] = 65535);
+      (_ === 0 && ((_ = 138), (_ = 3)), (_[2 * (_ + 1) + 1] = 65535));
       for (let _ = 0; _ <= _; _++)
-        (_ = _),
+        ((_ = _),
           (_ = _[2 * (_ + 1) + 1]),
           (++_ < _ && _ == _) ||
             (_ < _
@@ -4506,7 +4517,7 @@
               ? ((_ = 138), (_ = 3))
               : _ == _
                 ? ((_ = 6), (_ = 3))
-                : ((_ = 7), (_ = 4)));
+                : ((_ = 7), (_ = 4))));
     }
     build_bl_tree() {
       let _;
@@ -4518,23 +4529,23 @@
         _ >= 3 && this.bl_tree[2 * Tree.bl_order[_] + 1] === 0;
         _--
       );
-      return (this.opt_len += 3 * (_ + 1) + 5 + 5 + 4), _;
+      return ((this.opt_len += 3 * (_ + 1) + 5 + 5 + 4), _);
     }
     put_short(_) {
-      (this.pending_buf[this.pending++] = 255 & _),
-        (this.pending_buf[this.pending++] = (_ >>> 8) & 255);
+      ((this.pending_buf[this.pending++] = 255 & _),
+        (this.pending_buf[this.pending++] = (_ >>> 8) & 255));
     }
     send_bits(_, _) {
       if (this.bi_valid > 16 - _) {
         this.bi_buf |= (_ << this.bi_valid) & 65535;
         let _ = this.pending;
-        (this.pending_buf[_] = this.bi_buf),
+        ((this.pending_buf[_] = this.bi_buf),
           (this.pending_buf[_ + 1] = this.bi_buf >>> 8),
           (this.pending = _ + 2),
           (this.bi_buf = _ >>> (16 - this.bi_valid)),
-          (this.bi_valid += _ - 16);
+          (this.bi_valid += _ - 16));
       } else
-        (this.bi_buf |= (_ << this.bi_valid) & 65535), (this.bi_valid += _);
+        ((this.bi_buf |= (_ << this.bi_valid) & 65535), (this.bi_valid += _));
     }
     send_code(_, _) {
       let _ = 2 * _;
@@ -4563,23 +4574,23 @@
               : (_ != _ && (this.send_code(_, this.bl_tree), _--),
                 this.send_code(REP_3_6, this.bl_tree),
                 this.send_bits(_ - 3, 2));
-          (_ = 0),
+          ((_ = 0),
             (_ = _),
             _ === 0
               ? ((_ = 138), (_ = 3))
               : _ == _
                 ? ((_ = 6), (_ = 3))
-                : ((_ = 7), (_ = 4));
+                : ((_ = 7), (_ = 4)));
         }
     }
     send_all_trees(_, _, _) {
-      this.send_bits(_ - 257, 5),
+      (this.send_bits(_ - 257, 5),
         this.send_bits(_ - 1, 5),
-        this.send_bits(_ - 4, 4);
+        this.send_bits(_ - 4, 4));
       for (let _ = 0; _ < _; _++)
         this.send_bits(this.bl_tree[2 * Tree.bl_order[_] + 1], 3);
-      this.send_tree(this.dyn_ltree, _ - 1),
-        this.send_tree(this.dyn_dtree, _ - 1);
+      (this.send_tree(this.dyn_ltree, _ - 1),
+        this.send_tree(this.dyn_dtree, _ - 1));
     }
     bi_flush() {
       this.bi_valid === 16
@@ -4590,14 +4601,14 @@
           (this.bi_valid -= 8));
     }
     _tr_align() {
-      this.send_bits(STATIC_TREES << 1, 3),
+      (this.send_bits(STATIC_TREES << 1, 3),
         this.send_code(END_BLOCK, StaticTree.static_ltree),
         this.bi_flush(),
         1 + this.last_eob_len + 10 - this.bi_valid < 9 &&
           (this.send_bits(STATIC_TREES << 1, 3),
           this.send_code(END_BLOCK, StaticTree.static_ltree),
           this.bi_flush()),
-        (this.last_eob_len = 7);
+        (this.last_eob_len = 7));
     }
     _tr_tally(_, _) {
       if (
@@ -4638,38 +4649,40 @@
             let _ = Tree._length_code[_];
             this.send_code(_ + LITERALS + 1, _);
             let _ = Tree.extra_lbits[_];
-            _ !== 0 && ((_ -= Tree.base_length[_]), this.send_bits(_, _)),
+            (_ !== 0 && ((_ -= Tree.base_length[_]), this.send_bits(_, _)),
               _--,
               (_ = Tree.d_code(_)),
               this.send_code(_, _),
               (_ = Tree.extra_dbits[_]),
-              _ !== 0 && ((_ -= Tree.base_dist[_]), this.send_bits(_, _));
+              _ !== 0 && ((_ -= Tree.base_dist[_]), this.send_bits(_, _)));
           }
         } while (_ < this.last_lit);
-      this.send_code(END_BLOCK, _), (this.last_eob_len = _[2 * END_BLOCK + 1]);
+      (this.send_code(END_BLOCK, _),
+        (this.last_eob_len = _[2 * END_BLOCK + 1]));
     }
     bi_windup() {
-      this.bi_valid > 8
+      (this.bi_valid > 8
         ? this.put_short(this.bi_buf)
         : this.bi_valid > 0 && (this.pending_buf[this.pending++] = this.bi_buf),
         (this.bi_buf = 0),
-        (this.bi_valid = 0);
+        (this.bi_valid = 0));
     }
     copy_block(_, _, _) {
-      this.bi_windup(),
+      (this.bi_windup(),
         (this.last_eob_len = 8),
         _ && (this.put_short(_), this.put_short(~_)),
         this.pending_buf.set(this.window.subarray(_, _ + _), this.pending),
-        (this.pending += _);
+        (this.pending += _));
     }
     _tr_stored_block(_, _, _) {
-      this.send_bits((STORED_BLOCK << 1) + +!!_, 3), this.copy_block(_, _, !0);
+      (this.send_bits((STORED_BLOCK << 1) + +!!_, 3),
+        this.copy_block(_, _, !0));
     }
     _tr_flush_block(_, _, _) {
       let _,
         _,
         _ = 0;
-      this.level > 0
+      (this.level > 0
         ? (this.l_desc.build_tree(this),
           this.d_desc.build_tree(this),
           (_ = this.build_bl_tree()),
@@ -4693,16 +4706,16 @@
               ),
               this.compress_block(this.dyn_ltree, this.dyn_dtree)),
         this.init_block(),
-        _ && this.bi_windup();
+        _ && this.bi_windup());
     }
     flush_block_only(_) {
-      this._tr_flush_block(
+      (this._tr_flush_block(
         this.block_start >= 0 ? this.block_start : -1,
         this.strstart - this.block_start,
         _,
       ),
         (this.block_start = this.strstart),
-        this.strm.flush_pending(this);
+        this.strm.flush_pending(this));
     }
     fill_window() {
       do {
@@ -4710,17 +4723,17 @@
         if (_ === 0 && this.strstart === 0 && this.lookahead === 0) _ = 32768;
         else if (_ === -1) _--;
         else if (this.strstart >= 65536 - MIN_LOOKAHEAD) {
-          this.window.set(this.window.subarray(32768, 65536), 0),
+          (this.window.set(this.window.subarray(32768, 65536), 0),
             (this.match_start -= 32768),
             (this.strstart -= 32768),
-            (this.block_start -= 32768);
+            (this.block_start -= 32768));
           let _ = hash_size,
             _ = _;
           do {
             let _ = 65535 & this.head[--_];
             this.head[_] = _ >= 32768 ? _ - 32768 : 0;
           } while (--_ != 0);
-          (_ = 32768), (_ = _);
+          ((_ = 32768), (_ = _));
           do {
             let _ = 65535 & this.prev[--_];
             this.prev[_] = _ >= 32768 ? _ - 32768 : 0;
@@ -4733,23 +4746,23 @@
           this.strstart + this.lookahead,
           _,
         );
-        (this.lookahead += _),
+        ((this.lookahead += _),
           this.lookahead >= MIN_MATCH &&
             ((this.ins_h = 255 & this.window[this.strstart]),
             (this.ins_h =
               ((this.ins_h << hash_shift) ^
                 (255 & this.window[this.strstart + 1])) &
-              hash_mask));
+              hash_mask)));
       } while (this.lookahead < MIN_LOOKAHEAD && this.strm.avail_in !== 0);
     }
     deflate_stored(_) {
       let _ = 65535;
-      for (_ > pending_buf_size - 5 && (_ = pending_buf_size - 5); ; ) {
+      for (_ > pending_buf_size - 5 && (_ = pending_buf_size - 5); ;) {
         if (this.lookahead <= 1) {
           if ((this.fill_window(), this.lookahead === 0 && _ === 0)) return 0;
           if (this.lookahead === 0) break;
         }
-        (this.strstart += this.lookahead), (this.lookahead = 0);
+        ((this.strstart += this.lookahead), (this.lookahead = 0));
         let _ = this.block_start + _;
         if (
           ((this.strstart === 0 || this.strstart >= _) &&
@@ -4782,8 +4795,8 @@
         _ = _[_ + _],
         _ = _[_],
         _ = _[_ + 1];
-      this.prev_length >= this.good_match && (_ >>= 2),
-        _ > this.lookahead && (_ = this.lookahead);
+      (this.prev_length >= this.good_match && (_ >>= 2),
+        _ > this.lookahead && (_ = this.lookahead));
       do {
         let _ = _,
           _ = !0;
@@ -4796,23 +4809,23 @@
         }
         if (!_) break;
         if (_[_] !== _ || _[_ + 1] !== _) continue;
-        (_ += 2), (_ += 2);
+        ((_ += 2), (_ += 2));
         do {
           let _ =
             ((_[_] << 24) | (_[_ + 1] << 16) | (_[_ + 2] << 8) | _[_ + 3]) ^
             ((_[_] << 24) | (_[_ + 1] << 16) | (_[_ + 2] << 8) | _[_ + 3]);
           if (_) {
             let _ = Math.clz32(_) >> 3;
-            (_ += _), (_ += _);
+            ((_ += _), (_ += _));
             break;
           }
-          (_ += 4), (_ += 4);
+          ((_ += 4), (_ += 4));
         } while (_ < _);
         _ > _ && (_ = _);
         let _ = MAX_MATCH - (_ - _);
         if (((_ = _ - MAX_MATCH), _ > _)) {
           if (((this.match_start = _), (_ = _), _ >= _)) break;
-          (_ = _[_ + _ - 1]), (_ = _[_ + _]);
+          ((_ = _[_ + _ - 1]), (_ = _[_ + _]));
         }
       } while ((_ = this.prev[32767 & _]) > _ && --_ != 0);
       return _ <= this.lookahead ? _ : this.lookahead;
@@ -4852,28 +4865,28 @@
           ) {
             this.match_length--;
             do
-              this.strstart++,
+              (this.strstart++,
                 (this.ins_h =
                   ((this.ins_h << hash_shift) ^
                     (255 & this.window[this.strstart + (MIN_MATCH - 1)])) &
                   hash_mask),
                 (_ = 65535 & this.head[this.ins_h]),
                 (this.prev[32767 & this.strstart] = this.head[this.ins_h]),
-                (this.head[this.ins_h] = this.strstart);
+                (this.head[this.ins_h] = this.strstart));
             while (--this.match_length != 0);
             this.strstart++;
           } else
-            (this.strstart += this.match_length),
+            ((this.strstart += this.match_length),
               (this.match_length = 0),
               (this.ins_h = 255 & this.window[this.strstart]),
               (this.ins_h =
                 ((this.ins_h << hash_shift) ^
                   (255 & this.window[this.strstart + 1])) &
-                hash_mask);
+                hash_mask));
         } else
-          (_ = this._tr_tally(0, 255 & this.window[this.strstart])),
+          ((_ = this._tr_tally(0, 255 & this.window[this.strstart])),
             this.lookahead--,
-            this.strstart++;
+            this.strstart++);
         if (_ && (this.flush_block_only(!1), this.strm.avail_out === 0))
           return 0;
       }
@@ -4917,13 +4930,13 @@
           this.prev_length >= MIN_MATCH &&
             this.match_length <= this.prev_length)
         ) {
-          (_ = this.strstart + this.lookahead - MIN_MATCH),
+          ((_ = this.strstart + this.lookahead - MIN_MATCH),
             (_ = this._tr_tally(
               this.strstart - 1 - _,
               this.prev_length - MIN_MATCH,
             )),
             (this.lookahead -= this.prev_length - 1),
-            (this.prev_length -= 2);
+            (this.prev_length -= 2));
           do
             ++this.strstart <= _ &&
               ((this.ins_h =
@@ -4950,7 +4963,7 @@
             this.strm.avail_out === 0)
           )
             return 0;
-        } else (this.match_available = !0), this.strstart++, this.lookahead--;
+        } else ((this.match_available = !0), this.strstart++, this.lookahead--);
       }
       return (
         (this.match_available &&=
@@ -4978,12 +4991,12 @@
         _ <= _ - MIN_MATCH;
         _++
       )
-        (this.ins_h =
+        ((this.ins_h =
           ((this.ins_h << hash_shift) ^
             (255 & this.window[_ + (MIN_MATCH - 1)])) &
           hash_mask),
           (this.prev[32767 & _] = this.head[this.ins_h]),
-          (this.head[this.ins_h] = _);
+          (this.head[this.ins_h] = _));
       return 0;
     }
     deflate(_) {
@@ -5003,7 +5016,7 @@
         this.pending !== 0)
       ) {
         if ((_.flush_pending(this), _.avail_out === 0))
-          return (this.last_flush = -1), 0;
+          return ((this.last_flush = -1), 0);
       } else if (_.avail_in === 0 && _ <= _ && _ !== 4) return -5;
       if (this.status === 3 && _.avail_in !== 0) return -5;
       if (
@@ -5023,13 +5036,13 @@
             _ = this.deflate_slow(_);
         }
         if (((_ != 2 && _ !== 3) || (this.status = 3), _ === 0 || _ === 2))
-          return _.avail_out === 0 && (this.last_flush = -1), 0;
+          return (_.avail_out === 0 && (this.last_flush = -1), 0);
         if (_ === 1) {
           if (_ === 1) this._tr_align();
           else if ((this._tr_stored_block(0, 0, !1), _ === 3))
             for (let _ = 0; _ < hash_size; _++) this.head[_] = 0;
           if ((_.flush_pending(this), _.avail_out === 0))
-            return (this.last_flush = -1), 0;
+            return ((this.last_flush = -1), 0);
         }
       }
       return +(_ === 4);
@@ -5038,7 +5051,7 @@
   class Deflater {
     constructor(_) {
       var _, _;
-      (this.checksum = 1), (this.origSize = 0), (this.dictChecksum = 0);
+      ((this.checksum = 1), (this.origSize = 0), (this.dictChecksum = 0));
       let _ = _?.level ?? 6,
         _ = _?.format ?? `deflate`,
         _ = _?.dictionary,
@@ -5062,9 +5075,10 @@
         let _ = u8ArrayFromBufferSource(_);
         if (!_)
           throw TypeError(`dictionary must be an ArrayBuffer or buffer view`);
-        (this.dictChecksum = adler32(_)), this.deflate.deflateSetDictionary(_);
+        ((this.dictChecksum = adler32(_)),
+          this.deflate.deflateSetDictionary(_));
       }
-      (this.format = _), this.format === `gzip` && (this.checksum = 0);
+      ((this.format = _), this.format === `gzip` && (this.checksum = 0));
     }
     buildZlibHeader() {
       let _ = 2,
@@ -5090,12 +5104,12 @@
         _.push(0));
       let _ = new ArrayBuffer(10 + _.length),
         _ = new DataView(_);
-      _.setUint16(0, (GZIP_ID1 << 8) | GZIP_ID2),
-        _.setUint16(2, (Z_DEFLATED << 8) | _);
+      (_.setUint16(0, (GZIP_ID1 << 8) | GZIP_ID2),
+        _.setUint16(2, (Z_DEFLATED << 8) | _));
       let _ = Math.floor(Date.now() / 1e3);
-      _.setUint32(4, _, !0), _.setUint16(8, 255);
+      (_.setUint32(4, _, !0), _.setUint16(8, 255));
       let _ = new Uint8Array(_);
-      return _.length && _.set(_, 10), _;
+      return (_.length && _.set(_, 10), _);
     }
     buildTrailer() {
       let _ = this.format === `gzip`,
@@ -5113,19 +5127,19 @@
       if (!(_ instanceof Uint8Array))
         throw TypeError(`data must be an ArrayBuffer or buffer view`);
       if (!_.length) return _;
-      (this.checksum =
+      ((this.checksum =
         this.format === `gzip`
           ? crc32(_, this.checksum)
           : adler32(_, this.checksum)),
-        (this.origSize += _.length);
+        (this.origSize += _.length));
       let { deflate: _, _: _ } = this;
-      (_.next_in_index = 0),
+      ((_.next_in_index = 0),
         (_.next_in = _),
         (_.avail_in = _.length),
         _.status === 1 &&
           (this.format === `deflate`
             ? _.push(this.buildZlibHeader())
-            : this.format === `gzip` && _.push(this.buildGZipHeader()));
+            : this.format === `gzip` && _.push(this.buildGZipHeader())));
       do {
         if (
           ((_.next_out_index = 0),
@@ -5144,13 +5158,13 @@
       if (_.status === 1)
         throw Error(`Cannot call finish before at least 1 call to append`);
       do {
-        (_.next_out_index = 0), (_.avail_out = OUTPUT_BUFSIZE);
+        ((_.next_out_index = 0), (_.avail_out = OUTPUT_BUFSIZE));
         let _ = _.deflate(4);
         if (_ !== 1 && _ !== 0) throw Error(`deflating: ` + _.msg);
         OUTPUT_BUFSIZE - _.avail_out > 0 &&
           _.push(new Uint8Array(_.next_out.subarray(0, _.next_out_index)));
       } while (_.avail_in > 0 || _.avail_out === 0);
-      return this.format !== `raw` && _.push(this.buildTrailer()), _;
+      return (this.format !== `raw` && _.push(this.buildTrailer()), _);
     }
   }
   const decContext = Symbol(`decContext`),
@@ -5181,10 +5195,10 @@
     constructor(_) {
       if (_ !== `deflate` && _ !== `gzip`)
         throw TypeError("format must be one of `deflate`, `gzip`");
-      (this[decContext] = new Inflater()),
+      ((this[decContext] = new Inflater()),
         (this[decTransform$1] = new TransformStream(
           new DecompressionTransformer(this[decContext]),
-        ));
+        )));
     }
     get readable() {
       return this[decTransform$1].readable;
@@ -5214,12 +5228,12 @@
     constructor(_) {
       if (_ !== `deflate` && _ !== `gzip`)
         throw TypeError("format must be one of `deflate`, `gzip`");
-      (this[comContext] = new Deflater({
+      ((this[comContext] = new Deflater({
         format: _,
       })),
         (this[comTransform] = new TransformStream(
           new CompressionTransformer(this[comContext]),
-        ));
+        )));
     }
     get readable() {
       return this[comTransform].readable;
@@ -5242,7 +5256,7 @@
   function getGlobalValue(_) {
     let _ = getGlobal(),
       _;
-    return _ !== void 0 && (_ = _[_]), _;
+    return (_ !== void 0 && (_ = _[_]), _);
   }
   function getGlobalOrContextualValue(name) {
     const global = getGlobal();
@@ -5282,7 +5296,7 @@
     if (_ && _) {
       let _ = createAdaptedFetch(_, _, _, SDReadableStream, readableStreamTee),
         _ = createAdaptedResponse(_, _, SDReadableStream, readableStreamTee);
-      (_.fetch = _), (_.Response = _);
+      ((_.fetch = _), (_.Response = _));
     }
     return (
       (_.ReadableStream = SDReadableStream),
@@ -5311,5 +5325,5 @@
       (_.DecompressionStream = DecompressionStream);
   }
   const overwritten = installStardazedStreams();
-  installEncodingStreams(overwritten), installCompressionStreams(overwritten);
+  (installEncodingStreams(overwritten), installCompressionStreams(overwritten));
 })();

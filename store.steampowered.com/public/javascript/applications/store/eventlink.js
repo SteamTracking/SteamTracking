@@ -77,7 +77,7 @@ function C(e, t) {
     case `hardwarepreview`:
       return !1;
     default:
-      return g(!1, `Unknown route specified for link: ` + e), !1;
+      return (g(!1, `Unknown route specified for link: ` + e), !1);
   }
 }
 function w(e) {
@@ -210,7 +210,7 @@ function M(e, t, n, r) {
     case `usernewshub`:
       return `${c}${O()}/`;
     default:
-      return g(!1, `Unknown route specified for link`), ``;
+      return (g(!1, `Unknown route specified for link`), ``);
   }
 }
 function N(e, t, n) {

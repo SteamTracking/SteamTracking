@@ -859,9 +859,9 @@ function _(_) {
   return (0, _.jsxs)(_, {
     className: _(_, _),
     onClick: async (_) => {
-      _.preventDefault(),
+      (_.preventDefault(),
         _.stopPropagation(),
-        _.logged_in ? (_(!0), await _(), _.token.reason || _(!1)) : _();
+        _.logged_in ? (_(!0), await _(), _.token.reason || _(!1)) : _());
     },
     style: _,
     children: [
@@ -1144,7 +1144,7 @@ async function _(_, _, _, _, _) {
       )),
       _?.length > 0)
     ) {
-      (_ += _.length), _(_), (_ = _[_.length - 1].GID);
+      ((_ += _.length), _(_), (_ = _[_.length - 1].GID));
       let _ = _.filter((_) => _.startTime <= _ && _.BIsVisibleEvent()).map(
         (_) => _.GID,
       );
@@ -1424,7 +1424,7 @@ function _(_, _, _, _) {
   if (_) {
     let _ = _.GetEventModel();
     for (let _ = 0; _ < 32; ++_)
-      (_.BHasLanguageTitle(_) || _ == 0) &&
+      ((_.BHasLanguageTitle(_) || _ == 0) &&
         _.SetLocalization(`title`, _, _.GetName(_)),
         (_.BHasSubTitle(_) || _ == 0) &&
           _.SetLocalization(`subtitle`, _, _.GetSubTitle(_)),
@@ -1434,7 +1434,7 @@ function _(_, _, _, _) {
           _.SetLocalization(`summary`, _, _.GetSummary(_)),
         _.GetEventModel().jsondata.meet_steam_groups &&
           _.GetEventModel().jsondata.meet_steam_groups.forEach((_) => {
-            _.localized_session_title &&
+            (_.localized_session_title &&
               _.Get(_.localized_session_title, _) &&
               _.SetLocalization(
                 _ + _.group_id,
@@ -1461,7 +1461,7 @@ function _(_, _, _, _) {
                   _ + _.group_id,
                   _,
                   _.Get(_.localized_sesssion_faq, _),
-                );
+                ));
           }),
         _.GetEventModel().jsondata.meet_steam_schedules &&
           _.GetEventModel().jsondata.meet_steam_schedules.forEach((_) => {
@@ -1474,7 +1474,7 @@ function _(_, _, _, _) {
                   _.Get(_.localized_break_description, _),
                 );
             });
-          });
+          }));
   }
   if (_ && _.BHasEmailEnabled()) {
     let _ = _.GetEmailSettings();
@@ -1487,9 +1487,9 @@ function _(_, _, _, _) {
     _.sections.forEach((_, _) => {
       let _ = new _(_);
       for (let _ = 0; _ < 32; ++_)
-        _.BHasHeadlineInLanguage(_) &&
+        (_.BHasHeadlineInLanguage(_) &&
           _.SetLocalization(_ + _, _, _.GetHeadline(_)),
-          _.BHasBodyInLanguage(_) && _.SetLocalization(_ + _, _, _.GetBody(_));
+          _.BHasBodyInLanguage(_) && _.SetLocalization(_ + _, _, _.GetBody(_)));
     });
   }
   let _ = _.GetEventModel().jsondata;
@@ -1505,7 +1505,7 @@ function _(_, _, _, _) {
       _.user_polls?.length > 0 &&
       _.user_polls.forEach((_) => {
         for (let _ = 0; _ < 32; ++_)
-          _.localized_poll_description &&
+          (_.localized_poll_description &&
             _.Get(_.localized_poll_description, _) &&
             _.SetLocalization(
               _ + _.poll_id,
@@ -1516,7 +1516,7 @@ function _(_, _, _, _) {
               _.localized_option &&
                 _.Get(_.localized_option, _) &&
                 _.SetLocalization(_ + _.option_id, _, _.localized_option[_]);
-            });
+            }));
       }),
     _ && _.BHasSaleEnabled())
   ) {
@@ -1528,7 +1528,7 @@ function _(_, _, _, _) {
             _.SetLocalization(_ + _.unique_id, _, _);
           }
         });
-    _.sale_sub_menu?.menu_items?.length > 0 &&
+    (_.sale_sub_menu?.menu_items?.length > 0 &&
       _.sale_sub_menu.menu_items
         .filter((_) => _.localized_sub_menu_name?.length > 0)
         .map((_) => {
@@ -1568,7 +1568,7 @@ function _(_, _, _, _) {
               _.section_type === `tabs` && _.tabs)
             )
               for (let _ of _.tabs)
-                _.BHasSaleSectionTabName(_, _) &&
+                (_.BHasSaleSectionTabName(_, _) &&
                   _.SetLocalization(
                     _ + _.unique_id + `_` + _.unique_id,
                     _,
@@ -1589,7 +1589,7 @@ function _(_, _, _, _) {
                               _.localized_sub_menu_name[_],
                             );
                       }),
-                  _(_, _, _ + _.unique_id + `_`, _.tab_tag_filter?.rgNodes);
+                  _(_, _, _ + _.unique_id + `_`, _.tab_tag_filter?.rgNodes));
             if (
               (_.enable_faceted_browsing &&
                 (_.facets.forEach((_) => {
@@ -1602,7 +1602,7 @@ function _(_, _, _, _) {
                 }),
                 _.facets.forEach((_) => {
                   _.facetValues.forEach((_) => {
-                    _.BHasSaleSectionFacetValueName(_, _) &&
+                    (_.BHasSaleSectionFacetValueName(_, _) &&
                       _.SetLocalization(
                         _ + _.unique_id + `_` + _.unique_id + `_` + _.unique_id,
                         _,
@@ -1618,7 +1618,7 @@ function _(_, _, _, _) {
                             _.unique_id,
                           _,
                           _.subtitle[_],
-                        );
+                        ));
                   });
                 })),
               _.section_type == `vo_internal` &&
@@ -1627,7 +1627,7 @@ function _(_, _, _, _) {
                 (_.internal_section_data.reservation_options?.length > 0 ||
                   _.internal_section_data.reservation_layout) &&
                 (_.internal_section_data.reservation_options?.forEach((_) => {
-                  _.localized_reservation_desc &&
+                  (_.localized_reservation_desc &&
                     _.Get(_.localized_reservation_desc, _) &&
                     _.SetLocalization(
                       _ + _.unique_id + `_` + _.unique_id,
@@ -1655,11 +1655,11 @@ function _(_, _, _, _) {
                         _ + _.unique_id + `_` + _.unique_id,
                         _,
                         _.localized_delivery_override_desc[_],
-                      );
+                      ));
                 }),
                 _.internal_section_data.reservation_layout?.product_configs?.forEach(
                   (_) => {
-                    _.localized_product_config_title &&
+                    (_.localized_product_config_title &&
                       _.Get(_.localized_product_config_title, _) &&
                       _.SetLocalization(
                         _ + _.unique_id + `_` + _.unique_id,
@@ -1679,7 +1679,7 @@ function _(_, _, _, _) {
                             _,
                             _.localized_variation_name[_],
                           );
-                      });
+                      }));
                   },
                 )),
               _.section_type == `vo_internal` &&
@@ -1701,7 +1701,7 @@ function _(_, _, _, _) {
               (_.section_type == `quiz` || _.section_type == `template_faq`) &&
                 _.quiz?.questions?.length > 0 &&
                 _.quiz?.questions.forEach((_) => {
-                  _.localized_question &&
+                  (_.localized_question &&
                     _.Get(_.localized_question, _) &&
                     _.SetLocalization(
                       _ + _.unique_id + `_` + _.unique_id,
@@ -1717,12 +1717,12 @@ function _(_, _, _, _) {
                             _,
                             _.localized_answer[_],
                           );
-                      });
+                      }));
                 }),
               _.section_type == `template_techspec` &&
                 _.tech_specs?.tech_spec_block_list?.length > 0 &&
                 _.tech_specs?.tech_spec_block_list.forEach((_) => {
-                  _.localized_block_title &&
+                  (_.localized_block_title &&
                     _.Get(_.localized_block_title, _) &&
                     _.SetLocalization(
                       _ + _.unique_id + `_` + _.unique_id,
@@ -1752,12 +1752,12 @@ function _(_, _, _, _) {
                             ),
                           );
                         }
-                      });
+                      }));
                 }),
               _.section_type == `badge_progress` && _.badge_progress)
             ) {
               let _ = _.badge_progress;
-              _.localized_name &&
+              (_.localized_name &&
                 _.Get(_.localized_name, _) &&
                 _.SetLocalization(_ + _.unique_id, _, _.localized_name[_]),
                 _.localized_initial_description &&
@@ -1780,12 +1780,12 @@ function _(_, _, _, _) {
                     _ + _.unique_id,
                     _,
                     _.localized_maxtier_description[_],
-                  );
+                  ));
             }
-            _.section_type == `quest` &&
+            (_.section_type == `quest` &&
               _.quest?.door_info?.length > 0 &&
               _.quest.door_info.forEach((_) => {
-                _.localized_open_door_description &&
+                (_.localized_open_door_description &&
                   _.Get(_.localized_open_door_description, _) &&
                   _.SetLocalization(
                     _ + _.unique_id + `_` + _.unique_id,
@@ -1798,7 +1798,7 @@ function _(_, _, _, _) {
                       _ + _.unique_id + `_` + _.unique_id,
                       _,
                       _.localized_closed_door_description[_],
-                    );
+                    ));
               }),
               _.section_type == `rewards` &&
                 _.rewards?.reward_items?.length > 0 &&
@@ -1831,7 +1831,7 @@ function _(_, _, _, _) {
               _.section_type == `social_share` &&
                 _.social_share.content_options.forEach((_) => {
                   let _ = _.localized_option_fields;
-                  _.localized_header &&
+                  (_.localized_header &&
                     _.Get(_.localized_header, _) &&
                     _.SetLocalization(
                       _ + _.unique_id + `_` + _.unique_id,
@@ -1865,7 +1865,7 @@ function _(_, _, _, _) {
                         _ + _.unique_id + `_` + _.unique_id,
                         _,
                         _.twitter_alt_text[_],
-                      );
+                      ));
                 }),
               _.section_type == `media_layout` &&
                 _.media_layout.media_content.forEach((_, _) => {
@@ -1877,7 +1877,7 @@ function _(_, _, _, _) {
               _.section_type == `template_media_content` &&
                 _.media_container?.media_rows?.forEach((_, _) => {
                   _?.media_columns?.forEach((_) => {
-                    _(_, _, _.unique_id + `_` + _.unique_id, _),
+                    (_(_, _, _.unique_id + `_` + _.unique_id, _),
                       _.mobile_content_varient &&
                         _(
                           _,
@@ -1891,7 +1891,7 @@ function _(_, _, _, _) {
                           _,
                           _.unique_id + `_` + _.unique_id + `_tablet`,
                           _.tablet_content_varient,
-                        );
+                        ));
                   });
                 }),
               _.section_type == `template_media_overlay` &&
@@ -1910,15 +1910,15 @@ function _(_, _, _, _) {
                     _,
                     _.unique_id + `_overlay_tablet`,
                     _.media_overlay_tablet_content_varient,
-                  ));
+                  )));
           }
-        });
+        }));
   }
   return _;
 }
 function _(_, _, _, _) {
   let _ = _.localized_media_title;
-  _ && _.Get(_, _) && _.SetLocalization(_ + _, _, _[_]),
+  (_ && _.Get(_, _) && _.SetLocalization(_ + _, _, _[_]),
     (_ = _.localized_media_subtitle),
     _ && _.Get(_, _) && _.SetLocalization(_ + _, _, _[_]),
     (_ = _.localized_media_description),
@@ -1926,14 +1926,14 @@ function _(_, _, _, _) {
     (_ = _.localized_alt_text),
     _ && _.Get(_, _) && _.SetLocalization(_ + _, _, _[_]),
     (_ = _.title_media?.localized_alt_text),
-    _ && _.Get(_, _) && _.SetLocalization(_ + _, _, _[_]);
+    _ && _.Get(_, _) && _.SetLocalization(_ + _, _, _[_]));
 }
 function _(_, _, _, _) {
   for (let _ of _ ?? []) {
     let _ = _ + _(_);
-    _.Get(_.rgLocalizedNames, _) &&
+    (_.Get(_.rgLocalizedNames, _) &&
       _.SetLocalization(_, _, _.rgLocalizedNames[_]),
-      _(_, _, _ + `/`, _.rgChildren);
+      _(_, _, _ + `/`, _.rgChildren));
   }
 }
 function _(_, _, _) {
@@ -1943,7 +1943,7 @@ function _(_, _, _) {
     _(() => {
       _.forEach((_) => {
         let _ = !1;
-        _.forEach((_) => {
+        (_.forEach((_) => {
           let _ = _.GetLocalization(_, _) || ``;
           if (
             (_ === _ &&
@@ -2098,7 +2098,7 @@ function _(_, _, _) {
             }
             _.sections.forEach((_, _) => {
               let _ = new _(_, _);
-              _.BHasHeadline() &&
+              (_.BHasHeadline() &&
                 _ === _ + _ &&
                 (_ || _.BHasHeadlineInLanguage(_)) &&
                 _.SetHeadline(_, _) &&
@@ -2107,12 +2107,12 @@ function _(_, _, _) {
                   _ === _ + _ &&
                   (_ || _.BHasBodyInLanguage(_)) &&
                   _.SetBody(_, _) &&
-                  (_ = !0);
+                  (_ = !0));
             });
           }
           if (_.BHasSaleEnabled()) {
             let _ = _.GetEventModel().jsondata;
-            _?.sale_presenters?.length &&
+            (_?.sale_presenters?.length &&
               _.sale_presenters.forEach((_) => {
                 if (_ === _ + _.unique_id) {
                   (_ || _.Get(_.localized_presenter_name, _)) &&
@@ -2170,7 +2170,7 @@ function _(_, _, _) {
                     _.section_type === `tabs` && _.tabs)
                   )
                     for (let _ of _.tabs)
-                      _ === _ + _.unique_id + `_` + _.unique_id &&
+                      (_ === _ + _.unique_id + `_` + _.unique_id &&
                         (_ || _.BHasSaleSectionTabName(_, _)) &&
                         _.SetSaleSectionTabName(_, _, _) &&
                         (_ = !0),
@@ -2205,7 +2205,7 @@ function _(_, _, _) {
                           _,
                           _ + _.unique_id + `_`,
                           _.tab_tag_filter?.rgNodes,
-                        ) && (_ = !0);
+                        ) && (_ = !0));
                   if (
                     (_.BHasSaleSectionTextLocalization(_) &&
                       _ === _ + _.unique_id &&
@@ -2214,12 +2214,12 @@ function _(_, _, _) {
                       (_ = !0),
                     _.enable_faceted_browsing &&
                       _.facets.forEach((_) => {
-                        _ === _ + _.unique_id + `_` + _.unique_id &&
+                        (_ === _ + _.unique_id + `_` + _.unique_id &&
                           (_ || _.BHasSaleSectionFacetName(_, _)) &&
                           _.SetSaleSectionFacetName(_, _, _) &&
                           (_ = !0),
                           _.facetValues.forEach((_) => {
-                            _ ===
+                            (_ ===
                               _ +
                                 _.unique_id +
                                 `_` +
@@ -2239,8 +2239,8 @@ function _(_, _, _) {
                                 (_ ||
                                   _.BHasSaleSectionFacetValueSubtitle(_, _)) &&
                                 _.SetSaleSectionFacetValueSubtitle(_, _, _) &&
-                                (_ = !0);
-                          });
+                                (_ = !0));
+                          }));
                       }),
                     _.section_type == `vo_internal` &&
                       _.internal_section_data?.internal_type ==
@@ -2250,7 +2250,7 @@ function _(_, _, _) {
                         _.internal_section_data.reservation_layout) &&
                       (_.internal_section_data.reservation_options?.forEach(
                         (_) => {
-                          _ === _ + _.unique_id + `_` + _.unique_id &&
+                          (_ === _ + _.unique_id + `_` + _.unique_id &&
                             (_ ||
                               (_.localized_reservation_desc &&
                                 _.Get(_.localized_reservation_desc, _))) &&
@@ -2306,12 +2306,12 @@ function _(_, _, _) {
                                 _,
                               )),
                               _.SetDirty(_.jsondata_sales),
-                              (_ = !0));
+                              (_ = !0)));
                         },
                       ),
                       _.internal_section_data.reservation_layout?.product_configs?.forEach(
                         (_) => {
-                          _ === _ + _.unique_id + `_` + _.unique_id &&
+                          (_ === _ + _.unique_id + `_` + _.unique_id &&
                             (_ ||
                               (_.localized_product_config_title &&
                                 _.Get(_.localized_product_config_title, _))) &&
@@ -2342,7 +2342,7 @@ function _(_, _, _) {
                                 )),
                                 _.SetDirty(_.jsondata_sales),
                                 (_ = !0));
-                            });
+                            }));
                         },
                       )),
                     _.section_type == `vo_internal` &&
@@ -2521,7 +2521,7 @@ function _(_, _, _) {
                     _.section_type == `badge_progress` && _.badge_progress)
                   ) {
                     let _ = _.badge_progress;
-                    _ === _ + _.unique_id &&
+                    (_ === _ + _.unique_id &&
                       (_ || (_.localized_name && _.Get(_.localized_name, _))) &&
                       _.Get(_.localized_name, _) !== _ &&
                       ((_.localized_name = _.Set(_.localized_name || [], _, _)),
@@ -2562,7 +2562,7 @@ function _(_, _, _) {
                           _,
                         )),
                         _.SetDirty(_.jsondata_sales),
-                        (_ = !0));
+                        (_ = !0)));
                   }
                   if (
                     (_.section_type == `discoveryqueue` &&
@@ -2581,7 +2581,7 @@ function _(_, _, _) {
                     _.section_type == `social_share` &&
                       _.social_share.content_options?.forEach((_) => {
                         let _ = _.localized_option_fields;
-                        _ === _ + _.unique_id + `_` + _.unique_id &&
+                        (_ === _ + _.unique_id + `_` + _.unique_id &&
                           (_ ||
                             (_.localized_header &&
                               _.Get(_.localized_header, _))) &&
@@ -2622,7 +2622,7 @@ function _(_, _, _) {
                               _,
                             )),
                             _.SetDirty(_.jsondata_sales),
-                            (_ = !0));
+                            (_ = !0)));
                       }),
                     _.section_type == `media_layout` &&
                       _.media_layout.media_content?.forEach((_, _) => {
@@ -2645,7 +2645,7 @@ function _(_, _, _) {
                             _,
                             _,
                           );
-                          (_ ||= _),
+                          ((_ ||= _),
                             _.mobile_content_varient &&
                               ((_ = _(
                                 _,
@@ -2665,7 +2665,7 @@ function _(_, _, _) {
                                 _,
                                 _.tablet_content_varient,
                               )),
-                              (_ ||= _));
+                              (_ ||= _)));
                         });
                       }),
                     _.section_type == `template_media_overlay` &&
@@ -2702,10 +2702,10 @@ function _(_, _, _) {
                       _ ||= _;
                     }
                   }
-                });
+                }));
           }
         }),
-          _ && _.push(_);
+          _ && _.push(_));
       });
     }),
     _
@@ -2786,14 +2786,14 @@ var _ = (_) => {
           toolTipContent: _(`#EventEditor_Loc_Export_Desc0`),
           children: (0, _.jsx)(`a`, {
             onClick: (_) => {
-              _.preventDefault(),
+              (_.preventDefault(),
                 _(
                   (0, _.jsx)(_, {
                     editModel: _.editModel,
                     permissions: _,
                   }),
                   _(_),
-                );
+                ));
             },
             children: _(`#EventEditor_Loc_Export_Short`),
           }),
@@ -2816,7 +2816,7 @@ var _ = (_) => {
     GetLocalizationFilePrefix() {
       let { editModel: _ } = this.props,
         _ = _.GetName(0);
-      return (_ && _.trim() != ``) || (_ = `event`), _;
+      return ((_ && _.trim() != ``) || (_ = `event`), _);
     }
     GetLocalizationModel() {
       return _(
@@ -2970,9 +2970,9 @@ var _ = (_) => {
       });
     }
   };
-_([_], _.prototype, `GetLocalizationModel`, null),
+(_([_], _.prototype, `GetLocalizationModel`, null),
   _([_], _.prototype, `OnExportTypeChange`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = `YBWwi-HOl1E-`,
   _ = `uCIxyA-LA3Q-`,
   _ = `r0b7DWVF3e4-`,
@@ -3007,7 +3007,7 @@ function _(_) {
     : (0, _.jsx)(`div`, {
         className: _(_, _),
         onClick: (_) => {
-          _.stopPropagation(), _(_, _);
+          (_.stopPropagation(), _(_, _));
         },
         children: _(`#Button_Clone`),
       });
@@ -3057,7 +3057,7 @@ function _(_, _, _) {
     let _ = _.GetLanguagesWithTokens();
     _.ClearLanguagesTokens(_);
     let _ = _.jsondata.bSaleEnabled;
-    (_.jsondata.bSaleEnabled = !0), _(_, _, _), (_.jsondata.bSaleEnabled = _);
+    ((_.jsondata.bSaleEnabled = !0), _(_, _, _), (_.jsondata.bSaleEnabled = _));
   }
   _(`clone`);
 }
@@ -3084,7 +3084,7 @@ function _(_) {
               className: _,
               onChange: (_) => {
                 let _ = new Set(_);
-                _ ? _.delete(_) : _.add(_), _(_);
+                (_ ? _.delete(_) : _.add(_), _(_));
               },
               label: _(`#Language_` + _(_)),
               checked: !_.has(_),
@@ -3230,7 +3230,7 @@ var _ = (_) => {
       [_, _] = _.useState(void 0),
       [_, _, _] = _(_),
       _ = () => {
-        _(_?.build_id, _?.branch), _();
+        (_(_?.build_id, _?.branch), _());
       };
     if (_?.length && _ === void 0) {
       let _ = _.find((_) => _.branch == ``);
@@ -3294,7 +3294,7 @@ var _ = (_) => {
       [_, _] = _.useState(null),
       _ = _.useRef(!1),
       _ = _.useCallback((_) => {
-        (_.current = !1), _(_);
+        ((_.current = !1), _(_));
       }, []),
       _ = _.useCallback(
         (_) => {
@@ -3663,7 +3663,7 @@ function _(_) {
     _ = _(_.clanSteamID, !0),
     _ = _.useCallback(
       (_) => {
-        _.stopPropagation(),
+        (_.stopPropagation(),
           _.LoadEditorModel(_.clanSteamID, _.GID)
             .then(() => {
               _({
@@ -3676,7 +3676,7 @@ function _(_) {
                 kind: `error`,
                 strMessage: _.strErrorMsg,
               });
-            });
+            }));
       },
       [_],
     );
@@ -3722,7 +3722,7 @@ function _(_) {
     [_, _, _] = _(),
     _ = _.useCallback(
       (_) => {
-        _.stopPropagation(), _();
+        (_.stopPropagation(), _());
       },
       [_],
     );
@@ -3755,7 +3755,7 @@ function _(_, _) {
     Object.keys(_).forEach((_) => {
       let _ = _[_],
         _ = JSON.stringify(_)?.length || 0;
-      _.push({
+      (_.push({
         key: _,
         size: _,
       }),
@@ -3767,7 +3767,7 @@ function _(_, _) {
               key: _ + `:` + _.key,
               size: _.size,
             });
-          });
+          }));
     }),
     _
   );
@@ -3848,7 +3848,7 @@ var _ = (_) => {
           _(_ - (_ ?? []).length - (_ ?? []).length), Array.from(_.values())
         );
       }, [_, _?.pages, _, _]);
-    _.useEffect(() => {
+    (_.useEffect(() => {
       let _ = _.filter(
         (_) => !!(_ && _.BIsVisibleEvent() && _.BIsPartnerEvent()),
       ).map((_) => _.GID);
@@ -3864,12 +3864,12 @@ var _ = (_) => {
             window,
           );
         }
-      }, [_, _]);
+      }, [_, _]));
     let _ = (_, _) => {
         let _ = [],
           _ = _;
         if (_?.length > 0) {
-          (_ = _.slice().filter(
+          ((_ = _.slice().filter(
             (_) =>
               !(
                 _.visibility_state !== _ ||
@@ -3888,7 +3888,7 @@ var _ = (_) => {
                     ? 1
                     : _.startTime - _.startTime
               ),
-            );
+            ));
           for (let _ of _)
             _.push(
               (0, _.jsx)(
@@ -3899,7 +3899,7 @@ var _ = (_) => {
                   eventModel: _,
                   bShowEventMetaDataSizes: _,
                   refresh: () => {
-                    _(), _();
+                    (_(), _());
                   },
                 },
                 _.GID,
@@ -4531,9 +4531,9 @@ function _(_) {
         label: `Auto update vanity URL based on configured content hub`,
         checked: _,
         onChange: (_) => {
-          (_.jsondata.bAutoUpdateVanityURLForContentHub = _),
+          ((_.jsondata.bAutoUpdateVanityURLForContentHub = _),
             _ && _(_.GetContentHub(), _),
-            _.SetDirty(_.jsondata_sales);
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       (0, _.jsx)(_, {
@@ -4541,10 +4541,10 @@ function _(_) {
         tooltip: `If checked, this sale page will be used to render only a specific content hub. Check this if you are defining tabs/merchandising for some specific hub, or if you're defining a theme sale.`,
         checked: _,
         onChange: (_) => {
-          (_.jsondata.sale_defines_specific_contenthub = _ || void 0),
+          ((_.jsondata.sale_defines_specific_contenthub = _ || void 0),
             _.jsondata.bAutoUpdateVanityURLForContentHub &&
               _(_.GetContentHub(), _),
-            _.SetDirty(_.jsondata_sales);
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       _ &&
@@ -4556,10 +4556,10 @@ function _(_) {
         tooltip: `If checked, this sale page will be used when rendering content hubs only during the time period specified in the Options tab of the sale editor. Check this if you are defining a takeover for a seasonal sale, or if you're defining a theme sale.`,
         checked: _,
         onChange: (_) => {
-          (_.jsondata.sale_defines_temporary_contenthub = _ || void 0),
+          ((_.jsondata.sale_defines_temporary_contenthub = _ || void 0),
             _.jsondata.bAutoUpdateVanityURLForContentHub &&
               _(_.GetContentHub(), _),
-            _.SetDirty(_.jsondata_sales);
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       (0, _.jsx)(_, {
@@ -4572,8 +4572,8 @@ function _(_) {
         label: `Show discounted (and free-to-play) items only`,
         checked: _,
         onChange: (_) => {
-          (_.jsondata.content_hub_discounted_only = _),
-            _.SetDirty(_.jsondata_sales);
+          ((_.jsondata.content_hub_discounted_only = _),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       (0, _.jsx)(_, {
@@ -4581,9 +4581,9 @@ function _(_) {
         tooltip: `If checked, this hub will include opted-in games and exclude pruned out games from the selected opt-in event. Typically used when defining a theme sale.`,
         checked: _,
         onChange: (_) => {
-          _(_),
+          (_(_),
             _ || (_.jsondata.prune_list_optin_name = void 0),
-            _.SetDirty(_.jsondata_sales);
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       _ &&
@@ -4600,8 +4600,8 @@ function _(_) {
         label: `Show restricted-width title and main carousel`,
         checked: _,
         onChange: (_) => {
-          (_.jsondata.content_hub_restricted_width = _),
-            _.SetDirty(_.jsondata_sales);
+          ((_.jsondata.content_hub_restricted_width = _),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       (0, _.jsx)(_, {
@@ -4609,8 +4609,8 @@ function _(_) {
         tooltip: `If checked, use artwork (background, fonts, colors, etc.) from this sale page instead of the artwork defined in the sale page it inherits from.`,
         checked: _,
         onChange: (_) => {
-          (_.jsondata.contenthub_override_artwork = _),
-            _.SetDirty(_.jsondata_sales);
+          ((_.jsondata.contenthub_override_artwork = _),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       (0, _.jsx)(_, {
@@ -4618,8 +4618,8 @@ function _(_) {
         tooltip: `If checked, for every section that exists in this sale page and the parent sale page, use section styles (colors, etc.) from this sale page instead of from the parent.`,
         checked: _,
         onChange: (_) => {
-          (_.jsondata.contenthub_override_section_styles = _),
-            _.SetDirty(_.jsondata_sales);
+          ((_.jsondata.contenthub_override_section_styles = _),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       (0, _.jsx)(_, {
@@ -4627,8 +4627,8 @@ function _(_) {
         tooltip: `If checked, and a tabs section exists in this sale page and the parent sale page, use tab styles (colors, fonts, etc.) from this sale page instead of from the parent.`,
         checked: _,
         onChange: (_) => {
-          (_.jsondata.contenthub_override_tab_styles = _),
-            _.SetDirty(_.jsondata_sales);
+          ((_.jsondata.contenthub_override_tab_styles = _),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       (0, _.jsx)(_, {
@@ -4636,8 +4636,8 @@ function _(_) {
         tooltip: `If checked, and a tabs section exists in this sale page and the parent sale page, use the tab definitions (names, filters, etc.) from this sale page instead of from the parent.`,
         checked: _,
         onChange: (_) => {
-          (_.jsondata.contenthub_override_tab_definitions = _),
-            _.SetDirty(_.jsondata_sales);
+          ((_.jsondata.contenthub_override_tab_definitions = _),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       (0, _.jsx)(_, {
@@ -4645,16 +4645,16 @@ function _(_) {
         tooltip: `If checked, and an item browser section exists in this sale page and the parent sale page, use the flavor definitions (e.g. Popular, Recently Released, etc.) from this sale page instead of from the parent.`,
         checked: _,
         onChange: (_) => {
-          (_.jsondata.contenthub_override_item_browser_flavors = _),
-            _.SetDirty(_.jsondata_sales);
+          ((_.jsondata.contenthub_override_item_browser_flavors = _),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       (0, _.jsx)(_, {
         label: `Ignore item browser tab overrides during sale takeovers`,
         checked: _,
         onChange: (_) => {
-          (_.jsondata.ignore_item_browser_overrides = _),
-            _.SetDirty(_.jsondata_sales);
+          ((_.jsondata.ignore_item_browser_overrides = _),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       (0, _.jsx)(_, {
@@ -4662,8 +4662,8 @@ function _(_) {
         tooltip: `If checked, and an item browser section exists in this sale page and the parent sale page, use the facet menu from this sale page instead of from the parent.`,
         checked: _,
         onChange: (_) => {
-          (_.jsondata.contenthub_override_item_browser_facets = _),
-            _.SetDirty(_.jsondata_sales);
+          ((_.jsondata.contenthub_override_item_browser_facets = _),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       (0, _.jsx)(_, {
@@ -4671,8 +4671,8 @@ function _(_) {
         tooltip: `If checked, the sections defined in this sale page will be used as-is, instead of being combined with parent sale pages via the override logic.`,
         checked: _,
         onChange: (_) => {
-          (_.jsondata.contenthub_disable_overrides = _),
-            _.SetDirty(_.jsondata_sales);
+          ((_.jsondata.contenthub_disable_overrides = _),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
       (0, _.jsx)(_, {
@@ -4746,12 +4746,12 @@ function _(_) {
           options: _,
           value: _?.find((_) => _.value === _),
           onChange: (_) => {
-            (_.jsondata.source_content_hub = {
+            ((_.jsondata.source_content_hub = {
               type: _.value,
               category: _.value === `category` ? _ : void 0,
               tagid: _.value === `tags` ? _ : void 0,
             }),
-              _.SetDirty(_.jsondata_sales);
+              _.SetDirty(_.jsondata_sales));
           },
         }),
       }),
@@ -4773,11 +4773,11 @@ function _(_) {
                 options: _,
                 value: _?.find((_) => _.value === _),
                 onChange: (_) => {
-                  (_.jsondata.source_content_hub = {
+                  ((_.jsondata.source_content_hub = {
                     type: _,
                     category: _?.value,
                   }),
-                    _.SetDirty(_.jsondata_sales);
+                    _.SetDirty(_.jsondata_sales));
                 },
               }),
             }),
@@ -4801,11 +4801,11 @@ function _(_) {
                 options: _,
                 value: _?.find((_) => Number(_.value) === _),
                 onChange: (_) => {
-                  (_.jsondata.source_content_hub = {
+                  ((_.jsondata.source_content_hub = {
                     type: _,
                     tagid: Number(_?.value),
                   }),
-                    _.SetDirty(_.jsondata_sales);
+                    _.SetDirty(_.jsondata_sales));
                 },
               }),
             }),
@@ -4852,8 +4852,8 @@ function _(_) {
             options: _,
             value: _?.find((_) => _.value === _),
             onChange: (_) => {
-              (_.jsondata.prune_list_optin_name = _.value),
-                _.SetDirty(_.jsondata_sales);
+              ((_.jsondata.prune_list_optin_name = _.value),
+                _.SetDirty(_.jsondata_sales));
             },
           }),
           (0, _.jsx)(_, {
@@ -4861,7 +4861,7 @@ function _(_) {
             tooltip: `If checked, this hub will only show games that have been invited to register for the event. Typically used when defining a theme sale.`,
             checked: _,
             onChange: (_) => {
-              (_.jsondata.optin_only = _), _.SetDirty(_.jsondata_sales);
+              ((_.jsondata.optin_only = _), _.SetDirty(_.jsondata_sales));
             },
           }),
         ],
@@ -4895,11 +4895,11 @@ function _(_) {
           (0, _.jsx)(_, {
             items: _ || [],
             onDelete: (_) => {
-              (_.jsondata.contenthub_section_groups = [
+              ((_.jsondata.contenthub_section_groups = [
                 ..._.jsondata.contenthub_section_groups.slice(0, _),
                 ..._.jsondata.contenthub_section_groups.slice(_ + 1),
               ]),
-                _.SetDirty(_.jsondata_sales);
+                _.SetDirty(_.jsondata_sales));
             },
             onReorder: () => {
               _.SetDirty(_.jsondata_sales);
@@ -4921,7 +4921,7 @@ function _(_) {
               margin: `0 auto`,
             },
             onClick: () => {
-              _ || (_.jsondata.contenthub_section_groups = []),
+              (_ || (_.jsondata.contenthub_section_groups = []),
                 (_.jsondata.contenthub_section_groups = [
                   ..._.jsondata.contenthub_section_groups,
                   {
@@ -4929,7 +4929,7 @@ function _(_) {
                     sections: [],
                   },
                 ]),
-                _.SetDirty(_.jsondata_sales);
+                _.SetDirty(_.jsondata_sales));
             },
             children: `Add Group`,
           }),
@@ -4972,14 +4972,14 @@ function _(_) {
                     label: `Name`,
                     value: _,
                     onChange: (_) => {
-                      (_.name = _.target.value), _();
+                      ((_.name = _.target.value), _());
                     },
                   }),
                   (0, _.jsx)(_, {
                     label: `Description`,
                     value: _,
                     onChange: (_) => {
-                      (_.description = _.target.value), _();
+                      ((_.description = _.target.value), _());
                     },
                   }),
                 ],
@@ -5002,7 +5002,7 @@ function _(_) {
                         rgOptions: _,
                         selectedOption: _,
                         onChange: (_) => {
-                          (_.name = _.data), _();
+                          ((_.name = _.data), _());
                         },
                       }),
                     ],
@@ -5033,7 +5033,7 @@ function _(_) {
                         ],
                         selectedOption: _,
                         onChange: (_) => {
-                          (_.override_type = _.data), _();
+                          ((_.override_type = _.data), _());
                         },
                       }),
                       !_ &&
@@ -5057,11 +5057,11 @@ function _(_) {
               (0, _.jsx)(_, {
                 items: _,
                 onDelete: (_) => {
-                  (_.sections = [
+                  ((_.sections = [
                     ..._.sections.slice(0, _),
                     ..._.sections.slice(_ + 1),
                   ]),
-                    _();
+                    _());
                 },
                 onReorder: () => {
                   _();
@@ -5079,13 +5079,13 @@ function _(_) {
                   margin: `0 auto`,
                 },
                 onClick: () => {
-                  (_.sections = [
+                  ((_.sections = [
                     ..._.sections,
                     {
                       sectionid: 0,
                     },
                   ]),
-                    _();
+                    _());
                 },
                 children: `Add Section`,
               }),
@@ -5112,7 +5112,7 @@ function _(_) {
       rgOptions: _,
       selectedOption: _,
       onChange: (_) => {
-        (_.sectionid = _.data), _();
+        ((_.sectionid = _.data), _());
       },
     }),
   });
@@ -5139,7 +5139,7 @@ function _(_) {
                   _(_, {
                     color: _,
                     onChange: (_) => {
-                      (_.sale_background_color = _), _();
+                      ((_.sale_background_color = _), _());
                     },
                   });
                 },
@@ -5151,7 +5151,7 @@ function _(_) {
               (0, _.jsx)(_, {
                 className: _,
                 onClick: (_) => {
-                  (_.sale_background_color = ``), _();
+                  ((_.sale_background_color = ``), _());
                 },
                 children: _(`#Sale_BackgroundColor_Reset`),
               }),
@@ -5440,9 +5440,9 @@ function _(_) {
                   (0, _.jsx)(_, {
                     value: _,
                     onChange: (_) => {
-                      (_.GetEventModel().jsondata.sale_header_offset =
+                      ((_.GetEventModel().jsondata.sale_header_offset =
                         Number(_?.target?.value) || 0),
-                        _.SetDirty(_.jsondata_sales);
+                        _.SetDirty(_.jsondata_sales));
                     },
                   }),
                   (0, _.jsxs)(`div`, {
@@ -5465,8 +5465,8 @@ function _(_) {
         checked: _,
         label: `Disable Sale Page Top Pixels`,
         onChange: (_) => {
-          (_.GetEventModel().jsondata.sale_header_disable_top_margin = _),
-            _.SetDirty(_.jsondata_sales);
+          ((_.GetEventModel().jsondata.sale_header_disable_top_margin = _),
+            _.SetDirty(_.jsondata_sales));
         },
       }),
     ],
@@ -5623,18 +5623,18 @@ function _(_) {
       (0, _.jsx)(_, {
         label: _(`#Sale_BackgroundVideo_WebM`),
         onChange: (_) => {
-          (_.GetEventModel().jsondata.sale_background_video_webm =
+          ((_.GetEventModel().jsondata.sale_background_video_webm =
             _?.target?.value || ``),
-            _.SetDirty(_.jsondata_sales);
+            _.SetDirty(_.jsondata_sales));
         },
         value: _,
       }),
       (0, _.jsx)(_, {
         label: _(`#Sale_BackgroundVideo_MP4`),
         onChange: (_) => {
-          (_.GetEventModel().jsondata.sale_background_video_mp4 =
+          ((_.GetEventModel().jsondata.sale_background_video_mp4 =
             _?.target?.value || ``),
-            _.SetDirty(_.jsondata_sales);
+            _.SetDirty(_.jsondata_sales));
         },
         value: _,
       }),
@@ -5663,9 +5663,9 @@ function _(_) {
         _?.image
           ? ((_.aspect_ratio = _(_, _)),
             _(() => {
-              (_.GetEventModel().jsondata.sale_cross_promo_carousel_background =
+              ((_.GetEventModel().jsondata.sale_cross_promo_carousel_background =
                 _),
-                _.SetDirty(_.jsondata_image);
+                _.SetDirty(_.jsondata_image));
             }))
           : _(
               !1,
@@ -5677,17 +5677,17 @@ function _(_) {
     _ = (0, _.useCallback)(
       (_) => {
         _(() => {
-          (_.GetEventModel().jsondata.sale_cross_promo_carousel_fade_color =
+          ((_.GetEventModel().jsondata.sale_cross_promo_carousel_fade_color =
             _ || void 0),
-            _.SetDirty(_.jsondata_sales);
+            _.SetDirty(_.jsondata_sales));
         });
       },
       [_],
     ),
     _ = (0, _.useCallback)(() => {
       _(() => {
-        delete _.GetEventModel().jsondata.sale_cross_promo_carousel_background,
-          _.SetDirty(_.jsondata_image);
+        (delete _.GetEventModel().jsondata.sale_cross_promo_carousel_background,
+          _.SetDirty(_.jsondata_image));
       });
     }, [_]),
     _ = _(_.GetClanAccountID(), _?.image),
@@ -5876,9 +5876,9 @@ var _ = _((_) => {
                         ? void 0
                         : () => {
                             _(() => {
-                              (_.GetEventModel().jsondata.localized_sale_logo =
+                              ((_.GetEventModel().jsondata.localized_sale_logo =
                                 []),
-                                _.SetDirty(_.jsondata_sales);
+                                _.SetDirty(_.jsondata_sales));
                             });
                           },
                   }),
@@ -5893,9 +5893,9 @@ var _ = _((_) => {
                     ),
                     onChange: (_) => {
                       _(() => {
-                        (_.GetEventModel().jsondata.sale_logo_url =
+                        ((_.GetEventModel().jsondata.sale_logo_url =
                           _.target.value),
-                          _.SetDirty(_.jsondata_sales);
+                          _.SetDirty(_.jsondata_sales));
                       });
                     },
                   }),
@@ -5916,9 +5916,9 @@ var _ = _((_) => {
                             .sale_logo_cross_promo_only,
                         onChange: (_) => {
                           _(() => {
-                            (_.GetEventModel().jsondata.sale_logo_cross_promo_only =
+                            ((_.GetEventModel().jsondata.sale_logo_cross_promo_only =
                               _ || void 0),
-                              _.SetDirty(_.jsondata_sales);
+                              _.SetDirty(_.jsondata_sales));
                           });
                         },
                       }),
@@ -5972,9 +5972,9 @@ var _ = _((_) => {
                       ? void 0
                       : () => {
                           _(() => {
-                            (_.GetEventModel().jsondata.localized_sale_overlay =
+                            ((_.GetEventModel().jsondata.localized_sale_overlay =
                               []),
-                              _.SetDirty(_.jsondata_sales);
+                              _.SetDirty(_.jsondata_sales));
                           });
                         },
                 }),
@@ -6132,14 +6132,14 @@ function _(_) {
     [_, _] = (0, _.useState)(_);
   return (
     _(_, () => {
-      _(_), _(_);
+      (_(_), _(_));
     }),
     (0, _.jsxs)(_.Fragment, {
       children: [
         (0, _.jsx)(_, {
           checked: _ ? _ : !_ || _,
           onChange: (_) => {
-            _(_), _ || _(_);
+            (_(_), _ || _(_));
           },
           label: `Require Approval by Valve Admin in order to publish this sales events`,
           tooltip: `They will see a warning indicating they cannot publish until Valve approves the page. Approval is done by Valve Admin in the same place.`,
@@ -6147,7 +6147,7 @@ function _(_) {
         (0, _.jsx)(_, {
           checked: _ ? _ : _,
           onChange: (_) => {
-            _(_), _ || _(_);
+            (_(_), _ || _(_));
           },
           label: _(`#SalePresented_By_Admin`),
           tooltip: _(`#SalePresneted_By_Admin_ttip`),
@@ -6431,7 +6431,7 @@ function _(_) {
     : (0, _.jsx)(_, {
         strTitle: _,
         onOK: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _(_)
               .then((_) => {
                 _ == 1
@@ -6441,8 +6441,8 @@ function _(_) {
                     _.fnSetStrError(`Failed to update Private Data: ` + _));
               })
               .catch((_) => {
-                _(), _.fnSetError(!0), _.fnSetStrError(_(_).strErrorMsg);
-              });
+                (_(), _.fnSetError(!0), _.fnSetStrError(_(_).strErrorMsg));
+              }));
         },
         strOKButtonText: `Update`,
         bDisableBackgroundDismiss: !0,
@@ -6472,7 +6472,7 @@ function _(_) {
         strTitle: _,
         strDescription: `This will remove the publishing block and allow the partner to publish anytime afterward. As a reminder, these are the things we should check before approving:`,
         onOK: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _(_.accountid),
             _(_)
               .then((_) => {
@@ -6483,8 +6483,8 @@ function _(_) {
                     _.fnSetStrError(`Failed to update Private Data: ` + _));
               })
               .catch((_) => {
-                _(), _.fnSetError(!0), _.fnSetStrError(_(_).strErrorMsg);
-              });
+                (_(), _.fnSetError(!0), _.fnSetStrError(_(_).strErrorMsg));
+              }));
         },
         strOKButtonText: `Yes, Approve`,
         bDisableBackgroundDismiss: !0,
@@ -6535,11 +6535,11 @@ function _(_) {
 async function _(_, _, _, _) {
   let _ = _.COMMUNITY_BASE_URL + `partnereventdata/ajaxrequestsalepagereview`,
     _ = new URLSearchParams();
-  _.append(`sessionid`, _()),
+  (_.append(`sessionid`, _()),
     _.append(`clanAccountID`, `` + _.GetAccountID()),
     _.append(`gidClanEvent`, _),
     _.append(`partnerID`, `` + _),
-    _.append(`message`, _);
+    _.append(`message`, _));
   try {
     let _ = await _.default.post(_, _, {
       withCredentials: !0,
@@ -6577,7 +6577,7 @@ function _(_) {
         bOKDisabled: _,
         onCancel: _,
         onOK: async () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _(_, _, _, _)
               .then((_) => {
                 _ && _.success == 1
@@ -6618,11 +6618,11 @@ function _(_) {
                       ));
               })
               .catch((_) => {
-                _.fnSetError(!0),
+                (_.fnSetError(!0),
                   _.fnSetStrError(
                     _(`#EventEditor_SaleValveApproval_Request_Error`),
-                  );
-              });
+                  ));
+              }));
         },
         children: [
           (0, _.jsx)(`br`, {}),
@@ -6899,7 +6899,7 @@ function _(_) {
         strTitle: _,
         strDescription: `The sale is currently approved. This will revert this state and will require the sale operator to request permissions again. Are you sure?`,
         onOK: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _(!0),
             _(!0),
             _(!0),
@@ -6913,8 +6913,8 @@ function _(_) {
                     _.fnSetStrError(`Failed to update Private Data: ` + _));
               })
               .catch((_) => {
-                _(), _.fnSetError(!0), _.fnSetStrError(_(_).strErrorMsg);
-              });
+                (_(), _.fnSetError(!0), _.fnSetStrError(_(_).strErrorMsg));
+              }));
         },
         strOKButtonText: `Yes, Approve`,
         bDisableBackgroundDismiss: !0,
@@ -7004,7 +7004,7 @@ function _(_) {
     strDescription: _(`#EventSaleGuidelines_desc`),
     bOKDisabled: !_ || _,
     onOK: () => {
-      _ || _(_.accountid),
+      (_ || _(_.accountid),
         _(_, _),
         !_ && _.GetGID()
           ? (_(!0),
@@ -7013,7 +7013,7 @@ function _(_) {
               .catch((_) => {
                 _(_(_).strErrorMsg);
               }))
-          : _ && _();
+          : _ && _());
     },
     onCancel: _,
     closeModal: _,
@@ -7114,9 +7114,9 @@ function _(_) {
         _.some((_) => !_.validateUrl(_.url)) ||
         _.some((_) => !(_.localized_presenter_name[0]?.length > 0))),
     onOK: () => {
-      (_.GetEventModel().jsondata.sale_presenters = _),
+      ((_.GetEventModel().jsondata.sale_presenters = _),
         _.SetDirty(_.jsondata_sales),
-        _();
+        _());
     },
     children: [
       (0, _.jsx)(_, {
@@ -7131,17 +7131,17 @@ function _(_) {
           (0, _.jsx)(_, {
             presenter: _,
             setPresenter: (_) => {
-              (_[_] = {
+              ((_[_] = {
                 ..._,
               }),
-                _([..._]);
+                _([..._]));
             },
           }),
       }),
       (0, _.jsx)(_, {
         onClick: () => {
           let _ = Math.floor(1 + Math.random() * 1e5);
-          for (; _ && _.some((_) => _.unique_id === _); )
+          for (; _ && _.some((_) => _.unique_id === _);)
             _ = Math.floor(1 + Math.random() * 1e5);
           _([
             ..._,
@@ -7171,7 +7171,7 @@ function _(_) {
         clanSteamID: _.GetClanSteamID(),
         children: (0, _.jsx)(_, {
           onClick: () => {
-            _([]), _(!0);
+            (_([]), _(!0));
           },
           children: `(VO) Clear Presenters to hide event organizers display`,
         }),
@@ -7190,12 +7190,12 @@ function _(_) {
         type: `text`,
         value: _.Get(_.localized_presenter_name, _) || ``,
         onChange: (_) => {
-          (_.localized_presenter_name = _.Set(
+          ((_.localized_presenter_name = _.Set(
             _.localized_presenter_name,
             _,
             _.currentTarget.value,
           )),
-            _(_);
+            _(_));
         },
       }),
       (0, _.jsx)(_, {
@@ -7205,7 +7205,7 @@ function _(_) {
         placeholder: `https://`,
         value: _.url,
         onChange: (_) => {
-          (_.url = _.currentTarget.value), _(_);
+          ((_.url = _.currentTarget.value), _(_));
         },
       }),
     ],
@@ -7307,7 +7307,7 @@ var _ = (function (_) {
     static MapAppRights = _.ConstructAppRightsMap();
     static ConstructAppRightsMap() {
       let _ = new Map();
-      return _.AppRights.forEach((_) => _.set(_.token, _)), _;
+      return (_.AppRights.forEach((_) => _.set(_.token, _)), _);
     }
     static PubRights = [
       {
@@ -7334,7 +7334,7 @@ var _ = (function (_) {
     static MapPubRights = _.ConstructPubRightsMap();
     static ConstructPubRightsMap() {
       let _ = new Map();
-      return _.PubRights.forEach((_) => _.set(_.token, _)), _;
+      return (_.PubRights.forEach((_) => _.set(_.token, _)), _);
     }
     static GetAppRightFlags(_) {
       let _ = 0;
@@ -7390,7 +7390,7 @@ function _(_) {
                       _.background_style_identifier,
                   )
                 );
-                _
+                (_
                   ? (_.GetEventModel().jsondata.sale_named_section_background_styles =
                       [
                         ..._.GetEventModel().jsondata
@@ -7399,7 +7399,7 @@ function _(_) {
                       ])
                   : (_.GetEventModel().jsondata.sale_named_section_background_styles =
                       [_]),
-                  _.SetDirty(_.jsondata_sales);
+                  _.SetDirty(_.jsondata_sales));
               },
               children: _.Localize(`#Button_Create`),
             }),
@@ -7478,9 +7478,9 @@ function _(_) {
                 value: _,
                 onChange: (_) => {
                   _(() => {
-                    (_.GetEventModel().jsondata.sale_opt_in_page_name =
+                    ((_.GetEventModel().jsondata.sale_opt_in_page_name =
                       _.target.value),
-                      _.SetDirty(_.jsondata_sales);
+                      _.SetDirty(_.jsondata_sales));
                   });
                 },
               }),
@@ -7494,8 +7494,8 @@ function _(_) {
                 children: (0, _.jsx)(_, {
                   onChange: (_) => {
                     _(() => {
-                      (_.GetEventModel().jsondata.sale_show_creator = _),
-                        _.SetDirty(_.jsondata_sales);
+                      ((_.GetEventModel().jsondata.sale_show_creator = _),
+                        _.SetDirty(_.jsondata_sales));
                     });
                   },
                   label: _(`#Sale_ShowCreatorHome`),
@@ -7587,7 +7587,7 @@ function _(_) {
             onChange: (_) => {
               _(() => {
                 let _ = _.GetEventModel().jsondata;
-                _.ownership_requirement_info
+                (_.ownership_requirement_info
                   ? (_.ownership_requirement_info.bLockedToAppOwners = _)
                   : (_.ownership_requirement_info = {
                       bLockedToAppOwners: _,
@@ -7595,7 +7595,7 @@ function _(_) {
                       rgRequiredPackageIDs: [],
                       strRedirectURL: ``,
                     }),
-                  _.SetDirty(_.jsondata_sales);
+                  _.SetDirty(_.jsondata_sales));
               });
             },
             label: _(`#Sale_OwnershipRestrictions`),
@@ -7619,7 +7619,7 @@ function _(_) {
                         .split(`,`)
                         .map(Number)
                         .filter((_) => _ > 0);
-                    _.splice(0, _.length, ..._), _.SetDirty(_.jsondata_sales);
+                    (_.splice(0, _.length, ..._), _.SetDirty(_.jsondata_sales));
                   }));
               },
               value: _,
@@ -7637,7 +7637,7 @@ function _(_) {
                         .split(`,`)
                         .map(Number)
                         .filter((_) => _ > 0);
-                    _.splice(0, _.length, ..._), _.SetDirty(_.jsondata_sales);
+                    (_.splice(0, _.length, ..._), _.SetDirty(_.jsondata_sales));
                   }));
               },
               value: _,
@@ -7649,9 +7649,9 @@ function _(_) {
               onChange: (_) => {
                 _ != _.target.value &&
                   _(() => {
-                    (_.GetEventModel().jsondata.ownership_requirement_info.strRedirectURL =
+                    ((_.GetEventModel().jsondata.ownership_requirement_info.strRedirectURL =
                       _.target.value),
-                      _.SetDirty(_.jsondata_sales);
+                      _.SetDirty(_.jsondata_sales));
                   });
               },
               value: _,
@@ -7661,9 +7661,9 @@ function _(_) {
               children: (0, _.jsx)(_, {
                 onChange: (_) => {
                   _(() => {
-                    (_.GetEventModel().jsondata.sale_use_subscription_layout =
+                    ((_.GetEventModel().jsondata.sale_use_subscription_layout =
                       _),
-                      _.SetDirty(_.jsondata_sales);
+                      _.SetDirty(_.jsondata_sales));
                   });
                 },
                 label: `(VO) ` + _(`#Sale_UseSubscriptionLayout`),
@@ -7682,13 +7682,13 @@ function _(_) {
             onChange: (_) => {
               _(() => {
                 let _ = _.GetEventModel().jsondata;
-                _.app_right_requirement_info
+                (_.app_right_requirement_info
                   ? (_.app_right_requirement_info.bLockedToPartnerAppRights = _)
                   : (_.app_right_requirement_info = {
                       bLockedToPartnerAppRights: _,
                       nAppRightFlag: _.GetAppRightFlags([_.EditInfo]),
                     }),
-                  _.SetDirty(_.jsondata_sales);
+                  _.SetDirty(_.jsondata_sales));
               });
             },
             label: _(`#Sale_PartnerAppEditRestrictions`),
@@ -7720,7 +7720,7 @@ function _(_) {
         onClick: async () => {
           let _ = new Set(),
             _ = [];
-          _.GetEventModel().jsondata.sale_sections.forEach((_) => {
+          (_.GetEventModel().jsondata.sale_sections.forEach((_) => {
             _.capsules.forEach(async (_) => {
               _.type === `bundle`
                 ? _.push(_.Get().QueueBundleRequest(Number(_._), {}))
@@ -7739,11 +7739,11 @@ function _(_) {
                   _ && _.GetIncludedAppIDs().forEach((_) => _.add(_));
                 } else _.add(Number(_._));
               });
-            });
+            }));
           let _ = Array.from(_);
           _.sort();
           let _ = new FormData();
-          _.append(`sessionid`, _()),
+          (_.append(`sessionid`, _()),
             _.append(`name`, `[AUTO] ` + _.GetName()),
             _.append(`event`, `1`),
             _.append(`type`, `discount`),
@@ -7756,7 +7756,7 @@ function _(_) {
               _.append(
                 `discount_id`,
                 _.GetEventModel().jsondata.sale_discount_event_id.toString(),
-              );
+              ));
           let _ =
             (
               await _.default.post(
@@ -7768,7 +7768,7 @@ function _(_) {
               )
             ).data.discountid ||
             _.GetEventModel().jsondata.sale_discount_event_id;
-          _.GetEventModel().jsondata.sale_discount_event_id ||
+          (_.GetEventModel().jsondata.sale_discount_event_id ||
             (_.GetEventModel().jsondata.sale_discount_event_id = _),
             _(
               (0, _.jsx)(_, {
@@ -7782,7 +7782,7 @@ function _(_) {
                 },
               }),
               window,
-            );
+            ));
         },
         children: _.GetEventModel().jsondata.sale_discount_event_id
           ? _(
@@ -7861,9 +7861,9 @@ function _(_) {
         selectedOption: _,
         onChange: (_) => {
           _(() => {
-            (_.GetEventModel().jsondata.sale_font = _.data.fontFamily),
+            ((_.GetEventModel().jsondata.sale_font = _.data.fontFamily),
               (_.GetEventModel().jsondata.sale_font_weight = _.data.fontWeight),
-              _.SetDirty(_.jsondata_sales);
+              _.SetDirty(_.jsondata_sales));
           });
         },
         contextMenuPositionOptions: {
@@ -7876,10 +7876,10 @@ function _(_) {
         tooltip: _(`#Sale_SectionTitleFontSize_ttip`),
         onChange: (_) => {
           _(() => {
-            (_.GetEventModel().jsondata.sale_section_font_size = Number(
+            ((_.GetEventModel().jsondata.sale_section_font_size = Number(
               _.target.value,
             )),
-              _.SetDirty(_.jsondata_sales);
+              _.SetDirty(_.jsondata_sales));
           });
         },
         value: _,
@@ -7889,8 +7889,8 @@ function _(_) {
         tooltip: _(`#Sale_DontCapitalizeSectionTitles_ttip`),
         onChange: (_) => {
           _(() => {
-            (_.GetEventModel().jsondata.sale_section_disable_capitalize = _),
-              _.SetDirty(_.jsondata_sales);
+            ((_.GetEventModel().jsondata.sale_section_disable_capitalize = _),
+              _.SetDirty(_.jsondata_sales));
           });
         },
         checked: _,
@@ -7901,9 +7901,9 @@ function _(_) {
         tooltip: _(`#Sale_AdvertisingApp_ID_ttip`),
         onChange: (_) => {
           _(() => {
-            (_.GetEventModel().jsondata.sale_associated_advertising_appid =
+            ((_.GetEventModel().jsondata.sale_associated_advertising_appid =
               Number(_.target.value)),
-              _.SetDirty(_.jsondata_sales);
+              _.SetDirty(_.jsondata_sales));
           });
         },
         value: _,
@@ -7973,9 +7973,9 @@ function _(_) {
             tooltip: _(`#Sale_ValveTopSalePath_ttip`),
             onChange: (_) => {
               _(() => {
-                (_.GetEventModel().jsondata.sale_vanity_id_valve_approved_for_sale_subpath =
+                ((_.GetEventModel().jsondata.sale_vanity_id_valve_approved_for_sale_subpath =
                   _),
-                  _.SetDirty(_.jsondata_sales);
+                  _.SetDirty(_.jsondata_sales));
               });
             },
             checked: _,
@@ -8043,7 +8043,7 @@ function _(_) {
   if (_ && !_) return null;
   let _ = _
     ? (_) => {
-        _(_), _.preventDefault(), _.stopPropagation();
+        (_(_), _.preventDefault(), _.stopPropagation());
       }
     : void 0;
   return (0, _.jsx)(_, {
@@ -8164,9 +8164,9 @@ function _(_) {
             label: `Randomization delay (hours)`,
             tooltip: `The number of hours from the start of Next Fest to show the items in random order instead of ML recommended order`,
             onChange: (_) => {
-              (_.GetEventModel().jsondata.sale_ml_recommender_delay_hours =
+              ((_.GetEventModel().jsondata.sale_ml_recommender_delay_hours =
                 Number(_.target.value)),
-                _.SetDirty(_.jsondata_sales);
+                _.SetDirty(_.jsondata_sales));
             },
             placeholder: `10000`,
             value: _,
@@ -8181,9 +8181,9 @@ function _(_) {
               _ +
               `. Set to -1 to disable shuffling and use the exact recommended order.`,
             onChange: (_) => {
-              (_.GetEventModel().jsondata.sale_ml_recommender_weight_exponent =
+              ((_.GetEventModel().jsondata.sale_ml_recommender_weight_exponent =
                 Number(_.target.value)),
-                _.SetDirty(_.jsondata_sales);
+                _.SetDirty(_.jsondata_sales));
             },
             placeholder: String(_),
             value: _,
@@ -8202,7 +8202,7 @@ var _ = _((_) => {
     } = _;
     if (!_?.(_.GetEventModel())) return null;
     let _ = () => {
-      _(_.GetEventModel()), _.SetDirty(_.jsondata_sales);
+      (_(_.GetEventModel()), _.SetDirty(_.jsondata_sales));
     };
     return (0, _.jsxs)(`div`, {
       className: _,
@@ -8268,7 +8268,7 @@ var _ = _((_) => {
         }),
       }),
       _ = () => {
-        _.forEach(_), _.SetDirty(_.jsondata_sales);
+        (_.forEach(_), _.SetDirty(_.jsondata_sales));
       };
     return (0, _.jsxs)(`div`, {
       className: _,
@@ -8300,43 +8300,43 @@ var _ = _((_) => {
         !_.GetCreatorHome(_.GetClanSteamID())?.BHasClanAccountFlagSet(64),
       _ = Math.floor(Date.now() / 1e3),
       _ = new Date();
-    _.setHours(10), _.setMinutes(0), _.setSeconds(0);
+    (_.setHours(10), _.setMinutes(0), _.setSeconds(0));
     let _ = new Date();
-    _.setDate(_.getDate() + 1),
+    (_.setDate(_.getDate() + 1),
       _.setHours(10),
       _.setMinutes(0),
-      _.setSeconds(0);
+      _.setSeconds(0));
     let [_, _] = _.useState(
         _.startTime > _ ? _.startTime : Math.floor(_.getTime() / 1e3),
       ),
       _ = new Date();
-    _.setDate(_.getDate() + 1),
+    (_.setDate(_.getDate() + 1),
       _.setHours(10),
       _.setMinutes(0),
-      _.setSeconds(0);
+      _.setSeconds(0));
     let [_, _] = _.useState(
         _?.endTime > Math.floor(_.getTime() / 1e3)
           ? _.endTime
           : Math.floor(_.getTime() / 1e3),
       ),
       _ = () => {
-        _(() => {
-          _.SetSaleVanityID(_),
+        (_(() => {
+          (_.SetSaleVanityID(_),
             _.SetEventStartTime(_),
             _.SetEventEndTime(_),
             _(_.accountid),
             _ && _(!0),
             _.Dispatch(),
-            _();
+            _());
         }),
-          _.closeModal && _.closeModal();
+          _.closeModal && _.closeModal());
       },
       _ = () => {
-        _(() => {
-          (_.GetEventModel().jsondata.bSaleEnabled = !1),
-            _.SetDirty(_.jsondata_sales);
+        (_(() => {
+          ((_.GetEventModel().jsondata.bSaleEnabled = !1),
+            _.SetDirty(_.jsondata_sales));
         }),
-          _.closeModal && _.closeModal();
+          _.closeModal && _.closeModal());
       },
       _ = _.replace(/[^\w-]/g, ``).length > 0 && _ && _;
     return (0, _.jsx)(_, {
@@ -8419,17 +8419,17 @@ var _ = _((_) => {
       _ = _.GetEventModel(),
       [_, _] = _.useState(_.jsondata.sale_update_landing_page_vanity_id ?? ``),
       _ = () => {
-        _(() => {
-          _.SetSaleUpdateLandingPageVanityID(_), _();
+        (_(() => {
+          (_.SetSaleUpdateLandingPageVanityID(_), _());
         }),
-          _.closeModal && _.closeModal();
+          _.closeModal && _.closeModal());
       },
       _ = () => {
-        _(() => {
-          (_.GetEventModel().jsondata.bSaleEnabled = !1),
-            _.SetDirty(_.jsondata_sales);
+        (_(() => {
+          ((_.GetEventModel().jsondata.bSaleEnabled = !1),
+            _.SetDirty(_.jsondata_sales));
         }),
-          _.closeModal && _.closeModal();
+          _.closeModal && _.closeModal());
       },
       _ = _.replace(/[^\w-]/g, ``).length > 0;
     return (0, _.jsx)(_, {
@@ -8479,14 +8479,14 @@ function _(_) {
     { creatorHome: _ } = _(_.GetEventModel().clanSteamID.GetAccountID()),
     _ = _.useRef(void 0),
     _ = (_) => {
-      _(_),
+      (_(_),
         _?.current?.setState({
           checked: _,
         }),
         _(() => {
-          (_.GetEventModel().jsondata.bSaleEnabled = _),
-            _.SetDirty(_.jsondata_sales);
-        });
+          ((_.GetEventModel().jsondata.bSaleEnabled = _),
+            _.SetDirty(_.jsondata_sales));
+        }));
     },
     _ = _(_.GetClanSteamID(), !0),
     _ =
@@ -8568,7 +8568,7 @@ function _(_) {
                         }),
                         (0, _.jsx)(_, {
                           fnSetSaleItem: (_, _, _, _) => {
-                            _(_), _(_), _(_), _(_);
+                            (_(_), _(_), _(_), _(_));
                           },
                         }),
                         _
@@ -8600,7 +8600,7 @@ function _(_) {
                       strTitle: _(`#EventEditor_GenericAreYouSure`),
                       strDescription: _(`#Sale_Debug_Delete`),
                       onOK: () => {
-                        _(_), _();
+                        (_(_), _());
                       },
                     }),
                     window,
@@ -8660,7 +8660,7 @@ function _(_) {
               _.capsules && _.capsules.filter(_).forEach(_);
             });
             let _ = _.GetTabSaleSection();
-            _ &&
+            (_ &&
               _.tabs.forEach((_) => {
                 _.capsules && _.capsules.filter(_).forEach(_);
               }),
@@ -8694,7 +8694,7 @@ function _(_) {
                   bNoFocusWhenShown: !0,
                   bSkipFocusWhenReady: !0,
                 },
-              ));
+              )));
           }
         }, 300)));
     },
@@ -8800,14 +8800,14 @@ function _(_) {
     let _ = 0,
       _ = (_) => {
         let _ = _.capsules.findIndex((_) => _._ == _._ && _.type == _.type);
-        for (; _ >= 0; )
-          _.capsules.splice(_, 1),
+        for (; _ >= 0;)
+          (_.capsules.splice(_, 1),
             (_ += 1),
-            (_ = _.capsules.findIndex((_) => _._ == _._ && _.type == _.type));
+            (_ = _.capsules.findIndex((_) => _._ == _._ && _.type == _.type)));
       };
     _.GetEventModel().jsondata.sale_sections.forEach(_);
     let _ = _.GetTabSaleSection();
-    _ && _.tabs.forEach(_), _ && _.SetDirty(_.jsondata_sales);
+    (_ && _.tabs.forEach(_), _ && _.SetDirty(_.jsondata_sales));
   });
 }
 function _(_) {
@@ -8831,11 +8831,11 @@ function _() {
         unique_id: _.unique_id,
         strLabel: _(_.localized_label?.[0] || _.default_label),
       };
-      _.push(_),
+      (_.push(_),
         _.capsules.forEach((_) => {
           let _ = _(_);
-          _.has(_) || _.set(_, new Set()), _.get(_).add(_.unique_id);
-        });
+          (_.has(_) || _.set(_, new Set()), _.get(_).add(_.unique_id));
+        }));
     }),
     _.GetEventModel().jsondata.sale_sections?.forEach((_) => {
       if (_.section_type != `items`) return;
@@ -8846,11 +8846,11 @@ function _() {
           _(_, _.GetEventModel(), 1) || _.localized_label[0] || _.default_label,
         ),
       };
-      _.push(_),
+      (_.push(_),
         _.capsules.forEach((_) => {
           let _ = _(_);
-          _.has(_) || _.set(_, new Set()), _.get(_).add(_.unique_id);
-        });
+          (_.has(_) || _.set(_, new Set()), _.get(_).add(_.unique_id));
+        }));
     }),
     {
       mapItemLocations: _,
@@ -8926,7 +8926,7 @@ function _(_) {
                         _.push(_);
                       }
                       let _ = `item_locations.csv`;
-                      _.WriteCSVToFile(_, _),
+                      (_.WriteCSVToFile(_, _),
                         _(
                           (0, _.jsx)(_, {
                             strTitle: _(`#Sale_GameExport_Title`),
@@ -8938,7 +8938,7 @@ function _(_) {
                           }),
                           window,
                         ),
-                        _();
+                        _());
                     },
                     disabled: !_,
                     children: _(`#Sale_Export`),
@@ -8988,7 +8988,7 @@ function _(_) {
                           _.push(_);
                         }
                         let _ = `item_pubs.csv`;
-                        _.WriteCSVToFile(_, _),
+                        (_.WriteCSVToFile(_, _),
                           _(
                             (0, _.jsx)(_, {
                               strTitle: _(`#Sale_GameExport_Title`),
@@ -9000,7 +9000,7 @@ function _(_) {
                             }),
                             window,
                           ),
-                          _();
+                          _());
                       },
                       disabled: !_,
                       children: _(`#Sale_Export`),
@@ -9151,7 +9151,7 @@ var _ = _((_) => {
       _ = [];
     _(_, _(`#Sale_PageConfigOptions`), `SalePageEdit_Config`);
     let _ = _(_.GetClanSteamID(), !1);
-    (_ || _.GetTaggedItems().length > 0) &&
+    ((_ || _.GetTaggedItems().length > 0) &&
       _(
         _,
         _(`#Sale_TaggedItemsSection`, _.GetTaggedItems().length),
@@ -9163,7 +9163,7 @@ var _ = _((_) => {
         `SalePageEdit_AllArtworkCtn`,
       ),
       (_.BHasTag(`contenthub`) || _.BUsesContentHubForItemSource()) &&
-        _(_, `Content Hub Settings`, `SalePageEdit_ContentHub`);
+        _(_, `Content Hub Settings`, `SalePageEdit_ContentHub`));
     let _ = !1,
       _ = 0;
     return (
@@ -9181,7 +9181,7 @@ var _ = _((_) => {
               color: _.label_color,
             },
             _ = _ + _.unique_id;
-          _(_, _, _, _, _), _.section_type === `tabs` && (_ = !0);
+          (_(_, _, _, _, _), _.section_type === `tabs` && (_ = !0));
         }
       }),
       _ > 0 &&
@@ -9190,7 +9190,7 @@ var _ = _((_) => {
           (0, _.jsxs)(`div`, {
             className: _,
             onClick: (_) => {
-              _(void 0), _.stopPropagation();
+              (_(void 0), _.stopPropagation());
             },
             children: [
               (0, _.jsx)(`div`, {
@@ -9237,7 +9237,7 @@ var _ = _((_) => {
             unique_id: _.GenerateSaleSectionUniqueID(),
           },
           _ = _.GetEventModel().jsondata.sale_sections.slice(-1)[0];
-        _ &&
+        (_ &&
           ((_.label_color = _.label_color),
           (_.background_gradient_bottom = _.background_gradient_bottom),
           (_.background_gradient_top = _.background_gradient_top),
@@ -9247,7 +9247,7 @@ var _ = _((_) => {
           _.GetEventModel().jsondata.sale_sections.push(_),
           _.SetDirty(_.jsondata_sales),
           _(_(_), !0),
-          _();
+          _());
       });
     return (0, _.jsxs)(_.Fragment, {
       children: [
@@ -9383,9 +9383,9 @@ function _(_) {
     children: (0, _.jsx)(_, {
       strTitle: _(`#Sale_ReorderSections`),
       onOK: () => {
-        (_.GetEventModel().jsondata.sale_sections = _),
+        ((_.GetEventModel().jsondata.sale_sections = _),
           _.SetDirty(_.jsondata_sales),
-          _(null);
+          _(null));
       },
       onCancel: () => _(null),
       closeModal: _,
@@ -9398,7 +9398,7 @@ function _(_) {
                 items: _,
                 onMove: (_, _) => {
                   let _ = [..._];
-                  _(_, _, _), _(_);
+                  (_(_, _, _), _(_));
                 },
                 render: (_) => {
                   let _ = _.GetSaleSections().findIndex((_) => _ === _),
@@ -9509,13 +9509,13 @@ function _(_) {
                     if (_) {
                       _(_.target.files[0].name);
                       let _ = new FileReader();
-                      (_.onload = (_) => {
+                      ((_.onload = (_) => {
                         let _ = _.target.result.toString();
-                        (_.GetEventModel().jsondata.sale_custom_css = _),
+                        ((_.GetEventModel().jsondata.sale_custom_css = _),
                           _.SetDirty(_.jsondata_sales),
-                          (_.target.value = ``);
+                          (_.target.value = ``));
                       }),
-                        _.readAsText(_);
+                        _.readAsText(_));
                     }
                   },
                 }),
@@ -9525,10 +9525,10 @@ function _(_) {
                       _ = new Blob([_], {
                         type: `text/css`,
                       });
-                    (_.href = URL.createObjectURL(_)),
+                    ((_.href = URL.createObjectURL(_)),
                       (_.download = _),
                       document.body.appendChild(_),
-                      _.click();
+                      _.click());
                   },
                   children: `Export`,
                 }),
@@ -9726,11 +9726,11 @@ function _(_) {
     ),
     _ = (_) => {
       let _ = _.slice();
-      _.splice(_, 1), _(_);
+      (_.splice(_, 1), _(_));
     },
     _ = (_, _) => {
       let _ = _.slice();
-      _(_, _, _), _(_);
+      (_(_, _, _), _(_));
     },
     _ = (_, _) => {
       let _ = _.map((_, _) =>
@@ -9749,11 +9749,11 @@ function _(_) {
         options: _,
         onAddLink: (_) => {
           let _ = _.slice();
-          _.push({
+          (_.push({
             type: _,
             link: ``,
           }),
-            _(_);
+            _(_));
         },
       }),
       (0, _.jsx)(_, {
@@ -9942,8 +9942,8 @@ function _(_) {
       _.jsondata.sale_default_social_media_disabled,
     ]),
     _ = (_) => {
-      (_.jsondata.sale_default_social_media_disabled = !_),
-        _.SetDirty(_.jsondata_sales);
+      ((_.jsondata.sale_default_social_media_disabled = !_),
+        _.SetDirty(_.jsondata_sales));
     },
     _ = _.length > 0,
     _ = !(_ || _);
@@ -10053,11 +10053,11 @@ function _(_) {
               rgSocialMediaItems: _,
               fnSetItems: (_) => {
                 let _ = _.rgValidationData;
-                (_.GetEventModel().jsondata.sale_social_media_items = _.filter(
+                ((_.GetEventModel().jsondata.sale_social_media_items = _.filter(
                   (_) => !!_.link,
                 ).filter((_) => _(_, _[_.type]).bValid)),
                   _.SetDirty(_.jsondata_sales),
-                  _(_);
+                  _(_));
               },
             }),
             _.length == 0 &&
@@ -10130,8 +10130,8 @@ var _ = `CKuXw36x-Lo-`,
           params: _,
         });
       _(() => {
-        _.data && _.data.success && this.HandleCuratorResponse(_.data),
-          (this.m_bIsLoadComplete = !0);
+        (_.data && _.data.success && this.HandleCuratorResponse(_.data),
+          (this.m_bIsLoadComplete = !0));
       });
     }
     HandleCuratorResponse(_) {
@@ -10147,11 +10147,11 @@ var _ = `CKuXw36x-Lo-`,
         }
     }
   };
-_([_], _.prototype, `m_mapNewsCurators`, void 0),
+(_([_], _.prototype, `m_mapNewsCurators`, void 0),
   _([_], _.prototype, `m_bIsLoadComplete`, void 0),
   _([_], _.prototype, `m_mapLangToNewsCurators`, void 0),
   _([_], _.prototype, `allNewsCurators`, null),
-  _([_], _.prototype, `HandleCuratorResponse`, null);
+  _([_], _.prototype, `HandleCuratorResponse`, null));
 var _ = `_4gJW-1D-qoo-`,
   _ = `g-Xc-fP6jvg-`,
   _ = `_1Wx2O8pIAbo-`,
@@ -10196,8 +10196,8 @@ var _ = 300,
     }
     async GetSuggestionsFromServer(_) {
       let _ = _(this.props.rgCorporaToSearch);
-      _.has(`apps`) && this.GetAppSuggestionsFromServer(_),
-        _.has(`curators`) && this.GetCuratorSuggestions(_);
+      (_.has(`apps`) && this.GetAppSuggestionsFromServer(_),
+        _.has(`curators`) && this.GetCuratorSuggestions(_));
     }
     async GetCuratorSuggestions(_) {
       let _ = _.Get().allNewsCurators,
@@ -10234,21 +10234,21 @@ var _ = 300,
           );
         }
       }
-      this.m_mapHighestReceivedRequestIDFromBackEnd.set(
+      (this.m_mapHighestReceivedRequestIDFromBackEnd.set(
         `curators`,
         this.m_nHighestSentRequestID,
       ),
         this.setState({
           rgCuratorSuggestions: _,
-        });
+        }));
     }
     async GetAppSuggestionsFromServer(_) {
       let _ = this.m_nHighestSentRequestID,
         _ = [];
-      this.props.rgCorporaToSearch.indexOf(`games`) >= 0 &&
+      (this.props.rgCorporaToSearch.indexOf(`games`) >= 0 &&
         (_.push(`game`), _.push(`software`)),
         this.props.rgCorporaToSearch.indexOf(`dlc`) >= 0 &&
-          (_.push(`dlc`), _.push(`music`));
+          (_.push(`dlc`), _.push(`music`)));
       let _ = {
           _: _.COUNTRY,
           _: _.LANGUAGE,
@@ -10268,7 +10268,7 @@ var _ = 300,
       if (_ < this.m_mapHighestReceivedRequestIDFromBackEnd.get(`apps`)) return;
       this.m_mapHighestReceivedRequestIDFromBackEnd.set(`apps`, _);
       let _;
-      _?.data?.length &&
+      (_?.data?.length &&
         (_ = _.data.map((_) => {
           let _ = {
             corpus: _(_.type),
@@ -10294,11 +10294,11 @@ var _ = 300,
         })),
         this.setState({
           rgAppSuggestions: _,
-        });
+        }));
     }
     async UpdateSuggestions(_) {
       let _ = _.target.value && _.target.value.trim().toLocaleLowerCase();
-      this.m_nHighestSentRequestID++,
+      (this.m_nHighestSentRequestID++,
         _?.length
           ? (this.setState({
               strSearchString: _,
@@ -10316,7 +10316,7 @@ var _ = 300,
             this.setState({
               strSearchString: ``,
             }),
-            this.ResetSuggestions());
+            this.ResetSuggestions()));
     }
     ResetSuggestions() {
       this.setState({
@@ -10839,7 +10839,8 @@ function _(_) {
         (0, _.jsx)(_, {
           items: _.GetReferencedAppIDArray(),
           onDelete: (_) => {
-            _.GetReferencedAppIDArray().splice(_), _.SetDirty(_.jsondata_other);
+            (_.GetReferencedAppIDArray().splice(_),
+              _.SetDirty(_.jsondata_other));
           },
           onReorder: () => _.SetDirty(_.jsondata_other),
           render: (_) =>
@@ -10957,7 +10958,7 @@ function _(_) {
     _,
     _.useCallback(
       (_) => {
-        localStorage.setItem(_, _ ? `1` : `0`), _(_);
+        (localStorage.setItem(_, _ ? `1` : `0`), _(_));
       },
       [_],
     ),
@@ -11207,8 +11208,8 @@ function _(_) {
     _ = _.includes(_.GetAccountID()),
     _ = _ == 36;
   (0, _.useEffect)(() => {
-    _.Get().EnsureLoaded(_),
-      !_.Get().BHasExplicitSettings(_) && _.GetSaleSectionCount() > 10 && _();
+    (_.Get().EnsureLoaded(_),
+      !_.Get().BHasExplicitSettings(_) && _.GetSaleSectionCount() > 10 && _());
   }, [_]);
   let _ = _.useCallback((_) => {
       _(_.strSectionId) && _(_.strSectionId);
@@ -11281,8 +11282,8 @@ function _(_) {
               rgSalePresenters: _,
               bIsEventVisible: _,
               fnCleanSaleEventPresenters: () => {
-                (_.GetEventModel().jsondata.sale_presenters = void 0),
-                  _.SetDirty(_.jsondata_sales);
+                ((_.GetEventModel().jsondata.sale_presenters = void 0),
+                  _.SetDirty(_.jsondata_sales));
               },
               bPublishTab: !1,
             }),
@@ -11452,8 +11453,8 @@ function _(_) {
       let _ = -1,
         _ = new Map();
       for (let [_, _] of _.GetSaleSections().entries())
-        _.set(_.section_type, (_.get(_.section_type) || 0) + 1),
-          _ == -1 && _.section_type == `tabs` && (_ = _);
+        (_.set(_.section_type, (_.get(_.section_type) || 0) + 1),
+          _ == -1 && _.section_type == `tabs` && (_ = _));
       return [_.GetSaleSections().length, _, _, _()];
     }),
     [_, _] = _.useState(``),
@@ -11499,8 +11500,8 @@ function _(_) {
             items: _,
             bDisabled: _,
             onMove: (_, _) => {
-              _(_.GetEventModel().jsondata.sale_sections, _, _),
-                _.SetDirty(_.jsondata_sales);
+              (_(_.GetEventModel().jsondata.sale_sections, _, _),
+                _.SetDirty(_.jsondata_sales));
             },
             render: (_, _) => {
               let _ = _ + _.unique_id,
@@ -11582,16 +11583,16 @@ function _(_) {
       });
     },
     _ = (_) => {
-      (_.GetEventModel().jsondata.sale_browse_more_button = _),
-        _.SetDirty(_.jsondata_sales);
+      ((_.GetEventModel().jsondata.sale_browse_more_button = _),
+        _.SetDirty(_.jsondata_sales));
     },
     _ = (_) => {
       let _ = _.GetEventModel().jsondata;
-      (_[_.target.name] = _.target.value), _.SetDirty(_.jsondata_sales);
+      ((_[_.target.name] = _.target.value), _.SetDirty(_.jsondata_sales));
     },
     _ = (_, _) => {
       let _ = _.GetEventModel().jsondata;
-      (_[_] = _), _.SetDirty(_.jsondata_sales);
+      ((_[_] = _), _.SetDirty(_.jsondata_sales));
     };
   return (0, _.jsxs)(_.Fragment, {
     children: [
@@ -11705,7 +11706,7 @@ function _(_) {
           (0, _.jsx)(_, {
             onClick: () => {
               let _ = [];
-              _.push([
+              (_.push([
                 `Feature`,
                 `Date`,
                 `Impression`,
@@ -11728,7 +11729,7 @@ function _(_) {
                     `` + _.total_add_to_carts,
                     `` + _.total_ignores,
                   ]);
-                });
+                }));
               let _ = (_.GetName() + `_stats`).replace(` `, `_`) + `.csv`;
               _.WriteCSVToFile(_, _);
             },
@@ -11761,14 +11762,14 @@ function _(_) {
         _.forEach((_) => {
           if (_.has(_.feature)) {
             let _ = _.get(_.feature);
-            (_.total_views += _.total_views),
+            ((_.total_views += _.total_views),
               (_.total_impressions += _.total_impressions),
               (_.total_owner_views += _.total_owner_views),
               (_.total_owner_impressions += _.total_owner_impressions),
               (_.total_wishlists += _.total_wishlists),
               (_.total_ignores += _.total_ignores),
               (_.total_add_to_carts += _.total_add_to_carts),
-              _.set(_.feature, _);
+              _.set(_.feature, _));
           } else
             _.set(_.feature, {
               ..._,
@@ -11982,7 +11983,7 @@ function _(_, _) {
   let _ = {
     ..._,
   };
-  return delete _[_], _;
+  return (delete _[_], _);
 }
 var _ = `dpDkUTjygsI-`,
   _ = `X3Yd08f5Ld4-`,
@@ -12003,8 +12004,8 @@ function _(_) {
       (_, _, _) => {
         _(() => {
           let _ = _.GetEventModel().jsondata;
-          (_.sale_store_capsules = _(_.sale_store_capsules, _, _, _)),
-            _.SetDirty(_.jsondata_image);
+          ((_.sale_store_capsules = _(_.sale_store_capsules, _, _, _)),
+            _.SetDirty(_.jsondata_image));
         });
       },
       [_],
@@ -12013,8 +12014,8 @@ function _(_) {
       (_) => {
         _(() => {
           let _ = _.GetEventModel().jsondata;
-          (_.sale_store_capsules = _(_.sale_store_capsules, _)),
-            _.SetDirty(_.jsondata_image);
+          ((_.sale_store_capsules = _(_.sale_store_capsules, _)),
+            _.SetDirty(_.jsondata_image));
         });
       },
       [_],
@@ -12142,7 +12143,7 @@ function _(_) {
 var _ = class {
   m_editModel = void 0;
   constructor(_) {
-    _(this), (this.m_editModel = _);
+    (_(this), (this.m_editModel = _));
   }
   GetJSONData() {
     return this.m_editModel.GetEventModel().jsondata;
@@ -12211,15 +12212,15 @@ var _ = class {
       }
       let _ = this.GetJSONData().broadcast_language;
       if (_.length < _ && _ == -1) return;
-      for (; _.length <= _; ) _.push(-1);
+      for (; _.length <= _;) _.push(-1);
       if (_[_] != _) {
-        for (_[_] = _; _.length > 0 && _[_.length - 1] == -1; ) _.pop();
-        _.length == 0
+        for (_[_] = _; _.length > 0 && _[_.length - 1] == -1;) _.pop();
+        (_.length == 0
           ? (this.GetJSONData().broadcast_language = void 0)
           : (this.GetJSONData().broadcast_language = [
               ...this.GetJSONData().broadcast_language,
             ]),
-          this.m_editModel.SetDirty(_.jsondata_broadcast);
+          this.m_editModel.SetDirty(_.jsondata_broadcast));
       }
     }
   }
@@ -12227,9 +12228,9 @@ var _ = class {
     let _ = this.GetJSONData().broadcast_whitelist.indexOf(_);
     if (_ < 0) return;
     let _ = _(this.GetJSONData().broadcast_priority || [], _ + 1, ``);
-    for (_[_] = _; _.length > 0 && !_[_.length - 1]; ) _.pop();
-    (this.GetJSONData().broadcast_priority = _),
-      this.m_editModel.SetDirty(_.jsondata_broadcast);
+    for (_[_] = _; _.length > 0 && !_[_.length - 1];) _.pop();
+    ((this.GetJSONData().broadcast_priority = _),
+      this.m_editModel.SetDirty(_.jsondata_broadcast));
   }
   GetWhiteListAccountPriority(_, _) {
     let _ = this.GetJSONData().broadcast_whitelist.indexOf(_);
@@ -12329,7 +12330,7 @@ var _ = class {
       this.m_editModel.SetDirty(_.jsondata_broadcast));
   }
 };
-_([_], _.prototype, `m_editModel`, void 0),
+(_([_], _.prototype, `m_editModel`, void 0),
   _([_], _.prototype, `SetBroadcastEnabled`, null),
   _([_], _.prototype, `SetBroadcastForceBanner`, null),
   _([_], _.prototype, `SetChangeSetting`, null),
@@ -12350,7 +12351,7 @@ _([_], _.prototype, `m_editModel`, void 0),
   _([_], _.prototype, `SetItemDropDetailEvents`, null),
   _([_], _.prototype, `SetWidePlayerLayout`, null),
   _([_], _.prototype, `SetWidePlayerSupportChat`, null),
-  _([_], _.prototype, `SetChatAnnouncementGiveawayGID`, null);
+  _([_], _.prototype, `SetChatAnnouncementGiveawayGID`, null));
 var _ = class _ {
   m_rgFriendsList = null;
   GetFriendLiset() {
@@ -12365,8 +12366,8 @@ var _ = class _ {
         _.COMMUNITY_BASE_URL + `actions/ajaxlistfriends`,
       );
       if (_?.status == 200 && _.data?.success == 1 && _.data?.friends)
-        return (this.m_rgFriendsList = _.data.friends), this.m_rgFriendsList;
-      (this.m_rgFriendsList = []), (_ = _(_));
+        return ((this.m_rgFriendsList = _.data.friends), this.m_rgFriendsList);
+      ((this.m_rgFriendsList = []), (_ = _(_)));
     } catch (_) {
       _ = _(_);
     }
@@ -12380,7 +12381,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -12531,20 +12532,20 @@ var _ = class extends _.Component {
     });
   }
   AddTitle() {
-    this.GetBroadcastEditModel().SetCustomTitleLocalize(
+    (this.GetBroadcastEditModel().SetCustomTitleLocalize(
       this.state.customTitleLanguage,
       this.state.strCustomTitle,
     ),
       this.setState({
         strCustomTitle: ``,
-      });
+      }));
   }
   RemoveTitle(_) {
     this.GetBroadcastEditModel().SetCustomTitleLocalize(_, null);
   }
   OnSaleColorChange(_, _) {
     let _ = this.props.editModel.GetEventModel().jsondata;
-    (_[_] = _), this.props.editModel.SetDirty(_.jsondata_sales);
+    ((_[_] = _), this.props.editModel.SetDirty(_.jsondata_sales));
   }
   OnOpenGradientInnerColor(_) {
     this.OpenColorPopover(_, `broadcast_gradient_inner_color`);
@@ -12837,7 +12838,7 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnBroadcastOptionChange`, null),
+(_([_], _.prototype, `OnBroadcastOptionChange`, null),
   _([_], _.prototype, `OnBroadcastForceBanner`, null),
   _([_], _.prototype, `OnChatChange`, null),
   _([_], _.prototype, `OnTitleChange`, null),
@@ -12848,7 +12849,7 @@ _([_], _.prototype, `OnBroadcastOptionChange`, null),
   _([_], _.prototype, `OnSaleColorChange`, null),
   _([_], _.prototype, `OnOpenGradientInnerColor`, null),
   _([_], _.prototype, `OnOpenGradientOuterColor`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 function _(_) {
   let { broadcastEditModel: _ } = _,
     _ = _(() => _.GetBroadcastAllowList() || []);
@@ -12885,7 +12886,7 @@ function _(_) {
           (0, _.jsx)(_, {
             onButtonClick: async (_) => {
               let _ = new _(_);
-              return _.AddAccountToWhiteList(_.GetAccountID()), !0;
+              return (_.AddAccountToWhiteList(_.GetAccountID()), !0);
             },
             buttonText: _(`#Broadcast_whitelist_adduser`),
           }),
@@ -13097,7 +13098,7 @@ function _(_) {
     _ = _(() => {
       let _ = _.jsondata.broadcast_language,
         _ = -1;
-      return _ >= 0 && _ && _ < _.length && _[_] !== void 0 && (_ = _[_]), _;
+      return (_ >= 0 && _ && _ < _.length && _[_] !== void 0 && (_ = _[_]), _);
     });
   return _
     ? (0, _.jsx)(_, {
@@ -13265,7 +13266,7 @@ var _ = class _ {
               cancelToken: _?.token,
             }),
             _ = [];
-          _.data.dlcs &&
+          (_.data.dlcs &&
             _.data.dlcs.forEach((_) => {
               _.push({
                 appid: _.appid,
@@ -13283,7 +13284,7 @@ var _ = class _ {
                   is_released_somewhere: !!_.is_released_somewhere,
                 });
               }),
-            this.m_mapAppIDToSoundTracks.set(_, _);
+            this.m_mapAppIDToSoundTracks.set(_, _));
         } catch (_) {
           let _ = _(_);
           console.error(
@@ -13303,7 +13304,7 @@ var _ = class _ {
     }
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
     constructor() {
       _(this);
@@ -13379,7 +13380,7 @@ var _ = class _ {
             _(`#EventEmail_Template_Sub_` + _),
           ),
           onOK: () => {
-            _.RemoveSubSection(_), !_.BHasSomeSubSection() && _ && _();
+            (_.RemoveSubSection(_), !_.BHasSomeSubSection() && _ && _());
           },
         }),
         window,
@@ -13507,11 +13508,11 @@ var _ = class _ {
       });
     }
   };
-_([_], _.prototype, `OnHeadlineChange`, null),
+(_([_], _.prototype, `OnHeadlineChange`, null),
   _([_], _.prototype, `OnBodyChange`, null),
   _([_], _.prototype, `OnVideoChange`, null),
   _([_], _.prototype, `OnRemoveSubSection`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class extends _.Component {
   m_cancelSignal = _.default.CancelToken.source();
   state = {
@@ -13685,10 +13686,10 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnButtonLocChange`, null),
+(_([_], _.prototype, `OnButtonLocChange`, null),
   _([_], _.prototype, `OnDestinationChange`, null),
   _([_], _.prototype, `OnChangeStorePageURL`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class extends _.Component {
   state = {
     bIsValid: _.IsValidStoreURL(this.props.strExistingURL),
@@ -13707,7 +13708,7 @@ var _ = class extends _.Component {
       strDescription: _(`#EventEmail_Section_EnterSalesPage_ttip`),
       strTitle: _(`#EventEmail_Section_UpdateURL`),
       onOK: () => {
-        _(this.state.strURL), _();
+        (_(this.state.strURL), _());
       },
       onCancel: _,
       bOKDisabled: !this.state.bIsValid,
@@ -13722,14 +13723,14 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnURLUpdate`, null), (_ = _([_], _));
+(_([_], _.prototype, `OnURLUpdate`, null), (_ = _([_], _)));
 function _(_) {
   let { clanSteamID: _, section: _, lang: _, bEditor: _, artworkType: _ } = _,
     [_, _] = _.useState(_),
     _ = _.GetEditModel(),
     _ = _.useCallback(
       (_, _, _) => {
-        _.GetExtensionString(_) && _.SetImage(_.GetHashAndExt(_), _), _(_);
+        (_.GetExtensionString(_) && _.SetImage(_.GetHashAndExt(_), _), _(_));
       },
       [_],
     ),
@@ -13778,7 +13779,7 @@ var _ = class extends _.Component {
   };
   m_clanImageUploader = void 0;
   constructor(_) {
-    super(_), this.RefreshUploader();
+    (super(_), this.RefreshUploader());
   }
   componentDidUpdate(_) {
     (_.clanSteamID.GetAccountID() != this.props.clanSteamID.GetAccountID() ||
@@ -13796,8 +13797,8 @@ var _ = class extends _.Component {
       let _ = await this.m_clanImageUploader.UploadAllImages();
       for (let _ of _)
         if (!_.bSuccess || _.uploadResult.success !== 1)
-          (_.image.status = `failed`),
-            (_.image.message = _.uploadResult.message);
+          ((_.image.status = `failed`),
+            (_.image.message = _.uploadResult.message));
         else {
           _.image.status = `success`;
           let _ = _.GetExtensionString(_.uploadResult);
@@ -13814,7 +13815,7 @@ var _ = class extends _.Component {
         _ = Array.from(_);
       for (let _ = 0; _ && _ < _.length; _++) {
         let _ = _[_];
-        (_ = await this.m_clanImageUploader.AddImage(_, _)),
+        ((_ = await this.m_clanImageUploader.AddImage(_, _)),
           _ ||
             (console.error(
               `ClanImagePicker.OnDropFiles: failed on i=` +
@@ -13827,7 +13828,7 @@ var _ = class extends _.Component {
                 strDescription: _(`#ImagePicker_Error`, _.name),
               }),
               window,
-            ));
+            )));
       }
       return _;
     }
@@ -13860,13 +13861,13 @@ var _ = class extends _.Component {
             await this.m_clanImageUploader.AddExistingClanImage(_, _);
           } catch (_) {
             let _ = _(_);
-            console.error(`AddExistingClanImage: ` + _.strErrorMsg, _),
+            (console.error(`AddExistingClanImage: ` + _.strErrorMsg, _),
               _(
                 (0, _.jsx)(_, {
                   strDescription: _(`#EventError_Code`, _.strErrorMsg),
                 }),
                 window,
-              );
+              ));
           }
           this.setState({
             bDownloadFromClanImageStore: !1,
@@ -13916,11 +13917,11 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `DoUpload`, null),
+(_([_], _.prototype, `DoUpload`, null),
   _([_], _.prototype, `OnDropFiles`, null),
   _([_], _.prototype, `RenderInstructions`, null),
   _([_], _.prototype, `OnPreviousImageSelected`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = new URL(
     `../../../images/applications/community/Logo_Steamworks.png?v=valveisgoodatcaching`,
     import.meta.url,
@@ -14146,7 +14147,7 @@ var _ = class extends _.Component {
         label: _[0].capability,
         value: _[0],
       };
-    _.forEach((_) => {
+    (_.forEach((_) => {
       _._ === _.GetInternalTargetingPartnerCapability() &&
         (_ = {
           label: _.capability,
@@ -14156,7 +14157,7 @@ var _ = class extends _.Component {
       this.setState({
         capabilities: _,
         selectedCapability: _,
-      });
+      }));
   }
   GetEmailEditModel() {
     return new _(this.props.editModel);
@@ -14172,42 +14173,42 @@ var _ = class extends _.Component {
         },
         () => {
           let _ = new FileReader();
-          (_.onload = function () {
+          ((_.onload = function () {
             let _ = _.result
                 .toString()
                 .split(`
 `)
                 .map((_) => Number.parseInt(_)),
               _ = new Set(_);
-            _ == `app`
+            (_ == `app`
               ? _.GetEmailEditModel().SetInternalAppIDs(Array.from(_))
               : _.GetEmailEditModel().SetInternalPublisherIDs(Array.from(_)),
               _.setState({
                 readingFile: !1,
                 nDuplicatesRemoved: _.length - _.size,
                 file: null,
-              });
+              }));
           }),
             (_.onerror = function () {
-              console.error(
+              (console.error(
                 `DevEventRecipientOptions - Failed to read file`,
                 _,
               ),
                 _.setState({
                   readingFile: !1,
                   file: null,
-                });
+                }));
             }),
-            _.readAsText(this.state.file);
+            _.readAsText(this.state.file));
         },
       );
     }
-    this.m_appFileInput.current &&
+    (this.m_appFileInput.current &&
       this.m_appFileInput.current.value &&
       (this.m_appFileInput.current.value = null),
       this.m_pubFileInput.current &&
         this.m_pubFileInput.current.value &&
-        (this.m_pubFileInput.current.value = null);
+        (this.m_pubFileInput.current.value = null));
   }
   ShowTargets(_) {
     let _ = this.GetEmailEditModel(),
@@ -14536,10 +14537,10 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnFileChoice`, null),
+(_([_], _.prototype, `OnFileChoice`, null),
   _([_], _.prototype, `ShowTargets`, null),
   _([_], _.prototype, `ClearTargets`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAAAgCAYAAAAPHGYtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABo1JREFUeNrsWg1MVlUY/iDTElOcI9ZgZBorV8ywVFYGc05mZQbmMgoNk37NQq3IJZWoLf+l9eMqSQ1lpm4aWgStpauZYbl+wK3EssjKflYmtAyi59Hnbme3e7/v3o9PVtt9t2fnfPe+55x7z3Pe97znvV9cZ2dnKJD/pvTwqji5oLAPiuuAscBwYBDQR7dbgWZgP1APbN9UXXU8mN6uSVwkywEpyShKgTsMMiJJG1AJLAZJLcE0x5gckBKH4i5gCXBOlP3TesqACpAU+M9YkANieqN4GbgpRuPsYLcgqC2Y8i6QI2I4maNjPNYHwJhgL4qSHLmyzcCNUfTVAewGPtHvoUA2EG/o1DKoAEF/B1PvP1q7P0pidjFgwKR/YbPCdBQviSTKOOAR4Mlg6n1YDiYyBQUn92yffbwJXC/L4R6Va1ynFZ4B7FQITvkTyLATGci/xXQ5ZVEQw/NNkeo1wBxgr8D6awDZv026lF7AY8HUe7QcWE1/1I8AZ/lsvxYWMA3t6Q4n0jrw+y9ZIl1mHbAN157G73WoTzX2p1Rc/97D4XegiL4SSAR+VHCxBu0/ls5CFJdG6KoG+muk/wKKc130jkLvTofn4KKqAs4EGqCzyOV556IYCRyEzoMuOv0UDcfrPWpwrQD1nnw//H7dtJyJURBjRWBW+6UWMRTU23kNyNOlvUY7urrJHoi5GAUJuA8YpqwEX3wm8D7uD5DqKOCGCMgwus4No5fr8jh03ZOkU4axE130RkpnDnQud9HhgT5feoOhd772/1vNM6UVEIyNgpgTis5Ccoe/O+jwWm/V2233OGZFhDEYPPRV25kiipZUCHyGBfCz9J6hhapOEm5XfQHwi+r7Hfpnqmmjw8HZSYqMei9N5LMRnr/UflYEEbS8B2x6fI8kvcdgOznDoyDncUxOo+rvArcYZFlSaFy7yHbvCg9jDFTZjLFWq74HqMZLxhtWusV4+TyDnErc+ypM/024v9aDBZ+nSNN6V1rqdA/kTELbCzHGQeMayUo1lXj2g95WVGlp6+3kJPsk5j25LEsWA/swwAqU1iTSb19D4uWv7dmGZFxPwIO1hhnncyCHxEJ3h1ZWPdp0xOis1Fd7miktcsmmTJErJtGz5c4z0XYYdD8Kt6cDDykNZonjPoR+DqM47BSt8QEfBg55zJdN5QQZHR9FkSUX9JZAn5yle/Ptq0WSGGGsJ0Knst0UZsTfYOCCSVkQxuf7kWnAlzakhnFpm/A+DTpyhAwLdZK3Ae7BRbI8WuAYFJcBJPQ3T6E0BvwJoCWka7UzBHZbmSXQPeTA/BGgGEgTihl54IHmy/f6FvapTMMs4FNdZpQ1D/jQCAhOm2CMESiGWI+kstpy27jvFkh9A2xQBFaia7NVPuU7QyBXwRRLLQZNk2sqFlF8oANWOBrmZZK0h2XqfJMeRv1XDwTR7a0i0Pcl2uTzFbkxNF/ZhblntrzEg3VZZ7ocPEOOYfH9lFHZ4NJ2qebgbrTjgr9WVsf95UU/h1D7pHwNcIWmaSJITgYGmcG9woWY8SgalRFYGIGYHyLsN+wvQecl65kabZFO0mm2GlpFgX4maCGsVJrLkulh5rBJh3O6++26vMTrftnDw8o9oSo3/DbtTVwJV+HeMb0EQ+nlwD0+3n2fBx1OwgytuiaFsAXG/YYuzj83dbvlHMN7VaqeJ+s4OanAH4beUN0fjT4GObl6w4VNAAbooL/eV+JT4SeTk8+Hy3lpJXCD2yg/Wo56psx6iM+JqfegczOQ4kJ6nbEao5VsIylrCSOmSlsgwDNVqc2qUnWIjFNgMM9lzvZAd7fGWWEsds+Ws0tuaxY6YqT1nNId7S7tuC/lQzdLbXv6nJQOY3MNJ+N0VuK3pQsUznKFblHqyMk9fGeQ5vZxry5c+sbwBq3qa6vDpLdAp0LP1d+4ZWVCzBCbi2uEntuSnXKVzV6y0qtt8fi3iu/fsX9ihu5y5ZgOiEi/UoU+pwSpTe97ziKRYaVbUpQ+4QphFvkVnQPGKwLhSlgXxZj8ZFAeTH1kMVMgjMsftd3PVfi3TMm6zSLlauWWRkUxZnnwLce/5YSUiMzWOcKSVUoq8nzTIh+7TKT5lVqvB7BAgj94/D/cmuHe2rSvvBrDcU6SHRDTRXIMgnjGuDfk/J3GqxxXXmxC8J+1GLg1hxQGPyfM1UHL6z8/g7/jdgc5Zp4rdOpTrflHdivHZv6RnYfYbYEL60ZyAul++UeAAQDyv2dSS4HffQAAAABJRU5ErkJggg==`,
   _ = (_) => {
     let [_, _] = (0, _.useState)(_ ? void 0 : !1);
@@ -14585,7 +14586,7 @@ var _ = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAAAgCAYAAAAPHGYtAAAAG
     }
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
   };
 function _(_) {
@@ -14668,8 +14669,8 @@ var _ = _((_) => {
                 onChange: (_) => {
                   let { editModel: _ } = _,
                     _ = _.GetClanSteamID().GetAccountID();
-                  (_.CreateOrGetEmailSettings(_).bEnable = _),
-                    _.SetDirty(_.jsondata_email);
+                  ((_.CreateOrGetEmailSettings(_).bEnable = _),
+                    _.SetDirty(_.jsondata_email));
                 },
                 checked: _.BIsEmailEnabled(),
               }),
@@ -14783,7 +14784,7 @@ var _ = _((_) => {
     }
     OnTestEmail(_) {
       let { editModel: _ } = this.props;
-      _.preventDefault(),
+      (_.preventDefault(),
         this.props.bHasValidatedEmail && !_.BIsDirtyType(_.jsondata_email)
           ? _(
               (0, _.jsx)(_, {
@@ -14820,7 +14821,7 @@ var _ = _((_) => {
                   ),
                 }),
                 window,
-              );
+              ));
     }
     OnPrepareEmail(_) {
       _(
@@ -14882,7 +14883,7 @@ var _ = _((_) => {
         );
       } catch (_) {
         let _ = _(_);
-        console.error(`OnSetupAndFireEmail failed: ` + _.strErrorMsg),
+        (console.error(`OnSetupAndFireEmail failed: ` + _.strErrorMsg),
           _(
             (0, _.jsx)(_, {
               strTitle: _(`#Error_Message`),
@@ -14901,7 +14902,7 @@ var _ = _((_) => {
               }),
             }),
             window,
-          );
+          ));
       } finally {
         this.setState({
           bSettingUp: !1,
@@ -14948,12 +14949,12 @@ var _ = _((_) => {
       });
     }
   };
-_([_], _.prototype, `FireTestEmail`, null),
+(_([_], _.prototype, `FireTestEmail`, null),
   _([_], _.prototype, `OnTestEmail`, null),
   _([_], _.prototype, `OnPrepareEmail`, null),
   _([_], _.prototype, `OnSetupAndFireEmailConfirm`, null),
   _([_], _.prototype, `OnSetupAndFireEmail`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = _((_) => {
     let { editModel: _ } = _,
       _ = (_) => {
@@ -15005,17 +15006,17 @@ var _ = _((_) => {
       _ = _?.GetName();
     if (!_.BIsTargetingGamePlayers()) {
       if (_.BIsTargetingGameFollowers())
-        (_ = `#EventEmail_Reason_Follow`),
+        ((_ = `#EventEmail_Reason_Follow`),
           (_ = !0),
-          (_ = `#EventEmail_Footer_Reason_Followed`);
+          (_ = `#EventEmail_Footer_Reason_Followed`));
       else if (_.BIsTargetingGameWishlisters())
-        (_ = `#EventEmail_Reason_Wishlist`),
+        ((_ = `#EventEmail_Reason_Wishlist`),
           (_ = !0),
-          (_ = `#EventEmail_Footer_Reason_Wishlisted`);
+          (_ = `#EventEmail_Footer_Reason_Wishlisted`));
       else if (_.BIsTargetingSomeCreator()) {
-        (_ = `#EventEmail_Reason_Follow`),
+        ((_ = `#EventEmail_Reason_Follow`),
           (_ = !0),
-          (_ = `#EventEmail_Footer_Reason_Followed`);
+          (_ = `#EventEmail_Footer_Reason_Followed`));
         let _ = _.GetSomeCreatorTarget(),
           _ = _.GetAllCreatorClanIDs().find((_) => _ == _);
         if (_) {
@@ -15023,12 +15024,12 @@ var _ = _((_) => {
             _ = _.GetCreatorHome(_);
           if (_) {
             let _ = `developer`;
-            _.GetAllDeveloperCreatorClans().includes(_) ||
+            (_.GetAllDeveloperCreatorClans().includes(_) ||
               (_ = _.GetAllPublisherCreatorClans().includes(_)
                 ? `publisher`
                 : `franchise`),
               (_ = _.GetCreatorHomeURL(_)),
-              (_ = _.GetName());
+              (_ = _.GetName()));
           }
         }
       }
@@ -15229,7 +15230,7 @@ var _ = _((_) => {
       });
     }
   };
-_([_], _.prototype, `OnControlGroupSpinnerChange`, null), (_ = _([_], _));
+(_([_], _.prototype, `OnControlGroupSpinnerChange`, null), (_ = _([_], _)));
 var _ = class extends _.Component {
   state = {
     bLoadingCreator: !0,
@@ -15245,7 +15246,7 @@ var _ = class extends _.Component {
       include_basic_info: !0,
     });
     let _ = [];
-    (
+    ((
       await _.LoadCreatorHomeListForAppIncludeHiddden(
         _.GetAppID(),
         this.m_cancelSignal,
@@ -15259,7 +15260,7 @@ var _ = class extends _.Component {
           this.setState({
             bLoadingCreator: !1,
           });
-      });
+      }));
   }
   componentDidMount() {
     this.LoadCreatorHome();
@@ -15279,7 +15280,7 @@ var _ = class extends _.Component {
     else {
       let { editModel: _ } = this.props,
         _ = new _(_);
-      _.GetCreatorHomeListForAppIncludeHidden(_.GetAppID()).forEach((_) => {
+      (_.GetCreatorHomeListForAppIncludeHidden(_.GetAppID()).forEach((_) => {
         let _ = _.GetCreatorHomeByID(_);
         if (_ && !_.some((_) => _.clan_account_id === _.GetClanAccountID())) {
           let _ = (0, _.jsxs)(`a`, {
@@ -15294,7 +15295,7 @@ var _ = class extends _.Component {
               audience: _.GetNumFollowers(),
               label: _(`#EventEmail_Recipients_follower_creator`, _),
             });
-          _.push(
+          (_.push(
             (0, _.jsx)(
               _,
               {
@@ -15334,7 +15335,7 @@ var _ = class extends _.Component {
                   `RecipientToggle_player_` + _.clan_account_id,
                 ),
               ),
-              _.push(_));
+              _.push(_)));
         }
       }),
         _.length == 0 &&
@@ -15352,7 +15353,7 @@ var _ = class extends _.Component {
               },
               `creatorhome_plug`,
             ),
-          );
+          ));
     }
     return _;
   }
@@ -15465,7 +15466,7 @@ var _ = class extends _.Component {
     }
     OnLockEmail() {
       let { editModel: _ } = this.props;
-      new _(_).LockEmail(),
+      (new _(_).LockEmail(),
         this.setState(
           {
             state: `saving`,
@@ -15477,7 +15478,7 @@ var _ = class extends _.Component {
               });
             });
           },
-        );
+        ));
     }
     render() {
       switch (this.state.state) {
@@ -15562,7 +15563,7 @@ var _ = class extends _.Component {
       }
     }
   };
-_([_], _.prototype, `OnLockEmail`, null), (_ = _([_], _));
+(_([_], _.prototype, `OnLockEmail`, null), (_ = _([_], _)));
 var _ = 300,
   _ = class extends _.Component {
     state = {
@@ -15609,11 +15610,11 @@ var _ = 300,
       }
     }
     componentDidMount() {
-      this.RefreshIfNeeded(),
+      (this.RefreshIfNeeded(),
         (this.autoRefreshInterval = window.setInterval(
           this.RefreshIfNeeded,
           _ * 1e3,
-        ));
+        )));
     }
     componentDidUpdate(_) {
       this.props.editModel.GetGID() != _.editModel.GetGID() &&
@@ -15756,9 +15757,9 @@ var _ = 300,
       });
     }
   };
-_([_], _.prototype, `RefreshIfNeeded`, null),
+(_([_], _.prototype, `RefreshIfNeeded`, null),
   _([_], _.prototype, `RefreshStats`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = `-t8zrhkJpVk-`;
 function _(_) {
   let _ = _(_.appid);
@@ -16082,8 +16083,8 @@ var _ = _((_) => {
             !!_.IS_OGG &&
               (0, _.jsx)(_, {
                 onChange: (_) => {
-                  _ && (_.setEventType(14), _.SetSteamStoreSpotlight(_)),
-                    _.SetTag(`vo_marketing_message`, _);
+                  (_ && (_.setEventType(14), _.SetSteamStoreSpotlight(_)),
+                    _.SetTag(`vo_marketing_message`, _));
                 },
                 label: `(VO) Marketing Message Major Update`,
                 disabled:
@@ -16152,9 +16153,9 @@ var _ = _((_) => {
                 `#EventEditor_Options_RegionRestrictions_placeholder`,
               ),
               onChange: (_) => {
-                (_.GetEventModel().jsondata.country_restriction =
+                ((_.GetEventModel().jsondata.country_restriction =
                   _.currentTarget.value),
-                  _.SetDirty(_.description);
+                  _.SetDirty(_.description));
               },
               value: _,
             }),
@@ -16175,14 +16176,14 @@ var _ = _((_) => {
           bSending: !0,
         },
         () => {
-          _.FireTestEventNotifiation(
+          (_.FireTestEventNotifiation(
             _.GetClanSteamID(),
             _.GetGID(),
             this.m_cancelSignal,
           ),
             this.setState({
               bSending: !1,
-            });
+            }));
         },
       );
     }
@@ -16246,7 +16247,7 @@ var _ = _((_) => {
       });
     }
   };
-_([_], _.prototype, `TestFireEvent`, null), (_ = _([_], _));
+(_([_], _.prototype, `TestFireEvent`, null), (_ = _([_], _)));
 var _ = _((_) => {
   let { editModel: _ } = _;
   return _.BIsEventForOGGWithoutVisibleStorePage()
@@ -16300,10 +16301,10 @@ var _ = _((_) => {
     let { editModel: _ } = _;
     return (0, _.jsx)(_, {
       onChange: (_) => {
-        _
+        (_
           ? (_.AddTag(`enable_steam_china`), _.AddTag(`disable_steam_global`))
           : _.ClearTags([`enable_steam_china`, `disable_steam_global`]),
-          _(_);
+          _(_));
       },
       label: _(`#EventEditor_Options_ShowInSteamChina`),
       description: _(`#EventEditor_Options_ShowInSteamChina_Desc`),
@@ -16316,10 +16317,10 @@ var _ = _((_) => {
       ? null
       : (0, _.jsx)(_, {
           onChange: (_) => {
-            _
+            (_
               ? _.AddTag(`disable_steam_global`)
               : _.ClearTags([`disable_steam_global`]),
-              _(_);
+              _(_));
           },
           label: _(`#EventEditor_Options_ShowInSteamGlobal`),
           description: _(`#EventEditor_Options_ShowInSteamGlobal_Desc`),
@@ -16404,7 +16405,7 @@ var _ = _((_) => {
       );
     },
     _ = (_) => {
-      _.SetVisibilityPublishingSetup(_.immediate),
+      (_.SetVisibilityPublishingSetup(_.immediate),
         _(
           (0, _.jsx)(_, {
             editModel: _,
@@ -16416,7 +16417,7 @@ var _ = _((_) => {
             },
           }),
           _(_),
-        );
+        ));
     };
   if (_)
     return (0, _.jsx)(_, {
@@ -16573,7 +16574,7 @@ var _ = `oeK-Js89pJ0-`,
         _ == 0
           ? this.m_mapVisibilityUpdateChangeCallback
           : this.m_mapVisibilityLaunchChangeCallback;
-      return _.has(_) || _.set(_, new _()), _.get(_);
+      return (_.has(_) || _.set(_, new _()), _.get(_));
     }
     async LoadVisibilityRounds(_, _) {
       let _ =
@@ -16743,14 +16744,14 @@ function _(_) {
       _?.GetEventModel().GetLastUpdateTime(),
     ]);
   (0, _.useEffect)(() => {
-    _ &&
+    (_ &&
       _?.GetGID() != _ &&
       _.LoadEditorModel(_.GetClanSteamID(), _).then((_) => {
         _(_);
       }),
       _ &&
         !_ &&
-        _.GetLastUpdateTimeForEvent(_.GetClanSteamID(), _, null, null).then(_);
+        _.GetLastUpdateTimeForEvent(_.GetClanSteamID(), _, null, null).then(_));
   }, [_, _, _, _, _]);
   let [_, _] = (0, _.useState)(!1),
     _ = _();
@@ -16999,12 +17000,12 @@ async function _(_, _, _, _, _) {
       _.COMMUNITY_BASE_URL +
       `partnereventdata/ajaxrequestmarketingmessagemajorupdatereview`,
     _ = new URLSearchParams();
-  _.append(`sessionid`, _()),
+  (_.append(`sessionid`, _()),
     _.append(`clanAccountID`, `` + _.GetAccountID()),
     _.append(`appid`, `` + _),
     _.append(`gidClanEvent`, _),
     _.append(`partnerID`, `` + _),
-    _.append(`message`, _);
+    _.append(`message`, _));
   try {
     let _ = await _.default.post(_, _, {
       withCredentials: !0,
@@ -17048,8 +17049,8 @@ function _(_) {
             gidClanEvent: _,
             rgSalePresenters: _,
             fnCleanSaleEventPresenters: () => {
-              (_.GetEventModel().jsondata.sale_presenters = void 0),
-                _.SetDirty(_.jsondata_sales);
+              ((_.GetEventModel().jsondata.sale_presenters = void 0),
+                _.SetDirty(_.jsondata_sales));
             },
             bPublishTab: !0,
             bIsEventVisible: _,
@@ -17886,11 +17887,11 @@ function _() {
               );
           })
           .catch((_) => {
-            console.error(
+            (console.error(
               `Failed to rebuild the stripped tags for this event`,
               _,
             ),
-              _ || _(!0);
+              _ || _(!0));
           }),
         () => {
           _ = !0;
@@ -17933,10 +17934,10 @@ var _ = _(function (_) {
   _ = class extends _.Component {
     m_bRedirect = !1;
     constructor(_) {
-      super(_),
+      (super(_),
         (this.m_bRedirect =
           _.GetEditModel() === void 0 ||
-          _.GetEditModel().GetCategoryAsType() == 1);
+          _.GetEditModel().GetCategoryAsType() == 1));
     }
     render() {
       return this.m_bRedirect
@@ -17967,13 +17968,13 @@ function _(_) {
       _(_, _),
     ]),
     _ = [`background`, `capsule`];
-  _ > 0
+  (_ > 0
     ? _.push(`spotlight`)
     : _.IS_OGG &&
       _ &&
       (_.push(`localized_store_app_spotlight`),
       _.push(`localized_store_app_spotlight_mobile`)),
-    _ && _.push(`bestofyear_banner`, `bestofyear_banner_mobile`);
+    _ && _.push(`bestofyear_banner`, `bestofyear_banner_mobile`));
   let _ = _.includes(`spotlight`),
     _ = _.includes(`localized_store_app_spotlight`),
     _ = _.includes(`localized_store_app_spotlight_mobile`);
@@ -18362,10 +18363,10 @@ function _(_) {
                   iDoorIndex: _,
                 })
                   .then((_) => {
-                    _ || _(!0), _(!1);
+                    (_ || _(!0), _(!1));
                   })
                   .catch(() => {
-                    _(!0), _(!1);
+                    (_(!0), _(!1));
                   }))
               : _());
         },
@@ -18687,7 +18688,7 @@ function _(_) {
     _ = _(_.LANGUAGE);
   return (
     _.useEffect(() => {
-      _.Init(_(new _(_.WEBAPI_BASE_URL))), _.Init(), _.Init(), _(!1);
+      (_.Init(_(new _(_.WEBAPI_BASE_URL))), _.Init(), _.Init(), _(!1));
     }, []),
     _ || !_
       ? (0, _.jsx)(_, {

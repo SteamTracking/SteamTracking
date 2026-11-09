@@ -62,9 +62,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [5], null);
+        _.Message.initialize(this, _, 0, -1, [5], null));
     }
     static sm_m;
     static sm_mbf;
@@ -149,7 +149,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -170,14 +170,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CNewsFeedDef`;
@@ -186,9 +186,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [11], null);
+        _.Message.initialize(this, _, 0, -1, [11], null));
     }
     static sm_m;
     static sm_mbf;
@@ -291,7 +291,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -312,14 +312,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CNewsFeedPostDef`;
@@ -328,9 +328,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.content || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -356,7 +356,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -377,14 +377,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CNews_ConvertHTMLToBBCode_Request`;
@@ -393,9 +393,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.converted_content || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -420,7 +420,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -441,14 +441,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CNews_ConvertHTMLToBBCode_Response`;
@@ -457,9 +457,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.rss_message || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -513,7 +513,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -534,14 +534,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CNewsPartnerEventPreview`;
@@ -550,9 +550,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.rss_url || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -582,7 +582,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -603,14 +603,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CNews_PreviewPartnerEvents_Request`;
@@ -619,9 +619,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.rss_url || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [2], null);
+        _.Message.initialize(this, _, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -652,7 +652,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -673,14 +673,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CNews_PreviewPartnerEvents_Response`;
@@ -689,9 +689,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clan_account_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -711,7 +711,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -732,14 +732,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CNews_GetNewsFeedByRepublishClan_Request`;
@@ -748,9 +748,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.feeds || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -771,7 +771,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -792,14 +792,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CNews_GetNewsFeedByRepublishClan_Response`;
@@ -808,9 +808,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.post || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -834,7 +834,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -855,14 +855,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CNews_PublishPartnerEvent_Request`;
@@ -871,9 +871,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clan_event_gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -898,7 +898,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -919,14 +919,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CNews_PublishPartnerEvent_Response`;
@@ -935,9 +935,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.news_feed_gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -969,7 +969,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -990,14 +990,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CNews_GetBatchPublishedPartnerEvent_Request`;
@@ -1006,9 +1006,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clan_account_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [3, 4, 5], null);
+        _.Message.initialize(this, _, 0, -1, [3, 4, 5], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1056,7 +1056,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1077,14 +1077,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CNews_GetBatchPublishedPartnerEvent_Response`;
@@ -1139,7 +1139,7 @@ var _ = class {
   m_eCuratorLanguage = void 0;
   m_mapURLToPosted = new Map();
   constructor(_) {
-    _(this),
+    (_(this),
       (this.m_clanAccountID = _.clanid),
       (this.m_clanSteamID = _.InitFromClanID(
         this.m_clanAccountID,
@@ -1150,7 +1150,7 @@ var _ = class {
       (this.m_eRSSFeedLanguage = _.rss_feed_language),
       (this.m_rtimeRSSLastChecked = _.rss_feed_last_checked),
       (this.m_nPollIntervalSeconds = _.poll_interval),
-      (this.m_eCuratorLanguage = _.curation_language);
+      (this.m_eCuratorLanguage = _.curation_language));
   }
   GetFeedLanguageHandleUnset() {
     return this.m_eRSSFeedLanguage == -1
@@ -1193,9 +1193,9 @@ var _ = class {
         null
       );
     let _ = _.Init(_);
-    _.Body().set_rss_url(_),
+    (_.Body().set_rss_url(_),
       _.Body().set_lang(this.GetFeedLanguageHandleUnset()),
-      _.Body().set_clan_account_id(this.GetClanAccountID());
+      _.Body().set_clan_account_id(this.GetClanAccountID()));
     let _ = await _.PreviewPartnerEvents(_.Get().GetCuratorTransport(), _);
     return (
       _.GetEResult() != 1 &&
@@ -1210,14 +1210,14 @@ var _ = class {
   }
   async FetchPublishedEvents(_ = 100) {
     if (!this.BIsLoggedIn())
-      return console.error(`FetchPublishedEvents: User not logged in`), null;
+      return (console.error(`FetchPublishedEvents: User not logged in`), null);
     if (!this.m_strRSSGID)
       return (
         console.error(`FetchPublishedEvents: Need to create a news feed first`),
         null
       );
     let _ = _.Init(_);
-    _.Body().set_news_feed_gid(this.m_strRSSGID), _.Body().set_amount(_);
+    (_.Body().set_news_feed_gid(this.m_strRSSGID), _.Body().set_amount(_));
     let _ = await _.GetBatchPublishedPartnerEvent(
       _.Get().GetCuratorTransport(),
       _,
@@ -1254,11 +1254,11 @@ var _ = class {
   }
   async CreateOrUpdateRSSNewFeed(_, _ = 0) {
     let _ = new FormData();
-    _.append(`sessionid`, _()),
+    (_.append(`sessionid`, _()),
       _.append(`gid`, this.m_strRSSGID),
       _.append(`lang`, `` + this.GetCuratorLanguage()),
       _.append(`rss_url`, _),
-      _.append(`polling_interval`, `` + _);
+      _.append(`polling_interval`, `` + _));
     let _ =
         _.STORE_BASE_URL +
         `curator/` +
@@ -1270,9 +1270,9 @@ var _ = class {
     return (
       _.data.success == 1 &&
         _(() => {
-          (this.m_strRSSGID = _.data.gid),
+          ((this.m_strRSSGID = _.data.gid),
             (this.m_strRSSFeedURL = _),
-            (this.m_nPollIntervalSeconds = _);
+            (this.m_nPollIntervalSeconds = _));
         }),
       _.data
     );
@@ -1283,7 +1283,7 @@ var _ = class {
   async CheckForNewUpdate() {
     if (this.m_strRSSGID) {
       let _ = new FormData();
-      _.append(`sessionid`, _()), _.append(`gid`, this.m_strRSSGID);
+      (_.append(`sessionid`, _()), _.append(`gid`, this.m_strRSSGID));
       let _ =
         _.STORE_BASE_URL +
         `curator/` +
@@ -1307,7 +1307,7 @@ var _ = class {
         null
       );
     let _ = new _();
-    _.set_gid(_.post.gid),
+    (_.set_gid(_.post.gid),
       _.set_news_feed_gid(this.m_strRSSGID),
       _.set_title(_.post.title),
       _.set_url(_.post.url),
@@ -1321,9 +1321,9 @@ var _ = class {
       _.set_recommendation_state(_.post.recommendation_state),
       _.set_received_for_free(_.post.received_for_free),
       _.set_received_compensation(_.post.received_compensation),
-      _.set_blurb(_.post.blurb);
+      _.set_blurb(_.post.blurb));
     let _ = _.Init(_);
-    _.Body().set_post(_), _.Body().set_draft(_);
+    (_.Body().set_post(_), _.Body().set_draft(_));
     let _ = await _.PublishPartnerEvent(_.Get().GetCuratorTransport(), _);
     return (
       _.GetEResult() == 1
@@ -1347,13 +1347,13 @@ var _ = class {
     );
   }
 };
-_([_], _.prototype, `m_strRSSFeedURL`, void 0),
+(_([_], _.prototype, `m_strRSSFeedURL`, void 0),
   _([_], _.prototype, `m_strRSSGID`, void 0),
   _([_], _.prototype, `m_rtimeRSSLastChecked`, void 0),
   _([_], _.prototype, `m_nPollIntervalSeconds`, void 0),
   _([_], _.prototype, `m_eRSSFeedLanguage`, void 0),
   _([_], _.prototype, `m_eCuratorLanguage`, void 0),
-  _([_], _.prototype, `m_mapURLToPosted`, void 0);
+  _([_], _.prototype, `m_mapURLToPosted`, void 0));
 var _ = class _ {
   constructor() {
     _(this);
@@ -1388,13 +1388,13 @@ var _ = class _ {
   }
   Init() {
     let _ = _(`curatoradmin`, `application_config`);
-    this.ValidateStoreDefault(_) &&
+    (this.ValidateStoreDefault(_) &&
       ((this.m_defaultAdmin = new _(_)),
       this.m_mapClanAccountToAdmin.set(_.clanid, this.m_defaultAdmin)),
       this.ValidateWebAPI(_) &&
         (this.m_transport = _(
           new _(_.WEBAPI_BASE_URL, _.webapi_token),
-        ).GetServiceTransport());
+        ).GetServiceTransport()));
   }
   ValidateStoreDefault(_) {
     let _ = _;
@@ -1438,11 +1438,11 @@ var _ = class _ {
   async FlushPendingClanInfo() {
     let _ = this.m_PendingClanInfoResolve,
       _ = Array.from(this.m_setPendingClanInfo);
-    (this.m_PendingClanInfoPromise = void 0),
+    ((this.m_PendingClanInfoPromise = void 0),
       (this.m_PendingClanInfoResolve = void 0),
       this.m_setPendingClanInfo.clear(),
       await this.LoadBatchedClanRSSAdminInfo(_),
-      _();
+      _());
   }
   EnsureClanInfoLoaded(_) {
     let _ = _.filter(
@@ -1460,9 +1460,9 @@ var _ = class _ {
   async LoadBatchedClanRSSAdminInfo(_) {
     this.m_cClanInfoRequestsInFlight++;
     let _ = _.filter((_) => !this.m_mapClanAccountToAdmin.has(_));
-    for (; _.length > 0; ) {
+    for (; _.length > 0;) {
       let _ = Math.min(50, _.length);
-      _.slice(0, _), (_ = _.slice(_));
+      (_.slice(0, _), (_ = _.slice(_)));
       try {
         let _ = _.STORE_BASE_URL + `events_admin/ajaxgetrssadmininfo`,
           _ = {
@@ -1480,12 +1480,12 @@ var _ = class _ {
           Array.isArray(_.data.rss_admin_infos)
         )
           _(() => {
-            _.data.rss_admin_infos.forEach((_) => {
+            (_.data.rss_admin_infos.forEach((_) => {
               this.m_mapClanAccountToAdmin.set(_.clanid, new _(_));
             }),
               _.data.rss_event_stats.forEach((_) => {
                 this.m_mapClanToEventRSSStats.set(_.clan_account_id, _);
-              });
+              }));
           });
         else {
           let _ = _(_.data || {});
@@ -1505,8 +1505,8 @@ var _ = class _ {
     this.m_cClanInfoRequestsInFlight--;
   }
 };
-_([_.shallow], _.prototype, `m_mapClanAccountToAdmin`, void 0),
-  _([_.shallow], _.prototype, `m_mapClanToEventRSSStats`, void 0);
+(_([_.shallow], _.prototype, `m_mapClanAccountToAdmin`, void 0),
+  _([_.shallow], _.prototype, `m_mapClanToEventRSSStats`, void 0));
 var _ = class _ {
     static s_CuratorStore;
     m_mapClanToRecommendation = new Map();
@@ -1590,24 +1590,24 @@ var _ = class _ {
       });
     }
     OnCreateOrSaveFeed(_) {
-      _.preventDefault(),
+      (_.preventDefault(),
         _(
           (0, _.jsx)(_, {
             strRSSUrl: this.state.strRssURL,
             admin: this.m_Admin,
           }),
           _(_),
-        );
+        ));
     }
     OnRevert(_) {
-      _.preventDefault(),
+      (_.preventDefault(),
         this.setState({
           strRssURL: this.m_Admin.GetRSSUrl(),
-        });
+        }));
     }
     render() {
       let _ = this.state.strRssURL === this.m_Admin.GetRSSUrl();
-      if (window.Prototype !== void 0) return window.location.reload(), null;
+      if (window.Prototype !== void 0) return (window.location.reload(), null);
       let _ = _(_(this.m_Admin.GetFeedLanguageHandleUnset())),
         _ = _.Get().GetDefaultAdmin();
       return (0, _.jsxs)(`div`, {
@@ -1729,10 +1729,10 @@ var _ = class _ {
       });
     }
   };
-_([_], _.prototype, `OnChangeActualRSSURL`, null),
+(_([_], _.prototype, `OnChangeActualRSSURL`, null),
   _([_], _.prototype, `OnCreateOrSaveFeed`, null),
   _([_], _.prototype, `OnRevert`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = _,
   _ = class extends _.Component {
     state = {
@@ -1757,7 +1757,7 @@ var _ = _,
         _ = [];
       if (this.state.previews) {
         let _ = this.state.previews;
-        (_ = _.sort((_, _) => {
+        ((_ = _.sort((_, _) => {
           let _ = _.MapArticleURLToClanEventGID(_.post.url),
             _ = _.MapArticleURLToClanEventGID(_.post.url),
             _ = _ ? _.GetClanEventModel(_) : null,
@@ -1783,7 +1783,7 @@ var _ = _,
                 `id: ` + _.unique_id,
               ),
             );
-          });
+          }));
       }
       return _;
     }
@@ -1818,11 +1818,11 @@ var _ = _,
             if (
               (_.results.forEach((_) => {
                 let _ = _.MapArticleURLToClanEventGID(_.post.url);
-                _ && _.push(_),
+                (_ && _.push(_),
                   _.post.appids &&
                     _.post.appids.length === 1 &&
                     _.post.recommendation_state !== 0 &&
-                    _.push(_.post.appids[0]);
+                    _.push(_.post.appids[0]));
               }),
               _.length > 0 &&
                 (await _.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
@@ -1908,9 +1908,9 @@ var _ = _,
       });
     }
   };
-_([_], _.prototype, `GetRSSPreviewURL`, null),
+(_([_], _.prototype, `GetRSSPreviewURL`, null),
   _([_], _.prototype, `OnLoadPreview`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class extends _.Component {
   state = {};
   OnToggleChannelAutomation(_) {
@@ -1949,7 +1949,7 @@ var _ = class extends _.Component {
       );
   }
   async OnQueueScan(_) {
-    this.setState({
+    (this.setState({
       strReasonWaiting: _(`#CuratorAdmin_RSSFeed_scannow`),
     }),
       this.props.admin
@@ -1976,7 +1976,7 @@ var _ = class extends _.Component {
           this.setState({
             strReasonWaiting: void 0,
           }),
-        );
+        ));
   }
   render() {
     return this.props.admin.BHasSavedRSSURL()
@@ -2022,9 +2022,9 @@ var _ = class extends _.Component {
       : null;
   }
 };
-_([_], _.prototype, `OnToggleChannelAutomation`, null),
+(_([_], _.prototype, `OnToggleChannelAutomation`, null),
   _([_], _.prototype, `OnQueueScan`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class extends _.Component {
   state = {
     clan_event_gid: this.props.admin.MapArticleURLToClanEventGID(
@@ -2041,17 +2041,17 @@ var _ = class extends _.Component {
     if (this.state.clan_event_gid) {
       let _ = this.props.admin.GetClanSteamID(),
         _ = _.GetClanEventModel(this.state.clan_event_gid);
-      (_ ||= await _.LoadHiddenPartnerEvent(_, this.state.clan_event_gid)),
+      ((_ ||= await _.LoadHiddenPartnerEvent(_, this.state.clan_event_gid)),
         this.setState({
           bLoadingPartnerEvent: !1,
           existingEventModel: _,
-        });
+        }));
     }
   }
   OnOpenPreviewAsPartnerEvent(_) {
     let { newsData: _, clanSteamID: _ } = this.props,
       _ = new _();
-    (_.GID = `PreviewPartnerEventRow_0`),
+    ((_.GID = `PreviewPartnerEventRow_0`),
       (_.clanSteamID = _),
       (_.postTime = Date.now() / 1e3),
       (_.startTime = Date.now() / 1e3),
@@ -2062,9 +2062,9 @@ var _ = class extends _.Component {
       _.name.set(0, _.title),
       _.description.set(0, _.desc),
       this.ValidateJSONDefault(_.jsondata) && (_.jsondata = _.jsondata),
-      _.jsondata.read_more_link || (_.jsondata.read_more_link = _.unique_id);
+      _.jsondata.read_more_link || (_.jsondata.read_more_link = _.unique_id));
     let _ = this.props.admin.GetFeedLanguageHandleUnset();
-    !_.jsondata.localized_summary &&
+    (!_.jsondata.localized_summary &&
       _.post.event_summary &&
       ((_.jsondata.localized_summary = _(
         _.jsondata.localized_summary,
@@ -2082,20 +2082,20 @@ var _ = class extends _.Component {
         )),
         (_.jsondata.localized_subtitle[0] = _.post.event_subtitle),
         _ != 0 && (_.jsondata.localized_subtitle[_] = _.post.event_subtitle)),
-      this.ShowModalEvent(_);
+      this.ShowModalEvent(_));
   }
   OnViewEvent() {
     this.ShowModalEvent(_.GetClanEventModel(this.state.clan_event_gid));
   }
   ShowModalEvent(_) {
     let _ = document.getElementById(`curator_header_area_ctn_id`);
-    _ &&
+    (_ &&
       (_
         ? _.classList.add(`curator_header_area_ctn_hideme`)
         : _.classList.remove(`curator_header_area_ctn_hideme`)),
       this.setState({
         eventModelForPreviewNow: _,
-      });
+      }));
   }
   ValidateJSONDefault(_) {
     let _ = _;
@@ -2301,7 +2301,7 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `DoPartnerEventLoad`, null),
+(_([_], _.prototype, `DoPartnerEventLoad`, null),
   _([_], _.prototype, `OnOpenPreviewAsPartnerEvent`, null),
   _([_], _.prototype, `OnViewEvent`, null),
   _([_], _.prototype, `OnPostNewsEvent`, null),
@@ -2309,7 +2309,7 @@ _([_], _.prototype, `DoPartnerEventLoad`, null),
   _([_], _.prototype, `HideModalEvent`, null),
   _([_], _.prototype, `OnClanEventCreateSuccess`, null),
   _([_], _.prototype, `OnShowRawRSS`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class _ extends _.Component {
   state = {
     initialState: _.DetermineStartState(this.props),
@@ -2580,12 +2580,11 @@ var _ = class _ extends _.Component {
     }
   }
 };
-_([_], _.prototype, `OnCreateNewsFeed`, null),
+(_([_], _.prototype, `OnCreateNewsFeed`, null),
   _([_], _.prototype, `DoCreateNewsFeed`, null),
   _([_], _.prototype, `OnCreatePost`, null),
   _([_], _.prototype, `DoCreatePost`, null),
   _([_], _.prototype, `OnChangeDraftMode`, null),
   _([_], _.prototype, `OnChangePermissionsCreateFeed`, null),
   _([_], _.prototype, `OnChangeConductCreateFeed`, null),
-  _([_], _.prototype, `GetStrTitle`, null);
-export { _, _, _ };
+  _([_], _.prototype, `GetStrTitle`, null));

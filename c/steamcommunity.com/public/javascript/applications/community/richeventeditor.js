@@ -179,15 +179,15 @@ function _(_) {
     } = _,
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]),
     _ = _.useCallback(
       (_, _) => {
-        _({
+        (_({
           videoID: _,
           align: _,
         }),
-          _();
+          _());
       },
       [_, _],
     );
@@ -240,7 +240,7 @@ function _(_) {
     [_, _] = _.useState(void 0),
     _ = _.useCallback(() => {
       let { strVideoID: _ } = _(_);
-      return _ ? _(_, _) : _(_(`#EventEditor_InsertYouTube_NoURL`)), !1;
+      return (_ ? _(_, _) : _(_(`#EventEditor_InsertYouTube_NoURL`)), !1);
     }, [_, _, _]),
     _ = _.useCallback((_) => {
       _ && (_.element.focus(), _.element.select());
@@ -309,7 +309,7 @@ function _(_) {
       strTitle: _(`#MeetSteam_create_title`),
       onOK: () => _(_, _),
       closeModal: () => {
-        _(_(!0, null)), _(_(!0, null)), _();
+        (_(_(!0, null)), _(_(!0, null)), _());
       },
       bOKDisabled: !_ == null,
       children: (0, _.jsxs)(`div`, {
@@ -336,10 +336,10 @@ function _(_) {
     children: (0, _.jsx)(_, {
       strTitle: _(`#MeetSteam_edit_title`),
       onOK: () => {
-        _(_), _();
+        (_(_), _());
       },
       onCancel: () => {
-        _(_(!1, _)), _();
+        (_(_(!1, _)), _());
       },
       children: (0, _.jsx)(`div`, {
         className: _,
@@ -360,10 +360,10 @@ function _(_) {
     children: (0, _.jsx)(_, {
       strTitle: _(_ ? `#MeetSteam_create_title` : `#MeetSteam_edit_title`),
       onOK: () => {
-        _(_), _();
+        (_(_), _());
       },
       onCancel: () => {
-        _(_(_, _)), _();
+        (_(_(_, _)), _());
       },
       bOKDisabled: !_,
       children: (0, _.jsx)(`div`, {
@@ -389,12 +389,12 @@ function _(_) {
           let _ = {
             ..._,
           };
-          (_.localized_session_title = _.Set(
+          ((_.localized_session_title = _.Set(
             _.localized_session_title,
             _,
             _.currentTarget.value,
           )),
-            _(_);
+            _(_));
         },
       }),
       (0, _.jsx)(_, {
@@ -408,12 +408,12 @@ function _(_) {
           let _ = {
             ..._,
           };
-          (_.localized_session_description = _.Set(
+          ((_.localized_session_description = _.Set(
             _.localized_session_description,
             _,
             _.currentTarget.value,
           )),
-            _(_);
+            _(_));
         },
       }),
       (0, _.jsx)(_, {
@@ -425,12 +425,12 @@ function _(_) {
           let _ = {
             ..._,
           };
-          (_.localized_intended_audience = _.Set(
+          ((_.localized_intended_audience = _.Set(
             _.localized_intended_audience,
             _,
             _.currentTarget.value,
           )),
-            _(_);
+            _(_));
         },
       }),
       (0, _.jsxs)(_, {
@@ -449,12 +449,12 @@ function _(_) {
           let _ = {
             ..._,
           };
-          (_.localized_sesssion_faq = _.Set(
+          ((_.localized_sesssion_faq = _.Set(
             _.localized_sesssion_faq,
             _,
             _.currentTarget.value,
           )),
-            _(_);
+            _(_));
         },
       }),
       (0, _.jsx)(_, {
@@ -463,7 +463,7 @@ function _(_) {
           let _ = {
             ..._,
           };
-          (_.ask_registration_question = _), _(_);
+          ((_.ask_registration_question = _), _(_));
         },
         label: `Ask partner to tell us what they want to learn from the sessions`,
       }),
@@ -494,10 +494,10 @@ function _(_) {
                   let _ = {
                     ..._,
                   };
-                  (_.group_visibility_tokens[_] = Number.parseInt(
+                  ((_.group_visibility_tokens[_] = Number.parseInt(
                     _.currentTarget.value,
                   )),
-                    _(_);
+                    _(_));
                 },
                 label: `Visibility Token`,
               },
@@ -509,8 +509,11 @@ function _(_) {
               let _ = {
                 ..._,
               };
-              (_.group_visibility_tokens = [..._.group_visibility_tokens, 1e4]),
-                _(_);
+              ((_.group_visibility_tokens = [
+                ..._.group_visibility_tokens,
+                1e4,
+              ]),
+                _(_));
             },
             children: `Add Token`,
           }),
@@ -520,11 +523,11 @@ function _(_) {
                 let _ = {
                   ..._,
                 };
-                (_.group_visibility_tokens = _.group_visibility_tokens.slice(
+                ((_.group_visibility_tokens = _.group_visibility_tokens.slice(
                   0,
                   -1,
                 )),
-                  _(_);
+                  _(_));
               },
               children: `Remove Last Token`,
             }),
@@ -883,11 +886,11 @@ function _(_) {
     ),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]);
   return !_ || _.GetClanAccountID() != _()
     ? (0, _.jsx)(`div`, {
@@ -934,8 +937,8 @@ function _(_) {
               fnUpdateGroupSession: (_) => {
                 let { groupIndex: _ } = _(_.group_id),
                   _ = _.GetEditModel();
-                (_.GetEventModel().jsondata.meet_steam_groups[_] = _),
-                  _.SetDirty(_.description);
+                ((_.GetEventModel().jsondata.meet_steam_groups[_] = _),
+                  _.SetDirty(_.description));
               },
             }),
           !!_ &&
@@ -948,10 +951,10 @@ function _(_) {
                   let { groupIndex: _ } = _(_.group_id),
                     _ = _.GetEditModel(),
                     _ = [..._.GetEventModel().jsondata.meet_steam_groups];
-                  _.splice(_, 1),
+                  (_.splice(_, 1),
                     (_.GetEventModel().jsondata.meet_steam_groups = _),
                     _.SetDirty(_.description),
-                    _();
+                    _());
                 },
                 closeModal: _,
               }),
@@ -964,7 +967,7 @@ function _(_) {
     _ = _(() => _.sessions || []),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]);
   return _
     ? (0, _.jsxs)(_, {
@@ -994,9 +997,9 @@ function _(_) {
               fnUpdateSession: (_) => {
                 let _ = _.GetEditModel(),
                   _ = [..._.sessions, _];
-                _.sort((_, _) => _.rtime_start - _.rtime_start),
+                (_.sort((_, _) => _.rtime_start - _.rtime_start),
                   (_.sessions = _),
-                  _.SetDirty(_.description);
+                  _.SetDirty(_.description));
               },
             }),
         ],
@@ -1013,11 +1016,11 @@ function _(_) {
     }),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]);
   return (0, _.jsxs)(_.Fragment, {
     children: [
@@ -1055,11 +1058,11 @@ function _(_) {
                   _ = [
                     ..._.GetEventModel().jsondata.meet_steam_groups[_].sessions,
                   ];
-                (_[_] = _),
+                ((_[_] = _),
                   _.sort((_, _) => _.rtime_start - _.rtime_start),
                   (_.GetEventModel().jsondata.meet_steam_groups[_].sessions =
                     _),
-                  _.SetDirty(_.description);
+                  _.SetDirty(_.description));
               },
             }),
           !!_ &&
@@ -1075,11 +1078,11 @@ function _(_) {
                       ..._.GetEventModel().jsondata.meet_steam_groups[_]
                         .sessions,
                     ];
-                  _.splice(_, 1),
+                  (_.splice(_, 1),
                     _.sort((_, _) => _.rtime_start - _.rtime_start),
                     (_.GetEventModel().jsondata.meet_steam_groups[_].sessions =
                       _),
-                    _.SetDirty(_.description);
+                    _.SetDirty(_.description));
                 },
                 closeModal: _,
               }),
@@ -1262,7 +1265,7 @@ function _(_) {
         : `Create Meet Steam Schedule View`,
       onOK: () => _(_),
       closeModal: () => {
-        _(_(!_, _)), _();
+        (_(_(!_, _)), _());
       },
       children: (0, _.jsxs)(`div`, {
         className: void 0,
@@ -1299,11 +1302,11 @@ function _(_) {
         let _ = {
           ..._,
         };
-        (_.session_breaks = _.session_breaks ? [..._.session_breaks] : []),
+        ((_.session_breaks = _.session_breaks ? [..._.session_breaks] : []),
           _ < _.session_breaks.length
             ? (_.session_breaks[_] = _)
             : _.session_breaks.push(_),
-          _(_);
+          _(_));
       },
       [_, _],
     );
@@ -1328,7 +1331,7 @@ function _(_) {
         onClick: () => {
           let _ = _.session_breaks ? [..._.session_breaks] : [],
             _ = Math.floor(1 + Math.random() * 1e5);
-          for (; _.findIndex((_) => _.break_id == _) >= 0; )
+          for (; _.findIndex((_) => _.break_id == _) >= 0;)
             _ = Math.floor(1 + Math.random() * 1e5);
           _(
             {
@@ -1395,7 +1398,7 @@ function _(_) {
           let _ = {
             ..._,
           };
-          (_.localized_break_description[_] = _.currentTarget.value), _(_);
+          ((_.localized_break_description[_] = _.currentTarget.value), _(_));
         },
       }),
       (0, _.jsx)(_, {
@@ -1416,11 +1419,11 @@ function _(_) {
     ),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]);
   return !_ || _.GetClanAccountID() != _()
     ? (0, _.jsx)(`div`, {
@@ -1454,8 +1457,8 @@ function _(_) {
               inputScheduleModel: _,
               fnUpdateSession: (_) => {
                 let { scheduleIndex: _ } = _(_.schedule_id);
-                (_.GetEventModel().jsondata.meet_steam_schedules[_] = _),
-                  _.SetDirty(_.description);
+                ((_.GetEventModel().jsondata.meet_steam_schedules[_] = _),
+                  _.SetDirty(_.description));
               },
             }),
           !!_ &&
@@ -1468,10 +1471,10 @@ function _(_) {
                   let { scheduleIndex: _ } = _(_.schedule_id),
                     _ = _.GetEditModel(),
                     _ = [..._.GetEventModel().jsondata.meet_steam_schedules];
-                  _.splice(_, 1),
+                  (_.splice(_, 1),
                     (_.GetEventModel().jsondata.meet_steam_schedules = _),
                     _.SetDirty(_.description),
-                    _();
+                    _());
                 },
                 closeModal: _,
               }),
@@ -1485,13 +1488,13 @@ function _(_) {
     [_, _] = _.useState(!1),
     _ = _.useCallback(
       (_, _) => {
-        _.dispatch(
+        (_.dispatch(
           _.state._.insert(
             _.state.selection._,
             _.nodes.emoticon.create(null, _.text(_)),
           ),
         ),
-          _ || _.focus();
+          _ || _.focus());
       },
       [_, _],
     ),
@@ -1543,7 +1546,7 @@ function _(_) {
       strTitle: _(`#UserPolls_Create_title`),
       onOK: () => _(_),
       closeModal: () => {
-        _(_(!0, null)), _();
+        (_(_(!0, null)), _());
       },
       children: (0, _.jsx)(`div`, {
         className: _,
@@ -1619,12 +1622,12 @@ function _(_) {
           let _ = {
             ..._,
           };
-          (_.localized_poll_description = _.Set(
+          ((_.localized_poll_description = _.Set(
             _.localized_poll_description,
             _,
             _.currentTarget.value,
           )),
-            _(_);
+            _(_));
         },
       }),
       (0, _.jsx)(_, {
@@ -1668,8 +1671,8 @@ function _(_) {
     [_] = _(() => [_.user_poll_background]),
     _ = (0, _.useCallback)(
       (_, _, _, _, _) => {
-        _(_ != null && _ >= 0 && _ < 32, `Unexpected value for elang: ` + _),
-          _(_ === `user_poll_background`, `Unexpected artwork type ` + _);
+        (_(_ != null && _ >= 0 && _ < 32, `Unexpected value for elang: ` + _),
+          _(_ === `user_poll_background`, `Unexpected artwork type ` + _));
         let _ = _(_, _);
         _.image &&
           _({
@@ -1770,9 +1773,9 @@ function _(_) {
                   ..._,
                   voter_eligibility: _.data,
                 };
-                _.data == _.k_EPollVoter_MinPlayTime &&
+                (_.data == _.k_EPollVoter_MinPlayTime &&
                   (_.voter_min_playtime_seconds = 5 * _),
-                  _(_);
+                  _(_));
               }
             },
             bDisableMouseOverlay: !0,
@@ -1955,10 +1958,10 @@ function _(_) {
     children: (0, _.jsx)(_, {
       strTitle: _(_ ? `#UserPolls_Option_Create` : `#UserPolls_Option_Edit`),
       onOK: () => {
-        _(_), _();
+        (_(_), _());
       },
       onCancel: () => {
-        _(_(_, _)), _();
+        (_(_(_, _)), _());
       },
       children: (0, _.jsx)(`div`, {
         className: _,
@@ -1970,13 +1973,13 @@ function _(_) {
             let _ = {
               ..._,
             };
-            (_.localized_option = [..._.localized_option]),
+            ((_.localized_option = [..._.localized_option]),
               (_.localized_option = _.Set(
                 _.localized_option,
                 _,
                 _.currentTarget.value,
               )),
-              _(_);
+              _(_));
           },
         }),
       }),
@@ -2049,11 +2052,11 @@ function _(_) {
     ),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]);
   return _
     ? (0, _.jsxs)(`div`, {
@@ -2096,8 +2099,8 @@ function _(_) {
               fnUpdateUserPollDef: (_) => {
                 let { pollIndex: _ } = _(_.poll_id),
                   _ = _.GetEditModel();
-                (_.GetEventModel().jsondata.user_polls[_] = _),
-                  _.SetDirty(_.description);
+                ((_.GetEventModel().jsondata.user_polls[_] = _),
+                  _.SetDirty(_.description));
               },
             }),
           !!_ &&
@@ -2110,10 +2113,10 @@ function _(_) {
                   let { pollIndex: _ } = _(_.poll_id),
                     _ = _.GetEditModel(),
                     _ = [..._.GetEventModel().jsondata.user_polls];
-                  _.splice(_, 1),
+                  (_.splice(_, 1),
                     (_.GetEventModel().jsondata.user_polls = _),
                     _.SetDirty(_.description),
-                    _();
+                    _());
                 },
                 closeModal: _,
               }),
@@ -2132,11 +2135,11 @@ function _(_) {
     _ = _(),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]);
   return _
     ? (0, _.jsxs)(_, {
@@ -2175,9 +2178,9 @@ function _(_) {
               hideModal: _,
               fnUpdatePollOption: (_) => {
                 let _ = _.GetEditModel();
-                (_.options ||= []),
+                ((_.options ||= []),
                   _.options.push(_),
-                  _.SetDirty(_.description);
+                  _.SetDirty(_.description));
               },
             }),
           _ &&
@@ -2186,7 +2189,7 @@ function _(_) {
               options: _,
               bRandomize: _,
               fnUpdateOptions: (_, _) => {
-                (_.randomize_option_order = _), (_.options = _);
+                ((_.randomize_option_order = _), (_.options = _));
               },
             }),
         ],
@@ -2204,7 +2207,7 @@ function _(_) {
       strTitle: _(`#UserPolls_Option_Reorder`),
       strDescription: _(`#UserPolls_Option_Reorder_desc`),
       onCancel: () => {
-        _(_), _(_);
+        (_(_), _(_));
       },
       onOK: () => {
         _([..._], _);
@@ -2239,11 +2242,11 @@ function _(_) {
     _ = _(),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]);
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -2278,9 +2281,9 @@ function _(_) {
             let _ = _.GetEditModel(),
               { optionIndex: _, pollIndex: _ } = _(_),
               _ = [..._.GetEventModel().jsondata.user_polls[_].options];
-            (_[_] = _),
+            ((_[_] = _),
               (_.GetEventModel().jsondata.user_polls[_].options = _),
-              _.SetDirty(_.description);
+              _.SetDirty(_.description));
           },
         }),
       !!_ &&
@@ -2293,9 +2296,9 @@ function _(_) {
               let _ = _.GetEditModel(),
                 { optionIndex: _, pollIndex: _ } = _(_),
                 _ = [..._.GetEventModel().jsondata.user_polls[_].options];
-              _.splice(_, 1),
+              (_.splice(_, 1),
                 (_.GetEventModel().jsondata.user_polls[_].options = _),
-                _.SetDirty(_.description);
+                _.SetDirty(_.description));
             },
             closeModal: _,
           }),
@@ -2397,17 +2400,17 @@ function _(_) {
     _ = _(),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _.focus();
+      (_(), _.focus());
     }, [_, _]),
     _ = _.useCallback(
       (_) => {
-        _.GetEventModel().jsondata.user_polls ||
+        (_.GetEventModel().jsondata.user_polls ||
           (_.GetEventModel().jsondata.user_polls = []),
           _.GetEventModel().jsondata.user_polls.push({
             ..._,
           }),
           _(_, _.nodes.userpolls, _.poll_id),
-          _();
+          _());
       },
       [_, _, _, _],
     );
@@ -2481,11 +2484,11 @@ function _(_) {
     { callbacks: _, view: _ } = _(),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _.focus();
+      (_(), _.focus());
     }, [_, _]),
     _ = _.useCallback(
       (_, _) => {
-        _(_, _.nodes.previewyoutube, _, _), _();
+        (_(_, _.nodes.previewyoutube, _, _), _());
       },
       [_, _, _],
     );
@@ -2513,18 +2516,18 @@ function _(_) {
     _ = _(),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _.focus();
+      (_(), _.focus());
     }, [_, _]),
     _ = _.useCallback(
       (_, _) => {
-        _.GetEventModel().jsondata.meet_steam_groups ||
+        (_.GetEventModel().jsondata.meet_steam_groups ||
           (_.GetEventModel().jsondata.meet_steam_groups = []),
           _.GetEventModel().jsondata.meet_steam_groups.push({
             ..._,
             sessions: [_],
           }),
           _(_, _.nodes.meetsteamsessiongroup, _.group_id),
-          _();
+          _());
       },
       [_, _, _, _],
     );
@@ -2553,17 +2556,17 @@ function _(_) {
     _ = _(),
     [_, _, _] = _(),
     _ = _.useCallback(() => {
-      _(), _.focus();
+      (_(), _.focus());
     }, [_, _]),
     _ = _.useCallback(
       (_) => {
-        _.GetEventModel().jsondata.meet_steam_schedules ||
+        (_.GetEventModel().jsondata.meet_steam_schedules ||
           (_.GetEventModel().jsondata.meet_steam_schedules = []),
           _.GetEventModel().jsondata.meet_steam_schedules.push({
             ..._,
           }),
           _(_, _.nodes.meetsteamscheduleview, _.schedule_id),
-          _();
+          _());
       },
       [_, _, _, _],
     );
@@ -2590,7 +2593,7 @@ function _(_) {
 function _(_) {
   let { schema: _, emoticonStore: _ } = _,
     _ = _.nodes.emoticon;
-  _(_),
+  (_(_),
     _(
       _.useMemo(
         () =>
@@ -2599,7 +2602,7 @@ function _(_) {
           }),
         [_, _],
       ),
-    );
+    ));
   let _ = _.useMemo(
     () => [
       {
@@ -2735,7 +2738,7 @@ function _(_, _) {
   return _.useCallback(
     (..._) => {
       let _ = `default`;
-      return _ && (_ = _(..._)), _ == "default" && _ && (_ = _(..._)), _;
+      return (_ && (_ = _(..._)), _ == "default" && _ && (_ = _(..._)), _);
     },
     [_, _],
   );

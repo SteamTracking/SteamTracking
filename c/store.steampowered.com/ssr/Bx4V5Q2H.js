@@ -2,9 +2,9 @@ var _ = class extends Event {
     oldState;
     newState;
     constructor(_, { oldState: _ = ``, newState: _ = ``, ..._ } = {}) {
-      super(_, _),
+      (super(_, _),
         (this.oldState = String(_ || ``)),
-        (this.newState = String(_ || ``));
+        (this.newState = String(_ || ``)));
     }
   },
   _ = new WeakMap();
@@ -73,7 +73,7 @@ function _(_) {
       : _;
 }
 function _(_) {
-  for (; _; ) {
+  for (; _;) {
     if (
       _ instanceof HTMLElement &&
       _.popover === `auto` &&
@@ -89,7 +89,7 @@ function _(_) {
   }
 }
 function _(_) {
-  for (; _; ) {
+  for (; _;) {
     let _ = _.popoverTargetElement;
     if (_ instanceof HTMLElement) return _;
     if (
@@ -104,8 +104,8 @@ function _(_) {
   let _ = new Map(),
     _ = 0,
     _ = _.ownerDocument;
-  for (let _ of _.get(_) || []) _.set(_, _), (_ += 1);
-  _.set(_, _), (_ += 1);
+  for (let _ of _.get(_) || []) (_.set(_, _), (_ += 1));
+  (_.set(_, _), (_ += 1));
   let _ = null;
   function _(_) {
     let _ = _(_);
@@ -113,7 +113,7 @@ function _(_) {
     let _ = _.get(_);
     (_ === null || _.get(_) < _) && (_ = _);
   }
-  return _(_?.parentElement), _;
+  return (_(_?.parentElement), _);
 }
 function _(_) {
   return _.hidden ||
@@ -150,7 +150,7 @@ function _(_) {
   }
   let _ = _.ownerDocument.createTreeWalker(_, NodeFilter.SHOW_ELEMENT),
     _ = _.currentNode;
-  for (; _; ) {
+  for (; _;) {
     if (_(_)) return _;
     _ = _.nextNode();
   }
@@ -179,9 +179,9 @@ function _(_) {
     if ((_(_(_) || _, !1, !0), _ !== _.getAttribute(`popover`) || !_(_, !1)))
       return;
   }
-  _(_) || (_ = !0), _.delete(_);
+  (_(_) || (_ = !0), _.delete(_));
   let _ = _.activeElement;
-  _.classList.add(`:popover-open`),
+  (_.classList.add(`:popover-open`),
     _.set(_, `showing`),
     _.has(_) || _.set(_, new Set()),
     _.get(_).add(_),
@@ -189,7 +189,7 @@ function _(_) {
     _.popover === `auto` &&
       (_.has(_) || _.set(_, new Set()), _.get(_).add(_), _(_.get(_), !0)),
     _ && _ && _.popover === `auto` && _.set(_, _),
-    _(_, `closed`, `open`);
+    _(_, `closed`, `open`));
 }
 function _(_, _ = !1, _ = !1) {
   if (!_(_, !0)) return;
@@ -208,17 +208,17 @@ function _(_, _ = !1, _ = !1) {
       !_(_, !0)))
   )
     return;
-  _.get(_)?.delete(_),
+  (_.get(_)?.delete(_),
     _.get(_)?.delete(_),
     _.classList.remove(`:popover-open`),
     _.set(_, `hidden`),
-    _ && _(_, `open`, `closed`);
+    _ && _(_, `open`, `closed`));
   let _ = _.get(_);
   _ && (_.delete(_), _ && _.focus());
 }
 function _(_, _ = !1, _ = !1) {
   let _ = _(_);
-  for (; _; ) _(_, _, _), (_ = _(_));
+  for (; _;) (_(_, _, _), (_ = _(_)));
 }
 function _(_, _, _) {
   let _ = _.ownerDocument || _;
@@ -232,7 +232,7 @@ function _(_, _, _) {
       break;
     }
   if (!_) return _(_, _, _);
-  for (; _ && _(_) === `showing` && _.get(_)?.size; ) _(_, _, _);
+  for (; _ && _(_) === `showing` && _.get(_)?.size;) _(_, _, _);
 }
 var _ = new WeakMap();
 function _(_) {
@@ -245,7 +245,7 @@ function _(_) {
   if (_ && _.type === `pointerdown`) _.set(_, _);
   else if (_.type === `pointerup`) {
     let _ = _.get(_) === _;
-    _.delete(_), _ && _(_ || _, !1, !0);
+    (_.delete(_), _ && _(_ || _, !1, !0));
   }
 }
 var _ = new WeakMap();
@@ -338,14 +338,14 @@ var _ = /(^|[^\\]):popover-open\b/g,
 function _(_) {
   if (_ === null)
     try {
-      (_ = new CSSStyleSheet()), _.replaceSync(_);
+      ((_ = new CSSStyleSheet()), _.replaceSync(_));
     } catch {
       _ = !1;
     }
   if (_ === !1) {
     let _ = document.createElement(`style`);
-    (_.textContent = _),
-      _ instanceof Document ? _.head.prepend(_) : _.prepend(_);
+    ((_.textContent = _),
+      _ instanceof Document ? _.head.prepend(_) : _.prepend(_));
   } else _.adoptedStyleSheets = [_, ..._.adoptedStyleSheets];
 }
 function _() {
@@ -356,7 +356,7 @@ function _() {
       _
     );
   }
-  _(Document.prototype, `querySelector`, _),
+  (_(Document.prototype, `querySelector`, _),
     _(Document.prototype, `querySelectorAll`, _),
     _(Element.prototype, `querySelector`, _),
     _(Element.prototype, `querySelectorAll`, _),
@@ -400,7 +400,7 @@ function _() {
             : (_ === void 0 || _ === !0) && _(this);
         },
       },
-    });
+    }));
   let _ = Element.prototype.attachShadow;
   _ &&
     Object.defineProperties(Element.prototype, {
@@ -410,7 +410,7 @@ function _() {
         writable: !0,
         value(_) {
           let _ = _.call(this, _);
-          return _(_), _;
+          return (_(_), _);
         },
       },
     });
@@ -423,7 +423,7 @@ function _() {
         writable: !0,
         value() {
           let _ = _.call(this);
-          return _.shadowRoot && _(_.shadowRoot), _;
+          return (_.shadowRoot && _(_.shadowRoot), _);
         },
       },
     });
@@ -434,9 +434,10 @@ function _() {
         enumerable: !0,
         configurable: !0,
         set(_) {
-          if (_ === null) this.removeAttribute(`popovertarget`), _.delete(this);
+          if (_ === null)
+            (this.removeAttribute(`popovertarget`), _.delete(this));
           else if (_ instanceof Element)
-            this.setAttribute(`popovertarget`, ``), _.set(this, _);
+            (this.setAttribute(`popovertarget`, ``), _.set(this, _));
           else
             throw TypeError(`popoverTargetElement must be an element or null`);
         },
@@ -453,7 +454,7 @@ function _() {
             return null;
           let _ = _.get(this);
           if (_ && _.isConnected) return _;
-          if (_ && !_.isConnected) return _.delete(this), null;
+          if (_ && !_.isConnected) return (_.delete(this), null);
           let _ = _(this),
             _ = this.getAttribute(`popovertarget`);
           return (
@@ -479,7 +480,7 @@ function _() {
       },
     });
   }
-  _(HTMLButtonElement), _(HTMLInputElement);
+  (_(HTMLButtonElement), _(HTMLInputElement));
   let _ = (_) => {
       let _ = _.composedPath()[0];
       if (!(_ instanceof Element) || _?.shadowRoot) return;
@@ -496,12 +497,12 @@ function _() {
         (_ === `Escape` || _ === `Esc`) &&
         _(_.ownerDocument, !0, !0);
     };
-  ((_) => {
-    _.addEventListener(`click`, _),
+  (((_) => {
+    (_.addEventListener(`click`, _),
       _.addEventListener(`keydown`, _),
       _.addEventListener(`pointerdown`, _),
-      _.addEventListener(`pointerup`, _);
+      _.addEventListener(`pointerup`, _));
   })(document),
-    _(document);
+    _(document));
 }
 export { _ as apply, _ as isSupported };

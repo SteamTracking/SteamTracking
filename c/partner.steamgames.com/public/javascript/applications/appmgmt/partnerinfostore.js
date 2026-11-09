@@ -44,7 +44,7 @@ var _ = class _ {
                 _.PARTNER_BASE_URL + `pub/publisher/${_.publisherid}/`,
               contacts: _.contacts,
             };
-            this.m_mapOptInToPartners.set(_.publisherid, _), _.push(_);
+            (this.m_mapOptInToPartners.set(_.publisherid, _), _.push(_));
           })
         : console.log(
             `CPartnerInfoStore.FindPartnerByName failed with status ${_?.status} eresult ${_?.data?.success} and msg ${_?.data?.msg}`,
@@ -76,7 +76,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {
     let _ = JSON.parse(JSON.stringify(_(`partner_info`, `application_config`)));
@@ -130,4 +130,3 @@ function _(_) {
 function _(_) {
   return _.Get().LoadPartnerInfo(_);
 }
-export { _, _, _, _, _, _ };

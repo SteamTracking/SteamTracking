@@ -148,7 +148,7 @@ var Z = new (class {
     this.LazyInit();
   }
   LazyInit() {
-    q(this.m_queryClient),
+    (q(this.m_queryClient),
       this.m_bWatchingCache ||
         ((this.m_bWatchingCache = !0),
         this.m_queryClient.getQueryCache().subscribe((e) => {
@@ -157,21 +157,23 @@ var Z = new (class {
             e?.type == `removed`) &&
             v(e.query?.queryKey) &&
             this.ScheduleCacheVersionBump();
-        }));
+        })));
   }
   ScheduleCacheVersionBump() {
     this.m_bBumpScheduled ||
       ((this.m_bBumpScheduled = !0),
       queueMicrotask(() => {
-        (this.m_bBumpScheduled = !1),
-          i(() => this.m_boxCacheVersion.set(this.m_boxCacheVersion.get() + 1));
+        ((this.m_bBumpScheduled = !1),
+          i(() =>
+            this.m_boxCacheVersion.set(this.m_boxCacheVersion.get() + 1),
+          ));
       }));
   }
   ReadCache() {
-    return this.LazyInit(), this.m_boxCacheVersion.get(), this.m_queryClient;
+    return (this.LazyInit(), this.m_boxCacheVersion.get(), this.m_queryClient);
   }
   AddGroupVanities(e) {
-    this.LazyInit(), J(e) && w(this.m_queryClient, e);
+    (this.LazyInit(), J(e) && w(this.m_queryClient, e));
   }
   BHasClanInfoLoaded(t) {
     return (
@@ -187,7 +189,7 @@ var Z = new (class {
     return !!j(X(e), this.ReadCache());
   }
   RegisterClanData(e) {
-    this.LazyInit(), w(this.m_queryClient, e);
+    (this.LazyInit(), w(this.m_queryClient, e));
   }
   async LoadOGGClanInfoForAppID(t) {
     return (
@@ -198,16 +200,16 @@ var Z = new (class {
     );
   }
   async LoadOGGClanInfoForIdentifier(e) {
-    return this.LazyInit(), C(e, this.m_queryClient, `store`);
+    return (this.LazyInit(), C(e, this.m_queryClient, `store`));
   }
   async LoadOGGClanInfoForGroupVanity(e) {
-    return this.LazyInit(), C(e, this.m_queryClient, `group`);
+    return (this.LazyInit(), C(e, this.m_queryClient, `group`));
   }
   async LoadClanInfoForClanSteamID(e) {
     return this.LoadClanInfoForClanAccountID(e.GetAccountID());
   }
   async LoadClanInfoForClanAccountID(e) {
-    return this.LazyInit(), b(X(e), this.m_queryClient);
+    return (this.LazyInit(), b(X(e), this.m_queryClient));
   }
   GetOGGClanInfo(e) {
     let t = this.ReadCache();
@@ -253,7 +255,7 @@ var Z = new (class {
 L(`g_ClanStore`, Z);
 function Q() {
   let e = N();
-  return q(e), e;
+  return (q(e), e);
 }
 function $(e) {
   Q();

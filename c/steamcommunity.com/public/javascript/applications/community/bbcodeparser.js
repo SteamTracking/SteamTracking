@@ -2,8 +2,9 @@ var _ = class {
   m_fnAccumulatorFactory;
   m_dictComponents;
   constructor(_, _) {
-    (this.m_dictComponents = _ instanceof Map ? _ : new Map(Object.entries(_))),
-      (this.m_fnAccumulatorFactory = _);
+    ((this.m_dictComponents =
+      _ instanceof Map ? _ : new Map(Object.entries(_))),
+      (this.m_fnAccumulatorFactory = _));
   }
   Parse(_, _, _ = !0) {
     let _ = _(_ || ``, _);
@@ -27,26 +28,26 @@ var _ = class {
               rawargs: _.node.rawargs,
             },
             _ = _(_.Constructor, _, ..._.GetElements());
-          (_ = _.accumulator),
+          ((_ = _.accumulator),
             Array.isArray(_)
               ? _.forEach((_) => _.AppendNode(_))
               : _.AppendNode(_),
             (_ = !!_.skipFollowingNewline),
-            (_ = _.bWrapTextForCopying);
+            (_ = _.bWrapTextForCopying));
         } else if (_) {
           let _ = _.accumulator;
-          _.AppendText(`[` + _.node.text + `]`, !1),
+          (_.AppendText(`[` + _.node.text + `]`, !1),
             _.GetElements().forEach((_) => _.AppendNode(_)),
             _.AppendText(`[/` + _.text + `]`, !1),
             (_ = _),
-            (_ = _.bWrapTextForCopying);
+            (_ = _.bWrapTextForCopying));
         }
       };
     for (
       _.forEach((_, _) => {
         if (_.type == 1) {
           let _ = _ ? _.text.replace(/^[\t\r ]*\n/g, ``) : _.text;
-          _.AppendText(_, _), (_ = !1);
+          (_.AppendText(_, _), (_ = !1));
         } else if (_.type == 2) {
           let _ = _.get(_.tag);
           if (!_) _.AppendText(`[` + _.text + `]`, _.length == 0);
@@ -56,18 +57,18 @@ var _ = class {
               let _ = _.get(_.node.tag);
               _ && _.autocloses && _.tag === _.node.tag && _(_.pop(), _.node);
             }
-            _.push({
+            (_.push({
               accumulator: _,
               node: _,
               bWrapTextForCopying: _,
             }),
               (_ = this.m_fnAccumulatorFactory(_)),
               (_ = !!_.skipInternalNewline),
-              (_ = _.allowWrapTextForCopying ?? !1);
+              (_ = _.allowWrapTextForCopying ?? !1));
           }
         } else if (_.type == 3) {
           let _ = _.text.toLowerCase();
-          for (; _() && _().node.tag !== _ && _(_().node); ) {
+          for (; _() && _().node.tag !== _ && _(_().node);) {
             let _ = _.pop();
             _(_, _.node);
           }
@@ -89,7 +90,7 @@ function _(_, _, _ = !1) {
   let _ = `[` + _;
   _?.[``] && (_ += `=${_ ? `` + _[``] : _(`` + _[``])}`);
   for (let _ in _) _ !== `` && (_ += ` ${_(_)}=${_(`` + _[_])}`);
-  return (_ += `]`), _;
+  return ((_ += `]`), _);
 }
 function _(_) {
   return `"${_.replace(/(\\|"|\])/g, `\\$1`)}"`;
@@ -112,7 +113,7 @@ function _(_, _, _ = 0) {
     let _,
       _,
       _ = ``;
-    _ > 0
+    (_ > 0
       ? ((_ = _.substr(0, _).toLocaleLowerCase()),
         (_ = _.substr(_)),
         (_ = _(_)))
@@ -123,7 +124,7 @@ function _(_, _, _ = 0) {
         tag: _,
         args: _,
         rawargs: _,
-      });
+      }));
   } else
     _ != 0 &&
       _.push({
@@ -164,18 +165,18 @@ function _(_, _) {
         break;
       case 2:
       case 3:
-        if (_ == `/` && _) (_.type = 3), (_.text = ``), (_ = !1);
-        else if (_ == `[` && !_) (_ = _(_, _(_), 2)), (_ = !0);
+        if (_ == `/` && _) ((_.type = 3), (_.text = ``), (_ = !1));
+        else if (_ == `[` && !_) ((_ = _(_, _(_), 2)), (_ = !0));
         else if (_ == `]` && !_) {
           let _ = _.type == 2 && _.text?.toLocaleLowerCase() == `noparse`,
             _ = _.type == 3 && _.text?.toLocaleLowerCase() == `noparse`;
-          _ || (_ && !_)
+          (_ || (_ && !_)
             ? ((_ = _(_)), (_.text += _))
             : _
               ? (_ = !0)
               : _ && (_ = !1),
             (_ = _(_, _)),
-            (_ = !1);
+            (_ = !1));
         } else
           _ == `\\` && _
             ? ((_.text += _), (_ = !_), (_ = !1))
@@ -244,6 +245,5 @@ function _(_) {
     }
     _ && ((_[_] = _), (_ = ``), (_ = ``));
   }
-  return _ != 0 && (_[_] = _), _;
+  return (_ != 0 && (_[_] = _), _);
 }
-export { _, _, _, _ };

@@ -11,7 +11,7 @@ function a(e, t) {
       let r = t(n.ownerDocument.defaultView, (t) => {
         e(t[0]);
       });
-      return r.observe(n), () => r.unobserve(n);
+      return (r.observe(n), () => r.unobserve(n));
     },
     [e, t],
   );
@@ -38,14 +38,14 @@ function s(e, t) {
 function c(e, t) {
   let n = i.useRef(void 0);
   return s((t) => {
-    !n.current && t.isIntersecting && e.onEnter?.(t),
+    (!n.current && t.isIntersecting && e.onEnter?.(t),
       n.current && !t.isIntersecting && e.onLeave?.(t),
       e.onIntersectionChange?.(t),
-      (n.current = t.isIntersecting);
+      (n.current = t.isIntersecting));
   }, t);
 }
 function l(e, ...t) {
   let n = new e.ownerDocument.defaultView.IntersectionObserver(...t);
-  return n.observe(e), n;
+  return (n.observe(e), n);
 }
 export { c as n, o as r, l as t };

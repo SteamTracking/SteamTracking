@@ -6,7 +6,7 @@ import { _ } from "./moderationreasonpicker.js";
 import { _, _ } from "./basebuttons.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./main.js";
 var _ = {};
-(_.arabic = () =>
+((_.arabic = () =>
   _(() => import(`./workshop_ui_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
     _(() => import(`./workshop_ui_brazilian.js`), [], import.meta.url)),
@@ -69,7 +69,7 @@ var _ = {};
   (_.ukrainian = () =>
     _(() => import(`./workshop_ui_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./workshop_ui_vietnamese.js`), [], import.meta.url));
+    _(() => import(`./workshop_ui_vietnamese.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -139,9 +139,9 @@ function _(_) {
         children: (0, _.jsx)(_, {
           reasons: _(),
           onSelect: (_) => {
-            _ !== null &&
+            (_ !== null &&
               ((!_.trim() || (_ !== null && _ === _(_))) && _(_(_)), _(_)),
-              _(!1);
+              _(!1));
           },
         }),
       })
@@ -192,10 +192,10 @@ function _(_) {
                       selectedValue: null,
                       placeholder: _.Localize(_[0].labelToken),
                       onSelectionChange: (_) => {
-                        _(_.reasonToken ? _.Localize(_.reasonToken) : ``),
+                        (_(_.reasonToken ? _.Localize(_.reasonToken) : ``),
                           _.eModerationReason !== void 0 &&
                             _ === null &&
-                            _(_.eModerationReason);
+                            _(_.eModerationReason));
                       },
                     }),
                   ],
@@ -224,10 +224,10 @@ function _(_) {
                         let _ = _.Localize(
                           `#Workshop_ItemAdmin_Ban_Preset_CopyrightReason`,
                         );
-                        _ == `copyright` && _.trim().length === 0
+                        (_ == `copyright` && _.trim().length === 0
                           ? _(_)
                           : _ === _ && _(``),
-                          _(_);
+                          _(_));
                       },
                     }),
                   ],
@@ -265,7 +265,7 @@ function _(_) {
                   _(!0);
                   let _ = _ == `malware` ? 16 : (_ ?? 0);
                   Promise.resolve(_(_.trim(), _)).then(_, (_) => {
-                    _(!1), _?.(_);
+                    (_(!1), _?.(_));
                   });
                 },
                 autoFocus: !0,

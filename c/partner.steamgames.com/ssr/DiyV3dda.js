@@ -98,4 +98,3 @@ var _ = [
     className: (_) => _[`Variant-${_}`],
   },
 ];
-export { _ };

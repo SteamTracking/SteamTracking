@@ -92,8 +92,8 @@ var F = e(de()),
           this.m_bRunOnce && this.m_mapServerTypeCallbacks.delete(e));
     }
     RunAllCallbacks(e, ...t) {
-      this.RunCallbacks(void 0, ...t),
-        e.forEach((e) => this.RunCallbacks(e, ...t));
+      (this.RunCallbacks(void 0, ...t),
+        e.forEach((e) => this.RunCallbacks(e, ...t)));
     }
     AddCallback(e, t) {
       let n = this.m_ClientConnectionCallbacks;
@@ -148,7 +148,7 @@ var L = class {
   m_nPerfClockServerMSOffset = new Date().getTime() - performance.now();
   m_messageHandlers = new le();
   constructor() {
-    m(this),
+    (m(this),
       (this.m_ServiceTransport = {
         SendMsg: (e, t, n) => (
           (t.GetEMsg() === void 0 || t.GetEMsg() != 9804) && t.SetEMsg(151),
@@ -166,7 +166,7 @@ var L = class {
         window.addEventListener &&
         window.addEventListener(`unload`, (e) => {
           this.ForceDisconnect();
-        });
+        }));
   }
   get steamid() {
     return this.m_steamid;
@@ -235,7 +235,7 @@ var L = class {
     return this.m_callbacksOnDisconnect.AddCallback(n, t);
   }
   ForceDisconnect() {
-    (this.m_bForceDisconnect = !0), this.Disconnect();
+    ((this.m_bForceDisconnect = !0), this.Disconnect());
   }
   Send(e) {
     return this.BIsConnected()
@@ -247,17 +247,17 @@ var L = class {
   }
   ResolveAwaitWithTransportError(e, t, n, r) {
     let i = h.Init(t);
-    i.Hdr().set_eresult(2),
+    (i.Hdr().set_eresult(2),
       i.Hdr().set_transport_error(n),
       r && i.Hdr().set_error_message(r),
-      e(i);
+      e(i));
   }
   DispatchMessage(e) {
     try {
       if (!this.BInternalShouldDispatchMessage(e)) return;
       e.BIsValid()
         ? this.m_messageHandlers.DispatchMsgToHandlers(e, (t) => {
-            t.Hdr().set_jobid_target(e.Hdr().jobid_source()), this.Send(t);
+            (t.Hdr().set_jobid_target(e.Hdr().jobid_source()), this.Send(t));
           }) || this.DEBUG_LogCMInterfaceActivity(e, `receive`, !1)
         : console.error(
             `CMInterface RECV could not parse message of type ` +
@@ -266,31 +266,31 @@ var L = class {
               e.GetEMsg(),
           );
     } catch (t) {
-      console.error(
+      (console.error(
         `CMInterface RECV exception thrown while processing message of type ${pe(e.GetEMsg())}`,
         t,
       ),
-        e.DEBUG_LogToConsole();
+        e.DEBUG_LogToConsole());
     }
   }
   BIsConnected() {
     return this.m_bConnected;
   }
   OnConnect() {
-    (this.m_bConnected = !0),
+    ((this.m_bConnected = !0),
       (this.m_bConnectionFailed = !1),
-      (this.m_bForceDisconnect = !1);
+      (this.m_bForceDisconnect = !1));
   }
   OnLoggedOn() {
-    (this.m_bCompletedInitialConnect = !0),
+    ((this.m_bCompletedInitialConnect = !0),
       this.InternalAdjustClock(),
       this.m_callbacksOnConnect.RunAllCallbacks(this.m_setConnectedServers),
       this.m_callbacksOnConnectOneTime.RunAllCallbacks(
         this.m_setConnectedServers,
-      );
+      ));
   }
   OnDisconnect() {
-    (this.m_bConnected = !1),
+    ((this.m_bConnected = !1),
       (this.m_bConnectionFailed = !0),
       (this.m_onConnect = void 0),
       (this.m_bLoggedOn = !1),
@@ -300,7 +300,7 @@ var L = class {
         this.m_setConnectedServers,
         this.m_bForceDisconnect,
       ),
-      this.m_setConnectedServers.clear();
+      this.m_setConnectedServers.clear());
   }
   RunOnDisconnectCallbacks(e, t) {
     e instanceof Set
@@ -328,8 +328,8 @@ var L = class {
           t.delete(e));
       }
       t.forEach((e) => {
-        this.m_setConnectedServers.delete(e),
-          this.m_bLoggedOn && this.RunOnDisconnectCallbacks(e, !1);
+        (this.m_setConnectedServers.delete(e),
+          this.m_bLoggedOn && this.RunOnDisconnectCallbacks(e, !1));
       });
     },
   );
@@ -375,7 +375,7 @@ var L = class {
     return new Date(e * 1e3 + this.m_nWallClockDriftMS);
   }
 };
-c([i], L.prototype, `m_steamid`, void 0),
+(c([i], L.prototype, `m_steamid`, void 0),
   c([i], L.prototype, `m_bLoggedOn`, void 0),
   c([i], L.prototype, `m_bCompletedInitialConnect`, void 0),
   c([i], L.prototype, `m_unAccountFlags`, void 0),
@@ -386,19 +386,19 @@ c([i], L.prototype, `m_steamid`, void 0),
   c([i], L.prototype, `m_bConnected`, void 0),
   c([i], L.prototype, `m_bPerformedInitialClockAdjustment`, void 0),
   c([a], L.prototype, `DispatchMessage`, null),
-  c([a], L.prototype, `OnDisconnect`, null);
+  c([a], L.prototype, `OnDisconnect`, null));
 var R = class extends L {
   m_hSharedConnection;
   m_hEMsgRegistrationObserver;
   m_setEMsgHandlers = new Set();
   m_setServiceMethodHandlers = new Set();
   constructor() {
-    super(),
+    (super(),
       m(this),
       E(`User.RegisterForConnectionAttemptsThrottled`) &&
         SteamClient.User.RegisterForConnectionAttemptsThrottled(
           this.OnConnectionAttemptThrottled,
-        );
+        ));
   }
   SendMsgAndAwaitResponse(e, t) {
     return new Promise((n, r) => {
@@ -413,7 +413,7 @@ var R = class extends L {
               .then((e) => {
                 let r = new S(e),
                   i = h.InitFromPacket(t, r);
-                this.DEBUG_LogCMInterfaceActivity(i, `receive`, !0),
+                (this.DEBUG_LogCMInterfaceActivity(i, `receive`, !0),
                   i.BIsValid()
                     ? n(i)
                     : this.ResolveAwaitWithTransportError(
@@ -421,7 +421,7 @@ var R = class extends L {
                         t,
                         102,
                         `Failed to parse response from server`,
-                      );
+                      ));
               })
               .catch((e) => {
                 this.ResolveAwaitWithTransportError(n, t, 2, e);
@@ -433,7 +433,7 @@ var R = class extends L {
               .then((e) => {
                 let r = new S(F.toByteArray(e)),
                   i = h.InitFromPacket(t, r);
-                this.DEBUG_LogCMInterfaceActivity(i, `receive`, !0),
+                (this.DEBUG_LogCMInterfaceActivity(i, `receive`, !0),
                   i.BIsValid()
                     ? n(i)
                     : this.ResolveAwaitWithTransportError(
@@ -441,19 +441,19 @@ var R = class extends L {
                         t,
                         102,
                         `Failed to parse response from server`,
-                      );
+                      ));
               })
               .catch((e) => {
                 this.ResolveAwaitWithTransportError(n, t, 2, e);
               });
       } else
-        this.ResolveAwaitWithTransportError(
+        (this.ResolveAwaitWithTransportError(
           n,
           t,
           102,
           `Shared connection handle is empty, dropping traffic`,
         ),
-          console.warn(`Shared connection handle is empty, dropping traffic`);
+          console.warn(`Shared connection handle is empty, dropping traffic`));
     });
   }
   SendInternal(e) {
@@ -468,7 +468,7 @@ var R = class extends L {
     this.DispatchMessage(n);
   }
   OnLogonInfoChanged(e) {
-    this.DEBUG_LogMessage(`Login info from client: `, e),
+    (this.DEBUG_LogMessage(`Login info from client: `, e),
       (this.m_bLoggedOn = e.bLoggedOn),
       (v.EUNIVERSE = e.eUniverse),
       (v.MEDIA_CDN_COMMUNITY_URL = e.strCommunityImagesURL),
@@ -483,7 +483,7 @@ var R = class extends L {
         : this.m_steamid.GetAccountID() != 0 && (this.m_steamid = new P()),
       this.m_bLoggedOn
         ? (this.m_bConnected || this.OnConnect(), this.OnLoggedOn())
-        : this.OnDisconnect();
+        : this.OnDisconnect());
   }
   Connect() {
     return this.m_hSharedConnection
@@ -505,7 +505,7 @@ var R = class extends L {
         }));
   }
   OnSharedConnectionEstablished(e) {
-    (this.m_hSharedConnection = e),
+    ((this.m_hSharedConnection = e),
       this.m_setEMsgHandlers.clear(),
       this.m_setServiceMethodHandlers.clear(),
       this.m_hEMsgRegistrationObserver && this.m_hEMsgRegistrationObserver(),
@@ -526,12 +526,12 @@ var R = class extends L {
                 e,
               ));
         }
-      }));
+      })));
     let t = !1;
     SteamClient.SharedConnection.RegisterOnLogonInfoChanged(
       this.m_hSharedConnection,
       (e) => {
-        this.OnLogonInfoChanged(e),
+        (this.OnLogonInfoChanged(e),
           t ||
             ((t = !0),
             E(`SharedConnection.RegisterOnBinaryMessageReceived`)
@@ -542,7 +542,7 @@ var R = class extends L {
               : SteamClient.SharedConnection.RegisterOnMessageReceived(
                   this.m_hSharedConnection,
                   (e) => this.OnMsgRecvd(F.toByteArray(e)),
-                ));
+                )));
       },
     );
   }
@@ -552,33 +552,33 @@ var R = class extends L {
   Disconnect() {
     if (this.m_hSharedConnection) {
       let e = h.Init(se, 716);
-      e.Body().set_persona_state(0),
+      (e.Body().set_persona_state(0),
         e.Body().set_persona_set_by_user(!1),
         this.Send(e),
         SteamClient.SharedConnection.Close(this.m_hSharedConnection),
-        this.OnSharedConnectionClosed();
+        this.OnSharedConnectionClosed());
     }
   }
   OnSharedConnectionClosed() {
-    super.OnDisconnect(),
+    (super.OnDisconnect(),
       (this.m_hSharedConnection = void 0),
       this.m_setEMsgHandlers.clear(),
       (this.m_hEMsgRegistrationObserver &&=
-        (this.m_hEMsgRegistrationObserver(), void 0));
+        (this.m_hEMsgRegistrationObserver(), void 0)));
   }
   SendHeartbeat() {}
   ClearHeartbeatInterval() {}
   ResetHeartbeatInterval() {}
   OnConnectionAttemptThrottled(e) {
-    e.rtCooldownExpiration == 0
+    (e.rtCooldownExpiration == 0
       ? (this.m_rtReconnectThrottleStart = 0)
       : this.m_rtReconnectThrottleStart == 0 &&
         (this.m_rtReconnectThrottleStart = _()),
-      (this.m_rtReconnectThrottleExpiration = e.rtCooldownExpiration);
+      (this.m_rtReconnectThrottleExpiration = e.rtCooldownExpiration));
   }
 };
-c([a], R.prototype, `OnLogonInfoChanged`, null),
-  c([a.bound], R.prototype, `OnConnectionAttemptThrottled`, null);
+(c([a], R.prototype, `OnLogonInfoChanged`, null),
+  c([a.bound], R.prototype, `OnConnectionAttemptThrottled`, null));
 var z = t((e) => {
     var t =
       typeof Uint8Array < `u` &&
@@ -587,8 +587,8 @@ var z = t((e) => {
     function n(e, t) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }
-    (e.assign = function (e) {
-      for (var t = Array.prototype.slice.call(arguments, 1); t.length; ) {
+    ((e.assign = function (e) {
+      for (var t = Array.prototype.slice.call(arguments, 1); t.length;) {
         var r = t.shift();
         if (r) {
           if (typeof r != `object`) throw TypeError(r + `must be non-object`);
@@ -603,7 +603,7 @@ var z = t((e) => {
           : e.subarray
             ? e.subarray(0, t)
             : ((e.length = t), e);
-      });
+      }));
     var r = {
         arraySet: function (e, t, n, r, i) {
           if (t.subarray && e.subarray) e.set(t.subarray(n, n + r), i);
@@ -618,7 +618,7 @@ var z = t((e) => {
             o;
           for (t = 0, n = e.length; t < n; t++) r += e[t].length;
           for (o = new Uint8Array(r), i = 0, t = 0, n = e.length; t < n; t++)
-            (a = e[t]), o.set(a, i), (i += a.length);
+            ((a = e[t]), o.set(a, i), (i += a.length));
           return o;
         },
       },
@@ -630,7 +630,7 @@ var z = t((e) => {
           return [].concat.apply([], e);
         },
       };
-    (e.setTyped = function (t) {
+    ((e.setTyped = function (t) {
       t
         ? ((e.Buf8 = Uint8Array),
           (e.Buf16 = Uint16Array),
@@ -641,7 +641,7 @@ var z = t((e) => {
           (e.Buf32 = Array),
           e.assign(e, i));
     }),
-      e.setTyped(t);
+      e.setTyped(t));
   }),
   ge = t((e) => {
     var t = z(),
@@ -650,7 +650,7 @@ var z = t((e) => {
       i = 1,
       a = 2;
     function o(e) {
-      for (var t = e.length; --t >= 0; ) e[t] = 0;
+      for (var t = e.length; --t >= 0;) e[t] = 0;
     }
     var s = 0,
       c = 1,
@@ -694,23 +694,23 @@ var z = t((e) => {
     var re = Array(h);
     o(re);
     function ie(e, t, n, r, i) {
-      (this.static_tree = e),
+      ((this.static_tree = e),
         (this.extra_bits = t),
         (this.extra_base = n),
         (this.elems = r),
         (this.max_length = i),
-        (this.has_stree = e && e.length);
+        (this.has_stree = e && e.length));
     }
     var ae, M, oe;
     function se(e, t) {
-      (this.dyn_tree = e), (this.max_code = 0), (this.stat_desc = t);
+      ((this.dyn_tree = e), (this.max_code = 0), (this.stat_desc = t));
     }
     function ce(e) {
       return e < 256 ? k[e] : k[256 + (e >>> 7)];
     }
     function le(e, t) {
-      (e.pending_buf[e.pending++] = t & 255),
-        (e.pending_buf[e.pending++] = (t >>> 8) & 255);
+      ((e.pending_buf[e.pending++] = t & 255),
+        (e.pending_buf[e.pending++] = (t >>> 8) & 255));
     }
     function N(e, t, n) {
       e.bi_valid > y - n
@@ -725,7 +725,7 @@ var z = t((e) => {
     }
     function ue(e, t) {
       var n = 0;
-      do (n |= e & 1), (e >>>= 1), (n <<= 1);
+      do ((n |= e & 1), (e >>>= 1), (n <<= 1));
       while (--t > 0);
       return n >>> 1;
     }
@@ -754,7 +754,7 @@ var z = t((e) => {
         h = 0;
       for (f = 0; f <= v; f++) e.bl_count[f] = 0;
       for (n[e.heap[e.heap_max] * 2 + 1] = 0, l = e.heap_max + 1; l < _; l++)
-        (u = e.heap[l]),
+        ((u = e.heap[l]),
           (f = n[n[u * 2 + 1] * 2 + 1] + 1),
           f > c && ((f = c), h++),
           (n[u * 2 + 1] = f),
@@ -764,20 +764,23 @@ var z = t((e) => {
             u >= s && (p = o[u - s]),
             (m = n[u * 2]),
             (e.opt_len += m * (f + p)),
-            a && (e.static_len += m * (i[u * 2 + 1] + p)));
+            a && (e.static_len += m * (i[u * 2 + 1] + p))));
       if (h !== 0) {
         do {
-          for (f = c - 1; e.bl_count[f] === 0; ) f--;
-          e.bl_count[f]--, (e.bl_count[f + 1] += 2), e.bl_count[c]--, (h -= 2);
+          for (f = c - 1; e.bl_count[f] === 0;) f--;
+          (e.bl_count[f]--,
+            (e.bl_count[f + 1] += 2),
+            e.bl_count[c]--,
+            (h -= 2));
         } while (h > 0);
         for (f = c; f !== 0; f--)
-          for (u = e.bl_count[f]; u !== 0; )
-            (d = e.heap[--l]),
+          for (u = e.bl_count[f]; u !== 0;)
+            ((d = e.heap[--l]),
               !(d > r) &&
                 (n[d * 2 + 1] !== f &&
                   ((e.opt_len += (f - n[d * 2 + 1]) * n[d * 2]),
                   (n[d * 2 + 1] = f)),
-                u--);
+                u--));
       }
     }
     function pe(e, t, n) {
@@ -802,36 +805,36 @@ var z = t((e) => {
       for (i >>= 7; r < h; r++)
         for (re[r] = i << 7, e = 0; e < 1 << (E[r] - 7); e++) k[256 + i++] = r;
       for (t = 0; t <= v; t++) a[t] = 0;
-      for (e = 0; e <= 143; ) (D[e * 2 + 1] = 8), e++, a[8]++;
-      for (; e <= 255; ) (D[e * 2 + 1] = 9), e++, a[9]++;
-      for (; e <= 279; ) (D[e * 2 + 1] = 7), e++, a[7]++;
-      for (; e <= 287; ) (D[e * 2 + 1] = 8), e++, a[8]++;
+      for (e = 0; e <= 143;) ((D[e * 2 + 1] = 8), e++, a[8]++);
+      for (; e <= 255;) ((D[e * 2 + 1] = 9), e++, a[9]++);
+      for (; e <= 279;) ((D[e * 2 + 1] = 7), e++, a[7]++);
+      for (; e <= 287;) ((D[e * 2 + 1] = 8), e++, a[8]++);
       for (pe(D, m + 1, a), e = 0; e < h; e++)
-        (O[e * 2 + 1] = 5), (O[e * 2] = ue(e, 5));
-      (ae = new ie(D, T, p + 1, m, v)),
+        ((O[e * 2 + 1] = 5), (O[e * 2] = ue(e, 5)));
+      ((ae = new ie(D, T, p + 1, m, v)),
         (M = new ie(O, E, 0, h, v)),
-        (oe = new ie([], ee, 0, g, b));
+        (oe = new ie([], ee, 0, g, b)));
     }
     function me(e) {
       for (var t = 0; t < m; t++) e.dyn_ltree[t * 2] = 0;
       for (t = 0; t < h; t++) e.dyn_dtree[t * 2] = 0;
       for (t = 0; t < g; t++) e.bl_tree[t * 2] = 0;
-      (e.dyn_ltree[x * 2] = 1),
+      ((e.dyn_ltree[x * 2] = 1),
         (e.opt_len = e.static_len = 0),
-        (e.last_lit = e.matches = 0);
+        (e.last_lit = e.matches = 0));
     }
     function he(e) {
-      e.bi_valid > 8
+      (e.bi_valid > 8
         ? le(e, e.bi_buf)
         : e.bi_valid > 0 && (e.pending_buf[e.pending++] = e.bi_buf),
         (e.bi_buf = 0),
-        (e.bi_valid = 0);
+        (e.bi_valid = 0));
     }
     function I(e, n, r, i) {
-      he(e),
+      (he(e),
         i && (le(e, r), le(e, ~r)),
         t.arraySet(e.pending_buf, e.window, n, r, e.pending),
-        (e.pending += r);
+        (e.pending += r));
     }
     function L(e, t, n, r) {
       var i = t * 2,
@@ -845,7 +848,7 @@ var z = t((e) => {
         (i < e.heap_len && L(t, e.heap[i + 1], e.heap[i], e.depth) && i++,
         !L(t, r, e.heap[i], e.depth));
       )
-        (e.heap[n] = e.heap[i]), (n = i), (i <<= 1);
+        ((e.heap[n] = e.heap[i]), (n = i), (i <<= 1));
       e.heap[n] = r;
     }
     function ge(e, t, n) {
@@ -856,7 +859,7 @@ var z = t((e) => {
         s;
       if (e.last_lit !== 0)
         do
-          (r =
+          ((r =
             (e.pending_buf[e.d_buf + a * 2] << 8) |
             e.pending_buf[e.d_buf + a * 2 + 1]),
             (i = e.pending_buf[e.l_buf + a]),
@@ -871,7 +874,7 @@ var z = t((e) => {
                 (o = ce(r)),
                 P(e, o, n),
                 (s = E[o]),
-                s !== 0 && ((r -= re[o]), N(e, r, s)));
+                s !== 0 && ((r -= re[o]), N(e, r, s))));
         while (a < e.last_lit);
       P(e, x, t);
     }
@@ -888,16 +891,16 @@ var z = t((e) => {
         n[o * 2] === 0
           ? (n[o * 2 + 1] = 0)
           : ((e.heap[++e.heap_len] = c = o), (e.depth[o] = 0));
-      for (; e.heap_len < 2; )
-        (l = e.heap[++e.heap_len] = c < 2 ? ++c : 0),
+      for (; e.heap_len < 2;)
+        ((l = e.heap[++e.heap_len] = c < 2 ? ++c : 0),
           (n[l * 2] = 1),
           (e.depth[l] = 0),
           e.opt_len--,
-          i && (e.static_len -= r[l * 2 + 1]);
+          i && (e.static_len -= r[l * 2 + 1]));
       for (t.max_code = c, o = e.heap_len >> 1; o >= 1; o--) R(e, n, o);
       l = a;
       do
-        (o = e.heap[1]),
+        ((o = e.heap[1]),
           (e.heap[1] = e.heap[e.heap_len--]),
           R(e, n, 1),
           (s = e.heap[1]),
@@ -908,9 +911,9 @@ var z = t((e) => {
             (e.depth[o] >= e.depth[s] ? e.depth[o] : e.depth[s]) + 1),
           (n[o * 2 + 1] = n[s * 2 + 1] = l),
           (e.heap[1] = l++),
-          R(e, n, 1);
+          R(e, n, 1));
       while (e.heap_len >= 2);
-      (e.heap[--e.heap_max] = e.heap[1]), fe(e, t), pe(n, c, e.bl_count);
+      ((e.heap[--e.heap_max] = e.heap[1]), fe(e, t), pe(n, c, e.bl_count));
     }
     function _e(e, t, n) {
       var r,
@@ -925,7 +928,7 @@ var z = t((e) => {
         r <= n;
         r++
       )
-        (a = o),
+        ((a = o),
           (o = t[(r + 1) * 2 + 1]),
           !(++s < c && a === o) &&
             (s < l
@@ -941,7 +944,7 @@ var z = t((e) => {
               ? ((c = 138), (l = 3))
               : a === o
                 ? ((c = 6), (l = 3))
-                : ((c = 7), (l = 4)));
+                : ((c = 7), (l = 4))));
     }
     function V(e, t, n) {
       var r,
@@ -964,13 +967,13 @@ var z = t((e) => {
               : (a !== i && (P(e, a, e.bl_tree), s--),
                 P(e, S, e.bl_tree),
                 N(e, s - 3, 2));
-          (s = 0),
+          ((s = 0),
             (i = a),
             o === 0
               ? ((c = 138), (l = 3))
               : a === o
                 ? ((c = 6), (l = 3))
-                : ((c = 7), (l = 4));
+                : ((c = 7), (l = 4)));
         }
     }
     function H(e) {
@@ -983,13 +986,13 @@ var z = t((e) => {
         t >= 3 && e.bl_tree[te[t] * 2 + 1] === 0;
         t--
       );
-      return (e.opt_len += 3 * (t + 1) + 5 + 5 + 4), t;
+      return ((e.opt_len += 3 * (t + 1) + 5 + 5 + 4), t);
     }
     function U(e, t, n, r) {
       var i;
       for (N(e, t - 257, 5), N(e, n - 1, 5), N(e, r - 4, 4), i = 0; i < r; i++)
         N(e, e.bl_tree[te[i] * 2 + 1], 3);
-      V(e, e.dyn_ltree, t - 1), V(e, e.dyn_dtree, n - 1);
+      (V(e, e.dyn_ltree, t - 1), V(e, e.dyn_dtree, n - 1));
     }
     function W(e) {
       for (var t = 4093624447, n = 0; n <= 31; n++, t >>>= 1)
@@ -1005,25 +1008,25 @@ var z = t((e) => {
     }
     var ve = !1;
     function G(e) {
-      (ve ||= (F(), !0)),
+      ((ve ||= (F(), !0)),
         (e.l_desc = new se(e.dyn_ltree, ae)),
         (e.d_desc = new se(e.dyn_dtree, M)),
         (e.bl_desc = new se(e.bl_tree, oe)),
         (e.bi_buf = 0),
         (e.bi_valid = 0),
-        me(e);
+        me(e));
     }
     function K(e, t, n, r) {
-      N(e, (s << 1) + +!!r, 3), I(e, t, n, !0);
+      (N(e, (s << 1) + +!!r, 3), I(e, t, n, !0));
     }
     function ye(e) {
-      N(e, c << 1, 3), P(e, x, D), de(e);
+      (N(e, c << 1, 3), P(e, x, D), de(e));
     }
     function be(e, t, r, i) {
       var o,
         s,
         u = 0;
-      e.level > 0
+      (e.level > 0
         ? (e.strm.data_type === a && (e.strm.data_type = W(e)),
           B(e, e.l_desc),
           B(e, e.d_desc),
@@ -1040,7 +1043,7 @@ var z = t((e) => {
               U(e, e.l_desc.max_code + 1, e.d_desc.max_code + 1, u + 1),
               ge(e, e.dyn_ltree, e.dyn_dtree)),
         me(e),
-        i && he(e);
+        i && he(e));
     }
     function q(e, t, n) {
       return (
@@ -1057,19 +1060,19 @@ var z = t((e) => {
         e.last_lit === e.lit_bufsize - 1
       );
     }
-    (e._tr_init = G),
+    ((e._tr_init = G),
       (e._tr_stored_block = K),
       (e._tr_flush_block = be),
       (e._tr_tally = q),
-      (e._tr_align = ye);
+      (e._tr_align = ye));
   }),
   B = t((e, t) => {
     function n(e, t, n, r) {
-      for (var i = e & 65535, a = (e >>> 16) & 65535, o = 0; n !== 0; ) {
-        (o = n > 2e3 ? 2e3 : n), (n -= o);
-        do (i = (i + t[r++]) | 0), (a = (a + i) | 0);
+      for (var i = e & 65535, a = (e >>> 16) & 65535, o = 0; n !== 0;) {
+        ((o = n > 2e3 ? 2e3 : n), (n -= o));
+        do ((i = (i + t[r++]) | 0), (a = (a + i) | 0));
         while (--o);
-        (i %= 65521), (a %= 65521);
+        ((i %= 65521), (a %= 65521));
       }
       return i | (a << 16);
     }
@@ -1157,18 +1160,18 @@ var z = t((e) => {
       de = 4,
       fe = 3;
     function pe(e, t) {
-      return (e.msg = a[t]), t;
+      return ((e.msg = a[t]), t);
     }
     function F(e) {
       return (e << 1) - (e > 4 ? 9 : 0);
     }
     function me(e) {
-      for (var t = e.length; --t >= 0; ) e[t] = 0;
+      for (var t = e.length; --t >= 0;) e[t] = 0;
     }
     function he(e) {
       var n = e.state,
         r = n.pending;
-      r > e.avail_out && (r = e.avail_out),
+      (r > e.avail_out && (r = e.avail_out),
         r !== 0 &&
           (t.arraySet(e.output, n.pending_buf, n.pending_out, r, e.next_out),
           (e.next_out += r),
@@ -1176,24 +1179,24 @@ var z = t((e) => {
           (e.total_out += r),
           (e.avail_out -= r),
           (n.pending -= r),
-          n.pending === 0 && (n.pending_out = 0));
+          n.pending === 0 && (n.pending_out = 0)));
     }
     function I(e, t) {
-      n._tr_flush_block(
+      (n._tr_flush_block(
         e,
         e.block_start >= 0 ? e.block_start : -1,
         e.strstart - e.block_start,
         t,
       ),
         (e.block_start = e.strstart),
-        he(e.strm);
+        he(e.strm));
     }
     function L(e, t) {
       e.pending_buf[e.pending++] = t;
     }
     function R(e, t) {
-      (e.pending_buf[e.pending++] = (t >>> 8) & 255),
-        (e.pending_buf[e.pending++] = t & 255);
+      ((e.pending_buf[e.pending++] = (t >>> 8) & 255),
+        (e.pending_buf[e.pending++] = t & 255));
     }
     function H(e, n, a, o) {
       var s = e.avail_in;
@@ -1225,8 +1228,8 @@ var z = t((e) => {
         f = e.strstart + A,
         p = l[r + o - 1],
         m = l[r + o];
-      e.prev_length >= e.good_match && (n >>= 2),
-        s > e.lookahead && (s = e.lookahead);
+      (e.prev_length >= e.good_match && (n >>= 2),
+        s > e.lookahead && (s = e.lookahead));
       do
         if (
           ((i = t),
@@ -1235,7 +1238,7 @@ var z = t((e) => {
             l[i] === l[r] &&
             l[++i] === l[r + 1])
         ) {
-          (r += 2), i++;
+          ((r += 2), i++);
           do;
           while (
             l[++r] === l[++i] &&
@@ -1250,7 +1253,7 @@ var z = t((e) => {
           );
           if (((a = A - (f - r)), (r = f - A), a > o)) {
             if (((e.match_start = t), (o = a), a >= s)) break;
-            (p = l[r + o - 1]), (m = l[r + o]);
+            ((p = l[r + o - 1]), (m = l[r + o]));
           }
         }
       while ((t = d[t & u]) > c && --n !== 0);
@@ -1268,16 +1271,16 @@ var z = t((e) => {
           ((o = e.window_size - e.lookahead - e.strstart),
           e.strstart >= n + (n - j))
         ) {
-          t.arraySet(e.window, e.window, n, n, 0),
+          (t.arraySet(e.window, e.window, n, n, 0),
             (e.match_start -= n),
             (e.strstart -= n),
             (e.block_start -= n),
             (i = e.hash_size),
-            (r = i);
-          do (a = e.head[--r]), (e.head[r] = a >= n ? a - n : 0);
+            (r = i));
+          do ((a = e.head[--r]), (e.head[r] = a >= n ? a - n : 0));
           while (--i);
-          (i = n), (r = i);
-          do (a = e.prev[--r]), (e.prev[r] = a >= n ? a - n : 0);
+          ((i = n), (r = i));
+          do ((a = e.prev[--r]), (e.prev[r] = a >= n ? a - n : 0));
           while (--i);
           o += n;
         }
@@ -1305,12 +1308,12 @@ var z = t((e) => {
     }
     function ve(e, t) {
       var n = 65535;
-      for (n > e.pending_buf_size - 5 && (n = e.pending_buf_size - 5); ; ) {
+      for (n > e.pending_buf_size - 5 && (n = e.pending_buf_size - 5); ;) {
         if (e.lookahead <= 1) {
           if ((W(e), e.lookahead === 0 && t === o)) return N;
           if (e.lookahead === 0) break;
         }
-        (e.strstart += e.lookahead), (e.lookahead = 0);
+        ((e.strstart += e.lookahead), (e.lookahead = 0));
         var r = e.block_start + n;
         if (
           ((e.strstart === 0 || e.strstart >= r) &&
@@ -1331,7 +1334,7 @@ var z = t((e) => {
       );
     }
     function G(e, t) {
-      for (var r, i; ; ) {
+      for (var r, i; ;) {
         if (e.lookahead < j) {
           if ((W(e), e.lookahead < j && t === o)) return N;
           if (e.lookahead === 0) break;
@@ -1360,25 +1363,25 @@ var z = t((e) => {
           ) {
             e.match_length--;
             do
-              e.strstart++,
+              (e.strstart++,
                 (e.ins_h =
                   ((e.ins_h << e.hash_shift) ^ e.window[e.strstart + k - 1]) &
                   e.hash_mask),
                 (r = e.prev[e.strstart & e.w_mask] = e.head[e.ins_h]),
-                (e.head[e.ins_h] = e.strstart);
+                (e.head[e.ins_h] = e.strstart));
             while (--e.match_length !== 0);
             e.strstart++;
           } else
-            (e.strstart += e.match_length),
+            ((e.strstart += e.match_length),
               (e.match_length = 0),
               (e.ins_h = e.window[e.strstart]),
               (e.ins_h =
                 ((e.ins_h << e.hash_shift) ^ e.window[e.strstart + 1]) &
-                e.hash_mask);
+                e.hash_mask));
         } else
-          (i = n._tr_tally(e, 0, e.window[e.strstart])),
+          ((i = n._tr_tally(e, 0, e.window[e.strstart])),
             e.lookahead--,
-            e.strstart++;
+            e.strstart++);
         if (i && (I(e, !1), e.strm.avail_out === 0)) return N;
       }
       return (
@@ -1391,7 +1394,7 @@ var z = t((e) => {
       );
     }
     function K(e, t) {
-      for (var r, i, a; ; ) {
+      for (var r, i, a; ;) {
         if (e.lookahead < j) {
           if ((W(e), e.lookahead < j && t === o)) return N;
           if (e.lookahead === 0) break;
@@ -1417,14 +1420,14 @@ var z = t((e) => {
               (e.match_length = k - 1)),
           e.prev_length >= k && e.match_length <= e.prev_length)
         ) {
-          (a = e.strstart + e.lookahead - k),
+          ((a = e.strstart + e.lookahead - k),
             (i = n._tr_tally(
               e,
               e.strstart - 1 - e.prev_match,
               e.prev_length - k,
             )),
             (e.lookahead -= e.prev_length - 1),
-            (e.prev_length -= 2);
+            (e.prev_length -= 2));
           do
             ++e.strstart <= a &&
               ((e.ins_h =
@@ -1449,7 +1452,7 @@ var z = t((e) => {
             e.strm.avail_out === 0)
           )
             return N;
-        } else (e.match_available = 1), e.strstart++, e.lookahead--;
+        } else ((e.match_available = 1), e.strstart++, e.lookahead--);
       }
       return (
         (e.match_available &&=
@@ -1463,7 +1466,7 @@ var z = t((e) => {
       );
     }
     function ye(e, t) {
-      for (var r, i, a, s, c = e.window; ; ) {
+      for (var r, i, a, s, c = e.window; ;) {
         if (e.lookahead <= A) {
           if ((W(e), e.lookahead <= A && t === o)) return N;
           if (e.lookahead === 0) break;
@@ -1489,8 +1492,8 @@ var z = t((e) => {
             i === c[++a] &&
             a < s
           );
-          (e.match_length = A - (s - a)),
-            e.match_length > e.lookahead && (e.match_length = e.lookahead);
+          ((e.match_length = A - (s - a)),
+            e.match_length > e.lookahead && (e.match_length = e.lookahead));
         }
         if (
           (e.match_length >= k
@@ -1515,7 +1518,7 @@ var z = t((e) => {
       );
     }
     function be(e, t) {
-      for (var r; ; ) {
+      for (var r; ;) {
         if (e.lookahead === 0 && (W(e), e.lookahead === 0)) {
           if (t === o) return N;
           break;
@@ -1539,11 +1542,11 @@ var z = t((e) => {
       );
     }
     function q(e, t, n, r, i) {
-      (this.good_length = e),
+      ((this.good_length = e),
         (this.max_lazy = t),
         (this.nice_length = n),
         (this.max_chain = r),
-        (this.func = i);
+        (this.func = i));
     }
     var J = [
       new q(0, 0, 0, 0, ve),
@@ -1558,7 +1561,7 @@ var z = t((e) => {
       new q(32, 258, 258, 4096, K),
     ];
     function xe(e) {
-      (e.window_size = 2 * e.w_size),
+      ((e.window_size = 2 * e.w_size),
         me(e.head),
         (e.max_lazy_match = J[e.level].max_lazy),
         (e.good_match = J[e.level].good_length),
@@ -1570,10 +1573,10 @@ var z = t((e) => {
         (e.insert = 0),
         (e.match_length = e.prev_length = k - 1),
         (e.match_available = 0),
-        (e.ins_h = 0);
+        (e.ins_h = 0));
     }
     function Se() {
-      (this.strm = null),
+      ((this.strm = null),
         (this.status = 0),
         (this.pending_buf = null),
         (this.pending_buf_size = 0),
@@ -1635,7 +1638,7 @@ var z = t((e) => {
         (this.matches = 0),
         (this.insert = 0),
         (this.bi_buf = 0),
-        (this.bi_valid = 0);
+        (this.bi_valid = 0));
     }
     function Y(e) {
       var t;
@@ -1655,7 +1658,7 @@ var z = t((e) => {
     }
     function X(e) {
       var t = Y(e);
-      return t === d && xe(e.state), t;
+      return (t === d && xe(e.state), t);
     }
     function Z(e, t) {
       return !e || !e.state || e.state.wrap !== 2
@@ -1724,7 +1727,7 @@ var z = t((e) => {
         ((a.strm = e), (r = a.last_flush), (a.last_flush = t), a.status === ie)
       ) {
         if (a.wrap === 2)
-          (e.adler = 0),
+          ((e.adler = 0),
             L(a, 31),
             L(a, 139),
             L(a, 8),
@@ -1764,11 +1767,11 @@ var z = t((e) => {
                   a.level === 9 ? 2 : a.strategy >= v || a.level < 2 ? 4 : 0,
                 ),
                 L(a, fe),
-                (a.status = ce));
+                (a.status = ce)));
         else {
           var _ = (C + ((a.w_bits - 8) << 4)) << 8,
             b = -1;
-          (b =
+          ((b =
             a.strategy >= v || a.level < 2
               ? 0
               : a.level < 6
@@ -1782,7 +1785,7 @@ var z = t((e) => {
             (a.status = ce),
             R(a, _),
             a.strstart !== 0 && (R(a, e.adler >>> 16), R(a, e.adler & 65535)),
-            (e.adler = 1);
+            (e.adler = 1));
         }
       }
       if (a.status === ae) {
@@ -1800,12 +1803,12 @@ var z = t((e) => {
               a.pending === a.pending_buf_size)
             );
           )
-            L(a, a.gzhead.extra[a.gzindex] & 255), a.gzindex++;
-          a.gzhead.hcrc &&
+            (L(a, a.gzhead.extra[a.gzindex] & 255), a.gzindex++);
+          (a.gzhead.hcrc &&
             a.pending > m &&
             (e.adler = i(e.adler, a.pending_buf, a.pending - m, m)),
             a.gzindex === a.gzhead.extra.length &&
-              ((a.gzindex = 0), (a.status = M));
+              ((a.gzindex = 0), (a.status = M)));
         } else a.status = M;
       }
       if (a.status === M) {
@@ -1824,16 +1827,16 @@ var z = t((e) => {
               g = 1;
               break;
             }
-            (g =
+            ((g =
               a.gzindex < a.gzhead.name.length
                 ? a.gzhead.name.charCodeAt(a.gzindex++) & 255
                 : 0),
-              L(a, g);
+              L(a, g));
           } while (g !== 0);
-          a.gzhead.hcrc &&
+          (a.gzhead.hcrc &&
             a.pending > m &&
             (e.adler = i(e.adler, a.pending_buf, a.pending - m, m)),
-            g === 0 && ((a.gzindex = 0), (a.status = oe));
+            g === 0 && ((a.gzindex = 0), (a.status = oe)));
         } else a.status = oe;
       }
       if (a.status === oe) {
@@ -1852,16 +1855,16 @@ var z = t((e) => {
               g = 1;
               break;
             }
-            (g =
+            ((g =
               a.gzindex < a.gzhead.comment.length
                 ? a.gzhead.comment.charCodeAt(a.gzindex++) & 255
                 : 0),
-              L(a, g);
+              L(a, g));
           } while (g !== 0);
-          a.gzhead.hcrc &&
+          (a.gzhead.hcrc &&
             a.pending > m &&
             (e.adler = i(e.adler, a.pending_buf, a.pending - m, m)),
-            g === 0 && (a.status = se);
+            g === 0 && (a.status = se));
         } else a.status = se;
       }
       if (
@@ -1876,7 +1879,7 @@ var z = t((e) => {
             : (a.status = ce)),
         a.pending !== 0)
       ) {
-        if ((he(e), e.avail_out === 0)) return (a.last_flush = -1), d;
+        if ((he(e), e.avail_out === 0)) return ((a.last_flush = -1), d);
       } else if (e.avail_in === 0 && F(t) <= F(r) && t !== l) return pe(e, h);
       if (a.status === le && e.avail_in !== 0) return pe(e, h);
       if (
@@ -1891,7 +1894,7 @@ var z = t((e) => {
               ? ye(a, t)
               : J[a.level].func(a, t);
         if (((x === ue || x === de) && (a.status = le), x === N || x === ue))
-          return e.avail_out === 0 && (a.last_flush = -1), d;
+          return (e.avail_out === 0 && (a.last_flush = -1), d);
         if (
           x === P &&
           (t === s
@@ -1905,7 +1908,7 @@ var z = t((e) => {
           he(e),
           e.avail_out === 0)
         )
-          return (a.last_flush = -1), d;
+          return ((a.last_flush = -1), d);
       }
       return t === l
         ? a.wrap <= 0
@@ -1980,15 +1983,15 @@ var z = t((e) => {
           W(a);
         a.lookahead >= k;
       ) {
-        (o = a.strstart), (s = a.lookahead - (k - 1));
+        ((o = a.strstart), (s = a.lookahead - (k - 1)));
         do
-          (a.ins_h =
+          ((a.ins_h =
             ((a.ins_h << a.hash_shift) ^ a.window[o + k - 1]) & a.hash_mask),
             (a.prev[o & a.w_mask] = a.head[a.ins_h]),
             (a.head[a.ins_h] = o),
-            o++;
+            o++);
         while (--s);
-        (a.strstart = o), (a.lookahead = k - 1), W(a);
+        ((a.strstart = o), (a.lookahead = k - 1), W(a));
       }
       return (
         (a.strstart += a.lookahead),
@@ -2004,7 +2007,7 @@ var z = t((e) => {
         d
       );
     }
-    (e.deflateInit = we),
+    ((e.deflateInit = we),
       (e.deflateInit2 = Ce),
       (e.deflateReset = X),
       (e.deflateResetKeep = Y),
@@ -2012,7 +2015,7 @@ var z = t((e) => {
       (e.deflate = Q),
       (e.deflateEnd = Te),
       (e.deflateSetDictionary = $),
-      (e.deflateInfo = `pako deflate (from Nodeca project)`);
+      (e.deflateInfo = `pako deflate (from Nodeca project)`));
   }),
   U = t((e) => {
     var t = z(),
@@ -2041,7 +2044,7 @@ var z = t((e) => {
                 : a >= 192
                   ? 2
                   : 1;
-    (i[254] = i[254] = 1),
+    ((i[254] = i[254] = 1),
       (e.string2buf = function (e) {
         var n,
           r,
@@ -2051,15 +2054,15 @@ var z = t((e) => {
           s = e.length,
           c = 0;
         for (a = 0; a < s; a++)
-          (r = e.charCodeAt(a)),
+          ((r = e.charCodeAt(a)),
             (r & 64512) == 55296 &&
               a + 1 < s &&
               ((i = e.charCodeAt(a + 1)),
               (i & 64512) == 56320 &&
                 ((r = 65536 + ((r - 55296) << 10) + (i - 56320)), a++)),
-            (c += r < 128 ? 1 : r < 2048 ? 2 : r < 65536 ? 3 : 4);
+            (c += r < 128 ? 1 : r < 2048 ? 2 : r < 65536 ? 3 : 4));
         for (n = new t.Buf8(c), o = 0, a = 0; o < c; a++)
-          (r = e.charCodeAt(a)),
+          ((r = e.charCodeAt(a)),
             (r & 64512) == 55296 &&
               a + 1 < s &&
               ((i = e.charCodeAt(a + 1)),
@@ -2076,16 +2079,16 @@ var z = t((e) => {
                   : ((n[o++] = 240 | (r >>> 18)),
                     (n[o++] = 128 | ((r >>> 12) & 63)),
                     (n[o++] = 128 | ((r >>> 6) & 63)),
-                    (n[o++] = 128 | (r & 63)));
+                    (n[o++] = 128 | (r & 63))));
         return n;
-      });
+      }));
     function o(e, i) {
       if (i < 65534 && ((e.subarray && r) || (!e.subarray && n)))
         return String.fromCharCode.apply(null, t.shrinkBuf(e, i));
       for (var a = ``, o = 0; o < i; o++) a += String.fromCharCode(e[o]);
       return a;
     }
-    (e.buf2binstring = function (e) {
+    ((e.buf2binstring = function (e) {
       return o(e, e.length);
     }),
       (e.binstring2buf = function (e) {
@@ -2100,12 +2103,12 @@ var z = t((e) => {
           s,
           c = t || e.length,
           l = Array(c * 2);
-        for (r = 0, n = 0; n < c; )
+        for (r = 0, n = 0; n < c;)
           if (((a = e[n++]), a < 128)) l[r++] = a;
-          else if (((s = i[a]), s > 4)) (l[r++] = 65533), (n += s - 1);
+          else if (((s = i[a]), s > 4)) ((l[r++] = 65533), (n += s - 1));
           else {
-            for (a &= s === 2 ? 31 : s === 3 ? 15 : 7; s > 1 && n < c; )
-              (a = (a << 6) | (e[n++] & 63)), s--;
+            for (a &= s === 2 ? 31 : s === 3 ? 15 : 7; s > 1 && n < c;)
+              ((a = (a << 6) | (e[n++] & 63)), s--);
             s > 1
               ? (l[r++] = 65533)
               : a < 65536
@@ -2124,11 +2127,11 @@ var z = t((e) => {
         )
           n--;
         return n < 0 || n === 0 ? t : n + i[e[n]] > t ? n : t;
-      });
+      }));
   }),
   W = t((e, t) => {
     function n() {
-      (this.input = null),
+      ((this.input = null),
         (this.next_in = 0),
         (this.avail_in = 0),
         (this.total_in = 0),
@@ -2139,7 +2142,7 @@ var z = t((e) => {
         (this.msg = ``),
         (this.state = null),
         (this.data_type = 2),
-        (this.adler = 0);
+        (this.adler = 0));
     }
     t.exports = n;
   }),
@@ -2173,7 +2176,7 @@ var z = t((e) => {
         e || {},
       );
       var s = this.options;
-      s.raw && s.windowBits > 0
+      (s.raw && s.windowBits > 0
         ? (s.windowBits = -s.windowBits)
         : s.gzip &&
           s.windowBits > 0 &&
@@ -2184,7 +2187,7 @@ var z = t((e) => {
         (this.ended = !1),
         (this.chunks = []),
         (this.strm = new a()),
-        (this.strm.avail_out = 0);
+        (this.strm.avail_out = 0));
       var c = t.deflateInit2(
         this.strm,
         s.level,
@@ -2206,13 +2209,13 @@ var z = t((e) => {
         this._dict_set = !0;
       }
     }
-    (h.prototype.push = function (e, i) {
+    ((h.prototype.push = function (e, i) {
       var a = this.strm,
         f = this.options.chunkSize,
         p,
         m;
       if (this.ended) return !1;
-      (m = i === ~~i ? i : i === !0 ? c : s),
+      ((m = i === ~~i ? i : i === !0 ? c : s),
         (a.input =
           typeof e == `string`
             ? r.string2buf(e)
@@ -2220,7 +2223,7 @@ var z = t((e) => {
               ? new Uint8Array(e)
               : e),
         (a.next_in = 0),
-        (a.avail_in = a.input.length);
+        (a.avail_in = a.input.length));
       do {
         if (
           (a.avail_out === 0 &&
@@ -2228,7 +2231,7 @@ var z = t((e) => {
           (p = t.deflate(a, m)),
           p !== u && p !== l)
         )
-          return this.onEnd(p), (this.ended = !0), !1;
+          return (this.onEnd(p), (this.ended = !0), !1);
         (a.avail_out === 0 || (a.avail_in === 0 && (m === c || m === d))) &&
           (this.options.to === `string`
             ? this.onData(r.buf2binstring(n.shrinkBuf(a.output, a.next_out)))
@@ -2245,27 +2248,27 @@ var z = t((e) => {
         this.chunks.push(e);
       }),
       (h.prototype.onEnd = function (e) {
-        e === l &&
+        (e === l &&
           (this.result =
             this.options.to === `string`
               ? this.chunks.join(``)
               : n.flattenChunks(this.chunks)),
           (this.chunks = []),
           (this.err = e),
-          (this.msg = this.strm.msg);
-      });
+          (this.msg = this.strm.msg));
+      }));
     function g(e, t) {
       var n = new h(t);
       if ((n.push(e, !0), n.err)) throw n.msg || i[n.err];
       return n.result;
     }
     function _(e, t) {
-      return (t ||= {}), (t.raw = !0), g(e, t);
+      return ((t ||= {}), (t.raw = !0), g(e, t));
     }
     function v(e, t) {
-      return (t ||= {}), (t.gzip = !0), g(e, t);
+      return ((t ||= {}), (t.gzip = !0), g(e, t));
     }
-    (e.Deflate = h), (e.deflate = g), (e.deflateRaw = _), (e.gzip = v);
+    ((e.Deflate = h), (e.deflate = g), (e.deflateRaw = _), (e.gzip = v));
   }),
   G = t((e, t) => {
     t.exports = function (e, t) {
@@ -2294,7 +2297,7 @@ var z = t((e) => {
         w,
         T = e.input,
         E;
-      (i = r + (e.avail_in - 5)),
+      ((i = r + (e.avail_in - 5)),
         (a = e.next_out),
         (E = e.output),
         (o = a - (t - e.avail_out)),
@@ -2309,10 +2312,10 @@ var z = t((e) => {
         (h = n.lencode),
         (g = n.distcode),
         (_ = (1 << n.lenbits) - 1),
-        (v = (1 << n.distbits) - 1);
+        (v = (1 << n.distbits) - 1));
       top: do {
-        m < 15 && ((p += T[r++] << m), (m += 8), (p += T[r++] << m), (m += 8)),
-          (y = h[p & _]);
+        (m < 15 && ((p += T[r++] << m), (m += 8), (p += T[r++] << m), (m += 8)),
+          (y = h[p & _]));
         dolen: for (;;) {
           if (
             ((b = y >>> 24),
@@ -2323,7 +2326,7 @@ var z = t((e) => {
           )
             E[a++] = y & 65535;
           else if (b & 16) {
-            (x = y & 65535),
+            ((x = y & 65535),
               (b &= 15),
               b &&
                 (m < b && ((p += T[r++] << m), (m += 8)),
@@ -2332,7 +2335,7 @@ var z = t((e) => {
                 (m -= b)),
               m < 15 &&
                 ((p += T[r++] << m), (m += 8), (p += T[r++] << m), (m += 8)),
-              (y = g[p & v]);
+              (y = g[p & v]));
             dodist: for (;;) {
               if (
                 ((b = y >>> 24),
@@ -2351,12 +2354,12 @@ var z = t((e) => {
                   (S += p & ((1 << b) - 1)),
                   S > c)
                 ) {
-                  (e.msg = `invalid distance too far back`), (n.mode = 30);
+                  ((e.msg = `invalid distance too far back`), (n.mode = 30));
                   break top;
                 }
                 if (((p >>>= b), (m -= b), (b = a - o), S > b)) {
                   if (((b = S - b), b > u && n.sane)) {
-                    (e.msg = `invalid distance too far back`), (n.mode = 30);
+                    ((e.msg = `invalid distance too far back`), (n.mode = 30));
                     break top;
                   }
                   if (((C = 0), (w = f), d === 0)) {
@@ -2364,7 +2367,7 @@ var z = t((e) => {
                       x -= b;
                       do E[a++] = f[C++];
                       while (--b);
-                      (C = a - S), (w = E);
+                      ((C = a - S), (w = E));
                     }
                   } else if (d < b) {
                     if (((C += l + d - b), (b -= d), b < x)) {
@@ -2372,36 +2375,36 @@ var z = t((e) => {
                       do E[a++] = f[C++];
                       while (--b);
                       if (((C = 0), d < x)) {
-                        (b = d), (x -= b);
+                        ((b = d), (x -= b));
                         do E[a++] = f[C++];
                         while (--b);
-                        (C = a - S), (w = E);
+                        ((C = a - S), (w = E));
                       }
                     }
                   } else if (((C += d - b), b < x)) {
                     x -= b;
                     do E[a++] = f[C++];
                     while (--b);
-                    (C = a - S), (w = E);
+                    ((C = a - S), (w = E));
                   }
-                  for (; x > 2; )
-                    (E[a++] = w[C++]),
+                  for (; x > 2;)
+                    ((E[a++] = w[C++]),
                       (E[a++] = w[C++]),
                       (E[a++] = w[C++]),
-                      (x -= 3);
+                      (x -= 3));
                   x && ((E[a++] = w[C++]), x > 1 && (E[a++] = w[C++]));
                 } else {
                   C = a - S;
                   do
-                    (E[a++] = E[C++]),
+                    ((E[a++] = E[C++]),
                       (E[a++] = E[C++]),
                       (E[a++] = E[C++]),
-                      (x -= 3);
+                      (x -= 3));
                   while (x > 2);
                   x && ((E[a++] = E[C++]), x > 1 && (E[a++] = E[C++]));
                 }
               } else if (b & 64) {
-                (e.msg = `invalid distance code`), (n.mode = 30);
+                ((e.msg = `invalid distance code`), (n.mode = 30));
                 break top;
               } else {
                 y = g[(y & 65535) + (p & ((1 << b) - 1))];
@@ -2416,13 +2419,13 @@ var z = t((e) => {
             n.mode = 12;
             break top;
           } else {
-            (e.msg = `invalid literal/length code`), (n.mode = 30);
+            ((e.msg = `invalid literal/length code`), (n.mode = 30));
             break top;
           }
           break;
         }
       } while (r < i && a < s);
-      (x = m >> 3),
+      ((x = m >> 3),
         (r -= x),
         (m -= x << 3),
         (p &= (1 << m) - 1),
@@ -2431,7 +2434,7 @@ var z = t((e) => {
         (e.avail_in = r < i ? 5 + (i - r) : 5 - (r - i)),
         (e.avail_out = a < s ? 257 + (s - a) : 257 - (a - s)),
         (n.hold = p),
-        (n.bits = m);
+        (n.bits = m));
     };
   }),
   K = t((e, t) => {
@@ -2490,7 +2493,7 @@ var z = t((e) => {
       for (x = 0; x < m; x++) M[t[p + x]]++;
       for (w = y, C = r; C >= 1 && M[C] === 0; C--);
       if ((w > C && (w = C), C === 0))
-        return (h[g++] = 20971520), (h[g++] = 20971520), (v.bits = 1), 0;
+        return ((h[g++] = 20971520), (h[g++] = 20971520), (v.bits = 1), 0);
       for (S = 1; S < C && M[S] === 0; S++);
       for (w < S && (w = S), ee = 1, b = 1; b <= r; b++)
         if (((ee <<= 1), (ee -= M[b]), ee < 0)) return -1;
@@ -2516,7 +2519,7 @@ var z = t((e) => {
       )
         return 1;
       for (;;) {
-        (le = b - E),
+        ((le = b - E),
           _[x] < ae
             ? ((N = 0), (P = _[x]))
             : _[x] > ae
@@ -2524,10 +2527,10 @@ var z = t((e) => {
               : ((N = 96), (P = 0)),
           (D = 1 << (b - E)),
           (O = 1 << T),
-          (S = O);
-        do (O -= D), (h[j + (ne >> E) + O] = (le << 24) | (N << 16) | P);
+          (S = O));
+        do ((O -= D), (h[j + (ne >> E) + O] = (le << 24) | (N << 16) | P));
         while (O !== 0);
-        for (D = 1 << (b - 1); ne & D; ) D >>= 1;
+        for (D = 1 << (b - 1); ne & D;) D >>= 1;
         if (
           (D === 0 ? (ne = 0) : ((ne &= D - 1), (ne += D)), x++, --M[b] === 0)
         ) {
@@ -2539,10 +2542,10 @@ var z = t((e) => {
             E === 0 && (E = w), j += S, T = b - E, ee = 1 << T;
             T + E < C && ((ee -= M[T + E]), !(ee <= 0));
           )
-            T++, (ee <<= 1);
+            (T++, (ee <<= 1));
           if (((te += 1 << T), (e === s && te > i) || (e === c && te > a)))
             return 1;
-          (k = ne & A), (h[k] = (w << 24) | (T << 16) | (j - g));
+          ((k = ne & A), (h[k] = (w << 24) | (T << 16) | (j - g)));
         }
       }
       return (
@@ -2614,7 +2617,7 @@ var z = t((e) => {
       );
     }
     function V() {
-      (this.mode = 0),
+      ((this.mode = 0),
         (this.last = !1),
         (this.wrap = 0),
         (this.havedict = !1),
@@ -2648,7 +2651,7 @@ var z = t((e) => {
         (this.distdyn = null),
         (this.sane = 0),
         (this.back = 0),
-        (this.was = 0);
+        (this.was = 0));
     }
     function H(e) {
       var n;
@@ -2710,16 +2713,16 @@ var z = t((e) => {
     function xe(e) {
       if (be) {
         var n;
-        for (q = new t.Buf32(512), J = new t.Buf32(32), n = 0; n < 144; )
+        for (q = new t.Buf32(512), J = new t.Buf32(32), n = 0; n < 144;)
           e.lens[n++] = 8;
-        for (; n < 256; ) e.lens[n++] = 9;
-        for (; n < 280; ) e.lens[n++] = 7;
-        for (; n < 288; ) e.lens[n++] = 8;
-        for (a(s, e.lens, 0, 288, q, 0, e.work, { bits: 9 }), n = 0; n < 32; )
+        for (; n < 256;) e.lens[n++] = 9;
+        for (; n < 280;) e.lens[n++] = 7;
+        for (; n < 288;) e.lens[n++] = 8;
+        for (a(s, e.lens, 0, 288, q, 0, e.work, { bits: 9 }), n = 0; n < 32;)
           e.lens[n++] = 5;
-        a(c, e.lens, 0, 32, J, 0, e.work, { bits: 5 }), (be = !1);
+        (a(c, e.lens, 0, 32, J, 0, e.work, { bits: 5 }), (be = !1));
       }
-      (e.lencode = q), (e.lenbits = 9), (e.distcode = J), (e.distbits = 5);
+      ((e.lencode = q), (e.lenbits = 9), (e.distcode = J), (e.distbits = 5));
     }
     function Se(e, n, r, i) {
       var a,
@@ -2778,7 +2781,7 @@ var z = t((e) => {
         Oe = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
       if (!e || !e.state || !e.output || (!e.input && e.avail_in !== 0))
         return h;
-      (L = e.state),
+      ((L = e.state),
         L.mode === O && (L.mode = k),
         (_e = e.next_out),
         (z = e.output),
@@ -2790,7 +2793,7 @@ var z = t((e) => {
         (W = L.bits),
         (ve = V),
         (G = H),
-        (Te = f);
+        (Te = f));
       inf_leave: for (;;)
         switch (L.mode) {
           case b:
@@ -2798,18 +2801,18 @@ var z = t((e) => {
               L.mode = k;
               break;
             }
-            for (; W < 16; ) {
+            for (; W < 16;) {
               if (V === 0) break inf_leave;
-              V--, (U += R[B++] << W), (W += 8);
+              (V--, (U += R[B++] << W), (W += 8));
             }
             if (L.wrap & 2 && U === 35615) {
-              (L.check = 0),
+              ((L.check = 0),
                 ($[0] = U & 255),
                 ($[1] = (U >>> 8) & 255),
                 (L.check = r(L.check, $, 2, 0)),
                 (U = 0),
                 (W = 0),
-                (L.mode = x);
+                (L.mode = x));
               break;
             }
             if (
@@ -2817,52 +2820,52 @@ var z = t((e) => {
               L.head && (L.head.done = !1),
               !(L.wrap & 1) || (((U & 255) << 8) + (U >> 8)) % 31)
             ) {
-              (e.msg = `incorrect header check`), (L.mode = F);
+              ((e.msg = `incorrect header check`), (L.mode = F));
               break;
             }
             if ((U & 15) !== y) {
-              (e.msg = `unknown compression method`), (L.mode = F);
+              ((e.msg = `unknown compression method`), (L.mode = F));
               break;
             }
             if (((U >>>= 4), (W -= 4), (Q = (U & 15) + 8), L.wbits === 0))
               L.wbits = Q;
             else if (Q > L.wbits) {
-              (e.msg = `invalid window size`), (L.mode = F);
+              ((e.msg = `invalid window size`), (L.mode = F));
               break;
             }
-            (L.dmax = 1 << Q),
+            ((L.dmax = 1 << Q),
               (e.adler = L.check = 1),
               (L.mode = U & 512 ? ne : O),
               (U = 0),
-              (W = 0);
+              (W = 0));
             break;
           case x:
-            for (; W < 16; ) {
+            for (; W < 16;) {
               if (V === 0) break inf_leave;
-              V--, (U += R[B++] << W), (W += 8);
+              (V--, (U += R[B++] << W), (W += 8));
             }
             if (((L.flags = U), (L.flags & 255) !== y)) {
-              (e.msg = `unknown compression method`), (L.mode = F);
+              ((e.msg = `unknown compression method`), (L.mode = F));
               break;
             }
             if (L.flags & 57344) {
-              (e.msg = `unknown header flags set`), (L.mode = F);
+              ((e.msg = `unknown header flags set`), (L.mode = F));
               break;
             }
-            L.head && (L.head.text = (U >> 8) & 1),
+            (L.head && (L.head.text = (U >> 8) & 1),
               L.flags & 512 &&
                 (($[0] = U & 255),
                 ($[1] = (U >>> 8) & 255),
                 (L.check = r(L.check, $, 2, 0))),
               (U = 0),
               (W = 0),
-              (L.mode = S);
+              (L.mode = S));
           case S:
-            for (; W < 32; ) {
+            for (; W < 32;) {
               if (V === 0) break inf_leave;
-              V--, (U += R[B++] << W), (W += 8);
+              (V--, (U += R[B++] << W), (W += 8));
             }
-            L.head && (L.head.time = U),
+            (L.head && (L.head.time = U),
               L.flags & 512 &&
                 (($[0] = U & 255),
                 ($[1] = (U >>> 8) & 255),
@@ -2871,34 +2874,34 @@ var z = t((e) => {
                 (L.check = r(L.check, $, 4, 0))),
               (U = 0),
               (W = 0),
-              (L.mode = C);
+              (L.mode = C));
           case C:
-            for (; W < 16; ) {
+            for (; W < 16;) {
               if (V === 0) break inf_leave;
-              V--, (U += R[B++] << W), (W += 8);
+              (V--, (U += R[B++] << W), (W += 8));
             }
-            L.head && ((L.head.xflags = U & 255), (L.head.os = U >> 8)),
+            (L.head && ((L.head.xflags = U & 255), (L.head.os = U >> 8)),
               L.flags & 512 &&
                 (($[0] = U & 255),
                 ($[1] = (U >>> 8) & 255),
                 (L.check = r(L.check, $, 2, 0))),
               (U = 0),
               (W = 0),
-              (L.mode = w);
+              (L.mode = w));
           case w:
             if (L.flags & 1024) {
-              for (; W < 16; ) {
+              for (; W < 16;) {
                 if (V === 0) break inf_leave;
-                V--, (U += R[B++] << W), (W += 8);
+                (V--, (U += R[B++] << W), (W += 8));
               }
-              (L.length = U),
+              ((L.length = U),
                 L.head && (L.head.extra_len = U),
                 L.flags & 512 &&
                   (($[0] = U & 255),
                   ($[1] = (U >>> 8) & 255),
                   (L.check = r(L.check, $, 2, 0))),
                 (U = 0),
-                (W = 0);
+                (W = 0));
             } else L.head && (L.head.extra = null);
             L.mode = T;
           case T:
@@ -2918,17 +2921,17 @@ var z = t((e) => {
               L.length)
             )
               break inf_leave;
-            (L.length = 0), (L.mode = E);
+            ((L.length = 0), (L.mode = E));
           case E:
             if (L.flags & 2048) {
               if (V === 0) break inf_leave;
               K = 0;
               do
-                (Q = R[B + K++]),
+                ((Q = R[B + K++]),
                   L.head &&
                     Q &&
                     L.length < 65536 &&
-                    (L.head.name += String.fromCharCode(Q));
+                    (L.head.name += String.fromCharCode(Q)));
               while (Q && K < V);
               if (
                 (L.flags & 512 && (L.check = r(L.check, R, K, B)),
@@ -2938,17 +2941,17 @@ var z = t((e) => {
               )
                 break inf_leave;
             } else L.head && (L.head.name = null);
-            (L.length = 0), (L.mode = ee);
+            ((L.length = 0), (L.mode = ee));
           case ee:
             if (L.flags & 4096) {
               if (V === 0) break inf_leave;
               K = 0;
               do
-                (Q = R[B + K++]),
+                ((Q = R[B + K++]),
                   L.head &&
                     Q &&
                     L.length < 65536 &&
-                    (L.head.comment += String.fromCharCode(Q));
+                    (L.head.comment += String.fromCharCode(Q)));
               while (Q && K < V);
               if (
                 (L.flags & 512 && (L.check = r(L.check, R, K, B)),
@@ -2961,26 +2964,26 @@ var z = t((e) => {
             L.mode = te;
           case te:
             if (L.flags & 512) {
-              for (; W < 16; ) {
+              for (; W < 16;) {
                 if (V === 0) break inf_leave;
-                V--, (U += R[B++] << W), (W += 8);
+                (V--, (U += R[B++] << W), (W += 8));
               }
               if (U !== (L.check & 65535)) {
-                (e.msg = `header crc mismatch`), (L.mode = F);
+                ((e.msg = `header crc mismatch`), (L.mode = F));
                 break;
               }
-              (U = 0), (W = 0);
+              ((U = 0), (W = 0));
             }
-            L.head && ((L.head.hcrc = (L.flags >> 9) & 1), (L.head.done = !0)),
+            (L.head && ((L.head.hcrc = (L.flags >> 9) & 1), (L.head.done = !0)),
               (e.adler = L.check = 0),
-              (L.mode = O);
+              (L.mode = O));
             break;
           case ne:
-            for (; W < 32; ) {
+            for (; W < 32;) {
               if (V === 0) break inf_leave;
-              V--, (U += R[B++] << W), (W += 8);
+              (V--, (U += R[B++] << W), (W += 8));
             }
-            (e.adler = L.check = ge(U)), (U = 0), (W = 0), (L.mode = D);
+            ((e.adler = L.check = ge(U)), (U = 0), (W = 0), (L.mode = D));
           case D:
             if (L.havedict === 0)
               return (
@@ -2992,17 +2995,17 @@ var z = t((e) => {
                 (L.bits = W),
                 m
               );
-            (e.adler = L.check = 1), (L.mode = O);
+            ((e.adler = L.check = 1), (L.mode = O));
           case O:
             if (I === u || I === d) break inf_leave;
           case k:
             if (L.last) {
-              (U >>>= W & 7), (W -= W & 7), (L.mode = de);
+              ((U >>>= W & 7), (W -= W & 7), (L.mode = de));
               break;
             }
-            for (; W < 3; ) {
+            for (; W < 3;) {
               if (V === 0) break inf_leave;
-              V--, (U += R[B++] << W), (W += 8);
+              (V--, (U += R[B++] << W), (W += 8));
             }
             switch (((L.last = U & 1), (U >>>= 1), --W, U & 3)) {
               case 0:
@@ -3010,7 +3013,7 @@ var z = t((e) => {
                 break;
               case 1:
                 if ((xe(L), (L.mode = oe), I === d)) {
-                  (U >>>= 2), (W -= 2);
+                  ((U >>>= 2), (W -= 2));
                   break inf_leave;
                 }
                 break;
@@ -3018,17 +3021,17 @@ var z = t((e) => {
                 L.mode = ie;
                 break;
               case 3:
-                (e.msg = `invalid block type`), (L.mode = F);
+                ((e.msg = `invalid block type`), (L.mode = F));
             }
-            (U >>>= 2), (W -= 2);
+            ((U >>>= 2), (W -= 2));
             break;
           case A:
-            for (U >>>= W & 7, W -= W & 7; W < 32; ) {
+            for (U >>>= W & 7, W -= W & 7; W < 32;) {
               if (V === 0) break inf_leave;
-              V--, (U += R[B++] << W), (W += 8);
+              (V--, (U += R[B++] << W), (W += 8));
             }
             if ((U & 65535) != ((U >>> 16) ^ 65535)) {
-              (e.msg = `invalid stored block lengths`), (L.mode = F);
+              ((e.msg = `invalid stored block lengths`), (L.mode = F));
               break;
             }
             if (
@@ -3041,20 +3044,20 @@ var z = t((e) => {
             if (((K = L.length), K)) {
               if ((K > V && (K = V), K > H && (K = H), K === 0))
                 break inf_leave;
-              t.arraySet(z, R, B, K, _e),
+              (t.arraySet(z, R, B, K, _e),
                 (V -= K),
                 (B += K),
                 (H -= K),
                 (_e += K),
-                (L.length -= K);
+                (L.length -= K));
               break;
             }
             L.mode = O;
             break;
           case ie:
-            for (; W < 14; ) {
+            for (; W < 14;) {
               if (V === 0) break inf_leave;
-              V--, (U += R[B++] << W), (W += 8);
+              (V--, (U += R[B++] << W), (W += 8));
             }
             if (
               ((L.nlen = (U & 31) + 257),
@@ -3068,19 +3071,19 @@ var z = t((e) => {
               (W -= 4),
               L.nlen > 286 || L.ndist > 30)
             ) {
-              (e.msg = `too many length or distance symbols`), (L.mode = F);
+              ((e.msg = `too many length or distance symbols`), (L.mode = F));
               break;
             }
-            (L.have = 0), (L.mode = ae);
+            ((L.have = 0), (L.mode = ae));
           case ae:
-            for (; L.have < L.ncode; ) {
-              for (; W < 3; ) {
+            for (; L.have < L.ncode;) {
+              for (; W < 3;) {
                 if (V === 0) break inf_leave;
-                V--, (U += R[B++] << W), (W += 8);
+                (V--, (U += R[B++] << W), (W += 8));
               }
-              (L.lens[Oe[L.have++]] = U & 7), (U >>>= 3), (W -= 3);
+              ((L.lens[Oe[L.have++]] = U & 7), (U >>>= 3), (W -= 3));
             }
-            for (; L.have < 19; ) L.lens[Oe[L.have++]] = 0;
+            for (; L.have < 19;) L.lens[Oe[L.have++]] = 0;
             if (
               ((L.lencode = L.lendyn),
               (L.lenbits = 7),
@@ -3089,12 +3092,12 @@ var z = t((e) => {
               (L.lenbits = Ee.bits),
               Te)
             ) {
-              (e.msg = `invalid code lengths set`), (L.mode = F);
+              ((e.msg = `invalid code lengths set`), (L.mode = F));
               break;
             }
-            (L.have = 0), (L.mode = M);
+            ((L.have = 0), (L.mode = M));
           case M:
-            for (; L.have < L.nlen + L.ndist; ) {
+            for (; L.have < L.nlen + L.ndist;) {
               for (
                 ;
                 (q = L.lencode[U & ((1 << L.lenbits) - 1)]),
@@ -3104,56 +3107,56 @@ var z = t((e) => {
                   !(J <= W);
               ) {
                 if (V === 0) break inf_leave;
-                V--, (U += R[B++] << W), (W += 8);
+                (V--, (U += R[B++] << W), (W += 8));
               }
-              if (X < 16) (U >>>= J), (W -= J), (L.lens[L.have++] = X);
+              if (X < 16) ((U >>>= J), (W -= J), (L.lens[L.have++] = X));
               else {
                 if (X === 16) {
-                  for (De = J + 2; W < De; ) {
+                  for (De = J + 2; W < De;) {
                     if (V === 0) break inf_leave;
-                    V--, (U += R[B++] << W), (W += 8);
+                    (V--, (U += R[B++] << W), (W += 8));
                   }
                   if (((U >>>= J), (W -= J), L.have === 0)) {
-                    (e.msg = `invalid bit length repeat`), (L.mode = F);
+                    ((e.msg = `invalid bit length repeat`), (L.mode = F));
                     break;
                   }
-                  (Q = L.lens[L.have - 1]),
+                  ((Q = L.lens[L.have - 1]),
                     (K = 3 + (U & 3)),
                     (U >>>= 2),
-                    (W -= 2);
+                    (W -= 2));
                 } else if (X === 17) {
-                  for (De = J + 3; W < De; ) {
+                  for (De = J + 3; W < De;) {
                     if (V === 0) break inf_leave;
-                    V--, (U += R[B++] << W), (W += 8);
+                    (V--, (U += R[B++] << W), (W += 8));
                   }
-                  (U >>>= J),
+                  ((U >>>= J),
                     (W -= J),
                     (Q = 0),
                     (K = 3 + (U & 7)),
                     (U >>>= 3),
-                    (W -= 3);
+                    (W -= 3));
                 } else {
-                  for (De = J + 7; W < De; ) {
+                  for (De = J + 7; W < De;) {
                     if (V === 0) break inf_leave;
-                    V--, (U += R[B++] << W), (W += 8);
+                    (V--, (U += R[B++] << W), (W += 8));
                   }
-                  (U >>>= J),
+                  ((U >>>= J),
                     (W -= J),
                     (Q = 0),
                     (K = 11 + (U & 127)),
                     (U >>>= 7),
-                    (W -= 7);
+                    (W -= 7));
                 }
                 if (L.have + K > L.nlen + L.ndist) {
-                  (e.msg = `invalid bit length repeat`), (L.mode = F);
+                  ((e.msg = `invalid bit length repeat`), (L.mode = F));
                   break;
                 }
-                for (; K--; ) L.lens[L.have++] = Q;
+                for (; K--;) L.lens[L.have++] = Q;
               }
             }
             if (L.mode === F) break;
             if (L.lens[256] === 0) {
-              (e.msg = `invalid code -- missing end-of-block`), (L.mode = F);
+              ((e.msg = `invalid code -- missing end-of-block`), (L.mode = F));
               break;
             }
             if (
@@ -3163,7 +3166,7 @@ var z = t((e) => {
               (L.lenbits = Ee.bits),
               Te)
             ) {
-              (e.msg = `invalid literal/lengths set`), (L.mode = F);
+              ((e.msg = `invalid literal/lengths set`), (L.mode = F));
               break;
             }
             if (
@@ -3174,7 +3177,7 @@ var z = t((e) => {
               (L.distbits = Ee.bits),
               Te)
             ) {
-              (e.msg = `invalid distances set`), (L.mode = F);
+              ((e.msg = `invalid distances set`), (L.mode = F));
               break;
             }
             if (((L.mode = oe), I === d)) break inf_leave;
@@ -3182,7 +3185,7 @@ var z = t((e) => {
             L.mode = se;
           case se:
             if (V >= 6 && H >= 258) {
-              (e.next_out = _e),
+              ((e.next_out = _e),
                 (e.avail_out = H),
                 (e.next_in = B),
                 (e.avail_in = V),
@@ -3197,7 +3200,7 @@ var z = t((e) => {
                 (V = e.avail_in),
                 (U = L.hold),
                 (W = L.bits),
-                L.mode === O && (L.back = -1);
+                L.mode === O && (L.back = -1));
               break;
             }
             for (
@@ -3209,7 +3212,7 @@ var z = t((e) => {
                 !(J <= W);
             ) {
               if (V === 0) break inf_leave;
-              V--, (U += R[B++] << W), (W += 8);
+              (V--, (U += R[B++] << W), (W += 8));
             }
             if (Y && !(Y & 240)) {
               for (
@@ -3221,9 +3224,9 @@ var z = t((e) => {
                   !(Z + J <= W);
               ) {
                 if (V === 0) break inf_leave;
-                V--, (U += R[B++] << W), (W += 8);
+                (V--, (U += R[B++] << W), (W += 8));
               }
-              (U >>>= Z), (W -= Z), (L.back += Z);
+              ((U >>>= Z), (W -= Z), (L.back += Z));
             }
             if (
               ((U >>>= J), (W -= J), (L.back += J), (L.length = X), Y === 0)
@@ -3232,26 +3235,26 @@ var z = t((e) => {
               break;
             }
             if (Y & 32) {
-              (L.back = -1), (L.mode = O);
+              ((L.back = -1), (L.mode = O));
               break;
             }
             if (Y & 64) {
-              (e.msg = `invalid literal/length code`), (L.mode = F);
+              ((e.msg = `invalid literal/length code`), (L.mode = F));
               break;
             }
-            (L.extra = Y & 15), (L.mode = ce);
+            ((L.extra = Y & 15), (L.mode = ce));
           case ce:
             if (L.extra) {
-              for (De = L.extra; W < De; ) {
+              for (De = L.extra; W < De;) {
                 if (V === 0) break inf_leave;
-                V--, (U += R[B++] << W), (W += 8);
+                (V--, (U += R[B++] << W), (W += 8));
               }
-              (L.length += U & ((1 << L.extra) - 1)),
+              ((L.length += U & ((1 << L.extra) - 1)),
                 (U >>>= L.extra),
                 (W -= L.extra),
-                (L.back += L.extra);
+                (L.back += L.extra));
             }
-            (L.was = L.length), (L.mode = le);
+            ((L.was = L.length), (L.mode = le));
           case le:
             for (
               ;
@@ -3262,7 +3265,7 @@ var z = t((e) => {
                 !(J <= W);
             ) {
               if (V === 0) break inf_leave;
-              V--, (U += R[B++] << W), (W += 8);
+              (V--, (U += R[B++] << W), (W += 8));
             }
             if (!(Y & 240)) {
               for (
@@ -3274,28 +3277,28 @@ var z = t((e) => {
                   !(Z + J <= W);
               ) {
                 if (V === 0) break inf_leave;
-                V--, (U += R[B++] << W), (W += 8);
+                (V--, (U += R[B++] << W), (W += 8));
               }
-              (U >>>= Z), (W -= Z), (L.back += Z);
+              ((U >>>= Z), (W -= Z), (L.back += Z));
             }
             if (((U >>>= J), (W -= J), (L.back += J), Y & 64)) {
-              (e.msg = `invalid distance code`), (L.mode = F);
+              ((e.msg = `invalid distance code`), (L.mode = F));
               break;
             }
-            (L.offset = X), (L.extra = Y & 15), (L.mode = N);
+            ((L.offset = X), (L.extra = Y & 15), (L.mode = N));
           case N:
             if (L.extra) {
-              for (De = L.extra; W < De; ) {
+              for (De = L.extra; W < De;) {
                 if (V === 0) break inf_leave;
-                V--, (U += R[B++] << W), (W += 8);
+                (V--, (U += R[B++] << W), (W += 8));
               }
-              (L.offset += U & ((1 << L.extra) - 1)),
+              ((L.offset += U & ((1 << L.extra) - 1)),
                 (U >>>= L.extra),
                 (W -= L.extra),
-                (L.back += L.extra);
+                (L.back += L.extra));
             }
             if (L.offset > L.dmax) {
-              (e.msg = `invalid distance too far back`), (L.mode = F);
+              ((e.msg = `invalid distance too far back`), (L.mode = F));
               break;
             }
             L.mode = P;
@@ -3303,29 +3306,29 @@ var z = t((e) => {
             if (H === 0) break inf_leave;
             if (((K = G - H), L.offset > K)) {
               if (((K = L.offset - K), K > L.whave && L.sane)) {
-                (e.msg = `invalid distance too far back`), (L.mode = F);
+                ((e.msg = `invalid distance too far back`), (L.mode = F));
                 break;
               }
-              K > L.wnext
+              (K > L.wnext
                 ? ((K -= L.wnext), (ye = L.wsize - K))
                 : (ye = L.wnext - K),
                 K > L.length && (K = L.length),
-                (be = L.window);
-            } else (be = z), (ye = _e - L.offset), (K = L.length);
-            K > H && (K = H), (H -= K), (L.length -= K);
+                (be = L.window));
+            } else ((be = z), (ye = _e - L.offset), (K = L.length));
+            (K > H && (K = H), (H -= K), (L.length -= K));
             do z[_e++] = be[ye++];
             while (--K);
             L.length === 0 && (L.mode = se);
             break;
           case ue:
             if (H === 0) break inf_leave;
-            (z[_e++] = L.length), H--, (L.mode = se);
+            ((z[_e++] = L.length), H--, (L.mode = se));
             break;
           case de:
             if (L.wrap) {
-              for (; W < 32; ) {
+              for (; W < 32;) {
                 if (V === 0) break inf_leave;
-                V--, (U |= R[B++] << W), (W += 8);
+                (V--, (U |= R[B++] << W), (W += 8));
               }
               if (
                 ((G -= H),
@@ -3339,23 +3342,23 @@ var z = t((e) => {
                 (G = H),
                 (L.flags ? U : ge(U)) !== L.check)
               ) {
-                (e.msg = `incorrect data check`), (L.mode = F);
+                ((e.msg = `incorrect data check`), (L.mode = F));
                 break;
               }
-              (U = 0), (W = 0);
+              ((U = 0), (W = 0));
             }
             L.mode = fe;
           case fe:
             if (L.wrap && L.flags) {
-              for (; W < 32; ) {
+              for (; W < 32;) {
                 if (V === 0) break inf_leave;
-                V--, (U += R[B++] << W), (W += 8);
+                (V--, (U += R[B++] << W), (W += 8));
               }
               if (U !== (L.total | 0)) {
-                (e.msg = `incorrect length check`), (L.mode = F);
+                ((e.msg = `incorrect length check`), (L.mode = F));
                 break;
               }
-              (U = 0), (W = 0);
+              ((U = 0), (W = 0));
             }
             L.mode = pe;
           case pe:
@@ -3404,7 +3407,7 @@ var z = t((e) => {
     function X(e) {
       if (!e || !e.state) return h;
       var t = e.state;
-      return (t.window &&= null), (e.state = null), f;
+      return ((t.window &&= null), (e.state = null), f);
     }
     function Z(e, t) {
       var n;
@@ -3424,7 +3427,7 @@ var z = t((e) => {
           : ((o = Se(e, t, r, r)),
             o ? ((i.mode = me), _) : ((i.havedict = 1), f));
     }
-    (e.inflateReset = U),
+    ((e.inflateReset = U),
       (e.inflateReset2 = W),
       (e.inflateResetKeep = H),
       (e.inflateInit = ye),
@@ -3433,7 +3436,7 @@ var z = t((e) => {
       (e.inflateEnd = X),
       (e.inflateGetHeader = Z),
       (e.inflateSetDictionary = Ce),
-      (e.inflateInfo = `pako inflate (from Nodeca project)`);
+      (e.inflateInfo = `pako inflate (from Nodeca project)`));
   }),
   be = t((e, t) => {
     t.exports = {
@@ -3468,7 +3471,7 @@ var z = t((e) => {
   }),
   q = t((e, t) => {
     function n() {
-      (this.text = 0),
+      ((this.text = 0),
         (this.time = 0),
         (this.xflags = 0),
         (this.os = 0),
@@ -3477,7 +3480,7 @@ var z = t((e) => {
         (this.name = ``),
         (this.comment = ``),
         (this.hcrc = 0),
-        (this.done = !1);
+        (this.done = !1));
     }
     t.exports = n;
   }),
@@ -3497,7 +3500,7 @@ var z = t((e) => {
         e || {},
       );
       var u = this.options;
-      u.raw &&
+      (u.raw &&
         u.windowBits >= 0 &&
         u.windowBits < 16 &&
         ((u.windowBits = -u.windowBits),
@@ -3514,7 +3517,7 @@ var z = t((e) => {
         (this.ended = !1),
         (this.chunks = []),
         (this.strm = new o()),
-        (this.strm.avail_out = 0);
+        (this.strm.avail_out = 0));
       var d = t.inflateInit2(this.strm, u.windowBits);
       if (
         d !== i.Z_OK ||
@@ -3531,7 +3534,7 @@ var z = t((e) => {
       )
         throw Error(a[d]);
     }
-    (l.prototype.push = function (e, a) {
+    ((l.prototype.push = function (e, a) {
       var o = this.strm,
         s = this.options.chunkSize,
         l = this.options.dictionary,
@@ -3542,7 +3545,7 @@ var z = t((e) => {
         m,
         h = !1;
       if (this.ended) return !1;
-      (d = a === ~~a ? a : a === !0 ? i.Z_FINISH : i.Z_NO_FLUSH),
+      ((d = a === ~~a ? a : a === !0 ? i.Z_FINISH : i.Z_NO_FLUSH),
         (o.input =
           typeof e == `string`
             ? r.binstring2buf(e)
@@ -3550,7 +3553,7 @@ var z = t((e) => {
               ? new Uint8Array(e)
               : e),
         (o.next_in = 0),
-        (o.avail_in = o.input.length);
+        (o.avail_in = o.input.length));
       do {
         if (
           (o.avail_out === 0 &&
@@ -3562,8 +3565,8 @@ var z = t((e) => {
           u === i.Z_BUF_ERROR && h === !0 && ((u = i.Z_OK), (h = !1)),
           u !== i.Z_STREAM_END && u !== i.Z_OK)
         )
-          return this.onEnd(u), (this.ended = !0), !1;
-        o.next_out &&
+          return (this.onEnd(u), (this.ended = !0), !1);
+        (o.next_out &&
           (o.avail_out === 0 ||
             u === i.Z_STREAM_END ||
             (o.avail_in === 0 && (d === i.Z_FINISH || d === i.Z_SYNC_FLUSH))) &&
@@ -3576,7 +3579,7 @@ var z = t((e) => {
               p && n.arraySet(o.output, o.output, f, p, 0),
               this.onData(m))
             : this.onData(n.shrinkBuf(o.output, o.next_out))),
-          o.avail_in === 0 && o.avail_out === 0 && (h = !0);
+          o.avail_in === 0 && o.avail_out === 0 && (h = !0));
       } while ((o.avail_in > 0 || o.avail_out === 0) && u !== i.Z_STREAM_END);
       return (
         u === i.Z_STREAM_END && (d = i.Z_FINISH),
@@ -3593,24 +3596,24 @@ var z = t((e) => {
         this.chunks.push(e);
       }),
       (l.prototype.onEnd = function (e) {
-        e === i.Z_OK &&
+        (e === i.Z_OK &&
           (this.result =
             this.options.to === `string`
               ? this.chunks.join(``)
               : n.flattenChunks(this.chunks)),
           (this.chunks = []),
           (this.err = e),
-          (this.msg = this.strm.msg);
-      });
+          (this.msg = this.strm.msg));
+      }));
     function u(e, t) {
       var n = new l(t);
       if ((n.push(e, !0), n.err)) throw n.msg || a[n.err];
       return n.result;
     }
     function d(e, t) {
-      return (t ||= {}), (t.raw = !0), u(e, t);
+      return ((t ||= {}), (t.raw = !0), u(e, t));
     }
-    (e.Inflate = l), (e.inflate = u), (e.inflateRaw = d), (e.ungzip = u);
+    ((e.Inflate = l), (e.inflate = u), (e.inflateRaw = d), (e.ungzip = u));
   }),
   xe = e(
     t((e, t) => {
@@ -3619,7 +3622,7 @@ var z = t((e) => {
         i = J(),
         a = be(),
         o = {};
-      n(o, r, i, a), (t.exports = o);
+      (n(o, r, i, a), (t.exports = o));
     })(),
   ),
   Se = e(ue()),
@@ -3643,7 +3646,7 @@ var z = t((e) => {
     m_Storage;
     m_InitPromise;
     Init(e) {
-      (this.m_Storage = e), (this.m_InitPromise = this.LoadFromCache());
+      ((this.m_Storage = e), (this.m_InitPromise = this.LoadFromCache()));
     }
     async LoadFromCache() {
       if (this.m_InitPromise) return this.m_InitPromise;
@@ -3668,16 +3671,16 @@ var z = t((e) => {
       return this.PingCMs();
     }
     RecordCMDisconnected(e) {
-      (e.nConnectFailures = (e.nConnectFailures || 0) + 1),
+      ((e.nConnectFailures = (e.nConnectFailures || 0) + 1),
         (e.msPing = 2 ** 53 - 1),
         (e.nCMLoad = 2 ** 53 - 1),
-        this.WriteCMListToLocalStorage();
+        this.WriteCMListToLocalStorage());
     }
     BuildCMWebSocketURL(e) {
       return `wss://` + this.FixDevHost(e) + `/cmsocket/`;
     }
     FixDevHost(e) {
-      return v.EUNIVERSE, e;
+      return (v.EUNIVERSE, e);
     }
     GetLocalStorageKey() {
       return `CCMList_` + v.EUNIVERSE;
@@ -3707,8 +3710,8 @@ var z = t((e) => {
       for (let r of this.m_CMList.rgCMList) {
         let i = Le(r),
           a = !i || r.rtLastCheck < e;
-        a && t.length < $ && t.push(r),
-          (!a || v.IN_MOBILE) && i && i < Ee && (n[r.strHost] = r);
+        (a && t.length < $ && t.push(r),
+          (!a || v.IN_MOBILE) && i && i < Ee && (n[r.strHost] = r));
       }
       `${t.length}`;
       let r = !1;
@@ -3735,25 +3738,25 @@ var z = t((e) => {
               i(`No CMs available`);
             }
           };
-        (t.length === 0 ||
+        ((t.length === 0 ||
           Object.keys(n).some((e) => this.BCMOkToUse(n[e], a)) ||
           (v.IN_MOBILE && Object.keys(n).length)) &&
           (Object.keys(n).length && v.IN_MOBILE, c(n)),
           r ||
             ((o = window.setTimeout(() => {
-              (a = `timeout`),
+              ((a = `timeout`),
                 !r &&
                   Object.keys(n).some((e) => this.BCMOkToUse(n[e], a)) &&
-                  c(n);
+                  c(n));
             }, Q)),
             (s = window.setTimeout(() => {
-              (a = `seriouslytimeout`), c(n);
-            }, Te)));
+              ((a = `seriouslytimeout`), c(n));
+            }, Te))));
         let l = 0,
           u = 0,
           f,
           p = (e) => {
-            !r && this.BCMOkToUse(e, a)
+            (!r && this.BCMOkToUse(e, a)
               ? c({ [e.strHost]: e })
               : (n[e.strHost] = e),
               (r || !f()) &&
@@ -3762,7 +3765,7 @@ var z = t((e) => {
                   ? this.WriteCMListToLocalStorage()
                   : this.BCMOkToUse(e, `seriouslytimeout`)
                     ? c({ [e.strHost]: e })
-                    : ((n[e.strHost] = e), c(n)));
+                    : ((n[e.strHost] = e), c(n))));
           };
         f = () => {
           if (l < t.length) {
@@ -3783,12 +3786,12 @@ var z = t((e) => {
       if (!this.m_CMList.rgCMList.length) return;
       let e = this.m_CMList.rgCMList[0],
         t = 1;
-      for (; e.nConnectFailures > 0 && t < this.m_CMList.rgCMList.length; ) {
+      for (; e.nConnectFailures > 0 && t < this.m_CMList.rgCMList.length;) {
         let n = this.m_CMList.rgCMList[t++];
         (!n.nConnectFailures || n.nConnectFailures < e.nConnectFailures) &&
           (e = n);
       }
-      return `` + (e ? this.FixDevHost(e.strHost) : `none!`), e;
+      return (`` + (e ? this.FixDevHost(e.strHost) : `none!`), e);
     }
     BCMOkToUse(e, t) {
       if (!e) return !1;
@@ -3806,22 +3809,22 @@ var z = t((e) => {
       let n = performance.now(),
         r = Se.default.CancelToken.source(),
         i = window.setTimeout(() => {
-          `${e.strHost}`, r.cancel();
+          (`${e.strHost}`, r.cancel());
         }, Ce);
       try {
         let a = await Se.default.head(t, { cancelToken: r.token });
-        `${e.strHost}`, window.clearTimeout(i);
+        (`${e.strHost}`, window.clearTimeout(i));
         let o = performance.now() - n,
           s = a.headers[`x-steam-cmload`]
             ? parseInt(a.headers[`x-steam-cmload`])
             : void 0;
-        `${e.strHost}${o}${s}`, (e.msPing = o), (e.nCMLoad = s);
+        (`${e.strHost}${o}${s}`, (e.msPing = o), (e.nCMLoad = s));
       } catch (t) {
-        Se.default.isCancel(t) ? `${e.strHost}` : window.clearTimeout(i),
+        (Se.default.isCancel(t) ? `${e.strHost}` : window.clearTimeout(i),
           (e.msPing = Ee),
-          (e.nCMLoad = 0);
+          (e.nCMLoad = 0));
       }
-      return (e.rtLastCheck = new Date().getTime() / 1e3), e.msPing;
+      return ((e.rtLastCheck = new Date().getTime() / 1e3), e.msPing);
     }
   };
 async function Pe() {
@@ -3838,7 +3841,7 @@ function Fe(e, t) {
     new Promise((n, r) => {
       let i = !1,
         a = window.setTimeout(() => {
-          (i = !0), r(Error(`Timed out`));
+          ((i = !0), r(Error(`Timed out`)));
         }, t);
       e().then(
         (e) => {
@@ -3878,7 +3881,7 @@ var Re = 3,
     m_mapWaitingCallbacks = new Map();
     m_CMList = new Ne();
     constructor(e) {
-      super(), m(this), this.m_CMList.Init(e);
+      (super(), m(this), this.m_CMList.Init(e));
     }
     BIsConnected() {
       return this.m_Socket && this.m_Socket.readyState == WebSocket.OPEN;
@@ -3913,7 +3916,7 @@ var Re = 3,
                             t());
                       },
                       () => {
-                        console.log(
+                        (console.log(
                           `Failed to connect to CM ${a + 1} of ${o.length}: ${e.strHost}`,
                         ),
                           r++,
@@ -3921,7 +3924,7 @@ var Re = 3,
                             (console.log(
                               `Failed to connect to all ${o.length} best CMs`,
                             ),
-                            n());
+                            n()));
                       },
                     ),
                   );
@@ -3950,19 +3953,19 @@ var Re = 3,
           let i = !1,
             a = 3e3,
             o = window.setTimeout(() => {
-              console.warn(
+              (console.warn(
                 `Socket connection timed out after ${a}ms: ${e.strHost}`,
               ),
                 (i = !0),
                 t.close(4e3),
                 this.m_CMList.RecordCMDisconnected(e),
-                r();
+                r());
             }, a);
-          (t.onopen = () => {
-            console.log(`Connected socket to host ${e.strHost}`),
+          ((t.onopen = () => {
+            (console.log(`Connected socket to host ${e.strHost}`),
               d(!i, `Socket connection was opened after timing out.`),
               i || window.clearTimeout(o),
-              n(t);
+              n(t));
           }),
             (t.onerror = (t) => {
               i ||
@@ -3972,7 +3975,7 @@ var Re = 3,
                 t.message ? console.log(t.message) : console.log(`No message`),
                 this.m_CMList.RecordCMDisconnected(e),
                 r());
-            });
+            }));
         })
       );
     }
@@ -3984,39 +3987,39 @@ var Re = 3,
         (window.clearInterval(this.m_iIntervalHeartbeat), void 0);
     }
     ResetHeartbeatInterval() {
-      this.ClearHeartbeatInterval(),
+      (this.ClearHeartbeatInterval(),
         (this.m_iIntervalHeartbeat = window.setInterval(
           () => this.SendHeartbeat(),
           27e3,
-        ));
+        )));
     }
     SendHeartbeat() {
       let e = h.Init(ne, 703);
       this.Send(e);
     }
     OnConnect() {
-      super.OnConnect(),
+      (super.OnConnect(),
         this.m_Socket &&
           ((this.m_Socket.onerror = (e) => {}),
           this.ResetHeartbeatInterval(),
           (this.m_Socket.onclose = (e) => {
             this.OnDisconnect();
-          }));
+          })));
     }
     Disconnect() {
       this.m_Socket && this.m_Socket.close();
     }
     OnDisconnect() {
-      (this.m_Socket = void 0),
+      ((this.m_Socket = void 0),
         (this.m_SocketCMHost = void 0),
         (this.m_onConnect = void 0),
         this.ClearHeartbeatInterval(),
-        super.OnDisconnect();
+        super.OnDisconnect());
     }
     SendMsgAndAwaitResponse(e, t) {
       return new Promise((n, r) => {
         let i = this.m_iCallSeq++;
-        e.Hdr().set_jobid_source(`` + i),
+        (e.Hdr().set_jobid_source(`` + i),
           this.Send(e)
             ? this.m_mapWaitingCallbacks.set(i, {
                 iSeq: i,
@@ -4028,7 +4031,7 @@ var Re = 3,
                 t,
                 2,
                 `Web socket not connected`,
-              );
+              ));
       });
     }
     SendInternal(e) {
@@ -4053,7 +4056,7 @@ var Re = 3,
           let n = this.m_mapWaitingCallbacks.get(t);
           if (n) {
             let r = h.InitFromMsg(n.msgClass, e);
-            this.DEBUG_LogCMInterfaceActivity(r, `receive`, !0),
+            (this.DEBUG_LogCMInterfaceActivity(r, `receive`, !0),
               r.BIsValid()
                 ? n.fnCallback(r)
                 : this.ResolveAwaitWithTransportError(
@@ -4062,7 +4065,7 @@ var Re = 3,
                     102,
                     `Failed to parse response from server`,
                   ),
-              this.m_mapWaitingCallbacks.delete(t);
+              this.m_mapWaitingCallbacks.delete(t));
           }
           return !1;
         }
@@ -4075,7 +4078,7 @@ var Re = 3,
       O,
       (e) => {
         let t = e.Body().eresult();
-        (this.m_Session.m_bWaitingForLogonResponse = !1),
+        ((this.m_Session.m_bWaitingForLogonResponse = !1),
           (this.m_Session.m_eResultLogonSuccess = t),
           t == 1
             ? ((this.m_steamid = new P(e.Body().client_supplied_steamid())),
@@ -4092,16 +4095,16 @@ var Re = 3,
               ),
               t == 48 &&
                 this.m_CMList.RecordCMDisconnected(this.m_SocketCMHost),
-              this.Disconnect());
+              this.Disconnect()));
       },
     );
     ClientAccountInfoHandler = this.messageHandlers.RegisterEMessageAction(
       768,
       D,
       (e) => {
-        (this.m_unAccountFlags = e.Body().account_flags() || 0),
+        ((this.m_unAccountFlags = e.Body().account_flags() || 0),
           (this.m_strIPCountry = e.Body().ip_country() || ``),
-          (this.m_strPersonaName = e.Body().persona_name() || ``);
+          (this.m_strPersonaName = e.Body().persona_name() || ``));
       },
     );
     DecodeAndDispatchMultiMsg(e) {
@@ -4109,22 +4112,22 @@ var Re = 3,
       if (!t) return;
       e.Body().size_unzipped() && (t = xe.inflate(t));
       let n = new S(t);
-      for (; n.GetCountBytesRemaining() > 0; ) {
+      for (; n.GetCountBytesRemaining() > 0;) {
         let e = n.GetUint32(),
           t = f.InitHeaderFromPacket(new S(n.GetPacket(), n.TellGet(), e));
-        this.DispatchMessage(t), n.SeekGetCurrent(e);
+        (this.DispatchMessage(t), n.SeekGetCurrent(e));
       }
     }
   };
-c([a], ze.prototype, `DecodeAndDispatchMultiMsg`, null),
+(c([a], ze.prototype, `DecodeAndDispatchMultiMsg`, null),
   p({ enforceActions: `never` }),
-  (window.AssertMsg = d);
+  (window.AssertMsg = d));
 function Be() {
   let e = new oe(!1),
     t,
     n = null,
     r = (t = new ze(e.Storage));
-  j.Get().SetCMInterface(t),
+  (j.Get().SetCMInterface(t),
     (n = new A(r, v.EREALM)),
     n.PerformInitialLogon(s),
     e.Init(t, !1, n),
@@ -4132,7 +4135,7 @@ function Be() {
       e.FriendStore,
       e.ChatStore,
       document.getElementById(`friendslist-container`),
-    );
+    ));
 }
 async function Ve() {
   ie();
@@ -4149,14 +4152,14 @@ async function Ve() {
   });
 }
 document.addEventListener(`DOMContentLoaded`, async function () {
-  u(), k(), await He(v.LANGUAGE);
+  (u(), k(), await He(v.LANGUAGE));
   let e = !0;
-  r.steamid && fe(r.steamid),
+  (r.steamid && fe(r.steamid),
     !v.IN_CLIENT &&
       ce.STEAM_TV &&
       (s.logged_in ? M(r.steamid) : ((e = !1), Ve())),
     N.SetNavEventParams(`steamclient`, ce.STEAM_TV ? `steamtv` : `friendsui`),
-    e && Be();
+    e && Be());
 });
 async function He(e) {
   let t = x.GetLanguageFallback(e),

@@ -78,7 +78,8 @@ function N(e, t, n) {
                 n,
               );
             } catch (e) {
-              c(e?.response?.data?.err_msg), d(e?.response?.data?.success || 2);
+              (c(e?.response?.data?.err_msg),
+                d(e?.response?.data?.success || 2));
             }
             f.token.reason || i(a);
           }
@@ -93,7 +94,7 @@ function N(e, t, n) {
 function P(e) {
   let t = `` + e,
     n = O.GetELanguageFallback(e);
-  return e != n && (t += `_` + n), t;
+  return (e != n && (t += `_` + n), t);
 }
 var F = class {
     appid;
@@ -102,7 +103,7 @@ var F = class {
     playtime;
     announcementid;
     constructor(e) {
-      T(
+      (T(
         typeof e.appid == `number`,
         `AJAX updated app returned a non-numeric AppID! Did the PHP change?`,
       ),
@@ -110,12 +111,12 @@ var F = class {
         (this.date = e.date),
         (this.can_play = e.can_play),
         (this.playtime = e.playtime),
-        (this.announcementid = e.announcementid);
+        (this.announcementid = e.announcementid));
     }
   },
   I = class {
     constructor(e = !1) {
-      o(this), (this.m_bOnlySummary = e);
+      (o(this), (this.m_bOnlySummary = e));
     }
     m_bOnlySummary = !1;
     m_mapExistingEvents = new Map();
@@ -159,7 +160,7 @@ var F = class {
             }
           });
         let n = x(`partnereventadjacents`, `application_config`);
-        this.ValidateAdjacentEvent(n) &&
+        (this.ValidateAdjacentEvent(n) &&
           n.forEach((e) => {
             e &&
               this.m_mapAdjacentAnnouncementGIDs.set(
@@ -167,7 +168,7 @@ var F = class {
                 e.adjacents,
               );
           }),
-          (this.m_bLoadedFromConfig = !0);
+          (this.m_bLoadedFromConfig = !0));
       }
     }
     ValidateStoreDefault(e) {
@@ -252,7 +253,7 @@ var F = class {
         let t = this.GetClanEventModel(e);
         t && n.push(t);
       }
-      return n.sort(this.DefaultEventSortFunction), n;
+      return (n.sort(this.DefaultEventSortFunction), n);
     }
     InsertEventModelFromClanEventData(e, t) {
       let n = d(e, t);
@@ -286,23 +287,23 @@ var F = class {
     }
     async QueueLoadPartnerEvent(e, t, n) {
       if (this.m_mapExistingEvents.has(t)) return;
-      this.m_rgQueuedEventsClanIDs.push(e),
+      (this.m_rgQueuedEventsClanIDs.push(e),
         this.m_rgQueuedEventsUniqueIDs.push(t),
         this.m_rgQueuedEventsForEditFlags.push(!!n),
         (this.m_PendingInfoPromise ||= new Promise(
           (e) => (this.m_PendingInfoResolve = e),
-        ));
+        )));
       let r = this.m_PendingInfoPromise,
         i = () => {
           let e = this.m_PendingInfoResolve,
             t = this.m_rgQueuedEventsClanIDs,
             n = this.m_rgQueuedEventsUniqueIDs,
             r = this.m_rgQueuedEventsForEditFlags;
-          (this.m_PendingInfoPromise = void 0),
+          ((this.m_PendingInfoPromise = void 0),
             (this.m_rgQueuedEventsClanIDs = []),
             (this.m_rgQueuedEventsUniqueIDs = []),
             (this.m_rgQueuedEventsForEditFlags = []),
-            this.InternalLoadPartnerEventList(t, n, r).then(() => e?.());
+            this.InternalLoadPartnerEventList(t, n, r).then(() => e?.()));
         };
       return (
         this.m_rgQueuedEventsClanIDs.length >= 30
@@ -465,7 +466,7 @@ var F = class {
       } else {
         let e = this.m_mapAdjacentAnnouncementGIDs.get(t),
           n = [];
-        e?.forEach((e) => {
+        (e?.forEach((e) => {
           if (this.m_mapAnnouncementBodyToEvent.has(e)) {
             let t = this.m_mapAnnouncementBodyToEvent.get(e);
             t &&
@@ -480,7 +481,7 @@ var F = class {
                 n,
                 c,
               )
-            ).forEach((e) => l.push(e));
+            ).forEach((e) => l.push(e)));
       }
       return l;
     }
@@ -553,9 +554,9 @@ var F = class {
     async LoadImportantEventsAroundToday(e, t, n, r, i, o) {
       let s = [],
         c = [];
-      c.push({ priority: 0, appids: t }),
+      (c.push({ priority: 0, appids: t }),
         n && c.push({ priority: 1, appids: n }),
-        r && c.push({ priority: 2, appids: r });
+        r && c.push({ priority: 2, appids: r }));
       let l = {
           count: e,
           strAppIDPriority: JSON.stringify({ prioritized_apps: c }),
@@ -586,15 +587,17 @@ var F = class {
       let r = this.m_mapClanToGIDs.get(e);
       r ||= (this.m_mapClanToGIDs.set(e, []), this.m_mapClanToGIDs.get(e));
       let i = this.m_mapAppIDToGIDs.get(t);
-      (i ||= (this.m_mapAppIDToGIDs.set(t, []), this.m_mapAppIDToGIDs.get(t))),
-        r.indexOf(n) == -1 && (r.push(n), i.push(n));
+      ((i ||= (this.m_mapAppIDToGIDs.set(t, []), this.m_mapAppIDToGIDs.get(t))),
+        r.indexOf(n) == -1 && (r.push(n), i.push(n)));
     }
     ResetModel() {}
     async DeleteClanEvent(e, t) {
       this.m_mapExistingEvents.has(t) &&
         (this.m_mapExistingEvents.get(t).deleteInProgress = !0);
       let n = new URLSearchParams();
-      n.append(`sessionid`, w()), n.append(`bDelete`, `1`), n.append(`gid`, t);
+      (n.append(`sessionid`, w()),
+        n.append(`bDelete`, `1`),
+        n.append(`gid`, t));
       let r = await j.default.post(
         E.COMMUNITY_BASE_URL +
           `/gid/` +
@@ -602,7 +605,7 @@ var F = class {
           `/ajaxcreateupdatedeletepartnerevents/`,
         n,
       );
-      return this.RemoveGIDFromList(e, t), r.data;
+      return (this.RemoveGIDFromList(e, t), r.data);
     }
     RemoveGIDFromList(e, t) {
       if (
@@ -626,10 +629,10 @@ var F = class {
           this.m_mapAnnouncementBodyToEvent.has(t)))
       ) {
         let e = this.m_mapAnnouncementBodyToEvent.get(t);
-        e &&
+        (e &&
           this.m_mapExistingEvents.has(e) &&
           this.m_mapExistingEvents.delete(e),
-          this.m_mapAnnouncementBodyToEvent.delete(t);
+          this.m_mapAnnouncementBodyToEvent.delete(t));
       }
     }
     async InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID(
@@ -656,7 +659,7 @@ var F = class {
         l = null;
       if (a) {
         let n = y();
-        n === `community`
+        (n === `community`
           ? ((l = E.COMMUNITY_BASE_URL),
             (l += e ? `gid/` + e.ConvertTo64BitString() : `ogg/` + t),
             (l += `/`))
@@ -665,10 +668,10 @@ var F = class {
                 ? E.PARTNER_BASE_URL + `sales/`
                 : E.STORE_BASE_URL + `events/`),
           (l += `ajaxgetpartnereventforedit`),
-          (c = { params: s, withCredentials: !0 });
+          (c = { params: s, withCredentials: !0 }));
       } else
-        (l = E.STORE_BASE_URL + `events/ajaxgetpartnerevent`),
-          (c = { params: s, withCredentials: !1 });
+        ((l = E.STORE_BASE_URL + `events/ajaxgetpartnerevent`),
+          (c = { params: s, withCredentials: !1 }));
       try {
         let e = await j.default.get(l, c);
         if (e.data.success !== 1) return;
@@ -828,17 +831,17 @@ var F = class {
         c = null;
       if (e) {
         let t = [];
-        e.forEach((e) => {
+        (e.forEach((e) => {
           this.m_mapExistingEvents.has(e)
             ? r.push(this.m_mapExistingEvents.get(e))
             : t.push(e);
         }),
           t.sort(),
-          (s = t);
+          (s = t));
       }
       if (t) {
         let e = [];
-        t.forEach((t) => {
+        (t.forEach((t) => {
           if (
             this.m_mapAnnouncementBodyToEvent.has(t) &&
             this.m_mapAnnouncementBodyToEvent.get(t) &&
@@ -854,11 +857,11 @@ var F = class {
           } else e.push(t);
         }),
           e.sort(),
-          (c = e);
+          (c = e));
       }
       if (!s && !c) return r;
       let l = [];
-      for (; (s?.length ?? 0) > 0 || (c?.length ?? 0) > 0; ) {
+      for (; (s?.length ?? 0) > 0 || (c?.length ?? 0) > 0;) {
         let e = {
           event_gids:
             (s?.length ?? 0) > 0 ? s?.splice(0, 100).join(`,`) : void 0,
@@ -912,10 +915,10 @@ var F = class {
       try {
         let a = `${E.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
           o = new FormData();
-        o.append(`sessionid`, w()),
+        (o.append(`sessionid`, w()),
           o.append(`gidclanevent`, t),
           o.append(`json`, JSON.stringify(n)),
-          o.append(`pageStyles`, JSON.stringify(r));
+          o.append(`pageStyles`, JSON.stringify(r)));
         let s = await j.default.post(a, o, { withCredentials: !0 });
         if (s?.data?.success == 1) {
           let e = this.m_mapExistingEvents.get(t);
@@ -927,7 +930,7 @@ var F = class {
                 i !== void 0 && r !== void 0 && (e.jsondata[r] = i);
               }
           }
-          return this.GetPartnerEventChangeCallback(t).Dispatch(e), !0;
+          return (this.GetPartnerEventChangeCallback(t).Dispatch(e), !0);
         }
         i = p(s);
       } catch (e) {
@@ -946,7 +949,7 @@ var F = class {
       return this.m_bOnlySummary;
     }
   };
-_([t], I.prototype, `m_mapExistingEvents`, void 0),
+(_([t], I.prototype, `m_mapExistingEvents`, void 0),
   _([t], I.prototype, `m_mapAnnouncementBodyToEvent`, void 0),
   _([t], I.prototype, `m_mapClanToGIDs`, void 0),
   _([t], I.prototype, `m_mapAppIDToGIDs`, void 0),
@@ -958,7 +961,7 @@ _([t], I.prototype, `m_mapExistingEvents`, void 0),
   _([n], I.prototype, `DeleteClanEvent`, null),
   _([n], I.prototype, `RemoveGIDFromList`, null),
   _([n], I.prototype, `FlushEventFromCache`, null),
-  _([b], I.prototype, `SavePartnerEventSaleAssets`, null);
+  _([b], I.prototype, `SavePartnerEventSaleAssets`, null));
 var L = new I();
 D(`g_PartnerEventStore`, L);
 var R = new I(!0);

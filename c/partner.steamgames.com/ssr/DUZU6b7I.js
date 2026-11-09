@@ -17,7 +17,7 @@ var _ = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAG
   _ = new URL(`assets/BDtgl3DZ.png`, import.meta.url).href,
   _ = new URL(`assets/B5jZML_B.png`, import.meta.url).href,
   _ = {};
-(_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.brazilian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.bulgarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.czech = () => _(() => import(`./chunk.js`), [], import.meta.url)),
@@ -48,7 +48,7 @@ var _ = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAG
   (_.thai = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.turkish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.ukrainian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
-  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url));
+  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -512,7 +512,7 @@ function _(_, _ = {}) {
           });
       let _ = _.current.tsScheduledTimeout - performance.now(),
         _ = window.setTimeout(() => {
-          (_.current = void 0), _(_);
+          ((_.current = void 0), _(_));
         }, _);
       return () => window.clearTimeout(_);
     }, [_, _, _, _]),
@@ -552,8 +552,8 @@ function _(_) {
     (0, _.useLayoutEffect)(() => {
       if (!_.current || !_.current) return;
       let _ = _.current.getBoundingClientRect();
-      (_.current.style.top = `${_.bottom}px`),
-        (_.current.style.right = `${_ - _.right}px`);
+      ((_.current.style.top = `${_.bottom}px`),
+        (_.current.style.right = `${_ - _.right}px`));
     }, [_, _, _]),
     _
       ? (0, _.jsx)(`dialog`, {
@@ -569,12 +569,12 @@ function _(_) {
                   let _ = parseInt(_.dataset.index) + 1,
                     _ = _.current?.querySelector(`[data-index="${_}"]`);
                   if (_) {
-                    _.focus(), _.preventDefault();
+                    (_.focus(), _.preventDefault());
                     return;
                   }
                 }
-                _.current?.querySelector(`[data-index="0"]`)?.focus(),
-                  _.preventDefault();
+                (_.current?.querySelector(`[data-index="0"]`)?.focus(),
+                  _.preventDefault());
               }
               if (_.key === `ArrowUp`) {
                 let _ = document.activeElement;
@@ -582,16 +582,16 @@ function _(_) {
                   let _ = parseInt(_.dataset.index) - 1,
                     _ = _.current?.querySelector(`[data-index="${_}"]`);
                   if (_) {
-                    _.focus(), _.preventDefault();
+                    (_.focus(), _.preventDefault());
                     return;
                   }
                 }
-                _.current
+                (_.current
                   ?.querySelector(
                     `[data-index="${(_?.data?.length ?? 0) - 1}"]`,
                   )
                   ?.focus(),
-                  _.preventDefault();
+                  _.preventDefault());
               }
             }
           },
@@ -677,7 +677,7 @@ function _(_) {
         className: _,
         value: _,
         onChange: (_) => {
-          _(_.target.value), _(!0);
+          (_(_.target.value), _(!0));
         },
         placeholder: _.Localize(`#Header_Search_By_Appid`),
         autoComplete: `off`,
@@ -696,7 +696,7 @@ function _(_) {
           term: _,
           inputRef: _,
           fnDismiss: () => {
-            _.current?.focus(), _(!1);
+            (_.current?.focus(), _(!1));
           },
           firstItemRef: _,
           ref: _,
@@ -721,7 +721,7 @@ function _(_) {
     _ ? _.current?.showModal() : _.current?.close();
   }, [_]);
   async function _(_) {
-    _(!0), _(_);
+    (_(!0), _(_));
   }
   let _ = Object.entries(_.action_parameters?.affiliatedPublishers ?? {});
   return (0, _.jsx)(`dialog`, {
@@ -798,7 +798,7 @@ function _(_) {
     _ = _[_];
   return (0, _.jsx)(`img`, {
     onError: (_) => {
-      _((_) => _ + 1), _?.(_, _, _);
+      (_((_) => _ + 1), _?.(_, _, _));
     },
     alt: _,
     ..._,
@@ -818,8 +818,8 @@ function _(_, _) {
   let _ = `0000000000000000000000000000000000000000`;
   typeof _ == `string` ? (_ = _) : _ && (_ = _(_) || _);
   let _ = `.jpg`;
-  _ === `0000000000000000000000000000000000000000` && (_ = _),
-    _.length == 44 && ((_ = _.slice(-4)), (_ = _.slice(0, 40)));
+  (_ === `0000000000000000000000000000000000000000` && (_ = _),
+    _.length == 44 && ((_ = _.slice(-4)), (_ = _.slice(0, 40))));
   let _ = _.AVATAR_BASE_URL;
   switch (
     (_ ||
@@ -840,7 +840,7 @@ function _(_, _) {
     case `FillArea`:
       _ += `_full`;
   }
-  return (_ += _), _;
+  return ((_ += _), _);
 }
 function _(_) {
   return _
@@ -941,7 +941,7 @@ function _(_) {
   }
 }
 var _ = {};
-(_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.brazilian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.bulgarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.czech = () => _(() => import(`./chunk.js`), [], import.meta.url)),
@@ -972,7 +972,7 @@ var _ = {};
   (_.thai = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.turkish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.ukrainian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
-  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url));
+  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -1024,7 +1024,7 @@ function _(_) {
     try {
       await _(_, _);
     } catch (_) {
-      console.error(_), _(!1);
+      (console.error(_), _(!1));
       return;
     }
     _ && !_
@@ -1079,7 +1079,10 @@ function _(_) {
 }
 function _(_ = `/logout/`) {
   let _ = document.createElement(`form`);
-  (_.action = _), (_.method = `POST`), document.body.appendChild(_), _.submit();
+  ((_.action = _),
+    (_.method = `POST`),
+    document.body.appendChild(_),
+    _.submit());
 }
 function _(_) {
   let { action: _ } = _,
@@ -1551,7 +1554,7 @@ function _(_) {
         (0, _.jsx)(`button`, {
           className: void 0,
           onClick: () => {
-            _(_), window.location.reload();
+            (_(_), window.location.reload());
           },
           children: `End Spoofing`,
         }),
@@ -1802,10 +1805,10 @@ var _ = class {
       return Promise.resolve(localStorage.getItem(_));
     }
     StoreString(_, _) {
-      return localStorage.setItem(_, _), Promise.resolve();
+      return (localStorage.setItem(_, _), Promise.resolve());
     }
     RemoveObject(_) {
-      return localStorage.removeItem(_), Promise.resolve();
+      return (localStorage.removeItem(_), Promise.resolve());
     }
   };
 function _(_) {
@@ -1815,7 +1818,8 @@ function _(_) {
     _ = `strWebAPIToken` in _ ? _.strWebAPIToken : void 0,
     _ = _.useCallback(
       () => (
-        (_.current ||= new _(new _(_.WEBAPI_BASE_URL, _, !1, _))), _.current
+        (_.current ||= new _(new _(_.WEBAPI_BASE_URL, _, !1, _))),
+        _.current
       ),
       [_],
     ),
@@ -1844,7 +1848,7 @@ async function _(_) {
       })
     ).json();
     if (!_ || !_.success)
-      return console.error(`ajaxrefresh failed: "${_.error}"`), ``;
+      return (console.error(`ajaxrefresh failed: "${_.error}"`), ``);
     if (_.success) {
       let _ = await (
         await fetch(_.login_url, {
@@ -1966,7 +1970,7 @@ function _(_) {
     _ = null;
   _(() => {
     for (let _ = _; _ && _.visible; _ = _.submenu)
-      _.push(
+      (_.push(
         (0, _.jsx)(
           _,
           {
@@ -1975,7 +1979,7 @@ function _(_) {
           _.key,
         ),
       ),
-        (_ = _.label);
+        (_ = _.label));
   });
   let _ = _.useCallback(
     (_) => {

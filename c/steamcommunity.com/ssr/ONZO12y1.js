@@ -37,7 +37,7 @@ var _ = class {
   m_fallbackInterface;
   m_refreshLoginCookiePromise;
   constructor(_) {
-    (this.m_fallbackInterface = _),
+    ((this.m_fallbackInterface = _),
       (this.m_ServiceTransport = {
         SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
           bSendAuth: !0,
@@ -55,7 +55,7 @@ var _ = class {
           bSendAuth: !1,
         }),
         MakeReady: this.MakeReady.bind(this),
-      });
+      }));
   }
   async SendMsgAndAwaitResponse(_, _, _, _, _) {
     if (!_(_)) {
@@ -88,12 +88,12 @@ var _ = class {
     try {
       let _ = await this.Send(_, _, _, _);
       if (((_ = _.status), _ == 200)) {
-        (_ = _.Init(_, 147)),
+        ((_ = _.Init(_, 147)),
           _.headers &&
             (_.headers.get(`x-eresult`) &&
               _.Hdr().set_eresult(parseInt(_.headers.get(`x-eresult`))),
             _.headers.get(`x-error_message`) &&
-              _.Hdr().set_error_message(_.headers.get(`x-error_message`)));
+              _.Hdr().set_error_message(_.headers.get(`x-error_message`))));
         let _ = new _(await _.arrayBuffer());
         _.ReadBodyFromBuffer(_, _);
       }
@@ -120,7 +120,7 @@ var _ = class {
               .SendNotification(_, _, _);
       console.error(`No browserapi version of`, _, `and no fallback`);
     }
-    return this.SendNotificationAndRetryIfUnauthorized(_, _, _, _), !0;
+    return (this.SendNotificationAndRetryIfUnauthorized(_, _, _, _), !0);
   }
   async SendNotificationAndRetryIfUnauthorized(_, _, _, _) {
     (await this.Send(_, _, _, _)).status === 401 &&
@@ -202,4 +202,3 @@ var _ = class {
     return new Date(_ * 1e3);
   }
 };
-export { _ };

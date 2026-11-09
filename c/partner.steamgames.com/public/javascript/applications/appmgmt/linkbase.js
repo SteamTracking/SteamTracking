@@ -57,4 +57,3 @@ function _(_, _) {
         _,
       );
 }
-export { _ };

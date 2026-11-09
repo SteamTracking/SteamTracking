@@ -136,13 +136,13 @@ function X(e) {
                 : 1;
           })
           .forEach((t) => {
-            n.has(t.item_class) || n.set(t.item_class, []),
+            (n.has(t.item_class) || n.set(t.item_class, []),
               n
                 .get(t.item_class)
                 .push({
                   ...t,
                   user_has_item: e.has(`${t.appid}_${t.item_type}`),
-                });
+                }));
           }),
         n
       );
@@ -157,7 +157,7 @@ function X(e) {
               e.item_movie_webm && e.item_movie_mp4
             ),
           );
-        if (e.length) return u(e), e[0];
+        if (e.length) return (u(e), e[0]);
       }
       return null;
     }, [g]),
@@ -299,8 +299,8 @@ function Z(e) {
           })
           .forEach((t) => {
             let n = e.has(`${t.appid}_${t.item_type}`);
-            a.has(t.item_class) || a.set(t.item_class, []),
-              a.get(t.item_class).push({ ...t, user_has_item: n });
+            (a.has(t.item_class) || a.set(t.item_class, []),
+              a.get(t.item_class).push({ ...t, user_has_item: n }));
           }),
         a
       );

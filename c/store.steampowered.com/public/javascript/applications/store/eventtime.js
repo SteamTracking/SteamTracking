@@ -13,4 +13,3 @@ function _() {
   let _ = _.get();
   return _ ? new Date(_ * 1e3) : new Date();
 }
-export { _, _, _, _ };

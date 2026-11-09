@@ -34,7 +34,7 @@ function _(_) {
   )
     return null;
   let _ = () => {
-      _ ? localStorage.removeItem(_) : localStorage.setItem(_, `1`), _(!_);
+      (_ ? localStorage.removeItem(_) : localStorage.setItem(_, `1`), _(!_));
     },
     _ = 0;
   return (0, _.jsx)(`div`, {
@@ -133,7 +133,7 @@ function _(_) {
     let _ = 1;
     for (let _ of _.data.comments ?? []) {
       if (_.gidcomment === _) {
-        (_ = _(_.text)), (_ = `#${_}`);
+        ((_ = _(_.text)), (_ = `#${_}`));
         break;
       }
       _++;

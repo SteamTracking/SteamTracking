@@ -231,4 +231,3 @@ function _(_) {
     children: _,
   });
 }
-export { _, _ };

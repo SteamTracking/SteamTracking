@@ -23,7 +23,7 @@ var _ = _(`div`, {
   }),
   _ = _(`input`),
   _ = _(`textarea`);
-_(`img`, {
+(_(`img`, {
   bDOMElementFocusByDefault: !1,
 }),
   _(`label`, {
@@ -41,11 +41,10 @@ _(`img`, {
   }),
   _(`details`, {
     bFocusableByDefault: !1,
-  });
+  }));
 function _(_, _, _ = !1) {
   _.useEffect(() => {
     let _ = _.current;
     _ && (_ ? _.Activate(_) : _.Deactivate());
   }, [_, _, _]);
 }
-export { _, _, _, _, _, _, _ };

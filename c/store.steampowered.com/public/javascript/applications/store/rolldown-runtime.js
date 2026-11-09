@@ -7,7 +7,7 @@ var _ = Object.create,
   _ = (_, _, _) => () => {
     if (_) throw _[0];
     try {
-      return _ && (_ = _((_ = 0))), _;
+      return (_ && (_ = _((_ = 0))), _);
     } catch (_) {
       throw ((_ = [_]), _);
     }
@@ -42,13 +42,13 @@ var _ = Object.create,
   _ = (_, _, _, _) => {
     if ((_ && typeof _ == `object`) || typeof _ == `function`)
       for (var _ = _(_), _ = 0, _ = _.length, _; _ < _; _++)
-        (_ = _[_]),
+        ((_ = _[_]),
           !_.call(_, _) &&
             _ !== _ &&
             _(_, _, {
               get: ((_) => _[_]).bind(null, _),
               enumerable: !(_ = _(_, _)) || _.enumerable,
-            });
+            }));
     return _;
   },
   _ = (_, _, _) => (
@@ -87,4 +87,3 @@ var _ = Object.create,
         "\" in an environment that doesn't expose the `require` function. See https://rolldown.rs/in-depth/bundling-cjs#require-external-modules for more details.",
     );
   });
-export { _, _, _, _, _, _ };

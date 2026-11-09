@@ -46,7 +46,7 @@ function x(e, t) {
 }
 function S(e, t, n) {
   let r = e.slice(0);
-  return (r[t] = n), r;
+  return ((r[t] = n), r);
 }
 var C = class extends i {
     #e;
@@ -58,13 +58,13 @@ var C = class extends i {
     #o;
     #s;
     constructor(e, t, n) {
-      super(),
+      (super(),
         (this.#e = e),
         (this.#r = n),
         (this.#n = []),
         (this.#i = []),
         (this.#t = []),
-        this.setQueries(t);
+        this.setQueries(t));
     }
     onSubscribe() {
       this.listeners.size === 1 &&
@@ -78,13 +78,13 @@ var C = class extends i {
       this.listeners.size || this.destroy();
     }
     destroy() {
-      (this.listeners = new Set()),
+      ((this.listeners = new Set()),
         this.#i.forEach((e) => {
           e.destroy();
-        });
+        }));
     }
     setQueries(e, t, n) {
-      (this.#n = e),
+      ((this.#n = e),
         (this.#r = t),
         o.batch(() => {
           let e = this.#i,
@@ -106,7 +106,7 @@ var C = class extends i {
                 });
               }),
               this.#f()));
-        });
+        }));
     }
     getCurrentResult() {
       return this.#t;
@@ -180,24 +180,24 @@ function T({ queries: e, ...t }, n) {
       () =>
         e.map((e) => {
           let t = r.defaultQueryOptions(e);
-          return (t._optimisticResults = i ? `isRestoring` : `optimistic`), t;
+          return ((t._optimisticResults = i ? `isRestoring` : `optimistic`), t);
         }),
       [e, r, i],
     );
-  y.forEach((e) => {
-    p(e), m(e, v);
+  (y.forEach((e) => {
+    (p(e), m(e, v));
   }),
-    l(v);
+    l(v));
   let [b] = w.useState(() => new C(r, y, t)),
     [x, S, T] = b.getOptimisticResult(y, t.combine);
-  w.useSyncExternalStore(
+  (w.useSyncExternalStore(
     w.useCallback((e) => (i ? s : b.subscribe(o.batchCalls(e))), [b, i]),
     () => b.getCurrentResult(),
     () => b.getCurrentResult(),
   ),
     w.useEffect(() => {
       b.setQueries(y, t, { listeners: !1 });
-    }, [y, t, b]);
+    }, [y, t, b]));
   let E = x.some((e, t) => d(y[t], e))
     ? x.flatMap((e, t) => {
         let n = y[t];
@@ -390,13 +390,13 @@ function A(e, t) {
     l = a && e % 100 == 0;
   c && (e = -e);
   let u = [];
-  for (let t = 0; t < 2; t++) l || u.push(e % 10), (e = Math.floor(e / 10));
+  for (let t = 0; t < 2; t++) (l || u.push(e % 10), (e = Math.floor(e / 10)));
   !l && o && u.push(o);
   let d = 0;
   do
-    d++ % 3 == 0 && d > 2 && s && u.push(s),
+    (d++ % 3 == 0 && d > 2 && s && u.push(s),
       u.push(e % 10),
-      (e = Math.floor(e / 10));
+      (e = Math.floor(e / 10)));
   while (e > 0);
   let f = u.reverse().join(``),
     p = i ? ` ` : ``,
@@ -409,12 +409,12 @@ function M(e, t) {
   let n = (0, w.useContext)(j),
     r = typeof e == `string` ? e : b(...e),
     i = n;
-  for (; i; ) {
+  for (; i;) {
     if (r in i.instances) return i.instances[r];
     if (r in i.factories) break;
     i = i.parent;
   }
   let a = (i?.factories[r] ?? t)();
-  return ((i ?? n).instances[r] = a), a;
+  return (((i ?? n).instances[r] = a), a);
 }
 export { T as a, O as i, k as n, A as r, M as t };

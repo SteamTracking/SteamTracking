@@ -218,7 +218,7 @@ function _(_) {
       _(!0);
     }, []),
     _ = (0, _.useRef)(null);
-  (0, _.useEffect)(() => {
+  ((0, _.useEffect)(() => {
     _.current?.complete &&
       (_(),
       (_.current.naturalHeight == 0 || _.current.naturalWidth == 0) && _());
@@ -229,7 +229,7 @@ function _(_) {
           ? _()
           : (_(!1), _(!1))
         : _(!0);
-    }, [_, _.preview_type, _.url]);
+    }, [_, _.preview_type, _.url]));
   let _ = _ ?? _,
     _ = _ / _,
     _ = `${_.url}${_(_, _, !1)}`,
@@ -388,8 +388,8 @@ function _(_) {
       let _ = _[_];
       if (_.preview_type != 0) return;
       let _ = _ === _.length - 1 ? 0 : _ + 1;
-      for (_ = _[_]; _.preview_type != 0 && _ != _; )
-        (_ = _ === _.length - 1 ? 0 : _ + 1), (_ = _[_]);
+      for (_ = _[_]; _.preview_type != 0 && _ != _;)
+        ((_ = _ === _.length - 1 ? 0 : _ + 1), (_ = _[_]));
       _(_);
     }, 3e3);
     return () => clearInterval(_);
@@ -426,8 +426,8 @@ function _(_) {
         }),
         _.addEventListener(`scrollend`, _),
         () => {
-          _.removeEventListener(`scroll`, _),
-            _.removeEventListener(`scrollend`, _);
+          (_.removeEventListener(`scroll`, _),
+            _.removeEventListener(`scrollend`, _));
         }
       );
     }, []),
@@ -507,4 +507,3 @@ function _(_) {
         })
   );
 }
-export { _, _ };

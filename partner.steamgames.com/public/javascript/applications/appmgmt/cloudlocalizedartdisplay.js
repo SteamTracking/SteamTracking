@@ -89,16 +89,16 @@ function M(e) {
 function N(e) {
   return new Promise((t) => {
     let n = new Image();
-    (n.onload = () => t(!0)), (n.onerror = () => t(!1)), (n.src = e);
+    ((n.onload = () => t(!0)), (n.onerror = () => t(!1)), (n.src = e));
   });
 }
 function P(e) {
   return new Promise((t) => {
     let n = document.createElement(`video`);
-    (n.preload = `metadata`),
+    ((n.preload = `metadata`),
       (n.onloadedmetadata = () => t(!0)),
       (n.onerror = () => t(!1)),
-      (n.src = e);
+      (n.src = e));
   });
 }
 function F(e) {
@@ -161,7 +161,7 @@ function F(e) {
                 href: `#`,
                 className: `oyKuVDO21ZA-`,
                 onClick: (e) => {
-                  w(), e.preventDefault();
+                  (w(), e.preventDefault());
                 },
                 children: a(`#Button_DeleteAll`),
               }),
@@ -188,7 +188,7 @@ function I(e) {
         (0, A.jsx)(`a`, {
           href: `#`,
           onClick: (e) => {
-            e.preventDefault(), i(t);
+            (e.preventDefault(), i(t));
           },
           children:
             t === r
@@ -198,7 +198,7 @@ function I(e) {
         (0, A.jsx)(`a`, {
           href: `#`,
           onClick: (e) => {
-            e.preventDefault(), a(t);
+            (e.preventDefault(), a(t));
           },
           children: (0, A.jsx)(s, {}),
         }),

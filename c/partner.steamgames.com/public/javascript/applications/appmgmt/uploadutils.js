@@ -3,7 +3,7 @@ function _() {
   let _, _;
   return {
     promise: new Promise((_, _) => {
-      (_ = _), (_ = _);
+      ((_ = _), (_ = _));
     }),
     resolve: _,
     reject: _,
@@ -73,8 +73,8 @@ function _(_) {
   return (
     (_.onload = () => _.resolve(_)),
     (_.onerror = (_) => {
-      console.error(`LoadImage failed to load the image, details`, _),
-        _.resolve(void 0);
+      (console.error(`LoadImage failed to load the image, details`, _),
+        _.resolve(void 0));
     }),
     (_.src = _),
     _.promise
@@ -87,8 +87,8 @@ function _(_) {
     (_.preload = `metadata`),
     _.addEventListener(`loadedmetadata`, () => _.resolve(_)),
     (_.onerror = (_) => {
-      console.error(`LoadVideo failed to load the video, details`, _),
-        _.resolve(void 0);
+      (console.error(`LoadVideo failed to load the video, details`, _),
+        _.resolve(void 0));
     }),
     (_.src = _),
     _.promise
@@ -108,15 +108,15 @@ async function _(_, _) {
   {
     let _ = _(),
       _ = new FileReader();
-    (_.onload = () => _.resolve(_.result ?? void 0)),
+    ((_.onload = () => _.resolve(_.result ?? void 0)),
       (_.onerror = () => {
-        console.error(
+        (console.error(
           `GetMediaElementFromFile failed to load the image, details`,
           _.error,
         ),
-          _.resolve(void 0);
+          _.resolve(void 0));
       }),
-      _.readAsDataURL(_);
+      _.readAsDataURL(_));
     let _ = await _.promise;
     return _ ? _(_.toString()) : void 0;
   }
@@ -153,4 +153,3 @@ function _(_, _) {
   for (let _ of _) _.has(_.name.toLowerCase()) || (_[_.name] = _.value);
   return _;
 }
-export { _, _, _, _, _, _, _, _, _, _, _ };

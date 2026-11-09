@@ -136,7 +136,7 @@ function je(e, t) {
       e.addEventListener(`play`, n),
       e.addEventListener(`pause`, r),
       () => {
-        e.removeEventListener(`play`, n), e.removeEventListener(`pause`, r);
+        (e.removeEventListener(`play`, n), e.removeEventListener(`pause`, r));
       }
     );
   }, [t, e]);
@@ -191,14 +191,14 @@ function Pe(e) {
     [L, R] = (0, W.useState)(null),
     { bCookieLoaded: z } = Ie(r, n, d),
     B = z;
-  W.useEffect(() => {
+  (W.useEffect(() => {
     n && B && u && !w && p(!0);
   }, [u, B, n, w]),
     W.useEffect(() => {
       w && f && u && T();
-    }, [f, w, u, T]);
+    }, [f, w, u, T]));
   let V = (e) => {
-      D(r ?? Y, String(!e), 3650), d(e), p(e);
+      (D(r ?? Y, String(!e), 3650), d(e), p(e));
     },
     U = Me(A, p, L, M);
   W.useEffect(() => {
@@ -313,11 +313,11 @@ function Le(e) {
     [O, k] = (0, W.useState)(null),
     { data: j } = P(t),
     M = !!n;
-  W.useEffect(() => {
+  (W.useEffect(() => {
     let e = !1;
-    f && b && M && (e = c === 0 || (c === 1 && !S) || (c === 2 && !w)),
+    (f && b && M && (e = c === 0 || (c === 1 && !S) || (c === 2 && !w)),
       y(e),
-      a?.(g && e);
+      a?.(g && e));
   }, [a, c, w, S, f, g, b, M]),
     je(O, C),
     W.useEffect(() => {
@@ -327,13 +327,13 @@ function Le(e) {
         x(!1),
         O && (O.pause(), (O.currentTime = 0)),
         E && (E.Pause(), E.SeekToStart()));
-    }, [_, E, O, l]);
+    }, [_, E, O, l]));
   let F = W.useRef(!1);
-  W.useEffect(() => {
+  (W.useEffect(() => {
     if (f && c === 0) {
       if ((x(!0), _)) {
         if (E) {
-          J.Debug(`Starting microtrailer`), l(1);
+          (J.Debug(`Starting microtrailer`), l(1));
           let e = () => ze(F, l, E);
           r || !O
             ? e()
@@ -346,9 +346,9 @@ function Le(e) {
     W.useEffect(() => {
       f || m(!1);
     }, [f, m]),
-    Ne(!!o, c, O, S, E, w);
+    Ne(!!o, c, O, S, E, w));
   let I = (0, W.useCallback)((e) => {
-    d(e), k(e);
+    (d(e), k(e));
   }, []);
   return !j || !j.visible || !n
     ? null
@@ -374,7 +374,7 @@ function Le(e) {
           (0, K.jsx)(Re, {
             trailer: n,
             onRefChange: (e) => {
-              D(e), u(e);
+              (D(e), u(e));
             },
             eTrailerDisplay: c,
             fadeRatio: i,
@@ -404,7 +404,7 @@ function Re(e) {
     u = X(!1, n),
     d = (0, W.useMemo)(() => L(t), [t]),
     f = (0, W.useCallback)((e) => {
-      c(e), o(e);
+      (c(e), o(e));
     }, []),
     p = (0, W.useCallback)(() => {
       i(!0);
@@ -434,7 +434,7 @@ function ze(e, t, n) {
 }
 function Be(e, t, n) {
   e.play().catch((e) => {
-    n(), J.Warning(`Failed to play ${t}: `, e);
+    (n(), J.Warning(`Failed to play ${t}: `, e));
   });
 }
 function X(e, t) {
@@ -458,7 +458,7 @@ function Ve(e) {
   return (0, K.jsx)(K.Fragment, {
     children: (0, K.jsx)(`div`, {
       onClick: (e) => {
-        e.preventDefault(), e.stopPropagation();
+        (e.preventDefault(), e.stopPropagation());
       },
       className: ke,
       children: (0, K.jsx)(

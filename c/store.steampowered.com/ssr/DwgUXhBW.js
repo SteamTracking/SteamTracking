@@ -4,9 +4,9 @@ var _ = `_6ogph74EeuE-`,
 function _(_) {
   let { children: _, "flow-children": _, ..._ } = _,
     { gamepadEvents: _ } = _(_);
-  _ && (_.layout = _(_)),
+  (_ && (_.layout = _(_)),
     _.onOKButton ||
-      (`onClick` in _.props && _.props.onClick && (_.onOKButton = _));
+      (`onClick` in _.props && _.props.onClick && (_.onOKButton = _)));
   let _;
   _.focusable && (_ = _.props.tabIndex || 0);
   let { ref: _, node: _ } = _(_);
@@ -50,4 +50,3 @@ var _ = _;
 function _(_) {
   return _(_, _);
 }
-export { _, _, _ };

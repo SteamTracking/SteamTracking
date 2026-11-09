@@ -538,14 +538,14 @@ async function _(_, _) {
     let _ = _(_),
       _ = _.target.files[0],
       _ = await _.ParseCSVFile(_);
-    _(
+    (_(
       (0, _.jsx)(_, {
         strFilename: _.name,
         parseResult: _,
       }),
       _,
     ),
-      _();
+      _());
   }
 }
 function _(_, _) {
@@ -584,7 +584,7 @@ function _(_) {
   if (
     (_.useEffect(() => {
       let { rgPriceChanges: _, nPackagesImported: _ } = _(_, _, _, _);
-      _(_), _(_);
+      (_(_), _(_));
     }, [_, _, _, _]),
     _ === null)
   )

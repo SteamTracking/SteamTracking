@@ -4,10 +4,10 @@
     [2561],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
-        __webpack_require__._(module_exports),
+        (__webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
             default: () => _,
-          });
+          }));
         const _ = {
           arabic: {
             Steam_Language_Selection_Label:

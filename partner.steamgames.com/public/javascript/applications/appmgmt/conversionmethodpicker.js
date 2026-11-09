@@ -66,7 +66,7 @@ function p(n) {
                   contextMenuPositionOptions: { bMatchWidth: !1 },
                   selectedOption: p,
                   onChange: (e) => {
-                    h(e.data), i && i(e.data);
+                    (h(e.data), i && i(e.data));
                   },
                 }),
               }),

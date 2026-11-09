@@ -12,11 +12,11 @@ function _(_) {
     };
   if (typeof _ == `number`) {
     let _ = `${_}px`;
-    (_.width = _),
+    ((_.width = _),
       (_.height = _),
       (_.minHeight = _),
       (_.minWidth = _),
-      (_.borderWidth = `${_ / 10}px`);
+      (_.borderWidth = `${_ / 10}px`));
   }
   return (0, _.jsx)(`div`, {
     className: _(
@@ -37,4 +37,3 @@ function _(_) {
     children: _.children(_),
   });
 }
-export { _, _ };

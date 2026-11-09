@@ -12,7 +12,7 @@ function o(e) {
     ),
     o = (0, i.useMemo)(() => {
       let t = window.location.href.split(`#`)[0];
-      return e.gidcomment !== null && (t += `#c` + e.gidcomment), t;
+      return (e.gidcomment !== null && (t += `#c` + e.gidcomment), t);
     }, [e.gidcomment]);
   return (0, a.jsx)(r, { text: o, size: t ? `large` : `small` });
 }

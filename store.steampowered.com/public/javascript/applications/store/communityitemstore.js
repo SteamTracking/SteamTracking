@@ -9,7 +9,7 @@ var a = class {
   constructor(e) {
     t(this);
     let { itemDef: n, communityItemDef: r } = e;
-    i(
+    (i(
       e.itemDef || e.communityItemDef,
       `CCommunityItem must be initialized by an itemDef or a communityItemDef`,
     ),
@@ -42,7 +42,7 @@ var a = class {
           ),
           (this.m_ItemDefinition = r)),
       this.m_ItemDefinition.item_key_values &&
-        (this.m_ItemKV = JSON.parse(this.m_ItemDefinition.item_key_values));
+        (this.m_ItemKV = JSON.parse(this.m_ItemDefinition.item_key_values)));
   }
   get AppID() {
     return this.m_ItemDefinition.appid;
@@ -63,8 +63,8 @@ var a = class {
     return this.m_ItemDefinition;
   }
 };
-r([e], a.prototype, `m_ItemDefinition`, void 0),
-  r([e], a.prototype, `m_ItemKV`, void 0);
+(r([e], a.prototype, `m_ItemDefinition`, void 0),
+  r([e], a.prototype, `m_ItemKV`, void 0));
 function o(e, t) {
   return `${n.MEDIA_CDN_COMMUNITY_URL}images/items/${e}/${t}`;
 }

@@ -18,9 +18,9 @@ var d = e(t(), 1),
   f = class e extends d.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.bincremental || a(e.M()),
-        d.Message.initialize(this, t, 0, -1, [2], null);
+        d.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -40,7 +40,7 @@ var d = e(t(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= n(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= n(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -61,14 +61,14 @@ var d = e(t(), 1),
     }
     serializeBinary() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       s(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CMsgClientFriendsList`;
@@ -77,9 +77,9 @@ var d = e(t(), 1),
   p = class e extends d.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.ulfriendid || a(e.M()),
-        d.Message.initialize(this, t, 0, -1, void 0, null);
+        d.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -100,7 +100,7 @@ var d = e(t(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= n(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= n(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -121,14 +121,14 @@ var d = e(t(), 1),
     }
     serializeBinary() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       s(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CMsgClientFriendsList_Friend`;
@@ -137,9 +137,9 @@ var d = e(t(), 1),
   m = class e extends d.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.groupid || a(e.M()),
-        d.Message.initialize(this, t, 0, -1, [3], null);
+        d.Message.initialize(this, t, 0, -1, [3], null));
     }
     static sm_m;
     static sm_mbf;
@@ -164,7 +164,7 @@ var d = e(t(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= n(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= n(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -185,14 +185,14 @@ var d = e(t(), 1),
     }
     serializeBinary() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       s(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsListCategory`;
@@ -201,7 +201,7 @@ var d = e(t(), 1),
   h = class e extends d.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), d.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), d.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -222,12 +222,12 @@ var d = e(t(), 1),
     }
     serializeBinary() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetCategories_Request`;
@@ -236,9 +236,9 @@ var d = e(t(), 1),
   g = class e extends d.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.categories || a(e.M()),
-        d.Message.initialize(this, t, 0, -1, [1], null);
+        d.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -252,7 +252,7 @@ var d = e(t(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= n(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= n(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -273,14 +273,14 @@ var d = e(t(), 1),
     }
     serializeBinary() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       s(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetCategories_Response`;
@@ -289,9 +289,9 @@ var d = e(t(), 1),
   _ = class e extends d.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.accountid || a(e.M()),
-        d.Message.initialize(this, t, 0, -1, void 0, null);
+        d.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -313,7 +313,7 @@ var d = e(t(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= n(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= n(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -334,14 +334,14 @@ var d = e(t(), 1),
     }
     serializeBinary() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       s(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsListFavoriteEntry`;
@@ -350,7 +350,7 @@ var d = e(t(), 1),
   v = class e extends d.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), d.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), d.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -371,12 +371,12 @@ var d = e(t(), 1),
     }
     serializeBinary() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetFavorites_Request`;
@@ -385,9 +385,9 @@ var d = e(t(), 1),
   y = class e extends d.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.favorites || a(e.M()),
-        d.Message.initialize(this, t, 0, -1, [1], null);
+        d.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -401,7 +401,7 @@ var d = e(t(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= n(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= n(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -422,14 +422,14 @@ var d = e(t(), 1),
     }
     serializeBinary() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       s(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetFavorites_Response`;
@@ -438,9 +438,9 @@ var d = e(t(), 1),
   b = class e extends d.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.favorites || a(e.M()),
-        d.Message.initialize(this, t, 0, -1, [1], null);
+        d.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -454,7 +454,7 @@ var d = e(t(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= n(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= n(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -475,14 +475,14 @@ var d = e(t(), 1),
     }
     serializeBinary() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       s(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_SetFavorites_Request`;
@@ -491,7 +491,7 @@ var d = e(t(), 1),
   x = class e extends d.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), d.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), d.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -512,12 +512,12 @@ var d = e(t(), 1),
     }
     serializeBinary() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_SetFavorites_Response`;
@@ -526,9 +526,9 @@ var d = e(t(), 1),
   S = class e extends d.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.favorites || a(e.M()),
-        d.Message.initialize(this, t, 0, -1, [1], null);
+        d.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -542,7 +542,7 @@ var d = e(t(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= n(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= n(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -563,14 +563,14 @@ var d = e(t(), 1),
     }
     serializeBinary() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       s(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_FavoritesChanged_Notification`;
@@ -579,7 +579,7 @@ var d = e(t(), 1),
   C = class e extends d.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), d.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), d.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -600,12 +600,12 @@ var d = e(t(), 1),
     }
     serializeBinary() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetFriendsList_Request`;
@@ -614,9 +614,9 @@ var d = e(t(), 1),
   w = class e extends d.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.friendslist || a(e.M()),
-        d.Message.initialize(this, t, 0, -1, void 0, null);
+        d.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -627,7 +627,7 @@ var d = e(t(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= n(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= n(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -648,14 +648,14 @@ var d = e(t(), 1),
     }
     serializeBinary() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       s(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new d.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetFriendsList_Response`;

@@ -46,11 +46,8 @@ import {
   t as ie,
 } from "./tabulatorutils.js";
 import { r as ae } from "./modals.js";
-import {
-  n as oe,
-  t as se,
-} from "./simplesuccesserror.js"; /* empty css                                  */
-import { r as ce } from "./playerstore.js";
+import { n as oe, t as se } from "./simplesuccesserror.js";
+/* empty css                                  */ import { r as ce } from "./playerstore.js";
 import { t as L } from "./localization3.js";
 var R = s(a(), 1),
   le = s(l(), 1),
@@ -92,9 +89,9 @@ function B(e) {
         t = o.current.getBoundingClientRect(),
         i = m,
         a = l.current.matches(`:dir(rtl)`);
-      a && (m === `left` ? (i = `right`) : m === `right` && (i = `left`)),
+      (a && (m === `left` ? (i = `right`) : m === `right` && (i = `left`)),
         o.current.style.setProperty(`--parentWidth`, `${e.width}px`),
-        o.current.style.setProperty(`--parentHeight`, `${e.height}px`);
+        o.current.style.setProperty(`--parentHeight`, `${e.height}px`));
       let s = 0;
       if (!n) {
         if (t.width) {
@@ -105,11 +102,11 @@ function B(e) {
             let n = p ? e.left : e.right;
             s = document.body.clientWidth - (n + t.width);
           }
-          i === void 0 &&
+          (i === void 0 &&
             (s = a
               ? e.right - t.width
               : document.body.clientWidth - (e.left + t.width)),
-            (s = Math.min(s, 0));
+            (s = Math.min(s, 0)));
         }
         i === `left`
           ? p
@@ -161,8 +158,8 @@ function B(e) {
           g?.addEventListener(`scroll`, h),
           window.addEventListener(`scroll`, h),
           () => {
-            g?.removeEventListener(`scroll`, h),
-              window.addEventListener(`scroll`, h);
+            (g?.removeEventListener(`scroll`, h),
+              window.addEventListener(`scroll`, h));
           })
         : (window.sessionStorage.getItem(`DEBUG_StickyContextMenus`) !=
             `true` && o.current?.hidePopover(),
@@ -170,13 +167,13 @@ function B(e) {
     [u, h, g],
   );
   let _ = (0, R.useCallback)(() => {
-      h(), f(!0), (c.current = !0);
+      (h(), f(!0), (c.current = !0));
     }, [h]),
     v = (0, R.useCallback)(() => {
-      (c.current = !1), s.current || f(!1);
+      ((c.current = !1), s.current || f(!1));
     }, []),
     y = (0, R.useCallback)(() => {
-      (s.current = !0), f(!0);
+      ((s.current = !0), f(!0));
     }, []),
     b = (0, R.useCallback)(
       (e) => {
@@ -191,7 +188,7 @@ function B(e) {
       [y],
     ),
     S = (0, R.useCallback)(() => {
-      (s.current = !1), c.current || f(!1);
+      ((s.current = !1), c.current || f(!1));
     }, []),
     C = (0, R.useCallback)(
       (e) => {
@@ -200,7 +197,7 @@ function B(e) {
       [S],
     ),
     w = (0, R.useCallback)(() => {
-      S(), v();
+      (S(), v());
     }, [S, v]),
     T = (0, R.useCallback)(
       (e) => {
@@ -247,7 +244,7 @@ function B(e) {
     j;
   a === 0 && !u
     ? (j = (e) => {
-        e.preventDefault(), _();
+        (e.preventDefault(), _());
       })
     : a === 1 && (j = u ? v : _);
   let M = {
@@ -283,7 +280,7 @@ function B(e) {
 }
 function V(e, t) {
   return (n) => {
-    e?.(n), t?.(n);
+    (e?.(n), t?.(n));
   };
 }
 function H(e) {
@@ -332,7 +329,7 @@ function H(e) {
   );
 }
 var U = (function (e) {
-  return (e.k_FreeToPlay = `freetoplay`), (e.k_Free = `free`), e;
+  return ((e.k_FreeToPlay = `freetoplay`), (e.k_Free = `free`), e);
 })({});
 function me(e, r) {
   return O({
@@ -393,7 +390,7 @@ function he(e) {
           : L.Localize(`#FreeOnDemand_Button_disabled_ttip`),
         children: (0, z.jsx)(M, {
           onClick: () => {
-            i?.(), s();
+            (i?.(), s());
           },
           color: `dull`,
           children: t || L.Localize(`#FreeOnDemand_Button`),
@@ -419,10 +416,10 @@ function ge(e) {
         state: c,
         strDialogTitle: L.Localize(`#FreeOnDemand_Title`),
         closeModal: () => {
-          window.location.replace(
+          (window.location.replace(
             `${o.PARTNER_BASE_URL}store/packagelanding/${r}`,
           ),
-            t();
+            t());
         },
       })
     : (0, z.jsxs)(T, {
@@ -432,7 +429,7 @@ function ge(e) {
         onCancel: t,
         onOK: async () => {
           try {
-            c.fnSetLoading(!0),
+            (c.fnSetLoading(!0),
               c.fnSetThrobber(L.Localize(`#FreeOnDemand_Convert_Store`)),
               await s.mutateAsync({
                 displayOption: i,
@@ -441,14 +438,14 @@ function ge(e) {
                 },
               }),
               c.fnSetSuccess(!0),
-              c.fnSetStrSuccess(L.Localize(`#FreeOnDemand_ConvertSuccess`));
+              c.fnSetStrSuccess(L.Localize(`#FreeOnDemand_ConvertSuccess`)));
           } catch (e) {
-            c.fnSetError(!0),
+            (c.fnSetError(!0),
               c.fnSetStrError(
                 e instanceof Error
                   ? e.message
                   : h.Localize(`#Error_ErrorCommunicatingWithNetwork`),
-              );
+              ));
           }
         },
         children: [
@@ -583,7 +580,7 @@ function Ee(t) {
               `button`,
               {
                 onClick: () => {
-                  s(), r(t);
+                  (s(), r(t));
                 },
                 className: e({ [Se]: !0, [Ce]: u == t }),
                 children: f(t, 1),
@@ -737,7 +734,7 @@ function Ve(e) {
       if (Number.isNaN(n)) return;
       f.bWholeUnitsOnly && (n *= 100);
       let r = 2147483647;
-      n > r && (n = r), c(n);
+      (n > r && (n = r), c(n));
     },
     { strClassName: g } = Z(r, i),
     _ = i == `USD`,
@@ -885,11 +882,11 @@ function Q(t) {
     a = null,
     o = null,
     s = null;
-  if (!r) (i = S(`#PricingDashboard_PriceIsNew_Short`)), (s = e(Pe));
+  if (!r) ((i = S(`#PricingDashboard_PriceIsNew_Short`)), (s = e(Pe)));
   else {
     let t = Math.ceil((100 * (n - r)) / r),
       c = n > r;
-    (o = S(
+    ((o = S(
       c
         ? `#PricingDashboard_PriceIncreaseBy`
         : `#PricingDashboard_PriceLowerBy`,
@@ -900,7 +897,7 @@ function Q(t) {
         className: Ie,
         children: (0, z.jsx)(w, { angle: c ? 0 : 180 }),
       })),
-      (i = t + `%`);
+      (i = t + `%`));
   }
   return (0, z.jsxs)(C, {
     className: s,

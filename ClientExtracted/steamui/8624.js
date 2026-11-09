@@ -19,7 +19,7 @@
       },
       78624: (W, S, n) => {
         "use strict";
-        n.r(S), n.d(S, { PinnedAchievementsList: () => Q });
+        (n.r(S), n.d(S, { PinnedAchievementsList: () => Q }));
         var t = n(62540),
           R = n(17879),
           V = n(12116),
@@ -62,7 +62,7 @@
                 P &&
                 m &&
                 ((c) => {
-                  p({ basis: P, names: c }), m(c);
+                  (p({ basis: P, names: c }), m(c));
                 }),
               [P, m],
             ),
@@ -316,7 +316,7 @@
                   className: d.PinnedAchievementsList,
                   style: { marginBottom: -y },
                   ref: (i) => {
-                    e.innerRef(i), (g.current = i);
+                    (e.innerRef(i), (g.current = i));
                   },
                   ...e.droppableProps,
                   children: (0, t.jsx)(G.SR, {

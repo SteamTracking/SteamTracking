@@ -225,7 +225,7 @@ var Le = g(Ce()),
           r = h.STORE_BASE_URL + `saleaction/ajaxgetdeckappcompatibilityreport`,
           i = await Le.default.get(r, { params: n, withCredentials: !0 });
         if (i?.status == 200 && i.data?.success == 1 && i.data?.results)
-          return this.AddCompatabilityResult(i.data.results), !0;
+          return (this.AddCompatabilityResult(i.data.results), !0);
         t = we(i);
       } catch (e) {
         t = we(e);
@@ -241,7 +241,7 @@ var Le = g(Ce()),
     }
     static s_Singleton;
     static Get() {
-      return (e.s_Singleton ||= new e()), e.s_Singleton;
+      return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
     constructor() {
       if (document.getElementById(`application_config`)) {
@@ -377,7 +377,7 @@ var Be = class e {
   }
   BFromActiveNavTree(e, t) {
     let n = t?.Tree;
-    return (n ||= e?.Tree), n && n.Controller.IsActiveFocusNavTree(n);
+    return ((n ||= e?.Tree), n && n.Controller.IsActiveFocusNavTree(n));
   }
   OnFocusNavigationChanged(e, t, n) {
     this.BFromActiveNavTree(t, n) && this.UpdateForFocusedNode(n);
@@ -447,9 +447,9 @@ var Be = class e {
     t && this.Notify();
   }
   ClearActions() {
-    e.Log(`ClearActionDescriptions`),
+    (e.Log(`ClearActionDescriptions`),
       this.m_boundActions.clear(),
-      this.Notify();
+      this.Notify());
   }
   SetActionsFromMap(e) {
     let t = !1,
@@ -495,9 +495,9 @@ var Be = class e {
     );
   }
 };
-p([S], Be.prototype, `OnFocusNavigationChanged`, null),
+(p([S], Be.prototype, `OnFocusNavigationChanged`, null),
   p([S], Be.prototype, `OnActiveNavTreeChanged`, null),
-  p([S], Be.prototype, `SetActionDescriptionsFromMap`, null);
+  p([S], Be.prototype, `SetActionDescriptionsFromMap`, null));
 var Ve = `_6t-T9facds8-`,
   V = `_9ltdnbqRBVs-`,
   He = `KMiaP3xxJic-`,
@@ -1970,10 +1970,10 @@ function $t(t) {
   }, [h, h.key, t.bDisableRouting, v]);
   let ee = N.useCallback(
       (e) => {
-        v(e.key),
+        (v(e.key),
           r || Te(g, `tab`, e.key),
           o?.(e.key),
-          e.onClick && e.onClick(e);
+          e.onClick && e.onClick(e));
       },
       [r, g, o],
     ),
@@ -2069,9 +2069,9 @@ var X = g(l(), 1),
   nn = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.appid || n(e.M()),
-        X.Message.initialize(this, t, 0, -1, void 0, null);
+        X.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -2085,7 +2085,7 @@ var X = g(l(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= i(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= i(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -2106,14 +2106,14 @@ var X = g(l(), 1),
     }
     serializeBinary() {
       var t = new X.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       _(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new X.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CGamePerformanceStats_GetGameFrameRateStats_Request`;
@@ -2122,9 +2122,9 @@ var X = g(l(), 1),
   rn = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.frame_rates || n(e.M()),
-        X.Message.initialize(this, t, 0, -1, [1], null);
+        X.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -2138,7 +2138,7 @@ var X = g(l(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= i(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= i(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -2159,14 +2159,14 @@ var X = g(l(), 1),
     }
     serializeBinary() {
       var t = new X.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       _(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new X.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CGamePerformanceStats_GetGameFrameRateStats_Response`;
@@ -2175,9 +2175,9 @@ var X = g(l(), 1),
   an = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.clusterid || n(e.M()),
-        X.Message.initialize(this, t, 0, -1, [8], null);
+        X.Message.initialize(this, t, 0, -1, [8], null));
     }
     static sm_m;
     static sm_mbf;
@@ -2218,7 +2218,7 @@ var X = g(l(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= i(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= i(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -2239,21 +2239,21 @@ var X = g(l(), 1),
     }
     serializeBinary() {
       var t = new X.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       _(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new X.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CGamePerformanceStats_GetGameFrameRateStats_Response_FrameRate`;
     }
   },
   on;
-(function (e) {
+((function (e) {
   function t(e, t, n) {
     return e.SendMsg(
       `GamePerformanceStats.GetGameFrameRateStats#1`,
@@ -2269,7 +2269,7 @@ var X = g(l(), 1),
   }
   e.GetGameFrameRateStats = t;
 })((on ||= {})),
-  ye();
+  ye());
 function sn(e) {
   let {
     results: t,
@@ -2831,20 +2831,20 @@ function mn(t) {
     d = null;
   if (r == 4) {
     let e = o.steam_frame_compat_category || 0;
-    (u = (0, P.jsx)(L, { category: e })),
+    ((u = (0, P.jsx)(L, { category: e })),
       (d = T.Localize(
         `#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI`,
-      ));
+      )));
   } else if (r == 3) {
     let e = o.steam_machine_compat_category || 0;
-    (u = (0, P.jsx)(I, { category: e })),
+    ((u = (0, P.jsx)(I, { category: e })),
       (d = T.Localize(
         `#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI`,
-      ));
+      )));
   } else {
     let e = o.steam_deck_compat_category || 0;
-    (u = (0, P.jsx)(F, { category: e })),
-      (d = T.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_Desktop`));
+    ((u = (0, P.jsx)(F, { category: e })),
+      (d = T.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_Desktop`)));
   }
   return (0, P.jsxs)(`div`, {
     className: e(He, `LearnMoreCtn`),
@@ -2852,7 +2852,7 @@ function mn(t) {
       u,
       (0, P.jsx)(re, {
         onClick: (e) => {
-          e.preventDefault(), (i ?? c)();
+          (e.preventDefault(), (i ?? c)());
         },
         children: (0, P.jsx)(`span`, { className: Ue, children: d }),
       }),
@@ -2949,13 +2949,13 @@ function vn(e) {
     o = null;
   switch (n) {
     case 3:
-      (a = `#SteamDeckVerified_DescriptionHeader_Verified`), (o = Xe);
+      ((a = `#SteamDeckVerified_DescriptionHeader_Verified`), (o = Xe));
       break;
     case 2:
-      (a = `#SteamDeckVerified_DescriptionHeader_Playable`), (o = U);
+      ((a = `#SteamDeckVerified_DescriptionHeader_Playable`), (o = U));
       break;
     case 1:
-      (a = `#SteamDeckVerified_DescriptionHeader_Unsupported`), (o = W);
+      ((a = `#SteamDeckVerified_DescriptionHeader_Unsupported`), (o = W));
   }
   let s = (0, P.jsx)(`span`, { className: o, children: T.Localize(Sn(n)) }),
     c = (0, P.jsx)(`span`, { className: H, children: T.Localize(i || a) }),
@@ -2985,10 +2985,10 @@ function yn(e) {
     o = null;
   switch (n) {
     case 2:
-      (a = `#SteamOSCompatibility_DescriptionHeader_Compatible`), (o = Ze);
+      ((a = `#SteamOSCompatibility_DescriptionHeader_Compatible`), (o = Ze));
       break;
     case 1:
-      (a = `#SteamOSCompatibility_DescriptionHeader_Unsupported`), (o = W);
+      ((a = `#SteamOSCompatibility_DescriptionHeader_Unsupported`), (o = W));
   }
   let s = (0, P.jsx)(`span`, { className: o, children: T.Localize(Cn(n)) }),
     c = (0, P.jsx)(`span`, { className: H, children: T.Localize(i || a) }),
@@ -3018,13 +3018,13 @@ function bn(e) {
     o = null;
   switch (n) {
     case 3:
-      (a = `#SteamMachineVerified_DescriptionHeader_Verified`), (o = Xe);
+      ((a = `#SteamMachineVerified_DescriptionHeader_Verified`), (o = Xe));
       break;
     case 2:
-      (a = `#SteamMachineVerified_DescriptionHeader_Playable`), (o = U);
+      ((a = `#SteamMachineVerified_DescriptionHeader_Playable`), (o = U));
       break;
     case 1:
-      (a = `#SteamMachineVerified_DescriptionHeader_Unsupported`), (o = W);
+      ((a = `#SteamMachineVerified_DescriptionHeader_Unsupported`), (o = W));
   }
   let s = (0, P.jsx)(`span`, { className: o, children: T.Localize(Sn(n)) }),
     c = (0, P.jsx)(`span`, { className: H, children: T.Localize(i || a) }),
@@ -3054,13 +3054,13 @@ function xn(e) {
     o = null;
   switch (n) {
     case 3:
-      (a = `#SteamFrameVerified_DescriptionHeader_Verified`), (o = Xe);
+      ((a = `#SteamFrameVerified_DescriptionHeader_Verified`), (o = Xe));
       break;
     case 2:
-      (a = `#SteamFrameVerified_DescriptionHeader_Playable`), (o = U);
+      ((a = `#SteamFrameVerified_DescriptionHeader_Playable`), (o = U));
       break;
     case 1:
-      (a = `#SteamFrameVerified_DescriptionHeader_Unsupported`), (o = W);
+      ((a = `#SteamFrameVerified_DescriptionHeader_Unsupported`), (o = W));
   }
   let s = (0, P.jsx)(`span`, { className: o, children: T.Localize(Sn(n)) }),
     c = (0, P.jsx)(`span`, { className: H, children: T.Localize(i || a) }),

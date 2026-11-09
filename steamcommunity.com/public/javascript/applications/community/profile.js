@@ -289,7 +289,7 @@ var Rt = `tJCpCo5r9dY-`,
     m_rtLastLoad = 0;
     m_communityData = void 0;
     constructor(e) {
-      c(this), (this.m_accountid = e);
+      (c(this), (this.m_accountid = e));
     }
     get community_data() {
       return this.m_communityData;
@@ -310,7 +310,7 @@ var Rt = `tJCpCo5r9dY-`,
       return this.m_communityData && this.m_communityData.profile_background;
     }
     Reload() {
-      (this.m_rtLastLoad = 0), this.EnsureCommunityDataLoaded();
+      ((this.m_rtLastLoad = 0), this.EnsureCommunityDataLoaded());
     }
     EnsureCommunityDataLoaded() {
       let e = this.m_communityData || this.m_bLoadingData,
@@ -327,11 +327,11 @@ var Rt = `tJCpCo5r9dY-`,
           )
           .then((e) => {
             let t = e.data;
-            typeof t.level == `number` &&
+            (typeof t.level == `number` &&
               typeof t.level_class == `string` &&
               (this.m_communityData = t),
               (this.m_bLoadingData = !1),
-              (this.m_rtLastLoad = Date.now());
+              (this.m_rtLastLoad = Date.now()));
           })
           .catch((e) => {
             this.m_bLoadingData = !1;
@@ -499,7 +499,7 @@ var On = class extends I.Component {
     let h = !0,
       g = !1,
       _ = !1;
-    a || ((ne += ` ` + Jt), (h = !1)), o && ((ne += ` undefined`), (_ = !0));
+    (a || ((ne += ` ` + Jt), (h = !1)), o && ((ne += ` undefined`), (_ = !0)));
     let re = i !== void 0,
       v = t.is_awayOrSnooze,
       ie;
@@ -699,16 +699,16 @@ var kn = ({ community_data: e, persona: t }) => {
     m_rgPreviousAvatars = [];
     m_promiseLoading;
     constructor(e) {
-      c(this), (this.m_SteamInterface = e);
+      (c(this), (this.m_SteamInterface = e));
     }
     GetAvatarHistory() {
-      return this.StartLoadIfNeeded(), this.m_rgPreviousAvatars || [];
+      return (this.StartLoadIfNeeded(), this.m_rgPreviousAvatars || []);
     }
     RefreshAvatarHistory() {
       this.m_promiseLoading = this.LoadAvatarHistory();
     }
     async BWaitForLoad() {
-      return this.StartLoadIfNeeded(), this.m_promiseLoading;
+      return (this.StartLoadIfNeeded(), this.m_promiseLoading);
     }
     StartLoadIfNeeded() {
       this.m_promiseLoading ||= this.LoadAvatarHistory();
@@ -747,7 +747,7 @@ var kn = ({ community_data: e, persona: t }) => {
     }
     async SelectAvatar(e, t) {
       let n = new FormData();
-      n.append(`sessionid`, k()), n.append(`json`, `1`), n.append(`sha`, t);
+      (n.append(`sessionid`, k()), n.append(`json`, `1`), n.append(`sha`, t));
       let r =
         (
           await R.default.post(
@@ -755,7 +755,7 @@ var kn = ({ community_data: e, persona: t }) => {
             n,
           )
         ).data.success || 2;
-      return r == 1 && e.CommitAvatarHash(), r;
+      return (r == 1 && e.CommitAvatarHash(), r);
     }
   };
 x([d], jn.prototype, `m_rgPreviousAvatars`, void 0);
@@ -784,7 +784,7 @@ var Mn = class {
     );
   }
   async BWaitForLoad() {
-    return this.StartLoadIfNeeded(), this.m_promiseLoading;
+    return (this.StartLoadIfNeeded(), this.m_promiseLoading);
   }
   StartLoadIfNeeded() {
     this.m_promiseLoading ||= this.LoadOGGAvatars();
@@ -793,13 +793,13 @@ var Mn = class {
     let e = await R.default.get(
       `${A.COMMUNITY_BASE_URL}actions/GameAvatars/?json=1&l=${A.LANGUAGE}`,
     );
-    return (this.m_AvatarData = e.data || null), !!e.data;
+    return ((this.m_AvatarData = e.data || null), !!e.data);
   }
   async SetPlayerOGGAvatar(e) {
     let t = Pn(this),
       n,
       r = e.GetAvatarHash();
-    for (; (n = t.next().value); ) {
+    for (; (n = t.next().value);) {
       let t = n.avatars.find((e) => e.avatar_hash == r);
       if (t) return this.SelectGameAvatar(e, n.appid, t.ordinal);
     }
@@ -807,13 +807,13 @@ var Mn = class {
   }
   async SelectGameAvatar(e, t, n) {
     let r = new FormData();
-    r.append(`sessionid`, k()),
+    (r.append(`sessionid`, k()),
       r.append(`json`, `1`),
-      r.append(`selectedAvatar`, `` + n);
+      r.append(`selectedAvatar`, `` + n));
     let i =
       (await R.default.post(`${A.COMMUNITY_BASE_URL}ogg/${t}/selectAvatar`, r))
         .data.success || 2;
-    return i == 1 && e.CommitAvatarHash(), i;
+    return (i == 1 && e.CommitAvatarHash(), i);
   }
   UpdateAvatarsForGame(e, t) {
     let n = [`rgRecentGames`, `rgOwnedGames`, `rgOtherGames`],
@@ -882,7 +882,7 @@ var V = class {
   m_eSaveStateByKey = new Map();
   m_eCommentSaveState = 0;
   constructor(e, t) {
-    c(this), (this.m_PrivacySettings = e), (this.m_eCommentPermission = t);
+    (c(this), (this.m_PrivacySettings = e), (this.m_eCommentPermission = t));
   }
   GetPrivacySetting(e) {
     return e == `PrivacyOwnedGames`
@@ -970,8 +970,8 @@ var V = class {
               n.PrivacySettings &&
               n.eCommentPermission &&
               r(() => {
-                (this.m_PrivacySettings = n.PrivacySettings),
-                  (this.m_eCommentPermission = n.eCommentPermission);
+                ((this.m_PrivacySettings = n.PrivacySettings),
+                  (this.m_eCommentPermission = n.eCommentPermission));
               }),
             !0
           );
@@ -988,10 +988,10 @@ var V = class {
     );
   }
 };
-x([d], V.prototype, `m_PrivacySettings`, void 0),
+(x([d], V.prototype, `m_PrivacySettings`, void 0),
   x([d], V.prototype, `m_eCommentPermission`, void 0),
   x([d], V.prototype, `m_eSaveStateByKey`, void 0),
-  x([d], V.prototype, `m_eCommentSaveState`, void 0);
+  x([d], V.prototype, `m_eCommentSaveState`, void 0));
 var Rn = class {
   m_rgBadges = [];
   m_FavoriteBadge = void 0;
@@ -999,19 +999,19 @@ var Rn = class {
   m_AppInfoStore;
   m_CMInterface;
   constructor(e, t, n) {
-    c(this), (this.m_CMInterface = e), (this.m_AppInfoStore = t);
+    (c(this), (this.m_CMInterface = e), (this.m_AppInfoStore = t));
     let r = n.rgBadges,
       i = n.FavoriteBadge;
     if (!Array.isArray(r))
       for (let e in r) {
         let t = r[e],
           n;
-        (n =
+        ((n =
           `communityitemid` in t ? new Vn(t, this.m_AppInfoStore) : new Bn(t)),
           this.m_rgBadges.push(n),
           i &&
             n.BIsFavoriteBadge(i) &&
-            (this.m_CommittedFavoriteBadge = this.m_FavoriteBadge = n);
+            (this.m_CommittedFavoriteBadge = this.m_FavoriteBadge = n));
       }
   }
   get Badges() {
@@ -1063,17 +1063,17 @@ var Rn = class {
       : null;
   }
 };
-x([d], Rn.prototype, `m_FavoriteBadge`, void 0),
+(x([d], Rn.prototype, `m_FavoriteBadge`, void 0),
   x([m], Rn.prototype, `SetFavoriteBadge`, null),
-  x([m], Rn.prototype, `RevertFavoriteBadge`, null);
+  x([m], Rn.prototype, `RevertFavoriteBadge`, null));
 var zn = class {
     m_strIconURL;
     m_strName;
     m_strXP;
     constructor(e) {
-      (this.m_strIconURL = e.icon),
+      ((this.m_strIconURL = e.icon),
         (this.m_strName = e.name),
-        (this.m_strXP = e.xp);
+        (this.m_strXP = e.xp));
     }
     GetIconURL() {
       return this.m_strIconURL;
@@ -1094,7 +1094,7 @@ var zn = class {
   Bn = class extends zn {
     m_unBadgeID;
     constructor(e) {
-      super(e), (this.m_unBadgeID = e.badgeid);
+      (super(e), (this.m_unBadgeID = e.badgeid));
     }
     GetFavoriteBadgeID() {
       return { badgeid: this.m_unBadgeID };
@@ -1110,12 +1110,12 @@ var zn = class {
     m_unBorderColor;
     m_AppInfoStore;
     constructor(e, t) {
-      super(e),
+      (super(e),
         (this.m_ulCommunityItemID = e.communityitemid),
         (this.m_usItemType = e.item_type),
         (this.m_unAppID = e.appid),
         (this.m_unBorderColor = e.border_color),
-        (this.m_AppInfoStore = t);
+        (this.m_AppInfoStore = t));
     }
     GetFavoriteBadgeID() {
       return { communityitemid: this.m_ulCommunityItemID };
@@ -1163,7 +1163,7 @@ function Yn(e, t = !1) {
     r = t ? Un(e) : Hn(e);
   r && (n[`video/webm`] = r);
   let i = t ? Gn(e) : Wn(e);
-  return i && (n[`video/mp4`] = i), n;
+  return (i && (n[`video/mp4`] = i), n);
 }
 function U(e) {
   return e ? `${A.MEDIA_CDN_COMMUNITY_URL}images/${e}` : null;
@@ -1181,7 +1181,7 @@ var Xn = class {
   m_OnAvatarEquipmentChangedCallbacks = new Ae();
   m_mapGoldenProfileConfigByAppID = new Map();
   constructor(e, t, n) {
-    c(this), (this.m_SteamInterface = e), (this.m_AppInfoStore = t);
+    (c(this), (this.m_SteamInterface = e), (this.m_AppInfoStore = t));
     for (let e of n) this.m_mapGoldenProfileConfigByAppID.set(e.appid, e);
     this.Initialize();
   }
@@ -1240,12 +1240,12 @@ var Xn = class {
         this.m_Backgrounds.m_EquippedItem.communityitemid
       ) {
         let e = D.Init(xe);
-        e
+        (e
           .Body()
           .set_communityitemid(
             this.m_Backgrounds.m_EquippedItem.communityitemid,
           ),
-          e.Body().set_flags(this.m_Backgrounds.m_EquipFlags);
+          e.Body().set_flags(this.m_Backgrounds.m_EquipFlags));
         let t = await T.SetEquippedProfileItemFlags(
           this.m_SteamInterface.GetServiceTransport(),
           e,
@@ -1256,7 +1256,7 @@ var Xn = class {
           );
       }
     }
-    return this.m_Backgrounds.SetComitted(), 1;
+    return (this.m_Backgrounds.SetComitted(), 1);
   }
   RevertBackgroundChanges() {
     this.m_Backgrounds.Revert();
@@ -1317,7 +1317,7 @@ var Xn = class {
     let e, t;
     if (this.m_Avatars.BIsUncomitted()) {
       let t = D.Init(st);
-      t
+      (t
         .Body()
         .set_communityitemid(
           this.m_Avatars.m_EquippedItem &&
@@ -1326,17 +1326,17 @@ var Xn = class {
         (e = T.SetAnimatedAvatar(
           this.m_SteamInterface.GetServiceTransport(),
           t,
-        ));
+        )));
     }
     if (this.m_AvatarFrames.BIsUncomitted()) {
       let e = D.Init(Fe);
-      e
+      (e
         .Body()
         .set_communityitemid(
           this.m_AvatarFrames.m_EquippedItem &&
             this.m_AvatarFrames.m_EquippedItem.communityitemid,
         ),
-        (t = T.SetAvatarFrame(this.m_SteamInterface.GetServiceTransport(), e));
+        (t = T.SetAvatarFrame(this.m_SteamInterface.GetServiceTransport(), e)));
     }
     let [n, r] = await Promise.all([e, t]);
     return n && n.GetEResult() != 1
@@ -1349,7 +1349,7 @@ var Xn = class {
           1);
   }
   RevertAvatarChanges() {
-    this.m_Avatars.Revert(), this.m_AvatarFrames.Revert();
+    (this.m_Avatars.Revert(), this.m_AvatarFrames.Revert());
   }
   AddOnAvatarEquipmentChangedCallback(e) {
     this.m_OnAvatarEquipmentChangedCallbacks.Register(e);
@@ -1461,7 +1461,7 @@ var Xn = class {
   }
   ReloadEquippedItems() {
     let e = D.Init(Ue);
-    e.Body().set_steamid(M.steamid),
+    (e.Body().set_steamid(M.steamid),
       e.Body().set_language(A.LANGUAGE),
       (this.m_promiseEquipped = T.GetProfileItemsEquipped(
         this.m_SteamInterface.GetServiceTransport(),
@@ -1475,7 +1475,7 @@ var Xn = class {
       this.GetEquippedBackground(),
       this.m_MiniProfileBackgrounds.SetEquipped(null, !0),
       (this.m_MiniProfileBackgrounds.m_bEquippedLoaded = !1),
-      this.GetEquippedMiniProfileBackground();
+      this.GetEquippedMiniProfileBackground());
   }
   async CommitProfileModifierChanges() {
     if (this.m_ProfileModifiers.BIsUncomitted()) {
@@ -1486,7 +1486,7 @@ var Xn = class {
           this.m_ProfileModifiers.m_EquippedItem
       ) {
         let t = D.Init(ce);
-        t
+        (t
           .Body()
           .set_communityitemid(
             this.m_ProfileModifiers.m_CommittedEquippedItem.communityitemid,
@@ -1494,7 +1494,7 @@ var Xn = class {
           t
             .Body()
             .set_appid(this.m_ProfileModifiers.m_CommittedEquippedItem.appid),
-          t.Body().set_activate(!1);
+          t.Body().set_activate(!1));
         let n = await le.ActivateProfileModifierItem(
           this.m_SteamInterface.GetServiceTransport(),
           t,
@@ -1504,13 +1504,13 @@ var Xn = class {
       }
       if (this.m_ProfileModifiers.m_EquippedItem) {
         let t = D.Init(ce);
-        t
+        (t
           .Body()
           .set_communityitemid(
             this.m_ProfileModifiers.m_EquippedItem.communityitemid,
           ),
           t.Body().set_appid(this.m_ProfileModifiers.m_EquippedItem.appid),
-          t.Body().set_activate(!0);
+          t.Body().set_activate(!0));
         let n = await le.ActivateProfileModifierItem(
           this.m_SteamInterface.GetServiceTransport(),
           t,
@@ -1518,11 +1518,11 @@ var Xn = class {
         if (n.GetEResult() != 1) return n.GetEResult();
         e = !0;
       }
-      this.m_ProfileModifiers.SetComitted(),
+      (this.m_ProfileModifiers.SetComitted(),
         e &&
           r(() => {
             this.ReloadEquippedItems();
-          });
+          }));
     }
     return 1;
   }
@@ -1549,24 +1549,24 @@ var Xn = class {
   }
   async Initialize() {
     let e = D.Init(ct);
-    e.Body().set_language(A.LANGUAGE),
+    (e.Body().set_language(A.LANGUAGE),
       (this.m_promiseOwned = T.GetProfileItemsOwned(
         this.m_SteamInterface.GetServiceTransport(),
         e,
-      ));
+      )));
     let t = D.Init(Ue);
-    t.Body().set_steamid(M.steamid),
+    (t.Body().set_steamid(M.steamid),
       t.Body().set_language(A.LANGUAGE),
       (this.m_promiseEquipped = T.GetProfileItemsEquipped(
         this.m_SteamInterface.GetServiceTransport(),
         t,
-      ));
+      )));
   }
 };
-x([m], Xn.prototype, `RevertBackgroundChanges`, null),
+(x([m], Xn.prototype, `RevertBackgroundChanges`, null),
   x([m], Xn.prototype, `RevertMiniProfileBackgroundChanges`, null),
   x([m], Xn.prototype, `RevertAvatarChanges`, null),
-  x([m], Xn.prototype, `ReloadEquippedItems`, null);
+  x([m], Xn.prototype, `ReloadEquippedItems`, null));
 var W = class {
   m_cItemsOwned = void 0;
   m_bEquippedLoaded = !1;
@@ -1577,15 +1577,15 @@ var W = class {
   m_rgOwnedItems;
   m_parent;
   constructor(e) {
-    c(this), (this.m_parent = e);
+    (c(this), (this.m_parent = e));
   }
   GetOwnedItemCount() {
     return this.m_cItemsOwned;
   }
   async SetItems(e) {
     let t = e.map((e) => e.toObject());
-    (this.m_rgOwnedItems = (await this.FillAppNames(t)).reverse()),
-      (this.m_cItemsOwned = this.m_rgOwnedItems.length);
+    ((this.m_rgOwnedItems = (await this.FillAppNames(t)).reverse()),
+      (this.m_cItemsOwned = this.m_rgOwnedItems.length));
   }
   async LoadEquipped(e) {
     if (e !== void 0 && e.communityitemid()) {
@@ -1593,15 +1593,15 @@ var W = class {
       if (t) {
         let [e] = await this.FillAppNames([t]);
         r(() => {
-          (this.m_CommittedEquippedItem = this.m_EquippedItem = e),
-            (this.m_EquipFlags = e && e.equipped_flags);
+          ((this.m_CommittedEquippedItem = this.m_EquippedItem = e),
+            (this.m_EquipFlags = e && e.equipped_flags));
         });
       }
       this.m_bEquippedLoaded = !0;
     }
   }
   SetEquipped(e, t = !1) {
-    (this.m_EquippedItem = e),
+    ((this.m_EquippedItem = e),
       (this.m_bEquippedLoaded = !0),
       t
         ? this.SetComitted()
@@ -1613,7 +1613,7 @@ var W = class {
                 this.m_CommittedEquippedItem.equipped_flags !=
                   this.m_EquipFlags)) ||
             (!e && this.m_CommittedEquippedItem)
-          ));
+          )));
   }
   SetEquippedFlags(e) {
     this.m_EquipFlags = e;
@@ -1622,16 +1622,16 @@ var W = class {
     return this.m_bUnsavedChanges;
   }
   SetComitted() {
-    (this.m_bUnsavedChanges = !1),
+    ((this.m_bUnsavedChanges = !1),
       (this.m_CommittedEquippedItem = this.m_EquippedItem),
       this.m_CommittedEquippedItem &&
-        (this.m_CommittedEquippedItem.equipped_flags = this.m_EquipFlags);
+        (this.m_CommittedEquippedItem.equipped_flags = this.m_EquipFlags));
   }
   Revert() {
-    (this.m_EquippedItem = this.m_CommittedEquippedItem),
+    ((this.m_EquippedItem = this.m_CommittedEquippedItem),
       (this.m_EquipFlags =
         this.m_EquippedItem && this.m_EquippedItem.equipped_flags),
-      (this.m_bUnsavedChanges = !1);
+      (this.m_bUnsavedChanges = !1));
   }
   async FillAppNames(e) {
     await this.m_parent.AppInfoStore.EnsureAppInfoForAppIDs(
@@ -1644,14 +1644,14 @@ var W = class {
     return e;
   }
 };
-x([d], W.prototype, `m_cItemsOwned`, void 0),
+(x([d], W.prototype, `m_cItemsOwned`, void 0),
   x([d], W.prototype, `m_bUnsavedChanges`, void 0),
   x([d], W.prototype, `m_CommittedEquippedItem`, void 0),
   x([d], W.prototype, `m_EquippedItem`, void 0),
   x([d], W.prototype, `m_EquipFlags`, void 0),
   x([m], W.prototype, `SetEquipped`, null),
   x([m], W.prototype, `SetEquippedFlags`, null),
-  x([m], W.prototype, `Revert`, null);
+  x([m], W.prototype, `Revert`, null));
 var G = class {
   m_strDisplayCountry = void 0;
   m_strDisplayState = void 0;
@@ -1666,7 +1666,7 @@ var G = class {
   m_bStateSelectionAvailable = !1;
   m_bCitySelectionAvailable = !1;
   constructor(e, t, n, r, i, a) {
-    c(this),
+    (c(this),
       (this.m_strDisplayCountry = e),
       (this.m_strDisplayState = n),
       (this.m_strDisplayCity = i),
@@ -1676,7 +1676,7 @@ var G = class {
       this.m_strStateCode
         ? (this.m_bStateSelectionAvailable = !0)
         : this.m_strCountryCode && this.GetCountryList(),
-      (this.m_bCitySelectionAvailable = !!this.m_strStateCode);
+      (this.m_bCitySelectionAvailable = !!this.m_strStateCode));
   }
   get Country() {
     return this.m_strDisplayCountry;
@@ -1685,7 +1685,7 @@ var G = class {
     return this.m_strCountryCode;
   }
   SetCountry(e, t) {
-    e != this.m_strCountryCode &&
+    (e != this.m_strCountryCode &&
       ((this.m_strStateCode = ``),
       (this.m_strDisplayState = ``),
       (this.m_strCityCode = ``),
@@ -1693,7 +1693,7 @@ var G = class {
       (this.m_strCountryCode = e),
       (this.m_strDisplayCountry = t),
       this.FindAndSetActiveCountry(),
-      this.FindAndSetActiveState();
+      this.FindAndSetActiveState());
   }
   BIsStateSelectionAvailable() {
     return this.m_bStateSelectionAvailable;
@@ -1705,11 +1705,11 @@ var G = class {
     return this.m_strStateCode;
   }
   SetState(e, t) {
-    e != this.m_strStateCode &&
+    (e != this.m_strStateCode &&
       ((this.m_strCityCode = ``), (this.m_strDisplayCity = ``)),
       (this.m_strStateCode = e),
       (this.m_strDisplayState = t),
-      this.FindAndSetActiveState();
+      this.FindAndSetActiveState());
   }
   BIsCitySelectionAvailable() {
     return this.m_bCitySelectionAvailable;
@@ -1721,7 +1721,7 @@ var G = class {
     return this.m_strCityCode;
   }
   SetCity(e, t) {
-    (this.m_strCityCode = e), (this.m_strDisplayCity = t);
+    ((this.m_strCityCode = e), (this.m_strDisplayCity = t));
   }
   async GetCountryList() {
     return this.m_rgCountryList
@@ -1732,9 +1732,9 @@ var G = class {
             .then((e) => e.data)),
           this.m_promiseLoadCountries.then(
             (e) => {
-              (this.m_rgCountryList = e),
+              ((this.m_rgCountryList = e),
                 (this.m_promiseLoadCountries = null),
-                this.FindAndSetActiveCountry();
+                this.FindAndSetActiveCountry());
             },
             () => {
               this.m_promiseLoadCountries = null;
@@ -1743,11 +1743,11 @@ var G = class {
         this.m_promiseLoadCountries);
   }
   FindAndSetActiveCountry() {
-    (this.m_CountryCur =
+    ((this.m_CountryCur =
       this.m_strCountryCode &&
       this.m_rgCountryList.find((e) => e.countrycode == this.m_strCountryCode)),
       (this.m_bStateSelectionAvailable =
-        this.m_CountryCur && !!this.m_CountryCur.hasstates);
+        this.m_CountryCur && !!this.m_CountryCur.hasstates));
   }
   async GetStateList() {
     this.m_CountryCur || (await this.GetCountryList());
@@ -1764,9 +1764,9 @@ var G = class {
               .then((e) => e.data)),
             e.stateloader.then(
               (t) => {
-                (e.states = t || []),
+                ((e.states = t || []),
                   delete e.stateloader,
-                  this.FindAndSetActiveState();
+                  this.FindAndSetActiveState());
               },
               () => {
                 delete e.stateloader;
@@ -1776,11 +1776,11 @@ var G = class {
         : e.states;
   }
   FindAndSetActiveState() {
-    (this.m_StateCur =
+    ((this.m_StateCur =
       this.m_CountryCur &&
       this.m_CountryCur.states &&
       this.m_CountryCur.states.find((e) => e.statecode == this.m_strStateCode)),
-      (this.m_bCitySelectionAvailable = !!this.m_StateCur);
+      (this.m_bCitySelectionAvailable = !!this.m_StateCur));
   }
   async GetCityList() {
     this.m_StateCur || (await this.GetStateList());
@@ -1796,7 +1796,7 @@ var G = class {
               .then((e) => e.data)),
             e.cityloader.then(
               (t) => {
-                (e.cities = t || []), delete e.cityloader;
+                ((e.cities = t || []), delete e.cityloader);
               },
               () => {
                 delete e.cityloader;
@@ -1807,7 +1807,7 @@ var G = class {
       : [];
   }
 };
-x([d], G.prototype, `m_strDisplayCountry`, void 0),
+(x([d], G.prototype, `m_strDisplayCountry`, void 0),
   x([d], G.prototype, `m_strDisplayState`, void 0),
   x([d], G.prototype, `m_strDisplayCity`, void 0),
   x([d], G.prototype, `m_strCountryCode`, void 0),
@@ -1819,14 +1819,14 @@ x([d], G.prototype, `m_strDisplayCountry`, void 0),
   x([m], G.prototype, `SetState`, null),
   x([m], G.prototype, `SetCity`, null),
   x([m], G.prototype, `FindAndSetActiveCountry`, null),
-  x([m], G.prototype, `FindAndSetActiveState`, null);
+  x([m], G.prototype, `FindAndSetActiveState`, null));
 var Zn = class {
   m_ActiveTheme = void 0;
   m_ComittedActiveTheme;
   m_rgAvailableThemes;
   m_CMInterface;
   constructor(e, t, n) {
-    c(this),
+    (c(this),
       (this.m_CMInterface = e),
       (this.m_rgAvailableThemes = n.map((e) => ({
         ...e,
@@ -1835,7 +1835,7 @@ var Zn = class {
       }))),
       t === void 0 || t.theme_id === ``
         ? this.SetActiveTheme(`Default`, !0)
-        : ((this.m_ActiveTheme = t), (this.m_ComittedActiveTheme = t));
+        : ((this.m_ActiveTheme = t), (this.m_ComittedActiveTheme = t)));
   }
   get ActiveTheme() {
     return this.m_ActiveTheme;
@@ -1846,7 +1846,7 @@ var Zn = class {
   SetActiveTheme(e, t = !1) {
     for (let n of this.m_rgAvailableThemes)
       if (e === n.theme_id) {
-        (this.m_ActiveTheme = n), t && (this.m_ComittedActiveTheme = n);
+        ((this.m_ActiveTheme = n), t && (this.m_ComittedActiveTheme = n));
         break;
       }
   }
@@ -1871,8 +1871,8 @@ var Zn = class {
     );
   }
 };
-x([d], Zn.prototype, `m_ActiveTheme`, void 0),
-  x([m], Zn.prototype, `RevertActiveTheme`, null);
+(x([d], Zn.prototype, `m_ActiveTheme`, void 0),
+  x([m], Zn.prototype, `RevertActiveTheme`, null));
 async function Qn(e, t) {
   let n;
   if (t instanceof FormData) n = t;
@@ -1880,7 +1880,7 @@ async function Qn(e, t) {
     n = new FormData();
     for (let e in t) n.append(e, t[e]);
   }
-  n.append(`type`, e), n.append(`sessionID`, k()), n.append(`json`, `1`);
+  (n.append(`type`, e), n.append(`sessionID`, k()), n.append(`json`, `1`));
   let r = `${z.ProfileURL}edit/`;
   try {
     let e = await R.default.post(r, n);
@@ -1903,10 +1903,10 @@ var $n = class {
   m_bLoaded = !1;
   m_promiseLoading;
   constructor(e) {
-    c(this),
+    (c(this),
       e &&
         (this.m_CommittedPrimaryGroup = this.m_PrimaryGroup =
-          new er(new Pe(e.steamid), e.name, e.avatarHash));
+          new er(new Pe(e.steamid), e.name, e.avatarHash)));
   }
   get PrimaryGroup() {
     return this.m_PrimaryGroup;
@@ -1921,10 +1921,10 @@ var $n = class {
     return this.m_rgUserGroups.length > 0;
   }
   GetUserGroups() {
-    return this.m_bLoaded || this.StartUserGroupLoad(), this.m_rgUserGroups;
+    return (this.m_bLoaded || this.StartUserGroupLoad(), this.m_rgUserGroups);
   }
   async BWaitForUserGroups() {
-    return this.StartUserGroupLoad(), this.m_promiseLoading;
+    return (this.StartUserGroupLoad(), this.m_promiseLoading);
   }
   StartUserGroupLoad() {
     this.m_promiseLoading ||= this.LoadUserGroups();
@@ -1935,11 +1935,11 @@ var $n = class {
     );
     return (
       r(() => {
-        e.data &&
+        (e.data &&
           (this.m_rgUserGroups = e.data.map(
             (e) => new er(new Pe(e.steamid), e.name, e.avatarHash),
           )),
-          (this.m_bLoaded = !0);
+          (this.m_bLoaded = !0));
       }),
       !!e.data
     );
@@ -1966,16 +1966,16 @@ var $n = class {
     this.m_PrimaryGroup = this.m_CommittedPrimaryGroup;
   }
 };
-x([d], $n.prototype, `m_PrimaryGroup`, void 0),
+(x([d], $n.prototype, `m_PrimaryGroup`, void 0),
   x([d], $n.prototype, `m_bLoaded`, void 0),
   x([m], $n.prototype, `SetPrimaryGroup`, null),
-  x([m], $n.prototype, `RevertPrimaryGroupChanges`, null);
+  x([m], $n.prototype, `RevertPrimaryGroupChanges`, null));
 var er = class {
     m_steamID;
     m_strName;
     m_strAvatarHash;
     constructor(e, t, n) {
-      (this.m_steamID = e), (this.m_strName = t), (this.m_strAvatarHash = n);
+      ((this.m_steamID = e), (this.m_strName = t), (this.m_strAvatarHash = n));
     }
     GetSteamID() {
       return this.m_steamID;
@@ -2002,7 +2002,7 @@ var er = class {
     m_WebAPI;
     m_AppInfoStore;
     constructor(e, t, n) {
-      (this.m_Profile = new K(e)),
+      ((this.m_Profile = new K(e)),
         (this.m_WebAPI = n),
         (this.m_AppInfoStore = new pe()),
         this.m_AppInfoStore.Init(this.m_WebAPI),
@@ -2024,9 +2024,9 @@ var er = class {
         )),
         (this.m_AvatarHistory = new jn(this.m_WebAPI)),
         this.m_ProfileItems.AddOnAvatarEquipmentChangedCallback(() => {
-          this.m_Profile.MiniProfileData.Reload(),
-            this.m_AvatarHistory.RefreshAvatarHistory();
-        });
+          (this.m_Profile.MiniProfileData.Reload(),
+            this.m_AvatarHistory.RefreshAvatarHistory());
+        }));
     }
     get ServiceTransport() {
       return this.m_WebAPI.GetServiceTransport();
@@ -2083,7 +2083,7 @@ var er = class {
     m_rtAvatarBannedUntil;
     m_Preferences = void 0;
     constructor(e) {
-      c(this),
+      (c(this),
         (this.m_strPersonaName = e.strPersonaName),
         (this.m_strFilteredPersonaName = e.strFilteredPersonaName),
         (this.m_strCustomURL = e.strCustomURL),
@@ -2093,7 +2093,7 @@ var er = class {
         (this.m_Preferences = e.ProfilePreferences),
         this.SetBasicInfoChangesComitted(),
         (this.m_strCommittedAvatarHash = this.m_strAvatarHash =
-          e.strAvatarHash);
+          e.strAvatarHash));
       let {
         LocationData: {
           locCountry: t,
@@ -2104,10 +2104,10 @@ var er = class {
           locCityCode: o,
         },
       } = e;
-      (this.m_Location = new G(t, n, r, i, a, o)),
-        (this.m_GroupList = new $n(e.PrimaryGroup));
+      ((this.m_Location = new G(t, n, r, i, a, o)),
+        (this.m_GroupList = new $n(e.PrimaryGroup)));
       let s = new Pe(M.steamid);
-      (this.m_MiniProfileData = new Sn(s.GetAccountID())),
+      ((this.m_MiniProfileData = new Sn(s.GetAccountID())),
         (this.m_persona = new me(s)),
         l(() => {
           this.BuildPersonaStateObject();
@@ -2116,25 +2116,25 @@ var er = class {
           e.rtPersonaNameBannedUntil || void 0),
         (this.m_rtProfileSummaryBannedUntil =
           e.rtProfileSummaryBannedUntil || void 0),
-        (this.m_rtAvatarBannedUntil = e.rtAvatarBannedUntil || void 0);
+        (this.m_rtAvatarBannedUntil = e.rtAvatarBannedUntil || void 0));
     }
     RevertBasicInfoChanges() {
-      (this.m_strPersonaName = this.m_strCommittedPersonaName),
+      ((this.m_strPersonaName = this.m_strCommittedPersonaName),
         (this.m_strFilteredPersonaName =
           this.m_strCommittedFilteredPersonaName),
         (this.m_strCustomURL = this.m_strComittedCustomURL),
         (this.m_strRealName = this.m_strComittedRealName),
         (this.m_strFilteredRealName = this.m_strCommittedFilteredRealName),
-        (this.m_strSummary = this.m_strComittedSummary);
+        (this.m_strSummary = this.m_strComittedSummary));
     }
     SetBasicInfoChangesComitted() {
-      (this.m_strCommittedPersonaName = this.m_strPersonaName),
+      ((this.m_strCommittedPersonaName = this.m_strPersonaName),
         (this.m_strCommittedFilteredPersonaName =
           this.m_strFilteredPersonaName),
         (this.m_strComittedCustomURL = this.m_strCustomURL),
         (this.m_strComittedRealName = this.m_strRealName),
         (this.m_strCommittedFilteredRealName = this.m_strFilteredRealName),
-        (this.m_strComittedSummary = this.m_strSummary);
+        (this.m_strComittedSummary = this.m_strSummary));
     }
     NotifyRNMobileAppStateChanged() {
       let e = Reflect.get(window, `ReactNativeWebView`);
@@ -2150,7 +2150,7 @@ var er = class {
       return this.m_strCommittedPersonaName;
     }
     SetPersonaName(e) {
-      (this.m_strPersonaName = e), (this.m_strFilteredPersonaName = e);
+      ((this.m_strPersonaName = e), (this.m_strFilteredPersonaName = e));
     }
     HasFilteredPersonaName() {
       return this.m_strPersonaName !== this.m_strFilteredPersonaName;
@@ -2159,7 +2159,7 @@ var er = class {
       return this.m_strRealName;
     }
     SetRealName(e) {
-      (this.m_strRealName = e), (this.m_strFilteredRealName = e);
+      ((this.m_strRealName = e), (this.m_strFilteredRealName = e));
     }
     HasFilteredRealName() {
       return this.m_strRealName !== this.m_strFilteredRealName;
@@ -2215,18 +2215,18 @@ var er = class {
       return this.m_persona;
     }
     BuildPersonaStateObject() {
-      (this.m_persona.m_strPlayerName = this.m_strPersonaName),
+      ((this.m_persona.m_strPlayerName = this.m_strPersonaName),
         (this.m_persona.m_strAvatarHash = this.m_strAvatarHash),
-        (this.m_persona.m_ePersonaState = 1);
+        (this.m_persona.m_ePersonaState = 1));
     }
     async UploadAvatar(e) {
       let t = new FormData();
-      t.append(`avatar`, e),
+      (t.append(`avatar`, e),
         t.append(`type`, `player_avatar_image`),
         t.append(`sId`, M.steamid),
         t.append(`sessionid`, k()),
         t.append(`doSub`, `1`),
-        t.append(`json`, `1`);
+        t.append(`json`, `1`));
       let n = !1,
         r = ``;
       try {
@@ -2247,7 +2247,7 @@ var er = class {
       return { bSuccess: n, strError: r };
     }
     SetAvatarHash(e, t = !1) {
-      (this.m_strAvatarHash = e), t && this.CommitAvatarHash();
+      ((this.m_strAvatarHash = e), t && this.CommitAvatarHash());
     }
     BHasUncomittedAvatarChanges() {
       return this.m_strAvatarHash != this.m_strCommittedAvatarHash;
@@ -2276,16 +2276,12 @@ var er = class {
     GetAvatarChangeCooldownEndRTime() {
       return this.m_rtAvatarBannedUntil;
     }
-    static k_strPersonaNameCooldownSupportURL =
-      `https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B`;
-    static k_strProfileSummaryCooldownSupportURL =
-      `https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B`;
-    static k_strAvatarCooldownSupportURL =
-      `https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B`;
-    static k_strNameFilteredSupportURL =
-      `https://help.steampowered.com/wizard/HelpWithSteamIssue/?issueid=415`;
+    static k_strPersonaNameCooldownSupportURL = `https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B`;
+    static k_strProfileSummaryCooldownSupportURL = `https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B`;
+    static k_strAvatarCooldownSupportURL = `https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B`;
+    static k_strNameFilteredSupportURL = `https://help.steampowered.com/wizard/HelpWithSteamIssue/?issueid=415`;
   };
-x([d], K.prototype, `m_strPersonaName`, void 0),
+(x([d], K.prototype, `m_strPersonaName`, void 0),
   x([d], K.prototype, `m_strCommittedPersonaName`, void 0),
   x([d], K.prototype, `m_strCustomURL`, void 0),
   x([d], K.prototype, `m_strRealName`, void 0),
@@ -2295,7 +2291,7 @@ x([d], K.prototype, `m_strPersonaName`, void 0),
   x([d], K.prototype, `m_Preferences`, void 0),
   x([m], K.prototype, `RevertBasicInfoChanges`, null),
   x([m], K.prototype, `SetAvatarHash`, null),
-  x([m], K.prototype, `RevertToComittedAvatarHash`, null);
+  x([m], K.prototype, `RevertToComittedAvatarHash`, null));
 var nr = `MgL-7khVeG4-`,
   rr = `zgXBEH3YPKg-`,
   ir = `BKFlxpkJD9Y-`,
@@ -2360,13 +2356,13 @@ var J = class extends I.Component {
     };
   }
   async CommitChanges() {
-    this.setState({ bSaving: !0 }),
+    (this.setState({ bSaving: !0 }),
       await this.props.fnCommitChanges(this.state.activeItem),
-      this.setState({ bSaving: !1 });
+      this.setState({ bSaving: !1 }));
   }
   async RevertChanges() {
-    this.setState({ activeItem: this.props.ActiveItem }),
-      this.props.fnRevertChanges();
+    (this.setState({ activeItem: this.props.ActiveItem }),
+      this.props.fnRevertChanges());
   }
   OnItemSelected(e) {
     this.setState({ activeItem: e });
@@ -2417,9 +2413,9 @@ var J = class extends I.Component {
     });
   }
 };
-x([E], J.prototype, `CommitChanges`, null),
+(x([E], J.prototype, `CommitChanges`, null),
   x([E], J.prototype, `RevertChanges`, null),
-  x([E], J.prototype, `OnItemSelected`, null);
+  x([E], J.prototype, `OnItemSelected`, null));
 function Nr(e) {
   return e ? e.toLocaleLowerCase().replace(/\W/g, ``) : ``;
 }
@@ -2433,7 +2429,7 @@ var Pr = class extends I.Component {
       let { getItems: e, getSearchFields: t, onItemSelected: n } = this.props,
         r = await e();
       this.m_fnSearchFieldsDisposer = l(() => {
-        (this.m_rgSearchableItems = r.map((e, r) => ({
+        ((this.m_rgSearchableItems = r.map((e, r) => ({
           key: `` + r,
           normalized_search_strings: t && t(e).map(Nr),
           OnSelected: () => {
@@ -2450,7 +2446,7 @@ var Pr = class extends I.Component {
               },
               item: null,
             }),
-          this.forceUpdate();
+          this.forceUpdate());
       });
     }
   }
@@ -2485,7 +2481,7 @@ var Pr = class extends I.Component {
       let n = { strSearch: t };
       if (!e.strSearch && t) {
         let e = this.m_refRootDiv.current.getBoundingClientRect();
-        (n.nHeight = e.height), (n.nWidth = e.width);
+        ((n.nHeight = e.height), (n.nWidth = e.width));
       } else e.strSearch && !t && ((n.nHeight = null), (n.nWidth = null));
       return n;
     });
@@ -2619,26 +2615,26 @@ var X = class extends I.Component {
   m_rgAvatars;
   async componentDidMount() {
     let e;
-    ([this.m_rgAvatars, e] = await Promise.all([
+    (([this.m_rgAvatars, e] = await Promise.all([
       this.props.ProfileItems.GetOwnedAvatars(),
       this.props.OGGAvatars.BWaitForLoad(),
     ])),
-      this.setState({ bReady: !0 });
+      this.setState({ bReady: !0 }));
   }
   SelectAnimatedAvatar(e) {
-    this.props.Profile.RevertToComittedAvatarHash(),
+    (this.props.Profile.RevertToComittedAvatarHash(),
       this.props.ProfileItems.SetEquippedAvatar(e),
-      this.props.fnOnCollapse();
+      this.props.fnOnCollapse());
   }
   SelectOGGAvatar(e) {
-    this.props.Profile.SetAvatarHash(e),
+    (this.props.Profile.SetAvatarHash(e),
       this.props.ProfileItems.SetEquippedAvatar(null),
-      this.props.fnOnCollapse();
+      this.props.fnOnCollapse());
   }
   SelectPreviousAvatar(e) {
-    this.props.Profile.SetAvatarHash(e),
+    (this.props.Profile.SetAvatarHash(e),
       this.props.ProfileItems.SetEquippedAvatar(null),
-      this.props.fnOnCollapse();
+      this.props.fnOnCollapse());
   }
   GetTopAvatars(e = 4) {
     let t;
@@ -2751,10 +2747,10 @@ var X = class extends I.Component {
     }
   }
 };
-x([E], X.prototype, `SelectAnimatedAvatar`, null),
+(x([E], X.prototype, `SelectAnimatedAvatar`, null),
   x([E], X.prototype, `SelectOGGAvatar`, null),
   x([E], X.prototype, `SelectPreviousAvatar`, null),
-  (X = x([i], X));
+  (X = x([i], X)));
 var Lr = X,
   Rr = ({ children: e }) =>
     (0, L.jsx)(`div`, {
@@ -2916,7 +2912,7 @@ function Kr(e, t, n) {
       let n = await (
         await fetch(`${qe.COMMUNITY_BASE_URL}actions/GameAvatarsForGame/${t}`)
       ).json();
-      return e.UpdateAvatarsForGame(t, n), n;
+      return (e.UpdateAvatarsForGame(t, n), n);
     },
     enabled: n,
   });
@@ -2925,12 +2921,12 @@ var qr = class extends I.Component {
   state = { bReady: !1 };
   m_rgFrames;
   async componentDidMount() {
-    (this.m_rgFrames = await this.props.ProfileItems.GetOwnedAvatarFrames()),
-      this.setState({ bReady: !0 });
+    ((this.m_rgFrames = await this.props.ProfileItems.GetOwnedAvatarFrames()),
+      this.setState({ bReady: !0 }));
   }
   SelectFrame(e) {
-    this.props.ProfileItems.SetEquippedAvatarFrame(e),
-      this.props.fnOnCollapse();
+    (this.props.ProfileItems.SetEquippedAvatarFrame(e),
+      this.props.fnOnCollapse());
   }
   render() {
     if (!this.state.bReady) return !1;
@@ -3071,7 +3067,7 @@ var $r = Qr,
   ei = class extends I.Component {
     m_disposer;
     componentDidMount() {
-      document.querySelector(`.profile_small_header_avatar`).classList.add(Dt),
+      (document.querySelector(`.profile_small_header_avatar`).classList.add(Dt),
         (this.m_disposer = l(() => {
           let { Profile: e, ProfileItems: t } = this.props,
             n = ni(
@@ -3083,13 +3079,13 @@ var $r = Qr,
           document
             .querySelectorAll(`.user_avatar > img`)
             .forEach((e) => (e.src = n));
-        }));
+        })));
     }
     componentWillUnmount() {
-      document
+      (document
         .querySelector(`.profile_small_header_avatar`)
         .classList.remove(Dt),
-        this.m_disposer();
+        this.m_disposer());
     }
     render() {
       let { Profile: e, ProfileItems: t } = this.props;
@@ -3129,27 +3125,27 @@ var $r = Qr,
       });
     }
     Reset() {
-      (this.cropRef = I.createRef()),
+      ((this.cropRef = I.createRef()),
         this.setState({
           uploadImage: null,
           strUploadError: ``,
           bAvatarCollectionExpanded: !1,
           bFrameCollectionExpanded: !1,
           bHTMLError: !1,
-        });
+        }));
     }
     RevertChanges() {
-      this.props.ProfileItems.RevertAvatarChanges(),
+      (this.props.ProfileItems.RevertAvatarChanges(),
         this.props.Profile.RevertToComittedAvatarHash(),
-        this.Reset();
+        this.Reset());
     }
     async OnSave() {
-      this.setState({ bSaving: !0 }),
+      (this.setState({ bSaving: !0 }),
         this.state.uploadImage
           ? await this.SaveUpload()
           : await this.CommitChanges(),
         this.setState({ bSaving: !1 }),
-        this.props.Profile.NotifyRNMobileAppStateChanged();
+        this.props.Profile.NotifyRNMobileAppStateChanged());
     }
     async SaveUpload() {
       let { Profile: e, ProfileItems: t, AvatarHistory: n } = this.props,
@@ -3178,8 +3174,8 @@ var $r = Qr,
             ? r.SetPreviousAvatar(e)
             : Promise.resolve(1),
         ]);
-      this.setState({ bHTMLError: i !== 1 || (a !== 1 && o !== 1) }),
-        r.RefreshAvatarHistory();
+      (this.setState({ bHTMLError: i !== 1 || (a !== 1 && o !== 1) }),
+        r.RefreshAvatarHistory());
     }
     componentWillUnmount() {
       this.RevertChanges();
@@ -3288,14 +3284,14 @@ var $r = Qr,
       });
     }
   };
-x([E], Z.prototype, `OnUploadSelected`, null),
+(x([E], Z.prototype, `OnUploadSelected`, null),
   x([E], Z.prototype, `OnShowAllAvatarsClicked`, null),
   x([E], Z.prototype, `OnShowAllFramesClicked`, null),
   x([E], Z.prototype, `Reset`, null),
   x([E], Z.prototype, `RevertChanges`, null),
   x([E], Z.prototype, `OnSave`, null),
   x([E], Z.prototype, `SaveUpload`, null),
-  x([E], Z.prototype, `CommitChanges`, null);
+  x([E], Z.prototype, `CommitChanges`, null));
 var ti = ({ Profile: e, children: t }) =>
   e.BIsAvatarChangeOnCooldown()
     ? (0, L.jsx)(Fr, {
@@ -3480,11 +3476,11 @@ function ui(e) {
   }, [o.data, t.CountryCode]);
   let c = I.useCallback(
     (e) => {
-      t.SetCountry(
+      (t.SetCountry(
         e.data?.strCode,
         e.data?.strCode ? e.data.strDisplayText : void 0,
       ),
-        a(e);
+        a(e));
     },
     [t],
   );
@@ -3530,11 +3526,11 @@ function di(e) {
   }, [l.data, t.StateCode]);
   let u = I.useCallback(
       (e) => {
-        t.SetState(
+        (t.SetState(
           e.data?.strCode,
           e.data?.strCode ? e.data.strDisplayText : void 0,
         ),
-          a(e);
+          a(e));
       },
       [t],
     ),
@@ -3587,11 +3583,11 @@ function fi(e) {
   }, [u.data, t.CityCode]);
   let d = I.useCallback(
       (e) => {
-        t.SetCity(
+        (t.SetCity(
           e.data?.strCode,
           e.data?.strCode ? e.data.strDisplayText : void 0,
         ),
-          a(e);
+          a(e));
       },
       [t],
     ),
@@ -3628,7 +3624,7 @@ var pi = `oK53QBwGoIY-`,
       this.SetInputValue(e.currentTarget.value);
     }
     InsertEmoticon(e, t) {
-      t || this.m_refTextInput.current.focus(), this.InsertAtCursor(`:${e}:`);
+      (t || this.m_refTextInput.current.focus(), this.InsertAtCursor(`:${e}:`));
     }
     InsertAtCursor(e) {
       let t = this.m_refTextInput.current.textarea,
@@ -3640,7 +3636,7 @@ var pi = `oK53QBwGoIY-`,
       });
     }
     SetInputValue(e, t) {
-      this.setState({ strSummary: e }, t), this.props.Profile.SetSummary(e);
+      (this.setState({ strSummary: e }, t), this.props.Profile.SetSummary(e));
     }
     render() {
       let { EmoticonStore: e, Profile: t } = this.props,
@@ -3674,8 +3670,8 @@ var pi = `oK53QBwGoIY-`,
       });
     }
   };
-x([E], _i.prototype, `OnChange`, null),
-  x([E], _i.prototype, `InsertEmoticon`, null);
+(x([E], _i.prototype, `OnChange`, null),
+  x([E], _i.prototype, `InsertEmoticon`, null));
 var vi = ({ Profile: e, children: t }) =>
     e.BIsProfileSummaryChangeOnCooldown()
       ? (0, L.jsx)(Fr, {
@@ -3691,7 +3687,7 @@ var vi = ({ Profile: e, children: t }) =>
   yi = class extends I.Component {
     state = { bSaving: !1, strHTMLError: `` };
     OnSubmit(e) {
-      e.preventDefault(), this.CommitChanges(e.currentTarget);
+      (e.preventDefault(), this.CommitChanges(e.currentTarget));
     }
     async CommitChanges(e) {
       this.setState({ bSaving: !0, strHTMLError: `` });
@@ -3707,7 +3703,7 @@ var vi = ({ Profile: e, children: t }) =>
     }
     RevertChanges() {
       let { Profile: e } = this.props;
-      e.RevertBasicInfoChanges(), this.setState({ strHTMLError: `` });
+      (e.RevertBasicInfoChanges(), this.setState({ strHTMLError: `` }));
     }
     render() {
       let { Profile: e, EmoticonStore: t } = this.props,
@@ -3791,8 +3787,8 @@ var vi = ({ Profile: e, children: t }) =>
       });
     }
   };
-x([E], yi.prototype, `OnSubmit`, null),
-  x([E], yi.prototype, `RevertChanges`, null);
+(x([E], yi.prototype, `OnSubmit`, null),
+  x([E], yi.prototype, `RevertChanges`, null));
 var bi = class extends I.Component {
     render() {
       return (0, L.jsx)(`div`, {
@@ -3850,9 +3846,9 @@ var bi = class extends I.Component {
       });
     }
   };
-x([E], xi.prototype, `OnPersonaNameChange`, null),
+(x([E], xi.prototype, `OnPersonaNameChange`, null),
   x([E], xi.prototype, `OnRealNameChange`, null),
-  (xi = x([i], xi));
+  (xi = x([i], xi)));
 var Si = ({ Profile: e, children: t }) =>
     e.BIsPersonaNameChangeOnCooldown()
       ? (0, L.jsx)(Fr, {
@@ -3926,7 +3922,7 @@ var Si = ({ Profile: e, children: t }) =>
       });
     }
   };
-x([E], Ei.prototype, `OnProfileURLChange`, null), (Ei = x([i], Ei));
+(x([E], Ei.prototype, `OnProfileURLChange`, null), (Ei = x([i], Ei)));
 var Di = class extends I.Component {
   m_disposer;
   componentDidMount() {
@@ -3950,7 +3946,7 @@ var Oi = class extends I.Component {
     let { Profile: t } = this.props,
       n = e,
       r = t.GetPreferences();
-    (r.hide_profile_awards = n), t.SetPreferences(r);
+    ((r.hide_profile_awards = n), t.SetPreferences(r));
   }
   render() {
     let { Profile: e } = this.props,
@@ -3971,7 +3967,8 @@ var Oi = class extends I.Component {
     });
   }
 };
-x([E], Oi.prototype, `OnProfileAwardsCheckboxChecked`, null), (Oi = x([i], Oi));
+(x([E], Oi.prototype, `OnProfileAwardsCheckboxChecked`, null),
+  (Oi = x([i], Oi)));
 var ki = `GhpgMs4LuzQ-`,
   Ai = `yOrk2V0Iu-4-`,
   ji = `p8t4WX8LgAY-`,
@@ -3983,17 +3980,17 @@ var ki = `GhpgMs4LuzQ-`,
     state = { bSaving: !1, strHTMLError: `` };
     async CommitFavoriteBadge() {
       let e = this.props.Badges;
-      this.setState({ bSaving: !0 }),
+      (this.setState({ bSaving: !0 }),
         (await e.CommitFavoriteBadgeChanges()) == 1
           ? this.setState({ strHTMLError: `` })
           : this.setState({
               strHTMLError: O(`#ConnectionTrouble_FailedToConnect`),
             }),
-        this.setState({ bSaving: !1 });
+        this.setState({ bSaving: !1 }));
     }
     RevertFavoriteBadge() {
-      this.props.Badges.RevertFavoriteBadge(),
-        this.setState({ strHTMLError: `` });
+      (this.props.Badges.RevertFavoriteBadge(),
+        this.setState({ strHTMLError: `` }));
     }
     componentWillUnmount() {
       this.props.Badges.RevertFavoriteBadge();
@@ -4033,9 +4030,9 @@ var ki = `GhpgMs4LuzQ-`,
       });
     }
   };
-x([E], Ii.prototype, `CommitFavoriteBadge`, null),
+(x([E], Ii.prototype, `CommitFavoriteBadge`, null),
   x([E], Ii.prototype, `RevertFavoriteBadge`, null),
-  (Ii = x([i], Ii));
+  (Ii = x([i], Ii)));
 var Li = Ii,
   Ri = ({ badge: e, children: t }) =>
     (0, L.jsxs)(`div`, {
@@ -4107,14 +4104,14 @@ var Li = Ii,
       let e = this.props.Profile.GroupList;
       this.setState({ bSaving: !0 });
       let t = await e.CommitPrimaryGroup();
-      t.strHTMLError
+      (t.strHTMLError
         ? this.setState({ strHTMLError: t.strHTMLError })
         : this.setState({ strHTMLError: `` }),
-        this.setState({ bSaving: !1 });
+        this.setState({ bSaving: !1 }));
     }
     RevertFavoriteGroup() {
-      this.props.Profile.GroupList.RevertPrimaryGroupChanges(),
-        this.setState({ strHTMLError: `` });
+      (this.props.Profile.GroupList.RevertPrimaryGroupChanges(),
+        this.setState({ strHTMLError: `` }));
     }
     componentWillUnmount() {
       this.props.Profile.GroupList.RevertPrimaryGroupChanges();
@@ -4138,7 +4135,8 @@ var Li = Ii,
           (0, L.jsx)(Pr, {
             getSearchFields: Xi,
             getItems: async () => (
-              await r.BWaitForUserGroups(), r.GetUserGroups()
+              await r.BWaitForUserGroups(),
+              r.GetUserGroups()
             ),
             onItemSelected: (e) => {
               r.SetPrimaryGroup(e);
@@ -4154,9 +4152,9 @@ var Li = Ii,
       });
     }
   };
-x([E], qi.prototype, `CommitFavoriteGroup`, null),
+(x([E], qi.prototype, `CommitFavoriteGroup`, null),
   x([E], qi.prototype, `RevertFavoriteGroup`, null),
-  (qi = x([i], qi));
+  (qi = x([i], qi)));
 var Ji = qi,
   Yi = ({ group: e, children: t }) =>
     (0, L.jsxs)(`div`, {
@@ -4259,7 +4257,7 @@ var da = class extends I.Component {
     });
   }
 };
-x([E], da.prototype, `RevertChanges`, null), (da = x([i], da));
+(x([E], da.prototype, `RevertChanges`, null), (da = x([i], da)));
 var fa = da,
   pa = i(
     ({
@@ -4276,7 +4274,8 @@ var fa = da,
           getSearchFields: la,
           getItems: () => t.GetOwnedMiniProfileBackgrounds(),
           fnCommitChanges: async (e) => (
-            t.SetEquippedMiniProfileBackground(e), t.CommitMiniProfileChanges()
+            t.SetEquippedMiniProfileBackground(e),
+            t.CommitMiniProfileChanges()
           ),
           ItemComponent: ha,
           RenderDefaultComponent: ({ onSelected: e, active: t }) =>
@@ -4633,7 +4632,7 @@ function wa(e) {
 }
 var Ta = class extends I.Component {
   constructor(e) {
-    super(e), (this.state = { eSaveState: 0 });
+    (super(e), (this.state = { eSaveState: 0 }));
   }
   OnSettingChanged(e) {
     this.props.PrivacyStore.ChangeCommentPermission(e);
@@ -4659,7 +4658,7 @@ var Ta = class extends I.Component {
     });
   }
 };
-x([E], Ta.prototype, `OnSettingChanged`, null), (Ta = x([i], Ta));
+(x([E], Ta.prototype, `OnSettingChanged`, null), (Ta = x([i], Ta)));
 function Ea(e) {
   return (0, L.jsx)(`div`, {
     className: `ProfilePrivacyDropDown readonly`,
@@ -4773,7 +4772,7 @@ var Da = `QSRYwDyRJpA-`,
     SteamDeckTheme: yo,
   },
   xo = ({ className: e, width: t, height: n, theme: r }) => {
-    (r ||= `Default`), (r += `Theme`);
+    ((r ||= `Default`), (r += `Theme`));
     let [i, a] = Xe(),
       [o, s] = Xe();
     return (0, L.jsxs)(`svg`, {
@@ -5235,9 +5234,9 @@ var Da = `QSRYwDyRJpA-`,
       );
     }
   };
-x([E], Co.prototype, `CommitChanges`, null),
+(x([E], Co.prototype, `CommitChanges`, null),
   x([E], Co.prototype, `RevertChanges`, null),
-  (Co = x([i], Co));
+  (Co = x([i], Co)));
 var wo = Co,
   To = ({ label: e, currentFlag: t, flag: n, onSelect: r }) =>
     (0, L.jsx)(`div`, {
@@ -5277,7 +5276,7 @@ var wo = Co,
       });
     }
   };
-x([E], Eo.prototype, `OnChange`, null), (Eo = x([i], Eo));
+(x([E], Eo.prototype, `OnChange`, null), (Eo = x([i], Eo)));
 var Do = i(({ Background: e, ProfileItems: t, theme: n }) =>
     (0, L.jsxs)(`div`, {
       children: [
@@ -5529,9 +5528,9 @@ var Uo = ({ root: e, currentPath: t, linksAvailable: n }) => {
         : null;
     }
   };
-x([E], Xo.prototype, `ShowDialog`, null),
+(x([E], Xo.prototype, `ShowDialog`, null),
   x([E], Xo.prototype, `HideDialog`, null),
-  (Xo = x([i], Xo));
+  (Xo = x([i], Xo)));
 var Zo = Xo,
   Qo = i(({ ProfileItems: e }) => {
     let t = e.GetProfileModifierCSSURL();
@@ -5556,8 +5555,8 @@ var Zo = Xo,
   },
   es = class extends I.Component {
     OnDismiss() {
-      this.props.ProfileItems.RevertProfileModifierChanges(),
-        this.props.onDismiss();
+      (this.props.ProfileItems.RevertProfileModifierChanges(),
+        this.props.onDismiss());
     }
     render() {
       let { ProfileItems: e } = this.props;
@@ -5572,7 +5571,8 @@ var Zo = Xo,
             getSearchFields: la,
             getItems: () => e.GetOwnedProfileModifiers(),
             fnCommitChanges: async (t) => (
-              e.SetEquippedProfileModifier(t), e.CommitProfileModifierChanges()
+              e.SetEquippedProfileModifier(t),
+              e.CommitProfileModifierChanges()
             ),
             ItemComponent: ts,
             RenderDefaultComponent: ({ onSelected: e, active: t }) =>
@@ -5585,7 +5585,7 @@ var Zo = Xo,
       });
     }
   };
-x([E], es.prototype, `OnDismiss`, null), (es = x([i], es));
+(x([E], es.prototype, `OnDismiss`, null), (es = x([i], es)));
 var ts = ({ Item: e, onSelected: t, children: n, active: r }) =>
     (0, L.jsxs)(b, {
       className: F(Wo, r && `YGzcD6kqN6Q-`),
@@ -5653,8 +5653,8 @@ var ts = ({ Item: e, onSelected: t, children: n, active: r }) =>
     state = { bSaving: !1, strHTMLError: `` };
     async CommitChanges(e) {
       let { ProfileTheme: t } = this.props;
-      this.setState({ bSaving: !0, strHTMLError: `` }),
-        t.SetActiveTheme(e.theme_id);
+      (this.setState({ bSaving: !0, strHTMLError: `` }),
+        t.SetActiveTheme(e.theme_id));
       let n = await t.CommitActiveTheme();
       return (
         n != 1 &&
@@ -5667,7 +5667,7 @@ var ts = ({ Item: e, onSelected: t, children: n, active: r }) =>
     }
     RevertChanges() {
       let { ProfileTheme: e } = this.props;
-      this.setState({ strHTMLError: `` }), e.RevertActiveTheme();
+      (this.setState({ strHTMLError: `` }), e.RevertActiveTheme());
     }
     render() {
       let { ProfileTheme: e, ProfileItems: t } = this.props,
@@ -5695,9 +5695,9 @@ var ts = ({ Item: e, onSelected: t, children: n, active: r }) =>
       });
     }
   };
-x([E], ms.prototype, `CommitChanges`, null),
+(x([E], ms.prototype, `CommitChanges`, null),
   x([E], ms.prototype, `RevertChanges`, null),
-  (ms = x([i], ms));
+  (ms = x([i], ms)));
 var hs = ms,
   gs = ({ Theme: e, children: t }) => {
     let n;
@@ -5820,15 +5820,15 @@ var hs = ms,
     m_refDiv = I.createRef();
     state = { bSaving: !1, strHTMLError: `` };
     OnSubmit(e) {
-      e.preventDefault(), this.CommitChanges(e.currentTarget);
+      (e.preventDefault(), this.CommitChanges(e.currentTarget));
     }
     async CommitChanges(e) {
       this.setState({ bSaving: !0, strHTMLError: `` });
       let t = await Qn(`showcases`, new FormData(e));
-      t.strHTMLError
+      (t.strHTMLError
         ? this.setState({ strHTMLError: t.strHTMLError })
         : this.setState({ strHTMLError: `` }),
-        this.setState({ bSaving: !1 });
+        this.setState({ bSaving: !1 }));
     }
     RevertChanges() {
       window.location.href = z.ProfileURL;
@@ -5863,26 +5863,26 @@ var hs = ms,
       });
     }
   };
-x([E], xs.prototype, `OnSubmit`, null),
-  x([E], xs.prototype, `RevertChanges`, null);
+(x([E], xs.prototype, `OnSubmit`, null),
+  x([E], xs.prototype, `RevertChanges`, null));
 var Ss, Cs, ws;
 async function Ts(e) {
   let t = nt(`config`, `profile_config`);
-  t && Object.assign(z, t),
+  (t && Object.assign(z, t),
     (Ss = new tr(
       nt(`profile-edit`, `profile_edit_config`),
       nt(`profile-badges`, `profile_edit_config`),
       e,
     )),
     S(A.EREALM) || Ss.Profile.GroupList.GetUserGroups(),
-    (Cs = document.getElementById(`showcases`));
+    (Cs = document.getElementById(`showcases`)));
 }
 function Es(e) {
   let [t, n] = I.useState(!1),
     r = Ve();
   if (
     (I.useEffect(() => {
-      (ws ||= Ts(r)), ws.then(() => n(!0));
+      ((ws ||= Ts(r)), ws.then(() => n(!0)));
     }, [r]),
     I.useLayoutEffect(() => {
       if (t)
@@ -5987,12 +5987,12 @@ function Ds(e) {
         t = parseInt(e) * 86400,
         r = Math.floor(new Date().getTime() / 1e3) + t,
         s = o.current?.checked ?? !1;
-      await i.mutateAsync({ rtCooldownEnds: r, bClearOpenReports: s }),
+      (await i.mutateAsync({ rtCooldownEnds: r, bClearOpenReports: s }),
         n(!1),
-        c(!1);
+        c(!1));
     },
     d = async () => {
-      await i.mutateAsync({ rtCooldownEnds: 0 }), n(!1);
+      (await i.mutateAsync({ rtCooldownEnds: 0 }), n(!1));
     },
     f = ``;
   if (r.isSuccess && r.data > 0) {
@@ -6107,10 +6107,10 @@ function ks(e) {
   return o({
     mutationFn: async (n) => {
       let r = D.Init(ie);
-      r.Body().set_steamid(e),
+      (r.Body().set_steamid(e),
         r.Body().set_rtime_cooldown_ends(n.rtCooldownEnds),
         n.bClearOpenReports !== void 0 &&
-          r.Body().set_acquit_unresolved_reports(n.bClearOpenReports);
+          r.Body().set_acquit_unresolved_reports(n.bClearOpenReports));
       let i = await v.UpdateReporterCooldown(t, r);
       if (!i.BSuccess()) throw Error(`EResult ` + i.GetEResult());
     },

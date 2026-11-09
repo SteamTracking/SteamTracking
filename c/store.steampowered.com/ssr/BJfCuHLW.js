@@ -3,7 +3,7 @@ function _(_, _) {
 }
 function _(_, _, _) {
   let _ = _.slice(0);
-  return (_[_] = _), _;
+  return ((_[_] = _), _);
 }
 var _ = class extends _ {
     #e;
@@ -15,13 +15,13 @@ var _ = class extends _ {
     #o;
     #s;
     constructor(_, _, _) {
-      super(),
+      (super(),
         (this.#e = _),
         (this.#r = _),
         (this.#n = []),
         (this.#i = []),
         (this.#t = []),
-        this.setQueries(_);
+        this.setQueries(_));
     }
     onSubscribe() {
       this.listeners.size === 1 &&
@@ -35,13 +35,13 @@ var _ = class extends _ {
       this.listeners.size || this.destroy();
     }
     destroy() {
-      (this.listeners = new Set()),
+      ((this.listeners = new Set()),
         this.#i.forEach((_) => {
           _.destroy();
-        });
+        }));
     }
     setQueries(_, _, _) {
-      (this.#n = _),
+      ((this.#n = _),
         (this.#r = _),
         _.batch(() => {
           let _ = this.#i,
@@ -63,7 +63,7 @@ var _ = class extends _ {
                 });
               }),
               this.#f()));
-        });
+        }));
     }
     getCurrentResult() {
       return this.#t;
@@ -143,17 +143,17 @@ function _({ queries: _, ..._ }, _) {
       () =>
         _.map((_) => {
           let _ = _.defaultQueryOptions(_);
-          return (_._optimisticResults = _ ? `isRestoring` : `optimistic`), _;
+          return ((_._optimisticResults = _ ? `isRestoring` : `optimistic`), _);
         }),
       [_, _, _],
     );
-  _.forEach((_) => {
-    _(_), _(_, _);
+  (_.forEach((_) => {
+    (_(_), _(_, _));
   }),
-    _(_);
+    _(_));
   let [_] = _.useState(() => new _(_, _, _)),
     [_, _, _] = _.getOptimisticResult(_, _.combine);
-  _.useSyncExternalStore(
+  (_.useSyncExternalStore(
     _.useCallback((_) => (_ ? _ : _.subscribe(_.batchCalls(_))), [_, _]),
     () => _.getCurrentResult(),
     () => _.getCurrentResult(),
@@ -162,7 +162,7 @@ function _({ queries: _, ..._ }, _) {
       _.setQueries(_, _, {
         listeners: !1,
       });
-    }, [_, _, _]);
+    }, [_, _, _]));
   let _ = _.some((_, _) => _(_[_], _))
     ? _.flatMap((_, _) => {
         let _ = _[_];
@@ -190,4 +190,3 @@ function _({ queries: _, ..._ }, _) {
   if (_?.error) throw _.error;
   return _(_());
 }
-export { _ };

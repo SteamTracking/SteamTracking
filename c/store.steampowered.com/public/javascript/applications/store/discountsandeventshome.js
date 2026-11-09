@@ -52,7 +52,7 @@ function _(_, _, _, _, _) {
     _ = 0,
     _ = 0,
     _ = 0;
-  for (; _.length < _ && (_ < _.length || _ < _.length || _ < _.length); ) {
+  for (; _.length < _ && (_ < _.length || _ < _.length || _ < _.length);) {
     let _ = [],
       _ = _ < _.length || _ < _.length,
       _ = Math.min(_ ? _ : _, _.length - _);
@@ -68,7 +68,7 @@ function _(_, _, _, _, _) {
       _ = _.slice(_, _ + _);
     _ += _;
     let _ = Math.min(_ - _, _.length - _);
-    _.push(..._.slice(_, _ + _)), (_ += _);
+    (_.push(..._.slice(_, _ + _)), (_ += _));
     for (let _ = 0; _ < _.length; _ += 2) {
       let _ = _.slice(_, _ + 2);
       _.push({

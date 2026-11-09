@@ -58,10 +58,9 @@ function _(_, _, _, _) {
 }
 async function _(_, _, _) {
   let _ = _.Init(_);
-  _(_, _), _.Body().set_excluded_content_descriptorids(_.slice());
+  (_(_, _), _.Body().set_excluded_content_descriptorids(_.slice()));
   let _ = await _.GetContentHubConfig(_, _);
   if (!_.BSuccess())
     throw `Error loading category hub definitions: ${_.GetErrorMessage()}`;
   return _.Body().toObject().hubconfigs || [];
 }
-export { _, _, _, _ };

@@ -23,4 +23,3 @@ function _(_, _ = !1) {
 function _() {
   window.location.href = `${_.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
 }
-export { _, _, _, _ };

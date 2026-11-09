@@ -4,10 +4,10 @@
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports),
+        (__webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
             default: () => _,
-          });
+          }));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -55,7 +55,7 @@
                         {
                           className: _().HeroSelector,
                           onClick: (_) => {
-                            _.fnSetSelectedHero(_._), _.stopPropagation();
+                            (_.fnSetSelectedHero(_._), _.stopPropagation());
                           },
                           children: [
                             (0, _.jsx)("div", {
@@ -91,7 +91,7 @@
               }
             }, [_, _]);
             const _ = (_) => {
-                _(!1), _ != -1 && _.fnSetSelectedHero(_);
+                (_(!1), _ != -1 && _.fnSetSelectedHero(_));
               },
               _ = _.data,
               _ = _.data,
@@ -187,7 +187,7 @@
                           {
                             className: _().ItemSelector,
                             onClick: (_) => {
-                              _.fnSetSelectedItem(0), _.stopPropagation();
+                              (_.fnSetSelectedItem(0), _.stopPropagation());
                             },
                             children: [
                               (0, _.jsx)("div", {
@@ -220,7 +220,7 @@
                           {
                             className: _().ItemSelector,
                             onClick: (_) => {
-                              _.fnSetSelectedItem(_._), _.stopPropagation();
+                              (_.fnSetSelectedItem(_._), _.stopPropagation());
                             },
                             children: [
                               (0, _.jsx)("div", {
@@ -259,7 +259,7 @@
               _ = (0, _._)(_.nItemID),
               _ = (0, _._)().ownerWindow,
               _ = (_) => {
-                _(!1), _ != -1 && _.fnSetSelectedItem(_);
+                (_(!1), _ != -1 && _.fnSetSelectedItem(_));
               },
               _ = _.data,
               _ = _.document?.body;
@@ -594,33 +594,33 @@
                 _.push(_._.dotaplustester(_.strFeature, _(_)));
               },
               _ = (_) => {
-                console.log("1"), (_ = _), _();
+                (console.log("1"), (_ = _), _());
               },
               _ = (_) => {
-                console.log("3"), (_ = _), _();
+                (console.log("3"), (_ = _), _());
               },
               _ = (_, _) => {
-                console.log("4"), (_[_] = _), _();
+                (console.log("4"), (_[_] = _), _());
               },
               _ = (_, _) => {
-                console.log("6"), (_[_] = _), _();
+                (console.log("6"), (_[_] = _), _());
               },
               _ = (_) => {
-                console.log("8"), (_ = _), _();
+                (console.log("8"), (_ = _), _());
               },
               _ = (_) => {
-                console.log("9"), (_ = _), _();
+                (console.log("9"), (_ = _), _());
               },
               _ = (_) => {
-                console.log("10"), (_[_.indexOf(0)] = _), _();
+                (console.log("10"), (_[_.indexOf(0)] = _), _());
               },
               _ = () => {
-                console.log("11"),
+                (console.log("11"),
                   (_ = [
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                   ]),
-                  _();
+                  _());
               },
               _ = (0, _._)(_, _, _, _, parseInt(_), _, !0, _).data;
             let _ = [];
@@ -834,22 +834,22 @@
                     .value_sequence[0].value[_],
                 );
             const _ = (_) => {
-                (_ = _), _();
+                ((_ = _), _());
               },
               _ = (_) => {
-                (_ = _), _();
+                ((_ = _), _());
               },
               _ = (_, _) => {
-                (_[_] = _), _();
+                ((_[_] = _), _());
               },
               _ = (_, _) => {
-                (_[_] = _), _();
+                ((_[_] = _), _());
               },
               _ = (_) => {
-                (_ = _), _();
+                ((_ = _), _());
               },
               _ = (_) => {
-                (_ = _), _();
+                ((_ = _), _());
               },
               _ = (0, _._)(),
               _ = (0, _._)();
@@ -999,28 +999,28 @@
                 .map(Number),
               _ = (0, _._)(_).data;
             const _ = (_) => {
-                (_ = _), _();
+                ((_ = _), _());
               },
               _ = (_) => {
-                (_ = _), _();
+                ((_ = _), _());
               },
               _ = (_, _) => {
-                (_[_] = _), _();
+                ((_[_] = _), _());
               },
               _ = (_, _) => {
-                (_[_] = _), _();
+                ((_[_] = _), _());
               },
               _ = (_) => {
-                (_ = _), _();
+                ((_ = _), _());
               },
               _ = (_) => {
-                (_ = _), _();
+                ((_ = _), _());
               },
               _ = (_, _) => {
-                (_[_] = _), _();
+                ((_[_] = _), _());
               },
               _ = (_, _) => {
-                (_[_] = _), _();
+                ((_[_] = _), _());
               },
               _ = (_) => {
                 _ != _ &&
@@ -1359,44 +1359,44 @@
             const _ = (0, _._)(),
               _ = (0, _._)(),
               _ = (_) => {
-                (_ = _), _();
+                ((_ = _), _());
               },
               _ = (_) => {
-                (_ = _), _();
+                ((_ = _), _());
               },
               _ = (_, _) => {
-                (_[_] = _), _();
+                ((_[_] = _), _());
               },
               _ = (_, _) => {
-                (_[_] = _), _();
+                ((_[_] = _), _());
               },
               _ = (_) => {
-                (_ = _), _();
+                ((_ = _), _());
               },
               _ = (_) => {
-                (_ = _), _();
+                ((_ = _), _());
               },
               _ = (_) => {
-                (_[_.indexOf(0)] = _), _();
+                ((_[_.indexOf(0)] = _), _());
               },
               _ = () => {
-                (_ = [
+                ((_ = [
                   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                   0, 0, 0, 0, 0, 0, 0, 0, 0,
                 ]),
-                  _();
+                  _());
               },
               _ = (_) => {
-                (_ = _), _();
+                ((_ = _), _());
               },
               _ = (_, _) => {
-                (_[_] = _), _();
+                ((_[_] = _), _());
               },
               _ = (_, _) => {
-                (_[_] = _), _();
+                ((_[_] = _), _());
               },
               _ = (_, _) => {
-                (_[_] = _), _();
+                ((_[_] = _), _());
               };
             if (!_.data || !_.data)
               return (0, _.jsx)("div", {
@@ -1621,7 +1621,7 @@
                         "div",
                         {
                           onClick: () => {
-                            _.splice(_, 1), _.push(0), _();
+                            (_.splice(_, 1), _.push(0), _());
                           },
                           children: (0, _.jsx)(_, {
                             nItemID: _,
@@ -1710,10 +1710,10 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports),
+        (__webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
             default: () => _,
-          });
+          }));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -2432,11 +2432,11 @@
               displayName: "Overperformance History",
               formatFunction: (_ = 0) => {
                 let _ = 0;
-                (_ = _ - ((_ >> 1) & 1431655765)),
+                ((_ = _ - ((_ >> 1) & 1431655765)),
                   (_ = ((_ >> 2) & 858993459) + (_ & 858993459)),
                   (_ = ((_ >> 4) + _) & 252645135),
                   (_ = ((_ >> 8) + _) & 16711935),
-                  (_ = ((_ >> 16) + _) & 65535);
+                  (_ = ((_ >> 16) + _) & 65535));
                 let _ = _;
                 return (
                   _ > 20 ? (_ = _) : _ > 10 ? (_ = _) : _ > 5 && (_ = _),
@@ -2905,7 +2905,7 @@
               _ = _._.Get().getItemList();
             async function _() {
               if (!_._.DOTA_APP_ID || !_) return;
-              _(!1), _(!1), _(!1), _(!1);
+              (_(!1), _(!1), _(!1), _(!1));
               const _ = {
                 appid: _._.DOTA_APP_ID,
                 _: _(_._.DOTA_APP_ID),
@@ -2940,18 +2940,18 @@
                     const _ = Object.values(
                       _.persona.history.matches,
                     ).reverse();
-                    _(_), _(_);
+                    (_(_), _(_));
                   }
                 } catch {
                   _(!0);
                 }
                 _ && _.data && _(_);
               } catch {
-                console.log("Error fetching individual persona info."), _(!0);
+                (console.log("Error fetching individual persona info."), _(!0));
               }
-              _(!0), _(!0);
+              (_(!0), _(!0));
             }
-            (0, _.useEffect)(() => {
+            ((0, _.useEffect)(() => {
               try {
                 _();
               } catch {
@@ -2961,7 +2961,7 @@
               (0, _.useEffect)(() => {
                 if (!_) return;
                 let _ = _.slice();
-                (_ = _.filter(
+                ((_ = _.filter(
                   (_) =>
                     !(
                       (!_ && _.lobbytype == _._.CASUAL_MATCH) ||
@@ -2977,8 +2977,8 @@
                       (!_ && !_.rankwassolo)
                     ),
                 )),
-                  _(_);
-              }, [_, _, _, _, _, _]);
+                  _(_));
+              }, [_, _, _, _, _, _]));
             let _ = null;
             if (
               (_
@@ -3375,7 +3375,7 @@
                       (_) => _._ == _?.rowData[`item${_}`],
                     );
                     let _ = _?.name.replace("item_", "");
-                    (!_ || !_) && (_ = "emptyitembg"),
+                    ((!_ || !_) && (_ = "emptyitembg"),
                       _.push(
                         (0, _.jsx)(
                           "img",
@@ -3386,7 +3386,7 @@
                           },
                           `${_.rowIndex}_item${_}`,
                         ),
-                      );
+                      ));
                   }
                   return (0, _.jsxs)("div", {
                     className: _().ItemContainer,
@@ -3626,7 +3626,7 @@
                     for (let _ of _) {
                       const _ = _(_.reportreason),
                         _ = _(_.reportreason);
-                      _ &&
+                      (_ &&
                         _ != _.reporteraccountid &&
                         _.push(
                           (0, _.jsx)(
@@ -3663,7 +3663,7 @@
                             `${_.reporteraccountid}-${_.reportreason}`,
                           ),
                         ),
-                        (_ = _.reporteraccountid);
+                        (_ = _.reporteraccountid));
                     }
                     _.push(
                       (0, _.jsx)(
@@ -4810,10 +4810,10 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports),
+        (__webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
             default: () => _,
-          });
+          }));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -5166,7 +5166,7 @@
                 (0, _.jsx)("div", {
                   className: _().Link,
                   onClick: async () => {
-                    await _().get(`${_}`), setTimeout(() => _(), _);
+                    (await _().get(`${_}`), setTimeout(() => _(), _));
                   },
                   children: "KICK",
                 }),
@@ -5179,7 +5179,7 @@
                 (0, _.jsx)("div", {
                   className: _().Link,
                   onClick: async () => {
-                    await _().get(`${_}`), setTimeout(() => _(), _);
+                    (await _().get(`${_}`), setTimeout(() => _(), _));
                   },
                   children: "MAKE ADMIN",
                 }),
@@ -5251,8 +5251,8 @@
                       className: _().DPCLogoContainer,
                       children: (0, _.jsx)("img", {
                         onError: ({ currentTarget: _ }) => {
-                          (_.onerror = null),
-                            (_.src = `${_._.IMG_URL}teams_override/team_unknown_web.png`);
+                          ((_.onerror = null),
+                            (_.src = `${_._.IMG_URL}teams_override/team_unknown_web.png`));
                         },
                         src: `${_._.CDN_URL}apps/dota2/teamlogos/${_}.png`,
                       }),
@@ -5479,7 +5479,7 @@
                       _ = await _().get(_(), {
                         params: _,
                       });
-                    _(), setTimeout(() => _(!1), _);
+                    (_(), setTimeout(() => _(!1), _));
                   };
                 return (0, _.jsxs)("form", {
                   onSubmit: _,
@@ -5546,7 +5546,7 @@
                       _ = await _().get(_(), {
                         params: _,
                       });
-                    _(), setTimeout(() => _(!1), _);
+                    (_(), setTimeout(() => _(!1), _));
                   };
                 return (0, _.jsxs)("form", {
                   onSubmit: _,
@@ -5596,7 +5596,7 @@
                       _ = await _().post(_(), {
                         params: _,
                       });
-                    _(), setTimeout(() => _(!1), _);
+                    (_(), setTimeout(() => _(!1), _));
                   };
                 return (0, _.jsxs)("form", {
                   onSubmit: _,
@@ -5690,13 +5690,13 @@
                       },
                     )
                   )?.data?.result?.teams || [];
-              _.length && _(_), _(!0);
+              (_.length && _(_), _(!0));
             }
             (0, _.useEffect)(() => {
               try {
                 _();
               } catch {
-                console.log("Could not fetch registered teams."), _(!0);
+                (console.log("Could not fetch registered teams."), _(!0));
               }
             }, []);
             async function _() {
@@ -5728,7 +5728,7 @@
                     },
                   },
                 );
-                _.data && Object.assign(_, _.data),
+                (_.data && Object.assign(_, _.data),
                   await Promise.all(
                     _.map(async (_, _) => {
                       const _ = await _().get(
@@ -5740,8 +5740,8 @@
                           },
                         },
                       );
-                      (_[_].is_pro = !!_?.data?.is_pro),
-                        (_[_].name = _?.data?.name || "");
+                      ((_[_].is_pro = !!_?.data?.is_pro),
+                        (_[_].name = _?.data?.name || ""));
                       const _ = await _().get(
                         _._.BASE_URL + "teams/getpersonaname/",
                         {
@@ -5752,7 +5752,7 @@
                       );
                       _[_].persona_name = _?.data || "";
                     }),
-                  );
+                  ));
                 const _ = (_, _) =>
                   _.is_pro && !_.is_pro
                     ? -1
@@ -5772,13 +5772,13 @@
               } catch {
                 console.log("Error fetching individual player info.");
               }
-              _ && _.data && _(_), _(!0);
+              (_ && _.data && _(_), _(!0));
             }
-            (0, _.useEffect)(() => {
+            ((0, _.useEffect)(() => {
               try {
                 _();
               } catch {
-                console.log("Could not fetch single team info."), _(!0);
+                (console.log("Could not fetch single team info."), _(!0));
               }
             }, [_]),
               (0, _.useEffect)(() => {
@@ -5803,7 +5803,7 @@
                     ),
                     _ = _?.data,
                     _ = _?.actions || [];
-                  await Promise.all(
+                  (await Promise.all(
                     _.map(async (_) => {
                       if (_.action === 9 && _.account_id) {
                         const _ = await _().get(
@@ -5818,12 +5818,12 @@
                       }
                     }),
                   ),
-                    _ && _.data && _.actions && _(_.actions);
+                    _ && _.data && _.actions && _(_.actions));
                 }
                 try {
                   _();
                 } catch {
-                  console.log("Could not fetch single team info."), _(!0);
+                  (console.log("Could not fetch single team info."), _(!0));
                 }
               }, [_]),
               (0, _.useEffect)(() => {
@@ -5843,9 +5843,9 @@
                   const _ = _.leagues.map((_) => _.league_id);
                   _.push(..._);
                 }
-                _.sort().reverse(),
+                (_.sort().reverse(),
                   (_ = _.filter((_, _, _) => _.indexOf(_) == _)),
-                  _.length > _ && (_ = _.slice(_.length - _));
+                  _.length > _ && (_ = _.slice(_.length - _)));
                 async function _() {
                   if (!_.length) return;
                   const _ = {
@@ -5913,7 +5913,7 @@
                 } catch {
                   console.log("Could not fetch leagues data.");
                 }
-              }, [_]);
+              }, [_]));
             const _ = _.find((_) => _.team_id == _) || {};
             let _;
             if (
@@ -5954,16 +5954,16 @@
               });
             const _ = _.members || [];
             _.forEach((_) => {
-              (_.kick_link = `${_()}?u=${_}&appid=${_._.DOTA_APP_ID}&team_id=${_}&account_id=${_.account_id}`),
+              ((_.kick_link = `${_()}?u=${_}&appid=${_._.DOTA_APP_ID}&team_id=${_}&account_id=${_.account_id}`),
                 (_.make_admin_link = _.admin
                   ? ""
-                  : `${_()}?u=${_}&appid=${_._.DOTA_APP_ID}&team_id=${_}&account_id=${_.account_id}`);
+                  : `${_()}?u=${_}&appid=${_._.DOTA_APP_ID}&team_id=${_}&account_id=${_.account_id}`));
             });
             const _ = () => {
                 const _ = [];
                 return (
                   Object.keys(_).forEach((_, _) => {
-                    _.push(
+                    (_.push(
                       (0, _.jsx)(
                         "h3",
                         {
@@ -5989,7 +5989,7 @@
                             `${_.key}-${_.displayName}-matches-grid-header-league-${_}`,
                           ),
                         ),
-                      );
+                      ));
                     for (let _ of _[_])
                       _.push(
                         _.map((_) =>

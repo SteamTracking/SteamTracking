@@ -53,10 +53,10 @@ function T(e) {
   }, [T, T.key, e.bDisableRouting, k]);
   let A = p.useCallback(
       (e) => {
-        k(e.key),
+        (k(e.key),
           r || a(E, `tab`, e.key),
           u?.(e.key),
-          e.onClick && e.onClick(e);
+          e.onClick && e.onClick(e));
       },
       [r, E, u],
     ),

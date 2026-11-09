@@ -146,11 +146,11 @@ var w = class e {
       let i = x(t, n),
         a = this.m_mapDiscoveryQueues.get(i)?.appids,
         o = a?.[a.length - 1] == e;
-      this.m_mapSkippedApps.set(r, !0),
+      (this.m_mapSkippedApps.set(r, !0),
         this.m_mapSkippedAppCount.set(
           i,
           (this.m_mapSkippedAppCount.get(i) || 0) + 1,
-        );
+        ));
       let s = _.Init(v);
       if (
         (s.Body().set_appid(e),
@@ -159,8 +159,8 @@ var w = class e {
           s.Body().set_store_page_filter(g(n, !0)),
         !this.m_transport)
       ) {
-        console.warn(`Error`, `no transport`, `failed to skip appid `, e),
-          this.m_mapSkippedApps.delete(r);
+        (console.warn(`Error`, `no transport`, `failed to skip appid `, e),
+          this.m_mapSkippedApps.delete(r));
         return;
       }
       let c = (
@@ -176,11 +176,11 @@ var w = class e {
     let n = x(e, t);
     if (this.m_mapInClientCompleted.has(n)) {
       let r = this.m_mapInClientCompleted.get(n) + 1;
-      this.m_mapInClientCompleted.set(n, r),
-        this.GetInClientCompletedQueuesCallback(e, t).Dispatch(r);
+      (this.m_mapInClientCompleted.set(n, r),
+        this.GetInClientCompletedQueuesCallback(e, t).Dispatch(r));
     } else
-      this.m_mapInClientCompleted.set(n, 0),
-        this.GetInClientCompletedQueuesCallback(e, t).Dispatch(0);
+      (this.m_mapInClientCompleted.set(n, 0),
+        this.GetInClientCompletedQueuesCallback(e, t).Dispatch(0));
   }
   async LoadSkippedApps(e, t) {
     x(e, t);
@@ -219,7 +219,9 @@ var w = class e {
     return !!e.Get().m_transport;
   }
   static Get() {
-    return (this.s_DiscoveryQueueStore ||= new e()), this.s_DiscoveryQueueStore;
+    return (
+      (this.s_DiscoveryQueueStore ||= new e()), this.s_DiscoveryQueueStore
+    );
   }
   constructor() {
     r(this);
@@ -228,7 +230,7 @@ var w = class e {
 u([t], w.prototype, `m_mapDiscoveryQueues`, void 0);
 function T(e, t) {
   let [n, r] = (0, b.useState)(w.Get().GetInClientCompletedQueues(e, t));
-  return p(w.Get().GetInClientCompletedQueuesCallback(e, t), r), n;
+  return (p(w.Get().GetInClientCompletedQueuesCallback(e, t), r), n);
 }
 function E(e, t) {
   return o(w.Get().GetExhaustedCallback(e, t));

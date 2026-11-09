@@ -131,11 +131,11 @@ var _ = class _ {
       let _ = _(_, _),
         _ = this.m_mapDiscoveryQueues.get(_)?.appids,
         _ = _?.[_.length - 1] == _;
-      this.m_mapSkippedApps.set(_, !0),
+      (this.m_mapSkippedApps.set(_, !0),
         this.m_mapSkippedAppCount.set(
           _,
           (this.m_mapSkippedAppCount.get(_) || 0) + 1,
-        );
+        ));
       let _ = _.Init(_);
       if (
         (_.Body().set_appid(_),
@@ -144,8 +144,8 @@ var _ = class _ {
           _.Body().set_store_page_filter(_(_, !0)),
         !this.m_transport)
       ) {
-        console.warn(`Error`, `no transport`, `failed to skip appid `, _),
-          this.m_mapSkippedApps.delete(_);
+        (console.warn(`Error`, `no transport`, `failed to skip appid `, _),
+          this.m_mapSkippedApps.delete(_));
         return;
       }
       let _ = (
@@ -161,11 +161,11 @@ var _ = class _ {
     let _ = _(_, _);
     if (this.m_mapInClientCompleted.has(_)) {
       let _ = this.m_mapInClientCompleted.get(_) + 1;
-      this.m_mapInClientCompleted.set(_, _),
-        this.GetInClientCompletedQueuesCallback(_, _).Dispatch(_);
+      (this.m_mapInClientCompleted.set(_, _),
+        this.GetInClientCompletedQueuesCallback(_, _).Dispatch(_));
     } else
-      this.m_mapInClientCompleted.set(_, 0),
-        this.GetInClientCompletedQueuesCallback(_, _).Dispatch(0);
+      (this.m_mapInClientCompleted.set(_, 0),
+        this.GetInClientCompletedQueuesCallback(_, _).Dispatch(0));
   }
   async LoadSkippedApps(_, _) {
     _(_, _);
@@ -204,7 +204,9 @@ var _ = class _ {
     return !!_.Get().m_transport;
   }
   static Get() {
-    return (this.s_DiscoveryQueueStore ||= new _()), this.s_DiscoveryQueueStore;
+    return (
+      (this.s_DiscoveryQueueStore ||= new _()), this.s_DiscoveryQueueStore
+    );
   }
   constructor() {
     _(this);
@@ -213,7 +215,7 @@ var _ = class _ {
 _([_], _.prototype, `m_mapDiscoveryQueues`, void 0);
 function _(_, _) {
   let [_, _] = (0, _.useState)(_.Get().GetInClientCompletedQueues(_, _));
-  return _(_.Get().GetInClientCompletedQueuesCallback(_, _), _), _;
+  return (_(_.Get().GetInClientCompletedQueuesCallback(_, _), _), _);
 }
 function _(_, _) {
   return _(_.Get().GetExhaustedCallback(_, _));
@@ -222,4 +224,3 @@ function _(_, _) {
   let _ = _.useMemo(() => _(`discovery_queue_name`, `application_config`), []);
   return typeof _ == `string` && _.length > 0 ? _ : ``;
 }
-export { _, _, _, _, _, _ };

@@ -437,7 +437,7 @@ var _ = _(_()),
     };
     async OnCrop() {
       let _ = this.props.uploadFile.GetCanvasImageSource();
-      _ &&
+      (_ &&
         (await _(
           this.props.uploadFile,
           _,
@@ -449,7 +449,7 @@ var _ = _(_()),
           this.GetDestHeight(),
           this.props.fileType,
         )),
-        this.props.closeModal?.();
+        this.props.closeModal?.());
     }
     UpdateCrop(_, _) {
       this.setState({
@@ -583,7 +583,7 @@ var _ = _(_()),
       });
     }
   };
-_([_], _.prototype, `OnCrop`, null), _([_], _.prototype, `UpdateCrop`, null);
+(_([_], _.prototype, `OnCrop`, null), _([_], _.prototype, `UpdateCrop`, null));
 async function _(_, _, _, _, _, _, _, _, _) {
   return new Promise((_, _) => {
     let _ = _(_);
@@ -592,7 +592,7 @@ async function _(_, _, _, _, _, _, _, _, _) {
       return;
     }
     let _ = document.createElement(`canvas`);
-    (_.width = _),
+    ((_.width = _),
       (_.height = _),
       _.getContext(`2d`)?.drawImage(_, _, _, _, _, 0, 0, _, _),
       _.toBlob((_) => {
@@ -608,7 +608,7 @@ async function _(_, _, _, _, _, _, _, _, _) {
               (_.bCropped = !0),
               _())
             : _(`Unable to apply crop into image`);
-      });
+      }));
   });
 }
 function _(_) {
@@ -653,7 +653,7 @@ var _ = class {
   uploadTime;
   fileType;
   constructor(_, _, _, _, _) {
-    _(this),
+    (_(this),
       (this.file = _),
       (this.filename = _),
       (this.fileType = _(_) ?? 0),
@@ -664,21 +664,21 @@ var _ = class {
       (this.height = _.height),
       (this.width = _.width),
       (this.m_originalDataUrl = _),
-      (this.dataUrl = _);
+      (this.dataUrl = _));
   }
   ResetImage() {
-    (this.height = this.m_originalSize.height),
+    ((this.height = this.m_originalSize.height),
       (this.width = this.m_originalSize.width),
-      (this.dataUrl = this.m_originalDataUrl);
+      (this.dataUrl = this.m_originalDataUrl));
   }
   GetImageOptionLabel() {}
 };
-_([_], _.prototype, `dataUrl`, void 0),
+(_([_], _.prototype, `dataUrl`, void 0),
   _([_], _.prototype, `width`, void 0),
   _([_], _.prototype, `height`, void 0),
   _([_], _.prototype, `status`, void 0),
   _([_.ref], _.prototype, `message`, void 0),
-  _([_], _.prototype, `language`, void 0);
+  _([_], _.prototype, `language`, void 0));
 var _ = 960,
   _ = 311,
   _ = 480,
@@ -688,7 +688,7 @@ var _ = 960,
     m_currentImageOption = void 0;
     m_currentImageOptionKey = void 0;
     constructor(_, _, _, _, _, _) {
-      super(_, _, _, _, _), _(this), (this.m_rgImageOptions = _);
+      (super(_, _, _, _, _), _(this), (this.m_rgImageOptions = _));
     }
     IsValidAssetType(_, _) {
       let _ = 0,
@@ -700,7 +700,7 @@ var _ = 960,
           this.m_rgImageOptions.some(
             (_) => _.sKey == this.GetCurrentImageOption()?.sKey,
           );
-      if (_) (_ = _.width), (_ = _.height), (_ = !0);
+      if (_) ((_ = _.width), (_ = _.height), (_ = !0));
       else if (this.GetCurrentImageOption()) {
         let _ = _[this.GetCurrentImageOption().artworkType];
         _ &&
@@ -777,15 +777,16 @@ var _ = 960,
       return this.m_currentImageOption ?? this.ComputeDefaultImageOption();
     }
     SetCurrentImageOption(_) {
-      (this.m_currentImageOption = _), (this.m_currentImageOptionKey = _?.sKey);
+      ((this.m_currentImageOption = _),
+        (this.m_currentImageOptionKey = _?.sKey));
     }
   };
-_([_], _.prototype, `m_currentImageOption`, void 0),
-  _([_], _.prototype, `m_currentImageOptionKey`, void 0);
+(_([_], _.prototype, `m_currentImageOption`, void 0),
+  _([_], _.prototype, `m_currentImageOptionKey`, void 0));
 var _ = class extends _ {
     video;
     constructor(_, _, _, _, _, _, _) {
-      super(_, _, _, _, _, _), (this.video = _);
+      (super(_, _, _, _, _, _), (this.video = _));
     }
     BIsOriginalMinimumDimensions(_) {
       return _(this.video.videoWidth, this.video.videoHeight, _.artworkType);
@@ -821,10 +822,10 @@ var _ = class extends _ {
     localizedImageGroupPrimaryImage;
     media;
     constructor(_, _, _, _, _, _, _, _) {
-      super(_, _, _, _, _, _),
+      (super(_, _, _, _, _, _),
         _(this),
         (this.media = _),
-        (this.localizedImageGroupPrimaryImage = _);
+        (this.localizedImageGroupPrimaryImage = _));
     }
     IsValidAssetType(_, _) {
       return (
@@ -883,7 +884,7 @@ function _(_, _, _) {
   });
   return (
     _.forEach((_) => {
-      (_.status = `waiting`), (_.message = ``);
+      ((_.status = `waiting`), (_.message = ``));
     }),
     _
   );
@@ -894,13 +895,13 @@ async function _(_, _, _, _, _) {
   for (let _ of _) {
     _.status = `uploading`;
     let _ = await _(_, _.filename, _.language ?? -1, _);
-    (_.status = _.bSuccess ? `success` : `failed`),
+    ((_.status = _.bSuccess ? `success` : `failed`),
       (_.message = !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ``),
       _.push({
         bSuccess: _.bSuccess,
         image: _,
         uploadResult: _.result,
-      });
+      }));
   }
   return _;
 }
@@ -909,17 +910,17 @@ async function _(_, _, _, _, _, _) {
     _ = [],
     _ = 0,
     _ = async () => {
-      for (; _ < _.length; ) {
+      for (; _ < _.length;) {
         let _ = _++,
           _ = _[_];
         _.status = `uploading`;
         let _ = await _(_, _.filename, _.language ?? -1, _);
-        (_.status = _.bSuccess ? `success` : `failed`),
+        ((_.status = _.bSuccess ? `success` : `failed`),
           (_.message = !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ``),
           (_[_] = {
             image: _,
             uploadResult: _,
-          });
+          }));
       }
     },
     _ = Array.from(
@@ -986,31 +987,3 @@ function _(_, _ = 0) {
         : _,
   };
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

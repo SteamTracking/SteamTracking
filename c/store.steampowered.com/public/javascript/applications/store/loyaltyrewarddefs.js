@@ -145,10 +145,10 @@ var _ = class extends _ {
     m_mapHostToComponent;
     m_globalStoreLink;
     constructor(_, _, _, _) {
-      super(_),
+      (super(_),
         (this.m_parentNode = _),
         (this.m_mapHostToComponent = _),
-        (this.m_globalStoreLink = _);
+        (this.m_globalStoreLink = _));
     }
     AppendText(_, _ = !1) {
       let _ = _;
@@ -157,7 +157,7 @@ var _ = class extends _ {
         (this.m_parentNode == null || this.m_parentNode.tag != `img`)
       ) {
         let _ = this.m_LinkFilter.exec(_);
-        for (; _; ) {
+        for (; _;) {
           if (_.index > 0) {
             let _ = _.input.substring(0, _.index);
             super.AppendText(_, _);
@@ -167,19 +167,19 @@ var _ = class extends _ {
           if (this.m_mapHostToComponent) {
             for (let _ = 0; _ < this.m_mapHostToComponent.length; ++_)
               if (this.m_mapHostToComponent[_].urlRegExp.exec(_)) {
-                (_ = !0),
+                ((_ = !0),
                   super.AppendNode(
                     this.m_mapHostToComponent[_].fnBBComponent(
                       _,
                       this.m_globalStoreLink,
                     ),
-                  );
+                  ));
                 break;
               }
           }
-          _ || super.AppendNode(_(_)),
+          (_ || super.AppendNode(_(_)),
             (_ = _.input.substring(_.index + _.length)),
-            (_ = this.m_LinkFilter.exec(_));
+            (_ = this.m_LinkFilter.exec(_)));
         }
       }
       _.length > 0 && super.AppendText(_, _);
@@ -192,13 +192,13 @@ var _ = class extends _ {
       let _ = _;
       if (_.length >= 3) {
         let _ = this.m_EmoteRegex.exec(_);
-        for (; _; ) {
+        for (; _;) {
           if (_.index > 0) {
             let _ = _.input.substring(0, _.index);
             super.AppendText(_, _);
           }
           let _ = _[1];
-          super.AppendNode(
+          (super.AppendNode(
             _.createElement(
               _,
               {
@@ -208,7 +208,7 @@ var _ = class extends _ {
             ),
           ),
             (_ = _.input.substring(_.index + _.length + 2)),
-            (_ = this.m_EmoteRegex.exec(_));
+            (_ = this.m_EmoteRegex.exec(_)));
         }
       }
       _.length > 0 && super.AppendText(_, _);
@@ -217,15 +217,15 @@ var _ = class extends _ {
   _ = class extends _ {
     m_parentNode = void 0;
     constructor(_, _) {
-      super(_), (this.m_parentNode = _);
+      (super(_), (this.m_parentNode = _));
     }
     AppendText(_, _ = !1) {
       let _ = _;
-      this.m_parentNode &&
+      (this.m_parentNode &&
         this.m_parentNode.tag == `img` &&
         !_(_) &&
         (_ = _(_)),
-        super.AppendText(_, _);
+        super.AppendText(_, _));
     }
   };
 function _(_) {
@@ -925,8 +925,8 @@ function _(_, _, _, _) {
   let _,
     _ = _.endsWith(`/`) ? _.length - 1 : _.length,
     _ = _.lastIndexOf(`/`, _ - 1);
-  _ != -1 && _ + 1 < _.length && (_ = _.substring(_ + 1, _)),
-    _ && _ && (_ = _ + _);
+  (_ != -1 && _ + 1 < _.length && (_ = _.substring(_ + 1, _)),
+    _ && _ && (_ = _ + _));
   let _ = _(_, _?.event, _ ?? _);
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -1102,11 +1102,11 @@ function _(_) {
     );
   return (
     (0, _.useEffect)(() => {
-      _?.unvailable_for_country_restriction &&
+      (_?.unvailable_for_country_restriction &&
         _(_(`#TrailerPlayer_CouldNotLoad`, _, _)),
         _ &&
           !_ &&
-          _(_(`#TrailerPlayer_CouldNotLoad`, _.appid, _.trailerBaseID));
+          _(_(`#TrailerPlayer_CouldNotLoad`, _.appid, _.trailerBaseID)));
     }, [
       _,
       _.appid,
@@ -1357,7 +1357,7 @@ function _() {
 function _(_) {
   let { showErrorInfo: _, event: _ } = _.context,
     _ = _(_.args, `src`) || _.children?.toString();
-  (_ ||= _(_.args)), (_ = _(_ ?? ``) || void 0);
+  ((_ ||= _(_.args)), (_ = _(_ ?? ``) || void 0));
   let _ = _(_.args, `style`) === `inline`,
     _ = _(_, _.language, _?.rtime32_last_modified);
   if (_ == null) return null;
@@ -1590,4 +1590,3 @@ function _(_, _) {
     _
   );
 }
-export { _, _, _, _, _, _, _, _ };

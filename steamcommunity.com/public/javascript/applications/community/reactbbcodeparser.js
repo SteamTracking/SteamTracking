@@ -34,8 +34,8 @@ var a = e(t(), 1),
   s = class {
     m_decoratedAccumulator;
     constructor(e) {
-      r(e, `decorated accumulator cannot be null`),
-        (this.m_decoratedAccumulator = e);
+      (r(e, `decorated accumulator cannot be null`),
+        (this.m_decoratedAccumulator = e));
     }
     AppendText(e, t = !1) {
       this.m_decoratedAccumulator.AppendText(e, t);
@@ -61,20 +61,20 @@ var a = e(t(), 1),
         e = t.indexOf(`
 `)
       )
-        n.push(t.substr(0, e)),
+        (n.push(t.substr(0, e)),
           n.push(a.createElement(`br`)),
-          (t = t.substr(e + 1));
-      t.length && n.push(t),
+          (t = t.substr(e + 1)));
+      (t.length && n.push(t),
         n.forEach((e) => {
           super.AppendNode(e);
-        });
+        }));
     }
   },
   l = class extends n {
     m_renderingLanguage;
     constructor(e, t, n) {
-      super(e, t ?? (() => new o())),
-        (this.m_renderingLanguage = typeof n == `string` ? i(n) : n);
+      (super(e, t ?? (() => new o())),
+        (this.m_renderingLanguage = typeof n == `string` ? i(n) : n));
     }
     UpdateOverrideLanguage(e) {
       this.m_renderingLanguage = e;

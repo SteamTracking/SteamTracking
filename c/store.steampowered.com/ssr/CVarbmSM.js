@@ -3,7 +3,7 @@ function _(_, _) {
 }
 _();
 var _ = _((_) => {
-    (_.toByteArray = _), (_.fromByteArray = _);
+    ((_.toByteArray = _), (_.fromByteArray = _));
     for (
       var _ = [],
         _ = [],
@@ -14,8 +14,8 @@ var _ = _((_) => {
       _ < _;
       ++_
     )
-      (_[_] = _[_]), (_[_.charCodeAt(_)] = _);
-    (_[45] = 62), (_[95] = 63);
+      ((_[_] = _[_]), (_[_.charCodeAt(_)] = _));
+    ((_[45] = 62), (_[95] = 63));
     function _(_) {
       var _ = _.length;
       if (_ % 4 > 0)
@@ -41,14 +41,14 @@ var _ = _((_) => {
         _ < _;
         _ += 4
       )
-        (_ =
+        ((_ =
           (_[_.charCodeAt(_)] << 18) |
           (_[_.charCodeAt(_ + 1)] << 12) |
           (_[_.charCodeAt(_ + 2)] << 6) |
           _[_.charCodeAt(_ + 3)]),
           (_[_++] = (_ >> 16) & 255),
           (_[_++] = (_ >> 8) & 255),
-          (_[_++] = _ & 255);
+          (_[_++] = _ & 255));
       return (
         _ === 2 &&
           ((_ = (_[_.charCodeAt(_)] << 2) | (_[_.charCodeAt(_ + 1)] >> 4)),
@@ -70,11 +70,11 @@ var _ = _((_) => {
     }
     function _(_, _, _) {
       for (var _, _ = [], _ = _; _ < _; _ += 3)
-        (_ =
+        ((_ =
           ((_[_] << 16) & 16711680) +
           ((_[_ + 1] << 8) & 65280) +
           (_[_ + 2] & 255)),
-          _.push(_(_));
+          _.push(_(_)));
       return _.join(``);
     }
     function _(_) {
@@ -130,7 +130,7 @@ var _ = class {
   m_fallbackInterface;
   m_refreshLoginCookiePromise;
   constructor(_) {
-    (this.m_fallbackInterface = _),
+    ((this.m_fallbackInterface = _),
       (this.m_ServiceTransport = {
         SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
           bSendAuth: !0,
@@ -148,7 +148,7 @@ var _ = class {
           bSendAuth: !1,
         }),
         MakeReady: this.MakeReady.bind(this),
-      });
+      }));
   }
   async SendMsgAndAwaitResponse(_, _, _, _, _) {
     if (!_(_)) {
@@ -181,12 +181,12 @@ var _ = class {
     try {
       let _ = await this.Send(_, _, _, _);
       if (((_ = _.status), _ == 200)) {
-        (_ = _.Init(_, 147)),
+        ((_ = _.Init(_, 147)),
           _.headers &&
             (_.headers.get(`x-eresult`) &&
               _.Hdr().set_eresult(parseInt(_.headers.get(`x-eresult`))),
             _.headers.get(`x-error_message`) &&
-              _.Hdr().set_error_message(_.headers.get(`x-error_message`)));
+              _.Hdr().set_error_message(_.headers.get(`x-error_message`))));
         let _ = new _(await _.arrayBuffer());
         _.ReadBodyFromBuffer(_, _);
       }
@@ -213,7 +213,7 @@ var _ = class {
               .SendNotification(_, _, _);
       console.error(`No browserapi version of`, _, `and no fallback`);
     }
-    return this.SendNotificationAndRetryIfUnauthorized(_, _, _, _), !0;
+    return (this.SendNotificationAndRetryIfUnauthorized(_, _, _, _), !0);
   }
   async SendNotificationAndRetryIfUnauthorized(_, _, _, _) {
     (await this.Send(_, _, _, _)).status === 401 &&
@@ -295,4 +295,3 @@ var _ = class {
     return new Date(_ * 1e3);
   }
 };
-export { _, _ };

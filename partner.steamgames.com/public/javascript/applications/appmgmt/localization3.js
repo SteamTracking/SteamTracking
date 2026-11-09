@@ -4,7 +4,7 @@
 import { Ga as e } from "./dialogs.js";
 import { D as t } from "./react-router.js";
 var n = {};
-(n.arabic = () => e(() => import(`./pricing_arabic.js`), [], import.meta.url)),
+((n.arabic = () => e(() => import(`./pricing_arabic.js`), [], import.meta.url)),
   (n.brazilian = () =>
     e(() => import(`./pricing_brazilian.js`), [], import.meta.url)),
   (n.bulgarian = () =>
@@ -60,7 +60,7 @@ var n = {};
   (n.ukrainian = () =>
     e(() => import(`./pricing_ukrainian.js`), [], import.meta.url)),
   (n.vietnamese = () =>
-    e(() => import(`./pricing_vietnamese.js`), [], import.meta.url));
+    e(() => import(`./pricing_vietnamese.js`), [], import.meta.url)));
 async function r(e) {
   if (n[e]) return await n[e]();
 }

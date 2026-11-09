@@ -121,10 +121,10 @@ function _(_, _, _, _, _) {
   return _({
     mutationFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_steamid(_),
+      (_.Body().set_steamid(_),
         _.Body().set_gidforum(_),
         _.Body().set_gidtopic(_),
-        _.Body().set_gidpost(_);
+        _.Body().set_gidpost(_));
       let _ = await _.ResolveReportedPost(_, _);
       if (!_.BSuccess())
         throw Error(`Failed to acquit forum comment: ` + _.GetEMsg());
@@ -140,17 +140,17 @@ function _(_, _, _, _, _) {
   return _({
     mutationFn: async (_) => {
       let _ = _.Init(_);
-      _.Body().set_steamid(_),
+      (_.Body().set_steamid(_),
         _.Body().set_gidforum(_),
         _.Body().set_gidtopic(_),
         _.Body().set_gidpost(_),
         _.Body().set_reason(_.reason),
-        _.Body().set_note(_.message);
+        _.Body().set_note(_.message));
       for (let _ of _.sanctions) {
         let _ = new _();
-        _.set_sanction(_.sanction),
+        (_.set_sanction(_.sanction),
           _.days !== void 0 && _.set_days(_.days),
-          _.Body().add_sanctions(_);
+          _.Body().add_sanctions(_));
       }
       let _ = await _.SanctionReportedPost(_, _);
       if (!_.BSuccess())

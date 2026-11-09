@@ -43,7 +43,7 @@ function S(e) {
   )
     return null;
   let s = () => {
-      r ? localStorage.removeItem(n) : localStorage.setItem(n, `1`), i(!r);
+      (r ? localStorage.removeItem(n) : localStorage.setItem(n, `1`), i(!r));
     },
     c = 0;
   return (0, b.jsx)(`div`, {
@@ -136,7 +136,7 @@ function E(e) {
     let e = 1;
     for (let t of n.data.comments ?? []) {
       if (t.gidcomment === r) {
-        (i = T(t.text)), (a = `#${e}`);
+        ((i = T(t.text)), (a = `#${e}`));
         break;
       }
       e++;

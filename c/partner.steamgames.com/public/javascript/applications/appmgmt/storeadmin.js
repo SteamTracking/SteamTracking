@@ -654,7 +654,7 @@ function _(_, _) {
   _ && _.setAttribute(`value`, _ ? `true` : ``);
 }
 async function _(_) {
-  _(`gamepadsupport_input_1`, _.bPartialXboxControllerSupport),
+  (_(`gamepadsupport_input_1`, _.bPartialXboxControllerSupport),
     _(`gamepadsupport_input_2`, _.bFullXboxControllerSupport),
     _(`controllersupport_input_3`, _.bPS4ControllerSupport),
     _(`controllersupport_input_4`, _.bPS4ControllerBTSupport),
@@ -664,7 +664,7 @@ async function _(_) {
     _(`controllersupport_input_8`, _.bNoKeyboardSupport),
     _(`controllersupport_input_8_input`, _.bNoKeyboardSupport),
     _(`controllersupport_input_9`, _.bGamepadPreferred),
-    _(`controllersupport_input_10`, !0);
+    _(`controllersupport_input_10`, !0));
   let _ = document.getElementById(`submitBtn`);
   _ && _.click();
 }
@@ -734,11 +734,11 @@ function _(_) {
     _ = _(),
     _ = (_) => {
       let _ = _.find((_) => _._ == _);
-      _({
+      (_({
         ..._,
         ..._?.settings,
       }),
-        _(_.bSkipToEnd ?? !1);
+        _(_.bSkipToEnd ?? !1));
     };
   _.useEffect(() => {
     _ == 0 && _(!0);
@@ -819,11 +819,11 @@ function _(_) {
     _ = _.useCallback(
       (_) => {
         let _ = _.find((_) => _._ == _);
-        _({
+        (_({
           ..._,
           ..._?.settings,
         }),
-          _(_.bSkipToEnd ?? !1);
+          _(_.bSkipToEnd ?? !1));
       },
       [_, _, _, _],
     ),
@@ -1037,11 +1037,11 @@ function _(_) {
     _ = () => +!_.bSteamInputAPISupport,
     _ = (_) => {
       let _ = _.find((_) => _._ == _);
-      _({
+      (_({
         ..._,
         ..._?.settings,
       }),
-        _(_.bSkipToEnd ?? !1);
+        _(_.bSkipToEnd ?? !1));
     },
     _ = _(),
     _ = (0, _.jsx)(`div`, {
@@ -1129,15 +1129,15 @@ function _(_) {
     [_, _] = _.useState(!1),
     [_, _] = _.useState(0),
     _ = _.useCallback(() => {
-      _(_), _(!1);
+      (_(_), _(!1));
     }, [_, _]),
     _ = () => {
       _(_);
       let _ = _ - 1;
-      _ && _ == 4 && (_ = 0), _(_);
+      (_ && _ == 4 && (_ = 0), _(_));
     },
     _ = () => {
-      _(_), _(_ ? 4 : _ + 1);
+      (_(_), _(_ ? 4 : _ + 1));
     },
     _;
   switch (_) {
@@ -1572,15 +1572,15 @@ function _(_, _, _, _, _) {
       _ = _.length - _.length,
       _ = _.scrollTop;
     _(_, _ + _ + _ + _ + _, () => {
-      _.focus(),
+      (_.focus(),
         (_.selectionStart = _ + _.length),
         (_.selectionEnd = _ + _.length + _),
-        (_.scrollTop = _);
+        (_.scrollTop = _));
     });
   } else _(_, _.value + _ + ` ` + _, () => _.focus());
 }
 function _(_, _, _) {
-  _.Set(_), window.setTimeout(_, 1);
+  (_.Set(_), window.setTimeout(_, 1));
 }
 function _(_) {
   switch (_) {
@@ -1717,7 +1717,7 @@ function _(_) {
     (0, _.useEffect)(() => {
       _
         ? (async () => {
-            await _.AddGroupVanities(_), _(!1);
+            (await _.AddGroupVanities(_), _(!1));
           })()
         : _(!1);
     }, [_]),
@@ -2060,7 +2060,8 @@ function _(_) {
               (0, _.jsx)(_, {
                 disabled: !_,
                 onClick: () => {
-                  (_ && _.findIndex((_) => _ === _) != -1) || _(_, _), _(null);
+                  ((_ && _.findIndex((_) => _ === _) != -1) || _(_, _),
+                    _(null));
                 },
                 children: _(`#Create_Home_Add_App`),
               }),
@@ -2119,13 +2120,13 @@ function _(_) {
                   let _ = [..._];
                   _.splice(_, 1);
                   let _;
-                  _ && ((_ = [..._]), _.splice(_, 1)), _(_, _, _);
+                  (_ && ((_ = [..._]), _.splice(_, 1)), _(_, _, _));
                 },
                 onMove: (_, _) => {
                   let _ = [..._];
                   _(_, _, _);
                   let _;
-                  _ && ((_ = [..._]), _(_, _, _)), _(_, _, _);
+                  (_ && ((_ = [..._]), _(_, _, _)), _(_, _, _));
                 },
               }),
         ],
@@ -2511,17 +2512,17 @@ function _(_) {
           index: _,
           fnSetDLCInfo: (_) => {
             let _ = [..._];
-            _(_[_].dlc_appid == _.dlc_appid, `AppID don't match, what gives`),
+            (_(_[_].dlc_appid == _.dlc_appid, `AppID don't match, what gives`),
               console.log(),
               (_[_].config = _.config),
-              _(_);
+              _(_));
           },
         },
         `row` + _.dlc_appid,
       ),
     onDelete: (_) => {
       let _ = [..._];
-      _.splice(_, 1), _(_);
+      (_.splice(_, 1), _(_));
     },
     onReorder: (_) => _([..._]),
   });
@@ -2553,7 +2554,7 @@ function _(_) {
             let _ = {
               ..._,
             };
-            (_.config = _.data), _(_);
+            ((_.config = _.data), _(_));
           }
         },
       }),
@@ -2599,7 +2600,7 @@ function _(_) {
           (0, _.jsx)(_, {
             disabled: !_,
             onClick: () => {
-              _(_), _(void 0);
+              (_(_), _(void 0));
             },
             children: _(`#DLC_Dependency_Select`),
           }),
@@ -2620,7 +2621,7 @@ function _(_) {
   }, [_]);
   let _ = (_) => {
     let _ = [..._];
-    (_[_].bDeleted = !0), _(_);
+    ((_[_].bDeleted = !0), _(_));
   };
   _.useEffect(() => {
     let _ = [],
@@ -2665,20 +2666,20 @@ function _(_) {
         name: `app[related_items][dlc][${_}]`,
         value: ``,
       });
-      _.push(_), _++;
+      (_.push(_), _++);
     }
     _(_);
   }, [_.length, _]);
   let _ = (_, _) => {
       if (isNaN(_) || isNaN(_)) return;
       let _ = [..._];
-      _.splice(_, 0, _.splice(_, 1)[0]), _(_);
+      (_.splice(_, 0, _.splice(_, 1)[0]), _(_));
     },
     _ = (_, _) => {
       let _ = [..._];
-      (_[_].highlight = _.highlight),
+      ((_[_].highlight = _.highlight),
         (_[_].highlight_reason = _.highlight_reason),
-        _(_);
+        _(_));
     },
     _ = (0, _.jsx)(_, {
       className: _,
@@ -2789,14 +2790,14 @@ function _(_) {
           (0, _.jsx)(_, {
             disabled: !_,
             onClick: () => {
-              _(!0), _ && _();
+              (_(!0), _ && _());
             },
             children: _(`#StoreAdmin_Add_To_Top`),
           }),
           (0, _.jsx)(_, {
             disabled: !_,
             onClick: () => {
-              _(!1), _ && _();
+              (_(!1), _ && _());
             },
             children: _(`#StoreAdmin_Add_To_Bottom`),
           }),
@@ -2845,10 +2846,10 @@ function _(_) {
       [],
     ),
     _ = () => {
-      (_.highlight = !_.highlight), _(_, _);
+      ((_.highlight = !_.highlight), _(_, _));
     },
     _ = (_) => {
-      (_.highlight_reason = _.data), _(_, _);
+      ((_.highlight_reason = _.data), _(_, _));
     };
   if (!_) return null;
   let _ = _(_, _.bDeleted && `wWwt59hM-dY-`, !_ && `gsX5IuRSdVQ-`);
@@ -2926,7 +2927,7 @@ function _(_) {
   let { pinnedBundles: _, nInitialPinnedBundles: _ } = _,
     _ = 0,
     _ = [];
-  for (; _ < Math.max(_, _.length); ) {
+  for (; _ < Math.max(_, _.length);) {
     if (_ < _.length) {
       let _ = _[_];
       _.push({
@@ -2973,12 +2974,12 @@ function _(_) {
         pinnedBundles: _,
         onDelete: (_) => {
           let _ = [..._];
-          _.splice(_, 1), _(_);
+          (_.splice(_, 1), _(_));
         },
         onMove: (_, _) => {
           let _ = new Array(..._),
             [_] = _.splice(_, 1);
-          _.splice(_, 0, _), _(_);
+          (_.splice(_, 0, _), _(_));
         },
       }),
     ],
@@ -3114,9 +3115,9 @@ var _ = class _ {
   constructor() {}
   Init() {
     _(`package_to_paid_partners`, `application_config`).forEach((_) => {
-      this.m_mapPackageToPartners.has(_.packageid) ||
+      (this.m_mapPackageToPartners.has(_.packageid) ||
         this.m_mapPackageToPartners.set(_.packageid, []),
-        this.m_mapPackageToPartners.get(_.packageid).push(_.partnerid);
+        this.m_mapPackageToPartners.get(_.packageid).push(_.partnerid));
     });
   }
 };
@@ -3135,17 +3136,17 @@ var _ = class _ {
     return this.m_proposalAddRemoveCallback;
   }
   async LoadMoreProposal() {
-    return this.m_proposalAddRemoveCallback.Dispatch(this.GetProposals()), !1;
+    return (this.m_proposalAddRemoveCallback.Dispatch(this.GetProposals()), !1);
   }
   async RejectProposal(_, _, _) {
     let _ = null;
     try {
       let _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`packageid`, `` + _),
         _.append(`json`, `1`),
         _.append(`reason_code`, _.join(`,`) || ``),
-        _.append(`email_message`, _);
+        _.append(`email_message`, _));
       let _ = `${_.PARTNER_BASE_URL}packages/rejectpricing`,
         _ = await _.default.post(_, _, {
           withCredentials: !0,
@@ -3174,11 +3175,11 @@ var _ = class _ {
     let _ = null;
     try {
       let _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`packageid`, `` + _),
         _.append(`json`, `1`),
         _.append(`proposalkey`, `` + _),
-        _.append(`partner_will_publish`, _ ? `1` : `0`);
+        _.append(`partner_will_publish`, _ ? `1` : `0`));
       let _ = `${_.PARTNER_BASE_URL}packages/approvepricing`,
         _ = await _.default.post(_, _, {
           withCredentials: !0,
@@ -3216,25 +3217,25 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {
     let _ = _(`proposed_prices`, `application_config`);
-    this.ValidateInputDefault(_) &&
+    (this.ValidateInputDefault(_) &&
       _.forEach((_) => this.m_rgMapProposal.set(_.packageid, _)),
-      (this.m_nTotalItems = _(`total_proposed_prices`, `application_config`));
+      (this.m_nTotalItems = _(`total_proposed_prices`, `application_config`)));
   }
   ValidateInputDefault(_) {
     let _ = _;
     return _ && Array.isArray(_) && _.length > 0 && _[0].packageid > 0;
   }
 };
-_([_], _.prototype, `LoadMoreProposal`, null),
+(_([_], _.prototype, `LoadMoreProposal`, null),
   _([_], _.prototype, `RejectProposal`, null),
-  _([_], _.prototype, `AcceptProposal`, null);
+  _([_], _.prototype, `AcceptProposal`, null));
 function _() {
   let [_, _] = (0, _.useState)(() => _.Get().GetProposals());
-  return _(_.Get().GetProposalListChange(), _), _;
+  return (_(_.Get().GetProposalListChange(), _), _);
 }
 function _() {
   return {
@@ -3650,10 +3651,10 @@ function _(_) {
         children: [
           (0, _.jsxs)(_, {
             onClick: async () => {
-              _(!0),
+              (_(!0),
                 _(_.packageid, _.partner_will_publish, _.proposal_key)
                   .then(_)
-                  .finally(() => _(!1));
+                  .finally(() => _(!1)));
             },
             children: [`Publish Proposal `, _ ? ` (FORCE)` : ``],
           }),
@@ -3673,7 +3674,7 @@ function _(_) {
                   (_) => _.amount.currency_code == 1,
                 )?.amount.amount,
                 _ = _(_, _, _, _);
-              (_.rgAboveThreshold.length > 0 ||
+              ((_.rgAboveThreshold.length > 0 ||
                 _.rgBelowThreshold.length > 0) &&
                 _.push(`out_of_guideline`),
                 _ && _(_) && _.push(`within_30_days`),
@@ -3683,7 +3684,7 @@ function _(_) {
                     errors: _,
                   }),
                   _(_),
-                );
+                ));
             },
             children: `Reject...`,
           }),
@@ -3714,7 +3715,7 @@ function _(_) {
         bDisableBackgroundDismiss: !0,
         onCancel: _,
         onOK: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _(_.packageid, _, _)
               .then((_) => {
                 _
@@ -3725,11 +3726,11 @@ function _(_) {
                     ));
               })
               .catch((_) => {
-                _.fnSetError(!0),
+                (_.fnSetError(!0),
                   _.fnSetStrError(
                     `Failed to reject; check console for details`,
-                  );
-              });
+                  ));
+              }));
         },
         children: [
           (0, _.jsx)(_, {
@@ -3742,7 +3743,7 @@ function _(_) {
                 checked: _.includes(_),
                 onChange: (_) => {
                   let _ = _.filter((_) => _ != _);
-                  _ && _.push(_), _(_);
+                  (_ && _.push(_), _(_));
                 },
                 label: _.get(_),
               },
@@ -3778,9 +3779,9 @@ var _ = `q-hOeY9tNP0-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.quicktext_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [6, 10, 11], null);
+        _.Message.initialize(this, _, 0, -1, [6, 10, 11], null));
     }
     static sm_m;
     static sm_mbf;
@@ -3868,7 +3869,7 @@ var _ = `q-hOeY9tNP0-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -3889,14 +3890,14 @@ var _ = `q-hOeY9tNP0-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CSupportData_QuickText`;
@@ -3905,9 +3906,9 @@ var _ = `q-hOeY9tNP0-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.content || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -3952,7 +3953,7 @@ var _ = `q-hOeY9tNP0-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -3973,14 +3974,14 @@ var _ = `q-hOeY9tNP0-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CSupportData_QuickTextContent`;
@@ -3989,9 +3990,9 @@ var _ = `q-hOeY9tNP0-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.quicktext_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4021,7 +4022,7 @@ var _ = `q-hOeY9tNP0-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -4042,14 +4043,14 @@ var _ = `q-hOeY9tNP0-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CSupportAgents_GetQuickText_Request`;
@@ -4058,9 +4059,9 @@ var _ = `q-hOeY9tNP0-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.quicktext || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4083,7 +4084,7 @@ var _ = `q-hOeY9tNP0-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -4104,14 +4105,14 @@ var _ = `q-hOeY9tNP0-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CSupportAgents_GetQuickText_Response`;
@@ -4120,9 +4121,9 @@ var _ = `q-hOeY9tNP0-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.appid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4162,7 +4163,7 @@ var _ = `q-hOeY9tNP0-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -4183,14 +4184,14 @@ var _ = `q-hOeY9tNP0-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CHelpRequestLogs_UploadUserApplicationLog_Request`;
@@ -4199,9 +4200,9 @@ var _ = `q-hOeY9tNP0-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype._ || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4221,7 +4222,7 @@ var _ = `q-hOeY9tNP0-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -4242,14 +4243,14 @@ var _ = `q-hOeY9tNP0-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CHelpRequestLogs_UploadUserApplicationLog_Response`;
@@ -4258,9 +4259,9 @@ var _ = `q-hOeY9tNP0-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.appid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4280,7 +4281,7 @@ var _ = `q-hOeY9tNP0-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -4301,14 +4302,14 @@ var _ = `q-hOeY9tNP0-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CHelpRequestLogs_GetApplicationLogDemand_Request`;
@@ -4317,9 +4318,9 @@ var _ = `q-hOeY9tNP0-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.request_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4339,7 +4340,7 @@ var _ = `q-hOeY9tNP0-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -4360,14 +4361,14 @@ var _ = `q-hOeY9tNP0-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CHelpRequestLogs_GetApplicationLogDemand_Response`;
@@ -4436,22 +4437,22 @@ function _(_, _, _, _, _) {
     mutationFn: async (_) => {
       _.fnSetLoading(!0);
       let _ = new FormData();
-      _.append(`help_issue`, `` + _),
+      (_.append(`help_issue`, `` + _),
         _.append(`help_request_type`, `` + _),
         _.append(`appid`, `` + _.appid),
         _.append(`initial_text`, _.strRequestTitle),
         _.append(`issue_text`, _.strRequestBody),
         _.append(`sessionid`, _()),
         _.append(`steamid`, _),
-        _.append(`publisherid_selected`, `` + _);
+        _.append(`publisherid_selected`, `` + _));
       let _ = await _.default.post(
         `${_.PARTNER_BASE_URL}admin/ajaxcreatesupportticketforrequest/`,
         _,
       );
       if (_?.data?.success != 1)
         throw (
-          (_?.data?.message && _.fnSetStrError(_?.data?.message),
-          _?.data?.message || `create ticket failed generic`)
+          _?.data?.message && _.fnSetStrError(_?.data?.message),
+          _?.data?.message || `create ticket failed generic`
         );
     },
     onSuccess() {
@@ -6399,7 +6400,7 @@ function _(_) {
     [_, _] = (0, _.useState)(`avgPercentDiff`),
     [_, _] = (0, _.useState)(!1),
     _ = (_) => {
-      _(_ !== _ || !_), _(_);
+      (_(_ !== _ || !_), _(_));
     },
     [_, _] = (0, _.useState)(null),
     [_, _] = (0, _.useState)(null),
@@ -6567,12 +6568,12 @@ function _(_) {
           onOK: async () => {
             if (!_ || !_) return;
             let _ = new FormData();
-            _.append(`sessionid`, _()),
+            (_.append(`sessionid`, _()),
               _.append(
                 `pricing_multiplier_id`,
                 String(_.pricing_multiplier_id),
               ),
-              _.append(`rt_date_fx`, String(_.rt_date));
+              _.append(`rt_date_fx`, String(_.rt_date)));
             try {
               let _ = await _.default.post(
                 `${_.PARTNER_BASE_URL}admin/ajaxstagenewpricingguidelines/`,
@@ -7091,7 +7092,7 @@ function _(_) {
     _ = (0, _.useContext)(_),
     _ = (_) => {
       let _ = structuredClone(_);
-      (_.kind = _.target.value), _(_);
+      ((_.kind = _.target.value), _(_));
     },
     _ = [
       {
@@ -7219,7 +7220,7 @@ function _(_) {
     _ = (0, _.useContext)(_),
     _ = (_) => {
       let _ = structuredClone(_);
-      (_.package_id = _.value), _(_);
+      ((_.package_id = _.value), _(_));
     },
     _ = _.rgAllPackages.find((_) => _.packageid === _.package_id),
     _ = {
@@ -7253,7 +7254,7 @@ function _(_) {
     { item: _, setItem: _, index: _ } = _,
     _ = (_) => {
       let _ = structuredClone(_);
-      (_.bundle_id = _.value), _(_);
+      ((_.bundle_id = _.value), _(_));
     },
     _;
   if (_.bundle_id) {
@@ -7312,7 +7313,7 @@ function _(_) {
             onInput: (_) => {
               let _ = _.target.value,
                 _ = structuredClone(_);
-              _.header === void 0 && (_.header = {}), (_.header[_] = _), _(_);
+              (_.header === void 0 && (_.header = {}), (_.header[_] = _), _(_));
             },
             value: _,
             name: `app[purchase_options_order][order][${_}][header][${_}]`,
@@ -7364,11 +7365,11 @@ function _(_) {
     [_, _] = (0, _.useState)(`english`),
     _ = (_) => {
       let _ = structuredClone(_);
-      (_.dropdown_title ||= {}), (_.dropdown_title[_] = _.target.value), _(_);
+      ((_.dropdown_title ||= {}), (_.dropdown_title[_] = _.target.value), _(_));
     },
     _ = (_) => {
       let _ = structuredClone(_);
-      (_.description ||= {}), (_.description[_] = _.target.value), _(_);
+      ((_.description ||= {}), (_.description[_] = _.target.value), _(_));
     },
     _ = (_) => {
       let _ = structuredClone(_);
@@ -7377,7 +7378,7 @@ function _(_) {
         kind: `package`,
         package_id: _.value[1],
       };
-      _.dropdown_items.push(_), _(_);
+      (_.dropdown_items.push(_), _(_));
     },
     _ = _.rgUnusedPackages.map((_) => ({
       value: [`package`, _.value],
@@ -7545,13 +7546,13 @@ function _(_) {
             },
             onDelete: (_) => {
               let _ = structuredClone(_);
-              (_.dropdown_items ||= []), _.dropdown_items.splice(_, 1), _(_);
+              ((_.dropdown_items ||= []), _.dropdown_items.splice(_, 1), _(_));
             },
             onMove: (_, _) => {
               let _ = structuredClone(_);
               _.dropdown_items ||= [];
               let [_] = _.dropdown_items.splice(_, 1);
-              _.dropdown_items.splice(_, 0, _), _(_);
+              (_.dropdown_items.splice(_, 0, _), _(_));
             },
             items: _.dropdown_items ?? [],
           }),
@@ -7593,22 +7594,22 @@ function _(_) {
       if (_ === 0) return;
       let _ = [..._],
         [_] = _.splice(_, 1);
-      _.splice(_ - 1, 0, _), _(_);
+      (_.splice(_ - 1, 0, _), _(_));
     },
     _ = (_) => () => {
       if (_ === _.length - 1) return;
       let _ = [..._],
         [_] = _.splice(_, 1);
-      _.splice(_ + 1, 0, _), _(_);
+      (_.splice(_ + 1, 0, _), _(_));
     },
     _ = () => (_(_.concat([_()])), !1),
     _ = (_) => (_) => {
       let _ = [..._];
-      (_[_] = _), _(_);
+      ((_[_] = _), _(_));
     },
     _ = (_) => () => {
       let _ = [..._];
-      _.splice(_, 1), _(_);
+      (_.splice(_, 1), _(_));
     };
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -7812,7 +7813,7 @@ var _ = `EV26XGJ0bfw-`,
               cancelToken: _?.token,
             }),
             _ = [];
-          _.data.dlcs &&
+          (_.data.dlcs &&
             _.data.dlcs.forEach((_) => {
               _.push({
                 appid: _.appid,
@@ -7830,7 +7831,7 @@ var _ = `EV26XGJ0bfw-`,
                   is_released_somewhere: !!_.is_released_somewhere,
                 });
               }),
-            this.m_mapAppIDToSoundTracks.set(_, _);
+            this.m_mapAppIDToSoundTracks.set(_, _));
         } catch (_) {
           let _ = _(_);
           console.error(
@@ -7850,7 +7851,7 @@ var _ = `EV26XGJ0bfw-`,
     }
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
     constructor() {
       _(this);
@@ -7866,7 +7867,7 @@ function _(_) {
         _.Get()
           .LoadDLCAndSoundTracksForAppID(_, null)
           .then((_) => {
-            _(_.dlcs), _(_);
+            (_(_.dlcs), _(_));
           });
     }, [_, _, _]),
     _
@@ -7882,7 +7883,7 @@ function _(_) {
         _.Get()
           .LoadDLCAndSoundTracksForAppID(_, null)
           .then((_) => {
-            _(_.soundtracks), _(_);
+            (_(_.soundtracks), _(_));
           });
     }, [_, _, _]),
     _
@@ -8081,7 +8082,7 @@ function _(_) {
       bOKDisabled: _.english.length < 3,
       onOK: () => {
         let _ = {};
-        _.forEach((_, _) => {
+        (_.forEach((_, _) => {
           _[_] = _.Value;
         }),
           _({
@@ -8098,13 +8099,13 @@ function _(_) {
             coming_soon_appid: _,
           }),
           _ && _.forEach((_, _) => _.get(_).Set(``)),
-          _();
+          _());
       },
       onCancel: () => {
-        _.forEach((_, _) => {
+        (_.forEach((_, _) => {
           _?.[_] ? _.get(_).Set(_[_]) : _.get(_).Set(``);
         }),
-          _();
+          _());
       },
       children: (0, _.jsxs)(`div`, {
         className: _,
@@ -8125,10 +8126,10 @@ function _(_) {
             text: _,
             className: _,
             onChangeText: (_, _) => {
-              _(_, _, _),
+              (_(_, _, _),
                 _({
                   ..._,
-                });
+                }));
             },
             kvName: void 0,
             rgRealms: _,
@@ -8226,7 +8227,7 @@ function _(_) {
                   tooltip: _(`#SeasonPass_Backfill_check_ttip`),
                   onChange: (_) => {
                     let _ = !(!_ && _ < _);
-                    _(!_), _ ? _(_) : _.current.SetChecked(!0, !1);
+                    (_(!_), _ ? _(_) : _.current.SetChecked(!0, !1));
                   },
                   checked: _,
                 }),
@@ -8294,9 +8295,9 @@ function _(_) {
         let _ = {
           ..._,
         };
-        _ && _ && (_.completed_appid = _),
+        (_ && _ && (_.completed_appid = _),
           _ && _ && (_.completed_event_gid = _),
-          _(_);
+          _(_));
       },
       children: [
         _ &&
@@ -8559,7 +8560,7 @@ function _(_) {
                   seasonPassID: _,
                   bOnlyShowReleaseDLC: !0,
                   fnResetAppID: () => {
-                    _(!1), _(void 0);
+                    (_(!1), _(void 0));
                   },
                 }),
               ],
@@ -8868,11 +8869,11 @@ function _(_) {
         nNextMilestoneID: _,
         index: _?.commitments?.length || 0,
         fnAppendSeasonPass: (_) => {
-          _({
+          (_({
             ..._,
             commitments: [...(_.commitments || []), _],
           }),
-            _(Math.max(_, _.commitments ? _.commitments.length + 1 : 1));
+            _(Math.max(_, _.commitments ? _.commitments.length + 1 : 1)));
         },
         bAppHasSteamChinaToolsEnabled: _,
         rgShippedMilestoneIDs: _,
@@ -9077,7 +9078,7 @@ function _(_) {
     [_, _] = _.useState(_.length),
     _ = _.useCallback(
       (_) => {
-        _.length > _ && _(_.length), _(_);
+        (_.length > _ && _(_.length), _(_));
       },
       [_],
     );
@@ -9119,11 +9120,11 @@ function _(_) {
     ),
     _ = (_) => {
       let _ = _.slice();
-      _.splice(_, 1), _(_);
+      (_.splice(_, 1), _(_));
     },
     _ = (_, _) => {
       let _ = _.slice();
-      _(_, _, _), _(_);
+      (_(_, _, _), _(_));
     },
     _ = (_, _) => {
       let _ = _.map((_, _) =>
@@ -9142,11 +9143,11 @@ function _(_) {
         options: _,
         onAddLink: (_) => {
           let _ = _.slice();
-          _.push({
+          (_.push({
             type: _,
             link: ``,
           }),
-            _(_);
+            _(_));
         },
       }),
       (0, _.jsx)(_, {
@@ -9278,14 +9279,14 @@ function _(_, _) {
     });
     _ < _;
   )
-    _.push(
+    (_.push(
       _.createElement(`input`, {
         type: `hidden`,
         name: `app[content][ordered_social_links][${_}]`,
         value: ``,
       }),
     ),
-      _++;
+      _++);
   return (
     [`discord_server`, `youtube`, `facebook`, `twitter`, `twitch`].forEach(
       (_) => {
@@ -9618,11 +9619,11 @@ function _(_) {
   let [_, _] = _.useState(_),
     _ = (_, _) => {
       let _ = [..._];
-      (_[_] = _), _(_);
+      ((_[_] = _), _(_));
     },
     _ = (_) => {
       let _ = [..._];
-      _.splice(_, 1), _(_);
+      (_.splice(_, 1), _(_));
     };
   return {
     items: _,
@@ -9634,10 +9635,10 @@ function _(_) {
     moveItem: (_, _) => {
       let _ = [..._],
         _ = _[_];
-      _ < _
+      (_ < _
         ? (_.splice(_ + 1, 0, _), _.splice(_, 1))
         : (_.splice(_, 1), _.splice(_, 0, _)),
-        _(_);
+        _(_));
     },
     getState: (_) => ({
       item: _[_],
@@ -9765,7 +9766,7 @@ function _(_) {
     },
     _ = _(_),
     _ = async () => {
-      _(`throbber`),
+      (_(`throbber`),
         await _.mutateAsync(_.items)
           .then((_) => {
             _.success === 1 ? _(null) : _(_.errors[0] || `Unknown error`);
@@ -9775,10 +9776,10 @@ function _(_) {
           })
           .finally(() => {
             _(`message`);
-          });
+          }));
     },
     _ = () => {
-      _(`editor`), _();
+      (_(`editor`), _());
     },
     _ = () => {
       window.location.reload();
@@ -9886,13 +9887,13 @@ function _(_) {
       _(_.target.value);
     },
     _ = (_) => {
-      (_.localized_title[_] = _.target.value), _(_);
+      ((_.localized_title[_] = _.target.value), _(_));
     },
     _ = (_) => {
-      (_.localized_description[_] = _.target.value), _(_);
+      ((_.localized_description[_] = _.target.value), _(_));
     },
     _ = (_) => {
-      (_.visible = _ ? `1` : `0`), _(_);
+      ((_.visible = _ ? `1` : `0`), _(_));
     },
     _ = ``;
   _.localized_title && _.localized_title[_] && (_ = _.localized_title[_]);
@@ -9990,8 +9991,8 @@ function _(_) {
       if (_.status !== 200) return _.data;
       if (_.data.success != 1) throw _.data;
       let _ = new FormData();
-      _.append(`sessionid`, _()),
-        _.append(`changenotes`, `Change non-app items in package`);
+      (_.append(`sessionid`, _()),
+        _.append(`changenotes`, `Change non-app items in package`));
       let _ = `${_.PARTNER_BASE_URL}admin/store/packagepublish/${_}`,
         _ = await _.default.post(_, _);
       if (_.status !== 200) return _.data;
@@ -10022,10 +10023,10 @@ function _(_) {
       _(_.target.checked);
     },
     _ = () => {
-      _(_.bShowCapsuleArt), _(null);
+      (_(_.bShowCapsuleArt), _(null));
     },
     _ = async () => {
-      _(`working`),
+      (_(`working`),
         await _.mutateAsync({
           bShowCapsuleArt: _,
           bHideItemPrefix: _,
@@ -10038,7 +10039,7 @@ function _(_) {
           })
           .finally(() => {
             _(`message`);
-          });
+          }));
     },
     _ = () => {
       window.location.reload();
@@ -10269,20 +10270,20 @@ function _(_) {
     mutationKey: [`save_show_capsule_art_toggle`, _],
     mutationFn: async (_) => {
       let _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(
           `show_capsule_art_in_purchase_option`,
           _.bShowCapsuleArt ? `1` : `0`,
         ),
-        _.append(`hide_shared_prefix_on_items`, _.bHideItemPrefix ? `1` : `0`);
+        _.append(`hide_shared_prefix_on_items`, _.bHideItemPrefix ? `1` : `0`));
       let _ = `${_.PARTNER_BASE_URL}store/ajaxpackagesave/${_}`,
         _ = await _.default.post(_, _);
       if (_.status !== 200) return _.data;
       if (_.data.success != 1) throw _.data;
       let _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`changenotes`, `Configure package purchase display options.`),
-        _.append(`packages[0]`, `` + _);
+        _.append(`packages[0]`, `` + _));
       let _ = `${_.PARTNER_BASE_URL}store/ajaxpublishpackages`,
         _ = await _.default.post(_, _);
       if (_.status !== 200) return _.data;
@@ -10308,7 +10309,7 @@ function _(_) {
   (0, _.useEffect)(
     () => (
       (window.ShowImageConfirmationDialog = (_) => {
-        _(_), _(!0);
+        (_(_), _(!0));
       }),
       () => {
         delete window.ShowImageConfirmationDialog;
@@ -10320,7 +10321,7 @@ function _(_) {
       _(!1);
     },
     _ = _.useCallback(() => {
-      window.SubmitImageUpload(_, _, _, _, !0), _();
+      (window.SubmitImageUpload(_, _, _, _, !0), _());
     }, [_, _, _, _]);
   return (0, _.jsx)(_, {
     children: (0, _.jsx)(_, {
@@ -10463,11 +10464,11 @@ function _(_, _) {
         _ = await _.GetDevPagesForPartner(_, _);
       } catch (_) {
         throw (
-          (console.error(
+          console.error(
             `usePartnerActiveCreatorClans on PartnerID ${_} request failed`,
             _,
           ),
-          _)
+          _
         );
       }
       if (_.GetEResult() == 1)
@@ -10475,10 +10476,10 @@ function _(_, _) {
           .results()
           .map((_) => _.toObject());
       throw (
-        (console.error(
+        console.error(
           `usePartnerActiveCreatorClans on PartnerID ${_} failed with EResult: ${_.GetEResult()}`,
         ),
-        Error(`GetDevPagesForPartner answered EResult ${_.GetEResult()}`))
+        Error(`GetDevPagesForPartner answered EResult ${_.GetEResult()}`)
       );
     },
     enabled: _ > 0,
@@ -10574,7 +10575,7 @@ function _() {
   return _({
     mutationFn: async (_) => {
       let _ = _.Init(_);
-      _.Body().set_appid(_.appid),
+      (_.Body().set_appid(_.appid),
         _.Body().set_remove(_.remove),
         _.Body().set_update_json_only(_.update_json_only),
         _.Body().set_skip_clan_permissions(_.skip_clan_permissions),
@@ -10583,7 +10584,7 @@ function _() {
         _.Body().link().set_clan_steamid(_.link.clan_steamid),
         _.Body().link().set_relation(_.link.relation),
         _.Body().link().set_linkname(_.link.linkname),
-        _.Body().link().set_json(_.link.json);
+        _.Body().link().set_json(_.link.json));
       let _ = await _.SetDevPageLink(_, _);
       return _.GetEResult() == 1
         ? (_.invalidateQueries({
@@ -10630,7 +10631,7 @@ function _(_) {
         strTitle: _(`#Button_Unlink`),
         strDescription: _(`#AppLanding_Creator_UnlinkDesc`, _ || _, _.linkname),
         onOK: () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _.mutateAsync()
               .then((_) => {
                 _
@@ -10640,12 +10641,12 @@ function _(_) {
                     _.fnSetError(!0));
               })
               .catch((_) => {
-                _.fnSetStrError(_(`#Error_ErrorCommunicatingWithNetwork`)),
+                (_.fnSetStrError(_(`#Error_ErrorCommunicatingWithNetwork`)),
                   _.fnSetError(!0),
                   console.error(
                     `unlinking failed appid ${_.appid} with error ${_(_).strErrorMsg} `,
-                  );
-              });
+                  ));
+              }));
         },
         children: (0, _.jsx)(_, {
           _: `p`,
@@ -10675,20 +10676,20 @@ function _() {
       } catch (_) {
         let { strErrorMsg: _, errorCode: _ } = _(_);
         throw (
-          (console.error(
+          console.error(
             `useClanLinkableForMeViaCreatorHome: request failed, EResult ${_}: ${_}`,
             _,
           ),
-          _)
+          _
         );
       }
       if (_?.status == 200 && _.data?.success == 1)
         return _.data.rgClanAccountIDs ?? [];
       throw (
-        (console.error(
+        console.error(
           `useClanLinkableForMeViaCreatorHome: status ${_?.status}, EResult ${_?.data?.success}`,
         ),
-        Error(`ajaxgetgroupsforuser answered EResult ${_?.data?.success}`))
+        Error(`ajaxgetgroupsforuser answered EResult ${_?.data?.success}`)
       );
     },
     enabled: _.logged_in,
@@ -10728,14 +10729,14 @@ function _(_) {
     _ = _(_()),
     _ = _.data ?? _;
   (0, _.useEffect)(() => {
-    _ ||
+    (_ ||
       console.warn(
         `LinkDialog: no partner for app ${_} (got ${_}), offering only the groups the user owns or officers`,
       ),
       _.logged_in ||
         console.warn(
           `LinkDialog: UserConfig says signed out, so the groups the user owns or officers were not requested`,
-        );
+        ));
   }, [_, _, _]);
   let { rgClanChoices: _, setExistingLinks: _ } = (0, _.useMemo)(() => {
       let _ = new Set(_.map((_) => _.clan_accountid)),
@@ -10812,11 +10813,11 @@ function _(_) {
                       _.fnSetError(!0));
                 })
                 .catch((_) => {
-                  _.fnSetStrError(_(`#Error_ErrorCommunicatingWithNetwork`)),
+                  (_.fnSetStrError(_(`#Error_ErrorCommunicatingWithNetwork`)),
                     _.fnSetError(!0),
                     console.error(
                       `linking failed appid ${_} with error ${_(_).strErrorMsg} `,
-                    );
+                    ));
                 });
             },
             children: (0, _.jsxs)(_, {
@@ -11351,7 +11352,7 @@ function _(_) {
 var _ = class extends Error {
   eResult;
   constructor(_, _) {
-    super(_), (this.eResult = _);
+    (super(_), (this.eResult = _));
   }
 };
 async function _(_) {
@@ -11718,7 +11719,7 @@ function _(_) {
   let _ = {};
   _.forEach((_) => {
     let _ = _[_];
-    (_[_] ??= []), _[_].push(_);
+    ((_[_] ??= []), _[_].push(_));
   });
   let _ = Object.keys(_).length > 1;
   return (0, _.jsxs)(`details`, {
@@ -12000,8 +12001,8 @@ function _() {
           if (_.bAccessibilityNarratedMenus === !1) return `no`;
         },
         fnSetValues: (_) => {
-          _ === `yes` && _(`bAccessibilityNarratedMenus`, !0),
-            _ === `no` && _(`bAccessibilityNarratedMenus`, !1);
+          (_ === `yes` && _(`bAccessibilityNarratedMenus`, !0),
+            _ === `no` && _(`bAccessibilityNarratedMenus`, !1));
         },
       }),
     ],
@@ -12054,8 +12055,8 @@ function _() {
           if (_.bAccessibilityPlayableWithoutVision === !1) return `no`;
         },
         fnSetValues: (_) => {
-          _ === `yes` && _(`bAccessibilityPlayableWithoutVision`, !0),
-            _ === `no` && _(`bAccessibilityPlayableWithoutVision`, !1);
+          (_ === `yes` && _(`bAccessibilityPlayableWithoutVision`, !0),
+            _ === `no` && _(`bAccessibilityPlayableWithoutVision`, !1));
         },
       }),
     ],
@@ -12112,8 +12113,8 @@ function _() {
           if (_.bAccessibilityBackgroundVolumeControls === !1) return `no`;
         },
         fnSetValues: (_) => {
-          _ === `yes` && _(`bAccessibilityBackgroundVolumeControls`, !0),
-            _ === `no` && _(`bAccessibilityBackgroundVolumeControls`, !1);
+          (_ === `yes` && _(`bAccessibilityBackgroundVolumeControls`, !0),
+            _ === `no` && _(`bAccessibilityBackgroundVolumeControls`, !1));
         },
       }),
     ],
@@ -12174,7 +12175,7 @@ function _() {
               ? `stereo`
               : `none`,
         fnSetValues: (_) => {
-          _ === `surround` &&
+          (_ === `surround` &&
             (_(`bAccessibilitySurroundSound`, !0),
             _(`bAccessibilityStereoSound`, !0)),
             _ === `stereo` &&
@@ -12182,7 +12183,7 @@ function _() {
               _(`bAccessibilityStereoSound`, !0)),
             _ === `none` &&
               (_(`bAccessibilitySurroundSound`, !1),
-              _(`bAccessibilityStereoSound`, !1));
+              _(`bAccessibilityStereoSound`, !1)));
         },
       }),
     ],
@@ -12374,7 +12375,7 @@ function _() {
             return `no`;
         },
         fnSetValues: (_) => {
-          _ === `playable_at_your_own_pace` &&
+          (_ === `playable_at_your_own_pace` &&
             (_(`bAccessibilityPlayableAtYourOwnPace`, !0),
             _(`bAccessibilityPlayableWithoutQuicktimeEvents`, !0)),
             _ === `playable_without_quick_time_events` &&
@@ -12382,7 +12383,7 @@ function _() {
               _(`bAccessibilityPlayableWithoutQuicktimeEvents`, !0)),
             _ === `no` &&
               (_(`bAccessibilityPlayableAtYourOwnPace`, !1),
-              _(`bAccessibilityPlayableWithoutQuicktimeEvents`, !1));
+              _(`bAccessibilityPlayableWithoutQuicktimeEvents`, !1)));
         },
       }),
     ],
@@ -12694,7 +12695,7 @@ function _(_) {
     _ = _(`#Wizard_NextButton`);
   _ === _.length - 1 &&
     ((_ = () => {
-      _(_), _();
+      (_(_), _());
     }),
     (_ = _(`#Wizard_SaveAndExitButton`)));
   let _ = (_, _) => {
@@ -12834,11 +12835,11 @@ function _(_, _) {
   let _ = document.querySelector(
     `[name="app[classification][category][category_${_}]"]`,
   );
-  _(_, `Missing category input for`, _),
-    _ && _.setAttribute(`value`, _ ? `true` : ``);
+  (_(_, `Missing category input for`, _),
+    _ && _.setAttribute(`value`, _ ? `true` : ``));
 }
 function _(_) {
-  _(64, _.bAccessibilityResizableUI),
+  (_(64, _.bAccessibilityResizableUI),
     _(65, _.bAccessibilitySubtitles),
     _(66, _.bAccessibilityColorAlternatives),
     _(67, _.bAccessibilityCameraComfort),
@@ -12862,7 +12863,7 @@ function _(_) {
       ?.setAttribute(`value`, `true`),
     document
       .querySelector(`[name="app[content][accessibilitywizard][v2]"]`)
-      ?.setAttribute(`value`, `true`);
+      ?.setAttribute(`value`, `true`));
   let _ = document.getElementById(`submitBtn`);
   _ && _.click();
 }

@@ -1611,7 +1611,7 @@ function _(_) {
       let _ = _.onboarded ? `pub` : `newpartner`,
         _ = `${_.PARTNER_BASE_URL}${_}/ajaxstarttaxidentityworkflow/${_.deadline.data.partnerid}`,
         _ = new FormData();
-      _.append(`sessionid`, _()), _(!0);
+      (_.append(`sessionid`, _()), _(!0));
       try {
         let _ = await _.default.post(_, _, {
           withCredentials: !0,

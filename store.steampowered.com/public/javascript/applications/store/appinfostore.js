@@ -77,7 +77,7 @@ function h(e, t, n, r, i) {
       if (!a) return ``;
       e = e.replace(o, a);
     }
-  return (e = g(e, i)), e;
+  return ((e = g(e, i)), e);
 }
 function g(e, t) {
   let n = e.match(/%[A-Za-z0-9_:]+%/g);
@@ -134,7 +134,7 @@ var _ = 1209600,
         !this.m_mapAppInfo.has(e))
       ) {
         let t = new r(e);
-        this.m_mapAppInfo.set(e, t), this.QueueAppInfoRequest(e);
+        (this.m_mapAppInfo.set(e, t), this.QueueAppInfoRequest(e));
       }
       return this.m_mapAppInfo.get(e);
     }
@@ -152,23 +152,23 @@ var _ = 1209600,
     async FlushPendingAppInfo() {
       let e = this.m_PendingAppInfoResolve,
         t = Array.from(this.m_setPendingAppInfo);
-      (this.m_PendingAppInfoPromise = void 0),
+      ((this.m_PendingAppInfoPromise = void 0),
         (this.m_PendingAppInfoResolve = void 0),
         this.m_setPendingAppInfo.clear(),
         await this.LoadAppInfoBatch(t),
-        e?.();
+        e?.());
     }
     async LoadAppInfoBatch(e) {
       this.m_cAppInfoRequestsInFlight++;
       let t = await this.LoadAppInfoBatchFromLocalCache(e);
       if (t.length) {
-        console.log(`Loading batch of App Info from Steam: `, t),
-          await this.m_CMInterface?.WaitUntilLoggedOn();
+        (console.log(`Loading batch of App Info from Steam: `, t),
+          await this.m_CMInterface?.WaitUntilLoggedOn());
         let e = l.Init(a);
-        for (e.Body().set_language(c(f.LANGUAGE)); t.length > 0; ) {
+        for (e.Body().set_language(c(f.LANGUAGE)); t.length > 0;) {
           let n = Math.min(50, t.length),
             r = t.slice(0, n);
-          (t = t.slice(n)), e.Body().set_appids(r);
+          ((t = t.slice(n)), e.Body().set_appids(r));
           let i = await u.GetApps(this.m_CMInterface.GetServiceTransport(), e);
           i.GetEResult() == 1
             ? this.OnGetAppsResponse(i)
@@ -187,20 +187,20 @@ var _ = 1209600,
       let t = [];
       for (let n of e.Body().apps()) {
         let e = this.m_mapAppInfo.get(n.appid());
-        d(e, `Got AppInfo response for unrequested AppID: ${n.appid()}`),
+        (d(e, `Got AppInfo response for unrequested AppID: ${n.appid()}`),
           e &&
             ((e = new r(n.appid())),
             e.DeserializeFromMessage(n),
             this.m_mapAppInfo.set(n.appid(), e),
-            t.push(e));
+            t.push(e)));
       }
       this.SaveAppInfoBatchToLocalCache(t);
     }
     OnAppOverviewChange(e) {
       for (let t of e) {
         let e = new r(t.appid());
-        e.DeserializeFromAppOverview(t),
-          e.is_initialized && this.m_mapAppInfo.set(t.appid(), e);
+        (e.DeserializeFromAppOverview(t),
+          e.is_initialized && this.m_mapAppInfo.set(t.appid(), e));
       }
     }
     async EnsureAppInfoForAppIDs(e) {
@@ -349,7 +349,7 @@ var _ = 1209600,
       );
     }
   };
-s([t], v.prototype, `OnGetAppsResponse`, null),
-  s([t], v.prototype, `OnRichPresenceLocUpdate`, null);
+(s([t], v.prototype, `OnGetAppsResponse`, null),
+  s([t], v.prototype, `OnRichPresenceLocUpdate`, null));
 var y = new v();
 export { y as t };

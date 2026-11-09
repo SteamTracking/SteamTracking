@@ -12,11 +12,11 @@ function c(e) {
     a = { borderColor: r, borderLeftColor: n };
   if (typeof t == `number`) {
     let e = `${t}px`;
-    (a.width = e),
+    ((a.width = e),
       (a.height = e),
       (a.minHeight = e),
       (a.minWidth = e),
-      (a.borderWidth = `${t / 10}px`);
+      (a.borderWidth = `${t / 10}px`));
   }
   return (0, s.jsx)(`div`, {
     className: i(

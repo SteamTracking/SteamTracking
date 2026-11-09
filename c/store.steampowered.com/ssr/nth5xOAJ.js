@@ -64,7 +64,7 @@ var _ = _.memo(function (_) {
           _ = _;
           break;
         default:
-          return _(_, `Unhandled steam os category: ${_}`), null;
+          return (_(_, `Unhandled steam os category: ${_}`), null);
       }
     } else {
       let _;
@@ -92,7 +92,7 @@ var _ = _.memo(function (_) {
           _ = _;
           break;
         default:
-          return _(_, `Unhandled deck compat category: ${_}`), null;
+          return (_(_, `Unhandled deck compat category: ${_}`), null);
       }
     }
     return (0, _.jsxs)(`span`, {
@@ -404,4 +404,3 @@ function _() {
     }),
   });
 }
-export { _, _ };

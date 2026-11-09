@@ -10,15 +10,19 @@ var u = class extends n {
     #n;
     #r;
     constructor(e, t) {
-      super(), (this.#e = e), this.setOptions(t), this.bindMethods(), this.#i();
+      (super(),
+        (this.#e = e),
+        this.setOptions(t),
+        this.bindMethods(),
+        this.#i());
     }
     bindMethods() {
-      (this.mutate = this.mutate.bind(this)),
-        (this.reset = this.reset.bind(this));
+      ((this.mutate = this.mutate.bind(this)),
+        (this.reset = this.reset.bind(this)));
     }
     setOptions(e) {
       let t = this.options;
-      (this.options = this.#e.defaultMutationOptions(e)),
+      ((this.options = this.#e.defaultMutationOptions(e)),
         a(this.options, t) ||
           this.#e
             .getMutationCache()
@@ -32,19 +36,19 @@ var u = class extends n {
         r(t.mutationKey) !== r(this.options.mutationKey)
           ? this.reset()
           : this.#n?.state.status === `pending` &&
-            this.#n.setOptions(this.options);
+            this.#n.setOptions(this.options));
     }
     onUnsubscribe() {
       this.hasListeners() || this.#n?.removeObserver(this);
     }
     onMutationUpdate(e) {
-      this.#i(), this.#a(e);
+      (this.#i(), this.#a(e));
     }
     getCurrentResult() {
       return this.#t;
     }
     reset() {
-      this.#n?.removeObserver(this), (this.#n = void 0), this.#i(), this.#a();
+      (this.#n?.removeObserver(this), (this.#n = void 0), this.#i(), this.#a());
     }
     mutate(e, t) {
       return (

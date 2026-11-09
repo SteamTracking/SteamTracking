@@ -28,15 +28,15 @@ function _(_, _) {
     (_ = Object.setPrototypeOf
       ? Object.setPrototypeOf.bind()
       : function (_, _) {
-          return (_.__proto__ = _), _;
+          return ((_.__proto__ = _), _);
         }),
     _(_, _)
   );
 }
 function _(_, _) {
-  (_.prototype = Object.create(_.prototype)),
+  ((_.prototype = Object.create(_.prototype)),
     (_.prototype.constructor = _),
-    _(_, _);
+    _(_, _));
 }
 var _ = _((_, _) => {
     _.exports = `SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED`;
@@ -45,7 +45,7 @@ var _ = _((_, _) => {
     var _ = _();
     function _() {}
     function _() {}
-    (_.resetWarningCache = _),
+    ((_.resetWarningCache = _),
       (_.exports = function () {
         function _(_, _, _, _, _, _) {
           if (_ !== _) {
@@ -82,8 +82,8 @@ var _ = _((_, _) => {
           checkPropTypes: _,
           resetWarningCache: _,
         };
-        return (_.PropTypes = _), _;
-      });
+        return ((_.PropTypes = _), _);
+      }));
   }),
   _ = _(
     _((_, _) => {
@@ -117,10 +117,10 @@ function _(_, _) {
     var _ = _[_];
     _ === `.` ? _(_, _) : _ === `..` ? (_(_, _), _++) : _ && (_(_, _), _--);
   }
-  if (!_) for (; _--; ) _.unshift(`..`);
+  if (!_) for (; _--;) _.unshift(`..`);
   !_ || _[0] === `` || (_[0] && _(_[0])) || _.unshift(``);
   var _ = _.join(`/`);
-  return _ && _.substr(-1) !== `/` && (_ += `/`), _;
+  return (_ && _.substr(-1) !== `/` && (_ += `/`), _);
 }
 var _ = `Invariant failed`;
 function _(_, _) {
@@ -235,10 +235,10 @@ function _() {
     return (
       _.push(_),
       function () {
-        (_ = !1),
+        ((_ = !1),
           (_ = _.filter(function (_) {
             return _ !== _;
-          }));
+          })));
       }
     );
   }
@@ -291,7 +291,7 @@ function _() {
   }
 }
 function _(_) {
-  _ === void 0 && (_ = {}), !_ && _(!1);
+  (_ === void 0 && (_ = {}), !_ && _(!1));
   var _ = window.history,
     _ = _(),
     _ = !_(),
@@ -312,14 +312,14 @@ function _(_) {
       _ = _.search,
       _ = _.hash,
       _ = _ + _ + _;
-    return _ && (_ = _(_, _)), _(_, _, _);
+    return (_ && (_ = _(_, _)), _(_, _, _));
   }
   function _() {
     return Math.random().toString(36).substr(2, _);
   }
   var _ = _();
   function _(_) {
-    _(_, _), (_.length = _.length), _.notifyListeners(_.location, _.action);
+    (_(_, _), (_.length = _.length), _.notifyListeners(_.location, _.action));
   }
   function _(_) {
     _(_) || _(_(_.state));
@@ -329,7 +329,7 @@ function _(_) {
   }
   var _ = !1;
   function _(_) {
-    if (_) (_ = !1), _();
+    if (_) ((_ = !1), _());
     else {
       var _ = `POP`;
       _.confirmTransitionTo(_, _, _, function (_) {
@@ -380,12 +380,12 @@ function _(_) {
           else {
             var _ = _.indexOf(_.location.key),
               _ = _.slice(0, _ + 1);
-            _.push(_.key),
+            (_.push(_.key),
               (_ = _),
               _({
                 action: _,
                 location: _,
-              });
+              }));
           }
         } else window.location.href = _;
       }
@@ -414,11 +414,11 @@ function _(_) {
             window.location.replace(_);
           else {
             var _ = _.indexOf(_.location.key);
-            _ !== -1 && (_[_] = _.key),
+            (_ !== -1 && (_[_] = _.key),
               _({
                 action: _,
                 location: _,
-              });
+              }));
           }
         } else window.location.replace(_);
       }
@@ -435,12 +435,12 @@ function _(_) {
   }
   var _ = 0;
   function _(_) {
-    (_ += _),
+    ((_ += _),
       _ === 1 && _ === 1
         ? (window.addEventListener(_, _), _ && window.addEventListener(_, _))
         : _ === 0 &&
           (window.removeEventListener(_, _),
-          _ && window.removeEventListener(_, _));
+          _ && window.removeEventListener(_, _)));
   }
   var _ = !1;
   function _(_) {
@@ -449,7 +449,7 @@ function _(_) {
     return (
       (_ ||= (_(1), !0)),
       function () {
-        return _ && ((_ = !1), _(-1)), _();
+        return (_ && ((_ = !1), _(-1)), _());
       }
     );
   }
@@ -458,7 +458,7 @@ function _(_) {
     return (
       _(1),
       function () {
-        _(-1), _();
+        (_(-1), _());
       }
     );
   }
@@ -512,7 +512,7 @@ function _(_) {
   window.location.replace(_(window.location.href) + `#` + _);
 }
 function _(_) {
-  _ === void 0 && (_ = {}), !_ && _(!1);
+  (_ === void 0 && (_ = {}), !_ && _(!1));
   var _ = window.history;
   _();
   var _ = _,
@@ -526,11 +526,11 @@ function _(_) {
     _ = _.decodePath;
   function _() {
     var _ = _(_());
-    return _ && (_ = _(_, _)), _(_);
+    return (_ && (_ = _(_, _)), _(_));
   }
   var _ = _();
   function _(_) {
-    _(_, _), (_.length = _.length), _.notifyListeners(_.location, _.action);
+    (_(_, _), (_.length = _.length), _.notifyListeners(_.location, _.action));
   }
   var _ = !1,
     _ = null;
@@ -547,11 +547,11 @@ function _(_) {
       var _ = _(),
         _ = _.location;
       if ((!_ && _(_, _)) || _ === _(_)) return;
-      (_ = null), _(_);
+      ((_ = null), _(_));
     }
   }
   function _(_) {
-    if (_) (_ = !1), _();
+    if (_) ((_ = !1), _());
     else {
       var _ = `POP`;
       _.confirmTransitionTo(_, _, _, function (_) {
@@ -594,15 +594,15 @@ function _(_) {
         var _ = _(_),
           _ = _(_ + _);
         if (_() !== _) {
-          (_ = _), _(_);
+          ((_ = _), _(_));
           var _ = _.lastIndexOf(_(_.location)),
             _ = _.slice(0, _ + 1);
-          _.push(_),
+          (_.push(_),
             (_ = _),
             _({
               action: _,
               location: _,
-            });
+            }));
         } else _();
       }
     });
@@ -616,11 +616,11 @@ function _(_) {
           _ = _(_ + _);
         _() !== _ && ((_ = _), _(_));
         var _ = _.indexOf(_(_.location));
-        _ !== -1 && (_[_] = _),
+        (_ !== -1 && (_[_] = _),
           _({
             action: _,
             location: _,
-          });
+          }));
       }
     });
   }
@@ -635,10 +635,10 @@ function _(_) {
   }
   var _ = 0;
   function _(_) {
-    (_ += _),
+    ((_ += _),
       _ === 1 && _ === 1
         ? window.addEventListener(_, _)
-        : _ === 0 && window.removeEventListener(_, _);
+        : _ === 0 && window.removeEventListener(_, _));
   }
   var _ = !1;
   function _(_) {
@@ -647,7 +647,7 @@ function _(_) {
     return (
       (_ ||= (_(1), !0)),
       function () {
-        return _ && ((_ = !1), _(-1)), _();
+        return (_ && ((_ = !1), _(-1)), _());
       }
     );
   }
@@ -656,7 +656,7 @@ function _(_) {
     return (
       _(1),
       function () {
-        _(-1), _();
+        (_(-1), _());
       }
     );
   }
@@ -684,11 +684,11 @@ var _ = _((_, _) => {
   }),
   _ = _((_, _) => {
     var _ = _();
-    (_.exports = _),
+    ((_.exports = _),
       (_.exports.parse = _),
       (_.exports.compile = _),
       (_.exports.tokensToFunction = _),
-      (_.exports.tokensToRegExp = _);
+      (_.exports.tokensToRegExp = _));
     var _ = RegExp(
       `(\\\\.)|([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))`,
       `g`,
@@ -730,7 +730,7 @@ var _ = _((_, _) => {
           });
         }
       }
-      return _ < _.length && (_ += _.substr(_)), _ && _.push(_), _;
+      return (_ < _.length && (_ += _.substr(_)), _ && _.push(_), _);
     }
     function _(_, _) {
       return !_ || _.indexOf(_) > -1
@@ -826,7 +826,7 @@ var _ = _((_, _) => {
       return _.replace(/([=!:$\/()])/g, `\\$1`);
     }
     function _(_, _) {
-      return (_.keys = _), _;
+      return ((_.keys = _), _);
     }
     function _(_) {
       return _ && _.sensitive ? `` : `i`;
@@ -855,7 +855,7 @@ var _ = _((_, _) => {
       return _(_(_, _), _, _);
     }
     function _(_, _, _) {
-      _(_) || ((_ = _ || _), (_ = [])), (_ ||= {});
+      (_(_) || ((_ = _ || _), (_ = [])), (_ ||= {}));
       for (
         var _ = _.strict, _ = _.end !== !1, _ = ``, _ = 0;
         _ < _.length;
@@ -866,14 +866,14 @@ var _ = _((_, _) => {
         else {
           var _ = _(_.prefix),
             _ = `(?:` + _.pattern + `)`;
-          _.push(_),
+          (_.push(_),
             _.repeat && (_ += `(?:` + _ + _ + `)*`),
             (_ = _.optional
               ? _.partial
                 ? _ + `(` + _ + `)?`
                 : `(?:` + _ + `(` + _ + `))?`
               : _ + `(` + _ + `)`),
-            (_ += _);
+            (_ += _));
         }
       }
       var _ = _(_.delimiter || `/`),
@@ -951,7 +951,7 @@ var _ = _((_, _) => {
     function _(_) {
       return _(_) === _;
     }
-    (_.AsyncMode = _),
+    ((_.AsyncMode = _),
       (_.ConcurrentMode = _),
       (_.ContextConsumer = _),
       (_.ContextProvider = _),
@@ -1024,7 +1024,7 @@ var _ = _((_, _) => {
               _.$$typeof === _))
         );
       }),
-      (_.typeOf = _);
+      (_.typeOf = _));
   }),
   _ = _((_, _) => {
     _.exports = _();
@@ -1069,7 +1069,7 @@ var _ = _((_, _) => {
         type: !0,
       },
       _ = {};
-    (_[_.ForwardRef] = _), (_[_.Memo] = _);
+    ((_[_.ForwardRef] = _), (_[_.Memo] = _));
     function _(_) {
       return _.isMemo(_) ? _ : _[_.$$typeof] || _;
     }
@@ -1102,7 +1102,7 @@ var _ = _((_, _) => {
     _.exports = _;
   }),
   _ = _(_());
-_(), _();
+(_(), _());
 var _ = 1073741823,
   _ =
     typeof globalThis < `u`
@@ -1134,10 +1134,10 @@ function _(_) {
       return _;
     },
     set: function (_, _) {
-      (_ = _),
+      ((_ = _),
         _.forEach(function (_) {
           return _(_, _);
-        });
+        }));
     },
   };
 }
@@ -1163,7 +1163,7 @@ function _(_, _) {
       return (
         (_.getChildContext = function () {
           var _ = {};
-          return (_[_] = this.emitter), _;
+          return ((_[_] = this.emitter), _);
         }),
         (_.componentWillReceiveProps = function (_) {
           if (this.props.value !== _.value) {
@@ -1238,12 +1238,12 @@ function _(_, _) {
 var _ = _.createContext || _,
   _ = function (_) {
     var _ = _();
-    return (_.displayName = _), _;
+    return ((_.displayName = _), _);
   },
   _ = _(`Router-History`),
   _ = _(`Router`),
   _ = (function (_) {
-    _(_, _),
+    (_(_, _),
       (_.computeRootMatch = function (_) {
         return {
           path: `/`,
@@ -1251,7 +1251,7 @@ var _ = _.createContext || _,
           params: {},
           isExact: _ === `/`,
         };
-      });
+      }));
     function _(_) {
       var _ = _.call(this, _) || this;
       return (
@@ -1271,7 +1271,7 @@ var _ = _.createContext || _,
     return (
       (_.componentDidMount = function () {
         var _ = this;
-        (this._isMounted = !0),
+        ((this._isMounted = !0),
           this.unlisten && this.unlisten(),
           this.props.staticContext ||
             (this.unlisten = this.props.history.listen(function (_) {
@@ -1283,7 +1283,7 @@ var _ = _.createContext || _,
           this._pendingLocation &&
             this.setState({
               location: this._pendingLocation,
-            });
+            }));
       }),
       (_.componentWillUnmount = function () {
         this.unlisten &&
@@ -1311,7 +1311,7 @@ var _ = _.createContext || _,
       _
     );
   })(_.Component);
-_.Component, _.Component;
+(_.Component, _.Component);
 var _ = {},
   _ = 1e4,
   _ = 0;
@@ -1324,14 +1324,14 @@ function _(_, _) {
       regexp: (0, _.default)(_, _, _),
       keys: _,
     };
-  return _ < _ && ((_[_] = _), _++), _;
+  return (_ < _ && ((_[_] = _), _++), _);
 }
 function _(_, _) {
-  _ === void 0 && (_ = {}),
+  (_ === void 0 && (_ = {}),
     (typeof _ == `string` || Array.isArray(_)) &&
       (_ = {
         path: _,
-      });
+      }));
   var _ = _,
     _ = _.path,
     _ = _.exact,
@@ -1362,7 +1362,7 @@ function _(_, _) {
           url: _ === `/` && _ === `` ? `/` : _,
           isExact: _,
           params: _.reduce(function (_, _, _) {
-            return (_[_.name] = _[_]), _;
+            return ((_[_.name] = _[_]), _);
           }, {}),
         };
   }, null);
@@ -1426,7 +1426,7 @@ var _ = (function (_) {
         _ = _ === void 0 ? `` : _,
         _ = _.context,
         _ = _ === void 0 ? {} : _;
-      (_.action = _), (_.location = _(_, _(_))), (_.url = _(_.location));
+      ((_.action = _), (_.location = _(_, _(_))), (_.url = _(_.location)));
     }),
     (_.render = function () {
       var _ = this.props,
@@ -1470,4 +1470,3 @@ function _() {
 function _() {
   return _(_).location;
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

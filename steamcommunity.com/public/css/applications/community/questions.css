@@ -103,7 +103,7 @@ body.qanda {
 }
 .tnkl4wvxTNk- {
   background-color: #22252b;
-  grid-template: "desc reload" "entry entry" / auto 34px;
+  grid-template: "desc reload" "entry entry"/auto 34px;
   row-gap: 8px;
   padding: 8px;
   display: grid;

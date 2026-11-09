@@ -42,7 +42,7 @@
     radial-gradient(
       8% 130% at 0% 50%,
       var(--edge-glow) 0%,
-      rgb(from var(--edge-glow) r g b / 0%) 100%
+      rgb(from var(--edge-glow) r g b/0%) 100%
     ),
     radial-gradient(
       70% 277% at 21% 24%,
@@ -141,12 +141,8 @@
   --scroll-speed: 100s;
   transform: translate(-50%, -50%) rotate(calc(-1 * var(--tilt)));
   width: calc(
-    100cqw *
-    cos(var(--tilt)) +
-    100cqh *
-    sin(var(--tilt)) +
-    2 *
-    var(--tile-width)
+    100cqw * cos(var(--tilt)) + 100cqh * sin(var(--tilt)) + 2 *
+      var(--tile-width)
   );
   height: calc(100cqw * sin(var(--tilt)) + 100cqh * cos(var(--tilt)));
   position: absolute;
@@ -172,7 +168,7 @@
 ._570S1mNvERY- .-WitQ9830v8-,
 ._570S1mNvERY- svg {
   box-shadow: 0px 0px 10px 5px
-    rgb(from var(--color-progress-bar-foreground) r g b / 50%);
+    rgb(from var(--color-progress-bar-foreground) r g b/50%);
 }
 ._42StosQ-KgY- {
   width: 100%;
@@ -250,15 +246,10 @@
   --min-scale: 0.5;
   --max-scale: 1;
   --star-scale: calc(
-    var(--min-scale) +
-    (var(--max-scale) - var(--min-scale)) *
-    var(--scale, 1)
+    var(--min-scale) + (var(--max-scale) - var(--min-scale)) * var(--scale, 1)
   );
   --star-delay: calc(
-    -1 *
-    var(--delay, 0) *
-    var(--travel-duration) /
-    var(--star-scale)
+    -1 * var(--delay, 0) * var(--travel-duration) / var(--star-scale)
   );
   width: 16px;
   height: 16px;
@@ -269,11 +260,11 @@
     rotate(var(--r, 0deg)) scale(var(--star-scale));
   animation:
     b59Mo0Dum4A- calc(var(--travel-duration) / var(--star-scale)) infinite
-    linear var(--star-delay),
+      linear var(--star-delay),
     YiiCnv5rY4I- calc(1.5s / var(--star-scale)) infinite linear
-    var(--star-delay),
+      var(--star-delay),
     m4LuBN2XxfA- calc(1.5s / var(--star-scale)) infinite ease-out
-    var(--star-delay),
+      var(--star-delay),
     oA3GYiR4IYc- calc(1s / var(--star-scale)) infinite linear var(--star-delay);
   display: block;
   position: absolute;

@@ -14,9 +14,9 @@ var CLSTAMP = "10560831";
     var a = o[e];
     if (void 0 !== a) return a.exports;
     var n = (o[e] = { id: e, loaded: !1, exports: {} });
-    return d[e].call(n.exports, n, n.exports, i), (n.loaded = !0), n.exports;
+    return (d[e].call(n.exports, n, n.exports, i), (n.loaded = !0), n.exports);
   }
-  (i.m = d),
+  ((i.m = d),
     (e = []),
     (i.O = (a, n, r, s) => {
       if (!n) {
@@ -40,7 +40,7 @@ var CLSTAMP = "10560831";
     }),
     (i.n = (e) => {
       var a = e && e.__esModule ? () => e.default : () => e;
-      return i.d(a, { a }), a;
+      return (i.d(a, { a }), a);
     }),
     (n = Object.getPrototypeOf
       ? (e) => Object.getPrototypeOf(e)
@@ -57,7 +57,7 @@ var CLSTAMP = "10560831";
       a = a || [null, n({}), n([]), n(n)];
       for (var o = 2 & r && e; "object" == typeof o && !~a.indexOf(o); o = n(o))
         Object.getOwnPropertyNames(o).forEach((a) => (d[a] = () => e[a]));
-      return (d.default = () => e), i.d(s, d), s;
+      return ((d.default = () => e), i.d(s, d), s);
     }),
     (i.d = (e, a) => {
       for (var n in a)
@@ -226,16 +226,16 @@ var CLSTAMP = "10560831";
               break;
             }
           }
-        o ||
+        (o ||
           ((t = !0),
           ((o = document.createElement("script")).charset = "utf-8"),
           (o.timeout = 120),
           i.nc && o.setAttribute("nonce", i.nc),
           o.setAttribute("data-webpack", s + n),
           (o.src = e)),
-          (r[e] = [a]);
+          (r[e] = [a]));
         var h = (a, n) => {
-            (o.onerror = o.onload = null), clearTimeout(j);
+            ((o.onerror = o.onload = null), clearTimeout(j));
             var s = r[e];
             if (
               (delete r[e],
@@ -249,22 +249,22 @@ var CLSTAMP = "10560831";
             h.bind(null, void 0, { type: "timeout", target: o }),
             12e4,
           );
-        (o.onerror = h.bind(null, o.onerror)),
+        ((o.onerror = h.bind(null, o.onerror)),
           (o.onload = h.bind(null, o.onload)),
-          t && document.head.appendChild(o);
+          t && document.head.appendChild(o));
       }
     }),
     (i.r = (e) => {
-      "undefined" != typeof Symbol &&
+      ("undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
-        Object.defineProperty(e, "__esModule", { value: !0 });
+        Object.defineProperty(e, "__esModule", { value: !0 }));
     }),
     (i.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
     (i.p = ""),
     (() => {
       var e = { 4556: 0 };
-      (i.f.j = (a, n) => {
+      ((i.f.j = (a, n) => {
         var r = i.o(e, a) ? e[a] : void 0;
         if (0 !== r)
           if (r) n.push(r[2]);
@@ -279,12 +279,12 @@ var CLSTAMP = "10560831";
                 if (i.o(e, a) && (0 !== (r = e[a]) && (e[a] = void 0), r)) {
                   var s = n && ("load" === n.type ? "missing" : n.type),
                     d = n && n.target && n.target.src;
-                  (o.message =
+                  ((o.message =
                     "Loading chunk " + a + " failed.\n(" + s + ": " + d + ")"),
                     (o.name = "ChunkLoadError"),
                     (o.type = s),
                     (o.request = d),
-                    r[1](o);
+                    r[1](o));
                 }
               },
               "chunk-" + a,
@@ -292,7 +292,7 @@ var CLSTAMP = "10560831";
             );
           } else e[a] = 0;
       }),
-        (i.O.j = (a) => 0 === e[a]);
+        (i.O.j = (a) => 0 === e[a]));
       var a = (a, n) => {
           var r,
             s,
@@ -303,10 +303,10 @@ var CLSTAMP = "10560831";
             if (t) var f = t(i);
           }
           for (a && a(n); c < d.length; c++)
-            (s = d[c]), i.o(e, s) && e[s] && e[s][0](), (e[s] = 0);
+            ((s = d[c]), i.o(e, s) && e[s] && e[s][0](), (e[s] = 0));
           return i.O(f);
         },
         n = (self.webpackChunkcsgo_react = self.webpackChunkcsgo_react || []);
-      n.forEach(a.bind(null, 0)), (n.push = a.bind(null, n.push.bind(n)));
-    })();
+      (n.forEach(a.bind(null, 0)), (n.push = a.bind(null, n.push.bind(n))));
+    })());
 })();

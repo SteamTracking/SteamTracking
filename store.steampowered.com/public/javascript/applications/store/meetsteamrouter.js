@@ -55,13 +55,13 @@ function oe(e, t, n, r) {
   return a({
     mutationFn: async ({ bIncludeSelf: i, rgGuests: a }) => {
       let o = new FormData();
-      o.append(`sessionid`, k()),
+      (o.append(`sessionid`, k()),
         o.append(`gid`, e),
         o.append(`accountid`, `` + t),
         o.append(`meetsteam_group_id`, `` + n),
         o.append(`meetsteam_session_id`, `` + r),
         o.append(`include_self`, `` + +!!i),
-        a?.length && o.append(`guests`, a.join(`|`));
+        a?.length && o.append(`guests`, a.join(`|`)));
       let s = `${j.STORE_BASE_URL}meetsteam/ajaxupdateattendance`;
       return (
         (await R.default.post(s, o, { withCredentials: !0 }))?.data?.success ==
@@ -74,11 +74,11 @@ function se(e, t, n) {
   return a({
     mutationFn: async ({ nCapacity: r }) => {
       let i = new FormData();
-      i.append(`sessionid`, k()),
+      (i.append(`sessionid`, k()),
         i.append(`gid`, e),
         i.append(`meetsteam_group_id`, `` + t),
         i.append(`meetsteam_session_id`, `` + n),
-        i.append(`capacity`, `` + r);
+        i.append(`capacity`, `` + r));
       let a = `${j.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`;
       return (
         (await R.default.post(a, i, { withCredentials: !0 }))?.data?.success ==
@@ -401,7 +401,7 @@ function xe(e) {
         strTitle: S(`#Button_Submit`),
         bAllowFullSize: !0,
         onOK: async () => {
-          o.fnSetLoading(!0),
+          (o.fnSetLoading(!0),
             i
               .mutateAsync({ bIncludeSelf: n, rgGuests: r })
               .then((e) => {
@@ -414,7 +414,7 @@ function xe(e) {
               })
               .catch(() =>
                 o.fnSetStrError(S(`#Login_Error_Network_Description`)),
-              );
+              ));
         },
         children: `Mark as checked in?`,
       });
@@ -466,14 +466,14 @@ var Ce = `nRDp-l61YHE-`,
   ze = `_05vyEbktq5k-`;
 function Z(e) {
   let t = new Date(e.getTime());
-  return t.setHours(0, 0, 0, 0), t;
+  return (t.setHours(0, 0, 0, 0), t);
 }
 function Be(e, t) {
   return e.reduce((e, n) => {
     let r = t(n),
       i = Math.floor(r.getTime() / 1e3),
       a = e.get(i) || [];
-    return e.set(i, [...a, n]), e;
+    return (e.set(i, [...a, n]), e);
   }, new Map());
 }
 function Ve(e) {
@@ -624,7 +624,7 @@ function We(e) {
         return e.reduce((e, t) => {
           let n = `${t.group_id}_${t.session_id}`,
             r = e.get(n) ?? [];
-          return r.push(t), e.set(n, r), e;
+          return (r.push(t), e.set(n, r), e);
         }, new Map());
     }, []);
   if (!s || (a.size == 0 && !o)) return;

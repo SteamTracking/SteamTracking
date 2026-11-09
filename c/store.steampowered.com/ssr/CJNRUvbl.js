@@ -4,15 +4,19 @@ var _ = class extends _ {
     #n;
     #r;
     constructor(_, _) {
-      super(), (this.#e = _), this.setOptions(_), this.bindMethods(), this.#i();
+      (super(),
+        (this.#e = _),
+        this.setOptions(_),
+        this.bindMethods(),
+        this.#i());
     }
     bindMethods() {
-      (this.mutate = this.mutate.bind(this)),
-        (this.reset = this.reset.bind(this));
+      ((this.mutate = this.mutate.bind(this)),
+        (this.reset = this.reset.bind(this)));
     }
     setOptions(_) {
       let _ = this.options;
-      (this.options = this.#e.defaultMutationOptions(_)),
+      ((this.options = this.#e.defaultMutationOptions(_)),
         _(this.options, _) ||
           this.#e.getMutationCache().notify({
             type: `observerOptionsUpdated`,
@@ -24,19 +28,19 @@ var _ = class extends _ {
         _(_.mutationKey) !== _(this.options.mutationKey)
           ? this.reset()
           : this.#n?.state.status === `pending` &&
-            this.#n.setOptions(this.options);
+            this.#n.setOptions(this.options));
     }
     onUnsubscribe() {
       this.hasListeners() || this.#n?.removeObserver(this);
     }
     onMutationUpdate(_) {
-      this.#i(), this.#a(_);
+      (this.#i(), this.#a(_));
     }
     getCurrentResult() {
       return this.#t;
     }
     reset() {
-      this.#n?.removeObserver(this), (this.#n = void 0), this.#i(), this.#a();
+      (this.#n?.removeObserver(this), (this.#n = void 0), this.#i(), this.#a());
     }
     mutate(_, _) {
       return (
@@ -102,4 +106,3 @@ function _(_, _) {
     mutateAsync: _.mutate,
   };
 }
-export { _ };

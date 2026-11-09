@@ -149,7 +149,7 @@ function q(e) {
         let t = h(e, `thumb`),
           r = h(e, `600x338`),
           a = S.length;
-        S.push(
+        (S.push(
           (0, G.jsx)(
             `div`,
             {
@@ -182,7 +182,7 @@ function q(e) {
               { className: M, children: (0, G.jsx)(`img`, { src: r, alt: i }) },
               n + `_big_` + t,
             ),
-          );
+          ));
       }
     }),
     !t && (!C || C.length == 0))

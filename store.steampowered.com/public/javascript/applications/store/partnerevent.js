@@ -122,7 +122,7 @@ f(
     m_eventModel;
     m_entry;
     constructor(e, t) {
-      (this.m_eventModel = e), (this.m_entry = t);
+      ((this.m_eventModel = e), (this.m_entry = t));
     }
     GetEventStartTime() {
       return this.m_entry.rtime_start_specific
@@ -137,7 +137,7 @@ f(
 var M = 99999,
   N = `exploration`,
   P = (function (e) {
-    return (e.Random = `r`), (e.Personalized = `p`), e;
+    return ((e.Random = `r`), (e.Personalized = `p`), e);
   })({});
 function F(e) {
   switch (e) {
@@ -561,7 +561,7 @@ var Z = {
     }
     static FromCClanEventData(t, n) {
       let r = new e();
-      (r.GID = t.gid),
+      ((r.GID = t.gid),
         (r.clanSteamID = new d(t.clan_steamid)),
         r.name.set(n, t.event_name ?? ``),
         (r.type = t.event_type),
@@ -592,7 +592,7 @@ var Z = {
             t.broadcaster_accountid,
             u.EUNIVERSE,
           )),
-        (r.AnnouncementGID = t.announcement_body?.gid ?? `0`);
+        (r.AnnouncementGID = t.announcement_body?.gid ?? `0`));
       let i = t.clan_steamid_original;
       return (
         i
@@ -723,12 +723,12 @@ var Z = {
     }
     GetDayIndexFromEventStart(e = s()) {
       let t = 0;
-      this.startTime !== void 0 &&
+      (this.startTime !== void 0 &&
         e >= this.startTime &&
         (t = Math.floor((e - this.startTime) / 86400)),
         this.m_overrideCurrentDay !== void 0 &&
           this.m_overrideCurrentDay >= 0 &&
-          (t = this.m_overrideCurrentDay);
+          (t = this.m_overrideCurrentDay));
       let n = this.GetLastReferencedSaleDay() || 0;
       return Math.min(t, n);
     }
@@ -1538,7 +1538,7 @@ var Z = {
       };
     }
   };
-f([e], $.prototype, `GID`, void 0),
+(f([e], $.prototype, `GID`, void 0),
   f([e], $.prototype, `AnnouncementGID`, void 0),
   f([e], $.prototype, `forumTopicGID`, void 0),
   f([e], $.prototype, `type`, void 0),
@@ -1572,7 +1572,7 @@ f([e], $.prototype, `GID`, void 0),
   f([e], $.prototype, `rtime32_moderator_reviewed`, void 0),
   f([e], $.prototype, `video_preview_type`, void 0),
   f([e], $.prototype, `video_preview_id`, void 0),
-  f([e], $.prototype, `m_overrideCurrentDay`, void 0);
+  f([e], $.prototype, `m_overrideCurrentDay`, void 0));
 function He(e) {
   if (e) return e?.replace(/[()]/g, `\\$&`);
 }

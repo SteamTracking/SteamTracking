@@ -74,7 +74,7 @@ async function _() {
       _: 0,
     },
   };
-  _(_),
+  (_(_),
     (window.SSR.reactRoot = (0, _.hydrateRoot)(
       document,
       (0, _.jsx)(_, {
@@ -85,6 +85,5 @@ async function _() {
         renderContext: _,
         snr: _.snr,
       }),
-    ));
+    )));
 }
-export { _, _ };

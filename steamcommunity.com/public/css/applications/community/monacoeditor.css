@@ -1802,7 +1802,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   user-select: none;
-  font: 16px / 1 codicon;
+  font: 16px/1 codicon;
   text-decoration: none;
   display: inline-block;
 }
@@ -2203,7 +2203,7 @@
   color: var(--vscode-editorCodeLens-foreground);
   line-height: var(--vscode-editorCodeLens-lineHeight);
   font-size: var(--vscode-editorCodeLens-fontSize);
-  padding-right: calc(var(--vscode-editorCodeLens-fontSize) * 0.5);
+  padding-right: calc(var(--vscode-editorCodeLens-fontSize)*0.5);
   font-feature-settings: var(--vscode-editorCodeLens-fontFeatureSettings);
   font-family:
     var(--vscode-editorCodeLens-fontFamily),
@@ -2271,9 +2271,8 @@
 .colorpicker-header {
   height: 24px;
   image-rendering: pixelated;
-  background:
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTZEaa/1AAAAHUlEQVQYV2PYvXu3JAi7uLiAMaYAjAGTQBPYLQkAa/0Zef3qRswAAAAASUVORK5CYII=)
-    0 0 / 9px 9px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTZEaa/1AAAAHUlEQVQYV2PYvXu3JAi7uLiAMaYAjAGTQBPYLQkAa/0Zef3qRswAAAAASUVORK5CYII=)
+    0 0/9px 9px;
   display: flex;
   position: relative;
 }
@@ -2380,9 +2379,8 @@
 .colorpicker-body .opacity-strip {
   cursor: grab;
   image-rendering: pixelated;
-  background:
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTZEaa/1AAAAHUlEQVQYV2PYvXu3JAi7uLiAMaYAjAGTQBPYLQkAa/0Zef3qRswAAAAASUVORK5CYII=)
-    0 0 / 9px 9px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTZEaa/1AAAAHUlEQVQYV2PYvXu3JAi7uLiAMaYAjAGTQBPYLQkAa/0Zef3qRswAAAAASUVORK5CYII=)
+    0 0/9px 9px;
   margin-left: 8px;
   position: relative;
 }

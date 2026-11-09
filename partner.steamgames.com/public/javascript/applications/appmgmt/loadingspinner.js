@@ -10,11 +10,11 @@ function a(t) {
     s = { borderColor: o, borderLeftColor: a };
   if (typeof n == `number`) {
     let e = `${n}px`;
-    (s.width = e),
+    ((s.width = e),
       (s.height = e),
       (s.minHeight = e),
       (s.minWidth = e),
-      (s.borderWidth = `${n / 10}px`);
+      (s.borderWidth = `${n / 10}px`));
   }
   return (0, i.jsx)(`div`, {
     className: e(

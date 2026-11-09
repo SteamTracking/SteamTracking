@@ -11,7 +11,7 @@ var _ = _(_()),
     m_strLocalizedStoryHeaderMobile;
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
     constructor() {
       _(this);
@@ -19,15 +19,15 @@ var _ = _(_()),
       if (_) {
         if (_.story_choices) {
           let _ = _.story_choices;
-          _.sort((_, _) => _.time_chosen - _.time_chosen),
+          (_.sort((_, _) => _.time_chosen - _.time_chosen),
             _.forEach((_) => {
               this.m_mapGenreToStickerResponse.set(_.genre, _);
-            });
+            }));
         }
-        _.badge_granted && (this.m_eStoryBadgeGranted = _.badge_granted),
+        (_.badge_granted && (this.m_eStoryBadgeGranted = _.badge_granted),
           _.header && (this.m_strLocalizedStoryHeader = _.header),
           _.header_mobile &&
-            (this.m_strLocalizedStoryHeaderMobile = _.header_mobile);
+            (this.m_strLocalizedStoryHeaderMobile = _.header_mobile));
       }
     }
     GetStoryBadgeGranted() {
@@ -76,9 +76,9 @@ var _ = _(_()),
     async MakeClaimForGenre(_, _, _) {
       if (!_.logged_in) return 21;
       let _ = new FormData();
-      _.append(`genre`, _.toString()),
+      (_.append(`genre`, _.toString()),
         _.append(`choice`, _.toString()),
-        _.append(`sessionid`, _());
+        _.append(`sessionid`, _()));
       let _ = null;
       try {
         let _ = await _.default.post(
@@ -112,8 +112,8 @@ var _ = _(_()),
       );
     }
   };
-_([_], _.prototype, `m_mapGenreToStickerResponse`, void 0),
-  _([_], _.prototype, `m_eStoryBadgeGranted`, void 0);
+(_([_], _.prototype, `m_mapGenreToStickerResponse`, void 0),
+  _([_], _.prototype, `m_eStoryBadgeGranted`, void 0));
 function _() {
   return _.Get().GetStoryBadgeGranted();
 }
@@ -131,7 +131,7 @@ function _(_) {
   return (
     _.useEffect(() => {
       let _ = _.default.CancelToken.source();
-      return (_.current = _), () => _.cancel(`useGenreClaim: unmounting`);
+      return ((_.current = _), () => _.cancel(`useGenreClaim: unmounting`));
     }, []),
     _.Get().LoadClaimForGenre(_, _.current),
     [
@@ -371,9 +371,8 @@ var _ = [
 function _() {
   _.useEffect(() => {
     let _ = document.createElement(`link`);
-    (_.rel = `stylesheet`),
+    ((_.rel = `stylesheet`),
       (_.href = `https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap`),
-      document.head.appendChild(_);
+      document.head.appendChild(_));
   }, []);
 }
-export { _, _, _, _, _, _, _, _, _ };

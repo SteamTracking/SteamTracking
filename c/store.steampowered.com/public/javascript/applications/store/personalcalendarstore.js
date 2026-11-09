@@ -15,9 +15,9 @@ var _ = _(_()),
     }
     async GetCalendarRecommendations(_, _, _) {
       let _ = new Date();
-      _.setDate(_.getDate() + _), _.setHours(0, 0, 0, 0);
+      (_.setDate(_.getDate() + _), _.setHours(0, 0, 0, 0));
       let _ = new Date();
-      _.setDate(_.getDate() - _), _.setHours(0, 0, 0, 0);
+      (_.setDate(_.getDate() - _), _.setHours(0, 0, 0, 0));
       let _ = await _.fetchQuery(_(_, _, _));
       return (
         (_.arrAppInfos = _.arrAppInfos.filter(
@@ -60,7 +60,7 @@ function _(_, _, _, _) {
   let _ = new Date();
   if ((_.setDate(_.getDate() - _), _)) {
     let _ = _.getDay() % 7;
-    _.setDate(_.getDate() - _), _.setHours(0, 0, 0, 0);
+    (_.setDate(_.getDate() - _), _.setHours(0, 0, 0, 0));
   } else _.setHours(0, 0, 0, 0);
   let _ = [],
     _ = new Date(_),
@@ -68,11 +68,10 @@ function _(_, _, _, _) {
   for (let _ = 0; _ < _; _++) {
     _.push([]);
     for (let _ = 0; _ < 7; _++)
-      (!_ || (_.getDay() != 0 && _.getDay() != 6)) &&
+      ((!_ || (_.getDay() != 0 && _.getDay() != 6)) &&
         _[_].push(Math.floor(_.getTime() / 1e3)),
         _.setDate(_.getDate() + 1),
-        _.setHours(0, 0, 0, 0);
+        _.setHours(0, 0, 0, 0));
   }
   return _;
 }
-export { _, _, _ };

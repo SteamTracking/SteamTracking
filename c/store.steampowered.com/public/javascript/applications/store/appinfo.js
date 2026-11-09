@@ -49,11 +49,11 @@ var _ = `061818254b2c99ac49e6626adb128ed1282a392f`,
         : _(_, `small`, `web`);
     }
     DeserializeFromMessage(_) {
-      (this.m_bInitialized = !0),
+      ((this.m_bInitialized = !0),
         (this.m_strName = _.name()),
         (this.m_strIconURL = _.icon()),
         (this.m_dtUpdatedFromServer = new Date()),
-        (this.m_eAppType = _.app_type());
+        (this.m_eAppType = _.app_type()));
     }
     DeserializeFromAppOverview(_) {
       _.icon_hash() && _.app_type() != 1073741824
@@ -66,11 +66,11 @@ var _ = `061818254b2c99ac49e6626adb128ed1282a392f`,
     }
     DeserializeFromCacheObject(_) {
       try {
-        (this.m_strName = _.strName),
+        ((this.m_strName = _.strName),
           (this.m_strIconURL = _.strIconURL),
           (this.m_dtUpdatedFromServer = new Date(_.strUpdatedFromServer)),
           (this.m_eAppType = _.eAppType),
-          (this.m_bInitialized = !0);
+          (this.m_bInitialized = !0));
       } catch {}
     }
     SerializeToCacheObject() {
@@ -90,4 +90,3 @@ var _ = `061818254b2c99ac49e6626adb128ed1282a392f`,
       );
     }
   };
-export { _ };

@@ -131,8 +131,8 @@ var D = m(d(), 1),
   gt = class {
     m_decoratedAccumulator;
     constructor(t) {
-      e(t, `decorated accumulator cannot be null`),
-        (this.m_decoratedAccumulator = t);
+      (e(t, `decorated accumulator cannot be null`),
+        (this.m_decoratedAccumulator = t));
     }
     AppendText(e, t = !1) {
       this.m_decoratedAccumulator.AppendText(e, t);
@@ -158,20 +158,20 @@ var D = m(d(), 1),
         e = t.indexOf(`
 `)
       )
-        n.push(t.substr(0, e)),
+        (n.push(t.substr(0, e)),
           n.push(D.createElement(`br`)),
-          (t = t.substr(e + 1));
-      t.length && n.push(t),
+          (t = t.substr(e + 1)));
+      (t.length && n.push(t),
         n.forEach((e) => {
           super.AppendNode(e);
-        });
+        }));
     }
   },
   vt = class extends We {
     m_renderingLanguage;
     constructor(e, t, n) {
-      super(e, t ?? (() => new O())),
-        (this.m_renderingLanguage = typeof n == `string` ? s(n) : n);
+      (super(e, t ?? (() => new O())),
+        (this.m_renderingLanguage = typeof n == `string` ? s(n) : n));
     }
     UpdateOverrideLanguage(e) {
       this.m_renderingLanguage = e;
@@ -215,7 +215,7 @@ var A = class e {
       return this.m_bUserHasVolumePreference;
     }
     SetVolumePreference(e) {
-      (this.m_flVolumePreference = e), (this.m_bUserHasVolumePreference = !0);
+      ((this.m_flVolumePreference = e), (this.m_bUserHasVolumePreference = !0));
     }
     GetVolumePreference() {
       return this.m_flVolumePreference;
@@ -225,7 +225,7 @@ var A = class e {
     }
     static s_Singleton;
     static Get() {
-      return (e.s_Singleton ||= new e()), e.s_Singleton;
+      return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
   },
   bt = (0, D.forwardRef)(function (e, t) {
@@ -932,7 +932,7 @@ function hn(e) {
       let e = document.createElement(`script`);
       e.src = `https://www.youtube.com/iframe_api`;
       let t = document.getElementsByTagName(`script`)[0];
-      t.parentNode?.insertBefore(e, t), (window.onYouTubeIframeAPIReady = _n);
+      (t.parentNode?.insertBefore(e, t), (window.onYouTubeIframeAPIReady = _n));
     }
     e && (P.includes(e) || P.push(e));
   }
@@ -952,12 +952,12 @@ var F = class e extends D.Component {
   m_bPlayerReady = !1;
   static s_nPlayerIndex = 0;
   constructor(t) {
-    super(t),
+    (super(t),
       (this.m_strPlayerID = `YoutubePlayer_` + e.s_nPlayerIndex++),
-      (this.state = { bYoutubeLoaded: !1 });
+      (this.state = { bYoutubeLoaded: !1 }));
   }
   componentWillUnmount() {
-    this.DestroyPlayer(), gn(this.OnYoutubeScriptsReady);
+    (this.DestroyPlayer(), gn(this.OnYoutubeScriptsReady));
   }
   shouldComponentUpdate(e, t) {
     if (!this.m_player) return !1;
@@ -989,8 +989,8 @@ var F = class e extends D.Component {
   DestroyPlayer() {
     if (this.m_player)
       try {
-        this.m_player.stopVideo && this.m_player.stopVideo(),
-          this.m_player.destroy && this.m_player.destroy();
+        (this.m_player.stopVideo && this.m_player.stopVideo(),
+          this.m_player.destroy && this.m_player.destroy());
       } catch {
       } finally {
         this.m_player = null;
@@ -1037,7 +1037,7 @@ var F = class e extends D.Component {
         },
       },
       s = this.m_playerContainer.firstElementChild;
-    (this.m_bPlayerReady = !1), (this.m_player = new YT.Player(s, o));
+    ((this.m_bPlayerReady = !1), (this.m_player = new YT.Player(s, o)));
   }
   OnPlayerReady(e) {
     if (
@@ -1046,18 +1046,18 @@ var F = class e extends D.Component {
     ) {
       let e = this.m_player.getVideoData(),
         t = { strAuthor: ``, strTitle: ``, strVideoID: `` };
-      e.author && (t.strAuthor = e.author),
+      (e.author && (t.strAuthor = e.author),
         e.title && (t.strTitle = e.title),
         e.video_id && (t.strVideoID = e.video_id),
-        this.props.onVideoInfoChanged(t);
+        this.props.onVideoInfoChanged(t));
     }
-    this.props.width &&
+    (this.props.width &&
       this.props.height &&
       this.m_player?.setSize(this.props.width, this.props.height),
       this.props.forcePause
         ? this.ApplyForcePause()
         : this.props.autoplay && this.m_player?.playVideo(),
-      this.props.onPlayerReady && this.props.onPlayerReady();
+      this.props.onPlayerReady && this.props.onPlayerReady());
   }
   OnPlayerStateChange(e) {
     switch (e.data) {
@@ -1077,8 +1077,8 @@ var F = class e extends D.Component {
     }
   }
   OnError(e) {
-    console.log(`Youtube: Playback failed`, e),
-      this.props.onError && this.props.onError(e);
+    (console.log(`Youtube: Playback failed`, e),
+      this.props.onError && this.props.onError(e));
   }
   OnPlayerLeftView() {
     this.props.autopause &&
@@ -1107,14 +1107,14 @@ var F = class e extends D.Component {
     });
   }
 };
-u([g], F.prototype, `BindPlayerContainer`, null),
+(u([g], F.prototype, `BindPlayerContainer`, null),
   u([g], F.prototype, `OnYoutubeScriptsReady`, null),
   u([g], F.prototype, `CreatePlayer`, null),
   u([g], F.prototype, `OnPlayerReady`, null),
   u([g], F.prototype, `OnPlayerStateChange`, null),
   u([g], F.prototype, `OnError`, null),
   u([g], F.prototype, `OnPlayerLeftView`, null),
-  u([g], F.prototype, `PlayVideo`, null);
+  u([g], F.prototype, `PlayVideo`, null));
 function vn(e) {
   let { video: t, children: n } = e;
   return en(`youtube`)
@@ -1155,7 +1155,7 @@ function bn(e) {
       return (
         n && hn(e),
         () => {
-          gn(e), (i.current = null);
+          (gn(e), (i.current = null));
         }
       );
     }, [n]),
@@ -1774,7 +1774,7 @@ function wr(e) {
   try {
     let e = `BEGIN:VCALENDAR\r
 `;
-    (e += `VERSION:2.0\r
+    ((e += `VERSION:2.0\r
 `),
       (e += `BEGIN:VEVENT\r
 `),
@@ -1801,14 +1801,14 @@ function wr(e) {
 `),
       (e += `END:VCALENDAR\r
 `),
-      (f = `data:text/calendar;charset=utf-8;base64,${Et.fromByteArray(new TextEncoder().encode(e))}`);
+      (f = `data:text/calendar;charset=utf-8;base64,${Et.fromByteArray(new TextEncoder().encode(e))}`));
   } catch (e) {
     console.error(e);
   }
   let p = `https://calendar.google.com/calendar/render?action=TEMPLATE`;
-  (p += `&text=${encodeURI(n)}`),
+  ((p += `&text=${encodeURI(n)}`),
     (p += `&details=${encodeURI(a)}`),
-    (p += `&dates=${encodeURI(l + `/` + d)}`);
+    (p += `&dates=${encodeURI(l + `/` + d)}`));
   let m = (e) => {
     if (`ReactNativeWebView` in window) {
       let t = window.ReactNativeWebView,
@@ -1820,7 +1820,7 @@ function wr(e) {
           strNotes: a,
           strLocation: o,
         };
-      t.postMessage(JSON.stringify(r)), e.preventDefault();
+      (t.postMessage(JSON.stringify(r)), e.preventDefault());
     }
   };
   return (0, k.jsxs)(`div`, {
@@ -1858,9 +1858,7 @@ function Tr(e) {
   if (
     ((i =
       t instanceof Array
-        ? t
-            .map((e) => (e ? e.toString() : ``))
-            .filter((e) => e.length > 0)
+        ? t.map((e) => (e ? e.toString() : ``)).filter((e) => e.length > 0)
             .join(`
 `)
         : t.toString()),
@@ -2049,7 +2047,7 @@ var Gr = `L3HaktJsWWA-`,
           target: n,
         },
         i = `presenter-hover-` + Math.floor(Math.random() * 1e8);
-      (this.m_fnHidePopup = () =>
+      ((this.m_fnHidePopup = () =>
         e.sm_embeddedElements.HideElement(n.ownerDocument, i)),
         window.addEventListener(`scroll`, this.OnScroll),
         (this.m_nScrollPosAtHoverStart = window.scrollY),
@@ -2061,7 +2059,7 @@ var Gr = `L3HaktJsWWA-`,
             children: (0, k.jsx)(Zr, { ...this.props, fnClose: this.OnLeave }),
           }),
           i,
-        );
+        ));
     }
     OnLeave(e) {
       this.ClosePopup();
@@ -2078,10 +2076,10 @@ var Gr = `L3HaktJsWWA-`,
       });
     }
   };
-u([g], U.prototype, `ClosePopup`, null),
+(u([g], U.prototype, `ClosePopup`, null),
   u([g], U.prototype, `OnScroll`, null),
   u([g], U.prototype, `OnHover`, null),
-  u([g], U.prototype, `OnLeave`, null);
+  u([g], U.prototype, `OnLeave`, null));
 function Qr(e) {
   let {
       photo: t,
@@ -2145,7 +2143,7 @@ var ei = `_6Ymd3Ej4NCU-`,
   di = `nCS2TzxRijY-`,
   W = class extends D.Component {
     constructor(e) {
-      super(e), (this.state = { activeIndex: e.initialActiveIndex || 0 });
+      (super(e), (this.state = { activeIndex: e.initialActiveIndex || 0 }));
     }
     render() {
       let { config: e } = this.props,
@@ -2399,7 +2397,7 @@ var xi = w((e) => {
   Si = class extends D.Component {
     m_disposeEmoticonStore;
     constructor(e) {
-      super(e), (this.state = { strSearchText: `` });
+      (super(e), (this.state = { strSearchText: `` }));
       let t = this.props.emoticonStore;
       t.is_initialized ||
         (t.UpdateEmoticonList(),
@@ -2474,7 +2472,7 @@ Si = u([w], Si);
 var Ci = class extends D.Component {
     m_disposeEmoticonStore;
     constructor(e) {
-      super(e), (this.state = { strSearchText: `` });
+      (super(e), (this.state = { strSearchText: `` }));
       let t = this.props.emoticonStore;
       t.is_initialized ||
         (t.UpdateEmoticonList(),
@@ -2512,7 +2510,7 @@ var Ci = class extends D.Component {
   wi = class extends D.Component {
     m_disposeEmoticonStore;
     constructor(e) {
-      super(e), (this.state = { strSearchText: `` });
+      (super(e), (this.state = { strSearchText: `` }));
       let t = this.props.emoticonStore;
       t.is_initialized ||
         (t.UpdateEmoticonList(),
@@ -3043,7 +3041,7 @@ var Ji = 1576780700,
         this.BHaveUnseenEmoticons() && r)
       ) {
         let e = this.GetNewestIndicatorTime();
-        (!e || e < Ji) && (e = Ji), r(`rtLastAckedNewEmoticons`, e);
+        ((!e || e < Ji) && (e = Ji), r(`rtLastAckedNewEmoticons`, e));
       }
     }
     GetNewestIndicatorTime() {
@@ -3052,7 +3050,7 @@ var Ji = 1576780700,
         n = e.GetTimeReceivedNewestEmoticon();
       n && (t = n);
       let r = e.GetTimeReceivedForStickerOrEffect();
-      return (t = Math.max(r, t)), t > -(2 ** 53 - 1) ? t : void 0;
+      return ((t = Math.max(r, t)), t > -(2 ** 53 - 1) ? t : void 0);
     }
     BHaveUnseenEmoticons() {
       let { rtLastAckedNewEmoticons: e } = this.props,
@@ -3099,7 +3097,7 @@ var Ji = 1576780700,
       );
     }
   };
-u([g], $.prototype, `OnEmoticonClick`, null), ($ = u([w], $));
+(u([g], $.prototype, `OnEmoticonClick`, null), ($ = u([w], $)));
 var Yi = $;
 export {
   pn as A,

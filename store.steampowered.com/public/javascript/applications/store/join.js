@@ -70,14 +70,14 @@ function B(e, t) {
         let i = n.slice().filter((e) => !r.has(e));
         if (i.length) {
           let n = g.Init(u);
-          n.Body().set_language(h(y.LANGUAGE)), n.Body().set_appids(i);
+          (n.Body().set_language(h(y.LANGUAGE)), n.Body().set_appids(i));
           let a = await v.GetApps(e, n);
           if (a.GetEResult() != 1) throw a.GetErrorMessage();
           a.Body()
             .toObject()
             .apps.forEach((e) => {
-              t.StoreObject(R(e.appid), { timeCached: Date.now(), value: e }),
-                r.set(e.appid, e);
+              (t.StoreObject(R(e.appid), { timeCached: Date.now(), value: e }),
+                r.set(e.appid, e));
             });
         }
         return n.map((e) => r.get(e));

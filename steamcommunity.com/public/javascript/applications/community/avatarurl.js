@@ -7,8 +7,8 @@ function n(n, i) {
   let a = `0000000000000000000000000000000000000000`;
   typeof n == `string` ? (a = n) : n && (a = r(n) || a);
   let o = `.jpg`;
-  a === `0000000000000000000000000000000000000000` && (a = t),
-    a.length == 44 && ((o = a.slice(-4)), (a = a.slice(0, 40)));
+  (a === `0000000000000000000000000000000000000000` && (a = t),
+    a.length == 44 && ((o = a.slice(-4)), (a = a.slice(0, 40))));
   let s = e.AVATAR_BASE_URL;
   switch (
     (s ||
@@ -29,7 +29,7 @@ function n(n, i) {
     case `FillArea`:
       s += `_full`;
   }
-  return (s += o), s;
+  return ((s += o), s);
 }
 function r(e) {
   return e

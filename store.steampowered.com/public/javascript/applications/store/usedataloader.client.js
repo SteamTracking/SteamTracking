@@ -36,12 +36,12 @@ function c(e, t) {
   let n = (0, o.useContext)(s),
     r = typeof e == `string` ? e : a(...e),
     i = n;
-  for (; i; ) {
+  for (; i;) {
     if (r in i.instances) return i.instances[r];
     if (r in i.factories) break;
     i = i.parent;
   }
   let c = (i?.factories[r] ?? t)();
-  return ((i ?? n).instances[r] = c), c;
+  return (((i ?? n).instances[r] = c), c);
 }
 export { c as t };

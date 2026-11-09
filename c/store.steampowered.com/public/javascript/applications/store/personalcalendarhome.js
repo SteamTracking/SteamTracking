@@ -208,13 +208,12 @@ function _(_) {
     _ = _ > _,
     _ = _.toLocaleDateString(_(), _),
     _ = _.toLocaleString(_(), _),
-    _ = _.filter((_) => _.nReleaseDate > _ && _.nReleaseDate < _).sort(
-      (_, _) =>
-        _.bIsWishlisted && !_.bIsWishlisted
-          ? -1
-          : _.bIsWishlisted && !_.bIsWishlisted
-            ? 1
-            : _.nRank - _.nRank,
+    _ = _.filter((_) => _.nReleaseDate > _ && _.nReleaseDate < _).sort((_, _) =>
+      _.bIsWishlisted && !_.bIsWishlisted
+        ? -1
+        : _.bIsWishlisted && !_.bIsWishlisted
+          ? 1
+          : _.nRank - _.nRank,
     ),
     _ = _ ?? 100,
     _ = _.filter((_) => _.nRank <= _).length - 2,

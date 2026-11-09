@@ -98,11 +98,11 @@ function y(e) {
               step: p,
             }),
             r = [...f];
-          (r[C.current.activeValueIndex] = n),
+          ((r[C.current.activeValueIndex] = n),
             r.sort((e, t) => e - t),
             (C.current.activeValueIndex = r.indexOf(n)),
             (C.current.bMoved = !0),
-            d(r);
+            d(r));
         }
       },
       onClick: (e) => {
@@ -112,7 +112,7 @@ function y(e) {
           r = D({ value: n, min: i, max: s, step: p }),
           a = S(f, n),
           o = [...f];
-        (o[a] = r), d(o), h && h(o);
+        ((o[a] = r), d(o), h && h(o));
       },
       children: (0, m.jsx)(`div`, { className: u, children: t }),
     }),
@@ -190,11 +190,11 @@ function T(t) {
             r = u * (n ? 1 : -1),
             o = D({ value: l[_] + r, min: i, max: a, step: u }),
             s = [...l];
-          (s[_] = x(l, _, o)),
+          ((s[_] = x(l, _, o)),
             d(s),
             f && f(s),
             e.preventDefault(),
-            e.stopPropagation();
+            e.stopPropagation());
           break;
         }
         case `PageUp`:
@@ -203,11 +203,11 @@ function T(t) {
             n = Math.round((a - i) / 10) * (t ? 1 : -1),
             r = D({ value: l[_] + n, min: i, max: a, step: u }),
             o = [...l];
-          (o[_] = x(l, _, r)),
+          ((o[_] = x(l, _, r)),
             d(o),
             f && f(o),
             e.preventDefault(),
-            e.stopPropagation();
+            e.stopPropagation());
           break;
         }
       }

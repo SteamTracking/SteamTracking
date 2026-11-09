@@ -46,7 +46,7 @@ function _(_) {
     _ = _ && _?.some((_) => _ == _.GID),
     _ = _ || _,
     _ = () => {
-      _(), _();
+      (_(), _());
     },
     _ = _.useMemo(
       () => [...(_ ?? [])].sort((_, _) => _.startTime - _.startTime),
@@ -203,7 +203,7 @@ function _(_) {
             gid: _.GID,
           }),
         onClose: (_) => {
-          _(!1), _ && _();
+          (_(!1), _ && _());
         },
         strTitle: _(`#Button_Delete`),
         strDescription: _(`#CreatorHome_EventLink_Delete_Dialog_Desc`),
@@ -217,7 +217,7 @@ function _(_) {
             gid: _.GID,
           }),
         onClose: (_) => {
-          _(!1), _ && _();
+          (_(!1), _ && _());
         },
         strTitle: _(`#CreatorHome_EventLink_Select`),
         strDescription: _(`#CreatorHome_EventLink_Select_Dialog_Desc`),
@@ -231,7 +231,7 @@ function _(_) {
             gid: `0`,
           }),
         onClose: (_) => {
-          _(!1), _ && _();
+          (_(!1), _ && _());
         },
         strTitle: _(`#CreatorHome_EventLink_Clear`),
         strDescription: _(`#CreatorHome_EventLink_Clear_Dialog_Desc`),

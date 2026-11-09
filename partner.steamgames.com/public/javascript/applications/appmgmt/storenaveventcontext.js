@@ -729,7 +729,7 @@ var u = class e {
     let r = e.ComputeLinkPrefix(t.domain, t.controller, t.method, t.submethod);
     n = n ?? t.depth ?? null;
     let i = e.EncodeEventComponent(t.feature);
-    return i && ((r += `_` + i), n && (r += `_` + n)), r;
+    return (i && ((r += `_` + i), n && (r += `_` + n)), r);
   }
   static GetCuratorClanIDParam(e) {
     return e.curator_clanid ?? null;
@@ -745,7 +745,7 @@ var u = class e {
         r.origin + r.pathname + `?` + i.toString() + r.hash
       );
     } catch (t) {
-      return console.error(e, t), e;
+      return (console.error(e, t), e);
     }
   }
   static ComputeLinkPrefix(t, n, r, i) {

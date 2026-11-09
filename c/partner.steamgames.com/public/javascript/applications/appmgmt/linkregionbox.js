@@ -107,7 +107,7 @@ var _ = _(_()),
       this.m_listeners.Unregister();
     }
     constructor(_) {
-      super(_),
+      (super(_),
         (this.state = {
           curLeftPosPct: this.props.xPosPct,
           curTopPosPct: this.props.yPosPct,
@@ -125,13 +125,13 @@ var _ = _(_()),
         (this.m_aspectRatio =
           this.props.heightPct > 0 && this.props.widthPct > 0
             ? this.props.widthPct / this.props.heightPct
-            : 1);
+            : 1));
     }
     LinkRegionBoxRef(_) {
       this.m_elLinkRegionBox = _;
     }
     OnMouseDown(_, _) {
-      this.m_elLinkRegionBox?.parentElement &&
+      (this.m_elLinkRegionBox?.parentElement &&
         this.m_elLinkRegionBox.ownerDocument.defaultView &&
         ((this.m_fnMouseUp = (_) => {
           this.OnMouseUp(_, _);
@@ -165,7 +165,7 @@ var _ = _(_()),
           this.m_fnMouseUp,
         )),
         _.preventDefault(),
-        _.stopPropagation();
+        _.stopPropagation());
     }
     OnMouseMove(_, _) {
       if (this.state.EdgeDown !== void 0) {
@@ -236,7 +236,7 @@ var _ = _(_()),
             break;
           }
         }
-        _.preventDefault(), _.stopPropagation();
+        (_.preventDefault(), _.stopPropagation());
       }
     }
     IsValidPct(_) {
@@ -267,12 +267,12 @@ var _ = _(_()),
           this.props.heightMinPct || 0,
           this.props.heightMaxPct || 100,
         );
-      this.props.bLockAspectRatio &&
+      (this.props.bLockAspectRatio &&
         (_.curLeftPosPct !== void 0 || _.curRightPosPct !== void 0
           ? (_ = _ / this.m_aspectRatio)
           : (_ = _ * this.m_aspectRatio)),
         _.curLeftPosPct === void 0 ? (_ = 100 - (_ + _)) : (_ = 100 - _ - _),
-        _.curTopPosPct === void 0 ? (_ = 100 - (_ + _)) : (_ = 100 - _ - _);
+        _.curTopPosPct === void 0 ? (_ = 100 - (_ + _)) : (_ = 100 - _ - _));
       let _ = 100 - _ - _,
         _ = 100 - _ - _;
       this.IsValidPct(_) &&
@@ -317,7 +317,7 @@ var _ = _(_()),
       return _(100 - (this.GetYPercent(_) + this.state.curHeightPct), 0, 100);
     }
     OnMouseUp(_, _) {
-      this.setState({
+      (this.setState({
         curWidthPct: 100 - this.state.curRightPosPct - this.state.curLeftPosPct,
       }),
         this.setState({
@@ -335,7 +335,7 @@ var _ = _(_()),
           link_url: this.state.text_link_url,
           link_description: this.state.text_link_description,
         }),
-        this.m_listeners.Unregister();
+        this.m_listeners.Unregister());
     }
     async HandleDelete() {
       this.props.deleteFn && this.props.deleteFn(this.props.index);
@@ -360,7 +360,7 @@ var _ = _(_()),
       );
     }
     OnSaveLink() {
-      (this.m_strDescription = this.state.text_link_description ?? ``),
+      ((this.m_strDescription = this.state.text_link_description ?? ``),
         this.setState({
           bEditingLink: !this.state.bEditingLink,
         }),
@@ -371,7 +371,7 @@ var _ = _(_()),
           heightPct: this.state.curHeightPct,
           link_url: this.state.text_link_url,
           link_description: this.state.text_link_description,
-        });
+        }));
     }
     OnEditLink() {
       this.setState({
@@ -523,7 +523,7 @@ var _ = _(_()),
       );
     }
   };
-_([_], _.prototype, `LinkRegionBoxRef`, null),
+(_([_], _.prototype, `LinkRegionBoxRef`, null),
   _([_], _.prototype, `OnMouseDown`, null),
   _([_], _.prototype, `OnMouseMove`, null),
   _([_], _.prototype, `OnMouseUp`, null),
@@ -532,5 +532,4 @@ _([_], _.prototype, `LinkRegionBoxRef`, null),
   _([_], _.prototype, `OnSetLinkDescriptionChange`, null),
   _([_], _.prototype, `OnSaveLink`, null),
   _([_], _.prototype, `OnEditLink`, null),
-  (_ = _([_], _));
-export { _ };
+  (_ = _([_], _)));

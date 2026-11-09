@@ -28,7 +28,7 @@ function _() {
   return _(_) === `desktop`;
 }
 function _() {
-  _() && _(_), `location` in window && location.reload();
+  (_() && _(_), `location` in window && location.reload());
 }
 var _ = _(_(), 1),
   _ = _(_(), 1),
@@ -319,7 +319,7 @@ function _(_) {
       });
 }
 var _ = {};
-(_.arabic = () =>
+((_.arabic = () =>
   _(() => import(`./globalfooter_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
     _(() => import(`./globalfooter_brazilian.js`), [], import.meta.url)),
@@ -382,7 +382,7 @@ var _ = {};
   (_.ukrainian = () =>
     _(() => import(`./globalfooter_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./globalfooter_vietnamese.js`), [], import.meta.url));
+    _(() => import(`./globalfooter_vietnamese.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }

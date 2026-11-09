@@ -5,7 +5,7 @@ var _ = _((_, _) => {
     var _ = _();
     function _() {}
     function _() {}
-    (_.resetWarningCache = _),
+    ((_.resetWarningCache = _),
       (_.exports = function () {
         function _(_, _, _, _, _, _) {
           if (_ !== _) {
@@ -42,10 +42,9 @@ var _ = _((_, _) => {
           checkPropTypes: _,
           resetWarningCache: _,
         };
-        return (_.PropTypes = _), _;
-      });
+        return ((_.PropTypes = _), _);
+      }));
   }),
   _ = _((_, _) => {
     _.exports = _()();
   });
-export { _ };

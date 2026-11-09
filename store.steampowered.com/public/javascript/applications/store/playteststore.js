@@ -35,7 +35,7 @@ function h(e) {
   return r({
     mutationFn: async (n) => {
       let r = u.Init(o);
-      r.Body().add_invite_ids(e), r.Body().set_status(n.bAccept ? 3 : 2);
+      (r.Body().add_invite_ids(e), r.Body().set_status(n.bAccept ? 3 : 2));
       let i = await s.UpdateInvites(t, r);
       if (i.GetEResult() != 1)
         throw {

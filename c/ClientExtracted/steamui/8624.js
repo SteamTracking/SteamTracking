@@ -19,10 +19,10 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports),
+        (__webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
             PinnedAchievementsList: () => _,
-          });
+          }));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -65,11 +65,11 @@
                 _ &&
                 _ &&
                 ((_) => {
-                  _({
+                  (_({
                     basis: _,
                     names: _,
                   }),
-                    _(_);
+                    _(_));
                 }),
               [_, _],
             ),
@@ -344,7 +344,7 @@
                     marginBottom: -_,
                   },
                   ref: (_) => {
-                    _.innerRef(_), (_.current = _);
+                    (_.innerRef(_), (_.current = _));
                   },
                   ..._.droppableProps,
                   children: (0, _.jsx)(_._, {

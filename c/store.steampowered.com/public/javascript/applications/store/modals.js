@@ -37,12 +37,12 @@ function _(_) {
           _ = 0,
           _ = _.getBoundingClientRect(),
           _ = _.ownerDocument.defaultView;
-        _ &&
+        (_ &&
           _ &&
           !_ &&
           ((_ = Math.ceil(_.innerWidth - _.left)),
           (_ = Math.ceil(_.innerHeight - _.top))),
-          _.SteamClient.Window.SetResizeGrip(_, _);
+          _.SteamClient.Window.SetResizeGrip(_, _));
       }
       return () => {
         _(_, `Window.SetResizeGrip`) &&
@@ -125,9 +125,9 @@ function _(_) {
       onClose: _,
     },
     _ = 0;
-  _.resizable && (_ |= _.Resizable),
+  (_.resizable && (_ |= _.Resizable),
     (_.minWidth || _.minHeight) && (_ |= _.ApplyBrowserScaleToDimensions),
-    _.fullscreen && (_ |= _.FullScreen);
+    _.fullscreen && (_ |= _.FullScreen));
   let _ = `PopupWindow_` + (_ ? `${_}_` : ``) + _.useId(),
     { popup: _, element: _ } = _(
       _,
@@ -281,4 +281,3 @@ function _(_) {
     }),
   });
 }
-export { _, _, _ };

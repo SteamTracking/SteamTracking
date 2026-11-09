@@ -118,10 +118,10 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports),
+        (__webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
             ShareEventDialogBody: () => _,
-          });
+          }));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -175,7 +175,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         const _ = class _ {
           m_eCurLang = (0, _.sfN)(_._.LANGUAGE);
@@ -219,13 +219,13 @@
             (0, _._)(this);
           }
         };
-        _([_._], _.prototype, "m_eCurLang", 2),
+        (_([_._], _.prototype, "m_eCurLang", 2),
           _([_._], _.prototype, "m_rgHasData", 2),
           _([_._], _.prototype, "m_bHasLocalizationContext", 2),
           _([_._], _.prototype, "GetCurEditLanguage", 1),
           _([_._], _.prototype, "SetCurEditLanguage", 1),
           _([_._.bound], _.prototype, "SetHasLanguage", 1),
-          _([_._], _.prototype, "BHasLanguageData", 1);
+          _([_._], _.prototype, "BHasLanguageData", 1));
         let _ = null;
         function _() {
           return useObserver(() => _.Get().GetCurEditLanguage());
@@ -246,7 +246,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         let _ = class extends _.Component {
           GenerateLanguageOptions() {
@@ -310,7 +310,7 @@
               const _ = _ && _(_.eLang),
                 _ = _ && _(_.eLang);
               let _ = _.sLocName;
-              _ &&
+              (_ &&
                 _ !== 0 &&
                 ((_ += " "),
                 (_ += (0, _._)(
@@ -338,7 +338,7 @@
                     },
                     "langpicker" + _.eLang + (_ ? "_hasdata" : ""),
                   ),
-                );
+                ));
             }
             return _;
           }
@@ -361,7 +361,7 @@
             });
           }
         };
-        _([_._], _.prototype, "OnLanguageChange", 1), (_ = _([_._], _));
+        (_([_._], _.prototype, "OnLanguageChange", 1), (_ = _([_._], _)));
         function _(_) {
           const [_, _] = useObserver(() => [
             CEditorLocStore.Get().GetHasLocalizationContext(),
@@ -413,8 +413,8 @@
                     _((0, _._)("#EventDisplay_Share_CopiedToClipboard")),
                   )
                   .catch((_) => {
-                    _((0, _._)("#EventDisplay_Share_FailedToCopyToClipboard")),
-                      console.error("Failed to copy link to clipboard:", _);
+                    (_((0, _._)("#EventDisplay_Share_FailedToCopyToClipboard")),
+                      console.error("Failed to copy link to clipboard:", _));
                   });
             };
           return (0, _.jsxs)("div", {
@@ -479,7 +479,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         class _ {
           success;
@@ -559,13 +559,13 @@
               ) {
                 for (let _ of _.data.images) _.clanAccountID = _;
                 (0, _._)(() => {
-                  this.m_mapClanImageLoadState.set(_, {
+                  (this.m_mapClanImageLoadState.set(_, {
                     loaded: !0,
                   }),
                     this.m_mapClanToImages.set(_, _.data.images),
                     this.GetImageListCallbackForClanAccountIDInternal(
                       _,
-                    ).Dispatch(_.data.images);
+                    ).Dispatch(_.data.images));
                 });
               }
             }
@@ -648,8 +648,8 @@
             return this.DeleteClanImageByID(_, _.imageid);
           }
         }
-        _([_._], _.prototype, "m_mapClanToImages", 2),
-          _([_._], _.prototype, "m_mapClanImageLoadState", 2);
+        (_([_._], _.prototype, "m_mapClanToImages", 2),
+          _([_._], _.prototype, "m_mapClanImageLoadState", 2));
         const _ = new _();
         function _(_) {
           const [_, _] = useState(_.GetClanImagesByAccount(_));
@@ -748,7 +748,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         class _ extends _.Component {
           descTextAreaRef = _.createRef();
@@ -757,11 +757,11 @@
           m_iMentionSearchStartOffset;
           m_iMentionSearchCancelledOffset;
           constructor(_) {
-            super(_),
+            (super(_),
               (this.state = {
                 mentionSearch: void 0,
                 activeSuggestSearchType: void 0,
-              });
+              }));
           }
           BindMentionDialog(_) {
             this.m_MentionDialog = _ ?? void 0;
@@ -805,13 +805,13 @@
               _ !== void 0)
             ) {
               let _ = _.substr(0, _);
-              (_ += _), (_ >= _.length || _[_] != " ") && (_ += " ");
+              ((_ += _), (_ >= _.length || _[_] != " ") && (_ += " "));
               let _ = _.length;
-              (_ += _.substr(_)),
+              ((_ += _.substr(_)),
                 (_.value = _),
                 (_.selectionStart = _.selectionEnd = _),
                 this.props.fnSetText(_),
-                this.FocusTextInput();
+                this.FocusTextInput());
             }
           }
           OnFocus(_) {
@@ -824,31 +824,31 @@
             this.UpdateAutoSearchState();
           }
           ClearMentionSearchState() {
-            (this.m_iMentionSearchStartOffset = void 0),
+            ((this.m_iMentionSearchStartOffset = void 0),
               this.state.activeSuggestSearchType &&
                 this.setState({
                   activeSuggestSearchType: void 0,
                   mentionSearch: void 0,
-                });
+                }));
           }
           OnEmoticonSuggestionSelected(_, _) {
             if (!_) {
-              (this.m_iMentionSearchCancelledOffset =
+              ((this.m_iMentionSearchCancelledOffset =
                 this.m_iMentionSearchStartOffset),
-                this.ClearMentionSearchState();
+                this.ClearMentionSearchState());
               return;
             }
-            this.ReplaceSuggestedText(":", ":" + _ + ":"),
-              this.ClearMentionSearchState();
+            (this.ReplaceSuggestedText(":", ":" + _ + ":"),
+              this.ClearMentionSearchState());
           }
           OnBBCodeSuggestionSelected(_, _) {
             if (!_) {
-              (this.m_iMentionSearchCancelledOffset =
+              ((this.m_iMentionSearchCancelledOffset =
                 this.m_iMentionSearchStartOffset),
-                this.ClearMentionSearchState();
+                this.ClearMentionSearchState());
               return;
             }
-            this.ReplaceSuggestedText("[", _), this.ClearMentionSearchState();
+            (this.ReplaceSuggestedText("[", _), this.ClearMentionSearchState());
           }
           FocusTextInput() {
             this.descTextAreaRef.current &&
@@ -898,11 +898,11 @@
               return;
             }
             let _ = _.substr(_ + 1, _ - _ - 1);
-            (this.m_iMentionSearchStartOffset = _),
+            ((this.m_iMentionSearchStartOffset = _),
               this.setState({
                 activeSuggestSearchType: _,
                 mentionSearch: _,
-              });
+              }));
           }
           GetTextAreaRef() {
             return this.descTextAreaRef;
@@ -954,7 +954,7 @@
             });
           }
         }
-        _([_._], _.prototype, "BindMentionDialog", 1),
+        (_([_._], _.prototype, "BindMentionDialog", 1),
           _([_._], _.prototype, "OnKeyDown", 1),
           _([_._], _.prototype, "OnFocus", 1),
           _([_._], _.prototype, "OnKeyPress", 1),
@@ -963,7 +963,7 @@
           _([_._], _.prototype, "OnBBCodeSuggestionSelected", 1),
           _([_._], _.prototype, "FocusTextInput", 1),
           _([_._], _.prototype, "GetTextAreaRef", 1),
-          _([_._], _.prototype, "GetTextAreaCurrent", 1);
+          _([_._], _.prototype, "GetTextAreaCurrent", 1));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -1455,7 +1455,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         class _ extends _.Component {
           state = {
@@ -1470,7 +1470,7 @@
           };
           async OnCrop() {
             const _ = this.props.uploadFile.GetCanvasImageSource();
-            _ &&
+            (_ &&
               (await _(
                 this.props.uploadFile,
                 _,
@@ -1485,7 +1485,7 @@
                 this.GetDestHeight(),
                 this.props.fileType,
               )),
-              this.props.closeModal?.();
+              this.props.closeModal?.());
           }
           UpdateCrop(_, _) {
             this.setState({
@@ -1621,8 +1621,8 @@
             });
           }
         }
-        _([_._], _.prototype, "OnCrop", 1),
-          _([_._], _.prototype, "UpdateCrop", 1);
+        (_([_._], _.prototype, "OnCrop", 1),
+          _([_._], _.prototype, "UpdateCrop", 1));
         async function _(_, _, _, _, _, _, _, _, _) {
           return new Promise((_, _) => {
             const _ = _(_);
@@ -1631,7 +1631,7 @@
               return;
             }
             const _ = document.createElement("canvas");
-            (_.width = _),
+            ((_.width = _),
               (_.height = _),
               _.getContext("2d")?.drawImage(_, _, _, _, _, 0, 0, _, _),
               _.toBlob((_) => {
@@ -1644,14 +1644,14 @@
                   _("Unable to apply crop into image");
                   return;
                 }
-                (_.file = (0, _._)(_, _.filename)),
+                ((_.file = (0, _._)(_, _.filename)),
                   (_.width = _),
                   (_.height = _),
                   (_.dataUrl = _),
                   (_.uploadTime = Date.now()),
                   (_.bCropped = !0),
-                  _();
-              });
+                  _());
+              }));
           });
         }
         function _(_) {
@@ -1671,7 +1671,7 @@
               _ = () => _.closeModal && _.closeModal(),
               _ = _.GetFilteredClanImages(_, _),
               _ = (_) => {
-                _(_), _();
+                (_(_), _());
               };
             return (0, _.jsx)(_._, {
               children: (0, _.jsx)(_._, {
@@ -1763,7 +1763,7 @@
           let _ = [];
           if (_.length > 0) {
             let _ = _.toLocaleLowerCase();
-            for (let _ = 0; _ < _.length; ) {
+            for (let _ = 0; _ < _.length;) {
               let _ = _.indexOf(_, _);
               if (_ < 0) {
                 _.push(
@@ -1777,7 +1777,7 @@
                 );
                 break;
               } else
-                _ < _ &&
+                (_ < _ &&
                   _.push(
                     (0, _.jsx)(
                       "span",
@@ -1797,7 +1797,7 @@
                       _ + "_" + String(_),
                     ),
                   ),
-                  (_ = _ + _.length);
+                  (_ = _ + _.length));
             }
           } else
             _.push(
@@ -1825,7 +1825,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         function _(_) {
           return _ == "waiting" || _ == "uploading" || _ == "processing";
@@ -1847,7 +1847,7 @@
           uploadTime;
           fileType;
           constructor(_, _, _, _, _) {
-            (0, _._)(this),
+            ((0, _._)(this),
               (this.file = _),
               (this.filename = _),
               (this.fileType = (0, _._)(_) ?? _._._),
@@ -1858,21 +1858,21 @@
               (this.height = _.height),
               (this.width = _.width),
               (this.m_originalDataUrl = _),
-              (this.dataUrl = _);
+              (this.dataUrl = _));
           }
           ResetImage() {
-            (this.height = this.m_originalSize.height),
+            ((this.height = this.m_originalSize.height),
               (this.width = this.m_originalSize.width),
-              (this.dataUrl = this.m_originalDataUrl);
+              (this.dataUrl = this.m_originalDataUrl));
           }
           GetImageOptionLabel() {}
         }
-        _([_._], _.prototype, "dataUrl", 2),
+        (_([_._], _.prototype, "dataUrl", 2),
           _([_._], _.prototype, "width", 2),
           _([_._], _.prototype, "height", 2),
           _([_._], _.prototype, "status", 2),
           _([_._.ref], _.prototype, "message", 2),
-          _([_._], _.prototype, "language", 2);
+          _([_._], _.prototype, "language", 2));
         var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -1882,7 +1882,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         const _ = 960,
           _ = 311,
@@ -1893,7 +1893,7 @@
           m_currentImageOption = void 0;
           m_currentImageOptionKey = void 0;
           constructor(_, _, _, _, _, _) {
-            super(_, _, _, _, _), (0, _._)(this), (this.m_rgImageOptions = _);
+            (super(_, _, _, _, _), (0, _._)(this), (this.m_rgImageOptions = _));
           }
           IsValidAssetType(_, _) {
             let _ = 0,
@@ -1905,7 +1905,7 @@
                 this.m_rgImageOptions.some(
                   (_) => _.sKey == this.GetCurrentImageOption()?.sKey,
                 );
-            if (_) (_ = _.width), (_ = _.height), (_ = !0);
+            if (_) ((_ = _.width), (_ = _.height), (_ = !0));
             else if (this.GetCurrentImageOption()) {
               const _ = _[this.GetCurrentImageOption().artworkType];
               _ &&
@@ -2004,16 +2004,16 @@
             );
           }
           SetCurrentImageOption(_) {
-            (this.m_currentImageOption = _),
-              (this.m_currentImageOptionKey = _?.sKey);
+            ((this.m_currentImageOption = _),
+              (this.m_currentImageOptionKey = _?.sKey));
           }
         }
-        _([_._], _.prototype, "m_currentImageOption", 2),
-          _([_._], _.prototype, "m_currentImageOptionKey", 2);
+        (_([_._], _.prototype, "m_currentImageOption", 2),
+          _([_._], _.prototype, "m_currentImageOptionKey", 2));
         class _ extends _ {
           video;
           constructor(_, _, _, _, _, _, _) {
-            super(_, _, _, _, _, _), (this.video = _);
+            (super(_, _, _, _, _, _), (this.video = _));
           }
           BIsOriginalMinimumDimensions(_) {
             return _(
@@ -2057,10 +2057,10 @@
           localizedImageGroupPrimaryImage;
           media;
           constructor(_, _, _, _, _, _, _, _) {
-            super(_, _, _, _, _, _),
+            (super(_, _, _, _, _, _),
               (0, _._)(this),
               (this.media = _),
-              (this.localizedImageGroupPrimaryImage = _);
+              (this.localizedImageGroupPrimaryImage = _));
           }
           IsValidAssetType(_, _) {
             return (
@@ -2129,7 +2129,7 @@
           });
           return (
             _.forEach((_) => {
-              (_.status = "waiting"), (_.message = "");
+              ((_.status = "waiting"), (_.message = ""));
             }),
             _
           );
@@ -2140,14 +2140,14 @@
           for (const _ of _) {
             _.status = "uploading";
             const _ = await _(_, _.filename, _.language ?? _.xPp, _);
-            (_.status = _.bSuccess ? "success" : "failed"),
+            ((_.status = _.bSuccess ? "success" : "failed"),
               (_.message =
                 !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ""),
               _.push({
                 bSuccess: _.bSuccess,
                 image: _,
                 uploadResult: _.result,
-              });
+              }));
           }
           return _;
         }
@@ -2156,18 +2156,18 @@
             _ = [];
           let _ = 0;
           const _ = async () => {
-              for (; _ < _.length; ) {
+              for (; _ < _.length;) {
                 const _ = _++,
                   _ = _[_];
                 _.status = "uploading";
                 const _ = await _(_, _.filename, _.language ?? _.xPp, _);
-                (_.status = _.bSuccess ? "success" : "failed"),
+                ((_.status = _.bSuccess ? "success" : "failed"),
                   (_.message =
                     !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ""),
                   (_[_] = {
                     image: _,
                     uploadResult: _,
-                  });
+                  }));
               }
             },
             _ = Array.from(
@@ -2258,7 +2258,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         function _(_, _, _) {
           const _ = _(_.width, _),
@@ -2309,12 +2309,12 @@
           m_localizedImageGroupPrimaryImage;
           m_lastError = void 0;
           constructor(_, _, _, _) {
-            super(),
+            (super(),
               (0, _._)(this),
               (this.m_clanSteamID = _),
               (this.m_rgImageOptions = _(_)),
               (this.m_localizedImageGroupPrimaryImage = _),
-              (this.m_clanImagesV2 = _ ?? !1);
+              (this.m_clanImagesV2 = _ ?? !1));
           }
           GetClanSteamID() {
             return this.m_clanSteamID;
@@ -2338,7 +2338,7 @@
               _,
               this.m_localizedImageGroupPrimaryImage,
             );
-            return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+            return ((this.m_filesToUpload = [...this.m_filesToUpload, _]), !0);
           }
           async AddExistingClanImage(_, _ = _.Bhc) {
             const _ = _._.GetHashAndExt(_);
@@ -2356,8 +2356,8 @@
             return await this.AddImage(_, _);
           }
           DeleteUploadImageByIndex(_) {
-            this.m_filesToUpload.splice(_, 1),
-              (this.m_filesToUpload = [...this.m_filesToUpload]);
+            (this.m_filesToUpload.splice(_, 1),
+              (this.m_filesToUpload = [...this.m_filesToUpload]));
           }
           DeleteUploadImage(_) {
             let _ = this.m_filesToUpload.findIndex(
@@ -2399,7 +2399,7 @@
             return this.m_filesCompleted.indexOf(_) != -1;
           }
           RetryAllFailedUploads() {
-            this.CancelAllUploads(), this.UploadAllImages();
+            (this.CancelAllUploads(), this.UploadAllImages());
           }
           async handleUploadRefresh(_) {
             await _.LoadClanImages(this.m_clanSteamID, !0, _);
@@ -2412,7 +2412,7 @@
               _ = _.GetCurrentImageOption(),
               _ = _.GetResizeDimension(),
               _ = new FormData();
-            _.append("clanimage", _, _),
+            (_.append("clanimage", _, _),
               _.append("sessionid", (0, _._)()),
               this.m_clanImagesV2 && _.append("clan_images_v2", "1"),
               _?.artworkType && _.append("arttype", _.artworkType),
@@ -2421,7 +2421,7 @@
                 _.append(
                   "resize",
                   _.map((_) => _.width + "x" + _.height).join(","),
-                );
+                ));
             let _ = "/uploadimage/";
             const _ = this.m_localizedImageGroupPrimaryImage;
             _ &&
@@ -2449,15 +2449,15 @@
               _,
               _ = !0;
             try {
-              (_ = await _().post(_, _, _)), this.m_filesCompleted.push(_);
+              ((_ = await _().post(_, _, _)), this.m_filesCompleted.push(_));
             } catch (_) {
-              (_ = !1),
+              ((_ = !1),
                 (this.m_lastError = {
                   file: _,
                   status: _.response ? _.response.status : 500,
                   message: (0, _._)(_).strErrorMsg,
                 }),
-                (_ = _.response);
+                (_ = _.response));
             }
             return (
               _ || (await this.handleUploadRefresh(_)),
@@ -2468,14 +2468,14 @@
             );
           }
         }
-        _([_._], _.prototype, "m_filesToUpload", 2),
+        (_([_._], _.prototype, "m_filesToUpload", 2),
           _([_._], _.prototype, "m_filesCompleted", 2),
           _([_._], _.prototype, "m_lastError", 2),
           _([_._], _.prototype, "AddImage", 1),
           _([_._], _.prototype, "AddExistingClanImage", 1),
           _([_._], _.prototype, "DeleteUploadImageByIndex", 1),
           _([_._], _.prototype, "DeleteUploadImage", 1),
-          _([_._], _.prototype, "ClearImages", 1);
+          _([_._], _.prototype, "ClearImages", 1));
         class _ extends _ {
           constructor(_, _, _) {
             super(_, _, _, !1);
@@ -2606,7 +2606,7 @@
                         thumb_url: _,
                         uploaded_time: Date.now() / 1e3,
                       };
-                    _(_), _(_);
+                    (_(_), _(_));
                   }
                 }
               } finally {
@@ -2619,7 +2619,7 @@
           if (_ && _.GetFilesToUpload().length > 0) {
             _ = _.GetUploadImages()[0];
             const _ = _.IsValidAssetType(_);
-            (_ = _.error), (_ = _.needsCrop);
+            ((_ = _.error), (_ = _.needsCrop));
           }
           return (0, _.jsxs)(_.Fragment, {
             children: [
@@ -2694,18 +2694,18 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           },
           _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         let _ = class extends _.Component {
           m_cancelSignal = _().CancelToken.source();
           constructor(_) {
-            super(_),
+            (super(_),
               (this.state = {
                 formattingHelp: {
                   __html: _.s_formattingHelp.get(_.formatType) ?? "",
                 },
-              });
+              }));
           }
           componentDidMount() {
             this.AjaxGetFormattingHelp().catch((_) => {
@@ -2732,7 +2732,7 @@
                   sessionid: (0, _._)(),
                 },
                 _;
-              (_ = await _().get(_.GetHelpURL(this.props.formatType, !0), {
+              ((_ = await _().get(_.GetHelpURL(this.props.formatType, !0), {
                 params: _,
                 cancelToken: this.m_cancelSignal.token,
               })),
@@ -2741,7 +2741,7 @@
                   formattingHelp: {
                     __html: _.data,
                   },
-                });
+                }));
             }
           }
           render() {
@@ -2771,7 +2771,7 @@
                   });
           }
         };
-        _(_, "s_formattingHelp", new Map()), (_ = _([_._], _));
+        (_(_, "s_formattingHelp", new Map()), (_ = _([_._], _)));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -2793,16 +2793,16 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           },
           _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         let _ = class extends _.Component {
           descAutoTextAreaRef = _.createRef();
           constructor(_) {
-            super(_),
+            (super(_),
               (this.state = {
                 bShowDragTarget: !1,
-              });
+              }));
           }
           componentDidMount() {
             _.AddClanImageDragListener(this.ClanImageDragListener);
@@ -2891,11 +2891,11 @@
             });
           }
         };
-        _([_._], _.prototype, "ClanImageDragListener", 1),
+        (_([_._], _.prototype, "ClanImageDragListener", 1),
           _([_._], _.prototype, "onFocus", 1),
           _([_._], _.prototype, "OnTextAreaDropListener", 1),
           _([_._], _.prototype, "GetTextAreaRef", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         class _ {
           static BIsFireFox() {
             return !!new RegExp(/Firefox\/([0-9\.]+)(?:\s|$)/i).exec(
@@ -2905,9 +2905,9 @@
           static replaceSelection(_, _) {
             if (!_) return;
             let _ = _.selectionStart;
-            _.focus(),
+            (_.focus(),
               _.InsertTextAtSelect(_, _),
-              _.setSelectionRange(_, _ + _.length);
+              _.setSelectionRange(_, _ + _.length));
           }
           static getSelectedString(_) {
             return _
@@ -2921,10 +2921,10 @@
             if (!_) return;
             let _ = _.getSelectedString(_),
               _ = "";
-            _.indexOf(_) == 0 && _.lastIndexOf(_) == _.length - _.length
+            (_.indexOf(_) == 0 && _.lastIndexOf(_) == _.length - _.length
               ? (_ = _.substr(_.length, _.length - _.length - _.length))
               : (_ = _ + _ + _),
-              _.replaceSelection(_, _);
+              _.replaceSelection(_, _));
           }
           static append(_, _) {
             _ &&
@@ -2962,8 +2962,8 @@
               const _ = new Event("input", {
                 bubbles: !0,
               });
-              _.dispatchEvent(_),
-                (_.selectionStart = _.selectionEnd = _ + _.length);
+              (_.dispatchEvent(_),
+                (_.selectionStart = _.selectionEnd = _ + _.length));
             }
             _.focus();
           }
@@ -3022,9 +3022,7 @@
                 _ =
                   _ +
                   _.split(`
-`)
-                    .map((_) => (_.match(/\*+\s/) ? "[*]" : "[*] ") + _)
-                    .join(`
+`).map((_) => (_.match(/\*+\s/) ? "[*]" : "[*] ") + _).join(`
 `) +
                   `
 ` +
@@ -3100,8 +3098,8 @@
           }
           OnEmoticonSelected(_, _ = !1) {
             let _ = `\u02D0${_}\u02D0`;
-            _.replaceSelection(this.props.fnTextareaRef()?.current, _),
-              this.props.fnTextareaRef()?.current?.focus();
+            (_.replaceSelection(this.props.fnTextareaRef()?.current, _),
+              this.props.fnTextareaRef()?.current?.focus());
           }
           BSupports(_) {
             return this.props.supportBBCodes.findIndex((_) => _ == _) >= 0;
@@ -3271,7 +3269,7 @@
             );
           }
         };
-        _([_._], _.prototype, "onBold", 1),
+        (_([_._], _.prototype, "onBold", 1),
           _([_._], _.prototype, "onItalics", 1),
           _([_._], _.prototype, "onUnderline", 1),
           _([_._], _.prototype, "onStrikeThrough", 1),
@@ -3287,7 +3285,7 @@
           _([_._], _.prototype, "OnOpenImageDialog", 1),
           _([_._], _.prototype, "OnOpenSpeakerDialog", 1),
           _([_._], _.prototype, "OnEmoticonSelected", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         function _(_) {
           return (0, _.jsx)("span", {
             onClick: _.onClick,
@@ -3510,14 +3508,14 @@
             });
           }
         };
-        _([_._], _.prototype, "OnYoutubeInsertLink", 1),
+        (_([_._], _.prototype, "OnYoutubeInsertLink", 1),
           _([_._], _.prototype, "OnUrlChange", 1),
           _([_._], _.prototype, "OnLeftSelected", 1),
           _([_._], _.prototype, "OnRightSelected", 1),
           _([_._], _.prototype, "OnFullSelected", 1),
           _([_._], _.prototype, "OnSummarySelected", 1),
           _([_._], _.prototype, "OnOuterDivClickPassDown", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         let _ = class extends _.Component {
           state = {
             textToDisplay: "",
@@ -3613,11 +3611,11 @@
             });
           }
         };
-        _(_, "m_regExp", new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i)),
+        (_(_, "m_regExp", new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i)),
           _([_._], _.prototype, "onLinkTitleUpdate", 1),
           _([_._], _.prototype, "onLinkURLUpdate", 1),
           _([_._], _.prototype, "onInsertLink", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         let _ = class extends _.Component {
           refFirstInput = _.createRef();
           state = {
@@ -3631,10 +3629,12 @@
             const { anchorURL: _, imgURL: _ } = this.state;
             let _ = "",
               _ = "";
-            _ && _.length > 0 && ((_ += "[url=" + _ + "]"), (_ = "[/url]" + _)),
+            (_ &&
+              _.length > 0 &&
+              ((_ += "[url=" + _ + "]"), (_ = "[/url]" + _)),
               (_ += "[img]" + _),
               (_ = "[/img]" + _),
-              _.wrapBBCode(_, _, this.props.textareaRef.current);
+              _.wrapBBCode(_, _, this.props.textareaRef.current));
           }
           OnImageURLChange(_) {
             this.state.imgURL != _.target.value &&
@@ -3716,10 +3716,10 @@
             });
           }
         };
-        _([_._], _.prototype, "OnImageInsert", 1),
+        (_([_._], _.prototype, "OnImageInsert", 1),
           _([_._], _.prototype, "OnImageURLChange", 1),
           _([_._], _.prototype, "OnAnchorURLChange", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         const _ = (_) => {
           const [_, _] = _.useState(""),
             [_, _] = _.useState(""),
@@ -3740,9 +3740,9 @@
                   _._ + "/" + _.clanAccountID + "/" + _._.GetHashAndExt(_);
                 _ += ` photo="${_}"`;
               }
-              _ && (_ += ` steamid="${_.ConvertTo64BitString()}"`),
+              (_ && (_ += ` steamid="${_.ConvertTo64BitString()}"`),
                 (_ += `]${_}[/speaker]`),
-                _.replaceSelection(_.textareaRef.current, _);
+                _.replaceSelection(_.textareaRef.current, _));
             },
             _ = _.trim().length != 0 && _.trim().length != 0,
             _ = 184;
@@ -3944,11 +3944,11 @@
           m_isMounted = !1;
           m_bAppend = !1;
           constructor(_) {
-            super(_),
+            (super(_),
               (this.state = {
                 bPreserveNewLines: !1,
                 strHTMLData: "",
-              });
+              }));
           }
           componentDidMount() {
             this.m_isMounted = !0;
@@ -3957,10 +3957,10 @@
             this.m_isMounted = !1;
           }
           OnConvertAndOverriteHTML() {
-            (this.m_bAppend = !1), this.ConvertBBCode();
+            ((this.m_bAppend = !1), this.ConvertBBCode());
           }
           OnConvertAndAppendHTML() {
-            (this.m_bAppend = !0), this.ConvertBBCode();
+            ((this.m_bAppend = !0), this.ConvertBBCode());
           }
           async ConvertHtmlToBBCode(_, _) {
             let _ = new URLSearchParams();
@@ -3976,7 +3976,7 @@
             );
           }
           ConvertBBCode() {
-            this.setState({
+            (this.setState({
               bConverting: !0,
             }),
               this.ConvertHtmlToBBCode(
@@ -4009,7 +4009,7 @@
                       strTitle: (0, _._)("#EventEditor_ConvertHTML_Error"),
                     },
                   );
-                });
+                }));
           }
           OnCheckboxChange(_) {
             let _ = _.target.checked;
@@ -4131,11 +4131,11 @@
                   });
           }
         };
-        _([_._], _.prototype, "OnConvertAndOverriteHTML", 1),
+        (_([_._], _.prototype, "OnConvertAndOverriteHTML", 1),
           _([_._], _.prototype, "OnConvertAndAppendHTML", 1),
           _([_._], _.prototype, "OnCheckboxChange", 1),
           _([_._], _.prototype, "OnTextAreaChange", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -4152,7 +4152,7 @@
         async function _(_, _, _) {
           if (_._.IN_STEAMUI) {
             const _ = _._.Init(_.kVt);
-            _.Body().set_appid(_), _.Body().set_status_text(_);
+            (_.Body().set_appid(_), _.Body().set_status_text(_));
             const _ = await _.xtC.PostStatusToFriends(
               _._.CMInterface.GetServiceTransport(),
               _,
@@ -4161,9 +4161,9 @@
             return;
           }
           const _ = new FormData();
-          _.append("appid", String(_ ?? 0)),
+          (_.append("appid", String(_ ?? 0)),
             _.append("status_text", _),
-            _.append("sessionid", (0, _._)());
+            _.append("sessionid", (0, _._)()));
           const _ = await fetch(_ + "ajaxpostuserstatus", {
             method: "POST",
             body: _,
@@ -4324,7 +4324,7 @@
             _ = _.useMemo(() => {
               if (!_) return "";
               const _ = new URL(_);
-              return _.searchParams.set(_, (0, _.LgB)(_)), _.href;
+              return (_.searchParams.set(_, (0, _.LgB)(_)), _.href);
             }, [_, _]),
             _ = _._.EREALM === _._.k_ESteamRealmChina,
             _ = () => {
@@ -4500,7 +4500,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           },
           _ = ((_) => (
             (_.topleft = "topleft"),
@@ -4528,7 +4528,7 @@
             this.m_listeners.Unregister();
           }
           constructor(_) {
-            super(_),
+            (super(_),
               (this.state = {
                 curLeftPosPct: this.props.xPosPct,
                 curTopPosPct: this.props.yPosPct,
@@ -4548,13 +4548,13 @@
               (this.m_aspectRatio =
                 this.props.heightPct > 0 && this.props.widthPct > 0
                   ? this.props.widthPct / this.props.heightPct
-                  : 1);
+                  : 1));
           }
           LinkRegionBoxRef(_) {
             this.m_elLinkRegionBox = _;
           }
           OnMouseDown(_, _) {
-            this.m_elLinkRegionBox?.parentElement &&
+            (this.m_elLinkRegionBox?.parentElement &&
               this.m_elLinkRegionBox.ownerDocument.defaultView &&
               ((this.m_fnMouseUp = (_) => {
                 this.OnMouseUp(_, _);
@@ -4588,7 +4588,7 @@
                 this.m_fnMouseUp,
               )),
               _.preventDefault(),
-              _.stopPropagation();
+              _.stopPropagation());
           }
           OnMouseMove(_, _) {
             if (this.state.EdgeDown !== void 0) {
@@ -4670,7 +4670,7 @@
                 default:
                   break;
               }
-              _.preventDefault(), _.stopPropagation();
+              (_.preventDefault(), _.stopPropagation());
             }
           }
           IsValidPct(_) {
@@ -4703,7 +4703,7 @@
                 this.props.heightMinPct || 0,
                 this.props.heightMaxPct || 100,
               );
-            this.props.bLockAspectRatio &&
+            (this.props.bLockAspectRatio &&
               (_.curLeftPosPct !== void 0 || _.curRightPosPct !== void 0
                 ? (_ = _ / this.m_aspectRatio)
                 : (_ = _ * this.m_aspectRatio)),
@@ -4712,7 +4712,7 @@
                 : (_ = 100 - (_ + _)),
               _.curTopPosPct !== void 0
                 ? (_ = 100 - _ - _)
-                : (_ = 100 - (_ + _));
+                : (_ = 100 - (_ + _)));
             const _ = 100 - _ - _,
               _ = 100 - _ - _;
             this.IsValidPct(_) &&
@@ -4765,7 +4765,7 @@
             );
           }
           OnMouseUp(_, _) {
-            this.setState({
+            (this.setState({
               curWidthPct:
                 100 - this.state.curRightPosPct - this.state.curLeftPosPct,
             }),
@@ -4784,7 +4784,7 @@
                 link_url: this.state.text_link_url,
                 link_description: this.state.text_link_description,
               }),
-              this.m_listeners.Unregister();
+              this.m_listeners.Unregister());
           }
           async HandleDelete() {
             this.props.deleteFn && this.props.deleteFn(this.props.index);
@@ -4808,7 +4808,7 @@
               : !1;
           }
           OnSaveLink() {
-            (this.m_strDescription = this.state.text_link_description ?? ""),
+            ((this.m_strDescription = this.state.text_link_description ?? ""),
               this.setState({
                 bEditingLink: !this.state.bEditingLink,
               }),
@@ -4819,7 +4819,7 @@
                 heightPct: this.state.curHeightPct,
                 link_url: this.state.text_link_url,
                 link_description: this.state.text_link_description,
-              });
+              }));
           }
           OnEditLink() {
             this.setState({
@@ -4974,7 +4974,7 @@
             );
           }
         };
-        _([_._], _.prototype, "LinkRegionBoxRef", 1),
+        (_([_._], _.prototype, "LinkRegionBoxRef", 1),
           _([_._], _.prototype, "OnMouseDown", 1),
           _([_._], _.prototype, "OnMouseMove", 1),
           _([_._], _.prototype, "OnMouseUp", 1),
@@ -4983,7 +4983,7 @@
           _([_._], _.prototype, "OnSetLinkDescriptionChange", 1),
           _([_._], _.prototype, "OnSaveLink", 1),
           _([_._], _.prototype, "OnEditLink", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";

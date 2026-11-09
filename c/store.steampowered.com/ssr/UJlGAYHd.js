@@ -91,4 +91,3 @@ function _(_) {
 function _(_, _) {
   return _.ChildTakeFocus(_);
 }
-export { _ };

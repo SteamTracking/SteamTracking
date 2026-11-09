@@ -51,11 +51,11 @@ function D(e, t) {
     a = T.useCallback(
       (t) => {
         let n = E(t) ? String(t) : void 0;
-        n === void 0
+        (n === void 0
           ? window.localStorage.removeItem(e)
           : window.localStorage.setItem(e, n),
           r(n),
-          O.Get().GetLocalStoreChangeCallback(e).Dispatch(n);
+          O.Get().GetLocalStoreChangeCallback(e).Dispatch(n));
       },
       [e, r],
     );
@@ -87,7 +87,7 @@ var O = class e {
   }
   static s_Singleton;
   static Get() {
-    return (e.s_Singleton ||= new e()), e.s_Singleton;
+    return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
 };
 function pe([e, t, n]) {
@@ -97,19 +97,19 @@ function pe([e, t, n]) {
     o,
     s;
   if (r !== 0) s = (r - i) / r;
-  else return (s = 0), (o = 0), [o, s, a];
+  else return ((s = 0), (o = 0), [o, s, a]);
   if (s === 0) o = 0;
   else {
     let a = r - i;
-    (o = e === r ? (t - n) / a : t === r ? 2 + (n - e) / a : 4 + (e - t) / a),
+    ((o = e === r ? (t - n) / a : t === r ? 2 + (n - e) / a : 4 + (e - t) / a),
       (o *= 60),
-      o < 0 && (o += 360);
+      o < 0 && (o += 360));
   }
   return [o, s, a];
 }
 function me([e, t, n]) {
   if (t === 0) return [n, n, n];
-  (e = ((e % 360) + 360) % 360), (e /= 60);
+  ((e = ((e % 360) + 360) % 360), (e /= 60));
   let r = Math.floor(e),
     i = e - r,
     a = n * (1 - t),
@@ -243,15 +243,15 @@ function xe(e) {
   if (typeof CSS > `u` || !CSS.supports(`color`, e)) return;
   if (F === void 0) {
     let e = document.createElement(`canvas`);
-    (e.width = e.height = 1),
-      (F = e.getContext(`2d`, { willReadFrequently: !0 }));
+    ((e.width = e.height = 1),
+      (F = e.getContext(`2d`, { willReadFrequently: !0 })));
   }
   let t = F;
   if (!t) return;
-  t.clearRect(0, 0, 1, 1),
+  (t.clearRect(0, 0, 1, 1),
     (t.fillStyle = `#000000`),
     (t.fillStyle = e),
-    t.fillRect(0, 0, 1, 1);
+    t.fillRect(0, 0, 1, 1));
   let [n, r, i, a] = t.getImageData(0, 0, 1, 1).data;
   return { r: n, g: r, b: i, a: A(a / 255) };
 }
@@ -311,7 +311,7 @@ function We(t) {
         let t = a ? { ...e, a: 1 } : e;
         l(t);
         let n = j(t);
-        (u.current = n), r(N(n));
+        ((u.current = n), r(N(n)));
       },
       [a, r],
     ),
@@ -471,7 +471,7 @@ function Ye(t) {
       t && i(t);
     },
     h = (e) => {
-      s(e), u(void 0);
+      (s(e), u(void 0));
     };
   return (0, z.jsxs)(`div`, {
     className: Oe,
@@ -607,12 +607,12 @@ function $e(t) {
   f.current = { color: n, onChange: r, fnRestoreChanges: c, bLivePreview: s };
   let m = (0, T.useCallback)(
       (e) => {
-        (u.current = e), s && r(e);
+        ((u.current = e), s && r(e));
       },
       [s, r],
     ),
     h = (0, T.useCallback)(() => {
-      (d.current = !0), !s && u.current !== void 0 && r(u.current), i();
+      ((d.current = !0), !s && u.current !== void 0 && r(u.current), i());
     }, [s, r, i]);
   return (
     (0, T.useEffect)(
@@ -620,7 +620,7 @@ function $e(t) {
         let e = f.current;
         if (!d.current && e.bLivePreview && u.current !== void 0)
           try {
-            e.onChange(e.color), e.fnRestoreChanges?.();
+            (e.onChange(e.color), e.fnRestoreChanges?.());
           } catch (e) {
             console.error(`Color picker: could not undo a previewed color`, e);
           }
@@ -639,8 +639,8 @@ function $e(t) {
         e.addEventListener(`pointerdown`, t, !0),
         e.addEventListener(`keydown`, n, !0),
         () => {
-          e.removeEventListener(`pointerdown`, t, !0),
-            e.removeEventListener(`keydown`, n, !0);
+          (e.removeEventListener(`pointerdown`, t, !0),
+            e.removeEventListener(`keydown`, n, !0));
         }
       );
     }, [i]),
@@ -739,11 +739,11 @@ function q(e) {
       onDragOver: t ? J : void 0,
       onDrop: T.useCallback(
         (t) => {
-          t.dataTransfer.files?.length &&
+          (t.dataTransfer.files?.length &&
             (e(t.dataTransfer.files, t),
             t.preventDefault(),
             t.stopPropagation()),
-            n(!1);
+            n(!1));
         },
         [e],
       ),
@@ -826,7 +826,7 @@ function dt(e) {
             { language: a } = fe(i?.name, c);
           try {
             let n = le(a, c, o);
-            (r = await t.AddImageForLanguage(i, n)),
+            ((r = await t.AddImageForLanguage(i, n)),
               r ||
                 (console.error(
                   `ImageUploaderPanel.OnDropFiles: failed on i=` +
@@ -839,10 +839,10 @@ function dt(e) {
                     strDescription: y(`#ImagePicker_Error`, i.name),
                   }),
                   window,
-                ));
+                )));
           } catch (e) {
             let t = C(e);
-            console.error(
+            (console.error(
               `ImageUploaderPanel.OnDropFiles: ` + t.strErrorMsg,
               t,
             ),
@@ -851,7 +851,7 @@ function dt(e) {
                   strDescription: y(`#EventError_Code`, t.strErrorMsg ?? ``),
                 }),
                 window,
-              );
+              ));
           }
         }
         return r;
@@ -955,10 +955,10 @@ function mt(t) {
     s = r.ImageOptions?.map((e) => {
       let t = e?.fnGetLabelText(),
         n;
-      e.bEnforceDimensions && (t += ` - ${e.width}x${e.height}`),
+      (e.bEnforceDimensions && (t += ` - ${e.width}x${e.height}`),
         e.bDeprecated &&
           ((t += ` ${y(`#ImageUpload_Deprecated`)}`),
-          (n = y(`#ImageUpload_Deprecated_ttip`)));
+          (n = y(`#ImageUpload_Deprecated_ttip`))));
       let i;
       return (
         (r.BIsOriginalMinimumDimensions(e) && r.FileTypeMatchesImageTypes(e)) ||

@@ -73,7 +73,7 @@ function me(e, t, n, r, i) {
     l = 0,
     u = 0,
     d = 0;
-  for (; c.length < i && (l < a.length || u < o.length || d < s.length); ) {
+  for (; c.length < i && (l < a.length || u < o.length || d < s.length);) {
     let e = [],
       i = u < o.length || d < s.length,
       f = Math.min(i ? n : t, a.length - l);
@@ -86,7 +86,7 @@ function me(e, t, n, r, i) {
       h = o.slice(u, u + m);
     u += m;
     let g = Math.min(p - m, s.length - d);
-    h.push(...s.slice(d, d + g)), (d += g);
+    (h.push(...s.slice(d, d + g)), (d += g));
     for (let t = 0; t < h.length; t += 2) {
       let n = h.slice(t, t + 2);
       e.push({ key: `half_${X(n[0])}`, items: n });

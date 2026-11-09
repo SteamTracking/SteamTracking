@@ -125,7 +125,7 @@ function _(_) {
   )
     return null;
   let _ = () => {
-      _()?.AddEvent(_), _.mutate(null);
+      (_()?.AddEvent(_), _.mutate(null));
     },
     _ = () => {
       for (let _ of _)
@@ -140,7 +140,7 @@ function _(_) {
           },
           gidCoupon: _.gidcoupon_applied,
         });
-      _.mutate(_), _(!0), _()?.AddEvent(_);
+      (_.mutate(_), _(!0), _()?.AddEvent(_));
     },
     _ = (0, _.jsxs)(`a`, {
       href: _(_),

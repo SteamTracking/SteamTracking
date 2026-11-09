@@ -1246,7 +1246,7 @@ function _(_) {
   }, [_]);
 }
 var _ = {};
-(_.arabic = () =>
+((_.arabic = () =>
   _(() => import(`./yearinreview_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
     _(() => import(`./yearinreview_brazilian.js`), [], import.meta.url)),
@@ -1309,7 +1309,7 @@ var _ = {};
   (_.ukrainian = () =>
     _(() => import(`./yearinreview_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./yearinreview_vietnamese.js`), [], import.meta.url));
+    _(() => import(`./yearinreview_vietnamese.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -1320,4 +1320,3 @@ function _(_, _, _, _, ..._) {
     return _ ? _.LocalizeReact(_, ..._) : _.LocalizeReact(_, _, ..._);
   if (_.HasKey(_)) return _.LocalizeReact(_, ..._);
 }
-export { _, _, _ };

@@ -82,7 +82,7 @@ function I(e) {
     onOpenChange: s,
     onTextChange: (0, P.useCallback)(
       (e) => {
-        e ? (s(!0), a(null)) : s(!1), t(e);
+        (e ? (s(!0), a(null)) : s(!1), t(e));
       },
       [t],
     ),
@@ -167,7 +167,7 @@ function Ce(e) {
     } = z(`<Autocomplete.TextInput>`);
   return (0, F.jsx)(A.Item, {
     onSelect: (e) => {
-      s && s(t, e), e.defaultPrevented || i(t), o(null), a(!1);
+      (s && s(t, e), e.defaultPrevented || i(t), o(null), a(!1));
     },
     ...r,
     children: n,
@@ -182,7 +182,7 @@ var L = Object.assign(ye, {
   R = (0, P.createContext)(null);
 function z(e) {
   let t = (0, P.useContext)(R);
-  return le(t, `${e} must be used within an <Autocomplete>!`), t;
+  return (le(t, `${e} must be used within an <Autocomplete>!`), t);
 }
 var B = (0, P.createContext)(!1);
 function V() {
@@ -267,7 +267,7 @@ function ke(e) {
   let { facets: t, state: n, onStateChange: r, facetingInfo: i, ...a } = e,
     o = { ...t },
     s = o[G];
-  delete o[G], n.app && delete o[Oe];
+  (delete o[G], n.app && delete o[Oe]);
   let c = H(De, o, i);
   return (0, F.jsxs)(j, {
     ...a,
@@ -481,7 +481,7 @@ function Ue(e) {
     u = t.bSteamItems,
     d = (e) => n({ ...t, bSteamItems: e }),
     f = (e) => {
-      e.preventDefault(), e.stopPropagation();
+      (e.preventDefault(), e.stopPropagation());
     },
     p = M(`sm`),
     m = u ? l.rgAppData && l.rgAppData[Q] : t.filterInGame.app,
@@ -627,7 +627,7 @@ function Ge(e) {
       l.price[0] === 0 &&
       l.price[1] === r.maxPrice,
     f = () => {
-      s(!0), i(t, r);
+      (s(!0), i(t, r));
     },
     p = M(`sm`),
     m = (0, F.jsx)(O, {
@@ -1026,7 +1026,7 @@ function tt(e) {
     h = s;
   if (!a) {
     let e = d ? Math.floor((d.contentRect.width - 10) / 104) : 0;
-    (h = h.slice(0, e)), (l = l.slice(0, e));
+    ((h = h.slice(0, e)), (l = l.slice(0, e)));
   }
   return (0, F.jsxs)(k, {
     direction: `column`,
@@ -1102,10 +1102,10 @@ function rt(e) {
     },
     n = t.filterInGame,
     { strQuery: r, unFilterApp: i, rgFilterData: a, rgAppData: o = {} } = e;
-  typeof i == `number` &&
+  (typeof i == `number` &&
     o[i] &&
     (i === Q ? ((t.bSteamItems = !0), (n = t.filterSteam)) : (n.app = o[i])),
-    typeof r == `string` && (t.strSearch = r);
+    typeof r == `string` && (t.strSearch = r));
   let s = it(a);
   if (
     (s && (n.facets = s),
@@ -1171,9 +1171,9 @@ function ot(e, t) {
       price: [d, f],
     } = s,
     p = new FormData();
-  c && p.set(`appid`, c.appid.toString()),
+  (c && p.set(`appid`, c.appid.toString()),
     n && p.set(`q`, n),
-    n && r && We(s.app) && p.set(`descriptions`, `1`);
+    n && r && We(s.app) && p.set(`descriptions`, `1`));
   for (let e of Object.keys(l))
     if (l[e])
       for (let t of Object.keys(l[e]))
@@ -1372,7 +1372,7 @@ var ht = {};
 function gt(e) {
   let { icon: t, size: n } = e,
     [r, i] = (0, P.useState)(!!ht[t]);
-  (0, P.useEffect)(() => {
+  ((0, P.useEffect)(() => {
     let e = !0;
     return (
       setTimeout(() => {
@@ -1383,7 +1383,7 @@ function gt(e) {
       }
     );
   }, []),
-    r && (ht[t] = !0);
+    r && (ht[t] = !0));
   let a = he(n),
     o = `var(--spacing-${parseInt(a) + 3})`;
   return r
@@ -1415,8 +1415,8 @@ function yt(e) {
         (window.g_fnShowMarketSearch = () => n(!0)),
         (window.g_fnHideMarketSearch = () => n(!1)),
         () => {
-          delete window.g_fnShowMarketSearch,
-            delete window.g_fnHideMarketSearch;
+          (delete window.g_fnShowMarketSearch,
+            delete window.g_fnHideMarketSearch);
         }
       ),
       [],

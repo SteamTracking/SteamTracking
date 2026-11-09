@@ -37,8 +37,8 @@ function _(_, _, _ = !0) {
     _ = _.substring(0, _);
     let _ = _.replace(/^(.*([.!?])) .*$/, `$1`),
       _ = _.length;
-    (_ < _ * 0.6 || _ == _) && (_ = _.replace(/ [^ ]*$/, `...`)),
-      (_ = _ ? _.replace(/(\r\n|\n|\r)/gm, ``) : _);
+    ((_ < _ * 0.6 || _ == _) && (_ = _.replace(/ [^ ]*$/, `...`)),
+      (_ = _ ? _.replace(/(\r\n|\n|\r)/gm, ``) : _));
   }
   return _;
 }
@@ -48,7 +48,7 @@ function _(_) {
     _;
   if (_.length === 0) return _;
   for (_ = 0; _ < _.length; _++)
-    (_ = _.charCodeAt(_)), (_ = (_ << 5) - _ + _), (_ |= 0);
+    ((_ = _.charCodeAt(_)), (_ = (_ << 5) - _ + _), (_ |= 0));
   return _;
 }
 function _(_) {
@@ -62,4 +62,3 @@ function _(_) {
 function _(_) {
   return btoa(_).replace(/\+/g, `-`).replace(`///g`, `_`).replace(/=/g, ``);
 }
-export { _, _, _, _, _, _, _, _, _, _ };

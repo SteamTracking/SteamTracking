@@ -247,7 +247,7 @@ function _(_, _) {
     case `hardwarepreview`:
       return !1;
     default:
-      return _(!1, `Unknown route specified for link: ` + _), !1;
+      return (_(!1, `Unknown route specified for link: ` + _), !1);
   }
 }
 function _(_) {
@@ -388,7 +388,7 @@ function _(_, _, _, _) {
     case `usernewshub`:
       return `${_}${_()}/`;
     default:
-      return _(!1, `Unknown route specified for link`), ``;
+      return (_(!1, `Unknown route specified for link`), ``);
   }
 }
 function _(_, _, _) {
@@ -555,10 +555,10 @@ var _ = class extends _ {
     m_mapHostToComponent;
     m_globalStoreLink;
     constructor(_, _, _, _) {
-      super(_),
+      (super(_),
         (this.m_parentNode = _),
         (this.m_mapHostToComponent = _),
-        (this.m_globalStoreLink = _);
+        (this.m_globalStoreLink = _));
     }
     AppendText(_, _ = !1) {
       let _ = _;
@@ -567,7 +567,7 @@ var _ = class extends _ {
         (this.m_parentNode == null || this.m_parentNode.tag != `img`)
       ) {
         let _ = this.m_LinkFilter.exec(_);
-        for (; _; ) {
+        for (; _;) {
           if (_.index > 0) {
             let _ = _.input.substring(0, _.index);
             super.AppendText(_, _);
@@ -577,19 +577,19 @@ var _ = class extends _ {
           if (this.m_mapHostToComponent) {
             for (let _ = 0; _ < this.m_mapHostToComponent.length; ++_)
               if (this.m_mapHostToComponent[_].urlRegExp.exec(_)) {
-                (_ = !0),
+                ((_ = !0),
                   super.AppendNode(
                     this.m_mapHostToComponent[_].fnBBComponent(
                       _,
                       this.m_globalStoreLink,
                     ),
-                  );
+                  ));
                 break;
               }
           }
-          _ || super.AppendNode(_(_)),
+          (_ || super.AppendNode(_(_)),
             (_ = _.input.substring(_.index + _.length)),
-            (_ = this.m_LinkFilter.exec(_));
+            (_ = this.m_LinkFilter.exec(_)));
         }
       }
       _.length > 0 && super.AppendText(_, _);
@@ -602,13 +602,13 @@ var _ = class extends _ {
       let _ = _;
       if (_.length >= 3) {
         let _ = this.m_EmoteRegex.exec(_);
-        for (; _; ) {
+        for (; _;) {
           if (_.index > 0) {
             let _ = _.input.substring(0, _.index);
             super.AppendText(_, _);
           }
           let _ = _[1];
-          super.AppendNode(
+          (super.AppendNode(
             _.createElement(
               _,
               {
@@ -618,7 +618,7 @@ var _ = class extends _ {
             ),
           ),
             (_ = _.input.substring(_.index + _.length + 2)),
-            (_ = this.m_EmoteRegex.exec(_));
+            (_ = this.m_EmoteRegex.exec(_)));
         }
       }
       _.length > 0 && super.AppendText(_, _);
@@ -627,15 +627,15 @@ var _ = class extends _ {
   _ = class extends _ {
     m_parentNode = void 0;
     constructor(_, _) {
-      super(_), (this.m_parentNode = _);
+      (super(_), (this.m_parentNode = _));
     }
     AppendText(_, _ = !1) {
       let _ = _;
-      this.m_parentNode &&
+      (this.m_parentNode &&
         this.m_parentNode.tag == `img` &&
         !_(_) &&
         (_ = _(_)),
-        super.AppendText(_, _);
+        super.AppendText(_, _));
     }
   };
 function _(_) {
@@ -781,13 +781,13 @@ function _(_) {
 }
 async function _(_, _) {
   let _ = new URLSearchParams();
-  _.clanAccountID && _.set(`clan_accountid`, String(_.clanAccountID)),
+  (_.clanAccountID && _.set(`clan_accountid`, String(_.clanAccountID)),
     _.appid && _.set(`appid`, String(_.appid)),
     _.eventGID && _.set(`event_gid`, _.eventGID),
     _.announcementGID && _.set(`announcement_gid`, _.announcementGID),
     _.set(`lang_list`, _(_)),
     _.set(`last_modified_time`, `0`),
-    _.set(`origin`, window.location.origin);
+    _.set(`origin`, window.location.origin));
   let _ = _.STORE_BASE_URL + `events/ajaxgetpartnerevent?` + _.toString(),
     _ = await fetch(_);
   if (!_._) throw Error(`${_} answered ${_.status}`);
@@ -1394,8 +1394,8 @@ function _(_, _, _, _) {
   let _,
     _ = _.endsWith(`/`) ? _.length - 1 : _.length,
     _ = _.lastIndexOf(`/`, _ - 1);
-  _ != -1 && _ + 1 < _.length && (_ = _.substring(_ + 1, _)),
-    _ && _ && (_ = _ + _);
+  (_ != -1 && _ + 1 < _.length && (_ = _.substring(_ + 1, _)),
+    _ && _ && (_ = _ + _));
   let _ = _(_, _?.event, _ ?? _);
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -1572,7 +1572,7 @@ var _ = 5,
     m_nVideoDuration = 0;
     m_nBufferedEndTime = 0;
     constructor(_) {
-      _(this), (this.m_persistState = _ || {});
+      (_(this), (this.m_persistState = _ || {}));
     }
     IsPaused() {
       return this.m_bPaused;
@@ -1611,7 +1611,7 @@ var _ = 5,
       return this.m_bShowingCaption;
     }
     Start(_, _, _, _, _) {
-      this.Stop(),
+      (this.Stop(),
         (this.m_strStatsURL = _ || ``),
         (this.m_elVideo = _),
         this.m_listeners.AddEventListener(
@@ -1671,7 +1671,7 @@ var _ = 5,
         ),
         this.m_listeners.AddEventListener(window, `pagehide`, this.SendStats),
         (this.m_player = new _(this.m_elVideo)),
-        this.m_player.SetTimeoutAfterFailedDownload(!1);
+        this.m_player.SetTimeoutAfterFailedDownload(!1));
       let _ =
         this.m_persistState.m_bAudioMuted !== void 0 &&
         this.m_persistState.m_bAudioMuted;
@@ -1680,12 +1680,12 @@ var _ = 5,
         this.m_persistState.m_nPlayerVolume === void 0
           ? 1
           : this.m_persistState.m_nPlayerVolume;
-      this.SetVolume(_, !0),
+      (this.SetVolume(_, !0),
         this.m_player.SetMuteOnAutoplayBlocked(this.m_bMuteWhenAutoplayBlocked),
-        this.m_player.PlayMPD(_, _, _);
+        this.m_player.PlayMPD(_, _, _));
     }
     Stop() {
-      this.SendStats(),
+      (this.SendStats(),
         this.m_listeners.Unregister(),
         this.m_player && this.m_player.Close(),
         (this.m_elVideo = null),
@@ -1695,21 +1695,21 @@ var _ = 5,
         (this.m_nPlaybackTime = 0),
         (this.m_nVideoStartTime = 0),
         (this.m_nVideoDuration = 0),
-        (this.m_nBufferedEndTime = 0);
+        (this.m_nBufferedEndTime = 0));
     }
     IsInitialized() {
       return !!this.m_player && !!this.m_elVideo;
     }
     OnVideoPlaying() {
       let _ = this.m_bPaused;
-      (this.m_bPaused = !1),
+      ((this.m_bPaused = !1),
         (this.m_bUserInputNeeded = !1),
-        _ && this.m_fnOnPlayPauseChange && this.m_fnOnPlayPauseChange(!0);
+        _ && this.m_fnOnPlayPauseChange && this.m_fnOnPlayPauseChange(!0));
     }
     OnVideoPause() {
       let _ = this.m_bPaused;
-      (this.m_bPaused = !0),
-        !_ && this.m_fnOnPlayPauseChange && this.m_fnOnPlayPauseChange(!1);
+      ((this.m_bPaused = !0),
+        !_ && this.m_fnOnPlayPauseChange && this.m_fnOnPlayPauseChange(!1));
     }
     OnVideoTimeUpdate() {
       this.IsInitialized() &&
@@ -1731,8 +1731,8 @@ var _ = 5,
       this.m_fnOnPlaybackEnd && this.m_fnOnPlaybackEnd();
     }
     OnDownloadFailed(_) {
-      console.log(`video download failed`, _.detail),
-        (this.m_eFailureReason = _.detail || _.PlaybackError);
+      (console.log(`video download failed`, _.detail),
+        (this.m_eFailureReason = _.detail || _.PlaybackError));
     }
     OnUserInputNeeded() {
       this.m_bUserInputNeeded = !0;
@@ -1809,8 +1809,8 @@ var _ = 5,
           _.m_bAudioMuted !== void 0 && this.SetMute(_.m_bAudioMuted, !0)));
     }
     SetMuteWhenAutoplayBlocked(_) {
-      (this.m_bMuteWhenAutoplayBlocked = _),
-        this.IsInitialized() && this.m_player.SetMuteOnAutoplayBlocked(_);
+      ((this.m_bMuteWhenAutoplayBlocked = _),
+        this.IsInitialized() && this.m_player.SetMuteOnAutoplayBlocked(_));
     }
     SetPlaybackEndCallback(_) {
       this.m_fnOnPlaybackEnd = _;
@@ -1854,7 +1854,7 @@ var _ = 5,
         (this.m_bSentStats = !0));
     }
   };
-_([_], _.prototype, `m_bPaused`, void 0),
+(_([_], _.prototype, `m_bPaused`, void 0),
   _([_], _.prototype, `m_bUserInputNeeded`, void 0),
   _([_], _.prototype, `m_bMuted`, void 0),
   _([_], _.prototype, `m_nVolume`, void 0),
@@ -1880,14 +1880,14 @@ _([_], _.prototype, `m_bPaused`, void 0),
   _([_.bound], _.prototype, `OnCaptionsChange`, null),
   _([_], _.prototype, `UserInputReceived`, null),
   _([_.bound], _.prototype, `SetMuteInternal`, null),
-  _([_], _.prototype, `SendStats`, null);
+  _([_], _.prototype, `SendStats`, null));
 function _(_, _, _, _, _, _, _) {
   let _ = _(),
     _ = (0, _.useRef)(void 0);
   _.current ||= new _(_);
   let _ = _(
     (_) => {
-      if (_) return _.current.Start(_, _, _, _, _), () => _.current.Stop();
+      if (_) return (_.current.Start(_, _, _, _, _), () => _.current.Stop());
     },
     [_, _, _, _],
   );
@@ -1902,16 +1902,16 @@ function _(_, _, _, _, _, _, _) {
       _.current.SetOnPlayPauseChangeCallback(_);
     }, [_]),
     (0, _.useEffect)(() => {
-      _.current.SetOnMuteChangeCallback(_), _ && _(_.current.GetMuted());
+      (_.current.SetOnMuteChangeCallback(_), _ && _(_.current.GetMuted()));
     }, [_]),
     [_, _.current]
   );
 }
 function _(_, _) {
-  (_ = !!_),
+  ((_ = !!_),
     (0, _.useEffect)(() => {
       _.SetMuteWhenAutoplayBlocked(_);
-    }, [_, _]);
+    }, [_, _]));
 }
 function _(_, _) {
   let _ = (0, _.useRef)(!1),
@@ -1940,7 +1940,7 @@ function _(_, _, _) {
     },
     _ = JSON.stringify(_),
     _ = new FormData();
-  _.append(`stats`, _), navigator.sendBeacon(_, _);
+  (_.append(`stats`, _), navigator.sendBeacon(_, _));
 }
 function _(_, _) {
   if (!_ || _(_) || _(_) || !_) return;
@@ -1967,7 +1967,7 @@ function _(_) {
     _ = (0, _.useRef)(null),
     _ = (0, _.useRef)(null),
     [_, _] = (0, _.useState)(`none`);
-  _(_ == `theater`), (_ = !!_), (_ = !!_);
+  (_(_ == `theater`), (_ = !!_), (_ = !!_));
   let _ = _(
       (_) => {
         if (((_.current = _), !_)) return;
@@ -2010,7 +2010,7 @@ function _(_) {
       (_) => {
         let _ = _.current,
           _ = _.current;
-        _ &&
+        (_ &&
           (_ != `fullscreen` && _(_) && _(_), _ == `fullscreen` && _(_, !!_)),
           _(_) &&
             (_ != `theater` && _.open && _.close(),
@@ -2018,7 +2018,7 @@ function _(_) {
           _(_) &&
             (_ != `theater` && _.matches(`:popover-open`) && _.hidePopover(),
             _ == `theater` && _.showPopover()),
-          _(_);
+          _(_));
       },
       [_],
     );
@@ -2075,9 +2075,9 @@ function _() {
       _.addEventListener(`transitionend`, _),
       _.addEventListener(`transitioncancel`, _),
       () => {
-        _.removeEventListener(`transitionstart`, _),
+        (_.removeEventListener(`transitionstart`, _),
           _.removeEventListener(`transitionend`, _),
-          _.removeEventListener(`transitioncancel`, _);
+          _.removeEventListener(`transitioncancel`, _));
       }
     );
   }, []);
@@ -2118,7 +2118,7 @@ function _() {
   let _ = _();
   _(_, `Missing controls context`);
   let _ = _.m_fnSetMenuVisible;
-  return (0, _.useEffect)(() => (_(!0), () => _(!1)), [_]), _.m_refMenuLayer;
+  return ((0, _.useEffect)(() => (_(!0), () => _(!1)), [_]), _.m_refMenuLayer);
 }
 function _(_, _) {
   let [_, _] = _(_);
@@ -2155,12 +2155,12 @@ function _(_) {
       },
       [_, _, _],
     );
-  _(_),
+  (_(_),
     _(
       _,
       (0, _.useCallback)(
         (_) => {
-          (_.current = _), _(_);
+          ((_.current = _), _(_));
         },
         [_, _],
       ),
@@ -2170,7 +2170,7 @@ function _(_) {
       (0, _.useCallback)(() => {
         _(_);
       }, [_]),
-    );
+    ));
   let _ = (0, _.useCallback)(
       (_) => {
         _.pointerType != `touch` && (_(_), _(_(_)));
@@ -2216,7 +2216,7 @@ function _(_) {
       onPointerUp: (0, _.useCallback)(
         (_) => {
           let _ = _.current;
-          (_.current = void 0), _.currentTarget == _ && _(_(_));
+          ((_.current = void 0), _.currentTarget == _ && _(_(_)));
         },
         [_],
       ),
@@ -2227,7 +2227,7 @@ function _(_) {
 function _(_) {
   let _ = _.target,
     _ = _.currentTarget;
-  for (; _ && _ != _; ) {
+  for (; _ && _ != _;) {
     if (_.dataset?.keepcontrols == `true`) return !0;
     _ = _.parentElement;
   }
@@ -2253,7 +2253,7 @@ function _(_) {
     onPointerUp: (0, _.useCallback)(
       (_) => {
         if (_.current != _.pointerId) return;
-        _.currentTarget.releasePointerCapture(_.pointerId), (_.current = _);
+        (_.currentTarget.releasePointerCapture(_.pointerId), (_.current = _));
         let _ = _.currentTarget.getBoundingClientRect(),
           { clientX: _, clientY: _ } = _;
         _ >= _.left && _ <= _.right && _ >= _.top && _ <= _.bottom && _(_);
@@ -2267,9 +2267,9 @@ function _() {
     _ = (0, _.useRef)(void 0),
     _ = (0, _.useCallback)(
       (_, _) => {
-        (_.current &&= (window.clearTimeout(_.current), void 0)),
+        ((_.current &&= (window.clearTimeout(_.current), void 0)),
           _(_),
-          _ && _ != 0 && (_.current = window.setTimeout(() => _(!1), _));
+          _ && _ != 0 && (_.current = window.setTimeout(() => _(!1), _)));
       },
       [_],
     );
@@ -2288,7 +2288,7 @@ function _(_, _) {
     _ = _(_);
   (0, _.useEffect)(() => {
     let _ = _.current;
-    (_.current = !1), (!_ || _) && _(_);
+    ((_.current = !1), (!_ || _) && _(_));
   }, [_, _, _]);
 }
 function _(_, _) {
@@ -2296,7 +2296,7 @@ function _(_, _) {
     _ = _(() => _.GetMuted());
   (0, _.useEffect)(() => {
     let _ = _.current;
-    (_.current = !1), !_ && _();
+    ((_.current = !1), !_ && _());
   }, [_, _, _]);
 }
 function _(_) {
@@ -2306,7 +2306,7 @@ function _(_) {
     _,
     (0, _.useCallback)(
       (_) => {
-        _.SetMute(!1), _.SetVolume(_);
+        (_.SetMute(!1), _.SetVolume(_));
       },
       [_],
     ),
@@ -2374,7 +2374,7 @@ var _ = `cOcEiRe-dIg-`,
   _ = `HOEA4Jz0kQU-`,
   _ = `AAuicaihzn0-`,
   _ = {};
-(_.arabic = () =>
+((_.arabic = () =>
   _(() => import(`./video_players_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
     _(() => import(`./video_players_brazilian.js`), [], import.meta.url)),
@@ -2437,7 +2437,7 @@ var _ = `cOcEiRe-dIg-`,
   (_.ukrainian = () =>
     _(() => import(`./video_players_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./video_players_vietnamese.js`), [], import.meta.url));
+    _(() => import(`./video_players_vietnamese.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -2564,7 +2564,7 @@ function _(_) {
     _ = _(),
     _ = _.GetVideoRepresentations().map((_) => {
       let _ = () => {
-          _.SetVideoRepresentation(_), _();
+          (_.SetVideoRepresentation(_), _());
         },
         _ = _(_);
       return (0, _.jsx)(
@@ -2598,7 +2598,7 @@ function _(_) {
     _ = _(),
     _ = _.m_bAutoplayEnabled == 1,
     _ = (0, _.useCallback)(() => {
-      _.m_fnSetAutoplayEnabled && _.m_fnSetAutoplayEnabled(!_), _();
+      (_.m_fnSetAutoplayEnabled && _.m_fnSetAutoplayEnabled(!_), _());
     }, [_, _, _]);
   return (
     _.use(_.Ready()),
@@ -2622,16 +2622,16 @@ function _(_) {
     _ = (0, _.useMemo)(() => {
       let _ = [..._.GetCaptionRepresentations()],
         _ = _.findIndex((_) => _.m_eLanguage == _);
-      return _ > 0 && _(_, _, 0), _;
+      return (_ > 0 && _(_, _, 0), _);
     }, [_, _]),
     _ = [];
   for (let _ of _)
-    _.push(
+    (_.push(
       (0, _.jsx)(
         _,
         {
           onClick: () => {
-            _.SetCaptionRepresentation(_.m_eLanguage), _();
+            (_.SetCaptionRepresentation(_.m_eLanguage), _());
           },
           checked: !1,
           children: _.m_strLabel,
@@ -2639,7 +2639,7 @@ function _(_) {
         _.m_eLanguage,
       ),
     ),
-      _.m_eLanguage == _ && _.push((0, _.jsx)(_, {}));
+      _.m_eLanguage == _ && _.push((0, _.jsx)(_, {})));
   return _.length == 0
     ? null
     : (0, _.jsx)(_, {
@@ -2887,8 +2887,8 @@ function _() {
         passive: !1,
       }),
       () => {
-        _.removeEventListener(`touchstart`, _),
-          _.removeEventListener(`touchend`, _);
+        (_.removeEventListener(`touchstart`, _),
+          _.removeEventListener(`touchend`, _));
       }
     );
   }, []);
@@ -2969,9 +2969,9 @@ function _(_) {
     (_) => {
       let _ = _.currentTarget.getBoundingClientRect(),
         _ = (_.pageX - _.left) / (_.right - _.left);
-      _.Seek(_ * _.GetTimelineDuration()),
+      (_.Seek(_ * _.GetTimelineDuration()),
         _.preventDefault(),
-        _.stopPropagation();
+        _.stopPropagation());
     },
     [_],
   );
@@ -3011,7 +3011,7 @@ function _(_, _) {
           let _ = _.current;
           if (((_ ||= _.current), !_)) return;
           let _ = _(_, _.getBoundingClientRect(), _.clientX);
-          _(_),
+          (_(_),
             _.current &&
               _ &&
               _(
@@ -3021,7 +3021,7 @@ function _(_, _) {
                       nPlaybackSeconds: _.nPlaybackSeconds,
                     }
                   : null,
-              );
+              ));
         },
         [_, _, _, _, _],
       ),
@@ -3033,11 +3033,11 @@ function _(_, _) {
       ),
       onPointerDown: (0, _.useCallback)(
         (_) => {
-          (_.current = _.currentTarget),
+          ((_.current = _.currentTarget),
             _.current.setPointerCapture(_.pointerId),
-            (document.body.style.userSelect = `none`);
+            (document.body.style.userSelect = `none`));
           let _ = _(_, _.current.getBoundingClientRect(), _.clientX);
-          _(_),
+          (_(_),
             _ &&
               _(
                 _
@@ -3046,7 +3046,7 @@ function _(_, _) {
                       nPlaybackSeconds: _.nPlaybackSeconds,
                     }
                   : null,
-              );
+              ));
         },
         [_, _, _],
       ),
@@ -3138,7 +3138,7 @@ function _(_, _, _) {
   let _ = _(_),
     [_, _] = (0, _.useState)(``),
     _ = (0, _.useRef)(0);
-  (0, _.useEffect)(() => {
+  ((0, _.useEffect)(() => {
     _ &&
       !_ &&
       _ == `` &&
@@ -3147,7 +3147,7 @@ function _(_, _, _) {
     (0, _.useEffect)(() => {
       _ && (_(`complete`), window.clearTimeout(_.current));
     }, [_]),
-    (0, _.useEffect)(() => () => window.clearTimeout(_.current), []);
+    (0, _.useEffect)(() => () => window.clearTimeout(_.current), []));
   let _ = (0, _.useRef)(!1);
   return (
     _ == `complete` && !_ && (_.current = !0),
@@ -3280,7 +3280,7 @@ function _(_, _) {
           ..._,
         ]);
         let _ = () => {
-          (_.current = 0), _.TogglePlayPause();
+          ((_.current = 0), _.TogglePlayPause());
         };
         _.pointerType == `mouse`
           ? _.current
@@ -3299,7 +3299,7 @@ function _(_, _) {
   return (
     (0, _.useEffect)(
       () => () => {
-        window.clearTimeout(_.current), (_.current = 0);
+        (window.clearTimeout(_.current), (_.current = 0));
       },
       [_],
     ),
@@ -3521,7 +3521,7 @@ function _(_) {
 }
 function _(_, _, _) {
   let [_, _] = _(_, _);
-  return (_ ||= _), [_, _];
+  return ((_ ||= _), [_, _]);
 }
 function _(_, _) {
   let [_, _] = _(),
@@ -3531,7 +3531,7 @@ function _(_, _) {
   return (
     (0, _.useEffect)(() => {
       let _ = _.current;
-      (_.current = !1), (!_ || _) && _(!0, _ ? 0 : _);
+      ((_.current = !1), (!_ || _) && _(!0, _ ? 0 : _));
     }, [_, _, _]),
     [
       _,
@@ -3633,11 +3633,11 @@ function _(_) {
     _.useCallback(
       (_) => {
         let _ = _ ? _.thumbnail : null;
-        !_.IsPaused() && _ && ((_.current = !0), _.Pause()),
+        (!_.IsPaused() && _ && ((_.current = !0), _.Pause()),
           !_ && _.current && (_.Play(), (_.current = !1)),
           _.current && !_ && _.Seek(_.current.nPlaybackSeconds),
           (_.current = _),
-          _(_);
+          _(_));
       },
       [_, _, _],
     ),
@@ -3673,7 +3673,7 @@ function _(_) {
     _ = _(_),
     [_, _, _, _] = _(_),
     _ = (0, _.useCallback)(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]),
     _ = (0, _.useCallback)(
       (_) => {
@@ -3757,7 +3757,7 @@ function _(_, _) {
   return (
     (0, _.useEffect)(() => {
       let _ = _.current;
-      (_.current = !1), (!_ || _) && _(!0, _ ? 0 : _);
+      ((_.current = !1), (!_ || _) && _(!0, _ ? 0 : _));
     }, [_, _, _]),
     [
       _,
@@ -3772,10 +3772,10 @@ function _(_, _) {
     (_) => {
       if (_.detail.button == _.TRIGGER_LEFT && _) {
         let _ = Math.max(0, _.GetPlaybackTime() - 10);
-        _.Seek(_), _(), _.preventDefault(), _.stopPropagation();
+        (_.Seek(_), _(), _.preventDefault(), _.stopPropagation());
       } else if (_.detail.button == _.TRIGGER_RIGHT && _) {
         let _ = Math.min(_.GetTimelineDuration(), _.GetPlaybackTime() + 10);
-        _.Seek(_), _(), _.preventDefault(), _.stopPropagation();
+        (_.Seek(_), _(), _.preventDefault(), _.stopPropagation());
       }
     },
     [_, _],
@@ -3845,9 +3845,9 @@ function _(_) {
     localContext: _,
     focus: _,
   } = _;
-  (_ ||= ``), (_ ||= 0);
+  ((_ ||= ``), (_ ||= 0));
   let [_, _] = _(_, _, _, _, _, _, _);
-  _(_, _), _(_, !!_);
+  (_(_, _), _(_, !!_));
   let [_, _] = _(_),
     _ = _(),
     _ = _ && _ ? _.refFullscreen : null,
@@ -3857,10 +3857,10 @@ function _(_) {
     _ = {};
   _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`));
   let _ = _(() => _.IsBuffering());
-  _.useEffect(() => {
+  (_.useEffect(() => {
     _ || (_ && _());
   }, [_, _]),
-    _.use(_.Ready());
+    _.use(_.Ready()));
   let _ = _(_, _);
   return (0, _.jsxs)(`div`, {
     ref: _,
@@ -3933,8 +3933,8 @@ function _(_) {
         _ = _.current;
       if (!_ || !_) return;
       let [_, _] = _(_.nWidth, _.nHeight, _.nWidth, _.nHeight);
-      (_ = _.nWidth - _ < 2 ? _.nWidth : Math.ceil(_)),
-        (_ = _.nHeight - _ < 2 ? _.nHeight : Math.ceil(_));
+      ((_ = _.nWidth - _ < 2 ? _.nWidth : Math.ceil(_)),
+        (_ = _.nHeight - _ < 2 ? _.nHeight : Math.ceil(_)));
       let _ = _.current;
       (_ && _.nWidth == _ && _.nHeight == _) ||
         ((_.current = {
@@ -3947,18 +3947,18 @@ function _(_) {
     _,
     (0, _.useCallback)(
       (_) => {
-        (_.current = _), _();
+        ((_.current = _), _());
       },
       [_, _],
     ),
   );
   let _ = (0, _.useCallback)(
     (_) => {
-      (_.current = {
+      ((_.current = {
         nWidth: _.contentRect.width,
         nHeight: _.contentRect.height,
       }),
-        _();
+        _());
     },
     [_, _],
   );
@@ -3994,7 +3994,7 @@ function _(_) {
   let { player: _ } = _,
     [_, _] = (0, _.useState)(`norender`),
     _ = _(() => _.IsBuffering());
-  (0, _.useEffect)(() => {
+  ((0, _.useEffect)(() => {
     if (!_) return;
     let _ = window.setTimeout(() => _(`fadein`), 1e3);
     return () => {
@@ -4006,7 +4006,7 @@ function _(_) {
       _(`fadeout`);
       let _ = window.setTimeout(() => _(`norender`), 300);
       return () => window.clearTimeout(_);
-    }, [_, _]);
+    }, [_, _]));
   let _ = _ != `norender`,
     _ = _(_, _ == `fadein` && `ZxF0VUYsuGU-`);
   return (0, _.jsx)(`div`, {
@@ -4025,7 +4025,7 @@ function _(_) {
     _ = _(_, _),
     [_, _] = (0, _.useState)(!1),
     _ = _.useCallback(() => {
-      _.UserInputReceived(), _(!0);
+      (_.UserInputReceived(), _(!0));
     }, [_]);
   if (
     (_.useEffect(() => {
@@ -4224,7 +4224,7 @@ function _(_) {
         let _ = _(_, `thumb`),
           _ = _(_, `600x338`),
           _ = _.length;
-        _.push(
+        (_.push(
           (0, _.jsx)(
             `div`,
             {
@@ -4272,7 +4272,7 @@ function _(_) {
               },
               _ + `_big_` + _,
             ),
-          );
+          ));
       }
     }),
     !_ && (!_ || _.length == 0))
@@ -4591,11 +4591,11 @@ function _(_) {
     );
   return (
     (0, _.useEffect)(() => {
-      _?.unvailable_for_country_restriction &&
+      (_?.unvailable_for_country_restriction &&
         _(_(`#TrailerPlayer_CouldNotLoad`, _, _)),
         _ &&
           !_ &&
-          _(_(`#TrailerPlayer_CouldNotLoad`, _.appid, _.trailerBaseID));
+          _(_(`#TrailerPlayer_CouldNotLoad`, _.appid, _.trailerBaseID)));
     }, [
       _,
       _.appid,
@@ -4654,11 +4654,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -4683,10 +4683,10 @@ function _(_, _) {
 function _(_, _) {
   for (var _ = 0; _ < _.length; _++) {
     var _ = _[_];
-    (_.enumerable = _.enumerable || !1),
+    ((_.enumerable = _.enumerable || !1),
       (_.configurable = !0),
       `value` in _ && (_.writable = !0),
-      Object.defineProperty(_, _.key, _);
+      Object.defineProperty(_, _.key, _));
   }
 }
 function _(_, _, _) {
@@ -4727,7 +4727,7 @@ function _() {
 function _(_, _) {
   if (typeof _ != `function` && _ !== null)
     throw TypeError(`Super expression must either be null or a function`);
-  (_.prototype = Object.create(_ && _.prototype, {
+  ((_.prototype = Object.create(_ && _.prototype, {
     constructor: {
       value: _,
       writable: !0,
@@ -4737,7 +4737,7 @@ function _(_, _) {
     Object.defineProperty(_, "prototype", {
       writable: !1,
     }),
-    _ && _(_, _);
+    _ && _(_, _));
 }
 function _(_) {
   return (_ = Object.setPrototypeOf
@@ -4750,7 +4750,7 @@ function _(_, _) {
   return (_ = Object.setPrototypeOf
     ? Object.setPrototypeOf.bind()
     : function (_, _) {
-        return (_.__proto__ = _), _;
+        return ((_.__proto__ = _), _);
       })(_, _);
 }
 function _() {
@@ -4774,7 +4774,8 @@ function _(_, _) {
     _,
     _ = {},
     _ = Object.keys(_);
-  for (_ = 0; _ < _.length; _++) (_ = _[_]), _.indexOf(_) >= 0 || (_[_] = _[_]);
+  for (_ = 0; _ < _.length; _++)
+    ((_ = _[_]), _.indexOf(_) >= 0 || (_[_] = _[_]));
   return _;
 }
 function _(_, _) {
@@ -4785,9 +4786,9 @@ function _(_, _) {
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
     for (_ = 0; _ < _.length; _++)
-      (_ = _[_]),
+      ((_ = _[_]),
         _.indexOf(_) >= 0 ||
-          (Object.prototype.propertyIsEnumerable.call(_, _) && (_[_] = _[_]));
+          (Object.prototype.propertyIsEnumerable.call(_, _) && (_[_] = _[_])));
   }
   return _;
 }
@@ -4890,7 +4891,7 @@ function _(_, _, _) {
 function _(_) {
   return function (_, _, _) {
     if (!_) return _(_, _, []);
-    for (var _, _ = _.length; (_ = _[--_]); )
+    for (var _, _ = _.length; (_ = _[--_]);)
       if (_[0] === _ && _[1] === _) return !0;
     return _(_, _, _);
   };
@@ -4898,17 +4899,17 @@ function _(_) {
 function _(_, _, _) {
   var _ = _.length;
   if (_ !== _.length) return !1;
-  for (_.push([_, _]); _--; ) if (!_(_[_], _[_], _)) return !1;
+  for (_.push([_, _]); _--;) if (!_(_[_], _[_], _)) return !1;
   return !0;
 }
 function _(_, _, _) {
-  if (typeof _.equal == `function`) return _.push([_, _]), _.equal(_, _);
+  if (typeof _.equal == `function`) return (_.push([_, _]), _.equal(_, _));
   var _ = _(_),
     _ = _(_),
     _ = _.length;
   if (_ !== _.length) return !1;
-  for (_.sort(), _.sort(); _--; ) if (_[_] !== _[_]) return !1;
-  for (_.push([_, _]), _ = _.length; _--; ) {
+  for (_.sort(), _.sort(); _--;) if (_[_] !== _[_]) return !1;
+  for (_.push([_, _]), _ = _.length; _--;) {
     var _ = _[_];
     if (!_(_[_], _[_], _)) return !1;
   }
@@ -4988,9 +4989,9 @@ function _(_, _, _) {
   );
 }
 function _(_, _, _) {
-  ((_ ||= {}).arrayMerge = _.arrayMerge || _),
+  (((_ ||= {}).arrayMerge = _.arrayMerge || _),
     (_.isMergeableObject = _.isMergeableObject || _),
-    (_.cloneUnlessOtherwiseSpecified = _);
+    (_.cloneUnlessOtherwiseSpecified = _));
   var _ = Array.isArray(_);
   return _ === Array.isArray(_)
     ? _
@@ -5133,7 +5134,7 @@ var _ = function () {
       checkPropTypes: _,
       resetWarningCache: _,
     };
-    return (_.PropTypes = _), _;
+    return ((_.PropTypes = _), _);
   },
   _ = _(function (_) {
     _.exports = _();
@@ -5228,14 +5229,14 @@ var _ = function () {
                 _ = _.visibleSlides,
                 _ = _.totalSlides - _,
                 _ = Math.max(_ - _, 0);
-              _ && (_ = _ === 0 ? _ : _),
+              (_ && (_ = _ === 0 ? _ : _),
                 _.setStoreState(
                   {
                     currentSlide: _,
                     isPlaying: !1,
                   },
                   _ !== null && _.call(this, _),
-                );
+                ));
             },
           },
           {
@@ -5287,7 +5288,7 @@ var _ = function () {
       _
     );
   })(_.Component);
-_(_, `propTypes`, {
+(_(_, `propTypes`, {
   carouselStore: _.object.isRequired,
   children: _.children.isRequired,
   className: _.string,
@@ -5304,7 +5305,7 @@ _(_, `propTypes`, {
     disabled: null,
     onClick: null,
     infinite: !1,
-  });
+  }));
 var _ = _(function (_, _) {
   var _ = {}.toString,
     _ = typeof window < `u` ? window.Node : Function;
@@ -5355,7 +5356,7 @@ var _ = _(function (_, _) {
 });
 _.types;
 var _ = {};
-(_.number = function (_, _) {
+((_.number = function (_, _) {
   return _ !== _ && _ !== _;
 }),
   (_.function = function (_, _, _) {
@@ -5378,7 +5379,7 @@ var _ = {};
     return _.textContent === _.textContent;
   }),
   (_.arguments = _[`bit-array`] = _.array = _(_)),
-  (_.object = _(_));
+  (_.object = _(_)));
 var _ = _,
   _ = function (_) {
     return _(_) && !_(_);
@@ -5413,7 +5414,7 @@ var _ = _,
   },
   _ = (function () {
     function _(_) {
-      _(this, _),
+      (_(this, _),
         (this.state = _(_(_, _, _))),
         (this.subscriptions = []),
         (this.masterSpinnerSubscriptions = {}),
@@ -5428,14 +5429,14 @@ var _ = _,
         (this.unsubscribeAllMasterSpinner =
           this.unsubscribeAllMasterSpinner.bind(this)),
         (this.masterSpinnerSuccess = this.masterSpinnerSuccess.bind(this)),
-        (this.masterSpinnerError = this.masterSpinnerError.bind(this));
+        (this.masterSpinnerError = this.masterSpinnerError.bind(this)));
     }
     return (
       _(_, [
         {
           key: `setStoreState`,
           value: function (_, _) {
-            (this.state = _(_(this.state, _, _))), this.updateSubscribers(_);
+            ((this.state = _(_(this.state, _, _))), this.updateSubscribers(_));
           },
         },
         {
@@ -5460,10 +5461,10 @@ var _ = _,
         {
           key: `updateSubscribers`,
           value: function (_) {
-            this.subscriptions.forEach(function (_) {
+            (this.subscriptions.forEach(function (_) {
               return _();
             }),
-              typeof _ == `function` && _(this.getStoreState());
+              typeof _ == `function` && _(this.getStoreState()));
           },
         },
         {
@@ -5490,24 +5491,24 @@ var _ = _,
         {
           key: `unsubscribeAllMasterSpinner`,
           value: function () {
-            (this.masterSpinnerSubscriptions = {}),
-              this.setMasterSpinnerFinished();
+            ((this.masterSpinnerSubscriptions = {}),
+              this.setMasterSpinnerFinished());
           },
         },
         {
           key: `masterSpinnerSuccess`,
           value: function (_) {
-            (this.masterSpinnerSubscriptions[_].success = !0),
+            ((this.masterSpinnerSubscriptions[_].success = !0),
               (this.masterSpinnerSubscriptions[_].complete = !0),
-              this.setMasterSpinnerFinished();
+              this.setMasterSpinnerFinished());
           },
         },
         {
           key: `masterSpinnerError`,
           value: function (_) {
-            (this.masterSpinnerSubscriptions[_].error = !0),
+            ((this.masterSpinnerSubscriptions[_].error = !0),
               (this.masterSpinnerSubscriptions[_].complete = !0),
-              this.setMasterSpinnerFinished();
+              this.setMasterSpinnerFinished());
           },
         },
         {
@@ -5597,7 +5598,7 @@ var _ = _,
         infinite: _.infinite,
         isIntrinsicHeight: _.isIntrinsicHeight,
       };
-      return (_.carouselStore = new _(_)), _;
+      return ((_.carouselStore = new _(_)), _);
     }
     _(_, _);
     var _ = _(_);
@@ -5608,7 +5609,7 @@ var _ = _,
           value: function (_) {
             var _ = this,
               _ = {};
-            [
+            ([
               `currentSlide`,
               `disableAnimation`,
               `disableKeyboard`,
@@ -5644,7 +5645,7 @@ var _ = _,
                 ))),
               this.carouselStore.state.currentSlide >= this.props.totalSlides &&
                 (_.currentSlide = Math.max(this.props.totalSlides - 1, 0)),
-              Object.keys(_).length > 0 && this.carouselStore.setStoreState(_);
+              Object.keys(_).length > 0 && this.carouselStore.setStoreState(_));
           },
         },
         {
@@ -6006,14 +6007,14 @@ var _ = {
                 _ = _.totalSlides - _.visibleSlides,
                 _ = _ + _,
                 _ = Math.min(_, _);
-              _ && (_ = _ === _ ? 0 : _),
+              (_ && (_ = _ === _ ? 0 : _),
                 _.setStoreState(
                   {
                     currentSlide: _,
                     isPlaying: !1,
                   },
                   _ !== null && _.call(this, _),
-                );
+                ));
             },
           },
           {
@@ -6316,7 +6317,7 @@ var _ = {
   ],
   _ = (function (_) {
     function _() {
-      return _(this, _), _.apply(this, arguments);
+      return (_(this, _), _.apply(this, arguments));
     }
     _(_, _);
     var _ = _(_);
@@ -6334,7 +6335,7 @@ var _ = {
               _ = _.renderDots;
             if (_) {
               var _ = this.props;
-              return _.renderDots, _(_(_, _));
+              return (_.renderDots, _(_(_, _)));
             }
             for (var _ = [], _ = 0; _ < _; _ += 1) {
               var _ = _ >= _ && _ < _ + _,
@@ -6466,7 +6467,7 @@ var _ = {
           {
             key: `componentDidMount`,
             value: function () {
-              _.subscribeMasterSpinner(this.props), this.initImage();
+              (_.subscribeMasterSpinner(this.props), this.initImage());
             },
           },
           {
@@ -6481,10 +6482,10 @@ var _ = {
           {
             key: `componentWillUnmount`,
             value: function () {
-              _.unsubscribeMasterSpinner(this.props),
+              (_.unsubscribeMasterSpinner(this.props),
                 this.image.removeEventListener(`load`, this.handleImageLoad),
                 this.image.removeEventListener(`error`, this.handleImageError),
-                (this.image = null);
+                (this.image = null));
             },
           },
           {
@@ -6501,31 +6502,31 @@ var _ = {
                 this.image.readyState || this.image.complete)
               ) {
                 var _ = this.image.src;
-                (this.image.src = `data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==`),
-                  (this.image.src = _);
+                ((this.image.src = `data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==`),
+                  (this.image.src = _));
               }
             },
           },
           {
             key: `handleImageLoad`,
             value: function (_) {
-              this.setState({
+              (this.setState({
                 imageStatus: _,
               }),
                 this.props.hasMasterSpinner &&
                   this.props.carouselStore.masterSpinnerSuccess(this.props.src),
-                this.props.onLoad && this.props.onLoad(_);
+                this.props.onLoad && this.props.onLoad(_));
             },
           },
           {
             key: `handleImageError`,
             value: function (_) {
-              this.setState({
+              (this.setState({
                 imageStatus: _,
               }),
                 this.props.hasMasterSpinner &&
                   this.props.carouselStore.masterSpinnerError(this.props.src),
-                this.props.onError && this.props.onError(_);
+                this.props.onError && this.props.onError(_));
             },
           },
           {
@@ -6607,12 +6608,12 @@ var _ = {
                 _ = _;
               if (_ !== `img`) {
                 var _ = _.src;
-                _.alt,
+                (_.alt,
                   (_ = _(_, _)),
                   (_ = _({}, _, {
                     backgroundImage: `url("${_}")`,
                     backgroundSize: `cover`,
-                  }));
+                  })));
               }
               return _.createElement(
                 _,
@@ -6677,7 +6678,7 @@ var _ = {
       _
     );
   })(_.Component);
-_(_, `propTypes`, {
+(_(_, `propTypes`, {
   alt: _.string,
   carouselStore: _.object.isRequired,
   children: _.children,
@@ -6703,7 +6704,7 @@ _(_, `propTypes`, {
     renderLoading: null,
     style: null,
     tag: `img`,
-  });
+  }));
 var _ = _(_, function (_) {
     return {
       hasMasterSpinner: _.hasMasterSpinner,
@@ -6717,7 +6718,7 @@ var _ = _(_, function (_) {
   _ = [`className`],
   _ = (function (_) {
     function _() {
-      return _(this, _), _.apply(this, arguments);
+      return (_(this, _), _.apply(this, arguments));
     }
     _(_, _);
     var _ = _(_);
@@ -6815,7 +6816,7 @@ _(
           {
             key: `componentDidUpdate`,
             value: function (_, _) {
-              !1 === _.isZooming &&
+              (!1 === _.isZooming &&
                 !0 === this.state.isZooming &&
                 this.props.carouselStore.setStoreState({
                   isPageScrollLocked: !0,
@@ -6824,26 +6825,26 @@ _(
                   !1 === this.state.isZooming &&
                   this.props.carouselStore.setStoreState({
                     isPageScrollLocked: !1,
-                  });
+                  }));
             },
           },
           {
             key: `handleImageComplete`,
             value: function (_) {
-              this.setState({
+              (this.setState({
                 isImageLoading: !1,
               }),
-                this.props && this.props.onLoad && this.props.onLoad(_);
+                this.props && this.props.onLoad && this.props.onLoad(_));
             },
           },
           {
             key: `handleImageLoadError`,
             value: function (_) {
-              this.setState({
+              (this.setState({
                 isImageLoadingError: !0,
                 isImageLoading: !1,
               }),
-                this.props && this.props.onError && this.props.onError(_);
+                this.props && this.props.onError && this.props.onError(_));
             },
           },
           {
@@ -6921,7 +6922,7 @@ _(
                     };
                   _.distance = _.distanceBetweenTwoTouches(_({}, _));
                   var _ = _.midpointBetweenTwoTouches(_({}, _));
-                  (_._ = _._), (_._ = _._);
+                  ((_._ = _._), (_._ = _._));
                   var _ = {
                     _: _[0].clientX,
                     _: _[0].clientY,
@@ -6930,7 +6931,7 @@ _(
                   };
                   _.distance = _.distanceBetweenTwoTouches(_({}, _));
                   var _ = _.midpointBetweenTwoTouches(_({}, _));
-                  (_._ = _._), (_._ = _._);
+                  ((_._ = _._), (_._ = _._));
                   var _ = _(
                       _({
                         min: 0,
@@ -7522,7 +7523,7 @@ var _ = {
           {
             key: `componentDidMount`,
             value: function () {
-              this.props.lockOnWindowScroll &&
+              (this.props.lockOnWindowScroll &&
                 window.addEventListener(
                   `scroll`,
                   this.handleDocumentScroll,
@@ -7550,13 +7551,13 @@ var _ = {
                   this.handleOnMouseUp,
                   !1,
                 ),
-                this.props.isPlaying && this.play();
+                this.props.isPlaying && this.play());
             },
           },
           {
             key: `componentDidUpdate`,
             value: function (_) {
-              !_.isPlaying && this.props.isPlaying && this.play(),
+              (!_.isPlaying && this.props.isPlaying && this.play(),
                 _.isPlaying && !this.props.isPlaying && this.stop(),
                 !_.isPageScrollLocked &&
                   this.props.isPageScrollLocked &&
@@ -7569,13 +7570,13 @@ var _ = {
                   this.props.carouselStore.setStoreState({
                     privateUnDisableAnimation: !1,
                     disableAnimation: !1,
-                  });
+                  }));
             },
           },
           {
             key: `componentWillUnmount`,
             value: function () {
-              document.documentElement.removeEventListener(
+              (document.documentElement.removeEventListener(
                 `mouseleave`,
                 this.handleOnMouseUp,
                 !1,
@@ -7605,7 +7606,7 @@ var _ = {
                 window.clearTimeout(this.scrollStopTimer),
                 (this.isDocumentScrolling = null),
                 (this.moveTimer = null),
-                (this.scrollStopTimer = null);
+                (this.scrollStopTimer = null));
             },
           },
           {
@@ -7630,7 +7631,7 @@ var _ = {
                 _ = _ !== void 0 && _,
                 _ = _.mouseDrag,
                 _ = _ !== void 0 && _;
-              this.props.carouselStore.setStoreState({
+              (this.props.carouselStore.setStoreState({
                 isPlaying: !1,
               }),
                 window.cancelAnimationFrame.call(window, this.moveTimer),
@@ -7643,14 +7644,14 @@ var _ = {
                   isBeingMouseDragged: _,
                   startX: _,
                   startY: _,
-                });
+                }));
             },
           },
           {
             key: `fakeOnDragMove`,
             value: function (_, _) {
               var _ = this;
-              window.cancelAnimationFrame.call(window, this.moveTimer),
+              (window.cancelAnimationFrame.call(window, this.moveTimer),
                 (this.moveTimer = window.requestAnimationFrame.call(
                   window,
                   function () {
@@ -7666,13 +7667,13 @@ var _ = {
                       };
                     });
                   },
-                ));
+                )));
             },
           },
           {
             key: `fakeOnDragEnd`,
             value: function () {
-              window.cancelAnimationFrame.call(window, this.moveTimer),
+              (window.cancelAnimationFrame.call(window, this.moveTimer),
                 this.computeCurrentSlide(),
                 this.props.orientation === `vertical` &&
                   this.props.carouselStore.setStoreState({
@@ -7685,7 +7686,7 @@ var _ = {
                   isBeingMouseDragged: !1,
                 }),
                 (this.isDocumentScrolling =
-                  !this.props.lockOnWindowScroll && null);
+                  !this.props.lockOnWindowScroll && null));
             },
           },
           {
@@ -7700,13 +7701,13 @@ var _ = {
             value: function (_) {
               if (!this.props.dragEnabled)
                 return void this.callCallback(`onMouseDown`, _);
-              _.preventDefault(),
+              (_.preventDefault(),
                 this.fakeOnDragStart({
                   screenX: _.screenX,
                   screenY: _.screenY,
                   mouseDrag: !0,
                 }),
-                this.callCallback(`onMouseDown`, _);
+                this.callCallback(`onMouseDown`, _));
             },
           },
           {
@@ -7732,11 +7733,11 @@ var _ = {
             value: function (_) {
               if (!this.state.cancelNextClick)
                 return void this.callCallback(`onClickCapture`, _);
-              _.preventDefault(),
+              (_.preventDefault(),
                 this.setState({
                   cancelNextClick: !1,
                 }),
-                this.callCallback(`onClickCapture`, _);
+                this.callCallback(`onClickCapture`, _));
             },
           },
           {
@@ -7746,12 +7747,12 @@ var _ = {
                 return void this.callCallback(`onTouchStart`, _);
               this.props.orientation === `vertical` && _.preventDefault();
               var _ = _.targetTouches[0];
-              this.fakeOnDragStart({
+              (this.fakeOnDragStart({
                 screenX: _.screenX,
                 screenY: _.screenY,
                 touchDrag: !0,
               }),
-                this.callCallback(`onTouchStart`, _);
+                this.callCallback(`onTouchStart`, _));
             },
           },
           {
@@ -7863,18 +7864,18 @@ var _ = {
           {
             key: `stop`,
             value: function () {
-              window.clearInterval(this.interval), (this.interval = null);
+              (window.clearInterval(this.interval), (this.interval = null));
             },
           },
           {
             key: `lockScroll`,
             value: function () {
               var _ = new _();
-              (this.scrollParent = _.getScrollParent(this.sliderTrayElement)),
+              ((this.scrollParent = _.getScrollParent(this.sliderTrayElement)),
                 this.scrollParent &&
                   ((this.originalOverflow =
                     this.originalOverflow || this.scrollParent.style.overflow),
-                  (this.scrollParent.style.overflow = `hidden`));
+                  (this.scrollParent.style.overflow = `hidden`)));
             },
           },
           {
@@ -7918,12 +7919,12 @@ var _ = {
                   max: _,
                   _: this.props.currentSlide + _,
                 });
-              this.props.infinite &&
+              (this.props.infinite &&
                 (this.props.currentSlide >= _ && _ > 0 && (_ = 0),
                 this.props.currentSlide === 0 && _ < 0 && (_ = _)),
                 this.props.carouselStore.setStoreState({
                   currentSlide: _,
-                });
+                }));
             },
           },
           {
@@ -7935,13 +7936,13 @@ var _ = {
           {
             key: `handleOnTouchEnd`,
             value: function (_) {
-              this.endTouchMove(), this.callCallback(`onTouchEnd`, _);
+              (this.endTouchMove(), this.callCallback(`onTouchEnd`, _));
             },
           },
           {
             key: `handleOnTouchCancel`,
             value: function (_) {
-              this.endTouchMove(), this.callCallback(`onTouchCancel`, _);
+              (this.endTouchMove(), this.callCallback(`onTouchCancel`, _));
             },
           },
           {
@@ -8017,7 +8018,7 @@ var _ = {
                 (_.width = _(100)));
               var _ = {},
                 _ = _(_ * _ * -1);
-              (this.state.isBeingTouchDragged ||
+              ((this.state.isBeingTouchDragged ||
                 this.state.isBeingMouseDragged ||
                 _) &&
                 (_.transition = `none`),
@@ -8028,7 +8029,7 @@ var _ = {
                     (_.flexDirection = `column`))
                   : ((_.width = _(_)),
                     (_.transform = `translateX(${_}) translateX(${this.state.deltaX}px)`),
-                    (_.flexDirection = `row`));
+                    (_.flexDirection = `row`)));
               var _ = _([
                   _ === `vertical` ? _.verticalSlider : _.horizontalSlider,
                   !_ && _.touchDisabled,
@@ -8295,7 +8296,7 @@ function _(_) {
   );
   let _ = _.useCallback(
     (_) => {
-      _(_, String(_), 3650), _(_), _(_);
+      (_(_, String(_), 3650), _(_), _(_));
     },
     [_],
   );
@@ -8433,14 +8434,14 @@ function _(_) {
     _ = _.useRef(null),
     _ = _.useRef(null),
     _ = _();
-  _(_, _, _.Children.count(_)),
+  (_(_, _, _.Children.count(_)),
     _.useLayoutEffect(() => {
       _.current &&
         _.current &&
         (_.current.scrollLeft +=
           _.current.getBoundingClientRect().left -
           _.current.getBoundingClientRect().left);
-    }, [_]);
+    }, [_]));
   let _ = _.Children.map(_, (_, _) =>
       _
         ? (0, _.jsx)(_, {
@@ -8734,17 +8735,17 @@ function _(_) {
         _(_),
         _.current === _ ? (_.current = null) : _.current === null && _(!1));
     };
-    return _.subscribe(_), () => _.unsubscribe(_);
+    return (_.subscribe(_), () => _.unsubscribe(_));
   }, [_]);
   let _ = _.useCallback(() => {
     let { currentSlide: _, visibleSlides: _, totalSlides: _ } = _.state,
       _ = 0;
-    _ + _ < _ && (_ = Math.min(_ + _, _ - _)),
+    (_ + _ < _ && (_ = Math.min(_ + _, _ - _)),
       _ !== _ &&
         ((_.current = _),
         _.setStoreState({
           currentSlide: _,
-        }));
+        })));
   }, [_]);
   return (0, _.jsx)(_, {
     className: _,
@@ -8776,19 +8777,19 @@ function _(_) {
     let _ = () => {
       let _ = _.current,
         _ = _.state.currentSlide;
-      _(_(_.state)),
+      (_(_(_.state)),
         _ && _(_),
         _(_ > _ ? `Right` : _ < _ ? `Left` : null),
         _(_),
         (_.current = window.setTimeout(() => {
           _.current && (_(null), _(_));
         }, 1e3)),
-        (_.current = _);
+        (_.current = _));
     };
     return (
       _.subscribe(_),
       () => {
-        _.unsubscribe(_), _(_);
+        (_.unsubscribe(_), _(_));
       }
     );
   }, [_]);
@@ -9037,7 +9038,7 @@ function _() {
 function _(_) {
   let { showErrorInfo: _, event: _ } = _.context,
     _ = _(_.args, `src`) || _.children?.toString();
-  (_ ||= _(_.args)), (_ = _(_ ?? ``) || void 0);
+  ((_ ||= _(_.args)), (_ = _(_ ?? ``) || void 0));
   let _ = _(_.args, `style`) === `inline`,
     _ = _(_, _.language, _?.rtime32_last_modified);
   if (_ == null) return null;
@@ -9398,58 +9399,3 @@ function _(_) {
       });
   }
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

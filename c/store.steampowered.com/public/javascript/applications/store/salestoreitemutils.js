@@ -69,7 +69,7 @@ function _(_) {
 }
 function _(_, _) {
   let _ = [];
-  return _ && _(_, _, _), _.filter((_) => !!_);
+  return (_ && _(_, _, _), _.filter((_) => !!_));
 }
 function _(_, _) {
   return {
@@ -227,10 +227,10 @@ var _ = class {
   default_selection_priority = 0;
   current_selection_priority = 0;
 };
-_([_], _.prototype, `title`, void 0),
+(_([_], _.prototype, `title`, void 0),
   _([_], _.prototype, `viewer_count`, void 0),
   _([_], _.prototype, `gamedata_subtitle`, void 0),
-  _([_], _.prototype, `current_selection_priority`, void 0);
+  _([_], _.prototype, `current_selection_priority`, void 0));
 var _ = `primary`,
   _ = `featured`,
   _ = `default_featured`,
@@ -525,7 +525,6 @@ function _(_, _) {
     case `library`:
       return !!_.hero_capsule || !!_.library_capsule;
     default:
-      return _(_, `Unhandled imageType: ${_}`), !1;
+      return (_(_, `Unhandled imageType: ${_}`), !1);
   }
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

@@ -8,7 +8,7 @@ function _(_) {
 }
 function _(_) {
   let _ = {};
-  return (_?.tags || []).forEach(({ tagid: _, name: _ }) => (_[_] = _)), _;
+  return ((_?.tags || []).forEach(({ tagid: _, name: _ }) => (_[_] = _)), _);
 }
 function _(_, _, _) {
   return {
@@ -17,18 +17,18 @@ function _(_, _, _) {
       let _ = _(_),
         _ = await _.GetObject(_),
         _ = _.Init(_);
-      _.Body().set_language(_),
-        _?.version_hash && _.Body().set_have_version_hash(_.version_hash);
+      (_.Body().set_language(_),
+        _?.version_hash && _.Body().set_have_version_hash(_.version_hash));
       let _ = await _.GetTagList(_, _),
         _;
       if (_.GetEResult() == 1)
-        (_ = _.Body().toObject()), _ && _.StoreObject(_, _);
+        ((_ = _.Body().toObject()), _ && _.StoreObject(_, _));
       else if (_.GetEResult() == 29) _ = _ || void 0;
       else if (_)
-        console.warn(
+        (console.warn(
           `Couldn't load updated tag localization, will continue with what we have from storage.`,
         ),
-          (_ = _);
+          (_ = _));
       else throw _.GetErrorMessage();
       return _(_);
     },
@@ -40,4 +40,3 @@ function _(_, _) {
   return _ && _[_];
 }
 var _ = [_, _, _];
-export { _, _, _ };

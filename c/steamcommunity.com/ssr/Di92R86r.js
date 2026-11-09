@@ -1,5 +1,6 @@
 function _(_) {
-  if (_ === void 0) return console.error(`Cannot GetHostname on empty URL`), ``;
+  if (_ === void 0)
+    return (console.error(`Cannot GetHostname on empty URL`), ``);
   let _ = RegExp(
       `^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)`,
       `im`,
@@ -9,7 +10,7 @@ function _(_) {
 }
 function _(_) {
   let _ = _(_);
-  return _.startsWith(`www.`) && (_ = _.slice(4)), _;
+  return (_.startsWith(`www.`) && (_ = _.slice(4)), _);
 }
 function _(_) {
   return _.replace(
@@ -144,4 +145,3 @@ function _(_, _) {
     (!_ || _.filter((_) => _ == _).length == 0)
   );
 }
-export { _, _, _, _, _, _, _, _, _, _ };

@@ -137,14 +137,14 @@ function _() {
         : await _.RemoveObject(_);
     },
     onMutate: async (_) => {
-      await _.cancelQueries({
+      (await _.cancelQueries({
         queryKey: [_],
       }),
         (_ &&= {
           ..._,
           rtCreated: Date.now() / 1e3,
         }),
-        _.setQueryData([_], _);
+        _.setQueryData([_], _));
     },
   });
 }
@@ -152,11 +152,11 @@ var _ = _(_(), 1);
 async function _(_, _, _, _, _, _) {
   if (_(_)) {
     let _ = _.Init(_);
-    _.Body().set_line_item_id(_),
+    (_.Body().set_line_item_id(_),
       _.Body().set_user_country(_.country_code),
       _ && _.Body().set_gift_info(_.fromObject(_)),
       _ && _.Body().set_flags(_.fromObject(_)),
-      _ && _.Body().set_apply_gidcoupon(_);
+      _ && _.Body().set_apply_gidcoupon(_));
     let _ = await _.ModifyLineItem(_, _);
     return (
       _.BSuccess() ||
@@ -166,7 +166,7 @@ async function _(_, _, _, _, _, _) {
   }
   {
     let _ = _.Init(_);
-    _.Body().set_gidlineitem(_),
+    (_.Body().set_gidlineitem(_),
       _.Body().set_gidshoppingcart(_.gid),
       _
         ? _.Body().set_gift_info(_.fromObject(_))
@@ -176,7 +176,7 @@ async function _(_, _, _, _, _, _) {
               accountid_giftee: 0,
               email_giftee: ``,
             }),
-          );
+          ));
     let _ = await _.ModifyLineItem(_, _);
     return (
       _.BSuccess() ||
@@ -228,7 +228,7 @@ function _() {
   });
 }
 var _ = {};
-(_.arabic = () =>
+((_.arabic = () =>
   _(() => import(`./shoppingcart_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
     _(() => import(`./shoppingcart_brazilian.js`), [], import.meta.url)),
@@ -291,7 +291,7 @@ var _ = {};
   (_.ukrainian = () =>
     _(() => import(`./shoppingcart_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./shoppingcart_vietnamese.js`), [], import.meta.url));
+    _(() => import(`./shoppingcart_vietnamese.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -341,12 +341,12 @@ function _(_, _, _, _, _) {
 }
 async function _(_, _, _, _, _, _) {
   let _ = _.Init(_);
-  _(_) || _(_) || _(_)
+  (_(_) || _(_) || _(_)
     ? (_.Body().set_gidshoppingcart(_.gid),
       _ && _.Body().set_gift_info(_.fromObject(_)))
     : _(_) && _.Body().set_gidreplayoftransid(_.gid),
     _(_, _),
-    _ && _(_, _);
+    _ && _(_, _));
   let _ = await _.ValidateCart(_, _);
   if (
     (_.BSuccess() ||
@@ -879,7 +879,7 @@ function _(_, _) {
       _ = !1;
     _?.cart_items?.forEach((_) => {
       let _ = !!_.gift_info?.accountid_giftee;
-      _.errors && (_ = !0),
+      (_.errors && (_ = !0),
         _.errors?.duplicate_appids_in_cart?.length &&
           _(1, _.Localize(`#Cart_Error_DuplicateApps_FootNote`)),
         _.errors?.owned_appids?.length &&
@@ -909,7 +909,7 @@ function _(_, _) {
         _.warnings?.appids_in_mastersub?.length &&
           _(4, _.Localize(`#Cart_Error_MasterSubscription_FootNote`)),
         _.warnings?.price_has_changed &&
-          _.set(10, _.Localize(`#Cart_Warning_PriceChange_FootNote`));
+          _.set(10, _.Localize(`#Cart_Warning_PriceChange_FootNote`)));
     });
     let _ = Array.from(_.values());
     return (
@@ -936,13 +936,13 @@ async function _(_, _, _) {
     let _ = _.Init(_);
     _.Body().set_line_item_id(_);
     let _ = await _.RemoveItemFromCart(_, _);
-    return _(), _.Body().toObject();
+    return (_(), _.Body().toObject());
   }
   {
     let _ = _.Init(_);
-    _.Body().set_gidlineitems([_]), _.Body().set_gidshoppingcart(_.gid);
+    (_.Body().set_gidlineitems([_]), _.Body().set_gidshoppingcart(_.gid));
     let _ = await _.RemoveLineItems(_, _);
-    return _(), _.Body().toObject();
+    return (_(), _.Body().toObject());
   }
 }
 function _(_) {
@@ -1474,8 +1474,8 @@ function _(_) {
   let _ = _.recurrence_info;
   if (!_) return null;
   let _ = `#Package`;
-  _.billing_agreement_type === 2 && (_ = `#GameBillingPackage`),
-    _.formatted_final_price && _.discount_pct && (_ += `WithDiscount`);
+  (_.billing_agreement_type === 2 && (_ = `#GameBillingPackage`),
+    _.formatted_final_price && _.discount_pct && (_ += `WithDiscount`));
   let _ = _[_.renewal_time_unit],
     _ = _ + `CostIncludesSubscriptionBy` + _;
   return (0, _.jsx)(_, {
@@ -1554,8 +1554,8 @@ function _(_) {
                   },
                   giftInfo: _ ? _.gift_info : void 0,
                 });
-            _ === `private` ? _(!1) : _ === `gift` && _(!1),
-              _.data === `private` ? _(!0) : _.data === `gift` && _(!0);
+            (_ === `private` ? _(!1) : _ === `gift` && _(!1),
+              _.data === `private` ? _(!0) : _.data === `gift` && _(!0));
           },
           selectedValue: _.find((_) => _.data === _) ?? null,
           options: _,
@@ -1762,7 +1762,7 @@ function _(_) {
   )
     return null;
   let _ = () => {
-      _()?.AddEvent(_), _.mutate(null);
+      (_()?.AddEvent(_), _.mutate(null));
     },
     _ = () => {
       for (let _ of _)
@@ -1777,7 +1777,7 @@ function _(_) {
           },
           gidCoupon: _.gidcoupon_applied,
         });
-      _.mutate(_), _(!0), _()?.AddEvent(_);
+      (_.mutate(_), _(!0), _()?.AddEvent(_));
     },
     _ = (0, _.jsxs)(`a`, {
       href: _(_),

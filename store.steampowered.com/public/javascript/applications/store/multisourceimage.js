@@ -32,7 +32,7 @@ function a(e) {
       (e) => {
         n?.(e, t[l], l);
         let r = l + 1;
-        r >= t.length && a && a(e), r < t.length && u(r);
+        (r >= t.length && a && a(e), r < t.length && u(r));
       },
       [l, a, n, t],
     ),

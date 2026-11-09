@@ -40,12 +40,12 @@ function D(e) {
           r = 0,
           a = e.getBoundingClientRect(),
           o = e.ownerDocument.defaultView;
-        a &&
+        (a &&
           o &&
           !i &&
           ((n = Math.ceil(o.innerWidth - a.left)),
           (r = Math.ceil(o.innerHeight - a.top))),
-          t.SteamClient.Window.SetResizeGrip(n, r);
+          t.SteamClient.Window.SetResizeGrip(n, r));
       }
       return () => {
         p(t, `Window.SetResizeGrip`) &&
@@ -116,9 +116,9 @@ function j(e) {
     O = u(),
     k = { ...g(x), onClose: p },
     j = 0;
-  e.resizable && (j |= s.Resizable),
+  (e.resizable && (j |= s.Resizable),
     (e.minWidth || e.minHeight) && (j |= s.ApplyBrowserScaleToDimensions),
-    e.fullscreen && (j |= s.FullScreen);
+    e.fullscreen && (j |= s.FullScreen));
   let N = `PopupWindow_` + (t ? `${t}_` : ``) + T.useId(),
     { popup: P, element: F } = l(
       N,

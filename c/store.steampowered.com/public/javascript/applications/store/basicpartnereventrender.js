@@ -18,7 +18,7 @@ var _ = _(_()),
           _,
         _ = await _.default.post(_, _);
       if (_.data.success != 1) throw _.data;
-      return this.RemoveGIDFromList(_, _ + _), _.data;
+      return (this.RemoveGIDFromList(_, _ + _), _.data);
     }
     static sm_Instance;
     static sm_SummaryInstance;
@@ -100,7 +100,6 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `escFunction`, null),
+(_([_], _.prototype, `escFunction`, null),
   _([_], _.prototype, `OnBackgroundClick`, null),
-  (_ = _([_], _));
-export { _, _, _ };
+  (_ = _([_], _)));

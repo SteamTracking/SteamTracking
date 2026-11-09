@@ -1049,4 +1049,3 @@ var _ = _({
       cssProperty: `--aspect-ratio`,
     },
   ];
-export { _, _, _, _, _, _, _ };

@@ -38,7 +38,7 @@ function c(e, t = `height`, n = 250) {
     [d, f] = i.useState(e);
   return (
     i.useLayoutEffect(() => {
-      o.current || c(`start`), e && f(e);
+      (o.current || c(`start`), e && f(e));
     }, [e]),
     i.useLayoutEffect(
       () => (
@@ -54,7 +54,7 @@ function c(e, t = `height`, n = 250) {
         i = t == `height` ? `scrollHeight` : `scrollWidth`,
         o = () => {
           a.unstable_batchedUpdates(() => {
-            u(e ? {} : { [t]: `0px`, overflow: `hidden` }), c(`idle`), f(e);
+            (u(e ? {} : { [t]: `0px`, overflow: `hidden` }), c(`idle`), f(e));
           });
         };
       if (s == `start`) {

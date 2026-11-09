@@ -188,6 +188,6 @@ function I() {
     r = t(`rgRecentUnreleasedApps`, `application_config`),
     i = r ? Object.keys(r).map((e) => r[e]) : [],
     a = u(n, i);
-  return a.sort((e, t) => e.nOrder - t.nOrder), a;
+  return (a.sort((e, t) => e.nOrder - t.nOrder), a);
 }
 export { k as n, O as r, N as t };

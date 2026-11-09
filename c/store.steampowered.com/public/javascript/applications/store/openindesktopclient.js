@@ -92,11 +92,10 @@ function _() {
       if (_) {
         let _ = new URL(window.location.href),
           _ = new URLSearchParams(_.search);
-        _.set(`utm_bid`, _),
-          (_ += _.origin + _.pathname + `?` + _.toString() + _.hash);
+        (_.set(`utm_bid`, _),
+          (_ += _.origin + _.pathname + `?` + _.toString() + _.hash));
       } else _ += window.location.href;
       window.location.href = _;
     }, []),
   };
 }
-export { _, _ };

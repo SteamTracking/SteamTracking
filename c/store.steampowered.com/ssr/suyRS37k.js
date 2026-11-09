@@ -57,20 +57,20 @@ function _(_, _) {
   return _({
     mutationFn: async () => await _(_, _),
     onMutate: async () => {
-      await _.cancelQueries({
+      (await _.cancelQueries({
         queryKey: [`wishlist`, _],
         exact: !1,
       }),
         await _.cancelQueries({
           queryKey: [`WishlistSortedFiltered`, _],
           exact: !1,
-        });
+        }));
       let _ = (_) =>
         _ && {
           ..._,
           items: _.items.filter((_) => _.appid != _),
         };
-      _.setQueriesData(
+      (_.setQueriesData(
         {
           queryKey: [`wishlist`, _],
           exact: !1,
@@ -83,20 +83,20 @@ function _(_, _) {
             exact: !1,
           },
           _,
-        );
+        ));
     },
     onSuccess(_) {
       _(_, _, _);
     },
     onError() {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: [`wishlist`, _],
         exact: !1,
       }),
         _.invalidateQueries({
           queryKey: [`WishlistSortedFiltered`, _],
           exact: !1,
-        });
+        }));
     },
   });
 }
@@ -113,7 +113,7 @@ function _(_, _) {
   return _({
     mutationFn: async () => await _(_, _),
     onSuccess(_) {
-      _(_, _, _),
+      (_(_, _, _),
         _.setQueriesData(
           {
             queryKey: [`wishlist`, _],
@@ -135,11 +135,10 @@ function _(_, _) {
         _.invalidateQueries({
           queryKey: [`WishlistSortedFiltered`, _],
           exact: !1,
-        });
+        }));
     },
   });
 }
 function _(_, _, _) {
   _.setQueryData(_(_), () => _);
 }
-export { _, _, _, _ };

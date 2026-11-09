@@ -9,13 +9,13 @@ const __vite__mapDeps = (
       "./desktopbridge.js",
     ]),
 ) => _.map((_) => _[_]);
-`VALVE_PUBLIC_PATH` in window
+(`VALVE_PUBLIC_PATH` in window
   ? (globalThis.__webpack_public_path__ = window.VALVE_PUBLIC_PATH)
   : console.error(
       `VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet`,
     ),
   Array.from(new Set([123]))[0] !== 123 &&
-    console.error(`Should not include prototypejs.`);
+    console.error(`Should not include prototypejs.`));
 var _ = jQuery;
 function _(_, _) {
   return _(_, (_) => _ == _);
@@ -63,7 +63,7 @@ var _ = class {
       return new Promise((_) => {
         let _ = [],
           _ = () => {
-            _.forEach((_) => _.Unregister()), _();
+            (_.forEach((_) => _.Unregister()), _());
           };
         for (let _ of _) _.push(_.Register(_));
       });
@@ -77,14 +77,14 @@ var _ = class {
       this.m_config = _;
     }
     Reset() {
-      (this.m_ActiveInputId = void 0),
+      ((this.m_ActiveInputId = void 0),
         this.m_ActiveInputTimeout != null &&
           (clearInterval(this.m_ActiveInputTimeout),
-          (this.m_ActiveInputTimeout = void 0));
+          (this.m_ActiveInputTimeout = void 0)));
     }
     HandleInputButtonDown(_, _) {
       if (this.m_ActiveInputId !== _ && _ != null) {
-        this.Reset(), (this.m_ActiveInputId = _);
+        (this.Reset(), (this.m_ActiveInputId = _));
         let _ = () => {
           this.m_ActiveInputTimeout = window.setInterval(() => {
             _();
@@ -94,7 +94,7 @@ var _ = class {
         this.m_config.firstRepeatInterval_ms === this.m_config.repeatInterval_ms
           ? _()
           : (this.m_ActiveInputTimeout = window.setTimeout(() => {
-              _(), _();
+              (_(), _());
             }, this.m_config.firstRepeatInterval_ms));
       }
     }
@@ -105,13 +105,13 @@ var _ = class {
     m_repeatOnAxis = 0;
     m_fnRepeatAllowed = () => !0;
     constructor(_) {
-      (this.m_config = _), (this.m_inputRepeatGenerator = new _(_));
+      ((this.m_config = _), (this.m_inputRepeatGenerator = new _(_)));
     }
     Reset() {
       this.m_inputRepeatGenerator.Reset();
     }
     SetRepeatAllowed(_) {
-      (_ ||= () => !0), (this.m_fnRepeatAllowed = _);
+      ((_ ||= () => !0), (this.m_fnRepeatAllowed = _));
     }
     HandleInputButtonDown(_, _, _) {
       this.m_fnRepeatAllowed() && this.m_config.inputsThatRepeat.has(_)
@@ -223,8 +223,8 @@ var _ = class {
     return this.m_eNavigationSourceType;
   }
   SetControllerActive(_) {
-    (this.m_nLastActiveControllerIndex = _),
-      (this.m_fLastActiveTime = Date.now());
+    ((this.m_nLastActiveControllerIndex = _),
+      (this.m_fLastActiveTime = Date.now()));
   }
   GetActiveControllerIndex() {
     return this.m_nLastActiveControllerIndex;
@@ -236,28 +236,28 @@ var _ = class {
     this.m_ButtonRepeatHandler.SetRepeatAllowed(_);
   }
   OnGamepadDetected() {
-    console.log(`Gamepad detected`),
+    (console.log(`Gamepad detected`),
       (this.m_bGamepadDetected = !0),
-      this.m_OnGamepadDetectedCallbacks.Dispatch();
+      this.m_OnGamepadDetectedCallbacks.Dispatch());
   }
   OnButtonDown(_, _, _, _) {
-    _ === void 0 && (_ = -1),
+    (_ === void 0 && (_ = -1),
       this.SetControllerActive(_),
       this.m_ButtonRepeatHandler.HandleInputButtonDown(
         _,
         () => this.DispatchButtonDown(_, !1, _, _),
         () => this.DispatchButtonDown(_, !0, _, _),
-      );
+      ));
   }
   OnButtonUp(_, _) {
-    _ === void 0 && (_ = -1),
+    (_ === void 0 && (_ = -1),
       this.SetControllerActive(_),
       this.m_ButtonRepeatHandler.HandleInputButtonUp(_),
       this.m_ButtonUpCallbacks.Dispatch(
         _,
         this.m_eNavigationSourceType,
         this.m_nLastActiveControllerIndex,
-      );
+      ));
   }
   DispatchButtonDown(_, _, _, _) {
     this.m_ButtonDownCallbacks.Dispatch(
@@ -270,14 +270,14 @@ var _ = class {
     );
   }
   OnAnalogPad(_, _, _, _) {
-    _ === void 0 && (_ = -1),
+    (_ === void 0 && (_ = -1),
       this.SetControllerActive(_),
       this.m_AnalogCallbacks.Dispatch(
         _,
         this.m_nLastActiveControllerIndex,
         _,
         _,
-      );
+      ));
   }
   OnNavigationTypeChanged(_) {
     this.m_NavigationTypeChangeCallbacks.Dispatch(_);
@@ -293,7 +293,7 @@ function _(_, _, _, _) {
   else
     for (var _ = _.length - 1; _ >= 0; _--)
       (_ = _[_]) && (_ = (_ < 3 ? _(_) : _ > 3 ? _(_, _, _) : _(_, _)) || _);
-  return _ > 3 && _ && Object.defineProperty(_, _, _), _;
+  return (_ > 3 && _ && Object.defineProperty(_, _, _), _);
 }
 var _ = [
     {
@@ -390,12 +390,12 @@ var _ = [
   _ = class extends _ {
     m_rgGamepadStatus = [];
     constructor() {
-      super(),
+      (super(),
         this.SetSourceType(_.GAMEPAD),
         window.addEventListener(`gamepadconnected`, (_) => {
           this.m_bGamepadDetected ||
             (this.OnGamepadDetected(), this.PollGamepads());
-        });
+        }));
     }
     PollGamepads() {
       let _ = navigator.getGamepads();
@@ -468,7 +468,7 @@ var _ = (function () {
         throw ((_[_] = void 0), _);
       },
     );
-    return (_[_] = _), _;
+    return ((_[_] = _), _);
   },
   _ = function (_, _, _) {
     let _ = Promise.resolve();
@@ -511,8 +511,8 @@ var _ = (function () {
               let _ = document.getElementsByTagName(`link`);
               for (let _ = _.length - 1; _ >= 0; _--) {
                 let _ = _[_];
-                _.all.add(_.href),
-                  _.rel === `stylesheet` && _.styles.add(_.href);
+                (_.all.add(_.href),
+                  _.rel === `stylesheet` && _.styles.add(_.href));
               }
             }
             if ((_ ? _.styles : _.all).has(_.href)) return;
@@ -527,10 +527,10 @@ var _ = (function () {
               _)
             )
               return new Promise((_, _) => {
-                _.addEventListener(`load`, _),
+                (_.addEventListener(`load`, _),
                   _.addEventListener(`error`, () =>
                     _(Error(`Unable to preload CSS for ${_}`)),
-                  );
+                  ));
               });
           });
         }).filter((_) => _ !== void 0),
@@ -593,4 +593,3 @@ async function _() {
   );
   _();
 }
-export { _, _, _, _, _, _, _, _, _, _ };

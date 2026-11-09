@@ -84,16 +84,16 @@ function _(_) {
 function _(_) {
   return new Promise((_) => {
     let _ = new Image();
-    (_.onload = () => _(!0)), (_.onerror = () => _(!1)), (_.src = _);
+    ((_.onload = () => _(!0)), (_.onerror = () => _(!1)), (_.src = _));
   });
 }
 function _(_) {
   return new Promise((_) => {
     let _ = document.createElement(`video`);
-    (_.preload = `metadata`),
+    ((_.preload = `metadata`),
       (_.onloadedmetadata = () => _(!0)),
       (_.onerror = () => _(!1)),
-      (_.src = _);
+      (_.src = _));
   });
 }
 function _(_) {
@@ -159,7 +159,7 @@ function _(_) {
                 href: `#`,
                 className: `oyKuVDO21ZA-`,
                 onClick: (_) => {
-                  _(), _.preventDefault();
+                  (_(), _.preventDefault());
                 },
                 children: _(`#Button_DeleteAll`),
               }),
@@ -191,7 +191,7 @@ function _(_) {
         (0, _.jsx)(`a`, {
           href: `#`,
           onClick: (_) => {
-            _.preventDefault(), _(_);
+            (_.preventDefault(), _(_));
           },
           children:
             _ === _
@@ -206,7 +206,7 @@ function _(_) {
         (0, _.jsx)(`a`, {
           href: `#`,
           onClick: (_) => {
-            _.preventDefault(), _(_);
+            (_.preventDefault(), _(_));
           },
           children: (0, _.jsx)(_, {}),
         }),
@@ -279,4 +279,3 @@ function _(_) {
     })
   );
 }
-export { _, _ };

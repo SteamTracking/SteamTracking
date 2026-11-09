@@ -29,4 +29,3 @@ var _ = _;
 function _(_) {
   return _(_, _);
 }
-export { _, _ };

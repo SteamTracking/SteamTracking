@@ -55,11 +55,11 @@ function y(e, t, n, i) {
 }
 async function b(e, t, n, r, a) {
   let l = u.Init(s);
-  o(l),
+  (o(l),
     r && c(l, r),
     a && l.Body().set_override_country_code(a),
     l.Body().set_query(i.fromObject(n)),
-    l.Body().set_query_name(t);
+    l.Body().set_query_name(t));
   let f = await d.Query(e, l);
   if (f.GetEResult() != 1)
     throw `Error executing StoreQuery "${t}", EResult: ${f.GetEResult()}`;

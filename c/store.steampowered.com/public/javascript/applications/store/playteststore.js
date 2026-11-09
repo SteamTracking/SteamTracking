@@ -24,7 +24,7 @@ function _(_) {
   return _({
     mutationFn: async (_) => {
       let _ = _.Init(_);
-      _.Body().add_invite_ids(_), _.Body().set_status(_.bAccept ? 3 : 2);
+      (_.Body().add_invite_ids(_), _.Body().set_status(_.bAccept ? 3 : 2));
       let _ = await _.UpdateInvites(_, _);
       if (_.GetEResult() != 1)
         throw {
@@ -83,4 +83,3 @@ function _() {
     [_],
   );
 }
-export { _, _, _, _ };

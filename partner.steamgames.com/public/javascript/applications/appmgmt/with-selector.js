@@ -4,7 +4,7 @@
 import { kt as e, tn as t } from "./mobx.esm.js";
 var n = t((t) => {
     var n = e();
-    n.useSyncExternalStore, n.useRef, n.useEffect, n.useMemo, n.useDebugValue;
+    (n.useSyncExternalStore, n.useRef, n.useEffect, n.useMemo, n.useDebugValue);
   }),
   r = t((e, t) => {
     t.exports = n();

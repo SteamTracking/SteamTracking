@@ -174,7 +174,7 @@ button.DialogButton {
   color: #dfe3e6;
   text-align: center;
   cursor: pointer;
-  background: #3d4450 99% 1% / 300% 300%;
+  background: #3d4450 99% 1%/300% 300%;
   border: 0;
   border-radius: 2px;
   width: 100%;
@@ -848,15 +848,15 @@ button.DialogButton.DialogButtonTall {
   padding-bottom: 16px;
 }
 button.DialogButton.Primary {
-  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 25% / 330% 100%;
+  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 25%/330% 100%;
 }
 button.DialogButton.GreenPlay {
-  background: linear-gradient(90deg, #8ac329 0%, #4a7a16 60%) 25% / 330% 100%;
+  background: linear-gradient(90deg, #8ac329 0%, #4a7a16 60%) 25%/330% 100%;
 }
 button.DialogButton.GreenPlay:hover,
 button.DialogButton.GreenPlay.gpfocus {
   color: #fff;
-  background: linear-gradient(90deg, #8ac329 0%, #4a7a16 60%) 0% / 330% 100%;
+  background: linear-gradient(90deg, #8ac329 0%, #4a7a16 60%) 0%/330% 100%;
 }
 button.DialogButton.GreenPlay:active,
 button.DialogButton.GreenPlay:active:hover,
@@ -883,7 +883,7 @@ button.DialogButton:enabled:active.gpfocus {
 button.DialogButton.Primary:hover,
 button.DialogButton.Primary.gpfocus:not(.Disabled) {
   color: #fff;
-  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 0% / 330% 100%;
+  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 0%/330% 100%;
 }
 button.DialogButton.Primary:enabled:active,
 button.DialogButton.Primary:enabled:hover:active,

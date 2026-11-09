@@ -34,13 +34,13 @@ var _ = Object.create,
   _ = (_, _, _, _) => {
     if ((_ && typeof _ == `object`) || typeof _ == `function`)
       for (var _ = _(_), _ = 0, _ = _.length, _; _ < _; _++)
-        (_ = _[_]),
+        ((_ = _[_]),
           !_.call(_, _) &&
             _ !== _ &&
             _(_, _, {
               get: ((_) => _[_]).bind(null, _),
               enumerable: !(_ = _(_, _)) || _.enumerable,
-            });
+            }));
     return _;
   },
   _ = (_, _, _) => (
@@ -55,4 +55,3 @@ var _ = Object.create,
       _,
     )
   );
-export { _, _, _ };

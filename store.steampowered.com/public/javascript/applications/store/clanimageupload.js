@@ -113,11 +113,11 @@ var w = e(o()),
         ) {
           for (let e of a.data.images) e.clanAccountID = r;
           i(() => {
-            this.m_mapClanImageLoadState.set(r, { loaded: !0 }),
+            (this.m_mapClanImageLoadState.set(r, { loaded: !0 }),
               this.m_mapClanToImages.set(r, a.data.images),
               this.GetImageListCallbackForClanAccountIDInternal(r).Dispatch(
                 a.data.images,
-              );
+              ));
           });
         }
       }
@@ -192,12 +192,12 @@ var w = e(o()),
       return this.DeleteClanImageByID(e, t.imageid);
     }
   };
-g([t], E.prototype, `m_mapClanToImages`, void 0),
-  g([t], E.prototype, `m_mapClanImageLoadState`, void 0);
+(g([t], E.prototype, `m_mapClanToImages`, void 0),
+  g([t], E.prototype, `m_mapClanImageLoadState`, void 0));
 var D = new E();
 function fe(e) {
   let [t, n] = (0, T.useState)(D.GetClanImagesByAccount(e));
-  return se(D.GetImageListCallbackForClanAccountID(e), n), t;
+  return (se(D.GetImageListCallbackForClanAccountID(e), n), t);
 }
 function pe(e) {
   let t = te.InitFromClanID(e, S.EUNIVERSE),
@@ -527,7 +527,7 @@ var je = `A5DZIArSiNc-`,
     };
     async OnCrop() {
       let e = this.props.uploadFile.GetCanvasImageSource();
-      e &&
+      (e &&
         (await Pe(
           this.props.uploadFile,
           e,
@@ -539,7 +539,7 @@ var je = `A5DZIArSiNc-`,
           this.GetDestHeight(),
           this.props.fileType,
         )),
-        this.props.closeModal?.();
+        this.props.closeModal?.());
     }
     UpdateCrop(e, t) {
       this.setState({ region: t });
@@ -663,7 +663,7 @@ var je = `A5DZIArSiNc-`,
       });
     }
   };
-g([_], q.prototype, `OnCrop`, null), g([_], q.prototype, `UpdateCrop`, null);
+(g([_], q.prototype, `OnCrop`, null), g([_], q.prototype, `UpdateCrop`, null));
 async function Pe(e, t, n, r, i, a, o, s, c) {
   return new Promise((l, u) => {
     let d = J(c);
@@ -672,7 +672,7 @@ async function Pe(e, t, n, r, i, a, o, s, c) {
       return;
     }
     let f = document.createElement(`canvas`);
-    (f.width = o),
+    ((f.width = o),
       (f.height = s),
       f.getContext(`2d`)?.drawImage(t, n, r, i, a, 0, 0, o, s),
       f.toBlob((t) => {
@@ -688,7 +688,7 @@ async function Pe(e, t, n, r, i, a, o, s, c) {
               (e.bCropped = !0),
               l())
             : u(`Unable to apply crop into image`);
-      });
+      }));
   });
 }
 function J(e) {
@@ -730,7 +730,7 @@ var X = class {
   uploadTime;
   fileType;
   constructor(e, t, n, r, i) {
-    a(this),
+    (a(this),
       (this.file = e),
       (this.filename = t),
       (this.fileType = Y(t) ?? 0),
@@ -741,21 +741,21 @@ var X = class {
       (this.height = i.height),
       (this.width = i.width),
       (this.m_originalDataUrl = r),
-      (this.dataUrl = r);
+      (this.dataUrl = r));
   }
   ResetImage() {
-    (this.height = this.m_originalSize.height),
+    ((this.height = this.m_originalSize.height),
       (this.width = this.m_originalSize.width),
-      (this.dataUrl = this.m_originalDataUrl);
+      (this.dataUrl = this.m_originalDataUrl));
   }
   GetImageOptionLabel() {}
 };
-g([t], X.prototype, `dataUrl`, void 0),
+(g([t], X.prototype, `dataUrl`, void 0),
   g([t], X.prototype, `width`, void 0),
   g([t], X.prototype, `height`, void 0),
   g([t], X.prototype, `status`, void 0),
   g([t.ref], X.prototype, `message`, void 0),
-  g([t], X.prototype, `language`, void 0);
+  g([t], X.prototype, `language`, void 0));
 var Ie = 960,
   Le = 311,
   Re = 480,
@@ -765,7 +765,7 @@ var Ie = 960,
     m_currentImageOption = void 0;
     m_currentImageOptionKey = void 0;
     constructor(e, t, n, r, i, o) {
-      super(e, t, n, i, o), a(this), (this.m_rgImageOptions = r);
+      (super(e, t, n, i, o), a(this), (this.m_rgImageOptions = r));
     }
     IsValidAssetType(e, t) {
       let n = 0,
@@ -777,7 +777,7 @@ var Ie = 960,
           this.m_rgImageOptions.some(
             (e) => e.sKey == this.GetCurrentImageOption()?.sKey,
           );
-      if (e) (n = e.width), (r = e.height), (i = !0);
+      if (e) ((n = e.width), (r = e.height), (i = !0));
       else if (this.GetCurrentImageOption()) {
         let e = B[this.GetCurrentImageOption().artworkType];
         e &&
@@ -854,20 +854,21 @@ var Ie = 960,
       return this.m_currentImageOption ?? this.ComputeDefaultImageOption();
     }
     SetCurrentImageOption(e) {
-      (this.m_currentImageOption = e), (this.m_currentImageOptionKey = e?.sKey);
+      ((this.m_currentImageOption = e),
+        (this.m_currentImageOptionKey = e?.sKey));
     }
   };
-g([t], Z.prototype, `m_currentImageOption`, void 0),
-  g([t], Z.prototype, `m_currentImageOptionKey`, void 0);
+(g([t], Z.prototype, `m_currentImageOption`, void 0),
+  g([t], Z.prototype, `m_currentImageOptionKey`, void 0));
 var Q = class extends Z {
   bCropped = !1;
   localizedImageGroupPrimaryImage;
   media;
   constructor(e, t, n, r, i, o, s, c) {
-    super(e, t, n, r, i, o),
+    (super(e, t, n, r, i, o),
       a(this),
       (this.media = s),
-      (this.localizedImageGroupPrimaryImage = c);
+      (this.localizedImageGroupPrimaryImage = c));
   }
   IsValidAssetType(e, t) {
     return (
@@ -914,7 +915,7 @@ function Ue(e, t, n) {
   });
   return (
     r.forEach((e) => {
-      (e.status = `waiting`), (e.message = ``);
+      ((e.status = `waiting`), (e.message = ``));
     }),
     r
   );
@@ -925,9 +926,9 @@ async function We(e, t, n, r, i) {
   for (let e of a) {
     e.status = `uploading`;
     let n = await t(e, e.filename, e.language ?? -1, i);
-    (e.status = n.bSuccess ? `success` : `failed`),
+    ((e.status = n.bSuccess ? `success` : `failed`),
       (e.message = !n.bSuccess && n.elErrorMessage ? n.elErrorMessage : ``),
-      o.push({ bSuccess: n.bSuccess, image: e, uploadResult: n.result });
+      o.push({ bSuccess: n.bSuccess, image: e, uploadResult: n.result }));
   }
   return o;
 }
@@ -936,14 +937,14 @@ async function Ge(e, t, n, r, i, a) {
     s = [],
     c = 0,
     l = async () => {
-      for (; c < o.length; ) {
+      for (; c < o.length;) {
         let e = c++,
           t = o[e];
         t.status = `uploading`;
         let r = await n(t, t.filename, t.language ?? -1, a);
-        (t.status = r.bSuccess ? `success` : `failed`),
+        ((t.status = r.bSuccess ? `success` : `failed`),
           (t.message = !r.bSuccess && r.elErrorMessage ? r.elErrorMessage : ``),
-          (s[e] = { image: t, uploadResult: r });
+          (s[e] = { image: t, uploadResult: r }));
       }
     },
     u = Array.from({ length: Math.floor(t) }, () => l());
@@ -1049,12 +1050,12 @@ var $ = class extends Ke {
   m_localizedImageGroupPrimaryImage;
   m_lastError = void 0;
   constructor(e, t, n, r) {
-    super(),
+    (super(),
       a(this),
       (this.m_clanSteamID = e),
       (this.m_rgImageOptions = Xe(t)),
       (this.m_localizedImageGroupPrimaryImage = n),
-      (this.m_clanImagesV2 = r ?? !1);
+      (this.m_clanImagesV2 = r ?? !1));
   }
   GetClanSteamID() {
     return this.m_clanSteamID;
@@ -1077,7 +1078,7 @@ var $ = class extends Ke {
       n,
       this.m_localizedImageGroupPrimaryImage,
     );
-    return (this.m_filesToUpload = [...this.m_filesToUpload, r]), !0;
+    return ((this.m_filesToUpload = [...this.m_filesToUpload, r]), !0);
   }
   async AddExistingClanImage(e, t = 0) {
     let n = d.GetHashAndExt(e);
@@ -1088,8 +1089,8 @@ var $ = class extends Ke {
     return await this.AddImage(a, t);
   }
   DeleteUploadImageByIndex(e) {
-    this.m_filesToUpload.splice(e, 1),
-      (this.m_filesToUpload = [...this.m_filesToUpload]);
+    (this.m_filesToUpload.splice(e, 1),
+      (this.m_filesToUpload = [...this.m_filesToUpload]));
   }
   DeleteUploadImage(e) {
     let t = this.m_filesToUpload.findIndex(
@@ -1131,7 +1132,7 @@ var $ = class extends Ke {
     return this.m_filesCompleted.indexOf(e) != -1;
   }
   RetryAllFailedUploads() {
-    this.CancelAllUploads(), this.UploadAllImages();
+    (this.CancelAllUploads(), this.UploadAllImages());
   }
   async handleUploadRefresh(e) {
     await D.LoadClanImages(this.m_clanSteamID, !0, e);
@@ -1144,13 +1145,13 @@ var $ = class extends Ke {
       a = e.GetCurrentImageOption(),
       o = e.GetResizeDimension(),
       s = new FormData();
-    s.append(`clanimage`, i, t),
+    (s.append(`clanimage`, i, t),
       s.append(`sessionid`, b()),
       this.m_clanImagesV2 && s.append(`clan_images_v2`, `1`),
       a?.artworkType && s.append(`arttype`, a.artworkType),
       o &&
         o.length > 0 &&
-        s.append(`resize`, o.map((e) => e.width + `x` + e.height).join(`,`));
+        s.append(`resize`, o.map((e) => e.width + `x` + e.height).join(`,`)));
     let c = `/uploadimage/`,
       l = this.m_localizedImageGroupPrimaryImage;
     l &&
@@ -1176,29 +1177,29 @@ var $ = class extends Ke {
       p,
       m = !0;
     try {
-      (p = await w.default.post(d, s, f)), this.m_filesCompleted.push(i);
+      ((p = await w.default.post(d, s, f)), this.m_filesCompleted.push(i));
     } catch (e) {
-      (m = !1),
+      ((m = !1),
         (this.m_lastError = {
           file: i,
           status: e.response ? e.response.status : 500,
           message: ee(e).strErrorMsg,
         }),
-        (p = e.response);
+        (p = e.response));
     }
     return (
       l || (await this.handleUploadRefresh(r)), { bSuccess: m, result: p.data }
     );
   }
 };
-g([t], $.prototype, `m_filesToUpload`, void 0),
+(g([t], $.prototype, `m_filesToUpload`, void 0),
   g([t], $.prototype, `m_filesCompleted`, void 0),
   g([t], $.prototype, `m_lastError`, void 0),
   g([_], $.prototype, `AddImage`, null),
   g([_], $.prototype, `AddExistingClanImage`, null),
   g([_], $.prototype, `DeleteUploadImageByIndex`, null),
   g([_], $.prototype, `DeleteUploadImage`, null),
-  g([_], $.prototype, `ClearImages`, null);
+  g([_], $.prototype, `ClearImages`, null));
 var Ze = class extends $ {
   constructor(e, t, n) {
     super(e, t, n, !1);

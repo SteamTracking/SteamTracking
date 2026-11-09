@@ -5,12 +5,12 @@
       _ < _.length;
       _++
     )
-      (_ = _[_]),
+      ((_ = _[_]),
         Object.prototype.hasOwnProperty.call(_, _) && _[_] && _.push(_[_][0]),
-        (_[_] = 0);
+        (_[_] = 0));
     for (_ in _) Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]);
-    for (_ && _(_); _.length; ) _.shift()();
-    return _.push.apply(_, _ || []), _();
+    for (_ && _(_); _.length;) _.shift()();
+    return (_.push.apply(_, _ || []), _());
   }
   function _() {
     for (var _, _ = 0; _ < _.length; _++) {
@@ -34,9 +34,9 @@
       _: !1,
       exports: {},
     });
-    return _[_].call(_.exports, _, _.exports, _), (_._ = !0), _.exports;
+    return (_[_].call(_.exports, _, _.exports, _), (_._ = !0), _.exports);
   }
-  (_._ = _),
+  ((_._ = _),
     (_._ = _),
     (_._ = function (_, _, _) {
       _._(_, _) ||
@@ -46,14 +46,14 @@
         });
     }),
     (_._ = function (_) {
-      "undefined" != typeof Symbol &&
+      ("undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(_, Symbol.toStringTag, {
           value: "Module",
         }),
         Object.defineProperty(_, "__esModule", {
           value: !0,
-        });
+        }));
     }),
     (_._ = function (_, _) {
       if ((1 & _ && (_ = _(_)), 8 & _)) return _;
@@ -86,18 +86,18 @@
           : function () {
               return _;
             };
-      return _._(_, "a", _), _;
+      return (_._(_, "a", _), _);
     }),
     (_._ = function (_, _) {
       return Object.prototype.hasOwnProperty.call(_, _);
     }),
-    (_._ = "");
+    (_._ = ""));
   var _ = (window.webpackJsonp = window.webpackJsonp || []),
     _ = _.push.bind(_);
-  (_.push = _), (_ = _.slice());
+  ((_.push = _), (_ = _.slice()));
   for (var _ = 0; _ < _.length; _++) _(_[_]);
   var _ = _;
-  _.push(["gfbn", 0]), _();
+  (_.push(["gfbn", 0]), _());
 })({
   "2i24": function (_, _, _) {
     _.exports = {
@@ -339,8 +339,8 @@
         var _ = "";
         if (void 0 !== _ && _) {
           var _ = new Date();
-          _.setTime(_.getTime() + 864e5 * _),
-            (_ = "; expires=" + _.toUTCString());
+          (_.setTime(_.getTime() + 864e5 * _),
+            (_ = "; expires=" + _.toUTCString()));
         }
         document.cookie =
           encodeURIComponent(_) +
@@ -369,8 +369,8 @@
               _)
             ) {
               var _ = _("app_impressions") || "";
-              0 < _.length && (_ += "|"),
-                _("app_impressions", (_ += _ + "@" + _));
+              (0 < _.length && (_ += "|"),
+                _("app_impressions", (_ += _ + "@" + _)));
             }
           }),
           _
@@ -587,7 +587,7 @@
           return _;
       }
     }
-    ((_ = _ || (_ = {}))[(_.k_EOtherEvent = 1)] = "k_EOtherEvent"),
+    (((_ = _ || (_ = {}))[(_.k_EOtherEvent = 1)] = "k_EOtherEvent"),
       (_[(_.k_EGameEvent = 2)] = "k_EGameEvent"),
       (_[(_.k_EPartyEvent = 3)] = "k_EPartyEvent"),
       (_[(_.k_EMeetingEvent = 4)] = "k_EMeetingEvent"),
@@ -619,9 +619,9 @@
       (_[(_.k_EFreeTrial = 31)] = "k_EFreeTrial"),
       (_[(_.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
       (_[(_.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
-      (_[(_.k_EInGameEventGeneral = 35)] = "k_EInGameEventGeneral");
+      (_[(_.k_EInGameEventGeneral = 35)] = "k_EInGameEventGeneral"));
     var _, _;
-    _.k_EOtherEvent,
+    (_.k_EOtherEvent,
       _.k_EGameEvent,
       _.k_EPartyEvent,
       _.k_EMeetingEvent,
@@ -652,8 +652,8 @@
       _.k_EFreeTrial,
       _.k_ESeasonRelease,
       _.k_ECrosspostEvent,
-      _.k_EInGameEventGeneral;
-    ((_ = _ || (_ = {}))[(_.k_ELaunchSource_None = 0)] =
+      _.k_EInGameEventGeneral);
+    (((_ = _ || (_ = {}))[(_.k_ELaunchSource_None = 0)] =
       "k_ELaunchSource_None"),
       (_[(_.k_ELaunchSource_2ftLibraryDetails = 100)] =
         "k_ELaunchSource_2ftLibraryDetails"),
@@ -708,7 +708,7 @@
       (_[(_.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
         "k_ELaunchSource_DiscoveredAlreadyRunning"),
       (_[(_.k_ELaunchSource_GameActionJoinParty = 900)] =
-        "k_ELaunchSource_GameActionJoinParty");
+        "k_ELaunchSource_GameActionJoinParty"));
     var _,
       _ = {
         EUNIVERSE: 0,
@@ -745,7 +745,7 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function () {
-            if (!_()) return _ || (_ = _()), _;
+            if (!_()) return (_ || (_ = _()), _);
             var _ = _("sessionid");
             _ || (_ = _());
             return _;
@@ -766,16 +766,17 @@
           Math.floor(Math.random() * (_ - _ + 1)) + _).toString(36);
         return _;
       })();
-      return _("sessionid", _, 0), _;
+      return (_("sessionid", _, 0), _);
     }
     var _ = (function () {
       function _() {
-        (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
+        ((this.m_mapTokens = new Map()),
+          (this.m_mapFallbackTokens = new Map()));
       }
       return (
         (_.prototype.InitFromObjects = function (_, _, _, _, _) {
           var _ = this;
-          _ || this.m_mapTokens.clear(),
+          (_ || this.m_mapTokens.clear(),
             _ &&
               Object.keys(_).forEach(function (_, _) {
                 _.m_mapTokens.set(_, _[_]);
@@ -785,28 +786,28 @@
             }),
             _ &&
               Object.keys(_).forEach(function (_, _) {
-                _.m_mapTokens.has(_) || _.m_mapTokens.set(_, _[_]),
-                  _.m_mapFallbackTokens.set(_, _[_]);
+                (_.m_mapTokens.has(_) || _.m_mapTokens.set(_, _[_]),
+                  _.m_mapFallbackTokens.set(_, _[_]));
               }),
             _ &&
               Object.keys(_).forEach(function (_, _) {
-                _.m_mapTokens.has(_) || _.m_mapTokens.set(_, _[_]),
+                (_.m_mapTokens.has(_) || _.m_mapTokens.set(_, _[_]),
                   _.m_mapFallbackTokens.has(_) ||
-                    _.m_mapFallbackTokens.set(_, _[_]);
-              });
+                    _.m_mapFallbackTokens.set(_, _[_]));
+              }));
         }),
         (_.prototype.InitDirect = function (_, _) {
           var _ = this;
-          this.m_mapTokens.clear(),
+          (this.m_mapTokens.clear(),
             this.m_mapFallbackTokens.clear(),
             Object.keys(_).forEach(function (_, _) {
               _.m_mapTokens.set(_, _[_]);
             }),
             _ &&
               Object.keys(_).forEach(function (_, _) {
-                _.m_mapTokens.has(_) || _.m_mapTokens.set(_, _[_]),
-                  _.m_mapFallbackTokens.set(_, _[_]);
-              });
+                (_.m_mapTokens.has(_) || _.m_mapTokens.set(_, _[_]),
+                  _.m_mapFallbackTokens.set(_, _[_]));
+              }));
         }),
         (_.prototype.GetPreferredLocales = function () {
           return this.m_rgLocalesToUse
@@ -874,7 +875,7 @@
     }
     var _ = new Map();
     new Map();
-    new Map(), new Map(), new Map(), new Map();
+    (new Map(), new Map(), new Map(), new Map());
     var _ = new _();
     window.LocalizationManager = _;
     var _,
@@ -1055,7 +1056,7 @@
       _ = (function (_) {
         function _(_) {
           var _ = _.call(this, _) || this;
-          return (_.state = {}), _;
+          return ((_.state = {}), _);
         }
         return (
           Object(_._)(_, _),
@@ -1289,16 +1290,16 @@
               }
             }
             var _ = this.state.selected;
-            _ || (_.push(_.suggestion._), this.props.onAddTag(_.suggestion._)),
+            (_ || (_.push(_.suggestion._), this.props.onAddTag(_.suggestion._)),
               this.setState({
                 value: "",
                 selected: _,
-              });
+              }));
           }),
           (_.prototype.onRemoveSelectedTag = function (_) {
             for (var _ = this.state.selected, _ = 0; _ < _.length; _++)
               if (_[_] == _) {
-                this.props.onRemoveTag(_[_]), _.splice(_, 1);
+                (this.props.onRemoveTag(_[_]), _.splice(_, 1));
                 break;
               }
             this.setState({
@@ -1514,16 +1515,16 @@
             });
           }),
           (_.prototype.OnUnHover = function () {
-            this.setState({
+            (this.setState({
               hovered: !1,
             }),
               this.m_videoRef &&
                 this.m_videoRef.current &&
                 ((this.m_videoRef.current.currentTime = 0),
-                this.m_videoRef.current.pause());
+                this.m_videoRef.current.pause()));
           }),
           (_.prototype.onMuteToggle = function (_) {
-            _.shouldMute()
+            (_.shouldMute()
               ? (_.onUnMuteClicked(),
                 this.m_videoRef &&
                   this.m_videoRef.current &&
@@ -1533,23 +1534,23 @@
                   this.m_videoRef.current &&
                   (this.m_videoRef.current.muted = !0)),
               _.preventDefault(),
-              _.stopPropagation();
+              _.stopPropagation());
           }),
           (_.prototype.onAddToWishlist = function (_) {
-            _.onAddToWishlist(this.props.appID, this.props.rank),
+            (_.onAddToWishlist(this.props.appID, this.props.rank),
               this.setState({
                 wishlisted: !0,
               }),
               _.preventDefault(),
-              _.stopPropagation();
+              _.stopPropagation());
           }),
           (_.prototype.onGoToWishlist = function (_) {
-            _.onGoToWishlist(), _.preventDefault(), _.stopPropagation();
+            (_.onGoToWishlist(), _.preventDefault(), _.stopPropagation());
           }),
           (_.prototype.onAddToCart = function (_) {
-            _.onAddToCart(this.props.appID, this.props.rank),
+            (_.onAddToCart(this.props.appID, this.props.rank),
               _.preventDefault(),
-              _.stopPropagation();
+              _.stopPropagation());
           }),
           (_.prototype.render = function () {
             var _ = this,
@@ -1943,7 +1944,7 @@
               _ = 1 - (_ - _),
               _ = 1 - _,
               _ = [];
-            _.push({
+            (_.push({
               index: _ * _.NUM_RECENCY_STEPS + _,
               weight: _ * _,
             }),
@@ -1958,7 +1959,7 @@
               _.push({
                 index: _ * _.NUM_RECENCY_STEPS + _,
                 weight: _ * _,
-              });
+              }));
             var _ = new Map(),
               _ = 0,
               _ = _.getRecommendations(),
@@ -2013,7 +2014,7 @@
                 _ < _.length;
                 _++
               ) {
-                (_[_].rank = _), _++;
+                ((_[_].rank = _), _++);
               }
               for (
                 var _ = 0,
@@ -2167,7 +2168,7 @@
                             var _, _ = [], _ = /(.*?)%(\d+)\$s/g, _ = 0;
                             (_ = _.exec(_));
                           ) {
-                            (_ += _[0].length), _.push(_[1]);
+                            ((_ += _[0].length), _.push(_[1]));
                             var _ = parseInt(_[2]);
                             1 <= _ && _ <= _.length && _.push(_[_ - 1]);
                           }
@@ -2214,16 +2215,16 @@
       })(_._.Component),
       _ = _("2vnA"),
       _ = _("i8i4");
-    ((_ = _ || (_ = {}))[(_.Unrequested = 0)] = "Unrequested"),
+    (((_ = _ || (_ = {}))[(_.Unrequested = 0)] = "Unrequested"),
       (_[(_.Pending = 1)] = "Pending"),
       (_[(_.Valid = 2)] = "Valid"),
       (_[(_.Failed = 3)] = "Failed"),
-      (_[(_.Rerequest = 4)] = "Rerequest");
+      (_[(_.Rerequest = 4)] = "Rerequest"));
     var _,
       _,
       _ = (function () {
         function _() {
-          (this.eState = _.Unrequested), (this.nExpirationTime = 0);
+          ((this.eState = _.Unrequested), (this.nExpirationTime = 0));
         }
         return (
           (_.prototype.getData = function (_, _, _) {
@@ -2236,7 +2237,7 @@
                 ((this.eState = _.Pending),
                 _().then(function (_) {
                   if (_.eState == _.Rerequest)
-                    return _.expireData(), void _.getData(_, _, _);
+                    return (_.expireData(), void _.getData(_, _, _));
                   _.eState = _
                     ? ((_.data = _ ? _(_) : _),
                       (_.nExpirationTime = _ + _),
@@ -2248,9 +2249,9 @@
           }),
           (_.prototype.clearData = function () {
             var _ = Date.now() / 1e3;
-            (this.eState = _.Unrequested),
+            ((this.eState = _.Unrequested),
               (this.data = null),
-              (this.nExpirationTime = _);
+              (this.nExpirationTime = _));
           }),
           (_.prototype.expireData = function () {
             var _ = Date.now() / 1e3;
@@ -2272,13 +2273,13 @@
           _
         );
       })();
-    ((_ = _ || (_ = {}))[(_.ClickThrough = 1)] = "ClickThrough"),
+    (((_ = _ || (_ = {}))[(_.ClickThrough = 1)] = "ClickThrough"),
       (_[(_.AddToWishlist = 2)] = "AddToWishlist"),
-      (_[(_.AddToCart = 3)] = "AddToCart");
+      (_[(_.AddToCart = 3)] = "AddToCart"));
     var _ = (function () {
       function _() {
         var _ = this;
-        (this.m_rgFilterTags = []),
+        ((this.m_rgFilterTags = []),
           (this.m_rgExcludeTags = []),
           (this.m_mapAppDetailsCache = new Map()),
           (this.m_ResultDataCache = new _()),
@@ -2316,11 +2317,11 @@
               ((_.m_fPopularityValue = _.m_fQueuedPopularityValue),
               (_.m_fRecencyValue = _.m_fQueuedRecencyValue),
               (_.m_bStateUpdated = !0));
-          }, 400);
+          }, 400));
       }
       return (
         (_.prototype.Init = function () {
-          (this.m_fPopularityValue = _.DEFAULT_POPULARITY_SLIDER),
+          ((this.m_fPopularityValue = _.DEFAULT_POPULARITY_SLIDER),
             (this.m_fRecencyValue = _.DEFAULT_RECENCY_SLIDER),
             (this.m_rgExcludeTags = _.DEFAULT_EXCLUDED_TAGS),
             (this.m_rgFilterTags = _.DEFAULT_INCLUDED_TAGS),
@@ -2333,7 +2334,7 @@
                 app: this,
               }),
               document.getElementById("recommender_root"),
-            );
+            ));
         }),
         (_.prototype.getDetails = function (_) {
           var _ = this;
@@ -2516,7 +2517,7 @@
           );
         }),
         (_.prototype.getTagName = function (_) {
-          return this.getTags(), this.m_TagNameMap.get(_);
+          return (this.getTags(), this.m_TagNameMap.get(_));
         }),
         (_.prototype.getTagHeight = function () {
           return Math.max(
@@ -2557,8 +2558,8 @@
           return !1;
         }),
         (_.prototype.onExcludeWishlistedToggled = function (_) {
-          (this.m_bExcludeWishlisted = !this.m_bExcludeWishlisted),
-            (this.m_bStateUpdated = !0);
+          ((this.m_bExcludeWishlisted = !this.m_bExcludeWishlisted),
+            (this.m_bStateUpdated = !0));
         }),
         (_.prototype.onSaveUserSettings = function (_) {
           return Object(_._)(this, void 0, void 0, function () {
@@ -2615,7 +2616,7 @@
                     ]
                   );
                 case 2:
-                  _.sent(), (_.label = 3);
+                  (_.sent(), (_.label = 3));
                 case 3:
                   return [2];
               }
@@ -2640,7 +2641,7 @@
           });
         }),
         (_.prototype.onUpdateWithIgnored = function () {
-          this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1);
+          (this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1));
         }),
         (_.prototype.onAppClicked = function (_, _) {
           return Object(_._)(this, void 0, void 0, function () {
@@ -2668,7 +2669,7 @@
                     ]
                   );
                 case 1:
-                  return _.sent(), [2];
+                  return (_.sent(), [2]);
               }
             });
           });
@@ -2719,7 +2720,7 @@
                     ]
                   );
                 case 2:
-                  return _.sent(), [2, _];
+                  return (_.sent(), [2, _]);
               }
             });
           });
@@ -2830,8 +2831,8 @@
       _,
       _,
       _ = new _();
-    document.addEventListener("DOMContentLoaded", function () {
-      _(), _.Init();
+    (document.addEventListener("DOMContentLoaded", function () {
+      (_(), _.Init());
     }),
       (window.LocalizationReady = function (_, _, _) {
         if ("english" !== _) "main" == _ ? (_ = _) : "shared" == _ && (_ = _);
@@ -2841,11 +2842,11 @@
             _ = null,
             _ = void 0,
             _ = null;
-          void 0 !== _ ? ((_ = _), (_ = _)) : (_ = _),
+          (void 0 !== _ ? ((_ = _), (_ = _)) : (_ = _),
             void 0 !== _ ? ((_ = _), (_ = _)) : (_ = _),
             _.InitFromObjects(_, _, _, _),
-            (_ = _ = _ = void 0);
+            (_ = _ = _ = void 0));
         }
-      });
+      }));
   },
 });

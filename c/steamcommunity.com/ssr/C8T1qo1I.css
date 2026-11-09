@@ -1721,10 +1721,9 @@
   position: relative;
 }
 .FZlHN3ErsM8- {
-  background:
-    #67707b33
+  background: #67707b33
     url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAApElEQVR4AcWT4Q1GMBCGr1++AWygIxjFBoxgBBtYwQhMwgZswAbnbZA00nIV4kku96Ptk+u1R/QQ6myRmSOkDGHyjGiVUiOFAEnBbsoQSc7nFFLRcCGaJJKEZcT2uZ/DFZEMfSW6xasi6dX8+9BALXixHbNP+0RSyU7H6++nv10N0rjFd3iHdis5dSw1GNyZQoCsPvSkotCKLFmOZMahRyUtvc0CFg0cFdS6sHwAAAAASUVORK5CYII=)
-    50% / 14px no-repeat;
+    50%/14px no-repeat;
   width: 46px;
   height: 24px;
   margin: 0;
@@ -2173,7 +2172,7 @@ html.responsive.touch .NGjNcNxDz0Y- {
 .nlTg10o51PM- {
   box-sizing: border-box;
   z-index: 100;
-  background: linear-gradient(90.85deg, #333840 .58%, #25282e 74.92%);
+  background: linear-gradient(90.85deg, #333840 0.58%, #25282e 74.92%);
   border-left: 2px solid #0cf;
   width: 90%;
   max-width: 980px;
@@ -2212,7 +2211,7 @@ html.responsive.touch .NGjNcNxDz0Y- {
   outline: 2px solid #fff;
 }
 .Z0Fc4o3bNoI- {
-  background: linear-gradient(90deg, #47bfff 5%, #1a44c2 60%) 25% / 330% 100%;
+  background: linear-gradient(90deg, #47bfff 5%, #1a44c2 60%) 25%/330% 100%;
 }
 .Z0Fc4o3bNoI-:hover {
   color: #fff;

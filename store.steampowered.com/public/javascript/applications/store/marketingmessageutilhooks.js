@@ -151,13 +151,13 @@ var k = e(r()),
     async GetMessageList(t, n = !1) {
       if (!_.logged_in) return [];
       let r = w.Init(st);
-      r.Body().set_country_code(E.COUNTRY),
+      (r.Body().set_country_code(E.COUNTRY),
         r.Body().set_elanguage(C(E.LANGUAGE)),
         r.Body().set_client_package_version(t.nClientPackageVersion),
         r.Body().set_operating_system(t.eOSType),
         n && r.Body().set_include_seen_messages(!0),
         Qe(r),
-        $e(r, e.sm_DefaultDataRequest);
+        $e(r, e.sm_DefaultDataRequest));
       let i = await S.GetMarketingMessagesForUser(
         this.m_SteamInterface.GetServiceTransport(),
         r,
@@ -171,7 +171,7 @@ var k = e(r()),
     }
     async GetSingleMessage(t, n) {
       let r = w.Init(Ye);
-      r.Body().set_gid(t), Qe(r), $e(r, e.sm_DefaultDataRequest);
+      (r.Body().set_gid(t), Qe(r), $e(r, e.sm_DefaultDataRequest));
       let i;
       if (
         ((i =
@@ -192,11 +192,11 @@ var k = e(r()),
     MarkMessageSeen(e, t, n) {
       if (this.m_setMessagesSeen.has(e)) return;
       let r = w.Init(Xe);
-      r.Body().set_gid(e),
+      (r.Body().set_gid(e),
         r.Body().set_display_index(t),
         r.Body().set_template_type(n),
         S.MarkMessageSeen(this.m_SteamInterface.GetServiceTransport(), r),
-        this.m_setMessagesSeen.add(e);
+        this.m_setMessagesSeen.add(e));
     }
     BIsMessageSeen(e) {
       return this.m_setMessagesSeen.has(e);
@@ -228,18 +228,18 @@ var j = class {
   m_rgRecommendedAppIDs;
   m_nSaleItemCount;
   constructor(e) {
-    c(this),
+    (c(this),
       (this.m_message = e),
-      (this.m_templateVars = xt(e.template_vars_json()));
+      (this.m_templateVars = xt(e.template_vars_json())));
     let t = e.associated_item(!1);
-    (this.m_associatedItemKey = t
+    ((this.m_associatedItemKey = t
       ? ct({ item_type: t.item_type(), id: t.id() })
       : void 0),
       (this.m_rgRecommendedAppIDs = e
         .recommended_items()
         .map((e) => e.appid())
         .filter(Boolean)),
-      (this.m_nSaleItemCount = e.sale_item_count());
+      (this.m_nSaleItemCount = e.sale_item_count()));
   }
   get id() {
     return this.m_message.gid();
@@ -361,8 +361,8 @@ var j = class {
     return this.m_message.gid();
   }
   SetDLCAppIDOverride(e) {
-    (this.m_templateVars.additional_featuring = e.map((e) => ({ appid: e }))),
-      (this.m_templateVars.custom_display = `dlc_override`);
+    ((this.m_templateVars.additional_featuring = e.map((e) => ({ appid: e }))),
+      (this.m_templateVars.custom_display = `dlc_override`));
   }
   GetRecommendedAppIDs() {
     return this.m_rgRecommendedAppIDs;
@@ -478,10 +478,10 @@ function Dt(e, t, n) {
         let e = new j(r);
         if (n) {
           let t = Pe(`marketingmessage_preview_config`, `application_config`);
-          t?.dlc_appid_overrides?.length > 0 &&
+          (t?.dlc_appid_overrides?.length > 0 &&
             e.SetDLCAppIDOverride(t.dlc_appid_overrides),
             t?.recommended_appid_overrides?.length > 0 &&
-              e.SetRecommendedAppIDsOverride(t.recommended_appid_overrides);
+              e.SetRecommendedAppIDsOverride(t.recommended_appid_overrides));
         }
         return e;
       }
@@ -496,11 +496,11 @@ function Dt(e, t, n) {
 }
 function Ot(e, t, n, r, i) {
   let a = w.Init(ft);
-  a.Body().set_gid(t),
+  (a.Body().set_gid(t),
     a.Body().set_display_index(n),
     a.Body().set_template_type(r),
     a.Body().set_click_location(i),
-    S.MarkMessageClicked(e, a);
+    S.MarkMessageClicked(e, a));
 }
 var M = o(),
   N = k.createContext({ setLegalText: void 0 });
@@ -525,11 +525,11 @@ function Mt(e) {
     n = k.useRef(void 0);
   return (
     k.useEffect(() => {
-      (n.current = t),
+      ((n.current = t),
         SteamClient.BrowserView.PostMessageToParent(
           `MarketingMessageLegal`,
           t || ``,
-        );
+        ));
     }, [t]),
     k.useEffect(
       () =>
@@ -884,7 +884,7 @@ function U(e) {
     id: t,
     type: n,
     fnOnClickOverride: (e) => {
-      e.preventDefault(), i(e);
+      (e.preventDefault(), i(e));
     },
     bIsMarketingMessage: !0,
     bPreferAssetWithoutOverride: !1,
@@ -895,7 +895,7 @@ function W(e) {
     i = zr(t.id, t.type, r);
   return (0, M.jsx)(`div`, {
     onClick: (e) => {
-      e.preventDefault(), i(e);
+      (e.preventDefault(), i(e));
     },
     children: (0, M.jsx)(we, {
       capsule: t,
@@ -979,9 +979,9 @@ function _n(e, t, n) {
       : ((t = `${E.STORE_BASE_URL}news/app/${e.appid}?emclan=${e.clanSteamID.ConvertTo64BitString()}&emgid=${e.GID}`),
         E.IN_CLIENT && (t = `steam://openurl/${t}`));
   } else
-    (t = i),
+    ((t = i),
       e && (t += `${i.includes(`?`) ? `&` : `?`}emgid=${e.GID}`),
-      E.IN_CLIENT && (t = `steam://openurl/${t}`);
+      E.IN_CLIENT && (t = `steam://openurl/${t}`));
   return $(t, n, !0);
 }
 var vn = e(u());
@@ -1026,8 +1026,8 @@ function wn(e) {
         let e = i
           ? ut(`#MarketingMessages_See_Count_Items`, i)
           : g(`#MarketingMessages_See_All_Items`);
-        n.OverrideCustomText(e),
-          n.OverrideURL(`${E.STORE_BASE_URL}dlc/${n.associated_item_appid}`);
+        (n.OverrideCustomText(e),
+          n.OverrideURL(`${E.STORE_BASE_URL}dlc/${n.associated_item_appid}`));
       }
     }, [n, i]),
     (0, M.jsx)(v, {
@@ -1327,7 +1327,7 @@ var Ln = class e {
   }
   static g_Self = null;
   static Get() {
-    return (e.g_Self ||= new e()), e.g_Self;
+    return ((e.g_Self ||= new e()), e.g_Self);
   }
 };
 function Rn(e) {
@@ -1866,10 +1866,10 @@ function Fr(e) {
 }
 async function Ir(e, t) {
   let n = w.Init(Je);
-  n.Body().set_steamid(_.steamid),
+  (n.Body().set_steamid(_.steamid),
     n.Body().set_appids_filter([e]),
     n.Body().set_include_played_free_games(!0),
-    n.Body().set_language(E.LANGUAGE);
+    n.Body().set_language(E.LANGUAGE));
   let r = await gt.GetOwnedGames(t, n);
   return r.Body().games().length > 0 ? r.Body().games()[0].toObject() : {};
 }

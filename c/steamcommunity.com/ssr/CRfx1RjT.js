@@ -32,4 +32,3 @@ function _(_, _) {
     _?.public_data?.steamid && _.setQueryData(_(_.public_data.steamid), _);
   });
 }
-export { _, _, _ };

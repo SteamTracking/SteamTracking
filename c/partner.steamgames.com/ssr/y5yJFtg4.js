@@ -3,10 +3,10 @@ var _ = _(_()),
   _ = class extends _.Component {
     state = {};
     constructor(_) {
-      super(_), (this.state.lastErrorKey = _.errorKey);
+      (super(_), (this.state.lastErrorKey = _.errorKey));
     }
     componentDidCatch(_, _) {
-      _()
+      (_()
         .ReportError(_, {
           strComponentStack: _.componentStack || void 0,
         })
@@ -23,7 +23,7 @@ var _ = _(_()),
             info: _,
           },
           lastErrorKey: this.props.errorKey,
-        });
+        }));
     }
     Reset() {
       this.setState({
@@ -117,7 +117,7 @@ var _ = ({ error: _, onDismiss: _ }) => {
           cursor: `pointer`,
         },
         onClick: (_) => {
-          _.preventDefault(), _();
+          (_.preventDefault(), _());
         },
         children: _,
       })
@@ -155,4 +155,3 @@ var _ = ({ error: _, onDismiss: _ }) => {
       },
       children: _,
     });
-export { _ };

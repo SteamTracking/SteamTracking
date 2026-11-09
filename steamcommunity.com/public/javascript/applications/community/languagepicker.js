@@ -141,19 +141,19 @@ var F = e(i(), 1),
     }
     static s_globalSingletonStore;
     static Get() {
-      return (e.s_globalSingletonStore ||= new e()), e.s_globalSingletonStore;
+      return ((e.s_globalSingletonStore ||= new e()), e.s_globalSingletonStore);
     }
     constructor() {
       o(this);
     }
   };
-x([l], z.prototype, `m_eCurLang`, void 0),
+(x([l], z.prototype, `m_eCurLang`, void 0),
   x([l], z.prototype, `m_rgHasData`, void 0),
   x([l], z.prototype, `m_bHasLocalizationContext`, void 0),
   x([w], z.prototype, `GetCurEditLanguage`, null),
   x([w], z.prototype, `SetCurEditLanguage`, null),
   x([u.bound], z.prototype, `SetHasLanguage`, null),
-  x([w], z.prototype, `BHasLanguageData`, null);
+  x([w], z.prototype, `BHasLanguageData`, null));
 function at() {
   return f(() => z.Get().GetCurEditLanguage());
 }
@@ -231,11 +231,11 @@ var ot = class {
       ) {
         for (let e of a.data.images) e.clanAccountID = i;
         n(() => {
-          this.m_mapClanImageLoadState.set(i, { loaded: !0 }),
+          (this.m_mapClanImageLoadState.set(i, { loaded: !0 }),
             this.m_mapClanToImages.set(i, a.data.images),
             this.GetImageListCallbackForClanAccountIDInternal(i).Dispatch(
               a.data.images,
-            );
+            ));
         });
       }
     }
@@ -308,12 +308,12 @@ var ot = class {
     return this.DeleteClanImageByID(e, t.imageid);
   }
 };
-x([l], ot.prototype, `m_mapClanToImages`, void 0),
-  x([l], ot.prototype, `m_mapClanImageLoadState`, void 0);
+(x([l], ot.prototype, `m_mapClanToImages`, void 0),
+  x([l], ot.prototype, `m_mapClanImageLoadState`, void 0));
 var B = new ot();
 function st(e) {
   let [t, n] = (0, I.useState)(B.GetClanImagesByAccount(e));
-  return et(B.GetImageListCallbackForClanAccountID(e), n), t;
+  return (et(B.GetImageListCallbackForClanAccountID(e), n), t);
 }
 function ct(e) {
   let t = T.InitFromClanID(e, A.EUNIVERSE),
@@ -342,12 +342,12 @@ var lt = `_0ayR5P4snOQ-`,
     m_mapMatchByKey = new Map();
     containerRef = I.createRef();
     constructor(e) {
-      super(e),
+      (super(e),
         (this.m_hMobxSearchDisposer = s(async () => {
-          await this.UpdateSearchResults(this.props.strSearch),
-            this.forceUpdate();
+          (await this.UpdateSearchResults(this.props.strSearch),
+            this.forceUpdate());
         })),
-        (this.state = { selectedIndex: void 0 });
+        (this.state = { selectedIndex: void 0 }));
     }
     OnKeyDown(e) {
       this.BHandleKeyPress(e.keyCode) && e.preventDefault();
@@ -378,7 +378,8 @@ var lt = `_0ayR5P4snOQ-`,
             this.ChooseSuggestion(
               this.m_rgCurrentMatches[this.state.selectedIndex],
             );
-          else return this.props.onSuggestionSelected(this.props.strSearch), !1;
+          else
+            return (this.props.onSuggestionSelected(this.props.strSearch), !1);
           break;
         case 27:
           this.props.onSuggestionSelected(this.props.strSearch);
@@ -413,10 +414,10 @@ var lt = `_0ayR5P4snOQ-`,
     SetSelectedIndex(e) {
       if (!this.m_rgCurrentMatches.length) return;
       let t = this.m_rgCurrentMatches.length;
-      t > this.getMaxMatches() && (t = this.getMaxMatches()),
+      (t > this.getMaxMatches() && (t = this.getMaxMatches()),
         (e %= t),
         e < 0 && (e += t),
-        this.setState({ selectedIndex: e });
+        this.setState({ selectedIndex: e }));
     }
     FindKeyIndex(e) {
       if (!this.m_mapMatchByKey.size && this.m_rgCurrentMatches.length)
@@ -444,7 +445,7 @@ var lt = `_0ayR5P4snOQ-`,
         n.scrollIntoView();
     }
     async UpdateSearchResults(e) {
-      (this.m_rgCurrentMatches = await this.performSearch(e)),
+      ((this.m_rgCurrentMatches = await this.performSearch(e)),
         (this.m_strLastSearch = e),
         this.m_mapMatchByKey.clear(),
         this.m_rgCurrentMatches.length
@@ -457,7 +458,7 @@ var lt = `_0ayR5P4snOQ-`,
               this.setState({ selectedIndex: 0 })
           : this.state &&
             this.state.selectedIndex !== void 0 &&
-            this.setState({ selectedIndex: void 0 });
+            this.setState({ selectedIndex: void 0 }));
     }
     m_hMobxSearchDisposer;
     componentWillUnmount() {
@@ -514,10 +515,10 @@ var lt = `_0ayR5P4snOQ-`,
       });
     }
   };
-x([w], mt.prototype, `OnKeyDown`, null),
+(x([w], mt.prototype, `OnKeyDown`, null),
   x([w], mt.prototype, `OnClickSuggestion`, null),
   x([w], mt.prototype, `OnMouseOverSuggestion`, null),
-  x([w], mt.prototype, `BindSelectedElement`, null);
+  x([w], mt.prototype, `BindSelectedElement`, null));
 var ht = class extends I.PureComponent {
   containerRef = I.createRef();
   OnMouseOver(e) {
@@ -536,8 +537,8 @@ var ht = class extends I.PureComponent {
     });
   }
 };
-x([w], ht.prototype, `OnMouseOver`, null),
-  x([w], ht.prototype, `OnClick`, null);
+(x([w], ht.prototype, `OnMouseOver`, null),
+  x([w], ht.prototype, `OnClick`, null));
 var gt = `ARyrUoFBJKQ-`,
   _t = class extends mt {
     performSearch(e) {
@@ -637,11 +638,11 @@ var gt = `ARyrUoFBJKQ-`,
     m_iMentionSearchStartOffset;
     m_iMentionSearchCancelledOffset;
     constructor(e) {
-      super(e),
+      (super(e),
         (this.state = {
           mentionSearch: void 0,
           activeSuggestSearchType: void 0,
-        });
+        }));
     }
     BindMentionDialog(e) {
       this.m_MentionDialog = e ?? void 0;
@@ -678,13 +679,13 @@ var gt = `ARyrUoFBJKQ-`,
         a !== void 0)
       ) {
         let e = i.substr(0, a);
-        (e += t), (r >= i.length || i[r] != ` `) && (e += ` `);
+        ((e += t), (r >= i.length || i[r] != ` `) && (e += ` `));
         let o = e.length;
-        (e += i.substr(r)),
+        ((e += i.substr(r)),
           (n.value = e),
           (n.selectionStart = n.selectionEnd = o),
           this.props.fnSetText(e),
-          this.FocusTextInput();
+          this.FocusTextInput());
       }
     }
     OnFocus(e) {
@@ -697,12 +698,12 @@ var gt = `ARyrUoFBJKQ-`,
       this.UpdateAutoSearchState();
     }
     ClearMentionSearchState() {
-      (this.m_iMentionSearchStartOffset = void 0),
+      ((this.m_iMentionSearchStartOffset = void 0),
         this.state.activeSuggestSearchType &&
           this.setState({
             activeSuggestSearchType: void 0,
             mentionSearch: void 0,
-          });
+          }));
     }
     OnEmoticonSuggestionSelected(e, t) {
       t
@@ -768,8 +769,8 @@ var gt = `ARyrUoFBJKQ-`,
         return;
       }
       let a = n.substr(r + 1, t - r - 1);
-      (this.m_iMentionSearchStartOffset = r),
-        this.setState({ activeSuggestSearchType: i, mentionSearch: a });
+      ((this.m_iMentionSearchStartOffset = r),
+        this.setState({ activeSuggestSearchType: i, mentionSearch: a }));
     }
     GetTextAreaRef() {
       return this.descTextAreaRef;
@@ -820,7 +821,7 @@ var gt = `ARyrUoFBJKQ-`,
       });
     }
   };
-x([w], V.prototype, `BindMentionDialog`, null),
+(x([w], V.prototype, `BindMentionDialog`, null),
   x([w], V.prototype, `OnKeyDown`, null),
   x([w], V.prototype, `OnFocus`, null),
   x([w], V.prototype, `OnKeyPress`, null),
@@ -829,7 +830,7 @@ x([w], V.prototype, `BindMentionDialog`, null),
   x([w], V.prototype, `OnBBCodeSuggestionSelected`, null),
   x([w], V.prototype, `FocusTextInput`, null),
   x([w], V.prototype, `GetTextAreaRef`, null),
-  x([w], V.prototype, `GetTextAreaCurrent`, null);
+  x([w], V.prototype, `GetTextAreaCurrent`, null));
 var bt = `AqA5yADf-5M-`,
   xt = `OfpXVyFy5Fo-`,
   St = `Z2hFr9c9Bx8-`,
@@ -849,9 +850,9 @@ var bt = `AqA5yADf-5M-`,
   It = class e extends F.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.groupid || E(e.M()),
-        F.Message.initialize(this, t, 0, -1, [3], null);
+        F.Message.initialize(this, t, 0, -1, [3], null));
     }
     static sm_m;
     static sm_mbf;
@@ -876,7 +877,7 @@ var bt = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= M(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= M(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -897,14 +898,14 @@ var bt = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       y(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsListCategory`;
@@ -913,7 +914,7 @@ var bt = `AqA5yADf-5M-`,
   Lt = class e extends F.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), F.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), F.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -934,12 +935,12 @@ var bt = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetCategories_Request`;
@@ -948,9 +949,9 @@ var bt = `AqA5yADf-5M-`,
   Rt = class e extends F.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.categories || E(e.M()),
-        F.Message.initialize(this, t, 0, -1, [1], null);
+        F.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -964,7 +965,7 @@ var bt = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= M(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= M(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -985,14 +986,14 @@ var bt = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       y(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetCategories_Response`;
@@ -1001,9 +1002,9 @@ var bt = `AqA5yADf-5M-`,
   zt = class e extends F.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.accountid || E(e.M()),
-        F.Message.initialize(this, t, 0, -1, void 0, null);
+        F.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1025,7 +1026,7 @@ var bt = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= M(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= M(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1046,14 +1047,14 @@ var bt = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       y(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsListFavoriteEntry`;
@@ -1062,7 +1063,7 @@ var bt = `AqA5yADf-5M-`,
   Bt = class e extends F.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), F.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), F.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1083,12 +1084,12 @@ var bt = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetFavorites_Request`;
@@ -1097,9 +1098,9 @@ var bt = `AqA5yADf-5M-`,
   Vt = class e extends F.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.favorites || E(e.M()),
-        F.Message.initialize(this, t, 0, -1, [1], null);
+        F.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1113,7 +1114,7 @@ var bt = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= M(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= M(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1134,14 +1135,14 @@ var bt = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       y(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetFavorites_Response`;
@@ -1150,9 +1151,9 @@ var bt = `AqA5yADf-5M-`,
   Ht = class e extends F.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.favorites || E(e.M()),
-        F.Message.initialize(this, t, 0, -1, [1], null);
+        F.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1166,7 +1167,7 @@ var bt = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= M(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= M(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1187,14 +1188,14 @@ var bt = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       y(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_SetFavorites_Request`;
@@ -1203,7 +1204,7 @@ var bt = `AqA5yADf-5M-`,
   Ut = class e extends F.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), F.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), F.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1224,12 +1225,12 @@ var bt = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_SetFavorites_Response`;
@@ -1238,9 +1239,9 @@ var bt = `AqA5yADf-5M-`,
   Wt = class e extends F.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.favorites || E(e.M()),
-        F.Message.initialize(this, t, 0, -1, [1], null);
+        F.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1254,7 +1255,7 @@ var bt = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= M(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= M(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1275,14 +1276,14 @@ var bt = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       y(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_FavoritesChanged_Notification`;
@@ -1291,7 +1292,7 @@ var bt = `AqA5yADf-5M-`,
   Gt = class e extends F.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), F.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), F.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1312,12 +1313,12 @@ var bt = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetFriendsList_Request`;
@@ -1326,9 +1327,9 @@ var bt = `AqA5yADf-5M-`,
   Kt = class e extends F.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.friendslist || E(e.M()),
-        F.Message.initialize(this, t, 0, -1, void 0, null);
+        F.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1339,7 +1340,7 @@ var bt = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= M(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= M(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1360,14 +1361,14 @@ var bt = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       y(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new F.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetFriendsList_Response`;
@@ -1766,7 +1767,7 @@ var Yn = `A5DZIArSiNc-`,
     };
     async OnCrop() {
       let e = this.props.uploadFile.GetCanvasImageSource();
-      e &&
+      (e &&
         (await $n(
           this.props.uploadFile,
           e,
@@ -1778,7 +1779,7 @@ var Yn = `A5DZIArSiNc-`,
           this.GetDestHeight(),
           this.props.fileType,
         )),
-        this.props.closeModal?.();
+        this.props.closeModal?.());
     }
     UpdateCrop(e, t) {
       this.setState({ region: t });
@@ -1902,7 +1903,8 @@ var Yn = `A5DZIArSiNc-`,
       });
     }
   };
-x([w], Qn.prototype, `OnCrop`, null), x([w], Qn.prototype, `UpdateCrop`, null);
+(x([w], Qn.prototype, `OnCrop`, null),
+  x([w], Qn.prototype, `UpdateCrop`, null));
 async function $n(e, t, n, r, i, a, o, s, c) {
   return new Promise((l, u) => {
     let d = er(c);
@@ -1911,7 +1913,7 @@ async function $n(e, t, n, r, i, a, o, s, c) {
       return;
     }
     let f = document.createElement(`canvas`);
-    (f.width = o),
+    ((f.width = o),
       (f.height = s),
       f.getContext(`2d`)?.drawImage(t, n, r, i, a, 0, 0, o, s),
       f.toBlob((t) => {
@@ -1927,7 +1929,7 @@ async function $n(e, t, n, r, i, a, o, s, c) {
               (e.bCropped = !0),
               l())
             : u(`Unable to apply crop into image`);
-      });
+      }));
   });
 }
 function er(e) {
@@ -1950,7 +1952,7 @@ var tr = `_1ZQxfdsiPgM-`,
       o = () => e.closeModal && e.closeModal(),
       s = B.GetFilteredClanImages(t, r),
       c = (e) => {
-        n(e), o();
+        (n(e), o());
       };
     return (0, L.jsx)(it, {
       children: (0, L.jsx)(Te, {
@@ -2030,7 +2032,7 @@ function cr(e, t, n, r) {
   let i = [];
   if (e.length > 0) {
     let a = t.toLocaleLowerCase();
-    for (let o = 0; o < t.length; ) {
+    for (let o = 0; o < t.length;) {
       let s = a.indexOf(e, o);
       if (s < 0) {
         i.push(
@@ -2038,7 +2040,7 @@ function cr(e, t, n, r) {
         );
         break;
       }
-      o < s &&
+      (o < s &&
         i.push(
           (0, L.jsx)(
             `span`,
@@ -2053,7 +2055,7 @@ function cr(e, t, n, r) {
             n + `_` + String(o),
           ),
         ),
-        (o = s + e.length);
+        (o = s + e.length));
     }
   } else i.push((0, L.jsx)(`span`, { children: t }, n + `_null`));
   return i;
@@ -2089,7 +2091,7 @@ var K = class {
   uploadTime;
   fileType;
   constructor(e, t, n, r, i) {
-    o(this),
+    (o(this),
       (this.file = e),
       (this.filename = t),
       (this.fileType = lr(t) ?? 0),
@@ -2100,21 +2102,21 @@ var K = class {
       (this.height = i.height),
       (this.width = i.width),
       (this.m_originalDataUrl = r),
-      (this.dataUrl = r);
+      (this.dataUrl = r));
   }
   ResetImage() {
-    (this.height = this.m_originalSize.height),
+    ((this.height = this.m_originalSize.height),
       (this.width = this.m_originalSize.width),
-      (this.dataUrl = this.m_originalDataUrl);
+      (this.dataUrl = this.m_originalDataUrl));
   }
   GetImageOptionLabel() {}
 };
-x([l], K.prototype, `dataUrl`, void 0),
+(x([l], K.prototype, `dataUrl`, void 0),
   x([l], K.prototype, `width`, void 0),
   x([l], K.prototype, `height`, void 0),
   x([l], K.prototype, `status`, void 0),
   x([l.ref], K.prototype, `message`, void 0),
-  x([l], K.prototype, `language`, void 0);
+  x([l], K.prototype, `language`, void 0));
 var dr = 960,
   fr = 311,
   pr = 480,
@@ -2124,7 +2126,7 @@ var dr = 960,
     m_currentImageOption = void 0;
     m_currentImageOptionKey = void 0;
     constructor(e, t, n, r, i, a) {
-      super(e, t, n, i, a), o(this), (this.m_rgImageOptions = r);
+      (super(e, t, n, i, a), o(this), (this.m_rgImageOptions = r));
     }
     IsValidAssetType(e, t) {
       let n = 0,
@@ -2136,7 +2138,7 @@ var dr = 960,
           this.m_rgImageOptions.some(
             (e) => e.sKey == this.GetCurrentImageOption()?.sKey,
           );
-      if (e) (n = e.width), (r = e.height), (i = !0);
+      if (e) ((n = e.width), (r = e.height), (i = !0));
       else if (this.GetCurrentImageOption()) {
         let e = G[this.GetCurrentImageOption().artworkType];
         e &&
@@ -2213,15 +2215,16 @@ var dr = 960,
       return this.m_currentImageOption ?? this.ComputeDefaultImageOption();
     }
     SetCurrentImageOption(e) {
-      (this.m_currentImageOption = e), (this.m_currentImageOptionKey = e?.sKey);
+      ((this.m_currentImageOption = e),
+        (this.m_currentImageOptionKey = e?.sKey));
     }
   };
-x([l], hr.prototype, `m_currentImageOption`, void 0),
-  x([l], hr.prototype, `m_currentImageOptionKey`, void 0);
+(x([l], hr.prototype, `m_currentImageOption`, void 0),
+  x([l], hr.prototype, `m_currentImageOptionKey`, void 0));
 var gr = class extends hr {
     video;
     constructor(e, t, n, r, i, a, o) {
-      super(e, t, n, r, i, a), (this.video = o);
+      (super(e, t, n, r, i, a), (this.video = o));
     }
     BIsOriginalMinimumDimensions(e) {
       return Gn(this.video.videoWidth, this.video.videoHeight, e.artworkType);
@@ -2254,10 +2257,10 @@ var gr = class extends hr {
     localizedImageGroupPrimaryImage;
     media;
     constructor(e, t, n, r, i, a, s, c) {
-      super(e, t, n, r, i, a),
+      (super(e, t, n, r, i, a),
         o(this),
         (this.media = s),
-        (this.localizedImageGroupPrimaryImage = c);
+        (this.localizedImageGroupPrimaryImage = c));
     }
     IsValidAssetType(e, t) {
       return (
@@ -2304,7 +2307,7 @@ function Sr(e, t, n) {
   });
   return (
     r.forEach((e) => {
-      (e.status = `waiting`), (e.message = ``);
+      ((e.status = `waiting`), (e.message = ``));
     }),
     r
   );
@@ -2315,9 +2318,9 @@ async function Cr(e, t, n, r, i) {
   for (let e of a) {
     e.status = `uploading`;
     let n = await t(e, e.filename, e.language ?? -1, i);
-    (e.status = n.bSuccess ? `success` : `failed`),
+    ((e.status = n.bSuccess ? `success` : `failed`),
       (e.message = !n.bSuccess && n.elErrorMessage ? n.elErrorMessage : ``),
-      o.push({ bSuccess: n.bSuccess, image: e, uploadResult: n.result });
+      o.push({ bSuccess: n.bSuccess, image: e, uploadResult: n.result }));
   }
   return o;
 }
@@ -2326,14 +2329,14 @@ async function wr(e, t, n, r, i, a) {
     s = [],
     c = 0,
     l = async () => {
-      for (; c < o.length; ) {
+      for (; c < o.length;) {
         let e = c++,
           t = o[e];
         t.status = `uploading`;
         let r = await n(t, t.filename, t.language ?? -1, a);
-        (t.status = r.bSuccess ? `success` : `failed`),
+        ((t.status = r.bSuccess ? `success` : `failed`),
           (t.message = !r.bSuccess && r.elErrorMessage ? r.elErrorMessage : ``),
-          (s[e] = { image: t, uploadResult: r });
+          (s[e] = { image: t, uploadResult: r }));
       }
     },
     u = Array.from({ length: Math.floor(t) }, () => l());
@@ -2439,12 +2442,12 @@ var q = class extends Tr {
   m_localizedImageGroupPrimaryImage;
   m_lastError = void 0;
   constructor(e, t, n, r) {
-    super(),
+    (super(),
       o(this),
       (this.m_clanSteamID = e),
       (this.m_rgImageOptions = kr(t)),
       (this.m_localizedImageGroupPrimaryImage = n),
-      (this.m_clanImagesV2 = r ?? !1);
+      (this.m_clanImagesV2 = r ?? !1));
   }
   GetClanSteamID() {
     return this.m_clanSteamID;
@@ -2467,7 +2470,7 @@ var q = class extends Tr {
       n,
       this.m_localizedImageGroupPrimaryImage,
     );
-    return (this.m_filesToUpload = [...this.m_filesToUpload, r]), !0;
+    return ((this.m_filesToUpload = [...this.m_filesToUpload, r]), !0);
   }
   async AddExistingClanImage(e, t = 0) {
     let n = h.GetHashAndExt(e);
@@ -2478,8 +2481,8 @@ var q = class extends Tr {
     return await this.AddImage(a, t);
   }
   DeleteUploadImageByIndex(e) {
-    this.m_filesToUpload.splice(e, 1),
-      (this.m_filesToUpload = [...this.m_filesToUpload]);
+    (this.m_filesToUpload.splice(e, 1),
+      (this.m_filesToUpload = [...this.m_filesToUpload]));
   }
   DeleteUploadImage(e) {
     let t = this.m_filesToUpload.findIndex(
@@ -2521,7 +2524,7 @@ var q = class extends Tr {
     return this.m_filesCompleted.indexOf(e) != -1;
   }
   RetryAllFailedUploads() {
-    this.CancelAllUploads(), this.UploadAllImages();
+    (this.CancelAllUploads(), this.UploadAllImages());
   }
   async handleUploadRefresh(e) {
     await B.LoadClanImages(this.m_clanSteamID, !0, e);
@@ -2534,13 +2537,13 @@ var q = class extends Tr {
       a = e.GetCurrentImageOption(),
       o = e.GetResizeDimension(),
       s = new FormData();
-    s.append(`clanimage`, i, t),
+    (s.append(`clanimage`, i, t),
       s.append(`sessionid`, ze()),
       this.m_clanImagesV2 && s.append(`clan_images_v2`, `1`),
       a?.artworkType && s.append(`arttype`, a.artworkType),
       o &&
         o.length > 0 &&
-        s.append(`resize`, o.map((e) => e.width + `x` + e.height).join(`,`));
+        s.append(`resize`, o.map((e) => e.width + `x` + e.height).join(`,`)));
     let c = `/uploadimage/`,
       l = this.m_localizedImageGroupPrimaryImage;
     l &&
@@ -2566,29 +2569,29 @@ var q = class extends Tr {
       p,
       m = !0;
     try {
-      (p = await R.default.post(d, s, f)), this.m_filesCompleted.push(i);
+      ((p = await R.default.post(d, s, f)), this.m_filesCompleted.push(i));
     } catch (e) {
-      (m = !1),
+      ((m = !1),
         (this.m_lastError = {
           file: i,
           status: e.response ? e.response.status : 500,
           message: ge(e).strErrorMsg,
         }),
-        (p = e.response);
+        (p = e.response));
     }
     return (
       l || (await this.handleUploadRefresh(r)), { bSuccess: m, result: p.data }
     );
   }
 };
-x([l], q.prototype, `m_filesToUpload`, void 0),
+(x([l], q.prototype, `m_filesToUpload`, void 0),
   x([l], q.prototype, `m_filesCompleted`, void 0),
   x([l], q.prototype, `m_lastError`, void 0),
   x([w], q.prototype, `AddImage`, null),
   x([w], q.prototype, `AddExistingClanImage`, null),
   x([w], q.prototype, `DeleteUploadImageByIndex`, null),
   x([w], q.prototype, `DeleteUploadImage`, null),
-  x([w], q.prototype, `ClearImages`, null);
+  x([w], q.prototype, `ClearImages`, null));
 var Ar = class extends q {
     constructor(e, t, n) {
       super(e, t, n, !1);
@@ -2686,7 +2689,7 @@ var Nr = r((e) => {
                   thumb_url: o,
                   uploaded_time: Date.now() / 1e3,
                 };
-              c(s), a(s);
+              (c(s), a(s));
             }
           }
         } finally {
@@ -2699,7 +2702,7 @@ var Nr = r((e) => {
     if (p && p.GetFilesToUpload().length > 0) {
       _ = p.GetUploadImages()[0];
       let e = _.IsValidAssetType(o);
-      (ne = e.error), (re = e.needsCrop);
+      ((ne = e.error), (re = e.needsCrop));
     }
     return (0, L.jsxs)(L.Fragment, {
       children: [
@@ -2746,12 +2749,12 @@ var Nr = r((e) => {
     m_cancelSignal = R.default.CancelToken.source();
     static s_formattingHelp = new Map();
     constructor(e) {
-      super(e),
+      (super(e),
         (this.state = {
           formattingHelp: {
             __html: Pr.s_formattingHelp.get(e.formatType) ?? ``,
           },
-        });
+        }));
     }
     componentDidMount() {
       this.AjaxGetFormattingHelp().catch((e) => {
@@ -2774,12 +2777,12 @@ var Nr = r((e) => {
       if (this.state.formattingHelp.__html == ``) {
         let e = { sessionid: ze() },
           t;
-        (t = await R.default.get(Pr.GetHelpURL(this.props.formatType, !0), {
+        ((t = await R.default.get(Pr.GetHelpURL(this.props.formatType, !0), {
           params: e,
           cancelToken: this.m_cancelSignal.token,
         })),
           Pr.s_formattingHelp.set(this.props.formatType, t.data),
-          this.setState({ formattingHelp: { __html: t.data } });
+          this.setState({ formattingHelp: { __html: t.data } }));
       }
     }
     render() {
@@ -2812,7 +2815,7 @@ var Ir,
   J = class extends I.Component {
     descAutoTextAreaRef = I.createRef();
     constructor(e) {
-      super(e), (this.state = { bShowDragTarget: !1 });
+      (super(e), (this.state = { bShowDragTarget: !1 }));
     }
     componentDidMount() {
       B.AddClanImageDragListener(this.ClanImageDragListener);
@@ -2896,11 +2899,11 @@ var Ir,
       });
     }
   };
-x([w], J.prototype, `ClanImageDragListener`, null),
+(x([w], J.prototype, `ClanImageDragListener`, null),
   x([w], J.prototype, `onFocus`, null),
   x([w], J.prototype, `OnTextAreaDropListener`, null),
   x([w], J.prototype, `GetTextAreaRef`, null),
-  (J = x([r], J));
+  (J = x([r], J)));
 var Y = class e {
     static BIsFireFox() {
       return !!new RegExp(/Firefox\/([0-9\.]+)(?:\s|$)/i).exec(
@@ -2910,9 +2913,9 @@ var Y = class e {
     static replaceSelection(t, n) {
       if (!t) return;
       let r = t.selectionStart;
-      t.focus(),
+      (t.focus(),
         e.InsertTextAtSelect(n, t),
-        t.setSelectionRange(r, r + n.length);
+        t.setSelectionRange(r, r + n.length));
     }
     static getSelectedString(e) {
       return e
@@ -2923,11 +2926,11 @@ var Y = class e {
       if (!r) return;
       let i = e.getSelectedString(r),
         a = ``;
-      (a =
+      ((a =
         i.indexOf(t) == 0 && i.lastIndexOf(n) == i.length - n.length
           ? i.substr(t.length, i.length - t.length - n.length)
           : t + i + n),
-        e.replaceSelection(r, a);
+        e.replaceSelection(r, a));
     }
     static append(t, n) {
       n &&
@@ -2960,7 +2963,8 @@ var Y = class e {
           ? t.setRangeText(e, n, r, `preserve`)
           : (t.value = t.value.slice(0, n) + e + t.value.slice(r));
         let i = new Event(`input`, { bubbles: !0 });
-        t.dispatchEvent(i), (t.selectionStart = t.selectionEnd = n + e.length);
+        (t.dispatchEvent(i),
+          (t.selectionStart = t.selectionEnd = n + e.length));
       }
       t.focus();
     }
@@ -3020,8 +3024,7 @@ var Y = class e {
           Y.getSelectedString(t)
             .split(`
 `)
-            .map((e) => (e.match(/\*+\s/) ? `[*]` : `[*] `) + e)
-            .join(`
+            .map((e) => (e.match(/\*+\s/) ? `[*]` : `[*] `) + e).join(`
 `) +
           `
 ` +
@@ -3065,8 +3068,8 @@ var Y = class e {
     }
     OnEmoticonSelected(e, t = !1) {
       let n = `\u02D0${e}\u02D0`;
-      Y.replaceSelection(this.props.fnTextareaRef()?.current, n),
-        this.props.fnTextareaRef()?.current?.focus();
+      (Y.replaceSelection(this.props.fnTextareaRef()?.current, n),
+        this.props.fnTextareaRef()?.current?.focus());
     }
     BSupports(e) {
       return this.props.supportBBCodes.findIndex((t) => t == e) >= 0;
@@ -3228,7 +3231,7 @@ var Y = class e {
       );
     }
   };
-x([w], X.prototype, `onBold`, null),
+(x([w], X.prototype, `onBold`, null),
   x([w], X.prototype, `onItalics`, null),
   x([w], X.prototype, `onUnderline`, null),
   x([w], X.prototype, `onStrikeThrough`, null),
@@ -3244,7 +3247,7 @@ x([w], X.prototype, `onBold`, null),
   x([w], X.prototype, `OnOpenImageDialog`, null),
   x([w], X.prototype, `OnOpenSpeakerDialog`, null),
   x([w], X.prototype, `OnEmoticonSelected`, null),
-  (X = x([r], X));
+  (X = x([r], X)));
 function Z(e) {
   return (0, L.jsx)(`span`, {
     onClick: e.onClick,
@@ -3426,14 +3429,14 @@ var Q = class extends I.Component {
     });
   }
 };
-x([w], Q.prototype, `OnYoutubeInsertLink`, null),
+(x([w], Q.prototype, `OnYoutubeInsertLink`, null),
   x([w], Q.prototype, `OnUrlChange`, null),
   x([w], Q.prototype, `OnLeftSelected`, null),
   x([w], Q.prototype, `OnRightSelected`, null),
   x([w], Q.prototype, `OnFullSelected`, null),
   x([w], Q.prototype, `OnSummarySelected`, null),
   x([w], Q.prototype, `OnOuterDivClickPassDown`, null),
-  (Q = x([r], Q));
+  (Q = x([r], Q)));
 var Lr = class extends I.Component {
   static {
     Ir = this;
@@ -3521,10 +3524,10 @@ var Lr = class extends I.Component {
     });
   }
 };
-x([w], Lr.prototype, `onLinkTitleUpdate`, null),
+(x([w], Lr.prototype, `onLinkTitleUpdate`, null),
   x([w], Lr.prototype, `onLinkURLUpdate`, null),
   x([w], Lr.prototype, `onInsertLink`, null),
-  (Lr = Ir = x([r], Lr));
+  (Lr = Ir = x([r], Lr)));
 var Rr = class extends I.Component {
   refFirstInput = I.createRef();
   state = { imgURL: ``, anchorURL: `` };
@@ -3535,10 +3538,10 @@ var Rr = class extends I.Component {
     let { anchorURL: e, imgURL: t } = this.state,
       n = ``,
       r = ``;
-    e && e.length > 0 && ((n += `[url=` + e + `]`), (r = `[/url]` + r)),
+    (e && e.length > 0 && ((n += `[url=` + e + `]`), (r = `[/url]` + r)),
       (n += `[img]` + t),
       (r = `[/img]` + r),
-      Y.wrapBBCode(n, r, this.props.textareaRef.current);
+      Y.wrapBBCode(n, r, this.props.textareaRef.current));
   }
   OnImageURLChange(e) {
     this.state.imgURL != e.target.value &&
@@ -3610,10 +3613,10 @@ var Rr = class extends I.Component {
     });
   }
 };
-x([w], Rr.prototype, `OnImageInsert`, null),
+(x([w], Rr.prototype, `OnImageInsert`, null),
   x([w], Rr.prototype, `OnImageURLChange`, null),
   x([w], Rr.prototype, `OnAnchorURLChange`, null),
-  (Rr = x([r], Rr));
+  (Rr = x([r], Rr)));
 var zr = (e) => {
   let [t, n] = I.useState(``),
     [r, i] = I.useState(``),
@@ -3633,9 +3636,9 @@ var zr = (e) => {
         let e = m + `/` + l.clanAccountID + `/` + h.GetHashAndExt(l);
         n += ` photo="${e}"`;
       }
-      d && (n += ` steamid="${d.ConvertTo64BitString()}"`),
+      (d && (n += ` steamid="${d.ConvertTo64BitString()}"`),
         (n += `]${s}[/speaker]`),
-        Y.replaceSelection(e.textareaRef.current, n);
+        Y.replaceSelection(e.textareaRef.current, n));
     },
     re = t.trim().length != 0 && s.trim().length != 0;
   return (0, L.jsx)(D, {
@@ -3798,7 +3801,7 @@ var $ = class extends I.Component {
   m_isMounted = !1;
   m_bAppend = !1;
   constructor(e) {
-    super(e), (this.state = { bPreserveNewLines: !1, strHTMLData: `` });
+    (super(e), (this.state = { bPreserveNewLines: !1, strHTMLData: `` }));
   }
   componentDidMount() {
     this.m_isMounted = !0;
@@ -3807,10 +3810,10 @@ var $ = class extends I.Component {
     this.m_isMounted = !1;
   }
   OnConvertAndOverriteHTML() {
-    (this.m_bAppend = !1), this.ConvertBBCode();
+    ((this.m_bAppend = !1), this.ConvertBBCode());
   }
   OnConvertAndAppendHTML() {
-    (this.m_bAppend = !0), this.ConvertBBCode();
+    ((this.m_bAppend = !0), this.ConvertBBCode());
   }
   async ConvertHtmlToBBCode(e, t) {
     let n = new URLSearchParams();
@@ -3826,7 +3829,7 @@ var $ = class extends I.Component {
     );
   }
   ConvertBBCode() {
-    this.setState({ bConverting: !0 }),
+    (this.setState({ bConverting: !0 }),
       this.ConvertHtmlToBBCode(
         this.state.strHTMLData,
         this.state.bPreserveNewLines,
@@ -3852,7 +3855,7 @@ var $ = class extends I.Component {
             this.props.ownerWindow,
             { strTitle: k(`#EventEditor_ConvertHTML_Error`) },
           );
-        });
+        }));
   }
   OnCheckboxChange(e) {
     let t = e.target.checked;
@@ -3961,11 +3964,11 @@ var $ = class extends I.Component {
           });
   }
 };
-x([w], $.prototype, `OnConvertAndOverriteHTML`, null),
+(x([w], $.prototype, `OnConvertAndOverriteHTML`, null),
   x([w], $.prototype, `OnConvertAndAppendHTML`, null),
   x([w], $.prototype, `OnCheckboxChange`, null),
   x([w], $.prototype, `OnTextAreaChange`, null),
-  ($ = x([r], $));
+  ($ = x([r], $)));
 var Hr = class extends I.Component {
   GenerateLanguageOptions() {
     let e = [],
@@ -4021,7 +4024,7 @@ var Hr = class extends I.Component {
       let i = n && n(t.eLang),
         a = r && r(t.eLang),
         o = t.sLocName;
-      a &&
+      (a &&
         a !== 0 &&
         ((o += ` `),
         (o += k(
@@ -4038,7 +4041,7 @@ var Hr = class extends I.Component {
             },
             `langpicker` + t.eLang + (i ? `_hasdata` : ``),
           ),
-        );
+        ));
     }
     return e;
   }
@@ -4061,7 +4064,7 @@ var Hr = class extends I.Component {
     });
   }
 };
-x([w], Hr.prototype, `OnLanguageChange`, null), (Hr = x([r], Hr));
+(x([w], Hr.prototype, `OnLanguageChange`, null), (Hr = x([r], Hr)));
 export {
   Et as A,
   z as B,

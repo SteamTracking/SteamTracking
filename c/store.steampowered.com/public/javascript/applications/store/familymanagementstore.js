@@ -71,9 +71,9 @@ function _(_, _ = !1) {
     queryKey: _(_, _),
     queryFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_steamid(_), _.Body().set_include_family_group_response(_);
+      (_.Body().set_steamid(_), _.Body().set_include_family_group_response(_));
       let _ = await _.GetFamilyGroupForUser(_, _);
-      return _(_.GetEResult(), `GetFamilyGroupForUser`), _.Body();
+      return (_(_.GetEResult(), `GetFamilyGroupForUser`), _.Body());
     },
     staleTime: _,
     enabled: !!_,
@@ -90,7 +90,7 @@ function _(_) {
         let _ = _.Init(_);
         _.Body().set_family_groupid(_);
         let _ = await _.GetFamilyGroup(_, _);
-        return _(_.GetEResult(), `GetFamilyGroup`), _.Body();
+        return (_(_.GetEResult(), `GetFamilyGroup`), _.Body());
       }
       throw 42;
     },
@@ -106,7 +106,7 @@ function _() {
       let _ = _.Init(_);
       _.Body().set_name(_);
       let _ = await _.CreateFamilyGroup(_, _);
-      return _(_.GetEResult(), `CreateFamilyGroup`), _.Body();
+      return (_(_.GetEResult(), `CreateFamilyGroup`), _.Body());
     },
     onSuccess: () => {
       _.invalidateQueries({
@@ -124,10 +124,10 @@ function _(_) {
       let _ = _.Init(_);
       _.Body().set_family_groupid(_);
       let _ = await _.DeleteFamilyGroup(_, _);
-      return _(_.GetEResult(), `DeleteFamilyGroup`), _.Body();
+      return (_(_.GetEResult(), `DeleteFamilyGroup`), _.Body());
     },
     onSuccess: () => {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: _(_),
       }),
         _.invalidateQueries({
@@ -135,7 +135,7 @@ function _(_) {
         }),
         _.invalidateQueries({
           queryKey: _(_),
-        });
+        }));
     },
   });
 }
@@ -145,17 +145,17 @@ function _(_) {
   return _({
     mutationFn: async (_) => {
       let _ = _.Init(_);
-      _.Body().set_family_groupid(_), _.Body().set_name(_);
+      (_.Body().set_family_groupid(_), _.Body().set_name(_));
       let _ = await _.ModifyFamilyGroupDetails(_, _);
-      return _(_.GetEResult(), `ModifyFamilyGroupDetails`), _.Body();
+      return (_(_.GetEResult(), `ModifyFamilyGroupDetails`), _.Body());
     },
     onSuccess: () => {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: _(_),
       }),
         _.invalidateQueries({
           queryKey: _(_),
-        });
+        }));
     },
   });
 }
@@ -165,14 +165,14 @@ function _(_, _, _) {
   return _({
     mutationFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_family_groupid(_),
+      (_.Body().set_family_groupid(_),
         _.Body().set_receiver_steamid(_),
-        _.Body().set_receiver_role(_);
+        _.Body().set_receiver_role(_));
       let _ = await _.InviteToFamilyGroup(_, _);
-      return _(_.GetEResult(), `InviteToFamilyGroup`), _.Body();
+      return (_(_.GetEResult(), `InviteToFamilyGroup`), _.Body());
     },
     onSuccess: () => {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: _(_),
       }),
         _.invalidateQueries({
@@ -180,7 +180,7 @@ function _(_, _, _) {
         }),
         _.invalidateQueries({
           queryKey: _(_),
-        });
+        }));
     },
   });
 }
@@ -193,10 +193,10 @@ function _(_) {
       let _ = _.Init(_);
       _.Body().set_family_groupid(_);
       let _ = await _.JoinFamilyGroup(_, _);
-      return _(_.GetEResult(), `JoinFamilyGroup`), _.Body();
+      return (_(_.GetEResult(), `JoinFamilyGroup`), _.Body());
     },
     onSuccess: () => {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: _(_),
       }),
         _.invalidateQueries({
@@ -204,7 +204,7 @@ function _(_) {
         }),
         _.invalidateQueries({
           queryKey: _(_),
-        });
+        }));
     },
   });
 }
@@ -214,12 +214,12 @@ function _(_, _) {
   return _({
     mutationFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_family_groupid(_), _.Body().set_steamid_to_cancel(_);
+      (_.Body().set_family_groupid(_), _.Body().set_steamid_to_cancel(_));
       let _ = await _.CancelFamilyGroupInvite(_, _);
-      return _(_.GetEResult(), `CancelFamilyGroupInvite`), _.Body();
+      return (_(_.GetEResult(), `CancelFamilyGroupInvite`), _.Body());
     },
     onSuccess: () => {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: _(_),
       }),
         _.invalidateQueries({
@@ -227,7 +227,7 @@ function _(_, _) {
         }),
         _.invalidateQueries({
           queryKey: _(_),
-        });
+        }));
     },
   });
 }
@@ -237,12 +237,12 @@ function _(_, _) {
   return _({
     mutationFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_family_groupid(_), _.Body().set_steamid_to_remove(_);
+      (_.Body().set_family_groupid(_), _.Body().set_steamid_to_remove(_));
       let _ = await _.RemoveFromFamilyGroup(_, _);
-      return _(_.GetEResult(), `RemoveFromFamilyGroup`), _.Body();
+      return (_(_.GetEResult(), `RemoveFromFamilyGroup`), _.Body());
     },
     onSuccess: () => {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: _(_),
       }),
         _.invalidateQueries({
@@ -250,7 +250,7 @@ function _(_, _) {
         }),
         _.invalidateQueries({
           queryKey: _(_),
-        });
+        }));
     },
   });
 }
@@ -262,10 +262,10 @@ function _(_) {
       let _ = _(`clientsessionid`),
         _ = _ && BigInt(`0x` + _).toString(),
         _ = _.Init(_);
-      _.Body().set_family_groupid(_),
-        _.Body().set_client_instance_id(_ ?? void 0);
+      (_.Body().set_family_groupid(_),
+        _.Body().set_client_instance_id(_ ?? void 0));
       let _ = await _.GetUsersSharingDevice(_, _);
-      return _(_.GetEResult(), `GetUsersSharingDevice`), _.Body();
+      return (_(_.GetEResult(), `GetUsersSharingDevice`), _.Body());
     },
   });
 }
@@ -283,10 +283,10 @@ function _(_, _) {
     queryKey: _(_, _),
     queryFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_family_groupid(_),
-        _ !== void 0 && _.Body().set_rt_include_completed_since(_);
+      (_.Body().set_family_groupid(_),
+        _ !== void 0 && _.Body().set_rt_include_completed_since(_));
       let _ = await _.GetPurchaseRequests(_, _);
-      return _(_.GetEResult(), `GetPurchaseRequests`), _.Body();
+      return (_(_.GetEResult(), `GetPurchaseRequests`), _.Body());
     },
   });
 }
@@ -296,19 +296,19 @@ function _(_, _, _) {
   return _({
     mutationFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_family_groupid(_),
+      (_.Body().set_family_groupid(_),
         _.Body().set_request_id(_),
-        _.Body().set_action(_);
+        _.Body().set_action(_));
       let _ = await _.RespondToRequestedPurchase(_, _);
-      return _(_.GetEResult(), `RespondToRequestedPurchase`), _.Body();
+      return (_(_.GetEResult(), `RespondToRequestedPurchase`), _.Body());
     },
     onSuccess: () => {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: _(_),
       }),
         _.invalidateQueries({
           queryKey: _(_),
-        });
+        }));
     },
   });
 }
@@ -414,8 +414,8 @@ function _(_, _, _) {
         _ = [];
       if (_ === 25 || _ === 96) {
         let _;
-        _.isSuccess && _.data && (_ = _.data.cooldown_seconds_remaining()),
-          _.push(_(_));
+        (_.isSuccess && _.data && (_ = _.data.cooldown_seconds_remaining()),
+          _.push(_(_)));
       }
       _(_(_, _, _, _));
     }
@@ -445,7 +445,7 @@ function _(_) {
       let _ = _.Init(_);
       _.Body().set_family_groupid(_);
       let _ = await _.GetChangeLog(_, _);
-      return _(_.GetEResult(), `GetFamilyGroupChangeLog`), _.Body().changes();
+      return (_(_.GetEResult(), `GetFamilyGroupChangeLog`), _.Body().changes());
     },
     staleTime: 0,
   });
@@ -573,14 +573,14 @@ function _(_, _) {
   return _({
     mutationFn: async (_) => {
       let _ = _.Init(_);
-      _.Body().set_family_groupid(_),
+      (_.Body().set_family_groupid(_),
         _.Body().set_invite_id(_),
-        _.Body().set_nonce(_);
+        _.Body().set_nonce(_));
       let _ = await _.ConfirmJoinFamilyGroup(_, _);
-      return _(_.GetEResult(), `ConfirmJoinFamilyGroup`), _.Body();
+      return (_(_.GetEResult(), `ConfirmJoinFamilyGroup`), _.Body());
     },
     onSuccess: () => {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: _(_),
       }),
         _.invalidateQueries({
@@ -588,7 +588,7 @@ function _(_, _) {
         }),
         _.invalidateQueries({
           queryKey: _(_),
-        });
+        }));
     },
   });
 }
@@ -598,19 +598,19 @@ function _(_, _, _) {
   return _({
     mutationFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_family_groupid(_),
+      (_.Body().set_family_groupid(_),
         _.Body().set_invite_id(_),
-        _.Body().set_nonce(_);
+        _.Body().set_nonce(_));
       let _ = await _.ConfirmInviteToFamilyGroup(_, _);
-      return _(_.GetEResult(), `ConfirmInviteToFamilyGroup`), _.Body();
+      return (_(_.GetEResult(), `ConfirmInviteToFamilyGroup`), _.Body());
     },
     onSuccess: () => {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: _(_),
       }),
         _.invalidateQueries({
           queryKey: _(_),
-        });
+        }));
     },
   });
 }
@@ -627,7 +627,7 @@ function _(_) {
         : (_.push(_), _.set(_.appid, _));
   }
   for (let _ of _.values()) _.push(_);
-  return _.sort((_, _) => _.time_start - _.time_start), _;
+  return (_.sort((_, _) => _.time_start - _.time_start), _);
 }
 function _(_) {
   let _ = _();
@@ -653,10 +653,10 @@ function _(_) {
       let _ = _.Init(_);
       _.Body().set_family_groupid(_);
       let _ = await _.UndeleteFamilyGroup(_, _);
-      return _(_.GetEResult(), `UndeleteFamilyGroup`), _;
+      return (_(_.GetEResult(), `UndeleteFamilyGroup`), _);
     },
     onSuccess: () => {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: _(_),
       }),
         _.invalidateQueries({
@@ -664,41 +664,10 @@ function _(_) {
         }),
         _.invalidateQueries({
           queryKey: _(_),
-        });
+        }));
     },
   });
 }
 function _(_, _) {
   return _.members().find((_) => _.steamid() == _);
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

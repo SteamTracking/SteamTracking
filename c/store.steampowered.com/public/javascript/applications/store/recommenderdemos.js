@@ -112,7 +112,7 @@ var _ = _(_()),
                 timeout: 1e4,
               },
             );
-            _(_.data.appids), _(_.data.weights);
+            (_(_.data.appids), _(_.data.weights));
           } catch (_) {
             console.error(`Error fetching data`, _);
           }
@@ -292,7 +292,7 @@ var _ = _(_()),
                 timeout: 1e4,
               },
             );
-            _(_.data.sales), _(_.data.error);
+            (_(_.data.sales), _(_.data.error));
           } catch (_) {
             console.error(`Error fetching data`, _);
           }
@@ -398,7 +398,7 @@ var _ = (_) => {
                 timeout: 1e4,
               },
             );
-            _(_.data.reason_lists), _(_.data.error);
+            (_(_.data.reason_lists), _(_.data.error));
           } catch (_) {
             console.error(`Error fetching data`, _);
           }
@@ -489,7 +489,7 @@ var _ = (_) => {
                         disabled: !_,
                         className: _,
                         onClick: () => {
-                          _(!1), _(0), _(``);
+                          (_(!1), _(0), _(``));
                         },
                         children: `Clear`,
                       }),

@@ -468,7 +468,7 @@ body:not(.v7menu) div#global_header .content {
     :nth-child(48),
     :nth-child(54)
   ) {
-  grid-area: span 2 / span 2;
+  grid-area: span 2/span 2;
 }
 .Yl-MOWSIHeA- ._3eZTUI8a7YQ- ._6nJy9OkrSk4- {
   grid-template-rows: 1fr;

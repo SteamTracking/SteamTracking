@@ -8,7 +8,7 @@ function _(_, _) {
       let _ = _(_.ownerDocument.defaultView, (_) => {
         _(_[0]);
       });
-      return _.observe(_), () => _.unobserve(_);
+      return (_.observe(_), () => _.unobserve(_));
     },
     [_, _],
   );
@@ -39,14 +39,13 @@ function _(_, _) {
 function _(_, _) {
   let _ = _.useRef(void 0);
   return _((_) => {
-    !_.current && _.isIntersecting && _.onEnter?.(_),
+    (!_.current && _.isIntersecting && _.onEnter?.(_),
       _.current && !_.isIntersecting && _.onLeave?.(_),
       _.onIntersectionChange?.(_),
-      (_.current = _.isIntersecting);
+      (_.current = _.isIntersecting));
   }, _);
 }
 function _(_, ..._) {
   let _ = new _.ownerDocument.defaultView.IntersectionObserver(..._);
-  return _.observe(_), _;
+  return (_.observe(_), _);
 }
-export { _, _, _ };

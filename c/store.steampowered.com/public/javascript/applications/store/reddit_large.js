@@ -3,4 +3,3 @@ var _ = `data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--
     `../../../images/applications/store/reddit_large.png?v=valveisgoodatcaching`,
     import.meta.url,
   ).href;
-export { _, _ };

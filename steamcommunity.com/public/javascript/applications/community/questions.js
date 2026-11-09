@@ -55,13 +55,13 @@ var w = e(r()),
     m_bAreEventListenersRegistered = !1;
     static s_Singleton;
     static Get() {
-      return (e.s_Singleton ||= new e()), e.s_Singleton;
+      return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
     constructor() {}
     ResetFidgetTimer(e) {
       this.m_timer && window.clearTimeout(this.m_timer);
       let t = () => {
-        (this.m_timer = null), this.m_callbackList.Dispatch();
+        ((this.m_timer = null), this.m_callbackList.Dispatch());
       };
       this.m_timer = window.setTimeout(t, ge);
     }
@@ -75,13 +75,13 @@ var w = e(r()),
       if (this.m_bAreEventListenersRegistered) return !1;
       let e = window;
       for (let t of he) e.addEventListener(t, this.ResetFidgetTimer);
-      return (this.m_bAreEventListenersRegistered = !0), !0;
+      return ((this.m_bAreEventListenersRegistered = !0), !0);
     }
     BUnregisterEventListeners() {
       if (!this.m_bAreEventListenersRegistered) return !1;
       let e = window;
       for (let t of he) e.removeEventListener(t, this.ResetFidgetTimer);
-      return (this.m_bAreEventListenersRegistered = !1), !1;
+      return ((this.m_bAreEventListenersRegistered = !1), !1);
     }
   };
 ee([ne], T.prototype, `ResetFidgetTimer`, null);
@@ -123,7 +123,7 @@ var E = e(n()),
     m_rgPendingQuestionGIDs = [];
     static s_Singleton;
     static Get() {
-      return (e.s_Singleton ||= new e()), e.s_Singleton;
+      return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
     constructor() {}
     GetQAndACallbackList(e) {
@@ -195,7 +195,7 @@ var E = e(n()),
           S.VANITY_ID +
           `/ajaxcreateqanda`,
         r = new FormData();
-      r.append(`sessionid`, _()), r.append(`name`, e);
+      (r.append(`sessionid`, _()), r.append(`name`, e));
       let i = null;
       try {
         let e = await E.default.post(n, r, {
@@ -227,7 +227,7 @@ var E = e(n()),
           `/ajaxrenameqanda/` +
           e,
         i = new FormData();
-      i.append(`sessionid`, _()), i.append(`name`, t);
+      (i.append(`sessionid`, _()), i.append(`name`, t));
       let a = null;
       try {
         let o = await E.default.post(r, i, {
@@ -309,8 +309,8 @@ var E = e(n()),
             let t = e.gidQuestion,
               n = this.m_mapQuestions.get(t)?.bUserUpVoted ?? e.bUserUpVoted,
               r = { ...e, bUserUpVoted: n };
-            this.m_mapQuestions.set(t, r),
-              this.GetQuestionCallbackList(t).Dispatch(r);
+            (this.m_mapQuestions.set(t, r),
+              this.GetQuestionCallbackList(t).Dispatch(r));
           }
           let n =
               this.m_mapQAndASessions.get(e)?.bUserCanModerate ??
@@ -369,7 +369,7 @@ var E = e(n()),
           `/ajaxaskquestion/` +
           e,
         i = new FormData();
-      i.append(`sessionid`, _()), i.append(`question`, t);
+      (i.append(`sessionid`, _()), i.append(`question`, t));
       let a = null;
       try {
         let t = await E.default.post(r, i, {
@@ -408,9 +408,9 @@ var E = e(n()),
           `/ajaxmoderatequestion/` +
           e,
         a = new FormData();
-      a.append(`sessionid`, _()),
+      (a.append(`sessionid`, _()),
         a.append(`gidquestion`, t),
-        a.append(`action`, n == 1 ? `show` : `hide`);
+        a.append(`action`, n == 1 ? `show` : `hide`));
       let o = null;
       try {
         let t = await E.default.post(i, a, {
@@ -418,7 +418,7 @@ var E = e(n()),
           cancelToken: r?.token,
         });
         if (t?.status == 200 && t.data?.success == 1)
-          return this.LoadSession(e, !0, r), 1;
+          return (this.LoadSession(e, !0, r), 1);
         o = { response: t };
       } catch (e) {
         o = e;
@@ -443,9 +443,9 @@ var E = e(n()),
           `/ajaxanswerquestion/` +
           e,
         a = new FormData();
-      a.append(`sessionid`, _()),
+      (a.append(`sessionid`, _()),
         a.append(`gidquestion`, t),
-        a.append(`answer`, n);
+        a.append(`answer`, n));
       let o = null;
       try {
         let t = await E.default.post(i, a, {
@@ -453,7 +453,7 @@ var E = e(n()),
           cancelToken: r?.token,
         });
         if (t?.status == 200 && t.data?.success == 1)
-          return this.LoadSession(e, !0, r), 1;
+          return (this.LoadSession(e, !0, r), 1);
         o = { response: t };
       } catch (e) {
         o = e;
@@ -475,9 +475,9 @@ var E = e(n()),
       let i = this.m_mapQuestions.get(t),
         a = i.nVoteCount,
         o = a + (n ? 1 : -1);
-      (i = { ...i, nVoteCount: o, bUserUpVoted: n }),
+      ((i = { ...i, nVoteCount: o, bUserUpVoted: n }),
         this.m_mapQuestions.set(t, i),
-        this.GetQuestionCallbackList(t).Dispatch(i);
+        this.GetQuestionCallbackList(t).Dispatch(i));
       let s =
           v.COMMUNITY_BASE_URL +
           `questions/` +
@@ -485,9 +485,9 @@ var E = e(n()),
           `/ajaxvoteforquestion/` +
           e,
         c = new FormData();
-      c.append(`sessionid`, _()),
+      (c.append(`sessionid`, _()),
         c.append(`gidquestion`, t),
-        c.append(`up`, n ? `1` : `0`);
+        c.append(`up`, n ? `1` : `0`));
       let l = null;
       try {
         let e = await E.default.post(s, c, {
@@ -499,9 +499,9 @@ var E = e(n()),
       } catch (e) {
         l = e;
       }
-      (i = { ...i, nVoteCount: a, bUserUpVoted: !n }),
+      ((i = { ...i, nVoteCount: a, bUserUpVoted: !n }),
         this.m_mapQuestions.set(t, i),
-        this.GetQuestionCallbackList(t).Dispatch(i);
+        this.GetQuestionCallbackList(t).Dispatch(i));
       let u = f(l);
       return (
         console.error(`Could not upload vote`, e, t, n, u.strErrorMsg, u),
@@ -601,7 +601,7 @@ function ye(e) {
     i = w.useCallback(() => {
       r(!0);
       let n = D.Get().LoadSession(e, !1, t);
-      return n.then(() => r(!1)), n;
+      return (n.then(() => r(!1)), n);
     }, [e, t]),
     a = ve(i);
   return (
@@ -961,11 +961,11 @@ function Et(e) {
       t.gidSession,
     r = w.useCallback(
       (e) => {
-        e.stopPropagation(),
+        (e.stopPropagation(),
           e.preventDefault(),
           p((0, Q.jsx)(Ot, { qanda: t }), window, {
             strTitle: g(`#QAndA_CreateQAndA_Title`),
-          });
+          }));
       },
       [t],
     );
@@ -993,12 +993,12 @@ function Dt(e) {
     [i, a] = w.useState(t.strName),
     o = we(),
     c = (e) => {
-      e.stopPropagation(), e.preventDefault(), n || r(!0);
+      (e.stopPropagation(), e.preventDefault(), n || r(!0));
     },
     l = (e) => {
-      e.stopPropagation(),
+      (e.stopPropagation(),
         e.preventDefault(),
-        s(i, t.strName) == 0 ? r(!1) : o(t.gidSession, i).then(() => r(!1));
+        s(i, t.strName) == 0 ? r(!1) : o(t.gidSession, i).then(() => r(!1)));
     },
     u =
       t.strName.length > 0
@@ -1496,7 +1496,7 @@ function It(e) {
               }),
             (0, Q.jsx)(h, {
               onClick: async () => {
-                s(!0), (await n(r)) == 1 && i(``), s(!1);
+                (s(!0), (await n(r)) == 1 && i(``), s(!1));
               },
               disabled: o || !r,
               className: I,

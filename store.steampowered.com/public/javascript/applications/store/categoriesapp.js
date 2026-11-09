@@ -31,7 +31,7 @@ var f = e(t()),
     }
     static s_singleton;
     static Get() {
-      return (e.s_singleton ||= new e()), e.s_singleton;
+      return ((e.s_singleton ||= new e()), e.s_singleton);
     }
     constructor() {
       this.m_rgSections = i(`categories`, `application_config`);

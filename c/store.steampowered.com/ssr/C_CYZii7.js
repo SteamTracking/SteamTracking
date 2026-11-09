@@ -74,7 +74,7 @@ function _(_) {
       className: _.size ? void 0 : _,
       ..._,
     };
-  return _ && (_.viewBox = _(_)), _(_, _);
+  return (_ && (_.viewBox = _(_)), _(_, _));
 }
 function _(_) {
   if (_)
@@ -184,4 +184,3 @@ function _(_) {
     }),
   });
 }
-export { _, _, _ };

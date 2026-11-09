@@ -12,9 +12,8 @@ function _(_) {
       }, _);
     }, [_]),
     _ = (0, _.useCallback)(() => {
-      (_.current &&= (clearTimeout(_.current), null)),
-        _.current && _.current && (_.current.play(), (_.current = !1));
+      ((_.current &&= (clearTimeout(_.current), null)),
+        _.current && _.current && (_.current.play(), (_.current = !1)));
     }, [_]);
-  _(window, `blur`, _), _(window, `focus`, _);
+  (_(window, `blur`, _), _(window, `focus`, _));
 }
-export { _ };

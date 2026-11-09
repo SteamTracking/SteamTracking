@@ -62,7 +62,7 @@ function _(_, _, _, _, _) {
       if (!_) return ``;
       _ = _.replace(_, _);
     }
-  return (_ = _(_, _)), _;
+  return ((_ = _(_, _)), _);
 }
 function _(_, _) {
   let _ = _.match(/%[A-Za-z0-9_:]+%/g);
@@ -119,7 +119,7 @@ var _ = 1209600,
         !this.m_mapAppInfo.has(_))
       ) {
         let _ = new _(_);
-        this.m_mapAppInfo.set(_, _), this.QueueAppInfoRequest(_);
+        (this.m_mapAppInfo.set(_, _), this.QueueAppInfoRequest(_));
       }
       return this.m_mapAppInfo.get(_);
     }
@@ -137,23 +137,23 @@ var _ = 1209600,
     async FlushPendingAppInfo() {
       let _ = this.m_PendingAppInfoResolve,
         _ = Array.from(this.m_setPendingAppInfo);
-      (this.m_PendingAppInfoPromise = void 0),
+      ((this.m_PendingAppInfoPromise = void 0),
         (this.m_PendingAppInfoResolve = void 0),
         this.m_setPendingAppInfo.clear(),
         await this.LoadAppInfoBatch(_),
-        _?.();
+        _?.());
     }
     async LoadAppInfoBatch(_) {
       this.m_cAppInfoRequestsInFlight++;
       let _ = await this.LoadAppInfoBatchFromLocalCache(_);
       if (_.length) {
-        console.log(`Loading batch of App Info from Steam: `, _),
-          await this.m_CMInterface?.WaitUntilLoggedOn();
+        (console.log(`Loading batch of App Info from Steam: `, _),
+          await this.m_CMInterface?.WaitUntilLoggedOn());
         let _ = _.Init(_);
-        for (_.Body().set_language(_(_.LANGUAGE)); _.length > 0; ) {
+        for (_.Body().set_language(_(_.LANGUAGE)); _.length > 0;) {
           let _ = Math.min(50, _.length),
             _ = _.slice(0, _);
-          (_ = _.slice(_)), _.Body().set_appids(_);
+          ((_ = _.slice(_)), _.Body().set_appids(_));
           let _ = await _.GetApps(this.m_CMInterface.GetServiceTransport(), _);
           _.GetEResult() == 1
             ? this.OnGetAppsResponse(_)
@@ -172,20 +172,20 @@ var _ = 1209600,
       let _ = [];
       for (let _ of _.Body().apps()) {
         let _ = this.m_mapAppInfo.get(_.appid());
-        _(_, `Got AppInfo response for unrequested AppID: ${_.appid()}`),
+        (_(_, `Got AppInfo response for unrequested AppID: ${_.appid()}`),
           _ &&
             ((_ = new _(_.appid())),
             _.DeserializeFromMessage(_),
             this.m_mapAppInfo.set(_.appid(), _),
-            _.push(_));
+            _.push(_)));
       }
       this.SaveAppInfoBatchToLocalCache(_);
     }
     OnAppOverviewChange(_) {
       for (let _ of _) {
         let _ = new _(_.appid());
-        _.DeserializeFromAppOverview(_),
-          _.is_initialized && this.m_mapAppInfo.set(_.appid(), _);
+        (_.DeserializeFromAppOverview(_),
+          _.is_initialized && this.m_mapAppInfo.set(_.appid(), _));
       }
     }
     async EnsureAppInfoForAppIDs(_) {
@@ -334,8 +334,8 @@ var _ = 1209600,
       );
     }
   };
-_([_], _.prototype, `OnGetAppsResponse`, null),
-  _([_], _.prototype, `OnRichPresenceLocUpdate`, null);
+(_([_], _.prototype, `OnGetAppsResponse`, null),
+  _([_], _.prototype, `OnRichPresenceLocUpdate`, null));
 var _ = new _(),
   _ = class {
     m_steamid;
@@ -366,10 +366,10 @@ var _ = new _(),
     m_bStatusInitialized = !1;
     m_strProfileURL = void 0;
     constructor(_) {
-      _(this), (this.m_steamid = _);
+      (_(this), (this.m_steamid = _));
     }
     Reset() {
-      (this.m_ePersonaState = 0),
+      ((this.m_ePersonaState = 0),
         (this.m_unGamePlayedAppID = 0),
         (this.m_gameid = `0`),
         (this.m_strGameExtraInfo = ``),
@@ -382,7 +382,7 @@ var _ = new _(),
         (this.m_broadcastAppId = void 0),
         (this.m_broadcastViewerCount = void 0),
         (this.m_strBroadcastTitle = void 0),
-        (this.m_eGamingDeviceType = 0);
+        (this.m_eGamingDeviceType = 0));
     }
     GetAccountID() {
       return this.m_steamid.GetAccountID();
@@ -490,7 +490,7 @@ var _ = new _(),
       let _ = 3600,
         _ = 1e3,
         _ = _.CMInterface.GetServerRTime32() - this.last_seen_online;
-      return (_ *= _ > 86400 ? _ : _ > 2 * _ ? 60 : 15), _;
+      return ((_ *= _ > 86400 ? _ : _ > 2 * _ ? 60 : 15), _);
     }
     GetOfflineStatusTime() {
       if (this.last_seen_online == 0) return _(`#PersonaStateOffline`);
@@ -584,7 +584,7 @@ var _ = new _(),
         : `${_.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
     }
   };
-_([_], _.prototype, `m_bInitialized`, void 0),
+(_([_], _.prototype, `m_bInitialized`, void 0),
   _([_], _.prototype, `m_ePersonaState`, void 0),
   _([_], _.prototype, `m_unGamePlayedAppID`, void 0),
   _([_], _.prototype, `m_gameid`, void 0),
@@ -606,7 +606,7 @@ _([_], _.prototype, `m_bInitialized`, void 0),
   _([_], _.prototype, `m_strBroadcastTitle`, void 0),
   _([_], _.prototype, `m_bCommunityBanned`, void 0),
   _([_], _.prototype, `m_eGamingDeviceType`, void 0),
-  _([_], _.prototype, `m_bNameInitialized`, void 0);
+  _([_], _.prototype, `m_bNameInitialized`, void 0));
 function _(_) {
   let _ = _(),
     _ = _.useContext(_);
@@ -654,4 +654,3 @@ function _(_, _) {
     _
   );
 }
-export { _, _ };

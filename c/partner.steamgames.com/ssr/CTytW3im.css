@@ -775,7 +775,7 @@ dialog.DK6ZM4ZPGig-::backdrop {
 }
 .sGkRxGkTHqc- {
   background: radial-gradient(
-    201.11% 137.71% at .9% -3.76%,
+    201.11% 137.71% at 0.9% -3.76%,
     #343941 0%,
     #0e141b 40%
   );
@@ -1457,9 +1457,7 @@ button.N-Eqy7AbP-c-.DialogButton:enabled:active:hover:before {
 .JGinsRI6fVY-.ohHCFrSM444- {
   margin-inline: calc(-1 * var(--field-negative-horizontal-margin));
   padding-inline-start: calc(
-    var(--field-negative-horizontal-margin) +
-    var(--indent-level) *
-    20px
+    var(--field-negative-horizontal-margin) + var(--indent-level) * 20px
   );
   padding-inline-end: var(--field-negative-horizontal-margin);
 }
@@ -1471,10 +1469,7 @@ button.N-Eqy7AbP-c-.DialogButton:enabled:active:hover:before {
 .JGinsRI6fVY-.ohHCFrSM444-.aqb4PS607UM- {
   --field-row-children-spacing: 8px;
   margin-inline-start: calc(
-    -1 *
-    var(--field-negative-horizontal-margin) +
-    var(--indent-level) *
-    30px
+    -1 * var(--field-negative-horizontal-margin) + var(--indent-level) * 30px
   );
   padding: 10px 0;
 }
@@ -2137,15 +2132,13 @@ button.v2f7TrOeULg- svg {
 .ztBonIB1v-s- {
   --inverse-normalized-value: calc(1 - var(--normalized-slider-value));
   --inverse-normalized-default-value: calc(
-    1 -
-    var(--normalized-slider-default-value)
+    1 - var(--normalized-slider-default-value)
   );
 }
 .ztBonIB1v-s-:dir(rtl) {
   --inverse-normalized-value: calc(-1 * (1 - var(--normalized-slider-value)));
   --inverse-normalized-default-value: calc(
-    -1 *
-    (1 - var(--normalized-slider-default-value))
+    -1 * (1 - var(--normalized-slider-default-value))
   );
 }
 .ztBonIB1v-s- {
@@ -2182,16 +2175,15 @@ button.v2f7TrOeULg- svg {
   content: "";
   --normalized-fill-start: calc(
     (100%) *
-    min(var(--normalized-slider-value), var(--normalized-slider-origin))
+      min(var(--normalized-slider-value), var(--normalized-slider-origin))
   );
   --normalized-fill-end: calc(
     (100% - var(--slider-extra-notch-padding) * 2) *
-    max(var(--normalized-slider-value), var(--normalized-slider-origin)) +
-    var(--slider-extra-notch-padding)
+      max(var(--normalized-slider-value), var(--normalized-slider-origin)) +
+      var(--slider-extra-notch-padding)
   );
   --normalized-width-handle: calc(
-    var(--normalized-fill-end) -
-    var(--normalized-fill-start)
+    var(--normalized-fill-end) - var(--normalized-fill-start)
   );
   inset-inline-start: var(--normalized-fill-start);
   inset-inline-end: 0;
@@ -2204,19 +2196,15 @@ button.v2f7TrOeULg- svg {
 }
 .kc-023pqDxk- .zjf8C25Bc80-:before {
   --signed-normalized-slider-default-value: calc(
-    2 *
-    var(--normalized-slider-default-value) -
-    1
+    2 * var(--normalized-slider-default-value) - 1
   );
   --gradient-split-pct: calc(
-    100% *
-    var(--normalized-slider-default-value) /
-    var(--normalized-slider-value) -
-    (
-      var(--slider-handle-width) *
-      0.5 *
-      var(--signed-normalized-slider-default-value)
-    )
+    100% * var(--normalized-slider-default-value) /
+      var(--normalized-slider-value) -
+      (
+        var(--slider-handle-width) * 0.5 *
+          var(--signed-normalized-slider-default-value)
+      )
   );
 }
 .ZJdohSd-ZVM- .zjf8C25Bc80-:before {
@@ -2250,10 +2238,8 @@ button.v2f7TrOeULg- svg {
   transform: translateX(
     calc(
       (-100% + var(--slider-extra-notch-padding) * 2) *
-      var(--inverse-normalized-value) +
-      var(--slider-handle-width) *
-      var(--inverse-normalized-value) -
-      var(--slider-extra-notch-padding)
+        var(--inverse-normalized-value) + var(--slider-handle-width) *
+        var(--inverse-normalized-value) - var(--slider-extra-notch-padding)
     )
   );
   margin: auto 0;
@@ -2585,10 +2571,8 @@ button.v2f7TrOeULg- svg {
   width: 100%;
   transform: translateX(
     calc(
-      -100% *
-      var(--inverse-normalized-default-value) +
-      var(--slider-handle-width) *
-      var(--inverse-normalized-default-value)
+      -100% * var(--inverse-normalized-default-value) +
+        var(--slider-handle-width) * var(--inverse-normalized-default-value)
     )
   );
   margin: auto 0;

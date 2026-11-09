@@ -27,8 +27,8 @@ function _(_, _) {
       });
       if (_.GetEResult() != 1)
         throw (
-          (_.DEBUG_LogToConsole(),
-          new _(_.GetEResult(), `Failed to load equipped profile items`))
+          _.DEBUG_LogToConsole(),
+          new _(_.GetEResult(), `Failed to load equipped profile items`)
         );
       return _.Body().toObject();
     },
@@ -45,7 +45,7 @@ function _(_) {
     _ = _[_];
   return (0, _.jsx)(`img`, {
     onError: (_) => {
-      _((_) => _ + 1), _?.(_, _, _);
+      (_((_) => _ + 1), _?.(_, _, _));
     },
     alt: _,
     ..._,
@@ -406,4 +406,3 @@ function _(_) {
         children: _,
       });
 }
-export { _, _, _, _, _, _, _, _, _, _ };

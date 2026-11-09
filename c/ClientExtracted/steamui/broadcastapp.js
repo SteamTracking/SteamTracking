@@ -4,10 +4,10 @@
     [7653],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
-        __webpack_require__._(module_exports),
+        (__webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
             default: () => _,
-          });
+          }));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -29,7 +29,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         const _ = ({ group: _, onClick: _ }) => {
           const _ = _.watching_broadcast_steamid;
@@ -86,13 +86,13 @@
               broadcastChannelID: _,
               broadcastTabId: _,
             } = this.props;
-            this.Close(),
+            (this.Close(),
               _
                 ? _.SetChatRoomGroupWatchingBroadcast(void 0, _)
-                : _.SetChatRoomGroupWatchingBroadcast(_);
+                : _.SetChatRoomGroupWatchingBroadcast(_));
             const _ = _._.UIStore.ShowAndOrActivateChatRoomGroup(_, _, !0);
-            _ && _._.UIStore.CloseTabByID(_),
-              this.props.bIsNewSteamTVDialog || _.ShowBroadcast();
+            (_ && _._.UIStore.CloseTabByID(_),
+              this.props.bIsNewSteamTVDialog || _.ShowBroadcast());
           }
           Close() {
             const { closeModal: _ } = this.props;
@@ -184,8 +184,8 @@
             });
           }
         }
-        _([_._], _.prototype, "WatchAlone", 1),
-          _([_._], _.prototype, "Close", 1);
+        (_([_._], _.prototype, "WatchAlone", 1),
+          _([_._], _.prototype, "Close", 1));
         function _(_, _, _, _) {
           (0, _._)(
             (0, _.jsx)(_._, {
@@ -237,7 +237,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         const _ = 2500;
         var _ = ((_) => (
@@ -256,7 +256,7 @@
           m_steamID = void 0;
           m_reactRoot;
           Init(_) {
-            (this.m_fnLaunchChat = _),
+            ((this.m_fnLaunchChat = _),
               (this.m_steamID = _._.steamid),
               window.addEventListener("message", this.HandlePostMessage),
               (this.m_reactRoot = _.createRoot(
@@ -269,14 +269,14 @@
               ),
               (this.m_iTimeoutLogin = window.setTimeout(() => {
                 this.m_eLogonState == 0 && (this.m_eLogonState = 1);
-              }, _));
+              }, _)));
           }
           LaunchChat() {
-            this.m_reactRoot.unmount(),
+            (this.m_reactRoot.unmount(),
               window.removeEventListener("message", this.HandlePostMessage),
               window.clearTimeout(this.m_iTimeoutLogin),
               (0, _._)(_._.steamid),
-              this.m_fnLaunchChat();
+              this.m_fnLaunchChat());
           }
           GetLoginURL() {
             return `${_._.STORE_BASE_URL}login/?steamtv`;
@@ -306,8 +306,8 @@
             let _ = _.data;
             if (_) {
               if (_.msg == "OnLoginButtonClicked")
-                console.log("Login button clicked"),
-                  (window.location.href = _());
+                (console.log("Login button clicked"),
+                  (window.location.href = _()));
               else if (_.command == "LoginNeeded") this.m_eLogonState = 2;
               else if (_.command == "LogonComplete") {
                 this.LaunchChat();
@@ -316,21 +316,21 @@
             }
           }
         }
-        _([_._], _.prototype, "m_eLogonState", 2),
+        (_([_._], _.prototype, "m_eLogonState", 2),
           _([_._], _.prototype, "m_steamID", 2),
           _([_._], _.prototype, "LaunchChat", 1),
-          _([_._.bound], _.prototype, "HandlePostMessage", 1);
+          _([_._.bound], _.prototype, "HandlePostMessage", 1));
         let _ = class extends _.Component {
           m_broadcastInfo = null;
           constructor(_) {
-            super(_),
+            (super(_),
               (this.m_broadcastInfo = _.BroadcastWatchStore.StartInfo(
                 this.props.app.GetSteamIDWatched(),
               )),
               (this.state = {
                 bChatCollapsed: !1,
                 bTheaterMode: !1,
-              });
+              }));
           }
           componentWillUnmount() {
             this.m_broadcastInfo &&
@@ -411,9 +411,9 @@
             });
           }
         };
-        _([_._], _.prototype, "ToggleChat", 1),
+        (_([_._], _.prototype, "ToggleChat", 1),
           _([_._], _.prototype, "ToggleTheaterMode", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         function _() {
           const _ = (0, _._)("loyalty_webapi_token", "application_config");
           return new _._(_._.WEBAPI_BASE_URL, _);
@@ -483,10 +483,10 @@
             let _ = this.props.broadcastView
               .GetSteamID()
               .ConvertTo64BitString();
-            (this.m_broadcastInfo = _.BroadcastWatchStore.StartInfo(_)),
+            ((this.m_broadcastInfo = _.BroadcastWatchStore.StartInfo(_)),
               (this.state = {
                 bChatCollapsed: !1,
-              });
+              }));
           }
           componentWillUnmount() {
             this.m_broadcastInfo &&
@@ -561,20 +561,20 @@
             });
           }
         };
-        _([_._], _.prototype, "OnWatchWithFriends", 1),
+        (_([_._], _.prototype, "OnWatchWithFriends", 1),
           _([_._], _.prototype, "ToggleChat", 1),
           _([_._], _.prototype, "ToggleTheaterMode", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         let _ = class extends _.Component {
           m_strLocalSteamID = "";
           m_refBroadcastContainer = _.createRef();
           m_elMainContent;
           constructor(_) {
-            super(_),
+            (super(_),
               (0, _._)(this),
               (this.state = {
                 info: null,
-              });
+              }));
           }
           componentDidMount() {
             _._.stream["76561198208088121"] && _._.LANGUAGE === "chinese"
@@ -621,22 +621,22 @@
                 _.height = `${_}%`;
               }
             } else
-              (_.width = _ ? `${_}%` : "66%"),
+              ((_.width = _ ? `${_}%` : "66%"),
                 (_.minWidth = _ ? `${_}%` : "66%"),
                 (_.maxWidth = "calc( 100% - 316px )"),
-                (_.overflowY = "auto");
+                (_.overflowY = "auto"));
             return _;
           }
           OnGrabberMouseDown(_) {
             let _ = _.currentTarget.ownerDocument.defaultView;
-            _.addEventListener("mousemove", this.HandleMouseMove),
+            (_.addEventListener("mousemove", this.HandleMouseMove),
               _.addEventListener("mouseup", this.UnregisterDragEvents),
               this.setState({
                 bDraggingChatGrabber: !0,
-              });
+              }));
           }
           HandleMouseMove(_) {
-            _.preventDefault(), _.stopPropagation();
+            (_.preventDefault(), _.stopPropagation());
             let _ =
                 this.m_refBroadcastContainer.current.getBoundingClientRect(),
               _ =
@@ -652,11 +652,11 @@
             _._.SetUIDisplayPref(_, _);
           }
           UnregisterDragEvents(_) {
-            _.view.removeEventListener("mousemove", this.HandleMouseMove),
+            (_.view.removeEventListener("mousemove", this.HandleMouseMove),
               _.view.removeEventListener("mouseup", this.UnregisterDragEvents),
               this.setState({
                 bDraggingChatGrabber: !1,
-              });
+              }));
           }
           render() {
             let { steamID: _, children: _ } = this.props,
@@ -664,11 +664,11 @@
               _ = this.state.info.m_bIsOnline,
               _ = null;
             const _ = this.CalculateBroadcastSectionStyles(!1);
-            (_.flexGrow = this.props.bHideChat ? 1 : null),
+            ((_.flexGrow = this.props.bHideChat ? 1 : null),
               _._.bValid &&
                 (_ = (0, _.jsx)(_, {
                   info: _._,
-                }));
+                })));
             const _ = (0, _.jsx)("div", {
                 className: "LoginDiv",
                 children: (0, _.jsx)("a", {
@@ -746,13 +746,13 @@
             });
           }
         };
-        _([_._], _.prototype, "m_strLocalSteamID", 2),
+        (_([_._], _.prototype, "m_strLocalSteamID", 2),
           _([_._], _.prototype, "OnLocalStreamChange", 1),
           _([_._], _.prototype, "SetMainContentRef", 1),
           _([_._], _.prototype, "OnGrabberMouseDown", 1),
           _([_._], _.prototype, "HandleMouseMove", 1),
           _([_._], _.prototype, "UnregisterDragEvents", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         function _(_) {
           let _ = `url( "${_._.CHAT_BASE_URL + _.info.offlineImage}" )`;
           return (0, _.jsx)("div", {
@@ -775,7 +775,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         let _ = class extends _.Component {
           render() {
@@ -795,10 +795,10 @@
         _ = _([_._], _);
       },
       chunkid: (module, module_exports, __webpack_require__) => {
-        __webpack_require__._(module_exports),
+        (__webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
             default: () => _,
-          });
+          }));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),

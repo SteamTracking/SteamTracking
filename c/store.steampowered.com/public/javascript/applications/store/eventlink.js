@@ -63,7 +63,7 @@ function _(_, _) {
     case `hardwarepreview`:
       return !1;
     default:
-      return _(!1, `Unknown route specified for link: ` + _), !1;
+      return (_(!1, `Unknown route specified for link: ` + _), !1);
   }
 }
 function _(_) {
@@ -202,7 +202,7 @@ function _(_, _, _, _) {
     case `usernewshub`:
       return `${_}${_()}/`;
     default:
-      return _(!1, `Unknown route specified for link`), ``;
+      return (_(!1, `Unknown route specified for link`), ``);
   }
 }
 function _(_, _, _) {
@@ -275,4 +275,3 @@ function _(_) {
         })
     : null;
 }
-export { _, _, _, _, _, _, _, _, _, _, _ };

@@ -94,12 +94,12 @@
       },
       1135: (Oe, Ne, p) => {
         "use strict";
-        p.r(Ne),
+        (p.r(Ne),
           p.d(Ne, {
             ClientBoundsCenterPos2: () => Ae,
             VirtualKeyboard: () => Qt,
             useAnnounceOnFocus: () => ge,
-          });
+          }));
         var l = p(62540),
           oe = p(25538),
           lt = p(88794),
@@ -188,20 +188,20 @@
             h = t.type;
           switch (h) {
             case "Emoticon_t":
-              (C["data-key-handler"] = "emoticon"),
-                (d = (0, l.jsx)(ne.kS, { emoticon: t.item, large: !0 }));
+              ((C["data-key-handler"] = "emoticon"),
+                (d = (0, l.jsx)(ne.kS, { emoticon: t.item, large: !0 })));
               break;
             case "Sticker_t":
-              (C["data-key-handler"] = "sticker"),
-                (d = (0, l.jsx)(ne.eE, { sticker: t.item }));
+              ((C["data-key-handler"] = "sticker"),
+                (d = (0, l.jsx)(ne.eE, { sticker: t.item })));
               break;
             case "Effect_t":
-              (C["data-key-handler"] = "roomeffect"),
+              ((C["data-key-handler"] = "roomeffect"),
                 (d = (0, l.jsx)(ne.P6, {
                   className: n().Effect,
                   effect: t.item,
                   roomEffectSettings: vt.B,
-                }));
+                })));
               break;
           }
           let k = i ? n().Touched : void 0;
@@ -403,93 +403,93 @@
               i--
             )
               (r = e[i]) && (s = (a ? r(t, o, s) : r(s)) || s);
-            return a && s && Ue(t, o, s), s;
+            return (a && s && Ue(t, o, s), s);
           },
           _ = (e, t, o) => jt(e, typeof t != "symbol" ? t + "" : t, o);
         const we = new Lt.wd("VirtualKeyboard"),
           Dt = {
-            \u3131: "\u1100",
-            \u3132: "\u1101",
-            \u3134: "\u1102",
-            \u3165: "\u1114",
-            \u3166: "\u1115",
-            \u3167: "\u115B",
-            \u3135: "\u115C",
-            \u3136: "\u115D",
-            \u3137: "\u1103",
-            \u3138: "\u1104",
-            \u3139: "\u1105",
-            \u313A: "\uA964",
-            \u316A: "\uA966",
-            \u313B: "\uA968",
-            \u313C: "\uA969",
-            \u313D: "\uA96C",
-            \u3140: "\u111A",
-            \u3141: "\u1106",
-            \u316E: "\u111C",
-            \u316F: "\uA971",
-            \u3171: "\u111D",
-            \u3142: "\u1107",
-            \u3172: "\u111E",
-            \u3173: "\u1120",
-            \u3143: "\u1108",
-            \u3144: "\u1121",
-            \u3174: "\u1122",
-            \u3175: "\u1123",
-            \u3176: "\u1127",
-            \u3177: "\u1129",
-            \u3178: "\u112B",
-            \u3179: "\u112C",
-            \u3145: "\u1109",
-            \u317A: "\u112D",
-            \u317B: "\u112E",
-            \u317C: "\u112F",
-            \u317D: "\u1132",
-            \u3146: "\u110A",
-            \u317E: "\u1136",
-            \u317F: "\u1140",
-            \u3147: "\u110B",
-            \u3180: "\u1147",
-            \u3181: "\u114C",
-            \u3148: "\u110C",
-            \u3149: "\u110D",
-            \u314A: "\u110E",
-            \u314B: "\u110F",
-            \u314C: "\u1110",
-            \u314D: "\u1111",
-            \u3184: "\u1157",
-            \u314E: "\u1112",
-            \u3185: "\u1158",
-            \u3186: "\u1159",
-            \u314F: "\u1161",
-            \u3150: "\u1162",
-            \u3151: "\u1163",
-            \u3152: "\u1164",
-            \u3153: "\u1165",
-            \u3154: "\u1166",
-            \u3155: "\u1167",
-            \u3156: "\u1168",
-            \u3157: "\u1169",
-            \u3158: "\u116A",
-            \u3159: "\u116B",
-            \u315A: "\u116C",
-            \u315B: "\u116D",
-            \u3187: "\u1184",
-            \u3188: "\u1185",
-            \u3189: "\u1188",
-            \u315C: "\u116E",
-            \u315D: "\u116F",
-            \u315E: "\u1170",
-            \u315F: "\u1171",
-            \u3160: "\u1172",
-            \u318A: "\u1191",
-            \u318B: "\u1192",
-            \u318C: "\u1194",
-            \u3161: "\u1173",
-            \u3162: "\u1174",
-            \u3163: "\u1175",
-            \u318D: "\u119E",
-            \u318E: "\u11A1",
+            ㄱ: "\u1100",
+            ㄲ: "\u1101",
+            ㄴ: "\u1102",
+            ㅥ: "\u1114",
+            ㅦ: "\u1115",
+            ㅧ: "\u115B",
+            ㄵ: "\u115C",
+            ㄶ: "\u115D",
+            ㄷ: "\u1103",
+            ㄸ: "\u1104",
+            ㄹ: "\u1105",
+            ㄺ: "\uA964",
+            ㅪ: "\uA966",
+            ㄻ: "\uA968",
+            ㄼ: "\uA969",
+            ㄽ: "\uA96C",
+            ㅀ: "\u111A",
+            ㅁ: "\u1106",
+            ㅮ: "\u111C",
+            ㅯ: "\uA971",
+            ㅱ: "\u111D",
+            ㅂ: "\u1107",
+            ㅲ: "\u111E",
+            ㅳ: "\u1120",
+            ㅃ: "\u1108",
+            ㅄ: "\u1121",
+            ㅴ: "\u1122",
+            ㅵ: "\u1123",
+            ㅶ: "\u1127",
+            ㅷ: "\u1129",
+            ㅸ: "\u112B",
+            ㅹ: "\u112C",
+            ㅅ: "\u1109",
+            ㅺ: "\u112D",
+            ㅻ: "\u112E",
+            ㅼ: "\u112F",
+            ㅽ: "\u1132",
+            ㅆ: "\u110A",
+            ㅾ: "\u1136",
+            ㅿ: "\u1140",
+            ㅇ: "\u110B",
+            ㆀ: "\u1147",
+            ㆁ: "\u114C",
+            ㅈ: "\u110C",
+            ㅉ: "\u110D",
+            ㅊ: "\u110E",
+            ㅋ: "\u110F",
+            ㅌ: "\u1110",
+            ㅍ: "\u1111",
+            ㆄ: "\u1157",
+            ㅎ: "\u1112",
+            ㆅ: "\u1158",
+            ㆆ: "\u1159",
+            ㅏ: "\u1161",
+            ㅐ: "\u1162",
+            ㅑ: "\u1163",
+            ㅒ: "\u1164",
+            ㅓ: "\u1165",
+            ㅔ: "\u1166",
+            ㅕ: "\u1167",
+            ㅖ: "\u1168",
+            ㅗ: "\u1169",
+            ㅘ: "\u116A",
+            ㅙ: "\u116B",
+            ㅚ: "\u116C",
+            ㅛ: "\u116D",
+            ㆇ: "\u1184",
+            ㆈ: "\u1185",
+            ㆉ: "\u1188",
+            ㅜ: "\u116E",
+            ㅝ: "\u116F",
+            ㅞ: "\u1170",
+            ㅟ: "\u1171",
+            ㅠ: "\u1172",
+            ㆊ: "\u1191",
+            ㆋ: "\u1192",
+            ㆌ: "\u1194",
+            ㅡ: "\u1173",
+            ㅢ: "\u1174",
+            ㅣ: "\u1175",
+            ㆍ: "\u119E",
+            ㆎ: "\u11A1",
           },
           Pt = (e) => {
             const {
@@ -497,11 +497,11 @@
               onForwardKeyEvent: o,
               onDeleteSurroundingText: a,
             } = e;
-            return (0, q.u7)(t, o, a), null;
+            return ((0, q.u7)(t, o, a), null);
           },
           Ft = (e) => {
             const { layout: t } = e;
-            return (0, q.mQ)(t), null;
+            return ((0, q.mQ)(t), null);
           },
           Bt = (e) => {
             const {
@@ -793,13 +793,13 @@
             } = ge(t, C, g),
             w = K.useCallback(
               (E) => {
-                E.stopPropagation(), h(E);
+                (E.stopPropagation(), h(E));
               },
               [h],
             ),
             L = K.useCallback(
               (E) => {
-                E.stopPropagation(), k(E);
+                (E.stopPropagation(), k(E));
               },
               [k],
             );
@@ -972,7 +972,7 @@
           let d = [],
             h = [];
           for (let E = Z.C.Light; E <= Z.C.Dark; E++)
-            d.push(Le(t, E)), h.push(E);
+            (d.push(Le(t, E)), h.push(E));
           let k = Le(t, Z.C.Default);
           i
             ? (d.unshift(k), h.unshift(Z.C.Default))
@@ -1057,7 +1057,7 @@
             h = i,
             k = K.useCallback(
               (L) => {
-                d(L), r(h, !0);
+                (d(L), r(h, !0));
               },
               [h, d, r],
             ),
@@ -1123,7 +1123,7 @@
                 const H = e.rgLongPress[E].holdTarget;
                 let O = Ae(H),
                   F = Ae(H.ownerDocument.body);
-                (B = O.x < F.x),
+                ((B = O.x < F.x),
                   (A = (0, l.jsx)(zt, {
                     emoji: S,
                     emojiIndex: h.index,
@@ -1135,7 +1135,7 @@
                     onKeyFocus: e.onKeyFocus,
                     onKeyHover: e.onKeyHover,
                     children: e.fnRenderExtendedRowTouchpad(E),
-                  }));
+                  })));
               }
               return (0, l.jsx)(
                 $t,
@@ -1259,14 +1259,14 @@
             if (this.m_emojiCategories) return;
             this.m_emojiCategories = [];
             let t = [];
-            t.push(e.FullEmojiList.findIndex((s) => s.key === "\u{1F600}")),
+            (t.push(e.FullEmojiList.findIndex((s) => s.key === "\u{1F600}")),
               t.push(e.FullEmojiList.findIndex((s) => s.key === "\u{1F486}")),
               t.push(e.FullEmojiList.findIndex((s) => s.key === "\u{1F435}")),
               t.push(e.FullEmojiList.findIndex((s) => s.key === "\u{1F347}")),
               t.push(e.FullEmojiList.findIndex((s) => s.key === "\u{1F30D}")),
               t.push(e.FullEmojiList.findIndex((s) => s.key === "\u{1F453}")),
               t.push(e.FullEmojiList.findIndex((s) => s.key === "\u{1F48B}")),
-              t.push(e.FullEmojiList.findIndex((s) => s.key === "\u{1F3C1}"));
+              t.push(e.FullEmojiList.findIndex((s) => s.key === "\u{1F3C1}")));
             const o = [
               "People",
               "Activity",
@@ -1285,17 +1285,17 @@
             });
             let a = Math.ceil(e.GetMaxRecentEmoji() / u.s_numEmojiRows);
             for (let s = 0; s < t.length; s++)
-              this.m_emojiCategories.push({
+              (this.m_emojiCategories.push({
                 key: o[s],
                 startIndex: t[s],
                 startColumn: a,
                 categoryIndex: s + 1,
               }),
                 s < t.length - 1 &&
-                  (a += Math.ceil((t[s + 1] - t[s]) / u.s_numEmojiRows));
+                  (a += Math.ceil((t[s + 1] - t[s]) / u.s_numEmojiRows)));
           }
           WithEmojiStore(e) {
-            this.InitEmojiCategories(G._), e(G._);
+            (this.InitEmojiCategories(G._), e(G._));
           }
           m_keyboardDiv = null;
           m_keyboardNavRef = K.createRef();
@@ -1311,7 +1311,7 @@
           m_mapTouched = new Set();
           m_trackpadHover = (0, Tt.Jc)(!1);
           constructor(e) {
-            super(e),
+            (super(e),
               (this.state = {
                 toggleStates: {
                   Shift: 0,
@@ -1335,7 +1335,7 @@
                 bRightTrackpadDown: !1,
                 bShowLayoutName: !1,
                 screenReaderElement: "",
-              });
+              }));
           }
           AnnounceToScreenReader(e) {
             e != this.state.screenReaderElement &&
@@ -1344,15 +1344,15 @@
           }
           m_timerShowLayoutName;
           SetLayoutNameTimeout() {
-            this.m_timerShowLayoutName &&
+            (this.m_timerShowLayoutName &&
               clearTimeout(this.m_timerShowLayoutName),
               (this.m_timerShowLayoutName = window.setTimeout(() => {
-                (this.m_timerShowLayoutName = 0),
-                  this.setState({ bShowLayoutName: !1 });
-              }, 2e3));
+                ((this.m_timerShowLayoutName = 0),
+                  this.setState({ bShowLayoutName: !1 }));
+              }, 2e3)));
           }
           OnLayoutChanged(e) {
-            setTimeout(
+            (setTimeout(
               () =>
                 this.props.VirtualKeyboardManager.RestoreVirtualKeyboardForLastActiveElement(),
               1,
@@ -1362,7 +1362,7 @@
               this.setState({
                 standardLayout: (0, b.r_)(),
                 bShowLayoutName: !0,
-              });
+              }));
           }
           TypeKey(e) {
             for (
@@ -1441,11 +1441,11 @@
                   let h = u.s_rgSteamItemCategories.indexOf(d);
                   this.WithEmojiStore((k) => {
                     if (h != -1)
-                      (h += this.m_emojiCategories.length),
+                      ((h += this.m_emojiCategories.length),
                         this.setState({
                           layoutState: 3,
                           curEmojiCategoryIndex: h,
-                        });
+                        }));
                     else {
                       const T = this.m_emojiCategories.find(
                         ({ key: S }) => S === d,
@@ -1482,7 +1482,7 @@
                   let h = parseInt(r);
                   G._.AddEmojiTint(d, h);
                 }
-                t.length === 1 &&
+                (t.length === 1 &&
                   (V(this.state.toggleStates.Shift) ||
                     V(this.state.toggleStates.CapsLock)) &&
                   !c &&
@@ -1542,7 +1542,7 @@
                                     k,
                                     T,
                                   );
-                              })(t, V(this.state.toggleStates.Shift));
+                              })(t, V(this.state.toggleStates.Shift)));
               }
               this.setState((d, h) => ({
                 ...d,
@@ -1584,8 +1584,8 @@
                 );
           }
           OnCommitText(e) {
-            (e = e.replace(/./g, (t) => Dt[t] || t)),
-              this.props.VirtualKeyboardManager.HandleVirtualKeyDown(e, !1);
+            ((e = e.replace(/./g, (t) => Dt[t] || t)),
+              this.props.VirtualKeyboardManager.HandleVirtualKeyDown(e, !1));
           }
           OnActiveElementChangedOrClicked(e) {
             this.context && this.context.reset();
@@ -1599,11 +1599,11 @@
                 );
                 break;
               case "sticker":
-                lt.LN.TrackStickerUsage(e, Date.now() / 1e3),
+                (lt.LN.TrackStickerUsage(e, Date.now() / 1e3),
                   this.props.VirtualKeyboardManager.HandleVirtualKeyDown(
                     `/sticker ${e}\r`,
                     V(this.state.toggleStates.Shift),
-                  );
+                  ));
                 break;
               case "roomeffect":
                 this.props.VirtualKeyboardManager.HandleVirtualKeyDown(
@@ -1629,7 +1629,7 @@
                   t.hasAttribute("data-emoji-index") &&
                   G._.FullEmojiList[C].nNumTints != 0,
                 d = this.LongPressSlot(c);
-              d.holdTarget &&
+              (d.holdTarget &&
                 (this.TypeKey(d.holdTarget),
                 this.CancelLongPressTimer(c),
                 this.DismissLongPress(c),
@@ -1639,7 +1639,7 @@
                     t.addEventListener("mouseleave", this.OnKeyMouseLeave))
                   : this.TypeKey(t),
                 e.stopPropagation(),
-                e.preventDefault();
+                e.preventDefault());
             }
           }
           KeyUp(e) {
@@ -1667,9 +1667,9 @@
                 e.stopPropagation(),
                 e.preventDefault());
             }
-            this.CancelLongPressTimer(o),
+            (this.CancelLongPressTimer(o),
               this.DismissLongPress(o),
-              this.ClearHoldTarget(o);
+              this.ClearHoldTarget(o));
           }
           OnMouseDown(e) {
             this.KeyDown(e);
@@ -1706,33 +1706,36 @@
                       if (c >= a) {
                         s = 0;
                         let f = this.m_emojiCategories[s];
-                        this.setState({
+                        (this.setState({
                           layoutState: 2,
                           curEmojiCategoryIndex: s,
                         }),
                           this.OnSelectEmojiCategory(f),
-                          (i = f.key);
+                          (i = f.key));
                       } else
-                        this.setState({
+                        (this.setState({
                           layoutState: 3,
                           curEmojiCategoryIndex: s,
                         }),
-                          (i = u.s_rgSteamItemCategories[c]);
+                          (i = u.s_rgSteamItemCategories[c]));
                   }
                   break;
                 case 2:
                   if (s < 0 && !this.props.bStandalone)
-                    (s = o + a - 1),
+                    ((s = o + a - 1),
                       this.setState({
                         layoutState: 3,
                         curEmojiCategoryIndex: s,
                       }),
-                      (i = u.s_rgSteamItemCategories[a - 1]);
+                      (i = u.s_rgSteamItemCategories[a - 1]));
                   else if (s < o && s >= 0) {
                     let c = this.m_emojiCategories[s];
-                    this.setState({ layoutState: 2, curEmojiCategoryIndex: s }),
+                    (this.setState({
+                      layoutState: 2,
+                      curEmojiCategoryIndex: s,
+                    }),
                       this.OnSelectEmojiCategory(c),
-                      (i = c.key);
+                      (i = c.key));
                   }
                   break;
               }
@@ -1748,25 +1751,25 @@
             switch (e) {
               case m.pR.LPAD_CLICK:
               case m.pR.TRIGGER_LEFT:
-                (o = this.getElementFromPointWorkaround(
+                ((o = this.getElementFromPointWorkaround(
                   this.m_leftTrackpad.x,
                   this.m_leftTrackpad.y,
                   m.Vz.LPAD,
                 )),
                   this.setState({ bLeftTrackpadDown: t }),
                   (a = m.Vz.LPAD),
-                  this.OnTrackpadHover(this.m_leftTrackpad.lastElement, o);
+                  this.OnTrackpadHover(this.m_leftTrackpad.lastElement, o));
                 break;
               case m.pR.RPAD_CLICK:
               case m.pR.TRIGGER_RIGHT:
-                (o = this.getElementFromPointWorkaround(
+                ((o = this.getElementFromPointWorkaround(
                   this.m_rightTrackpad.x,
                   this.m_rightTrackpad.y,
                   m.Vz.RPAD,
                 )),
                   this.setState({ bRightTrackpadDown: t }),
                   (a = m.Vz.RPAD),
-                  this.OnTrackpadHover(this.m_rightTrackpad.lastElement, o);
+                  this.OnTrackpadHover(this.m_rightTrackpad.lastElement, o));
                 break;
             }
             o &&
@@ -1805,8 +1808,8 @@
                 break;
               case m.pR.SECONDARY:
                 if (e.detail.source == m.Vz.KEYBOARD_SIMULATOR) return;
-                this.DispatchEventByDataKey("Backspace", !0),
-                  this.StartBackspaceTimer();
+                (this.DispatchEventByDataKey("Backspace", !0),
+                  this.StartBackspaceTimer());
                 break;
               case m.pR.DIR_UP:
               case m.pR.DIR_DOWN:
@@ -1814,19 +1817,19 @@
               case m.pR.DIR_RIGHT:
                 break;
               case m.pR.BUMPER_LEFT:
-                this.TypeKeyInternal({ strKey: "IME_LUT_Up" }),
-                  this.OnSelectSiblingEmojiCategory(-1);
+                (this.TypeKeyInternal({ strKey: "IME_LUT_Up" }),
+                  this.OnSelectSiblingEmojiCategory(-1));
                 break;
               case m.pR.BUMPER_RIGHT:
-                this.TypeKeyInternal({ strKey: "IME_LUT_Down" }),
-                  this.OnSelectSiblingEmojiCategory(1);
+                (this.TypeKeyInternal({ strKey: "IME_LUT_Down" }),
+                  this.OnSelectSiblingEmojiCategory(1));
                 break;
               case m.pR.START:
                 this.RotateWindowPosition();
                 break;
               case m.pR.SELECT:
-                this.props.VirtualKeyboardManager.SendChatRadialMenuMsg(),
-                  e.stopPropagation();
+                (this.props.VirtualKeyboardManager.SendChatRadialMenuMsg(),
+                  e.stopPropagation());
                 break;
             }
           }
@@ -1865,9 +1868,9 @@
                 }));
                 break;
               case m.pR.SECONDARY:
-                this.DispatchEventByDataKey("Backspace", !1),
+                (this.DispatchEventByDataKey("Backspace", !1),
                   this.CancelBackpaceTimer(),
-                  this.DismissBackpaceTimer();
+                  this.DismissBackpaceTimer());
                 break;
               case m.pR.OPTIONS:
                 this.DispatchEventByDataKey(" ", !1);
@@ -1915,7 +1918,7 @@
                 a = parseFloat(o.getAttribute("data-key-row") || ""),
                 s = parseFloat(o.getAttribute("data-key-col") || ""),
                 r = o.getAttribute("data-key") == "Backspace";
-              (t.longPressRow = a),
+              ((t.longPressRow = a),
                 (t.longPressCol = s),
                 (t.bSentKey = r),
                 !r &&
@@ -1924,7 +1927,7 @@
                 this.CommitLongPressState(),
                 r &&
                   (this.StartLongPressTimer(t.holdTarget, e, !0),
-                  this.TypeKey(o));
+                  this.TypeKey(o)));
             }
           }
           DismissLongPress(e) {
@@ -1932,20 +1935,22 @@
               o =
                 (t.longPressRow !== null || t.longPressCol !== null) &&
                 !t.bSentKey;
-            (t.longPressRow = null), (t.longPressCol = null), (t.bSentKey = !1);
+            ((t.longPressRow = null),
+              (t.longPressCol = null),
+              (t.bSentKey = !1));
             let a = null;
-            o &&
+            (o &&
               (--this.m_nOpenExtendedRows === 0
                 ? (a = () => this.m_keyboardNavRef.current.PopState())
                 : (a = () => {
-                    this.m_keyboardNavRef.current.PopState(),
-                      this.m_keyboardNavRef.current.PushState();
+                    (this.m_keyboardNavRef.current.PopState(),
+                      this.m_keyboardNavRef.current.PushState());
                   })),
-              this.CommitLongPressState(a);
+              this.CommitLongPressState(a));
           }
           StartLongPressTimer(e, t, o = !1) {
             const a = this.LongPressSlot(t);
-            a.nTimer && window.clearTimeout(a.nTimer),
+            (a.nTimer && window.clearTimeout(a.nTimer),
               (a.nTimer = window.setTimeout(
                 () => {
                   this.LongPressTimerExpired(t);
@@ -1953,7 +1958,7 @@
                 o ? u.s_longPressRepeatThreshold : u.s_longPressThreshold,
               )),
               (a.holdTarget = e),
-              this.CommitLongPressState();
+              this.CommitLongPressState());
           }
           StartBackspaceTimer(e = !1) {
             const t = this.m_nBackspaceTimer;
@@ -1967,40 +1972,40 @@
             this.m_nBackspaceTimer = o;
           }
           BackspaceTimeExpired() {
-            this.StartBackspaceTimer(!0),
+            (this.StartBackspaceTimer(!0),
               this.TypeKeyInternal({ strKey: "Backspace" }),
-              this.SetBackspaceButtonSentKey(!0);
+              this.SetBackspaceButtonSentKey(!0));
           }
           DismissBackpaceTimer() {
             this.SetBackspaceButtonSentKey(!1);
           }
           SetBackspaceButtonSentKey(e) {
-            (this.LongPressSlot(m.Vz.GAMEPAD).bSentKey = e),
-              this.CommitLongPressState();
+            ((this.LongPressSlot(m.Vz.GAMEPAD).bSentKey = e),
+              this.CommitLongPressState());
           }
           CancelBackpaceTimer() {
             const e = this.m_nBackspaceTimer;
-            e && clearTimeout(e),
+            (e && clearTimeout(e),
               this.SetBackspaceButtonSentKey(!1),
-              (this.m_nBackspaceTimer = null);
+              (this.m_nBackspaceTimer = null));
           }
           OnKeyMouseLeave(e) {
-            this.CancelLongPressTimer(m.Vz.MOUSE),
-              this.ClearHoldTarget(m.Vz.MOUSE);
+            (this.CancelLongPressTimer(m.Vz.MOUSE),
+              this.ClearHoldTarget(m.Vz.MOUSE));
           }
           ClearHoldTarget(e) {
             const t = this.LongPressSlot(e);
-            t.holdTarget &&
+            (t.holdTarget &&
               t.holdTarget.removeEventListener(
                 "mouseleave",
                 this.OnKeyMouseLeave,
               ),
               (t.holdTarget = null),
-              this.CommitLongPressState();
+              this.CommitLongPressState());
           }
           CancelLongPressTimer(e) {
             const t = this.LongPressSlot(e);
-            t.nTimer && clearTimeout(t.nTimer), (t.nTimer = null);
+            (t.nTimer && clearTimeout(t.nTimer), (t.nTimer = null));
           }
           ToggleStatesUpdate(e, t, o) {
             const a = {};
@@ -2044,10 +2049,10 @@
                     w !== null &&
                     (i = parseFloat(T?.getAttribute("data-key-col") || ""));
                 }
-                s[g] === void 0 && (s[g] = []),
+                (s[g] === void 0 && (s[g] = []),
                   s[g][d] || (s[g][d] = 0),
                   ++s[g][d],
-                  ++a;
+                  ++a);
                 const h = C.getAttribute("data-key");
                 if (h == null) continue;
                 const k = u.s_keyToggleData[h];
@@ -2086,18 +2091,18 @@
             const a = this.LongPressSlot(m.Vz.TOUCH);
             if (a.holdTarget) {
               const s = a.holdTarget;
-              this.TypeKey(s),
+              (this.TypeKey(s),
                 this.CancelLongPressTimer(m.Vz.TOUCH),
                 this.DismissLongPress(m.Vz.TOUCH),
                 this.ClearHoldTarget(m.Vz.TOUCH),
-                this.m_mapTouched.delete(s);
+                this.m_mapTouched.delete(s));
             }
             for (let s = 0; s < e.changedTouches.length; ++s) {
               const r = e.changedTouches[s].target;
               (0, W.kD)(r) && this.m_mapTouched.add(r);
             }
-            (0, ye.rf)() || Ce.eZ.PlayNavSound(Ce.PN.Typing, !0),
-              this.UpdateTouchState(t, e.touches);
+            ((0, ye.rf)() || Ce.eZ.PlayNavSound(Ce.PN.Typing, !0),
+              this.UpdateTouchState(t, e.touches));
           }
           HandleTouchMove(e) {
             const t = this.LongPressSlot(m.Vz.TOUCH);
@@ -2107,7 +2112,7 @@
               if (!o) return;
               this.UpdateTouchState(o, e.touches);
             }
-            e.preventDefault(), e.stopPropagation();
+            (e.preventDefault(), e.stopPropagation());
           }
           IsCharacterFromActiveExtendedMenu(e) {
             const t = e.hasAttribute("parent-row")
@@ -2145,16 +2150,16 @@
                 }
                 this.m_mapTouched.delete(s);
               }
-              this.CancelLongPressTimer(m.Vz.TOUCH),
+              (this.CancelLongPressTimer(m.Vz.TOUCH),
                 this.DismissLongPress(m.Vz.TOUCH),
                 this.ClearHoldTarget(m.Vz.TOUCH),
                 this.UpdateTouchState(t, e.touches),
                 e.preventDefault(),
-                e.stopPropagation();
+                e.stopPropagation());
             }
           }
           HandleTouchCancel(e) {
-            e.preventDefault(), e.stopPropagation();
+            (e.preventDefault(), e.stopPropagation());
           }
           ElementFromTouch(e, t) {
             const o = e.elementsFromPoint(t.clientX, t.clientY);
@@ -2189,7 +2194,7 @@
                 for (let g = 0; g < e; ++g) {
                   let d = s.startIndex + g,
                     h = 0;
-                  for (; d < C; ) {
+                  for (; d < C;) {
                     const k = c ? o[d] : d,
                       T = h + s.startColumn;
                     let S = {
@@ -2199,7 +2204,7 @@
                       row: g,
                       column: T,
                     };
-                    t[g].push(S), (d += e), h++, (r = Math.max(h, r));
+                    (t[g].push(S), (d += e), h++, (r = Math.max(h, r)));
                   }
                   for (; h < r; ++h) t[g].push(void 0);
                 }
@@ -2250,14 +2255,14 @@
               (this.m_resizeObserver = null));
           }
           SetKeyboardDiv(e) {
-            this.StopResizeListening(),
+            (this.StopResizeListening(),
               (this.m_keyboardDiv = e),
               this.m_keyboardDiv &&
                 ((this.m_resizeObserver =
                   new this.m_keyboardDiv.ownerDocument.defaultView.ResizeObserver(
                     this.UpdateWindowSize,
                   )),
-                this.m_resizeObserver.observe(this.m_keyboardDiv));
+                this.m_resizeObserver.observe(this.m_keyboardDiv)));
           }
           UpdateWindowSize() {
             if (this.m_keyboardDiv) {
@@ -2419,7 +2424,7 @@
             let J = null;
             if (F?.length == 1 && F !== " ") {
               let y = F;
-              v instanceof Object &&
+              (v instanceof Object &&
                 v.extended_keys !== void 0 &&
                 (y = v.extended_keys),
                 a instanceof Array &&
@@ -2431,7 +2436,7 @@
                       a.length > 3 && (y += L(a[3])))),
                 (y += u.s_rgExtendedKeys[F] ?? ""),
                 (J = y.split("").filter((it, yo, go) => go.indexOf(it) === yo)),
-                ce || (J = J.reverse());
+                ce || (J = J.reverse()));
             }
             const je =
                 v instanceof Object && v.dead
@@ -2491,11 +2496,11 @@
               "data-key-col": s,
               "data-keycode": i || 0,
             };
-            J && (ue["data-extended-chars"] = 1),
+            (J && (ue["data-extended-chars"] = 1),
               H && (ue["data-key-shifted"] = 1),
               de && (ue["data-dead-key-next"] = de),
               te && (ue["data-dead-key-combined"] = te),
-              uo && (ue["data-key-is-literal"] = 1);
+              uo && (ue["data-key-is-literal"] = 1));
             let ho = this.GetKeyClassNameForTheme(v, e, s),
               mo = (0, R.A)(n().KeyboardKey, ie, ro, io, lo, je, no, ho),
               rt;
@@ -2755,7 +2760,7 @@
               he.oy.WindowStore.BHasStandaloneKeyboard()
             ) {
               const s = (0, Ee.DH)(this.m_keyboardDiv);
-              (e *= s), (t *= s);
+              ((e *= s), (t *= s));
             }
             for (const s of a.document.elementsFromPoint(e, t))
               if (!this.BInForeignExtendedRow(s, o))
@@ -2793,11 +2798,11 @@
                   this.OnTrackpadHover(void 0, e.lastElement);
               }
             } else
-              this.OnTrackpadHover(e.lastElement, void 0),
-                (e.lastElement = void 0);
+              (this.OnTrackpadHover(e.lastElement, void 0),
+                (e.lastElement = void 0));
           }
           OnLeftTrackpadAnalog(e, t, o, a) {
-            this.OnTrackpadAnalogInternal(
+            (this.OnTrackpadAnalogInternal(
               this.m_leftTrackpad,
               be.ek,
               e,
@@ -2806,10 +2811,10 @@
               a,
             ),
               this.state.bLeftTrackpadActive != e &&
-                this.setState({ bLeftTrackpadActive: e });
+                this.setState({ bLeftTrackpadActive: e }));
           }
           OnRightTrackpadAnalog(e, t, o, a) {
-            this.OnTrackpadAnalogInternal(
+            (this.OnTrackpadAnalogInternal(
               this.m_rightTrackpad,
               be.SN,
               e,
@@ -2818,7 +2823,7 @@
               a,
             ),
               this.state.bRightTrackpadActive != e &&
-                this.setState({ bRightTrackpadActive: e });
+                this.setState({ bRightTrackpadActive: e }));
           }
           RenderNumericKeyboard() {
             const e = { key: "ArrowLeft", label: N.KaratLeft, type: b.dI.Meta },
@@ -2969,30 +2974,30 @@
             this.setState({ watchdogTimer: e });
           }
           ClearControllerInputWatchdogTimer() {
-            window.clearInterval(this.state.watchdogTimer),
-              this.setState({ watchdogTimer: null });
+            (window.clearInterval(this.state.watchdogTimer),
+              this.setState({ watchdogTimer: null }));
           }
           componentDidUpdate() {
             this.m_trackpadHover.Set(this.BHasTrackpadHover());
           }
           componentDidMount() {
-            z.O.GetKeyboardLayoutSettings().selectedLayouts.length != 1 &&
+            (z.O.GetKeyboardLayoutSettings().selectedLayouts.length != 1 &&
               (this.SetLayoutNameTimeout(),
               this.setState({ bShowLayoutName: !0 })),
               this.m_trackpadInput.EnableAnalogInputMessages(!0),
-              this.StartControllerInputWatchdogTimer();
+              this.StartControllerInputWatchdogTimer());
           }
           componentWillUnmount() {
-            this.StopResizeListening(),
+            (this.StopResizeListening(),
               this.CancelBackpaceTimer(),
-              this.DismissBackpaceTimer();
+              this.DismissBackpaceTimer());
             for (const e of [m.Vz.GAMEPAD, m.Vz.LPAD, m.Vz.RPAD])
-              this.CancelLongPressTimer(e),
+              (this.CancelLongPressTimer(e),
                 this.DismissLongPress(e),
-                this.ClearHoldTarget(e);
-            this.m_trackpadInput.EnableAnalogInputMessages(!1),
+                this.ClearHoldTarget(e));
+            (this.m_trackpadInput.EnableAnalogInputMessages(!1),
               this.m_trackpadInput.Destroy(),
-              this.ClearControllerInputWatchdogTimer();
+              this.ClearControllerInputWatchdogTimer());
           }
           render() {
             switch (this.state.layoutState) {
@@ -3006,7 +3011,7 @@
             }
           }
         };
-        _(u, "contextType", q.E3),
+        (_(u, "contextType", q.E3),
           _(u, "s_keyCapTypeData", {
             [b.dI.Character]: [
               n().KeyboardCharacterKey,
@@ -3195,7 +3200,7 @@
           I([x.oI], u.prototype, "getElementFromPointWorkaround", 1),
           I([x.oI], u.prototype, "OnLeftTrackpadAnalog", 1),
           I([x.oI], u.prototype, "OnRightTrackpadAnalog", 1),
-          (u = I([ut.PA], u));
+          (u = I([ut.PA], u)));
         function Jt(e) {
           const {
               nRow: t,
@@ -3237,13 +3242,13 @@
           }, [r, P]);
           const J = K.useCallback(
               (de, te) => {
-                F(te), P(de, te);
+                (F(te), P(de, te));
               },
               [P],
             ),
             je = K.useCallback(
               (de, te) => {
-                se(te), B(de, te);
+                (se(te), B(de, te));
               },
               [B],
             ),
@@ -3393,9 +3398,9 @@
           const h = K.useRef(void 0),
             k = K.useRef(void 0),
             T = K.useCallback(() => {
-              c.current && ((c.current = void 0), o(!1, 0, 0)),
+              (c.current && ((c.current = void 0), o(!1, 0, 0)),
                 (C.current = !1),
-                r({ active: !1, trackpadX: 0, trackpadY: 0 });
+                r({ active: !1, trackpadX: 0, trackpadY: 0 }));
             }, [o, c]),
             S = K.useCallback((D) => {
               s.current = D;
@@ -3415,9 +3420,9 @@
                         F = s.current.getBoundingClientRect(),
                         ae = F.left + F.width * H,
                         se = F.top + F.height * O;
-                      g.current.fnCallback(!0, ae, se, v),
+                      (g.current.fnCallback(!0, ae, se, v),
                         c.current !== void 0 && window.clearTimeout(c.current),
-                        (c.current = window.setTimeout(T, 100));
+                        (c.current = window.setTimeout(T, 100)));
                     }
                     f.current &&
                       (f.current.style.translate = at(P, B, d.current));
@@ -3443,8 +3448,8 @@
                 const H = A.requestAnimationFrame(() => {
                   k.current = void 0;
                   const O = h.current;
-                  (h.current = void 0),
-                    O && w(O.button, O.controller_index, O.x, O.y);
+                  ((h.current = void 0),
+                    O && w(O.button, O.controller_index, O.x, O.y));
                 });
                 k.current = { ownerWindow: A, nFrame: H };
               },
@@ -3453,8 +3458,8 @@
           if (
             (K.useEffect(
               () => () => {
-                k.current?.ownerWindow.cancelAnimationFrame(k.current.nFrame),
-                  (k.current = void 0);
+                (k.current?.ownerWindow.cancelAnimationFrame(k.current.nFrame),
+                  (k.current = void 0));
               },
               [],
             ),

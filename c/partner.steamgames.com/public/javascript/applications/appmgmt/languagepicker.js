@@ -68,7 +68,7 @@ var _ = _(_()),
         let _ = _ && _(_.eLang),
           _ = _ && _(_.eLang),
           _ = _.sLocName;
-        _ &&
+        (_ &&
           _ !== 0 &&
           ((_ += ` `),
           (_ += _(
@@ -94,7 +94,7 @@ var _ = _(_()),
               },
               `langpicker` + _.eLang + (_ ? `_hasdata` : ``),
             ),
-          );
+          ));
       }
       return _;
     }
@@ -117,7 +117,7 @@ var _ = _(_()),
       });
     }
   };
-_([_], _.prototype, `OnLanguageChange`, null), (_ = _([_], _));
+(_([_], _.prototype, `OnLanguageChange`, null), (_ = _([_], _)));
 function _(_) {
   let [_, _] = _(() => [
     _.Get().GetHasLocalizationContext(),
@@ -150,4 +150,3 @@ function _(_) {
     (0, _.jsx)(_.Fragment, {})
   );
 }
-export { _, _, _ };

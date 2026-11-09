@@ -3,7 +3,7 @@
 /* Third-party software licenses can be found at licenses.txt */
 import { tn as e } from "./mobx.esm.js";
 var t = e((e) => {
-  (e.byteLength = c), (e.toByteArray = u), (e.fromByteArray = p);
+  ((e.byteLength = c), (e.toByteArray = u), (e.fromByteArray = p));
   for (
     var t = [],
       n = [],
@@ -14,8 +14,8 @@ var t = e((e) => {
     a < o;
     ++a
   )
-    (t[a] = i[a]), (n[i.charCodeAt(a)] = a);
-  (n[45] = 62), (n[95] = 63);
+    ((t[a] = i[a]), (n[i.charCodeAt(a)] = a));
+  ((n[45] = 62), (n[95] = 63));
   function s(e) {
     var t = e.length;
     if (t % 4 > 0)
@@ -47,14 +47,14 @@ var t = e((e) => {
       f < d;
       f += 4
     )
-      (t =
+      ((t =
         (n[e.charCodeAt(f)] << 18) |
         (n[e.charCodeAt(f + 1)] << 12) |
         (n[e.charCodeAt(f + 2)] << 6) |
         n[e.charCodeAt(f + 3)]),
         (c[u++] = (t >> 16) & 255),
         (c[u++] = (t >> 8) & 255),
-        (c[u++] = t & 255);
+        (c[u++] = t & 255));
     return (
       o === 2 &&
         ((t = (n[e.charCodeAt(f)] << 2) | (n[e.charCodeAt(f + 1)] >> 4)),
@@ -74,11 +74,11 @@ var t = e((e) => {
   }
   function f(e, t, n) {
     for (var r, i = [], a = t; a < n; a += 3)
-      (r =
+      ((r =
         ((e[a] << 16) & 16711680) +
         ((e[a + 1] << 8) & 65280) +
         (e[a + 2] & 255)),
-        i.push(d(r));
+        i.push(d(r)));
     return i.join(``);
   }
   function p(e) {

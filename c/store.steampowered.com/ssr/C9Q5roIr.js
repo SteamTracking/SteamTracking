@@ -2,9 +2,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.appids || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -27,7 +27,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -48,14 +48,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivateAppList`;
@@ -64,9 +64,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.appids || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -94,7 +94,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -115,14 +115,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivateApps_ToggleAppPrivacy_Request`;
@@ -131,7 +131,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -156,12 +156,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivateApps_ToggleAppPrivacy_Response`;
@@ -170,7 +170,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -195,12 +195,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivateApps_GetPrivateAppList_Request`;
@@ -209,9 +209,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.private_apps || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -230,7 +230,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -251,14 +251,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivateApps_GetPrivateAppList_Response`;
@@ -267,9 +267,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.private_apps || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -288,7 +288,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -309,14 +309,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivateApsClient_NotifyPrivateAppListChanged_Notification`;
@@ -363,10 +363,10 @@ async function _(_, _) {
     let _ = Error(
       `WritePrivateAppsToLocalCache failed with result ${_?.result}, ${_?.message}`,
     );
-    _().ReportError(_, {
+    (_().ReportError(_, {
       bIncludeMessageInIdentifier: !0,
     }),
-      console.warn(_);
+      console.warn(_));
   }
 }
 var _ = [`AccountPrivateApps`];
@@ -422,7 +422,7 @@ function _() {
 }
 async function _(_, _, _) {
   let _ = _.Init(_);
-  _.Body().set_appids(_.slice()), _.Body().set_private(_);
+  (_.Body().set_appids(_.slice()), _.Body().set_private(_));
   let _ = await _.ToggleAppPrivacy(_, _);
   if (!_.BSuccess()) throw _.GetErrorMessage();
 }
@@ -446,13 +446,13 @@ async function _(_, _, _) {
     let _ = _.Init(_);
     _.Body().set_line_item_id(_);
     let _ = await _.RemoveItemFromCart(_, _);
-    return _(), _.Body().toObject();
+    return (_(), _.Body().toObject());
   }
   {
     let _ = _.Init(_);
-    _.Body().set_gidlineitems([_]), _.Body().set_gidshoppingcart(_.gid);
+    (_.Body().set_gidlineitems([_]), _.Body().set_gidshoppingcart(_.gid));
     let _ = await _.RemoveLineItems(_, _);
-    return _(), _.Body().toObject();
+    return (_(), _.Body().toObject());
   }
 }
 function _(_) {
@@ -1066,7 +1066,7 @@ function _(_, _) {
       _ = !1;
     _?.cart_items?.forEach((_) => {
       let _ = !!_.gift_info?.accountid_giftee;
-      _.errors && (_ = !0),
+      (_.errors && (_ = !0),
         _.errors?.duplicate_appids_in_cart?.length &&
           _(1, _.Localize(`#Cart_Error_DuplicateApps_FootNote`)),
         _.errors?.owned_appids?.length &&
@@ -1096,7 +1096,7 @@ function _(_, _) {
         _.warnings?.appids_in_mastersub?.length &&
           _(4, _.Localize(`#Cart_Error_MasterSubscription_FootNote`)),
         _.warnings?.price_has_changed &&
-          _.set(10, _.Localize(`#Cart_Warning_PriceChange_FootNote`));
+          _.set(10, _.Localize(`#Cart_Warning_PriceChange_FootNote`)));
     });
     let _ = Array.from(_.values());
     return (
@@ -1112,11 +1112,11 @@ function _(_, _) {
 async function _(_, _, _, _, _, _) {
   if (_(_)) {
     let _ = _.Init(_);
-    _.Body().set_line_item_id(_),
+    (_.Body().set_line_item_id(_),
       _.Body().set_user_country(_.country_code),
       _ && _.Body().set_gift_info(_.fromObject(_)),
       _ && _.Body().set_flags(_.fromObject(_)),
-      _ && _.Body().set_apply_gidcoupon(_);
+      _ && _.Body().set_apply_gidcoupon(_));
     let _ = await _.ModifyLineItem(_, _);
     return (
       _.BSuccess() ||
@@ -1126,7 +1126,7 @@ async function _(_, _, _, _, _, _) {
   }
   {
     let _ = _.Init(_);
-    _.Body().set_gidlineitem(_),
+    (_.Body().set_gidlineitem(_),
       _.Body().set_gidshoppingcart(_.gid),
       _
         ? _.Body().set_gift_info(_.fromObject(_))
@@ -1136,7 +1136,7 @@ async function _(_, _, _, _, _, _) {
               accountid_giftee: 0,
               email_giftee: ``,
             }),
-          );
+          ));
     let _ = await _.ModifyLineItem(_, _);
     return (
       _.BSuccess() ||
@@ -1705,8 +1705,8 @@ function _(_) {
   let _ = _.recurrence_info;
   if (!_) return null;
   let _ = `#Package`;
-  _.billing_agreement_type === 2 && (_ = `#GameBillingPackage`),
-    _.formatted_final_price && _.discount_pct && (_ += `WithDiscount`);
+  (_.billing_agreement_type === 2 && (_ = `#GameBillingPackage`),
+    _.formatted_final_price && _.discount_pct && (_ += `WithDiscount`));
   let _ = _[_.renewal_time_unit],
     _ = _ + `CostIncludesSubscriptionBy` + _;
   return (0, _.jsx)(_, {
@@ -1785,8 +1785,8 @@ function _(_) {
                   },
                   giftInfo: _ ? _.gift_info : void 0,
                 });
-            _ === `private` ? _(!1) : _ === `gift` && _(!1),
-              _.data === `private` ? _(!0) : _.data === `gift` && _(!0);
+            (_ === `private` ? _(!1) : _ === `gift` && _(!1),
+              _.data === `private` ? _(!0) : _.data === `gift` && _(!0));
           },
           selectedValue: _.find((_) => _.data === _) ?? null,
           options: _,
@@ -1877,4 +1877,3 @@ function _(_) {
     ],
   });
 }
-export { _, _, _, _, _, _, _, _, _ };

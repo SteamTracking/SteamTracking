@@ -394,9 +394,9 @@ function _(_) {
 var _ = 100;
 async function _(_, _) {
   let _ = new URLSearchParams();
-  _.set(`event_gids`, [...new Set(_)].sort().join(`,`)),
+  (_.set(`event_gids`, [...new Set(_)].sort().join(`,`)),
     _.set(`lang_list`, _(_)),
-    _.set(`origin`, location.origin);
+    _.set(`origin`, location.origin));
   let _ =
       _.STORE_BASE_URL + `events/ajaxgetbatchedpartnerevent/?` + _.toString(),
     _ = await fetch(_);
@@ -677,7 +677,7 @@ var _ = _((_) => {
       strLinkButtonClasses: _,
       bSmallButton: _,
     } = _(_);
-    _ &&
+    (_ &&
       (_ =
         _ && _
           ? (0, _.jsx)(_, {
@@ -703,7 +703,7 @@ var _ = _((_) => {
         url: _,
         bFocusable: !_,
         children: _,
-      }));
+      })));
   }
   return (0, _.jsxs)(`div`, {
     className: _(
@@ -989,15 +989,15 @@ async function _(_, _, _, _) {
   let _ = _.Init(_);
   for (let _ of _.rgSections) {
     let _ = _.Body().add_sections();
-    _.set_sort(_.eSort),
+    (_.set_sort(_.eSort),
       _.set_min_items(_.nMinItems),
       _.set_randomize(_.bRandomize),
       _.set_include_packages(!!_.bIncludePackages),
       _.set_include_bundles(!!_.bIncludeBundles),
       _.set_include_dlc(_.bIncludeDLC),
-      _.set_min_discount_percent(_.nMinDiscountPercent);
+      _.set_min_discount_percent(_.nMinDiscountPercent));
   }
-  _.Body().set_context(_(_)),
+  (_.Body().set_context(_(_)),
     _.Body().set_filters(_(_.storePageFilter, !1)),
     _.strStoreFilterJSON &&
       _.Body()
@@ -1008,7 +1008,7 @@ async function _(_, _, _, _) {
       _.Body()
         .filters(!0)
         .add_store_filters()
-        .set_filter_json(_.strTabStoreFilterJSON);
+        .set_filter_json(_.strTabStoreFilterJSON));
   let _ = await _.GetItemsByUserRecommendedTags(_, _);
   if (_.GetEResult() != 1)
     throw Error(`GetItemsByUserRecommendedTags failed: ${_.GetEResult()}`);
@@ -2257,7 +2257,7 @@ function _(_, _, _) {
   }, [_, _, _, _, _, _, _]);
 }
 function _(_) {
-  return _(_.event, _.section), null;
+  return (_(_.event, _.section), null);
 }
 function _(_, _) {
   return _ == null || _ == null || !_(_)
@@ -2598,13 +2598,13 @@ function _(_, _) {
   {
     let _ = _.single_item_style ? _.single_item_style : _,
       _;
-    `overrideNavigation` in _ &&
+    (`overrideNavigation` in _ &&
       (_ = (_) => (
         _.overrideNavigation(_),
         _ && (_.preventDefault(), _.stopPropagation()),
         !1
       )),
-      _() && (_ == `library` || _ == `animated`) && (_ = `bordered`);
+      _() && (_ == `library` || _ == `animated`) && (_ = `bordered`));
     let _ = _({
       [_]: !_ && _ == `bordered`,
       [_]: _ && _ == `bordered`,
@@ -2756,7 +2756,7 @@ function _(_, _, _, _, _, _, _, _, _, _) {
   else {
     let _ = _(_),
       _ = !0;
-    if (_) (_ = _), (_ = _);
+    if (_) ((_ = _), (_ = _));
     else if (_ == 0 && _ > 0) {
       let _ = 0,
         _ = 0;
@@ -2784,7 +2784,7 @@ function _(_, _, _, _, _, _, _, _, _, _) {
             };
           _ = Math.max(_ === `tall` ? 3 : 2, _);
         }
-        _.push(
+        (_.push(
           (0, _.jsx)(
             _,
             {
@@ -2795,11 +2795,11 @@ function _(_, _, _, _, _, _, _, _, _, _) {
             `Row_` + _,
           ),
         ),
-          (_ += _);
+          (_ += _));
       }
       if (_ || (_ >= _.length && _.length === 0)) break;
       let _ = _.length || void 0;
-      _.push(
+      (_.push(
         (0, _.jsx)(
           `div`,
           {
@@ -2812,7 +2812,7 @@ function _(_, _, _, _, _, _, _, _, _, _) {
           `Page_${_}`,
         ),
       ),
-        (_ = []);
+        (_ = []));
     }
     _.length == 0
       ? ((_ = _.length > _),
@@ -2897,10 +2897,10 @@ var _ = (_) => {
     _ = null;
   if (_ > 0) {
     let _ = Math.floor((_ + 1) / 2);
-    (_ = []), (_ = []);
+    ((_ = []), (_ = []));
     for (let _ = 0; _ < _; _++)
-      _.push((0, _.jsx)(`div`, {}, `front_` + _)),
-        _.push((0, _.jsx)(`div`, {}, `back_` + _));
+      (_.push((0, _.jsx)(`div`, {}, `front_` + _)),
+        _.push((0, _.jsx)(`div`, {}, `back_` + _)));
   }
   return (0, _.jsxs)(`div`, {
     className: _(
@@ -3091,7 +3091,7 @@ function _(_) {
     },
     _ = _(_, _.nShowAdditionalRows),
     _ = _(_(_, _), _, _.capsules?.length ?? 0);
-  return _ < _ && _(_) && (_.nShowAdditionalRows -= _ - _), _;
+  return (_ < _ && _(_) && (_.nShowAdditionalRows -= _ - _), _);
 }
 var _ = `NQebVMQULto-`;
 function _(_) {
@@ -3278,72 +3278,3 @@ function _(_) {
     }),
   });
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

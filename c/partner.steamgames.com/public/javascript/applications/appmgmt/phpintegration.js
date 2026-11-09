@@ -76,14 +76,14 @@ function _(_) {
   return (
     _.useEffect(() => {
       let _ = `[data-featuretarget=${_}]`;
-      (_.current = []), (_.current = 0);
+      ((_.current = []), (_.current = 0));
       let _ = (_) =>
           _.current.push({
             key: _.current++,
             elem: _,
           }),
         _ = (_) => _(_.current, (_) => _.elem == _);
-      document.querySelectorAll(_).forEach(_), _.current.length && _();
+      (document.querySelectorAll(_).forEach(_), _.current.length && _());
       let _ = new MutationObserver((_) => {
         let _ = !1;
         for (let _ of _)
@@ -91,12 +91,12 @@ function _(_) {
             _,
             (_) => {
               _(_, _).forEach((_) => {
-                _(_), (_ = !0);
+                (_(_), (_ = !0));
               });
             },
             (_) => {
               _(_, _).forEach((_) => {
-                _(_), (_ = !0);
+                (_(_), (_ = !0));
               });
             },
           );
@@ -181,4 +181,3 @@ function _(_, _) {
 function _(_, _) {
   return _.matches(_) ? [_] : _.querySelectorAll(_);
 }
-export { _ };

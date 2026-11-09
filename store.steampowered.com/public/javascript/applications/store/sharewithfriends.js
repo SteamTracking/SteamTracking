@@ -76,12 +76,12 @@ var I = e(t()),
     m_mapMatchByKey = new Map();
     containerRef = I.createRef();
     constructor(e) {
-      super(e),
+      (super(e),
         (this.m_hMobxSearchDisposer = o(async () => {
-          await this.UpdateSearchResults(this.props.strSearch),
-            this.forceUpdate();
+          (await this.UpdateSearchResults(this.props.strSearch),
+            this.forceUpdate());
         })),
-        (this.state = { selectedIndex: void 0 });
+        (this.state = { selectedIndex: void 0 }));
     }
     OnKeyDown(e) {
       this.BHandleKeyPress(e.keyCode) && e.preventDefault();
@@ -112,7 +112,8 @@ var I = e(t()),
             this.ChooseSuggestion(
               this.m_rgCurrentMatches[this.state.selectedIndex],
             );
-          else return this.props.onSuggestionSelected(this.props.strSearch), !1;
+          else
+            return (this.props.onSuggestionSelected(this.props.strSearch), !1);
           break;
         case 27:
           this.props.onSuggestionSelected(this.props.strSearch);
@@ -147,10 +148,10 @@ var I = e(t()),
     SetSelectedIndex(e) {
       if (!this.m_rgCurrentMatches.length) return;
       let t = this.m_rgCurrentMatches.length;
-      t > this.getMaxMatches() && (t = this.getMaxMatches()),
+      (t > this.getMaxMatches() && (t = this.getMaxMatches()),
         (e %= t),
         e < 0 && (e += t),
-        this.setState({ selectedIndex: e });
+        this.setState({ selectedIndex: e }));
     }
     FindKeyIndex(e) {
       if (!this.m_mapMatchByKey.size && this.m_rgCurrentMatches.length)
@@ -178,7 +179,7 @@ var I = e(t()),
         n.scrollIntoView();
     }
     async UpdateSearchResults(e) {
-      (this.m_rgCurrentMatches = await this.performSearch(e)),
+      ((this.m_rgCurrentMatches = await this.performSearch(e)),
         (this.m_strLastSearch = e),
         this.m_mapMatchByKey.clear(),
         this.m_rgCurrentMatches.length
@@ -191,7 +192,7 @@ var I = e(t()),
               this.setState({ selectedIndex: 0 })
           : this.state &&
             this.state.selectedIndex !== void 0 &&
-            this.setState({ selectedIndex: void 0 });
+            this.setState({ selectedIndex: void 0 }));
     }
     m_hMobxSearchDisposer;
     componentWillUnmount() {
@@ -248,10 +249,10 @@ var I = e(t()),
       });
     }
   };
-D([A], z.prototype, `OnKeyDown`, null),
+(D([A], z.prototype, `OnKeyDown`, null),
   D([A], z.prototype, `OnClickSuggestion`, null),
   D([A], z.prototype, `OnMouseOverSuggestion`, null),
-  D([A], z.prototype, `BindSelectedElement`, null);
+  D([A], z.prototype, `BindSelectedElement`, null));
 var B = class extends I.PureComponent {
   containerRef = I.createRef();
   OnMouseOver(e) {
@@ -270,7 +271,8 @@ var B = class extends I.PureComponent {
     });
   }
 };
-D([A], B.prototype, `OnMouseOver`, null), D([A], B.prototype, `OnClick`, null);
+(D([A], B.prototype, `OnMouseOver`, null),
+  D([A], B.prototype, `OnClick`, null));
 var Ae = `ARyrUoFBJKQ-`,
   je = class extends z {
     performSearch(e) {
@@ -370,11 +372,11 @@ var Ae = `ARyrUoFBJKQ-`,
     m_iMentionSearchStartOffset;
     m_iMentionSearchCancelledOffset;
     constructor(e) {
-      super(e),
+      (super(e),
         (this.state = {
           mentionSearch: void 0,
           activeSuggestSearchType: void 0,
-        });
+        }));
     }
     BindMentionDialog(e) {
       this.m_MentionDialog = e ?? void 0;
@@ -411,13 +413,13 @@ var Ae = `ARyrUoFBJKQ-`,
         a !== void 0)
       ) {
         let e = i.substr(0, a);
-        (e += t), (r >= i.length || i[r] != ` `) && (e += ` `);
+        ((e += t), (r >= i.length || i[r] != ` `) && (e += ` `));
         let o = e.length;
-        (e += i.substr(r)),
+        ((e += i.substr(r)),
           (n.value = e),
           (n.selectionStart = n.selectionEnd = o),
           this.props.fnSetText(e),
-          this.FocusTextInput();
+          this.FocusTextInput());
       }
     }
     OnFocus(e) {
@@ -430,12 +432,12 @@ var Ae = `ARyrUoFBJKQ-`,
       this.UpdateAutoSearchState();
     }
     ClearMentionSearchState() {
-      (this.m_iMentionSearchStartOffset = void 0),
+      ((this.m_iMentionSearchStartOffset = void 0),
         this.state.activeSuggestSearchType &&
           this.setState({
             activeSuggestSearchType: void 0,
             mentionSearch: void 0,
-          });
+          }));
     }
     OnEmoticonSuggestionSelected(e, t) {
       t
@@ -501,8 +503,8 @@ var Ae = `ARyrUoFBJKQ-`,
         return;
       }
       let a = n.substr(r + 1, t - r - 1);
-      (this.m_iMentionSearchStartOffset = r),
-        this.setState({ activeSuggestSearchType: i, mentionSearch: a });
+      ((this.m_iMentionSearchStartOffset = r),
+        this.setState({ activeSuggestSearchType: i, mentionSearch: a }));
     }
     GetTextAreaRef() {
       return this.descTextAreaRef;
@@ -553,7 +555,7 @@ var Ae = `ARyrUoFBJKQ-`,
       });
     }
   };
-D([A], V.prototype, `BindMentionDialog`, null),
+(D([A], V.prototype, `BindMentionDialog`, null),
   D([A], V.prototype, `OnKeyDown`, null),
   D([A], V.prototype, `OnFocus`, null),
   D([A], V.prototype, `OnKeyPress`, null),
@@ -562,7 +564,7 @@ D([A], V.prototype, `BindMentionDialog`, null),
   D([A], V.prototype, `OnBBCodeSuggestionSelected`, null),
   D([A], V.prototype, `FocusTextInput`, null),
   D([A], V.prototype, `GetTextAreaRef`, null),
-  D([A], V.prototype, `GetTextAreaCurrent`, null);
+  D([A], V.prototype, `GetTextAreaCurrent`, null));
 var Pe = `nIUbxO5p4A8-`,
   Fe = `_0VP7ctGOadU-`,
   Ie = `siVkCB-BeMc-`,
@@ -660,7 +662,7 @@ var Pe = `nIUbxO5p4A8-`,
                   thumb_url: o,
                   uploaded_time: Date.now() / 1e3,
                 };
-              l(s), a(s);
+              (l(s), a(s));
             }
           }
         } finally {
@@ -673,7 +675,7 @@ var Pe = `nIUbxO5p4A8-`,
     if (g && g.GetFilesToUpload().length > 0) {
       x = g.GetUploadImages()[0];
       let e = x.IsValidAssetType(o);
-      (b = e.error), (re = e.needsCrop);
+      ((b = e.error), (re = e.needsCrop));
     }
     return (0, R.jsxs)(R.Fragment, {
       children: [
@@ -720,12 +722,12 @@ var Pe = `nIUbxO5p4A8-`,
     m_cancelSignal = L.default.CancelToken.source();
     static s_formattingHelp = new Map();
     constructor(e) {
-      super(e),
+      (super(e),
         (this.state = {
           formattingHelp: {
             __html: W.s_formattingHelp.get(e.formatType) ?? ``,
           },
-        });
+        }));
     }
     componentDidMount() {
       this.AjaxGetFormattingHelp().catch((e) => {
@@ -748,12 +750,12 @@ var Pe = `nIUbxO5p4A8-`,
       if (this.state.formattingHelp.__html == ``) {
         let e = { sessionid: ye() },
           t;
-        (t = await L.default.get(W.GetHelpURL(this.props.formatType, !0), {
+        ((t = await L.default.get(W.GetHelpURL(this.props.formatType, !0), {
           params: e,
           cancelToken: this.m_cancelSignal.token,
         })),
           W.s_formattingHelp.set(this.props.formatType, t.data),
-          this.setState({ formattingHelp: { __html: t.data } });
+          this.setState({ formattingHelp: { __html: t.data } }));
       }
     }
     render() {
@@ -786,7 +788,7 @@ var Ze,
   K = class extends I.Component {
     descAutoTextAreaRef = I.createRef();
     constructor(e) {
-      super(e), (this.state = { bShowDragTarget: !1 });
+      (super(e), (this.state = { bShowDragTarget: !1 }));
     }
     componentDidMount() {
       b.AddClanImageDragListener(this.ClanImageDragListener);
@@ -870,11 +872,11 @@ var Ze,
       });
     }
   };
-D([A], K.prototype, `ClanImageDragListener`, null),
+(D([A], K.prototype, `ClanImageDragListener`, null),
   D([A], K.prototype, `onFocus`, null),
   D([A], K.prototype, `OnTextAreaDropListener`, null),
   D([A], K.prototype, `GetTextAreaRef`, null),
-  (K = D([r], K));
+  (K = D([r], K)));
 var q = class e {
     static BIsFireFox() {
       return !!new RegExp(/Firefox\/([0-9\.]+)(?:\s|$)/i).exec(
@@ -884,9 +886,9 @@ var q = class e {
     static replaceSelection(t, n) {
       if (!t) return;
       let r = t.selectionStart;
-      t.focus(),
+      (t.focus(),
         e.InsertTextAtSelect(n, t),
-        t.setSelectionRange(r, r + n.length);
+        t.setSelectionRange(r, r + n.length));
     }
     static getSelectedString(e) {
       return e
@@ -897,11 +899,11 @@ var q = class e {
       if (!r) return;
       let i = e.getSelectedString(r),
         a = ``;
-      (a =
+      ((a =
         i.indexOf(t) == 0 && i.lastIndexOf(n) == i.length - n.length
           ? i.substr(t.length, i.length - t.length - n.length)
           : t + i + n),
-        e.replaceSelection(r, a);
+        e.replaceSelection(r, a));
     }
     static append(t, n) {
       n &&
@@ -934,7 +936,8 @@ var q = class e {
           ? t.setRangeText(e, n, r, `preserve`)
           : (t.value = t.value.slice(0, n) + e + t.value.slice(r));
         let i = new Event(`input`, { bubbles: !0 });
-        t.dispatchEvent(i), (t.selectionStart = t.selectionEnd = n + e.length);
+        (t.dispatchEvent(i),
+          (t.selectionStart = t.selectionEnd = n + e.length));
       }
       t.focus();
     }
@@ -995,8 +998,7 @@ var q = class e {
             .getSelectedString(t)
             .split(`
 `)
-            .map((e) => (e.match(/\*+\s/) ? `[*]` : `[*] `) + e)
-            .join(`
+            .map((e) => (e.match(/\*+\s/) ? `[*]` : `[*] `) + e).join(`
 `) +
           `
 ` +
@@ -1040,8 +1042,8 @@ var q = class e {
     }
     OnEmoticonSelected(e, t = !1) {
       let n = `\u02D0${e}\u02D0`;
-      q.replaceSelection(this.props.fnTextareaRef()?.current, n),
-        this.props.fnTextareaRef()?.current?.focus();
+      (q.replaceSelection(this.props.fnTextareaRef()?.current, n),
+        this.props.fnTextareaRef()?.current?.focus());
     }
     BSupports(e) {
       return this.props.supportBBCodes.findIndex((t) => t == e) >= 0;
@@ -1203,7 +1205,7 @@ var q = class e {
       );
     }
   };
-D([A], J.prototype, `onBold`, null),
+(D([A], J.prototype, `onBold`, null),
   D([A], J.prototype, `onItalics`, null),
   D([A], J.prototype, `onUnderline`, null),
   D([A], J.prototype, `onStrikeThrough`, null),
@@ -1219,7 +1221,7 @@ D([A], J.prototype, `onBold`, null),
   D([A], J.prototype, `OnOpenImageDialog`, null),
   D([A], J.prototype, `OnOpenSpeakerDialog`, null),
   D([A], J.prototype, `OnEmoticonSelected`, null),
-  (J = D([r], J));
+  (J = D([r], J)));
 function Y(e) {
   return (0, R.jsx)(`span`, {
     onClick: e.onClick,
@@ -1401,14 +1403,14 @@ var X = class extends I.Component {
     });
   }
 };
-D([A], X.prototype, `OnYoutubeInsertLink`, null),
+(D([A], X.prototype, `OnYoutubeInsertLink`, null),
   D([A], X.prototype, `OnUrlChange`, null),
   D([A], X.prototype, `OnLeftSelected`, null),
   D([A], X.prototype, `OnRightSelected`, null),
   D([A], X.prototype, `OnFullSelected`, null),
   D([A], X.prototype, `OnSummarySelected`, null),
   D([A], X.prototype, `OnOuterDivClickPassDown`, null),
-  (X = D([r], X));
+  (X = D([r], X)));
 var Z = class extends I.Component {
   static {
     Ze = this;
@@ -1496,10 +1498,10 @@ var Z = class extends I.Component {
     });
   }
 };
-D([A], Z.prototype, `onLinkTitleUpdate`, null),
+(D([A], Z.prototype, `onLinkTitleUpdate`, null),
   D([A], Z.prototype, `onLinkURLUpdate`, null),
   D([A], Z.prototype, `onInsertLink`, null),
-  (Z = Ze = D([r], Z));
+  (Z = Ze = D([r], Z)));
 var Q = class extends I.Component {
   refFirstInput = I.createRef();
   state = { imgURL: ``, anchorURL: `` };
@@ -1510,10 +1512,10 @@ var Q = class extends I.Component {
     let { anchorURL: e, imgURL: t } = this.state,
       n = ``,
       r = ``;
-    e && e.length > 0 && ((n += `[url=` + e + `]`), (r = `[/url]` + r)),
+    (e && e.length > 0 && ((n += `[url=` + e + `]`), (r = `[/url]` + r)),
       (n += `[img]` + t),
       (r = `[/img]` + r),
-      q.wrapBBCode(n, r, this.props.textareaRef.current);
+      q.wrapBBCode(n, r, this.props.textareaRef.current));
   }
   OnImageURLChange(e) {
     this.state.imgURL != e.target.value &&
@@ -1585,10 +1587,10 @@ var Q = class extends I.Component {
     });
   }
 };
-D([A], Q.prototype, `OnImageInsert`, null),
+(D([A], Q.prototype, `OnImageInsert`, null),
   D([A], Q.prototype, `OnImageURLChange`, null),
   D([A], Q.prototype, `OnAnchorURLChange`, null),
-  (Q = D([r], Q));
+  (Q = D([r], Q)));
 var Qe = (e) => {
   let [t, n] = I.useState(``),
     [r, i] = I.useState(``),
@@ -1608,9 +1610,9 @@ var Qe = (e) => {
         let e = s + `/` + f.clanAccountID + `/` + c.GetHashAndExt(f);
         n += ` photo="${e}"`;
       }
-      m && (n += ` steamid="${m.ConvertTo64BitString()}"`),
+      (m && (n += ` steamid="${m.ConvertTo64BitString()}"`),
         (n += `]${l}[/speaker]`),
-        q.replaceSelection(e.textareaRef.current, n);
+        q.replaceSelection(e.textareaRef.current, n));
     },
     ne = t.trim().length != 0 && l.trim().length != 0;
   return (0, R.jsx)(C, {
@@ -1773,7 +1775,7 @@ var $ = class extends I.Component {
   m_isMounted = !1;
   m_bAppend = !1;
   constructor(e) {
-    super(e), (this.state = { bPreserveNewLines: !1, strHTMLData: `` });
+    (super(e), (this.state = { bPreserveNewLines: !1, strHTMLData: `` }));
   }
   componentDidMount() {
     this.m_isMounted = !0;
@@ -1782,10 +1784,10 @@ var $ = class extends I.Component {
     this.m_isMounted = !1;
   }
   OnConvertAndOverriteHTML() {
-    (this.m_bAppend = !1), this.ConvertBBCode();
+    ((this.m_bAppend = !1), this.ConvertBBCode());
   }
   OnConvertAndAppendHTML() {
-    (this.m_bAppend = !0), this.ConvertBBCode();
+    ((this.m_bAppend = !0), this.ConvertBBCode());
   }
   async ConvertHtmlToBBCode(e, t) {
     let n = new URLSearchParams();
@@ -1801,7 +1803,7 @@ var $ = class extends I.Component {
     );
   }
   ConvertBBCode() {
-    this.setState({ bConverting: !0 }),
+    (this.setState({ bConverting: !0 }),
       this.ConvertHtmlToBBCode(
         this.state.strHTMLData,
         this.state.bPreserveNewLines,
@@ -1827,7 +1829,7 @@ var $ = class extends I.Component {
             this.props.ownerWindow,
             { strTitle: M(`#EventEditor_ConvertHTML_Error`) },
           );
-        });
+        }));
   }
   OnCheckboxChange(e) {
     let t = e.target.checked;
@@ -1936,11 +1938,11 @@ var $ = class extends I.Component {
           });
   }
 };
-D([A], $.prototype, `OnConvertAndOverriteHTML`, null),
+(D([A], $.prototype, `OnConvertAndOverriteHTML`, null),
   D([A], $.prototype, `OnConvertAndAppendHTML`, null),
   D([A], $.prototype, `OnCheckboxChange`, null),
   D([A], $.prototype, `OnTextAreaChange`, null),
-  ($ = D([r], $));
+  ($ = D([r], $)));
 var tt = `j59mI0R4Mls-`,
   nt = `hYzeNZ6Fv5E-`,
   rt = `_7KwGD4ys9So-`,
@@ -1957,7 +1959,7 @@ function at(e, t) {
 async function ot(e, t, n) {
   if (T.IN_STEAMUI) {
     let e = he.Init(ge);
-    e.Body().set_appid(t), e.Body().set_status_text(n);
+    (e.Body().set_appid(t), e.Body().set_status_text(n));
     let r = await Ce.PostStatusToFriends(
       v.CMInterface.GetServiceTransport(),
       e,
@@ -1966,9 +1968,9 @@ async function ot(e, t, n) {
     return;
   }
   let r = new FormData();
-  r.append(`appid`, String(t ?? 0)),
+  (r.append(`appid`, String(t ?? 0)),
     r.append(`status_text`, n),
-    r.append(`sessionid`, ye());
+    r.append(`sessionid`, ye()));
   let i = await fetch(e + `ajaxpostuserstatus`, {
       method: `POST`,
       body: r,

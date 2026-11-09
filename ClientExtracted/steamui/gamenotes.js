@@ -7,7 +7,7 @@
       },
       3291: (j, l, t) => {
         "use strict";
-        t.r(l), t.d(l, { default: () => e });
+        (t.r(l), t.d(l, { default: () => e }));
         var s = t(62540),
           i = t(9851),
           d = t(50209),
@@ -97,7 +97,7 @@
       },
       44026: (j, l, t) => {
         "use strict";
-        t.r(l), t.d(l, { default: () => E });
+        (t.r(l), t.d(l, { default: () => E }));
         var s = t(62540),
           i = t(49519),
           d = t(12442),

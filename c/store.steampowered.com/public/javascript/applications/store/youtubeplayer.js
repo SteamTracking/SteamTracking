@@ -488,7 +488,7 @@ function _(_) {
       let _ = document.createElement(`script`);
       _.src = `https://www.youtube.com/iframe_api`;
       let _ = document.getElementsByTagName(`script`)[0];
-      _.parentNode?.insertBefore(_, _), (window.onYouTubeIframeAPIReady = _);
+      (_.parentNode?.insertBefore(_, _), (window.onYouTubeIframeAPIReady = _));
     }
     _ && (_.includes(_) || _.push(_));
   }
@@ -514,14 +514,14 @@ var _ = class _ extends _.Component {
   m_bPlayerReady = !1;
   static s_nPlayerIndex = 0;
   constructor(_) {
-    super(_),
+    (super(_),
       (this.m_strPlayerID = `YoutubePlayer_` + _.s_nPlayerIndex++),
       (this.state = {
         bYoutubeLoaded: !1,
-      });
+      }));
   }
   componentWillUnmount() {
-    this.DestroyPlayer(), _(this.OnYoutubeScriptsReady);
+    (this.DestroyPlayer(), _(this.OnYoutubeScriptsReady));
   }
   shouldComponentUpdate(_, _) {
     if (!this.m_player) return !1;
@@ -553,8 +553,8 @@ var _ = class _ extends _.Component {
   DestroyPlayer() {
     if (this.m_player)
       try {
-        this.m_player.stopVideo && this.m_player.stopVideo(),
-          this.m_player.destroy && this.m_player.destroy();
+        (this.m_player.stopVideo && this.m_player.stopVideo(),
+          this.m_player.destroy && this.m_player.destroy());
       } catch {
       } finally {
         this.m_player = null;
@@ -601,7 +601,7 @@ var _ = class _ extends _.Component {
         },
       },
       _ = this.m_playerContainer.firstElementChild;
-    (this.m_bPlayerReady = !1), (this.m_player = new _.Player(_, _));
+    ((this.m_bPlayerReady = !1), (this.m_player = new _.Player(_, _)));
   }
   OnPlayerReady(_) {
     if (
@@ -614,18 +614,18 @@ var _ = class _ extends _.Component {
           strTitle: ``,
           strVideoID: ``,
         };
-      _.author && (_.strAuthor = _.author),
+      (_.author && (_.strAuthor = _.author),
         _.title && (_.strTitle = _.title),
         _.video_id && (_.strVideoID = _.video_id),
-        this.props.onVideoInfoChanged(_);
+        this.props.onVideoInfoChanged(_));
     }
-    this.props.width &&
+    (this.props.width &&
       this.props.height &&
       this.m_player?.setSize(this.props.width, this.props.height),
       this.props.forcePause
         ? this.ApplyForcePause()
         : this.props.autoplay && this.m_player?.playVideo(),
-      this.props.onPlayerReady && this.props.onPlayerReady();
+      this.props.onPlayerReady && this.props.onPlayerReady());
   }
   OnPlayerStateChange(_) {
     switch (_.data) {
@@ -645,8 +645,8 @@ var _ = class _ extends _.Component {
     }
   }
   OnError(_) {
-    console.log(`Youtube: Playback failed`, _),
-      this.props.onError && this.props.onError(_);
+    (console.log(`Youtube: Playback failed`, _),
+      this.props.onError && this.props.onError(_));
   }
   OnPlayerLeftView() {
     this.props.autopause &&
@@ -677,14 +677,14 @@ var _ = class _ extends _.Component {
     });
   }
 };
-_([_], _.prototype, `BindPlayerContainer`, null),
+(_([_], _.prototype, `BindPlayerContainer`, null),
   _([_], _.prototype, `OnYoutubeScriptsReady`, null),
   _([_], _.prototype, `CreatePlayer`, null),
   _([_], _.prototype, `OnPlayerReady`, null),
   _([_], _.prototype, `OnPlayerStateChange`, null),
   _([_], _.prototype, `OnError`, null),
   _([_], _.prototype, `OnPlayerLeftView`, null),
-  _([_], _.prototype, `PlayVideo`, null);
+  _([_], _.prototype, `PlayVideo`, null));
 function _(_) {
   let { video: _, children: _ } = _;
   return _(`youtube`)
@@ -727,7 +727,7 @@ function _(_) {
       return (
         _ && _(_),
         () => {
-          _(_), (_.current = null);
+          (_(_), (_.current = null));
         }
       );
     }, [_]),
@@ -742,4 +742,3 @@ function _(_) {
     })
   );
 }
-export { _, _, _, _, _, _, _, _, _, _ };

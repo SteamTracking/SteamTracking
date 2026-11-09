@@ -17,4 +17,3 @@ var _ = _.createContext({
 function _() {
   return (0, _.useContext)(_).depth;
 }
-export { _, _ };

@@ -33,8 +33,8 @@ var g = class t {
       let t = e(`old_sale_pages`, `application_config`);
       this.ValidateStoreDefault(t) &&
         t.forEach((e) => {
-          this.m_mapSalePage.set(e.pageid, e),
-            e.migrated_clan_account_id || this.m_rgUnmigratedSalesPage.push(e);
+          (this.m_mapSalePage.set(e.pageid, e),
+            e.migrated_clan_account_id || this.m_rgUnmigratedSalesPage.push(e));
         });
     }
     ValidateStoreDefault(e) {

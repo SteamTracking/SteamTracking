@@ -628,7 +628,7 @@ function _(_) {
     }, [_]),
     !_)
   )
-    return console.warn(`Error: missing store item for appid `, _), null;
+    return (console.warn(`Error: missing store item for appid `, _), null);
   let _ = {
     width: _ || void 0,
     height: _ || void 0,
@@ -899,13 +899,13 @@ async function _(_, _, _, _) {
       _,
       _,
     );
-    (_ = [..._]),
+    ((_ = [..._]),
       (_ = _),
       _ && _.findIndex((_) => _ === _) === -1 && _.unshift(_),
       await _.Get().QueueMultipleAppRequests(_, {
         ..._,
         ..._,
-      });
+      }));
   } catch (_) {
     console.error(`Failed getting discovery queue apps`, _);
   }
@@ -919,7 +919,7 @@ function _(_) {
     _ = _();
   return (
     (0, _.useEffect)(() => {
-      _.Init(_), _(!0);
+      (_.Init(_), _(!0));
     }, [_]),
     _
       ? (0, _.jsx)(_, {
@@ -944,26 +944,26 @@ function _(_) {
     _ = _(_),
     [_, _] = _.useState(0),
     _ = _();
-  _(`ArrowLeft`, () => _(!1), !0, !0),
+  (_(`ArrowLeft`, () => _(!1), !0, !0),
     _(`Left`, () => _(!1), !0, !0),
     _(`ArrowRight`, () => _(!0), !0, !0),
     _(`Right`, () => _(!0), !0, !0),
     _(`Escape`, () => _?.(), !0, !0),
-    _(`Esc`, () => _?.(), !0, !0);
+    _(`Esc`, () => _?.(), !0, !0));
   let _ = _.useMemo(() => _.innerWidth < _, [_]),
     { fnGetDiscoveryQueue: _, rgAppIDs: _ } = _(_, _, _);
-  _.useEffect(() => {
-    _(!0), _.Get().HintLoad();
+  (_.useEffect(() => {
+    (_(!0), _.Get().HintLoad());
   }, []),
     _.useEffect(() => {
       let _ = _[_];
       _ != _ && (_ && _ != _ && _.AddImpression(_, _), _(_));
-    }, [_, _, _, _, _]);
+    }, [_, _, _, _, _]));
   let _ = (_) => {
     let _ = _(_ + (_ ? 1 : -1), 0, _.length - 1);
     _ != _ && (_(_), _(`New selected index: `, _, ` Prev selected index: `, _));
   };
-  _.useEffect(() => {
+  (_.useEffect(() => {
     _?.length &&
       _[_] !== _ &&
       (_((_) => _ + 1),
@@ -973,7 +973,7 @@ function _(_) {
   }, [_, _, _, _]),
     _.useEffect(() => {
       _.length != _ && (_(_.length), _.length > _ && _[_] == _ && _(_ + 1));
-    }, [_, _, _]);
+    }, [_, _, _]));
   let [_] = _.useState(new Map()),
     _ = _(_, _),
     _ = !_() && _ > 0,
@@ -1158,12 +1158,12 @@ function _(_, _) {
     nDragOffset: _,
     nDragSelectedOffsetIndex: _,
     handleTouchStart: (_) => {
-      _(!0), (_.current = _.touches[0].clientX), _(0), _(0);
+      (_(!0), (_.current = _.touches[0].clientX), _(0), _(0));
     },
     handleTouchMove: (_) => {
       if (!_) return;
       let _ = _.touches[0].clientX - _.current;
-      _(_), _(_ > 50 ? 1 : _ < -50 ? -1 : 0);
+      (_(_), _(_ > 50 ? 1 : _ < -50 ? -1 : 0));
     },
     handleTouchEnd: () => {
       _ &&
@@ -1309,14 +1309,14 @@ function _(_) {
           _.Get()
             .LoadSkippedApps(_, _)
             .then((_) => {
-              _(_.reduce((_, _) => (_.has(_) ? _ + 1 : _), 0)),
+              (_(_.reduce((_, _) => (_.has(_) ? _ + 1 : _), 0)),
                 _(
                   _.reduce(
                     (_, _) => (_.Get().BIsGameIgnored(_) ? _ + 1 : _),
                     0,
                   ),
                 ),
-                _(!0);
+                _(!0));
             });
         });
   }, [_, _, _, _, _]);

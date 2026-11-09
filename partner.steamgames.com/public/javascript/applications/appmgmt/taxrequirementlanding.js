@@ -1368,7 +1368,7 @@ function K(e) {
       let e = n.onboarded ? `pub` : `newpartner`,
         r = `${a.PARTNER_BASE_URL}${e}/ajaxstarttaxidentityworkflow/${n.deadline.data.partnerid}`,
         o = new FormData();
-      o.append(`sessionid`, t()), s(!0);
+      (o.append(`sessionid`, t()), s(!0));
       try {
         let e = await se.default.post(r, o, { withCredentials: !0 });
         e?.status == 200 && e.data?.success == 1 && e.data.url

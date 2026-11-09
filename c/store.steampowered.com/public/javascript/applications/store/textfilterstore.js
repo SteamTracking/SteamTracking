@@ -36,21 +36,21 @@ var _ = _(_(), 1),
     m_transport = null;
     m_registry = null;
     SetDefaultTransport(_) {
-      this.m_transport != null &&
+      (this.m_transport != null &&
         console.error(
           `Multiple attempts to set a default WebUI transport: overriding previous`,
         ),
-        (this.m_transport = _);
+        (this.m_transport = _));
     }
     GetDefaultTransport() {
       return this.m_transport;
     }
     SetDefaultHandlerRegistry(_) {
-      this.m_registry != null &&
+      (this.m_registry != null &&
         console.error(
           `Multiple attempts to set a default WebUI message handler registry: overriding previous`,
         ),
-        (this.m_registry = _);
+        (this.m_registry = _));
     }
     GetDefaultHandlerRegistry() {
       return this.m_registry;
@@ -64,9 +64,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.language || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -91,7 +91,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -112,14 +112,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CSteamEngine_UpdateTextFilterDictionary_Notification`;
@@ -128,9 +128,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.language || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -155,7 +155,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -176,14 +176,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CSteamEngine_GetTextFilterDictionary_Request`;
@@ -192,9 +192,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.dictionary || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -214,7 +214,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -235,14 +235,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CSteamEngine_GetTextFilterDictionary_Response`;
@@ -251,9 +251,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.language || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -278,7 +278,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -299,14 +299,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CSteamEngine_TextFilterDictionaryChanged_Notification`;
@@ -315,9 +315,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.pid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -337,7 +337,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -358,14 +358,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CSteamEngine_GetGameIDForPID_Request`;
@@ -374,9 +374,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.gameid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -396,7 +396,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -417,14 +417,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CSteamEngine_GetGameIDForPID_Response`;
@@ -433,9 +433,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.gameid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -460,7 +460,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -481,14 +481,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CSteamEngine_SetOverlayEscapeKeyHandling_Notification`;
@@ -497,9 +497,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.search_term || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -524,7 +524,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -545,14 +545,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CSteamEngine_SearchAppDataCacheByStoreKeywords_Request`;
@@ -561,9 +561,9 @@ var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.appids || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -586,7 +586,7 @@ var _ = _(_()),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -607,14 +607,14 @@ var _ = _(_()),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CSteamEngine_SearchAppDataCacheByStoreKeywords_Response`;
@@ -678,21 +678,21 @@ var _ = _(_()),
           )
     );
   }
-  (_.SendMsgUpdateTextFilterDictionary = _),
+  ((_.SendMsgUpdateTextFilterDictionary = _),
     (_.GetTextFilterDictionaryHandler = {
       name: `SteamEngine.GetTextFilterDictionary#1`,
       request: _,
       response: _,
-    });
+    }));
   function _(_, _) {
     return (
       (_ ||= _().GetDefaultTransport()),
       _ == null
         ? new Promise((_, _) => {
-            console.error(
+            (console.error(
               `Transport Error: no transport is available for request`,
             ),
-              _(`Transport Error: no transport is available for request`);
+              _(`Transport Error: no transport is available for request`));
           })
         : _.SendMsg(`SteamEngine.GetTextFilterDictionary#1`, _(_, _), _, {
             ePrivilege: 1,
@@ -706,10 +706,10 @@ var _ = _(_()),
       (_ ||= _().GetDefaultTransport()),
       _ == null
         ? new Promise((_, _) => {
-            console.error(
+            (console.error(
               `Transport Error: no transport is available for request`,
             ),
-              _(`Transport Error: no transport is available for request`);
+              _(`Transport Error: no transport is available for request`));
           })
         : _.SendMsg(`SteamEngine.GetTextFilterDictionary#1`, _(_, _), _, {
             ePrivilege: 1,
@@ -717,11 +717,11 @@ var _ = _(_()),
           })
     );
   }
-  (_.SendMsgGetTextFilterDictionary = _),
+  ((_.SendMsgGetTextFilterDictionary = _),
     (_.NotifyTextFilterDictionaryChangedHandler = {
       name: `SteamEngine.NotifyTextFilterDictionaryChanged#1`,
       request: _,
-    });
+    }));
   function _(_, _) {
     return (
       (_ ||= _().GetDefaultHandlerRegistry()),
@@ -774,21 +774,21 @@ var _ = _(_()),
           )
     );
   }
-  (_.SendMsgNotifyTextFilterDictionaryChanged = _),
+  ((_.SendMsgNotifyTextFilterDictionaryChanged = _),
     (_.GetGameIDForPIDHandler = {
       name: `SteamEngine.GetGameIDForPID#1`,
       request: _,
       response: _,
-    });
+    }));
   function _(_, _) {
     return (
       (_ ||= _().GetDefaultTransport()),
       _ == null
         ? new Promise((_, _) => {
-            console.error(
+            (console.error(
               `Transport Error: no transport is available for request`,
             ),
-              _(`Transport Error: no transport is available for request`);
+              _(`Transport Error: no transport is available for request`));
           })
         : _.SendMsg(`SteamEngine.GetGameIDForPID#1`, _(_, _), _, {
             ePrivilege: 1,
@@ -802,10 +802,10 @@ var _ = _(_()),
       (_ ||= _().GetDefaultTransport()),
       _ == null
         ? new Promise((_, _) => {
-            console.error(
+            (console.error(
               `Transport Error: no transport is available for request`,
             ),
-              _(`Transport Error: no transport is available for request`);
+              _(`Transport Error: no transport is available for request`));
           })
         : _.SendMsg(`SteamEngine.GetGameIDForPID#1`, _(_, _), _, {
             ePrivilege: 1,
@@ -813,11 +813,11 @@ var _ = _(_()),
           })
     );
   }
-  (_.SendMsgGetGameIDForPID = _),
+  ((_.SendMsgGetGameIDForPID = _),
     (_.SetOverlayEscapeKeyHandlingHandler = {
       name: `SteamEngine.SetOverlayEscapeKeyHandling#1`,
       request: _,
-    });
+    }));
   function _(_, _) {
     return (
       (_ ||= _().GetDefaultHandlerRegistry()),
@@ -870,21 +870,21 @@ var _ = _(_()),
           )
     );
   }
-  (_.SendMsgSetOverlayEscapeKeyHandling = _),
+  ((_.SendMsgSetOverlayEscapeKeyHandling = _),
     (_.SearchAppDataCacheByStoreKeywordsHandler = {
       name: `SteamEngine.SearchAppDataCacheByStoreKeywords#1`,
       request: _,
       response: _,
-    });
+    }));
   function _(_, _) {
     return (
       (_ ||= _().GetDefaultTransport()),
       _ == null
         ? new Promise((_, _) => {
-            console.error(
+            (console.error(
               `Transport Error: no transport is available for request`,
             ),
-              _(`Transport Error: no transport is available for request`);
+              _(`Transport Error: no transport is available for request`));
           })
         : _.SendMsg(
             `SteamEngine.SearchAppDataCacheByStoreKeywords#1`,
@@ -903,10 +903,10 @@ var _ = _(_()),
       (_ ||= _().GetDefaultTransport()),
       _ == null
         ? new Promise((_, _) => {
-            console.error(
+            (console.error(
               `Transport Error: no transport is available for request`,
             ),
-              _(`Transport Error: no transport is available for request`);
+              _(`Transport Error: no transport is available for request`));
           })
         : _.SendMsg(
             `SteamEngine.SearchAppDataCacheByStoreKeywords#1`,
@@ -1006,7 +1006,7 @@ var _ = class {
         _ = _.Init(_.response, 147),
         _ = _(_, _),
         _ = (_) => {
-          _.Hdr().set_eresult(_), _(_);
+          (_.Hdr().set_eresult(_), _(_));
         };
       _ instanceof Promise
         ? _.then(_).catch(() => {
@@ -1104,14 +1104,14 @@ var _ = class {
     });
   }
 };
-_([_], _.prototype, `m_rgRegisteredEMsgs`, void 0),
-  _([_], _.prototype, `m_rgRegisteredServiceMethodHandlers`, void 0);
+(_([_], _.prototype, `m_rgRegisteredEMsgs`, void 0),
+  _([_], _.prototype, `m_rgRegisteredServiceMethodHandlers`, void 0));
 var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.auth_key || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1131,7 +1131,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1152,14 +1152,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CTransportAuth_Authenticate_Request`;
@@ -1168,7 +1168,7 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1193,12 +1193,12 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CTransportAuth_Authenticate_Response`;
@@ -1207,7 +1207,7 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1232,12 +1232,12 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CTransportAuth_StartShutdown_Notification`;
@@ -1255,10 +1255,10 @@ var _ = class _ extends _.Message {
       (_ ||= _().GetDefaultTransport()),
       _ == null
         ? new Promise((_, _) => {
-            console.error(
+            (console.error(
               `Transport Error: no transport is available for request`,
             ),
-              _(`Transport Error: no transport is available for request`);
+              _(`Transport Error: no transport is available for request`));
           })
         : _.SendMsg(`TransportAuth.Authenticate#1`, _(_, _), _, {
             ePrivilege: 1,
@@ -1272,10 +1272,10 @@ var _ = class _ extends _.Message {
       (_ ||= _().GetDefaultTransport()),
       _ == null
         ? new Promise((_, _) => {
-            console.error(
+            (console.error(
               `Transport Error: no transport is available for request`,
             ),
-              _(`Transport Error: no transport is available for request`);
+              _(`Transport Error: no transport is available for request`));
           })
         : _.SendMsg(`TransportAuth.Authenticate#1`, _(_, _), _, {
             ePrivilege: 1,
@@ -1283,11 +1283,11 @@ var _ = class _ extends _.Message {
           })
     );
   }
-  (_.SendMsgAuthenticate = _),
+  ((_.SendMsgAuthenticate = _),
     (_.NotifyStartShutdownHandler = {
       name: `TransportAuth.NotifyStartShutdown#1`,
       request: _,
-    });
+    }));
   function _(_, _) {
     return (
       (_ ||= _().GetDefaultHandlerRegistry()),
@@ -1348,7 +1348,7 @@ var _ = class {
   m_nReconnectAttemptTimeoutMs;
   m_nReconnectAttemptsMax;
   constructor(_, _) {
-    (this.m_sName = _),
+    ((this.m_sName = _),
       (this.m_fnOnMessageHandler = _.fnOnMessageHandler),
       (this.m_fnOnCloseHandler = _.fnOnCloseHandler),
       (this.m_fnOnReconnectStartHandler =
@@ -1359,7 +1359,8 @@ var _ = class {
       (this.m_nConnectAttemptTimeoutMs = _.nConnectAttemptTimeoutMs ?? 1e3),
       (this.m_bReconnectOnFailure = _.bReconnectOnFailure ?? !1),
       (this.m_nReconnectAttemptsMax = _.nReconnectAttemptsMax ?? 3e4),
-      (this.m_nReconnectAttemptTimeoutMs = _.nReconnectAttemptTimeoutMs ?? 1e4);
+      (this.m_nReconnectAttemptTimeoutMs =
+        _.nReconnectAttemptTimeoutMs ?? 1e4));
   }
   get name() {
     return this.m_sName;
@@ -1390,16 +1391,16 @@ var _ = class {
     do {
       try {
         let _ = await this.ConnectToSocket(_, _);
-        if (_.result == 1) return (this.m_bConnecting = !1), _;
+        if (_.result == 1) return ((this.m_bConnecting = !1), _);
         this.Log.Warning(`connect attempt failed: ${_.result} - ${_.message}`);
       } catch (_) {
         this.Log.Warning(`connect attempt failed: exception ${_.name} - ${_}`);
       }
       let _ = this.GetInterAttemptBackoffMs(_);
-      this.Log.Info(`connect retry: attempt:${_}/${_} backoff:${_}`),
+      (this.Log.Info(`connect retry: attempt:${_}/${_} backoff:${_}`),
         await new Promise((_) => setTimeout(_, _)),
         (this.m_socket = null),
-        (_ += 1);
+        (_ += 1));
     } while (_ < _);
     return (
       this.Log.Warning(
@@ -1414,12 +1415,12 @@ var _ = class {
     );
   }
   Disconnect() {
-    this.Log.Info(`disconnect requested`),
+    (this.Log.Info(`disconnect requested`),
       (this.m_bDisconnectRequested = !0),
-      this.m_socket.close();
+      this.m_socket.close());
   }
   PrepareForShutdown() {
-    this.Log.Info(`shutdown pending`), (this.m_bDisconnectRequested = !0);
+    (this.Log.Info(`shutdown pending`), (this.m_bDisconnectRequested = !0));
   }
   BShouldReconnect() {
     return this.m_bConnecting || !this.m_bReconnectOnFailure
@@ -1427,7 +1428,7 @@ var _ = class {
       : !this.m_bDisconnectRequested;
   }
   async StartReconnect() {
-    this.Log.Info(`start reconnect`),
+    (this.Log.Info(`start reconnect`),
       (this.m_socket = null),
       this.m_fnOnReconnectStartHandler({
         connection: this,
@@ -1447,7 +1448,7 @@ var _ = class {
             connection: this,
             bError: !0,
             bIsExpectedToReconnect: !1,
-          }));
+          })));
   }
   async ConnectToSocket(_, _) {
     if (this.m_socket != null)
@@ -1497,8 +1498,8 @@ var _ = class {
     if (_.readyState != WebSocket.CONNECTING)
       return _.readyState == WebSocket.OPEN;
     let _ = _ / 100;
-    for (; _.readyState == WebSocket.CONNECTING && _ > 0; )
-      _--, await new Promise((_) => setTimeout(_, 100));
+    for (; _.readyState == WebSocket.CONNECTING && _ > 0;)
+      (_--, await new Promise((_) => setTimeout(_, 100)));
     return _.readyState == WebSocket.OPEN;
   }
   BCanSendMessages() {
@@ -1512,39 +1513,39 @@ var _ = class {
   }
   OnSocketClose(_) {
     if (this.m_bDisconnectRequested) {
-      this.Log.Info(`websocket closed`),
+      (this.Log.Info(`websocket closed`),
         this.m_fnOnCloseHandler({
           connection: this,
           bError: !1,
           bIsExpectedToReconnect: !1,
-        });
+        }));
       return;
     }
     if (this.m_bConnecting) return;
     this.Log.Warning(`websocket unexpectedly closed`);
     let _ = this.BShouldReconnect();
-    this.m_fnOnCloseHandler({
+    (this.m_fnOnCloseHandler({
       connection: this,
       bError: !0,
       bIsExpectedToReconnect: _,
     }),
-      _ && this.StartReconnect();
+      _ && this.StartReconnect());
   }
   async OnSocketMessage(_) {
     this.m_fnOnMessageHandler(_.data);
   }
   SendSerializedMessage(_) {
     try {
-      return this.m_socket.send(_), 1;
+      return (this.m_socket.send(_), 1);
     } catch {
       return 2;
     }
   }
 };
-_([_], _.prototype, `OnSocketError`, null),
+(_([_], _.prototype, `OnSocketError`, null),
   _([_], _.prototype, `OnSocketOpen`, null),
   _([_], _.prototype, `OnSocketClose`, null),
-  _([_], _.prototype, `OnSocketMessage`, null);
+  _([_], _.prototype, `OnSocketMessage`, null));
 var _ = `127.0.0.1`,
   _ = new _(`WebUITransport`),
   _ = class {
@@ -1586,7 +1587,7 @@ var _ = `127.0.0.1`,
     async Init() {
       if (!_.IN_CLIENT) return;
       let _ = await SteamClient.WebUITransport.GetTransportInfo();
-      (this.m_nMaximumMsgSizeBytes = _.nMaximumMsgSizeBytes),
+      ((this.m_nMaximumMsgSizeBytes = _.nMaximumMsgSizeBytes),
         this.CreateConnection(1, `steamUI`, _.portSteamUI, _.authKeySteamUI),
         this.CreateConnection(
           2,
@@ -1596,7 +1597,7 @@ var _ = `127.0.0.1`,
         ),
         _().SetDefaultTransport(this),
         _().SetDefaultHandlerRegistry(this.m_messageHandlers),
-        _.RegisterForNotifyStartShutdown(this.OnStartShutdown);
+        _.RegisterForNotifyStartShutdown(this.OnStartShutdown));
     }
     get messageHandlers() {
       return this.m_messageHandlers;
@@ -1630,18 +1631,18 @@ var _ = `127.0.0.1`,
       return new Promise((_, _) => {
         let _ = _.eClientExecutionSite;
         if (_ == null || _ == 0) {
-          _.Error(`SendMsg: Invalid client execution site: ${_}`),
-            _(`Transport SendMsg: invalid client execution site ${_}`);
+          (_.Error(`SendMsg: Invalid client execution site: ${_}`),
+            _(`Transport SendMsg: invalid client execution site ${_}`));
           return;
         }
         let _ = this.m_mapConnectionDetails.get(_);
         if (_ == null) {
-          _.Error(
+          (_.Error(
             `SendMsg: could not find connection for execution site: ${_}`,
           ),
             _(
               `Transport SendMsg: could not find connection for execution site ${_}`,
-            );
+            ));
           return;
         }
         let _ = _.connection;
@@ -1649,22 +1650,22 @@ var _ = `127.0.0.1`,
           let _ = this.m_mapServiceCallErrorCount.get(_) ?? 1;
           this.m_mapServiceCallErrorCount.set(_, _ + 1);
           let _ = `SendMsg: Attempt to send message but socket wasn't ready: ${_.name} - ${_}`;
-          _ == 1 && this.ReportError(_),
+          (_ == 1 && this.ReportError(_),
             _.Warning(_ + ` error count: ${_}`),
-            _(`Transport SendMsg: socket not ready`);
+            _(`Transport SendMsg: socket not ready`));
           return;
         }
         let _ = this.m_iMsgSeq++;
-        _.SetEMsg(146),
+        (_.SetEMsg(146),
           _.Hdr().set_target_job_name(_),
-          _.Hdr().set_jobid_source(`` + _);
+          _.Hdr().set_jobid_source(`` + _));
         let _ = _.Serialize();
         if (_.byteLength >= this.m_nMaximumMsgSizeBytes) {
           _.Error(
             `SendMsg: message exceeds maximum size: ${_.byteLength} >= ${this.m_nMaximumMsgSizeBytes}`,
           );
           let _ = _.Init(_);
-          _.Hdr().set_eresult(2), _(_);
+          (_.Hdr().set_eresult(2), _(_));
         } else
           _.SendSerializedMessage(_) == 1
             ? this.m_mapPendingMethodRequests.set(_, {
@@ -1725,7 +1726,7 @@ var _ = `127.0.0.1`,
       for (let [_, _] of this.m_mapConnectionDetails)
         _.push(this.ConnectToSite(_));
       let _ = await Promise.all(_);
-      (this.m_bInitialized = !0), this.DispatchTransportStatusUpdate();
+      ((this.m_bInitialized = !0), this.DispatchTransportStatusUpdate());
       for (let _ of _) if (_.result != 1) return _;
       return {
         result: 1,
@@ -1753,8 +1754,8 @@ var _ = `127.0.0.1`,
     }
     OnWebsocketReconnectFinish(_) {
       if ((this.DispatchTransportStatusUpdate(), _.eResult != 1)) {
-        _.Warning(`OnWebsocketReconnect: Failed to reconnect to steam client`),
-          this.m_fnOnReconnectErrorHandler?.({});
+        (_.Warning(`OnWebsocketReconnect: Failed to reconnect to steam client`),
+          this.m_fnOnReconnectErrorHandler?.({}));
         return;
       }
       this.FailAllPendingRequests();
@@ -1779,8 +1780,8 @@ var _ = `127.0.0.1`,
         _(!1, `Transport Error: no pending callback for request`);
         return;
       }
-      _(_ == _.m_iSeq, `Transport Error: mistmatched request sequence`),
-        this.m_mapPendingMethodRequests.delete(_);
+      (_(_ == _.m_iSeq, `Transport Error: mistmatched request sequence`),
+        this.m_mapPendingMethodRequests.delete(_));
       let _ = _.InitFromMsg(_.m_responseClass, _);
       _.m_fnCallback(_);
     }
@@ -1795,7 +1796,7 @@ var _ = `127.0.0.1`,
           `FailAllPendingRequests: forcing failure for request: ${_.m_responseClass.name}`,
         );
         let _ = _.Init(_.m_responseClass);
-        _.Hdr().set_eresult(2), _.m_fnCallback(_);
+        (_.Hdr().set_eresult(2), _.m_fnCallback(_));
       }
       this.m_mapPendingMethodRequests.clear();
     }
@@ -1816,11 +1817,11 @@ var _ = `127.0.0.1`,
       return 1;
     }
   };
-_([_], _.prototype, `OnWebsocketReconnectStart`, null),
+(_([_], _.prototype, `OnWebsocketReconnectStart`, null),
   _([_], _.prototype, `OnWebsocketReconnectFinish`, null),
   _([_], _.prototype, `OnWebsocketClose`, null),
   _([_], _.prototype, `OnWebsocketMessage`, null),
-  _([_], _.prototype, `OnStartShutdown`, null);
+  _([_], _.prototype, `OnStartShutdown`, null));
 var _ = new _();
 function _() {
   return _.IN_MOBILE ? _ : _();
@@ -1828,7 +1829,7 @@ function _() {
 function _(_) {
   if (_ === ``) return !1;
   try {
-    return RegExp(`\\b(` + _ + `)\\b`, `ugi`), !0;
+    return (RegExp(`\\b(` + _ + `)\\b`, `ugi`), !0);
   } catch {
     return (
       console.log(`'${_}' is an invalid expression, removing from text filter`),
@@ -1870,15 +1871,15 @@ var _ = 15,
     constructor(_) {
       _(this);
       let _ = new _();
-      (this.m_TextFilterPreferences = {
+      ((this.m_TextFilterPreferences = {
         eTextFilterSetting: _.text_filter_setting(),
         bIgnoreFriends: _.text_filter_ignore_friends(),
       }),
         (this.m_TextFilterWords = new _()),
-        (this.m_DataAccess = _);
+        (this.m_DataAccess = _));
     }
     async Init(_ = 0, _ = null, _ = null, _ = null) {
-      (this.m_bInitialized = !1),
+      ((this.m_bInitialized = !1),
         (this.m_WebUIServiceTransport = _),
         (this.m_unAccountID = _),
         (this.m_Transport = _),
@@ -1894,7 +1895,7 @@ var _ = 15,
         await this.LoadTextFilterWords(),
         await this.RequestUpdatedSettings(),
         (this.m_nLoadLanguagesRetryDelaySec = _),
-        await this.EnsureFiltersLoaded();
+        await this.EnsureFiltersLoaded());
     }
     InitSteamEngineLanguages() {
       this.m_WebUIServiceTransport.BIsValid() &&
@@ -1926,17 +1927,17 @@ var _ = 15,
       this.m_bOngoingLoad = !0;
       try {
         do
-          (this.m_bFilterChangedWhileLoading = !1),
+          ((this.m_bFilterChangedWhileLoading = !1),
             await this.LoadLanguages(),
             this.OnFilterDataChanged(),
-            (this.m_bInitialized = !0);
+            (this.m_bInitialized = !0));
         while (this.m_bFilterChangedWhileLoading);
       } finally {
-        (this.m_bOngoingLoad = !1), (this.m_promiseOngoingLoad = null);
+        ((this.m_bOngoingLoad = !1), (this.m_promiseOngoingLoad = null));
       }
     }
     RegisterPlayerNotifications(_) {
-      this.m_rgUnregisterPlayerNotifications.forEach((_) => _()),
+      (this.m_rgUnregisterPlayerNotifications.forEach((_) => _()),
         (this.m_rgUnregisterPlayerNotifications = []),
         _ &&
           this.m_rgUnregisterPlayerNotifications.push(
@@ -1956,18 +1957,18 @@ var _ = 15,
                 1
               ),
             ).unregister,
-          );
+          ));
     }
     OnPlayerSettingsChanged() {
       this.m_bInitialized && !this.m_bOngoingLoad && this.OnFilterDataChanged();
     }
     InitSteamEngineLanguage(_) {
       let _ = _.Init(_);
-      _.Body().set_language(_),
+      (_.Body().set_language(_),
         _.Body().set_type(`profanity`),
         _.SendMsgUpdateTextFilterDictionary(_, this.m_WebUIServiceTransport),
         _.Body().set_type(`banned`),
-        _.SendMsgUpdateTextFilterDictionary(_, this.m_WebUIServiceTransport);
+        _.SendMsgUpdateTextFilterDictionary(_, this.m_WebUIServiceTransport));
     }
     GetSteamEngineTextFilterDictionary(_, _) {
       let _ = _.Init(_);
@@ -2039,8 +2040,8 @@ var _ = 15,
         try {
           this.m_TextFilterWords = _.fromObject(JSON.parse(_));
         } catch {
-          console.warn(`Error parsing cached text filter word list`, _),
-            (this.m_TextFilterWords = new _());
+          (console.warn(`Error parsing cached text filter word list`, _),
+            (this.m_TextFilterWords = new _()));
         }
     }
     SaveTextFilterWords() {
@@ -2054,18 +2055,18 @@ var _ = 15,
           `CTextFilterStore_strBannedPattern`,
         ),
         _ = await this.LoadObfuscatedString(`CTextFilterStore_strCleanPattern`);
-      (this.m_bHaveCompleteFilter = _ != null && _ != null),
-        _ != null && _ != null && this.BRebuildFilter(_, _);
+      ((this.m_bHaveCompleteFilter = _ != null && _ != null),
+        _ != null && _ != null && this.BRebuildFilter(_, _));
     }
     SaveFilter() {
-      this.SaveObfuscatedString(
+      (this.SaveObfuscatedString(
         `CTextFilterStore_strBannedPattern`,
         this.m_strBannedPattern,
       ),
         this.SaveObfuscatedString(
           `CTextFilterStore_strCleanPattern`,
           this.m_strCleanPattern,
-        );
+        ));
     }
     async RequestUpdatedSettings() {
       let _ = new _();
@@ -2125,7 +2126,7 @@ var _ = 15,
     }
     UpdateCommunityPreferences(_) {
       let _ = !1;
-      _.text_filter_setting() !==
+      (_.text_filter_setting() !==
         this.m_TextFilterPreferences?.eTextFilterSetting &&
         ((this.m_TextFilterPreferences.eTextFilterSetting =
           _.text_filter_setting()),
@@ -2135,23 +2136,23 @@ var _ = 15,
           ((this.m_TextFilterPreferences.bIgnoreFriends =
             _.text_filter_ignore_friends()),
           (_ = !0)),
-        _ && this.SaveTextFilterPreferences();
+        _ && this.SaveTextFilterPreferences());
     }
     get TextFilterPreferences() {
       return this.m_TextFilterPreferences;
     }
     UpdateTextFilterWords(_) {
-      (this.m_TextFilterWords = _), this.SaveTextFilterWords();
+      ((this.m_TextFilterWords = _), this.SaveTextFilterWords());
     }
     m_nLoadLanguagesRetryTimeout = void 0;
     m_nLoadLanguagesRetryDelaySec = _;
     async LoadLanguages() {
-      (this.m_strBannedWords = ``),
+      ((this.m_strBannedWords = ``),
         (this.m_strProfanityWords = ``),
         (this.m_strCleanWords = ``),
         (this.m_bWordListsComplete = !1),
         (this.m_nLoadLanguagesRetryTimeout &&=
-          (window.clearTimeout(this.m_nLoadLanguagesRetryTimeout), void 0));
+          (window.clearTimeout(this.m_nLoadLanguagesRetryTimeout), void 0)));
       try {
         let _ = await this.LoadLanguage(_.LANGUAGE);
         if (
@@ -2160,19 +2161,19 @@ var _ = 15,
           !_)
         )
           throw Error(`clean_public dictionary unavailable`);
-        (this.m_nLoadLanguagesRetryDelaySec = _),
-          (this.m_bWordListsComplete = !0);
+        ((this.m_nLoadLanguagesRetryDelaySec = _),
+          (this.m_bWordListsComplete = !0));
       } catch (_) {
         this.m_nLoadLanguagesRetryDelaySec = Math.min(
           this.m_nLoadLanguagesRetryDelaySec * 2,
           _,
         );
         let _ = this.m_nLoadLanguagesRetryDelaySec;
-        console.warn(`LoadLanguages caught`, _, `retry in`, _, `seconds`),
+        (console.warn(`LoadLanguages caught`, _, `retry in`, _, `seconds`),
           (this.m_nLoadLanguagesRetryTimeout = window.setTimeout(() => {
-            (this.m_nLoadLanguagesRetryTimeout = void 0),
-              this.EnsureFiltersLoaded();
-          }, _ * 1e3));
+            ((this.m_nLoadLanguagesRetryTimeout = void 0),
+              this.EnsureFiltersLoaded());
+          }, _ * 1e3)));
       }
     }
     async LoadLanguage(_) {
@@ -2212,8 +2213,8 @@ var _ = 15,
       _ = `${_.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${_}&v=1&origin=${_()}`;
       try {
         let _ = await _.default.get(_);
-        (this.m_strCleanWords += _.data),
-          _ && this.SaveObfuscatedString(_, _.data);
+        ((this.m_strCleanWords += _.data),
+          _ && this.SaveObfuscatedString(_, _.data));
       } catch (_) {
         console.warn(`LoadLanguage caught while loading clean list:`, _);
         let _ = _ ? await this.LoadObfuscatedString(_) : null;
@@ -2247,16 +2248,18 @@ var _ = 15,
             this.m_strBannedWords.split(_),
           );
       }
-      (_ = _.concat(this.m_TextFilterWords.text_filter_custom_banned_words())),
+      ((_ = _.concat(this.m_TextFilterWords.text_filter_custom_banned_words())),
         (_ = this.m_strCleanWords.split(_)),
-        (_ = _.concat(this.m_TextFilterWords.text_filter_custom_clean_words()));
+        (_ = _.concat(
+          this.m_TextFilterWords.text_filter_custom_clean_words(),
+        )));
       let _ = this.CreatePattern(_),
         _ = this.CreatePattern(_);
-      _ != `` && (_ = `^(` + _ + `)$`),
+      (_ != `` && (_ = `^(` + _ + `)$`),
         this.BRebuildFilter(_, _) &&
           this.m_bWordListsComplete &&
           this.SaveFilter(),
-        (this.m_bHaveCompleteFilter = this.m_bWordListsComplete);
+        (this.m_bHaveCompleteFilter = this.m_bWordListsComplete));
     }
     BRebuildFilter(_, _) {
       if (_ === this.m_strBannedPattern && _ === this.m_strCleanPattern)
@@ -2269,11 +2272,11 @@ var _ = 15,
         try {
           this.m_regexBannedWords = new RegExp(_, `ugi`);
         } catch (_) {
-          console.warn(`Couldn't compile textfilter bannedwords regex`),
+          (console.warn(`Couldn't compile textfilter bannedwords regex`),
             _().ReportError(
               Error(`Couldn't compile textfilter bannedwords regex: ${_}`),
             ),
-            (this.m_strBannedPattern = ``);
+            (this.m_strBannedPattern = ``));
         }
       if (
         ((this.m_regexCleanWords = null),
@@ -2283,11 +2286,11 @@ var _ = 15,
         try {
           this.m_regexCleanWords = new RegExp(_, `ugi`);
         } catch (_) {
-          console.warn(`Couldn't compile textfilter cleanwords regex`),
+          (console.warn(`Couldn't compile textfilter cleanwords regex`),
             _().ReportError(
               Error(`Couldn't compile textfilter cleanwords regex: ${_}`),
             ),
-            (this.m_strCleanPattern = ``);
+            (this.m_strCleanPattern = ``));
         }
       return !0;
     }
@@ -2324,7 +2327,7 @@ var _ = 15,
       );
     }
   };
-_([_], _.prototype, `m_TextFilterPreferences`, void 0),
+(_([_], _.prototype, `m_TextFilterPreferences`, void 0),
   _([_], _.prototype, `m_mapPlayerCache`, void 0),
   _([_], _.prototype, `m_regexBannedWords`, void 0),
   _([_], _.prototype, `m_regexCleanWords`, void 0),
@@ -2334,7 +2337,7 @@ _([_], _.prototype, `m_TextFilterPreferences`, void 0),
   _([_], _.prototype, `Init`, null),
   _([_], _.prototype, `OnTextFilterDictionaryChanged`, null),
   _([_], _.prototype, `UpdateCommunityPreferences`, null),
-  _([_], _.prototype, `BRebuildFilter`, null);
+  _([_], _.prototype, `BRebuildFilter`, null));
 var _;
 function _() {
   if (!_) {
@@ -2343,7 +2346,7 @@ function _() {
         sessionid: _(),
         origin: _(),
       };
-    _.default
+    (_.default
       .get(_.COMMUNITY_BASE_URL + `textfilter/ajaxgetfriendslist`, {
         params: _,
         withCredentials: !0,
@@ -2352,8 +2355,7 @@ function _() {
         for (let _ of _.data.friendslist?.friends ?? [])
           _(_.efriendrelationship) && _.add(new _(_.ulfriendid).GetAccountID());
       }),
-      (_ = (_) => _.has(_));
+      (_ = (_) => _.has(_)));
   }
   return _;
 }
-export { _, _ };

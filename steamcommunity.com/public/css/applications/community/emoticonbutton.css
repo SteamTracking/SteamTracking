@@ -39,7 +39,7 @@ a.m6bojdeQzBM-:hover {
   padding-bottom: 10px;
 }
 .oknukvR2bfs- {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16/9;
   width: 100%;
   margin: 10px 0;
   position: relative;
@@ -813,9 +813,9 @@ img.JQFjcVsL4SA-.MHuFPh5V6r4- {
 }
 .ChatMessageEntryVoice {
   color: #c9c9c9;
-  background:
-    #1b1c20 radial-gradient(128px 128px at 20%, #1da834 0%, #1b1c2000 100%)
-    -190px 0 / 256px 128px no-repeat;
+  background: #1b1c20
+    radial-gradient(128px 128px at 20%, #1da834 0%, #1b1c2000 100%) -190px
+    0/256px 128px no-repeat;
   flex-direction: column;
   flex: 0;
   min-width: 46px;

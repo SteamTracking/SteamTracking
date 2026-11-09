@@ -5,7 +5,7 @@ var _ = {
     NoColumnBorders: `CFDvy9hAlHM-`,
   },
   _ = {};
-(_.arabic = () =>
+((_.arabic = () =>
   _(() => import(`./countries_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
     _(() => import(`./countries_brazilian.js`), [], import.meta.url)),
@@ -67,7 +67,7 @@ var _ = {
   (_.ukrainian = () =>
     _(() => import(`./countries_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./countries_vietnamese.js`), [], import.meta.url));
+    _(() => import(`./countries_vietnamese.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -75,4 +75,3 @@ var _ = _(_);
 function _(_) {
   return _.Localize(`#Steam_Country_${_}`);
 }
-export { _, _ };

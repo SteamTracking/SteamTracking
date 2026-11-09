@@ -108,19 +108,19 @@ var _ = _(_(), 1),
     }
     static s_globalSingletonStore;
     static Get() {
-      return (_.s_globalSingletonStore ||= new _()), _.s_globalSingletonStore;
+      return ((_.s_globalSingletonStore ||= new _()), _.s_globalSingletonStore);
     }
     constructor() {
       _(this);
     }
   };
-_([_], _.prototype, `m_eCurLang`, void 0),
+(_([_], _.prototype, `m_eCurLang`, void 0),
   _([_], _.prototype, `m_rgHasData`, void 0),
   _([_], _.prototype, `m_bHasLocalizationContext`, void 0),
   _([_], _.prototype, `GetCurEditLanguage`, null),
   _([_], _.prototype, `SetCurEditLanguage`, null),
   _([_.bound], _.prototype, `SetHasLanguage`, null),
-  _([_], _.prototype, `BHasLanguageData`, null);
+  _([_], _.prototype, `BHasLanguageData`, null));
 function _() {
   return _(() => _.Get().GetCurEditLanguage());
 }
@@ -198,13 +198,13 @@ var _ = class {
       ) {
         for (let _ of _.data.images) _.clanAccountID = _;
         _(() => {
-          this.m_mapClanImageLoadState.set(_, {
+          (this.m_mapClanImageLoadState.set(_, {
             loaded: !0,
           }),
             this.m_mapClanToImages.set(_, _.data.images),
             this.GetImageListCallbackForClanAccountIDInternal(_).Dispatch(
               _.data.images,
-            );
+            ));
         });
       }
     }
@@ -282,12 +282,12 @@ var _ = class {
     return this.DeleteClanImageByID(_, _.imageid);
   }
 };
-_([_], _.prototype, `m_mapClanToImages`, void 0),
-  _([_], _.prototype, `m_mapClanImageLoadState`, void 0);
+(_([_], _.prototype, `m_mapClanToImages`, void 0),
+  _([_], _.prototype, `m_mapClanImageLoadState`, void 0));
 var _ = new _();
 function _(_) {
   let [_, _] = (0, _.useState)(_.GetClanImagesByAccount(_));
-  return _(_.GetImageListCallbackForClanAccountID(_), _), _;
+  return (_(_.GetImageListCallbackForClanAccountID(_), _), _);
 }
 function _(_) {
   let _ = _.InitFromClanID(_, _.EUNIVERSE),
@@ -316,14 +316,14 @@ var _ = `_0ayR5P4snOQ-`,
     m_mapMatchByKey = new Map();
     containerRef = _.createRef();
     constructor(_) {
-      super(_),
+      (super(_),
         (this.m_hMobxSearchDisposer = _(async () => {
-          await this.UpdateSearchResults(this.props.strSearch),
-            this.forceUpdate();
+          (await this.UpdateSearchResults(this.props.strSearch),
+            this.forceUpdate());
         })),
         (this.state = {
           selectedIndex: void 0,
-        });
+        }));
     }
     OnKeyDown(_) {
       this.BHandleKeyPress(_.keyCode) && _.preventDefault();
@@ -354,7 +354,8 @@ var _ = `_0ayR5P4snOQ-`,
             this.ChooseSuggestion(
               this.m_rgCurrentMatches[this.state.selectedIndex],
             );
-          else return this.props.onSuggestionSelected(this.props.strSearch), !1;
+          else
+            return (this.props.onSuggestionSelected(this.props.strSearch), !1);
           break;
         case 27:
           this.props.onSuggestionSelected(this.props.strSearch);
@@ -389,12 +390,12 @@ var _ = `_0ayR5P4snOQ-`,
     SetSelectedIndex(_) {
       if (!this.m_rgCurrentMatches.length) return;
       let _ = this.m_rgCurrentMatches.length;
-      _ > this.getMaxMatches() && (_ = this.getMaxMatches()),
+      (_ > this.getMaxMatches() && (_ = this.getMaxMatches()),
         (_ %= _),
         _ < 0 && (_ += _),
         this.setState({
           selectedIndex: _,
-        });
+        }));
     }
     FindKeyIndex(_) {
       if (!this.m_mapMatchByKey.size && this.m_rgCurrentMatches.length)
@@ -422,7 +423,7 @@ var _ = `_0ayR5P4snOQ-`,
         _.scrollIntoView();
     }
     async UpdateSearchResults(_) {
-      (this.m_rgCurrentMatches = await this.performSearch(_)),
+      ((this.m_rgCurrentMatches = await this.performSearch(_)),
         (this.m_strLastSearch = _),
         this.m_mapMatchByKey.clear(),
         this.m_rgCurrentMatches.length
@@ -441,7 +442,7 @@ var _ = `_0ayR5P4snOQ-`,
             this.state.selectedIndex !== void 0 &&
             this.setState({
               selectedIndex: void 0,
-            });
+            }));
     }
     m_hMobxSearchDisposer;
     componentWillUnmount() {
@@ -498,10 +499,10 @@ var _ = `_0ayR5P4snOQ-`,
       });
     }
   };
-_([_], _.prototype, `OnKeyDown`, null),
+(_([_], _.prototype, `OnKeyDown`, null),
   _([_], _.prototype, `OnClickSuggestion`, null),
   _([_], _.prototype, `OnMouseOverSuggestion`, null),
-  _([_], _.prototype, `BindSelectedElement`, null);
+  _([_], _.prototype, `BindSelectedElement`, null));
 var _ = class extends _.PureComponent {
   containerRef = _.createRef();
   OnMouseOver(_) {
@@ -520,7 +521,8 @@ var _ = class extends _.PureComponent {
     });
   }
 };
-_([_], _.prototype, `OnMouseOver`, null), _([_], _.prototype, `OnClick`, null);
+(_([_], _.prototype, `OnMouseOver`, null),
+  _([_], _.prototype, `OnClick`, null));
 var _ = `ARyrUoFBJKQ-`,
   _ = class extends _ {
     performSearch(_) {
@@ -631,11 +633,11 @@ var _ = `ARyrUoFBJKQ-`,
     m_iMentionSearchStartOffset;
     m_iMentionSearchCancelledOffset;
     constructor(_) {
-      super(_),
+      (super(_),
         (this.state = {
           mentionSearch: void 0,
           activeSuggestSearchType: void 0,
-        });
+        }));
     }
     BindMentionDialog(_) {
       this.m_MentionDialog = _ ?? void 0;
@@ -672,13 +674,13 @@ var _ = `ARyrUoFBJKQ-`,
         _ !== void 0)
       ) {
         let _ = _.substr(0, _);
-        (_ += _), (_ >= _.length || _[_] != ` `) && (_ += ` `);
+        ((_ += _), (_ >= _.length || _[_] != ` `) && (_ += ` `));
         let _ = _.length;
-        (_ += _.substr(_)),
+        ((_ += _.substr(_)),
           (_.value = _),
           (_.selectionStart = _.selectionEnd = _),
           this.props.fnSetText(_),
-          this.FocusTextInput();
+          this.FocusTextInput());
       }
     }
     OnFocus(_) {
@@ -691,12 +693,12 @@ var _ = `ARyrUoFBJKQ-`,
       this.UpdateAutoSearchState();
     }
     ClearMentionSearchState() {
-      (this.m_iMentionSearchStartOffset = void 0),
+      ((this.m_iMentionSearchStartOffset = void 0),
         this.state.activeSuggestSearchType &&
           this.setState({
             activeSuggestSearchType: void 0,
             mentionSearch: void 0,
-          });
+          }));
     }
     OnEmoticonSuggestionSelected(_, _) {
       _
@@ -762,11 +764,11 @@ var _ = `ARyrUoFBJKQ-`,
         return;
       }
       let _ = _.substr(_ + 1, _ - _ - 1);
-      (this.m_iMentionSearchStartOffset = _),
+      ((this.m_iMentionSearchStartOffset = _),
         this.setState({
           activeSuggestSearchType: _,
           mentionSearch: _,
-        });
+        }));
     }
     GetTextAreaRef() {
       return this.descTextAreaRef;
@@ -817,7 +819,7 @@ var _ = `ARyrUoFBJKQ-`,
       });
     }
   };
-_([_], _.prototype, `BindMentionDialog`, null),
+(_([_], _.prototype, `BindMentionDialog`, null),
   _([_], _.prototype, `OnKeyDown`, null),
   _([_], _.prototype, `OnFocus`, null),
   _([_], _.prototype, `OnKeyPress`, null),
@@ -826,7 +828,7 @@ _([_], _.prototype, `BindMentionDialog`, null),
   _([_], _.prototype, `OnBBCodeSuggestionSelected`, null),
   _([_], _.prototype, `FocusTextInput`, null),
   _([_], _.prototype, `GetTextAreaRef`, null),
-  _([_], _.prototype, `GetTextAreaCurrent`, null);
+  _([_], _.prototype, `GetTextAreaCurrent`, null));
 var _ = `AqA5yADf-5M-`,
   _ = `OfpXVyFy5Fo-`,
   _ = `Z2hFr9c9Bx8-`,
@@ -846,9 +848,9 @@ var _ = `AqA5yADf-5M-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.groupid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [3], null);
+        _.Message.initialize(this, _, 0, -1, [3], null));
     }
     static sm_m;
     static sm_mbf;
@@ -881,7 +883,7 @@ var _ = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -902,14 +904,14 @@ var _ = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CFriendsListCategory`;
@@ -918,7 +920,7 @@ var _ = `AqA5yADf-5M-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -943,12 +945,12 @@ var _ = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetCategories_Request`;
@@ -957,9 +959,9 @@ var _ = `AqA5yADf-5M-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.categories || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -980,7 +982,7 @@ var _ = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1001,14 +1003,14 @@ var _ = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetCategories_Response`;
@@ -1017,9 +1019,9 @@ var _ = `AqA5yADf-5M-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.accountid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1049,7 +1051,7 @@ var _ = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1070,14 +1072,14 @@ var _ = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CFriendsListFavoriteEntry`;
@@ -1086,7 +1088,7 @@ var _ = `AqA5yADf-5M-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1111,12 +1113,12 @@ var _ = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetFavorites_Request`;
@@ -1125,9 +1127,9 @@ var _ = `AqA5yADf-5M-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.favorites || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1148,7 +1150,7 @@ var _ = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1169,14 +1171,14 @@ var _ = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetFavorites_Response`;
@@ -1185,9 +1187,9 @@ var _ = `AqA5yADf-5M-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.favorites || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1208,7 +1210,7 @@ var _ = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1229,14 +1231,14 @@ var _ = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_SetFavorites_Request`;
@@ -1245,7 +1247,7 @@ var _ = `AqA5yADf-5M-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1270,12 +1272,12 @@ var _ = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_SetFavorites_Response`;
@@ -1284,9 +1286,9 @@ var _ = `AqA5yADf-5M-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.favorites || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1307,7 +1309,7 @@ var _ = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1328,14 +1330,14 @@ var _ = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_FavoritesChanged_Notification`;
@@ -1344,7 +1346,7 @@ var _ = `AqA5yADf-5M-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1369,12 +1371,12 @@ var _ = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetFriendsList_Request`;
@@ -1383,9 +1385,9 @@ var _ = `AqA5yADf-5M-`,
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.friendslist || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1404,7 +1406,7 @@ var _ = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1425,14 +1427,14 @@ var _ = `AqA5yADf-5M-`,
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CFriendsList_GetFriendsList_Response`;
@@ -1947,7 +1949,7 @@ var _ = `A5DZIArSiNc-`,
     };
     async OnCrop() {
       let _ = this.props.uploadFile.GetCanvasImageSource();
-      _ &&
+      (_ &&
         (await _(
           this.props.uploadFile,
           _,
@@ -1959,7 +1961,7 @@ var _ = `A5DZIArSiNc-`,
           this.GetDestHeight(),
           this.props.fileType,
         )),
-        this.props.closeModal?.();
+        this.props.closeModal?.());
     }
     UpdateCrop(_, _) {
       this.setState({
@@ -2093,7 +2095,7 @@ var _ = `A5DZIArSiNc-`,
       });
     }
   };
-_([_], _.prototype, `OnCrop`, null), _([_], _.prototype, `UpdateCrop`, null);
+(_([_], _.prototype, `OnCrop`, null), _([_], _.prototype, `UpdateCrop`, null));
 async function _(_, _, _, _, _, _, _, _, _) {
   return new Promise((_, _) => {
     let _ = _(_);
@@ -2102,7 +2104,7 @@ async function _(_, _, _, _, _, _, _, _, _) {
       return;
     }
     let _ = document.createElement(`canvas`);
-    (_.width = _),
+    ((_.width = _),
       (_.height = _),
       _.getContext(`2d`)?.drawImage(_, _, _, _, _, 0, 0, _, _),
       _.toBlob((_) => {
@@ -2118,7 +2120,7 @@ async function _(_, _, _, _, _, _, _, _, _) {
               (_.bCropped = !0),
               _())
             : _(`Unable to apply crop into image`);
-      });
+      }));
   });
 }
 function _(_) {
@@ -2141,7 +2143,7 @@ var _ = `_1ZQxfdsiPgM-`,
       _ = () => _.closeModal && _.closeModal(),
       _ = _.GetFilteredClanImages(_, _),
       _ = (_) => {
-        _(_), _();
+        (_(_), _());
       };
     return (0, _.jsx)(_, {
       children: (0, _.jsx)(_, {
@@ -2231,7 +2233,7 @@ function _(_, _, _, _) {
   let _ = [];
   if (_.length > 0) {
     let _ = _.toLocaleLowerCase();
-    for (let _ = 0; _ < _.length; ) {
+    for (let _ = 0; _ < _.length;) {
       let _ = _.indexOf(_, _);
       if (_ < 0) {
         _.push(
@@ -2245,7 +2247,7 @@ function _(_, _, _, _) {
         );
         break;
       }
-      _ < _ &&
+      (_ < _ &&
         _.push(
           (0, _.jsx)(
             `span`,
@@ -2265,7 +2267,7 @@ function _(_, _, _, _) {
             _ + `_` + String(_),
           ),
         ),
-        (_ = _ + _.length);
+        (_ = _ + _.length));
     }
   } else
     _.push(
@@ -2313,7 +2315,7 @@ var _ = class {
   uploadTime;
   fileType;
   constructor(_, _, _, _, _) {
-    _(this),
+    (_(this),
       (this.file = _),
       (this.filename = _),
       (this.fileType = _(_) ?? 0),
@@ -2324,21 +2326,21 @@ var _ = class {
       (this.height = _.height),
       (this.width = _.width),
       (this.m_originalDataUrl = _),
-      (this.dataUrl = _);
+      (this.dataUrl = _));
   }
   ResetImage() {
-    (this.height = this.m_originalSize.height),
+    ((this.height = this.m_originalSize.height),
       (this.width = this.m_originalSize.width),
-      (this.dataUrl = this.m_originalDataUrl);
+      (this.dataUrl = this.m_originalDataUrl));
   }
   GetImageOptionLabel() {}
 };
-_([_], _.prototype, `dataUrl`, void 0),
+(_([_], _.prototype, `dataUrl`, void 0),
   _([_], _.prototype, `width`, void 0),
   _([_], _.prototype, `height`, void 0),
   _([_], _.prototype, `status`, void 0),
   _([_.ref], _.prototype, `message`, void 0),
-  _([_], _.prototype, `language`, void 0);
+  _([_], _.prototype, `language`, void 0));
 var _ = 960,
   _ = 311,
   _ = 480,
@@ -2348,7 +2350,7 @@ var _ = 960,
     m_currentImageOption = void 0;
     m_currentImageOptionKey = void 0;
     constructor(_, _, _, _, _, _) {
-      super(_, _, _, _, _), _(this), (this.m_rgImageOptions = _);
+      (super(_, _, _, _, _), _(this), (this.m_rgImageOptions = _));
     }
     IsValidAssetType(_, _) {
       let _ = 0,
@@ -2360,7 +2362,7 @@ var _ = 960,
           this.m_rgImageOptions.some(
             (_) => _.sKey == this.GetCurrentImageOption()?.sKey,
           );
-      if (_) (_ = _.width), (_ = _.height), (_ = !0);
+      if (_) ((_ = _.width), (_ = _.height), (_ = !0));
       else if (this.GetCurrentImageOption()) {
         let _ = _[this.GetCurrentImageOption().artworkType];
         _ &&
@@ -2437,15 +2439,16 @@ var _ = 960,
       return this.m_currentImageOption ?? this.ComputeDefaultImageOption();
     }
     SetCurrentImageOption(_) {
-      (this.m_currentImageOption = _), (this.m_currentImageOptionKey = _?.sKey);
+      ((this.m_currentImageOption = _),
+        (this.m_currentImageOptionKey = _?.sKey));
     }
   };
-_([_], _.prototype, `m_currentImageOption`, void 0),
-  _([_], _.prototype, `m_currentImageOptionKey`, void 0);
+(_([_], _.prototype, `m_currentImageOption`, void 0),
+  _([_], _.prototype, `m_currentImageOptionKey`, void 0));
 var _ = class extends _ {
     video;
     constructor(_, _, _, _, _, _, _) {
-      super(_, _, _, _, _, _), (this.video = _);
+      (super(_, _, _, _, _, _), (this.video = _));
     }
     BIsOriginalMinimumDimensions(_) {
       return _(this.video.videoWidth, this.video.videoHeight, _.artworkType);
@@ -2481,10 +2484,10 @@ var _ = class extends _ {
     localizedImageGroupPrimaryImage;
     media;
     constructor(_, _, _, _, _, _, _, _) {
-      super(_, _, _, _, _, _),
+      (super(_, _, _, _, _, _),
         _(this),
         (this.media = _),
-        (this.localizedImageGroupPrimaryImage = _);
+        (this.localizedImageGroupPrimaryImage = _));
     }
     IsValidAssetType(_, _) {
       return (
@@ -2542,7 +2545,7 @@ function _(_, _, _) {
   });
   return (
     _.forEach((_) => {
-      (_.status = `waiting`), (_.message = ``);
+      ((_.status = `waiting`), (_.message = ``));
     }),
     _
   );
@@ -2553,13 +2556,13 @@ async function _(_, _, _, _, _) {
   for (let _ of _) {
     _.status = `uploading`;
     let _ = await _(_, _.filename, _.language ?? -1, _);
-    (_.status = _.bSuccess ? `success` : `failed`),
+    ((_.status = _.bSuccess ? `success` : `failed`),
       (_.message = !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ``),
       _.push({
         bSuccess: _.bSuccess,
         image: _,
         uploadResult: _.result,
-      });
+      }));
   }
   return _;
 }
@@ -2568,17 +2571,17 @@ async function _(_, _, _, _, _, _) {
     _ = [],
     _ = 0,
     _ = async () => {
-      for (; _ < _.length; ) {
+      for (; _ < _.length;) {
         let _ = _++,
           _ = _[_];
         _.status = `uploading`;
         let _ = await _(_, _.filename, _.language ?? -1, _);
-        (_.status = _.bSuccess ? `success` : `failed`),
+        ((_.status = _.bSuccess ? `success` : `failed`),
           (_.message = !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ``),
           (_[_] = {
             image: _,
             uploadResult: _,
-          });
+          }));
       }
     },
     _ = Array.from(
@@ -2694,12 +2697,12 @@ var _ = class extends _ {
   m_localizedImageGroupPrimaryImage;
   m_lastError = void 0;
   constructor(_, _, _, _) {
-    super(),
+    (super(),
       _(this),
       (this.m_clanSteamID = _),
       (this.m_rgImageOptions = _(_)),
       (this.m_localizedImageGroupPrimaryImage = _),
-      (this.m_clanImagesV2 = _ ?? !1);
+      (this.m_clanImagesV2 = _ ?? !1));
   }
   GetClanSteamID() {
     return this.m_clanSteamID;
@@ -2722,7 +2725,7 @@ var _ = class extends _ {
       _,
       this.m_localizedImageGroupPrimaryImage,
     );
-    return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+    return ((this.m_filesToUpload = [...this.m_filesToUpload, _]), !0);
   }
   async AddExistingClanImage(_, _ = 0) {
     let _ = _.GetHashAndExt(_);
@@ -2737,8 +2740,8 @@ var _ = class extends _ {
     return await this.AddImage(_, _);
   }
   DeleteUploadImageByIndex(_) {
-    this.m_filesToUpload.splice(_, 1),
-      (this.m_filesToUpload = [...this.m_filesToUpload]);
+    (this.m_filesToUpload.splice(_, 1),
+      (this.m_filesToUpload = [...this.m_filesToUpload]));
   }
   DeleteUploadImage(_) {
     let _ = this.m_filesToUpload.findIndex(
@@ -2780,7 +2783,7 @@ var _ = class extends _ {
     return this.m_filesCompleted.indexOf(_) != -1;
   }
   RetryAllFailedUploads() {
-    this.CancelAllUploads(), this.UploadAllImages();
+    (this.CancelAllUploads(), this.UploadAllImages());
   }
   async handleUploadRefresh(_) {
     await _.LoadClanImages(this.m_clanSteamID, !0, _);
@@ -2793,13 +2796,13 @@ var _ = class extends _ {
       _ = _.GetCurrentImageOption(),
       _ = _.GetResizeDimension(),
       _ = new FormData();
-    _.append(`clanimage`, _, _),
+    (_.append(`clanimage`, _, _),
       _.append(`sessionid`, _()),
       this.m_clanImagesV2 && _.append(`clan_images_v2`, `1`),
       _?.artworkType && _.append(`arttype`, _.artworkType),
       _ &&
         _.length > 0 &&
-        _.append(`resize`, _.map((_) => _.width + `x` + _.height).join(`,`));
+        _.append(`resize`, _.map((_) => _.width + `x` + _.height).join(`,`)));
     let _ = `/uploadimage/`,
       _ = this.m_localizedImageGroupPrimaryImage;
     _ &&
@@ -2827,15 +2830,15 @@ var _ = class extends _ {
       _,
       _ = !0;
     try {
-      (_ = await _.default.post(_, _, _)), this.m_filesCompleted.push(_);
+      ((_ = await _.default.post(_, _, _)), this.m_filesCompleted.push(_));
     } catch (_) {
-      (_ = !1),
+      ((_ = !1),
         (this.m_lastError = {
           file: _,
           status: _.response ? _.response.status : 500,
           message: _(_).strErrorMsg,
         }),
-        (_ = _.response);
+        (_ = _.response));
     }
     return (
       _ || (await this.handleUploadRefresh(_)),
@@ -2846,14 +2849,14 @@ var _ = class extends _ {
     );
   }
 };
-_([_], _.prototype, `m_filesToUpload`, void 0),
+(_([_], _.prototype, `m_filesToUpload`, void 0),
   _([_], _.prototype, `m_filesCompleted`, void 0),
   _([_], _.prototype, `m_lastError`, void 0),
   _([_], _.prototype, `AddImage`, null),
   _([_], _.prototype, `AddExistingClanImage`, null),
   _([_], _.prototype, `DeleteUploadImageByIndex`, null),
   _([_], _.prototype, `DeleteUploadImage`, null),
-  _([_], _.prototype, `ClearImages`, null);
+  _([_], _.prototype, `ClearImages`, null));
 var _ = class extends _ {
     constructor(_, _, _) {
       super(_, _, _, !1);
@@ -2960,7 +2963,7 @@ var _ = _((_) => {
                   thumb_url: _,
                   uploaded_time: Date.now() / 1e3,
                 };
-              _(_), _(_);
+              (_(_), _(_));
             }
           }
         } finally {
@@ -2973,7 +2976,7 @@ var _ = _((_) => {
     if (_ && _.GetFilesToUpload().length > 0) {
       _ = _.GetUploadImages()[0];
       let _ = _.IsValidAssetType(_);
-      (_ = _.error), (_ = _.needsCrop);
+      ((_ = _.error), (_ = _.needsCrop));
     }
     return (0, _.jsxs)(_.Fragment, {
       children: [
@@ -3033,12 +3036,12 @@ var _ = _((_) => {
     m_cancelSignal = _.default.CancelToken.source();
     static s_formattingHelp = new Map();
     constructor(_) {
-      super(_),
+      (super(_),
         (this.state = {
           formattingHelp: {
             __html: _.s_formattingHelp.get(_.formatType) ?? ``,
           },
-        });
+        }));
     }
     componentDidMount() {
       this.AjaxGetFormattingHelp().catch((_) => {
@@ -3063,7 +3066,7 @@ var _ = _((_) => {
             sessionid: _(),
           },
           _;
-        (_ = await _.default.get(_.GetHelpURL(this.props.formatType, !0), {
+        ((_ = await _.default.get(_.GetHelpURL(this.props.formatType, !0), {
           params: _,
           cancelToken: this.m_cancelSignal.token,
         })),
@@ -3072,7 +3075,7 @@ var _ = _((_) => {
             formattingHelp: {
               __html: _.data,
             },
-          });
+          }));
       }
     }
     render() {
@@ -3105,10 +3108,10 @@ var _,
   _ = class extends _.Component {
     descAutoTextAreaRef = _.createRef();
     constructor(_) {
-      super(_),
+      (super(_),
         (this.state = {
           bShowDragTarget: !1,
-        });
+        }));
     }
     componentDidMount() {
       _.AddClanImageDragListener(this.ClanImageDragListener);
@@ -3195,11 +3198,11 @@ var _,
       });
     }
   };
-_([_], _.prototype, `ClanImageDragListener`, null),
+(_([_], _.prototype, `ClanImageDragListener`, null),
   _([_], _.prototype, `onFocus`, null),
   _([_], _.prototype, `OnTextAreaDropListener`, null),
   _([_], _.prototype, `GetTextAreaRef`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class _ {
     static BIsFireFox() {
       return !!new RegExp(/Firefox\/([0-9\.]+)(?:\s|$)/i).exec(
@@ -3209,9 +3212,9 @@ var _ = class _ {
     static replaceSelection(_, _) {
       if (!_) return;
       let _ = _.selectionStart;
-      _.focus(),
+      (_.focus(),
         _.InsertTextAtSelect(_, _),
-        _.setSelectionRange(_, _ + _.length);
+        _.setSelectionRange(_, _ + _.length));
     }
     static getSelectedString(_) {
       return _
@@ -3222,11 +3225,11 @@ var _ = class _ {
       if (!_) return;
       let _ = _.getSelectedString(_),
         _ = ``;
-      (_ =
+      ((_ =
         _.indexOf(_) == 0 && _.lastIndexOf(_) == _.length - _.length
           ? _.substr(_.length, _.length - _.length - _.length)
           : _ + _ + _),
-        _.replaceSelection(_, _);
+        _.replaceSelection(_, _));
     }
     static append(_, _) {
       _ &&
@@ -3263,7 +3266,8 @@ var _ = class _ {
         let _ = new Event(`input`, {
           bubbles: !0,
         });
-        _.dispatchEvent(_), (_.selectionStart = _.selectionEnd = _ + _.length);
+        (_.dispatchEvent(_),
+          (_.selectionStart = _.selectionEnd = _ + _.length));
       }
       _.focus();
     }
@@ -3323,8 +3327,7 @@ var _ = class _ {
           _.getSelectedString(_)
             .split(`
 `)
-            .map((_) => (_.match(/\*+\s/) ? `[*]` : `[*] `) + _)
-            .join(`
+            .map((_) => (_.match(/\*+\s/) ? `[*]` : `[*] `) + _).join(`
 `) +
           `
 ` +
@@ -3400,8 +3403,8 @@ var _ = class _ {
     }
     OnEmoticonSelected(_, _ = !1) {
       let _ = `\u02D0${_}\u02D0`;
-      _.replaceSelection(this.props.fnTextareaRef()?.current, _),
-        this.props.fnTextareaRef()?.current?.focus();
+      (_.replaceSelection(this.props.fnTextareaRef()?.current, _),
+        this.props.fnTextareaRef()?.current?.focus());
     }
     BSupports(_) {
       return this.props.supportBBCodes.findIndex((_) => _ == _) >= 0;
@@ -3567,7 +3570,7 @@ var _ = class _ {
       );
     }
   };
-_([_], _.prototype, `onBold`, null),
+(_([_], _.prototype, `onBold`, null),
   _([_], _.prototype, `onItalics`, null),
   _([_], _.prototype, `onUnderline`, null),
   _([_], _.prototype, `onStrikeThrough`, null),
@@ -3583,7 +3586,7 @@ _([_], _.prototype, `onBold`, null),
   _([_], _.prototype, `OnOpenImageDialog`, null),
   _([_], _.prototype, `OnOpenSpeakerDialog`, null),
   _([_], _.prototype, `OnEmoticonSelected`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 function _(_) {
   return (0, _.jsx)(`span`, {
     onClick: _.onClick,
@@ -3784,14 +3787,14 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnYoutubeInsertLink`, null),
+(_([_], _.prototype, `OnYoutubeInsertLink`, null),
   _([_], _.prototype, `OnUrlChange`, null),
   _([_], _.prototype, `OnLeftSelected`, null),
   _([_], _.prototype, `OnRightSelected`, null),
   _([_], _.prototype, `OnFullSelected`, null),
   _([_], _.prototype, `OnSummarySelected`, null),
   _([_], _.prototype, `OnOuterDivClickPassDown`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class extends _.Component {
   static {
     _ = this;
@@ -3891,10 +3894,10 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `onLinkTitleUpdate`, null),
+(_([_], _.prototype, `onLinkTitleUpdate`, null),
   _([_], _.prototype, `onLinkURLUpdate`, null),
   _([_], _.prototype, `onInsertLink`, null),
-  (_ = _ = _([_], _));
+  (_ = _ = _([_], _)));
 var _ = class extends _.Component {
   refFirstInput = _.createRef();
   state = {
@@ -3908,10 +3911,10 @@ var _ = class extends _.Component {
     let { anchorURL: _, imgURL: _ } = this.state,
       _ = ``,
       _ = ``;
-    _ && _.length > 0 && ((_ += `[url=` + _ + `]`), (_ = `[/url]` + _)),
+    (_ && _.length > 0 && ((_ += `[url=` + _ + `]`), (_ = `[/url]` + _)),
       (_ += `[img]` + _),
       (_ = `[/img]` + _),
-      _.wrapBBCode(_, _, this.props.textareaRef.current);
+      _.wrapBBCode(_, _, this.props.textareaRef.current));
   }
   OnImageURLChange(_) {
     this.state.imgURL != _.target.value &&
@@ -3989,10 +3992,10 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnImageInsert`, null),
+(_([_], _.prototype, `OnImageInsert`, null),
   _([_], _.prototype, `OnImageURLChange`, null),
   _([_], _.prototype, `OnAnchorURLChange`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = (_) => {
   let [_, _] = _.useState(``),
     [_, _] = _.useState(``),
@@ -4012,9 +4015,9 @@ var _ = (_) => {
         let _ = _ + `/` + _.clanAccountID + `/` + _.GetHashAndExt(_);
         _ += ` photo="${_}"`;
       }
-      _ && (_ += ` steamid="${_.ConvertTo64BitString()}"`),
+      (_ && (_ += ` steamid="${_.ConvertTo64BitString()}"`),
         (_ += `]${_}[/speaker]`),
-        _.replaceSelection(_.textareaRef.current, _);
+        _.replaceSelection(_.textareaRef.current, _));
     },
     _ = _.trim().length != 0 && _.trim().length != 0;
   return (0, _.jsx)(_, {
@@ -4204,11 +4207,11 @@ var _ = class extends _.Component {
   m_isMounted = !1;
   m_bAppend = !1;
   constructor(_) {
-    super(_),
+    (super(_),
       (this.state = {
         bPreserveNewLines: !1,
         strHTMLData: ``,
-      });
+      }));
   }
   componentDidMount() {
     this.m_isMounted = !0;
@@ -4217,10 +4220,10 @@ var _ = class extends _.Component {
     this.m_isMounted = !1;
   }
   OnConvertAndOverriteHTML() {
-    (this.m_bAppend = !1), this.ConvertBBCode();
+    ((this.m_bAppend = !1), this.ConvertBBCode());
   }
   OnConvertAndAppendHTML() {
-    (this.m_bAppend = !0), this.ConvertBBCode();
+    ((this.m_bAppend = !0), this.ConvertBBCode());
   }
   async ConvertHtmlToBBCode(_, _) {
     let _ = new URLSearchParams();
@@ -4236,7 +4239,7 @@ var _ = class extends _.Component {
     );
   }
   ConvertBBCode() {
-    this.setState({
+    (this.setState({
       bConverting: !0,
     }),
       this.ConvertHtmlToBBCode(
@@ -4269,7 +4272,7 @@ var _ = class extends _.Component {
               strTitle: _(`#EventEditor_ConvertHTML_Error`),
             },
           );
-        });
+        }));
   }
   OnCheckboxChange(_) {
     let _ = _.target.checked;
@@ -4382,11 +4385,11 @@ var _ = class extends _.Component {
           });
   }
 };
-_([_], _.prototype, `OnConvertAndOverriteHTML`, null),
+(_([_], _.prototype, `OnConvertAndOverriteHTML`, null),
   _([_], _.prototype, `OnConvertAndAppendHTML`, null),
   _([_], _.prototype, `OnCheckboxChange`, null),
   _([_], _.prototype, `OnTextAreaChange`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class extends _.Component {
   GenerateLanguageOptions() {
     let _ = [],
@@ -4449,7 +4452,7 @@ var _ = class extends _.Component {
       let _ = _ && _(_.eLang),
         _ = _ && _(_.eLang),
         _ = _.sLocName;
-      _ &&
+      (_ &&
         _ !== 0 &&
         ((_ += ` `),
         (_ += _(
@@ -4475,7 +4478,7 @@ var _ = class extends _.Component {
             },
             `langpicker` + _.eLang + (_ ? `_hasdata` : ``),
           ),
-        );
+        ));
     }
     return _;
   }
@@ -4498,47 +4501,4 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnLanguageChange`, null), (_ = _([_], _));
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};
+(_([_], _.prototype, `OnLanguageChange`, null), (_ = _([_], _)));

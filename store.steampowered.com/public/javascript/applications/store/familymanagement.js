@@ -185,7 +185,7 @@ function un(e, t, n) {
         t = Math.round((Date.now() - c) * 100) / 100,
         r = t / 16,
         i = (e, t) => {
-          for (e = String(e); e.length < t; ) e = ` ` + e;
+          for (e = String(e); e.length < t;) e = ` ` + e;
           return e;
         };
       console.info(
@@ -197,7 +197,7 @@ function un(e, t, n) {
         n?.key,
       );
     }
-    return (a = n?.onChange) == null || a.call(n, i), i;
+    return ((a = n?.onChange) == null || a.call(n, i), i);
   }
   return (
     (a.updateDeps = (e) => {
@@ -214,7 +214,7 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
   pn = (e, t, n) => {
     let r;
     return function (...i) {
-      e.clearTimeout(r), (r = e.setTimeout(() => t.apply(this, i), n));
+      (e.clearTimeout(r), (r = e.setTimeout(() => t.apply(this, i), n)));
     };
   },
   mn = (e) => {
@@ -296,17 +296,17 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
             ),
       o = (r) => () => {
         let { horizontal: o, isRtl: s } = e.options;
-        (i = o ? n.scrollLeft * ((s && -1) || 1) : n.scrollTop), a(), t(i, r);
+        ((i = o ? n.scrollLeft * ((s && -1) || 1) : n.scrollTop), a(), t(i, r));
       },
       s = o(!0),
       c = o(!1);
-    c(), n.addEventListener(`scroll`, s, vn);
+    (c(), n.addEventListener(`scroll`, s, vn));
     let l = e.options.useScrollendEvent && bn;
     return (
       l && n.addEventListener(`scrollend`, c, vn),
       () => {
-        n.removeEventListener(`scroll`, s),
-          l && n.removeEventListener(`scrollend`, c);
+        (n.removeEventListener(`scroll`, s),
+          l && n.removeEventListener(`scrollend`, c));
       }
     );
   },
@@ -327,17 +327,17 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
               e.options.isScrollingResetDelay,
             ),
       o = (r) => () => {
-        (i = n[e.options.horizontal ? `scrollX` : `scrollY`]), a(), t(i, r);
+        ((i = n[e.options.horizontal ? `scrollX` : `scrollY`]), a(), t(i, r));
       },
       s = o(!0),
       c = o(!1);
-    c(), n.addEventListener(`scroll`, s, vn);
+    (c(), n.addEventListener(`scroll`, s, vn));
     let l = e.options.useScrollendEvent && bn;
     return (
       l && n.addEventListener(`scrollend`, c, vn),
       () => {
-        n.removeEventListener(`scroll`, s),
-          l && n.removeEventListener(`scrollend`, c);
+        (n.removeEventListener(`scroll`, s),
+          l && n.removeEventListener(`scrollend`, c));
       }
     );
   },
@@ -363,7 +363,7 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
   },
   En = class {
     constructor(e) {
-      (this.unsubs = []),
+      ((this.unsubs = []),
         (this.scrollElement = null),
         (this.targetWindow = null),
         (this.isScrolling = !1),
@@ -394,7 +394,7 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
           return {
             disconnect: () => {
               var n;
-              (n = t()) == null || n.disconnect(), (e = null);
+              ((n = t()) == null || n.disconnect(), (e = null));
             },
             observe: (e) => t()?.observe(e, { box: `border-box` }),
             unobserve: (e) => t()?.unobserve(e),
@@ -402,7 +402,7 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
         })()),
         (this.range = null),
         (this.setOptions = (e) => {
-          Object.entries(e).forEach(([t, n]) => {
+          (Object.entries(e).forEach(([t, n]) => {
             n === void 0 && delete e[t];
           }),
             (this.options = {
@@ -430,7 +430,7 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
               useScrollendEvent: !1,
               useAnimationFrameWithResizeObserver: !1,
               ...e,
-            });
+            }));
         }),
         (this.notify = (e) => {
           var t, n;
@@ -459,11 +459,11 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
           },
         )),
         (this.cleanup = () => {
-          this.unsubs.filter(Boolean).forEach((e) => e()),
+          (this.unsubs.filter(Boolean).forEach((e) => e()),
             (this.unsubs = []),
             this.observer.disconnect(),
             (this.scrollElement = null),
-            (this.targetWindow = null);
+            (this.targetWindow = null));
         }),
         (this._didMount = () => () => {
           this.cleanup();
@@ -475,7 +475,7 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
               this.maybeNotify();
               return;
             }
-            (this.scrollElement = e),
+            ((this.scrollElement = e),
               (this.targetWindow =
                 this.scrollElement && `ownerDocument` in this.scrollElement
                   ? this.scrollElement.ownerDocument.defaultView
@@ -489,12 +489,12 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
               }),
               this.unsubs.push(
                 this.options.observeElementRect(this, (e) => {
-                  (this.scrollRect = e), this.maybeNotify();
+                  ((this.scrollRect = e), this.maybeNotify());
                 }),
               ),
               this.unsubs.push(
                 this.options.observeElementOffset(this, (e, t) => {
-                  (this.scrollAdjustments = 0),
+                  ((this.scrollAdjustments = 0),
                     (this.scrollDirection = t
                       ? this.getScrollOffset() < e
                         ? `forward`
@@ -502,9 +502,9 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
                       : null),
                     (this.scrollOffset = e),
                     (this.isScrolling = t),
-                    this.maybeNotify();
+                    this.maybeNotify());
                 }),
-              );
+              ));
           }
         }),
         (this.getSize = () =>
@@ -602,7 +602,7 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
                 f = o ? o.lane : i % this.options.lanes;
               s[i] = { index: i, start: c, size: u, end: d, key: e, lane: f };
             }
-            return (this.measurementsCache = s), s;
+            return ((this.measurementsCache = s), s);
           },
           { key: !1, debug: () => this.options.debug },
         )),
@@ -664,12 +664,12 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
           if (!r) return;
           let i = r.key,
             a = this.elementsCache.get(i);
-          a !== e &&
+          (a !== e &&
             (a && this.observer.unobserve(a),
             this.observer.observe(e),
             this.elementsCache.set(i, e)),
             e.isConnected &&
-              this.resizeItem(n, this.options.measureElement(e, t, this));
+              this.resizeItem(n, this.options.measureElement(e, t, this)));
         }),
         (this.resizeItem = (e, t) => {
           let n = this.measurementsCache[e];
@@ -715,8 +715,8 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
         (this.getOffsetForAlignment = (e, t, n = 0) => {
           let r = this.getSize(),
             i = this.getScrollOffset();
-          t === `auto` && (t = e >= i + r ? `end` : `start`),
-            t === `center` ? (e += (n - r) / 2) : t === `end` && (e -= r);
+          (t === `auto` && (t = e >= i + r ? `end` : `start`),
+            t === `center` ? (e += (n - r) / 2) : t === `end` && (e -= r));
           let a = this.getTotalSize() + this.options.scrollMargin - r;
           return Math.max(Math.min(a, e), 0);
         }),
@@ -743,7 +743,7 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
           e,
           { align: t = `start`, behavior: n } = {},
         ) => {
-          n === `smooth` &&
+          (n === `smooth` &&
             this.isDynamicMode() &&
             console.warn(
               "The `smooth` scroll behavior is not fully supported with dynamic size.",
@@ -751,15 +751,15 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
             this._scrollToOffset(this.getOffsetForAlignment(e, t), {
               adjustments: void 0,
               behavior: n,
-            });
+            }));
         }),
         (this.scrollToIndex = (e, { align: t = `auto`, behavior: n } = {}) => {
-          n === `smooth` &&
+          (n === `smooth` &&
             this.isDynamicMode() &&
             console.warn(
               "The `smooth` scroll behavior is not fully supported with dynamic size.",
             ),
-            (e = Math.max(0, Math.min(e, this.options.count - 1)));
+            (e = Math.max(0, Math.min(e, this.options.count - 1))));
           let r = 0,
             i = (t) => {
               if (!this.targetWindow) return;
@@ -769,14 +769,14 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
                 return;
               }
               let [i, o] = r;
-              this._scrollToOffset(i, { adjustments: void 0, behavior: n }),
+              (this._scrollToOffset(i, { adjustments: void 0, behavior: n }),
                 this.targetWindow.requestAnimationFrame(() => {
                   let t = this.getScrollOffset(),
                     n = this.getOffsetForIndex(e, o);
                   n
                     ? fn(n[0], t) || a(o)
                     : console.warn(`Failed to get offset for index:`, e);
-                });
+                }));
             },
             a = (t) => {
               this.targetWindow &&
@@ -790,7 +790,7 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
           i(t);
         }),
         (this.scrollBy = (e, { behavior: t } = {}) => {
-          t === `smooth` &&
+          (t === `smooth` &&
             this.isDynamicMode() &&
             console.warn(
               "The `smooth` scroll behavior is not fully supported with dynamic size.",
@@ -798,7 +798,7 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
             this._scrollToOffset(this.getScrollOffset() + e, {
               adjustments: void 0,
               behavior: t,
-            });
+            }));
         }),
         (this.getTotalSize = () => {
           let e = this.getMeasurements(),
@@ -808,9 +808,9 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
           else {
             let n = Array(this.options.lanes).fill(null),
               r = e.length - 1;
-            for (; r >= 0 && n.some((e) => e === null); ) {
+            for (; r >= 0 && n.some((e) => e === null);) {
               let t = e[r];
-              n[t.lane] === null && (n[t.lane] = t.end), r--;
+              (n[t.lane] === null && (n[t.lane] = t.end), r--);
             }
             t = Math.max(...n.filter((e) => e !== null));
           }
@@ -823,13 +823,13 @@ var fn = (e, t) => Math.abs(e - t) < 1.01,
           this.options.scrollToFn(e, { behavior: n, adjustments: t }, this);
         }),
         (this.measure = () => {
-          (this.itemSizeCache = new Map()), this.notify(!1);
+          ((this.itemSizeCache = new Map()), this.notify(!1));
         }),
-        this.setOptions(e);
+        this.setOptions(e));
     }
   },
   Dn = (e, t, n, r) => {
-    for (; e <= t; ) {
+    for (; e <= t;) {
       let i = ((e + t) / 2) | 0,
         a = n(i);
       if (a < r) e = i + 1;
@@ -844,19 +844,19 @@ function On({ measurements: e, outerSize: t, scrollOffset: n, lanes: r }) {
   if (e.length <= r) return { startIndex: 0, endIndex: i };
   let o = Dn(0, i, a, n),
     s = o;
-  if (r === 1) for (; s < i && e[s].end < n + t; ) s++;
+  if (r === 1) for (; s < i && e[s].end < n + t;) s++;
   else if (r > 1) {
     let a = Array(r).fill(0);
-    for (; s < i && a.some((e) => e < n + t); ) {
+    for (; s < i && a.some((e) => e < n + t);) {
       let t = e[s];
-      (a[t.lane] = t.end), s++;
+      ((a[t.lane] = t.end), s++);
     }
     let c = Array(r).fill(n + t);
-    for (; o >= 0 && c.some((e) => e >= n); ) {
+    for (; o >= 0 && c.some((e) => e >= n);) {
       let t = e[o];
-      (c[t.lane] = t.start), o--;
+      ((c[t.lane] = t.start), o--);
     }
-    (o = Math.max(0, o - (o % r))), (s = Math.min(i, s + (r - 1 - (s % r))));
+    ((o = Math.max(0, o - (o % r))), (s = Math.min(i, s + (r - 1 - (s % r)))));
   }
   return { startIndex: o, endIndex: s };
 }
@@ -869,8 +869,8 @@ function jn(e) {
       ...e,
       onChange: (n, r) => {
         var i;
-        r ? (0, kn.flushSync)(t) : t(),
-          (i = e.onChange) == null || i.call(e, n, r);
+        (r ? (0, kn.flushSync)(t) : t(),
+          (i = e.onChange) == null || i.call(e, n, r));
       },
     },
     [r] = Y.useState(() => new En(n));
@@ -938,7 +938,7 @@ function Bn(e) {
         }),
         r = [],
         i = t;
-      for (; i && i != null; ) n.observe(i), r.push(i), (i = i.parentElement);
+      for (; i && i != null;) (n.observe(i), r.push(i), (i = i.parentElement));
       return () => {
         r.forEach((e) => n.unobserve(e));
       };
@@ -985,7 +985,7 @@ var Hn = Y.forwardRef(function (e, t) {
           n = Vn(e, d == `window` ? null : t),
           r = t?.getBoundingClientRect(),
           i = () => {
-            d != `window` &&
+            (d != `window` &&
               (te(t || void 0),
               ne((e) => {
                 if (!r) return;
@@ -996,7 +996,7 @@ var Hn = Y.forwardRef(function (e, t) {
                   : { width: t, height: n };
               })),
               w(n),
-              d || ee(t ? `element` : `window`);
+              d || ee(t ? `element` : `window`));
           };
         h ? i() : (0, Y.startTransition)(i);
       },
@@ -1072,7 +1072,7 @@ function Wn(e, t, n) {
 function Gn(e, t, n) {
   let [, r] = (0, Y.useState)(0),
     i = Y.useRef({ bPositionKnown: t, nMargin: n, eRowWindow: `all` });
-  (i.current.bPositionKnown = t), (i.current.nMargin = n);
+  ((i.current.bPositionKnown = t), (i.current.nMargin = n));
   let a = Y.useCallback(
     (e, t) =>
       Xn(e, (n, a) => {
@@ -1086,7 +1086,7 @@ function Gn(e, t, n) {
     observeElementOffset: e ? a : Xn,
     fnGetRowWindow: (r) => {
       let a = e ? Wn(r, t, n) : `all`;
-      return (i.current.eRowWindow = a), a;
+      return ((i.current.eRowWindow = a), a);
     },
   };
 }
@@ -1260,7 +1260,8 @@ function Xn(e, t) {
     n.addEventListener(`scroll`, i, { passive: !0 }),
     n.addEventListener(`scrollend`, a, { passive: !0 }),
     () => {
-      n.removeEventListener(`scroll`, i), n.removeEventListener(`scrollend`, a);
+      (n.removeEventListener(`scroll`, i),
+        n.removeEventListener(`scrollend`, a));
     }
   );
 }
@@ -1333,12 +1334,12 @@ function er(e) {
     f = Math.floor(d / r),
     p = Y.useCallback(
       (e) => {
-        l(e.borderBoxSize[0].inlineSize),
+        (l(e.borderBoxSize[0].inlineSize),
           s &&
             s(
               e.target.ownerDocument.defaultView?.innerWidth || 0,
               e.borderBoxSize[0].inlineSize,
-            );
+            ));
       },
       [s],
     ),
@@ -1592,8 +1593,12 @@ function Ir(e) {
   U(l, `#FamilyManagement_ErrorLoadFamilyInviteGeneric`);
   let b = t(),
     ee = !!Mr(u(), Nr);
-  q(s, `#FamilyManagement_ErrorAcceptInvite`, K.k_EFamilyQueryJoinFamily),
-    q(c, `#FamilyManagement_ErrorDeclineInvite`, K.k_EFamilyQueryDeclineInvite);
+  (q(s, `#FamilyManagement_ErrorAcceptInvite`, K.k_EFamilyQueryJoinFamily),
+    q(
+      c,
+      `#FamilyManagement_ErrorDeclineInvite`,
+      K.k_EFamilyQueryDeclineInvite,
+    ));
   let x = G();
   if (
     (x.isSuccess &&
@@ -1605,22 +1610,22 @@ function Ir(e) {
   if (l.isLoading)
     return (0, X.jsx)(`div`, { className: mr, children: (0, X.jsx)(y, {}) });
   let te = () => {
-      v(null),
+      (v(null),
         s.mutate(null, {
           onSuccess: (e) => {
-            e.cooldown_skip_granted() && h(!0),
+            (e.cooldown_skip_granted() && h(!0),
               e.two_factor_method() === 1
                 ? V.IN_MOBILE_WEBVIEW
                   ? (window.location.href = `steammobile://confirmations?first_of_type=11`)
                   : p(`awaitmobile2fa`)
                 : e.two_factor_method() === 2
                   ? p(`awaitemail2fa`)
-                  : b.push(`/account/familymanagement`);
+                  : b.push(`/account/familymanagement`));
           },
-        });
+        }));
     },
     ne = () => {
-      v(null), c.mutate(), ee && b.push(`/account/familymanagement`);
+      (v(null), c.mutate(), ee && b.push(`/account/familymanagement`));
     },
     C = l.data,
     w = () => p(!1),
@@ -1726,7 +1731,7 @@ function Ir(e) {
                     className: void 0,
                     type: `text`,
                     onChange: (e) => {
-                      _(e.target.value), v(null);
+                      (_(e.target.value), v(null));
                     },
                     value: g,
                     placeholder: N(
@@ -1970,7 +1975,7 @@ function di(e) {
       s.data.slot_cooldown_remaining_seconds() > 0 &&
       s.data.slot_cooldown_overrides() === 0,
     l = (e) => {
-      i(e), o(`selectRole`);
+      (i(e), o(`selectRole`));
     };
   return a === `splash`
     ? (0, X.jsx)(fi, { onClick: () => o(`selectMethod`) })
@@ -2123,7 +2128,7 @@ function gi(e) {
     return (0, X.jsx)(`div`, { className: li, children: (0, X.jsx)(y, {}) });
   let f = a.data,
     p = (e) => {
-      i(``), s(e);
+      (i(``), s(e));
     };
   return (0, X.jsxs)(`div`, {
     className: Gr,
@@ -2591,7 +2596,7 @@ function ya(e) {
     children: (0, X.jsx)(D, {
       strTitle: h,
       onOK: () => {
-        c(null), l.mutate(null, { onSuccess: () => d.push(f.pathname) });
+        (c(null), l.mutate(null, { onSuccess: () => d.push(f.pathname) }));
       },
       closeModal: r,
       children: (0, X.jsx)(`div`, { className: ha, children: m }),
@@ -2615,7 +2620,7 @@ function ba(e) {
     _ = t(),
     { url: v } = l(),
     y = () => {
-      f(null), c(), r();
+      (f(null), c(), r());
     },
     b = () => {
       let e = new A(a.steamid());
@@ -2717,7 +2722,7 @@ function xa(e) {
     { setErrorMessage: s } = H();
   q(o, `#FamilyManagement_ErrorCancelInvite`, K.k_EFamilyQueryDeclineInvite);
   let c = () => {
-      s(null), o.mutate();
+      (s(null), o.mutate());
     },
     l = N(
       `#FamilyManagement_CancelInvitationConfirmationText`,
@@ -2743,7 +2748,7 @@ function Sa(e) {
       window.location.href = V.COMMUNITY_BASE_URL + `profiles/` + i.steamid();
     },
     f = () => {
-      u(null), s(), n();
+      (u(null), s(), n());
     },
     p = N(`#FamilyManagement_ManageDialogTitle`, a?.m_strPlayerName);
   return (0, X.jsxs)(X.Fragment, {
@@ -2811,10 +2816,10 @@ function Ca(e) {
             children: (0, X.jsxs)(D, {
               strTitle: N(`#FamilyManagement_DeleteFamilyConfirmationTitle`),
               onOK: () => {
-                s(null),
+                (s(null),
                   o.mutate(null, {
                     onSuccess: () => d.push(`/account/familymanagement`),
-                  });
+                  }));
               },
               closeModal: a,
               children: [
@@ -2861,7 +2866,7 @@ function Ca(e) {
             className: M(pa, Q),
             noFocusRing: !1,
             onClick: () => {
-              s(null), i();
+              (s(null), i());
             },
             children: N(`#FamilyManagement_DeleteFamilyButton`),
           }),
@@ -3294,7 +3299,7 @@ function vs(e) {
 }
 function ys(e, t, n) {
   let r = e.m_strPlayerName;
-  return t && (r = n ? `${e.m_strPlayerName} (${t})` : `${t}*`), r;
+  return (t && (r = n ? `${e.m_strPlayerName} (${t})` : `${t}*`), r);
 }
 function bs(e) {
   let t = new A(e),
@@ -3313,7 +3318,7 @@ function xs(e) {
     s = o?.get(t.appid) || !1,
     c = O(n),
     l = Y.useCallback(() => {
-      Le(a, !s, [i]), c.mutate(a);
+      (Le(a, !s, [i]), c.mutate(a));
     }, [i, a, c, s]);
   return !r || !a || !a.is_enabled || a.applist_base_id == 0
     ? null
@@ -3336,7 +3341,7 @@ function Ss(e) {
     { mutateAsync: d } = x(t.appid),
     f = V.IN_CLIENT,
     p = Y.useCallback(async () => {
-      await d(!u), o();
+      (await d(!u), o());
     }, [d, u, o]),
     m = Y.useCallback(
       (e) => {
@@ -3404,9 +3409,9 @@ function Cs(e) {
     y = p && p.visible,
     b = Y.useCallback(
       (e) => {
-        Ce((0, X.jsx)(Ss, { item: n, bOwnsGame: _, familyContext: l }), e),
+        (Ce((0, X.jsx)(Ss, { item: n, bOwnsGame: _, familyContext: l }), e),
           e.stopPropagation(),
-          e.preventDefault();
+          e.preventDefault());
       },
       [n, _, l],
     ),
@@ -3444,7 +3449,7 @@ function ws() {
     e,
     Y.useCallback((e, n) => {
       let r;
-      (r = e <= 500 ? 3 : e <= 620 ? 5 : 7), t(r);
+      ((r = e <= 500 ? 3 : e <= 620 ? 5 : 7), t(r));
     }, []),
   ];
 }
@@ -3737,7 +3742,7 @@ function Ls(e) {
     e & (BigInt(1) << BigInt(r))
       ? n == -1 && (n = r)
       : n != -1 && (t.push(Is(n, r)), (n = -1));
-  return n != -1 && (t.push(Is(n, 48)), (n = -1)), t.join(`, `);
+  return (n != -1 && (t.push(Is(n, 48)), (n = -1)), t.join(`, `));
 }
 function Rs(e, t) {
   return t
@@ -3750,8 +3755,8 @@ function zs(e) {
     i = pe(t, n),
     a = nt(t),
     { setErrorMessage: o } = H();
-  U(i, `#FamilyManagement_ErrorModifyParentalSettingsGeneric`),
-    U(a, `#FamilyManagement_ErrorModifyParentalSettingsGeneric`);
+  (U(i, `#FamilyManagement_ErrorModifyParentalSettingsGeneric`),
+    U(a, `#FamilyManagement_ErrorModifyParentalSettingsGeneric`));
   let [s, c] = (0, Y.useState)(``),
     l = Rs(t, r),
     u = ne(l),
@@ -3854,7 +3859,7 @@ function Vs(e) {
     ),
     o = Y.useCallback(
       (e, t) => {
-        i(null), (n.applist_base_id = e.data), r.mutate(n);
+        (i(null), (n.applist_base_id = e.data), r.mutate(n));
       },
       [n, r, i],
     );
@@ -3886,7 +3891,7 @@ function Hs(e) {
           r.img_icon_hash +
           `.jpg`),
     d = Y.useCallback(() => {
-      c(null), Le(n, !l, [o]), a.mutate(n);
+      (c(null), Le(n, !l, [o]), a.mutate(n));
     }, [o, n, a, c, l]);
   return (0, X.jsxs)(I, {
     className: M(so, l && `WKEuj5y5CYU-`),
@@ -3972,7 +3977,7 @@ function Us(e) {
       (0, X.jsx)(st, {
         onCancel: a,
         onOK: () => {
-          t(o), a();
+          (t(o), a());
         },
         strOKText: N(`#Parental_GameList_Button_Apply`),
         className: Lo,
@@ -4061,7 +4066,7 @@ function Gs(e) {
     queryFn: async () => {
       if (e.length < 2) return [];
       let r = dt.Init(wt);
-      r.Body().set_query_name(JSON.stringify(n)),
+      (r.Body().set_query_name(JSON.stringify(n)),
         r.Body().set_search_term(e),
         Xe(r),
         $e(r, { include_basic_info: !0, include_assets: !0 }),
@@ -4070,7 +4075,7 @@ function Gs(e) {
           price_filters: { only_free_items: !0 },
         }),
         r.Body().set_max_results(20),
-        r.Body().set_use_spellcheck(!0);
+        r.Body().set_use_spellcheck(!0));
       let i = await pt.SearchSuggestions(t, r);
       return i.BSuccess()
         ? i
@@ -4139,8 +4144,8 @@ function qs(e, t, n) {
         a = i?.filter((e) => e.app_type == 4 && e.owner_steamids.includes(n));
       return [r, t ? o?.concat(a || []) : []];
     }, [i, o, t, e.steamid]);
-  (o = c?.filter((e) => s.findIndex((t) => t.appid == e.appid) == -1)),
-    (a = a?.filter((e) => c.findIndex((t) => t.appid == e.appid) == -1));
+  ((o = c?.filter((e) => s.findIndex((t) => t.appid == e.appid) == -1)),
+    (a = a?.filter((e) => c.findIndex((t) => t.appid == e.appid) == -1)));
   let l = Y.useMemo(() => {
     let e = new Map();
     return (
@@ -4243,12 +4248,12 @@ function Xs(e) {
     v = (!a && p?.length) || 0,
     y = Y.useCallback(
       (e) => {
-        Le(
+        (Le(
           n,
           e,
           p.map((e) => e.appid),
         ),
-          i.mutate(n);
+          i.mutate(n));
       },
       [n, p, i],
     );
@@ -4344,7 +4349,7 @@ function $s(e) {
     s = Y.useMemo(() => r?.map((e) => ({ appid: e.appid, name: e.name })), [r]),
     c = Y.useCallback(
       (e, t) => {
-        Le(n, t, [e.appid]), o.mutate(n);
+        (Le(n, t, [e.appid]), o.mutate(n));
       },
       [n, o],
     ),
@@ -4386,7 +4391,7 @@ function tc(e) {
     s = Y.useCallback(
       (e) => {
         let t = n.enabled_features ^ (1 << r);
-        (n.enabled_features = t), o.mutate(n);
+        ((n.enabled_features = t), o.mutate(n));
       },
       [o, n, r],
     );
@@ -4506,20 +4511,20 @@ function ic(e) {
     [l, u] = (0, Y.useState)(!1),
     d = (0, Y.useRef)(void 0),
     f = (e) => {
-      o !== null && !r && n !== o && a(i),
-        e.target.releasePointerCapture(e.pointerId);
+      (o !== null && !r && n !== o && a(i),
+        e.target.releasePointerCapture(e.pointerId));
     },
     p = (e) => {
       e.target.releasePointerCapture(e.pointerId);
     },
     m = (e) => {
-      s(!n), u(!0), a(i), e.target.releasePointerCapture(e.pointerId);
+      (s(!n), u(!0), a(i), e.target.releasePointerCapture(e.pointerId));
     },
     h = () => {
       s(null);
     },
     g = () => {
-      !r && !l && a(i), s(null), u(!1);
+      (!r && !l && a(i), s(null), u(!1));
     };
   return (0, X.jsx)(I, {
     ref: d,
@@ -4599,7 +4604,7 @@ function oc(e) {
     className: _o,
     closeModal: i,
     onOK: () => {
-      c.mutate(s.current), i();
+      (c.mutate(s.current), i());
     },
     strTitle: (0, X.jsx)(St, {
       className: $a,
@@ -4644,13 +4649,13 @@ function cc(e) {
   let s = Y.useCallback(
       (e) => {
         let n = i ^ (BigInt(1) << BigInt(e));
-        (t.allowed_time_windows = n.toString()), a(n);
+        ((t.allowed_time_windows = n.toString()), a(n));
       },
       [i, t],
     ),
     c = Y.useCallback(
       (e) => {
-        (t.allowed_time_windows = e.toString()), a(e);
+        ((t.allowed_time_windows = e.toString()), a(e));
       },
       [t],
     ),
@@ -4713,7 +4718,7 @@ function cc(e) {
 function lc(e, t) {
   let n = BigInt(0),
     r = BigInt(1) << BigInt(e);
-  for (let i = e; i < t; i++) (n |= r), (r <<= BigInt(1));
+  for (let i = e; i < t; i++) ((n |= r), (r <<= BigInt(1)));
   return n;
 }
 function uc(e) {
@@ -4735,18 +4740,18 @@ function uc(e) {
     h = Y.useCallback(
       (e) => {
         let t = e;
-        o(t), t > u && c(t);
+        (o(t), t > u && c(t));
       },
       [u],
     ),
     g = Y.useCallback(
       (e) => {
         let t = e;
-        (t =
+        ((t =
           t.hours() != 0 || t.minutes() != 0
             ? t.day(l.day())
             : t.day(l.day() + 1)),
-          c(t >= l ? t : (0, $.default)(l));
+          c(t >= l ? t : (0, $.default)(l)));
       },
       [l],
     );
@@ -4969,7 +4974,7 @@ function vc(e) {
           e !== -1 && s.splice(e, 1);
         }
       }
-      t(r, s), a.mutate(r);
+      (t(r, s), a.mutate(r));
     },
     p = !r.excluded_store_content_descriptors.includes(n.valueOf()),
     m = !r.excluded_community_content_descriptors.includes(n.valueOf());
@@ -5341,10 +5346,10 @@ function Ac(e) {
   }, [c, s, u]);
   let f = Y.useCallback(() => {
     let e = new De();
-    e.restrictions(!0).set_allowed_daily_minutes(o + c),
+    (e.restrictions(!0).set_allowed_daily_minutes(o + c),
       e.restrictions(!0).set_allowed_time_windows(u.toString()),
       e.set_rtime_expires(t.time_expires()),
-      r.mutateAsync({ bApprove: !0, restrictions: e });
+      r.mutateAsync({ bApprove: !0, restrictions: e }));
   }, [r, o, c, u, t]);
   return (0, X.jsx)(D, {
     className: void 0,
@@ -5577,14 +5582,14 @@ function Lc(e) {
     o = null;
   if (r || a <= 5) o = Rc(t, n, a);
   else {
-    (o = Rc(t, n, 5)),
+    ((o = Rc(t, n, 5)),
       o.push(
         (0, X.jsx)(
           `span`,
           { children: N(`#PurchaseRequest_PackageLinksFinalSeparator`) },
           `sepand`,
         ),
-      );
+      ));
     let e = t.length + n.length - 5;
     o.push(
       (0, X.jsx)(
@@ -5606,7 +5611,7 @@ function Rc(e, t, n) {
     i = 0;
   for (let t = 0; t < e.length && i < n; t++, i++) {
     let a = e[t];
-    r.push((0, X.jsx)(zc, { packageID: a }, a)),
+    (r.push((0, X.jsx)(zc, { packageID: a }, a)),
       i < n - 1 &&
         r.push(
           (0, X.jsx)(
@@ -5614,11 +5619,11 @@ function Rc(e, t, n) {
             { children: N(`#PurchaseRequest_PackageLinksSeparator`) },
             `sep` + a,
           ),
-        );
+        ));
   }
   for (let e = 0; e < t.length && i < n; e++, i++) {
     let a = t[e];
-    r.push((0, X.jsx)(Bc, { bundleID: a }, a)),
+    (r.push((0, X.jsx)(Bc, { bundleID: a }, a)),
       i < n - 1 &&
         r.push(
           (0, X.jsx)(
@@ -5626,7 +5631,7 @@ function Rc(e, t, n) {
             { children: N(`#PurchaseRequest_PackageLinksSeparator`) },
             `sep` + a,
           ),
-        );
+        ));
   }
   return r;
 }
@@ -5684,7 +5689,7 @@ function Hc(e) {
   );
   let s = Vt(n, t.request_id()),
     c = () => {
-      o(null), a.mutate();
+      (o(null), a.mutate());
     },
     l = ``;
   if (t.is_completed())
@@ -5866,7 +5871,7 @@ function hl(e) {
   i.setHours(0, 0, 0, 0);
   let a = [...Array(ml).keys()].map((e) => {
     let t = new Date(i);
-    return t.setDate(t.getDate() - e), t;
+    return (t.setDate(t.getDate() - e), t);
   });
   return (0, X.jsx)(
     `div`,
@@ -5980,7 +5985,8 @@ function yl(e) {
     c = 0,
     l = new Set();
   for (let e of r)
-    (c += Math.min(e.time_end, a) - Math.max(e.time_start, i)), l.add(e.appid);
+    ((c += Math.min(e.time_end, a) - Math.max(e.time_start, i)),
+      l.add(e.appid));
   let u = qc,
     d = Jc,
     f = Math.round((100 * c) / (fl * 3600)),
@@ -6194,10 +6200,10 @@ function El(e) {
   if (r.isLoading) return (0, X.jsx)(y, {});
   let a = r.data?.pending_group_invites().length,
     o = () => {
-      i(``), n.push(`/account/familymanagement/create`);
+      (i(``), n.push(`/account/familymanagement/create`));
     },
     s = () => {
-      i(``), n.push(`/account/familymanagement/join`);
+      (i(``), n.push(`/account/familymanagement/join`));
     },
     c;
   c =
@@ -6344,7 +6350,7 @@ function Ol(e) {
                       (0, X.jsx)(Ye, {
                         type: `text`,
                         onChange: (e) => {
-                          r(e.target.value), u(null);
+                          (r(e.target.value), u(null));
                         },
                         value: n,
                         placeholder: N(
@@ -6354,12 +6360,12 @@ function Ol(e) {
                       (0, X.jsx)(F, {
                         disabled: n.length === 0,
                         onClick: () => {
-                          u(null),
+                          (u(null),
                             i.mutate(n, {
                               onSuccess: (e) => {
                                 e.cooldown_skip_granted() && s();
                               },
-                            });
+                            }));
                         },
                         children: N(`#FamilyManagement_FinalizeCreateFamily`),
                       }),
@@ -6401,7 +6407,7 @@ function kl(e) {
             active: i,
             isCreate: !1,
             closeModal: () => {
-              a(!1), o.push(`/account/familymanagement`);
+              (a(!1), o.push(`/account/familymanagement`));
             },
             cooldownSeconds: n.data?.cooldown_seconds_remaining(),
           }),
@@ -6730,7 +6736,7 @@ function Rl(e) {
     l = Bt(t);
   q(l, `#FamilyManagement_ErrorModifyFamily`, K.k_EFamilyQueryModifyFamily);
   let u = (e) => {
-    o(null), l.mutate(e), i(!1);
+    (o(null), l.mutate(e), i(!1));
   };
   return r && n
     ? (0, X.jsxs)(I, {
@@ -6744,7 +6750,7 @@ function Rl(e) {
             className: Hi,
             type: `text`,
             onChange: (e) => {
-              c(e.target.value), o(null);
+              (c(e.target.value), o(null));
             },
             value: s,
             placeholder: N(`#FamilyManagement_InputNamePlaceholder`),
@@ -6760,7 +6766,7 @@ function Rl(e) {
             className: Wi,
             noFocusRing: !1,
             onClick: () => {
-              i(!1), o(null);
+              (i(!1), o(null));
             },
             children: N(`#FamilyManagement_EditFamilyNameCancelButton`),
           }),
@@ -6777,7 +6783,7 @@ function Rl(e) {
             className: Vi,
             onActivate: n
               ? () => {
-                  i(!0), o(null);
+                  (i(!0), o(null));
                 }
               : void 0,
             children: [

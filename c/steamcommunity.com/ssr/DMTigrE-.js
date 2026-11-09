@@ -15,7 +15,7 @@ var _ = _((_) => {
           : _.toString() === `[object ${_}]`;
       }
       let _ = _;
-      for (; Object.getPrototypeOf(_) !== null; ) _ = Object.getPrototypeOf(_);
+      for (; Object.getPrototypeOf(_) !== null;) _ = Object.getPrototypeOf(_);
       return Object.getPrototypeOf(_) === _;
     }
     _.isPlainObject = _;
@@ -28,11 +28,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -223,10 +223,10 @@ function _(_, _) {
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
     for (_ = 0; _ < _.length; _++)
-      (_ = _[_]),
+      ((_ = _[_]),
         _.indexOf(_) === -1 &&
           {}.propertyIsEnumerable.call(_, _) &&
-          (_[_] = _[_]);
+          (_[_] = _[_]));
   }
   return _;
 }
@@ -244,11 +244,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -357,33 +357,33 @@ function _(_) {
 var _ = (_, _) => {
     var _ = _();
     return (_, _) => (_) => {
-      _?.(_, _, _),
+      (_?.(_, _, _),
         _(
           _({
             activeIndex: String(_),
             activeDataKey: _,
             activeCoordinate: _.tooltipPosition,
           }),
-        );
+        ));
     };
   },
   _ = (_) => {
     var _ = _();
     return (_, _) => (_) => {
-      _?.(_, _, _), _(_());
+      (_?.(_, _, _), _(_()));
     };
   },
   _ = (_, _) => {
     var _ = _();
     return (_, _) => (_) => {
-      _?.(_, _, _),
+      (_?.(_, _, _),
         _(
           _({
             activeIndex: String(_),
             activeDataKey: _,
             activeCoordinate: _.tooltipPosition,
           }),
-        );
+        ));
     };
   },
   _ = [`x`, `y`];
@@ -405,11 +405,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -463,10 +463,10 @@ function _(_, _) {
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
     for (_ = 0; _ < _.length; _++)
-      (_ = _[_]),
+      ((_ = _[_]),
         _.indexOf(_) === -1 &&
           {}.propertyIsEnumerable.call(_, _) &&
-          (_[_] = _[_]);
+          (_[_] = _[_]));
   }
   return _;
 }
@@ -559,11 +559,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -617,10 +617,10 @@ function _(_, _) {
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
     for (_ = 0; _ < _.length; _++)
-      (_ = _[_]),
+      ((_ = _[_]),
         _.indexOf(_) === -1 &&
           {}.propertyIsEnumerable.call(_, _) &&
-          (_[_] = _[_]);
+          (_[_] = _[_]));
   }
   return _;
 }
@@ -885,10 +885,10 @@ function _(_) {
     [_, _] = (0, _.useState)(!1),
     _ = !_,
     _ = (0, _.useCallback)(() => {
-      typeof _ == `function` && _(), _(!1);
+      (typeof _ == `function` && _(), _(!1));
     }, [_]),
     _ = (0, _.useCallback)(() => {
-      typeof _ == `function` && _(), _(!0);
+      (typeof _ == `function` && _(), _(!0));
     }, [_]);
   return _.createElement(
     _,
@@ -1129,7 +1129,7 @@ function _(_) {
     var _ = _(_, _)(_[1], _);
     if (_ === `horizontal`) {
       var [_, _] = [_.scale(_[0]), _.scale(_[1])];
-      (_ = _({
+      ((_ = _({
         axis: _,
         ticks: _,
         bandSize: _,
@@ -1138,7 +1138,7 @@ function _(_) {
         index: _,
       })),
         (_ = _ ?? _ ?? void 0),
-        (_ = _.size);
+        (_ = _.size));
       var _ = _ - _;
       if (
         ((_ = _(_) ? 0 : _),
@@ -1151,7 +1151,7 @@ function _(_) {
         Math.abs(_) > 0 && Math.abs(_) < Math.abs(_))
       ) {
         var _ = _(_ || _) * (Math.abs(_) - Math.abs(_));
-        (_ -= _), (_ += _);
+        ((_ -= _), (_ += _));
       }
     } else {
       var [_, _] = [_.scale(_[0]), _.scale(_[1])];
@@ -1252,11 +1252,11 @@ function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
     var _ = Object.getOwnPropertySymbols(_);
-    _ &&
+    (_ &&
       (_ = _.filter(function (_) {
         return Object.getOwnPropertyDescriptor(_, _).enumerable;
       })),
-      _.push.apply(_, _);
+      _.push.apply(_, _));
   }
   return _;
 }
@@ -1335,7 +1335,9 @@ var _ = (_, _) => _,
         _ = _.filter((_) => _.stackId == null),
         _ = _.reduce(
           (_, _) => (
-            _[_.stackId] || (_[_.stackId] = []), _[_.stackId].push(_), _
+            _[_.stackId] || (_[_.stackId] = []),
+            _[_.stackId].push(_),
+            _
           ),
           _,
         ),
@@ -1393,9 +1395,9 @@ function _(_, _, _, _, _) {
       var _ = !1,
         _ = _ / _,
         _ = _.reduce((_, _) => _ + (_.barSize || 0), 0);
-      (_ += (_ - 1) * _),
+      ((_ += (_ - 1) * _),
         _ >= _ && ((_ -= (_ - 1) * _), (_ = 0)),
-        _ >= _ && _ > 0 && ((_ = !0), (_ *= 0.9), (_ = _ * _));
+        _ >= _ && _ > 0 && ((_ = !0), (_ *= 0.9), (_ = _ * _)));
       var _ = {
         offset: (((_ - _) / 2) | 0) - _,
         size: 0,
@@ -1410,7 +1412,7 @@ function _(_, _, _, _, _) {
             },
           },
           _ = [..._, _];
-        return (_ = _[_.length - 1].position), _;
+        return ((_ = _[_.length - 1].position), _);
       }, _);
     } else {
       var _ = _(_, _, 0, !0);
@@ -1526,4 +1528,3 @@ var _ = _([_, _, _, _, _, _, _], (_, _, _, _, _, _, _) => {
       }
     },
   );
-export { _ };

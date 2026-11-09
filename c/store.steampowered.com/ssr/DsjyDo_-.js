@@ -192,8 +192,8 @@ function _(_) {
               break;
             case `dropdown`: {
               let _ = _.reference.width;
-              _.floating.width > _ && _ < 200 && (_ = _.floating.width),
-                (_.width = `${_}px`);
+              (_.floating.width > _ && _ < 200 && (_ = _.floating.width),
+                (_.width = `${_}px`));
             }
           }
           typeof _.width == `function` &&
@@ -202,7 +202,7 @@ function _(_) {
               unTargetWidth: _.reference.width,
             }));
           let _ = typeof _ == `number` ? `${_}px` : `var(--spacing-${_})`;
-          (_.maxHeight =
+          ((_.maxHeight =
             typeof _.maxHeight == `function`
               ? _.maxHeight({
                   unAvailableHeight: _,
@@ -214,7 +214,7 @@ function _(_) {
                   ? `${_ - _}px`
                   : `calc( ${_}px - var(--spacing-${_}) )`),
             Object.assign(_.floating.style, _),
-            _.floating.style.setProperty(`--popover-max-height`, _.maxHeight);
+            _.floating.style.setProperty(`--popover-max-height`, _.maxHeight));
         },
       }),
     ),
@@ -227,4 +227,3 @@ var _ = {
   Positioner: _,
   FocusManager: _,
 };
-export { _, _ };

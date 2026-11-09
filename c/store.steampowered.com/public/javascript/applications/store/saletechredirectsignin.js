@@ -4,7 +4,8 @@ import { _ } from "./storeurl.js";
 import { _, _, _, _, _, _, _ } from "./main.js";
 _();
 var _ = {};
-(_.arabic = () => _(() => import(`./saletech_arabic.js`), [], import.meta.url)),
+((_.arabic = () =>
+  _(() => import(`./saletech_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
     _(() => import(`./saletech_brazilian.js`), [], import.meta.url)),
   (_.bulgarian = () =>
@@ -60,7 +61,7 @@ var _ = {};
   (_.ukrainian = () =>
     _(() => import(`./saletech_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./saletech_vietnamese.js`), [], import.meta.url));
+    _(() => import(`./saletech_vietnamese.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -74,7 +75,7 @@ function _(_) {
     onCancel: _,
     strOKButtonText: _.Localize(`#Button_OK`),
     onOK: () => {
-      _(), _();
+      (_(), _());
     },
   });
 }
@@ -104,4 +105,3 @@ function _(_) {
     ],
   });
 }
-export { _, _, _ };

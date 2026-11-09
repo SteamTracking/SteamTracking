@@ -14,7 +14,7 @@ function _(_) {
     [_, _] = (0, _.useState)(``),
     _ = _.length ? _[_.length - 1] : null,
     _ = () => {
-      _(_.slice(0, -1)), _(`reason`);
+      (_(_.slice(0, -1)), _(`reason`));
     },
     _ = () => {
       if (!_ || !_(_)) {
@@ -33,7 +33,7 @@ function _(_) {
     },
     _ = (_) => {
       let _ = _(_) && _.children.length === 1 ? _.children[0] : _;
-      _([..._, _]),
+      (_([..._, _]),
         _(_)
           ? (_(
               _.strOverrideReasonNameLocToken
@@ -44,7 +44,7 @@ function _(_) {
           : _(_) &&
             (_.strWarningBeforeNav
               ? _(`anchorwarning`)
-              : (window.location.href = _.url));
+              : (window.location.href = _.url)));
     },
     _ = _ && _(_) ? _.value : 0,
     _ = [];
@@ -321,4 +321,3 @@ function _(_) {
     ],
   });
 }
-export { _, _ };

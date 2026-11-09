@@ -78,14 +78,14 @@ function G(t) {
     a = t.host_role == `peer` ? `Peer` : `Client`,
     o = null;
   if (n.data_center)
-    (a = `Gameserver`),
+    ((a = `Gameserver`),
       (o = (0, U.jsxs)(v.Fragment, {
         children: [
           (0, U.jsx)(`span`, { className: O, children: i }),
           ` in `,
           (0, U.jsx)(`span`, { className: k, children: n.data_center }),
         ],
-      }));
+      })));
   else if (n.steam_persona) {
     let e = r.COMMUNITY_BASE_URL + `/profiles/` + n.id;
     o = (0, U.jsxs)(v.Fragment, {
@@ -159,7 +159,7 @@ function q(e) {
       let i = parseFloat(r);
       if (i >= 5 && i <= 95) {
         let i = e.ping_pctile[r];
-        i < t && (t = i), i > n && (n = i);
+        (i < t && (t = i), i > n && (n = i));
       }
     }
   return [t, n];
@@ -381,17 +381,17 @@ function Se(e) {
     for (let t = 0; t < e.length; ++t)
       e[t][1] > 0 && ((i ??= t), (a = t + 1), (r += e[t][1]));
     if (r > 0) {
-      (i = Math.max(0, i - 2)), (a = Math.min(e.length, a + 2));
+      ((i = Math.max(0, i - 2)), (a = Math.min(e.length, a + 2)));
       let n = [];
       for (let t = i; t < a; ++t) {
         let [o, s] = e[t];
         t == i && s == 0 && (o = 0);
         let c;
-        (c =
+        ((c =
           t + 1 >= e.length || (t + 1 >= a && s == 0)
             ? Q(o) + `+`
             : o + `-` + Q(e[t + 1][0])),
-          n.push(Y(c, s, r));
+          n.push(Y(c, s, r)));
       }
       t = (0, U.jsx)(`table`, {
         className: H,
@@ -674,7 +674,9 @@ function Te(e) {
   if (s) {
     let e = function (e) {
         let t = [...e];
-        return t.sort((e, t) => (t.active_time || 0) - (e.active_time || 0)), t;
+        return (
+          t.sort((e, t) => (t.active_time || 0) - (e.active_time || 0)), t
+        );
       },
       n = t.client_sessions && t.client_sessions.length > 0,
       r = t.peer_sessions && t.peer_sessions.length > 0;
@@ -751,7 +753,7 @@ function Ee(t) {
       s = e.get(`app_name1`) || ``,
       l = e.get(`app_value1`) || ``;
     if ((w(t), E(a), O(o), M(s), P(l), !e.toString() && k == 0)) return;
-    c(!0), m(``), i > 0 && e.set(`appid`, `` + i);
+    (c(!0), m(``), i > 0 && e.set(`appid`, `` + i));
     let u = r.PARTNER_BASE_URL + `sdr/ajaxsessionsearch?` + e.toString();
     (async () => {
       try {
@@ -767,20 +769,20 @@ function Ee(t) {
             m(e?.data?.success + ` msg: ` + e?.data?.msg));
       } catch (e) {
         let t = g(e);
-        console.error(`sdrsessionsearch: OnPerformSearch ` + t.strErrorMsg, t),
-          m(t.strErrorMsg);
+        (console.error(`sdrsessionsearch: OnPerformSearch ` + t.strErrorMsg, t),
+          m(t.strErrorMsg));
       }
       c(!1);
     })();
   }, [i, n.location, k]);
   let F = () => {
       let e = new URLSearchParams();
-      C && e.set(`client_id`, C),
+      (C && e.set(`client_id`, C),
         T && e.set(`peer_id`, T),
         D && e.set(`kind`, D),
-        j && N && (e.set(`app_name1`, j), e.set(`app_value1`, N));
+        j && N && (e.set(`app_name1`, j), e.set(`app_value1`, N)));
       let t = { ...n.location };
-      (t.search = e.toString()), t != n.location && n.push(t), A(k + 1);
+      ((t.search = e.toString()), t != n.location && n.push(t), A(k + 1));
     },
     I = null;
   if (h !== void 0) {

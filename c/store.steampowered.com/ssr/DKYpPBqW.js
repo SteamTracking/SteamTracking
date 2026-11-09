@@ -53,7 +53,7 @@ async function _(_, _, _, _, _, _ = {}) {
       use_name_match_scoring: _ = !1,
     } = _,
     _ = _.Init(_);
-  _(_, _),
+  (_(_, _),
     _ && _(_, _.data_request),
     _.Body().set_search_term(_),
     _.Body().set_use_spellcheck(!0),
@@ -61,7 +61,7 @@ async function _(_, _, _, _, _, _ = {}) {
     _ && _.Body().set_filters(_.fromObject(_)),
     _.Body().set_search_tags(_),
     _.Body().set_search_creators(_),
-    _ && _.Body().set_use_name_match_scoring(!0);
+    _ && _.Body().set_use_name_match_scoring(!0));
   let _ = await _.SearchSuggestions(_, _);
   if (!_.BSuccess())
     throw `Error loading search suggestions: ${_.GetErrorMessage()}`;
@@ -81,4 +81,3 @@ async function _(_, _, _, _, _, _ = {}) {
     }
   );
 }
-export { _, _, _, _ };

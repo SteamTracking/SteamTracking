@@ -112,7 +112,7 @@ function _(_) {
     bAlertDialog: !0,
     strTitle: _.Localize(`#PricingDashboard_ApplyConversion_Method`),
     onOK: () => {
-      _(), _ && _();
+      (_(), _ && _());
     },
     strOKButtonText: _(
       _
@@ -475,13 +475,13 @@ function _(_) {
     [_, _] = _.useState(!1);
   return {
     fnPublish: _.useCallback(async () => {
-      _(1), _(void 0), _(!1);
+      (_(1), _(void 0), _(!1));
       let _ = await _(_);
       if (_.success != 1) {
         let _ = _.success == 40;
-        return _(_ ? _.msg : void 0), _(_ && !!_.cooldown), _(3), !1;
+        return (_(_ ? _.msg : void 0), _(_ && !!_.cooldown), _(3), !1);
       }
-      return _(2), !0;
+      return (_(2), !0);
     }, [_, _, _]),
     ePublishState: _,
     strPublishError: _,
@@ -896,7 +896,7 @@ function _(_) {
   for (let _ of _) {
     let { packageID: _, strPriceKey: _, nPriceInCents: _ } = _,
       { nMinPriceInCents: _, nMaxPriceInCents: _ } = _(_, _);
-    _ < _
+    (_ < _
       ? _.push({
           packageID: _,
           strPriceKey: _,
@@ -915,7 +915,7 @@ function _(_) {
         }),
       _.nPriceInCents > _.nOldPriceInCents &&
         (_.add(_.strPriceKey), _(_) && _.add(_.strPriceKey)),
-      _.add(_.packageID);
+      _.add(_.packageID));
   }
   let _ = Array.from(_),
     _ = Array.from(_),
@@ -990,7 +990,7 @@ function _(_) {
                 bOKDisabled: _,
                 strUpdateText: _(`#PackageGrid_NavigateWithoutSavingButton`),
                 onUpdate: () => {
-                  _(), _.closeModal(), _(!0);
+                  (_(), _.closeModal(), _(!0));
                 },
                 onCancel: _.closeModal,
               })
@@ -1212,7 +1212,7 @@ function _(_) {
             return;
           }
         }
-        _(_.length), _(), _();
+        (_(_.length), _(), _());
       })();
     }, []),
     _
@@ -1237,4 +1237,3 @@ function _(_) {
         })
   );
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

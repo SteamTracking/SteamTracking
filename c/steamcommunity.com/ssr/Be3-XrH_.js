@@ -153,14 +153,14 @@ function _(_) {
         _ = ``;
       switch (_) {
         case 1:
-          (_ = _.slice(0, 20)),
+          ((_ = _.slice(0, 20)),
             (_ = _.length),
-            (_ = _.Localize(`#Workshop_OwnedDLC_None_Filter`));
+            (_ = _.Localize(`#Workshop_OwnedDLC_None_Filter`)));
           break;
         case 2:
-          (_ = _.slice(0, 20)),
+          ((_ = _.slice(0, 20)),
             (_ = _.length),
-            (_ = _.Localize(`#Workshop_OwnedDLC_All_Filter`));
+            (_ = _.Localize(`#Workshop_OwnedDLC_All_Filter`)));
       }
       return (0, _.jsxs)(_, {
         direction: `column`,

@@ -12,4 +12,3 @@ function _() {
     _.apply(null, arguments)
   );
 }
-export { _ };

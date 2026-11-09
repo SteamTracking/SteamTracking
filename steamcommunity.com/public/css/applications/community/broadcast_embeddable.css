@@ -5,7 +5,7 @@
   height: 100%;
   display: flex;
   overflow: hidden;
-  container: broadcast-right-panel / inline-size;
+  container: broadcast-right-panel/inline-size;
 }
 ._7FIE12jcFio- .uXv1RHnafMc-,
 ._7FIE12jcFio- .qevodOTO45c- {
@@ -35,7 +35,7 @@
   padding: 5px;
   position: relative;
 }
-@container broadcast-right-panel (width > 250px) {
+@container broadcast-right-panel (width>250px) {
   .l3NO7dsjryo- {
     padding: 0;
   }

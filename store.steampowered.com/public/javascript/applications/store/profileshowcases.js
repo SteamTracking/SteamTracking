@@ -49,13 +49,13 @@ var v = e(t()),
   T = (e) => {
     let { point_cost: t, upgradable_showcases: n, purchased_upgrades: r } = e,
       a = new Map();
-    n.forEach((e) => {
+    (n.forEach((e) => {
       a.set(e, 1);
     }),
       r &&
         r.forEach((e) => {
           a.set(e.customization_type, e.level);
-        });
+        }));
     let c = n.map((e) => {
       let n = a.get(e),
         r = n + 1;
@@ -90,8 +90,8 @@ var v = e(t()),
       } = e,
       c = new Map(),
       l = new Map();
-    n.forEach((e) => {
-      c.set(e, 0), l.set(e, 1);
+    (n.forEach((e) => {
+      (c.set(e, 0), l.set(e, 1));
     }),
       r &&
         r.forEach((e) => {
@@ -100,7 +100,7 @@ var v = e(t()),
       a &&
         a.forEach((e) => {
           l.set(e.customization_type, e.level);
-        });
+        }));
     let u = n.map((e) =>
       (0, x.jsx)(
         C,

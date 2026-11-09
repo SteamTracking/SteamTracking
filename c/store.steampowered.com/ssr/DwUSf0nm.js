@@ -28,10 +28,10 @@ function _(_ = !1) {
   );
 }
 function _() {
-  _(_, `desktop`), `location` in window && location.reload();
+  (_(_, `desktop`), `location` in window && location.reload());
 }
 function _() {
-  _() && _(_), `location` in window && location.reload();
+  (_() && _(_), `location` in window && location.reload());
 }
 var _ = 1,
   _ = 2;
@@ -94,7 +94,7 @@ function _(_) {
     try {
       await _(_, _);
     } catch (_) {
-      console.error(_), _(!1);
+      (console.error(_), _(!1));
       return;
     }
     _ && !_
@@ -159,7 +159,7 @@ var _ = `X-UKhqf-Moc-`,
   _ = `XYfgXgWUac8-`,
   _ = `_7ykpxZ0stGM-`,
   _ = {};
-(_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.brazilian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.bulgarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.czech = () => _(() => import(`./chunk.js`), [], import.meta.url)),
@@ -190,14 +190,17 @@ var _ = `X-UKhqf-Moc-`,
   (_.thai = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.turkish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.ukrainian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
-  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url));
+  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
 var _ = _(_);
 function _(_ = `/logout/`) {
   let _ = document.createElement(`form`);
-  (_.action = _), (_.method = `POST`), document.body.appendChild(_), _.submit();
+  ((_.action = _),
+    (_.method = `POST`),
+    document.body.appendChild(_),
+    _.submit());
 }
 function _(_) {
   let { action: _ } = _,
@@ -1276,7 +1279,7 @@ function _(_) {
     _ = null;
   _(() => {
     for (let _ = _; _ && _.visible; _ = _.submenu)
-      _.push(
+      (_.push(
         (0, _.jsx)(
           _,
           {
@@ -1285,7 +1288,7 @@ function _(_) {
           _.key,
         ),
       ),
-        (_ = _.label);
+        (_ = _.label));
   });
   let _ = _.useCallback(
     (_) => {
@@ -1433,4 +1436,3 @@ function _(_) {
         ..._,
       });
 }
-export { _, _, _, _, _, _ };

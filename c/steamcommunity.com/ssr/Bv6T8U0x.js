@@ -28,4 +28,3 @@ function _(_, _ = null, _ = ``) {
   let _ = `\\[\\/?(?:` + _(_) + `){1,}.*?]`;
   return _.replace(new RegExp(_, `gi`), _);
 }
-export { _, _, _, _ };

@@ -2,7 +2,7 @@ body.forgeyourfate {
   filter: drop-shadow(2px 4px 6px #0006);
   background:
     url(../../../images/applications/store/story_page_bg.jpg?v=valveisgoodatcaching)
-    top no-repeat,
+      top no-repeat,
     #232323;
 }
 .lzdS-shJ99Q- {
@@ -333,9 +333,8 @@ body.forgeyourfate {
 }
 .rjnRPU-qxvU- {
   color: #212121;
-  background:
-    url(../../../images/applications/store/book.jpg?v=valveisgoodatcaching) top
-    / contain no-repeat;
+  background: url(../../../images/applications/store/book.jpg?v=valveisgoodatcaching)
+    top/contain no-repeat;
   border-radius: 5px;
   max-width: 1100px;
   height: 900px;
@@ -431,9 +430,8 @@ body.forgeyourfate {
   font-size: 14px;
 }
 .rjnRPU-qxvU- .Bh4iq-F-F0M- {
-  background:
-    url(../../../images/applications/store/all_frames_sm.png?v=valveisgoodatcaching)
-    top / contain no-repeat;
+  background: url(../../../images/applications/store/all_frames_sm.png?v=valveisgoodatcaching)
+    top/contain no-repeat;
   width: 24vw;
   height: 12vw;
   margin: 10px;

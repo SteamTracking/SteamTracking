@@ -124,9 +124,8 @@
   filter: drop-shadow(0 0 3px #fffc);
   animation: O4ztYm8DYok- var(--sparkle-period) ease-in-out infinite
     calc(
-      -1 *
-      (var(--sparkle-delay) + var(--sparkle-phase, 0)) *
-      var(--sparkle-period)
+      -1 * (var(--sparkle-delay) + var(--sparkle-phase, 0)) *
+        var(--sparkle-period)
     );
   position: absolute;
 }

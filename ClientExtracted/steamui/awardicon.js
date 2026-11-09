@@ -14,7 +14,7 @@
       },
       8216: (c, e, n) => {
         "use strict";
-        n.r(e), n.d(e, { AwardIcon: () => i, AwardIconList: () => u });
+        (n.r(e), n.d(e, { AwardIcon: () => i, AwardIconList: () => u }));
         var s = n(62540),
           l = n(63696),
           _ = n(1276),

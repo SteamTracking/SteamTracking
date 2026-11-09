@@ -307,8 +307,8 @@ function Tt(e) {
               i(A(`#EventDisplay_Share_CopiedToClipboard`));
             })
             .catch((e) => {
-              i(A(`#EventDisplay_Share_FailedToCopyToClipboard`)),
-                console.error(`Failed to copy link to clipboard:`, e);
+              (i(A(`#EventDisplay_Share_FailedToCopyToClipboard`)),
+                console.error(`Failed to copy link to clipboard:`, e));
             });
       },
       [n],
@@ -410,7 +410,7 @@ var J = class extends W.Component {
     bStartMuted: !0,
   };
   async componentDidMount() {
-    await U.Get().LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal),
+    (await U.Get().LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal),
       this.m_cancelSignal.token.reason ||
         this.setState({
           bLoadingPreference: !1,
@@ -432,7 +432,7 @@ var J = class extends W.Component {
       window.setTimeout(() => {
         this.m_cancelSignal.token.reason ||
           this.setState({ style: { ...this.state.style, maxHeight: `100vh` } });
-      }, 10);
+      }, 10));
   }
   componentWillUnmount() {
     this.m_cancelSignal.cancel(`BroadcastEmbeddable component unmounted`);
@@ -442,7 +442,7 @@ var J = class extends W.Component {
     if (!e) return;
     let t = this.state.bExpanded,
       n = x.GetOrCreateBroadcastInfo(e.steamid).m_nAppID;
-    H(n, t ? 2 : 3, e.snr),
+    (H(n, t ? 2 : 3, e.snr),
       t && q()?.AddEvent(gt),
       window.setTimeout(
         () =>
@@ -457,7 +457,7 @@ var J = class extends W.Component {
       t ||
         this.setState({ bExpanded: !this.state.bExpanded }, () =>
           U.Get().SetEmbeddedStreamCollapsed(!this.state.bExpanded),
-        );
+        ));
   }
   OnShrinkTransitionEnd() {
     this.state.innerStyle.maxHeight === `0vh` &&
@@ -466,9 +466,9 @@ var J = class extends W.Component {
       );
   }
   async onStreamSelect(e) {
-    this.setState({ bStartMuted: !1 }),
+    (this.setState({ bStartMuted: !1 }),
       U.Get().GetPlayReadyStream(this.props)?.accountid != e.accountid &&
-        (await U.Get().AttemptToPlayStream(this.props, e));
+        (await U.Get().AttemptToPlayStream(this.props, e)));
   }
   async PlayNextNonVOD() {
     this.setState({ bStartMuted: !1 });
@@ -548,7 +548,7 @@ var J = class extends W.Component {
         s = a.store_title ? a.store_title : a.title,
         c = U.Get().GetConcurrentStreams(this.props) > 1,
         l = () => {
-          a.nAppIDVOD && this.PlayNextNonVOD(), this.props.fnOnVideoEnd?.();
+          (a.nAppIDVOD && this.PlayNextNonVOD(), this.props.fnOnVideoEnd?.());
         };
       return (0, K.jsx)(W.Fragment, {
         children: (0, K.jsxs)(`div`, {
@@ -645,22 +645,25 @@ var J = class extends W.Component {
     return (0, K.jsx)(`div`, { className: `NoBroadcastAvailable` });
   }
 };
-E([O], J.prototype, `ToggleBroadcastExpandShrink`, null),
+(E([O], J.prototype, `ToggleBroadcastExpandShrink`, null),
   E([O], J.prototype, `OnShrinkTransitionEnd`, null),
   E([O], J.prototype, `onStreamSelect`, null),
   E([O], J.prototype, `PlayNextNonVOD`, null),
-  (J = E([r], J));
+  (J = E([r], J)));
 var Y = class extends W.Component {
   m_iVideoContainerRef = W.createRef();
   constructor(e) {
-    super(e),
-      (this.state = { bPopout: !1, bPreventPopup: window.screen.width <= 768 });
+    (super(e),
+      (this.state = {
+        bPopout: !1,
+        bPreventPopup: window.screen.width <= 768,
+      }));
   }
   CloseBroadcastPopup() {
     let e = x.GetOrCreateBroadcastInfo(this.props.stream.steamid).m_nAppID;
-    H(e, 7, this.props.stream.snr),
+    (H(e, 7, this.props.stream.snr),
       q()?.AddEvent(_t),
-      this.setState({ bPopout: !1, bPreventPopup: !0 });
+      this.setState({ bPopout: !1, bPreventPopup: !0 }));
   }
   OnEnter() {
     !this.state.bPreventPopup &&
@@ -712,9 +715,9 @@ var Y = class extends W.Component {
     });
   }
 };
-E([O], Y.prototype, `CloseBroadcastPopup`, null),
+(E([O], Y.prototype, `CloseBroadcastPopup`, null),
   E([O], Y.prototype, `OnEnter`, null),
-  E([O], Y.prototype, `OnLeave`, null);
+  E([O], Y.prototype, `OnLeave`, null));
 function jt(e) {
   let { stream: t } = e,
     [n] = o(() => [t.steamid]),
@@ -754,8 +757,12 @@ var X = class extends W.Component {
   OnToggleChat(e) {
     e.preventDefault();
     let t = x.GetOrCreateBroadcastInfo(this.props.stream.steamid).m_nAppID;
-    H(t, U.Get().GetChatVisibility() === `show` ? 5 : 4, this.props.stream.snr),
-      U.Get().ToggleChatVisibility();
+    (H(
+      t,
+      U.Get().GetChatVisibility() === `show` ? 5 : 4,
+      this.props.stream.snr,
+    ),
+      U.Get().ToggleChatVisibility());
   }
   onWatchBroadcastPage() {
     let e = x.GetOrCreateBroadcastInfo(this.props.stream.steamid).m_nAppID;
@@ -854,9 +861,9 @@ var X = class extends W.Component {
     });
   }
 };
-E([O], X.prototype, `OnToggleChat`, null),
+(E([O], X.prototype, `OnToggleChat`, null),
   E([O], X.prototype, `onWatchBroadcastPage`, null),
-  (X = E([r], X));
+  (X = E([r], X)));
 var Z = class extends W.Component {
     render() {
       let e = this.props.ImgUrl;
@@ -919,7 +926,7 @@ function $(e) {
     o = (0, W.useRef)(null),
     s = (0, W.useMemo)(() => {
       let e = (U.Get().GetStreams(a) ?? []).filter((e) => !r || r(e));
-      return ut(e), e;
+      return (ut(e), e);
     }, [a, r]);
   return (
     (0, W.useEffect)(() => {

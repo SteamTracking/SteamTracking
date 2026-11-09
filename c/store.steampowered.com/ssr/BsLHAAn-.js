@@ -73,7 +73,7 @@ function _() {
   window.location.href = `${_.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
 }
 var _ = {};
-(_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.brazilian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.bulgarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.czech = () => _(() => import(`./chunk.js`), [], import.meta.url)),
@@ -104,7 +104,7 @@ var _ = {};
   (_.thai = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.turkish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.ukrainian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
-  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url));
+  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -118,7 +118,7 @@ function _(_) {
     onCancel: _,
     strOKButtonText: _.Localize(`#Button_OK`),
     onOK: () => {
-      _(), _();
+      (_(), _());
     },
   });
 }
@@ -157,4 +157,3 @@ function _(_) {
     children: _.children(_),
   });
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

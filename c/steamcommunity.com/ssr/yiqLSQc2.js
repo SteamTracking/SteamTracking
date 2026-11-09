@@ -67,9 +67,9 @@ function _(_) {
       errorCode: _.success,
     };
   else if (typeof _ == `string` && _.length > 1024)
-    console.groupCollapsed(`GetMsgAndErrorCodeFromResponse cannot parse: `),
+    (console.groupCollapsed(`GetMsgAndErrorCodeFromResponse cannot parse: `),
       console.warn(_),
-      console.groupEnd();
+      console.groupEnd());
   else if (typeof _ == `object` && _ instanceof _)
     return {
       strErrorMsg: `` + _.GetErrorMessage(),
@@ -91,4 +91,3 @@ Status Code:` +
         errorCode: 2,
       };
 }
-export { _ };

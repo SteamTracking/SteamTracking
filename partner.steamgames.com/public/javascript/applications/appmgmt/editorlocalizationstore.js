@@ -44,19 +44,19 @@ var u = class e {
   }
   static s_globalSingletonStore;
   static Get() {
-    return (e.s_globalSingletonStore ||= new e()), e.s_globalSingletonStore;
+    return ((e.s_globalSingletonStore ||= new e()), e.s_globalSingletonStore);
   }
   constructor() {
     a(this);
   }
 };
-r([e], u.prototype, `m_eCurLang`, void 0),
+(r([e], u.prototype, `m_eCurLang`, void 0),
   r([e], u.prototype, `m_rgHasData`, void 0),
   r([e], u.prototype, `m_bHasLocalizationContext`, void 0),
   r([s], u.prototype, `GetCurEditLanguage`, null),
   r([s], u.prototype, `SetCurEditLanguage`, null),
   r([n.bound], u.prototype, `SetHasLanguage`, null),
-  r([s], u.prototype, `BHasLanguageData`, null);
+  r([s], u.prototype, `BHasLanguageData`, null));
 function d() {
   return l(() => u.Get().GetCurEditLanguage());
 }

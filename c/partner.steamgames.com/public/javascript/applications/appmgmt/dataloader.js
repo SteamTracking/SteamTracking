@@ -9,13 +9,13 @@ var _ = _((_, _) => {
                 _ +
                 `.`),
           );
-        (this._batchLoadFn = _),
+        ((this._batchLoadFn = _),
           (this._maxBatchSize = _(_)),
           (this._batchScheduleFn = _(_)),
           (this._cacheKeyFn = _(_)),
           (this._cacheMap = _(_)),
           (this._batch = null),
-          (this.name = _(_));
+          (this.name = _(_)));
       }
       var _ = _.prototype;
       return (
@@ -46,7 +46,7 @@ var _ = _((_, _) => {
               reject: _,
             });
           });
-          return _ && _.set(_, _), _;
+          return (_ && _.set(_, _), _);
         }),
         (_.loadMany = function (_) {
           if (!_(_))
@@ -72,7 +72,7 @@ var _ = _((_, _) => {
         }),
         (_.clearAll = function () {
           var _ = this._cacheMap;
-          return _ && _.clear(), this;
+          return (_ && _.clear(), this);
         }),
         (_.prime = function (_, _) {
           var _ = this._cacheMap;
@@ -80,10 +80,10 @@ var _ = _((_, _) => {
             var _ = this._cacheKeyFn(_);
             if (_.get(_) === void 0) {
               var _;
-              _ instanceof Error
+              (_ instanceof Error
                 ? ((_ = Promise.reject(_)), _.catch(function () {}))
                 : (_ = Promise.resolve(_)),
-                _.set(_, _);
+                _.set(_, _));
             }
           }
           return this;
@@ -94,10 +94,10 @@ var _ = _((_, _) => {
     _ =
       typeof process == `object` && typeof process.nextTick == `function`
         ? function (_) {
-            (_ ||= Promise.resolve()),
+            ((_ ||= Promise.resolve()),
               _.then(function () {
                 process.nextTick(_);
-              });
+              }));
           }
         : typeof setImmediate == `function`
           ? function (_) {
@@ -184,7 +184,7 @@ Values:
   function _(_, _, _) {
     _(_);
     for (var _ = 0; _ < _.keys.length; _++)
-      _.clear(_.keys[_]), _.callbacks[_].reject(_);
+      (_.clear(_.keys[_]), _.callbacks[_].reject(_));
   }
   function _(_) {
     if (_.cacheHits)
@@ -242,4 +242,3 @@ Values:
   }
   _.exports = _;
 });
-export { _ };

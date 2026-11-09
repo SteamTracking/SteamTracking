@@ -89,8 +89,8 @@ var _ = _(_()),
           this.m_bRunOnce && this.m_mapServerTypeCallbacks.delete(_));
     }
     RunAllCallbacks(_, ..._) {
-      this.RunCallbacks(void 0, ..._),
-        _.forEach((_) => this.RunCallbacks(_, ..._));
+      (this.RunCallbacks(void 0, ..._),
+        _.forEach((_) => this.RunCallbacks(_, ..._)));
     }
     AddCallback(_, _) {
       let _ = this.m_ClientConnectionCallbacks;
@@ -145,7 +145,7 @@ var _ = class {
   m_nPerfClockServerMSOffset = new Date().getTime() - performance.now();
   m_messageHandlers = new _();
   constructor() {
-    _(this),
+    (_(this),
       (this.m_ServiceTransport = {
         SendMsg: (_, _, _) => (
           (_.GetEMsg() === void 0 || _.GetEMsg() != 9804) && _.SetEMsg(151),
@@ -163,7 +163,7 @@ var _ = class {
         window.addEventListener &&
         window.addEventListener(`unload`, (_) => {
           this.ForceDisconnect();
-        });
+        }));
   }
   get steamid() {
     return this.m_steamid;
@@ -232,7 +232,7 @@ var _ = class {
     return this.m_callbacksOnDisconnect.AddCallback(_, _);
   }
   ForceDisconnect() {
-    (this.m_bForceDisconnect = !0), this.Disconnect();
+    ((this.m_bForceDisconnect = !0), this.Disconnect());
   }
   Send(_) {
     return this.BIsConnected()
@@ -244,17 +244,17 @@ var _ = class {
   }
   ResolveAwaitWithTransportError(_, _, _, _) {
     let _ = _.Init(_);
-    _.Hdr().set_eresult(2),
+    (_.Hdr().set_eresult(2),
       _.Hdr().set_transport_error(_),
       _ && _.Hdr().set_error_message(_),
-      _(_);
+      _(_));
   }
   DispatchMessage(_) {
     try {
       if (!this.BInternalShouldDispatchMessage(_)) return;
       _.BIsValid()
         ? this.m_messageHandlers.DispatchMsgToHandlers(_, (_) => {
-            _.Hdr().set_jobid_target(_.Hdr().jobid_source()), this.Send(_);
+            (_.Hdr().set_jobid_target(_.Hdr().jobid_source()), this.Send(_));
           }) || this.DEBUG_LogCMInterfaceActivity(_, `receive`, !1)
         : console.error(
             `CMInterface RECV could not parse message of type ` +
@@ -263,31 +263,31 @@ var _ = class {
               _.GetEMsg(),
           );
     } catch (_) {
-      console.error(
+      (console.error(
         `CMInterface RECV exception thrown while processing message of type ${_(_.GetEMsg())}`,
         _,
       ),
-        _.DEBUG_LogToConsole();
+        _.DEBUG_LogToConsole());
     }
   }
   BIsConnected() {
     return this.m_bConnected;
   }
   OnConnect() {
-    (this.m_bConnected = !0),
+    ((this.m_bConnected = !0),
       (this.m_bConnectionFailed = !1),
-      (this.m_bForceDisconnect = !1);
+      (this.m_bForceDisconnect = !1));
   }
   OnLoggedOn() {
-    (this.m_bCompletedInitialConnect = !0),
+    ((this.m_bCompletedInitialConnect = !0),
       this.InternalAdjustClock(),
       this.m_callbacksOnConnect.RunAllCallbacks(this.m_setConnectedServers),
       this.m_callbacksOnConnectOneTime.RunAllCallbacks(
         this.m_setConnectedServers,
-      );
+      ));
   }
   OnDisconnect() {
-    (this.m_bConnected = !1),
+    ((this.m_bConnected = !1),
       (this.m_bConnectionFailed = !0),
       (this.m_onConnect = void 0),
       (this.m_bLoggedOn = !1),
@@ -297,7 +297,7 @@ var _ = class {
         this.m_setConnectedServers,
         this.m_bForceDisconnect,
       ),
-      this.m_setConnectedServers.clear();
+      this.m_setConnectedServers.clear());
   }
   RunOnDisconnectCallbacks(_, _) {
     _ instanceof Set
@@ -325,8 +325,8 @@ var _ = class {
           _.delete(_));
       }
       _.forEach((_) => {
-        this.m_setConnectedServers.delete(_),
-          this.m_bLoggedOn && this.RunOnDisconnectCallbacks(_, !1);
+        (this.m_setConnectedServers.delete(_),
+          this.m_bLoggedOn && this.RunOnDisconnectCallbacks(_, !1));
       });
     },
   );
@@ -372,7 +372,7 @@ var _ = class {
     return new Date(_ * 1e3 + this.m_nWallClockDriftMS);
   }
 };
-_([_], _.prototype, `m_steamid`, void 0),
+(_([_], _.prototype, `m_steamid`, void 0),
   _([_], _.prototype, `m_bLoggedOn`, void 0),
   _([_], _.prototype, `m_bCompletedInitialConnect`, void 0),
   _([_], _.prototype, `m_unAccountFlags`, void 0),
@@ -383,19 +383,19 @@ _([_], _.prototype, `m_steamid`, void 0),
   _([_], _.prototype, `m_bConnected`, void 0),
   _([_], _.prototype, `m_bPerformedInitialClockAdjustment`, void 0),
   _([_], _.prototype, `DispatchMessage`, null),
-  _([_], _.prototype, `OnDisconnect`, null);
+  _([_], _.prototype, `OnDisconnect`, null));
 var _ = class extends _ {
   m_hSharedConnection;
   m_hEMsgRegistrationObserver;
   m_setEMsgHandlers = new Set();
   m_setServiceMethodHandlers = new Set();
   constructor() {
-    super(),
+    (super(),
       _(this),
       _(`User.RegisterForConnectionAttemptsThrottled`) &&
         SteamClient.User.RegisterForConnectionAttemptsThrottled(
           this.OnConnectionAttemptThrottled,
-        );
+        ));
   }
   SendMsgAndAwaitResponse(_, _) {
     return new Promise((_, _) => {
@@ -410,7 +410,7 @@ var _ = class extends _ {
               .then((_) => {
                 let _ = new _(_),
                   _ = _.InitFromPacket(_, _);
-                this.DEBUG_LogCMInterfaceActivity(_, `receive`, !0),
+                (this.DEBUG_LogCMInterfaceActivity(_, `receive`, !0),
                   _.BIsValid()
                     ? _(_)
                     : this.ResolveAwaitWithTransportError(
@@ -418,7 +418,7 @@ var _ = class extends _ {
                         _,
                         102,
                         `Failed to parse response from server`,
-                      );
+                      ));
               })
               .catch((_) => {
                 this.ResolveAwaitWithTransportError(_, _, 2, _);
@@ -430,7 +430,7 @@ var _ = class extends _ {
               .then((_) => {
                 let _ = new _(_.toByteArray(_)),
                   _ = _.InitFromPacket(_, _);
-                this.DEBUG_LogCMInterfaceActivity(_, `receive`, !0),
+                (this.DEBUG_LogCMInterfaceActivity(_, `receive`, !0),
                   _.BIsValid()
                     ? _(_)
                     : this.ResolveAwaitWithTransportError(
@@ -438,19 +438,19 @@ var _ = class extends _ {
                         _,
                         102,
                         `Failed to parse response from server`,
-                      );
+                      ));
               })
               .catch((_) => {
                 this.ResolveAwaitWithTransportError(_, _, 2, _);
               });
       } else
-        this.ResolveAwaitWithTransportError(
+        (this.ResolveAwaitWithTransportError(
           _,
           _,
           102,
           `Shared connection handle is empty, dropping traffic`,
         ),
-          console.warn(`Shared connection handle is empty, dropping traffic`);
+          console.warn(`Shared connection handle is empty, dropping traffic`));
     });
   }
   SendInternal(_) {
@@ -465,7 +465,7 @@ var _ = class extends _ {
     this.DispatchMessage(_);
   }
   OnLogonInfoChanged(_) {
-    this.DEBUG_LogMessage(`Login info from client: `, _),
+    (this.DEBUG_LogMessage(`Login info from client: `, _),
       (this.m_bLoggedOn = _.bLoggedOn),
       (_.EUNIVERSE = _.eUniverse),
       (_.MEDIA_CDN_COMMUNITY_URL = _.strCommunityImagesURL),
@@ -480,7 +480,7 @@ var _ = class extends _ {
         : this.m_steamid.GetAccountID() != 0 && (this.m_steamid = new _()),
       this.m_bLoggedOn
         ? (this.m_bConnected || this.OnConnect(), this.OnLoggedOn())
-        : this.OnDisconnect();
+        : this.OnDisconnect());
   }
   Connect() {
     return this.m_hSharedConnection
@@ -502,7 +502,7 @@ var _ = class extends _ {
         }));
   }
   OnSharedConnectionEstablished(_) {
-    (this.m_hSharedConnection = _),
+    ((this.m_hSharedConnection = _),
       this.m_setEMsgHandlers.clear(),
       this.m_setServiceMethodHandlers.clear(),
       this.m_hEMsgRegistrationObserver && this.m_hEMsgRegistrationObserver(),
@@ -523,12 +523,12 @@ var _ = class extends _ {
                 _,
               ));
         }
-      }));
+      })));
     let _ = !1;
     SteamClient.SharedConnection.RegisterOnLogonInfoChanged(
       this.m_hSharedConnection,
       (_) => {
-        this.OnLogonInfoChanged(_),
+        (this.OnLogonInfoChanged(_),
           _ ||
             ((_ = !0),
             _(`SharedConnection.RegisterOnBinaryMessageReceived`)
@@ -539,7 +539,7 @@ var _ = class extends _ {
               : SteamClient.SharedConnection.RegisterOnMessageReceived(
                   this.m_hSharedConnection,
                   (_) => this.OnMsgRecvd(_.toByteArray(_)),
-                ));
+                )));
       },
     );
   }
@@ -549,33 +549,33 @@ var _ = class extends _ {
   Disconnect() {
     if (this.m_hSharedConnection) {
       let _ = _.Init(_, 716);
-      _.Body().set_persona_state(0),
+      (_.Body().set_persona_state(0),
         _.Body().set_persona_set_by_user(!1),
         this.Send(_),
         SteamClient.SharedConnection.Close(this.m_hSharedConnection),
-        this.OnSharedConnectionClosed();
+        this.OnSharedConnectionClosed());
     }
   }
   OnSharedConnectionClosed() {
-    super.OnDisconnect(),
+    (super.OnDisconnect(),
       (this.m_hSharedConnection = void 0),
       this.m_setEMsgHandlers.clear(),
       (this.m_hEMsgRegistrationObserver &&=
-        (this.m_hEMsgRegistrationObserver(), void 0));
+        (this.m_hEMsgRegistrationObserver(), void 0)));
   }
   SendHeartbeat() {}
   ClearHeartbeatInterval() {}
   ResetHeartbeatInterval() {}
   OnConnectionAttemptThrottled(_) {
-    _.rtCooldownExpiration == 0
+    (_.rtCooldownExpiration == 0
       ? (this.m_rtReconnectThrottleStart = 0)
       : this.m_rtReconnectThrottleStart == 0 &&
         (this.m_rtReconnectThrottleStart = _()),
-      (this.m_rtReconnectThrottleExpiration = _.rtCooldownExpiration);
+      (this.m_rtReconnectThrottleExpiration = _.rtCooldownExpiration));
   }
 };
-_([_], _.prototype, `OnLogonInfoChanged`, null),
-  _([_.bound], _.prototype, `OnConnectionAttemptThrottled`, null);
+(_([_], _.prototype, `OnLogonInfoChanged`, null),
+  _([_.bound], _.prototype, `OnConnectionAttemptThrottled`, null));
 var _ = _((_) => {
     var _ =
       typeof Uint8Array < `u` &&
@@ -584,8 +584,8 @@ var _ = _((_) => {
     function _(_, _) {
       return Object.prototype.hasOwnProperty.call(_, _);
     }
-    (_.assign = function (_) {
-      for (var _ = Array.prototype.slice.call(arguments, 1); _.length; ) {
+    ((_.assign = function (_) {
+      for (var _ = Array.prototype.slice.call(arguments, 1); _.length;) {
         var _ = _.shift();
         if (_) {
           if (typeof _ != `object`) throw TypeError(_ + `must be non-object`);
@@ -600,7 +600,7 @@ var _ = _((_) => {
           : _.subarray
             ? _.subarray(0, _)
             : ((_.length = _), _);
-      });
+      }));
     var _ = {
         arraySet: function (_, _, _, _, _) {
           if (_.subarray && _.subarray) _.set(_.subarray(_, _ + _), _);
@@ -615,7 +615,7 @@ var _ = _((_) => {
             _;
           for (_ = 0, _ = _.length; _ < _; _++) _ += _[_].length;
           for (_ = new Uint8Array(_), _ = 0, _ = 0, _ = _.length; _ < _; _++)
-            (_ = _[_]), _.set(_, _), (_ += _.length);
+            ((_ = _[_]), _.set(_, _), (_ += _.length));
           return _;
         },
       },
@@ -627,7 +627,7 @@ var _ = _((_) => {
           return [].concat.apply([], _);
         },
       };
-    (_.setTyped = function (_) {
+    ((_.setTyped = function (_) {
       _
         ? ((_.Buf8 = Uint8Array),
           (_.Buf16 = Uint16Array),
@@ -638,7 +638,7 @@ var _ = _((_) => {
           (_.Buf32 = Array),
           _.assign(_, _));
     }),
-      _.setTyped(_);
+      _.setTyped(_));
   }),
   _ = _((_) => {
     var _ = _(),
@@ -647,7 +647,7 @@ var _ = _((_) => {
       _ = 1,
       _ = 2;
     function _(_) {
-      for (var _ = _.length; --_ >= 0; ) _[_] = 0;
+      for (var _ = _.length; --_ >= 0;) _[_] = 0;
     }
     var _ = 0,
       _ = 1,
@@ -691,23 +691,23 @@ var _ = _((_) => {
     var _ = Array(_);
     _(_);
     function _(_, _, _, _, _) {
-      (this.static_tree = _),
+      ((this.static_tree = _),
         (this.extra_bits = _),
         (this.extra_base = _),
         (this.elems = _),
         (this.max_length = _),
-        (this.has_stree = _ && _.length);
+        (this.has_stree = _ && _.length));
     }
     var _, _, _;
     function _(_, _) {
-      (this.dyn_tree = _), (this.max_code = 0), (this.stat_desc = _);
+      ((this.dyn_tree = _), (this.max_code = 0), (this.stat_desc = _));
     }
     function _(_) {
       return _ < 256 ? _[_] : _[256 + (_ >>> 7)];
     }
     function _(_, _) {
-      (_.pending_buf[_.pending++] = _ & 255),
-        (_.pending_buf[_.pending++] = (_ >>> 8) & 255);
+      ((_.pending_buf[_.pending++] = _ & 255),
+        (_.pending_buf[_.pending++] = (_ >>> 8) & 255));
     }
     function _(_, _, _) {
       _.bi_valid > _ - _
@@ -722,7 +722,7 @@ var _ = _((_) => {
     }
     function _(_, _) {
       var _ = 0;
-      do (_ |= _ & 1), (_ >>>= 1), (_ <<= 1);
+      do ((_ |= _ & 1), (_ >>>= 1), (_ <<= 1));
       while (--_ > 0);
       return _ >>> 1;
     }
@@ -751,7 +751,7 @@ var _ = _((_) => {
         _ = 0;
       for (_ = 0; _ <= _; _++) _.bl_count[_] = 0;
       for (_[_.heap[_.heap_max] * 2 + 1] = 0, _ = _.heap_max + 1; _ < _; _++)
-        (_ = _.heap[_]),
+        ((_ = _.heap[_]),
           (_ = _[_[_ * 2 + 1] * 2 + 1] + 1),
           _ > _ && ((_ = _), _++),
           (_[_ * 2 + 1] = _),
@@ -761,20 +761,23 @@ var _ = _((_) => {
             _ >= _ && (_ = _[_ - _]),
             (_ = _[_ * 2]),
             (_.opt_len += _ * (_ + _)),
-            _ && (_.static_len += _ * (_[_ * 2 + 1] + _)));
+            _ && (_.static_len += _ * (_[_ * 2 + 1] + _))));
       if (_ !== 0) {
         do {
-          for (_ = _ - 1; _.bl_count[_] === 0; ) _--;
-          _.bl_count[_]--, (_.bl_count[_ + 1] += 2), _.bl_count[_]--, (_ -= 2);
+          for (_ = _ - 1; _.bl_count[_] === 0;) _--;
+          (_.bl_count[_]--,
+            (_.bl_count[_ + 1] += 2),
+            _.bl_count[_]--,
+            (_ -= 2));
         } while (_ > 0);
         for (_ = _; _ !== 0; _--)
-          for (_ = _.bl_count[_]; _ !== 0; )
-            (_ = _.heap[--_]),
+          for (_ = _.bl_count[_]; _ !== 0;)
+            ((_ = _.heap[--_]),
               !(_ > _) &&
                 (_[_ * 2 + 1] !== _ &&
                   ((_.opt_len += (_ - _[_ * 2 + 1]) * _[_ * 2]),
                   (_[_ * 2 + 1] = _)),
-                _--);
+                _--));
       }
     }
     function _(_, _, _) {
@@ -799,36 +802,36 @@ var _ = _((_) => {
       for (_ >>= 7; _ < _; _++)
         for (_[_] = _ << 7, _ = 0; _ < 1 << (_[_] - 7); _++) _[256 + _++] = _;
       for (_ = 0; _ <= _; _++) _[_] = 0;
-      for (_ = 0; _ <= 143; ) (_[_ * 2 + 1] = 8), _++, _[8]++;
-      for (; _ <= 255; ) (_[_ * 2 + 1] = 9), _++, _[9]++;
-      for (; _ <= 279; ) (_[_ * 2 + 1] = 7), _++, _[7]++;
-      for (; _ <= 287; ) (_[_ * 2 + 1] = 8), _++, _[8]++;
+      for (_ = 0; _ <= 143;) ((_[_ * 2 + 1] = 8), _++, _[8]++);
+      for (; _ <= 255;) ((_[_ * 2 + 1] = 9), _++, _[9]++);
+      for (; _ <= 279;) ((_[_ * 2 + 1] = 7), _++, _[7]++);
+      for (; _ <= 287;) ((_[_ * 2 + 1] = 8), _++, _[8]++);
       for (_(_, _ + 1, _), _ = 0; _ < _; _++)
-        (_[_ * 2 + 1] = 5), (_[_ * 2] = _(_, 5));
-      (_ = new _(_, _, _ + 1, _, _)),
+        ((_[_ * 2 + 1] = 5), (_[_ * 2] = _(_, 5)));
+      ((_ = new _(_, _, _ + 1, _, _)),
         (_ = new _(_, _, 0, _, _)),
-        (_ = new _([], _, 0, _, _));
+        (_ = new _([], _, 0, _, _)));
     }
     function _(_) {
       for (var _ = 0; _ < _; _++) _.dyn_ltree[_ * 2] = 0;
       for (_ = 0; _ < _; _++) _.dyn_dtree[_ * 2] = 0;
       for (_ = 0; _ < _; _++) _.bl_tree[_ * 2] = 0;
-      (_.dyn_ltree[_ * 2] = 1),
+      ((_.dyn_ltree[_ * 2] = 1),
         (_.opt_len = _.static_len = 0),
-        (_.last_lit = _.matches = 0);
+        (_.last_lit = _.matches = 0));
     }
     function _(_) {
-      _.bi_valid > 8
+      (_.bi_valid > 8
         ? _(_, _.bi_buf)
         : _.bi_valid > 0 && (_.pending_buf[_.pending++] = _.bi_buf),
         (_.bi_buf = 0),
-        (_.bi_valid = 0);
+        (_.bi_valid = 0));
     }
     function _(_, _, _, _) {
-      _(_),
+      (_(_),
         _ && (_(_, _), _(_, ~_)),
         _.arraySet(_.pending_buf, _.window, _, _, _.pending),
-        (_.pending += _);
+        (_.pending += _));
     }
     function _(_, _, _, _) {
       var _ = _ * 2,
@@ -842,7 +845,7 @@ var _ = _((_) => {
         (_ < _.heap_len && _(_, _.heap[_ + 1], _.heap[_], _.depth) && _++,
         !_(_, _, _.heap[_], _.depth));
       )
-        (_.heap[_] = _.heap[_]), (_ = _), (_ <<= 1);
+        ((_.heap[_] = _.heap[_]), (_ = _), (_ <<= 1));
       _.heap[_] = _;
     }
     function _(_, _, _) {
@@ -853,7 +856,7 @@ var _ = _((_) => {
         _;
       if (_.last_lit !== 0)
         do
-          (_ =
+          ((_ =
             (_.pending_buf[_.d_buf + _ * 2] << 8) |
             _.pending_buf[_.d_buf + _ * 2 + 1]),
             (_ = _.pending_buf[_.l_buf + _]),
@@ -868,7 +871,7 @@ var _ = _((_) => {
                 (_ = _(_)),
                 _(_, _, _),
                 (_ = _[_]),
-                _ !== 0 && ((_ -= _[_]), _(_, _, _)));
+                _ !== 0 && ((_ -= _[_]), _(_, _, _))));
         while (_ < _.last_lit);
       _(_, _, _);
     }
@@ -885,16 +888,16 @@ var _ = _((_) => {
         _[_ * 2] === 0
           ? (_[_ * 2 + 1] = 0)
           : ((_.heap[++_.heap_len] = _ = _), (_.depth[_] = 0));
-      for (; _.heap_len < 2; )
-        (_ = _.heap[++_.heap_len] = _ < 2 ? ++_ : 0),
+      for (; _.heap_len < 2;)
+        ((_ = _.heap[++_.heap_len] = _ < 2 ? ++_ : 0),
           (_[_ * 2] = 1),
           (_.depth[_] = 0),
           _.opt_len--,
-          _ && (_.static_len -= _[_ * 2 + 1]);
+          _ && (_.static_len -= _[_ * 2 + 1]));
       for (_.max_code = _, _ = _.heap_len >> 1; _ >= 1; _--) _(_, _, _);
       _ = _;
       do
-        (_ = _.heap[1]),
+        ((_ = _.heap[1]),
           (_.heap[1] = _.heap[_.heap_len--]),
           _(_, _, 1),
           (_ = _.heap[1]),
@@ -905,9 +908,9 @@ var _ = _((_) => {
             (_.depth[_] >= _.depth[_] ? _.depth[_] : _.depth[_]) + 1),
           (_[_ * 2 + 1] = _[_ * 2 + 1] = _),
           (_.heap[1] = _++),
-          _(_, _, 1);
+          _(_, _, 1));
       while (_.heap_len >= 2);
-      (_.heap[--_.heap_max] = _.heap[1]), _(_, _), _(_, _, _.bl_count);
+      ((_.heap[--_.heap_max] = _.heap[1]), _(_, _), _(_, _, _.bl_count));
     }
     function _(_, _, _) {
       var _,
@@ -922,7 +925,7 @@ var _ = _((_) => {
         _ <= _;
         _++
       )
-        (_ = _),
+        ((_ = _),
           (_ = _[(_ + 1) * 2 + 1]),
           !(++_ < _ && _ === _) &&
             (_ < _
@@ -938,7 +941,7 @@ var _ = _((_) => {
               ? ((_ = 138), (_ = 3))
               : _ === _
                 ? ((_ = 6), (_ = 3))
-                : ((_ = 7), (_ = 4)));
+                : ((_ = 7), (_ = 4))));
     }
     function _(_, _, _) {
       var _,
@@ -961,13 +964,13 @@ var _ = _((_) => {
               : (_ !== _ && (_(_, _, _.bl_tree), _--),
                 _(_, _, _.bl_tree),
                 _(_, _ - 3, 2));
-          (_ = 0),
+          ((_ = 0),
             (_ = _),
             _ === 0
               ? ((_ = 138), (_ = 3))
               : _ === _
                 ? ((_ = 6), (_ = 3))
-                : ((_ = 7), (_ = 4));
+                : ((_ = 7), (_ = 4)));
         }
     }
     function _(_) {
@@ -980,13 +983,13 @@ var _ = _((_) => {
         _ >= 3 && _.bl_tree[_[_] * 2 + 1] === 0;
         _--
       );
-      return (_.opt_len += 3 * (_ + 1) + 5 + 5 + 4), _;
+      return ((_.opt_len += 3 * (_ + 1) + 5 + 5 + 4), _);
     }
     function _(_, _, _, _) {
       var _;
       for (_(_, _ - 257, 5), _(_, _ - 1, 5), _(_, _ - 4, 4), _ = 0; _ < _; _++)
         _(_, _.bl_tree[_[_] * 2 + 1], 3);
-      _(_, _.dyn_ltree, _ - 1), _(_, _.dyn_dtree, _ - 1);
+      (_(_, _.dyn_ltree, _ - 1), _(_, _.dyn_dtree, _ - 1));
     }
     function _(_) {
       for (var _ = 4093624447, _ = 0; _ <= 31; _++, _ >>>= 1)
@@ -1002,25 +1005,25 @@ var _ = _((_) => {
     }
     var _ = !1;
     function _(_) {
-      (_ ||= (_(), !0)),
+      ((_ ||= (_(), !0)),
         (_.l_desc = new _(_.dyn_ltree, _)),
         (_.d_desc = new _(_.dyn_dtree, _)),
         (_.bl_desc = new _(_.bl_tree, _)),
         (_.bi_buf = 0),
         (_.bi_valid = 0),
-        _(_);
+        _(_));
     }
     function _(_, _, _, _) {
-      _(_, (_ << 1) + +!!_, 3), _(_, _, _, !0);
+      (_(_, (_ << 1) + +!!_, 3), _(_, _, _, !0));
     }
     function _(_) {
-      _(_, _ << 1, 3), _(_, _, _), _(_);
+      (_(_, _ << 1, 3), _(_, _, _), _(_));
     }
     function _(_, _, _, _) {
       var _,
         _,
         _ = 0;
-      _.level > 0
+      (_.level > 0
         ? (_.strm.data_type === _ && (_.strm.data_type = _(_)),
           _(_, _.l_desc),
           _(_, _.d_desc),
@@ -1037,7 +1040,7 @@ var _ = _((_) => {
               _(_, _.l_desc.max_code + 1, _.d_desc.max_code + 1, _ + 1),
               _(_, _.dyn_ltree, _.dyn_dtree)),
         _(_),
-        _ && _(_);
+        _ && _(_));
     }
     function _(_, _, _) {
       return (
@@ -1054,19 +1057,19 @@ var _ = _((_) => {
         _.last_lit === _.lit_bufsize - 1
       );
     }
-    (_._tr_init = _),
+    ((_._tr_init = _),
       (_._tr_stored_block = _),
       (_._tr_flush_block = _),
       (_._tr_tally = _),
-      (_._tr_align = _);
+      (_._tr_align = _));
   }),
   _ = _((_, _) => {
     function _(_, _, _, _) {
-      for (var _ = _ & 65535, _ = (_ >>> 16) & 65535, _ = 0; _ !== 0; ) {
-        (_ = _ > 2e3 ? 2e3 : _), (_ -= _);
-        do (_ = (_ + _[_++]) | 0), (_ = (_ + _) | 0);
+      for (var _ = _ & 65535, _ = (_ >>> 16) & 65535, _ = 0; _ !== 0;) {
+        ((_ = _ > 2e3 ? 2e3 : _), (_ -= _));
+        do ((_ = (_ + _[_++]) | 0), (_ = (_ + _) | 0));
         while (--_);
-        (_ %= 65521), (_ %= 65521);
+        ((_ %= 65521), (_ %= 65521));
       }
       return _ | (_ << 16);
     }
@@ -1154,18 +1157,18 @@ var _ = _((_) => {
       _ = 4,
       _ = 3;
     function _(_, _) {
-      return (_.msg = _[_]), _;
+      return ((_.msg = _[_]), _);
     }
     function _(_) {
       return (_ << 1) - (_ > 4 ? 9 : 0);
     }
     function _(_) {
-      for (var _ = _.length; --_ >= 0; ) _[_] = 0;
+      for (var _ = _.length; --_ >= 0;) _[_] = 0;
     }
     function _(_) {
       var _ = _.state,
         _ = _.pending;
-      _ > _.avail_out && (_ = _.avail_out),
+      (_ > _.avail_out && (_ = _.avail_out),
         _ !== 0 &&
           (_.arraySet(_.output, _.pending_buf, _.pending_out, _, _.next_out),
           (_.next_out += _),
@@ -1173,24 +1176,24 @@ var _ = _((_) => {
           (_.total_out += _),
           (_.avail_out -= _),
           (_.pending -= _),
-          _.pending === 0 && (_.pending_out = 0));
+          _.pending === 0 && (_.pending_out = 0)));
     }
     function _(_, _) {
-      _._tr_flush_block(
+      (_._tr_flush_block(
         _,
         _.block_start >= 0 ? _.block_start : -1,
         _.strstart - _.block_start,
         _,
       ),
         (_.block_start = _.strstart),
-        _(_.strm);
+        _(_.strm));
     }
     function _(_, _) {
       _.pending_buf[_.pending++] = _;
     }
     function _(_, _) {
-      (_.pending_buf[_.pending++] = (_ >>> 8) & 255),
-        (_.pending_buf[_.pending++] = _ & 255);
+      ((_.pending_buf[_.pending++] = (_ >>> 8) & 255),
+        (_.pending_buf[_.pending++] = _ & 255));
     }
     function _(_, _, _, _) {
       var _ = _.avail_in;
@@ -1222,8 +1225,8 @@ var _ = _((_) => {
         _ = _.strstart + _,
         _ = _[_ + _ - 1],
         _ = _[_ + _];
-      _.prev_length >= _.good_match && (_ >>= 2),
-        _ > _.lookahead && (_ = _.lookahead);
+      (_.prev_length >= _.good_match && (_ >>= 2),
+        _ > _.lookahead && (_ = _.lookahead));
       do
         if (
           ((_ = _),
@@ -1232,7 +1235,7 @@ var _ = _((_) => {
             _[_] === _[_] &&
             _[++_] === _[_ + 1])
         ) {
-          (_ += 2), _++;
+          ((_ += 2), _++);
           do;
           while (
             _[++_] === _[++_] &&
@@ -1247,7 +1250,7 @@ var _ = _((_) => {
           );
           if (((_ = _ - (_ - _)), (_ = _ - _), _ > _)) {
             if (((_.match_start = _), (_ = _), _ >= _)) break;
-            (_ = _[_ + _ - 1]), (_ = _[_ + _]);
+            ((_ = _[_ + _ - 1]), (_ = _[_ + _]));
           }
         }
       while ((_ = _[_ & _]) > _ && --_ !== 0);
@@ -1265,16 +1268,16 @@ var _ = _((_) => {
           ((_ = _.window_size - _.lookahead - _.strstart),
           _.strstart >= _ + (_ - _))
         ) {
-          _.arraySet(_.window, _.window, _, _, 0),
+          (_.arraySet(_.window, _.window, _, _, 0),
             (_.match_start -= _),
             (_.strstart -= _),
             (_.block_start -= _),
             (_ = _.hash_size),
-            (_ = _);
-          do (_ = _.head[--_]), (_.head[_] = _ >= _ ? _ - _ : 0);
+            (_ = _));
+          do ((_ = _.head[--_]), (_.head[_] = _ >= _ ? _ - _ : 0));
           while (--_);
-          (_ = _), (_ = _);
-          do (_ = _.prev[--_]), (_.prev[_] = _ >= _ ? _ - _ : 0);
+          ((_ = _), (_ = _));
+          do ((_ = _.prev[--_]), (_.prev[_] = _ >= _ ? _ - _ : 0));
           while (--_);
           _ += _;
         }
@@ -1302,12 +1305,12 @@ var _ = _((_) => {
     }
     function _(_, _) {
       var _ = 65535;
-      for (_ > _.pending_buf_size - 5 && (_ = _.pending_buf_size - 5); ; ) {
+      for (_ > _.pending_buf_size - 5 && (_ = _.pending_buf_size - 5); ;) {
         if (_.lookahead <= 1) {
           if ((_(_), _.lookahead === 0 && _ === _)) return _;
           if (_.lookahead === 0) break;
         }
-        (_.strstart += _.lookahead), (_.lookahead = 0);
+        ((_.strstart += _.lookahead), (_.lookahead = 0));
         var _ = _.block_start + _;
         if (
           ((_.strstart === 0 || _.strstart >= _) &&
@@ -1328,7 +1331,7 @@ var _ = _((_) => {
       );
     }
     function _(_, _) {
-      for (var _, _; ; ) {
+      for (var _, _; ;) {
         if (_.lookahead < _) {
           if ((_(_), _.lookahead < _ && _ === _)) return _;
           if (_.lookahead === 0) break;
@@ -1357,25 +1360,25 @@ var _ = _((_) => {
           ) {
             _.match_length--;
             do
-              _.strstart++,
+              (_.strstart++,
                 (_.ins_h =
                   ((_.ins_h << _.hash_shift) ^ _.window[_.strstart + _ - 1]) &
                   _.hash_mask),
                 (_ = _.prev[_.strstart & _.w_mask] = _.head[_.ins_h]),
-                (_.head[_.ins_h] = _.strstart);
+                (_.head[_.ins_h] = _.strstart));
             while (--_.match_length !== 0);
             _.strstart++;
           } else
-            (_.strstart += _.match_length),
+            ((_.strstart += _.match_length),
               (_.match_length = 0),
               (_.ins_h = _.window[_.strstart]),
               (_.ins_h =
                 ((_.ins_h << _.hash_shift) ^ _.window[_.strstart + 1]) &
-                _.hash_mask);
+                _.hash_mask));
         } else
-          (_ = _._tr_tally(_, 0, _.window[_.strstart])),
+          ((_ = _._tr_tally(_, 0, _.window[_.strstart])),
             _.lookahead--,
-            _.strstart++;
+            _.strstart++);
         if (_ && (_(_, !1), _.strm.avail_out === 0)) return _;
       }
       return (
@@ -1388,7 +1391,7 @@ var _ = _((_) => {
       );
     }
     function _(_, _) {
-      for (var _, _, _; ; ) {
+      for (var _, _, _; ;) {
         if (_.lookahead < _) {
           if ((_(_), _.lookahead < _ && _ === _)) return _;
           if (_.lookahead === 0) break;
@@ -1414,14 +1417,14 @@ var _ = _((_) => {
               (_.match_length = _ - 1)),
           _.prev_length >= _ && _.match_length <= _.prev_length)
         ) {
-          (_ = _.strstart + _.lookahead - _),
+          ((_ = _.strstart + _.lookahead - _),
             (_ = _._tr_tally(
               _,
               _.strstart - 1 - _.prev_match,
               _.prev_length - _,
             )),
             (_.lookahead -= _.prev_length - 1),
-            (_.prev_length -= 2);
+            (_.prev_length -= 2));
           do
             ++_.strstart <= _ &&
               ((_.ins_h =
@@ -1446,7 +1449,7 @@ var _ = _((_) => {
             _.strm.avail_out === 0)
           )
             return _;
-        } else (_.match_available = 1), _.strstart++, _.lookahead--;
+        } else ((_.match_available = 1), _.strstart++, _.lookahead--);
       }
       return (
         (_.match_available &&=
@@ -1460,7 +1463,7 @@ var _ = _((_) => {
       );
     }
     function _(_, _) {
-      for (var _, _, _, _, _ = _.window; ; ) {
+      for (var _, _, _, _, _ = _.window; ;) {
         if (_.lookahead <= _) {
           if ((_(_), _.lookahead <= _ && _ === _)) return _;
           if (_.lookahead === 0) break;
@@ -1486,8 +1489,8 @@ var _ = _((_) => {
             _ === _[++_] &&
             _ < _
           );
-          (_.match_length = _ - (_ - _)),
-            _.match_length > _.lookahead && (_.match_length = _.lookahead);
+          ((_.match_length = _ - (_ - _)),
+            _.match_length > _.lookahead && (_.match_length = _.lookahead));
         }
         if (
           (_.match_length >= _
@@ -1512,7 +1515,7 @@ var _ = _((_) => {
       );
     }
     function _(_, _) {
-      for (var _; ; ) {
+      for (var _; ;) {
         if (_.lookahead === 0 && (_(_), _.lookahead === 0)) {
           if (_ === _) return _;
           break;
@@ -1536,11 +1539,11 @@ var _ = _((_) => {
       );
     }
     function _(_, _, _, _, _) {
-      (this.good_length = _),
+      ((this.good_length = _),
         (this.max_lazy = _),
         (this.nice_length = _),
         (this.max_chain = _),
-        (this.func = _);
+        (this.func = _));
     }
     var _ = [
       new _(0, 0, 0, 0, _),
@@ -1555,7 +1558,7 @@ var _ = _((_) => {
       new _(32, 258, 258, 4096, _),
     ];
     function _(_) {
-      (_.window_size = 2 * _.w_size),
+      ((_.window_size = 2 * _.w_size),
         _(_.head),
         (_.max_lazy_match = _[_.level].max_lazy),
         (_.good_match = _[_.level].good_length),
@@ -1567,10 +1570,10 @@ var _ = _((_) => {
         (_.insert = 0),
         (_.match_length = _.prev_length = _ - 1),
         (_.match_available = 0),
-        (_.ins_h = 0);
+        (_.ins_h = 0));
     }
     function _() {
-      (this.strm = null),
+      ((this.strm = null),
         (this.status = 0),
         (this.pending_buf = null),
         (this.pending_buf_size = 0),
@@ -1632,7 +1635,7 @@ var _ = _((_) => {
         (this.matches = 0),
         (this.insert = 0),
         (this.bi_buf = 0),
-        (this.bi_valid = 0);
+        (this.bi_valid = 0));
     }
     function _(_) {
       var _;
@@ -1652,7 +1655,7 @@ var _ = _((_) => {
     }
     function _(_) {
       var _ = _(_);
-      return _ === _ && _(_.state), _;
+      return (_ === _ && _(_.state), _);
     }
     function _(_, _) {
       return !_ || !_.state || _.state.wrap !== 2
@@ -1721,7 +1724,7 @@ var _ = _((_) => {
         ((_.strm = _), (_ = _.last_flush), (_.last_flush = _), _.status === _)
       ) {
         if (_.wrap === 2)
-          (_.adler = 0),
+          ((_.adler = 0),
             _(_, 31),
             _(_, 139),
             _(_, 8),
@@ -1761,11 +1764,11 @@ var _ = _((_) => {
                   _.level === 9 ? 2 : _.strategy >= _ || _.level < 2 ? 4 : 0,
                 ),
                 _(_, _),
-                (_.status = _));
+                (_.status = _)));
         else {
           var _ = (_ + ((_.w_bits - 8) << 4)) << 8,
             _ = -1;
-          (_ =
+          ((_ =
             _.strategy >= _ || _.level < 2
               ? 0
               : _.level < 6
@@ -1779,7 +1782,7 @@ var _ = _((_) => {
             (_.status = _),
             _(_, _),
             _.strstart !== 0 && (_(_, _.adler >>> 16), _(_, _.adler & 65535)),
-            (_.adler = 1);
+            (_.adler = 1));
         }
       }
       if (_.status === _) {
@@ -1797,12 +1800,12 @@ var _ = _((_) => {
               _.pending === _.pending_buf_size)
             );
           )
-            _(_, _.gzhead.extra[_.gzindex] & 255), _.gzindex++;
-          _.gzhead.hcrc &&
+            (_(_, _.gzhead.extra[_.gzindex] & 255), _.gzindex++);
+          (_.gzhead.hcrc &&
             _.pending > _ &&
             (_.adler = _(_.adler, _.pending_buf, _.pending - _, _)),
             _.gzindex === _.gzhead.extra.length &&
-              ((_.gzindex = 0), (_.status = _));
+              ((_.gzindex = 0), (_.status = _)));
         } else _.status = _;
       }
       if (_.status === _) {
@@ -1821,16 +1824,16 @@ var _ = _((_) => {
               _ = 1;
               break;
             }
-            (_ =
+            ((_ =
               _.gzindex < _.gzhead.name.length
                 ? _.gzhead.name.charCodeAt(_.gzindex++) & 255
                 : 0),
-              _(_, _);
+              _(_, _));
           } while (_ !== 0);
-          _.gzhead.hcrc &&
+          (_.gzhead.hcrc &&
             _.pending > _ &&
             (_.adler = _(_.adler, _.pending_buf, _.pending - _, _)),
-            _ === 0 && ((_.gzindex = 0), (_.status = _));
+            _ === 0 && ((_.gzindex = 0), (_.status = _)));
         } else _.status = _;
       }
       if (_.status === _) {
@@ -1849,16 +1852,16 @@ var _ = _((_) => {
               _ = 1;
               break;
             }
-            (_ =
+            ((_ =
               _.gzindex < _.gzhead.comment.length
                 ? _.gzhead.comment.charCodeAt(_.gzindex++) & 255
                 : 0),
-              _(_, _);
+              _(_, _));
           } while (_ !== 0);
-          _.gzhead.hcrc &&
+          (_.gzhead.hcrc &&
             _.pending > _ &&
             (_.adler = _(_.adler, _.pending_buf, _.pending - _, _)),
-            _ === 0 && (_.status = _);
+            _ === 0 && (_.status = _));
         } else _.status = _;
       }
       if (
@@ -1873,7 +1876,7 @@ var _ = _((_) => {
             : (_.status = _)),
         _.pending !== 0)
       ) {
-        if ((_(_), _.avail_out === 0)) return (_.last_flush = -1), _;
+        if ((_(_), _.avail_out === 0)) return ((_.last_flush = -1), _);
       } else if (_.avail_in === 0 && _(_) <= _(_) && _ !== _) return _(_, _);
       if (_.status === _ && _.avail_in !== 0) return _(_, _);
       if (
@@ -1888,7 +1891,7 @@ var _ = _((_) => {
               ? _(_, _)
               : _[_.level].func(_, _);
         if (((_ === _ || _ === _) && (_.status = _), _ === _ || _ === _))
-          return _.avail_out === 0 && (_.last_flush = -1), _;
+          return (_.avail_out === 0 && (_.last_flush = -1), _);
         if (
           _ === _ &&
           (_ === _
@@ -1902,7 +1905,7 @@ var _ = _((_) => {
           _(_),
           _.avail_out === 0)
         )
-          return (_.last_flush = -1), _;
+          return ((_.last_flush = -1), _);
       }
       return _ === _
         ? _.wrap <= 0
@@ -1977,15 +1980,15 @@ var _ = _((_) => {
           _(_);
         _.lookahead >= _;
       ) {
-        (_ = _.strstart), (_ = _.lookahead - (_ - 1));
+        ((_ = _.strstart), (_ = _.lookahead - (_ - 1)));
         do
-          (_.ins_h =
+          ((_.ins_h =
             ((_.ins_h << _.hash_shift) ^ _.window[_ + _ - 1]) & _.hash_mask),
             (_.prev[_ & _.w_mask] = _.head[_.ins_h]),
             (_.head[_.ins_h] = _),
-            _++;
+            _++);
         while (--_);
-        (_.strstart = _), (_.lookahead = _ - 1), _(_);
+        ((_.strstart = _), (_.lookahead = _ - 1), _(_));
       }
       return (
         (_.strstart += _.lookahead),
@@ -2001,7 +2004,7 @@ var _ = _((_) => {
         _
       );
     }
-    (_.deflateInit = _),
+    ((_.deflateInit = _),
       (_.deflateInit2 = _),
       (_.deflateReset = _),
       (_.deflateResetKeep = _),
@@ -2009,7 +2012,7 @@ var _ = _((_) => {
       (_.deflate = _),
       (_.deflateEnd = _),
       (_.deflateSetDictionary = _),
-      (_.deflateInfo = `pako deflate (from Nodeca project)`);
+      (_.deflateInfo = `pako deflate (from Nodeca project)`));
   }),
   _ = _((_) => {
     var _ = _(),
@@ -2038,7 +2041,7 @@ var _ = _((_) => {
                 : _ >= 192
                   ? 2
                   : 1;
-    (_[254] = _[254] = 1),
+    ((_[254] = _[254] = 1),
       (_.string2buf = function (_) {
         var _,
           _,
@@ -2048,15 +2051,15 @@ var _ = _((_) => {
           _ = _.length,
           _ = 0;
         for (_ = 0; _ < _; _++)
-          (_ = _.charCodeAt(_)),
+          ((_ = _.charCodeAt(_)),
             (_ & 64512) == 55296 &&
               _ + 1 < _ &&
               ((_ = _.charCodeAt(_ + 1)),
               (_ & 64512) == 56320 &&
                 ((_ = 65536 + ((_ - 55296) << 10) + (_ - 56320)), _++)),
-            (_ += _ < 128 ? 1 : _ < 2048 ? 2 : _ < 65536 ? 3 : 4);
+            (_ += _ < 128 ? 1 : _ < 2048 ? 2 : _ < 65536 ? 3 : 4));
         for (_ = new _.Buf8(_), _ = 0, _ = 0; _ < _; _++)
-          (_ = _.charCodeAt(_)),
+          ((_ = _.charCodeAt(_)),
             (_ & 64512) == 55296 &&
               _ + 1 < _ &&
               ((_ = _.charCodeAt(_ + 1)),
@@ -2073,16 +2076,16 @@ var _ = _((_) => {
                   : ((_[_++] = 240 | (_ >>> 18)),
                     (_[_++] = 128 | ((_ >>> 12) & 63)),
                     (_[_++] = 128 | ((_ >>> 6) & 63)),
-                    (_[_++] = 128 | (_ & 63)));
+                    (_[_++] = 128 | (_ & 63))));
         return _;
-      });
+      }));
     function _(_, _) {
       if (_ < 65534 && ((_.subarray && _) || (!_.subarray && _)))
         return String.fromCharCode.apply(null, _.shrinkBuf(_, _));
       for (var _ = ``, _ = 0; _ < _; _++) _ += String.fromCharCode(_[_]);
       return _;
     }
-    (_.buf2binstring = function (_) {
+    ((_.buf2binstring = function (_) {
       return _(_, _.length);
     }),
       (_.binstring2buf = function (_) {
@@ -2097,12 +2100,12 @@ var _ = _((_) => {
           _,
           _ = _ || _.length,
           _ = Array(_ * 2);
-        for (_ = 0, _ = 0; _ < _; )
+        for (_ = 0, _ = 0; _ < _;)
           if (((_ = _[_++]), _ < 128)) _[_++] = _;
-          else if (((_ = _[_]), _ > 4)) (_[_++] = 65533), (_ += _ - 1);
+          else if (((_ = _[_]), _ > 4)) ((_[_++] = 65533), (_ += _ - 1));
           else {
-            for (_ &= _ === 2 ? 31 : _ === 3 ? 15 : 7; _ > 1 && _ < _; )
-              (_ = (_ << 6) | (_[_++] & 63)), _--;
+            for (_ &= _ === 2 ? 31 : _ === 3 ? 15 : 7; _ > 1 && _ < _;)
+              ((_ = (_ << 6) | (_[_++] & 63)), _--);
             _ > 1
               ? (_[_++] = 65533)
               : _ < 65536
@@ -2121,11 +2124,11 @@ var _ = _((_) => {
         )
           _--;
         return _ < 0 || _ === 0 ? _ : _ + _[_[_]] > _ ? _ : _;
-      });
+      }));
   }),
   _ = _((_, _) => {
     function _() {
-      (this.input = null),
+      ((this.input = null),
         (this.next_in = 0),
         (this.avail_in = 0),
         (this.total_in = 0),
@@ -2136,7 +2139,7 @@ var _ = _((_) => {
         (this.msg = ``),
         (this.state = null),
         (this.data_type = 2),
-        (this.adler = 0);
+        (this.adler = 0));
     }
     _.exports = _;
   }),
@@ -2170,7 +2173,7 @@ var _ = _((_) => {
         _ || {},
       );
       var _ = this.options;
-      _.raw && _.windowBits > 0
+      (_.raw && _.windowBits > 0
         ? (_.windowBits = -_.windowBits)
         : _.gzip &&
           _.windowBits > 0 &&
@@ -2181,7 +2184,7 @@ var _ = _((_) => {
         (this.ended = !1),
         (this.chunks = []),
         (this.strm = new _()),
-        (this.strm.avail_out = 0);
+        (this.strm.avail_out = 0));
       var _ = _.deflateInit2(
         this.strm,
         _.level,
@@ -2203,13 +2206,13 @@ var _ = _((_) => {
         this._dict_set = !0;
       }
     }
-    (_.prototype.push = function (_, _) {
+    ((_.prototype.push = function (_, _) {
       var _ = this.strm,
         _ = this.options.chunkSize,
         _,
         _;
       if (this.ended) return !1;
-      (_ = _ === ~~_ ? _ : _ === !0 ? _ : _),
+      ((_ = _ === ~~_ ? _ : _ === !0 ? _ : _),
         (_.input =
           typeof _ == `string`
             ? _.string2buf(_)
@@ -2217,7 +2220,7 @@ var _ = _((_) => {
               ? new Uint8Array(_)
               : _),
         (_.next_in = 0),
-        (_.avail_in = _.input.length);
+        (_.avail_in = _.input.length));
       do {
         if (
           (_.avail_out === 0 &&
@@ -2225,7 +2228,7 @@ var _ = _((_) => {
           (_ = _.deflate(_, _)),
           _ !== _ && _ !== _)
         )
-          return this.onEnd(_), (this.ended = !0), !1;
+          return (this.onEnd(_), (this.ended = !0), !1);
         (_.avail_out === 0 || (_.avail_in === 0 && (_ === _ || _ === _))) &&
           (this.options._ === `string`
             ? this.onData(_.buf2binstring(_.shrinkBuf(_.output, _.next_out)))
@@ -2242,27 +2245,27 @@ var _ = _((_) => {
         this.chunks.push(_);
       }),
       (_.prototype.onEnd = function (_) {
-        _ === _ &&
+        (_ === _ &&
           (this.result =
             this.options._ === `string`
               ? this.chunks.join(``)
               : _.flattenChunks(this.chunks)),
           (this.chunks = []),
           (this.err = _),
-          (this.msg = this.strm.msg);
-      });
+          (this.msg = this.strm.msg));
+      }));
     function _(_, _) {
       var _ = new _(_);
       if ((_.push(_, !0), _.err)) throw _.msg || _[_.err];
       return _.result;
     }
     function _(_, _) {
-      return (_ ||= {}), (_.raw = !0), _(_, _);
+      return ((_ ||= {}), (_.raw = !0), _(_, _));
     }
     function _(_, _) {
-      return (_ ||= {}), (_.gzip = !0), _(_, _);
+      return ((_ ||= {}), (_.gzip = !0), _(_, _));
     }
-    (_.Deflate = _), (_.deflate = _), (_.deflateRaw = _), (_.gzip = _);
+    ((_.Deflate = _), (_.deflate = _), (_.deflateRaw = _), (_.gzip = _));
   }),
   _ = _((_, _) => {
     _.exports = function (_, _) {
@@ -2291,7 +2294,7 @@ var _ = _((_) => {
         _,
         _ = _.input,
         _;
-      (_ = _ + (_.avail_in - 5)),
+      ((_ = _ + (_.avail_in - 5)),
         (_ = _.next_out),
         (_ = _.output),
         (_ = _ - (_ - _.avail_out)),
@@ -2306,10 +2309,10 @@ var _ = _((_) => {
         (_ = _.lencode),
         (_ = _.distcode),
         (_ = (1 << _.lenbits) - 1),
-        (_ = (1 << _.distbits) - 1);
+        (_ = (1 << _.distbits) - 1));
       top: do {
-        _ < 15 && ((_ += _[_++] << _), (_ += 8), (_ += _[_++] << _), (_ += 8)),
-          (_ = _[_ & _]);
+        (_ < 15 && ((_ += _[_++] << _), (_ += 8), (_ += _[_++] << _), (_ += 8)),
+          (_ = _[_ & _]));
         dolen: for (;;) {
           if (
             ((_ = _ >>> 24),
@@ -2320,7 +2323,7 @@ var _ = _((_) => {
           )
             _[_++] = _ & 65535;
           else if (_ & 16) {
-            (_ = _ & 65535),
+            ((_ = _ & 65535),
               (_ &= 15),
               _ &&
                 (_ < _ && ((_ += _[_++] << _), (_ += 8)),
@@ -2329,7 +2332,7 @@ var _ = _((_) => {
                 (_ -= _)),
               _ < 15 &&
                 ((_ += _[_++] << _), (_ += 8), (_ += _[_++] << _), (_ += 8)),
-              (_ = _[_ & _]);
+              (_ = _[_ & _]));
             dodist: for (;;) {
               if (
                 ((_ = _ >>> 24),
@@ -2348,12 +2351,12 @@ var _ = _((_) => {
                   (_ += _ & ((1 << _) - 1)),
                   _ > _)
                 ) {
-                  (_.msg = `invalid distance too far back`), (_.mode = 30);
+                  ((_.msg = `invalid distance too far back`), (_.mode = 30));
                   break top;
                 }
                 if (((_ >>>= _), (_ -= _), (_ = _ - _), _ > _)) {
                   if (((_ = _ - _), _ > _ && _.sane)) {
-                    (_.msg = `invalid distance too far back`), (_.mode = 30);
+                    ((_.msg = `invalid distance too far back`), (_.mode = 30));
                     break top;
                   }
                   if (((_ = 0), (_ = _), _ === 0)) {
@@ -2361,7 +2364,7 @@ var _ = _((_) => {
                       _ -= _;
                       do _[_++] = _[_++];
                       while (--_);
-                      (_ = _ - _), (_ = _);
+                      ((_ = _ - _), (_ = _));
                     }
                   } else if (_ < _) {
                     if (((_ += _ + _ - _), (_ -= _), _ < _)) {
@@ -2369,36 +2372,36 @@ var _ = _((_) => {
                       do _[_++] = _[_++];
                       while (--_);
                       if (((_ = 0), _ < _)) {
-                        (_ = _), (_ -= _);
+                        ((_ = _), (_ -= _));
                         do _[_++] = _[_++];
                         while (--_);
-                        (_ = _ - _), (_ = _);
+                        ((_ = _ - _), (_ = _));
                       }
                     }
                   } else if (((_ += _ - _), _ < _)) {
                     _ -= _;
                     do _[_++] = _[_++];
                     while (--_);
-                    (_ = _ - _), (_ = _);
+                    ((_ = _ - _), (_ = _));
                   }
-                  for (; _ > 2; )
-                    (_[_++] = _[_++]),
+                  for (; _ > 2;)
+                    ((_[_++] = _[_++]),
                       (_[_++] = _[_++]),
                       (_[_++] = _[_++]),
-                      (_ -= 3);
+                      (_ -= 3));
                   _ && ((_[_++] = _[_++]), _ > 1 && (_[_++] = _[_++]));
                 } else {
                   _ = _ - _;
                   do
-                    (_[_++] = _[_++]),
+                    ((_[_++] = _[_++]),
                       (_[_++] = _[_++]),
                       (_[_++] = _[_++]),
-                      (_ -= 3);
+                      (_ -= 3));
                   while (_ > 2);
                   _ && ((_[_++] = _[_++]), _ > 1 && (_[_++] = _[_++]));
                 }
               } else if (_ & 64) {
-                (_.msg = `invalid distance code`), (_.mode = 30);
+                ((_.msg = `invalid distance code`), (_.mode = 30));
                 break top;
               } else {
                 _ = _[(_ & 65535) + (_ & ((1 << _) - 1))];
@@ -2413,13 +2416,13 @@ var _ = _((_) => {
             _.mode = 12;
             break top;
           } else {
-            (_.msg = `invalid literal/length code`), (_.mode = 30);
+            ((_.msg = `invalid literal/length code`), (_.mode = 30));
             break top;
           }
           break;
         }
       } while (_ < _ && _ < _);
-      (_ = _ >> 3),
+      ((_ = _ >> 3),
         (_ -= _),
         (_ -= _ << 3),
         (_ &= (1 << _) - 1),
@@ -2428,7 +2431,7 @@ var _ = _((_) => {
         (_.avail_in = _ < _ ? 5 + (_ - _) : 5 - (_ - _)),
         (_.avail_out = _ < _ ? 257 + (_ - _) : 257 - (_ - _)),
         (_.hold = _),
-        (_.bits = _);
+        (_.bits = _));
     };
   }),
   _ = _((_, _) => {
@@ -2487,7 +2490,7 @@ var _ = _((_) => {
       for (_ = 0; _ < _; _++) _[_[_ + _]]++;
       for (_ = _, _ = _; _ >= 1 && _[_] === 0; _--);
       if ((_ > _ && (_ = _), _ === 0))
-        return (_[_++] = 20971520), (_[_++] = 20971520), (_.bits = 1), 0;
+        return ((_[_++] = 20971520), (_[_++] = 20971520), (_.bits = 1), 0);
       for (_ = 1; _ < _ && _[_] === 0; _++);
       for (_ < _ && (_ = _), _ = 1, _ = 1; _ <= _; _++)
         if (((_ <<= 1), (_ -= _[_]), _ < 0)) return -1;
@@ -2513,7 +2516,7 @@ var _ = _((_) => {
       )
         return 1;
       for (;;) {
-        (_ = _ - _),
+        ((_ = _ - _),
           _[_] < _
             ? ((_ = 0), (_ = _[_]))
             : _[_] > _
@@ -2521,10 +2524,10 @@ var _ = _((_) => {
               : ((_ = 96), (_ = 0)),
           (_ = 1 << (_ - _)),
           (_ = 1 << _),
-          (_ = _);
-        do (_ -= _), (_[_ + (_ >> _) + _] = (_ << 24) | (_ << 16) | _);
+          (_ = _));
+        do ((_ -= _), (_[_ + (_ >> _) + _] = (_ << 24) | (_ << 16) | _));
         while (_ !== 0);
-        for (_ = 1 << (_ - 1); _ & _; ) _ >>= 1;
+        for (_ = 1 << (_ - 1); _ & _;) _ >>= 1;
         if ((_ === 0 ? (_ = 0) : ((_ &= _ - 1), (_ += _)), _++, --_[_] === 0)) {
           if (_ === _) break;
           _ = _[_ + _[_]];
@@ -2534,13 +2537,15 @@ var _ = _((_) => {
             _ === 0 && (_ = _), _ += _, _ = _ - _, _ = 1 << _;
             _ + _ < _ && ((_ -= _[_ + _]), !(_ <= 0));
           )
-            _++, (_ <<= 1);
+            (_++, (_ <<= 1));
           if (((_ += 1 << _), (_ === _ && _ > _) || (_ === _ && _ > _)))
             return 1;
-          (_ = _ & _), (_[_] = (_ << 24) | (_ << 16) | (_ - _));
+          ((_ = _ & _), (_[_] = (_ << 24) | (_ << 16) | (_ - _)));
         }
       }
-      return _ !== 0 && (_[_ + _] = ((_ - _) << 24) | 4194304), (_.bits = _), 0;
+      return (
+        _ !== 0 && (_[_ + _] = ((_ - _) << 24) | 4194304), (_.bits = _), 0
+      );
     };
   }),
   _ = _((_) => {
@@ -2607,7 +2612,7 @@ var _ = _((_) => {
       );
     }
     function _() {
-      (this.mode = 0),
+      ((this.mode = 0),
         (this.last = !1),
         (this.wrap = 0),
         (this.havedict = !1),
@@ -2641,7 +2646,7 @@ var _ = _((_) => {
         (this.distdyn = null),
         (this.sane = 0),
         (this.back = 0),
-        (this.was = 0);
+        (this.was = 0));
     }
     function _(_) {
       var _;
@@ -2703,11 +2708,11 @@ var _ = _((_) => {
     function _(_) {
       if (_) {
         var _;
-        for (_ = new _.Buf32(512), _ = new _.Buf32(32), _ = 0; _ < 144; )
+        for (_ = new _.Buf32(512), _ = new _.Buf32(32), _ = 0; _ < 144;)
           _.lens[_++] = 8;
-        for (; _ < 256; ) _.lens[_++] = 9;
-        for (; _ < 280; ) _.lens[_++] = 7;
-        for (; _ < 288; ) _.lens[_++] = 8;
+        for (; _ < 256;) _.lens[_++] = 9;
+        for (; _ < 280;) _.lens[_++] = 7;
+        for (; _ < 288;) _.lens[_++] = 8;
         for (
           _(_, _.lens, 0, 288, _, 0, _.work, {
             bits: 9,
@@ -2716,12 +2721,12 @@ var _ = _((_) => {
           _ < 32;
         )
           _.lens[_++] = 5;
-        _(_, _.lens, 0, 32, _, 0, _.work, {
+        (_(_, _.lens, 0, 32, _, 0, _.work, {
           bits: 5,
         }),
-          (_ = !1);
+          (_ = !1));
       }
-      (_.lencode = _), (_.lenbits = 9), (_.distcode = _), (_.distbits = 5);
+      ((_.lencode = _), (_.lenbits = 9), (_.distcode = _), (_.distbits = 5));
     }
     function _(_, _, _, _) {
       var _,
@@ -2780,7 +2785,7 @@ var _ = _((_) => {
         _ = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
       if (!_ || !_.state || !_.output || (!_.input && _.avail_in !== 0))
         return _;
-      (_ = _.state),
+      ((_ = _.state),
         _.mode === _ && (_.mode = _),
         (_ = _.next_out),
         (_ = _.output),
@@ -2792,7 +2797,7 @@ var _ = _((_) => {
         (_ = _.bits),
         (_ = _),
         (_ = _),
-        (_ = _);
+        (_ = _));
       inf_leave: for (;;)
         switch (_.mode) {
           case _:
@@ -2800,18 +2805,18 @@ var _ = _((_) => {
               _.mode = _;
               break;
             }
-            for (; _ < 16; ) {
+            for (; _ < 16;) {
               if (_ === 0) break inf_leave;
-              _--, (_ += _[_++] << _), (_ += 8);
+              (_--, (_ += _[_++] << _), (_ += 8));
             }
             if (_.wrap & 2 && _ === 35615) {
-              (_.check = 0),
+              ((_.check = 0),
                 (_[0] = _ & 255),
                 (_[1] = (_ >>> 8) & 255),
                 (_.check = _(_.check, _, 2, 0)),
                 (_ = 0),
                 (_ = 0),
-                (_.mode = _);
+                (_.mode = _));
               break;
             }
             if (
@@ -2819,52 +2824,52 @@ var _ = _((_) => {
               _.head && (_.head.done = !1),
               !(_.wrap & 1) || (((_ & 255) << 8) + (_ >> 8)) % 31)
             ) {
-              (_.msg = `incorrect header check`), (_.mode = _);
+              ((_.msg = `incorrect header check`), (_.mode = _));
               break;
             }
             if ((_ & 15) !== _) {
-              (_.msg = `unknown compression method`), (_.mode = _);
+              ((_.msg = `unknown compression method`), (_.mode = _));
               break;
             }
             if (((_ >>>= 4), (_ -= 4), (_ = (_ & 15) + 8), _.wbits === 0))
               _.wbits = _;
             else if (_ > _.wbits) {
-              (_.msg = `invalid window size`), (_.mode = _);
+              ((_.msg = `invalid window size`), (_.mode = _));
               break;
             }
-            (_.dmax = 1 << _),
+            ((_.dmax = 1 << _),
               (_.adler = _.check = 1),
               (_.mode = _ & 512 ? _ : _),
               (_ = 0),
-              (_ = 0);
+              (_ = 0));
             break;
           case _:
-            for (; _ < 16; ) {
+            for (; _ < 16;) {
               if (_ === 0) break inf_leave;
-              _--, (_ += _[_++] << _), (_ += 8);
+              (_--, (_ += _[_++] << _), (_ += 8));
             }
             if (((_.flags = _), (_.flags & 255) !== _)) {
-              (_.msg = `unknown compression method`), (_.mode = _);
+              ((_.msg = `unknown compression method`), (_.mode = _));
               break;
             }
             if (_.flags & 57344) {
-              (_.msg = `unknown header flags set`), (_.mode = _);
+              ((_.msg = `unknown header flags set`), (_.mode = _));
               break;
             }
-            _.head && (_.head.text = (_ >> 8) & 1),
+            (_.head && (_.head.text = (_ >> 8) & 1),
               _.flags & 512 &&
                 ((_[0] = _ & 255),
                 (_[1] = (_ >>> 8) & 255),
                 (_.check = _(_.check, _, 2, 0))),
               (_ = 0),
               (_ = 0),
-              (_.mode = _);
+              (_.mode = _));
           case _:
-            for (; _ < 32; ) {
+            for (; _ < 32;) {
               if (_ === 0) break inf_leave;
-              _--, (_ += _[_++] << _), (_ += 8);
+              (_--, (_ += _[_++] << _), (_ += 8));
             }
-            _.head && (_.head.time = _),
+            (_.head && (_.head.time = _),
               _.flags & 512 &&
                 ((_[0] = _ & 255),
                 (_[1] = (_ >>> 8) & 255),
@@ -2873,34 +2878,34 @@ var _ = _((_) => {
                 (_.check = _(_.check, _, 4, 0))),
               (_ = 0),
               (_ = 0),
-              (_.mode = _);
+              (_.mode = _));
           case _:
-            for (; _ < 16; ) {
+            for (; _ < 16;) {
               if (_ === 0) break inf_leave;
-              _--, (_ += _[_++] << _), (_ += 8);
+              (_--, (_ += _[_++] << _), (_ += 8));
             }
-            _.head && ((_.head.xflags = _ & 255), (_.head._ = _ >> 8)),
+            (_.head && ((_.head.xflags = _ & 255), (_.head._ = _ >> 8)),
               _.flags & 512 &&
                 ((_[0] = _ & 255),
                 (_[1] = (_ >>> 8) & 255),
                 (_.check = _(_.check, _, 2, 0))),
               (_ = 0),
               (_ = 0),
-              (_.mode = _);
+              (_.mode = _));
           case _:
             if (_.flags & 1024) {
-              for (; _ < 16; ) {
+              for (; _ < 16;) {
                 if (_ === 0) break inf_leave;
-                _--, (_ += _[_++] << _), (_ += 8);
+                (_--, (_ += _[_++] << _), (_ += 8));
               }
-              (_.length = _),
+              ((_.length = _),
                 _.head && (_.head.extra_len = _),
                 _.flags & 512 &&
                   ((_[0] = _ & 255),
                   (_[1] = (_ >>> 8) & 255),
                   (_.check = _(_.check, _, 2, 0))),
                 (_ = 0),
-                (_ = 0);
+                (_ = 0));
             } else _.head && (_.head.extra = null);
             _.mode = _;
           case _:
@@ -2920,17 +2925,17 @@ var _ = _((_) => {
               _.length)
             )
               break inf_leave;
-            (_.length = 0), (_.mode = _);
+            ((_.length = 0), (_.mode = _));
           case _:
             if (_.flags & 2048) {
               if (_ === 0) break inf_leave;
               _ = 0;
               do
-                (_ = _[_ + _++]),
+                ((_ = _[_ + _++]),
                   _.head &&
                     _ &&
                     _.length < 65536 &&
-                    (_.head.name += String.fromCharCode(_));
+                    (_.head.name += String.fromCharCode(_)));
               while (_ && _ < _);
               if (
                 (_.flags & 512 && (_.check = _(_.check, _, _, _)),
@@ -2940,17 +2945,17 @@ var _ = _((_) => {
               )
                 break inf_leave;
             } else _.head && (_.head.name = null);
-            (_.length = 0), (_.mode = _);
+            ((_.length = 0), (_.mode = _));
           case _:
             if (_.flags & 4096) {
               if (_ === 0) break inf_leave;
               _ = 0;
               do
-                (_ = _[_ + _++]),
+                ((_ = _[_ + _++]),
                   _.head &&
                     _ &&
                     _.length < 65536 &&
-                    (_.head.comment += String.fromCharCode(_));
+                    (_.head.comment += String.fromCharCode(_)));
               while (_ && _ < _);
               if (
                 (_.flags & 512 && (_.check = _(_.check, _, _, _)),
@@ -2963,26 +2968,26 @@ var _ = _((_) => {
             _.mode = _;
           case _:
             if (_.flags & 512) {
-              for (; _ < 16; ) {
+              for (; _ < 16;) {
                 if (_ === 0) break inf_leave;
-                _--, (_ += _[_++] << _), (_ += 8);
+                (_--, (_ += _[_++] << _), (_ += 8));
               }
               if (_ !== (_.check & 65535)) {
-                (_.msg = `header crc mismatch`), (_.mode = _);
+                ((_.msg = `header crc mismatch`), (_.mode = _));
                 break;
               }
-              (_ = 0), (_ = 0);
+              ((_ = 0), (_ = 0));
             }
-            _.head && ((_.head.hcrc = (_.flags >> 9) & 1), (_.head.done = !0)),
+            (_.head && ((_.head.hcrc = (_.flags >> 9) & 1), (_.head.done = !0)),
               (_.adler = _.check = 0),
-              (_.mode = _);
+              (_.mode = _));
             break;
           case _:
-            for (; _ < 32; ) {
+            for (; _ < 32;) {
               if (_ === 0) break inf_leave;
-              _--, (_ += _[_++] << _), (_ += 8);
+              (_--, (_ += _[_++] << _), (_ += 8));
             }
-            (_.adler = _.check = _(_)), (_ = 0), (_ = 0), (_.mode = _);
+            ((_.adler = _.check = _(_)), (_ = 0), (_ = 0), (_.mode = _));
           case _:
             if (_.havedict === 0)
               return (
@@ -2994,17 +2999,17 @@ var _ = _((_) => {
                 (_.bits = _),
                 _
               );
-            (_.adler = _.check = 1), (_.mode = _);
+            ((_.adler = _.check = 1), (_.mode = _));
           case _:
             if (_ === _ || _ === _) break inf_leave;
           case _:
             if (_.last) {
-              (_ >>>= _ & 7), (_ -= _ & 7), (_.mode = _);
+              ((_ >>>= _ & 7), (_ -= _ & 7), (_.mode = _));
               break;
             }
-            for (; _ < 3; ) {
+            for (; _ < 3;) {
               if (_ === 0) break inf_leave;
-              _--, (_ += _[_++] << _), (_ += 8);
+              (_--, (_ += _[_++] << _), (_ += 8));
             }
             switch (((_.last = _ & 1), (_ >>>= 1), --_, _ & 3)) {
               case 0:
@@ -3012,7 +3017,7 @@ var _ = _((_) => {
                 break;
               case 1:
                 if ((_(_), (_.mode = _), _ === _)) {
-                  (_ >>>= 2), (_ -= 2);
+                  ((_ >>>= 2), (_ -= 2));
                   break inf_leave;
                 }
                 break;
@@ -3020,17 +3025,17 @@ var _ = _((_) => {
                 _.mode = _;
                 break;
               case 3:
-                (_.msg = `invalid block type`), (_.mode = _);
+                ((_.msg = `invalid block type`), (_.mode = _));
             }
-            (_ >>>= 2), (_ -= 2);
+            ((_ >>>= 2), (_ -= 2));
             break;
           case _:
-            for (_ >>>= _ & 7, _ -= _ & 7; _ < 32; ) {
+            for (_ >>>= _ & 7, _ -= _ & 7; _ < 32;) {
               if (_ === 0) break inf_leave;
-              _--, (_ += _[_++] << _), (_ += 8);
+              (_--, (_ += _[_++] << _), (_ += 8));
             }
             if ((_ & 65535) != ((_ >>> 16) ^ 65535)) {
-              (_.msg = `invalid stored block lengths`), (_.mode = _);
+              ((_.msg = `invalid stored block lengths`), (_.mode = _));
               break;
             }
             if (
@@ -3043,20 +3048,20 @@ var _ = _((_) => {
             if (((_ = _.length), _)) {
               if ((_ > _ && (_ = _), _ > _ && (_ = _), _ === 0))
                 break inf_leave;
-              _.arraySet(_, _, _, _, _),
+              (_.arraySet(_, _, _, _, _),
                 (_ -= _),
                 (_ += _),
                 (_ -= _),
                 (_ += _),
-                (_.length -= _);
+                (_.length -= _));
               break;
             }
             _.mode = _;
             break;
           case _:
-            for (; _ < 14; ) {
+            for (; _ < 14;) {
               if (_ === 0) break inf_leave;
-              _--, (_ += _[_++] << _), (_ += 8);
+              (_--, (_ += _[_++] << _), (_ += 8));
             }
             if (
               ((_.nlen = (_ & 31) + 257),
@@ -3070,19 +3075,19 @@ var _ = _((_) => {
               (_ -= 4),
               _.nlen > 286 || _.ndist > 30)
             ) {
-              (_.msg = `too many length or distance symbols`), (_.mode = _);
+              ((_.msg = `too many length or distance symbols`), (_.mode = _));
               break;
             }
-            (_.have = 0), (_.mode = _);
+            ((_.have = 0), (_.mode = _));
           case _:
-            for (; _.have < _.ncode; ) {
-              for (; _ < 3; ) {
+            for (; _.have < _.ncode;) {
+              for (; _ < 3;) {
                 if (_ === 0) break inf_leave;
-                _--, (_ += _[_++] << _), (_ += 8);
+                (_--, (_ += _[_++] << _), (_ += 8));
               }
-              (_.lens[_[_.have++]] = _ & 7), (_ >>>= 3), (_ -= 3);
+              ((_.lens[_[_.have++]] = _ & 7), (_ >>>= 3), (_ -= 3));
             }
-            for (; _.have < 19; ) _.lens[_[_.have++]] = 0;
+            for (; _.have < 19;) _.lens[_[_.have++]] = 0;
             if (
               ((_.lencode = _.lendyn),
               (_.lenbits = 7),
@@ -3093,12 +3098,12 @@ var _ = _((_) => {
               (_.lenbits = _.bits),
               _)
             ) {
-              (_.msg = `invalid code lengths set`), (_.mode = _);
+              ((_.msg = `invalid code lengths set`), (_.mode = _));
               break;
             }
-            (_.have = 0), (_.mode = _);
+            ((_.have = 0), (_.mode = _));
           case _:
-            for (; _.have < _.nlen + _.ndist; ) {
+            for (; _.have < _.nlen + _.ndist;) {
               for (
                 ;
                 (_ = _.lencode[_ & ((1 << _.lenbits) - 1)]),
@@ -3108,56 +3113,56 @@ var _ = _((_) => {
                   !(_ <= _);
               ) {
                 if (_ === 0) break inf_leave;
-                _--, (_ += _[_++] << _), (_ += 8);
+                (_--, (_ += _[_++] << _), (_ += 8));
               }
-              if (_ < 16) (_ >>>= _), (_ -= _), (_.lens[_.have++] = _);
+              if (_ < 16) ((_ >>>= _), (_ -= _), (_.lens[_.have++] = _));
               else {
                 if (_ === 16) {
-                  for (_ = _ + 2; _ < _; ) {
+                  for (_ = _ + 2; _ < _;) {
                     if (_ === 0) break inf_leave;
-                    _--, (_ += _[_++] << _), (_ += 8);
+                    (_--, (_ += _[_++] << _), (_ += 8));
                   }
                   if (((_ >>>= _), (_ -= _), _.have === 0)) {
-                    (_.msg = `invalid bit length repeat`), (_.mode = _);
+                    ((_.msg = `invalid bit length repeat`), (_.mode = _));
                     break;
                   }
-                  (_ = _.lens[_.have - 1]),
+                  ((_ = _.lens[_.have - 1]),
                     (_ = 3 + (_ & 3)),
                     (_ >>>= 2),
-                    (_ -= 2);
+                    (_ -= 2));
                 } else if (_ === 17) {
-                  for (_ = _ + 3; _ < _; ) {
+                  for (_ = _ + 3; _ < _;) {
                     if (_ === 0) break inf_leave;
-                    _--, (_ += _[_++] << _), (_ += 8);
+                    (_--, (_ += _[_++] << _), (_ += 8));
                   }
-                  (_ >>>= _),
+                  ((_ >>>= _),
                     (_ -= _),
                     (_ = 0),
                     (_ = 3 + (_ & 7)),
                     (_ >>>= 3),
-                    (_ -= 3);
+                    (_ -= 3));
                 } else {
-                  for (_ = _ + 7; _ < _; ) {
+                  for (_ = _ + 7; _ < _;) {
                     if (_ === 0) break inf_leave;
-                    _--, (_ += _[_++] << _), (_ += 8);
+                    (_--, (_ += _[_++] << _), (_ += 8));
                   }
-                  (_ >>>= _),
+                  ((_ >>>= _),
                     (_ -= _),
                     (_ = 0),
                     (_ = 11 + (_ & 127)),
                     (_ >>>= 7),
-                    (_ -= 7);
+                    (_ -= 7));
                 }
                 if (_.have + _ > _.nlen + _.ndist) {
-                  (_.msg = `invalid bit length repeat`), (_.mode = _);
+                  ((_.msg = `invalid bit length repeat`), (_.mode = _));
                   break;
                 }
-                for (; _--; ) _.lens[_.have++] = _;
+                for (; _--;) _.lens[_.have++] = _;
               }
             }
             if (_.mode === _) break;
             if (_.lens[256] === 0) {
-              (_.msg = `invalid code -- missing end-of-block`), (_.mode = _);
+              ((_.msg = `invalid code -- missing end-of-block`), (_.mode = _));
               break;
             }
             if (
@@ -3169,7 +3174,7 @@ var _ = _((_) => {
               (_.lenbits = _.bits),
               _)
             ) {
-              (_.msg = `invalid literal/lengths set`), (_.mode = _);
+              ((_.msg = `invalid literal/lengths set`), (_.mode = _));
               break;
             }
             if (
@@ -3182,7 +3187,7 @@ var _ = _((_) => {
               (_.distbits = _.bits),
               _)
             ) {
-              (_.msg = `invalid distances set`), (_.mode = _);
+              ((_.msg = `invalid distances set`), (_.mode = _));
               break;
             }
             if (((_.mode = _), _ === _)) break inf_leave;
@@ -3190,7 +3195,7 @@ var _ = _((_) => {
             _.mode = _;
           case _:
             if (_ >= 6 && _ >= 258) {
-              (_.next_out = _),
+              ((_.next_out = _),
                 (_.avail_out = _),
                 (_.next_in = _),
                 (_.avail_in = _),
@@ -3205,7 +3210,7 @@ var _ = _((_) => {
                 (_ = _.avail_in),
                 (_ = _.hold),
                 (_ = _.bits),
-                _.mode === _ && (_.back = -1);
+                _.mode === _ && (_.back = -1));
               break;
             }
             for (
@@ -3217,7 +3222,7 @@ var _ = _((_) => {
                 !(_ <= _);
             ) {
               if (_ === 0) break inf_leave;
-              _--, (_ += _[_++] << _), (_ += 8);
+              (_--, (_ += _[_++] << _), (_ += 8));
             }
             if (_ && !(_ & 240)) {
               for (
@@ -3229,9 +3234,9 @@ var _ = _((_) => {
                   !(_ + _ <= _);
               ) {
                 if (_ === 0) break inf_leave;
-                _--, (_ += _[_++] << _), (_ += 8);
+                (_--, (_ += _[_++] << _), (_ += 8));
               }
-              (_ >>>= _), (_ -= _), (_.back += _);
+              ((_ >>>= _), (_ -= _), (_.back += _));
             }
             if (
               ((_ >>>= _), (_ -= _), (_.back += _), (_.length = _), _ === 0)
@@ -3240,26 +3245,26 @@ var _ = _((_) => {
               break;
             }
             if (_ & 32) {
-              (_.back = -1), (_.mode = _);
+              ((_.back = -1), (_.mode = _));
               break;
             }
             if (_ & 64) {
-              (_.msg = `invalid literal/length code`), (_.mode = _);
+              ((_.msg = `invalid literal/length code`), (_.mode = _));
               break;
             }
-            (_.extra = _ & 15), (_.mode = _);
+            ((_.extra = _ & 15), (_.mode = _));
           case _:
             if (_.extra) {
-              for (_ = _.extra; _ < _; ) {
+              for (_ = _.extra; _ < _;) {
                 if (_ === 0) break inf_leave;
-                _--, (_ += _[_++] << _), (_ += 8);
+                (_--, (_ += _[_++] << _), (_ += 8));
               }
-              (_.length += _ & ((1 << _.extra) - 1)),
+              ((_.length += _ & ((1 << _.extra) - 1)),
                 (_ >>>= _.extra),
                 (_ -= _.extra),
-                (_.back += _.extra);
+                (_.back += _.extra));
             }
-            (_.was = _.length), (_.mode = _);
+            ((_.was = _.length), (_.mode = _));
           case _:
             for (
               ;
@@ -3270,7 +3275,7 @@ var _ = _((_) => {
                 !(_ <= _);
             ) {
               if (_ === 0) break inf_leave;
-              _--, (_ += _[_++] << _), (_ += 8);
+              (_--, (_ += _[_++] << _), (_ += 8));
             }
             if (!(_ & 240)) {
               for (
@@ -3282,28 +3287,28 @@ var _ = _((_) => {
                   !(_ + _ <= _);
               ) {
                 if (_ === 0) break inf_leave;
-                _--, (_ += _[_++] << _), (_ += 8);
+                (_--, (_ += _[_++] << _), (_ += 8));
               }
-              (_ >>>= _), (_ -= _), (_.back += _);
+              ((_ >>>= _), (_ -= _), (_.back += _));
             }
             if (((_ >>>= _), (_ -= _), (_.back += _), _ & 64)) {
-              (_.msg = `invalid distance code`), (_.mode = _);
+              ((_.msg = `invalid distance code`), (_.mode = _));
               break;
             }
-            (_.offset = _), (_.extra = _ & 15), (_.mode = _);
+            ((_.offset = _), (_.extra = _ & 15), (_.mode = _));
           case _:
             if (_.extra) {
-              for (_ = _.extra; _ < _; ) {
+              for (_ = _.extra; _ < _;) {
                 if (_ === 0) break inf_leave;
-                _--, (_ += _[_++] << _), (_ += 8);
+                (_--, (_ += _[_++] << _), (_ += 8));
               }
-              (_.offset += _ & ((1 << _.extra) - 1)),
+              ((_.offset += _ & ((1 << _.extra) - 1)),
                 (_ >>>= _.extra),
                 (_ -= _.extra),
-                (_.back += _.extra);
+                (_.back += _.extra));
             }
             if (_.offset > _.dmax) {
-              (_.msg = `invalid distance too far back`), (_.mode = _);
+              ((_.msg = `invalid distance too far back`), (_.mode = _));
               break;
             }
             _.mode = _;
@@ -3311,29 +3316,29 @@ var _ = _((_) => {
             if (_ === 0) break inf_leave;
             if (((_ = _ - _), _.offset > _)) {
               if (((_ = _.offset - _), _ > _.whave && _.sane)) {
-                (_.msg = `invalid distance too far back`), (_.mode = _);
+                ((_.msg = `invalid distance too far back`), (_.mode = _));
                 break;
               }
-              _ > _.wnext
+              (_ > _.wnext
                 ? ((_ -= _.wnext), (_ = _.wsize - _))
                 : (_ = _.wnext - _),
                 _ > _.length && (_ = _.length),
-                (_ = _.window);
-            } else (_ = _), (_ = _ - _.offset), (_ = _.length);
-            _ > _ && (_ = _), (_ -= _), (_.length -= _);
+                (_ = _.window));
+            } else ((_ = _), (_ = _ - _.offset), (_ = _.length));
+            (_ > _ && (_ = _), (_ -= _), (_.length -= _));
             do _[_++] = _[_++];
             while (--_);
             _.length === 0 && (_.mode = _);
             break;
           case _:
             if (_ === 0) break inf_leave;
-            (_[_++] = _.length), _--, (_.mode = _);
+            ((_[_++] = _.length), _--, (_.mode = _));
             break;
           case _:
             if (_.wrap) {
-              for (; _ < 32; ) {
+              for (; _ < 32;) {
                 if (_ === 0) break inf_leave;
-                _--, (_ |= _[_++] << _), (_ += 8);
+                (_--, (_ |= _[_++] << _), (_ += 8));
               }
               if (
                 ((_ -= _),
@@ -3347,23 +3352,23 @@ var _ = _((_) => {
                 (_ = _),
                 (_.flags ? _ : _(_)) !== _.check)
               ) {
-                (_.msg = `incorrect data check`), (_.mode = _);
+                ((_.msg = `incorrect data check`), (_.mode = _));
                 break;
               }
-              (_ = 0), (_ = 0);
+              ((_ = 0), (_ = 0));
             }
             _.mode = _;
           case _:
             if (_.wrap && _.flags) {
-              for (; _ < 32; ) {
+              for (; _ < 32;) {
                 if (_ === 0) break inf_leave;
-                _--, (_ += _[_++] << _), (_ += 8);
+                (_--, (_ += _[_++] << _), (_ += 8));
               }
               if (_ !== (_.total | 0)) {
-                (_.msg = `incorrect length check`), (_.mode = _);
+                ((_.msg = `incorrect length check`), (_.mode = _));
                 break;
               }
-              (_ = 0), (_ = 0);
+              ((_ = 0), (_ = 0));
             }
             _.mode = _;
           case _:
@@ -3412,7 +3417,7 @@ var _ = _((_) => {
     function _(_) {
       if (!_ || !_.state) return _;
       var _ = _.state;
-      return (_.window &&= null), (_.state = null), _;
+      return ((_.window &&= null), (_.state = null), _);
     }
     function _(_, _) {
       var _;
@@ -3432,7 +3437,7 @@ var _ = _((_) => {
           : ((_ = _(_, _, _, _)),
             _ ? ((_.mode = _), _) : ((_.havedict = 1), _));
     }
-    (_.inflateReset = _),
+    ((_.inflateReset = _),
       (_.inflateReset2 = _),
       (_.inflateResetKeep = _),
       (_.inflateInit = _),
@@ -3441,7 +3446,7 @@ var _ = _((_) => {
       (_.inflateEnd = _),
       (_.inflateGetHeader = _),
       (_.inflateSetDictionary = _),
-      (_.inflateInfo = `pako inflate (from Nodeca project)`);
+      (_.inflateInfo = `pako inflate (from Nodeca project)`));
   }),
   _ = _((_, _) => {
     _.exports = {
@@ -3476,7 +3481,7 @@ var _ = _((_) => {
   }),
   _ = _((_, _) => {
     function _() {
-      (this.text = 0),
+      ((this.text = 0),
         (this.time = 0),
         (this.xflags = 0),
         (this._ = 0),
@@ -3485,7 +3490,7 @@ var _ = _((_) => {
         (this.name = ``),
         (this.comment = ``),
         (this.hcrc = 0),
-        (this.done = !1);
+        (this.done = !1));
     }
     _.exports = _;
   }),
@@ -3509,7 +3514,7 @@ var _ = _((_) => {
         _ || {},
       );
       var _ = this.options;
-      _.raw &&
+      (_.raw &&
         _.windowBits >= 0 &&
         _.windowBits < 16 &&
         ((_.windowBits = -_.windowBits),
@@ -3526,7 +3531,7 @@ var _ = _((_) => {
         (this.ended = !1),
         (this.chunks = []),
         (this.strm = new _()),
-        (this.strm.avail_out = 0);
+        (this.strm.avail_out = 0));
       var _ = _.inflateInit2(this.strm, _.windowBits);
       if (
         _ !== _.Z_OK ||
@@ -3543,7 +3548,7 @@ var _ = _((_) => {
       )
         throw Error(_[_]);
     }
-    (_.prototype.push = function (_, _) {
+    ((_.prototype.push = function (_, _) {
       var _ = this.strm,
         _ = this.options.chunkSize,
         _ = this.options.dictionary,
@@ -3554,7 +3559,7 @@ var _ = _((_) => {
         _,
         _ = !1;
       if (this.ended) return !1;
-      (_ = _ === ~~_ ? _ : _ === !0 ? _.Z_FINISH : _.Z_NO_FLUSH),
+      ((_ = _ === ~~_ ? _ : _ === !0 ? _.Z_FINISH : _.Z_NO_FLUSH),
         (_.input =
           typeof _ == `string`
             ? _.binstring2buf(_)
@@ -3562,7 +3567,7 @@ var _ = _((_) => {
               ? new Uint8Array(_)
               : _),
         (_.next_in = 0),
-        (_.avail_in = _.input.length);
+        (_.avail_in = _.input.length));
       do {
         if (
           (_.avail_out === 0 &&
@@ -3574,8 +3579,8 @@ var _ = _((_) => {
           _ === _.Z_BUF_ERROR && _ === !0 && ((_ = _.Z_OK), (_ = !1)),
           _ !== _.Z_STREAM_END && _ !== _.Z_OK)
         )
-          return this.onEnd(_), (this.ended = !0), !1;
-        _.next_out &&
+          return (this.onEnd(_), (this.ended = !0), !1);
+        (_.next_out &&
           (_.avail_out === 0 ||
             _ === _.Z_STREAM_END ||
             (_.avail_in === 0 && (_ === _.Z_FINISH || _ === _.Z_SYNC_FLUSH))) &&
@@ -3588,7 +3593,7 @@ var _ = _((_) => {
               _ && _.arraySet(_.output, _.output, _, _, 0),
               this.onData(_))
             : this.onData(_.shrinkBuf(_.output, _.next_out))),
-          _.avail_in === 0 && _.avail_out === 0 && (_ = !0);
+          _.avail_in === 0 && _.avail_out === 0 && (_ = !0));
       } while ((_.avail_in > 0 || _.avail_out === 0) && _ !== _.Z_STREAM_END);
       return (
         _ === _.Z_STREAM_END && (_ = _.Z_FINISH),
@@ -3605,24 +3610,24 @@ var _ = _((_) => {
         this.chunks.push(_);
       }),
       (_.prototype.onEnd = function (_) {
-        _ === _.Z_OK &&
+        (_ === _.Z_OK &&
           (this.result =
             this.options._ === `string`
               ? this.chunks.join(``)
               : _.flattenChunks(this.chunks)),
           (this.chunks = []),
           (this.err = _),
-          (this.msg = this.strm.msg);
-      });
+          (this.msg = this.strm.msg));
+      }));
     function _(_, _) {
       var _ = new _(_);
       if ((_.push(_, !0), _.err)) throw _.msg || _[_.err];
       return _.result;
     }
     function _(_, _) {
-      return (_ ||= {}), (_.raw = !0), _(_, _);
+      return ((_ ||= {}), (_.raw = !0), _(_, _));
     }
-    (_.Inflate = _), (_.inflate = _), (_.inflateRaw = _), (_.ungzip = _);
+    ((_.Inflate = _), (_.inflate = _), (_.inflateRaw = _), (_.ungzip = _));
   }),
   _ = _(
     _((_, _) => {
@@ -3631,7 +3636,7 @@ var _ = _((_) => {
         _ = _(),
         _ = _(),
         _ = {};
-      _(_, _, _, _), (_.exports = _);
+      (_(_, _, _, _), (_.exports = _));
     })(),
   ),
   _ = _(_()),
@@ -3658,7 +3663,7 @@ var _ = _((_) => {
     m_Storage;
     m_InitPromise;
     Init(_) {
-      (this.m_Storage = _), (this.m_InitPromise = this.LoadFromCache());
+      ((this.m_Storage = _), (this.m_InitPromise = this.LoadFromCache()));
     }
     async LoadFromCache() {
       if (this.m_InitPromise) return this.m_InitPromise;
@@ -3686,16 +3691,16 @@ var _ = _((_) => {
       return this.PingCMs();
     }
     RecordCMDisconnected(_) {
-      (_.nConnectFailures = (_.nConnectFailures || 0) + 1),
+      ((_.nConnectFailures = (_.nConnectFailures || 0) + 1),
         (_.msPing = 2 ** 53 - 1),
         (_.nCMLoad = 2 ** 53 - 1),
-        this.WriteCMListToLocalStorage();
+        this.WriteCMListToLocalStorage());
     }
     BuildCMWebSocketURL(_) {
       return `wss://` + this.FixDevHost(_) + `/cmsocket/`;
     }
     FixDevHost(_) {
-      return _.EUNIVERSE, _;
+      return (_.EUNIVERSE, _);
     }
     GetLocalStorageKey() {
       return `CCMList_` + _.EUNIVERSE;
@@ -3731,8 +3736,8 @@ var _ = _((_) => {
       for (let _ of this.m_CMList.rgCMList) {
         let _ = _(_),
           _ = !_ || _.rtLastCheck < _;
-        _ && _.length < _ && _.push(_),
-          (!_ || _.IN_MOBILE) && _ && _ < _ && (_[_.strHost] = _);
+        (_ && _.length < _ && _.push(_),
+          (!_ || _.IN_MOBILE) && _ && _ < _ && (_[_.strHost] = _));
       }
       `${_.length}`;
       let _ = !1;
@@ -3759,25 +3764,25 @@ var _ = _((_) => {
               _(`No CMs available`);
             }
           };
-        (_.length === 0 ||
+        ((_.length === 0 ||
           Object.keys(_).some((_) => this.BCMOkToUse(_[_], _)) ||
           (_.IN_MOBILE && Object.keys(_).length)) &&
           (Object.keys(_).length && _.IN_MOBILE, _(_)),
           _ ||
             ((_ = window.setTimeout(() => {
-              (_ = `timeout`),
+              ((_ = `timeout`),
                 !_ &&
                   Object.keys(_).some((_) => this.BCMOkToUse(_[_], _)) &&
-                  _(_);
+                  _(_));
             }, _)),
             (_ = window.setTimeout(() => {
-              (_ = `seriouslytimeout`), _(_);
-            }, _)));
+              ((_ = `seriouslytimeout`), _(_));
+            }, _))));
         let _ = 0,
           _ = 0,
           _,
           _ = (_) => {
-            !_ && this.BCMOkToUse(_, _)
+            (!_ && this.BCMOkToUse(_, _)
               ? _({
                   [_.strHost]: _,
                 })
@@ -3790,7 +3795,7 @@ var _ = _((_) => {
                     ? _({
                         [_.strHost]: _,
                       })
-                    : ((_[_.strHost] = _), _(_)));
+                    : ((_[_.strHost] = _), _(_))));
           };
         _ = () => {
           if (_ < _.length) {
@@ -3811,12 +3816,12 @@ var _ = _((_) => {
       if (!this.m_CMList.rgCMList.length) return;
       let _ = this.m_CMList.rgCMList[0],
         _ = 1;
-      for (; _.nConnectFailures > 0 && _ < this.m_CMList.rgCMList.length; ) {
+      for (; _.nConnectFailures > 0 && _ < this.m_CMList.rgCMList.length;) {
         let _ = this.m_CMList.rgCMList[_++];
         (!_.nConnectFailures || _.nConnectFailures < _.nConnectFailures) &&
           (_ = _);
       }
-      return `` + (_ ? this.FixDevHost(_.strHost) : `none!`), _;
+      return (`` + (_ ? this.FixDevHost(_.strHost) : `none!`), _);
     }
     BCMOkToUse(_, _) {
       if (!_) return !1;
@@ -3834,24 +3839,24 @@ var _ = _((_) => {
       let _ = performance.now(),
         _ = _.default.CancelToken.source(),
         _ = window.setTimeout(() => {
-          `${_.strHost}`, _.cancel();
+          (`${_.strHost}`, _.cancel());
         }, _);
       try {
         let _ = await _.default.head(_, {
           cancelToken: _.token,
         });
-        `${_.strHost}`, window.clearTimeout(_);
+        (`${_.strHost}`, window.clearTimeout(_));
         let _ = performance.now() - _,
           _ = _.headers[`x-steam-cmload`]
             ? parseInt(_.headers[`x-steam-cmload`])
             : void 0;
-        `${_.strHost}${_}${_}`, (_.msPing = _), (_.nCMLoad = _);
+        (`${_.strHost}${_}${_}`, (_.msPing = _), (_.nCMLoad = _));
       } catch (_) {
-        _.default.isCancel(_) ? `${_.strHost}` : window.clearTimeout(_),
+        (_.default.isCancel(_) ? `${_.strHost}` : window.clearTimeout(_),
           (_.msPing = _),
-          (_.nCMLoad = 0);
+          (_.nCMLoad = 0));
       }
-      return (_.rtLastCheck = new Date().getTime() / 1e3), _.msPing;
+      return ((_.rtLastCheck = new Date().getTime() / 1e3), _.msPing);
     }
   };
 async function _() {
@@ -3872,7 +3877,7 @@ function _(_, _) {
     new Promise((_, _) => {
       let _ = !1,
         _ = window.setTimeout(() => {
-          (_ = !0), _(Error(`Timed out`));
+          ((_ = !0), _(Error(`Timed out`)));
         }, _);
       _().then(
         (_) => {
@@ -3912,7 +3917,7 @@ var _ = 3,
     m_mapWaitingCallbacks = new Map();
     m_CMList = new _();
     constructor(_) {
-      super(), _(this), this.m_CMList.Init(_);
+      (super(), _(this), this.m_CMList.Init(_));
     }
     BIsConnected() {
       return this.m_Socket && this.m_Socket.readyState == WebSocket.OPEN;
@@ -3947,7 +3952,7 @@ var _ = 3,
                             _());
                       },
                       () => {
-                        console.log(
+                        (console.log(
                           `Failed to connect to CM ${_ + 1} of ${_.length}: ${_.strHost}`,
                         ),
                           _++,
@@ -3955,7 +3960,7 @@ var _ = 3,
                             (console.log(
                               `Failed to connect to all ${_.length} best CMs`,
                             ),
-                            _());
+                            _()));
                       },
                     ),
                   );
@@ -3984,19 +3989,19 @@ var _ = 3,
           let _ = !1,
             _ = 3e3,
             _ = window.setTimeout(() => {
-              console.warn(
+              (console.warn(
                 `Socket connection timed out after ${_}ms: ${_.strHost}`,
               ),
                 (_ = !0),
                 _.close(4e3),
                 this.m_CMList.RecordCMDisconnected(_),
-                _();
+                _());
             }, _);
-          (_.onopen = () => {
-            console.log(`Connected socket to host ${_.strHost}`),
+          ((_.onopen = () => {
+            (console.log(`Connected socket to host ${_.strHost}`),
               _(!_, `Socket connection was opened after timing out.`),
               _ || window.clearTimeout(_),
-              _(_);
+              _(_));
           }),
             (_.onerror = (_) => {
               _ ||
@@ -4006,7 +4011,7 @@ var _ = 3,
                 _.message ? console.log(_.message) : console.log(`No message`),
                 this.m_CMList.RecordCMDisconnected(_),
                 _());
-            });
+            }));
         })
       );
     }
@@ -4018,39 +4023,39 @@ var _ = 3,
         (window.clearInterval(this.m_iIntervalHeartbeat), void 0);
     }
     ResetHeartbeatInterval() {
-      this.ClearHeartbeatInterval(),
+      (this.ClearHeartbeatInterval(),
         (this.m_iIntervalHeartbeat = window.setInterval(
           () => this.SendHeartbeat(),
           27e3,
-        ));
+        )));
     }
     SendHeartbeat() {
       let _ = _.Init(_, 703);
       this.Send(_);
     }
     OnConnect() {
-      super.OnConnect(),
+      (super.OnConnect(),
         this.m_Socket &&
           ((this.m_Socket.onerror = (_) => {}),
           this.ResetHeartbeatInterval(),
           (this.m_Socket.onclose = (_) => {
             this.OnDisconnect();
-          }));
+          })));
     }
     Disconnect() {
       this.m_Socket && this.m_Socket.close();
     }
     OnDisconnect() {
-      (this.m_Socket = void 0),
+      ((this.m_Socket = void 0),
         (this.m_SocketCMHost = void 0),
         (this.m_onConnect = void 0),
         this.ClearHeartbeatInterval(),
-        super.OnDisconnect();
+        super.OnDisconnect());
     }
     SendMsgAndAwaitResponse(_, _) {
       return new Promise((_, _) => {
         let _ = this.m_iCallSeq++;
-        _.Hdr().set_jobid_source(`` + _),
+        (_.Hdr().set_jobid_source(`` + _),
           this.Send(_)
             ? this.m_mapWaitingCallbacks.set(_, {
                 iSeq: _,
@@ -4062,7 +4067,7 @@ var _ = 3,
                 _,
                 2,
                 `Web socket not connected`,
-              );
+              ));
       });
     }
     SendInternal(_) {
@@ -4087,7 +4092,7 @@ var _ = 3,
           let _ = this.m_mapWaitingCallbacks.get(_);
           if (_) {
             let _ = _.InitFromMsg(_.msgClass, _);
-            this.DEBUG_LogCMInterfaceActivity(_, `receive`, !0),
+            (this.DEBUG_LogCMInterfaceActivity(_, `receive`, !0),
               _.BIsValid()
                 ? _.fnCallback(_)
                 : this.ResolveAwaitWithTransportError(
@@ -4096,7 +4101,7 @@ var _ = 3,
                     102,
                     `Failed to parse response from server`,
                   ),
-              this.m_mapWaitingCallbacks.delete(_);
+              this.m_mapWaitingCallbacks.delete(_));
           }
           return !1;
         }
@@ -4109,7 +4114,7 @@ var _ = 3,
       _,
       (_) => {
         let _ = _.Body().eresult();
-        (this.m_Session.m_bWaitingForLogonResponse = !1),
+        ((this.m_Session.m_bWaitingForLogonResponse = !1),
           (this.m_Session.m_eResultLogonSuccess = _),
           _ == 1
             ? ((this.m_steamid = new _(_.Body().client_supplied_steamid())),
@@ -4125,16 +4130,16 @@ var _ = 3,
               ),
               _ == 48 &&
                 this.m_CMList.RecordCMDisconnected(this.m_SocketCMHost),
-              this.Disconnect());
+              this.Disconnect()));
       },
     );
     ClientAccountInfoHandler = this.messageHandlers.RegisterEMessageAction(
       768,
       _,
       (_) => {
-        (this.m_unAccountFlags = _.Body().account_flags() || 0),
+        ((this.m_unAccountFlags = _.Body().account_flags() || 0),
           (this.m_strIPCountry = _.Body().ip_country() || ``),
-          (this.m_strPersonaName = _.Body().persona_name() || ``);
+          (this.m_strPersonaName = _.Body().persona_name() || ``));
       },
     );
     DecodeAndDispatchMultiMsg(_) {
@@ -4142,24 +4147,24 @@ var _ = 3,
       if (!_) return;
       _.Body().size_unzipped() && (_ = _.inflate(_));
       let _ = new _(_);
-      for (; _.GetCountBytesRemaining() > 0; ) {
+      for (; _.GetCountBytesRemaining() > 0;) {
         let _ = _.GetUint32(),
           _ = _.InitHeaderFromPacket(new _(_.GetPacket(), _.TellGet(), _));
-        this.DispatchMessage(_), _.SeekGetCurrent(_);
+        (this.DispatchMessage(_), _.SeekGetCurrent(_));
       }
     }
   };
-_([_], _.prototype, `DecodeAndDispatchMultiMsg`, null),
+(_([_], _.prototype, `DecodeAndDispatchMultiMsg`, null),
   _({
     enforceActions: `never`,
   }),
-  (window.AssertMsg = _);
+  (window.AssertMsg = _));
 function _() {
   let _ = new _(!1),
     _,
     _ = null,
     _ = (_ = new _(_.Storage));
-  _.Get().SetCMInterface(_),
+  (_.Get().SetCMInterface(_),
     (_ = new _(_, _.EREALM)),
     _.PerformInitialLogon(_),
     _.Init(_, !1, _),
@@ -4167,7 +4172,7 @@ function _() {
       _.FriendStore,
       _.ChatStore,
       document.getElementById(`friendslist-container`),
-    );
+    ));
 }
 async function _() {
   _();
@@ -4186,14 +4191,14 @@ async function _() {
   });
 }
 document.addEventListener(`DOMContentLoaded`, async function () {
-  _(), _(), await _(_.LANGUAGE);
+  (_(), _(), await _(_.LANGUAGE));
   let _ = !0;
-  _.steamid && _(_.steamid),
+  (_.steamid && _(_.steamid),
     !_.IN_CLIENT &&
       _.STEAM_TV &&
       (_.logged_in ? _(_.steamid) : ((_ = !1), _())),
     _.SetNavEventParams(`steamclient`, _.STEAM_TV ? `steamtv` : `friendsui`),
-    _ && _();
+    _ && _());
 });
 async function _(_) {
   let _ = _.GetLanguageFallback(_),

@@ -784,7 +784,7 @@ function Od() {
         window.addEventListener(`popstate`, e),
         t(location.search),
         () => {
-          Ed.delete(t), window.removeEventListener(`popstate`, e);
+          (Ed.delete(t), window.removeEventListener(`popstate`, e));
         }
       );
     }, []),
@@ -814,7 +814,7 @@ function kd(e, t) {
           if (!r.has(e)) return;
           r.delete(e);
         }
-        n
+        (n
           ? history.replaceState(
               history.state,
               ``,
@@ -825,7 +825,7 @@ function kd(e, t) {
               ``,
               decodeURIComponent(`${window.location.pathname}?${r}`),
             ),
-          (0, q.startTransition)(Dd);
+          (0, q.startTransition)(Dd));
       },
       [e],
     ),
@@ -859,15 +859,15 @@ var jd = class extends te {
     super(e, t);
   }
   bindMethods() {
-    super.bindMethods(),
+    (super.bindMethods(),
       (this.fetchNextPage = this.fetchNextPage.bind(this)),
-      (this.fetchPreviousPage = this.fetchPreviousPage.bind(this));
+      (this.fetchPreviousPage = this.fetchPreviousPage.bind(this)));
   }
   setOptions(e, t) {
     super.setOptions({ ...e, behavior: g() }, t);
   }
   getOptimisticResult(e) {
-    return (e.behavior = g()), super.getOptimisticResult(e);
+    return ((e.behavior = g()), super.getOptimisticResult(e));
   }
   fetchNextPage(e) {
     return this.fetch({ ...e, meta: { fetchMore: { direction: `forward` } } });
@@ -944,7 +944,7 @@ function Bd(e) {
           let i = n[r];
           if (i.dataset.radioId && i.dataset.radioId === e) {
             let e = n[(r + t + n.length) % n.length];
-            e.click(), e.focus();
+            (e.click(), e.focus());
           }
         }
     }, []),
@@ -1006,15 +1006,15 @@ function Vd(e) {
         if (!l)
           switch (e.key) {
             case ` `:
-              p(), e.preventDefault(), e.stopPropagation();
+              (p(), e.preventDefault(), e.stopPropagation());
               break;
             case `ArrowRight`:
             case `ArrowDown`:
-              u(o), e.preventDefault(), e.stopPropagation();
+              (u(o), e.preventDefault(), e.stopPropagation());
               break;
             case `ArrowLeft`:
             case `ArrowUp`:
-              d(o), e.preventDefault(), e.stopPropagation();
+              (d(o), e.preventDefault(), e.stopPropagation());
           }
       },
       tabIndex: f || s === null ? 0 : -1,
@@ -1049,11 +1049,11 @@ function qd(e, t) {
     a = q.useCallback(
       (t) => {
         let n = Kd(t) ? String(t) : void 0;
-        n === void 0
+        (n === void 0
           ? window.localStorage.removeItem(e)
           : window.localStorage.setItem(e, n),
           r(n),
-          Jd.Get().GetLocalStoreChangeCallback(e).Dispatch(n);
+          Jd.Get().GetLocalStoreChangeCallback(e).Dispatch(n));
       },
       [e, r],
     );
@@ -1085,7 +1085,7 @@ var Jd = class e {
   }
   static s_Singleton;
   static Get() {
-    return (e.s_Singleton ||= new e()), e.s_Singleton;
+    return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
 };
 function Yd(e) {
@@ -1110,12 +1110,12 @@ async function $d() {
 }
 async function ef(e, t, n, r) {
   let i = new FormData();
-  i.append(`sessionid`, uu()),
+  (i.append(`sessionid`, uu()),
     i.append(`door_index`, `` + e),
     n && i.append(`datarecord`, n),
     r && i.append(`fake_open`, `` + r),
     i.append(`clan_accountid`, `` + Xl.CLANACCOUNTID),
-    t || i.append(`open_door`, `0`);
+    t || i.append(`open_door`, `0`));
   let a = await Zd(Xd(`ajaxopendoor`), { method: `POST`, body: i });
   if (a.success != 1)
     throw Error(
@@ -1127,7 +1127,7 @@ async function ef(e, t, n, r) {
 }
 async function tf(e) {
   let t = new FormData();
-  t.append(`sessionid`, uu()), t.append(`clan_accountid`, `` + e);
+  (t.append(`sessionid`, uu()), t.append(`clan_accountid`, `` + e));
   let n = await Zd(Xd(`ajaxclosealldoor`), { method: `POST`, body: t });
   if (n.success != 1) throw Error(`ajaxclosealldoor answered ` + n.success);
   return n.count ?? 0;
@@ -1200,7 +1200,7 @@ function _f() {
 var vf = new WeakMap();
 function yf(e) {
   let t = vf.get(e);
-  return t || ((t = new Map()), vf.set(e, t)), t;
+  return (t || ((t = new Map()), vf.set(e, t)), t);
 }
 async function bf(e, t) {
   let {
@@ -1255,7 +1255,7 @@ async function bf(e, t) {
       {}
     );
   let l = xf(e, n, r, i, a);
-  return s.set(n, l), l;
+  return (s.set(n, l), l);
 }
 async function xf(e, t, n, r, i) {
   try {
@@ -1277,7 +1277,7 @@ async function xf(e, t, n, r, i) {
       a
     );
   } catch (n) {
-    return yf(e).delete(t), console.error(`OpenEventDoor hit error`, n), null;
+    return (yf(e).delete(t), console.error(`OpenEventDoor hit error`, n), null);
   }
 }
 function Sf() {
@@ -1365,10 +1365,10 @@ var kf = `hts1AEUagvA-`,
         window.scrollTo(0, i);
       },
       g = (0, q.useCallback)(() => {
-        o.UpdateFilter(), s?.();
+        (o.UpdateFilter(), s?.());
       }, [o, s]),
       _ = (e) => {
-        u(e.target.value), o.SetFacetValueSearchString(e.target.value, t, d);
+        (u(e.target.value), o.SetFacetValueSearchString(e.target.value, t, d));
       };
     q.useEffect(() => {
       !o && c && c();
@@ -1503,7 +1503,7 @@ var kf = `hts1AEUagvA-`,
     return (0, J.jsxs)(`a`, {
       className: zf,
       onClick: (e) => {
-        e.preventDefault(), (t.bEnabled = !1), r && r();
+        (e.preventDefault(), (t.bEnabled = !1), r && r());
       },
       children: [
         (0, J.jsx)(Eu, {}),
@@ -1634,10 +1634,10 @@ var Kf = E(function (e) {
     let m;
     a?.facetValueName || (m = { color: r || `white` });
     let h = (e) => {
-        e.preventDefault(),
+        (e.preventDefault(),
           w(() => {
             d || ((i.bEnabled = !i.bEnabled), o?.());
-          });
+          }));
       },
       g = (e) => {
         w(() => {
@@ -1646,7 +1646,7 @@ var Kf = E(function (e) {
       },
       _ = () => {
         w(() => {
-          (i.bEnabled = i.nPriceStopIndex !== l.length - 1), o?.();
+          ((i.bEnabled = i.nPriceStopIndex !== l.length - 1), o?.());
         });
       },
       v = c,
@@ -1916,9 +1916,9 @@ function Cp(e, t) {
           !1
         );
       let o = Gl.Init(El);
-      e && o.Body().add_packages_to_reserve(e),
+      (e && o.Body().add_packages_to_reserve(e),
         t && o.Body().add_packages_to_unreserve(t),
-        o.Body().set_country_code(cs.country_code);
+        o.Body().set_country_code(cs.country_code));
       let s = await zc.UpdatePackageReservations(i, o);
       return s.GetEResult() == 1
         ? (mu(
@@ -1931,7 +1931,7 @@ function Cp(e, t) {
             .forEach((e) => {
               let t = e.packageid() == n?.packageid ? n : r,
                 i = { ...t };
-              (i.reservation_state = e.reservation_state()),
+              ((i.reservation_state = e.reservation_state()),
                 (i.expired = e.expired()),
                 (i.time_expires = e.time_expires()),
                 (i.time_reserved = e.time_reserved()),
@@ -1941,7 +1941,7 @@ function Cp(e, t) {
                 (i.queue_waitlist_token = e.queue_waitlist_token()),
                 (i.position_is_waitlist = e.position_is_waitlist()),
                 (i.user_waitlist_token = e.user_waitlist_token()),
-                a.setQueryData(on(t?.packageid), i);
+                a.setQueryData(on(t?.packageid), i));
             }),
           !0)
         : (console.log(
@@ -1960,7 +1960,7 @@ function wp(e) {
     d = Cp(t, void 0),
     f = (0, q.useCallback)(
       (e) => {
-        a(!0),
+        (a(!0),
           d
             .mutateAsync()
             .then((e) => {
@@ -1971,7 +1971,7 @@ function wp(e) {
               u?.token?.reason ||
                 (s(!0), l(W.Localize(`#Sale_Reservations_BusyServer`)));
             })
-            .finally(() => a(!1));
+            .finally(() => a(!1)));
       },
       [u?.token?.reason, d],
     );
@@ -2021,7 +2021,7 @@ function Tp(e) {
           strOKButtonText: W.Localize(`#Button_Confirm`),
           strCancelButtonText: W.Localize(`#Button_Dismiss`),
           onOK: () => {
-            s(!0),
+            (s(!0),
               a
                 .mutateAsync()
                 .then((e) => {
@@ -2034,7 +2034,7 @@ function Tp(e) {
                   f?.token?.reason ||
                     (d(W.Localize(`#Sale_Reservations_BusyServer`)), l(!0));
                 })
-                .finally(() => s(!1));
+                .finally(() => s(!1)));
           },
         }),
       }),
@@ -2180,7 +2180,7 @@ function Op(e) {
             strOKButtonText: W.Localize(`#Button_Yes`),
             strCancelButtonText: W.Localize(`#Button_Dismiss`),
             onOK: () => {
-              s(!0),
+              (s(!0),
                 a
                   .mutateAsync()
                   .then((e) => {
@@ -2191,7 +2191,7 @@ function Op(e) {
                   .catch(() => {
                     f?.token?.reason ||
                       (d(W.Localize(`#Sale_Reservations_BusyServer`)), l(!0));
-                  });
+                  }));
             },
             children: [
               (0, J.jsx)(`p`, { children: S }),
@@ -2520,42 +2520,42 @@ function fm(e) {
       break;
     case `#Sale_Reservation_MonthYear`:
     case `#Sale_Reservation_AfterMonthYear`:
-      (f = z(`#Sale_Reservation_MonthNoun_` + d)), (p = `` + u.getFullYear());
+      ((f = z(`#Sale_Reservation_MonthNoun_` + d)), (p = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_TwoMonthRangeYear`:
-      (f = z(`#Sale_Reservation_MonthNoun_` + dm(d, 1))),
+      ((f = z(`#Sale_Reservation_MonthNoun_` + dm(d, 1))),
         (p = z(`#Sale_Reservation_MonthNoun_` + d)),
-        (m = `` + u.getFullYear());
+        (m = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_ThreeMonthRangeYear`:
-      (f = z(`#Sale_Reservation_MonthNoun_` + dm(d, 2))),
+      ((f = z(`#Sale_Reservation_MonthNoun_` + dm(d, 2))),
         (p = z(`#Sale_Reservation_MonthNoun_` + d)),
-        (m = `` + u.getFullYear());
+        (m = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_FourMonthRangeYear`:
-      (f = z(`#Sale_Reservation_MonthNoun_` + dm(d, 3))),
+      ((f = z(`#Sale_Reservation_MonthNoun_` + dm(d, 3))),
         (p = z(`#Sale_Reservation_MonthNoun_` + d)),
-        (m = `` + u.getFullYear());
+        (m = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_Quarter_ThreeMonths`:
-      (h = `#Sale_Reservation_Quarter` + (Math.floor((d - 1) / 3) + 1)),
-        (f = `` + u.getFullYear());
+      ((h = `#Sale_Reservation_Quarter` + (Math.floor((d - 1) / 3) + 1)),
+        (f = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_AfterQuarter_ThreeMonths`:
-      (h = `#Sale_Reservation_AfterQuarter` + (Math.floor((d - 1) / 3) + 1)),
+      ((h = `#Sale_Reservation_AfterQuarter` + (Math.floor((d - 1) / 3) + 1)),
         (f = z(`#Sale_Reservation_MonthNoun_` + d)),
-        (p = `` + u.getFullYear());
+        (p = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_ByYear`:
       f = `` + u.getFullYear();
       break;
     case `#Sale_Reservation_ByMonthYear`:
-      (f = z(`#Sale_Reservation_MonthNoun_` + d)), (p = `` + u.getFullYear());
+      ((f = z(`#Sale_Reservation_MonthNoun_` + d)), (p = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_BetweenNowAndLastDay`:
-      (f = z(`#Sale_Reservation_MonthNoun_` + d)),
+      ((f = z(`#Sale_Reservation_MonthNoun_` + d)),
         (p = `` + new Date(u.getFullYear(), u.getMonth(), 0).getDate()),
-        (m = `` + u.getFullYear());
+        (m = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_RelativeWeekly`:
       {
@@ -2950,9 +2950,9 @@ var Mm = new Set([`img`, `noparse`, `url`, `dynamiclink`]),
     m_parentNode;
     m_fnRenderURL;
     constructor(e, t, n) {
-      super(e),
+      (super(e),
         (this.m_parentNode = t),
-        (this.m_fnRenderURL = n ?? ((e) => (0, J.jsx)(Qp, { strURL: e })));
+        (this.m_fnRenderURL = n ?? ((e) => (0, J.jsx)(Qp, { strURL: e }))));
     }
     AppendText(e, t = !1) {
       if (this.m_parentNode && Mm.has(this.m_parentNode.tag)) {
@@ -2961,9 +2961,9 @@ var Mm = new Set([`img`, `noparse`, `url`, `dynamiclink`]),
       }
       let n = e;
       for (let e = tl.exec(n); e; e = tl.exec(n))
-        e.index > 0 && super.AppendText(n.slice(0, e.index), t),
+        (e.index > 0 && super.AppendText(n.slice(0, e.index), t),
           super.AppendNode(this.m_fnRenderURL(e[0])),
-          (n = n.slice(e.index + e[0].length));
+          (n = n.slice(e.index + e[0].length)));
       n.length > 0 && super.AppendText(n, t);
     }
   };
@@ -3033,7 +3033,7 @@ function qm(e, t, n) {
   let r =
       !t.fnBAllowCard || t.fnBAllowCard(n) ? Wm(t.rgDynamicLinks, n) : void 0,
     i = r && (!t.fnBTake || t.fnBTake()) ? r : void 0;
-  return Km.set(e, i), i;
+  return (Km.set(e, i), i);
 }
 function Jm(e, t = Fm) {
   if (!e.rgDynamicLinks.length) return t;
@@ -3117,13 +3117,13 @@ function nh(e) {
       n = W.Localize(`#DynamicLinkType_WorkshopItem`, t.strAppName);
       break;
     case 5:
-      (n = W.Localize(`#DynamicLinkType_Screenshot`, t.strAppName)),
+      ((n = W.Localize(`#DynamicLinkType_Screenshot`, t.strAppName)),
         (r = i),
         (i = ``),
-        (a = !0);
+        (a = !0));
       break;
     case 3:
-      (n = W.Localize(`#DynamicLinkType_Art`, t.strAppName)), (a = !0);
+      ((n = W.Localize(`#DynamicLinkType_Art`, t.strAppName)), (a = !0));
       break;
     case 4:
       n = W.Localize(`#DynamicLinkType_Video`, t.strAppName);
@@ -3835,7 +3835,7 @@ function sg(e) {
 }
 function cg(e, t, n) {
   let r = sg(e).filter((e) => e != t);
-  return r.push(n), og(r);
+  return (r.push(n), og(r));
 }
 var lg = `AYtIxEGY9Qs-`;
 function ug(e) {
@@ -4254,9 +4254,9 @@ function Cg(e) {
         Array.from(r).forEach((e) => {
           if (e) {
             let r = { packageid: e };
-            t.prefetchQuery(sl(n, r)),
+            (t.prefetchQuery(sl(n, r)),
               t.prefetchQuery(su(n, r)),
-              t.prefetchQuery(il(n, r));
+              t.prefetchQuery(il(n, r)));
           }
         });
     }
@@ -4272,7 +4272,7 @@ function Dg(e, t, n, r, i, a, o) {
   if (n == en.k_LoadFailure || !i)
     s = W.Localize(`#Sale_Reservations_BusyServer`);
   else if (rp(r, e))
-    (c = !0),
+    ((c = !0),
       (s =
         e === Zf
           ? bc(
@@ -4292,9 +4292,9 @@ function Dg(e, t, n, r, i, a, o) {
                 href: `https://komodostation.com/`,
                 children: `komodostation.com`,
               }),
-            ));
+            )));
   else if (i && i.some((e) => !e.allow_purchase_in_country))
-    (c = !0), (s = W.Localize(`#Sale_Reservation_NotAvailableCountry`));
+    ((c = !0), (s = W.Localize(`#Sale_Reservation_NotAvailableCountry`)));
   else if (i && i.some((e) => e.account_restricted_from_purchasing)) {
     if (cs.logged_in) {
       let e = i.some((e) => e.requires_reservation),
@@ -4303,7 +4303,7 @@ function Dg(e, t, n, r, i, a, o) {
             e.account_first_date_purchase_requirement &&
             e.account_first_date_purchase_requirement > 0,
         )?.account_first_date_purchase_requirement;
-      (s = e
+      ((s = e
         ? t
           ? W.Localize(`#Sale_Reservation_NotAvailale_PreDate`, Ko(t))
           : W.Localize(`#Sale_Reservation_NotAllowedAccount`)
@@ -4312,7 +4312,7 @@ function Dg(e, t, n, r, i, a, o) {
         (s = (0, J.jsx)(Og, {
           elReservationMessage: s,
           strUrlLearnMoreLink: o,
-        }));
+        })));
     }
   } else
     i &&
@@ -4751,8 +4751,8 @@ function v_(e, t, n, r) {
   let i = Math.min(Math.max(n, 0), a_);
   e.setQueryData(s_(t), (e) => {
     let t = (e ?? o_).slice();
-    for (; t.length <= i; ) t.push(void 0);
-    return (t[i] = { ...t[i], ...r }), t;
+    for (; t.length <= i;) t.push(void 0);
+    return ((t[i] = { ...t[i], ...r }), t);
   });
 }
 function y_(e) {
@@ -4822,10 +4822,10 @@ var D_ = e(fi()),
     m_jumpToSubsection = void 0;
     static s_Singleton;
     static Get() {
-      return (e.s_Singleton ||= new e()), e.s_Singleton;
+      return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
     constructor() {
-      T(this),
+      (T(this),
         window.opener &&
           ((this.m_sParentOrigin = ri(location.search, `parentOrigin`)),
           window.addEventListener(`message`, this.HandleMessage),
@@ -4838,7 +4838,7 @@ var D_ = e(fi()),
           window.opener.postMessage(
             { message: `PartnerEventEditor_ClientReady` },
             this.m_sParentOrigin,
-          ));
+          )));
     }
     BIsConnected() {
       return !!(window.opener && this.m_eventModelJson);
@@ -4943,22 +4943,22 @@ var D_ = e(fi()),
             if (`strSubsectionID` in t) {
               let e = t;
               w(() => {
-                (this.m_jumpToSection = e.nSectionID),
+                ((this.m_jumpToSection = e.nSectionID),
                   (this.m_jumpToSubsection = {
                     nSectionID: e.nSectionID,
                     strSubsectionID: e.strSubsectionID,
-                  });
+                  }));
               });
             }
         }
     }
   };
-P([n], O_.prototype, `m_eventModelJson`, void 0),
+(P([n], O_.prototype, `m_eventModelJson`, void 0),
   P([n], O_.prototype, `m_setMouseOverSectionID`, void 0),
   P([n], O_.prototype, `m_setMouseOverSubsectionID`, void 0),
   P([n], O_.prototype, `m_jumpToSection`, void 0),
   P([n], O_.prototype, `m_jumpToSubsection`, void 0),
-  P([I], O_.prototype, `HandleMessage`, null);
+  P([I], O_.prototype, `HandleMessage`, null));
 function k_() {
   return O(() => O_.Get().BIsConnected());
 }
@@ -4967,7 +4967,7 @@ function A_() {
   return q.useMemo(() => {
     if (!e) return;
     let t = mr.FromJSON(e);
-    return (t.rtime32_last_modified = Math.floor(Date.now() / 1e3)), t;
+    return ((t.rtime32_last_modified = Math.floor(Date.now() / 1e3)), t);
   }, [e]);
 }
 function j_(e) {
@@ -5118,8 +5118,10 @@ function K_(e, t) {
         let n = t.name.find((t) => e.has(t));
         return { facet: t, pri: n ? e.get(n) : void 0 };
       });
-    r.sort((e, t) => (e.pri ?? Number.MAX_VALUE) - (t.pri ?? Number.MAX_VALUE)),
-      (n = r.map((e) => e.facet));
+    (r.sort(
+      (e, t) => (e.pri ?? Number.MAX_VALUE) - (t.pri ?? Number.MAX_VALUE),
+    ),
+      (n = r.map((e) => e.facet)));
   }
   return n;
 }
@@ -5135,7 +5137,7 @@ function J_(e) {
       if (e)
         for (let r of e) {
           let e = t.get(r);
-          e || ((e = []), t.set(r, e)), e.push(n);
+          (e || ((e = []), t.set(r, e)), e.push(n));
         }
     }),
     t
@@ -5159,24 +5161,24 @@ function Y_(e) {
     };
   for (let e of t) {
     let t = [];
-    r.set(e, t), e === `theme_mood` ? (i(t, `theme`), i(t, `mood`)) : i(t, e);
+    (r.set(e, t), e === `theme_mood` ? (i(t, `theme`), i(t, `mood`)) : i(t, e));
   }
   return r;
 }
 function X_(e) {
   let t = new Map();
-  t.set(`supergenre`, `#App_Taxonomy_Survey_QSuperGenreTitle`),
+  (t.set(`supergenre`, `#App_Taxonomy_Survey_QSuperGenreTitle`),
     t.set(`genre`, `#App_Taxonomy_Survey_QGenreTitle`),
     t.set(`subgenre`, `#App_Taxonomy_Survey_QSubGenreTitle`),
     t.set(`visuals`, `#App_Taxonomy_Survey_QVisualsTitle`),
     t.set(`theme_mood`, `#App_Taxonomy_Survey_QThemeMoodTitle`),
     t.set(`feature`, `#App_Taxonomy_Survey_QFeaturesTitle`),
-    t.set(`players`, `#App_Taxonomy_Survey_QPlayersTitle`);
+    t.set(`players`, `#App_Taxonomy_Survey_QPlayersTitle`));
   let n = new Map();
   return (
     e.mapLocalizedCategoryNames.forEach((e, r) => {
       let i = Array(32);
-      (i[0] = t.get(r) ?? ``), n.set(r, i);
+      ((i[0] = t.get(r) ?? ``), n.set(r, i));
     }),
     n
   );
@@ -5187,14 +5189,14 @@ function Z_(e) {
     e.mapLocalizedTagNames.forEach((n, r) => {
       let i = n,
         a = Array(32);
-      a.fill(``),
+      (a.fill(``),
         e.rgLanguages.forEach((e, t) => {
           let n = Hl(e, -1);
           n === -1
             ? console.warn(`Unrecognized language: ` + e)
             : 0 <= n && n < 32 && (a[n] = i[t]);
         }),
-        t.set(r, a);
+        t.set(r, a));
     }),
     t
   );
@@ -5230,12 +5232,12 @@ function Q_(e, t, n) {
         };
         a.facetValues.push(r);
       }
-      o.length > 0 &&
+      (o.length > 0 &&
         console.warn(
           `No name information found for tag count ` + o.length + `, skipping.`,
           o,
         ),
-        r.push(a);
+        r.push(a));
     }),
     r
   );
@@ -5248,8 +5250,8 @@ function ev(e, t) {
     for (let e of n.facetValues) {
       let n = e.nAtomicStoreTagID ?? 0,
         r = [$_(String(t.get(n)))];
-      (e.type = j.k_ESaleTagFilter),
-        (e.filter = { clauses: [{ type: `Must have`, or_tags: r }] });
+      ((e.type = j.k_ESaleTagFilter),
+        (e.filter = { clauses: [{ type: `Must have`, or_tags: r }] }));
     }
 }
 function tv(e) {
@@ -5290,7 +5292,7 @@ function rv(e) {
     logical_and: !1,
     single_selection: !0,
   };
-  t.facetValues.push({
+  (t.facetValues.push({
     name: [`#Platform_Windows`],
     type: j.k_ESaleTagFilter,
     filter: {
@@ -5312,7 +5314,7 @@ function rv(e) {
       filter: { clauses: [{ type: `Must have`, or_tags: [`[Feature] Mac`] }] },
       rgStoreTagFilter: null,
     }),
-    e.push(t);
+    e.push(t));
 }
 function iv(e) {
   let t = { name: [`#LanguageTitle`], facetValues: [], logical_and: !1 };
@@ -5328,7 +5330,7 @@ function iv(e) {
 }
 function av(e) {
   let t = { name: [`#ContentDescriptor`], facetValues: [], logical_and: !1 };
-  t.facetValues.push({
+  (t.facetValues.push({
     name: [`#ContentDescriptor_GeneralMatureContent`],
     type: j.k_EContentDescriptor,
     contentDescriptor: 5,
@@ -5363,11 +5365,11 @@ function av(e) {
       filter: null,
       rgStoreTagFilter: null,
     }),
-    e.push(t);
+    e.push(t));
 }
 function ov(e) {
   let t = { name: [`#Sale_Preferences`], facetValues: [] };
-  t.facetValues.push({
+  (t.facetValues.push({
     name: [`#UserPreference_HideOwnedItems`],
     type: j.k_EUserPreference,
     userPreference: pr.k_EHideOwnedItems,
@@ -5389,7 +5391,7 @@ function ov(e) {
       filter: null,
       rgStoreTagFilter: null,
     }),
-    e.push(t);
+    e.push(t));
 }
 function sv(e) {
   let t = {
@@ -5481,10 +5483,10 @@ function fv(e, t, n, r) {
         max_results: String(t),
         cc: N.COUNTRY,
       });
-      a !== void 0 && r.set(`applist`, a),
+      (a !== void 0 && r.set(`applist`, a),
         o !== void 0 && r.set(`tagids_featured`, String(o)),
         n && r.set(`facet_filter`, n),
-        i && r.set(`pre_filter`, i);
+        i && r.set(`pre_filter`, i));
       let s =
           a === void 0
             ? `ajaxgetdynamicsaleitems`
@@ -5587,18 +5589,18 @@ function hv(e, t, n, r, i, a) {
       this.m_rgPriceStops = e;
     },
     SetViewer(e) {
-      (this.m_viewer = e), this.PruneFacets();
+      ((this.m_viewer = e), this.PruneFacets());
     },
     SetCapsulesRemovedByUserPreferenceFilters(e) {
       this.m_setCapsulesRemovedByUserPreferenceFilters = e;
     },
     Reset() {
-      this.m_facets.forEach((e) => {
+      (this.m_facets.forEach((e) => {
         e.facetValues.forEach((e) => {
           e.bEnabled = !!e.facetValue.bEnabledByDefault;
         });
       }),
-        this.UpdateFilter();
+        this.UpdateFilter());
     },
     SetFromURLParam(e) {
       e !== this.m_strURLParam &&
@@ -5613,9 +5615,9 @@ function hv(e, t, n, r, i, a) {
           t[1].split(`|`).forEach((e) => {
             if (e.includes(`_`)) {
               let t = e.split(`_`);
-              (this.m_facets[n].facetValues[Number(t[0])].bEnabled = !0),
+              ((this.m_facets[n].facetValues[Number(t[0])].bEnabled = !0),
                 (this.m_facets[n].facetValues[Number(t[0])].nPriceStopIndex =
-                  Number(t[1]));
+                  Number(t[1])));
             } else
               this.m_facets[n].facetValues[Number(e)].bEnabled =
                 !this.m_facets[n].facetValues[Number(e)].facetValue
@@ -5660,10 +5662,10 @@ function hv(e, t, n, r, i, a) {
             ) || (i.bHiddenBySearch = !0);
     },
     UpdateFilter() {
-      this.UpdateQuery(),
+      (this.UpdateQuery(),
         this.UpdateURLParam(),
         this.UpdateSelectedOptionsCount(),
-        this.UpdateUserPreferenceFilters();
+        this.UpdateUserPreferenceFilters());
     },
     UpdateFacetDefinitionHash(e) {
       this.m_strFacetDefinitionHash = String(ai(oe(e)));
@@ -5678,7 +5680,7 @@ function hv(e, t, n, r, i, a) {
             : rr.k_EStoreFilterClauseTypeOr,
           rgSubexpressions: [],
         };
-        t.facetValues.forEach((e) => {
+        (t.facetValues.forEach((e) => {
           let t = e.facetValue.rgStoreTagFilter;
           if (e.bEnabled && t) {
             if (e.facetValue.type === j.k_EUserPreference) return;
@@ -5694,14 +5696,14 @@ function hv(e, t, n, r, i, a) {
               n.rgSubexpressions.push(r);
           }
         }),
-          n.rgSubexpressions.length !== 0 && e.rgSubexpressions.push(n);
+          n.rgSubexpressions.length !== 0 && e.rgSubexpressions.push(n));
       });
       let t = pv(e);
       this.m_strQuery = t ? JSON.stringify(t) : ``;
     },
     UpdateURLParam() {
       let e = [];
-      this.m_facets.forEach((t, n) => {
+      (this.m_facets.forEach((t, n) => {
         let r = [];
         if (
           (t.facetValues.forEach((e, t) => {
@@ -5716,40 +5718,40 @@ function hv(e, t, n, r, i, a) {
         let i = r.join(`|`);
         e.push(n + `:` + i);
       }),
-        (this.m_strURLParam = e.length > 0 ? e.join(`,`) : void 0);
+        (this.m_strURLParam = e.length > 0 ? e.join(`,`) : void 0));
     },
     UpdateSelectedOptionsCount() {
-      (this.m_nSelectedOptions = 0),
+      ((this.m_nSelectedOptions = 0),
         this.m_facets.forEach((e) => {
           e.facetValues.forEach((e) => {
             e.bEnabled !== !!e.facetValue.bEnabledByDefault &&
               ++this.m_nSelectedOptions;
           });
-        });
+        }));
     },
     UpdateUserPreferenceFilters() {
-      (this.m_userPreferences = new Set()),
+      ((this.m_userPreferences = new Set()),
         this.m_facets.forEach((e) => {
           e.facetValues.forEach((e) => {
             e.facetValue.type === j.k_EUserPreference &&
               e.bEnabled &&
               this.m_userPreferences.add(e.facetValue.userPreference);
           });
-        });
+        }));
     },
     PruneFacets() {
-      (this.m_prunedFacets = []),
+      ((this.m_prunedFacets = []),
         this.m_facets.forEach((e) => {
-          e.facetValues.forEach((e) => {
-            (e.bDeactivated = !1), (e.nMatchingFilteredCapsules = void 0);
+          (e.facetValues.forEach((e) => {
+            ((e.bDeactivated = !1), (e.nMatchingFilteredCapsules = void 0));
           }),
-            this.m_prunedFacets.push({ facet: e, facetValues: e.facetValues });
+            this.m_prunedFacets.push({ facet: e, facetValues: e.facetValues }));
         }),
-        this.PruneFacetsForCurrentUser();
+        this.PruneFacetsForCurrentUser());
     },
     PruneFacetsForCurrentUser() {
       let e = this.m_viewer;
-      this.m_prunedFacets.forEach((t) => {
+      (this.m_prunedFacets.forEach((t) => {
         t.facetValues = t.facetValues.filter((t) =>
           t.facetValue.type === j.k_EContentDescriptor
             ? !e ||
@@ -5769,7 +5771,7 @@ function hv(e, t, n, r, i, a) {
       }),
         (this.m_prunedFacets = this.m_prunedFacets.filter(
           (e) => e.facetValues.length > 0,
-        ));
+        )));
     },
     UpdateMatchingFilteredCapsuleCounts() {
       this.m_prunedFacets.forEach((e) => {
@@ -5865,7 +5867,7 @@ function hv(e, t, n, r, i, a) {
       return t;
     },
     DeactivateFacetValues() {
-      this.m_prunedFacets.forEach((e) => {
+      (this.m_prunedFacets.forEach((e) => {
         e.facetValues.forEach((e) => {
           e.bDeactivated = !1;
         });
@@ -5880,15 +5882,15 @@ function hv(e, t, n, r, i, a) {
               n === 0 &&
               e.facetValue.type !== j.k_EUserPreference;
           });
-        });
+        }));
     },
     SortFacets() {
-      this.UpdateMatchingFilteredCapsuleCounts(),
+      (this.UpdateMatchingFilteredCapsuleCounts(),
         this.DeactivateFacetValues(),
         (this.m_sortedFacets = []),
         this.m_prunedFacets.forEach((e) => {
           let t = e.facetValues.slice();
-          t.sort((e, t) => {
+          (t.sort((e, t) => {
             if (
               e.facetValue.type === j.k_EPrice &&
               t.facetValue.type !== j.k_EPrice
@@ -5927,23 +5929,23 @@ function hv(e, t, n, r, i, a) {
             }
             return 0;
           }),
-            this.m_sortedFacets.push({ ...e, facetValues: t });
-        });
+            this.m_sortedFacets.push({ ...e, facetValues: t }));
+        }));
     },
     UpdateMatchCount(e, t) {
-      e
+      (e
         ? ((this.m_nFilteredCapsuleCount = this.m_nSolrMatchCount),
           (this.m_nFilteredCapsuleCount -=
             this.m_setCapsulesRemovedByUserPreferenceFilters?.size || 0))
         : (this.m_nFilteredCapsuleCount = t),
-        this.SortFacets();
+        this.SortFacets());
     },
   };
   return (
     u(o),
     e.forEach((e) => {
       let t = [];
-      e.facetValues.forEach((e) => {
+      (e.facetValues.forEach((e) => {
         t.push({
           facetValue: e,
           bEnabled: !!e.bEnabledByDefault,
@@ -5958,7 +5960,7 @@ function hv(e, t, n, r, i, a) {
           facetValues: t,
           matchingCapsules: null,
           matchingCapsulesInOtherFacets: null,
-        });
+        }));
     }),
     o.PruneFacets(),
     o.UpdateFacetDefinitionHash(e),
@@ -6007,16 +6009,16 @@ function yv(e, t, n, r, i, a) {
     r,
     i,
   );
-  return a && bv(o, a), o;
+  return (a && bv(o, a), o);
 }
 function bv(e, t) {
   try {
     e.SetFromURLParam(t);
   } catch (n) {
-    console.log(
+    (console.log(
       `Ignoring facet selection "${t}" that does not fit the section -- ${n}`,
     ),
-      e.SetFromURLParam(void 0);
+      e.SetFromURLParam(void 0));
   }
 }
 var xv = `BEJJ0zhyKjM-`,
@@ -6405,14 +6407,14 @@ var Pv = `dN7XyOPtpDA-`,
         i = this.state.nStartScrollLeft - r,
         a = Math.abs(i - this.state.nStartScrollLeft),
         o = this.props.minDragPixels || e.knDefaultMinDragPixels;
-      !this.state.bInScroll &&
+      (!this.state.bInScroll &&
         a >= o &&
         ((n.scrollLeft = i),
         this.setState({ bInScroll: !0 }),
         document.body.classList.add(Pv),
         this.props.dragClassName && n.classList.add(this.props.dragClassName),
         n.setPointerCapture(t.pointerId)),
-        this.state.bInScroll && (n.scrollLeft = i);
+        this.state.bInScroll && (n.scrollLeft = i));
     }
     render() {
       return (0, J.jsx)(V, {
@@ -6424,9 +6426,9 @@ var Pv = `dN7XyOPtpDA-`,
       });
     }
   };
-P([I], Fv.prototype, `OnPointerDown`, null),
+(P([I], Fv.prototype, `OnPointerDown`, null),
   P([I], Fv.prototype, `OnPointerUp`, null),
-  P([I], Fv.prototype, `OnPointerMove`, null);
+  P([I], Fv.prototype, `OnPointerMove`, null));
 var Iv = `FQuVIvXzECY-`,
   Lv = `EtG3bD1IPJE-`,
   Rv = `_25-ogODAwZc-`,
@@ -6692,11 +6694,11 @@ function dy(e) {
   )
     return null;
   let h = k(t, n, u);
-  a.tab_bar_bg_image &&
+  (a.tab_bar_bg_image &&
     a.tab_bar_bg_image.length > 0 &&
     (h.background = `url(${de.GenerateURLFromHashAndExt(n.clanSteamID, a.tab_bar_bg_image)})`),
     t.tab_highlight_label_color &&
-      (h[`--SaleTabActiveColor`] = t.tab_highlight_label_color);
+      (h[`--SaleTabActiveColor`] = t.tab_highlight_label_color));
   let g = a.tab_jump_list,
     _ = !!g?.menu_items?.length;
   return (0, J.jsxs)(`div`, {
@@ -7130,7 +7132,7 @@ function Nb(e) {
         e.image = ls(n);
         let r = n.microtrailer?.find((e) => e.type == `video/mp4`)?.filename,
           i = n.microtrailer?.find((e) => e.type == `video/webm`)?.filename;
-        (t.video_mp4_src = r && Cs(n, r)), (t.video_webm_src = i && Cs(n, i));
+        ((t.video_mp4_src = r && Cs(n, r)), (t.video_webm_src = i && Cs(n, i)));
       }
       return [e, t];
     }, [c, r]);
@@ -7843,7 +7845,7 @@ function px(e) {
     f = n.media_columns?.length || 0,
     p = q.useCallback(
       (e, t, n) => {
-        (d[t] = { bMediaFirst: e, nHeight: n }),
+        ((d[t] = { bMediaFirst: e, nHeight: n }),
           c(
             d
               .slice(0, f)
@@ -7855,7 +7857,7 @@ function px(e) {
               .slice(0, f)
               .filter((e) => !e.bMediaFirst)
               .reduce((e, t) => Math.max(e, t.nHeight), 0),
-          );
+          ));
       },
       [d, f],
     );
@@ -8003,7 +8005,7 @@ function hx(e) {
           !t || t == Dy.k_TitleMediaDesc || Dy.k_TitleDescMedia
             ? e.blockSize
             : e.inlineSize;
-        (_.current = n), o(g, a, n);
+        ((_.current = n), o(g, a, n));
       },
       [g, t, o, a],
     );
@@ -8220,13 +8222,13 @@ function Px(e) {
         y(!0);
         return;
       }
-      (O.current = t), re(1);
+      ((O.current = t), re(1));
       let e = new Date().getTime(),
         n = window.setInterval(() => {
           let t = 1 - (new Date().getTime() - e) / 500;
           ae(Math.max(t, 0));
         }, 30);
-      await new Promise((e) => setTimeout(e, 500)),
+      (await new Promise((e) => setTimeout(e, 500)),
         window.clearTimeout(n),
         ae(void 0),
         O.current == t &&
@@ -8234,7 +8236,7 @@ function Px(e) {
           a(!0),
           re(2),
           await new Promise((e) => setTimeout(e, 500))),
-        re(0);
+        re(0));
     }, [t, ue, de, a]);
   q.useEffect(() => {
     ue || de || !v || (y(!1), pe());
@@ -8242,7 +8244,7 @@ function Px(e) {
   let me = !p && !N.IN_MOBILE_WEBVIEW,
     he = !o && u > 1 && (n == null || n > 0),
     ge;
-  g
+  (g
     ? (ge = 4)
     : m
       ? (ge = 3)
@@ -8253,7 +8255,7 @@ function Px(e) {
         : (ge = 0),
     q.useEffect(() => {
       ge != 1 && ge != 2 && x(!0);
-    }, [ge]);
+    }, [ge]));
   let _e = (e) =>
       e.detail.button == Ic.DIR_LEFT || e.detail.button == Ic.DIR_RIGHT
         ? (a(e.detail.button == Ic.DIR_RIGHT), !0)
@@ -8574,7 +8576,7 @@ function Gx(e) {
     Ux.push(e),
     (Wx ??= Promise.resolve().then(async () => {
       let e = [...new Set(Ux)];
-      (Ux = []), (Wx = null);
+      ((Ux = []), (Wx = null));
       let t = new Map();
       for (let n = 0; n < e.length; n += Vx) {
         let r = await Hx(e.slice(n, n + Vx));
@@ -8610,9 +8612,9 @@ function $x(e) {
       if (!cs.logged_in) throw 21;
       let { targetid: n, targetType: r, nReactionId: i } = t,
         a = Gl.Init(so);
-      a.Body().set_target_type(r),
+      (a.Body().set_target_type(r),
         a.Body().set_targetid(n),
-        a.Body().set_reactionid(i);
+        a.Body().set_reactionid(i));
       let o = await io.AddReaction(e, a);
       if (o.GetEResult() != 1) throw o.GetEResult();
     },
@@ -8661,7 +8663,7 @@ function nS(e, t, n, r) {
     queryFn: async () => {
       if (!cs.logged_in) throw 21;
       let e = Gl.Init(oo);
-      e.Body().set_target_type(r), e.Body().set_targetid(n);
+      (e.Body().set_target_type(r), e.Body().set_targetid(n));
       let i = await io.GetReactions(t, e);
       if (i.GetEResult() == 1) return new Set(i.Body().reactionids());
       throw i.GetEResult();
@@ -8746,7 +8748,7 @@ var US = (e) =>
     }),
   WS = class extends q.PureComponent {
     constructor(e) {
-      super(e), (this.state = { bHovered: !1 });
+      (super(e), (this.state = { bHovered: !1 }));
     }
     handleMouseOver(e) {
       this.setState({ bHovered: !0 });
@@ -8768,8 +8770,8 @@ var US = (e) =>
       });
     }
   };
-P([I], WS.prototype, `handleMouseOver`, null),
-  P([I], WS.prototype, `handleMouseOut`, null);
+(P([I], WS.prototype, `handleMouseOver`, null),
+  P([I], WS.prototype, `handleMouseOut`, null));
 function GS(e, t, n) {
   let r = [];
   return (
@@ -8800,9 +8802,9 @@ function GS(e, t, n) {
 var KS = class extends q.Component {
   static defaultProps = { targetType: 1 };
   constructor(e) {
-    super(e),
+    (super(e),
       (window.fnLoyalty_ShowAwardModal = (e, t, n, r, i) => {
-        (i ||= 0),
+        ((i ||= 0),
           this.setState({
             bShowModal: !0,
             fnSuccessFunc: n,
@@ -8810,9 +8812,9 @@ var KS = class extends q.Component {
             ugcType: r,
             initialSelectedReaction: i,
             targetType: t,
-          });
+          }));
       }),
-      (this.state = { bShowModal: !1, targetid: ``, targetType: 0 });
+      (this.state = { bShowModal: !1, targetid: ``, targetType: 0 }));
   }
   render() {
     let {
@@ -8893,14 +8895,14 @@ function JS(e) {
         { targetid: n, targetType: r, nReactionId: c },
         {
           onSuccess: () => {
-            d(3),
+            (d(3),
               p(!0),
               setTimeout(() => {
                 o && o(n, c);
-              }, 2e3);
+              }, 2e3));
           },
           onError: (e) => {
-            d(4), h(e);
+            (d(4), h(e));
           },
         },
       ));
@@ -9044,7 +9046,7 @@ function JS(e) {
             }),
           ],
         });
-        u === 3 &&
+        (u === 3 &&
           (e = (0, J.jsx)(XS, {
             pointBalance: T,
             children: (0, J.jsx)(Jl, {
@@ -9118,7 +9120,7 @@ function JS(e) {
               (0, J.jsx)(ZS, {}),
               e,
             ],
-          }));
+          })));
       }
       break;
     case 4:
@@ -9269,7 +9271,7 @@ function XS(e) {
 var ZS = () => (0, J.jsx)(`div`, { className: TS }),
   QS = class extends q.PureComponent {
     constructor(e) {
-      super(e), (this.state = { bHovered: !1 });
+      (super(e), (this.state = { bHovered: !1 }));
     }
     handleMouseOver(e) {
       this.setState({ bHovered: !0 });
@@ -9318,8 +9320,8 @@ var ZS = () => (0, J.jsx)(`div`, { className: TS }),
       });
     }
   };
-P([I], QS.prototype, `handleMouseOver`, null),
-  P([I], QS.prototype, `handleMouseOut`, null);
+(P([I], QS.prototype, `handleMouseOver`, null),
+  P([I], QS.prototype, `handleMouseOut`, null));
 var $S = () => (0, J.jsx)(ii, { size: `large`, className: PS }),
   eC = (e) => {
     let { children: t, className: n, ...r } = e;
@@ -9373,7 +9375,7 @@ function oC(e) {
     : null;
 }
 var Z = {};
-(Z.arabic = () => L(() => import(`./reviews_arabic.js`), [], import.meta.url)),
+((Z.arabic = () => L(() => import(`./reviews_arabic.js`), [], import.meta.url)),
   (Z.brazilian = () =>
     L(() => import(`./reviews_brazilian.js`), [], import.meta.url)),
   (Z.bulgarian = () =>
@@ -9429,7 +9431,7 @@ var Z = {};
   (Z.ukrainian = () =>
     L(() => import(`./reviews_ukrainian.js`), [], import.meta.url)),
   (Z.vietnamese = () =>
-    L(() => import(`./reviews_vietnamese.js`), [], import.meta.url));
+    L(() => import(`./reviews_vietnamese.js`), [], import.meta.url)));
 async function sC(e) {
   if (Z[e]) return await Z[e]();
 }
@@ -9442,7 +9444,7 @@ function cC(e) {
         typeof e[1] == `boolean` ? (e[1] ? `1` : `0`) : String(e[1]),
       ]),
     n = new URLSearchParams(t);
-  return e.topics && e.topics.forEach((e) => n.append(`topics[]`, e)), n;
+  return (e.topics && e.topics.forEach((e) => n.append(`topics[]`, e)), n);
 }
 function lC() {
   return {
@@ -9471,7 +9473,7 @@ async function uC(e, t, n, r, i) {
   let a = Object.assign(lC(), r);
   a.cursor = i;
   let o = cC(a);
-  Po(o), i === `*` && n && n !== t && o.set(`steamworks_appid`, String(n));
+  (Po(o), i === `*` && n && n !== t && o.set(`steamworks_appid`, String(n)));
   let s = await fetch(
       `${N.STORE_BASE_URL}ajaxappreviews/${t}?${o.toString()}`,
       { credentials: `include` },
@@ -10499,10 +10501,10 @@ function cT(e) {
 function lT(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
-    (r.enumerable = r.enumerable || !1),
+    ((r.enumerable = r.enumerable || !1),
       (r.configurable = !0),
       `value` in r && (r.writable = !0),
-      Object.defineProperty(e, cT(r.key), r);
+      Object.defineProperty(e, cT(r.key), r));
   }
 }
 function uT(e, t, n) {
@@ -10532,11 +10534,11 @@ function fT(e) {
 function pT(e, t) {
   if (typeof t != `function` && t !== null)
     throw TypeError(`Super expression must either be null or a function`);
-  (e.prototype = Object.create(t && t.prototype, {
+  ((e.prototype = Object.create(t && t.prototype, {
     constructor: { value: e, writable: !0, configurable: !0 },
   })),
     Object.defineProperty(e, "prototype", { writable: !1 }),
-    t && y(e, t);
+    t && y(e, t));
 }
 function $(e, t, n) {
   return (
@@ -10565,17 +10567,17 @@ function gT(e, t) {
   try {
     var n = this.props,
       r = this.state;
-    (this.props = e),
+    ((this.props = e),
       (this.state = t),
       (this.__reactInternalSnapshotFlag = !0),
-      (this.__reactInternalSnapshot = this.getSnapshotBeforeUpdate(n, r));
+      (this.__reactInternalSnapshot = this.getSnapshotBeforeUpdate(n, r)));
   } finally {
-    (this.props = n), (this.state = r);
+    ((this.props = n), (this.state = r));
   }
 }
-(mT.__suppressDeprecationWarning = !0),
+((mT.__suppressDeprecationWarning = !0),
   (hT.__suppressDeprecationWarning = !0),
-  (gT.__suppressDeprecationWarning = !0);
+  (gT.__suppressDeprecationWarning = !0));
 function _T(e) {
   var t = e.prototype;
   if (!t || !t.isReactComponent)
@@ -10658,11 +10660,11 @@ function vT(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
-    t &&
+    (t &&
       (r = r.filter(function (t) {
         return Object.getOwnPropertyDescriptor(e, t).enumerable;
       })),
-      n.push.apply(n, r);
+      n.push.apply(n, r));
   }
   return n;
 }
@@ -10755,10 +10757,10 @@ var ST = (function (e) {
           r = t.columnStopIndex,
           i = t.rowStartIndex,
           a = t.rowStopIndex;
-        (e._columnStartIndex = n),
+        ((e._columnStartIndex = n),
           (e._columnStopIndex = r),
           (e._rowStartIndex = i),
-          (e._rowStopIndex = a);
+          (e._rowStopIndex = a));
       }),
       e
     );
@@ -10810,8 +10812,8 @@ var ST = (function (e) {
               r = this.props,
               i = r.isControlled,
               a = r.onScrollToChange;
-            typeof a == `function` && a({ scrollToColumn: t, scrollToRow: n }),
-              i || this.setState({ scrollToColumn: t, scrollToRow: n });
+            (typeof a == `function` && a({ scrollToColumn: t, scrollToRow: n }),
+              i || this.setState({ scrollToColumn: t, scrollToRow: n }));
           },
         },
       ],
@@ -10842,14 +10844,14 @@ var ST = (function (e) {
     )
   );
 })(q.PureComponent);
-$(ST, `defaultProps`, {
+($(ST, `defaultProps`, {
   disabled: !1,
   isControlled: !1,
   mode: `edges`,
   scrollToColumn: 0,
   scrollToRow: 0,
 }),
-  _T(ST);
+  _T(ST));
 function CT(e, t) {
   var n =
       t === void 0
@@ -10888,12 +10890,12 @@ function CT(e, t) {
           n = t.firstElementChild,
           r = t.lastElementChild,
           i = n.firstElementChild;
-        (r.scrollLeft = r.scrollWidth),
+        ((r.scrollLeft = r.scrollWidth),
           (r.scrollTop = r.scrollHeight),
           (i.style.width = n.offsetWidth + 1 + `px`),
           (i.style.height = n.offsetHeight + 1 + `px`),
           (n.scrollLeft = n.scrollWidth),
-          (n.scrollTop = n.scrollHeight);
+          (n.scrollTop = n.scrollHeight));
       },
       s = function (e) {
         return (
@@ -10911,7 +10913,7 @@ function CT(e, t) {
           )
         ) {
           var t = this;
-          o(this),
+          (o(this),
             this.__resizeRAF__ && a(this.__resizeRAF__),
             (this.__resizeRAF__ = i(function () {
               s(t) &&
@@ -10920,7 +10922,7 @@ function CT(e, t) {
                 t.__resizeListeners__.forEach(function (n) {
                   n.call(t, e);
                 }));
-            }));
+            })));
         }
       },
       l = !1,
@@ -10936,7 +10938,7 @@ function CT(e, t) {
     if ((h.style.animationName !== void 0 && (l = !0), l === !1)) {
       for (var g = 0; g < f.length; g++)
         if (h.style[f[g] + `AnimationName`] !== void 0) {
-          (m = f[g]), (u = `-` + m.toLowerCase() + `-`), (d = p[g]), (l = !0);
+          ((m = f[g]), (u = `-` + m.toLowerCase() + `-`), (d = p[g]), (l = !0));
           break;
         }
     }
@@ -10958,13 +10960,13 @@ function CT(e, t) {
           `visibility: hidden; opacity: 0; } .resize-triggers, .resize-triggers > div, .contract-trigger:before { content: " "; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; z-index: -1; } .resize-triggers > div { background: #eee; overflow: auto; } .contract-trigger:before { width: 200%; height: 200%; }`,
         r = t.head || t.getElementsByTagName(`head`)[0],
         i = t.createElement(`style`);
-      (i.id = `detectElementResize`),
+      ((i.id = `detectElementResize`),
         (i.type = `text/css`),
         e != null && i.setAttribute(`nonce`, e),
         i.styleSheet
           ? (i.styleSheet.cssText = n)
           : i.appendChild(t.createTextNode(n)),
-        r.appendChild(i);
+        r.appendChild(i));
     }
   };
   return {
@@ -10974,17 +10976,17 @@ function CT(e, t) {
         if (!e.__resizeTriggers__) {
           var i = e.ownerDocument,
             a = n.getComputedStyle(e);
-          a && a.position == `static` && (e.style.position = `relative`),
+          (a && a.position == `static` && (e.style.position = `relative`),
             b(i),
             (e.__resizeLast__ = {}),
             (e.__resizeListeners__ = []),
             ((e.__resizeTriggers__ = i.createElement(`div`)).className =
-              `resize-triggers`);
+              `resize-triggers`));
           var s = i.createElement(`div`);
-          (s.className = `expand-trigger`),
-            s.appendChild(i.createElement(`div`));
+          ((s.className = `expand-trigger`),
+            s.appendChild(i.createElement(`div`)));
           var l = i.createElement(`div`);
-          (l.className = `contract-trigger`),
+          ((l.className = `contract-trigger`),
             e.__resizeTriggers__.appendChild(s),
             e.__resizeTriggers__.appendChild(l),
             e.appendChild(e.__resizeTriggers__),
@@ -10997,7 +10999,7 @@ function CT(e, t) {
               e.__resizeTriggers__.addEventListener(
                 d,
                 e.__resizeTriggers__.__animationListener__,
-              ));
+              )));
         }
         e.__resizeListeners__.push(t);
       }
@@ -11008,13 +11010,13 @@ function CT(e, t) {
         (e.__resizeListeners__.splice(e.__resizeListeners__.indexOf(t), 1),
         !e.__resizeListeners__.length)
       ) {
-        e.removeEventListener(`scroll`, c, !0),
+        (e.removeEventListener(`scroll`, c, !0),
           e.__resizeTriggers__.__animationListener__ &&
             (e.__resizeTriggers__.removeEventListener(
               d,
               e.__resizeTriggers__.__animationListener__,
             ),
-            (e.__resizeTriggers__.__animationListener__ = null));
+            (e.__resizeTriggers__.__animationListener__ = null)));
         try {
           e.__resizeTriggers__ = !e.removeChild(e.__resizeTriggers__);
         } catch {}
@@ -11026,11 +11028,11 @@ function wT(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
-    t &&
+    (t &&
       (r = r.filter(function (t) {
         return Object.getOwnPropertyDescriptor(e, t).enumerable;
       })),
-      n.push.apply(n, r);
+      n.push.apply(n, r));
   }
   return n;
 }
@@ -11223,13 +11225,13 @@ $(
               a.recomputeGridSize({ columnIndex: i, rowIndex: s }));
         }),
         $(e, `_registerChild`, function (t) {
-          t &&
+          (t &&
             !(t instanceof Element) &&
             console.warn(
               `CellMeasurer registerChild expects to be passed Element or null`,
             ),
             (e._child.current = t),
-            t && e._maybeMeasureCell();
+            t && e._maybeMeasureCell());
         }),
         e
       );
@@ -11265,10 +11267,10 @@ $(
               ? n
               : (0, q.cloneElement)(n, {
                   ref: function (t) {
-                    typeof n.ref == `function`
+                    (typeof n.ref == `function`
                       ? n.ref(t)
                       : n.ref && (n.ref.current = t),
-                      (e._child.current = t);
+                      (e._child.current = t));
                   },
                 });
           },
@@ -11286,8 +11288,8 @@ $(
             ) {
               var n = t.style.width,
                 r = t.style.height;
-              e.hasFixedWidth() || (t.style.width = `auto`),
-                e.hasFixedHeight() || (t.style.height = `auto`);
+              (e.hasFixedWidth() || (t.style.width = `auto`),
+                e.hasFixedHeight() || (t.style.height = `auto`));
               var i = Math.ceil(t.offsetHeight),
                 a = Math.ceil(t.offsetWidth);
               return (
@@ -11313,13 +11315,13 @@ $(
               var s = this._getCellMeasurements(),
                 c = s.height,
                 l = s.width;
-              t.set(o, r, l, c),
+              (t.set(o, r, l, c),
                 i &&
                   typeof i.invalidateCellSizeAfterRender == `function` &&
                   i.invalidateCellSizeAfterRender({
                     columnIndex: r,
                     rowIndex: o,
-                  });
+                  }));
             }
           },
         },
@@ -11346,7 +11348,7 @@ function jT(e) {
   return r;
 }
 function MT() {
-  for (var e, t, n = 0, r = ``; n < arguments.length; )
+  for (var e, t, n = 0, r = ``; n < arguments.length;)
     (e = arguments[n++]) && (t = jT(e)) && (r && (r += ` `), (r += t));
   return r;
 }
@@ -11370,7 +11372,7 @@ function NT() {
             r = i[e];
           return Array.isArray(r) ? n.join(`,`) !== r.join(`,`) : n !== r;
         });
-    (t = i), o && s && r(i);
+    ((t = i), o && s && r(i));
   };
 }
 var PT = !!(
@@ -11382,14 +11384,14 @@ var PT = !!(
 function IT(e) {
   if (((!FT && FT !== 0) || e) && PT) {
     var t = document.createElement(`div`);
-    (t.style.position = `absolute`),
+    ((t.style.position = `absolute`),
       (t.style.top = `-9999px`),
       (t.style.width = `50px`),
       (t.style.height = `50px`),
       (t.style.overflow = `scroll`),
       document.body.appendChild(t),
       (FT = t.offsetWidth - t.clientWidth),
-      document.body.removeChild(t);
+      document.body.removeChild(t));
   }
   return FT;
 }
@@ -11397,11 +11399,11 @@ function LT(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
-    t &&
+    (t &&
       (r = r.filter(function (t) {
         return Object.getOwnPropertyDescriptor(e, t).enumerable;
       })),
-      n.push.apply(n, r);
+      n.push.apply(n, r));
   }
   return n;
 }
@@ -11503,13 +11505,13 @@ var VT = 150,
               f = Math.max(0, Math.min(l - i + s, t.target.scrollTop));
             if (e.state.scrollLeft !== d || e.state.scrollTop !== f) {
               var p = t.cancelable ? HT.OBSERVED : HT.REQUESTED;
-              e.state.isScrolling || a(!0),
+              (e.state.isScrolling || a(!0),
                 e.setState({
                   isScrolling: !0,
                   scrollLeft: d,
                   scrollPositionChangeReason: p,
                   scrollTop: f,
-                });
+                }));
             }
             e._invokeOnScrollMemoizer({
               scrollLeft: d,
@@ -11534,8 +11536,8 @@ var VT = 150,
           {
             key: `recomputeCellSizesAndPositions`,
             value: function () {
-              (this._calculateSizeAndPositionDataOnNextUpdate = !0),
-                this.forceUpdate();
+              ((this._calculateSizeAndPositionDataOnNextUpdate = !0),
+                this.forceUpdate());
             },
           },
           {
@@ -11546,7 +11548,7 @@ var VT = 150,
                 n = e.scrollLeft,
                 r = e.scrollToCell,
                 i = e.scrollTop;
-              this._scrollbarSizeMeasured ||
+              (this._scrollbarSizeMeasured ||
                 ((this._scrollbarSize = IT()),
                 (this._scrollbarSizeMeasured = !0),
                 this.setState({})),
@@ -11554,7 +11556,7 @@ var VT = 150,
                   ? this._updateScrollPositionForScrollToCell()
                   : (n >= 0 || i >= 0) &&
                     this._setScrollPosition({ scrollLeft: n, scrollTop: i }),
-                this._invokeOnSectionRenderedHelper();
+                this._invokeOnSectionRenderedHelper());
               var a = t.getTotalSize(),
                 o = a.height,
                 s = a.width;
@@ -11578,7 +11580,7 @@ var VT = 150,
                 c = s.scrollLeft,
                 l = s.scrollPositionChangeReason,
                 u = s.scrollTop;
-              l === HT.REQUESTED &&
+              (l === HT.REQUESTED &&
                 (c >= 0 &&
                   c !== t.scrollLeft &&
                   c !== this._scrollingContainer.scrollLeft &&
@@ -11592,7 +11594,7 @@ var VT = 150,
                   a !== e.scrollToCell ||
                   o !== e.width) &&
                   this._updateScrollPositionForScrollToCell(),
-                this._invokeOnSectionRenderedHelper();
+                this._invokeOnSectionRenderedHelper());
             },
           },
           {
@@ -11696,14 +11698,14 @@ var VT = 150,
             key: `_enablePointerEventsAfterDelay`,
             value: function () {
               var e = this;
-              this._disablePointerEventsTimeoutId &&
+              (this._disablePointerEventsTimeoutId &&
                 clearTimeout(this._disablePointerEventsTimeoutId),
                 (this._disablePointerEventsTimeoutId = setTimeout(function () {
                   var t = e.props.isScrollingChange;
-                  t(!1),
+                  (t(!1),
                     (e._disablePointerEventsTimeoutId = null),
-                    e.setState({ isScrolling: !1 });
-                }, VT));
+                    e.setState({ isScrolling: !1 }));
+                }, VT)));
             },
           },
           {
@@ -11741,11 +11743,11 @@ var VT = 150,
               var t = e.scrollLeft,
                 n = e.scrollTop,
                 r = { scrollPositionChangeReason: HT.REQUESTED };
-              t >= 0 && (r.scrollLeft = t),
+              (t >= 0 && (r.scrollLeft = t),
                 n >= 0 && (r.scrollTop = n),
                 ((t >= 0 && t !== this.state.scrollLeft) ||
                   (n >= 0 && n !== this.state.scrollTop)) &&
-                  this.setState(r);
+                  this.setState(r));
             },
           },
         ],
@@ -11775,7 +11777,7 @@ var VT = 150,
       )
     );
   })(q.PureComponent);
-$(UT, `defaultProps`, {
+($(UT, `defaultProps`, {
   "aria-label": `grid`,
   horizontalOverscanSize: 0,
   noContentRenderer: function () {
@@ -11793,20 +11795,20 @@ $(UT, `defaultProps`, {
   verticalOverscanSize: 0,
 }),
   (UT.propTypes = {}),
-  _T(UT);
+  _T(UT));
 var WT = (function () {
     function e(t) {
       var n = t.height,
         r = t.width,
         i = t.x,
         a = t.y;
-      aT(this, e),
+      (aT(this, e),
         (this.height = n),
         (this.width = r),
         (this.x = i),
         (this.y = a),
         (this._indexMap = {}),
-        (this._indices = []);
+        (this._indices = []));
     }
     return uT(e, [
       {
@@ -11836,10 +11838,10 @@ var WT = (function () {
     function e() {
       var t =
         arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : GT;
-      aT(this, e),
+      (aT(this, e),
         (this._sectionSize = t),
         (this._cellMetadata = []),
-        (this._sections = {});
+        (this._sections = {}));
     }
     return uT(e, [
       {
@@ -11890,14 +11892,14 @@ var WT = (function () {
           )
             for (var d = s; d <= c; d++) {
               var f = `${u}.${d}`;
-              this._sections[f] ||
+              (this._sections[f] ||
                 (this._sections[f] = new WT({
                   height: this._sectionSize,
                   width: this._sectionSize,
                   x: u * this._sectionSize,
                   y: d * this._sectionSize,
                 })),
-                l.push(this._sections[f]);
+                l.push(this._sections[f]));
             }
           return l;
         },
@@ -11922,10 +11924,10 @@ var WT = (function () {
         value: function (e) {
           var t = e.cellMetadatum,
             n = e.index;
-          (this._cellMetadata[n] = t),
+          ((this._cellMetadata[n] = t),
             this.getSections(t).forEach(function (e) {
               return e.addCellIndex({ index: n });
-            });
+            }));
         },
       },
     ]);
@@ -11956,10 +11958,10 @@ function qT(e) {
     )
       throw Error(`Invalid metadata returned for cell ${c}:
         x:${l.x}, y:${l.y}, width:${l.width}, height:${l.height}`);
-    (o = Math.max(o, l.y + l.height)),
+    ((o = Math.max(o, l.y + l.height)),
       (s = Math.max(s, l.x + l.width)),
       (i[c] = l),
-      a.registerCell({ cellMetadatum: l, index: c });
+      a.registerCell({ cellMetadatum: l, index: c }));
   }
   return { cellMetadata: i, height: o, sectionManager: a, width: s };
 }
@@ -12028,8 +12030,8 @@ var ZT = (function (e) {
       {
         key: `recomputeCellSizesAndPositions`,
         value: function () {
-          (this._cellCache = []),
-            this._collectionView.recomputeCellSizesAndPositions();
+          ((this._cellCache = []),
+            this._collectionView.recomputeCellSizesAndPositions());
         },
       },
       {
@@ -12061,10 +12063,10 @@ var ZT = (function (e) {
               cellSizeAndPositionGetter: n,
               sectionSize: r,
             });
-          (this._cellMetadata = i.cellMetadata),
+          ((this._cellMetadata = i.cellMetadata),
             (this._sectionManager = i.sectionManager),
             (this._height = i.height),
-            (this._width = i.width);
+            (this._width = i.width));
         },
       },
       {
@@ -12085,7 +12087,7 @@ var ZT = (function (e) {
             s = this.props.cellCount;
           if (n >= 0 && n < s) {
             var c = this._cellMetadata[n];
-            (i = JT({
+            ((i = JT({
               align: t,
               cellOffset: c.x,
               cellSize: c.width,
@@ -12100,7 +12102,7 @@ var ZT = (function (e) {
                 containerSize: r,
                 currentOffset: a,
                 targetIndex: n,
-              }));
+              })));
           }
           return { scrollLeft: i, scrollTop: a };
         },
@@ -12159,8 +12161,8 @@ var ZT = (function (e) {
     ])
   );
 })(q.PureComponent);
-$(ZT, `defaultProps`, { "aria-label": `grid`, cellGroupRenderer: QT }),
-  (ZT.propTypes = {});
+($(ZT, `defaultProps`, { "aria-label": `grid`, cellGroupRenderer: QT }),
+  (ZT.propTypes = {}));
 function QT(e) {
   var t = e.cellCache,
     n = e.cellRenderer,
@@ -12270,8 +12272,8 @@ var tE = (function (e) {
             throw Error(
               `Unexpected child type registered; only Grid/MultiGrid children are supported.`,
             );
-          (this._registeredChild = e),
-            this._registeredChild && this._registeredChild.recomputeGridSize();
+          ((this._registeredChild = e),
+            this._registeredChild && this._registeredChild.recomputeGridSize());
         },
       },
     ])
@@ -12299,10 +12301,10 @@ function rE(e, t) {
   if (Object.getOwnPropertySymbols) {
     var a = Object.getOwnPropertySymbols(e);
     for (r = 0; r < a.length; r++)
-      (n = a[r]),
+      ((n = a[r]),
         t.indexOf(n) === -1 &&
           {}.propertyIsEnumerable.call(e, n) &&
-          (i[n] = e[n]);
+          (i[n] = e[n]));
   }
   return i;
 }
@@ -12311,7 +12313,7 @@ var iE = (function () {
       var n = t.cellCount,
         r = t.cellSizeGetter,
         i = t.estimatedCellSize;
-      aT(this, e),
+      (aT(this, e),
         $(this, `_cellSizeAndPositionData`, {}),
         $(this, `_lastMeasuredIndex`, -1),
         $(this, `_lastBatchedIndex`, -1),
@@ -12320,7 +12322,7 @@ var iE = (function () {
         $(this, `_estimatedCellSize`, void 0),
         (this._cellSizeGetter = r),
         (this._cellCount = n),
-        (this._estimatedCellSize = i);
+        (this._estimatedCellSize = i));
     }
     return uT(e, [
       {
@@ -12335,9 +12337,9 @@ var iE = (function () {
           var t = e.cellCount,
             n = e.estimatedCellSize,
             r = e.cellSizeGetter;
-          (this._cellCount = t),
+          ((this._cellCount = t),
             (this._estimatedCellSize = n),
-            (this._cellSizeGetter = r);
+            (this._cellSizeGetter = r));
         },
       },
       {
@@ -12454,8 +12456,8 @@ var iE = (function () {
             i = this._findNearestCell(n),
             a = this.getSizeAndPositionOfCell(i);
           n = a.offset + a.size;
-          for (var o = i; n < r && o < this._cellCount - 1; )
-            o++, (n += this.getSizeAndPositionOfCell(o).size);
+          for (var o = i; n < r && o < this._cellCount - 1;)
+            (o++, (n += this.getSizeAndPositionOfCell(o).size));
           return { start: i, stop: o };
         },
       },
@@ -12468,7 +12470,7 @@ var iE = (function () {
       {
         key: `_binarySearch`,
         value: function (e, t, n) {
-          for (; t <= e; ) {
+          for (; t <= e;) {
             var r = t + Math.floor((e - t) / 2),
               i = this.getSizeAndPositionOfCell(r).offset;
             if (i === n) return r;
@@ -12484,7 +12486,7 @@ var iE = (function () {
             var n = 1;
             e < this._cellCount && this.getSizeAndPositionOfCell(e).offset < t;
           )
-            (e += n), (n *= 2);
+            ((e += n), (n *= 2));
           return this._binarySearch(
             Math.min(e, this._cellCount - 1),
             Math.floor(e / 2),
@@ -12523,11 +12525,11 @@ var iE = (function () {
       var n = t.maxScrollSize,
         r = n === void 0 ? lE() : n,
         i = rE(t, uE);
-      aT(this, e),
+      (aT(this, e),
         $(this, `_cellSizeAndPositionManager`, void 0),
         $(this, `_maxScrollSize`, void 0),
         (this._cellSizeAndPositionManager = new iE(i)),
-        (this._maxScrollSize = r);
+        (this._maxScrollSize = r));
     }
     return uT(e, [
       {
@@ -12781,11 +12783,13 @@ function mE(e) {
           style: ee,
         },
         te = void 0;
-      (l || c) && !s && !h ? (t[E] || (t[E] = n(D)), (te = t[E])) : (te = n(D)),
+      ((l || c) && !s && !h
+        ? (t[E] || (t[E] = n(D)), (te = t[E]))
+        : (te = n(D)),
         te != null &&
           te !== !1 &&
           (te.props.role || (te = q.cloneElement(te, { role: `gridcell` })),
-          v.push(te));
+          v.push(te)));
     }
   return v;
 }
@@ -12828,11 +12832,11 @@ function SE(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
-    t &&
+    (t &&
       (r = r.filter(function (t) {
         return Object.getOwnPropertyDescriptor(e, t).enumerable;
       })),
-      n.push.apply(n, r);
+      n.push.apply(n, r));
   }
   return n;
 }
@@ -12877,7 +12881,7 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
   OE = (function (e) {
     function t(e) {
       var n;
-      aT(this, t),
+      (aT(this, t),
         (n = wE(this, t, [e])),
         $(n, `_onGridRenderedMemoizer`, NT()),
         $(n, `_onScrollMemoizer`, NT(!1)),
@@ -12904,8 +12908,8 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
         $(n, `_styleCache`, {}),
         $(n, `_cellCache`, {}),
         $(n, `_debounceScrollEndedCallback`, function () {
-          (n._disablePointerEventsTimeoutId = null),
-            n.setState({ isScrolling: !1, needToResetStyleCache: !1 });
+          ((n._disablePointerEventsTimeoutId = null),
+            n.setState({ isScrolling: !1, needToResetStyleCache: !1 }));
         }),
         $(n, `_invokeOnGridRenderedHelper`, function () {
           var e = n.props.onSectionRendered;
@@ -12924,15 +12928,15 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
           });
         }),
         $(n, `_setScrollingContainerRef`, function (e) {
-          (n._scrollingContainer = e),
+          ((n._scrollingContainer = e),
             typeof n.props.elementRef == `function`
               ? n.props.elementRef(e)
               : oT(n.props.elementRef) === `object` &&
-                (n.props.elementRef.current = e);
+                (n.props.elementRef.current = e));
         }),
         $(n, `_onScroll`, function (e) {
           e.target === n._scrollingContainer && n.handleScrollEvent(e.target);
-        });
+        }));
       var r = new dE({
           cellCount: e.columnCount,
           cellSizeGetter: function (n) {
@@ -13055,10 +13059,10 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                           : -1,
                     scrollPositionChangeReason: EE.OBSERVED,
                   };
-                  o || (g.scrollTop = h),
+                  (o || (g.scrollTop = h),
                     s || (g.scrollLeft = m),
                     (g.needToResetStyleCache = !1),
-                    this.setState(g);
+                    this.setState(g));
                 }
                 this._invokeOnScrollMemoizer({
                   scrollLeft: m,
@@ -13074,14 +13078,14 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
             value: function (e) {
               var t = e.columnIndex,
                 n = e.rowIndex;
-              (this._deferredInvalidateColumnIndex =
+              ((this._deferredInvalidateColumnIndex =
                 typeof this._deferredInvalidateColumnIndex == `number`
                   ? Math.min(this._deferredInvalidateColumnIndex, t)
                   : t),
                 (this._deferredInvalidateRowIndex =
                   typeof this._deferredInvalidateRowIndex == `number`
                     ? Math.min(this._deferredInvalidateRowIndex, n)
-                    : n);
+                    : n));
             },
           },
           {
@@ -13091,8 +13095,8 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                 t = e.columnCount,
                 n = e.rowCount,
                 r = this.state.instanceProps;
-              r.columnSizeAndPositionManager.getSizeAndPositionOfCell(t - 1),
-                r.rowSizeAndPositionManager.getSizeAndPositionOfCell(n - 1);
+              (r.columnSizeAndPositionManager.getSizeAndPositionOfCell(t - 1),
+                r.rowSizeAndPositionManager.getSizeAndPositionOfCell(n - 1));
             },
           },
           {
@@ -13110,7 +13114,7 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                 o = a.scrollToColumn,
                 s = a.scrollToRow,
                 c = this.state.instanceProps;
-              c.columnSizeAndPositionManager.resetCell(n),
+              (c.columnSizeAndPositionManager.resetCell(n),
                 c.rowSizeAndPositionManager.resetCell(i),
                 (this._recomputeScrollLeftFlag =
                   o >= 0 &&
@@ -13122,7 +13126,7 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                   (this.state.scrollDirectionVertical === 1 ? i <= s : i >= s)),
                 (this._styleCache = {}),
                 (this._cellCache = {}),
-                this.forceUpdate();
+                this.forceUpdate());
             },
           },
           {
@@ -13132,7 +13136,7 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                 n = e.rowIndex,
                 r = this.props.columnCount,
                 i = this.props;
-              r > 1 &&
+              (r > 1 &&
                 t !== void 0 &&
                 this._updateScrollLeftForScrollToColumn(
                   CE(CE({}, i), {}, { scrollToColumn: t }),
@@ -13140,7 +13144,7 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                 n !== void 0 &&
                   this._updateScrollTopForScrollToRow(
                     CE(CE({}, i), {}, { scrollToRow: n }),
-                  );
+                  ));
             },
           },
           {
@@ -13185,7 +13189,7 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                 this._scrollingContainer.scrollTop !== this.state.scrollTop &&
                   (this._scrollingContainer.scrollTop = this.state.scrollTop));
               var d = r > 0 && c > 0;
-              a >= 0 && d && this._updateScrollLeftForScrollToColumn(),
+              (a >= 0 && d && this._updateScrollLeftForScrollToColumn(),
                 s >= 0 && d && this._updateScrollTopForScrollToRow(),
                 this._invokeOnGridRenderedHelper(),
                 this._invokeOnScrollMemoizer({
@@ -13195,7 +13199,7 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                     l.columnSizeAndPositionManager.getTotalSize(),
                   totalRowsHeight: l.rowSizeAndPositionManager.getTotalSize(),
                 }),
-                this._maybeCallOnScrollbarPresenceChange();
+                this._maybeCallOnScrollbarPresenceChange());
             },
           },
           {
@@ -13323,20 +13327,20 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                   WebkitOverflowScrolling: `touch`,
                   willChange: `transform`,
                 };
-              v && (this._styleCache = {}),
+              (v && (this._styleCache = {}),
                 this.state.isScrolling || this._resetStyleCache(),
-                this._calculateChildrenToRender(this.props, this.state);
+                this._calculateChildrenToRender(this.props, this.state));
               var x = _.columnSizeAndPositionManager.getTotalSize(),
                 S = _.rowSizeAndPositionManager.getTotalSize(),
                 C = S > c ? _.scrollbarSize : 0,
                 w = x > h ? _.scrollbarSize : 0;
-              (w !== this._horizontalScrollBarSize ||
+              ((w !== this._horizontalScrollBarSize ||
                 C !== this._verticalScrollBarSize) &&
                 ((this._horizontalScrollBarSize = w),
                 (this._verticalScrollBarSize = C),
                 (this._scrollbarPresenceChanged = !0)),
                 (b.overflowX = x + C <= h ? `hidden` : `auto`),
-                (b.overflowY = S + w <= c ? `hidden` : `auto`);
+                (b.overflowY = S + w <= c ? `hidden` : `auto`));
               var T = this._childrenToDisplay,
                 E = T.length === 0 && c > 0 && h > 0;
               return q.createElement(
@@ -13427,10 +13431,10 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                     containerSize: o,
                     offset: g,
                   });
-                (this._renderedColumnStartIndex = y.start),
+                ((this._renderedColumnStartIndex = y.start),
                   (this._renderedColumnStopIndex = y.stop),
                   (this._renderedRowStartIndex = b.start),
-                  (this._renderedRowStopIndex = b.stop);
+                  (this._renderedRowStopIndex = b.stop));
                 var C = c({
                     direction: `horizontal`,
                     cellCount: i,
@@ -13455,19 +13459,19 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                   if (!a.hasFixedHeight()) {
                     for (var te = ee; te <= D; te++)
                       if (!a.has(te, 0)) {
-                        (T = 0), (E = i - 1);
+                        ((T = 0), (E = i - 1));
                         break;
                       }
                   }
                   if (!a.hasFixedWidth()) {
                     for (var ne = T; ne <= E; ne++)
                       if (!a.has(0, ne)) {
-                        (ee = 0), (D = u - 1);
+                        ((ee = 0), (D = u - 1));
                         break;
                       }
                   }
                 }
-                (this._childrenToDisplay = r({
+                ((this._childrenToDisplay = r({
                   cellCache: this._cellCache,
                   cellRenderer: n,
                   columnSizeAndPositionManager: h.columnSizeAndPositionManager,
@@ -13491,7 +13495,7 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                   (this._columnStartIndex = T),
                   (this._columnStopIndex = E),
                   (this._rowStartIndex = ee),
-                  (this._rowStopIndex = D);
+                  (this._rowStopIndex = D));
               }
             },
           },
@@ -13499,12 +13503,12 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
             key: `_debounceScrollEnded`,
             value: function () {
               var e = this.props.scrollingResetTimeInterval;
-              this._disablePointerEventsTimeoutId &&
+              (this._disablePointerEventsTimeoutId &&
                 bE(this._disablePointerEventsTimeoutId),
                 (this._disablePointerEventsTimeoutId = xE(
                   this._debounceScrollEndedCallback,
                   e,
-                ));
+                )));
             },
           },
           {
@@ -13516,9 +13520,9 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
               ) {
                 var e = this._deferredInvalidateColumnIndex,
                   t = this._deferredInvalidateRowIndex;
-                (this._deferredInvalidateColumnIndex = null),
+                ((this._deferredInvalidateColumnIndex = null),
                   (this._deferredInvalidateRowIndex = null),
-                  this.recomputeGridSize({ columnIndex: e, rowIndex: t });
+                  this.recomputeGridSize({ columnIndex: e, rowIndex: t }));
               }
             },
           },
@@ -13572,12 +13576,12 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
             value: function () {
               if (this._scrollbarPresenceChanged) {
                 var e = this.props.onScrollbarPresenceChange;
-                (this._scrollbarPresenceChanged = !1),
+                ((this._scrollbarPresenceChanged = !1),
                   e({
                     horizontal: this._horizontalScrollBarSize > 0,
                     size: this.state.instanceProps.scrollbarSize,
                     vertical: this._verticalScrollBarSize > 0,
-                  });
+                  }));
               }
             },
           },
@@ -13643,7 +13647,7 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
               var e = this._styleCache,
                 t = this._cellCache,
                 n = this.props.isScrollingOptOut;
-              (this._cellCache = {}), (this._styleCache = {});
+              ((this._cellCache = {}), (this._styleCache = {}));
               for (var r = this._rowStartIndex; r <= this._rowStopIndex; r++)
                 for (
                   var i = this._columnStartIndex;
@@ -13651,8 +13655,8 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                   i++
                 ) {
                   var a = `${r}-${i}`;
-                  (this._styleCache[a] = e[a]),
-                    n && (this._cellCache[a] = t[a]);
+                  ((this._styleCache[a] = e[a]),
+                    n && (this._cellCache[a] = t[a]));
                 }
             },
           },
@@ -13691,7 +13695,7 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                     }),
                   );
               var i = n.instanceProps;
-              (r.needToResetStyleCache = !1),
+              ((r.needToResetStyleCache = !1),
                 (e.columnWidth !== i.prevColumnWidth ||
                   e.rowHeight !== i.prevRowHeight) &&
                   (r.needToResetStyleCache = !0),
@@ -13710,7 +13714,7 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
                 e.autoHeight &&
                   e.isScrolling === !1 &&
                   i.prevIsScrolling === !0 &&
-                  Object.assign(r, { isScrolling: !1 });
+                  Object.assign(r, { isScrolling: !1 }));
               var a, o;
               return (
                 nE({
@@ -13896,7 +13900,7 @@ var EE = { OBSERVED: `observed`, REQUESTED: `requested` },
       )
     );
   })(q.PureComponent);
-$(OE, `defaultProps`, {
+($(OE, `defaultProps`, {
   "aria-label": `grid`,
   "aria-readonly": !0,
   autoContainerWidth: !1,
@@ -13924,7 +13928,7 @@ $(OE, `defaultProps`, {
   tabIndex: 0,
   isScrollingOptOut: !1,
 }),
-  _T(OE);
+  _T(OE));
 function kE(e) {
   var t = e.cellCount,
     n = e.overscanCellsCount,
@@ -14018,12 +14022,12 @@ var RE = (function (e) {
       {
         key: `resetLoadMoreRowsCache`,
         value: function (e) {
-          (this._loadMoreRowsMemoizer = NT()),
+          ((this._loadMoreRowsMemoizer = NT()),
             e &&
               this._doStuff(
                 this._lastRenderedStartIndex,
                 this._lastRenderedStopIndex,
-              );
+              ));
         },
       },
       {
@@ -14062,9 +14066,9 @@ var RE = (function (e) {
         value: function (e) {
           var t = e.startIndex,
             n = e.stopIndex;
-          (this._lastRenderedStartIndex = t),
+          ((this._lastRenderedStartIndex = t),
             (this._lastRenderedStopIndex = n),
-            this._doStuff(t, n);
+            this._doStuff(t, n));
         },
       },
       {
@@ -14109,8 +14113,8 @@ var RE = (function (e) {
     ])
   );
 })(q.PureComponent);
-$(RE, `defaultProps`, { minimumBatchSize: 10, rowCount: 0, threshold: 15 }),
-  (RE.propTypes = {});
+($(RE, `defaultProps`, { minimumBatchSize: 10, rowCount: 0, threshold: 15 }),
+  (RE.propTypes = {}));
 function zE(e) {
   var t = e.lastRenderedStartIndex,
     n = e.lastRenderedStopIndex,
@@ -14398,7 +14402,7 @@ function GE(e, t) {
           c = !0
         );
     } catch (e) {
-      (l = !0), (i = e);
+      ((l = !0), (i = e));
     } finally {
       try {
         if (!c && n.return != null && ((o = n.return()), Object(o) !== o))
@@ -14418,14 +14422,14 @@ function qE(e, t) {
   return WE(e) || GE(e, t) || NE(e, t) || KE();
 }
 function JE(e, t, n, r) {
-  for (var i = n + 1; t <= n; ) {
+  for (var i = n + 1; t <= n;) {
     var a = (t + n) >>> 1;
     e[a] >= r ? ((i = a), (n = a - 1)) : (t = a + 1);
   }
   return i;
 }
 function YE(e, t, n, r, i) {
-  for (var a = n + 1; t <= n; ) {
+  for (var a = n + 1; t <= n;) {
     var o = (t + n) >>> 1,
       s = e[o];
     i(s, r) >= 0 ? ((a = o), (n = o - 1)) : (t = o + 1);
@@ -14438,14 +14442,14 @@ function XE(e, t, n, r, i) {
     : JE(e, n === void 0 ? 0 : n | 0, r === void 0 ? e.length - 1 : r | 0, t);
 }
 function ZE(e, t, n, r) {
-  for (var i = n + 1; t <= n; ) {
+  for (var i = n + 1; t <= n;) {
     var a = (t + n) >>> 1;
     e[a] > r ? ((i = a), (n = a - 1)) : (t = a + 1);
   }
   return i;
 }
 function QE(e, t, n, r, i) {
-  for (var a = n + 1; t <= n; ) {
+  for (var a = n + 1; t <= n;) {
     var o = (t + n) >>> 1,
       s = e[o];
     i(s, r) > 0 ? ((a = o), (n = o - 1)) : (t = o + 1);
@@ -14458,14 +14462,14 @@ function $E(e, t, n, r, i) {
     : ZE(e, n === void 0 ? 0 : n | 0, r === void 0 ? e.length - 1 : r | 0, t);
 }
 function eD(e, t, n, r) {
-  for (var i = t - 1; t <= n; ) {
+  for (var i = t - 1; t <= n;) {
     var a = (t + n) >>> 1;
     e[a] < r ? ((i = a), (t = a + 1)) : (n = a - 1);
   }
   return i;
 }
 function tD(e, t, n, r, i) {
-  for (var a = t - 1; t <= n; ) {
+  for (var a = t - 1; t <= n;) {
     var o = (t + n) >>> 1,
       s = e[o];
     i(s, r) < 0 ? ((a = o), (t = o + 1)) : (n = o - 1);
@@ -14478,14 +14482,14 @@ function nD(e, t, n, r, i) {
     : eD(e, n === void 0 ? 0 : n | 0, r === void 0 ? e.length - 1 : r | 0, t);
 }
 function rD(e, t, n, r) {
-  for (var i = t - 1; t <= n; ) {
+  for (var i = t - 1; t <= n;) {
     var a = (t + n) >>> 1;
     e[a] <= r ? ((i = a), (t = a + 1)) : (n = a - 1);
   }
   return i;
 }
 function iD(e, t, n, r, i) {
-  for (var a = t - 1; t <= n; ) {
+  for (var a = t - 1; t <= n;) {
     var o = (t + n) >>> 1,
       s = e[o];
     i(s, r) <= 0 ? ((a = o), (t = o + 1)) : (n = o - 1);
@@ -14498,7 +14502,7 @@ function aD(e, t, n, r, i) {
     : rD(e, n === void 0 ? 0 : n | 0, r === void 0 ? e.length - 1 : r | 0, t);
 }
 function oD(e, t, n, r) {
-  for (t - 1; t <= n; ) {
+  for (t - 1; t <= n;) {
     var i = (t + n) >>> 1,
       a = e[i];
     if (a === r) return i;
@@ -14507,7 +14511,7 @@ function oD(e, t, n, r) {
   return -1;
 }
 function sD(e, t, n, r, i) {
-  for (t - 1; t <= n; ) {
+  for (t - 1; t <= n;) {
     var a = (t + n) >>> 1,
       o = e[a],
       s = i(o, r);
@@ -14526,41 +14530,41 @@ var lD = { ge: XE, gt: $E, lt: nD, le: aD, eq: cD },
   dD = 1,
   fD = 2;
 function pD(e, t, n, r, i) {
-  (this.mid = e),
+  ((this.mid = e),
     (this.left = t),
     (this.right = n),
     (this.leftPoints = r),
     (this.rightPoints = i),
-    (this.count = (t ? t.count : 0) + (n ? n.count : 0) + r.length);
+    (this.count = (t ? t.count : 0) + (n ? n.count : 0) + r.length));
 }
 var mD = pD.prototype;
 function hD(e, t) {
-  (e.mid = t.mid),
+  ((e.mid = t.mid),
     (e.left = t.left),
     (e.right = t.right),
     (e.leftPoints = t.leftPoints),
     (e.rightPoints = t.rightPoints),
-    (e.count = t.count);
+    (e.count = t.count));
 }
 function gD(e, t) {
   var n = TD(t);
-  (e.mid = n.mid),
+  ((e.mid = n.mid),
     (e.left = n.left),
     (e.right = n.right),
     (e.leftPoints = n.leftPoints),
     (e.rightPoints = n.rightPoints),
-    (e.count = n.count);
+    (e.count = n.count));
 }
 function _D(e, t) {
   var n = e.intervals([]);
-  n.push(t), gD(e, n);
+  (n.push(t), gD(e, n));
 }
 function vD(e, t) {
   var n = e.intervals([]),
     r = n.indexOf(t);
   return r < 0 ? uD : (n.splice(r, 1), gD(e, n), dD);
 }
-(mD.intervals = function (e) {
+((mD.intervals = function (e) {
   return (
     e.push.apply(e, this.leftPoints),
     this.left && this.left.intervals(e),
@@ -14585,7 +14589,7 @@ function vD(e, t) {
     else {
       var n = lD.ge(this.leftPoints, e, CD),
         r = lD.ge(this.rightPoints, e, wD);
-      this.leftPoints.splice(n, 0, e), this.rightPoints.splice(r, 0, e);
+      (this.leftPoints.splice(n, 0, e), this.rightPoints.splice(r, 0, e));
     }
   }),
   (mD.remove = function (e) {
@@ -14611,18 +14615,21 @@ function vD(e, t) {
     if (this.count === 1) return this.leftPoints[0] === e ? fD : uD;
     if (this.leftPoints.length === 1 && this.leftPoints[0] === e) {
       if (this.left && this.right) {
-        for (var r = this, i = this.left; i.right; ) (r = i), (i = i.right);
+        for (var r = this, i = this.left; i.right;) ((r = i), (i = i.right));
         if (r === this) i.right = this.right;
         else {
           var a = this.left,
             n = this.right;
-          (r.count -= i.count), (r.right = i.left), (i.left = a), (i.right = n);
+          ((r.count -= i.count),
+            (r.right = i.left),
+            (i.left = a),
+            (i.right = n));
         }
-        hD(this, i),
+        (hD(this, i),
           (this.count =
             (this.left ? this.left.count : 0) +
             (this.right ? this.right.count : 0) +
-            this.leftPoints.length);
+            this.leftPoints.length));
       } else this.left ? hD(this, this.left) : hD(this, this.right);
       return dD;
     }
@@ -14632,17 +14639,17 @@ function vD(e, t) {
       ++a
     )
       if (this.leftPoints[a] === e) {
-        --this.count, this.leftPoints.splice(a, 1);
+        (--this.count, this.leftPoints.splice(a, 1));
         for (
           var n = lD.ge(this.rightPoints, e, wD);
           n < this.rightPoints.length && this.rightPoints[n][1] === e[1];
           ++n
         )
           if (this.rightPoints[n] === e)
-            return this.rightPoints.splice(n, 1), dD;
+            return (this.rightPoints.splice(n, 1), dD);
       }
     return uD;
-  });
+  }));
 function yD(e, t, n) {
   for (var r = 0; r < e.length && e[r][0] <= t; ++r) {
     var i = n(e[r]);
@@ -14661,7 +14668,7 @@ function xD(e, t) {
     if (r) return r;
   }
 }
-(mD.queryPoint = function (e, t) {
+((mD.queryPoint = function (e, t) {
   if (e < this.mid) {
     if (this.left) {
       var n = this.left.queryPoint(e, t);
@@ -14692,7 +14699,7 @@ function xD(e, t) {
       : e > this.mid
         ? bD(this.rightPoints, e, n)
         : xD(this.leftPoints, n);
-  });
+  }));
 function SD(e, t) {
   return e - t;
 }
@@ -14716,13 +14723,13 @@ function TD(e) {
   }
   var c = o,
     l = o.slice();
-  return c.sort(CD), l.sort(wD), new pD(r, TD(i), TD(a), c, l);
+  return (c.sort(CD), l.sort(wD), new pD(r, TD(i), TD(a), c, l));
 }
 function ED(e) {
   this.root = e;
 }
 var DD = ED.prototype;
-(DD.insert = function (e) {
+((DD.insert = function (e) {
   this.root
     ? this.root.insert(e)
     : (this.root = new pD(e[0], null, null, [e], [e]));
@@ -14730,7 +14737,7 @@ var DD = ED.prototype;
   (DD.remove = function (e) {
     if (this.root) {
       var t = this.root.remove(e);
-      return t === fD && (this.root = null), t !== uD;
+      return (t === fD && (this.root = null), t !== uD);
     }
     return !1;
   }),
@@ -14749,16 +14756,16 @@ var DD = ED.prototype;
     get: function () {
       return this.root ? this.root.intervals([]) : [];
     },
-  });
+  }));
 function OD(e) {
   return !e || e.length === 0 ? new ED(null) : new ED(TD(e));
 }
 var kD = (function () {
   function e() {
-    aT(this, e),
+    (aT(this, e),
       $(this, `_columnSizeMap`, {}),
       $(this, `_intervalTree`, OD()),
-      $(this, `_leftMap`, {});
+      $(this, `_leftMap`, {}));
   }
   return uT(e, [
     {
@@ -14784,7 +14791,7 @@ var kD = (function () {
     {
       key: `setPosition`,
       value: function (e, t, n, r) {
-        this._intervalTree.insert([n, n + r, e]), (this._leftMap[e] = t);
+        (this._intervalTree.insert([n, n + r, e]), (this._leftMap[e] = t));
         var i = this._columnSizeMap,
           a = i[t];
         i[t] = a === void 0 ? n + r : Math.max(a, n + r);
@@ -14826,11 +14833,11 @@ function AD(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
-    t &&
+    (t &&
       (r = r.filter(function (t) {
         return Object.getOwnPropertyDescriptor(e, t).enumerable;
       })),
-      n.push.apply(n, r);
+      n.push.apply(n, r));
   }
   return n;
 }
@@ -14911,7 +14918,7 @@ var PD = {},
           {
             key: `clearCellPositions`,
             value: function () {
-              (this._positionCache = new kD()), this.forceUpdate();
+              ((this._positionCache = new kD()), this.forceUpdate());
             },
           },
           {
@@ -14935,27 +14942,27 @@ var PD = {},
             key: `recomputeCellPositions`,
             value: function () {
               var e = this._positionCache.count - 1;
-              (this._positionCache = new kD()),
+              ((this._positionCache = new kD()),
                 this._populatePositionCache(0, e),
-                this.forceUpdate();
+                this.forceUpdate());
             },
           },
           {
             key: `componentDidMount`,
             value: function () {
-              this._checkInvalidateOnUpdate(),
+              (this._checkInvalidateOnUpdate(),
                 this._invokeOnScrollCallback(),
-                this._invokeOnCellsRenderedCallback();
+                this._invokeOnCellsRenderedCallback());
             },
           },
           {
             key: `componentDidUpdate`,
             value: function (e, t) {
-              this._checkInvalidateOnUpdate(),
+              (this._checkInvalidateOnUpdate(),
                 this._invokeOnScrollCallback(),
                 this._invokeOnCellsRenderedCallback(),
                 this.props.scrollTop !== e.scrollTop &&
-                  this._debounceResetIsScrolling();
+                  this._debounceResetIsScrolling());
             },
           },
           {
@@ -14998,7 +15005,7 @@ var PD = {},
                   Math.max(0, v - u),
                   s + u * 2,
                   function (t, n, r) {
-                    w === void 0
+                    (w === void 0
                       ? ((C = t), (w = t))
                       : ((C = Math.min(C, t)), (w = Math.max(w, t))),
                       y.push(
@@ -15025,7 +15032,7 @@ var PD = {},
                             i.getWidth(t),
                           ),
                         }),
-                      );
+                      ));
                   },
                 ),
                 x < v + s + u && S < r)
@@ -15042,7 +15049,7 @@ var PD = {},
                   E < S + T;
                   E++
                 )
-                  (w = E),
+                  ((w = E),
                     y.push(
                       a({
                         index: E,
@@ -15051,7 +15058,7 @@ var PD = {},
                         parent: this,
                         style: { width: i.getWidth(E) },
                       }),
-                    );
+                    ));
               return (
                 (this._startIndex = C),
                 (this._stopIndex = w),
@@ -15106,10 +15113,10 @@ var PD = {},
               if (typeof this._invalidateOnUpdateStartIndex == `number`) {
                 var e = this._invalidateOnUpdateStartIndex,
                   t = this._invalidateOnUpdateStopIndex;
-                (this._invalidateOnUpdateStartIndex = null),
+                ((this._invalidateOnUpdateStartIndex = null),
                   (this._invalidateOnUpdateStopIndex = null),
                   this._populatePositionCache(e, t),
-                  this.forceUpdate();
+                  this.forceUpdate());
               }
             },
           },
@@ -15117,12 +15124,12 @@ var PD = {},
             key: `_debounceResetIsScrolling`,
             value: function () {
               var e = this.props.scrollingResetTimeInterval;
-              this._debounceResetIsScrollingId &&
+              (this._debounceResetIsScrollingId &&
                 bE(this._debounceResetIsScrollingId),
                 (this._debounceResetIsScrollingId = xE(
                   this._debounceResetIsScrollingCallback,
                   e,
-                ));
+                )));
             },
           },
           {
@@ -15164,9 +15171,12 @@ var PD = {},
                 this._stopIndexMemoized !== this._stopIndex
               ) {
                 var e = this.props.onCellsRendered;
-                e({ startIndex: this._startIndex, stopIndex: this._stopIndex }),
+                (e({
+                  startIndex: this._startIndex,
+                  stopIndex: this._stopIndex,
+                }),
                   (this._startIndexMemoized = this._startIndex),
-                  (this._stopIndexMemoized = this._stopIndex);
+                  (this._stopIndexMemoized = this._stopIndex));
               }
             },
           },
@@ -15223,7 +15233,7 @@ var RD = (function () {
     function e() {
       var t = this,
         n = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
-      aT(this, e),
+      (aT(this, e),
         $(this, `_cellMeasurerCache`, void 0),
         $(this, `_columnIndexOffset`, void 0),
         $(this, `_rowIndexOffset`, void 0),
@@ -15234,15 +15244,15 @@ var RD = (function () {
         $(this, `rowHeight`, function (e) {
           var n = e.index;
           t._cellMeasurerCache.rowHeight({ index: n + t._rowIndexOffset });
-        });
+        }));
       var r = n.cellMeasurerCache,
         i = n.columnIndexOffset,
         a = i === void 0 ? 0 : i,
         o = n.rowIndexOffset,
         s = o === void 0 ? 0 : o;
-      (this._cellMeasurerCache = r),
+      ((this._cellMeasurerCache = r),
         (this._columnIndexOffset = a),
-        (this._rowIndexOffset = s);
+        (this._rowIndexOffset = s));
     }
     return uT(e, [
       {
@@ -15346,11 +15356,11 @@ function UD(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
-    t &&
+    (t &&
       (r = r.filter(function (t) {
         return Object.getOwnPropertyDescriptor(e, t).enumerable;
       })),
-      n.push.apply(n, r);
+      n.push.apply(n, r));
   }
   return n;
 }
@@ -15392,7 +15402,7 @@ var qD = 20,
   JD = (function (e) {
     function t(e, n) {
       var r;
-      aT(this, t),
+      (aT(this, t),
         (r = GD(this, t, [e, n])),
         $(r, `state`, {
           scrollLeft: 0,
@@ -15518,7 +15528,7 @@ var qD = 20,
         }),
         $(r, `_topRightGridRef`, function (e) {
           r._topRightGrid = e;
-        });
+        }));
       var i = e.deferredMeasurementCache,
         a = e.fixedColumnCount,
         o = e.fixedRowCount;
@@ -15560,10 +15570,10 @@ var qD = 20,
           {
             key: `forceUpdateGrids`,
             value: function () {
-              this._bottomLeftGrid && this._bottomLeftGrid.forceUpdate(),
+              (this._bottomLeftGrid && this._bottomLeftGrid.forceUpdate(),
                 this._bottomRightGrid && this._bottomRightGrid.forceUpdate(),
                 this._topLeftGrid && this._topLeftGrid.forceUpdate(),
-                this._topRightGrid && this._topRightGrid.forceUpdate();
+                this._topRightGrid && this._topRightGrid.forceUpdate());
             },
           },
           {
@@ -15577,24 +15587,24 @@ var qD = 20,
                 n = t === void 0 ? 0 : t,
                 r = e.rowIndex,
                 i = r === void 0 ? 0 : r;
-              (this._deferredInvalidateColumnIndex =
+              ((this._deferredInvalidateColumnIndex =
                 typeof this._deferredInvalidateColumnIndex == `number`
                   ? Math.min(this._deferredInvalidateColumnIndex, n)
                   : n),
                 (this._deferredInvalidateRowIndex =
                   typeof this._deferredInvalidateRowIndex == `number`
                     ? Math.min(this._deferredInvalidateRowIndex, i)
-                    : i);
+                    : i));
             },
           },
           {
             key: `measureAllCells`,
             value: function () {
-              this._bottomLeftGrid && this._bottomLeftGrid.measureAllCells(),
+              (this._bottomLeftGrid && this._bottomLeftGrid.measureAllCells(),
                 this._bottomRightGrid &&
                   this._bottomRightGrid.measureAllCells(),
                 this._topLeftGrid && this._topLeftGrid.measureAllCells(),
-                this._topRightGrid && this._topRightGrid.measureAllCells();
+                this._topRightGrid && this._topRightGrid.measureAllCells());
             },
           },
           {
@@ -15613,7 +15623,7 @@ var qD = 20,
                 s = a.fixedRowCount,
                 c = Math.max(0, n - o),
                 l = Math.max(0, i - s);
-              this._bottomLeftGrid &&
+              (this._bottomLeftGrid &&
                 this._bottomLeftGrid.recomputeGridSize({
                   columnIndex: n,
                   rowIndex: l,
@@ -15635,7 +15645,7 @@ var qD = 20,
                   }),
                 (this._leftGridWidth = null),
                 (this._topGridHeight = null),
-                this._maybeCalculateCachedStyles(!0);
+                this._maybeCalculateCachedStyles(!0));
             },
           },
           {
@@ -15646,9 +15656,9 @@ var qD = 20,
                 n = e.scrollTop;
               if (t > 0 || n > 0) {
                 var r = {};
-                t > 0 && (r.scrollLeft = t),
+                (t > 0 && (r.scrollLeft = t),
                   n > 0 && (r.scrollTop = n),
-                  this.setState(r);
+                  this.setState(r));
               }
               this._handleInvalidatedGridSize();
             },
@@ -15665,7 +15675,7 @@ var qD = 20,
               var e = this.props,
                 t = e.onScroll,
                 n = e.onSectionRendered;
-              e.onScrollbarPresenceChange, e.scrollLeft;
+              (e.onScrollbarPresenceChange, e.scrollLeft);
               var r = e.scrollToColumn;
               e.scrollTop;
               var i = e.scrollToRow,
@@ -15759,10 +15769,10 @@ var qD = 20,
               if (typeof this._deferredInvalidateColumnIndex == `number`) {
                 var e = this._deferredInvalidateColumnIndex,
                   t = this._deferredInvalidateRowIndex;
-                (this._deferredInvalidateColumnIndex = null),
+                ((this._deferredInvalidateColumnIndex = null),
                   (this._deferredInvalidateRowIndex = null),
                   this.recomputeGridSize({ columnIndex: e, rowIndex: t }),
-                  this.forceUpdate();
+                  this.forceUpdate());
               }
             },
           },
@@ -15795,7 +15805,7 @@ var qD = 20,
                   e ||
                   s !== this._lastRenderedFixedRowCount ||
                   c !== this._lastRenderedRowHeight;
-              (e || h || l !== this._lastRenderedStyle) &&
+              ((e || h || l !== this._lastRenderedStyle) &&
                 (this._containerOuterStyle = WD(
                   { height: a, overflow: `visible`, width: m },
                   l,
@@ -15862,13 +15872,13 @@ var qD = 20,
                 (this._lastRenderedStyleBottomRightGrid = d),
                 (this._lastRenderedStyleTopLeftGrid = f),
                 (this._lastRenderedStyleTopRightGrid = p),
-                (this._lastRenderedWidth = m);
+                (this._lastRenderedWidth = m));
             },
           },
           {
             key: `_prepareForRender`,
             value: function () {
-              (this._lastRenderedColumnWidth !== this.props.columnWidth ||
+              ((this._lastRenderedColumnWidth !== this.props.columnWidth ||
                 this._lastRenderedFixedColumnCount !==
                   this.props.fixedColumnCount) &&
                 (this._leftGridWidth = null),
@@ -15880,7 +15890,7 @@ var qD = 20,
                 (this._lastRenderedFixedColumnCount =
                   this.props.fixedColumnCount),
                 (this._lastRenderedFixedRowCount = this.props.fixedRowCount),
-                (this._lastRenderedRowHeight = this.props.rowHeight);
+                (this._lastRenderedRowHeight = this.props.rowHeight));
             },
           },
           {
@@ -16069,7 +16079,7 @@ var qD = 20,
       )
     );
   })(q.PureComponent);
-$(JD, `defaultProps`, {
+($(JD, `defaultProps`, {
   classNameBottomLeftGrid: ``,
   classNameBottomRightGrid: ``,
   classNameTopLeftGrid: ``,
@@ -16089,7 +16099,7 @@ $(JD, `defaultProps`, {
   hideBottomLeftGridScrollbar: !1,
 }),
   (JD.propTypes = {}),
-  _T(JD);
+  _T(JD));
 function YD(e, t, n) {
   return (
     (t = fT(t)),
@@ -16295,11 +16305,11 @@ function oO() {
 }
 var sO = (function (e) {
   function t() {
-    return aT(this, t), aO(this, t, arguments);
+    return (aT(this, t), aO(this, t, arguments));
   }
-  return pT(t, e), uT(t);
+  return (pT(t, e), uT(t));
 })(q.Component);
-$(sO, `defaultProps`, {
+($(sO, `defaultProps`, {
   cellDataGetter: QD,
   cellRenderer: $D,
   defaultSortDirection: tO.ASC,
@@ -16308,16 +16318,16 @@ $(sO, `defaultProps`, {
   headerRenderer: rO,
   style: {},
 }),
-  (sO.propTypes = {});
+  (sO.propTypes = {}));
 function cO(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
-    t &&
+    (t &&
       (r = r.filter(function (t) {
         return Object.getOwnPropertyDescriptor(e, t).enumerable;
       })),
-      n.push.apply(n, r);
+      n.push.apply(n, r));
   }
   return n;
 }
@@ -16651,22 +16661,22 @@ var fO = (function (e) {
           if (v || o) {
             var ee = c === f ? (l === tO.DESC ? tO.ASC : tO.DESC) : p,
               D = function (e) {
-                v &&
+                (v &&
                   s({
                     defaultSortDirection: p,
                     event: e,
                     sortBy: f,
                     sortDirection: ee,
                   }),
-                  o && o({ columnData: d, dataKey: f, event: e });
+                  o && o({ columnData: d, dataKey: f, event: e }));
               };
-            (E = t.props[`aria-label`] || _ || f),
+            ((E = t.props[`aria-label`] || _ || f),
               (T = `none`),
               (w = 0),
               (S = D),
               (C = function (e) {
                 (e.key === `Enter` || e.key === ` `) && D(e);
-              });
+              }));
           }
           return (
             c === f && (T = l === tO.ASC ? `ascending` : `descending`),
@@ -16833,7 +16843,7 @@ var fO = (function (e) {
     ])
   );
 })(q.PureComponent);
-$(fO, `defaultProps`, {
+($(fO, `defaultProps`, {
   disableHeader: !1,
   estimatedRowSize: 30,
   headerHeight: 0,
@@ -16856,7 +16866,7 @@ $(fO, `defaultProps`, {
   scrollToIndex: -1,
   style: {},
 }),
-  (fO.propTypes = {});
+  (fO.propTypes = {}));
 var pO = [],
   mO = null,
   hO = null;
@@ -16867,21 +16877,21 @@ function gO() {
     (mO = null));
 }
 function _O() {
-  gO(),
+  (gO(),
     pO.forEach(function (e) {
       return e.__resetIsScrolling();
-    });
+    }));
 }
 function vO() {
   hO && bE(hO);
   var e = 0;
-  pO.forEach(function (t) {
+  (pO.forEach(function (t) {
     e = Math.max(e, t.props.scrollingResetTimeInterval);
   }),
-    (hO = xE(_O, e));
+    (hO = xE(_O, e)));
 }
 function yO(e) {
-  e.currentTarget === window &&
+  (e.currentTarget === window &&
     mO == null &&
     document.body &&
     ((mO = document.body.style.pointerEvents),
@@ -16890,19 +16900,19 @@ function yO(e) {
     pO.forEach(function (t) {
       t.props.scrollElement === e.currentTarget &&
         t.__handleWindowScrollEvent();
-    });
+    }));
 }
 function bO(e, t) {
-  pO.some(function (e) {
+  (pO.some(function (e) {
     return e.props.scrollElement === t;
   }) || t.addEventListener(`scroll`, yO),
-    pO.push(e);
+    pO.push(e));
 }
 function xO(e, t) {
-  (pO = pO.filter(function (t) {
+  ((pO = pO.filter(function (t) {
     return t !== e;
   })),
-    pO.length || (t.removeEventListener(`scroll`, yO), hO && (bE(hO), gO()));
+    pO.length || (t.removeEventListener(`scroll`, yO), hO && (bE(hO), gO())));
 }
 var SO = function (e) {
     return e === window;
@@ -16953,11 +16963,11 @@ function DO(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
-    t &&
+    (t &&
       (r = r.filter(function (t) {
         return Object.getOwnPropertyDescriptor(e, t).enumerable;
       })),
-      n.push.apply(n, r);
+      n.push.apply(n, r));
   }
   return n;
 }
@@ -17023,13 +17033,13 @@ $(
           ),
         ),
         $(e, `_registerChild`, function (t) {
-          t &&
+          (t &&
             !(t instanceof Element) &&
             console.warn(
               `WindowScroller registerChild expects to be passed Element or null`,
             ),
             (e._child = t),
-            e.updatePosition();
+            e.updatePosition());
         }),
         $(e, `_onChildScroll`, function (t) {
           var n = t.scrollTop;
@@ -17062,8 +17072,8 @@ $(
               var r = EO(n),
                 i = Math.max(0, r.left - e._positionFromLeft),
                 a = Math.max(0, r.top - e._positionFromTop);
-              e.setState({ isScrolling: !0, scrollLeft: i, scrollTop: a }),
-                t({ scrollLeft: i, scrollTop: a });
+              (e.setState({ isScrolling: !0, scrollLeft: i, scrollTop: a }),
+                t({ scrollLeft: i, scrollTop: a }));
             }
           }
         }),
@@ -17090,25 +17100,25 @@ $(
               a = this._child || this._windowScrollerRef.current;
             if (a instanceof Element && e) {
               var o = TO(a, e);
-              (this._positionFromTop = o.top),
-                (this._positionFromLeft = o.left);
+              ((this._positionFromTop = o.top),
+                (this._positionFromLeft = o.left));
             }
             var s = wO(e, this.props);
-            (r !== s.height || i !== s.width) &&
+            ((r !== s.height || i !== s.width) &&
               (this.setState({ height: s.height, width: s.width }),
               t({ height: s.height, width: s.width })),
               this.props.updateScrollTopOnUpdatePosition === !0 &&
-                (this.__handleWindowScrollEvent(), this.__resetIsScrolling());
+                (this.__handleWindowScrollEvent(), this.__resetIsScrolling()));
           },
         },
         {
           key: `componentDidMount`,
           value: function () {
             var e = this.props.scrollElement;
-            (this._detectElementResize = CT()),
+            ((this._detectElementResize = CT()),
               this.updatePosition(e),
               e && (bO(this, e), this._registerResizeListener(e)),
-              (this._isMounted = !0);
+              (this._isMounted = !0));
           },
         },
         {
@@ -17130,8 +17140,8 @@ $(
           key: `componentWillUnmount`,
           value: function () {
             var e = this.props.scrollElement;
-            e && (xO(this, e), this._unregisterResizeListener(e)),
-              (this._isMounted = !1);
+            (e && (xO(this, e), this._unregisterResizeListener(e)),
+              (this._isMounted = !1));
           },
         },
         {
@@ -17228,12 +17238,12 @@ var IO = q.forwardRef(function (e, t) {
             timing: this.props.scrollTiming,
             onComplete: () => this.OnAnimationScrollComplete(e, t, n, r),
           };
-          this.m_scrollAnimation && this.m_scrollAnimation.End(),
+          (this.m_scrollAnimation && this.m_scrollAnimation.End(),
             (this.m_scrollAnimation = new Js(o, { scrollLeft: r }, a)),
-            this.m_scrollAnimation.Start();
+            this.m_scrollAnimation.Start());
         } else
-          a.scrollToPosition({ scrollLeft: r, scrollTop: 0 }),
-            this.OnAnimationScrollComplete(e, t, n, r);
+          (a.scrollToPosition({ scrollLeft: r, scrollTop: 0 }),
+            this.OnAnimationScrollComplete(e, t, n, r));
       }
     }
     RestoreScrollPosition(e) {
@@ -17244,17 +17254,17 @@ var IO = q.forwardRef(function (e, t) {
       this.m_timeout && window.clearTimeout(this.m_timeout);
       let t = this.props.fnOnScroll;
       this.m_timeout = window.setTimeout(() => {
-        t && t(e), (this.m_timeout = void 0);
+        (t && t(e), (this.m_timeout = void 0));
       }, 250);
     }
     OnAnimationScrollComplete(e, t, n, r) {
       Gd.unstable_batchedUpdates(() => {
-        NO(`OnAnimationScrollComplete`, n, r), this.SendScrollNotification(r);
+        (NO(`OnAnimationScrollComplete`, n, r), this.SendScrollNotification(r));
         let i = this.m_mapRefs.get(n);
-        i && i.current && (NO(`Sending focus to`, n), i.current.TakeFocus(e)),
+        (i && i.current && (NO(`Sending focus to`, n), i.current.TakeFocus(e)),
           this.props.setFocusedColumn(t),
           (this.m_scrollAnimation = null),
-          (this.m_activeScrollTo = null);
+          (this.m_activeScrollTo = null));
       });
     }
     m_nTouchStartClientX = void 0;
@@ -17294,19 +17304,19 @@ var IO = q.forwardRef(function (e, t) {
         e.cancelable && e.preventDefault());
     }
     SnapBackToFirstElement(e) {
-      console.warn(`Carousel out of bounds, scrolling back to`, e),
-        this.RestoreScrollPosition(e);
+      (console.warn(`Carousel out of bounds, scrolling back to`, e),
+        this.RestoreScrollPosition(e));
     }
     OnScroll(e) {
       let t = this.m_refGrid?.getOffsetForCell({
         alignment: this.props.scrollToAlignment,
         columnIndex: this.nIndexLeftmost,
       });
-      this.SendScrollNotification(e.scrollLeft),
+      (this.SendScrollNotification(e.scrollLeft),
         t &&
           e.scrollLeft < Math.floor(t.scrollLeft) &&
           this.SnapBackToFirstElement(t.scrollLeft),
-        this.UpdateScrollArrows();
+        this.UpdateScrollArrows());
     }
     GetCellColumnWidth(e) {
       let { fnGetColumnWidth: t } = this.props,
@@ -17364,10 +17374,10 @@ var IO = q.forwardRef(function (e, t) {
       );
     }
     OnSectionRendered(e) {
-      (this.m_iStart = e.columnStartIndex),
+      ((this.m_iStart = e.columnStartIndex),
         (this.m_iEnd = e.columnStopIndex),
         NO(`Section rendered`, this.m_iStart, this.m_iEnd),
-        this.UpdateScrollArrows();
+        this.UpdateScrollArrows());
     }
     get alignment() {
       return this.props.scrollToAlignment || `start`;
@@ -17381,9 +17391,9 @@ var IO = q.forwardRef(function (e, t) {
     GetLastFocusableColumn() {
       let e = this.props.nNumItems - 1;
       if (this.props.fnDoesItemTakeFocus)
-        for (; !this.props.fnDoesItemTakeFocus(e) && e > this.nIndexLeftmost; )
+        for (; !this.props.fnDoesItemTakeFocus(e) && e > this.nIndexLeftmost;)
           e--;
-      return NO(`LastFocusableColumn: `, e), e;
+      return (NO(`LastFocusableColumn: `, e), e);
     }
     UpdateScrollArrows() {
       if (this.props.fnUpdateArrows) {
@@ -17400,7 +17410,7 @@ var IO = q.forwardRef(function (e, t) {
           n = Math.round(this.m_refGridElement?.scrollLeft ?? NaN),
           r = n != Math.floor(e) && n != Math.round(e),
           i = n != Math.floor(t) && n != Math.round(t);
-        NO(
+        (NO(
           `ShowLeftArrow: `,
           r,
           e,
@@ -17410,7 +17420,7 @@ var IO = q.forwardRef(function (e, t) {
           ` ScrollPos: `,
           n,
         ),
-          this.props.fnUpdateArrows(r, i);
+          this.props.fnUpdateArrows(r, i));
       }
     }
     BindGridObject(e) {
@@ -17438,7 +17448,7 @@ var IO = q.forwardRef(function (e, t) {
         this.m_refGrid)
       ) {
         let e = this.m_refGridContainer.current;
-        this.m_refGrid._setScrollingContainerRef(e),
+        (this.m_refGrid._setScrollingContainerRef(e),
           (this.m_refGridElement = e),
           e?.addEventListener(`touchstart`, this.OnTouchStart),
           e?.addEventListener(`touchend`, this.OnTouchEnd),
@@ -17451,7 +17461,7 @@ var IO = q.forwardRef(function (e, t) {
             e.firstChild?.setAttribute(
               `aria-labelledby`,
               this.props[`aria-labelledby`],
-            );
+            ));
         let t = window.getComputedStyle(e),
           n = parseInt(t.getPropertyValue(`padding-right`)) || 0,
           r = parseInt(t.getPropertyValue(`scroll-padding-right`)) || 0,
@@ -17491,10 +17501,10 @@ var IO = q.forwardRef(function (e, t) {
     }
     OnResize() {
       let e = this.m_refContainer.current?.clientWidth ?? 0;
-      e != this.state.nContainerWidth &&
+      (e != this.state.nContainerWidth &&
         (NO(`OnResize Setting width to`, e),
         this.setState({ nContainerWidth: e })),
-        this.UpdateScrollArrows();
+        this.UpdateScrollArrows());
     }
     ScrollLeft(e) {
       let t = this.m_iEnd - this.m_iStart,
@@ -17683,7 +17693,7 @@ var IO = q.forwardRef(function (e, t) {
       );
     }
   };
-P([I], LO.prototype, `RestoreScrollPosition`, null),
+(P([I], LO.prototype, `RestoreScrollPosition`, null),
   P([I], LO.prototype, `OnAnimationScrollComplete`, null),
   P([I], LO.prototype, `OnTouchStart`, null),
   P([I], LO.prototype, `OnTouchEnd`, null),
@@ -17705,7 +17715,7 @@ P([I], LO.prototype, `RestoreScrollPosition`, null),
   P([I], LO.prototype, `MoveLeft`, null),
   P([I], LO.prototype, `MoveRight`, null),
   P([I], LO.prototype, `OnGamepadButtonDown`, null),
-  P([I], LO.prototype, `OnGamepadDirection`, null);
+  P([I], LO.prototype, `OnGamepadDirection`, null));
 var RO = `eDGtQw63G7w-`,
   zO = `_5TYT8OSRgeo-`,
   BO = class extends q.Component {
@@ -17829,9 +17839,10 @@ var VO = class extends q.Component {
     e && e.ScrollToFirstChild();
   }
   OnUpdateArrows(e, t) {
-    (this.state.bLeftArrowEnabled != e || this.state.bRightArrowEnabled != t) &&
+    ((this.state.bLeftArrowEnabled != e ||
+      this.state.bRightArrowEnabled != t) &&
       this.setState({ bLeftArrowEnabled: e, bRightArrowEnabled: t }),
-      this.props.fnUpdateArrows && this.props.fnUpdateArrows(e, t);
+      this.props.fnUpdateArrows && this.props.fnUpdateArrows(e, t));
   }
   OnHeaderClick(e) {
     this.props.bHeaderClickScrollToFirst &&
@@ -17870,14 +17881,14 @@ var VO = class extends q.Component {
     });
   }
 };
-P([I], VO.prototype, `OnLeftClicked`, null),
+(P([I], VO.prototype, `OnLeftClicked`, null),
   P([I], VO.prototype, `OnRightClicked`, null),
   P([I], VO.prototype, `ScrollLeft`, null),
   P([I], VO.prototype, `ScrollRight`, null),
   P([I], VO.prototype, `ScrollToFirstChild`, null),
   P([I], VO.prototype, `OnUpdateArrows`, null),
   P([I], VO.prototype, `OnHeaderClick`, null),
-  P([I], VO.prototype, `onCloseButtonClicked`, null);
+  P([I], VO.prototype, `onCloseButtonClicked`, null));
 var HO = `bSM41vf3dug-`,
   UO = `_5ovpbmDsyA4-`;
 function WO(e) {
@@ -18022,7 +18033,7 @@ function QO(e) {
     g = q.useCallback((e) => 350, [350]),
     _ = q.useCallback(
       (e, t) => {
-        u(i(t)), o && o(e, t);
+        (u(i(t)), o && o(e, t));
       },
       [i, o],
     );
@@ -18217,7 +18228,7 @@ function Rk(e) {
               (0, J.jsx)(Jl, {
                 className: R(Fk, void 0, `GreenPlay`),
                 onClick: () => {
-                  n(), i();
+                  (n(), i());
                 },
                 children: Q.Localize(`#ReviewHistogram_AnomalyDialogView`),
               }),
@@ -18225,7 +18236,7 @@ function Rk(e) {
                 (0, J.jsx)(ol, {
                   className: R(`F96b8bBJ7GA-`, void 0),
                   onClick: () => {
-                    r(), i();
+                    (r(), i());
                   },
                   children: Q.Localize(
                     `#ReviewHistogram_AnomalyDialogEditPreferences`,
@@ -18496,27 +18507,27 @@ function pA(e, t, n) {
   }
   let s = a * Qk[o],
     c = new Date(e * 1e3);
-  o == `month`
+  (o == `month`
     ? c.setUTCMonth(uA(c.getUTCMonth(), a))
     : o == `year` && c.setUTCFullYear(uA(c.getUTCFullYear(), a)),
     c.setUTCHours(0, 0, 0, 0),
     s >= 4 * Ec.PerDay && c.setUTCDate(1),
     s >= 2 * Ec.PerMonth && c.setUTCMonth(uA(c.getUTCMonth(), 3)),
     s >= 2 * Zk && c.setUTCMonth(uA(c.getUTCMonth(), 6)),
-    s >= Ec.PerYear && c.setUTCMonth(0);
+    s >= Ec.PerYear && c.setUTCMonth(0));
   let l = [],
     u = NaN,
     d = 0;
-  for (; l.length < eA; ) {
+  for (; l.length < eA;) {
     let e = Math.floor(c.getTime() / 1e3);
     if (e == u || (l.push(e), (u = e), e >= t)) break;
     if (o == `month` && a < 1) {
       let t =
         Date.UTC(c.getUTCFullYear(), c.getUTCMonth() + 1, 1) -
         Date.UTC(c.getUTCFullYear(), c.getUTCMonth(), 1);
-      c.setTime(e * 1e3 + d + t * a),
+      (c.setTime(e * 1e3 + d + t * a),
         (d = c.getTime() - uA(c.getTime(), Ec.PerDay * 1e3)),
-        c.setUTCHours(0, 0, 0, 0);
+        c.setUTCHours(0, 0, 0, 0));
     } else
       o == `month`
         ? c.setUTCMonth(c.getUTCMonth() + a)
@@ -18541,8 +18552,8 @@ function hA(e, t, n) {
   let r = 0,
     i = 0;
   for (let t of e)
-    (r = Math.max(r, t.recommendations_up)),
-      (i = Math.max(i, t.recommendations_down));
+    ((r = Math.max(r, t.recommendations_up)),
+      (i = Math.max(i, t.recommendations_down)));
   let a = -i,
     o = r,
     s = a,
@@ -18553,7 +18564,7 @@ function hA(e, t, n) {
   let d = c - s;
   if (d == 0) {
     let e = c == 0 ? 1 : 0.01;
-    (s -= e), l || (c += e);
+    ((s -= e), l || (c += e));
   } else
     u != 0 &&
       ((s -= d * u),
@@ -18790,7 +18801,7 @@ function EA(e) {
     re = (e) => {
       if (e.button != 0) return;
       let t = ne(e);
-      (_.current = !1), g({ flStartX: t, flCurrentX: t });
+      ((_.current = !1), g({ flStartX: t, flCurrentX: t }));
     },
     ie = (e) => {
       h && g({ ...h, flCurrentX: ne(e) });
@@ -18803,7 +18814,7 @@ function EA(e) {
         r = D.TimeFromX(Math.max(h.flStartX, t)),
         i = Math.floor(Math.max(n, D.nTimeMin) / Ec.PerDay) * Ec.PerDay,
         a = Math.ceil(Math.min(r, D.nTimeMax) / Ec.PerDay) * Ec.PerDay;
-      (_.current = !0), u?.(i, a, `all`);
+      ((_.current = !0), u?.(i, a, `all`));
     },
     O = (e, t) => {
       _.current ? (_.current = !1) : u?.(e.date, nA(e.date, n), t);
@@ -18968,7 +18979,7 @@ function DA(e) {
     [h, g] = q.useState(!1),
     _ = q.useCallback(
       (e, t, r, i) => {
-        f(i == `all` ? (e ? `recent` : `rollup`) : `none`), n?.(t, r, i);
+        (f(i == `all` ? (e ? `recent` : `rollup`) : `none`), n?.(t, r, i));
       },
       [n],
     ),
@@ -18976,10 +18987,10 @@ function DA(e) {
     y = q.useCallback((e, t, n) => _(!0, e, t, n), [_]),
     b = q.useCallback(
       (e) => {
-        f(`none`),
+        (f(`none`),
           r
             ? r(e.start_date, e.end_date)
-            : _(!1, e.start_date, e.end_date, `all`);
+            : _(!1, e.start_date, e.end_date, `all`));
       },
       [r, _],
     );
@@ -19098,9 +19109,9 @@ function LA(e) {
         t = o.current.getBoundingClientRect(),
         i = p,
         a = l.current.matches(`:dir(rtl)`);
-      a && (p === `left` ? (i = `right`) : p === `right` && (i = `left`)),
+      (a && (p === `left` ? (i = `right`) : p === `right` && (i = `left`)),
         o.current.style.setProperty(`--parentWidth`, `${e.width}px`),
-        o.current.style.setProperty(`--parentHeight`, `${e.height}px`);
+        o.current.style.setProperty(`--parentHeight`, `${e.height}px`));
       let s = 0;
       if (!n) {
         if (t.width) {
@@ -19111,11 +19122,11 @@ function LA(e) {
             let n = f ? e.left : e.right;
             s = document.body.clientWidth - (n + t.width);
           }
-          i === void 0 &&
+          (i === void 0 &&
             (s = a
               ? e.right - t.width
               : document.body.clientWidth - (e.left + t.width)),
-            (s = Math.min(s, 0));
+            (s = Math.min(s, 0)));
         }
         i === `left`
           ? f
@@ -19167,8 +19178,8 @@ function LA(e) {
           h?.addEventListener(`scroll`, m),
           window.addEventListener(`scroll`, m),
           () => {
-            h?.removeEventListener(`scroll`, m),
-              window.addEventListener(`scroll`, m);
+            (h?.removeEventListener(`scroll`, m),
+              window.addEventListener(`scroll`, m));
           })
         : (window.sessionStorage.getItem(`DEBUG_StickyContextMenus`) !=
             `true` && o.current?.hidePopover(),
@@ -19176,13 +19187,13 @@ function LA(e) {
     [u, m, h],
   );
   let g = (0, q.useCallback)(() => {
-      m(), d(!0), (c.current = !0);
+      (m(), d(!0), (c.current = !0));
     }, [m]),
     _ = (0, q.useCallback)(() => {
-      (c.current = !1), s.current || d(!1);
+      ((c.current = !1), s.current || d(!1));
     }, []),
     v = (0, q.useCallback)(() => {
-      (s.current = !0), d(!0);
+      ((s.current = !0), d(!0));
     }, []),
     y = (0, q.useCallback)(
       (e) => {
@@ -19197,7 +19208,7 @@ function LA(e) {
       [v],
     ),
     x = (0, q.useCallback)(() => {
-      (s.current = !1), c.current || d(!1);
+      ((s.current = !1), c.current || d(!1));
     }, []),
     S = (0, q.useCallback)(
       (e) => {
@@ -19206,7 +19217,7 @@ function LA(e) {
       [x],
     ),
     C = (0, q.useCallback)(() => {
-      x(), _();
+      (x(), _());
     }, [x, _]),
     w = (0, q.useCallback)(
       (e) => {
@@ -19253,7 +19264,7 @@ function LA(e) {
     ne;
   a === 0 && !u
     ? (ne = (e) => {
-        e.preventDefault(), g();
+        (e.preventDefault(), g());
       })
     : a === 1 && (ne = u ? _ : g);
   let re = {
@@ -19289,7 +19300,7 @@ function LA(e) {
 }
 function RA(e, t) {
   return (n) => {
-    e?.(n), t?.(n);
+    (e?.(n), t?.(n));
   };
 }
 function zA(e) {
@@ -19452,8 +19463,8 @@ function yj(e) {
     c = vj(t.playtime_filter_max, i),
     l = a ?? [s, c],
     u = (e) => {
-      o(null),
-        n({ playtime_filter_min: e[0], playtime_filter_max: _j(e[1], i) });
+      (o(null),
+        n({ playtime_filter_min: e[0], playtime_filter_max: _j(e[1], i) }));
     },
     d =
       l[0] > 0
@@ -19725,7 +19736,7 @@ var Bj = [
 ];
 function Vj(e, t) {
   let n = {};
-  return (n[e] = t), n;
+  return ((n[e] = t), n);
 }
 function Hj(e, t) {
   return q.useCallback((n) => t({ ...e, ...n }), [e, t]);
@@ -19996,7 +20007,7 @@ function Xj(e) {
                 type: `button`,
                 className: `KbaITRGAFWM-`,
                 onClick: () => {
-                  s.current?.close(), a?.();
+                  (s.current?.close(), a?.());
                 },
                 children: Q.Localize(
                   i ? `#ReviewFilters_HideGraph` : `#ReviewFilters_ShowGraph`,
@@ -20832,13 +20843,13 @@ function cN(e) {
     [s, c] = q.useState(!1),
     [l, u] = q.useState(!1),
     d = q.useCallback((e) => {
-      e.preventDefault(), o(!0);
+      (e.preventDefault(), o(!0));
     }, []),
     f = q.useCallback((e) => {
-      e.preventDefault(), u(!0);
+      (e.preventDefault(), u(!0));
     }, []),
     p = q.useCallback((e) => {
-      e.preventDefault(), c(!0);
+      (e.preventDefault(), c(!0));
     }, []);
   return (0, J.jsxs)(J.Fragment, {
     children: [
@@ -21421,7 +21432,7 @@ function AN(e) {
   }
   let [x, S] = (0, q.useState)(f),
     C = (e, t, n) => {
-      n >= b.length && S(void 0), S(b[n + 1]);
+      (n >= b.length && S(void 0), S(b[n + 1]));
     };
   if (!t) return (0, J.jsx)(`div`, { className: Va });
   let w = t ? t.GetStartTimeAndDateUnixSeconds() : 0,
@@ -21630,7 +21641,7 @@ function RN(e, t, n = `deck`) {
           try {
             return await at(n);
           } catch (e) {
-            return console.error(`FetchPopularCompatList failed`, e), MN;
+            return (console.error(`FetchPopularCompatList failed`, e), MN);
           }
         },
       };
@@ -21768,13 +21779,13 @@ var QN = class {
   m_eStorageType = `session`;
   m_strStorageKey;
   constructor(e) {
-    T(this),
+    (T(this),
       w(() => {
-        e?.rgHiddenApps &&
+        (e?.rgHiddenApps &&
           e.rgHiddenApps.forEach((e) => this.m_mapHiddenApps.set(e, !0)),
           e?.rgHiddenClans &&
-            e.rgHiddenClans.forEach((e) => this.m_mapHiddenClans.set(e, !0));
-      });
+            e.rgHiddenClans.forEach((e) => this.m_mapHiddenClans.set(e, !0)));
+      }));
   }
   GetGameSources() {
     return Array.from(this.m_mapGameSources.keys());
@@ -21805,25 +21816,25 @@ var QN = class {
     );
   }
   InitDefaultCheckboxes(e, t, n) {
-    (this.m_bInitializedForUpdatesOnly = t),
-      (this.m_mapEventTypeGroupsAllowed = ZN(t ? [`updates`] : JN));
+    ((this.m_bInitializedForUpdatesOnly = t),
+      (this.m_mapEventTypeGroupsAllowed = ZN(t ? [`updates`] : JN)));
     let r = gs() ? GN : WN;
-    (this.m_mapGameSources = ZN(e ? r : KN)),
-      n && this.m_mapGameSources.set(`featured`, !0);
+    ((this.m_mapGameSources = ZN(e ? r : KN)),
+      n && this.m_mapGameSources.set(`featured`, !0));
   }
   Init(e, t, n, r, i) {
-    (this.m_eStorageType = i), (this.m_strStorageKey = r);
+    ((this.m_eStorageType = i), (this.m_strStorageKey = r));
     let a = this.GetStorageObject(),
       o = a ? a.getItem(this.GetPreferencesStorageKey()) : null;
     if (o) {
       let e = JSON.parse(o);
       if (e.rgEventTypeGroupsAllowed && e.rgGameSources) {
         let { rgEventTypeGroupsAllowed: t, rgGameSources: n } = e;
-        (this.m_mapEventTypeGroupsAllowed = ZN(t)),
+        ((this.m_mapEventTypeGroupsAllowed = ZN(t)),
           (this.m_mapGameSources = ZN(n)),
           e.bCuratorUnhideOnFollowDismissed !== void 0 &&
             (this.m_bCuratorUnhideOnFollowDialogDismissed =
-              e.bCuratorUnhideOnFollowDismissed);
+              e.bCuratorUnhideOnFollowDismissed));
         return;
       }
     }
@@ -21844,7 +21855,7 @@ var QN = class {
   }
   RecordFilterChange() {
     let e = 0;
-    this.BIsGameSourceAllowed(`library`) && (e |= 1),
+    (this.BIsGameSourceAllowed(`library`) && (e |= 1),
       this.BIsGameSourceAllowed(`wishlist`) && (e |= 2),
       this.BIsGameSourceAllowed(`following`) && (e |= 4),
       this.BIsGameSourceAllowed(`recommended`) && (e |= 8),
@@ -21857,14 +21868,14 @@ var QN = class {
       this.BIsEventTypeGroupAllowed(`updates`) && (e |= 8192),
       this.BIsEventTypeGroupAllowed(`releases`) && (e |= 16384),
       this.BIsEventTypeGroupAllowed(`sales`) && (e |= 32768),
-      Tr(As, e);
+      Tr(As, e));
   }
   BCuratorUnhideOnFollowDialogDismissed() {
     return this.m_bCuratorUnhideOnFollowDialogDismissed;
   }
   SetCuratorUnhideOnFollowDialogDismissed(e) {
-    (this.m_bCuratorUnhideOnFollowDialogDismissed = e),
-      this.SaveFilterPreferences();
+    ((this.m_bCuratorUnhideOnFollowDialogDismissed = e),
+      this.SaveFilterPreferences());
   }
   BIsEventTypeGroupAllowed(e) {
     return this.m_mapEventTypeGroupsAllowed.has(e);
@@ -21875,14 +21886,14 @@ var QN = class {
       : this.m_mapGameSources.has(e);
   }
   SetEventTypeGroupAllowed(e, t) {
-    t
+    (t
       ? this.m_mapEventTypeGroupsAllowed.set(e, !0)
       : this.m_mapEventTypeGroupsAllowed.delete(e),
       this.SaveFilterPreferences(),
-      this.RecordFilterChange();
+      this.RecordFilterChange());
   }
   SetGameSourceAllowed(e, t) {
-    t
+    (t
       ? (this.m_mapGameSources.set(e, !0),
         e == `recent`
           ? this.m_mapGameSources.delete(`library`)
@@ -21897,7 +21908,7 @@ var QN = class {
           ? this.m_mapGameSources.set(`library`, !0)
           : e == `library` && this.m_mapGameSources.delete(`recent`)),
       this.SaveFilterPreferences(),
-      this.RecordFilterChange();
+      this.RecordFilterChange());
   }
   BShouldDisplayEvent(e) {
     let t = e.GetSource(),
@@ -21960,7 +21971,7 @@ var QN = class {
       : this.m_mapHiddenApps.has(e) || this.m_mapHiddenApps.set(e, !0);
   }
 };
-P([n], QN.prototype, `m_mapEventTypeGroupsAllowed`, void 0),
+(P([n], QN.prototype, `m_mapEventTypeGroupsAllowed`, void 0),
   P([n], QN.prototype, `m_mapGameSources`, void 0),
   P([n], QN.prototype, `m_bCuratorUnhideOnFollowDialogDismissed`, void 0),
   P([n], QN.prototype, `m_mapHiddenApps`, void 0),
@@ -21972,7 +21983,7 @@ P([n], QN.prototype, `m_mapEventTypeGroupsAllowed`, void 0),
     null,
   ),
   P([i], QN.prototype, `SetEventTypeGroupAllowed`, null),
-  P([i], QN.prototype, `SetGameSourceAllowed`, null);
+  P([i], QN.prototype, `SetGameSourceAllowed`, null));
 var $N = (function (e) {
     return (
       (e.Default = `default`),
@@ -21989,11 +22000,11 @@ var $N = (function (e) {
   })({}),
   eP = new Map();
 function tP(e) {
-  return eP.size == 0 && nP(), eP.get(e);
+  return (eP.size == 0 && nP(), eP.get(e));
 }
 function nP() {
   let e = Pr();
-  eP.set(`default`, {
+  (eP.set(`default`, {
     id: `default`,
     strUrl: `${e}/`,
     strName: z(`#EventCalendar_NewsChannel_YourNews`),
@@ -22053,7 +22064,7 @@ function nP() {
         strUrl: `${e}/collection/associated_press/`,
         strName: z(`#EventCalendar_NewsChannel_AssociatedPress`),
         bIsValveOnly: !0,
-      }));
+      })));
 }
 var rP = class e {
   constructor() {
@@ -22112,20 +22123,20 @@ var rP = class e {
         (e && !this.m_mapBlockedAppIds.has(t))
       )
         return !0;
-      e
+      (e
         ? this.m_mapBlockedAppIds.delete(t)
         : this.m_mapBlockedAppIds.set(t, !0),
-        i.append(`appId`, t.toString());
+        i.append(`appId`, t.toString()));
     } else if (n) {
       if (
         (!e && this.m_mapBlockedClanIds.has(n)) ||
         (e && !this.m_mapBlockedClanIds.has(n))
       )
         return !0;
-      e
+      (e
         ? this.m_mapBlockedClanIds.delete(n)
         : this.m_mapBlockedClanIds.set(n, !0),
-        i.append(`clanId`, n.toString());
+        i.append(`clanId`, n.toString()));
     } else
       return (
         mu(!1, `BlockEventsFromCalenderEvent: Invalid AppID and ClanID`), !1
@@ -22139,8 +22150,8 @@ var rP = class e {
     }
   }
 };
-P([n], rP.prototype, `m_mapBlockedAppIds`, void 0),
-  P([n], rP.prototype, `m_mapBlockedClanIds`, void 0);
+(P([n], rP.prototype, `m_mapBlockedAppIds`, void 0),
+  P([n], rP.prototype, `m_mapBlockedClanIds`, void 0));
 var iP = 2500;
 function aP(e, t, n, r) {
   return {
@@ -22172,10 +22183,10 @@ var oP = class {
   m_key;
   m_collectionMetaData = void 0;
   constructor(e, t) {
-    T(this),
+    (T(this),
       (this.m_key = e),
       (this.m_visibilityStore = new QN(t)),
-      G.Get().HintLoad();
+      G.Get().HintLoad());
   }
   GetNumEventsLoaded() {
     return this.m_mapCalendarEventsByGid.size;
@@ -22329,34 +22340,34 @@ var oP = class {
     let r = new Date(e);
     r.setHours(0, 0, 0, 1);
     let i = r.getTime() / 1e3;
-    t.push(aP(n, z(`#Time_Today`), i, n)), r.setDate(r.getDate() - 1);
+    (t.push(aP(n, z(`#Time_Today`), i, n)), r.setDate(r.getDate() - 1));
     let a = i;
-    (i = r.getTime() / 1e3), t.push(aP(n, z(`#Time_Yesterday`), i, a));
+    ((i = r.getTime() / 1e3), t.push(aP(n, z(`#Time_Yesterday`), i, a)));
     let o =
         this.m_rgSortedCalendarEvents[this.m_rgSortedCalendarEvents.length - 1],
       s = o ? o.start_time : n,
       c = s > i;
     for (let e = 0; e < 5 && !c; e++)
-      r.setDate(r.getDate() - 1),
+      (r.setDate(r.getDate() - 1),
         (a = i),
         (i = r.getTime() / 1e3),
         t.push(aP(n, Xs(r), i, a)),
-        (c = s > i);
+        (c = s > i));
     let l = new Date(r),
       u = i;
-    for (; l.getMonth() == e.getMonth() && l.getDate() != 1 && !c; ) {
+    for (; l.getMonth() == e.getMonth() && l.getDate() != 1 && !c;) {
       l.setDate(l.getDate() - 7);
       let e = l.getTime() / 1e3;
-      t.push(aP(n, Fc(u - 1), e, u)), (c = s > e), (u = e);
+      (t.push(aP(n, Fc(u - 1), e, u)), (c = s > e), (u = e));
     }
     let d = new Date(e);
-    d.setHours(0, 0, 0, 1), d.setDate(1);
+    (d.setHours(0, 0, 0, 1), d.setDate(1));
     let f = u;
     for (let r = 1; !c; r++) {
       let i = new Date(d);
       i.setMonth(e.getMonth() - r, 1);
       let a = i.getTime() / 1e3;
-      t.push(aP(n, Fc(a), a, f)), (c = s > a), (f = a);
+      (t.push(aP(n, Fc(a), a, f)), (c = s > a), (f = a));
     }
     this.m_rgCalendarSections.length > t.length
       ? this.m_rgCalendarSections.splice(
@@ -22373,7 +22384,7 @@ var oP = class {
       n;
     this.m_key.rtCalendarEnd && (n = this.m_key.rtCalendarEnd);
     let r = this.m_rgSortedCalendarEvents[0];
-    r && (n = r.start_time), (n ||= e.getTime() / 1e3);
+    (r && (n = r.start_time), (n ||= e.getTime() / 1e3));
     let i = e.getTime() / 1e3,
       a = new Date(e);
     a.setHours(24, 0, 0, 0);
@@ -22383,27 +22394,27 @@ var oP = class {
     );
     let s = n <= o,
       c = o;
-    a.setDate(a.getDate() + 1),
+    (a.setDate(a.getDate() + 1),
       (o = a.getTime() / 1e3),
       s || t.push(aP(i, z(`#Time_Tomorrow`), c, o)),
-      (s = n <= o);
+      (s = n <= o));
     let l = 6 - (0, D_.default)(e).weekday();
     for (let e = 2; e <= l && !s; e++) {
       c = o;
       let e = Xs(a);
-      a.setDate(a.getDate() + 1),
+      (a.setDate(a.getDate() + 1),
         (o = a.getTime() / 1e3),
         t.push(aP(i, e, c, o)),
-        (s = n <= o);
+        (s = n <= o));
     }
     if (this.m_key.bSectionByDay)
-      for (; !s; ) {
+      for (; !s;) {
         c = o;
         let e = Ho(a);
-        a.setDate(a.getDate() + 1),
+        (a.setDate(a.getDate() + 1),
           (o = a.getTime() / 1e3),
           t.push(aP(i, e, c, o)),
-          (s = n <= o);
+          (s = n <= o));
       }
     else {
       let r = new Date(a),
@@ -22412,24 +22423,24 @@ var oP = class {
       if (r.getMonth() == e.getMonth() && r.getDate() != l && !s) {
         r.setDate(r.getDate() + 7);
         let e = r.getTime() / 1e3;
-        t.push(aP(i, z(`#EventCalendar_NextWeek`), c, e)),
+        (t.push(aP(i, z(`#EventCalendar_NextWeek`), c, e)),
           (s = n <= e),
-          (c = e);
+          (c = e));
       }
       let u = new Date(e);
-      u.setMonth(u.getMonth() + 1), u.setDate(1), u.setHours(0, 0, 0, 0);
+      (u.setMonth(u.getMonth() + 1), u.setDate(1), u.setHours(0, 0, 0, 0));
       let d;
       if (r < u && !s) {
         let e = u.getTime() / 1e3;
-        t.push(aP(i, z(`#EventCalendar_LaterThisMonth`), c, e)),
+        (t.push(aP(i, z(`#EventCalendar_LaterThisMonth`), c, e)),
           (s = n <= e),
-          (d = e);
+          (d = e));
       } else d = c;
       for (let r = 2; !s; r++) {
         let a = new Date(u);
         a.setMonth(e.getMonth() + r);
         let o = a.getTime() / 1e3;
-        t.push(aP(i, Fc(d), d, o)), (s = n <= o), (d = o);
+        (t.push(aP(i, Fc(d), d, o)), (s = n <= o), (d = o));
       }
     }
     this.m_rgFutureSections.length > t.length
@@ -22439,9 +22450,9 @@ var oP = class {
           .forEach((e) => this.m_rgFutureSections.push(e));
   }
   async RegisterCalendarEventsAndModels(e) {
-    await G.Get().HintLoad(),
+    (await G.Get().HintLoad(),
       w(() => {
-        this.RegisterCalendarApps(e.apps ?? []),
+        (this.RegisterCalendarApps(e.apps ?? []),
           this.RegisterCalendarClans(e.clans ?? []),
           this.RegisterCalendarEvents(e.documents ?? []),
           Lo.RegisterClanEvents(e.events ?? []),
@@ -22455,21 +22466,21 @@ var oP = class {
             this.ValidateCollectionMetadata(e.metadatainfo)
               ? e.metadatainfo
               : void 0,
-          );
-      });
+          ));
+      }));
   }
   RegisterCalendarApps(e) {
     if (e)
       for (let t of e) {
         if (this.m_mapCalendarAppsByID.has(t.appid)) continue;
         let e = new VN();
-        (e.appid = t.appid),
+        ((e.appid = t.appid),
           (e.source = t.source),
           (e.playtime = t.playtime),
           (e.last_played = t.last_played),
           (e.wishlist_added = t.wishlist_added),
           this.m_mapCalendarAppsByID.set(t.appid, e),
-          t.hidden && this.m_visibilityStore.SetAppVisibility(t.appid, !1);
+          t.hidden && this.m_visibilityStore.SetAppVisibility(t.appid, !1));
       }
   }
   RegisterCalendarClans(e) {
@@ -22477,10 +22488,10 @@ var oP = class {
       for (let t of e)
         if (!this.m_mapCalendarClansByID.has(t.clanid)) {
           let e = new HN();
-          (e.clanid = t.clanid),
+          ((e.clanid = t.clanid),
             (e.source = t.source),
             this.m_mapCalendarClansByID.set(t.clanid, e),
-            t.hidden && this.m_visibilityStore.SetClanVisibility(t.clanid, !1);
+            t.hidden && this.m_visibilityStore.SetClanVisibility(t.clanid, !1));
         }
     }
   }
@@ -22541,14 +22552,14 @@ var oP = class {
       : this.m_backwardRequestInFlight;
   }
   SetRequestInFlight(e, t) {
-    mu(
+    (mu(
       !t || !this.GetRequestInFlight(e),
       `Already have a request in flight for`,
       e,
     ),
       e === `forward`
         ? (this.m_forwardRequestInFlight = t)
-        : (this.m_backwardRequestInFlight = t);
+        : (this.m_backwardRequestInFlight = t));
   }
   async LoadAdditionalEvents(e, t) {
     if (this.BHitEventHorizon(e)) return 1;
@@ -22639,7 +22650,7 @@ var oP = class {
     if (this.m_mapCalendarEventsByGid.has(e.unique_id)) return !1;
     let t = this.m_mapCalendarAppsByID.get(e.appid),
       n = this.m_mapCalendarClansByID.get(e.clanid);
-    if (!t && !n) return console.log(`No AppInfo or ClanInfo For: `, e), !1;
+    if (!t && !n) return (console.log(`No AppInfo or ClanInfo For: `, e), !1);
     let r = new BN();
     return (
       (r.clanid = e.clanid),
@@ -22681,7 +22692,7 @@ var oP = class {
     return Array.from(this.m_mapCalendarAppsByID.keys());
   }
 };
-P([n], oP.prototype, `m_mapCalendarAppsByID`, void 0),
+(P([n], oP.prototype, `m_mapCalendarAppsByID`, void 0),
   P([n], oP.prototype, `m_mapCalendarClansByID`, void 0),
   P([n], oP.prototype, `m_mapCalendarEventsByGid`, void 0),
   P([n], oP.prototype, `m_rgSortedCalendarEvents`, void 0),
@@ -22698,7 +22709,7 @@ P([n], oP.prototype, `m_mapCalendarAppsByID`, void 0),
   P([i], oP.prototype, `RegisterCalendarEvents`, null),
   P([I], oP.prototype, `BHitEventHorizon`, null),
   P([i.bound], oP.prototype, `LoadAdditionalEvents`, null),
-  P([i], oP.prototype, `UpdateEventBlockFromCalendarEvent`, null);
+  P([i], oP.prototype, `UpdateEventBlockFromCalendarEvent`, null));
 var sP = class {
   m_rgLoadedEventsBox = n.box([]);
   m_lastLoadLatch = null;
@@ -22710,7 +22721,7 @@ var sP = class {
   m_bAllowMutedAndIgnoredSources;
   m_rgAutorunDisposer;
   constructor(e, t, n, r, i, a) {
-    T(this),
+    (T(this),
       (this.m_fnGetUnfilteredEvents = e),
       (this.m_fnLoadAdditionalEvents = t),
       (this.m_fnBHitEventHorizon = n),
@@ -22735,7 +22746,7 @@ var sP = class {
           this.m_lastLoadLatch = null;
         }
         this.m_rgLoadedEventsBox.set(e);
-      }));
+      })));
   }
   dispose() {
     this.m_rgAutorunDisposer();
@@ -22813,8 +22824,8 @@ var sP = class {
       });
   }
 };
-P([a.struct], sP.prototype, `viewFilteredEvents`, null),
-  P([a.struct], sP.prototype, `filteredAndCheckedEvents`, null);
+(P([a.struct], sP.prototype, `viewFilteredEvents`, null),
+  P([a.struct], sP.prototype, `filteredAndCheckedEvents`, null));
 var cP = n.box(null),
   lP = new Map();
 window.g_EventCalendarMap = lP;
@@ -22848,7 +22859,7 @@ function uP(e, t) {
 }
 function dP() {
   let e = cP.get();
-  return (e ??= uP({})), lP.get(e);
+  return ((e ??= uP({})), lP.get(e));
 }
 function fP() {
   return cP.get() !== null;
@@ -22866,14 +22877,14 @@ var pP = class {
     StartTracking(e, t, n) {
       if (e.bOldAnnouncement) return;
       let r = this.m_mapEvents.get(e.GID);
-      r || ((r = new pP()), this.m_mapEvents.set(e.GID, r)),
+      (r || ((r = new pP()), this.m_mapEvents.set(e.GID, r)),
         r.m_bHasBeenTracked ||
           r.m_fnSubmit ||
           ((r.m_fnSubmit = new Bs()),
           r.m_fnSubmit.Schedule(
             this.m_nImpressionDelayMS,
             this.ReportImpression.bind(this, e, t, n),
-          ));
+          )));
     }
     StopTracking(e) {
       let t = this.m_mapEvents.get(e.GID);
@@ -23062,10 +23073,10 @@ function jP(e, t) {
     ],
     u = !!e.jsondata.localized_store_app_spotlight?.[0],
     d = (t) => {
-      Zs().RecordEventRead(e, 8),
+      (Zs().RecordEventRead(e, 8),
         vd(e, Go(t)),
         t.stopPropagation(),
-        t.preventDefault();
+        t.preventDefault());
     };
   if (a == 1 && !o && u) {
     let t =
@@ -23344,11 +23355,11 @@ var WP = class e {
     }
     console.error(`useEventBadge: ` + t?.strErrorMsg, t);
     let n = { badgeid: e, level: 0 };
-    return this.m_mapBadgeInfo.set(e, n), n;
+    return (this.m_mapBadgeInfo.set(e, n), n);
   }
   static s_Singleton;
   static Get() {
-    return (e.s_Singleton ||= new e()), e.s_Singleton;
+    return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
   constructor() {}
 };
@@ -23443,7 +23454,7 @@ var XP = class e {
   m_tagSelection;
   m_tagStoreFilter;
   constructor(e, t, n = !0, r, i) {
-    (this.m_nSaleDay = t),
+    ((this.m_nSaleDay = t),
       (this.m_tagSelection = r),
       (this.m_tagStoreFilter = Me(r, e?.tab_tag_filter, i)),
       e &&
@@ -23454,7 +23465,7 @@ var XP = class e {
           : ((this.m_capsuleFilter = new Set()),
             (JP ? JP(e.capsules, t) : e.capsules).forEach((e) => {
               this.m_capsuleFilter.add(Number(e.id));
-            })));
+            }))));
   }
   GetSaleDay() {
     return this.m_nSaleDay;
@@ -23932,13 +23943,13 @@ var sF = class e {
           }
           if (!this.m_mapMainCarousel.has(d)) {
             let e = { mapAppLists: new Map() };
-            this.SetAppListData(e.mapAppLists, m.data.mainListData),
-              this.m_mapMainCarousel.set(d, e);
+            (this.SetAppListData(e.mapAppLists, m.data.mainListData),
+              this.m_mapMainCarousel.set(d, e));
           }
-          this.m_mapPartnerTakeover.has(d) ||
+          (this.m_mapPartnerTakeover.has(d) ||
             this.m_mapPartnerTakeover.set(d, m.data.partnerTakeover),
             this.m_mapBroadcasts.has(f) ||
-              this.m_mapBroadcasts.set(f, m.data.broadcasts?.filtered);
+              this.m_mapBroadcasts.set(f, m.data.broadcasts?.filtered));
         }
       }
       let p = [];
@@ -23947,10 +23958,10 @@ var sF = class e {
       ))
         for (let n of this.m_mapMainCarousel.get(d).mapAppLists.get(t).apps)
           p.push(e.SaleCapsuleFromContentHubCapsule(n));
-      await _e(p, _o),
+      (await _e(p, _o),
         this.ReplaceSingleAppPackagesWithApps(d, f),
         await this.ApplyUserAndHomeViewFilters(d, t, i),
-        await this.UpdateRecommendationReasons(d);
+        await this.UpdateRecommendationReasons(d));
     }
     async ApplyUserAndHomeViewFilters(e, t, n) {
       let r = new vo(),
@@ -23995,13 +24006,13 @@ var sF = class e {
       e.forEach((e) => n.push(0));
       let r = [],
         i = 1;
-      for (; r.length < iF && i <= 4; ) {
+      for (; r.length < iF && i <= 4;) {
         let a = !1;
         for (let o = 0; o < e.length; ++o) {
           let s = e[o],
             c = n[o];
           if (c < s.length && s[c].priority <= i) {
-            (a = !0), (n[o] += 1);
+            ((a = !0), (n[o] += 1));
             let e = s[c];
             if (
               (t.BHasStoreItemKey(e) || (r.push(e), t.AddStoreItemKey(e)),
@@ -24029,8 +24040,10 @@ var sF = class e {
           iF,
           aF,
         );
-      (s = s?.filter((e) => e.item_type !== `bundle` && e.item_type !== `sub`)),
-        (this.m_mapMainCarousel.get(t).rgMainCapsule = e.ZipperMerge([s], r));
+      ((s = s?.filter(
+        (e) => e.item_type !== `bundle` && e.item_type !== `sub`,
+      )),
+        (this.m_mapMainCarousel.get(t).rgMainCapsule = e.ZipperMerge([s], r)));
       let c = [
         `featured_recommended`,
         `top_sellers`,
@@ -24159,7 +24172,7 @@ var sF = class e {
     }
     static s_globalSingletonStore;
     static Get() {
-      return (e.s_globalSingletonStore ||= new e()), e.s_globalSingletonStore;
+      return ((e.s_globalSingletonStore ||= new e()), e.s_globalSingletonStore);
     }
     constructor() {
       this.m_searchPreferences = ys(`search_preferences`, `application_config`);
@@ -24187,8 +24200,8 @@ var sF = class e {
         let e = ys(`ch_main_list_data`, `application_config`);
         if (this.ValidateAppListData(e)) {
           let t = { mapAppLists: new Map() };
-          this.SetAppListData(t.mapAppLists, e),
-            this.m_mapMainCarousel.set(i, t);
+          (this.SetAppListData(t.mapAppLists, e),
+            this.m_mapMainCarousel.set(i, t));
         }
       }
       if (!this.m_mapPartnerTakeover.has(i)) {
@@ -24261,7 +24274,7 @@ var sF = class e {
     static s_singleton;
     constructor() {}
     static Get() {
-      return (e.s_singleton ||= new e()), e.s_singleton;
+      return ((e.s_singleton ||= new e()), e.s_singleton);
     }
   };
 function lF(e) {
@@ -24276,16 +24289,16 @@ async function uF(e) {
         (await cF.Get().LoadDiscountRange(n), cF.Get().BHasDiscountRange(n))
       ) {
         let e = cF.Get().GetDiscountRange(n);
-        (t.discount_min = e.discount_min), (t.discount_max = e.discount_max);
+        ((t.discount_min = e.discount_min), (t.discount_max = e.discount_max));
       }
     } else
-      (t.orig_price = e.GetBestPurchaseOption().formatted_original_price),
+      ((t.orig_price = e.GetBestPurchaseOption().formatted_original_price),
         (t.final_price = e.GetBestPurchaseOption().formatted_final_price),
         (t.discount_percent = e.GetBestPurchaseOption().discount_pct),
         (t.suppress_discount_percent =
           e.GetBestPurchaseOption().should_suppress_discount_pct),
         (t.hide_discount_percent_for_compliance =
-          e.GetBestPurchaseOption().hide_discount_pct_for_compliance);
+          e.GetBestPurchaseOption().hide_discount_pct_for_compliance));
   }
   return t;
 }
@@ -24521,7 +24534,7 @@ var hF = class e {
     }
     static s_globalSingletonStore;
     static Get() {
-      return (e.s_globalSingletonStore ||= new e()), e.s_globalSingletonStore;
+      return ((e.s_globalSingletonStore ||= new e()), e.s_globalSingletonStore);
     }
     constructor() {
       let e = ys(`ch_hub_data`, `application_config`);
@@ -24536,9 +24549,9 @@ var hF = class e {
   gF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.context || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, void 0, null);
+        Y.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -24552,7 +24565,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -24573,14 +24586,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetMostPlayedGames_Request`;
@@ -24589,9 +24602,9 @@ var hF = class e {
   _F = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.rollup_date || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, [2], null);
+        Y.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -24608,7 +24621,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -24629,14 +24642,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetMostPlayedGames_Response`;
@@ -24645,9 +24658,9 @@ var hF = class e {
   vF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.rank || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, void 0, null);
+        Y.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -24668,7 +24681,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -24689,14 +24702,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetMostPlayedGames_Response_MostPlayedRank`;
@@ -24705,9 +24718,9 @@ var hF = class e {
   yF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.context || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, void 0, null);
+        Y.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -24721,7 +24734,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -24742,14 +24755,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetGamesByConcurrentPlayers_Request`;
@@ -24758,9 +24771,9 @@ var hF = class e {
   bF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.last_update || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, [2], null);
+        Y.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -24777,7 +24790,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -24798,14 +24811,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetGamesByConcurrentPlayers_Response`;
@@ -24814,9 +24827,9 @@ var hF = class e {
   xF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.rank || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, void 0, null);
+        Y.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -24836,7 +24849,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -24857,14 +24870,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetGamesByConcurrentPlayers_Response_MostPlayedRank`;
@@ -24873,7 +24886,7 @@ var hF = class e {
   SF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), Y.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), Y.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -24894,12 +24907,12 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetTopReleasesPages_Request`;
@@ -24908,9 +24921,9 @@ var hF = class e {
   CF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.pages || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, [1], null);
+        Y.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -24924,7 +24937,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -24945,14 +24958,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetTopReleasesPages_Response`;
@@ -24961,9 +24974,9 @@ var hF = class e {
   wF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.name || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, [4], null);
+        Y.Message.initialize(this, t, 0, -1, [4], null));
     }
     static sm_m;
     static sm_mbf;
@@ -24982,7 +24995,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -25003,14 +25016,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetTopReleasesPages_Response_TopReleasesPage`;
@@ -25019,7 +25032,7 @@ var hF = class e {
   TF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), Y.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), Y.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -25040,12 +25053,12 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetBestOfYearPages_Request`;
@@ -25054,9 +25067,9 @@ var hF = class e {
   EF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.pages || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, [1], null);
+        Y.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -25070,7 +25083,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -25091,14 +25104,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetBestOfYearPages_Response`;
@@ -25107,9 +25120,9 @@ var hF = class e {
   DF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.name || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, [3, 4], null);
+        Y.Message.initialize(this, t, 0, -1, [3, 4], null));
     }
     static sm_m;
     static sm_mbf;
@@ -25141,7 +25154,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -25162,14 +25175,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetBestOfYearPages_Response_BestOfYearPage`;
@@ -25178,9 +25191,9 @@ var hF = class e {
   OF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.context || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, void 0, null);
+        Y.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -25199,7 +25212,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -25220,14 +25233,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetMostPlayedSteamDeckGames_Request`;
@@ -25236,9 +25249,9 @@ var hF = class e {
   kF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.ranks || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, [1], null);
+        Y.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -25255,7 +25268,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -25276,14 +25289,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetMostPlayedSteamDeckGames_Response`;
@@ -25292,9 +25305,9 @@ var hF = class e {
   AF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.rank || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, void 0, null);
+        Y.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -25313,7 +25326,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -25334,14 +25347,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetMostPlayedSteamDeckGames_Response_MostPlayedRank`;
@@ -25350,9 +25363,9 @@ var hF = class e {
   jF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.rtime_month || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, void 0, null);
+        Y.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -25370,7 +25383,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -25391,14 +25404,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetMonthTopAppReleases_Request`;
@@ -25407,9 +25420,9 @@ var hF = class e {
   MF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.appid || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, void 0, null);
+        Y.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -25427,7 +25440,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -25448,14 +25461,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CTopAppNewRelease`;
@@ -25464,9 +25477,9 @@ var hF = class e {
   NF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.top_dlc_releases || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, [2, 3], null);
+        Y.Message.initialize(this, t, 0, -1, [2, 3], null));
     }
     static sm_m;
     static sm_mbf;
@@ -25483,7 +25496,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -25504,14 +25517,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetMonthTopAppReleases_Response`;
@@ -25520,9 +25533,9 @@ var hF = class e {
   PF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.rtime_year || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, void 0, null);
+        Y.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -25539,7 +25552,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -25560,14 +25573,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetYearTopAppReleases_Request`;
@@ -25576,9 +25589,9 @@ var hF = class e {
   FF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.top_dlc_releases || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, [2, 3, 4], null);
+        Y.Message.initialize(this, t, 0, -1, [2, 3, 4], null));
     }
     static sm_m;
     static sm_mbf;
@@ -25596,7 +25609,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -25617,14 +25630,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetYearTopAppReleases_Response`;
@@ -25633,9 +25646,9 @@ var hF = class e {
   IF = class e extends Y.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.appid || kc(e.M()),
-        Y.Message.initialize(this, t, 0, -1, void 0, null);
+        Y.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -25653,7 +25666,7 @@ var hF = class e {
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= Vo(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= Vo(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -25674,14 +25687,14 @@ var hF = class e {
     }
     serializeBinary() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       ll(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Y.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSteamCharts_GetYearTopAppReleases_Response_TopApps`;
@@ -25781,11 +25794,11 @@ var RF = class e {
     async GetDiscounts(e) {
       try {
         let t = `discount`;
-        (t += e.tagid ? `_tag` + e.tagid : ``),
+        ((t += e.tagid ? `_tag` + e.tagid : ``),
           (t += e.categoryid ? `_categoryid` + e.categoryid : ``),
           (t += e.top_n_sellers ? `_ntop` + e.top_n_sellers : ``),
           (t += e.max_results ? `_max` + e.max_results : ``),
-          (t += e.random_across_set ? `_rand` : ``);
+          (t += e.random_across_set ? `_rand` : ``));
         let n = Tc(t, `application_config`);
         return (
           (n ||= (
@@ -25833,11 +25846,11 @@ var RF = class e {
           max_results: t,
           feature: e,
         });
-        (this.m_rgAllDiscounted ||= new Map()),
+        ((this.m_rgAllDiscounted ||= new Map()),
           this.m_rgAllDiscounted.set(o, {
             rgAppIDs: n.rgAppIDs.map((e) => Number(e)),
             ...n,
-          });
+          }));
       }
       return this.m_rgAllDiscounted.get(o);
     }
@@ -26104,11 +26117,11 @@ var RF = class e {
           for (let e of b.data.store_item_keys)
             x.setStoreItemKeys.has(e) ||
               (x.store_item_keys.push(e), x.setStoreItemKeys.add(e));
-          (x.faceting = b.data.faceting),
+          ((x.faceting = b.data.faceting),
             (x.multifaceting = b.data.multifaceting),
             (x.possible_has_more = b.data.possible_has_more),
             (x.solr_index = b.data.solr_index),
-            (x.match_count = b.data.match_count);
+            (x.match_count = b.data.match_count));
         } else
           throw Error(
             `query failed, status=` +
@@ -26162,7 +26175,7 @@ var RF = class e {
         _,
         f,
       );
-      for (; this.m_mapPromisesByFlavor.has(x); )
+      for (; this.m_mapPromisesByFlavor.has(x);)
         try {
           await this.m_mapPromisesByFlavor.get(x);
         } catch {}
@@ -26243,7 +26256,7 @@ var RF = class e {
             !G.Get().BOwnsApp(e) &&
             G.Get().BIsGameWishlisted(e) &&
             c.push(e);
-        return this.m_mapMyWishlistInContentHub.set(i, c), c;
+        return (this.m_mapMyWishlistInContentHub.set(i, c), c);
       } catch {
         return [];
       }
@@ -26285,7 +26298,7 @@ var RF = class e {
         let s = G.Get().GetRecommendedGamesInIRPriorityOrder(),
           c = [];
         for (let e of s) o.has(e) && (G.Get().BOwnsApp(e) || c.push(e));
-        return this.m_mapMyIRInContentHub.set(i, c), c;
+        return (this.m_mapMyIRInContentHub.set(i, c), c);
       } catch (e) {
         return (
           console.error(`GetInteractiveRecommenderInContentHub failed: `, e), []
@@ -26295,10 +26308,10 @@ var RF = class e {
     async GetTopPlayedGamesOnDeck(e) {
       if (!this.m_rgDeckTopPlayedGames && !this.m_rgDeckTopPlayedGames) {
         let t = Gl.Init(OF);
-        t.Body().set_context(Du(!1)),
+        (t.Body().set_context(Du(!1)),
           t.Body().set_count(50),
           t.Body().set_top_played_period(1),
-          e && hl(t, e);
+          e && hl(t, e));
         let n = await LF.GetMostPlayedSteamDeckGames(
           this.m_serviceTransport,
           t,
@@ -26317,7 +26330,7 @@ var RF = class e {
     }
     static s_globalSingletonStore;
     static Get() {
-      return (e.s_globalSingletonStore ||= new e()), e.s_globalSingletonStore;
+      return ((e.s_globalSingletonStore ||= new e()), e.s_globalSingletonStore);
     }
   },
   zF = `Pv6QytWjPTo-`,
@@ -26341,8 +26354,8 @@ function KF(e) {
       : t.nPageBackgroundOffsetHeight,
     o = t.strPageBackgroundColorLeft,
     s = t.strPageBackgroundColorRight;
-  (i = i?.replace(`http://`, `https://`)),
-    (i = Os(n.domain ? n : Al.GetDefaultParams(), i, `promo-takeover`));
+  ((i = i?.replace(`http://`, `https://`)),
+    (i = Os(n.domain ? n : Al.GetDefaultParams(), i, `promo-takeover`)));
   let c = { height: (a || 0) + `px` },
     l = {
       background:
@@ -26452,10 +26465,10 @@ function YF(e, t, n, r, i, a, o, s) {
     [l, u] = (0, q.useState)(!c.BHasTitle(e, t, n));
   return (
     (0, q.useEffect)(() => {
-      u(!0),
+      (u(!0),
         c.LoadTitle(e, t, n, r, i, a, o, s).then(() => {
           u(!1);
-        });
+        }));
     }, [t, e, s, o, a, r, i, c, n]),
     { bLoading: !c.BHasTitle(e, t, n), title: c.GetTitle(e, t, n) }
   );
@@ -26465,10 +26478,10 @@ function XF(e, t, n, r, i, a, o, s) {
     [l, u] = (0, q.useState)(!c.BHasMainCarousel(e, t, n));
   return (
     (0, q.useEffect)(() => {
-      u(!0),
+      (u(!0),
         c.LoadMainCarousel(e, t, n, r, i, a, o, s).then(() => {
           u(!1);
-        });
+        }));
     }, [t, e, s, o, a, r, i, c, n]),
     {
       bLoading: !c.BHasMainCarousel(e, t, n),
@@ -26500,10 +26513,10 @@ function QF(e, t, n, r, i, a, o, s) {
     [l, u] = (0, q.useState)(!c.BHasPartnerTakeover(e, t, n));
   return (
     (0, q.useEffect)(() => {
-      u(!0),
+      (u(!0),
         c.LoadPartnerTakeover(e, t, n, r, i, a, o, s).then(() => {
           u(!1);
-        });
+        }));
     }, [t, e, s, o, a, r, i, c, n]),
     {
       bLoading: !c.BHasPartnerTakeover(e, t, n),
@@ -26530,10 +26543,10 @@ function eI(e, t, n, r, i, a, o, s, c, l) {
     [d, f] = (0, q.useState)(!u.BHasBroadcasts(e, t, n, r));
   return (
     (0, q.useEffect)(() => {
-      f(!0),
+      (f(!0),
         u.LoadBroadcasts(e, t, n, r, i, a, o, s, c, l).then(() => {
           f(!1);
-        });
+        }));
     }, [t, e, l, c, s, a, o, u, i, r, n]),
     {
       bLoading: !u.BHasBroadcasts(e, t, n, r),
@@ -26559,7 +26572,7 @@ function tI(e, t, n, r, i, a, o, s, c) {
           let t = e.appids.map((e) => ({ id: e, type: `game` }));
           _e(t, _o).then(() => {
             we(t, !1).then((e) => {
-              f(e), u(!1);
+              (f(e), u(!1));
             });
           });
         });
@@ -26576,11 +26589,11 @@ function nI() {
   return (
     (0, q.useEffect)(() => {
       let e = () => {
-        t(window.innerWidth),
+        (t(window.innerWidth),
           r(window.innerHeight),
           a($i()),
           s(ta(`items`)),
-          l(ta(`contenthubspecials`));
+          l(ta(`contenthubspecials`)));
       };
       return (
         window.addEventListener(`resize`, e),
@@ -26657,7 +26670,7 @@ function CI(e) {
       _e(t, _o, !0).then(() => {
         let n = [];
         we(t, !0, n).then((t) => {
-          g(t.map((t) => e.get(t.id))), v(n.length);
+          (g(t.map((t) => e.get(t.id))), v(n.length));
         });
       });
     }
@@ -26971,7 +26984,7 @@ function OI(e) {
     b = K();
   (0, q.useEffect)(() => {
     let e = FI(m, _);
-    (e = II(p, e)), y(MI(p, m, e));
+    ((e = II(p, e)), y(MI(p, m, e)));
   }, [m, _, p]);
   let { bIsScreenWide: x, nSpotlightCapsules: S } = nI(),
     C = Math.min(3, S);
@@ -27092,20 +27105,20 @@ function MI(e, t, n) {
         (a.push({ type: `spotlight`, item: t }), r.push(a), (a = []));
   if (t)
     for (let e of t)
-      a.push({ type: `dailydeal`, item: e }),
-        a.length === 2 && (i.push(a), (a = []));
+      (a.push({ type: `dailydeal`, item: e }),
+        a.length === 2 && (i.push(a), (a = [])));
   let o = r?.length > 0,
     s = i?.length > 0 || (a?.length > 0 && n?.length > 0);
   if (!o && !s) return null;
   if (n)
     for (let e of n)
-      a.push({ type: `capsule`, item: e }),
-        a.length === 2 && (i.push(a), (a = []));
+      (a.push({ type: `capsule`, item: e }),
+        a.length === 2 && (i.push(a), (a = [])));
   a.length === 1 && i.push(a);
   let c = [],
     l = 0,
     u = 0;
-  for (; (r.length > 0 && l < r.length) || (i.length > 0 && u < i.length); ) {
+  for (; (r.length > 0 && l < r.length) || (i.length > 0 && u < i.length);) {
     for (let e = 0; e < 2; e++)
       r.length > 0 && l < r.length && (c.push(r[l]), l++);
     i.length > 0 && u < i.length && (c.push(i[u]), u++);
@@ -27123,12 +27136,12 @@ function PI(e) {
   if (e.type === `dailydeal`) {
     let t = e.item,
       n = t.item?.type;
-    return n !== `sub` && n !== `bundle` && (n = `app`), n + t.item?.id;
+    return (n !== `sub` && n !== `bundle` && (n = `app`), n + t.item?.id);
   }
   if (e.type === `capsule`) {
     let t = e.item,
       n = t.type;
-    return n !== `sub` && n !== `bundle` && (n = `app`), n + t.id;
+    return (n !== `sub` && n !== `bundle` && (n = `app`), n + t.id);
   }
   return `unknown`;
 }
@@ -27259,7 +27272,7 @@ function $I(e) {
     u = q.useCallback(
       (e) => {
         let t = ((e % l) + l) % l;
-        o(t), c(!1);
+        (o(t), c(!1));
       },
       [l],
     ),
@@ -27379,14 +27392,14 @@ function rL(e) {
       let a = Array.from(i.keys()),
         o = [],
         s = [];
-      for (let e of a) o.push(0), s.push(i.get(e).length);
+      for (let e of a) (o.push(0), s.push(i.get(e).length));
       let c = 0;
       for (let e = 0; e < a.length; ++e) c += s[e];
       let l = [],
         u = 0;
-      for (; l.length < c; )
-        o[u] < s[u] && (l.push(i.get(a[u])[o[u]]), o[u]++),
-          (u = (u + 1) % a.length);
+      for (; l.length < c;)
+        (o[u] < s[u] && (l.push(i.get(a[u])[o[u]]), o[u]++),
+          (u = (u + 1) % a.length));
       return l.slice(0, nL)?.map((e) => ({ item_type: `app`, id: Number(e) }));
     },
   });
@@ -27893,7 +27906,7 @@ var YL = E((e) => {
             let r = [],
               a = [],
               o = null;
-            Wc.logged_in &&
+            (Wc.logged_in &&
               (await G.Get().HintLoad(),
               G.Get().GetFollowedCuratorCount() > 0 &&
                 !e.token.reason &&
@@ -27905,7 +27918,7 @@ var YL = E((e) => {
                 t.featured_curator_list.forEach((t) => {
                   let n = vs.InitFromClanID(t.clanAccountID, U.EUNIVERSE);
                   a.push(xd.Get().LoadListDetails(n, t.listID, e));
-                });
+                }));
             let s = (await Promise.all(a)) || [],
               c = (await o) || [],
               l = new Set(),
@@ -27916,9 +27929,9 @@ var YL = E((e) => {
                   .GetELanguageFallbackOrder()
                   .some((t) => e.localized_flat_title[t]?.length > 0),
               );
-            [...c, ...f].forEach((e) => {
+            ([...c, ...f].forEach((e) => {
               if (!l.has(e.listid)) {
-                l.add(e.listid), r.push(e);
+                (l.add(e.listid), r.push(e));
                 let t = xd.Get().GetClanAccountFromListID(e.listid);
                 if (!u.has(t)) {
                   u.add(t);
@@ -27928,7 +27941,7 @@ var YL = E((e) => {
               }
             }),
               await Promise.all(d),
-              e.token.reason || i(r);
+              e.token.reason || i(r));
           })(),
           () => e?.cancel(`CuratorRecommendationSaleWidget: unmounting`)
         );
@@ -27977,7 +27990,7 @@ var YL = E((e) => {
     }
     static s_Singleton;
     static Get() {
-      return (e.s_Singleton ||= new e()), e.s_Singleton;
+      return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
   },
   ZL = (e) => {
@@ -28072,7 +28085,7 @@ function QL(e) {
             i.push(t.GetAssets().GetHeaderURL());
         });
         let e = 0;
-        for (; i.length > 0 && i.length < 6; ) i.push(i[e++]);
+        for (; i.length > 0 && i.length < 6;) i.push(i[e++]);
         a(i);
       });
     }, [n, t, 12]),
@@ -28359,8 +28372,8 @@ function mR(e) {
       t = -1;
     return (
       r.levels.forEach((n, i) => {
-        n.level <= u && (e == -1 || r.levels[e].level < n.level) && (e = i),
-          n.level > u && (t == -1 || r.levels[t].level > n.level) && (t = i);
+        (n.level <= u && (e == -1 || r.levels[e].level < n.level) && (e = i),
+          n.level > u && (t == -1 || r.levels[t].level > n.level) && (t = i));
       }),
       [e, t]
     );
@@ -28405,19 +28418,19 @@ function xR(e, t, n, r) {
     for (let e of i.data.groups) {
       let t = n.splice(0, e.nCount),
         r = oc(e.nSeed);
-      Ts(t, Math.min(s, t.length), r),
+      (Ts(t, Math.min(s, t.length), r),
         (s -= Math.min(s, t.length)),
         a.push(...t),
-        o.push(e);
+        o.push(e));
     }
   if (n.length > 0) {
     if (s > 0) {
       let r = { nCount: s, nSeed: Bu() },
         i = oc(r.nSeed);
-      Ts(n, s, i),
+      (Ts(n, s, i),
         a.push(...n),
         o.push(r),
-        OR(t, e.rtime32_last_modified, { groups: o });
+        OR(t, e.rtime32_last_modified, { groups: o }));
     } else a.push(...n);
   }
   return a;
@@ -28494,8 +28507,8 @@ function DR(e, t, n) {
 }
 function OR(e, t, n, r) {
   let i = { nVersion: yR, rtLastModified: t, data: n };
-  r > 0 && (i.rtExpires = Math.floor(Date.now() / 1e3) + r),
-    window.sessionStorage.setItem(e, JSON.stringify(i));
+  (r > 0 && (i.rtExpires = Math.floor(Date.now() / 1e3) + r),
+    window.sessionStorage.setItem(e, JSON.stringify(i)));
 }
 function kR(e) {
   return (U.IN_CLIENT ? `library-` : Gs() + `-`) + e;
@@ -28551,7 +28564,7 @@ function MR() {
 function NR(e, t, n) {
   let r = dt(e, n),
     i = 0;
-  for (; t > 0; ) (t -= r[i % r.length]), i++;
+  for (; t > 0;) ((t -= r[i % r.length]), i++);
   return i;
 }
 function PR(e, t, n) {
@@ -28792,13 +28805,13 @@ function XR(e) {
   }, [w, i, m, g]);
   let T = (0, q.useCallback)(
     (e, t) => {
-      s && e > 0 && t?.correct && f({ iDoorIndex: e - 1 }),
+      (s && e > 0 && t?.correct && f({ iDoorIndex: e - 1 }),
         h(e),
         e == 0
           ? (_(g + 1),
             C(),
             y?.current?.scrollIntoView({ behavior: `smooth`, block: `center` }))
-          : S(e - 1, t);
+          : S(e - 1, t));
     },
     [s, g, C, S, f],
   );
@@ -29000,7 +29013,7 @@ function QR(e) {
     [h, g] = (0, q.useState)(!1),
     _ = (0, q.useMemo)(() => {
       let e = [...(r.answers || [])];
-      return c && Ts(e), e;
+      return (c && Ts(e), e);
     }, [r.answers, c]),
     v = d == `question_answer`,
     [y, b] = (0, q.useState)(() => {
@@ -29018,7 +29031,7 @@ function QR(e) {
             (0, J.jsx)(ml, {
               checked: t === y,
               onChange: (r) => {
-                p(n, r ? e.category_ids : void 0), b(r ? t : null);
+                (p(n, r ? e.category_ids : void 0), b(r ? t : null));
               },
               disabled: t === y,
               label: (0, J.jsx)($R, {
@@ -29087,7 +29100,7 @@ function QR(e) {
                 }),
                 (0, J.jsx)(Jl, {
                   onClick: () => {
-                    S(!1), b(null);
+                    (S(!1), b(null));
                   },
                   children: z(`#SalePage_TryAgain`),
                 }),
@@ -29106,7 +29119,7 @@ function QR(e) {
               (0, J.jsx)(Jl, {
                 disabled: y == null,
                 onClick: () => {
-                  S(!0), g(!0), (!v || _[y].correct) && l?.(n + 1, _[y]);
+                  (S(!0), g(!0), (!v || _[y].correct) && l?.(n + 1, _[y]));
                 },
                 children: z(
                   d == `scenario` ? `#Button_Confirm` : `#Button_Submit`,
@@ -29183,7 +29196,7 @@ function tz(e) {
     c = (0, q.useCallback)(
       async (e) => {
         let t = await s({ iDoorIndex: e, bPreviewMode: r });
-        return t && wf(o, JR, !0), t;
+        return (t && wf(o, JR, !0), t);
       },
       [s, r, o],
     ),
@@ -29269,11 +29282,11 @@ function nz(e) {
                       a(!0));
                 })
                 .catch((e) => {
-                  console.error(
+                  (console.error(
                     `ScenarioQuizResetOrSubmit: Failed to save with exception`,
                   ),
                     o.token.reason || s.fnSetError(!0),
-                    a(!0);
+                    a(!0));
                 })
             : (console.error(
                 `ScenarioQuizResetOrSubmit: No category matched the answers given`,
@@ -29299,8 +29312,8 @@ function sz(e) {
         e?.forEach((e) => {
           if (!e?.appid || e.community_item_type == null) return;
           let n = t.get(e.appid);
-          n || ((n = new Set()), t.set(e.appid, n)),
-            n.add(e.community_item_type);
+          (n || ((n = new Set()), t.set(e.appid, n)),
+            n.add(e.community_item_type));
         }),
         t
       );
@@ -29357,7 +29370,7 @@ function cz(e) {
             ),
       );
     }
-    return i.length > 0 && e.push(i), e;
+    return (i.length > 0 && e.push(i), e);
   }, [u, t, r, c, n]);
   return l && !Wc.logged_in
     ? null
@@ -29601,7 +29614,7 @@ var gz = 45,
       return (this.m_nExpirationTime + e) * 1e3;
     }
     IncrementalSectionNeedingReveal(e, t, n) {
-      mu(
+      (mu(
         !this.m_clanSteamID ||
           this.m_clanSteamID.GetAccountID() == e.GetAccountID(),
         `mismatch clan steam id`,
@@ -29617,36 +29630,36 @@ var gz = 45,
         this.m_nActiveSectionCount > 0 &&
           !this.m_timer.IsScheduled() &&
           ((this.m_nTimeStartedMS = Date.now()),
-          this.m_timer.Schedule(this.GetTimerWaitTimeMS(), this.TimerAction));
+          this.m_timer.Schedule(this.GetTimerWaitTimeMS(), this.TimerAction)));
     }
     DecrementSectionNeedingReveal() {
-      --this.m_nActiveSectionCount,
-        this.m_nActiveSectionCount <= 0 && this.m_timer.Cancel();
+      (--this.m_nActiveSectionCount,
+        this.m_nActiveSectionCount <= 0 && this.m_timer.Cancel());
     }
     AddSaleCapsules(e, t) {
       let n = this.m_mapSectionToExistingCapsules.has(e)
         ? this.m_mapSectionToExistingCapsules.get(e)
         : [];
-      t?.forEach((e) => {
+      (t?.forEach((e) => {
         n.findIndex((t) => e.id == t.id && e.type == t.type) < 0 &&
           !Te(e) &&
           n.push(e);
       }),
         this.m_mapSectionToExistingCapsules.has(e) ||
-          this.m_mapSectionToExistingCapsules.set(e, n);
+          this.m_mapSectionToExistingCapsules.set(e, n));
     }
     AddEvents(e, t) {
       let n = this.m_mapSectionToExistingClanEventGIDs.has(e)
         ? this.m_mapSectionToExistingClanEventGIDs.get(e)
         : [];
-      t?.forEach((e) => {
+      (t?.forEach((e) => {
         !n.includes(e) && Lo.BHasClanEventModel(e) && n.push(e);
       }),
         this.m_mapSectionToExistingClanEventGIDs.has(e) ||
-          this.m_mapSectionToExistingClanEventGIDs.set(e, n);
+          this.m_mapSectionToExistingClanEventGIDs.set(e, n));
     }
     SetTestMode(e, t) {
-      U.WEBAPI_BASE_URL == `dev` &&
+      (U.WEBAPI_BASE_URL == `dev` &&
         console.log(
           `CDynamicRevealStore Test Mode Cur ${this.m_bTestMode.get(e)} setting to ${t}`,
         ),
@@ -29654,17 +29667,17 @@ var gz = 45,
         this.m_mapSectionToExistingCapsules.has(e) &&
           this.m_mapSectionToExistingCapsules.set(e, []),
         this.m_mapSectionToExistingClanEventGIDs.has(e) &&
-          this.m_mapSectionToExistingClanEventGIDs.set(e, []);
+          this.m_mapSectionToExistingClanEventGIDs.set(e, []));
     }
     BIsInTestMode(e) {
       return this.m_bTestMode.get(e);
     }
     FireRequestNow() {
-      mu(
+      (mu(
         this.m_bTestMode,
         `We should only use CDynamicRevealStore::FireRequestNow in test mode`,
       ),
-        this.TimerAction();
+        this.TimerAction());
     }
     TimerAction() {
       this.m_nActiveSectionCount > 0 &&
@@ -29716,20 +29729,20 @@ var gz = 45,
                   );
                 _e(r, _o).then(() => {
                   let t = [];
-                  r.forEach((e) => {
+                  (r.forEach((e) => {
                     Te(e) || t.push(e);
                   }),
-                    this.m_mapSectionToNewCapsules.set(e.unique_id, t);
+                    this.m_mapSectionToNewCapsules.set(e.unique_id, t));
                 });
               }
             });
           })
           .finally(() => {
-            (this.m_nTimeStartedMS = Date.now()),
+            ((this.m_nTimeStartedMS = Date.now()),
               this.m_timer.Schedule(
                 this.GetTimerWaitTimeMS(),
                 this.TimerAction,
-              );
+              ));
           }));
     }
     async LoadRevealedItems(e, t) {
@@ -29766,16 +29779,16 @@ var gz = 45,
     }
     static s_Singleton;
     static Get() {
-      return (e.s_Singleton ||= new e()), e.s_Singleton;
+      return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
     constructor() {
       T(this);
     }
   };
-P([n], vz.prototype, `m_mapSectionToNewCapsules`, void 0),
+(P([n], vz.prototype, `m_mapSectionToNewCapsules`, void 0),
   P([n], vz.prototype, `m_mapSectionToNewEvents`, void 0),
   P([I], vz.prototype, `FireRequestNow`, null),
-  P([I], vz.prototype, `TimerAction`, null);
+  P([I], vz.prototype, `TimerAction`, null));
 var yz = `_8eFIasuIcVU-`,
   bz = E((e) => {
     let {
@@ -29817,11 +29830,11 @@ var yz = `_8eFIasuIcVU-`,
               }),
               (0, J.jsx)(Jl, {
                 onClick: () => {
-                  l(n() || []),
+                  (l(n() || []),
                     d(i() || []),
                     r([]),
                     a([]),
-                    vz.Get().SetTestMode(t.unique_id, !0);
+                    vz.Get().SetTestMode(t.unique_id, !0));
                 },
                 children: z(`#Sale_DynamicReview_Preview_start`),
               }),
@@ -29880,14 +29893,14 @@ function Tz(e, t, n, r) {
 function Ez(e, t, n, r) {
   if (e == null || t?.unique_id == null) return null;
   let i = e + `_` + t.unique_id;
-  return n && (i += `_` + n), r && (i += `_` + ai(JSON.stringify(t))), i;
+  return (n && (i += `_` + n), r && (i += `_` + ai(JSON.stringify(t))), i);
 }
 var Dz = class e {
   static s_Singleton;
   m_rgRecentEvent = new Map();
   m_mapPromises = new Map();
   static Get() {
-    return (e.s_Singleton ||= new e()), e.s_Singleton;
+    return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
   constructor() {
     T(this);
@@ -30060,9 +30073,9 @@ var Dz = class e {
     return this.m_mapPromises.get(i);
   }
 };
-P([n], Dz.prototype, `m_rgRecentEvent`, void 0),
+(P([n], Dz.prototype, `m_rgRecentEvent`, void 0),
   P([i], Dz.prototype, `Init`, null),
-  P([i], Dz.prototype, `AddAllRecentEvents`, null);
+  P([i], Dz.prototype, `AddAllRecentEvents`, null));
 var Oz = class e {
   static s_SubscriptStore;
   m_mapMasterAppToBenefitApps = new Map();
@@ -30084,8 +30097,8 @@ var Oz = class e {
       w(() => {
         e.forEach((e) => {
           let t = new Set();
-          e.benefit_appid.forEach((e) => t.add(e)),
-            this.m_mapMasterAppToBenefitApps.set(e.master_appid, t);
+          (e.benefit_appid.forEach((e) => t.add(e)),
+            this.m_mapMasterAppToBenefitApps.set(e.master_appid, t));
         });
       });
   }
@@ -30116,8 +30129,8 @@ var Oz = class e {
     return n
       ? (w(() => {
           let e = new Set();
-          n.benefit_appid.forEach((t) => e.add(t)),
-            this.m_mapMasterAppToBenefitApps.set(n.master_appid, e);
+          (n.benefit_appid.forEach((t) => e.add(t)),
+            this.m_mapMasterAppToBenefitApps.set(n.master_appid, e));
         }),
         !0)
       : !1;
@@ -30420,19 +30433,19 @@ async function Pz(e, t, n, r, i, a, o, s, c, l, u = 0) {
         gR() || ((a = await RF.Get().GetWishlistOnSale()), (o = `game`));
         break;
       case `dlc_onsale`:
-        (o = `dlc`),
-          vR() || (a = await RF.Get().GetDLCForGamesInMyLibraryOnSale());
+        ((o = `dlc`),
+          vR() || (a = await RF.Get().GetDLCForGamesInMyLibraryOnSale()));
         break;
       case `dlc_music_onsale`:
-        (o = `music`),
-          (a = await RF.Get().GetSoundtracksForGamesInMyLibraryOnSale());
+        ((o = `music`),
+          (a = await RF.Get().GetSoundtracksForGamesInMyLibraryOnSale()));
         break;
       case `interactive_recommender_onsale`:
-        (o = `game`),
-          _R() || (a = await RF.Get().GetInteractiveRecommendationsOnSale());
+        ((o = `game`),
+          _R() || (a = await RF.Get().GetInteractiveRecommendationsOnSale()));
         break;
       case `tag_recommender`:
-        (o = `game`),
+        ((o = `game`),
           (a = await RF.Get().GetTagRecommendorForThisSale(
             r,
             g,
@@ -30441,7 +30454,7 @@ async function Pz(e, t, n, r, i, a, o, s, c, l, u = 0) {
             n?.GetStoreFilter(),
             s,
             Zn(i),
-          ));
+          )));
         break;
       case `ir_subscription`:
         o = `game`;
@@ -30503,7 +30516,7 @@ async function Iz(e, t, n, r, i, a, o, s, c, l, u = 0, d, f, p, m, h) {
     x = PR(n, b, l);
   if (dr(n)) {
     let a = await Pz(e, r, i, t, n, kR(s), o, !!n.prioritize_discounts, d, p);
-    (_ = a.capsules),
+    ((_ = a.capsules),
       (v = !!(
         a.bMoreRemaining &&
         n.smart_section_max_apps &&
@@ -30516,7 +30529,7 @@ async function Iz(e, t, n, r, i, a, o, s, c, l, u = 0, d, f, p, m, h) {
       n.enable_faceted_browsing &&
         (mu(o, `facetFilterState is missing when facetting is enabled (1)`),
         o.SetFacetCounts(a.facetCounts),
-        o.SetSolrMatchCount(a.nMatchCount));
+        o.SetSolrMatchCount(a.nMatchCount)));
   } else if (n.enable_faceted_browsing) {
     mu(o, `facetFilterState is missing when facetting is enabled (2)`);
     let e = vv(t, n),
@@ -30524,11 +30537,11 @@ async function Iz(e, t, n, r, i, a, o, s, c, l, u = 0, d, f, p, m, h) {
       a = await As.fetchQuery(
         fv(e, r, o?.GetQuery(), i?.GetStoreFilterClause()),
       );
-    (v = !!a.bMoreResultsRemaining),
+    ((v = !!a.bMoreResultsRemaining),
       o.SetFacetCounts(a.rgSolrFacetCounts),
       o.SetSolrMatchCount(a.nMatchCount),
       (_ = a.rgCapsules),
-      (_ = SR(t, n, y, f, [..._]));
+      (_ = SR(t, n, y, f, [..._])));
   } else _ = SR(t, n, y, f, [...n.capsules]);
   if (m.signal.aborted) return g;
   if (
@@ -30578,13 +30591,13 @@ async function Iz(e, t, n, r, i, a, o, s, c, l, u = 0, d, f, p, m, h) {
   let w = [],
     T;
   if (n.enable_faceted_browsing) {
-    mu(o, `facetFilterState is missing when facetting is enabled (3)`),
-      (_ = await ke(o, _, C, w));
+    (mu(o, `facetFilterState is missing when facetting is enabled (3)`),
+      (_ = await ke(o, _, C, w)));
     let e = S || v;
     o.UpdateMatchCount(e, _.length);
   }
   let E = !!n.enable_faceted_browsing && he(o);
-  (T = await we(_, C, w, (e) => Sz(e, t, E) || xz(e, t))),
+  ((T = await we(_, C, w, (e) => Sz(e, t, E) || xz(e, t))),
     (n.store_item_filter_require_discount ||
       n.store_item_filter_require_coming_soon ||
       n.store_item_filter_require_released ||
@@ -30603,7 +30616,7 @@ async function Iz(e, t, n, r, i, a, o, s, c, l, u = 0, d, f, p, m, h) {
           (n.store_item_filter_require_demo && !t.BHasDemo()) ||
           (n.store_item_filter_require_free && !t.BIsFree())
         );
-      }));
+      })));
   let ee = w.length;
   if (((T = Bz(T)), n.prioritize_discounts)) {
     let e = [],
@@ -30618,7 +30631,7 @@ async function Iz(e, t, n, r, i, a, o, s, c, l, u = 0, d, f, p, m, h) {
     n.section_type != `trailercarousel` &&
     c
   ) {
-    c.MarkAllAppsNotVisible(n.unique_id), T.sort(c.SortKey.bind(c));
+    (c.MarkAllAppsNotVisible(n.unique_id), T.sort(c.SortKey.bind(c)));
     let e = et(n, u, l) || T.length;
     T.slice(0, e).forEach(c.BMarkAppVisibile.bind(c, n.unique_id));
   }
@@ -30680,14 +30693,14 @@ async function Lz(e, t, n, r, i) {
       t.events.filter((e) => !!e).map((e) => e.announcement_gid),
     );
   let o = a.map((e) => e.GID);
-  (o = SR(
+  ((o = SR(
     e,
     t,
     Dt(e, t, n, `events` + a.length, i?.GetActiveTabUniqueID()),
     r,
     o,
   )),
-    (a = o.map((e) => Lo.GetClanEventModel(e)));
+    (a = o.map((e) => Lo.GetClanEventModel(e))));
   let s = a.filter(
     (t) => !!t && (e.BUsesContentHubForItemSource() || i.ShouldShowEvent(t)),
   );
@@ -30831,7 +30844,7 @@ function Gz(e) {
       t,
       cr(e.section.section_type) && or(e.section) === `personalized_carousel`,
     );
-  (0, q.useEffect)(() => {
+  ((0, q.useEffect)(() => {
     let r = new AbortController();
     return (
       (async () => {
@@ -30889,11 +30902,11 @@ function Gz(e) {
   ]),
     (0, q.useEffect)(
       () => () => {
-        e.appVisibilityTracker?.MarkAllAppsNotVisible(e.section.unique_id),
-          e.section.dynamic_reveal && vz.Get().DecrementSectionNeedingReveal();
+        (e.appVisibilityTracker?.MarkAllAppsNotVisible(e.section.unique_id),
+          e.section.dynamic_reveal && vz.Get().DecrementSectionNeedingReveal());
       },
       [e.appVisibilityTracker, e.section.dynamic_reveal, e.section.unique_id],
-    );
+    ));
   let se = () => {
       h || (g(!0), ce());
     },
@@ -30907,8 +30920,8 @@ function Gz(e) {
       return Math.max(1, t) * 250;
     },
     ue = () => {
-      $r(e.history, gv(de), D.facetFilterState.GetURLParam()),
-        te({ facetFilterState: D.facetFilterState });
+      ($r(e.history, gv(de), D.facetFilterState.GetURLParam()),
+        te({ facetFilterState: D.facetFilterState }));
     },
     de = CR(t, e.section, ie),
     fe = null;
@@ -31138,10 +31151,10 @@ function rB(e) {
       (async () => {
         let e = [],
           t = new Date();
-        t.setHours(0), t.setMinutes(0), t.setSeconds(0);
+        (t.setHours(0), t.setMinutes(0), t.setSeconds(0));
         for (let n = 0; n < _; n++)
-          e.push(Math.floor(t.getTime() / 1e3)), t.setDate(t.getDate() + 1);
-        (e = e.slice(0, _)), m(e);
+          (e.push(Math.floor(t.getTime() / 1e3)), t.setDate(t.getDate() + 1));
+        ((e = e.slice(0, _)), m(e));
         let n = s?.map((e) => e.id);
         u(n);
         let r = [];
@@ -31154,7 +31167,7 @@ function rB(e) {
               let n = e.findIndex((e) => i > e && i < e + 86400);
               if (n >= 0) {
                 if (n > _) continue;
-                for (; r.length <= n; ) r.push([]);
+                for (; r.length <= n;) r.push([]);
                 r[n].push(t);
               }
             }
@@ -31275,14 +31288,14 @@ function aB(e) {
         []),
     ),
     n = new Date();
-  n.setHours(0), n.setMinutes(0), n.setSeconds(0);
+  (n.setHours(0), n.setMinutes(0), n.setSeconds(0));
   let r = [],
     i = [];
   for (let t = 0; t < e.dayTimestamps.length; t++)
-    n.getDay() == 0
+    (n.getDay() == 0
       ? i.push(Math.floor(n.getTime() / 1e3))
       : n.getDay() == 6 && r.push(Math.floor(n.getTime() / 1e3)),
-      n.setDate(n.getDate() + 1);
+      n.setDate(n.getDate() + 1));
   let a =
       Math.max(
         ...e.dayTimestamps.map((t, n) =>
@@ -31410,21 +31423,21 @@ var sB = new Nu(`SalePage`),
     static s_singleton;
     constructor() {}
     static Get() {
-      return (e.s_singleton ||= new e()), e.s_singleton;
+      return ((e.s_singleton ||= new e()), e.s_singleton);
     }
     async GetItemsSoFar(e, t, n, r, i, a, o, s, c, l) {
       let u;
       if (a === e?.nNextSolrIndex) {
         let d = await this.GetItemsFiltered(t, n, r, i, a, o, s, c, l);
-        (u = { ...d, rgItems: this.DedupeItems(e.rgItems.concat(d.rgItems)) }),
+        ((u = { ...d, rgItems: this.DedupeItems(e.rgItems.concat(d.rgItems)) }),
           sB.Debug(
             `GetItemsSoFar (continuing) start ${a} count ${o} items ${u.rgItems.length} next ${u.nNextSolrIndex}`,
-          );
+          ));
       } else
-        (u = await this.GetItemsFiltered(t, n, r, i, a, o, s, c, l)),
+        ((u = await this.GetItemsFiltered(t, n, r, i, a, o, s, c, l)),
           sB.Debug(
             `GetItemsSoFar (new) start ${a} count ${o} items ${u.rgItems.length} next ${u.nNextSolrIndex}`,
-          );
+          ));
       return u;
     }
     async GetItemsFiltered(e, t, n, r, i, a, o, s, c) {
@@ -31448,7 +31461,7 @@ var sB = new Nu(`SalePage`),
             Math.floor((u + d - 1) / cB) - f + 1 > uB)
         )
           break;
-        (u = l.nNextSolrIndex), (d = a - l.rgItems.length);
+        ((u = l.nNextSolrIndex), (d = a - l.rgItems.length));
       }
       return (
         sB.Debug(
@@ -31608,7 +31621,7 @@ var sB = new Nu(`SalePage`),
             this.m_mapResults.get(l)
           );
         }
-        this.m_mapPromises.delete(l), (g = ss(e));
+        (this.m_mapPromises.delete(l), (g = ss(e)));
       } catch (e) {
         if ((this.m_mapPromises.delete(l), (g = ss(e)), X.default.isCancel(e)))
           return (
@@ -31658,7 +31671,7 @@ var sB = new Nu(`SalePage`),
       if (this.m_categories) return this.m_categories;
       let e = await this.Load();
       if (!e) throw Error(`Unable to load tag category data`);
-      return (this.m_categories = G_(e)), this.m_categories;
+      return ((this.m_categories = G_(e)), this.m_categories);
     }
     async Load() {
       let e = null;
@@ -31698,7 +31711,7 @@ var mB = e(
           var r, i, a;
           if (Array.isArray(t)) {
             if (((r = t.length), r != n.length)) return !1;
-            for (i = r; i-- !== 0; ) if (!e(t[i], n[i])) return !1;
+            for (i = r; i-- !== 0;) if (!e(t[i], n[i])) return !1;
             return !0;
           }
           if (t.constructor === RegExp)
@@ -31711,9 +31724,9 @@ var mB = e(
             ((a = Object.keys(t)), (r = a.length), r !== Object.keys(n).length)
           )
             return !1;
-          for (i = r; i-- !== 0; )
+          for (i = r; i-- !== 0;)
             if (!Object.prototype.hasOwnProperty.call(n, a[i])) return !1;
-          for (i = r; i-- !== 0; ) {
+          for (i = r; i-- !== 0;) {
             var o = a[i];
             if (!e(t[o], n[o])) return !1;
           }
@@ -31748,14 +31761,14 @@ var mB = e(
       super(e);
     }
     componentDidMount() {
-      window.addEventListener(`resize`, this.OnResize), this.LoadCapsules();
+      (window.addEventListener(`resize`, this.OnResize), this.LoadCapsules());
       let { displayStyle: e } = this.props;
       this.setState({ bCompactViewMode: this.BDisplayStyleIsCompact(e) });
     }
     componentWillUnmount() {
-      this.m_timerForChange.Cancel(),
+      (this.m_timerForChange.Cancel(),
         this.m_cancelSignal.cancel(`SaleItemBrowser component unmounted`),
-        hB.Debug(`componentWillUnmount: Cancelled`);
+        hB.Debug(`componentWillUnmount: Cancelled`));
     }
     componentDidUpdate(e, t) {
       let n = this.props.section
@@ -31766,7 +31779,7 @@ var mB = e(
         let e = ri(this.props.history, `flavor`);
         Nv(e) && this.GetFlavorsForActiveTab()?.includes(e) && (r = e);
       }
-      ((0, mB.default)(this.props.browseInfo, e.browseInfo) &&
+      (((0, mB.default)(this.props.browseInfo, e.browseInfo) &&
         this.props.event == e.event &&
         (0, mB.default)(this.props.section, e.section) &&
         this.props.activeTab?.GetActiveTabUniqueID() ==
@@ -31800,10 +31813,10 @@ var mB = e(
             bCompactViewMode: this.BDisplayStyleIsCompact(
               this.props.displayStyle,
             ),
-          });
+          }));
     }
     ShowMoreRows() {
-      this.m_timerForChange.Cancel(),
+      (this.m_timerForChange.Cancel(),
         !this.m_cancelSignal.token.reason &&
           (ei(
             this.props.history,
@@ -31814,7 +31827,7 @@ var mB = e(
           ),
           this.setState({ bAwaitingMoreRowsLoading: !0 }, () =>
             this.LoadCapsules(),
-          ));
+          )));
     }
     SetViewMode(e) {
       this.setState({ bCompactViewMode: e });
@@ -31826,11 +31839,11 @@ var mB = e(
           id: e.id,
           type: e.type === 0 ? `game` : Cu(e.type),
         }));
-      await _e(a, _o),
+      (await _e(a, _o),
         !this.state.strSearchQuery &&
           !t.BUsesContentHubForItemSource() &&
           (a = a.filter((e) => !r || r.ShouldShowCapsule(e))),
-        (a = await RR(t, n, this.state.strSearchQuery ? void 0 : r, a));
+        (a = await RR(t, n, this.state.strSearchQuery ? void 0 : r, a)));
       let o = [];
       n?.enable_faceted_browsing && i && (a = await ke(i, a, !1, o));
       let s = !!n?.enable_faceted_browsing && he(i);
@@ -31854,13 +31867,13 @@ var mB = e(
           facetFilterState: c,
         } = this.state,
         l = this.m_loadCapsulesDebugGeneration + 1;
-      hB.Debug(`LoadCapsules[${l}]: starting`), this.m_cancelSignal.cancel();
+      (hB.Debug(`LoadCapsules[${l}]: starting`), this.m_cancelSignal.cancel());
       let u = X.default.CancelToken.source();
-      (this.m_cancelSignal = u),
+      ((this.m_cancelSignal = u),
         this.m_loadCapsulesDebugGeneration++,
         hB.Debug(
           `LoadCapsules[${l}]: now in generation ${this.m_loadCapsulesDebugGeneration}`,
-        );
+        ));
       let d = this.context.eLocation == 2;
       if (
         (await Promise.all([G.Get().HintLoad(), _e(a, _o)]), u.token.reason)
@@ -31888,7 +31901,7 @@ var mB = e(
           },
           l = s ? `search` : i,
           u = Math.max(n.cap_item_count ?? 0, gB);
-        f > 0 && (n.show_more_count ?? 0) > 0 && (u = n.show_more_count),
+        (f > 0 && (n.show_more_count ?? 0) > 0 && (u = n.show_more_count),
           (m = await dB
             .Get()
             .GetItemsSoFar(
@@ -31907,7 +31920,7 @@ var mB = e(
             id: e.id,
             type: e.type === 0 ? `game` : Cu(e.type),
           }))),
-          (p = m.bMoreAvailable);
+          (p = m.bMoreAvailable));
       } catch (e) {
         u.token.reason ||
           (hB.Info(
@@ -31938,9 +31951,9 @@ var mB = e(
           ));
     }
     OnFlavorLabelClick(e) {
-      this.m_timerForChange.Cancel(),
+      (this.m_timerForChange.Cancel(),
         !this.m_cancelSignal.token.reason &&
-          ni(this.props.history, { flavor: e, offset: void 0 });
+          ni(this.props.history, { flavor: e, offset: void 0 }));
     }
     GetFlavorsForActiveTab() {
       let { activeTab: e, browseInfo: t } = this.props,
@@ -32027,8 +32040,8 @@ var mB = e(
     OnUpdateSearch(e) {
       if (this.m_cancelSignal.token.reason) return;
       let t = e.target.value && e.target.value.trim().toLocaleLowerCase();
-      this.setState({ strRawSearch: e.target.value }),
-        this.m_timerForChange.Schedule(200, () => this.OnApplySearch(t));
+      (this.setState({ strRawSearch: e.target.value }),
+        this.m_timerForChange.Schedule(200, () => this.OnApplySearch(t)));
     }
     GetSNRFeature() {
       if (this.state.strRawSearch) return `saleitemsearch`;
@@ -32105,7 +32118,7 @@ var mB = e(
         _ =
           c > 0
             ? () => {
-                ei(this.props.history, `offset`, void 0),
+                (ei(this.props.history, `offset`, void 0),
                   this.setState(
                     {
                       bInitialLoadComplete: !1,
@@ -32117,7 +32130,7 @@ var mB = e(
                       bAwaitingMoreRowsLoading: !0,
                     },
                     () => this.LoadCapsules(),
-                  );
+                  ));
               }
             : void 0,
         v = (0, J.jsxs)(J.Fragment, {
@@ -32167,7 +32180,7 @@ var mB = e(
           fnOnUpdateFilter: this.OnUpdateFacetFilter,
           onInitFilter: async () => {
             let e = this.props.section.facets;
-            hB.Debug(`FacetedSaleSection.onInitFilter', rgFacet`),
+            (hB.Debug(`FacetedSaleSection.onInitFilter', rgFacet`),
               !e &&
                 this.props.section.facet_auto_generate_options &&
                 ((e = await pB(this.props.section.facet_auto_generate_options)),
@@ -32184,7 +32197,7 @@ var mB = e(
                   Ae(),
                   Se(),
                 ),
-              });
+              }));
           },
           ...this.state.results,
           children: v,
@@ -32257,14 +32270,14 @@ var mB = e(
       });
     }
   };
-P([I], _B.prototype, `ShowMoreRows`, null),
+(P([I], _B.prototype, `ShowMoreRows`, null),
   P([I], _B.prototype, `SetViewMode`, null),
   P([I], _B.prototype, `FilterItems`, null),
   P([I], _B.prototype, `OnUpdateSearch`, null),
   P([I], _B.prototype, `OnUpdateFacetFilter`, null),
   P([I], _B.prototype, `OnResize`, null),
   P([I], _B.prototype, `BDisplayStyleIsCompact`, null),
-  (_B = P([E], _B));
+  (_B = P([E], _B)));
 function vB(e) {
   let { value: t, onChange: n, className: r, tooltip: i, children: a } = e;
   return (0, J.jsx)(Ds, {
@@ -32346,7 +32359,7 @@ function bB(e) {
       ref: n,
       className: Bv,
       onClick: (e) => {
-        t && t(), e.preventDefault(), e.stopPropagation();
+        (t && t(), e.preventDefault(), e.stopPropagation());
       },
       children: [
         (0, J.jsx)(Hc, {}),
@@ -32373,7 +32386,7 @@ function xB(e) {
         if ((e != null || n != null) && a.current) {
           let e = a.current.style.position,
             t = a.current.style.top;
-          r.jsondata.sale_sections?.find((e) => e.section_type == `tabs`) &&
+          (r.jsondata.sale_sections?.find((e) => e.section_type == `tabs`) &&
             ((a.current.style.position = `relative`),
             (a.current.style.top = `-64px`)),
             a.current.scrollIntoView({
@@ -32382,7 +32395,7 @@ function xB(e) {
               inline: `nearest`,
             }),
             (a.current.style.position = e),
-            (a.current.style.top = t);
+            (a.current.style.top = t));
         }
       }
     }
@@ -32609,7 +32622,7 @@ function MB(e) {
             window.scrollY > e && window.scrollTo(0, e);
           }
           let t = { ..._v(r), ...Fe(void 0) };
-          (t.tab = String(e.unique_id)), a(e.unique_id, t);
+          ((t.tab = String(e.unique_id)), a(e.unique_id, t));
         }
       },
       [r, n, a],
@@ -32665,7 +32678,7 @@ function NB(e, t, n, r) {
         let a = e.GetSaleSectionByID(n);
         if (!a || Pe(t.GetActiveTabUniqueID(), a)) return !1;
         let o = i?.find((e) => Pe(e.unique_id, a));
-        return o && r(o), !1;
+        return (o && r(o), !1);
       },
       [e, r, i, t],
     ),
@@ -32836,7 +32849,7 @@ function UB(e, t) {
     r = new URLSearchParams({});
   switch (e) {
     case hr.Facebook:
-      return r.append(`u`, n), `${HB}${r.toString()}`;
+      return (r.append(`u`, n), `${HB}${r.toString()}`);
     case hr.Twitter:
       return (
         r.append(`url`, n),
@@ -32857,18 +32870,18 @@ var GB = class e {
     m_mapAnnounceGIDToSaleClanID = new Map();
     m_mapEventGIDToTrack = new Map();
     static Get() {
-      return (e.s_singleton ||= new e()), e.s_singleton;
+      return ((e.s_singleton ||= new e()), e.s_singleton);
     }
     AddAllScheduleTrack(e, t) {
       t &&
         t.forEach((t) => {
           t.events.forEach((n) => {
-            this.m_mapAnnounceGIDToTrack.set(n.announcement_gid, t),
+            (this.m_mapAnnounceGIDToTrack.set(n.announcement_gid, t),
               this.m_mapAnnounceGIDToSaleClanID.set(
                 n.announcement_gid,
                 e.clanSteamID.GetAccountID(),
               ),
-              this.m_mapEventGIDToTrack.set(n.event_gid, t);
+              this.m_mapEventGIDToTrack.set(n.event_gid, t));
           });
         });
     }
@@ -32927,7 +32940,7 @@ var GB = class e {
     }
     static s_Singleton;
     static Get() {
-      return (e.s_Singleton ||= new e()), e.s_Singleton;
+      return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
   };
 P([n], KB.prototype, `m_gidClanEventSelected`, void 0);
@@ -33013,7 +33026,7 @@ var qB = `I-ir9Mpq4kk-`,
         (async () => {
           let e = vs.InitFromClanID(t.clanid, U.EUNIVERSE),
             n = [];
-          Lo.BHasClanEventModel(t.unique_id) ||
+          (Lo.BHasClanEventModel(t.unique_id) ||
             n.push(
               Lo.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                 e,
@@ -33026,7 +33039,7 @@ var qB = `I-ir9Mpq4kk-`,
               n.push(ud.LoadClanInfoForClanSteamID(e)),
             n.length > 0 && r(!1),
             await Promise.all(n),
-            i.current.token.reason || r(!0);
+            i.current.token.reason || r(!0));
         })();
       }, [t]),
       !n)
@@ -33092,7 +33105,7 @@ var VV = E((e) => {
     let s = o.getTime() / 1e3,
       c = i.GetNameWithFallback(Hl(U.LANGUAGE));
     if (c.startsWith(a))
-      for (c = c.slice(a.length); zV.has(c[0]); ) c = c.slice(1);
+      for (c = c.slice(a.length); zV.has(c[0]);) c = c.slice(1);
     let l = GB.Get().BIsPartOfSomeTrack(i),
       u = !i.BIsEventInFuture() && !i.BHasEventEnded(),
       d = KB.Get().BIsEventSelected(n.unique_id);
@@ -33296,15 +33309,15 @@ var JV = class extends q.Component {
   m_scheduledUpdate = new Bs();
   m_bAddedToBroadcastStoreCallback = !1;
   constructor(e) {
-    super(e), T(this);
+    (super(e), T(this));
   }
   componentWillUnmount() {
-    (this.m_bAddedToBroadcastStoreCallback &&=
+    ((this.m_bAddedToBroadcastStoreCallback &&=
       (hd.Get().ClearCallbackOnNewContext(this.props.broadcastEmbedContext),
       !1)),
       hd.Get().RemoveStreamChangedListener(this.OnBroadcastSelected),
       this.m_cancelSignal.cancel(`SaleSectionEventScheduleInner to unload`),
-      this.m_scheduledUpdate.Cancel();
+      this.m_scheduledUpdate.Cancel());
   }
   componentDidUpdate(e) {
     e.activeTab?.GetActiveTabUniqueID() !=
@@ -33312,11 +33325,11 @@ var JV = class extends q.Component {
   }
   static m_bInitialLoad = !0;
   async componentDidMount() {
-    hd.Get().AddStreamChangedListener(this.OnBroadcastSelected),
+    (hd.Get().AddStreamChangedListener(this.OnBroadcastSelected),
       GB.Get().AddAllScheduleTrack(
         this.props.event,
         this.props.section.event_schedule_tracks,
-      );
+      ));
     let e = this.GetScheduleCalendarStore();
     if (
       (e.SetFilteredView((e) => this.BShouldShowOnTab(e.appid)),
@@ -33327,13 +33340,13 @@ var JV = class extends q.Component {
         ? await e.RegisterCalendarEventsAndModels(t)
         : await e.RegisterCalendarEventsAndModels({ success: 1 });
     }
-    (GV.m_bInitialLoad = !1),
-      this.setState({ bLoaded: !0 }, this.ApplyScheduleToBroadcasts);
+    ((GV.m_bInitialLoad = !1),
+      this.setState({ bLoaded: !0 }, this.ApplyScheduleToBroadcasts));
   }
   get rtTopOfHour() {
     let e = mi.GetTimeNowWithOverrideAsDate(),
       t = ju(e);
-    return p(t.getTime() - e.getTime() + Wu.PerHour * 1e3), t.getTime() / 1e3;
+    return (p(t.getTime() - e.getTime() + Wu.PerHour * 1e3), t.getTime() / 1e3);
   }
   get cachedCurrentCalendarItems() {
     let e = this.rtTopOfHour + Wu.PerHour - 1;
@@ -33343,7 +33356,7 @@ var JV = class extends q.Component {
     let e = dP().GetStoreInitializationTimestamp(),
       t = ju(e).getTime() / 1e3,
       n = dP().GetCalendarItemsInTimeRange(t, void 0);
-    return GB.Get().BHasTracks() && n.rgCalendarItems.sort(ZV), n;
+    return (GB.Get().BHasTracks() && n.rgCalendarItems.sort(ZV), n);
   }
   UpdateBroadcastPresentersFromEvents() {
     md.SynchronizeEventsWithBroadcasts(
@@ -33373,14 +33386,14 @@ var JV = class extends q.Component {
   ApplyScheduleToBroadcasts() {
     if (!this.state.bLoaded) return;
     if (!hd.Get().BHasStreams(this.props.broadcastEmbedContext)) {
-      hd
+      (hd
         .Get()
         .AddCallbackOnNewContext(
           this.props.broadcastEmbedContext,
           `SaleSectionEventScheduleInner`,
           this.ApplyScheduleToBroadcasts,
         ),
-        (this.m_bAddedToBroadcastStoreCallback = !0);
+        (this.m_bAddedToBroadcastStoreCallback = !0));
       return;
     }
     let e = this.cachedCurrentCalendarItems.rgCalendarItems,
@@ -33401,11 +33414,11 @@ var JV = class extends q.Component {
       }
       a != gd(i) && (i.current_selection_priority = a);
     }
-    this.UpdateBroadcastPresentersFromEvents(),
+    (this.UpdateBroadcastPresentersFromEvents(),
       this.m_scheduledUpdate.IsScheduled() ||
         this.m_scheduledUpdate.Schedule(6e4, () =>
           this.ApplyScheduleToBroadcasts(),
-        );
+        ));
   }
   BShouldShowOnTab(e) {
     let t;
@@ -33514,13 +33527,13 @@ var JV = class extends q.Component {
     });
   }
 };
-P([a], JV.prototype, `rtTopOfHour`, null),
+(P([a], JV.prototype, `rtTopOfHour`, null),
   P([a], JV.prototype, `cachedCurrentCalendarItems`, null),
   P([a], JV.prototype, `cachedUpcomingCalenderEvents`, null),
   P([I], JV.prototype, `OnBroadcastSelected`, null),
   P([I], JV.prototype, `ApplyScheduleToBroadcasts`, null),
   P([I], JV.prototype, `VisibleEventsChanged`, null),
-  (JV = GV = P([E], JV));
+  (JV = GV = P([E], JV)));
 var YV = h(JV),
   XV = class extends q.Component {
     state = {};
@@ -33537,19 +33550,19 @@ var YV = h(JV),
       this.m_timerForRefresh.Cancel();
     }
     TimerRefresh() {
-      this.forceUpdate(),
+      (this.forceUpdate(),
         this.m_timerForRefresh.Schedule(
           this.m_nTimerRefreshS * 1e3,
           this.TimerRefresh,
-        );
+        ));
     }
     OnEventVisibilityChange(e, t, n, r) {
-      (this.m_visibleEventGIDs[n] = us(
+      ((this.m_visibleEventGIDs[n] = us(
         this.m_visibleEventGIDs[n] || [],
         r + 1,
         null,
       )),
-        (this.m_visibleEventGIDs[n][r] = e ? t : null);
+        (this.m_visibleEventGIDs[n][r] = e ? t : null));
       let i = [];
       for (let e of this.m_visibleEventGIDs.filter(Boolean))
         for (let t of e.filter(Boolean)) i.push(t);
@@ -33635,8 +33648,8 @@ var YV = h(JV),
       });
     }
   };
-P([I], XV.prototype, `TimerRefresh`, null),
-  P([I], XV.prototype, `OnEventVisibilityChange`, null);
+(P([I], XV.prototype, `TimerRefresh`, null),
+  P([I], XV.prototype, `OnEventVisibilityChange`, null));
 function ZV(e, t) {
   if (e.start_time == t.start_time) {
     let n = GB.Get().BIsPartOfSomeTrackByEventID(e.unique_id),
@@ -33649,14 +33662,14 @@ var QV = class extends q.Component {
   rtSectionStart = 0;
   rtSectionEnd = 0;
   constructor(e) {
-    super(e),
+    (super(e),
       T(this),
       (this.rtSectionStart = e.rtSectionStart),
-      (this.rtSectionEnd = e.rtSectionEnd);
+      (this.rtSectionEnd = e.rtSectionEnd));
   }
   componentDidUpdate() {
-    (this.rtSectionStart = this.props.rtSectionStart),
-      (this.rtSectionEnd = this.props.rtSectionEnd);
+    ((this.rtSectionStart = this.props.rtSectionStart),
+      (this.rtSectionEnd = this.props.rtSectionEnd));
   }
   m_cancelSignal = X.default.CancelToken.source();
   m_timerForRefresh = new Bs();
@@ -33668,22 +33681,22 @@ var QV = class extends q.Component {
     );
   }
   TimerRefresh() {
-    this.forceUpdate(),
+    (this.forceUpdate(),
       this.m_timerForRefresh.Schedule(
         this.m_nTimerRefreshS * 1e3,
         this.TimerRefresh,
-      );
+      ));
   }
   componentWillUnmount() {
-    this.m_timerForRefresh.Cancel(),
-      this.m_cancelSignal.cancel(`SaleScheduleCalendarSection to unload`);
+    (this.m_timerForRefresh.Cancel(),
+      this.m_cancelSignal.cancel(`SaleScheduleCalendarSection to unload`));
   }
   get cachedCalendarItems() {
     let e = dP().GetCalendarItemsInTimeRange(
       ce(() => this.rtSectionStart),
       ce(() => this.rtSectionEnd),
     );
-    return GB.Get().BHasTracks() && e.rgCalendarItems.sort(ZV), e;
+    return (GB.Get().BHasTracks() && e.rgCalendarItems.sort(ZV), e);
   }
   render() {
     let {
@@ -33731,11 +33744,11 @@ var QV = class extends q.Component {
         });
   }
 };
-P([n], QV.prototype, `rtSectionStart`, void 0),
+(P([n], QV.prototype, `rtSectionStart`, void 0),
   P([n], QV.prototype, `rtSectionEnd`, void 0),
   P([I], QV.prototype, `TimerRefresh`, null),
   P([a], QV.prototype, `cachedCalendarItems`, null),
-  (QV = P([E], QV));
+  (QV = P([E], QV)));
 var $V = E((e) => {
   let {
     rgEventGIDs: t,
@@ -33794,7 +33807,7 @@ function tH(e, t) {
       /(?:steampowered\.com|valve\.org\/store|steam\.dev\/store)\/(app)\/(\d+)/gi,
     i = e.GetDescriptionWithFallback(t),
     a = null;
-  for (; (a = r.exec(i)) !== null; ) {
+  for (; (a = r.exec(i)) !== null;) {
     let e = Number(a[2]);
     n.includes(e) || n.push(e);
   }
@@ -33945,7 +33958,7 @@ var cH = (e) => {
   let { event: t, broadcastEmbedContext: n } = e,
     r = q.useCallback(
       (e) => {
-        vd(t, Go(e)), e.preventDefault();
+        (vd(t, Go(e)), e.preventDefault());
       },
       [t],
     ),
@@ -34089,7 +34102,7 @@ var uH = (function (e) {
     localized_langs;
     deck_compatibility_category;
     constructor(e) {
-      (this.packageid = e.packageid),
+      ((this.packageid = e.packageid),
         (this.enabled = e.enabled),
         (this.name = e.name),
         (this.header_image_url = e.header_image_url),
@@ -34119,7 +34132,8 @@ var uH = (function (e) {
         (this.no_main_cap = e.no_main_cap),
         (this.creator_clan_ids = e.creator_clan_ids),
         (this.localized_langs = e.localized_langs),
-        (this.deck_compatibility_category = e.deck_compatibility_category || 0);
+        (this.deck_compatibility_category =
+          e.deck_compatibility_category || 0));
     }
     GetHeaderImageDimension() {
       return this.header_image_url.includes(`header_586x192`)
@@ -34165,11 +34179,11 @@ var uH = (function (e) {
             }),
           );
         let t = ys(`bundleunknown`, `application_config`);
-        lH(t) &&
+        (lH(t) &&
           t.forEach((e) => {
             this.m_mapMissingPackages.set(e, !0);
           }),
-          (this.m_bLoadedFromConfig = !0);
+          (this.m_bLoadedFromConfig = !0));
       }
     }
     ValidateStoreDefault(e) {
@@ -34182,7 +34196,7 @@ var uH = (function (e) {
       return this.m_mapMissingPackages.has(e);
     }
     GetPackageInfo(e) {
-      return this.LazyInit(), this.m_mapPackageInfo.get(e);
+      return (this.LazyInit(), this.m_mapPackageInfo.get(e));
     }
     BHasPackageInfoLoaded(e) {
       return !!this.GetPackageInfo(e);
@@ -34215,15 +34229,15 @@ var uH = (function (e) {
             })
             .then((e) => {
               w(() => {
-                this.AddPackages(e?.data),
+                (this.AddPackages(e?.data),
                   i.forEach((e) => {
-                    this.m_mapPackageInfo.has(e) ||
+                    (this.m_mapPackageInfo.has(e) ||
                       this.m_mapMissingPackages.set(e, !0),
-                      this.m_mapInFlightRequests.delete(e);
-                  });
+                      this.m_mapInFlightRequests.delete(e));
+                  }));
               });
             });
-          n.push(a), i.forEach((e) => this.m_mapInFlightRequests.set(e, a));
+          (n.push(a), i.forEach((e) => this.m_mapInFlightRequests.set(e, a)));
         } while (r.length > 0);
       }
       await Promise.all(n);
@@ -34239,8 +34253,8 @@ var uH = (function (e) {
         }
     }
   };
-P([n], fH.prototype, `m_mapPackageInfo`, void 0),
-  P([i], fH.prototype, `AddPackages`, null);
+(P([n], fH.prototype, `m_mapPackageInfo`, void 0),
+  P([i], fH.prototype, `AddPackages`, null));
 var pH = new fH();
 window.g_PackageInfoStore = pH;
 var mH = `Py6oYs4LJh4-`,
@@ -34273,7 +34287,7 @@ function OH(e) {
 }
 function kH(e, t, n, r) {
   let i = e.createElement(`input`);
-  (i.type = `hidden`), (i.name = n), (i.value = r), t.appendChild(i);
+  ((i.type = `hidden`), (i.name = n), (i.value = r), t.appendChild(i));
 }
 function AH(e, t, n) {
   if (
@@ -34286,7 +34300,7 @@ function AH(e, t, n) {
   }
   let r = Go(e),
     i = r.document.createElement(`form`);
-  (i.action = U.STORE_BASE_URL + `cart/addtocart?redirect=1`),
+  ((i.action = U.STORE_BASE_URL + `cart/addtocart?redirect=1`),
     (i.method = `POST`),
     (i.style.display = `none`),
     kH(document, i, `action`, `add_to_cart`),
@@ -34294,7 +34308,7 @@ function AH(e, t, n) {
     kH(document, i, `sessionid`, uu()),
     kH(document, i, `snr`, U.SNR),
     r.document.documentElement.append(i),
-    i.submit();
+    i.submit());
 }
 function jH(e, t) {
   if (!e.renewal_time_amount || !t) return 0;
@@ -34321,7 +34335,7 @@ function MH(e, t) {
 var NH = E((e) => {
     let t = ps(),
       n = (n) => {
-        AH(n, e.sub_package_id, t), n.preventDefault();
+        (AH(n, e.sub_package_id, t), n.preventDefault());
       },
       {
         language: r,
@@ -34343,7 +34357,7 @@ var NH = E((e) => {
       }));
     let m = pH.GetPackageInfo(a),
       h = pH.GetPackageInfo(o);
-    if (!m || (!h && o)) return pH.LoadPackageInfo([a, o]), null;
+    if (!m || (!h && o)) return (pH.LoadPackageInfo([a, o]), null);
     if (!m.formatted_final_price) return null;
     let g = m.formatted_final_price,
       _ = m.discount_end_rtime;
@@ -34578,9 +34592,9 @@ var FH = `-qssch4aLfM-`,
       c = s === 1,
       l = s === 2,
       [u, d] = q.useState(!1);
-    if (!i) return console.error(`Unsupported genre`, n), t?.(), null;
+    if (!i) return (console.error(`Unsupported genre`, n), t?.(), null);
     let f = async (e) => {
-        (s && s != e) || d(!0), s || (await o(e));
+        ((s && s != e) || d(!0), s || (await o(e)));
       },
       p = q.useId(),
       m = q.useRef(null);
@@ -34854,12 +34868,12 @@ var _U = class e {
     } catch (e) {
       t = ss(e);
     }
-    (this.m_mapPlaytime = e),
+    ((this.m_mapPlaytime = e),
       t &&
         console.error(
           `CDLCForYouStore.LoadPlaytime failed: ` + t.strErrorMsg,
           t,
-        );
+        ));
   }
   GetSortKey(e, t, n) {
     return `${e}_${t || `*`}_${n || `*`}`;
@@ -34882,12 +34896,12 @@ var _U = class e {
     let r = [],
       i = null;
     try {
-      await Promise.all([this.LoadPlaytime(), G.Get().HintLoad()]),
+      (await Promise.all([this.LoadPlaytime(), G.Get().HintLoad()]),
         (r = Array.from(this.m_mapPlaytime.keys())),
-        (r = r.filter((e) => G.Get().BIsGameOwned(e)));
+        (r = r.filter((e) => G.Get().BIsGameOwned(e))));
       let i = [],
         a = [];
-      t &&
+      (t &&
         ((i = r.filter((e) => this.m_mapPlaytime.get(e).playtime < t * 60)),
         (r = r.filter((e) => this.m_mapPlaytime.get(e).playtime >= t * 60))),
         n &&
@@ -34933,16 +34947,16 @@ var _U = class e {
                 this.m_mapPlaytime.get(t).last_played -
                 this.m_mapPlaytime.get(e).last_played,
             )),
-        (r = r.concat(a).concat(i));
+        (r = r.concat(a).concat(i)));
     } catch (e) {
       i = ss(e);
     }
-    this.m_mapOwnedApps.set(this.GetSortKey(e, t, n), r),
+    (this.m_mapOwnedApps.set(this.GetSortKey(e, t, n), r),
       i &&
         console.error(
           `CDLCForYouStore.InternalLoadOwnedApps failed: ` + i.strErrorMsg,
           i,
-        );
+        ));
   }
   BIsDLCLoaded(e) {
     return this.m_mapDLC.has(JSON.stringify(e));
@@ -35002,12 +35016,12 @@ var _U = class e {
     } catch (e) {
       n = ss(e);
     }
-    this.m_mapDLC.set(JSON.stringify(e), t),
+    (this.m_mapDLC.set(JSON.stringify(e), t),
       n &&
         console.error(
           `CDLCForYouStore.InternalLoadDLC failed: ` + n.strErrorMsg,
           n,
-        );
+        ));
   }
   async InternalLoadDLCFromDiscoveryQueue(e) {
     let t = [],
@@ -35057,18 +35071,18 @@ var _U = class e {
           e.nTabID && e.strTabFilter)
         ) {
           let t = r.Body().store_page_filter().add_store_filters();
-          t.set_filter_json(e.strTabFilter),
-            t.set_cache_key(e.strTabFilterCacheKey || e.nTabID.toString());
+          (t.set_filter_json(e.strTabFilter),
+            t.set_cache_key(e.strTabFilterCacheKey || e.nTabID.toString()));
         }
         if (e.nSectionID && e.strSectionFilter) {
           let t = r.Body().store_page_filter().add_store_filters();
-          t.set_filter_json(e.strSectionFilter),
-            t.set_cache_key(e.nSectionID.toString());
+          (t.set_filter_json(e.strSectionFilter),
+            t.set_cache_key(e.nSectionID.toString()));
         }
         if (e.nFacetCount && e.strFacetURLParam && e.strFacetFilter) {
           let t = r.Body().store_page_filter().add_store_filters();
-          t.set_filter_json(e.strFacetFilter),
-            t.set_cache_key(e.strFacetURLParam);
+          (t.set_filter_json(e.strFacetFilter),
+            t.set_cache_key(e.strFacetURLParam));
         }
       } else
         e.nSaleTagID &&
@@ -35085,12 +35099,12 @@ var _U = class e {
     } catch (e) {
       n = ss(e);
     }
-    this.m_mapDLC.set(JSON.stringify(e), t),
+    (this.m_mapDLC.set(JSON.stringify(e), t),
       n &&
         console.error(
           `CDLCForYouStore.InternalLoadDLC failed: ` + n.strErrorMsg,
           n,
-        );
+        ));
   }
   GetAppKey(e, t) {
     return JSON.stringify(e) + `_` + t;
@@ -35130,9 +35144,9 @@ var _U = class e {
     try {
       await G.Get().HintLoad();
       let i = Gl.Init($l);
-      i.Body().context().set_language(U.LANGUAGE),
+      (i.Body().context().set_language(U.LANGUAGE),
         i.Body().context().set_elanguage(Hl(U.LANGUAGE)),
-        i.Body().context().set_country_code(U.COUNTRY);
+        i.Body().context().set_country_code(U.COUNTRY));
       for (let t of e) i.Body().add_appids(t);
       if (
         (i.Body().set_flavor(t.strFlavor || `popular`),
@@ -35158,18 +35172,18 @@ var _U = class e {
           t.nTabID && t.strTabFilter)
         ) {
           let e = i.Body().store_page_filter().add_store_filters();
-          e.set_filter_json(t.strTabFilter),
-            e.set_cache_key(t.strTabFilterCacheKey || t.nTabID.toString());
+          (e.set_filter_json(t.strTabFilter),
+            e.set_cache_key(t.strTabFilterCacheKey || t.nTabID.toString()));
         }
         if (t.nSectionID && t.strSectionFilter) {
           let e = i.Body().store_page_filter().add_store_filters();
-          e.set_filter_json(t.strSectionFilter),
-            e.set_cache_key(t.nSectionID.toString());
+          (e.set_filter_json(t.strSectionFilter),
+            e.set_cache_key(t.nSectionID.toString()));
         }
         if (t.nFacetCount && t.strFacetURLParam && t.strFacetFilter) {
           let e = i.Body().store_page_filter().add_store_filters();
-          e.set_filter_json(t.strFacetFilter),
-            e.set_cache_key(t.strFacetURLParam);
+          (e.set_filter_json(t.strFacetFilter),
+            e.set_cache_key(t.strFacetURLParam));
         }
       }
       let a = await cl.GetDLCForAppsSolr(this.m_anonymousServiceTransport, i);
@@ -35258,13 +35272,13 @@ var _U = class e {
     } catch (e) {
       i = ss(e);
     }
-    this.m_mapPopularDLCByApp.set(JSON.stringify(e), r),
+    (this.m_mapPopularDLCByApp.set(JSON.stringify(e), r),
       i &&
         console.error(
           `CDLCForYouStore.InternalLoadPopularDLCByApp failed: ` +
             i.strErrorMsg,
           i,
-        );
+        ));
   }
   BIsDLCStatsLoaded() {
     return !!this.m_dlcStats;
@@ -35296,23 +35310,23 @@ var _U = class e {
     } catch (e) {
       t = ss(e);
     }
-    (this.m_dlcStats = e),
+    ((this.m_dlcStats = e),
       t &&
         console.error(
           `CDLCForYouStore.LoadDLCStats failed: ` + t.strErrorMsg,
           t,
-        );
+        ));
   }
   constructor() {
     if (!this.m_serviceTransport) {
       let e = ys(`loyalty_webapi_token`, `application_config`),
         t = sc(new Us(U.WEBAPI_BASE_URL, e || void 0));
-      (this.m_serviceTransport = t.GetServiceTransport()),
-        (this.m_anonymousServiceTransport = t.GetAnonymousServiceTransport());
+      ((this.m_serviceTransport = t.GetServiceTransport()),
+        (this.m_anonymousServiceTransport = t.GetAnonymousServiceTransport()));
     }
   }
   static Get() {
-    return (e.s_singleton ||= new e()), e.s_singleton;
+    return ((e.s_singleton ||= new e()), e.s_singleton);
   }
 };
 function vU(e, t, n, r, i, a, o) {
@@ -35339,13 +35353,13 @@ function vU(e, t, n, r, i, a, o) {
                     t.get(n.GetParentAppID()).push(e));
                 });
                 let n = [];
-                t.forEach((e) => {
+                (t.forEach((e) => {
                   n.push(e);
                 }),
                   B.Get().HintLoadStoreApps(Array.from(t.keys()), _o),
                   f(n.slice(0, i)),
                   m(n.length > i),
-                  c(!1);
+                  c(!1));
               })
           : (f([e]), c(!1));
       } else {
@@ -35377,7 +35391,7 @@ function vU(e, t, n, r, i, a, o) {
                 )
                 .then(() => {
                   let e = _U.Get().GetPopularDLCByApp(s);
-                  f(e.slice(0, i)), m(e.length > i), c(!1);
+                  (f(e.slice(0, i)), m(e.length > i), c(!1));
                 })
             : _U
                 .Get()
@@ -35387,16 +35401,16 @@ function vU(e, t, n, r, i, a, o) {
                   i,
                 )
                 .then((e) => {
-                  u(_U.Get().GetPlaytime()),
+                  (u(_U.Get().GetPlaytime()),
                     f(e.rgDLC),
                     m(e.bMoreAvailable),
-                    c(!1);
+                    c(!1));
                 })
           : _U
               .Get()
               .LoadDLC(s)
               .then(() => {
-                f([_U.Get().GetDLC(s)]), c(!1);
+                (f([_U.Get().GetDLC(s)]), c(!1));
               });
       }
     }, [e, o, n, i, t, t.dlc_for_you_data, r, a]),
@@ -35632,10 +35646,10 @@ function jU(e) {
   let { countDownUntil: t, fnCallbackOnZero: n, ...r } = e,
     [i, a] = (0, q.useState)(Math.floor(Math.max(0, t.getTime() - p()) / 1e3)),
     o = q.useRef(null);
-  q.useEffect(() => (PU(o, t, a), () => NU(o)), [t]),
+  (q.useEffect(() => (PU(o, t, a), () => NU(o)), [t]),
     q.useEffect(() => {
       i == 0 && n && n();
-    }, [n, i]);
+    }, [n, i]));
   let s = Math.floor(i / Wu.PerHour),
     c = Math.floor((i - s * Wu.PerHour) / Wu.PerMinute),
     l = Math.floor(i - (s * Wu.PerHour + c * Wu.PerMinute));
@@ -35655,7 +35669,8 @@ function PU(e, t, n) {
   NU(e);
   let r = p(),
     i = Math.floor(Math.max(0, t.getTime() - r) / 1e3);
-  n(i), i >= 0 && e && (e.current = window.setTimeout(() => PU(e, t, n), 1e3));
+  (n(i),
+    i >= 0 && e && (e.current = window.setTimeout(() => PU(e, t, n), 1e3)));
 }
 var FU = `semGMZ8pb2Y-`,
   IU = `lVLOX8h0TJQ-`,
@@ -35894,7 +35909,7 @@ function WU(e) {
     { bVisible: c, ref: l } = Ac(),
     u = (0, q.useRef)(void 0),
     d = (0, q.useRef)(void 0);
-  (0, q.useEffect)(() => {
+  ((0, q.useEffect)(() => {
     r(c);
   }, [c, r]),
     (0, q.useEffect)(() => {
@@ -35919,7 +35934,7 @@ function WU(e) {
           (d.current = null),
           !c && n && i.current[o] && s(o));
     }, [c, n, i, o, s]),
-    (0, q.useEffect)(() => () => d.current && d.current(), []);
+    (0, q.useEffect)(() => () => d.current && d.current(), []));
   let f = (0, q.useCallback)(() => {
       s(a);
     }, [a, s]),
@@ -35984,7 +35999,7 @@ function JU(e) {
             (e.push(v), localStorage.setItem(KU, JSON.stringify(e)));
         }
         let t = ((e % y) + y) % y;
-        h(t), _(!1);
+        (h(t), _(!1));
       },
       [x, v, y],
     ),
@@ -36032,7 +36047,7 @@ function YU(e, t, n, r, i, a, o, s, c, l) {
     b = QU(e, t, `trailercarousel`),
     x = q.useMemo(() => new Map(), []),
     S = q.useMemo(() => new Map(), []);
-  $U(b, x), $U(b, S);
+  ($U(b, x), $U(b, S));
   let [C] = ti(nr, void 0);
   q.useEffect(() => {
     if (t.enable_faceted_browsing) return;
@@ -36057,19 +36072,19 @@ function YU(e, t, n, r, i, a, o, s, c, l) {
           d,
           (e) => tW(e, x),
         );
-        (p = p.filter((e) => e.type != null && pe(e.type))),
+        ((p = p.filter((e) => e.type != null && pe(e.type))),
           t.trailer_carousel_allow_apps_without_trailers ||
             (p = p.filter((e) =>
               B.Get()
                 .GetApp(e.id)
                 ?.BHasTrailers(g == `blocked`),
-            ));
+            )));
         let v = p.slice(c, c + qU).map((e) => e.id);
-        await Promise.all([
+        (await Promise.all([
           B.Get().QueueMultipleAppRequests(v, To),
           Lx(_, y, v, t.prefer_demo_store_page),
         ]),
-          !d.signal.aborted && (m((l ?? []).concat(p)), f(!1));
+          !d.signal.aborted && (m((l ?? []).concat(p)), f(!1)));
       })(),
       () => {
         d.abort();
@@ -36143,18 +36158,18 @@ function $U(e, t) {
     let n;
     try {
       let r = window.localStorage.getItem(e);
-      (n = r && JSON.parse(r)),
+      ((n = r && JSON.parse(r)),
         n?.every((e) => `appid` in e && `count` in e) &&
           n.forEach(({ appid: e, count: n }) => {
             t.set(e, n);
-          });
+          }));
     } catch {}
   }, [t, e]);
 }
 function eW(e, t) {
   let n = [];
-  t.forEach((e, t) => n.push({ appid: t, count: e })),
-    window.localStorage.setItem(e, JSON.stringify(n));
+  (t.forEach((e, t) => n.push({ appid: t, count: e })),
+    window.localStorage.setItem(e, JSON.stringify(n)));
 }
 function tW(e, t) {
   return e
@@ -36295,12 +36310,12 @@ function pW(e) {
       t = Math.round(e / 3600) * 3600,
       n = Qs(new Date(t * 1e3)),
       r = pc(t);
-    (u = z(`#SaleSectionNextFestHeader_ExplorationMode_DescriptionNotReady1`)),
+    ((u = z(`#SaleSectionNextFestHeader_ExplorationMode_DescriptionNotReady1`)),
       (d = z(
         `#SaleSectionNextFestHeader_ExplorationMode_DescriptionNotReady2`,
         n,
         r,
-      ));
+      )));
   }
   let f = (e) => {
       a && (Qr(n, { [nr]: e }), l(e));

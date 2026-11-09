@@ -101,8 +101,8 @@ function D() {
       if (t) {
         let n = new URL(window.location.href),
           r = new URLSearchParams(n.search);
-        r.set(`utm_bid`, t),
-          (e += n.origin + n.pathname + `?` + r.toString() + n.hash);
+        (r.set(`utm_bid`, t),
+          (e += n.origin + n.pathname + `?` + r.toString() + n.hash));
       } else e += window.location.href;
       window.location.href = e;
     }, []),

@@ -5,9 +5,9 @@ var e = class extends Event {
     oldState;
     newState;
     constructor(e, { oldState: t = ``, newState: n = ``, ...r } = {}) {
-      super(e, r),
+      (super(e, r),
         (this.oldState = String(t || ``)),
-        (this.newState = String(n || ``));
+        (this.newState = String(n || ``)));
     }
   },
   t = new WeakMap();
@@ -72,7 +72,7 @@ function h(e) {
       : e;
 }
 function g(e) {
-  for (; e; ) {
+  for (; e;) {
     if (
       e instanceof HTMLElement &&
       e.popover === `auto` &&
@@ -88,7 +88,7 @@ function g(e) {
   }
 }
 function _(e) {
-  for (; e; ) {
+  for (; e;) {
     let t = e.popoverTargetElement;
     if (t instanceof HTMLElement) return t;
     if (
@@ -103,8 +103,8 @@ function v(e) {
   let t = new Map(),
     n = 0,
     r = e.ownerDocument;
-  for (let e of o.get(r) || []) t.set(e, n), (n += 1);
-  t.set(e, n), (n += 1);
+  for (let e of o.get(r) || []) (t.set(e, n), (n += 1));
+  (t.set(e, n), (n += 1));
   let i = null;
   function a(e) {
     let n = g(e);
@@ -112,7 +112,7 @@ function v(e) {
     let r = t.get(n);
     (i === null || t.get(i) < r) && (i = n);
   }
-  return a(e?.parentElement), i;
+  return (a(e?.parentElement), i);
 }
 function y(e) {
   return e.hidden ||
@@ -147,7 +147,7 @@ function b(e) {
   }
   let r = e.ownerDocument.createTreeWalker(t, NodeFilter.SHOW_ELEMENT),
     i = r.currentNode;
-  for (; i; ) {
+  for (; i;) {
     if (y(i)) return i;
     i = r.nextNode();
   }
@@ -176,9 +176,9 @@ function C(t) {
     if ((E(v(t) || r, !1, !0), e !== t.getAttribute(`popover`) || !d(t, !1)))
       return;
   }
-  m(r) || (i = !0), S.delete(t);
+  (m(r) || (i = !0), S.delete(t));
   let c = r.activeElement;
-  t.classList.add(`:popover-open`),
+  (t.classList.add(`:popover-open`),
     s.set(t, `showing`),
     a.has(r) || a.set(r, new Set()),
     a.get(r).add(t),
@@ -186,7 +186,7 @@ function C(t) {
     t.popover === `auto` &&
       (o.has(r) || o.set(r, new Set()), o.get(r).add(t), A(l.get(t), !0)),
     i && c && t.popover === `auto` && S.set(t, c),
-    n(t, `closed`, `open`);
+    n(t, `closed`, `open`));
 }
 function w(t, r = !1, i = !1) {
   if (!d(t, !0)) return;
@@ -202,17 +202,17 @@ function w(t, r = !1, i = !1) {
       !d(t, !0)))
   )
     return;
-  a.get(c)?.delete(t),
+  (a.get(c)?.delete(t),
     o.get(c)?.delete(t),
     t.classList.remove(`:popover-open`),
     s.set(t, `hidden`),
-    i && n(t, `open`, `closed`);
+    i && n(t, `open`, `closed`));
   let u = S.get(t);
   u && (S.delete(t), r && u.focus());
 }
 function T(e, t = !1, n = !1) {
   let r = m(e);
-  for (; r; ) w(r, t, n), (r = m(e));
+  for (; r;) (w(r, t, n), (r = m(e)));
 }
 function E(e, t, n) {
   let r = e.ownerDocument || e;
@@ -226,7 +226,7 @@ function E(e, t, n) {
       break;
     }
   if (!a) return T(r, t, n);
-  for (; i && c(i) === `showing` && o.get(r)?.size; ) w(i, t, n);
+  for (; i && c(i) === `showing` && o.get(r)?.size;) w(i, t, n);
 }
 var D = new WeakMap();
 function O(e) {
@@ -239,7 +239,7 @@ function O(e) {
   if (r && e.type === `pointerdown`) D.set(n, r);
   else if (e.type === `pointerup`) {
     let e = D.get(n) === r;
-    D.delete(n), e && E(r || n, !1, !0);
+    (D.delete(n), e && E(r || n, !1, !0));
   }
 }
 var k = new WeakMap();
@@ -332,14 +332,14 @@ var P = /(^|[^\\]):popover-open\b/g,
 function L(e) {
   if (I === null)
     try {
-      (I = new CSSStyleSheet()), I.replaceSync(F);
+      ((I = new CSSStyleSheet()), I.replaceSync(F));
     } catch {
       I = !1;
     }
   if (I === !1) {
     let t = document.createElement(`style`);
-    (t.textContent = F),
-      e instanceof Document ? e.head.prepend(t) : e.prepend(t);
+    ((t.textContent = F),
+      e instanceof Document ? e.head.prepend(t) : e.prepend(t));
   } else e.adoptedStyleSheets = [I, ...e.adoptedStyleSheets];
 }
 function R() {
@@ -350,7 +350,7 @@ function R() {
       e
     );
   }
-  N(Document.prototype, `querySelector`, t),
+  (N(Document.prototype, `querySelector`, t),
     N(Document.prototype, `querySelectorAll`, t),
     N(Element.prototype, `querySelector`, t),
     N(Element.prototype, `querySelectorAll`, t),
@@ -394,7 +394,7 @@ function R() {
             : (e === void 0 || e === !0) && C(this);
         },
       },
-    });
+    }));
   let n = Element.prototype.attachShadow;
   n &&
     Object.defineProperties(Element.prototype, {
@@ -404,7 +404,7 @@ function R() {
         writable: !0,
         value(e) {
           let t = n.call(this, e);
-          return L(t), t;
+          return (L(t), t);
         },
       },
     });
@@ -417,7 +417,7 @@ function R() {
         writable: !0,
         value() {
           let e = r.call(this);
-          return e.shadowRoot && L(e.shadowRoot), e;
+          return (e.shadowRoot && L(e.shadowRoot), e);
         },
       },
     });
@@ -428,9 +428,10 @@ function R() {
         enumerable: !0,
         configurable: !0,
         set(e) {
-          if (e === null) this.removeAttribute(`popovertarget`), i.delete(this);
+          if (e === null)
+            (this.removeAttribute(`popovertarget`), i.delete(this));
           else if (e instanceof Element)
-            this.setAttribute(`popovertarget`, ``), i.set(this, e);
+            (this.setAttribute(`popovertarget`, ``), i.set(this, e));
           else
             throw TypeError(`popoverTargetElement must be an element or null`);
         },
@@ -447,7 +448,7 @@ function R() {
             return null;
           let e = i.get(this);
           if (e && e.isConnected) return e;
-          if (e && !e.isConnected) return i.delete(this), null;
+          if (e && !e.isConnected) return (i.delete(this), null);
           let t = h(this),
             n = this.getAttribute(`popovertarget`);
           return (
@@ -473,7 +474,7 @@ function R() {
       },
     });
   }
-  a(HTMLButtonElement), a(HTMLInputElement);
+  (a(HTMLButtonElement), a(HTMLInputElement));
   let o = (e) => {
       let t = e.composedPath()[0];
       if (!(t instanceof Element) || t?.shadowRoot) return;
@@ -490,12 +491,12 @@ function R() {
         (t === `Escape` || t === `Esc`) &&
         E(n.ownerDocument, !0, !0);
     };
-  ((e) => {
-    e.addEventListener(`click`, o),
+  (((e) => {
+    (e.addEventListener(`click`, o),
       e.addEventListener(`keydown`, c),
       e.addEventListener(`pointerdown`, O),
-      e.addEventListener(`pointerup`, O);
+      e.addEventListener(`pointerup`, O));
   })(document),
-    L(document);
+    L(document));
 }
 export { R as apply, M as isSupported };

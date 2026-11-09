@@ -1043,9 +1043,8 @@
   margin-right: 12px;
 }
 body.profile_edit_page {
-  background:
-    linear-gradient(#262d33 -3.38%, #1d1e20 78.58%) 0 0 / auto 100% no-repeat
-    fixed;
+  background: linear-gradient(#262d33 -3.38%, #1d1e20 78.58%) 0 0/auto 100%
+    no-repeat fixed;
   font-family:
     Motiva Sans,
     Motiva Sans fallback,

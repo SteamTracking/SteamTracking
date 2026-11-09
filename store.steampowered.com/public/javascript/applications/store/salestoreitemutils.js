@@ -93,7 +93,7 @@ function z(e) {
 }
 function B(e, t) {
   let n = [];
-  return e && H(n, e, t), n.filter((e) => !!e);
+  return (e && H(n, e, t), n.filter((e) => !!e));
 }
 function V(e, t) {
   return {
@@ -211,10 +211,10 @@ var J = class {
   default_selection_priority = 0;
   current_selection_priority = 0;
 };
-T([t], J.prototype, `title`, void 0),
+(T([t], J.prototype, `title`, void 0),
   T([t], J.prototype, `viewer_count`, void 0),
   T([t], J.prototype, `gamedata_subtitle`, void 0),
-  T([t], J.prototype, `current_selection_priority`, void 0);
+  T([t], J.prototype, `current_selection_priority`, void 0));
 var he = `primary`,
   ge = `featured`,
   _e = `default_featured`,
@@ -468,7 +468,7 @@ function ke(e, t) {
     case `library`:
       return !!e.hero_capsule || !!e.library_capsule;
     default:
-      return w(t, `Unhandled imageType: ${t}`), !1;
+      return (w(t, `Unhandled imageType: ${t}`), !1);
   }
 }
 export {

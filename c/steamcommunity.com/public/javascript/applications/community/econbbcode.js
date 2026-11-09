@@ -141,7 +141,7 @@ function _(_, _, _, _) {
     queryFn: async () => {
       let _ = await _.fetchQuery(_(_, _, _)),
         _ = new Map();
-      return _.property_schemas.forEach((_) => _.set(_._, _)), _;
+      return (_.property_schemas.forEach((_) => _.set(_._, _)), _);
     },
   };
 }
@@ -162,7 +162,7 @@ function _(_, _, _) {
   };
 }
 var _ = {};
-(_.arabic = () => _(() => import(`./economy_arabic.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./economy_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
     _(() => import(`./economy_brazilian.js`), [], import.meta.url)),
   (_.bulgarian = () =>
@@ -218,7 +218,7 @@ var _ = {};
   (_.ukrainian = () =>
     _(() => import(`./economy_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./economy_vietnamese.js`), [], import.meta.url));
+    _(() => import(`./economy_vietnamese.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -549,12 +549,12 @@ function _(_, _, _, _, _) {
     _?.asset_properties &&
       _.asset_properties.forEach((_) => {
         let _ = ``;
-        _.float_value === void 0
+        (_.float_value === void 0
           ? _.int_value === void 0
             ? _.string_value !== void 0 && (_ = _.string_value)
             : (_ = _.int_value.toString())
           : (_ = _.float_value.toString()),
-          (_ = _.replace(`%propid:${_.propertyid}%`, _));
+          (_ = _.replace(`%propid:${_.propertyid}%`, _)));
       }),
     (_ = _.replace(/%propid:[0-9]+%/, ``)),
     _
@@ -1207,13 +1207,13 @@ function _(_, _, _, _ = _.GetAssetClassInfo) {
 function _(_, _, _, _ = _.GetAssetClassInfo) {
   return new _.default(async (_) => {
     let _ = _.Init(_);
-    _.Body().set_language(_),
+    (_.Body().set_language(_),
       _.Body().set_appid(_),
       _.forEach((_) => {
         let [_, _] = _.split(`_`),
           _ = _.Body().add_classes();
-        _.set_classid(_), _.set_instanceid(_);
-      });
+        (_.set_classid(_), _.set_instanceid(_));
+      }));
     let _ = await _(_, _);
     if (_.GetEResult() != 1)
       throw `Error loading econ items: ${_.GetErrorMessage()}`;
@@ -1228,10 +1228,10 @@ function _(_) {
       let _ = _.current;
       if (_ && _.deltaY != 0) {
         let _ = _.scrollTop;
-        _.scrollBy({
+        (_.scrollBy({
           top: _.deltaY,
         }),
-          _.scrollTop != _ && _.preventDefault();
+          _.scrollTop != _ && _.preventDefault());
       }
     }, []),
     _ = _(`wheel`, _, {
@@ -1443,4 +1443,3 @@ function _(_) {
   let _ = parseInt(_.children?.toString() ?? `0`);
   return _ ? new Date(_ * 1e3).toLocaleString(_()) : null;
 }
-export { _, _, _, _ };

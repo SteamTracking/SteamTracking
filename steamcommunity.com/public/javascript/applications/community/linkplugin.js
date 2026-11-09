@@ -37,7 +37,7 @@ var d = e(t(), 1),
                       .marks()
                       .find((e) => e.type == t),
                     s = e && r(e.attrs.href);
-                  if (s) return p.current(s, o.view), o.preventDefault(), !0;
+                  if (s) return (p.current(s, o.view), o.preventDefault(), !0);
                 }
                 return !1;
               },
@@ -72,7 +72,7 @@ var d = e(t(), 1),
                 for (let e of s) {
                   let { node: t, pos: n, rgNodes: r } = e,
                     i = o.content.cut(d, n).append(a.from(r));
-                  c.insert(u, i), (u += i.size + 2), (d = n + t.nodeSize);
+                  (c.insert(u, i), (u += i.size + 2), (d = n + t.nodeSize));
                 }
                 return (
                   c.insert(u, o.content.cut(d)),
@@ -90,7 +90,7 @@ var d = e(t(), 1),
                   )
                     if (e.nodeName == `A` && `getBoundingClientRect` in e) {
                       let t = e.getBoundingClientRect();
-                      g(t.left + t.width / 2), b(t.bottom + 2), S(e);
+                      (g(t.left + t.width / 2), b(t.bottom + 2), S(e));
                       return;
                     }
                   S(void 0);

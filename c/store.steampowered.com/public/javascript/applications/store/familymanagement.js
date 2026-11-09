@@ -161,7 +161,7 @@ function _(_, _, _) {
         _ = Math.round((Date.now() - _) * 100) / 100,
         _ = _ / 16,
         _ = (_, _) => {
-          for (_ = String(_); _.length < _; ) _ = ` ` + _;
+          for (_ = String(_); _.length < _;) _ = ` ` + _;
           return _;
         };
       console.info(
@@ -173,7 +173,7 @@ function _(_, _, _) {
         _?.key,
       );
     }
-    return (_ = _?.onChange) == null || _.call(_, _), _;
+    return ((_ = _?.onChange) == null || _.call(_, _), _);
   }
   return (
     (_.updateDeps = (_) => {
@@ -190,7 +190,7 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
   _ = (_, _, _) => {
     let _;
     return function (..._) {
-      _.clearTimeout(_), (_ = _.setTimeout(() => _.apply(this, _), _));
+      (_.clearTimeout(_), (_ = _.setTimeout(() => _.apply(this, _), _)));
     };
   },
   _ = (_) => {
@@ -288,17 +288,17 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
             ),
       _ = (_) => () => {
         let { horizontal: _, isRtl: _ } = _.options;
-        (_ = _ ? _.scrollLeft * ((_ && -1) || 1) : _.scrollTop), _(), _(_, _);
+        ((_ = _ ? _.scrollLeft * ((_ && -1) || 1) : _.scrollTop), _(), _(_, _));
       },
       _ = _(!0),
       _ = _(!1);
-    _(), _.addEventListener(`scroll`, _, _);
+    (_(), _.addEventListener(`scroll`, _, _));
     let _ = _.options.useScrollendEvent && _;
     return (
       _ && _.addEventListener(`scrollend`, _, _),
       () => {
-        _.removeEventListener(`scroll`, _),
-          _ && _.removeEventListener(`scrollend`, _);
+        (_.removeEventListener(`scroll`, _),
+          _ && _.removeEventListener(`scrollend`, _));
       }
     );
   },
@@ -319,17 +319,17 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
               _.options.isScrollingResetDelay,
             ),
       _ = (_) => () => {
-        (_ = _[_.options.horizontal ? `scrollX` : `scrollY`]), _(), _(_, _);
+        ((_ = _[_.options.horizontal ? `scrollX` : `scrollY`]), _(), _(_, _));
       },
       _ = _(!0),
       _ = _(!1);
-    _(), _.addEventListener(`scroll`, _, _);
+    (_(), _.addEventListener(`scroll`, _, _));
     let _ = _.options.useScrollendEvent && _;
     return (
       _ && _.addEventListener(`scrollend`, _, _),
       () => {
-        _.removeEventListener(`scroll`, _),
-          _ && _.removeEventListener(`scrollend`, _);
+        (_.removeEventListener(`scroll`, _),
+          _ && _.removeEventListener(`scrollend`, _));
       }
     );
   },
@@ -361,7 +361,7 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
   },
   _ = class {
     constructor(_) {
-      (this.unsubs = []),
+      ((this.unsubs = []),
         (this.scrollElement = null),
         (this.targetWindow = null),
         (this.isScrolling = !1),
@@ -392,7 +392,7 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
           return {
             disconnect: () => {
               var _;
-              (_ = _()) == null || _.disconnect(), (_ = null);
+              ((_ = _()) == null || _.disconnect(), (_ = null));
             },
             observe: (_) =>
               _()?.observe(_, {
@@ -403,7 +403,7 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
         })()),
         (this.range = null),
         (this.setOptions = (_) => {
-          Object.entries(_).forEach(([_, _]) => {
+          (Object.entries(_).forEach(([_, _]) => {
             _ === void 0 && delete _[_];
           }),
             (this.options = {
@@ -434,7 +434,7 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
               useScrollendEvent: !1,
               useAnimationFrameWithResizeObserver: !1,
               ..._,
-            });
+            }));
         }),
         (this.notify = (_) => {
           var _, _;
@@ -463,11 +463,11 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
           },
         )),
         (this.cleanup = () => {
-          this.unsubs.filter(Boolean).forEach((_) => _()),
+          (this.unsubs.filter(Boolean).forEach((_) => _()),
             (this.unsubs = []),
             this.observer.disconnect(),
             (this.scrollElement = null),
-            (this.targetWindow = null);
+            (this.targetWindow = null));
         }),
         (this._didMount = () => () => {
           this.cleanup();
@@ -479,7 +479,7 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
               this.maybeNotify();
               return;
             }
-            (this.scrollElement = _),
+            ((this.scrollElement = _),
               (this.targetWindow =
                 this.scrollElement && `ownerDocument` in this.scrollElement
                   ? this.scrollElement.ownerDocument.defaultView
@@ -493,12 +493,12 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
               }),
               this.unsubs.push(
                 this.options.observeElementRect(this, (_) => {
-                  (this.scrollRect = _), this.maybeNotify();
+                  ((this.scrollRect = _), this.maybeNotify());
                 }),
               ),
               this.unsubs.push(
                 this.options.observeElementOffset(this, (_, _) => {
-                  (this.scrollAdjustments = 0),
+                  ((this.scrollAdjustments = 0),
                     (this.scrollDirection = _
                       ? this.getScrollOffset() < _
                         ? `forward`
@@ -506,9 +506,9 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
                       : null),
                     (this.scrollOffset = _),
                     (this.isScrolling = _),
-                    this.maybeNotify();
+                    this.maybeNotify());
                 }),
-              );
+              ));
           }
         }),
         (this.getSize = () =>
@@ -615,7 +615,7 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
                 lane: _,
               };
             }
-            return (this.measurementsCache = _), _;
+            return ((this.measurementsCache = _), _);
           },
           {
             key: !1,
@@ -691,12 +691,12 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
           if (!_) return;
           let _ = _.key,
             _ = this.elementsCache.get(_);
-          _ !== _ &&
+          (_ !== _ &&
             (_ && this.observer.unobserve(_),
             this.observer.observe(_),
             this.elementsCache.set(_, _)),
             _.isConnected &&
-              this.resizeItem(_, this.options.measureElement(_, _, this));
+              this.resizeItem(_, this.options.measureElement(_, _, this)));
         }),
         (this.resizeItem = (_, _) => {
           let _ = this.measurementsCache[_];
@@ -745,8 +745,8 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
         (this.getOffsetForAlignment = (_, _, _ = 0) => {
           let _ = this.getSize(),
             _ = this.getScrollOffset();
-          _ === `auto` && (_ = _ >= _ + _ ? `end` : `start`),
-            _ === `center` ? (_ += (_ - _) / 2) : _ === `end` && (_ -= _);
+          (_ === `auto` && (_ = _ >= _ + _ ? `end` : `start`),
+            _ === `center` ? (_ += (_ - _) / 2) : _ === `end` && (_ -= _));
           let _ = this.getTotalSize() + this.options.scrollMargin - _;
           return Math.max(Math.min(_, _), 0);
         }),
@@ -773,7 +773,7 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
           _,
           { align: _ = `start`, behavior: _ } = {},
         ) => {
-          _ === `smooth` &&
+          (_ === `smooth` &&
             this.isDynamicMode() &&
             console.warn(
               "The `smooth` scroll behavior is not fully supported with dynamic size.",
@@ -781,15 +781,15 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
             this._scrollToOffset(this.getOffsetForAlignment(_, _), {
               adjustments: void 0,
               behavior: _,
-            });
+            }));
         }),
         (this.scrollToIndex = (_, { align: _ = `auto`, behavior: _ } = {}) => {
-          _ === `smooth` &&
+          (_ === `smooth` &&
             this.isDynamicMode() &&
             console.warn(
               "The `smooth` scroll behavior is not fully supported with dynamic size.",
             ),
-            (_ = Math.max(0, Math.min(_, this.options.count - 1)));
+            (_ = Math.max(0, Math.min(_, this.options.count - 1))));
           let _ = 0,
             _ = (_) => {
               if (!this.targetWindow) return;
@@ -799,7 +799,7 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
                 return;
               }
               let [_, _] = _;
-              this._scrollToOffset(_, {
+              (this._scrollToOffset(_, {
                 adjustments: void 0,
                 behavior: _,
               }),
@@ -809,7 +809,7 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
                   _
                     ? _(_[0], _) || _(_)
                     : console.warn(`Failed to get offset for index:`, _);
-                });
+                }));
             },
             _ = (_) => {
               this.targetWindow &&
@@ -823,7 +823,7 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
           _(_);
         }),
         (this.scrollBy = (_, { behavior: _ } = {}) => {
-          _ === `smooth` &&
+          (_ === `smooth` &&
             this.isDynamicMode() &&
             console.warn(
               "The `smooth` scroll behavior is not fully supported with dynamic size.",
@@ -831,7 +831,7 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
             this._scrollToOffset(this.getScrollOffset() + _, {
               adjustments: void 0,
               behavior: _,
-            });
+            }));
         }),
         (this.getTotalSize = () => {
           let _ = this.getMeasurements(),
@@ -841,9 +841,9 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
           else {
             let _ = Array(this.options.lanes).fill(null),
               _ = _.length - 1;
-            for (; _ >= 0 && _.some((_) => _ === null); ) {
+            for (; _ >= 0 && _.some((_) => _ === null);) {
               let _ = _[_];
-              _[_.lane] === null && (_[_.lane] = _.end), _--;
+              (_[_.lane] === null && (_[_.lane] = _.end), _--);
             }
             _ = Math.max(..._.filter((_) => _ !== null));
           }
@@ -863,13 +863,13 @@ var _ = (_, _) => Math.abs(_ - _) < 1.01,
           );
         }),
         (this.measure = () => {
-          (this.itemSizeCache = new Map()), this.notify(!1);
+          ((this.itemSizeCache = new Map()), this.notify(!1));
         }),
-        this.setOptions(_);
+        this.setOptions(_));
     }
   },
   _ = (_, _, _, _) => {
-    for (; _ <= _; ) {
+    for (; _ <= _;) {
       let _ = ((_ + _) / 2) | 0,
         _ = _(_);
       if (_ < _) _ = _ + 1;
@@ -888,19 +888,19 @@ function _({ measurements: _, outerSize: _, scrollOffset: _, lanes: _ }) {
     };
   let _ = _(0, _, _, _),
     _ = _;
-  if (_ === 1) for (; _ < _ && _[_].end < _ + _; ) _++;
+  if (_ === 1) for (; _ < _ && _[_].end < _ + _;) _++;
   else if (_ > 1) {
     let _ = Array(_).fill(0);
-    for (; _ < _ && _.some((_) => _ < _ + _); ) {
+    for (; _ < _ && _.some((_) => _ < _ + _);) {
       let _ = _[_];
-      (_[_.lane] = _.end), _++;
+      ((_[_.lane] = _.end), _++);
     }
     let _ = Array(_).fill(_ + _);
-    for (; _ >= 0 && _.some((_) => _ >= _); ) {
+    for (; _ >= 0 && _.some((_) => _ >= _);) {
       let _ = _[_];
-      (_[_.lane] = _.start), _--;
+      ((_[_.lane] = _.start), _--);
     }
-    (_ = Math.max(0, _ - (_ % _))), (_ = Math.min(_, _ + (_ - 1 - (_ % _))));
+    ((_ = Math.max(0, _ - (_ % _))), (_ = Math.min(_, _ + (_ - 1 - (_ % _)))));
   }
   return {
     startIndex: _,
@@ -916,8 +916,8 @@ function _(_) {
       ..._,
       onChange: (_, _) => {
         var _;
-        _ ? (0, _.flushSync)(_) : _(),
-          (_ = _.onChange) == null || _.call(_, _, _);
+        (_ ? (0, _.flushSync)(_) : _(),
+          (_ = _.onChange) == null || _.call(_, _, _));
       },
     },
     [_] = _.useState(() => new _(_));
@@ -993,7 +993,7 @@ function _(_) {
         }),
         _ = [],
         _ = _;
-      for (; _ && _ != null; ) _.observe(_), _.push(_), (_ = _.parentElement);
+      for (; _ && _ != null;) (_.observe(_), _.push(_), (_ = _.parentElement));
       return () => {
         _.forEach((_) => _.unobserve(_));
       };
@@ -1040,7 +1040,7 @@ var _ = _.forwardRef(function (_, _) {
           _ = _(_, _ == `window` ? null : _),
           _ = _?.getBoundingClientRect(),
           _ = () => {
-            _ != `window` &&
+            (_ != `window` &&
               (_(_ || void 0),
               _((_) => {
                 if (!_) return;
@@ -1054,7 +1054,7 @@ var _ = _.forwardRef(function (_, _) {
                     };
               })),
               _(_),
-              _ || _(_ ? `element` : `window`);
+              _ || _(_ ? `element` : `window`));
           };
         _ ? _() : (0, _.startTransition)(_);
       },
@@ -1138,7 +1138,7 @@ function _(_, _, _) {
       nMargin: _,
       eRowWindow: `all`,
     });
-  (_.current.bPositionKnown = _), (_.current.nMargin = _);
+  ((_.current.bPositionKnown = _), (_.current.nMargin = _));
   let _ = _.useCallback(
     (_, _) =>
       _(_, (_, _) => {
@@ -1152,7 +1152,7 @@ function _(_, _, _) {
     observeElementOffset: _ ? _ : _,
     fnGetRowWindow: (_) => {
       let _ = _ ? _(_, _, _) : `all`;
-      return (_.current.eRowWindow = _), _;
+      return ((_.current.eRowWindow = _), _);
     },
   };
 }
@@ -1342,7 +1342,8 @@ function _(_, _) {
       passive: !0,
     }),
     () => {
-      _.removeEventListener(`scroll`, _), _.removeEventListener(`scrollend`, _);
+      (_.removeEventListener(`scroll`, _),
+        _.removeEventListener(`scrollend`, _));
     }
   );
 }
@@ -1430,12 +1431,12 @@ function _(_) {
     _ = Math.floor(_ / _),
     _ = _.useCallback(
       (_) => {
-        _(_.borderBoxSize[0].inlineSize),
+        (_(_.borderBoxSize[0].inlineSize),
           _ &&
             _(
               _.target.ownerDocument.defaultView?.innerWidth || 0,
               _.borderBoxSize[0].inlineSize,
-            );
+            ));
       },
       [_],
     ),
@@ -1712,8 +1713,12 @@ function _(_) {
   _(_, `#FamilyManagement_ErrorLoadFamilyInviteGeneric`);
   let _ = _(),
     _ = !!_(_(), _);
-  _(_, `#FamilyManagement_ErrorAcceptInvite`, _.k_EFamilyQueryJoinFamily),
-    _(_, `#FamilyManagement_ErrorDeclineInvite`, _.k_EFamilyQueryDeclineInvite);
+  (_(_, `#FamilyManagement_ErrorAcceptInvite`, _.k_EFamilyQueryJoinFamily),
+    _(
+      _,
+      `#FamilyManagement_ErrorDeclineInvite`,
+      _.k_EFamilyQueryDeclineInvite,
+    ));
   let _ = _();
   if (
     (_.isSuccess &&
@@ -1728,22 +1733,22 @@ function _(_) {
       children: (0, _.jsx)(_, {}),
     });
   let _ = () => {
-      _(null),
+      (_(null),
         _.mutate(null, {
           onSuccess: (_) => {
-            _.cooldown_skip_granted() && _(!0),
+            (_.cooldown_skip_granted() && _(!0),
               _.two_factor_method() === 1
                 ? _.IN_MOBILE_WEBVIEW
                   ? (window.location.href = `steammobile://confirmations?first_of_type=11`)
                   : _(`awaitmobile2fa`)
                 : _.two_factor_method() === 2
                   ? _(`awaitemail2fa`)
-                  : _.push(`/account/familymanagement`);
+                  : _.push(`/account/familymanagement`));
           },
-        });
+        }));
     },
     _ = () => {
-      _(null), _.mutate(), _ && _.push(`/account/familymanagement`);
+      (_(null), _.mutate(), _ && _.push(`/account/familymanagement`));
     },
     _ = _.data,
     _ = () => _(!1),
@@ -1849,7 +1854,7 @@ function _(_) {
                     className: void 0,
                     type: `text`,
                     onChange: (_) => {
-                      _(_.target.value), _(null);
+                      (_(_.target.value), _(null));
                     },
                     value: _,
                     placeholder: _(
@@ -2108,7 +2113,7 @@ function _(_) {
       _.data.slot_cooldown_remaining_seconds() > 0 &&
       _.data.slot_cooldown_overrides() === 0,
     _ = (_) => {
-      _(_), _(`selectRole`);
+      (_(_), _(`selectRole`));
     };
   return _ === `splash`
     ? (0, _.jsx)(_, {
@@ -2283,7 +2288,7 @@ function _(_) {
     });
   let _ = _.data,
     _ = (_) => {
-      _(``), _(_);
+      (_(``), _(_));
     };
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -2784,10 +2789,10 @@ function _(_) {
     children: (0, _.jsx)(_, {
       strTitle: _,
       onOK: () => {
-        _(null),
+        (_(null),
           _.mutate(null, {
             onSuccess: () => _.push(_.pathname),
-          });
+          }));
       },
       closeModal: _,
       children: (0, _.jsx)(`div`, {
@@ -2814,7 +2819,7 @@ function _(_) {
     _ = _(),
     { url: _ } = _(),
     _ = () => {
-      _(null), _(), _();
+      (_(null), _(), _());
     },
     _ = () => {
       let _ = new _(_.steamid());
@@ -2923,7 +2928,7 @@ function _(_) {
     { setErrorMessage: _ } = _();
   _(_, `#FamilyManagement_ErrorCancelInvite`, _.k_EFamilyQueryDeclineInvite);
   let _ = () => {
-      _(null), _.mutate();
+      (_(null), _.mutate());
     },
     _ = _(
       `#FamilyManagement_CancelInvitationConfirmationText`,
@@ -2949,7 +2954,7 @@ function _(_) {
       window.location.href = _.COMMUNITY_BASE_URL + `profiles/` + _.steamid();
     },
     _ = () => {
-      _(null), _(), _();
+      (_(null), _(), _());
     },
     _ = _(`#FamilyManagement_ManageDialogTitle`, _?.m_strPlayerName);
   return (0, _.jsxs)(_.Fragment, {
@@ -3024,10 +3029,10 @@ function _(_) {
             children: (0, _.jsxs)(_, {
               strTitle: _(`#FamilyManagement_DeleteFamilyConfirmationTitle`),
               onOK: () => {
-                _(null),
+                (_(null),
                   _.mutate(null, {
                     onSuccess: () => _.push(`/account/familymanagement`),
-                  });
+                  }));
               },
               closeModal: _,
               children: [
@@ -3074,7 +3079,7 @@ function _(_) {
             className: _(_, _),
             noFocusRing: !1,
             onClick: () => {
-              _(null), _();
+              (_(null), _());
             },
             children: _(`#FamilyManagement_DeleteFamilyButton`),
           }),
@@ -3533,7 +3538,7 @@ function _(_) {
 }
 function _(_, _, _) {
   let _ = _.m_strPlayerName;
-  return _ && (_ = _ ? `${_.m_strPlayerName} (${_})` : `${_}*`), _;
+  return (_ && (_ = _ ? `${_.m_strPlayerName} (${_})` : `${_}*`), _);
 }
 function _(_) {
   let _ = new _(_),
@@ -3552,7 +3557,7 @@ function _(_) {
     _ = _?.get(_.appid) || !1,
     _ = _(_),
     _ = _.useCallback(() => {
-      _(_, !_, [_]), _.mutate(_);
+      (_(_, !_, [_]), _.mutate(_));
     }, [_, _, _, _]);
   return !_ || !_ || !_.is_enabled || _.applist_base_id == 0
     ? null
@@ -3577,7 +3582,7 @@ function _(_) {
     { mutateAsync: _ } = _(_.appid),
     _ = _.IN_CLIENT,
     _ = _.useCallback(async () => {
-      await _(!_), _();
+      (await _(!_), _());
     }, [_, _, _]),
     _ = _.useCallback(
       (_) => {
@@ -3663,7 +3668,7 @@ function _(_) {
     _ = _ && _.visible,
     _ = _.useCallback(
       (_) => {
-        _(
+        (_(
           (0, _.jsx)(_, {
             item: _,
             bOwnsGame: _,
@@ -3672,7 +3677,7 @@ function _(_) {
           _,
         ),
           _.stopPropagation(),
-          _.preventDefault();
+          _.preventDefault());
       },
       [_, _, _],
     ),
@@ -3716,7 +3721,7 @@ function _() {
     _,
     _.useCallback((_, _) => {
       let _;
-      (_ = _ <= 500 ? 3 : _ <= 620 ? 5 : 7), _(_);
+      ((_ = _ <= 500 ? 3 : _ <= 620 ? 5 : 7), _(_));
     }, []),
   ];
 }
@@ -4032,7 +4037,7 @@ function _(_) {
     _ & (BigInt(1) << BigInt(_))
       ? _ == -1 && (_ = _)
       : _ != -1 && (_.push(_(_, _)), (_ = -1));
-  return _ != -1 && (_.push(_(_, 48)), (_ = -1)), _.join(`, `);
+  return (_ != -1 && (_.push(_(_, 48)), (_ = -1)), _.join(`, `));
 }
 function _(_, _) {
   return _.members()
@@ -4044,8 +4049,8 @@ function _(_) {
     _ = _(_, _),
     _ = _(_),
     { setErrorMessage: _ } = _();
-  _(_, `#FamilyManagement_ErrorModifyParentalSettingsGeneric`),
-    _(_, `#FamilyManagement_ErrorModifyParentalSettingsGeneric`);
+  (_(_, `#FamilyManagement_ErrorModifyParentalSettingsGeneric`),
+    _(_, `#FamilyManagement_ErrorModifyParentalSettingsGeneric`));
   let [_, _] = (0, _.useState)(``),
     _ = _(_, _),
     _ = _(_),
@@ -4173,7 +4178,7 @@ function _(_) {
     ),
     _ = _.useCallback(
       (_, _) => {
-        _(null), (_.applist_base_id = _.data), _.mutate(_);
+        (_(null), (_.applist_base_id = _.data), _.mutate(_));
       },
       [_, _, _],
     );
@@ -4205,7 +4210,7 @@ function _(_) {
           _.img_icon_hash +
           `.jpg`),
     _ = _.useCallback(() => {
-      _(null), _(_, !_, [_]), _.mutate(_);
+      (_(null), _(_, !_, [_]), _.mutate(_));
     }, [_, _, _, _, _]);
   return (0, _.jsxs)(_, {
     className: _(_, _ && `WKEuj5y5CYU-`),
@@ -4314,7 +4319,7 @@ function _(_) {
       (0, _.jsx)(_, {
         onCancel: _,
         onOK: () => {
-          _(_), _();
+          (_(_), _());
         },
         strOKText: _(`#Parental_GameList_Button_Apply`),
         className: _,
@@ -4406,7 +4411,7 @@ function _(_) {
     queryFn: async () => {
       if (_.length < 2) return [];
       let _ = _.Init(_);
-      _.Body().set_query_name(JSON.stringify(_)),
+      (_.Body().set_query_name(JSON.stringify(_)),
         _.Body().set_search_term(_),
         _(_),
         _(_, {
@@ -4422,7 +4427,7 @@ function _(_) {
           },
         }),
         _.Body().set_max_results(20),
-        _.Body().set_use_spellcheck(!0);
+        _.Body().set_use_spellcheck(!0));
       let _ = await _.SearchSuggestions(_, _);
       return _.BSuccess()
         ? _.Body()
@@ -4490,8 +4495,8 @@ function _(_, _, _) {
         _ = _?.filter((_) => _.app_type == 4 && _.owner_steamids.includes(_));
       return [_, _ ? _?.concat(_ || []) : []];
     }, [_, _, _, _.steamid]);
-  (_ = _?.filter((_) => _.findIndex((_) => _.appid == _.appid) == -1)),
-    (_ = _?.filter((_) => _.findIndex((_) => _.appid == _.appid) == -1));
+  ((_ = _?.filter((_) => _.findIndex((_) => _.appid == _.appid) == -1)),
+    (_ = _?.filter((_) => _.findIndex((_) => _.appid == _.appid) == -1)));
   let _ = _.useMemo(() => {
     let _ = new Map();
     return (
@@ -4593,12 +4598,12 @@ function _(_) {
     _ = (!_ && _?.length) || 0,
     _ = _.useCallback(
       (_) => {
-        _(
+        (_(
           _,
           _,
           _.map((_) => _.appid),
         ),
-          _.mutate(_);
+          _.mutate(_));
       },
       [_, _, _],
     );
@@ -4710,7 +4715,7 @@ function _(_) {
     ),
     _ = _.useCallback(
       (_, _) => {
-        _(_, _, [_.appid]), _.mutate(_);
+        (_(_, _, [_.appid]), _.mutate(_));
       },
       [_, _],
     ),
@@ -4759,7 +4764,7 @@ function _(_) {
     _ = _.useCallback(
       (_) => {
         let _ = _.enabled_features ^ (1 << _);
-        (_.enabled_features = _), _.mutate(_);
+        ((_.enabled_features = _), _.mutate(_));
       },
       [_, _, _],
     );
@@ -4879,20 +4884,20 @@ function _(_) {
     [_, _] = (0, _.useState)(!1),
     _ = (0, _.useRef)(void 0),
     _ = (_) => {
-      _ !== null && !_ && _ !== _ && _(_),
-        _.target.releasePointerCapture(_.pointerId);
+      (_ !== null && !_ && _ !== _ && _(_),
+        _.target.releasePointerCapture(_.pointerId));
     },
     _ = (_) => {
       _.target.releasePointerCapture(_.pointerId);
     },
     _ = (_) => {
-      _(!_), _(!0), _(_), _.target.releasePointerCapture(_.pointerId);
+      (_(!_), _(!0), _(_), _.target.releasePointerCapture(_.pointerId));
     },
     _ = () => {
       _(null);
     },
     _ = () => {
-      !_ && !_ && _(_), _(null), _(!1);
+      (!_ && !_ && _(_), _(null), _(!1));
     };
   return (0, _.jsx)(_, {
     ref: _,
@@ -4985,7 +4990,7 @@ function _(_) {
     className: _,
     closeModal: _,
     onOK: () => {
-      _.mutate(_.current), _();
+      (_.mutate(_.current), _());
     },
     strTitle: (0, _.jsx)(_, {
       className: _,
@@ -5030,13 +5035,13 @@ function _(_) {
   let _ = _.useCallback(
       (_) => {
         let _ = _ ^ (BigInt(1) << BigInt(_));
-        (_.allowed_time_windows = _.toString()), _(_);
+        ((_.allowed_time_windows = _.toString()), _(_));
       },
       [_, _],
     ),
     _ = _.useCallback(
       (_) => {
-        (_.allowed_time_windows = _.toString()), _(_);
+        ((_.allowed_time_windows = _.toString()), _(_));
       },
       [_],
     ),
@@ -5109,7 +5114,7 @@ function _(_) {
 function _(_, _) {
   let _ = BigInt(0),
     _ = BigInt(1) << BigInt(_);
-  for (let _ = _; _ < _; _++) (_ |= _), (_ <<= BigInt(1));
+  for (let _ = _; _ < _; _++) ((_ |= _), (_ <<= BigInt(1)));
   return _;
 }
 function _(_) {
@@ -5131,18 +5136,18 @@ function _(_) {
     _ = _.useCallback(
       (_) => {
         let _ = _;
-        _(_), _ > _ && _(_);
+        (_(_), _ > _ && _(_));
       },
       [_],
     ),
     _ = _.useCallback(
       (_) => {
         let _ = _;
-        (_ =
+        ((_ =
           _.hours() != 0 || _.minutes() != 0
             ? _.day(_.day())
             : _.day(_.day() + 1)),
-          _(_ >= _ ? _ : (0, _.default)(_));
+          _(_ >= _ ? _ : (0, _.default)(_)));
       },
       [_],
     );
@@ -5415,7 +5420,7 @@ function _(_) {
           _ !== -1 && _.splice(_, 1);
         }
       }
-      _(_, _), _.mutate(_);
+      (_(_, _), _.mutate(_));
     },
     _ = !_.excluded_store_content_descriptors.includes(_.valueOf()),
     _ = !_.excluded_community_content_descriptors.includes(_.valueOf());
@@ -5867,13 +5872,13 @@ function _(_) {
   }, [_, _, _]);
   let _ = _.useCallback(() => {
     let _ = new _();
-    _.restrictions(!0).set_allowed_daily_minutes(_ + _),
+    (_.restrictions(!0).set_allowed_daily_minutes(_ + _),
       _.restrictions(!0).set_allowed_time_windows(_.toString()),
       _.set_rtime_expires(_.time_expires()),
       _.mutateAsync({
         bApprove: !0,
         restrictions: _,
-      });
+      }));
   }, [_, _, _, _, _]);
   return (0, _.jsx)(_, {
     className: void 0,
@@ -6149,7 +6154,7 @@ function _(_) {
     _ = null;
   if (_ || _ <= 5) _ = _(_, _, _);
   else {
-    (_ = _(_, _, 5)),
+    ((_ = _(_, _, 5)),
       _.push(
         (0, _.jsx)(
           `span`,
@@ -6158,7 +6163,7 @@ function _(_) {
           },
           `sepand`,
         ),
-      );
+      ));
     let _ = _.length + _.length - 5;
     _.push(
       (0, _.jsx)(
@@ -6183,7 +6188,7 @@ function _(_, _, _) {
     _ = 0;
   for (let _ = 0; _ < _.length && _ < _; _++, _++) {
     let _ = _[_];
-    _.push(
+    (_.push(
       (0, _.jsx)(
         _,
         {
@@ -6201,11 +6206,11 @@ function _(_, _, _) {
             },
             `sep` + _,
           ),
-        );
+        ));
   }
   for (let _ = 0; _ < _.length && _ < _; _++, _++) {
     let _ = _[_];
-    _.push(
+    (_.push(
       (0, _.jsx)(
         _,
         {
@@ -6223,7 +6228,7 @@ function _(_, _, _) {
             },
             `sep` + _,
           ),
-        );
+        ));
   }
   return _;
 }
@@ -6293,7 +6298,7 @@ function _(_) {
   );
   let _ = _(_, _.request_id()),
     _ = () => {
-      _(null), _.mutate();
+      (_(null), _.mutate());
     },
     _ = ``;
   if (_.is_completed())
@@ -6492,7 +6497,7 @@ function _(_) {
   _.setHours(0, 0, 0, 0);
   let _ = [...Array(_).keys()].map((_) => {
     let _ = new Date(_);
-    return _.setDate(_.getDate() - _), _;
+    return (_.setDate(_.getDate() - _), _);
   });
   return (0, _.jsx)(
     `div`,
@@ -6637,7 +6642,8 @@ function _(_) {
     _ = 0,
     _ = new Set();
   for (let _ of _)
-    (_ += Math.min(_.time_end, _) - Math.max(_.time_start, _)), _.add(_.appid);
+    ((_ += Math.min(_.time_end, _) - Math.max(_.time_start, _)),
+      _.add(_.appid));
   let _ = _,
     _ = _,
     _ = Math.round((100 * _) / (_ * 3600)),
@@ -6897,10 +6903,10 @@ function _(_) {
   if (_.isLoading) return (0, _.jsx)(_, {});
   let _ = _.data?.pending_group_invites().length,
     _ = () => {
-      _(``), _.push(`/account/familymanagement/create`);
+      (_(``), _.push(`/account/familymanagement/create`));
     },
     _ = () => {
-      _(``), _.push(`/account/familymanagement/join`);
+      (_(``), _.push(`/account/familymanagement/join`));
     },
     _;
   _ =
@@ -7059,7 +7065,7 @@ function _(_) {
                       (0, _.jsx)(_, {
                         type: `text`,
                         onChange: (_) => {
-                          _(_.target.value), _(null);
+                          (_(_.target.value), _(null));
                         },
                         value: _,
                         placeholder: _(
@@ -7069,12 +7075,12 @@ function _(_) {
                       (0, _.jsx)(_, {
                         disabled: _.length === 0,
                         onClick: () => {
-                          _(null),
+                          (_(null),
                             _.mutate(_, {
                               onSuccess: (_) => {
                                 _.cooldown_skip_granted() && _();
                               },
-                            });
+                            }));
                         },
                         children: _(`#FamilyManagement_FinalizeCreateFamily`),
                       }),
@@ -7120,7 +7126,7 @@ function _(_) {
             active: _,
             isCreate: !1,
             closeModal: () => {
-              _(!1), _.push(`/account/familymanagement`);
+              (_(!1), _.push(`/account/familymanagement`));
             },
             cooldownSeconds: _.data?.cooldown_seconds_remaining(),
           }),
@@ -7501,7 +7507,7 @@ function _(_) {
     _ = _(_);
   _(_, `#FamilyManagement_ErrorModifyFamily`, _.k_EFamilyQueryModifyFamily);
   let _ = (_) => {
-    _(null), _.mutate(_), _(!1);
+    (_(null), _.mutate(_), _(!1));
   };
   return _ && _
     ? (0, _.jsxs)(_, {
@@ -7515,7 +7521,7 @@ function _(_) {
             className: _,
             type: `text`,
             onChange: (_) => {
-              _(_.target.value), _(null);
+              (_(_.target.value), _(null));
             },
             value: _,
             placeholder: _(`#FamilyManagement_InputNamePlaceholder`),
@@ -7531,7 +7537,7 @@ function _(_) {
             className: _,
             noFocusRing: !1,
             onClick: () => {
-              _(!1), _(null);
+              (_(!1), _(null));
             },
             children: _(`#FamilyManagement_EditFamilyNameCancelButton`),
           }),
@@ -7548,7 +7554,7 @@ function _(_) {
             className: _,
             onActivate: _
               ? () => {
-                  _(!0), _(null);
+                  (_(!0), _(null));
                 }
               : void 0,
             children: [

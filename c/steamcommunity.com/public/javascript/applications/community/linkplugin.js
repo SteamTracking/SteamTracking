@@ -26,7 +26,7 @@ var _ = _(_(), 1),
                       .marks()
                       .find((_) => _.type == _),
                     _ = _ && _(_.attrs.href);
-                  if (_) return _.current(_, _.view), _.preventDefault(), !0;
+                  if (_) return (_.current(_, _.view), _.preventDefault(), !0);
                 }
                 return !1;
               },
@@ -66,7 +66,7 @@ var _ = _(_(), 1),
                 for (let _ of _) {
                   let { node: _, pos: _, rgNodes: _ } = _,
                     _ = _.content.cut(_, _).append(_.from(_));
-                  _.insert(_, _), (_ += _.size + 2), (_ = _ + _.nodeSize);
+                  (_.insert(_, _), (_ += _.size + 2), (_ = _ + _.nodeSize));
                 }
                 return (
                   _.insert(_, _.content.cut(_)),
@@ -84,7 +84,7 @@ var _ = _(_(), 1),
                   )
                     if (_.nodeName == `A` && `getBoundingClientRect` in _) {
                       let _ = _.getBoundingClientRect();
-                      _(_.left + _.width / 2), _(_.bottom + 2), _(_);
+                      (_(_.left + _.width / 2), _(_.bottom + 2), _(_));
                       return;
                     }
                   _(void 0);
@@ -141,4 +141,3 @@ function _(_) {
 function _(_, _) {
   _.open(_);
 }
-export { _ };

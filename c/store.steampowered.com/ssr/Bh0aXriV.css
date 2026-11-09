@@ -65,7 +65,7 @@ html.responsive.touch .IShbIXSFzbI- form {
 }
 .uKigBhcFUks- {
   order: 9999;
-  grid-column: -2 / -1;
+  grid-column: -2/-1;
   width: fit-content;
 }
 .V7Sgmg4CTV0- {
@@ -412,7 +412,7 @@ div.gPCB6myPBsc- {
     #1b2c42 95%
   );
   border: 1px solid #ffffff05;
-  grid-template: "dragger capsule title remove" 30px "dragger capsule mid mid" 32px "dragger capsule lower purchase" / fit-content(
+  grid-template: "dragger capsule title remove" 30px "dragger capsule mid mid" 32px "dragger capsule lower purchase"/fit-content(
       0
     ) 288px 1fr auto;
   gap: 2px 12px;
@@ -449,20 +449,20 @@ div.gPCB6myPBsc- {
 }
 @media screen and (width <= 910px) {
   html.responsive .PE-3oq-yIvg-:not(.-SAg8UMCWZ4-) {
-    grid-template: "dragger capsule title" 32px "dragger capsule mid" 26px "dragger capsule lower" 38px "dragger remove purchase" 42px / fit-content(
+    grid-template: "dragger capsule title" 32px "dragger capsule mid" 26px "dragger capsule lower" 38px "dragger remove purchase" 42px/fit-content(
         0
       ) 220px auto;
     padding-block: 8px;
   }
 }
 html.responsive.GamepadMode .PE-3oq-yIvg-:not(.-SAg8UMCWZ4-) {
-  grid-template: "dragger capsule title title" 32px "dragger capsule mid mid" 26px "dragger capsule tags tags" 38px "dragger capsule lower purchase" / fit-content(
+  grid-template: "dragger capsule title title" 32px "dragger capsule mid mid" 26px "dragger capsule tags tags" 38px "dragger capsule lower purchase"/fit-content(
       0
     ) 288px 1fr auto;
 }
 @media screen and (width <= 910px) {
   .PE-3oq-yIvg-:not(.-SAg8UMCWZ4-) {
-    grid-template: "dragger capsule title title" 32px "dragger capsule mid mid" 26px "dragger capsule tags tags" 38px "dragger capsule lower purchase" / fit-content(
+    grid-template: "dragger capsule title title" 32px "dragger capsule mid mid" 26px "dragger capsule tags tags" 38px "dragger capsule lower purchase"/fit-content(
         0
       ) 288px 1fr auto;
   }
@@ -470,7 +470,7 @@ html.responsive.GamepadMode .PE-3oq-yIvg-:not(.-SAg8UMCWZ4-) {
 @media screen and (width <= 500px) {
   html.responsive.responsive .PE-3oq-yIvg-:not(.-SAg8UMCWZ4-) {
     height: unset;
-    grid-template: "dragger tags tags remove" 30px "dragger capsule capsule capsule" "dragger title title title" 28px "dragger mid mid mid" 25px "dragger lower lower lower" 42px "dragger purchase purchase purchase" 40px / fit-content(
+    grid-template: "dragger tags tags remove" 30px "dragger capsule capsule capsule" "dragger title title title" 28px "dragger mid mid mid" 25px "dragger lower lower lower" 42px "dragger purchase purchase purchase" 40px/fit-content(
         0
       ) fit-content(100px) 1fr auto;
     width: 100%;
@@ -486,7 +486,7 @@ html.responsive.GamepadMode .PE-3oq-yIvg-:not(.-SAg8UMCWZ4-) {
 }
 .PE-3oq-yIvg- .nyQD3NZQjZU-,
 .PE-3oq-yIvg- .nyQD3NZQjZU- .TaL3HQOZ35g- {
-  aspect-ratio: 460 / 215;
+  aspect-ratio: 460/215;
   width: 100%;
   height: auto;
   transition:
@@ -565,7 +565,7 @@ html.responsive.GamepadMode .PE-3oq-yIvg-:not(.-SAg8UMCWZ4-) {
   }
 }
 .PE-3oq-yIvg-.-SAg8UMCWZ4- {
-  grid-template: "dragger capsule title remove" 28px "dragger capsule mid purchase" 24px "dragger capsule lower purchase" / fit-content(
+  grid-template: "dragger capsule title remove" 28px "dragger capsule mid purchase" 24px "dragger capsule lower purchase"/fit-content(
       0
     ) 150px auto auto;
   gap: 2px 12px;

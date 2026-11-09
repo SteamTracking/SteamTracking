@@ -107,7 +107,7 @@ function _(_) {
       ..._,
     },
     _ = _[_];
-  delete _[_], _.app && delete _[_];
+  (delete _[_], _.app && delete _[_]);
   let _ = _(_, _, _);
   return (0, _.jsxs)(_, {
     ..._,
@@ -351,7 +351,7 @@ function _(_) {
         bSteamItems: _,
       }),
     _ = (_) => {
-      _.preventDefault(), _.stopPropagation();
+      (_.preventDefault(), _.stopPropagation());
     },
     _ = _(`sm`),
     _ = _ ? _.rgAppData && _.rgAppData[_] : _.filterInGame.app,
@@ -524,7 +524,7 @@ function _(_) {
       _.price[0] === 0 &&
       _.price[1] === _.maxPrice,
     _ = () => {
-      _(!0), _(_, _);
+      (_(!0), _(_, _));
     },
     _ = _(`sm`),
     _ = (0, _.jsx)(_, {
@@ -1016,7 +1016,7 @@ function _(_) {
     _ = _;
   if (!_) {
     let _ = _ ? Math.floor((_.contentRect.width - 10) / 104) : 0;
-    (_ = _.slice(0, _)), (_ = _.slice(0, _));
+    ((_ = _.slice(0, _)), (_ = _.slice(0, _)));
   }
   return (0, _.jsxs)(_, {
     direction: `column`,
@@ -1108,9 +1108,9 @@ function _(_, _) {
       price: [_, _],
     } = _,
     _ = new FormData();
-  _ && _.set(`appid`, _.appid.toString()),
+  (_ && _.set(`appid`, _.appid.toString()),
     _ && _.set(`q`, _),
-    _ && _ && _(_.app) && _.set(`descriptions`, `1`);
+    _ && _ && _(_.app) && _.set(`descriptions`, `1`));
   for (let _ of Object.keys(_))
     if (_[_])
       for (let _ of Object.keys(_[_]))
@@ -1334,7 +1334,7 @@ var _ = {};
 function _(_) {
   let { icon: _, size: _ } = _,
     [_, _] = (0, _.useState)(!!_[_]);
-  (0, _.useEffect)(() => {
+  ((0, _.useEffect)(() => {
     let _ = !0;
     return (
       setTimeout(() => {
@@ -1345,7 +1345,7 @@ function _(_) {
       }
     );
   }, []),
-    _ && (_[_] = !0);
+    _ && (_[_] = !0));
   let _ = _(_),
     _ = `var(--spacing-${parseInt(_) + 3})`;
   return _
@@ -1374,4 +1374,3 @@ function _() {
     }),
   });
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _ };

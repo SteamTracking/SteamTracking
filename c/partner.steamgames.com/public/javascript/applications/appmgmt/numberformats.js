@@ -78,4 +78,3 @@ function _(_) {
         ? Math.trunc(_ / 1e3).toString() + `K`
         : _.toString();
 }
-export { _, _, _ };

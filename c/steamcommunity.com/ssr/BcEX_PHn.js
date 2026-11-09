@@ -133,4 +133,3 @@ var _ = [
     cssProperty: (_) => [`--separator-color`, _(_)],
   },
 ];
-export { _, _ };

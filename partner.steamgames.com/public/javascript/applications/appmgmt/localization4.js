@@ -5,7 +5,7 @@ import { Ga as e } from "./dialogs.js";
 import { D as t } from "./react-router.js";
 var n = { DefaultFancyTable: `_9B0qMqxa5jA-`, NoColumnBorders: `CFDvy9hAlHM-` },
   r = {};
-(r.arabic = () =>
+((r.arabic = () =>
   e(() => import(`./countries_arabic.js`), [], import.meta.url)),
   (r.brazilian = () =>
     e(() => import(`./countries_brazilian.js`), [], import.meta.url)),
@@ -67,7 +67,7 @@ var n = { DefaultFancyTable: `_9B0qMqxa5jA-`, NoColumnBorders: `CFDvy9hAlHM-` },
   (r.ukrainian = () =>
     e(() => import(`./countries_ukrainian.js`), [], import.meta.url)),
   (r.vietnamese = () =>
-    e(() => import(`./countries_vietnamese.js`), [], import.meta.url));
+    e(() => import(`./countries_vietnamese.js`), [], import.meta.url)));
 async function i(e) {
   if (r[e]) return await r[e]();
 }

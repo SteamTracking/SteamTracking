@@ -232,12 +232,12 @@ var yt = class e {
       ct({ collectionid: t, bSectionByDay: !0, rtCalendarEnd: e });
       let n = G(),
         r = He(`conference_calendar`, `application_config`);
-      r && (await n.RegisterCalendarEventsAndModels(r)),
-        n.SetFilteredView((e) => !0);
+      (r && (await n.RegisterCalendarEventsAndModels(r)),
+        n.SetFilteredView((e) => !0));
     }
     static m_singleton;
     static Get() {
-      return (e.m_singleton ||= new e()), e.m_singleton;
+      return ((e.m_singleton ||= new e()), e.m_singleton);
     }
     constructor() {}
   },
@@ -482,11 +482,11 @@ function Rn(e) {
       `#EventCalendar_GameSource_UnhideCuratorsDialog_CancelButton`,
     ),
     onOK: () => {
-      G().m_visibilityStore.SetGameSourceAllowed(K.k_ECurator, !0), t && t();
+      (G().m_visibilityStore.SetGameSourceAllowed(K.k_ECurator, !0), t && t());
     },
     onCancel: () => {
-      G().m_visibilityStore.SetCuratorUnhideOnFollowDialogDismissed(!0),
-        t && t();
+      (G().m_visibilityStore.SetCuratorUnhideOnFollowDialogDismissed(!0),
+        t && t());
     },
   });
 }
@@ -562,7 +562,7 @@ var Bn = n((e) => {
         d = n.unique_id,
         f = Oe(),
         p = G();
-      p.BIsGlobalCalendar() &&
+      (p.BIsGlobalCalendar() &&
         (l &&
           l & W.k_eLibrary &&
           (s().BIsGameSourceAllowed(K.k_ERecent) && n.appInfo
@@ -669,7 +669,7 @@ var Bn = n((e) => {
               t.GID + `goto`,
             ),
           ),
-        De((0, J.jsx)(Ee, { children: r }), e);
+        De((0, J.jsx)(Ee, { children: r }), e));
     },
     children: (0, J.jsx)(Pe, {}),
   });
@@ -750,10 +750,10 @@ var Hn = r(Bn),
           className: U(`YoutubePreviewContainer`, Un, e.imageClassnames),
           onClick: r
             ? (t) => {
-                e.onPlayerActivated && e.onPlayerActivated(),
+                (e.onPlayerActivated && e.onPlayerActivated(),
                   n(!0),
                   t.stopPropagation(),
-                  t.preventDefault();
+                  t.preventDefault());
               }
             : void 0,
           children: [
@@ -832,7 +832,7 @@ function qn(e) {
     ),
     T = ce,
     E = le;
-  T === E && (E = void 0), T === S && (T = void 0);
+  (T === E && (E = void 0), T === S && (T = void 0));
   let D = ee(me),
     O = (0, J.jsx)(Zn, {
       setVideoPlayerReady: l,
@@ -872,8 +872,8 @@ function qn(e) {
         children: (0, J.jsxs)(`div`, {
           className: Yt,
           onClick: (e) => {
-            d.RecordInteraction(w.k_eClickThrough),
-              !_e() && (o(t), e.stopPropagation(), e.preventDefault());
+            (d.RecordInteraction(w.k_eClickThrough),
+              !_e() && (o(t), e.stopPropagation(), e.preventDefault()));
           },
           children: [
             b === 14 &&
@@ -974,7 +974,7 @@ function Xn(e) {
         controls: !0,
         imageClassnames: Z,
         onPlayerActivated: () => {
-          o.RecordInteraction(w.k_ePlayedVideo), n(!0);
+          (o.RecordInteraction(w.k_ePlayedVideo), n(!0));
         },
         preloadYoutubeScripts: !0,
         playsInline: !0,
@@ -1004,10 +1004,10 @@ function Zn(e) {
   q.useEffect(() => {
     if (a) {
       let e = new Image();
-      (e.src = a),
+      ((e.src = a),
         (e.onerror = () => {
           s(x.full);
-        });
+        }));
     }
   }, [a, s]);
   let [, ee] = C(h),
@@ -1088,9 +1088,9 @@ var Qn = n((e) => {
       } = e,
       a = ye(t, ve.k_eStoreNewsHub, `allowRelative`),
       o = (e) => {
-        a.startsWith(`http`) ? (window.location.href = a) : i.push(a),
+        (a.startsWith(`http`) ? (window.location.href = a) : i.push(a),
           e.stopPropagation(),
-          e.preventDefault();
+          e.preventDefault());
       },
       s = n.GetEntityName(),
       c = n.GetGameIcon(),
@@ -1169,7 +1169,7 @@ var Qn = n((e) => {
     let t = e.calendarEvent.GetSource(),
       n = [],
       r = G().m_visibilityStore;
-    t & W.k_eLibrary && r.BIsGameSourceAllowed(K.k_ELibrary)
+    (t & W.k_eLibrary && r.BIsGameSourceAllowed(K.k_ELibrary)
       ? n.push({
           id: W.k_eLibrary,
           name: `#EventCalendar_GameSource_inLibrary`,
@@ -1205,7 +1205,7 @@ var Qn = n((e) => {
           name: `#EventCalendar_GameSource_followed`,
           ttip: `#EventCalendar_GameSource_EventExplanation_ttip_following`,
           styles: void 0,
-        });
+        }));
     let i = n.map((t, r) => {
       let i = e.calendarEvent.unique_id;
       return nr(
@@ -1300,7 +1300,7 @@ function sr(e) {
     [s, c] = Se(ar, null);
   return (
     We(n, (e, t) => {
-      o(e), c(P.InitFromClanID(t, R.EUNIVERSE).ConvertTo64BitString());
+      (o(e), c(P.InitFromClanID(t, R.EUNIVERSE).ConvertTo64BitString()));
     }),
     q.useEffect(() => {
       if (a != null && s != null) {
@@ -1317,7 +1317,7 @@ function sr(e) {
           eventModel: r,
           showAppHeader: !0,
           closeModal: () => {
-            i(null), c(null), o(null);
+            (i(null), c(null), o(null));
           },
         })
       : null
@@ -1720,7 +1720,7 @@ function ni(e) {
               (0, J.jsx)(`div`, {
                 className: Yr,
                 onClick: () => {
-                  r(!0), a(!1);
+                  (r(!0), a(!1));
                 },
                 children: L(`#Conference_Tab_Chat`),
               }),
@@ -1741,7 +1741,7 @@ function ni(e) {
               (0, J.jsx)(`div`, {
                 className: Yr,
                 onClick: () => {
-                  r(!1), a(!0);
+                  (r(!1), a(!0));
                 },
                 children: L(`#Conference_Tab_QandA`),
               }),
@@ -1761,7 +1761,7 @@ function ni(e) {
             children: (0, J.jsx)(`div`, {
               className: Gr,
               onClick: () => {
-                r(!0), a(!0);
+                (r(!0), a(!0));
               },
               children: (0, J.jsx)(Xe, {}),
             }),

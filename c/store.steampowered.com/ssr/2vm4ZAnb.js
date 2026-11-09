@@ -22,11 +22,11 @@ async function _(_, _, _, _) {
   let _ = [];
   if (_) {
     let _ = _.Init(_);
-    _.Body().set_steamid(_),
+    (_.Body().set_steamid(_),
       _.Body().set_share_token(_),
       (_ =
         (await _.GetSharedWishlistCategories(_, _)).Body().toObject()
-          .categories ?? []);
+          .categories ?? []));
   } else {
     let _ = _.Init(_);
     _ =
@@ -74,9 +74,9 @@ function _(_) {
   return _({
     mutationFn: async (_) => {
       let _ = _.Init(_);
-      _.Body().set_appid(_.appid),
+      (_.Body().set_appid(_.appid),
         _.Body().set_category_name(_.categoryName),
-        _.Body().set_categoryid(_.categoryID);
+        _.Body().set_categoryid(_.categoryID));
       let _ = await _.AddWishlistItemCategory(_, _),
         _ = {
           eresult: _.GetEResult(),
@@ -93,7 +93,7 @@ function _(_) {
       );
     },
     onSuccess(_, _) {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: [`WishlistSortedFiltered`, _],
         exact: !1,
       }),
@@ -103,7 +103,7 @@ function _(_) {
         }),
         _.invalidateQueries({
           queryKey: _(_, _.appid),
-        });
+        }));
     },
   });
 }
@@ -120,7 +120,7 @@ function _(_) {
       );
     },
     onSuccess(_, _) {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: [`WishlistSortedFiltered`, _],
         exact: !1,
       }),
@@ -130,7 +130,7 @@ function _(_) {
         }),
         _.invalidateQueries({
           queryKey: _(_, _.appid),
-        });
+        }));
     },
   });
 }
@@ -149,14 +149,14 @@ function _(_) {
       );
     },
     onSuccess() {
-      _.invalidateQueries({
+      (_.invalidateQueries({
         queryKey: [_, _],
         exact: !1,
       }),
         _.invalidateQueries({
           queryKey: [_, _],
           exact: !1,
-        });
+        }));
     },
   });
 }
@@ -171,28 +171,28 @@ function _(_) {
         rgAppIDsFailed: [],
       };
       if (_.rgAppIDs.length === 0 || (!_.categoryID && !_.categoryName))
-        return (_.eresult = 8), _;
+        return ((_.eresult = 8), _);
       let _ = _.categoryID;
       for (let _ = 0; _ < _.rgAppIDs.length; _ += 256) {
         let _ = _.rgAppIDs.slice(_, _ + 256),
           _ = _.Init(_);
         for (let _ of _) _.Body().add_appids(_);
-        _ && _ !== `0`
+        (_ && _ !== `0`
           ? _.Body().set_categoryid(_)
           : _.Body().set_category_name(_.categoryName),
-          _.Body().set_remove(!!_.bRemove);
+          _.Body().set_remove(!!_.bRemove));
         let _ = await _.SetWishlistItemCategoryBulk(_, _);
         if (!_.BSuccess()) {
-          (_.eresult = _.GetEResult()),
-            _.rgAppIDsFailed.push(..._.rgAppIDs.slice(_));
+          ((_.eresult = _.GetEResult()),
+            _.rgAppIDsFailed.push(..._.rgAppIDs.slice(_)));
           break;
         }
         let _ = _.Body().toObject();
-        _.rgAppIDsUpdated.push(...(_.appids_updated ?? [])),
+        (_.rgAppIDsUpdated.push(...(_.appids_updated ?? [])),
           _.rgAppIDsFailed.push(...(_.appids_failed ?? [])),
           !_.category &&
             _.category &&
-            ((_.category = _([_.category])[0]), (_ ??= _.category?._));
+            ((_.category = _([_.category])[0]), (_ ??= _.category?._)));
       }
       return _;
     },
@@ -232,7 +232,7 @@ function _() {
     mutationFn: async (_) => {
       let _ = (await _.ensureQueryData(_(_))) ?? [],
         _ = Array.from(new Set([..._.rgCategoryIDs, _])).slice(0, 3);
-      return await _.StoreObject(_, _), _;
+      return (await _.StoreObject(_, _), _);
     },
     onSuccess: async (_) => {
       _.setQueryData([_], _);
@@ -292,7 +292,7 @@ function _(_) {
         throw Error(`SetWishlistCategoryNotifications returned EResult ${_}`);
     },
     onMutate: async (_) => {
-      await _.cancelQueries({
+      (await _.cancelQueries({
         queryKey: _,
       }),
         _.setQueryData(_, (_) => {
@@ -304,7 +304,7 @@ function _(_) {
                 ..._,
               },
           );
-        });
+        }));
     },
     onError: () =>
       _.invalidateQueries({
@@ -317,9 +317,9 @@ async function _(_, _) {
   let _ = _.Init(_);
   for (let _ of _) {
     let _ = new _();
-    _.set_categoryid(_._),
+    (_.set_categoryid(_._),
       _.set_notification_opt_in(_.bNotificationOptIn),
-      _.Body().add_categories(_);
+      _.Body().add_categories(_));
   }
   return (await _.SetWishlistCategoryNotifications(_, _)).GetEResult();
 }
@@ -498,4 +498,3 @@ function _(_) {
     }),
   });
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

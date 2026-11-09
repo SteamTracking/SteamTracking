@@ -1,7 +1,7 @@
 import { _ } from "./dialogs.js";
 import { _ } from "./react-router.js";
 var _ = {};
-(_.arabic = () => _(() => import(`./pricing_arabic.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./pricing_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
     _(() => import(`./pricing_brazilian.js`), [], import.meta.url)),
   (_.bulgarian = () =>
@@ -57,9 +57,8 @@ var _ = {};
   (_.ukrainian = () =>
     _(() => import(`./pricing_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./pricing_vietnamese.js`), [], import.meta.url));
+    _(() => import(`./pricing_vietnamese.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
 var _ = _(_);
-export { _ };

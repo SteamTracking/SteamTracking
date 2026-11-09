@@ -57,7 +57,7 @@ function m() {
   let e = document.createElement(`a`);
   e.href = t.PARTNER_BASE_URL;
   let n = e.pathname;
-  return n.endsWith(`/`) || (n += `/`), n;
+  return (n.endsWith(`/`) || (n += `/`), n);
 }
 var h = n(e()),
   g = (function (e) {
@@ -117,7 +117,7 @@ var S = b(function (e, t) {
             (e.preventDefault(), i());
         },
       });
-    return (c.ref = y === b ? n : t || n), h.createElement(`a`, c);
+    return ((c.ref = y === b ? n : t || n), h.createElement(`a`, c));
   }),
   C = b(function (e, t) {
     var n = e.component,
@@ -202,7 +202,9 @@ T(function (e, t) {
       { "aria-current": (A && a) || null, className: j, style: M, to: o },
       O,
     );
-    return w === T ? (N.innerRef = D) : (N.ref = t || D), h.createElement(C, N);
+    return (
+      w === T ? (N.innerRef = D) : (N.ref = t || D), h.createElement(C, N)
+    );
   });
 });
 export { p as i, C as n, m as r, g as t };

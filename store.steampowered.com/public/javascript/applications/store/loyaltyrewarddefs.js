@@ -139,10 +139,10 @@ var Ot = class extends _ {
     m_mapHostToComponent;
     m_globalStoreLink;
     constructor(e, t, n, r) {
-      super(e),
+      (super(e),
         (this.m_parentNode = t),
         (this.m_mapHostToComponent = n),
-        (this.m_globalStoreLink = r);
+        (this.m_globalStoreLink = r));
     }
     AppendText(e, t = !1) {
       let n = e;
@@ -151,7 +151,7 @@ var Ot = class extends _ {
         (this.m_parentNode == null || this.m_parentNode.tag != `img`)
       ) {
         let e = this.m_LinkFilter.exec(n);
-        for (; e; ) {
+        for (; e;) {
           if (e.index > 0) {
             let n = e.input.substring(0, e.index);
             super.AppendText(n, t);
@@ -161,19 +161,19 @@ var Ot = class extends _ {
           if (this.m_mapHostToComponent) {
             for (let e = 0; e < this.m_mapHostToComponent.length; ++e)
               if (this.m_mapHostToComponent[e].urlRegExp.exec(r)) {
-                (i = !0),
+                ((i = !0),
                   super.AppendNode(
                     this.m_mapHostToComponent[e].fnBBComponent(
                       r,
                       this.m_globalStoreLink,
                     ),
-                  );
+                  ));
                 break;
               }
           }
-          i || super.AppendNode(g(r)),
+          (i || super.AppendNode(g(r)),
             (n = e.input.substring(e.index + r.length)),
-            (e = this.m_LinkFilter.exec(n));
+            (e = this.m_LinkFilter.exec(n)));
         }
       }
       n.length > 0 && super.AppendText(n, t);
@@ -186,15 +186,15 @@ var Ot = class extends _ {
       let n = e;
       if (e.length >= 3) {
         let e = this.m_EmoteRegex.exec(n);
-        for (; e; ) {
+        for (; e;) {
           if (e.index > 0) {
             let n = e.input.substring(0, e.index);
             super.AppendText(n, t);
           }
           let r = e[1];
-          super.AppendNode(N.createElement(Ge, { emoticon: r }, [])),
+          (super.AppendNode(N.createElement(Ge, { emoticon: r }, [])),
             (n = e.input.substring(e.index + r.length + 2)),
-            (e = this.m_EmoteRegex.exec(n));
+            (e = this.m_EmoteRegex.exec(n)));
         }
       }
       n.length > 0 && super.AppendText(n, t);
@@ -203,15 +203,15 @@ var Ot = class extends _ {
   jt = class extends _ {
     m_parentNode = void 0;
     constructor(e, t) {
-      super(e), (this.m_parentNode = t);
+      (super(e), (this.m_parentNode = t));
     }
     AppendText(e, t = !1) {
       let n = e;
-      this.m_parentNode &&
+      (this.m_parentNode &&
         this.m_parentNode.tag == `img` &&
         !Mt(n) &&
         (n = A(n)),
-        super.AppendText(n, t);
+        super.AppendText(n, t));
     }
   };
 function Mt(e) {
@@ -802,8 +802,8 @@ function X(e, t, n, r) {
   let i,
     a = e.endsWith(`/`) ? e.length - 1 : e.length,
     o = e.lastIndexOf(`/`, a - 1);
-  o != -1 && o + 1 < e.length && (i = e.substring(o + 1, a)),
-    n && i && (i = n + i);
+  (o != -1 && o + 1 < e.length && (i = e.substring(o + 1, a)),
+    n && i && (i = n + i));
   let s = g(e, r?.event, i ?? e);
   return (0, P.jsxs)(`div`, {
     className: Pe,
@@ -939,11 +939,11 @@ function Kn(e) {
     );
   return (
     (0, N.useEffect)(() => {
-      i?.unvailable_for_country_restriction &&
+      (i?.unvailable_for_country_restriction &&
         o(k(`#TrailerPlayer_CouldNotLoad`, t, n)),
         c &&
           !l &&
-          o(k(`#TrailerPlayer_CouldNotLoad`, e.appid, e.trailerBaseID));
+          o(k(`#TrailerPlayer_CouldNotLoad`, e.appid, e.trailerBaseID)));
     }, [
       t,
       e.appid,
@@ -1070,7 +1070,7 @@ function $n() {
 function er(e) {
   let { showErrorInfo: t, event: n } = e.context,
     r = x(e.args, `src`) || e.children?.toString();
-  (r ||= x(e.args)), (r = y(r ?? ``) || void 0);
+  ((r ||= x(e.args)), (r = y(r ?? ``) || void 0));
   let i = x(e.args, `style`) === `inline`,
     o = a(r, e.language, n?.rtime32_last_modified);
   if (o == null) return null;

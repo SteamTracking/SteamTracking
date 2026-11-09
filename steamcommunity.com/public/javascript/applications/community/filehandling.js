@@ -23,11 +23,11 @@ function g(e, t) {
     a = m.useCallback(
       (t) => {
         let n = h(t) ? String(t) : void 0;
-        n === void 0
+        (n === void 0
           ? window.localStorage.removeItem(e)
           : window.localStorage.setItem(e, n),
           r(n),
-          _.Get().GetLocalStoreChangeCallback(e).Dispatch(n);
+          _.Get().GetLocalStoreChangeCallback(e).Dispatch(n));
       },
       [e, r],
     );
@@ -59,7 +59,7 @@ var _ = class e {
   }
   static s_Singleton;
   static Get() {
-    return (e.s_Singleton ||= new e()), e.s_Singleton;
+    return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
 };
 function v([e, t, n]) {
@@ -69,19 +69,19 @@ function v([e, t, n]) {
     o,
     s;
   if (r !== 0) s = (r - i) / r;
-  else return (s = 0), (o = 0), [o, s, a];
+  else return ((s = 0), (o = 0), [o, s, a]);
   if (s === 0) o = 0;
   else {
     let a = r - i;
-    (o = e === r ? (t - n) / a : t === r ? 2 + (n - e) / a : 4 + (e - t) / a),
+    ((o = e === r ? (t - n) / a : t === r ? 2 + (n - e) / a : 4 + (e - t) / a),
       (o *= 60),
-      o < 0 && (o += 360);
+      o < 0 && (o += 360));
   }
   return [o, s, a];
 }
 function y([e, t, n]) {
   if (t === 0) return [n, n, n];
-  (e = ((e % 360) + 360) % 360), (e /= 60);
+  ((e = ((e % 360) + 360) % 360), (e /= 60));
   let r = Math.floor(e),
     i = e - r,
     a = n * (1 - t),
@@ -215,15 +215,15 @@ function oe(e) {
   if (typeof CSS > `u` || !CSS.supports(`color`, e)) return;
   if (E === void 0) {
     let e = document.createElement(`canvas`);
-    (e.width = e.height = 1),
-      (E = e.getContext(`2d`, { willReadFrequently: !0 }));
+    ((e.width = e.height = 1),
+      (E = e.getContext(`2d`, { willReadFrequently: !0 })));
   }
   let t = E;
   if (!t) return;
-  t.clearRect(0, 0, 1, 1),
+  (t.clearRect(0, 0, 1, 1),
     (t.fillStyle = `#000000`),
     (t.fillStyle = e),
-    t.fillRect(0, 0, 1, 1);
+    t.fillRect(0, 0, 1, 1));
   let [n, r, i, a] = t.getImageData(0, 0, 1, 1).data;
   return { r: n, g: r, b: i, a: S(a / 255) };
 }
@@ -283,7 +283,7 @@ function me(e) {
         let t = i ? { ...e, a: 1 } : e;
         l(t);
         let r = C(t);
-        (u.current = r), n(T(r));
+        ((u.current = r), n(T(r)));
       },
       [i, n],
     ),
@@ -443,7 +443,7 @@ function ye(e) {
       i && r(i);
     },
     _ = (e) => {
-      o(e), u(void 0);
+      (o(e), u(void 0));
     };
   return (0, G.jsxs)(`div`, {
     className: N,
@@ -571,12 +571,12 @@ function Se(e) {
   f.current = { color: t, onChange: n, fnRestoreChanges: c, bLivePreview: o };
   let h = (0, m.useCallback)(
       (e) => {
-        (u.current = e), o && n(e);
+        ((u.current = e), o && n(e));
       },
       [o, n],
     ),
     g = (0, m.useCallback)(() => {
-      (d.current = !0), !o && u.current !== void 0 && n(u.current), r();
+      ((d.current = !0), !o && u.current !== void 0 && n(u.current), r());
     }, [o, n, r]);
   return (
     (0, m.useEffect)(
@@ -584,7 +584,7 @@ function Se(e) {
         let e = f.current;
         if (!d.current && e.bLivePreview && u.current !== void 0)
           try {
-            e.onChange(e.color), e.fnRestoreChanges?.();
+            (e.onChange(e.color), e.fnRestoreChanges?.());
           } catch (e) {
             console.error(`Color picker: could not undo a previewed color`, e);
           }
@@ -603,8 +603,8 @@ function Se(e) {
         e.addEventListener(`pointerdown`, t, !0),
         e.addEventListener(`keydown`, n, !0),
         () => {
-          e.removeEventListener(`pointerdown`, t, !0),
-            e.removeEventListener(`keydown`, n, !0);
+          (e.removeEventListener(`pointerdown`, t, !0),
+            e.removeEventListener(`keydown`, n, !0));
         }
       );
     }, [r]),
@@ -703,11 +703,11 @@ function Te(e) {
       onDragOver: t ? $ : void 0,
       onDrop: m.useCallback(
         (t) => {
-          t.dataTransfer.files?.length &&
+          (t.dataTransfer.files?.length &&
             (e(t.dataTransfer.files, t),
             t.preventDefault(),
             t.stopPropagation()),
-            n(!1);
+            n(!1));
         },
         [e],
       ),
@@ -718,10 +718,10 @@ function Te(e) {
 async function Ee(e, t = 1e3) {
   return await new Promise((n, r) => {
     let i = new Image();
-    (i.src = e),
+    ((i.src = e),
       (i.onload = () => n(`success`)),
       (i.onerror = () => n(`error`)),
-      t > 0 && window.setTimeout(() => n(`timeout`), t);
+      t > 0 && window.setTimeout(() => n(`timeout`), t));
   });
 }
 function $(e) {

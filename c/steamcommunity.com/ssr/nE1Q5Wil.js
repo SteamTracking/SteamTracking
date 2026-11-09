@@ -395,7 +395,7 @@ function _(_) {
 function _() {
   let { bHideSearch: _ = !1, marketEligibility: _ } = _.useLoaderData(),
     _ = () => {
-      _(!0), (window.location.href = `${_.COMMUNITY_BASE_URL}market/`);
+      (_(!0), (window.location.href = `${_.COMMUNITY_BASE_URL}market/`));
     },
     _ = `${_.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
     _ = !_(`sm`);
@@ -558,13 +558,13 @@ function _(_) {
         children: (0, _.jsx)(`form`, {
           className: _(),
           onSubmit: (_) => {
-            _.preventDefault(),
+            (_.preventDefault(),
               _.stopPropagation(),
               _(
                 _.Search({
                   search: `q=${encodeURIComponent(_)}`,
                 }),
-              );
+              ));
           },
           children: (0, _.jsx)(_, {
             value: _,

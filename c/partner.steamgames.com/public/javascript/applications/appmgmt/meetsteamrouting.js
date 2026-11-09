@@ -99,7 +99,7 @@ function _() {
         window.addEventListener(`popstate`, _),
         _(location.search),
         () => {
-          _.delete(_), window.removeEventListener(`popstate`, _);
+          (_.delete(_), window.removeEventListener(`popstate`, _));
         }
       );
     }, []),
@@ -129,7 +129,7 @@ function _(_, _) {
           if (!_.has(_)) return;
           _.delete(_);
         }
-        _
+        (_
           ? history.replaceState(
               history.state,
               ``,
@@ -140,7 +140,7 @@ function _(_, _) {
               ``,
               decodeURIComponent(`${window.location.pathname}?${_}`),
             ),
-          (0, _.startTransition)(_);
+          (0, _.startTransition)(_));
       },
       [_],
     ),
@@ -150,9 +150,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clan_event_gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -202,7 +202,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -223,14 +223,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerMeetSteam_UpdateRegistration_Request`;
@@ -239,7 +239,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -264,12 +264,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerMeetSteam_UpdateRegistration_Response`;
@@ -278,9 +278,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clan_event_gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -300,7 +300,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -321,14 +321,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerMeetSteam_GetAvailability_Request`;
@@ -337,9 +337,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.availability || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -360,7 +360,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -381,14 +381,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerMeetSteam_GetAvailability_Response`;
@@ -397,9 +397,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.group_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -429,7 +429,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -450,14 +450,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerMeetSteam_GetAvailability_Response_Session`;
@@ -466,9 +466,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clan_event_gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -493,7 +493,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -514,14 +514,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerMeetSteam_GetRegistrations_Request`;
@@ -530,9 +530,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.registrations || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -553,7 +553,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -574,14 +574,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerMeetSteam_GetRegistrations_Response`;
@@ -590,9 +590,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.group_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -647,7 +647,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -668,14 +668,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerMeetSteam_GetRegistrations_Response_Registration`;
@@ -684,9 +684,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clan_event_gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [3], null);
+        _.Message.initialize(this, _, 0, -1, [3], null));
     }
     static sm_m;
     static sm_mbf;
@@ -719,7 +719,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -740,14 +740,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerMeetSteam_EmailInvitees_Request`;
@@ -756,9 +756,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.num_emailed || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -783,7 +783,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -804,14 +804,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerMeetSteam_EmailInvitees_Response`;
@@ -820,9 +820,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clan_event_gid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -847,7 +847,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -868,14 +868,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CParterMeetSteam_TestFireEmails_Request`;
@@ -884,9 +884,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.sessionids || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -909,7 +909,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -930,14 +930,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CParterMeetSteam_TestFireEmails_Response`;
@@ -946,9 +946,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.rt_oldest_date || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -968,7 +968,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -989,14 +989,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerMeetSteam_GetSaleEventOrganizers_Request`;
@@ -1005,9 +1005,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.accountid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [2], null);
+        _.Message.initialize(this, _, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1035,7 +1035,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1056,14 +1056,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CSaleEventOrganizerInfo`;
@@ -1072,9 +1072,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.info || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1095,7 +1095,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1116,14 +1116,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerMeetSteam_GetSaleEventOrganizers_Response`;
@@ -1132,9 +1132,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.accountids || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1, 2], null);
+        _.Message.initialize(this, _, 0, -1, [1, 2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1165,7 +1165,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1186,14 +1186,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerMeetSteam_GetBatchPartnerEmailAndName_Request`;
@@ -1202,9 +1202,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.accountid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1239,7 +1239,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1260,14 +1260,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerEmailAndName`;
@@ -1276,9 +1276,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.info || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1299,7 +1299,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1320,14 +1320,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CPartnerMeetSteam_GetBatchPartnerEmailAndName_Response`;
@@ -1479,7 +1479,7 @@ function _(_) {
     queryFn: async () => {
       let _ = _.Init(_),
         _ = new Date();
-      _.setFullYear(_.getFullYear() - 2), _.Body().set_rt_oldest_date(0);
+      (_.setFullYear(_.getFullYear() - 2), _.Body().set_rt_oldest_date(0));
       let _ = await _.GetSaleEventOrganizers(_, _);
       return _.BSuccess()
         ? _.Body()
@@ -1500,7 +1500,7 @@ function _(_) {
         let _ = 0;
         for (let _ of _) {
           let _ = _.results.partner_id;
-          new _(_.steamid).GetAccountID(),
+          (new _(_.steamid).GetAccountID(),
             await Promise.all([
               _(_),
               _.prefetchQuery({
@@ -1510,7 +1510,7 @@ function _(_) {
               _(_, _),
             ]),
             ++_,
-            _(_);
+            _(_));
         }
         _(!0);
       })();
@@ -1680,7 +1680,7 @@ function _(_, _ = {}) {
           });
       let _ = _.current.tsScheduledTimeout - performance.now(),
         _ = window.setTimeout(() => {
-          (_.current = void 0), _(_);
+          ((_.current = void 0), _(_));
         }, _);
       return () => window.clearTimeout(_);
     }, [_, _, _, _]),
@@ -1729,9 +1729,9 @@ function _(_) {
     _.useEffect(() => {
       if (!_.isLoading && _.isSuccess) {
         let _ = _?.length == 1 ? _[0].partnerid.toString() : ``;
-        _(_.data.partner_id ? _.data.partner_id.toString() : _),
+        (_(_.data.partner_id ? _.data.partner_id.toString() : _),
           _(_.data.email_override ?? ``),
-          _(_.data.allow_registration_if_full ?? !1);
+          _(_.data.allow_registration_if_full ?? !1));
       }
     }, [_.isLoading, _.isSuccess, _.data, _]),
     (0, _.jsxs)(_, {
@@ -1752,10 +1752,10 @@ function _(_) {
             !0,
           ),
           _ = _ && _.success == 1;
-        _ || _(`We hit error during invite, check console: ` + _?.msg),
+        (_ || _(`We hit error during invite, check console: ` + _?.msg),
           _(!1),
           _.refetch(),
-          _ && _();
+          _ && _());
       },
       onCancel: _,
       children: [
@@ -1912,7 +1912,7 @@ function _(_) {
                     href: `#`,
                     className: _(_, _.partnerid.toString() == _ ? _ : ``),
                     onClick: (_) => {
-                      _.preventDefault(), _(_.partnerid.toString());
+                      (_.preventDefault(), _(_.partnerid.toString()));
                     },
                     children: [_.partner_name, ` (`, _.partnerid, `)`],
                   },
@@ -1936,13 +1936,13 @@ function _(_) {
     onOK: async () => {
       _(!0);
       let _ = await _(_, _, !1);
-      _?.success == 1
+      (_?.success == 1
         ? (_(_.rgInvitedAccounts.length), _(_.rgSkippedAccounts.length))
         : _(`We hit error during invite, check console: ` + _?.msg),
-        _(!1);
+        _(!1));
     },
     onCancel: () => {
-      _(null), _(null), _(!1), _(null), _();
+      (_(null), _(null), _(!1), _(null), _());
     },
     children: [
       !!_ &&
@@ -2067,11 +2067,11 @@ function _(_) {
       (0, _.jsx)(`a`, {
         href: `#`,
         onClick: async (_) => {
-          _.preventDefault(), _.stopPropagation();
+          (_.preventDefault(), _.stopPropagation());
           let _ = [];
-          _.push([`nAccountID`, `nPartnerID`, `strEmailOverride`]),
+          (_.push([`nAccountID`, `nPartnerID`, `strEmailOverride`]),
             _.push([`388445686`, `1`, `adils@valvesoftware.com`]),
-            _.WriteCSVToFile(_, `invite_template.csv`);
+            _.WriteCSVToFile(_, `invite_template.csv`));
         },
         children: `Download Template Example`,
       }),
@@ -2095,19 +2095,19 @@ function _(_) {
                     _ = await _.ParseCSVFile(_);
                   if (_?.data) {
                     let _ = [];
-                    _.data.forEach((_) => {
+                    (_.data.forEach((_) => {
                       if (_.nAccountID) {
                         let _ = {
                           nAccountID: Number.parseInt(_.nAccountID),
                         };
-                        _.nPartnerID &&
+                        (_.nPartnerID &&
                           (_.nPartnerID = Number.parseInt(_.nPartnerID)),
                           _.strEmailOverride &&
                             (_.strEmailOverride = _.strEmailOverride),
-                          _.push(_);
+                          _.push(_));
                       }
                     }),
-                      _(_);
+                      _(_));
                   }
                 }
               },
@@ -2124,13 +2124,13 @@ async function _(_, _, _) {
     _ = _.map((_) => _.strEmailOverride).join(`,`),
     _ = _.map((_) => (_.bAllowRegistrationIfFull ? `1` : `0`)).join(`,`),
     _ = new FormData();
-  _.append(`sessionid`, _()),
+  (_.append(`sessionid`, _()),
     _.append(`gid`, _),
     _.append(`accounts`, _),
     _.append(`partnerids`, _),
     _.append(`emailoverride`, _),
     _.append(`allowregistrationiffull`, _),
-    _.append(`forceupdate`, _ ? `1` : `0`);
+    _.append(`forceupdate`, _ ? `1` : `0`));
   let _ = `${_.PARTNER_BASE_URL}/meetsteam/ajaxinviteusers`;
   try {
     let _ = await _.default.post(_, _, {
@@ -2177,7 +2177,7 @@ function _(_) {
     (_ ||= new _.default(
       async (_) => {
         let _ = _.Init(_);
-        _.Body().set_gids([..._]), _.Body().set_type(6);
+        (_.Body().set_gids([..._]), _.Body().set_type(6));
         let _ = await _.GetMultipleUserActionData(_, _);
         if (!_.BSuccess())
           throw `Failed to call GetMultipleUserActionData with details: ${_.GetErrorMessage()}`;
@@ -2192,7 +2192,7 @@ function _(_) {
                   ((_.steamid = _.steamid()),
                   (_.accountid = new _(_.steamid).GetAccountID()));
                 let _ = _.gid();
-                return _.has(_) ? _.get(_).push(_) : _.set(_, [_]), [_];
+                return (_.has(_) ? _.get(_).push(_) : _.set(_, [_]), [_]);
               } catch {
                 throw `Failed to parse GetMultipleUserActionData with details: ${_.steamid()}`;
               }
@@ -2243,8 +2243,8 @@ function _(_) {
     (_ ||= new _.default(
       async (_) => {
         let _ = _.Init(_);
-        _.Body().set_accountids(_.map((_) => _.accountID)),
-          _.Body().set_partnerids(_.map((_) => _.partnerID));
+        (_.Body().set_accountids(_.map((_) => _.accountID)),
+          _.Body().set_partnerids(_.map((_) => _.partnerID)));
         let _ = await _.GetBatchPartnerEmailAndName(_, _);
         if (!_.BSuccess())
           throw `Failed to call GetBatchPartnerEmailAndName with details: ${_.GetErrorMessage()}`;
@@ -2277,7 +2277,7 @@ function _(_) {
       (0, _.jsx)(`a`, {
         href: `#`,
         onClick: (_) => {
-          _.preventDefault(), _.stopPropagation(), _();
+          (_.preventDefault(), _.stopPropagation(), _());
         },
         children: `Analyse Top Partner Coverage`,
       }),
@@ -2780,18 +2780,18 @@ function _(_, _, _, _, _, _) {
       `Guest Count`,
       `Reg Confirmation Email Sent`,
     ];
-  _.ask_registration_question && _.push(`Pre Reg Answer`),
+  (_.ask_registration_question && _.push(`Pre Reg Answer`),
     _.push(_),
     _.forEach((_) => {
       let _ = [],
         _ = _.partner_id ? _(_.partner_id) : void 0;
-      _.push(`` + _.steamid),
+      (_.push(`` + _.steamid),
         _.push(_.name),
         _.push(_.invited ? `YES` : ``),
         _.push(_ ? `${_?.name} (${_.partner_id})` : ``),
         _.push(_.game ? `Game: ${_.game}` : ``),
         _.push(_.email_override),
-        _.push(`` + (_.guests_registered ? _.guests_registered - 1 : 0));
+        _.push(`` + (_.guests_registered ? _.guests_registered - 1 : 0)));
       let _ = new _(_.steamid);
       if (_.has(_.GetAccountID())) {
         let _ = _(_.get(_.GetAccountID()), _);
@@ -2810,9 +2810,9 @@ function _(_, _, _, _, _, _) {
       _.push(_);
       for (let _ = 0; _ < _.guest_names?.length; _++) {
         let _ = [];
-        _.push(`(guest)`), _.push(_.guest_names[_]), _.push(_);
+        (_.push(`(guest)`), _.push(_.guest_names[_]), _.push(_));
       }
-    });
+    }));
   let _ =
     `meetsteam_${_}_${_(_.rtime_start)}_at_${_(_.rtime_start)}.csv`.replace(
       /[ <>:"/\\|?*\x00-\x1F]/g,
@@ -2823,7 +2823,7 @@ function _(_, _, _, _, _, _) {
 function _(_, _) {
   let _ = `registration_emailed_${_.group_id}_${_.session_id}`,
     _ = null;
-  return _ in _ && (_ = _[_]), _;
+  return (_ in _ && (_ = _[_]), _);
 }
 function _(_) {
   let { inviteInfo: _, regInfo: _, group: _, preRegQuestions: _ } = _,
@@ -2877,7 +2877,7 @@ function _(_) {
 }
 async function _(_, _) {
   let _ = new FormData();
-  _.append(`sessionid`, _()), _.append(`gid`, _);
+  (_.append(`sessionid`, _()), _.append(`gid`, _));
   let _ = `${_.PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails`;
   try {
     let _ = await _.default.post(_, _, {
@@ -2911,7 +2911,7 @@ function _(_) {
       (0, _.jsx)(`a`, {
         href: `#`,
         onClick: (_) => {
-          _.preventDefault(), _.stopPropagation(), _();
+          (_.preventDefault(), _.stopPropagation(), _());
         },
         children: `Show Registration Across Events`,
       }),
@@ -3161,7 +3161,7 @@ function _(_) {
     [_, _] = (0, _.useState)(() => _ || ``),
     _ = (0, _.useCallback)(
       (_) => {
-        _(_), _(_ || void 0, !0);
+        (_(_), _(_ || void 0, !0));
       },
       [_],
     ),
@@ -3202,7 +3202,7 @@ function _(_, _) {
     _ = _.toLowerCase(),
     _ = 0;
   for (let _ = _.indexOf(_); _ >= 0; _ = _.indexOf(_, _))
-    _ > _ &&
+    (_ > _ &&
       _.push({
         strText: _.slice(_, _),
         bMatch: !1,
@@ -3211,7 +3211,7 @@ function _(_, _) {
         strText: _.slice(_, _ + _.length),
         bMatch: !0,
       }),
-      (_ = _ + _.length);
+      (_ = _ + _.length));
   return (
     _ < _.length &&
       _.push({
@@ -3324,7 +3324,7 @@ function _(_) {
                       (0, _.jsx)(`a`, {
                         href: `#`,
                         onClick: (_) => {
-                          _.preventDefault(), _(``);
+                          (_.preventDefault(), _(``));
                         },
                         children: `Clear`,
                       }),
@@ -3352,10 +3352,10 @@ function _(_, _) {
   let _ = [_.GID, _.GetNameWithFallback(0), _.GetDescriptionWithFallback(0)];
   return (
     _.jsondata.meet_steam_groups?.forEach((_) => {
-      _.push(_.GetWithFallback(_.localized_session_title, 0)),
+      (_.push(_.GetWithFallback(_.localized_session_title, 0)),
         _.push(_.GetWithFallback(_.localized_session_description, 0)),
         _.push(_.GetWithFallback(_.localized_intended_audience, 0)),
-        _.push(_.GetWithFallback(_.localized_sesssion_faq, 0));
+        _.push(_.GetWithFallback(_.localized_sesssion_faq, 0)));
     }),
     _.some((_) => _(_, _))
   );
@@ -3611,7 +3611,7 @@ function _(_) {
       (0, _.jsxs)(`a`, {
         href: `#`,
         onClick: (_) => {
-          _.preventDefault(), _.stopPropagation(), _();
+          (_.preventDefault(), _.stopPropagation(), _());
         },
         children: [
           `Invite via CSV`,
@@ -3641,7 +3641,7 @@ function _(_) {
       (0, _.jsx)(`a`, {
         href: `#`,
         onClick: (_) => {
-          _.preventDefault(), _.stopPropagation(), _();
+          (_.preventDefault(), _.stopPropagation(), _());
         },
         children: `Invite`,
       }),
@@ -3666,7 +3666,7 @@ function _(_) {
       (0, _.jsx)(`a`, {
         href: `#`,
         onClick: (_) => {
-          _.preventDefault(), _.stopPropagation(), _();
+          (_.preventDefault(), _.stopPropagation(), _());
         },
         children: `Show Invites`,
       }),
@@ -3692,7 +3692,7 @@ function _(_) {
       (0, _.jsx)(`a`, {
         href: `#`,
         onClick: async (_) => {
-          _.preventDefault(), _.stopPropagation(), _(!0);
+          (_.preventDefault(), _.stopPropagation(), _(!0));
           let _ = await _(_, _);
           _(_);
         },
@@ -3704,7 +3704,7 @@ function _(_) {
           bAlertDialog: !0,
           strTitle: `Test Emails`,
           closeModal: () => {
-            _(!1), _(null);
+            (_(!1), _(null));
           },
           onOK: () => {},
           children: [
@@ -3732,10 +3732,10 @@ function _(_) {
 async function _(_, _) {
   let _ = _.Init(_),
     _ = _.InitFromClanID(_(), _.EUNIVERSE);
-  _.Body().set_clan_event_gid(_),
-    _.Body().set_steamid(_.ConvertTo64BitString());
+  (_.Body().set_clan_event_gid(_),
+    _.Body().set_steamid(_.ConvertTo64BitString()));
   let _ = await _.TestFireEmails(_, _);
-  return console.log(`test fire`, _), _.GetEResult();
+  return (console.log(`test fire`, _), _.GetEResult());
 }
 function _(_, _) {
   let _ = _.default.unix(_),
@@ -3972,7 +3972,7 @@ function _(_) {
       (0, _.jsx)(_, {
         onClick: () => {
           let _ = [];
-          _.push([
+          (_.push([
             `AccountID`,
             `Partner ID`,
             `Valve Partner Contacts`,
@@ -4000,8 +4000,8 @@ function _(_) {
               let _ = _(_).map((_) => _(_, _)?.displayName || `` + _);
               _.push(_.join(`|`));
               let _ = _.results.email_override || ``;
-              _.push(`` + _),
-                _.push(_?.m_strPlayerName ? _.m_strPlayerName : ``);
+              (_.push(`` + _),
+                _.push(_?.m_strPlayerName ? _.m_strPlayerName : ``));
               let _ = _(_.GetAccountID(), _);
               if (
                 (_.push(_ ? _.realname : ``),
@@ -4015,24 +4015,24 @@ function _(_) {
                     .split(`.`)[0];
                 _.push(_);
               } else _.push(``);
-              _.push(`` + _.results.attending?.length),
+              (_.push(`` + _.results.attending?.length),
                 _.push(_.results.country_code),
                 _.push(
                   _.results.preferred_language
                     ? _(_.results.preferred_language)
                     : ``,
-                );
+                ));
               let _ = _(_);
               _.push(_ ? _.name : ``);
               let _ = _(_, _);
-              _
+              (_
                 ? (_.push(`` + _(_.strGrossUSD)),
                   _.push(`` + _.nBestAppID),
                   _.push(_.Get().GetApp(_.nBestAppID)?.GetName()),
                   _.push(`` + _.nBestAppLongTermSalesRank))
                 : (_.push(``), _.push(``), _.push(``), _.push(``)),
-                _.push(_);
-            });
+                _.push(_));
+            }));
           let _ = _.name.replace(` `, `_`) + `_conference_interest.csv`;
           _.WriteCSVToFile(_, _);
         },
@@ -4212,7 +4212,7 @@ function _(_) {
       (0, _.jsx)(_, {
         onClick: () => {
           let _ = [];
-          _.push([
+          (_.push([
             `AccountID`,
             `Partner ID`,
             `Email Override`,
@@ -4235,29 +4235,29 @@ function _(_) {
                 _ = _.results.partner_id;
               _.push(`` + _);
               let _ = _.results.email_override || ``;
-              _.push(`` + _),
-                _.push(_?.m_strPlayerName ? _.m_strPlayerName : ``);
+              (_.push(`` + _),
+                _.push(_?.m_strPlayerName ? _.m_strPlayerName : ``));
               let _ = _(_.GetAccountID(), _);
-              _.push(_ ? _.realname : ``),
+              (_.push(_ ? _.realname : ``),
                 _.push(`` + _.results.attending?.length),
                 _.push(_.results.country_code),
                 _.push(
                   _.results.preferred_language
                     ? _(_.results.preferred_language)
                     : ``,
-                );
+                ));
               let _ = _(_);
               _.push(_ ? _.name : ``);
               let _ = _(_, _);
-              _
+              (_
                 ? (_.push(`` + _(_.strGrossUSD)),
                   _.push(`` + _.nBestAppID),
                   _.push(`` + _.nBestAppLongTermSalesRank))
                 : (_.push(``), _.push(``), _.push(``)),
                 _.push(_.results.suggestion),
-                _.push(_);
+                _.push(_));
             }),
-            _.WriteCSVToFile(_, `suggestsion.csv`);
+            _.WriteCSVToFile(_, `suggestsion.csv`));
         },
         children: `Export to CSV (wait until the table populates fully)`,
       }),
@@ -4396,7 +4396,7 @@ function _(_) {
           (0, _.jsxs)(_, {
             onClick: () => {
               let _ = [];
-              _.push([`User Name`, `account id`, `Email`, `Event Count`]),
+              (_.push([`User Name`, `account id`, `Email`, `Event Count`]),
                 _.forEach((_) => {
                   let _ = _(_.accountid),
                     _ = _(_.accountid);
@@ -4407,7 +4407,7 @@ function _(_) {
                     _.clan_event_gids?.length.toLocaleString(_()),
                   ]);
                 }),
-                _.WriteCSVToFile(_, `sale_operators.csv`);
+                _.WriteCSVToFile(_, `sale_operators.csv`));
             },
             children: [
               `CSV Export`,
@@ -4663,11 +4663,11 @@ function _(_) {
                     children: [
                       (0, _.jsx)(_, {
                         onClick: async () => {
-                          _(!0), _(!1), _(!1);
+                          (_(!0), _(!1), _(!1));
                           let _ = `${_.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
                             _ = new FormData();
-                          _.append(`sessionid`, _()),
-                            _.append(`registrationJson`, JSON.stringify(_));
+                          (_.append(`sessionid`, _()),
+                            _.append(`registrationJson`, JSON.stringify(_)));
                           try {
                             let _ = await _.default.post(_, _, {
                               withCredentials: !0,
@@ -5095,10 +5095,10 @@ function _(_) {
                   children: [
                     (0, _.jsx)(_, {
                       onClick: async () => {
-                        _(!0), _(!1), _(!1);
+                        (_(!0), _(!1), _(!1));
                         let _ = `${_.PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${_}`,
                           _ = new FormData();
-                        _.append(`gid`, _), _.append(`sessionid`, _());
+                        (_.append(`gid`, _), _.append(`sessionid`, _()));
                         let _ = {
                           gid: _,
                           simple_response: _,
@@ -5206,22 +5206,22 @@ function _(_) {
           if (_.has(_.GetAccountID())) {
             let _ = _.get(_.GetAccountID()),
               _ = JSON.parse(_[0].jsondata);
-            (_.partner_id = _.partner_id),
+            ((_.partner_id = _.partner_id),
               (_.email = _.email_override),
               (_.name = _.name),
-              (_.registrations = ``);
+              (_.registrations = ``));
             let _ = _(_.partner_id);
-            _ && (_.partner_name = _.name),
+            (_ && (_.partner_name = _.name),
               _.forEach((_) => {
                 let _ = _.get(_.gidEvent);
                 if (_) {
                   let _ = _.jsondata.meet_steam_groups.find(
                     (_) => _.group_id === _.group_id,
                   ).localized_session_title[0];
-                  _.registrations.length > 0 && (_.registrations += `|`),
-                    (_.registrations += _);
+                  (_.registrations.length > 0 && (_.registrations += `|`),
+                    (_.registrations += _));
                 }
-              });
+              }));
           } else {
             let _ = _(_.GetAccountID());
             _ && (_.name = _.persona_name);
@@ -5323,9 +5323,9 @@ function _() {
       _.forEach((_, _) => {
         _.forEach((_) => {
           let _ = new _(_.steamid);
-          _.has(_.GetAccountID()) || _.set(_.GetAccountID(), []),
+          (_.has(_.GetAccountID()) || _.set(_.GetAccountID(), []),
             (_.gidEvent = _),
-            _.get(_.GetAccountID()).push(_);
+            _.get(_.GetAccountID()).push(_));
         });
       }),
       _

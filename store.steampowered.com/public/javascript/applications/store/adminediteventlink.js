@@ -49,7 +49,7 @@ function V(e) {
     g = m && i?.some((e) => m == e.GID),
     _ = r || u,
     y = () => {
-      a(), f();
+      (a(), f());
     },
     x = j.useMemo(
       () => [...(i ?? [])].sort((e, t) => t.startTime - e.startTime),
@@ -186,7 +186,7 @@ function U(e) {
         active: a,
         mutateAsync: () => c.mutateAsync({ clanSteamID: t, gid: r.GID }),
         onClose: (e) => {
-          s(!1), e && i();
+          (s(!1), e && i());
         },
         strTitle: b(`#Button_Delete`),
         strDescription: b(`#CreatorHome_EventLink_Delete_Dialog_Desc`),
@@ -196,7 +196,7 @@ function U(e) {
         active: l,
         mutateAsync: () => p.mutateAsync({ clanSteamID: t, gid: r.GID }),
         onClose: (e) => {
-          u(!1), e && i();
+          (u(!1), e && i());
         },
         strTitle: b(`#CreatorHome_EventLink_Select`),
         strDescription: b(`#CreatorHome_EventLink_Select_Dialog_Desc`),
@@ -206,7 +206,7 @@ function U(e) {
         active: d,
         mutateAsync: () => p.mutateAsync({ clanSteamID: t, gid: `0` }),
         onClose: (e) => {
-          f(!1), e && i();
+          (f(!1), e && i());
         },
         strTitle: b(`#CreatorHome_EventLink_Clear`),
         strDescription: b(`#CreatorHome_EventLink_Clear_Dialog_Desc`),

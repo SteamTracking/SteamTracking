@@ -163,8 +163,8 @@
 .ZCnr2Om6zRM- .JFMgmiOe8xk- {
   background: linear-gradient(
     to bottom,
-    rgb(from var(--color-dull-3) r g b / 70%) 5%,
-    rgb(from var(--color-dull-3) r g b / 40%) 95%
+    rgb(from var(--color-dull-3) r g b/70%) 5%,
+    rgb(from var(--color-dull-3) r g b/40%) 95%
   );
 }
 .cJQvFpktOuY- {
@@ -407,7 +407,7 @@
   color: var(--color-rare);
 }
 .YdwpRPPithE-.tQWKFb1QLD0- .BAUq7IBFzgM- svg {
-  filter: drop-shadow(0px 0px 4px rgb(from currentColor r g b / 50%));
+  filter: drop-shadow(0px 0px 4px rgb(from currentColor r g b/50%));
 }
 .YdwpRPPithE-.Vdd-T2WCTiA- {
   font-size: var(--text-size-4);

@@ -870,9 +870,9 @@ function Hc(e) {
   return (0, X.jsxs)(Ja, {
     className: Y(Bc, n),
     onClick: async (e) => {
-      e.preventDefault(),
+      (e.preventDefault(),
         e.stopPropagation(),
-        _s.logged_in ? (a(!0), await u(), o.token.reason || a(!1)) : c();
+        _s.logged_in ? (a(!0), await u(), o.token.reason || a(!1)) : c());
     },
     style: r,
     children: [
@@ -1087,7 +1087,7 @@ async function al(e, t, n, r, i) {
       )),
       u?.length > 0)
     ) {
-      (s += u.length), i(s), (l = u[u.length - 1].GID);
+      ((s += u.length), i(s), (l = u[u.length - 1].GID));
       let n = u
         .filter((e) => e.startTime <= r && e.BIsVisibleEvent())
         .map((e) => e.GID);
@@ -1334,7 +1334,7 @@ function Su(e, t, n, r) {
   if (t) {
     let t = e.GetEventModel();
     for (let n = 0; n < 32; ++n)
-      (e.BHasLanguageTitle(n) || n == 0) &&
+      ((e.BHasLanguageTitle(n) || n == 0) &&
         i.SetLocalization(`title`, n, e.GetName(n)),
         (t.BHasSubTitle(n) || n == 0) &&
           i.SetLocalization(`subtitle`, n, e.GetSubTitle(n)),
@@ -1344,7 +1344,7 @@ function Su(e, t, n, r) {
           i.SetLocalization(`summary`, n, e.GetSummary(n)),
         e.GetEventModel().jsondata.meet_steam_groups &&
           e.GetEventModel().jsondata.meet_steam_groups.forEach((e) => {
-            e.localized_session_title &&
+            (e.localized_session_title &&
               M.Get(e.localized_session_title, n) &&
               i.SetLocalization(
                 su + e.group_id,
@@ -1371,7 +1371,7 @@ function Su(e, t, n, r) {
                   cu + e.group_id,
                   n,
                   M.Get(e.localized_sesssion_faq, n),
-                );
+                ));
           }),
         e.GetEventModel().jsondata.meet_steam_schedules &&
           e.GetEventModel().jsondata.meet_steam_schedules.forEach((e) => {
@@ -1384,7 +1384,7 @@ function Su(e, t, n, r) {
                   M.Get(t.localized_break_description, n),
                 );
             });
-          });
+          }));
   }
   if (n && e.BHasEmailEnabled()) {
     let t = e.GetEmailSettings();
@@ -1397,9 +1397,10 @@ function Su(e, t, n, r) {
     t.sections.forEach((e, t) => {
       let n = new Zt(e);
       for (let e = 0; e < 32; ++e)
-        n.BHasHeadlineInLanguage(e) &&
+        (n.BHasHeadlineInLanguage(e) &&
           i.SetLocalization(vl + t, e, n.GetHeadline(e)),
-          n.BHasBodyInLanguage(e) && i.SetLocalization(yl + t, e, n.GetBody(e));
+          n.BHasBodyInLanguage(e) &&
+            i.SetLocalization(yl + t, e, n.GetBody(e)));
     });
   }
   let a = e.GetEventModel().jsondata;
@@ -1415,7 +1416,7 @@ function Su(e, t, n, r) {
       a.user_polls?.length > 0 &&
       a.user_polls.forEach((e) => {
         for (let t = 0; t < 32; ++t)
-          e.localized_poll_description &&
+          (e.localized_poll_description &&
             M.Get(e.localized_poll_description, t) &&
             i.SetLocalization(
               vu + e.poll_id,
@@ -1426,7 +1427,7 @@ function Su(e, t, n, r) {
               e.localized_option &&
                 M.Get(e.localized_option, t) &&
                 i.SetLocalization(yu + e.option_id, t, e.localized_option[t]);
-            });
+            }));
       }),
     r && e.BHasSaleEnabled())
   ) {
@@ -1438,7 +1439,7 @@ function Su(e, t, n, r) {
             i.SetLocalization(tu + t.unique_id, e, n);
           }
         });
-    a.sale_sub_menu?.menu_items?.length > 0 &&
+    (a.sale_sub_menu?.menu_items?.length > 0 &&
       a.sale_sub_menu.menu_items
         .filter((e) => e.localized_sub_menu_name?.length > 0)
         .map((e) => {
@@ -1479,7 +1480,7 @@ function Su(e, t, n, r) {
               t.section_type === `tabs` && t.tabs)
             )
               for (let n of t.tabs)
-                e.BHasSaleSectionTabName(r, n) &&
+                (e.BHasSaleSectionTabName(r, n) &&
                   i.SetLocalization(
                     Tl + t.unique_id + `_` + n.unique_id,
                     r,
@@ -1500,7 +1501,7 @@ function Su(e, t, n, r) {
                               e.localized_sub_menu_name[t],
                             );
                       }),
-                  wu(i, r, xu + n.unique_id + `_`, n.tab_tag_filter?.rgNodes);
+                  wu(i, r, xu + n.unique_id + `_`, n.tab_tag_filter?.rgNodes));
             if (
               (t.enable_faceted_browsing &&
                 (t.facets.forEach((n) => {
@@ -1513,7 +1514,7 @@ function Su(e, t, n, r) {
                 }),
                 t.facets.forEach((n) => {
                   n.facetValues.forEach((a) => {
-                    e.BHasSaleSectionFacetValueName(r, a) &&
+                    (e.BHasSaleSectionFacetValueName(r, a) &&
                       i.SetLocalization(
                         Dl +
                           t.unique_id +
@@ -1534,7 +1535,7 @@ function Su(e, t, n, r) {
                             a.unique_id,
                           r,
                           a.subtitle[r],
-                        );
+                        ));
                   });
                 })),
               t.section_type == `vo_internal` &&
@@ -1543,7 +1544,7 @@ function Su(e, t, n, r) {
                 (t.internal_section_data.reservation_options?.length > 0 ||
                   t.internal_section_data.reservation_layout) &&
                 (t.internal_section_data.reservation_options?.forEach((e) => {
-                  e.localized_reservation_desc &&
+                  (e.localized_reservation_desc &&
                     M.Get(e.localized_reservation_desc, r) &&
                     i.SetLocalization(
                       kl + t.unique_id + `_` + e.unique_id,
@@ -1571,11 +1572,11 @@ function Su(e, t, n, r) {
                         jl + t.unique_id + `_` + e.unique_id,
                         r,
                         e.localized_delivery_override_desc[r],
-                      );
+                      ));
                 }),
                 t.internal_section_data.reservation_layout?.product_configs?.forEach(
                   (e) => {
-                    e.localized_product_config_title &&
+                    (e.localized_product_config_title &&
                       M.Get(e.localized_product_config_title, r) &&
                       i.SetLocalization(
                         Ml + t.unique_id + `_` + e.unique_id,
@@ -1595,7 +1596,7 @@ function Su(e, t, n, r) {
                             r,
                             n.localized_variation_name[r],
                           );
-                      });
+                      }));
                   },
                 )),
               t.section_type == `vo_internal` &&
@@ -1617,7 +1618,7 @@ function Su(e, t, n, r) {
               (t.section_type == `quiz` || t.section_type == `template_faq`) &&
                 t.quiz?.questions?.length > 0 &&
                 t.quiz?.questions.forEach((e) => {
-                  e.localized_question &&
+                  (e.localized_question &&
                     M.Get(e.localized_question, r) &&
                     i.SetLocalization(
                       zl + t.unique_id + `_` + e.unique_id,
@@ -1633,12 +1634,12 @@ function Su(e, t, n, r) {
                             r,
                             e.localized_answer[r],
                           );
-                      });
+                      }));
                 }),
               t.section_type == `template_techspec` &&
                 t.tech_specs?.tech_spec_block_list?.length > 0 &&
                 t.tech_specs?.tech_spec_block_list.forEach((e) => {
-                  e.localized_block_title &&
+                  (e.localized_block_title &&
                     M.Get(e.localized_block_title, r) &&
                     i.SetLocalization(
                       fu + t.unique_id + `_` + e.unique_id,
@@ -1668,12 +1669,12 @@ function Su(e, t, n, r) {
                             ),
                           );
                         }
-                      });
+                      }));
                 }),
               t.section_type == `badge_progress` && t.badge_progress)
             ) {
               let e = t.badge_progress;
-              e.localized_name &&
+              (e.localized_name &&
                 M.Get(e.localized_name, r) &&
                 i.SetLocalization(Vl + t.unique_id, r, e.localized_name[r]),
                 e.localized_initial_description &&
@@ -1696,12 +1697,12 @@ function Su(e, t, n, r) {
                     Wl + t.unique_id,
                     r,
                     e.localized_maxtier_description[r],
-                  );
+                  ));
             }
-            t.section_type == `quest` &&
+            (t.section_type == `quest` &&
               t.quest?.door_info?.length > 0 &&
               t.quest.door_info.forEach((e) => {
-                e.localized_open_door_description &&
+                (e.localized_open_door_description &&
                   M.Get(e.localized_open_door_description, r) &&
                   i.SetLocalization(
                     Gl + t.unique_id + `_` + e.unique_id,
@@ -1714,7 +1715,7 @@ function Su(e, t, n, r) {
                       Kl + t.unique_id + `_` + e.unique_id,
                       r,
                       e.localized_closed_door_description[r],
-                    );
+                    ));
               }),
               t.section_type == `rewards` &&
                 t.rewards?.reward_items?.length > 0 &&
@@ -1747,7 +1748,7 @@ function Su(e, t, n, r) {
               t.section_type == `social_share` &&
                 t.social_share.content_options.forEach((e) => {
                   let n = e.localized_option_fields;
-                  n.localized_header &&
+                  (n.localized_header &&
                     M.Get(n.localized_header, r) &&
                     i.SetLocalization(
                       Jl + t.unique_id + `_` + e.unique_id,
@@ -1781,7 +1782,7 @@ function Su(e, t, n, r) {
                         Ql + t.unique_id + `_` + e.unique_id,
                         r,
                         n.twitter_alt_text[r],
-                      );
+                      ));
                 }),
               t.section_type == `media_layout` &&
                 t.media_layout.media_content.forEach((e, n) => {
@@ -1793,7 +1794,7 @@ function Su(e, t, n, r) {
               t.section_type == `template_media_content` &&
                 t.media_container?.media_rows?.forEach((e, n) => {
                   e?.media_columns?.forEach((e) => {
-                    Cu(i, r, t.unique_id + `_` + e.unique_id, e),
+                    (Cu(i, r, t.unique_id + `_` + e.unique_id, e),
                       e.mobile_content_varient &&
                         Cu(
                           i,
@@ -1807,7 +1808,7 @@ function Su(e, t, n, r) {
                           r,
                           t.unique_id + `_` + e.unique_id + `_tablet`,
                           e.tablet_content_varient,
-                        );
+                        ));
                   });
                 }),
               t.section_type == `template_media_overlay` &&
@@ -1826,15 +1827,15 @@ function Su(e, t, n, r) {
                     r,
                     t.unique_id + `_overlay_tablet`,
                     t.media_overlay_tablet_content_varient,
-                  ));
+                  )));
           }
-        });
+        }));
   }
   return i;
 }
 function Cu(e, t, n, r) {
   let i = r.localized_media_title;
-  i && M.Get(i, t) && e.SetLocalization(ru + n, t, i[t]),
+  (i && M.Get(i, t) && e.SetLocalization(ru + n, t, i[t]),
     (i = r.localized_media_subtitle),
     i && M.Get(i, t) && e.SetLocalization(iu + n, t, i[t]),
     (i = r.localized_media_description),
@@ -1842,14 +1843,14 @@ function Cu(e, t, n, r) {
     (i = r.localized_alt_text),
     i && M.Get(i, t) && e.SetLocalization(gu + n, t, i[t]),
     (i = r.title_media?.localized_alt_text),
-    i && M.Get(i, t) && e.SetLocalization(_u + n, t, i[t]);
+    i && M.Get(i, t) && e.SetLocalization(_u + n, t, i[t]));
 }
 function wu(e, t, n, r) {
   for (let i of r ?? []) {
     let r = n + Nt(i);
-    M.Get(i.rgLocalizedNames, t) &&
+    (M.Get(i.rgLocalizedNames, t) &&
       e.SetLocalization(r, t, i.rgLocalizedNames[t]),
-      wu(e, t, r + `/`, i.rgChildren);
+      wu(e, t, r + `/`, i.rgChildren));
   }
 }
 function Tu(e, t, r) {
@@ -1859,7 +1860,7 @@ function Tu(e, t, r) {
     n(() => {
       r.forEach((n) => {
         let r = !1;
-        a.forEach((i) => {
+        (a.forEach((i) => {
           let a = t.GetLocalization(i, n) || ``;
           if (
             (i === ml &&
@@ -2014,7 +2015,7 @@ function Tu(e, t, r) {
             }
             t.sections.forEach((t, o) => {
               let s = new gn(t, e);
-              s.BHasHeadline() &&
+              (s.BHasHeadline() &&
                 i === vl + o &&
                 (a || s.BHasHeadlineInLanguage(n)) &&
                 s.SetHeadline(a, n) &&
@@ -2023,12 +2024,12 @@ function Tu(e, t, r) {
                   i === yl + o &&
                   (a || s.BHasBodyInLanguage(n)) &&
                   s.SetBody(a, n) &&
-                  (r = !0);
+                  (r = !0));
             });
           }
           if (e.BHasSaleEnabled()) {
             let o = e.GetEventModel().jsondata;
-            o?.sale_presenters?.length &&
+            (o?.sale_presenters?.length &&
               o.sale_presenters.forEach((o) => {
                 if (i === tu + o.unique_id) {
                   (a || M.Get(o.localized_presenter_name, n)) &&
@@ -2087,7 +2088,7 @@ function Tu(e, t, r) {
                     s.section_type === `tabs` && s.tabs)
                   )
                     for (let c of s.tabs)
-                      i === Tl + s.unique_id + `_` + c.unique_id &&
+                      (i === Tl + s.unique_id + `_` + c.unique_id &&
                         (a || e.BHasSaleSectionTabName(n, c)) &&
                         e.SetSaleSectionTabName(n, c, a) &&
                         (r = !0),
@@ -2122,7 +2123,7 @@ function Tu(e, t, r) {
                           n,
                           xu + c.unique_id + `_`,
                           c.tab_tag_filter?.rgNodes,
-                        ) && (r = !0);
+                        ) && (r = !0));
                   if (
                     (e.BHasSaleSectionTextLocalization(c) &&
                       i === Cl + s.unique_id &&
@@ -2131,12 +2132,12 @@ function Tu(e, t, r) {
                       (r = !0),
                     s.enable_faceted_browsing &&
                       s.facets.forEach((t) => {
-                        i === El + s.unique_id + `_` + t.unique_id &&
+                        (i === El + s.unique_id + `_` + t.unique_id &&
                           (a || e.BHasSaleSectionFacetName(n, t)) &&
                           e.SetSaleSectionFacetName(n, t, a) &&
                           (r = !0),
                           t.facetValues.forEach((o) => {
-                            i ===
+                            (i ===
                               Dl +
                                 s.unique_id +
                                 `_` +
@@ -2156,8 +2157,8 @@ function Tu(e, t, r) {
                                 (a ||
                                   e.BHasSaleSectionFacetValueSubtitle(n, o)) &&
                                 e.SetSaleSectionFacetValueSubtitle(n, o, a) &&
-                                (r = !0);
-                          });
+                                (r = !0));
+                          }));
                       }),
                     s.section_type == `vo_internal` &&
                       s.internal_section_data?.internal_type ==
@@ -2167,7 +2168,7 @@ function Tu(e, t, r) {
                         s.internal_section_data.reservation_layout) &&
                       (s.internal_section_data.reservation_options?.forEach(
                         (t) => {
-                          i === kl + s.unique_id + `_` + t.unique_id &&
+                          (i === kl + s.unique_id + `_` + t.unique_id &&
                             (a ||
                               (t.localized_reservation_desc &&
                                 M.Get(t.localized_reservation_desc, n))) &&
@@ -2223,12 +2224,12 @@ function Tu(e, t, r) {
                                 a,
                               )),
                               e.SetDirty(x.jsondata_sales),
-                              (r = !0));
+                              (r = !0)));
                         },
                       ),
                       s.internal_section_data.reservation_layout?.product_configs?.forEach(
                         (t) => {
-                          i === Ml + s.unique_id + `_` + t.unique_id &&
+                          (i === Ml + s.unique_id + `_` + t.unique_id &&
                             (a ||
                               (t.localized_product_config_title &&
                                 M.Get(t.localized_product_config_title, n))) &&
@@ -2259,7 +2260,7 @@ function Tu(e, t, r) {
                                 )),
                                 e.SetDirty(x.jsondata_sales),
                                 (r = !0));
-                            });
+                            }));
                         },
                       )),
                     s.section_type == `vo_internal` &&
@@ -2438,7 +2439,7 @@ function Tu(e, t, r) {
                     s.section_type == `badge_progress` && s.badge_progress)
                   ) {
                     let t = s.badge_progress;
-                    i === Vl + s.unique_id &&
+                    (i === Vl + s.unique_id &&
                       (a || (t.localized_name && M.Get(t.localized_name, n))) &&
                       M.Get(t.localized_name, n) !== a &&
                       ((t.localized_name = M.Set(t.localized_name || [], n, a)),
@@ -2479,7 +2480,7 @@ function Tu(e, t, r) {
                           a,
                         )),
                         e.SetDirty(x.jsondata_sales),
-                        (r = !0));
+                        (r = !0)));
                   }
                   if (
                     (s.section_type == `discoveryqueue` &&
@@ -2498,7 +2499,7 @@ function Tu(e, t, r) {
                     s.section_type == `social_share` &&
                       s.social_share.content_options?.forEach((t) => {
                         let o = t.localized_option_fields;
-                        i === Jl + s.unique_id + `_` + t.unique_id &&
+                        (i === Jl + s.unique_id + `_` + t.unique_id &&
                           (a ||
                             (o.localized_header &&
                               M.Get(o.localized_header, n))) &&
@@ -2539,7 +2540,7 @@ function Tu(e, t, r) {
                               a,
                             )),
                             e.SetDirty(x.jsondata_sales),
-                            (r = !0));
+                            (r = !0)));
                       }),
                     s.section_type == `media_layout` &&
                       s.media_layout.media_content?.forEach((t, o) => {
@@ -2562,7 +2563,7 @@ function Tu(e, t, r) {
                             n,
                             t,
                           );
-                          (r ||= o),
+                          ((r ||= o),
                             t.mobile_content_varient &&
                               ((o = Eu(
                                 e,
@@ -2582,7 +2583,7 @@ function Tu(e, t, r) {
                                 n,
                                 t.tablet_content_varient,
                               )),
-                              (r ||= o));
+                              (r ||= o)));
                         });
                       }),
                     s.section_type == `template_media_overlay` &&
@@ -2619,10 +2620,10 @@ function Tu(e, t, r) {
                       r ||= t;
                     }
                   }
-                });
+                }));
           }
         }),
-          r && i.push(n);
+          r && i.push(n));
       });
     }),
     i
@@ -2701,11 +2702,11 @@ var ku = (e) => {
           toolTipContent: L(`#EventEditor_Loc_Export_Desc0`),
           children: (0, X.jsx)(`a`, {
             onClick: (n) => {
-              n.preventDefault(),
+              (n.preventDefault(),
                 P(
                   (0, X.jsx)(Au, { editModel: e.editModel, permissions: t }),
                   G(n),
-                );
+                ));
             },
             children: L(`#EventEditor_Loc_Export_Short`),
           }),
@@ -2728,7 +2729,7 @@ var ku = (e) => {
     GetLocalizationFilePrefix() {
       let { editModel: e } = this.props,
         t = e.GetName(0);
-      return (t && t.trim() != ``) || (t = `event`), t;
+      return ((t && t.trim() != ``) || (t = `event`), t);
     }
     GetLocalizationModel() {
       return Su(
@@ -2869,9 +2870,9 @@ var ku = (e) => {
       });
     }
   };
-D([A], Au.prototype, `GetLocalizationModel`, null),
+(D([A], Au.prototype, `GetLocalizationModel`, null),
   D([A], Au.prototype, `OnExportTypeChange`, null),
-  (Au = D([r], Au));
+  (Au = D([r], Au)));
 var ju = `YBWwi-HOl1E-`,
   Mu = `uCIxyA-LA3Q-`,
   Nu = `r0b7DWVF3e4-`,
@@ -2906,7 +2907,7 @@ function id(e) {
     : (0, X.jsx)(`div`, {
         className: Y(Yu, Qu),
         onClick: (e) => {
-          e.stopPropagation(), ad(t, n);
+          (e.stopPropagation(), ad(t, n));
         },
         children: L(`#Button_Clone`),
       });
@@ -2947,7 +2948,9 @@ function od(e, t, n) {
     let e = t.GetLanguagesWithTokens();
     t.ClearLanguagesTokens(n);
     let a = i.jsondata.bSaleEnabled;
-    (i.jsondata.bSaleEnabled = !0), Tu(r, t, e), (i.jsondata.bSaleEnabled = a);
+    ((i.jsondata.bSaleEnabled = !0),
+      Tu(r, t, e),
+      (i.jsondata.bSaleEnabled = a));
   }
   e(`clone`);
 }
@@ -2974,7 +2977,7 @@ function sd(e) {
               className: nd,
               onChange: (t) => {
                 let n = new Set(o);
-                t ? n.delete(e) : n.add(e), s(n);
+                (t ? n.delete(e) : n.add(e), s(n));
               },
               label: L(`#Language_` + lo(e)),
               checked: !o.has(e),
@@ -3111,7 +3114,7 @@ var bd = (e) => {
       [i, a] = Z.useState(void 0),
       [o, s, c] = cd(t),
       l = () => {
-        c(i?.build_id, i?.branch), n();
+        (c(i?.build_id, i?.branch), n());
       };
     if (r?.length && i === void 0) {
       let e = r.find((e) => e.branch == ``);
@@ -3169,7 +3172,7 @@ var bd = (e) => {
       [a, o] = Z.useState(null),
       s = Z.useRef(!1),
       c = Z.useCallback((e) => {
-        (s.current = !1), o(e);
+        ((s.current = !1), o(e));
       }, []),
       l = Z.useCallback(
         (e) => {
@@ -3471,7 +3474,7 @@ function Dd(e) {
     o = ua(t.clanSteamID, !0),
     s = Z.useCallback(
       (e) => {
-        e.stopPropagation(),
+        (e.stopPropagation(),
           b
             .LoadEditorModel(t.clanSteamID, t.GID)
             .then(() => {
@@ -3480,7 +3483,7 @@ function Dd(e) {
             .catch((e) => {
               let t = k(e);
               i({ kind: `error`, strMessage: t.strErrorMsg });
-            });
+            }));
       },
       [t],
     );
@@ -3526,7 +3529,7 @@ function Od(e) {
     [r, i, a] = Gs(),
     o = Z.useCallback(
       (e) => {
-        e.stopPropagation(), i();
+        (e.stopPropagation(), i());
       },
       [i],
     );
@@ -3559,13 +3562,13 @@ function kd(e, t) {
     Object.keys(e).forEach((r) => {
       let i = e[r],
         a = JSON.stringify(i)?.length || 0;
-      n.push({ key: r, size: a }),
+      (n.push({ key: r, size: a }),
         i &&
           (typeof i == `object` || Array.isArray(i)) &&
           a > 100 &&
           kd(i, t - 1).forEach((e) => {
             n.push({ key: r + `:` + e.key, size: e.size });
-          });
+          }));
     }),
     n
   );
@@ -3646,7 +3649,7 @@ var Ad = (e) => {
           d(a - (r ?? []).length - (i ?? []).length), Array.from(t.values())
         );
       }, [v, te?.pages, c, p]);
-    Z.useEffect(() => {
+    (Z.useEffect(() => {
       let e = fe
         .filter((e) => !!(e && e.BIsVisibleEvent() && e.BIsPartnerEvent()))
         .map((e) => e.GID);
@@ -3662,12 +3665,12 @@ var Ad = (e) => {
             window,
           );
         }
-      }, [ce, se]);
+      }, [ce, se]));
     let pe = (e, r) => {
         let i = [],
           a = fe;
         if (a?.length > 0) {
-          (a = a
+          ((a = a
             .slice()
             .filter(
               (t) =>
@@ -3689,7 +3692,7 @@ var Ad = (e) => {
                     ? 1
                     : t.startTime - e.startTime
               ),
-            );
+            ));
           for (let e of a)
             i.push(
               (0, X.jsx)(
@@ -3700,7 +3703,7 @@ var Ad = (e) => {
                   eventModel: e,
                   bShowEventMetaDataSizes: n,
                   refresh: () => {
-                    le(), ee();
+                    (le(), ee());
                   },
                 },
                 e.GID,
@@ -4273,9 +4276,9 @@ function Bd(e) {
         label: `Auto update vanity URL based on configured content hub`,
         checked: r,
         onChange: (e) => {
-          (n.jsondata.bAutoUpdateVanityURLForContentHub = e),
+          ((n.jsondata.bAutoUpdateVanityURLForContentHub = e),
             e && Gt(n.GetContentHub(), t),
-            t.SetDirty(x.jsondata_sales);
+            t.SetDirty(x.jsondata_sales));
         },
       }),
       (0, X.jsx)(F, {
@@ -4283,10 +4286,10 @@ function Bd(e) {
         tooltip: `If checked, this sale page will be used to render only a specific content hub. Check this if you are defining tabs/merchandising for some specific hub, or if you're defining a theme sale.`,
         checked: i,
         onChange: (e) => {
-          (n.jsondata.sale_defines_specific_contenthub = e || void 0),
+          ((n.jsondata.sale_defines_specific_contenthub = e || void 0),
             n.jsondata.bAutoUpdateVanityURLForContentHub &&
               Gt(n.GetContentHub(), t),
-            t.SetDirty(x.jsondata_sales);
+            t.SetDirty(x.jsondata_sales));
         },
       }),
       i && (0, X.jsx)(Vd, { ...e }),
@@ -4295,10 +4298,10 @@ function Bd(e) {
         tooltip: `If checked, this sale page will be used when rendering content hubs only during the time period specified in the Options tab of the sale editor. Check this if you are defining a takeover for a seasonal sale, or if you're defining a theme sale.`,
         checked: a,
         onChange: (e) => {
-          (n.jsondata.sale_defines_temporary_contenthub = e || void 0),
+          ((n.jsondata.sale_defines_temporary_contenthub = e || void 0),
             n.jsondata.bAutoUpdateVanityURLForContentHub &&
               Gt(n.GetContentHub(), t),
-            t.SetDirty(x.jsondata_sales);
+            t.SetDirty(x.jsondata_sales));
         },
       }),
       (0, X.jsx)(W, {
@@ -4309,8 +4312,8 @@ function Bd(e) {
         label: `Show discounted (and free-to-play) items only`,
         checked: o,
         onChange: (e) => {
-          (n.jsondata.content_hub_discounted_only = e),
-            t.SetDirty(x.jsondata_sales);
+          ((n.jsondata.content_hub_discounted_only = e),
+            t.SetDirty(x.jsondata_sales));
         },
       }),
       (0, X.jsx)(F, {
@@ -4318,9 +4321,9 @@ function Bd(e) {
         tooltip: `If checked, this hub will include opted-in games and exclude pruned out games from the selected opt-in event. Typically used when defining a theme sale.`,
         checked: v,
         onChange: (e) => {
-          ee(e),
+          (ee(e),
             e || (n.jsondata.prune_list_optin_name = void 0),
-            t.SetDirty(x.jsondata_sales);
+            t.SetDirty(x.jsondata_sales));
         },
       }),
       v && (0, X.jsx)(Hd, { ...e }),
@@ -4329,8 +4332,8 @@ function Bd(e) {
         label: `Show restricted-width title and main carousel`,
         checked: s,
         onChange: (e) => {
-          (n.jsondata.content_hub_restricted_width = e),
-            t.SetDirty(x.jsondata_sales);
+          ((n.jsondata.content_hub_restricted_width = e),
+            t.SetDirty(x.jsondata_sales));
         },
       }),
       (0, X.jsx)(F, {
@@ -4338,8 +4341,8 @@ function Bd(e) {
         tooltip: `If checked, use artwork (background, fonts, colors, etc.) from this sale page instead of the artwork defined in the sale page it inherits from.`,
         checked: l,
         onChange: (e) => {
-          (n.jsondata.contenthub_override_artwork = e),
-            t.SetDirty(x.jsondata_sales);
+          ((n.jsondata.contenthub_override_artwork = e),
+            t.SetDirty(x.jsondata_sales));
         },
       }),
       (0, X.jsx)(F, {
@@ -4347,8 +4350,8 @@ function Bd(e) {
         tooltip: `If checked, for every section that exists in this sale page and the parent sale page, use section styles (colors, etc.) from this sale page instead of from the parent.`,
         checked: u,
         onChange: (e) => {
-          (n.jsondata.contenthub_override_section_styles = e),
-            t.SetDirty(x.jsondata_sales);
+          ((n.jsondata.contenthub_override_section_styles = e),
+            t.SetDirty(x.jsondata_sales));
         },
       }),
       (0, X.jsx)(F, {
@@ -4356,8 +4359,8 @@ function Bd(e) {
         tooltip: `If checked, and a tabs section exists in this sale page and the parent sale page, use tab styles (colors, fonts, etc.) from this sale page instead of from the parent.`,
         checked: d,
         onChange: (e) => {
-          (n.jsondata.contenthub_override_tab_styles = e),
-            t.SetDirty(x.jsondata_sales);
+          ((n.jsondata.contenthub_override_tab_styles = e),
+            t.SetDirty(x.jsondata_sales));
         },
       }),
       (0, X.jsx)(F, {
@@ -4365,8 +4368,8 @@ function Bd(e) {
         tooltip: `If checked, and a tabs section exists in this sale page and the parent sale page, use the tab definitions (names, filters, etc.) from this sale page instead of from the parent.`,
         checked: f,
         onChange: (e) => {
-          (n.jsondata.contenthub_override_tab_definitions = e),
-            t.SetDirty(x.jsondata_sales);
+          ((n.jsondata.contenthub_override_tab_definitions = e),
+            t.SetDirty(x.jsondata_sales));
         },
       }),
       (0, X.jsx)(F, {
@@ -4374,16 +4377,16 @@ function Bd(e) {
         tooltip: `If checked, and an item browser section exists in this sale page and the parent sale page, use the flavor definitions (e.g. Popular, Recently Released, etc.) from this sale page instead of from the parent.`,
         checked: p,
         onChange: (e) => {
-          (n.jsondata.contenthub_override_item_browser_flavors = e),
-            t.SetDirty(x.jsondata_sales);
+          ((n.jsondata.contenthub_override_item_browser_flavors = e),
+            t.SetDirty(x.jsondata_sales));
         },
       }),
       (0, X.jsx)(F, {
         label: `Ignore item browser tab overrides during sale takeovers`,
         checked: c,
         onChange: (e) => {
-          (n.jsondata.ignore_item_browser_overrides = e),
-            t.SetDirty(x.jsondata_sales);
+          ((n.jsondata.ignore_item_browser_overrides = e),
+            t.SetDirty(x.jsondata_sales));
         },
       }),
       (0, X.jsx)(F, {
@@ -4391,8 +4394,8 @@ function Bd(e) {
         tooltip: `If checked, and an item browser section exists in this sale page and the parent sale page, use the facet menu from this sale page instead of from the parent.`,
         checked: m,
         onChange: (e) => {
-          (n.jsondata.contenthub_override_item_browser_facets = e),
-            t.SetDirty(x.jsondata_sales);
+          ((n.jsondata.contenthub_override_item_browser_facets = e),
+            t.SetDirty(x.jsondata_sales));
         },
       }),
       (0, X.jsx)(F, {
@@ -4400,8 +4403,8 @@ function Bd(e) {
         tooltip: `If checked, the sections defined in this sale page will be used as-is, instead of being combined with parent sale pages via the override logic.`,
         checked: h,
         onChange: (e) => {
-          (n.jsondata.contenthub_disable_overrides = e),
-            t.SetDirty(x.jsondata_sales);
+          ((n.jsondata.contenthub_disable_overrides = e),
+            t.SetDirty(x.jsondata_sales));
         },
       }),
       (0, X.jsx)(dr, {
@@ -4460,12 +4463,12 @@ function Vd(e) {
           options: s,
           value: s?.find((e) => e.value === r),
           onChange: (e) => {
-            (n.jsondata.source_content_hub = {
+            ((n.jsondata.source_content_hub = {
               type: e.value,
               category: e.value === `category` ? i : void 0,
               tagid: e.value === `tags` ? a : void 0,
             }),
-              t.SetDirty(x.jsondata_sales);
+              t.SetDirty(x.jsondata_sales));
           },
         }),
       }),
@@ -4485,11 +4488,11 @@ function Vd(e) {
                 options: c,
                 value: c?.find((e) => e.value === i),
                 onChange: (e) => {
-                  (n.jsondata.source_content_hub = {
+                  ((n.jsondata.source_content_hub = {
                     type: r,
                     category: e?.value,
                   }),
-                    t.SetDirty(x.jsondata_sales);
+                    t.SetDirty(x.jsondata_sales));
                 },
               }),
             }),
@@ -4509,11 +4512,11 @@ function Vd(e) {
                 options: l,
                 value: l?.find((e) => Number(e.value) === a),
                 onChange: (e) => {
-                  (n.jsondata.source_content_hub = {
+                  ((n.jsondata.source_content_hub = {
                     type: r,
                     tagid: Number(e?.value),
                   }),
-                    t.SetDirty(x.jsondata_sales);
+                    t.SetDirty(x.jsondata_sales));
                 },
               }),
             }),
@@ -4553,8 +4556,8 @@ function Hd(e) {
             options: o,
             value: o?.find((e) => e.value === r),
             onChange: (e) => {
-              (n.jsondata.prune_list_optin_name = e.value),
-                t.SetDirty(x.jsondata_sales);
+              ((n.jsondata.prune_list_optin_name = e.value),
+                t.SetDirty(x.jsondata_sales));
             },
           }),
           (0, X.jsx)(F, {
@@ -4562,7 +4565,7 @@ function Hd(e) {
             tooltip: `If checked, this hub will only show games that have been invited to register for the event. Typically used when defining a theme sale.`,
             checked: i,
             onChange: (e) => {
-              (n.jsondata.optin_only = e), t.SetDirty(x.jsondata_sales);
+              ((n.jsondata.optin_only = e), t.SetDirty(x.jsondata_sales));
             },
           }),
         ],
@@ -4592,11 +4595,11 @@ function Ud(e) {
           (0, X.jsx)(Hn, {
             items: i || [],
             onDelete: (e) => {
-              (n.jsondata.contenthub_section_groups = [
+              ((n.jsondata.contenthub_section_groups = [
                 ...n.jsondata.contenthub_section_groups.slice(0, e),
                 ...n.jsondata.contenthub_section_groups.slice(e + 1),
               ]),
-                t.SetDirty(x.jsondata_sales);
+                t.SetDirty(x.jsondata_sales));
             },
             onReorder: () => {
               t.SetDirty(x.jsondata_sales);
@@ -4615,12 +4618,12 @@ function Ud(e) {
           (0, X.jsx)(I, {
             style: { maxWidth: `200px`, margin: `0 auto` },
             onClick: () => {
-              i || (n.jsondata.contenthub_section_groups = []),
+              (i || (n.jsondata.contenthub_section_groups = []),
                 (n.jsondata.contenthub_section_groups = [
                   ...n.jsondata.contenthub_section_groups,
                   { name: ``, sections: [] },
                 ]),
-                t.SetDirty(x.jsondata_sales);
+                t.SetDirty(x.jsondata_sales));
             },
             children: `Add Group`,
           }),
@@ -4661,14 +4664,14 @@ function Wd(e) {
                     label: `Name`,
                     value: o,
                     onChange: (e) => {
-                      (n.name = e.target.value), a();
+                      ((n.name = e.target.value), a());
                     },
                   }),
                   (0, X.jsx)(N, {
                     label: `Description`,
                     value: s,
                     onChange: (e) => {
-                      (n.description = e.target.value), a();
+                      ((n.description = e.target.value), a());
                     },
                   }),
                 ],
@@ -4686,7 +4689,7 @@ function Wd(e) {
                         rgOptions: u,
                         selectedOption: o,
                         onChange: (e) => {
-                          (n.name = e.data), a();
+                          ((n.name = e.data), a());
                         },
                       }),
                     ],
@@ -4703,7 +4706,7 @@ function Wd(e) {
                         ],
                         selectedOption: l,
                         onChange: (e) => {
-                          (n.override_type = e.data), a();
+                          ((n.override_type = e.data), a());
                         },
                       }),
                       !l &&
@@ -4724,11 +4727,11 @@ function Wd(e) {
               (0, X.jsx)(Hn, {
                 items: c,
                 onDelete: (e) => {
-                  (n.sections = [
+                  ((n.sections = [
                     ...n.sections.slice(0, e),
                     ...n.sections.slice(e + 1),
                   ]),
-                    a();
+                    a());
                 },
                 onReorder: () => {
                   a();
@@ -4739,7 +4742,7 @@ function Wd(e) {
               (0, X.jsx)(I, {
                 style: { maxWidth: `150px`, margin: `0 auto` },
                 onClick: () => {
-                  (n.sections = [...n.sections, { sectionid: 0 }]), a();
+                  ((n.sections = [...n.sections, { sectionid: 0 }]), a());
                 },
                 children: `Add Section`,
               }),
@@ -4764,7 +4767,7 @@ function Gd(e) {
       rgOptions: s,
       selectedOption: c,
       onChange: (e) => {
-        (n.sectionid = e.data), r();
+        ((n.sectionid = e.data), r());
       },
     }),
   });
@@ -4789,7 +4792,7 @@ function Kd(e) {
                   r(e, {
                     color: i,
                     onChange: (e) => {
-                      (t.sale_background_color = e), n();
+                      ((t.sale_background_color = e), n());
                     },
                   });
                 },
@@ -4799,7 +4802,7 @@ function Kd(e) {
               (0, X.jsx)(I, {
                 className: Ma,
                 onClick: (e) => {
-                  (t.sale_background_color = ``), n();
+                  ((t.sale_background_color = ``), n());
                 },
                 children: L(`#Sale_BackgroundColor_Reset`),
               }),
@@ -5035,9 +5038,9 @@ function Qd(e) {
                   (0, X.jsx)(N, {
                     value: n,
                     onChange: (e) => {
-                      (t.GetEventModel().jsondata.sale_header_offset =
+                      ((t.GetEventModel().jsondata.sale_header_offset =
                         Number(e?.target?.value) || 0),
-                        t.SetDirty(x.jsondata_sales);
+                        t.SetDirty(x.jsondata_sales));
                     },
                   }),
                   (0, X.jsxs)(`div`, {
@@ -5060,8 +5063,8 @@ function Qd(e) {
         checked: i,
         label: `Disable Sale Page Top Pixels`,
         onChange: (e) => {
-          (t.GetEventModel().jsondata.sale_header_disable_top_margin = e),
-            t.SetDirty(x.jsondata_sales);
+          ((t.GetEventModel().jsondata.sale_header_disable_top_margin = e),
+            t.SetDirty(x.jsondata_sales));
         },
       }),
     ],
@@ -5198,18 +5201,18 @@ function tf(e) {
       (0, X.jsx)(N, {
         label: L(`#Sale_BackgroundVideo_WebM`),
         onChange: (e) => {
-          (t.GetEventModel().jsondata.sale_background_video_webm =
+          ((t.GetEventModel().jsondata.sale_background_video_webm =
             e?.target?.value || ``),
-            t.SetDirty(x.jsondata_sales);
+            t.SetDirty(x.jsondata_sales));
         },
         value: n,
       }),
       (0, X.jsx)(N, {
         label: L(`#Sale_BackgroundVideo_MP4`),
         onChange: (e) => {
-          (t.GetEventModel().jsondata.sale_background_video_mp4 =
+          ((t.GetEventModel().jsondata.sale_background_video_mp4 =
             e?.target?.value || ``),
-            t.SetDirty(x.jsondata_sales);
+            t.SetDirty(x.jsondata_sales));
         },
         value: r,
       }),
@@ -5238,9 +5241,9 @@ function ff(e) {
         l?.image
           ? ((l.aspect_ratio = hi(s, c)),
             n(() => {
-              (t.GetEventModel().jsondata.sale_cross_promo_carousel_background =
+              ((t.GetEventModel().jsondata.sale_cross_promo_carousel_background =
                 l),
-                t.SetDirty(x.jsondata_image);
+                t.SetDirty(x.jsondata_image));
             }))
           : es(
               !1,
@@ -5252,17 +5255,17 @@ function ff(e) {
     s = (0, Z.useCallback)(
       (e) => {
         n(() => {
-          (t.GetEventModel().jsondata.sale_cross_promo_carousel_fade_color =
+          ((t.GetEventModel().jsondata.sale_cross_promo_carousel_fade_color =
             e || void 0),
-            t.SetDirty(x.jsondata_sales);
+            t.SetDirty(x.jsondata_sales));
         });
       },
       [t],
     ),
     c = (0, Z.useCallback)(() => {
       n(() => {
-        delete t.GetEventModel().jsondata.sale_cross_promo_carousel_background,
-          t.SetDirty(x.jsondata_image);
+        (delete t.GetEventModel().jsondata.sale_cross_promo_carousel_background,
+          t.SetDirty(x.jsondata_image));
       });
     }, [t]),
     l = fi(t.GetClanAccountID(), i?.image),
@@ -5428,9 +5431,9 @@ var mf = r((e) => {
                         ? void 0
                         : () => {
                             n(() => {
-                              (t.GetEventModel().jsondata.localized_sale_logo =
+                              ((t.GetEventModel().jsondata.localized_sale_logo =
                                 []),
-                                t.SetDirty(x.jsondata_sales);
+                                t.SetDirty(x.jsondata_sales));
                             });
                           },
                   }),
@@ -5445,9 +5448,9 @@ var mf = r((e) => {
                     ),
                     onChange: (e) => {
                       n(() => {
-                        (t.GetEventModel().jsondata.sale_logo_url =
+                        ((t.GetEventModel().jsondata.sale_logo_url =
                           e.target.value),
-                          t.SetDirty(x.jsondata_sales);
+                          t.SetDirty(x.jsondata_sales));
                       });
                     },
                   }),
@@ -5468,9 +5471,9 @@ var mf = r((e) => {
                             .sale_logo_cross_promo_only,
                         onChange: (e) => {
                           n(() => {
-                            (t.GetEventModel().jsondata.sale_logo_cross_promo_only =
+                            ((t.GetEventModel().jsondata.sale_logo_cross_promo_only =
                               e || void 0),
-                              t.SetDirty(x.jsondata_sales);
+                              t.SetDirty(x.jsondata_sales));
                           });
                         },
                       }),
@@ -5522,9 +5525,9 @@ var mf = r((e) => {
                       ? void 0
                       : () => {
                           n(() => {
-                            (t.GetEventModel().jsondata.localized_sale_overlay =
+                            ((t.GetEventModel().jsondata.localized_sale_overlay =
                               []),
-                              t.SetDirty(x.jsondata_sales);
+                              t.SetDirty(x.jsondata_sales));
                           });
                         },
                 }),
@@ -5667,14 +5670,14 @@ function Tf(e) {
     [p, m] = (0, Z.useState)(o);
   return (
     Hs(r, () => {
-      a(d), s(p);
+      (a(d), s(p));
     }),
     (0, X.jsxs)(X.Fragment, {
       children: [
         (0, X.jsx)(F, {
           checked: r ? d : !c || i,
           onChange: (e) => {
-            f(e), r || a(e);
+            (f(e), r || a(e));
           },
           label: `Require Approval by Valve Admin in order to publish this sales events`,
           tooltip: `They will see a warning indicating they cannot publish until Valve approves the page. Approval is done by Valve Admin in the same place.`,
@@ -5682,7 +5685,7 @@ function Tf(e) {
         (0, X.jsx)(F, {
           checked: r ? p : o,
           onChange: (e) => {
-            m(e), r || s(e);
+            (m(e), r || s(e));
           },
           label: L(`#SalePresented_By_Admin`),
           tooltip: L(`#SalePresneted_By_Admin_ttip`),
@@ -5942,7 +5945,7 @@ function Af(e) {
     : (0, X.jsx)(j, {
         strTitle: i,
         onOK: () => {
-          c.fnSetLoading(!0),
+          (c.fnSetLoading(!0),
             s(n)
               .then((e) => {
                 e == 1
@@ -5952,8 +5955,8 @@ function Af(e) {
                     c.fnSetStrError(`Failed to update Private Data: ` + e));
               })
               .catch((e) => {
-                o(), c.fnSetError(!0), c.fnSetStrError(k(e).strErrorMsg);
-              });
+                (o(), c.fnSetError(!0), c.fnSetStrError(k(e).strErrorMsg));
+              }));
         },
         strOKButtonText: `Update`,
         bDisableBackgroundDismiss: !0,
@@ -5979,7 +5982,7 @@ function jf(e) {
         strTitle: c,
         strDescription: `This will remove the publishing block and allow the partner to publish anytime afterward. As a reminder, these are the things we should check before approving:`,
         onOK: () => {
-          l.fnSetLoading(!0),
+          (l.fnSetLoading(!0),
             i(_s.accountid),
             s(n)
               .then((e) => {
@@ -5990,8 +5993,8 @@ function jf(e) {
                     l.fnSetStrError(`Failed to update Private Data: ` + e));
               })
               .catch((e) => {
-                o(), l.fnSetError(!0), l.fnSetStrError(k(e).strErrorMsg);
-              });
+                (o(), l.fnSetError(!0), l.fnSetStrError(k(e).strErrorMsg));
+              }));
         },
         strOKButtonText: `Yes, Approve`,
         bDisableBackgroundDismiss: !0,
@@ -6033,11 +6036,11 @@ function jf(e) {
 async function Mf(e, t, n, r) {
   let i = R.COMMUNITY_BASE_URL + `partnereventdata/ajaxrequestsalepagereview`,
     a = new URLSearchParams();
-  a.append(`sessionid`, ss()),
+  (a.append(`sessionid`, ss()),
     a.append(`clanAccountID`, `` + e.GetAccountID()),
     a.append(`gidClanEvent`, t),
     a.append(`partnerID`, `` + r),
-    a.append(`message`, n);
+    a.append(`message`, n));
   try {
     let e = await Q.default.post(i, a, { withCredentials: !0 });
     return !e || e.status != 200 || e.data.success != 1
@@ -6073,7 +6076,7 @@ function Nf(e) {
         bOKDisabled: i,
         onCancel: r,
         onOK: async () => {
-          d.fnSetLoading(!0),
+          (d.fnSetLoading(!0),
             Mf(t, n, s, l)
               .then((e) => {
                 e && e.success == 1
@@ -6114,11 +6117,11 @@ function Nf(e) {
                       ));
               })
               .catch((e) => {
-                d.fnSetError(!0),
+                (d.fnSetError(!0),
                   d.fnSetStrError(
                     L(`#EventEditor_SaleValveApproval_Request_Error`),
-                  );
-              });
+                  ));
+              }));
         },
         children: [
           (0, X.jsx)(`br`, {}),
@@ -6372,7 +6375,7 @@ function Zf(e) {
         strTitle: i,
         strDescription: `The sale is currently approved. This will revert this state and will require the sale operator to request permissions again. Are you sure?`,
         onOK: () => {
-          f.fnSetLoading(!0),
+          (f.fnSetLoading(!0),
             l(!0),
             u(!0),
             d(!0),
@@ -6386,8 +6389,8 @@ function Zf(e) {
                     f.fnSetStrError(`Failed to update Private Data: ` + e));
               })
               .catch((e) => {
-                o(), f.fnSetError(!0), f.fnSetStrError(k(e).strErrorMsg);
-              });
+                (o(), f.fnSetError(!0), f.fnSetStrError(k(e).strErrorMsg));
+              }));
         },
         strOKButtonText: `Yes, Approve`,
         bDisableBackgroundDismiss: !0,
@@ -6477,7 +6480,7 @@ function ep(e) {
     strDescription: L(`#EventSaleGuidelines_desc`),
     bOKDisabled: !de || se,
     onOK: () => {
-      t || s(_s.accountid),
+      (t || s(_s.accountid),
         c(re, ae),
         !t && r.GetGID()
           ? (ce(!0),
@@ -6486,7 +6489,7 @@ function ep(e) {
               .catch((e) => {
                 ue(k(e).strErrorMsg);
               }))
-          : n && n();
+          : n && n());
     },
     onCancel: n,
     closeModal: n,
@@ -6582,9 +6585,9 @@ function tp(e) {
         o.some((e) => !N.validateUrl(e.url)) ||
         o.some((e) => !(e.localized_presenter_name[0]?.length > 0))),
     onOK: () => {
-      (n.GetEventModel().jsondata.sale_presenters = o),
+      ((n.GetEventModel().jsondata.sale_presenters = o),
         n.SetDirty(x.jsondata_sales),
-        t();
+        t());
     },
     children: [
       (0, X.jsx)(Ct, { editModel: n, eInitLangLanguage: 0 }),
@@ -6596,14 +6599,14 @@ function tp(e) {
           (0, X.jsx)(np, {
             presenter: e,
             setPresenter: (e) => {
-              (o[t] = { ...e }), s([...o]);
+              ((o[t] = { ...e }), s([...o]));
             },
           }),
       }),
       (0, X.jsx)(I, {
         onClick: () => {
           let e = Math.floor(1 + Math.random() * 1e5);
-          for (; o && o.some((t) => t.unique_id === e); )
+          for (; o && o.some((t) => t.unique_id === e);)
             e = Math.floor(1 + Math.random() * 1e5);
           s([
             ...o,
@@ -6627,7 +6630,7 @@ function tp(e) {
         clanSteamID: n.GetClanSteamID(),
         children: (0, X.jsx)(I, {
           onClick: () => {
-            s([]), i(!0);
+            (s([]), i(!0));
           },
           children: `(VO) Clear Presenters to hide event organizers display`,
         }),
@@ -6646,12 +6649,12 @@ function np(e) {
         type: `text`,
         value: M.Get(t.localized_presenter_name, r) || ``,
         onChange: (e) => {
-          (t.localized_presenter_name = M.Set(
+          ((t.localized_presenter_name = M.Set(
             t.localized_presenter_name,
             r,
             e.currentTarget.value,
           )),
-            n(t);
+            n(t));
         },
       }),
       (0, X.jsx)(N, {
@@ -6661,7 +6664,7 @@ function np(e) {
         placeholder: `https://`,
         value: t.url,
         onChange: (e) => {
-          (t.url = e.currentTarget.value), n(t);
+          ((t.url = e.currentTarget.value), n(t));
         },
       }),
     ],
@@ -6712,7 +6715,7 @@ var rp = (function (e) {
     static MapAppRights = e.ConstructAppRightsMap();
     static ConstructAppRightsMap() {
       let t = new Map();
-      return e.AppRights.forEach((e) => t.set(e.token, e)), t;
+      return (e.AppRights.forEach((e) => t.set(e.token, e)), t);
     }
     static PubRights = [
       { flag: 1, token: `pubrightmanageusers` },
@@ -6724,7 +6727,7 @@ var rp = (function (e) {
     static MapPubRights = e.ConstructPubRightsMap();
     static ConstructPubRightsMap() {
       let t = new Map();
-      return e.PubRights.forEach((e) => t.set(e.token, e)), t;
+      return (e.PubRights.forEach((e) => t.set(e.token, e)), t);
     }
     static GetAppRightFlags(t) {
       let n = 0;
@@ -6780,7 +6783,7 @@ function ap(e) {
                       e.background_style_identifier,
                   )
                 );
-                n
+                (n
                   ? (t.GetEventModel().jsondata.sale_named_section_background_styles =
                       [
                         ...t.GetEventModel().jsondata
@@ -6789,7 +6792,7 @@ function ap(e) {
                       ])
                   : (t.GetEventModel().jsondata.sale_named_section_background_styles =
                       [e]),
-                  t.SetDirty(x.jsondata_sales);
+                  t.SetDirty(x.jsondata_sales));
               },
               children: rs.Localize(`#Button_Create`),
             }),
@@ -6868,9 +6871,9 @@ function op(e) {
                 value: a,
                 onChange: (e) => {
                   n(() => {
-                    (i.GetEventModel().jsondata.sale_opt_in_page_name =
+                    ((i.GetEventModel().jsondata.sale_opt_in_page_name =
                       e.target.value),
-                      i.SetDirty(x.jsondata_sales);
+                      i.SetDirty(x.jsondata_sales));
                   });
                 },
               }),
@@ -6884,8 +6887,8 @@ function op(e) {
                 children: (0, X.jsx)(z, {
                   onChange: (e) => {
                     n(() => {
-                      (i.GetEventModel().jsondata.sale_show_creator = e),
-                        i.SetDirty(x.jsondata_sales);
+                      ((i.GetEventModel().jsondata.sale_show_creator = e),
+                        i.SetDirty(x.jsondata_sales));
                     });
                   },
                   label: L(`#Sale_ShowCreatorHome`),
@@ -6973,7 +6976,7 @@ function cp(e) {
             onChange: (e) => {
               n(() => {
                 let n = t.GetEventModel().jsondata;
-                n.ownership_requirement_info
+                (n.ownership_requirement_info
                   ? (n.ownership_requirement_info.bLockedToAppOwners = e)
                   : (n.ownership_requirement_info = {
                       bLockedToAppOwners: e,
@@ -6981,7 +6984,7 @@ function cp(e) {
                       rgRequiredPackageIDs: [],
                       strRedirectURL: ``,
                     }),
-                  t.SetDirty(x.jsondata_sales);
+                  t.SetDirty(x.jsondata_sales));
               });
             },
             label: L(`#Sale_OwnershipRestrictions`),
@@ -7005,7 +7008,7 @@ function cp(e) {
                         .split(`,`)
                         .map(Number)
                         .filter((e) => e > 0);
-                    n.splice(0, n.length, ...r), t.SetDirty(x.jsondata_sales);
+                    (n.splice(0, n.length, ...r), t.SetDirty(x.jsondata_sales));
                   }));
               },
               value: s,
@@ -7023,7 +7026,7 @@ function cp(e) {
                         .split(`,`)
                         .map(Number)
                         .filter((e) => e > 0);
-                    n.splice(0, n.length, ...r), t.SetDirty(x.jsondata_sales);
+                    (n.splice(0, n.length, ...r), t.SetDirty(x.jsondata_sales));
                   }));
               },
               value: l,
@@ -7035,9 +7038,9 @@ function cp(e) {
               onChange: (e) => {
                 i != e.target.value &&
                   n(() => {
-                    (t.GetEventModel().jsondata.ownership_requirement_info.strRedirectURL =
+                    ((t.GetEventModel().jsondata.ownership_requirement_info.strRedirectURL =
                       e.target.value),
-                      t.SetDirty(x.jsondata_sales);
+                      t.SetDirty(x.jsondata_sales));
                   });
               },
               value: i,
@@ -7047,9 +7050,9 @@ function cp(e) {
               children: (0, X.jsx)(F, {
                 onChange: (e) => {
                   n(() => {
-                    (t.GetEventModel().jsondata.sale_use_subscription_layout =
+                    ((t.GetEventModel().jsondata.sale_use_subscription_layout =
                       e),
-                      t.SetDirty(x.jsondata_sales);
+                      t.SetDirty(x.jsondata_sales));
                   });
                 },
                 label: `(VO) ` + L(`#Sale_UseSubscriptionLayout`),
@@ -7068,13 +7071,13 @@ function cp(e) {
             onChange: (e) => {
               n(() => {
                 let n = t.GetEventModel().jsondata;
-                n.app_right_requirement_info
+                (n.app_right_requirement_info
                   ? (n.app_right_requirement_info.bLockedToPartnerAppRights = e)
                   : (n.app_right_requirement_info = {
                       bLockedToPartnerAppRights: e,
                       nAppRightFlag: ip.GetAppRightFlags([rp.EditInfo]),
                     }),
-                  t.SetDirty(x.jsondata_sales);
+                  t.SetDirty(x.jsondata_sales));
               });
             },
             label: L(`#Sale_PartnerAppEditRestrictions`),
@@ -7106,7 +7109,7 @@ function lp(e) {
         onClick: async () => {
           let e = new Set(),
             n = [];
-          t.GetEventModel().jsondata.sale_sections.forEach((e) => {
+          (t.GetEventModel().jsondata.sale_sections.forEach((e) => {
             e.capsules.forEach(async (e) => {
               e.type === `bundle`
                 ? n.push(Do.Get().QueueBundleRequest(Number(e.id), {}))
@@ -7125,11 +7128,11 @@ function lp(e) {
                   n && n.GetIncludedAppIDs().forEach((t) => e.add(t));
                 } else e.add(Number(t.id));
               });
-            });
+            }));
           let r = Array.from(e);
           r.sort();
           let i = new FormData();
-          i.append(`sessionid`, ss()),
+          (i.append(`sessionid`, ss()),
             i.append(`name`, `[AUTO] ` + t.GetName()),
             i.append(`event`, `1`),
             i.append(`type`, `discount`),
@@ -7142,7 +7145,7 @@ function lp(e) {
               i.append(
                 `discount_id`,
                 t.GetEventModel().jsondata.sale_discount_event_id.toString(),
-              );
+              ));
           let a =
             (
               await Q.default.post(
@@ -7152,7 +7155,7 @@ function lp(e) {
               )
             ).data.discountid ||
             t.GetEventModel().jsondata.sale_discount_event_id;
-          t.GetEventModel().jsondata.sale_discount_event_id ||
+          (t.GetEventModel().jsondata.sale_discount_event_id ||
             (t.GetEventModel().jsondata.sale_discount_event_id = a),
             P(
               (0, X.jsx)(De, {
@@ -7166,7 +7169,7 @@ function lp(e) {
                 },
               }),
               window,
-            );
+            ));
         },
         children: t.GetEventModel().jsondata.sale_discount_event_id
           ? L(
@@ -7230,9 +7233,9 @@ function up(e) {
         selectedOption: u,
         onChange: (e) => {
           n(() => {
-            (t.GetEventModel().jsondata.sale_font = e.data.fontFamily),
+            ((t.GetEventModel().jsondata.sale_font = e.data.fontFamily),
               (t.GetEventModel().jsondata.sale_font_weight = e.data.fontWeight),
-              t.SetDirty(x.jsondata_sales);
+              t.SetDirty(x.jsondata_sales));
           });
         },
         contextMenuPositionOptions: { bDisablePopTop: !0 },
@@ -7243,10 +7246,10 @@ function up(e) {
         tooltip: L(`#Sale_SectionTitleFontSize_ttip`),
         onChange: (e) => {
           n(() => {
-            (t.GetEventModel().jsondata.sale_section_font_size = Number(
+            ((t.GetEventModel().jsondata.sale_section_font_size = Number(
               e.target.value,
             )),
-              t.SetDirty(x.jsondata_sales);
+              t.SetDirty(x.jsondata_sales));
           });
         },
         value: i,
@@ -7256,8 +7259,8 @@ function up(e) {
         tooltip: L(`#Sale_DontCapitalizeSectionTitles_ttip`),
         onChange: (e) => {
           n(() => {
-            (t.GetEventModel().jsondata.sale_section_disable_capitalize = e),
-              t.SetDirty(x.jsondata_sales);
+            ((t.GetEventModel().jsondata.sale_section_disable_capitalize = e),
+              t.SetDirty(x.jsondata_sales));
           });
         },
         checked: r,
@@ -7268,9 +7271,9 @@ function up(e) {
         tooltip: L(`#Sale_AdvertisingApp_ID_ttip`),
         onChange: (e) => {
           n(() => {
-            (t.GetEventModel().jsondata.sale_associated_advertising_appid =
+            ((t.GetEventModel().jsondata.sale_associated_advertising_appid =
               Number(e.target.value)),
-              t.SetDirty(x.jsondata_sales);
+              t.SetDirty(x.jsondata_sales));
           });
         },
         value: s,
@@ -7340,9 +7343,9 @@ function dp(e) {
             tooltip: L(`#Sale_ValveTopSalePath_ttip`),
             onChange: (e) => {
               n(() => {
-                (t.GetEventModel().jsondata.sale_vanity_id_valve_approved_for_sale_subpath =
+                ((t.GetEventModel().jsondata.sale_vanity_id_valve_approved_for_sale_subpath =
                   e),
-                  t.SetDirty(x.jsondata_sales);
+                  t.SetDirty(x.jsondata_sales));
               });
             },
             checked: o,
@@ -7408,7 +7411,7 @@ function pp(e) {
   if (s && !d) return null;
   let f = n
     ? (e) => {
-        On(t), e.preventDefault(), e.stopPropagation();
+        (On(t), e.preventDefault(), e.stopPropagation());
       }
     : void 0;
   return (0, X.jsx)(kc, {
@@ -7516,9 +7519,9 @@ function vp(e) {
             label: `Randomization delay (hours)`,
             tooltip: `The number of hours from the start of Next Fest to show the items in random order instead of ML recommended order`,
             onChange: (e) => {
-              (t.GetEventModel().jsondata.sale_ml_recommender_delay_hours =
+              ((t.GetEventModel().jsondata.sale_ml_recommender_delay_hours =
                 Number(e.target.value)),
-                t.SetDirty(x.jsondata_sales);
+                t.SetDirty(x.jsondata_sales));
             },
             placeholder: `10000`,
             value: r,
@@ -7533,9 +7536,9 @@ function vp(e) {
               br +
               `. Set to -1 to disable shuffling and use the exact recommended order.`,
             onChange: (e) => {
-              (t.GetEventModel().jsondata.sale_ml_recommender_weight_exponent =
+              ((t.GetEventModel().jsondata.sale_ml_recommender_weight_exponent =
                 Number(e.target.value)),
-                t.SetDirty(x.jsondata_sales);
+                t.SetDirty(x.jsondata_sales));
             },
             placeholder: String(br),
             value: i,
@@ -7554,7 +7557,7 @@ var yp = r((e) => {
     } = e;
     if (!n?.(t.GetEventModel())) return null;
     let o = () => {
-      r(t.GetEventModel()), t.SetDirty(x.jsondata_sales);
+      (r(t.GetEventModel()), t.SetDirty(x.jsondata_sales));
     };
     return (0, X.jsxs)(`div`, {
       className: hp,
@@ -7609,7 +7612,7 @@ var yp = r((e) => {
         }),
       }),
       l = () => {
-        o.forEach(r), t.SetDirty(x.jsondata_sales);
+        (o.forEach(r), t.SetDirty(x.jsondata_sales));
       };
     return (0, X.jsxs)(`div`, {
       className: hp,
@@ -7637,43 +7640,43 @@ var yp = r((e) => {
         !ai.GetCreatorHome(t.GetClanSteamID())?.BHasClanAccountFlagSet(64),
       d = Math.floor(Date.now() / 1e3),
       f = new Date();
-    f.setHours(10), f.setMinutes(0), f.setSeconds(0);
+    (f.setHours(10), f.setMinutes(0), f.setSeconds(0));
     let p = new Date();
-    p.setDate(f.getDate() + 1),
+    (p.setDate(f.getDate() + 1),
       p.setHours(10),
       p.setMinutes(0),
-      p.setSeconds(0);
+      p.setSeconds(0));
     let [m, h] = Z.useState(
         i.startTime > d ? i.startTime : Math.floor(p.getTime() / 1e3),
       ),
       g = new Date();
-    g.setDate(p.getDate() + 1),
+    (g.setDate(p.getDate() + 1),
       g.setHours(10),
       g.setMinutes(0),
-      g.setSeconds(0);
+      g.setSeconds(0));
     let [_, v] = Z.useState(
         i?.endTime > Math.floor(g.getTime() / 1e3)
           ? i.endTime
           : Math.floor(g.getTime() / 1e3),
       ),
       ee = () => {
-        n(() => {
-          t.SetSaleVanityID(s),
+        (n(() => {
+          (t.SetSaleVanityID(s),
             t.SetEventStartTime(m),
             t.SetEventEndTime(_),
             o(_s.accountid),
             u && a(!0),
             l.Dispatch(),
-            r();
+            r());
         }),
-          e.closeModal && e.closeModal();
+          e.closeModal && e.closeModal());
       },
       te = () => {
-        n(() => {
-          (t.GetEventModel().jsondata.bSaleEnabled = !1),
-            t.SetDirty(x.jsondata_sales);
+        (n(() => {
+          ((t.GetEventModel().jsondata.bSaleEnabled = !1),
+            t.SetDirty(x.jsondata_sales));
         }),
-          e.closeModal && e.closeModal();
+          e.closeModal && e.closeModal());
       },
       ne = s.replace(/[^\w-]/g, ``).length > 0 && m && _;
     return (0, X.jsx)(J, {
@@ -7748,17 +7751,17 @@ var yp = r((e) => {
       i = t.GetEventModel(),
       [a, o] = Z.useState(i.jsondata.sale_update_landing_page_vanity_id ?? ``),
       s = () => {
-        n(() => {
-          t.SetSaleUpdateLandingPageVanityID(a), r();
+        (n(() => {
+          (t.SetSaleUpdateLandingPageVanityID(a), r());
         }),
-          e.closeModal && e.closeModal();
+          e.closeModal && e.closeModal());
       },
       c = () => {
-        n(() => {
-          (t.GetEventModel().jsondata.bSaleEnabled = !1),
-            t.SetDirty(x.jsondata_sales);
+        (n(() => {
+          ((t.GetEventModel().jsondata.bSaleEnabled = !1),
+            t.SetDirty(x.jsondata_sales));
         }),
-          e.closeModal && e.closeModal();
+          e.closeModal && e.closeModal());
       },
       l = a.replace(/[^\w-]/g, ``).length > 0;
     return (0, X.jsx)(J, {
@@ -7808,12 +7811,12 @@ function Cp(e) {
     { creatorHome: o } = ri(r.GetEventModel().clanSteamID.GetAccountID()),
     s = Z.useRef(void 0),
     c = (e) => {
-      a(e),
+      (a(e),
         s?.current?.setState({ checked: e }),
         n(() => {
-          (r.GetEventModel().jsondata.bSaleEnabled = e),
-            r.SetDirty(x.jsondata_sales);
-        });
+          ((r.GetEventModel().jsondata.bSaleEnabled = e),
+            r.SetDirty(x.jsondata_sales));
+        }));
     },
     l = ua(r.GetClanSteamID(), !0),
     u =
@@ -7889,7 +7892,7 @@ function Tp(e) {
                         (0, X.jsx)(`div`, { children: L(`#Sale_Debug_Desc`) }),
                         (0, X.jsx)(Op, {
                           fnSetSaleItem: (e, t, n, r) => {
-                            a(e), s(t), l(n), d(r);
+                            (a(e), s(t), l(n), d(r));
                           },
                         }),
                         i
@@ -7921,7 +7924,7 @@ function Tp(e) {
                       strTitle: L(`#EventEditor_GenericAreYouSure`),
                       strDescription: L(`#Sale_Debug_Delete`),
                       onOK: () => {
-                        jp(i), t();
+                        (jp(i), t());
                       },
                     }),
                     window,
@@ -7979,7 +7982,7 @@ function Op(e) {
               e.capsules && e.capsules.filter(s).forEach(c);
             });
             let l = e.GetTabSaleSection();
-            l &&
+            (l &&
               l.tabs.forEach((e) => {
                 e.capsules && e.capsules.filter(s).forEach(c);
               }),
@@ -8015,7 +8018,7 @@ function Op(e) {
                   bNoFocusWhenShown: !0,
                   bSkipFocusWhenReady: !0,
                 },
-              ));
+              )));
           }
         }, 300)));
     },
@@ -8111,14 +8114,16 @@ function jp(e) {
     let n = 0,
       r = (t) => {
         let r = t.capsules.findIndex((t) => t.id == e.id && t.type == e.type);
-        for (; r >= 0; )
-          t.capsules.splice(r, 1),
+        for (; r >= 0;)
+          (t.capsules.splice(r, 1),
             (n += 1),
-            (r = t.capsules.findIndex((t) => t.id == e.id && t.type == e.type));
+            (r = t.capsules.findIndex(
+              (t) => t.id == e.id && t.type == e.type,
+            )));
       };
     t.GetEventModel().jsondata.sale_sections.forEach(r);
     let i = t.GetTabSaleSection();
-    i && i.tabs.forEach(r), n && t.SetDirty(x.jsondata_sales);
+    (i && i.tabs.forEach(r), n && t.SetDirty(x.jsondata_sales));
   });
 }
 function Mp(e) {
@@ -8139,11 +8144,11 @@ function Pp() {
         unique_id: n.unique_id,
         strLabel: L(n.localized_label?.[0] || n.default_label),
       };
-      e.push(r),
+      (e.push(r),
         n.capsules.forEach((e) => {
           let r = Mp(e);
-          t.has(r) || t.set(r, new Set()), t.get(r).add(n.unique_id);
-        });
+          (t.has(r) || t.set(r, new Set()), t.get(r).add(n.unique_id));
+        }));
     }),
     n.GetEventModel().jsondata.sale_sections?.forEach((r) => {
       if (r.section_type != `items`) return;
@@ -8156,11 +8161,11 @@ function Pp() {
             r.default_label,
         ),
       };
-      e.push(i),
+      (e.push(i),
         r.capsules.forEach((e) => {
           let n = Mp(e);
-          t.has(n) || t.set(n, new Set()), t.get(n).add(r.unique_id);
-        });
+          (t.has(n) || t.set(n, new Set()), t.get(n).add(r.unique_id));
+        }));
     }),
     { mapItemLocations: t, rgSections: e }
   );
@@ -8231,7 +8236,7 @@ function Fp(e) {
                         i.push(o);
                       }
                       let s = `item_locations.csv`;
-                      ma.WriteCSVToFile(i, s),
+                      (ma.WriteCSVToFile(i, s),
                         ho(
                           (0, X.jsx)(j, {
                             strTitle: L(`#Sale_GameExport_Title`),
@@ -8243,7 +8248,7 @@ function Fp(e) {
                           }),
                           window,
                         ),
-                        a();
+                        a());
                     },
                     disabled: !t,
                     children: L(`#Sale_Export`),
@@ -8293,7 +8298,7 @@ function Fp(e) {
                           t.push(s);
                         }
                         let i = `item_pubs.csv`;
-                        ma.WriteCSVToFile(t, i),
+                        (ma.WriteCSVToFile(t, i),
                           ho(
                             (0, X.jsx)(j, {
                               strTitle: L(`#Sale_GameExport_Title`),
@@ -8305,7 +8310,7 @@ function Fp(e) {
                             }),
                             window,
                           ),
-                          a();
+                          a());
                       },
                       disabled: !t,
                       children: L(`#Sale_Export`),
@@ -8429,7 +8434,7 @@ var Wp = r((e) => {
       f = [];
     u(f, L(`#Sale_PageConfigOptions`), `SalePageEdit_Config`);
     let p = ua(t.GetClanSteamID(), !1);
-    (p || d.GetTaggedItems().length > 0) &&
+    ((p || d.GetTaggedItems().length > 0) &&
       u(
         f,
         L(`#Sale_TaggedItemsSection`, d.GetTaggedItems().length),
@@ -8441,7 +8446,7 @@ var Wp = r((e) => {
         `SalePageEdit_AllArtworkCtn`,
       ),
       (d.BHasTag(`contenthub`) || d.BUsesContentHubForItemSource()) &&
-        u(f, `Content Hub Settings`, `SalePageEdit_ContentHub`);
+        u(f, `Content Hub Settings`, `SalePageEdit_ContentHub`));
     let m = !1,
       h = 0;
     return (
@@ -8456,7 +8461,7 @@ var Wp = r((e) => {
             }),
             a = { ...Ut(e, d, n), color: e.label_color },
             o = Ti + e.unique_id;
-          u(f, i, o, m, a), e.section_type === `tabs` && (m = !0);
+          (u(f, i, o, m, a), e.section_type === `tabs` && (m = !0));
         }
       }),
       h > 0 &&
@@ -8465,7 +8470,7 @@ var Wp = r((e) => {
           (0, X.jsxs)(`div`, {
             className: Ip,
             onClick: (e) => {
-              Yt(void 0), e.stopPropagation();
+              (Yt(void 0), e.stopPropagation());
             },
             children: [
               (0, X.jsx)(`div`, {
@@ -8503,7 +8508,7 @@ var Wp = r((e) => {
       a = m((e) => {
         let n = { ...kr, unique_id: t.GenerateSaleSectionUniqueID() },
           r = t.GetEventModel().jsondata.sale_sections.slice(-1)[0];
-        r &&
+        (r &&
           ((n.label_color = r.label_color),
           (n.background_gradient_bottom = r.background_gradient_bottom),
           (n.background_gradient_top = r.background_gradient_top),
@@ -8513,7 +8518,7 @@ var Wp = r((e) => {
           t.GetEventModel().jsondata.sale_sections.push(n),
           t.SetDirty(x.jsondata_sales),
           On(Rn(n), !0),
-          i();
+          i());
       });
     return (0, X.jsxs)(X.Fragment, {
       children: [
@@ -8642,9 +8647,9 @@ function Jp(e) {
     children: (0, X.jsx)(j, {
       strTitle: L(`#Sale_ReorderSections`),
       onOK: () => {
-        (t.GetEventModel().jsondata.sale_sections = i),
+        ((t.GetEventModel().jsondata.sale_sections = i),
           t.SetDirty(x.jsondata_sales),
-          a(null);
+          a(null));
       },
       onCancel: () => a(null),
       closeModal: n,
@@ -8657,7 +8662,7 @@ function Jp(e) {
                 items: i,
                 onMove: (e, t) => {
                   let n = [...i];
-                  co(n, e, t), a(n);
+                  (co(n, e, t), a(n));
                 },
                 render: (e) => {
                   let n = t.GetSaleSections().findIndex((t) => e === t),
@@ -8760,13 +8765,13 @@ function Xp(e) {
                     if (n) {
                       c(e.target.files[0].name);
                       let r = new FileReader();
-                      (r.onload = (n) => {
+                      ((r.onload = (n) => {
                         let r = n.target.result.toString();
-                        (t.GetEventModel().jsondata.sale_custom_css = r),
+                        ((t.GetEventModel().jsondata.sale_custom_css = r),
                           t.SetDirty(x.jsondata_sales),
-                          (e.target.value = ``);
+                          (e.target.value = ``));
                       }),
-                        r.readAsText(n);
+                        r.readAsText(n));
                     }
                   },
                 }),
@@ -8774,10 +8779,10 @@ function Xp(e) {
                   onClick: () => {
                     let e = document.createElement(`a`),
                       t = new Blob([i], { type: `text/css` });
-                    (e.href = URL.createObjectURL(t)),
+                    ((e.href = URL.createObjectURL(t)),
                       (e.download = s),
                       document.body.appendChild(e),
-                      e.click();
+                      e.click());
                   },
                   children: `Export`,
                 }),
@@ -8959,11 +8964,11 @@ function lm(e) {
     ),
     o = (e) => {
       let r = t.slice();
-      r.splice(e, 1), n(r);
+      (r.splice(e, 1), n(r));
     },
     s = (e, r) => {
       let i = t.slice();
-      co(i, e, r), n(i);
+      (co(i, e, r), n(i));
     },
     c = (e, r) => {
       let i = t.map((t, n) => (n === e ? { ...t, link: r } : t));
@@ -8975,7 +8980,7 @@ function lm(e) {
         options: a,
         onAddLink: (e) => {
           let r = t.slice();
-          r.push({ type: e, link: `` }), n(r);
+          (r.push({ type: e, link: `` }), n(r));
         },
       }),
       (0, X.jsx)(Hn, {
@@ -9146,8 +9151,8 @@ function _m(e) {
       l.jsondata.sale_default_social_media_disabled,
     ]),
     f = (e) => {
-      (l.jsondata.sale_default_social_media_disabled = !e),
-        t.SetDirty(x.jsondata_sales);
+      ((l.jsondata.sale_default_social_media_disabled = !e),
+        t.SetDirty(x.jsondata_sales));
     },
     p = u.length > 0,
     m = !(d || p);
@@ -9244,11 +9249,11 @@ function ym(e) {
               rgSocialMediaItems: i,
               fnSetItems: (e) => {
                 let r = n.rgValidationData;
-                (t.GetEventModel().jsondata.sale_social_media_items = e
+                ((t.GetEventModel().jsondata.sale_social_media_items = e
                   .filter((e) => !!e.link)
                   .filter((e) => dm(e, r[e.type]).bValid)),
                   t.SetDirty(x.jsondata_sales),
-                  a(e);
+                  a(e));
               },
             }),
             r.length == 0 &&
@@ -9314,8 +9319,8 @@ var bm = `CKuXw36x-Lo-`,
         t = { origin: self.origin },
         r = await Q.default.get(e, { params: t });
       n(() => {
-        r.data && r.data.success && this.HandleCuratorResponse(r.data),
-          (this.m_bIsLoadComplete = !0);
+        (r.data && r.data.success && this.HandleCuratorResponse(r.data),
+          (this.m_bIsLoadComplete = !0));
       });
     }
     HandleCuratorResponse(e) {
@@ -9331,11 +9336,11 @@ var bm = `CKuXw36x-Lo-`,
         }
     }
   };
-D([u], wm.prototype, `m_mapNewsCurators`, void 0),
+(D([u], wm.prototype, `m_mapNewsCurators`, void 0),
   D([u], wm.prototype, `m_bIsLoadComplete`, void 0),
   D([u], wm.prototype, `m_mapLangToNewsCurators`, void 0),
   D([c], wm.prototype, `allNewsCurators`, null),
-  D([m], wm.prototype, `HandleCuratorResponse`, null);
+  D([m], wm.prototype, `HandleCuratorResponse`, null));
 var Tm = `_4gJW-1D-qoo-`,
   Em = `g-Xc-fP6jvg-`,
   Dm = `_1Wx2O8pIAbo-`,
@@ -9380,8 +9385,8 @@ var jm = 300,
     }
     async GetSuggestionsFromServer(e) {
       let t = km(this.props.rgCorporaToSearch);
-      t.has(`apps`) && this.GetAppSuggestionsFromServer(e),
-        t.has(`curators`) && this.GetCuratorSuggestions(e);
+      (t.has(`apps`) && this.GetAppSuggestionsFromServer(e),
+        t.has(`curators`) && this.GetCuratorSuggestions(e));
     }
     async GetCuratorSuggestions(e) {
       let t = wm.Get().allNewsCurators,
@@ -9418,19 +9423,19 @@ var jm = 300,
           );
         }
       }
-      this.m_mapHighestReceivedRequestIDFromBackEnd.set(
+      (this.m_mapHighestReceivedRequestIDFromBackEnd.set(
         `curators`,
         this.m_nHighestSentRequestID,
       ),
-        this.setState({ rgCuratorSuggestions: n });
+        this.setState({ rgCuratorSuggestions: n }));
     }
     async GetAppSuggestionsFromServer(e) {
       let t = this.m_nHighestSentRequestID,
         n = [];
-      this.props.rgCorporaToSearch.indexOf(`games`) >= 0 &&
+      (this.props.rgCorporaToSearch.indexOf(`games`) >= 0 &&
         (n.push(`game`), n.push(`software`)),
         this.props.rgCorporaToSearch.indexOf(`dlc`) >= 0 &&
-          (n.push(`dlc`), n.push(`music`));
+          (n.push(`dlc`), n.push(`music`)));
       let r = {
           cc: R.COUNTRY,
           l: R.LANGUAGE,
@@ -9447,7 +9452,7 @@ var jm = 300,
       if (t < this.m_mapHighestReceivedRequestIDFromBackEnd.get(`apps`)) return;
       this.m_mapHighestReceivedRequestIDFromBackEnd.set(`apps`, t);
       let o;
-      a?.data?.length &&
+      (a?.data?.length &&
         (o = a.data.map((e) => {
           let t = { corpus: Am(e.type), ...e, id: parseInt(e.id) };
           if (
@@ -9464,11 +9469,11 @@ var jm = 300,
             ? this.props.fnDecorateSuggestion(t, n)
             : n;
         })),
-        this.setState({ rgAppSuggestions: o });
+        this.setState({ rgAppSuggestions: o }));
     }
     async UpdateSuggestions(e) {
       let t = e.target.value && e.target.value.trim().toLocaleLowerCase();
-      this.m_nHighestSentRequestID++,
+      (this.m_nHighestSentRequestID++,
         t?.length
           ? (this.setState({ strSearchString: t }),
             this.m_timerForChange.Schedule(jm, () =>
@@ -9482,7 +9487,7 @@ var jm = 300,
             ),
             this.m_timerForChange.Cancel(),
             this.setState({ strSearchString: `` }),
-            this.ResetSuggestions());
+            this.ResetSuggestions()));
     }
     ResetSuggestions() {
       this.setState({ rgAppSuggestions: null, rgCuratorSuggestions: null });
@@ -9946,7 +9951,8 @@ function Um(e) {
         (0, X.jsx)(Hn, {
           items: t.GetReferencedAppIDArray(),
           onDelete: (e) => {
-            t.GetReferencedAppIDArray().splice(e), t.SetDirty(x.jsondata_other);
+            (t.GetReferencedAppIDArray().splice(e),
+              t.SetDirty(x.jsondata_other));
           },
           onReorder: () => t.SetDirty(x.jsondata_other),
           render: (e) => (0, X.jsx)(Wm, { appid: e }, `suggestion-${e}`),
@@ -10054,7 +10060,7 @@ function qm(e) {
     n,
     Z.useCallback(
       (e) => {
-        localStorage.setItem(t, e ? `1` : `0`), r(e);
+        (localStorage.setItem(t, e ? `1` : `0`), r(e));
       },
       [t],
     ),
@@ -10279,8 +10285,10 @@ function $m(e) {
     f = Ur.includes(o.GetAccountID()),
     p = r == 36;
   (0, Z.useEffect)(() => {
-    $n.Get().EnsureLoaded(t),
-      !$n.Get().BHasExplicitSettings(t) && t.GetSaleSectionCount() > 10 && Kn();
+    ($n.Get().EnsureLoaded(t),
+      !$n.Get().BHasExplicitSettings(t) &&
+        t.GetSaleSectionCount() > 10 &&
+        Kn());
   }, [t]);
   let m = Z.useCallback((e) => {
       yn(e.strSectionId) && On(e.strSectionId);
@@ -10342,8 +10350,8 @@ function $m(e) {
               rgSalePresenters: i,
               bIsEventVisible: l,
               fnCleanSaleEventPresenters: () => {
-                (t.GetEventModel().jsondata.sale_presenters = void 0),
-                  t.SetDirty(x.jsondata_sales);
+                ((t.GetEventModel().jsondata.sale_presenters = void 0),
+                  t.SetDirty(x.jsondata_sales));
               },
               bPublishTab: !1,
             }),
@@ -10479,8 +10487,8 @@ function th(e) {
       let e = -1,
         t = new Map();
       for (let [n, i] of r.GetSaleSections().entries())
-        t.set(i.section_type, (t.get(i.section_type) || 0) + 1),
-          e == -1 && i.section_type == `tabs` && (e = n);
+        (t.set(i.section_type, (t.get(i.section_type) || 0) + 1),
+          e == -1 && i.section_type == `tabs` && (e = n));
       return [r.GetSaleSections().length, t, e, et()];
     }),
     [c, l] = Z.useState(``),
@@ -10526,8 +10534,8 @@ function th(e) {
             items: f,
             bDisabled: d,
             onMove: (e, n) => {
-              co(t.GetEventModel().jsondata.sale_sections, e, n),
-                t.SetDirty(x.jsondata_sales);
+              (co(t.GetEventModel().jsondata.sale_sections, e, n),
+                t.SetDirty(x.jsondata_sales));
             },
             render: (e, r) => {
               let i = Ti + e.unique_id,
@@ -10599,16 +10607,16 @@ function rh(e) {
       s(e, { color: n, onChange: (e) => f(e, `sale_browsemore_bgcolor`) });
     },
     u = (e) => {
-      (t.GetEventModel().jsondata.sale_browse_more_button = e),
-        t.SetDirty(x.jsondata_sales);
+      ((t.GetEventModel().jsondata.sale_browse_more_button = e),
+        t.SetDirty(x.jsondata_sales));
     },
     d = (e) => {
       let n = t.GetEventModel().jsondata;
-      (n[e.target.name] = e.target.value), t.SetDirty(x.jsondata_sales);
+      ((n[e.target.name] = e.target.value), t.SetDirty(x.jsondata_sales));
     },
     f = (e, n) => {
       let r = t.GetEventModel().jsondata;
-      (r[n] = e), t.SetDirty(x.jsondata_sales);
+      ((r[n] = e), t.SetDirty(x.jsondata_sales));
     };
   return (0, X.jsxs)(X.Fragment, {
     children: [
@@ -10702,7 +10710,7 @@ function sh(e) {
           (0, X.jsx)(I, {
             onClick: () => {
               let e = [];
-              e.push([
+              (e.push([
                 `Feature`,
                 `Date`,
                 `Impression`,
@@ -10725,7 +10733,7 @@ function sh(e) {
                     `` + t.total_add_to_carts,
                     `` + t.total_ignores,
                   ]);
-                });
+                }));
               let r = (t.GetName() + `_stats`).replace(` `, `_`) + `.csv`;
               ma.WriteCSVToFile(e, r);
             },
@@ -10754,14 +10762,14 @@ function uh(e) {
         t.forEach((t) => {
           if (e.has(t.feature)) {
             let n = e.get(t.feature);
-            (n.total_views += t.total_views),
+            ((n.total_views += t.total_views),
               (n.total_impressions += t.total_impressions),
               (n.total_owner_views += t.total_owner_views),
               (n.total_owner_impressions += t.total_owner_impressions),
               (n.total_wishlists += t.total_wishlists),
               (n.total_ignores += t.total_ignores),
               (n.total_add_to_carts += t.total_add_to_carts),
-              e.set(t.feature, n);
+              e.set(t.feature, n));
           } else e.set(t.feature, { ...t });
         }),
         Array.from(e.values()).sort(
@@ -10905,11 +10913,11 @@ function xh(e, t) {
 }
 function Sh(e, t, n, r) {
   let i = Go([...(e?.[t] ?? [])], 32, null);
-  return (i[n] = r), { ...e, [t]: i };
+  return ((i[n] = r), { ...e, [t]: i });
 }
 function Ch(e, t) {
   let n = { ...e };
-  return delete n[t], n;
+  return (delete n[t], n);
 }
 var wh = `dpDkUTjygsI-`,
   Th = `X3Yd08f5Ld4-`,
@@ -10930,8 +10938,8 @@ function jh(e) {
       (e, r, i) => {
         n(() => {
           let n = t.GetEventModel().jsondata;
-          (n.sale_store_capsules = Sh(n.sale_store_capsules, e, r, i)),
-            t.SetDirty(x.jsondata_image);
+          ((n.sale_store_capsules = Sh(n.sale_store_capsules, e, r, i)),
+            t.SetDirty(x.jsondata_image));
         });
       },
       [t],
@@ -10940,8 +10948,8 @@ function jh(e) {
       (e) => {
         n(() => {
           let n = t.GetEventModel().jsondata;
-          (n.sale_store_capsules = Ch(n.sale_store_capsules, e)),
-            t.SetDirty(x.jsondata_image);
+          ((n.sale_store_capsules = Ch(n.sale_store_capsules, e)),
+            t.SetDirty(x.jsondata_image));
         });
       },
       [t],
@@ -11060,7 +11068,7 @@ function Mh(e) {
 var $ = class {
   m_editModel = void 0;
   constructor(e) {
-    s(this), (this.m_editModel = e);
+    (s(this), (this.m_editModel = e));
   }
   GetJSONData() {
     return this.m_editModel.GetEventModel().jsondata;
@@ -11129,15 +11137,15 @@ var $ = class {
       }
       let e = this.GetJSONData().broadcast_language;
       if (e.length < n && t == -1) return;
-      for (; e.length <= n; ) e.push(-1);
+      for (; e.length <= n;) e.push(-1);
       if (e[n] != t) {
-        for (e[n] = t; e.length > 0 && e[e.length - 1] == -1; ) e.pop();
-        e.length == 0
+        for (e[n] = t; e.length > 0 && e[e.length - 1] == -1;) e.pop();
+        (e.length == 0
           ? (this.GetJSONData().broadcast_language = void 0)
           : (this.GetJSONData().broadcast_language = [
               ...this.GetJSONData().broadcast_language,
             ]),
-          this.m_editModel.SetDirty(x.jsondata_broadcast);
+          this.m_editModel.SetDirty(x.jsondata_broadcast));
       }
     }
   }
@@ -11145,9 +11153,9 @@ var $ = class {
     let n = this.GetJSONData().broadcast_whitelist.indexOf(e);
     if (n < 0) return;
     let r = Go(this.GetJSONData().broadcast_priority || [], n + 1, ``);
-    for (r[n] = t; r.length > 0 && !r[r.length - 1]; ) r.pop();
-    (this.GetJSONData().broadcast_priority = r),
-      this.m_editModel.SetDirty(x.jsondata_broadcast);
+    for (r[n] = t; r.length > 0 && !r[r.length - 1];) r.pop();
+    ((this.GetJSONData().broadcast_priority = r),
+      this.m_editModel.SetDirty(x.jsondata_broadcast));
   }
   GetWhiteListAccountPriority(e, t) {
     let n = this.GetJSONData().broadcast_whitelist.indexOf(e);
@@ -11247,7 +11255,7 @@ var $ = class {
       this.m_editModel.SetDirty(x.jsondata_broadcast));
   }
 };
-D([u], $.prototype, `m_editModel`, void 0),
+(D([u], $.prototype, `m_editModel`, void 0),
   D([m], $.prototype, `SetBroadcastEnabled`, null),
   D([m], $.prototype, `SetBroadcastForceBanner`, null),
   D([m], $.prototype, `SetChangeSetting`, null),
@@ -11268,7 +11276,7 @@ D([u], $.prototype, `m_editModel`, void 0),
   D([m], $.prototype, `SetItemDropDetailEvents`, null),
   D([m], $.prototype, `SetWidePlayerLayout`, null),
   D([m], $.prototype, `SetWidePlayerSupportChat`, null),
-  D([m], $.prototype, `SetChatAnnouncementGiveawayGID`, null);
+  D([m], $.prototype, `SetChatAnnouncementGiveawayGID`, null));
 var Nh = class e {
   m_rgFriendsList = null;
   GetFriendLiset() {
@@ -11283,8 +11291,8 @@ var Nh = class e {
         R.COMMUNITY_BASE_URL + `actions/ajaxlistfriends`,
       );
       if (t?.status == 200 && t.data?.success == 1 && t.data?.friends)
-        return (this.m_rgFriendsList = t.data.friends), this.m_rgFriendsList;
-      (this.m_rgFriendsList = []), (e = k(t));
+        return ((this.m_rgFriendsList = t.data.friends), this.m_rgFriendsList);
+      ((this.m_rgFriendsList = []), (e = k(t)));
     } catch (t) {
       e = k(t);
     }
@@ -11298,7 +11306,7 @@ var Nh = class e {
   }
   static s_Singleton;
   static Get() {
-    return (e.s_Singleton ||= new e()), e.s_Singleton;
+    return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
   constructor() {}
 };
@@ -11426,18 +11434,18 @@ var zh = class extends Z.Component {
     this.setState({ customTitleLanguage: e.data });
   }
   AddTitle() {
-    this.GetBroadcastEditModel().SetCustomTitleLocalize(
+    (this.GetBroadcastEditModel().SetCustomTitleLocalize(
       this.state.customTitleLanguage,
       this.state.strCustomTitle,
     ),
-      this.setState({ strCustomTitle: `` });
+      this.setState({ strCustomTitle: `` }));
   }
   RemoveTitle(e) {
     this.GetBroadcastEditModel().SetCustomTitleLocalize(e, null);
   }
   OnSaleColorChange(e, t) {
     let n = this.props.editModel.GetEventModel().jsondata;
-    (n[t] = e), this.props.editModel.SetDirty(x.jsondata_sales);
+    ((n[t] = e), this.props.editModel.SetDirty(x.jsondata_sales));
   }
   OnOpenGradientInnerColor(e) {
     this.OpenColorPopover(e, `broadcast_gradient_inner_color`);
@@ -11718,7 +11726,7 @@ var zh = class extends Z.Component {
     });
   }
 };
-D([A], zh.prototype, `OnBroadcastOptionChange`, null),
+(D([A], zh.prototype, `OnBroadcastOptionChange`, null),
   D([A], zh.prototype, `OnBroadcastForceBanner`, null),
   D([A], zh.prototype, `OnChatChange`, null),
   D([A], zh.prototype, `OnTitleChange`, null),
@@ -11729,7 +11737,7 @@ D([A], zh.prototype, `OnBroadcastOptionChange`, null),
   D([A], zh.prototype, `OnSaleColorChange`, null),
   D([A], zh.prototype, `OnOpenGradientInnerColor`, null),
   D([A], zh.prototype, `OnOpenGradientOuterColor`, null),
-  (zh = D([r], zh));
+  (zh = D([r], zh)));
 function Bh(e) {
   let { broadcastEditModel: t } = e,
     n = g(() => t.GetBroadcastAllowList() || []);
@@ -11751,7 +11759,7 @@ function Bh(e) {
           (0, X.jsx)(fc, {
             onButtonClick: async (e) => {
               let n = new zo(e);
-              return t.AddAccountToWhiteList(n.GetAccountID()), !0;
+              return (t.AddAccountToWhiteList(n.GetAccountID()), !0);
             },
             buttonText: L(`#Broadcast_whitelist_adduser`),
           }),
@@ -11957,7 +11965,7 @@ function Wh(e) {
     s = g(() => {
       let e = a.jsondata.broadcast_language,
         t = -1;
-      return o >= 0 && e && o < e.length && e[o] !== void 0 && (t = e[o]), t;
+      return (o >= 0 && e && o < e.length && e[o] !== void 0 && (t = e[o]), t);
     });
   return n
     ? (0, X.jsx)(C, { size: `small`, string: L(`#Loading`) })
@@ -12077,7 +12085,7 @@ var qh = class e {
               : R.STORE_BASE_URL + `dlc/` + e + `/ajaxgetdlclist`;
           let i = await Q.default.get(r, { params: n, cancelToken: t?.token }),
             a = [];
-          i.data.dlcs &&
+          (i.data.dlcs &&
             i.data.dlcs.forEach((e) => {
               a.push({
                 appid: e.appid,
@@ -12095,7 +12103,7 @@ var qh = class e {
                   is_released_somewhere: !!e.is_released_somewhere,
                 });
               }),
-            this.m_mapAppIDToSoundTracks.set(e, a);
+            this.m_mapAppIDToSoundTracks.set(e, a));
         } catch (t) {
           let n = k(t);
           console.error(
@@ -12115,7 +12123,7 @@ var qh = class e {
     }
     static s_Singleton;
     static Get() {
-      return (e.s_Singleton ||= new e()), e.s_Singleton;
+      return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
     constructor() {
       s(this);
@@ -12191,7 +12199,7 @@ var qh = class e {
             L(`#EventEmail_Template_Sub_` + e),
           ),
           onOK: () => {
-            t.RemoveSubSection(e), !t.BHasSomeSubSection() && n && n();
+            (t.RemoveSubSection(e), !t.BHasSomeSubSection() && n && n());
           },
         }),
         window,
@@ -12314,11 +12322,11 @@ var qh = class e {
       });
     }
   };
-D([A], Vg.prototype, `OnHeadlineChange`, null),
+(D([A], Vg.prototype, `OnHeadlineChange`, null),
   D([A], Vg.prototype, `OnBodyChange`, null),
   D([A], Vg.prototype, `OnVideoChange`, null),
   D([A], Vg.prototype, `OnRemoveSubSection`, null),
-  (Vg = D([r], Vg));
+  (Vg = D([r], Vg)));
 var Hg = class extends Z.Component {
   m_cancelSignal = Q.default.CancelToken.source();
   state = { dlcs: void 0 };
@@ -12471,10 +12479,10 @@ var Hg = class extends Z.Component {
     });
   }
 };
-D([A], Hg.prototype, `OnButtonLocChange`, null),
+(D([A], Hg.prototype, `OnButtonLocChange`, null),
   D([A], Hg.prototype, `OnDestinationChange`, null),
   D([A], Hg.prototype, `OnChangeStorePageURL`, null),
-  (Hg = D([r], Hg));
+  (Hg = D([r], Hg)));
 var Ug = class extends Z.Component {
   state = {
     bIsValid: gn.IsValidStoreURL(this.props.strExistingURL),
@@ -12490,7 +12498,7 @@ var Ug = class extends Z.Component {
       strDescription: L(`#EventEmail_Section_EnterSalesPage_ttip`),
       strTitle: L(`#EventEmail_Section_UpdateURL`),
       onOK: () => {
-        e(this.state.strURL), t();
+        (e(this.state.strURL), t());
       },
       onCancel: t,
       bOKDisabled: !this.state.bIsValid,
@@ -12505,14 +12513,14 @@ var Ug = class extends Z.Component {
     });
   }
 };
-D([A], Ug.prototype, `OnURLUpdate`, null), (Ug = D([r], Ug));
+(D([A], Ug.prototype, `OnURLUpdate`, null), (Ug = D([r], Ug)));
 function Wg(e) {
   let { clanSteamID: t, section: n, lang: r, bEditor: i, artworkType: a } = e,
     [o, s] = Z.useState(r),
     c = b.GetEditModel(),
     l = Z.useCallback(
       (e, t, r) => {
-        S.GetExtensionString(e) && n.SetImage(S.GetHashAndExt(e), r), s(r);
+        (S.GetExtensionString(e) && n.SetImage(S.GetHashAndExt(e), r), s(r));
       },
       [n],
     ),
@@ -12559,7 +12567,7 @@ var Gg = class extends Z.Component {
   state = { bDownloadFromClanImageStore: !1 };
   m_clanImageUploader = void 0;
   constructor(e) {
-    super(e), this.RefreshUploader();
+    (super(e), this.RefreshUploader());
   }
   componentDidUpdate(e) {
     (e.clanSteamID.GetAccountID() != this.props.clanSteamID.GetAccountID() ||
@@ -12577,8 +12585,8 @@ var Gg = class extends Z.Component {
       let t = await this.m_clanImageUploader.UploadAllImages();
       for (let n of t)
         if (!n.bSuccess || n.uploadResult.success !== 1)
-          (n.image.status = `failed`),
-            (n.image.message = n.uploadResult.message);
+          ((n.image.status = `failed`),
+            (n.image.message = n.uploadResult.message));
         else {
           n.image.status = `success`;
           let t = S.GetExtensionString(n.uploadResult);
@@ -12595,7 +12603,7 @@ var Gg = class extends Z.Component {
         r = Array.from(e);
       for (let e = 0; n && e < r.length; e++) {
         let i = r[e];
-        (n = await this.m_clanImageUploader.AddImage(i, t)),
+        ((n = await this.m_clanImageUploader.AddImage(i, t)),
           n ||
             (console.error(
               `ClanImagePicker.OnDropFiles: failed on i=` +
@@ -12608,7 +12616,7 @@ var Gg = class extends Z.Component {
                 strDescription: L(`#ImagePicker_Error`, i.name),
               }),
               window,
-            ));
+            )));
       }
       return n;
     }
@@ -12637,13 +12645,13 @@ var Gg = class extends Z.Component {
           await this.m_clanImageUploader.AddExistingClanImage(e, t);
         } catch (e) {
           let t = k(e);
-          console.error(`AddExistingClanImage: ` + t.strErrorMsg, t),
+          (console.error(`AddExistingClanImage: ` + t.strErrorMsg, t),
             P(
               (0, X.jsx)(Zo, {
                 strDescription: L(`#EventError_Code`, t.strErrorMsg),
               }),
               window,
-            );
+            ));
         }
         this.setState({ bDownloadFromClanImageStore: !1 });
       });
@@ -12687,11 +12695,11 @@ var Gg = class extends Z.Component {
     });
   }
 };
-D([A], Gg.prototype, `DoUpload`, null),
+(D([A], Gg.prototype, `DoUpload`, null),
   D([A], Gg.prototype, `OnDropFiles`, null),
   D([A], Gg.prototype, `RenderInstructions`, null),
   D([A], Gg.prototype, `OnPreviousImageSelected`, null),
-  (Gg = D([r], Gg));
+  (Gg = D([r], Gg)));
 var Kg = new URL(
     `../../../images/applications/community/Logo_Steamworks.png?v=valveisgoodatcaching`,
     import.meta.url,
@@ -12896,11 +12904,11 @@ var Qg = class extends Z.Component {
     let e = await b.GetPartnerCapabilities(this.m_cancelSignal),
       t = this.GetEmailEditModel(),
       n = { label: e[0].capability, value: e[0] };
-    e.forEach((e) => {
+    (e.forEach((e) => {
       e.id === t.GetInternalTargetingPartnerCapability() &&
         (n = { label: e.capability, value: e });
     }),
-      this.setState({ capabilities: e, selectedCapability: n });
+      this.setState({ capabilities: e, selectedCapability: n }));
   }
   GetEmailEditModel() {
     return new xn(this.props.editModel);
@@ -12911,35 +12919,35 @@ var Qg = class extends Z.Component {
       let t = this;
       this.setState({ readingFile: !0, file: n[0] }, () => {
         let n = new FileReader();
-        (n.onload = function () {
+        ((n.onload = function () {
           let r = n.result
               .toString()
               .split(`
 `)
               .map((e) => Number.parseInt(e)),
             i = new Set(r);
-          e == `app`
+          (e == `app`
             ? t.GetEmailEditModel().SetInternalAppIDs(Array.from(i))
             : t.GetEmailEditModel().SetInternalPublisherIDs(Array.from(i)),
             t.setState({
               readingFile: !1,
               nDuplicatesRemoved: r.length - i.size,
               file: null,
-            });
+            }));
         }),
           (n.onerror = function () {
-            console.error(`DevEventRecipientOptions - Failed to read file`, n),
-              t.setState({ readingFile: !1, file: null });
+            (console.error(`DevEventRecipientOptions - Failed to read file`, n),
+              t.setState({ readingFile: !1, file: null }));
           }),
-          n.readAsText(this.state.file);
+          n.readAsText(this.state.file));
       });
     }
-    this.m_appFileInput.current &&
+    (this.m_appFileInput.current &&
       this.m_appFileInput.current.value &&
       (this.m_appFileInput.current.value = null),
       this.m_pubFileInput.current &&
         this.m_pubFileInput.current.value &&
-        (this.m_pubFileInput.current.value = null);
+        (this.m_pubFileInput.current.value = null));
   }
   ShowTargets(e) {
     let t = this.GetEmailEditModel(),
@@ -13239,10 +13247,10 @@ var Qg = class extends Z.Component {
     });
   }
 };
-D([A], Qg.prototype, `OnFileChoice`, null),
+(D([A], Qg.prototype, `OnFileChoice`, null),
   D([A], Qg.prototype, `ShowTargets`, null),
   D([A], Qg.prototype, `ClearTargets`, null),
-  (Qg = D([r], Qg));
+  (Qg = D([r], Qg)));
 var $g = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAAAgCAYAAAAPHGYtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABo1JREFUeNrsWg1MVlUY/iDTElOcI9ZgZBorV8ywVFYGc05mZQbmMgoNk37NQq3IJZWoLf+l9eMqSQ1lpm4aWgStpauZYbl+wK3EssjKflYmtAyi59Hnbme3e7/v3o9PVtt9t2fnfPe+55x7z3Pe97znvV9cZ2dnKJD/pvTwqji5oLAPiuuAscBwYBDQR7dbgWZgP1APbN9UXXU8mN6uSVwkywEpyShKgTsMMiJJG1AJLAZJLcE0x5gckBKH4i5gCXBOlP3TesqACpAU+M9YkANieqN4GbgpRuPsYLcgqC2Y8i6QI2I4maNjPNYHwJhgL4qSHLmyzcCNUfTVAewGPtHvoUA2EG/o1DKoAEF/B1PvP1q7P0pidjFgwKR/YbPCdBQviSTKOOAR4Mlg6n1YDiYyBQUn92yffbwJXC/L4R6Va1ynFZ4B7FQITvkTyLATGci/xXQ5ZVEQw/NNkeo1wBxgr8D6awDZv026lF7AY8HUe7QcWE1/1I8AZ/lsvxYWMA3t6Q4n0jrw+y9ZIl1mHbAN157G73WoTzX2p1Rc/97D4XegiL4SSAR+VHCxBu0/ls5CFJdG6KoG+muk/wKKc130jkLvTofn4KKqAs4EGqCzyOV556IYCRyEzoMuOv0UDcfrPWpwrQD1nnw//H7dtJyJURBjRWBW+6UWMRTU23kNyNOlvUY7urrJHoi5GAUJuA8YpqwEX3wm8D7uD5DqKOCGCMgwus4No5fr8jh03ZOkU4axE130RkpnDnQud9HhgT5feoOhd772/1vNM6UVEIyNgpgTis5Ccoe/O+jwWm/V2233OGZFhDEYPPRV25kiipZUCHyGBfCz9J6hhapOEm5XfQHwi+r7Hfpnqmmjw8HZSYqMei9N5LMRnr/UflYEEbS8B2x6fI8kvcdgOznDoyDncUxOo+rvArcYZFlSaFy7yHbvCg9jDFTZjLFWq74HqMZLxhtWusV4+TyDnErc+ypM/024v9aDBZ+nSNN6V1rqdA/kTELbCzHGQeMayUo1lXj2g95WVGlp6+3kJPsk5j25LEsWA/swwAqU1iTSb19D4uWv7dmGZFxPwIO1hhnncyCHxEJ3h1ZWPdp0xOis1Fd7miktcsmmTJErJtGz5c4z0XYYdD8Kt6cDDykNZonjPoR+DqM47BSt8QEfBg55zJdN5QQZHR9FkSUX9JZAn5yle/Ptq0WSGGGsJ0Knst0UZsTfYOCCSVkQxuf7kWnAlzakhnFpm/A+DTpyhAwLdZK3Ae7BRbI8WuAYFJcBJPQ3T6E0BvwJoCWka7UzBHZbmSXQPeTA/BGgGEgTihl54IHmy/f6FvapTMMs4FNdZpQ1D/jQCAhOm2CMESiGWI+kstpy27jvFkh9A2xQBFaia7NVPuU7QyBXwRRLLQZNk2sqFlF8oANWOBrmZZK0h2XqfJMeRv1XDwTR7a0i0Pcl2uTzFbkxNF/ZhblntrzEg3VZZ7ocPEOOYfH9lFHZ4NJ2qebgbrTjgr9WVsf95UU/h1D7pHwNcIWmaSJITgYGmcG9woWY8SgalRFYGIGYHyLsN+wvQecl65kabZFO0mm2GlpFgX4maCGsVJrLkulh5rBJh3O6++26vMTrftnDw8o9oSo3/DbtTVwJV+HeMb0EQ+nlwD0+3n2fBx1OwgytuiaFsAXG/YYuzj83dbvlHMN7VaqeJ+s4OanAH4beUN0fjT4GObl6w4VNAAbooL/eV+JT4SeTk8+Hy3lpJXCD2yg/Wo56psx6iM+JqfegczOQ4kJ6nbEao5VsIylrCSOmSlsgwDNVqc2qUnWIjFNgMM9lzvZAd7fGWWEsds+Ws0tuaxY6YqT1nNId7S7tuC/lQzdLbXv6nJQOY3MNJ+N0VuK3pQsUznKFblHqyMk9fGeQ5vZxry5c+sbwBq3qa6vDpLdAp0LP1d+4ZWVCzBCbi2uEntuSnXKVzV6y0qtt8fi3iu/fsX9ihu5y5ZgOiEi/UoU+pwSpTe97ziKRYaVbUpQ+4QphFvkVnQPGKwLhSlgXxZj8ZFAeTH1kMVMgjMsftd3PVfi3TMm6zSLlauWWRkUxZnnwLce/5YSUiMzWOcKSVUoq8nzTIh+7TKT5lVqvB7BAgj94/D/cmuHe2rSvvBrDcU6SHRDTRXIMgnjGuDfk/J3GqxxXXmxC8J+1GLg1hxQGPyfM1UHL6z8/g7/jdgc5Zp4rdOpTrflHdivHZv6RnYfYbYEL60ZyAul++UeAAQDyv2dSS4HffQAAAABJRU5ErkJggg==`,
   e_ = (e) => {
     let [t, n] = (0, Z.useState)(e ? void 0 : !1);
@@ -13288,7 +13296,7 @@ var $g = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAAAgCAYAAAAPHGYtAAAA
     }
     static s_Singleton;
     static Get() {
-      return (e.s_Singleton ||= new e()), e.s_Singleton;
+      return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
   };
 function n_(e) {
@@ -13367,8 +13375,8 @@ var a_ = r((e) => {
                 onChange: (t) => {
                   let { editModel: n } = e,
                     r = n.GetClanSteamID().GetAccountID();
-                  (n.CreateOrGetEmailSettings(r).bEnable = t),
-                    n.SetDirty(x.jsondata_email);
+                  ((n.CreateOrGetEmailSettings(r).bEnable = t),
+                    n.SetDirty(x.jsondata_email));
                 },
                 checked: t.BIsEmailEnabled(),
               }),
@@ -13455,7 +13463,7 @@ var a_ = r((e) => {
     }
     OnTestEmail(e) {
       let { editModel: t } = this.props;
-      e.preventDefault(),
+      (e.preventDefault(),
         this.props.bHasValidatedEmail && !t.BIsDirtyType(x.jsondata_email)
           ? ts(
               (0, X.jsx)(j, {
@@ -13490,7 +13498,7 @@ var a_ = r((e) => {
                   ),
                 }),
                 window,
-              );
+              ));
     }
     OnPrepareEmail(e) {
       P((0, X.jsx)(f_, { editModel: this.props.editModel }), G(e));
@@ -13542,7 +13550,7 @@ var a_ = r((e) => {
         );
       } catch (e) {
         let t = k(e);
-        console.error(`OnSetupAndFireEmail failed: ` + t.strErrorMsg),
+        (console.error(`OnSetupAndFireEmail failed: ` + t.strErrorMsg),
           P(
             (0, X.jsx)(j, {
               strTitle: L(`#Error_Message`),
@@ -13561,7 +13569,7 @@ var a_ = r((e) => {
               }),
             }),
             window,
-          );
+          ));
       } finally {
         this.setState({ bSettingUp: !1 });
       }
@@ -13603,12 +13611,12 @@ var a_ = r((e) => {
       });
     }
   };
-D([A], s_.prototype, `FireTestEmail`, null),
+(D([A], s_.prototype, `FireTestEmail`, null),
   D([A], s_.prototype, `OnTestEmail`, null),
   D([A], s_.prototype, `OnPrepareEmail`, null),
   D([A], s_.prototype, `OnSetupAndFireEmailConfirm`, null),
   D([A], s_.prototype, `OnSetupAndFireEmail`, null),
-  (s_ = D([r], s_));
+  (s_ = D([r], s_)));
 var c_ = r((e) => {
     let { editModel: t } = e,
       n = (e) => {
@@ -13651,17 +13659,17 @@ var c_ = r((e) => {
       g = l?.GetName();
     if (!a.BIsTargetingGamePlayers()) {
       if (a.BIsTargetingGameFollowers())
-        (f = `#EventEmail_Reason_Follow`),
+        ((f = `#EventEmail_Reason_Follow`),
           (p = !0),
-          (m = `#EventEmail_Footer_Reason_Followed`);
+          (m = `#EventEmail_Footer_Reason_Followed`));
       else if (a.BIsTargetingGameWishlisters())
-        (f = `#EventEmail_Reason_Wishlist`),
+        ((f = `#EventEmail_Reason_Wishlist`),
           (p = !0),
-          (m = `#EventEmail_Footer_Reason_Wishlisted`);
+          (m = `#EventEmail_Footer_Reason_Wishlisted`));
       else if (a.BIsTargetingSomeCreator()) {
-        (f = `#EventEmail_Reason_Follow`),
+        ((f = `#EventEmail_Reason_Follow`),
           (p = !0),
-          (m = `#EventEmail_Footer_Reason_Followed`);
+          (m = `#EventEmail_Footer_Reason_Followed`));
         let e = a.GetSomeCreatorTarget(),
           t = l.GetAllCreatorClanIDs().find((t) => t == e);
         if (t) {
@@ -13669,12 +13677,12 @@ var c_ = r((e) => {
             n = ai.GetCreatorHome(e);
           if (n) {
             let e = `developer`;
-            l.GetAllDeveloperCreatorClans().includes(t) ||
+            (l.GetAllDeveloperCreatorClans().includes(t) ||
               (e = l.GetAllPublisherCreatorClans().includes(t)
                 ? `publisher`
                 : `franchise`),
               (h = n.GetCreatorHomeURL(e)),
-              (g = n.GetName());
+              (g = n.GetName()));
           }
         }
       }
@@ -13859,7 +13867,7 @@ var c_ = r((e) => {
       });
     }
   };
-D([A], l_.prototype, `OnControlGroupSpinnerChange`, null), (l_ = D([r], l_));
+(D([A], l_.prototype, `OnControlGroupSpinnerChange`, null), (l_ = D([r], l_)));
 var u_ = class extends Z.Component {
   state = { bLoadingCreator: !0 };
   m_cancelSignal = Q.default.CancelToken.source();
@@ -13868,7 +13876,7 @@ var u_ = class extends Z.Component {
     let { editModel: e } = this.props;
     Do.Get().QueueAppRequest(e.GetAppID(), { include_basic_info: !0 });
     let t = [];
-    (
+    ((
       await ai.LoadCreatorHomeListForAppIncludeHiddden(
         e.GetAppID(),
         this.m_cancelSignal,
@@ -13880,7 +13888,7 @@ var u_ = class extends Z.Component {
       Promise.all(t).then((e) => {
         this.m_cancelSignal.token.reason ||
           this.setState({ bLoadingCreator: !1 });
-      });
+      }));
   }
   componentDidMount() {
     this.LoadCreatorHome();
@@ -13900,7 +13908,7 @@ var u_ = class extends Z.Component {
     else {
       let { editModel: r } = this.props,
         i = new xn(r);
-      ai.GetCreatorHomeListForAppIncludeHidden(r.GetAppID()).forEach((r) => {
+      (ai.GetCreatorHomeListForAppIncludeHidden(r.GetAppID()).forEach((r) => {
         let a = ai.GetCreatorHomeByID(r);
         if (a && !n.some((e) => e.clan_account_id === a.GetClanAccountID())) {
           let o = (0, X.jsxs)(`a`, {
@@ -13915,7 +13923,7 @@ var u_ = class extends Z.Component {
               audience: a.GetNumFollowers(),
               label: K(`#EventEmail_Recipients_follower_creator`, o),
             });
-          t.push(
+          (t.push(
             (0, X.jsx)(
               z,
               {
@@ -13955,7 +13963,7 @@ var u_ = class extends Z.Component {
                   `RecipientToggle_player_` + r.clan_account_id,
                 ),
               ),
-              n.push(r));
+              n.push(r)));
         }
       }),
         t.length == 0 &&
@@ -13973,7 +13981,7 @@ var u_ = class extends Z.Component {
               },
               `creatorhome_plug`,
             ),
-          );
+          ));
     }
     return t;
   }
@@ -14076,12 +14084,12 @@ var d_ = class extends Z.Component {
     }
     OnLockEmail() {
       let { editModel: e } = this.props;
-      new xn(e).LockEmail(),
+      (new xn(e).LockEmail(),
         this.setState({ state: `saving` }, () => {
           b.SaveModel(e.GetClanSteamID()).then((e) => {
             this.setState({ state: `done` });
           });
-        });
+        }));
     }
     render() {
       switch (this.state.state) {
@@ -14160,7 +14168,7 @@ var d_ = class extends Z.Component {
       }
     }
   };
-D([A], f_.prototype, `OnLockEmail`, null), (f_ = D([r], f_));
+(D([A], f_.prototype, `OnLockEmail`, null), (f_ = D([r], f_)));
 var p_ = 300,
   m_ = class extends Z.Component {
     state = { rtimeLastRefresh: 0, bRefreshing: !1 };
@@ -14190,11 +14198,11 @@ var p_ = 300,
       }
     }
     componentDidMount() {
-      this.RefreshIfNeeded(),
+      (this.RefreshIfNeeded(),
         (this.autoRefreshInterval = window.setInterval(
           this.RefreshIfNeeded,
           p_ * 1e3,
-        ));
+        )));
     }
     componentDidUpdate(e) {
       this.props.editModel.GetGID() != e.editModel.GetGID() &&
@@ -14329,9 +14337,9 @@ var p_ = 300,
       });
     }
   };
-D([A], m_.prototype, `RefreshIfNeeded`, null),
+(D([A], m_.prototype, `RefreshIfNeeded`, null),
   D([A], m_.prototype, `RefreshStats`, null),
-  (m_ = D([r], m_));
+  (m_ = D([r], m_)));
 var h_ = `-t8zrhkJpVk-`;
 function g_(e) {
   let t = e_(e.appid);
@@ -14633,8 +14641,8 @@ var y_ = r((e) => {
             !!q.IS_OGG &&
               (0, X.jsx)(z, {
                 onChange: (e) => {
-                  e && (t.setEventType(14), t.SetSteamStoreSpotlight(e)),
-                    t.SetTag(`vo_marketing_message`, e);
+                  (e && (t.setEventType(14), t.SetSteamStoreSpotlight(e)),
+                    t.SetTag(`vo_marketing_message`, e));
                 },
                 label: `(VO) Marketing Message Major Update`,
                 disabled:
@@ -14703,9 +14711,9 @@ var y_ = r((e) => {
                 `#EventEditor_Options_RegionRestrictions_placeholder`,
               ),
               onChange: (e) => {
-                (t.GetEventModel().jsondata.country_restriction =
+                ((t.GetEventModel().jsondata.country_restriction =
                   e.currentTarget.value),
-                  t.SetDirty(x.description);
+                  t.SetDirty(x.description));
               },
               value: o,
             }),
@@ -14720,12 +14728,12 @@ var y_ = r((e) => {
     TestFireEvent() {
       let { editModel: e } = this.props;
       this.setState({ bSending: !0 }, () => {
-        b.FireTestEventNotifiation(
+        (b.FireTestEventNotifiation(
           e.GetClanSteamID(),
           e.GetGID(),
           this.m_cancelSignal,
         ),
-          this.setState({ bSending: !1 });
+          this.setState({ bSending: !1 }));
       });
     }
     render() {
@@ -14785,7 +14793,7 @@ var y_ = r((e) => {
       });
     }
   };
-D([A], x_.prototype, `TestFireEvent`, null), (x_ = D([r], x_));
+(D([A], x_.prototype, `TestFireEvent`, null), (x_ = D([r], x_)));
 var S_ = r((e) => {
   let { editModel: t } = e;
   return t.BIsEventForOGGWithoutVisibleStorePage()
@@ -14842,10 +14850,10 @@ var w_ = r((e) => {
     let { editModel: t } = e;
     return (0, X.jsx)(z, {
       onChange: (e) => {
-        e
+        (e
           ? (t.AddTag(`enable_steam_china`), t.AddTag(`disable_steam_global`))
           : t.ClearTags([`enable_steam_china`, `disable_steam_global`]),
-          C_(t);
+          C_(t));
       },
       label: L(`#EventEditor_Options_ShowInSteamChina`),
       description: L(`#EventEditor_Options_ShowInSteamChina_Desc`),
@@ -14858,10 +14866,10 @@ var w_ = r((e) => {
       ? null
       : (0, X.jsx)(z, {
           onChange: (e) => {
-            e
+            (e
               ? t.AddTag(`disable_steam_global`)
               : t.ClearTags([`disable_steam_global`]),
-              C_(t);
+              C_(t));
           },
           label: L(`#EventEditor_Options_ShowInSteamGlobal`),
           description: L(`#EventEditor_Options_ShowInSteamGlobal_Desc`),
@@ -14939,7 +14947,7 @@ var P_ = r((e) => {
       );
     },
     g = (e) => {
-      t.SetVisibilityPublishingSetup(rr.immediate),
+      (t.SetVisibilityPublishingSetup(rr.immediate),
         P(
           (0, X.jsx)(Je, {
             editModel: t,
@@ -14951,7 +14959,7 @@ var P_ = r((e) => {
             },
           }),
           G(e),
-        );
+        ));
     };
   if (i)
     return (0, X.jsx)(wi, { eventModel: t.GetEventModel(), route: T.k_eView });
@@ -15088,7 +15096,7 @@ var I_ = `oeK-Js89pJ0-`,
         e == 0
           ? this.m_mapVisibilityUpdateChangeCallback
           : this.m_mapVisibilityLaunchChangeCallback;
-      return n.has(t) || n.set(t, new Oo()), n.get(t);
+      return (n.has(t) || n.set(t, new Oo()), n.get(t));
     }
     async LoadVisibilityRounds(e, t) {
       let n =
@@ -15246,14 +15254,16 @@ function $_(e) {
       c?.GetEventModel().GetLastUpdateTime(),
     ]);
   (0, Z.useEffect)(() => {
-    r &&
+    (r &&
       c?.GetGID() != r &&
       s.LoadEditorModel(n.GetClanSteamID(), r).then((e) => {
         l(e);
       }),
       r &&
         !a &&
-        Jn.GetLastUpdateTimeForEvent(n.GetClanSteamID(), r, null, null).then(o);
+        Jn.GetLastUpdateTimeForEvent(n.GetClanSteamID(), r, null, null).then(
+          o,
+        ));
   }, [n, r, c, s, a]);
   let [v, ee] = (0, Z.useState)(!1),
     te = ta();
@@ -15489,12 +15499,12 @@ async function ov(e, t, n, r, i) {
       R.COMMUNITY_BASE_URL +
       `partnereventdata/ajaxrequestmarketingmessagemajorupdatereview`,
     o = new URLSearchParams();
-  o.append(`sessionid`, ss()),
+  (o.append(`sessionid`, ss()),
     o.append(`clanAccountID`, `` + e.GetAccountID()),
     o.append(`appid`, `` + t),
     o.append(`gidClanEvent`, n),
     o.append(`partnerID`, `` + i),
-    o.append(`message`, r);
+    o.append(`message`, r));
   try {
     let e = await Q.default.post(a, o, { withCredentials: !0 });
     return !e || e.status != 200 || e.data.success != 1
@@ -15536,8 +15546,8 @@ function sv(e) {
             gidClanEvent: r,
             rgSalePresenters: a,
             fnCleanSaleEventPresenters: () => {
-              (t.GetEventModel().jsondata.sale_presenters = void 0),
-                t.SetDirty(x.jsondata_sales);
+              ((t.GetEventModel().jsondata.sale_presenters = void 0),
+                t.SetDirty(x.jsondata_sales));
             },
             bPublishTab: !0,
             bIsEventVisible: o,
@@ -16268,11 +16278,11 @@ function gv() {
               );
           })
           .catch((e) => {
-            console.error(
+            (console.error(
               `Failed to rebuild the stripped tags for this event`,
               e,
             ),
-              n || r(!0);
+              n || r(!0));
           }),
         () => {
           n = !0;
@@ -16312,10 +16322,10 @@ var _v = r(function (e) {
   yv = class extends Z.Component {
     m_bRedirect = !1;
     constructor(e) {
-      super(e),
+      (super(e),
         (this.m_bRedirect =
           b.GetEditModel() === void 0 ||
-          b.GetEditModel().GetCategoryAsType() == 1);
+          b.GetEditModel().GetCategoryAsType() == 1));
     }
     render() {
       return this.m_bRedirect
@@ -16344,13 +16354,13 @@ function xv(e) {
       Ah(t, n),
     ]),
     p = [`background`, `capsule`];
-  l > 0
+  (l > 0
     ? p.push(`spotlight`)
     : q.IS_OGG &&
       u &&
       (p.push(`localized_store_app_spotlight`),
       p.push(`localized_store_app_spotlight_mobile`)),
-    i && p.push(`bestofyear_banner`, `bestofyear_banner_mobile`);
+    i && p.push(`bestofyear_banner`, `bestofyear_banner_mobile`));
   let m = p.includes(`spotlight`),
     h = p.includes(`localized_store_app_spotlight`),
     _ = p.includes(`localized_store_app_spotlight_mobile`);
@@ -16716,10 +16726,10 @@ function jv(e) {
               ? (o(!0),
                 i({ iDoorIndex: t })
                   .then((e) => {
-                    e || c(!0), o(!1);
+                    (e || c(!0), o(!1));
                   })
                   .catch(() => {
-                    c(!0), o(!1);
+                    (c(!0), o(!1));
                   }))
               : u());
         },
@@ -16935,7 +16945,7 @@ function Yv(e) {
     r = Dr(R.LANGUAGE);
   return (
     Z.useEffect(() => {
-      ra.Init(Po(new Fs(R.WEBAPI_BASE_URL))), Gr.Init(), b.Init(), n(!1);
+      (ra.Init(Po(new Fs(R.WEBAPI_BASE_URL))), Gr.Init(), b.Init(), n(!1));
     }, []),
     t || !r
       ? (0, X.jsx)(C, {

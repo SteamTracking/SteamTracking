@@ -111,11 +111,11 @@ function Me(e) {
   K.useEffect(() => {
     if (_ && !C.current) {
       let e = window.setTimeout(() => {
-        (C.current = !0), b(!0);
+        ((C.current = !0), b(!0));
       }, 500);
       return () => window.clearTimeout(e);
     }
-    return b(_ || h), () => {};
+    return (b(_ || h), () => {});
   }, [_, h]);
   let { data: T } = ie(),
     E = !!T?.preferences?.disable_microtrailers,

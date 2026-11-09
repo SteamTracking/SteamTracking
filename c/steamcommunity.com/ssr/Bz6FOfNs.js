@@ -74,7 +74,7 @@ function _(_) {
       className: _.size ? void 0 : _,
       ..._,
     };
-  return _ && (_.viewBox = _(_)), _(_, _);
+  return (_ && (_.viewBox = _(_)), _(_, _));
 }
 function _(_) {
   if (_)
@@ -84,4 +84,3 @@ function _(_) {
         ? _
         : `0 0 ${_.width} ${_.height}`;
 }
-export { _, _ };

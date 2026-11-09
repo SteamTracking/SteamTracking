@@ -109,13 +109,13 @@ var x = class e {
   }
   RemoveCachedDataIfNotInMap(e) {
     let t = [];
-    this.m_mapBroadcasterSteamIDToEvents.forEach((n, r) => {
+    (this.m_mapBroadcasterSteamIDToEvents.forEach((n, r) => {
       e.has(r) || t.push(r);
     }),
       t.forEach((e) => {
-        this.m_mapBroadcasterSteamIDData.delete(e),
-          this.m_mapBroadcasterSteamIDToEvents.delete(e);
-      });
+        (this.m_mapBroadcasterSteamIDData.delete(e),
+          this.m_mapBroadcasterSteamIDToEvents.delete(e));
+      }));
   }
   static BuildAppIDRefsForEventList(t, n) {
     let r = new Set();
@@ -130,16 +130,16 @@ var x = class e {
         m_mapPresenters: e.BuildSteamIDToPresenterMapFromEventList(t, n),
         m_rgAppIDs: e.BuildAppIDRefsForEventList(t, n),
       };
-      this.m_mapBroadcasterSteamIDData.set(r, i),
+      (this.m_mapBroadcasterSteamIDData.set(r, i),
         this.m_mapBroadcasterSteamIDToEvents.set(
           r,
           t.map((e) => e.GID ?? ``),
-        );
+        ));
     });
   }
   async SynchronizeEventsWithBroadcasts(e, t) {
     let n = await this.BuildBroadcasterSteamIDToActiveEventMap(e);
-    this.RemoveCachedDataIfNotInMap(n), this.UpdateCachedDataFromEvents(n, t);
+    (this.RemoveCachedDataIfNotInMap(n), this.UpdateCachedDataFromEvents(n, t));
   }
   GetPresenterMapForBroadcasterSteamID(e) {
     return this.m_mapBroadcasterSteamIDData.get(e)?.m_mapPresenters;
@@ -231,11 +231,11 @@ var D = class e {
     e !== `remove` && (this.m_bUserChatExpanded = e === `hide`);
   }
   DebugDumpContextAndAvailableContext(e) {
-    console.log(`Requested context`, this.GetStreamsLookupKeyFromDef(e)),
+    (console.log(`Requested context`, this.GetStreamsLookupKeyFromDef(e)),
       console.log(`Available context count: `, this.m_lookupStreams.size),
       this.m_lookupStreams.forEach((e, t) => {
         console.log(t, e.length);
-      });
+      }));
   }
   GetStreams(e) {
     let t = this.GetStreamsLookupKeyFromDef(e);
@@ -288,18 +288,18 @@ var D = class e {
           t = (await C.default.get(n, { params: {}, cancelToken: e.token }))
             .data;
         } catch (e) {
-          console.log(`LoadBIsEmbeddedBroadcastHidden: ` + m(e).strErrorMsg),
-            (t = { bHideStoreBroadcast: !1 });
+          (console.log(`LoadBIsEmbeddedBroadcastHidden: ` + m(e).strErrorMsg),
+            (t = { bHideStoreBroadcast: !1 }));
         }
       n(() => {
-        (this.m_bUserPreferenceHideBroadcastByDefault = t.bHideStoreBroadcast),
-          (this.m_bCollapsed = t.bHideStoreBroadcast);
+        ((this.m_bUserPreferenceHideBroadcastByDefault = t.bHideStoreBroadcast),
+          (this.m_bCollapsed = t.bHideStoreBroadcast));
       });
     }
     return this.BIsEmbeddedBroadcastHiddenByDefaultUserSettings();
   }
   async SetupEmbeddableVOD(e, t) {
-    (this.m_bUseFakeData = !1),
+    ((this.m_bUseFakeData = !1),
       (this.m_streamChatStatus = `remove`),
       _(!!e.nAppIDVOD, `SetupEmbeddableVOD requires a VOD appid`),
       await h
@@ -307,15 +307,15 @@ var D = class e {
         .QueueAppRequest(e.nAppIDVOD, {
           include_assets: !0,
           include_trailers: !0,
-        });
+        }));
     let n = h.Get().GetApp(e.nAppIDVOD),
       r = new l();
-    (r.accountid = 0),
+    ((r.accountid = 0),
       (r.nAppIDVOD = e.nAppIDVOD),
       (r.default_selection_priority = u.k_ePrimary),
       (r.current_selection_priority = u.k_ePrimary),
       (r.thumbnail_http_address = n?.GetAssets()?.GetHeaderURL() || ``),
-      (r.title = n?.GetName() || ``);
+      (r.title = n?.GetName() || ``));
     let i = this.GetStreams(e);
     if (
       (_(
@@ -384,7 +384,7 @@ var D = class e {
     return [];
   }
   async HandleHintLoadBroadcastResponse(e, t) {
-    (this.m_bUseFakeData = !1),
+    ((this.m_bUseFakeData = !1),
       e.bIsPreview &&
         (t?.filtered?.length > 0
           ? (_(!!e.event, `Broadcast preview requires an event`),
@@ -401,7 +401,7 @@ var D = class e {
             }),
             (this.m_bUseFakeData = !0))),
       t.broadcast_chat_visibility &&
-        (this.m_pageChatStatus = t.broadcast_chat_visibility);
+        (this.m_pageChatStatus = t.broadcast_chat_visibility));
     let r = [];
     n(() => {
       t.filtered.forEach((e) => {
@@ -410,11 +410,11 @@ var D = class e {
           .ConvertTo64BitString();
         let t = d.GetOrCreateBroadcastInfo(e.steamid),
           n = e.appid ? Number(e.appid) : 7;
-        (t.m_nAppID = n),
+        ((t.m_nAppID = n),
           (t.m_strAppId = `` + n),
           e.current_selection_priority === void 0 &&
             (e.current_selection_priority = e.default_selection_priority),
-          n != 7 && r.push(n);
+          n != 7 && r.push(n));
       });
     });
     let i = this.GetStreamsLookupKeyFromDef(e);
@@ -425,7 +425,7 @@ var D = class e {
       e && e.fnCallback();
     }
     let a = this.GetStreams(e) ?? [];
-    return await this.AutoStartVideoStream(e, a), a;
+    return (await this.AutoStartVideoStream(e, a), a);
   }
   ExtractBroadcastPrioritiesFromPartnerEventForPreview(e, t) {
     let n = Array.from(e.jsondata.broadcast_whitelist ?? []),
@@ -480,13 +480,13 @@ var D = class e {
     else {
       let i = await this.m_mapBroadcastChecked.get(r);
       if (i?.success == 1) {
-        (t.steamid = i.steamid),
+        ((t.steamid = i.steamid),
           this.m_playReadyStream.set(n, t),
           (this.m_streamChatStatus =
             this.GetConcurrentStreams(e) > 1
               ? `hide`
               : (t.broadcast_chat_visibility ?? null)),
-          this.m_setStreamChangedListeners.forEach((e) => e(t));
+          this.m_setStreamChangedListeners.forEach((e) => e(t)));
         let r = d.GetOrCreateBroadcastInfo(t.steamid).m_nAppID;
         A(r, 1, t.snr);
       } else return null;
@@ -562,7 +562,7 @@ var D = class e {
   }
   Init() {}
 };
-p([i], D.prototype, `m_lookupStreams`, void 0),
+(p([i], D.prototype, `m_lookupStreams`, void 0),
   p([i], D.prototype, `m_playReadyStream`, void 0),
   p([i], D.prototype, `m_pageChatStatus`, void 0),
   p([i], D.prototype, `m_streamChatStatus`, void 0),
@@ -570,7 +570,7 @@ p([i], D.prototype, `m_lookupStreams`, void 0),
   p([i], D.prototype, `m_bUserPreferenceHideBroadcastByDefault`, void 0),
   p([i], D.prototype, `m_bCollapsed`, void 0),
   p([a], D.prototype, `HintLoadEmbeddablePreviewStreams`, null),
-  p([a], D.prototype, `AttemptToPlayStream`, null);
+  p([a], D.prototype, `AttemptToPlayStream`, null));
 function O(e) {
   return e.current_selection_priority || u.k_eGeneral;
 }
@@ -586,12 +586,12 @@ function k(e) {
 async function A(e, t, n) {
   if (e > 0 && e != 7 && n) {
     let r = new URLSearchParams();
-    r.append(`page_action`, `` + t),
+    (r.append(`page_action`, `` + t),
       r.append(`snr`, n),
       C.default.post(
         y.STORE_BASE_URL + `ajaxreportproductaction/` + e + `/`,
         r,
-      );
+      ));
   }
 }
 var j = new v();

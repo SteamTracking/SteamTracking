@@ -129,4 +129,3 @@ function _(_) {
         : []),
     ].sort((_, _) => _.ordinal - _.ordinal);
 }
-export { _, _, _, _, _, _ };

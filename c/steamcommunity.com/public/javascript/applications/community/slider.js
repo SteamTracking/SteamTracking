@@ -127,11 +127,11 @@ function _(_) {
               step: _,
             }),
             _ = [..._];
-          (_[_.current.activeValueIndex] = _),
+          ((_[_.current.activeValueIndex] = _),
             _.sort((_, _) => _ - _),
             (_.current.activeValueIndex = _.indexOf(_)),
             (_.current.bMoved = !0),
-            _(_);
+            _(_));
         }
       },
       onClick: (_) => {
@@ -146,7 +146,7 @@ function _(_) {
           }),
           _ = _(_, _),
           _ = [..._];
-        (_[_] = _), _(_), _ && _(_);
+        ((_[_] = _), _(_), _ && _(_));
       },
       children: (0, _.jsx)(`div`, {
         className: _,
@@ -244,11 +244,11 @@ function _(_) {
               step: _,
             }),
             _ = [..._];
-          (_[_] = _(_, _, _)),
+          ((_[_] = _(_, _, _)),
             _(_),
             _ && _(_),
             _.preventDefault(),
-            _.stopPropagation();
+            _.stopPropagation());
           break;
         }
         case `PageUp`:
@@ -262,11 +262,11 @@ function _(_) {
               step: _,
             }),
             _ = [..._];
-          (_[_] = _(_, _, _)),
+          ((_[_] = _(_, _, _)),
             _(_),
             _ && _(_),
             _.preventDefault(),
-            _.stopPropagation();
+            _.stopPropagation());
           break;
         }
       }
@@ -307,4 +307,3 @@ function _(_) {
 function _(_, _, _) {
   return ((_ - _) / (_ - _)) * 100;
 }
-export { _, _ };

@@ -19,10 +19,10 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports),
+        (__webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
             default: () => _,
-          });
+          }));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -44,7 +44,7 @@
           const _ = async () => {
             _(!0);
             const { eResult: _, strURL: _ } = await _(_.clip_id, "", "", _.wY0);
-            _(_), _(!1);
+            (_(_), _(!1));
           };
           return (0, _.jsxs)("div", {
             className: _.ClipUploadStatus,
@@ -105,11 +105,11 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports),
+        (__webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
             default: () => _,
             useTimelineLoaderForCommunityClip: () => _,
-          });
+          }));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -126,9 +126,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.representation_name || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [11], null);
+              _.Message.initialize(this, _, 0, -1, [11], null));
           }
           static sm_m;
           static sm_mbf;
@@ -195,7 +195,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -216,7 +216,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -234,9 +234,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.component_name || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [5], null);
+              _.Message.initialize(this, _, 0, -1, [5], null));
           }
           static sm_m;
           static sm_mbf;
@@ -278,7 +278,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -299,7 +299,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -317,9 +317,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.steamid || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [7], null);
+              _.Message.initialize(this, _, 0, -1, [7], null));
           }
           static sm_m;
           static sm_mbf;
@@ -381,7 +381,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -402,7 +402,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -420,9 +420,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.segment_number || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
+              _.Message.initialize(this, _, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -458,7 +458,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -479,7 +479,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -497,9 +497,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.segment_info || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [5], null);
+              _.Message.initialize(this, _, 0, -1, [5], null));
           }
           static sm_m;
           static sm_mbf;
@@ -540,7 +540,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -561,7 +561,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -579,9 +579,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.name || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
+              _.Message.initialize(this, _, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -607,7 +607,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -628,7 +628,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -646,9 +646,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.video_manager_clip_id || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
+              _.Message.initialize(this, _, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -694,7 +694,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -715,7 +715,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -733,9 +733,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.clip_id || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [9], null);
+              _.Message.initialize(this, _, 0, -1, [9], null));
           }
           static sm_m;
           static sm_mbf;
@@ -792,7 +792,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -813,7 +813,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -831,9 +831,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.clip || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [3], null);
+              _.Message.initialize(this, _, 0, -1, [3], null));
           }
           static sm_m;
           static sm_mbf;
@@ -859,7 +859,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -880,7 +880,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -898,9 +898,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.clip || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
+              _.Message.initialize(this, _, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -920,7 +920,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -941,7 +941,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -959,9 +959,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.clip_id || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
+              _.Message.initialize(this, _, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -982,7 +982,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -1003,7 +1003,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -1021,7 +1021,7 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+            (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -1046,7 +1046,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {}
           serializeBase64String() {
@@ -1062,9 +1062,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.clip_id || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
+              _.Message.initialize(this, _, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -1085,7 +1085,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -1106,7 +1106,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -1124,9 +1124,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.clip || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
+              _.Message.initialize(this, _, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -1146,7 +1146,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -1167,7 +1167,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -1185,9 +1185,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.recording_id || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [4], null);
+              _.Message.initialize(this, _, 0, -1, [4], null));
           }
           static sm_m;
           static sm_mbf;
@@ -1224,7 +1224,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -1245,7 +1245,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -1263,9 +1263,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.segments_needed || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [1], null);
+              _.Message.initialize(this, _, 0, -1, [1], null));
           }
           static sm_m;
           static sm_mbf;
@@ -1292,7 +1292,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -1313,7 +1313,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -1331,9 +1331,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.recording_id || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
+              _.Message.initialize(this, _, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -1379,7 +1379,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -1400,7 +1400,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -1418,7 +1418,7 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+            (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -1443,7 +1443,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {}
           serializeBase64String() {
@@ -1459,9 +1459,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.recording_id || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
+              _.Message.initialize(this, _, 0, -1, void 0, null));
           }
           static sm_m;
           static sm_mbf;
@@ -1482,7 +1482,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -1503,7 +1503,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -1521,9 +1521,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.segments_needed || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [1], null);
+              _.Message.initialize(this, _, 0, -1, [1], null));
           }
           static sm_m;
           static sm_mbf;
@@ -1545,7 +1545,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -1566,7 +1566,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -1584,9 +1584,9 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(),
+            (super(),
               _.prototype.recording_id || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [2], null);
+              _.Message.initialize(this, _, 0, -1, [2], null));
           }
           static sm_m;
           static sm_mbf;
@@ -1613,7 +1613,7 @@
             );
           }
           static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+            return (_.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf);
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -1634,7 +1634,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {
             _._(_._(), _, _);
@@ -1652,7 +1652,7 @@
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
-            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+            (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
           }
           toObject(_ = !1) {
             return _.toObject(_, this);
@@ -1677,7 +1677,7 @@
           }
           serializeBinary() {
             var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+            return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
           }
           static serializeBinaryToWriter(_, _) {}
           serializeBase64String() {
@@ -1841,23 +1841,23 @@
               const _ = await _.GetSingleSharedClip(_, _);
               if (_.GetEResult() != _._)
                 throw (
-                  ((0, _._)("GetSingleSharedClip failed"),
+                  (0, _._)("GetSingleSharedClip failed"),
                   _.DEBUG_LogToConsole(),
                   new Error(
                     `Failed to load clip with result: ${_.GetEResult()}`,
-                  ))
+                  )
                 );
               let _ = _.Body().toObject().clip,
                 _ = [];
               if (_.video_ids.length == 0)
                 throw (
-                  ((0, _._)("No video ids in clip", _),
+                  (0, _._)("No video ids in clip", _),
                   _.DEBUG_LogToConsole(),
-                  new Error("No video ids in clip"))
+                  new Error("No video ids in clip")
                 );
               let _;
               for (let _ of _.video_ids)
-                (!_ || _.timeline_id != _.server_timeline_id) &&
+                ((!_ || _.timeline_id != _.server_timeline_id) &&
                   ((_ = _(_, _)), _.push(_)),
                   _.recordings.push({
                     recording_id: _.video_manager_video_id,
@@ -1865,7 +1865,7 @@
                     duration_ms: _.duration_ms.toFixed(0),
                     recording_type: _._,
                     cdn_manifest_url: _.manifest_url,
-                  });
+                  }));
               return {
                 clip_id: _.clip_id,
                 game_id: _.gameid,

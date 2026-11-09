@@ -37,7 +37,7 @@ function S(t, n) {
   r &&
     r.setQueryData(b(e.accountid), (e) => {
       let n = new Set(e);
-      return t.forEach((e) => n.add(e)), n;
+      return (t.forEach((e) => n.add(e)), n);
     });
 }
 function C(e, t) {
@@ -101,7 +101,7 @@ var w = 60,
       return `${e}_${t}`;
     }
     QueueForUpload(e) {
-      this.m_rgPendingUpload.push(e), this.ScheduleUpload();
+      (this.m_rgPendingUpload.push(e), this.ScheduleUpload());
     }
     ScheduleUpload() {
       this.m_bUploading ||
@@ -127,13 +127,13 @@ var w = 60,
           this.m_CMInterface.GetServiceTransport(),
           t,
         );
-        (this.m_bUploading = !1), (r = n.GetEResult() == 1);
+        ((this.m_bUploading = !1), (r = n.GetEResult() == 1));
       } else {
         if (!s.logged_in) return;
         let i = e.map((e) => e.toObject()),
           a = t() + `actions/ajaxmarkpartnerevents`,
           o = new FormData();
-        o.append(`sessionid`, n()), o.append(`request`, JSON.stringify(i));
+        (o.append(`sessionid`, n()), o.append(`request`, JSON.stringify(i)));
         try {
           r =
             (await _.default.post(a, o, { withCredentials: !0 })).data
@@ -157,7 +157,7 @@ var w = 60,
 i([l], E.prototype, `UploadPendingData`, null);
 var D;
 function O() {
-  return (D ||= new E()), D;
+  return ((D ||= new E()), D);
 }
 var k = o(a(), 1),
   A = r(),

@@ -135,4 +135,3 @@ var _ = [
     cssProperty: (_) => [`--grid-gap-y`, `var(--spacing-${_})`],
   },
 ];
-export { _ };

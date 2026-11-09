@@ -16,7 +16,7 @@ var _ = _(_(), 1),
   _ = `dc7pWlMQLmU-`,
   _ = `gKxbRyrbiIU-`,
   _ = {};
-(_.arabic = () =>
+((_.arabic = () =>
   _(() => import(`./achievements_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
     _(() => import(`./achievements_brazilian.js`), [], import.meta.url)),
@@ -79,7 +79,7 @@ var _ = _(_(), 1),
   (_.ukrainian = () =>
     _(() => import(`./achievements_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./achievements_vietnamese.js`), [], import.meta.url));
+    _(() => import(`./achievements_vietnamese.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -169,4 +169,3 @@ function _(_) {
     ..._,
   });
 }
-export { _, _, _, _ };

@@ -581,7 +581,7 @@ function Gt(e) {
     }, [i]),
     !g)
   )
-    return console.warn(`Error: missing store item for appid `, t), null;
+    return (console.warn(`Error: missing store item for appid `, t), null);
   let D = { width: r || void 0, height: n || void 0 };
   return (0, Z.jsxs)(U, {
     "aria-labelledby": v(
@@ -823,10 +823,10 @@ async function $t(e, t, n, r) {
       t,
       r,
     );
-    (i = [...o]),
+    ((i = [...o]),
       (a = s),
       n && i.findIndex((e) => e === n) === -1 && i.unshift(n),
-      await V.Get().QueueMultipleAppRequests(i, { ...I, ...vt });
+      await V.Get().QueueMultipleAppRequests(i, { ...I, ...vt }));
   } catch (e) {
     console.error(`Failed getting discovery queue apps`, e);
   }
@@ -837,7 +837,7 @@ function en(e) {
     r = _t();
   return (
     (0, X.useEffect)(() => {
-      Y.Init(r), n(!0);
+      (Y.Init(r), n(!0));
     }, [r]),
     t ? (0, Z.jsx)(tn, { ...e }) : null
   );
@@ -858,27 +858,27 @@ function tn(e) {
     g = lt(Qt),
     [_, v] = X.useState(0),
     y = tt();
-  m(`ArrowLeft`, () => C(!1), !0, !0),
+  (m(`ArrowLeft`, () => C(!1), !0, !0),
     m(`Left`, () => C(!1), !0, !0),
     m(`ArrowRight`, () => C(!0), !0, !0),
     m(`Right`, () => C(!0), !0, !0),
     m(`Escape`, () => n?.(), !0, !0),
-    m(`Esc`, () => n?.(), !0, !0);
+    m(`Esc`, () => n?.(), !0, !0));
   let b = X.useMemo(() => p.innerWidth < Zt, [p]),
     { fnGetDiscoveryQueue: x, rgAppIDs: S } = on(t, i, r);
-  X.useEffect(() => {
-    x(!0), q.Get().HintLoad();
+  (X.useEffect(() => {
+    (x(!0), q.Get().HintLoad());
   }, []),
     X.useEffect(() => {
       let e = S[s];
       e != l && (e && e != $ && y.AddImpression(e, g), u(e));
-    }, [y, s, l, S, g]);
+    }, [y, s, l, S, g]));
   let C = (e) => {
     let t = Xe(s + (e ? 1 : -1), 0, S.length - 1);
     t != s &&
       (c(t), Xt(`New selected index: `, t, ` Prev selected index: `, s));
   };
-  X.useEffect(() => {
+  (X.useEffect(() => {
     S?.length &&
       S[s] !== $ &&
       (v((e) => e + 1),
@@ -888,7 +888,7 @@ function tn(e) {
   }, [t, s, S, i]),
     X.useEffect(() => {
       S.length != d && (f(S.length), S.length > d && S[s] == $ && c(s + 1));
-    }, [d, s, S]);
+    }, [d, s, S]));
   let [w] = X.useState(new Map()),
     T = Ct(t, i),
     E = !h() && s > 0,
@@ -1057,12 +1057,12 @@ function rn(e, t) {
     nDragOffset: r,
     nDragSelectedOffsetIndex: s,
     handleTouchStart: (e) => {
-      o(!0), (l.current = e.touches[0].clientX), i(0), c(0);
+      (o(!0), (l.current = e.touches[0].clientX), i(0), c(0));
     },
     handleTouchMove: (e) => {
       if (!a) return;
       let t = e.touches[0].clientX - l.current;
-      i(t), c(r > 50 ? 1 : r < -50 ? -1 : 0);
+      (i(t), c(r > 50 ? 1 : r < -50 ? -1 : 0));
     },
     handleTouchEnd: () => {
       a &&
@@ -1209,14 +1209,14 @@ function sn(e) {
           Y.Get()
             .LoadSkippedApps(t, s)
             .then((e) => {
-              b(e.reduce((e, t) => (w.has(t) ? e + 1 : e), 0)),
+              (b(e.reduce((e, t) => (w.has(t) ? e + 1 : e), 0)),
                 C(
                   e.reduce(
                     (e, t) => (q.Get().BIsGameIgnored(t) ? e + 1 : e),
                     0,
                   ),
                 ),
-                h(!0);
+                h(!0));
             });
         });
   }, [m, t, a, s, w]);

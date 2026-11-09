@@ -68,4 +68,3 @@ function _(_, _ = 0) {
     _ ? _.toLocaleString(_(), _) : `` + _
   );
 }
-export { _, _ };

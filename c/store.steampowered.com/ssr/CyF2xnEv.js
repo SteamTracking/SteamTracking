@@ -25,7 +25,7 @@ function _(_, _) {
       let _;
       if (_(_)) {
         let [_, _] = await _(_, _, _, _);
-        if (_ == 1) (_ = _.line_item_ids), _(_, _, _.cart);
+        if (_ == 1) ((_ = _.line_item_ids), _(_, _, _.cart));
         else throw `AddItemsToAccountCart failed with ${_}`;
       } else if (_(_)) {
         let _ = _.map((_) => _.packageid).filter(_),
@@ -42,7 +42,7 @@ function _(_, _) {
         if (_ == 1 && _) {
           let _ = new Set(_),
             _ = new Set(_);
-          (_ =
+          ((_ =
             _.lineitems
               ?.filter(
                 (_) =>
@@ -52,7 +52,7 @@ function _(_, _) {
                   (_.bundle_item && _.has(_.bundle_item.bundleid)),
               )
               ?.map((_) => _.gidlineitem) || []),
-            _(_, _, _(_));
+            _(_, _, _(_)));
         } else throw `AddItemsToAnonymousCart failed with ${_}`;
       } else throw `Invalid cart type`;
       return _;
@@ -76,11 +76,10 @@ function _(_, _) {
                     appid: _.included_appids[0],
                   }
                 : _[_];
-            _.prefetchQuery(_(_, _)), _.prefetchQuery(_(_, _));
+            (_.prefetchQuery(_(_, _)), _.prefetchQuery(_(_, _)));
           },
         );
       })();
     },
   });
 }
-export { _ };

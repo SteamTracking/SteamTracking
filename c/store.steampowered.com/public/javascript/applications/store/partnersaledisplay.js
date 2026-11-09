@@ -124,19 +124,19 @@ function _([_, _, _]) {
     _,
     _;
   if (_ !== 0) _ = (_ - _) / _;
-  else return (_ = 0), (_ = 0), [_, _, _];
+  else return ((_ = 0), (_ = 0), [_, _, _]);
   if (_ === 0) _ = 0;
   else {
     let _ = _ - _;
-    (_ = _ === _ ? (_ - _) / _ : _ === _ ? 2 + (_ - _) / _ : 4 + (_ - _) / _),
+    ((_ = _ === _ ? (_ - _) / _ : _ === _ ? 2 + (_ - _) / _ : 4 + (_ - _) / _),
       (_ *= 60),
-      _ < 0 && (_ += 360);
+      _ < 0 && (_ += 360));
   }
   return [_, _, _];
 }
 function _([_, _, _]) {
   if (_ === 0) return [_, _, _];
-  (_ = ((_ % 360) + 360) % 360), (_ /= 60);
+  ((_ = ((_ % 360) + 360) % 360), (_ /= 60));
   let _ = Math.floor(_),
     _ = _ - _,
     _ = _ * (1 - _),
@@ -299,17 +299,17 @@ function _(_) {
   if (typeof CSS > `u` || !CSS.supports(`color`, _)) return;
   if (_ === void 0) {
     let _ = document.createElement(`canvas`);
-    (_.width = _.height = 1),
+    ((_.width = _.height = 1),
       (_ = _.getContext(`2d`, {
         willReadFrequently: !0,
-      }));
+      })));
   }
   let _ = _;
   if (!_) return;
-  _.clearRect(0, 0, 1, 1),
+  (_.clearRect(0, 0, 1, 1),
     (_.fillStyle = `#000000`),
     (_.fillStyle = _),
-    _.fillRect(0, 0, 1, 1);
+    _.fillRect(0, 0, 1, 1));
   let [_, _, _, _] = _.getImageData(0, 0, 1, 1).data;
   return {
     _: _,
@@ -375,7 +375,7 @@ function _(_) {
           : _;
         _(_);
         let _ = _(_);
-        (_.current = _), _(_(_));
+        ((_.current = _), _(_(_)));
       },
       [_, _],
     ),
@@ -590,7 +590,7 @@ function _(_) {
       _ && _(_);
     },
     _ = (_) => {
-      _(_), _(void 0);
+      (_(_), _(void 0));
     };
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -736,12 +736,12 @@ function _(_) {
   };
   let _ = (0, _.useCallback)(
       (_) => {
-        (_.current = _), _ && _(_);
+        ((_.current = _), _ && _(_));
       },
       [_, _],
     ),
     _ = (0, _.useCallback)(() => {
-      (_.current = !0), !_ && _.current !== void 0 && _(_.current), _();
+      ((_.current = !0), !_ && _.current !== void 0 && _(_.current), _());
     }, [_, _, _]);
   return (
     (0, _.useEffect)(
@@ -749,7 +749,7 @@ function _(_) {
         let _ = _.current;
         if (!_.current && _.bLivePreview && _.current !== void 0)
           try {
-            _.onChange(_.color), _.fnRestoreChanges?.();
+            (_.onChange(_.color), _.fnRestoreChanges?.());
           } catch (_) {
             console.error(`Color picker: could not undo a previewed color`, _);
           }
@@ -768,8 +768,8 @@ function _(_) {
         _.addEventListener(`pointerdown`, _, !0),
         _.addEventListener(`keydown`, _, !0),
         () => {
-          _.removeEventListener(`pointerdown`, _, !0),
-            _.removeEventListener(`keydown`, _, !0);
+          (_.removeEventListener(`pointerdown`, _, !0),
+            _.removeEventListener(`keydown`, _, !0));
         }
       );
     }, [_]),
@@ -981,11 +981,11 @@ function _(_) {
   _.useEffect(() => {
     if (!_) return;
     let _ = new Image();
-    (_.onload = () => {
+    ((_.onload = () => {
       let _ = (100 * _.width) / 950 + `%`;
       _.current && _.current.style.setProperty(`--background-scale`, _);
     }),
-      (_.src = _);
+      (_.src = _));
   }, [_]);
   let _ = _.jsondata.sale_sections?.some(
       (_) => _.section_type === `contenthubmaincarousel`,
@@ -1331,7 +1331,7 @@ function _(_) {
             (0, _.jsx)(_, {
               className: `kqyJu6iojzM-`,
               onClick: () => {
-                _(void 0), _(``);
+                (_(void 0), _(``));
               },
               children: `Reset to page's order`,
             }),
@@ -1441,9 +1441,9 @@ function _(_, _, _) {
           ++_, ++_
         ) {
           let _ = _[_].unique_id;
-          _.push(_),
+          (_.push(_),
             _.set(_, _.background_id),
-            _ === 0 && _.set(_, _.background_id);
+            _ === 0 && _.set(_, _.background_id));
         }
         if (
           (_.set(_.background_id, {
@@ -1485,7 +1485,7 @@ function _(_, _, _) {
               : --_;
           }
           let _ = _;
-          for (; _ < _.length && !_(_, _[_]); ) _ += 1;
+          for (; _ < _.length && !_(_, _[_]);) _ += 1;
           if (
             (_.set(_.background_id, {
               nBackgroundGroupID: _.background_id,
@@ -1728,7 +1728,7 @@ var _ = class {
       return this.m_curLocImageGroup?.primaryImage;
     }
     ClearImageGroup() {
-      (this.m_curLocImageGroup = null), (this.m_curLocImageGroupType = null);
+      ((this.m_curLocImageGroup = null), (this.m_curLocImageGroupType = null));
     }
     GetLocalizedImageGroupForEdit() {
       return this.m_curLocImageGroup;
@@ -1852,11 +1852,11 @@ function _(_) {
       onDragOver: _ ? _ : void 0,
       onDrop: _.useCallback(
         (_) => {
-          _.dataTransfer.files?.length &&
+          (_.dataTransfer.files?.length &&
             (_(_.dataTransfer.files, _),
             _.preventDefault(),
             _.stopPropagation()),
-            _(!1);
+            _(!1));
         },
         [_],
       ),
@@ -1941,7 +1941,7 @@ function _(_) {
             { language: _ } = _(_?.name, _);
           try {
             let _ = _(_, _, _);
-            (_ = await _.AddImageForLanguage(_, _)),
+            ((_ = await _.AddImageForLanguage(_, _)),
               _ ||
                 (console.error(
                   `ImageUploaderPanel.OnDropFiles: failed on i=` +
@@ -1954,10 +1954,10 @@ function _(_) {
                     strDescription: _(`#ImagePicker_Error`, _.name),
                   }),
                   window,
-                ));
+                )));
           } catch (_) {
             let _ = _(_);
-            console.error(
+            (console.error(
               `ImageUploaderPanel.OnDropFiles: ` + _.strErrorMsg,
               _,
             ),
@@ -1966,7 +1966,7 @@ function _(_) {
                   strDescription: _(`#EventError_Code`, _.strErrorMsg ?? ``),
                 }),
                 window,
-              );
+              ));
           }
         }
         return _;
@@ -2091,10 +2091,10 @@ function _(_) {
     _ = _.ImageOptions?.map((_) => {
       let _ = _?.fnGetLabelText(),
         _;
-      _.bEnforceDimensions && (_ += ` - ${_.width}x${_.height}`),
+      (_.bEnforceDimensions && (_ += ` - ${_.width}x${_.height}`),
         _.bDeprecated &&
           ((_ += ` ${_(`#ImageUpload_Deprecated`)}`),
-          (_ = _(`#ImageUpload_Deprecated_ttip`)));
+          (_ = _(`#ImageUpload_Deprecated_ttip`))));
       let _;
       return (
         (_.BIsOriginalMinimumDimensions(_) && _.FileTypeMatchesImageTypes(_)) ||
@@ -2452,7 +2452,7 @@ function _(_) {
       );
     },
     _ = (_) => {
-      console.log(`ClanImageWrapper on delete error: ` + _),
+      (console.log(`ClanImageWrapper on delete error: ` + _),
         _(
           (0, _.jsx)(_, {
             strTitle: _(`#Error_FailureNotice`),
@@ -2462,17 +2462,17 @@ function _(_) {
             }),
           }),
           window,
-        );
+        ));
     },
     _ = () => {
       _(!0);
       let _ = _.InitFromClanID(_.clanAccountID, _.EUNIVERSE);
       _.DeleteClanImage(_, _)
         .then((_) => {
-          _.success != 1 && _(_(_).strErrorMsg), _(!1);
+          (_.success != 1 && _(_(_).strErrorMsg), _(!1));
         })
         .catch((_) => {
-          _(_(_).strErrorMsg), _(!1);
+          (_(_(_).strErrorMsg), _(!1));
         });
     },
     _ = () => {},
@@ -2583,7 +2583,7 @@ function _(_) {
   let { clanSteamID: _, closeModal: _, OnClanImageSelected: _ } = _,
     _ = _.useCallback(
       (_, _) => {
-        _?.(_, _), _?.();
+        (_?.(_, _), _?.());
       },
       [_, _],
     ),
@@ -2666,13 +2666,13 @@ function _(_) {
             await _.AddExistingClanImage(_, _);
           } catch (_) {
             let _ = _(_);
-            console.error(`AddExistingClanImage: ` + _.strErrorMsg, _),
+            (console.error(`AddExistingClanImage: ` + _.strErrorMsg, _),
               _(
                 (0, _.jsx)(_, {
                   strDescription: _(`#EventError_Code`, _.strErrorMsg ?? ``),
                 }),
                 window,
-              );
+              ));
           }
           _(!1);
         }
@@ -2892,7 +2892,7 @@ function _(_) {
           _.lang,
         ));
       let _ = _;
-      return _ != _.lang && (_ = _.imgHash ? _ : _), [_, _];
+      return (_ != _.lang && (_ = _.imgHash ? _ : _), [_, _]);
     });
   return (0, _.jsxs)(`div`, {
     _: _.strLang,
@@ -3034,7 +3034,7 @@ function _(_) {
     _ = _(),
     _ = _.useCallback(
       (_) => {
-        _.preventDefault(), _ && _(_);
+        (_.preventDefault(), _ && _(_));
       },
       [_, _],
     ),
@@ -3281,17 +3281,17 @@ function _(_) {
 }
 function _(_, _) {
   let _ = document.createElement(`canvas`);
-  (_.width = 780), (_.height = 200);
+  ((_.width = 780), (_.height = 200));
   let _ = _.getContext(`2d`);
   for (let _ = 0; _ < 200; _ += 20)
     for (let _ = 0; _ < 780; _ += 20)
-      (_.fillStyle = (_ / 20 + _ / 20) % 2 == 0 ? `#a405e3ff` : `#000000`),
-        _.fillRect(_, _, 20, 20);
+      ((_.fillStyle = (_ / 20 + _ / 20) % 2 == 0 ? `#a405e3ff` : `#000000`),
+        _.fillRect(_, _, 20, 20));
   let _ = _.createLinearGradient(0, 0, 780, 0);
-  _.addColorStop(0, `rgba(32,32,32,0.8)`),
+  (_.addColorStop(0, `rgba(32,32,32,0.8)`),
     _.addColorStop(1, `rgba(60,60,60,0.8)`),
     (_.fillStyle = _),
-    _.fillRect(0, 0, 780, 200);
+    _.fillRect(0, 0, 780, 200));
   let _ = _.createRadialGradient(390, 100, 0, 390, 100, 650);
   return (
     _.addColorStop(0, `rgba(0,0,0,0)`),
@@ -3932,7 +3932,7 @@ function _(_) {
     strTitle: _(`#Sale_RemoveAll`),
     strDescription: _(`#ImageUpload_DeleteAll_Confirm`),
     onOK: () => {
-      _?.(), _?.();
+      (_?.(), _?.());
     },
     onCancel: _,
   });
@@ -3955,7 +3955,7 @@ function _(_) {
     _ = _.useCallback(
       (_, _, _) => {
         let _ = [];
-        _.find((_) => _.clanImage.imageid == _.imageid)
+        (_.find((_) => _.clanImage.imageid == _.imageid)
           ? (_ = _.map((_) =>
               _.clanImage.imageid == _.imageid
                 ? {
@@ -3969,16 +3969,16 @@ function _(_) {
               clanImage: _,
               lang: _,
             })),
-          _(_);
+          _(_));
       },
       [_],
     ),
     _ = _.useCallback(
       (_, _, _) => {
         _(() => {
-          _(_(_, _) ?? ``) == _.image_hash && _(_, null, _),
+          (_(_(_, _) ?? ``) == _.image_hash && _(_, null, _),
             _(_, _, _),
-            _(_, _, !1);
+            _(_, _, !1));
         });
       },
       [_, _, _, _],
@@ -4092,7 +4092,7 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `ShowLangChangeDialog`, null), (_ = _([_], _));
+(_([_], _.prototype, `ShowLangChangeDialog`, null), (_ = _([_], _)));
 function _(_) {
   let {
       clanSteamID: _,
@@ -4111,7 +4111,7 @@ function _(_) {
     _ = _.GetAccountID(),
     [_] = _(() => [_.GetFilesToUpload().length - _.GetCompletedFiles()]);
   (0, _.useEffect)(() => {
-    _(!1),
+    (_(!1),
       _.ClearImageGroup(),
       _?.forEach((_, _) => {
         let _ = _.InitFromClanID(_, _.EUNIVERSE);
@@ -4122,7 +4122,7 @@ function _(_) {
         }
         _.SetLocalizedImageGroupAtLang(_, _, _ ?? null);
       }),
-      _(!0);
+      _(!0));
   }, [_, _, _]);
   let _ = (0, _.useCallback)(
       (_, _, _ = 0) => {
@@ -4168,7 +4168,7 @@ function _(_) {
           );
         } else _(_, null, _);
       }
-      _.ClearImageGroup(), _.onOK ? _.onOK() : _?.();
+      (_.ClearImageGroup(), _.onOK ? _.onOK() : _?.());
     },
     strOKButtonText: _ > 0 ? _(`#ImagePickerLoc_DismissWarning`) : void 0,
     children: [
@@ -4613,7 +4613,7 @@ function _(_) {
           label: _(`#BackgroundGroups_Setting`),
           checked: _,
           onChange: (_) => {
-            _(_), _.SetBackgroundImageEnabled(_);
+            (_(_), _.SetBackgroundImageEnabled(_));
           },
         }),
         _
@@ -4645,7 +4645,7 @@ function _(_) {
                     ),
                     bDestructiveWarning: !0,
                     onOK: () => {
-                      _.ClearAllBackgroundImageGroupSettings(), _(!1);
+                      (_.ClearAllBackgroundImageGroupSettings(), _(!1));
                     },
                     closeModal: _,
                   }),
@@ -4980,7 +4980,7 @@ function _(_) {
             _ !== void 0 && _)
           ) {
             let _ = _.SetTabEnabled(_, _);
-            _(!!_, `Failed to create model TabID ${_}backgroundModel`), _(_);
+            (_(!!_, `Failed to create model TabID ${_}backgroundModel`), _(_));
           } else
             console.error(
               `Failed to enable table group, edit mode: ${!!_}, TabID: ${_}.`,
@@ -5036,7 +5036,7 @@ function _(_) {
     ) {
       let _ = document.getElementsByTagName(`HEAD`)[0],
         _ = document.createElement(`style`);
-      (_.innerText = _(_.jsondata.sale_custom_css)), _(_), _.appendChild(_);
+      ((_.innerText = _(_.jsondata.sale_custom_css)), _(_), _.appendChild(_));
     }
     let _ = document.getElementsByClassName(`react_landing_background`);
     return (
@@ -5234,7 +5234,7 @@ function _(_) {
     [_, _] = _.useState(_()),
     _ = _.useMemo(() => new _(), []),
     _ = _.useCallback(() => _(_()), []);
-  _.useEffect(
+  (_.useEffect(
     () => (
       window.addEventListener(`resize`, _),
       () => window.removeEventListener(`resize`, _)
@@ -5258,10 +5258,10 @@ function _(_) {
       return (
         window.addEventListener(`hashchange`, _),
         () => {
-          clearTimeout(_), window.removeEventListener(`hashchange`, _);
+          (clearTimeout(_), window.removeEventListener(`hashchange`, _));
         }
       );
-    }, []);
+    }, []));
   let _ = _(),
     _ = (_, _) => {
       _(_, {
@@ -5300,7 +5300,7 @@ function _(_) {
       let _ = _.findIndex((_) => _.section_anchor === _);
       return _ > -1 ? _ : void 0;
     }, [_]);
-  _.forEach((_, _) => {
+  (_.forEach((_, _) => {
     let _ = _[_.length - 1].activeTab;
     if (_ && !_.ShouldShowSection(_)) return;
     let _ = _.Get().BIsPartnerTakeoverActive(
@@ -5324,7 +5324,7 @@ function _(_) {
         let _ = _.diable_tab_id_filtering
           ? new _(void 0, _ && _.GetSaleDay())
           : _;
-        _.section_type == `tabs` &&
+        (_.section_type == `tabs` &&
           _.tabs?.some((_) => _.unique_id == _?.GetActiveTabUniqueID()) &&
           _.push({
             activeTab: _,
@@ -5340,7 +5340,7 @@ function _(_) {
             expanded: _,
             controllerCategory: _,
             setControllerCategory: _,
-          }));
+          })));
       }
     }
     _ &&
@@ -5367,7 +5367,7 @@ function _(_) {
         `SaleSectionIndex_` + _.unique_id + `_` + _,
       ),
       _ = _.mapSectionToGroup.get(_.unique_id);
-    _ &&
+    (_ &&
       _.groupID != _ &&
       (_[_.length - 1].elements.push(
         _(_, _, _, _ && _?.GetActiveTabUniqueID()),
@@ -5380,13 +5380,13 @@ function _(_) {
             derivedGroupInfo: _.mapGroupToSections.get(_),
           }),
           _.elSaleSections.push(_))
-        : _[_.length - 1].elements.push(_);
+        : _[_.length - 1].elements.push(_));
   }),
     (_ &&=
       (_[_.length - 1].elements.push(
         _(_, _, _, _ && _?.GetActiveTabUniqueID()),
       ),
-      null));
+      null)));
   let _ = _.map((_, _) =>
     (0, _.jsx)(
       `div`,
@@ -5523,4 +5523,3 @@ function _(_) {
       })
     : null;
 }
-export { _ };

@@ -46,12 +46,12 @@ var _ = _(_()),
       _.data &&
         _.status == 200 &&
         _.data.forEach((_) => {
-          (_.avatar_hash = _.avatar_url),
+          ((_.avatar_hash = _.avatar_url),
             (_.avatar_url_medium = _(_.avatar_url, `medium`)),
             (_.avatar_url_full = _(_.avatar_url, `full`)),
             (_.avatar_url = _(_.avatar_url)),
             this.m_mapProfiles.set(_.steamid, _),
-            this.m_mapProfilesLoading.delete(_.steamid);
+            this.m_mapProfilesLoading.delete(_.steamid));
         });
     }
     GetProfile(_) {
@@ -117,9 +117,9 @@ var _ = new _(),
     }
     async OnCreateInviteLink() {
       let _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`steamid_user`, _.steamid),
-        _.append(`duration`, `2592000`);
+        _.append(`duration`, `2592000`));
       let _ = await _.default.post(
         _.COMMUNITY_BASE_URL + `invites/ajaxcreate`,
         _,
@@ -132,7 +132,7 @@ var _ = new _(),
         });
     }
     OnCopy(_, _) {
-      _ === `friend_code` &&
+      (_ === `friend_code` &&
         (this.setState({
           friend_code_copied: !0,
         }),
@@ -154,13 +154,13 @@ var _ = new _(),
               }),
             1e3,
           )),
-        _(_);
+        _(_));
     }
     async OnAddFriend(_) {
       let _ = new FormData();
-      _.append(`sessionID`, _()),
+      (_.append(`sessionID`, _()),
         _.append(`steamid`, _),
-        _.append(`accept_invite`, `0`);
+        _.append(`accept_invite`, `0`));
       try {
         let _ = await _.default.post(
           _.COMMUNITY_BASE_URL + `actions/AddFriendAjax`,
@@ -318,12 +318,12 @@ var _ = new _(),
       });
     }
   };
-_([_], _.prototype, `OnCreateInviteLink`, null),
+(_([_], _.prototype, `OnCreateInviteLink`, null),
   _([_], _.prototype, `OnCopy`, null),
   _([_], _.prototype, `OnAddFriend`, null),
   _([_], _.prototype, `OnSearchChange`, null),
   _([_], _.prototype, `OnSearchKeyDown`, null),
-  _([_], _.prototype, `OnSearchSubmit`, null);
+  _([_], _.prototype, `OnSearchSubmit`, null));
 var _ = class extends _.Component {
   state = {
     input_friend_code: ``,
@@ -334,7 +334,7 @@ var _ = class extends _.Component {
   m_currentRequest = 0;
   async OnFriendCodeChange(_) {
     let _ = _.target.value.split(`,`)[0];
-    this.setState({
+    (this.setState({
       input_friend_code: _,
       invite_status: `pending`,
     }),
@@ -342,7 +342,7 @@ var _ = class extends _.Component {
       (this.m_currentRequest = window.setTimeout(
         () => this.LoadProfile(_),
         500,
-      ));
+      )));
   }
   async LoadProfile(_) {
     if (_) {
@@ -367,7 +367,7 @@ var _ = class extends _.Component {
   }
   async OnActionClick(_) {
     let _ = new FormData();
-    _.append(`sessionID`, _()),
+    (_.append(`sessionID`, _()),
       _.append(`steamid`, _),
       _.append(`accept_invite`, `0`),
       this.setState({
@@ -388,7 +388,7 @@ var _ = class extends _.Component {
         : this.setState({
             invite_status: `failure`,
             disable_send_invite: !1,
-          });
+          }));
   }
   render() {
     return (0, _.jsxs)(`div`, {
@@ -415,9 +415,9 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnFriendCodeChange`, null),
+(_([_], _.prototype, `OnFriendCodeChange`, null),
   _([_], _.prototype, `LoadProfile`, null),
-  _([_], _.prototype, `OnActionClick`, null);
+  _([_], _.prototype, `OnActionClick`, null));
 var _ = (_) => {
   let { searchResult: _, invite_status: _, bShowStatus: _, children: _ } = _,
     _ = _();
@@ -515,4 +515,3 @@ var _ = (_) => {
       })
     : null;
 };
-export { _, _ };

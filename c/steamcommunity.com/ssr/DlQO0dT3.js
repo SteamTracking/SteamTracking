@@ -266,11 +266,11 @@ function _(_) {
     }, []),
     _ = _(_),
     _ = () => {
-      _({
+      (_({
         section: `readytouseitems`,
         childpublishedfileid: _.publishedfileid,
       }),
-        _();
+        _());
     },
     _ = !0;
   switch (_.file_type) {
@@ -655,4 +655,3 @@ function _(_) {
             }),
       });
 }
-export { _, _ };

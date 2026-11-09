@@ -44,4 +44,3 @@ var _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
   _ = () => _().useActiveSteamInterface().GetAnonymousServiceTransport(),
   _ = () => _().useStorage(),
   _ = () => _().useActiveSteamInterface();
-export { _, _, _, _, _, _ };

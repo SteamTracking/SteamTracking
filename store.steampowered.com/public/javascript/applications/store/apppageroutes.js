@@ -738,7 +738,7 @@ function ao(e) {
                         let t =
                           r && !Qe()
                             ? (t) => {
-                                r(e), t.stopPropagation(), t.preventDefault();
+                                (r(e), t.stopPropagation(), t.preventDefault());
                               }
                             : void 0;
                         return (0, J.jsx)(
@@ -788,7 +788,7 @@ function so(e) {
           (0, J.jsx)(fi, {
             className: Qt,
             onClick: (e) => {
-              r?.(), e.stopPropagation(), e.preventDefault();
+              (r?.(), e.stopPropagation(), e.preventDefault());
             },
             children: O(`#EventBrowse_MoreEventsBtn`),
           }),
@@ -802,7 +802,7 @@ function so(e) {
           children: (0, J.jsx)(a, {
             event: i,
             onClick: (e) => {
-              r?.(), e.stopPropagation(), e.preventDefault();
+              (r?.(), e.stopPropagation(), e.preventDefault());
             },
           }),
         }),
@@ -820,30 +820,30 @@ function co(e) {
     [l, u] = (0, q.useState)(void 0),
     d = Vn(),
     f = (0, q.useCallback)(() => {
-      c(null), o();
+      (c(null), o());
     }, [o]),
     p = (0, q.useCallback)(
       (e) => {
-        t &&
+        (t &&
           e &&
           e.BIsPartnerEvent() &&
           d.MarkEventRead(e.GID, e.clanSteamID.GetAccountID(), t) &&
           d.Flush(),
           c(e),
           u(void 0),
-          a();
+          a());
       },
       [t, d, a],
     ),
     { last_update_event: m, rgEvents: h } = lo({ ...e, fnEventShowModal: p }),
     g = (0, q.useCallback)(() => {
       let { event_gid: e, announcement_gid: n, clan_account_id: r } = m;
-      t && e && d.MarkEventRead(e, r, t) && d.Flush(), u(n), c(null), a();
+      (t && e && d.MarkEventRead(e, r, t) && d.Flush(), u(n), c(null), a());
     }, [m, a, d, t]);
   (0, q.useEffect)(
     () => (
       (window.fnPartnerEvent_ShowInfiniteScroll = (e, t) => {
-        u(t), c(null), u(t), a();
+        (u(t), c(null), u(t), a());
       }),
       () => {
         window.fnPartnerEvent_ShowInfiniteScroll &&
@@ -910,18 +910,18 @@ function lo(e) {
       let e = rn(`EventWebRowEmbed`),
         a = !1;
       if (uo(e)) {
-        (a = e.bPreLoaded), s(e.last_update_event);
+        ((a = e.bPreLoaded), s(e.last_update_event));
         let t = [];
-        e.announcementGIDList.forEach((e) => {
+        (e.announcementGIDList.forEach((e) => {
           let n = nn.GetClanEventFromAnnouncementGID(e);
           n && t.push(n);
         }),
-          l(t);
+          l(t));
       }
       a ||
         (async () => {
           let e = await r.LoadAdjacentPartnerEvents(void 0, void 0, t, 0, 2, n);
-          l(e),
+          (l(e),
             i &&
               e &&
               e.length > 0 &&
@@ -930,7 +930,7 @@ function lo(e) {
                 .forEach((e) =>
                   u.MarkEventShown(e.GID, e.clanSteamID.GetAccountID(), i),
                 ),
-              u.Flush());
+              u.Flush()));
         })();
     }, [t, n, a, r, u, i]),
     (0, q.useEffect)(() => {
@@ -1479,7 +1479,7 @@ function ts(e) {
 }
 function ns(e) {
   let t = q.useRef(!1);
-  return e || (t.current = !0), t.current;
+  return (e || (t.current = !0), t.current);
 }
 var rs = class {
   m_mapTrailerPlay = new Map();
@@ -1494,16 +1494,16 @@ var rs = class {
     c(this);
   }
   InitAutoplayMethods(e, t) {
-    (this.m_bAutoplayEnabled = e), (this.m_fnSetAutoplayEnabled = t);
+    ((this.m_bAutoplayEnabled = e), (this.m_fnSetAutoplayEnabled = t));
   }
   InitPlayerVolumeMethods(e, t) {
-    (this.m_flPlayerVolume = e / 100),
+    ((this.m_flPlayerVolume = e / 100),
       (this.m_fnSetPlayerVolume = (e) => {
-        (e *= 100), t(e);
-      });
+        ((e *= 100), t(e));
+      }));
   }
   InitAudioMutedMethods(e, t) {
-    (this.m_bAudioMuted = e), (this.m_fnSetAudioMuted = t);
+    ((this.m_bAudioMuted = e), (this.m_fnSetAudioMuted = t));
   }
   UpdateAutoplay(e) {
     this.m_bAutoplayEnabled = e;
@@ -1546,10 +1546,10 @@ var rs = class {
     return t !== void 0 && t;
   }
 };
-Wn([t], rs.prototype, `m_mapTrailerPlay`, void 0),
+(Wn([t], rs.prototype, `m_mapTrailerPlay`, void 0),
   Wn([t], rs.prototype, `m_bAutoplayEnabled`, void 0),
   Wn([t], rs.prototype, `m_flPlayerVolume`, void 0),
-  Wn([t], rs.prototype, `m_bAudioMuted`, void 0);
+  Wn([t], rs.prototype, `m_bAudioMuted`, void 0));
 var is = null;
 function as() {
   return (
@@ -1854,7 +1854,7 @@ var xs = `OV8HMeZ1Few-`,
   Gs = `nh9RIgtIRPw-`,
   Ks = `dDQmGw5hMhA-`,
   X = {};
-(X.arabic = () => E(() => import(`./apppage_arabic.js`), [], import.meta.url)),
+((X.arabic = () => E(() => import(`./apppage_arabic.js`), [], import.meta.url)),
   (X.brazilian = () =>
     E(() => import(`./apppage_brazilian.js`), [], import.meta.url)),
   (X.bulgarian = () =>
@@ -1910,7 +1910,7 @@ var xs = `OV8HMeZ1Few-`,
   (X.ukrainian = () =>
     E(() => import(`./apppage_ukrainian.js`), [], import.meta.url)),
   (X.vietnamese = () =>
-    E(() => import(`./apppage_vietnamese.js`), [], import.meta.url));
+    E(() => import(`./apppage_vietnamese.js`), [], import.meta.url)));
 async function qs(e) {
   if (X[e]) return await X[e]();
 }
@@ -2316,7 +2316,7 @@ function Mc(e) {
   return (
     q.useEffect(() => {
       let { appid: r, userInterest: i, markReady: a } = e;
-      jc(t, n, r, i), a();
+      (jc(t, n, r, i), a());
     }, [t, n, e]),
     null
   );
@@ -2328,8 +2328,8 @@ function Nc(e) {
     enabled: !!t,
     queryFn: async () => {
       throw (
-        (kc.Info(`Fetching user game interest from the back end for `, e),
-        Error(`Fetching user game interest is not yet supported`))
+        kc.Info(`Fetching user game interest from the back end for `, e),
+        Error(`Fetching user game interest is not yet supported`)
       );
     },
   });
@@ -2343,17 +2343,17 @@ function Pc(e, t, n) {
     mutationFn: async (o) => {
       kc.Info(`Mutating ${e} for ${t}`, o);
       let s = new FormData();
-      s.set(`sessionid`, Bi()), s.set(`appid`, e.toString()), s.set(`snr`, i);
+      (s.set(`sessionid`, Bi()), s.set(`appid`, e.toString()), s.set(`snr`, i));
       let { url: c, new_interest: l } = n(o, s);
-      kc.Info(` new interest before backend call`, l),
-        r.setQueryData(Ac(a, e), l);
+      (kc.Info(` new interest before backend call`, l),
+        r.setQueryData(Ac(a, e), l));
       try {
         let n = await fetch(c, { method: `POST`, body: s });
         return n.ok
           ? !0
           : (kc.Info(`request to ${t} ${e} failed with ${n}`, o), !1);
       } catch (n) {
-        return kc.Info(`request to ${t} ${e} failed with ${n}`, o), !1;
+        return (kc.Info(`request to ${t} ${e} failed with ${n}`, o), !1);
       }
     },
     onSuccess: (t, n) => {
@@ -2594,9 +2594,9 @@ function Kc() {
           e.addEventListener(`play`, r),
           e.addEventListener(`pause`, i),
           () => {
-            e.removeEventListener(`volumechange`, n),
+            (e.removeEventListener(`volumechange`, n),
               e.removeEventListener(`play`, r),
-              e.removeEventListener(`pause`, i);
+              e.removeEventListener(`pause`, i));
           }
         );
       },
@@ -2617,8 +2617,8 @@ function qc(e) {
               ? ((n.current = i.play()),
                 n.current
                   .then(() => {
-                    !t.current && e.current && e.current.pause(),
-                      (n.current = null);
+                    (!t.current && e.current && e.current.pause(),
+                      (n.current = null));
                   })
                   .catch(() => {
                     n.current = null;
@@ -2817,8 +2817,8 @@ function ml() {
 }
 function hl(e) {
   let t = new Date();
-  t.setTime(t.getTime() + 31536e7),
-    (document.cookie = `bGameHighlightAutoplayDisabled=${e ? `false` : `true`}; expires=${t.toUTCString()};path=/`);
+  (t.setTime(t.getTime() + 31536e7),
+    (document.cookie = `bGameHighlightAutoplayDisabled=${e ? `false` : `true`}; expires=${t.toUTCString()};path=/`));
 }
 function gl() {
   let e = document.cookie.match(/(^|; )flGameHighlightPlayerVolume=([^;]*)/),
@@ -2827,8 +2827,8 @@ function gl() {
 }
 function _l(e) {
   let t = new Date();
-  t.setTime(t.getTime() + 31536e7),
-    (document.cookie = `flGameHighlightPlayerVolume=${e}; expires=${t.toUTCString()};path=/`);
+  (t.setTime(t.getTime() + 31536e7),
+    (document.cookie = `flGameHighlightPlayerVolume=${e}; expires=${t.toUTCString()};path=/`));
 }
 function vl() {
   let e = document.cookie.match(/(^|; )bGameHighlightAudioEnabled=([^;]*)/);
@@ -2836,22 +2836,22 @@ function vl() {
 }
 function yl(e) {
   let t = new Date();
-  t.setTime(t.getTime() + 31536e7),
-    (document.cookie = `bGameHighlightAudioEnabled=${e ? `true` : `false`}; expires=${t.toUTCString()};path=/`);
+  (t.setTime(t.getTime() + 31536e7),
+    (document.cookie = `bGameHighlightAudioEnabled=${e ? `true` : `false`}; expires=${t.toUTCString()};path=/`));
 }
 function bl(e) {
   let { children: t } = e,
     [n, r] = (0, q.useState)(ml),
     i = (0, q.useCallback)((e) => {
-      hl(e), r(e);
+      (hl(e), r(e));
     }, []),
     [a, o] = (0, q.useState)(gl),
     s = (0, q.useCallback)((e) => {
-      (e *= 100), _l(e), o(e);
+      ((e *= 100), _l(e), o(e));
     }, []),
     [c, l] = (0, q.useState)(vl),
     u = (0, q.useCallback)((e) => {
-      yl(!e), l(!e);
+      (yl(!e), l(!e));
     }, []);
   return (0, J.jsx)(Mt, {
     autoplayEnabled: n,
@@ -2969,7 +2969,7 @@ function Bl() {
     r = (0, q.useRef)(null),
     i = (0, q.useRef)(null),
     a = (0, q.useRef)(void 0);
-  (a.current ||= new Map()),
+  ((a.current ||= new Map()),
     (0, q.useEffect)(() => {
       let e = r.current,
         a = n.current,
@@ -2984,17 +2984,17 @@ function Bl() {
               r = t.width - n.width,
               c = o.scrollWidth - o.clientWidth,
               l;
-            (l = s
+            ((l = s
               ? gi(o.scrollLeft, -c, 0, -r, 0)
               : gi(o.scrollLeft, 0, c, 0, r)),
-              (e.style.transform = `translateX( ${l}px )`);
+              (e.style.transform = `translateX( ${l}px )`));
           });
         };
       return (
         o.addEventListener(`scroll`, c, { passive: !0 }),
         () => {
-          o.removeEventListener(`scroll`, c),
-            i.current && cancelAnimationFrame(i.current);
+          (o.removeEventListener(`scroll`, c),
+            i.current && cancelAnimationFrame(i.current));
         }
       );
     }, []),
@@ -3010,8 +3010,8 @@ function Bl() {
           let t = e.clientX - o.nInitialClientX,
             n = wn(o.nInitialPosition + t, 0, o.nTrackWidth),
             r = gi(n, 0, o.nTrackWidth, 0, o.nScrollWidth);
-          s && (r = -(o.nScrollWidth - r)),
-            a.scrollTo({ left: r, behavior: `auto` });
+          (s && (r = -(o.nScrollWidth - r)),
+            a.scrollTo({ left: r, behavior: `auto` }));
         },
         l = (t) => {
           i.setPointerCapture(t.pointerId);
@@ -3021,7 +3021,7 @@ function Bl() {
             l = a.scrollWidth - a.clientWidth,
             u = Math.max(r.left - n.left, 0),
             d = t.clientX;
-          t.target != e &&
+          (t.target != e &&
             ((u = t.clientX - n.left),
             (u -= Math.floor(r.width / 2)),
             (u = wn(u, 0, s))),
@@ -3032,22 +3032,22 @@ function Bl() {
               nScrollWidth: l,
             }),
             (document.body.style.userSelect = `none`),
-            c(t);
+            c(t));
         },
         u = (e) => {
-          (o = null), (document.body.style.userSelect = ``);
+          ((o = null), (document.body.style.userSelect = ``));
         };
       return (
         i.addEventListener(`pointerdown`, l),
         i.addEventListener(`pointermove`, c),
         i.addEventListener(`lostpointercapture`, u),
         () => {
-          i.removeEventListener(`pointerdown`, l),
+          (i.removeEventListener(`pointerdown`, l),
             i.removeEventListener(`pointermove`, c),
-            i.removeEventListener(`lostpointercapture`, u);
+            i.removeEventListener(`lostpointercapture`, u));
         }
       );
-    }, []);
+    }, []));
   let o = e.strActiveID;
   return (
     (0, q.useEffect)(() => {
@@ -3252,7 +3252,7 @@ function $l(e) {
         c.current ||
         !i.current ||
         (n.current = window.setTimeout(() => {
-          (n.current = 0), o.current.fnSetActive(o.current.strNextID);
+          ((n.current = 0), o.current.fnSetActive(o.current.strNextID));
         }, Kl));
     }, []),
     u = (0, q.useCallback)(() => {
@@ -3273,24 +3273,24 @@ function $l(e) {
           document.visibilityState == `visible` ? l() : u();
         },
         i = () => {
-          (r.current = !0), u();
+          ((r.current = !0), u());
         },
         a = () => {
-          (r.current = !1), l();
+          ((r.current = !1), l());
         };
       return (
         e.addEventListener(`pointerenter`, i),
         e.addEventListener(`pointerleave`, a),
         document.addEventListener(`visibilitychange`, n),
         () => {
-          e.removeEventListener(`pointerenter`, i),
+          (e.removeEventListener(`pointerenter`, i),
             e.removeEventListener(`pointerleave`, a),
-            document.addEventListener(`visibilitychange`, n);
+            document.addEventListener(`visibilitychange`, n));
         }
       );
     }, []),
     (0, q.useEffect)(() => {
-      (i.current = e), e ? l() : u();
+      ((i.current = e), e ? l() : u());
     }, [e, l, u]),
     { refRoot: t }
   );
@@ -3565,7 +3565,7 @@ function cu(e) {
 }
 function lu(e) {
   let t = (0, q.useRef)(!1);
-  return e && (t.current = !0), t.current;
+  return (e && (t.current = !0), t.current);
 }
 function uu(e) {
   let { appID: t, results: n, appName: r, tab: i = 1 } = e,
@@ -3650,7 +3650,7 @@ function mu(e) {
     s = q.useCallback(
       (e) => {
         let t = Ji();
-        t && t.AddEvent(_a), o(!0);
+        (t && t.AddEvent(_a), o(!0));
       },
       [o],
     ),
@@ -3713,11 +3713,11 @@ async function Nu(e, t, n, r) {
   let i = [];
   if (r) {
     let n = Di.Init(Oi);
-    n.Body().set_steamid(t),
+    (n.Body().set_steamid(t),
       n.Body().set_share_token(r),
       (i =
         (await Ir.GetSharedWishlistCategories(e, n)).Body().toObject()
-          .categories ?? []);
+          .categories ?? []));
   } else {
     let t = Di.Init(Gi);
     i =
@@ -3762,9 +3762,9 @@ function Bu(e) {
   return u({
     mutationFn: async (e) => {
       let n = Di.Init(Qr);
-      n.Body().set_appid(e.appid),
+      (n.Body().set_appid(e.appid),
         n.Body().set_category_name(e.categoryName),
-        n.Body().set_categoryid(e.categoryID);
+        n.Body().set_categoryid(e.categoryID));
       let r = await Ir.AddWishlistItemCategory(t, n),
         i = { eresult: r.GetEResult() };
       return (
@@ -3779,12 +3779,12 @@ function Bu(e) {
       );
     },
     onSuccess(t, r) {
-      n.invalidateQueries({
+      (n.invalidateQueries({
         queryKey: [`WishlistSortedFiltered`, e],
         exact: !1,
       }),
         n.invalidateQueries({ queryKey: [Au, e], exact: !1 }),
-        n.invalidateQueries({ queryKey: Lu(e, r.appid) });
+        n.invalidateQueries({ queryKey: Lu(e, r.appid) }));
     },
   });
 }
@@ -3801,12 +3801,12 @@ function Vu(e) {
       );
     },
     onSuccess(t, r) {
-      n.invalidateQueries({
+      (n.invalidateQueries({
         queryKey: [`WishlistSortedFiltered`, e],
         exact: !1,
       }),
         n.invalidateQueries({ queryKey: [Au, e], exact: !1 }),
-        n.invalidateQueries({ queryKey: Lu(e, r.appid) });
+        n.invalidateQueries({ queryKey: Lu(e, r.appid) }));
     },
   });
 }
@@ -3829,7 +3829,7 @@ function Gu() {
     mutationFn: async (n) => {
       let r = (await t.ensureQueryData(Uu(e))) ?? [],
         i = Array.from(new Set([...n.rgCategoryIDs, r])).slice(0, 3);
-      return await e.StoreObject(Hu, i), i;
+      return (await e.StoreObject(Hu, i), i);
     },
     onSuccess: async (e) => {
       t.setQueryData([Hu], e);
@@ -4066,7 +4066,7 @@ function ed(e) {
     { data: d } = Pu(n),
     f = !!a && !!d && d.length > 0,
     p = q.useCallback(() => {
-      c.mutate({ rgCategoryIDs: o.reverse() }), r();
+      (c.mutate({ rgCategoryIDs: o.reverse() }), r());
     }, [c, o, r]);
   return (0, J.jsx)(et, {
     onClose: p,
@@ -4125,7 +4125,7 @@ function td(e, t, n, r) {
       c = !1,
       l = n.filter((e) => {
         let t = e.name.toLocaleLowerCase();
-        return (c ||= t === s), t.indexOf(s) > -1;
+        return ((c ||= t === s), t.indexOf(s) > -1);
       });
     return (
       (l = o(l, [])),
@@ -4162,9 +4162,9 @@ function nd(e) {
       t !== 0 && (f.mutate({ appid: t, categoryID: e }), i(e));
     },
     m = (e) => {
-      e.stopPropagation(),
+      (e.stopPropagation(),
         e.preventDefault(),
-        a && a.length !== 0 && (o(``), d(a));
+        a && a.length !== 0 && (o(``), d(a)));
     },
     { data: h } = zu(n, t),
     g = qu(n),
@@ -4294,14 +4294,14 @@ function cd(e) {
       if (!r) return;
       let a = n ? r.find((e) => e.id === n) : void 0;
       if (a?.bSelected)
-        g.mutate({ appid: t, categoryID: a.id }),
+        (g.mutate({ appid: t, categoryID: a.id }),
           i(
             r.map((e) =>
               e.id === n
                 ? { ...e, bSelected: !1, cItems: Math.max(0, e.cItems - 1) }
                 : e,
             ),
-          );
+          ));
       else if (e) {
         let r = await h.mutateAsync({
           appid: t,
@@ -4310,16 +4310,16 @@ function cd(e) {
         });
         if (r.eresult === 1 && r.category?.id) {
           let t = { ...r.category, bSelected: !0 };
-          i((n) => n?.map((n) => (n.name === e ? t : n)) ?? [t]),
-            _.mutate({ rgCategoryIDs: [r.category.id] });
+          (i((n) => n?.map((n) => (n.name === e ? t : n)) ?? [t]),
+            _.mutate({ rgCategoryIDs: [r.category.id] }));
         }
       }
     },
     y = (e) => {
-      e.stopPropagation(), e.preventDefault(), sd(s, !0), o(!0);
+      (e.stopPropagation(), e.preventDefault(), sd(s, !0), o(!0));
     },
     ee = () => {
-      o(!1), sd(s, !1), i(void 0);
+      (o(!1), sd(s, !1), i(void 0));
     };
   if (
     (q.useEffect(() => {
@@ -4331,7 +4331,8 @@ function cd(e) {
         if (t.length >= 6) break;
         e.has(r.id) || (t.push(r), e.add(r.id));
       }
-      t.length < 6 && (t = [...t, ...(f?.slice(0, 6 - t.length) ?? [])]), i(t);
+      (t.length < 6 && (t = [...t, ...(f?.slice(0, 6 - t.length) ?? [])]),
+        i(t));
     }, [r, d, u, p, m, f]),
     !r || r.length === 0)
   )
@@ -4479,7 +4480,7 @@ function xd(e) {
       ...o,
       onCancel: r,
       onOK: () => {
-        n(), i && r();
+        (n(), i && r());
       },
       children: a,
     }),
@@ -4512,7 +4513,7 @@ function Cd(e) {
     }),
     s = q.useCallback(
       (e, t) => {
-        n(e), i(t), o();
+        (n(e), i(t), o());
       },
       [o],
     ),
@@ -4524,7 +4525,7 @@ var wd = `FneGtSBNXCI-`,
 function Ed(e) {
   let { color: t, onClick: n, strIconTitle: r, children: i } = e,
     a = (e) => {
-      e.stopPropagation(), n && n(e);
+      (e.stopPropagation(), n && n(e));
     };
   return r
     ? (0, J.jsx)(Xa, {
@@ -4766,7 +4767,7 @@ function Rd(e) {
     r = q.useCallback(
       (e) => {
         let t = ce(e.args) ?? ce(e.args, `href`);
-        return ha(t) && (t = lr(t)), n && n(t), ue(e);
+        return (ha(t) && (t = lr(t)), n && n(t), ue(e));
       },
       [n],
     );
@@ -4942,20 +4943,20 @@ function Kd(e) {
   let c, l;
   switch (s) {
     case 0:
-      (c = `#AppPage_PurchaseOption_JoinPlaytest`),
+      ((c = `#AppPage_PurchaseOption_JoinPlaytest`),
         (l = r
           ? (a.steam_release_date || 2147483647) < Ln()
             ? `#AppPage_PurchaseOption_Playtest_Open`
             : `#AppPage_PurchaseOption_Playtest_Open_Unreleased`
-          : `#AppPage_PurchaseOption_JoinPlaytest_Description`);
+          : `#AppPage_PurchaseOption_JoinPlaytest_Description`));
       break;
     case 1:
-      (c = `#AppPage_PurchaseOption_JoinPlaytest`),
-        (l = `#AppPage_PurchaseOption_JoinPlaytest_InvitePending`);
+      ((c = `#AppPage_PurchaseOption_JoinPlaytest`),
+        (l = `#AppPage_PurchaseOption_JoinPlaytest_InvitePending`));
       break;
     case 2:
-      (c = `#AppPage_PurchaseOption_JoinPlaytest`),
-        (l = `#AppPage_PurchaseOption_JoinPlaytest_InvitedByFriend`);
+      ((c = `#AppPage_PurchaseOption_JoinPlaytest`),
+        (l = `#AppPage_PurchaseOption_JoinPlaytest_InvitedByFriend`));
       break;
     case 3:
       (a.steam_release_date || 2147483647) < Ln()
@@ -5078,11 +5079,11 @@ function tf(e) {
     r.discount_end_date - n > 172800
   ) {
     let e = r.discount_description + `_date`;
-    (i = Z.Localize(
+    ((i = Z.Localize(
       e,
       ln(r.discount_end_date, { weekday: void 0, year: void 0 }),
     )),
-      i == e && (i = null);
+      i == e && (i = null));
   } else return (0, J.jsx)(Qd, { discount: r });
   return i ? (0, J.jsx)(V, { contrast: `body`, size: `2`, children: i }) : null;
 }
@@ -5119,9 +5120,9 @@ function af(e) {
       day: `numeric`,
       year: void 0,
     });
-    (l = `slate-12`),
+    ((l = `slate-12`),
       (u = `blue-8`),
-      (c = Z.Localize(`#AppPage_AdvanceAccess_Banner`, e));
+      (c = Z.Localize(`#AppPage_AdvanceAccess_Banner`, e)));
   }
   return c
     ? (0, J.jsx)(R, {
@@ -5392,7 +5393,7 @@ function bf(e) {
     c = q.useCallback(() => {
       s && (window.location.href = s);
     }, [s]);
-  if (!r || !a) return console.warn(`Not ready`, t, r, i, a), null;
+  if (!r || !a) return (console.warn(`Not ready`, t, r, i, a), null);
   let l = r.included_appids?.length || 0,
     u = r.included_appids?.filter((e) => !a.has(e)) || [],
     d = r.included_appids?.filter((e) => a.has(e)) || [],
@@ -5486,10 +5487,10 @@ function xf(e) {
             (c != t.length - 1 && e.height < s - o.height) ||
             (c == t.length - 1 && e.height < s)
           )
-            c++, (s -= e.height);
+            (c++, (s -= e.height));
           else break;
         }
-        r != c && i(c), (a.current.style.opacity = c == t.length ? `0` : `1`);
+        (r != c && i(c), (a.current.style.opacity = c == t.length ? `0` : `1`));
       }
     });
   if (t.length == 0 || r == 0) return null;
@@ -6293,7 +6294,7 @@ function hp(e) {
     [f, p] = q.useState(!1);
   return (
     q.useEffect(() => {
-      mp.Debug(`Initializing PurchaseOptions`),
+      (mp.Debug(`Initializing PurchaseOptions`),
         mp.Debug(`rgOwnedApps`, n),
         mp.Debug(`rgActiveLicenses`, r),
         mp.Debug(`playtestStatus`, i),
@@ -6301,7 +6302,7 @@ function hp(e) {
         mp.Debug(`strAccountTypeDescription`, o),
         l(n),
         u(r),
-        p(!0);
+        p(!0));
     }, [t, r, n, i, l, u, d, a, o]),
     q.use(Z.Ready()),
     q.use(W.Ready()),
@@ -6387,15 +6388,15 @@ function gp(e, t, n) {
         if (!g.has(e.packageid) && !(e.packageid && o.has(e.packageid))) {
           if (h && !e.is_edition && r.related_items) {
             let e = r.related_items.related_f2p;
-            d.push({
+            (d.push({
               type: `related`,
               appid: e.appid,
               title: e.header_text,
               description: e.description_text,
             }),
-              (h = !1);
+              (h = !1));
           }
-          e.package_group !== _?.id &&
+          (e.package_group !== _?.id &&
             (e.package_group
               ? ((_ = m.get(e.package_group)),
                 _?.package_group.display_type == 1 &&
@@ -6407,9 +6408,9 @@ function gp(e, t, n) {
                   type: `item`,
                   data: e,
                   bAvailableForFree: !!e.packageid && u.has(e.packageid),
-                });
+                }));
         }
-      return mp.Debug(m), d;
+      return (mp.Debug(m), d);
     }, [e, r, i, s, a, t, o])
   );
 }
@@ -6554,7 +6555,7 @@ function yp(e) {
           case `related`:
             return `related_` + n.appid;
           default:
-            return Ui(!1, `Unknown purchase option type`, n.type), `unknown`;
+            return (Ui(!1, `Unknown purchase option type`, n.type), `unknown`);
         }
       },
       [t],
@@ -6801,7 +6802,7 @@ function Ip(e) {
       for (let r of t) {
         let t = (r.name || ``).length;
         if (n > 0 && e + t >= jp) break;
-        (e += t), n++;
+        ((e += t), n++);
       }
       return n;
     }, [t]),
@@ -6918,7 +6919,7 @@ function Jp(e) {
     { data: l } = I({ appid: t }),
     u = vd(t);
   if (!l || (n.length == 0 && i == 0 && !u?.length)) return null;
-  q.use(Z.Ready()), q.use(zr.Ready());
+  (q.use(Z.Ready()), q.use(zr.Ready()));
   let d = l.type == 6,
     f = !o && n.length > Gp,
     p = f ? n.slice(0, Gp) : n;
@@ -7138,7 +7139,7 @@ function am(e) {
     { data: o } = I({ appid: t.appid }),
     { data: s } = I(a ? { appid: n[0].appid } : void 0);
   if (!o || n.length == 0 || (a && !s)) return null;
-  q.use(Z.Ready()), q.use(zr.Ready());
+  (q.use(Z.Ready()), q.use(zr.Ready()));
   let c = n[0].bRequired,
     l = a
       ? Z.Localize(
@@ -7671,13 +7672,13 @@ function Nm() {
     c = n && !e;
   return (
     q.useLayoutEffect(() => {
-      a.current && !e && i.current?.scrollIntoView({ block: `nearest` }),
-        (a.current = !1);
+      (a.current && !e && i.current?.scrollIntoView({ block: `nearest` }),
+        (a.current = !1));
     }, [e]),
     {
       setExpanded: q.useCallback(
         (e) => {
-          t(e), e || (a.current = !0);
+          (t(e), e || (a.current = !0));
         },
         [t, a],
       ),
@@ -8102,7 +8103,7 @@ function lh(e) {
     i = n?.content_descriptorids;
   if (!n || n.type == null || !i?.length || r === void 0 || ba(w.EREALM))
     return null;
-  q.use(Z.Ready()), q.use(W.Ready());
+  (q.use(Z.Ready()), q.use(W.Ready()));
   let a = r?.content_survey_notes;
   if (!a) {
     let e = [];
@@ -8191,7 +8192,7 @@ function mh(e, t, n) {
 }
 async function hh(e, t, n) {
   let r = Di.Init(Fn);
-  r.Body().set_appid(t), n && r.Body().set_include_family_licenses(!0);
+  (r.Body().set_appid(t), n && r.Body().set_include_family_licenses(!0));
   let i = await ca.GetFriendsGameplayInfo(e, r);
   return (
     i.BSuccess() ||
@@ -8533,7 +8534,7 @@ function Vh(e) {
     });
   let f = s.find((e) => e.index === c) || s[0],
     p = (e) => {
-      l(e), d(!0);
+      (l(e), d(!0));
     };
   return (0, J.jsx)(N, {
     marginTop: `5`,
@@ -8598,8 +8599,8 @@ function Hh(e) {
     a = 0,
     o = 0;
   for (let { data: e } of i)
-    e?.episode?.type !== void 0 && !Ih(e.episode.type) && a++,
-      (o += e?.running_time_minutes || 0);
+    (e?.episode?.type !== void 0 && !Ih(e.episode.type) && a++,
+      (o += e?.running_time_minutes || 0));
   return (0, J.jsxs)(N, {
     marginTop: `2`,
     children: [
@@ -8874,10 +8875,10 @@ function yg(e, t) {
   for (let e of t)
     if (_g(e)) {
       if (a.has(e.elanguage)) continue;
-      r.push({ ...e, preferred: !1 }), a.add(e.elanguage);
+      (r.push({ ...e, preferred: !1 }), a.add(e.elanguage));
     } else if (vg(e)) {
       if (s.has(e.elanguage)) continue;
-      r.push({ ...e, preferred: !1 }), s.add(e.eadditionallanguage);
+      (r.push({ ...e, preferred: !1 }), s.add(e.eadditionallanguage));
     }
   return { rgSorted: r, nForceVisible: c, firstPreferredLanguage: n };
 }
@@ -9240,28 +9241,28 @@ function Ag(e) {
     s;
   switch (n.type) {
     case 0:
-      (o = a
+      ((o = a
         ? `#feature_learning_about_game`
         : `#feature_profile_features_limited`),
-        (s = `#feature_learning_about_desc_game`);
+        (s = `#feature_learning_about_desc_game`));
       break;
     case 6:
-      (o = a
+      ((o = a
         ? `#feature_learning_about_software`
         : `#feature_profile_features_limited`),
-        (s = `#feature_learning_about_desc_software`);
+        (s = `#feature_learning_about_desc_software`));
       break;
     case 4:
-      (o = a
+      ((o = a
         ? `#feature_learning_about_dlc`
         : `#feature_profile_features_limited`),
-        (s = `#feature_learning_about_desc_dlc`);
+        (s = `#feature_learning_about_desc_dlc`));
       break;
     case 2:
-      (o = a
+      ((o = a
         ? `#feature_learning_about_mod`
         : `#feature_profile_features_limited`),
-        (s = `#feature_learning_about_desc_mod`);
+        (s = `#feature_learning_about_desc_mod`));
   }
   return !o || !s
     ? null
@@ -9715,11 +9716,11 @@ function o_(e) {
   let { ignored: o = !1, ignored_reason: s } = n,
     c = !!o && (s ?? !1),
     l = (e, t) => {
-      t_.Info(`ignoring`, e, t),
-        r.mutateAsync({ ignored: e, ignored_reason: t, old_interest: n });
+      (t_.Info(`ignoring`, e, t),
+        r.mutateAsync({ ignored: e, ignored_reason: t, old_interest: n }));
     },
     u = (e) => {
-      l(e !== !1, e === !1 ? void 0 : e), a(!1);
+      (l(e !== !1, e === !1 ? void 0 : e), a(!1));
     },
     d = Z.Localize(`#button_ignore`),
     f = (0, J.jsxs)(R, {
@@ -9955,14 +9956,14 @@ function x_(e) {
     )
       return null;
     let h = { appid: e };
-    (h.nCurrentUserPlaytimeMins = u.your_info?.minutes_played_forever || 0),
+    ((h.nCurrentUserPlaytimeMins = u.your_info?.minutes_played_forever || 0),
       (h.bCurrentUserOwns = !!u.your_info?.owned),
       (h.bFromInteractiveRecommender = c.bRecommendedByIR),
       h.bCurrentUserOwns ||
         ((h.rgSimilarApps = c.arrSimilarPlayedApps || []),
         h.rgSimilarApps?.length == 0 &&
           (h.rgMatchingTagsPlayed =
-            s.filter((e) => r?.find((t) => t.tagid == e.tagid)) || []));
+            s.filter((e) => r?.find((t) => t.tagid == e.tagid)) || [])));
     let g =
         (d.preferences?.review_score_preference == 1 && i.summary_unfiltered) ||
         i.summary_filtered,
@@ -10117,7 +10118,7 @@ function H_(e) {
   );
 }
 var Q = {};
-(Q.arabic = () =>
+((Q.arabic = () =>
   E(() => import(`./miniprofile_arabic.js`), [], import.meta.url)),
   (Q.brazilian = () =>
     E(() => import(`./miniprofile_brazilian.js`), [], import.meta.url)),
@@ -10180,7 +10181,7 @@ var Q = {};
   (Q.ukrainian = () =>
     E(() => import(`./miniprofile_ukrainian.js`), [], import.meta.url)),
   (Q.vietnamese = () =>
-    E(() => import(`./miniprofile_vietnamese.js`), [], import.meta.url));
+    E(() => import(`./miniprofile_vietnamese.js`), [], import.meta.url)));
 async function U_(e) {
   if (Q[e]) return await Q[e]();
 }
@@ -10738,7 +10739,7 @@ function uy(e) {
   let te = !0,
     ne = !1,
     re = !1;
-  c || ((ee += ` ` + tv), (te = !1)), l && ((ee += ` undefined`), (re = !0));
+  (c || ((ee += ` ` + tv), (te = !1)), l && ((ee += ` undefined`), (re = !0)));
   let ie = s ?? i?.nickname,
     ae = ie !== void 0,
     oe = Mv(_),
@@ -11129,7 +11130,7 @@ function By(e) {
     s = jr();
   return (
     q.useEffect(() => {
-      o(t, n), s(r), a(!0);
+      (o(t, n), s(r), a(!0));
     }, [t, n, r, o, s]),
     q.use(Z.Ready()),
     q.use(W.Ready()),
@@ -12021,9 +12022,9 @@ var $ = e(a(), 1),
   tx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.serial_number || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -12040,7 +12041,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12061,14 +12062,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_QueryAccountsRegisteredToSerial_Request`;
@@ -12077,9 +12078,9 @@ var $ = e(a(), 1),
   nx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.accountid || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -12096,7 +12097,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12117,14 +12118,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_QueryAccountsRegisteredToSerial_Accounts`;
@@ -12133,9 +12134,9 @@ var $ = e(a(), 1),
   rx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.accounts || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, [1], null);
+        $.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -12149,7 +12150,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12170,14 +12171,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_QueryAccountsRegisteredToSerial_Response`;
@@ -12186,9 +12187,9 @@ var $ = e(a(), 1),
   ix = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.serial_number || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -12205,7 +12206,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12226,14 +12227,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_RegisterSteamController_Request`;
@@ -12242,7 +12243,7 @@ var $ = e(a(), 1),
   ax = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), $.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), $.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12263,12 +12264,12 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_RegisterSteamController_Response`;
@@ -12277,9 +12278,9 @@ var $ = e(a(), 1),
   ox = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.serial_number || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -12296,7 +12297,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12317,14 +12318,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_CompleteSteamControllerRegistration_Request`;
@@ -12333,7 +12334,7 @@ var $ = e(a(), 1),
   sx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), $.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), $.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12354,12 +12355,12 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_CompleteSteamControllerRegistration_Response`;
@@ -12368,9 +12369,9 @@ var $ = e(a(), 1),
   cx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.appidorname || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -12392,7 +12393,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12413,14 +12414,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_SteamControllerSetConfig_ControllerConfig`;
@@ -12429,9 +12430,9 @@ var $ = e(a(), 1),
   lx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.serial_number || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, [4], null);
+        $.Message.initialize(this, t, 0, -1, [4], null));
     }
     static sm_m;
     static sm_mbf;
@@ -12457,7 +12458,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12478,14 +12479,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_SteamControllerSetConfig_Request`;
@@ -12494,7 +12495,7 @@ var $ = e(a(), 1),
   ux = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), $.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), $.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12515,12 +12516,12 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_SteamControllerSetConfig_Response`;
@@ -12529,9 +12530,9 @@ var $ = e(a(), 1),
   dx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.serial_number || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -12557,7 +12558,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12578,14 +12579,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_SteamControllerGetConfig_Request`;
@@ -12594,9 +12595,9 @@ var $ = e(a(), 1),
   fx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.appidorname || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -12620,7 +12621,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12641,14 +12642,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_SteamControllerGetConfig_ControllerConfig`;
@@ -12657,9 +12658,9 @@ var $ = e(a(), 1),
   px = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.configurations || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, [1], null);
+        $.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -12673,7 +12674,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12694,14 +12695,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_SteamControllerGetConfig_Response`;
@@ -12710,9 +12711,9 @@ var $ = e(a(), 1),
   mx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.serial_number || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -12730,7 +12731,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12751,14 +12752,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_DeRegisterSteamController_Request`;
@@ -12767,7 +12768,7 @@ var $ = e(a(), 1),
   hx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), $.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), $.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12788,12 +12789,12 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_DeRegisterSteamController_Response`;
@@ -12802,9 +12803,9 @@ var $ = e(a(), 1),
   gx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.serial_number || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -12826,7 +12827,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12847,14 +12848,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_SetPersonalizationFile_Request`;
@@ -12863,7 +12864,7 @@ var $ = e(a(), 1),
   _x = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), $.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), $.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12884,12 +12885,12 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_SetPersonalizationFile_Response`;
@@ -12898,9 +12899,9 @@ var $ = e(a(), 1),
   vx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.serial_number || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -12917,7 +12918,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12938,14 +12939,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_GetPersonalizationFile_Request`;
@@ -12954,9 +12955,9 @@ var $ = e(a(), 1),
   yx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.publishedfileid || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -12976,7 +12977,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -12997,14 +12998,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_GetPersonalizationFile_Response`;
@@ -13013,9 +13014,9 @@ var $ = e(a(), 1),
   bx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.product_name || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, [2], null);
+        $.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -13032,7 +13033,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13053,14 +13054,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_VRCompatibilityCheck_Request`;
@@ -13069,9 +13070,9 @@ var $ = e(a(), 1),
   xx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.key || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -13088,7 +13089,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13109,14 +13110,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_VRCompatibilityCheck_Request_Pair`;
@@ -13125,9 +13126,9 @@ var $ = e(a(), 1),
   Sx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.values || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, [1, 2], null);
+        $.Message.initialize(this, t, 0, -1, [1, 2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -13144,7 +13145,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13165,14 +13166,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_VRCompatibilityCheck_Response`;
@@ -13181,9 +13182,9 @@ var $ = e(a(), 1),
   Cx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.key || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -13200,7 +13201,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13221,14 +13222,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_VRCompatibilityCheck_Response_Pair`;
@@ -13237,9 +13238,9 @@ var $ = e(a(), 1),
   wx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.name || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -13257,7 +13258,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13278,14 +13279,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_VRCompatibilityCheck_Response_ComponentDisplay`;
@@ -13294,9 +13295,9 @@ var $ = e(a(), 1),
   Tx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.serial_number || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -13324,7 +13325,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13345,14 +13346,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_RegisterValveIndexComponent_Request`;
@@ -13361,7 +13362,7 @@ var $ = e(a(), 1),
   Ex = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), $.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), $.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13382,12 +13383,12 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_RegisterValveIndexComponent_Response`;
@@ -13396,9 +13397,9 @@ var $ = e(a(), 1),
   Dx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.serial_number || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -13415,7 +13416,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13436,14 +13437,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_GetSteamDeckComponents_Request`;
@@ -13452,9 +13453,9 @@ var $ = e(a(), 1),
   Ox = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.json_components || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -13470,7 +13471,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13491,14 +13492,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_GetSteamDeckComponents_Response`;
@@ -13507,9 +13508,9 @@ var $ = e(a(), 1),
   kx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.friendly_name || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -13527,7 +13528,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13548,14 +13549,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_SaveHardware_Request`;
@@ -13564,9 +13565,9 @@ var $ = e(a(), 1),
   Ax = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.hardware_id || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -13586,7 +13587,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13607,14 +13608,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_SaveHardware_Response`;
@@ -13623,9 +13624,9 @@ var $ = e(a(), 1),
   jx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.hardware_id || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -13653,7 +13654,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13674,14 +13675,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_SavedHardware_Details`;
@@ -13690,9 +13691,9 @@ var $ = e(a(), 1),
   Mx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.steamid || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -13712,7 +13713,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13733,14 +13734,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_GetSavedHardwareList_Request`;
@@ -13749,9 +13750,9 @@ var $ = e(a(), 1),
   Nx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.saved_hardware || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, [1], null);
+        $.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -13765,7 +13766,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13786,14 +13787,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_GetSavedHardwareList_Response`;
@@ -13802,9 +13803,9 @@ var $ = e(a(), 1),
   Px = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.hardware_id || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -13826,7 +13827,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13847,14 +13848,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_ManageSavedHardware_Request`;
@@ -13863,7 +13864,7 @@ var $ = e(a(), 1),
   Fx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), $.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), $.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13884,12 +13885,12 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_ManageSavedHardware_Response`;
@@ -13898,9 +13899,9 @@ var $ = e(a(), 1),
   Ix = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.serial_number || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -13917,7 +13918,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13938,14 +13939,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_RegisterSteamMachine_Request`;
@@ -13954,7 +13955,7 @@ var $ = e(a(), 1),
   Lx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), $.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), $.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -13975,12 +13976,12 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_RegisterSteamMachine_Response`;
@@ -13989,9 +13990,9 @@ var $ = e(a(), 1),
   Rx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.controllers || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, [1], null);
+        $.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -14005,7 +14006,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -14026,14 +14027,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_UpdateControllerUsageReport_Request`;
@@ -14042,9 +14043,9 @@ var $ = e(a(), 1),
   zx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.serial_number || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -14061,7 +14062,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -14082,14 +14083,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_UpdateControllerUsageReport_Request_Controller`;
@@ -14098,7 +14099,7 @@ var $ = e(a(), 1),
   Bx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), $.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), $.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -14119,12 +14120,12 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardware_UpdateControllerUsageReport_Response`;
@@ -14133,9 +14134,9 @@ var $ = e(a(), 1),
   Vx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.serial || A(e.M()),
-        $.Message.initialize(this, t, 0, -1, void 0, null);
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -14152,7 +14153,7 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= x(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -14173,14 +14174,14 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       M(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardwarePromotions_RedeemFramePromoPackage_Request`;
@@ -14189,7 +14190,7 @@ var $ = e(a(), 1),
   Hx = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), $.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), $.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -14210,12 +14211,12 @@ var $ = e(a(), 1),
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new $.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountHardwarePromotions_RedeemFramePromoPackage_Response`;
@@ -14444,7 +14445,7 @@ function tS(e) {
         : c(Z.Localize(`#AppPage_WriteReview_ErrorNoText`));
     }, [a, u, p]);
   if (!r) return null;
-  q.use(Z.Ready()), q.use(W.Ready());
+  (q.use(Z.Ready()), q.use(W.Ready()));
   let h = !!n,
     g = r.type ?? 0,
     _ = l.error
@@ -14660,7 +14661,7 @@ function iS(e) {
     s = Yx(),
     c = q.useCallback(
       (e) => {
-        i(e), e || n({ saved_hardware_id: void 0 });
+        (i(e), e || n({ saved_hardware_id: void 0 }));
       },
       [n],
     ),
@@ -14830,7 +14831,7 @@ function lS(e) {
     [i, a] = q.useState(!1);
   return (
     q.useEffect(() => {
-      r(n), a(!0);
+      (r(n), a(!0));
     }, [n, r]),
     i ? (0, J.jsx)(uS, { appid: t }) : null
   );
@@ -15310,8 +15311,8 @@ async function fC(e, t, n) {
   if (gC(r)) throw new hC();
   if (r.GetEResult() !== 1)
     throw (
-      (console.error(`Received error from GetGameAchievements`, r.GetEResult()),
-      Error(`Error from GetGameAchievements: ${r.GetEResult()}`))
+      console.error(`Received error from GetGameAchievements`, r.GetEResult()),
+      Error(`Error from GetGameAchievements: ${r.GetEResult()}`)
     );
   let i = {};
   return (
@@ -15378,11 +15379,11 @@ async function mC(e, t) {
   if (gC(n)) throw new hC();
   if (n.GetEResult() !== 1)
     throw (
-      (console.error(
+      console.error(
         `Received error from GetGlobalAchievementPercentages`,
         n.GetEResult(),
       ),
-      Error(`Error from GetGlobalAchievementPercentages: ${n.GetEResult()}`))
+      Error(`Error from GetGlobalAchievementPercentages: ${n.GetEResult()}`)
     );
   return {
     percentages: n
@@ -15390,7 +15391,7 @@ async function mC(e, t) {
       .achievements()
       .reduce((e, t) => {
         let n = t.internal_key();
-        return n === void 0 || (e[n] = t.player_percent_unlocked() ?? 0.1), e;
+        return (n === void 0 || (e[n] = t.player_percent_unlocked() ?? 0.1), e);
       }, {}),
   };
 }
@@ -15482,7 +15483,7 @@ function OC(e, t) {
         r.add(e.dlcappid);
         continue;
       }
-      a.push(...n), i++;
+      (a.push(...n), i++);
     }
   }
   if (a?.length) return { achievements: a, nDLCCount: r.size, nGroupCount: i };

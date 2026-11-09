@@ -13,7 +13,14 @@ a {
   font-weight: bold;
 }
 {
-font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
+  font-family:
+    Stratum2,
+    Noto Sans,
+    sans-serif;
+}
+body {
+  font-family: Stratum2, sans-serif;
+}
 .Language_tchinese,
 .Language_vietnamese,
 .Language_japanese,
@@ -295,11 +302,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: normal;
 }
@@ -308,11 +315,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -321,11 +328,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -334,11 +341,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -347,11 +354,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -360,11 +367,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -373,11 +380,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: italic;
 }
@@ -386,11 +393,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: italic;
 }
@@ -399,11 +406,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -412,11 +419,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: italic;
 }
@@ -425,11 +432,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -438,11 +445,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: italic;
 }
@@ -451,11 +458,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -464,11 +471,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -477,11 +484,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -490,11 +497,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -503,11 +510,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -516,11 +523,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -529,11 +536,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -4291,8 +4298,8 @@ button._32WBlTIPR8mTZ8vqxHQ44C.DialogButton:enabled:active:hover:before {
 .cuCR0dxwDE098bZV2Bu7u {
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
-  margin-left: calc(-1 * var(--field-negative-horizontal-margin));
-  margin-right: calc(-1 * var(--field-negative-horizontal-margin));
+  margin-left: calc(-1*var(--field-negative-horizontal-margin));
+  margin-right: calc(-1*var(--field-negative-horizontal-margin));
 }
 .BBGW4g_bAleGAh0nqq6HQ {
   display: flex;
@@ -4302,13 +4309,11 @@ button._32WBlTIPR8mTZ8vqxHQ44C.DialogButton:enabled:active:hover:before {
   background: none;
   border-radius: 0;
   padding-left: calc(
-    var(--field-negative-horizontal-margin) +
-    var(--indent-level) *
-    20px
+    var(--field-negative-horizontal-margin) + var(--indent-level)*20px
   );
   padding-right: var(--field-negative-horizontal-margin);
-  margin-left: calc(-1 * var(--field-negative-horizontal-margin));
-  margin-right: calc(-1 * var(--field-negative-horizontal-margin));
+  margin-left: calc(-1*var(--field-negative-horizontal-margin));
+  margin-right: calc(-1*var(--field-negative-horizontal-margin));
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
@@ -4339,13 +4344,13 @@ button._32WBlTIPR8mTZ8vqxHQ44C.DialogButton:enabled:active:hover:before {
 }
 .BBGW4g_bAleGAh0nqq6HQ._7Y04wd2IszuzLyVLd3bb7::after {
   bottom: -0.5px;
-  margin-left: calc(var(--indent-level) * 18px);
+  margin-left: calc(var(--indent-level)*18px);
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
 }
 .BBGW4g_bAleGAh0nqq6HQ._3B93DHpz3rHSkEZWV3yFQO::after {
   bottom: -0.75px;
-  margin-left: calc(var(--indent-level) * 18px);
+  margin-left: calc(var(--indent-level)*18px);
   height: 1.5px;
   background: rgba(255, 255, 255, 0.1);
 }
@@ -4851,7 +4856,7 @@ button._32WBlTIPR8mTZ8vqxHQ44C.DialogButton:enabled:active:hover:before {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: calc(-1 * var(--controls-list-spacing));
+  margin-bottom: calc(-1*var(--controls-list-spacing));
 }
 .YU3PolkIvnVjIjHB9uFue._1lK_L_ZAb_Iv50k3safn__ {
   --controls-list-spacing: 10px;
@@ -4865,15 +4870,15 @@ button._32WBlTIPR8mTZ8vqxHQ44C.DialogButton:enabled:active:hover:before {
   flex-grow: 1;
 }
 .YU3PolkIvnVjIjHB9uFue._8c09xSd4wTavthSYrw2LQ {
-  margin-right: calc(-1 * var(--controls-list-spacing));
+  margin-right: calc(-1*var(--controls-list-spacing));
 }
 .YU3PolkIvnVjIjHB9uFue._3nfmwI2mif3HLsO46hWgGu {
-  margin-left: calc(-1 * var(--controls-list-spacing));
+  margin-left: calc(-1*var(--controls-list-spacing));
   justify-content: start;
 }
 .YU3PolkIvnVjIjHB9uFue._2KB4B_DAXXg6XD_kDs0Y9I {
-  margin-left: calc(-0.5 * var(--controls-list-spacing));
-  margin-right: calc(-0.5 * var(--controls-list-spacing));
+  margin-left: calc(-0.5*var(--controls-list-spacing));
+  margin-right: calc(-0.5*var(--controls-list-spacing));
   justify-content: center;
 }
 .YU3PolkIvnVjIjHB9uFue._2tn549_D60Fp4fL9Yy4NkP {
@@ -4902,8 +4907,8 @@ button._32WBlTIPR8mTZ8vqxHQ44C.DialogButton:enabled:active:hover:before {
   margin-left: auto;
 }
 .YU3PolkIvnVjIjHB9uFue._2KB4B_DAXXg6XD_kDs0Y9I ._3uFQqHcaDB82sTsp8R9RiN {
-  margin-left: calc(0.5 * var(--controls-list-spacing));
-  margin-right: calc(0.5 * var(--controls-list-spacing));
+  margin-left: calc(0.5*var(--controls-list-spacing));
+  margin-right: calc(0.5*var(--controls-list-spacing));
 }
 ._2MJWFIiYwobt6RMCEOxj0M._1274IEwn78em0BwAU5xlf- {
   padding-top: 40px;
@@ -5509,8 +5514,7 @@ button._1Ozw-BTjQs8I23yS-ALPqD svg {
 ._3RYrNyEhPaEDUdWwBD_n7W {
   --inverse-normalized-value: calc(1 - var(--normalized-slider-value));
   --inverse-normalized-default-value: calc(
-    1 -
-    var(--normalized-slider-default-value)
+    1 - var(--normalized-slider-default-value)
   );
   --slider-handle-width: 24px;
   position: relative;
@@ -5546,16 +5550,15 @@ button._1Ozw-BTjQs8I23yS-ALPqD svg {
   position: absolute;
   --normalized-fill-start: calc(
     (100%) *
-    min(var(--normalized-slider-value), var(--normalized-slider-origin))
+      min(var(--normalized-slider-value), var(--normalized-slider-origin))
   );
   --normalized-fill-end: calc(
     (100% - var(--slider-extra-notch-padding) * 2) *
-    max(var(--normalized-slider-value), var(--normalized-slider-origin)) +
-    var(--slider-extra-notch-padding)
+      max(var(--normalized-slider-value), var(--normalized-slider-origin)) +
+      var(--slider-extra-notch-padding)
   );
   --normalized-width-handle: calc(
-    var(--normalized-fill-end) -
-    var(--normalized-fill-start)
+    var(--normalized-fill-end) - var(--normalized-fill-start)
   );
   left: var(--normalized-fill-start);
   right: 0;
@@ -5567,19 +5570,15 @@ button._1Ozw-BTjQs8I23yS-ALPqD svg {
 }
 .t3xfSWjmJKeJ5RODXWm01 ._2htJFyPuhQntcvdcItCPNT::before {
   --signed-normalized-slider-default-value: calc(
-    2 *
-    var(--normalized-slider-default-value) -
-    1
+    2 * var(--normalized-slider-default-value) - 1
   );
   --gradient-split-pct: calc(
-    100% *
-    var(--normalized-slider-default-value) /
-    var(--normalized-slider-value) -
-    (
-      var(--slider-handle-width) *
-      0.5 *
-      var(--signed-normalized-slider-default-value)
-    )
+    100% * var(--normalized-slider-default-value) /
+      var(--normalized-slider-value) -
+      (
+        var(--slider-handle-width) * 0.5 *
+          var(--signed-normalized-slider-default-value)
+      )
   );
 }
 ._3V-Xg0tZREUThBNYDiGyKD ._2htJFyPuhQntcvdcItCPNT::before {
@@ -5615,10 +5614,8 @@ button._1Ozw-BTjQs8I23yS-ALPqD svg {
   transform: translateX(
     calc(
       (-100% + var(--slider-extra-notch-padding) * 2) *
-      var(--inverse-normalized-value) +
-      var(--slider-handle-width) *
-      var(--inverse-normalized-value) -
-      var(--slider-extra-notch-padding)
+        var(--inverse-normalized-value) + var(--slider-handle-width) *
+        var(--inverse-normalized-value) - var(--slider-extra-notch-padding)
     )
   );
 }
@@ -5901,12 +5898,10 @@ button._1Ozw-BTjQs8I23yS-ALPqD svg {
   width: 100%;
   box-sizing: border-box;
   top: -30px;
-  margin-left: calc(-1 * var(--field-negative-horizontal-margin));
-  margin-right: calc(-1 * var(--field-negative-horizontal-margin));
+  margin-left: calc(-1*var(--field-negative-horizontal-margin));
+  margin-right: calc(-1*var(--field-negative-horizontal-margin));
   padding-left: calc(
-    var(--field-negative-horizontal-margin) +
-    var(--indent-level) *
-    20px
+    var(--field-negative-horizontal-margin) + var(--indent-level)*20px
   );
   padding-right: var(--field-negative-horizontal-margin);
 }
@@ -5914,7 +5909,7 @@ button._1Ozw-BTjQs8I23yS-ALPqD svg {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: calc(100% * var(--normalized-slider-value));
+  width: calc(100%*var(--normalized-slider-value));
 }
 ._3MipVI4KqhfBQ59yVVh6vh {
   font-size: 14px;
@@ -5942,10 +5937,8 @@ button._1Ozw-BTjQs8I23yS-ALPqD svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% *
-      var(--inverse-normalized-default-value) +
-      var(--slider-handle-width) *
-      var(--inverse-normalized-default-value)
+      -100% * var(--inverse-normalized-default-value) +
+        var(--slider-handle-width) * var(--inverse-normalized-default-value)
     )
   );
 }
@@ -8336,7 +8329,14 @@ a {
   font-weight: bold;
 }
 {
-font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
+  font-family:
+    Stratum2,
+    Noto Sans,
+    sans-serif;
+}
+body {
+  font-family: Stratum2, sans-serif;
+}
 .Language_tchinese,
 .Language_vietnamese,
 .Language_japanese,
@@ -8618,11 +8618,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: normal;
 }
@@ -8631,11 +8631,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -8644,11 +8644,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -8657,11 +8657,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -8670,11 +8670,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -8683,11 +8683,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -8696,11 +8696,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: italic;
 }
@@ -8709,11 +8709,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: italic;
 }
@@ -8722,11 +8722,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -8735,11 +8735,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: italic;
 }
@@ -8748,11 +8748,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -8761,11 +8761,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: italic;
 }
@@ -8774,11 +8774,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -8787,11 +8787,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -8800,11 +8800,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -8813,11 +8813,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -8826,11 +8826,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -8839,11 +8839,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -8852,11 +8852,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -9065,7 +9065,14 @@ a {
   font-weight: bold;
 }
 {
-font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
+  font-family:
+    Stratum2,
+    Noto Sans,
+    sans-serif;
+}
+body {
+  font-family: Stratum2, sans-serif;
+}
 .Language_tchinese,
 .Language_vietnamese,
 .Language_japanese,
@@ -9347,11 +9354,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: normal;
 }
@@ -9360,11 +9367,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -9373,11 +9380,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -9386,11 +9393,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -9399,11 +9406,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -9412,11 +9419,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -9425,11 +9432,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: italic;
 }
@@ -9438,11 +9445,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: italic;
 }
@@ -9451,11 +9458,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -9464,11 +9471,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: italic;
 }
@@ -9477,11 +9484,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -9490,11 +9497,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: italic;
 }
@@ -9503,11 +9510,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -9516,11 +9523,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -9529,11 +9536,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -9542,11 +9549,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -9555,11 +9562,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -9568,11 +9575,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -9581,11 +9588,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -9760,7 +9767,14 @@ a {
   font-weight: bold;
 }
 {
-font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
+  font-family:
+    Stratum2,
+    Noto Sans,
+    sans-serif;
+}
+body {
+  font-family: Stratum2, sans-serif;
+}
 .Language_tchinese,
 .Language_vietnamese,
 .Language_japanese,
@@ -10042,11 +10056,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: normal;
 }
@@ -10055,11 +10069,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -10068,11 +10082,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -10081,11 +10095,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -10094,11 +10108,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -10107,11 +10121,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -10120,11 +10134,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: italic;
 }
@@ -10133,11 +10147,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: italic;
 }
@@ -10146,11 +10160,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -10159,11 +10173,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: italic;
 }
@@ -10172,11 +10186,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -10185,11 +10199,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: italic;
 }
@@ -10198,11 +10212,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -10211,11 +10225,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -10224,11 +10238,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -10237,11 +10251,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -10250,11 +10264,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -10263,11 +10277,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -10276,11 +10290,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -10570,7 +10584,14 @@ a {
   font-weight: bold;
 }
 {
-font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
+  font-family:
+    Stratum2,
+    Noto Sans,
+    sans-serif;
+}
+body {
+  font-family: Stratum2, sans-serif;
+}
 .Language_tchinese,
 .Language_vietnamese,
 .Language_japanese,
@@ -10852,11 +10873,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: normal;
 }
@@ -10865,11 +10886,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -10878,11 +10899,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -10891,11 +10912,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -10904,11 +10925,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -10917,11 +10938,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -10930,11 +10951,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: italic;
 }
@@ -10943,11 +10964,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: italic;
 }
@@ -10956,11 +10977,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -10969,11 +10990,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: italic;
 }
@@ -10982,11 +11003,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -10995,11 +11016,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: italic;
 }
@@ -11008,11 +11029,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -11021,11 +11042,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -11034,11 +11055,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -11047,11 +11068,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -11060,11 +11081,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -11073,11 +11094,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -11086,11 +11107,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -11355,7 +11376,14 @@ a {
   font-weight: bold;
 }
 {
-font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
+  font-family:
+    Stratum2,
+    Noto Sans,
+    sans-serif;
+}
+body {
+  font-family: Stratum2, sans-serif;
+}
 .Language_tchinese,
 .Language_vietnamese,
 .Language_japanese,
@@ -11637,11 +11665,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: normal;
 }
@@ -11650,11 +11678,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -11663,11 +11691,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -11676,11 +11704,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -11689,11 +11717,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -11702,11 +11730,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -11715,11 +11743,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: italic;
 }
@@ -11728,11 +11756,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: italic;
 }
@@ -11741,11 +11769,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -11754,11 +11782,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: italic;
 }
@@ -11767,11 +11795,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -11780,11 +11808,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: italic;
 }
@@ -11793,11 +11821,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -11806,11 +11834,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -11819,11 +11847,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -11832,11 +11860,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -11845,11 +11873,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -11858,11 +11886,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -11871,11 +11899,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -12031,7 +12059,14 @@ a {
   font-weight: bold;
 }
 {
-font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
+  font-family:
+    Stratum2,
+    Noto Sans,
+    sans-serif;
+}
+body {
+  font-family: Stratum2, sans-serif;
+}
 .Language_tchinese,
 .Language_vietnamese,
 .Language_japanese,
@@ -12313,11 +12348,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: normal;
 }
@@ -12326,11 +12361,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -12339,11 +12374,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -12352,11 +12387,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -12365,11 +12400,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -12378,11 +12413,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -12391,11 +12426,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: italic;
 }
@@ -12404,11 +12439,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: italic;
 }
@@ -12417,11 +12452,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -12430,11 +12465,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: italic;
 }
@@ -12443,11 +12478,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -12456,11 +12491,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: italic;
 }
@@ -12469,11 +12504,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -12482,11 +12517,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -12495,11 +12530,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -12508,11 +12543,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -12521,11 +12556,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -12534,11 +12569,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -12547,11 +12582,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -12732,7 +12767,14 @@ a {
   font-weight: bold;
 }
 {
-font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
+  font-family:
+    Stratum2,
+    Noto Sans,
+    sans-serif;
+}
+body {
+  font-family: Stratum2, sans-serif;
+}
 .Language_tchinese,
 .Language_vietnamese,
 .Language_japanese,
@@ -13014,11 +13056,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: normal;
 }
@@ -13027,11 +13069,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -13040,11 +13082,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -13053,11 +13095,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -13066,11 +13108,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -13079,11 +13121,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -13092,11 +13134,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: italic;
 }
@@ -13105,11 +13147,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: italic;
 }
@@ -13118,11 +13160,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -13131,11 +13173,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: italic;
 }
@@ -13144,11 +13186,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -13157,11 +13199,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: italic;
 }
@@ -13170,11 +13212,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -13183,11 +13225,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -13196,11 +13238,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -13209,11 +13251,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -13222,11 +13264,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -13235,11 +13277,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -13248,11 +13290,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -13920,7 +13962,14 @@ a {
   font-weight: bold;
 }
 {
-font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
+  font-family:
+    Stratum2,
+    Noto Sans,
+    sans-serif;
+}
+body {
+  font-family: Stratum2, sans-serif;
+}
 .Language_tchinese,
 .Language_vietnamese,
 .Language_japanese,
@@ -14202,11 +14251,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: normal;
 }
@@ -14215,11 +14264,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -14228,11 +14277,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -14241,11 +14290,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -14254,11 +14303,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -14267,11 +14316,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -14280,11 +14329,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: italic;
 }
@@ -14293,11 +14342,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: italic;
 }
@@ -14306,11 +14355,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -14319,11 +14368,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: italic;
 }
@@ -14332,11 +14381,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -14345,11 +14394,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: italic;
 }
@@ -14358,11 +14407,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -14371,11 +14420,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -14384,11 +14433,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -14397,11 +14446,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -14410,11 +14459,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -14423,11 +14472,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -14436,11 +14485,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -15764,7 +15813,14 @@ a {
   font-weight: bold;
 }
 {
-font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
+  font-family:
+    Stratum2,
+    Noto Sans,
+    sans-serif;
+}
+body {
+  font-family: Stratum2, sans-serif;
+}
 .Language_tchinese,
 .Language_vietnamese,
 .Language_japanese,
@@ -16046,11 +16102,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: normal;
 }
@@ -16059,11 +16115,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -16072,11 +16128,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -16085,11 +16141,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -16098,11 +16154,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -16111,11 +16167,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -16124,11 +16180,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: italic;
 }
@@ -16137,11 +16193,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: italic;
 }
@@ -16150,11 +16206,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -16163,11 +16219,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: italic;
 }
@@ -16176,11 +16232,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -16189,11 +16245,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: italic;
 }
@@ -16202,11 +16258,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -16215,11 +16271,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -16228,11 +16284,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -16241,11 +16297,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -16254,11 +16310,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -16267,11 +16323,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -16280,11 +16336,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -16553,7 +16609,14 @@ a {
   font-weight: bold;
 }
 {
-font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
+  font-family:
+    Stratum2,
+    Noto Sans,
+    sans-serif;
+}
+body {
+  font-family: Stratum2, sans-serif;
+}
 .Language_tchinese,
 .Language_vietnamese,
 .Language_japanese,
@@ -16835,11 +16898,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: normal;
 }
@@ -16848,11 +16911,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -16861,11 +16924,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -16874,11 +16937,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -16887,11 +16950,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -16900,11 +16963,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -16913,11 +16976,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: italic;
 }
@@ -16926,11 +16989,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: italic;
 }
@@ -16939,11 +17002,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -16952,11 +17015,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: italic;
 }
@@ -16965,11 +17028,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -16978,11 +17041,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: italic;
 }
@@ -16991,11 +17054,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -17004,11 +17067,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -17017,11 +17080,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -17030,11 +17093,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -17043,11 +17106,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -17056,11 +17119,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -17069,11 +17132,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -17408,7 +17471,14 @@ a {
   font-weight: bold;
 }
 {
-font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
+  font-family:
+    Stratum2,
+    Noto Sans,
+    sans-serif;
+}
+body {
+  font-family: Stratum2, sans-serif;
+}
 .Language_tchinese,
 .Language_vietnamese,
 .Language_japanese,
@@ -17690,11 +17760,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: normal;
 }
@@ -17703,11 +17773,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -17716,11 +17786,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -17729,11 +17799,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -17742,11 +17812,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -17755,11 +17825,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -17768,11 +17838,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: italic;
 }
@@ -17781,11 +17851,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: italic;
 }
@@ -17794,11 +17864,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -17807,11 +17877,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: italic;
 }
@@ -17820,11 +17890,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -17833,11 +17903,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: italic;
 }
@@ -17846,11 +17916,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -17859,11 +17929,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -17872,11 +17942,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -17885,11 +17955,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -17898,11 +17968,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -17911,11 +17981,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -17924,11 +17994,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -18777,7 +18847,14 @@ a {
   font-weight: bold;
 }
 {
-font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
+  font-family:
+    Stratum2,
+    Noto Sans,
+    sans-serif;
+}
+body {
+  font-family: Stratum2, sans-serif;
+}
 .Language_tchinese,
 .Language_vietnamese,
 .Language_japanese,
@@ -19059,11 +19136,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThin.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: normal;
 }
@@ -19072,11 +19149,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -19085,11 +19162,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -19098,11 +19175,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMedium.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -19111,11 +19188,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -19124,11 +19201,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlack.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -19137,11 +19214,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebThinItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 100;
   font-style: italic;
 }
@@ -19150,11 +19227,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: italic;
 }
@@ -19163,11 +19240,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -19176,11 +19253,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebMediumItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 500;
   font-style: italic;
 }
@@ -19189,11 +19266,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -19202,11 +19279,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackItalic.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: italic;
 }
@@ -19215,11 +19292,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebLightCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -19228,11 +19305,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebRegularCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -19241,11 +19318,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBoldCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -19254,11 +19331,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2WebBlackCondensed.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -19267,11 +19344,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebLight.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -19280,11 +19357,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebRegular.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -19293,11 +19370,11 @@ font-family:Stratum2,Noto Sans,sans-serif}body{font-family:Stratum2,sans-serif}
   src: url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot");
   src:
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.eot?#iefix")
-    format("embedded-opentype"),
+      format("embedded-opentype"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff")
-    format("woff"),
+      format("woff"),
     url("https://cdn.fastly.steamstatic.com/apps/csgo/fonts/Stratum2MonoWebBold.woff2")
-    format("woff2");
+      format("woff2");
   font-weight: 700;
   font-style: normal;
 }

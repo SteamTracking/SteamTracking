@@ -38,13 +38,13 @@ var _ = _(_()),
   _ = (_) => {
     let { point_cost: _, upgradable_showcases: _, purchased_upgrades: _ } = _,
       _ = new Map();
-    _.forEach((_) => {
+    (_.forEach((_) => {
       _.set(_, 1);
     }),
       _ &&
         _.forEach((_) => {
           _.set(_.customization_type, _.level);
-        });
+        }));
     let _ = _.map((_) => {
       let _ = _.get(_),
         _ = _ + 1;
@@ -79,8 +79,8 @@ var _ = _(_()),
       } = _,
       _ = new Map(),
       _ = new Map();
-    _.forEach((_) => {
-      _.set(_, 0), _.set(_, 1);
+    (_.forEach((_) => {
+      (_.set(_, 0), _.set(_, 1));
     }),
       _ &&
         _.forEach((_) => {
@@ -89,7 +89,7 @@ var _ = _(_()),
       _ &&
         _.forEach((_) => {
           _.set(_.customization_type, _.level);
-        });
+        }));
     let _ = _.map((_) =>
       (0, _.jsx)(
         _,

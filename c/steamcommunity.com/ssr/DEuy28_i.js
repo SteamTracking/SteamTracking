@@ -82,4 +82,3 @@ function _(_) {
   }
   return !1;
 }
-export { _ };

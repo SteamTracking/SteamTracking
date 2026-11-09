@@ -379,15 +379,14 @@ html.responsive.touch .MYmTqhwexFc- .WishlistButtonText {
   box-sizing: content-box;
   background: linear-gradient(90deg, #232d39 0%, #354453 100%);
   border: 1px solid #0000;
-  border-image:
-    linear-gradient(
+  border-image: linear-gradient(
       90deg,
       #199fff 0%,
       #199fff80 18px,
       #135787 50%,
       #199fff81 100%
     )
-    7 / 1px;
+    7/1px;
   border-radius: 0;
   margin-top: -4px;
   padding: 0;
@@ -647,7 +646,7 @@ html.responsive.touch .MYmTqhwexFc- .WishlistButtonText {
   padding: 0 48px;
 }
 .Xg4jiVpnrEk- {
-  aspect-ratio: 940 / 400;
+  aspect-ratio: 940/400;
   background-position: 50%;
   background-size: cover;
   max-width: 940px;

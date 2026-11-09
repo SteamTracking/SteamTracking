@@ -24,7 +24,7 @@ async function _(_, _, ..._) {
 }
 async function _(_, _, ..._) {
   let _ = new URL(_, window.location.href);
-  _.searchParams.set(`q`, _), _.searchParams.set(`qp`, JSON.stringify(_));
+  (_.searchParams.set(`q`, _), _.searchParams.set(`qp`, JSON.stringify(_)));
   let _ = await fetch(_, {
     headers: {
       [_]: `queryAction`,
@@ -49,7 +49,7 @@ function _(_, ..._) {
   return (
     _.forEach((_, _) => {
       let _ = _[_];
-      _.startsWith(`/`) && (_ = `/` + _), (_ = _.replace(_, _));
+      (_.startsWith(`/`) && (_ = `/` + _), (_ = _.replace(_, _)));
     }),
     _
   );
@@ -76,4 +76,3 @@ var {
   NavigateToRoute: _,
   RouteURL_t: _,
 } = _();
-export { _, _, _ };

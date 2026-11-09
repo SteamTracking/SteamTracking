@@ -9,4 +9,3 @@ function _() {
 function _() {
   return _() ? (0, _.jsx)(_, {}) : (0, _.jsx)(_, {});
 }
-export { _, _ };

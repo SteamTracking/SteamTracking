@@ -328,8 +328,8 @@ function _(_) {
               _(_(`#EventDisplay_Share_CopiedToClipboard`));
             })
             .catch((_) => {
-              _(_(`#EventDisplay_Share_FailedToCopyToClipboard`)),
-                console.error(`Failed to copy link to clipboard:`, _);
+              (_(_(`#EventDisplay_Share_FailedToCopyToClipboard`)),
+                console.error(`Failed to copy link to clipboard:`, _));
             });
       },
       [_],
@@ -451,7 +451,7 @@ var _ = class extends _.Component {
     bStartMuted: !0,
   };
   async componentDidMount() {
-    await _.Get().LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal),
+    (await _.Get().LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal),
       this.m_cancelSignal.token.reason ||
         this.setState({
           bLoadingPreference: !1,
@@ -478,7 +478,7 @@ var _ = class extends _.Component {
               maxHeight: `100vh`,
             },
           });
-      }, 10);
+      }, 10));
   }
   componentWillUnmount() {
     this.m_cancelSignal.cancel(`BroadcastEmbeddable component unmounted`);
@@ -488,7 +488,7 @@ var _ = class extends _.Component {
     if (!_) return;
     let _ = this.state.bExpanded,
       _ = _.GetOrCreateBroadcastInfo(_.steamid).m_nAppID;
-    _(_, _ ? 2 : 3, _.snr),
+    (_(_, _ ? 2 : 3, _.snr),
       _ && _()?.AddEvent(_),
       window.setTimeout(
         () =>
@@ -506,7 +506,7 @@ var _ = class extends _.Component {
             bExpanded: !this.state.bExpanded,
           },
           () => _.Get().SetEmbeddedStreamCollapsed(!this.state.bExpanded),
-        );
+        ));
   }
   OnShrinkTransitionEnd() {
     this.state.innerStyle.maxHeight === `0vh` &&
@@ -518,11 +518,11 @@ var _ = class extends _.Component {
       );
   }
   async onStreamSelect(_) {
-    this.setState({
+    (this.setState({
       bStartMuted: !1,
     }),
       _.Get().GetPlayReadyStream(this.props)?.accountid != _.accountid &&
-        (await _.Get().AttemptToPlayStream(this.props, _));
+        (await _.Get().AttemptToPlayStream(this.props, _)));
   }
   async PlayNextNonVOD() {
     this.setState({
@@ -624,7 +624,7 @@ var _ = class extends _.Component {
         _ = _.store_title ? _.store_title : _.title,
         _ = _.Get().GetConcurrentStreams(this.props) > 1,
         _ = () => {
-          _.nAppIDVOD && this.PlayNextNonVOD(), this.props.fnOnVideoEnd?.();
+          (_.nAppIDVOD && this.PlayNextNonVOD(), this.props.fnOnVideoEnd?.());
         };
       return (0, _.jsx)(_.Fragment, {
         children: (0, _.jsxs)(`div`, {
@@ -736,28 +736,28 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `ToggleBroadcastExpandShrink`, null),
+(_([_], _.prototype, `ToggleBroadcastExpandShrink`, null),
   _([_], _.prototype, `OnShrinkTransitionEnd`, null),
   _([_], _.prototype, `onStreamSelect`, null),
   _([_], _.prototype, `PlayNextNonVOD`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class extends _.Component {
   m_iVideoContainerRef = _.createRef();
   constructor(_) {
-    super(_),
+    (super(_),
       (this.state = {
         bPopout: !1,
         bPreventPopup: window.screen.width <= 768,
-      });
+      }));
   }
   CloseBroadcastPopup() {
     let _ = _.GetOrCreateBroadcastInfo(this.props.stream.steamid).m_nAppID;
-    _(_, 7, this.props.stream.snr),
+    (_(_, 7, this.props.stream.snr),
       _()?.AddEvent(_),
       this.setState({
         bPopout: !1,
         bPreventPopup: !0,
-      });
+      }));
   }
   OnEnter() {
     !this.state.bPreventPopup &&
@@ -813,9 +813,9 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `CloseBroadcastPopup`, null),
+(_([_], _.prototype, `CloseBroadcastPopup`, null),
   _([_], _.prototype, `OnEnter`, null),
-  _([_], _.prototype, `OnLeave`, null);
+  _([_], _.prototype, `OnLeave`, null));
 function _(_) {
   let { stream: _ } = _,
     [_] = _(() => [_.steamid]),
@@ -855,8 +855,12 @@ var _ = class extends _.Component {
   OnToggleChat(_) {
     _.preventDefault();
     let _ = _.GetOrCreateBroadcastInfo(this.props.stream.steamid).m_nAppID;
-    _(_, _.Get().GetChatVisibility() === `show` ? 5 : 4, this.props.stream.snr),
-      _.Get().ToggleChatVisibility();
+    (_(
+      _,
+      _.Get().GetChatVisibility() === `show` ? 5 : 4,
+      this.props.stream.snr,
+    ),
+      _.Get().ToggleChatVisibility());
   }
   onWatchBroadcastPage() {
     let _ = _.GetOrCreateBroadcastInfo(this.props.stream.steamid).m_nAppID;
@@ -958,9 +962,9 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnToggleChat`, null),
+(_([_], _.prototype, `OnToggleChat`, null),
   _([_], _.prototype, `onWatchBroadcastPage`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class extends _.Component {
     render() {
       let _ = this.props.ImgUrl;
@@ -1026,7 +1030,7 @@ function _(_) {
     _ = (0, _.useRef)(null),
     _ = (0, _.useMemo)(() => {
       let _ = (_.Get().GetStreams(_) ?? []).filter((_) => !_ || _(_));
-      return _(_), _;
+      return (_(_), _);
     }, [_, _]);
   return (
     (0, _.useEffect)(() => {
@@ -1176,4 +1180,3 @@ function _(_) {
       })
     : null;
 }
-export { _, _ };

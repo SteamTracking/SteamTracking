@@ -7,16 +7,16 @@ var r = class extends e {
   #t;
   #n;
   constructor(e) {
-    super(),
+    (super(),
       (this.mutationId = e.mutationId),
       (this.#t = e.mutationCache),
       (this.#e = []),
       (this.state = e.state || i()),
       this.setOptions(e.options),
-      this.scheduleGc();
+      this.scheduleGc());
   }
   setOptions(e) {
-    (this.options = e), this.updateGcTime(this.options.gcTime);
+    ((this.options = e), this.updateGcTime(this.options.gcTime));
   }
   get meta() {
     return this.options.meta;
@@ -28,9 +28,9 @@ var r = class extends e {
       this.#t.notify({ type: `observerAdded`, mutation: this, observer: e }));
   }
   removeObserver(e) {
-    (this.#e = this.#e.filter((t) => t !== e)),
+    ((this.#e = this.#e.filter((t) => t !== e)),
       this.scheduleGc(),
-      this.#t.notify({ type: `observerRemoved`, mutation: this, observer: e });
+      this.#t.notify({ type: `observerRemoved`, mutation: this, observer: e }));
   }
   optionalRemove() {
     this.#e.length ||
@@ -65,8 +65,8 @@ var r = class extends e {
       r = !this.#n.canStart();
     try {
       if (!n) {
-        this.#r({ type: `pending`, variables: e, isPaused: r }),
-          await this.#t.config.onMutate?.(e, this);
+        (this.#r({ type: `pending`, variables: e, isPaused: r }),
+          await this.#t.config.onMutate?.(e, this));
         let t = await this.options.onMutate?.(e);
         t !== this.state.context &&
           this.#r({ type: `pending`, context: t, variables: e, isPaused: r });
@@ -89,7 +89,7 @@ var r = class extends e {
     } catch (t) {
       try {
         throw (
-          (await this.#t.config.onError?.(t, e, this.state.context, this),
+          await this.#t.config.onError?.(t, e, this.state.context, this),
           await this.options.onError?.(t, e, this.state.context),
           await this.#t.config.onSettled?.(
             void 0,
@@ -99,7 +99,7 @@ var r = class extends e {
             this,
           ),
           await this.options.onSettled?.(void 0, t, e, this.state.context),
-          t)
+          t
         );
       } finally {
         this.#r({ type: `error`, error: t });
@@ -152,13 +152,13 @@ var r = class extends e {
           };
       }
     };
-    (this.state = t(this.state)),
+    ((this.state = t(this.state)),
       n.batch(() => {
-        this.#e.forEach((t) => {
+        (this.#e.forEach((t) => {
           t.onMutationUpdate(e);
         }),
-          this.#t.notify({ mutation: this, type: `updated`, action: e });
-      });
+          this.#t.notify({ mutation: this, type: `updated`, action: e }));
+      }));
   }
 };
 function i() {

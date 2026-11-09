@@ -41,7 +41,7 @@ function _(_) {
         }),
         _ = [],
         _ = _;
-      for (; _ && _ != null; ) _.observe(_), _.push(_), (_ = _.parentElement);
+      for (; _ && _ != null;) (_.observe(_), _.push(_), (_ = _.parentElement));
       return () => {
         _.forEach((_) => _.unobserve(_));
       };
@@ -88,7 +88,7 @@ var _ = _.forwardRef(function (_, _) {
           _ = _(_, _ == `window` ? null : _),
           _ = _?.getBoundingClientRect(),
           _ = () => {
-            _ != `window` &&
+            (_ != `window` &&
               (_(_ || void 0),
               _((_) => {
                 if (!_) return;
@@ -102,7 +102,7 @@ var _ = _.forwardRef(function (_, _) {
                     };
               })),
               _(_),
-              _ || _(_ ? `element` : `window`);
+              _ || _(_ ? `element` : `window`));
           };
         _ ? _() : (0, _.startTransition)(_);
       },
@@ -186,7 +186,7 @@ function _(_, _, _) {
       nMargin: _,
       eRowWindow: `all`,
     });
-  (_.current.bPositionKnown = _), (_.current.nMargin = _);
+  ((_.current.bPositionKnown = _), (_.current.nMargin = _));
   let _ = _.useCallback(
     (_, _) =>
       _(_, (_, _) => {
@@ -200,7 +200,7 @@ function _(_, _, _) {
     observeElementOffset: _ ? _ : _,
     fnGetRowWindow: (_) => {
       let _ = _ ? _(_, _, _) : `all`;
-      return (_.current.eRowWindow = _), _;
+      return ((_.current.eRowWindow = _), _);
     },
   };
 }
@@ -391,7 +391,8 @@ function _(_, _) {
       passive: !0,
     }),
     () => {
-      _.removeEventListener(`scroll`, _), _.removeEventListener(`scrollend`, _);
+      (_.removeEventListener(`scroll`, _),
+        _.removeEventListener(`scrollend`, _));
     }
   );
 }
@@ -443,4 +444,3 @@ function _(_, _) {
     }
   );
 }
-export { _, _, _, _ };

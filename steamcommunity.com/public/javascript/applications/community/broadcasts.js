@@ -109,7 +109,7 @@ var K = e(t()),
         });
         if (e && e.token.reason) return null;
         if (r && r.status == 200 && r.data && r.data.success == 1)
-          return (this.m_curDebugInfo = r.data), this.m_curDebugInfo;
+          return ((this.m_curDebugInfo = r.data), this.m_curDebugInfo);
       } catch (e) {
         let t = S(e);
         console.error(`LoadBroadcastDebugInfo: Failed ` + t.strErrorMsg, t);
@@ -268,8 +268,8 @@ var J = e(a()),
                 onClick: async () => {
                   t.current && t.current();
                   let e = K.default.CancelToken.source();
-                  (t.current = e.cancel),
-                    r(await q.Get().LoadBroadcastDebugInfo(e));
+                  ((t.current = e.cancel),
+                    r(await q.Get().LoadBroadcastDebugInfo(e)));
                 },
                 children: `(VO) Load Debug Info`,
               }),
@@ -793,8 +793,8 @@ var Ie = r((e) => {
       onCancel: e.closeModal,
       bOKDisabled: t.trim().length == 0,
       onOK: async () => {
-        await q.Get().SendUserReportOnBroadcast(t),
-          e.closeModal && e.closeModal();
+        (await q.Get().SendUserReportOnBroadcast(t),
+          e.closeModal && e.closeModal());
       },
       children: (0, Z.jsx)(`textarea`, {
         value: t,
@@ -917,11 +917,11 @@ var Ie = r((e) => {
                           try {
                             d.current && d.current();
                             let e = K.default.CancelToken.source();
-                            (d.current = e.cancel),
+                            ((d.current = e.cancel),
                               await q.Get().SetBroadcasterRestrictions(n, r, e),
-                              e.token.reason;
+                              e.token.reason);
                           } finally {
-                            o(!1), c(!0), u(!1);
+                            (o(!1), c(!0), u(!1));
                           }
                         },
                         children: M(`#Button_Confirm`),
@@ -988,10 +988,10 @@ var Ie = r((e) => {
                           try {
                             s.current && s.current();
                             let t = K.default.CancelToken.source();
-                            (s.current = t.cancel),
-                              (e = await q.Get().SetUnBannable(t));
+                            ((s.current = t.cancel),
+                              (e = await q.Get().SetUnBannable(t)));
                           } finally {
-                            n(!1), i(!0), o(e);
+                            (n(!1), i(!0), o(e));
                           }
                         },
                         children: M(`#Button_Confirm`),

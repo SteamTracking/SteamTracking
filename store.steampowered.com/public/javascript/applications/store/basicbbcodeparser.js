@@ -61,8 +61,8 @@ var T = e(t(), 1),
   D = class {
     m_decoratedAccumulator;
     constructor(e) {
-      se(e, `decorated accumulator cannot be null`),
-        (this.m_decoratedAccumulator = e);
+      (se(e, `decorated accumulator cannot be null`),
+        (this.m_decoratedAccumulator = e));
     }
     AppendText(e, t = !1) {
       this.m_decoratedAccumulator.AppendText(e, t);
@@ -88,22 +88,22 @@ var T = e(t(), 1),
         e = t.indexOf(`
 `)
       )
-        n.push(t.substr(0, e)),
+        (n.push(t.substr(0, e)),
           n.push(T.createElement(`br`)),
-          (t = t.substr(e + 1));
-      t.length && n.push(t),
+          (t = t.substr(e + 1)));
+      (t.length && n.push(t),
         n.forEach((e) => {
           super.AppendNode(e);
-        });
+        }));
     }
   },
   ue = class {
     m_fnAccumulatorFactory;
     m_dictComponents;
     constructor(e, t) {
-      (this.m_dictComponents =
+      ((this.m_dictComponents =
         e instanceof Map ? e : new Map(Object.entries(e))),
-        (this.m_fnAccumulatorFactory = t);
+        (this.m_fnAccumulatorFactory = t));
     }
     Parse(e, t, n = !0) {
       let r = de(e || ``, n);
@@ -127,26 +127,26 @@ var T = e(t(), 1),
                 rawargs: e.node.rawargs,
               },
               o = t(r.Constructor, i, ...n.GetElements());
-            (n = e.accumulator),
+            ((n = e.accumulator),
               Array.isArray(o)
                 ? o.forEach((e) => n.AppendNode(e))
                 : n.AppendNode(o),
               (s = !!r.skipFollowingNewline),
-              (c = e.bWrapTextForCopying);
+              (c = e.bWrapTextForCopying));
           } else if (e) {
             let t = e.accumulator;
-            t.AppendText(`[` + e.node.text + `]`, !1),
+            (t.AppendText(`[` + e.node.text + `]`, !1),
               n.GetElements().forEach((e) => t.AppendNode(e)),
               t.AppendText(`[/` + r.text + `]`, !1),
               (n = t),
-              (c = e.bWrapTextForCopying);
+              (c = e.bWrapTextForCopying));
           }
         };
       for (
         e.forEach((e, t) => {
           if (e.type == 1) {
             let t = s ? e.text.replace(/^[\t\r ]*\n/g, ``) : e.text;
-            n.AppendText(t, c), (s = !1);
+            (n.AppendText(t, c), (s = !1));
           } else if (e.type == 2) {
             let t = a.get(e.tag);
             if (!t) n.AppendText(`[` + e.text + `]`, r.length == 0);
@@ -156,14 +156,14 @@ var T = e(t(), 1),
                 let t = a.get(o.node.tag);
                 t && t.autocloses && e.tag === o.node.tag && l(r.pop(), o.node);
               }
-              r.push({ accumulator: n, node: e, bWrapTextForCopying: c }),
+              (r.push({ accumulator: n, node: e, bWrapTextForCopying: c }),
                 (n = this.m_fnAccumulatorFactory(e)),
                 (s = !!t.skipInternalNewline),
-                (c = t.allowWrapTextForCopying ?? !1);
+                (c = t.allowWrapTextForCopying ?? !1));
             }
           } else if (e.type == 3) {
             let t = e.text.toLowerCase();
-            for (; i() && i().node.tag !== t && o(i().node); ) {
+            for (; i() && i().node.tag !== t && o(i().node);) {
               let e = r.pop();
               l(e, e.node);
             }
@@ -190,12 +190,12 @@ function O(e, t, n = 0) {
     let a,
       o,
       s = ``;
-    t > 0
+    (t > 0
       ? ((a = i.substr(0, t).toLocaleLowerCase()),
         (s = i.substr(t)),
         (o = fe(s)))
       : ((o = {}), (a = i.toLocaleLowerCase())),
-      e.push({ type: r, text: i, tag: a, args: o, rawargs: s });
+      e.push({ type: r, text: i, tag: a, args: o, rawargs: s }));
   } else r != 0 && e.push({ type: r, text: i });
   return { type: n, text: `` };
 }
@@ -222,18 +222,18 @@ function de(e, t) {
         break;
       case 2:
       case 3:
-        if (c == `/` && a) (r.type = 3), (r.text = ``), (a = !1);
-        else if (c == `[` && !i) (r = O(n, k(r), 2)), (a = !0);
+        if (c == `/` && a) ((r.type = 3), (r.text = ``), (a = !1));
+        else if (c == `[` && !i) ((r = O(n, k(r), 2)), (a = !0));
         else if (c == `]` && !i) {
           let e = r.type == 2 && r.text?.toLocaleLowerCase() == `noparse`,
             t = r.type == 3 && r.text?.toLocaleLowerCase() == `noparse`;
-          a || (o && !t)
+          (a || (o && !t)
             ? ((r = k(r)), (r.text += c))
             : e
               ? (o = !0)
               : t && (o = !1),
             (r = O(n, r)),
-            (a = !1);
+            (a = !1));
         } else
           c == `\\` && t
             ? ((r.text += c), (i = !i), (a = !1))
@@ -299,13 +299,13 @@ function fe(e) {
     }
     l && ((t[n] = r), (n = ``), (r = ``));
   }
-  return i != 0 && (t[n] = r), t;
+  return (i != 0 && (t[n] = r), t);
 }
 var A = class extends ue {
   m_renderingLanguage;
   constructor(e, t, n) {
-    super(e, t ?? (() => new E())),
-      (this.m_renderingLanguage = typeof n == `string` ? ae(n) : n);
+    (super(e, t ?? (() => new E())),
+      (this.m_renderingLanguage = typeof n == `string` ? ae(n) : n));
   }
   UpdateOverrideLanguage(e) {
     this.m_renderingLanguage = e;
@@ -398,7 +398,7 @@ var P = class e {
       return this.m_bUserHasVolumePreference;
     }
     SetVolumePreference(e) {
-      (this.m_flVolumePreference = e), (this.m_bUserHasVolumePreference = !0);
+      ((this.m_flVolumePreference = e), (this.m_bUserHasVolumePreference = !0));
     }
     GetVolumePreference() {
       return this.m_flVolumePreference;
@@ -408,7 +408,7 @@ var P = class e {
     }
     static s_Singleton;
     static Get() {
-      return (e.s_Singleton ||= new e()), e.s_Singleton;
+      return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
   },
   F = (0, T.forwardRef)(function (e, t) {
@@ -1257,7 +1257,7 @@ function gn(e) {
   try {
     let e = `BEGIN:VCALENDAR\r
 `;
-    (e += `VERSION:2.0\r
+    ((e += `VERSION:2.0\r
 `),
       (e += `BEGIN:VEVENT\r
 `),
@@ -1284,14 +1284,14 @@ function gn(e) {
 `),
       (e += `END:VCALENDAR\r
 `),
-      (d = `data:text/calendar;charset=utf-8;base64,${$e.fromByteArray(new TextEncoder().encode(e))}`);
+      (d = `data:text/calendar;charset=utf-8;base64,${$e.fromByteArray(new TextEncoder().encode(e))}`));
   } catch (e) {
     console.error(e);
   }
   let f = `https://calendar.google.com/calendar/render?action=TEMPLATE`;
-  (f += `&text=${encodeURI(t)}`),
+  ((f += `&text=${encodeURI(t)}`),
     (f += `&details=${encodeURI(i)}`),
-    (f += `&dates=${encodeURI(c + `/` + u)}`);
+    (f += `&dates=${encodeURI(c + `/` + u)}`));
   let p = (e) => {
     if (`ReactNativeWebView` in window) {
       let n = window.ReactNativeWebView,
@@ -1303,7 +1303,7 @@ function gn(e) {
           strNotes: i,
           strLocation: a,
         };
-      n.postMessage(JSON.stringify(r)), e.preventDefault();
+      (n.postMessage(JSON.stringify(r)), e.preventDefault());
     }
   };
   return (0, M.jsxs)(`div`, {

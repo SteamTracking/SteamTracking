@@ -35,4 +35,3 @@ var _ = _((_, _) => {
         : (window.classNames = _);
   })();
 });
-export { _ };

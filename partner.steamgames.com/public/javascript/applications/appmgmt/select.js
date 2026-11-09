@@ -48,8 +48,8 @@ function v(e) {
       refPopover: v,
       popoverLabel: s,
       setOpen: (e) => {
-        e && d(n.multiselect ? n.selectedValue[0] : n.selectedValue),
-          n.setOpen(e);
+        (e && d(n.multiselect ? n.selectedValue[0] : n.selectedValue),
+          n.setOpen(e));
       },
       focusedIndex: p,
       onFocusedIndexChange: m,
@@ -187,13 +187,13 @@ function T(e, t) {
     [a, o] = (0, g.useState)(!1),
     s = (0, g.useCallback)(
       (e) => {
-        n(e), t || o(!1);
+        (n(e), t || o(!1));
       },
       [n, t],
     ),
     c = (0, g.useCallback)(
       (e) => {
-        s(t ? [] : null), e?.stopPropagation(), e?.preventDefault();
+        (s(t ? [] : null), e?.stopPropagation(), e?.preventDefault());
       },
       [s, t],
     );
@@ -326,6 +326,6 @@ var N = Object.assign(M, j),
   P = (0, g.createContext)(null);
 function F(e) {
   let t = (0, g.useContext)(P);
-  return t || console.error(`${e} must be used within a <Select>!`), t;
+  return (t || console.error(`${e} must be used within a <Select>!`), t);
 }
 export { k as n, w as r, N as t };

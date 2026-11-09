@@ -187,7 +187,7 @@ function De(e, t, n) {
         : Math.round(parseFloat(e) * 100);
 }
 var j = {};
-(j.arabic = () =>
+((j.arabic = () =>
   m(() => import(`./market_ui_arabic.js`), [], import.meta.url)),
   (j.brazilian = () =>
     m(() => import(`./market_ui_brazilian.js`), [], import.meta.url)),
@@ -249,7 +249,7 @@ var j = {};
   (j.ukrainian = () =>
     m(() => import(`./market_ui_ukrainian.js`), [], import.meta.url)),
   (j.vietnamese = () =>
-    m(() => import(`./market_ui_vietnamese.js`), [], import.meta.url));
+    m(() => import(`./market_ui_vietnamese.js`), [], import.meta.url)));
 async function Oe(e) {
   if (j[e]) return await j[e]();
 }
@@ -257,7 +257,7 @@ var M = le(Oe),
   N = (0, T.createContext)(null);
 function ke() {
   let e = (0, T.useContext)(N);
-  return y(e, `No filter config provider found!`), e;
+  return (y(e, `No filter config provider found!`), e);
 }
 var Ae = `_1cm7q5EIecg-`,
   je = `x0wykImFlRE-`,
@@ -604,8 +604,8 @@ function rt(e) {
           for (let n of e) i[`${t.facet}_${n}`] = { facet: t.facet, tag: n };
         }
         for (let e of t)
-          i[`${e.facet}_${e.tag}`] || (a = I(a, e.facet, e.tag, !0)),
-            delete i[`${e.facet}_${e.tag}`];
+          (i[`${e.facet}_${e.tag}`] || (a = I(a, e.facet, e.tag, !0)),
+            delete i[`${e.facet}_${e.tag}`]);
         for (let e of Object.values(i)) a = I(a, e.facet, e.tag, !1);
         r(a, !0);
       };
@@ -624,7 +624,7 @@ function rt(e) {
     case `togglegrid`:
       return (0, D.jsx)(tt, { ...t, onChange: r, state: n });
     default:
-      return v(t, `Unhandled facet field type: "${t.fieldType}"`), null;
+      return (v(t, `Unhandled facet field type: "${t.fieldType}"`), null);
   }
 }
 function L(e, t, n, r, i, a) {
@@ -635,26 +635,26 @@ function L(e, t, n, r, i, a) {
     u = e.tags || {};
   for (let t of Object.keys(u)) {
     let r;
-    i && (r = (i.counts[e.name] && i.counts[e.name][t]) ?? 0), (s += r ?? 0);
+    (i && (r = (i.counts[e.name] && i.counts[e.name][t]) ?? 0), (s += r ?? 0));
     let a = R(e.name, t, u[t], r);
     if (a) {
-      if (!l[a.strLabel]) o.push(a), (l[a.strLabel] = a);
+      if (!l[a.strLabel]) (o.push(a), (l[a.strLabel] = a));
       else if (n) {
         let e = l[a.strLabel],
           t = typeof e.tag == `string` ? [e.tag] : e.tag,
           n = typeof a.tag == `string` ? [a.tag] : a.tag;
-        (e.tag = t.concat(...n)),
+        ((e.tag = t.concat(...n)),
           e.matches !== void 0 &&
             a.matches !== void 0 &&
             (e.matches = (e.matches ?? 0) + (a.matches ?? 0)),
-          e.color === void 0 && a.color && (e.color = a.color);
+          e.color === void 0 && a.color && (e.color = a.color));
       } else {
         let e;
-        do (e = `${a.strLabel} (?${c}?)`), c++;
+        do ((e = `${a.strLabel} (?${c}?)`), c++);
         while (l[e]);
         y(!1, `Forced to assign a unique label to option`, e, a, l[a.strLabel]);
         let t = { ...a, strLabel: e };
-        o.push(t), (l[t.strLabel] = t);
+        (o.push(t), (l[t.strLabel] = t));
       }
     }
   }
@@ -682,7 +682,7 @@ function L(e, t, n, r, i, a) {
 }
 function R(e, t, n, r) {
   let i = { facet: e, tag: t, strLabel: n.localized_name, matches: r };
-  return n.color && (i.color = `#${n.color}`), i;
+  return (n.color && (i.color = `#${n.color}`), i);
 }
 function z(e) {
   let { state: t, onStateChange: n } = e;
@@ -699,7 +699,7 @@ function it(e) {
     c = [0, i],
     u = (e) => (i) => {
       let a = [...t];
-      (a[e] = se(i, c[0], c[1])), n(a), r && r(a), s(!0);
+      ((a[e] = se(i, c[0], c[1])), n(a), r && r(a), s(!0));
     },
     {
       checkMin: d,
@@ -6881,11 +6881,11 @@ function wr(e) {
       let a = { ...n.accessories };
       if (i.length > 0) {
         let e = i.some((e) => e.is_artificial);
-        (a[t.internal_type] = {}),
+        ((a[t.internal_type] = {}),
           i.forEach((n) => {
             (!e || n.is_artificial) &&
               (a[t.internal_type][n.internal_facet] = !0);
-          });
+          }));
       } else delete a[t.internal_type];
       let o = { ...n, accessories: a };
       r(o, !0);
@@ -7214,7 +7214,7 @@ var W = [
 function Mr(e) {
   let t = {},
     n = (e, n) => {
-      t[e] || (t[e] = []), t[e].push(n);
+      (t[e] || (t[e] = []), t[e].push(n));
     },
     r = gn(),
     i = [];
@@ -7244,23 +7244,23 @@ function Mr(e) {
     } else {
       let r = e[t.facet],
         a = L(r, `select`, !1);
-      y(
+      (y(
         a.rgOptions.every((e) => typeof e.tag == `string`),
         `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${a.strLabel}" facet.`,
       ),
-        i.push({ facet: a, img: `` });
+        i.push({ facet: a, img: `` }));
       for (let e of Object.keys(r.tags || {})) n(r.name, e);
     }
   let a = [];
   for (let t of Dr) {
     let { facet: r, tag: i } = t;
-    n(r, i),
+    (n(r, i),
       a.push({
         fieldType: `togglebutton`,
         facet: r,
         tag: i,
         strLabel: J({ facet: r, tag: i }, e),
-      });
+      }));
   }
   let o = {
       fieldType: `select`,
@@ -7295,11 +7295,11 @@ function Mr(e) {
             let n = t.tags[e];
             if (!n) continue;
             let r = R(t.name, e, n);
-            y(
+            (y(
               typeof r.tag == `string`,
               `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${t.name}" facet.`,
             ),
-              i.push(r);
+              i.push(r));
           }
           e.push({
             facet: {
@@ -7388,13 +7388,13 @@ function Fr(e) {
       r = [];
     for (let e of t) {
       let t = e.facet;
-      n.has(t) || r.push(e), n.set(t, !0);
+      (n.has(t) || r.push(e), n.set(t, !0));
     }
     let i = () =>
         [...l.map((e) => e.facet), ...u, f, ...r.map((e) => e.facet)].reduce(
           (e, t) => {
             let n = Vr(t);
-            for (let [t, r] of n) e[t] || (e[t] = {}), (e[t][r] = !0);
+            for (let [t, r] of n) (e[t] || (e[t] = {}), (e[t][r] = !0));
             return e;
           },
           {},
@@ -7402,10 +7402,10 @@ function Fr(e) {
       a = null;
     for (let t of Object.keys(o.facets))
       for (let n of Object.keys(o.facets[t]))
-        (a ||= i()),
+        ((a ||= i()),
           (a[t] && a[t][n]) ||
-            ((e ||= { ...o, facets: { ...o.facets } }), (e = I(e, t, n, !1)));
-    g(r), e && s(e, !0);
+            ((e ||= { ...o, facets: { ...o.facets } }), (e = I(e, t, n, !1))));
+    (g(r), e && s(e, !0));
   }, [d, o, s, l, u, f]);
   let v = (e = [], t = []) => {
       let n = { ...o, facets: { ...o.facets } },
@@ -7431,8 +7431,8 @@ function Fr(e) {
             n.facets[r.facet][r.tag] &&
             delete n.facets[r.facet][r.tag];
       for (let e of t)
-        n.facets[e.facet] || (n.facets[e.facet] = {}),
-          (n.facets[e.facet] = { ...n.facets[e.facet], [e.tag]: !0 });
+        (n.facets[e.facet] || (n.facets[e.facet] = {}),
+          (n.facets[e.facet] = { ...n.facets[e.facet], [e.tag]: !0 }));
       s(n, !0);
     },
     y = (e, t) => v(e, t),
@@ -7562,7 +7562,7 @@ var Y = T.forwardRef(function (e, t) {
     } = e,
     u = o
       ? (e) => {
-          e.stopPropagation(), e.preventDefault(), o();
+          (e.stopPropagation(), e.preventDefault(), o());
         }
       : void 0,
     d = (0, D.jsxs)(h, {
@@ -8000,7 +8000,7 @@ function Vr(e) {
     case `togglegrid`:
       return e.rgToggles.map(({ facet: e, tag: t }) => [e, t]);
     default:
-      return v(e, `Unhandled facet type`), [];
+      return (v(e, `Unhandled facet type`), []);
   }
 }
 function Hr(e, t = !1) {

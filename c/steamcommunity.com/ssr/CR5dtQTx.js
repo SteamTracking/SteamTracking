@@ -15,4 +15,3 @@ function _(_) {
     staleTime: _,
   };
 }
-export { _, _, _, _, _ };

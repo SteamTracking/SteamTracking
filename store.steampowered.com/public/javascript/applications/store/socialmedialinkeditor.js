@@ -78,25 +78,25 @@ function N(e) {
         (I(U.current.firstElementChild.getBoundingClientRect().height),
         R(U.current.firstElementChild.getBoundingClientRect().width));
     };
-  w.useEffect(() => {
+  (w.useEffect(() => {
     q();
   }, []),
-    w.useEffect(() => () => K.cancel(`ReorderableList unmounting`), [K]);
+    w.useEffect(() => () => K.cancel(`ReorderableList unmounting`), [K]));
   let J = (e, t) => {
       let n = W.current[e]?.current;
       if (!n) {
         console.error(`start element grab missing element at index ` + e);
         return;
       }
-      y(!0), k(e), B(void 0), N(e);
+      (y(!0), k(e), B(void 0), N(e));
       let r = t.clientX - n.getBoundingClientRect().left;
       C(r);
       let i = t.clientY - n.getBoundingClientRect().top;
-      D(i),
+      (D(i),
         (n.style.position = `fixed`),
         (n.style.left = t.clientX - r + `px`),
         (n.style.top = t.clientY - i + `px`),
-        (n.style.zIndex = `1`);
+        (n.style.zIndex = `1`));
     },
     Y = w.useCallback(
       (e) => {
@@ -110,13 +110,13 @@ function N(e) {
     ),
     X = w.useCallback(() => {
       let e = W.current[O]?.current;
-      e
+      (e
         ? ((e.style.position = ``), (e.style.zIndex = ``))
         : console.error(`end element drag missing element`),
         y(!1),
         k(-1),
         B(void 0),
-        N(void 0);
+        N(void 0));
     }, [O]),
     ee = (e, t) => {
       K.token.reason ||
@@ -148,16 +148,16 @@ function N(e) {
             n = e;
             break;
           }
-        N(n ?? G.current.length), Y(e);
+        (N(n ?? G.current.length), Y(e));
       },
       [_, K, Y],
     );
-  g(window, `mousemove`, _ ? ne : void 0),
+  (g(window, `mousemove`, _ ? ne : void 0),
     g(window, `mouseup`, _ ? te : void 0),
     w.useEffect(() => {
       for (let e = W.current.length; e < t.length; e++)
-        W.current.push(w.createRef()), G.current.push(w.createRef());
-    }, [t.length]);
+        (W.current.push(w.createRef()), G.current.push(w.createRef()));
+    }, [t.length]));
   let Q = (e) => {
       B(void 0);
       let t = V?.trim(),
@@ -229,7 +229,7 @@ function N(e) {
                   onChange: (e) => H(e.target.value),
                   onKeyDown: (e) => re(e, a),
                   onFocus: (e) => {
-                    B(a), H(e.target.value);
+                    (B(a), H(e.target.value));
                   },
                   onBlur: () => Q(a),
                 }),
@@ -295,11 +295,11 @@ function F(e) {
     ),
     o = (e) => {
       let r = t.slice();
-      r.splice(e, 1), n(r);
+      (r.splice(e, 1), n(r));
     },
     s = (e, r) => {
       let i = t.slice();
-      b(i, e, r), n(i);
+      (b(i, e, r), n(i));
     },
     c = (e, r) => {
       let i = t.map((t, n) => (n === e ? { ...t, link: r } : t));
@@ -311,7 +311,7 @@ function F(e) {
         options: a,
         onAddLink: (e) => {
           let r = t.slice();
-          r.push({ type: e, link: `` }), n(r);
+          (r.push({ type: e, link: `` }), n(r));
         },
       }),
       (0, M.jsx)(N, {
@@ -448,11 +448,11 @@ function z(e) {
                 className: `btnv6_blue_hoverfade btn_medium`,
                 href: `#`,
                 onClick: (e) => {
-                  e.preventDefault(),
+                  (e.preventDefault(),
                     window.g_StoreLocHelper?.SaveFields([`tagline`]),
                     window.UpdateCuratorFromForm?.(
                       document.getElementById(`listform`),
-                    );
+                    ));
                 },
                 children: (0, M.jsx)(`span`, { children: y(`#Button_Save`) }),
               }),

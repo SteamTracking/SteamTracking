@@ -1,6 +1,6 @@
 var _ = class extends _ {
   constructor(_, _) {
-    super(),
+    (super(),
       (this.options = _),
       (this.#e = _),
       (this.#s = null),
@@ -10,7 +10,7 @@ var _ = class extends _ {
           Error(`experimental_prefetchInRender feature flag is not enabled`),
         ),
       this.bindMethods(),
-      this.setOptions(_);
+      this.setOptions(_));
   }
   #e;
   #t = void 0;
@@ -46,10 +46,10 @@ var _ = class extends _ {
     return _(this.#t, this.options, this.options.refetchOnWindowFocus);
   }
   destroy() {
-    (this.listeners = new Set()),
+    ((this.listeners = new Set()),
       this.#b(),
       this.#x(),
-      this.#t.removeObserver(this);
+      this.#t.removeObserver(this));
   }
   setOptions(_, _) {
     let _ = this.options,
@@ -64,7 +64,7 @@ var _ = class extends _ {
       throw Error(
         `Expected enabled to be a boolean or a callback that returns a boolean`,
       );
-    this.#S(),
+    (this.#S(),
       this.#t.setOptions(this.options),
       _._defaulted &&
         !_(this.options, _) &&
@@ -72,15 +72,15 @@ var _ = class extends _ {
           type: `observerOptionsUpdated`,
           query: this.#t,
           observer: this,
-        });
+        }));
     let _ = this.hasListeners();
-    _ && _(this.#t, _, this.options, _) && this.#h(),
+    (_ && _(this.#t, _, this.options, _) && this.#h(),
       this.updateResult(_),
       _ &&
         (this.#t !== _ ||
           _(this.options.enabled, this.#t) !== _(_.enabled, this.#t) ||
           _(this.options.staleTime, this.#t) !== _(_.staleTime, this.#t)) &&
-        this.#g();
+        this.#g());
     let _ = this.#_();
     _ &&
       (this.#t !== _ ||
@@ -138,7 +138,7 @@ var _ = class extends _ {
   #h(_) {
     this.#S();
     let _ = this.#t.fetch(this.options, _);
-    return _?.throwOnError || (_ = _.catch(_)), _;
+    return (_?.throwOnError || (_ = _.catch(_)), _);
   }
   #g() {
     this.#b();
@@ -157,7 +157,7 @@ var _ = class extends _ {
     );
   }
   #v(_) {
-    this.#x(),
+    (this.#x(),
       (this.#p = _),
       !_ &&
         _(this.options.enabled, this.#t) !== !1 &&
@@ -166,10 +166,10 @@ var _ = class extends _ {
         (this.#f = setInterval(() => {
           (this.options.refetchIntervalInBackground || _.isFocused()) &&
             this.#h();
-        }, this.#p));
+        }, this.#p)));
   }
   #y() {
-    this.#g(), this.#v(this.#_());
+    (this.#g(), this.#v(this.#_()));
   }
   #b() {
     this.#d &&= (clearTimeout(this.#d), void 0);
@@ -194,23 +194,23 @@ var _ = class extends _ {
       let _ = this.hasListeners(),
         _ = !_ && _(_, _),
         _ = _ && _(_, _, _, _);
-      (_ || _) &&
+      ((_ || _) &&
         (_ = {
           ..._,
           ..._(_.data, _.options),
         }),
-        _._optimisticResults === `isRestoring` && (_.fetchStatus = `idle`);
+        _._optimisticResults === `isRestoring` && (_.fetchStatus = `idle`));
     }
     let { error: _, errorUpdatedAt: _, status: _ } = _;
     if (_.select && _.data !== void 0) {
       if (_ && _.data === _?.data && _.select === this.#c) _ = this.#l;
       else
         try {
-          (this.#c = _.select),
+          ((this.#c = _.select),
             (_ = _.select(_.data)),
             (_ = _(_?.data, _, _)),
             (this.#l = _),
-            (this.#s = null);
+            (this.#s = null));
         } catch (_) {
           this.#s = _;
         }
@@ -227,7 +227,7 @@ var _ = class extends _ {
         _.select && _ !== void 0)
       )
         try {
-          (_ = _.select(_)), (this.#s = null);
+          ((_ = _.select(_)), (this.#s = null));
         } catch (_) {
           this.#s = _;
         }
@@ -304,7 +304,7 @@ var _ = class extends _ {
       return;
     this.#r = _;
     let _ = {};
-    _?.listeners !== !1 &&
+    (_?.listeners !== !1 &&
       (() => {
         if (!_) return !0;
         let { notifyOnChangeProps: _ } = this.options,
@@ -323,29 +323,29 @@ var _ = class extends _ {
       this.#C({
         ..._,
         ..._,
-      });
+      }));
   }
   #S() {
     let _ = this.#e.getQueryCache().build(this.#e, this.options);
     if (_ === this.#t) return;
     let _ = this.#t;
-    (this.#t = _),
+    ((this.#t = _),
       (this.#n = _.state),
-      this.hasListeners() && (_?.removeObserver(this), _.addObserver(this));
+      this.hasListeners() && (_?.removeObserver(this), _.addObserver(this)));
   }
   onQueryUpdate() {
-    this.updateResult(), this.hasListeners() && this.#y();
+    (this.updateResult(), this.hasListeners() && this.#y());
   }
   #C(_) {
     _.batch(() => {
-      _.listeners &&
+      (_.listeners &&
         this.listeners.forEach((_) => {
           _(this.#r);
         }),
         this.#e.getQueryCache().notify({
           query: this.#t,
           type: `observerResultsUpdated`,
-        });
+        }));
     });
   }
 };
@@ -429,11 +429,11 @@ function _(_, _, _) {
     _ = _(),
     _ = _(),
     _ = _.defaultQueryOptions(_);
-  _.getDefaultOptions().queries?._experimental_beforeQuery?.(_),
+  (_.getDefaultOptions().queries?._experimental_beforeQuery?.(_),
     (_._optimisticResults = _ ? `isRestoring` : `optimistic`),
     _(_),
     _(_, _),
-    _(_);
+    _(_));
   let _ = !_.getQueryCache().get(_.queryHash),
     [_] = _.useState(() => new _(_, _)),
     _ = _.getOptimisticResult(_);
@@ -442,7 +442,7 @@ function _(_, _, _) {
       _.useCallback(
         (_) => {
           let _ = _ ? _ : _.subscribe(_.batchCalls(_));
-          return _.updateResult(), _;
+          return (_.updateResult(), _);
         },
         [_, _],
       ),
@@ -482,4 +482,3 @@ function _(_, _, _) {
 function _(_, _) {
   return _(_, _, _);
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

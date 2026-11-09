@@ -52,13 +52,13 @@ var _ = _(_()),
     m_bAreEventListenersRegistered = !1;
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
     constructor() {}
     ResetFidgetTimer(_) {
       this.m_timer && window.clearTimeout(this.m_timer);
       let _ = () => {
-        (this.m_timer = null), this.m_callbackList.Dispatch();
+        ((this.m_timer = null), this.m_callbackList.Dispatch());
       };
       this.m_timer = window.setTimeout(_, _);
     }
@@ -72,13 +72,13 @@ var _ = _(_()),
       if (this.m_bAreEventListenersRegistered) return !1;
       let _ = window;
       for (let _ of _) _.addEventListener(_, this.ResetFidgetTimer);
-      return (this.m_bAreEventListenersRegistered = !0), !0;
+      return ((this.m_bAreEventListenersRegistered = !0), !0);
     }
     BUnregisterEventListeners() {
       if (!this.m_bAreEventListenersRegistered) return !1;
       let _ = window;
       for (let _ of _) _.removeEventListener(_, this.ResetFidgetTimer);
-      return (this.m_bAreEventListenersRegistered = !1), !1;
+      return ((this.m_bAreEventListenersRegistered = !1), !1);
     }
   };
 _([_], _.prototype, `ResetFidgetTimer`, null);
@@ -120,7 +120,7 @@ var _ = _(_()),
     m_rgPendingQuestionGIDs = [];
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
     constructor() {}
     GetQAndACallbackList(_) {
@@ -197,7 +197,7 @@ var _ = _(_()),
           _.VANITY_ID +
           `/ajaxcreateqanda`,
         _ = new FormData();
-      _.append(`sessionid`, _()), _.append(`name`, _);
+      (_.append(`sessionid`, _()), _.append(`name`, _));
       let _ = null;
       try {
         let _ = await _.default.post(_, _, {
@@ -231,7 +231,7 @@ var _ = _(_()),
           `/ajaxrenameqanda/` +
           _,
         _ = new FormData();
-      _.append(`sessionid`, _()), _.append(`name`, _);
+      (_.append(`sessionid`, _()), _.append(`name`, _));
       let _ = null;
       try {
         let _ = await _.default.post(_, _, {
@@ -323,8 +323,8 @@ var _ = _(_()),
                 ..._,
                 bUserUpVoted: _,
               };
-            this.m_mapQuestions.set(_, _),
-              this.GetQuestionCallbackList(_).Dispatch(_);
+            (this.m_mapQuestions.set(_, _),
+              this.GetQuestionCallbackList(_).Dispatch(_));
           }
           let _ =
               this.m_mapQAndASessions.get(_)?.bUserCanModerate ??
@@ -385,7 +385,7 @@ var _ = _(_()),
           `/ajaxaskquestion/` +
           _,
         _ = new FormData();
-      _.append(`sessionid`, _()), _.append(`question`, _);
+      (_.append(`sessionid`, _()), _.append(`question`, _));
       let _ = null;
       try {
         let _ = await _.default.post(_, _, {
@@ -426,9 +426,9 @@ var _ = _(_()),
           `/ajaxmoderatequestion/` +
           _,
         _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`gidquestion`, _),
-        _.append(`action`, _ == 1 ? `show` : `hide`);
+        _.append(`action`, _ == 1 ? `show` : `hide`));
       let _ = null;
       try {
         let _ = await _.default.post(_, _, {
@@ -436,7 +436,7 @@ var _ = _(_()),
           cancelToken: _?.token,
         });
         if (_?.status == 200 && _.data?.success == 1)
-          return this.LoadSession(_, !0, _), 1;
+          return (this.LoadSession(_, !0, _), 1);
         _ = {
           response: _,
         };
@@ -463,9 +463,9 @@ var _ = _(_()),
           `/ajaxanswerquestion/` +
           _,
         _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`gidquestion`, _),
-        _.append(`answer`, _);
+        _.append(`answer`, _));
       let _ = null;
       try {
         let _ = await _.default.post(_, _, {
@@ -473,7 +473,7 @@ var _ = _(_()),
           cancelToken: _?.token,
         });
         if (_?.status == 200 && _.data?.success == 1)
-          return this.LoadSession(_, !0, _), 1;
+          return (this.LoadSession(_, !0, _), 1);
         _ = {
           response: _,
         };
@@ -497,13 +497,13 @@ var _ = _(_()),
       let _ = this.m_mapQuestions.get(_),
         _ = _.nVoteCount,
         _ = _ + (_ ? 1 : -1);
-      (_ = {
+      ((_ = {
         ..._,
         nVoteCount: _,
         bUserUpVoted: _,
       }),
         this.m_mapQuestions.set(_, _),
-        this.GetQuestionCallbackList(_).Dispatch(_);
+        this.GetQuestionCallbackList(_).Dispatch(_));
       let _ =
           _.COMMUNITY_BASE_URL +
           `questions/` +
@@ -511,9 +511,9 @@ var _ = _(_()),
           `/ajaxvoteforquestion/` +
           _,
         _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`gidquestion`, _),
-        _.append(`up`, _ ? `1` : `0`);
+        _.append(`up`, _ ? `1` : `0`));
       let _ = null;
       try {
         let _ = await _.default.post(_, _, {
@@ -527,13 +527,13 @@ var _ = _(_()),
       } catch (_) {
         _ = _;
       }
-      (_ = {
+      ((_ = {
         ..._,
         nVoteCount: _,
         bUserUpVoted: !_,
       }),
         this.m_mapQuestions.set(_, _),
-        this.GetQuestionCallbackList(_).Dispatch(_);
+        this.GetQuestionCallbackList(_).Dispatch(_));
       let _ = _(_);
       return (
         console.error(`Could not upload vote`, _, _, _, _.strErrorMsg, _),
@@ -633,7 +633,7 @@ function _(_) {
     _ = _.useCallback(() => {
       _(!0);
       let _ = _.Get().LoadSession(_, !1, _);
-      return _.then(() => _(!1)), _;
+      return (_.then(() => _(!1)), _);
     }, [_, _]),
     _ = _(_);
   return (
@@ -1016,7 +1016,7 @@ function _(_) {
       _.gidSession,
     _ = _.useCallback(
       (_) => {
-        _.stopPropagation(),
+        (_.stopPropagation(),
           _.preventDefault(),
           _(
             (0, _.jsx)(_, {
@@ -1026,7 +1026,7 @@ function _(_) {
             {
               strTitle: _(`#QAndA_CreateQAndA_Title`),
             },
-          );
+          ));
       },
       [_],
     );
@@ -1062,12 +1062,12 @@ function _(_) {
     [_, _] = _.useState(_.strName),
     _ = _(),
     _ = (_) => {
-      _.stopPropagation(), _.preventDefault(), _ || _(!0);
+      (_.stopPropagation(), _.preventDefault(), _ || _(!0));
     },
     _ = (_) => {
-      _.stopPropagation(),
+      (_.stopPropagation(),
         _.preventDefault(),
-        _(_, _.strName) == 0 ? _(!1) : _(_.gidSession, _).then(() => _(!1));
+        _(_, _.strName) == 0 ? _(!1) : _(_.gidSession, _).then(() => _(!1)));
     },
     _ =
       _.strName.length > 0
@@ -1596,7 +1596,7 @@ function _(_) {
               }),
             (0, _.jsx)(_, {
               onClick: async () => {
-                _(!0), (await _(_)) == 1 && _(``), _(!1);
+                (_(!0), (await _(_)) == 1 && _(``), _(!1));
               },
               disabled: _ || !_,
               className: _,
@@ -1625,4 +1625,3 @@ function _(_) {
     ],
   });
 }
-export { _, _, _ };

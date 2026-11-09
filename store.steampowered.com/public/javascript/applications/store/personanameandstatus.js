@@ -178,7 +178,7 @@ var V = class extends y.Component {
       W = null,
       G = null,
       K = [e, void 0, a(n), l ? B : void 0, D ? I : void 0];
-    T || n.has_public_party_beacon
+    (T || n.has_public_party_beacon
       ? (W = (0, O.jsx)(re, { persona: n }))
       : g(r)
         ? ((W = f(`#PersonaStateBlocked`)), K.push(N))
@@ -192,12 +192,12 @@ var V = class extends y.Component {
               : i && n.is_awayOrSnooze && (G = f(`#PersonaStateAway`)))
           : n.m_broadcastAccountId && (W = f(`#PersonaStateWatchingBroadcast`)),
       (W ||= n.GetLocalizedOnlineStatus()),
-      x && (W = x());
+      x && (W = x()));
     let q = !C && !y;
-    y === !1 && (q = !0),
-      n.is_awayOrSnooze && q && (U = (0, O.jsx)(k, { persona: n }));
+    (y === !1 && (q = !0),
+      n.is_awayOrSnooze && q && (U = (0, O.jsx)(k, { persona: n })));
     let J = (0, O.jsx)(O.Fragment, {});
-    t
+    (t
       ? (J = (0, O.jsx)(`div`, {
           className: `ContextMenuButton`,
           onClick: t,
@@ -206,7 +206,7 @@ var V = class extends y.Component {
       : K.push(ne),
       C && K.push(z),
       S && (G = S()),
-      (_ || !G) && K.push(L);
+      (_ || !G) && K.push(L));
     let Y = !n.is_ingame && !b,
       X = !v && G,
       Z = W && (!_ || !X),

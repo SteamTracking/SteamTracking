@@ -124,11 +124,11 @@ function _(_) {
                 : 1;
           })
           .forEach((_) => {
-            _.has(_.item_class) || _.set(_.item_class, []),
+            (_.has(_.item_class) || _.set(_.item_class, []),
               _.get(_.item_class).push({
                 ..._,
                 user_has_item: _.has(`${_.appid}_${_.item_type}`),
-              });
+              }));
           }),
         _
       );
@@ -137,10 +137,11 @@ function _(_) {
       if (_.has(3)) {
         let _ = _.get(3).filter(
           (_) => (
-            JSON.parse(_.item_key_values), _.item_movie_webm && _.item_movie_mp4
+            JSON.parse(_.item_key_values),
+            _.item_movie_webm && _.item_movie_mp4
           ),
         );
-        if (_.length) return _(_), _[0];
+        if (_.length) return (_(_), _[0]);
       }
       return null;
     }, [_]),
@@ -283,11 +284,11 @@ function _(_) {
           })
           .forEach((_) => {
             let _ = _.has(`${_.appid}_${_.item_type}`);
-            _.has(_.item_class) || _.set(_.item_class, []),
+            (_.has(_.item_class) || _.set(_.item_class, []),
               _.get(_.item_class).push({
                 ..._,
                 user_has_item: _,
-              });
+              }));
           }),
         _
       );

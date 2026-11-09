@@ -12,4 +12,3 @@ function _(_, _ = `#Played_`, _ = !1) {
   }
   return _(_ && _ == 1 ? _ + `Minute` : _ + `Minutes`, _);
 }
-export { _ };

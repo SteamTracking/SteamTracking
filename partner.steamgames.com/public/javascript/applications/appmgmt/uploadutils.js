@@ -6,7 +6,7 @@ function e() {
   let e, t;
   return {
     promise: new Promise((n, r) => {
-      (e = n), (t = r);
+      ((e = n), (t = r));
     }),
     resolve: e,
     reject: t,
@@ -76,8 +76,8 @@ function a(t) {
   return (
     (r.onload = () => n.resolve(r)),
     (r.onerror = (e) => {
-      console.error(`LoadImage failed to load the image, details`, e),
-        n.resolve(void 0);
+      (console.error(`LoadImage failed to load the image, details`, e),
+        n.resolve(void 0));
     }),
     (r.src = t),
     n.promise
@@ -90,8 +90,8 @@ function o(t) {
     (r.preload = `metadata`),
     r.addEventListener(`loadedmetadata`, () => n.resolve(r)),
     (r.onerror = (e) => {
-      console.error(`LoadVideo failed to load the video, details`, e),
-        n.resolve(void 0);
+      (console.error(`LoadVideo failed to load the video, details`, e),
+        n.resolve(void 0));
     }),
     (r.src = t),
     n.promise
@@ -111,15 +111,15 @@ async function u(t, n) {
   {
     let n = e(),
       r = new FileReader();
-    (r.onload = () => n.resolve(r.result ?? void 0)),
+    ((r.onload = () => n.resolve(r.result ?? void 0)),
       (r.onerror = () => {
-        console.error(
+        (console.error(
           `GetMediaElementFromFile failed to load the image, details`,
           r.error,
         ),
-          n.resolve(void 0);
+          n.resolve(void 0));
       }),
-      r.readAsDataURL(t);
+      r.readAsDataURL(t));
     let i = await n.promise;
     return i ? a(i.toString()) : void 0;
   }

@@ -34,20 +34,19 @@ var _ = class _ {
   }
   static s_globalSingletonStore;
   static Get() {
-    return (_.s_globalSingletonStore ||= new _()), _.s_globalSingletonStore;
+    return ((_.s_globalSingletonStore ||= new _()), _.s_globalSingletonStore);
   }
   constructor() {
     _(this);
   }
 };
-_([_], _.prototype, `m_eCurLang`, void 0),
+(_([_], _.prototype, `m_eCurLang`, void 0),
   _([_], _.prototype, `m_rgHasData`, void 0),
   _([_], _.prototype, `m_bHasLocalizationContext`, void 0),
   _([_], _.prototype, `GetCurEditLanguage`, null),
   _([_], _.prototype, `SetCurEditLanguage`, null),
   _([_.bound], _.prototype, `SetHasLanguage`, null),
-  _([_], _.prototype, `BHasLanguageData`, null);
+  _([_], _.prototype, `BHasLanguageData`, null));
 function _() {
   return _(() => _.Get().GetCurEditLanguage());
 }
-export { _, _ };

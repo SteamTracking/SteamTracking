@@ -26,7 +26,7 @@ var _ = _(_()),
       if (this.m_storage) return;
       this.m_storage = _;
       let _ = await _(_);
-      Object.keys(_ || {}).forEach((_) => {
+      (Object.keys(_ || {}).forEach((_) => {
         let _ = !!_[_];
         this.m_tours[_] = {
           ...(this.m_tours[_] || {
@@ -35,10 +35,10 @@ var _ = _(_()),
           bSeen: _,
         };
       }),
-        (this.m_bReady = !0);
+        (this.m_bReady = !0));
     }
     UpdateStop(_, _, _, _) {
-      this.m_tours[_] ||
+      (this.m_tours[_] ||
         (this.m_tours[_] = {
           bSeen: !1,
           stops: {},
@@ -46,7 +46,7 @@ var _ = _(_()),
         (this.m_tours[_].stops[_] = {
           options: _,
           elem: _,
-        });
+        }));
     }
     BHasSeenTour(_) {
       return !this.m_bReady || (this.m_tours[_] && this.m_tours[_].bSeen);
@@ -55,10 +55,10 @@ var _ = _(_()),
       return this.m_tours[_]?.stops || {};
     }
     ActivateTour(_) {
-      this.m_strActiveTour &&
+      (this.m_strActiveTour &&
         this.m_strActiveTour !== _ &&
         this.DismissTour(this.m_strActiveTour),
-        (this.m_strActiveTour = _);
+        (this.m_strActiveTour = _));
     }
     DismissTour(_) {
       this.m_tours[_] &&
@@ -73,12 +73,12 @@ var _ = _(_()),
       return _(this.m_storage, _, void 0);
     }
   };
-_([_], _.prototype, `m_tours`, void 0),
+(_([_], _.prototype, `m_tours`, void 0),
   _([_], _.prototype, `m_strActiveTour`, void 0),
   _([_], _.prototype, `m_bReady`, void 0),
   _([_.bound], _.prototype, `UpdateStop`, null),
   _([_], _.prototype, `ActivateTour`, null),
-  _([_], _.prototype, `DismissTour`, null);
+  _([_], _.prototype, `DismissTour`, null));
 var _ = `tour_history`;
 async function _(_) {
   let _ = await _.GetObject(_);
@@ -133,7 +133,7 @@ function _(_) {
     [_, _] = (0, _.useState)(0);
   if (!_ || !_ || _ >= _.length) return null;
   let _ = () => {
-      _(_ + 1), _();
+      (_(_ + 1), _());
     },
     { _: _, title: _, content: _ } = _[_],
     _ = _[_];
@@ -330,19 +330,18 @@ function _(_, _) {
   };
   switch (_) {
     case `right`:
-      (_.left = `0px`), (_.top = `${Math.max(_.height / 2 - _, _)}px`);
+      ((_.left = `0px`), (_.top = `${Math.max(_.height / 2 - _, _)}px`));
       break;
     case `left`:
-      (_.right = `0px`), (_.top = `${Math.max(_.height / 2 - _, _)}px`);
+      ((_.right = `0px`), (_.top = `${Math.max(_.height / 2 - _, _)}px`));
       break;
     case `above`:
-      (_.bottom = `-10px`),
-        (_.insetInlineStart = `${Math.max(_.width / 2 - _, _)}px`);
+      ((_.bottom = `-10px`),
+        (_.insetInlineStart = `${Math.max(_.width / 2 - _, _)}px`));
       break;
     case `below`:
-      (_.top = `-10px`),
-        (_.insetInlineStart = `${Math.max(_.width / 2 - _, _)}px`);
+      ((_.top = `-10px`),
+        (_.insetInlineStart = `${Math.max(_.width / 2 - _, _)}px`));
   }
   return _;
 }
-export { _, _ };

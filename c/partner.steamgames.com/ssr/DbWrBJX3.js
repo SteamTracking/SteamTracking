@@ -9,4 +9,4 @@ function _() {
     _ &&
     (document.cookie = `timezoneName=${_};expires=${new Date(Date.now() + 31536e6).toUTCString()};path=/;Secure;SameSite=None;`);
 }
-_(), _(), _();
+(_(), _(), _());

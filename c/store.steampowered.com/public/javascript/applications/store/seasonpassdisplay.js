@@ -295,7 +295,7 @@ function _(_) {
             underline: `always`,
             contrast: `title`,
             onClick: (_) => {
-              _.preventDefault(), _.stopPropagation(), _(!0);
+              (_.preventDefault(), _.stopPropagation(), _(!0));
             },
             children: _(`#SeasonPass_ReadEvent`),
           }),

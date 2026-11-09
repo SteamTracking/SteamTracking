@@ -49,7 +49,7 @@
   mask-image: linear-gradient(90deg, #0000 4%, #000 30% 70%, #0000 96%);
 }
 .pRJkF9pz-wk- img {
-  aspect-ratio: 1920 / 620;
+  aspect-ratio: 1920/620;
   filter: saturate(0.6) opacity(0.4);
   -webkit-mask-image: linear-gradient(#000 78%, #0000 98%);
   background-blend-mode: multiply;
@@ -152,7 +152,7 @@
   margin-bottom: clamp(30px, 4vw, 60px);
 }
 .S-bqOgtMzmg- {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16/9;
   width: 51.5%;
   position: absolute;
   top: 18%;

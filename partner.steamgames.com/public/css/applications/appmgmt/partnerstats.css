@@ -3,7 +3,7 @@
   height: 210px;
 }
 ._7FQdtBvoXrk- {
-  grid-template: "vo vo" "controls controls" "numbers graph" / 20% 80%;
+  grid-template: "vo vo" "controls controls" "numbers graph"/20% 80%;
   display: grid;
 }
 ._7FQdtBvoXrk- p.valveh2 {

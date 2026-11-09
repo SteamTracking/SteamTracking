@@ -64,4 +64,3 @@ var _ = (0, _.createContext)(null),
   _ = Object.assign(_, {
     Item: _,
   });
-export { _ };

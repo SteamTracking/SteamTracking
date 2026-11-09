@@ -19,11 +19,11 @@ function _(_, _) {
     _ = _.useCallback(
       (_) => {
         let _ = _(_) ? String(_) : void 0;
-        _ === void 0
+        (_ === void 0
           ? window.localStorage.removeItem(_)
           : window.localStorage.setItem(_, _),
           _(_),
-          _.Get().GetLocalStoreChangeCallback(_).Dispatch(_);
+          _.Get().GetLocalStoreChangeCallback(_).Dispatch(_));
       },
       [_, _],
     );
@@ -55,7 +55,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
 };
 function _([_, _, _]) {
@@ -65,19 +65,19 @@ function _([_, _, _]) {
     _,
     _;
   if (_ !== 0) _ = (_ - _) / _;
-  else return (_ = 0), (_ = 0), [_, _, _];
+  else return ((_ = 0), (_ = 0), [_, _, _]);
   if (_ === 0) _ = 0;
   else {
     let _ = _ - _;
-    (_ = _ === _ ? (_ - _) / _ : _ === _ ? 2 + (_ - _) / _ : 4 + (_ - _) / _),
+    ((_ = _ === _ ? (_ - _) / _ : _ === _ ? 2 + (_ - _) / _ : 4 + (_ - _) / _),
       (_ *= 60),
-      _ < 0 && (_ += 360);
+      _ < 0 && (_ += 360));
   }
   return [_, _, _];
 }
 function _([_, _, _]) {
   if (_ === 0) return [_, _, _];
-  (_ = ((_ % 360) + 360) % 360), (_ /= 60);
+  ((_ = ((_ % 360) + 360) % 360), (_ /= 60));
   let _ = Math.floor(_),
     _ = _ - _,
     _ = _ * (1 - _),
@@ -240,17 +240,17 @@ function _(_) {
   if (typeof CSS > `u` || !CSS.supports(`color`, _)) return;
   if (_ === void 0) {
     let _ = document.createElement(`canvas`);
-    (_.width = _.height = 1),
+    ((_.width = _.height = 1),
       (_ = _.getContext(`2d`, {
         willReadFrequently: !0,
-      }));
+      })));
   }
   let _ = _;
   if (!_) return;
-  _.clearRect(0, 0, 1, 1),
+  (_.clearRect(0, 0, 1, 1),
     (_.fillStyle = `#000000`),
     (_.fillStyle = _),
-    _.fillRect(0, 0, 1, 1);
+    _.fillRect(0, 0, 1, 1));
   let [_, _, _, _] = _.getImageData(0, 0, 1, 1).data;
   return {
     _: _,
@@ -328,7 +328,7 @@ function _(_) {
           : _;
         _(_);
         let _ = _(_);
-        (_.current = _), _(_(_));
+        ((_.current = _), _(_(_)));
       },
       [_, _],
     ),
@@ -543,7 +543,7 @@ function _(_) {
       _ && _(_);
     },
     _ = (_) => {
-      _(_), _(void 0);
+      (_(_), _(void 0));
     };
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -697,12 +697,12 @@ function _(_) {
   };
   let _ = (0, _.useCallback)(
       (_) => {
-        (_.current = _), _ && _(_);
+        ((_.current = _), _ && _(_));
       },
       [_, _],
     ),
     _ = (0, _.useCallback)(() => {
-      (_.current = !0), !_ && _.current !== void 0 && _(_.current), _();
+      ((_.current = !0), !_ && _.current !== void 0 && _(_.current), _());
     }, [_, _, _]);
   return (
     (0, _.useEffect)(
@@ -710,7 +710,7 @@ function _(_) {
         let _ = _.current;
         if (!_.current && _.bLivePreview && _.current !== void 0)
           try {
-            _.onChange(_.color), _.fnRestoreChanges?.();
+            (_.onChange(_.color), _.fnRestoreChanges?.());
           } catch (_) {
             console.error(`Color picker: could not undo a previewed color`, _);
           }
@@ -729,8 +729,8 @@ function _(_) {
         _.addEventListener(`pointerdown`, _, !0),
         _.addEventListener(`keydown`, _, !0),
         () => {
-          _.removeEventListener(`pointerdown`, _, !0),
-            _.removeEventListener(`keydown`, _, !0);
+          (_.removeEventListener(`pointerdown`, _, !0),
+            _.removeEventListener(`keydown`, _, !0));
         }
       );
     }, [_]),
@@ -837,11 +837,11 @@ function _(_) {
       onDragOver: _ ? _ : void 0,
       onDrop: _.useCallback(
         (_) => {
-          _.dataTransfer.files?.length &&
+          (_.dataTransfer.files?.length &&
             (_(_.dataTransfer.files, _),
             _.preventDefault(),
             _.stopPropagation()),
-            _(!1);
+            _(!1));
         },
         [_],
       ),
@@ -926,7 +926,7 @@ function _(_) {
             { language: _ } = _(_?.name, _);
           try {
             let _ = _(_, _, _);
-            (_ = await _.AddImageForLanguage(_, _)),
+            ((_ = await _.AddImageForLanguage(_, _)),
               _ ||
                 (console.error(
                   `ImageUploaderPanel.OnDropFiles: failed on i=` +
@@ -939,10 +939,10 @@ function _(_) {
                     strDescription: _(`#ImagePicker_Error`, _.name),
                   }),
                   window,
-                ));
+                )));
           } catch (_) {
             let _ = _(_);
-            console.error(
+            (console.error(
               `ImageUploaderPanel.OnDropFiles: ` + _.strErrorMsg,
               _,
             ),
@@ -951,7 +951,7 @@ function _(_) {
                   strDescription: _(`#EventError_Code`, _.strErrorMsg ?? ``),
                 }),
                 window,
-              );
+              ));
           }
         }
         return _;
@@ -1076,10 +1076,10 @@ function _(_) {
     _ = _.ImageOptions?.map((_) => {
       let _ = _?.fnGetLabelText(),
         _;
-      _.bEnforceDimensions && (_ += ` - ${_.width}x${_.height}`),
+      (_.bEnforceDimensions && (_ += ` - ${_.width}x${_.height}`),
         _.bDeprecated &&
           ((_ += ` ${_(`#ImageUpload_Deprecated`)}`),
-          (_ = _(`#ImageUpload_Deprecated_ttip`)));
+          (_ = _(`#ImageUpload_Deprecated_ttip`))));
       let _;
       return (
         (_.BIsOriginalMinimumDimensions(_) && _.FileTypeMatchesImageTypes(_)) ||
@@ -1280,4 +1280,3 @@ function _(_) {
     _
   );
 }
-export { _, _, _, _, _, _, _, _, _, _ };

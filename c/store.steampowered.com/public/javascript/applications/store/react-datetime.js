@@ -11,7 +11,7 @@ var _ = _((_, _) => {
         _: !1,
         exports: {},
       });
-      return _[_].call(_.exports, _, _.exports, _), (_._ = !0), _.exports;
+      return (_[_].call(_.exports, _, _.exports, _), (_._ = !0), _.exports);
     }
     return (
       (_._ = _),
@@ -24,14 +24,14 @@ var _ = _((_, _) => {
           });
       }),
       (_._ = function (_) {
-        typeof Symbol < `u` &&
+        (typeof Symbol < `u` &&
           Symbol.toStringTag &&
           Object.defineProperty(_, Symbol.toStringTag, {
             value: `Module`,
           }),
           Object.defineProperty(_, "__esModule", {
             value: !0,
-          });
+          }));
       }),
       (_._ = function (_, _) {
         if (
@@ -67,7 +67,7 @@ var _ = _((_, _) => {
             : function () {
                 return _;
               };
-        return _._(_, `a`, _), _;
+        return (_._(_, `a`, _), _);
       }),
       (_._ = function (_, _) {
         return Object.prototype.hasOwnProperty.call(_, _);
@@ -95,7 +95,7 @@ var _ = _((_, _) => {
       var _ = _(6);
       function _() {}
       function _() {}
-      (_.resetWarningCache = _),
+      ((_.resetWarningCache = _),
         (_.exports = function () {
           function _(_, _, _, _, _, _) {
             if (_ !== _) {
@@ -132,8 +132,8 @@ var _ = _((_, _) => {
             checkPropTypes: _,
             resetWarningCache: _,
           };
-          return (_.PropTypes = _), _;
-        });
+          return ((_.PropTypes = _), _);
+        }));
     },
     function (_, _, _) {
       _.exports = `SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED`;
@@ -220,17 +220,17 @@ var _ = _((_, _) => {
       function _(_, _) {
         for (var _ = 0; _ < _.length; _++) {
           var _ = _[_];
-          (_.enumerable = _.enumerable || !1),
+          ((_.enumerable = _.enumerable || !1),
             (_.configurable = !0),
             `value` in _ && (_.writable = !0),
-            Object.defineProperty(_, _.key, _);
+            Object.defineProperty(_, _.key, _));
         }
       }
       function _(_, _) {
         return (_ = Object.setPrototypeOf
           ? Object.setPrototypeOf.bind()
           : function (_, _) {
-              return (_.__proto__ = _), _;
+              return ((_.__proto__ = _), _);
             })(_, _);
       }
       function _(_) {
@@ -304,7 +304,7 @@ var _ = _((_, _) => {
             throw TypeError(
               `Super expression must either be null or a function`,
             );
-          (_.prototype = Object.create(_ && _.prototype, {
+          ((_.prototype = Object.create(_ && _.prototype, {
             constructor: {
               value: _,
               writable: !0,
@@ -314,7 +314,7 @@ var _ = _((_, _) => {
             Object.defineProperty(_, "prototype", {
               writable: !1,
             }),
-            _ && _(_, _);
+            _ && _(_, _));
         })(_, _);
         var _,
           _,
@@ -420,8 +420,8 @@ var _ = _((_, _) => {
                   _ = [[], [], [], [], [], []],
                   _ = _.clone().subtract(1, `months`);
                 _.date(_.daysInMonth()).startOf(`week`);
-                for (var _ = _.clone().add(42, `d`), _ = 0; _.isBefore(_); )
-                  _(_, _++).push(this.renderDay(_, _, _)), _.add(1, `d`);
+                for (var _ = _.clone().add(42, `d`), _ = 0; _.isBefore(_);)
+                  (_(_, _++).push(this.renderDay(_, _, _)), _.add(1, `d`));
                 return _.map(function (_, _) {
                   return _._.createElement(
                     `tr`,
@@ -519,17 +519,17 @@ var _ = _((_, _) => {
       function _(_, _) {
         for (var _ = 0; _ < _.length; _++) {
           var _ = _[_];
-          (_.enumerable = _.enumerable || !1),
+          ((_.enumerable = _.enumerable || !1),
             (_.configurable = !0),
             `value` in _ && (_.writable = !0),
-            Object.defineProperty(_, _.key, _);
+            Object.defineProperty(_, _.key, _));
         }
       }
       function _(_, _) {
         return (_ = Object.setPrototypeOf
           ? Object.setPrototypeOf.bind()
           : function (_, _) {
-              return (_.__proto__ = _), _;
+              return ((_.__proto__ = _), _);
             })(_, _);
       }
       function _(_) {
@@ -611,7 +611,7 @@ var _ = _((_, _) => {
             throw TypeError(
               `Super expression must either be null or a function`,
             );
-          (_.prototype = Object.create(_ && _.prototype, {
+          ((_.prototype = Object.create(_ && _.prototype, {
             constructor: {
               value: _,
               writable: !0,
@@ -621,7 +621,7 @@ var _ = _((_, _) => {
             Object.defineProperty(_, "prototype", {
               writable: !1,
             }),
-            _ && _(_, _);
+            _ && _(_, _));
         })(_, _);
         var _,
           _,
@@ -708,13 +708,13 @@ var _ = _((_, _) => {
                 var _,
                   _ = this.props.selectedDate,
                   _ = `rdtMonth`;
-                this.isDisabledMonth(_)
+                (this.isDisabledMonth(_)
                   ? (_ += ` rdtDisabled`)
                   : (_ = this._updateSelectedMonth),
                   _ &&
                     _.year() === this.props.viewDate.year() &&
                     _.month() === _ &&
-                    (_ += ` rdtActive`);
+                    (_ += ` rdtActive`));
                 var _ = {
                   key: _,
                   className: _,
@@ -793,17 +793,17 @@ var _ = _((_, _) => {
       function _(_, _) {
         for (var _ = 0; _ < _.length; _++) {
           var _ = _[_];
-          (_.enumerable = _.enumerable || !1),
+          ((_.enumerable = _.enumerable || !1),
             (_.configurable = !0),
             `value` in _ && (_.writable = !0),
-            Object.defineProperty(_, _.key, _);
+            Object.defineProperty(_, _.key, _));
         }
       }
       function _(_, _) {
         return (_ = Object.setPrototypeOf
           ? Object.setPrototypeOf.bind()
           : function (_, _) {
-              return (_.__proto__ = _), _;
+              return ((_.__proto__ = _), _);
             })(_, _);
       }
       function _(_) {
@@ -877,7 +877,7 @@ var _ = _((_, _) => {
             throw TypeError(
               `Super expression must either be null or a function`,
             );
-          (_.prototype = Object.create(_ && _.prototype, {
+          ((_.prototype = Object.create(_ && _.prototype, {
             constructor: {
               value: _,
               writable: !0,
@@ -887,7 +887,7 @@ var _ = _((_, _) => {
             Object.defineProperty(_, "prototype", {
               writable: !1,
             }),
-            _ && _(_, _);
+            _ && _(_, _));
         })(_, _);
         var _,
           _,
@@ -978,10 +978,10 @@ var _ = _((_, _) => {
                 var _,
                   _ = this.getSelectedYear(),
                   _ = `rdtYear`;
-                this.isDisabledYear(_)
+                (this.isDisabledYear(_)
                   ? (_ += ` rdtDisabled`)
                   : (_ = this._updateSelectedYear),
-                  _ === _ && (_ += ` rdtActive`);
+                  _ === _ && (_ += ` rdtActive`));
                 var _ = {
                   key: _,
                   className: _,
@@ -1023,8 +1023,8 @@ var _ = _((_, _) => {
                     _ = _.endOf(`year`).dayOfYear() + 1;
                   _-- > 1;
                 )
-                  if (_(_.dayOfYear(_))) return (_[_] = !1), !1;
-                return (_[_] = !0), !0;
+                  if (_(_.dayOfYear(_))) return ((_[_] = !1), !1);
+                return ((_[_] = !0), !0);
               },
             },
           ]) && _(_.prototype, _),
@@ -1056,17 +1056,17 @@ var _ = _((_, _) => {
       function _(_, _) {
         for (var _ = 0; _ < _.length; _++) {
           var _ = _[_];
-          (_.enumerable = _.enumerable || !1),
+          ((_.enumerable = _.enumerable || !1),
             (_.configurable = !0),
             `value` in _ && (_.writable = !0),
-            Object.defineProperty(_, _.key, _);
+            Object.defineProperty(_, _.key, _));
         }
       }
       function _(_, _) {
         return (_ = Object.setPrototypeOf
           ? Object.setPrototypeOf.bind()
           : function (_, _) {
-              return (_.__proto__ = _), _;
+              return ((_.__proto__ = _), _);
             })(_, _);
       }
       function _(_) {
@@ -1124,11 +1124,11 @@ var _ = _((_, _) => {
         var _ = Object.keys(_);
         if (Object.getOwnPropertySymbols) {
           var _ = Object.getOwnPropertySymbols(_);
-          _ &&
+          (_ &&
             (_ = _.filter(function (_) {
               return Object.getOwnPropertyDescriptor(_, _).enumerable;
             })),
-            _.push.apply(_, _);
+            _.push.apply(_, _));
         }
         return _;
       }
@@ -1197,7 +1197,7 @@ var _ = _((_, _) => {
               throw TypeError(
                 `Super expression must either be null or a function`,
               );
-            (_.prototype = Object.create(_ && _.prototype, {
+            ((_.prototype = Object.create(_ && _.prototype, {
               constructor: {
                 value: _,
                 writable: !0,
@@ -1207,7 +1207,7 @@ var _ = _((_, _) => {
               Object.defineProperty(_, "prototype", {
                 writable: !1,
               }),
-              _ && _(_, _);
+              _ && _(_, _));
           })(_, _);
           var _,
             _,
@@ -1242,7 +1242,7 @@ var _ = _((_, _) => {
                     _ = this.state;
                   return (
                     this.getCounters().forEach(function (_, _) {
-                      _ &&
+                      (_ &&
                         _ !== `ampm` &&
                         _.push(
                           _._.createElement(
@@ -1254,7 +1254,7 @@ var _ = _((_, _) => {
                             `:`,
                           ),
                         ),
-                        _.push(_.renderCounter(_, _[_]));
+                        _.push(_.renderCounter(_, _[_])));
                     }),
                     _._.createElement(
                       `div`,
@@ -1376,22 +1376,22 @@ var _ = _((_, _) => {
                     if (_ === `ampm`) return this.toggleDayPart();
                     var _ = {},
                       _ = document.body;
-                    (_[_] = this[_](_)),
+                    ((_[_] = this[_](_)),
                       this.setState(_),
                       (this.timer = setTimeout(function () {
                         _.increaseTimer = setInterval(function () {
-                          (_[_] = _[_](_)), _.setState(_);
+                          ((_[_] = _[_](_)), _.setState(_));
                         }, 70);
                       }, 500)),
                       (this.mouseUpListener = function () {
-                        clearTimeout(_.timer),
+                        (clearTimeout(_.timer),
                           clearInterval(_.increaseTimer),
                           _.props.setTime(_, parseInt(_.state[_], 10)),
                           _.removeEventListener(`mouseup`, _.mouseUpListener),
-                          _.removeEventListener(`touchend`, _.mouseUpListener);
+                          _.removeEventListener(`touchend`, _.mouseUpListener));
                       }),
                       _.addEventListener(`mouseup`, this.mouseUpListener),
-                      _.addEventListener(`touchend`, this.mouseUpListener);
+                      _.addEventListener(`touchend`, this.mouseUpListener));
                   }
                 },
               },
@@ -1399,8 +1399,8 @@ var _ = _((_, _) => {
                 key: `toggleDayPart`,
                 value: function () {
                   var _ = parseInt(this.state.hours, 10);
-                  _ >= 12 ? (_ -= 12) : (_ += 12),
-                    this.props.setTime(`hours`, _);
+                  (_ >= 12 ? (_ -= 12) : (_ += 12),
+                    this.props.setTime(`hours`, _));
                 },
               },
               {
@@ -1408,7 +1408,9 @@ var _ = _((_, _) => {
                 value: function (_) {
                   var _ = this.constraints[_],
                     _ = parseInt(this.state[_], 10) + _.step;
-                  return _ > _.max && (_ = _.min + (_ - (_.max + 1))), _(_, _);
+                  return (
+                    _ > _.max && (_ = _.min + (_ - (_.max + 1))), _(_, _)
+                  );
                 },
               },
               {
@@ -1416,7 +1418,7 @@ var _ = _((_, _) => {
                 value: function (_) {
                   var _ = this.constraints[_],
                     _ = parseInt(this.state[_], 10) - _.step;
-                  return _ < _.min && (_ = _.max + 1 - (_.min - _)), _(_, _);
+                  return (_ < _.min && (_ = _.max + 1 - (_.min - _)), _(_, _));
                 },
               },
               {
@@ -1495,7 +1497,7 @@ var _ = _((_, _) => {
         return (_ =
           Object.setPrototypeOf ||
           function (_, _) {
-            return (_.__proto__ = _), _;
+            return ((_.__proto__ = _), _);
           })(_, _);
       }
       function _(_) {
@@ -1570,7 +1572,7 @@ var _ = _((_, _) => {
                   }),
                   (_.enableOnClickOutside = function () {
                     if (typeof document < `u` && !_[_._uid]) {
-                      _ === void 0 &&
+                      (_ === void 0 &&
                         (_ = (function () {
                           if (
                             typeof window < `u` &&
@@ -1598,9 +1600,9 @@ var _ = _((_, _) => {
                             );
                           }
                         })()),
-                        (_[_._uid] = !0);
+                        (_[_._uid] = !0));
                       var _ = _.props.eventTypes;
-                      _.forEach || (_ = [_]),
+                      (_.forEach || (_ = [_]),
                         (_[_._uid] = function (_) {
                           var _;
                           _.componentNode !== null &&
@@ -1614,7 +1616,7 @@ var _ = _((_, _) => {
                                   _.clientY)) ||
                               ((function (_, _, _) {
                                 if (_ === _) return !0;
-                                for (; _.parentNode || _.host; ) {
+                                for (; _.parentNode || _.host;) {
                                   if (_.parentNode && _(_, _, _)) return !0;
                                   _ = _.parentNode || _.host;
                                 }
@@ -1631,7 +1633,7 @@ var _ = _((_, _) => {
                         }),
                         _.forEach(function (_) {
                           document.addEventListener(_, _[_._uid], _(_(_), _));
-                        });
+                        }));
                     }
                   }),
                   (_.disableOnClickOutside = function () {
@@ -1639,11 +1641,11 @@ var _ = _((_, _) => {
                     var _ = _[_._uid];
                     if (_ && typeof document < `u`) {
                       var _ = _.props.eventTypes;
-                      _.forEach || (_ = [_]),
+                      (_.forEach || (_ = [_]),
                         _.forEach(function (_) {
                           return document.removeEventListener(_, _, _(_(_), _));
                         }),
-                        delete _[_._uid];
+                        delete _[_._uid]);
                     }
                   }),
                   (_.getRef = function (_) {
@@ -1653,10 +1655,10 @@ var _ = _((_, _) => {
                   _
                 );
               }
-              (_ = _),
+              ((_ = _),
                 ((_ = _).prototype = Object.create(_.prototype)),
                 (_.prototype.constructor = _),
-                _(_, _);
+                _(_, _));
               var _ = _.prototype;
               return (
                 (_.getInstance = function () {
@@ -1679,9 +1681,9 @@ var _ = _((_, _) => {
                           _ +
                           ` lacks a function for processing outside click events specified by the handleClickOutside config option.`,
                       );
-                    (this.componentNode = this.__getComponentNode()),
+                    ((this.componentNode = this.__getComponentNode()),
                       this.props.disableOnClickOutside ||
-                        this.enableOnClickOutside();
+                        this.enableOnClickOutside());
                   }
                 }),
                 (_.componentDidUpdate = function () {
@@ -1700,7 +1702,7 @@ var _ = _((_, _) => {
                       _ = {},
                       _ = Object.keys(_);
                     for (_ = 0; _ < _.length; _++)
-                      (_ = _[_]), _.indexOf(_) >= 0 || (_[_] = _[_]);
+                      ((_ = _[_]), _.indexOf(_) >= 0 || (_[_] = _[_]));
                     return _;
                   })(_, [`excludeScrollbar`]);
                   return (
@@ -1748,11 +1750,11 @@ var _ = _((_, _) => {
         var _ = Object.keys(_);
         if (Object.getOwnPropertySymbols) {
           var _ = Object.getOwnPropertySymbols(_);
-          _ &&
+          (_ &&
             (_ = _.filter(function (_) {
               return Object.getOwnPropertyDescriptor(_, _).enumerable;
             })),
-            _.push.apply(_, _);
+            _.push.apply(_, _));
         }
         return _;
       }
@@ -1782,10 +1784,10 @@ var _ = _((_, _) => {
       function _(_, _) {
         for (var _ = 0; _ < _.length; _++) {
           var _ = _[_];
-          (_.enumerable = _.enumerable || !1),
+          ((_.enumerable = _.enumerable || !1),
             (_.configurable = !0),
             `value` in _ && (_.writable = !0),
-            Object.defineProperty(_, _.key, _);
+            Object.defineProperty(_, _.key, _));
         }
       }
       function _(_, _, _) {
@@ -1801,7 +1803,7 @@ var _ = _((_, _) => {
       function _(_, _) {
         if (typeof _ != `function` && _ !== null)
           throw TypeError(`Super expression must either be null or a function`);
-        (_.prototype = Object.create(_ && _.prototype, {
+        ((_.prototype = Object.create(_ && _.prototype, {
           constructor: {
             value: _,
             writable: !0,
@@ -1811,13 +1813,13 @@ var _ = _((_, _) => {
           Object.defineProperty(_, "prototype", {
             writable: !1,
           }),
-          _ && _(_, _);
+          _ && _(_, _));
       }
       function _(_, _) {
         return (_ = Object.setPrototypeOf
           ? Object.setPrototypeOf.bind()
           : function (_, _) {
-              return (_.__proto__ = _), _;
+              return ((_.__proto__ = _), _);
             })(_, _);
       }
       function _(_) {
@@ -1963,16 +1965,16 @@ var _ = _((_, _) => {
                 var _ = _.state.currentView,
                   _ = _.getUpdateOn(_.getFormat(`date`)),
                   _ = _.state.viewDate.clone();
-                _[_.viewToMethod[_]](
+                (_[_.viewToMethod[_]](
                   parseInt(_.target.getAttribute(`data-value`), 10),
                 ),
                   _ === `days` &&
                     (_.month(parseInt(_.target.getAttribute(`data-month`), 10)),
-                    _.year(parseInt(_.target.getAttribute(`data-year`), 10)));
+                    _.year(parseInt(_.target.getAttribute(`data-year`), 10))));
                 var _ = {
                   viewDate: _,
                 };
-                _ === _
+                (_ === _
                   ? ((_.selectedDate = _.clone()),
                     (_.inputValue = _.format(_.getFormat(`datetime`))),
                     _.props.open === void 0 &&
@@ -1981,28 +1983,28 @@ var _ = _((_, _) => {
                       _._closeCalendar(),
                     _.props.onChange(_.clone()))
                   : _._showView(_.nextView[_], _),
-                  _.setState(_);
+                  _.setState(_));
               }),
               _(_(_), `_viewNavigate`, function (_, _) {
                 var _ = _.state.viewDate.clone();
-                _.add(_, _),
+                (_.add(_, _),
                   _ > 0
                     ? _.props.onNavigateForward(_, _)
                     : _.props.onNavigateBack(-_, _),
                   _.setState({
                     viewDate: _,
-                  });
+                  }));
               }),
               _(_(_), `_setTime`, function (_, _) {
                 var _ = (_.getSelectedDate() || _.state.viewDate).clone();
-                _[_](_),
+                (_[_](_),
                   _.props.value ||
                     _.setState({
                       selectedDate: _,
                       viewDate: _.clone(),
                       inputValue: _.format(_.getFormat(`datetime`)),
                     }),
-                  _.props.onChange(_);
+                  _.props.onChange(_));
               }),
               _(_(_), `_openCalendar`, function () {
                 _.isOpen() ||
@@ -2045,13 +2047,13 @@ var _ = _((_, _) => {
                     _ = {
                       inputValue: _,
                     };
-                  _.isValid()
+                  (_.isValid()
                     ? ((_.selectedDate = _),
                       (_.viewDate = _.clone().startOf(`month`)))
                     : (_.selectedDate = null),
                     _.setState(_, function () {
                       _.props.onChange(_.isValid() ? _ : _.state.inputValue);
-                    });
+                    }));
                 }
               }),
               _(_(_), `_onInputKeyDown`, function (_) {
@@ -2176,7 +2178,7 @@ var _ = _((_, _) => {
                 key: `getInitialDate`,
                 value: function () {
                   var _ = this.localMoment();
-                  return _.hour(0).minute(0).second(0).millisecond(0), _;
+                  return (_.hour(0).minute(0).second(0).millisecond(0), _);
                 },
               },
               {
@@ -2280,7 +2282,7 @@ var _ = _((_, _) => {
                 value: function (_, _, _, _) {
                   var _ = {},
                     _ = _ ? `selectedDate` : `viewDate`;
-                  (_[_] = this.state[_].clone()[_](_, _)), this.setState(_);
+                  ((_[_] = this.state[_].clone()[_](_, _)), this.setState(_));
                 },
               },
               {
@@ -2320,7 +2322,7 @@ var _ = _((_, _) => {
                   if (_ !== this.props) {
                     var _ = !1,
                       _ = this.props;
-                    [
+                    ([
                       `locale`,
                       `utc`,
                       `displayZone`,
@@ -2333,7 +2335,7 @@ var _ = _((_, _) => {
                       _.value &&
                         _.value !== _.value &&
                         this.setViewDate(_.value),
-                      this.checkTZ();
+                      this.checkTZ());
                   }
                 },
               },
@@ -2345,20 +2347,20 @@ var _ = _((_, _) => {
                     _ =
                       this.state.selectedDate &&
                       this.state.selectedDate.clone();
-                  _.locale && (_.locale(_.locale), _ && _.locale(_.locale)),
+                  (_.locale && (_.locale(_.locale), _ && _.locale(_.locale)),
                     _.utc
                       ? (_.utc(), _ && _.utc())
                       : _.displayTimeZone
                         ? (_._(_.displayTimeZone), _ && _._(_.displayTimeZone))
-                        : (_.locale(), _ && _.locale());
+                        : (_.locale(), _ && _.locale()));
                   var _ = {
                     viewDate: _,
                     selectedDate: _,
                   };
-                  _ &&
+                  (_ &&
                     _.isValid() &&
                     (_.inputValue = _.format(this.getFormat(`datetime`))),
-                    this.setState(_);
+                    this.setState(_));
                 },
               },
               {
@@ -2438,7 +2440,7 @@ var _ = _((_, _) => {
         var _ = typeof window < `u` && window.console;
         _ && ((_ ||= `warn`), _[_](`***react-datetime:` + _));
       }
-      _(_, `propTypes`, {
+      (_(_, `propTypes`, {
         value: _,
         initialValue: _,
         initialViewDate: _,
@@ -2500,7 +2502,7 @@ var _ = _((_, _) => {
             return _();
           },
         }),
-        _(_, `moment`, _._);
+        _(_, `moment`, _._));
       var _ = _(
         (function (_) {
           _(_, _);
@@ -2553,4 +2555,3 @@ var _ = _((_, _) => {
     },
   ]);
 });
-export { _ };

@@ -81,7 +81,7 @@ function M(e) {
       (e, t) =>
         y((n) => {
           let r = { ...n };
-          return r[t]?.node === e && delete r[t], r;
+          return (r[t]?.node === e && delete r[t], r);
         }),
       [],
     ),
@@ -106,7 +106,7 @@ function M(e) {
         for (let a = 1; a <= r; a++) {
           let [o, c] = n[(((i + t * a) % r) + r) % r];
           if (!c.bDisabled) {
-            o !== s && l(o), e.stopPropagation(), e.preventDefault();
+            (o !== s && l(o), e.stopPropagation(), e.preventDefault());
             break;
           }
         }
@@ -160,7 +160,7 @@ function te(e) {
   let { value: d, onValueChange: f } = i,
     p = t === d,
     v = (e) => {
-      e.stopPropagation(), e.preventDefault(), !(p || r) && f(t);
+      (e.stopPropagation(), e.preventDefault(), !(p || r) && f(t));
     },
     y = n === void 0 ? t : n;
   return (0, A.jsx)(l, {
@@ -180,7 +180,7 @@ function N(e) {
     children: t.map((e) => (0, A.jsx)(N.Item, { value: e, children: n(e) }, e)),
   });
 }
-(N.Item = te), (N.Root = M);
+((N.Item = te), (N.Root = M));
 function ne(e) {
   let { radius: t, color: n } = e;
   return (0, A.jsx)(c, {
@@ -288,11 +288,11 @@ function W(e) {
               step: l,
             }),
             r = [...c];
-          (r[_.current.activeValueIndex] = n),
+          ((r[_.current.activeValueIndex] = n),
             r.sort((e, t) => e - t),
             (_.current.activeValueIndex = r.indexOf(n)),
             (_.current.bMoved = !0),
-            o(r);
+            o(r));
         }
       },
       onClick: (e) => {
@@ -302,7 +302,7 @@ function W(e) {
           r = Q({ value: n, min: i, max: a, step: l }),
           s = q(c, n),
           d = [...c];
-        (d[s] = r), o(d), u && u(d);
+        ((d[s] = r), o(d), u && u(d));
       },
       children: (0, A.jsx)(`div`, { className: I, children: t }),
     }),
@@ -380,11 +380,11 @@ function X(e) {
             a = c * (n ? 1 : -1),
             o = Q({ value: s[m] + a, min: r, max: i, step: c }),
             d = [...s];
-          (d[m] = K(s, m, o)),
+          ((d[m] = K(s, m, o)),
             l(d),
             u && u(d),
             e.preventDefault(),
-            e.stopPropagation();
+            e.stopPropagation());
           break;
         }
         case `PageUp`:
@@ -393,11 +393,11 @@ function X(e) {
             n = Math.round((i - r) / 10) * (t ? 1 : -1),
             a = Q({ value: s[m] + n, min: r, max: i, step: c }),
             o = [...s];
-          (o[m] = K(s, m, a)),
+          ((o[m] = K(s, m, a)),
             l(o),
             u && u(o),
             e.preventDefault(),
-            e.stopPropagation();
+            e.stopPropagation());
           break;
         }
       }

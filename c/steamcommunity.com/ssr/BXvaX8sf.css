@@ -142,9 +142,9 @@
   background-color: var(--color-dull-6);
 }
 :where(
-    .dEQ-gZ9-RTM- .L5RG2a-Ajh8-[data-selected="false"]:not(.Wh2kJd7EgSU-):hover
-  ) {
-  background-color: rgb(from var(--color-dull-12) r g b / 60%);
+  .dEQ-gZ9-RTM- .L5RG2a-Ajh8-[data-selected="false"]:not(.Wh2kJd7EgSU-):hover
+) {
+  background-color: rgb(from var(--color-dull-12) r g b/60%);
 }
 :where(.NI2QkHzo6HI- .L5RG2a-Ajh8-[data-selected="false"]:hover) {
   background-color: var(--color-dull-7);

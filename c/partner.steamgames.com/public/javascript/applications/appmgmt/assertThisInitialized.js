@@ -5,4 +5,3 @@ function _(_) {
     );
   return _;
 }
-export { _ };

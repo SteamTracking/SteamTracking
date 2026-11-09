@@ -100,7 +100,7 @@ function _(_) {
             if (_.listings && _.listings > 0) {
               let _ = _.tag.category,
                 _ = _.tag.internal_name;
-              _[_] || (_[_] = {}), (_[_][_] = _.listings);
+              (_[_] || (_[_] = {}), (_[_][_] = _.listings));
             }
             return _;
           }, {}),
@@ -116,7 +116,7 @@ function _(_) {
       ),
     ),
     _ = () => {
-      _(
+      (_(
         _
           ? {
               ..._,
@@ -140,7 +140,7 @@ function _(_) {
             },
         !0,
       ),
-        _(null);
+        _(null));
     },
     _ = _ ? _.filterSteam : _.filterInGame,
     _ =
@@ -403,7 +403,7 @@ function _() {
     _ = (0, _.useCallback)(
       (_) => {
         let _ = new URL(window.location.href);
-        (_.search = _(_, _.maxPrice).toString()),
+        ((_.search = _(_, _.maxPrice).toString()),
           _(
             (_) => ({
               ..._,
@@ -411,7 +411,7 @@ function _() {
             }),
             _,
           ),
-          _(_);
+          _(_));
       },
       [_.maxPrice],
     );
@@ -459,7 +459,7 @@ function _() {
     }
     let _ = new URL(window.location.href),
       _ = _.sort;
-    _
+    (_
       ? (_.searchParams.set(`sort`, _.toString()),
         _.direction === void 0
           ? _.searchParams.delete(`dir`)
@@ -476,7 +476,7 @@ function _() {
           searchSort: 0,
           searchSortDir: void 0,
         }))),
-      _(_);
+      _(_));
   }, [_.sort, _.direction, _]);
   let _ = _.data?.pages && _.data.pages[0] && _.data.pages[0].facets,
     _ = _(),
@@ -624,7 +624,7 @@ function _(_, _, _, _) {
           if (_ && _ == `Game`) {
             let _ = parseInt(_.slice(_.indexOf(`_`) + 1));
             isNaN(_) || (_ = _[_] ?? null);
-          } else _ in _ || (_[_] = {}), (_[_][_] = !0);
+          } else (_ in _ || (_[_] = {}), (_[_][_] = !0));
     }
   let _ = {};
   if (_.accessoryFilters) {
@@ -633,7 +633,7 @@ function _(_, _, _, _) {
         let _ = _.slice(10);
         if (!_.length) continue;
         let _ = _.accessoryFilters[_];
-        for (let _ of _) _ in _ || (_[_] = {}), (_[_][_] = !0);
+        for (let _ of _) (_ in _ || (_[_] = {}), (_[_][_] = !0));
       }
   }
   return {
@@ -708,7 +708,7 @@ function _() {
     [1, 1],
     [1, 2],
   ];
-  return _() && _.unshift([5, 2]), _;
+  return (_() && _.unshift([5, 2]), _);
 }
 function _() {
   return _() ? [5, 2] : [0, 2];

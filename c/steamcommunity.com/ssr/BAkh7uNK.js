@@ -73,7 +73,7 @@ function _(_) {
           let _ = {
             ..._,
           };
-          return _[_]?.node === _ && delete _[_], _;
+          return (_[_]?.node === _ && delete _[_], _);
         }),
       [],
     ),
@@ -98,7 +98,7 @@ function _(_) {
         for (let _ = 1; _ <= _; _++) {
           let [_, _] = _[(((_ + _ * _) % _) + _) % _];
           if (!_.bDisabled) {
-            _ !== _ && _(_), _.stopPropagation(), _.preventDefault();
+            (_ !== _ && _(_), _.stopPropagation(), _.preventDefault());
             break;
           }
         }
@@ -161,7 +161,7 @@ function _(_) {
   let { value: _, onValueChange: _ } = _,
     _ = _ === _,
     _ = (_) => {
-      _.stopPropagation(), _.preventDefault(), !(_ || _) && _(_);
+      (_.stopPropagation(), _.preventDefault(), !(_ || _) && _(_));
     },
     _ = _ === void 0 ? _ : _;
   return (0, _.jsx)(_, {
@@ -190,7 +190,7 @@ function _(_) {
     ),
   });
 }
-(_.Item = _), (_.Root = _);
+((_.Item = _), (_.Root = _));
 function _(_) {
   let { radius: _, color: _ } = _;
   return (0, _.jsx)(_, {
@@ -209,4 +209,3 @@ function _(_, _) {
       ? 1
       : 0;
 }
-export { _ };

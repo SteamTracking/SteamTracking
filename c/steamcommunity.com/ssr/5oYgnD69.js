@@ -34,11 +34,10 @@ function _(_, _ = {}) {
           });
       let _ = _.current.tsScheduledTimeout - performance.now(),
         _ = window.setTimeout(() => {
-          (_.current = void 0), _(_);
+          ((_.current = void 0), _(_));
         }, _);
       return () => window.clearTimeout(_);
     }, [_, _, _, _]),
     _
   );
 }
-export { _, _ };

@@ -125,8 +125,9 @@ function _(_) {
       _ = _(_);
     for (let _ = 0; _ < _.tags.length; ++_) {
       let _ = _.tags[_];
-      _.findIndex((_) => _.name.toLocaleLowerCase() == _.toLocaleLowerCase()) !=
-        -1 &&
+      (_.findIndex(
+        (_) => _.name.toLocaleLowerCase() == _.toLocaleLowerCase(),
+      ) != -1 &&
         _.push({
           tag: _,
           category: _,
@@ -139,7 +140,7 @@ function _(_) {
             tag: _,
             category: _,
             bRequired: !1,
-          });
+          }));
     }
   }
   return _.length == 0
@@ -237,56 +238,3 @@ function _(_) {
         }),
       });
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

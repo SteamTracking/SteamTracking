@@ -25,7 +25,7 @@ function a(e, t, n) {
         t = Math.round((Date.now() - c) * 100) / 100,
         r = t / 16,
         i = (e, t) => {
-          for (e = String(e); e.length < t; ) e = ` ` + e;
+          for (e = String(e); e.length < t;) e = ` ` + e;
           return e;
         };
       console.info(
@@ -37,7 +37,7 @@ function a(e, t, n) {
         n?.key,
       );
     }
-    return (a = n?.onChange) == null || a.call(n, i), i;
+    return ((a = n?.onChange) == null || a.call(n, i), i);
   }
   return (
     (a.updateDeps = (e) => {
@@ -54,7 +54,7 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
   c = (e, t, n) => {
     let r;
     return function (...i) {
-      e.clearTimeout(r), (r = e.setTimeout(() => t.apply(this, i), n));
+      (e.clearTimeout(r), (r = e.setTimeout(() => t.apply(this, i), n)));
     };
   },
   l = (e) => {
@@ -136,17 +136,17 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
             ),
       o = (r) => () => {
         let { horizontal: o, isRtl: s } = e.options;
-        (i = o ? n.scrollLeft * ((s && -1) || 1) : n.scrollTop), a(), t(i, r);
+        ((i = o ? n.scrollLeft * ((s && -1) || 1) : n.scrollTop), a(), t(i, r));
       },
       s = o(!0),
       l = o(!1);
-    l(), n.addEventListener(`scroll`, s, p);
+    (l(), n.addEventListener(`scroll`, s, p));
     let u = e.options.useScrollendEvent && h;
     return (
       u && n.addEventListener(`scrollend`, l, p),
       () => {
-        n.removeEventListener(`scroll`, s),
-          u && n.removeEventListener(`scrollend`, l);
+        (n.removeEventListener(`scroll`, s),
+          u && n.removeEventListener(`scrollend`, l));
       }
     );
   },
@@ -167,17 +167,17 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
               e.options.isScrollingResetDelay,
             ),
       o = (r) => () => {
-        (i = n[e.options.horizontal ? `scrollX` : `scrollY`]), a(), t(i, r);
+        ((i = n[e.options.horizontal ? `scrollX` : `scrollY`]), a(), t(i, r));
       },
       s = o(!0),
       l = o(!1);
-    l(), n.addEventListener(`scroll`, s, p);
+    (l(), n.addEventListener(`scroll`, s, p));
     let u = e.options.useScrollendEvent && h;
     return (
       u && n.addEventListener(`scrollend`, l, p),
       () => {
-        n.removeEventListener(`scroll`, s),
-          u && n.removeEventListener(`scrollend`, l);
+        (n.removeEventListener(`scroll`, s),
+          u && n.removeEventListener(`scrollend`, l));
       }
     );
   },
@@ -203,7 +203,7 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
   },
   x = class {
     constructor(e) {
-      (this.unsubs = []),
+      ((this.unsubs = []),
         (this.scrollElement = null),
         (this.targetWindow = null),
         (this.isScrolling = !1),
@@ -234,7 +234,7 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
           return {
             disconnect: () => {
               var n;
-              (n = t()) == null || n.disconnect(), (e = null);
+              ((n = t()) == null || n.disconnect(), (e = null));
             },
             observe: (e) => t()?.observe(e, { box: `border-box` }),
             unobserve: (e) => t()?.unobserve(e),
@@ -242,7 +242,7 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
         })()),
         (this.range = null),
         (this.setOptions = (e) => {
-          Object.entries(e).forEach(([t, n]) => {
+          (Object.entries(e).forEach(([t, n]) => {
             n === void 0 && delete e[t];
           }),
             (this.options = {
@@ -270,7 +270,7 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
               useScrollendEvent: !1,
               useAnimationFrameWithResizeObserver: !1,
               ...e,
-            });
+            }));
         }),
         (this.notify = (e) => {
           var t, n;
@@ -299,11 +299,11 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
           },
         )),
         (this.cleanup = () => {
-          this.unsubs.filter(Boolean).forEach((e) => e()),
+          (this.unsubs.filter(Boolean).forEach((e) => e()),
             (this.unsubs = []),
             this.observer.disconnect(),
             (this.scrollElement = null),
-            (this.targetWindow = null);
+            (this.targetWindow = null));
         }),
         (this._didMount = () => () => {
           this.cleanup();
@@ -315,7 +315,7 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
               this.maybeNotify();
               return;
             }
-            (this.scrollElement = e),
+            ((this.scrollElement = e),
               (this.targetWindow =
                 this.scrollElement && `ownerDocument` in this.scrollElement
                   ? this.scrollElement.ownerDocument.defaultView
@@ -329,12 +329,12 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
               }),
               this.unsubs.push(
                 this.options.observeElementRect(this, (e) => {
-                  (this.scrollRect = e), this.maybeNotify();
+                  ((this.scrollRect = e), this.maybeNotify());
                 }),
               ),
               this.unsubs.push(
                 this.options.observeElementOffset(this, (e, t) => {
-                  (this.scrollAdjustments = 0),
+                  ((this.scrollAdjustments = 0),
                     (this.scrollDirection = t
                       ? this.getScrollOffset() < e
                         ? `forward`
@@ -342,9 +342,9 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
                       : null),
                     (this.scrollOffset = e),
                     (this.isScrolling = t),
-                    this.maybeNotify();
+                    this.maybeNotify());
                 }),
-              );
+              ));
           }
         }),
         (this.getSize = () =>
@@ -442,7 +442,7 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
                 f = o ? o.lane : i % this.options.lanes;
               s[i] = { index: i, start: c, size: u, end: d, key: e, lane: f };
             }
-            return (this.measurementsCache = s), s;
+            return ((this.measurementsCache = s), s);
           },
           { key: !1, debug: () => this.options.debug },
         )),
@@ -504,12 +504,12 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
           if (!r) return;
           let i = r.key,
             a = this.elementsCache.get(i);
-          a !== e &&
+          (a !== e &&
             (a && this.observer.unobserve(a),
             this.observer.observe(e),
             this.elementsCache.set(i, e)),
             e.isConnected &&
-              this.resizeItem(n, this.options.measureElement(e, t, this));
+              this.resizeItem(n, this.options.measureElement(e, t, this)));
         }),
         (this.resizeItem = (e, t) => {
           let n = this.measurementsCache[e];
@@ -555,8 +555,8 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
         (this.getOffsetForAlignment = (e, t, n = 0) => {
           let r = this.getSize(),
             i = this.getScrollOffset();
-          t === `auto` && (t = e >= i + r ? `end` : `start`),
-            t === `center` ? (e += (n - r) / 2) : t === `end` && (e -= r);
+          (t === `auto` && (t = e >= i + r ? `end` : `start`),
+            t === `center` ? (e += (n - r) / 2) : t === `end` && (e -= r));
           let a = this.getTotalSize() + this.options.scrollMargin - r;
           return Math.max(Math.min(a, e), 0);
         }),
@@ -583,7 +583,7 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
           e,
           { align: t = `start`, behavior: n } = {},
         ) => {
-          n === `smooth` &&
+          (n === `smooth` &&
             this.isDynamicMode() &&
             console.warn(
               "The `smooth` scroll behavior is not fully supported with dynamic size.",
@@ -591,15 +591,15 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
             this._scrollToOffset(this.getOffsetForAlignment(e, t), {
               adjustments: void 0,
               behavior: n,
-            });
+            }));
         }),
         (this.scrollToIndex = (e, { align: t = `auto`, behavior: n } = {}) => {
-          n === `smooth` &&
+          (n === `smooth` &&
             this.isDynamicMode() &&
             console.warn(
               "The `smooth` scroll behavior is not fully supported with dynamic size.",
             ),
-            (e = Math.max(0, Math.min(e, this.options.count - 1)));
+            (e = Math.max(0, Math.min(e, this.options.count - 1))));
           let r = 0,
             i = (t) => {
               if (!this.targetWindow) return;
@@ -609,14 +609,14 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
                 return;
               }
               let [i, o] = r;
-              this._scrollToOffset(i, { adjustments: void 0, behavior: n }),
+              (this._scrollToOffset(i, { adjustments: void 0, behavior: n }),
                 this.targetWindow.requestAnimationFrame(() => {
                   let t = this.getScrollOffset(),
                     n = this.getOffsetForIndex(e, o);
                   n
                     ? s(n[0], t) || a(o)
                     : console.warn(`Failed to get offset for index:`, e);
-                });
+                }));
             },
             a = (t) => {
               this.targetWindow &&
@@ -630,7 +630,7 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
           i(t);
         }),
         (this.scrollBy = (e, { behavior: t } = {}) => {
-          t === `smooth` &&
+          (t === `smooth` &&
             this.isDynamicMode() &&
             console.warn(
               "The `smooth` scroll behavior is not fully supported with dynamic size.",
@@ -638,7 +638,7 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
             this._scrollToOffset(this.getScrollOffset() + e, {
               adjustments: void 0,
               behavior: t,
-            });
+            }));
         }),
         (this.getTotalSize = () => {
           let e = this.getMeasurements(),
@@ -648,9 +648,9 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
           else {
             let n = Array(this.options.lanes).fill(null),
               r = e.length - 1;
-            for (; r >= 0 && n.some((e) => e === null); ) {
+            for (; r >= 0 && n.some((e) => e === null);) {
               let t = e[r];
-              n[t.lane] === null && (n[t.lane] = t.end), r--;
+              (n[t.lane] === null && (n[t.lane] = t.end), r--);
             }
             t = Math.max(...n.filter((e) => e !== null));
           }
@@ -663,13 +663,13 @@ var s = (e, t) => Math.abs(e - t) < 1.01,
           this.options.scrollToFn(e, { behavior: n, adjustments: t }, this);
         }),
         (this.measure = () => {
-          (this.itemSizeCache = new Map()), this.notify(!1);
+          ((this.itemSizeCache = new Map()), this.notify(!1));
         }),
-        this.setOptions(e);
+        this.setOptions(e));
     }
   },
   S = (e, t, n, r) => {
-    for (; e <= t; ) {
+    for (; e <= t;) {
       let i = ((e + t) / 2) | 0,
         a = n(i);
       if (a < r) e = i + 1;
@@ -684,19 +684,19 @@ function C({ measurements: e, outerSize: t, scrollOffset: n, lanes: r }) {
   if (e.length <= r) return { startIndex: 0, endIndex: i };
   let o = S(0, i, a, n),
     s = o;
-  if (r === 1) for (; s < i && e[s].end < n + t; ) s++;
+  if (r === 1) for (; s < i && e[s].end < n + t;) s++;
   else if (r > 1) {
     let a = Array(r).fill(0);
-    for (; s < i && a.some((e) => e < n + t); ) {
+    for (; s < i && a.some((e) => e < n + t);) {
       let t = e[s];
-      (a[t.lane] = t.end), s++;
+      ((a[t.lane] = t.end), s++);
     }
     let c = Array(r).fill(n + t);
-    for (; o >= 0 && c.some((e) => e >= n); ) {
+    for (; o >= 0 && c.some((e) => e >= n);) {
       let t = e[o];
-      (c[t.lane] = t.start), o--;
+      ((c[t.lane] = t.start), o--);
     }
-    (o = Math.max(0, o - (o % r))), (s = Math.min(i, s + (r - 1 - (s % r))));
+    ((o = Math.max(0, o - (o % r))), (s = Math.min(i, s + (r - 1 - (s % r)))));
   }
   return { startIndex: o, endIndex: s };
 }
@@ -707,8 +707,8 @@ function T(e) {
       ...e,
       onChange: (n, r) => {
         var a;
-        r ? (0, i.flushSync)(t) : t(),
-          (a = e.onChange) == null || a.call(e, n, r);
+        (r ? (0, i.flushSync)(t) : t(),
+          (a = e.onChange) == null || a.call(e, n, r));
       },
     },
     [a] = r.useState(() => new x(n));

@@ -21,7 +21,7 @@ function h(e, t) {
     queryKey: [`crowdin_metadata_for_clan_event`, e.ConvertTo64BitString(), t],
     queryFn: async () => {
       let n = l.Init(c);
-      n.Body().set_steamid(e.ConvertTo64BitString()), n.Body().set_itemid(t);
+      (n.Body().set_steamid(e.ConvertTo64BitString()), n.Body().set_itemid(t));
       let i = await s.GetClanEventCrowdInMetadata(r, n);
       return i.GetEResult() == 1 ? i.Body().toObject() : null;
     },
@@ -72,7 +72,7 @@ function b(e) {
 }
 async function x(e, t, n, r) {
   let i = l.Init(a);
-  i.Body().set_language(r), i.Body().set_steamid(t), i.Body().set_itemid(n);
+  (i.Body().set_language(r), i.Body().set_steamid(t), i.Body().set_itemid(n));
   let o = await s.FetchTranslationFromCrowdIn(e, i);
   if (o.GetEResult() != 1)
     throw Error(

@@ -149,10 +149,10 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports),
+        (__webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
             default: () => _,
-          });
+          }));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -379,8 +379,8 @@
               _.addEventListener("play", _),
               _.addEventListener("pause", _),
               () => {
-                _.removeEventListener("play", _),
-                  _.removeEventListener("pause", _);
+                (_.removeEventListener("play", _),
+                  _.removeEventListener("pause", _));
               }
             );
           }, [_, _]);
@@ -438,14 +438,14 @@
             [_, _] = (0, _.useState)(null),
             { bCookieLoaded: _ } = _(_, _, _),
             _ = _;
-          _.useEffect(() => {
+          (_.useEffect(() => {
             _ && _ && _ && !_ && _(!0);
           }, [_, _, _, _]),
             _.useEffect(() => {
               _ && _ && _ && _();
-            }, [_, _, _, _]);
+            }, [_, _, _, _]));
           const _ = (_) => {
-              (0, _._)(_ ?? _, String(!_), 365 * 10), _(_), _(_);
+              ((0, _._)(_ ?? _, String(!_), 365 * 10), _(_), _(_));
             },
             _ = _(_, _, _, _);
           _.useEffect(() => {
@@ -561,11 +561,11 @@
             [_, _] = (0, _.useState)(null),
             { data: _ } = (0, _._)(_),
             _ = !!_;
-          _.useEffect(() => {
+          (_.useEffect(() => {
             let _ = !1;
-            _ && _ && _ && (_ = _ === _ || (_ === _ && !_) || (_ === _ && !_)),
+            (_ && _ && _ && (_ = _ === _ || (_ === _ && !_) || (_ === _ && !_)),
               _(_),
-              _?.(_ && _);
+              _?.(_ && _));
           }, [_, _, _, _, _, _, _, _]),
             _(_, _),
             _.useEffect(() => {
@@ -575,13 +575,13 @@
                 _(!1),
                 _ && (_.pause(), (_.currentTime = 0)),
                 _ && (_.Pause(), _.SeekToStart()));
-            }, [_, _, _, _]);
+            }, [_, _, _, _]));
           const _ = _.useRef(!1);
-          _.useEffect(() => {
+          (_.useEffect(() => {
             if (_ && _ === _)
               if ((_(!0), _)) {
                 if (_) {
-                  _.Debug("Starting microtrailer"), _(_);
+                  (_.Debug("Starting microtrailer"), _(_));
                   const _ = () => _(_, _, _);
                   _ || !_
                     ? _()
@@ -595,9 +595,9 @@
             _.useEffect(() => {
               _ || _(!1);
             }, [_, _]),
-            _(!!_, _, _, _, _, _);
+            _(!!_, _, _, _, _, _));
           const _ = (0, _.useCallback)((_) => {
-            _(_), _(_);
+            (_(_), _(_));
           }, []);
           return !_ || !_.visible || !_
             ? null
@@ -625,7 +625,7 @@
                   (0, _.jsx)(_, {
                     trailer: _,
                     onRefChange: (_) => {
-                      _(_), _(_);
+                      (_(_), _(_));
                     },
                     eTrailerDisplay: _,
                     fadeRatio: _,
@@ -655,7 +655,7 @@
             _ = _(!1, _);
           const _ = (0, _.useMemo)(() => (0, _._)(_), [_]),
             _ = (0, _.useCallback)((_) => {
-              _(_), _(_);
+              (_(_), _(_));
             }, []),
             _ = (0, _.useCallback)(() => {
               _(!0);
@@ -688,7 +688,7 @@
         }
         function _(_, _, _) {
           _.play().catch((_) => {
-            _(), _.Warning(`Failed to play ${_}: `, _);
+            (_(), _.Warning(`Failed to play ${_}: `, _));
           });
         }
         function _(_, _) {
@@ -714,7 +714,7 @@
           return (0, _.jsx)(_.Fragment, {
             children: (0, _.jsx)("div", {
               onClick: (_) => {
-                _.preventDefault(), _.stopPropagation();
+                (_.preventDefault(), _.stopPropagation());
               },
               className: _().AutoplayCheckboxCtn,
               children: (0, _.jsx)(
@@ -1783,13 +1783,13 @@
           try {
             const { appids: _, exhausted: _ } =
               await _._.Get().GetDiscoveryQueueAppsOfType(_, _, _);
-            (_ = [..._]),
+            ((_ = [..._]),
               (_ = _),
               _ && _.findIndex((_) => _ === _) === -1 && _.unshift(_),
               await _._.Get().QueueMultipleAppRequests(_, {
                 ..._,
                 ..._._,
-              });
+              }));
           } catch (_) {
             console.error("Failed getting discovery queue apps", _);
           }
@@ -1803,7 +1803,7 @@
             _ = (0, _._)();
           return (
             (0, _.useEffect)(() => {
-              _._.Init(_), _(!0);
+              (_._.Init(_), _(!0));
             }, [_]),
             _
               ? (0, _.jsx)(_, {
@@ -1828,27 +1828,27 @@
             _ = (0, _._)(_),
             [_, _] = _.useState(0),
             _ = (0, _._)();
-          (0, _._)("ArrowLeft", () => _(!1), !0, !0),
+          ((0, _._)("ArrowLeft", () => _(!1), !0, !0),
             (0, _._)("Left", () => _(!1), !0, !0),
             (0, _._)("ArrowRight", () => _(!0), !0, !0),
             (0, _._)("Right", () => _(!0), !0, !0),
             (0, _._)("Escape", () => _?.(), !0, !0),
-            (0, _._)("Esc", () => _?.(), !0, !0);
+            (0, _._)("Esc", () => _?.(), !0, !0));
           const _ = _.useMemo(() => _.innerWidth < _, [_]),
             { fnGetDiscoveryQueue: _, rgAppIDs: _ } = _(_, _, _);
-          _.useEffect(() => {
-            _(!0), _._.Get().HintLoad();
+          (_.useEffect(() => {
+            (_(!0), _._.Get().HintLoad());
           }, []),
             _.useEffect(() => {
               const _ = _[_];
               _ != _ && (_ && _ != _ && _.AddImpression(_, _), _(_));
-            }, [_, _, _, _, _]);
+            }, [_, _, _, _, _]));
           const _ = (_) => {
             const _ = _._(_ + (_ ? 1 : -1), 0, _.length - 1);
             _ != _ &&
               (_(_), _("New selected index: ", _, " Prev selected index: ", _));
           };
-          _.useEffect(() => {
+          (_.useEffect(() => {
             _?.length &&
               _[_] !== _ &&
               (_((_) => _ + 1),
@@ -1859,7 +1859,7 @@
             _.useEffect(() => {
               _.length != _ &&
                 (_(_.length), _.length > _ && _[_] == _ && _(_ + 1));
-            }, [_, _, _]);
+            }, [_, _, _]));
           const [_] = _.useState(new Map()),
             _ = (0, _._)(_, _),
             _ = !(0, _._)() && _ > 0,
@@ -2053,12 +2053,12 @@
             nDragOffset: _,
             nDragSelectedOffsetIndex: _,
             handleTouchStart: (_) => {
-              _(!0), (_.current = _.touches[0].clientX), _(0), _(0);
+              (_(!0), (_.current = _.touches[0].clientX), _(0), _(0));
             },
             handleTouchMove: (_) => {
               if (!_) return;
               const _ = _.touches[0].clientX - _.current;
-              _(_), _(_ > _ ? 1 : _ < -_ ? -1 : 0);
+              (_(_), _(_ > _ ? 1 : _ < -_ ? -1 : 0));
             },
             handleTouchEnd: () => {
               _ &&
@@ -2205,14 +2205,14 @@
                   _._.Get()
                     .LoadSkippedApps(_, _)
                     .then((_) => {
-                      _(_.reduce((_, _) => (_.has(_) ? _ + 1 : _), 0)),
+                      (_(_.reduce((_, _) => (_.has(_) ? _ + 1 : _), 0)),
                         _(
                           _.reduce(
                             (_, _) => (_._.Get().BIsGameIgnored(_) ? _ + 1 : _),
                             0,
                           ),
                         ),
-                        _(!0);
+                        _(!0));
                     });
                 });
           }, [_, _, _, _, _]);

@@ -6,7 +6,7 @@ function _(_, _) {
       let _ = _(_.ownerDocument.defaultView, (_) => {
         _(_[0]);
       });
-      return _.observe(_), () => _.unobserve(_);
+      return (_.observe(_), () => _.unobserve(_));
     },
     [_, _],
   );
@@ -36,7 +36,7 @@ function _(_, _) {
 }
 function _(_, ..._) {
   let _ = new _.ownerDocument.defaultView.ResizeObserver(..._);
-  return _.observe(_), _;
+  return (_.observe(_), _);
 }
 function _() {
   let [_, _] = (0, _.useState)(!1),
@@ -75,10 +75,10 @@ function _(_) {
 var _ = class extends _.Component {
   state = {};
   constructor(_) {
-    super(_), (this.state.lastErrorKey = _.errorKey);
+    (super(_), (this.state.lastErrorKey = _.errorKey));
   }
   componentDidCatch(_, _) {
-    _()
+    (_()
       .ReportError(_, {
         strComponentStack: _.componentStack || void 0,
       })
@@ -95,7 +95,7 @@ var _ = class extends _.Component {
           info: _,
         },
         lastErrorKey: this.props.errorKey,
-      });
+      }));
   }
   Reset() {
     this.setState({
@@ -189,7 +189,7 @@ var _ = ({ error: _, onDismiss: _ }) => {
           cursor: `pointer`,
         },
         onClick: (_) => {
-          _.preventDefault(), _();
+          (_.preventDefault(), _());
         },
         children: _,
       })
@@ -227,4 +227,3 @@ var _ = ({ error: _, onDismiss: _ }) => {
       },
       children: _,
     });
-export { _, _, _, _, _, _ };

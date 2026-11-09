@@ -34,11 +34,11 @@ function _(_) {
       if (!_ || !_ || !_ || (_ && _ && !_)) return;
       let _ = _.ownerDocument.defaultView;
       if (!_ || _.closed) return;
-      (_.style.display = `flex`),
+      ((_.style.display = `flex`),
         requestAnimationFrame(() => {
           _.style.display = `block`;
         }),
-        _.showPopover && _.showPopover();
+        _.showPopover && _.showPopover());
       let _ = _.querySelector(`.hover_arrow.left`),
         _ = _.querySelector(`.hover_arrow.right`),
         _ = _.querySelector(`.hover_arrow.top`),
@@ -47,10 +47,10 @@ function _(_) {
         _ = _.getBoundingClientRect(),
         _ = _ == `overlay` || _ == `overlay-center`,
         _ = _.getBoundingClientRect();
-      _ && _.setAttribute(`style`, `display: none;`),
+      (_ && _.setAttribute(`style`, `display: none;`),
         _ && _.setAttribute(`style`, `display: none;`),
         _ && _.setAttribute(`style`, `display: none;`),
-        _ && _.setAttribute(`style`, `display: none;`);
+        _ && _.setAttribute(`style`, `display: none;`));
       let _ = _;
       _.matches(`:dir(rtl)`) &&
         (_ === `left` ? (_ = `right`) : _ === `right` && (_ = `left`));
@@ -73,12 +73,12 @@ function _(_) {
           (_ < _ && ((_ = _), (_ = _), (_ = _), (_ = _), (_ = _)),
           _ > (_ ?? 10))
         ) {
-          console.log(
+          (console.log(
             `Not showing hover because it didn't fit in the main or alt direction`,
           ),
             _.setAttribute(`style`, `display: none;`),
             _(!0),
-            _?.();
+            _?.());
           return;
         }
       }
@@ -97,10 +97,10 @@ function _(_) {
         case `bottom`:
           _ = _;
       }
-      _ && _.setAttribute(`style`, ``),
+      (_ && _.setAttribute(`style`, ``),
         _ != _ && _(_),
         _ != _ && _(_),
-        _ || _(!0);
+        _ || _(!0));
     }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _]);
   _.useEffect(() => _(), [_]);
   let _ = Object.assign(
@@ -155,37 +155,37 @@ function _(_, _, _, _, _, _, _) {
     _;
   switch (_) {
     case `right`:
-      (_ = _.right + _ - _.left),
+      ((_ = _.right + _ - _.left),
         (_ = _(_.top - _.top, _.height, _.height, _)),
         (_ = Math.max(0, _ + _.width - _)),
-        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
+        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]));
       break;
     case `left`:
-      (_ = _.left - _ - _.width - _.left),
+      ((_ = _.left - _ - _.width - _.left),
         (_ = _(_.top - _.top, _.height, _.height, _)),
         (_ = Math.max(0, 0 - _)),
-        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
+        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]));
       break;
     case `bottom`:
-      (_ = _(_.left - _.left, _.width, _.width, _)),
+      ((_ = _(_.left - _.left, _.width, _.width, _)),
         (_ = _.bottom + _ - _.top),
         (_ = Math.max(0, _ + _.height - _)),
-        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
+        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]));
       break;
     case `top`:
-      (_ = _(_.left - _.left, _.width, _.width, _)),
+      ((_ = _(_.left - _.left, _.width, _.width, _)),
         (_ = _.top - _ - _.height - _.top),
         (_ = Math.max(0, 0 - _)),
-        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
+        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]));
       break;
     case `overlay`:
-      (_ = _.left - _.left), (_ = _.top - _.top), (_ = 0), (_ = [0, 0]);
+      ((_ = _.left - _.left), (_ = _.top - _.top), (_ = 0), (_ = [0, 0]));
       break;
     case `overlay-center`:
-      (_ = _.left - _.left + 0.5 * _.width - 0.5 * _.width),
+      ((_ = _.left - _.left + 0.5 * _.width - 0.5 * _.width),
         (_ = _.top - _.top + 0.5 * _.height - 0.5 * _.height),
         (_ = 0),
-        (_ = [0, 0]);
+        (_ = [0, 0]));
   }
   return {
     nLeft: _,
@@ -199,9 +199,9 @@ function _(_, _, _, _) {
 }
 function _(_, _, _, _, _) {
   let _ = Math.max(_[0], _[1]);
-  _ !== void 0 && (_ = Math.min(_, _)), (_ = Math.max(0, _));
+  (_ !== void 0 && (_ = Math.min(_, _)), (_ = Math.max(0, _)));
   let _ = _[0] > _[1] ? _ : -_;
-  return _ === `left` || _ === `right` ? (_ += _) : (_ += _), [_, _];
+  return (_ === `left` || _ === `right` ? (_ += _) : (_ += _), [_, _]);
 }
 var _ = `oQJ4ZJN3E6g-`,
   _ = _(_());
@@ -374,4 +374,3 @@ function _(_) {
   });
   return _ ? _.createPortal(_, _.ownerDocument.body) : _;
 }
-export { _, _, _, _, _ };

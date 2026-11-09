@@ -86,10 +86,10 @@ function _(_, _) {
     _(_);
     return;
   }
-  _(
+  (_(
     `Wait for page enabled, suppressing focus in ${_._} until we hear that page is ready`,
   ),
-    _.DeferredFocus.SuppressFocus();
+    _.DeferredFocus.SuppressFocus());
   let _ = _(_),
     _ = _.Register(() => {
       _(_, _) ? _.DeferredFocus.Reset() : _.DeferredFocus.ExecuteQueuedFocus();
@@ -97,12 +97,12 @@ function _(_, _) {
   _.Push(_);
 }
 function _() {
-  (window.__bFocusRestoreReady = !0), window.postMessage(`FocusRestoreReady`);
+  ((window.__bFocusRestoreReady = !0), window.postMessage(`FocusRestoreReady`));
 }
 var _ = `FocusHistoryWaitForPage`;
 function _() {
   let _ = window.navigation.currentEntry?.getState();
-  return _(`Wait for page? ${_?.[_] ? `wait` : `no`} `, _), !!_?.[_];
+  return (_(`Wait for page? ${_?.[_] ? `wait` : `no`} `, _), !!_?.[_]);
 }
 function _() {
   window.navigation.updateCurrentEntry({
@@ -129,4 +129,3 @@ function _(_) {
 function _() {
   return _.useContext(_).ePreferredHWCompat;
 }
-export { _, _, _, _ };

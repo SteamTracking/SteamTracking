@@ -32,7 +32,7 @@ function T() {
   return v(w) === `desktop`;
 }
 function ne() {
-  T() && b(w), `location` in window && location.reload();
+  (T() && b(w), `location` in window && location.reload());
 }
 var E = e(n(), 1),
   D = e(t(), 1),
@@ -56,7 +56,7 @@ function N(e) {
     interactions: {
       hover: (e) => {
         let t = { ...e, delay: { open: r, close: 0 } };
-        return i && (t = { ...t, handleClose: null }), t;
+        return (i && (t = { ...t, handleClose: null }), t);
       },
     },
     presentation: `anchor`,
@@ -343,7 +343,7 @@ function V(e) {
       });
 }
 var H = {};
-(H.arabic = () =>
+((H.arabic = () =>
   f(() => import(`./globalfooter_arabic.js`), [], import.meta.url)),
   (H.brazilian = () =>
     f(() => import(`./globalfooter_brazilian.js`), [], import.meta.url)),
@@ -406,7 +406,7 @@ var H = {};
   (H.ukrainian = () =>
     f(() => import(`./globalfooter_ukrainian.js`), [], import.meta.url)),
   (H.vietnamese = () =>
-    f(() => import(`./globalfooter_vietnamese.js`), [], import.meta.url));
+    f(() => import(`./globalfooter_vietnamese.js`), [], import.meta.url)));
 async function U(e) {
   if (H[e]) return await H[e]();
 }

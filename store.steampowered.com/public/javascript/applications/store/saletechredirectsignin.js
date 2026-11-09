@@ -15,7 +15,8 @@ import {
 } from "./main.js";
 e();
 var u = {};
-(u.arabic = () => o(() => import(`./saletech_arabic.js`), [], import.meta.url)),
+((u.arabic = () =>
+  o(() => import(`./saletech_arabic.js`), [], import.meta.url)),
   (u.brazilian = () =>
     o(() => import(`./saletech_brazilian.js`), [], import.meta.url)),
   (u.bulgarian = () =>
@@ -71,7 +72,7 @@ var u = {};
   (u.ukrainian = () =>
     o(() => import(`./saletech_ukrainian.js`), [], import.meta.url)),
   (u.vietnamese = () =>
-    o(() => import(`./saletech_vietnamese.js`), [], import.meta.url));
+    o(() => import(`./saletech_vietnamese.js`), [], import.meta.url)));
 async function d(e) {
   if (u[e]) return await u[e]();
 }
@@ -85,7 +86,7 @@ function m(e) {
     onCancel: t,
     strOKButtonText: l.Localize(`#Button_OK`),
     onOK: () => {
-      n(), t();
+      (n(), t());
     },
   });
 }

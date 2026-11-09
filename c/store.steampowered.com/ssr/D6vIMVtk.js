@@ -1,6 +1,7 @@
 function _(_) {
   return () => (
-    (_ = (_ * 1664525 + 1013904223) % 4294967296), (_ >>> 0) / 4294967296
+    (_ = (_ * 1664525 + 1013904223) % 4294967296),
+    (_ >>> 0) / 4294967296
   );
 }
 function _() {
@@ -18,11 +19,11 @@ function _() {
 }
 async function _(_, _, _, _, _) {
   let _ = _.Init(_);
-  _.Body().set_steamid(_.steamid),
+  (_.Body().set_steamid(_.steamid),
     _(_, _),
     _ !== void 0 && _.Body().set_sort_order(_),
     _ && (_(_, _.data_request), _.Body().set_page_size(_.item_count)),
-    _.Body().filters(!0).set_min_discount_percent(_);
+    _.Body().filters(!0).set_min_discount_percent(_));
   let _ = await _.GetWishlistSortedFiltered(_, _);
   if (!_.BSuccess())
     throw `Error from WishlistService.GetWishlistSortedFiltered: ${_.GetErrorMessage()}`;
@@ -77,12 +78,12 @@ function _(_, _, _ = !1, _ = void 0) {
 }
 async function _(_, _, _ = !1, _ = void 0) {
   let _ = _.Init(_);
-  _.Body().set_queue_type(_),
+  (_.Body().set_queue_type(_),
     _.Body().set_country_code(_.COUNTRY),
     _.Body().set_rebuild_queue(_),
     _.Body().set_rebuild_queue_if_stale(!0),
     (_?.nSaleTagID || _?.strContentHubType || _?.nCreatorClanAccountId) &&
-      _.Body().set_store_page_filter(_(_, !0));
+      _.Body().set_store_page_filter(_(_, !0)));
   let _ = await _.GetDiscoveryQueue(_, _);
   if (!_.BSuccess())
     throw `Error loading discovery queue: ${_.GetErrorMessage()}`;
@@ -109,7 +110,9 @@ function _(_, _) {
     _ = new _();
   if (_ || _) {
     let _ = new _();
-    _.set_sale_tagid(_), _.set_creator_clan_account_id(_), _.set_sale_filter(_);
+    (_.set_sale_tagid(_),
+      _.set_creator_clan_account_id(_),
+      _.set_sale_filter(_));
   } else if (_) {
     let _ = new _();
     if (
@@ -121,14 +124,13 @@ function _(_, _) {
       _)
     ) {
       let _ = new _();
-      _.set_name(_),
+      (_.set_name(_),
         _.set_optin_tagid(_),
         _.set_prune_tagid(_),
         _.set_optin_only(_),
-        _.set_optin(_);
+        _.set_optin(_));
     }
     _.set_content_hub_filter(_);
   }
   return _;
 }
-export { _, _, _, _, _, _ };

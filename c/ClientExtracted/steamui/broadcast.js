@@ -74,11 +74,11 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports),
+        (__webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
             BroadcastEmbeddablePopoutHeader: () => _,
             default: () => _,
-          });
+          }));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -354,10 +354,10 @@
                       _((0, _._)("#EventDisplay_Share_CopiedToClipboard"));
                     })
                     .catch((_) => {
-                      _(
+                      (_(
                         (0, _._)("#EventDisplay_Share_FailedToCopyToClipboard"),
                       ),
-                        console.error("Failed to copy link to clipboard:", _);
+                        console.error("Failed to copy link to clipboard:", _));
                     });
               },
               [_],
@@ -426,7 +426,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           };
         const _ = {
           list: [
@@ -495,7 +495,9 @@
             bStartMuted: !0,
           };
           async componentDidMount() {
-            await _._.Get().LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal),
+            (await _._.Get().LoadBIsEmbeddedBroadcastHidden(
+              this.m_cancelSignal,
+            ),
               this.m_cancelSignal.token.reason ||
                 this.setState({
                   bLoadingPreference: !1,
@@ -527,7 +529,7 @@
                       maxHeight: "100vh",
                     },
                   });
-              }, 10);
+              }, 10));
           }
           componentWillUnmount() {
             this.m_cancelSignal.cancel(
@@ -541,7 +543,7 @@
               _ = _.BroadcastWatchStore.GetOrCreateBroadcastInfo(
                 _.steamid,
               ).m_nAppID;
-            (0, _._)(_, _ ? _._._ : _._._, _.snr),
+            ((0, _._)(_, _ ? _._._ : _._._, _.snr),
               _ && _()?.AddEvent(_._._),
               window.setTimeout(
                 () =>
@@ -560,7 +562,7 @@
                   },
                   () =>
                     _._.Get().SetEmbeddedStreamCollapsed(!this.state.bExpanded),
-                );
+                ));
           }
           OnShrinkTransitionEnd() {
             this.state.innerStyle.maxHeight === "0vh" &&
@@ -572,12 +574,12 @@
               );
           }
           async onStreamSelect(_) {
-            this.setState({
+            (this.setState({
               bStartMuted: !1,
             }),
               _._.Get().GetPlayReadyStream(this.props)?.accountid !=
                 _.accountid &&
-                (await _._.Get().AttemptToPlayStream(this.props, _));
+                (await _._.Get().AttemptToPlayStream(this.props, _)));
           }
           async PlayNextNonVOD() {
             this.setState({
@@ -695,8 +697,8 @@
                 _ = _.store_title ? _.store_title : _.title,
                 _ = _._.Get().GetConcurrentStreams(this.props) > 1;
               const _ = () => {
-                _.nAppIDVOD && this.PlayNextNonVOD(),
-                  this.props.fnOnVideoEnd?.();
+                (_.nAppIDVOD && this.PlayNextNonVOD(),
+                  this.props.fnOnVideoEnd?.());
               };
               return (0, _.jsx)(_.Fragment, {
                 children: (0, _.jsxs)("div", {
@@ -818,30 +820,30 @@
               });
           }
         };
-        _([_._], _.prototype, "ToggleBroadcastExpandShrink", 1),
+        (_([_._], _.prototype, "ToggleBroadcastExpandShrink", 1),
           _([_._], _.prototype, "OnShrinkTransitionEnd", 1),
           _([_._], _.prototype, "onStreamSelect", 1),
           _([_._], _.prototype, "PlayNextNonVOD", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         class _ extends _.Component {
           m_iVideoContainerRef = _.createRef();
           constructor(_) {
-            super(_),
+            (super(_),
               (this.state = {
                 bPopout: !1,
                 bPreventPopup: window.screen.width <= 768,
-              });
+              }));
           }
           CloseBroadcastPopup() {
             const _ = _.BroadcastWatchStore.GetOrCreateBroadcastInfo(
               this.props.stream.steamid,
             ).m_nAppID;
-            (0, _._)(_, _._._, this.props.stream.snr),
+            ((0, _._)(_, _._._, this.props.stream.snr),
               _()?.AddEvent(_._._),
               this.setState({
                 bPopout: !1,
                 bPreventPopup: !0,
-              });
+              }));
           }
           OnEnter() {
             !this.state.bPreventPopup &&
@@ -900,9 +902,9 @@
             });
           }
         }
-        _([_._], _.prototype, "CloseBroadcastPopup", 1),
+        (_([_._], _.prototype, "CloseBroadcastPopup", 1),
           _([_._], _.prototype, "OnEnter", 1),
-          _([_._], _.prototype, "OnLeave", 1);
+          _([_._], _.prototype, "OnLeave", 1));
         function _(_) {
           const { stream: _ } = _,
             [_] = (0, _._)(() => [_.steamid]),
@@ -946,12 +948,12 @@
             const _ = _.BroadcastWatchStore.GetOrCreateBroadcastInfo(
               this.props.stream.steamid,
             ).m_nAppID;
-            (0, _._)(
+            ((0, _._)(
               _,
               _._.Get().GetChatVisibility() === "show" ? _._._ : _._._,
               this.props.stream.snr,
             ),
-              _._.Get().ToggleChatVisibility();
+              _._.Get().ToggleChatVisibility());
           }
           onWatchBroadcastPage() {
             const _ = _.BroadcastWatchStore.GetOrCreateBroadcastInfo(
@@ -1059,9 +1061,9 @@
             });
           }
         };
-        _([_._], _.prototype, "OnToggleChat", 1),
+        (_([_._], _.prototype, "OnToggleChat", 1),
           _([_._], _.prototype, "onWatchBroadcastPage", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         class _ extends _.Component {
           render() {
             let _ = this.props.ImgUrl;
@@ -1138,7 +1140,7 @@
               const _ = (_._.Get().GetStreams(_) ?? []).filter(
                 (_) => !_ || _(_),
               );
-              return (0, _._)(_), _;
+              return ((0, _._)(_), _);
             }, [_, _]);
           return (
             (0, _.useEffect)(() => {

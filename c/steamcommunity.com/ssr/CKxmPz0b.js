@@ -26,4 +26,3 @@ function _(_) {
   if (_.endsWith(`.srt`)) return 7;
   if (_.endsWith(`.webp`)) return 10;
 }
-export { _, _ };

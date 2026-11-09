@@ -43,7 +43,7 @@ function _() {
   let _ = document.createElement(`a`);
   _.href = _.PARTNER_BASE_URL;
   let _ = _.pathname;
-  return _.endsWith(`/`) || (_ += `/`), _;
+  return (_.endsWith(`/`) || (_ += `/`), _);
 }
 var _ = _(_()),
   _ = (function (_) {
@@ -103,7 +103,7 @@ var _ = _(function (_, _) {
             (_.preventDefault(), _());
         },
       });
-    return (_.ref = _ === _ ? _ : _ || _), _.createElement(`a`, _);
+    return ((_.ref = _ === _ ? _ : _ || _), _.createElement(`a`, _));
   }),
   _ = _(function (_, _) {
     var _ = _.component,
@@ -198,7 +198,8 @@ _(function (_, _) {
       },
       _,
     );
-    return _ === _ ? (_.innerRef = _) : (_.ref = _ || _), _.createElement(_, _);
+    return (
+      _ === _ ? (_.innerRef = _) : (_.ref = _ || _), _.createElement(_, _)
+    );
   });
 });
-export { _, _, _, _ };

@@ -149,7 +149,7 @@ function _() {
       mutationFn: () => {
         if (_) {
           let _ = _;
-          return (_ = null), Promise.resolve(_);
+          return ((_ = null), Promise.resolve(_));
         }
         return _
           ? Promise.resolve(_.getQueryData(_(_.LANGUAGE)) ?? _)
@@ -171,7 +171,7 @@ function _() {
   return {
     fnSetClaimState: (0, _.useCallback)(
       (_) => {
-        (_ = !0),
+        ((_ = !0),
           (_ = _.bCanClaimNewItem
             ? {
                 bAlreadyClaimedCurrentItem: !0,
@@ -180,7 +180,7 @@ function _() {
                 ..._,
               }
             : null),
-          _.setQueryData(_(_.LANGUAGE), _);
+          _.setQueryData(_(_.LANGUAGE), _));
       },
       [_],
     ),
@@ -214,4 +214,3 @@ function _(_, _, _, _) {
   let _ = _();
   return _(_(_, _, _, _, _));
 }
-export { _, _, _, _, _, _ };

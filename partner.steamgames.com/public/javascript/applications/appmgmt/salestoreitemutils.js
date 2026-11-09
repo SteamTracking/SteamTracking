@@ -132,12 +132,12 @@ function Te(e) {
     fnClose: o,
     bCircular: s,
   } = e;
-  F(`ArrowLeft`, () => a?.(), !0, !0),
+  (F(`ArrowLeft`, () => a?.(), !0, !0),
     F(`Left`, () => a?.(), !0, !0),
     F(`ArrowRight`, () => i?.(), !0, !0),
     F(`Right`, () => i?.(), !0, !0),
     F(`Escape`, () => o && o(), !0, !0),
-    F(`Esc`, () => o && o(), !0, !0);
+    F(`Esc`, () => o && o(), !0, !0));
   let c = r > 1;
   return (0, N.jsxs)(`div`, {
     className: Se,
@@ -253,8 +253,8 @@ function z(e) {
     c != n.length && (l(n.length), d(0));
   }, [c, n.length]);
   let f = M.useCallback(() => {
-    e.onImageError && e.onImageError(e.srcs[u]),
-      u + 1 < e.srcs.length && d(u + 1);
+    (e.onImageError && e.onImageError(e.srcs[u]),
+      u + 1 < e.srcs.length && d(u + 1));
   }, [u, e]);
   return n.length == 0
     ? null
@@ -342,7 +342,7 @@ function je(e) {
 var B = d(p(), 1);
 function V(e, t) {
   let n = [];
-  return e && Ne(n, e, t), n.filter((e) => !!e);
+  return (e && Ne(n, e, t), n.filter((e) => !!e));
 }
 function Me(e, t) {
   return {
@@ -411,7 +411,7 @@ var qe = M.memo(function (t) {
         a = K;
         break;
       default:
-        return c(e, `Unhandled steam os category: ${e}`), null;
+        return (c(e, `Unhandled steam os category: ${e}`), null);
     }
   } else {
     let e;
@@ -439,7 +439,7 @@ var qe = M.memo(function (t) {
         a = K;
         break;
       default:
-        return c(e, `Unhandled deck compat category: ${e}`), null;
+        return (c(e, `Unhandled deck compat category: ${e}`), null);
     }
   }
   return (0, N.jsxs)(`span`, {
@@ -856,10 +856,10 @@ var J = class {
   default_selection_priority = 0;
   current_selection_priority = 0;
 };
-l([a], J.prototype, `title`, void 0),
+(l([a], J.prototype, `title`, void 0),
   l([a], J.prototype, `viewer_count`, void 0),
   l([a], J.prototype, `gamedata_subtitle`, void 0),
-  l([a], J.prototype, `current_selection_priority`, void 0);
+  l([a], J.prototype, `current_selection_priority`, void 0));
 var _t = `primary`,
   vt = `featured`,
   yt = `default_featured`,
@@ -1113,7 +1113,7 @@ function jt(e, t) {
     case `library`:
       return !!e.hero_capsule || !!e.library_capsule;
     default:
-      return c(t, `Unhandled imageType: ${t}`), !1;
+      return (c(t, `Unhandled imageType: ${t}`), !1);
   }
 }
 export {

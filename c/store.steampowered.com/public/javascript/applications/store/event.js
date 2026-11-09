@@ -563,20 +563,20 @@ var _ = _((_) => {
                     _.BIsVisibleEvent() &&
                     (_.RecordEventRead(_, _), (_ = !0));
                 }
-                _.length > 0 &&
+                (_.length > 0 &&
                   (_.filter((_) => _.BIsPartnerEvent()).forEach((_) =>
                     _.RecordEventShown(_, _),
                   ),
                   (_ = !0)),
-                  _ && _.Flush();
+                  _ && _.Flush());
               }
             }
           })().catch((_) => {
-            console.error(
+            (console.error(
               `PartnerEventRow: loading the adjacent events failed`,
               _,
             ),
-              _(!1);
+              _(!1));
           }),
           () => {
             _.current && _.current(`PartnerEventRow: unmounting`);
@@ -607,7 +607,7 @@ var _ = _((_) => {
   }),
   _ = class {
     constructor(_) {
-      _(this),
+      (_(this),
         (this.m_stats = {
           event_gid: `0`,
           library_overview_shown: 0,
@@ -644,10 +644,10 @@ var _ = _((_) => {
           this.m_stats.community_hub_read +
           this.m_stats.news_hub_read +
           this.m_stats.event_scroller_read),
-        (this.m_lastUpdateTime = _ ? Math.floor(Date.now() / 1e3) : 0);
+        (this.m_lastUpdateTime = _ ? Math.floor(Date.now() / 1e3) : 0));
     }
     reset(_) {
-      (this.m_stats.library_overview_shown = _.library_overview_shown),
+      ((this.m_stats.library_overview_shown = _.library_overview_shown),
         (this.m_stats.library_overview_read = _.library_overview_read),
         (this.m_stats.app_details_spotlight_shown =
           _.app_details_spotlight_shown),
@@ -682,13 +682,13 @@ var _ = _((_) => {
           _.community_hub_read +
           _.news_hub_read +
           _.event_scroller_read),
-        (this.m_lastUpdateTime = Date.now() / 1e3);
+        (this.m_lastUpdateTime = Date.now() / 1e3));
     }
     m_stats = void 0;
     m_lastUpdateTime = void 0;
   };
-_([_], _.prototype, `m_stats`, void 0),
-  _([_], _.prototype, `m_lastUpdateTime`, void 0);
+(_([_], _.prototype, `m_stats`, void 0),
+  _([_], _.prototype, `m_lastUpdateTime`, void 0));
 var _ = 3600,
   _ = class {
     m_mapPerEventStats = new Map();
@@ -703,13 +703,13 @@ var _ = 3600,
         this.ValidateStoreDefault(_) &&
           this.m_mapSummaryStats.set(_.clan_account_id, new _(_));
         let _ = _(`trackingdataevents`, `application_config`);
-        this.ValidateStoreDefaultList(_) &&
+        (this.ValidateStoreDefaultList(_) &&
           _.forEach((_) => {
             let _ = _.InitFromClanID(_.clan_account_id, _.EUNIVERSE),
               _ = this.GetKey(_, _.event_gid);
             this.m_mapPerEventStats.set(_, new _(_));
           }),
-          (this.m_bLoadedFromConfig = !0);
+          (this.m_bLoadedFromConfig = !0));
       }
     }
     ValidateStoreDefault(_) {
@@ -767,13 +767,16 @@ var _ = 3600,
         });
         return (
           _(() => {
-            this.m_mapSummaryStats.set(_.GetAccountID(), new _(_.data.summary)),
+            (this.m_mapSummaryStats.set(
+              _.GetAccountID(),
+              new _(_.data.summary),
+            ),
               _.data.events_detail.forEach((_) => {
                 let _ = this.GetKey(_, _.event_gid);
                 this.m_mapPerEventStats.has(_)
                   ? this.m_mapPerEventStats.get(_).reset(_)
                   : this.m_mapPerEventStats.set(_, new _(_));
-              });
+              }));
           }),
           !0
         );
@@ -790,9 +793,9 @@ var _ = 3600,
       return !!(_ && _.m_stats);
     }
   };
-_([_], _.prototype, `m_mapPerEventStats`, void 0),
+(_([_], _.prototype, `m_mapPerEventStats`, void 0),
   _([_], _.prototype, `m_mapSummaryStats`, void 0),
-  _([_], _.prototype, `LazyInit`, null);
+  _([_], _.prototype, `LazyInit`, null));
 var _ = new _();
 function _(_) {
   let { appid: _, creatorHome: _ } = _;
@@ -1736,7 +1739,7 @@ var _ = `FDyPgF-sqXU-`,
     }
     static s_Singleton;
     static Get() {
-      return (_.s_Singleton ||= new _()), _.s_Singleton;
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
     }
     constructor() {
       _(this);
@@ -1811,9 +1814,9 @@ var _ = _((_) => {
     let { eventModel: _ } = _,
       _ = async () => {
         let _ = new URLSearchParams();
-        _.append(`sessionid`, _()),
+        (_.append(`sessionid`, _()),
           _.append(`clan_accountid`, `` + _.clanSteamID.GetAccountID()),
-          _.append(`gid_clan_event`, `` + _.GID);
+          _.append(`gid_clan_event`, `` + _.GID));
         let _ = !1,
           _ = 0;
         try {
@@ -1821,21 +1824,21 @@ var _ = _((_) => {
             _ = await _.default.post(_, _, {
               withCredentials: !0,
             });
-          (_ = _?.data?.success == 1 || _?.data?.success == 29),
+          ((_ = _?.data?.success == 1 || _?.data?.success == 29),
             _?.data?.success == 29 &&
               console.warn(
                 `RemoveEventFromSteamChinaButton: we receive duplicate request ${_.clanSteamID.GetAccountID()} : ${_.GID}; event is still removed from SC`,
               ),
-            (_ = _?.data?.success);
+            (_ = _?.data?.success));
         } catch (_) {
           let _ = _(_);
-          (_ = _.errorCode),
+          ((_ = _.errorCode),
             console.error(
               `RemoveEventFromSteamChinaButton: error ` + _.strErrorMsg,
               _,
-            );
+            ));
         }
-        _.closeModal && _.closeModal(),
+        (_.closeModal && _.closeModal(),
           _(
             _
               ? (0, _.jsx)(_, {
@@ -1846,7 +1849,7 @@ var _ = _((_) => {
                   children: _(`#EventDisplay_Share_Failure`) + ` ` + _,
                 }),
             window,
-          );
+          ));
       };
     return (0, _.jsx)(`div`, {
       className: _(_, _, _),
@@ -1859,7 +1862,7 @@ var _ = _((_) => {
             bDestructiveWarning: !0,
             closeModal: _.closeModal,
             onOK: () => {
-              (_ = !0), _();
+              ((_ = !0), _());
             },
             children:
               _ &&
@@ -1914,9 +1917,10 @@ var _ = _((_) => {
       },
       _ = (_) => {
         let _ = _(_);
-        console.error(`StoreEventDetailView failed ` + _.strErrorMsg, _), _(!0);
+        (console.error(`StoreEventDetailView failed ` + _.strErrorMsg, _),
+          _(!0));
       };
-    (0, _.useEffect)(_, []),
+    ((0, _.useEffect)(_, []),
       (0, _.useEffect)(() => {
         let _ = _.default.CancelToken.source();
         return (
@@ -1939,7 +1943,7 @@ var _ = _((_) => {
             _.cancel(`StoreEventDetailView: unmounting`);
           }
         );
-      }, [_, _, _, _, _]);
+      }, [_, _, _, _, _]));
     let _ = _(_, _.k_eStoreNewsHub, `allowRelative`);
     if (_ || !_ || (_?.appid && _ == 1)) {
       let _ = `lang_` + _(_(_.LANGUAGE));
@@ -2065,8 +2069,8 @@ var _ = _((_) => {
           params: _,
         });
       _(() => {
-        _.data && _.data.success && this.HandleCuratorResponse(_.data),
-          (this.m_bIsLoadComplete = !0);
+        (_.data && _.data.success && this.HandleCuratorResponse(_.data),
+          (this.m_bIsLoadComplete = !0));
       });
     }
     HandleCuratorResponse(_) {
@@ -2082,11 +2086,11 @@ var _ = _((_) => {
         }
     }
   };
-_([_], _.prototype, `m_mapNewsCurators`, void 0),
+(_([_], _.prototype, `m_mapNewsCurators`, void 0),
   _([_], _.prototype, `m_bIsLoadComplete`, void 0),
   _([_], _.prototype, `m_mapLangToNewsCurators`, void 0),
   _([_], _.prototype, `allNewsCurators`, null),
-  _([_], _.prototype, `HandleCuratorResponse`, null);
+  _([_], _.prototype, `HandleCuratorResponse`, null));
 var _ = `_4gJW-1D-qoo-`,
   _ = `g-Xc-fP6jvg-`,
   _ = `_1Wx2O8pIAbo-`,
@@ -2131,8 +2135,8 @@ var _ = 300,
     }
     async GetSuggestionsFromServer(_) {
       let _ = _(this.props.rgCorporaToSearch);
-      _.has(`apps`) && this.GetAppSuggestionsFromServer(_),
-        _.has(`curators`) && this.GetCuratorSuggestions(_);
+      (_.has(`apps`) && this.GetAppSuggestionsFromServer(_),
+        _.has(`curators`) && this.GetCuratorSuggestions(_));
     }
     async GetCuratorSuggestions(_) {
       let _ = _.Get().allNewsCurators,
@@ -2169,21 +2173,21 @@ var _ = 300,
           );
         }
       }
-      this.m_mapHighestReceivedRequestIDFromBackEnd.set(
+      (this.m_mapHighestReceivedRequestIDFromBackEnd.set(
         `curators`,
         this.m_nHighestSentRequestID,
       ),
         this.setState({
           rgCuratorSuggestions: _,
-        });
+        }));
     }
     async GetAppSuggestionsFromServer(_) {
       let _ = this.m_nHighestSentRequestID,
         _ = [];
-      this.props.rgCorporaToSearch.indexOf(`games`) >= 0 &&
+      (this.props.rgCorporaToSearch.indexOf(`games`) >= 0 &&
         (_.push(`game`), _.push(`software`)),
         this.props.rgCorporaToSearch.indexOf(`dlc`) >= 0 &&
-          (_.push(`dlc`), _.push(`music`));
+          (_.push(`dlc`), _.push(`music`)));
       let _ = {
           _: _.COUNTRY,
           _: _.LANGUAGE,
@@ -2203,7 +2207,7 @@ var _ = 300,
       if (_ < this.m_mapHighestReceivedRequestIDFromBackEnd.get(`apps`)) return;
       this.m_mapHighestReceivedRequestIDFromBackEnd.set(`apps`, _);
       let _;
-      _?.data?.length &&
+      (_?.data?.length &&
         (_ = _.data.map((_) => {
           let _ = {
             corpus: _(_.type),
@@ -2229,11 +2233,11 @@ var _ = 300,
         })),
         this.setState({
           rgAppSuggestions: _,
-        });
+        }));
     }
     async UpdateSuggestions(_) {
       let _ = _.target.value && _.target.value.trim().toLocaleLowerCase();
-      this.m_nHighestSentRequestID++,
+      (this.m_nHighestSentRequestID++,
         _?.length
           ? (this.setState({
               strSearchString: _,
@@ -2251,7 +2255,7 @@ var _ = 300,
             this.setState({
               strSearchString: ``,
             }),
-            this.ResetSuggestions());
+            this.ResetSuggestions()));
     }
     ResetSuggestions() {
       this.setState({
@@ -2415,11 +2419,11 @@ function _(_) {
       `#EventCalendar_GameSource_UnhideCuratorsDialog_CancelButton`,
     ),
     onOK: () => {
-      _().m_visibilityStore.SetGameSourceAllowed(_.k_ECurator, !0), _ && _();
+      (_().m_visibilityStore.SetGameSourceAllowed(_.k_ECurator, !0), _ && _());
     },
     onCancel: () => {
-      _().m_visibilityStore.SetCuratorUnhideOnFollowDialogDismissed(!0),
-        _ && _();
+      (_().m_visibilityStore.SetCuratorUnhideOnFollowDialogDismissed(!0),
+        _ && _());
     },
   });
 }
@@ -2468,7 +2472,7 @@ var _ = (_) =>
     _.useEffect(() => {
       _ ||
         (async () => {
-          await _.Get().WaitForInitialLoad(), _(!0);
+          (await _.Get().WaitForInitialLoad(), _(!0));
         })();
     }, [_]);
     let _ = [];
@@ -2558,14 +2562,14 @@ var _ = (_) =>
   _ = (_) => {
     let [_, _] = _.useState(!1),
       _ = () => {
-        _(
+        (_(
           (0, _.jsx)(_, {
             strDescription: _(`#EventCurator_NoEventsFound_Body`),
             strTitle: _(`#EventCurator_NoEventsFound_Title`),
           }),
           window,
         ),
-          _(!1);
+          _(!1));
       },
       _ = () =>
         _
@@ -2930,7 +2934,7 @@ var _ = (_) => {
     m_fnGetRouterHistory = void 0;
     static s_GlobalStore;
     static Get() {
-      return (_.s_GlobalStore ||= new _()), _.s_GlobalStore;
+      return ((_.s_GlobalStore ||= new _()), _.s_GlobalStore);
     }
     constructor() {
       _(this);
@@ -2951,7 +2955,7 @@ var _ = (_) => {
       return this.m_curDisplay;
     }
     SetDisplay(_) {
-      (this.m_curDisplay = _),
+      ((this.m_curDisplay = _),
         this.m_fnGetRouterHistory &&
           _(
             this.m_fnGetRouterHistory(),
@@ -2959,7 +2963,7 @@ var _ = (_) => {
             this.m_curDisplay == `desktop_navigation`
               ? void 0
               : this.m_curDisplay,
-          );
+          ));
     }
     GetDisplay() {
       return this.m_curDisplay;
@@ -2974,8 +2978,8 @@ var _ = class extends _.Component {
     return _().m_visibilityStore;
   }
   OnEventTypeChange(_, _) {
-    this.GetVisibilityStore().SetEventTypeGroupAllowed(_, _),
-      this.props.fnOnFilterChange();
+    (this.GetVisibilityStore().SetEventTypeGroupAllowed(_, _),
+      this.props.fnOnFilterChange());
   }
   RenderEventTypeCheckbox(_) {
     let _ = this.GetVisibilityStore().BIsEventTypeGroupAllowed(_);
@@ -2994,8 +2998,8 @@ var _ = class extends _.Component {
     );
   }
   OnGameSourceChange(_, _) {
-    this.GetVisibilityStore().SetGameSourceAllowed(_, _),
-      this.props.fnOnFilterChange();
+    (this.GetVisibilityStore().SetGameSourceAllowed(_, _),
+      this.props.fnOnFilterChange());
   }
   RenderGameSourceCheckbox(_, _) {
     let _ =
@@ -3207,7 +3211,7 @@ function _(_) {
     label: _.GetClanInfoByClanAccountID(_)?.group_name,
     checked: _,
     onChange: (_) => {
-      _.m_visibilityStore.SetClanVisibility(_, _), _();
+      (_.m_visibilityStore.SetClanVisibility(_, _), _());
     },
   });
 }
@@ -3218,7 +3222,7 @@ function _(_) {
     label: _.Get().GetApp(_)?.GetName(),
     checked: _,
     onChange: (_) => {
-      _.m_visibilityStore.SetAppVisibility(_, _), _();
+      (_.m_visibilityStore.SetAppVisibility(_, _), _());
     },
   });
 }
@@ -3261,7 +3265,7 @@ var _ = _(function (_) {
       _ = (0, _.jsx)(`div`, {
         className: _,
         onClick: () => {
-          _(!1), _();
+          (_(!1), _());
         },
         children: (0, _.jsx)(_, {}),
       }),
@@ -3439,7 +3443,7 @@ function _(_, _) {
       _ = _().BIsGlobalCalendar() && !_;
       break;
     case _.Upcoming:
-      (_ = _().BIsGlobalCalendar() && _), (_ = _());
+      ((_ = _().BIsGlobalCalendar() && _), (_ = _()));
   }
   return {
     name: _.strName,
@@ -3454,7 +3458,7 @@ function _(_, _) {
 }
 function _(_, _) {
   let _ = [];
-  return _.push(_(_.Default, _)), _.push(_(_.Upcoming, _)), _;
+  return (_.push(_(_.Default, _)), _.push(_(_.Upcoming, _)), _);
 }
 function _(_, _) {
   let _ = [];
@@ -3466,7 +3470,7 @@ function _(_, _) {
   );
 }
 function _(_, _) {
-  _().BIsCollectionCalendar(), _();
+  (_().BIsCollectionCalendar(), _());
   let _ = [];
   if ((_() && _.push(_(_.Press, _)), _))
     for (let _ of _.GetVisibleSpecialEvents())
@@ -3574,7 +3578,7 @@ var _ = (_) => {
       });
     }
   };
-_([_], _.prototype, `onExpandSearch`, null), (_ = _([_], _));
+(_([_], _.prototype, `onExpandSearch`, null), (_ = _([_], _)));
 function _(_) {
   let {
     key: _,
@@ -3991,7 +3995,7 @@ var _ = _({
           _ = _.unique_id,
           _ = _(),
           _ = _();
-        _.BIsGlobalCalendar() &&
+        (_.BIsGlobalCalendar() &&
           (_ &&
             _ & _.k_eLibrary &&
             (_().BIsGameSourceAllowed(_.k_ERecent) && _.appInfo
@@ -4108,7 +4112,7 @@ var _ = _({
               children: _,
             }),
             _,
-          );
+          ));
       },
       children: (0, _.jsx)(_, {}),
     });
@@ -4202,7 +4206,7 @@ function _(_) {
     ),
     _ = _,
     _ = _;
-  _ === _ && (_ = void 0), _ === _ && (_ = void 0);
+  (_ === _ && (_ = void 0), _ === _ && (_ = void 0));
   let _ = _(_),
     _ = (0, _.jsx)(_, {
       setVideoPlayerReady: _,
@@ -4245,8 +4249,8 @@ function _(_) {
         children: (0, _.jsxs)(`div`, {
           className: _,
           onClick: (_) => {
-            _.RecordInteraction(_.k_eClickThrough),
-              !_() && (_(_), _.stopPropagation(), _.preventDefault());
+            (_.RecordInteraction(_.k_eClickThrough),
+              !_() && (_(_), _.stopPropagation(), _.preventDefault()));
           },
           children: [
             _ === 14 &&
@@ -4363,7 +4367,7 @@ function _(_) {
         controls: !0,
         imageClassnames: _,
         onPlayerActivated: () => {
-          _.RecordInteraction(_.k_ePlayedVideo), _(!0);
+          (_.RecordInteraction(_.k_ePlayedVideo), _(!0));
         },
         preloadYoutubeScripts: !0,
         playsInline: !0,
@@ -4393,10 +4397,10 @@ function _(_) {
   _.useEffect(() => {
     if (_) {
       let _ = new Image();
-      (_.src = _),
+      ((_.src = _),
         (_.onerror = () => {
           _(_.full);
-        });
+        }));
     }
   }, [_, _]);
   let [, _] = _(_),
@@ -4487,9 +4491,9 @@ var _ = _((_) => {
       } = _,
       _ = _(_, _.k_eStoreNewsHub, `allowRelative`),
       _ = (_) => {
-        _.startsWith(`http`) ? (window.location.href = _) : _.push(_),
+        (_.startsWith(`http`) ? (window.location.href = _) : _.push(_),
           _.stopPropagation(),
-          _.preventDefault();
+          _.preventDefault());
       },
       _ = _.GetEntityName(),
       _ = _.GetGameIcon(),
@@ -4577,7 +4581,7 @@ var _ = _((_) => {
     let _ = _.calendarEvent.GetSource(),
       _ = [],
       _ = _().m_visibilityStore;
-    _ & _.k_eLibrary && _.BIsGameSourceAllowed(_.k_ELibrary)
+    (_ & _.k_eLibrary && _.BIsGameSourceAllowed(_.k_ELibrary)
       ? _.push({
           _: _.k_eLibrary,
           name: `#EventCalendar_GameSource_inLibrary`,
@@ -4613,7 +4617,7 @@ var _ = _((_) => {
           name: `#EventCalendar_GameSource_followed`,
           ttip: `#EventCalendar_GameSource_EventExplanation_ttip_following`,
           styles: void 0,
-        });
+        }));
     let _ = _.map((_, _) => {
       let _ = _.calendarEvent.unique_id;
       return _(
@@ -4720,7 +4724,7 @@ function _(_) {
 }
 function _(_, _, _) {
   let _ = [];
-  _.push(_.QueueLoadPartnerEvent(_.clanid, _.unique_id)),
+  (_.push(_.QueueLoadPartnerEvent(_.clanid, _.unique_id)),
     _.appid && _.push(_.Get().QueueAppRequest(_.appid, _)),
     _.clanInfo && _.push(_.LoadClanInfoForClanAccountID(_.clanInfo.clanid)),
     Promise.all(_).then(() => {
@@ -4728,7 +4732,7 @@ function _(_, _, _) {
       _ && _.appid && _.appid != _.appid && !_.Get().BHasApp(_.appid, _)
         ? _.Get().QueueAppRequest(_.appid, _).then(_)
         : _();
-    });
+    }));
 }
 var _ = {
   include_assets: !0,
@@ -4816,7 +4820,7 @@ function _() {
     let _ = _.Get().GetCuratorsForLang(_);
     if (!_) continue;
     let _ = _.filter((_) => !_.Get().BIsIgnoringCurator(_.clanAccountID));
-    _(_), _.push(..._);
+    (_(_), _.push(..._));
   }
   return _;
 }
@@ -4844,7 +4848,7 @@ function _(_) {
       () => (
         _ ??
           (async () => {
-            await _.Get().WaitForInitialLoad(), _.token.reason || _(_);
+            (await _.Get().WaitForInitialLoad(), _.token.reason || _(_));
           })(),
         window.addEventListener(`resize`, _),
         () => window.removeEventListener(`resize`, _)
@@ -4889,13 +4893,13 @@ function _(_) {
                     strTitle: _(`#EventCurator_DismissTitle`),
                     strDescription: _(`#EventCurator_DismissBody`),
                     onOK: () => {
-                      localStorage.setItem(
+                      (localStorage.setItem(
                         _,
                         JSON.stringify({
                           bDismissed: !0,
                         }),
                       ),
-                        _.token.reason || _(!0);
+                        _.token.reason || _(!0));
                     },
                   }),
                   _(_),
@@ -5035,7 +5039,7 @@ function _(_) {
 }
 var _ = null;
 function _() {
-  return _ || ((_ = []), _.push(_(_.Press)), _.push(_(_.Halloween))), _;
+  return (_ || ((_ = []), _.push(_(_.Press)), _.push(_(_.Halloween))), _);
 }
 var _ = `_8cquMQJOr-c-`,
   _ = `yU9ZvjZaQZ4-`,
@@ -5160,7 +5164,7 @@ var _ = (_ = class extends _.Component {
     });
   }
 });
-_([_], _.prototype, `OnResize`, null), (_ = _ = _([_], _));
+(_([_], _.prototype, `OnResize`, null), (_ = _ = _([_], _)));
 var _ = `g9t-2syJNnE-`,
   _ = `_4O47-h0zJ1s-`,
   _ = `x1sf2kCIcTg-`,
@@ -5192,13 +5196,13 @@ var _ = `g9t-2syJNnE-`,
       );
     if (_ || _()) return null;
     let _ = () => {
-        _(!0),
+        (_(!0),
           localStorage.setItem(
             _,
             JSON.stringify({
               bDismissed: !0,
             }),
-          );
+          ));
       },
       _ = _.STORE_BASE_URL + `account/languagepreferences/`;
     return (0, _.jsx)(`div`, {
@@ -5286,7 +5290,7 @@ var _ = class extends _.Component {
   };
   m_cancelSignal = _.default.CancelToken.source();
   componentDidMount() {
-    this.InitEventCalendarStore(),
+    (this.InitEventCalendarStore(),
       this.UpdateDocumentUI(),
       window.addEventListener(`resize`, this.OnResize),
       window.addEventListener(`scroll`, this.OnScroll),
@@ -5299,10 +5303,10 @@ var _ = class extends _.Component {
         this.props.location &&
         this.props.history.length == 0 &&
         this.props.history.push(this.props.location),
-      _();
+      _());
   }
   componentDidUpdate(_, _) {
-    (_.bUserIsLoggedIn != this.state.bUserIsLoggedIn ||
+    ((_.bUserIsLoggedIn != this.state.bUserIsLoggedIn ||
       JSON.stringify(_.filter_to_appids) !=
         JSON.stringify(this.props.filter_to_appids) ||
       JSON.stringify(_.filter_to_clanids) !=
@@ -5319,7 +5323,7 @@ var _ = class extends _.Component {
       (window.scrollTo(0, 0), this.InitEventCalendarStore()),
       this.UpdateDocumentUI(),
       this.LoadEventToShowAsModal(),
-      this.UpdateEventControlLocationAndVisibility();
+      this.UpdateEventControlLocationAndVisibility());
   }
   UpdateEventControlLocationAndVisibility() {
     if (this.props.location) {
@@ -5335,10 +5339,10 @@ var _ = class extends _.Component {
     }
   }
   componentWillUnmount() {
-    this.m_cancelSignal.cancel(`component unmounted`),
+    (this.m_cancelSignal.cancel(`component unmounted`),
       window.removeEventListener(`resize`, this.OnResize),
       window.removeEventListener(`scroll`, this.OnScroll),
-      this.UpdateBodyScrollState(!0);
+      this.UpdateBodyScrollState(!0));
     let _ = _();
     _ && (_.style.transform = ``);
   }
@@ -5478,13 +5482,13 @@ var _ = class extends _.Component {
       }
     }
     let _ = _(`#EventCalendar_TabTitle_Global`);
-    _ &&
+    (_ &&
       (_ = _
         ? _(`#EventCalendar_TabTitle_GroupNameAndEventDetail`, _, _)
         : _(`#EventCalendar_TabTitle_GroupHub`, _)),
       document.title != _ && (document.title = _),
       document.body.classList.contains(`events_hub`) ||
-        document.body.classList.add(`events_hub`);
+        document.body.classList.add(`events_hub`));
   }
   OnResize() {
     this.setState((_) => {
@@ -5509,17 +5513,17 @@ var _ = class extends _.Component {
         { nHubBannerHeight: _, nLogInBannerHeight: _ } = _;
       if (_ != _) {
         let _ = this.GetCurrentHeaderHeights(_);
-        (_ = _.nHubBannerHeight), (_ = _.nLogInBannerHeight);
+        ((_ = _.nHubBannerHeight), (_ = _.nLogInBannerHeight));
       }
       let _ = _ - _.nScrollTop,
         _ = Math.max(0, _.nAccumScrollUp - _),
         _ = Math.max(0, _.nAccumScrollDown + _),
         _ = _.nDisappearingHeaderTop,
         _ = _.nDisappearingHeaderTop < 0;
-      _ > 80 && ((_ = 0), (_ = 0), (_ = !0)),
+      (_ > 80 && ((_ = 0), (_ = 0), (_ = !0)),
         (_ > 100 || _) && ((_ = 0), (_ = 0), (_ = !1)),
         this.state.bControlBarIsCollapsed || (_ = !1),
-        _.modalEvent && (_ = !0);
+        _.modalEvent && (_ = !0));
       let _ = _.nSteamNavHeaderHeight + _ + _.nMobileNavBannerHeight;
       if (((_ = _ ? -1 * _ : 0), _ !== _.nDisappearingHeaderTop)) {
         let _ = _();
@@ -5570,7 +5574,7 @@ var _ = class extends _.Component {
       _.SetCollectionMetaData(_.ValidateCollectionMetadata(_) ? _ : null);
     }
     let _ = _.m_bInitialLoad && _(`initialEvents`, `application_config`);
-    _
+    (_
       ? (await _.RegisterCalendarEventsAndModels(_), (_.m_bInitialLoad = !1))
       : await _.RegisterCalendarEventsAndModels({
           success: 1,
@@ -5586,7 +5590,7 @@ var _ = class extends _.Component {
           : _.LoadClanInfoForClanSteamID(
               _.InitFromClanID(_.GetSingleGroupID(), _.EUNIVERSE),
             )),
-      this.OnResize();
+      this.OnResize());
   }
   UpdateBodyScrollState(_) {
     let _ = !_ && _(),
@@ -5594,7 +5598,7 @@ var _ = class extends _.Component {
     _ && (_ ? _.classList.add(_) : _.classList.remove(_));
   }
   MobileNavOpenSettings() {
-    this.ToggleControlBarCollapsed(), _(!0);
+    (this.ToggleControlBarCollapsed(), _(!0));
   }
   ToggleControlBarCollapsed() {
     this.setState((_) => {
@@ -5618,14 +5622,14 @@ var _ = class extends _.Component {
   }
   CloseEventModal() {
     let _ = _();
-    _ &&
+    (_ &&
       (_.style.transform = `translateY(${this.state.nDisappearingHeaderTop}px)`),
       this.props.history.action === `PUSH`
         ? this.props.history.goBack()
         : _(this.props.history, {
             emclan: void 0,
             emgid: void 0,
-          });
+          }));
   }
   async OnEventClicked(_) {
     this.props.tracker.RecordEventRead(_, 8);
@@ -5634,11 +5638,11 @@ var _ = class extends _.Component {
         this.state.nHubBannerHeight +
         this.state.nMobileNavBannerHeight,
       _ = _();
-    _ && (_.style.transform = `translateY(${-1 * _}px)`),
+    (_ && (_.style.transform = `translateY(${-1 * _}px)`),
       _(this.props.history, {
         emclan: _.clanSteamID.ConvertTo64BitString(),
         emgid: _.GID,
-      });
+      }));
   }
   ToggleFutureView() {
     _(
@@ -5648,11 +5652,11 @@ var _ = class extends _.Component {
     );
   }
   ResetAllFilters() {
-    _(this.props.history, `updates`, void 0),
+    (_(this.props.history, `updates`, void 0),
       _().m_visibilityStore.InitDefaultCheckboxes(
         this.state.bUserIsLoggedIn,
         !1,
-      );
+      ));
   }
   render() {
     let _ =
@@ -5755,7 +5759,7 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `OnResize`, null),
+(_([_], _.prototype, `OnResize`, null),
   _([_], _.prototype, `OnScroll`, null),
   _([_], _.prototype, `MobileNavOpenSettings`, null),
   _([_], _.prototype, `ToggleControlBarCollapsed`, null),
@@ -5764,7 +5768,7 @@ _([_], _.prototype, `OnResize`, null),
   _([_], _.prototype, `OnEventClicked`, null),
   _([_], _.prototype, `ToggleFutureView`, null),
   _([_], _.prototype, `ResetAllFilters`, null),
-  (_ = _ = _([_], _));
+  (_ = _ = _([_], _)));
 var _ = _(function (_) {
   return (0, _.jsx)(_, {
     ..._,
@@ -5794,12 +5798,12 @@ function _(_) {
         (async () => {
           let _ = _.GetCollectionMetaData(),
             _ = _.InitFromClanID(_.clanid, _.EUNIVERSE);
-          await _.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+          (await _.LoadPartnerEventFromClanEventGIDAndClanSteamID(
             _,
             _.clan_event_gid,
             0,
           ),
-            _(!1);
+            _(!1));
         })());
     }, [_, _, _]),
     _)
@@ -5978,7 +5982,7 @@ var _ = class extends _.Component {
               );
             },
           );
-    _ !== void 0 &&
+    (_ !== void 0 &&
       _.splice(
         _,
         0,
@@ -5991,7 +5995,7 @@ var _ = class extends _.Component {
         ),
       ),
       _.GetCollectionID() === _.Press &&
-        _.splice(0, 0, (0, _.jsx)(_, {}, `LanguageFeedRow`));
+        _.splice(0, 0, (0, _.jsx)(_, {}, `LanguageFeedRow`)));
     let _ = _[0].rtSectionStart,
       _ = _().GetCurrentlyLoadedEventCount(0, _),
       _ = _().GetCurrentlyLoadedEventCount(_),
@@ -6180,18 +6184,18 @@ var _ = _((_) => {
     rtSectionStart = void 0;
     rtSectionEnd = void 0;
     constructor(_) {
-      super(_),
+      (super(_),
         _(this),
         (this.rtSectionStart = _.rtSectionStart),
-        (this.rtSectionEnd = _.rtSectionEnd);
+        (this.rtSectionEnd = _.rtSectionEnd));
     }
     componentDidMount() {
       this.UpdatePositioning();
     }
     componentDidUpdate() {
-      this.UpdatePositioning(),
+      (this.UpdatePositioning(),
         (this.rtSectionStart = this.props.rtSectionStart),
-        (this.rtSectionEnd = this.props.rtSectionEnd);
+        (this.rtSectionEnd = this.props.rtSectionEnd));
     }
     UpdatePositioning() {
       this.m_ref.current &&
@@ -6249,7 +6253,7 @@ var _ = _((_) => {
           if (_) _.push(_);
           else {
             let _ = [];
-            _.push(_), _.set(_, _);
+            (_.push(_), _.set(_, _));
           }
         }
       }
@@ -6269,7 +6273,7 @@ var _ = _((_) => {
           if ((_ === 1 && (_ = _), _.length >= 3)) {
             let _ = _ === 1 ? this.GetCarouselGroupTitle(_) : ``,
               _ = !_.find((_) => _.clanid != _.clanid);
-            _.sort((_, _) =>
+            (_.sort((_, _) =>
               _.score == _.score
                 ? _.start_time - _.start_time
                 : _.score - _.score,
@@ -6297,11 +6301,11 @@ var _ = _((_) => {
                   _.unique_id,
                 ),
               ),
-              _.delete(_);
+              _.delete(_));
             continue;
           }
         }
-        _ === _ &&
+        (_ === _ &&
           (this.AddTimestampEventsInInterval(
             _,
             Math.min(_, _.start_time),
@@ -6327,7 +6331,7 @@ var _ = _((_) => {
               },
               _.unique_id,
             ),
-          );
+          ));
       }
       return (
         this.props.bShowEarliestFirst
@@ -6418,10 +6422,10 @@ var _ = _((_) => {
       );
     }
   });
-_([_], _.prototype, `rtSectionStart`, void 0),
+(_([_], _.prototype, `rtSectionStart`, void 0),
   _([_], _.prototype, `rtSectionEnd`, void 0),
   _([_], _.prototype, `cachedCalendarItems`, null),
-  (_ = _ = _([_], _));
+  (_ = _ = _([_], _)));
 var _ = (_) => {
     let _ = _().GetTimeEdgeForDirection(
       _.bShowEarliestFirst ? `forward` : `backward`,
@@ -6678,4 +6682,4 @@ function _(_) {
       rgHiddenClans: [_],
     };
 }
-export { _ as default, _, _, _, _ };
+export { _ as default };

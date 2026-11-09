@@ -109,13 +109,13 @@ var C = l(s()),
                     : (this.eState = 3));
             })
             .catch((e) => {
-              (this.data = n(void 0)), (this.eState = 3);
+              ((this.data = n(void 0)), (this.eState = 3));
             })),
         this.data
       );
     }
     clearData() {
-      (this.eState = 0), (this.data = null), (this.nExpirationTime = 0);
+      ((this.eState = 0), (this.data = null), (this.nExpirationTime = 0));
     }
     setDataPending() {
       this.eState = 1;
@@ -124,7 +124,7 @@ var C = l(s()),
       return this.eState == 1;
     }
     setData(e, t) {
-      (this.data = t), this.delayNewData(e), (this.eState = 2);
+      ((this.data = t), this.delayNewData(e), (this.eState = 2));
     }
     expireData() {
       this.nExpirationTime = 0;
@@ -150,8 +150,8 @@ var C = l(s()),
     eState = 0;
     nExpirationTime = 0;
   };
-o([n], q.prototype, `data`, void 0),
-  o([n], q.prototype, `nExpirationTime`, void 0);
+(o([n], q.prototype, `data`, void 0),
+  o([n], q.prototype, `nExpirationTime`, void 0));
 var J = class {
   constructor() {
     u(this);
@@ -166,9 +166,9 @@ var J = class {
     );
   }
   clearKey(e) {
-    this.m_mapKeyToDataWrapper.has(e) &&
+    (this.m_mapKeyToDataWrapper.has(e) &&
       this.m_mapKeyToDataWrapper.get(e).clearData(),
-      this.m_mapKeyToDataWrapper.delete(e);
+      this.m_mapKeyToDataWrapper.delete(e));
   }
   getAllElements() {
     return Array.from(this.m_mapKeyToDataWrapper.values()).map((e) =>
@@ -179,9 +179,9 @@ var J = class {
     let e = [],
       t = this.m_mapKeyToDataWrapper.entries(),
       n = t.next();
-    for (; !n.done; )
-      e.push({ key: n.value[0], data: n.value[1].getCachedData() }),
-        (n = t.next());
+    for (; !n.done;)
+      (e.push({ key: n.value[0], data: n.value[1].getCachedData() }),
+        (n = t.next()));
     return e;
   }
   m_mapKeyToDataWrapper = new Map();
@@ -261,15 +261,15 @@ var Y = class e {
   }
   EditProblemName(e, t) {
     let n = new FormData();
-    n.append(`name`, t), this.EditProblem(e, n);
+    (n.append(`name`, t), this.EditProblem(e, n));
   }
   EditProblemDesc(e, t) {
     let n = new FormData();
-    n.append(`description`, t), this.EditProblem(e, n);
+    (n.append(`description`, t), this.EditProblem(e, n));
   }
   EditProblemSchemas(e, t) {
     let n = new FormData();
-    n.append(`schemaids`, t.join(`,`)), this.EditProblem(e, n);
+    (n.append(`schemaids`, t.join(`,`)), this.EditProblem(e, n));
   }
   EditProblem(e, t) {
     return (
@@ -295,11 +295,11 @@ var Y = class e {
     );
   }
 };
-o([n], Y.prototype, `m_asyncSchemaList`, void 0),
+(o([n], Y.prototype, `m_asyncSchemaList`, void 0),
   o([n], Y.prototype, `m_asyncSchemaDetails`, void 0),
   o([n], Y.prototype, `m_asyncProblemList`, void 0),
   o([n], Y.prototype, `m_asyncProblemDetails`, void 0),
-  o([a], Y.prototype, `Init`, null);
+  o([a], Y.prototype, `Init`, null));
 var X = i(),
   ze = d((e) => {
     let t = _().schemaid == `0`,
@@ -794,37 +794,37 @@ var He = d((e) => {
         .sort((e, t) => (e.name < t.name ? -1 : 1))
         ?.filter((e, t, n) => t == 0 || e.name != n[t - 1].name);
     qe(() => {
-      b(), x(), l(t.problem_description), s(!1);
+      (b(), x(), l(t.problem_description), s(!1));
     });
     let b = () => {
-        a(t.name), r(!1);
+        (a(t.name), r(!1));
       },
       x = () => {
-        l(t.problem_description), s(!1);
+        (l(t.problem_description), s(!1));
       },
       S = () => {
-        m(t.schemaid), d(!1);
+        (m(t.schemaid), d(!1));
       },
       w = () => {
-        x(), S(), r(!0);
+        (x(), S(), r(!0));
       },
       T = () => {
-        b(), S(), s(!0);
+        (b(), S(), s(!0));
       },
       E = () => {
-        b(), x(), d(!0);
+        (b(), x(), d(!0));
       },
       D = () => {
-        Y.Get().EditProblemName(_, i), (t.name = i), r(!1);
+        (Y.Get().EditProblemName(_, i), (t.name = i), r(!1));
       },
       O = () => {
-        Y.Get().EditProblemDesc(_, c), (t.problem_description = c), s(!1);
+        (Y.Get().EditProblemDesc(_, c), (t.problem_description = c), s(!1));
       },
       k = () => {
-        Y.Get().EditProblemSchemas(_, f), (t.schemaid = f), d(!1);
+        (Y.Get().EditProblemSchemas(_, f), (t.schemaid = f), d(!1));
       },
       ne = () => {
-        Y.Get().DeleteProblem(_), ee.push($.SteamMLProblems(0));
+        (Y.Get().DeleteProblem(_), ee.push($.SteamMLProblems(0)));
       };
     return (
       n && h.current.focus(),
@@ -848,7 +848,7 @@ var He = d((e) => {
               (0, X.jsx)(`form`, {
                 className: n ? void 0 : re,
                 onSubmit: (e) => {
-                  D(), e.preventDefault();
+                  (D(), e.preventDefault());
                 },
                 children: (0, X.jsx)(`input`, {
                   ref: h,
@@ -868,7 +868,7 @@ var He = d((e) => {
               (0, X.jsx)(`form`, {
                 className: o ? void 0 : re,
                 onSubmit: (e) => {
-                  O(), e.preventDefault();
+                  (O(), e.preventDefault());
                 },
                 children: (0, X.jsx)(`input`, {
                   ref: g,

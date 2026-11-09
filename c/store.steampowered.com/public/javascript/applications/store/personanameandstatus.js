@@ -163,7 +163,7 @@ var _ = class extends _.Component {
       _ = null,
       _ = null,
       _ = [_, void 0, _(_), _ ? _ : void 0, _ ? _ : void 0];
-    _ || _.has_public_party_beacon
+    (_ || _.has_public_party_beacon
       ? (_ = (0, _.jsx)(_, {
           persona: _,
         }))
@@ -179,16 +179,16 @@ var _ = class extends _.Component {
               : _ && _.is_awayOrSnooze && (_ = _(`#PersonaStateAway`)))
           : _.m_broadcastAccountId && (_ = _(`#PersonaStateWatchingBroadcast`)),
       (_ ||= _.GetLocalizedOnlineStatus()),
-      _ && (_ = _());
+      _ && (_ = _()));
     let _ = !_ && !_;
-    _ === !1 && (_ = !0),
+    (_ === !1 && (_ = !0),
       _.is_awayOrSnooze &&
         _ &&
         (_ = (0, _.jsx)(_, {
           persona: _,
-        }));
+        })));
     let _ = (0, _.jsx)(_.Fragment, {});
-    _
+    (_
       ? (_ = (0, _.jsx)(`div`, {
           className: `ContextMenuButton`,
           onClick: _,
@@ -197,7 +197,7 @@ var _ = class extends _.Component {
       : _.push(_),
       _ && _.push(_),
       _ && (_ = _()),
-      (_ || !_) && _.push(_);
+      (_ || !_) && _.push(_));
     let _ = !_.is_ingame && !_,
       _ = !_ && _,
       _ = _ && (!_ || !_),
@@ -314,4 +314,3 @@ var _ = _((_) => {
     }),
   });
 });
-export { _, _ };

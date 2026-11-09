@@ -35,4 +35,3 @@ function _(_, _, _) {
         : `#Sale_CompleteTheSet_Discount_ttip`
     : `#Sale_Discount_ttip`;
 }
-export { _, _ };

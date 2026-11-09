@@ -41,7 +41,7 @@ function _(_) {
         }),
         _ = [],
         _ = _;
-      for (; _ && _ != null; ) _.observe(_), _.push(_), (_ = _.parentElement);
+      for (; _ && _ != null;) (_.observe(_), _.push(_), (_ = _.parentElement));
       return () => {
         _.forEach((_) => _.unobserve(_));
       };
@@ -88,7 +88,7 @@ var _ = _.forwardRef(function (_, _) {
           _ = _(_, _ == `window` ? null : _),
           _ = _?.getBoundingClientRect(),
           _ = () => {
-            _ != `window` &&
+            (_ != `window` &&
               (_(_ || void 0),
               _((_) => {
                 if (!_) return;
@@ -102,7 +102,7 @@ var _ = _.forwardRef(function (_, _) {
                     };
               })),
               _(_),
-              _ || _(_ ? `element` : `window`);
+              _ || _(_ ? `element` : `window`));
           };
         _ ? _() : (0, _.startTransition)(_);
       },
@@ -186,7 +186,7 @@ function _(_, _, _) {
       nMargin: _,
       eRowWindow: `all`,
     });
-  (_.current.bPositionKnown = _), (_.current.nMargin = _);
+  ((_.current.bPositionKnown = _), (_.current.nMargin = _));
   let _ = _.useCallback(
     (_, _) =>
       _(_, (_, _) => {
@@ -200,7 +200,7 @@ function _(_, _, _) {
     observeElementOffset: _ ? _ : _,
     fnGetRowWindow: (_) => {
       let _ = _ ? _(_, _, _) : `all`;
-      return (_.current.eRowWindow = _), _;
+      return ((_.current.eRowWindow = _), _);
     },
   };
 }
@@ -391,7 +391,8 @@ function _(_, _) {
       passive: !0,
     }),
     () => {
-      _.removeEventListener(`scroll`, _), _.removeEventListener(`scrollend`, _);
+      (_.removeEventListener(`scroll`, _),
+        _.removeEventListener(`scrollend`, _));
     }
   );
 }
@@ -791,7 +792,7 @@ function _(_, _, _) {
 }
 async function _(_, _, _) {
   let _ = _.Init(_);
-  _.Body().set_appid(_), _ && _.Body().set_include_family_licenses(!0);
+  (_.Body().set_appid(_), _ && _.Body().set_include_family_licenses(!0));
   let _ = await _.GetFriendsGameplayInfo(_, _);
   return (
     _.BSuccess() ||
@@ -905,7 +906,7 @@ function _(_) {
         if (!_.isSuccess) return _;
         let _ = _.data?.public_data?.steamid,
           _ = _.data?.public_data?.persona_name ?? ``;
-        return _ !== void 0 && (_[_] = _), _;
+        return (_ !== void 0 && (_[_] = _), _);
       }, {});
     return _.map((_) => ({
       steamid: _.steamid,
@@ -946,7 +947,7 @@ function _(_, _) {
   let _ = _ ? void 0 : _,
     _ = _?.private_data?.persona_state === 1,
     _ = _?.private_data?.game_id !== void 0;
-  return _ && (_ ? (_ = _) : _ && (_ = _)), _(_, _);
+  return (_ && (_ ? (_ = _) : _ && (_ = _)), _(_, _));
 }
 function _(_, _) {
   let _ = _(_);
@@ -1604,35 +1605,3 @@ function _(_, _, _, _) {
               : _.unlock_time - _.unlock_time;
       });
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

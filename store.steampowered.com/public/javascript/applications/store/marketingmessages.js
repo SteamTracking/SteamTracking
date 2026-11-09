@@ -21,7 +21,7 @@ function v(e) {
     i = h.useMemo(() => (new URLSearchParams(r.search), {}), [r.search]);
   return (
     h.useEffect(() => {
-      c(`marketingmessage_config`, `application_config`), n({});
+      (c(`marketingmessage_config`, `application_config`), n({}));
     }, [i]),
     t
       ? (0, g.jsxs)(_.Provider, { value: t, children: [e.children, ` `] })
@@ -71,7 +71,7 @@ function b(e) {
 }
 var x;
 function S(e) {
-  return (x ||= new p(e)), x;
+  return ((x ||= new p(e)), x);
 }
 function C() {
   let [e, t] = h.useState(null),

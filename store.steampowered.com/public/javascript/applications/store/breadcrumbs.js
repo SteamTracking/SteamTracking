@@ -54,10 +54,10 @@ var p = e(t()),
           className: s(`YoutubePreviewContainer`, m, e.imageClassnames),
           onClick: r
             ? (t) => {
-                e.onPlayerActivated && e.onPlayerActivated(),
+                (e.onPlayerActivated && e.onPlayerActivated(),
                   n(!0),
                   t.stopPropagation(),
-                  t.preventDefault();
+                  t.preventDefault());
               }
             : void 0,
           children: [

@@ -46,9 +46,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.version || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -95,7 +95,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -116,14 +116,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivacyCookiePreferences`;
@@ -132,9 +132,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.recentapps || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -154,7 +154,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -175,14 +175,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivacyCookiePreferences_ContentCustomization`;
@@ -191,9 +191,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.product_impressions_tracking || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -213,7 +213,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -234,14 +234,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivacyCookiePreferences_ValveAnalytics`;
@@ -250,9 +250,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.google_analytics || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -272,7 +272,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -293,14 +293,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivacyCookiePreferences_ThirdPartyAnalytics`;
@@ -309,9 +309,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.youtube || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -346,7 +346,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -367,14 +367,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivacyCookiePreferences_ThirdPartyContent`;
@@ -383,7 +383,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -408,12 +408,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivacy_GetCookiePreferences_Request`;
@@ -422,9 +422,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.preferences || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -443,7 +443,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -464,14 +464,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivacy_GetCookiePreferences_Response`;
@@ -559,7 +559,7 @@ function _(_, _) {
   if (!(`document` in globalThis) || !_(_)) return;
   let _ = _.options?.path ?? `/`,
     _ = ``;
-  _.options?.expires
+  (_.options?.expires
     ? (_ += `;expires=` + _.options.expires.toUTCString())
     : _.options?.maxAge &&
       (_ += `;max-age=` + Math.floor(_.options.maxAge / 1e3)),
@@ -570,7 +570,7 @@ function _(_, _) {
       encodeURIComponent(_) +
       _ +
       `;path=` +
-      _);
+      _));
 }
 function _(_) {
   return _(
@@ -625,7 +625,7 @@ function _() {
 }
 function _(_) {
   let _ = {};
-  _.viewportWidth &&
+  (_.viewportWidth &&
     (_._ = {
       _: _.viewportWidth.value,
       _: _.viewportWidth.source,
@@ -635,7 +635,7 @@ function _(_) {
         _: _.viewportHeight.value,
         _: _.viewportHeight.source,
       }),
-    Object.keys(_).length === 0 ? _(_) : _(_, JSON.stringify(_));
+    Object.keys(_).length === 0 ? _(_) : _(_, JSON.stringify(_)));
 }
 function _(_, _) {
   if (!_ || typeof _ != `object`) return !1;
@@ -694,12 +694,12 @@ function _(_) {
       _();
       let _,
         _ = () => {
-          clearTimeout(_), (_ = setTimeout(_, 250));
+          (clearTimeout(_), (_ = setTimeout(_, 250)));
         };
       return (
         window.addEventListener(`resize`, _),
         () => {
-          clearTimeout(_), window.removeEventListener(`resize`, _);
+          (clearTimeout(_), window.removeEventListener(`resize`, _));
         }
       );
     }, [_]),
@@ -833,7 +833,7 @@ function _(_) {
     case `geometric`:
       return _.GEOMETRIC;
     default:
-      return _(_, `Unhandled flow-children: ${_}`), _.NONE;
+      return (_(_, `Unhandled flow-children: ${_}`), _.NONE);
   }
 }
 var _ = (function (_) {
@@ -888,7 +888,7 @@ var _ = (function (_) {
   })(),
   _ = new _(`GamepadEvents`).Debug;
 function _(_, _, _) {
-  _ === void 0 &&
+  (_ === void 0 &&
     (_ = [
       _.onButtonDown,
       _.onButtonUp,
@@ -918,16 +918,16 @@ function _(_, _, _) {
           _.onGamepadBlur && _.push(_(_, _.onGamepadBlur))),
         () => _.forEach((_) => _())
       );
-    }, _);
+    }, _));
 }
 function _(_) {
-  return _.stopPropagation(), !1;
+  return (_.stopPropagation(), !1);
 }
 function _(_, _, _) {
   let { onButtonDown: _, ..._ } = _,
     _ = _.useCallback(
       (_) => {
-        _ && _(_),
+        (_ && _(_),
           _(
             `Gamepad Event fired:`,
             _.detail.button,
@@ -936,11 +936,11 @@ function _(_, _, _) {
             `, propagation stopped:`,
             _.cancelBubble,
           ),
-          !_.cancelBubble && _.OnRootButtonDown(_);
+          !_.cancelBubble && _.OnRootButtonDown(_));
       },
       [_, _],
     );
-  _(_, _),
+  (_(_, _),
     _(
       {
         onButtonDown: _,
@@ -956,7 +956,7 @@ function _(_, _, _) {
       },
       _,
       [_],
-    );
+    ));
 }
 function _(_) {
   let {
@@ -1061,7 +1061,7 @@ function _(_) {
       historyMode: _,
       excludeTreeFromScrollRegionSearch: _,
     });
-  _(_.OnActivateCallbacks, _),
+  (_(_.OnActivateCallbacks, _),
     _(_.OnDeactivateCallbacks, _),
     _(_, _, _),
     _.useLayoutEffect(() => {
@@ -1070,7 +1070,7 @@ function _(_) {
         ..._,
         layout: _,
       });
-    });
+    }));
   let _ = _(_, _.props.ref);
   return (0, _.jsx)(_, {
     tree: _ ? null : _,
@@ -1142,18 +1142,18 @@ function _(_) {
     _ = _(_?.SubscribableIsMounted) ?? !1;
   _.useEffect(() => {
     if (!_) {
-      _(!1), _(!1);
+      (_(!1), _(!1));
       return;
     }
-    _(_.BIsActive()), _(_.BIsActiveWithinWindow());
+    (_(_.BIsActive()), _(_.BIsActiveWithinWindow()));
     let _ = _.OnActiveStateChangedCallbacks.Register(() => {
-        _(_.BIsActive()), _(_.BIsActiveWithinWindow());
+        (_(_.BIsActive()), _(_.BIsActiveWithinWindow()));
       }),
       _ = _.OnActiveWithinWindowChangedCallbacks.Register(() =>
         _(_.BIsActiveWithinWindow()),
       );
     return () => {
-      _.Unregister(), _.Unregister();
+      (_.Unregister(), _.Unregister());
     };
   }, [_]);
   let _ = _.useMemo(
@@ -1202,7 +1202,7 @@ function _(_) {
       };
     }, [_, _, _]),
     _.useLayoutEffect(() => {
-      if (_ && _) return _(_, _.CreateHandle()), () => _(_, null);
+      if (_ && _) return (_(_, _.CreateHandle()), () => _(_, null));
     }, [_, _]),
     {
       ref: _,
@@ -1410,13 +1410,13 @@ function _(_, _, _, _, _) {
     layout: _(_),
     ..._,
   });
-  _.onOKButton ||
+  (_.onOKButton ||
     (((`onClick` in _ && _.onClick) || (_ && (_ === !0 || _(_)))) &&
       (_.onOKButton = _)),
     _.focusable && !_
       ? (_.tabIndex = _.tabIndex || 0)
       : !_.focusable && _ && (_.tabIndex = _.tabIndex ?? -1),
-    _(_, _);
+    _(_, _));
   let _ = _(_),
     _ = _(_, _, _),
     _ = (0, _.useContext)(_)?.Component,
@@ -2555,44 +2555,3 @@ function _(_, _) {
   let _ = _(_);
   return !_ || _ === "default" ? _ : _;
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

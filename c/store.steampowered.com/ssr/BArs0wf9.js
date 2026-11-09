@@ -61,10 +61,10 @@ var _ = {
 function _() {
   let _ = _();
   return _.useCallback(() => {
-    _(_, String(Math.floor(Date.now() / 1e3) + _)),
+    (_(_, String(Math.floor(Date.now() / 1e3) + _)),
       _.invalidateQueries({
         queryKey: [`AOWarningCookie`],
-      });
+      }));
   }, [_]);
 }
 function _() {
@@ -106,4 +106,3 @@ function _(_) {
     { data: _ } = _(_ ? void 0 : _);
   return _ || !_ ? !1 : !_ || !!_.content_descriptorids?.includes(3);
 }
-export { _, _, _, _, _, _ };

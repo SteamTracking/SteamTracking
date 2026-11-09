@@ -40,6 +40,6 @@ function _(_) {
   });
 }
 function _(_) {
-  return _.use(_.Ready()), _.children;
+  return (_.use(_.Ready()), _.children);
 }
 export { _ as default };

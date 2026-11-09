@@ -147,13 +147,13 @@ function _(_) {
       setOpen: (_) => {
         if (_) {
           let _ = null;
-          (_ = _.multiselect
+          ((_ = _.multiselect
             ? Array.isArray(_.selectedValue)
               ? _.selectedValue[0]
               : null
             : _.selectedValue),
             _(_),
-            _.onInputChange(``);
+            _.onInputChange(``));
         }
         _.setOpen(_);
       },
@@ -459,19 +459,19 @@ function _(_, _) {
     _ = _.length > 0,
     _ = (0, _.useCallback)(
       (_) => {
-        _ && !_ && _ && _(0), _(_);
+        (_ && !_ && _ && _(0), _(_));
       },
       [_, _],
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        _ || _(``), _(_);
+        (_ || _(``), _(_));
       },
       [_],
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        _(_), _ || _(!1);
+        (_(_), _ || _(!1));
       },
       [_, _, _],
     );
@@ -495,7 +495,7 @@ function _(_, _) {
       [_, _, _],
     ),
     onClear: (_) => {
-      _(_ ? [] : null), _?.stopPropagation(), _?.preventDefault();
+      (_(_ ? [] : null), _?.stopPropagation(), _?.preventDefault());
     },
     inputValue: _,
     onInputChange: _,
@@ -649,7 +649,7 @@ var _ = Object.assign(_, _),
   _ = (0, _.createContext)(null);
 function _(_) {
   let _ = (0, _.useContext)(_);
-  return _ || console.error(`${_} must be used within a <Combobox>!`), _;
+  return (_ || console.error(`${_} must be used within a <Combobox>!`), _);
 }
 function _(_) {
   let {
@@ -715,7 +715,7 @@ var _ = _((_, _) => {
       var _, _, _;
       if (Array.isArray(_)) {
         if (((_ = _.length), _ != _.length)) return !1;
-        for (_ = _; _-- !== 0; ) if (!_(_[_], _[_])) return !1;
+        for (_ = _; _-- !== 0;) if (!_(_[_], _[_])) return !1;
         return !0;
       }
       if (_.constructor === RegExp)
@@ -726,9 +726,9 @@ var _ = _((_, _) => {
         return _.toString() === _.toString();
       if (((_ = Object.keys(_)), (_ = _.length), _ !== Object.keys(_).length))
         return !1;
-      for (_ = _; _-- !== 0; )
+      for (_ = _; _-- !== 0;)
         if (!Object.prototype.hasOwnProperty.call(_, _[_])) return !1;
-      for (_ = _; _-- !== 0; ) {
+      for (_ = _; _-- !== 0;) {
         var _ = _[_];
         if (!_(_[_], _[_])) return !1;
       }
@@ -737,4 +737,3 @@ var _ = _((_, _) => {
     return _ !== _ && _ !== _;
   };
 });
-export { _, _, _, _, _ };

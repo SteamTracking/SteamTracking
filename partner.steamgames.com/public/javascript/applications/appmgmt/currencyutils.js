@@ -297,7 +297,7 @@ function a(e) {
     case `ZA`:
       return 28;
     default:
-      return console.assert(!1, `Unhandled country code: ${e}`), 1;
+      return (console.assert(!1, `Unhandled country code: ${e}`), 1);
   }
 }
 function o(e) {

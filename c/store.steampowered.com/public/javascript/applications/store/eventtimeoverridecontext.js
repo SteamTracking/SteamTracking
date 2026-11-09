@@ -7,4 +7,3 @@ var _ = _.createContext(void 0);
 function _() {
   return _.useContext(_) ?? _();
 }
-export { _ };

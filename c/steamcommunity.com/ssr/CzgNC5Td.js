@@ -90,7 +90,7 @@ function _(_, _) {
     case `integratedguides`:
       _ = [..._];
   }
-  return _ && (_ = _.concat(_)), _;
+  return (_ && (_ = _.concat(_)), _);
 }
 function _(_, _) {
   let _ = [0];
@@ -105,7 +105,7 @@ function _(_, _) {
     case `readytouseitems`:
       _ = [..._, 6, 7];
   }
-  return _ && (_ = [..._, 5]), _;
+  return (_ && (_ = [..._, 5]), _);
 }
 function _(_) {
   let _ = new URLSearchParams();
@@ -271,12 +271,12 @@ var _ = _(),
             return;
           }
           let _ = _(_);
-          _.delete(`appid`),
+          (_.delete(`appid`),
             _(
               _(_.appid, {
                 search: _,
               }),
-            );
+            ));
         },
         [_.appid, _, _],
       ),
@@ -312,10 +312,10 @@ var _ = _(),
       _ = _(_.appid),
       [_, _] = (0, _.useState)(!1),
       _ = async () => {
-        await _.mutateAsync(_.queryid ?? ``), _(!1);
+        (await _.mutateAsync(_.queryid ?? ``), _(!1));
       },
       _ = (0, _.useCallback)((_) => {
-        _(_), _(!0);
+        (_(_), _(!0));
       }, []),
       _ = () => {
         _(!1);
@@ -487,13 +487,13 @@ function _(_, _) {
         let _ = {
           ..._,
         };
-        (_.tags = _.tags.filter(
+        ((_.tags = _.tags.filter(
           (_) =>
             _.findIndex(
               (_) => _.tag?.toLocaleLowerCase() == _.name.toLocaleLowerCase(),
             ) != -1,
         )),
-          _.tags.length != 0 && _.push(_);
+          _.tags.length != 0 && _.push(_));
       }),
       _
     );
@@ -576,38 +576,3 @@ function _(_) {
     _
   );
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

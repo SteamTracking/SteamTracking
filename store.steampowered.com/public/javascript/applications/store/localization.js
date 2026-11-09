@@ -1234,7 +1234,7 @@ function Ho(e) {
   }, [e]);
 }
 var $ = {};
-($.arabic = () =>
+(($.arabic = () =>
   r(() => import(`./yearinreview_arabic.js`), [], import.meta.url)),
   ($.brazilian = () =>
     r(() => import(`./yearinreview_brazilian.js`), [], import.meta.url)),
@@ -1297,7 +1297,7 @@ var $ = {};
   ($.ukrainian = () =>
     r(() => import(`./yearinreview_ukrainian.js`), [], import.meta.url)),
   ($.vietnamese = () =>
-    r(() => import(`./yearinreview_vietnamese.js`), [], import.meta.url));
+    r(() => import(`./yearinreview_vietnamese.js`), [], import.meta.url)));
 async function Uo(e) {
   if ($[e]) return await $[e]();
 }

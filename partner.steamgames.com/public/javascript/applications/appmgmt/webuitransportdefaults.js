@@ -5,21 +5,21 @@ var e = new (class {
   m_transport = null;
   m_registry = null;
   SetDefaultTransport(e) {
-    this.m_transport != null &&
+    (this.m_transport != null &&
       console.error(
         `Multiple attempts to set a default WebUI transport: overriding previous`,
       ),
-      (this.m_transport = e);
+      (this.m_transport = e));
   }
   GetDefaultTransport() {
     return this.m_transport;
   }
   SetDefaultHandlerRegistry(e) {
-    this.m_registry != null &&
+    (this.m_registry != null &&
       console.error(
         `Multiple attempts to set a default WebUI message handler registry: overriding previous`,
       ),
-      (this.m_registry = e);
+      (this.m_registry = e));
   }
   GetDefaultHandlerRegistry() {
     return this.m_registry;

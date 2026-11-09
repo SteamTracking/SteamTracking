@@ -24,10 +24,10 @@ function u(e) {
         i(),
         r.addEventListener(`change`, i),
         () => {
-          (t = !1),
+          ((t = !1),
             r.removeEventListener(`change`, i),
             l[e].refCount--,
-            l[e].refCount === 0 && delete l[e];
+            l[e].refCount === 0 && delete l[e]);
         }
       );
     }, [e]),
@@ -190,14 +190,10 @@ function b(e) {
     `margin-top`,
     `margin-right`,
     `margin-bottom`,
-  ]
-    .map((t) =>
-      Object.keys(e.spacing)
-        .map((n) => C(t, n, e.spacing[n]))
-        .join(`
+  ].map((t) =>
+    Object.keys(e.spacing).map((n) => C(t, n, e.spacing[n])).join(`
 `),
-    )
-    .join(`
+  ).join(`
 `);
 }
 var x = (e, t) => `${e}-${t}`,

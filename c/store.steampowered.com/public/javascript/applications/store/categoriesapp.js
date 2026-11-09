@@ -19,7 +19,7 @@ var _ = _(_()),
     }
     static s_singleton;
     static Get() {
-      return (_.s_singleton ||= new _()), _.s_singleton;
+      return ((_.s_singleton ||= new _()), _.s_singleton);
     }
     constructor() {
       this.m_rgSections = _(`categories`, `application_config`);

@@ -69,7 +69,7 @@ var j = e(l()),
         if (e.data) {
           let t = [];
           for (let n of e.data) n != "default" && t.push(n);
-          t.sort(), (t = [`default`, ...t]), (this.rgModelNames = t);
+          (t.sort(), (t = [`default`, ...t]), (this.rgModelNames = t));
         }
       });
     }
@@ -97,7 +97,7 @@ var j = e(l()),
         for (let n = 0; n < c.path.length; n++) {
           let r = c.path[n],
             i = r.cost - t;
-          (t = r.cost), e.push({ appid: r.node, similarity: Math.cos(i) });
+          ((t = r.cost), e.push({ appid: r.node, similarity: Math.cos(i) }));
         }
         return e;
       }
@@ -123,9 +123,9 @@ var j = e(l()),
       throw Error(`Unable to fetch cost estimates`);
     }
   };
-g([t], M.prototype, `rgModelNames`, void 0),
+(g([t], M.prototype, `rgModelNames`, void 0),
   g([v], M.prototype, `GetNeighbors`, null),
-  g([v], M.prototype, `EstimateCosts`, null);
+  g([v], M.prototype, `EstimateCosts`, null));
 var ye = class {
     m_fnCompare;
     m_Heap = [];
@@ -137,7 +137,7 @@ var ye = class {
       return this.m_Length;
     }
     Clear() {
-      (this.m_Heap = []), (this.m_Length = 0);
+      ((this.m_Heap = []), (this.m_Length = 0));
     }
     Peek() {
       if (this.m_Length > 0) return this.m_Heap[0];
@@ -154,18 +154,18 @@ var ye = class {
       }
     }
     Push(e) {
-      this.m_Heap.length == this.m_Length
+      (this.m_Heap.length == this.m_Length
         ? this.m_Heap.push(e)
         : (this.m_Heap[this.m_Length] = e),
         this.m_Length++,
-        this.BubbleUp();
+        this.BubbleUp());
     }
     FindElement(e) {
       for (let t = 0; t < this.m_Length; t++)
         if (e(this.m_Heap[t])) return { index: t, element: this.m_Heap[t] };
     }
     LowerPriorityOfElement(e, t) {
-      (this.m_Heap[e] = t), this.BubbleUp(e);
+      ((this.m_Heap[e] = t), this.BubbleUp(e));
     }
     BubbleDown() {
       let e = 0;
@@ -183,17 +183,17 @@ var ye = class {
           r != e)
         ) {
           let t = this.m_Heap[e];
-          (this.m_Heap[e] = this.m_Heap[r]), (this.m_Heap[r] = t), (e = r);
+          ((this.m_Heap[e] = this.m_Heap[r]), (this.m_Heap[r] = t), (e = r));
         } else break;
       } while (e < this.m_Length);
     }
     BubbleUp(e) {
       let t = e || this.m_Length - 1;
-      for (; t > 0; ) {
+      for (; t > 0;) {
         let e = (t - 1) >> 1;
         if (this.m_fnCompare(this.m_Heap[e], this.m_Heap[t]) > 0) {
           let n = this.m_Heap[e];
-          (this.m_Heap[e] = this.m_Heap[t]), (this.m_Heap[t] = n), (t = e);
+          ((this.m_Heap[e] = this.m_Heap[t]), (this.m_Heap[t] = n), (t = e));
         } else break;
       }
     }
@@ -204,10 +204,10 @@ var ye = class {
     m_fnEquality;
     m_fnIterationCallback;
     constructor(e, t, n, r) {
-      (this.m_fnGetNeighbors = e),
+      ((this.m_fnGetNeighbors = e),
         (this.m_fnEstimateCosts = t),
         (this.m_fnEquality = n),
-        (this.m_fnIterationCallback = r);
+        (this.m_fnIterationCallback = r));
     }
     async FindPath(e, t, n) {
       let r = new ye((e, t) => e.cost - t.cost),
@@ -217,14 +217,14 @@ var ye = class {
         o = new Map(),
         s = new Map(),
         c = (await this.m_fnEstimateCosts([e], t))[0];
-      a.set(e, c), o.set(e, 0);
+      (a.set(e, c), o.set(e, 0));
       let l = 0;
-      for (; r.length > 0 && l < n; ) {
+      for (; r.length > 0 && l < n;) {
         let e = r.Pop();
         if (this.m_fnEquality(e.node, t)) {
           let t = [],
             n = e.node;
-          for (; s.has(n); ) t.push(n), (n = s.get(n));
+          for (; s.has(n);) (t.push(n), (n = s.get(n)));
           let r = [];
           for (let e = t.length - 1; e >= 0; e--)
             r.push({ node: t[e], cost: o.get(t[e]) });
@@ -264,7 +264,7 @@ var ye = class {
             }
           }
         }
-        l++, this.m_fnIterationCallback && this.m_fnIterationCallback();
+        (l++, this.m_fnIterationCallback && this.m_fnIterationCallback());
       }
       throw Error(`No path found.`);
     }
@@ -313,16 +313,16 @@ var P = e(i()),
     };
     m_currentRequest = 0;
     constructor(e) {
-      super(e),
+      (super(e),
         this.props.appidInitial &&
           (d.EnsureAppInfoForAppIDs([this.props.appidInitial]).then(() => {
-            d.GetAppInfo(this.props.appidInitial),
+            (d.GetAppInfo(this.props.appidInitial),
               this.setState({
                 appid: this.props.appidInitial,
                 appinfo: d.GetAppInfo(this.props.appidInitial),
-              });
+              }));
           }),
-          (this.state.appid = this.props.appidInitial));
+          (this.state.appid = this.props.appidInitial)));
     }
     OnDisplayClicked() {
       this.setState({ mode: `select` });
@@ -346,7 +346,7 @@ var P = e(i()),
               n = `${k.STORE_BASE_URL}search/suggest`,
               r = await j.default.get(n, { params: e, withCredentials: !0 }),
               i;
-            (i = r?.data?.length
+            ((i = r?.data?.length
               ? r.data.map((e) =>
                   (0, W.jsxs)(
                     `div`,
@@ -367,20 +367,20 @@ var P = e(i()),
                   ),
                 )
               : []),
-              this.setState({ strSearch: t, rgSuggestions: i });
+              this.setState({ strSearch: t, rgSuggestions: i }));
           }, 250)))
         : this.setState({ strSearch: ``, rgSuggestions: null });
     }
     SetSelectedApp(e) {
       e && e != 0
         ? d.EnsureAppInfoForAppIDs([e]).then(() => {
-            d.GetAppInfo(e),
+            (d.GetAppInfo(e),
               this.setState({
                 appid: e,
                 appinfo: d.GetAppInfo(e),
                 mode: `display`,
               }),
-              this.props.fnOnSelection && this.props.fnOnSelection(e, this);
+              this.props.fnOnSelection && this.props.fnOnSelection(e, this));
           })
         : this.setState({ appid: 0, appinfo: null, mode: `display` });
     }
@@ -425,9 +425,9 @@ var P = e(i()),
       });
     }
   };
-g([v], G.prototype, `OnDisplayClicked`, null),
+(g([v], G.prototype, `OnDisplayClicked`, null),
   g([v], G.prototype, `UpdateAppSuggestions`, null),
-  g([v], G.prototype, `OnKeyUp`, null);
+  g([v], G.prototype, `OnKeyUp`, null));
 var K = class extends P.Component {
     render() {
       if (this.props.appid == 0) return (0, W.jsx)(`div`, { className: I });
@@ -516,7 +516,7 @@ var J = class extends P.Component {
   similarity_model = `default`;
   app_selector_ref = P.createRef();
   constructor(e) {
-    super(e), s(this), e.default_app && this.SetSelectedApp(e.default_app);
+    (super(e), s(this), e.default_app && this.SetSelectedApp(e.default_app));
   }
   componentDidMount() {
     this.app_selector_ref.current &&
@@ -527,28 +527,28 @@ var J = class extends P.Component {
   }
   SetSelectedApp(e, t) {
     if (t || e != this.selected_app) {
-      (this.similar_apps = []),
+      ((this.similar_apps = []),
         (this.selected_app = e),
         this.app_selector_ref.current &&
-          this.app_selector_ref.current.SetSelectedApp(e);
+          this.app_selector_ref.current.SetSelectedApp(e));
       let t = `${k.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}&model=${this.similarity_model}`;
       j.default.get(t).then((e) => {
         if (e.data && e.data.appid == this.selected_app) {
           let t = new Set(
             e.data.similar_appids.slice(0, this.props.max_similar),
           );
-          t.add(e.data.appid),
+          (t.add(e.data.appid),
             d.EnsureAppInfoForAppIDs(t).then(() => {
-              (this.similar_apps = e.data.similar_appids),
-                (this.similarity_scores = e.data.similarity_scores);
-            });
+              ((this.similar_apps = e.data.similar_appids),
+                (this.similarity_scores = e.data.similarity_scores));
+            }));
         }
       });
     }
   }
   OnModelChanged(e, t) {
-    (this.similarity_model = e.data),
-      this.SetSelectedApp(this.selected_app, !0);
+    ((this.similarity_model = e.data),
+      this.SetSelectedApp(this.selected_app, !0));
   }
   render() {
     let e = [],
@@ -594,22 +594,22 @@ var J = class extends P.Component {
     });
   }
 };
-g([t], J.prototype, `selected_app`, void 0),
+(g([t], J.prototype, `selected_app`, void 0),
   g([t], J.prototype, `similar_apps`, void 0),
   g([t], J.prototype, `similarity_scores`, void 0),
   g([t], J.prototype, `similarity_model`, void 0),
   g([v], J.prototype, `OnSelectedApp`, null),
   g([v], J.prototype, `SetSelectedApp`, null),
   g([v], J.prototype, `OnModelChanged`, null),
-  (J = g([c], J));
+  (J = g([c], J)));
 var Y = class extends P.Component {
   selected_app = void 0;
   selected_operator = void 0;
   constructor(e) {
-    super(e),
+    (super(e),
       s(this),
       (this.selected_app = e.app),
-      (this.selected_operator = e.operator);
+      (this.selected_operator = e.operator));
   }
   OnSelectedApp(e) {
     e &&
@@ -618,8 +618,8 @@ var Y = class extends P.Component {
       this.props.fnOnChange && this.props.fnOnChange());
   }
   OnSelectedOperator(e, t) {
-    (this.selected_operator = e.data),
-      this.props.fnOnChange && this.props.fnOnChange();
+    ((this.selected_operator = e.data),
+      this.props.fnOnChange && this.props.fnOnChange());
   }
   render() {
     let e = [
@@ -645,11 +645,11 @@ var Y = class extends P.Component {
     });
   }
 };
-g([t], Y.prototype, `selected_app`, void 0),
+(g([t], Y.prototype, `selected_app`, void 0),
   g([t], Y.prototype, `selected_operator`, void 0),
   g([v], Y.prototype, `OnSelectedApp`, null),
   g([v], Y.prototype, `OnSelectedOperator`, null),
-  (Y = g([c], Y));
+  (Y = g([c], Y)));
 var X = class extends P.Component {
   operands = [];
   similarity_model = `default`;
@@ -657,12 +657,12 @@ var X = class extends P.Component {
   similarity_scores = [];
   operand_refs;
   constructor(e) {
-    super(e), s(this), (this.operand_refs = []);
+    (super(e), s(this), (this.operand_refs = []));
     for (let t = 0; t < e.max_operands; t++)
       this.operand_refs.push(P.createRef());
   }
   OnModelChanged(e, t) {
-    (this.similarity_model = e.data), this.RecomputeExpression();
+    ((this.similarity_model = e.data), this.RecomputeExpression());
   }
   OnAddOperand() {
     this.operands.length < this.props.max_operands &&
@@ -674,8 +674,8 @@ var X = class extends P.Component {
   OnOperandChanged() {
     for (let e = 0; e < this.operands.length; e++) {
       let t = this.operand_refs[e].current;
-      (this.operands[e].app = t.selected_app),
-        (this.operands[e].operator = t.selected_operator);
+      ((this.operands[e].app = t.selected_app),
+        (this.operands[e].operator = t.selected_operator));
     }
     this.RecomputeExpression();
   }
@@ -711,8 +711,8 @@ var X = class extends P.Component {
               e.data.similar_appids.slice(0, this.props.max_similar),
             );
             d.EnsureAppInfoForAppIDs(t).then(() => {
-              (this.similar_apps = e.data.similar_appids),
-                (this.similarity_scores = e.data.similarity_scores);
+              ((this.similar_apps = e.data.similar_appids),
+                (this.similarity_scores = e.data.similarity_scores));
             });
           });
         }
@@ -728,7 +728,7 @@ var X = class extends P.Component {
     let t = [],
       n = 0;
     for (let e of this.operands)
-      t.push(
+      (t.push(
         (0, W.jsx)(
           Y,
           {
@@ -740,7 +740,7 @@ var X = class extends P.Component {
           n,
         ),
       ),
-        n++;
+        n++);
     let r = null;
     this.operands.length < this.props.max_operands &&
       (r = (0, W.jsx)(`div`, {
@@ -776,17 +776,17 @@ var X = class extends P.Component {
     });
   }
 };
-g([t], X.prototype, `operands`, void 0),
+(g([t], X.prototype, `operands`, void 0),
   g([t], X.prototype, `similarity_model`, void 0),
   g([t], X.prototype, `similar_apps`, void 0),
   g([t], X.prototype, `similarity_scores`, void 0),
   g([v], X.prototype, `OnModelChanged`, null),
   g([v], X.prototype, `OnAddOperand`, null),
   g([v], X.prototype, `OnOperandChanged`, null),
-  (X = g([c], X));
+  (X = g([c], X)));
 var Z = class extends P.Component {
   constructor(e) {
-    super(e), s(this);
+    (super(e), s(this));
   }
   app_start = 0;
   app_end = 0;
@@ -811,15 +811,15 @@ var Z = class extends P.Component {
         this.IterationCallback,
       )
         .then((e) => {
-          (this.in_progress = !1),
+          ((this.in_progress = !1),
             d.EnsureAppInfoForAppIDs(e.map((e) => e.appid)).then(() => {
               this.found_path = e;
-            });
+            }));
         })
         .catch((e) => {
-          console.warn(`Caught pathfinding failure because: ` + e.toString()),
+          (console.warn(`Caught pathfinding failure because: ` + e.toString()),
             (this.in_progress = !1),
-            (this.found_path = void 0);
+            (this.found_path = void 0));
         }));
   }
   OnSelectedStartApp(e) {
@@ -887,7 +887,7 @@ var Z = class extends P.Component {
     });
   }
 };
-g([t], Z.prototype, `app_start`, void 0),
+(g([t], Z.prototype, `app_start`, void 0),
   g([t], Z.prototype, `app_end`, void 0),
   g([t], Z.prototype, `in_progress`, void 0),
   g([t], Z.prototype, `progress_iteration`, void 0),
@@ -896,7 +896,7 @@ g([t], Z.prototype, `app_start`, void 0),
   g([v], Z.prototype, `Pathfind`, null),
   g([v], Z.prototype, `OnSelectedStartApp`, null),
   g([v], Z.prototype, `OnSelectedEndApp`, null),
-  (Z = g([c], Z));
+  (Z = g([c], Z)));
 function He() {
   return (0, W.jsxs)(W.Fragment, {
     children: [
@@ -918,9 +918,9 @@ var Q = e(a(), 1),
   Ue = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.tag_score_factor || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null);
+        Q.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -973,7 +973,7 @@ var Q = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -994,14 +994,14 @@ var Q = e(a(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `StoreAppSimilarityPriorityOptions`;
@@ -1010,9 +1010,9 @@ var Q = e(a(), 1),
   We = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.steamid || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [3], null);
+        Q.Message.initialize(this, t, 0, -1, [3], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1037,7 +1037,7 @@ var Q = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1058,14 +1058,14 @@ var Q = e(a(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Request`;
@@ -1074,9 +1074,9 @@ var Q = e(a(), 1),
   Ge = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.items || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [1], null);
+        Q.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1090,7 +1090,7 @@ var Q = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1111,14 +1111,14 @@ var Q = e(a(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Response`;
@@ -1127,9 +1127,9 @@ var Q = e(a(), 1),
   Ke = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.id || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [50], null);
+        Q.Message.initialize(this, t, 0, -1, [50], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1150,7 +1150,7 @@ var Q = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1171,14 +1171,14 @@ var Q = e(a(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem`;
@@ -1187,9 +1187,9 @@ var Q = e(a(), 1),
   qe = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.source_app || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null);
+        Q.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1207,7 +1207,7 @@ var Q = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1228,14 +1228,14 @@ var Q = e(a(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem_MatchDebugInfo`;
@@ -1244,9 +1244,9 @@ var Q = e(a(), 1),
   Je = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.rank || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null);
+        Q.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1268,7 +1268,7 @@ var Q = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1289,14 +1289,14 @@ var Q = e(a(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem_PopularityDebugInfo`;
@@ -1305,9 +1305,9 @@ var Q = e(a(), 1),
   $ = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.steamid || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null);
+        Q.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1332,7 +1332,7 @@ var Q = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1353,14 +1353,14 @@ var Q = e(a(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_IdentifyClustersFromPlaytime_Request`;
@@ -1369,9 +1369,9 @@ var Q = e(a(), 1),
   Ye = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.clusters || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [1], null);
+        Q.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1385,7 +1385,7 @@ var Q = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1406,14 +1406,14 @@ var Q = e(a(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response`;
@@ -1422,9 +1422,9 @@ var Q = e(a(), 1),
   Xe = class e extends Q.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.cluster_id || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [5, 6, 7], null);
+        Q.Message.initialize(this, t, 0, -1, [5, 6, 7], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1465,7 +1465,7 @@ var Q = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -1486,14 +1486,14 @@ var Q = e(a(), 1),
     }
     serializeBinary() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new Q.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response_Cluster`;
@@ -1534,7 +1534,7 @@ var Qe = class {
     m_rgClusters;
     constructor(e, t, n, r, i) {
       let a = pe.Init($);
-      ce(a),
+      (ce(a),
         i && le(a, i),
         a.Body().set_steamid(t || C.steamid),
         r && a.Body().set_clusters_to_return(r),
@@ -1547,7 +1547,7 @@ var Qe = class {
               this.m_rgClusters.push(this.ReadCluster(e, i));
             this.m_callbacksLoaded.Dispatch(this.m_rgClusters);
           },
-        );
+        ));
     }
     ReadCluster(e, t) {
       let n;
@@ -1826,7 +1826,7 @@ function ht(e) {
     o = he();
   if (
     ((0, P.useEffect)(() => {
-      N.Init(o), i(!0);
+      (N.Init(o), i(!0));
     }, [o]),
     !t)
   )

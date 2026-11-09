@@ -280,7 +280,7 @@
   position: relative;
 }
 .oztjxXYIBAk- img {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16/9;
   object-fit: cover;
   width: 100%;
   display: block;
@@ -319,8 +319,7 @@
   margin: var(--gpSpace-Gap, 12px);
   font: var(
     --gpText-BodyMedium,
-    normal 400 14px /
-    1.4 "Motiva Sans",
+    normal 400 14px/1.4 "Motiva Sans",
     Arial,
     sans-serif
   );
@@ -331,7 +330,7 @@
   filter: blur();
 }
 .tYvCiFSJDdI- {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16/9;
 }
 .aMHZOpwLiBw- {
   color: #8f98a0;

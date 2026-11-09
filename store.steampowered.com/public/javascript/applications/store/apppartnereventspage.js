@@ -430,7 +430,7 @@ function gr(e, t) {
   let n = t ?? J.default.tz.guess(),
     r = J.default.unix(e).tz(n),
     i = st();
-  return i && r.locale(i), r.format(`LT`);
+  return (i && r.locale(i), r.format(`LT`));
 }
 function _r(e, t, n) {
   let r = n ?? J.default.tz.guess(),
@@ -775,7 +775,7 @@ function Pr(e, t, n) {
   let r = Nr.get(e);
   r || ((r = new Map()), Nr.set(e, r));
   let i = r.get(t);
-  return i || ((i = Fr(e, t, n).finally(() => r?.delete(t))), r.set(t, i)), i;
+  return (i || ((i = Fr(e, t, n).finally(() => r?.delete(t))), r.set(t, i)), i);
 }
 async function Fr(e, t, n) {
   let r = [0, Er, Ir()];
@@ -783,7 +783,7 @@ async function Fr(e, t, n) {
     i > 0 && (await Lr(i));
     let r;
     try {
-      (r = await Tr(t)), e.setQueryData(Or(t), r);
+      ((r = await Tr(t)), e.setQueryData(Or(t), r));
     } catch (e) {
       console.error(
         `Re-reading the community inventory for app ` + t + ` failed`,
@@ -1009,7 +1009,7 @@ function ni(e) {
               case 15:
                 t = R(`#Sale_ClaimableReward_completed_animatedavatar`);
             }
-            i.fnSetStrSuccess(`   `),
+            (i.fnSetStrSuccess(`   `),
               i.fnSetElSuccess(
                 (0, K.jsxs)(`div`, {
                   className: Qr,
@@ -1022,7 +1022,7 @@ function ni(e) {
                     }),
                   ],
                 }),
-              );
+              ));
           } else i.fnSetStrError(R(`#Sale_ClaimableReward_Busy`));
         })
         .catch(() => i.fnSetStrError(R(`#Sale_ClaimableReward_Busy`))));
@@ -1158,10 +1158,10 @@ function fi(e) {
 }
 async function pi(e, t) {
   let n = new URLSearchParams();
-  n.append(`page_action`, String(e)),
+  (n.append(`page_action`, String(e)),
     n.append(`snr`, W.SNR),
     n.append(`uint_data`, String(t)),
-    n.append(`str_data`, mi());
+    n.append(`str_data`, mi()));
   try {
     await fetch(W.STORE_BASE_URL + `events/ajaxreportnewshubstats/`, {
       method: `POST`,
@@ -1206,11 +1206,11 @@ function _i(e) {
   return e.getQueryData(gi()) ?? hi;
 }
 function vi(e, t) {
-  e.setQueryDefaults(gi(), { staleTime: 1 / 0, gcTime: 1 / 0 }),
-    e.setQueryData(gi(), (e) => ({ ...(e ?? hi), ...t }));
+  (e.setQueryDefaults(gi(), { staleTime: 1 / 0, gcTime: 1 / 0 }),
+    e.setQueryData(gi(), (e) => ({ ...(e ?? hi), ...t })));
 }
 function yi(e, t, n) {
-  return clearTimeout(e), setTimeout(n, t);
+  return (clearTimeout(e), setTimeout(n, t));
 }
 function bi(e) {
   pi(19, e);
@@ -1434,7 +1434,7 @@ function ta(e) {
     d = G.useRef(null),
     f = G.useRef(null),
     p = G.useCallback(() => {
-      f.current?.Hide(), u(!1);
+      (f.current?.Hide(), u(!1));
     }, []),
     m = () => {
       let e = {
@@ -1444,10 +1444,10 @@ function ta(e) {
         bMatchWidth: !0,
         strClassName: I(Hi, Ui, Ot),
       };
-      (f.current = ut(a(p), d.current, e)),
+      ((f.current = ut(a(p), d.current, e)),
         f.current.SetOnHideCallback(p),
         u(!0),
-        c?.(`opened`);
+        c?.(`opened`));
     },
     h = (e) => {
       s ? (l ? p() : m(), e.stopPropagation(), e.preventDefault()) : o?.();
@@ -1513,10 +1513,10 @@ function na(e) {
       if (t.GID && t.GID != `18446744073709551615`) {
         p(!0);
         try {
-          await l(e, n),
-            e && u?.(n == `email` ? `notify-email` : `notify-push`);
+          (await l(e, n),
+            e && u?.(n == `email` ? `notify-email` : `notify-push`));
         } catch (e) {
-          h(e instanceof Error ? e.message : String(e)), _();
+          (h(e instanceof Error ? e.message : String(e)), _());
         }
         p(!1);
       }
@@ -1749,8 +1749,8 @@ function oa(e, t) {
     let o = n.getQueryData(r.queryKey),
       s = a == `email` ? ia.k_ENotifyFlagByEmail : ia.k_ENotifyFlagByPush,
       c = sa(o, t);
-    await ca(e, t, i ? c | s : c & ~s),
-      await n.invalidateQueries({ queryKey: r.queryKey });
+    (await ca(e, t, i ? c | s : c & ~s),
+      await n.invalidateQueries({ queryKey: r.queryKey }));
   };
 }
 function sa(e, t) {
@@ -1761,11 +1761,11 @@ async function ca(e, t, n) {
   let r = n == 0,
     i = `${`${j.STORE_BASE_URL}events/`}${r ? `unfolloworunignoreevent` : `followorignoreevent`}`,
     a = new URLSearchParams();
-  a.append(`sessionid`, vn()),
+  (a.append(`sessionid`, vn()),
     a.append(`ignore`, `false`),
     a.append(`gid`, t),
     a.append(`notification_flag`, `` + n),
-    a.append(`clan_accountid`, `` + e);
+    a.append(`clan_accountid`, `` + e));
   let o = await fetch(i, { method: `POST`, body: a, credentials: `include` });
   if (!o.ok) throw Error(`${i} answered ${o.status}`);
 }
@@ -2448,11 +2448,11 @@ function rs(e) {
 function is(e, t) {
   let n = G.useCallback(
     (e) => {
-      e.preventDefault(), (e.returnValue = t);
+      (e.preventDefault(), (e.returnValue = t));
     },
     [t],
   );
-  St(window, `beforeunload`, e ? n : void 0),
+  (St(window, `beforeunload`, e ? n : void 0),
     G.useEffect(() => {
       if (!e || !window.navigation) return;
       let n = (e) => {
@@ -2467,7 +2467,7 @@ function is(e, t) {
         window.navigation.addEventListener(`navigate`, n),
         () => window.navigation.removeEventListener(`navigate`, n)
       );
-    }, [e, t]);
+    }, [e, t]));
 }
 var as = new Map(),
   os = ``,
@@ -2608,7 +2608,7 @@ function Os(e, t, n, r) {
     e.setQueryData(ls(t.gidClanEvent, t.userAccountID), (i) => {
       let a = e.getQueryData(cs(t.gidClanEvent, t.userAccountID)) ?? as,
         o = new Map(i ?? ms(a));
-      return r !== void 0 && r > 0 ? o.set(n, r) : o.delete(n), o;
+      return (r !== void 0 && r > 0 ? o.set(n, r) : o.delete(n), o);
     });
 }
 function ks() {
@@ -2738,7 +2738,7 @@ function ic(e) {
     if (!f.isSuccess) return;
     let e = g.find((e) => e.partnerid == f.data.partner_id),
       t = f.data.partner_id === 0 ? 0 : e?.partnerid;
-    b(t), v(t), c(f.data);
+    (b(t), v(t), c(f.data));
   }, [f.isSuccess, f.data, g]);
   let S = g?.length > 0,
     C = !S || y != null,
@@ -2747,7 +2747,7 @@ function ic(e) {
     if (y == _ || (v(y), !S || !C)) return;
     let e,
       t = g.find((e) => e.partnerid == y);
-    (e =
+    ((e =
       w || !t
         ? {
             name: h?.length > 0 ? m : void 0,
@@ -2764,7 +2764,7 @@ function ic(e) {
               t.partneruseremail?.length > 0 ? t.partneruseremail : void 0,
             partner_id: t.partnerid,
           }),
-      Object.values(e).some((e) => e != null) && d(ac(e));
+      Object.values(e).some((e) => e != null) && d(ac(e)));
   }, [C, w, S, y, _, g, h, m, d]);
   let T = f.isLoading || l,
     E = a
@@ -2798,7 +2798,7 @@ function ic(e) {
           onCancel: r,
           bOKDisabled: !ee,
           onOK: async () => {
-            u(!0), await n(s), u(!1), f.refetch(), r();
+            (u(!0), await n(s), u(!1), f.refetch(), r());
           },
           children:
             a &&
@@ -2878,8 +2878,8 @@ function ic(e) {
                                   value: e,
                                   onChange: (e) => {
                                     let n = [...(s.guest_names ?? [])];
-                                    (n[t] = e.currentTarget.value),
-                                      d({ guest_names: n });
+                                    ((n[t] = e.currentTarget.value),
+                                      d({ guest_names: n }));
                                   },
                                 },
                                 `guesname_` + t,
@@ -2925,10 +2925,10 @@ function oc(e) {
                           ? [...n.pre_event_partner_questions]
                           : [],
                         a = i.findIndex((t) => t.group_id == e);
-                      a < 0
+                      (a < 0
                         ? i.push({ group_id: e, question: t })
                         : (i[a] = { group_id: e, question: t }),
-                        r({ pre_event_partner_questions: i });
+                        r({ pre_event_partner_questions: i }));
                     },
                   },
                   `groupquestion` + e,
@@ -3214,7 +3214,7 @@ function _c(e) {
     { elLogInDialog: d, fnRequireLogIn: f } = bc(),
     p = As(),
     m = async (e) => {
-      i(!0), (await p(e)) || l(), s.refetch(), i(!1);
+      (i(!0), (await p(e)) || l(), s.refetch(), i(!1));
     },
     g = Cs(),
     _ = r || g,
@@ -3384,7 +3384,7 @@ function Cc(e) {
                   : J.default.unix(n.rtime_start ?? 0).tz(c)
               ).format(`YYYY-MM-DD`),
               i = e.get(r);
-            i || ((i = []), e.set(r, i)), i.push({ group: t, session: n });
+            (i || ((i = []), e.set(r, i)), i.push({ group: t, session: n }));
           }
       }
       for (let e of n.session_breaks || []) {
@@ -3394,7 +3394,7 @@ function Cc(e) {
               : J.default.unix(e.rtime_start ?? 0).tz(c)
           ).format(`YYYY-MM-DD`),
           r = t.get(n);
-        r || ((r = []), t.set(n, r)), r.push(e);
+        (r || ((r = []), t.set(n, r)), r.push(e));
       }
       for (let t of e.values())
         t.sort(
@@ -3711,7 +3711,7 @@ var jc = class {
   m_fileUploadProps = Ac();
   m_onComplete;
   constructor(e) {
-    l(this, {
+    (l(this, {
       SetUploadFileError: r,
       StartFileExportToUpload: r,
       SetImageFileToUpload: r,
@@ -3724,7 +3724,7 @@ var jc = class {
       ClearFileUploadError: r,
       Reset: r,
     }),
-      (this.m_Callbacks = e);
+      (this.m_Callbacks = e));
   }
   get file_upload_props() {
     return this.m_fileUploadProps;
@@ -3740,18 +3740,18 @@ var jc = class {
       this.m_Callbacks.LogFileUploadMessage(e);
   }
   SetUploadFileError(e, t) {
-    (this.m_fileUploadProps.eUploadState = e),
+    ((this.m_fileUploadProps.eUploadState = e),
       (this.m_fileUploadProps.strErrorDescription = t),
-      (this.m_fileUploadProps.displayFileName = void 0);
+      (this.m_fileUploadProps.displayFileName = void 0));
   }
   async StartFileExportToUpload(e, t = {}) {
     let { displayFilename: n, info: r, onComplete: i } = t;
-    (this.m_fileUploadProps.eUploadState = 7),
+    ((this.m_fileUploadProps.eUploadState = 7),
       (this.m_fileUploadProps.uploadProgress = 0),
       (this.m_onComplete = i),
       (this.m_fileUploadProps.fileInfo = r),
       this.SetFileToUpload(e),
-      (this.m_fileUploadProps.displayFileName = n);
+      (this.m_fileUploadProps.displayFileName = n));
   }
   async SetImageFileToUpload(e, t = {}) {
     let { processor: n = Mc, info: r } = t;
@@ -3795,9 +3795,9 @@ var jc = class {
       return;
     }
     let s = await n(e);
-    this.SetFileToUpload(s.file),
+    (this.SetFileToUpload(s.file),
       (this.m_fileUploadProps.imageHeight = s.height),
-      (this.m_fileUploadProps.imageWidth = s.width);
+      (this.m_fileUploadProps.imageWidth = s.width));
   }
   async SetOtherFileToUpload(e, t = {}) {
     if (!e) {
@@ -3840,28 +3840,28 @@ var jc = class {
     }
     let t = ``;
     if (typeof e == `function`)
-      (this.m_fileUploadProps.file = void 0),
-        (this.m_fileUploadProps.exportFn = e);
+      ((this.m_fileUploadProps.file = void 0),
+        (this.m_fileUploadProps.exportFn = e));
     else {
-      (this.m_fileUploadProps.file = e),
-        (this.m_fileUploadProps.exportFn = void 0);
+      ((this.m_fileUploadProps.file = e),
+        (this.m_fileUploadProps.exportFn = void 0));
       try {
         t = URL.createObjectURL(e);
       } catch (e) {
         console.error(`Failed to created object URL from file: ${e}`);
       }
-      (this.m_fileUploadProps.displayFileName =
+      ((this.m_fileUploadProps.displayFileName =
         this.m_fileUploadProps.file.name),
         (this.m_fileUploadProps.uploadFileName =
-          window.performance.now() + `_` + this.m_fileUploadProps.file.name);
+          window.performance.now() + `_` + this.m_fileUploadProps.file.name));
     }
     this.m_fileUploadProps.eUploadState = 1;
     let n = ``;
-    for (; n.length < 40; ) n += Math.floor(Math.random() * 16).toString(16);
-    (this.m_fileUploadProps.dataURL = t),
+    for (; n.length < 40;) n += Math.floor(Math.random() * 16).toString(16);
+    ((this.m_fileUploadProps.dataURL = t),
       (this.m_fileUploadProps.sha1 = n),
       (this.m_fileUploadProps.hmac = ``),
-      (this.m_fileUploadProps.timestamp = 0);
+      (this.m_fileUploadProps.timestamp = 0));
   }
   async RetryFileUpload() {
     return this.BeginFileUpload();
@@ -3884,20 +3884,20 @@ var jc = class {
           this.SetUploadFileError(3, R(`#Chat_Settings_Error_ExportFailed`)),
           new Response()
         );
-      (this.m_fileUploadProps.file = t),
+      ((this.m_fileUploadProps.file = t),
         (this.m_fileUploadProps.uploadFileName =
-          window.performance.now() + `_` + t.name);
+          window.performance.now() + `_` + t.name));
     }
     let t = this.m_fileUploadProps.file;
     if (!t)
       throw (
-        (xn(!1, `Must SetImageFileToUpload before calling BeginFileUpload`),
-        Error(`Invalid State`))
+        xn(!1, `Must SetImageFileToUpload before calling BeginFileUpload`),
+        Error(`Invalid State`)
       );
-    (this.m_fileUploadProps.eUploadState = 2),
-      (this.m_fileUploadProps.uploadInfo = e);
+    ((this.m_fileUploadProps.eUploadState = 2),
+      (this.m_fileUploadProps.uploadInfo = e));
     let n = new FormData();
-    n.append(`sessionid`, vn()),
+    (n.append(`sessionid`, vn()),
       n.append(`l`, j.LANGUAGE),
       n.append(`file_size`, t.size.toString()),
       n.append(`file_name`, this.m_fileUploadProps.uploadFileName),
@@ -3916,7 +3916,7 @@ var jc = class {
           n,
           this.file_upload_props.uploadInfo,
           this.file_upload_props.fileInfo,
-        );
+        ));
     try {
       let e = await fetch(
           this.m_Callbacks.GetBeginFileUploadURL() + `?l=${j.LANGUAGE}`,
@@ -3929,8 +3929,8 @@ var jc = class {
       if (!e.ok) {
         let t = ``;
         throw (
-          (c(() => {
-            (this.m_fileUploadProps.eUploadState = 3),
+          c(() => {
+            ((this.m_fileUploadProps.eUploadState = 3),
               this.LogFileUploadMessage(e),
               (t = r?.message
                 ? r?.message
@@ -3938,9 +3938,9 @@ var jc = class {
               (this.m_fileUploadProps.strErrorDescription = R(
                 `#Chat_Upload_ErrorStart`,
                 t,
-              ));
+              )));
           }),
-          t)
+          t
         );
       }
       if (!r || !r.result) throw Error();
@@ -3952,14 +3952,14 @@ var jc = class {
     } catch (e) {
       let t = e || R(`#ConnectionTrouble_FailedToConnect`);
       throw (
-        (c(() => {
-          (this.m_fileUploadProps.eUploadState = 3),
+        c(() => {
+          ((this.m_fileUploadProps.eUploadState = 3),
             (this.m_fileUploadProps.strErrorDescription = R(
               `#Chat_Upload_ErrorStart`,
               t,
-            ));
+            )));
         }),
-        t)
+        t
       );
     }
   }
@@ -3974,8 +3974,8 @@ var jc = class {
       )
         continue;
       let e = t.name;
-      e.toLowerCase() === `content-type` && (e = `Content-Type`),
-        (r[e] = t.value);
+      (e.toLowerCase() === `content-type` && (e = `Content-Type`),
+        (r[e] = t.value));
     }
     let i = {
       onUploadProgress: (e) => {
@@ -3997,23 +3997,23 @@ var jc = class {
       );
     } catch (n) {
       throw (
-        (this.LogFileUploadMessage(n.response),
+        this.LogFileUploadMessage(n.response),
         c(() => {
-          (this.m_fileUploadProps.strErrorDescription = R(
+          ((this.m_fileUploadProps.strErrorDescription = R(
             `#Chat_Upload_ErrorCloud`,
           )),
             (this.m_fileUploadProps.eUploadState = 3),
-            (this.m_fileUploadProps.uploadProgress = 0);
+            (this.m_fileUploadProps.uploadProgress = 0));
         }),
         this.CommitFileUpload(!1, e.ugcid, t),
-        this.m_fileUploadProps.strErrorDescription)
+        this.m_fileUploadProps.strErrorDescription
       );
     }
   }
   async CommitFileUpload(e, t, n) {
     let r = this.m_fileUploadProps.sha1,
       i = new FormData();
-    i.append(`sessionid`, vn()),
+    (i.append(`sessionid`, vn()),
       i.append(`l`, j.LANGUAGE),
       i.append(`file_name`, this.m_fileUploadProps.uploadFileName),
       i.append(`file_sha`, r),
@@ -4034,7 +4034,7 @@ var jc = class {
         i,
         this.file_upload_props.uploadInfo,
         this.file_upload_props.fileInfo,
-      );
+      ));
     try {
       let t = await fetch(this.m_Callbacks.GetCommitFileUploadURL(), {
         method: `POST`,
@@ -4054,7 +4054,7 @@ var jc = class {
       if (!e) return;
       let r = ``;
       throw (
-        (c(() => {
+        c(() => {
           if (
             (this.LogFileUploadMessage(t),
             (this.m_fileUploadProps.uploadProgress = 0),
@@ -4062,16 +4062,16 @@ var jc = class {
             t.response)
           ) {
             let e = t.response.data;
-            t.response.status,
+            (t.response.status,
               e && e.success,
               (r = e.message
                 ? e.message
-                : R(`#Chat_Settings_Error_ServerError`));
+                : R(`#Chat_Settings_Error_ServerError`)));
           } else r = R(`#ConnectionTrouble_FailedToConnect`);
-          (this.m_fileUploadProps.strErrorDescription = `Failed to commit upload: ${r}`),
-            this.m_onComplete && this.m_onComplete(2, n.size);
+          ((this.m_fileUploadProps.strErrorDescription = `Failed to commit upload: ${r}`),
+            this.m_onComplete && this.m_onComplete(2, n.size));
         }),
-        r)
+        r
       );
     }
   }
@@ -4088,26 +4088,26 @@ var jc = class {
 function Mc(e) {
   return new Promise((t) => {
     let n = new FileReader();
-    (n.onload = () => {
+    ((n.onload = () => {
       let r = e,
         i = n.result,
         a = Nc(i),
         o = new Blob([a], { type: e.type });
       if (o) {
         let t = o;
-        (t.lastModifiedDate = new Date(e.lastModified)),
+        ((t.lastModifiedDate = new Date(e.lastModified)),
           (t.name = e.name),
-          (r = t);
+          (r = t));
       }
       if (e.type.indexOf(`image`) == 0) {
         let n = new Image();
-        (n.src = URL.createObjectURL(e)),
+        ((n.src = URL.createObjectURL(e)),
           (n.onload = (e) => {
             t({ file: r, width: n.width, height: n.height });
-          });
+          }));
       } else t({ file: r, width: 0, height: 0 });
     }),
-      n.readAsArrayBuffer(e);
+      n.readAsArrayBuffer(e));
   });
 }
 function Nc(e) {
@@ -4119,11 +4119,11 @@ function Nc(e) {
   if (t.getUint16(n) == 65496) {
     n += 2;
     let o = t.getUint16(n);
-    for (n += 2; n < t.byteLength && n < 131072; ) {
+    for (n += 2; n < t.byteLength && n < 131072;) {
       if (o == 65505)
-        (i[a] = { recess: r, offset: n - 2 }), (r = n + t.getUint16(n)), a++;
+        ((i[a] = { recess: r, offset: n - 2 }), (r = n + t.getUint16(n)), a++);
       else if (o == 65498) break;
-      (n += t.getUint16(n)), (o = t.getUint16(n)), (n += 2);
+      ((n += t.getUint16(n)), (o = t.getUint16(n)), (n += 2));
     }
     let s = e.byteLength - r;
     if (
@@ -4136,11 +4136,11 @@ function Nc(e) {
     let c = new Uint8Array(s);
     if (i.length > 0) {
       let t = 0;
-      i.forEach((n) => {
+      (i.forEach((n) => {
         let r = n.offset - n.recess;
-        c.set(new Uint8Array(e.slice(n.recess, n.offset)), t), (t += r);
+        (c.set(new Uint8Array(e.slice(n.recess, n.offset)), t), (t += r));
       }),
-        c.set(new Uint8Array(e.slice(r)), t);
+        c.set(new Uint8Array(e.slice(r)), t));
     }
     return c.buffer;
   }
@@ -4215,7 +4215,7 @@ function Wc(e) {
           (0, K.jsx)(tn, {
             className: zc,
             onClick: async () => {
-              await t.BeginFileUpload(), t.Reset();
+              (await t.BeginFileUpload(), t.Reset());
             },
             children: R(`#Button_Upload`),
           }),
@@ -4268,7 +4268,7 @@ function Kc(e) {
             i == 3 &&
               (0, K.jsx)(tn, {
                 onClick: async () => {
-                  await t.RetryFileUpload(), t.Reset();
+                  (await t.RetryFileUpload(), t.Reset());
                 },
                 children: R(`#Chat_Upload_ErrorAction_Retry`),
               }),
@@ -4523,10 +4523,10 @@ function Sl(e) {
                     ...a.userPollSubmitData.user_poll_option_votes,
                   ],
                 };
-                e.user_poll_option_votes.push(c),
+                (e.user_poll_option_votes.push(c),
                   await s.mutateAsync({ votes: e }),
                   l(void 0),
-                  d(!1);
+                  d(!1));
               }
             },
             children: R(`#Button_Submit`),
@@ -4656,7 +4656,7 @@ function Tl(e) {
     [i] = (0, G.useState)(() =>
       G.lazy(async () => {
         let e = await t();
-        return await An(), { default: e };
+        return (await An(), { default: e });
       }),
     );
   return (0, K.jsx)(Bt, {
@@ -5072,14 +5072,14 @@ var $ = class extends G.Component {
   m_nPreviousRenderCount = 0;
   m_nCurrentRenderCount = 0;
   constructor(e) {
-    super(e),
+    (super(e),
       (this.m_loader = new Mu(this.props.partnerEventStore)),
       !this.props.bShowOnlyInitialEvent &&
         this.props.initialEvent &&
         this.m_loader.InitAroundEvent(
           this.props.initialEvent,
           this.props.additionalParams,
-        );
+        ));
   }
   FindCurrentlyViewedEventIndex() {
     let e = this.m_refScroll.current;
@@ -5114,8 +5114,8 @@ var $ = class extends G.Component {
       timing: `cubic-in-out`,
       onComplete: this.OnScrollComplete,
     };
-    (this.m_scrollAnimation = new At(t, { scrollTop: e }, n)),
-      this.m_scrollAnimation.Start();
+    ((this.m_scrollAnimation = new At(t, { scrollTop: e }, n)),
+      this.m_scrollAnimation.Start());
   }
   ScrollToBottom() {
     this.m_refScroll.current &&
@@ -5143,7 +5143,7 @@ var $ = class extends G.Component {
         a = i.offsetTop,
         o = a + i.clientHeight,
         s = this.GetScrollTopForComparison(r);
-      (s -= (o - a) * 0.3), a <= s && (t = e);
+      ((s -= (o - a) * 0.3), a <= s && (t = e));
     }
     this.ScrollToEvent(t);
   }
@@ -5164,8 +5164,8 @@ var $ = class extends G.Component {
     let t = this.m_refScroll.current;
     if (!t) return;
     let n = t.clientHeight;
-    t.scrollHeight - (t.scrollTop + n) <= n && this.m_loader.LoadMoreAtEnd(),
-      t.scrollTop <= n && this.m_loader.LoadMoreAtBeginning();
+    (t.scrollHeight - (t.scrollTop + n) <= n && this.m_loader.LoadMoreAtEnd(),
+      t.scrollTop <= n && this.m_loader.LoadMoreAtBeginning());
   }
   getSnapshotBeforeUpdate(e) {
     let t = this.m_nCurrentRenderCount != this.m_nPreviousRenderCount;
@@ -5182,9 +5182,9 @@ var $ = class extends G.Component {
   OnTouchMove(e) {
     if (!this.m_refScroll.current || e.touches.length == 0) return;
     let t = 0;
-    this.m_nTouchStartClientY !== void 0 &&
+    (this.m_nTouchStartClientY !== void 0 &&
       (t = this.m_nTouchStartClientY - e.touches[0].clientY),
-      this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(e, t);
+      this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(e, t));
   }
   OnWheel(e) {
     this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(e, e.deltaY);
@@ -5199,8 +5199,8 @@ var $ = class extends G.Component {
   }
   SetGlobalHeaderHidden(e) {
     let t = document.getElementsByClassName(`responsive_header`);
-    xn(t.length <= 1, `Must have at most one responsive_header`),
-      t.length >= 1 && (t[0].style.display = e ? `none` : ``);
+    (xn(t.length <= 1, `Must have at most one responsive_header`),
+      t.length >= 1 && (t[0].style.display = e ? `none` : ``));
   }
   SetFooterPinnedToBottom(e) {
     let t = document.getElementById(`footer`);
@@ -5210,12 +5210,12 @@ var $ = class extends G.Component {
     let e = this.m_refScroll.current;
     e && !Ft(e, e.ownerDocument.activeElement) && e.focus();
     let t = this.m_refPage.current;
-    t &&
+    (t &&
       (t.addEventListener(`touchstart`, this.OnTouchStart),
       t.addEventListener(`touchmove`, this.OnTouchMove, { passive: !1 }),
       t.addEventListener(`wheel`, this.OnWheel, { passive: !1 })),
       this.props.showAppHeader && this.SetGlobalHeaderHidden(!0),
-      this.SetFooterPinnedToBottom(!0);
+      this.SetFooterPinnedToBottom(!0));
   }
   componentDidUpdate(e, t, n) {
     if (n === null) return;
@@ -5229,12 +5229,12 @@ var $ = class extends G.Component {
   }
   componentWillUnmount() {
     let e = this.m_refPage.current;
-    e &&
+    (e &&
       (e.removeEventListener(`touchstart`, this.OnTouchStart),
       e.removeEventListener(`touchmove`, this.OnTouchMove),
       e.removeEventListener(`wheel`, this.OnWheel)),
       this.props.showAppHeader && this.SetGlobalHeaderHidden(!1),
-      this.SetFooterPinnedToBottom(!1);
+      this.SetFooterPinnedToBottom(!1));
   }
   render() {
     let { initialEvent: e, bShowOnlyInitialEvent: t } = this.props,
@@ -5246,7 +5246,7 @@ var $ = class extends G.Component {
     for (let t of r) {
       let n = e !== void 0 && t.GID == e.GID,
         r = n;
-      i.push(
+      (i.push(
         (0, K.jsx)(
           ku,
           {
@@ -5265,7 +5265,7 @@ var $ = class extends G.Component {
         ),
       ),
         (a ??= t.appid),
-        (o ??= t.clanSteamID.GetAccountID());
+        (o ??= t.clanSteamID.GetAccountID()));
     }
     return (
       (this.m_nCurrentRenderCount = i.length),
@@ -5364,7 +5364,7 @@ var $ = class extends G.Component {
     );
   }
 };
-N([P], $.prototype, `ScrollToNextEvent`, null),
+(N([P], $.prototype, `ScrollToNextEvent`, null),
   N([P], $.prototype, `ScrollToPrevEvent`, null),
   N([P], $.prototype, `OnScrollComplete`, null),
   N([P], $.prototype, `Close`, null),
@@ -5374,7 +5374,7 @@ N([P], $.prototype, `ScrollToNextEvent`, null),
   N([P], $.prototype, `OnTouchStart`, null),
   N([P], $.prototype, `OnTouchMove`, null),
   N([P], $.prototype, `OnWheel`, null),
-  ($ = N([u], $));
+  ($ = N([u], $)));
 var Ou = u((e) => {
     let t = e.loader.GetNewerState(),
       n = e.loader.GetOlderState();
@@ -5412,8 +5412,8 @@ var Ou = u((e) => {
       this.m_bSentRead ||
         this.m_sendReadInfo.IsScheduled() ||
         this.m_sendReadInfo.Schedule(750, () => {
-          this.props.tracker.RecordEventRead(this.props.event, 4),
-            (this.m_bSentRead = !0);
+          (this.props.tracker.RecordEventRead(this.props.event, 4),
+            (this.m_bSentRead = !0));
         });
     }
     OnLeaveVisible() {
@@ -5586,9 +5586,9 @@ var Ou = u((e) => {
       );
     }
   };
-N([P], Au.prototype, `OnEnterVisible`, null),
+(N([P], Au.prototype, `OnEnterVisible`, null),
   N([P], Au.prototype, `OnLeaveVisible`, null),
-  (Au = N([u], Au));
+  (Au = N([u], Au)));
 function ju(e) {
   let {
       event: t,
@@ -5633,7 +5633,7 @@ var Mu = class {
   m_eOlderDirection = 1;
   m_eNewerDirection = 1;
   constructor(e) {
-    l(this), (this.m_partnerEventStore = e);
+    (l(this), (this.m_partnerEventStore = e));
   }
   GetEvents() {
     return this.m_rgEvents;
@@ -5649,13 +5649,13 @@ var Mu = class {
   }
   async InitAroundEvent(e, t) {
     let n = this.m_partnerEventStore;
-    (this.m_nAppID = e.appid),
+    ((this.m_nAppID = e.appid),
       (this.m_clanSteamID = e.clanSteamID),
       (this.m_rgEvents = []),
       (this.m_eOlderDirection = 2),
       (this.m_eNewerDirection = 2),
       (this.m_additionalParams = t),
-      this.m_rgEvents.push(e);
+      this.m_rgEvents.push(e));
     let r;
     try {
       r = await n.LoadAdjacentPartnerEventsByEvent(
@@ -5669,15 +5669,15 @@ var Mu = class {
     } catch {}
     c(() => {
       if (!r || r.length == 0) {
-        (this.m_eOlderDirection = 3), (this.m_eNewerDirection = 3);
+        ((this.m_eOlderDirection = 3), (this.m_eNewerDirection = 3));
         return;
       }
       let t = r.findIndex((t) => t.GID == e.GID),
         n = t,
         i = t >= 0 ? r.length - t - 1 : 0;
-      (this.m_eNewerDirection = n >= this.k_nMaxPerDirection ? 1 : 3),
+      ((this.m_eNewerDirection = n >= this.k_nMaxPerDirection ? 1 : 3),
         (this.m_eOlderDirection = i >= this.k_nMaxPerDirection ? 1 : 3),
-        (this.m_rgEvents = r);
+        (this.m_rgEvents = r));
     });
   }
   async LoadMoreAtEnd() {
@@ -5741,9 +5741,9 @@ var Mu = class {
     });
   }
 };
-N([n.shallow], Mu.prototype, `m_rgEvents`, void 0),
+(N([n.shallow], Mu.prototype, `m_rgEvents`, void 0),
   N([n], Mu.prototype, `m_eOlderDirection`, void 0),
-  N([n], Mu.prototype, `m_eNewerDirection`, void 0);
+  N([n], Mu.prototype, `m_eNewerDirection`, void 0));
 export {
   za as $,
   ho as A,

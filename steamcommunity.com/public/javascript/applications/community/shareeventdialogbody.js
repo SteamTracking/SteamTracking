@@ -51,15 +51,15 @@ function V(e, t) {
 async function H(e, t, n) {
   if (D.IN_STEAMUI) {
     let e = x.Init(h);
-    e.Body().set_appid(t), e.Body().set_status_text(n);
+    (e.Body().set_appid(t), e.Body().set_status_text(n));
     let r = await b.PostStatusToFriends(f.CMInterface.GetServiceTransport(), e);
     if (r.GetEResult() != 1) throw Error(String(r.GetEResult()));
     return;
   }
   let r = new FormData();
-  r.append(`appid`, String(t ?? 0)),
+  (r.append(`appid`, String(t ?? 0)),
     r.append(`status_text`, n),
-    r.append(`sessionid`, E());
+    r.append(`sessionid`, E()));
   let i = await fetch(e + `ajaxpostuserstatus`, {
       method: `POST`,
       body: r,
@@ -194,7 +194,7 @@ function K(e) {
     x = F.useMemo(() => {
       if (!n) return ``;
       let e = new URL(n);
-      return e.searchParams.set(W, v(l)), e.href;
+      return (e.searchParams.set(W, v(l)), e.href);
     }, [l, n]),
     S = D.EREALM === y.k_ESteamRealmChina;
   return f

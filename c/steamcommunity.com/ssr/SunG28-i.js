@@ -171,7 +171,7 @@ function _(_) {
                   children: [
                     (0, _.jsx)(_, {
                       onClick: () => {
-                        _(_), _(!1);
+                        (_(_), _(!1));
                       },
                       children: _.Localize(`#AppHubs_ContentCheck_ViewPage`),
                     }),
@@ -288,4 +288,3 @@ function _(_) {
     }),
   });
 }
-export { _, _, _ };

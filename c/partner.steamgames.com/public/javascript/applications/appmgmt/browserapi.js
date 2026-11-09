@@ -35,7 +35,7 @@ function _(_) {
     _ = _(_),
     _ = 900,
     _ = _ - _;
-  return _ < 1350 && (_ = _ <= 60 ? 0 : 60), _(_) - _ < Date.now() / 1e3;
+  return (_ < 1350 && (_ = _ <= 60 ? 0 : 60), _(_) - _ < Date.now() / 1e3);
 }
 function _(_) {
   return atob(_.replace(/-/g, `+`).replace(/_/g, `/`));
@@ -52,7 +52,7 @@ var _ = class {
   m_dtLastExpireCheck = 0;
   m_strSpoofedSteamID = ``;
   constructor(_, _ = ``, _ = !1, _) {
-    (this.m_strWebAPIBaseURL = _),
+    ((this.m_strWebAPIBaseURL = _),
       (this.m_webApiAccessToken = _),
       (this.m_bJsonMode = _),
       (this.m_fnRequestNewAccessToken = _),
@@ -74,7 +74,7 @@ var _ = class {
           bSendAuth: !1,
         }),
         MakeReady: this.MakeReady.bind(this),
-      });
+      }));
     let _ = _(_);
     _ && /[0-9]+/g.test(_) && (this.m_strSpoofedSteamID = _);
   }
@@ -155,7 +155,7 @@ var _ = class {
     );
   }
   SendNotification(_, _, _, _) {
-    return this.Send(_, _, _, _), !0;
+    return (this.Send(_, _, _, _), !0);
   }
   Send(_, _, _, _) {
     let _ = this.CreateWebAPIURL(_),
@@ -174,10 +174,10 @@ var _ = class {
       _.bSendAuth && !_)
     ) {
       let _ = `${_} was called over WebAPI with auth`;
-      console.warn(_),
+      (console.warn(_),
         _().ReportError(Error(_), {
           bIncludeMessageInIdentifier: !0,
-        });
+        }));
     }
     if (
       (this.m_webApiAccessToken &&
@@ -278,7 +278,7 @@ var _ = class {
   m_fallbackInterface;
   m_refreshLoginCookiePromise;
   constructor(_) {
-    (this.m_fallbackInterface = _),
+    ((this.m_fallbackInterface = _),
       (this.m_ServiceTransport = {
         SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
           bSendAuth: !0,
@@ -296,7 +296,7 @@ var _ = class {
           bSendAuth: !1,
         }),
         MakeReady: this.MakeReady.bind(this),
-      });
+      }));
   }
   async SendMsgAndAwaitResponse(_, _, _, _, _) {
     if (!_(_)) {
@@ -329,12 +329,12 @@ var _ = class {
     try {
       let _ = await this.Send(_, _, _, _);
       if (((_ = _.status), _ == 200)) {
-        (_ = _.Init(_, 147)),
+        ((_ = _.Init(_, 147)),
           _.headers &&
             (_.headers.get(`x-eresult`) &&
               _.Hdr().set_eresult(parseInt(_.headers.get(`x-eresult`))),
             _.headers.get(`x-error_message`) &&
-              _.Hdr().set_error_message(_.headers.get(`x-error_message`)));
+              _.Hdr().set_error_message(_.headers.get(`x-error_message`))));
         let _ = new _(await _.arrayBuffer());
         _.ReadBodyFromBuffer(_, _);
       }
@@ -361,7 +361,7 @@ var _ = class {
               .SendNotification(_, _, _);
       console.error(`No browserapi version of`, _, `and no fallback`);
     }
-    return this.SendNotificationAndRetryIfUnauthorized(_, _, _, _), !0;
+    return (this.SendNotificationAndRetryIfUnauthorized(_, _, _, _), !0);
   }
   async SendNotificationAndRetryIfUnauthorized(_, _, _, _) {
     (await this.Send(_, _, _, _)).status === 401 &&
@@ -450,4 +450,3 @@ function _(_) {
   let _ = _();
   return _ && _().includes(_) ? new _(_) : _;
 }
-export { _, _, _ };

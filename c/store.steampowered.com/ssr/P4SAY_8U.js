@@ -21,4 +21,3 @@ async function _(_, _) {
   if (!_.BSuccess()) throw `Error loading price stops: ${_.GetErrorMessage()}`;
   return _.Body().toObject().price_stops || [];
 }
-export { _, _ };

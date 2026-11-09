@@ -59,17 +59,17 @@ function _(_, _) {
         let _ = _.slice().filter((_) => !_.has(_));
         if (_.length) {
           let _ = _.Init(_);
-          _.Body().set_language(_(_.LANGUAGE)), _.Body().set_appids(_);
+          (_.Body().set_language(_(_.LANGUAGE)), _.Body().set_appids(_));
           let _ = await _.GetApps(_, _);
           if (_.GetEResult() != 1) throw _.GetErrorMessage();
           _.Body()
             .toObject()
             .apps.forEach((_) => {
-              _.StoreObject(_(_.appid), {
+              (_.StoreObject(_(_.appid), {
                 timeCached: Date.now(),
                 value: _,
               }),
-                _.set(_.appid, _);
+                _.set(_.appid, _));
             });
         }
         return _.map((_) => _.get(_));

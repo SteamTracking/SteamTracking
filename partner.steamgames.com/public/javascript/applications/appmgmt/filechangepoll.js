@@ -86,11 +86,13 @@ var r = e({
       }
       var c = l(e, t),
         u = e.substring(0, c);
-      (e = e.substring(c)), (t = t.substring(c)), (c = d(e, t));
+      ((e = e.substring(c)), (t = t.substring(c)), (c = d(e, t)));
       var f = e.substring(e.length - c);
-      (e = e.substring(0, e.length - c)), (t = t.substring(0, t.length - c));
+      ((e = e.substring(0, e.length - c)), (t = t.substring(0, t.length - c)));
       var m = o(e, t);
-      return u && m.unshift([i, u]), f && m.push([i, f]), b(m, a), r && p(m), m;
+      return (
+        u && m.unshift([i, u]), f && m.push([i, f]), b(m, a), r && p(m), m
+      );
     }
     function o(e, t) {
       var o;
@@ -140,8 +142,8 @@ var r = e({
         f < l;
         f++
       )
-        (u[f] = -1), (d[f] = -1);
-      (u[s + 1] = 0), (d[s + 1] = 0);
+        ((u[f] = -1), (d[f] = -1));
+      ((u[s + 1] = 0), (d[s + 1] = 0));
       for (
         var p = i - a, m = p % 2 != 0, h = 0, g = 0, _ = 0, v = 0, y = 0;
         y < o;
@@ -157,7 +159,7 @@ var r = e({
               C = S - b;
             S < i && C < a && e.charAt(S) === t.charAt(C);
           )
-            S++, C++;
+            (S++, C++);
           if (((u[x] = S), S > i)) g += 2;
           else if (C > a) h += 2;
           else if (m) {
@@ -178,7 +180,7 @@ var r = e({
               D = T - E;
             T < i && D < a && e.charAt(i - T - 1) === t.charAt(a - D - 1);
           )
-            T++, D++;
+            (T++, D++);
           if (((d[w] = T), T > i)) v += 2;
           else if (D > a) _ += 2;
           else if (!m) {
@@ -207,10 +209,10 @@ var r = e({
     }
     function l(e, t) {
       if (!e || !t || e.charAt(0) !== t.charAt(0)) return 0;
-      for (var n = 0, r = Math.min(e.length, t.length), i = r, a = 0; n < i; )
-        e.substring(a, i) == t.substring(a, i) ? ((n = i), (a = n)) : (r = i),
-          (i = Math.floor((r - n) / 2 + n));
-      return x(e.charCodeAt(i - 1)) && i--, i;
+      for (var n = 0, r = Math.min(e.length, t.length), i = r, a = 0; n < i;)
+        (e.substring(a, i) == t.substring(a, i) ? ((n = i), (a = n)) : (r = i),
+          (i = Math.floor((r - n) / 2 + n)));
+      return (x(e.charCodeAt(i - 1)) && i--, i);
     }
     function u(e, t) {
       var n = e.length,
@@ -219,23 +221,24 @@ var r = e({
       n > r ? (e = e.substring(n - r)) : n < r && (t = t.substring(0, n));
       var i = Math.min(n, r);
       if (e == t) return i;
-      for (var a = 0, o = 1; ; ) {
+      for (var a = 0, o = 1; ;) {
         var s = e.substring(i - o),
           c = t.indexOf(s);
         if (c == -1) return a;
-        (o += c),
-          (c == 0 || e.substring(i - o) == t.substring(0, o)) && ((a = o), o++);
+        ((o += c),
+          (c == 0 || e.substring(i - o) == t.substring(0, o)) &&
+            ((a = o), o++));
       }
     }
     function d(e, t) {
       if (!e || !t || e.slice(-1) !== t.slice(-1)) return 0;
-      for (var n = 0, r = Math.min(e.length, t.length), i = r, a = 0; n < i; )
-        e.substring(e.length - i, e.length - a) ==
+      for (var n = 0, r = Math.min(e.length, t.length), i = r, a = 0; n < i;)
+        (e.substring(e.length - i, e.length - a) ==
         t.substring(t.length - i, t.length - a)
           ? ((n = i), (a = n))
           : (r = i),
-          (i = Math.floor((r - n) / 2 + n));
-      return S(e.charCodeAt(e.length - i)) && i--, i;
+          (i = Math.floor((r - n) / 2 + n)));
+      return (S(e.charCodeAt(e.length - i)) && i--, i);
     }
     function f(e, t) {
       var n = e.length > t.length ? e : t,
@@ -280,7 +283,7 @@ var r = e({
         var t = !1, a = [], o = 0, s = null, c = 0, l = 0, d = 0, f = 0, p = 0;
         c < e.length;
       )
-        e[c][0] == i
+        (e[c][0] == i
           ? ((a[o++] = c), (l = f), (d = p), (f = 0), (p = 0), (s = e[c][1]))
           : (e[c][0] == r ? (f += e[c][1].length) : (p += e[c][1].length),
             s &&
@@ -297,14 +300,14 @@ var r = e({
               (p = 0),
               (s = null),
               (t = !0))),
-          c++;
-      for (t && b(e), y(e), c = 1; c < e.length; ) {
+          c++);
+      for (t && b(e), y(e), c = 1; c < e.length;) {
         if (e[c - 1][0] == n && e[c][0] == r) {
           var m = e[c - 1][1],
             h = e[c][1],
             g = u(m, h),
             _ = u(h, m);
-          g >= _
+          (g >= _
             ? (g >= m.length / 2 || g >= h.length / 2) &&
               (e.splice(c, 0, [i, h.substring(0, g)]),
               (e[c - 1][1] = m.substring(0, m.length - g)),
@@ -317,7 +320,7 @@ var r = e({
               (e[c + 1][0] = n),
               (e[c + 1][1] = m.substring(_)),
               c++),
-            c++;
+            c++);
         }
         c++;
       }
@@ -352,7 +355,7 @@ var r = e({
                   ? 1
                   : 0;
       }
-      for (var n = 1; n < e.length - 1; ) {
+      for (var n = 1; n < e.length - 1;) {
         if (e[n - 1][0] == i && e[n + 1][0] == i) {
           var r = e[n - 1][1],
             a = e[n][1],
@@ -360,17 +363,17 @@ var r = e({
             s = d(r, a);
           if (s) {
             var c = a.substring(a.length - s);
-            (r = r.substring(0, r.length - s)),
+            ((r = r.substring(0, r.length - s)),
               (a = c + a.substring(0, a.length - s)),
-              (o = c + o);
+              (o = c + o));
           }
           for (
             var l = r, u = a, f = o, p = t(r, a) + t(a, o);
             a.charAt(0) === o.charAt(0);
           ) {
-            (r += a.charAt(0)),
+            ((r += a.charAt(0)),
               (a = a.substring(1) + o.charAt(0)),
-              (o = o.substring(1));
+              (o = o.substring(1)));
             var y = t(r, a) + t(a, o);
             y >= p && ((p = y), (l = r), (u = a), (f = o));
           }
@@ -384,15 +387,15 @@ var r = e({
     }
     function b(e, t) {
       e.push([i, ``]);
-      for (var a = 0, o = 0, s = 0, c = ``, u = ``, f; a < e.length; )
+      for (var a = 0, o = 0, s = 0, c = ``, u = ``, f; a < e.length;)
         if (a < e.length - 1 && !e[a][1]) e.splice(a, 1);
         else
           switch (e[a][0]) {
             case r:
-              s++, (u += e[a][1]), a++;
+              (s++, (u += e[a][1]), a++);
               break;
             case n:
-              o++, (c += e[a][1]), a++;
+              (o++, (c += e[a][1]), a++);
               break;
             case i:
               var p = a - s - o - 1;
@@ -405,16 +408,16 @@ var r = e({
                     (u = m + u),
                     !e[p][1])
                   ) {
-                    e.splice(p, 1), a--;
+                    (e.splice(p, 1), a--);
                     var h = p - 1;
-                    e[h] && e[h][0] === r && (s++, (u = e[h][1] + u), h--),
+                    (e[h] && e[h][0] === r && (s++, (u = e[h][1] + u), h--),
                       e[h] && e[h][0] === n && (o++, (c = e[h][1] + c), h--),
-                      (p = h);
+                      (p = h));
                   }
                 }
                 if (C(e[a][1])) {
                   var m = e[a][1].charAt(0);
-                  (e[a][1] = e[a][1].slice(1)), (c += m), (u += m);
+                  ((e[a][1] = e[a][1].slice(1)), (c += m), (u += m));
                 }
               }
               if (a < e.length - 1 && !e[a][1]) {
@@ -445,18 +448,18 @@ var r = e({
                       ? (e.splice(a - g, g, [n, c]), (a = a - g + 1))
                       : (e.splice(a - g, g, [n, c], [r, u]), (a = a - g + 2));
               }
-              a !== 0 && e[a - 1][0] === i
+              (a !== 0 && e[a - 1][0] === i
                 ? ((e[a - 1][1] += e[a][1]), e.splice(a, 1))
                 : a++,
                 (s = 0),
                 (o = 0),
                 (c = ``),
-                (u = ``);
+                (u = ``));
           }
       e[e.length - 1][1] === `` && e.pop();
       var _ = !1;
-      for (a = 1; a < e.length - 1; )
-        e[a - 1][0] === i &&
+      for (a = 1; a < e.length - 1;)
+        (e[a - 1][0] === i &&
           e[a + 1][0] === i &&
           (e[a][1].substring(e[a][1].length - e[a - 1][1].length) ===
           e[a - 1][1]
@@ -471,7 +474,7 @@ var r = e({
               (e[a][1] = e[a][1].substring(e[a + 1][1].length) + e[a + 1][1]),
               e.splice(a + 1, 1),
               (_ = !0))),
-          a++;
+          a++);
       _ && b(e, t);
     }
     function x(e) {
@@ -559,9 +562,9 @@ var r = e({
     function O(e, t, n, r) {
       return a(e, t, n, r, !0);
     }
-    (O.INSERT = r), (O.DELETE = n), (O.EQUAL = i), (t.exports = O);
+    ((O.INSERT = r), (O.DELETE = n), (O.EQUAL = i), (t.exports = O));
   });
-n(), N();
+(n(), N());
 export {
   S as C,
   b as D,

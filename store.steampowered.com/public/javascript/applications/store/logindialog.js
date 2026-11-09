@@ -55,46 +55,46 @@ function N() {
   return new M(null);
 }
 function fe(e, t, n, r, i, a) {
-  for (; --a >= 0; ) {
+  for (; --a >= 0;) {
     var o = t * this[e++] + n[r] + i;
-    (i = Math.floor(o / 67108864)), (n[r++] = o & 67108863);
+    ((i = Math.floor(o / 67108864)), (n[r++] = o & 67108863));
   }
   return i;
 }
 function pe(e, t, n, r, i, a) {
-  for (var o = t & 32767, s = t >> 15; --a >= 0; ) {
+  for (var o = t & 32767, s = t >> 15; --a >= 0;) {
     var c = this[e] & 32767,
       l = this[e++] >> 15,
       u = s * c + l * o;
-    (c = o * c + ((u & 32767) << 15) + n[r] + (i & 1073741823)),
+    ((c = o * c + ((u & 32767) << 15) + n[r] + (i & 1073741823)),
       (i = (c >>> 30) + (u >>> 15) + s * l + (i >>> 30)),
-      (n[r++] = c & 1073741823);
+      (n[r++] = c & 1073741823));
   }
   return i;
 }
 function me(e, t, n, r, i, a) {
-  for (var o = t & 16383, s = t >> 14; --a >= 0; ) {
+  for (var o = t & 16383, s = t >> 14; --a >= 0;) {
     var c = this[e] & 16383,
       l = this[e++] >> 14,
       u = s * c + l * o;
-    (c = o * c + ((u & 16383) << 14) + n[r] + i),
+    ((c = o * c + ((u & 16383) << 14) + n[r] + i),
       (i = (c >> 28) + (u >> 14) + s * l),
-      (n[r++] = c & 268435455);
+      (n[r++] = c & 268435455));
   }
   return i;
 }
-de && navigator.appName == `Microsoft Internet Explorer`
+(de && navigator.appName == `Microsoft Internet Explorer`
   ? ((M.prototype.am = pe), (j = 30))
   : de && navigator.appName != `Netscape`
     ? ((M.prototype.am = fe), (j = 26))
     : ((M.prototype.am = me), (j = 28)),
   (M.prototype.DB = j),
   (M.prototype.DM = (1 << j) - 1),
-  (M.prototype.DV = 1 << j);
+  (M.prototype.DV = 1 << j));
 var he = 52;
-(M.prototype.FV = 2 ** he),
+((M.prototype.FV = 2 ** he),
   (M.prototype.F1 = he - j),
-  (M.prototype.F2 = 2 * j - he);
+  (M.prototype.F2 = 2 * j - he));
 for (
   var ge = `0123456789abcdefghijklmnopqrstuvwxyz`, _e = [], P = 48, F = 0;
   F <= 9;
@@ -111,16 +111,16 @@ function ye(e, t) {
 }
 function be(e) {
   for (var t = this.t - 1; t >= 0; --t) e[t] = this[t];
-  (e.t = this.t), (e.s = this.s);
+  ((e.t = this.t), (e.s = this.s));
 }
 function xe(e) {
-  (this.t = 1),
+  ((this.t = 1),
     (this.s = e < 0 ? -1 : 0),
-    e > 0 ? (this[0] = e) : e < -1 ? (this[0] = e + DV) : (this.t = 0);
+    e > 0 ? (this[0] = e) : e < -1 ? (this[0] = e + DV) : (this.t = 0));
 }
 function I(e) {
   var t = N();
-  return t.fromInt(e), t;
+  return (t.fromInt(e), t);
 }
 function Se(e, t) {
   var n;
@@ -134,8 +134,8 @@ function Se(e, t) {
     this.fromRadix(e, t);
     return;
   }
-  (this.t = 0), (this.s = 0);
-  for (var r = e.length, i = !1, a = 0; --r >= 0; ) {
+  ((this.t = 0), (this.s = 0));
+  for (var r = e.length, i = !1, a = 0; --r >= 0;) {
     var o = n == 8 ? e[r] & 255 : ye(e, r);
     o < 0
       ? e.charAt(r) == `-` && (i = !0)
@@ -149,16 +149,15 @@ function Se(e, t) {
         (a += n),
         a >= this.DB && (a -= this.DB));
   }
-  n == 8 &&
+  (n == 8 &&
     e[0] & 128 &&
     ((this.s = -1),
     a > 0 && (this[this.t - 1] |= ((1 << (this.DB - a)) - 1) << a)),
     this.clamp(),
-    i && M.ZERO.subTo(this, this);
+    i && M.ZERO.subTo(this, this));
 }
 function Ce() {
-  for (var e = this.s & this.DM; this.t > 0 && this[this.t - 1] == e; )
-    --this.t;
+  for (var e = this.s & this.DM; this.t > 0 && this[this.t - 1] == e;) --this.t;
 }
 function we(e) {
   if (this.s < 0) return `-` + this.negate().toString(e);
@@ -180,17 +179,17 @@ function we(e) {
       s < this.DB && (r = this[o] >> s) > 0 && ((i = !0), (a = ve(r)));
       o >= 0;
     )
-      s < t
+      (s < t
         ? ((r = (this[o] & ((1 << s) - 1)) << (t - s)),
           (r |= this[--o] >> (s += this.DB - t)))
         : ((r = (this[o] >> (s -= t)) & n), s <= 0 && ((s += this.DB), --o)),
         r > 0 && (i = !0),
-        i && (a += ve(r));
+        i && (a += ve(r)));
   return i ? a : `0`;
 }
 function Te() {
   var e = N();
-  return M.ZERO.subTo(this, e), e;
+  return (M.ZERO.subTo(this, e), e);
 }
 function Ee() {
   return this.s < 0 ? this.negate() : this;
@@ -200,7 +199,7 @@ function De(e) {
   if (t != 0) return t;
   var n = this.t;
   if (((t = n - e.t), t != 0)) return t;
-  for (; --n >= 0; ) if ((t = this[n] - e[n]) != 0) return t;
+  for (; --n >= 0;) if ((t = this[n] - e[n]) != 0) return t;
   return 0;
 }
 function Oe(e) {
@@ -223,11 +222,11 @@ function ke() {
 function Ae(e, t) {
   for (var n = this.t - 1; n >= 0; --n) t[n + e] = this[n];
   for (n = e - 1; n >= 0; --n) t[n] = 0;
-  (t.t = this.t + e), (t.s = this.s);
+  ((t.t = this.t + e), (t.s = this.s));
 }
 function je(e, t) {
   for (var n = e; n < this.t; ++n) t[n - e] = this[n];
-  (t.t = Math.max(this.t - e, 0)), (t.s = this.s);
+  ((t.t = Math.max(this.t - e, 0)), (t.s = this.s));
 }
 function Me(e, t) {
   for (
@@ -240,9 +239,9 @@ function Me(e, t) {
     s >= 0;
     --s
   )
-    (t[s + a + 1] = (this[s] >> r) | o), (o = (this[s] & i) << n);
+    ((t[s + a + 1] = (this[s] >> r) | o), (o = (this[s] & i) << n));
   for (s = a - 1; s >= 0; --s) t[s] = 0;
-  (t[a] = o), (t.t = this.t + a + 1), (t.s = this.s), t.clamp();
+  ((t[a] = o), (t.t = this.t + a + 1), (t.s = this.s), t.clamp());
 }
 function Ne(e, t) {
   t.s = this.s;
@@ -254,53 +253,53 @@ function Ne(e, t) {
       a = (1 << r) - 1;
     t[0] = this[n] >> r;
     for (var o = n + 1; o < this.t; ++o)
-      (t[o - n - 1] |= (this[o] & a) << i), (t[o - n] = this[o] >> r);
-    r > 0 && (t[this.t - n - 1] |= (this.s & a) << i),
+      ((t[o - n - 1] |= (this[o] & a) << i), (t[o - n] = this[o] >> r));
+    (r > 0 && (t[this.t - n - 1] |= (this.s & a) << i),
       (t.t = this.t - n),
-      t.clamp();
+      t.clamp());
   }
 }
 function Pe(e, t) {
-  for (var n = 0, r = 0, i = Math.min(e.t, this.t); n < i; )
-    (r += this[n] - e[n]), (t[n++] = r & this.DM), (r >>= this.DB);
+  for (var n = 0, r = 0, i = Math.min(e.t, this.t); n < i;)
+    ((r += this[n] - e[n]), (t[n++] = r & this.DM), (r >>= this.DB));
   if (e.t < this.t) {
-    for (r -= e.s; n < this.t; )
-      (r += this[n]), (t[n++] = r & this.DM), (r >>= this.DB);
+    for (r -= e.s; n < this.t;)
+      ((r += this[n]), (t[n++] = r & this.DM), (r >>= this.DB));
     r += this.s;
   } else {
-    for (r += this.s; n < e.t; )
-      (r -= e[n]), (t[n++] = r & this.DM), (r >>= this.DB);
+    for (r += this.s; n < e.t;)
+      ((r -= e[n]), (t[n++] = r & this.DM), (r >>= this.DB));
     r -= e.s;
   }
-  (t.s = r < 0 ? -1 : 0),
+  ((t.s = r < 0 ? -1 : 0),
     r < -1 ? (t[n++] = this.DV + r) : r > 0 && (t[n++] = r),
     (t.t = n),
-    t.clamp();
+    t.clamp());
 }
 function Fe(e, t) {
   var n = this.abs(),
     r = e.abs(),
     i = n.t;
-  for (t.t = i + r.t; --i >= 0; ) t[i] = 0;
+  for (t.t = i + r.t; --i >= 0;) t[i] = 0;
   for (i = 0; i < r.t; ++i) t[i + n.t] = n.am(0, r[i], t, i, 0, n.t);
-  (t.s = 0), t.clamp(), this.s != e.s && M.ZERO.subTo(t, t);
+  ((t.s = 0), t.clamp(), this.s != e.s && M.ZERO.subTo(t, t));
 }
 function Ie(e) {
-  for (var t = this.abs(), n = (e.t = 2 * t.t); --n >= 0; ) e[n] = 0;
+  for (var t = this.abs(), n = (e.t = 2 * t.t); --n >= 0;) e[n] = 0;
   for (n = 0; n < t.t - 1; ++n) {
     var r = t.am(n, t[n], e, 2 * n, 0, 1);
     (e[n + t.t] += t.am(n + 1, 2 * t[n], e, 2 * n + 1, r, t.t - n - 1)) >=
       t.DV && ((e[n + t.t] -= t.DV), (e[n + t.t + 1] = 1));
   }
-  e.t > 0 && (e[e.t - 1] += t.am(n, t[n], e, 2 * n, 0, 1)),
+  (e.t > 0 && (e[e.t - 1] += t.am(n, t[n], e, 2 * n, 0, 1)),
     (e.s = 0),
-    e.clamp();
+    e.clamp());
 }
 function Le(e, t, n) {
   var r = e.abs();
   if (!(r.t <= 0)) {
     var i = this.abs();
-    if (i.t < r.t) t?.fromInt(0), n != null && this.copyTo(n);
+    if (i.t < r.t) (t?.fromInt(0), n != null && this.copyTo(n));
     else {
       n ??= N();
       var a = N(),
@@ -326,17 +325,17 @@ function Le(e, t, n) {
           a.t < l;
         )
           a[a.t++] = 0;
-        for (; --g >= 0; ) {
+        for (; --g >= 0;) {
           var v =
             n[--h] == u ? this.DM : Math.floor(n[h] * f + (n[h - 1] + m) * p);
           if ((n[h] += a.am(0, v, n, g, 0, l)) < v)
-            for (a.dlShiftTo(g, _), n.subTo(_, n); n[h] < --v; ) n.subTo(_, n);
+            for (a.dlShiftTo(g, _), n.subTo(_, n); n[h] < --v;) n.subTo(_, n);
         }
-        t != null && (n.drShiftTo(l, t), o != s && M.ZERO.subTo(t, t)),
+        (t != null && (n.drShiftTo(l, t), o != s && M.ZERO.subTo(t, t)),
           (n.t = l),
           n.clamp(),
           c > 0 && n.rShiftTo(c, n),
-          o < 0 && M.ZERO.subTo(n, n);
+          o < 0 && M.ZERO.subTo(n, n));
       }
     }
   }
@@ -362,16 +361,16 @@ function Ve(e) {
   e.divRemTo(this.m, null, e);
 }
 function He(e, t, n) {
-  e.multiplyTo(t, n), this.reduce(n);
+  (e.multiplyTo(t, n), this.reduce(n));
 }
 function Ue(e, t) {
-  e.squareTo(t), this.reduce(t);
+  (e.squareTo(t), this.reduce(t));
 }
-(L.prototype.convert = ze),
+((L.prototype.convert = ze),
   (L.prototype.revert = Be),
   (L.prototype.reduce = Ve),
   (L.prototype.mulTo = He),
-  (L.prototype.sqrTo = Ue);
+  (L.prototype.sqrTo = Ue));
 function We() {
   if (this.t < 1) return 0;
   var e = this[0];
@@ -386,12 +385,12 @@ function We() {
   );
 }
 function R(e) {
-  (this.m = e),
+  ((this.m = e),
     (this.mp = e.invDigit()),
     (this.mpl = this.mp & 32767),
     (this.mph = this.mp >> 15),
     (this.um = (1 << (e.DB - 15)) - 1),
-    (this.mt2 = 2 * e.t);
+    (this.mt2 = 2 * e.t));
 }
 function Ge(e) {
   var t = N();
@@ -404,10 +403,10 @@ function Ge(e) {
 }
 function Ke(e) {
   var t = N();
-  return e.copyTo(t), this.reduce(t), t;
+  return (e.copyTo(t), this.reduce(t), t);
 }
 function qe(e) {
-  for (; e.t <= this.mt2; ) e[e.t++] = 0;
+  for (; e.t <= this.mt2;) e[e.t++] = 0;
   for (var t = 0; t < this.m.t; ++t) {
     var n = e[t] & 32767,
       r =
@@ -418,23 +417,23 @@ function qe(e) {
       n = t + this.m.t, e[n] += this.m.am(0, r, e, t, 0, this.m.t);
       e[n] >= e.DV;
     )
-      (e[n] -= e.DV), e[++n]++;
+      ((e[n] -= e.DV), e[++n]++);
   }
-  e.clamp(),
+  (e.clamp(),
     e.drShiftTo(this.m.t, e),
-    e.compareTo(this.m) >= 0 && e.subTo(this.m, e);
+    e.compareTo(this.m) >= 0 && e.subTo(this.m, e));
 }
 function Je(e, t) {
-  e.squareTo(t), this.reduce(t);
+  (e.squareTo(t), this.reduce(t));
 }
 function Ye(e, t, n) {
-  e.multiplyTo(t, n), this.reduce(n);
+  (e.multiplyTo(t, n), this.reduce(n));
 }
-(R.prototype.convert = Ge),
+((R.prototype.convert = Ge),
   (R.prototype.revert = Ke),
   (R.prototype.reduce = qe),
   (R.prototype.mulTo = Ye),
-  (R.prototype.sqrTo = Je);
+  (R.prototype.sqrTo = Je));
 function Xe() {
   return (this.t > 0 ? this[0] & 1 : this.s) == 0;
 }
@@ -444,11 +443,11 @@ function Ze(e, t) {
     r = N(),
     i = t.convert(this),
     a = Oe(e) - 1;
-  for (i.copyTo(n); --a >= 0; )
+  for (i.copyTo(n); --a >= 0;)
     if ((t.sqrTo(n, r), (e & (1 << a)) > 0)) t.mulTo(r, i, n);
     else {
       var o = n;
-      (n = r), (r = o);
+      ((n = r), (r = o));
     }
   return t.revert(n);
 }
@@ -456,7 +455,7 @@ function Qe(e, t) {
   var n = e < 256 || t.isEven() ? new L(t) : new R(t);
   return this.exp(e, n);
 }
-(M.prototype.copyTo = be),
+((M.prototype.copyTo = be),
   (M.prototype.fromInt = xe),
   (M.prototype.fromString = Se),
   (M.prototype.clamp = Ce),
@@ -479,10 +478,10 @@ function Qe(e, t) {
   (M.prototype.mod = Re),
   (M.prototype.modPowInt = Qe),
   (M.ZERO = I(0)),
-  (M.ONE = I(1));
+  (M.ONE = I(1)));
 function $e() {
   var e = N();
-  return this.copyTo(e), e;
+  return (this.copyTo(e), e);
 }
 function et() {
   if (this.s < 0) {
@@ -512,12 +511,12 @@ function at(e) {
     i = N(),
     a = N(),
     o = ``;
-  for (this.divRemTo(r, i, a); i.signum() > 0; )
-    (o = (n + a.intValue()).toString(e).substr(1) + o), i.divRemTo(r, i, a);
+  for (this.divRemTo(r, i, a); i.signum() > 0;)
+    ((o = (n + a.intValue()).toString(e).substr(1) + o), i.divRemTo(r, i, a));
   return a.intValue().toString(e) + o;
 }
 function ot(e, t) {
-  this.fromInt(0), (t ??= 10);
+  (this.fromInt(0), (t ??= 10));
   for (
     var n = this.chunkSize(t), r = t ** +n, i = !1, a = 0, o = 0, s = 0;
     s < e.length;
@@ -530,8 +529,8 @@ function ot(e, t) {
         ++a >= n &&
           (this.dMultiply(r), this.dAddOffset(o, 0), (a = 0), (o = 0)));
   }
-  a > 0 && (this.dMultiply(t ** +a), this.dAddOffset(o, 0)),
-    i && M.ZERO.subTo(this, this);
+  (a > 0 && (this.dMultiply(t ** +a), this.dAddOffset(o, 0)),
+    i && M.ZERO.subTo(this, this));
 }
 function st(e, t, n) {
   if (typeof t == `number`) {
@@ -544,15 +543,15 @@ function st(e, t, n) {
           this.isEven() && this.dAddOffset(1, 0);
         !this.isProbablePrime(t);
       )
-        this.dAddOffset(2, 0),
-          this.bitLength() > e && this.subTo(M.ONE.shiftLeft(e - 1), this);
+        (this.dAddOffset(2, 0),
+          this.bitLength() > e && this.subTo(M.ONE.shiftLeft(e - 1), this));
   } else {
     var r = [],
       i = e & 7;
-    (r.length = (e >> 3) + 1),
+    ((r.length = (e >> 3) + 1),
       t.nextBytes(r),
       i > 0 ? (r[0] &= (1 << i) - 1) : (r[0] = 0),
-      this.fromString(r, 256);
+      this.fromString(r, 256));
   }
 }
 function ct() {
@@ -569,13 +568,13 @@ function ct() {
       (t[i++] = r | (this.s << (this.DB - n)));
       e >= 0;
     )
-      n < 8
+      (n < 8
         ? ((r = (this[e] & ((1 << n) - 1)) << (8 - n)),
           (r |= this[--e] >> (n += this.DB - 8)))
         : ((r = (this[e] >> (n -= 8)) & 255), n <= 0 && ((n += this.DB), --e)),
         r & 128 && (r |= -256),
         i == 0 && (this.s & 128) != (r & 128) && ++i,
-        (i > 0 || r != this.s) && (t[i++] = r);
+        (i > 0 || r != this.s) && (t[i++] = r));
   return t;
 }
 function lt(e) {
@@ -599,47 +598,47 @@ function ft(e, t, n) {
     for (i = this.s & this.DM, r = a; r < e.t; ++r) n[r] = t(i, e[r]);
     n.t = e.t;
   }
-  (n.s = t(this.s, e.s)), n.clamp();
+  ((n.s = t(this.s, e.s)), n.clamp());
 }
 function pt(e, t) {
   return e & t;
 }
 function mt(e) {
   var t = N();
-  return this.bitwiseTo(e, pt, t), t;
+  return (this.bitwiseTo(e, pt, t), t);
 }
 function ht(e, t) {
   return e | t;
 }
 function gt(e) {
   var t = N();
-  return this.bitwiseTo(e, ht, t), t;
+  return (this.bitwiseTo(e, ht, t), t);
 }
 function _t(e, t) {
   return e ^ t;
 }
 function vt(e) {
   var t = N();
-  return this.bitwiseTo(e, _t, t), t;
+  return (this.bitwiseTo(e, _t, t), t);
 }
 function yt(e, t) {
   return e & ~t;
 }
 function bt(e) {
   var t = N();
-  return this.bitwiseTo(e, yt, t), t;
+  return (this.bitwiseTo(e, yt, t), t);
 }
 function xt() {
   for (var e = N(), t = 0; t < this.t; ++t) e[t] = this.DM & ~this[t];
-  return (e.t = this.t), (e.s = ~this.s), e;
+  return ((e.t = this.t), (e.s = ~this.s), e);
 }
 function St(e) {
   var t = N();
-  return e < 0 ? this.rShiftTo(-e, t) : this.lShiftTo(e, t), t;
+  return (e < 0 ? this.rShiftTo(-e, t) : this.lShiftTo(e, t), t);
 }
 function Ct(e) {
   var t = N();
-  return e < 0 ? this.lShiftTo(-e, t) : this.rShiftTo(e, t), t;
+  return (e < 0 ? this.lShiftTo(-e, t) : this.rShiftTo(e, t), t);
 }
 function wt(e) {
   if (e == 0) return -1;
@@ -659,7 +658,7 @@ function Tt() {
   return this.s < 0 ? this.t * this.DB : -1;
 }
 function Et(e) {
-  for (var t = 0; e != 0; ) (e &= e - 1), ++t;
+  for (var t = 0; e != 0;) ((e &= e - 1), ++t);
   return t;
 }
 function Dt() {
@@ -673,7 +672,7 @@ function Ot(e) {
 }
 function kt(e, t) {
   var n = M.ONE.shiftLeft(e);
-  return this.bitwiseTo(n, t, n), n;
+  return (this.bitwiseTo(n, t, n), n);
 }
 function At(e) {
   return this.changeBit(e, ht);
@@ -685,56 +684,56 @@ function Mt(e) {
   return this.changeBit(e, _t);
 }
 function Nt(e, t) {
-  for (var n = 0, r = 0, i = Math.min(e.t, this.t); n < i; )
-    (r += this[n] + e[n]), (t[n++] = r & this.DM), (r >>= this.DB);
+  for (var n = 0, r = 0, i = Math.min(e.t, this.t); n < i;)
+    ((r += this[n] + e[n]), (t[n++] = r & this.DM), (r >>= this.DB));
   if (e.t < this.t) {
-    for (r += e.s; n < this.t; )
-      (r += this[n]), (t[n++] = r & this.DM), (r >>= this.DB);
+    for (r += e.s; n < this.t;)
+      ((r += this[n]), (t[n++] = r & this.DM), (r >>= this.DB));
     r += this.s;
   } else {
-    for (r += this.s; n < e.t; )
-      (r += e[n]), (t[n++] = r & this.DM), (r >>= this.DB);
+    for (r += this.s; n < e.t;)
+      ((r += e[n]), (t[n++] = r & this.DM), (r >>= this.DB));
     r += e.s;
   }
-  (t.s = r < 0 ? -1 : 0),
+  ((t.s = r < 0 ? -1 : 0),
     r > 0 ? (t[n++] = r) : r < -1 && (t[n++] = this.DV + r),
     (t.t = n),
-    t.clamp();
+    t.clamp());
 }
 function Pt(e) {
   var t = N();
-  return this.addTo(e, t), t;
+  return (this.addTo(e, t), t);
 }
 function Ft(e) {
   var t = N();
-  return this.subTo(e, t), t;
+  return (this.subTo(e, t), t);
 }
 function It(e) {
   var t = N();
-  return this.multiplyTo(e, t), t;
+  return (this.multiplyTo(e, t), t);
 }
 function Lt(e) {
   var t = N();
-  return this.divRemTo(e, t, null), t;
+  return (this.divRemTo(e, t, null), t);
 }
 function Rt(e) {
   var t = N();
-  return this.divRemTo(e, null, t), t;
+  return (this.divRemTo(e, null, t), t);
 }
 function zt(e) {
   var t = N(),
     n = N();
-  return this.divRemTo(e, t, n), [t, n];
+  return (this.divRemTo(e, t, n), [t, n]);
 }
 function Bt(e) {
-  (this[this.t] = this.am(0, e - 1, this, 0, 0, this.t)),
+  ((this[this.t] = this.am(0, e - 1, this, 0, 0, this.t)),
     ++this.t,
-    this.clamp();
+    this.clamp());
 }
 function Vt(e, t) {
-  for (; this.t <= t; ) this[this.t++] = 0;
-  for (this[t] += e; this[t] >= this.DV; )
-    (this[t] -= this.DV), ++t >= this.t && (this[this.t++] = 0), ++this[t];
+  for (; this.t <= t;) this[this.t++] = 0;
+  for (this[t] += e; this[t] >= this.DV;)
+    ((this[t] -= this.DV), ++t >= this.t && (this[this.t++] = 0), ++this[t]);
 }
 function z() {}
 function Ht(e) {
@@ -746,16 +745,16 @@ function Ut(e, t, n) {
 function Wt(e, t) {
   e.squareTo(t);
 }
-(z.prototype.convert = Ht),
+((z.prototype.convert = Ht),
   (z.prototype.revert = Ht),
   (z.prototype.mulTo = Ut),
-  (z.prototype.sqrTo = Wt);
+  (z.prototype.sqrTo = Wt));
 function Gt(e) {
   return this.exp(e, new z());
 }
 function Kt(e, t, n) {
   var r = Math.min(this.t + e.t, t);
-  for (n.s = 0, n.t = r; r > 0; ) n[--r] = 0;
+  for (n.s = 0, n.t = r; r > 0;) n[--r] = 0;
   for (var i = n.t - this.t; r < i; ++r)
     n[r + this.t] = this.am(0, e[r], n, r, 0, this.t);
   for (i = Math.min(e.t, t); r < i; ++r) this.am(0, e[r], n, r, 0, t - r);
@@ -764,23 +763,23 @@ function Kt(e, t, n) {
 function qt(e, t, n) {
   --t;
   var r = (n.t = this.t + e.t - t);
-  for (n.s = 0; --r >= 0; ) n[r] = 0;
+  for (n.s = 0; --r >= 0;) n[r] = 0;
   for (r = Math.max(t - this.t, 0); r < e.t; ++r)
     n[this.t + r - t] = this.am(t - r, e[r], n, 0, 0, this.t + r - t);
-  n.clamp(), n.drShiftTo(1, n);
+  (n.clamp(), n.drShiftTo(1, n));
 }
 function B(e) {
-  (this.r2 = N()),
+  ((this.r2 = N()),
     (this.q3 = N()),
     M.ONE.dlShiftTo(2 * e.t, this.r2),
     (this.mu = this.r2.divide(e)),
-    (this.m = e);
+    (this.m = e));
 }
 function Jt(e) {
   if (e.s < 0 || e.t > 2 * this.m.t) return e.mod(this.m);
   if (e.compareTo(this.m) < 0) return e;
   var t = N();
-  return e.copyTo(t), this.reduce(t), t;
+  return (e.copyTo(t), this.reduce(t), t);
 }
 function Yt(e) {
   return e;
@@ -794,42 +793,42 @@ function Xt(e) {
     e.compareTo(this.r2) < 0;
   )
     e.dAddOffset(1, this.m.t + 1);
-  for (e.subTo(this.r2, e); e.compareTo(this.m) >= 0; ) e.subTo(this.m, e);
+  for (e.subTo(this.r2, e); e.compareTo(this.m) >= 0;) e.subTo(this.m, e);
 }
 function Zt(e, t) {
-  e.squareTo(t), this.reduce(t);
+  (e.squareTo(t), this.reduce(t));
 }
 function Qt(e, t, n) {
-  e.multiplyTo(t, n), this.reduce(n);
+  (e.multiplyTo(t, n), this.reduce(n));
 }
-(B.prototype.convert = Jt),
+((B.prototype.convert = Jt),
   (B.prototype.revert = Yt),
   (B.prototype.reduce = Xt),
   (B.prototype.mulTo = Qt),
-  (B.prototype.sqrTo = Zt);
+  (B.prototype.sqrTo = Zt));
 function $t(e, t) {
   var n = e.bitLength(),
     r,
     i = I(1),
     a;
   if (n <= 0) return i;
-  (r = n < 18 ? 1 : n < 48 ? 3 : n < 144 ? 4 : n < 768 ? 5 : 6),
-    (a = n < 8 ? new L(t) : t.isEven() ? new B(t) : new R(t));
+  ((r = n < 18 ? 1 : n < 48 ? 3 : n < 144 ? 4 : n < 768 ? 5 : 6),
+    (a = n < 8 ? new L(t) : t.isEven() ? new B(t) : new R(t)));
   var o = [],
     s = 3,
     c = r - 1,
     l = (1 << r) - 1;
   if (((o[1] = a.convert(this)), r > 1)) {
     var u = N();
-    for (a.sqrTo(o[1], u); s <= l; )
-      (o[s] = N()), a.mulTo(u, o[s - 2], o[s]), (s += 2);
+    for (a.sqrTo(o[1], u); s <= l;)
+      ((o[s] = N()), a.mulTo(u, o[s - 2], o[s]), (s += 2));
   }
   var d = e.t - 1,
     f,
     p = !0,
     m = N(),
     h;
-  for (n = Oe(e[d]) - 1; d >= 0; ) {
+  for (n = Oe(e[d]) - 1; d >= 0;) {
     for (
       n >= c
         ? (f = (e[d] >> (n - c)) & l)
@@ -838,18 +837,19 @@ function $t(e, t) {
         s = r;
       !(f & 1);
     )
-      (f >>= 1), --s;
-    if (((n -= s) < 0 && ((n += this.DB), --d), p)) o[f].copyTo(i), (p = !1);
+      ((f >>= 1), --s);
+    if (((n -= s) < 0 && ((n += this.DB), --d), p)) (o[f].copyTo(i), (p = !1));
     else {
-      for (; s > 1; ) a.sqrTo(i, m), a.sqrTo(m, i), (s -= 2);
-      s > 0 ? a.sqrTo(i, m) : ((h = i), (i = m), (m = h)), a.mulTo(m, o[f], i);
+      for (; s > 1;) (a.sqrTo(i, m), a.sqrTo(m, i), (s -= 2));
+      (s > 0 ? a.sqrTo(i, m) : ((h = i), (i = m), (m = h)),
+        a.mulTo(m, o[f], i));
     }
-    for (; d >= 0 && !(e[d] & (1 << n)); )
-      a.sqrTo(i, m),
+    for (; d >= 0 && !(e[d] & (1 << n));)
+      (a.sqrTo(i, m),
         (h = i),
         (i = m),
         (m = h),
-        --n < 0 && ((n = this.DB - 1), --d);
+        --n < 0 && ((n = this.DB - 1), --d));
   }
   return a.revert(i);
 }
@@ -858,7 +858,7 @@ function en(e) {
     n = e.s < 0 ? e.negate() : e.clone();
   if (t.compareTo(n) < 0) {
     var r = t;
-    (t = n), (n = r);
+    ((t = n), (n = r));
   }
   var i = t.getLowestSetBit(),
     a = n.getLowestSetBit();
@@ -867,12 +867,12 @@ function en(e) {
     i < a && (a = i), a > 0 && (t.rShiftTo(a, t), n.rShiftTo(a, n));
     t.signum() > 0;
   )
-    (i = t.getLowestSetBit()) > 0 && t.rShiftTo(i, t),
+    ((i = t.getLowestSetBit()) > 0 && t.rShiftTo(i, t),
       (i = n.getLowestSetBit()) > 0 && n.rShiftTo(i, n),
       t.compareTo(n) >= 0
         ? (t.subTo(n, t), t.rShiftTo(1, t))
-        : (n.subTo(t, n), n.rShiftTo(1, n));
-  return a > 0 && n.lShiftTo(a, n), n;
+        : (n.subTo(t, n), n.rShiftTo(1, n)));
+  return (a > 0 && n.lShiftTo(a, n), n);
 }
 function tn(e) {
   if (e <= 0) return 0;
@@ -891,20 +891,20 @@ function nn(e) {
     var n = e.clone(), r = this.clone(), i = I(1), a = I(0), o = I(0), s = I(1);
     n.signum() != 0;
   ) {
-    for (; n.isEven(); )
-      n.rShiftTo(1, n),
+    for (; n.isEven();)
+      (n.rShiftTo(1, n),
         t
           ? ((i.isEven() && a.isEven()) || (i.addTo(this, i), a.subTo(e, a)),
             i.rShiftTo(1, i))
           : a.isEven() || a.subTo(e, a),
-        a.rShiftTo(1, a);
-    for (; r.isEven(); )
-      r.rShiftTo(1, r),
+        a.rShiftTo(1, a));
+    for (; r.isEven();)
+      (r.rShiftTo(1, r),
         t
           ? ((o.isEven() && s.isEven()) || (o.addTo(this, o), s.subTo(e, s)),
             o.rShiftTo(1, o))
           : s.isEven() || s.subTo(e, s),
-        s.rShiftTo(1, s);
+        s.rShiftTo(1, s));
     n.compareTo(r) >= 0
       ? (n.subTo(r, n), t && i.subTo(o, i), a.subTo(s, a))
       : (r.subTo(n, r), t && o.subTo(i, o), s.subTo(a, s));
@@ -933,9 +933,9 @@ function an(e) {
     return !1;
   }
   if (n.isEven()) return !1;
-  for (t = 1; t < V.length; ) {
-    for (var r = V[t], i = t + 1; i < V.length && r < rn; ) r *= V[i++];
-    for (r = n.modInt(r); t < i; ) if (r % V[t++] == 0) return !1;
+  for (t = 1; t < V.length;) {
+    for (var r = V[t], i = t + 1; i < V.length && r < rn;) r *= V[i++];
+    for (r = n.modInt(r); t < i;) if (r % V[t++] == 0) return !1;
   }
   return n.millerRabin(e);
 }
@@ -944,19 +944,19 @@ function on(e) {
     n = t.getLowestSetBit();
   if (n <= 0) return !1;
   var r = t.shiftRight(n);
-  (e = (e + 1) >> 1), e > V.length && (e = V.length);
+  ((e = (e + 1) >> 1), e > V.length && (e = V.length));
   for (var i = N(), a = 0; a < e; ++a) {
     i.fromInt(V[a]);
     var o = i.modPow(r, this);
     if (o.compareTo(M.ONE) != 0 && o.compareTo(t) != 0) {
-      for (var s = 1; s++ < n && o.compareTo(t) != 0; )
+      for (var s = 1; s++ < n && o.compareTo(t) != 0;)
         if (((o = o.modPowInt(2, this)), o.compareTo(M.ONE) == 0)) return !1;
       if (o.compareTo(t) != 0) return !1;
     }
   }
   return !0;
 }
-(M.prototype.chunkSize = rt),
+((M.prototype.chunkSize = rt),
   (M.prototype.toRadix = at),
   (M.prototype.fromRadix = ot),
   (M.prototype.fromNumber = st),
@@ -1001,9 +1001,9 @@ function on(e) {
   (M.prototype.modInverse = nn),
   (M.prototype.pow = Gt),
   (M.prototype.gcd = en),
-  (M.prototype.isProbablePrime = an);
+  (M.prototype.isProbablePrime = an));
 var sn = function (e, t) {
-    (this.modulus = new M(e, 16)), (this.encryptionExponent = new M(t, 16));
+    ((this.modulus = new M(e, 16)), (this.encryptionExponent = new M(t, 16)));
   },
   cn = {
     base64: `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=`,
@@ -1019,7 +1019,7 @@ var sn = function (e, t) {
         c,
         l = 0;
       do
-        (n = e.charCodeAt(l++)),
+        ((n = e.charCodeAt(l++)),
           (r = e.charCodeAt(l++)),
           (i = e.charCodeAt(l++)),
           (a = n >> 2),
@@ -1031,7 +1031,7 @@ var sn = function (e, t) {
             this.base64.charAt(a) +
             this.base64.charAt(o) +
             this.base64.charAt(s) +
-            this.base64.charAt(c));
+            this.base64.charAt(c)));
       while (l < e.length);
       return t;
     },
@@ -1045,13 +1045,13 @@ var sn = function (e, t) {
         a,
         o = 0;
       do
-        (n = this.base64.indexOf(e.charAt(o++))),
+        ((n = this.base64.indexOf(e.charAt(o++))),
           (r = this.base64.indexOf(e.charAt(o++))),
           (i = this.base64.indexOf(e.charAt(o++))),
           (a = this.base64.indexOf(e.charAt(o++))),
           (t += String.fromCharCode((n << 2) | (r >> 4))),
           i != 64 && (t += String.fromCharCode(((r & 15) << 4) | (i >> 2))),
-          a != 64 && (t += String.fromCharCode(((i & 3) << 6) | a));
+          a != 64 && (t += String.fromCharCode(((i & 3) << 6) | a)));
       while (o < e.length);
       return t;
     },
@@ -1064,8 +1064,8 @@ var sn = function (e, t) {
         n,
         r = 0;
       do
-        (n = e.charCodeAt(r++)),
-          (t += this.hex.charAt((n >> 4) & 15) + this.hex.charAt(n & 15));
+        ((n = e.charCodeAt(r++)),
+          (t += this.hex.charAt((n >> 4) & 15) + this.hex.charAt(n & 15)));
       while (r < e.length);
       return t;
     },
@@ -1098,10 +1098,10 @@ var sn = function (e, t) {
     },
     pkcs1pad2: function (e, t) {
       if (t < e.length + 11) return null;
-      for (var n = [], r = e.length - 1; r >= 0 && t > 0; )
+      for (var n = [], r = e.length - 1; r >= 0 && t > 0;)
         n[--t] = e.charCodeAt(r--);
-      for (n[--t] = 0; t > 2; ) n[--t] = Math.floor(Math.random() * 254) + 1;
-      return (n[--t] = 2), (n[--t] = 0), new M(n);
+      for (n[--t] = 0; t > 2;) n[--t] = Math.floor(Math.random() * 254) + 1;
+      return ((n[--t] = 2), (n[--t] = 0), new M(n));
     },
   },
   dn = new te(`Login`),
@@ -1174,7 +1174,7 @@ var G = class {
     return this.m_strChallengeURLValue;
   }
   set m_strChallengeURL(e) {
-    (this.m_strChallengeURLValue = e), this.NotifyChanged();
+    ((this.m_strChallengeURLValue = e), this.NotifyChanged());
   }
   m_onShowAgreement;
   m_bRemoteInteractionValue = !1;
@@ -1182,7 +1182,7 @@ var G = class {
     return this.m_bRemoteInteractionValue;
   }
   set m_bRemoteInteraction(e) {
-    (this.m_bRemoteInteractionValue = e), this.NotifyChanged();
+    ((this.m_bRemoteInteractionValue = e), this.NotifyChanged());
   }
   m_onCompleteCallback;
   m_eFailureStateValue = 0;
@@ -1190,21 +1190,21 @@ var G = class {
     return this.m_eFailureStateValue;
   }
   set m_eFailureState(e) {
-    (this.m_eFailureStateValue = e), this.NotifyChanged();
+    ((this.m_eFailureStateValue = e), this.NotifyChanged());
   }
   m_strExtendedErrorMessageValue = ``;
   get m_strExtendedErrorMessage() {
     return this.m_strExtendedErrorMessageValue;
   }
   set m_strExtendedErrorMessage(e) {
-    (this.m_strExtendedErrorMessageValue = e), this.NotifyChanged();
+    ((this.m_strExtendedErrorMessageValue = e), this.NotifyChanged());
   }
   m_onDeviceDetailsCallback;
   constructor(e, t, n, r) {
-    (this.m_transport = e),
+    ((this.m_transport = e),
       (this.m_onCompleteCallback = t),
       (this.m_onDeviceDetailsCallback = n),
-      (this.m_onShowAgreement = r);
+      (this.m_onShowAgreement = r));
   }
   Subscribe(e) {
     return (
@@ -1230,25 +1230,26 @@ var G = class {
       }));
   }
   StartPolling(e = !0) {
-    this.m_activeTimerID != null && this.StopPolling(),
+    (this.m_activeTimerID != null && this.StopPolling(),
       e
         ? this.PollForUpdate()
         : (this.m_activeTimerID = window.setTimeout(
             this.PollForUpdate,
             this.m_msPollInterval,
-          ));
+          )));
   }
   StopPolling() {
-    window.clearTimeout(this.m_activeTimerID), (this.m_activeTimerID = void 0);
+    (window.clearTimeout(this.m_activeTimerID),
+      (this.m_activeTimerID = void 0));
   }
   async PollForUpdate() {
     try {
       let e = E.Init(ie);
-      e.SetEMsg(k),
+      (e.SetEMsg(k),
         e.Body().set_client_id(this.m_strClientID),
         e.Body().set_request_id(this.m_rgRequestID),
         this.m_strTokenToRevoke &&
-          e.Body().set_token_to_revoke(this.m_strTokenToRevoke);
+          e.Body().set_token_to_revoke(this.m_strTokenToRevoke));
       let t = await A.PollAuthSessionStatus(this.m_transport, e),
         n = t.GetEResult();
       if (n !== 1) {
@@ -1260,7 +1261,7 @@ var G = class {
             ),
             e === 2 || e === 3)
           )
-            return this.m_transport.MakeReady(), this.StartPolling(!1), 1;
+            return (this.m_transport.MakeReady(), this.StartPolling(!1), 1);
         }
         if (n === 9 || n === 27) this.m_eFailureState = 2;
         else if (n === 84) this.m_eFailureState = 5;
@@ -1275,11 +1276,11 @@ var G = class {
             let t = location.href;
             window.location.href = `${e}&redir=${encodeURIComponent(t)}`;
           }
-          return this.m_onCompleteCallback({ bSuccess: !1 }), n;
+          return (this.m_onCompleteCallback({ bSuccess: !1 }), n);
         } else
-          H(`Failed to poll auth session. Result: ${n}`),
-            (this.m_eFailureState = 1);
-        return this.m_onCompleteCallback({ bSuccess: !1 }), n;
+          (H(`Failed to poll auth session. Result: ${n}`),
+            (this.m_eFailureState = 1));
+        return (this.m_onCompleteCallback({ bSuccess: !1 }), n);
       }
       let {
         new_challenge_url: r,
@@ -1336,18 +1337,18 @@ var G = class {
     return ce.fromObject(e);
   }
 };
-p([v], G.prototype, `Subscribe`, null),
+(p([v], G.prototype, `Subscribe`, null),
   p([v], G.prototype, `GetSnapshot`, null),
   p([v], G.prototype, `PollForUpdate`, null),
-  p([v], G.prototype, `SetTokenToRevoke`, null);
+  p([v], G.prototype, `SetTokenToRevoke`, null));
 function yn(e) {
   let t = new FormData();
-  t.append(`nonce`, e), t.append(`sessionid`, u(_) ?? ``);
+  (t.append(`nonce`, e), t.append(`sessionid`, u(_) ?? ``));
   let n = new URL(location.href),
     r = new URLSearchParams(n.search);
-  r.has(`need_password`) &&
+  (r.has(`need_password`) &&
     (r.delete(`need_password`), (n.search = r.toString())),
-    t.append(`redir`, n.toString());
+    t.append(`redir`, n.toString()));
   let i = `${d.LOGIN_BASE_URL}jwt/finalizelogin`;
   return U.default.post(i, t, { withCredentials: !0 }).then(
     (e) => {
@@ -1358,7 +1359,7 @@ function yn(e) {
         !t.steamID ||
         !Array.isArray(t.transfer_info)
       )
-        return H(`Result of finalizelogin does not match expectations!`), 1;
+        return (H(`Result of finalizelogin does not match expectations!`), 1);
       let { transfer_info: n, steamID: r, primary_domain: i } = t;
       return Promise.all(
         n.map(({ url: e, params: t }) => xn(e, { ...t, steamID: r })),
@@ -1396,7 +1397,7 @@ async function xn(e, t) {
       : (H(`Transfer login to ${n.host} failed with status code: ${a.status}`),
         (r = !1));
   } catch (e) {
-    H(`Transfer login to ${n.host} failed: "${e}"`), (r = !1);
+    (H(`Transfer login to ${n.host} failed: "${e}"`), (r = !1));
   }
   return { bSuccess: r, domain: n.host };
 }
@@ -1407,7 +1408,7 @@ var K = e(n(), 1),
       return this.m_eStatusValue;
     }
     set m_eStatus(e) {
-      (this.m_eStatusValue = e), this.NotifyChanged();
+      ((this.m_eStatusValue = e), this.NotifyChanged());
     }
     m_steamid;
     m_strAccountName;
@@ -1422,18 +1423,18 @@ var K = e(n(), 1),
       return this.m_strErrorReferenceValue;
     }
     set m_strErrorReference(e) {
-      (this.m_strErrorReferenceValue = e), this.NotifyChanged();
+      ((this.m_strErrorReferenceValue = e), this.NotifyChanged());
     }
     m_onLoginComplete;
     constructor(e) {
-      super(
+      (super(
         e.transport,
         (e) => this.onAuthComplete(e),
         e.onDeviceDetails,
         e.onShowAgreement,
       ),
         (this.m_onLoginComplete = e.onComplete),
-        (this.m_onGetMachineAuth = e.onGetMachineAuth);
+        (this.m_onGetMachineAuth = e.onGetMachineAuth));
     }
     BuildSnapshot() {
       return {
@@ -1465,7 +1466,7 @@ var K = e(n(), 1),
         (this.m_bUsingCodeOverride = !1),
         e == `anonymous`)
       )
-        return this.SetFailureState(W.AnonymousLogin, J.EResult(12)), 12;
+        return (this.SetFailureState(W.AnonymousLogin, J.EResult(12)), 12);
       try {
         let t = await Sn(this.m_transport, r);
         if (!t)
@@ -1476,18 +1477,18 @@ var K = e(n(), 1),
           );
         let a = mn(i, t),
           o = E.Init(ne);
-        o.SetEMsg(k),
+        (o.SetEMsg(k),
           o.Body().set_account_name(r),
           o.Body().set_encrypted_password(a ?? void 0),
           o.Body().set_encryption_timestamp(t.timestamp),
           o.Body().set_remember_login(!!n),
-          o.Body().set_persistence(+!!n);
+          o.Body().set_persistence(+!!n));
         let s = x();
         s && o.Body().set_website_id(s.WEBSITE_ID);
         try {
           o.Body().set_device_details(await this.GetDeviceDetails());
         } catch (e) {
-          H(`Failed to GetDeviceDetails`), H(e);
+          (H(`Failed to GetDeviceDetails`), H(e));
         }
         if (
           (o.Body().set_language(ee(d.LANGUAGE)),
@@ -1504,12 +1505,14 @@ var K = e(n(), 1),
         if (l !== 1)
           switch (l) {
             case 5:
-              return (this.m_eStatus = 2), l;
+              return ((this.m_eStatus = 2), l);
             case 20:
             case 3:
-              return this.SetFailureState(W.Network, J.EResult(20)), l;
+              return (this.SetFailureState(W.Network, J.EResult(20)), l);
             case 84:
-              return this.SetFailureState(W.RateLimitExceeded, J.EResult(l)), l;
+              return (
+                this.SetFailureState(W.RateLimitExceeded, J.EResult(l)), l
+              );
             case 118: {
               let e = c.Body().agreement_session_url();
               if (
@@ -1562,7 +1565,7 @@ var K = e(n(), 1),
           h.find(({ confirmation_type: e }) => e === 6))
         ) {
           let e = new FormData();
-          e.append(`clientid`, f), e.append(`steamid`, g);
+          (e.append(`clientid`, f), e.append(`steamid`, g));
           let t = `${d.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
           try {
             if (
@@ -1573,7 +1576,7 @@ var K = e(n(), 1),
                 })
               ).data.result == 1
             )
-              return (this.m_eStatus = 4), this.StartPolling(!0), 1;
+              return ((this.m_eStatus = 4), this.StartPolling(!0), 1);
           } catch (e) {
             if (
               (fn(`checkdevice ajax to ${t} failed: ${e.message}`),
@@ -1588,7 +1591,7 @@ var K = e(n(), 1),
                   20)
                 : (this.SetFailureState(W.Network, J.AjaxFailureNoCode()), 20);
             }
-            return this.SetFailureState(W.Network, J.EResult(79)), 79;
+            return (this.SetFailureState(W.Network, J.EResult(79)), 79);
           }
         }
         let v = wn(
@@ -1610,18 +1613,18 @@ var K = e(n(), 1),
           v)
         ) {
           case 1:
-            return (this.m_eStatus = 13), this.StartPolling(), l;
+            return ((this.m_eStatus = 13), this.StartPolling(), l);
           case 2:
             this.m_eStatus = 3;
             break;
           case 5:
-            (this.m_eStatus = 4), this.StartPolling(!1);
+            ((this.m_eStatus = 4), this.StartPolling(!1));
             break;
           case 3:
-            (this.m_eStatus = 5), this.StartPolling(!1);
+            ((this.m_eStatus = 5), this.StartPolling(!1));
             break;
           case 4:
-            (this.m_eStatus = 6), this.StartPolling(!1);
+            ((this.m_eStatus = 6), this.StartPolling(!1));
         }
         return l;
       } catch (e) {
@@ -1635,7 +1638,7 @@ var K = e(n(), 1),
       }
     }
     Stop() {
-      this.StopPolling(), (this.m_eStatus = 16);
+      (this.StopPolling(), (this.m_eStatus = 16));
     }
     GetStatus() {
       return this.m_eStatus;
@@ -1676,11 +1679,11 @@ var K = e(n(), 1),
         await this.m_transport.MakeReady();
         let n = this.m_eStatus === 3 || this.m_eStatus === 10,
           r = E.Init(ue);
-        r.SetEMsg(k),
+        (r.SetEMsg(k),
           r.Body().set_client_id(this.m_strClientID),
           r.Body().set_steamid(this.m_steamid),
           r.Body().set_code(e),
-          r.Body().set_code_type(n ? 2 : 3);
+          r.Body().set_code_type(n ? 2 : 3));
         let i = await A.UpdateAuthSessionWithSteamGuardCode(
             this.m_transport,
             r,
@@ -1697,7 +1700,7 @@ var K = e(n(), 1),
           switch (a) {
             case 65:
             case 88:
-              return (this.m_eStatus = n ? 10 : 11), a;
+              return ((this.m_eStatus = n ? 10 : 11), a);
             case 27:
               return (
                 this.SetFailureState(W.Expired, J.EResult(a)),
@@ -1736,7 +1739,7 @@ var K = e(n(), 1),
               );
           }
         }
-        return (this.m_eStatus = 13), this.StartPolling(), a;
+        return ((this.m_eStatus = 13), this.StartPolling(), a);
       } catch (e) {
         return (
           H(`Failed to update auth session with SG code. ${e}`),
@@ -1749,10 +1752,10 @@ var K = e(n(), 1),
     UseCodeOverride() {
       switch (this.m_eStatus) {
         case 6:
-          (this.m_bUsingCodeOverride = !0), (this.m_eStatus = 5);
+          ((this.m_bUsingCodeOverride = !0), (this.m_eStatus = 5));
           return;
         case 4:
-          (this.m_bUsingCodeOverride = !0), (this.m_eStatus = 3);
+          ((this.m_bUsingCodeOverride = !0), (this.m_eStatus = 3));
           return;
         default:
           H(
@@ -1787,8 +1790,8 @@ var K = e(n(), 1),
               J.EResult(t.GetEResult()),
             ));
       } catch (e) {
-        H(`An unexpected error occured while moving an authenticator`, e),
-          this.SetFailureState(W.MoveAuthenticator, J.EResult(2));
+        (H(`An unexpected error occured while moving an authenticator`, e),
+          this.SetFailureState(W.MoveAuthenticator, J.EResult(2)));
       }
     }
     async ResendMoveCode() {
@@ -1801,13 +1804,13 @@ var K = e(n(), 1),
           this.m_weakAuthWebInterface.GetServiceTransport(),
           e,
         );
-      t.GetEResult() != 1 &&
+      (t.GetEResult() != 1 &&
         (t.DEBUG_LogToConsole(),
         H(
           `An unexpected error occured while adding an authenticator`,
           t.GetEResult(),
         )),
-        (this.m_eStatus = 8);
+        (this.m_eStatus = 8));
     }
     async FinishMoveAuthenticator(e) {
       D(
@@ -1815,28 +1818,28 @@ var K = e(n(), 1),
         `Finishing authenticator move before StartMoveAuthenticator`,
       );
       let t = E.Init(le);
-      t.Body().set_sms_code(e),
+      (t.Body().set_sms_code(e),
         t.Body().set_generate_new_token(!0),
-        t.Body().set_version(2);
+        t.Body().set_version(2));
       let n = await se.RemoveAuthenticatorViaChallengeContinue(
         this.m_weakAuthWebInterface.GetServiceTransport(),
         t,
       );
       if (n.GetEResult() == 94) this.m_eStatus = 12;
       else if (!n.Body().success())
-        n.DEBUG_LogToConsole(),
+        (n.DEBUG_LogToConsole(),
           H(
             `Error when calling RemoveAuthenticatorViaChallengeContinue`,
             n.GetEResult(),
           ),
-          this.SetFailureState(W.MoveAuthenticator, J.EResult(n.GetEResult()));
+          this.SetFailureState(W.MoveAuthenticator, J.EResult(n.GetEResult())));
       else {
         n.DEBUG_LogToConsole();
         let e = n.Body().replacement_token();
-        D(!!e, `Missing replacement token on successful authenticator move`),
+        (D(!!e, `Missing replacement token on successful authenticator move`),
           (this.m_replacementAuthenticator = gn(e.toObject())),
           (this.m_eStatus = 9),
-          (this.m_bUsingCodeOverride = !1);
+          (this.m_bUsingCodeOverride = !1));
       }
     }
     FinishMoveRecovery() {
@@ -1885,15 +1888,15 @@ var K = e(n(), 1),
       }
     }
     SetFailureState(e, t, n = ``) {
-      (this.m_eStatus = 15),
+      ((this.m_eStatus = 15),
         (this.m_eFailureState = e),
         (this.m_strErrorReference = t),
-        (this.m_strExtendedErrorMessage = n);
+        (this.m_strExtendedErrorMessage = n));
     }
     onAuthComplete = (e) => {
       this.m_eStatus = e.bSuccess ? 14 : 15;
       let t;
-      e.bSuccess
+      (e.bSuccess
         ? (D(
             !!this.m_strAccountName && !!this.m_steamid,
             `Missing account name or steamid on auth success`,
@@ -1904,13 +1907,13 @@ var K = e(n(), 1),
             steamid: this.m_steamid,
           }))
         : (t = { bSuccess: !1 }),
-        this.m_onLoginComplete && this.m_onLoginComplete(t);
+        this.m_onLoginComplete && this.m_onLoginComplete(t));
     };
     SetOnLoginComplete(e) {
       this.m_onLoginComplete = e;
     }
   };
-p([v], q.prototype, `Start`, null),
+(p([v], q.prototype, `Start`, null),
   p([v], q.prototype, `SendSteamGuardCode`, null),
   p([v], q.prototype, `UseCodeOverride`, null),
   p([v], q.prototype, `CantAccessCode`, null),
@@ -1919,15 +1922,15 @@ p([v], q.prototype, `Start`, null),
   p([v], q.prototype, `FinishMoveAuthenticator`, null),
   p([v], q.prototype, `FinishMoveRecovery`, null),
   p([v], q.prototype, `GoBack`, null),
-  p([v], q.prototype, `SetOnLoginComplete`, null);
+  p([v], q.prototype, `SetOnLoginComplete`, null));
 async function Sn(e, t) {
   let n = E.Init(re);
-  n.Body().set_account_name(t), n.SetEMsg(k);
+  (n.Body().set_account_name(t), n.SetEMsg(k));
   try {
     await e.MakeReady();
     let t = await A.GetPasswordRSAPublicKey(e, n);
     if ((t.DEBUG_LogToConsole(), t.GetEResult() !== 1))
-      return H(`Failed to get RSA key with EResult: ${t.GetEResult()}`), null;
+      return (H(`Failed to get RSA key with EResult: ${t.GetEResult()}`), null);
     let {
       publickey_exp: r,
       publickey_mod: i,
@@ -1940,13 +1943,13 @@ async function Sn(e, t) {
         null)
       : { publickey_exp: r, publickey_mod: i, timestamp: a };
   } catch (e) {
-    return H(`Failed to get RSA key: ${JSON.stringify(e)}`), null;
+    return (H(`Failed to get RSA key: ${JSON.stringify(e)}`), null);
   }
 }
 var Cn = [4, 3, 2, 1, 0, 5].reduce((e, t, n) => ((e[t] = n), e), {});
 function wn(e) {
   let t = e[0] || 0;
-  return e.length > 1 && (t = e.sort((e, t) => Cn[e] - Cn[t])[0]), t;
+  return (e.length > 1 && (t = e.sort((e, t) => Cn[e] - Cn[t])[0]), t);
 }
 function Tn(e) {
   let [t, n] = (0, K.useState)(() => new q(e));
@@ -1992,14 +1995,14 @@ var J = {
       return this.m_eStatusValue;
     }
     set m_eStatus(e) {
-      (this.m_eStatusValue = e), this.NotifyChanged();
+      ((this.m_eStatusValue = e), this.NotifyChanged());
     }
     m_bPreloaded = !1;
     constructor(e) {
-      super(
+      (super(
         e.transport,
         (t) => {
-          (this.m_eStatus = t.bSuccess ? 3 : 4), e.onComplete(t);
+          ((this.m_eStatus = t.bSuccess ? 3 : 4), e.onComplete(t));
         },
         e.onDeviceDetails,
       ),
@@ -2009,7 +2012,7 @@ var J = {
           (this.m_strChallengeURL = e.preloaded.strChallengeURL),
           (this.m_msPollInterval = e.preloaded.msPollInterval),
           (this.m_rgRequestID = e.preloaded.rgRequestID),
-          (this.m_bPreloaded = !0));
+          (this.m_bPreloaded = !0)));
     }
     BuildSnapshot() {
       return {
@@ -2043,7 +2046,7 @@ var J = {
         try {
           e.Body().set_device_details(await this.GetDeviceDetails());
         } catch (e) {
-          console.error(`Failed to GetDeviceDetails`), console.log(e);
+          (console.error(`Failed to GetDeviceDetails`), console.log(e));
         }
         let t = x();
         t && e.Body().set_website_id(t.WEBSITE_ID);
@@ -2085,7 +2088,7 @@ var J = {
       }
     }
     Stop() {
-      this.StopPolling(), (this.m_eStatus = 5);
+      (this.StopPolling(), (this.m_eStatus = 5));
     }
     GetChallengeURL() {
       return this.m_strChallengeURL;
@@ -2189,15 +2192,15 @@ function Pn(e) {
       onPasswordChange: d,
       bRememberMe: f,
       onRememberMeChange: (e) => {
-        p(e), localStorage?.setItem(Nn, e ? `1` : `0`);
+        (p(e), localStorage?.setItem(Nn, e ? `1` : `0`));
       },
       onPasswordSubmit: () =>
         !c || !u ? Promise.resolve(8) : a.start(c, u, f),
       bInPasswordFlow: m,
       onTryOffline: () => {
-        fn(`Logging in offline with username ${c}`),
+        (fn(`Logging in offline with username ${c}`),
           SteamClient.User.SetLoginCredentials(c, u, f),
-          SteamClient.User.StartOffline(!0);
+          SteamClient.User.StartOffline(!0));
       },
     }
   );
@@ -2244,7 +2247,7 @@ function Fn(e, t = ``) {
         description: O.Localize(`#Login_Error_Default_Description`),
       };
   }
-  return t && (n.description = t), n;
+  return (t && (n.description = t), n);
 }
 var In = `ZhRwp4aSW-8-`,
   Ln = `QV15rhpdkBI-`,
@@ -2343,7 +2346,7 @@ function ti(e) {
       let t = e.target.value;
       if (t && u && !u(t)) return;
       let n = e.target.nextElementSibling;
-      e.target.value && n && n.focus(), f();
+      (e.target.value && n && n.focus(), f());
     },
     m = (e) => {
       d.current.findIndex((e) => !!e.value) === -1
@@ -2381,9 +2384,9 @@ function ti(e) {
       let t = e.clipboardData.getData(`Text`),
         n = e.target,
         r = 0;
-      for (; n && r < t.length; )
-        n.focus(), (n.value = t.charAt(r)), (n = n.nextElementSibling), r++;
-      f(), e.preventDefault(), i && i();
+      for (; n && r < t.length;)
+        (n.focus(), (n.value = t.charAt(r)), (n = n.nextElementSibling), r++);
+      (f(), e.preventDefault(), i && i());
     },
     v = [];
   for (let e = 0; e < t; e++)
@@ -2501,9 +2504,9 @@ var ai = new URL(
   si = t((e, t) => {
     var n = oi();
     function r(e) {
-      (this.mode = n.MODE_8BIT_BYTE), (this.data = e);
+      ((this.mode = n.MODE_8BIT_BYTE), (this.data = e));
     }
-    (r.prototype = {
+    ((r.prototype = {
       getLength: function (e) {
         return this.data.length;
       },
@@ -2512,7 +2515,7 @@ var ai = new URL(
           e.put(this.data.charCodeAt(t), 8);
       },
     }),
-      (t.exports = r);
+      (t.exports = r));
   }),
   ci = t((e, t) => {
     t.exports = { L: 1, M: 0, Q: 3, H: 2 };
@@ -2520,9 +2523,9 @@ var ai = new URL(
   li = t((e, t) => {
     var n = ci();
     function r(e, t) {
-      (this.totalCount = e), (this.dataCount = t);
+      ((this.totalCount = e), (this.dataCount = t));
     }
-    (r.RS_BLOCK_TABLE = [
+    ((r.RS_BLOCK_TABLE = [
       [1, 26, 19],
       [1, 26, 16],
       [1, 26, 13],
@@ -2713,13 +2716,13 @@ var ai = new URL(
             return;
         }
       }),
-      (t.exports = r);
+      (t.exports = r));
   }),
   ui = t((e, t) => {
     function n() {
-      (this.buffer = []), (this.length = 0);
+      ((this.buffer = []), (this.length = 0));
     }
-    (n.prototype = {
+    ((n.prototype = {
       get: function (e) {
         var t = Math.floor(e / 8);
         return ((this.buffer[t] >>> (7 - (e % 8))) & 1) == 1;
@@ -2732,12 +2735,12 @@ var ai = new URL(
       },
       putBit: function (e) {
         var t = Math.floor(this.length / 8);
-        this.buffer.length <= t && this.buffer.push(0),
+        (this.buffer.length <= t && this.buffer.push(0),
           e && (this.buffer[t] |= 128 >>> (this.length % 8)),
-          this.length++;
+          this.length++);
       },
     }),
-      (t.exports = n);
+      (t.exports = n));
   }),
   di = t((e, t) => {
     for (
@@ -2747,8 +2750,8 @@ var ai = new URL(
             return n.LOG_TABLE[e];
           },
           gexp: function (e) {
-            for (; e < 0; ) e += 255;
-            for (; e >= 256; ) e -= 255;
+            for (; e < 0;) e += 255;
+            for (; e >= 256;) e -= 255;
             return n.EXP_TABLE[e];
           },
           EXP_TABLE: Array(256),
@@ -2772,11 +2775,11 @@ var ai = new URL(
     var n = di();
     function r(e, t) {
       if (e.length == null) throw Error(e.length + `/` + t);
-      for (var n = 0; n < e.length && e[n] == 0; ) n++;
+      for (var n = 0; n < e.length && e[n] == 0;) n++;
       this.num = Array(e.length - n + t);
       for (var r = 0; r < e.length - n; r++) this.num[r] = e[r + n];
     }
-    (r.prototype = {
+    ((r.prototype = {
       get: function (e) {
         return this.num[e];
       },
@@ -2808,7 +2811,7 @@ var ai = new URL(
         return new r(i, 0).mod(e);
       },
     }),
-      (t.exports = r);
+      (t.exports = r));
   }),
   pi = t((e, t) => {
     var n = oi(),
@@ -2871,17 +2874,17 @@ var ai = new URL(
         G18: 7973,
         G15_MASK: 21522,
         getBCHTypeInfo: function (e) {
-          for (var t = e << 10; o.getBCHDigit(t) - o.getBCHDigit(o.G15) >= 0; )
+          for (var t = e << 10; o.getBCHDigit(t) - o.getBCHDigit(o.G15) >= 0;)
             t ^= o.G15 << (o.getBCHDigit(t) - o.getBCHDigit(o.G15));
           return ((e << 10) | t) ^ o.G15_MASK;
         },
         getBCHTypeNumber: function (e) {
-          for (var t = e << 12; o.getBCHDigit(t) - o.getBCHDigit(o.G18) >= 0; )
+          for (var t = e << 12; o.getBCHDigit(t) - o.getBCHDigit(o.G18) >= 0;)
             t ^= o.G18 << (o.getBCHDigit(t) - o.getBCHDigit(o.G18));
           return (e << 12) | t;
         },
         getBCHDigit: function (e) {
-          for (var t = 0; e != 0; ) t++, (e >>>= 1);
+          for (var t = 0; e != 0;) (t++, (e >>>= 1));
           return t;
         },
         getPatternPosition: function (e) {
@@ -2972,11 +2975,11 @@ var ai = new URL(
           for (var r = 0; r < t - 1; r++)
             for (var i = 0; i < t - 1; i++) {
               var l = 0;
-              e.isDark(r, i) && l++,
+              (e.isDark(r, i) && l++,
                 e.isDark(r + 1, i) && l++,
                 e.isDark(r, i + 1) && l++,
                 e.isDark(r + 1, i + 1) && l++,
-                (l == 0 || l == 4) && (n += 3);
+                (l == 0 || l == 4) && (n += 3));
             }
           for (var r = 0; r < t; r++)
             for (var i = 0; i < t - 6; i++)
@@ -3001,7 +3004,7 @@ var ai = new URL(
           for (var u = 0, i = 0; i < t; i++)
             for (var r = 0; r < t; r++) e.isDark(r, i) && u++;
           var d = Math.abs((100 * u) / t / t - 50) / 5;
-          return (n += d * 10), n;
+          return ((n += d * 10), n);
         },
       };
     t.exports = o;
@@ -3013,17 +3016,17 @@ var ai = new URL(
       a = pi(),
       o = fi();
     function s(e, t) {
-      (this.typeNumber = e),
+      ((this.typeNumber = e),
         (this.errorCorrectLevel = t),
         (this.modules = null),
         (this.moduleCount = 0),
         (this.dataCache = null),
-        (this.dataList = []);
+        (this.dataList = []));
     }
     var c = s.prototype;
-    (c.addData = function (e) {
+    ((c.addData = function (e) {
       var t = new n(e);
-      this.dataList.push(t), (this.dataCache = null);
+      (this.dataList.push(t), (this.dataCache = null));
     }),
       (c.isDark = function (e, t) {
         if (e < 0 || this.moduleCount <= e || t < 0 || this.moduleCount <= t)
@@ -3048,9 +3051,9 @@ var ai = new URL(
               o += t[s].dataCount;
             for (var s = 0; s < this.dataList.length; s++) {
               var c = this.dataList[s];
-              n.put(c.mode, 4),
+              (n.put(c.mode, 4),
                 n.put(c.getLength(), a.getLengthInBits(c.mode, e)),
-                c.write(n);
+                c.write(n));
             }
             if (n.getLengthInBits() <= o * 8) break;
           }
@@ -3059,13 +3062,13 @@ var ai = new URL(
         this.makeImpl(!1, this.getBestMaskPattern());
       }),
       (c.makeImpl = function (e, t) {
-        (this.moduleCount = this.typeNumber * 4 + 17),
-          (this.modules = Array(this.moduleCount));
+        ((this.moduleCount = this.typeNumber * 4 + 17),
+          (this.modules = Array(this.moduleCount)));
         for (var n = 0; n < this.moduleCount; n++) {
           this.modules[n] = Array(this.moduleCount);
           for (var r = 0; r < this.moduleCount; r++) this.modules[n][r] = null;
         }
-        this.setupPositionProbePattern(0, 0),
+        (this.setupPositionProbePattern(0, 0),
           this.setupPositionProbePattern(this.moduleCount - 7, 0),
           this.setupPositionProbePattern(0, this.moduleCount - 7),
           this.setupPositionAdjustPattern(),
@@ -3077,7 +3080,7 @@ var ai = new URL(
             this.errorCorrectLevel,
             this.dataList,
           )),
-          this.mapData(this.dataCache, t);
+          this.mapData(this.dataCache, t));
       }),
       (c.setupPositionProbePattern = function (e, t) {
         for (var n = -1; n <= 7; n++)
@@ -3186,18 +3189,18 @@ var ai = new URL(
           s > 0;
           s -= 2
         )
-          for (s == 6 && s--; ; ) {
+          for (s == 6 && s--; ;) {
             for (var c = 0; c < 2; c++)
               if (this.modules[r][s - c] == null) {
                 var l = !1;
-                o < e.length && (l = ((e[o] >>> i) & 1) == 1),
+                (o < e.length && (l = ((e[o] >>> i) & 1) == 1),
                   a.getMask(t, r, s - c) && (l = !l),
                   (this.modules[r][s - c] = l),
                   i--,
-                  i == -1 && (o++, (i = 7));
+                  i == -1 && (o++, (i = 7)));
               }
             if (((r += n), r < 0 || this.moduleCount <= r)) {
-              (r -= n), (n = -n);
+              ((r -= n), (n = -n));
               break;
             }
           }
@@ -3211,9 +3214,9 @@ var ai = new URL(
           l++
         ) {
           var u = n[l];
-          c.put(u.mode, 4),
+          (c.put(u.mode, 4),
             c.put(u.getLength(), a.getLengthInBits(u.mode, e)),
-            u.write(c);
+            u.write(c));
         }
         for (var d = 0, l = 0; l < o.length; l++) d += o[l].dataCount;
         if (c.getLengthInBits() > d * 8)
@@ -3248,7 +3251,7 @@ var ai = new URL(
         ) {
           var u = t[l].dataCount,
             d = t[l].totalCount - u;
-          (r = Math.max(r, u)), (i = Math.max(i, d)), (s[l] = Array(u));
+          ((r = Math.max(r, u)), (i = Math.max(i, d)), (s[l] = Array(u)));
           for (var f = 0; f < s[l].length; f++) s[l][f] = 255 & e.buffer[f + n];
           n += u;
           var p = a.getErrorCorrectPolynomial(d),
@@ -3268,7 +3271,7 @@ var ai = new URL(
             f < c[l].length && (_[v++] = c[l][f]);
         return _;
       }),
-      (t.exports = s);
+      (t.exports = s));
   }),
   hi = t((e, t) => {
     var n = mi(),
@@ -3276,9 +3279,9 @@ var ai = new URL(
       i = function (e, t) {
         t ||= {};
         var i = new n(t.typeNumber || -1, t.errorCorrectLevel || r.H);
-        return i.addData(e), i.make(), i;
+        return (i.addData(e), i.make(), i);
       };
-    (i.ErrorCorrectLevel = r), (t.exports = i);
+    ((i.ErrorCorrectLevel = r), (t.exports = i));
   }),
   gi = `RuVnOcF9yRI-`,
   _i = `QhysrBJX1dU-`,
@@ -3298,7 +3301,7 @@ function bi(e, t, n) {
     a = (r + 2) * i,
     o = new Uint8Array(40 + a),
     s = 0;
-  (o[s++] = 71),
+  ((o[s++] = 71),
     (o[s++] = 73),
     (o[s++] = 70),
     (o[s++] = 56),
@@ -3346,12 +3349,12 @@ function bi(e, t, n) {
     (o[s++] = i),
     (o[s++] = 0),
     (o[s++] = 0),
-    (o[s++] = 7);
+    (o[s++] = 7));
   for (let t = 0; t < e.length; t++) {
-    (o[s++] = r + 1), (o[s++] = 128);
+    ((o[s++] = r + 1), (o[s++] = 128));
     for (let n = 0; n < e.length; n++) o[s++] = +!e[t][n];
   }
-  return (o[s++] = 1), (o[s++] = 129), (o[s++] = 0), (o[s++] = 59), o;
+  return ((o[s++] = 1), (o[s++] = 129), (o[s++] = 0), (o[s++] = 59), o);
 }
 function xi(
   e,
@@ -3957,7 +3960,7 @@ function Gi(e) {
         }),
         value: a,
         onChange: (e) => {
-          m(!0), o(e);
+          (m(!0), o(e));
         },
         autoFocus: x,
         disabled: C,
@@ -3971,7 +3974,7 @@ function Gi(e) {
         }),
         value: s,
         onChange: (e) => {
-          m(!0), c(e);
+          (m(!0), c(e));
         },
         type: `password`,
         autoFocus: S,
@@ -4384,13 +4387,13 @@ function ga(e) {
     v = s.join(``),
     y = On(v, p),
     b = (e) => {
-      f(!0),
+      (f(!0),
         n(e).then(() => {
-          u(!1), f(!1);
-        });
+          (u(!1), f(!1));
+        }));
     },
     x = (e) => {
-      l || u(!0), c(e);
+      (l || u(!0), c(e));
       let t = e.join(``);
       On(t, p) && b(t);
     },
@@ -4398,7 +4401,7 @@ function ga(e) {
       y && b(v);
     },
     C = () => {
-      m(!p), c([]), n(``), g(h + 1);
+      (m(!p), c([]), n(``), g(h + 1));
     },
     w = !l && (r === 11 || r === 10),
     T,
@@ -4714,7 +4717,7 @@ function Oa(e) {
     length: En(n),
     backupCode: n,
     onChange: (e) => {
-      (e = e.map((e) => e.toUpperCase())), Dn(e.join(``).trim(), n) && t(e);
+      ((e = e.map((e) => e.toUpperCase())), Dn(e.join(``).trim(), n) && t(e));
     },
     autoFocus: !0,
     ...r,
@@ -4911,14 +4914,14 @@ function Pa() {
 }
 function Fa(e) {
   let t = (0, K.useRef)(e);
-  (t.current = e),
+  ((t.current = e),
     (0, K.useEffect)(() => {
       new URLSearchParams(location.search).get(`need_password`) ||
         (t.current &&
           Ia(t.current).catch((e) => {
             pn(`PerformRefresh exception`, e);
           }));
-    }, [t]);
+    }, [t]));
 }
 async function Ia(e) {
   let t = new FormData();
@@ -4931,7 +4934,7 @@ async function Ia(e) {
   Object.entries(s).forEach(([e, t]) => c.append(e, t));
   let l = await U.default.post(a, c),
     u = l.status === 200 && l.data.result === 1;
-  return u && window.location.assign(e), u;
+  return (u && window.location.assign(e), u);
 }
 function La() {
   let e = (0, K.useRef)(!0);

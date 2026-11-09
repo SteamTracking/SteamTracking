@@ -234,10 +234,10 @@
 }
 .xLC-sgUX-fY-.v11aQP5VeMw- .o6BagYCEj9k- {
   color: #fff;
-  background: linear-gradient(270.05deg, #1babd8 .05%, #4ad4ff 99.24%);
+  background: linear-gradient(270.05deg, #1babd8 0.05%, #4ad4ff 99.24%);
 }
 .xLC-sgUX-fY-.v11aQP5VeMw- .o6BagYCEj9k-:hover {
-  background: linear-gradient(270.05deg, #56bfdf .05%, #74dcfc 99.24%);
+  background: linear-gradient(270.05deg, #56bfdf 0.05%, #74dcfc 99.24%);
   box-shadow: 2px 2px 10px #000;
 }
 .xLC-sgUX-fY-.v11aQP5VeMw- .cP7Gr1eZGVU- {
@@ -256,7 +256,7 @@
   }
 }
 ._7WXZh5Eks7U- {
-  background: radial-gradient(70% 100vh, #0f1924 30%, #925801 77%) 0 0 / 100%;
+  background: radial-gradient(70% 100vh, #0f1924 30%, #925801 77%) 0 0/100%;
   animation: 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards QTRKq1-0bnQ-;
 }
 .N4qFiiTU6r4- {
@@ -381,7 +381,7 @@
   }
 }
 .qqP0f-r-kjA- {
-  background: radial-gradient(#925801 0%, #150025 40%) 0 0 / 200% 200%;
+  background: radial-gradient(#925801 0%, #150025 40%) 0 0/200% 200%;
   animation: 15s infinite -IlUZ-60Jk8-;
 }
 ._6v-aVrhEXII- path,
@@ -533,7 +533,7 @@
   }
 }
 .P75lJrLLXGo- {
-  background: radial-gradient(70% 100vh, #0f1924 30%, #01787f 77%) 0 0 / 100%;
+  background: radial-gradient(70% 100vh, #0f1924 30%, #01787f 77%) 0 0/100%;
   animation: 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards QFAUYXEDOc8-;
 }
 .L3HX8XNsKd8- {
@@ -632,7 +632,7 @@
   }
 }
 .lh-S2clmG3s- {
-  background: radial-gradient(#01a2ab 0%, #00191a 40%) 0 0 / 300% 200%;
+  background: radial-gradient(#01a2ab 0%, #00191a 40%) 0 0/300% 200%;
   animation: 15s infinite _5ThFqNzQ0x8-;
 }
 ._5AQOc4fWdxc- {
@@ -788,7 +788,7 @@
   color: #fff;
 }
 .YQQ-YfqYp30- {
-  background: radial-gradient(70% 100vh, #0f1924 30%, #4e0020 77%) 0 0 / 100%;
+  background: radial-gradient(70% 100vh, #0f1924 30%, #4e0020 77%) 0 0/100%;
   animation: 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards Y8Jk6lvMwIs-;
 }
 ._2SQx7i-KNhY- {
@@ -888,7 +888,7 @@
   }
 }
 .FDsWoWXtJeY- {
-  background: radial-gradient(#a62858 0%, #0f1924 40%) 0 0 / 300% 200%;
+  background: radial-gradient(#a62858 0%, #0f1924 40%) 0 0/300% 200%;
   animation: 15s infinite lU9h2Y7Cwv0-;
 }
 .NTc4bj7Lw0s- {
@@ -1049,7 +1049,7 @@
   color: #fff;
 }
 .KI5YLGnRg58- {
-  background: radial-gradient(70% 100vh, #051d00 30%, #0d4e00 77%) 0 0 / 100%;
+  background: radial-gradient(70% 100vh, #051d00 30%, #0d4e00 77%) 0 0/100%;
   animation: 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards _4cgyZKApV2I-;
 }
 .CqM-LEC78bM- {
@@ -1149,7 +1149,7 @@
   }
 }
 .JR2K1LUZovU- {
-  background: radial-gradient(#56a628 0%, #051d00 40%) 0 0 / 300% 200%;
+  background: radial-gradient(#56a628 0%, #051d00 40%) 0 0/300% 200%;
   animation: 15s infinite AMDZ7B5c7GE-;
 }
 .TKe0kUd-IAQ- {

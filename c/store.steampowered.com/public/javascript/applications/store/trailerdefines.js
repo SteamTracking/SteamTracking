@@ -131,7 +131,7 @@ function _(_, _) {
       _.addEventListener(`play`, _),
       _.addEventListener(`pause`, _),
       () => {
-        _.removeEventListener(`play`, _), _.removeEventListener(`pause`, _);
+        (_.removeEventListener(`play`, _), _.removeEventListener(`pause`, _));
       }
     );
   }, [_, _]);
@@ -186,14 +186,14 @@ function _(_) {
     [_, _] = (0, _.useState)(null),
     { bCookieLoaded: _ } = _(_, _, _),
     _ = _;
-  _.useEffect(() => {
+  (_.useEffect(() => {
     _ && _ && _ && !_ && _(!0);
   }, [_, _, _, _]),
     _.useEffect(() => {
       _ && _ && _ && _();
-    }, [_, _, _, _]);
+    }, [_, _, _, _]));
   let _ = (_) => {
-      _(_ ?? _, String(!_), 3650), _(_), _(_);
+      (_(_ ?? _, String(!_), 3650), _(_), _(_));
     },
     _ = _(_, _, _, _);
   _.useEffect(() => {
@@ -310,11 +310,11 @@ function _(_) {
     [_, _] = (0, _.useState)(null),
     { data: _ } = _(_),
     _ = !!_;
-  _.useEffect(() => {
+  (_.useEffect(() => {
     let _ = !1;
-    _ && _ && _ && (_ = _ === 0 || (_ === 1 && !_) || (_ === 2 && !_)),
+    (_ && _ && _ && (_ = _ === 0 || (_ === 1 && !_) || (_ === 2 && !_)),
       _(_),
-      _?.(_ && _);
+      _?.(_ && _));
   }, [_, _, _, _, _, _, _, _]),
     _(_, _),
     _.useEffect(() => {
@@ -324,13 +324,13 @@ function _(_) {
         _(!1),
         _ && (_.pause(), (_.currentTime = 0)),
         _ && (_.Pause(), _.SeekToStart()));
-    }, [_, _, _, _]);
+    }, [_, _, _, _]));
   let _ = _.useRef(!1);
-  _.useEffect(() => {
+  (_.useEffect(() => {
     if (_ && _ === 0) {
       if ((_(!0), _)) {
         if (_) {
-          _.Debug(`Starting microtrailer`), _(1);
+          (_.Debug(`Starting microtrailer`), _(1));
           let _ = () => _(_, _, _);
           _ || !_
             ? _()
@@ -343,9 +343,9 @@ function _(_) {
     _.useEffect(() => {
       _ || _(!1);
     }, [_, _]),
-    _(!!_, _, _, _, _, _);
+    _(!!_, _, _, _, _, _));
   let _ = (0, _.useCallback)((_) => {
-    _(_), _(_);
+    (_(_), _(_));
   }, []);
   return !_ || !_.visible || !_
     ? null
@@ -373,7 +373,7 @@ function _(_) {
           (0, _.jsx)(_, {
             trailer: _,
             onRefChange: (_) => {
-              _(_), _(_);
+              (_(_), _(_));
             },
             eTrailerDisplay: _,
             fadeRatio: _,
@@ -403,7 +403,7 @@ function _(_) {
     _ = _(!1, _),
     _ = (0, _.useMemo)(() => _(_), [_]),
     _ = (0, _.useCallback)((_) => {
-      _(_), _(_);
+      (_(_), _(_));
     }, []),
     _ = (0, _.useCallback)(() => {
       _(!0);
@@ -433,7 +433,7 @@ function _(_, _, _) {
 }
 function _(_, _, _) {
   _.play().catch((_) => {
-    _(), _.Warning(`Failed to play ${_}: `, _);
+    (_(), _.Warning(`Failed to play ${_}: `, _));
   });
 }
 function _(_, _) {
@@ -459,7 +459,7 @@ function _(_) {
   return (0, _.jsx)(_.Fragment, {
     children: (0, _.jsx)(`div`, {
       onClick: (_) => {
-        _.preventDefault(), _.stopPropagation();
+        (_.preventDefault(), _.stopPropagation());
       },
       className: _,
       children: (0, _.jsx)(
@@ -702,88 +702,3 @@ var _ = `f6ytvVy3zPE-`,
     include_screenshots: !0,
     include_reviews: !0,
   };
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

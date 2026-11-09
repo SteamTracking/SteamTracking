@@ -556,7 +556,7 @@ var tr = class e extends ht {
           t,
         i = await zn.default.post(r, n);
       if (i.data.success != 1) throw i.data;
-      return this.RemoveGIDFromList(e, Wt + t), i.data;
+      return (this.RemoveGIDFromList(e, Wt + t), i.data);
     }
     static sm_Instance;
     static sm_SummaryInstance;
@@ -836,8 +836,8 @@ function wr(e) {
   return Cr[e];
 }
 var W = y(Mt(), 1);
-(0, W.default)(`2026-11-23T09:30:00-08:00`).unix(),
-  (0, W.default)(`2026-11-30T10:00:00-08:00`).unix();
+((0, W.default)(`2026-11-23T09:30:00-08:00`).unix(),
+  (0, W.default)(`2026-11-30T10:00:00-08:00`).unix());
 function Tr() {
   return 2025;
 }
@@ -861,8 +861,8 @@ function Dr() {
 function Or() {
   return `${l.STORE_BASE_URL}steamawards/ajaxgetwidgetstyle`;
 }
-(0, W.default)(`2026-12-17T09:30:00-08:00`).unix(),
-  (0, W.default)(`2027-01-02T10:00:00-08:00`).unix();
+((0, W.default)(`2026-12-17T09:30:00-08:00`).unix(),
+  (0, W.default)(`2027-01-02T10:00:00-08:00`).unix());
 var G = 5350740;
 function kr(e, t) {
   return e.BIsEventActionEnabled(t) || t < e.GetStartTimeAndDateUnixSeconds();
@@ -1778,14 +1778,14 @@ var K = class extends V.Component {
   m_nPreviousRenderCount = 0;
   m_nCurrentRenderCount = 0;
   constructor(e) {
-    super(e),
+    (super(e),
       (this.m_loader = new J(this.props.partnerEventStore)),
       !this.props.bShowOnlyInitialEvent &&
         this.props.initialEvent &&
         this.m_loader.InitAroundEvent(
           this.props.initialEvent,
           this.props.additionalParams,
-        );
+        ));
   }
   FindCurrentlyViewedEventIndex() {
     let e = this.m_refScroll.current;
@@ -1820,8 +1820,8 @@ var K = class extends V.Component {
       timing: `cubic-in-out`,
       onComplete: this.OnScrollComplete,
     };
-    (this.m_scrollAnimation = new fe(t, { scrollTop: e }, n)),
-      this.m_scrollAnimation.Start();
+    ((this.m_scrollAnimation = new fe(t, { scrollTop: e }, n)),
+      this.m_scrollAnimation.Start());
   }
   ScrollToBottom() {
     this.m_refScroll.current &&
@@ -1849,7 +1849,7 @@ var K = class extends V.Component {
         a = i.offsetTop,
         o = a + i.clientHeight,
         s = this.GetScrollTopForComparison(r);
-      (s -= (o - a) * 0.3), a <= s && (t = e);
+      ((s -= (o - a) * 0.3), a <= s && (t = e));
     }
     this.ScrollToEvent(t);
   }
@@ -1870,8 +1870,8 @@ var K = class extends V.Component {
     let t = this.m_refScroll.current;
     if (!t) return;
     let n = t.clientHeight;
-    t.scrollHeight - (t.scrollTop + n) <= n && this.m_loader.LoadMoreAtEnd(),
-      t.scrollTop <= n && this.m_loader.LoadMoreAtBeginning();
+    (t.scrollHeight - (t.scrollTop + n) <= n && this.m_loader.LoadMoreAtEnd(),
+      t.scrollTop <= n && this.m_loader.LoadMoreAtBeginning());
   }
   getSnapshotBeforeUpdate(e) {
     let t = this.m_nCurrentRenderCount != this.m_nPreviousRenderCount;
@@ -1888,9 +1888,9 @@ var K = class extends V.Component {
   OnTouchMove(e) {
     if (!this.m_refScroll.current || e.touches.length == 0) return;
     let t = 0;
-    this.m_nTouchStartClientY !== void 0 &&
+    (this.m_nTouchStartClientY !== void 0 &&
       (t = this.m_nTouchStartClientY - e.touches[0].clientY),
-      this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(e, t);
+      this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(e, t));
   }
   OnWheel(e) {
     this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(e, e.deltaY);
@@ -1905,8 +1905,8 @@ var K = class extends V.Component {
   }
   SetGlobalHeaderHidden(t) {
     let n = document.getElementsByClassName(`responsive_header`);
-    e(n.length <= 1, `Must have at most one responsive_header`),
-      n.length >= 1 && (n[0].style.display = t ? `none` : ``);
+    (e(n.length <= 1, `Must have at most one responsive_header`),
+      n.length >= 1 && (n[0].style.display = t ? `none` : ``));
   }
   SetFooterPinnedToBottom(e) {
     let t = document.getElementById(`footer`);
@@ -1916,12 +1916,12 @@ var K = class extends V.Component {
     let e = this.m_refScroll.current;
     e && !S(e, e.ownerDocument.activeElement) && e.focus();
     let t = this.m_refPage.current;
-    t &&
+    (t &&
       (t.addEventListener(`touchstart`, this.OnTouchStart),
       t.addEventListener(`touchmove`, this.OnTouchMove, { passive: !1 }),
       t.addEventListener(`wheel`, this.OnWheel, { passive: !1 })),
       this.props.showAppHeader && this.SetGlobalHeaderHidden(!0),
-      this.SetFooterPinnedToBottom(!0);
+      this.SetFooterPinnedToBottom(!0));
   }
   componentDidUpdate(e, t, n) {
     if (n === null) return;
@@ -1935,12 +1935,12 @@ var K = class extends V.Component {
   }
   componentWillUnmount() {
     let e = this.m_refPage.current;
-    e &&
+    (e &&
       (e.removeEventListener(`touchstart`, this.OnTouchStart),
       e.removeEventListener(`touchmove`, this.OnTouchMove),
       e.removeEventListener(`wheel`, this.OnWheel)),
       this.props.showAppHeader && this.SetGlobalHeaderHidden(!1),
-      this.SetFooterPinnedToBottom(!1);
+      this.SetFooterPinnedToBottom(!1));
   }
   render() {
     let { initialEvent: e, bShowOnlyInitialEvent: n } = this.props,
@@ -1952,7 +1952,7 @@ var K = class extends V.Component {
     for (let t of i) {
       let n = e !== void 0 && t.GID == e.GID,
         r = n;
-      a.push(
+      (a.push(
         (0, H.jsx)(
           ha,
           {
@@ -1971,7 +1971,7 @@ var K = class extends V.Component {
         ),
       ),
         (o ??= t.appid),
-        (s ??= t.clanSteamID.GetAccountID());
+        (s ??= t.clanSteamID.GetAccountID()));
     }
     return (
       (this.m_nCurrentRenderCount = a.length),
@@ -2070,7 +2070,7 @@ var K = class extends V.Component {
     );
   }
 };
-g([T], K.prototype, `ScrollToNextEvent`, null),
+(g([T], K.prototype, `ScrollToNextEvent`, null),
   g([T], K.prototype, `ScrollToPrevEvent`, null),
   g([T], K.prototype, `OnScrollComplete`, null),
   g([T], K.prototype, `Close`, null),
@@ -2080,7 +2080,7 @@ g([T], K.prototype, `ScrollToNextEvent`, null),
   g([T], K.prototype, `OnTouchStart`, null),
   g([T], K.prototype, `OnTouchMove`, null),
   g([T], K.prototype, `OnWheel`, null),
-  (K = g([I], K));
+  (K = g([I], K)));
 var ma = I((e) => {
     let t = e.loader.GetNewerState(),
       n = e.loader.GetOlderState();
@@ -2118,8 +2118,8 @@ var ma = I((e) => {
       this.m_bSentRead ||
         this.m_sendReadInfo.IsScheduled() ||
         this.m_sendReadInfo.Schedule(750, () => {
-          this.props.tracker.RecordEventRead(this.props.event, 4),
-            (this.m_bSentRead = !0);
+          (this.props.tracker.RecordEventRead(this.props.event, 4),
+            (this.m_bSentRead = !0));
         });
     }
     OnLeaveVisible() {
@@ -2280,9 +2280,9 @@ var ma = I((e) => {
       );
     }
   };
-g([T], q.prototype, `OnEnterVisible`, null),
+(g([T], q.prototype, `OnEnterVisible`, null),
   g([T], q.prototype, `OnLeaveVisible`, null),
-  (q = g([I], q));
+  (q = g([I], q)));
 function ga(e) {
   let {
       event: n,
@@ -2327,7 +2327,7 @@ var J = class {
   m_eOlderDirection = 1;
   m_eNewerDirection = 1;
   constructor(e) {
-    x(this), (this.m_partnerEventStore = e);
+    (x(this), (this.m_partnerEventStore = e));
   }
   GetEvents() {
     return this.m_rgEvents;
@@ -2343,13 +2343,13 @@ var J = class {
   }
   async InitAroundEvent(e, t) {
     let n = this.m_partnerEventStore;
-    (this.m_nAppID = e.appid),
+    ((this.m_nAppID = e.appid),
       (this.m_clanSteamID = e.clanSteamID),
       (this.m_rgEvents = []),
       (this.m_eOlderDirection = 2),
       (this.m_eNewerDirection = 2),
       (this.m_additionalParams = t),
-      this.m_rgEvents.push(e);
+      this.m_rgEvents.push(e));
     let r;
     try {
       r = await n.LoadAdjacentPartnerEventsByEvent(
@@ -2363,15 +2363,15 @@ var J = class {
     } catch {}
     c(() => {
       if (!r || r.length == 0) {
-        (this.m_eOlderDirection = 3), (this.m_eNewerDirection = 3);
+        ((this.m_eOlderDirection = 3), (this.m_eNewerDirection = 3));
         return;
       }
       let t = r.findIndex((t) => t.GID == e.GID),
         n = t,
         i = t >= 0 ? r.length - t - 1 : 0;
-      (this.m_eNewerDirection = n >= this.k_nMaxPerDirection ? 1 : 3),
+      ((this.m_eNewerDirection = n >= this.k_nMaxPerDirection ? 1 : 3),
         (this.m_eOlderDirection = i >= this.k_nMaxPerDirection ? 1 : 3),
-        (this.m_rgEvents = r);
+        (this.m_rgEvents = r));
     });
   }
   async LoadMoreAtEnd() {
@@ -2435,9 +2435,9 @@ var J = class {
     });
   }
 };
-g([s.shallow], J.prototype, `m_rgEvents`, void 0),
+(g([s.shallow], J.prototype, `m_rgEvents`, void 0),
   g([s], J.prototype, `m_eOlderDirection`, void 0),
-  g([s], J.prototype, `m_eNewerDirection`, void 0);
+  g([s], J.prototype, `m_eNewerDirection`, void 0));
 var _a = `rde3mdS-0gs-`,
   Y = class extends V.Component {
     m_refFocus = V.createRef();
@@ -2481,9 +2481,9 @@ var _a = `rde3mdS-0gs-`,
       });
     }
   };
-g([T], Y.prototype, `escFunction`, null),
+(g([T], Y.prototype, `escFunction`, null),
   g([T], Y.prototype, `OnBackgroundClick`, null),
-  (Y = g([I], Y));
+  (Y = g([I], Y)));
 var va = `CTh2D28nj8Q-`,
   ya = `_6Et65dUyXmI-`,
   ba = `TBpCjwaivo4-`,
@@ -2506,7 +2506,7 @@ var va = `CTh2D28nj8Q-`,
   Ia = `zwvQr7NqKZg-`;
 function Z(e, t, n) {
   let r = e && e.length > n ? [...e] : ee(e || [], n + 1, ``);
-  return (r[n] = t), r;
+  return ((r[n] = t), r);
 }
 function Q(e, t) {
   return (e && e.length > t && e[t]) || ``;
@@ -2535,13 +2535,13 @@ async function Ra(e, t, n) {
   if (La(t, n)) return null;
   let r = !!Q(t, 29).trim(),
     i = new FormData();
-  i.append(`sessionid`, u()),
+  (i.append(`sessionid`, u()),
     i.append(`appid`, `` + e),
     i.append(`post_steam_china`, `` + r),
     i.append(`titles`, JSON.stringify(t)),
     i.append(`descriptions`, JSON.stringify(n)),
     i.append(`build_id`, `` + $.Get().GetPostedBuildVersion()),
-    i.append(`build_branch`, $.Get().GetBuildBranch());
+    i.append(`build_branch`, $.Get().GetBuildBranch()));
   let a = v.PARTNER_BASE_URL + `partnerevents/ajaxpublishpatchnotes`;
   try {
     let e = await zn.default.post(a, i, { withCredentials: !0 });
@@ -2560,19 +2560,19 @@ async function Ra(e, t, n) {
 }
 function za(e, t) {
   let n = new Ht();
-  (n.GID = `PreviewPartnerEventRow_0`),
+  ((n.GID = `PreviewPartnerEventRow_0`),
     (n.clanSteamID = new E(b.steamid)),
     (n.postTime = Date.now() / 1e3),
     (n.startTime = Date.now() / 1e3),
     (n.createTime = Date.now() / 1e3),
-    (n.type = 12);
+    (n.type = 12));
   for (let r = 0; r < 32; r++)
-    n.name.set(r, Q(e, r)), n.description.set(r, Q(t, r));
+    (n.name.set(r, Q(e, r)), n.description.set(r, Q(t, r)));
   return n;
 }
 function Ba() {
   let e = new URLSearchParams(window.location.search);
-  e.delete(`submittedbuild`), e.delete(`buildbranch`);
+  (e.delete(`submittedbuild`), e.delete(`buildbranch`));
   let t = e.toString(),
     n =
       window.location.origin +
@@ -2595,13 +2595,13 @@ var $ = class e {
   }
   Init() {
     let e = d(`build_notes`, `application_config`);
-    (this.m_nBuildVersion = e?.build_version || 0),
+    ((this.m_nBuildVersion = e?.build_version || 0),
       (this.m_bSteamChina = e?.steam_china || !1),
       (this.m_strBuildBranch = e?.build_branch || ``),
       (this.m_strBuildBranch = this.m_strBuildBranch
         .trim()
         .toLocaleLowerCase()),
-      this.m_strBuildBranch === "default" && (this.m_strBuildBranch = ``);
+      this.m_strBuildBranch === "default" && (this.m_strBuildBranch = ``));
   }
   GetPostedBuildVersion() {
     return this.m_nBuildVersion;
@@ -2629,7 +2629,7 @@ function Va(e) {
     g = (e) => !!(Q(r, e) || Q(a, e)),
     _ = () => c(null),
     y = async () => {
-      c(null), u(`submitting`);
+      (c(null), u(`submitting`));
       let t = await Ra(e.appId, r, a);
       t ? (f(t.clan_event_gid), Ba(), u(`submitted`)) : u(`failed`);
     },
@@ -2640,9 +2640,9 @@ function Va(e) {
       for (let r of t) {
         let t = e.GetLocalization(`Title`, r) || ``,
           i = e.GetLocalization(`Description`, r) || ``;
-        (t || i) && n.push(r), t && (s = Z(s, t, r)), i && (c = Z(c, i, r));
+        ((t || i) && n.push(r), t && (s = Z(s, t, r)), i && (c = Z(c, i, r)));
       }
-      return i(s), o(c), n;
+      return (i(s), o(c), n);
     },
     x = $.Get().BCanSubmitSteamChinaPatchNotes()
       ? [h.k_ESteamRealmChina, h.k_ESteamRealmGlobal]
@@ -2767,8 +2767,8 @@ var Ha = (e) => {
                       t = M(`#BuildNotes_SampleTitle`),
                       n = M(`#BuildNotes_SampleDescription`);
                     for (let r = 0; r < 32; r++)
-                      e.SetLocalization(`Title`, r, t),
-                        e.SetLocalization(`Description`, r, n);
+                      (e.SetLocalization(`Title`, r, t),
+                        e.SetLocalization(`Description`, r, n));
                     P(
                       (0, H.jsx)(kt, {
                         sampleLocData: e,

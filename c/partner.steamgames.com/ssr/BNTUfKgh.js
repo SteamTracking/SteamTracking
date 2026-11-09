@@ -1,5 +1,5 @@
 var _ = {};
-(_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.brazilian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.bulgarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.czech = () => _(() => import(`./chunk.js`), [], import.meta.url)),
@@ -30,7 +30,7 @@ var _ = {};
   (_.thai = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.turkish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.ukrainian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
-  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url));
+  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -58,7 +58,7 @@ function _(_) {
   });
 }
 var _ = (function (_) {
-  return (_.k_FreeToPlay = `freetoplay`), (_.k_Free = `free`), _;
+  return ((_.k_FreeToPlay = `freetoplay`), (_.k_Free = `free`), _);
 })({});
 function _(_, _) {
   return _({
@@ -198,7 +198,7 @@ function _(_) {
           : _.Localize(`#FreeOnDemand_Button_disabled_ttip`),
         children: (0, _.jsx)(_, {
           onClick: () => {
-            _?.(), _();
+            (_?.(), _());
           },
           color: `dull`,
           children: _ || _.Localize(`#FreeOnDemand_Button`),
@@ -230,10 +230,10 @@ function _(_) {
         state: _,
         strDialogTitle: _.Localize(`#FreeOnDemand_Title`),
         closeModal: () => {
-          window.location.replace(
+          (window.location.replace(
             `${_.PARTNER_BASE_URL}store/packagelanding/${_}`,
           ),
-            _();
+            _());
         },
       })
     : (0, _.jsxs)(_, {
@@ -243,7 +243,7 @@ function _(_) {
         onCancel: _,
         onOK: async () => {
           try {
-            _.fnSetLoading(!0),
+            (_.fnSetLoading(!0),
               _.fnSetThrobber(_.Localize(`#FreeOnDemand_Convert_Store`)),
               await _.mutateAsync({
                 displayOption: _,
@@ -252,14 +252,14 @@ function _(_) {
                 },
               }),
               _.fnSetSuccess(!0),
-              _.fnSetStrSuccess(_.Localize(`#FreeOnDemand_ConvertSuccess`));
+              _.fnSetStrSuccess(_.Localize(`#FreeOnDemand_ConvertSuccess`)));
           } catch (_) {
-            _.fnSetError(!0),
+            (_.fnSetError(!0),
               _.fnSetStrError(
                 _ instanceof Error
                   ? _.message
                   : _.Localize(`#Error_ErrorCommunicatingWithNetwork`),
-              );
+              ));
           }
         },
         children: [
@@ -337,7 +337,7 @@ function _() {
 var _ = _(_(), 1);
 function _(_, _) {
   return (_) => {
-    _?.(_), _?.(_);
+    (_?.(_), _?.(_));
   };
 }
 function _(_) {
@@ -394,7 +394,7 @@ var _ = `_8mKVRCU0I2U-`,
   _ = `PAWFedTtNSs-`,
   _ = `_4ykH48NbiHo-`,
   _ = {};
-(_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.brazilian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.bulgarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.czech = () => _(() => import(`./chunk.js`), [], import.meta.url)),
@@ -425,7 +425,7 @@ var _ = `_8mKVRCU0I2U-`,
   (_.thai = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.turkish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.ukrainian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
-  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url));
+  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -508,7 +508,7 @@ function _(_) {
               `button`,
               {
                 onClick: () => {
-                  _(), _(_);
+                  (_(), _(_));
                 },
                 className: _({
                   [_]: !0,
@@ -577,9 +577,9 @@ var _ = 1,
     }
     constructor(_) {
       let _ = new Set();
-      _.forEach((_) => {
+      (_.forEach((_) => {
         let _ = _.convert_method ?? _;
-        this.m_setConversionMethod.add(_),
+        (this.m_setConversionMethod.add(_),
           this.m_mapUSDPrice.has(_) || this.m_mapUSDPrice.set(_, new Map()),
           this.m_mapUSDPrice.get(_).set(_.usd_price, _),
           _.add(_.usd_price),
@@ -594,8 +594,8 @@ var _ = 1,
               0,
               _.convert_method || _,
             );
-            this.m_mapKeyToGuidePrice.set(_, _),
-              this.m_setSupportedCurrencies.add(_.currency_code);
+            (this.m_mapKeyToGuidePrice.set(_, _),
+              this.m_setSupportedCurrencies.add(_.currency_code));
           }),
           _.region_prices.forEach((_) => {
             let _ = this.GetKey(
@@ -617,9 +617,9 @@ var _ = 1,
                 _ = this.GetKey(_.usd_price, 1, _.region_code, 3);
               this.m_mapKeyToGuidePrice.set(_, _);
             }
-          });
+          }));
       }),
-        (this.m_rgUSDPricePointInCents = Array.from(_.keys()));
+        (this.m_rgUSDPricePointInCents = Array.from(_.keys())));
     }
   },
   _ = `_3kvimQQNinY-`,

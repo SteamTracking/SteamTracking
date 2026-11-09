@@ -117,13 +117,13 @@ var _ = _(_()),
     async GetMessageList(_, _ = !1) {
       if (!_.logged_in) return [];
       let _ = _.Init(_);
-      _.Body().set_country_code(_.COUNTRY),
+      (_.Body().set_country_code(_.COUNTRY),
         _.Body().set_elanguage(_(_.LANGUAGE)),
         _.Body().set_client_package_version(_.nClientPackageVersion),
         _.Body().set_operating_system(_.eOSType),
         _ && _.Body().set_include_seen_messages(!0),
         _(_),
-        _(_, _.sm_DefaultDataRequest);
+        _(_, _.sm_DefaultDataRequest));
       let _ = await _.GetMarketingMessagesForUser(
         this.m_SteamInterface.GetServiceTransport(),
         _,
@@ -137,7 +137,7 @@ var _ = _(_()),
     }
     async GetSingleMessage(_, _) {
       let _ = _.Init(_);
-      _.Body().set_gid(_), _(_), _(_, _.sm_DefaultDataRequest);
+      (_.Body().set_gid(_), _(_), _(_, _.sm_DefaultDataRequest));
       let _;
       if (
         ((_ =
@@ -158,11 +158,11 @@ var _ = _(_()),
     MarkMessageSeen(_, _, _) {
       if (this.m_setMessagesSeen.has(_)) return;
       let _ = _.Init(_);
-      _.Body().set_gid(_),
+      (_.Body().set_gid(_),
         _.Body().set_display_index(_),
         _.Body().set_template_type(_),
         _.MarkMessageSeen(this.m_SteamInterface.GetServiceTransport(), _),
-        this.m_setMessagesSeen.add(_);
+        this.m_setMessagesSeen.add(_));
     }
     BIsMessageSeen(_) {
       return this.m_setMessagesSeen.has(_);
@@ -194,11 +194,11 @@ var _ = class {
   m_rgRecommendedAppIDs;
   m_nSaleItemCount;
   constructor(_) {
-    _(this),
+    (_(this),
       (this.m_message = _),
-      (this.m_templateVars = _(_.template_vars_json()));
+      (this.m_templateVars = _(_.template_vars_json())));
     let _ = _.associated_item(!1);
-    (this.m_associatedItemKey = _
+    ((this.m_associatedItemKey = _
       ? _({
           item_type: _.item_type(),
           _: _._(),
@@ -207,7 +207,7 @@ var _ = class {
       (this.m_rgRecommendedAppIDs = _.recommended_items()
         .map((_) => _.appid())
         .filter(Boolean)),
-      (this.m_nSaleItemCount = _.sale_item_count());
+      (this.m_nSaleItemCount = _.sale_item_count()));
   }
   get id() {
     return this.m_message.gid();
@@ -329,10 +329,10 @@ var _ = class {
     return this.m_message.gid();
   }
   SetDLCAppIDOverride(_) {
-    (this.m_templateVars.additional_featuring = _.map((_) => ({
+    ((this.m_templateVars.additional_featuring = _.map((_) => ({
       appid: _,
     }))),
-      (this.m_templateVars.custom_display = `dlc_override`);
+      (this.m_templateVars.custom_display = `dlc_override`));
   }
   GetRecommendedAppIDs() {
     return this.m_rgRecommendedAppIDs;
@@ -458,10 +458,10 @@ function _(_, _, _) {
         let _ = new _(_);
         if (_) {
           let _ = _(`marketingmessage_preview_config`, `application_config`);
-          _?.dlc_appid_overrides?.length > 0 &&
+          (_?.dlc_appid_overrides?.length > 0 &&
             _.SetDLCAppIDOverride(_.dlc_appid_overrides),
             _?.recommended_appid_overrides?.length > 0 &&
-              _.SetRecommendedAppIDsOverride(_.recommended_appid_overrides);
+              _.SetRecommendedAppIDsOverride(_.recommended_appid_overrides));
         }
         return _;
       }
@@ -479,11 +479,11 @@ function _(_, _, _) {
 }
 function _(_, _, _, _, _) {
   let _ = _.Init(_);
-  _.Body().set_gid(_),
+  (_.Body().set_gid(_),
     _.Body().set_display_index(_),
     _.Body().set_template_type(_),
     _.Body().set_click_location(_),
-    _.MarkMessageClicked(_, _);
+    _.MarkMessageClicked(_, _));
 }
 var _ = _(),
   _ = _.createContext({
@@ -521,11 +521,11 @@ function _(_) {
     _ = _.useRef(void 0);
   return (
     _.useEffect(() => {
-      (_.current = _),
+      ((_.current = _),
         SteamClient.BrowserView.PostMessageToParent(
           `MarketingMessageLegal`,
           _ || ``,
-        );
+        ));
     }, [_]),
     _.useEffect(
       () =>
@@ -938,7 +938,7 @@ function _(_) {
     _: _,
     type: _,
     fnOnClickOverride: (_) => {
-      _.preventDefault(), _(_);
+      (_.preventDefault(), _(_));
     },
     bIsMarketingMessage: !0,
     bPreferAssetWithoutOverride: !1,
@@ -949,7 +949,7 @@ function _(_) {
     _ = _(_._, _.type, _);
   return (0, _.jsx)(`div`, {
     onClick: (_) => {
-      _.preventDefault(), _(_);
+      (_.preventDefault(), _(_));
     },
     children: (0, _.jsx)(_, {
       capsule: _,
@@ -1050,9 +1050,9 @@ function _(_, _, _) {
       : ((_ = `${_.STORE_BASE_URL}news/app/${_.appid}?emclan=${_.clanSteamID.ConvertTo64BitString()}&emgid=${_.GID}`),
         _.IN_CLIENT && (_ = `steam://openurl/${_}`));
   } else
-    (_ = _),
+    ((_ = _),
       _ && (_ += `${_.includes(`?`) ? `&` : `?`}emgid=${_.GID}`),
-      _.IN_CLIENT && (_ = `steam://openurl/${_}`);
+      _.IN_CLIENT && (_ = `steam://openurl/${_}`));
   return _(_, _, !0);
 }
 var _ = _(_());
@@ -1106,8 +1106,8 @@ function _(_) {
         let _ = _
           ? _(`#MarketingMessages_See_Count_Items`, _)
           : _(`#MarketingMessages_See_All_Items`);
-        _.OverrideCustomText(_),
-          _.OverrideURL(`${_.STORE_BASE_URL}dlc/${_.associated_item_appid}`);
+        (_.OverrideCustomText(_),
+          _.OverrideURL(`${_.STORE_BASE_URL}dlc/${_.associated_item_appid}`));
       }
     }, [_, _]),
     (0, _.jsx)(_, {
@@ -1477,7 +1477,7 @@ var _ = class _ {
   }
   static g_Self = null;
   static Get() {
-    return (_.g_Self ||= new _()), _.g_Self;
+    return ((_.g_Self ||= new _()), _.g_Self);
   }
 };
 function _(_) {
@@ -2136,10 +2136,10 @@ function _(_) {
 }
 async function _(_, _) {
   let _ = _.Init(_);
-  _.Body().set_steamid(_.steamid),
+  (_.Body().set_steamid(_.steamid),
     _.Body().set_appids_filter([_]),
     _.Body().set_include_played_free_games(!0),
-    _.Body().set_language(_.LANGUAGE);
+    _.Body().set_language(_.LANGUAGE));
   let _ = await _.GetOwnedGames(_, _);
   return _.Body().games().length > 0 ? _.Body().games()[0].toObject() : {};
 }
@@ -2195,4 +2195,3 @@ function _(_, _, _) {
     { data: _ } = _(_);
   return _(_(_) ?? _.STORE_BASE_URL, _);
 }
-export { _, _, _, _, _, _ };

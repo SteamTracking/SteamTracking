@@ -1067,7 +1067,7 @@ function _(_) {
     let _ = _.data ? _.data.find((_) => _.internal_type === _) : void 0;
     for (let _ of Object.keys(_)) {
       let _ = _;
-      _ === `$any$` &&
+      (_ === `$any$` &&
         ((_ = _.Localize(`#Accessories_AnyFilter`)),
         _ &&
           (_ = _.Localize(
@@ -1091,7 +1091,7 @@ function _(_) {
               ..._,
               accessories: _(_.accessories, _, _, !1),
             }),
-        });
+        }));
     }
   }
   for (let [_, _] of Object.entries(_.properties)) {
@@ -1109,7 +1109,7 @@ function _(_) {
             ..._.properties,
           },
         };
-        delete _.properties[_._], _(_);
+        (delete _.properties[_._], _(_));
       },
     });
   }
@@ -1360,7 +1360,7 @@ function _(_) {
 }
 function _(_) {
   let _ = new URLSearchParams(location.search);
-  _.delete(`detail`), _.delete(`buy`);
+  (_.delete(`detail`), _.delete(`buy`));
   let _ = `?${_.toString()}`;
   return (0, _.jsxs)(_, {
     direction: `column`,
@@ -1439,20 +1439,20 @@ function _(_, _, _, _) {
         });
         try {
           let _ = await _.json();
-          if (_._) return _ && _(null), _;
+          if (_._) return (_ && _(null), _);
           if (_?.need_confirmation) {
             let _ = {
               _: _.confirmation.confirmation_id,
               cAttempts: _ ? _.cAttempts + 1 : 0,
             };
-            _(_), _.confirmation_type == 2 && _(12, _._);
+            (_(_), _.confirmation_type == 2 && _(12, _._));
           } else if (_)
             throw (
-              (_(null),
+              _(null),
               {
                 bFatal: !0,
                 message: _.Localize(`#PurchaseDialog_Error_NoConfirmation`),
-              })
+              }
             );
           else
             throw _?.message
@@ -1680,7 +1680,7 @@ function _(_) {
     _ = ``;
   if (!_) {
     let _ = new URL(location.href);
-    _.searchParams.set(`detail`, _.listingid), _.searchParams.set(`buy`, `1`);
+    (_.searchParams.set(`detail`, _.listingid), _.searchParams.set(`buy`, `1`));
     let _ = _.toString();
     _ = `${_.STORE_BASE_URL}steamaccount/addfunds?marketlisting=${_.listingid}&returnurl=${encodeURIComponent(_)}`;
   }
@@ -1802,7 +1802,7 @@ function _(_) {
     for (let [_, _] of _.filters || [])
       _ === _ ? _.rgTypes.push(_) : _ === _ && (_.wear = _);
     _.wear ||= _;
-    for (let _ of _.rgTypes) _[_] || (_[_] = {}), (_[_][_.wear] = _);
+    for (let _ of _.rgTypes) (_[_] || (_[_] = {}), (_[_][_.wear] = _));
   }
   return _;
 }
@@ -1937,15 +1937,15 @@ function _(_) {
   let { index: _, listings: _, onIndexChange: _, onClose: _, ..._ } = _,
     [_, _] = (0, _.useState)(!0),
     [_, _] = (0, _.useState)(0);
-  _(`ArrowLeft`, () => _(!1), !0, !0),
+  (_(`ArrowLeft`, () => _(!1), !0, !0),
     _(`Left`, () => _(!1), !0, !0),
     _(`ArrowRight`, () => _(!0), !0, !0),
     _(`Right`, () => _(!0), !0, !0),
     _(`Escape`, () => _(), !0, !0),
-    _(`Esc`, () => _(), !0, !0);
+    _(`Esc`, () => _(), !0, !0));
   let _ = (0, _.useCallback)(
       (_) => {
-        _(_), _(_ > _);
+        (_(_), _(_ > _));
       },
       [_, _],
     ),
@@ -2033,13 +2033,13 @@ function _(_, _, _) {
     nDragOffset: _,
     nDragSelectedOffsetIndex: _,
     handleTouchStart: (_) => {
-      _(!0),
+      (_(!0),
         (_.current = {
           _: _.touches[0].clientX,
           _: _.touches[0].clientY,
         }),
         _(0),
-        _(0);
+        _(0));
     },
     handleTouchMove: (_) => {
       if (!_) return;
@@ -2338,10 +2338,10 @@ function _() {
   let _ = _(),
     _ = _();
   return (0, _.useCallback)(() => {
-    _(),
+    (_(),
       _.invalidateQueries({
         queryKey: [`market_item_search`],
-      });
+      }));
   }, [_, _]);
 }
 function _() {
@@ -2824,7 +2824,7 @@ function _(_) {
       if (!_.data) return 0;
       let _ = 0;
       for (let _ = 0; _ < _; _++) _ += _.data.pages[_]?.listings.length ?? 0;
-      return (_ += _), _;
+      return ((_ += _), _);
     }, [_.data, _, _]),
     { data: _, fetchNextPage: _, isFetchingNextPage: _ } = _,
     _ = (0, _.useCallback)(
@@ -3009,13 +3009,13 @@ function _(_) {
       src: _[_],
     }),
     onMoveNextRequest: (_) => {
-      _.stopPropagation(), _.preventDefault(), _(_);
+      (_.stopPropagation(), _.preventDefault(), _(_));
     },
     onMovePrevRequest: (_) => {
-      _.stopPropagation(), _.preventDefault(), _(_);
+      (_.stopPropagation(), _.preventDefault(), _(_));
     },
     onCloseRequest: (_) => {
-      _.stopPropagation(), _.preventDefault(), _(-1);
+      (_.stopPropagation(), _.preventDefault(), _(-1));
     },
     toolbarButtons: [],
   });
@@ -3101,7 +3101,7 @@ function _(_) {
     onClose: _,
     children: (0, _.jsx)(`form`, {
       onSubmit: (_) => {
-        _.preventDefault(), _.stopPropagation(), _(_);
+        (_.preventDefault(), _.stopPropagation(), _(_));
       },
       children: (0, _.jsxs)(_, {
         direction: `column`,
@@ -3181,7 +3181,7 @@ function _() {
           ..._,
           items: _,
         };
-      return _.setQueryData(_, _), _;
+      return (_.setQueryData(_, _), _);
     },
     onError: (_, _, _) => {
       _.setQueryData(_, _);
@@ -3192,7 +3192,7 @@ function _(_) {
   let { items: _, iSource: _, iDest: _ } = _,
     _ = [..._],
     _ = _[_];
-  return _.splice(_, 1), _.splice(_, 0, _), _;
+  return (_.splice(_, 1), _.splice(_, 0, _), _);
 }
 async function _(_) {
   let { items: _, iSource: _, iDest: _ } = _;
@@ -3260,7 +3260,7 @@ function _(_) {
               iSource: _.source.index,
               iDest: _.destination.index,
             };
-            _(_(_)), _.mutateAsync(_).finally(() => _(null));
+            (_(_(_)), _.mutateAsync(_).finally(() => _(null)));
           }
         },
         children: (0, _.jsx)(_, {
@@ -3374,7 +3374,7 @@ function _(_) {
     _ = _(),
     [_, _] = (0, _.useState)(!1),
     _ = (_) => {
-      _.preventDefault(), _.stopPropagation(), _.mutate(_);
+      (_.preventDefault(), _.stopPropagation(), _.mutate(_));
     };
   return (0, _.jsxs)(_.Fragment, {
     children: [
@@ -3425,7 +3425,7 @@ function _(_) {
   let { _: _, name: _, sold: _, deleteMutation: _, dragHandle: _ = {} } = _,
     _ = _(),
     _ = (_) => {
-      _.preventDefault(), _.stopPropagation(), _.mutate(_);
+      (_.preventDefault(), _.stopPropagation(), _.mutate(_));
     };
   return _
     ? (0, _.jsx)(_.Root, {
@@ -3598,7 +3598,7 @@ function _(_) {
       ],
     });
   let _ = (_) => {
-      _.preventDefault(), _.stopPropagation(), _.isPending || _.mutate(_);
+      (_.preventDefault(), _.stopPropagation(), _.isPending || _.mutate(_));
     },
     _ = _ || _.market_bucket_group_name || _.market_name || ``;
   return _
@@ -3798,7 +3798,7 @@ function _(_) {
 function _(_) {
   let { _: _, href: _, children: _, deleteMutation: _, dragHandle: _ = {} } = _,
     _ = (_) => {
-      _.stopPropagation(), _.preventDefault(), _.isPending || _.mutate(_);
+      (_.stopPropagation(), _.preventDefault(), _.isPending || _.mutate(_));
     };
   return (0, _.jsx)(_, {
     href: _,
@@ -3987,39 +3987,3 @@ function _(_) {
     children: _.Localize(`#Watchlist_RemoveItem`),
   });
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

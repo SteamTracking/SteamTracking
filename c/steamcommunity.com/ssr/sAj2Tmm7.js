@@ -6,4 +6,3 @@ function _(_, _) {
 function _(_) {
   return _ ? `${_.COMMUNITY_BASE_URL}profiles/${_}` : ``;
 }
-export { _ };

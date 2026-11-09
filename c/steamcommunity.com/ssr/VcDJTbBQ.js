@@ -39,7 +39,7 @@ function _(_) {
     onOpenChange: _,
     onTextChange: (0, _.useCallback)(
       (_) => {
-        _ ? (_(!0), _(null)) : _(!1), _(_);
+        (_ ? (_(!0), _(null)) : _(!1), _(_));
       },
       [_],
     ),
@@ -133,7 +133,7 @@ function _(_) {
     } = _(`<Autocomplete.TextInput>`);
   return (0, _.jsx)(_.Item, {
     onSelect: (_) => {
-      _ && _(_, _), _.defaultPrevented || _(_), _(null), _(!1);
+      (_ && _(_, _), _.defaultPrevented || _(_), _(null), _(!1));
     },
     ..._,
     children: _,
@@ -148,6 +148,5 @@ var _ = Object.assign(_, {
   _ = (0, _.createContext)(null);
 function _(_) {
   let _ = (0, _.useContext)(_);
-  return _(_, `${_} must be used within an <Autocomplete>!`), _;
+  return (_(_, `${_} must be used within an <Autocomplete>!`), _);
 }
-export { _, _ };

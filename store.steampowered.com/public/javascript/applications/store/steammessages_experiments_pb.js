@@ -86,9 +86,9 @@ var D = e(n(), 1),
   O = class e extends D.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.impressions || d(e.M()),
-        D.Message.initialize(this, t, 0, -1, [1], null);
+        D.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -102,7 +102,7 @@ var D = e(n(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= o(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= o(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -123,14 +123,14 @@ var D = e(n(), 1),
     }
     serializeBinary() {
       var t = new D.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       p(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new D.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CProductImpressionsFromClient_Notification`;
@@ -139,9 +139,9 @@ var D = e(n(), 1),
   k = class e extends D.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.type || d(e.M()),
-        D.Message.initialize(this, t, 0, -1, void 0, null);
+        D.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -159,7 +159,7 @@ var D = e(n(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= o(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= o(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -180,14 +180,14 @@ var D = e(n(), 1),
     }
     serializeBinary() {
       var t = new D.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       p(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new D.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CProductImpressionsFromClient_Notification_Impression`;

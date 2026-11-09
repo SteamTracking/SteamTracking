@@ -100,7 +100,7 @@ function B(e) {
     [`sup`, { Constructor: V, autocloses: !1 }],
     [`h6`, { Constructor: H, autocloses: !1, skipFollowingNewline: !0 }],
   ]);
-  return e && t.set(`url`, { Constructor: U, autocloses: !1 }), t;
+  return (e && t.set(`url`, { Constructor: U, autocloses: !1 }), t);
 }
 function V(e) {
   return (0, O.jsx)(`sup`, { children: e.children });

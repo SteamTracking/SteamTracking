@@ -12,4 +12,3 @@ function _(_) {
     _.current
   );
 }
-export { _ };

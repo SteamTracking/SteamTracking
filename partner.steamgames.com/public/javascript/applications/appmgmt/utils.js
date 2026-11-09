@@ -4,15 +4,15 @@
 import { _t as e, kt as t, on as n } from "./mobx.esm.js";
 var r = class {
     constructor() {
-      (this.listeners = new Set()),
-        (this.subscribe = this.subscribe.bind(this));
+      ((this.listeners = new Set()),
+        (this.subscribe = this.subscribe.bind(this)));
     }
     subscribe(e) {
       return (
         this.listeners.add(e),
         this.onSubscribe(),
         () => {
-          this.listeners.delete(e), this.onUnsubscribe();
+          (this.listeners.delete(e), this.onUnsubscribe());
         }
       );
     }
@@ -171,7 +171,7 @@ var D = new (class extends r {
     #t;
     #n;
     constructor() {
-      super(),
+      (super(),
         (this.#n = (e) => {
           if (!i && window.addEventListener) {
             let t = () => e();
@@ -182,7 +182,7 @@ var D = new (class extends r {
               }
             );
           }
-        });
+        }));
     }
     onSubscribe() {
       this.#t || this.setEventListener(this.#n);
@@ -191,11 +191,11 @@ var D = new (class extends r {
       this.hasListeners() || (this.#t?.(), (this.#t = void 0));
     }
     setEventListener(e) {
-      (this.#n = e),
+      ((this.#n = e),
         this.#t?.(),
         (this.#t = e((e) => {
           typeof e == `boolean` ? this.setFocused(e) : this.onFocus();
-        }));
+        })));
     }
     setFocused(e) {
       this.#e !== e && ((this.#e = e), this.onFocus());
@@ -217,7 +217,7 @@ var D = new (class extends r {
     #t;
     #n;
     constructor() {
-      super(),
+      (super(),
         (this.#n = (e) => {
           if (!i && window.addEventListener) {
             let t = () => e(!0),
@@ -226,12 +226,12 @@ var D = new (class extends r {
               window.addEventListener(`online`, t, !1),
               window.addEventListener(`offline`, n, !1),
               () => {
-                window.removeEventListener(`online`, t),
-                  window.removeEventListener(`offline`, n);
+                (window.removeEventListener(`online`, t),
+                  window.removeEventListener(`offline`, n));
               }
             );
           }
-        });
+        }));
     }
     onSubscribe() {
       this.#t || this.setEventListener(this.#n);
@@ -240,7 +240,7 @@ var D = new (class extends r {
       this.hasListeners() || (this.#t?.(), (this.#t = void 0));
     }
     setEventListener(e) {
-      (this.#n = e), this.#t?.(), (this.#t = e(this.setOnline.bind(this)));
+      ((this.#n = e), this.#t?.(), (this.#t = e(this.setOnline.bind(this))));
     }
     setOnline(e) {
       this.#e !== e &&
@@ -257,18 +257,18 @@ function k() {
   let e,
     t,
     n = new Promise((n, r) => {
-      (e = n), (t = r);
+      ((e = n), (t = r));
     });
-  (n.status = `pending`), n.catch(() => {});
+  ((n.status = `pending`), n.catch(() => {}));
   function r(e) {
-    Object.assign(n, e), delete n.resolve, delete n.reject;
+    (Object.assign(n, e), delete n.resolve, delete n.reject);
   }
   return (
     (n.resolve = (t) => {
-      r({ status: `fulfilled`, value: t }), e(t);
+      (r({ status: `fulfilled`, value: t }), e(t));
     }),
     (n.reject = (e) => {
-      r({ status: `rejected`, reason: e }), t(e);
+      (r({ status: `rejected`, reason: e }), t(e));
     }),
     n
   );
@@ -281,9 +281,9 @@ function j(e) {
 }
 var M = class extends Error {
   constructor(e) {
-    super(`CancelledError`),
+    (super(`CancelledError`),
       (this.revert = e?.revert),
-      (this.silent = e?.silent);
+      (this.silent = e?.silent));
   }
 };
 function N(e) {
@@ -317,12 +317,12 @@ function P(e) {
     },
     m = () =>
       new Promise((t) => {
-        (a = (e) => {
+        ((a = (e) => {
           (r || u()) && t(e);
         }),
-          e.onPause?.();
+          e.onPause?.());
       }).then(() => {
-        (a = void 0), r || e.onContinue?.();
+        ((a = void 0), r || e.onContinue?.());
       }),
     h = () => {
       if (r) return;
@@ -384,7 +384,7 @@ function F() {
     },
     o = () => {
       let t = e;
-      (e = []),
+      ((e = []),
         t.length &&
           i(() => {
             r(() => {
@@ -392,7 +392,7 @@ function F() {
                 n(e);
               });
             });
-          });
+          }));
     };
   return {
     batch: (e) => {
@@ -401,7 +401,7 @@ function F() {
       try {
         n = e();
       } finally {
-        t--, t || o();
+        (t--, t || o());
       }
       return n;
     },
@@ -431,11 +431,11 @@ var I = F(),
       this.clearGcTimeout();
     }
     scheduleGc() {
-      this.clearGcTimeout(),
+      (this.clearGcTimeout(),
         s(this.gcTime) &&
           (this.#e = setTimeout(() => {
             this.optionalRemove();
-          }, this.gcTime));
+          }, this.gcTime)));
     }
     updateGcTime(e) {
       this.gcTime = Math.max(this.gcTime || 0, e ?? (i ? 1 / 0 : 3e5));

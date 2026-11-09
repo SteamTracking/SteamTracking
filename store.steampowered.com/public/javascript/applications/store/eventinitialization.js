@@ -207,9 +207,9 @@ function Oe(e) {
   return (0, K.jsxs)(pe, {
     className: R(Ee, n),
     onClick: async (e) => {
-      e.preventDefault(),
+      (e.preventDefault(),
         e.stopPropagation(),
-        W.logged_in ? (a(!0), await u(), o.token.reason || a(!1)) : c();
+        W.logged_in ? (a(!0), await u(), o.token.reason || a(!1)) : c());
     },
     style: r,
     children: [
@@ -465,10 +465,10 @@ function Ye(e) {
               ? (o(!0),
                 i({ iDoorIndex: t })
                   .then((e) => {
-                    e || u(!0), o(!1);
+                    (e || u(!0), o(!1));
                   })
                   .catch(() => {
-                    u(!0), o(!1);
+                    (u(!0), o(!1));
                   }))
               : f());
         },
@@ -642,11 +642,11 @@ function $(e, t) {
 }
 function ct(e) {
   let [t, n] = (0, G.useState)(!1);
-  (0, G.useEffect)(() => {
+  ((0, G.useEffect)(() => {
     let t = window.setTimeout(() => n(!0), e);
     return () => window.clearTimeout(t);
   }, [e]),
-    $(t);
+    $(t));
 }
 function lt(e) {
   let { bSalePage: t } = e,
@@ -654,7 +654,7 @@ function lt(e) {
   return (
     $(n, t),
     G.useEffect(() => {
-      k.Init(z(new L(he.WEBAPI_BASE_URL))), A.Init(), r(!0);
+      (k.Init(z(new L(he.WEBAPI_BASE_URL))), A.Init(), r(!0));
     }, []),
     G.useEffect(() => {
       let e = j();

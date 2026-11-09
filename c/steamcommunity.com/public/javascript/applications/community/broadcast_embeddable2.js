@@ -97,13 +97,13 @@ var _ = class _ {
   }
   RemoveCachedDataIfNotInMap(_) {
     let _ = [];
-    this.m_mapBroadcasterSteamIDToEvents.forEach((_, _) => {
+    (this.m_mapBroadcasterSteamIDToEvents.forEach((_, _) => {
       _.has(_) || _.push(_);
     }),
       _.forEach((_) => {
-        this.m_mapBroadcasterSteamIDData.delete(_),
-          this.m_mapBroadcasterSteamIDToEvents.delete(_);
-      });
+        (this.m_mapBroadcasterSteamIDData.delete(_),
+          this.m_mapBroadcasterSteamIDToEvents.delete(_));
+      }));
   }
   static BuildAppIDRefsForEventList(_, _) {
     let _ = new Set();
@@ -118,16 +118,16 @@ var _ = class _ {
         m_mapPresenters: _.BuildSteamIDToPresenterMapFromEventList(_, _),
         m_rgAppIDs: _.BuildAppIDRefsForEventList(_, _),
       };
-      this.m_mapBroadcasterSteamIDData.set(_, _),
+      (this.m_mapBroadcasterSteamIDData.set(_, _),
         this.m_mapBroadcasterSteamIDToEvents.set(
           _,
           _.map((_) => _.GID ?? ``),
-        );
+        ));
     });
   }
   async SynchronizeEventsWithBroadcasts(_, _) {
     let _ = await this.BuildBroadcasterSteamIDToActiveEventMap(_);
-    this.RemoveCachedDataIfNotInMap(_), this.UpdateCachedDataFromEvents(_, _);
+    (this.RemoveCachedDataIfNotInMap(_), this.UpdateCachedDataFromEvents(_, _));
   }
   GetPresenterMapForBroadcasterSteamID(_) {
     return this.m_mapBroadcasterSteamIDData.get(_)?.m_mapPresenters;
@@ -219,11 +219,11 @@ var _ = class _ {
     _ !== `remove` && (this.m_bUserChatExpanded = _ === `hide`);
   }
   DebugDumpContextAndAvailableContext(_) {
-    console.log(`Requested context`, this.GetStreamsLookupKeyFromDef(_)),
+    (console.log(`Requested context`, this.GetStreamsLookupKeyFromDef(_)),
       console.log(`Available context count: `, this.m_lookupStreams.size),
       this.m_lookupStreams.forEach((_, _) => {
         console.log(_, _.length);
-      });
+      }));
   }
   GetStreams(_) {
     let _ = this.GetStreamsLookupKeyFromDef(_);
@@ -280,34 +280,34 @@ var _ = class _ {
             })
           ).data;
         } catch (_) {
-          console.log(`LoadBIsEmbeddedBroadcastHidden: ` + _(_).strErrorMsg),
+          (console.log(`LoadBIsEmbeddedBroadcastHidden: ` + _(_).strErrorMsg),
             (_ = {
               bHideStoreBroadcast: !1,
-            });
+            }));
         }
       _(() => {
-        (this.m_bUserPreferenceHideBroadcastByDefault = _.bHideStoreBroadcast),
-          (this.m_bCollapsed = _.bHideStoreBroadcast);
+        ((this.m_bUserPreferenceHideBroadcastByDefault = _.bHideStoreBroadcast),
+          (this.m_bCollapsed = _.bHideStoreBroadcast));
       });
     }
     return this.BIsEmbeddedBroadcastHiddenByDefaultUserSettings();
   }
   async SetupEmbeddableVOD(_, _) {
-    (this.m_bUseFakeData = !1),
+    ((this.m_bUseFakeData = !1),
       (this.m_streamChatStatus = `remove`),
       _(!!_.nAppIDVOD, `SetupEmbeddableVOD requires a VOD appid`),
       await _.Get().QueueAppRequest(_.nAppIDVOD, {
         include_assets: !0,
         include_trailers: !0,
-      });
+      }));
     let _ = _.Get().GetApp(_.nAppIDVOD),
       _ = new _();
-    (_.accountid = 0),
+    ((_.accountid = 0),
       (_.nAppIDVOD = _.nAppIDVOD),
       (_.default_selection_priority = _.k_ePrimary),
       (_.current_selection_priority = _.k_ePrimary),
       (_.thumbnail_http_address = _?.GetAssets()?.GetHeaderURL() || ``),
-      (_.title = _?.GetName() || ``);
+      (_.title = _?.GetName() || ``));
     let _ = this.GetStreams(_);
     if (
       (_(
@@ -380,7 +380,7 @@ var _ = class _ {
     return [];
   }
   async HandleHintLoadBroadcastResponse(_, _) {
-    (this.m_bUseFakeData = !1),
+    ((this.m_bUseFakeData = !1),
       _.bIsPreview &&
         (_?.filtered?.length > 0
           ? (_(!!_.event, `Broadcast preview requires an event`),
@@ -397,7 +397,7 @@ var _ = class _ {
             }),
             (this.m_bUseFakeData = !0))),
       _.broadcast_chat_visibility &&
-        (this.m_pageChatStatus = _.broadcast_chat_visibility);
+        (this.m_pageChatStatus = _.broadcast_chat_visibility));
     let _ = [];
     _(() => {
       _.filtered.forEach((_) => {
@@ -407,11 +407,11 @@ var _ = class _ {
         ).ConvertTo64BitString();
         let _ = _.GetOrCreateBroadcastInfo(_.steamid),
           _ = _.appid ? Number(_.appid) : 7;
-        (_.m_nAppID = _),
+        ((_.m_nAppID = _),
           (_.m_strAppId = `` + _),
           _.current_selection_priority === void 0 &&
             (_.current_selection_priority = _.default_selection_priority),
-          _ != 7 && _.push(_);
+          _ != 7 && _.push(_));
       });
     });
     let _ = this.GetStreamsLookupKeyFromDef(_);
@@ -422,7 +422,7 @@ var _ = class _ {
       _ && _.fnCallback();
     }
     let _ = this.GetStreams(_) ?? [];
-    return await this.AutoStartVideoStream(_, _), _;
+    return (await this.AutoStartVideoStream(_, _), _);
   }
   ExtractBroadcastPrioritiesFromPartnerEventForPreview(_, _) {
     let _ = Array.from(_.jsondata.broadcast_whitelist ?? []),
@@ -477,13 +477,13 @@ var _ = class _ {
     else {
       let _ = await this.m_mapBroadcastChecked.get(_);
       if (_?.success == 1) {
-        (_.steamid = _.steamid),
+        ((_.steamid = _.steamid),
           this.m_playReadyStream.set(_, _),
           (this.m_streamChatStatus =
             this.GetConcurrentStreams(_) > 1
               ? `hide`
               : (_.broadcast_chat_visibility ?? null)),
-          this.m_setStreamChangedListeners.forEach((_) => _(_));
+          this.m_setStreamChangedListeners.forEach((_) => _(_)));
         let _ = _.GetOrCreateBroadcastInfo(_.steamid).m_nAppID;
         _(_, 1, _.snr);
       } else return null;
@@ -563,7 +563,7 @@ var _ = class _ {
   }
   Init() {}
 };
-_([_], _.prototype, `m_lookupStreams`, void 0),
+(_([_], _.prototype, `m_lookupStreams`, void 0),
   _([_], _.prototype, `m_playReadyStream`, void 0),
   _([_], _.prototype, `m_pageChatStatus`, void 0),
   _([_], _.prototype, `m_streamChatStatus`, void 0),
@@ -571,7 +571,7 @@ _([_], _.prototype, `m_lookupStreams`, void 0),
   _([_], _.prototype, `m_bUserPreferenceHideBroadcastByDefault`, void 0),
   _([_], _.prototype, `m_bCollapsed`, void 0),
   _([_], _.prototype, `HintLoadEmbeddablePreviewStreams`, null),
-  _([_], _.prototype, `AttemptToPlayStream`, null);
+  _([_], _.prototype, `AttemptToPlayStream`, null));
 function _(_) {
   return _.current_selection_priority || _.k_eGeneral;
 }
@@ -587,13 +587,12 @@ function _(_) {
 async function _(_, _, _) {
   if (_ > 0 && _ != 7 && _) {
     let _ = new URLSearchParams();
-    _.append(`page_action`, `` + _),
+    (_.append(`page_action`, `` + _),
       _.append(`snr`, _),
       _.default.post(
         _.STORE_BASE_URL + `ajaxreportproductaction/` + _ + `/`,
         _,
-      );
+      ));
   }
 }
 var _ = new _();
-export { _, _, _, _, _, _, _, _, _ };

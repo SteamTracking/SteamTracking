@@ -58,7 +58,7 @@ import {
 function _(_) {
   this.content = _;
 }
-(_.prototype = {
+((_.prototype = {
   constructor: _,
   find: function (_) {
     for (var _ = 0; _ < this.content.length; _ += 2)
@@ -81,20 +81,20 @@ function _(_) {
     var _ = this.find(_);
     if (_ == -1) return this;
     var _ = this.content.slice();
-    return _.splice(_, 2), new _(_);
+    return (_.splice(_, 2), new _(_));
   },
   addToStart: function (_, _) {
     return new _([_, _].concat(this.remove(_).content));
   },
   addToEnd: function (_, _) {
     var _ = this.remove(_).content.slice();
-    return _.push(_, _), new _(_);
+    return (_.push(_, _), new _(_));
   },
   addBefore: function (_, _, _) {
     var _ = this.remove(_),
       _ = _.content.slice(),
       _ = _.find(_);
-    return _.splice(_ == -1 ? _.length : _, 0, _, _), new _(_);
+    return (_.splice(_ == -1 ? _.length : _, 0, _, _), new _(_));
   },
   forEach: function (_) {
     for (var _ = 0; _ < this.content.length; _ += 2)
@@ -136,7 +136,7 @@ function _(_) {
     var _ = [];
     if (_) for (var _ in _) _.push(_, _[_]);
     return new _(_);
-  });
+  }));
 function _(_, _, _) {
   for (let _ = 0; ; _++) {
     if (_ == _.childCount || _ == _.childCount)
@@ -170,7 +170,7 @@ function _(_, _, _) {
   }
 }
 function _(_, _, _, _) {
-  for (let _ = _.childCount, _ = _.childCount; ; ) {
+  for (let _ = _.childCount, _ = _.childCount; ;) {
     if (_ == 0 || _ == 0)
       return _ == _
         ? null
@@ -181,7 +181,7 @@ function _(_, _, _, _) {
     let _ = _.child(--_),
       _ = _.child(--_),
       _ = _.nodeSize;
-    if (_ == _) (_ -= _), (_ -= _);
+    if (_ == _) ((_ -= _), (_ -= _));
     else {
       if (!_.sameMarkup(_))
         return {
@@ -193,7 +193,7 @@ function _(_, _, _, _) {
           _ = _.text,
           _ = _.length,
           _ = _.length;
-        for (; _ > 0 && _ > 0 && _[_ - 1] == _[_ - 1]; ) _--, _--, _--, _--;
+        for (; _ > 0 && _ > 0 && _[_ - 1] == _[_ - 1];) (_--, _--, _--, _--);
         return (
           _ &&
             _ &&
@@ -211,7 +211,7 @@ function _(_, _, _, _) {
         let _ = _(_.content, _.content, _ - 1, _ - 1);
         if (_) return _;
       }
-      (_ -= _), (_ -= _);
+      ((_ -= _), (_ -= _));
     }
   }
 }
@@ -264,11 +264,11 @@ var _ = class _ {
                   ? _.type.spec.leafText(_)
                   : ``
               : ``;
-          _.isBlock &&
+          (_.isBlock &&
             ((_.isLeaf && _) || _.isTextblock) &&
             _ &&
             (_ ? (_ = !1) : (_ += _)),
-            (_ += _);
+            (_ += _));
         },
         0,
       ),
@@ -300,7 +300,7 @@ var _ = class _ {
       for (let _ = 0, _ = 0; _ < _; _++) {
         let _ = this.content[_],
           _ = _ + _.nodeSize;
-        _ > _ &&
+        (_ > _ &&
           ((_ < _ || _ > _) &&
             (_ = _.isText
               ? _.cut(Math.max(0, _ - _), Math.min(_.text.length, _ - _))
@@ -310,7 +310,7 @@ var _ = class _ {
                 )),
           _.push(_),
           (_ += _.nodeSize)),
-          (_ = _);
+          (_ = _));
       }
     return new _(_, _);
   }
@@ -326,7 +326,7 @@ var _ = class _ {
     if (_ == _) return this;
     let _ = this.content.slice(),
       _ = this.size + _.nodeSize - _.nodeSize;
-    return (_[_] = _), new _(_, _);
+    return ((_[_] = _), new _(_, _));
   }
   addToStart(_) {
     return new _([_].concat(this.content), this.size + _.nodeSize);
@@ -360,7 +360,7 @@ var _ = class _ {
   forEach(_) {
     for (let _ = 0, _ = 0; _ < this.content.length; _++) {
       let _ = this.content[_];
-      _(_, _, _), (_ += _.nodeSize);
+      (_(_, _, _), (_ += _.nodeSize));
     }
   }
   findDiffStart(_, _ = 0) {
@@ -402,11 +402,11 @@ var _ = class _ {
       _ = 0;
     for (let _ = 0; _ < _.length; _++) {
       let _ = _[_];
-      (_ += _.nodeSize),
+      ((_ += _.nodeSize),
         _ && _.isText && _[_ - 1].sameMarkup(_)
           ? ((_ ||= _.slice(0, _)),
             (_[_.length - 1] = _.withText(_[_.length - 1].text + _.text)))
-          : _ && _.push(_);
+          : _ && _.push(_));
     }
     return new _(_ || _, _);
   }
@@ -431,7 +431,7 @@ var _ = {
   offset: 0,
 };
 function _(_, _) {
-  return (_.index = _), (_.offset = _), _;
+  return ((_.index = _), (_.offset = _), _);
 }
 function _(_, _) {
   if (_ === _) return !0;
@@ -449,7 +449,7 @@ function _(_, _) {
 }
 var _ = class _ {
   constructor(_, _) {
-    (this.type = _), (this.attrs = _);
+    ((this.type = _), (this.attrs = _));
   }
   addToSet(_) {
     let _,
@@ -460,12 +460,12 @@ var _ = class _ {
       if (this.type.excludes(_.type)) _ ||= _.slice(0, _);
       else if (_.type.excludes(this.type)) return _;
       else
-        !_ &&
+        (!_ &&
           _.type.rank > this.type.rank &&
           ((_ ||= _.slice(0, _)), _.push(this), (_ = !0)),
-          _ && _.push(_);
+          _ && _.push(_));
     }
-    return (_ ||= _.slice()), _ || _.push(this), _;
+    return ((_ ||= _.slice()), _ || _.push(this), _);
   }
   removeFromSet(_) {
     for (let _ = 0; _ < _.length; _++)
@@ -505,14 +505,14 @@ var _ = class _ {
     if (!_ || (Array.isArray(_) && _.length == 0)) return _.none;
     if (_ instanceof _) return [_];
     let _ = _.slice();
-    return _.sort((_, _) => _.type.rank - _.type.rank), _;
+    return (_.sort((_, _) => _.type.rank - _.type.rank), _);
   }
 };
 _.none = [];
 var _ = class extends Error {},
   _ = class _ {
     constructor(_, _, _) {
-      (this.content = _), (this.openStart = _), (this.openEnd = _);
+      ((this.content = _), (this.openStart = _), (this.openEnd = _));
     }
     get size() {
       return this.content.size - this.openStart - this.openEnd;
@@ -645,7 +645,7 @@ function _(_, _) {
 }
 function _(_, _, _) {
   let _ = _.node(_);
-  return _(_, _.node(_)), _;
+  return (_(_, _.node(_)), _);
 }
 function _(_, _) {
   let _ = _.length - 1;
@@ -703,10 +703,10 @@ function _(_, _) {
 }
 var _ = class _ {
     constructor(_, _, _) {
-      (this.pos = _),
+      ((this.pos = _),
         (this.path = _),
         (this.parentOffset = _),
-        (this.depth = _.length / 3 - 1);
+        (this.depth = _.length / 3 - 1));
     }
     resolveDepth(_) {
       return _ == null ? this.depth : _ < 0 ? this.depth + _ : _;
@@ -730,7 +730,9 @@ var _ = class _ {
       );
     }
     start(_) {
-      return (_ = this.resolveDepth(_)), _ == 0 ? 0 : this.path[_ * 3 - 1] + 1;
+      return (
+        (_ = this.resolveDepth(_)), _ == 0 ? 0 : this.path[_ * 3 - 1] + 1
+      );
     }
     end(_) {
       return (
@@ -785,7 +787,7 @@ var _ = class _ {
         _ = _.maybeChild(_);
       if (!_) {
         let _ = _;
-        (_ = _), (_ = _);
+        ((_ = _), (_ = _));
       }
       let _ = _.marks;
       for (var _ = 0; _ < _.length; _++)
@@ -843,11 +845,11 @@ var _ = class _ {
       let _ = [],
         _ = 0,
         _ = _;
-      for (let _ = _; ; ) {
+      for (let _ = _; ;) {
         let { index: _, offset: _ } = _.content.findIndex(_),
           _ = _ - _;
         if ((_.push(_, _, _ + _), !_ || ((_ = _.child(_)), _.isText))) break;
-        (_ = _ - 1), (_ += _ + 1);
+        ((_ = _ - 1), (_ += _ + 1));
       }
       return new _(_, _, _);
     }
@@ -860,19 +862,19 @@ var _ = class _ {
         }
       else _.set(_, (_ = new _()));
       let _ = (_.elts[_._] = _.resolve(_, _));
-      return (_._ = (_._ + 1) % _), _;
+      return ((_._ = (_._ + 1) % _), _);
     }
   },
   _ = class {
     constructor() {
-      (this.elts = []), (this._ = 0);
+      ((this.elts = []), (this._ = 0));
     }
   },
   _ = 12,
   _ = new WeakMap(),
   _ = class {
     constructor(_, _, _) {
-      (this.$from = _), (this.$to = _), (this.depth = _);
+      ((this.$from = _), (this.$to = _), (this.depth = _));
     }
     get start() {
       return this.$from.before(this.depth + 1);
@@ -893,10 +895,10 @@ var _ = class _ {
   _ = Object.create(null),
   _ = class _ {
     constructor(_, _, _, _ = _.none) {
-      (this.type = _),
+      ((this.type = _),
         (this.attrs = _),
         (this.marks = _),
-        (this.content = _ || _.empty);
+        (this.content = _ || _.empty));
     }
     get children() {
       return this.content.content;
@@ -980,7 +982,7 @@ var _ = class _ {
       return _(this.resolve(_), this.resolve(_), _);
     }
     nodeAt(_) {
-      for (let _ = this; ; ) {
+      for (let _ = this; ;) {
         let { index: _, offset: _ } = _.content.findIndex(_);
         if (((_ = _.maybeChild(_)), !_)) return null;
         if (_ == _ || _.isText) return _;
@@ -1086,12 +1088,12 @@ var _ = class _ {
         : this.type.compatibleContent(_.type);
     }
     check() {
-      this.type.checkContent(this.content),
-        _(this.type.attrs, this.attrs, `node`, this.type.name);
+      (this.type.checkContent(this.content),
+        _(this.type.attrs, this.attrs, `node`, this.type.name));
       let _ = _.none;
       for (let _ = 0; _ < this.marks.length; _++) {
         let _ = this.marks[_];
-        _(_.type.attrs, _.attrs, `mark`, _.type.name), (_ = _.addToSet(_));
+        (_(_.type.attrs, _.attrs, `mark`, _.type.name), (_ = _.addToSet(_)));
       }
       if (!_.sameSet(_, this.marks))
         throw RangeError(
@@ -1167,7 +1169,7 @@ var _ = class _ extends _ {
   }
   toJSON() {
     let _ = super.toJSON();
-    return (_.text = this.text), _;
+    return ((_.text = this.text), _);
   }
 };
 function _(_, _) {
@@ -1182,7 +1184,7 @@ function _(_, _, _, _) {
 }
 var _ = class _ {
   constructor(_) {
-    (this.validEnd = _), (this.next = []), (this.wrapCache = []);
+    ((this.validEnd = _), (this.next = []), (this.wrapCache = []));
   }
   static parse(_, _) {
     let _ = new _(_, _);
@@ -1190,7 +1192,7 @@ var _ = class _ {
     let _ = _(_);
     _.next && _.err(`Unexpected trailing text`);
     let _ = _(_(_));
-    return _(_, _), _;
+    return (_(_, _), _);
   }
   matchType(_) {
     for (let _ = 0; _ < this.next.length; _++)
@@ -1240,7 +1242,7 @@ var _ = class _ {
     for (let _ = 0; _ < this.wrapCache.length; _ += 2)
       if (this.wrapCache[_] == _) return this.wrapCache[_ + 1];
     let _ = this.computeWrapping(_);
-    return this.wrapCache.push(_, _), _;
+    return (this.wrapCache.push(_, _), _);
   }
   computeWrapping(_) {
     let _ = Object.create(null),
@@ -1251,7 +1253,7 @@ var _ = class _ {
           via: null,
         },
       ];
-    for (; _.length; ) {
+    for (; _.length;) {
       let _ = _.shift(),
         _ = _.match;
       if (_.matchType(_)) {
@@ -1309,13 +1311,13 @@ var _ = class _ {
 _.empty = new _(!0);
 var _ = class {
   constructor(_, _) {
-    (this.string = _),
+    ((this.string = _),
       (this.nodeTypes = _),
       (this.inline = null),
       (this.pos = 0),
       (this.tokens = _.split(/\s*(?=\b|\W|$)/)),
       this.tokens[this.tokens.length - 1] == `` && this.tokens.pop(),
-      this.tokens[0] == `` && this.tokens.shift();
+      this.tokens[0] == `` && this.tokens.shift());
   }
   get next() {
     return this.tokens[this.pos];
@@ -1374,7 +1376,7 @@ function _(_) {
 function _(_) {
   /\D/.test(_.next) && _.err(`Expected number, got '` + _.next + `'`);
   let _ = Number(_.next);
-  return _.pos++, _;
+  return (_.pos++, _);
 }
 function _(_, _) {
   let _ = _(_),
@@ -1399,12 +1401,12 @@ function _(_, _) {
     let _ = _[_];
     _.isInGroup(_) && _.push(_);
   }
-  return _.length == 0 && _.err(`No node type or group '` + _ + `' found`), _;
+  return (_.length == 0 && _.err(`No node type or group '` + _ + `' found`), _);
 }
 function _(_) {
   if (_.eat(`(`)) {
     let _ = _(_);
-    return _.eat(`)`) || _.err(`Missing closing paren`), _;
+    return (_.eat(`)`) || _.err(`Missing closing paren`), _);
   }
   if (/\W/.test(_.next)) _.err(`Unexpected token '` + _.next + `'`);
   else {
@@ -1432,7 +1434,7 @@ function _(_) {
 }
 function _(_) {
   let _ = [[]];
-  return _(_(_, 0), _()), _;
+  return (_(_(_, 0), _()), _);
   function _() {
     return _.push([]) - 1;
   }
@@ -1441,7 +1443,7 @@ function _(_) {
       term: _,
       _: _,
     };
-    return _[_].push(_), _;
+    return (_[_].push(_), _);
   }
   function _(_, _) {
     _.forEach((_) => (_._ = _));
@@ -1457,22 +1459,22 @@ function _(_) {
       }
     else if (_.type == `star`) {
       let _ = _();
-      return _(_, _), _(_(_.expr, _), _), [_(_)];
+      return (_(_, _), _(_(_.expr, _), _), [_(_)]);
     } else if (_.type == `plus`) {
       let _ = _();
-      return _(_(_.expr, _), _), _(_(_.expr, _), _), [_(_)];
+      return (_(_(_.expr, _), _), _(_(_.expr, _), _), [_(_)]);
     } else if (_.type == `opt`) return [_(_)].concat(_(_.expr, _));
     else if (_.type == `range`) {
       let _ = _;
       for (let _ = 0; _ < _.min; _++) {
         let _ = _();
-        _(_(_.expr, _), _), (_ = _);
+        (_(_(_.expr, _), _), (_ = _));
       }
       if (_.max == -1) _(_(_.expr, _), _);
       else
         for (let _ = _.min; _ < _.max; _++) {
           let _ = _();
-          _(_, _), _(_(_.expr, _), _), (_ = _);
+          (_(_, _), _(_(_.expr, _), _), (_ = _));
         }
       return [_(_)];
     } else if (_.type == `name`) return [_(_, void 0, _.value)];
@@ -1484,7 +1486,7 @@ function _(_, _) {
 }
 function _(_, _) {
   let _ = [];
-  return _(_), _.sort(_);
+  return (_(_), _.sort(_));
   function _(_) {
     let _ = _[_];
     if (_.length == 1 && !_[0].term) return _(_[0]._);
@@ -1506,7 +1508,7 @@ function _(_) {
         let _;
         for (let _ = 0; _ < _.length; _++) _[_][0] == _ && (_ = _[_][1]);
         _(_, _).forEach((_) => {
-          _ || _.push([_, (_ = [])]), _.indexOf(_) == -1 && _.push(_);
+          (_ || _.push([_, (_ = [])]), _.indexOf(_) == -1 && _.push(_));
         });
       });
     });
@@ -1528,9 +1530,9 @@ function _(_, _) {
       _ = [];
     for (let _ = 0; _ < _.next.length; _++) {
       let { type: _, next: _ } = _.next[_];
-      _.push(_.name),
+      (_.push(_.name),
         _ && !(_.isText || _.hasRequiredAttrs()) && (_ = !1),
-        _.indexOf(_) == -1 && _.push(_);
+        _.indexOf(_) == -1 && _.push(_));
     }
     _ &&
       _.err(
@@ -1569,7 +1571,7 @@ function _(_, _) {
 }
 var _ = class _ {
   constructor(_, _, _) {
-    (this.name = _),
+    ((this.name = _),
       (this.schema = _),
       (this.spec = _),
       (this.markSet = null),
@@ -1579,7 +1581,7 @@ var _ = class _ {
       (this.contentMatch = null),
       (this.inlineContent = null),
       (this.isBlock = !(_.inline || _ == `text`)),
-      (this.isText = _ == `text`);
+      (this.isText = _ == `text`));
   }
   get isInline() {
     return !this.isBlock;
@@ -1686,10 +1688,10 @@ function _(_, _, _) {
 }
 var _ = class {
     constructor(_, _, _) {
-      (this.hasDefault = Object.prototype.hasOwnProperty.call(_, `default`)),
+      ((this.hasDefault = Object.prototype.hasOwnProperty.call(_, `default`)),
         (this.default = _.default),
         (this.validate =
-          typeof _.validate == `string` ? _(_, _, _.validate) : _.validate);
+          typeof _.validate == `string` ? _(_, _, _.validate) : _.validate));
     }
     get isRequired() {
       return !this.hasDefault;
@@ -1697,12 +1699,12 @@ var _ = class {
   },
   _ = class _ {
     constructor(_, _, _, _) {
-      (this.name = _),
+      ((this.name = _),
         (this.rank = _),
         (this.schema = _),
         (this.spec = _),
         (this.attrs = _(_, _.attrs)),
-        (this.excluded = null);
+        (this.excluded = null));
       let _ = _(this.attrs);
       this.instance = _ ? new _(this, _) : null;
     }
@@ -1714,7 +1716,7 @@ var _ = class {
     static compile(_, _) {
       let _ = Object.create(null),
         _ = 0;
-      return _.forEach((_, _) => (_[_] = new _(_, _++, _, _))), _;
+      return (_.forEach((_, _) => (_[_] = new _(_, _++, _, _))), _);
     }
     removeFromSet(_) {
       for (var _ = 0; _ < _.length; _++)
@@ -1730,13 +1732,13 @@ var _ = class {
   },
   _ = class {
     constructor(_) {
-      (this.linebreakReplacement = null), (this.cached = Object.create(null));
+      ((this.linebreakReplacement = null), (this.cached = Object.create(null)));
       let _ = (this.spec = {});
       for (let _ in _) _[_] = _[_];
-      (_.nodes = _.from(_.nodes)),
+      ((_.nodes = _.from(_.nodes)),
         (_.marks = _.from(_.marks || {})),
         (this.nodes = _.compile(this.spec.nodes, this)),
-        (this.marks = _.compile(this.spec.marks, this));
+        (this.marks = _.compile(this.spec.marks, this)));
       let _ = Object.create(null);
       for (let _ in this.nodes) {
         if (_ in this.marks)
@@ -1771,10 +1773,10 @@ var _ = class {
           _ = _.spec.excludes;
         _.excluded = _ == null ? [_] : _ == `` ? [] : _(this, _.split(` `));
       }
-      (this.nodeFromJSON = (_) => _.fromJSON(this, _)),
+      ((this.nodeFromJSON = (_) => _.fromJSON(this, _)),
         (this.markFromJSON = (_) => _.fromJSON(this, _)),
         (this.topNodeType = this.nodes[this.spec.topNode || `doc`]),
-        (this.cached.wrappings = Object.create(null));
+        (this.cached.wrappings = Object.create(null)));
     }
     node(_, _ = null, _, _) {
       if (typeof _ == `string`) _ = this.nodeType(_);
@@ -1790,7 +1792,7 @@ var _ = class {
       return new _(_, _.defaultAttrs, _, _.setFrom(_));
     }
     mark(_, _) {
-      return typeof _ == `string` && (_ = this.marks[_]), _.create(_);
+      return (typeof _ == `string` && (_ = this.marks[_]), _.create(_));
     }
     nodeType(_) {
       let _ = this.nodes[_];
@@ -1824,28 +1826,31 @@ function _(_) {
 }
 var _ = class _ {
     constructor(_, _) {
-      (this.schema = _), (this.rules = _), (this.tags = []), (this.styles = []);
+      ((this.schema = _),
+        (this.rules = _),
+        (this.tags = []),
+        (this.styles = []));
       let _ = (this.matchedStyles = []);
-      _.forEach((_) => {
+      (_.forEach((_) => {
         if (_(_)) this.tags.push(_);
         else if (_(_)) {
           let _ = /[^=]*/.exec(_.style)[0];
-          _.indexOf(_) < 0 && _.push(_), this.styles.push(_);
+          (_.indexOf(_) < 0 && _.push(_), this.styles.push(_));
         }
       }),
         (this.normalizeLists = !this.tags.some((_) => {
           if (!/^(ul|ol)\b/.test(_.tag) || !_.node) return !1;
           let _ = _.nodes[_.node];
           return _.contentMatch.matchType(_);
-        }));
+        })));
     }
     parse(_, _ = {}) {
       let _ = new _(this, _, !1);
-      return _.addAll(_, _.none, _.from, _._), _.finish();
+      return (_.addAll(_, _.none, _.from, _._), _.finish());
     }
     parseSlice(_, _ = {}) {
       let _ = new _(this, _, !0);
-      return _.addAll(_, _.none, _.from, _._), _.maxOpen(_.finish());
+      return (_.addAll(_, _.none, _.from, _._), _.maxOpen(_.finish()));
     }
     matchTag(_, _, _) {
       for (
@@ -1908,14 +1913,14 @@ var _ = class _ {
         let _ = _.marks[_].spec.parseDOM;
         _ &&
           _.forEach((_) => {
-            _((_ = _(_))), _.mark || _.ignore || _.clearMark || (_.mark = _);
+            (_((_ = _(_))), _.mark || _.ignore || _.clearMark || (_.mark = _));
           });
       }
       for (let _ in _.nodes) {
         let _ = _.nodes[_].spec.parseDOM;
         _ &&
           _.forEach((_) => {
-            _((_ = _(_))), _.node || _.ignore || _.mark || (_.node = _);
+            (_((_ = _(_))), _.node || _.ignore || _.mark || (_.node = _));
           });
       }
       return _;
@@ -1985,14 +1990,14 @@ function _(_, _, _) {
 }
 var _ = class {
     constructor(_, _, _, _, _, _) {
-      (this.type = _),
+      ((this.type = _),
         (this.attrs = _),
         (this.marks = _),
         (this.solid = _),
         (this.options = _),
         (this.content = []),
         (this.activeMarks = _.none),
-        (this.match = _ || (_ & _ ? null : _.contentMatch));
+        (this.match = _ || (_ & _ ? null : _.contentMatch)));
     }
     findWrapping(_) {
       if (!this.match) {
@@ -2037,15 +2042,15 @@ var _ = class {
   },
   _ = class {
     constructor(_, _, _) {
-      (this.parser = _),
+      ((this.parser = _),
         (this.options = _),
         (this.isOpen = _),
         (this.open = 0),
-        (this.localPreserveWS = !1);
+        (this.localPreserveWS = !1));
       let _ = _.topNode,
         _,
         _ = _(null, _.preserveWhitespace, 0) | (_ ? _ : 0);
-      (_ = _
+      ((_ = _
         ? new _(
             _.type,
             _.attrs,
@@ -2059,7 +2064,7 @@ var _ = class {
           : new _(_.schema.topNodeType, null, _.none, !0, null, _)),
         (this.nodes = [_]),
         (this.find = _.findPositions),
-        (this.needsBlock = !1);
+        (this.needsBlock = !1));
     }
     get top() {
       return this.nodes[this.open];
@@ -2101,11 +2106,11 @@ var _ = class {
         ) {
           let _ = _.split(/\r?\n|\r/);
           for (let _ = 0; _ < _.length; _++)
-            _ && this.insertNode(_.linebreakReplacement.create(), _, !0),
-              _[_] && this.insertNode(_.text(_[_]), _, !/\S/.test(_[_]));
+            (_ && this.insertNode(_.linebreakReplacement.create(), _, !0),
+              _[_] && this.insertNode(_.text(_[_]), _, !/\S/.test(_[_])));
           _ = ``;
         } else _ = _.replace(/\r?\n|\r/g, ` `);
-        _ && this.insertNode(_.text(_), _, !/\S/.test(_)), this.findInText(_);
+        (_ && this.insertNode(_.text(_), _, !/\S/.test(_)), this.findInText(_));
       } else this.findInside(_);
     }
     addElement(_, _, _) {
@@ -2120,7 +2125,7 @@ var _ = class {
         (this.options.ruleFromNode && this.options.ruleFromNode(_)) ||
         (_ = this.parser.matchTag(_, this, _));
       out: if (_ ? _.ignore : _.hasOwnProperty(_))
-        this.findInside(_), this.ignoreFallback(_, _);
+        (this.findInside(_), this.ignoreFallback(_, _));
       else if (!_ || _.skip || _.closeParent) {
         _ && _.closeParent
           ? (this.open = Math.max(0, this.open - 1))
@@ -2128,18 +2133,18 @@ var _ = class {
         let _,
           _ = this.needsBlock;
         if (_.hasOwnProperty(_))
-          _.content.length &&
+          (_.content.length &&
             _.content[0].isInline &&
             this.open &&
             (this.open--, (_ = this.top)),
             (_ = !0),
-            _.type || (this.needsBlock = !0);
+            _.type || (this.needsBlock = !0));
         else if (!_.firstChild) {
           this.leafFallback(_, _);
           break out;
         }
         let _ = _ && _.skip ? _ : this.readStyles(_, _);
-        _ && this.addAll(_, _), _ && this.sync(_), (this.needsBlock = _);
+        (_ && this.addAll(_, _), _ && this.sync(_), (this.needsBlock = _));
       } else {
         let _ = this.readStyles(_, _);
         _ && this.addElementByRule(_, _, _, _.consuming === !1 ? _ : void 0);
@@ -2168,7 +2173,7 @@ var _ = class {
           let _ = this.parser.matchedStyles[_],
             _ = _.getPropertyValue(_);
           if (_)
-            for (let _; ; ) {
+            for (let _; ;) {
               let _ = this.parser.matchStyle(_, _, this, _);
               if (!_) break;
               if (_.ignore) return null;
@@ -2202,20 +2207,20 @@ var _ = class {
       if (_ && _.isLeaf) this.findInside(_);
       else if (_) this.addElement(_, _, _);
       else if (_.getContent)
-        this.findInside(_),
+        (this.findInside(_),
           _.getContent(_, this.parser.schema).forEach((_) =>
             this.insertNode(_, _, !1),
-          );
+          ));
       else {
         let _ = _;
-        typeof _.contentElement == `string`
+        (typeof _.contentElement == `string`
           ? (_ = _.querySelector(_.contentElement))
           : typeof _.contentElement == `function`
             ? (_ = _.contentElement(_))
             : _.contentElement && (_ = _.contentElement),
           this.findAround(_, _, !0),
           this.addAll(_, _),
-          this.findAround(_, _, !1);
+          this.findAround(_, _, !1));
       }
       _ && this.sync(_) && this.open--;
     }
@@ -2227,7 +2232,7 @@ var _ = class {
         _ != _;
         _ = _.nextSibling, ++_
       )
-        this.findAtPoint(_, _), this.addDOM(_, _);
+        (this.findAtPoint(_, _), this.addDOM(_, _));
       this.findAtPoint(_, _);
     }
     findPlace(_, _, _) {
@@ -2265,13 +2270,13 @@ var _ = class {
         for (let _ of _.concat(_.marks))
           (_.type ? _.type.allowsMarkType(_.type) : _(_.type, _.type)) &&
             (_ = _.addToSet(_));
-        return _.content.push(_.mark(_)), !0;
+        return (_.content.push(_.mark(_)), !0);
       }
       return !1;
     }
     enter(_, _, _, _) {
       let _ = this.findPlace(_.create(_), _, !1);
-      return (_ &&= this.enterInner(_, _, _, !0, _)), _;
+      return ((_ &&= this.enterInner(_, _, _, !0, _)), _);
     }
     enterInner(_, _, _, _ = !1, _) {
       this.closeExtra();
@@ -2308,7 +2313,7 @@ var _ = class {
     }
     sync(_) {
       for (let _ = this.open; _ >= 0; _--)
-        if (this.nodes[_] == _) return (this.open = _), !0;
+        if (this.nodes[_] == _) return ((this.open = _), !0);
         else this.localPreserveWS && (this.nodes[_].options |= _);
       return !1;
     }
@@ -2437,7 +2442,7 @@ function _(_, _) {
 }
 var _ = class _ {
   constructor(_, _) {
-    (this.nodes = _), (this.marks = _);
+    ((this.nodes = _), (this.marks = _));
   }
   serializeFragment(_, _ = {}, _) {
     _ ||= _(_).createDocumentFragment();
@@ -2448,16 +2453,16 @@ var _ = class _ {
         if (_.length || _.marks.length) {
           let _ = 0,
             _ = 0;
-          for (; _ < _.length && _ < _.marks.length; ) {
+          for (; _ < _.length && _ < _.marks.length;) {
             let _ = _.marks[_];
             if (!this.marks[_.type.name]) _++;
             else {
               if (!_._(_[_][0]) || _.type.spec.spanning === !1) break;
-              _++, _++;
+              (_++, _++);
             }
           }
-          for (; _ < _.length; ) _ = _.pop()[1];
-          for (; _ < _.marks.length; ) {
+          for (; _ < _.length;) _ = _.pop()[1];
+          for (; _ < _.marks.length;) {
             let _ = _.marks[_++],
               _ = this.serializeMark(_, _.isInline, _);
             _ &&
@@ -2516,7 +2521,7 @@ var _ = class _ {
   }
   static nodesFromSchema(_) {
     let _ = _(_.nodes);
-    return (_.text ||= (_) => _.text), _;
+    return ((_.text ||= (_) => _.text), _);
   }
   static marksFromSchema(_) {
     return _(_.marks);
@@ -2536,19 +2541,19 @@ function _(_) {
 var _ = new WeakMap();
 function _(_) {
   let _ = _.get(_);
-  return _ === void 0 && _.set(_, (_ = _(_))), _;
+  return (_ === void 0 && _.set(_, (_ = _(_))), _);
 }
 function _(_) {
   let _ = null;
   function _(_) {
     if (_ && typeof _ == `object`) {
       if (Array.isArray(_)) {
-        if (typeof _[0] == `string`) (_ ||= []), _.push(_);
+        if (typeof _[0] == `string`) ((_ ||= []), _.push(_));
         else for (let _ = 0; _ < _.length; _++) _(_[_]);
       } else for (let _ in _) _(_[_]);
     }
   }
-  return _(_), _;
+  return (_(_), _);
 }
 function _(_, _, _, _) {
   if (_.nodeType == 1)
@@ -2625,7 +2630,7 @@ var _ = 1,
   _ = 8,
   _ = class {
     constructor(_, _, _) {
-      (this.pos = _), (this.delInfo = _), (this.recover = _);
+      ((this.pos = _), (this.delInfo = _), (this.recover = _));
     }
     get deleted() {
       return (this.delInfo & _) > 0;
@@ -2675,7 +2680,7 @@ var _ = 1,
           if (_) return _;
           let _ = _ == (_ < 0 ? _ : _) ? null : _(_ / 3, _ - _),
             _ = _ == _ ? _ : _ == _ ? _ : _;
-          return (_ < 0 ? _ != _ : _ != _) && (_ |= _), new _(_, _, _);
+          return ((_ < 0 ? _ != _ : _ != _) && (_ |= _), new _(_, _, _));
         }
         _ += _ - _;
       }
@@ -2704,7 +2709,7 @@ var _ = 1,
           _ = _ + (this.inverted ? 0 : _),
           _ = this.ranges[_ + _],
           _ = this.ranges[_ + _];
-        _(_, _ + _, _, _ + _), (_ += _ - _);
+        (_(_, _ + _, _, _ + _), (_ += _ - _));
       }
     }
     invert() {
@@ -2720,11 +2725,11 @@ var _ = 1,
 _.empty = new _([]);
 var _ = class _ {
     constructor(_, _, _ = 0, _ = _ ? _.length : 0) {
-      (this.mirror = _),
+      ((this.mirror = _),
         (this.from = _),
         (this._ = _),
         (this._maps = _ || []),
-        (this.ownData = !(_ || _));
+        (this.ownData = !(_ || _)));
     }
     get maps() {
       return this._maps;
@@ -2733,12 +2738,12 @@ var _ = class _ {
       return new _(this._maps, this.mirror, _, _);
     }
     appendMap(_, _) {
-      (this.ownData ||=
+      ((this.ownData ||=
         ((this._maps = this._maps.slice()),
         (this.mirror = this.mirror && this.mirror.slice()),
         !0)),
         (this._ = this._maps.push(_)),
-        _ != null && this.setMirror(this._maps.length - 1, _);
+        _ != null && this.setMirror(this._maps.length - 1, _));
     }
     appendMapping(_) {
       for (let _ = 0, _ = this._maps.length; _ < _._maps.length; _++) {
@@ -2753,7 +2758,7 @@ var _ = class _ {
       }
     }
     setMirror(_, _) {
-      (this.mirror ||= []), this.mirror.push(_, _);
+      ((this.mirror ||= []), this.mirror.push(_, _));
     }
     appendMappingInverted(_) {
       for (
@@ -2770,7 +2775,7 @@ var _ = class _ {
     }
     invert() {
       let _ = new _();
-      return _.appendMappingInverted(this), _;
+      return (_.appendMappingInverted(this), _);
     }
     map(_, _ = 1) {
       if (this.mirror) return this._map(_, _, !0);
@@ -2787,11 +2792,11 @@ var _ = class _ {
         if (_.recover != null) {
           let _ = this.getMirror(_);
           if (_ != null && _ > _ && _ < this._) {
-            (_ = _), (_ = this._maps[_].recover(_.recover));
+            ((_ = _), (_ = this._maps[_].recover(_.recover)));
             continue;
           }
         }
-        (_ |= _.delInfo), (_ = _.pos);
+        ((_ |= _.delInfo), (_ = _.pos));
       }
       return _ ? _ : new _(_, _, null);
     }
@@ -2813,12 +2818,12 @@ var _ = class _ {
     }
     static jsonID(_, _) {
       if (_ in _) throw RangeError(`Duplicate use of step JSON ID ` + _);
-      return (_[_] = _), (_.prototype.jsonID = _), _;
+      return ((_[_] = _), (_.prototype.jsonID = _), _);
     }
   },
   _ = class _ {
     constructor(_, _) {
-      (this.doc = _), (this.failed = _);
+      ((this.doc = _), (this.failed = _));
     }
     static ok(_) {
       return new _(_, null);
@@ -2839,15 +2844,15 @@ function _(_, _, _) {
   let _ = [];
   for (let _ = 0; _ < _.childCount; _++) {
     let _ = _.child(_);
-    _.content.size && (_ = _.copy(_(_.content, _, _))),
+    (_.content.size && (_ = _.copy(_(_.content, _, _))),
       _.isInline && (_ = _(_, _, _)),
-      _.push(_);
+      _.push(_));
   }
   return _.fromArray(_);
 }
 var _ = class _ extends _ {
   constructor(_, _, _) {
-    super(), (this.from = _), (this._ = _), (this.mark = _);
+    (super(), (this.from = _), (this._ = _), (this.mark = _));
   }
   apply(_) {
     let _ = _.slice(this.from, this._),
@@ -2902,7 +2907,7 @@ var _ = class _ extends _ {
 _.jsonID(`addMark`, _);
 var _ = class _ extends _ {
   constructor(_, _, _) {
-    super(), (this.from = _), (this._ = _), (this.mark = _);
+    (super(), (this.from = _), (this._ = _), (this.mark = _));
   }
   apply(_) {
     let _ = _.slice(this.from, this._),
@@ -2948,7 +2953,7 @@ var _ = class _ extends _ {
 _.jsonID(`removeMark`, _);
 var _ = class _ extends _ {
   constructor(_, _) {
-    super(), (this.pos = _), (this.mark = _);
+    (super(), (this.pos = _), (this.mark = _));
   }
   apply(_) {
     let _ = _.nodeAt(this.pos);
@@ -2993,7 +2998,7 @@ var _ = class _ extends _ {
 _.jsonID(`addNodeMark`, _);
 var _ = class _ extends _ {
   constructor(_, _) {
-    super(), (this.pos = _), (this.mark = _);
+    (super(), (this.pos = _), (this.mark = _));
   }
   apply(_) {
     let _ = _.nodeAt(this.pos);
@@ -3032,11 +3037,11 @@ var _ = class _ extends _ {
 _.jsonID(`removeNodeMark`, _);
 var _ = class _ extends _ {
   constructor(_, _, _, _ = !1) {
-    super(),
+    (super(),
       (this.from = _),
       (this._ = _),
       (this.slice = _),
-      (this.structure = _);
+      (this.structure = _));
   }
   apply(_) {
     return this.structure && _(_, this.from, this._)
@@ -3111,14 +3116,14 @@ var _ = class _ extends _ {
 _.jsonID(`replace`, _);
 var _ = class _ extends _ {
   constructor(_, _, _, _, _, _, _ = !1) {
-    super(),
+    (super(),
       (this.from = _),
       (this._ = _),
       (this.gapFrom = _),
       (this.gapTo = _),
       (this.slice = _),
       (this.insert = _),
-      (this.structure = _);
+      (this.structure = _));
   }
   apply(_) {
     if (
@@ -3207,12 +3212,12 @@ function _(_, _, _) {
   let _ = _.resolve(_),
     _ = _ - _,
     _ = _.depth;
-  for (; _ > 0 && _ > 0 && _.indexAfter(_) == _.node(_).childCount; ) _--, _--;
+  for (; _ > 0 && _ > 0 && _.indexAfter(_) == _.node(_).childCount;) (_--, _--);
   if (_ > 0) {
     let _ = _.node(_).maybeChild(_.indexAfter(_));
-    for (; _ > 0; ) {
+    for (; _ > 0;) {
       if (!_ || _.isLeaf) return !0;
-      (_ = _.firstChild), _--;
+      ((_ = _.firstChild), _--);
     }
   }
   return !1;
@@ -3222,7 +3227,7 @@ function _(_, _, _, _) {
     _ = [],
     _,
     _;
-  _.doc.nodesBetween(_, _, (_, _, _) => {
+  (_.doc.nodesBetween(_, _, (_, _, _) => {
     if (!_.isInline) return;
     let _ = _.marks;
     if (!_.isInSet(_) && _.type.allowsMarkType(_.type)) {
@@ -3238,19 +3243,20 @@ function _(_, _, _, _) {
     }
   }),
     _.forEach((_) => _.step(_)),
-    _.forEach((_) => _.step(_));
+    _.forEach((_) => _.step(_)));
 }
 function _(_, _, _, _) {
   let _ = [],
     _ = 0;
-  _.doc.nodesBetween(_, _, (_, _) => {
+  (_.doc.nodesBetween(_, _, (_, _) => {
     if (!_.isInline) return;
     _++;
     let _ = null;
     if (_ instanceof _) {
       let _ = _.marks,
         _;
-      for (; (_ = _.isInSet(_)); ) (_ ||= []).push(_), (_ = _.removeFromSet(_));
+      for (; (_ = _.isInSet(_));)
+        ((_ ||= []).push(_), (_ = _.removeFromSet(_)));
     } else _ ? _.isInSet(_.marks) && (_ = [_]) : (_ = _.marks);
     if (_ && _.length) {
       let _ = Math.min(_ + _.nodeSize, _);
@@ -3272,7 +3278,7 @@ function _(_, _, _, _) {
       }
     }
   }),
-    _.forEach((_) => _.step(new _(_.from, _._, _.style)));
+    _.forEach((_) => _.step(new _(_.from, _._, _.style))));
 }
 function _(_, _, _, _ = _.contentMatch, _ = !0) {
   let _ = _.doc.nodeAt(_),
@@ -3291,13 +3297,13 @@ function _(_, _, _, _ = _.contentMatch, _ = !0) {
         let _,
           _ = /\r?\n|\r/g,
           _;
-        for (; (_ = _.exec(_.text)); )
-          (_ ||= new _(
+        for (; (_ = _.exec(_.text));)
+          ((_ ||= new _(
             _.from(_.schema.text(` `, _.allowedMarks(_.marks))),
             0,
             0,
           )),
-            _.push(new _(_ + _.index, _ + _.index + _[0].length, _));
+            _.push(new _(_ + _.index, _ + _.index + _[0].length, _)));
       }
     }
     _ = _;
@@ -3322,7 +3328,7 @@ function _(_) {
       _ = _.$to.indexAfter(_) - _;
     if (_ < _.depth && _.canReplace(_, _, _)) return _;
     if (_ == 0 || _.type.spec.isolating || !_(_, _, _)) break;
-    _ && (_ = 1), _ < _.childCount && (_ = 1);
+    (_ && (_ = 1), _ < _.childCount && (_ = 1));
   }
   return null;
 }
@@ -3413,8 +3419,8 @@ function _(_, _, _, _, _) {
           _ = !!_.contentMatch.matchType(_.schema.linebreakReplacement);
         _ && !_ ? (_ = !1) : !_ && _ && (_ = !0);
       }
-      _ === !1 && _(_, _, _, _),
-        _(_, _.mapping.slice(_).map(_, 1), _, void 0, _ === null);
+      (_ === !1 && _(_, _, _, _),
+        _(_, _.mapping.slice(_).map(_, 1), _, void 0, _ === null));
       let _ = _.mapping.slice(_),
         _ = _.map(_, 1),
         _ = _.map(_ + _.nodeSize, 1);
@@ -3441,7 +3447,7 @@ function _(_, _, _, _) {
     if (_.isText) {
       let _,
         _ = /\r?\n|\r/g;
-      for (; (_ = _.exec(_.text)); ) {
+      for (; (_ = _.exec(_.text));) {
         let _ = _.mapping.slice(_).map(_ + 1 + _ + _.index);
         _.replaceWith(_, _ + 1, _.type.schema.linebreakReplacement.create());
       }
@@ -3627,11 +3633,11 @@ function _(_, _, _) {
 }
 var _ = class {
   constructor(_, _, _) {
-    (this.$from = _),
+    ((this.$from = _),
       (this.$to = _),
       (this.unplaced = _),
       (this.frontier = []),
-      (this.placed = _.empty);
+      (this.placed = _.empty));
     for (let _ = 0; _ <= _.depth; _++) {
       let _ = _.node(_);
       this.frontier.push({
@@ -3646,7 +3652,7 @@ var _ = class {
     return this.frontier.length - 1;
   }
   fit() {
-    for (; this.unplaced.size; ) {
+    for (; this.unplaced.size;) {
       let _ = this.findFittable();
       _ ? this.placeNodes(_) : this.openMore() || this.dropNode();
     }
@@ -3658,7 +3664,7 @@ var _ = class {
     let _ = this.placed,
       _ = _.depth,
       _ = _.depth;
-    for (; _ && _ && _.childCount == 1; ) (_ = _.firstChild.content), _--, _--;
+    for (; _ && _ && _.childCount == 1;) ((_ = _.firstChild.content), _--, _--);
     let _ = new _(_, _, _);
     return _ > -1
       ? new _(_.pos, _, this.$to.pos, this.$to.end(), _, _)
@@ -3742,7 +3748,7 @@ var _ = class {
     inject: _,
     wrap: _,
   }) {
-    for (; this.depth > _; ) this.closeFrontierNode();
+    for (; this.depth > _;) this.closeFrontierNode();
     if (_) for (let _ = 0; _ < _.length; _++) this.openFrontierNode(_[_]);
     let _ = this.unplaced,
       _ = _ ? _.content : _.content,
@@ -3755,11 +3761,11 @@ var _ = class {
       _ = _.matchFragment(_);
     }
     let _ = _.size + _ - (_.content.size - _.openEnd);
-    for (; _ < _.childCount; ) {
+    for (; _ < _.childCount;) {
       let _ = _.child(_),
         _ = _.matchType(_.type);
       if (!_) break;
-      _++,
+      (_++,
         (_ > 1 || _ == 0 || _.content.size) &&
           ((_ = _),
           _.push(
@@ -3768,10 +3774,10 @@ var _ = class {
               _ == 1 ? _ : 0,
               _ == _.childCount ? _ : -1,
             ),
-          ));
+          )));
     }
     let _ = _ == _.childCount;
-    _ || (_ = -1),
+    (_ || (_ = -1),
       (this.placed = _(this.placed, _, _.from(_))),
       (this.frontier[_].match = _),
       _ &&
@@ -3779,14 +3785,14 @@ var _ = class {
         _ &&
         _.type == this.frontier[this.depth].type &&
         this.frontier.length > 1 &&
-        this.closeFrontierNode();
+        this.closeFrontierNode());
     for (let _ = 0, _ = _; _ < _; _++) {
       let _ = _.lastChild;
-      this.frontier.push({
+      (this.frontier.push({
         type: _.type,
         match: _.contentMatchAt(_.childCount),
       }),
-        (_ = _.content);
+        (_ = _.content));
     }
     this.unplaced = _
       ? _ == 0
@@ -3808,7 +3814,7 @@ var _ = class {
       return -1;
     let { depth: _ } = this.$to,
       _ = this.$to.after(_);
-    for (; _ > 1 && _ == this.$to.end(--_); ) ++_;
+    for (; _ > 1 && _ == this.$to.end(--_);) ++_;
     return _;
   }
   findCloseLevel(_) {
@@ -3833,9 +3839,9 @@ var _ = class {
   close(_) {
     let _ = this.findCloseLevel(_);
     if (!_) return null;
-    for (; this.depth > _.depth; ) this.closeFrontierNode();
-    _.fit.childCount && (this.placed = _(this.placed, _.depth, _.fit)),
-      (_ = _.move);
+    for (; this.depth > _.depth;) this.closeFrontierNode();
+    (_.fit.childCount && (this.placed = _(this.placed, _.depth, _.fit)),
+      (_ = _.move));
     for (let _ = _.depth + 1; _ <= _.depth; _++) {
       let _ = _.node(_),
         _ = _.type.contentMatch.fillBefore(_.content, !0, _.index(_));
@@ -3845,12 +3851,12 @@ var _ = class {
   }
   openFrontierNode(_, _ = null, _) {
     let _ = this.frontier[this.depth];
-    (_.match = _.match.matchType(_)),
+    ((_.match = _.match.matchType(_)),
       (this.placed = _(this.placed, this.depth, _.from(_.create(_, _)))),
       this.frontier.push({
         type: _,
         match: _.contentMatch,
-      });
+      }));
   }
   closeFrontierNode() {
     let _ = this.frontier.pop().match.fillBefore(_.empty, !0);
@@ -4033,7 +4039,7 @@ function _(_, _) {
 }
 var _ = class _ extends _ {
   constructor(_, _, _) {
-    super(), (this.pos = _), (this.attr = _), (this.value = _);
+    (super(), (this.pos = _), (this.attr = _), (this.value = _));
   }
   apply(_) {
     let _ = _.nodeAt(this.pos);
@@ -4076,7 +4082,7 @@ var _ = class _ extends _ {
 _.jsonID(`attr`, _);
 var _ = class _ extends _ {
   constructor(_, _) {
-    super(), (this.attr = _), (this.value = _);
+    (super(), (this.attr = _), (this.value = _));
   }
   apply(_) {
     let _ = Object.create(null);
@@ -4109,19 +4115,19 @@ var _ = class _ extends _ {
 };
 _.jsonID(`docAttr`, _);
 var _ = class extends Error {};
-(_ = function _(_) {
+((_ = function _(_) {
   let _ = Error.call(this, _);
-  return (_.__proto__ = _.prototype), _;
+  return ((_.__proto__ = _.prototype), _);
 }),
   (_.prototype = Object.create(Error.prototype)),
   (_.prototype.constructor = _),
-  (_.prototype.name = `TransformError`);
+  (_.prototype.name = `TransformError`));
 var _ = class {
     constructor(_) {
-      (this.doc = _),
+      ((this.doc = _),
         (this.steps = []),
         (this.docs = []),
-        (this.mapping = new _());
+        (this.mapping = new _()));
     }
     get before() {
       return this.docs.length ? this.docs[0] : this.doc;
@@ -4133,20 +4139,20 @@ var _ = class {
     }
     maybeStep(_) {
       let _ = _.apply(this.doc);
-      return _.failed || this.addStep(_, _.doc), _;
+      return (_.failed || this.addStep(_, _.doc), _);
     }
     get docChanged() {
       return this.steps.length > 0;
     }
     addStep(_, _) {
-      this.docs.push(this.doc),
+      (this.docs.push(this.doc),
         this.steps.push(_),
         this.mapping.appendMap(_.getMap()),
-        (this.doc = _);
+        (this.doc = _));
     }
     replace(_, _ = _, _ = _.empty) {
       let _ = _(this.doc, _, _, _);
-      return _ && this.step(_), this;
+      return (_ && this.step(_), this);
     }
     replaceWith(_, _, _) {
       return this.replace(_, _, new _(_.from(_), 0, 0));
@@ -4158,37 +4164,37 @@ var _ = class {
       return this.replaceWith(_, _, _);
     }
     replaceRange(_, _, _) {
-      return _(this, _, _, _), this;
+      return (_(this, _, _, _), this);
     }
     replaceRangeWith(_, _, _) {
-      return _(this, _, _, _), this;
+      return (_(this, _, _, _), this);
     }
     deleteRange(_, _) {
-      return _(this, _, _), this;
+      return (_(this, _, _), this);
     }
     lift(_, _) {
-      return _(this, _, _), this;
+      return (_(this, _, _), this);
     }
     join(_, _ = 1) {
-      return _(this, _, _), this;
+      return (_(this, _, _), this);
     }
     wrap(_, _) {
-      return _(this, _, _), this;
+      return (_(this, _, _), this);
     }
     setBlockType(_, _ = _, _, _ = null) {
-      return _(this, _, _, _, _), this;
+      return (_(this, _, _, _, _), this);
     }
     setNodeMarkup(_, _, _ = null, _) {
-      return _(this, _, _, _, _), this;
+      return (_(this, _, _, _, _), this);
     }
     setNodeAttribute(_, _, _) {
-      return this.step(new _(_, _, _)), this;
+      return (this.step(new _(_, _, _)), this);
     }
     setDocAttribute(_, _) {
-      return this.step(new _(_, _)), this;
+      return (this.step(new _(_, _)), this);
     }
     addNodeMark(_, _) {
-      return this.step(new _(_, _)), this;
+      return (this.step(new _(_, _)), this);
     }
     removeNodeMark(_, _) {
       let _ = this.doc.nodeAt(_);
@@ -4198,31 +4204,31 @@ var _ = class {
         let _ = _.marks,
           _,
           _ = [];
-        for (; (_ = _.isInSet(_)); )
-          _.push(new _(_, _)), (_ = _.removeFromSet(_));
+        for (; (_ = _.isInSet(_));)
+          (_.push(new _(_, _)), (_ = _.removeFromSet(_)));
         for (let _ = _.length - 1; _ >= 0; _--) this.step(_[_]);
       }
       return this;
     }
     split(_, _ = 1, _) {
-      return _(this, _, _, _), this;
+      return (_(this, _, _, _), this);
     }
     addMark(_, _, _) {
-      return _(this, _, _, _), this;
+      return (_(this, _, _, _), this);
     }
     removeMark(_, _, _) {
-      return _(this, _, _, _), this;
+      return (_(this, _, _, _), this);
     }
     clearIncompatible(_, _, _) {
-      return _(this, _, _, _), this;
+      return (_(this, _, _, _), this);
     }
   },
   _ = Object.create(null),
   _ = class {
     constructor(_, _, _) {
-      (this.$anchor = _),
+      ((this.$anchor = _),
         (this.$head = _),
-        (this.ranges = _ || [new _(_.min(_), _.max(_))]);
+        (this.ranges = _ || [new _(_.min(_), _.max(_))]));
     }
     get anchor() {
       return this.$anchor.pos;
@@ -4254,14 +4260,14 @@ var _ = class {
     replace(_, _ = _.empty) {
       let _ = _.content.lastChild,
         _ = null;
-      for (let _ = 0; _ < _.openEnd; _++) (_ = _), (_ = _.lastChild);
+      for (let _ = 0; _ < _.openEnd; _++) ((_ = _), (_ = _.lastChild));
       let _ = _.steps.length,
         _ = this.ranges;
       for (let _ = 0; _ < _.length; _++) {
         let { $from: _, $to: _ } = _[_],
           _ = _.mapping.slice(_);
-        _.replaceRange(_.map(_.pos), _.map(_.pos), _ ? _.empty : _),
-          _ == 0 && _(_, _, (_ ? _.isInline : _ && _.isTextblock) ? -1 : 1);
+        (_.replaceRange(_.map(_.pos), _.map(_.pos), _ ? _.empty : _),
+          _ == 0 && _(_, _, (_ ? _.isInline : _ && _.isTextblock) ? -1 : 1));
       }
     }
     replaceWith(_, _) {
@@ -4309,7 +4315,7 @@ var _ = class {
     }
     static jsonID(_, _) {
       if (_ in _) throw RangeError(`Duplicate use of selection JSON ID ` + _);
-      return (_[_] = _), (_.prototype.jsonID = _), _;
+      return ((_[_] = _), (_.prototype.jsonID = _), _);
     }
     getBookmark() {
       return _.between(this.$anchor, this.$head).getBookmark();
@@ -4318,7 +4324,7 @@ var _ = class {
 _.prototype.visible = !0;
 var _ = class {
     constructor(_, _) {
-      (this.$from = _), (this.$to = _);
+      ((this.$from = _), (this.$to = _));
     }
   },
   _ = !1;
@@ -4334,7 +4340,7 @@ function _(_) {
 }
 var _ = class _ extends _ {
   constructor(_, _ = _) {
-    _(_), _(_), super(_, _);
+    (_(_), _(_), super(_, _));
   }
   get $cursor() {
     return this.$anchor.pos == this.$head.pos ? this.$head : null;
@@ -4393,7 +4399,7 @@ var _ = class _ extends _ {
 _.jsonID(`text`, _);
 var _ = class _ {
     constructor(_, _) {
-      (this.anchor = _), (this.head = _);
+      ((this.anchor = _), (this.head = _));
     }
     map(_) {
       return new _(_.map(this.anchor), _.map(this.head));
@@ -4406,7 +4412,7 @@ var _ = class _ {
     constructor(_) {
       let _ = _.nodeAfter,
         _ = _.node(0).resolve(_.pos + _.nodeSize);
-      super(_, _), (this.node = _);
+      (super(_, _), (this.node = _));
     }
     map(_, _) {
       let { deleted: _, pos: _ } = _.mapResult(this.anchor),
@@ -4440,7 +4446,7 @@ var _ = class _ {
       return !_.isText && _.type.spec.selectable !== !1;
     }
   };
-(_.prototype.visible = !1), _.jsonID(`node`, _);
+((_.prototype.visible = !1), _.jsonID(`node`, _));
 var _ = class _ {
     constructor(_) {
       this.anchor = _;
@@ -4513,23 +4519,23 @@ function _(_, _, _) {
   if (!(_ instanceof _ || _ instanceof _)) return;
   let _ = _.mapping.maps[_],
     _;
-  _.forEach((_, _, _, _) => {
+  (_.forEach((_, _, _, _) => {
     _ ??= _;
   }),
-    _.setSelection(_.near(_.doc.resolve(_), _));
+    _.setSelection(_.near(_.doc.resolve(_), _)));
 }
 var _ = 1,
   _ = 2,
   _ = 4,
   _ = class extends _ {
     constructor(_) {
-      super(_.doc),
+      (super(_.doc),
         (this.curSelectionFor = 0),
         (this.updated = 0),
         (this.meta = Object.create(null)),
         (this.time = Date.now()),
         (this.curSelection = _.selection),
-        (this.storedMarks = _.storedMarks);
+        (this.storedMarks = _.storedMarks));
     }
     get selection() {
       return (
@@ -4559,7 +4565,7 @@ var _ = 1,
       return (this.updated & _) > 0;
     }
     setStoredMarks(_) {
-      return (this.storedMarks = _), (this.updated |= _), this;
+      return ((this.storedMarks = _), (this.updated |= _), this);
     }
     ensureMarks(_) {
       return (
@@ -4582,13 +4588,13 @@ var _ = 1,
       return (this.updated & _) > 0;
     }
     addStep(_, _) {
-      super.addStep(_, _), (this.updated &= -3), (this.storedMarks = null);
+      (super.addStep(_, _), (this.updated &= -3), (this.storedMarks = null));
     }
     setTime(_) {
-      return (this.time = _), this;
+      return ((this.time = _), this);
     }
     replaceSelection(_) {
-      return this.selection.replace(this, _), this;
+      return (this.selection.replace(this, _), this);
     }
     replaceSelectionWith(_, _ = !0) {
       let _ = this.selection;
@@ -4605,7 +4611,7 @@ var _ = 1,
       );
     }
     deleteSelection() {
-      return this.selection.replace(this), this;
+      return (this.selection.replace(this), this);
     }
     insertText(_, _, _) {
       let _ = this.doc.type.schema;
@@ -4628,7 +4634,7 @@ var _ = 1,
       }
     }
     setMeta(_, _) {
-      return (this.meta[typeof _ == `string` ? _ : _.key] = _), this;
+      return ((this.meta[typeof _ == `string` ? _ : _.key] = _), this);
     }
     getMeta(_) {
       return this.meta[typeof _ == `string` ? _ : _.key];
@@ -4638,7 +4644,7 @@ var _ = 1,
       return !0;
     }
     scrollIntoView() {
-      return (this.updated |= _), this;
+      return ((this.updated |= _), this);
     }
     get scrolledIntoView() {
       return (this.updated & _) > 0;
@@ -4649,7 +4655,9 @@ function _(_, _) {
 }
 var _ = class {
     constructor(_, _, _) {
-      (this.name = _), (this.init = _(_.init, _)), (this.apply = _(_.apply, _));
+      ((this.name = _),
+        (this.init = _(_.init, _)),
+        (this.apply = _(_.apply, _)));
     }
   },
   _ = [
@@ -4688,7 +4696,7 @@ var _ = class {
   ],
   _ = class {
     constructor(_, _) {
-      (this.schema = _),
+      ((this.schema = _),
         (this.plugins = []),
         (this.pluginsByKey = Object.create(null)),
         (this.fields = _.slice()),
@@ -4698,10 +4706,10 @@ var _ = class {
               throw RangeError(
                 `Adding different instances of a keyed plugin (` + _.key + `)`,
               );
-            this.plugins.push(_),
+            (this.plugins.push(_),
               (this.pluginsByKey[_.key] = _),
-              _.spec.state && this.fields.push(new _(_.key, _.spec.state, _));
-          });
+              _.spec.state && this.fields.push(new _(_.key, _.spec.state, _)));
+          }));
     }
   },
   _ = class _ {
@@ -4764,7 +4772,7 @@ var _ = class {
                         },
                   );
               }
-              _.push(_), (_ = _.applyInner(_)), (_ = !0);
+              (_.push(_), (_ = _.applyInner(_)), (_ = !0));
             }
             _ &&
               (_[_] = {
@@ -4870,19 +4878,19 @@ var _ = class {
 function _(_, _, _) {
   for (let _ in _) {
     let _ = _[_];
-    _ instanceof Function
+    (_ instanceof Function
       ? (_ = _.bind(_))
       : _ == `handleDOMEvents` && (_ = _(_, _, {})),
-      (_[_] = _);
+      (_[_] = _));
   }
   return _;
 }
 var _ = class {
     constructor(_) {
-      (this.spec = _),
+      ((this.spec = _),
         (this.props = {}),
         _.props && _(_.props, this, this.props),
-        (this.key = _.key ? _.key.key : _(`plugin`));
+        (this.key = _.key ? _.key.key : _(`plugin`)));
     }
     getState(_) {
       return _[this.key];
@@ -4929,12 +4937,12 @@ var _ = (_, _, _) => {
     if (_ && _.slice.size < _._ - _.from) {
       if (_) {
         let _ = _._.step(_);
-        _.setSelection(
+        (_.setSelection(
           _(_, `end`)
             ? _.findFrom(_.doc.resolve(_.mapping.map(_.pos, -1)), -1)
             : _.create(_.doc, _.pos - _.nodeSize),
         ),
-          _(_.scrollIntoView());
+          _(_.scrollIntoView()));
       }
       return !0;
     }
@@ -4998,12 +5006,12 @@ var _ = (_, _, _) => {
       if (_ && _.slice.size < _._ - _.from) {
         if (_) {
           let _ = _._.step(_);
-          _.setSelection(
+          (_.setSelection(
             _(_, `start`)
               ? _.findFrom(_.doc.resolve(_.mapping.map(_.pos)), 1)
               : _.create(_.doc, _.mapping.map(_.pos)),
           ),
-            _(_.scrollIntoView());
+            _(_.scrollIntoView()));
         }
         return !0;
       }
@@ -5067,7 +5075,7 @@ var _ = (_, _) => {
     if (_) {
       let _ = _.after(),
         _ = _._.replaceWith(_, _, _.createAndFill());
-      _.setSelection(_.near(_.doc.resolve(_), 1)), _(_.scrollIntoView());
+      (_.setSelection(_.near(_.doc.resolve(_), 1)), _(_.scrollIntoView()));
     }
     return !0;
   },
@@ -5081,7 +5089,7 @@ var _ = (_, _) => {
     if (_) {
       let _ = (!_.parentOffset && _.index() < _.parent.childCount ? _ : _).pos,
         _ = _._.insert(_, _.createAndFill());
-      _.setSelection(_.create(_.doc, _ + 1)), _(_.scrollIntoView());
+      (_.setSelection(_.create(_.doc, _ + 1)), _(_.scrollIntoView()));
     }
     return !0;
   },
@@ -5090,7 +5098,7 @@ var _ = (_, _) => {
     if (!_ || _.parent.content.size) return !1;
     if (_.depth > 1 && _.after() != _.end(-1)) {
       let _ = _.before();
-      if (_(_.doc, _)) return _ && _(_._.split(_).scrollIntoView()), !0;
+      if (_(_.doc, _)) return (_ && _(_._.split(_).scrollIntoView()), !0);
     }
     let _ = _.blockRange(),
       _ = _ && _(_);
@@ -5214,7 +5222,7 @@ function _(_, _, _) {
           new _(_.pos - 1, _, _.pos, _, new _(_, 1, 0), _.length, !0),
         ),
         _ = _ + 2 * _.length;
-      _(_.doc, _) && _.join(_), _(_.scrollIntoView());
+      (_(_.doc, _) && _.join(_), _(_.scrollIntoView()));
     }
     return !0;
   }
@@ -5222,11 +5230,11 @@ function _(_, _, _) {
     _ = _ && _.$from.blockRange(_.$to),
     _ = _ && _(_);
   if (_ != null && _ >= _.depth)
-    return _ && _(_._.lift(_, _).scrollIntoView()), !0;
+    return (_ && _(_._.lift(_, _).scrollIntoView()), !0);
   if (_ && _(_, `start`, !0) && _(_, `end`)) {
     let _ = _,
       _ = [];
-    for (; _.push(_), !_.isTextblock; ) _ = _.lastChild;
+    for (; _.push(_), !_.isTextblock;) _ = _.lastChild;
     let _ = _,
       _ = 1;
     for (; !_.isTextblock; _ = _.firstChild) _++;
@@ -5258,7 +5266,7 @@ function _(_) {
     let _ = _.selection,
       _ = _ < 0 ? _.$from : _.$to,
       _ = _.depth;
-    for (; _.node(_).isInline; ) {
+    for (; _.node(_).isInline;) {
       if (!_) return !1;
       _--;
     }
@@ -5347,7 +5355,7 @@ function _(_, _ = null) {
               _ = _.nodeBefore,
               _ = _ && _.isText ? /^\s*/.exec(_.text)[0].length : 0,
               _ = _ && _.isText ? /\s*$/.exec(_.text)[0].length : 0;
-            _ + _ < _ && ((_ += _), (_ -= _)), _.addMark(_, _, _.create(_));
+            (_ + _ < _ && ((_ += _), (_ -= _)), _.addMark(_, _, _.create(_)));
           }
         }
         _(_.scrollIntoView());
@@ -5394,7 +5402,7 @@ var _ = (
     : _,
   _ = 200,
   _ = function () {};
-(_.prototype.append = function (_) {
+((_.prototype.append = function (_) {
   return _.length
     ? ((_ = _.from(_)),
       (!this.length && _) ||
@@ -5422,14 +5430,14 @@ var _ = (
     if (!(_ < 0 || _ >= this.length)) return this.getInner(_);
   }),
   (_.prototype.forEach = function (_, _, _) {
-    _ === void 0 && (_ = 0),
+    (_ === void 0 && (_ = 0),
       _ === void 0 && (_ = this.length),
       _ <= _
         ? this.forEachInner(_, _, _, 0)
-        : this.forEachInvertedInner(_, _, _, 0);
+        : this.forEachInvertedInner(_, _, _, 0));
   }),
   (_.prototype.map = function (_, _, _) {
-    _ === void 0 && (_ = 0), _ === void 0 && (_ = this.length);
+    (_ === void 0 && (_ = 0), _ === void 0 && (_ = this.length));
     var _ = [];
     return (
       this.forEach(
@@ -5444,14 +5452,14 @@ var _ = (
   }),
   (_.from = function (_) {
     return _ instanceof _ ? _ : _ && _.length ? new _(_) : _.empty;
-  });
+  }));
 var _ = (function (_) {
   function _(_) {
-    _.call(this), (this.values = _);
+    (_.call(this), (this.values = _));
   }
-  _ && (_.__proto__ = _),
+  (_ && (_.__proto__ = _),
     (_.prototype = Object.create(_ && _.prototype)),
-    (_.prototype.constructor = _);
+    (_.prototype.constructor = _));
   var _ = {
     length: {
       configurable: !0,
@@ -5499,11 +5507,11 @@ var _ = (function (_) {
 _.empty = new _([]);
 var _ = (function (_) {
     function _(_, _) {
-      _.call(this),
+      (_.call(this),
         (this.left = _),
         (this.right = _),
         (this.length = _.length + _.length),
-        (this.depth = Math.max(_.depth, _.depth) + 1);
+        (this.depth = Math.max(_.depth, _.depth) + 1));
     }
     return (
       _ && (_.__proto__ = _),
@@ -5574,7 +5582,7 @@ var _ = (function (_) {
   _ = 500,
   _ = class _ {
     constructor(_, _) {
-      (this.items = _), (this.eventCount = _);
+      ((this.items = _), (this.eventCount = _));
     }
     popEvent(_, _) {
       if (this.eventCount == 0) return null;
@@ -5595,20 +5603,20 @@ var _ = (function (_) {
         this.items.forEach(
           (_, _) => {
             if (!_.step)
-              _ || ((_ = this.remapping(_, _ + 1)), (_ = _.maps.length)),
+              (_ || ((_ = this.remapping(_, _ + 1)), (_ = _.maps.length)),
                 _--,
-                _.push(_);
+                _.push(_));
             else {
               if (_) {
                 _.push(new _(_.map));
                 let _ = _.step.map(_.slice(_)),
                   _;
-                _ &&
+                (_ &&
                   _.maybeStep(_).doc &&
                   ((_ = _.mapping.maps[_.mapping.maps.length - 1]),
                   _.push(new _(_, void 0, void 0, _.length + _.length))),
                   _--,
-                  _ && _.appendMap(_, _);
+                  _ && _.appendMap(_, _));
               } else _.maybeStep(_.step);
               if (_.selection)
                 return (
@@ -5640,14 +5648,14 @@ var _ = (function (_) {
         let _ = _.steps[_].invert(_.docs[_]),
           _ = new _(_.mapping.maps[_], _, _),
           _;
-        (_ = _ && _.merge(_)) &&
+        ((_ = _ && _.merge(_)) &&
           ((_ = _), _ ? _.pop() : (_ = _.slice(0, _.length - 1))),
           _.push(_),
           (_ &&= (_++, void 0)),
-          _ || (_ = _);
+          _ || (_ = _));
       }
       let _ = _ - _.depth;
-      return _ > _ && ((_ = _(_, _)), (_ -= _)), new _(_.append(_), _);
+      return (_ > _ && ((_ = _(_, _)), (_ -= _)), new _(_.append(_), _));
     }
     remapping(_, _) {
       let _ = new _();
@@ -5690,7 +5698,7 @@ var _ = (function (_) {
         if (_.step) {
           let _ = _.steps[_].invert(_.docs[_]),
             _ = _.selection && _.selection.map(_.slice(_ + 1, _));
-          _ && _++, _.push(new _(_, _, _));
+          (_ && _++, _.push(new _(_, _, _)));
         } else _.push(new _(_));
       }, _);
       let _ = [];
@@ -5720,7 +5728,7 @@ var _ = (function (_) {
       return (
         this.items.forEach(
           (_, _) => {
-            if (_ >= _) _.push(_), _.selection && _++;
+            if (_ >= _) (_.push(_), _.selection && _++);
             else if (_.step) {
               let _ = _.step.map(_.slice(_)),
                 _ = _ && _.getMap();
@@ -5746,17 +5754,17 @@ function _(_, _) {
   let _;
   return (
     _.forEach((_, _) => {
-      if (_.selection && _-- == 0) return (_ = _), !1;
+      if (_.selection && _-- == 0) return ((_ = _), !1);
     }),
     _.slice(_)
   );
 }
 var _ = class _ {
     constructor(_, _, _, _) {
-      (this.map = _),
+      ((this.map = _),
         (this.step = _),
         (this.selection = _),
-        (this.mirrorOffset = _);
+        (this.mirrorOffset = _));
     }
     merge(_) {
       if (this.step && _.step && !_.selection) {
@@ -5767,11 +5775,11 @@ var _ = class _ {
   },
   _ = class {
     constructor(_, _, _, _, _) {
-      (this.done = _),
+      ((this.done = _),
         (this.undone = _),
         (this.prevRanges = _),
         (this.prevTime = _),
-        (this.prevComposition = _);
+        (this.prevComposition = _));
     }
   },
   _ = 20;
@@ -5850,7 +5858,7 @@ function _(_, _) {
 }
 function _(_) {
   let _ = [];
-  return _.forEach((_, _, _, _) => _.push(_, _)), _;
+  return (_.forEach((_, _, _, _) => _.push(_, _)), _);
 }
 function _(_, _) {
   if (!_) return null;
@@ -5885,7 +5893,7 @@ var _ = !1,
 function _(_) {
   let _ = _.plugins;
   if (_ != _) {
-    (_ = !1), (_ = _);
+    ((_ = !1), (_ = _));
     for (let _ = 0; _ < _.length; _++)
       if (_[_].spec.historyPreserveItems) {
         _ = !0;
@@ -5940,11 +5948,11 @@ var _ = _(!1, !0),
   _ = _(!0, !0),
   _ = class {
     constructor(_, _, _ = {}) {
-      (this.match = _),
+      ((this.match = _),
         (this.match = _),
         (this.handler = typeof _ == `string` ? _(_) : _),
         (this.undoable = _.undoable !== !1),
-        (this.inCode = _.inCode || !1);
+        (this.inCode = _.inCode || !1));
     }
   };
 function _(_) {
@@ -5952,7 +5960,7 @@ function _(_) {
     let _ = _;
     if (_[1]) {
       let _ = _[0].lastIndexOf(_[1]);
-      (_ += _[0].slice(_ + _[1].length)), (_ += _);
+      ((_ += _[0].slice(_ + _[1].length)), (_ += _));
       let _ = _ - _;
       _ > 0 && ((_ = _[0].slice(_ - _, _) + _), (_ = _));
     }
@@ -6042,12 +6050,12 @@ var _ = (_, _) => {
   }
   return !1;
 };
-new _(/--$/, `—`),
+(new _(/--$/, `—`),
   new _(/\.\.\.$/, `…`),
   new _(/(?:^|[\s\{\[\(\<'"\u2018\u201C])(")$/, `“`),
   new _(/"$/, `”`),
   new _(/(?:^|[\s\{\[\(\<'"\u2018\u201C])(')$/, `‘`),
-  new _(/'$/, `’`);
+  new _(/'$/, `’`));
 function _(_, _, _ = null, _) {
   return new _(_, (_, _, _, _) => {
     let _ = _ instanceof Function ? _(_) : _,
@@ -6081,7 +6089,7 @@ var _ = function (_) {
   _ = null,
   _ = function (_, _, _) {
     let _ = (_ ||= document.createRange());
-    return _.setEnd(_, _ ?? _.nodeValue.length), _.setStart(_, _ || 0), _;
+    return (_.setEnd(_, _ ?? _.nodeValue.length), _.setStart(_, _ || 0), _);
   },
   _ = function () {
     _ = null;
@@ -6103,13 +6111,13 @@ function _(_, _, _, _, _) {
         _.contentEditable == `false`
       )
         return !1;
-      (_ = _(_) + (_ < 0 ? 0 : 1)), (_ = _);
+      ((_ = _(_) + (_ < 0 ? 0 : 1)), (_ = _));
     } else if (_(_)) {
       let _ = _.childNodes[_ + (_ < 0 ? -1 : 0)];
       if (_(_) && _.contentEditable == `false`) {
         if (_.pmViewDesc?.ignoreForSelection) _ += _;
         else return !1;
-      } else (_ = _), (_ = _ < 0 ? _(_) : 0);
+      } else ((_ = _), (_ = _ < 0 ? _(_) : 0));
     } else return !1;
   }
 }
@@ -6130,8 +6138,8 @@ function _(_, _) {
     if (_(_) && _) return _;
     if (_(_) && _ > 0) {
       if (_.contentEditable == `false`) return null;
-      (_ = _.childNodes[_ - 1]), (_ = _(_));
-    } else if (_.parentNode && !_(_)) (_ = _(_)), (_ = _.parentNode);
+      ((_ = _.childNodes[_ - 1]), (_ = _(_)));
+    } else if (_.parentNode && !_(_)) ((_ = _(_)), (_ = _.parentNode));
     else return null;
   }
 }
@@ -6140,17 +6148,17 @@ function _(_, _) {
     if (_(_) && _ < _.nodeValue.length) return _;
     if (_(_) && _ < _.childNodes.length) {
       if (_.contentEditable == `false`) return null;
-      (_ = _.childNodes[_]), (_ = 0);
-    } else if (_.parentNode && !_(_)) (_ = _(_) + 1), (_ = _.parentNode);
+      ((_ = _.childNodes[_]), (_ = 0));
+    } else if (_.parentNode && !_(_)) ((_ = _(_) + 1), (_ = _.parentNode));
     else return null;
   }
 }
 function _(_, _, _) {
-  for (let _ = _ == 0, _ = _ == _(_); _ || _; ) {
+  for (let _ = _ == 0, _ = _ == _(_); _ || _;) {
     if (_ == _) return !0;
     let _ = _(_);
     if (((_ = _.parentNode), !_)) return !1;
-    (_ &&= _ == 0), (_ &&= _ == _(_));
+    ((_ &&= _ == 0), (_ &&= _ == _(_)));
   }
 }
 function _(_) {
@@ -6171,7 +6179,7 @@ function _(_, _) {
 }
 function _(_) {
   let _ = _.activeElement;
-  for (; _ && _.shadowRoot; ) _ = _.shadowRoot.activeElement;
+  for (; _ && _.shadowRoot;) _ = _.shadowRoot.activeElement;
   return _;
 }
 function _(_, _, _) {
@@ -6248,7 +6256,7 @@ function _(_, _, _) {
   let _ = _.someProp(`scrollThreshold`) || 0,
     _ = _.someProp(`scrollMargin`) || 5,
     _ = _.dom.ownerDocument;
-  for (let _ = _ || _.dom; _; ) {
+  for (let _ = _ || _.dom; _;) {
     if (!_(_)) {
       _ = _(_);
       continue;
@@ -6275,7 +6283,7 @@ function _(_, _, _) {
       else {
         let _ = _.scrollLeft,
           _ = _.scrollTop;
-        _ && (_.scrollTop += _), _ && (_.scrollLeft += _);
+        (_ && (_.scrollTop += _), _ && (_.scrollLeft += _));
         let _ = _.scrollLeft - _,
           _ = _.scrollTop - _;
         _ = {
@@ -6305,7 +6313,7 @@ function _(_) {
     if (!_ || _ == _.dom || !_.dom.contains(_)) continue;
     let _ = _.getBoundingClientRect();
     if (_.top >= _ - 20) {
-      (_ = _), (_ = _.top);
+      ((_ = _), (_ = _.top));
       break;
     }
   }
@@ -6338,8 +6346,8 @@ function _({ refDOM: _, refTop: _, stack: _ }) {
 function _(_, _) {
   for (let _ = 0; _ < _.length; _++) {
     let { dom: _, top: _, left: _ } = _[_];
-    _.scrollTop != _ + _ && (_.scrollTop = _ + _),
-      _.scrollLeft != _ && (_.scrollLeft = _);
+    (_.scrollTop != _ + _ && (_.scrollTop = _ + _),
+      _.scrollLeft != _ && (_.scrollLeft = _));
   }
 }
 var _ = null;
@@ -6347,7 +6355,7 @@ function _(_) {
   if (_.setActive) return _.setActive();
   if (_) return _.focus(_);
   let _ = _(_);
-  _.focus(
+  (_.focus(
     _ == null
       ? {
           get preventScroll() {
@@ -6361,7 +6369,7 @@ function _(_) {
         }
       : void 0,
   ),
-    _ || ((_ = !1), _(_, 0));
+    _ || ((_ = !1), _(_, 0)));
 }
 function _(_, _) {
   let _,
@@ -6380,7 +6388,7 @@ function _(_, _) {
     for (let _ = 0; _ < _.length; _++) {
       let _ = _[_];
       if (_.top <= _ && _.bottom >= _) {
-        (_ = Math.max(_.bottom, _)), (_ = Math.min(_.top, _));
+        ((_ = Math.max(_.bottom, _)), (_ = Math.min(_.top, _)));
         let _ =
           _.left > _.left
             ? _.left - _.left
@@ -6388,7 +6396,7 @@ function _(_, _) {
               ? _.left - _.right
               : 0;
         if (_ < _) {
-          (_ = _),
+          ((_ = _),
             (_ = _),
             (_ =
               _ && _(_)
@@ -6397,7 +6405,7 @@ function _(_, _) {
                     top: _.top,
                   }
                 : _),
-            _(_) && _ && (_ = _ + +(_.left >= (_.left + _.right) / 2));
+            _(_) && _ && (_ = _ + +(_.left >= (_.left + _.right) / 2)));
           continue;
         }
       } else
@@ -6433,7 +6441,7 @@ function _(_, _) {
     _ = document.createRange(),
     _;
   for (let _ = 0; _ < _; _++) {
-    _.setEnd(_, _ + 1), _.setStart(_, _);
+    (_.setEnd(_, _ + 1), _.setStart(_, _));
     let _ = _(_, 1);
     if (_.top != _.bottom && _(_, _)) {
       _ = {
@@ -6478,7 +6486,7 @@ function _(_, _, _) {
 }
 function _(_, _, _, _) {
   let _ = -1;
-  for (let _ = _, _ = !1; _ != _.dom; ) {
+  for (let _ = _, _ = !1; _ != _.dom;) {
     let _ = _.docView.nearestDesc(_, !0),
       _;
     if (!_) return null;
@@ -6562,7 +6570,7 @@ function _(_, _) {
         _++;
     }
     let _;
-    _ &&
+    (_ &&
       _ &&
       _(_) &&
       _((_ = _.childNodes[_ - 1])) &&
@@ -6575,7 +6583,7 @@ function _(_, _) {
       _.top > _.lastChild.getBoundingClientRect().bottom
         ? (_ = _.state.doc.content.size)
         : (_ != 0 && _(_) && _.childNodes[_ - 1].nodeName == `BR`) ||
-          (_ = _(_, _, _, _));
+          (_ = _(_, _, _, _)));
   }
   _ ??= _(_, _, _);
   let _ = _.docView.nearestDesc(_, !0);
@@ -6649,7 +6657,7 @@ function _(_, _, _) {
   }
   if (_ == null && _ < _(_)) {
     let _ = _.childNodes[_];
-    for (; _.pmViewDesc && _.pmViewDesc.ignoreForCoords; ) _ = _.nextSibling;
+    for (; _.pmViewDesc && _.pmViewDesc.ignoreForCoords;) _ = _.nextSibling;
     let _ = _ ? (_(_) ? _(_, 0, +!_) : _(_) ? _ : null) : null;
     if (_) return _(_(_, -1), !0);
   }
@@ -6678,11 +6686,11 @@ function _(_, _) {
 function _(_, _, _) {
   let _ = _.state,
     _ = _.root.activeElement;
-  _ != _ && _.updateState(_), _ != _.dom && _.focus();
+  (_ != _ && _.updateState(_), _ != _.dom && _.focus());
   try {
     return _();
   } finally {
-    _ != _ && _.updateState(_), _ != _.dom && _ && _.focus();
+    (_ != _ && _.updateState(_), _ != _.dom && _ && _.focus());
   }
 }
 function _(_, _, _) {
@@ -6745,10 +6753,10 @@ function _(_, _, _) {
             { focusNode: _, focusOffset: _ } = _.domSelectionRange(),
             _ = (_ && !_(_, _)) || (_ == _ && _ == _);
           try {
-            _.collapse(_, _),
-              _ && (_ != _ || _ != _) && _.extend && _.extend(_, _);
+            (_.collapse(_, _),
+              _ && (_ != _ || _ != _) && _.extend && _.extend(_, _));
           } catch {}
-          return _ != null && (_.caretBidiLevel = _), _;
+          return (_ != null && (_.caretBidiLevel = _), _);
         })
     : _.pos == _.start() || _.pos == _.end();
 }
@@ -6768,12 +6776,12 @@ var _ = 0,
   _ = 3,
   _ = class {
     constructor(_, _, _, _) {
-      (this.parent = _),
+      ((this.parent = _),
         (this.children = _),
         (this.dom = _),
         (this.contentDOM = _),
         (this.dirty = _),
-        (_.pmViewDesc = this);
+        (_.pmViewDesc = this));
     }
     matchesWidget(_) {
       return !1;
@@ -6802,8 +6810,8 @@ var _ = 0,
       return 0;
     }
     destroy() {
-      (this.parent = void 0),
-        this.dom.pmViewDesc == this && (this.dom.pmViewDesc = void 0);
+      ((this.parent = void 0),
+        this.dom.pmViewDesc == this && (this.dom.pmViewDesc = void 0));
       for (let _ = 0; _ < this.children.length; _++) this.children[_].destroy();
     }
     posBeforeChild(_) {
@@ -6831,10 +6839,10 @@ var _ = 0,
           let _, _;
           if (_ == this.contentDOM) _ = _.childNodes[_ - 1];
           else {
-            for (; _.parentNode != this.contentDOM; ) _ = _.parentNode;
+            for (; _.parentNode != this.contentDOM;) _ = _.parentNode;
             _ = _.previousSibling;
           }
-          for (; _ && !((_ = _.pmViewDesc) && _.parent == this); )
+          for (; _ && !((_ = _.pmViewDesc) && _.parent == this);)
             _ = _.previousSibling;
           return _ ? this.posBeforeChild(_) + _.size : this.posAtStart;
         }
@@ -6842,10 +6850,10 @@ var _ = 0,
           let _, _;
           if (_ == this.contentDOM) _ = _.childNodes[_];
           else {
-            for (; _.parentNode != this.contentDOM; ) _ = _.parentNode;
+            for (; _.parentNode != this.contentDOM;) _ = _.parentNode;
             _ = _.nextSibling;
           }
-          for (; _ && !((_ = _.pmViewDesc) && _.parent == this); )
+          for (; _ && !((_ = _.pmViewDesc) && _.parent == this);)
             _ = _.nextSibling;
           return _ ? this.posBeforeChild(_) : this.posAtEnd;
         }
@@ -6911,7 +6919,7 @@ var _ = 0,
         let _ = this.children[_],
           _ = _ + _.size;
         if (_ == _ && _ != _) {
-          for (; !_.border && _.children.length; )
+          for (; !_.border && _.children.length;)
             for (let _ = 0; _ < _.children.length; _++) {
               let _ = _.children[_];
               if (_.size) {
@@ -7118,19 +7126,19 @@ var _ = 0,
       if ((_.extend || _ == _) && !(_ && _)) {
         _.collapse(_.node, _.offset);
         try {
-          _ != _ && _.extend(_.node, _.offset), (_ = !0);
+          (_ != _ && _.extend(_.node, _.offset), (_ = !0));
         } catch {}
       }
       if (!_) {
         if (_ > _) {
           let _ = _;
-          (_ = _), (_ = _);
+          ((_ = _), (_ = _));
         }
         let _ = document.createRange();
-        _.setEnd(_.node, _.offset),
+        (_.setEnd(_.node, _.offset),
           _.setStart(_.node, _.offset),
           _.removeAllRanges(),
-          _.addRange(_);
+          _.addRange(_));
       }
     }
     ignoreMutation(_) {
@@ -7151,12 +7159,12 @@ var _ = 0,
           let _ = _ + _.border,
             _ = _ - _.border;
           if (_ >= _ && _ <= _) {
-            (this.dirty = _ == _ || _ == _ ? _ : _),
+            ((this.dirty = _ == _ || _ == _ ? _ : _),
               _ == _ &&
               _ == _ &&
               (_.contentLost || _.dom.parentNode != this.contentDOM)
                 ? (_.dirty = _)
-                : _.markDirty(_ - _, _ - _);
+                : _.markDirty(_ - _, _ - _));
             return;
           }
           _.dirty =
@@ -7203,11 +7211,11 @@ var _ = 0,
         !_.type.spec.raw)
       ) {
         let _ = _(_) ? _ : document.createElement(`span`);
-        _ != _ && (_.appendChild(_), (_ = _)),
+        (_ != _ && (_.appendChild(_), (_ = _)),
           _.hasAttribute(`contenteditable`) || (_.contentEditable = `false`),
-          _.classList.add(`ProseMirror-widget`);
+          _.classList.add(`ProseMirror-widget`));
       }
-      super(_, [], _, null), (this.widget = _), (this.widget = _), (_ = this);
+      (super(_, [], _, null), (this.widget = _), (this.widget = _), (_ = this));
     }
     matchesWidget(_) {
       return this.dirty == _ && _.type._(this.widget.type);
@@ -7225,7 +7233,7 @@ var _ = 0,
       return _.type != `selection` || this.widget.spec.ignoreSelection;
     }
     destroy() {
-      this.widget.type.destroy(this.dom), super.destroy();
+      (this.widget.type.destroy(this.dom), super.destroy());
     }
     get domAtom() {
       return !0;
@@ -7239,7 +7247,7 @@ var _ = 0,
   },
   _ = class extends _ {
     constructor(_, _, _, _) {
-      super(_, [], _, null), (this.textDOM = _), (this.text = _);
+      (super(_, [], _, null), (this.textDOM = _), (this.text = _));
     }
     get size() {
       return this.text.length;
@@ -7261,7 +7269,7 @@ var _ = 0,
   },
   _ = class _ extends _ {
     constructor(_, _, _, _, _) {
-      super(_, [], _, _), (this.mark = _), (this.spec = _);
+      (super(_, [], _, _), (this.mark = _), (this.spec = _));
     }
     static create(_, _, _, _) {
       let _ = _.nodeViews[_.type.name],
@@ -7287,17 +7295,17 @@ var _ = 0,
     markDirty(_, _) {
       if ((super.markDirty(_, _), this.dirty != _)) {
         let _ = this.parent;
-        for (; !_.node; ) _ = _.parent;
-        _.dirty < this.dirty && (_.dirty = this.dirty), (this.dirty = _);
+        for (; !_.node;) _ = _.parent;
+        (_.dirty < this.dirty && (_.dirty = this.dirty), (this.dirty = _));
       }
     }
     slice(_, _, _) {
       let _ = _.create(this.parent, this.mark, !0, _),
         _ = this.children,
         _ = this.size;
-      _ < _ && (_ = _(_, _, _, _)), _ > 0 && (_ = _(_, 0, _, _));
+      (_ < _ && (_ = _(_, _, _, _)), _ > 0 && (_ = _(_, 0, _, _)));
       for (let _ = 0; _ < _.length; _++) _[_].parent = _;
-      return (_.children = _), _;
+      return ((_.children = _), _);
     }
     ignoreMutation(_) {
       return this.spec.ignoreMutation
@@ -7305,16 +7313,16 @@ var _ = 0,
         : super.ignoreMutation(_);
     }
     destroy() {
-      this.spec.destroy && this.spec.destroy(), super.destroy();
+      (this.spec.destroy && this.spec.destroy(), super.destroy());
     }
   },
   _ = class _ extends _ {
     constructor(_, _, _, _, _, _, _) {
-      super(_, [], _, _),
+      (super(_, [], _, _),
         (this.node = _),
         (this.outerDeco = _),
         (this.innerDeco = _),
-        (this.nodeDOM = _);
+        (this.nodeDOM = _));
     }
     static create(_, _, _, _, _, _) {
       let _ = _.nodeViews[_.type.name],
@@ -7411,11 +7419,11 @@ var _ = 0,
         _ = new _(this, _ && _.node, _),
         _ = this.node.inlineContent,
         _ = _ && this.node.isBlock;
-      _(
+      (_(
         this.node,
         this.innerDeco,
         (_, _, _) => {
-          _.spec.marks
+          (_.spec.marks
             ? _.syncToMarks(_.spec.marks, _, _, _)
             : _.type.side >= 0 &&
               !_ &&
@@ -7425,13 +7433,13 @@ var _ = 0,
                 _,
                 _,
               ),
-            _.placeWidget(_, _, _);
+            _.placeWidget(_, _, _));
         },
         (_, _, _, _) => {
-          _.syncToMarks(_.marks, _, _, _),
-            _ && _.isAtom && !_.isText && _.addHackNode(`IMG`, _.top);
+          (_.syncToMarks(_.marks, _, _, _),
+            _ && _.isAtom && !_.isText && _.addHackNode(`IMG`, _.top));
           let _;
-          _.findNodeMatch(_, _, _, _) ||
+          (_.findNodeMatch(_, _, _, _) ||
             (_ &&
               _.state.selection.from > _ &&
               _.state.selection._ < _ + _.nodeSize &&
@@ -7440,7 +7448,7 @@ var _ = 0,
             _.updateNextNode(_, _, _, _, _, _) ||
             _.addNode(_, _, _, _, _),
             (_ += _.nodeSize),
-            _ && (_ = _.isAtom && !_.isText);
+            _ && (_ = _.isAtom && !_.isText));
         },
       ),
         _.syncToMarks([], _, _, 0),
@@ -7449,7 +7457,7 @@ var _ = 0,
         (_.changed || this.dirty == _) &&
           (_ && this.protectLocalComposition(_, _),
           _(this.contentDOM, this.children, _),
-          _ && _(this.dom));
+          _ && _(this.dom)));
     }
     localCompositionInfo(_, _) {
       let { from: _, _: _ } = _.state.selection;
@@ -7482,13 +7490,13 @@ var _ = 0,
       if (this.getDesc(_)) return;
       let _ = _;
       for (; _.parentNode != this.contentDOM; _ = _.parentNode) {
-        for (; _.previousSibling; ) _.parentNode.removeChild(_.previousSibling);
-        for (; _.nextSibling; ) _.parentNode.removeChild(_.nextSibling);
+        for (; _.previousSibling;) _.parentNode.removeChild(_.previousSibling);
+        for (; _.nextSibling;) _.parentNode.removeChild(_.nextSibling);
         _.pmViewDesc && (_.pmViewDesc = void 0);
       }
       let _ = new _(this, _, _, _);
-      _.input.compositionNodes.push(_),
-        (this.children = _(this.children, _, _ + _.length, _, _));
+      (_.input.compositionNodes.push(_),
+        (this.children = _(this.children, _, _ + _.length, _, _)));
     }
     update(_, _, _, _) {
       return this.dirty == _ || !_.sameMarkup(this.node)
@@ -7496,17 +7504,17 @@ var _ = 0,
         : (this.updateInner(_, _, _, _), !0);
     }
     updateInner(_, _, _, _) {
-      this.updateOuterDeco(_),
+      (this.updateOuterDeco(_),
         (this.node = _),
         (this.innerDeco = _),
         this.contentDOM && this.updateChildren(_, this.posAtStart),
-        (this.dirty = _);
+        (this.dirty = _));
     }
     updateOuterDeco(_) {
       if (_(_, this.outerDeco)) return;
       let _ = !_(this.nodeDOM),
         _ = this.dom;
-      (this.dom = _(
+      ((this.dom = _(
         this.dom,
         this.nodeDOM,
         _(this.outerDeco, this.node, _),
@@ -7514,7 +7522,7 @@ var _ = 0,
       )),
         this.dom != _ &&
           ((_.pmViewDesc = void 0), (this.dom.pmViewDesc = this)),
-        (this.outerDeco = _);
+        (this.outerDeco = _));
     }
     selectNode() {
       _(this.nodeDOM) &&
@@ -7535,7 +7543,7 @@ var _ = 0,
 function _(_, _, _, _, _) {
   _(_, _, _);
   let _ = new _(void 0, _, _, _, _, _, _);
-  return _.contentDOM && _.updateChildren(_, 0), _;
+  return (_.contentDOM && _.updateChildren(_, 0), _);
 }
 var _ = class _ extends _ {
     constructor(_, _, _, _, _, _) {
@@ -7543,7 +7551,7 @@ var _ = class _ extends _ {
     }
     parseRule() {
       let _ = this.nodeDOM.parentNode;
-      for (; _ && _ != this.dom && !_.pmIsDeco; ) _ = _.parentNode;
+      for (; _ && _ != this.dom && !_.pmIsDeco;) _ = _.parentNode;
       return {
         skip: _ || !0,
       };
@@ -7587,10 +7595,10 @@ var _ = class _ extends _ {
       return new _(this.parent, _, this.outerDeco, this.innerDeco, _, _);
     }
     markDirty(_, _) {
-      super.markDirty(_, _),
+      (super.markDirty(_, _),
         this.dom != this.nodeDOM &&
           (_ == 0 || _ == this.nodeDOM.nodeValue.length) &&
-          (this.dirty = _);
+          (this.dirty = _));
     }
     get domAtom() {
       return !1;
@@ -7617,7 +7625,7 @@ var _ = class _ extends _ {
   },
   _ = class extends _ {
     constructor(_, _, _, _, _, _, _, _) {
-      super(_, _, _, _, _, _, _), (this.spec = _);
+      (super(_, _, _, _, _, _, _), (this.spec = _));
     }
     update(_, _, _, _) {
       if (this.dirty == _) return !1;
@@ -7626,7 +7634,7 @@ var _ = class _ extends _ {
         (this.node.type == _.type || this.spec.multiType)
       ) {
         let _ = this.spec.update(_, _, _);
-        return _ && this.updateInner(_, _, _, _), _;
+        return (_ && this.updateInner(_, _, _, _), _);
       }
       return !this.contentDOM && !_.isLeaf ? !1 : super.update(_, _, _, _);
     }
@@ -7642,7 +7650,7 @@ var _ = class _ extends _ {
         : super.setSelection(_, _, _, _);
     }
     destroy() {
-      this.spec.destroy && this.spec.destroy(), super.destroy();
+      (this.spec.destroy && this.spec.destroy(), super.destroy());
     }
     stopEvent(_) {
       return this.spec.stopEvent ? this.spec.stopEvent(_) : !1;
@@ -7660,15 +7668,15 @@ function _(_, _, _) {
     let _ = _[_],
       _ = _.dom;
     if (_.parentNode == _) {
-      for (; _ != _; ) (_ = _(_)), (_ = !0);
+      for (; _ != _;) ((_ = _(_)), (_ = !0));
       _ = _.nextSibling;
-    } else (_ = !0), _.insertBefore(_, _);
+    } else ((_ = !0), _.insertBefore(_, _));
     if (_ instanceof _) {
       let _ = _ ? _.previousSibling : _.lastChild;
-      _(_.contentDOM, _.children, _), (_ = _ ? _.nextSibling : _.firstChild);
+      (_(_.contentDOM, _.children, _), (_ = _ ? _.nextSibling : _.firstChild));
     }
   }
-  for (; _; ) (_ = _(_)), (_ = !0);
+  for (; _;) ((_ = _(_)), (_ = !0));
   _ && _.trackWrites == _ && (_.trackWrites = null);
 }
 var _ = function (_) {
@@ -7708,7 +7716,7 @@ function _(_, _, _, _) {
       _ = _[_];
     if (_) {
       let _;
-      (_ &&
+      ((_ &&
         _.nodeName == _.nodeName &&
         _ != _ &&
         (_ = _.parentNode) &&
@@ -7717,7 +7725,7 @@ function _(_, _, _, _) {
         (_.pmIsDeco = !0),
         _.appendChild(_),
         (_ = _[0])),
-        (_ = _);
+        (_ = _));
     }
     _(_, _ || _[0], _);
   }
@@ -7750,7 +7758,7 @@ function _(_, _, _) {
       let _ =
           /\s*([\w\-\xa1-\uffff]+)\s*:(?:"(?:\\.|[^"])*"|'(?:\\.|[^'])*'|\(.*?\)|[^;])*/g,
         _;
-      for (; (_ = _.exec(_.style)); ) _.style.removeProperty(_[1]);
+      for (; (_ = _.exec(_.style));) _.style.removeProperty(_[1]);
     }
     _.style && (_.style.cssText += _.style);
   }
@@ -7765,22 +7773,22 @@ function _(_, _) {
 }
 function _(_) {
   let _ = _.nextSibling;
-  return _.parentNode.removeChild(_), _;
+  return (_.parentNode.removeChild(_), _);
 }
 var _ = class {
   constructor(_, _, _) {
-    (this.lock = _),
+    ((this.lock = _),
       (this.view = _),
       (this.index = 0),
       (this.stack = []),
       (this.changed = !1),
       (this.top = _),
-      (this.preMatch = _(_.node.content, _));
+      (this.preMatch = _(_.node.content, _)));
   }
   destroyBetween(_, _) {
     if (_ != _) {
       for (let _ = _; _ < _; _++) this.top.children[_].destroy();
-      this.top.children.splice(_, _ - _), (this.changed = !0);
+      (this.top.children.splice(_, _ - _), (this.changed = !0));
     }
   }
   destroyRest() {
@@ -7797,13 +7805,13 @@ var _ = class {
       _[_].type.spec.spanning !== !1;
     )
       _++;
-    for (; _ < _; )
-      this.destroyRest(),
+    for (; _ < _;)
+      (this.destroyRest(),
         (this.top.dirty = _),
         (this.index = this.stack.pop()),
         (this.top = this.stack.pop()),
-        _--;
-    for (; _ < _.length; ) {
+        _--);
+    for (; _ < _.length;) {
       this.stack.push(this.top, this.index + 1);
       let _ = -1,
         _ = this.top.children.length;
@@ -7826,16 +7834,16 @@ var _ = class {
           ((_.mark = _[_]), (_ = this.index), (this.changed = !0));
       }
       if (_ > -1)
-        _ > this.index &&
+        (_ > this.index &&
           ((this.changed = !0), this.destroyBetween(this.index, _)),
-          (this.top = this.top.children[this.index]);
+          (this.top = this.top.children[this.index]));
       else {
         let _ = _.create(this.top, _[_], _, _);
-        this.top.children.splice(this.index, 0, _),
+        (this.top.children.splice(this.index, 0, _),
           (this.top = _),
-          (this.changed = !0);
+          (this.changed = !0));
       }
-      (this.index = 0), _++;
+      ((this.index = 0), _++);
     }
   }
   findNodeMatch(_, _, _, _) {
@@ -7937,16 +7945,16 @@ var _ = class {
       return null;
     let _ = _.create(this.top, _, _, _, _, _);
     if (_.contentDOM) {
-      (_.children = _.children), (_.children = []);
+      ((_.children = _.children), (_.children = []));
       for (let _ of _.children) _.parent = _;
     }
-    return _.destroy(), _;
+    return (_.destroy(), _);
   }
   addNode(_, _, _, _, _) {
     let _ = _.create(this.top, _, _, _, _, _);
-    _.contentDOM && _.updateChildren(_, _ + 1),
+    (_.contentDOM && _.updateChildren(_, _ + 1),
       this.top.children.splice(this.index++, 0, _),
-      (this.changed = !0);
+      (this.changed = !0));
   }
   placeWidget(_, _, _) {
     let _ =
@@ -7961,13 +7969,13 @@ var _ = class {
       this.index++;
     else {
       let _ = new _(this.top, _, _, _);
-      this.top.children.splice(this.index++, 0, _), (this.changed = !0);
+      (this.top.children.splice(this.index++, 0, _), (this.changed = !0));
     }
   }
   addTextblockHacks() {
     let _ = this.top.children[this.index - 1],
       _ = this.top;
-    for (; _ instanceof _; ) (_ = _), (_ = _.children[_.children.length - 1]);
+    for (; _ instanceof _;) ((_ = _), (_ = _.children[_.children.length - 1]));
     (!_ ||
       !(_ instanceof _) ||
       /\n$/.test(_.node.text) ||
@@ -7987,13 +7995,13 @@ var _ = class {
       this.index++;
     else {
       let _ = document.createElement(_);
-      _ == `IMG` && ((_.className = `ProseMirror-separator`), (_.alt = ``)),
-        _ == `BR` && (_.className = `ProseMirror-trailingBreak`);
+      (_ == `IMG` && ((_.className = `ProseMirror-separator`), (_.alt = ``)),
+        _ == `BR` && (_.className = `ProseMirror-trailingBreak`));
       let _ = new _(this.top, [], _, null);
-      _ == this.top
+      (_ == this.top
         ? _.children.splice(this.index++, 0, _)
         : _.children.push(_),
-        (this.changed = !0);
+        (this.changed = !0));
     }
   }
   isLocked(_) {
@@ -8009,22 +8017,22 @@ function _(_, _) {
     _ = _.childCount,
     _ = new Map(),
     _ = [];
-  outer: for (; _ > 0; ) {
+  outer: for (; _ > 0;) {
     let _;
     for (;;)
       if (_) {
         let _ = _.children[_ - 1];
-        if (_ instanceof _) (_ = _), (_ = _.children.length);
+        if (_ instanceof _) ((_ = _), (_ = _.children.length));
         else {
-          (_ = _), _--;
+          ((_ = _), _--);
           break;
         }
       } else if (_ == _) break outer;
-      else (_ = _.parent.children.indexOf(_)), (_ = _.parent);
+      else ((_ = _.parent.children.indexOf(_)), (_ = _.parent));
     let _ = _.node;
     if (_) {
       if (_ != _.child(_ - 1)) break;
-      --_, _.set(_, _), _.push(_);
+      (--_, _.set(_, _), _.push(_));
     }
   }
   return {
@@ -8042,16 +8050,16 @@ function _(_, _, _, _) {
   if (_.length == 0) {
     for (let _ = 0; _ < _.childCount; _++) {
       let _ = _.child(_);
-      _(_, _, _.forChild(_, _), _), (_ += _.nodeSize);
+      (_(_, _, _.forChild(_, _), _), (_ += _.nodeSize));
     }
     return;
   }
   let _ = 0,
     _ = [],
     _ = null;
-  for (let _ = 0; ; ) {
+  for (let _ = 0; ;) {
     let _, _;
-    for (; _ < _.length && _[_]._ == _; ) {
+    for (; _ < _.length && _[_]._ == _;) {
       let _ = _[_++];
       _.widget && (_ ? (_ ||= [_]).push(_) : (_ = _));
     }
@@ -8062,37 +8070,37 @@ function _(_, _, _, _) {
       } else _(_, _, !!_);
     }
     let _, _;
-    if (_) (_ = -1), (_ = _), (_ = null);
-    else if (_ < _.childCount) (_ = _), (_ = _.child(_++));
+    if (_) ((_ = -1), (_ = _), (_ = null));
+    else if (_ < _.childCount) ((_ = _), (_ = _.child(_++)));
     else break;
     for (let _ = 0; _ < _.length; _++) _[_]._ <= _ && _.splice(_--, 1);
-    for (; _ < _.length && _[_].from <= _ && _[_]._ > _; ) _.push(_[_++]);
+    for (; _ < _.length && _[_].from <= _ && _[_]._ > _;) _.push(_[_++]);
     let _ = _ + _.nodeSize;
     if (_.isText) {
       let _ = _;
       _ < _.length && _[_].from < _ && (_ = _[_].from);
       for (let _ = 0; _ < _.length; _++) _[_]._ < _ && (_ = _[_]._);
       _ < _ && ((_ = _.cut(_ - _)), (_ = _.cut(0, _ - _)), (_ = _), (_ = -1));
-    } else for (; _ < _.length && _[_]._ < _; ) _++;
+    } else for (; _ < _.length && _[_]._ < _;) _++;
     let _ = _.isInline && !_.isLeaf ? _.filter((_) => !_.inline) : _.slice();
-    _(_, _, _.forChild(_, _), _), (_ = _);
+    (_(_, _, _.forChild(_, _), _), (_ = _));
   }
 }
 function _(_) {
   if (_.nodeName == `UL` || _.nodeName == `OL`) {
     let _ = _.style.cssText;
-    (_.style.cssText = _ + `; list-style: square !important`),
+    ((_.style.cssText = _ + `; list-style: square !important`),
       window.getComputedStyle(_).listStyle,
-      (_.style.cssText = _);
+      (_.style.cssText = _));
   }
 }
 function _(_, _, _, _) {
-  for (let _ = 0, _ = 0; _ < _.childCount && _ <= _; ) {
+  for (let _ = 0, _ = 0; _ < _.childCount && _ <= _;) {
     let _ = _.child(_++),
       _ = _;
     if (((_ += _.nodeSize), !_.isText)) continue;
     let _ = _.text;
-    for (; _ < _.childCount; ) {
+    for (; _ < _.childCount;) {
       let _ = _.child(_++);
       if (((_ += _.nodeSize), !_.isText)) break;
       _ += _.text;
@@ -8137,7 +8145,7 @@ function _(_, _ = null) {
     _,
     _;
   if (_(_)) {
-    for (_ = _; _ && !_.node; ) _ = _.parent;
+    for (_ = _; _ && !_.node;) _ = _.parent;
     if (
       _ &&
       _.node.isAtom &&
@@ -8173,18 +8181,18 @@ function _(_, _ = null) {
         _ = _;
       for (let _ = 0; _ < _.rangeCount; _++) {
         let _ = _.getRangeAt(_);
-        (_ = Math.min(
+        ((_ = Math.min(
           _,
           _.docView.posFromDOM(_.startContainer, _.startOffset, 1),
         )),
           (_ = Math.max(
             _,
             _.docView.posFromDOM(_.endContainer, _.endOffset, -1),
-          ));
+          )));
       }
       if (_ < 0) return null;
-      ([_, _] = _ == _.state.selection.anchor ? [_, _] : [_, _]),
-        (_ = _.resolve(_));
+      (([_, _] = _ == _.state.selection.anchor ? [_, _] : [_, _]),
+        (_ = _.resolve(_)));
     } else _ = _.docView.posFromDOM(_.anchorNode, _.anchorOffset, 1);
     if (_ < 0) return null;
   }
@@ -8222,7 +8230,7 @@ function _(_, _ = !1) {
     let { anchor: _, head: _ } = _,
       _,
       _;
-    _ &&
+    (_ &&
       !(_ instanceof _) &&
       (_.$from.parent.inlineContent || (_ = _(_, _.from)),
       !_.empty && !_.$from.parent.inlineContent && (_ = _(_, _._))),
@@ -8231,9 +8239,9 @@ function _(_, _ = !1) {
       _.visible
         ? _.dom.classList.remove(`ProseMirror-hideselection`)
         : (_.dom.classList.add(`ProseMirror-hideselection`),
-          `onselectionchange` in document && _(_));
+          `onselectionchange` in document && _(_)));
   }
-  _.domObserver.setCurSelection(), _.domObserver.connectSelection();
+  (_.domObserver.setCurSelection(), _.domObserver.connectSelection());
 }
 var _ = _ || (_ && _ < 63);
 function _(_, _) {
@@ -8257,8 +8265,8 @@ function _(_) {
   );
 }
 function _(_) {
-  (_.contentEditable = `false`),
-    (_.wasDraggable &&= ((_.draggable = !0), null));
+  ((_.contentEditable = `false`),
+    (_.wasDraggable &&= ((_.draggable = !0), null)));
 }
 function _(_) {
   let _ = _.dom.ownerDocument;
@@ -8283,12 +8291,12 @@ function _(_) {
   if (!_) return;
   let _ = _.cursorWrapper.dom,
     _ = _.nodeName == `IMG`;
-  _ ? _.collapse(_.parentNode, _(_) + 1) : _.collapse(_, 0),
+  (_ ? _.collapse(_.parentNode, _(_) + 1) : _.collapse(_, 0),
     !_ &&
       !_.state.selection.visible &&
       _ &&
       _ <= 11 &&
-      ((_.disabled = !0), (_.disabled = !1));
+      ((_.disabled = !0), (_.disabled = !1)));
 }
 function _(_, _) {
   if (_ instanceof _) {
@@ -8336,7 +8344,7 @@ function _(_, _) {
   return _ && _.findFrom(_, _);
 }
 function _(_, _) {
-  return _.dispatch(_.state._.setSelection(_).scrollIntoView()), !0;
+  return (_.dispatch(_.state._.setSelection(_).scrollIntoView()), !0);
 }
 function _(_, _, _) {
   let _ = _.state.selection;
@@ -8389,19 +8397,19 @@ function _(_) {
   let _,
     _,
     _ = !1;
-  for (_ && _(_) && _ < _(_) && _(_.childNodes[_], -1) && (_ = !0); ; )
+  for (_ && _(_) && _ < _(_) && _(_.childNodes[_], -1) && (_ = !0); ;)
     if (_ > 0) {
       if (!_(_)) break;
       let _ = _.childNodes[_ - 1];
-      if (_(_, -1)) (_ = _), (_ = --_);
-      else if (_(_)) (_ = _), (_ = _.nodeValue.length);
+      if (_(_, -1)) ((_ = _), (_ = --_));
+      else if (_(_)) ((_ = _), (_ = _.nodeValue.length));
       else break;
     } else if (_(_)) break;
     else {
       let _ = _.previousSibling;
-      for (; _ && _(_, -1); )
-        (_ = _.parentNode), (_ = _(_)), (_ = _.previousSibling);
-      if (_) (_ = _), (_ = _(_));
+      for (; _ && _(_, -1);)
+        ((_ = _.parentNode), (_ = _(_)), (_ = _.previousSibling));
+      if (_) ((_ = _), (_ = _(_)));
       else {
         if (((_ = _.parentNode), _ == _.dom)) break;
         _ = 0;
@@ -8421,14 +8429,14 @@ function _(_) {
     if (_ < _) {
       if (!_(_)) break;
       let _ = _.childNodes[_];
-      if (_(_, 1)) (_ = _), (_ = ++_);
+      if (_(_, 1)) ((_ = _), (_ = ++_));
       else break;
     } else if (_(_)) break;
     else {
       let _ = _.nextSibling;
-      for (; _ && _(_, 1); )
-        (_ = _.parentNode), (_ = _(_) + 1), (_ = _.nextSibling);
-      if (_) (_ = _), (_ = 0), (_ = _(_));
+      for (; _ && _(_, 1);)
+        ((_ = _.parentNode), (_ = _(_) + 1), (_ = _.nextSibling));
+      if (_) ((_ = _), (_ = 0), (_ = _(_)));
       else {
         if (((_ = _.parentNode), _ == _.dom)) break;
         _ = _ = 0;
@@ -8441,22 +8449,22 @@ function _(_) {
   return _ && _.node && _.node.isBlock;
 }
 function _(_, _) {
-  for (; _ && _ == _.childNodes.length && !_(_); )
-    (_ = _(_) + 1), (_ = _.parentNode);
-  for (; _ && _ < _.childNodes.length; ) {
+  for (; _ && _ == _.childNodes.length && !_(_);)
+    ((_ = _(_) + 1), (_ = _.parentNode));
+  for (; _ && _ < _.childNodes.length;) {
     let _ = _.childNodes[_];
     if (_(_)) return _;
     if (_(_) && _.contentEditable == `false`) break;
-    (_ = _), (_ = 0);
+    ((_ = _), (_ = 0));
   }
 }
 function _(_, _) {
-  for (; _ && !_ && !_(_); ) (_ = _(_)), (_ = _.parentNode);
-  for (; _ && _; ) {
+  for (; _ && !_ && !_(_);) ((_ = _(_)), (_ = _.parentNode));
+  for (; _ && _;) {
     let _ = _.childNodes[_ - 1];
     if (_(_)) return _;
     if (_(_) && _.contentEditable == `false`) break;
-    (_ = _), (_ = _.childNodes.length);
+    ((_ = _), (_ = _.childNodes.length));
   }
 }
 function _(_, _, _) {
@@ -8469,10 +8477,10 @@ function _(_, _, _) {
   let _ = _.domSelection(),
     _ = _.domSelectionRange();
   if (!_) return;
-  _(_)
+  (_(_)
     ? _.collapse(_, _)
     : _.extend && (_.collapse(_.anchorNode, _.anchorOffset), _.extend(_, _)),
-    _.domObserver.setCurSelection();
+    _.domObserver.setCurSelection());
   let { state: _ } = _;
   setTimeout(() => {
     _.state == _ && _(_);
@@ -8543,7 +8551,7 @@ function _(_, _) {
   return !1;
 }
 function _(_, _, _) {
-  _.domObserver.stop(), (_.contentEditable = _), _.domObserver.start();
+  (_.domObserver.stop(), (_.contentEditable = _), _.domObserver.start());
 }
 function _(_) {
   if (!_ || _.state.selection.$head.parentOffset > 0) return !1;
@@ -8557,7 +8565,7 @@ function _(_) {
     _.firstChild.contentEditable == `false`
   ) {
     let _ = _.firstChild;
-    _(_, _, `true`), setTimeout(() => _(_, _, `false`), 20);
+    (_(_, _, `true`), setTimeout(() => _(_, _, `false`), 20));
   }
   return !1;
 }
@@ -8598,14 +8606,11 @@ function _(_, _) {
   });
   let _ = [],
     { content: _, openStart: _, openEnd: _ } = _;
-  for (
-    ;
-    _ > 1 && _ > 1 && _.childCount == 1 && _.firstChild.childCount == 1;
-  ) {
-    _--, _--;
+  for (; _ > 1 && _ > 1 && _.childCount == 1 && _.firstChild.childCount == 1;) {
+    (_--, _--);
     let _ = _.firstChild;
-    _.push(_.type.name, _.attrs == _.type.defaultAttrs ? null : _.attrs),
-      (_ = _.content);
+    (_.push(_.type.name, _.attrs == _.type.defaultAttrs ? null : _.attrs),
+      (_ = _.content));
   }
   let _ = _.someProp(`clipboardSerializer`) || _.fromSchema(_.state.schema),
     _ = _(),
@@ -8618,11 +8623,11 @@ function _(_, _) {
   let _ = _.firstChild,
     _,
     _ = 0;
-  for (; _ && _(_) && (_ = _[_.nodeName.toLowerCase()]); ) {
+  for (; _ && _(_) && (_ = _[_.nodeName.toLowerCase()]);) {
     for (let _ = _.length - 1; _ >= 0; _--) {
       let _ = _.createElement(_[_]);
-      for (; _.firstChild; ) _.appendChild(_.firstChild);
-      _.appendChild(_), _++;
+      for (; _.firstChild;) _.appendChild(_.firstChild);
+      (_.appendChild(_), _++);
     }
     _ = _.firstChild;
   }
@@ -8686,18 +8691,18 @@ function _(_, _, _, _, _) {
       let _ = _.marks(),
         { schema: _ } = _.state,
         _ = _.fromSchema(_);
-      (_ = document.createElement(`div`)),
+      ((_ = document.createElement(`div`)),
         _.split(/(?:\r\n?|\n)+/).forEach((_) => {
           let _ = _.appendChild(document.createElement(`p`));
           _ && _.appendChild(_.serializeNode(_.text(_, _)));
-        });
+        }));
     }
   } else
-    _.someProp(`transformPastedHTML`, (_) => {
+    (_.someProp(`transformPastedHTML`, (_) => {
       _ = _(_, _);
     }),
       (_ = _(_)),
-      _ && _(_);
+      _ && _(_));
   let _ = _ && _.querySelector(`[data-pm-slice]`),
     _ =
       _ &&
@@ -8707,7 +8712,7 @@ function _(_, _, _, _, _) {
   if (_ && _[3])
     for (let _ = +_[3]; _ > 0; _--) {
       let _ = _.firstChild;
-      for (; _ && !_(_); ) _ = _.nextSibling;
+      for (; _ && !_(_);) _ = _.nextSibling;
       if (!_) break;
       _ = _;
     }
@@ -8774,7 +8779,7 @@ function _(_, _) {
         else {
           _.length && (_[_.length - 1] = _(_[_.length - 1], _.length));
           let _ = _(_, _);
-          _.push(_), (_ = _.matchType(_.type)), (_ = _);
+          (_.push(_), (_ = _.matchType(_.type)), (_ = _));
         }
       }),
       _)
@@ -8921,7 +8926,7 @@ function _(_, _) {
     } catch {
       break;
     }
-    _++, _++;
+    (_++, _++);
   }
   return new _(_, _, _);
 }
@@ -8933,7 +8938,7 @@ var _ = {},
   },
   _ = class {
     constructor() {
-      (this.shiftKey = !1),
+      ((this.shiftKey = !1),
         (this.mouseDown = null),
         (this.lastKeyCode = null),
         (this.lastKeyCodeTime = 0),
@@ -8961,7 +8966,7 @@ var _ = {},
         (this.compositionPendingChanges = 0),
         (this.domChangeCount = 0),
         (this.eventHandlers = Object.create(null)),
-        (this.hideSelectionGuard = null);
+        (this.hideSelectionGuard = null));
     }
   };
 function _(_) {
@@ -8979,17 +8984,17 @@ function _(_) {
         : void 0,
     );
   }
-  _ && _.dom.addEventListener(`input`, () => null), _(_);
+  (_ && _.dom.addEventListener(`input`, () => null), _(_));
 }
 function _(_, _) {
-  (_.input.lastSelectionOrigin = _), (_.input.lastSelectionTime = Date.now());
+  ((_.input.lastSelectionOrigin = _), (_.input.lastSelectionTime = Date.now()));
 }
 function _(_) {
-  _.input.mouseDown && _.input.mouseDown.done(), _.domObserver.stop();
+  (_.input.mouseDown && _.input.mouseDown.done(), _.domObserver.stop());
   for (let _ in _.input.eventHandlers)
     _.dom.removeEventListener(_, _.input.eventHandlers[_]);
-  clearTimeout(_.input.composingTimeout),
-    clearTimeout(_.input.lastIOSEnterFallbackTimeout);
+  (clearTimeout(_.input.composingTimeout),
+    clearTimeout(_.input.lastIOSEnterFallbackTimeout));
 }
 function _(_) {
   _.someProp(`handleDOMEvents`, (_) => {
@@ -9015,7 +9020,7 @@ function _(_, _) {
 function _(_, _) {
   !_(_, _) && _[_.type] && (_.editable || !(_.type in _)) && _[_.type](_, _);
 }
-(_.keydown = (_, _) => {
+((_.keydown = (_, _) => {
   let _ = _;
   if (
     ((_.input.shiftKey = _.keyCode == 16 || _.shiftKey),
@@ -9029,12 +9034,12 @@ function _(_, _) {
       _ && _.keyCode == 13 && !_.ctrlKey && !_.altKey && !_.metaKey)
     ) {
       let _ = Date.now();
-      (_.input.lastIOSEnter = _),
+      ((_.input.lastIOSEnter = _),
         (_.input.lastIOSEnterFallbackTimeout = setTimeout(() => {
           _.input.lastIOSEnter == _ &&
             (_.someProp(`handleKeyDown`, (_) => _(_, _(13, `Enter`))),
             (_.input.lastIOSEnter = 0));
-        }, 200));
+        }, 200)));
     } else
       _.someProp(`handleKeyDown`, (_) => _(_, _)) || _(_, _)
         ? _.preventDefault()
@@ -9056,14 +9061,14 @@ function _(_, _) {
     if (!(_ instanceof _) || !_.$from.sameParent(_.$to)) {
       let _ = String.fromCharCode(_.charCode),
         _ = () => _.state._.insertText(_).scrollIntoView();
-      !/[\r\n]/.test(_) &&
+      (!/[\r\n]/.test(_) &&
         !_.someProp(`handleTextInput`, (_) =>
           _(_, _.$from.pos, _.$to.pos, _, _),
         ) &&
         _.dispatch(_()),
-        _.preventDefault();
+        _.preventDefault());
     }
-  });
+  }));
 function _(_) {
   return {
     left: _.clientX,
@@ -9092,7 +9097,7 @@ function _(_, _, _, _, _) {
 function _(_, _, _) {
   if ((_.focused || _.focus(), _.state.selection._(_))) return;
   let _ = _.state._.setSelection(_);
-  _.setMeta(`pointer`, !0), _.dispatch(_);
+  (_.setMeta(`pointer`, !0), _.dispatch(_));
 }
 function _(_, _) {
   if (_ == -1) return !1;
@@ -9174,7 +9179,7 @@ _.mousedown = (_, _) => {
   let _ = _(_),
     _ = Date.now(),
     _ = `singleClick`;
-  _ - _.input.lastClick.time < 500 &&
+  (_ - _.input.lastClick.time < 500 &&
     _(_, _.input.lastClick) &&
     !_[_] &&
     _.input.lastClick.button == _.button &&
@@ -9188,7 +9193,7 @@ _.mousedown = (_, _) => {
       type: _,
       button: _.button,
     }),
-    _.input.mouseDown && _.input.mouseDown.done();
+    _.input.mouseDown && _.input.mouseDown.done());
   let _ = _.posAtCoords(_(_));
   _ &&
     (_ == `singleClick`
@@ -9199,13 +9204,13 @@ _.mousedown = (_, _) => {
 };
 var _ = class {
     constructor(_) {
-      (this.view = _),
+      ((this.view = _),
         (this.mightDrag = null),
         _.root.addEventListener(`mouseup`, (this._ = this._.bind(this))),
         _.root.addEventListener(
           `mousemove`,
           (this.move = this.move.bind(this)),
-        );
+        ));
     }
     up(_) {
       this.done();
@@ -9214,9 +9219,10 @@ var _ = class {
       _.buttons == 0 && this.done();
     }
     done() {
-      this.view.root.removeEventListener(`mouseup`, this._),
+      (this.view.root.removeEventListener(`mouseup`, this._),
         this.view.root.removeEventListener(`mousemove`, this.move),
-        this.view.input.mouseDown == this && (this.view.input.mouseDown = null);
+        this.view.input.mouseDown == this &&
+          (this.view.input.mouseDown = null));
     }
     delaySelUpdate() {
       return !1;
@@ -9224,25 +9230,25 @@ var _ = class {
   },
   _ = class extends _ {
     constructor(_, _, _, _) {
-      super(_),
+      (super(_),
         (this.pos = _),
         (this.event = _),
         (this.flushed = _),
         (this.delayedSelectionSync = !1),
         (this.startDoc = _.state.doc),
         (this.selectNode = !!_[_]),
-        (this.allowDefault = _.shiftKey);
+        (this.allowDefault = _.shiftKey));
       let _, _;
-      if (_.inside > -1) (_ = _.state.doc.nodeAt(_.inside)), (_ = _.inside);
+      if (_.inside > -1) ((_ = _.state.doc.nodeAt(_.inside)), (_ = _.inside));
       else {
         let _ = _.state.doc.resolve(_.pos);
-        (_ = _.parent), (_ = _.depth ? _.before() : 0);
+        ((_ = _.parent), (_ = _.depth ? _.before() : 0));
       }
       let _ = _ ? null : _.target,
         _ = _ ? _.docView.nearestDesc(_, !0) : null;
       this.target = _ && _(_.nodeDOM) ? _.nodeDOM : null;
       let { selection: _ } = _.state;
-      _.button == 0 &&
+      (_.button == 0 &&
         ((_.type.spec.draggable && _.type.spec.selectable !== !1) ||
           (_ instanceof _ && _.from <= _ && _._ > _)) &&
         (this.mightDrag = {
@@ -9266,10 +9272,10 @@ var _ = class {
                 this.target.setAttribute(`contentEditable`, `false`);
             }, 20),
           this.view.domObserver.start()),
-        _(_, `pointer`);
+        _(_, `pointer`));
     }
     done() {
-      super.done(),
+      (super.done(),
         this.mightDrag &&
           this.target &&
           (this.view.domObserver.stop(),
@@ -9280,12 +9286,13 @@ var _ = class {
         this.delayedSelectionSync &&
           setTimeout(() => {
             this.view.isDestroyed || _(this.view);
-          });
+          }));
     }
     up(_) {
       if ((this.done(), !this.view.dom.contains(_.target))) return;
       let _ = this.pos;
-      this.view.state.doc != this.startDoc && (_ = this.view.posAtCoords(_(_))),
+      (this.view.state.doc != this.startDoc &&
+        (_ = this.view.posAtCoords(_(_))),
         this.updateAllowDefault(_),
         this.allowDefault || !_
           ? _(this.view, `pointer`)
@@ -9302,10 +9309,10 @@ var _ = class {
                     ) <= 2))
               ? (_(this.view, _.near(this.view.state.doc.resolve(_.pos))),
                 _.preventDefault())
-              : _(this.view, `pointer`);
+              : _(this.view, `pointer`));
     }
     move(_) {
-      this.updateAllowDefault(_), _(this.view, `pointer`), super.move(_);
+      (this.updateAllowDefault(_), _(this.view, `pointer`), super.move(_));
     }
     updateAllowDefault(_) {
       !this.allowDefault &&
@@ -9319,7 +9326,7 @@ var _ = class {
   },
   _ = class extends _ {
     constructor(_, _) {
-      super(_), (this.startSelection = _), (this.startDoc = _.state.doc);
+      (super(_), (this.startSelection = _), (this.startDoc = _.state.doc));
     }
     move(_) {
       if (
@@ -9330,7 +9337,7 @@ var _ = class {
         this.done();
         return;
       }
-      _.preventDefault(), _(this.view, `pointer`);
+      (_.preventDefault(), _(this.view, `pointer`));
       let _ = this.view.posAtCoords(_(_)),
         _ = _ && _(this.view, _.inside, !1);
       if (!_) return;
@@ -9340,13 +9347,13 @@ var _ = class {
       _(this.view, _.create(_, _, _));
     }
   };
-(_.touchstart = (_) => {
-  (_.input.lastTouch = Date.now()), _(_), _(_, `pointer`);
+((_.touchstart = (_) => {
+  ((_.input.lastTouch = Date.now()), _(_), _(_, `pointer`));
 }),
   (_.touchmove = (_) => {
-    (_.input.lastTouch = Date.now()), _(_, `pointer`);
+    ((_.input.lastTouch = Date.now()), _(_, `pointer`));
   }),
-  (_.contextmenu = (_) => _(_));
+  (_.contextmenu = (_) => _(_)));
 function _(_, _) {
   return _.composing
     ? !0
@@ -9369,9 +9376,9 @@ _.compositionstart = _.compositionupdate = (_) => {
           _.nodeBefore.marks.some((_) => _.type.spec.inclusive === !1)) ||
         (_ && _ && _(_)))
     )
-      (_.markCursor = _.state.storedMarks || _.marks()),
+      ((_.markCursor = _.state.storedMarks || _.marks()),
         _(_, !0),
-        (_.markCursor = null);
+        (_.markCursor = null));
     else if (
       (_(_, !_.selection.empty),
       _ &&
@@ -9381,7 +9388,7 @@ _.compositionstart = _.compositionupdate = (_) => {
         _.nodeBefore.marks.length)
     ) {
       let _ = _.domSelectionRange();
-      for (let _ = _.focusNode, _ = _.focusOffset; _ && _(_) && _ != 0; ) {
+      for (let _ = _.focusNode, _ = _.focusOffset; _ && _(_) && _ != 0;) {
         let _ = _ < 0 ? _.lastChild : _.childNodes[_ - 1];
         if (!_) break;
         if (_(_)) {
@@ -9389,7 +9396,7 @@ _.compositionstart = _.compositionupdate = (_) => {
           _ && _.collapse(_, _.nodeValue.length);
           break;
         }
-        (_ = _), (_ = -1);
+        ((_ = _), (_ = -1));
       }
     }
     _.input.composing = !0;
@@ -9418,8 +9425,8 @@ _.compositionend = (_, _) => {
     _(_, 20));
 };
 function _(_, _) {
-  clearTimeout(_.input.composingTimeout),
-    _ > -1 && (_.input.composingTimeout = setTimeout(() => _(_), _));
+  (clearTimeout(_.input.composingTimeout),
+    _ > -1 && (_.input.composingTimeout = setTimeout(() => _(_), _)));
 }
 function _(_) {
   for (
@@ -9469,17 +9476,17 @@ function _(_, _ = !1) {
 function _(_, _) {
   if (!_.dom.parentNode) return;
   let _ = _.dom.parentNode.appendChild(document.createElement(`div`));
-  _.appendChild(_),
-    (_.style.cssText = `position: fixed; left: -10000px; top: 10px`);
+  (_.appendChild(_),
+    (_.style.cssText = `position: fixed; left: -10000px; top: 10px`));
   let _ = getSelection(),
     _ = document.createRange();
-  _.selectNodeContents(_),
+  (_.selectNodeContents(_),
     _.dom.blur(),
     _.removeAllRanges(),
     _.addRange(_),
     setTimeout(() => {
-      _.parentNode && _.parentNode.removeChild(_), _.focus();
-    }, 50);
+      (_.parentNode && _.parentNode.removeChild(_), _.focus());
+    }, 50));
 }
 var _ = (_ && _ < 15) || (_ && _ < 604);
 _.copy = _.cut = (_, _) => {
@@ -9489,7 +9496,7 @@ _.copy = _.cut = (_, _) => {
   if (_.empty) return;
   let _ = _ ? null : _.clipboardData,
     { dom: _, text: _ } = _(_, _.content());
-  _
+  (_
     ? (_.preventDefault(),
       _.clearData(),
       _.setData(`text/html`, _.innerHTML),
@@ -9498,7 +9505,7 @@ _.copy = _.cut = (_, _) => {
     _ &&
       _.dispatch(
         _.state._.deleteSelection().scrollIntoView().setMeta(`uiEvent`, `cut`),
-      );
+      ));
 };
 function _(_) {
   return _.openStart == 0 && _.openEnd == 0 && _.content.childCount == 1
@@ -9511,14 +9518,14 @@ function _(_, _) {
     _ = _.dom.parentNode.appendChild(
       document.createElement(_ ? `textarea` : `div`),
     );
-  _ || (_.contentEditable = `true`),
+  (_ || (_.contentEditable = `true`),
     (_.style.cssText = `position: fixed; left: -10000px; top: 10px`),
-    _.focus();
+    _.focus());
   let _ = _.input.shiftKey && _.input.lastKeyCode != 45;
   setTimeout(() => {
-    _.focus(),
+    (_.focus(),
       _.parentNode && _.parentNode.removeChild(_),
-      _ ? _(_, _.value, null, _, _) : _(_, _.textContent, _.innerHTML, _, _);
+      _ ? _(_, _.value, null, _, _) : _(_, _.textContent, _.innerHTML, _, _));
   }, 50);
 }
 function _(_, _, _, _, _) {
@@ -9551,7 +9558,7 @@ _.paste = (_, _) => {
 };
 var _ = class {
     constructor(_, _, _) {
-      (this.slice = _), (this.move = _), (this.node = _);
+      ((this.slice = _), (this.move = _), (this.node = _));
     }
   },
   _ = _ ? `altKey` : `ctrlKey`;
@@ -9564,7 +9571,7 @@ function _(_, _) {
     _ == null ? !_[_] : !_
   );
 }
-(_.dragstart = (_, _) => {
+((_.dragstart = (_, _) => {
   let _ = _,
     _ = _.input.mouseDown;
   if ((_ && _.done(), !_.dataTransfer)) return;
@@ -9582,11 +9589,12 @@ function _(_, _) {
     }
   }
   let { dom: _, text: _, slice: _ } = _(_, (_ || _.state.selection).content());
-  (!_.dataTransfer.files.length || !_ || _ > 120) && _.dataTransfer.clearData(),
+  ((!_.dataTransfer.files.length || !_ || _ > 120) &&
+    _.dataTransfer.clearData(),
     _.dataTransfer.setData(_ ? `Text` : `text/html`, _.innerHTML),
     (_.dataTransfer.effectAllowed = `copyMove`),
     _ || _.dataTransfer.setData(`text/plain`, _),
-    (_.dragging = new _(_, _(_, _), _));
+    (_.dragging = new _(_, _(_, _), _)));
 }),
   (_.dragend = (_) => {
     let _ = _.dragging;
@@ -9601,7 +9609,7 @@ function _(_, _) {
     } finally {
       _.dragging = null;
     }
-  });
+  }));
 function _(_, _, _) {
   if (!_.dataTransfer) return;
   let _ = _.posAtCoords(_(_));
@@ -9653,13 +9661,13 @@ function _(_, _, _) {
     _.setSelection(new _(_));
   else {
     let _ = _.mapping.map(_);
-    _.mapping.maps[_.mapping.maps.length - 1].forEach((_, _, _, _) => (_ = _)),
-      _.setSelection(_(_, _, _.doc.resolve(_)));
+    (_.mapping.maps[_.mapping.maps.length - 1].forEach((_, _, _, _) => (_ = _)),
+      _.setSelection(_(_, _, _.doc.resolve(_))));
   }
-  _.focus(), _.dispatch(_.setMeta(`uiEvent`, `drop`));
+  (_.focus(), _.dispatch(_.setMeta(`uiEvent`, `drop`)));
 }
-(_.focus = (_) => {
-  (_.input.lastFocus = Date.now()),
+((_.focus = (_) => {
+  ((_.input.lastFocus = Date.now()),
     _.focused ||
       (_.domObserver.stop(),
       _.dom.classList.add(`ProseMirror-focused`),
@@ -9670,7 +9678,7 @@ function _(_, _, _) {
           _.hasFocus() &&
           !_.domObserver.currentSelection._(_.domSelectionRange()) &&
           _(_);
-      }, 20));
+      }, 20)));
 }),
   (_.blur = (_, _) => {
     let _ = _;
@@ -9701,7 +9709,7 @@ function _(_, _, _) {
           _.dispatch(_.state._.delete(_.pos - 1, _.pos).scrollIntoView());
       }, 50);
     }
-  });
+  }));
 for (let _ in _) _[_] = _[_];
 function _(_, _) {
   if (_ == _) return !0;
@@ -9711,20 +9719,22 @@ function _(_, _) {
 }
 var _ = class {
     constructor(_) {
-      (this.frag = _), (this.index = 0), (this.off = 0);
+      ((this.frag = _), (this.index = 0), (this.off = 0));
     }
     nodeAt(_) {
-      for (; this.off <= _ && this.index < this.frag.childCount; ) {
+      for (; this.off <= _ && this.index < this.frag.childCount;) {
         let _ = this.frag.child(this.index);
         if (this.off == _) return _;
-        (this.off += _.nodeSize), this.index++;
+        ((this.off += _.nodeSize), this.index++);
       }
       return null;
     }
   },
   _ = class _ {
     constructor(_, _) {
-      (this.toDOM = _), (this.spec = _ || _), (this.side = this.spec.side || 0);
+      ((this.toDOM = _),
+        (this.spec = _ || _),
+        (this.side = this.spec.side || 0));
     }
     map(_, _, _, _) {
       let { pos: _, deleted: _ } = _.mapResult(
@@ -9750,7 +9760,7 @@ var _ = class {
   },
   _ = class _ {
     constructor(_, _) {
-      (this.attrs = _), (this.spec = _ || _);
+      ((this.attrs = _), (this.spec = _ || _));
     }
     map(_, _, _, _) {
       let _ = _.map(_.from + _, this.spec.inclusiveStart ? -1 : 1) - _,
@@ -9773,7 +9783,7 @@ var _ = class {
   },
   _ = class _ {
     constructor(_, _) {
-      (this.attrs = _), (this.spec = _ || _);
+      ((this.attrs = _), (this.spec = _ || _));
     }
     map(_, _, _, _) {
       let _ = _.mapResult(_.from + _, 1);
@@ -9797,7 +9807,7 @@ var _ = class {
   },
   _ = class _ {
     constructor(_, _, _) {
-      (this.from = _), (this._ = _), (this.type = _);
+      ((this.from = _), (this._ = _), (this.type = _));
     }
     copy(_, _) {
       return new _(_, _, this.type);
@@ -9833,14 +9843,14 @@ var _ = class {
   _ = {},
   _ = class _ {
     constructor(_, _) {
-      (this.local = _.length ? _ : _), (this.children = _.length ? _ : _);
+      ((this.local = _.length ? _ : _), (this.children = _.length ? _ : _));
     }
     static create(_, _) {
       return _.length ? _(_, _, 0, _) : _;
     }
     find(_, _, _) {
       let _ = [];
-      return this.findInner(_ ?? 0, _ ?? 1e9, _, 0, _), _;
+      return (this.findInner(_ ?? 0, _ ?? 1e9, _, 0, _), _);
     }
     findInner(_, _, _, _, _) {
       for (let _ = 0; _ < this.local.length; _++) {
@@ -9892,11 +9902,11 @@ var _ = class {
         let _ = _ + _,
           _;
         if ((_ = _(_, _, _))) {
-          for (_ ||= this.children.slice(); _ < _.length && _[_] < _; ) _ += 3;
-          _[_] == _
+          for (_ ||= this.children.slice(); _ < _.length && _[_] < _;) _ += 3;
+          (_[_] == _
             ? (_[_ + 2] = _[_ + 2].addInner(_, _, _ + 1))
             : _.splice(_, 0, _, _ + _.nodeSize, _(_, _, _ + 1, _)),
-            (_ += 3);
+            (_ += 3));
         }
       });
       let _ = _(_ ? _(_) : _, -_);
@@ -10002,7 +10012,7 @@ var _ = class {
       _(this);
     }
   };
-(_.empty = new _([], [])), (_.removeOverlap = _);
+((_.empty = new _([], [])), (_.removeOverlap = _));
 var _ = _.empty,
   _ = class _ {
     constructor(_) {
@@ -10069,7 +10079,7 @@ function _(_, _, _, _, _, _, _) {
   let _ = _.slice();
   for (let _ = 0, _ = _; _ < _.maps.length; _++) {
     let _ = 0;
-    _.maps[_].forEach((_, _, _, _) => {
+    (_.maps[_].forEach((_, _, _, _) => {
       let _ = _ - _ - (_ - _);
       for (let _ = 0; _ < _.length; _ += 3) {
         let _ = _[_ + 1];
@@ -10081,13 +10091,13 @@ function _(_, _, _, _, _, _, _) {
       }
       _ += _;
     }),
-      (_ = _.maps[_].map(_, -1));
+      (_ = _.maps[_].map(_, -1)));
   }
   let _ = !1;
   for (let _ = 0; _ < _.length; _ += 3)
     if (_[_ + 1] < 0) {
       if (_[_ + 1] == -2) {
-        (_ = !0), (_[_ + 1] = -1);
+        ((_ = !0), (_[_ + 1] = -1));
         continue;
       }
       let _ = _.map(_[_] + _),
@@ -10113,7 +10123,7 @@ function _(_, _, _, _, _, _, _) {
       _[_ + 1] < 0 && (_.splice(_, 3), (_ -= 3));
     for (let _ = 0, _ = 0; _ < _.children.length; _ += 3) {
       let _ = _.children[_];
-      for (; _ < _.length && _[_] < _; ) _ += 3;
+      for (; _ < _.length && _[_] < _;) _ += 3;
       _.splice(_, 0, _.children[_], _.children[_ + 1], _.children[_ + 2]);
     }
   }
@@ -10201,7 +10211,7 @@ function _(_) {
   return _;
 }
 function _(_, _, _) {
-  for (; _ < _.length && _(_, _[_]) > 0; ) _++;
+  for (; _ < _.length && _(_, _[_]) > 0;) _++;
   _.splice(_, 0, _);
 }
 function _(_) {
@@ -10226,16 +10236,16 @@ var _ = {
   _ = _ && _ <= 11,
   _ = class {
     constructor() {
-      (this.anchorNode = null),
+      ((this.anchorNode = null),
         (this.anchorOffset = 0),
         (this.focusNode = null),
-        (this.focusOffset = 0);
+        (this.focusOffset = 0));
     }
     set(_) {
-      (this.anchorNode = _.anchorNode),
+      ((this.anchorNode = _.anchorNode),
         (this.anchorOffset = _.anchorOffset),
         (this.focusNode = _.focusNode),
-        (this.focusOffset = _.focusOffset);
+        (this.focusOffset = _.focusOffset));
     }
     clear() {
       this.anchorNode = this.focusNode = null;
@@ -10251,7 +10261,7 @@ var _ = {
   },
   _ = class {
     constructor(_, _) {
-      (this.view = _),
+      ((this.view = _),
         (this.handleDOMChange = _),
         (this.queue = []),
         (this.flushingSoon = -1),
@@ -10283,19 +10293,19 @@ var _ = {
           })),
         _ &&
           (this.onCharData = (_) => {
-            this.queue.push({
+            (this.queue.push({
               target: _.target,
               type: `characterData`,
               oldValue: _.prevValue,
             }),
-              this.flushSoon();
+              this.flushSoon());
           }),
-        (this.onSelectionChange = this.onSelectionChange.bind(this));
+        (this.onSelectionChange = this.onSelectionChange.bind(this)));
     }
     flushSoon() {
       this.flushingSoon < 0 &&
         (this.flushingSoon = window.setTimeout(() => {
-          (this.flushingSoon = -1), this.flush();
+          ((this.flushingSoon = -1), this.flush());
         }, 20));
     }
     forceFlush() {
@@ -10305,14 +10315,14 @@ var _ = {
         this.flush());
     }
     start() {
-      this.observer &&
+      (this.observer &&
         (this.observer.takeRecords(), this.observer.observe(this.view.dom, _)),
         this.onCharData &&
           this.view.dom.addEventListener(
             `DOMCharacterDataModified`,
             this.onCharData,
           ),
-        this.connectSelection();
+        this.connectSelection());
     }
     stop() {
       if (this.observer) {
@@ -10323,12 +10333,12 @@ var _ = {
         }
         this.observer.disconnect();
       }
-      this.onCharData &&
+      (this.onCharData &&
         this.view.dom.removeEventListener(
           `DOMCharacterDataModified`,
           this.onCharData,
         ),
-        this.disconnectSelection();
+        this.disconnectSelection());
     }
     connectSelection() {
       this.view.dom.ownerDocument.addEventListener(
@@ -10343,8 +10353,8 @@ var _ = {
       );
     }
     suppressSelectionUpdates() {
-      (this.suppressingSelectionUpdates = !0),
-        setTimeout(() => (this.suppressingSelectionUpdates = !1), 50);
+      ((this.suppressingSelectionUpdates = !0),
+        setTimeout(() => (this.suppressingSelectionUpdates = !1), 50));
     }
     onSelectionChange() {
       if (_(this.view)) {
@@ -10381,7 +10391,7 @@ var _ = {
           target: _(_) ? _.parentNode : _,
         })
       )
-        return this.setCurSelection(), !0;
+        return (this.setCurSelection(), !0);
     }
     pendingRecords() {
       if (this.observer)
@@ -10422,7 +10432,7 @@ var _ = {
         for (let _ of _)
           if (_.nodeName == `BR` && _.parentNode) {
             let _ = _.nextSibling;
-            for (; _ && _(_); ) {
+            for (; _ && _(_);) {
               if (_.contentEditable == `false`) {
                 _.parentNode.removeChild(_);
                 break;
@@ -10484,7 +10494,7 @@ var _ = {
       if (_.type == `childList`) {
         for (let _ = 0; _ < _.addedNodes.length; _++) {
           let _ = _.addedNodes[_];
-          _.push(_), _(_) && (this.lastChangedTextNode = _);
+          (_.push(_), _(_) && (this.lastChangedTextNode = _));
         }
         if (
           _.contentDOM &&
@@ -10500,10 +10510,10 @@ var _ = {
         if (_ && _ <= 11 && _.addedNodes.length)
           for (let _ = 0; _ < _.addedNodes.length; _++) {
             let { previousSibling: _, nextSibling: _ } = _.addedNodes[_];
-            (!_ || Array.prototype.indexOf.call(_.addedNodes, _) < 0) &&
+            ((!_ || Array.prototype.indexOf.call(_.addedNodes, _) < 0) &&
               (_ = _),
               (!_ || Array.prototype.indexOf.call(_.addedNodes, _) < 0) &&
-                (_ = _);
+                (_ = _));
           }
         let _ = _ && _.parentNode == _.target ? _(_) + 1 : 0,
           _ = _.localPosFromDOM(_.target, _, -1),
@@ -10537,10 +10547,10 @@ function _(_) {
     ) !== -1)
   ) {
     if (((_.requiresGeckoHackNode = _), _)) return;
-    console.warn(
+    (console.warn(
       `ProseMirror expects the CSS white-space property to be set, preferably to 'pre-wrap'. It is recommended to load style/prosemirror.css from the prosemirror-view package.`,
     ),
-      (_ = !0);
+      (_ = !0));
   }
 }
 function _(_, _) {
@@ -10566,9 +10576,9 @@ function _(_, _) {
   }
   let _;
   function _(_) {
-    _.preventDefault(),
+    (_.preventDefault(),
       _.stopImmediatePropagation(),
-      (_ = _.getTargetRanges()[0]);
+      (_ = _.getTargetRanges()[0]));
   }
   return (
     _.dom.addEventListener(`beforeinput`, _, !0),
@@ -10589,7 +10599,7 @@ function _(_, _) {
   for (let _ of _)
     if (_.parentNode?.nodeName == `TR`) {
       let _ = _.nextSibling;
-      for (; _ && _.nodeName != `TD` && _.nodeName != `TH`; ) _ = _.nextSibling;
+      for (; _ && _.nodeName != `TD` && _.nodeName != `TH`;) _ = _.nextSibling;
       if (_) {
         let _ = _;
         for (;;) {
@@ -10603,8 +10613,8 @@ function _(_, _) {
             break;
           _ = _;
         }
-        _.insertBefore(_, _.firstChild),
-          _ == _ && _.domSelection().collapse(_, _);
+        (_.insertBefore(_, _.firstChild),
+          _ == _ && _.domSelection().collapse(_, _));
       } else _.parentNode.removeChild(_);
     }
 }
@@ -10662,11 +10672,11 @@ function _(_, _, _, _) {
   if (_ && _[0].pos != null) {
     let _ = _[0].pos,
       _ = _[1] && _[1].pos;
-    (_ ??= _),
+    ((_ ??= _),
       (_ = {
         anchor: _ + _,
         head: _ + _,
-      });
+      }));
   }
   return {
     doc: _,
@@ -10723,27 +10733,27 @@ function _(_, _, _, _, _) {
       )
         return;
       let _ = _.state._.setSelection(_);
-      _ == `pointer`
+      (_ == `pointer`
         ? _.setMeta(`pointer`, !0)
         : _ == `key` && _.scrollIntoView(),
         _ && _.setMeta(`composition`, _),
-        _.dispatch(_);
+        _.dispatch(_));
     }
     return;
   }
   let _ = _.state.doc.resolve(_),
     _ = _.sharedDepth(_);
-  (_ = _.before(_ + 1)), (_ = _.state.doc.resolve(_).after(_ + 1));
+  ((_ = _.before(_ + 1)), (_ = _.state.doc.resolve(_).after(_ + 1)));
   let _ = _.state.selection,
     _ = _(_, _, _, _),
     _ = _.state.doc,
     _ = _.slice(_.from, _._),
     _,
     _;
-  _.input.lastKeyCode === 8 && Date.now() - 100 < _.input.lastKeyCodeTime
+  (_.input.lastKeyCode === 8 && Date.now() - 100 < _.input.lastKeyCodeTime
     ? ((_ = _.state.selection._), (_ = `end`))
     : ((_ = _.state.selection.from), (_ = `start`)),
-    (_.input.lastKeyCode = null);
+    (_.input.lastKeyCode = null));
   let _ = _(_.content, _.doc.content, _.from, _, _);
   if (
     (_ && _.input.domChangeCount++,
@@ -10774,13 +10784,13 @@ function _(_, _, _, _, _) {
         let _ = _(_, _.state.doc, _.sel);
         if (_ && !_._(_.state.selection)) {
           let _ = _.state._.setSelection(_);
-          _ && _.setMeta(`composition`, _), _.dispatch(_);
+          (_ && _.setMeta(`composition`, _), _.dispatch(_));
         }
       }
       return;
     }
   }
-  _.state.selection.from < _.state.selection._ &&
+  (_.state.selection.from < _.state.selection._ &&
     _.start == _.endB &&
     _.state.selection instanceof _ &&
     (_.start > _.state.selection.from &&
@@ -10799,7 +10809,7 @@ function _(_, _, _, _, _) {
       _.start > _.from &&
       _.doc.textBetween(_.start - _.from - 1, _.start - _.from + 1) ==
         ` \xA0` &&
-      (_.start--, _.endA--, _.endB--);
+      (_.start--, _.endA--, _.endB--));
   let _ = _.doc.resolveNoCache(_.start - _.from),
     _ = _.doc.resolveNoCache(_.endB - _.from),
     _ = _.resolve(_.start),
@@ -10822,7 +10832,7 @@ function _(_, _, _, _, _) {
     _ && _ && _.domObserver.suppressSelectionUpdates();
     return;
   }
-  _ && _.endB == _.start && (_.input.lastChromeDelete = Date.now()),
+  (_ && _.endB == _.start && (_.input.lastChromeDelete = Date.now()),
     _ &&
       !_ &&
       _.start() != _.start() &&
@@ -10837,7 +10847,7 @@ function _(_, _, _, _, _) {
         _.someProp(`handleKeyDown`, function (_) {
           return _(_, _(13, `Enter`));
         });
-      }, 20));
+      }, 20)));
   let _ = _.start,
     _ = _.endA,
     _ = (_) => {
@@ -10858,7 +10868,7 @@ function _(_, _, _, _, _) {
           ) &&
           _.setSelection(_);
       }
-      return _ && _.setMeta(`composition`, _), _.scrollIntoView();
+      return (_ && _.setMeta(`composition`, _), _.scrollIntoView());
     },
     _;
   if (_) {
@@ -10869,7 +10879,7 @@ function _(_, _, _, _, _) {
         (_.domObserver.suppressSelectionUpdates(), setTimeout(() => _(_), 20));
       let _ = _(_.state._.delete(_, _)),
         _ = _.resolve(_.start).marksAcross(_.resolve(_.endA));
-      _ && _.ensureMarks(_), _.dispatch(_);
+      (_ && _.ensureMarks(_), _.dispatch(_));
     } else if (
       _.endA == _.endB &&
       (_ = _(
@@ -10878,8 +10888,8 @@ function _(_, _, _, _, _) {
       ))
     ) {
       let _ = _(_.state._);
-      _.type == `add` ? _.addMark(_, _, _.mark) : _.removeMark(_, _, _.mark),
-        _.dispatch(_);
+      (_.type == `add` ? _.addMark(_, _, _.mark) : _.removeMark(_, _, _.mark),
+        _.dispatch(_));
     } else if (
       _.parent.child(_.index()).isText &&
       _.index() == _.index() - +!_.textOffset
@@ -10906,9 +10916,9 @@ function _(_, _) {
   for (let _ = 0; _ < _.length; _++) _ = _[_].removeFromSet(_);
   for (let _ = 0; _ < _.length; _++) _ = _[_].removeFromSet(_);
   if (_.length == 1 && _.length == 0)
-    (_ = _[0]), (_ = `add`), (_ = (_) => _.mark(_.addToSet(_.marks)));
+    ((_ = _[0]), (_ = `add`), (_ = (_) => _.mark(_.addToSet(_.marks))));
   else if (_.length == 0 && _.length == 1)
-    (_ = _[0]), (_ = `remove`), (_ = (_) => _.mark(_.removeFromSet(_.marks)));
+    ((_ = _[0]), (_ = `remove`), (_ = (_) => _.mark(_.removeFromSet(_.marks))));
   else return null;
   let _ = [];
   for (let _ = 0; _ < _.childCount; _++) _.push(_(_.child(_)));
@@ -10951,11 +10961,11 @@ function _(_, _, _) {
 function _(_, _, _) {
   let _ = _.depth,
     _ = _ ? _.end() : _.pos;
-  for (; _ > 0 && (_ || _.indexAfter(_) == _.node(_).childCount); )
-    _--, _++, (_ = !1);
+  for (; _ > 0 && (_ || _.indexAfter(_) == _.node(_).childCount);)
+    (_--, _++, (_ = !1));
   if (_) {
     let _ = _.node(_).maybeChild(_.indexAfter(_));
-    for (; _ && !_.isLeaf; ) (_ = _.firstChild), _++;
+    for (; _ && !_.isLeaf;) ((_ = _.firstChild), _++);
   }
   return _;
 }
@@ -10971,10 +10981,10 @@ function _(_, _, _, _, _) {
   }
   if (_ < _ && _ < _) {
     let _ = _ <= _ && _ >= _ ? _ - _ : 0;
-    (_ -= _), (_ = _ + (_ - _)), (_ = _);
+    ((_ -= _), (_ = _ + (_ - _)), (_ = _));
   } else if (_ < _) {
     let _ = _ <= _ && _ >= _ ? _ - _ : 0;
-    (_ -= _), (_ = _ + (_ - _)), (_ = _);
+    ((_ -= _), (_ = _ + (_ - _)), (_ = _));
   }
   return {
     start: _,
@@ -10984,7 +10994,7 @@ function _(_, _, _, _, _) {
 }
 var _ = class {
   constructor(_, _) {
-    (this._root = null),
+    ((this._root = null),
       (this.focused = !1),
       (this.trackWrites = null),
       (this.mounted = !1),
@@ -11015,7 +11025,7 @@ var _ = class {
       (this.domObserver = new _(this, (_, _, _, _) => _(this, _, _, _, _))),
       this.domObserver.start(),
       _(this),
-      this.updatePluginViews();
+      this.updatePluginViews());
   }
   get composing() {
     return this.input.composing;
@@ -11032,9 +11042,9 @@ var _ = class {
   update(_) {
     _.handleDOMEvents != this._props.handleDOMEvents && _(this);
     let _ = this._props;
-    (this._props = _),
+    ((this._props = _),
       _.plugins && (_.plugins.forEach(_), (this.directPlugins = _.plugins)),
-      this.updateStateInner(_.state, _);
+      this.updateStateInner(_.state, _));
   }
   setProps(_) {
     let _ = {};
@@ -11050,7 +11060,7 @@ var _ = class {
     let _ = this.state,
       _ = !1,
       _ = !1;
-    _.storedMarks && this.composing && (_(this), (_ = !0)), (this.state = _);
+    (_.storedMarks && this.composing && (_(this), (_ = !0)), (this.state = _));
     let _ = _.plugins != _.plugins || this._props.plugins != _.plugins;
     if (
       _ ||
@@ -11060,9 +11070,9 @@ var _ = class {
       let _ = _(this);
       _(_, this.nodeViews) && ((this.nodeViews = _), (_ = !0));
     }
-    (_ || _.handleDOMEvents != this._props.handleDOMEvents) && _(this),
+    ((_ || _.handleDOMEvents != this._props.handleDOMEvents) && _(this),
       (this.editable = _(this)),
-      _(this);
+      _(this));
     let _ = _(this),
       _ = _(this),
       _ =
@@ -11088,17 +11098,17 @@ var _ = class {
         let _ = _
           ? (this.trackWrites = this.domSelectionRange().focusNode)
           : null;
-        this.composing && (this.input.compositionNode = _(this)),
+        (this.composing && (this.input.compositionNode = _(this)),
           (_ || !this.docView.update(_.doc, _, _, this)) &&
             (this.docView.updateOuterDeco(_),
             this.docView.destroy(),
             (this.docView = _(_.doc, _, _, this.dom, this))),
           !_ ||
             (this.trackWrites && this.dom.contains(this.trackWrites)) ||
-            (_ = !0);
+            (_ = !0));
       }
       let _ = this.input.mouseDown;
-      _ ||
+      (_ ||
       !(
         _ &&
         this.domObserver.currentSelection._(this.domSelectionRange()) &&
@@ -11107,9 +11117,9 @@ var _ = class {
       )
         ? _(this, _)
         : (_(this, _.selection), this.domObserver.setCurSelection()),
-        this.domObserver.start();
+        this.domObserver.start());
     }
-    this.updatePluginViews(_),
+    (this.updatePluginViews(_),
       this.dragging?.node &&
         !_.doc._(_.doc) &&
         this.updateDraggedNode(this.dragging, _),
@@ -11117,7 +11127,7 @@ var _ = class {
         ? (this.dom.scrollTop = 0)
         : _ == `to selection`
           ? this.scrollToSelection()
-          : _ && _(_);
+          : _ && _(_));
   }
   scrollToSelection() {
     let _ = this.domSelectionRange().focusNode;
@@ -11134,7 +11144,7 @@ var _ = class {
   }
   destroyPluginViews() {
     let _;
-    for (; (_ = this.pluginViews.pop()); ) _.destroy && _.destroy();
+    for (; (_ = this.pluginViews.pop());) _.destroy && _.destroy();
   }
   updatePluginViews(_) {
     if (
@@ -11142,7 +11152,8 @@ var _ = class {
       _.plugins != this.state.plugins ||
       this.directPlugins != this.prevDirectPlugins
     ) {
-      (this.prevDirectPlugins = this.directPlugins), this.destroyPluginViews();
+      ((this.prevDirectPlugins = this.directPlugins),
+        this.destroyPluginViews());
       for (let _ = 0; _ < this.directPlugins.length; _++) {
         let _ = this.directPlugins[_];
         _.spec.view && this.pluginViews.push(_.spec.view(this));
@@ -11196,7 +11207,7 @@ var _ = class {
       let _ = this.root.activeElement;
       if (_ == this.dom) return !0;
       if (!_ || !this.dom.contains(_)) return !1;
-      for (; _ && this.dom != _ && this.dom.contains(_); ) {
+      for (; _ && this.dom != _ && this.dom.contains(_);) {
         if (_.contentEditable == `false`) return !1;
         _ = _.parentElement;
       }
@@ -11205,10 +11216,10 @@ var _ = class {
     return this.root.activeElement == this.dom;
   }
   focus() {
-    this.domObserver.stop(),
+    (this.domObserver.stop(),
       this.editable && _(this.dom),
       _(this),
-      this.domObserver.start();
+      this.domObserver.start());
   }
   get root() {
     let _ = this._root;
@@ -11322,7 +11333,7 @@ function _(_) {
 function _(_) {
   if (_.markCursor) {
     let _ = document.createElement(`img`);
-    (_.className = `ProseMirror-separator`),
+    ((_.className = `ProseMirror-separator`),
       _.setAttribute(`mark-placeholder`, `true`),
       _.setAttribute(`alt`, ``),
       (_.cursorWrapper = {
@@ -11331,7 +11342,7 @@ function _(_) {
           raw: !0,
           marks: _.markCursor,
         }),
-      });
+      }));
   } else _.cursorWrapper = null;
 }
 function _(_) {
@@ -11350,7 +11361,7 @@ function _(_) {
     for (let _ in _)
       Object.prototype.hasOwnProperty.call(_, _) || (_[_] = _[_]);
   }
-  return _.someProp(`nodeViews`, _), _.someProp(`markViews`, _), _;
+  return (_.someProp(`nodeViews`, _), _.someProp(`markViews`, _), _);
 }
 function _(_, _) {
   let _ = 0,
@@ -11460,7 +11471,7 @@ for (
   _[48 + _] = _[96 + _] = String(_);
 for (var _ = 1; _ <= 24; _++) _[_ + 111] = `F` + _;
 for (var _ = 65; _ <= 90; _++)
-  (_[_] = String.fromCharCode(_ + 32)), (_[_] = String.fromCharCode(_));
+  ((_[_] = String.fromCharCode(_ + 32)), (_[_] = String.fromCharCode(_)));
 for (var _ in _) _.hasOwnProperty(_) || (_[_] = _[_]);
 function _(_) {
   var _ =
@@ -11554,18 +11565,18 @@ function _(_) {
 var _, _;
 if (typeof WeakMap < `u`) {
   let _ = new WeakMap();
-  (_ = (_) => _.get(_)), (_ = (_, _) => (_.set(_, _), _));
+  ((_ = (_) => _.get(_)), (_ = (_, _) => (_.set(_, _), _)));
 } else {
   let _ = [],
     _ = 0;
-  (_ = (_) => {
+  ((_ = (_) => {
     for (let _ = 0; _ < _.length; _ += 2) if (_[_] == _) return _[_ + 1];
   }),
-    (_ = (_, _) => (_ == 10 && (_ = 0), (_[_++] = _), (_[_++] = _)));
+    (_ = (_, _) => (_ == 10 && (_ = 0), (_[_++] = _), (_[_++] = _))));
 }
 var _ = class {
   constructor(_, _, _, _) {
-    (this.width = _), (this.height = _), (this.map = _), (this.problems = _);
+    ((this.width = _), (this.height = _), (this.map = _), (this.problems = _));
   }
   findCell(_) {
     for (let _ = 0; _ < this.map.length; _++) {
@@ -11634,7 +11645,7 @@ var _ = class {
       if (_ == _) {
         let _ = _ + _ * this.width,
           _ = (_ + 1) * this.width;
-        for (; _ < _ && this.map[_] < _; ) _++;
+        for (; _ < _ && this.map[_] < _;) _++;
         return _ == _ ? _ - 1 : this.map[_];
       }
       _ = _;
@@ -11658,7 +11669,7 @@ function _(_) {
     let _ = _.child(_);
     _++;
     for (let _ = 0; ; _++) {
-      for (; _ < _.length && _[_] != 0; ) _++;
+      for (; _ < _.length && _[_] != 0;) _++;
       if (_ == _.childCount) break;
       let _ = _.child(_),
         { colspan: _, rowspan: _, colwidth: _ } = _.attrs;
@@ -11691,18 +11702,18 @@ function _(_) {
           }
         }
       }
-      (_ += _), (_ += _.nodeSize);
+      ((_ += _), (_ += _.nodeSize));
     }
     let _ = (_ + 1) * _,
       _ = 0;
-    for (; _ < _; ) _[_++] == 0 && _++;
-    _ &&
+    for (; _ < _;) _[_++] == 0 && _++;
+    (_ &&
       (_ ||= []).push({
         type: `missing`,
         row: _,
         _: _,
       }),
-      _++;
+      _++);
   }
   (_ === 0 || _ === 0) &&
     (_ ||= []).push({
@@ -11712,7 +11723,7 @@ function _(_) {
     _ = !1;
   for (let _ = 0; !_ && _ < _.length; _ += 2)
     _[_] != null && _[_ + 1] < _ && (_ = !0);
-  return _ && _(_, _, _), _;
+  return (_ && _(_, _, _), _);
 }
 function _(_) {
   let _ = -1,
@@ -11730,7 +11741,7 @@ function _(_) {
       }
     for (let _ = 0; _ < _.childCount; _++) {
       let _ = _.child(_);
-      (_ += _.attrs.colspan), _.attrs.rowspan > 1 && (_ = !0);
+      ((_ += _.attrs.colspan), _.attrs.rowspan > 1 && (_ = !0));
     }
     _ == -1 ? (_ = _) : _ != _ && (_ = Math.max(_, _));
   }
@@ -11784,9 +11795,9 @@ function _(_, _) {
 }
 function _(_, _) {
   let _ = {};
-  _.attrs.colspan != 1 && (_.colspan = _.attrs.colspan),
+  (_.attrs.colspan != 1 && (_.colspan = _.attrs.colspan),
     _.attrs.rowspan != 1 && (_.rowspan = _.attrs.rowspan),
-    _.attrs.colwidth && (_[`data-colwidth`] = _.attrs.colwidth.join(`,`));
+    _.attrs.colwidth && (_[`data-colwidth`] = _.attrs.colwidth.join(`,`)));
   for (let _ in _) {
     let _ = _[_].setDOMAttr;
     _ && _(_.attrs[_], _);
@@ -11979,9 +11990,9 @@ var _ = class _ extends _ {
       let _ = _ + _ + 1;
       return new _(_.resolve(_), _.resolve(_ + _.content.size));
     });
-    super(_[0].$from, _[0].$to, _),
+    (super(_[0].$from, _[0].$to, _),
       (this.$anchorCell = _),
-      (this.$headCell = _);
+      (this.$headCell = _));
   }
   map(_, _) {
     let _ = _.resolve(_.map(this.$anchorCell.pos)),
@@ -12146,10 +12157,10 @@ var _ = class _ extends _ {
     return new _(this.$anchorCell.pos, this.$headCell.pos);
   }
 };
-(_.prototype.visible = !1), _.jsonID(`cell`, _);
+((_.prototype.visible = !1), _.jsonID(`cell`, _));
 var _ = class _ {
   constructor(_, _) {
-    (this.anchor = _), (this.head = _);
+    ((this.anchor = _), (this.head = _));
   }
   map(_) {
     return new _(_.map(this.anchor), _.map(this.head));
@@ -12235,7 +12246,7 @@ function _(_, _, _) {
       : _ instanceof _ &&
         _(_) &&
         (_ = _.create(_, _.$from.start(), _.$from.end()));
-  return _ && (_ ||= _._).setSelection(_), _;
+  return (_ && (_ ||= _._).setSelection(_), _);
 }
 var _ = new _(`fix-tables`);
 function _(_, _, _, _) {
@@ -12245,14 +12256,14 @@ function _(_, _, _, _) {
     let _ = _.child(_);
     for (let _ = _, _ = Math.min(_, _ + 3); _ < _; _++)
       if (_.child(_) == _) {
-        (_ = _ + 1), (_ += _.nodeSize);
+        ((_ = _ + 1), (_ += _.nodeSize));
         continue outer;
       }
-    _(_, _),
+    (_(_, _),
       _ < _ && _.child(_).sameMarkup(_)
         ? _(_.child(_), _, _ + 1, _)
         : _.nodesBetween(0, _.content.size, _, _ + 1),
-      (_ += _.nodeSize);
+      (_ += _.nodeSize));
   }
 }
 function _(_, _) {
@@ -12260,7 +12271,9 @@ function _(_, _) {
     _ = (_, _) => {
       _.type.spec.tableRole == `table` && (_ = _(_, _, _, _));
     };
-  return _ ? _.doc != _.doc && _(_.doc, _.doc, 0, _) : _.doc.descendants(_), _;
+  return (
+    _ ? _.doc != _.doc && _(_.doc, _.doc, 0, _) : _.doc.descendants(_), _
+  );
 }
 function _(_, _, _, _) {
   let _ = _.get(_);
@@ -12346,12 +12359,12 @@ function _(_, { map: _, tableStart: _, table: _ }, _) {
     if (_ > 0 && _ < _.width && _.map[_ - 1] == _.map[_]) {
       let _ = _.map[_],
         _ = _.nodeAt(_);
-      _.setNodeMarkup(
+      (_.setNodeMarkup(
         _.mapping.map(_ + _),
         null,
         _(_.attrs, _ - _.colCount(_)),
       ),
-        (_ += _.attrs.rowspan - 1);
+        (_ += _.attrs.rowspan - 1));
     } else {
       let _ = _ == null ? _(_.type.schema).cell : _.nodeAt(_.map[_ + _]).type,
         _ = _.positionAt(_, _, _);
@@ -12378,7 +12391,7 @@ function _(_, _) {
 }
 function _(_, { map: _, table: _, tableStart: _ }, _) {
   let _ = _.mapping.maps.length;
-  for (let _ = 0; _ < _.height; ) {
+  for (let _ = 0; _ < _.height;) {
     let _ = _ * _.width + _,
       _ = _.map[_],
       _ = _.nodeAt(_),
@@ -12405,7 +12418,7 @@ function _(_, _) {
     for (let _ = _.right - 1; _(_, _, _), _ != _.left; _--) {
       let _ = _.tableStart ? _.doc.nodeAt(_.tableStart - 1) : _.doc;
       if (!_) throw RangeError(`No table found`);
-      (_.table = _), (_.map = _.get(_));
+      ((_.table = _), (_.map = _.get(_)));
     }
     _(_);
   }
@@ -12427,11 +12440,11 @@ function _(_, { map: _, tableStart: _, table: _ }, _) {
     if (_ > 0 && _ < _.height && _.map[_] == _.map[_ - _.width]) {
       let _ = _.map[_],
         _ = _.nodeAt(_).attrs;
-      _.setNodeMarkup(_ + _, null, {
+      (_.setNodeMarkup(_ + _, null, {
         ..._,
         rowspan: _.rowspan + 1,
       }),
-        (_ += _.colspan - 1);
+        (_ += _.colspan - 1));
     } else {
       let _ = (
         _ == null
@@ -12440,7 +12453,7 @@ function _(_, { map: _, tableStart: _, table: _ }, _) {
       )?.createAndFill();
       _ && _.push(_);
     }
-  return _.insert(_, _(_.type.schema).row.create(null, _)), _;
+  return (_.insert(_, _(_.type.schema).row.create(null, _)), _);
 }
 function _(_, _) {
   if (!_(_)) return !1;
@@ -12470,11 +12483,11 @@ function _(_, { map: _, table: _, tableStart: _ }, _) {
     if (!_.has(_)) {
       if ((_.add(_), _ > 0 && _ == _.map[_ - _.width])) {
         let _ = _.nodeAt(_).attrs;
-        _.setNodeMarkup(_.mapping.slice(_).map(_ + _), null, {
+        (_.setNodeMarkup(_.mapping.slice(_).map(_ + _), null, {
           ..._,
           rowspan: _.rowspan - 1,
         }),
-          (_ += _.colspan - 1);
+          (_ += _.colspan - 1));
       } else if (_ < _.height && _ == _.map[_ + _.width]) {
         let _ = _.nodeAt(_),
           _ = _.attrs,
@@ -12486,7 +12499,7 @@ function _(_, { map: _, table: _, tableStart: _ }, _) {
             _.content,
           ),
           _ = _.positionAt(_ + 1, _, _);
-        _.insert(_.mapping.slice(_).map(_ + _), _), (_ += _.colspan - 1);
+        (_.insert(_.mapping.slice(_).map(_ + _), _), (_ += _.colspan - 1));
       }
     }
   }
@@ -12500,7 +12513,7 @@ function _(_, _) {
     for (let _ = _.bottom - 1; _(_, _, _), _ != _.top; _--) {
       let _ = _.tableStart ? _.doc.nodeAt(_.tableStart - 1) : _.doc;
       if (!_) throw RangeError(`No table found`);
-      (_.table = _), (_.map = _.get(_.table));
+      ((_.table = _), (_.map = _.get(_.table)));
     }
     _(_);
   }
@@ -12520,12 +12533,12 @@ function _({ width: _, height: _, map: _ }, _) {
   for (let _ = _.top; _ < _.bottom; _++) {
     if ((_.left > 0 && _[_] == _[_ - 1]) || (_.right < _ && _[_] == _[_ + 1]))
       return !0;
-    (_ += _), (_ += _);
+    ((_ += _), (_ += _));
   }
   for (let _ = _.left; _ < _.right; _++) {
     if ((_.top > 0 && _[_] == _[_ - _]) || (_.bottom < _ && _[_] == _[_ + _]))
       return !0;
-    _++, _++;
+    (_++, _++);
   }
   return !1;
 }
@@ -12546,7 +12559,7 @@ function _(_, _) {
         let _ = _.map[_ * _.width + _],
           _ = _.table.nodeAt(_);
         if (!_[_] && _) {
-          if (((_[_] = !0), _ == null)) (_ = _), (_ = _);
+          if (((_[_] = !0), _ == null)) ((_ = _), (_ = _));
           else {
             _(_) || (_ = _.append(_.content));
             let _ = _.mapping.map(_ + _.tableStart);
@@ -12566,7 +12579,7 @@ function _(_, _) {
         _ = _(_) ? _ + 1 : _;
       _.replaceWith(_ + _.tableStart, _ + _.tableStart, _);
     }
-    _.setSelection(new _(_.doc.resolve(_ + _.tableStart))), _(_);
+    (_.setSelection(new _(_.doc.resolve(_ + _.tableStart))), _(_));
   }
   return !0;
 }
@@ -12581,7 +12594,7 @@ function _(_) {
       _;
     if (_ instanceof _) {
       if (_.$anchorCell.pos != _.$headCell.pos) return !1;
-      (_ = _.$anchorCell.nodeAfter), (_ = _.$anchorCell.pos);
+      ((_ = _.$anchorCell.nodeAfter), (_ = _.$anchorCell.pos));
     } else {
       if (((_ = _(_.$from)), !_)) return !1;
       _ = _(_.$from)?.pos;
@@ -12596,7 +12609,7 @@ function _(_) {
       let _ = _.attrs,
         _ = [],
         _ = _.colwidth;
-      _.rowspan > 1 &&
+      (_.rowspan > 1 &&
         (_ = {
           ..._,
           rowspan: 1,
@@ -12605,7 +12618,7 @@ function _(_) {
           (_ = {
             ..._,
             colspan: 1,
-          });
+          }));
       let _ = _(_),
         _ = _._;
       for (let _ = 0; _ < _.right - _.left; _++)
@@ -12632,7 +12645,7 @@ function _(_) {
               }).createAndFill(_[_]),
             );
       }
-      _.setNodeMarkup(
+      (_.setNodeMarkup(
         _,
         _({
           node: _,
@@ -12648,7 +12661,7 @@ function _(_) {
               _ ? _.doc.resolve(_) : void 0,
             ),
           ),
-        _(_);
+        _(_));
     }
     return !0;
   };
@@ -12744,12 +12757,12 @@ function _(_, _) {
                       ? _.cell
                       : _.header_cell
                     : _.cell;
-            _.map.cellsInRect(_).forEach((_) => {
+            (_.map.cellsInRect(_).forEach((_) => {
               let _ = _ + _.tableStart,
                 _ = _.doc.nodeAt(_);
               _ && _.setNodeMarkup(_, _, _.attrs);
             }),
-              _(_);
+              _(_));
           }
           return !0;
         }
@@ -12770,7 +12783,7 @@ function _(_, _) {
   if (_) {
     let _ = _._,
       _ = _(_.schema).cell.createAndFill().content;
-    _.forEachCell((_, _) => {
+    (_.forEachCell((_, _) => {
       _.content._(_) ||
         _.replace(
           _.mapping.map(_ + 1),
@@ -12778,7 +12791,7 @@ function _(_, _) {
           new _(_, 0, 0),
         );
     }),
-      _.docChanged && _(_);
+      _.docChanged && _(_));
   }
   return !0;
 }
@@ -12790,7 +12803,7 @@ function _(_) {
     _.childCount == 1 &&
     ((_ > 0 && _ > 0) || _.child(0).type.spec.tableRole == `table`);
   )
-    _--, _--, (_ = _.child(0).content);
+    (_--, _--, (_ = _.child(0).content));
   let _ = _.child(0),
     _ = _.type.spec.tableRole,
     _ = _.type.schema,
@@ -12800,7 +12813,7 @@ function _(_) {
       let _ = _.child(_).content,
         _ = _ ? 0 : Math.max(0, _ - 1),
         _ = _ < _.childCount - 1 ? 0 : Math.max(0, _ - 1);
-      (_ || _) && (_ = _(_(_).row, new _(_, _, _)).content), _.push(_);
+      ((_ || _) && (_ = _(_(_).row, new _(_, _, _)).content), _.push(_));
     }
   else if (_ == `cell` || _ == `header_cell`)
     _.push(_ || _ ? _(_(_).row, new _(_, _, _)).content : _);
@@ -12844,19 +12857,19 @@ function _({ width: _, height: _, rows: _ }, _, _) {
         _ = [];
       for (let _ = _[_] || 0, _ = 0; _ < _; _++) {
         let _ = _.child(_ % _.childCount);
-        _ + _.attrs.colspan > _ &&
+        (_ + _.attrs.colspan > _ &&
           (_ = _.type.createChecked(
             _(_.attrs, _.attrs.colspan, _ + _.attrs.colspan - _),
             _.content,
           )),
           _.push(_),
-          (_ += _.attrs.colspan);
+          (_ += _.attrs.colspan));
         for (let _ = 1; _ < _.attrs.rowspan; _++)
           _[_ + _] = (_[_ + _] || 0) + _.attrs.colspan;
       }
       _.push(_.from(_));
     }
-    (_ = _), (_ = _);
+    ((_ = _), (_ = _));
   }
   if (_ != _) {
     let _ = [];
@@ -12865,7 +12878,7 @@ function _({ width: _, height: _, rows: _ }, _, _) {
         _ = _[_ % _];
       for (let _ = 0; _ < _.childCount; _++) {
         let _ = _.child(_);
-        _ + _.attrs.rowspan > _ &&
+        (_ + _.attrs.rowspan > _ &&
           (_ = _.type.create(
             {
               ..._.attrs,
@@ -12873,11 +12886,11 @@ function _({ width: _, height: _, rows: _ }, _, _) {
             },
             _.content,
           )),
-          _.push(_);
+          _.push(_));
       }
       _.push(_.from(_));
     }
-    (_ = _), (_ = _);
+    ((_ = _), (_ = _));
   }
   return {
     width: _,
@@ -12934,7 +12947,7 @@ function _(_, _, _, _, _, _, _, _) {
       _ = !0;
       let _ = _.nodeAt(_),
         { top: _, left: _ } = _.findCell(_);
-      _.setNodeMarkup(_.mapping.slice(_).map(_ + _), null, {
+      (_.setNodeMarkup(_.mapping.slice(_).map(_ + _), null, {
         ..._.attrs,
         rowspan: _ - _,
       }),
@@ -12945,7 +12958,7 @@ function _(_, _, _, _, _, _, _, _) {
             rowspan: _ + _.attrs.rowspan - _,
           }),
         ),
-        (_ += _.attrs.colspan - 1);
+        (_ += _.attrs.colspan - 1));
     }
   }
   return _;
@@ -12961,9 +12974,9 @@ function _(_, _, _, _, _, _, _, _) {
       let _ = _.nodeAt(_),
         _ = _.colCount(_),
         _ = _.mapping.slice(_).map(_ + _);
-      _.setNodeMarkup(_, null, _(_.attrs, _ - _, _.attrs.colspan - (_ - _))),
+      (_.setNodeMarkup(_, null, _(_.attrs, _ - _, _.attrs.colspan - (_ - _))),
         _.insert(_ + _.nodeSize, _.type.createAndFill(_(_.attrs, 0, _ - _))),
-        (_ += _.attrs.rowspan - 1);
+        (_ += _.attrs.rowspan - 1));
     }
   }
   return _;
@@ -12980,13 +12993,13 @@ function _(_, _, _, _, _) {
   function _() {
     if (((_ = _ ? _.doc.nodeAt(_ - 1) : _.doc), !_))
       throw Error(`No table found`);
-    (_ = _.get(_)), (_ = _.mapping.maps.length);
+    ((_ = _.get(_)), (_ = _.mapping.maps.length));
   }
-  _(_, _, _, _, _, _, _) && _(),
+  (_(_, _, _, _, _, _, _) && _(),
     _(_, _, _, _, _, _, _, _) && _(),
     _(_, _, _, _, _, _, _, _) && _(),
     _(_, _, _, _, _, _, _, _) && _(),
-    _(_, _, _, _, _, _, _, _) && _();
+    _(_, _, _, _, _, _, _, _) && _());
   for (let _ = _; _ < _; _++) {
     let _ = _.positionAt(_, _, _),
       _ = _.positionAt(_, _, _);
@@ -12996,14 +13009,14 @@ function _(_, _, _, _, _) {
       new _(_.rows[_ - _], 0, 0),
     );
   }
-  _(),
+  (_(),
     _.setSelection(
       new _(
         _.doc.resolve(_ + _.positionAt(_, _, _)),
         _.doc.resolve(_ + _.positionAt(_ - 1, _ - 1, _)),
       ),
     ),
-    _(_);
+    _(_));
 }
 var _ = _({
   ArrowLeft: _(`horiz`, -1),
@@ -13101,14 +13114,14 @@ function _(_, _) {
   let _ = _(_, _.target),
     _;
   if (_.shiftKey && _.state.selection instanceof _)
-    _(_.state.selection.$anchorCell, _), _.preventDefault();
+    (_(_.state.selection.$anchorCell, _), _.preventDefault());
   else if (
     _.shiftKey &&
     _ &&
     (_ = _(_.state.selection.$anchor)) != null &&
     _(_, _)?.pos != _.pos
   )
-    _(_, _), _.preventDefault();
+    (_(_, _), _.preventDefault());
   else if (!_) return;
   function _(_, _) {
     let _ = _(_, _),
@@ -13120,14 +13133,14 @@ function _(_, _) {
     let _ = new _(_, _);
     if (_ || !_.state.selection._(_)) {
       let _ = _.state._.setSelection(_);
-      _ && _.setMeta(_, _.pos), _.dispatch(_);
+      (_ && _.setMeta(_, _.pos), _.dispatch(_));
     }
   }
   function _() {
-    _.root.removeEventListener(`mouseup`, _),
+    (_.root.removeEventListener(`mouseup`, _),
       _.root.removeEventListener(`dragstart`, _),
       _.root.removeEventListener(`mousemove`, _),
-      _.getState(_.state) != null && _.dispatch(_.state._.setMeta(_, -1));
+      _.getState(_.state) != null && _.dispatch(_.state._.setMeta(_, -1)));
   }
   function _(_) {
     let _ = _,
@@ -13137,9 +13150,9 @@ function _(_, _) {
     else if (_(_, _.target) != _ && ((_ = _(_, _)), !_)) return _();
     _ && _(_, _);
   }
-  _.root.addEventListener(`mouseup`, _),
+  (_.root.addEventListener(`mouseup`, _),
     _.root.addEventListener(`dragstart`, _),
-    _.root.addEventListener(`mousemove`, _);
+    _.root.addEventListener(`mousemove`, _));
 }
 function _(_, _, _) {
   if (!(_.state.selection instanceof _)) return null;
@@ -13173,7 +13186,7 @@ function _(_, _) {
 }
 var _ = class {
   constructor(_, _) {
-    (this.node = _),
+    ((this.node = _),
       (this.defaultCellMinWidth = _),
       (this.dom = document.createElement(`div`)),
       (this.dom.className = `tableWrapper`),
@@ -13185,7 +13198,7 @@ var _ = class {
       _(_, this.colgroup, this.table, _),
       (this.contentDOM = this.table.appendChild(
         document.createElement(`tbody`),
-      ));
+      )));
   }
   update(_) {
     return (
@@ -13215,16 +13228,16 @@ function _(_, _, _, _, _, _) {
         let _ = _ == _ ? _ : _ && _[_],
           _ = _ ? _ + `px` : ``;
         if (((_ += _ || _), _ || (_ = !1), _))
-          _.style.width != _ && (_.style.width = _), (_ = _.nextSibling);
+          (_.style.width != _ && (_.style.width = _), (_ = _.nextSibling));
         else {
           let _ = document.createElement(`col`);
-          (_.style.width = _), _.appendChild(_);
+          ((_.style.width = _), _.appendChild(_));
         }
       }
     }
-    for (; _; ) {
+    for (; _;) {
       let _ = _.nextSibling;
-      (_ = _.parentNode) == null || _.removeChild(_), (_ = _);
+      ((_ = _.parentNode) == null || _.removeChild(_), (_ = _));
     }
     _
       ? ((_.style.width = _ + `px`), (_.style.minWidth = ``))
@@ -13245,7 +13258,7 @@ function _({
       init(_, _) {
         let _ = _.spec?.props?.nodeViews,
           _ = _(_.schema).table.name;
-        return _ && _ && (_[_] = (_, _) => new _(_, _, _)), new _(-1, !1);
+        return (_ && _ && (_[_] = (_, _) => new _(_, _, _)), new _(-1, !1));
       },
       apply(_, _) {
         return _.apply(_);
@@ -13282,7 +13295,7 @@ function _({
 }
 var _ = class _ {
   constructor(_, _) {
-    (this.activeHandle = _), (this.dragging = _);
+    ((this.activeHandle = _), (this.dragging = _));
   }
   apply(_) {
     let _ = this,
@@ -13292,7 +13305,7 @@ var _ = class _ {
       return new _(_.activeHandle, _.setDragging);
     if (_.activeHandle > -1 && _.docChanged) {
       let _ = _.mapping.map(_.activeHandle, -1);
-      return _(_.doc.resolve(_)) || (_ = -1), new _(_, _.dragging);
+      return (_(_.doc.resolve(_)) || (_ = -1), new _(_, _.dragging));
     }
     return _;
   }
@@ -13346,7 +13359,8 @@ function _(_, _, _, _) {
     }),
   );
   function _(_) {
-    _.removeEventListener(`mouseup`, _), _.removeEventListener(`mousemove`, _);
+    (_.removeEventListener(`mouseup`, _),
+      _.removeEventListener(`mousemove`, _));
     let _ = _.getState(_.state);
     _?.dragging &&
       (_(_, _.activeHandle, _(_.dragging, _, _)),
@@ -13382,7 +13396,7 @@ function _(_, _, { colspan: _, colwidth: _ }) {
   return _ / _;
 }
 function _(_) {
-  for (; _ && _.nodeName != `TD` && _.nodeName != `TH`; )
+  for (; _ && _.nodeName != `TD` && _.nodeName != `TH`;)
     _ =
       _.classList && _.classList.contains(`ProseMirror`) ? null : _.parentNode;
   return _;
@@ -13429,11 +13443,11 @@ function _(_, _, _) {
       _ = _.colspan == 1 ? 0 : _ - _.colCount(_);
     if (_.colwidth && _.colwidth[_] == _) continue;
     let _ = _.colwidth ? _.colwidth.slice() : _(_.colspan);
-    (_[_] = _),
+    ((_[_] = _),
       _.setNodeMarkup(_ + _, null, {
         ..._,
         colwidth: _,
-      });
+      }));
   }
   _.docChanged && _.dispatch(_);
 }
@@ -13443,7 +13457,7 @@ function _(_, _, _, _) {
     _ = _.start(-1),
     _ = _.get(_).colCount(_.pos - _) + _.nodeAfter.attrs.colspan - 1,
     _ = _.domAtPos(_.start(-1)).node;
-  for (; _ && _.nodeName != `TABLE`; ) _ = _.parentNode;
+  for (; _ && _.nodeName != `TABLE`;) _ = _.parentNode;
   _ && _(_, _.firstChild, _, _, _, _);
 }
 function _(_) {
@@ -13466,14 +13480,14 @@ function _(_, _) {
       let _ = _.map[_],
         _ = _ + _ + _.nodeAt(_).nodeSize - 1,
         _ = document.createElement(`div`);
-      (_.className = `column-resize-handle`),
+      ((_.className = `column-resize-handle`),
         _.getState(_)?.dragging &&
           _.push(
             _.node(_ + _, _ + _ + _.nodeAt(_).nodeSize, {
               class: `column-resize-dragging`,
             }),
           ),
-        _.push(_.widget(_, _));
+        _.push(_.widget(_, _)));
     }
   }
   return _.create(_.doc, _);
@@ -13576,10 +13590,10 @@ function _(_, _ = null) {
     ) {
       if (_.index(_.depth - 1) == 0) return !1;
       let _ = _.doc.resolve(_.start - 2);
-      (_ = new _(_, _, _.depth)),
+      ((_ = new _(_, _, _.depth)),
         _.endIndex < _.parent.childCount &&
           (_ = new _(_, _.doc.resolve(_.end(_.depth)), _.depth)),
-        (_ = !0);
+        (_ = !0));
     }
     let _ = _(_, _, _, _);
     return _ ? (_ && _(_(_._, _, _, _, _).scrollIntoView()), !0) : !1;
@@ -13606,8 +13620,8 @@ function _(_, _, _, _, _) {
     _ = _.start + _.length - (_ ? 2 : 0),
     _ = _.parent;
   for (let _ = _.startIndex, _ = _.endIndex, _ = !0; _ < _; _++, _ = !1)
-    !_ && _(_.doc, _, _) && (_.split(_, _), (_ += 2 * _)),
-      (_ += _.child(_).nodeSize);
+    (!_ && _(_.doc, _, _) && (_.split(_, _), (_ += 2 * _)),
+      (_ += _.child(_).nodeSize));
   return _;
 }
 function _(_, _) {
@@ -13641,12 +13655,12 @@ function _(_, _) {
         let _ = _.before(_.depth - (_ - 1)),
           _ = _._.replace(_, _.after(-_), new _(_, 4 - _, 0)),
           _ = -1;
-        _.doc.nodesBetween(_, _.doc.content.size, (_, _) => {
+        (_.doc.nodesBetween(_, _.doc.content.size, (_, _) => {
           if (_ > -1) return !1;
           _.isTextblock && _.content.size == 0 && (_ = _ + 1);
         }),
           _ > -1 && _.setSelection(_.near(_.doc.resolve(_))),
-          _(_.scrollIntoView());
+          _(_.scrollIntoView()));
       }
       return !0;
     }
@@ -13704,13 +13718,13 @@ function _(_, _, _, _) {
   if (_ == null) return !1;
   _.lift(_, _);
   let _ = _.mapping.map(_, -1) - 1;
-  return _(_.doc, _) && _.join(_), _(_.scrollIntoView()), !0;
+  return (_(_.doc, _) && _.join(_), _(_.scrollIntoView()), !0);
 }
 function _(_, _, _) {
   let _ = _._,
     _ = _.parent;
   for (let _ = _.end, _ = _.endIndex - 1, _ = _.startIndex; _ > _; _--)
-    (_ -= _.child(_).nodeSize), _.delete(_ - 1, _ + 1);
+    ((_ -= _.child(_).nodeSize), _.delete(_ - 1, _ + 1));
   let _ = _.doc.resolve(_.start),
     _ = _.nodeAfter;
   if (_.mapping.map(_.end) != _.start + _.nodeAfter.nodeSize) return !1;
@@ -13775,8 +13789,8 @@ var _ = _(),
     m_bConvertNewlinesToBR;
     m_fnProcessText;
     constructor(_, _, _) {
-      (this.m_schema = _),
-        (this.m_bConvertNewlinesToBR = _?.bConvertNewlinesToBR ?? !1);
+      ((this.m_schema = _),
+        (this.m_bConvertNewlinesToBR = _?.bConvertNewlinesToBR ?? !1));
       let _ = _ && `mark` in _;
       this.m_fnProcessText = _ ? void 0 : _?.fnProcessText;
     }
@@ -13808,10 +13822,10 @@ var _ = _(),
           _,
         )
       )
-        _ != _ && _.push(...this.TextNode(_.substring(_, _))),
+        (_ != _ && _.push(...this.TextNode(_.substring(_, _))),
           _.push(this.m_schema.nodes.hard_break.createChecked()),
-          (_ = _ + 1);
-      return _ < _.length && _.push(...this.TextNode(_.substring(_))), _;
+          (_ = _ + 1));
+      return (_ < _.length && _.push(...this.TextNode(_.substring(_))), _);
     }
     TextNode(_) {
       return (
@@ -13840,7 +13854,7 @@ var _ = class extends _ {
   m_mapPMBBNodes = new Map();
   m_bUseBackslashEscapes;
   constructor(_, _) {
-    super(_.bbcode_dictionary, (_) => {
+    (super(_.bbcode_dictionary, (_) => {
       let _ = _?.tag && _.bbcode_dictionary.get(_.tag);
       return new _(
         _.pm_schema,
@@ -13853,7 +13867,7 @@ var _ = class extends _ {
       this.m_schemaConfig.bbcode_dictionary.forEach((_) => {
         `node` in _.Constructor &&
           this.m_mapPMBBNodes.set(_.Constructor.node.name, _.Constructor);
-      });
+      }));
   }
   get schema() {
     return this.m_schemaConfig.pm_schema;
@@ -13911,7 +13925,7 @@ var _ = class extends _ {
         try {
           _ = _ ? this.TryCreateNode(_, _, void 0) : _.createChecked(void 0, _);
         } catch (_) {
-          console.error(_), (_ = []), (_ = [..._, ..._]);
+          (console.error(_), (_ = []), (_ = [..._, ..._]));
         }
         _ = _.from(_);
       } else _ = _.from(_);
@@ -13949,7 +13963,7 @@ var _ = class extends _ {
         return _.map((_) => this.RecursivelyApplyMark(_, _));
       }
     } catch (_) {
-      return console.error(`Error parsing [${_.tagname}] tag: ${_}`, _), [];
+      return (console.error(`Error parsing [${_.tagname}] tag: ${_}`, _), []);
     }
   }
   RecursivelyApplyMark(_, _) {
@@ -13974,7 +13988,7 @@ var _ = class extends _ {
         nodes: [],
         nodeType: void 0,
         reset() {
-          (this.nodes = []), (this.nodeType = void 0);
+          ((this.nodes = []), (this.nodeType = void 0));
         },
         accumulate(_, _) {
           return (
@@ -13995,8 +14009,8 @@ var _ = class extends _ {
           _ = _.from(_);
         if (_ || _.topNodeType.validContent(_)) {
           let _ = _ && _.nodes.length > 0;
-          _.emit(),
-            _ ? _ || _.push(_.nodes.paragraph.createChecked()) : _.push(_);
+          (_.emit(),
+            _ ? _ || _.push(_.nodes.paragraph.createChecked()) : _.push(_));
         } else {
           let _;
           if (
@@ -14034,12 +14048,12 @@ function _(_, _, _) {
   if (!_) return;
   let _ = _.index() - 1,
     _ = _.start() + _.offset;
-  for (; _ >= 0 && _.isInSet(_.child(_).marks); )
-    (_ -= _.child(_).nodeSize), --_;
+  for (; _ >= 0 && _.isInSet(_.child(_).marks);)
+    ((_ -= _.child(_).nodeSize), --_);
   let _ = _.index() + 1,
     _ = _.start() + _.offset + _.node.nodeSize;
-  for (; _ < _.childCount && _.isInSet(_.child(_).marks); )
-    (_ += _.child(_).nodeSize), (_ += 1);
+  for (; _ < _.childCount && _.isInSet(_.child(_).marks);)
+    ((_ += _.child(_).nodeSize), (_ += 1));
   let _ = _.doc.slice(_, _);
   return {
     from: _,
@@ -14076,9 +14090,9 @@ function _(_, _, _ = {}) {
     if (_[1]) {
       let _ = _ + _[0].indexOf(_[1]),
         _ = _ + _[1].length;
-      _ < _ && _.delete(_, _), _ > _ && _.delete(_, _), (_ = _ + _[1].length);
+      (_ < _ && _.delete(_, _), _ > _ && _.delete(_, _), (_ = _ + _[1].length));
     }
-    return _.addMark(_, _, _.create(_)), _.removeStoredMark(_), _;
+    return (_.addMark(_, _, _.create(_)), _.removeStoredMark(_), _);
   });
 }
 function _(_, _, _) {
@@ -14241,12 +14255,12 @@ var _ = class _ extends _ {
         let _ = _ > 0 ? _.firstChild : _.lastChild;
         if (!_) {
           if (_.isAtom && !_.isText && !_.isSelectable(_)) {
-            (_ = _.doc.resolve(_ + _.nodeSize * _)), (_ = !1);
+            ((_ = _.doc.resolve(_ + _.nodeSize * _)), (_ = !1));
             continue search;
           }
           break;
         }
-        (_ = _), (_ += _);
+        ((_ = _), (_ += _));
         let _ = _.doc.resolve(_);
         if (_.valid(_)) return _;
       }
@@ -14254,9 +14268,9 @@ var _ = class _ extends _ {
     }
   }
 };
-(_.prototype.visible = !1),
+((_.prototype.visible = !1),
   (_.findFrom = _.findGapCursorFrom),
-  _.jsonID(`gapcursor`, _);
+  _.jsonID(`gapcursor`, _));
 var _ = class _ {
   constructor(_) {
     this.pos = _;
@@ -14336,7 +14350,7 @@ function _(_, _) {
       _ = _.empty;
     if (_ instanceof _) {
       if (!_.endOfTextblock(_) || _.depth == 0) return !1;
-      (_ = !1), (_ = _.doc.resolve(_ > 0 ? _.after() : _.before()));
+      ((_ = !1), (_ = _.doc.resolve(_ > 0 ? _.after() : _.before())));
     }
     let _ = _.findGapCursorFrom(_, _, _);
     return _ ? (_ && _(_._.setSelection(new _(_))), !0) : !1;
@@ -14369,7 +14383,7 @@ function _(_, _) {
   for (let _ = _.length - 1; _ >= 0; _--)
     _ = _.from(_[_].createAndFill(null, _));
   let _ = _.state._.replace(_.pos, _.pos, new _(_, 0, 0));
-  return _.setSelection(_.near(_.doc.resolve(_.pos + 1))), _.dispatch(_), !1;
+  return (_.setSelection(_.near(_.doc.resolve(_.pos + 1))), _.dispatch(_), !1);
 }
 function _(_) {
   if (!(_.selection instanceof _)) return null;
@@ -14409,7 +14423,7 @@ function _(_) {
 }
 function _(_) {
   let { nMaxChars: _ } = _;
-  return _((0, _.useMemo)(() => _(_), [_])), (0, _.jsx)(_.Fragment, {});
+  return (_((0, _.useMemo)(() => _(_), [_])), (0, _.jsx)(_.Fragment, {}));
 }
 var _ = _.createContext(void 0);
 function _(_) {
@@ -14562,7 +14576,7 @@ var _ = class {
         },
       },
       _ = new _();
-    (this.destroy = _({
+    ((this.destroy = _({
       element: _,
       spec: _,
       getProps: () => _.readProps(this.node),
@@ -14570,7 +14584,7 @@ var _ = class {
       onPropsChanged: _,
       actions: _,
     })),
-      (this.onPropsChanged = _.Dispatch.bind(_));
+      (this.onPropsChanged = _.Dispatch.bind(_)));
   }
   update(_, _, _) {
     return (
@@ -14588,10 +14602,10 @@ var _ = class {
     return !!this.reactHost && this.reactHost.contains(_.target);
   }
   selectNode() {
-    (this.selected = !0), this.onPropsChanged();
+    ((this.selected = !0), this.onPropsChanged());
   }
   deselectNode() {
-    (this.selected = !1), this.onPropsChanged();
+    ((this.selected = !1), this.onPropsChanged());
   }
 };
 function _(_) {
@@ -14685,7 +14699,9 @@ var _ = {
             let _ = {
               args: {},
             };
-            return _.align && _.align != `left` && (_.args.align = _.align), _;
+            return (
+              _.align && _.align != `left` && (_.args.align = _.align), _
+            );
           },
         },
       },
@@ -15176,12 +15192,12 @@ function _(_, _, _, _) {
 `;
       else {
         let _ = _(_, _);
-        _ &&
+        (_ &&
           _ &&
           (_ += `
 `),
           (_ += _(_, _, _, _)),
-          (_ = _);
+          (_ = _));
         return;
       }
       _ = !1;
@@ -15199,7 +15215,7 @@ function _(_, _, _, _) {
   for (let _ of _) _.indexOf(_) === -1 && _.push(_);
   if (!_.length) return [_, _];
   let _ = _.slice();
-  for (; _.length && (_(_.length, `no marks left to close`), _.length); ) {
+  for (; _.length && (_(_.length, `no marks left to close`), _.length);) {
     let _ = _.pop(),
       { tag: _ } = _(_.mapMarks.get(_.type), _);
     _ += _(_);
@@ -15262,7 +15278,7 @@ var _ = new _(`CProseMirrorState - OnChange`),
     m_state;
     constructor(_, _, _, _) {
       let { parser: _, bUseBackslashEscapes: _ = !0 } = _ ?? {};
-      (this.m_schemaConfig = _),
+      ((this.m_schemaConfig = _),
         (this.m_bUseBackslashEscapes = _),
         (this.m_bbcodeParser = new _(_, {
           ..._,
@@ -15270,7 +15286,7 @@ var _ = new _(`CProseMirrorState - OnChange`),
         })),
         (this.m_bbcode = _),
         (this.m_fnCommitChanges = _),
-        (this.m_state = this.ConstructState());
+        (this.m_state = this.ConstructState()));
     }
     CommitChanges() {
       this.m_currentDoc &&
@@ -15333,20 +15349,20 @@ var _ = new _(`CProseMirrorState - OnChange`),
           this.m_view?.updateState(this.m_state)),
         () => {
           let _ = this.m_view ? this.m_view.state : this.m_state;
-          (this.m_state = _.reconfigure({
+          ((this.m_state = _.reconfigure({
             plugins: _.plugins.filter((_) => _ != _),
           })),
-            this.m_view?.updateState(this.m_state);
+            this.m_view?.updateState(this.m_state));
         }
       );
     }
     OnStateChange(_, _) {
-      (this.m_state = _),
+      ((this.m_state = _),
         _.doc &&
           _.doc != _.doc &&
           ((this.m_currentDoc = _.doc),
           (this.m_bHasUncomittedChanges = !0),
-          this.m_onStateChangedCallbacks.Dispatch(this.m_currentDoc, _.doc));
+          this.m_onStateChangedCallbacks.Dispatch(this.m_currentDoc, _.doc)));
     }
     ReplaceDocument(_) {
       this.m_bbcode != _ &&
@@ -15375,7 +15391,7 @@ function _(_, _) {
     _(
       _,
       _.useCallback(() => {
-        (_.current = performance.now()), _(!0);
+        ((_.current = performance.now()), _(!0));
       }, []),
     ),
     _.useEffect(() => {
@@ -15413,7 +15429,7 @@ function _(_) {
       children: _,
     } = _,
     _ = _.useCallback(() => {
-      _ && _(), _();
+      (_ && _(), _());
     }, [_, _]),
     _ = _ ? () => {} : _;
   return (0, _.jsx)(_, {
@@ -15485,7 +15501,7 @@ function _(_, _) {
     ),
     _ = _?.view,
     _ = _.useCallback(() => {
-      window.setTimeout(() => _.focus(), 1), _(void 0);
+      (window.setTimeout(() => _.focus(), 1), _(void 0));
     }, [_]);
   return [
     _,
@@ -15527,9 +15543,9 @@ var _ = _.memo(function (_) {
       let _ = _.marks.link?.create(_),
         _ = _.text(_ || _, [_]);
       try {
-        (_ = _.replaceRangeWith(_, _, _)),
+        ((_ = _.replaceRangeWith(_, _, _)),
           (_ = _.setSelection(_.create(_.doc, _ + _.nodeSize, _ + _.nodeSize))),
-          _.dispatch(_);
+          _.dispatch(_));
       } catch (_) {
         console.error(`Error during link insertion`, _);
       }
@@ -15610,11 +15626,11 @@ var _ = _.memo(function (_) {
 function _(_, _, _, _) {
   let _ = [],
     _;
-  for (; (_ = _.match(_)); ) {
+  for (; (_ = _.match(_));) {
     _.index > 0 && _.push(_.text(_.substring(0, _.index)));
     let _ = _(_[0]),
       _ = _ && _(_);
-    !_ || _ === "default"
+    (!_ || _ === "default"
       ? _.push(
           _.text(_[0], [
             _.create({
@@ -15623,9 +15639,9 @@ function _(_, _, _, _) {
           ]),
         )
       : _ !== `remove` && _.push(_),
-      (_ = _.substring(_.index + _[0].length));
+      (_ = _.substring(_.index + _[0].length)));
   }
-  if (_.length != 0) return _.length && _.push(_.text(_)), _;
+  if (_.length != 0) return (_.length && _.push(_.text(_)), _);
 }
 function _(_, _ = `PlaceholderPlugin`) {
   let [_, _] = _.useState([]),
@@ -15875,18 +15891,18 @@ var _ = class {
   m_fnCreatePlaceholder;
   m_fnReplacePlaceholder;
   constructor(_, _, _) {
-    (this.m_fnProcessFileUpload = _),
+    ((this.m_fnProcessFileUpload = _),
       (this.m_fnFetchImageURL = _),
-      (this.m_bAllowImageHotLinking = _);
+      (this.m_bAllowImageHotLinking = _));
   }
   SetProps(_, _, _) {
-    (this.m_fnProcessFileUpload = _),
+    ((this.m_fnProcessFileUpload = _),
       (this.m_fnFetchImageURL = _),
       (this.m_bAllowImageHotLinking = _),
       _(
         !this.m_fnFetchImageURL || !this.m_bAllowImageHotLinking,
         `Not expected to have a URL fetch function and allow hotlinking.  URL fetch function will not be called.`,
-      );
+      ));
   }
   RegisterEditor(_, _, _) {
     return (
@@ -15949,7 +15965,7 @@ var _ = class {
         _,
         _,
       );
-      return this.ProcessDataURL(_, _), !0;
+      return (this.ProcessDataURL(_, _), !0);
     }
     if (this.m_fnFetchImageURL) {
       let _ = this.m_fnCreatePlaceholder(
@@ -15959,7 +15975,7 @@ var _ = class {
         _,
         _,
       );
-      return this.FetchURLAndProcess(_, _), !0;
+      return (this.FetchURLAndProcess(_, _), !0);
     }
     return (
       _(
@@ -16004,15 +16020,15 @@ var _ = class {
         );
       await this.ProcessFile(_, _);
     } catch {
-      this.AddError(`Unable to process URL: ${_}`),
-        this.m_fnReplacePlaceholder(_);
+      (this.AddError(`Unable to process URL: ${_}`),
+        this.m_fnReplacePlaceholder(_));
     }
   }
   async ProcessFile(_, _) {
     let _;
     try {
-      console.log(`Processing file upload: "${_.name}"`),
-        (_ = await this.m_fnProcessFileUpload(_));
+      (console.log(`Processing file upload: "${_.name}"`),
+        (_ = await this.m_fnProcessFileUpload(_)));
     } catch (_) {
       _ instanceof _
         ? this.AddError(_.message)
@@ -16110,10 +16126,10 @@ function _(_, _) {
                   _ = 0;
                 for (let _ of _) {
                   let _ = _.content.cut(_, _.pos - 1);
-                  _.insert(_, _),
+                  (_.insert(_, _),
                     (_ += _.size),
                     _.QueueUploadFileByURL(_.url, _, _),
-                    (_ = _.pos + 1);
+                    (_ = _.pos + 1));
                 }
                 return (
                   _.insert(_, _.content.cut(_)),
@@ -16213,18 +16229,18 @@ function _(_) {
   let { command: _, toggled: _, children: _, ..._ } = _,
     { view: _, callbacks: _ } = _(),
     [_, _] = _.useState(() => _(_.state));
-  _(
+  (_(
     _,
     _.useCallback((_) => _(_(_.state)), [_]),
   ),
-    _.useEffect(() => _(_(_.state)), [_, _]);
+    _.useEffect(() => _(_(_.state)), [_, _]));
   let _ = !_ && !_;
   return (0, _.jsx)(_, {
     ..._,
     children: (0, _.jsx)(_, {
       className: _(_, _ && `LayGdJxtj74-`),
       onMouseDown: (_) => {
-        _.preventDefault(), _(_.state, _.dispatch, _);
+        (_.preventDefault(), _(_.state, _.dispatch, _));
       },
       disabled: _,
       focusable: !_,
@@ -16324,7 +16340,7 @@ function _(_) {
     case `Mod`:
       return _.PLATFORM == `macos` ? `⌘` : `Ctrl`;
     case `Shift`:
-      return _.PLATFORM, `Shift`;
+      return (_.PLATFORM, `Shift`);
     case `Ctrl`:
       return _.PLATFORM == `macos` ? `Control` : `Ctrl`;
     case `Alt`:
@@ -16405,12 +16421,12 @@ function _(_, _, _, _, _, _) {
         ..._,
       }),
       _ = _._;
-    _ === _
+    (_ === _
       ? (_ = _.addStoredMark(_))
       : ((_ = _.removeMark(_, _, _)),
         (_ = _.addMark(_, _, _)),
         (_ = _.setSelection(_.create(_.doc, _)))),
-      _(_.scrollIntoView());
+      _(_.scrollIntoView()));
   } catch (_) {
     console.error(_);
   }
@@ -16483,8 +16499,8 @@ var _ = {
         }),
         AttrsToBBArgs: (_, _) => {
           let _ = {};
-          _.noborder && (_.noborder = `1`),
-            _.equalcells && (_.equalcells = `1`);
+          (_.noborder && (_.noborder = `1`),
+            _.equalcells && (_.equalcells = `1`));
           let _ = _.child(0);
           if (_) {
             let _ = [];
@@ -16543,7 +16559,7 @@ var _ = {
   }),
   _ = class extends _ {
     constructor(_, _) {
-      super(_, _), this.SetTableClass(_);
+      (super(_, _), this.SetTableClass(_));
     }
     update(_) {
       return super.update(_) ? (this.SetTableClass(_), !0) : !1;
@@ -16569,7 +16585,7 @@ var _ = {
       } = _,
       [_, _] = _.useState(),
       [_, _] = _.useState();
-    _.useEffect(() => {
+    (_.useEffect(() => {
       _ &&
         _ &&
         _(
@@ -16579,7 +16595,7 @@ var _ = {
         );
     }, [_, _]),
       _.useEffect(() => () => _?.destroy(), [_]),
-      _(_, _);
+      _(_, _));
     let { refDiv: _, onActivate: _, onGamepadDirection: _ } = _(_),
       _ = _(_, _);
     if (!_) return null;
@@ -17018,7 +17034,7 @@ var _ = class {
       let { bbCode: _, ..._ } = _.marks[_];
       (!_ || _.has(_.tag)) && ((_[_] = _), _.set(_, _));
     }
-    (this.m_ProseMirrorSchema = new _({
+    ((this.m_ProseMirrorSchema = new _({
       nodes: _,
       marks: _,
     })),
@@ -17027,7 +17043,7 @@ var _ = class {
           _ = _.nodes[_],
           _ = Array.isArray(_) ? _ : [_],
           _;
-        _.content == `list_item+`
+        (_.content == `list_item+`
           ? (_ = this.m_ProseMirrorSchema.nodes.list_item)
           : _.content?.indexOf(`paragraph`) != -1 &&
             (_ = this.m_ProseMirrorSchema.nodes.paragraph),
@@ -17052,7 +17068,7 @@ var _ = class {
                 ..._,
               });
             },
-          );
+          ));
         let {
           tag: _,
           AttrsToBBArgs: _,
@@ -17069,7 +17085,7 @@ var _ = class {
       _.forEach((_, _) => {
         let _ = this.m_ProseMirrorSchema.marks[_],
           { tag: _, BBArgsToAttrs: _, AttrsToBBArgs: _, ..._ } = _;
-        this.m_mapBBCodeDictionary.set(_, {
+        (this.m_mapBBCodeDictionary.set(_, {
           Constructor: {
             mark: _,
             BBArgsToAttrs: _,
@@ -17079,8 +17095,8 @@ var _ = class {
           this.m_PMToBBCodeConfig.mapMarks.set(_, {
             tag: _,
             AttrsToBBArgs: _,
-          });
-      });
+          }));
+      }));
   }
 };
 function _(_, _) {
@@ -17091,59 +17107,3 @@ function _(_, _) {
   }
   return _.has(_.tag) ? _ : void 0;
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

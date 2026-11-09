@@ -1,11 +1,11 @@
 function _(_, _ = 0, _ = Math.random) {
   if (_?.length > 1) {
     let _ = _ > 0 ? Math.min(_, _.length) : _.length;
-    for (; _ !== 0; ) {
+    for (; _ !== 0;) {
       let _ = Math.floor(_() * _);
       --_;
       let _ = _[_];
-      (_[_] = _[_]), (_[_] = _);
+      ((_[_] = _[_]), (_[_] = _));
     }
   }
   return _;
@@ -82,7 +82,7 @@ var _ = class {
     return new Promise((_) => {
       let _ = [],
         _ = () => {
-          _.forEach((_) => _.Unregister()), _();
+          (_.forEach((_) => _.Unregister()), _());
         };
       for (let _ of _) _.push(_.Register(_));
     });
@@ -98,7 +98,7 @@ function _(_, _, _, _) {
   else
     for (var _ = _.length - 1; _ >= 0; _--)
       (_ = _[_]) && (_ = (_ < 3 ? _(_) : _ > 3 ? _(_, _, _) : _(_, _)) || _);
-  return _ > 3 && _ && Object.defineProperty(_, _, _), _;
+  return (_ > 3 && _ && Object.defineProperty(_, _, _), _);
 }
 var _ = class {
   SyncStore(_) {
@@ -108,23 +108,23 @@ var _ = class {
     return this.Value;
   }
 };
-_([_], _.prototype, `SyncStore`, null), _([_], _.prototype, `GetValue`, null);
+(_([_], _.prototype, `SyncStore`, null), _([_], _.prototype, `GetValue`, null));
 var _ = class extends _ {},
   _ = class extends _ {
     m_callbacks;
     m_currentValue;
     m_fnEquals;
     constructor(_, _) {
-      super(),
+      (super(),
         (this.m_callbacks = new _()),
         (this.m_currentValue = _),
-        (this.m_fnEquals = _);
+        (this.m_fnEquals = _));
     }
     Set(_) {
       if (this.m_fnEquals) {
         if (this.m_fnEquals(this.m_currentValue, _)) return !1;
       } else if (this.m_currentValue === _) return !1;
-      return (this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0;
+      return ((this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0);
     }
     get Value() {
       return this.m_currentValue;
@@ -147,7 +147,7 @@ var _ = class extends _ {
   m_mappedSubscribableValue;
   m_bMappedValueStale = !1;
   constructor(_, _, _) {
-    super(),
+    (super(),
       (this.m_originalSubscribableValue = _),
       (this.m_mappedSubscribableValue = new _(_(_.Value), _)),
       (this.m_fnMap = _),
@@ -155,7 +155,7 @@ var _ = class extends _ {
         this.m_mappedSubscribableValue.SubscriberCount > 0
           ? this.UpdateMappedValue()
           : (this.m_bMappedValueStale = !0);
-      });
+      }));
   }
   get Value() {
     return (
@@ -167,10 +167,10 @@ var _ = class extends _ {
     return this.m_mappedSubscribableValue.Subscribe(_);
   }
   UpdateMappedValue() {
-    this.m_mappedSubscribableValue.Set(
+    (this.m_mappedSubscribableValue.Set(
       this.m_fnMap(this.m_originalSubscribableValue.Value),
     ),
-      (this.m_bMappedValueStale = !1);
+      (this.m_bMappedValueStale = !1));
   }
 };
 function _(_, _, _) {
@@ -181,16 +181,16 @@ var _ = class {
   m_fnCallback;
   m_fnOnCancel;
   Schedule(_, _) {
-    this.IsScheduled() && this.Cancel(),
+    (this.IsScheduled() && this.Cancel(),
       (this.m_fnCallback = _),
-      (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _));
+      (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _)));
   }
   AsyncSchedule(_, _) {
     return new Promise((_, _) => {
-      this.Schedule(_, () => {
-        _(), _();
+      (this.Schedule(_, () => {
+        (_(), _());
       }),
-        (this.m_fnOnCancel = _);
+        (this.m_fnOnCancel = _));
     });
   }
   IsScheduled() {
@@ -199,29 +199,29 @@ var _ = class {
   Cancel() {
     if (this.m_schTimer) {
       let _ = this.m_fnOnCancel;
-      clearTimeout(this.m_schTimer), this.Reset(), _ && _();
+      (clearTimeout(this.m_schTimer), this.Reset(), _ && _());
     }
   }
   Reset() {
-    (this.m_schTimer = void 0),
+    ((this.m_schTimer = void 0),
       (this.m_fnCallback = void 0),
-      (this.m_fnOnCancel = void 0);
+      (this.m_fnOnCancel = void 0));
   }
   ScheduledInternal() {
     let _ = this.m_fnCallback;
-    this.Reset(), _?.();
+    (this.Reset(), _?.());
   }
 };
 _([_], _.prototype, `ScheduledInternal`, null);
 var _ = class {
     m_rgListeners = [];
     AddEventListener(_, _, _) {
-      _.addEventListener(_, _),
+      (_.addEventListener(_, _),
         this.m_rgListeners.push({
           element: _,
           type: _,
           listener: _,
-        });
+        }));
     }
     Unregister() {
       for (let _ of this.m_rgListeners)
@@ -246,4 +246,3 @@ var _ = class {
     }
   };
 _([_], _.prototype, `Unregister`, null);
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

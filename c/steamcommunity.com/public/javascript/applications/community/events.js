@@ -106,7 +106,7 @@ function _(_) {
                         let _ =
                           _ && !_()
                             ? (_) => {
-                                _(_), _.stopPropagation(), _.preventDefault();
+                                (_(_), _.stopPropagation(), _.preventDefault());
                               }
                             : void 0;
                         return (0, _.jsx)(
@@ -162,7 +162,7 @@ function _(_) {
           (0, _.jsx)(_, {
             className: _,
             onClick: (_) => {
-              _?.(), _.stopPropagation(), _.preventDefault();
+              (_?.(), _.stopPropagation(), _.preventDefault());
             },
             children: _(`#EventBrowse_MoreEventsBtn`),
           }),
@@ -176,7 +176,7 @@ function _(_) {
           children: (0, _.jsx)(_, {
             event: _,
             onClick: (_) => {
-              _?.(), _.stopPropagation(), _.preventDefault();
+              (_?.(), _.stopPropagation(), _.preventDefault());
             },
           }),
         }),
@@ -240,13 +240,13 @@ var _ = (_) =>
             bLoadedLandingState: !1,
           });
       } else
-        console.error(
+        (console.error(
           `EventInfiniteScrollLanding: failed to load clan info for ` +
             this.props.match.params.appid_or_vanity_str,
         ),
           this.setState({
             bLoadedLandingState: !1,
-          });
+          }));
     }
     HideModal() {
       this.props.bPreventDismiss ||
@@ -274,7 +274,7 @@ var _ = (_) =>
           : (0, _.jsx)(`div`, {});
     }
   };
-_([_], _.prototype, `HideModal`, null), (_ = _([_], _));
+(_([_], _.prototype, `HideModal`, null), (_ = _([_], _)));
 function _(_) {
   let {
       trackingLocation: _,
@@ -286,18 +286,18 @@ function _(_) {
     [_, _] = (0, _.useState)(void 0),
     _ = _(),
     _ = (0, _.useCallback)(() => {
-      _(null), _();
+      (_(null), _());
     }, [_]),
     _ = (0, _.useCallback)(
       (_) => {
-        _ &&
+        (_ &&
           _ &&
           _.BIsPartnerEvent() &&
           _.MarkEventRead(_.GID, _.clanSteamID.GetAccountID(), _) &&
           _.Flush(),
           _(_),
           _(void 0),
-          _();
+          _());
       },
       [_, _, _],
     ),
@@ -307,12 +307,12 @@ function _(_) {
     }),
     _ = (0, _.useCallback)(() => {
       let { event_gid: _, announcement_gid: _, clan_account_id: _ } = _;
-      _ && _ && _.MarkEventRead(_, _, _) && _.Flush(), _(_), _(null), _();
+      (_ && _ && _.MarkEventRead(_, _, _) && _.Flush(), _(_), _(null), _());
     }, [_, _, _, _]);
   (0, _.useEffect)(
     () => (
       (window.fnPartnerEvent_ShowInfiniteScroll = (_, _) => {
-        _(_), _(null), _(_), _();
+        (_(_), _(null), _(_), _());
       }),
       () => {
         window.fnPartnerEvent_ShowInfiniteScroll &&
@@ -382,25 +382,25 @@ function _(_) {
       let _ = _(`EventWebRowEmbed`),
         _ = !1;
       if (_(_)) {
-        (_ = _.bPreLoaded), _(_.last_update_event);
+        ((_ = _.bPreLoaded), _(_.last_update_event));
         let _ = [];
-        _.announcementGIDList.forEach((_) => {
+        (_.announcementGIDList.forEach((_) => {
           let _ = _.GetClanEventFromAnnouncementGID(_);
           _ && _.push(_);
         }),
-          _(_);
+          _(_));
       }
       _ ||
         (async () => {
           let _ = await _.LoadAdjacentPartnerEvents(void 0, void 0, _, 0, 2, _);
-          _(_),
+          (_(_),
             _ &&
               _ &&
               _.length > 0 &&
               (_.filter((_) => _.BIsPartnerEvent()).forEach((_) =>
                 _.MarkEventShown(_.GID, _.clanSteamID.GetAccountID(), _),
               ),
-              _.Flush());
+              _.Flush()));
         })();
     }, [_, _, _, _, _, _]),
     (0, _.useEffect)(() => {
@@ -475,7 +475,7 @@ function _(_) {
   let [_, _] = _.useState(!0);
   return (
     _.useEffect(() => {
-      _.Init(_(new _(_.WEBAPI_BASE_URL))), _.Init(), _(!1);
+      (_.Init(_(new _(_.WEBAPI_BASE_URL))), _.Init(), _(!1));
     }, []),
     _
       ? null

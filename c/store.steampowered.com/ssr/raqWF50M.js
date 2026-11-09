@@ -199,7 +199,7 @@ var _ = _(_()),
                 status: _,
               },
               function () {
-                _.props.onEntering(_, _),
+                (_.props.onEntering(_, _),
                   _.onTransitionEnd(_, function () {
                     _.safeSetState(
                       {
@@ -209,7 +209,7 @@ var _ = _(_()),
                         _.props.onEntered(_, _);
                       },
                     );
-                  });
+                  }));
               },
             ));
       }),
@@ -233,7 +233,7 @@ var _ = _(_()),
                 status: _,
               },
               function () {
-                _.props.onExiting(_),
+                (_.props.onExiting(_),
                   _.onTransitionEnd(_.exit, function () {
                     _.safeSetState(
                       {
@@ -243,7 +243,7 @@ var _ = _(_()),
                         _.props.onExited(_);
                       },
                     );
-                  });
+                  }));
               },
             ));
       }),
@@ -252,7 +252,7 @@ var _ = _(_()),
           (this.nextCallback.cancel(), (this.nextCallback = null));
       }),
       (_.safeSetState = function (_, _) {
-        (_ = this.setNextCallback(_)), this.setState(_, _);
+        ((_ = this.setNextCallback(_)), this.setState(_, _));
       }),
       (_.setNextCallback = function (_) {
         var _ = this,
@@ -291,7 +291,7 @@ var _ = _(_()),
         if (_ === `unmounted`) return null;
         var _ = this.props,
           _ = _.children;
-        _._,
+        (_._,
           _.mountOnEnter,
           _.unmountOnExit,
           _.appear,
@@ -305,7 +305,7 @@ var _ = _(_()),
           _.onExit,
           _.onExiting,
           _.onExited,
-          _.nodeRef;
+          _.nodeRef);
         var _ = _(_, [
           `children`,
           `in`,
@@ -337,9 +337,9 @@ var _ = _(_()),
       _
     );
   })(_.Component);
-(_.contextType = _), (_.propTypes = {});
+((_.contextType = _), (_.propTypes = {}));
 function _() {}
-(_.defaultProps = {
+((_.defaultProps = {
   _: !1,
   mountOnEnter: !1,
   unmountOnExit: !1,
@@ -357,7 +357,7 @@ function _() {}
   (_.EXITED = _),
   (_.ENTERING = _),
   (_.ENTERED = _),
-  (_.EXITING = _);
+  (_.EXITING = _));
 var _ = function (_, _) {
     return (
       _ &&
@@ -392,42 +392,42 @@ var _ = function (_, _) {
           var _ = _.resolveArguments(_, _),
             _ = _[0],
             _ = _[1];
-          _.removeClasses(_, `exit`),
+          (_.removeClasses(_, `exit`),
             _.addClass(_, _ ? `appear` : `enter`, `base`),
-            _.props.onEnter && _.props.onEnter(_, _);
+            _.props.onEnter && _.props.onEnter(_, _));
         }),
         (_.onEntering = function (_, _) {
           var _ = _.resolveArguments(_, _),
             _ = _[0],
             _ = _[1] ? `appear` : `enter`;
-          _.addClass(_, _, `active`),
-            _.props.onEntering && _.props.onEntering(_, _);
+          (_.addClass(_, _, `active`),
+            _.props.onEntering && _.props.onEntering(_, _));
         }),
         (_.onEntered = function (_, _) {
           var _ = _.resolveArguments(_, _),
             _ = _[0],
             _ = _[1] ? `appear` : `enter`;
-          _.removeClasses(_, _),
+          (_.removeClasses(_, _),
             _.addClass(_, _, `done`),
-            _.props.onEntered && _.props.onEntered(_, _);
+            _.props.onEntered && _.props.onEntered(_, _));
         }),
         (_.onExit = function (_) {
           var _ = _.resolveArguments(_)[0];
-          _.removeClasses(_, `appear`),
+          (_.removeClasses(_, `appear`),
             _.removeClasses(_, `enter`),
             _.addClass(_, `exit`, `base`),
-            _.props.onExit && _.props.onExit(_);
+            _.props.onExit && _.props.onExit(_));
         }),
         (_.onExiting = function (_) {
           var _ = _.resolveArguments(_)[0];
-          _.addClass(_, `exit`, `active`),
-            _.props.onExiting && _.props.onExiting(_);
+          (_.addClass(_, `exit`, `active`),
+            _.props.onExiting && _.props.onExiting(_));
         }),
         (_.onExited = function (_) {
           var _ = _.resolveArguments(_)[0];
-          _.removeClasses(_, `exit`),
+          (_.removeClasses(_, `exit`),
             _.addClass(_, `exit`, `done`),
-            _.props.onExited && _.props.onExited(_);
+            _.props.onExited && _.props.onExited(_));
         }),
         (_.resolveArguments = function (_, _) {
           return _.props.nodeRef ? [_.props.nodeRef.current, _] : [_, _];
@@ -451,16 +451,19 @@ var _ = function (_, _) {
       (_.addClass = function (_, _, _) {
         var _ = this.getClassNames(_)[_ + `ClassName`],
           _ = this.getClassNames(`enter`).doneClassName;
-        _ === `appear` && _ === `done` && _ && (_ += ` ` + _),
+        (_ === `appear` && _ === `done` && _ && (_ += ` ` + _),
           _ === `active` && _ && _(_),
-          _ && ((this.appliedClasses[_][_] = _), _(_, _));
+          _ && ((this.appliedClasses[_][_] = _), _(_, _)));
       }),
       (_.removeClasses = function (_, _) {
         var _ = this.appliedClasses[_],
           _ = _.base,
           _ = _.active,
           _ = _.done;
-        (this.appliedClasses[_] = {}), _ && _(_, _), _ && _(_, _), _ && _(_, _);
+        ((this.appliedClasses[_] = {}),
+          _ && _(_, _),
+          _ && _(_, _),
+          _ && _(_, _));
       }),
       (_.render = function () {
         var _ = this.props;
@@ -481,10 +484,10 @@ var _ = function (_, _) {
       _
     );
   })(_.Component);
-(_.defaultProps = {
+((_.defaultProps = {
   classNames: ``,
 }),
-  (_.propTypes = {});
+  (_.propTypes = {}));
 function _(_) {
   if (_ === void 0)
     throw ReferenceError(
@@ -508,7 +511,7 @@ function _(_, _) {
   );
 }
 function _(_, _) {
-  (_ ||= {}), (_ ||= {});
+  ((_ ||= {}), (_ ||= {}));
   function _(_) {
     return _ in _ ? _[_] : _[_];
   }
@@ -609,12 +612,12 @@ var _ =
     var _ = _.prototype;
     return (
       (_.componentDidMount = function () {
-        (this.mounted = !0),
+        ((this.mounted = !0),
           this.setState({
             contextValue: {
               isMounting: !1,
             },
-          });
+          }));
       }),
       (_.componentWillUnmount = function () {
         this.mounted = !1;
@@ -673,7 +676,7 @@ var _ =
       _
     );
   })(_.Component);
-(_.propTypes = {}), (_.defaultProps = _);
+((_.propTypes = {}), (_.defaultProps = _));
 var _ = _();
 function _(_) {
   let {
@@ -707,10 +710,10 @@ function _(_) {
     _ = _.useRef(!0),
     _ = _.useCallback(() => _.current, [_]),
     _ = _.useCallback(() => {
-      (_.current = !0), _();
+      ((_.current = !0), _());
     }, [_]),
     _ = _.useCallback(() => {
-      (_.current = !1), _();
+      ((_.current = !1), _());
     }, [_]),
     _ = _.childrenClasses,
     _ = {
@@ -768,8 +771,8 @@ function _() {
           (_.activeProps.delete(_.propertyName),
           _.fnDone && _.activeProps.size == 0 && _.bExiting && _.fnDone());
       };
-      _.addEventListener(`transitionend`, _, !1),
-        _.addEventListener(`transitioncancel`, _, !1);
+      (_.addEventListener(`transitionend`, _, !1),
+        _.addEventListener(`transitioncancel`, _, !1));
     }, []),
     [
       _,
@@ -829,12 +832,12 @@ var _ = {
           (_.addEventListener(`load`, this.OnLinkLoad),
           this.m_rgLoadingLinks.push(_));
       } else
-        _.addEventListener(`load`, this.OnLinkLoad),
-          this.m_rgLoadingLinks.push(_);
+        (_.addEventListener(`load`, this.OnLinkLoad),
+          this.m_rgLoadingLinks.push(_));
     }
     SetTarget(_) {
-      (this.m_fnRender = _),
-        this.m_rgLoadingLinks.length == 0 && this.RenderWhenFontsReady();
+      ((this.m_fnRender = _),
+        this.m_rgLoadingLinks.length == 0 && this.RenderWhenFontsReady());
     }
     RenderWhenFontsReady() {
       let _ = this.m_doc?.fonts,
@@ -849,19 +852,19 @@ var _ = {
           console.warn(`CRenderWhenLinksReady: font load failed`, _),
         )
         .then(() => {
-          window.clearTimeout(_), this.Render();
+          (window.clearTimeout(_), this.Render());
         });
     }
     Render() {
-      this.m_fnRender?.(), (this.m_fnRender = void 0);
+      (this.m_fnRender?.(), (this.m_fnRender = void 0));
     }
     OnLinkLoad(_) {
-      _.currentTarget.removeEventListener(`load`, this.OnLinkLoad),
+      (_.currentTarget.removeEventListener(`load`, this.OnLinkLoad),
         _(this.m_rgLoadingLinks, _.currentTarget),
-        this.m_rgLoadingLinks.length == 0 && this.RenderWhenFontsReady();
+        this.m_rgLoadingLinks.length == 0 && this.RenderWhenFontsReady());
     }
   };
-_([_], _.prototype, `Render`, null), _([_], _.prototype, `OnLinkLoad`, null);
+(_([_], _.prototype, `Render`, null), _([_], _.prototype, `OnLinkLoad`, null));
 var _ = (function (_) {
     return (
       (_[(_.None = 0)] = `None`),
@@ -914,7 +917,7 @@ function _(_) {
   let _ = 0;
   switch (_) {
     case 0:
-      return (_ |= 8192), (_ |= 8), (_ |= 512), (_ |= 4194304), _;
+      return ((_ |= 8192), (_ |= 8), (_ |= 512), (_ |= 4194304), _);
     case 1:
       return (
         (_ |= _(0)),
@@ -925,7 +928,9 @@ function _(_) {
         _
       );
     case 2:
-      return (_ |= _(0)), (_ |= 262144), (_ |= 16384), (_ |= 4), (_ |= _()), _;
+      return (
+        (_ |= _(0)), (_ |= 262144), (_ |= 16384), (_ |= 4), (_ |= _()), _
+      );
     case 3:
       return (
         (_ |= 8),
@@ -964,43 +969,43 @@ var _ = class {
   m_onCreateRender = null;
   m_bFocused = !1;
   constructor(_, _) {
-    _(this),
+    (_(this),
       _(
         _,
         `Name is required.  This is an internal name, different from title.`,
       ),
-      (this.m_strName = _);
+      (this.m_strName = _));
     let { title: _, eCreationFlags: _, ..._ } = _;
-    (this.m_rgParams = {
+    ((this.m_rgParams = {
       ..._,
       eCreationFlags: _ ?? 0,
     }),
       this.m_rgParams.target_browser &&
         (this.m_strName += `_uid` + this.m_rgParams.target_browser.m_unPID),
       (this.m_bCreateHidden = !!(this.m_rgParams.eCreationFlags & 2)),
-      (this.m_strTitle = _);
+      (this.m_strTitle = _));
   }
   UpdateParamsBeforeShow(_) {
     return _;
   }
   OnDrop(_) {
-    console.log(`Ignoring drop onto toplevel window`, _),
+    (console.log(`Ignoring drop onto toplevel window`, _),
       _.preventDefault(),
-      _.stopPropagation();
+      _.stopPropagation());
   }
   OnDragOver(_) {
-    _.preventDefault(),
+    (_.preventDefault(),
       (_.dataTransfer.dropEffect = `none`),
-      _.stopPropagation();
+      _.stopPropagation());
   }
   OnMessage(_) {
-    _.data === `window_moved` && this.OnMove(),
+    (_.data === `window_moved` && this.OnMove(),
       _.data === `window_resized` && this.OnResize(),
-      _.data === `popup-created` && this.OnCreateInternal();
+      _.data === `popup-created` && this.OnCreateInternal());
   }
   Show(_ = _.k_EWindowBringToFrontAndForceOS) {
     let _;
-    (_ =
+    ((_ =
       typeof _ == `boolean`
         ? _
           ? _.k_EWindowBringToFrontAndForceOS
@@ -1012,12 +1017,12 @@ var _ = class {
       this.BIsValid() &&
         (this.BIsClosed()
           ? ((this.m_popup = void 0), (this.m_element = void 0))
-          : _ != _.k_EWindowBringToFrontInvalid && this.Focus(_));
+          : _ != _.k_EWindowBringToFrontInvalid && this.Focus(_)));
     let _ = _.GetExistingPopup(this.m_strName);
     if (_ && !this.m_rgParams.replace_existing_popup) return;
     this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams);
     let _, _, _;
-    _
+    (_
       ? ((_ = _.m_element),
         (_ = _.m_popup),
         (_ = _.m_renderWhenReady),
@@ -1062,17 +1067,17 @@ var _ = class {
       _.AddTrackedPopup(this),
       _ &&
         (this.OnCreateInternal(),
-        _ != _.k_EWindowBringToFrontInvalid && this.Focus(_));
+        _ != _.k_EWindowBringToFrontInvalid && this.Focus(_)));
   }
   RemoveEventListeners() {
-    this.window?.removeEventListener(`beforeunload`, this.OnBeforeUnloadEvent),
+    (this.window?.removeEventListener(`beforeunload`, this.OnBeforeUnloadEvent),
       this.window?.removeEventListener(`unload`, this.OnUnload),
       this.window?.removeEventListener(`resize`, this.OnResizeEvent),
       this.window?.removeEventListener(`focus`, this.OnFocusInternal),
       this.window?.removeEventListener(`blur`, this.OnBlurInternal),
       this.window?.removeEventListener(`drop`, this.OnDrop),
       this.window?.removeEventListener(`dragover`, this.OnDragOver),
-      this.window?.removeEventListener(`message`, this.OnMessage);
+      this.window?.removeEventListener(`message`, this.OnMessage));
   }
   RenderInternal(_, _, _) {
     this.m_bCreated
@@ -1102,10 +1107,10 @@ var _ = class {
     this.OnBeforeUnload();
   }
   OnUnload(_) {
-    this.RemoveEventListeners(),
+    (this.RemoveEventListeners(),
       _.RemoveTrackedPopup(this),
       this.OnClose(),
-      (this.m_popup = void 0);
+      (this.m_popup = void 0));
   }
   get browser_info() {
     return this.m_rgParams.target_browser;
@@ -1120,8 +1125,8 @@ var _ = class {
     return this.m_strTitle;
   }
   set title(_) {
-    (this.m_strTitle = _),
-      this.m_popup && (this.m_popup.document.title = this.m_strTitle);
+    ((this.m_strTitle = _),
+      this.m_popup && (this.m_popup.document.title = this.m_strTitle));
   }
   get params() {
     return this.m_rgParams;
@@ -1159,14 +1164,14 @@ var _ = class {
     return this.BIsVisible() && !!this.m_popup?.document.hasFocus();
   }
   OnFocusInternal() {
-    this.m_popup && this.m_popup.document.body.classList.add(`WindowFocus`),
+    (this.m_popup && this.m_popup.document.body.classList.add(`WindowFocus`),
       (this.m_bFocused = !0),
-      this.OnFocus();
+      this.OnFocus());
   }
   OnBlurInternal() {
-    this.m_popup && this.m_popup.document.body.classList.remove(`WindowFocus`),
+    (this.m_popup && this.m_popup.document.body.classList.remove(`WindowFocus`),
       (this.m_bFocused = !1),
-      this.OnBlur();
+      this.OnBlur());
   }
   get focused() {
     return this.m_bFocused;
@@ -1188,7 +1193,7 @@ var _ = class {
       : Promise.resolve(!1);
   }
   ReleasePopup() {
-    this.OnClose(), (this.m_popup = null);
+    (this.OnClose(), (this.m_popup = null));
   }
   OnMove() {}
   OnResize() {
@@ -1217,7 +1222,7 @@ var _ = class {
     );
   }
 };
-_([_], _.prototype, `m_bFocused`, void 0),
+(_([_], _.prototype, `m_bFocused`, void 0),
   _([_], _.prototype, `OnMessage`, null),
   _([_], _.prototype, `RenderInternal`, null),
   _([_], _.prototype, `OnCreateInternal`, null),
@@ -1234,7 +1239,7 @@ _([_], _.prototype, `m_bFocused`, void 0),
       m_strInitialRestoreDetails;
       m_bExpires;
       constructor(_, _, _, _) {
-        super(_, _), this.SetSavedDimensionsKey(_), (this.m_bExpires = _);
+        (super(_, _), this.SetSavedDimensionsKey(_), (this.m_bExpires = _));
       }
       BIsInOverlay() {
         return (
@@ -1269,14 +1274,14 @@ _([_], _.prototype, `m_bFocused`, void 0),
       }
       OnLoad() {
         this.GetWindowRestoreDetails().then((_) => {
-          (this.m_strInitialRestoreDetails = _), this.OnResizeComplete(_);
+          ((this.m_strInitialRestoreDetails = _), this.OnResizeComplete(_));
         });
       }
       OnMove() {
-        super.OnMove(), this.QueryAndStoreWindowPosition();
+        (super.OnMove(), this.QueryAndStoreWindowPosition());
       }
       OnResize() {
-        super.OnResize(), this.QueryAndStoreWindowPosition();
+        (super.OnResize(), this.QueryAndStoreWindowPosition());
       }
       OnResizeComplete(_) {}
       QueryAndStoreWindowPosition() {
@@ -1300,17 +1305,17 @@ _([_], _.prototype, `m_bFocused`, void 0),
         }
       }
       OnBeforeUnload() {
-        this.QueryAndStoreWindowPosition(), super.OnBeforeUnload();
+        (this.QueryAndStoreWindowPosition(), super.OnBeforeUnload());
       }
       OnClose() {}
       SaveWindowPosition(_) {
-        _.SetRestoreDetails(this.GetSavedDimensionsKey(), _, !1),
-          (this.m_rgParams.strRestoreDetails = _);
+        (_.SetRestoreDetails(this.GetSavedDimensionsKey(), _, !1),
+          (this.m_rgParams.strRestoreDetails = _));
       }
     }.prototype,
     `QueryAndStoreWindowPosition`,
     null,
-  );
+  ));
 var _ = class {
   m_bShuttingDown = !1;
   m_mapPopups = _.map([], {
@@ -1333,16 +1338,16 @@ var _ = class {
           _.BIsValid() && !_.BIsClosed() && _.push(_);
         });
         for (let _ of _)
-          _(_.window, `Browser.SetShouldExitSteamOnBrowserClosed`) &&
+          (_(_.window, `Browser.SetShouldExitSteamOnBrowserClosed`) &&
             _.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(!1),
             _(_.window, `Window.SetHideOnClose`) &&
               _.window.SteamClient.Window.SetHideOnClose(!1),
-            _.Close();
-        this.m_bSaveRequired && this.SaveSavedDimensionStore(),
-          this.m_mapPopups.clear();
+            _.Close());
+        (this.m_bSaveRequired && this.SaveSavedDimensionStore(),
+          this.m_mapPopups.clear());
       });
       let _ = document.querySelector(`head`);
-      _(_, `Couldn't find head element`),
+      (_(_, `Couldn't find head element`),
         _ &&
           ((this.m_DynamicCSSObserver = new MutationObserver(() => {
             let _ = _();
@@ -1352,7 +1357,7 @@ var _ = class {
           })),
           this.m_DynamicCSSObserver.observe(_, {
             childList: !0,
-          }));
+          })));
     }
   }
   BAnyPopupHasFocus() {
@@ -1379,12 +1384,12 @@ var _ = class {
     return this.m_rgPopupDestroyedCallbacks.Register(_);
   }
   AddTrackedPopup(_) {
-    this.m_mapPopups.set(_.GetName(), _),
-      _.BIsValid() && this.m_rgPopupCreatedCallbacks.Dispatch(_);
+    (this.m_mapPopups.set(_.GetName(), _),
+      _.BIsValid() && this.m_rgPopupCreatedCallbacks.Dispatch(_));
   }
   RemoveTrackedPopup(_) {
-    this.m_rgPopupDestroyedCallbacks.Dispatch(_),
-      this.m_mapPopups.delete(_.GetName());
+    (this.m_rgPopupDestroyedCallbacks.Dispatch(_),
+      this.m_mapPopups.delete(_.GetName()));
   }
   GetExistingPopup(_) {
     return this.m_mapPopups.get(_);
@@ -1415,12 +1420,12 @@ var _ = class {
       _ = _.height || 300,
       _ = _.title,
       _ = `width=` + _ + `,height=` + _;
-    _.left !== void 0 && (_ += `,left=` + _.left),
+    (_.left !== void 0 && (_ += `,left=` + _.left),
       _.top !== void 0 && (_ += `,top=` + _.top),
-      (_ += `,resizeable,status=0,toolbar=0,menubar=0,location=0`);
+      (_ += `,resizeable,status=0,toolbar=0,menubar=0,location=0`));
     let _ = `about:blank`,
       _ = [];
-    _.push(`createflags=` + _.eCreationFlags),
+    (_.push(`createflags=` + _.eCreationFlags),
       _.minWidth && _.push(`minwidth=` + _.minWidth),
       _.minHeight && _.push(`minheight=` + _.minHeight),
       _.maxWidth && _.maxWidth != 1 / 0 && _.push(`maxwidth=` + _.maxWidth),
@@ -1452,7 +1457,7 @@ var _ = class {
       _.hwndParent && _.push(`hwndParent=` + _.hwndParent),
       _.bPinned && _.push(`pinned=true`),
       _.bModal && _.push(`modal=true`),
-      _ && (_ += `?` + _.join(`&`));
+      _ && (_ += `?` + _.join(`&`)));
     let _ = (_.owner_window || window).open(_, _, _);
     if (!_)
       return (
@@ -1503,7 +1508,7 @@ var _ = class {
     let _ = this.GetLocalStorageKey(),
       _ = JSON.stringify(Array.from(this.m_mapRestoreDetails));
     try {
-      window.localStorage.setItem(_, _), (this.m_bSaveRequired = !1);
+      (window.localStorage.setItem(_, _), (this.m_bSaveRequired = !1));
     } catch (_) {
       if (`name` in _ && _.name == `QuotaExceededError`) {
         console.log(`Quota exceeded`);
@@ -1511,7 +1516,7 @@ var _ = class {
           _.startsWith(`PopupSavedDimensions_`) &&
             _ != _ &&
             window.localStorage.removeItem(_);
-        window.localStorage.setItem(_, _), (this.m_bSaveRequired = !1);
+        (window.localStorage.setItem(_, _), (this.m_bSaveRequired = !1));
       }
     }
   }
@@ -1519,7 +1524,7 @@ var _ = class {
     this.SaveSavedDimensionStore();
   }
   ClearSavedDimensionStore() {
-    this.m_mapRestoreDetails?.clear(), (this.m_bSaveRequired = !1);
+    (this.m_mapRestoreDetails?.clear(), (this.m_bSaveRequired = !1));
   }
   GetRestoreDetails(_) {
     if (!this.m_mapRestoreDetails?.has(_)) return ``;
@@ -1549,10 +1554,10 @@ var _ = class {
         };
         this.m_mapRestoreDetails.set(_, _);
       } else this.m_mapRestoreDetails.delete(_);
-      (this.m_bSaveRequired = !0),
+      ((this.m_bSaveRequired = !0),
         this.m_bShuttingDown
           ? this.SaveSavedDimensionStore()
-          : this.DebouncedSaveSavedDimensionStore();
+          : this.DebouncedSaveSavedDimensionStore());
     }
   }
 };
@@ -1607,10 +1612,10 @@ function _(_, _, _) {
               _.k_EWindowBringToFrontAndForceOS,
           ),
         () => {
-          (_.current.m_callbacks = void 0),
+          ((_.current.m_callbacks = void 0),
             _.current.window?.SteamClient.Window.SetHideOnClose &&
               _.current.window?.SteamClient.Window.SetHideOnClose(!1),
-            _.current.Close();
+            _.current.Close());
         }
       ),
       [],
@@ -1636,7 +1641,7 @@ var _ = class extends _ {
   m_callbacks;
   m_fnReadyToRender;
   constructor(_, _, _) {
-    super(_, _), (this.m_fnReadyToRender = _);
+    (super(_, _), (this.m_fnReadyToRender = _));
   }
   DoCallback(_) {
     this.m_callbacks?.[_]?.(this.m_popup, this.m_element);
@@ -1666,7 +1671,7 @@ var _ = class extends _ {
     this.DoCallback(`onResize`);
   }
   OnClose() {
-    this.DoCallback(`onClose`), this.m_fnReadyToRender(void 0);
+    (this.DoCallback(`onClose`), this.m_fnReadyToRender(void 0));
   }
   Render(_, _) {
     this.m_fnReadyToRender(_);
@@ -1756,14 +1761,14 @@ function _(_) {
           };
         else {
           let _ = _(_, _.getBoundingClientRect());
-          (_.dimensions = {
+          ((_.dimensions = {
             left: _.right,
             top: _.top,
             width: 2,
             height: 1,
           }),
             (_.availscreenwidth = _.screen.availWidth),
-            (_.availscreenheight = _.screen.availHeight);
+            (_.availscreenheight = _.screen.availHeight));
         }
         return _;
       },
@@ -1772,8 +1777,8 @@ function _(_) {
     _ = _.options.bStandalone
       ? _(_.StandaloneContextMenu)
       : _(_.PopupContextMenu);
-  _.options.bCreateHidden && (_ |= _.Hidden),
-    _.options.bAlwaysOnTop && (_ |= _.AlwaysOnTop);
+  (_.options.bCreateHidden && (_ |= _.Hidden),
+    _.options.bAlwaysOnTop && (_ |= _.AlwaysOnTop));
   let { popupObj: _, element: _ } = _(
     `contextmenu_` + _.key,
     {
@@ -1796,7 +1801,7 @@ function _(_) {
       if (_) {
         if (_.visible) {
           if (_) {
-            _.PositionMenu(), _.PositionPopupWindow();
+            (_.PositionMenu(), _.PositionPopupWindow());
             let _ = _.options.bNoFocusWhenShown
               ? _.k_EWindowBringToFrontWithoutForcingOS
               : _.k_EWindowBringToFrontAndForceOS;
@@ -1855,7 +1860,8 @@ function _(_, _ = 100) {
           _.addEventListener(`focus`, _),
           _.addEventListener(`blur`, _),
           () => {
-            _.removeEventListener(`focus`, _), _.removeEventListener(`blur`, _);
+            (_.removeEventListener(`focus`, _),
+              _.removeEventListener(`blur`, _));
           }
         );
     }, [_, _, _]),
@@ -2060,7 +2066,7 @@ function _(_, _, _, _) {
     _ = _.SteamClient.Browser.GetBrowserID();
   else {
     let _ = _.screen;
-    (_ = (_.availWidth - _) / 2), (_ = (_.availHeight - _) / 2);
+    ((_ = (_.availWidth - _) / 2), (_ = (_.availHeight - _) / 2));
     let _ = _;
     _.availLeft !== void 0 &&
       _.availTop !== void 0 &&
@@ -2088,13 +2094,13 @@ function _(_) {
         _(!0);
       });
     }, []);
-  _.useEffect(() => _.RegisterMeasureModalCallback(_).Unregister, [_, _]),
+  (_.useEffect(() => _.RegisterMeasureModalCallback(_).Unregister, [_, _]),
     _.useLayoutEffect(() => {
       _ ||
         _.startTransition(() => {
-          _(_.TakeMeasureModalRequest()), _(!1);
+          (_(_.TakeMeasureModalRequest()), _(!1));
         });
-    }, [_, _, _]);
+    }, [_, _, _]));
   let _ = _.useCallback((_) => {
     _.startTransition(() => {
       _((_) => (_ === _ ? void 0 : _));
@@ -2147,7 +2153,7 @@ function _(_) {
         _ = (_) => {
           _ ||= (_.fnResults(_), _(_), !0);
         };
-      return _(_, _.promiseContentReady).then(_), () => _(void 0);
+      return (_(_, _.promiseContentReady).then(_), () => _(void 0));
     }, [_, _, _]),
     (0, _.jsx)(_.Provider, {
       value: !0,
@@ -2179,10 +2185,10 @@ var _ = class _ {
     element;
     ModalUpdatedCallback = new _();
     constructor(_) {
-      super(), (this.element = _);
+      (super(), (this.element = _));
     }
     UpdateModal(_) {
-      (this.element = _), this.ModalUpdatedCallback.Dispatch();
+      ((this.element = _), this.ModalUpdatedCallback.Dispatch());
     }
   },
   _ = class extends _ {
@@ -2210,10 +2216,10 @@ var _ = class extends _ {
     m_modalProps;
     m_options;
     constructor(_, _, _, _) {
-      super(_),
+      (super(_),
         (this.m_strName = _),
         (this.m_modalProps = _),
-        (this.m_options = _);
+        (this.m_options = _));
     }
     get name() {
       return this.m_strName;
@@ -2260,18 +2266,18 @@ var _ = class extends _ {
         return this.m_rgMeasureModalRequests.shift();
     }
     RegisterOverlay(_) {
-      _(
+      (_(
         this.m_cMountedOverlays == 0,
         `Duplicate modal DialogOverlay; modals will appear in both`,
       ),
-        this.m_cMountedOverlays++;
+        this.m_cMountedOverlays++);
       let _ = this.m_OnModalCountChangedCallbacks.Register(_);
       return () => {
-        this.m_cMountedOverlays--, _.Unregister();
+        (this.m_cMountedOverlays--, _.Unregister());
       };
     }
     OnModalCountChanged(_) {
-      _ == `show` &&
+      (_ == `show` &&
         this.m_cMountedOverlays == 0 &&
         window.setTimeout(() => {
           _(
@@ -2283,7 +2289,7 @@ var _ = class extends _ {
         _ == `show`
           ? this.m_OnModalShownCallbacks.Dispatch(this.m_rgModals.length)
           : _ == `hide` &&
-            this.m_OnModalHiddenCallbacks.Dispatch(this.m_rgModals.length);
+            this.m_OnModalHiddenCallbacks.Dispatch(this.m_rgModals.length));
     }
     get modals() {
       return this.m_rgModals;
@@ -2301,9 +2307,9 @@ var _ = class extends _ {
     }
     RemoveModal(_) {
       let _ = this.m_rgModals.indexOf(_);
-      _ != -1 && this.m_rgModals.splice(_, 1),
+      (_ != -1 && this.m_rgModals.splice(_, 1),
         _.ModalClosedCallback.Dispatch(),
-        this.OnModalCountChanged(`hide`);
+        this.OnModalCountChanged(`hide`));
     }
     ShowModalInternal(_) {
       let _ = new _(_);
@@ -2317,11 +2323,11 @@ var _ = class extends _ {
         },
         ClosedPromise: new Promise((_) => {
           let _ = _.ModalClosedCallback.Register(() => {
-            _(), _.Unregister();
+            (_(), _.Unregister());
           });
         }),
       };
-      return this.OnModalCountChanged(`show`), _;
+      return (this.OnModalCountChanged(`show`), _);
     }
     ShowPortalModal() {
       _(
@@ -2367,13 +2373,13 @@ var _ = class extends _ {
       return this.m_bCenterPopupsOnWindow;
     }
     RequestModalMeasure(_, _, _) {
-      this.m_rgMeasureModalRequests.push({
+      (this.m_rgMeasureModalRequests.push({
         _: this.m_nMeasureRequestID++,
         rctToMeasure: _,
         fnResults: _,
         promiseContentReady: _,
       }),
-        this.m_OnMeasureModal.Dispatch();
+        this.m_OnMeasureModal.Dispatch());
     }
     get legacy_popup_modals() {
       return this.m_rgLegacyPopupModals;
@@ -2381,12 +2387,12 @@ var _ = class extends _ {
     ShowLegacyPopupModal(_, _, _, _) {
       let _ = () => {
           let _ = this.m_rgLegacyPopupModals.indexOf(_);
-          _ != -1 && this.m_rgLegacyPopupModals.splice(_, 1),
+          (_ != -1 && this.m_rgLegacyPopupModals.splice(_, 1),
             this.m_OnLegacyPopupModalCountChanged.Dispatch(
               this.m_rgLegacyPopupModals.length,
             ),
             _.ModalClosedCallback.Dispatch(),
-            _.fnOnClose && _.fnOnClose();
+            _.fnOnClose && _.fnOnClose());
         },
         _ = new _(
           _,
@@ -2412,7 +2418,7 @@ var _ = class extends _ {
           },
           ClosedPromise: new Promise((_) => {
             let _ = _.ModalClosedCallback.Register(() => {
-              _(), _.Unregister();
+              (_(), _.Unregister());
             });
           }),
         }
@@ -2473,8 +2479,8 @@ function _(_) {
     _ = _.useCallback(() => {
       _?.SteamClient?.Window && _.SteamClient.Window.BringToFront();
     }, [_]);
-  _.useEffect(() => _.RegisterOverlay(_), [_, _]),
-    _.useEffect(() => _.RegisterOnModalShownCallback(_).Unregister, [_, _]);
+  (_.useEffect(() => _.RegisterOverlay(_), [_, _]),
+    _.useEffect(() => _.RegisterOnModalShownCallback(_).Unregister, [_, _]));
 }
 function _(_, _) {
   return _(
@@ -2499,7 +2505,7 @@ function _(_) {
     _ = _.modals,
     _ = _ && !!_.length,
     _ = _.active_modal;
-  _(_), _(_);
+  (_(_), _(_));
   let _ = _(_, _),
     _ = null,
     _ = !_;
@@ -2684,7 +2690,7 @@ var _ = _.createContext({}),
       bRegisterModalManager: _,
       rctActiveContextMenus: (0, _.jsx)(_, {}),
     });
-    _.bRenderOverlayAtRoot &&
+    (_.bRenderOverlayAtRoot &&
       typeof document < `u` &&
       `body` in document &&
       (_ = _.createPortal(_, document.body)),
@@ -2692,7 +2698,7 @@ var _ = _.createContext({}),
       _ !== void 0 && _.current?.SetUsePopups(_),
       _ !== void 0 && _.current?.SetCenterPopupsOnWindow(_),
       _ !== void 0 && _.current?.SetOnlyPopups(_),
-      _.current.SetBrowserInfo(_);
+      _.current.SetBrowserInfo(_));
     let _ = _.useMemo(
       () => ({
         ModalManager: _.current,
@@ -2751,8 +2757,8 @@ function _(_) {
       _ && (_(_, _.ownerDocument.activeElement) || _.focus());
     }));
   let _ = [`ModalPosition`];
-  _.className && _.push(_.className),
-    _.bDestructiveWarning && _.push(`Destructive`);
+  (_.className && _.push(_.className),
+    _.bDestructiveWarning && _.push(`Destructive`));
   let _ =
       _.renderContent ||
       ((_) =>
@@ -2772,7 +2778,7 @@ function _(_) {
             children: (0, _.jsx)(`div`, {
               className: `closeButton`,
               onClick: (_) => {
-                _.stopPropagation(), _.onEscKeypress();
+                (_.stopPropagation(), _.onEscKeypress());
               },
               children: (0, _.jsx)(_, {}),
             }),
@@ -2871,14 +2877,15 @@ var _ = _(`DialogFooter`),
   _ = _(`DialogBodyText`),
   _ = _(`DialogBody`),
   _ = _(`DialogBody`);
-_(`DialogInnerBody`),
+(_(`DialogInnerBody`),
   _(`DialogControlsSection`),
   _(`DialogControlsSectionHeader`, `heading`, {
     "aria-level": 3,
-  });
+  }));
 var _ = _(`DialogTwoColLayout _DialogColLayout`),
   _ = _(`DialogThreeColLayout _DialogColLayout`);
-_(`DialogTwoThirdColLayout _DialogColLayout`), _(`DialogColumn _DialogLayout`);
+(_(`DialogTwoThirdColLayout _DialogColLayout`),
+  _(`DialogColumn _DialogLayout`));
 function _(_) {
   let _ = _(`Content`, _);
   return (0, _.jsx)(_, {
@@ -2903,9 +2910,9 @@ function _(_) {
 }
 var _ = class extends _.Component {
   OnSubmit(_) {
-    _.preventDefault(),
+    (_.preventDefault(),
       _.stopPropagation(),
-      this.props.onSubmit && this.props.onSubmit(_);
+      this.props.onSubmit && this.props.onSubmit(_));
   }
   render() {
     return (0, _.jsx)(`form`, {
@@ -2958,7 +2965,7 @@ var _ = _.forwardRef(function (_, _) {
       _ = (_) => {
         if (!_.disabled && _)
           return (_) => {
-            _.stopPropagation(), _(_);
+            (_.stopPropagation(), _(_));
           };
       };
     return (0, _.jsxs)(_, {
@@ -3068,14 +3075,14 @@ function _(_) {
 }
 var _ = class extends _.Component {
   constructor(_) {
-    super(_),
+    (super(_),
       (this.state = {
         checked: _.checked,
         disabled: _.disabled,
-      });
+      }));
   }
   componentDidUpdate(_) {
-    this.props.controlled ||
+    (this.props.controlled ||
       (_.checked != this.props.checked &&
         this.props.checked != this.state.checked &&
         this.setState({
@@ -3085,7 +3092,7 @@ var _ = class extends _.Component {
         this.props.disabled != this.state.disabled &&
         this.setState({
           disabled: this.props.disabled,
-        });
+        }));
   }
   shouldComponentUpdate(_, _) {
     return (
@@ -3128,25 +3135,25 @@ var _ = class extends _.Component {
   Toggle() {
     if (this.props.disabled) return;
     let _ = !this.checked;
-    this.props.controlled ||
+    (this.props.controlled ||
       this.setState({
         checked: _,
       }),
-      this.props.onChange && this.props.onChange(_);
+      this.props.onChange && this.props.onChange(_));
   }
   KeyDown(_) {
     _.keyCode == 32 && (this.Toggle(), _.preventDefault(), _.stopPropagation());
   }
   SetChecked(_, _) {
-    this.setState({
+    (this.setState({
       checked: _,
     }),
-      _ && this.props.onChange && this.props.onChange(_);
+      _ && this.props.onChange && this.props.onChange(_));
   }
 };
-_([_], _.prototype, `Toggle`, null),
+(_([_], _.prototype, `Toggle`, null),
   _([_], _.prototype, `KeyDown`, null),
-  _([_], _.prototype, `SetChecked`, null);
+  _([_], _.prototype, `SetChecked`, null));
 var _ = class extends _ {
     render() {
       let _ = `DialogCheckbox` + (this.checked ? ` Active` : ``);
@@ -3291,18 +3298,18 @@ var _ = class extends _ {
       );
     }
   };
-_([_], _.prototype, `OnOffKeyDown`, null),
-  _([_], _.prototype, `OnNewUIToggle`, null);
+(_([_], _.prototype, `OnOffKeyDown`, null),
+  _([_], _.prototype, `OnNewUIToggle`, null));
 var _ = class extends _ {
     m_component;
     m_propTargets;
     m_props = {};
     m_setStateOnComplete;
     constructor(_, _, _) {
-      super(_(_.ref.current), _),
+      (super(_(_.ref.current), _),
         (this.m_component = _),
         (this.m_propTargets = _),
-        (this.m_setStateOnComplete = _.setStateOnComplete);
+        (this.m_setStateOnComplete = _.setStateOnComplete));
     }
     Start() {
       this.m_props = {};
@@ -3326,9 +3333,9 @@ var _ = class extends _ {
       this.m_component.setState(_);
     }
     FireOnComplete() {
-      super.FireOnComplete(),
+      (super.FireOnComplete(),
         this.m_setStateOnComplete &&
-          this.m_component.setState(this.m_setStateOnComplete);
+          this.m_component.setState(this.m_setStateOnComplete));
     }
   },
   _ = _.forwardRef(function (_, _) {
@@ -3342,7 +3349,7 @@ var _ = class extends _ {
     m_CopiedAnimation;
     ref = _.createRef();
     constructor(_) {
-      super(_),
+      (super(_),
         this.CheckProps(_),
         (this.state = {
           m_CopiedYPos: 0,
@@ -3355,15 +3362,15 @@ var _ = class extends _ {
           m_strInvalidURLMessage: null,
           m_bIsInvalidEmail: !1,
           m_bAboveMaxChars: !1,
-        });
+        }));
     }
     componentDidUpdate(_) {
       this.CheckProps(this.props);
     }
     m_elInput;
     OnInputRef(_) {
-      (this.m_elInput = _),
-        this.m_elInput && this.props.focusOnMount && this.m_elInput.focus();
+      ((this.m_elInput = _),
+        this.m_elInput && this.props.focusOnMount && this.m_elInput.focus());
     }
     get element() {
       return this.m_elInput;
@@ -3418,7 +3425,7 @@ var _ = class extends _ {
       });
     }
     OnChanged(_) {
-      this.props.onChange && this.props.onChange(_), this.Validate();
+      (this.props.onChange && this.props.onChange(_), this.Validate());
     }
     OnCopyClick(_) {
       if (!this.m_elInput) return;
@@ -3436,7 +3443,7 @@ var _ = class extends _ {
             m_CopiedYPos: -4,
           },
           () => {
-            (this.m_CopiedAnimation = new _(
+            ((this.m_CopiedAnimation = new _(
               this,
               {
                 m_CopiedYPos: -24,
@@ -3449,7 +3456,7 @@ var _ = class extends _ {
                 },
               },
             )),
-              this.m_CopiedAnimation.Start();
+              this.m_CopiedAnimation.Start());
           },
         ));
     }
@@ -3497,8 +3504,8 @@ var _ = class extends _ {
           (_.className ? ` ` + _.className : ``),
         _ = `copiedAnimation`,
         _ = this.state.m_bCompletedCopiedAnimation;
-      this.m_CopiedAnimation && (_ = `copiedAnimation animationPlaying`),
-        _ && (_ = `copiedAnimation animationComplete`);
+      (this.m_CopiedAnimation && (_ = `copiedAnimation animationPlaying`),
+        _ && (_ = `copiedAnimation animationComplete`));
       let _ = {};
       this.state.m_CopiedYPos !== void 0 &&
         (_.transform = `translateY(` + this.state.m_CopiedYPos + `px)`);
@@ -3615,22 +3622,22 @@ var _ = class extends _ {
         : _;
     }
   };
-_([_], _.prototype, `OnInputRef`, null),
+(_([_], _.prototype, `OnInputRef`, null),
   _([_], _.prototype, `OnChanged`, null),
   _([_], _.prototype, `OnCopyClick`, null),
-  _([_], _.prototype, `OnClearClick`, null);
+  _([_], _.prototype, `OnClearClick`, null));
 var _ = class extends _ {
   m_bFocused = !1;
   OnBackgroundClick() {
     this.m_elInput && this.m_elInput.focus();
   }
   OnInputFocus(_) {
-    this.m_bFocused || ((this.m_bFocused = !0), this.forceUpdate()),
-      this.props.onFocus && this.props.onFocus(_);
+    (this.m_bFocused || ((this.m_bFocused = !0), this.forceUpdate()),
+      this.props.onFocus && this.props.onFocus(_));
   }
   OnInputBlur(_) {
-    this.m_bFocused && ((this.m_bFocused = !1), this.forceUpdate()),
-      this.props.onBlur && this.props.onBlur(_);
+    (this.m_bFocused && ((this.m_bFocused = !1), this.forceUpdate()),
+      this.props.onBlur && this.props.onBlur(_));
   }
   render() {
     let {
@@ -3706,9 +3713,9 @@ var _ = class extends _ {
     });
   }
 };
-_([_], _.prototype, `OnBackgroundClick`, null),
+(_([_], _.prototype, `OnBackgroundClick`, null),
   _([_], _.prototype, `OnInputFocus`, null),
-  _([_], _.prototype, `OnInputBlur`, null);
+  _([_], _.prototype, `OnInputBlur`, null));
 var _ = (_, _) =>
     `` + (_ == null ? null : Number.parseFloat(_.toFixed(3))) + (_ ?? ``),
   _ = (_) => {
@@ -3735,7 +3742,7 @@ var _ = (_, _) =>
     m_elSlider;
     m_rectSlider;
     OnMouseDown(_) {
-      (this.m_elSlider = _.currentTarget),
+      ((this.m_elSlider = _.currentTarget),
         (this.m_rectSlider = this.m_elSlider.getBoundingClientRect()),
         this.props.onChangeStart && this.props.onChangeStart(1),
         this.AdjustSliderForClientX(_.clientX, 1),
@@ -3746,13 +3753,13 @@ var _ = (_, _) =>
         this.m_elSlider.ownerDocument.defaultView?.addEventListener(
           `mouseup`,
           this.OnMouseUp,
-        );
+        ));
     }
     OnMouseMove(_) {
       this.AdjustSliderForClientX(_.clientX, 1);
     }
     OnMouseUp(_) {
-      this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
+      (this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
         `mousemove`,
         this.OnMouseMove,
       ),
@@ -3760,10 +3767,10 @@ var _ = (_, _) =>
           `mouseup`,
           this.OnMouseUp,
         ),
-        this.CompleteChange(1);
+        this.CompleteChange(1));
     }
     OnTouchStart(_) {
-      (this.m_elSlider = _.currentTarget),
+      ((this.m_elSlider = _.currentTarget),
         (this.m_rectSlider = this.m_elSlider.getBoundingClientRect()),
         this.props.onChangeStart && this.props.onChangeStart(0),
         this.AdjustSliderForClientX(_.touches[0].clientX, 0),
@@ -3774,13 +3781,13 @@ var _ = (_, _) =>
         this.m_elSlider.ownerDocument.defaultView?.addEventListener(
           `touchend`,
           this.OnTouchEnd,
-        );
+        ));
     }
     OnTouchMove(_) {
       this.AdjustSliderForClientX(_.touches[0].clientX, 0);
     }
     OnTouchEnd(_) {
-      this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
+      (this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
         `touchmove`,
         this.OnTouchMove,
       ),
@@ -3788,11 +3795,11 @@ var _ = (_, _) =>
           `touchend`,
           this.OnTouchEnd,
         ),
-        this.CompleteChange(0);
+        this.CompleteChange(0));
     }
     OnKeyDown(_) {
       let _ = 1;
-      _.ctrlKey &&
+      (_.ctrlKey &&
         (_ = Math.max(
           1,
           Math.floor((this.props.max - this.props.min) * 0.1 + 0.5),
@@ -3800,7 +3807,7 @@ var _ = (_, _) =>
         _.keyCode == 37
           ? (this.IncrementValue(-1 * _), _.preventDefault())
           : _.keyCode == 39 && (this.IncrementValue(1 * _), _.preventDefault()),
-        this.CompleteChange(2);
+        this.CompleteChange(2));
     }
     AdjustSliderForClientX(_, _) {
       let _ =
@@ -3834,10 +3841,10 @@ var _ = (_, _) =>
           (100 * (this.props.value - this.props.min)) /
             (this.props.max - this.props.min) +
           `%`;
-        (_.width = _),
+        ((_.width = _),
           (_ = {
             "--position": _,
-          });
+          }));
       }
       let { label: _, description: _, tooltip: _, ..._ } = this.props,
         _ = this.props.renderValue ?? _;
@@ -3888,7 +3895,7 @@ var _ = (_, _) =>
       });
     }
   };
-_([_], _.prototype, `OnMouseDown`, null),
+(_([_], _.prototype, `OnMouseDown`, null),
   _([_], _.prototype, `OnMouseMove`, null),
   _([_], _.prototype, `OnMouseUp`, null),
   _([_], _.prototype, `OnTouchStart`, null),
@@ -3897,7 +3904,7 @@ _([_], _.prototype, `OnMouseDown`, null),
   _([_], _.prototype, `OnKeyDown`, null),
   _.createContext({
     setValue: () => {},
-  });
+  }));
 var _ = `eSWLyPGexUc-`,
   _ = `BPz4HYn2rzo-`,
   _ = `buMBIF1RUqA-`;
@@ -4009,11 +4016,11 @@ var _ = _.forwardRef(function (_, _) {
     m_elInput;
     m_iMenuInstance;
     constructor(_) {
-      super(_),
+      (super(_),
         (this.state = {
           value: _(_.rgOptions, _.selectedOption),
           bOpened: !1,
-        });
+        }));
     }
     SetSelectedOption(_) {
       if (this.props.controlled) return;
@@ -4054,7 +4061,7 @@ var _ = _.forwardRef(function (_, _) {
       let _ = !_(_.rgOptions, this.props.rgOptions),
         _ = _.selectedOption !== this.props.selectedOption,
         _ = !_(this.value, _.value);
-      !this.props.controlled &&
+      (!this.props.controlled &&
         (_ || _ || _) &&
         (_ || this.value == null
           ? this.SetSelectedOption(this.props.selectedOption)
@@ -4066,7 +4073,7 @@ var _ = _.forwardRef(function (_, _) {
               (this.m_iMenuInstance = void 0),
               this.BuildMenu())
             : (this.m_iMenuInstance &&=
-                (this.m_iMenuInstance.SetOnHideCallback(void 0), void 0)));
+                (this.m_iMenuInstance.SetOnHideCallback(void 0), void 0))));
     }
     OnInputRef(_) {
       _ && (this.m_elInput = _);
@@ -4086,11 +4093,11 @@ var _ = _.forwardRef(function (_, _) {
       }
     }
     OnValueSelected(_, _) {
-      this.HideMenu(),
+      (this.HideMenu(),
         this.setState({
           value: _,
         }),
-        this.props.onChange && this.props.onChange(_, this, _);
+        this.props.onChange && this.props.onChange(_, this, _));
     }
     BuildMenu() {
       let _ = `DialogMenuPosition`;
@@ -4105,7 +4112,7 @@ var _ = _.forwardRef(function (_, _) {
           ...this.props.contextMenuPositionOptions,
         },
         _ = this.props.contextMenuPositionOptions?.onCancel;
-      (this.m_iMenuInstance = _(
+      ((this.m_iMenuInstance = _(
         (0, _.jsx)(_, {
           rgOptions: this.props.rgOptions,
           onValueSelected: this.OnValueSelected,
@@ -4123,23 +4130,23 @@ var _ = _.forwardRef(function (_, _) {
             (typeof this.props.strDefaultLabel == `string` &&
               this.props.strDefaultLabel),
         ),
-        this.m_iMenuInstance.SetOnHideCallback(this.HideMenu);
+        this.m_iMenuInstance.SetOnHideCallback(this.HideMenu));
     }
     ShowMenu() {
-      this.m_iMenuInstance ? this.m_iMenuInstance.Show() : this.BuildMenu(),
+      (this.m_iMenuInstance ? this.m_iMenuInstance.Show() : this.BuildMenu(),
         this.props.onMenuOpened && this.props.onMenuOpened(),
         this.setState({
           bOpened: !0,
-        });
+        }));
     }
     HideMenu() {
-      this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
+      (this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
         this.setState(
           {
             bOpened: !1,
           },
           () => this.m_elInput.focus(),
-        );
+        ));
     }
     OnKeyDown(_) {
       _(_, this.props.rgOptions.filter(_), this.value?.data, (_) =>
@@ -4174,12 +4181,12 @@ var _ = _.forwardRef(function (_, _) {
       });
     }
   };
-_([_], _.prototype, `OnInputRef`, null),
+(_([_], _.prototype, `OnInputRef`, null),
   _([_], _.prototype, `ToggleMenu`, null),
   _([_], _.prototype, `OnValueSelected`, null),
   _([_], _.prototype, `ShowMenu`, null),
   _([_], _.prototype, `HideMenu`, null),
-  _([_], _.prototype, `OnKeyDown`, null);
+  _([_], _.prototype, `OnKeyDown`, null));
 var _ = _.createContext(null);
 function _(_) {
   let _ = _(`DropDownMenu`, _);
@@ -4346,9 +4353,9 @@ var _ = _(_()),
     m_bRemoveOnHide;
     m_reactRoot;
     constructor(_, _ = !0) {
-      (this.m_parent = _),
+      ((this.m_parent = _),
         (this.m_window = _.ownerDocument.defaultView),
-        (this.m_bRemoveOnHide = _);
+        (this.m_bRemoveOnHide = _));
     }
     Show(_, _) {
       return (
@@ -4366,26 +4373,26 @@ var _ = _(_()),
       );
     }
     InternalShow(_) {
-      this.m_container ||
+      (this.m_container ||
         ((this.m_container = this.m_parent.ownerDocument.createElement(`div`)),
         this.m_parent.appendChild(this.m_container)),
         (this.m_reactRoot ||= _.createRoot(this.m_container)),
-        this.m_reactRoot.render(_);
+        this.m_reactRoot.render(_));
     }
     Hide(_) {
-      this.CancelShowInterval(),
+      (this.CancelShowInterval(),
         _
           ? (this.iIntervalShow = this.m_window.setTimeout(() => {
               this.InternalHide();
             }, _))
-          : this.InternalHide();
+          : this.InternalHide());
     }
     InternalHide() {
-      (this.m_reactRoot &&= (this.m_reactRoot.unmount(), void 0)),
+      ((this.m_reactRoot &&= (this.m_reactRoot.unmount(), void 0)),
         this.m_container &&
           this.m_bRemoveOnHide &&
           (this.m_parent.removeChild(this.m_container),
-          (this.m_container = null));
+          (this.m_container = null)));
     }
     CancelShowInterval() {
       this.iIntervalShow !== void 0 &&
@@ -4404,11 +4411,11 @@ var _ = _(_()),
     }
     ShowElementDelayed(_, _, _, _) {
       let _ = this.GetEmbeddedElement(_);
-      return (_.activeObject = _), _.instance.Show(_, _);
+      return ((_.activeObject = _), _.instance.Show(_, _));
     }
     ShowElement(_, _, _) {
       let _ = this.GetEmbeddedElement(_);
-      (_.activeObject = _), _.instance.Show(_);
+      ((_.activeObject = _), _.instance.Show(_));
     }
     HideElement(_, _, _) {
       let _ = this.GetEmbeddedElement(_);
@@ -4416,14 +4423,16 @@ var _ = _(_()),
     }
     GetEmbeddedElement(_) {
       let _ = this.m_mapEmbeddedHovers.get(_);
-      return _ || ((_ = new _(_.body)), this.m_mapEmbeddedHovers.set(_, _)), _;
+      return (
+        _ || ((_ = new _(_.body)), this.m_mapEmbeddedHovers.set(_, _)), _
+      );
     }
   },
   _ = new _(`DragDrop`).Debug,
   _ = class extends _.Component {
     m_coordinator = new _();
     OnDrop(_, _) {
-      _ > _ && _--, _ != _ && this.props.onReorder(_, _);
+      (_ > _ && _--, _ != _ && this.props.onReorder(_, _));
     }
     render() {
       let _ = [];
@@ -4442,7 +4451,7 @@ var _ = _(_()),
         _.Children.forEach(this.props.children, (_, _) => {
           let _ = _.props._ || `__list_` + _,
             _ = _ + 1;
-          _.push(
+          (_.push(
             (0, _.jsx)(
               _,
               {
@@ -4463,7 +4472,7 @@ var _ = _(_()),
                 },
                 `dropregion_` + _,
               ),
-            );
+            ));
         }),
         (0, _.jsx)(`div`, {
           className: `DialogReorderableList`,
@@ -4495,18 +4504,18 @@ var _ = class {
   m_dragGhost;
   m_dragOffWindowTimer;
   RegisterDropRegion(_) {
-    this.m_rgDropRegions.push(_),
+    (this.m_rgDropRegions.push(_),
       this.m_activeDraggable &&
         _.BAcceptDraggable(this.m_activeDraggable) &&
         (_.OnDragStarted(this.m_activeDraggable),
-        this.m_rgActiveDropRegions.push(_));
+        this.m_rgActiveDropRegions.push(_)));
   }
   UnregisterDropRegion(_) {
-    _(this.m_rgDropRegions, _),
+    (_(this.m_rgDropRegions, _),
       _(this.m_rgActiveDropRegions, _),
       this.m_activeDropRegion == _ &&
         ((this.m_activeDropRegion = void 0),
-        this.m_activeDraggable && this.ShowDragGhost());
+        this.m_activeDraggable && this.ShowDragGhost()));
   }
   OnDragGhostRef(_) {
     this.m_dragGhost = _;
@@ -4537,7 +4546,7 @@ var _ = class {
   m_elCloneOriginal;
   m_nodeCloneCopy;
   MakeDragClone(_) {
-    _(
+    (_(
       !this.m_nodeCloneCopy && !this.m_elCloneOriginal,
       `Drag already in progress`,
     ),
@@ -4548,34 +4557,34 @@ var _ = class {
         ((this.m_elCloneContainer =
           _.GetDragDocument().body.ownerDocument.createElement(`div`)),
         _.GetDragDocument().body.appendChild(this.m_elCloneContainer)),
-      this.m_elCloneContainer.appendChild(this.m_elCloneOriginal);
+      this.m_elCloneContainer.appendChild(this.m_elCloneOriginal));
   }
   ReverseDragClone() {
-    this.m_nodeCloneCopy.parentNode?.replaceChild(
+    (this.m_nodeCloneCopy.parentNode?.replaceChild(
       this.m_elCloneOriginal,
       this.m_nodeCloneCopy,
     ),
       (this.m_nodeCloneCopy = void 0),
-      (this.m_elCloneOriginal = void 0);
+      (this.m_elCloneOriginal = void 0));
   }
   OnDragStart(_) {
-    (this.m_activeDraggable = _), (this.m_rgActiveDropRegions = []);
+    ((this.m_activeDraggable = _), (this.m_rgActiveDropRegions = []));
     for (let _ of this.m_rgDropRegions)
       _.BAcceptDraggable(_) &&
         (_.OnDragStarted(_), this.m_rgActiveDropRegions.push(_));
-    this.MakeDragClone(_), this.ShowDragGhost();
+    (this.MakeDragClone(_), this.ShowDragGhost());
   }
   EndDrag() {
     if (this.m_activeDraggable) {
-      this.ReverseDragClone(),
+      (this.ReverseDragClone(),
         this.HideDragGhost(),
         this.m_activeDropRegion &&
-          this.m_activeDropRegion.OnDrop(this.m_activeDraggable);
+          this.m_activeDropRegion.OnDrop(this.m_activeDraggable));
       for (let _ of this.m_rgActiveDropRegions)
         _.OnDragEnded(this.m_activeDraggable);
-      (this.m_activeDraggable = void 0),
+      ((this.m_activeDraggable = void 0),
         (this.m_dropGhost = void 0),
-        (this.m_rgActiveDropRegions = []);
+        (this.m_rgActiveDropRegions = []));
     }
   }
   FindBestActiveDropRegionForPoint(_, _) {
@@ -4636,7 +4645,7 @@ var _ = class {
       }
     }
     let _ = this.FindBestActiveDropRegionForPoint(_, _);
-    (this.m_prevClientX = _),
+    ((this.m_prevClientX = _),
       (this.m_prevClientY = _),
       !!this.m_activeDropRegion != !!_ &&
         (this.ShowDragGhost(),
@@ -4649,13 +4658,13 @@ var _ = class {
         _.OnDragEnter(this.m_activeDraggable, this.m_dropGhost),
       (this.m_activeDropRegion = _),
       this.m_activeDropRegion &&
-        this.m_activeDropRegion.OnDragMove(_, _, this.m_activeDraggable);
+        this.m_activeDropRegion.OnDragMove(_, _, this.m_activeDraggable));
   }
 };
 _([_], _.prototype, `OnDragGhostRef`, null);
 var _ = class extends _.Component {
   constructor(_) {
-    super(_), _(this);
+    (super(_), _(this));
   }
   m_DragInfo = {
     bStarted: !1,
@@ -4672,13 +4681,13 @@ var _ = class extends _.Component {
     return this.m_DragInfo.ownerWin?.document;
   }
   RecordDragStart(_, _, _) {
-    (this.m_DragInfo.startClientX = _), (this.m_DragInfo.startClientY = _);
+    ((this.m_DragInfo.startClientX = _), (this.m_DragInfo.startClientY = _));
     let _ = _.getBoundingClientRect();
-    (this.m_DragInfo.startOffsetX = _ - _.left),
+    ((this.m_DragInfo.startOffsetX = _ - _.left),
       (this.m_DragInfo.startOffsetY = _ - _.top),
       (this.m_DragInfo.startWidth = _.width),
       (this.m_DragInfo.startHeight = _.height),
-      (this.m_DragInfo.ownerWin = _.ownerDocument.defaultView);
+      (this.m_DragInfo.ownerWin = _.ownerDocument.defaultView));
   }
   ProcessDragMove(_) {
     _(`ProcessDragMove`, _, this.props.data);
@@ -4706,12 +4715,12 @@ var _ = class extends _.Component {
       this.m_DragInfo.ownerWin?.addEventListener(`mouseup`, this.OnMouseUp));
   }
   OnMouseUp(_) {
-    this.m_DragInfo.ownerWin?.removeEventListener(
+    (this.m_DragInfo.ownerWin?.removeEventListener(
       `mousemove`,
       this.ProcessDragMove,
     ),
       this.m_DragInfo.ownerWin?.removeEventListener(`mouseup`, this.OnMouseUp),
-      this.ResetDragState();
+      this.ResetDragState());
   }
   OnTouchStart(_) {
     this.m_DragInfo.bStarted ||
@@ -4727,7 +4736,7 @@ var _ = class extends _.Component {
       this.m_DragInfo.ownerWin?.addEventListener(`touchend`, this.OnTouchEnd));
   }
   OnTouchEnd(_) {
-    this.m_DragInfo.ownerWin?.removeEventListener(
+    (this.m_DragInfo.ownerWin?.removeEventListener(
       `touchmove`,
       this.ProcessDragMove,
     ),
@@ -4735,10 +4744,10 @@ var _ = class extends _.Component {
         `touchend`,
         this.OnTouchEnd,
       ),
-      this.ResetDragState();
+      this.ResetDragState());
   }
   ResetDragState() {
-    _(`ResetDragState`, this.props.data),
+    (_(`ResetDragState`, this.props.data),
       this.m_DragInfo.bStarted &&
         (this.props.coordinator.EndDrag(),
         this.props.fnOnDragEnd && this.props.fnOnDragEnd()),
@@ -4748,28 +4757,31 @@ var _ = class extends _.Component {
       (this.m_DragInfo.startOffsetX = void 0),
       (this.m_DragInfo.startOffsetY = void 0),
       (this.m_DragInfo.ownerWin = void 0),
-      this.forceUpdate();
+      this.forceUpdate());
   }
   OnHTMLDragStart(_) {
-    _(`HTMLDragStart`, _, this.props.data, this.props.strHTMLDragData),
+    (_(`HTMLDragStart`, _, this.props.data, this.props.strHTMLDragData),
       (_.dataTransfer.effectAllowed = `copyMove`),
       this.props.strHTMLDragData &&
         this.props.strHTMLDragData.forEach((_, _) =>
           _.dataTransfer.setData(_, _),
         ),
       _.dataTransfer.getData(`text/plain`) ||
-        _.dataTransfer.setData(`text/plain`, this.props.data.toString());
+        _.dataTransfer.setData(`text/plain`, this.props.data.toString()));
     let _ = new Image();
-    _.dataTransfer.setDragImage(_, 0, 0),
+    (_.dataTransfer.setDragImage(_, 0, 0),
       this.RecordDragStart(_.currentTarget, _.clientX, _.clientY),
       this.m_DragInfo.ownerWin?.addEventListener(`drag`, this.OnHTMLDrag),
-      this.m_DragInfo.ownerWin?.addEventListener(`dragend`, this.OnHTMLDragEnd);
+      this.m_DragInfo.ownerWin?.addEventListener(
+        `dragend`,
+        this.OnHTMLDragEnd,
+      ));
   }
   OnHTMLDrag(_) {
-    _(`HTMLDrag`, _, _.dataTransfer?.types.length), this.ProcessDragMove(_);
+    (_(`HTMLDrag`, _, _.dataTransfer?.types.length), this.ProcessDragMove(_));
   }
   OnHTMLDragEnd(_) {
-    _(
+    (_(
       `HTMLDragEnd`,
       _,
       _.dataTransfer?.getData(`text/plain`) || `NOTHING`,
@@ -4780,7 +4792,7 @@ var _ = class extends _.Component {
         `dragend`,
         this.OnHTMLDragEnd,
       ),
-      this.ResetDragState();
+      this.ResetDragState());
   }
   render() {
     let {
@@ -4856,7 +4868,7 @@ var _ = class extends _.Component {
     return _;
   }
 };
-_([_], _.prototype, `ProcessDragMove`, null),
+(_([_], _.prototype, `ProcessDragMove`, null),
   _([_], _.prototype, `OnMouseDown`, null),
   _([_], _.prototype, `OnMouseUp`, null),
   _([_], _.prototype, `OnTouchStart`, null),
@@ -4864,7 +4876,7 @@ _([_], _.prototype, `ProcessDragMove`, null),
   _([_], _.prototype, `ResetDragState`, null),
   _([_], _.prototype, `OnHTMLDragStart`, null),
   _([_], _.prototype, `OnHTMLDrag`, null),
-  _([_], _.prototype, `OnHTMLDragEnd`, null);
+  _([_], _.prototype, `OnHTMLDragEnd`, null));
 var _ = class extends _.Component {
   OnRef(_) {
     _ && this.props.elContent && _.appendChild(this.props.elContent);
@@ -4934,7 +4946,7 @@ _([_], _.prototype, `OnRef`, null);
 var _ = class extends _.Component {
     m_divRef = _.createRef();
     constructor(_) {
-      super(_), (this.state = {});
+      (super(_), (this.state = {}));
     }
     componentDidMount() {
       this.props.coordinator.RegisterDropRegion(this);
@@ -4953,23 +4965,23 @@ var _ = class extends _.Component {
       });
     }
     OnDragEnter(_, _) {
-      this.setState({
+      (this.setState({
         dropGhost: _,
       }),
-        this.props.fnOnDragEnter && this.props.fnOnDragEnter(_);
+        this.props.fnOnDragEnter && this.props.fnOnDragEnter(_));
     }
     OnDragLeave(_) {
-      this.setState({
+      (this.setState({
         dropGhost: void 0,
       }),
-        this.props.fnOnDragLeave && this.props.fnOnDragLeave(_);
+        this.props.fnOnDragLeave && this.props.fnOnDragLeave(_));
     }
     OnDragMove(_, _, _) {}
     OnDrop(_) {
-      this.setState({
+      (this.setState({
         dropGhost: void 0,
       }),
-        this.props.fnOnDrop(_);
+        this.props.fnOnDrop(_));
     }
     BAcceptDraggable(_) {
       return !this.props.fnBAcceptDraggable || this.props.fnBAcceptDraggable(_);
@@ -5104,12 +5116,12 @@ var _ = class extends _.Component {
     m_flPageListScrollTop = 0;
     m_flPageScrollTop = 0;
   };
-_([_], _.prototype, `m_flPageListScrollTop`, void 0),
-  _([_], _.prototype, `m_flPageScrollTop`, void 0);
+(_([_], _.prototype, `m_flPageListScrollTop`, void 0),
+  _([_], _.prototype, `m_flPageScrollTop`, void 0));
 var _ = class _ {
   static s_Instance;
   static Get() {
-    return (_.s_Instance ||= new _()), _.s_Instance;
+    return ((_.s_Instance ||= new _()), _.s_Instance);
   }
   constructor() {
     _(this);
@@ -5251,9 +5263,9 @@ _.forwardRef(function (_, _) {
           ),
     ),
     _ = _;
-  _ ||
+  (_ ||
     (_ = _.findIndex((_) => typeof _ == `object` && _.identifier === _.page)),
-    (_ < 0 || _ >= _.length) && (_ = 0);
+    (_ < 0 || _ >= _.length) && (_ = 0));
   let _ = null;
   typeof _[_] == `object` && (_ = _[_]);
   let _ = _.useRef(null),
@@ -5265,10 +5277,10 @@ _.forwardRef(function (_, _) {
     }, []),
     _ = _.useCallback(
       (_, _) => {
-        _(!0),
+        (_(!0),
           _.PlayNavSound(_.PagedNavigation),
           _ && _(_.identifier),
-          _.click ? _.click() : _ && _(_);
+          _.click ? _.click() : _ && _(_));
       },
       [_, _],
     ),
@@ -5466,14 +5478,14 @@ var _ = class extends _.Component {
         ((_ = window.scrollY), (_.style.height = _ + `px`)),
       _.scrollHeight > _)
     )
-      (_.style.height = _ + `px`), (_.style.overflow = `auto`);
+      ((_.style.height = _ + `px`), (_.style.overflow = `auto`));
     else if (_.scrollHeight != _.clientHeight) {
       let _ = Math.max(_.scrollHeight, _);
-      (_.style.height = _ - this.m_nTextAreaPadding + `px`),
-        _.style.overflow == `auto` && (_.style.overflow = `hidden`);
+      ((_.style.height = _ - this.m_nTextAreaPadding + `px`),
+        _.style.overflow == `auto` && (_.style.overflow = `hidden`));
     }
-    _ !== void 0 && window.scrollTo(window.scrollX, _),
-      (this.m_cEntryLength = _);
+    (_ !== void 0 && window.scrollTo(window.scrollX, _),
+      (this.m_cEntryLength = _));
   }
   CalculatePadding() {
     let _ = getComputedStyle(this.m_refTextArea.current);
@@ -5492,31 +5504,32 @@ var _ = class extends _.Component {
     window.setTimeout(this.InternalOnInput, 1);
   }
   OnKeyUp(_) {
-    this.InternalOnInput(), this.props.onKeyUp && this.props.onKeyUp(_);
+    (this.InternalOnInput(), this.props.onKeyUp && this.props.onKeyUp(_));
   }
   OnBlur(_) {
-    this.DeferredInternalOnInput(), this.props.onBlur && this.props.onBlur(_);
+    (this.DeferredInternalOnInput(), this.props.onBlur && this.props.onBlur(_));
   }
   OnClick(_) {
-    this.InternalOnInput(), this.props.onClick && this.props.onClick(_);
+    (this.InternalOnInput(), this.props.onClick && this.props.onClick(_));
   }
   OnPaste(_) {
-    this.DeferredInternalOnInput(), this.props.onPaste && this.props.onPaste(_);
+    (this.DeferredInternalOnInput(),
+      this.props.onPaste && this.props.onPaste(_));
   }
   OnCut(_) {
-    this.InternalOnInput(), this.props.onCut && this.props.onCut(_);
+    (this.InternalOnInput(), this.props.onCut && this.props.onCut(_));
   }
   componentDidMount() {
-    (this.m_refTextArea.current.style.overflow = `hidden`),
+    ((this.m_refTextArea.current.style.overflow = `hidden`),
       (this.m_refTextArea.current.style.resize = `none`),
-      this.InternalOnInput();
+      this.InternalOnInput());
   }
   componentDidUpdate(_) {
-    (_.nMinHeight != this.props.nMinHeight ||
+    ((_.nMinHeight != this.props.nMinHeight ||
       _.nMaxHeight != this.props.nMaxHeight) &&
       (this.m_cEntryLength = Number.MAX_VALUE),
       this.m_refTextArea.current?.value.length != this.m_cEntryLength &&
-        this.InternalOnInput();
+        this.InternalOnInput());
   }
   render() {
     let { nMinHeight: _, nMaxHeight: _, ..._ } = this.props;
@@ -5531,12 +5544,12 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `InternalOnInput`, null),
+(_([_], _.prototype, `InternalOnInput`, null),
   _([_], _.prototype, `OnKeyUp`, null),
   _([_], _.prototype, `OnBlur`, null),
   _([_], _.prototype, `OnClick`, null),
   _([_], _.prototype, `OnPaste`, null),
-  _([_], _.prototype, `OnCut`, null);
+  _([_], _.prototype, `OnCut`, null));
 var _ = `lm8av4GjoRI-`,
   _ = `ixBfjCBhveg-`,
   _ = `JGinsRI6fVY-`,
@@ -5605,10 +5618,10 @@ function _(_, _, _, _, _, _, _) {
     _,
     _ = _.props.closeModal,
     _ = () => {
-      _ && _.Close(), _ && _(), _?.fnOnClose && _.fnOnClose();
+      (_ && _.Close(), _ && _(), _?.fnOnClose && _.fnOnClose());
     },
     _ = () => {
-      _ && _.Close(), _();
+      (_ && _.Close(), _());
     },
     _ = _.cloneElement(_, {
       closeModal: _,
@@ -5632,7 +5645,7 @@ function _(_, _, _, _, _, _, _) {
   return _;
 }
 function _(_, _) {
-  return (_ ||= _(_ || window)), _.IN_CLIENT && _.BUsePopups();
+  return ((_ ||= _(_ || window)), _.IN_CLIENT && _.BUsePopups());
 }
 function _(_) {
   return _.BOnlyPopups && _.BOnlyPopups();
@@ -5712,7 +5725,7 @@ function _(_) {
 function _(_) {
   function _(_) {
     return () => {
-      _ && _(), _.closeModal && _.closeModal();
+      (_ && _(), _.closeModal && _.closeModal());
     };
   }
   let {
@@ -5754,7 +5767,7 @@ function _(_) {
           strCancelText: _,
           focusButton: _,
           onUpdate: () => {
-            _(), _.closeModal && _.closeModal();
+            (_(), _.closeModal && _.closeModal());
           },
           strUpdateText: _,
           bUpdateDisabled: _.bMiddleDisabled,
@@ -6059,7 +6072,7 @@ _.forwardRef(function (_, _) {
     childrenLayout: _ ?? `inline`,
     childrenContainerWidth: _ ?? `min`,
     onMouseDown: (_) => {
-      _.current?.focus(), _.preventDefault();
+      (_.current?.focus(), _.preventDefault());
     },
     padding: _,
     inlineWrap: _,
@@ -6129,7 +6142,7 @@ var _ = _.forwardRef(function (_, _) {
       childrenLayout: _ ?? `inline`,
       childrenContainerWidth: `fixed`,
       onMouseDown: (_) => {
-        _.current?.element?.focus(), _.preventDefault();
+        (_.current?.element?.focus(), _.preventDefault());
       },
       children: (0, _.jsx)(_, {
         ..._(_, _),
@@ -6231,7 +6244,7 @@ var _ = `v2f7TrOeULg-`,
       _ = _(_, _),
       [_, _] = _.useState(!1),
       _ = _.useCallback(() => {
-        _((_) => !_), window.setTimeout(() => _.current?.Focus(), 1);
+        (_((_) => !_), window.setTimeout(() => _.current?.Focus(), 1));
       }, []);
     return (0, _.jsx)(_, {
       className: _,
@@ -6426,14 +6439,15 @@ var _ = class extends _.Component {
     }
   }
   constructor(_) {
-    super(_),
+    (super(_),
       (this.m_fStartValue = this.props.value),
       (this.m_fLatestUserValue = this.props.value),
-      (this.m_fLatestOnChangeValue = this.props.value);
+      (this.m_fLatestOnChangeValue = this.props.value));
   }
   RecomputeSliderBounds() {
-    (this.m_sliderBounds = this.m_refSlider.current?.getBoundingClientRect()),
-      (this.m_handleBounds = this.m_refHandle.current?.getBoundingClientRect());
+    ((this.m_sliderBounds = this.m_refSlider.current?.getBoundingClientRect()),
+      (this.m_handleBounds =
+        this.m_refHandle.current?.getBoundingClientRect()));
   }
   SetDragMode(_) {
     if (_ != this.m_eDragMode) {
@@ -6448,13 +6462,13 @@ var _ = class extends _.Component {
         case 3:
         case 2:
         case 4:
-          this.RecomputeSliderBounds(),
+          (this.RecomputeSliderBounds(),
             (this.m_fStartValue = this.props.value),
-            (this.m_fLatestUserValue = this.props.value);
+            (this.m_fLatestUserValue = this.props.value));
       }
       switch (_) {
         case 1:
-          this.m_refSlider.current?.ownerDocument?.addEventListener(
+          (this.m_refSlider.current?.ownerDocument?.addEventListener(
             `mousemove`,
             this.OnWindowMouseMove,
             {
@@ -6467,11 +6481,11 @@ var _ = class extends _.Component {
               {
                 passive: !1,
               },
-            );
+            ));
           break;
         case 2:
         case 3:
-          this.m_refSlider.current?.ownerDocument?.addEventListener(
+          (this.m_refSlider.current?.ownerDocument?.addEventListener(
             `touchmove`,
             this.OnWindowTouchMove,
             {
@@ -6484,7 +6498,7 @@ var _ = class extends _.Component {
               {
                 passive: !1,
               },
-            );
+            ));
           break;
         case 0:
           this.RemoveDocumentEventListeners();
@@ -6520,9 +6534,9 @@ var _ = class extends _.Component {
     ) {
       this.m_eDragMode == 0 && this.SetDragMode(4);
       let _ = _ > this.m_fLatestUserValue;
-      _.PlayNavSound(_ ? _.SliderUp : _.SliderDown),
+      (_.PlayNavSound(_ ? _.SliderUp : _.SliderDown),
         (this.m_fLatestUserValue = _),
-        this.FireOnChange(_, 2);
+        this.FireOnChange(_, 2));
     } else _.PlayNavSound(_.FailedNav);
     return !0;
   }
@@ -6570,7 +6584,7 @@ var _ = class extends _.Component {
         this.m_eDragMode == 1 || this.m_eDragMode == 3)
       ) {
         let _ = !1;
-        (_ == _ || _ == _) &&
+        ((_ == _ || _ == _) &&
         this.m_fLatestUserValue > _ &&
         this.m_fLatestUserValue < _ &&
         !_
@@ -6582,10 +6596,10 @@ var _ = class extends _.Component {
               Math.floor(((_ - _) / (_ - _)) * 40) &&
             !_ &&
             (this.PlayHaptic(_.Sliding), (_ = !0)),
-          !_ && !_ && (this.PlayHaptic(_.Snap), (_ = !0));
+          !_ && !_ && (this.PlayHaptic(_.Snap), (_ = !0)));
       }
-      (this.m_fLatestUserValue = _),
-        this.FireOnChange(_, this.SliderChangeSource);
+      ((this.m_fLatestUserValue = _),
+        this.FireOnChange(_, this.SliderChangeSource));
     }
   }
   OnWindowMouseMove(_) {
@@ -6639,13 +6653,13 @@ var _ = class extends _.Component {
   }
   Complete() {
     let _ = this.m_eDragMode != 0;
-    this.FireOnChange(this.m_fLatestUserValue, this.SliderChangeSource),
+    (this.FireOnChange(this.m_fLatestUserValue, this.SliderChangeSource),
       this.props.onChangeComplete &&
         this.props.onChangeComplete(
           this.m_fLatestUserValue,
           this.SliderChangeSource,
         ),
-      this.SetDragMode(0);
+      this.SetDragMode(0));
     let _ = this.step == 0;
     if (
       this.m_fLatestUserValue != this.m_fStartValue &&
@@ -6657,7 +6671,7 @@ var _ = class extends _.Component {
     }
   }
   RemoveDocumentEventListeners() {
-    this.m_refSlider.current?.ownerDocument?.removeEventListener(
+    (this.m_refSlider.current?.ownerDocument?.removeEventListener(
       `mousemove`,
       this.OnWindowMouseMove,
     ),
@@ -6672,7 +6686,7 @@ var _ = class extends _.Component {
       this.m_refSlider.current?.ownerDocument?.removeEventListener(
         `touchend`,
         this.OnWindowTouchEnd,
-      );
+      ));
   }
   GetZoom() {
     return (
@@ -6689,18 +6703,19 @@ var _ = class extends _.Component {
     this.m_navRefSlider.current?.ParentTakeFocus();
   }
   OnInnerSliderFocus() {
-    (this.m_bInnerSliderHasFocus = !0), (this.m_fStartValue = this.props.value);
+    ((this.m_bInnerSliderHasFocus = !0),
+      (this.m_fStartValue = this.props.value));
   }
   OnInnerSliderBlur() {
-    (this.m_bInnerSliderHasFocus = !1),
+    ((this.m_bInnerSliderHasFocus = !1),
       (this.m_fStartValue != this.m_fLatestUserValue ||
         this.m_eDragMode != 0) &&
-        this.Complete();
+        this.Complete());
   }
   ResetToDefault() {
     if (!this.CanResetToDefault || this.m_eDragMode != 0) return;
     let _;
-    (this.m_fLatestUserValue = this.props.resetValue),
+    ((this.m_fLatestUserValue = this.props.resetValue),
       (this.m_fLatestOnChangeValue = this.props.value),
       this.FireOnChange(this.props.resetValue, 4),
       this.m_bInnerSliderHasFocus
@@ -6708,7 +6723,7 @@ var _ = class extends _.Component {
         : ((_ = this.props.resetValue > this.props.value),
           this.props.onChangeComplete &&
             this.props.onChangeComplete(this.props.resetValue, 4)),
-      _.PlayNavSound(_ ? _.SliderUp : _.SliderDown);
+      _.PlayNavSound(_ ? _.SliderUp : _.SliderDown));
   }
   OnContextMenu(_) {
     if (this.props.resetValue != null) {
@@ -6897,7 +6912,7 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `RecomputeSliderBounds`, null),
+(_([_], _.prototype, `RecomputeSliderBounds`, null),
   _([_], _.prototype, `SetDragMode`, null),
   _([_], _.prototype, `OnGamepadDirection`, null),
   _([_], _.prototype, `UpdateSliderValueForPosition`, null),
@@ -6912,7 +6927,7 @@ _([_], _.prototype, `RecomputeSliderBounds`, null),
   _([_], _.prototype, `OnInnerSliderFocus`, null),
   _([_], _.prototype, `OnInnerSliderBlur`, null),
   _([_], _.prototype, `ResetToDefault`, null),
-  _([_], _.prototype, `OnContextMenu`, null);
+  _([_], _.prototype, `OnContextMenu`, null));
 function _(_) {
   let {
       sliderValue: _,
@@ -7036,7 +7051,7 @@ var _ = _.forwardRef(function (_, _) {
     _ = _.useCallback(() => {
       if (!_ && _) {
         let _ = !_;
-        _(_), _.PlayNavSound(_ ? _.ToggleOn : _.ToggleOff);
+        (_(_), _.PlayNavSound(_ ? _.ToggleOn : _.ToggleOff));
       }
     }, [_, _, _]);
   return (
@@ -7145,54 +7160,3 @@ function _(_) {
     }),
   });
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

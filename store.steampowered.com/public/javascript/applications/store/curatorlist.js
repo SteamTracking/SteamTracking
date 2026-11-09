@@ -61,7 +61,8 @@ async function W(e, t) {
     a = new Set();
   try {
     let e = await U.default.get(n, { params: r });
-    if (e?.data?.success == 1) return e.data.appids.forEach((e) => a.add(e)), a;
+    if (e?.data?.success == 1)
+      return (e.data.appids.forEach((e) => a.add(e)), a);
     i = v(e);
   } catch (e) {
     i = v(e);
@@ -157,7 +158,7 @@ function de(e) {
   let t = Math.floor(e / 3600);
   e -= t * 60 * 60;
   let n = Math.floor(e / 60);
-  return (e -= n * e), `${t}h${n}m${e}s`;
+  return ((e -= n * e), `${t}h${n}m${e}s`);
 }
 var fe = `ZJL8xBrL2zY-`,
   pe = `vcekW7OLx38-`,

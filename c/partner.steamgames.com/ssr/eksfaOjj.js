@@ -37,9 +37,9 @@ function _(_) {
         _ = _.current.getBoundingClientRect(),
         _ = _,
         _ = _.current.matches(`:dir(rtl)`);
-      _ && (_ === `left` ? (_ = `right`) : _ === `right` && (_ = `left`)),
+      (_ && (_ === `left` ? (_ = `right`) : _ === `right` && (_ = `left`)),
         _.current.style.setProperty(`--parentWidth`, `${_.width}px`),
-        _.current.style.setProperty(`--parentHeight`, `${_.height}px`);
+        _.current.style.setProperty(`--parentHeight`, `${_.height}px`));
       let _ = 0;
       if (!_) {
         if (_.width) {
@@ -50,11 +50,11 @@ function _(_) {
             let _ = _ ? _.left : _.right;
             _ = document.body.clientWidth - (_ + _.width);
           }
-          _ === void 0 &&
+          (_ === void 0 &&
             (_ = _
               ? _.right - _.width
               : document.body.clientWidth - (_.left + _.width)),
-            (_ = Math.min(_, 0));
+            (_ = Math.min(_, 0)));
         }
         _ === `left`
           ? _
@@ -106,8 +106,8 @@ function _(_) {
           _?.addEventListener(`scroll`, _),
           window.addEventListener(`scroll`, _),
           () => {
-            _?.removeEventListener(`scroll`, _),
-              window.addEventListener(`scroll`, _);
+            (_?.removeEventListener(`scroll`, _),
+              window.addEventListener(`scroll`, _));
           })
         : (window.sessionStorage.getItem(`DEBUG_StickyContextMenus`) !=
             `true` && _.current?.hidePopover(),
@@ -115,28 +115,13 @@ function _(_) {
     [_, _, _],
   );
   let _ = (0, _.useCallback)(() => {
-      _(), _(!0), (_.current = !0);
+      (_(), _(!0), (_.current = !0));
     }, [_]),
     _ = (0, _.useCallback)(() => {
-      (_.current = !1), _.current || _(!1);
+      ((_.current = !1), _.current || _(!1));
     }, []),
     _ = (0, _.useCallback)(() => {
-      (_.current = !0), _(!0);
-    }, []),
-    _ = (0, _.useCallback)(
-      (_) => {
-        _.current?.contains(_.target) && _();
-      },
-      [_],
-    ),
-    _ = (0, _.useCallback)(
-      (_) => {
-        _.current?.contains(_.target) && _();
-      },
-      [_],
-    ),
-    _ = (0, _.useCallback)(() => {
-      (_.current = !1), _.current || _(!1);
+      ((_.current = !0), _(!0));
     }, []),
     _ = (0, _.useCallback)(
       (_) => {
@@ -144,8 +129,23 @@ function _(_) {
       },
       [_],
     ),
+    _ = (0, _.useCallback)(
+      (_) => {
+        _.current?.contains(_.target) && _();
+      },
+      [_],
+    ),
     _ = (0, _.useCallback)(() => {
-      _(), _();
+      ((_.current = !1), _.current || _(!1));
+    }, []),
+    _ = (0, _.useCallback)(
+      (_) => {
+        _.current?.contains(_.target) && _();
+      },
+      [_],
+    ),
+    _ = (0, _.useCallback)(() => {
+      (_(), _());
     }, [_, _]),
     _ = (0, _.useCallback)(
       (_) => {
@@ -192,7 +192,7 @@ function _(_) {
     _;
   _ === 0 && !_
     ? (_ = (_) => {
-        _.preventDefault(), _();
+        (_.preventDefault(), _());
       })
     : _ === 1 && (_ = _ ? _ : _);
   let _ = {
@@ -265,4 +265,3 @@ function _(_) {
     ],
   });
 }
-export { _, _ };

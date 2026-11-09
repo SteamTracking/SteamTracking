@@ -24,7 +24,7 @@ function p(e) {
         return (
           (h.current = e.key),
           () => {
-            l(null), m(!1), e.Close(), t.Unregister(), n.Unregister();
+            (l(null), m(!1), e.Close(), t.Unregister(), n.Unregister());
           }
         );
       }

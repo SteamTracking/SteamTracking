@@ -27,4 +27,3 @@ function _(_, _) {
 function _(_) {
   return _(`PlayerLinkDetails`, () => _(_));
 }
-export { _, _ };

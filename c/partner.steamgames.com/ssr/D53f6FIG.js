@@ -87,10 +87,10 @@ function _(_, _) {
     _(_);
     return;
   }
-  _(
+  (_(
     `Wait for page enabled, suppressing focus in ${_._} until we hear that page is ready`,
   ),
-    _.DeferredFocus.SuppressFocus();
+    _.DeferredFocus.SuppressFocus());
   let _ = _(_),
     _ = _.Register(() => {
       _(_, _) ? _.DeferredFocus.Reset() : _.DeferredFocus.ExecuteQueuedFocus();
@@ -100,7 +100,7 @@ function _(_, _) {
 var _ = `FocusHistoryWaitForPage`;
 function _() {
   let _ = window.navigation.currentEntry?.getState();
-  return _(`Wait for page? ${_?.[_] ? `wait` : `no`} `, _), !!_?.[_];
+  return (_(`Wait for page? ${_?.[_] ? `wait` : `no`} `, _), !!_?.[_]);
 }
 function _() {
   window.navigation.updateCurrentEntry({
@@ -134,7 +134,7 @@ var _ = new _(`FocusNavigation`).Debug,
     m_rgOnUnhandledButton = [];
     m_rgGlobalButtonHandlers = [];
     constructor(_, _, _, _, _) {
-      (this.m_Controller = _),
+      ((this.m_Controller = _),
         (this.m_context = _),
         (this.m_ID = _),
         (this.m_ParentNavTree = _),
@@ -142,7 +142,7 @@ var _ = new _(`FocusNavigation`).Debug,
         this.m_Root.SetProperties({
           layout: _.COLUMN,
         }),
-        (this.m_Properties = _);
+        (this.m_Properties = _));
     }
     get id() {
       return this.m_ID;
@@ -188,7 +188,7 @@ var _ = new _(`FocusNavigation`).Debug,
       return new _(this, _, _);
     }
     RegisterNavigationItem(_, _) {
-      return _.OnMount(_), () => _.OnUnmount();
+      return (_.OnMount(_), () => _.OnUnmount());
     }
     OnChildActivated(_) {
       this.m_valueIsMounted.Value &&
@@ -224,15 +224,15 @@ var _ = new _(`FocusNavigation`).Debug,
       this.m_onActiveWithinWindowChangedCallbacks.Dispatch();
     }
     OnActivate(_) {
-      (this.m_tsLastActivated = performance.now()),
+      ((this.m_tsLastActivated = performance.now()),
         this.m_onActivateCallbacks.Dispatch(this, _),
-        this.m_onActiveFocusStateChangedCallbacks.Dispatch(!0, this);
+        this.m_onActiveFocusStateChangedCallbacks.Dispatch(!0, this));
       for (let _ = this.m_lastFocusNode; _; _ = _.Parent) _.SetFocusWithin(!0);
     }
     OnDeactivate(_) {
-      this.m_onDeactivateCallbacks.Dispatch(this, _),
+      (this.m_onDeactivateCallbacks.Dispatch(this, _),
         this.m_onActiveFocusStateChangedCallbacks.Dispatch(!1, this),
-        (this.m_bWasActiveForLastFocusChange = !1);
+        (this.m_bWasActiveForLastFocusChange = !1));
       for (let _ = this.m_lastFocusNode; _; _ = _.Parent) _.SetFocusWithin(!1);
     }
     OnContextActiveStateChanged(_) {
@@ -243,11 +243,11 @@ var _ = new _(`FocusNavigation`).Debug,
     }
     TakeFocus(_, _ = !1) {
       let _ = !1;
-      _
+      (_
         ? (_ = this.Root.BVisibleChildTakeFocus(_))
         : this.m_lastFocusNode && (_ = this.m_lastFocusNode.BTakeFocus(_)),
         (_ ||= this.Root.BTakeFocus(_)),
-        _ || this.TransferFocus(_, this.Root);
+        _ || this.TransferFocus(_, this.Root));
     }
     Activate(_ = !1) {
       this.m_Controller.OnGamepadNavigationTreeActivated(
@@ -300,7 +300,8 @@ var _ = new _(`FocusNavigation`).Debug,
     MountNavTree(_) {
       this.m_window = _;
       let _ = this.m_Root.Element;
-      (_.__nav_tree = this), _.__nav_wrapper && _.__nav_wrapper.BindTree(this);
+      ((_.__nav_tree = this),
+        _.__nav_wrapper && _.__nav_wrapper.BindTree(this));
       let _ = new _();
       return (
         this.m_valueIsMounted.Set(!0),
@@ -349,8 +350,8 @@ var _ = new _(`FocusNavigation`).Debug,
         this.m_rgGlobalButtonHandlers.push(_),
         this.UpdateRootActionDescriptionMap(),
         () => {
-          _(this.m_rgGlobalButtonHandlers, _),
-            this.UpdateRootActionDescriptionMap();
+          (_(this.m_rgGlobalButtonHandlers, _),
+            this.UpdateRootActionDescriptionMap());
         }
       );
     }
@@ -401,17 +402,17 @@ var _ = new _(`FocusNavigation`).Debug,
         this.m_rgChildNavTrees.push(_),
         this.OnChildTreesChangedCallbacks.Dispatch(`add`, _),
         () => {
-          _(this.m_rgChildNavTrees, _),
-            this.OnChildTreesChangedCallbacks.Dispatch(`remove`, _);
+          (_(this.m_rgChildNavTrees, _),
+            this.OnChildTreesChangedCallbacks.Dispatch(`remove`, _));
         }
       );
     }
     TransferFocus(_, _, _, _) {
-      (_ ??= _.INVALID),
+      ((_ ??= _.INVALID),
         (_ ??= !1),
         this.m_Controller.BatchedUpdate(() =>
           this.TransferFocusInternal(_, _, _, _),
-        );
+        ));
     }
     TransferFocusInternal(_, _, _, _) {
       let _ = _(_),
@@ -438,7 +439,7 @@ var _ = new _(`FocusNavigation`).Debug,
         for (let _ = _; _ && _ != _; _ = _.Parent) _.SetFocusWithin(!0);
       }
       let _ = this.m_context.OnFocusChangeStart(_, this, _, _);
-      _ && _.SetDOMFocusAndScroll(_, _, _, _),
+      (_ && _.SetDOMFocusAndScroll(_, _, _, _),
         _ &&
           (_(_.Element, `vgp_onblur`, _),
           _.m_FocusRing &&
@@ -458,24 +459,24 @@ var _ = new _(`FocusNavigation`).Debug,
             ? this.m_lastFocusNodeYMovement.SetNode(_?.Element)
             : (this.m_lastFocusNodeXMovement.Reset(),
               this.m_lastFocusNodeYMovement.Reset()),
-        this.m_context.OnFocusChangeComplete(_);
+        this.m_context.OnFocusChangeComplete(_));
     }
   };
 function _(_, _) {
   if (!_ || !_) return null;
   let _ = _,
     _ = _;
-  for (; _.GetDepth() > _.GetDepth() && _.Parent; ) _ = _.Parent;
-  for (; _.GetDepth() > _.GetDepth() && _.Parent; ) _ = _.Parent;
-  for (; _ != _ && _ && _; ) (_ = _.Parent), (_ = _.Parent);
+  for (; _.GetDepth() > _.GetDepth() && _.Parent;) _ = _.Parent;
+  for (; _.GetDepth() > _.GetDepth() && _.Parent;) _ = _.Parent;
+  for (; _ != _ && _ && _;) ((_ = _.Parent), (_ = _.Parent));
   return _;
 }
 var _ = class {
     m_element;
     m_rect;
     SetNode(_) {
-      (this.m_element = _),
-        (this.m_rect = _ ? _.getBoundingClientRect() : void 0);
+      ((this.m_element = _),
+        (this.m_rect = _ ? _.getBoundingClientRect() : void 0));
     }
     Reset() {
       this.SetNode(void 0);
@@ -504,7 +505,7 @@ var _ = class {
           !this.m_interval &&
             !this.m_bSuppressed &&
             this.m_schExecuteQueuedFocus.Schedule(1, () => {
-              (this.m_interval = void 0), this.ExecuteQueuedFocus();
+              ((this.m_interval = void 0), this.ExecuteQueuedFocus());
             }))
         : (this.m_target = void 0);
     }
@@ -515,10 +516,12 @@ var _ = class {
       return this.m_target && this.m_target.node == _;
     }
     SuppressFocus() {
-      (this.m_bSuppressed = !0), this.ClearInterval();
+      ((this.m_bSuppressed = !0), this.ClearInterval());
     }
     Reset() {
-      (this.m_bSuppressed = !1), (this.m_target = void 0), this.ClearInterval();
+      ((this.m_bSuppressed = !1),
+        (this.m_target = void 0),
+        this.ClearInterval());
     }
     ClearInterval() {
       this.m_schExecuteQueuedFocus.Cancel();
@@ -526,14 +529,14 @@ var _ = class {
     ExecuteQueuedFocus() {
       if (((this.m_bSuppressed = !1), this.m_target)) {
         let { node: _, bFocusDescendant: _ } = this.m_target;
-        (this.m_target = void 0),
+        ((this.m_target = void 0),
           _(
             `DeferredFocus in ${this.m_tree._} - focusing ${_ ? `descendant of` : `node`} ${_.NavKey}`,
           ),
           _
             ? _.BChildTakeFocus(_.AUTOFOCUS) ||
               this.m_tree.TransferFocus(_.AUTOFOCUS, _)
-            : _.BTakeFocus(_.AUTOFOCUS) || this.m_tree.TakeFocus(_.AUTOFOCUS);
+            : _.BTakeFocus(_.AUTOFOCUS) || this.m_tree.TakeFocus(_.AUTOFOCUS));
       }
     }
   },
@@ -556,11 +559,11 @@ var _ = class {
     m_bVR = !1;
     m_fnGetNavTreeToActivateOverride;
     constructor(_, _, _, _) {
-      (this.m_controller = _),
+      ((this.m_controller = _),
         (this.m_rootWindow = _),
         (this.m_activeWindow = _),
         (this.m_bIsGamepadInputSuppressed = _),
-        (this.m_bVR = _);
+        (this.m_bVR = _));
     }
     get RootWindow() {
       return this.m_rootWindow;
@@ -601,14 +604,14 @@ var _ = class {
           return;
         }
         let _ = this.m_valueIsActive.Value != _;
-        _
+        (_
           ? ((this.m_activeWindow = _),
             (this.m_activeBrowserView = _),
             this.m_controller.OnContextActivated(this))
           : ((this.m_activeBrowserView = void 0),
             this.m_controller.OnContextDeactivated(this, !1)),
           this.m_valueIsActive.Set(_),
-          _ && this.m_LastActiveFocusNavTree?.OnContextActiveStateChanged(_);
+          _ && this.m_LastActiveFocusNavTree?.OnContextActiveStateChanged(_));
         let _ = this.m_LastActiveFocusNavTree;
         if (_ && _ === void 0 && _?.Window == (_ ?? this.m_rootWindow)) {
           let _ = _?.GetLastFocusedNode()?.Element,
@@ -653,8 +656,8 @@ var _ = class {
           );
     }
     OnDeactivateBrowserView(_, _) {
-      _(`${this.LogName(_)} Browser View "${_}" deactivated in context`),
-        this.m_activeBrowserView == _ && this.SetActive(!1, _, _);
+      (_(`${this.LogName(_)} Browser View "${_}" deactivated in context`),
+        this.m_activeBrowserView == _ && this.SetActive(!1, _, _));
     }
     SetGamepadInputSuppressed(_) {
       this.m_bIsGamepadInputSuppressed = _;
@@ -702,19 +705,19 @@ var _ = class {
         return;
       }
       let _ = this.m_LastActiveNavTree;
-      _ && _(this.m_rgGamepadNavigationTrees, _),
-        (_ ||= this.FindNavTreeToActivate());
+      (_ && _(this.m_rgGamepadNavigationTrees, _),
+        (_ ||= this.FindNavTreeToActivate()));
       let _ = this.m_LastActiveFocusNavTree == _;
-      _ && _(this.m_rgGamepadNavigationTrees, _),
+      (_ && _(this.m_rgGamepadNavigationTrees, _),
         (this.m_LastActiveNavTree = _),
-        (_ && _.BUseVirtualFocus()) || (this.m_LastActiveFocusNavTree = _);
+        (_ && _.BUseVirtualFocus()) || (this.m_LastActiveFocusNavTree = _));
       let _ = [],
         _ = _?.TopWindow;
       if (_ && _) {
         let _ = this.m_mapLastActiveNavTreesByWindow.get(_);
         _ || ((_ = {}), this.m_mapLastActiveNavTreesByWindow.set(_, _));
         let _ = [_.tree, _.treeFocus];
-        (_.tree = _), _.BUseVirtualFocus() || (_.treeFocus = _);
+        ((_.tree = _), _.BUseVirtualFocus() || (_.treeFocus = _));
         for (let _ of _)
           _ &&
             _ != _ &&
@@ -724,7 +727,7 @@ var _ = class {
             !_.includes(_) &&
             _.push(_);
       }
-      _(
+      (_(
         `${this.LogName(_?.Window)} Move from nav tree ${_?._} to nav tree ${_?._} ${_ ? `taking focus` : `no focus`}`,
       ),
         _ && this.m_rgGamepadNavigationTrees.push(_),
@@ -736,7 +739,7 @@ var _ = class {
             _.DeferredFocus.RequestFocus(_.Root),
           this.m_NavTreeActivatedOrReactivatedCallbacks.Dispatch(_)),
         _ && _ != this.m_LastActiveFocusNavTree && _.OnDeactivate(_),
-        _ && !_ && _.OnActivate(_);
+        _ && !_ && _.OnActivate(_));
       for (let _ of _) _.OnActiveWithinWindowChanged();
     }
     BIsLastActiveNavTreeInWindow(_) {
@@ -745,26 +748,26 @@ var _ = class {
       return !!_ && (_.tree == _ || _.treeFocus == _);
     }
     BlurNavTree(_) {
-      this.m_LastActiveNavTree == _ && this.SetActiveNavTree(void 0, !0),
+      (this.m_LastActiveNavTree == _ && this.SetActiveNavTree(void 0, !0),
         _(this.m_rgGamepadNavigationTrees, _),
-        this.m_rgGamepadNavigationTrees.unshift(_);
+        this.m_rgGamepadNavigationTrees.unshift(_));
     }
     async UnregisterGamepadNavigationTree(_) {
-      _(this.m_rgGamepadNavigationTrees, _),
+      (_(this.m_rgGamepadNavigationTrees, _),
         _(
           `(${this.m_rootWindow.name}) Unregister tree ${_?._} ${this.m_LastActiveFocusNavTree == _ ? `(was active)` : `(inactive)`}`,
         ),
-        _.SetIsEnabled(!1);
+        _.SetIsEnabled(!1));
       let _ = _.TopWindow,
         _ = _ && this.m_mapLastActiveNavTreesByWindow.get(_);
-      _?.tree == _ && (_.tree = void 0),
+      (_?.tree == _ && (_.tree = void 0),
         _?.treeFocus == _ && (_.treeFocus = void 0),
         this.m_LastActiveNavTree == _ &&
           this.m_bMounted &&
           (await this.m_schDeferredActivate.AsyncSchedule(1, () => {
             (this.m_LastActiveNavTree && this.m_LastActiveNavTree != _) ||
               this.SetActiveNavTree(void 0, !0);
-          }));
+          })));
     }
     get FocusChangedCallbacks() {
       return this.m_FocusChangedCallbacks;
@@ -864,7 +867,7 @@ var _ = class {
     );
   }
   DestroyContext(_) {
-    _(this.m_rgAllContexts, _), this.m_ContextSetChangedCallbacks.Dispatch();
+    (_(this.m_rgAllContexts, _), this.m_ContextSetChangedCallbacks.Dispatch());
   }
   GetDefaultContext() {
     return (
@@ -892,11 +895,11 @@ var _ = class {
       for (let _ of this.m_rgAllContexts) {
         let _ = _.FindNavTreeInFocusedWindow();
         if (_ && this.BCanActivateContext(_)) {
-          _(
+          (_(
             `${_.LogName(_.Window)} Found a focused window; setting this context as active.`,
           ),
             (this.m_ActiveContext = _),
-            this.m_ActiveContext.OnActivate(_.Window);
+            this.m_ActiveContext.OnActivate(_.Window));
           break;
         }
       }
@@ -916,7 +919,7 @@ var _ = class {
     );
   }
   SetShowDebugFocusRing(_) {
-    this.m_bShowDebugFocusRing.Set(_), _(_);
+    (this.m_bShowDebugFocusRing.Set(_), _(_));
   }
   GetShowDebugFocusRing() {
     return this.m_bShowDebugFocusRing;
@@ -969,8 +972,8 @@ var _ = class {
         _.Root.Element &&
         ((_ = _.Root.Element), (_ = _));
     }
-    this.OnButtonDown(_, _ ?? _.GAMEPAD, -1, void 0, void 0, void 0, _, _, !0),
-      this.OnButtonUp(_, _ ?? _.GAMEPAD, -1, void 0, void 0, void 0, _, _, !0);
+    (this.OnButtonDown(_, _ ?? _.GAMEPAD, -1, void 0, void 0, void 0, _, _, !0),
+      this.OnButtonUp(_, _ ?? _.GAMEPAD, -1, void 0, void 0, void 0, _, _, !0));
   }
   DispatchVirtualGamepad(_, _) {
     switch (_) {
@@ -1061,7 +1064,7 @@ var _ = class {
     );
     let _ = _,
       _ = _;
-    (_ == null || _ == null) && ([_, _] = this.GetEventTarget(_, _, _)),
+    ((_ == null || _ == null) && ([_, _] = this.GetEventTarget(_, _, _)),
       _?.BIsGamepadInputSuppressed() && !_
         ? _(
             `Suppressing ${_[_]} input on element ${_?.className} because tree ${_?.m_LastActiveNavTree?._} has it disabled`,
@@ -1074,7 +1077,7 @@ var _ = class {
               source: _,
               is_repeat: _,
             }),
-          ));
+          )));
   }
   OnButtonDown(_, _, _, _, _, _, _, _, _) {
     this.OnButtonActionInternal(!0, _, _, _, _, _, _, _, _, _);
@@ -1121,7 +1124,7 @@ var _ = class {
   }
   OnGamepadNavigationTreeFocused(_, _, _ = !1) {
     let _ = _.WindowContext;
-    _ != this.m_ActiveContext &&
+    (_ != this.m_ActiveContext &&
       _(`(${_.LogName(_.Window)}) Focus event in inactive window`),
       _ != _.m_LastActiveFocusNavTree &&
         _ != _.m_LastActiveNavTree &&
@@ -1137,7 +1140,7 @@ var _ = class {
               _.Activate())
           : _(
               `There was a focus event in ${_._}, but the active nav tree is ${_.m_LastActiveFocusNavTree?._} so it is being ignored.  Source: ${_ && _[_]}.`,
-            ));
+            )));
   }
   BlurNavTree(_) {
     _.WindowContext.BlurNavTree(_);
@@ -1191,13 +1194,13 @@ var _ = class {
     _ && _.TakeFocus(_.APPLICATION);
   }
   OnContextActivated(_) {
-    (this.m_ActiveContext = _), (this.m_LastActiveContext = _);
+    ((this.m_ActiveContext = _), (this.m_LastActiveContext = _));
   }
   OnContextDeactivated(_, _) {
-    _ &&
+    (_ &&
       (this.m_LastActiveContext == _ && (this.m_LastActiveContext = void 0),
       this.DestroyContext(_)),
-      this.m_ActiveContext == _ && (this.m_ActiveContext = void 0);
+      this.m_ActiveContext == _ && (this.m_ActiveContext = void 0));
   }
   BIsRestoringHistory() {
     return this.m_bRestoringHistory;
@@ -1211,9 +1214,9 @@ var _ = class {
     }
   }
 };
-_([_], _.prototype, `OnButtonDown`, null),
+(_([_], _.prototype, `OnButtonDown`, null),
   _([_], _.prototype, `OnButtonUp`, null),
-  _([_], _.prototype, `OnNavigationTypeChange`, null);
+  _([_], _.prototype, `OnNavigationTypeChange`, null));
 function _(_) {
   if (!_(_)) return !1;
   let _ = _.tagName,
@@ -1278,7 +1281,8 @@ var _ = class {
   m_postWindow;
   m_fnCallback = void 0;
   constructor(_) {
-    (this.m_postWindow = _), window.addEventListener(`message`, this.OnMessage);
+    ((this.m_postWindow = _),
+      window.addEventListener(`message`, this.OnMessage));
   }
   RegisterForMessage(_) {
     this.m_fnCallback = _;
@@ -1308,9 +1312,9 @@ var _ = class {
   m_bIsGamepadInputExternallyControlled = !1;
   constructor(_) {
     if (((this.m_NavigationController = _), _()))
-      (this.m_bIsGamepadInputExternallyControlled = !0),
+      ((this.m_bIsGamepadInputExternallyControlled = !0),
         (this.m_postMessage = new _()),
-        this.m_NavigationController.UpdateSourceToGamepad();
+        this.m_NavigationController.UpdateSourceToGamepad());
     else {
       let _ = window.top;
       _ && _ != window.self
@@ -1319,13 +1323,13 @@ var _ = class {
         : ((this.m_bIsGamepadInputExternallyControlled = !1),
           (this.m_postMessage = new _()));
     }
-    this.m_postMessage.RegisterForMessage(this.OnMessage),
+    (this.m_postMessage.RegisterForMessage(this.OnMessage),
       window.addEventListener(`unload`, this.PostPageUnloading),
       this.m_NavigationController.RegisterForUnhandledButtonDownEvents((_) =>
         this.PostButtonPressToSteam(_.detail.button),
       ),
       this.UpdateActionDescriptions({}),
-      this.SendGameInputState(`CGamepadWebBridgeClient constructor`);
+      this.SendGameInputState(`CGamepadWebBridgeClient constructor`));
   }
   RegisterForFocusChanged(_) {
     return _.FocusChangedCallbacks.Register(this.OnFocusChanged).Unregister;
@@ -1335,7 +1339,7 @@ var _ = class {
   }
   BFromActiveNavTree(_, _) {
     let _ = _?.Tree;
-    return (_ ||= _?.Tree), _ && _.Controller.IsActiveFocusNavTree(_);
+    return ((_ ||= _?.Tree), _ && _.Controller.IsActiveFocusNavTree(_));
   }
   OnFocusChanged(_, _, _) {
     this.BFromActiveNavTree(_, _) && this.OnActionDescriptionTargetChanged(_);
@@ -1378,14 +1382,14 @@ var _ = class {
   }
   SendGameInputState(_) {
     let _ = _.Basic;
-    window.bSupportsGamepadUI && (_ = _.Full),
+    (window.bSupportsGamepadUI && (_ = _.Full),
       this.m_postMessage.PostMessage({
         type: `GameInputState`,
         data: {
           source: _,
           support: _,
         },
-      });
+      }));
   }
   PostButtonPressToSteam(_) {
     this.m_postMessage.PostMessage({
@@ -1404,9 +1408,9 @@ var _ = class {
     });
   }
 };
-_([_], _.prototype, `OnFocusChanged`, null),
+(_([_], _.prototype, `OnFocusChanged`, null),
   _([_], _.prototype, `OnMessage`, null),
-  _([_], _.prototype, `PostPageUnloading`, null);
+  _([_], _.prototype, `PostPageUnloading`, null));
 function _() {
   return (
     _(`BrowserView.RegisterForMessageFromParent`) &&
@@ -1508,12 +1512,12 @@ var _ = [
   _ = class extends _ {
     m_rgGamepadStatus = [];
     constructor() {
-      super(),
+      (super(),
         this.SetSourceType(_.GAMEPAD),
         window.addEventListener(`gamepadconnected`, (_) => {
           this.m_bGamepadDetected ||
             (this.OnGamepadDetected(), this.PollGamepads());
-        });
+        }));
     }
     PollGamepads() {
       let _ = navigator.getGamepads();
@@ -1686,7 +1690,7 @@ var _ = class extends _ {
   m_strLastKeyDown;
   m_targetWindow;
   constructor(_) {
-    super(),
+    (super(),
       (this.m_targetWindow = _),
       this.SetSourceType(_.KEYBOARD_SIMULATOR),
       _.addEventListener(`keydown`, this.OnKeyDown, {
@@ -1695,7 +1699,7 @@ var _ = class extends _ {
       _.addEventListener(`keyup`, this.OnKeyUp, {
         capture: !0,
       }),
-      _.addEventListener(`blur`, this.Reset);
+      _.addEventListener(`blur`, this.Reset));
   }
   OnKeyDown(_) {
     if (_(this.m_targetWindow)) return;
@@ -1798,9 +1802,9 @@ var _ = class extends _ {
         )?.button ?? _.INVALID);
   }
 };
-_([_], _.prototype, `OnKeyDown`, null),
+(_([_], _.prototype, `OnKeyDown`, null),
   _([_], _.prototype, `OnKeyUp`, null),
-  _([_], _.prototype, `Reset`, null);
+  _([_], _.prototype, `Reset`, null));
 var _ = class extends _ {
   m_nAccumulatedMouseMovement = 0;
   m_bFirstMouseUpdate = !0;
@@ -1808,12 +1812,12 @@ var _ = class extends _ {
   m_nLastScreenY;
   m_lastButtonDown = _.INVALID;
   constructor(_) {
-    super(),
+    (super(),
       this.SetSourceType(_.MOUSE),
       _.addEventListener(`mousedown`, this.OnMouseDown),
       _.addEventListener(`mouseup`, this.OnMouseUp),
       _.addEventListener(`mousemove`, this.OnMouseMove),
-      _.addEventListener(`blur`, this.Reset);
+      _.addEventListener(`blur`, this.Reset));
   }
   TranslateKey(_) {
     switch (_.button) {
@@ -1852,24 +1856,24 @@ var _ = class extends _ {
             (this.Reset(), this.OnNavigationTypeChanged(_.MOUSE))));
   }
   Reset() {
-    (this.m_nAccumulatedMouseMovement = 0),
+    ((this.m_nAccumulatedMouseMovement = 0),
       (this.m_bFirstMouseUpdate = !0),
       this.m_lastButtonDown != _.INVALID &&
         (this.OnButtonUp(this.m_lastButtonDown),
-        (this.m_lastButtonDown = _.INVALID));
+        (this.m_lastButtonDown = _.INVALID)));
   }
 };
-_([_], _.prototype, `TranslateKey`, null),
+(_([_], _.prototype, `TranslateKey`, null),
   _([_], _.prototype, `OnMouseDown`, null),
   _([_], _.prototype, `OnMouseUp`, null),
   _([_], _.prototype, `OnMouseMove`, null),
-  _([_], _.prototype, `Reset`, null);
+  _([_], _.prototype, `Reset`, null));
 var _ = class extends _ {
   constructor(_) {
-    super(),
+    (super(),
       this.SetSourceType(_.TOUCH),
       _.addEventListener(`touchstart`, this.OnTouchStart),
-      _.addEventListener(`touchend`, this.OnTouchEnd);
+      _.addEventListener(`touchend`, this.OnTouchEnd));
   }
   OnTouchStart(_) {
     _.defaultPrevented || this.OnNavigationTypeChanged(_.TOUCH);
@@ -1878,8 +1882,8 @@ var _ = class extends _ {
     _.defaultPrevented || this.OnNavigationTypeChanged(_.TOUCH);
   }
 };
-_([_], _.prototype, `OnTouchStart`, null),
-  _([_], _.prototype, `OnTouchEnd`, null);
+(_([_], _.prototype, `OnTouchStart`, null),
+  _([_], _.prototype, `OnTouchEnd`, null));
 var _ = `VirtualKeyboardMessage`;
 function _(_) {
   return _ && _.type === _;
@@ -1892,8 +1896,8 @@ var _ = class {
       (this.m_ownerWindow = _),
       this.m_ownerWindow.addEventListener(`message`, this.OnMessage),
       () => {
-        this.m_ownerWindow.removeEventListener(`message`, this.OnMessage),
-          (this.m_ownerWindow = void 0);
+        (this.m_ownerWindow.removeEventListener(`message`, this.OnMessage),
+          (this.m_ownerWindow = void 0));
       }
     );
   }
@@ -1949,7 +1953,7 @@ var _ = class {
         this.m_ownerWindow.parent.postMessage(_, `*`));
   }
 };
-_([_], _.prototype, `ShowVirtualKeyboard`, null),
+(_([_], _.prototype, `ShowVirtualKeyboard`, null),
   _([_], _.prototype, `ShowModalKeyboard`, null),
   _([_], _.prototype, `HideVirtualKeyboard`, null),
   _([_], _.prototype, `OnBrowserViewMessage`, null),
@@ -1961,10 +1965,10 @@ _([_], _.prototype, `ShowVirtualKeyboard`, null),
       m_showModalKeyboard;
       m_hideKeyboard;
       constructor(_, _, _, _) {
-        (this.m_showKeyboard = _),
+        ((this.m_showKeyboard = _),
           (this.m_showModalKeyboard = _),
           (this.m_hideKeyboard = _),
-          _._(`message`, this.OnMessage);
+          _._(`message`, this.OnMessage));
       }
       OnMessage(_, _, _) {
         if (_ == _) {
@@ -1985,13 +1989,13 @@ _([_], _.prototype, `ShowVirtualKeyboard`, null),
     }.prototype,
     `OnMessage`,
     null,
-  );
+  ));
 var _ = _();
 function _(_) {
   let _ = _(),
     [_] = _.useState(() => {
       let _ = new _();
-      return _ && _.UpdateSourceToGamepad(), _;
+      return (_ && _.UpdateSourceToGamepad(), _);
     }),
     [_, _] = _.useState(),
     [_] = _.useState(() => new _()),
@@ -2000,7 +2004,7 @@ function _(_) {
     _.useEffect(() => {
       if (_ && !_) {
         let _ = new _(_);
-        _(_), _(_.BIsGamepadInputExternallyControlled());
+        (_(_), _(_.BIsGamepadInputExternallyControlled()));
       }
     }, [_, _, _]),
     _.useEffect(() => {
@@ -2041,16 +2045,15 @@ function _(_) {
 }
 function _() {
   let [_] = _.useState(() => new _());
-  return _(_), null;
+  return (_(_), null);
 }
 function _(_) {
   let [_, _] = _.useState(void 0);
-  _.useEffect(() => _(new _(window)), [_]), _(_);
+  (_.useEffect(() => _(new _(window)), [_]), _(_));
 }
 function _() {
-  return _(_), null;
+  return (_(_), null);
 }
 function _() {
-  return _(_), _(_), null;
+  return (_(_), _(_), null);
 }
-export { _ };

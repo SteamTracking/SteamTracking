@@ -18,11 +18,11 @@ var s = t((e, t, n) => {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
-          t &&
+          (t &&
             (r = r.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
         }
         return n;
       }
@@ -71,10 +71,10 @@ var s = t((e, t, n) => {
       function i(e, t) {
         for (var n = 0; n < t.length; n++) {
           var r = t[n];
-          (r.enumerable = r.enumerable || !1),
+          ((r.enumerable = r.enumerable || !1),
             (r.configurable = !0),
             `value` in r && (r.writable = !0),
-            Object.defineProperty(e, m(r.key), r);
+            Object.defineProperty(e, m(r.key), r));
         }
       }
       function a(e, t, n) {
@@ -319,7 +319,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       function K(e, t) {
         var n = e.style;
         U(t, function (e, t) {
-          Ie.test(t) && z(e) && (e = `${e}px`), (n[t] = e);
+          (Ie.test(t) && z(e) && (e = `${e}px`), (n[t] = e));
         });
       }
       function Le(e, t) {
@@ -404,14 +404,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               n = function () {},
               r = Object.defineProperty({}, "once", {
                 get: function () {
-                  return (e = !0), t;
+                  return ((e = !0), t);
                 },
                 set: function (e) {
                   t = e;
                 },
               });
-            g.addEventListener(`test`, n, r),
-              g.removeEventListener(`test`, n, r);
+            (g.addEventListener(`test`, n, r),
+              g.removeEventListener(`test`, n, r));
           }
           return e;
         })();
@@ -445,15 +445,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             if (r.once && !We) {
               var a = e.listeners,
                 o = a === void 0 ? {} : a;
-              (i = function () {
-                delete o[t][n], e.removeEventListener(t, i, r);
+              ((i = function () {
+                (delete o[t][n], e.removeEventListener(t, i, r));
                 var a = [...arguments];
                 n.apply(e, a);
               }),
                 o[t] || (o[t] = {}),
                 o[t][n] && e.removeEventListener(t, o[t][n], r),
                 (o[t][n] = i),
-                (e.listeners = o);
+                (e.listeners = o));
             }
             e.addEventListener(t, i, r);
           });
@@ -501,11 +501,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           i = e.translateX,
           a = e.translateY,
           o = [];
-        z(i) && i !== 0 && o.push(`translateX(${i}px)`),
+        (z(i) && i !== 0 && o.push(`translateX(${i}px)`),
           z(a) && a !== 0 && o.push(`translateY(${a}px)`),
           z(t) && t !== 0 && o.push(`rotate(${t}deg)`),
           z(n) && n !== 1 && o.push(`scaleX(${n})`),
-          z(r) && r !== 1 && o.push(`scaleY(${r})`);
+          z(r) && r !== 1 && o.push(`scaleY(${r})`));
         var s = o.length ? o.join(` `) : `none`;
         return { WebkitTransform: s, msTransform: s, transform: s };
       }
@@ -514,7 +514,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           r = 0;
         return (
           U(e, function (e, t) {
-            delete n[t],
+            (delete n[t],
               U(n, function (t) {
                 var n = Math.abs(e.startX - t.startX),
                   i = Math.abs(e.startY - t.startY),
@@ -523,7 +523,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   s = Math.sqrt(n * n + i * i),
                   c = (Math.sqrt(a * a + o * o) - s) / s;
                 Math.abs(c) > Math.abs(r) && (r = c);
-              });
+              }));
           }),
           r
         );
@@ -542,7 +542,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           U(e, function (e) {
             var i = e.startX,
               a = e.startY;
-            (t += i), (n += a), (r += 1);
+            ((t += i), (n += a), (r += 1));
           }),
           (t /= r),
           (n /= r),
@@ -663,8 +663,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         );
       }
       function ot(e, t) {
-        for (var n = [], r = 8192, i = new Uint8Array(e); i.length > 0; )
-          n.push(nt.apply(null, Pe(i.subarray(0, r)))), (i = i.subarray(r));
+        for (var n = [], r = 8192, i = new Uint8Array(e); i.length > 0;)
+          (n.push(nt.apply(null, Pe(i.subarray(0, r)))), (i = i.subarray(r)));
         return `data:${t};base64,${btoa(n.join(``))}`;
       }
       function st(e) {
@@ -673,7 +673,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         try {
           var r, i, a;
           if (t.getUint8(0) === 255 && t.getUint8(1) === 216)
-            for (var o = t.byteLength, s = 2; s + 1 < o; ) {
+            for (var o = t.byteLength, s = 2; s + 1 < o;) {
               if (t.getUint8(s) === 255 && t.getUint8(s + 1) === 225) {
                 i = s;
                 break;
@@ -697,7 +697,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           if (a) {
             for (var f = t.getUint16(a, r), p, m = 0; m < f; m += 1)
               if (((p = a + m * 12 + 2), t.getUint16(p, r) === 274)) {
-                (p += 8), (n = t.getUint16(p, r)), t.setUint16(p, 1, r);
+                ((p += 8), (n = t.getUint16(p, r)), t.setUint16(p, 1, r));
                 break;
               }
           }
@@ -721,13 +721,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             r = -1;
             break;
           case 5:
-            (t = 90), (r = -1);
+            ((t = 90), (r = -1));
             break;
           case 6:
             t = 90;
             break;
           case 7:
-            (t = 90), (n = -1);
+            ((t = 90), (n = -1));
             break;
           case 8:
             t = -90;
@@ -736,11 +736,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       }
       var lt = {
           render: function () {
-            this.initContainer(),
+            (this.initContainer(),
               this.initCanvas(),
               this.initCropBox(),
               this.renderCanvas(),
-              this.cropped && this.renderCropBox();
+              this.cropped && this.renderCropBox());
           },
           initContainer: function () {
             var e = this.element,
@@ -749,15 +749,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               r = this.cropper,
               i = Number(t.minContainerWidth),
               a = Number(t.minContainerHeight);
-            q(r, P), J(e, P);
+            (q(r, P), J(e, P));
             var o = {
               width: Math.max(n.offsetWidth, i >= 0 ? i : Te),
               height: Math.max(n.offsetHeight, a >= 0 ? a : Ee),
             };
-            (this.containerData = o),
+            ((this.containerData = o),
               K(r, { width: o.width, height: o.height }),
               q(e, P),
-              J(r, P);
+              J(r, P));
           },
           initCanvas: function () {
             var e = this.containerData,
@@ -783,7 +783,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               width: s,
               height: c,
             };
-            (this.canvasData = l),
+            ((this.canvasData = l),
               (this.limited = n === 1 || n === 2),
               this.limitCanvas(!0, !0),
               (l.width = Math.min(Math.max(l.width, l.minWidth), l.maxWidth)),
@@ -795,7 +795,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               (l.top = (e.height - l.height) / 2),
               (l.oldLeft = l.left),
               (l.oldTop = l.top),
-              (this.initialCanvasData = W({}, l));
+              (this.initialCanvasData = W({}, l)));
           },
           limitCanvas: function (e, t) {
             var n = this.options,
@@ -822,18 +822,18 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         (u = a.height),
                         u * s > l ? (l = u * s) : (u = l / s)));
               var d = $({ aspectRatio: s, width: l, height: u });
-              (l = d.width),
+              ((l = d.width),
                 (u = d.height),
                 (i.minWidth = l),
                 (i.minHeight = u),
                 (i.maxWidth = 1 / 0),
-                (i.maxHeight = 1 / 0);
+                (i.maxHeight = 1 / 0));
             }
             if (t) {
               if (o > +!c) {
                 var f = r.width - i.width,
                   p = r.height - i.height;
-                (i.minLeft = Math.min(0, f)),
+                ((i.minLeft = Math.min(0, f)),
                   (i.minTop = Math.min(0, p)),
                   (i.maxLeft = Math.max(0, f)),
                   (i.maxTop = Math.max(0, p)),
@@ -852,12 +852,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         (i.maxLeft = Math.max(0, f))),
                       i.height >= r.height &&
                         ((i.minTop = Math.min(0, p)),
-                        (i.maxTop = Math.max(0, p)))));
+                        (i.maxTop = Math.max(0, p))))));
               } else
-                (i.minLeft = -i.width),
+                ((i.minLeft = -i.width),
                   (i.minTop = -i.height),
                   (i.maxLeft = r.width),
-                  (i.maxTop = r.height);
+                  (i.maxTop = r.height));
             }
           },
           renderCanvas: function (e, t) {
@@ -873,16 +873,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 o = i.height,
                 s = n.width * (a / n.naturalWidth),
                 c = n.height * (o / n.naturalHeight);
-              (n.left -= (s - n.width) / 2),
+              ((n.left -= (s - n.width) / 2),
                 (n.top -= (c - n.height) / 2),
                 (n.width = s),
                 (n.height = c),
                 (n.aspectRatio = a / o),
                 (n.naturalWidth = a),
                 (n.naturalHeight = o),
-                this.limitCanvas(!0, !1);
+                this.limitCanvas(!0, !1));
             }
-            (n.width > n.maxWidth || n.width < n.minWidth) &&
+            ((n.width > n.maxWidth || n.width < n.minWidth) &&
               (n.left = n.oldLeft),
               (n.height > n.maxHeight || n.height < n.minHeight) &&
                 (n.top = n.oldTop),
@@ -904,14 +904,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 ),
               ),
               this.renderImage(e),
-              this.cropped && this.limited && this.limitCropBox(!0, !0);
+              this.cropped && this.limited && this.limitCropBox(!0, !0));
           },
           renderImage: function (e) {
             var t = this.canvasData,
               n = this.imageData,
               r = n.naturalWidth * (t.width / t.naturalWidth),
               i = n.naturalHeight * (t.height / t.naturalHeight);
-            W(n, {
+            (W(n, {
               width: r,
               height: i,
               left: (t.width - r) / 2,
@@ -924,7 +924,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   Xe(W({ translateX: n.left, translateY: n.top }, n)),
                 ),
               ),
-              e && this.output();
+              e && this.output());
           },
           initCropBox: function () {
             var e = this.options,
@@ -932,7 +932,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               n = e.aspectRatio || e.initialAspectRatio,
               r = Number(e.autoCropArea) || 0.8,
               i = { width: t.width, height: t.height };
-            n &&
+            (n &&
               (t.height * n > t.width
                 ? (i.height = i.width / n)
                 : (i.width = i.height * n)),
@@ -949,7 +949,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               (i.top = t.top + (t.height - i.height) / 2),
               (i.oldLeft = i.left),
               (i.oldTop = i.top),
-              (this.initialCropBoxData = W({}, i));
+              (this.initialCropBoxData = W({}, i)));
           },
           limitCropBox: function (e, t) {
             var n = this.options,
@@ -977,7 +977,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       r.height - i.top,
                     )
                   : r.height;
-              (c = Math.min(c, r.width)),
+              ((c = Math.min(c, r.width)),
                 (l = Math.min(l, r.height)),
                 s &&
                   (c && l
@@ -991,7 +991,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 (a.minWidth = Math.min(c, u)),
                 (a.minHeight = Math.min(l, d)),
                 (a.maxWidth = u),
-                (a.maxHeight = d);
+                (a.maxHeight = d));
             }
             t &&
               (o
@@ -1008,7 +1008,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             var e = this.options,
               t = this.containerData,
               n = this.cropBoxData;
-            (n.width > n.maxWidth || n.width < n.minWidth) &&
+            ((n.width > n.maxWidth || n.width < n.minWidth) &&
               (n.left = n.oldLeft),
               (n.height > n.maxHeight || n.height < n.minHeight) &&
                 (n.top = n.oldTop),
@@ -1037,10 +1037,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 ),
               ),
               this.cropped && this.limited && this.limitCanvas(!0, !0),
-              this.disabled || this.output();
+              this.disabled || this.output());
           },
           output: function () {
-            this.preview(), Q(this.element, ae, this.getData());
+            (this.preview(), Q(this.element, ae, this.getData()));
           },
         },
         ut = {
@@ -1060,13 +1060,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               n)
             ) {
               var o = n;
-              typeof n == `string`
+              (typeof n == `string`
                 ? (o = e.ownerDocument.querySelectorAll(n))
                 : n.querySelector && (o = [n]),
                 (this.previews = o),
                 U(o, function (e) {
                   var n = document.createElement(`img`);
-                  Ve(e, R, {
+                  (Ve(e, R, {
                     width: e.offsetWidth,
                     height: e.offsetHeight,
                     html: e.innerHTML,
@@ -1076,16 +1076,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     (n.alt = i),
                     (n.style.cssText = `display:block;width:100%;height:auto;min-width:0!important;min-height:0!important;max-width:none!important;max-height:none!important;image-orientation:0deg!important;"`),
                     (e.innerHTML = ``),
-                    e.appendChild(n);
-                });
+                    e.appendChild(n));
+                }));
             }
           },
           resetPreview: function () {
             U(this.previews, function (e) {
               var t = Be(e, R);
-              K(e, { width: t.width, height: t.height }),
+              (K(e, { width: t.width, height: t.height }),
                 (e.innerHTML = t.html),
-                He(e, R);
+                He(e, R));
             });
           },
           preview: function () {
@@ -1114,7 +1114,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   d = l,
                   f = u,
                   p = 1;
-                r && ((p = l / r), (f = i * p)),
+                (r && ((p = l / r), (f = i * p)),
                   i && f > u && ((p = u / i), (d = r * p), (f = u)),
                   K(t, { width: d, height: f }),
                   K(
@@ -1123,7 +1123,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       { width: a * p, height: o * p },
                       Xe(W({ translateX: -s * p, translateY: -c * p }, e)),
                     ),
-                  );
+                  ));
               }));
           },
         },
@@ -1132,7 +1132,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             var e = this.element,
               t = this.options,
               n = this.cropper;
-            H(t.cropstart) && Z(e, ce, t.cropstart),
+            (H(t.cropstart) && Z(e, ce, t.cropstart),
               H(t.cropmove) && Z(e, se, t.cropmove),
               H(t.cropend) && Z(e, oe, t.cropend),
               H(t.crop) && Z(e, ae, t.crop),
@@ -1157,13 +1157,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 (this.onCropEnd = this.cropEnd.bind(this)),
               ),
               t.responsive &&
-                Z(window, _e, (this.onResize = this.resize.bind(this)));
+                Z(window, _e, (this.onResize = this.resize.bind(this))));
           },
           unbind: function () {
             var e = this.element,
               t = this.options,
               n = this.cropper;
-            H(t.cropstart) && X(e, ce, t.cropstart),
+            (H(t.cropstart) && X(e, ce, t.cropstart),
               H(t.cropmove) && X(e, se, t.cropmove),
               H(t.cropend) && X(e, oe, t.cropend),
               H(t.crop) && X(e, ae, t.crop),
@@ -1175,7 +1175,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               t.toggleDragModeOnDblclick && X(n, le, this.onDblclick),
               X(e.ownerDocument, me, this.onCropMove),
               X(e.ownerDocument, he, this.onCropEnd),
-              t.responsive && X(window, _e, this.onResize);
+              t.responsive && X(window, _e, this.onResize));
           },
         },
         ft = {
@@ -1189,7 +1189,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a = Math.abs(r - 1) > Math.abs(i - 1) ? r : i;
               if (a !== 1) {
                 var o, s;
-                e.restore &&
+                (e.restore &&
                   ((o = this.getCanvasData()), (s = this.getCropBoxData())),
                   this.render(),
                   e.restore &&
@@ -1202,7 +1202,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       U(s, function (e, t) {
                         s[t] = e * a;
                       }),
-                    ));
+                    )));
               }
             }
           },
@@ -1243,7 +1243,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               var r = this.options,
                 i = this.pointers,
                 a;
-              e.changedTouches
+              (e.changedTouches
                 ? U(e.changedTouches, function (e) {
                     i[e.identifier] = Qe(e);
                   })
@@ -1257,28 +1257,28 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   (e.preventDefault(),
                   (this.action = a),
                   (this.cropping = !1),
-                  a === x && ((this.cropping = !0), q(this.dragBox, I)));
+                  a === x && ((this.cropping = !0), q(this.dragBox, I))));
             }
           },
           cropMove: function (e) {
             var t = this.action;
             if (!this.disabled && t) {
               var n = this.pointers;
-              e.preventDefault(),
+              (e.preventDefault(),
                 Q(this.element, se, { originalEvent: e, action: t }) !== !1 &&
                   (e.changedTouches
                     ? U(e.changedTouches, function (e) {
                         W(n[e.identifier] || {}, Qe(e, !0));
                       })
                     : W(n[e.pointerId || 0] || {}, Qe(e, !0)),
-                  this.change(e));
+                  this.change(e)));
             }
           },
           cropEnd: function (e) {
             if (!this.disabled) {
               var t = this.action,
                 n = this.pointers;
-              e.changedTouches
+              (e.changedTouches
                 ? U(e.changedTouches, function (e) {
                     delete n[e.identifier];
                   })
@@ -1289,7 +1289,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   this.cropping &&
                     ((this.cropping = !1),
                     Y(this.dragBox, I, this.cropped && this.options.modal)),
-                  Q(this.element, oe, { originalEvent: e, action: t }));
+                  Q(this.element, oe, { originalEvent: e, action: t })));
             }
           },
         },
@@ -1314,12 +1314,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               _ = r.height,
               v = !0,
               y;
-            !s && e.shiftKey && (s = u && d ? u / d : 1),
+            (!s && e.shiftKey && (s = u && d ? u / d : 1),
               this.limited &&
                 ((m = i.minLeft),
                 (h = i.minTop),
                 (g = m + Math.min(r.width, n.width, n.left + n.width)),
-                (_ = h + Math.min(r.height, n.height, n.top + n.height)));
+                (_ = h + Math.min(r.height, n.height, n.top + n.height))));
             var M = a[Object.keys(a)[0]],
               N = { x: M.endX - M.startX, y: M.endY - M.startY },
               F = function (e) {
@@ -1339,49 +1339,49 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               };
             switch (o) {
               case b:
-                (c += N.x), (l += N.y);
+                ((c += N.x), (l += N.y));
                 break;
               case w:
                 if (N.x >= 0 && (f >= g || (s && (l <= h || p >= _)))) {
                   v = !1;
                   break;
                 }
-                F(w),
+                (F(w),
                   (u += N.x),
                   u < 0 && ((o = T), (u = -u), (c -= u)),
-                  s && ((d = u / s), (l += (i.height - d) / 2));
+                  s && ((d = u / s), (l += (i.height - d) / 2)));
                 break;
               case D:
                 if (N.y <= 0 && (l <= h || (s && (c <= m || f >= g)))) {
                   v = !1;
                   break;
                 }
-                F(D),
+                (F(D),
                   (d -= N.y),
                   (l += N.y),
                   d < 0 && ((o = E), (d = -d), (l -= d)),
-                  s && ((u = d * s), (c += (i.width - u) / 2));
+                  s && ((u = d * s), (c += (i.width - u) / 2)));
                 break;
               case T:
                 if (N.x <= 0 && (c <= m || (s && (l <= h || p >= _)))) {
                   v = !1;
                   break;
                 }
-                F(T),
+                (F(T),
                   (u -= N.x),
                   (c += N.x),
                   u < 0 && ((o = w), (u = -u), (c -= u)),
-                  s && ((d = u / s), (l += (i.height - d) / 2));
+                  s && ((d = u / s), (l += (i.height - d) / 2)));
                 break;
               case E:
                 if (N.y >= 0 && (p >= _ || (s && (c <= m || f >= g)))) {
                   v = !1;
                   break;
                 }
-                F(E),
+                (F(E),
                   (d += N.y),
                   d < 0 && ((o = D), (d = -d), (l -= d)),
-                  s && ((u = d * s), (c += (i.width - u) / 2));
+                  s && ((u = d * s), (c += (i.width - u) / 2)));
                 break;
               case O:
                 if (s) {
@@ -1389,9 +1389,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     v = !1;
                     break;
                   }
-                  F(D), (d -= N.y), (l += N.y), (u = d * s);
+                  (F(D), (d -= N.y), (l += N.y), (u = d * s));
                 } else
-                  F(D),
+                  (F(D),
                     F(w),
                     N.x >= 0
                       ? f < g
@@ -1400,7 +1400,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       : (u += N.x),
                     N.y <= 0
                       ? l > h && ((d -= N.y), (l += N.y))
-                      : ((d -= N.y), (l += N.y));
+                      : ((d -= N.y), (l += N.y)));
                 u < 0 && d < 0
                   ? ((o = j), (d = -d), (u = -u), (l -= d), (c -= u))
                   : u < 0
@@ -1413,9 +1413,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     v = !1;
                     break;
                   }
-                  F(D), (d -= N.y), (l += N.y), (u = d * s), (c += i.width - u);
+                  (F(D),
+                    (d -= N.y),
+                    (l += N.y),
+                    (u = d * s),
+                    (c += i.width - u));
                 } else
-                  F(D),
+                  (F(D),
                     F(T),
                     N.x <= 0
                       ? c > m
@@ -1424,7 +1428,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       : ((u -= N.x), (c += N.x)),
                     N.y <= 0
                       ? l > h && ((d -= N.y), (l += N.y))
-                      : ((d -= N.y), (l += N.y));
+                      : ((d -= N.y), (l += N.y)));
                 u < 0 && d < 0
                   ? ((o = A), (d = -d), (u = -u), (l -= d), (c -= u))
                   : u < 0
@@ -1437,16 +1441,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     v = !1;
                     break;
                   }
-                  F(T), (u -= N.x), (c += N.x), (d = u / s);
+                  (F(T), (u -= N.x), (c += N.x), (d = u / s));
                 } else
-                  F(E),
+                  (F(E),
                     F(T),
                     N.x <= 0
                       ? c > m
                         ? ((u -= N.x), (c += N.x))
                         : N.y >= 0 && p >= _ && (v = !1)
                       : ((u -= N.x), (c += N.x)),
-                    N.y >= 0 ? p < _ && (d += N.y) : (d += N.y);
+                    N.y >= 0 ? p < _ && (d += N.y) : (d += N.y));
                 u < 0 && d < 0
                   ? ((o = O), (d = -d), (u = -u), (l -= d), (c -= u))
                   : u < 0
@@ -1459,16 +1463,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     v = !1;
                     break;
                   }
-                  F(w), (u += N.x), (d = u / s);
+                  (F(w), (u += N.x), (d = u / s));
                 } else
-                  F(E),
+                  (F(E),
                     F(w),
                     N.x >= 0
                       ? f < g
                         ? (u += N.x)
                         : N.y >= 0 && p >= _ && (v = !1)
                       : (u += N.x),
-                    N.y >= 0 ? p < _ && (d += N.y) : (d += N.y);
+                    N.y >= 0 ? p < _ && (d += N.y) : (d += N.y));
                 u < 0 && d < 0
                   ? ((o = k), (d = -d), (u = -u), (l -= d), (c -= u))
                   : u < 0
@@ -1476,17 +1480,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     : d < 0 && ((o = O), (d = -d), (l -= d));
                 break;
               case S:
-                this.move(N.x, N.y), (v = !1);
+                (this.move(N.x, N.y), (v = !1));
                 break;
               case C:
-                this.zoom(Ze(a), e), (v = !1);
+                (this.zoom(Ze(a), e), (v = !1));
                 break;
               case x:
                 if (!N.x || !N.y) {
                   v = !1;
                   break;
                 }
-                (y = Ge(this.cropper)),
+                ((y = Ge(this.cropper)),
                   (c = M.startX - y.left),
                   (l = M.startY - y.top),
                   (u = i.minWidth),
@@ -1498,9 +1502,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   this.cropped ||
                     (J(this.cropBox, P),
                     (this.cropped = !0),
-                    this.limited && this.limitCropBox(!0, !0));
+                    this.limited && this.limitCropBox(!0, !0)));
             }
-            v &&
+            (v &&
               ((i.width = u),
               (i.height = d),
               (i.left = c),
@@ -1508,8 +1512,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               (this.action = o),
               this.renderCropBox()),
               U(a, function (e) {
-                (e.startX = e.endX), (e.startY = e.endY);
-              });
+                ((e.startX = e.endX), (e.startY = e.endY));
+              }));
           },
         },
         mt = {
@@ -1668,14 +1672,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     d && Object.keys(d).length
                       ? $e(d)
                       : { pageX: n.pageX, pageY: n.pageY };
-                (i.left -= (l - a) * ((p.pageX - f.left - i.left) / a)),
-                  (i.top -= (u - o) * ((p.pageY - f.top - i.top) / o));
+                ((i.left -= (l - a) * ((p.pageX - f.left - i.left) / a)),
+                  (i.top -= (u - o) * ((p.pageY - f.top - i.top) / o)));
               } else
                 V(t) && z(t.x) && z(t.y)
                   ? ((i.left -= (l - a) * ((t.x - i.left) / a)),
                     (i.top -= (u - o) * ((t.y - i.top) / o)))
                   : ((i.left -= (l - a) / 2), (i.top -= (u - o) / 2));
-              (i.width = l), (i.height = u), this.renderCanvas(!0);
+              ((i.width = l), (i.height = u), this.renderCanvas(!0));
             }
             return this;
           },
@@ -1744,10 +1748,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               ) {
                 var s = Math.round(a.y + a.height),
                   c = Math.round(a.x + a.width);
-                (a.x = Math.round(a.x)),
+                ((a.x = Math.round(a.x)),
                   (a.y = Math.round(a.y)),
                   (a.width = c - a.x),
-                  (a.height = s - a.y);
+                  (a.height = s - a.y));
               }
             } else a = { x: 0, y: 0, width: 0, height: 0 };
             return (
@@ -1764,7 +1768,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               i = {};
             if (this.ready && !this.disabled && V(e)) {
               var a = !1;
-              t.rotatable &&
+              (t.rotatable &&
                 z(e.rotate) &&
                 e.rotate !== n.rotate &&
                 ((n.rotate = e.rotate), (a = !0)),
@@ -1775,13 +1779,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   z(e.scaleY) &&
                     e.scaleY !== n.scaleY &&
                     ((n.scaleY = e.scaleY), (a = !0))),
-                a && this.renderCanvas(!0, !0);
+                a && this.renderCanvas(!0, !0));
               var o = n.width / n.naturalWidth;
-              z(e.x) && (i.left = e.x * o + r.left),
+              (z(e.x) && (i.left = e.x * o + r.left),
                 z(e.y) && (i.top = e.y * o + r.top),
                 z(e.width) && (i.width = e.width * o),
                 z(e.height) && (i.height = e.height * o),
-                this.setCropBoxData(i);
+                this.setCropBoxData(i));
             }
             return this;
           },
@@ -1907,18 +1911,18 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               }),
               m = p.width,
               h = p.height;
-            (m = Math.min(d.width, Math.max(f.width, m))),
-              (h = Math.min(d.height, Math.max(f.height, h)));
+            ((m = Math.min(d.width, Math.max(f.width, m))),
+              (h = Math.min(d.height, Math.max(f.height, h))));
             var g = document.createElement(`canvas`),
               _ = g.getContext(`2d`);
-            (g.width = G(m)),
+            ((g.width = G(m)),
               (g.height = G(h)),
               (_.fillStyle = e.fillColor || `transparent`),
-              _.fillRect(0, 0, m, h);
+              _.fillRect(0, 0, m, h));
             var v = e.imageSmoothingEnabled,
               y = v === void 0 || v,
               b = e.imageSmoothingQuality;
-            (_.imageSmoothingEnabled = y), b && (_.imageSmoothingQuality = b);
+            ((_.imageSmoothingEnabled = y), b && (_.imageSmoothingQuality = b));
             var x = n.width,
               S = n.height,
               C = i,
@@ -1929,7 +1933,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               O,
               k,
               A;
-            C <= -o || C > x
+            (C <= -o || C > x
               ? ((C = 0), (T = 0), (D = 0), (k = 0))
               : C <= 0
                 ? ((D = -C), (C = 0), (T = Math.min(x, o + C)), (k = T))
@@ -1938,7 +1942,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 ? ((w = 0), (E = 0), (O = 0), (A = 0))
                 : w <= 0
                   ? ((O = -w), (w = 0), (E = Math.min(S, c + w)), (A = E))
-                  : w <= S && ((O = 0), (E = Math.min(c, S - w)), (A = E));
+                  : w <= S && ((O = 0), (E = Math.min(c, S - w)), (A = E)));
             var j = [C, w, T, E];
             if (k > 0 && A > 0) {
               var M = m / o;
@@ -1976,12 +1980,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             if (this.ready && !this.disabled) {
               var i = e === ne,
                 a = t.movable && e === re;
-              (e = i || a ? e : ie),
+              ((e = i || a ? e : ie),
                 (t.dragMode = e),
                 Ve(n, L, e),
                 Y(n, M, i),
                 Y(n, te, a),
-                t.cropBoxMovable || (Ve(r, L, e), Y(r, M, i), Y(r, te, a));
+                t.cropBoxMovable || (Ve(r, L, e), Y(r, M, i), Y(r, te, a)));
             }
             return this;
           },
@@ -1997,7 +2001,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               throw Error(
                 `The first argument is required and must be an <img> or <canvas> element.`,
               );
-            (this.element = t),
+            ((this.element = t),
               (this.options = W({}, De, V(n) && n)),
               (this.cropped = !1),
               (this.disabled = !1),
@@ -2007,7 +2011,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               (this.replaced = !1),
               (this.sized = !1),
               (this.sizing = !1),
-              this.init();
+              this.init());
           }
           return (
             a(
@@ -2042,7 +2046,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   value: function (e) {
                     var t = this;
                     if (e) {
-                      (this.url = e), (this.imageData = {});
+                      ((this.url = e), (this.imageData = {}));
                       var n = this.element,
                         r = this.options;
                       if (
@@ -2057,7 +2061,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       else {
                         var i = new XMLHttpRequest(),
                           a = this.clone.bind(this);
-                        (this.reloading = !0),
+                        ((this.reloading = !0),
                           (this.xhr = i),
                           (i.onabort = a),
                           (i.onerror = a),
@@ -2070,7 +2074,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             t.read(i.response);
                           }),
                           (i.onloadend = function () {
-                            (t.reloading = !1), (t.xhr = null);
+                            ((t.reloading = !1), (t.xhr = null));
                           }),
                           r.checkCrossOrigin &&
                             Je(e) &&
@@ -2080,7 +2084,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           (i.responseType = `arraybuffer`),
                           (i.withCredentials =
                             n.crossOrigin === `use-credentials`),
-                          i.send();
+                          i.send());
                       }
                     }
                   },
@@ -2097,11 +2101,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     if (r > 1) {
                       this.url = ot(e, be);
                       var s = ct(r);
-                      (i = s.rotate), (a = s.scaleX), (o = s.scaleY);
+                      ((i = s.rotate), (a = s.scaleX), (o = s.scaleY));
                     }
-                    t.rotatable && (n.rotate = i),
+                    (t.rotatable && (n.rotate = i),
                       t.scalable && ((n.scaleX = a), (n.scaleY = o)),
-                      this.clone();
+                      this.clone());
                   },
                 },
                 {
@@ -2111,20 +2115,20 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       t = this.url,
                       n = e.crossOrigin,
                       r = t;
-                    this.options.checkCrossOrigin &&
+                    (this.options.checkCrossOrigin &&
                       Je(t) &&
                       ((n ||= `anonymous`), (r = Ye(t))),
                       (this.crossOrigin = n),
-                      (this.crossOriginUrl = r);
+                      (this.crossOriginUrl = r));
                     var i = document.createElement(`img`);
-                    n && (i.crossOrigin = n),
+                    (n && (i.crossOrigin = n),
                       (i.src = r || t),
                       (i.alt = e.alt || `The image to crop`),
                       (this.image = i),
                       (i.onload = this.start.bind(this)),
                       (i.onerror = this.stop.bind(this)),
                       q(i, F),
-                      e.parentNode.insertBefore(i, e.nextSibling);
+                      e.parentNode.insertBefore(i, e.nextSibling));
                   },
                 },
                 {
@@ -2132,14 +2136,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   value: function () {
                     var e = this,
                       t = this.image;
-                    (t.onload = null), (t.onerror = null), (this.sizing = !0);
+                    ((t.onload = null), (t.onerror = null), (this.sizing = !0));
                     var n =
                         g.navigator &&
                         /(?:iPad|iPhone|iPod).*?AppleWebKit/i.test(
                           g.navigator.userAgent,
                         ),
                       r = function (t, n) {
-                        W(e.imageData, {
+                        (W(e.imageData, {
                           naturalWidth: t,
                           naturalHeight: n,
                           aspectRatio: t / n,
@@ -2147,21 +2151,21 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           (e.initialImageData = W({}, e.imageData)),
                           (e.sizing = !1),
                           (e.sized = !0),
-                          e.build();
+                          e.build());
                       };
                     if (t.naturalWidth && !n)
                       r(t.naturalWidth, t.naturalHeight);
                     else {
                       var i = document.createElement(`img`),
                         a = document.body || document.documentElement;
-                      (this.sizingImage = i),
+                      ((this.sizingImage = i),
                         (i.onload = function () {
-                          r(i.width, i.height), n || a.removeChild(i);
+                          (r(i.width, i.height), n || a.removeChild(i));
                         }),
                         (i.src = t.src),
                         n ||
                           ((i.style.cssText = `left:0;max-height:none!important;max-width:none!important;min-height:0!important;min-width:0!important;opacity:0;position:absolute;top:0;z-index:-1;`),
-                          a.appendChild(i));
+                          a.appendChild(i)));
                     }
                   },
                 },
@@ -2169,10 +2173,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   key: `stop`,
                   value: function () {
                     var e = this.image;
-                    (e.onload = null),
+                    ((e.onload = null),
                       (e.onerror = null),
                       e.parentNode.removeChild(e),
-                      (this.image = null);
+                      (this.image = null));
                   },
                 },
                 {
@@ -2190,7 +2194,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         s = a.querySelector(`.${y}-drag-box`),
                         c = a.querySelector(`.${y}-crop-box`),
                         l = c.querySelector(`.${y}-face`);
-                      (this.container = r),
+                      ((this.container = r),
                         (this.cropper = a),
                         (this.canvas = o),
                         (this.dragBox = s),
@@ -2226,7 +2230,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         t.autoCrop && this.crop(),
                         this.setData(t.data),
                         H(t.ready) && Z(e, ge, t.ready, { once: !0 }),
-                        Q(e, ge);
+                        Q(e, ge));
                     }
                   },
                 },
@@ -2234,9 +2238,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   key: `unbuild`,
                   value: function () {
                     if (this.ready) {
-                      (this.ready = !1), this.unbind(), this.resetPreview();
+                      ((this.ready = !1), this.unbind(), this.resetPreview());
                       var e = this.cropper.parentNode;
-                      e && e.removeChild(this.cropper), J(this.element, P);
+                      (e && e.removeChild(this.cropper), J(this.element, P));
                     }
                   },
                 },
@@ -2259,7 +2263,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 {
                   key: `noConflict`,
                   value: function () {
-                    return (window.Cropper = ht), e;
+                    return ((window.Cropper = ht), e);
                   },
                 },
                 {
@@ -2273,7 +2277,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             e
           );
         })();
-      return W(gt.prototype, lt, ut, dt, ft, pt, mt), gt;
+      return (W(gt.prototype, lt, ut, dt, ft, pt, mt), gt);
     });
   }),
   c = e(n()),
@@ -2319,11 +2323,11 @@ function y(e) {
     a = c.useRef(null);
   return (
     c.useEffect(() => {
-      n(!0),
+      (n(!0),
         i.current &&
           i.current.scrollIntoView({ behavior: `smooth`, block: `center` }),
         b(r.current, e).then(() => {
-          n(!1),
+          (n(!1),
             (a.current = new l.default(r.current, {
               viewMode: 1,
               background: !1,
@@ -2345,11 +2349,11 @@ function y(e) {
                     height: t.height + n + n,
                   });
               },
-            }));
-        });
+            })));
+        }));
       let t = r.current;
       return () => {
-        a.current.destroy(), URL.revokeObjectURL(t.src), (t.src = ``);
+        (a.current.destroy(), URL.revokeObjectURL(t.src), (t.src = ``));
       };
     }, [e]),
     {
@@ -2363,17 +2367,17 @@ function y(e) {
 async function b(e, t) {
   let n = new Image(),
     r = a(n, `load`);
-  (n.src = URL.createObjectURL(t)), await r;
+  ((n.src = URL.createObjectURL(t)), await r);
   let i = document.createElement(`canvas`);
-  (i.width = n.width), (i.height = n.height);
+  ((i.width = n.width), (i.height = n.height));
   let o = i.getContext(`2d`);
-  o.rect(0, 0, i.width, i.height),
+  (o.rect(0, 0, i.width, i.height),
     (o.fillStyle = `black`),
     o.fill(),
     o.drawImage(n, 0, 0),
-    URL.revokeObjectURL(n.src);
+    URL.revokeObjectURL(n.src));
   let s = a(e, `load`);
-  (e.src = URL.createObjectURL(await C(i))), await s;
+  ((e.src = URL.createObjectURL(await C(i))), await s);
 }
 async function x(e, t) {
   let n = e.getData(),
@@ -2389,7 +2393,7 @@ async function x(e, t) {
 function S(e, t) {
   let n = Math.min(Math.max(h, t.size), t.maxSize),
     r = document.createElement(`canvas`);
-  (r.width = n), (r.height = n);
+  ((r.width = n), (r.height = n));
   let i = r.getContext(`2d`);
   return (
     (i.imageSmoothingEnabled = !0),

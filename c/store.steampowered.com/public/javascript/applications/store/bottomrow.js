@@ -105,11 +105,11 @@ function _(_) {
   _.useEffect(() => {
     if (_ && !_.current) {
       let _ = window.setTimeout(() => {
-        (_.current = !0), _(!0);
+        ((_.current = !0), _(!0));
       }, 500);
       return () => window.clearTimeout(_);
     }
-    return _(_ || _), () => {};
+    return (_(_ || _), () => {});
   }, [_, _]);
   let { data: _ } = _(),
     _ = !!_?.preferences?.disable_microtrailers,
@@ -480,32 +480,3 @@ function _(_) {
     ],
   });
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

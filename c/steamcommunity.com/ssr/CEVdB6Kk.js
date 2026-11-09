@@ -127,4 +127,3 @@ function _() {
 function _(_) {
   return _(_, _(), _.dynamicLinks);
 }
-export { _, _, _, _ };

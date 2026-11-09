@@ -134,12 +134,12 @@ var d = n(t()),
             })
           : (this.props.onEnter(a, o),
             this.safeSetState({ status: v }, function () {
-              t.props.onEntering(a, o),
+              (t.props.onEntering(a, o),
                 t.onTransitionEnd(c, function () {
                   t.safeSetState({ status: y }, function () {
                     t.props.onEntered(a, o);
                   });
-                });
+                }));
             }));
       }),
       (n.performExit = function () {
@@ -153,12 +153,12 @@ var d = n(t()),
             })
           : (this.props.onExit(r),
             this.safeSetState({ status: b }, function () {
-              e.props.onExiting(r),
+              (e.props.onExiting(r),
                 e.onTransitionEnd(n.exit, function () {
                   e.safeSetState({ status: _ }, function () {
                     e.props.onExited(r);
                   });
-                });
+                }));
             }));
       }),
       (n.cancelNextCallback = function () {
@@ -166,7 +166,7 @@ var d = n(t()),
           (this.nextCallback.cancel(), (this.nextCallback = null));
       }),
       (n.safeSetState = function (e, t) {
-        (t = this.setNextCallback(t)), this.setState(e, t);
+        ((t = this.setNextCallback(t)), this.setState(e, t));
       }),
       (n.setNextCallback = function (e) {
         var t = this,
@@ -205,7 +205,7 @@ var d = n(t()),
         if (e === `unmounted`) return null;
         var t = this.props,
           n = t.children;
-        t.in,
+        (t.in,
           t.mountOnEnter,
           t.unmountOnExit,
           t.appear,
@@ -219,7 +219,7 @@ var d = n(t()),
           t.onExit,
           t.onExiting,
           t.onExited,
-          t.nodeRef;
+          t.nodeRef);
         var r = a(t, [
           `children`,
           `in`,
@@ -249,9 +249,9 @@ var d = n(t()),
       t
     );
   })(d.Component);
-(x.contextType = m), (x.propTypes = {});
+((x.contextType = m), (x.propTypes = {}));
 function S() {}
-(x.defaultProps = {
+((x.defaultProps = {
   in: !1,
   mountOnEnter: !1,
   unmountOnExit: !1,
@@ -269,7 +269,7 @@ function S() {}
   (x.EXITED = _),
   (x.ENTERING = v),
   (x.ENTERED = y),
-  (x.EXITING = b);
+  (x.EXITING = b));
 var C = function (e, t) {
     return (
       e &&
@@ -300,42 +300,42 @@ var C = function (e, t) {
           var r = t.resolveArguments(e, n),
             i = r[0],
             a = r[1];
-          t.removeClasses(i, `exit`),
+          (t.removeClasses(i, `exit`),
             t.addClass(i, a ? `appear` : `enter`, `base`),
-            t.props.onEnter && t.props.onEnter(e, n);
+            t.props.onEnter && t.props.onEnter(e, n));
         }),
         (t.onEntering = function (e, n) {
           var r = t.resolveArguments(e, n),
             i = r[0],
             a = r[1] ? `appear` : `enter`;
-          t.addClass(i, a, `active`),
-            t.props.onEntering && t.props.onEntering(e, n);
+          (t.addClass(i, a, `active`),
+            t.props.onEntering && t.props.onEntering(e, n));
         }),
         (t.onEntered = function (e, n) {
           var r = t.resolveArguments(e, n),
             i = r[0],
             a = r[1] ? `appear` : `enter`;
-          t.removeClasses(i, a),
+          (t.removeClasses(i, a),
             t.addClass(i, a, `done`),
-            t.props.onEntered && t.props.onEntered(e, n);
+            t.props.onEntered && t.props.onEntered(e, n));
         }),
         (t.onExit = function (e) {
           var n = t.resolveArguments(e)[0];
-          t.removeClasses(n, `appear`),
+          (t.removeClasses(n, `appear`),
             t.removeClasses(n, `enter`),
             t.addClass(n, `exit`, `base`),
-            t.props.onExit && t.props.onExit(e);
+            t.props.onExit && t.props.onExit(e));
         }),
         (t.onExiting = function (e) {
           var n = t.resolveArguments(e)[0];
-          t.addClass(n, `exit`, `active`),
-            t.props.onExiting && t.props.onExiting(e);
+          (t.addClass(n, `exit`, `active`),
+            t.props.onExiting && t.props.onExiting(e));
         }),
         (t.onExited = function (e) {
           var n = t.resolveArguments(e)[0];
-          t.removeClasses(n, `exit`),
+          (t.removeClasses(n, `exit`),
             t.addClass(n, `exit`, `done`),
-            t.props.onExited && t.props.onExited(e);
+            t.props.onExited && t.props.onExited(e));
         }),
         (t.resolveArguments = function (e, n) {
           return t.props.nodeRef ? [t.props.nodeRef.current, e] : [e, n];
@@ -359,16 +359,19 @@ var C = function (e, t) {
       (n.addClass = function (e, t, n) {
         var r = this.getClassNames(t)[n + `ClassName`],
           i = this.getClassNames(`enter`).doneClassName;
-        t === `appear` && n === `done` && i && (r += ` ` + i),
+        (t === `appear` && n === `done` && i && (r += ` ` + i),
           n === `active` && e && h(e),
-          r && ((this.appliedClasses[t][n] = r), C(e, r));
+          r && ((this.appliedClasses[t][n] = r), C(e, r)));
       }),
       (n.removeClasses = function (e, t) {
         var n = this.appliedClasses[t],
           r = n.base,
           i = n.active,
           a = n.done;
-        (this.appliedClasses[t] = {}), r && w(e, r), i && w(e, i), a && w(e, a);
+        ((this.appliedClasses[t] = {}),
+          r && w(e, r),
+          i && w(e, i),
+          a && w(e, a));
       }),
       (n.render = function () {
         var e = this.props;
@@ -389,7 +392,7 @@ var C = function (e, t) {
       t
     );
   })(d.Component);
-(T.defaultProps = { classNames: `` }), (T.propTypes = {});
+((T.defaultProps = { classNames: `` }), (T.propTypes = {}));
 var E = e();
 function D(e) {
   let { children: t, ...n } = e,

@@ -31,7 +31,7 @@ var _ = _(),
   _ = _(),
   _ = class extends _ {
     constructor(_) {
-      super(_), _(this);
+      (super(_), _(this));
     }
     BIsExpired() {
       return _.sm_rtTimeCur >= this.m_rtTimeExpires;
@@ -39,7 +39,7 @@ var _ = _(),
     InitFromPHPInviteLinkInfo(_) {
       this.m_ulChatID = _.chat_id;
       let _ = new _(_.steamid_sender);
-      _.BIsIndividualAccount() &&
+      (_.BIsIndividualAccount() &&
         (this.m_unAccountIDInviter = _.GetAccountID()),
         (this.m_rtTimeExpires = _.time_expires),
         (this.m_bIsBanned = _.banned),
@@ -47,7 +47,7 @@ var _ = _(),
         _.group_summary &&
           (this.m_ulChatRoomGroupID = _.group_summary.chat_group_id),
         (this.m_bValid = !0),
-        (this.m_bReady = !0);
+        (this.m_bReady = !0));
     }
   };
 _([_], _.prototype, `InitFromPHPInviteLinkInfo`, null);
@@ -57,12 +57,12 @@ var _ = class {
   m_htmlPreRendered;
   static sm_rtTimeCur;
   constructor(_) {
-    _(this),
+    (_(this),
       (this.m_invite = new _(_.strInviteCode)),
       _.Invite
         ? this.m_invite.InitFromPHPInviteLinkInfo(_.Invite)
         : this.m_invite.InitInvalid(),
-      (this.m_htmlPreRendered = _.render);
+      (this.m_htmlPreRendered = _.render));
   }
   BIsInviteValid() {
     return this.m_invite.BIsValid() && !this.m_invite.BIsExpired();
@@ -104,17 +104,17 @@ var _ = class extends _.Component {
 _ = _([_], _);
 var _ = class extends _.Component {
   constructor(_) {
-    super(_), _(this);
+    (super(_), _(this));
   }
   m_bTriedToLaunchSteam = !1;
   LaunchWebChat() {
     this.props.controller.LaunchWebChat();
   }
   LaunchSteamClient() {
-    this.props.controller.ForceLaunchSteamClient(),
+    (this.props.controller.ForceLaunchSteamClient(),
       window.setTimeout(() => {
         this.m_bTriedToLaunchSteam = !0;
-      }, 1e3);
+      }, 1e3));
   }
   IsMobileDevice() {
     switch (new _.UAParser(navigator.userAgent).getResult()._.name) {
@@ -162,10 +162,10 @@ var _ = class extends _.Component {
     );
   }
 };
-_([_], _.prototype, `m_bTriedToLaunchSteam`, void 0),
+(_([_], _.prototype, `m_bTriedToLaunchSteam`, void 0),
   _([_], _.prototype, `LaunchWebChat`, null),
   _([_], _.prototype, `LaunchSteamClient`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class extends _.Component {
   render() {
     return (0, _.jsx)(`div`, {
@@ -240,7 +240,7 @@ function _(_) {
   );
 }
 document.addEventListener(`DOMContentLoaded`, async function () {
-  _(), await _(_.LANGUAGE), _();
+  (_(), await _(_.LANGUAGE), _());
 });
 async function _(_) {
   let _ = _.GetLanguageFallback(_),

@@ -40,7 +40,7 @@ function _(_, _ = `height`, _ = 250) {
     [_, _] = _.useState(_);
   return (
     _.useLayoutEffect(() => {
-      _.current || _(`start`), _ && _(_);
+      (_.current || _(`start`), _ && _(_));
     }, [_]),
     _.useLayoutEffect(
       () => (
@@ -56,7 +56,7 @@ function _(_, _ = `height`, _ = 250) {
         _ = _ == `height` ? `scrollHeight` : `scrollWidth`,
         _ = () => {
           _.unstable_batchedUpdates(() => {
-            _(
+            (_(
               _
                 ? {}
                 : {
@@ -65,7 +65,7 @@ function _(_, _ = `height`, _ = 250) {
                   },
             ),
               _(`idle`),
-              _(_);
+              _(_));
           });
         };
       if (_ == `start`) {
@@ -103,4 +103,3 @@ function _(_, _ = `height`, _ = 250) {
     }
   );
 }
-export { _ };

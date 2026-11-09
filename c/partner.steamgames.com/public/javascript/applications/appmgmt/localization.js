@@ -104,7 +104,7 @@ function _(_) {
       className: _.size ? void 0 : _,
       ..._,
     };
-  return _ && (_.viewBox = _(_)), _(_, _);
+  return (_ && (_.viewBox = _(_)), _(_, _));
 }
 function _(_) {
   if (_)
@@ -223,8 +223,8 @@ function _(_) {
               break;
             case `dropdown`: {
               let _ = _.reference.width;
-              _.floating.width > _ && _ < 200 && (_ = _.floating.width),
-                (_.width = `${_}px`);
+              (_.floating.width > _ && _ < 200 && (_ = _.floating.width),
+                (_.width = `${_}px`));
             }
           }
           typeof _.width == `function` &&
@@ -233,7 +233,7 @@ function _(_) {
               unTargetWidth: _.reference.width,
             }));
           let _ = typeof _ == `number` ? `${_}px` : `var(--spacing-${_})`;
-          (_.maxHeight =
+          ((_.maxHeight =
             typeof _.maxHeight == `function`
               ? _.maxHeight({
                   unAvailableHeight: _,
@@ -245,7 +245,7 @@ function _(_) {
                   ? `${_ - _}px`
                   : `calc( ${_}px - var(--spacing-${_}) )`),
             Object.assign(_.floating.style, _),
-            _.floating.style.setProperty(`--popover-max-height`, _.maxHeight);
+            _.floating.style.setProperty(`--popover-max-height`, _.maxHeight));
         },
       }),
     ),
@@ -700,7 +700,7 @@ function _(_) {
   });
 }
 var _ = {};
-(_.arabic = () => _(() => import(`./baseui_arabic.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./baseui_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
     _(() => import(`./baseui_brazilian.js`), [], import.meta.url)),
   (_.bulgarian = () =>
@@ -752,9 +752,8 @@ var _ = {};
   (_.ukrainian = () =>
     _(() => import(`./baseui_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./baseui_vietnamese.js`), [], import.meta.url));
+    _(() => import(`./baseui_vietnamese.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
 var _ = _(_);
-export { _, _, _, _, _, _, _, _, _ };

@@ -369,9 +369,9 @@ function _(_) {
   _.current = _;
   let _ = _.useCallback((_) => {
       let _ = _.current?.rgSales[_];
-      `${_}${_?.strEventGID}${_?.clanAccountID}`,
+      (`${_}${_?.strEventGID}${_?.clanAccountID}`,
         _.current,
-        _((_) => (_.has(_) ? _ : new Set([..._, _])));
+        _((_) => (_.has(_) ? _ : new Set([..._, _]))));
     }, []),
     _ = _.useMemo(() => _?.rgSales[0] && _(_.rgSales[0], []), [_]);
   if (!_ || !_ || !_) return null;
@@ -511,7 +511,7 @@ function _(_) {
     _ = _();
   return (
     _.useEffect(() => {
-      _(_, _, _), _(!0);
+      (_(_, _, _), _(!0));
     }, [_, _, _, _]),
     _
       ? (0, _.jsx)(_, {

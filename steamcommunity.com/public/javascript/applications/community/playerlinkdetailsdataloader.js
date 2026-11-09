@@ -37,13 +37,13 @@ function u(e, t) {
   let n = (0, c.useContext)(l),
     r = typeof e == `string` ? e : s(...e),
     i = n;
-  for (; i; ) {
+  for (; i;) {
     if (r in i.instances) return i.instances[r];
     if (r in i.factories) break;
     i = i.parent;
   }
   let a = (i?.factories[r] ?? t)();
-  return ((i ?? n).instances[r] = a), a;
+  return (((i ?? n).instances[r] = a), a);
 }
 var d = e(n(), 1);
 function f(e, t) {

@@ -21,4 +21,3 @@ function _(_) {
   });
   return _.useMemo(() => _?.data, [_, _.isLoading]);
 }
-export { _ };

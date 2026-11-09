@@ -33,7 +33,7 @@ var w = class extends l {
   #i;
   #a;
   constructor(e) {
-    super(),
+    (super(),
       (this.#a = !1),
       (this.#i = e.defaultOptions),
       this.setOptions(e.options),
@@ -43,7 +43,7 @@ var w = class extends l {
       (this.queryHash = e.queryHash),
       (this.#e = E(this.options)),
       (this.state = e.state ?? this.#e),
-      this.scheduleGc();
+      this.scheduleGc());
   }
   get meta() {
     return this.options.meta;
@@ -52,8 +52,8 @@ var w = class extends l {
     return this.#r?.promise;
   }
   setOptions(e) {
-    (this.options = { ...this.#i, ...e }),
-      this.updateGcTime(this.options.gcTime);
+    ((this.options = { ...this.#i, ...e }),
+      this.updateGcTime(this.options.gcTime));
   }
   optionalRemove() {
     !this.observers.length &&
@@ -77,13 +77,13 @@ var w = class extends l {
   }
   cancel(e) {
     let t = this.#r?.promise;
-    return this.#r?.cancel(e), t ? t.then(i).catch(i) : Promise.resolve();
+    return (this.#r?.cancel(e), t ? t.then(i).catch(i) : Promise.resolve());
   }
   destroy() {
-    super.destroy(), this.cancel({ silent: !0 });
+    (super.destroy(), this.cancel({ silent: !0 }));
   }
   reset() {
-    this.destroy(), this.setState(this.#e);
+    (this.destroy(), this.setState(this.#e));
   }
   isActive() {
     return this.observers.some((e) => a(e.options.enabled, this) !== !1);
@@ -109,16 +109,16 @@ var w = class extends l {
     );
   }
   onFocus() {
-    this.observers
+    (this.observers
       .find((e) => e.shouldFetchOnWindowFocus())
       ?.refetch({ cancelRefetch: !1 }),
-      this.#r?.continue();
+      this.#r?.continue());
   }
   onOnline() {
-    this.observers
+    (this.observers
       .find((e) => e.shouldFetchOnReconnect())
       ?.refetch({ cancelRefetch: !1 }),
-      this.#r?.continue();
+      this.#r?.continue());
   }
   addObserver(e) {
     this.observers.includes(e) ||
@@ -145,7 +145,7 @@ var w = class extends l {
     if (this.state.fetchStatus !== `idle`) {
       if (this.state.data !== void 0 && t?.cancelRefetch)
         this.cancel({ silent: !0 });
-      else if (this.#r) return this.#r.continueRetry(), this.#r.promise;
+      else if (this.#r) return (this.#r.continueRetry(), this.#r.promise);
     }
     if ((e && this.setOptions(e), !this.options.queryFn)) {
       let e = this.observers.find((e) => e.options.queryFn);
@@ -173,18 +173,18 @@ var w = class extends l {
           );
         },
       };
-    r(i),
+    (r(i),
       this.options.behavior?.onFetch(i, this),
       (this.#t = this.state),
       (this.state.fetchStatus === `idle` ||
         this.state.fetchMeta !== i.fetchOptions?.meta) &&
-        this.#o({ type: `fetch`, meta: i.fetchOptions?.meta });
+        this.#o({ type: `fetch`, meta: i.fetchOptions?.meta }));
     let a = (e) => {
-      (_(e) && e.silent) || this.#o({ type: `error`, error: e }),
+      ((_(e) && e.silent) || this.#o({ type: `error`, error: e }),
         _(e) ||
           (this.#n.config.onError?.(e, this),
           this.#n.config.onSettled?.(this.state.data, e, this)),
-        this.scheduleGc();
+        this.scheduleGc());
     };
     return (
       (this.#r = d({
@@ -200,9 +200,9 @@ var w = class extends l {
               a(e);
               return;
             }
-            this.#n.config.onSuccess?.(e, this),
+            (this.#n.config.onSuccess?.(e, this),
               this.#n.config.onSettled?.(e, this.state.error, this),
-              this.scheduleGc();
+              this.scheduleGc());
           }
         },
         onError: a,
@@ -277,13 +277,13 @@ var w = class extends l {
           return { ...t, ...e.state };
       }
     };
-    (this.state = t(this.state)),
+    ((this.state = t(this.state)),
       y.batch(() => {
-        this.observers.forEach((e) => {
+        (this.observers.forEach((e) => {
           e.onQueryUpdate();
         }),
-          this.#n.notify({ query: this, type: `updated`, action: e });
-      });
+          this.#n.notify({ query: this, type: `updated`, action: e }));
+      }));
   }
 };
 function T(e, t) {
@@ -319,7 +319,7 @@ function E(e) {
 }
 var D = class extends o {
   constructor(e, t) {
-    super(),
+    (super(),
       (this.options = t),
       (this.#e = e),
       (this.#s = null),
@@ -329,7 +329,7 @@ var D = class extends o {
           Error(`experimental_prefetchInRender feature flag is not enabled`),
         ),
       this.bindMethods(),
-      this.setOptions(t);
+      this.setOptions(t));
   }
   #e;
   #t = void 0;
@@ -365,10 +365,10 @@ var D = class extends o {
     return A(this.#t, this.options, this.options.refetchOnWindowFocus);
   }
   destroy() {
-    (this.listeners = new Set()),
+    ((this.listeners = new Set()),
       this.#b(),
       this.#x(),
-      this.#t.removeObserver(this);
+      this.#t.removeObserver(this));
   }
   setOptions(e, t) {
     let n = this.options,
@@ -383,7 +383,7 @@ var D = class extends o {
       throw Error(
         `Expected enabled to be a boolean or a callback that returns a boolean`,
       );
-    this.#S(),
+    (this.#S(),
       this.#t.setOptions(this.options),
       n._defaulted &&
         !g(this.options, n) &&
@@ -393,15 +393,15 @@ var D = class extends o {
             type: `observerOptionsUpdated`,
             query: this.#t,
             observer: this,
-          });
+          }));
     let i = this.hasListeners();
-    i && j(this.#t, r, this.options, n) && this.#h(),
+    (i && j(this.#t, r, this.options, n) && this.#h(),
       this.updateResult(t),
       i &&
         (this.#t !== r ||
           a(this.options.enabled, this.#t) !== a(n.enabled, this.#t) ||
           s(this.options.staleTime, this.#t) !== s(n.staleTime, this.#t)) &&
-        this.#g();
+        this.#g());
     let o = this.#_();
     i &&
       (this.#t !== r ||
@@ -456,7 +456,7 @@ var D = class extends o {
   #h(e) {
     this.#S();
     let t = this.#t.fetch(this.options, e);
-    return e?.throwOnError || (t = t.catch(i)), t;
+    return (e?.throwOnError || (t = t.catch(i)), t);
   }
   #g() {
     this.#b();
@@ -475,7 +475,7 @@ var D = class extends o {
     );
   }
   #v(e) {
-    this.#x(),
+    (this.#x(),
       (this.#p = e),
       !C &&
         a(this.options.enabled, this.#t) !== !1 &&
@@ -484,10 +484,10 @@ var D = class extends o {
         (this.#f = setInterval(() => {
           (this.options.refetchIntervalInBackground || f.isFocused()) &&
             this.#h();
-        }, this.#p));
+        }, this.#p)));
   }
   #y() {
-    this.#g(), this.#v(this.#_());
+    (this.#g(), this.#v(this.#_()));
   }
   #b() {
     this.#d &&= (clearTimeout(this.#d), void 0);
@@ -510,19 +510,19 @@ var D = class extends o {
       let i = this.hasListeners(),
         a = !i && k(e, t),
         o = i && j(e, n, t, r);
-      (a || o) && (u = { ...u, ...T(l.data, e.options) }),
-        t._optimisticResults === `isRestoring` && (u.fetchStatus = `idle`);
+      ((a || o) && (u = { ...u, ...T(l.data, e.options) }),
+        t._optimisticResults === `isRestoring` && (u.fetchStatus = `idle`));
     }
     let { error: p, errorUpdatedAt: m, status: h } = u;
     if (t.select && u.data !== void 0) {
       if (i && u.data === a?.data && t.select === this.#c) f = this.#l;
       else
         try {
-          (this.#c = t.select),
+          ((this.#c = t.select),
             (f = t.select(u.data)),
             (f = c(i?.data, f, t)),
             (this.#l = f),
-            (this.#s = null);
+            (this.#s = null));
         } catch (e) {
           this.#s = e;
         }
@@ -539,7 +539,7 @@ var D = class extends o {
         t.select && e !== void 0)
       )
         try {
-          (e = t.select(e)), (this.#s = null);
+          ((e = t.select(e)), (this.#s = null));
         } catch (e) {
           this.#s = e;
         }
@@ -616,7 +616,7 @@ var D = class extends o {
       return;
     this.#r = n;
     let r = {};
-    e?.listeners !== !1 &&
+    (e?.listeners !== !1 &&
       (() => {
         if (!t) return !0;
         let { notifyOnChangeProps: e } = this.options,
@@ -632,28 +632,28 @@ var D = class extends o {
         );
       })() &&
       (r.listeners = !0),
-      this.#C({ ...r, ...e });
+      this.#C({ ...r, ...e }));
   }
   #S() {
     let e = this.#e.getQueryCache().build(this.#e, this.options);
     if (e === this.#t) return;
     let t = this.#t;
-    (this.#t = e),
+    ((this.#t = e),
       (this.#n = e.state),
-      this.hasListeners() && (t?.removeObserver(this), e.addObserver(this));
+      this.hasListeners() && (t?.removeObserver(this), e.addObserver(this)));
   }
   onQueryUpdate() {
-    this.updateResult(), this.hasListeners() && this.#y();
+    (this.updateResult(), this.hasListeners() && this.#y());
   }
   #C(e) {
     y.batch(() => {
-      e.listeners &&
+      (e.listeners &&
         this.listeners.forEach((e) => {
           e(this.#r);
         }),
         this.#e
           .getQueryCache()
-          .notify({ query: this.#t, type: `observerResultsUpdated` });
+          .notify({ query: this.#t, type: `observerResultsUpdated` }));
     });
   }
 };
@@ -733,11 +733,11 @@ function q(e, t, n) {
     i = I(),
     a = z(),
     o = r.defaultQueryOptions(e);
-  r.getDefaultOptions().queries?._experimental_beforeQuery?.(o),
+  (r.getDefaultOptions().queries?._experimental_beforeQuery?.(o),
     (o._optimisticResults = i ? `isRestoring` : `optimistic`),
     U(o),
     B(o, a),
-    V(a);
+    V(a));
   let s = !r.getQueryCache().get(o.queryHash),
     [c] = P.useState(() => new t(r, o)),
     l = c.getOptimisticResult(o);
@@ -746,7 +746,7 @@ function q(e, t, n) {
       P.useCallback(
         (e) => {
           let t = i ? x : c.subscribe(y.batchCalls(e));
-          return c.updateResult(), t;
+          return (c.updateResult(), t);
         },
         [c, i],
       ),

@@ -1,7 +1,7 @@
-_({
+(_({
   enforceActions: `never`,
 }),
-  _();
+  _());
 async function _() {
   await _.Ready();
 }

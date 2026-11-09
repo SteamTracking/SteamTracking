@@ -149,7 +149,7 @@ var U = e(a()),
   Ne = class {
     m_Preferences = void 0;
     constructor(e) {
-      l(this),
+      (l(this),
         (this.m_Preferences = e),
         (!this.m_Preferences.content_customization ||
           Array.isArray(this.m_Preferences.content_customization)) &&
@@ -176,7 +176,7 @@ var U = e(a()),
           (this.m_Preferences.third_party_content.twitter = !0),
           (this.m_Preferences.third_party_content.vimeo = !0),
           (this.m_Preferences.third_party_content.youtube = !0)),
-        this.m_Preferences.version == 0 && (this.m_Preferences.version = 1);
+        this.m_Preferences.version == 0 && (this.m_Preferences.version = 1));
     }
     GetVersion() {
       return this.m_Preferences.version;
@@ -197,14 +197,14 @@ var U = e(a()),
       if (this.m_Preferences.preference_state != e) {
         if (((this.m_Preferences.preference_state = e), e == 1 || e == 2)) {
           let t = e == 1;
-          (this.m_Preferences.content_customization.recentapps = t),
+          ((this.m_Preferences.content_customization.recentapps = t),
             (this.m_Preferences.third_party_analytics.google_analytics = t),
             (this.m_Preferences.third_party_content.sketchfab = t),
             (this.m_Preferences.third_party_content.twitter = t),
             (this.m_Preferences.third_party_content.vimeo = t),
             (this.m_Preferences.third_party_content.youtube = t),
             (this.m_Preferences.valve_analytics.product_impressions_tracking =
-              t);
+              t));
         }
         this.PostCookieSettings();
       }
@@ -213,57 +213,57 @@ var U = e(a()),
       return this.m_Preferences.content_customization.recentapps;
     }
     ToggleRecentApps() {
-      (this.m_Preferences.content_customization.recentapps =
+      ((this.m_Preferences.content_customization.recentapps =
         !this.m_Preferences.content_customization.recentapps),
-        this.ProcessToggle();
+        this.ProcessToggle());
     }
     GetImpressions() {
       return this.m_Preferences.valve_analytics.product_impressions_tracking;
     }
     ToggleImpressions() {
-      (this.m_Preferences.valve_analytics.product_impressions_tracking =
+      ((this.m_Preferences.valve_analytics.product_impressions_tracking =
         !this.m_Preferences.valve_analytics.product_impressions_tracking),
-        this.ProcessToggle();
+        this.ProcessToggle());
     }
     GetSketchfab() {
       return this.m_Preferences.third_party_content.sketchfab;
     }
     ToggleSketchfab() {
-      (this.m_Preferences.third_party_content.sketchfab =
+      ((this.m_Preferences.third_party_content.sketchfab =
         !this.m_Preferences.third_party_content.sketchfab),
-        this.ProcessToggle();
+        this.ProcessToggle());
     }
     GetVimeo() {
       return this.m_Preferences.third_party_content.vimeo;
     }
     ToggleVimeo() {
-      (this.m_Preferences.third_party_content.vimeo =
+      ((this.m_Preferences.third_party_content.vimeo =
         !this.m_Preferences.third_party_content.vimeo),
-        this.ProcessToggle();
+        this.ProcessToggle());
     }
     GetYouTube() {
       return this.m_Preferences.third_party_content.youtube;
     }
     ToggleYouTube() {
-      (this.m_Preferences.third_party_content.youtube =
+      ((this.m_Preferences.third_party_content.youtube =
         !this.m_Preferences.third_party_content.youtube),
-        this.ProcessToggle();
+        this.ProcessToggle());
     }
     GetUTMEnabled() {
       return this.m_Preferences.utm_enabled;
     }
     ToggleUTMEnabled() {
-      (this.m_Preferences.utm_enabled = !this.m_Preferences.utm_enabled),
-        this.PostCookieSettings();
+      ((this.m_Preferences.utm_enabled = !this.m_Preferences.utm_enabled),
+        this.PostCookieSettings());
     }
     ProcessToggle() {
-      (this.m_Preferences.preference_state = 3), this.PostCookieSettings();
+      ((this.m_Preferences.preference_state = 3), this.PostCookieSettings());
     }
     async PostCookieSettings() {
       let e = B.STORE_BASE_URL + `account/ajaxsetcookiepreferences`,
         t = new FormData();
-      t.set(`sessionid`, z()),
-        t.append(`cookiepreferences`, JSON.stringify(this.m_Preferences));
+      (t.set(`sessionid`, z()),
+        t.append(`cookiepreferences`, JSON.stringify(this.m_Preferences)));
       try {
         let n = await Me.default.post(e, t, { withCredentials: !0 });
         if (n.status != 200 || n?.data?.success != 1)
@@ -309,15 +309,15 @@ var Pe = `VK34WouHuaw-`,
   Ge = class {
     m_Preferences = void 0;
     constructor(e) {
-      l(this), (this.m_Preferences = e);
+      (l(this), (this.m_Preferences = e));
     }
     SetDeckFeedback(e) {
-      (this.m_Preferences.provide_deck_feedback = e),
-        this.PostStorePreferences();
+      ((this.m_Preferences.provide_deck_feedback = e),
+        this.PostStorePreferences());
     }
     SetGameFrameRateReporting(e) {
-      (this.m_Preferences.game_frame_rate_reporting = e),
-        this.PostStorePreferences();
+      ((this.m_Preferences.game_frame_rate_reporting = e),
+        this.PostStorePreferences());
     }
     GetProvideDeckFeedbackEnabled() {
       return this.m_Preferences.provide_deck_feedback == 1;
@@ -326,19 +326,19 @@ var Pe = `VK34WouHuaw-`,
       return this.m_Preferences.game_frame_rate_reporting == 2;
     }
     ToggleProvideDeckFeeback() {
-      (this.m_Preferences.provide_deck_feedback =
+      ((this.m_Preferences.provide_deck_feedback =
         this.m_Preferences.provide_deck_feedback == 1 ? 2 : 1),
-        this.PostStorePreferences();
+        this.PostStorePreferences());
     }
     ToggleGameFrameRateReporting() {
-      (this.m_Preferences.game_frame_rate_reporting =
+      ((this.m_Preferences.game_frame_rate_reporting =
         this.m_Preferences.game_frame_rate_reporting == 2 ? 1 : 2),
-        this.PostStorePreferences();
+        this.PostStorePreferences());
     }
     async PostStorePreferences() {
       let e = B.STORE_BASE_URL + `account/savepreferences`,
         t = new FormData();
-      t.set(`sessionid`, z()),
+      (t.set(`sessionid`, z()),
         t.set(
           `provide_deck_feedback`,
           this.m_Preferences.provide_deck_feedback.toString(),
@@ -346,7 +346,7 @@ var Pe = `VK34WouHuaw-`,
         t.set(
           `game_frame_rate_reporting`,
           this.m_Preferences.game_frame_rate_reporting.toString(),
-        );
+        ));
       try {
         let n = await Me.default.post(e, t, { withCredentials: !0 });
         n.status != 200 || n?.data?.success != 1
@@ -441,7 +441,7 @@ var X = c();
 function Je(e) {
   let { hw: t, closeModal: n } = e,
     r = U.useCallback(() => {
-      Ke.Get().DeleteHardware(t.hardware_id), n();
+      (Ke.Get().DeleteHardware(t.hardware_id), n());
     }, [n, t.hardware_id]);
   return (0, X.jsx)(x, {
     bDisableBackgroundDismiss: !0,
@@ -456,7 +456,7 @@ function Ye(e) {
   let { hw: t, closeModal: n } = e,
     [r, i] = U.useState(t.friendly_name),
     a = U.useCallback(() => {
-      Ke.Get().RenameHardware(t.hardware_id, r.trim()), n();
+      (Ke.Get().RenameHardware(t.hardware_id, r.trim()), n());
     }, [r, n, t.hardware_id]);
   return (0, X.jsx)(x, {
     bDisableBackgroundDismiss: !0,
@@ -549,11 +549,11 @@ var Xe = s((e) => {
         window.location.reload();
       }, []),
       r = U.useCallback(() => {
-        window.SteamClient.BrowserView.RegisterForMessageFromParent(n),
+        (window.SteamClient.BrowserView.RegisterForMessageFromParent(n),
           SteamClient.BrowserView.PostMessageToParent(
             `ShowSavedHardwareDialog`,
             ``,
-          );
+          ));
       }, [n]);
     return (0, X.jsxs)(`div`, {
       className: W,
@@ -1256,7 +1256,7 @@ var Z = class e {
     );
   }
   Init() {
-    (this.m_rgActiveDevices = C(`active_devices`, `application_config`)),
+    ((this.m_rgActiveDevices = C(`active_devices`, `application_config`)),
       (this.m_rgRevokedDevices = C(`revoked_devices`, `application_config`)),
       (this.m_strAccountName = C(`accountName`, `application_config`)),
       (this.m_strPhoneHint = C(`phone_hint`, `application_config`)),
@@ -1268,7 +1268,7 @@ var Z = class e {
       (this.m_strLatestAndroidAppVersion = C(
         `latest_android_app_version`,
         `application_config`,
-      ));
+      )));
   }
   GetActiveDevices() {
     return this.m_rgActiveDevices;
@@ -1292,8 +1292,8 @@ var Z = class e {
     return this.m_strLatestAndroidAppVersion;
   }
 };
-T([n], Z.prototype, `m_rgActiveDevices`, void 0),
-  T([n], Z.prototype, `m_rgRevokedDevices`, void 0);
+(T([n], Z.prototype, `m_rgActiveDevices`, void 0),
+  T([n], Z.prototype, `m_rgRevokedDevices`, void 0));
 var At = new URL(
     `../../../images/applications/store/sg_shield_off.png?v=valveisgoodatcaching`,
     import.meta.url,
@@ -1383,13 +1383,13 @@ var At = new URL(
             );
         },
         L = function (e, t) {
-          for (var n = 0, i, a, s, l, u, d; n < t.length && !u; ) {
+          for (var n = 0, i, a, s, l, u, d; n < t.length && !u;) {
             var f = t[n],
               p = t[n + 1];
-            for (i = a = 0; i < f.length && !u && f[i]; )
+            for (i = a = 0; i < f.length && !u && f[i];)
               if (((u = f[i++].exec(e)), u))
                 for (s = 0; s < p.length; s++)
-                  (d = u[++a]),
+                  ((d = u[++a]),
                     (l = p[s]),
                     typeof l == c && l.length > 0
                       ? l.length === 2
@@ -1404,7 +1404,7 @@ var At = new URL(
                             (this[l[0]] = d
                               ? l[3].call(this, d.replace(l[1], l[2]))
                               : r)
-                      : (this[l] = d || r);
+                      : (this[l] = d || r));
             n += 2;
           }
         },
@@ -2102,7 +2102,7 @@ var At = new URL(
             }),
             (this.getCPU = function () {
               var e = {};
-              return (e[g] = r), L.call(e, _, x.cpu), e;
+              return ((e[g] = r), L.call(e, _, x.cpu), e);
             }),
             (this.getDevice = function () {
               var e = {};
@@ -2124,7 +2124,7 @@ var At = new URL(
             }),
             (this.getEngine = function () {
               var e = {};
-              return (e[f] = r), (e[h] = r), L.call(e, _, x.engine), e;
+              return ((e[f] = r), (e[h] = r), L.call(e, _, x.engine), e);
             }),
             (this.getOS = function () {
               var e = {};
@@ -2165,7 +2165,7 @@ var At = new URL(
             this
           );
         };
-      (V.VERSION = i),
+      ((V.VERSION = i),
         (V.BROWSER = _e([f, h, u])),
         (V.CPU = _e([g])),
         (V.DEVICE = _e([d, m, p, _, v, b, y, x, S])),
@@ -2177,11 +2177,11 @@ var At = new URL(
               })
             : typeof n !== s && (n.UAParser = V)
           : (typeof t !== s && t.exports && (e = t.exports = V),
-            (e.UAParser = V));
+            (e.UAParser = V)));
       var H = typeof n !== s && (n.jQuery || n.Zepto);
       if (H && !H.ua) {
         var xe = new V();
-        (H.ua = xe.getResult()),
+        ((H.ua = xe.getResult()),
           (H.ua.get = function () {
             return xe.getUA();
           }),
@@ -2189,7 +2189,7 @@ var At = new URL(
             xe.setUA(e);
             var t = xe.getResult();
             for (var n in t) H.ua[n] = t[n];
-          });
+          }));
       }
     })(typeof window == `object` ? window : n);
   })(),
@@ -2745,21 +2745,22 @@ function bn(e) {
                 strOKText: k(`#authorized_devices_deauthorize_proceed`),
                 onOK: async () => {
                   let e = new FormData();
-                  e.set(`action`, `deauthorize`),
+                  (e.set(`action`, `deauthorize`),
                     e.set(`sessionid`, z()),
                     await Me.default.post(
                       B.STORE_BASE_URL + `twofactor/manage_action`,
                       e,
-                    );
+                    ));
                   let t = document.createElement(`form`);
-                  (t.method = `POST`), (t.action = B.STORE_BASE_URL + `logout`);
+                  ((t.method = `POST`),
+                    (t.action = B.STORE_BASE_URL + `logout`));
                   let n = document.createElement(`input`);
-                  (n.type = `hidden`),
+                  ((n.type = `hidden`),
                     (n.name = `sessionid`),
                     (n.value = z()),
                     t.appendChild(n),
                     document.body.appendChild(t),
-                    t.submit();
+                    t.submit());
                 },
                 onCancel: t,
               }),
@@ -3031,7 +3032,7 @@ function Yn(e) {
 function Xn(e, t) {
   let n = Oe.GetLanguageFallback(B.LANGUAGE),
     r = [e + B.LANGUAGE + t];
-  return B.LANGUAGE != n && r.push(e + n + t), r;
+  return (B.LANGUAGE != n && r.push(e + n + t), r);
 }
 function Zn(e) {
   let t = Z.Get(),

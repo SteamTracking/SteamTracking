@@ -177,14 +177,14 @@ function _() {
     _ = (0, _.useContext)(_),
     _ = (0, _.useCallback)(
       (_, _, _) => {
-        _({
+        (_({
           section: _,
           browse_sort: _,
           special_filter: _,
           search_text: ``,
         }),
           _(``),
-          _();
+          _());
       },
       [_, _, _],
     ),
@@ -477,7 +477,7 @@ function _() {
 function _() {
   let [_, _] = (0, _.useState)(_()),
     _ = (0, _.useCallback)(() => _(_()), []);
-  return _(_), _;
+  return (_(_), _);
 }
 function _() {
   let { app: _, appHubHeader: _, workshopConfig: _ } = _.useLoaderData(),

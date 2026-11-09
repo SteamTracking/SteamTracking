@@ -92,7 +92,7 @@ function _(_) {
     onOpenChange: _,
     onTextChange: (0, _.useCallback)(
       (_) => {
-        _ ? (_(!0), _(null)) : _(!1), _(_);
+        (_ ? (_(!0), _(null)) : _(!1), _(_));
       },
       [_],
     ),
@@ -186,7 +186,7 @@ function _(_) {
     } = _(`<Autocomplete.TextInput>`);
   return (0, _.jsx)(_.Item, {
     onSelect: (_) => {
-      _ && _(_, _), _.defaultPrevented || _(_), _(null), _(!1);
+      (_ && _(_, _), _.defaultPrevented || _(_), _(null), _(!1));
     },
     ..._,
     children: _,
@@ -201,7 +201,7 @@ var _ = Object.assign(_, {
   _ = (0, _.createContext)(null);
 function _(_) {
   let _ = (0, _.useContext)(_);
-  return _(_, `${_} must be used within an <Autocomplete>!`), _;
+  return (_(_, `${_} must be used within an <Autocomplete>!`), _);
 }
 var _ = (0, _.createContext)(!1);
 function _() {
@@ -303,7 +303,7 @@ function _(_) {
       ..._,
     },
     _ = _[_];
-  delete _[_], _.app && delete _[_];
+  (delete _[_], _.app && delete _[_]);
   let _ = _(_, _, _);
   return (0, _.jsxs)(_, {
     ..._,
@@ -544,7 +544,7 @@ function _(_) {
         bSteamItems: _,
       }),
     _ = (_) => {
-      _.preventDefault(), _.stopPropagation();
+      (_.preventDefault(), _.stopPropagation());
     },
     _ = _(`sm`),
     _ = _ ? _.rgAppData && _.rgAppData[_] : _.filterInGame.app,
@@ -717,7 +717,7 @@ function _(_) {
       _.price[0] === 0 &&
       _.price[1] === _.maxPrice,
     _ = () => {
-      _(!0), _(_, _);
+      (_(!0), _(_, _));
     },
     _ = _(`sm`),
     _ = (0, _.jsx)(_, {
@@ -1209,7 +1209,7 @@ function _(_) {
     _ = _;
   if (!_) {
     let _ = _ ? Math.floor((_.contentRect.width - 10) / 104) : 0;
-    (_ = _.slice(0, _)), (_ = _.slice(0, _));
+    ((_ = _.slice(0, _)), (_ = _.slice(0, _)));
   }
   return (0, _.jsxs)(_, {
     direction: `column`,
@@ -1287,10 +1287,10 @@ function _(_) {
     },
     _ = _.filterInGame,
     { strQuery: _, unFilterApp: _, rgFilterData: _, rgAppData: _ = {} } = _;
-  typeof _ == `number` &&
+  (typeof _ == `number` &&
     _[_] &&
     (_ === _ ? ((_.bSteamItems = !0), (_ = _.filterSteam)) : (_.app = _[_])),
-    typeof _ == `string` && (_.strSearch = _);
+    typeof _ == `string` && (_.strSearch = _));
   let _ = _(_);
   if (
     (_ && (_.facets = _),
@@ -1375,9 +1375,9 @@ function _(_, _) {
       price: [_, _],
     } = _,
     _ = new FormData();
-  _ && _.set(`appid`, _.appid.toString()),
+  (_ && _.set(`appid`, _.appid.toString()),
     _ && _.set(`q`, _),
-    _ && _ && _(_.app) && _.set(`descriptions`, `1`);
+    _ && _ && _(_.app) && _.set(`descriptions`, `1`));
   for (let _ of Object.keys(_))
     if (_[_])
       for (let _ of Object.keys(_[_]))
@@ -1601,7 +1601,7 @@ var _ = {};
 function _(_) {
   let { icon: _, size: _ } = _,
     [_, _] = (0, _.useState)(!!_[_]);
-  (0, _.useEffect)(() => {
+  ((0, _.useEffect)(() => {
     let _ = !0;
     return (
       setTimeout(() => {
@@ -1612,7 +1612,7 @@ function _(_) {
       }
     );
   }, []),
-    _ && (_[_] = !0);
+    _ && (_[_] = !0));
   let _ = _(_),
     _ = `var(--spacing-${parseInt(_) + 3})`;
   return _
@@ -1658,8 +1658,8 @@ function _(_) {
         (window.g_fnShowMarketSearch = () => __webpack_require__(!0)),
         (window.g_fnHideMarketSearch = () => __webpack_require__(!1)),
         () => {
-          delete window.g_fnShowMarketSearch,
-            delete window.g_fnHideMarketSearch;
+          (delete window.g_fnShowMarketSearch,
+            delete window.g_fnHideMarketSearch);
         }
       ),
       [],
@@ -1730,4 +1730,4 @@ function _(_) {
     ..._,
   });
 }
-export { _ as MarketBaseUIRoot, _ as default, _, _ };
+export { _ as MarketBaseUIRoot, _ as default };

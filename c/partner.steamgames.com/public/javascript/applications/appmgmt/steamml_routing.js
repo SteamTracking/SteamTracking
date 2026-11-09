@@ -85,13 +85,13 @@ var _ = _(_()),
                     : (this.eState = 3));
             })
             .catch((_) => {
-              (this.data = _(void 0)), (this.eState = 3);
+              ((this.data = _(void 0)), (this.eState = 3));
             })),
         this.data
       );
     }
     clearData() {
-      (this.eState = 0), (this.data = null), (this.nExpirationTime = 0);
+      ((this.eState = 0), (this.data = null), (this.nExpirationTime = 0));
     }
     setDataPending() {
       this.eState = 1;
@@ -100,7 +100,7 @@ var _ = _(_()),
       return this.eState == 1;
     }
     setData(_, _) {
-      (this.data = _), this.delayNewData(_), (this.eState = 2);
+      ((this.data = _), this.delayNewData(_), (this.eState = 2));
     }
     expireData() {
       this.nExpirationTime = 0;
@@ -126,8 +126,8 @@ var _ = _(_()),
     eState = 0;
     nExpirationTime = 0;
   };
-_([_], _.prototype, `data`, void 0),
-  _([_], _.prototype, `nExpirationTime`, void 0);
+(_([_], _.prototype, `data`, void 0),
+  _([_], _.prototype, `nExpirationTime`, void 0));
 var _ = class {
   constructor() {
     _(this);
@@ -142,9 +142,9 @@ var _ = class {
     );
   }
   clearKey(_) {
-    this.m_mapKeyToDataWrapper.has(_) &&
+    (this.m_mapKeyToDataWrapper.has(_) &&
       this.m_mapKeyToDataWrapper.get(_).clearData(),
-      this.m_mapKeyToDataWrapper.delete(_);
+      this.m_mapKeyToDataWrapper.delete(_));
   }
   getAllElements() {
     return Array.from(this.m_mapKeyToDataWrapper.values()).map((_) =>
@@ -155,12 +155,12 @@ var _ = class {
     let _ = [],
       _ = this.m_mapKeyToDataWrapper.entries(),
       _ = _.next();
-    for (; !_.done; )
-      _.push({
+    for (; !_.done;)
+      (_.push({
         key: _.value[0],
         data: _.value[1].getCachedData(),
       }),
-        (_ = _.next());
+        (_ = _.next()));
     return _;
   }
   m_mapKeyToDataWrapper = new Map();
@@ -240,15 +240,15 @@ var _ = class _ {
   }
   EditProblemName(_, _) {
     let _ = new FormData();
-    _.append(`name`, _), this.EditProblem(_, _);
+    (_.append(`name`, _), this.EditProblem(_, _));
   }
   EditProblemDesc(_, _) {
     let _ = new FormData();
-    _.append(`description`, _), this.EditProblem(_, _);
+    (_.append(`description`, _), this.EditProblem(_, _));
   }
   EditProblemSchemas(_, _) {
     let _ = new FormData();
-    _.append(`schemaids`, _.join(`,`)), this.EditProblem(_, _);
+    (_.append(`schemaids`, _.join(`,`)), this.EditProblem(_, _));
   }
   EditProblem(_, _) {
     return (
@@ -274,11 +274,11 @@ var _ = class _ {
     );
   }
 };
-_([_], _.prototype, `m_asyncSchemaList`, void 0),
+(_([_], _.prototype, `m_asyncSchemaList`, void 0),
   _([_], _.prototype, `m_asyncSchemaDetails`, void 0),
   _([_], _.prototype, `m_asyncProblemList`, void 0),
   _([_], _.prototype, `m_asyncProblemDetails`, void 0),
-  _([_], _.prototype, `Init`, null);
+  _([_], _.prototype, `Init`, null));
 var _ = _(),
   _ = _((_) => {
     let _ = _().schemaid == `0`,
@@ -833,37 +833,37 @@ var _ = _((_) => {
         .sort((_, _) => (_.name < _.name ? -1 : 1))
         ?.filter((_, _, _) => _ == 0 || _.name != _[_ - 1].name);
     _(() => {
-      _(), _(), _(_.problem_description), _(!1);
+      (_(), _(), _(_.problem_description), _(!1));
     });
     let _ = () => {
-        _(_.name), _(!1);
+        (_(_.name), _(!1));
       },
       _ = () => {
-        _(_.problem_description), _(!1);
+        (_(_.problem_description), _(!1));
       },
       _ = () => {
-        _(_.schemaid), _(!1);
+        (_(_.schemaid), _(!1));
       },
       _ = () => {
-        _(), _(), _(!0);
+        (_(), _(), _(!0));
       },
       _ = () => {
-        _(), _(), _(!0);
+        (_(), _(), _(!0));
       },
       _ = () => {
-        _(), _(), _(!0);
+        (_(), _(), _(!0));
       },
       _ = () => {
-        _.Get().EditProblemName(_, _), (_.name = _), _(!1);
+        (_.Get().EditProblemName(_, _), (_.name = _), _(!1));
       },
       _ = () => {
-        _.Get().EditProblemDesc(_, _), (_.problem_description = _), _(!1);
+        (_.Get().EditProblemDesc(_, _), (_.problem_description = _), _(!1));
       },
       _ = () => {
-        _.Get().EditProblemSchemas(_, _), (_.schemaid = _), _(!1);
+        (_.Get().EditProblemSchemas(_, _), (_.schemaid = _), _(!1));
       },
       _ = () => {
-        _.Get().DeleteProblem(_), _.push(_.SteamMLProblems(0));
+        (_.Get().DeleteProblem(_), _.push(_.SteamMLProblems(0)));
       };
     return (
       _ && _.current.focus(),
@@ -887,7 +887,7 @@ var _ = _((_) => {
               (0, _.jsx)(`form`, {
                 className: _ ? void 0 : _,
                 onSubmit: (_) => {
-                  _(), _.preventDefault();
+                  (_(), _.preventDefault());
                 },
                 children: (0, _.jsx)(`input`, {
                   ref: _,
@@ -907,7 +907,7 @@ var _ = _((_) => {
               (0, _.jsx)(`form`, {
                 className: _ ? void 0 : _,
                 onSubmit: (_) => {
-                  _(), _.preventDefault();
+                  (_(), _.preventDefault());
                 },
                 children: (0, _.jsx)(`input`, {
                   ref: _,

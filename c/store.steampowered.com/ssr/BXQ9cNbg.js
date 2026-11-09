@@ -118,4 +118,3 @@ var _ = [
       className: (_) => _[`TextSize-${_}`],
     },
   ];
-export { _, _, _ };

@@ -95,7 +95,7 @@ var _ = _(_()),
         });
         if (_ && _.token.reason) return null;
         if (_ && _.status == 200 && _.data && _.data.success == 1)
-          return (this.m_curDebugInfo = _.data), this.m_curDebugInfo;
+          return ((this.m_curDebugInfo = _.data), this.m_curDebugInfo);
       } catch (_) {
         let _ = _(_);
         console.error(`LoadBroadcastDebugInfo: Failed ` + _.strErrorMsg, _);
@@ -254,8 +254,8 @@ var _ = _(_()),
                 onClick: async () => {
                   _.current && _.current();
                   let _ = _.default.CancelToken.source();
-                  (_.current = _.cancel),
-                    _(await _.Get().LoadBroadcastDebugInfo(_));
+                  ((_.current = _.cancel),
+                    _(await _.Get().LoadBroadcastDebugInfo(_)));
                 },
                 children: `(VO) Load Debug Info`,
               }),
@@ -851,8 +851,8 @@ var _ = _((_) => {
       onCancel: _.closeModal,
       bOKDisabled: _.trim().length == 0,
       onOK: async () => {
-        await _.Get().SendUserReportOnBroadcast(_),
-          _.closeModal && _.closeModal();
+        (await _.Get().SendUserReportOnBroadcast(_),
+          _.closeModal && _.closeModal());
       },
       children: (0, _.jsx)(`textarea`, {
         value: _,
@@ -1003,11 +1003,11 @@ var _ = _((_) => {
                           try {
                             _.current && _.current();
                             let _ = _.default.CancelToken.source();
-                            (_.current = _.cancel),
+                            ((_.current = _.cancel),
                               await _.Get().SetBroadcasterRestrictions(_, _, _),
-                              _.token.reason;
+                              _.token.reason);
                           } finally {
-                            _(!1), _(!0), _(!1);
+                            (_(!1), _(!0), _(!1));
                           }
                         },
                         children: _(`#Button_Confirm`),
@@ -1079,10 +1079,10 @@ var _ = _((_) => {
                           try {
                             _.current && _.current();
                             let _ = _.default.CancelToken.source();
-                            (_.current = _.cancel),
-                              (_ = await _.Get().SetUnBannable(_));
+                            ((_.current = _.cancel),
+                              (_ = await _.Get().SetUnBannable(_)));
                           } finally {
-                            _(!1), _(!0), _(_);
+                            (_(!1), _(!0), _(_));
                           }
                         },
                         children: _(`#Button_Confirm`),

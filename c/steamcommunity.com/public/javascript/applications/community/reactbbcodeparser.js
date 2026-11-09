@@ -31,8 +31,8 @@ var _ = _(_(), 1),
   _ = class {
     m_decoratedAccumulator;
     constructor(_) {
-      _(_, `decorated accumulator cannot be null`),
-        (this.m_decoratedAccumulator = _);
+      (_(_, `decorated accumulator cannot be null`),
+        (this.m_decoratedAccumulator = _));
     }
     AppendText(_, _ = !1) {
       this.m_decoratedAccumulator.AppendText(_, _);
@@ -58,20 +58,20 @@ var _ = _(_(), 1),
         _ = _.indexOf(`
 `)
       )
-        _.push(_.substr(0, _)),
+        (_.push(_.substr(0, _)),
           _.push(_.createElement(`br`)),
-          (_ = _.substr(_ + 1));
-      _.length && _.push(_),
+          (_ = _.substr(_ + 1)));
+      (_.length && _.push(_),
         _.forEach((_) => {
           super.AppendNode(_);
-        });
+        }));
     }
   },
   _ = class extends _ {
     m_renderingLanguage;
     constructor(_, _, _) {
-      super(_, _ ?? (() => new _())),
-        (this.m_renderingLanguage = typeof _ == `string` ? _(_) : _);
+      (super(_, _ ?? (() => new _())),
+        (this.m_renderingLanguage = typeof _ == `string` ? _(_) : _));
     }
     UpdateOverrideLanguage(_) {
       this.m_renderingLanguage = _;
@@ -100,4 +100,3 @@ var _ = _(_(), 1),
           : null;
     }
   };
-export { _, _, _, _ };

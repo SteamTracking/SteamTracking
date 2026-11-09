@@ -3,7 +3,7 @@ function _(_, _) {
 }
 function _(_, _, _) {
   let _ = _.slice(0);
-  return (_[_] = _), _;
+  return ((_[_] = _), _);
 }
 var _ = class extends _ {
     #e;
@@ -15,13 +15,13 @@ var _ = class extends _ {
     #o;
     #s;
     constructor(_, _, _) {
-      super(),
+      (super(),
         (this.#e = _),
         (this.#r = _),
         (this.#n = []),
         (this.#i = []),
         (this.#t = []),
-        this.setQueries(_);
+        this.setQueries(_));
     }
     onSubscribe() {
       this.listeners.size === 1 &&
@@ -35,13 +35,13 @@ var _ = class extends _ {
       this.listeners.size || this.destroy();
     }
     destroy() {
-      (this.listeners = new Set()),
+      ((this.listeners = new Set()),
         this.#i.forEach((_) => {
           _.destroy();
-        });
+        }));
     }
     setQueries(_, _, _) {
-      (this.#n = _),
+      ((this.#n = _),
         (this.#r = _),
         _.batch(() => {
           let _ = this.#i,
@@ -63,7 +63,7 @@ var _ = class extends _ {
                 });
               }),
               this.#f()));
-        });
+        }));
     }
     getCurrentResult() {
       return this.#t;
@@ -143,17 +143,17 @@ function _({ queries: _, ..._ }, _) {
       () =>
         _.map((_) => {
           let _ = _.defaultQueryOptions(_);
-          return (_._optimisticResults = _ ? `isRestoring` : `optimistic`), _;
+          return ((_._optimisticResults = _ ? `isRestoring` : `optimistic`), _);
         }),
       [_, _, _],
     );
-  _.forEach((_) => {
-    _(_), _(_, _);
+  (_.forEach((_) => {
+    (_(_), _(_, _));
   }),
-    _(_);
+    _(_));
   let [_] = _.useState(() => new _(_, _, _)),
     [_, _, _] = _.getOptimisticResult(_, _.combine);
-  _.useSyncExternalStore(
+  (_.useSyncExternalStore(
     _.useCallback((_) => (_ ? _ : _.subscribe(_.batchCalls(_))), [_, _]),
     () => _.getCurrentResult(),
     () => _.getCurrentResult(),
@@ -162,7 +162,7 @@ function _({ queries: _, ..._ }, _) {
       _.setQueries(_, _, {
         listeners: !1,
       });
-    }, [_, _, _]);
+    }, [_, _, _]));
   let _ = _.some((_, _) => _(_[_], _))
     ? _.flatMap((_, _) => {
         let _ = _[_];
@@ -246,7 +246,7 @@ function _(_) {
     _ = _(_),
     _ = 900,
     _ = _ - _;
-  return _ < 1350 && (_ = _ <= 60 ? 0 : 60), _(_) - _ < Date.now() / 1e3;
+  return (_ < 1350 && (_ = _ <= 60 ? 0 : 60), _(_) - _ < Date.now() / 1e3);
 }
 function _(_) {
   return atob(_.replace(/-/g, `+`).replace(/_/g, `/`));
@@ -263,7 +263,7 @@ var _ = class {
   m_dtLastExpireCheck = 0;
   m_strSpoofedSteamID = ``;
   constructor(_, _ = ``, _ = !1, _) {
-    (this.m_strWebAPIBaseURL = _),
+    ((this.m_strWebAPIBaseURL = _),
       (this.m_webApiAccessToken = _),
       (this.m_bJsonMode = _),
       (this.m_fnRequestNewAccessToken = _),
@@ -285,7 +285,7 @@ var _ = class {
           bSendAuth: !1,
         }),
         MakeReady: this.MakeReady.bind(this),
-      });
+      }));
     let _ = _(_);
     _ && /[0-9]+/g.test(_) && (this.m_strSpoofedSteamID = _);
   }
@@ -366,7 +366,7 @@ var _ = class {
     );
   }
   SendNotification(_, _, _, _) {
-    return this.Send(_, _, _, _), !0;
+    return (this.Send(_, _, _, _), !0);
   }
   Send(_, _, _, _) {
     let _ = this.CreateWebAPIURL(_),
@@ -385,10 +385,10 @@ var _ = class {
       _.bSendAuth && !_)
     ) {
       let _ = `${_} was called over WebAPI with auth`;
-      console.warn(_),
+      (console.warn(_),
         _().ReportError(Error(_), {
           bIncludeMessageInIdentifier: !0,
-        });
+        }));
     }
     if (
       (this.m_webApiAccessToken &&
@@ -451,4 +451,3 @@ var _ = class {
       }
   }
 };
-export { _, _, _, _ };

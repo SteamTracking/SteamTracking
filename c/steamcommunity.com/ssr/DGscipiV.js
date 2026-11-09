@@ -32,7 +32,7 @@ function _(..._) {
 function _(_, _) {
   let _ = _.useRef(void 0);
   return _.useCallback((_) => {
-    _.current && _.current(), (_.current = _(_));
+    (_.current && _.current(), (_.current = _(_)));
   }, _);
 }
 function _(_) {
@@ -44,7 +44,7 @@ function _(_) {
 }
 function _(_, _) {
   let _ = _.useRef(!1);
-  _.useLayoutEffect(
+  (_.useLayoutEffect(
     () => () => {
       _.current && _(_, void 0);
     },
@@ -52,20 +52,20 @@ function _(_, _) {
   ),
     _.useLayoutEffect(() => {
       (_ || _.current) && (_(_, _), (_.current = !!_));
-    }, [_, _]);
+    }, [_, _]));
 }
 function _(_, _, _, _) {
   _.useEffect(() => {
     let _ = _ && `current` in _ ? _.current : _;
     if (_ && _)
-      return _.addEventListener(_, _, _), () => _.removeEventListener(_, _);
+      return (_.addEventListener(_, _, _), () => _.removeEventListener(_, _));
   }, [_, _, _]);
 }
 function _(_, _, _) {
   return _(
     (_) => {
       if (_ && _)
-        return _.addEventListener(_, _, _), () => _.removeEventListener(_, _);
+        return (_.addEventListener(_, _, _), () => _.removeEventListener(_, _));
     },
     [_, _],
   );
@@ -73,7 +73,9 @@ function _(_, _, _) {
 function _(_, _, _, _) {
   _.useEffect(() => {
     if (_ && _)
-      return _.addEventListener(_, _, _), () => _.removeEventListener(_, _, _);
+      return (
+        _.addEventListener(_, _, _), () => _.removeEventListener(_, _, _)
+      );
   }, [_, _, _]);
 }
 function _(_, _, _, _) {
@@ -125,10 +127,10 @@ var _ = !1,
   _ = !1,
   _ = !1;
 function _() {
-  return _ || _(), _;
+  return (_ || _(), _);
 }
 function _() {
-  return _ || _(), _;
+  return (_ || _(), _);
 }
 function _() {
   return _() || _();
@@ -152,7 +154,7 @@ function _(_, _) {
 function _() {
   let _ = navigator,
     _ = _ && _.maxTouchPoints && _.maxTouchPoints > 1;
-  (_ = _(`Valve Steam Tenfoot`, `force_tenfoot_client_view`)),
+  ((_ = _(`Valve Steam Tenfoot`, `force_tenfoot_client_view`)),
     _(`Valve Steam GameOverlay`, `force_overlay_view`),
     _ || _(`Valve Steam Client`, `force_client_view`),
     _(`macintosh`, `force_mac_view`),
@@ -162,7 +164,7 @@ function _() {
       _(`ipod`, `force_ios_view`) ||
       (_(`macintosh`, `force_ios_view`) && _)),
     (_ = _(`android`, `force_android_view`)),
-    (_ = !0);
+    (_ = !0));
 }
 var _ = _.createContext({}),
   _ = (_) => {
@@ -221,7 +223,7 @@ function _(_, _) {
 var _ = `unknown`;
 function _() {
   if (!window || !window.location || !window.location.href)
-    return console.warn(`Unable to determine base url!`), _;
+    return (console.warn(`Unable to determine base url!`), _);
   let _ = window.location.href;
   return _(_, _.STORE_BASE_URL)
     ? _.STORE_BASE_URL
@@ -248,31 +250,3 @@ function _() {
 function _() {
   return `community`;
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

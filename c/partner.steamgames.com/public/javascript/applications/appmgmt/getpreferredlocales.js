@@ -6,4 +6,3 @@ function _() {
 function _(_) {
   return _.length == 2 && _.COUNTRY ? `${_}-${_.COUNTRY}` : _;
 }
-export { _ };

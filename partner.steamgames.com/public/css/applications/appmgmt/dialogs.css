@@ -232,7 +232,7 @@ html._75X6HzwBhoc- body {
 ._76JQCA2LSJ0-:hover,
 ._76JQCA2LSJ0-._1Zkw8Hwe0PE- {
   color: #b8c5c9;
-  --color-text-secondary:$darkGrey;
+  --color-text-secondary: $darkGrey;
   background: #5a6069;
 }
 ._76JQCA2LSJ0-.disabled,
@@ -1393,7 +1393,7 @@ html._75X6HzwBhoc- body {
 }
 .rLxoT9L8pa8- {
   background: radial-gradient(
-    201.11% 137.71% at .9% -3.76%,
+    201.11% 137.71% at 0.9% -3.76%,
     #343941 0%,
     #0e141b 40%
   );
@@ -2075,9 +2075,7 @@ button.VCubv9Yx4Q0-.DialogButton:enabled:active:hover:before {
 .kwxrGJQL5-4-.-EO4FT59VAE- {
   margin-inline: calc(-1 * var(--field-negative-horizontal-margin));
   padding-inline-start: calc(
-    var(--field-negative-horizontal-margin) +
-    var(--indent-level) *
-    20px
+    var(--field-negative-horizontal-margin) + var(--indent-level) * 20px
   );
   padding-inline-end: var(--field-negative-horizontal-margin);
 }
@@ -2089,10 +2087,7 @@ button.VCubv9Yx4Q0-.DialogButton:enabled:active:hover:before {
 .kwxrGJQL5-4-.-EO4FT59VAE-.Lp7SIUigpfY- {
   --field-row-children-spacing: 8px;
   margin-inline-start: calc(
-    -1 *
-    var(--field-negative-horizontal-margin) +
-    var(--indent-level) *
-    30px
+    -1 * var(--field-negative-horizontal-margin) + var(--indent-level) * 30px
   );
   padding: 10px 0;
 }
@@ -3019,15 +3014,13 @@ button.Cw4uxrkspko- svg {
 .HsioiS8tolM- {
   --inverse-normalized-value: calc(1 - var(--normalized-slider-value));
   --inverse-normalized-default-value: calc(
-    1 -
-    var(--normalized-slider-default-value)
+    1 - var(--normalized-slider-default-value)
   );
 }
 .HsioiS8tolM-:dir(rtl) {
   --inverse-normalized-value: calc(-1 * (1 - var(--normalized-slider-value)));
   --inverse-normalized-default-value: calc(
-    -1 *
-    (1 - var(--normalized-slider-default-value))
+    -1 * (1 - var(--normalized-slider-default-value))
   );
 }
 .HsioiS8tolM- {
@@ -3064,16 +3057,15 @@ button.Cw4uxrkspko- svg {
   content: "";
   --normalized-fill-start: calc(
     (100%) *
-    min(var(--normalized-slider-value), var(--normalized-slider-origin))
+      min(var(--normalized-slider-value), var(--normalized-slider-origin))
   );
   --normalized-fill-end: calc(
     (100% - var(--slider-extra-notch-padding) * 2) *
-    max(var(--normalized-slider-value), var(--normalized-slider-origin)) +
-    var(--slider-extra-notch-padding)
+      max(var(--normalized-slider-value), var(--normalized-slider-origin)) +
+      var(--slider-extra-notch-padding)
   );
   --normalized-width-handle: calc(
-    var(--normalized-fill-end) -
-    var(--normalized-fill-start)
+    var(--normalized-fill-end) - var(--normalized-fill-start)
   );
   inset-inline-start: var(--normalized-fill-start);
   inset-inline-end: 0;
@@ -3086,19 +3078,15 @@ button.Cw4uxrkspko- svg {
 }
 .L1H8c1tG81w- .bhfWNpXbH4Q-:before {
   --signed-normalized-slider-default-value: calc(
-    2 *
-    var(--normalized-slider-default-value) -
-    1
+    2 * var(--normalized-slider-default-value) - 1
   );
   --gradient-split-pct: calc(
-    100% *
-    var(--normalized-slider-default-value) /
-    var(--normalized-slider-value) -
-    (
-      var(--slider-handle-width) *
-      0.5 *
-      var(--signed-normalized-slider-default-value)
-    )
+    100% * var(--normalized-slider-default-value) /
+      var(--normalized-slider-value) -
+      (
+        var(--slider-handle-width) * 0.5 *
+          var(--signed-normalized-slider-default-value)
+      )
   );
 }
 .Q8VDUuiGgkQ- .bhfWNpXbH4Q-:before {
@@ -3132,10 +3120,8 @@ button.Cw4uxrkspko- svg {
   transform: translateX(
     calc(
       (-100% + var(--slider-extra-notch-padding) * 2) *
-      var(--inverse-normalized-value) +
-      var(--slider-handle-width) *
-      var(--inverse-normalized-value) -
-      var(--slider-extra-notch-padding)
+        var(--inverse-normalized-value) + var(--slider-handle-width) *
+        var(--inverse-normalized-value) - var(--slider-extra-notch-padding)
     )
   );
   margin: auto 0;
@@ -3467,10 +3453,8 @@ button.Cw4uxrkspko- svg {
   width: 100%;
   transform: translateX(
     calc(
-      -100% *
-      var(--inverse-normalized-default-value) +
-      var(--slider-handle-width) *
-      var(--inverse-normalized-default-value)
+      -100% * var(--inverse-normalized-default-value) +
+        var(--slider-handle-width) * var(--inverse-normalized-default-value)
     )
   );
   margin: auto 0;

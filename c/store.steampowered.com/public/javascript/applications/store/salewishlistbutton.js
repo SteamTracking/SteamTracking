@@ -87,4 +87,3 @@ function _(_) {
         className: _,
       });
 }
-export { _, _ };

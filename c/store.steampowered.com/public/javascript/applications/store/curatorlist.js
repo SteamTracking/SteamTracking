@@ -60,7 +60,8 @@ async function _(_, _) {
     let _ = await _.default.get(_, {
       params: _,
     });
-    if (_?.data?.success == 1) return _.data.appids.forEach((_) => _.add(_)), _;
+    if (_?.data?.success == 1)
+      return (_.data.appids.forEach((_) => _.add(_)), _);
     _ = _(_);
   } catch (_) {
     _ = _(_);
@@ -156,7 +157,7 @@ function _(_) {
   let _ = Math.floor(_ / 3600);
   _ -= _ * 60 * 60;
   let _ = Math.floor(_ / 60);
-  return (_ -= _ * _), `${_}h${_}m${_}s`;
+  return ((_ -= _ * _), `${_}h${_}m${_}s`);
 }
 var _ = `ZJL8xBrL2zY-`,
   _ = `vcekW7OLx38-`,

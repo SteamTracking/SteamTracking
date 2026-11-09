@@ -10,4 +10,3 @@ function _(_) {
     className: _,
   });
 }
-export { _ };

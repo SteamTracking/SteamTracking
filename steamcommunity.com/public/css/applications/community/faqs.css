@@ -204,7 +204,7 @@ button._93gJHlVzPcA-._93gJHlVzPcA-:disabled:hover {
 }
 ._5U-wyIj4ywo- {
   background: #24282e;
-  grid-template: "left main" / 400px auto;
+  grid-template: "left main"/400px auto;
   min-height: 100vh;
   display: grid;
 }
@@ -316,7 +316,7 @@ button.bQ9zA-4NLQ4-.bQ9zA-4NLQ4-:disabled:hover {
   font-size: 14px;
 }
 .blM4bFZXLIk- .CRU83TBl7pk- .BgdZCSG01tM- {
-  grid-template: "status_global btn" "status_china btn" / 50% 50%;
+  grid-template: "status_global btn" "status_china btn"/50% 50%;
   display: grid;
 }
 .blM4bFZXLIk- .CRU83TBl7pk- .BgdZCSG01tM- .r1aa-W9tGrs- {
@@ -335,7 +335,7 @@ button.bQ9zA-4NLQ4-.bQ9zA-4NLQ4-:disabled:hover {
 }
 .blM4bFZXLIk- .CRU83TBl7pk- ._2MeFppaz7Kg- {
   border-top: 1px solid #40464f;
-  grid-template: "status btn" / 50% 50%;
+  grid-template: "status btn"/50% 50%;
   margin-top: 8px;
   padding-top: 8px;
   display: grid;

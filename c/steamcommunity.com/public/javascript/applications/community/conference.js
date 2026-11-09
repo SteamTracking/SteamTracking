@@ -183,12 +183,12 @@ var _ = class _ {
       });
       let _ = _(),
         _ = _(`conference_calendar`, `application_config`);
-      _ && (await _.RegisterCalendarEventsAndModels(_)),
-        _.SetFilteredView((_) => !0);
+      (_ && (await _.RegisterCalendarEventsAndModels(_)),
+        _.SetFilteredView((_) => !0));
     }
     static m_singleton;
     static Get() {
-      return (_.m_singleton ||= new _()), _.m_singleton;
+      return ((_.m_singleton ||= new _()), _.m_singleton);
     }
     constructor() {}
   },
@@ -433,11 +433,11 @@ function _(_) {
       `#EventCalendar_GameSource_UnhideCuratorsDialog_CancelButton`,
     ),
     onOK: () => {
-      _().m_visibilityStore.SetGameSourceAllowed(_.k_ECurator, !0), _ && _();
+      (_().m_visibilityStore.SetGameSourceAllowed(_.k_ECurator, !0), _ && _());
     },
     onCancel: () => {
-      _().m_visibilityStore.SetCuratorUnhideOnFollowDialogDismissed(!0),
-        _ && _();
+      (_().m_visibilityStore.SetCuratorUnhideOnFollowDialogDismissed(!0),
+        _ && _());
     },
   });
 }
@@ -513,7 +513,7 @@ var _ = _((_) => {
         _ = _.unique_id,
         _ = _(),
         _ = _();
-      _.BIsGlobalCalendar() &&
+      (_.BIsGlobalCalendar() &&
         (_ &&
           _ & _.k_eLibrary &&
           (_().BIsGameSourceAllowed(_.k_ERecent) && _.appInfo
@@ -630,7 +630,7 @@ var _ = _((_) => {
             children: _,
           }),
           _,
-        );
+        ));
     },
     children: (0, _.jsx)(_, {}),
   });
@@ -714,10 +714,10 @@ var _ = _(_),
           className: _(`YoutubePreviewContainer`, _, _.imageClassnames),
           onClick: _
             ? (_) => {
-                _.onPlayerActivated && _.onPlayerActivated(),
+                (_.onPlayerActivated && _.onPlayerActivated(),
                   _(!0),
                   _.stopPropagation(),
-                  _.preventDefault();
+                  _.preventDefault());
               }
             : void 0,
           children: [
@@ -799,7 +799,7 @@ function _(_) {
     ),
     _ = _,
     _ = _;
-  _ === _ && (_ = void 0), _ === _ && (_ = void 0);
+  (_ === _ && (_ = void 0), _ === _ && (_ = void 0));
   let _ = _(_),
     _ = (0, _.jsx)(_, {
       setVideoPlayerReady: _,
@@ -842,8 +842,8 @@ function _(_) {
         children: (0, _.jsxs)(`div`, {
           className: _,
           onClick: (_) => {
-            _.RecordInteraction(_.k_eClickThrough),
-              !_() && (_(_), _.stopPropagation(), _.preventDefault());
+            (_.RecordInteraction(_.k_eClickThrough),
+              !_() && (_(_), _.stopPropagation(), _.preventDefault()));
           },
           children: [
             _ === 14 &&
@@ -960,7 +960,7 @@ function _(_) {
         controls: !0,
         imageClassnames: _,
         onPlayerActivated: () => {
-          _.RecordInteraction(_.k_ePlayedVideo), _(!0);
+          (_.RecordInteraction(_.k_ePlayedVideo), _(!0));
         },
         preloadYoutubeScripts: !0,
         playsInline: !0,
@@ -990,10 +990,10 @@ function _(_) {
   _.useEffect(() => {
     if (_) {
       let _ = new Image();
-      (_.src = _),
+      ((_.src = _),
         (_.onerror = () => {
           _(_.full);
-        });
+        }));
     }
   }, [_, _]);
   let [, _] = _(_),
@@ -1084,9 +1084,9 @@ var _ = _((_) => {
       } = _,
       _ = _(_, _.k_eStoreNewsHub, `allowRelative`),
       _ = (_) => {
-        _.startsWith(`http`) ? (window.location.href = _) : _.push(_),
+        (_.startsWith(`http`) ? (window.location.href = _) : _.push(_),
           _.stopPropagation(),
-          _.preventDefault();
+          _.preventDefault());
       },
       _ = _.GetEntityName(),
       _ = _.GetGameIcon(),
@@ -1174,7 +1174,7 @@ var _ = _((_) => {
     let _ = _.calendarEvent.GetSource(),
       _ = [],
       _ = _().m_visibilityStore;
-    _ & _.k_eLibrary && _.BIsGameSourceAllowed(_.k_ELibrary)
+    (_ & _.k_eLibrary && _.BIsGameSourceAllowed(_.k_ELibrary)
       ? _.push({
           _: _.k_eLibrary,
           name: `#EventCalendar_GameSource_inLibrary`,
@@ -1210,7 +1210,7 @@ var _ = _((_) => {
           name: `#EventCalendar_GameSource_followed`,
           ttip: `#EventCalendar_GameSource_EventExplanation_ttip_following`,
           styles: void 0,
-        });
+        }));
     let _ = _.map((_, _) => {
       let _ = _.calendarEvent.unique_id;
       return _(
@@ -1324,7 +1324,7 @@ function _(_) {
     [_, _] = _(_, null);
   return (
     _(_, (_, _) => {
-      _(_), _(_.InitFromClanID(_, _.EUNIVERSE).ConvertTo64BitString());
+      (_(_), _(_.InitFromClanID(_, _.EUNIVERSE).ConvertTo64BitString()));
     }),
     _.useEffect(() => {
       if (_ != null && _ != null) {
@@ -1341,7 +1341,7 @@ function _(_) {
           eventModel: _,
           showAppHeader: !0,
           closeModal: () => {
-            _(null), _(null), _(null);
+            (_(null), _(null), _(null));
           },
         })
       : null
@@ -1802,7 +1802,7 @@ function _(_) {
               (0, _.jsx)(`div`, {
                 className: _,
                 onClick: () => {
-                  _(!0), _(!1);
+                  (_(!0), _(!1));
                 },
                 children: _(`#Conference_Tab_Chat`),
               }),
@@ -1823,7 +1823,7 @@ function _(_) {
               (0, _.jsx)(`div`, {
                 className: _,
                 onClick: () => {
-                  _(!1), _(!0);
+                  (_(!1), _(!0));
                 },
                 children: _(`#Conference_Tab_QandA`),
               }),
@@ -1843,7 +1843,7 @@ function _(_) {
             children: (0, _.jsx)(`div`, {
               className: _,
               onClick: () => {
-                _(!0), _(!0);
+                (_(!0), _(!0));
               },
               children: (0, _.jsx)(_, {}),
             }),

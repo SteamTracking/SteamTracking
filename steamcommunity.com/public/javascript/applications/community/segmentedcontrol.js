@@ -77,7 +77,7 @@ function k(e) {
       (e, t) =>
         b((n) => {
           let r = { ...n };
-          return r[t]?.node === e && delete r[t], r;
+          return (r[t]?.node === e && delete r[t], r);
         }),
       [],
     ),
@@ -102,7 +102,7 @@ function k(e) {
         for (let a = 1; a <= r; a++) {
           let [o, s] = n[(((i + t * a) % r) + r) % r];
           if (!s.bDisabled) {
-            o !== h && _(o), e.stopPropagation(), e.preventDefault();
+            (o !== h && _(o), e.stopPropagation(), e.preventDefault());
             break;
           }
         }
@@ -156,7 +156,7 @@ function A(e) {
   let { value: h, onValueChange: g } = i,
     _ = t === h,
     y = (e) => {
-      e.stopPropagation(), e.preventDefault(), !(_ || r) && g(t);
+      (e.stopPropagation(), e.preventDefault(), !(_ || r) && g(t));
     },
     b = n === void 0 ? t : n;
   return (0, D.jsx)(a, {
@@ -176,7 +176,7 @@ function j(e) {
     children: t.map((e) => (0, D.jsx)(j.Item, { value: e, children: n(e) }, e)),
   });
 }
-(j.Item = A), (j.Root = k);
+((j.Item = A), (j.Root = k));
 function M(e) {
   let { radius: t, color: n } = e;
   return (0, D.jsx)(l, {

@@ -26,12 +26,12 @@ try {
   ).exports;
 } catch {}
 function _(_, _, _) {
-  (this.low = _ | 0), (this.high = _ | 0), (this.unsigned = !!_);
+  ((this.low = _ | 0), (this.high = _ | 0), (this.unsigned = !!_));
 }
-_.prototype.__isLong__,
+(_.prototype.__isLong__,
   Object.defineProperty(_.prototype, "__isLong__", {
     value: !0,
-  });
+  }));
 function _(_) {
   return (_ && _.__isLong__) === !0;
 }
@@ -89,9 +89,9 @@ function _(_, _, _) {
     if (_ < 8) {
       var _ = _(_(_, _));
       _ = _.mul(_).add(_(_));
-    } else (_ = _.mul(_)), (_ = _.add(_(_)));
+    } else ((_ = _.mul(_)), (_ = _.add(_(_))));
   }
-  return (_.unsigned = _), _;
+  return ((_.unsigned = _), _);
 }
 _.fromString = _;
 function _(_, _) {
@@ -125,7 +125,7 @@ _.MAX_UNSIGNED_VALUE = _;
 var _ = _(0, -2147483648, !1);
 _.MIN_VALUE = _;
 var _ = _.prototype;
-(_.toInt = function () {
+((_.toInt = function () {
   return this.unsigned ? this.low >>> 0 : this.low;
 }),
   (_.toNumber = function () {
@@ -145,11 +145,11 @@ var _ = _.prototype;
       }
       return `-` + this.neg().toString(_);
     }
-    for (var _ = _(_(_, 6), this.unsigned), _ = this, _ = ``; ; ) {
+    for (var _ = _(_(_, 6), this.unsigned), _ = this, _ = ``; ;) {
       var _ = _.div(_),
         _ = (_.sub(_.mul(_)).toInt() >>> 0).toString(_);
       if (((_ = _), _.isZero())) return _ + _;
-      for (; _.length < 6; ) _ = `0` + _;
+      for (; _.length < 6;) _ = `0` + _;
       _ = `` + _ + _;
     }
   }),
@@ -283,7 +283,7 @@ var _ = _.prototype;
     );
   }),
   (_.subtract = function (_) {
-    return _(_) || (_ = _(_)), this.add(_.neg());
+    return (_(_) || (_ = _(_)), this.add(_.neg()));
   }),
   (_.sub = _.subtract),
   (_.multiply = function (_) {
@@ -383,7 +383,7 @@ var _ = _.prototype;
       if (_.isNegative()) return this.div(_.neg()).neg();
       _ = _;
     }
-    for (_ = this; _.gte(_); ) {
+    for (_ = this; _.gte(_);) {
       _ = Math.max(1, Math.floor(_.toNumber() / _.toNumber()));
       for (
         var _ = Math.ceil(Math.log(_) / Math.LN2),
@@ -392,8 +392,8 @@ var _ = _.prototype;
           _ = _.mul(_);
         _.isNegative() || _._(_);
       )
-        (_ -= _), (_ = _(_, this.unsigned)), (_ = _.mul(_));
-      _.isZero() && (_ = _), (_ = _.add(_)), (_ = _.sub(_));
+        ((_ -= _), (_ = _(_, this.unsigned)), (_ = _.mul(_)));
+      (_.isZero() && (_ = _), (_ = _.add(_)), (_ = _.sub(_)));
     }
     return _;
   }),
@@ -609,7 +609,7 @@ var _ = _.prototype;
       return (
         (BigInt(this.unsigned ? this.high >>> 0 : this.high) << BigInt(32)) | _
       );
-    }));
+    })));
 var _ = class _ {
   m_ulSteamID = _.UZERO;
   constructor(_ = 0, _, _, _) {
@@ -771,4 +771,3 @@ var _ = class _ {
     this.m_ulSteamID = new _(_, _, !0);
   }
 };
-export { _, _ };

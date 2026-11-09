@@ -115,7 +115,7 @@ function O(e, t, n, r) {
     queryFn: async () => {
       let i = await e.fetchQuery(Ee(t, n, r)),
         a = new Map();
-      return i.property_schemas.forEach((e) => a.set(e.id, e)), a;
+      return (i.property_schemas.forEach((e) => a.set(e.id, e)), a);
     },
   };
 }
@@ -131,7 +131,7 @@ function Ee(e, t, n) {
   };
 }
 var k = {};
-(k.arabic = () => h(() => import(`./economy_arabic.js`), [], import.meta.url)),
+((k.arabic = () => h(() => import(`./economy_arabic.js`), [], import.meta.url)),
   (k.brazilian = () =>
     h(() => import(`./economy_brazilian.js`), [], import.meta.url)),
   (k.bulgarian = () =>
@@ -187,7 +187,7 @@ var k = {};
   (k.ukrainian = () =>
     h(() => import(`./economy_ukrainian.js`), [], import.meta.url)),
   (k.vietnamese = () =>
-    h(() => import(`./economy_vietnamese.js`), [], import.meta.url));
+    h(() => import(`./economy_vietnamese.js`), [], import.meta.url)));
 async function De(e) {
   if (k[e]) return await k[e]();
 }
@@ -446,12 +446,12 @@ function V(e, t, n, r, i) {
     n?.asset_properties &&
       n.asset_properties.forEach((e) => {
         let t = ``;
-        e.float_value === void 0
+        (e.float_value === void 0
           ? e.int_value === void 0
             ? e.string_value !== void 0 && (t = e.string_value)
             : (t = e.int_value.toString())
           : (t = e.float_value.toString()),
-          (a = a.replace(`%propid:${e.propertyid}%`, t));
+          (a = a.replace(`%propid:${e.propertyid}%`, t)));
       }),
     (a = a.replace(/%propid:[0-9]+%/, ``)),
     a
@@ -1013,13 +1013,13 @@ function wt(e, t, n, r = S.GetAssetClassInfo) {
 function Tt(e, t, n, r = S.GetAssetClassInfo) {
   return new St.default(async (i) => {
     let a = pe.Init(xe);
-    a.Body().set_language(n),
+    (a.Body().set_language(n),
       a.Body().set_appid(t),
       i.forEach((e) => {
         let [t, n] = e.split(`_`),
           r = a.Body().add_classes();
-        r.set_classid(t), r.set_instanceid(n);
-      });
+        (r.set_classid(t), r.set_instanceid(n));
+      }));
     let o = await r(e, a);
     if (o.GetEResult() != 1)
       throw `Error loading econ items: ${o.GetErrorMessage()}`;
@@ -1034,7 +1034,7 @@ function Z(e) {
       let t = r.current;
       if (t && e.deltaY != 0) {
         let n = t.scrollTop;
-        t.scrollBy({ top: e.deltaY }), t.scrollTop != n && e.preventDefault();
+        (t.scrollBy({ top: e.deltaY }), t.scrollTop != n && e.preventDefault());
       }
     }, []),
     o = me(`wheel`, a, { passive: !1 }),

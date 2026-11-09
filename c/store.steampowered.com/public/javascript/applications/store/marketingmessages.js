@@ -13,7 +13,7 @@ function _(_) {
     _ = _.useMemo(() => (new URLSearchParams(_.search), {}), [_.search]);
   return (
     _.useEffect(() => {
-      _(`marketingmessage_config`, `application_config`), _({});
+      (_(`marketingmessage_config`, `application_config`), _({}));
     }, [_]),
     _
       ? (0, _.jsxs)(_.Provider, {
@@ -72,7 +72,7 @@ function _(_) {
 }
 var _;
 function _(_) {
-  return (_ ||= new _(_)), _;
+  return ((_ ||= new _(_)), _);
 }
 function _() {
   let [_, _] = _.useState(null),

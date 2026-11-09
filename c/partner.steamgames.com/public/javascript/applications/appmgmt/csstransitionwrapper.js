@@ -153,7 +153,7 @@ var _ = _(_()),
                 status: _,
               },
               function () {
-                _.props.onEntering(_, _),
+                (_.props.onEntering(_, _),
                   _.onTransitionEnd(_, function () {
                     _.safeSetState(
                       {
@@ -163,7 +163,7 @@ var _ = _(_()),
                         _.props.onEntered(_, _);
                       },
                     );
-                  });
+                  }));
               },
             ));
       }),
@@ -187,7 +187,7 @@ var _ = _(_()),
                 status: _,
               },
               function () {
-                _.props.onExiting(_),
+                (_.props.onExiting(_),
                   _.onTransitionEnd(_.exit, function () {
                     _.safeSetState(
                       {
@@ -197,7 +197,7 @@ var _ = _(_()),
                         _.props.onExited(_);
                       },
                     );
-                  });
+                  }));
               },
             ));
       }),
@@ -206,7 +206,7 @@ var _ = _(_()),
           (this.nextCallback.cancel(), (this.nextCallback = null));
       }),
       (_.safeSetState = function (_, _) {
-        (_ = this.setNextCallback(_)), this.setState(_, _);
+        ((_ = this.setNextCallback(_)), this.setState(_, _));
       }),
       (_.setNextCallback = function (_) {
         var _ = this,
@@ -245,7 +245,7 @@ var _ = _(_()),
         if (_ === `unmounted`) return null;
         var _ = this.props,
           _ = _.children;
-        _._,
+        (_._,
           _.mountOnEnter,
           _.unmountOnExit,
           _.appear,
@@ -259,7 +259,7 @@ var _ = _(_()),
           _.onExit,
           _.onExiting,
           _.onExited,
-          _.nodeRef;
+          _.nodeRef);
         var _ = _(_, [
           `children`,
           `in`,
@@ -291,9 +291,9 @@ var _ = _(_()),
       _
     );
   })(_.Component);
-(_.contextType = _), (_.propTypes = {});
+((_.contextType = _), (_.propTypes = {}));
 function _() {}
-(_.defaultProps = {
+((_.defaultProps = {
   _: !1,
   mountOnEnter: !1,
   unmountOnExit: !1,
@@ -311,7 +311,7 @@ function _() {}
   (_.EXITED = _),
   (_.ENTERING = _),
   (_.ENTERED = _),
-  (_.EXITING = _);
+  (_.EXITING = _));
 var _ = function (_, _) {
     return (
       _ &&
@@ -346,42 +346,42 @@ var _ = function (_, _) {
           var _ = _.resolveArguments(_, _),
             _ = _[0],
             _ = _[1];
-          _.removeClasses(_, `exit`),
+          (_.removeClasses(_, `exit`),
             _.addClass(_, _ ? `appear` : `enter`, `base`),
-            _.props.onEnter && _.props.onEnter(_, _);
+            _.props.onEnter && _.props.onEnter(_, _));
         }),
         (_.onEntering = function (_, _) {
           var _ = _.resolveArguments(_, _),
             _ = _[0],
             _ = _[1] ? `appear` : `enter`;
-          _.addClass(_, _, `active`),
-            _.props.onEntering && _.props.onEntering(_, _);
+          (_.addClass(_, _, `active`),
+            _.props.onEntering && _.props.onEntering(_, _));
         }),
         (_.onEntered = function (_, _) {
           var _ = _.resolveArguments(_, _),
             _ = _[0],
             _ = _[1] ? `appear` : `enter`;
-          _.removeClasses(_, _),
+          (_.removeClasses(_, _),
             _.addClass(_, _, `done`),
-            _.props.onEntered && _.props.onEntered(_, _);
+            _.props.onEntered && _.props.onEntered(_, _));
         }),
         (_.onExit = function (_) {
           var _ = _.resolveArguments(_)[0];
-          _.removeClasses(_, `appear`),
+          (_.removeClasses(_, `appear`),
             _.removeClasses(_, `enter`),
             _.addClass(_, `exit`, `base`),
-            _.props.onExit && _.props.onExit(_);
+            _.props.onExit && _.props.onExit(_));
         }),
         (_.onExiting = function (_) {
           var _ = _.resolveArguments(_)[0];
-          _.addClass(_, `exit`, `active`),
-            _.props.onExiting && _.props.onExiting(_);
+          (_.addClass(_, `exit`, `active`),
+            _.props.onExiting && _.props.onExiting(_));
         }),
         (_.onExited = function (_) {
           var _ = _.resolveArguments(_)[0];
-          _.removeClasses(_, `exit`),
+          (_.removeClasses(_, `exit`),
             _.addClass(_, `exit`, `done`),
-            _.props.onExited && _.props.onExited(_);
+            _.props.onExited && _.props.onExited(_));
         }),
         (_.resolveArguments = function (_, _) {
           return _.props.nodeRef ? [_.props.nodeRef.current, _] : [_, _];
@@ -405,16 +405,19 @@ var _ = function (_, _) {
       (_.addClass = function (_, _, _) {
         var _ = this.getClassNames(_)[_ + `ClassName`],
           _ = this.getClassNames(`enter`).doneClassName;
-        _ === `appear` && _ === `done` && _ && (_ += ` ` + _),
+        (_ === `appear` && _ === `done` && _ && (_ += ` ` + _),
           _ === `active` && _ && _(_),
-          _ && ((this.appliedClasses[_][_] = _), _(_, _));
+          _ && ((this.appliedClasses[_][_] = _), _(_, _)));
       }),
       (_.removeClasses = function (_, _) {
         var _ = this.appliedClasses[_],
           _ = _.base,
           _ = _.active,
           _ = _.done;
-        (this.appliedClasses[_] = {}), _ && _(_, _), _ && _(_, _), _ && _(_, _);
+        ((this.appliedClasses[_] = {}),
+          _ && _(_, _),
+          _ && _(_, _),
+          _ && _(_, _));
       }),
       (_.render = function () {
         var _ = this.props;
@@ -435,10 +438,10 @@ var _ = function (_, _) {
       _
     );
   })(_.Component);
-(_.defaultProps = {
+((_.defaultProps = {
   classNames: ``,
 }),
-  (_.propTypes = {});
+  (_.propTypes = {}));
 var _ = _();
 function _(_) {
   let { children: _, ..._ } = _,
@@ -449,4 +452,3 @@ function _(_) {
     children: _.children(_),
   });
 }
-export { _, _, _ };

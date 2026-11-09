@@ -66,7 +66,7 @@ function s(e, t, n, s) {
             .Get()
             .QueueStoreItemRequest(e, t, n)
             .then((t) => {
-              !i?.token.reason && c.current === e && f(t == 1), u();
+              (!i?.token.reason && c.current === e && f(t == 1), u());
             })),
         () => i?.cancel(`useStoreItemCache: unmounting`)
       );

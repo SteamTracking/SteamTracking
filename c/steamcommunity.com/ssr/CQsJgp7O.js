@@ -1,7 +1,7 @@
 function _(_, _) {
   let _ = _.toLowerCase().replace(/[^\p{L}\p{N}\p{Z}]/gu, ``),
     _ = _[_];
-  return _ && (_ = _.replace(_, ``)), _.trim();
+  return (_ && (_ = _.replace(_, ``)), _.trim());
 }
 function _(_, _) {
   let _ = _().languages[0].strLanguage,
@@ -81,7 +81,7 @@ function _(_, _, _) {
 var _ = (0, _.createContext)(null);
 function _() {
   let _ = (0, _.useContext)(_);
-  return _(_, `No filter config provider found!`), _;
+  return (_(_, `No filter config provider found!`), _);
 }
 function _(_, _) {
   return _.bSteamItems
@@ -536,8 +536,8 @@ function _(_) {
             };
         }
         for (let _ of _)
-          _[`${_.facet}_${_.tag}`] || (_ = _(_, _.facet, _.tag, !0)),
-            delete _[`${_.facet}_${_.tag}`];
+          (_[`${_.facet}_${_.tag}`] || (_ = _(_, _.facet, _.tag, !0)),
+            delete _[`${_.facet}_${_.tag}`]);
         for (let _ of Object.values(_)) _ = _(_, _.facet, _.tag, !1);
         _(_, !0);
       };
@@ -576,7 +576,7 @@ function _(_) {
         state: _,
       });
     default:
-      return _(_, `Unhandled facet field type: "${_.fieldType}"`), null;
+      return (_(_, `Unhandled facet field type: "${_.fieldType}"`), null);
   }
 }
 function _(_, _, _, _, _, _) {
@@ -587,29 +587,29 @@ function _(_, _, _, _, _, _) {
     _ = _.tags || {};
   for (let _ of Object.keys(_)) {
     let _;
-    _ && (_ = (_.counts[_.name] && _.counts[_.name][_]) ?? 0), (_ += _ ?? 0);
+    (_ && (_ = (_.counts[_.name] && _.counts[_.name][_]) ?? 0), (_ += _ ?? 0));
     let _ = _(_.name, _, _[_], _);
     if (_) {
-      if (!_[_.strLabel]) _.push(_), (_[_.strLabel] = _);
+      if (!_[_.strLabel]) (_.push(_), (_[_.strLabel] = _));
       else if (_) {
         let _ = _[_.strLabel],
           _ = typeof _.tag == `string` ? [_.tag] : _.tag,
           _ = typeof _.tag == `string` ? [_.tag] : _.tag;
-        (_.tag = _.concat(..._)),
+        ((_.tag = _.concat(..._)),
           _.matches !== void 0 &&
             _.matches !== void 0 &&
             (_.matches = (_.matches ?? 0) + (_.matches ?? 0)),
-          _.color === void 0 && _.color && (_.color = _.color);
+          _.color === void 0 && _.color && (_.color = _.color));
       } else {
         let _;
-        do (_ = `${_.strLabel} (?${_}?)`), _++;
+        do ((_ = `${_.strLabel} (?${_}?)`), _++);
         while (_[_]);
         _(!1, `Forced to assign a unique label to option`, _, _, _[_.strLabel]);
         let _ = {
           ..._,
           strLabel: _,
         };
-        _.push(_), (_[_.strLabel] = _);
+        (_.push(_), (_[_.strLabel] = _));
       }
     }
   }
@@ -646,7 +646,7 @@ function _(_, _, _, _) {
     strLabel: _.localized_name,
     matches: _,
   };
-  return _.color && (_.color = `#${_.color}`), _;
+  return (_.color && (_.color = `#${_.color}`), _);
 }
 function _(_) {
   let { state: _, onStateChange: _ } = _;
@@ -677,7 +677,7 @@ function _(_) {
     _ = [0, _],
     _ = (_) => (_) => {
       let _ = [..._];
-      (_[_] = _(_, _[0], _[1])), _(_), _ && _(_), _(!0);
+      ((_[_] = _(_, _[0], _[1])), _(_), _ && _(_), _(!0));
     },
     {
       checkMin: _,
@@ -6696,11 +6696,11 @@ function _(_) {
       };
       if (_.length > 0) {
         let _ = _.some((_) => _.is_artificial);
-        (_[_.internal_type] = {}),
+        ((_[_.internal_type] = {}),
           _.forEach((_) => {
             (!_ || _.is_artificial) &&
               (_[_.internal_type][_.internal_facet] = !0);
-          });
+          }));
       } else delete _[_.internal_type];
       let _ = {
         ..._,
@@ -7271,7 +7271,7 @@ var _ = {
 function _(_) {
   let _ = {},
     _ = (_, _) => {
-      _[_] || (_[_] = []), _[_].push(_);
+      (_[_] || (_[_] = []), _[_].push(_));
     },
     _ = _(),
     _ = [];
@@ -7320,20 +7320,20 @@ function _(_) {
     } else {
       let _ = _[_.facet],
         _ = _(_, `select`, !1);
-      _(
+      (_(
         _.rgOptions.every((_) => typeof _.tag == `string`),
         `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${_.strLabel}" facet.`,
       ),
         _.push({
           facet: _,
           img: ``,
-        });
+        }));
       for (let _ of Object.keys(_.tags || {})) _(_.name, _);
     }
   let _ = [];
   for (let _ of _) {
     let { facet: _, tag: _ } = _;
-    _(_, _),
+    (_(_, _),
       _.push({
         fieldType: `togglebutton`,
         facet: _,
@@ -7345,7 +7345,7 @@ function _(_) {
           },
           _,
         ),
-      });
+      }));
   }
   let _ = {
       fieldType: `select`,
@@ -7389,11 +7389,11 @@ function _(_) {
             let _ = _.tags[_];
             if (!_) continue;
             let _ = _(_.name, _, _);
-            _(
+            (_(
               typeof _.tag == `string`,
               `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${_.name}" facet.`,
             ),
-              _.push(_);
+              _.push(_));
           }
           _.push({
             facet: {
@@ -7503,13 +7503,13 @@ function _(_) {
       _ = [];
     for (let _ of _) {
       let _ = _.facet;
-      _.has(_) || _.push(_), _.set(_, !0);
+      (_.has(_) || _.push(_), _.set(_, !0));
     }
     let _ = () =>
         [..._.map((_) => _.facet), ..._, _, ..._.map((_) => _.facet)].reduce(
           (_, _) => {
             let _ = _(_);
-            for (let [_, _] of _) _[_] || (_[_] = {}), (_[_][_] = !0);
+            for (let [_, _] of _) (_[_] || (_[_] = {}), (_[_][_] = !0));
             return _;
           },
           {},
@@ -7517,7 +7517,7 @@ function _(_) {
       _ = null;
     for (let _ of Object.keys(_.facets))
       for (let _ of Object.keys(_.facets[_]))
-        (_ ||= _()),
+        ((_ ||= _()),
           (_[_] && _[_][_]) ||
             ((_ ||= {
               ..._,
@@ -7525,8 +7525,8 @@ function _(_) {
                 ..._.facets,
               },
             }),
-            (_ = _(_, _, _, !1)));
-    _(_), _ && _(_, !0);
+            (_ = _(_, _, _, !1))));
+    (_(_), _ && _(_, !0));
   }, [_, _, _, _, _, _]);
   let _ = (_ = [], _ = []) => {
       let _ = {
@@ -7557,11 +7557,11 @@ function _(_) {
             _.facets[_.facet][_.tag] &&
             delete _.facets[_.facet][_.tag];
       for (let _ of _)
-        _.facets[_.facet] || (_.facets[_.facet] = {}),
+        (_.facets[_.facet] || (_.facets[_.facet] = {}),
           (_.facets[_.facet] = {
             ..._.facets[_.facet],
             [_.tag]: !0,
-          });
+          }));
       _(_, !0);
     },
     _ = (_, _) => _(_, _),
@@ -7734,7 +7734,7 @@ var _ = _.forwardRef(function (_, _) {
     } = _,
     _ = _
       ? (_) => {
-          _.stopPropagation(), _.preventDefault(), _();
+          (_.stopPropagation(), _.preventDefault(), _());
         }
       : void 0,
     _ = (0, _.jsxs)(_, {
@@ -8216,7 +8216,7 @@ function _(_) {
     case `togglegrid`:
       return _.rgToggles.map(({ facet: _, tag: _ }) => [_, _]);
     default:
-      return _(_, `Unhandled facet type`), [];
+      return (_(_, `Unhandled facet type`), []);
   }
 }
 function _(_, _ = !1) {
@@ -8286,34 +8286,3 @@ function _(_, _ = {}) {
     `${_.COMMUNITY_BASE_URL}market/${_}${_ ? `?` + _ : ``}`
   );
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

@@ -726,7 +726,7 @@ var _ = class _ {
     let _ = _.ComputeLinkPrefix(_.domain, _.controller, _.method, _.submethod);
     _ = _ ?? _.depth ?? null;
     let _ = _.EncodeEventComponent(_.feature);
-    return _ && ((_ += `_` + _), _ && (_ += `_` + _)), _;
+    return (_ && ((_ += `_` + _), _ && (_ += `_` + _)), _);
   }
   static GetCuratorClanIDParam(_) {
     return _.curator_clanid ?? null;
@@ -742,7 +742,7 @@ var _ = class _ {
         _.origin + _.pathname + `?` + _.toString() + _.hash
       );
     } catch (_) {
-      return console.error(_, _), _;
+      return (console.error(_, _), _);
     }
   }
   static ComputeLinkPrefix(_, _, _, _) {
@@ -859,4 +859,3 @@ function _(_, _, _, _) {
     _ = _.GetCuratorClanIDParam(_);
   return _.AddNavParamToURL(_, _, _);
 }
-export { _, _, _, _, _, _, _, _, _, _ };

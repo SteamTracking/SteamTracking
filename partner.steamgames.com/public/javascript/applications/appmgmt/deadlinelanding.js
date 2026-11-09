@@ -216,8 +216,8 @@ function H() {
   D.useEffect(() => () => window.clearTimeout(r.current), []);
   let i = (e) => {
       let n = Number(e.currentTarget.value);
-      window.clearTimeout(r.current),
-        (r.current = window.setTimeout(() => t(n), 1e3));
+      (window.clearTimeout(r.current),
+        (r.current = window.setTimeout(() => t(n), 1e3)));
     },
     a = D.useMemo(() => {
       let e = new Map();
@@ -231,10 +231,10 @@ function H() {
           })
           ?.forEach((t) => {
             let n;
-            e.has(t.data.gid)
+            (e.has(t.data.gid)
               ? (n = e.get(t.data.gid))
               : ((n = []), e.set(t.data.gid, n)),
-              n.push(t.data);
+              n.push(t.data));
           }),
         e
       );
@@ -382,9 +382,9 @@ function q(e, t) {
     queryFn: async () => {
       if (t && t < 0) return;
       let r = new FormData();
-      r.append(`type`, e.toString()),
+      (r.append(`type`, e.toString()),
         r.append(`sessionid`, n()),
-        t && r.append(`partnerid`, t.toString());
+        t && r.append(`partnerid`, t.toString()));
       let i = `${a.PARTNER_BASE_URL}deadlines/ajaxgetdeadlines`,
         o = await L.default.post(i, r, { withCredentials: !0 });
       if (o?.status == 200) return o.data;

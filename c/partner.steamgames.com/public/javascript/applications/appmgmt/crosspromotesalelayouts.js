@@ -143,4 +143,3 @@ function _(_, _) {
       strSaleURL: _(_) ?? void 0,
     };
 }
-export { _ };

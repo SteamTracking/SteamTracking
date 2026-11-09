@@ -411,9 +411,9 @@ function Nr(e) {
 var Pr = 100;
 async function Fr(e, t) {
   let n = new URLSearchParams();
-  n.set(`event_gids`, [...new Set(e)].sort().join(`,`)),
+  (n.set(`event_gids`, [...new Set(e)].sort().join(`,`)),
     n.set(`lang_list`, Ie(t)),
-    n.set(`origin`, location.origin);
+    n.set(`origin`, location.origin));
   let r =
       L.STORE_BASE_URL + `events/ajaxgetbatchedpartnerevent/?` + n.toString(),
     i = await fetch(r);
@@ -672,7 +672,7 @@ var ni = i((e) => {
       strLinkButtonClasses: n,
       bSmallButton: r,
     } = ei(t);
-    e &&
+    (e &&
       (w =
         f && c
           ? (0, W.jsx)(Be, { label: e, shown: !!s })
@@ -685,7 +685,7 @@ var ni = i((e) => {
                 }),
               })
             : (0, W.jsx)(y, { url: v, className: n, children: e })),
-      (S = (0, W.jsx)(y, { url: v, bFocusable: !w, children: S }));
+      (S = (0, W.jsx)(y, { url: v, bFocusable: !w, children: S })));
   }
   return (0, W.jsxs)(`div`, {
     className: B(
@@ -948,15 +948,15 @@ async function Ni(e, t, n, r) {
   let i = zn.Init(Qe);
   for (let e of n.rgSections) {
     let t = i.Body().add_sections();
-    t.set_sort(e.eSort),
+    (t.set_sort(e.eSort),
       t.set_min_items(e.nMinItems),
       t.set_randomize(e.bRandomize),
       t.set_include_packages(!!e.bIncludePackages),
       t.set_include_bundles(!!e.bIncludeBundles),
       t.set_include_dlc(e.bIncludeDLC),
-      t.set_min_discount_percent(e.nMinDiscountPercent);
+      t.set_min_discount_percent(e.nMinDiscountPercent));
   }
-  i.Body().set_context(sn(t)),
+  (i.Body().set_context(sn(t)),
     i.Body().set_filters(Ln(n.storePageFilter, !1)),
     n.strStoreFilterJSON &&
       i
@@ -969,7 +969,7 @@ async function Ni(e, t, n, r) {
         .Body()
         .filters(!0)
         .add_store_filters()
-        .set_filter_json(n.strTabStoreFilterJSON);
+        .set_filter_json(n.strTabStoreFilterJSON));
   let a = await Un.GetItemsByUserRecommendedTags(e, i);
   if (a.GetEResult() != 1)
     throw Error(`GetItemsByUserRecommendedTags failed: ${a.GetEResult()}`);
@@ -1856,7 +1856,7 @@ function Ia(e, t, r) {
   }, [e, t, a, E, re, A, s]);
 }
 function La(e) {
-  return Ia(e.event, e.section), null;
+  return (Ia(e.event, e.section), null);
 }
 function Ra(e, t) {
   return e == null || e == null || !Ha(t)
@@ -2164,13 +2164,13 @@ function mo(e, t) {
   {
     let n = i.single_item_style ? i.single_item_style : ie,
       a;
-    `overrideNavigation` in e &&
+    (`overrideNavigation` in e &&
       (a = (t) => (
         e.overrideNavigation(t),
         t && (t.preventDefault(), t.stopPropagation()),
         !1
       )),
-      pe() && (n == `library` || n == `animated`) && (n = `bordered`);
+      pe() && (n == `library` || n == `animated`) && (n = `bordered`));
     let o = B({
       [x]: !l && n == `bordered`,
       [m]: l && n == `bordered`,
@@ -2306,7 +2306,7 @@ function _o(e, t, n, r, i, a, o, s, c, l) {
   else {
     let e = o(f),
       r = !0;
-    if (p) (e = a), (r = w);
+    if (p) ((e = a), (r = w));
     else if (f == 0 && e > 0) {
       let t = 0,
         r = 0;
@@ -2330,25 +2330,25 @@ function _o(e, t, n, r, i, a, o, s, c, l) {
           if (h) return { content: null, bAdditionalContent: !1 };
           r = Math.max(a === `tall` ? 3 : 2, i);
         }
-        s.push(
+        (s.push(
           (0, W.jsx)(
             yo,
             { nMaxItems: r, nItems: i, children: v(n, l, l + i, r, a) },
             `Row_` + t,
           ),
         ),
-          (l += i);
+          (l += i));
       }
       if (r || (l >= n.length && i.length === 0)) break;
       let o = i.length || void 0;
-      i.push(
+      (i.push(
         (0, W.jsx)(
           `div`,
           { className: S, children: (0, W.jsx)(Tn, { depth: o, children: s }) },
           `Page_${t}`,
         ),
       ),
-        (s = []);
+        (s = []));
     }
     i.length == 0
       ? ((b = n.length > l),
@@ -2418,10 +2418,10 @@ var yo = (e) => {
     o = null;
   if (r > 0) {
     let e = Math.floor((r + 1) / 2);
-    (a = []), (o = []);
+    ((a = []), (o = []));
     for (let t = 0; t < e; t++)
-      a.push((0, W.jsx)(`div`, {}, `front_` + t)),
-        o.push((0, W.jsx)(`div`, {}, `back_` + t));
+      (a.push((0, W.jsx)(`div`, {}, `front_` + t)),
+        o.push((0, W.jsx)(`div`, {}, `back_` + t)));
   }
   return (0, W.jsxs)(`div`, {
     className: B(
@@ -2580,7 +2580,7 @@ function To(e) {
     },
     a = Ka(n, i.nShowAdditionalRows),
     o = Wa(Q(n, r), a, i.capsules?.length ?? 0);
-  return o < a && P(n) && (i.nShowAdditionalRows -= a - o), i;
+  return (o < a && P(n) && (i.nShowAdditionalRows -= a - o), i);
 }
 var Eo = `NQebVMQULto-`;
 function Do(e) {

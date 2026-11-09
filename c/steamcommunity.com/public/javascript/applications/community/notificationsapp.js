@@ -131,7 +131,7 @@ var _ = _(_()),
       return _.bsubscribed;
     }
     ProcessHash(_) {
-      this.rgFilterState.clear(),
+      (this.rgFilterState.clear(),
         this.commentFilter.setItemTypes.clear(),
         _ &&
           _.split(`,`).forEach((_) => {
@@ -141,26 +141,26 @@ var _ = _(_()),
                 this.rgFilterState.has(3) &&
                 this.commentFilter.setItemTypes.add(parseInt(_))
               : this.rgFilterState.set(this.k_rgFilterCheckboxes[_].type, !0);
-          });
+          }));
     }
     SetFilter(_, _, _) {
-      _ &&
+      (_ &&
         (this.rgFilterState.clear(), this.commentFilter.setItemTypes.clear()),
         _ &&
           (this.rgFilterState.set(_, _),
           _ == 3 && !_ && this.commentFilter.setItemTypes.clear()),
-        this.UpdateLocationHash();
+        this.UpdateLocationHash());
     }
     SetCommentFilter(_) {
-      (this.commentFilter = _),
+      ((this.commentFilter = _),
         (this.commentFilter.fnFilter = this.k_rgCommentFilters.find(
           (_) => _.type == _.type,
         )?.fnFilter),
-        this.UpdateLocationHash();
+        this.UpdateLocationHash());
     }
     UpdateLocationHash() {
       let _ = ``;
-      this.rgFilterState.forEach((_, _) => {
+      (this.rgFilterState.forEach((_, _) => {
         _ &&
           (_ +=
             (_ ? `,` : ``) +
@@ -174,11 +174,11 @@ var _ = _(_()),
           {},
           null,
           window.location.pathname + (_ ? `#` + _ : ``),
-        );
+        ));
     }
   };
-_([_], _.prototype, `rgFilterState`, void 0),
-  _([_], _.prototype, `commentFilter`, void 0);
+(_([_], _.prototype, `rgFilterState`, void 0),
+  _([_], _.prototype, `commentFilter`, void 0));
 function _() {
   _(() => [..._.rgFilterState]);
   let _ = 0;
@@ -269,7 +269,7 @@ function _(_) {
   }, [_]);
   let _ = _();
   (0, _.useEffect)(() => {
-    _.setTransport(_), _.m_nUnviewed > 0 && _.MarkAllItemsViewed();
+    (_.setTransport(_), _.m_nUnviewed > 0 && _.MarkAllItemsViewed());
   }, [_]);
   let _ = _(`notifications`, `application_config`);
   return (
@@ -532,10 +532,10 @@ function _(_) {
   });
 }
 function _(_, _, _) {
-  _.read ||
+  (_.read ||
     (_ && _.button != 0 && _.button != 1) ||
     _.MarkItemRead(_.notification_id),
-    _();
+    _());
 }
 function _(_) {
   let { rollup: _ } = _;

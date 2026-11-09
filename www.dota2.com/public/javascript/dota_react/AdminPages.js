@@ -6,7 +6,7 @@
     {
       57200: (Re, ke, y) => {
         "use strict";
-        y.r(ke), y.d(ke, { default: () => z });
+        (y.r(ke), y.d(ke, { default: () => z }));
         var e = y(69500),
           fe = y(2095),
           R = y(84485),
@@ -54,7 +54,7 @@
                         {
                           className: r().HeroSelector,
                           onClick: (p) => {
-                            i.fnSetSelectedHero(s.id), p.stopPropagation();
+                            (i.fnSetSelectedHero(s.id), p.stopPropagation());
                           },
                           children: [
                             (0, e.jsx)("div", {
@@ -90,7 +90,7 @@
               }
             }, [i, E]);
             const f = (F) => {
-                S(!1), F != -1 && i.fnSetSelectedHero(F);
+                (S(!1), F != -1 && i.fnSetSelectedHero(F));
               },
               L = C.data,
               k = s.data,
@@ -181,7 +181,7 @@
                           {
                             className: r().ItemSelector,
                             onClick: (p) => {
-                              i.fnSetSelectedItem(0), p.stopPropagation();
+                              (i.fnSetSelectedItem(0), p.stopPropagation());
                             },
                             children: [
                               (0, e.jsx)("div", { className: r().Icon }),
@@ -214,7 +214,8 @@
                             {
                               className: r().ItemSelector,
                               onClick: (f) => {
-                                i.fnSetSelectedItem(p.id), f.stopPropagation();
+                                (i.fnSetSelectedItem(p.id),
+                                  f.stopPropagation());
                               },
                               children: [
                                 (0, e.jsx)("div", {
@@ -253,7 +254,7 @@
               E = (0, R.mU)(i.nItemID),
               C = (0, w.R7)().ownerWindow,
               s = (L) => {
-                S(!1), L != -1 && i.fnSetSelectedItem(L);
+                (S(!1), L != -1 && i.fnSetSelectedItem(L));
               },
               p = E.data,
               f = C.document?.body;
@@ -527,33 +528,33 @@
                 S.push(I.J.dotaplustester(i.strFeature, Se(_)));
               },
               F = (_) => {
-                console.log("1"), (E = _), H();
+                (console.log("1"), (E = _), H());
               },
               te = (_) => {
-                console.log("3"), (C = _), H();
+                (console.log("3"), (C = _), H());
               },
               Y = (_, W) => {
-                console.log("4"), (s[_] = W), H();
+                (console.log("4"), (s[_] = W), H());
               },
               b = (_, W) => {
-                console.log("6"), (p[_] = W), H();
+                (console.log("6"), (p[_] = W), H());
               },
               U = (_) => {
-                console.log("8"), (L = _), H();
+                (console.log("8"), (L = _), H());
               },
               J = (_) => {
-                console.log("9"), (k = _), H();
+                (console.log("9"), (k = _), H());
               },
               ae = (_) => {
-                console.log("10"), (f[f.indexOf(0)] = _), H();
+                (console.log("10"), (f[f.indexOf(0)] = _), H());
               },
               se = () => {
-                console.log("11"),
+                (console.log("11"),
                   (f = [
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                   ]),
-                  H();
+                  H());
               },
               Z = (0, R.k4)(E, C, s, p, parseInt(L), k, !0, f).data;
             let v = [];
@@ -744,22 +745,22 @@
                     .value_sequence[0].value[v],
                 );
             const Y = (v) => {
-                (E = v), k();
+                ((E = v), k());
               },
               b = (v) => {
-                (C = v), k();
+                ((C = v), k());
               },
               U = (v, _) => {
-                (s[v] = _), k();
+                ((s[v] = _), k());
               },
               J = (v, _) => {
-                (p[v] = _), k();
+                ((p[v] = _), k());
               },
               ae = (v) => {
-                (f = v), k();
+                ((f = v), k());
               },
               se = (v) => {
-                (L = v), k();
+                ((L = v), k());
               },
               ce = (0, R.HJ)(),
               Z = (0, R.wB)();
@@ -894,28 +895,28 @@
                 .map(Number),
               Y = (0, R.zy)(H).data;
             const b = (n) => {
-                (E = n), W();
+                ((E = n), W());
               },
               U = (n) => {
-                (C = n), W();
+                ((C = n), W());
               },
               J = (n, c) => {
-                (s[n] = c), W();
+                ((s[n] = c), W());
               },
               ae = (n, c) => {
-                (p[n] = c), W();
+                ((p[n] = c), W());
               },
               se = (n) => {
-                (f = n), W();
+                ((f = n), W());
               },
               ce = (n) => {
-                (L = n), W();
+                ((L = n), W());
               },
               Z = (n, c) => {
-                (H[n] = c), W();
+                ((H[n] = c), W());
               },
               v = (n, c) => {
-                (F[n] = c), W();
+                ((F[n] = c), W());
               },
               _ = (n) => {
                 k != n &&
@@ -1237,44 +1238,44 @@
             const W = (0, R.HJ)(),
               Ie = (0, R.wB)(),
               Ke = (t) => {
-                (E = t), U();
+                ((E = t), U());
               },
               ve = (t) => {
-                (C = t), U();
+                ((C = t), U());
               },
               Q = (t, u) => {
-                (s[t] = u), U();
+                ((s[t] = u), U());
               },
               he = (t, u) => {
-                (p[t] = u), U();
+                ((p[t] = u), U());
               },
               re = (t) => {
-                (f = t), U();
+                ((f = t), U());
               },
               Oe = (t) => {
-                (L = t), U();
+                ((L = t), U());
               },
               pe = (t) => {
-                (F[F.indexOf(0)] = t), U();
+                ((F[F.indexOf(0)] = t), U());
               },
               ge = () => {
-                (F = [
+                ((F = [
                   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                   0, 0, 0, 0, 0, 0, 0, 0, 0,
                 ]),
-                  U();
+                  U());
               },
               Pe = (t) => {
-                (te = t), U();
+                ((te = t), U());
               },
               n = (t, u) => {
-                (H[t] = u), U();
+                ((H[t] = u), U());
               },
               c = (t, u) => {
-                (b[t] = u), U();
+                ((b[t] = u), U());
               },
               m = (t, u) => {
-                (Y[t] = u), U();
+                ((Y[t] = u), U());
               };
             if (!W.data || !Ie.data)
               return (0, e.jsx)("div", {
@@ -1486,7 +1487,7 @@
                         "div",
                         {
                           onClick: () => {
-                            F.splice(u, 1), F.push(0), U();
+                            (F.splice(u, 1), F.push(0), U());
                           },
                           children: (0, e.jsx)(Ee, { nItemID: t }),
                         },
@@ -1565,7 +1566,7 @@
       },
       14391: (Re, ke, y) => {
         "use strict";
-        y.r(ke), y.d(ke, { default: () => Pe });
+        (y.r(ke), y.d(ke, { default: () => Pe }));
         var e = y(69500),
           fe = y(75749),
           R = y.n(fe),
@@ -2226,11 +2227,11 @@
               displayName: "Overperformance History",
               formatFunction: (n = 0) => {
                 let c = 0;
-                (c = n - ((n >> 1) & 1431655765)),
+                ((c = n - ((n >> 1) & 1431655765)),
                   (c = ((c >> 2) & 858993459) + (c & 858993459)),
                   (c = ((c >> 4) + c) & 252645135),
                   (c = ((c >> 8) + c) & 16711935),
-                  (c = ((c >> 16) + c) & 65535);
+                  (c = ((c >> 16) + c) & 65535));
                 let m = S;
                 return (
                   c > 20 ? (m = z) : c > 10 ? (m = i) : c > 5 && (m = h),
@@ -2650,7 +2651,7 @@
               Tt = ee.B5.Get().getItemList();
             async function Et() {
               if (!T.r.DOTA_APP_ID || !m) return;
-              ht(!1), be(!1), q(!1), V(!1);
+              (ht(!1), be(!1), q(!1), V(!1));
               const a = {
                 appid: T.r.DOTA_APP_ID,
                 u: qe(T.r.DOTA_APP_ID),
@@ -2683,18 +2684,19 @@
                     const X = Object.values(
                       N.persona.history.matches,
                     ).reverse();
-                    P(X), $(X);
+                    (P(X), $(X));
                   }
                 } catch {
                   V(!0);
                 }
                 A && A.data && t(N);
               } catch {
-                console.log("Error fetching individual persona info."), ht(!0);
+                (console.log("Error fetching individual persona info."),
+                  ht(!0));
               }
-              be(!0), q(!0);
+              (be(!0), q(!0));
             }
-            (0, j.useEffect)(() => {
+            ((0, j.useEffect)(() => {
               try {
                 Et();
               } catch {
@@ -2704,7 +2706,7 @@
               (0, j.useEffect)(() => {
                 if (!g) return;
                 let a = g.slice();
-                (a = a.filter(
+                ((a = a.filter(
                   (A) =>
                     !(
                       (!nt && A.lobbytype == o.AP.CASUAL_MATCH) ||
@@ -2720,8 +2722,8 @@
                       (!ot && !A.rankwassolo)
                     ),
                 )),
-                  $(a);
-              }, [g, at, nt, st, rt, ot]);
+                  $(a));
+              }, [g, at, nt, st, rt, ot]));
             let ze = null;
             if (
               (m
@@ -3066,7 +3068,7 @@
                       (_e) => _e.id == a?.rowData[`item${N}`],
                     );
                     let me = X?.name.replace("item_", "");
-                    (!X || !me) && (me = "emptyitembg"),
+                    ((!X || !me) && (me = "emptyitembg"),
                       A.push(
                         (0, e.jsx)(
                           "img",
@@ -3077,7 +3079,7 @@
                           },
                           `${a.rowIndex}_item${N}`,
                         ),
-                      );
+                      ));
                   }
                   return (0, e.jsxs)("div", {
                     className: d().ItemContainer,
@@ -3307,7 +3309,7 @@
                     for (let ye of tt) {
                       const lt = b(ye.reportreason),
                         It = U(ye.reportreason);
-                      Ze &&
+                      (Ze &&
                         Ze != ye.reporteraccountid &&
                         Ae.push(
                           (0, e.jsx)(
@@ -3339,7 +3341,7 @@
                             `${ye.reporteraccountid}-${ye.reportreason}`,
                           ),
                         ),
-                        (Ze = ye.reporteraccountid);
+                        (Ze = ye.reporteraccountid));
                     }
                     xe.push(
                       (0, e.jsx)(
@@ -4417,7 +4419,7 @@
       },
       83672: (Re, ke, y) => {
         "use strict";
-        y.r(ke), y.d(ke, { default: () => C });
+        (y.r(ke), y.d(ke, { default: () => C }));
         var e = y(69500),
           fe = y(75749),
           R = y.n(fe),
@@ -4725,7 +4727,7 @@
                 (0, e.jsx)("div", {
                   className: D().Link,
                   onClick: async () => {
-                    await R().get(`${s}`), setTimeout(() => p(), ee);
+                    (await R().get(`${s}`), setTimeout(() => p(), ee));
                   },
                   children: "KICK",
                 }),
@@ -4738,7 +4740,7 @@
                 (0, e.jsx)("div", {
                   className: D().Link,
                   onClick: async () => {
-                    await R().get(`${s}`), setTimeout(() => p(), ee);
+                    (await R().get(`${s}`), setTimeout(() => p(), ee));
                   },
                   children: "MAKE ADMIN",
                 }),
@@ -4803,8 +4805,8 @@
                       className: D().DPCLogoContainer,
                       children: (0, e.jsx)("img", {
                         onError: ({ currentTarget: f }) => {
-                          (f.onerror = null),
-                            (f.src = `${I.r.IMG_URL}teams_override/team_unknown_web.png`);
+                          ((f.onerror = null),
+                            (f.src = `${I.r.IMG_URL}teams_override/team_unknown_web.png`));
                         },
                         src: `${I.r.CDN_URL}apps/dota2/teamlogos/${p}.png`,
                       }),
@@ -4996,7 +4998,7 @@
                         team_abbreviation: K,
                       },
                       be = await R().get(we(), { params: de });
-                    ge(), setTimeout(() => q(!1), Ue);
+                    (ge(), setTimeout(() => q(!1), Ue));
                   };
                 return (0, e.jsxs)("form", {
                   onSubmit: Me,
@@ -5052,7 +5054,7 @@
                     P(!0);
                     const B = { team_id: t, account_id: u },
                       q = await R().get(De(), { params: B });
-                    ge(), setTimeout(() => P(!1), Ue);
+                    (ge(), setTimeout(() => P(!1), Ue));
                   };
                 return (0, e.jsxs)("form", {
                   onSubmit: K,
@@ -5098,7 +5100,7 @@
                           I.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
                       },
                       V = await R().post(je(), { params: Me });
-                    pe(), setTimeout(() => $(!1), Ue);
+                    (pe(), setTimeout(() => $(!1), Ue));
                   };
                 return (0, e.jsxs)("form", {
                   onSubmit: B,
@@ -5182,13 +5184,13 @@
                       { params: t },
                     )
                   )?.data?.result?.teams || [];
-              O.length && k(O), F(!0);
+              (O.length && k(O), F(!0));
             }
             (0, x.useEffect)(() => {
               try {
                 pe();
               } catch {
-                console.log("Could not fetch registered teams."), Y(!0);
+                (console.log("Could not fetch registered teams."), Y(!0));
               }
             }, []);
             async function ge() {
@@ -5210,7 +5212,7 @@
                   I.r.BASE_URL + "teams/getugcfilelinks/",
                   { params: { team_id: f } },
                 );
-                P.data && Object.assign(O, P.data),
+                (P.data && Object.assign(O, P.data),
                   await Promise.all(
                     g.map(async ($, B) => {
                       const q = await R().get(
@@ -5218,15 +5220,15 @@
                           "webapi/IDOTA2Fantasy/GetPlayerInfo/v0001",
                         { params: { account_id: $.account_id } },
                       );
-                      (g[B].is_pro = !!q?.data?.is_pro),
-                        (g[B].name = q?.data?.name || "");
+                      ((g[B].is_pro = !!q?.data?.is_pro),
+                        (g[B].name = q?.data?.name || ""));
                       const Me = await R().get(
                         I.r.BASE_URL + "teams/getpersonaname/",
                         { params: { account_id: $.account_id } },
                       );
                       g[B].persona_name = Me?.data || "";
                     }),
-                  );
+                  ));
                 const K = ($, B) =>
                   $.is_pro && !B.is_pro
                     ? -1
@@ -5246,13 +5248,13 @@
               } catch {
                 console.log("Error fetching individual player info.");
               }
-              u && u.data && U(O), ae(!0);
+              (u && u.data && U(O), ae(!0));
             }
-            (0, x.useEffect)(() => {
+            ((0, x.useEffect)(() => {
               try {
                 ge();
               } catch {
-                console.log("Could not fetch single team info."), ce(!0);
+                (console.log("Could not fetch single team info."), ce(!0));
               }
             }, [f]),
               (0, x.useEffect)(() => {
@@ -5275,7 +5277,7 @@
                     ),
                     g = O?.data,
                     P = g?.actions || [];
-                  await Promise.all(
+                  (await Promise.all(
                     P.map(async (K) => {
                       if (K.action === 9 && K.account_id) {
                         const $ = await R().get(
@@ -5286,12 +5288,12 @@
                       }
                     }),
                   ),
-                    O && O.data && g.actions && Q(g.actions);
+                    O && O.data && g.actions && Q(g.actions));
                 }
                 try {
                   t();
                 } catch {
-                  console.log("Could not fetch single team info."), ce(!0);
+                  (console.log("Could not fetch single team info."), ce(!0));
                 }
               }, [f]),
               (0, x.useEffect)(() => {
@@ -5311,9 +5313,9 @@
                   const P = g.leagues.map((K) => K.league_id);
                   u.push(...P);
                 }
-                u.sort().reverse(),
+                (u.sort().reverse(),
                   (u = u.filter((g, P, K) => K.indexOf(g) == P)),
-                  u.length > Te && (u = u.slice(u.length - Te));
+                  u.length > Te && (u = u.slice(u.length - Te)));
                 async function O() {
                   if (!u.length) return;
                   const g = { league_ids: u.join(",") },
@@ -5377,7 +5379,7 @@
                 } catch {
                   console.log("Could not fetch leagues data.");
                 }
-              }, [f]);
+              }, [f]));
             const Pe = L.find((t) => t.team_id == f) || {};
             let n;
             if (
@@ -5414,16 +5416,16 @@
               });
             const c = b.members || [];
             c.forEach((t) => {
-              (t.kick_link = `${Se()}?u=${r}&appid=${I.r.DOTA_APP_ID}&team_id=${f}&account_id=${t.account_id}`),
+              ((t.kick_link = `${Se()}?u=${r}&appid=${I.r.DOTA_APP_ID}&team_id=${f}&account_id=${t.account_id}`),
                 (t.make_admin_link = t.admin
                   ? ""
-                  : `${$e()}?u=${r}&appid=${I.r.DOTA_APP_ID}&team_id=${f}&account_id=${t.account_id}`);
+                  : `${$e()}?u=${r}&appid=${I.r.DOTA_APP_ID}&team_id=${f}&account_id=${t.account_id}`));
             });
             const m = () => {
                 const t = [];
                 return (
                   Object.keys(_).forEach((u, O) => {
-                    t.push(
+                    (t.push(
                       (0, e.jsx)(
                         "h3",
                         {
@@ -5445,7 +5447,7 @@
                             `${g.key}-${g.displayName}-matches-grid-header-league-${O}`,
                           ),
                         ),
-                      );
+                      ));
                     for (let g of _[u])
                       t.push(
                         S.map((P) =>

@@ -25,7 +25,7 @@ function _(_) {
             let _ = [..._].sort(
               (_, _) => _.GetNumFollowers() - _.GetNumFollowers(),
             );
-            _(_), _(_);
+            (_(_), _(_));
           }
           _(!1);
         })();

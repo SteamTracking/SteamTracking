@@ -25,7 +25,7 @@ import { f as y } from "./useQuery.js";
 import { t as b } from "./mutation.js";
 var x = class extends i {
     constructor(e = {}) {
-      super(), (this.config = e), (this.#e = new Map());
+      (super(), (this.config = e), (this.#e = new Map()));
     }
     #e;
     build(e, t, n) {
@@ -102,7 +102,10 @@ var x = class extends i {
   },
   S = class extends i {
     constructor(e = {}) {
-      super(), (this.config = e), (this.#e = new Map()), (this.#t = Date.now());
+      (super(),
+        (this.config = e),
+        (this.#e = new Map()),
+        (this.#t = Date.now()));
     }
     #e;
     #t;
@@ -113,12 +116,14 @@ var x = class extends i {
         options: e.defaultMutationOptions(t),
         state: n,
       });
-      return this.add(r), r;
+      return (this.add(r), r);
     }
     add(e) {
       let t = C(e),
         n = this.#e.get(t) ?? [];
-      n.push(e), this.#e.set(t, n), this.notify({ type: `added`, mutation: e });
+      (n.push(e),
+        this.#e.set(t, n),
+        this.notify({ type: `added`, mutation: e }));
     }
     remove(e) {
       let t = C(e);
@@ -225,7 +230,7 @@ function w(e) {
             do {
               let e = c === 0 ? (o[0] ?? r.initialPageParam) : T(r, s);
               if (c > 0 && e == null) break;
-              (s = await p(s, e)), c++;
+              ((s = await p(s, e)), c++);
             } while (c < t);
           }
           return s;
@@ -258,27 +263,27 @@ var D = class {
     #o;
     #s;
     constructor(e = {}) {
-      (this.#e = e.queryCache || new x()),
+      ((this.#e = e.queryCache || new x()),
         (this.#t = e.mutationCache || new S()),
         (this.#n = e.defaultOptions || {}),
         (this.#r = new Map()),
         (this.#i = new Map()),
-        (this.#a = 0);
+        (this.#a = 0));
     }
     mount() {
-      this.#a++,
+      (this.#a++,
         this.#a === 1 &&
           ((this.#o = l.subscribe(async (e) => {
             e && (await this.resumePausedMutations(), this.#e.onFocus());
           })),
           (this.#s = c.subscribe(async (e) => {
             e && (await this.resumePausedMutations(), this.#e.onOnline());
-          })));
+          }))));
     }
     unmount() {
-      this.#a--,
+      (this.#a--,
         this.#a === 0 &&
-          (this.#o?.(), (this.#o = void 0), this.#s?.(), (this.#s = void 0));
+          (this.#o?.(), (this.#o = void 0), this.#s?.(), (this.#s = void 0)));
     }
     isFetching(e) {
       return this.#e.findAll({ ...e, fetchStatus: `fetching` }).length;
@@ -391,13 +396,13 @@ var D = class {
       return this.fetchQuery(e).then(r).catch(r);
     }
     fetchInfiniteQuery(e) {
-      return (e.behavior = w(e.pages)), this.fetchQuery(e);
+      return ((e.behavior = w(e.pages)), this.fetchQuery(e));
     }
     prefetchInfiniteQuery(e) {
       return this.fetchInfiniteQuery(e).then(r).catch(r);
     }
     ensureInfiniteQueryData(e) {
-      return (e.behavior = w(e.pages)), this.ensureQueryData(e);
+      return ((e.behavior = w(e.pages)), this.ensureQueryData(e));
     }
     resumePausedMutations() {
       return c.isOnline() ? this.#t.resumePausedMutations() : Promise.resolve();
@@ -469,7 +474,7 @@ var D = class {
           };
     }
     clear() {
-      this.#e.clear(), this.#t.clear();
+      (this.#e.clear(), this.#t.clear());
     }
   },
   O = t(e(), 1),

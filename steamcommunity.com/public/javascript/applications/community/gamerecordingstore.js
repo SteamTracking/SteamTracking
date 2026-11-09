@@ -80,7 +80,7 @@ var S = class {
   m_recordingState = null;
   m_bEnoughDiskSpace = !1;
   async Init(e, t) {
-    (this.m_transport = e),
+    ((this.m_transport = e),
       (this.m_fnGetAchievementInfo = t),
       c.IN_STEAMUI &&
         (p.RegisterForNotifyTimelineChanged(this.OnTimelineChanged),
@@ -97,7 +97,7 @@ var S = class {
           this.LoadAppsWithBackgroundVideo(),
           this.CheckEnoughDiskSpace(),
           this.UpdateState(),
-        ]));
+        ])));
   }
   async UpdateState() {
     let e = await p.GetState({});
@@ -109,7 +109,7 @@ var S = class {
     this.m_bEnableH265Recording = t?.is_h265_enabled ?? !1;
   }
   OnStateChanged() {
-    return this.UpdateState(), 1;
+    return (this.UpdateState(), 1);
   }
   GetAppsWithBackgroundVideo() {
     return this.m_rgAppsWithBackgroundVideo;
@@ -122,9 +122,9 @@ var S = class {
     let t = this.m_mapTimelineLoaders.get(e);
     if (!t) {
       let n = new h();
-      n.LoadTimelinesForBackgroundVideo(e),
+      (n.LoadTimelinesForBackgroundVideo(e),
         (t = { loader: n, nRefCount: 0 }),
-        this.m_mapTimelineLoaders.set(e, t);
+        this.m_mapTimelineLoaders.set(e, t));
     }
     return (
       t.nRefCount++,
@@ -135,12 +135,12 @@ var S = class {
       {
         loader: t.loader,
         release: () => {
-          t.nRefCount--,
+          (t.nRefCount--,
             g(
               `CGameRecordingStore::GetTimelineLoaderForGame reducing refCount ${t.nRefCount} for ${e}` +
                 (t.nRefCount <= 0 ? ` will delete` : ``),
             ),
-            t.nRefCount <= 0 && this.m_mapTimelineLoaders.delete(e);
+            t.nRefCount <= 0 && this.m_mapTimelineLoaders.delete(e));
         },
       }
     );
@@ -150,17 +150,17 @@ var S = class {
     let t = this.m_mapClipLoaders.get(e);
     if (!t) {
       let n = new h();
-      n.LoadTimelinesForClip(e),
+      (n.LoadTimelinesForClip(e),
         (t = { loader: n, nRefCount: 0 }),
-        this.m_mapClipLoaders.set(e, t);
+        this.m_mapClipLoaders.set(e, t));
     }
     return (
       t.nRefCount++,
       {
         loader: t.loader,
         release: () => {
-          t.nRefCount--,
-            t.nRefCount <= 0 && this.m_mapTimelineLoaders.delete(e);
+          (t.nRefCount--,
+            t.nRefCount <= 0 && this.m_mapTimelineLoaders.delete(e));
         },
       }
     );
@@ -170,24 +170,24 @@ var S = class {
     let t = this.m_mapSharedClipLoaders.get(e.clip_id);
     if (!t) {
       let n = new h();
-      n.LoadTimelinesForSharedClip(e),
+      (n.LoadTimelinesForSharedClip(e),
         (t = { loader: n, nRefCount: 0 }),
-        this.m_mapClipLoaders.set(e.clip_id, t);
+        this.m_mapClipLoaders.set(e.clip_id, t));
     }
     return (
       t.nRefCount++,
       {
         loader: t.loader,
         release: () => {
-          t.nRefCount--,
-            t.nRefCount <= 0 && this.m_mapTimelineLoaders.delete(e.clip_id);
+          (t.nRefCount--,
+            t.nRefCount <= 0 && this.m_mapTimelineLoaders.delete(e.clip_id));
         },
       }
     );
   }
   OnTimelineChanged(e) {
-    d() && e.DEBUG_LogToConsole(),
-      this.ReloadAppsWithBackgroundVideoIfNecessary(e);
+    (d() && e.DEBUG_LogToConsole(),
+      this.ReloadAppsWithBackgroundVideoIfNecessary(e));
     let t = e.Body().notification_type(),
       n = e.Body().timeline_id(),
       r = e.Body().game_id();
@@ -195,8 +195,8 @@ var S = class {
       case 1:
       case 4: {
         let t = this.GetTimelineLoaderForGame(r);
-        this.m_mapActiveTimelines.set(n, t),
-          t.loader.AddRunningTimeline(n, r, e.Body().start_time());
+        (this.m_mapActiveTimelines.set(n, t),
+          t.loader.AddRunningTimeline(n, r, e.Body().start_time()));
         break;
       }
       case 2: {
@@ -230,11 +230,11 @@ var S = class {
         this.m_recordingState = null;
     }
     let i = this.m_mapTimelineLoaders.get(n);
-    return i && i.loader.RecordingSessionChanged(t), 1;
+    return (i && i.loader.RecordingSessionChanged(t), 1);
   }
   OnTimelineEntryChanged(e) {
     if (!e.Body().entry(!1))
-      return o(!1, `OnTimelineEntryChanged received an invalid protobuf`), 1;
+      return (o(!1, `OnTimelineEntryChanged received an invalid protobuf`), 1);
     let { entry: t } = e.Body().toObject();
     if (!t)
       return (
@@ -248,7 +248,7 @@ var S = class {
     if (n) {
       let e = n.loader;
       if (e.BIsTimelineRunning(t.timeline_id))
-        return e.AddRunningTimelineEntry(t), 1;
+        return (e.AddRunningTimelineEntry(t), 1);
     }
     if (e.Body().game_id()) {
       let n = this.m_mapTimelineLoaders.get(e.Body().game_id());
@@ -279,7 +279,7 @@ var S = class {
   }
   OnClipCreated(e) {
     let t = e.Body().summary().toObject();
-    return this.InternalAddClipSummary(t), g(`New clip saved:`, t), 1;
+    return (this.InternalAddClipSummary(t), g(`New clip saved:`, t), 1);
   }
   async UploadClip(e, t, n, r) {
     let i = await p.UploadClipToSteam({
@@ -291,8 +291,8 @@ var S = class {
       a;
     if (i.GetEResult() == 1) {
       let e = i.Body().summary().toObject();
-      this.InternalAddClipSummary(e),
-        (a = `${c.COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${e.published_file_id}`);
+      (this.InternalAddClipSummary(e),
+        (a = `${c.COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${e.published_file_id}`));
     }
     return { eResult: i.GetEResult(), strURL: a };
   }
@@ -303,19 +303,19 @@ var S = class {
         this.m_bLoadingAppsWithBackgroundVideo = !1;
         return;
       }
-      v(`Loaded ${t.Body().apps().length} apps with timelines`),
+      (v(`Loaded ${t.Body().apps().length} apps with timelines`),
         e(() => {
-          (this.m_bLoadingAppsWithBackgroundVideo = !1),
+          ((this.m_bLoadingAppsWithBackgroundVideo = !1),
             (this.m_rgAppsWithBackgroundVideo = t
               .Body()
               .toObject()
               .apps.sort(
                 (e, t) => t.most_recent_start_time - e.most_recent_start_time,
-              ));
-        });
+              )));
+        }));
     } catch (e) {
-      f(`Failed to load apps with timelines`, e),
-        (this.m_bLoadingAppsWithBackgroundVideo = !1);
+      (f(`Failed to load apps with timelines`, e),
+        (this.m_bLoadingAppsWithBackgroundVideo = !1));
     }
   }
   ReloadAppsWithBackgroundVideoIfNecessary(e) {
@@ -334,10 +334,10 @@ var S = class {
         t.filter((t) => t.clip_id != e.clip_id),
       );
     }
-    this.m_clips.set(e.clip_id, e),
+    (this.m_clips.set(e.clip_id, e),
       this.m_clipsGroupByGame.has(e.game_id) ||
         this.m_clipsGroupByGame.set(e.game_id, []),
-      this.m_clipsGroupByGame.get(e.game_id).push(e);
+      this.m_clipsGroupByGame.get(e.game_id).push(e));
   }
   async SaveClip(e, t, n, r, i, a, o) {
     let s = await p.SaveClip({
@@ -358,7 +358,7 @@ var S = class {
         { clipSummary: e, result: 1 }
       );
     }
-    return m(`Failed to save clip`), { result: s.GetEResult() };
+    return (m(`Failed to save clip`), { result: s.GetEResult() });
   }
   async DeleteClip(e) {
     let t = await p.DeleteClip({ clip_id: e });
@@ -367,7 +367,7 @@ var S = class {
       this.m_clips.delete(e);
       let n = this.m_clipsGroupByGame.get(t.game_id),
         r = n.findIndex((t) => t.clip_id == e);
-      n.splice(r, 1), g(`Deleted clip`, e);
+      (n.splice(r, 1), g(`Deleted clip`, e));
     } else m(`Failed to delete clip`, e);
     return t.GetEResult();
   }
@@ -376,12 +376,12 @@ var S = class {
       return (
         m(`Export in progress, cannot start another one`, e), y.ConverterBusy
       );
-    this.m_clipExportProgress.set(e, {
+    (this.m_clipExportProgress.set(e, {
       exportPath: t,
       progress: 0,
       resultStatus: 22,
     }),
-      (this.m_currentlyExportingClip = e);
+      (this.m_currentlyExportingClip = e));
     let i = await p.ExportClip({
         clip_id: e,
         export_mp4_path: t,
@@ -450,14 +450,14 @@ var S = class {
         this.m_bClipLoadingTriggered = !0;
         let t = await p.GetClips({});
         e(() => {
-          t
+          (t
             .Body()
             .clip()
             .forEach((e) => this.InternalAddClipSummary(e.toObject())),
-            (this.m_bLoadingClips = !1);
+            (this.m_bLoadingClips = !1));
         });
       } catch (e) {
-        f(`Failed to load clips`, e), (this.m_bLoadingClips = !1);
+        (f(`Failed to load clips`, e), (this.m_bLoadingClips = !1));
       }
   }
   BLoadingClips() {
@@ -476,7 +476,7 @@ var S = class {
       );
     }
     let t = [];
-    return this.m_clips.forEach((e) => t.push(e.clip_id)), t;
+    return (this.m_clips.forEach((e) => t.push(e.clip_id)), t);
   }
   GetClipSummary(e) {
     if ((this.LazyLoadClips(), this.m_clips.has(e))) return this.m_clips.get(e);
@@ -509,7 +509,7 @@ var S = class {
     );
   }
   async StartRecording(e) {
-    return v(`Start manual recording`), p.StartRecording({ game_id: e });
+    return (v(`Start manual recording`), p.StartRecording({ game_id: e }));
   }
   async StopRecording(e) {
     v(`Stop manual recording`);
@@ -608,19 +608,19 @@ var S = class {
     return e.BSuccess() ? e.Body().size() : 0;
   }
   ReportClipShare(e, t, n, r, i) {
-    v(`ReportClipShare ${JSON.stringify(e)} ${t} ${n} ${r} ${i}`),
+    (v(`ReportClipShare ${JSON.stringify(e)} ${t} ${n} ${r} ${i}`),
       s.ReportClipShare(this.m_transport, {
         gameid: e.ConvertTo64BitString(),
         share_method: t,
         seconds: n,
         bytes: r.toString(),
         eresult: i,
-      });
+      }));
   }
   ReportClipRange(e, t, n, r, i) {
     v(`ReportClipRange`, JSON.stringify(e), t, n, r, i);
     let o = a.Init(l);
-    o.Body().set_gameid(e.ConvertTo64BitString()),
+    (o.Body().set_gameid(e.ConvertTo64BitString()),
       o.Body().set_original_range_method(t),
       o.Body().set_seconds(n),
       o.Body().start().set_original_range_method(r.originalRangeMethod),
@@ -629,7 +629,7 @@ var S = class {
       o.Body().end().set_original_range_method(i.originalRangeMethod),
       o.Body().end().set_latest_range_method(i.latestRangeMethod),
       o.Body().end().set_delta_ms(Math.ceil(i.relativeMS)),
-      s.ReportClipRange(this.m_transport, o);
+      s.ReportClipRange(this.m_transport, o));
   }
   GetRecordingState() {
     return this.m_recordingState;
@@ -638,7 +638,7 @@ var S = class {
     return this.m_bEnoughDiskSpace;
   }
   OnLowDiskSpace(e) {
-    return (this.m_bEnoughDiskSpace = !1), 1;
+    return ((this.m_bEnoughDiskSpace = !1), 1);
   }
   async CheckEnoughDiskSpace() {
     let e = await p.GetEnoughDiskSpace({});
@@ -654,7 +654,7 @@ var S = class {
     ).map((e) => e.toObject());
   }
 };
-r([n.shallow], S.prototype, `m_rgAppsWithBackgroundVideo`, void 0),
+(r([n.shallow], S.prototype, `m_rgAppsWithBackgroundVideo`, void 0),
   r([n], S.prototype, `m_bLoadingClips`, void 0),
   r([n], S.prototype, `m_bLoadingAppsWithBackgroundVideo`, void 0),
   r([n], S.prototype, `m_clips`, void 0),
@@ -688,5 +688,5 @@ r([n.shallow], S.prototype, `m_rgAppsWithBackgroundVideo`, void 0),
   r([i], S.prototype, `RemoveUserTimelineMarker`, null),
   r([i], S.prototype, `LoadThumbnails`, null),
   r([i], S.prototype, `GetAchievementInfo`, null),
-  r([i], S.prototype, `OnLowDiskSpace`, null);
+  r([i], S.prototype, `OnLowDiskSpace`, null));
 export { S as CGameRecordingStore, S as default, b as k_strGRFAQ };

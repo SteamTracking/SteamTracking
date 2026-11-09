@@ -211,7 +211,7 @@ function zt(e) {
           let n = t.filter((e) => e.color != s);
           c = n.length > 0 ? n[0].color : void 0;
         }
-        o
+        (o
           ? v[e * 7 + n].current?.style.setProperty(`--note-color`, o)
           : v[e * 7 + n].current?.style.removeProperty(`--note-color`),
           s
@@ -219,7 +219,7 @@ function zt(e) {
             : v[e * 7 + n].current?.style.removeProperty(`--day-color1`),
           (c ?? s)
             ? v[e * 7 + n].current?.style.setProperty(`--day-color2`, c ?? s)
-            : v[e * 7 + n].current?.style.removeProperty(`--day-color2`);
+            : v[e * 7 + n].current?.style.removeProperty(`--day-color2`));
       }
     }
   }, [d, p, m, g, v]);
@@ -330,8 +330,8 @@ var Wt = class {
     return this.m_rgHiddenIds;
   }
   SetHidden(e, t) {
-    t ? this.m_rgHiddenIds.add(e) : this.m_rgHiddenIds.delete(e),
-      this.m_eventsChanged.Dispatch();
+    (t ? this.m_rgHiddenIds.add(e) : this.m_rgHiddenIds.delete(e),
+      this.m_eventsChanged.Dispatch());
   }
   GetAdditionalEvents() {
     return Array.from(this.m_rgAdditionalEvents.values());
@@ -344,7 +344,7 @@ var Wt = class {
     );
   }
   RemoveAdditionalEvent(e) {
-    this.m_rgAdditionalEvents.delete(e), this.m_eventsChanged.Dispatch();
+    (this.m_rgAdditionalEvents.delete(e), this.m_eventsChanged.Dispatch());
   }
 };
 function Gt(e) {
@@ -352,7 +352,7 @@ function Gt(e) {
     [r, i] = K.useState(0);
   return (
     p(e.EventsChanged(), () => {
-      n(e.GetAdditionalEvents()), i((e) => e + 1);
+      (n(e.GetAdditionalEvents()), i((e) => e + 1));
     }),
     t
   );
@@ -362,7 +362,7 @@ function Kt(e) {
     [r, i] = K.useState(0);
   return (
     p(e.EventsChanged(), () => {
-      n(e.GetHiddenIds()), i((e) => e + 1);
+      (n(e.GetHiddenIds()), i((e) => e + 1));
     }),
     t
   );
@@ -376,37 +376,37 @@ var J = class t {
   m_setDismisses = new Set();
   static s_Singleton;
   static Get() {
-    return (t.s_Singleton ||= new t()), t.s_Singleton;
+    return ((t.s_Singleton ||= new t()), t.s_Singleton);
   }
   async Init(e, t) {
-    (this.m_accountId = e),
+    ((this.m_accountId = e),
       (this.m_partnerId = t),
       (this.m_serviceTransport = Dt.Get()
         .GetPromotionTransport()
-        .GetServiceTransport());
+        .GetServiceTransport()));
     let n = u.Init(Ct);
-    n.Body().set_accountid(this.m_accountId),
+    (n.Body().set_accountid(this.m_accountId),
       n.Body().set_partnerid(this.m_partnerId),
       n
         .Body()
         .set_rtime_after(
           Math.floor(new Date().getTime() / 1e3 - 14 * R.PerDay),
-        );
+        ));
     let r = await St.GetDismissTimeRange(this.m_serviceTransport, n);
     if (r.BSuccess()) {
       for (let e of r.Body().dismiss_list())
         if (e.state() == 1) {
           let t = this.m_rgDismisses.get(e.key_json()) ?? [];
-          t.push(e.dismiss_id()), this.m_rgDismisses.set(e.key_json(), t);
+          (t.push(e.dismiss_id()), this.m_rgDismisses.set(e.key_json(), t));
         }
       this.DismissesUpdated();
     }
   }
   DismissesUpdated() {
-    (this.m_setDismisses = new Set(
+    ((this.m_setDismisses = new Set(
       Array.from(this.m_rgDismisses).map(([e, t]) => e),
     )),
-      this.m_eventsChanged.Dispatch();
+      this.m_eventsChanged.Dispatch());
   }
   EventsChanged() {
     return this.m_eventsChanged;
@@ -422,21 +422,21 @@ var J = class t {
   async SetDismiss(t, n) {
     e(this.m_serviceTransport, `Must call Init first`);
     let r = this.m_rgDismisses.get(t) ?? [];
-    r.push(null), this.m_rgDismisses.set(t, r), this.DismissesUpdated();
+    (r.push(null), this.m_rgDismisses.set(t, r), this.DismissesUpdated());
     let i = u.Init(wt),
       a = new Et();
-    a.set_accountid(this.m_accountId),
+    (a.set_accountid(this.m_accountId),
       a.set_partnerid(this.m_partnerId),
       a.set_key_json(t),
       a.set_state(1),
       a.set_rtime_create(Math.floor(new Date().getTime() / 1e3)),
       a.set_rtime_validity(Math.floor(n.getTime() / 1e3)),
-      i.Body().add_dismiss_list(a);
+      i.Body().add_dismiss_list(a));
     let o = await St.CreateDismiss(this.m_serviceTransport, i);
     if (o.BSuccess() && o.Body().dismiss_list().length > 0) {
       let e = (this.m_rgDismisses.get(t) ?? []).filter((e) => e !== null);
-      e.push(o.Body().dismiss_list()[0].dismiss_id()),
-        this.m_rgDismisses.set(t, e);
+      (e.push(o.Body().dismiss_list()[0].dismiss_id()),
+        this.m_rgDismisses.set(t, e));
     }
   }
   async ClearDismiss(t) {
@@ -445,8 +445,8 @@ var J = class t {
     if ((this.m_rgDismisses.delete(t), this.DismissesUpdated(), n))
       for (let e of n) {
         let t = u.Init(Tt);
-        t.Body().set_dismiss_id(e),
-          await St.DeleteDismiss(this.m_serviceTransport, t);
+        (t.Body().set_dismiss_id(e),
+          await St.DeleteDismiss(this.m_serviceTransport, t));
       }
   }
 };
@@ -455,7 +455,7 @@ function qt() {
     [n, r] = K.useState(0);
   return (
     p(J.Get().EventsChanged(), () => {
-      t(J.Get().GetDismissedEvents()), r((e) => e + 1);
+      (t(J.Get().GetDismissedEvents()), r((e) => e + 1));
     }),
     e
   );
@@ -618,13 +618,13 @@ var an = `j-KLJ7Mtr80-`,
     m_rgOptInComputed = new Map();
     static async Construct() {
       let t = new e();
-      return await t.Init(), t;
+      return (await t.Init(), t);
     }
     async Init() {
       let t = await fetch(`${s.PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard`);
       try {
-        (this.m_rgOptIns = await t.json()),
-          this.m_rgOptIns && e.ExtractOptInDefinitions(this.m_rgOptIns);
+        ((this.m_rgOptIns = await t.json()),
+          this.m_rgOptIns && e.ExtractOptInDefinitions(this.m_rgOptIns));
       } catch {
         this.m_rgOptIns = {};
       }
@@ -633,7 +633,7 @@ var an = `j-KLJ7Mtr80-`,
       for (let t of Object.keys(e)) {
         let n = e[t].description,
           r = $e(n?.jsondata);
-        delete n?.jsondata, r && (e[t].description.definition = r);
+        (delete n?.jsondata, r && (e[t].description.definition = r));
       }
     }
     GetInfo(e) {
@@ -654,7 +654,7 @@ var an = `j-KLJ7Mtr80-`,
           rgRegisteredApps: t.summary?.apps_in,
           rgFeaturedApps: t.featured_appids,
         };
-      return this.m_rgOptInComputed.set(e, i), i;
+      return (this.m_rgOptInComputed.set(e, i), i);
     }
   };
 function hn() {
@@ -758,7 +758,7 @@ var yn = class {
   getElement;
   getCapsuleElement;
   constructor(e, t, n, r, i, a, o, c, l, u, d, f, p, m) {
-    (this.m_partnerId = t),
+    ((this.m_partnerId = t),
       (this.valveOnly = n),
       (this.m_plan = r),
       (this.m_assetInput = i),
@@ -773,7 +773,7 @@ var yn = class {
       (this.loading = d),
       (this.dimmed = f),
       (this.getElement = () => p({ eventData: this })),
-      (this.getCapsuleElement = () => m?.({ eventData: this }));
+      (this.getCapsuleElement = () => m?.({ eventData: this })));
   }
   passesFilter = (e) => e == 1;
   dataChanged() {
@@ -882,8 +882,8 @@ function Cn(e) {
       n.sale_clan_account,
       n.sale_clan_event_gid,
     );
-  (u ??= !p && f?.GetImageURL(`capsule`, d, H.capsule_main)),
-    (l ??= !p && ht(f));
+  ((u ??= !p && f?.GetImageURL(`capsule`, d, H.capsule_main)),
+    (l ??= !p && ht(f)));
   let m = [];
   t.valveOnly &&
     (n.type != `seasonalsale` &&
@@ -1003,7 +1003,7 @@ function Tn(e) {
       ],
     });
   }
-  Dn(t), On(t);
+  (Dn(t), On(t));
   let u = a?.description.start_date ?? r.start_date,
     d = a?.description.end_date ?? r.end_date,
     f = a?.description?.definition?.localized_optin_banner?.[s.LANGUAGE],
@@ -1075,8 +1075,8 @@ function Dn(e) {
             `#Dashboard_UpcomingEvents_EventType_PromotionPlan_registration_reminder`,
           ),
         );
-        (t.getElement = () => (0, q.jsx)(Tn, { eventData: t })),
-          (r = n.AddAdditionalEvent(t));
+        ((t.getElement = () => (0, q.jsx)(Tn, { eventData: t })),
+          (r = n.AddAdditionalEvent(t)));
       }
     }
     return r;
@@ -1128,7 +1128,7 @@ function On(e) {
                 `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailer_Header`,
               ),
             );
-            (a.getElement = () =>
+            ((a.getElement = () =>
               (0, q.jsx)(Rn, {
                 eventData: a,
                 appId: n.appid,
@@ -1138,7 +1138,7 @@ function On(e) {
                     ? `trailer-seasonalsale`
                     : `trailer-themesale`,
               })),
-              r.push(t.AddAdditionalEvent(a));
+              r.push(t.AddAdditionalEvent(a)));
           }
         }
         if (e.m_plan.type == `seasonalsale`) {
@@ -1155,14 +1155,14 @@ function On(e) {
                 `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Header`,
               ),
             );
-            (a.getElement = () =>
+            ((a.getElement = () =>
               (0, q.jsx)(Rn, {
                 eventData: a,
                 appId: n.appid,
                 registerByDate: i,
                 registrationType: `registration`,
               })),
-              r.push(t.AddAdditionalEvent(a));
+              r.push(t.AddAdditionalEvent(a)));
           }
         }
       } else if (!c && e.m_plan.type == `seasonalsale`) {
@@ -1180,14 +1180,14 @@ function On(e) {
               `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedDiscount_Header`,
             ),
           );
-          (o.getElement = () =>
+          ((o.getElement = () =>
             (0, q.jsx)(Rn, {
               eventData: o,
               appId: n.appid,
               registerByDate: i,
               registrationType: `discount`,
             })),
-            r.push(t.AddAdditionalEvent(o));
+            r.push(t.AddAdditionalEvent(o)));
         }
       }
     }
@@ -1889,24 +1889,24 @@ function Rn(e) {
     j = null;
   switch (o) {
     case `trailer-seasonalsale`:
-      (k = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerSeasonalSale_Title`),
+      ((k = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerSeasonalSale_Title`),
         (A = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerSeasonalSale_Body`),
-        (j = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerSeasonalSale_Action`);
+        (j = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerSeasonalSale_Action`));
       break;
     case `trailer-themesale`:
-      (k = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerThemeSale_Title`),
+      ((k = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerThemeSale_Title`),
         (A = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerThemeSale_Body`),
-        (j = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerThemeSale_Action`);
+        (j = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedTrailerThemeSale_Action`));
       break;
     case `registration`:
-      (k = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Title`),
+      ((k = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Title`),
         (A = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Body`),
-        (j = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Action`);
+        (j = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Action`));
       break;
     case `discount`:
-      (k = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedDiscount_Title`),
+      ((k = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedDiscount_Title`),
         (A = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedDiscount_Body`),
-        (j = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Action`);
+        (j = `#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Action`));
   }
   return (0, q.jsxs)(N, {
     hasImage: !!f,
@@ -2067,7 +2067,7 @@ function Hn(t) {
             xn,
             void 0,
           );
-        return e(Y(n, o), ``), c;
+        return (e(Y(n, o), ``), c);
       },
       [n, t],
     );
@@ -2082,7 +2082,7 @@ function Un() {
     e.setHours(0, 0, 0, 0);
     let t = (t) => {
         let n = new Date();
-        return n.setDate(e.getDate() + t), n;
+        return (n.setDate(e.getDate() + t), n);
       },
       n = [
         { title: `Event Recap Foo`, startDate: t(-10), eventType: `event` },
@@ -3005,7 +3005,7 @@ function Rr() {
 }
 function zr(e) {
   let t = -1;
-  return e == 1 ? (t = 0) : e == 2 ? (t = 1) : e == 5 && (t = 2), t;
+  return (e == 1 ? (t = 0) : e == 2 ? (t = 1) : e == 5 && (t = 2), t);
 }
 function Br(e) {
   let { marketingMessage: t } = e,
@@ -3540,32 +3540,32 @@ function ui(e) {
     [r] = at(`expanded`, !1),
     [i, a] = K.useState(!!r),
     o = K.useCallback((e) => {
-      a(e), !e && D.current.scrollIntoView();
+      (a(e), !e && D.current.scrollIntoView());
     }, []),
     [s, c] = K.useState(!1),
     l = K.useCallback(
       (e) => {
-        c(e), e && a(!0);
+        (c(e), e && a(!0));
       },
       [a, c],
     ),
     [u, d] = K.useState(!1),
     f = K.useCallback(
       (e) => {
-        d(e), e && a(!0);
+        (d(e), e && a(!0));
       },
       [a, d],
     ),
     [p, m] = K.useState(``),
     h = K.useCallback(
       (e) => {
-        e && (a(!0), l(!0), f(!0)), m(e);
+        (e && (a(!0), l(!0), f(!0)), m(e));
       },
       [l, f],
     ),
     [g, _] = K.useState(0),
     v = () => {
-      _(0), m(``);
+      (_(0), m(``));
     },
     y = Q(),
     { rgShownEvents: b, nShouldBeShownCount: x } = ai(y, t, g, n),
@@ -3621,7 +3621,7 @@ function ui(e) {
                     `#Dashboard_UpcomingEvents_Filter_DismissedAllDismissed`,
                     (0, q.jsx)(`a`, {
                       onClick: () => {
-                        _(3), m(``);
+                        (_(3), m(``));
                       },
                       children: z(
                         `#Dashboard_UpcomingEvents_Filter_DismissedAllDismissed_LinkText`,
@@ -3672,7 +3672,7 @@ function pi(t, n, r, i, a, o) {
           let r = e.filter((e) => t(e));
           return r.length > 1 ? e.filter((e) => !t(e)).concat(n(r)) : e;
         };
-        r ||
+        (r ||
           (e = t(
             e,
             (e) => di(s, e),
@@ -3713,7 +3713,7 @@ function pi(t, n, r, i, a, o) {
                     setExpanded: o,
                   }),
               }),
-            ));
+            )));
       }
       return e;
     }, [s, t, n, r, i, a, o])
@@ -4067,10 +4067,10 @@ function yi(e) {
     n = !1;
   switch (e.eventType) {
     case `deadline`:
-      (t = `#cf980c`), (n = !0);
+      ((t = `#cf980c`), (n = !0));
       break;
     case `deadline-urgent`:
-      (t = `#cf520c`), (n = !0);
+      ((t = `#cf520c`), (n = !0));
       break;
     case `release-game`:
       t = `#426283`;
@@ -4095,7 +4095,7 @@ function bi(e) {
       let e = t.reduce((e, t) => {
         let n = `${t.eventType}_${t.eventTypeName}`,
           r = e.get(n) || [];
-        return e.set(n, [...r, t]), e;
+        return (e.set(n, [...r, t]), e);
       }, new Map());
       for (let t of e.values()) t.sort(Ei);
       return Array.from(e).sort(([e, t], [n, r]) =>
@@ -4369,10 +4369,10 @@ function Oi(e) {
   let t = Math.min(...e.keys()),
     n = Math.max(...e.keys()),
     r = new Date(t);
-  for (r.setMonth(r.getMonth() + 1); r.getTime() < n; )
-    e.has(r.getTime()) || e.set(r.getTime(), []),
+  for (r.setMonth(r.getMonth() + 1); r.getTime() < n;)
+    (e.has(r.getTime()) || e.set(r.getTime(), []),
       (r = new Date(r)),
-      r.setMonth(r.getMonth() + 1);
+      r.setMonth(r.getMonth() + 1));
   return e;
 }
 function ki(e, t) {
@@ -4637,7 +4637,7 @@ function Yi(e) {
       (0, q.jsx)(`button`, {
         className: t(Bi),
         onClick: () => {
-          typeof c == `function` && c(), window.open(c, `_blank`);
+          (typeof c == `function` && c(), window.open(c, `_blank`));
         },
         children: s,
       }),
@@ -4671,11 +4671,11 @@ function Zi(e) {
   let [t, n] = K.useState(!0);
   return (
     K.useEffect(() => {
-      Ze.Init(),
+      (Ze.Init(),
         j.Get(),
         (async () => {
-          await J.Get().Init(l.accountid, Number.isNaN(e) ? 0 : e), n(!1);
-        })();
+          (await J.Get().Init(l.accountid, Number.isNaN(e) ? 0 : e), n(!1));
+        })());
     }, [e]),
     t
   );

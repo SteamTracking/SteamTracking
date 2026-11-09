@@ -27,4 +27,3 @@ function _(_) {
     children: _.Localize(`#MySellListings_LoadMoreButton`),
   });
 }
-export { _, _ };

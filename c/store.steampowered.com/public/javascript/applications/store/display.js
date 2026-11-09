@@ -16,8 +16,8 @@ var _ = _(_(), 1),
 function _(_) {
   return _[_];
 }
-(0, _.default)(`2026-11-23T09:30:00-08:00`).unix(),
-  (0, _.default)(`2026-11-30T10:00:00-08:00`).unix();
+((0, _.default)(`2026-11-23T09:30:00-08:00`).unix(),
+  (0, _.default)(`2026-11-30T10:00:00-08:00`).unix());
 function _() {
   return 2025;
 }
@@ -41,8 +41,8 @@ function _() {
 function _() {
   return `${_.STORE_BASE_URL}steamawards/ajaxgetwidgetstyle`;
 }
-(0, _.default)(`2026-12-17T09:30:00-08:00`).unix(),
-  (0, _.default)(`2027-01-02T10:00:00-08:00`).unix();
+((0, _.default)(`2026-12-17T09:30:00-08:00`).unix(),
+  (0, _.default)(`2027-01-02T10:00:00-08:00`).unix());
 var _ = 5350740;
 function _(_, _) {
   return _.BIsEventActionEnabled(_) || _ < _.GetStartTimeAndDateUnixSeconds();
@@ -821,4 +821,3 @@ var _ = _({
   useSteamAwardEligibility: () => _,
   useSteamAwardWidgetStyle: () => _,
 });
-export { _, _, _ };

@@ -19,22 +19,22 @@ import { t as p } from "./axiosutils.js";
 import { t as m } from "./importexport.js";
 function h(e) {
   let t = new Date(e.getTime());
-  return t.setHours(0, 0, 0, 0), t;
+  return (t.setHours(0, 0, 0, 0), t);
 }
 function g(e) {
   let t = new Date(e.getTime());
-  return t.setDate(1), t.setHours(0, 0, 0, 0), t;
+  return (t.setDate(1), t.setHours(0, 0, 0, 0), t);
 }
 function _(e, t) {
   let n = new Date(e);
-  return n.setDate(e.getDate() + t), n;
+  return (n.setDate(e.getDate() + t), n);
 }
 function v(e, t) {
   return e.reduce((e, n) => {
     let r = t(n),
       i = Math.floor(r.getTime() / 1e3),
       a = e.get(i) || [];
-    return e.set(i, [...a, n]), e;
+    return (e.set(i, [...a, n]), e);
   }, new Map());
 }
 var y = o(f());
@@ -110,9 +110,9 @@ var j = class e {
       i = await y.default.get(t, { params: r, withCredentials: !0 });
     return i?.status == 200 && i?.data.success == 1
       ? (i.data.contacts.forEach((e) => {
-          this.m_mapPartnerToContactInfo.has(e.partnerid) ||
+          (this.m_mapPartnerToContactInfo.has(e.partnerid) ||
             this.m_mapPartnerToContactInfo.set(e.partnerid, []),
-            this.m_mapPartnerToContactInfo.get(e.partnerid).push(e);
+            this.m_mapPartnerToContactInfo.get(e.partnerid).push(e));
         }),
         i.data.contacts)
       : [];

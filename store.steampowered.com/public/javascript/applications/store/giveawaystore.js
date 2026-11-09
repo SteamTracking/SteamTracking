@@ -54,12 +54,12 @@ var m = e(o()),
       );
     }
   };
-u([t], g.prototype, `giveaway_id`, void 0),
+(u([t], g.prototype, `giveaway_id`, void 0),
   u([t], g.prototype, `seconds_until_drawing`, void 0),
   u([t], g.prototype, `rtime_start`, void 0),
   u([t], g.prototype, `rtime_end`, void 0),
   u([t], g.prototype, `closed`, void 0),
-  u([t], g.prototype, `winner_count`, void 0);
+  u([t], g.prototype, `winner_count`, void 0));
 var _ = class e {
   constructor() {
     a(this);
@@ -76,16 +76,18 @@ var _ = class e {
   }
   GetNextDrawChangeCallback(e) {
     let t = this.m_mapNextDrawChangeCallback.get(e);
-    return t || ((t = new l()), this.m_mapNextDrawChangeCallback.set(e, t)), t;
+    return (
+      t || ((t = new l()), this.m_mapNextDrawChangeCallback.set(e, t)), t
+    );
   }
   CopyToGiveaway(e, t) {
-    t.closed != e.closed && (t.closed = e.closed),
+    (t.closed != e.closed && (t.closed = e.closed),
       t.giveaway_id != e.giveaway_id && (t.giveaway_id = e.giveaway_id),
       t.rtime_start != e.rtime_start && (t.rtime_start = e.rtime_start),
       t.rtime_end != e.rtime_end && (t.rtime_end = e.rtime_end),
       t.winner_count != e.winner_count && (t.winner_count = e.winner_count),
       t.seconds_until_drawing != e.seconds_until_drawing &&
-        (t.seconds_until_drawing = e.seconds_until_drawing);
+        (t.seconds_until_drawing = e.seconds_until_drawing));
   }
   async ReloadGiveaway(e, t) {
     if (!e) return null;
@@ -101,14 +103,14 @@ var _ = class e {
         ) {
           let n = this.GetKey(e, t),
             r = this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(n);
-          r ||
+          (r ||
             ((r = new g()),
             this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(n, r)),
-            this.CopyToGiveaway(a.data, r);
+            this.CopyToGiveaway(a.data, r));
         }
         return n;
       });
-    return this.GetNextDrawChangeCallback(e).Dispatch(o), o;
+    return (this.GetNextDrawChangeCallback(e).Dispatch(o), o);
   }
   static s_Singleton;
   static Get() {
@@ -122,22 +124,22 @@ var _ = class e {
       let e = c(`giveawaynextdraw`, `application_config`);
       if (e && e.giveaway_id) {
         let t = new g();
-        this.CopyToGiveaway(e, t),
-          this.m_mapGiveawayIDToNextDrawInfo.set(e.giveaway_id, t);
+        (this.CopyToGiveaway(e, t),
+          this.m_mapGiveawayIDToNextDrawInfo.set(e.giveaway_id, t));
       }
       this.m_bLoadedFromConfig = !0;
     }
   }
 };
-u([t], _.prototype, `m_mapGiveawayIDToNextDrawInfo`, void 0),
-  u([n], _.prototype, `CopyToGiveaway`, null);
+(u([t], _.prototype, `m_mapGiveawayIDToNextDrawInfo`, void 0),
+  u([n], _.prototype, `CopyToGiveaway`, null));
 var v = class e {
   m_intervalID;
   m_intervalCountDownID;
   static s_GlobalInstance = 0;
   m_myInstanceNumber = 0;
   constructor() {
-    (this.m_myInstanceNumber = e.s_GlobalInstance), (e.s_GlobalInstance += 1);
+    ((this.m_myInstanceNumber = e.s_GlobalInstance), (e.s_GlobalInstance += 1));
   }
   ClearRefreshInterval() {
     this.m_intervalID &&= (window.clearInterval(this.m_intervalID), void 0);
@@ -163,10 +165,10 @@ var v = class e {
       (this.m_intervalCountDownID = window.setInterval(t, 1e3));
   }
 };
-u([d], v.prototype, `ClearRefreshInterval`, null),
+(u([d], v.prototype, `ClearRefreshInterval`, null),
   u([d], v.prototype, `ClearCountDown`, null),
   u([d], v.prototype, `SetupRefreshDataInterval`, null),
-  u([d], v.prototype, `SetupCountDown`, null);
+  u([d], v.prototype, `SetupCountDown`, null));
 function y(e, t) {
   let n = _.Get().GetInfoByInstance(e, t.m_myInstanceNumber);
   n &&
@@ -202,7 +204,7 @@ function x(e) {
             n());
         }),
       () => {
-        t.ClearRefreshInterval(), t.ClearCountDown();
+        (t.ClearRefreshInterval(), t.ClearCountDown());
       }
     ),
     [t, e, n],

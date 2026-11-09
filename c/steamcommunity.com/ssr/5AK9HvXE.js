@@ -280,7 +280,7 @@ function _(_) {
     case `ZA`:
       return 28;
     default:
-      return console.assert(!1, `Unhandled country code: ${_}`), 1;
+      return (console.assert(!1, `Unhandled country code: ${_}`), 1);
   }
 }
 var _ = {
@@ -554,21 +554,20 @@ function _(_, _) {
     _ = _ && _ % 100 == 0;
   _ && (_ = -_);
   let _ = [];
-  for (let _ = 0; _ < 2; _++) _ || _.push(_ % 10), (_ = Math.floor(_ / 10));
+  for (let _ = 0; _ < 2; _++) (_ || _.push(_ % 10), (_ = Math.floor(_ / 10)));
   !_ && _ && _.push(_);
   let _ = 0;
   do
-    _++ % 3 == 0 && _ > 2 && _ && _.push(_),
+    (_++ % 3 == 0 && _ > 2 && _ && _.push(_),
       _.push(_ % 10),
-      (_ = Math.floor(_ / 10));
+      (_ = Math.floor(_ / 10)));
   while (_ > 0);
   let _ = _.reverse().join(``),
     _ = _ ? ` ` : ``,
     _ = _ ? `-` : ``;
   return _ ? `${_}${_}${_}${_}` : `${_}${_}${_}${_}`;
 }
-_(), _();
+(_(), _());
 function _(_, _, _) {
   return _(_ ? `${_.STORE_BASE_URL}${_.store_url_path}` : void 0, _, _);
 }
-export { _, _, _, _, _ };

@@ -94,12 +94,12 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports),
+        (__webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
             ClientBoundsCenterPos2: () => _,
             VirtualKeyboard: () => _,
             useAnnounceOnFocus: () => _,
-          });
+          }));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -188,25 +188,25 @@
             _ = _.type;
           switch (_) {
             case "Emoticon_t":
-              (_["data-key-handler"] = "emoticon"),
+              ((_["data-key-handler"] = "emoticon"),
                 (_ = (0, _.jsx)(_._, {
                   emoticon: _.item,
                   large: !0,
-                }));
+                })));
               break;
             case "Sticker_t":
-              (_["data-key-handler"] = "sticker"),
+              ((_["data-key-handler"] = "sticker"),
                 (_ = (0, _.jsx)(_._, {
                   sticker: _.item,
-                }));
+                })));
               break;
             case "Effect_t":
-              (_["data-key-handler"] = "roomeffect"),
+              ((_["data-key-handler"] = "roomeffect"),
                 (_ = (0, _.jsx)(_._, {
                   className: _().Effect,
                   effect: _.item,
                   roomEffectSettings: _._,
-                }));
+                })));
               break;
           }
           let _ = _ ? _().Touched : void 0;
@@ -413,7 +413,7 @@
               _--
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
+            return (_ && _ && _(_, _, _), _);
           },
           _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         const _ = new _._("VirtualKeyboard"),
@@ -507,11 +507,11 @@
               onForwardKeyEvent: _,
               onDeleteSurroundingText: _,
             } = _;
-            return (0, _._)(_, _, _), null;
+            return ((0, _._)(_, _, _), null);
           },
           _ = (_) => {
             const { layout: _ } = _;
-            return (0, _._)(_), null;
+            return ((0, _._)(_), null);
           },
           _ = (_) => {
             const {
@@ -805,13 +805,13 @@
             } = _(_, _, _),
             _ = _.useCallback(
               (_) => {
-                _.stopPropagation(), _(_);
+                (_.stopPropagation(), _(_));
               },
               [_],
             ),
             _ = _.useCallback(
               (_) => {
-                _.stopPropagation(), _(_);
+                (_.stopPropagation(), _(_));
               },
               [_],
             );
@@ -989,7 +989,7 @@
           let _ = [],
             _ = [];
           for (let _ = _._.Light; _ <= _._.Dark; _++)
-            _.push(_(_, _)), _.push(_);
+            (_.push(_(_, _)), _.push(_));
           let _ = _(_, _._.Default);
           _
             ? (_.unshift(_), _.unshift(_._.Default))
@@ -1080,7 +1080,7 @@
             _ = _,
             _ = _.useCallback(
               (_) => {
-                _(_), _(_, !0);
+                (_(_), _(_, !0));
               },
               [_, _, _],
             ),
@@ -1151,7 +1151,7 @@
                 const _ = _.rgLongPress[_].holdTarget;
                 let _ = _(_),
                   _ = _(_.ownerDocument.body);
-                (_ = _._ < _._),
+                ((_ = _._ < _._),
                   (_ = (0, _.jsx)(_, {
                     emoji: _,
                     emojiIndex: _.index,
@@ -1163,7 +1163,7 @@
                     onKeyFocus: _.onKeyFocus,
                     onKeyHover: _.onKeyHover,
                     children: _.fnRenderExtendedRowTouchpad(_),
-                  }));
+                  })));
               }
               return (0, _.jsx)(
                 _,
@@ -1294,14 +1294,14 @@
             if (this.m_emojiCategories) return;
             this.m_emojiCategories = [];
             let _ = [];
-            _.push(_.FullEmojiList.findIndex((_) => _.key === "\u{1F600}")),
+            (_.push(_.FullEmojiList.findIndex((_) => _.key === "\u{1F600}")),
               _.push(_.FullEmojiList.findIndex((_) => _.key === "\u{1F486}")),
               _.push(_.FullEmojiList.findIndex((_) => _.key === "\u{1F435}")),
               _.push(_.FullEmojiList.findIndex((_) => _.key === "\u{1F347}")),
               _.push(_.FullEmojiList.findIndex((_) => _.key === "\u{1F30D}")),
               _.push(_.FullEmojiList.findIndex((_) => _.key === "\u{1F453}")),
               _.push(_.FullEmojiList.findIndex((_) => _.key === "\u{1F48B}")),
-              _.push(_.FullEmojiList.findIndex((_) => _.key === "\u{1F3C1}"));
+              _.push(_.FullEmojiList.findIndex((_) => _.key === "\u{1F3C1}")));
             const _ = [
               "People",
               "Activity",
@@ -1320,17 +1320,17 @@
             });
             let _ = Math.ceil(_.GetMaxRecentEmoji() / _.s_numEmojiRows);
             for (let _ = 0; _ < _.length; _++)
-              this.m_emojiCategories.push({
+              (this.m_emojiCategories.push({
                 key: _[_],
                 startIndex: _[_],
                 startColumn: _,
                 categoryIndex: _ + 1,
               }),
                 _ < _.length - 1 &&
-                  (_ += Math.ceil((_[_ + 1] - _[_]) / _.s_numEmojiRows));
+                  (_ += Math.ceil((_[_ + 1] - _[_]) / _.s_numEmojiRows)));
           }
           WithEmojiStore(_) {
-            this.InitEmojiCategories(_._), _(_._);
+            (this.InitEmojiCategories(_._), _(_._));
           }
           m_keyboardDiv = null;
           m_keyboardNavRef = _.createRef();
@@ -1361,7 +1361,7 @@
           m_mapTouched = new Set();
           m_trackpadHover = (0, _._)(!1);
           constructor(_) {
-            super(_),
+            (super(_),
               (this.state = {
                 toggleStates: {
                   Shift: 0,
@@ -1394,7 +1394,7 @@
                 bRightTrackpadDown: !1,
                 bShowLayoutName: !1,
                 screenReaderElement: "",
-              });
+              }));
           }
           AnnounceToScreenReader(_) {
             _ != this.state.screenReaderElement &&
@@ -1405,17 +1405,17 @@
           }
           m_timerShowLayoutName;
           SetLayoutNameTimeout() {
-            this.m_timerShowLayoutName &&
+            (this.m_timerShowLayoutName &&
               clearTimeout(this.m_timerShowLayoutName),
               (this.m_timerShowLayoutName = window.setTimeout(() => {
-                (this.m_timerShowLayoutName = 0),
+                ((this.m_timerShowLayoutName = 0),
                   this.setState({
                     bShowLayoutName: !1,
-                  });
-              }, 2e3));
+                  }));
+              }, 2e3)));
           }
           OnLayoutChanged(_) {
-            setTimeout(
+            (setTimeout(
               () =>
                 this.props.VirtualKeyboardManager.RestoreVirtualKeyboardForLastActiveElement(),
               1,
@@ -1425,7 +1425,7 @@
               this.setState({
                 standardLayout: (0, _._)(),
                 bShowLayoutName: !0,
-              });
+              }));
           }
           TypeKey(_) {
             for (
@@ -1513,11 +1513,11 @@
                   let _ = _.s_rgSteamItemCategories.indexOf(_);
                   this.WithEmojiStore((_) => {
                     if (_ != -1)
-                      (_ += this.m_emojiCategories.length),
+                      ((_ += this.m_emojiCategories.length),
                         this.setState({
                           layoutState: 3,
                           curEmojiCategoryIndex: _,
-                        });
+                        }));
                     else {
                       const _ = this.m_emojiCategories.find(
                         ({ key: _ }) => _ === _,
@@ -1554,7 +1554,7 @@
                   let _ = parseInt(_);
                   _._.AddEmojiTint(_, _);
                 }
-                _.length === 1 &&
+                (_.length === 1 &&
                   (_(this.state.toggleStates.Shift) ||
                     _(this.state.toggleStates.CapsLock)) &&
                   !_ &&
@@ -1614,7 +1614,7 @@
                                     _,
                                     _,
                                   );
-                              })(_, _(this.state.toggleStates.Shift));
+                              })(_, _(this.state.toggleStates.Shift)));
               }
               this.setState((_, _) => ({
                 ..._,
@@ -1656,8 +1656,8 @@
                 );
           }
           OnCommitText(_) {
-            (_ = _.replace(/./g, (_) => _[_] || _)),
-              this.props.VirtualKeyboardManager.HandleVirtualKeyDown(_, !1);
+            ((_ = _.replace(/./g, (_) => _[_] || _)),
+              this.props.VirtualKeyboardManager.HandleVirtualKeyDown(_, !1));
           }
           OnActiveElementChangedOrClicked(_) {
             this.context && this.context.reset();
@@ -1671,11 +1671,11 @@
                 );
                 break;
               case "sticker":
-                _._.TrackStickerUsage(_, Date.now() / 1e3),
+                (_._.TrackStickerUsage(_, Date.now() / 1e3),
                   this.props.VirtualKeyboardManager.HandleVirtualKeyDown(
                     `/sticker ${_}\r`,
                     _(this.state.toggleStates.Shift),
-                  );
+                  ));
                 break;
               case "roomeffect":
                 this.props.VirtualKeyboardManager.HandleVirtualKeyDown(
@@ -1707,7 +1707,7 @@
                   _.hasAttribute("data-emoji-index") &&
                   _._.FullEmojiList[_].nNumTints != 0,
                 _ = this.LongPressSlot(_);
-              _.holdTarget &&
+              (_.holdTarget &&
                 (this.TypeKey(_.holdTarget),
                 this.CancelLongPressTimer(_),
                 this.DismissLongPress(_),
@@ -1717,7 +1717,7 @@
                     _.addEventListener("mouseleave", this.OnKeyMouseLeave))
                   : this.TypeKey(_),
                 _.stopPropagation(),
-                _.preventDefault();
+                _.preventDefault());
             }
           }
           KeyUp(_) {
@@ -1751,9 +1751,9 @@
                 _.stopPropagation(),
                 _.preventDefault());
             }
-            this.CancelLongPressTimer(_),
+            (this.CancelLongPressTimer(_),
               this.DismissLongPress(_),
-              this.ClearHoldTarget(_);
+              this.ClearHoldTarget(_));
           }
           OnMouseDown(_) {
             this.KeyDown(_);
@@ -1790,36 +1790,36 @@
                       if (_ >= _) {
                         _ = 0;
                         let _ = this.m_emojiCategories[_];
-                        this.setState({
+                        (this.setState({
                           layoutState: 2,
                           curEmojiCategoryIndex: _,
                         }),
                           this.OnSelectEmojiCategory(_),
-                          (_ = _.key);
+                          (_ = _.key));
                       } else
-                        this.setState({
+                        (this.setState({
                           layoutState: 3,
                           curEmojiCategoryIndex: _,
                         }),
-                          (_ = _.s_rgSteamItemCategories[_]);
+                          (_ = _.s_rgSteamItemCategories[_]));
                   }
                   break;
                 case 2:
                   if (_ < 0 && !this.props.bStandalone)
-                    (_ = _ + _ - 1),
+                    ((_ = _ + _ - 1),
                       this.setState({
                         layoutState: 3,
                         curEmojiCategoryIndex: _,
                       }),
-                      (_ = _.s_rgSteamItemCategories[_ - 1]);
+                      (_ = _.s_rgSteamItemCategories[_ - 1]));
                   else if (_ < _ && _ >= 0) {
                     let _ = this.m_emojiCategories[_];
-                    this.setState({
+                    (this.setState({
                       layoutState: 2,
                       curEmojiCategoryIndex: _,
                     }),
                       this.OnSelectEmojiCategory(_),
-                      (_ = _.key);
+                      (_ = _.key));
                   }
                   break;
               }
@@ -1835,7 +1835,7 @@
             switch (_) {
               case _._.LPAD_CLICK:
               case _._.TRIGGER_LEFT:
-                (_ = this.getElementFromPointWorkaround(
+                ((_ = this.getElementFromPointWorkaround(
                   this.m_leftTrackpad._,
                   this.m_leftTrackpad._,
                   _._.LPAD,
@@ -1844,11 +1844,11 @@
                     bLeftTrackpadDown: _,
                   }),
                   (_ = _._.LPAD),
-                  this.OnTrackpadHover(this.m_leftTrackpad.lastElement, _);
+                  this.OnTrackpadHover(this.m_leftTrackpad.lastElement, _));
                 break;
               case _._.RPAD_CLICK:
               case _._.TRIGGER_RIGHT:
-                (_ = this.getElementFromPointWorkaround(
+                ((_ = this.getElementFromPointWorkaround(
                   this.m_rightTrackpad._,
                   this.m_rightTrackpad._,
                   _._.RPAD,
@@ -1857,7 +1857,7 @@
                     bRightTrackpadDown: _,
                   }),
                   (_ = _._.RPAD),
-                  this.OnTrackpadHover(this.m_rightTrackpad.lastElement, _);
+                  this.OnTrackpadHover(this.m_rightTrackpad.lastElement, _));
                 break;
             }
             _ &&
@@ -1899,8 +1899,8 @@
                 break;
               case _._.SECONDARY:
                 if (_.detail.source == _._.KEYBOARD_SIMULATOR) return;
-                this.DispatchEventByDataKey("Backspace", !0),
-                  this.StartBackspaceTimer();
+                (this.DispatchEventByDataKey("Backspace", !0),
+                  this.StartBackspaceTimer());
                 break;
               case _._.DIR_UP:
               case _._.DIR_DOWN:
@@ -1908,23 +1908,23 @@
               case _._.DIR_RIGHT:
                 break;
               case _._.BUMPER_LEFT:
-                this.TypeKeyInternal({
+                (this.TypeKeyInternal({
                   strKey: "IME_LUT_Up",
                 }),
-                  this.OnSelectSiblingEmojiCategory(-1);
+                  this.OnSelectSiblingEmojiCategory(-1));
                 break;
               case _._.BUMPER_RIGHT:
-                this.TypeKeyInternal({
+                (this.TypeKeyInternal({
                   strKey: "IME_LUT_Down",
                 }),
-                  this.OnSelectSiblingEmojiCategory(1);
+                  this.OnSelectSiblingEmojiCategory(1));
                 break;
               case _._.START:
                 this.RotateWindowPosition();
                 break;
               case _._.SELECT:
-                this.props.VirtualKeyboardManager.SendChatRadialMenuMsg(),
-                  _.stopPropagation();
+                (this.props.VirtualKeyboardManager.SendChatRadialMenuMsg(),
+                  _.stopPropagation());
                 break;
             }
           }
@@ -1966,9 +1966,9 @@
                 }));
                 break;
               case _._.SECONDARY:
-                this.DispatchEventByDataKey("Backspace", !1),
+                (this.DispatchEventByDataKey("Backspace", !1),
                   this.CancelBackpaceTimer(),
-                  this.DismissBackpaceTimer();
+                  this.DismissBackpaceTimer());
                 break;
               case _._.OPTIONS:
                 this.DispatchEventByDataKey(" ", !1);
@@ -2021,7 +2021,7 @@
                 _ = parseFloat(_.getAttribute("data-key-row") || ""),
                 _ = parseFloat(_.getAttribute("data-key-col") || ""),
                 _ = _.getAttribute("data-key") == "Backspace";
-              (_.longPressRow = _),
+              ((_.longPressRow = _),
                 (_.longPressCol = _),
                 (_.bSentKey = _),
                 !_ &&
@@ -2030,7 +2030,7 @@
                 this.CommitLongPressState(),
                 _ &&
                   (this.StartLongPressTimer(_.holdTarget, _, !0),
-                  this.TypeKey(_));
+                  this.TypeKey(_)));
             }
           }
           DismissLongPress(_) {
@@ -2038,20 +2038,22 @@
               _ =
                 (_.longPressRow !== null || _.longPressCol !== null) &&
                 !_.bSentKey;
-            (_.longPressRow = null), (_.longPressCol = null), (_.bSentKey = !1);
+            ((_.longPressRow = null),
+              (_.longPressCol = null),
+              (_.bSentKey = !1));
             let _ = null;
-            _ &&
+            (_ &&
               (--this.m_nOpenExtendedRows === 0
                 ? (_ = () => this.m_keyboardNavRef.current.PopState())
                 : (_ = () => {
-                    this.m_keyboardNavRef.current.PopState(),
-                      this.m_keyboardNavRef.current.PushState();
+                    (this.m_keyboardNavRef.current.PopState(),
+                      this.m_keyboardNavRef.current.PushState());
                   })),
-              this.CommitLongPressState(_);
+              this.CommitLongPressState(_));
           }
           StartLongPressTimer(_, _, _ = !1) {
             const _ = this.LongPressSlot(_);
-            _.nTimer && window.clearTimeout(_.nTimer),
+            (_.nTimer && window.clearTimeout(_.nTimer),
               (_.nTimer = window.setTimeout(
                 () => {
                   this.LongPressTimerExpired(_);
@@ -2059,7 +2061,7 @@
                 _ ? _.s_longPressRepeatThreshold : _.s_longPressThreshold,
               )),
               (_.holdTarget = _),
-              this.CommitLongPressState();
+              this.CommitLongPressState());
           }
           StartBackspaceTimer(_ = !1) {
             const _ = this.m_nBackspaceTimer;
@@ -2073,42 +2075,42 @@
             this.m_nBackspaceTimer = _;
           }
           BackspaceTimeExpired() {
-            this.StartBackspaceTimer(!0),
+            (this.StartBackspaceTimer(!0),
               this.TypeKeyInternal({
                 strKey: "Backspace",
               }),
-              this.SetBackspaceButtonSentKey(!0);
+              this.SetBackspaceButtonSentKey(!0));
           }
           DismissBackpaceTimer() {
             this.SetBackspaceButtonSentKey(!1);
           }
           SetBackspaceButtonSentKey(_) {
-            (this.LongPressSlot(_._.GAMEPAD).bSentKey = _),
-              this.CommitLongPressState();
+            ((this.LongPressSlot(_._.GAMEPAD).bSentKey = _),
+              this.CommitLongPressState());
           }
           CancelBackpaceTimer() {
             const _ = this.m_nBackspaceTimer;
-            _ && clearTimeout(_),
+            (_ && clearTimeout(_),
               this.SetBackspaceButtonSentKey(!1),
-              (this.m_nBackspaceTimer = null);
+              (this.m_nBackspaceTimer = null));
           }
           OnKeyMouseLeave(_) {
-            this.CancelLongPressTimer(_._.MOUSE),
-              this.ClearHoldTarget(_._.MOUSE);
+            (this.CancelLongPressTimer(_._.MOUSE),
+              this.ClearHoldTarget(_._.MOUSE));
           }
           ClearHoldTarget(_) {
             const _ = this.LongPressSlot(_);
-            _.holdTarget &&
+            (_.holdTarget &&
               _.holdTarget.removeEventListener(
                 "mouseleave",
                 this.OnKeyMouseLeave,
               ),
               (_.holdTarget = null),
-              this.CommitLongPressState();
+              this.CommitLongPressState());
           }
           CancelLongPressTimer(_) {
             const _ = this.LongPressSlot(_);
-            _.nTimer && clearTimeout(_.nTimer), (_.nTimer = null);
+            (_.nTimer && clearTimeout(_.nTimer), (_.nTimer = null));
           }
           ToggleStatesUpdate(_, _, _) {
             const _ = {};
@@ -2152,10 +2154,10 @@
                     _ !== null &&
                     (_ = parseFloat(_?.getAttribute("data-key-col") || ""));
                 }
-                _[_] === void 0 && (_[_] = []),
+                (_[_] === void 0 && (_[_] = []),
                   _[_][_] || (_[_][_] = 0),
                   ++_[_][_],
-                  ++_;
+                  ++_);
                 const _ = _.getAttribute("data-key");
                 if (_ == null) continue;
                 const _ = _.s_keyToggleData[_];
@@ -2194,18 +2196,18 @@
             const _ = this.LongPressSlot(_._.TOUCH);
             if (_.holdTarget) {
               const _ = _.holdTarget;
-              this.TypeKey(_),
+              (this.TypeKey(_),
                 this.CancelLongPressTimer(_._.TOUCH),
                 this.DismissLongPress(_._.TOUCH),
                 this.ClearHoldTarget(_._.TOUCH),
-                this.m_mapTouched.delete(_);
+                this.m_mapTouched.delete(_));
             }
             for (let _ = 0; _ < _.changedTouches.length; ++_) {
               const _ = _.changedTouches[_].target;
               (0, _._)(_) && this.m_mapTouched.add(_);
             }
-            (0, _._)() || _._.PlayNavSound(_._.Typing, !0),
-              this.UpdateTouchState(_, _.touches);
+            ((0, _._)() || _._.PlayNavSound(_._.Typing, !0),
+              this.UpdateTouchState(_, _.touches));
           }
           HandleTouchMove(_) {
             const _ = this.LongPressSlot(_._.TOUCH);
@@ -2215,7 +2217,7 @@
               if (!_) return;
               this.UpdateTouchState(_, _.touches);
             }
-            _.preventDefault(), _.stopPropagation();
+            (_.preventDefault(), _.stopPropagation());
           }
           IsCharacterFromActiveExtendedMenu(_) {
             const _ = _.hasAttribute("parent-row")
@@ -2253,16 +2255,16 @@
                 }
                 this.m_mapTouched.delete(_);
               }
-              this.CancelLongPressTimer(_._.TOUCH),
+              (this.CancelLongPressTimer(_._.TOUCH),
                 this.DismissLongPress(_._.TOUCH),
                 this.ClearHoldTarget(_._.TOUCH),
                 this.UpdateTouchState(_, _.touches),
                 _.preventDefault(),
-                _.stopPropagation();
+                _.stopPropagation());
             }
           }
           HandleTouchCancel(_) {
-            _.preventDefault(), _.stopPropagation();
+            (_.preventDefault(), _.stopPropagation());
           }
           ElementFromTouch(_, _) {
             const _ = _.elementsFromPoint(_.clientX, _.clientY);
@@ -2299,7 +2301,7 @@
                 for (let _ = 0; _ < _; ++_) {
                   let _ = _.startIndex + _,
                     _ = 0;
-                  for (; _ < _; ) {
+                  for (; _ < _;) {
                     const _ = _ ? _[_] : _,
                       _ = _ + _.startColumn;
                     let _ = {
@@ -2309,7 +2311,7 @@
                       row: _,
                       column: _,
                     };
-                    _[_].push(_), (_ += _), _++, (_ = Math.max(_, _));
+                    (_[_].push(_), (_ += _), _++, (_ = Math.max(_, _)));
                   }
                   for (; _ < _; ++_) _[_].push(void 0);
                 }
@@ -2360,14 +2362,14 @@
               (this.m_resizeObserver = null));
           }
           SetKeyboardDiv(_) {
-            this.StopResizeListening(),
+            (this.StopResizeListening(),
               (this.m_keyboardDiv = _),
               this.m_keyboardDiv &&
                 ((this.m_resizeObserver =
                   new this.m_keyboardDiv.ownerDocument.defaultView.ResizeObserver(
                     this.UpdateWindowSize,
                   )),
-                this.m_resizeObserver.observe(this.m_keyboardDiv));
+                this.m_resizeObserver.observe(this.m_keyboardDiv)));
           }
           UpdateWindowSize() {
             if (this.m_keyboardDiv) {
@@ -2529,7 +2531,7 @@
             let _ = null;
             if (_?.length == 1 && _ !== " ") {
               let _ = _;
-              _ instanceof Object &&
+              (_ instanceof Object &&
                 _.extended_keys !== void 0 &&
                 (_ = _.extended_keys),
                 _ instanceof Array &&
@@ -2541,7 +2543,7 @@
                       _.length > 3 && (_ += _(_[3])))),
                 (_ += _.s_rgExtendedKeys[_] ?? ""),
                 (_ = _.split("").filter((_, _, _) => _.indexOf(_) === _)),
-                _ || (_ = _.reverse());
+                _ || (_ = _.reverse()));
             }
             const _ =
                 _ instanceof Object && _.dead
@@ -2601,11 +2603,11 @@
               "data-key-col": _,
               "data-keycode": _ || 0,
             };
-            _ && (_["data-extended-chars"] = 1),
+            (_ && (_["data-extended-chars"] = 1),
               _ && (_["data-key-shifted"] = 1),
               _ && (_["data-dead-key-next"] = _),
               _ && (_["data-dead-key-combined"] = _),
-              _ && (_["data-key-is-literal"] = 1);
+              _ && (_["data-key-is-literal"] = 1));
             let _ = this.GetKeyClassNameForTheme(_, _, _),
               _ = (0, _._)(_().KeyboardKey, _, _, _, _, _, _, _),
               _;
@@ -2867,7 +2869,7 @@
               _._.WindowStore.BHasStandaloneKeyboard()
             ) {
               const _ = (0, _._)(this.m_keyboardDiv);
-              (_ *= _), (_ *= _);
+              ((_ *= _), (_ *= _));
             }
             for (const _ of _.document.elementsFromPoint(_, _))
               if (!this.BInForeignExtendedRow(_, _))
@@ -2905,18 +2907,25 @@
                   this.OnTrackpadHover(void 0, _.lastElement);
               }
             } else
-              this.OnTrackpadHover(_.lastElement, void 0),
-                (_.lastElement = void 0);
+              (this.OnTrackpadHover(_.lastElement, void 0),
+                (_.lastElement = void 0));
           }
           OnLeftTrackpadAnalog(_, _, _, _) {
-            this.OnTrackpadAnalogInternal(this.m_leftTrackpad, _._, _, _, _, _),
+            (this.OnTrackpadAnalogInternal(
+              this.m_leftTrackpad,
+              _._,
+              _,
+              _,
+              _,
+              _,
+            ),
               this.state.bLeftTrackpadActive != _ &&
                 this.setState({
                   bLeftTrackpadActive: _,
-                });
+                }));
           }
           OnRightTrackpadAnalog(_, _, _, _) {
-            this.OnTrackpadAnalogInternal(
+            (this.OnTrackpadAnalogInternal(
               this.m_rightTrackpad,
               _._,
               _,
@@ -2927,7 +2936,7 @@
               this.state.bRightTrackpadActive != _ &&
                 this.setState({
                   bRightTrackpadActive: _,
-                });
+                }));
           }
           RenderNumericKeyboard() {
             const _ = {
@@ -3104,34 +3113,34 @@
             });
           }
           ClearControllerInputWatchdogTimer() {
-            window.clearInterval(this.state.watchdogTimer),
+            (window.clearInterval(this.state.watchdogTimer),
               this.setState({
                 watchdogTimer: null,
-              });
+              }));
           }
           componentDidUpdate() {
             this.m_trackpadHover.Set(this.BHasTrackpadHover());
           }
           componentDidMount() {
-            _._.GetKeyboardLayoutSettings().selectedLayouts.length != 1 &&
+            (_._.GetKeyboardLayoutSettings().selectedLayouts.length != 1 &&
               (this.SetLayoutNameTimeout(),
               this.setState({
                 bShowLayoutName: !0,
               })),
               this.m_trackpadInput.EnableAnalogInputMessages(!0),
-              this.StartControllerInputWatchdogTimer();
+              this.StartControllerInputWatchdogTimer());
           }
           componentWillUnmount() {
-            this.StopResizeListening(),
+            (this.StopResizeListening(),
               this.CancelBackpaceTimer(),
-              this.DismissBackpaceTimer();
+              this.DismissBackpaceTimer());
             for (const _ of [_._.GAMEPAD, _._.LPAD, _._.RPAD])
-              this.CancelLongPressTimer(_),
+              (this.CancelLongPressTimer(_),
                 this.DismissLongPress(_),
-                this.ClearHoldTarget(_);
-            this.m_trackpadInput.EnableAnalogInputMessages(!1),
+                this.ClearHoldTarget(_));
+            (this.m_trackpadInput.EnableAnalogInputMessages(!1),
               this.m_trackpadInput.Destroy(),
-              this.ClearControllerInputWatchdogTimer();
+              this.ClearControllerInputWatchdogTimer());
           }
           render() {
             switch (this.state.layoutState) {
@@ -3145,7 +3154,7 @@
             }
           }
         };
-        _(_, "contextType", _._),
+        (_(_, "contextType", _._),
           _(_, "s_keyCapTypeData", {
             [_._.Character]: [
               _().KeyboardCharacterKey,
@@ -3342,7 +3351,7 @@
           _([_._], _.prototype, "getElementFromPointWorkaround", 1),
           _([_._], _.prototype, "OnLeftTrackpadAnalog", 1),
           _([_._], _.prototype, "OnRightTrackpadAnalog", 1),
-          (_ = _([_._], _));
+          (_ = _([_._], _)));
         function _(_) {
           const {
               nRow: _,
@@ -3384,13 +3393,13 @@
           }, [_, _]);
           const _ = _.useCallback(
               (_, _) => {
-                _(_), _(_, _);
+                (_(_), _(_, _));
               },
               [_],
             ),
             _ = _.useCallback(
               (_, _) => {
-                _(_), _(_, _);
+                (_(_), _(_, _));
               },
               [_],
             ),
@@ -3555,13 +3564,13 @@
           const _ = _.useRef(void 0),
             _ = _.useRef(void 0),
             _ = _.useCallback(() => {
-              _.current && ((_.current = void 0), _(!1, 0, 0)),
+              (_.current && ((_.current = void 0), _(!1, 0, 0)),
                 (_.current = !1),
                 _({
                   active: !1,
                   trackpadX: 0,
                   trackpadY: 0,
-                });
+                }));
             }, [_, _]),
             _ = _.useCallback((_) => {
               _.current = _;
@@ -3585,9 +3594,9 @@
                         _ = _.current.getBoundingClientRect(),
                         _ = _.left + _.width * _,
                         _ = _.top + _.height * _;
-                      _.current.fnCallback(!0, _, _, _),
+                      (_.current.fnCallback(!0, _, _, _),
                         _.current !== void 0 && window.clearTimeout(_.current),
-                        (_.current = window.setTimeout(_, 100));
+                        (_.current = window.setTimeout(_, 100)));
                     }
                     _.current &&
                       (_.current.style.translate = _(_, _, _.current));
@@ -3618,8 +3627,8 @@
                 const _ = _.requestAnimationFrame(() => {
                   _.current = void 0;
                   const _ = _.current;
-                  (_.current = void 0),
-                    _ && _(_.button, _.controller_index, _._, _._);
+                  ((_.current = void 0),
+                    _ && _(_.button, _.controller_index, _._, _._));
                 });
                 _.current = {
                   ownerWindow: _,
@@ -3631,8 +3640,8 @@
           if (
             (_.useEffect(
               () => () => {
-                _.current?.ownerWindow.cancelAnimationFrame(_.current.nFrame),
-                  (_.current = void 0);
+                (_.current?.ownerWindow.cancelAnimationFrame(_.current.nFrame),
+                  (_.current = void 0));
               },
               [],
             ),

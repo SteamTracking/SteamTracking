@@ -281,8 +281,8 @@ import {
   nt as p,
   on as m,
   rn as h,
-} from "./mobx.esm.js"; /* empty css                                   */
-import {
+} from "./mobx.esm.js";
+/* empty css                                   */ import {
   At as g,
   F as _,
   It as v,
@@ -339,8 +339,8 @@ import { t as Ke } from "./axios.js";
 import { a as qe } from "./historyutils.js";
 import { n as Je, r as Ye, t as Xe } from "./browserapi.js";
 import { n as Ze, t as Qe } from "./simplesuccesserror.js";
-import { t as $e } from "./eventtrackinghook.js"; /* empty css                                  */
-import { t as et } from "./localstorage.js";
+import { t as $e } from "./eventtrackinghook.js";
+/* empty css                                  */ import { t as et } from "./localstorage.js";
 import { t as tt } from "./configdatadiag.js";
 import { t as E } from "./phpintegration.js";
 import { t as nt } from "./unknownroute.js";
@@ -367,13 +367,13 @@ var D = (e, t, n) => {
         );
       });
 };
-`VALVE_PUBLIC_PATH` in window
+(`VALVE_PUBLIC_PATH` in window
   ? (globalThis.__webpack_public_path__ = window.VALVE_PUBLIC_PATH)
   : console.error(
       `VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet`,
     ),
   Array.from(new Set([123]))[0] !== 123 &&
-    console.error(`Should not include prototypejs.`);
+    console.error(`Should not include prototypejs.`));
 var O = m(v(), 1),
   at = `_7u8JcHTlx8M-`,
   ot = `KWtRH19ERaI-`,
@@ -415,13 +415,13 @@ function ft(e) {
   let g;
   typeof n == `string` ? (g = n) : n && M(m, `dull`, n);
   let _;
-  typeof r == `string` ? (_ = r) : r && N(m, `body`, r),
+  (typeof r == `string` ? (_ = r) : r && N(m, `body`, r),
     i && M(m, `success`, i),
     a && M(m, `warning`, a),
     o && M(m, `error`, o),
     s && N(m, `success`, s),
     c && N(m, `warning`, c),
-    l && N(m, `error`, l);
+    l && N(m, `error`, l));
   let v = (0, A.jsx)(Ue, {
     variants: f,
     children: (0, A.jsx)(`div`, {
@@ -798,7 +798,7 @@ function Wt(e) {
     a = null;
   Me(() => {
     for (let e = n; e && e.visible; e = e.submenu)
-      i.push((0, A.jsx)(Gt, { instance: e }, e.key)), (a = e.label);
+      (i.push((0, A.jsx)(Gt, { instance: e }, e.key)), (a = e.label));
   });
   let o = k.useCallback(
     (e) => {
@@ -924,7 +924,7 @@ function rn() {
 }
 async function an(e, t) {
   let n = new FormData();
-  n.append(`sessionid`, s()), n.append(`keys`, JSON.stringify(t));
+  (n.append(`sessionid`, s()), n.append(`keys`, JSON.stringify(t)));
   let r = `${p.PARTNER_BASE_URL}apps/requestkeys/${e}`,
     i = await Qt.default.post(r, n);
   return i?.data?.message
@@ -1023,7 +1023,7 @@ function cn(e) {
     });
   return (
     (0, k.useEffect)(() => {
-      o.fnSetLoading(!0), s.mutate();
+      (o.fnSetLoading(!0), s.mutate());
     }, []),
     (0, A.jsx)(Qe, {
       state: o,
@@ -1570,10 +1570,10 @@ function Pn(e) {
   return (
     k.useEffect(() => {
       let e = Te();
-      e &&
+      (e &&
         (document.documentElement.setAttribute(`lang`, e),
         x.SetPreferredLocales([e])),
-        n(!0);
+        n(!0));
     }, []),
     t
       ? (0, A.jsx)(Le, {
@@ -1825,12 +1825,12 @@ function zn() {
 }
 document.addEventListener(`DOMContentLoaded`, async function () {
   let e = document.getElementById(`application_root`);
-  o(e ? `application_config` : void 0),
+  (o(e ? `application_config` : void 0),
     n().Init(`Partner`, CLSTAMP, new Je().GetServiceTransport(), {
       fnGetReportTags: Rn,
     }),
     await Bn(p.LANGUAGE),
-    e ? Ln.createRoot(e).render(k.createElement(Pn, {})) : zn();
+    e ? Ln.createRoot(e).render(k.createElement(Pn, {})) : zn());
 });
 async function Bn(e) {
   let [t, n, r] = await Promise.all([
@@ -2338,10 +2338,11 @@ async function Bn(e) {
         ce.Ready(),
       ]),
       s = { ...o.default };
-    x.InitFromObjects(i, s), x.AddTokens(t, e), x.AddTokens(n, r);
-  } else x.InitFromObjects(i, null), x.AddTokens(t, null), x.AddTokens(n, null);
+    (x.InitFromObjects(i, s), x.AddTokens(t, e), x.AddTokens(n, r));
+  } else
+    (x.InitFromObjects(i, null), x.AddTokens(t, null), x.AddTokens(n, null));
 }
 function Vn(t, n, r) {
-  e(n === `manifest`, `Expected manifest not "${n}"`), x.InitDirect(r);
+  (e(n === `manifest`, `Expected manifest not "${n}"`), x.InitDirect(r));
 }
 window.LocalizationManifestReady = Vn;

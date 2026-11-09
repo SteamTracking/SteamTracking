@@ -51,9 +51,9 @@ function i(e) {
   else if (e.success !== void 0 && e.err_msg !== void 0)
     return { strErrorMsg: e.err_msg, errorCode: e.success };
   else if (typeof e == `string` && e.length > 1024)
-    console.groupCollapsed(`GetMsgAndErrorCodeFromResponse cannot parse: `),
+    (console.groupCollapsed(`GetMsgAndErrorCodeFromResponse cannot parse: `),
       console.warn(e),
-      console.groupEnd();
+      console.groupEnd());
   else if (typeof e == `object` && e instanceof t)
     return { strErrorMsg: `` + e.GetErrorMessage(), errorCode: e.GetEResult() };
   else console.warn(`GetMsgAndErrorCodeFromResponse cannot parse: `, e);

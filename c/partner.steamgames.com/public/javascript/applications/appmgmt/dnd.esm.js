@@ -16,7 +16,7 @@ var _ = (typeof Symbol == `function` && Symbol.observable) || `@@observable`,
 function _(_) {
   if (typeof _ != `object` || !_) return !1;
   let _ = _;
-  for (; Object.getPrototypeOf(_) !== null; ) _ = Object.getPrototypeOf(_);
+  for (; Object.getPrototypeOf(_) !== null;) _ = Object.getPrototypeOf(_);
   return Object.getPrototypeOf(_) === _ || Object.getPrototypeOf(_) === null;
 }
 function _(_, _, _) {
@@ -61,7 +61,7 @@ function _(_, _, _) {
       function () {
         if (_) {
           if (_) throw Error(_(6));
-          (_ = !1), _(), _.delete(_), (_ = null);
+          ((_ = !1), _(), _.delete(_), (_ = null));
         }
       }
     );
@@ -72,7 +72,7 @@ function _(_, _, _) {
     if (typeof _.type != `string`) throw Error(_(17));
     if (_) throw Error(_(9));
     try {
-      (_ = !0), (_ = _(_, _));
+      ((_ = !0), (_ = _(_, _)));
     } finally {
       _ = !1;
     }
@@ -85,10 +85,10 @@ function _(_, _, _) {
   }
   function _(_) {
     if (typeof _ != `function`) throw Error(_(10));
-    (_ = _),
+    ((_ = _),
       _({
         type: _.REPLACE,
-      });
+      }));
   }
   function _() {
     let _ = _;
@@ -257,12 +257,12 @@ function _(
   function _() {
     let _ = _(_, _),
       _ = !_(_, _);
-    return (_ = _), _ && (_ = _(_, _, _)), _;
+    return ((_ = _), _ && (_ = _(_, _, _)), _);
   }
   function _(_, _) {
     let _ = !_(_, _),
       _ = !_(_, _, _, _);
-    return (_ = _), (_ = _), _ && _ ? _() : _ ? _() : _ ? _() : _;
+    return ((_ = _), (_ = _), _ && _ ? _() : _ ? _() : _ ? _() : _);
   }
   return function (_, _) {
     return _ ? _(_, _) : _(_, _);
@@ -293,7 +293,7 @@ function _(_) {
     function _() {
       return _;
     }
-    return (_.dependsOnOwnProps = !1), _;
+    return ((_.dependsOnOwnProps = !1), _);
   };
 }
 function _(_) {
@@ -307,7 +307,7 @@ function _(_, _) {
     return (
       (_.dependsOnOwnProps = !0),
       (_.mapToProps = function (_, _) {
-        (_.mapToProps = _), (_.dependsOnOwnProps = _(_));
+        ((_.mapToProps = _), (_.dependsOnOwnProps = _(_)));
         let _ = _(_, _);
         return (
           typeof _ == `function` &&
@@ -357,7 +357,7 @@ function _(_) {
       _;
     return function (_, _, _) {
       let _ = _(_, _, _);
-      return _ ? _(_, _) || (_ = _) : ((_ = !0), (_ = _)), _;
+      return (_ ? _(_, _) || (_ = _) : ((_ = !0), (_ = _)), _);
     };
   };
 }
@@ -372,18 +372,18 @@ function _() {
     _ = null;
   return {
     clear() {
-      (_ = null), (_ = null);
+      ((_ = null), (_ = null));
     },
     notify() {
       _(() => {
         let _ = _;
-        for (; _; ) _.callback(), (_ = _.next);
+        for (; _;) (_.callback(), (_ = _.next));
       });
     },
     get() {
       let _ = [],
         _ = _;
-      for (; _; ) _.push(_), (_ = _.next);
+      for (; _;) (_.push(_), (_ = _.next));
       return _;
     },
     subscribe(_) {
@@ -433,10 +433,10 @@ function _(_, _) {
     return _;
   }
   function _() {
-    _++, _ || ((_ = _ ? _.addNestedSub(_) : _.subscribe(_)), (_ = _()));
+    (_++, _ || ((_ = _ ? _.addNestedSub(_) : _.subscribe(_)), (_ = _())));
   }
   function _() {
-    _--, _ && _ === 0 && (_(), (_ = void 0), _.clear(), (_ = _));
+    (_--, _ && _ === 0 && (_(), (_ = void 0), _.clear(), (_ = _)));
   }
   function _() {
     _ || ((_ = !0), _());
@@ -553,7 +553,7 @@ function _() {
   if (!_.createContext) return {};
   let _ = (_[_] ??= new Map()),
     _ = _.get(_.createContext);
-  return _ || ((_ = _.createContext(null)), _.set(_.createContext, _)), _;
+  return (_ || ((_ = _.createContext(null)), _.set(_.createContext, _)), _);
 }
 var _ = _(),
   _ = [null, null];
@@ -561,7 +561,7 @@ function _(_, _, _) {
   _(() => _(..._), _);
 }
 function _(_, _, _, _, _, _) {
-  (_.current = _), (_.current = !1), _.current && ((_.current = null), _());
+  ((_.current = _), (_.current = !1), _.current && ((_.current = null), _()));
 }
 function _(_, _, _, _, _, _, _, _, _, _, _) {
   if (!_) return () => {};
@@ -575,12 +575,12 @@ function _(_, _, _, _, _, _, _, _, _, _, _) {
       try {
         _ = _(_, _.current);
       } catch (_) {
-        (_ = _), (_ = _);
+        ((_ = _), (_ = _));
       }
-      _ || (_ = null),
+      (_ || (_ = null),
         _ === _.current
           ? _.current || _()
-          : ((_.current = _), (_.current = _), (_.current = !0), _());
+          : ((_.current = _), (_.current = _), (_.current = !0), _()));
     };
   return (
     (_.onStateChange = _),
@@ -636,7 +636,7 @@ function _(
         }, [_]),
         _ = _.useMemo(() => {
           let _ = _;
-          return _?.Consumer, _;
+          return (_?.Consumer, _);
         }, [_, _]),
         _ = _.useContext(_),
         _ = !!_.store && !!_.store.getState && !!_.store.dispatch,
@@ -689,17 +689,17 @@ function _(
         _ = _.useSyncExternalStore(_, _, _ ? () => _(_(), _) : _);
       } catch (_) {
         throw (
-          (_.current &&
+          _.current &&
             (_.message += `
 The error may be correlated with this previous error:
 ${_.current.stack}
 
 `),
-          _)
+          _
         );
       }
       _(() => {
-        (_.current = void 0), (_.current = void 0), (_.current = _);
+        ((_.current = void 0), (_.current = void 0), (_.current = _));
       });
       let _ = _.useMemo(
         () =>
@@ -731,7 +731,7 @@ ${_.current.stack}
           reactReduxForwardedRef: _,
         });
       });
-      return (_.displayName = _), (_.WrappedComponent = _), _(_, _);
+      return ((_.displayName = _), (_.WrappedComponent = _), _(_, _));
     }
     return _(_, _);
   };
@@ -755,7 +755,7 @@ function _(_) {
       _.trySubscribe(),
       _ !== _.getState() && _.notifyNestedSubs(),
       () => {
-        _.tryUnsubscribe(), (_.onStateChange = void 0);
+        (_.tryUnsubscribe(), (_.onStateChange = void 0));
       }
     );
   }, [_, _]);
@@ -844,7 +844,7 @@ var _ = _,
     var _ = _.slice(0, -2);
     if (_.slice(-2) !== `px`) return 0;
     var _ = Number(_);
-    return isNaN(_) && _(!1), _;
+    return (isNaN(_) && _(!1), _);
   },
   _ = function () {
     return {
@@ -865,7 +865,7 @@ var _ = _,
     });
   },
   _ = function (_, _) {
-    return _ === void 0 && (_ = _()), _(_, _);
+    return (_ === void 0 && (_ = _()), _(_, _));
   },
   _ = function (_, _) {
     return _({
@@ -897,11 +897,11 @@ var _ = _,
     var _ = [],
       _ = null,
       _ = function () {
-        (_ = [...arguments]),
+        ((_ = [...arguments]),
           !_ &&
             (_ = requestAnimationFrame(function () {
-              (_ = null), _.apply(void 0, _);
-            }));
+              ((_ = null), _.apply(void 0, _));
+            })));
       };
     return (
       (_.cancel = function () {
@@ -911,7 +911,7 @@ var _ = _,
     );
   };
 function _(_, _) {}
-_.bind(null, `warn`), _.bind(null, `error`);
+(_.bind(null, `warn`), _.bind(null, `error`));
 function _() {}
 function _(_, _) {
   return {
@@ -945,13 +945,13 @@ function _(_, _) {
 }
 var _ = class extends _.Component {
     constructor(..._) {
-      super(..._),
+      (super(..._),
         (this.callbacks = null),
         (this.unbind = _),
         (this.onWindowError = (_) => {
           let _ = this.getCallbacks();
-          _.isDragging() && _.tryAbort(),
-            _.error instanceof _ && _.preventDefault();
+          (_.isDragging() && _.tryAbort(),
+            _.error instanceof _ && _.preventDefault());
         }),
         (this.getCallbacks = () => {
           if (!this.callbacks)
@@ -960,7 +960,7 @@ var _ = class extends _.Component {
         }),
         (this.setCallbacks = (_) => {
           this.callbacks = _;
-        });
+        }));
     }
     componentDidMount() {
       this.unbind = _(window, [
@@ -1081,7 +1081,7 @@ function _(_, _) {
           };
   return (
     (0, _.useEffect)(() => {
-      (_.current = !1), (_.current = _);
+      ((_.current = !1), (_.current = _));
     }, [_]),
     _.result
   );
@@ -1407,12 +1407,12 @@ function _({
           withDroppableDisplacement: !0,
         }))
       )
-        return (_.invisible[_.descriptor._] = !0), _;
+        return ((_.invisible[_.descriptor._] = !0), _);
       let _ = {
         draggableId: _,
         shouldAnimate: _(_, _, _),
       };
-      return (_.visible[_] = _), _;
+      return ((_.visible[_] = _), _);
     },
     {
       all: [],
@@ -1858,7 +1858,7 @@ var _ = ({
   },
   _ = (_) => {
     let _ = _.subject.active;
-    return !_ && _(), _;
+    return (!_ && _(), _);
   },
   _ = ({
     isMovingForward: _,
@@ -1964,7 +1964,7 @@ var _ = ({
   }),
   _ = (_, _, _) => {
     let _ = _.frame;
-    _(_, _) && _(), _.subject.withPlaceholder && _();
+    (_(_, _) && _(), _.subject.withPlaceholder && _());
     let _ = _(_.axis, _.displaceBy).point,
       _ = _(_, _, _),
       _ = {
@@ -2601,7 +2601,7 @@ var _ = ({
   },
   _ = (_) => {
     let _ = _.frame;
-    return !_ && _(), _;
+    return (!_ && _(), _);
   },
   _ = ({ additions: _, updatedDroppables: _, viewport: _ }) => {
     let _ = _.scroll.diff.value;
@@ -2833,7 +2833,7 @@ var _ = {
     }
     if (_.type === `MOVE_BY_WINDOW_SCROLL`) {
       if (_.phase === `DROP_PENDING` || _.phase === `DROP_ANIMATING`) return _;
-      !_(_) && _(), !_.isWindowScrollAllowed && _();
+      (!_(_) && _(), !_.isWindowScrollAllowed && _());
       let _ = _.payload.newScroll;
       if (_(_.viewport.scroll.current, _)) return _(_);
       let _ = _(_.viewport, _);
@@ -3017,7 +3017,7 @@ var _ = (_) => ({
       }
       let { _: _, clientSelection: _, movementMode: _ } = _.payload,
         _ = _();
-      _.phase === `DROP_ANIMATING` &&
+      (_.phase === `DROP_ANIMATING` &&
         _(
           _({
             completed: _.completed,
@@ -3030,7 +3030,7 @@ var _ = (_) => ({
             draggableId: _,
             movementMode: _,
           }),
-        );
+        ));
       let _ = {
           draggableId: _,
           scrollOptions: {
@@ -3049,10 +3049,10 @@ var _ = (_) => ({
       );
     },
   _ = (_) => () => (_) => (_) => {
-    _(_, `INITIAL_PUBLISH`) && _.dragging(),
+    (_(_, `INITIAL_PUBLISH`) && _.dragging(),
       _(_, `DROP_ANIMATE`) && _.dropping(_.payload.completed.result.reason),
       (_(_, `FLUSH`) || _(_, `DROP_COMPLETE`)) && _.resting(),
-      _(_);
+      _(_));
   },
   _ = {
     outOfTheWay: `cubic-bezier(0.2, 0, 0, 1)`,
@@ -3176,8 +3176,8 @@ var _ = (_) => ({
         return;
       }
       if (_.phase === `IDLE`) return;
-      _.phase === `DROP_PENDING` && _.isWaiting && _(),
-        _.phase !== `DRAGGING` && _.phase !== `DROP_PENDING` && _();
+      (_.phase === `DROP_PENDING` && _.isWaiting && _(),
+        _.phase !== `DRAGGING` && _.phase !== `DROP_PENDING` && _());
       let _ = _.critical,
         _ = _.dimensions,
         _ = _.draggables[_.critical.draggable._],
@@ -3263,10 +3263,10 @@ function _({ onWindowScroll: _ }) {
     return _ !== _;
   }
   function _() {
-    _() && _(), (_ = _(window, [_]));
+    (_() && _(), (_ = _(window, [_])));
   }
   function _() {
-    !_() && _(), _.cancel(), _(), (_ = _);
+    (!_() && _(), _.cancel(), _(), (_ = _));
   }
   return {
     start: _,
@@ -3286,9 +3286,9 @@ var _ = (_) => _(_, `DROP_COMPLETE`) || _(_, `DROP_ANIMATE`) || _(_, `FLUSH`),
       },
     });
     return (_) => (_) => {
-      !_.isActive() && _(_, `INITIAL_PUBLISH`) && _.start(),
+      (!_.isActive() && _(_, `INITIAL_PUBLISH`) && _.start(),
         _.isActive() && _(_) && _.stop(),
-        _(_);
+        _(_));
     };
   },
   _ = (_) => {
@@ -3300,7 +3300,7 @@ var _ = (_) => _(_, `DROP_COMPLETE`) || _(_, `DROP_ANIMATE`) || _(_, `FLUSH`),
       _ = (_) => {
         _ || _ || ((_ = !0), _(_), clearTimeout(_));
       };
-    return (_.wasCalled = () => _), _;
+    return ((_.wasCalled = () => _), _);
   },
   _ = () => {
     let _ = [],
@@ -3322,10 +3322,10 @@ var _ = (_) => _(_, `DROP_COMPLETE`) || _(_, `DROP_ANIMATE`) || _(_, `FLUSH`),
       flush: () => {
         if (!_.length) return;
         let _ = [..._];
-        (_.length = 0),
+        ((_.length = 0),
           _.forEach((_) => {
-            clearTimeout(_.timerId), _.callback();
-          });
+            (clearTimeout(_.timerId), _.callback());
+          }));
       },
     };
   },
@@ -3371,16 +3371,16 @@ function _(_, _, _, _) {
     return;
   }
   let _ = _(_);
-  _(_, {
+  (_(_, {
     announce: _,
   }),
-    _.wasCalled() || _(_(_));
+    _.wasCalled() || _(_(_)));
 }
 var _ = (_, _) => {
     let _ = _(),
       _ = null,
       _ = (_, _) => {
-        _ && _(),
+        (_ && _(),
           _(`onBeforeCapture`, () => {
             let _ = _().onBeforeCapture;
             _ &&
@@ -3388,19 +3388,19 @@ var _ = (_, _) => {
                 draggableId: _,
                 mode: _,
               });
-          });
+          }));
       },
       _ = (_, _) => {
-        _ && _(),
+        (_ && _(),
           _(`onBeforeDragStart`, () => {
             let _ = _().onBeforeDragStart;
             _ && _(_(_, _));
-          });
+          }));
       },
       _ = (_, _) => {
         _ && _();
         let _ = _(_, _);
-        (_ = {
+        ((_ = {
           mode: _,
           lastCritical: _,
           lastLocation: _.source,
@@ -3408,7 +3408,7 @@ var _ = (_, _) => {
         }),
           _.add(() => {
             _(`onDragStart`, () => _(_().onDragStart, _, _, _.onDragStart));
-          });
+          }));
       },
       _ = (_, _) => {
         let _ = _(_),
@@ -3430,12 +3430,12 @@ var _ = (_, _) => {
         });
       },
       _ = () => {
-        !_ && _(), _.flush();
+        (!_ && _(), _.flush());
       },
       _ = (_) => {
-        !_ && _(),
+        (!_ && _(),
           (_ = null),
-          _(`onDragEnd`, () => _(_().onDragEnd, _, _, _.onDragEnd));
+          _(`onDragEnd`, () => _(_().onDragEnd, _, _, _.onDragEnd)));
       };
     return {
       beforeCapture: _,
@@ -3465,14 +3465,14 @@ var _ = (_, _) => {
       }
       if (_(_, `INITIAL_PUBLISH`)) {
         let _ = _.payload.critical;
-        _.beforeStart(_, _.payload.movementMode),
+        (_.beforeStart(_, _.payload.movementMode),
           _(_),
-          _.start(_, _.payload.movementMode);
+          _.start(_, _.payload.movementMode));
         return;
       }
       if (_(_, `DROP_COMPLETE`)) {
         let _ = _.payload.completed.result;
-        _.flush(), _(_), _.drop(_);
+        (_.flush(), _(_), _.drop(_));
         return;
       }
       if ((_(_), _(_, `FLUSH`))) {
@@ -3489,18 +3489,18 @@ var _ = (_, _) => {
       return;
     }
     let _ = _.getState();
-    _.phase !== `DROP_ANIMATING` && _(),
+    (_.phase !== `DROP_ANIMATING` && _(),
       _.dispatch(
         _({
           completed: _.completed,
         }),
-      );
+      ));
   },
   _ = (_) => {
     let _ = null,
       _ = null;
     function _() {
-      (_ &&= (cancelAnimationFrame(_), null)), (_ &&= (_(), null));
+      ((_ &&= (cancelAnimationFrame(_), null)), (_ &&= (_(), null)));
     }
     return (_) => (_) => {
       if (
@@ -3524,42 +3524,42 @@ var _ = (_, _) => {
         },
       };
       _ = requestAnimationFrame(() => {
-        (_ = null), (_ = _(window, [_]));
+        ((_ = null), (_ = _(window, [_])));
       });
     };
   },
   _ = (_) => () => (_) => (_) => {
-    (_(_, `DROP_COMPLETE`) || _(_, `FLUSH`) || _(_, `DROP_ANIMATE`)) &&
+    ((_(_, `DROP_COMPLETE`) || _(_, `FLUSH`) || _(_, `DROP_ANIMATE`)) &&
       _.stopPublishing(),
-      _(_);
+      _(_));
   },
   _ = (_) => {
     let _ = !1;
     return () => (_) => (_) => {
       if (_(_, `INITIAL_PUBLISH`))
-        (_ = !0),
+        ((_ = !0),
           _.tryRecordFocus(_.payload.critical.draggable._),
           _(_),
-          _.tryRestoreFocusRecorded();
+          _.tryRestoreFocusRecorded());
       else if ((_(_), _)) {
-        if (_(_, `FLUSH`)) (_ = !1), _.tryRestoreFocusRecorded();
+        if (_(_, `FLUSH`)) ((_ = !1), _.tryRestoreFocusRecorded());
         else if (_(_, `DROP_COMPLETE`)) {
           _ = !1;
           let _ = _.payload.completed.result;
-          _.combine && _.tryShiftRecord(_.draggableId, _.combine.draggableId),
-            _.tryRestoreFocusRecorded();
+          (_.combine && _.tryShiftRecord(_.draggableId, _.combine.draggableId),
+            _.tryRestoreFocusRecorded());
         }
       }
     };
   },
   _ = (_) => _(_, `DROP_COMPLETE`) || _(_, `DROP_ANIMATE`) || _(_, `FLUSH`),
   _ = (_) => (_) => (_) => (_) => {
-    if (_(_)) _.stop(), _(_);
+    if (_(_)) (_.stop(), _(_));
     else if (_(_, `INITIAL_PUBLISH`)) {
       _(_);
       let _ = _.getState();
-      _.phase !== `DRAGGING` && _(), _.start(_);
-    } else _(_), _.scroll(_.getState());
+      (_.phase !== `DRAGGING` && _(), _.start(_));
+    } else (_(_), _.scroll(_.getState()));
   },
   _ = (_) => (_) => (_) => {
     if ((_(_), !_(_, `PUBLISH_WHILE_DRAGGING`))) return;
@@ -3607,23 +3607,23 @@ function _({ registry: _, callbacks: _ }) {
               removals: Object.keys(_),
               modified: _,
             };
-          (_ = _()), _.publish(_);
+          ((_ = _()), _.publish(_));
         }));
     };
   return {
     add: (_) => {
       let _ = _.descriptor._;
-      (_.additions[_] = _),
+      ((_.additions[_] = _),
         (_.modified[_.descriptor.droppableId] = !0),
         _.removals[_] && delete _.removals[_],
-        _();
+        _());
     },
     remove: (_) => {
       let _ = _.descriptor;
-      (_.removals[_._] = !0),
+      ((_.removals[_._] = !0),
         (_.modified[_.droppableId] = !0),
         _.additions[_._] && delete _.additions[_._],
-        _();
+        _());
     },
     stop: () => {
       _ && (cancelAnimationFrame(_), (_ = null), (_ = _()));
@@ -3648,7 +3648,7 @@ var _ = ({ scrollHeight: _, scrollWidth: _, height: _, width: _ }) => {
   },
   _ = (_ = window) => {
     let _ = _.document.documentElement;
-    return !_ && _(), _;
+    return (!_ && _(), _);
   },
   _ = (_ = window) => {
     let _ = _(_);
@@ -3722,12 +3722,12 @@ var _ = (_, _, _) => {
         registry: _,
       }),
       _ = (_, _) => {
-        !_.droppable.exists(_) && _(),
+        (!_.droppable.exists(_) && _(),
           _ &&
             _.updateDroppableIsEnabled({
               _: _,
               isEnabled: _,
-            });
+            }));
       },
       _ = (_, _) => {
         _ &&
@@ -3752,17 +3752,17 @@ var _ = (_, _, _) => {
         if (!_) return;
         _.stop();
         let _ = _.critical.droppable;
-        _.droppable
+        (_.droppable
           .getAllByType(_.type)
           .forEach((_) => _.callbacks.dragStopped()),
           _.unsubscribe(),
-          (_ = null);
+          (_ = null));
       },
       _ = (_) => {
         !_ && _();
         let _ = _.critical.draggable;
-        _.type === `ADDITION` && _(_, _, _.value) && _.add(_.value),
-          _.type === `REMOVAL` && _(_, _, _.value) && _.remove(_.value);
+        (_.type === `ADDITION` && _(_, _, _.value) && _.add(_.value),
+          _.type === `REMOVAL` && _(_, _, _.value) && _.remove(_.value));
       };
     return {
       updateDroppableIsEnabled: _,
@@ -4125,7 +4125,7 @@ var _ = (_, _, _) => {
           _ = () => {
             _ = !0;
           };
-        _({
+        (_({
           state: _,
           dragStartTime: 0,
           shouldUseTimeDampening: !1,
@@ -4137,7 +4137,7 @@ var _ = (_, _, _) => {
             dragStartTime: _,
             shouldUseTimeDampening: _,
           }),
-          _ && _(_);
+          _ && _(_));
       },
       stop: () => {
         _ &&= (_.cancel(), _.cancel(), null);
@@ -4154,16 +4154,16 @@ var _ = (_, _, _) => {
       _ = (_, _) => {
         if (!_(_, _)) return _;
         let _ = _(_, _);
-        if (!_) return _(_.descriptor._, _), null;
+        if (!_) return (_(_.descriptor._, _), null);
         let _ = _(_, _);
-        return _(_.descriptor._, _), _(_, _);
+        return (_(_.descriptor._, _), _(_, _));
       },
       _ = (_, _, _) => {
         if (!_ || !_(_, _)) return _;
         let _ = _(_, _);
-        if (!_) return _(_), null;
+        if (!_) return (_(_), null);
         let _ = _(_, _);
-        return _(_), _(_, _);
+        return (_(_), _(_, _));
       };
     return (_) => {
       let _ = _.scrollJumpRequest;
@@ -4313,11 +4313,11 @@ var _ = (_, _, _) => {
       : _.useEffect,
   _ = (_) => {
     let _ = _ || document.querySelector(`head`);
-    return !_ && _(), _;
+    return (!_ && _(), _);
   },
   _ = (_) => {
     let _ = document.createElement(`style`);
-    return _ && _.setAttribute(`nonce`, _), (_.type = `text/css`), _;
+    return (_ && _.setAttribute(`nonce`, _), (_.type = `text/css`), _);
   };
 function _(_, _, _) {
   let _ = _(() => _(_), [_]),
@@ -4326,22 +4326,22 @@ function _(_, _, _) {
     _ = _(
       _((_) => {
         let _ = _.current;
-        !_ && _(), (_.textContent = _);
+        (!_ && _(), (_.textContent = _));
       }),
       [],
     ),
     _ = _((_) => {
       let _ = _.current;
-      !_ && _(), (_.textContent = _);
+      (!_ && _(), (_.textContent = _));
     }, []);
   _(() => {
     (_.current || _.current) && _();
     let _ = _(_),
       _ = _(_);
-    (_.current = _),
+    ((_.current = _),
       (_.current = _),
       _.setAttribute(`${_}-always`, _),
-      _.setAttribute(`${_}-dynamic`, _);
+      _.setAttribute(`${_}-dynamic`, _));
     let _ = _(_);
     return (
       _.appendChild(_),
@@ -4351,9 +4351,9 @@ function _(_, _, _) {
       () => {
         let _ = (_) => {
           let _ = _.current;
-          !_ && _(), _.removeChild(_), (_.current = null);
+          (!_ && _(), _.removeChild(_), (_.current = null));
         };
-        _(_), _(_);
+        (_(_), _(_));
       }
     );
   }, [_, _, _, _.always, _.resting, _, _]);
@@ -4498,15 +4498,15 @@ function _() {
   }
   function _(_) {
     let _ = _(_);
-    return !_ && _(), _;
+    return (!_ && _(), _);
   }
   let _ = {
     register: (_) => {
-      (_.draggables[_.descriptor._] = _),
+      ((_.draggables[_.descriptor._] = _),
         _({
           type: `ADDITION`,
           value: _,
-        });
+        }));
     },
     update: (_, _) => {
       let _ = _.draggables[_.descriptor._];
@@ -4538,7 +4538,7 @@ function _() {
   }
   function _(_) {
     let _ = _(_);
-    return !_ && _(), _;
+    return (!_ && _(), _);
   }
   let _ = {
     register: (_) => {
@@ -4555,7 +4555,7 @@ function _() {
       Object.values(_.droppables).filter((_) => _.descriptor.type === _),
   };
   function _() {
-    (_.draggables = {}), (_.droppables = {}), (_.length = 0);
+    ((_.draggables = {}), (_.droppables = {}), (_.length = 0));
   }
   return {
     draggable: _,
@@ -4580,7 +4580,7 @@ function _() {
 var _ = _.createContext(null),
   _ = () => {
     let _ = document.body;
-    return !_ && _(), _;
+    return (!_ && _(), _);
   },
   _ = {
     position: `absolute`,
@@ -4611,8 +4611,8 @@ function _(_) {
           function () {
             setTimeout(function () {
               let _ = _();
-              _.contains(_) && _.removeChild(_),
-                _ === _.current && (_.current = null);
+              (_.contains(_) && _.removeChild(_),
+                _ === _.current && (_.current = null));
             });
           }
         );
@@ -4690,10 +4690,10 @@ function _() {
     let _ = {
       abandon: _,
     };
-    return (_ = _), _;
+    return ((_ = _), _);
   }
   function _() {
-    !_ && _(), (_ = null);
+    (!_ && _(), (_ = null));
   }
   function _() {
     _ && (_.abandon(), _());
@@ -4757,7 +4757,7 @@ function _({ cancel: _, completed: _, getPhase: _, setPhase: _ }) {
           },
           _ = _();
         if (_.type === `DRAGGING`) {
-          _.preventDefault(), _.actions.move(_);
+          (_.preventDefault(), _.actions.move(_));
           return;
         }
         _.type !== `PENDING` && _();
@@ -4786,7 +4786,7 @@ function _({ cancel: _, completed: _, getPhase: _, setPhase: _ }) {
     {
       eventName: `mousedown`,
       _: (_) => {
-        _().type === `DRAGGING` && _.preventDefault(), _();
+        (_().type === `DRAGGING` && _.preventDefault(), _());
       },
     },
     {
@@ -4817,8 +4817,8 @@ function _({ cancel: _, completed: _, getPhase: _, setPhase: _ }) {
       eventName: `webkitmouseforcedown`,
       _: (_) => {
         let _ = _();
-        _.type === `IDLE` && _(),
-          _.actions.shouldRespectForcePress() ? _() : _.preventDefault();
+        (_.type === `IDLE` && _(),
+          _.actions.shouldRespectForcePress() ? _() : _.preventDefault());
       },
     },
     {
@@ -4854,7 +4854,7 @@ function _(_) {
             _: _.clientX,
             _: _.clientY,
           };
-          _.current(), _(_, _);
+          (_.current(), _(_, _));
         },
       }),
       [_],
@@ -4888,12 +4888,12 @@ function _(_) {
     }, [_]),
     _ = _(() => {
       let _ = _.current;
-      _(),
+      (_(),
         _.type === `DRAGGING` &&
           _.actions.cancel({
             shouldBlockNextClick: !0,
           }),
-        _.type === `PENDING` && _.actions.abort();
+        _.type === `PENDING` && _.actions.abort());
     }, [_]),
     _ = _(
       function () {
@@ -4915,13 +4915,13 @@ function _(_) {
     ),
     _ = _(
       function (_, _) {
-        _.current.type !== `IDLE` && _(),
+        (_.current.type !== `IDLE` && _(),
           (_.current = {
             type: `PENDING`,
             point: _,
             actions: _,
           }),
-          _();
+          _());
       },
       [_],
     );
@@ -4946,10 +4946,10 @@ var _ = {
 };
 function _(_, _) {
   function _() {
-    _(), _.cancel();
+    (_(), _.cancel());
   }
   function _() {
-    _(), _.drop();
+    (_(), _.drop());
   }
   return [
     {
@@ -5023,7 +5023,7 @@ function _(_) {
             _ = _.snapLift();
           _.current();
           function _() {
-            !_ && _(), (_ = !1), _.current(), _();
+            (!_ && _(), (_ = !1), _.current(), _());
           }
           _.current = _(_.getWindow(), _(_, _), {
             capture: !0,
@@ -5078,7 +5078,7 @@ function _({ cancel: _, getPhase: _ }) {
     {
       eventName: `keydown`,
       _: (_) => {
-        _().type === `DRAGGING` && _.keyCode === _ && _.preventDefault(), _();
+        (_().type === `DRAGGING` && _.keyCode === _ && _.preventDefault(), _());
       },
     },
     {
@@ -5106,7 +5106,7 @@ function _({ cancel: _, completed: _, getPhase: _ }) {
             _: _,
             _: _,
           };
-        _.preventDefault(), _.actions.move(_);
+        (_.preventDefault(), _.actions.move(_));
       },
     },
     {
@@ -5125,7 +5125,7 @@ function _({ cancel: _, completed: _, getPhase: _ }) {
     {
       eventName: `touchcancel`,
       _: (_) => {
-        _().type === `DRAGGING` && _.preventDefault(), _();
+        (_().type === `DRAGGING` && _.preventDefault(), _());
       },
     },
     {
@@ -5177,7 +5177,7 @@ function _(_) {
               _: _,
               _: _,
             };
-          _.current(), _(_, _);
+          (_.current(), _(_, _));
         },
       }),
       [_],
@@ -5201,12 +5201,12 @@ function _(_) {
     }, [_, _]),
     _ = _(() => {
       let _ = _.current;
-      _(),
+      (_(),
         _.type === `DRAGGING` &&
           _.actions.cancel({
             shouldBlockNextClick: !0,
           }),
-        _.type === `PENDING` && _.actions.abort();
+        _.type === `PENDING` && _.actions.abort());
     }, [_]),
     _ = _(
       function () {
@@ -5222,7 +5222,7 @@ function _(_) {
           _ = _(_.getWindow(), _(_), _),
           _ = _(_.getWindow(), _(_), _);
         _.current = function () {
-          _(), _();
+          (_(), _());
         };
       },
       [_, _, _, _],
@@ -5244,17 +5244,17 @@ function _(_) {
       function (_, _) {
         _().type !== `IDLE` && _();
         let _ = setTimeout(_, _);
-        _({
+        (_({
           type: `PENDING`,
           point: _,
           actions: _,
           longPressTimerId: _,
         }),
-          _();
+          _());
       },
       [_, _, _, _],
     );
-  _(
+  (_(
     function () {
       return (
         _(),
@@ -5281,7 +5281,7 @@ function _(_) {
         ]);
       },
       [_],
-    );
+    ));
 }
 var _ = [
   `input`,
@@ -5395,11 +5395,11 @@ function _({
   let _ = _.bind(null, `DRAGGING`);
   function _(_) {
     function _() {
-      _.release(), (_ = `COMPLETED`);
+      (_.release(), (_ = `COMPLETED`));
     }
-    _ !== `PRE_DRAG` && (_(), _()),
+    (_ !== `PRE_DRAG` && (_(), _()),
       _.dispatch(_(_.liftActionArgs)),
-      (_ = `DRAGGING`);
+      (_ = `DRAGGING`));
     function _(
       _,
       _ = {
@@ -5420,12 +5420,12 @@ function _({
         ]);
         setTimeout(_);
       }
-      _(),
+      (_(),
         _.dispatch(
           _({
             reason: _,
           }),
-        );
+        ));
     }
     return {
       isActive: () =>
@@ -5519,17 +5519,17 @@ function _({
       },
       [_],
     );
-  _(
+  (_(
     function () {
       let _ = _.getState();
       return _.subscribe(() => {
         let _ = _.getState();
-        _(_, _), (_ = _);
+        (_(_, _), (_ = _));
       });
     },
     [_, _, _],
   ),
-    _(() => _.tryAbandon, [_.tryAbandon]);
+    _(() => _.tryAbandon, [_.tryAbandon]));
   let _ = _(
       (_) =>
         _({
@@ -5604,7 +5604,7 @@ var _ = (_) => ({
     },
   });
 function _(_) {
-  return !_.current && _(), _.current;
+  return (!_.current && _(), _.current);
 }
 function _(_) {
   let {
@@ -5843,7 +5843,7 @@ function _(_) {
     _ = _(
       (_) => {
         let _ = _();
-        return !_ && _(), _(_, _, _);
+        return (!_ && _(), _(_, _, _));
       },
       [_, _],
     ),
@@ -5858,9 +5858,10 @@ function _(_) {
     ),
     _ = (0, _.useRef)(_),
     _ = (0, _.useRef)(!0);
-  _(
+  (_(
     () => (
-      _.draggable.register(_.current), () => _.draggable.unregister(_.current)
+      _.draggable.register(_.current),
+      () => _.draggable.unregister(_.current)
     ),
     [_.draggable],
   ),
@@ -5870,13 +5871,13 @@ function _(_) {
         return;
       }
       let _ = _.current;
-      (_.current = _), _.draggable.update(_, _);
-    }, [_, _.draggable]);
+      ((_.current = _), _.draggable.update(_, _));
+    }, [_, _.draggable]));
 }
 var _ = _.createContext(null);
 function _(_) {
   let _ = (0, _.useContext)(_);
-  return !_ && _(), _;
+  return (!_ && _(), _);
 }
 function _(_) {
   _.preventDefault();
@@ -6351,7 +6352,7 @@ function _(_) {
     _ = _(() => {
       let _ = _.current,
         _ = _(_);
-      !(_ && _) && _(), _.scrollOptions.shouldPublishImmediately ? _() : _();
+      (!(_ && _) && _(), _.scrollOptions.shouldPublishImmediately ? _() : _());
     }, [_, _]),
     _ = _(
       (_, _) => {
@@ -6390,23 +6391,23 @@ function _(_) {
     _ = _(() => {
       let _ = _.current,
         _ = _(_);
-      return !(_ && _) && _(), _(_);
+      return (!(_ && _) && _(), _(_));
     }, []),
     _ = _(() => {
       let _ = _.current;
       !_ && _();
       let _ = _(_);
-      (_.current = null),
+      ((_.current = null),
         _ &&
           (_.cancel(),
           _.removeAttribute(_.contextId),
-          _.removeEventListener(`scroll`, _, _(_.scrollOptions)));
+          _.removeEventListener(`scroll`, _, _(_.scrollOptions))));
     }, [_, _]),
     _ = _((_) => {
       let _ = _.current;
       !_ && _();
       let _ = _(_);
-      !_ && _(), (_.scrollTop += _._), (_.scrollLeft += _._);
+      (!_ && _(), (_.scrollTop += _._), (_.scrollLeft += _._));
     }, []),
     _ = _(
       () => ({
@@ -6425,12 +6426,12 @@ function _(_) {
       }),
       [_, _, _],
     );
-  _(
+  (_(
     () => (
       (_.current = _.descriptor),
       _.droppable.register(_),
       () => {
-        _.current && _(), _.droppable.unregister(_);
+        (_.current && _(), _.droppable.unregister(_));
       }
     ),
     [_, _, _, _, _, _.droppable],
@@ -6441,7 +6442,7 @@ function _(_) {
     _(() => {
       _.current &&
         _.updateDroppableIsCombineEnabled(_.current._, _.isCombineEnabled);
-    }, [_.isCombineEnabled, _]);
+    }, [_.isCombineEnabled, _]));
 }
 function _() {}
 var _ = {
@@ -6492,7 +6493,7 @@ var _ = {
             ? _.current
               ? _
               : ((_.current = setTimeout(() => {
-                  (_.current = null), _(!1);
+                  ((_.current = null), _(!1));
                 })),
                 _)
             : (_(), _(!1), _)
@@ -6519,7 +6520,7 @@ var _ = {
   }),
   _ = class extends _.PureComponent {
     constructor(..._) {
-      super(..._),
+      (super(..._),
         (this.state = {
           isVisible: !!this.props._,
           data: this.props._,
@@ -6530,7 +6531,7 @@ var _ = {
             this.setState({
               isVisible: !1,
             });
-        });
+        }));
     }
     static getDerivedStateFromProps(_, _) {
       return _.shouldAnimate
@@ -6680,7 +6681,7 @@ var _ = {
     );
   };
 function _() {
-  return !document.body && _(), document.body;
+  return (!document.body && _(), document.body);
 }
 var _ = {
     mode: `standard`,
@@ -6812,4 +6813,3 @@ var _ = {
       areStatePropsEqual: _,
     },
   )(_);
-export { _, _, _ };

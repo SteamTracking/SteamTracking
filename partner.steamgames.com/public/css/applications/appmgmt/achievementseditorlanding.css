@@ -174,7 +174,7 @@ div.jTuAxcBgoTE- {
   display: grid;
 }
 .qzpxo0wXsfc- > * {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   padding: var(--spacing-1);
@@ -238,7 +238,7 @@ div.jTuAxcBgoTE- {
   display: grid;
 }
 .xUGb5jQBhyU- > * {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   background: 0 0;
@@ -269,7 +269,7 @@ div.jTuAxcBgoTE- {
   display: grid;
 }
 .T8JDTNAeC2M- > * {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   padding: var(--spacing-1);
@@ -296,11 +296,14 @@ div.jTuAxcBgoTE- {
   column-gap: var(--spacing-3);
   text-align: left;
   grid-template-rows: auto;
-  grid-template-columns: max-content minmax(0, 1fr) minmax(0, 1fr) max-content max-content max-content;
+  grid-template-columns: max-content minmax(0, 1fr) minmax(
+      0,
+      1fr
+    ) max-content max-content max-content;
   display: grid;
 }
 .TUV4wPkWt5k- > * {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   padding: var(--spacing-1);
@@ -322,7 +325,7 @@ div.jTuAxcBgoTE- {
   display: grid;
 }
 .oCifuQH4ZIk- > * {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   padding: var(--spacing-1);
@@ -353,7 +356,7 @@ div.jTuAxcBgoTE- {
   background-color: var(--color-header-bg);
   padding: var(--spacing-2);
   flex-direction: column;
-  grid-area: auto / 1 / auto / -1;
+  grid-area: auto/1/auto/-1;
   display: flex;
 }
 .HP-ZlEaCACo- p {
@@ -383,7 +386,7 @@ div.jTuAxcBgoTE- {
   display: grid;
 }
 .bs4EjclJyLQ- > * {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   padding: var(--spacing-1);
@@ -394,7 +397,7 @@ div.jTuAxcBgoTE- {
   background: var(--color-dull-5);
   border: 1px solid var(--color-header-bg);
   interpolate-size: allow-keywords;
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   max-height: max-content;
   transition:
     max-height 0.5s ease-in-out,
@@ -412,7 +415,7 @@ div.jTuAxcBgoTE- {
 .qY1uFJOX7PU- {
   grid-template-columns: subgrid;
   background: 0 0;
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-rows: auto;
   grid-auto-flow: row;
   display: grid;
@@ -420,7 +423,7 @@ div.jTuAxcBgoTE- {
 .qY1uFJOX7PU- > div {
   grid-template-columns: subgrid;
   padding: var(--spacing-1);
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-rows: auto;
   grid-auto-flow: row;
   display: grid !important;
@@ -431,7 +434,7 @@ div.jTuAxcBgoTE- {
 .qY1uFJOX7PU- > div > div {
   background-color: var(--color-dull-7);
   padding: var(--spacing-1);
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
 }
 .Wv5uSB0pD34- {
   grid-template-columns: subgrid;
@@ -481,7 +484,7 @@ div.jTuAxcBgoTE- {
   display: grid;
 }
 .m6EHqiT2-CI- > * {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   padding: var(--spacing-1);
@@ -557,7 +560,7 @@ div.jTuAxcBgoTE- {
   border: 1px solid var(--color-header-bg);
 }
 .Pe2J8WTncno- .XVCBnsVWfXA- {
-  columns: 1 / -1;
+  columns: 1/-1;
 }
 ._4k0uWmAz8gE- {
   vertical-align: middle;
@@ -715,7 +718,7 @@ div.qy5lIF2tbu0- {
   display: grid;
 }
 .Z0zWlwGI2pg- > * {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   padding: var(--spacing-1);
@@ -917,7 +920,7 @@ div._4O-3xLv1g0w- {
   display: grid;
 }
 .F6Fn6fUCnNI- > * {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   padding: var(--spacing-1);
@@ -1224,7 +1227,7 @@ div.mJHu7xMX10w- {
   display: grid;
 }
 .IqT5rNi7YAs- > * {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   padding: var(--spacing-1);
@@ -1302,7 +1305,7 @@ div.mJHu7xMX10w- {
   top: 0;
 }
 .V33-ZCcC1uo- > div {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   display: grid;
@@ -1452,7 +1455,7 @@ div.-pMvBKHMtEk- {
   display: grid;
 }
 ._6keR-6dlnfk- > * {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   padding: var(--spacing-1);
@@ -1497,7 +1500,7 @@ div.-pMvBKHMtEk- {
   display: grid;
 }
 .hgpOtPMr7Vs- > * {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   padding: var(--spacing-1);
@@ -1556,7 +1559,7 @@ div.-pMvBKHMtEk- {
   background-color: var(--color-group-dark);
   padding: var(--spacing-2);
   flex-direction: column;
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   margin: 0;
   display: flex;
 }
@@ -1591,7 +1594,7 @@ div.-pMvBKHMtEk- {
 }
 .ug0b7Jyfk0k- .xjXkwfxm1QY- {
   text-align: end;
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   justify-content: start;
   display: flex;
 }
@@ -1615,7 +1618,7 @@ div.-pMvBKHMtEk- {
 }
 .ug0b7Jyfk0k- .bjF8wq9VBcE- {
   text-align: end;
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   justify-content: end;
   display: flex;
 }
@@ -1650,7 +1653,7 @@ div.-pMvBKHMtEk- {
   display: grid;
 }
 .QCoxkFWUsk8- .U6f4OlslI60- > div:nth-child(2) > * {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   padding: var(--spacing-1);
@@ -1851,7 +1854,7 @@ div._9tyDx-RnbZ0- {
   display: grid;
 }
 .XFkwfYwgNng- > * {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   padding: var(--spacing-1);
@@ -2058,7 +2061,7 @@ div._9tyDx-RnbZ0- {
   font-size: var(--text-size-3);
 }
 .mBqXy6qapwM- {
-  aspect-ratio: 92 / 43;
+  aspect-ratio: 92/43;
   isolation: isolate;
   contain: size;
   background: linear-gradient(155deg, #3d4249, #272b30);
@@ -2147,7 +2150,7 @@ div._9tyDx-RnbZ0- {
 }
 .uYo-jtvTTp0- .mln46SGaN-g- {
   backdrop-filter: blur(1px);
-  background-color: rgb(from var(--color-dull-6) r g b / 40%);
+  background-color: rgb(from var(--color-dull-6) r g b/40%);
   width: 100%;
   height: 100%;
   color: var(--color-text-light-title);

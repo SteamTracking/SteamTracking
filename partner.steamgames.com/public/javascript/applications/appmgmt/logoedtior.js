@@ -222,7 +222,7 @@ var he = `UpperLeft`,
   J = class extends g.Component {
     m_refTopCapsule = g.createRef();
     constructor(e) {
-      super(e), (this.state = { logoPosition: void 0 });
+      (super(e), (this.state = { logoPosition: void 0 }));
     }
     componentDidUpdate(e) {
       (e.appid != this.props.appid || e.editMode != this.props.editMode) &&
@@ -310,14 +310,14 @@ var he = `UpperLeft`,
       });
     }
   };
-c([p], J.prototype, `SetDimensions`, null),
+(c([p], J.prototype, `SetDimensions`, null),
   c([p], J.prototype, `OnPositionChanged`, null),
-  c([p], J.prototype, `PostPositionChangeCallback`, null);
+  c([p], J.prototype, `PostPositionChangeCallback`, null));
 var Y = class extends g.Component {
   m_refBackgroundImage = g.createRef();
   m_refLogoImage = g.createRef();
   constructor(t) {
-    super(t),
+    (super(t),
       e(
         !t.editMode || t.rgLogoImages.length <= 1,
         `Can't use multiple logo images in edit mode`,
@@ -326,11 +326,11 @@ var Y = class extends g.Component {
         bHasHeaderImage: t.rgHeaderImages.length > 0,
         bHasLogoImage: t.rgLogoImages.length > 0,
         bLogoLoaded: !1,
-      });
+      }));
   }
   componentDidUpdate(e) {
     let t = null;
-    (JSON.stringify(e.rgHeaderImages) !=
+    ((JSON.stringify(e.rgHeaderImages) !=
       JSON.stringify(this.props.rgHeaderImages) ||
       JSON.stringify(e.rgBlurImages) !=
         JSON.stringify(this.props.rgBlurImages)) &&
@@ -340,16 +340,16 @@ var Y = class extends g.Component {
         ((t ||= {}),
         (t.bHasLogoImage = this.props.rgLogoImages.length > 0),
         (t.bLogoLoaded = !1)),
-      t && this.setState(t);
+      t && this.setState(t));
   }
   OnHeaderError() {
-    this.setState({ bHasHeaderImage: !1 }),
-      this.props.fnOnLoaded && this.props.fnOnLoaded();
+    (this.setState({ bHasHeaderImage: !1 }),
+      this.props.fnOnLoaded && this.props.fnOnLoaded());
   }
   OnIncrementalLogoError(e, t, n) {
-    this.props.fnReportLogoCacheMiss &&
+    (this.props.fnReportLogoCacheMiss &&
       this.props.fnReportLogoCacheMiss(this.props.appid, t),
-      this.props.fnOnLoaded && this.props.fnOnLoaded();
+      this.props.fnOnLoaded && this.props.fnOnLoaded());
   }
   OnLogoError() {
     this.setState({ bHasLogoImage: !1 }, () => {
@@ -449,31 +449,31 @@ var Y = class extends g.Component {
     });
   }
 };
-c([p], Y.prototype, `OnHeaderError`, null),
+(c([p], Y.prototype, `OnHeaderError`, null),
   c([p], Y.prototype, `OnIncrementalLogoError`, null),
   c([p], Y.prototype, `OnLogoError`, null),
   c([p], Y.prototype, `OnLogoLoad`, null),
   c([p], Y.prototype, `OnLoaded`, null),
-  (Y = c([se], Y));
+  (Y = c([se], Y)));
 var X = class extends g.Component {
   m_refBackgroundImage = g.createRef();
   m_refCanvasBlurImage;
   m_elBackgroundImage = null;
   constructor(e) {
-    super(e),
+    (super(e),
       (this.state = {
         bBackgroundLoaded: !1,
         strLoadedBlurImage: null,
         nBlurImageIndex: 0,
         bUseCanvasBlur: !this.HasBlurImages(),
-      });
+      }));
   }
   componentDidMount() {
-    !this.HasHeaderImages() && this.props.onLoad && this.props.onLoad(),
-      this.CheckForLoadedImage();
+    (!this.HasHeaderImages() && this.props.onLoad && this.props.onLoad(),
+      this.CheckForLoadedImage());
   }
   componentDidUpdate(e) {
-    (e.appid != this.props.appid ||
+    ((e.appid != this.props.appid ||
       JSON.stringify(e.rgHeaderImages) !=
         JSON.stringify(this.props.rgHeaderImages) ||
       JSON.stringify(e.rgBlurImages) !=
@@ -486,7 +486,7 @@ var X = class extends g.Component {
       }),
       !this.HasHeaderImages() && this.props.onLoad && this.props.onLoad(),
       (this.m_elBackgroundImage = null)),
-      this.CheckForLoadedImage();
+      this.CheckForLoadedImage());
   }
   CheckForLoadedImage() {
     let e = this.m_refBackgroundImage.current?.imgRef.current ?? null;
@@ -495,14 +495,14 @@ var X = class extends g.Component {
       e?.complete && e.naturalWidth > 0 && this.ShowHeaderImage(e));
   }
   ShowHeaderImage(e) {
-    (this.m_refCanvasBlurImage = e),
+    ((this.m_refCanvasBlurImage = e),
       this.setState((e) => ({
         bBackgroundLoaded: !0,
         bUseCanvasBlur:
           e.bUseCanvasBlur ||
           !this.HasBlurImages() ||
           !this.props.rgBlurImages[e.nBlurImageIndex],
-      }));
+      })));
   }
   get src() {
     return (
@@ -511,19 +511,19 @@ var X = class extends g.Component {
     );
   }
   OnIncrementalError(e, t, n) {
-    this.props.onReportHeroImageMiss &&
+    (this.props.onReportHeroImageMiss &&
       this.props.onReportHeroImageMiss(this.props.appid, t),
       this.HasBlurImages() &&
-        this.setState({ nBlurImageIndex: this.state.nBlurImageIndex + 1 });
+        this.setState({ nBlurImageIndex: this.state.nBlurImageIndex + 1 }));
   }
   OnHeaderLoad() {
-    this.props.onLoad && this.props.onLoad(),
+    (this.props.onLoad && this.props.onLoad(),
       this.state.bBackgroundLoaded ||
         (0, be.flushSync)(() =>
           this.ShowHeaderImage(
             this.m_refBackgroundImage.current?.imgRef.current,
           ),
-        );
+        ));
   }
   OnBlurImageLoaded(e) {
     this.setState({ strLoadedBlurImage: e.currentTarget.getAttribute(`src`) });
@@ -637,10 +637,10 @@ var X = class extends g.Component {
     );
   }
 };
-c([p], X.prototype, `OnIncrementalError`, null),
+(c([p], X.prototype, `OnIncrementalError`, null),
   c([p], X.prototype, `OnHeaderLoad`, null),
   c([p], X.prototype, `OnBlurImageLoaded`, null),
-  c([p], X.prototype, `OnBlurImageFailed`, null);
+  c([p], X.prototype, `OnBlurImageFailed`, null));
 function $e(e) {
   let {
       logoPosition: n,
@@ -703,22 +703,22 @@ function et(e, t, n) {
   let r, i, a, o;
   switch (e) {
     case ge:
-      (r = 0), (i = 100 - n), (a = 0), (o = 100 - t);
+      ((r = 0), (i = 100 - n), (a = 0), (o = 100 - t));
       break;
     case he:
-      (r = 100 - n), (i = 0), (a = 0), (o = 100 - t);
+      ((r = 100 - n), (i = 0), (a = 0), (o = 100 - t));
       break;
     case ve:
-      (r = (100 - n) / 2),
+      ((r = (100 - n) / 2),
         (i = (100 - n) / 2),
         (a = (100 - t) / 2),
-        (o = (100 - t) / 2);
+        (o = (100 - t) / 2));
       break;
     case _e:
-      (r = 100 - n), (i = 0), (a = (100 - t) / 2), (o = (100 - t) / 2);
+      ((r = 100 - n), (i = 0), (a = (100 - t) / 2), (o = (100 - t) / 2));
       break;
     case ye:
-      (r = 0), (i = 100 - n), (a = (100 - t) / 2), (o = (100 - t) / 2);
+      ((r = 0), (i = 100 - n), (a = (100 - t) / 2), (o = (100 - t) / 2));
   }
   return { nBottomPct: r, nTopPct: i, nLeftPct: a, nRightPct: o };
 }
@@ -732,7 +732,7 @@ var Z = class extends g.Component {
   m_listeners = new m();
   m_pinType;
   constructor(e) {
-    super(e), (this.state = {});
+    (super(e), (this.state = {}));
   }
   componentWillUnmount() {
     this.m_listeners.Unregister();
@@ -763,7 +763,7 @@ var Z = class extends g.Component {
     this.m_elLinkRegionBox = e;
   }
   OnMouseDown(e, t) {
-    (this.m_fnMouseUp = (e) => {
+    ((this.m_fnMouseUp = (e) => {
       this.OnMouseUp(e, t);
     }),
       (this.m_fnMouseMove = (e) => {
@@ -793,7 +793,7 @@ var Z = class extends g.Component {
         this.m_fnMouseUp,
       ),
       e.preventDefault(),
-      e.stopPropagation();
+      e.stopPropagation());
   }
   UpdateBoxPosition() {
     let {
@@ -835,7 +835,7 @@ var Z = class extends g.Component {
           this.props.pinType == `UpperCenter`
         ) {
           let e = Math.min(Math.max(t, 0), 45);
-          return (i = e), e;
+          return ((i = e), e);
         }
         return t;
       },
@@ -852,7 +852,7 @@ var Z = class extends g.Component {
           this.props.pinType == `UpperCenter`
         ) {
           let e = Math.min(Math.max(t, 0), 45);
-          return (o = e), e;
+          return ((o = e), e);
         }
         return t;
       },
@@ -869,7 +869,7 @@ var Z = class extends g.Component {
           return 0;
         if (this.props.pinType == `CenterCenter`) {
           let e = Math.min(Math.max(t, 0), 45);
-          return (a = e), e;
+          return ((a = e), e);
         }
         return t;
       },
@@ -887,7 +887,7 @@ var Z = class extends g.Component {
           return 0;
         if (this.props.pinType == `CenterCenter`) {
           let e = Math.min(Math.max(t, 0), 45);
-          return (r = e), e;
+          return ((r = e), e);
         }
         return t;
       };
@@ -905,31 +905,31 @@ var Z = class extends g.Component {
     }
     switch (t) {
       case `Left`:
-        (o = s(e.clientX)), m();
+        ((o = s(e.clientX)), m());
         break;
       case `Right`:
-        (i = c(e.clientX)), f();
+        ((i = c(e.clientX)), f());
         break;
       case `Top`:
-        (r = l(e.clientY)), p();
+        ((r = l(e.clientY)), p());
         break;
       case `Bottom`:
-        (a = u(e.clientY)), d();
+        ((a = u(e.clientY)), d());
         break;
       case `Topleft`:
-        (r = l(e.clientY)), (o = s(e.clientX)), p(), m();
+        ((r = l(e.clientY)), (o = s(e.clientX)), p(), m());
         break;
       case `TopRight`:
-        (r = l(e.clientY)), (i = c(e.clientX)), p(), f();
+        ((r = l(e.clientY)), (i = c(e.clientX)), p(), f());
         break;
       case `BottomLeft`:
-        (a = u(e.clientY)), (o = s(e.clientX)), d(), m();
+        ((a = u(e.clientY)), (o = s(e.clientX)), d(), m());
         break;
       case `BottomRight`:
-        (a = u(e.clientY)), (i = c(e.clientX)), d(), f();
+        ((a = u(e.clientY)), (i = c(e.clientX)), d(), f());
         break;
       case `Middle`:
-        (i = c(e.clientX)),
+        ((i = c(e.clientX)),
           (a = u(e.clientY)),
           this.state.pinType != `CenterCenter` && (r = l(e.clientY)),
           this.state.pinType != `CenterCenter` &&
@@ -939,9 +939,9 @@ var Z = class extends g.Component {
           p(),
           d(),
           m(),
-          f();
+          f());
     }
-    (r = n(r, 0, 98)),
+    ((r = n(r, 0, 98)),
       (a = n(a, 0, 98)),
       (o = n(o, 0, 99)),
       (i = n(i, 0, 99)),
@@ -952,10 +952,10 @@ var Z = class extends g.Component {
         curLeftPosPct: o,
       }),
       e.preventDefault(),
-      e.stopPropagation();
+      e.stopPropagation());
   }
   OnMouseUp(e, t) {
-    this.setState(
+    (this.setState(
       {
         curWidthPct: 100 - this.state.curRightPosPct - this.state.curLeftPosPct,
         curHeightPct:
@@ -964,7 +964,7 @@ var Z = class extends g.Component {
       this.OnResizeComplete,
     ),
       this.setState({ EdgeDown: void 0 }),
-      this.m_listeners.Unregister();
+      this.m_listeners.Unregister());
   }
   OnResizeComplete() {
     this.props.fnOnPositionChanged &&
@@ -1065,12 +1065,12 @@ var Z = class extends g.Component {
     });
   }
 };
-c([p], Z.prototype, `LinkRegionBoxRef`, null),
+(c([p], Z.prototype, `LinkRegionBoxRef`, null),
   c([p], Z.prototype, `OnMouseDown`, null),
   c([p], Z.prototype, `UpdateBoxPosition`, null),
   c([p], Z.prototype, `OnMouseMove`, null),
   c([p], Z.prototype, `OnMouseUp`, null),
-  c([p], Z.prototype, `OnResizeComplete`, null);
+  c([p], Z.prototype, `OnResizeComplete`, null));
 var tt = (e) => {
   let { title: n, className: r } = e,
     i = 26;
@@ -1141,7 +1141,7 @@ var rt = class {
   m_logoPosition = void 0;
   m_strSaveURL;
   constructor(e) {
-    f(this),
+    (f(this),
       (this.m_strLibraryHeroURL = e.strLibraryHeroURL),
       (this.m_strLibraryLogoURL = e.strLibraryLogoURL),
       (this.m_unAppID = e.unAppID),
@@ -1153,7 +1153,7 @@ var rt = class {
       this.m_logoPosition.nHeightPct ||
         (this.m_logoPosition.nHeightPct = K.nHeightPct),
       this.m_logoPosition.nWidthPct ||
-        (this.m_logoPosition.nWidthPct = K.nWidthPct);
+        (this.m_logoPosition.nWidthPct = K.nWidthPct));
   }
   GetHeroURL() {
     return this.m_strLibraryHeroURL;
@@ -1427,7 +1427,7 @@ function on(e) {
       if (an.indexOf(n) !== -1) return an;
       {
         let e = [...an, n];
-        return e.sort(), e;
+        return (e.sort(), e);
       }
     }, [n]);
   return (0, U.jsx)(`div`, {
@@ -1448,7 +1448,7 @@ function sn(e, t) {
 }
 var Q = class extends g.Component {
   constructor(e) {
-    super(e), (this.state = { saving: !1, saved: !1, unsavedChanges: !1 });
+    (super(e), (this.state = { saving: !1, saved: !1, unsavedChanges: !1 }));
   }
   componentDidMount() {
     window.addEventListener(`beforeunload`, this.OnBeforeUnload);
@@ -1469,7 +1469,7 @@ var Q = class extends g.Component {
         let t = e.GetLogoPosition();
         try {
           let n = new FormData();
-          n.append(`json`, `1`),
+          (n.append(`json`, `1`),
             n.append(`sessionid`, a()),
             n.append(
               `app[assets][library_logo][logo_position][pinned_position]`,
@@ -1484,24 +1484,24 @@ var Q = class extends g.Component {
               `` + t.nHeightPct,
             ),
             await Se.default.post(e.GetSaveURL(), n),
-            this.setState({ saving: !1, saved: !0, unsavedChanges: !1 });
+            this.setState({ saving: !1, saved: !0, unsavedChanges: !1 }));
         } catch (e) {
-          console.error(e),
+          (console.error(e),
             alert(`There was a problem saving changes`),
-            this.setState({ saving: !1 });
+            this.setState({ saving: !1 }));
         }
       } else
-        window.opener &&
+        (window.opener &&
           window.opener.postMessage(
             { appid: e.GetAppID(), ...r(e.GetLogoPosition()) },
             `*`,
           ),
-          this.OnCancel();
+          this.OnCancel());
     });
   }
   OnCancel() {
-    window.removeEventListener(`beforeunload`, this.OnBeforeUnload),
-      window.close();
+    (window.removeEventListener(`beforeunload`, this.OnBeforeUnload),
+      window.close());
   }
   OnPositionChanged() {
     this.state.unsavedChanges ||
@@ -1551,17 +1551,17 @@ var Q = class extends g.Component {
     });
   }
 };
-c([p], Q.prototype, `OnBeforeUnload`, null),
+(c([p], Q.prototype, `OnBeforeUnload`, null),
   c([p], Q.prototype, `OnOK`, null),
   c([p], Q.prototype, `OnCancel`, null),
-  c([p], Q.prototype, `OnPositionChanged`, null);
+  c([p], Q.prototype, `OnPositionChanged`, null));
 var $ = class extends g.Component {
   constructor(e) {
-    super(e), (this.state = { bEditModeEnabled: !0 });
+    (super(e), (this.state = { bEditModeEnabled: !0 }));
   }
   OnPositionChanged(e) {
     let { LogoEditorStore: t, fnOnPositionChanged: n } = this.props;
-    t.SetLogoPosition(e), n && n(e);
+    (t.SetLogoPosition(e), n && n(e));
   }
   render() {
     let { LogoEditorStore: e } = this.props,

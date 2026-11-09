@@ -58,7 +58,7 @@ function _(_, _, _ = !1) {
   for (let _ in _)
     if (_.hasOwnProperty(_)) {
       let _ = _[_];
-      _.delete(_), _ != null && _ != null && _.append(_, _);
+      (_.delete(_), _ != null && _ != null && _.append(_, _));
     }
   _
     ? _.replace(`?${_.toString()}`, {
@@ -69,4 +69,3 @@ function _(_, _, _ = !1) {
 function _(_, _) {
   _(_, _, !0);
 }
-export { _, _, _, _, _, _ };

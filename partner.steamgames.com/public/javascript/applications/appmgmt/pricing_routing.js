@@ -530,7 +530,7 @@ async function it(e, t) {
     let n = c(e),
       r = e.target.files[0],
       i = await H.ParseCSVFile(r);
-    f((0, G.jsx)(st, { strFilename: r.name, parseResult: i }), n), t();
+    (f((0, G.jsx)(st, { strFilename: r.name, parseResult: i }), n), t());
   }
 }
 function at(e, t) {
@@ -566,7 +566,7 @@ function st(e) {
   if (
     (U.useEffect(() => {
       let { rgPriceChanges: e, nPackagesImported: t } = ot(r, i, a, o);
-      c(e), u(t);
+      (c(e), u(t));
     }, [r, i, a, o]),
     s === null)
   )

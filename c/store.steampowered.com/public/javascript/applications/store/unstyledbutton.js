@@ -17,21 +17,21 @@ _.setTimeout = (_, _) => {
   let _ = _.now() + _,
     _ = () => {
       let _ = _.findIndex((_) => _.cancel == _);
-      ~_ && _.splice(_, 1), (_ -= +!!~_);
+      (~_ && _.splice(_, 1), (_ -= +!!~_));
     },
     _ = {
       time: _,
       handler: _,
       cancel: _,
     };
-  return _.splice(_(_), 0, _), (_ += 1), _(), _;
+  return (_.splice(_(_), 0, _), (_ += 1), _(), _);
 };
 var _ = (_) => ~(~_.findIndex((_) => _.time > _) || ~_.length);
-(_.cancel = (_) => {
-  _.delete(_), _.delete(_), _.delete(_), _.delete(_), _.delete(_);
+((_.cancel = (_) => {
+  (_.delete(_), _.delete(_), _.delete(_), _.delete(_), _.delete(_));
 }),
   (_.sync = (_) => {
-    (_ = !0), _.batchedUpdates(_), (_ = !1);
+    ((_ = !0), _.batchedUpdates(_), (_ = !1));
   }),
   (_.throttle = (_) => {
     let _;
@@ -43,18 +43,18 @@ var _ = (_) => ~(~_.findIndex((_) => _.time > _) || ~_.length);
       }
     }
     function _(..._) {
-      (_ = _), _.onStart(_);
+      ((_ = _), _.onStart(_));
     }
     return (
       (_.handler = _),
       (_.cancel = () => {
-        _.delete(_), (_ = null);
+        (_.delete(_), (_ = null));
       }),
       _
     );
-  });
+  }));
 var _ = typeof window < `u` ? window.requestAnimationFrame : () => {};
-(_.use = (_) => (_ = _)),
+((_.use = (_) => (_ = _)),
   (_.now = typeof performance < `u` ? () => performance.now() : Date.now),
   (_.batchedUpdates = (_) => _()),
   (_.catch = console.error),
@@ -65,7 +65,7 @@ var _ = typeof window < `u` ? window.requestAnimationFrame : () => {};
       : console.warn(
           `Cannot call the manual advancement of rafz whilst frameLoop is not set as demand`,
         );
-  });
+  }));
 var _ = -1,
   _ = 0,
   _ = !1;
@@ -85,24 +85,24 @@ function _() {
   let _ = _;
   _ = _.now();
   let _ = _(_);
-  _ && (_(_.splice(0, _), (_) => _.handler()), (_ -= _)),
+  (_ && (_(_.splice(0, _), (_) => _.handler()), (_ -= _)),
     _
       ? (_.flush(),
         _.flush(_ ? Math.min(64, _ - _) : 16.667),
         _.flush(),
         _.flush(),
         _.flush())
-      : _();
+      : _());
 }
 function _() {
   let _ = new Set(),
     _ = _;
   return {
     add(_) {
-      (_ += +(_ == _ && !_.has(_))), _.add(_);
+      ((_ += +(_ == _ && !_.has(_))), _.add(_));
     },
     delete(_) {
-      return (_ -= _ == _ && _.has(_) ? 1 : 0), _.delete(_);
+      return ((_ -= _ == _ && _.has(_) ? 1 : 0), _.delete(_));
     },
     flush(_) {
       _.size &&
@@ -172,7 +172,7 @@ var _ = (_) => (_.und(_) ? [] : _.arr(_) ? _ : [_]);
 function _(_, _) {
   if (_.size) {
     let _ = Array.from(_);
-    _.clear(), _(_, _);
+    (_.clear(), _(_, _));
   }
 }
 var _ = (_, ..._) => _(_, (_) => _(..._)),
@@ -186,7 +186,7 @@ var _ = (_, ..._) => _(_, (_) => _(..._)),
   _ = !1,
   _ = _,
   _ = (_) => {
-    _._ && (_ = _._),
+    (_._ && (_ = _._),
       _.now && (_.now = _.now),
       _.colors !== void 0 && (_ = _.colors),
       _.skipAnimation != null && (_ = _.skipAnimation),
@@ -194,7 +194,7 @@ var _ = (_, ..._) => _(_, (_) => _(..._)),
       _.requestAnimationFrame && _.use(_.requestAnimationFrame),
       _.batchedUpdates && (_.batchedUpdates = _.batchedUpdates),
       _.willAdvance && (_ = _.willAdvance),
-      _.frameLoop && (_.frameLoop = _.frameLoop);
+      _.frameLoop && (_.frameLoop = _.frameLoop));
   },
   _ = new Set(),
   _ = [],
@@ -216,11 +216,11 @@ var _ = (_, ..._) => _(_, (_) => _(..._)),
       }
     },
     clear() {
-      (_ = []), _.clear();
+      ((_ = []), _.clear());
     },
   };
 function _() {
-  _.forEach(_), _.clear(), _(_);
+  (_.forEach(_), _.clear(), _(_));
 }
 function _(_) {
   _.includes(_) || _(_);
@@ -236,9 +236,9 @@ function _(_) {
   let _ = _;
   for (let _ = 0; _ < _.length; _++) {
     let _ = _[_];
-    (_ = _.priority), _.idle || (_(_), _.advance(_), _.idle || _.push(_));
+    ((_ = _.priority), _.idle || (_(_), _.advance(_), _.idle || _.push(_)));
   }
-  return (_ = 0), (_ = _), (_.length = 0), (_ = _), _.length > 0;
+  return ((_ = 0), (_ = _), (_.length = 0), (_ = _), _.length > 0);
 }
 function _(_, _) {
   let _ = _.findIndex(_);
@@ -657,8 +657,8 @@ var _ = class {
 function _(_, _) {
   if (_[_]) {
     let _ = _[_];
-    _ || _(_, _, (_ = new Set())),
-      _.has(_) || (_.add(_), _.observerAdded && _.observerAdded(_.size, _));
+    (_ || _(_, _, (_ = new Set())),
+      _.has(_) || (_.add(_), _.observerAdded && _.observerAdded(_.size, _)));
   }
   return _;
 }
@@ -666,8 +666,8 @@ function _(_, _) {
   let _ = _[_];
   if (_ && _.has(_)) {
     let _ = _.size - 1;
-    _ ? _.delete(_) : (_[_] = null),
-      _.observerRemoved && _.observerRemoved(_, _);
+    (_ ? _.delete(_) : (_[_] = null),
+      _.observerRemoved && _.observerRemoved(_, _));
   }
 }
 var _ = (_, _, _) =>
@@ -806,11 +806,11 @@ var _ = Symbol.for(`Animated:node`),
   },
   _ = class _ extends _ {
     constructor(_) {
-      super(),
+      (super(),
         (this._value = _),
         (this.done = !0),
         (this.durationProgress = 0),
-        _.num(this._value) && (this.lastPosition = this._value);
+        _.num(this._value) && (this.lastPosition = this._value));
     }
     static create(_) {
       return new _(_);
@@ -833,22 +833,22 @@ var _ = Symbol.for(`Animated:node`),
     }
     reset() {
       let { done: _ } = this;
-      (this.done = !1),
+      ((this.done = !1),
         _.num(this._value) &&
           ((this.elapsedTime = 0),
           (this.durationProgress = 0),
           (this.lastPosition = this._value),
           _ && (this.lastVelocity = null),
-          (this._ = null));
+          (this._ = null)));
     }
   },
   _ = class _ extends _ {
     constructor(_) {
-      super(0),
+      (super(0),
         (this._string = null),
         (this._toString = _({
           output: [_, _],
-        }));
+        })));
     }
     static create(_) {
       return new _(_);
@@ -859,18 +859,18 @@ var _ = Symbol.for(`Animated:node`),
     setValue(_) {
       if (_.str(_)) {
         if (_ == this._string) return !1;
-        (this._string = _), (this._value = 1);
+        ((this._string = _), (this._value = 1));
       } else if (super.setValue(_)) this._string = null;
       else return !1;
       return !0;
     }
     reset(_) {
-      _ &&
+      (_ &&
         (this._toString = _({
           output: [this.getValue(), _],
         })),
         (this._value = 0),
-        super.reset();
+        super.reset());
     }
   },
   _ = {
@@ -878,7 +878,7 @@ var _ = Symbol.for(`Animated:node`),
   },
   _ = class extends _ {
     constructor(_) {
-      super(), (this.source = _), this.setValue(_);
+      (super(), (this.source = _), this.setValue(_));
     }
     getValue(_) {
       let _ = {};
@@ -894,7 +894,7 @@ var _ = Symbol.for(`Animated:node`),
       );
     }
     setValue(_) {
-      (this.source = _), (this.payload = this._makePayload(_));
+      ((this.source = _), (this.payload = this._makePayload(_)));
     }
     reset() {
       this.payload && _(this.payload, (_) => _.reset());
@@ -902,7 +902,7 @@ var _ = Symbol.for(`Animated:node`),
     _makePayload(_) {
       if (_) {
         let _ = new Set();
-        return _(_, this._addToPayload, _), Array.from(_);
+        return (_(_, this._addToPayload, _), Array.from(_));
       }
     }
     _addToPayload(_) {
@@ -957,7 +957,7 @@ var _ = (_, _) => {
         },
         _ = new _(_, _),
         _ = (0, _.useRef)(void 0);
-      _(
+      (_(
         () => (
           (_.current = _),
           _(_, (_) => _(_, _)),
@@ -972,7 +972,7 @@ var _ = (_, _) => {
         _(() => () => {
           let _ = _.current;
           _(_.deps, (_) => _(_, _));
-        });
+        }));
       let _ = _.getComponentProps(_.getValue());
       return _.createElement(_, {
         ..._,
@@ -982,7 +982,7 @@ var _ = (_, _) => {
   },
   _ = class {
     constructor(_, _) {
-      (this.update = _), (this.deps = _);
+      ((this.update = _), (this.deps = _));
     }
     eventObserved(_) {
       _.type == `change` && _.write(this.update);
@@ -1003,7 +1003,7 @@ function _(_, _) {
   );
 }
 function _(_, _) {
-  return _ && (_.fun(_) ? _(_) : (_.current = _)), _;
+  return (_ && (_.fun(_) ? _(_) : (_.current = _)), _);
 }
 var _ = Symbol.for(`AnimatedComponent`),
   _ = (
@@ -1029,7 +1029,7 @@ var _ = Symbol.for(`AnimatedComponent`),
       };
     return (
       _(_, (_, _) => {
-        _.arr(_) && (_ = _(_)), (_[_] = _(_));
+        (_.arr(_) && (_ = _(_)), (_[_] = _(_)));
       }),
       {
         animated: _,
@@ -1120,7 +1120,7 @@ function _(_) {
     let _ = {
       _: _,
     };
-    return _(_, (_, _) => _ in _ || (_[_] = _)), _;
+    return (_(_, (_, _) => _ in _ || (_[_] = _)), _);
   }
   return {
     ..._,
@@ -1147,7 +1147,7 @@ function _(_) {
   return _.fun(_) || (_.arr(_) && _.obj(_[0]));
 }
 function _(_, _) {
-  _.ref?.delete(_), _?.delete(_);
+  (_.ref?.delete(_), _?.delete(_));
 }
 function _(_, _) {
   _ && _.ref !== _ && (_.ref?.delete(_), _.add(_), (_.ref = _));
@@ -1186,11 +1186,11 @@ var _ = {
   },
   _ = class {
     constructor() {
-      (this.velocity = 0), Object.assign(this, _);
+      ((this.velocity = 0), Object.assign(this, _));
     }
   };
 function _(_, _, _) {
-  _ &&
+  (_ &&
     ((_ = {
       ..._,
     }),
@@ -1200,7 +1200,7 @@ function _(_, _, _) {
       ..._,
     })),
     _(_, _),
-    Object.assign(_, _);
+    Object.assign(_, _));
   for (let _ in _) _[_] ?? (_[_] = _[_]);
   let { frequency: _, damping: _ } = _,
     { mass: _ } = _;
@@ -1217,20 +1217,20 @@ function _(_, _) {
   if (!_.und(_.decay)) _.duration = void 0;
   else {
     let _ = !_.und(_.tension) || !_.und(_.friction);
-    (!_ && _.und(_.frequency) && _.und(_.damping) && _.und(_.mass)) ||
+    ((!_ && _.und(_.frequency) && _.und(_.damping) && _.und(_.mass)) ||
       ((_.duration = void 0), (_.decay = void 0)),
-      _ && (_.frequency = void 0);
+      _ && (_.frequency = void 0));
   }
 }
 var _ = [],
   _ = class {
     constructor() {
-      (this.changed = !1),
+      ((this.changed = !1),
         (this.values = _),
         (this.toValues = null),
         (this.fromValues = _),
         (this.config = new _()),
-        (this.immediate = !1);
+        (this.immediate = !1));
     }
   };
 function _(_, { key: _, props: _, defaultProps: _, state: _, actions: _ }) {
@@ -1242,15 +1242,15 @@ function _(_, { key: _, props: _, defaultProps: _, state: _, actions: _ }) {
     else {
       _.und(_.pause) || (_.paused = _(_.pause, _));
       let _ = _?.pause;
-      _ !== !0 && (_ = _.paused || _(_, _)),
+      (_ !== !0 && (_ = _.paused || _(_, _)),
         (_ = _(_.delay || 0, _)),
-        _ ? (_.resumeQueue.add(_), _.pause()) : (_.resume(), _());
+        _ ? (_.resumeQueue.add(_), _.pause()) : (_.resume(), _()));
     }
     function _() {
-      _.resumeQueue.add(_),
+      (_.resumeQueue.add(_),
         _.timeouts.delete(_),
         _.cancel(),
-        (_ = _.time - _.now());
+        (_ = _.time - _.now()));
     }
     function _() {
       _ > 0 && !_.skipAnimation
@@ -1261,10 +1261,10 @@ function _(_, { key: _, props: _, defaultProps: _, state: _, actions: _ }) {
         : _();
     }
     function _() {
-      (_.delayed &&= !1),
+      ((_.delayed &&= !1),
         _.pauseQueue.delete(_),
         _.timeouts.delete(_),
-        _ <= (_.cancelId || 0) && (_ = !0);
+        _ <= (_.cancelId || 0) && (_ = !0));
       try {
         _.start(
           {
@@ -1313,7 +1313,7 @@ function _(_, _, _, _) {
   return !_ && _ === _ && !_.reset
     ? _
     : (_.promise = (async () => {
-        (_.asyncId = _), (_.asyncTo = _);
+        ((_.asyncId = _), (_.asyncTo = _));
         let _ = _(_, (_, _) => (_ === `onRest` ? void 0 : _)),
           _,
           _,
@@ -1337,10 +1337,10 @@ function _(_, _, _, _) {
                     ..._,
                     _: _,
                   };
-              (_.parentId = _),
+              ((_.parentId = _),
                 _(_, (_, _) => {
                   _.und(_[_]) && (_[_] = _);
-                });
+                }));
               let _ = await _.start(_);
               return (
                 _(_),
@@ -1353,16 +1353,16 @@ function _(_, _, _, _) {
             })();
           },
           _;
-        if (_.skipAnimation) return _(_), _(_, !1);
+        if (_.skipAnimation) return (_(_), _(_, !1));
         try {
           let _;
-          (_ = _.arr(_)
+          ((_ = _.arr(_)
             ? (async (_) => {
                 for (let _ of _) await _(_);
               })(_)
             : Promise.resolve(_(_, _.stop.bind(_)))),
             await Promise.all([_.then(_), _]),
-            (_ = _(_.get(), !0, !1));
+            (_ = _(_.get(), !0, !1)));
         } catch (_) {
           if (_ instanceof _) _ = _.result;
           else if (_ instanceof _) _ = _.result;
@@ -1383,11 +1383,11 @@ function _(_, _, _, _) {
       })());
 }
 function _(_, _) {
-  _(_.timeouts, (_) => _.cancel()),
+  (_(_.timeouts, (_) => _.cancel()),
     _.pauseQueue.clear(),
     _.resumeQueue.clear(),
     (_.asyncId = _.asyncTo = _.promise = void 0),
-    _ && (_.cancelId = _);
+    _ && (_.cancelId = _));
 }
 var _ = class extends Error {
     constructor() {
@@ -1405,7 +1405,7 @@ var _ = class extends Error {
   _ = 1,
   _ = class extends _ {
     constructor() {
-      super(...arguments), (this._ = _++), (this._priority = 0);
+      (super(...arguments), (this._ = _++), (this._priority = 0));
     }
     get priority() {
       return this._priority;
@@ -1421,7 +1421,7 @@ var _ = class extends Error {
       return _._(this, _);
     }
     interpolate(..._) {
-      return _(), _._(this, _);
+      return (_(), _._(this, _));
     }
     toJSON() {
       return this.get();
@@ -1443,12 +1443,12 @@ var _ = class extends Error {
       });
     }
     _onPriorityChange(_) {
-      this.idle || _.sort(this),
+      (this.idle || _.sort(this),
         _(this, {
           type: `priority`,
           parent: this,
           priority: _,
-        });
+        }));
     }
   },
   _ = Symbol.for(`SpringPhase`),
@@ -1487,7 +1487,7 @@ var _ = class extends Error {
               ..._,
               from: _,
             };
-        _.und(_.default) && (_.default = !0), this.start(_);
+        (_.und(_.default) && (_.default = !0), this.start(_));
       }
     }
     get idle() {
@@ -1521,7 +1521,7 @@ var _ = class extends Error {
         { toValues: _ } = _,
         { config: _ } = _,
         _ = _(_._);
-      !_ && _(_._) && (_ = _(_(_._))),
+      (!_ && _(_._) && (_ = _(_(_._))),
         _.values.forEach((_, _) => {
           if (_.done) return;
           let _ = _.constructor == _ ? 1 : _ ? _[_].lastPosition : _[_],
@@ -1544,7 +1544,7 @@ var _ = class extends Error {
                 (_ == _ ? 0.005 : Math.min(1, Math.abs(_ - _) * 0.001));
             if (!_.und(_.duration)) {
               let _ = 1;
-              _.duration > 0 &&
+              (_.duration > 0 &&
                 (this._memoizedDuration !== _.duration &&
                   ((this._memoizedDuration = _.duration),
                   _.durationProgress > 0 &&
@@ -1555,13 +1555,13 @@ var _ = class extends Error {
                 (_.durationProgress = _)),
                 (_ = _ + _.easing(_) * (_ - _)),
                 (_ = (_ - _.lastPosition) / _),
-                (_ = _ == 1);
+                (_ = _ == 1));
             } else if (_.decay) {
               let _ = _.decay === !0 ? 0.998 : _.decay,
                 _ = Math.exp(-(1 - _) * _);
-              (_ = _ + (_ / (1 - _)) * (1 - _)),
+              ((_ = _ + (_ / (1 - _)) * (1 - _)),
                 (_ = Math.abs(_.lastPosition - _) <= _),
-                (_ = _ * _);
+                (_ = _ * _));
             } else {
               _ = _.lastVelocity == null ? _ : _.lastVelocity;
               let _ = _.restVelocity || _ / 10,
@@ -1582,31 +1582,31 @@ var _ = class extends Error {
                 let _ =
                   (-_.tension * 1e-6 * (_ - _) + -_.friction * 0.001 * _) /
                   _.mass;
-                (_ += _ * 1), (_ += _ * 1);
+                ((_ += _ * 1), (_ += _ * 1));
               }
             }
-            (_.lastVelocity = _),
+            ((_.lastVelocity = _),
               Number.isNaN(_) &&
-                (console.warn(`Got NaN while animating:`, this), (_ = !0));
+                (console.warn(`Got NaN while animating:`, this), (_ = !0)));
           }
-          _ && !_[_].done && (_ = !1),
+          (_ && !_[_].done && (_ = !1),
             _ ? (_.done = !0) : (_ = !1),
-            _.setValue(_, _.round) && (_ = !0);
-        });
+            _.setValue(_, _.round) && (_ = !0));
+        }));
       let _ = _(this),
         _ = _.getValue();
       if (_) {
         let _ = _(_._);
-        (_ !== _ || _) && !_.decay
+        ((_ !== _ || _) && !_.decay
           ? (_.setValue(_), this._onChange(_))
           : _ && _.decay && this._onChange(_),
-          this._stop();
+          this._stop());
       } else _ && this._onChange(_);
     }
     set(_) {
       return (
         _.batchedUpdates(() => {
-          this._stop(), this._focus(_), this._set(_);
+          (this._stop(), this._focus(_), this._set(_));
         }),
         this
       );
@@ -1625,13 +1625,13 @@ var _ = class extends Error {
       if (_(this)) {
         let { _: _, config: _ } = this.animation;
         _.batchedUpdates(() => {
-          this._onStart(), _.decay || this._set(_, !1), this._stop();
+          (this._onStart(), _.decay || this._set(_, !1), this._stop());
         });
       }
       return this;
     }
     update(_) {
-      return (this.queue ||= []).push(_), this;
+      return ((this.queue ||= []).push(_), this);
     }
     start(_, _) {
       let _;
@@ -1671,10 +1671,10 @@ var _ = class extends Error {
     _prepareNode(_) {
       let _ = this.key || ``,
         { _: _, from: _ } = _;
-      (_ = _.obj(_) ? _[_] : _),
+      ((_ = _.obj(_) ? _[_] : _),
         (_ == null || _(_)) && (_ = void 0),
         (_ = _.obj(_) ? _[_] : _),
-        (_ ??= void 0);
+        (_ ??= void 0));
       let _ = {
         _: _,
         from: _,
@@ -1689,13 +1689,13 @@ var _ = class extends Error {
     }
     _update({ ..._ }, _) {
       let { key: _, defaultProps: _ } = this;
-      _.default &&
+      (_.default &&
         Object.assign(
           _,
           _(_, (_, _) => (/^on/.test(_) ? _(_, _) : _)),
         ),
         _(this, _, `onProps`),
-        _(this, `onProps`, _, this);
+        _(this, `onProps`, _, this));
       let _ = this._prepareNode(_);
       if (Object.isFrozen(this))
         throw Error(
@@ -1732,7 +1732,7 @@ var _ = class extends Error {
       });
     }
     _merge(_, _, _) {
-      if (_.cancel) return this.stop(!0), _(_(this));
+      if (_.cancel) return (this.stop(!0), _(_(this)));
       let _ = !_.und(_._),
         _ = !_.und(_.from);
       if (_ || _) {
@@ -1742,19 +1742,23 @@ var _ = class extends Error {
       let { key: _, defaultProps: _, animation: _ } = this,
         { _: _, from: _ } = _,
         { _: _ = _, from: _ = _ } = _;
-      _ && !_ && (!_.default || _.und(_)) && (_ = _),
-        _.reverse && ([_, _] = [_, _]);
+      (_ && !_ && (!_.default || _.und(_)) && (_ = _),
+        _.reverse && ([_, _] = [_, _]));
       let _ = !_(_, _);
-      _ && (_.from = _), (_ = _(_));
+      (_ && (_.from = _), (_ = _(_)));
       let _ = !_(_, _);
       _ && this._focus(_);
       let _ = _(_._),
         { config: _ } = _,
         { decay: _, velocity: _ } = _;
-      (_ || _) && (_.velocity = 0),
+      ((_ || _) && (_.velocity = 0),
         _.config &&
           !_ &&
-          _(_, _(_.config, _), _.config === _.config ? void 0 : _(_.config, _));
+          _(
+            _,
+            _(_.config, _),
+            _.config === _.config ? void 0 : _(_.config, _),
+          ));
       let _ = _(this);
       if (!_ || _.und(_)) return _(_(this, !0));
       let _ = _.und(_.reset) ? _ && !_.default : !_.und(_) && _(_.reset, _),
@@ -1777,9 +1781,9 @@ var _ = class extends Error {
         _ = !1;
       if (!_) {
         let _ = _ || (!_(this) && _);
-        (_ || _) && ((_ = _(_(_), _)), (_ = !_)),
+        ((_ || _) && ((_ = _(_(_), _)), (_ = !_)),
           ((_(_.immediate, _) || _) && _(_.decay, _) && _(_.velocity, _)) ||
-            (_ = !0);
+            (_ = !0));
       }
       if (
         (_ && _(this) && (_.changed && !_ ? (_ = !0) : _ || this._stop(_)),
@@ -1793,23 +1797,23 @@ var _ = class extends Error {
         let { onRest: _ } = _;
         _(_, (_) => _(this, _, _));
         let _ = _(this, _(this, _));
-        _(this._pendingCalls, _),
+        (_(this._pendingCalls, _),
           this._pendingCalls.add(_),
           _.changed &&
             _.batchedUpdates(() => {
-              (_.changed = !_),
+              ((_.changed = !_),
                 _?.(_, this),
-                _ ? _(_.onRest, _) : _.onStart?.(_, this);
-            });
+                _ ? _(_.onRest, _) : _.onStart?.(_, this));
+            }));
       }
-      _ && this._set(_),
+      (_ && this._set(_),
         _
           ? _(_(_._, _, this._state, this))
           : _
             ? this._start()
             : _(this) && !_
               ? this._pendingCalls.add(_)
-              : _(_(_));
+              : _(_(_)));
     }
     _focus(_) {
       let _ = this.animation;
@@ -1819,7 +1823,7 @@ var _ = class extends Error {
     _attach() {
       let _ = 0,
         { _: _ } = this.animation;
-      _(_) && (_(_, this), _(_) && (_ = _.priority + 1)), (this.priority = _);
+      (_(_) && (_(_, this), _(_) && (_ = _.priority + 1)), (this.priority = _));
     }
     _detach() {
       let { _: _ } = this.animation;
@@ -1831,11 +1835,11 @@ var _ = class extends Error {
         let _ = _(this);
         if (!_ || !_(_, _.getValue())) {
           let _ = _(_);
-          !_ || _.constructor != _ ? _(this, _.create(_)) : _.setValue(_),
+          (!_ || _.constructor != _ ? _(this, _.create(_)) : _.setValue(_),
             _ &&
               _.batchedUpdates(() => {
                 this._onChange(_, _);
-              });
+              }));
         }
       }
       return _(this);
@@ -1846,15 +1850,15 @@ var _ = class extends Error {
         ((_.changed = !0), _(this, `onStart`, _(this, _(this, _._)), this));
     }
     _onChange(_, _) {
-      _ || (this._onStart(), _(this.animation.onChange, _, this)),
+      (_ || (this._onStart(), _(this.animation.onChange, _, this)),
         _(this.defaultProps.onChange, _, this),
-        super._onChange(_, _);
+        super._onChange(_, _));
     }
     _start() {
       let _ = this.animation;
-      _(this).reset(_(_._)),
+      (_(this).reset(_(_._)),
         _.immediate || (_.fromValues = _.values.map((_) => _.lastPosition)),
-        _(this) || (_(this, !0), _(this) || this._resume());
+        _(this) || (_(this, !0), _(this) || this._resume()));
     }
     _resume() {
       _.skipAnimation ? this.finish() : _.start(this);
@@ -1863,17 +1867,17 @@ var _ = class extends Error {
       if (_(this)) {
         _(this, !1);
         let _ = this.animation;
-        _(_.values, (_) => {
+        (_(_.values, (_) => {
           _.done = !0;
         }),
           _.toValues && (_.onChange = _.onPause = _.onResume = void 0),
           _(this, {
             type: `idle`,
             parent: this,
-          });
+          }));
         let _ = _ ? _(this.get()) : _(this.get(), _(this, _ ?? _._));
-        _(this._pendingCalls, _),
-          _.changed && ((_.changed = !1), _(this, `onRest`, _, this));
+        (_(this._pendingCalls, _),
+          _.changed && ((_.changed = !1), _(this, `onRest`, _, this)));
       }
     }
   };
@@ -1911,7 +1915,7 @@ function _(_) {
 }
 function _(_) {
   let _ = _(_);
-  return _.und(_.default) && (_.default = _(_)), _;
+  return (_.und(_.default) && (_.default = _(_)), _);
 }
 function _(_, _) {
   _(_, (_, _) => _ != null && _.add(_));
@@ -1921,13 +1925,13 @@ function _(_, _, _) {
   _.animation[_] = _[_] === _(_, _) ? void 0 : _(_[_], _.key);
 }
 function _(_, _, ..._) {
-  _.animation[_]?.(..._), _.defaultProps[_]?.(..._);
+  (_.animation[_]?.(..._), _.defaultProps[_]?.(..._));
 }
 var _ = [`onStart`, `onChange`, `onRest`],
   _ = 1,
   _ = class {
     constructor(_, _) {
-      (this._ = _++),
+      ((this._ = _++),
         (this.springs = {}),
         (this.queue = []),
         (this._lastAsyncId = 0),
@@ -1951,7 +1955,7 @@ var _ = [`onStart`, `onChange`, `onRest`],
           this.start({
             default: !0,
             ..._,
-          });
+          }));
     }
     get idle() {
       return (
@@ -1969,7 +1973,7 @@ var _ = [`onStart`, `onChange`, `onRest`],
     }
     get() {
       let _ = {};
-      return this.each((_, _) => (_[_] = _.get())), _;
+      return (this.each((_, _) => (_[_] = _.get())), _);
     }
     set(_) {
       for (let _ in _) {
@@ -1978,7 +1982,7 @@ var _ = [`onStart`, `onChange`, `onRest`],
       }
     }
     update(_) {
-      return _ && this.queue.push(_(_)), this;
+      return (_ && this.queue.push(_(_)), this);
     }
     start(_) {
       let { queue: _ } = this;
@@ -1991,7 +1995,7 @@ var _ = [`onStart`, `onChange`, `onRest`],
       if ((_ !== !!_ && (_ = _), _)) {
         let _ = this.springs;
         _(_(_), (_) => _[_].stop(!!_));
-      } else _(this._state, this._lastAsyncId), this.each((_) => _.stop(!!_));
+      } else (_(this._state, this._lastAsyncId), this.each((_) => _.stop(!!_)));
       return this;
     }
     pause(_) {
@@ -2026,24 +2030,24 @@ var _ = [`onStart`, `onChange`, `onRest`],
       ((_ && !this._started) || (_ && !this._started)) &&
         ((this._started = !0),
         _(_, ([_, _]) => {
-          (_.value = this.get()), _(_, this, this._item);
+          ((_.value = this.get()), _(_, this, this._item));
         }));
       let _ = !_ && this._started,
         _ = _ || (_ && _.size) ? this.get() : null;
-      _ &&
+      (_ &&
         _.size &&
         _(_, ([_, _]) => {
-          (_.value = _), _(_, this, this._item);
+          ((_.value = _), _(_, this, this._item));
         }),
         _ &&
           ((this._started = !1),
           _(_, ([_, _]) => {
-            (_.value = _), _(_, this, this._item);
-          }));
+            ((_.value = _), _(_, this, this._item));
+          })));
     }
     eventObserved(_) {
       if (_.type == `change`)
-        this._changed.add(_.parent), _.idle || this._active.add(_.parent);
+        (this._changed.add(_.parent), _.idle || this._active.add(_.parent));
       else if (_.type == `idle`) this._active.delete(_.parent);
       else return;
       _.onFrame(this._onFrame);
@@ -2055,7 +2059,7 @@ function _(_, _) {
 async function _(_, _, _) {
   let { keys: _, _: _, from: _, loop: _, onRest: _, onResolve: _ } = _,
     _ = _.obj(_.default) && _.default;
-  _ && (_.loop = !1), _ === !1 && (_._ = null), _ === !1 && (_.from = null);
+  (_ && (_.loop = !1), _ === !1 && (_._ = null), _ === !1 && (_.from = null));
   let _ = _.arr(_) || _.fun(_) ? _ : void 0;
   _
     ? ((_._ = void 0), (_.onRest = void 0), _ && (_.onRest = void 0))
@@ -2063,7 +2067,7 @@ async function _(_, _, _) {
         let _ = _[_];
         if (_.fun(_)) {
           let _ = _._events[_];
-          (_[_] = ({ finished: _, cancelled: _ }) => {
+          ((_[_] = ({ finished: _, cancelled: _ }) => {
             let _ = _.get(_);
             _
               ? (_ || (_.finished = !1), _ && (_.cancelled = !0))
@@ -2073,7 +2077,7 @@ async function _(_, _, _) {
                   cancelled: _ || !1,
                 });
           }),
-            _ && (_[_] = _[_]);
+            _ && (_[_] = _[_]));
         }
       });
   let _ = _._state;
@@ -2082,7 +2086,7 @@ async function _(_, _, _) {
     : _.paused && (_.pause = !0);
   let _ = (_ || Object.keys(_.springs)).map((_) => _.springs[_].start(_)),
     _ = _.cancel === !0 || _(_, `cancel`) === !0;
-  (_ || (_ && _.asyncId)) &&
+  ((_ || (_ && _.asyncId)) &&
     _.push(
       _(++_._lastAsyncId, {
         props: _,
@@ -2101,13 +2105,13 @@ async function _(_, _, _) {
     _.paused &&
       (await new Promise((_) => {
         _.resumeQueue.add(_);
-      }));
+      })));
   let _ = _(_, await Promise.all(_));
   if (_ && _.finished && !(_ && _.noop)) {
     let _ = _(_, _, _);
-    if (_) return _(_, [_]), _(_, _, !0);
+    if (_) return (_(_, [_]), _(_, _, !0));
   }
-  return _ && _.batchedUpdates(() => _(_, _, _.item)), _;
+  return (_ && _.batchedUpdates(() => _(_, _, _.item)), _);
 }
 function _(_, _) {
   let _ = {
@@ -2116,13 +2120,13 @@ function _(_, _) {
   return (
     _ &&
       _(_(_), (_) => {
-        _.und(_.keys) && (_ = _(_)),
+        (_.und(_.keys) && (_ = _(_)),
           _.obj(_._) ||
             (_ = {
               ..._,
               _: void 0,
             }),
-          _(_, _, (_) => _(_));
+          _(_, _, (_) => _(_)));
       }),
     _(_, _),
     _
@@ -2135,7 +2139,7 @@ function _(_, _) {
 }
 function _(_, _) {
   let _ = new _();
-  return (_.key = _), _ && _(_, _), _;
+  return ((_.key = _), _ && _(_, _), _);
 }
 function _(_, _, _) {
   _.keys &&
@@ -2168,7 +2172,7 @@ var _ = _.createContext({
           _
         );
       };
-    (_.current = _),
+    ((_.current = _),
       (_.add = function (_) {
         _.includes(_) || _.push(_);
       }),
@@ -2177,10 +2181,10 @@ var _ = _.createContext({
         ~_ && _.splice(_, 1);
       }),
       (_.pause = function () {
-        return _(_, (_) => _.pause(...arguments)), this;
+        return (_(_, (_) => _.pause(...arguments)), this);
       }),
       (_.resume = function () {
-        return _(_, (_) => _.resume(...arguments)), this;
+        return (_(_, (_) => _.resume(...arguments)), this);
       }),
       (_.set = function (_) {
         _(_, (_, _) => {
@@ -2202,15 +2206,15 @@ var _ = _.createContext({
         );
       }),
       (_.stop = function () {
-        return _(_, (_) => _.stop(...arguments)), this;
+        return (_(_, (_) => _.stop(...arguments)), this);
       }),
       (_.update = function (_) {
-        return _(_, (_, _) => _.update(this._getProps(_, _, _))), this;
-      });
+        return (_(_, (_, _) => _.update(this._getProps(_, _, _))), this);
+      }));
     let _ = function (_, _, _) {
       return _.fun(_) ? _(_, _) : _;
     };
-    return (_._getProps = _), _;
+    return ((_._getProps = _), _);
   };
 function _(_, _, _) {
   let _ = _.fun(_) && _;
@@ -2229,11 +2233,11 @@ function _(_, _, _) {
             !Object.keys(_).some((_) => !_.springs[_])
             ? _(_, _)
             : new Promise((_) => {
-                _(_, _),
+                (_(_, _),
                   _.queue.push(() => {
                     _(_(_, _));
                   }),
-                  _();
+                  _());
               });
         },
       }),
@@ -2242,16 +2246,16 @@ function _(_, _, _) {
     _ = (0, _.useRef)([..._.ctrls]),
     _ = (0, _.useRef)([]),
     _ = _(_) || 0;
-  (0, _.useMemo)(() => {
-    _(_.current.slice(_, _), (_) => {
-      _(_, _), _.stop(!0);
+  ((0, _.useMemo)(() => {
+    (_(_.current.slice(_, _), (_) => {
+      (_(_, _), _.stop(!0));
     }),
       (_.current.length = _),
-      _(_, _);
+      _(_, _));
   }, [_]),
     (0, _.useMemo)(() => {
       _(0, Math.min(_, _));
-    }, _);
+    }, _));
   function _(_, _) {
     for (let _ = _; _ < _; _++) {
       let _ = _.current[_] || (_.current[_] = new _(null, _.flush)),
@@ -2262,23 +2266,23 @@ function _(_, _, _) {
   let _ = _.current.map((_, _) => _(_, _.current[_])),
     _ = (0, _.useContext)(_),
     _ = _ !== _(_) && _(_);
-  _(() => {
-    _.current++, (_.ctrls = _.current);
+  (_(() => {
+    (_.current++, (_.ctrls = _.current));
     let { queue: _ } = _;
-    _.length && ((_.queue = []), _(_, (_) => _())),
+    (_.length && ((_.queue = []), _(_, (_) => _())),
       _(_.current, (_, _) => {
-        _?.add(_),
+        (_?.add(_),
           _ &&
             _.start({
               default: _,
-            });
+            }));
         let _ = _.current[_];
         _ && (_(_, _.ref), _.ref ? _.queue.push(_) : _.start(_));
-      });
+      }));
   }),
     _(() => () => {
       _(_.ctrls, (_) => _.stop(!0));
-    });
+    }));
   let _ = _.map((_) => ({
     ..._,
   }));
@@ -2291,19 +2295,19 @@ function _(_, _) {
 }
 var _ = class extends _ {
   constructor(_, _) {
-    super(),
+    (super(),
       (this.source = _),
       (this.idle = !0),
       (this._active = new Set()),
-      (this.calc = _(..._));
+      (this.calc = _(..._)));
     let _ = this._get(),
       _ = _(_);
     _(this, _.create(_));
   }
   advance(_) {
     let _ = this._get();
-    _(_, this.get()) || (_(this).setValue(_), this._onChange(_, this.idle)),
-      !this.idle && _(this._active) && _(this);
+    (_(_, this.get()) || (_(this).setValue(_), this._onChange(_, this.idle)),
+      !this.idle && _(this._active) && _(this));
   }
   _get() {
     let _ = _.arr(this.source) ? this.source.map(_) : _(_(this.source));
@@ -2322,20 +2326,20 @@ var _ = class extends _ {
   }
   _attach() {
     let _ = 1;
-    _(_(this.source), (_) => {
-      _(_) && _(_, this),
+    (_(_(this.source), (_) => {
+      (_(_) && _(_, this),
         _(_) &&
-          (_.idle || this._active.add(_), (_ = Math.max(_, _.priority + 1)));
+          (_.idle || this._active.add(_), (_ = Math.max(_, _.priority + 1))));
     }),
       (this.priority = _),
-      this._start();
+      this._start());
   }
   _detach() {
-    _(_(this.source), (_) => {
+    (_(_(this.source), (_) => {
       _(_) && _(_, this);
     }),
       this._active.clear(),
-      _(this);
+      _(this));
   }
   eventObserved(_) {
     _.type == `change`
@@ -2368,11 +2372,11 @@ function _(_) {
       parent: _,
     }));
 }
-_.assign({
+(_.assign({
   createStringInterpolator: _,
   _: (_, _) => new _(_, _),
 }),
-  _.advance;
+  _.advance);
 var _ = _(_(), 1),
   _ = /^--/;
 function _(_, _) {
@@ -2412,13 +2416,13 @@ function _(_, _) {
       let _ = _(_, _[_]);
       _.test(_) ? _.style.setProperty(_, _) : (_.style[_] = _);
     }
-  _.forEach((_, _) => {
+  (_.forEach((_, _) => {
     _.setAttribute(_, _[_]);
   }),
     _ !== void 0 && (_.className = _),
     _ !== void 0 && (_.scrollTop = _),
     _ !== void 0 && (_.scrollLeft = _),
-    _ !== void 0 && _.setAttribute(`viewBox`, _);
+    _ !== void 0 && _.setAttribute(`viewBox`, _));
 }
 var _ = {
     animationIterationCount: !0,
@@ -2483,7 +2487,7 @@ var _ = /^(matrix|translate|scale|rotate|skew)/,
     constructor({ _: _, _: _, _: _, ..._ }) {
       let _ = [],
         _ = [];
-      (_ || _ || _) &&
+      ((_ || _ || _) &&
         (_.push([_ || 0, _ || 0, _ || 0]),
         _.push((_) => [
           `translate3d(${_.map((_) => _(_, `px`)).join(`,`)})`,
@@ -2491,11 +2495,11 @@ var _ = /^(matrix|translate|scale|rotate|skew)/,
         ])),
         _(_, (_, _) => {
           if (_ === `transform`)
-            _.push([_ || ``]), _.push((_) => [_, _ === ``]);
+            (_.push([_ || ``]), _.push((_) => [_, _ === ``]));
           else if (_.test(_)) {
             if ((delete _[_], _.und(_))) return;
             let _ = _.test(_) ? `px` : _.test(_) ? `deg` : ``;
-            _.push(_(_)),
+            (_.push(_(_)),
               _.push(
                 _ === `rotate3d`
                   ? ([_, _, _, _]) => [
@@ -2506,16 +2510,16 @@ var _ = /^(matrix|translate|scale|rotate|skew)/,
                       `${_}(${_.map((_) => _(_, _)).join(`,`)})`,
                       _(_, +!!_.startsWith(`scale`)),
                     ],
-              );
+              ));
           }
         }),
         _.length && (_.transform = new _(_, _)),
-        super(_);
+        super(_));
     }
   },
   _ = class extends _ {
     constructor(_, _) {
-      super(), (this.inputs = _), (this.transforms = _), (this._value = null);
+      (super(), (this.inputs = _), (this.transforms = _), (this._value = null));
     }
     get() {
       return (this._value ||= this._get());
@@ -2527,7 +2531,7 @@ var _ = /^(matrix|translate|scale|rotate|skew)/,
         _(this.inputs, (_, _) => {
           let _ = _(_[0]),
             [_, _] = this.transforms[_](_.arr(_) ? _ : _.map(_));
-          (_ += ` ` + _), (_ &&= _);
+          ((_ += ` ` + _), (_ &&= _));
         }),
         _ ? `none` : _
       );
@@ -2539,7 +2543,7 @@ var _ = /^(matrix|translate|scale|rotate|skew)/,
       _ == 0 && _(this.inputs, (_) => _(_, (_) => _(_) && _(_, this)));
     }
     eventObserved(_) {
-      _.type == `change` && (this._value = null), _(this, _);
+      (_.type == `change` && (this._value = null), _(this, _));
     }
   },
   _ =
@@ -3075,4 +3079,3 @@ var _ = `Wo4YgGDqLZc-`,
       ..._,
     });
   };
-export { _, _, _, _ };

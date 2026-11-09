@@ -160,7 +160,7 @@ function v(e, t) {
     n.g_mapPendingItemInfo?.has(e))
   ) {
     let { description: r, asset: i } = n.g_mapPendingItemInfo.get(e);
-    t(r, i), n.g_mapPendingItemInfo.delete(e);
+    (t(r, i), n.g_mapPendingItemInfo.delete(e));
   }
   return (
     _.set(e, t),

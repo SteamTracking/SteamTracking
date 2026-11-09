@@ -4,7 +4,7 @@
     [2561],
     {
       82561: (l, e, a) => {
-        a.r(e), a.d(e, { default: () => n });
+        (a.r(e), a.d(e, { default: () => n }));
         const n = {
           arabic: {
             Steam_Language_Selection_Label:

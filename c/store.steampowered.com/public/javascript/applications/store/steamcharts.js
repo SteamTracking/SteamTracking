@@ -71,9 +71,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.country_code || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -117,7 +117,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -138,14 +138,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CStoreTopSellers_GetWeeklyTopSellers_Request`;
@@ -154,9 +154,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.start_date || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [2], null);
+        _.Message.initialize(this, _, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -187,7 +187,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -208,14 +208,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CStoreTopSellers_GetWeeklyTopSellers_Response`;
@@ -224,9 +224,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.rank || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -270,7 +270,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -291,14 +291,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CStoreTopSellers_GetWeeklyTopSellers_Response_TopSellersRank`;
@@ -307,9 +307,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.language || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -329,7 +329,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -350,14 +350,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CStoreTopSellers_GetCountryList_Request`;
@@ -366,9 +366,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.countries || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -389,7 +389,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -410,14 +410,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CStoreTopSellers_GetCountryList_Response`;
@@ -426,9 +426,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.country_code || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -453,7 +453,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -474,14 +474,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CStoreTopSellers_GetCountryList_Response_Country`;
@@ -513,20 +513,20 @@ var _ = 20,
     m_promiseInitialize;
     m_rtCurrentWeek;
     constructor(_, _) {
-      (this.m_WebAPI = _), (this.m_Storage = _);
+      ((this.m_WebAPI = _), (this.m_Storage = _));
     }
     async Initialize(_) {
       return (
         (this.m_promiseInitialize ||= new Promise((_, _) => {
           let _;
-          (_.EUNIVERSE == 2 || _.EUNIVERSE == 4) && (_ = 1539068400),
+          ((_.EUNIVERSE == 2 || _.EUNIVERSE == 4) && (_ = 1539068400),
             this.LoadCountryList()
               .then(() =>
                 this.LoadCurrentWeekStart(_, _).then((_) => {
-                  (this.m_rtCurrentWeek = _), _();
+                  ((this.m_rtCurrentWeek = _), _());
                 }),
               )
-              .catch(_);
+              .catch(_));
         })),
         this.m_promiseInitialize
       );
@@ -552,12 +552,12 @@ var _ = 20,
             let _ = _.Body()
               .countries()
               .map((_) => _.toObject());
-            _.sort((_, _) => (_.name < _.name ? -1 : 1)),
+            (_.sort((_, _) => (_.name < _.name ? -1 : 1)),
               (this.m_rgCountryList = {
                 rgCountryCodes: _,
                 dtTimeStored: Date.now(),
               }),
-              this.m_Storage.StoreObject(_, this.m_rgCountryList);
+              this.m_Storage.StoreObject(_, this.m_rgCountryList));
           } else
             this.m_rgCountryList = {
               rgCountryCodes: [
@@ -589,11 +589,11 @@ var _ = 20,
     async LoadCurrentWeekStart(_, _) {
       let _ = this.ValidateCountryCode(_),
         _ = _.Init(_);
-      _(_),
+      (_(_),
         _(_, _),
         _ && _.Body().set_country_code(_),
         _ && _.Body().set_start_date(_),
-        _.Body().set_page_count(_);
+        _.Body().set_page_count(_));
       let _ = await _.GetWeeklyTopSellers(
         this.m_WebAPI.GetAnonymousServiceTransport(),
         _,
@@ -622,7 +622,7 @@ function _(_, _) {
 }
 function _(_) {
   let _ = 50;
-  return _ < 2009 ? (_ = 5) : _ < 2014 ? (_ = 10) : _ < 2018 && (_ = 25), _;
+  return (_ < 2009 ? (_ = 5) : _ < 2014 ? (_ = 10) : _ < 2018 && (_ = 25), _);
 }
 var _ = class {
     m_WebAPI;
@@ -632,8 +632,8 @@ var _ = class {
     async LoadTopMonthlyReleases(_, _) {
       let _ = _.Init(_),
         _ = new Date(_, _, 15);
-      _.Body().set_rtime_month(Math.floor(_.getTime() / 1e3)),
-        _.Body().set_include_dlc(!0);
+      (_.Body().set_rtime_month(Math.floor(_.getTime() / 1e3)),
+        _.Body().set_include_dlc(!0));
       let _ = _(_);
       _.Body().set_top_results_limit(_);
       let _ = await _.GetMonthTopAppReleases(
@@ -667,8 +667,8 @@ var _ = class {
     async LoadTopYearlyReleases(_) {
       let _ = _.Init(_),
         _ = new Date(_, 1, 15);
-      _.Body().set_rtime_year(Math.floor(_.getTime() / 1e3)),
-        _.Body().set_include_dlc(!0);
+      (_.Body().set_rtime_year(Math.floor(_.getTime() / 1e3)),
+        _.Body().set_include_dlc(!0));
       let _ = (_.is_support, this.m_WebAPI.GetAnonymousServiceTransport()),
         _ = await _.GetYearTopAppReleases(_, _);
       if (_.GetEResult() != 1) {
@@ -680,7 +680,7 @@ var _ = class {
         throw `error loading top releases`;
       }
       let _ = _.Body().toObject();
-      return _.is_support && _.top_app_list.length, _;
+      return (_.is_support && _.top_app_list.length, _);
     }
   },
   _ = `useYearlyTopRelease`;
@@ -698,11 +698,11 @@ var _ = class {
     m_TopYearlyReleasesStore;
     m_WebAPI;
     async Initialize(_, _) {
-      (this.m_WebAPI = _),
+      ((this.m_WebAPI = _),
         (this.m_TopSellersStore = new _(this.m_WebAPI, _)),
         (this.m_TopMonthlyReleasesStore = new _(this.m_WebAPI)),
         (this.m_TopYearlyReleasesStore = new _(this.m_WebAPI)),
-        (this.m_DynamicUserStore = await _.Get().HintLoad());
+        (this.m_DynamicUserStore = await _.Get().HintLoad()));
     }
     get TopSellersStore() {
       return this.m_TopSellersStore;
@@ -805,7 +805,7 @@ function _(_) {
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        _(_.unix()), _.current.Hide();
+        (_(_.unix()), _.current.Hide());
       },
       [_],
     ),
@@ -837,7 +837,7 @@ function _(_) {
       className: _,
       children: (0, _.jsx)(`div`, {
         onClick: (_) => {
-          _.preventDefault(), _.stopPropagation();
+          (_.preventDefault(), _.stopPropagation());
         },
         children: (0, _.jsx)(_.default, {
           ref: _,
@@ -873,7 +873,7 @@ function _(_) {
     _ = (0, _.useMemo)(() => {
       let _ = 0,
         _ = [..._];
-      for (; _.length < 25; ) _.push(_[_ % _.length]), _++;
+      for (; _.length < 25;) (_.push(_[_ % _.length]), _++);
       return _.map((_) => _.Get().GetApp(_)).filter(Boolean);
     }, [_]);
   return (0, _.jsxs)(_.Fragment, {
@@ -942,8 +942,8 @@ function _(_) {
     _ = _.getHours(),
     _,
     _;
-  for (_ = _ > 15 || (_ === 15 && _ >= 10) ? _ - 1 : _ - 2; _ < 0; )
-    (_ += 12), (_ = (_ ?? _) - 1);
+  for (_ = _ > 15 || (_ === 15 && _ >= 10) ? _ - 1 : _ - 2; _ < 0;)
+    ((_ += 12), (_ = (_ ?? _) - 1));
   _ ??= _;
   let _ = new Date(Date.UTC(_, _, 15, 17, 0));
   return Math.floor(_.getTime() / 1e3);
@@ -1220,7 +1220,7 @@ function _(_, _, _, _, _) {
       try {
         return _(_, _, _, _, _);
       } catch (_) {
-        return console.error(`Montly new release: ${_} failed: `, _), null;
+        return (console.error(`Montly new release: ${_} failed: `, _), null);
       }
     },
   });
@@ -1417,7 +1417,7 @@ function _(_, _, _, _) {
           (_) => !_.Get().BIsAppMissing(_.appid),
         ).map((_) => {
           let _ = _.app_release_rank;
-          return _[_] || (_[_] = []), _[_].push(_.appid), _.appid;
+          return (_[_] || (_[_] = []), _[_].push(_.appid), _.appid);
         }),
         rgFilteredAppIDByTier: _,
       };
@@ -1980,7 +1980,7 @@ function _(_, _, _) {
           prefer_demo_store_page: !!_.bShowDemoInfo,
         });
       }
-      _(
+      (_(
         _,
         _,
         _,
@@ -2009,7 +2009,7 @@ function _(_, _, _) {
           _.tabs[_].unique_id,
           !!_.bShowDeckCompat,
           !!_.bShowDemoInfo,
-        );
+        ));
     }),
     _.jsondata.sale_sections.push({
       ..._(`text_section`, ``),
@@ -2033,7 +2033,7 @@ function _(_, _, _) {
       try {
         return _(_, _, _);
       } catch (_) {
-        return console.error(`Yearly new release: ${_} failed: `, _), null;
+        return (console.error(`Yearly new release: ${_} failed: `, _), null);
       }
     },
   });
@@ -2307,10 +2307,10 @@ function _(_) {
       },
       [_.active_modal, _, _, _, _, _],
     );
-  _(`ArrowLeft`, () => _(!1), !0, !0),
+  (_(`ArrowLeft`, () => _(!1), !0, !0),
     _(`Left`, () => _(!1), !0, !0),
     _(`ArrowRight`, () => _(!0), !0, !0),
-    _(`Right`, () => _(!0), !0, !0);
+    _(`Right`, () => _(!0), !0, !0));
   let _ = _ == 1 ? `` : `?tab=${_}`;
   return (0, _.jsxs)(_.Fragment, {
     children: [
@@ -2409,7 +2409,7 @@ var _ = {
 };
 async function _(_, _) {
   let _ = new _();
-  return await _.Initialize(_, _), _;
+  return (await _.Initialize(_, _), _);
 }
 function _(_) {
   let [_, _] = (0, _.useState)(void 0),

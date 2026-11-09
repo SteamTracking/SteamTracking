@@ -13,13 +13,13 @@ function s(e) {
 }
 async function c(e, t) {
   let r = new URLSearchParams();
-  e.clanAccountID && r.set(`clan_accountid`, String(e.clanAccountID)),
+  (e.clanAccountID && r.set(`clan_accountid`, String(e.clanAccountID)),
     e.appid && r.set(`appid`, String(e.appid)),
     e.eventGID && r.set(`event_gid`, e.eventGID),
     e.announcementGID && r.set(`announcement_gid`, e.announcementGID),
     r.set(`lang_list`, o(t)),
     r.set(`last_modified_time`, `0`),
-    r.set(`origin`, window.location.origin);
+    r.set(`origin`, window.location.origin));
   let i = n.STORE_BASE_URL + `events/ajaxgetpartnerevent?` + r.toString(),
     a = await fetch(i);
   if (!a.ok) throw Error(`${i} answered ${a.status}`);

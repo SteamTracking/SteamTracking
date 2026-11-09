@@ -10,4 +10,3 @@ function _(_) {
 function _() {
   return (0, _.useContext)(_);
 }
-export { _, _ };

@@ -40,7 +40,7 @@ function _(_) {
     ),
     _ = (0, _.useCallback)((_) => {
       let _ = new URL(window.location.href);
-      (_.search = _(_).toString()),
+      ((_.search = _(_).toString()),
         _(
           (_) => ({
             ..._,
@@ -48,9 +48,9 @@ function _(_) {
           }),
           _,
         ),
-        _(_);
+        _(_));
     }, []);
-  _(
+  (_(
     (0, _.useCallback)(() => {
       let _ = _()?.workshopBrowseQuery ?? _;
       _ && (_(_), _(_.search_text ?? ``));
@@ -107,15 +107,15 @@ function _(_) {
             (_.section == `mtxitems` || _.section == `collections`) &&
               (_.omitted_flags = [`workshopaccepted`]);
         }
-        _.special_filter == 1 && (_.omitted_flags = void 0),
+        (_.special_filter == 1 && (_.omitted_flags = void 0),
           !_.search_text?.length &&
             _.browse_sort == `textsearch` &&
             (_.browse_sort = `trend`),
           _(_),
-          _(!1);
+          _(!1));
       };
-      return _(() => _), () => _(() => void 0);
-    }, [_, _, _, _, _]);
+      return (_(() => _), () => _(() => void 0));
+    }, [_, _, _, _, _]));
   let _ = _(_, _),
     _ = _.isSuccess
       ? _.data
@@ -403,11 +403,11 @@ function _(_) {
   let { onSearchTextUpdatedExternally: _, onBrowseHandler: _ } = _(),
     { search_text: _, search_text_target: _ } = _,
     _ = (0, _.useCallback)(() => {
-      _({
+      (_({
         search_text: ``,
         page: 1,
       }),
-        _(``);
+        _(``));
     }, [_, _]),
     _ = `#Workshop_SearchResults_SearchText`;
   switch (_) {
@@ -565,7 +565,7 @@ function _(_) {
     _,
     {
       onClick: () => {
-        _({
+        (_({
           special_filter: 0,
           required_flags: [],
           omitted_flags: [],
@@ -578,7 +578,7 @@ function _(_) {
           childpublishedfileid: void 0,
           page: 1,
         }),
-          _(``);
+          _(``));
       },
       color: `dull`,
       size: `1`,
@@ -601,10 +601,10 @@ function _(_) {
     _ = _(_),
     _ = async () => {
       let _ = _(_);
-      (_.query_name = _),
+      ((_.query_name = _),
         (_.queryid = _.queryid),
         await _.mutateAsync(_),
-        _(!1);
+        _(!1));
     },
     _ = (0, _.useCallback)((_) => {
       _(_);
@@ -692,7 +692,7 @@ function _(_) {
       bSavedQueries: _,
     } = _,
     _ = [];
-  _.childpublishedfileid?.length &&
+  (_.childpublishedfileid?.length &&
     _.push(
       (0, _.jsx)(
         _,
@@ -784,7 +784,7 @@ function _(_) {
             `saved_query`,
           ),
         ),
-      _.push((0, _.jsx)(_, {}, `clear`)));
+      _.push((0, _.jsx)(_, {}, `clear`))));
   let _ = (0, _.jsx)(`div`, {
     className: _,
     children: _.LocalizePlural(
@@ -1282,4 +1282,3 @@ function _(_) {
     })
   );
 }
-export { _, _, _, _ };

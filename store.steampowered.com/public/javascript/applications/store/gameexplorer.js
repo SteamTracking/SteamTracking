@@ -148,7 +148,7 @@ function se() {
             (0, Z.jsx)(fe, {
               state: r,
               onChange: (e, t) => {
-                i(e), t && (s.push(Q(e)), o(e));
+                (i(e), t && (s.push(Q(e)), o(e)));
               },
             }),
             c.data &&
@@ -160,7 +160,7 @@ function se() {
                     ...a,
                     arrSelectedAppInfos: [{ nAppID: e, nWeight: 100 }],
                   };
-                  i(t), s.push(Q(t)), o(t);
+                  (i(t), s.push(Q(t)), o(t));
                 },
               }),
           ],
@@ -257,14 +257,14 @@ function fe(e) {
           c = (100 - n - s) / (i.length - +!a),
           l = o.reduce((e, t) => e + Math.max(0, t + c - 100), 0),
           u = o.reduce((e, t) => e + Math.min(0, t + c), 0);
-        (c += Math.floor(l / (i.length - 1))),
+        ((c += Math.floor(l / (i.length - 1))),
           (c += Math.floor(u / (i.length - 1))),
           (i = i.map((e) => ({
             nAppID: e.nAppID,
             nWeight:
               e.nAppID == t ? n : Math.max(0, Math.min(100, e.nWeight + c)),
           }))),
-          e.onChange({ ...e.state, arrSelectedAppInfos: i }, r);
+          e.onChange({ ...e.state, arrSelectedAppInfos: i }, r));
       } else e.onChange({ ...e.state, arrSelectedAppInfos: i }, r);
     },
     o = (e) => {
@@ -514,7 +514,7 @@ var ge = E.forwardRef(function (e, t) {
         e != t && (n(e), i(Date.now()), setTimeout(d, 300));
       },
       p = (t) => {
-        e.fnSelectAppID(t), n(``), o(0), c([]), i(Date.now());
+        (e.fnSelectAppID(t), n(``), o(0), c([]), i(Date.now()));
       },
       m = (e) => {
         switch (e) {

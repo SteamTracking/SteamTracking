@@ -29,7 +29,7 @@ function _(_) {
     case `FillArea`:
       return _;
     default:
-      return _(_, `Unhandled size ${_}`), _;
+      return (_(_, `Unhandled size ${_}`), _);
   }
 }
 var _ = _.memo(function (_) {
@@ -134,11 +134,11 @@ var _ = _((_) => {
   _ = class extends _.Component {
     m_timer;
     constructor(_) {
-      super(_),
+      (super(_),
         (this.state = {
           bAnimate: this.props.loopDuration != `None`,
         }),
-        (this.m_timer = 0);
+        (this.m_timer = 0));
     }
     componentDidMount() {
       this.props.bParentHovered || this.SetupAnimationTimer();
@@ -177,7 +177,7 @@ var _ = _((_) => {
       this.StopAnimationTimer();
     }
     componentDidUpdate(_) {
-      this.props.loopDuration != _.loopDuration &&
+      (this.props.loopDuration != _.loopDuration &&
         (this.props.loopDuration == `None`
           ? (this.setState({
               bAnimate: !1,
@@ -200,7 +200,7 @@ var _ = _((_) => {
                 bAnimate: !0,
               }),
               this.StopAnimationTimer())
-            : this.state.bAnimate && this.SetupAnimationTimer());
+            : this.state.bAnimate && this.SetupAnimationTimer()));
     }
     render() {
       let {
@@ -240,4 +240,3 @@ var _ = _((_) => {
     }
   };
 _ = _([_], _);
-export { _, _, _, _ };

@@ -41,11 +41,11 @@ var _ = class _ {
   static sm_strSubmethod;
   static sm_strComputedLinkPrefix;
   static SetNavEventParams(_, _, _ = null, _ = null) {
-    (_.sm_strDomain = _),
+    ((_.sm_strDomain = _),
       (_.sm_strController = _),
       (_.sm_strMethod = _),
       (_.sm_strSubmethod = _),
-      (_.sm_strComputedLinkPrefix = null);
+      (_.sm_strComputedLinkPrefix = null));
   }
   static GetDefaultParams() {
     let _ = {
@@ -74,7 +74,7 @@ var _ = class _ {
       return null;
     _ = _.sm_strComputedLinkPrefix;
     let _ = _.EncodeEventComponent(_);
-    return _ && ((_ += `_` + _), _ && (_ += `_` + _)), _;
+    return (_ && ((_ += `_` + _), _ && (_ += `_` + _)), _);
   }
   static ComputeStaticLinkPrefix() {
     return _.sm_strDomain
@@ -97,4 +97,3 @@ var _ = _.createContext({});
 function _() {
   return _.useContext(_);
 }
-export { _, _, _, _, _, _, _ };

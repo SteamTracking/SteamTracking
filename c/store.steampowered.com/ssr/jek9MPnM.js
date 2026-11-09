@@ -16,26 +16,26 @@ function _(_) {
     { elemProps: _, navOptions: _, gamepadEvents: _ } = _(_),
     _ = {},
     _ = _(_);
-  _ != _.NONE && (_.layout = _),
+  (_ != _.NONE && (_.layout = _),
     _ && ((_.onClick = _.onClick || _), (_.onOKButton = _.onOKButton || _)),
     _.onOKButton &&
       _.focusable === void 0 &&
       _.focusableIfEmpty === void 0 &&
       (_.focusable = !0),
-    _ && (_.onCancelButton = _.onCancelButton || _);
+    _ && (_.onCancelButton = _.onCancelButton || _));
   let { ref: _, node: _ } = _({
       ..._,
       ..._,
     }),
     _ = _();
-  (_.className = (0, _.default)(_.className, `Panel`, _ && `Focusable`)),
-    _(_, _);
+  ((_.className = (0, _.default)(_.className, `Panel`, _ && `Focusable`)),
+    _(_, _));
   let _ = _(_),
     _ = _(_, _.ref, _);
-  (!_.focusable && !_.focusableIfEmpty) ||
+  ((!_.focusable && !_.focusableIfEmpty) ||
     (_ && _.Tree.BUseVirtualFocus()) ||
     (_.tabIndex = _.tabIndex || 0),
-    _.focusable && (_ || _.onOKButton) && (_.role ??= `button`);
+    _.focusable && (_ || _.onOKButton) && (_.role ??= `button`));
   let _ = (0, _.useContext)(_).Component;
   return (0, _.jsx)(_.Provider, {
     value: _,
@@ -53,4 +53,3 @@ function _(_) {
         }),
   });
 }
-export { _ };

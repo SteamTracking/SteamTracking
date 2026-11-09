@@ -57,4 +57,3 @@ function _(_) {
     typeof _ == `number` ? `calc( ${_}lh + 2 * var(--spacing-1) )` : void 0,
   ];
 }
-export { _ };

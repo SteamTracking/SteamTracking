@@ -1501,7 +1501,7 @@ button:focus {
   box-shadow: 0 0 10px #0e141b;
 }
 .GamepadMode .PendingGameInvite .PendingGameInviteHeader {
-  aspect-ratio: 460 / 215;
+  aspect-ratio: 460/215;
   border-radius: 2px;
   height: 60px;
 }
@@ -5178,8 +5178,7 @@ body.in_global_drag .friendlist_titlebar {
 }
 .TestGradient {
   top: 0;
-  background:
-    linear-gradient(
+  background: linear-gradient(
       170deg,
       #155c1c 0,
       #0e480c 32px,
@@ -5190,7 +5189,7 @@ body.in_global_drag .friendlist_titlebar {
       #373b42 368px 380px,
       #101214 462px
     )
-    0 0 / 100% 512px;
+    0 0/100% 512px;
   width: 224px;
   height: 512px;
   display: none;
@@ -5296,9 +5295,8 @@ body.in_global_drag .friendlist_titlebar {
   margin-top: 0;
 }
 .ChatTabsContextMenu .friend.awayOrSnooze .avatarHolder .avatarStatus {
-  -webkit-mask:
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
-    0 0 / 2px 4px repeat-y;
+  -webkit-mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    0 0/2px 4px repeat-y;
 }
 .ChatTabsContextMenu.CompactFriendsList .friend {
   height: 24px;
@@ -6213,9 +6211,8 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 .copyRemotePlayTogetherInviteURLButton {
   cursor: pointer;
   opacity: 0.8;
-  background:
-    url(../../images/webui/icon_create_rpt_invite_url.png?v=valveisgoodatcaching)
-    0 0 / contain no-repeat;
+  background: url(../../images/webui/icon_create_rpt_invite_url.png?v=valveisgoodatcaching)
+    0 0/contain no-repeat;
   border: none;
   width: 20px;
   height: 20px;
@@ -8986,9 +8983,8 @@ html.web_chat_frame .perf_timing_area {
   background-color: #59bf40;
 }
 .speaker.away .speakerStatus {
-  -webkit-mask:
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
-    0 0 / 4px 4px repeat-y;
+  -webkit-mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    0 0/4px 4px repeat-y;
   -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
     repeat-y;
   mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
@@ -10732,13 +10728,11 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 }
 .ChatTabContent .friend.awayOrSnooze .avatarHolder .avatarStatus,
 .friend.quickAccessFriend.friend.awayOrSnooze .avatarHolder .avatarStatus {
-  -webkit-mask:
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
-    0 0 / 5px 6px repeat-x;
+  -webkit-mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    0 0/5px 6px repeat-x;
   opacity: 0.75;
-  mask:
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
-    0 0 / 5px 6px repeat-x;
+  mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    0 0/5px 6px repeat-x;
 }
 .GamepadMode .ChatTabContent .friend.awayOrSnooze .avatarHolder .avatarStatus,
 .GamepadMode
@@ -11957,9 +11951,8 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 }
 .chatRoomVoiceStatus {
   opacity: 0.3;
-  background:
-    url("data:image/svg+xml,%3csvg%20fill='%23FFFFFF'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20version='1.1'%20x='0px'%20y='0px'%20viewBox='0%200%20100%20100'%20enable-background='new%200%200%20100%20100'%20xml:space='preserve'%3e%3crect%20x='47.835'%20y='13.817'%20transform='matrix(-0.7071%20-0.7071%200.7071%20-0.7071%2051.9%20113.8805)'%20width='3.4'%20height='64.749'%3e%3c/rect%3e%3cg%3e%3cpath%20d='M34.292,59.03l-2.75,2.75c0.414,1.112,0.973,2.167,1.65,3.159l2.453-2.453C34.998,61.409,34.538,60.25,34.292,59.03z'%3e%3c/path%3e%3cpath%20d='M34.074,54.582v-8.39h-3.406v10.822c0,0.311,0.031,0.615,0.052,0.922L34.074,54.582z'%3e%3c/path%3e%3cpath%20d='M64.998,57.014c0,6.913-6.936,12.537-15.461,12.537c-4.738,0-8.98-1.741-11.819-4.47l-2.389,2.389%20c3.111,3.011,7.526,5.037,12.504,5.415v7.018h-9.839c-0.586,0-1.062,0.763-1.062,1.704c0,0.939,0.476,1.702,1.062,1.702h9.926%20h3.232h9.926c0.587,0,1.062-0.763,1.062-1.702c0-0.941-0.476-1.704-1.062-1.704h-9.838v-7.018%20c9.608-0.73,17.165-7.565,17.165-15.871V46.191h-3.406V57.014z'%3e%3c/path%3e%3c/g%3e%3cg%3e%3cpath%20d='M41.999,54.029v-2.705l-3.367,3.367c0.083,1.369,0.412,2.669,0.952,3.857l2.657-2.657%20C42.088,55.294,41.999,54.672,41.999,54.029z'%3e%3c/path%3e%3cpolygon%20points='60.473,32.85%2057.073,36.25%2057.073,41.058%2060.473,37.658%20'%3e%3c/polygon%3e%3cpath%20d='M57.073,45.725v8.304c0,4.156-3.381,7.538-7.537,7.538c-2.273,0-4.31-1.016-5.693-2.612l-2.407,2.407%20c2.001,2.209,4.884,3.605,8.1,3.605c6.04,0,10.937-4.896,10.937-10.938V42.325L57.073,45.725z'%3e%3c/path%3e%3cpath%20d='M41.999,46.657V27.628c0-4.156,3.382-7.537,7.538-7.537c4.156,0,7.537,3.381,7.537,7.537v3.954l3.4-3.4v-0.554%20c0-6.04-4.896-10.937-10.937-10.937c-6.041,0-10.938,4.897-10.938,10.937v22.428L41.999,46.657z'%3e%3c/path%3e%3c/g%3e%3c/svg%3e")
-    50% / 20px 20px no-repeat;
+  background: url("data:image/svg+xml,%3csvg%20fill='%23FFFFFF'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20version='1.1'%20x='0px'%20y='0px'%20viewBox='0%200%20100%20100'%20enable-background='new%200%200%20100%20100'%20xml:space='preserve'%3e%3crect%20x='47.835'%20y='13.817'%20transform='matrix(-0.7071%20-0.7071%200.7071%20-0.7071%2051.9%20113.8805)'%20width='3.4'%20height='64.749'%3e%3c/rect%3e%3cg%3e%3cpath%20d='M34.292,59.03l-2.75,2.75c0.414,1.112,0.973,2.167,1.65,3.159l2.453-2.453C34.998,61.409,34.538,60.25,34.292,59.03z'%3e%3c/path%3e%3cpath%20d='M34.074,54.582v-8.39h-3.406v10.822c0,0.311,0.031,0.615,0.052,0.922L34.074,54.582z'%3e%3c/path%3e%3cpath%20d='M64.998,57.014c0,6.913-6.936,12.537-15.461,12.537c-4.738,0-8.98-1.741-11.819-4.47l-2.389,2.389%20c3.111,3.011,7.526,5.037,12.504,5.415v7.018h-9.839c-0.586,0-1.062,0.763-1.062,1.704c0,0.939,0.476,1.702,1.062,1.702h9.926%20h3.232h9.926c0.587,0,1.062-0.763,1.062-1.702c0-0.941-0.476-1.704-1.062-1.704h-9.838v-7.018%20c9.608-0.73,17.165-7.565,17.165-15.871V46.191h-3.406V57.014z'%3e%3c/path%3e%3c/g%3e%3cg%3e%3cpath%20d='M41.999,54.029v-2.705l-3.367,3.367c0.083,1.369,0.412,2.669,0.952,3.857l2.657-2.657%20C42.088,55.294,41.999,54.672,41.999,54.029z'%3e%3c/path%3e%3cpolygon%20points='60.473,32.85%2057.073,36.25%2057.073,41.058%2060.473,37.658%20'%3e%3c/polygon%3e%3cpath%20d='M57.073,45.725v8.304c0,4.156-3.381,7.538-7.537,7.538c-2.273,0-4.31-1.016-5.693-2.612l-2.407,2.407%20c2.001,2.209,4.884,3.605,8.1,3.605c6.04,0,10.937-4.896,10.937-10.938V42.325L57.073,45.725z'%3e%3c/path%3e%3cpath%20d='M41.999,46.657V27.628c0-4.156,3.382-7.537,7.538-7.537c4.156,0,7.537,3.381,7.537,7.537v3.954l3.4-3.4v-0.554%20c0-6.04-4.896-10.937-10.937-10.937c-6.041,0-10.938,4.897-10.938,10.937v22.428L41.999,46.657z'%3e%3c/path%3e%3c/g%3e%3c/svg%3e")
+    50%/20px 20px no-repeat;
   flex-shrink: 0;
   width: 20px;
   height: 20px;

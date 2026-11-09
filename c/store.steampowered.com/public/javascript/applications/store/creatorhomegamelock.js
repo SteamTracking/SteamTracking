@@ -10,13 +10,13 @@ function _(_) {
 }
 async function _(_, _) {
   let _ = new URLSearchParams();
-  _.clanAccountID && _.set(`clan_accountid`, String(_.clanAccountID)),
+  (_.clanAccountID && _.set(`clan_accountid`, String(_.clanAccountID)),
     _.appid && _.set(`appid`, String(_.appid)),
     _.eventGID && _.set(`event_gid`, _.eventGID),
     _.announcementGID && _.set(`announcement_gid`, _.announcementGID),
     _.set(`lang_list`, _(_)),
     _.set(`last_modified_time`, `0`),
-    _.set(`origin`, window.location.origin);
+    _.set(`origin`, window.location.origin));
   let _ = _.STORE_BASE_URL + `events/ajaxgetpartnerevent?` + _.toString(),
     _ = await fetch(_);
   if (!_._) throw Error(`${_} answered ${_.status}`);
@@ -73,4 +73,3 @@ function _(_, _) {
 function _(_, _) {
   return !!_ && !!_.is_creator_home && (_.createTime ?? 0) > _;
 }
-export { _, _, _ };

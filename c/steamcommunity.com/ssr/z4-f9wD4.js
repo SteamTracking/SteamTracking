@@ -583,11 +583,11 @@ function _(_) {
           }),
           (0, _.jsx)(_, {
             onClick: async () => {
-              await _.mutateAsync({
+              (await _.mutateAsync({
                 eNewLevel: _,
                 strNote: _,
               }),
-                _();
+                _());
             },
             disabled: _.length == 0,
             loading: _.isPending,
@@ -598,4 +598,3 @@ function _(_) {
     ],
   });
 }
-export { _, _, _, _ };

@@ -144,7 +144,7 @@ function N() {
       mutationFn: () => {
         if (O) {
           let e = O;
-          return (O = null), Promise.resolve(e);
+          return ((O = null), Promise.resolve(e));
         }
         return D
           ? Promise.resolve(e.getQueryData(A(c.LANGUAGE)) ?? h)
@@ -162,7 +162,7 @@ function F() {
   return {
     fnSetClaimState: (0, m.useCallback)(
       (t) => {
-        (D = !0),
+        ((D = !0),
           (O = t.bCanClaimNewItem
             ? {
                 bAlreadyClaimedCurrentItem: !0,
@@ -171,7 +171,7 @@ function F() {
                 ...k,
               }
             : null),
-          e.setQueryData(A(c.LANGUAGE), t);
+          e.setQueryData(A(c.LANGUAGE), t));
       },
       [e],
     ),

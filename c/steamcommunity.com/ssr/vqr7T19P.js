@@ -43,7 +43,7 @@ function _(_, _) {
   _ &&
     _.setQueryData(_(_.accountid), (_) => {
       let _ = new Set(_);
-      return _.forEach((_) => _.add(_)), _;
+      return (_.forEach((_) => _.add(_)), _);
     });
 }
 function _(_, _) {
@@ -107,7 +107,7 @@ var _ = 60,
       return `${_}_${_}`;
     }
     QueueForUpload(_) {
-      this.m_rgPendingUpload.push(_), this.ScheduleUpload();
+      (this.m_rgPendingUpload.push(_), this.ScheduleUpload());
     }
     ScheduleUpload() {
       this.m_bUploading ||
@@ -133,13 +133,13 @@ var _ = 60,
           this.m_CMInterface.GetServiceTransport(),
           _,
         );
-        (this.m_bUploading = !1), (_ = _.GetEResult() == 1);
+        ((this.m_bUploading = !1), (_ = _.GetEResult() == 1));
       } else {
         if (!_.logged_in) return;
         let _ = _.map((_) => _.toObject()),
           _ = _() + `actions/ajaxmarkpartnerevents`,
           _ = new FormData();
-        _.append(`sessionid`, _()), _.append(`request`, JSON.stringify(_));
+        (_.append(`sessionid`, _()), _.append(`request`, JSON.stringify(_)));
         try {
           _ =
             (
@@ -166,7 +166,7 @@ var _ = 60,
 _([_], _.prototype, `UploadPendingData`, null);
 var _;
 function _() {
-  return (_ ||= new _()), _;
+  return ((_ ||= new _()), _);
 }
 var _ = _.createContext(void 0);
 function _(_) {
@@ -179,4 +179,3 @@ function _(_) {
 function _() {
   return _.useContext(_) || _();
 }
-export { _, _, _ };

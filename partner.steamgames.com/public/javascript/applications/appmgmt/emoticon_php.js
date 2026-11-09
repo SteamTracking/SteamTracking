@@ -106,7 +106,7 @@ var d = 50,
       );
     }
     GetTimeReceivedNewestEmoticon() {
-      return this.UpdateEmoticonList(), this.m_rtMostRecentEmoticon;
+      return (this.UpdateEmoticonList(), this.m_rtMostRecentEmoticon);
     }
     GetTimeReceivedForStickerOrEffect() {
       return this.m_rtLastStickerOrEffect;
@@ -115,13 +115,13 @@ var d = 50,
       this.m_bInitialized || this.RequestEmoticonList();
     }
     get emoticon_list() {
-      return this.UpdateEmoticonList(), this.m_rgEmoticons;
+      return (this.UpdateEmoticonList(), this.m_rgEmoticons);
     }
     BHasEmoticon(e) {
       return this.m_setEmoticonOwned.has(e);
     }
     get flair_list() {
-      return this.UpdateEmoticonList(), this.m_rgFlairs;
+      return (this.UpdateEmoticonList(), this.m_rgFlairs);
     }
     GetStickerList() {
       return this.m_rgStickers;
@@ -150,7 +150,7 @@ var d = 50,
       let n = new Map(),
         r = /\[emoticon\]([^[]*)/g,
         i;
-      for (; (i = r.exec(e)); ) {
+      for (; (i = r.exec(e));) {
         let e = n.get(i[1]) || 0;
         n.set(i[1], e + 1);
       }
@@ -230,10 +230,10 @@ var d = 50,
       );
     }
     OnEmoticonListReceived(e) {
-      (this.m_rgFlairs = []),
+      ((this.m_rgFlairs = []),
         (this.m_rgEmoticons = []),
         (this.m_rgRecentEmoticons = void 0),
-        (this.m_rtMostRecentEmoticon = void 0);
+        (this.m_rtMostRecentEmoticon = void 0));
       let t = this.GetServerTime() - f;
       for (let n of e) {
         let e = n.name;
@@ -243,25 +243,25 @@ var d = 50,
           t && n && this.m_rgFlairs.push({ name: t[1], flairGroupID: n[1] });
         } else {
           let e = n.time_received;
-          !n.last_used && e && e > t
+          (!n.last_used && e && e > t
             ? (!this.m_rtMostRecentEmoticon ||
                 e > this.m_rtMostRecentEmoticon) &&
               (this.m_rtMostRecentEmoticon = e)
             : delete n.time_received,
-            this.m_rgEmoticons.push(n);
+            this.m_rgEmoticons.push(n));
         }
       }
-      (this.m_setEmoticonOwned = new Set(
+      ((this.m_setEmoticonOwned = new Set(
         this.m_rgEmoticons.map((e) => e.name_normalized || e.name),
       )),
         (this.m_bInitialized = !0),
-        (this.m_bEmoticonListRequested = !1);
+        (this.m_bEmoticonListRequested = !1));
     }
   };
-i([t], p.prototype, `m_bInitialized`, void 0),
+(i([t], p.prototype, `m_bInitialized`, void 0),
   i([t], p.prototype, `m_rtMostRecentEmoticon`, void 0),
   i([t], p.prototype, `m_rtLastStickerOrEffect`, void 0),
-  i([r], p.prototype, `TrackEmoticonUsage`, null);
+  i([r], p.prototype, `TrackEmoticonUsage`, null));
 var m = s(l()),
   h = class extends p {
     constructor() {
@@ -287,12 +287,12 @@ var m = s(l()),
               else {
                 let r = { name: t.substr(1, t.length - 2) },
                   i = r.name.toLowerCase();
-                i != r.name && (r.name_normalized = i),
+                (i != r.name && (r.name_normalized = i),
                   n.time_last_used && (r.last_used = n.time_last_used),
                   n.use_count && (r.use_count = n.use_count),
                   n.time_received && (r.time_received = n.time_received),
                   n.appid && (r.appid = n.appid),
-                  e.push(r);
+                  e.push(r));
               }
             }
           }

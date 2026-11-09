@@ -7,4 +7,3 @@ function _(_, _) {
       _.asset_url_format.replace("${FILENAME}", _[_])
     );
 }
-export { _ };

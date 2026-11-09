@@ -64,11 +64,11 @@ var T = class t {
     static sm_strSubmethod;
     static sm_strComputedLinkPrefix;
     static SetNavEventParams(e, n, r = null, i = null) {
-      (t.sm_strDomain = e),
+      ((t.sm_strDomain = e),
         (t.sm_strController = n),
         (t.sm_strMethod = r),
         (t.sm_strSubmethod = i),
-        (t.sm_strComputedLinkPrefix = null);
+        (t.sm_strComputedLinkPrefix = null));
     }
     static GetDefaultParams() {
       let e = { domain: t.sm_strDomain, controller: t.sm_strController };
@@ -94,7 +94,7 @@ var T = class t {
         return null;
       i = t.sm_strComputedLinkPrefix;
       let a = g.EncodeEventComponent(r);
-      return a && ((i += `_` + a), n && (i += `_` + n)), i;
+      return (a && ((i += `_` + a), n && (i += `_` + n)), i);
     }
     static ComputeStaticLinkPrefix() {
       return t.sm_strDomain
@@ -158,7 +158,8 @@ var j = (e) => {
     });
   },
   M = {};
-(M.arabic = () => c(() => import(`./saletech_arabic.js`), [], import.meta.url)),
+((M.arabic = () =>
+  c(() => import(`./saletech_arabic.js`), [], import.meta.url)),
   (M.brazilian = () =>
     c(() => import(`./saletech_brazilian.js`), [], import.meta.url)),
   (M.bulgarian = () =>
@@ -214,7 +215,7 @@ var j = (e) => {
   (M.ukrainian = () =>
     c(() => import(`./saletech_ukrainian.js`), [], import.meta.url)),
   (M.vietnamese = () =>
-    c(() => import(`./saletech_vietnamese.js`), [], import.meta.url));
+    c(() => import(`./saletech_vietnamese.js`), [], import.meta.url)));
 async function N(e) {
   if (M[e]) return await M[e]();
 }

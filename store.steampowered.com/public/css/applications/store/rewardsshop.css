@@ -343,7 +343,7 @@
 ._412b5kWi3yQ- {
   text-align: center;
   color: #efeaea;
-  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 25% / 330% 100%;
+  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 25%/330% 100%;
   border-radius: 2px;
   padding: 5px 20px;
   font-size: 18px;
@@ -2875,7 +2875,7 @@ body.yxQHh-wmkgM- {
   text-align: center;
   color: #efeaea;
   white-space: nowrap;
-  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 25% / 330% 100%;
+  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 25%/330% 100%;
   flex-direction: column;
   flex: 1;
   justify-content: center;
@@ -3834,8 +3834,7 @@ body.yxQHh-wmkgM- {
   min-width: 230px;
   top: calc(
     var(--responsive-menu-floating-height, 0px) +
-    var(--store-menu-floating-height, 0px) +
-    10px
+      var(--store-menu-floating-height, 0px) + 10px
   );
   z-index: 2;
   background: #20232e;
@@ -7491,7 +7490,7 @@ body.yxQHh-wmkgM- {
 .btITtjX9iPQ- {
   text-align: center;
   color: #efeaea;
-  background: linear-gradient(90deg, #8ac329 0%, #4a7a16 60%) 25% / 330% 100%;
+  background: linear-gradient(90deg, #8ac329 0%, #4a7a16 60%) 25%/330% 100%;
   border-radius: 2px;
   padding: 10px 20px;
   font-size: 18px;
@@ -7504,7 +7503,7 @@ body.yxQHh-wmkgM- {
 .yEbVhDS-mQE- {
   text-align: center;
   color: #efeaea;
-  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 25% / 330% 100%;
+  background: linear-gradient(90deg, #47bfff 0%, #1a44c2 60%) 25%/330% 100%;
   border-radius: 2px;
   padding: 10px 20px;
   font-size: 18px;

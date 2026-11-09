@@ -1,6 +1,6 @@
 var _ = _(_(), 1),
   _ = {};
-(_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.brazilian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.bulgarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.czech = () => _(() => import(`./chunk.js`), [], import.meta.url)),
@@ -31,7 +31,7 @@ var _ = _(_(), 1),
   (_.thai = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.turkish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.ukrainian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
-  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url));
+  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -150,8 +150,8 @@ async function _(_, _, _) {
   if (_(_)) throw new _();
   if (_.GetEResult() !== 1)
     throw (
-      (console.error(`Received error from GetGameAchievements`, _.GetEResult()),
-      Error(`Error from GetGameAchievements: ${_.GetEResult()}`))
+      console.error(`Received error from GetGameAchievements`, _.GetEResult()),
+      Error(`Error from GetGameAchievements: ${_.GetEResult()}`)
     );
   let _ = {};
   return (
@@ -221,18 +221,18 @@ async function _(_, _) {
   if (_(_)) throw new _();
   if (_.GetEResult() !== 1)
     throw (
-      (console.error(
+      console.error(
         `Received error from GetGlobalAchievementPercentages`,
         _.GetEResult(),
       ),
-      Error(`Error from GetGlobalAchievementPercentages: ${_.GetEResult()}`))
+      Error(`Error from GetGlobalAchievementPercentages: ${_.GetEResult()}`)
     );
   return {
     percentages: _.Body()
       .achievements()
       .reduce((_, _) => {
         let _ = _.internal_key();
-        return _ === void 0 || (_[_] = _.player_percent_unlocked() ?? 0.1), _;
+        return (_ === void 0 || (_[_] = _.player_percent_unlocked() ?? 0.1), _);
       }, {}),
   };
 }
@@ -319,8 +319,8 @@ async function _(_, _, _) {
   if (_(_)) throw new _();
   if (_.GetEResult() !== 1)
     throw (
-      (console.error(`Received error from GetUserAchievements`, _.GetEResult()),
-      Error(`Error from GetUserAchievements: ${_.GetEResult()}`))
+      console.error(`Received error from GetUserAchievements`, _.GetEResult()),
+      Error(`Error from GetUserAchievements: ${_.GetEResult()}`)
     );
   return _(_, _, _.Body(), _.Body()?.schema_hash() ?? 0);
 }
@@ -340,10 +340,10 @@ function _() {
   };
 }
 function _(_, _) {
-  _.total++, _ ? _.dlc++ : _.base++;
+  (_.total++, _ ? _.dlc++ : _.base++);
 }
 function _(_, _, _, _) {
-  (_.total += _), (_.rare += _), _ ? (_.dlc += _) : (_.base += _);
+  ((_.total += _), (_.rare += _), _ ? (_.dlc += _) : (_.base += _));
 }
 function _(_, _, _) {
   return (
@@ -359,7 +359,7 @@ function _(_, _, _) {
     if (!_(_, _, _)) continue;
     let _ = _(_?.percentages?.[_.internal_key]),
       _ = _?.achievements[_.internal_key]?.unlocked == 1;
-    _++, (_ += +!!_), (_ += +!!_), (_ += _ && _ ? 1 : 0);
+    (_++, (_ += +!!_), (_ += +!!_), (_ += _ && _ ? 1 : 0));
   }
   let _ = _?.groups?.[_._],
     _ = _?.is_completed == 1 || (_ !== void 0 && _ > 0 && _ == _);
@@ -387,11 +387,11 @@ function _(_, _, _) {
     if (!_(_, _)) continue;
     let _ = _(_, _, _),
       { isDlc: _, achievements: _ } = _;
-    _(_, _.total, _.rare, _), _(_, _);
+    (_(_, _.total, _.rare, _), _(_, _));
     let _ = !_.archived && _.isAchievable;
-    _(_, _ ? _.total : _.unlocked, _ ? _.rare : _.unlockedRare, _),
+    (_(_, _ ? _.total : _.unlocked, _ ? _.rare : _.unlockedRare, _),
       _(_, _.unlocked, _.unlockedRare, _),
-      (_.isAchievable || _.isCompleted) && (_(_, _), _.isCompleted && _(_, _));
+      (_.isAchievable || _.isCompleted) && (_(_, _), _.isCompleted && _(_, _)));
   }
   return {
     achievements: _,
@@ -1091,33 +1091,3 @@ function _(_) {
 function _(_) {
   return _(_);
 }
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

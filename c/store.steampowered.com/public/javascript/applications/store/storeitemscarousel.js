@@ -46,8 +46,8 @@ function _(_) {
     let _ = _.filter((_) => !_.Get().BIsStoreItemMissing(_, 0));
     if (_ && _ && !_ && _.length > 0 && _[0] == _[0]) {
       let _ = [_[0], _, ..._.slice(1)];
-      _(_), _(_), _?.(_.length);
-    } else _(_), _?.(_.length);
+      (_(_), _(_), _?.(_.length));
+    } else (_(_), _?.(_.length));
   }, [_, _, _, _, _, _]);
   let _ = _;
   return (0, _.jsx)(_, {
@@ -212,4 +212,4 @@ function _(_) {
     }),
   });
 }
-export { _ as default, _, _ };
+export { _ as default };

@@ -35,7 +35,7 @@ function _() {
     queryFn: async () => {
       let _ = await Promise.all(_.map((_) => _.fetchQuery(_(_, _)))),
         _ = new Set();
-      return _.forEach((_) => _.included_appids?.forEach((_) => _.add(_))), _;
+      return (_.forEach((_) => _.included_appids?.forEach((_) => _.add(_))), _);
     },
     enabled: _ !== void 0,
   });
@@ -60,4 +60,3 @@ function _(_) {
     )
   );
 }
-export { _, _ };

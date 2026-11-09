@@ -49,8 +49,8 @@ function I(e) {
           .writeText(r.current.value)
           .then(() => a(E(`#EventDisplay_Share_CopiedToClipboard`)))
           .catch((e) => {
-            a(E(`#EventDisplay_Share_FailedToCopyToClipboard`)),
-              console.error(`Failed to copy link to clipboard:`, e);
+            (a(E(`#EventDisplay_Share_FailedToCopyToClipboard`)),
+              console.error(`Failed to copy link to clipboard:`, e));
           });
     };
   return (0, F.jsxs)(`div`, {
@@ -104,7 +104,7 @@ function z(e) {
     v = P.useMemo(() => {
       if (!n) return ``;
       let e = new URL(n);
-      return e.searchParams.set(L, j(u)), e.href;
+      return (e.searchParams.set(L, j(u)), e.href);
     }, [u, n]),
     C = S.EREALM === O.k_ESteamRealmChina;
   return f

@@ -22,7 +22,8 @@ import { _ } from "./localization3.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./saveprices.js";
 import { _, _ } from "./localization4.js";
 var _ = {};
-(_.arabic = () => _(() => import(`./currency_arabic.js`), [], import.meta.url)),
+((_.arabic = () =>
+  _(() => import(`./currency_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
     _(() => import(`./currency_brazilian.js`), [], import.meta.url)),
   (_.bulgarian = () =>
@@ -78,7 +79,7 @@ var _ = {};
   (_.ukrainian = () =>
     _(() => import(`./currency_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./currency_vietnamese.js`), [], import.meta.url));
+    _(() => import(`./currency_vietnamese.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -404,7 +405,7 @@ function _(_) {
                   strDescription: _(`#Dialog_AreYouSure`),
                   closeModal: _,
                   onOK: async () => {
-                    _(!0), await _(), _(!1), window.location.reload();
+                    (_(!0), await _(), _(!1), window.location.reload());
                   },
                   children:
                     _ &&

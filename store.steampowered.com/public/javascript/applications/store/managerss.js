@@ -74,9 +74,9 @@ var B = e(ee()),
   we = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.gid || T(e.M()),
-        V.Message.initialize(this, t, 0, -1, [5], null);
+        V.Message.initialize(this, t, 0, -1, [5], null));
     }
     static sm_m;
     static sm_mbf;
@@ -120,7 +120,7 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -141,14 +141,14 @@ var B = e(ee()),
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNewsFeedDef`;
@@ -157,9 +157,9 @@ var B = e(ee()),
   H = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.gid || T(e.M()),
-        V.Message.initialize(this, t, 0, -1, [11], null);
+        V.Message.initialize(this, t, 0, -1, [11], null));
     }
     static sm_m;
     static sm_mbf;
@@ -202,7 +202,7 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -223,14 +223,14 @@ var B = e(ee()),
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNewsFeedPostDef`;
@@ -239,9 +239,9 @@ var B = e(ee()),
   Te = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.content || T(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null);
+        V.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -258,7 +258,7 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -279,14 +279,14 @@ var B = e(ee()),
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_ConvertHTMLToBBCode_Request`;
@@ -295,9 +295,9 @@ var B = e(ee()),
   Ee = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.converted_content || T(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null);
+        V.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -314,7 +314,7 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -335,14 +335,14 @@ var B = e(ee()),
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_ConvertHTMLToBBCode_Response`;
@@ -351,9 +351,9 @@ var B = e(ee()),
   De = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.rss_message || T(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null);
+        V.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -376,7 +376,7 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -397,14 +397,14 @@ var B = e(ee()),
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNewsPartnerEventPreview`;
@@ -413,9 +413,9 @@ var B = e(ee()),
   Oe = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.rss_url || T(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null);
+        V.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -433,7 +433,7 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -454,14 +454,14 @@ var B = e(ee()),
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_PreviewPartnerEvents_Request`;
@@ -470,9 +470,9 @@ var B = e(ee()),
   ke = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.rss_url || T(e.M()),
-        V.Message.initialize(this, t, 0, -1, [2], null);
+        V.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -490,7 +490,7 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -511,14 +511,14 @@ var B = e(ee()),
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_PreviewPartnerEvents_Response`;
@@ -527,9 +527,9 @@ var B = e(ee()),
   Ae = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.clan_account_id || T(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null);
+        V.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -545,7 +545,7 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -566,14 +566,14 @@ var B = e(ee()),
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_GetNewsFeedByRepublishClan_Request`;
@@ -582,9 +582,9 @@ var B = e(ee()),
   je = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.feeds || T(e.M()),
-        V.Message.initialize(this, t, 0, -1, [1], null);
+        V.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -598,7 +598,7 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -619,14 +619,14 @@ var B = e(ee()),
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_GetNewsFeedByRepublishClan_Response`;
@@ -635,9 +635,9 @@ var B = e(ee()),
   Me = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.post || T(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null);
+        V.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -654,7 +654,7 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -675,14 +675,14 @@ var B = e(ee()),
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_PublishPartnerEvent_Request`;
@@ -691,9 +691,9 @@ var B = e(ee()),
   Ne = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.clan_event_gid || T(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null);
+        V.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -718,7 +718,7 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -739,14 +739,14 @@ var B = e(ee()),
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_PublishPartnerEvent_Response`;
@@ -755,9 +755,9 @@ var B = e(ee()),
   Pe = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.news_feed_gid || T(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null);
+        V.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -779,7 +779,7 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -800,14 +800,14 @@ var B = e(ee()),
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_GetBatchPublishedPartnerEvent_Request`;
@@ -816,9 +816,9 @@ var B = e(ee()),
   Fe = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.clan_account_id || T(e.M()),
-        V.Message.initialize(this, t, 0, -1, [3, 4, 5], null);
+        V.Message.initialize(this, t, 0, -1, [3, 4, 5], null));
     }
     static sm_m;
     static sm_mbf;
@@ -862,7 +862,7 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= p(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -883,14 +883,14 @@ var B = e(ee()),
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new V.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_GetBatchPublishedPartnerEvent_Response`;
@@ -945,7 +945,7 @@ var W = class {
   m_eCuratorLanguage = void 0;
   m_mapURLToPosted = new Map();
   constructor(e) {
-    o(this),
+    (o(this),
       (this.m_clanAccountID = e.clanid),
       (this.m_clanSteamID = oe.InitFromClanID(
         this.m_clanAccountID,
@@ -956,7 +956,7 @@ var W = class {
       (this.m_eRSSFeedLanguage = e.rss_feed_language),
       (this.m_rtimeRSSLastChecked = e.rss_feed_last_checked),
       (this.m_nPollIntervalSeconds = e.poll_interval),
-      (this.m_eCuratorLanguage = e.curation_language);
+      (this.m_eCuratorLanguage = e.curation_language));
   }
   GetFeedLanguageHandleUnset() {
     return this.m_eRSSFeedLanguage == -1
@@ -999,9 +999,9 @@ var W = class {
         null
       );
     let t = M.Init(Oe);
-    t.Body().set_rss_url(e),
+    (t.Body().set_rss_url(e),
       t.Body().set_lang(this.GetFeedLanguageHandleUnset()),
-      t.Body().set_clan_account_id(this.GetClanAccountID());
+      t.Body().set_clan_account_id(this.GetClanAccountID()));
     let n = await U.PreviewPartnerEvents(G.Get().GetCuratorTransport(), t);
     return (
       n.GetEResult() != 1 &&
@@ -1016,14 +1016,14 @@ var W = class {
   }
   async FetchPublishedEvents(e = 100) {
     if (!this.BIsLoggedIn())
-      return console.error(`FetchPublishedEvents: User not logged in`), null;
+      return (console.error(`FetchPublishedEvents: User not logged in`), null);
     if (!this.m_strRSSGID)
       return (
         console.error(`FetchPublishedEvents: Need to create a news feed first`),
         null
       );
     let t = M.Init(Pe);
-    t.Body().set_news_feed_gid(this.m_strRSSGID), t.Body().set_amount(e);
+    (t.Body().set_news_feed_gid(this.m_strRSSGID), t.Body().set_amount(e));
     let n = await U.GetBatchPublishedPartnerEvent(
       G.Get().GetCuratorTransport(),
       t,
@@ -1060,11 +1060,11 @@ var W = class {
   }
   async CreateOrUpdateRSSNewFeed(e, t = 0) {
     let n = new FormData();
-    n.append(`sessionid`, F()),
+    (n.append(`sessionid`, F()),
       n.append(`gid`, this.m_strRSSGID),
       n.append(`lang`, `` + this.GetCuratorLanguage()),
       n.append(`rss_url`, e),
-      n.append(`polling_interval`, `` + t);
+      n.append(`polling_interval`, `` + t));
     let r =
         L.STORE_BASE_URL +
         `curator/` +
@@ -1074,9 +1074,9 @@ var W = class {
     return (
       i.data.success == 1 &&
         a(() => {
-          (this.m_strRSSGID = i.data.gid),
+          ((this.m_strRSSGID = i.data.gid),
             (this.m_strRSSFeedURL = e),
-            (this.m_nPollIntervalSeconds = t);
+            (this.m_nPollIntervalSeconds = t));
         }),
       i.data
     );
@@ -1087,7 +1087,7 @@ var W = class {
   async CheckForNewUpdate() {
     if (this.m_strRSSGID) {
       let e = new FormData();
-      e.append(`sessionid`, F()), e.append(`gid`, this.m_strRSSGID);
+      (e.append(`sessionid`, F()), e.append(`gid`, this.m_strRSSGID));
       let t =
         L.STORE_BASE_URL +
         `curator/` +
@@ -1109,7 +1109,7 @@ var W = class {
         null
       );
     let n = new H();
-    n.set_gid(e.post.gid),
+    (n.set_gid(e.post.gid),
       n.set_news_feed_gid(this.m_strRSSGID),
       n.set_title(e.post.title),
       n.set_url(e.post.url),
@@ -1123,9 +1123,9 @@ var W = class {
       n.set_recommendation_state(e.post.recommendation_state),
       n.set_received_for_free(e.post.received_for_free),
       n.set_received_compensation(e.post.received_compensation),
-      n.set_blurb(e.post.blurb);
+      n.set_blurb(e.post.blurb));
     let r = M.Init(Me);
-    r.Body().set_post(n), r.Body().set_draft(t);
+    (r.Body().set_post(n), r.Body().set_draft(t));
     let i = await U.PublishPartnerEvent(G.Get().GetCuratorTransport(), r);
     return (
       i.GetEResult() == 1
@@ -1149,13 +1149,13 @@ var W = class {
     );
   }
 };
-v([t], W.prototype, `m_strRSSFeedURL`, void 0),
+(v([t], W.prototype, `m_strRSSFeedURL`, void 0),
   v([t], W.prototype, `m_strRSSGID`, void 0),
   v([t], W.prototype, `m_rtimeRSSLastChecked`, void 0),
   v([t], W.prototype, `m_nPollIntervalSeconds`, void 0),
   v([t], W.prototype, `m_eRSSFeedLanguage`, void 0),
   v([t], W.prototype, `m_eCuratorLanguage`, void 0),
-  v([t], W.prototype, `m_mapURLToPosted`, void 0);
+  v([t], W.prototype, `m_mapURLToPosted`, void 0));
 var G = class e {
   constructor() {
     o(this);
@@ -1193,13 +1193,13 @@ var G = class e {
   }
   Init() {
     let e = se(`curatoradmin`, `application_config`);
-    this.ValidateStoreDefault(e) &&
+    (this.ValidateStoreDefault(e) &&
       ((this.m_defaultAdmin = new W(e)),
       this.m_mapClanAccountToAdmin.set(e.clanid, this.m_defaultAdmin)),
       this.ValidateWebAPI(e) &&
         (this.m_transport = ue(
           new le(L.WEBAPI_BASE_URL, e.webapi_token),
-        ).GetServiceTransport());
+        ).GetServiceTransport()));
   }
   ValidateStoreDefault(e) {
     let t = e;
@@ -1243,11 +1243,11 @@ var G = class e {
   async FlushPendingClanInfo() {
     let e = this.m_PendingClanInfoResolve,
       t = Array.from(this.m_setPendingClanInfo);
-    (this.m_PendingClanInfoPromise = void 0),
+    ((this.m_PendingClanInfoPromise = void 0),
       (this.m_PendingClanInfoResolve = void 0),
       this.m_setPendingClanInfo.clear(),
       await this.LoadBatchedClanRSSAdminInfo(t),
-      e();
+      e());
   }
   EnsureClanInfoLoaded(e) {
     let t = e.filter(
@@ -1265,9 +1265,9 @@ var G = class e {
   async LoadBatchedClanRSSAdminInfo(e) {
     this.m_cClanInfoRequestsInFlight++;
     let t = e.filter((e) => !this.m_mapClanAccountToAdmin.has(e));
-    for (; t.length > 0; ) {
+    for (; t.length > 0;) {
       let n = Math.min(50, t.length);
-      t.slice(0, n), (t = t.slice(n));
+      (t.slice(0, n), (t = t.slice(n)));
       try {
         let t = L.STORE_BASE_URL + `events_admin/ajaxgetrssadmininfo`,
           n = { clanids: e },
@@ -1280,12 +1280,12 @@ var G = class e {
           Array.isArray(r.data.rss_admin_infos)
         )
           a(() => {
-            r.data.rss_admin_infos.forEach((e) => {
+            (r.data.rss_admin_infos.forEach((e) => {
               this.m_mapClanAccountToAdmin.set(e.clanid, new W(e));
             }),
               r.data.rss_event_stats.forEach((e) => {
                 this.m_mapClanToEventRSSStats.set(e.clan_account_id, e);
-              });
+              }));
           });
         else {
           let e = _(r.data || {});
@@ -1305,8 +1305,8 @@ var G = class e {
     this.m_cClanInfoRequestsInFlight--;
   }
 };
-v([t.shallow], G.prototype, `m_mapClanAccountToAdmin`, void 0),
-  v([t.shallow], G.prototype, `m_mapClanToEventRSSStats`, void 0);
+(v([t.shallow], G.prototype, `m_mapClanAccountToAdmin`, void 0),
+  v([t.shallow], G.prototype, `m_mapClanToEventRSSStats`, void 0));
 var Ie = class e {
     static s_CuratorStore;
     m_mapClanToRecommendation = new Map();
@@ -1382,22 +1382,22 @@ var Ie = class e {
       this.setState({ strRssURL: e.target.value });
     }
     OnCreateOrSaveFeed(e) {
-      e.preventDefault(),
+      (e.preventDefault(),
         y(
           (0, J.jsx)($, {
             strRSSUrl: this.state.strRssURL,
             admin: this.m_Admin,
           }),
           m(e),
-        );
+        ));
     }
     OnRevert(e) {
-      e.preventDefault(),
-        this.setState({ strRssURL: this.m_Admin.GetRSSUrl() });
+      (e.preventDefault(),
+        this.setState({ strRssURL: this.m_Admin.GetRSSUrl() }));
     }
     render() {
       let e = this.state.strRssURL === this.m_Admin.GetRSSUrl();
-      if (window.Prototype !== void 0) return window.location.reload(), null;
+      if (window.Prototype !== void 0) return (window.location.reload(), null);
       let t = be(ge(this.m_Admin.GetFeedLanguageHandleUnset())),
         n = G.Get().GetDefaultAdmin();
       return (0, J.jsxs)(`div`, {
@@ -1509,10 +1509,10 @@ var Ie = class e {
       });
     }
   };
-v([x], Y.prototype, `OnChangeActualRSSURL`, null),
+(v([x], Y.prototype, `OnChangeActualRSSURL`, null),
   v([x], Y.prototype, `OnCreateOrSaveFeed`, null),
   v([x], Y.prototype, `OnRevert`, null),
-  (Y = v([s], Y));
+  (Y = v([s], Y)));
 var Xe = Y,
   X = class extends K.Component {
     state = { strParseRssURL: this.props.strRssURL, bLoadingPreview: !1 };
@@ -1534,7 +1534,7 @@ var Xe = Y,
         t = [];
       if (this.state.previews) {
         let n = this.state.previews;
-        (n = n.sort((t, n) => {
+        ((n = n.sort((t, n) => {
           let r = e.MapArticleURLToClanEventGID(t.post.url),
             i = e.MapArticleURLToClanEventGID(n.post.url),
             a = r ? d.GetClanEventModel(r) : null,
@@ -1560,7 +1560,7 @@ var Xe = Y,
                 `id: ` + n.unique_id,
               ),
             );
-          });
+          }));
       }
       return t;
     }
@@ -1592,11 +1592,11 @@ var Xe = Y,
             if (
               (n.results.forEach((n) => {
                 let i = e.MapArticleURLToClanEventGID(n.post.url);
-                i && t.push(i),
+                (i && t.push(i),
                   n.post.appids &&
                     n.post.appids.length === 1 &&
                     n.post.recommendation_state !== 0 &&
-                    r.push(n.post.appids[0]);
+                    r.push(n.post.appids[0]));
               }),
               t.length > 0 &&
                 (await d.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
@@ -1676,9 +1676,9 @@ var Xe = Y,
       });
     }
   };
-v([x], X.prototype, `GetRSSPreviewURL`, null),
+(v([x], X.prototype, `GetRSSPreviewURL`, null),
   v([x], X.prototype, `OnLoadPreview`, null),
-  (X = v([s], X));
+  (X = v([s], X)));
 var Z = class extends K.Component {
   state = {};
   OnToggleChannelAutomation(e) {
@@ -1708,7 +1708,7 @@ var Z = class extends K.Component {
       .finally(() => this.setState({ strReasonWaiting: void 0 }));
   }
   async OnQueueScan(e) {
-    this.setState({ strReasonWaiting: C(`#CuratorAdmin_RSSFeed_scannow`) }),
+    (this.setState({ strReasonWaiting: C(`#CuratorAdmin_RSSFeed_scannow`) }),
       this.props.admin
         .CheckForNewUpdate()
         .then(() =>
@@ -1729,7 +1729,7 @@ var Z = class extends K.Component {
             m(e),
           ),
         )
-        .finally(() => this.setState({ strReasonWaiting: void 0 }));
+        .finally(() => this.setState({ strReasonWaiting: void 0 })));
   }
   render() {
     return this.props.admin.BHasSavedRSSURL()
@@ -1775,9 +1775,9 @@ var Z = class extends K.Component {
       : null;
   }
 };
-v([x], Z.prototype, `OnToggleChannelAutomation`, null),
+(v([x], Z.prototype, `OnToggleChannelAutomation`, null),
   v([x], Z.prototype, `OnQueueScan`, null),
-  (Z = v([s], Z));
+  (Z = v([s], Z)));
 var Q = class extends K.Component {
   state = {
     clan_event_gid: this.props.admin.MapArticleURLToClanEventGID(
@@ -1794,14 +1794,14 @@ var Q = class extends K.Component {
     if (this.state.clan_event_gid) {
       let e = this.props.admin.GetClanSteamID(),
         t = d.GetClanEventModel(this.state.clan_event_gid);
-      (t ||= await d.LoadHiddenPartnerEvent(e, this.state.clan_event_gid)),
-        this.setState({ bLoadingPartnerEvent: !1, existingEventModel: t });
+      ((t ||= await d.LoadHiddenPartnerEvent(e, this.state.clan_event_gid)),
+        this.setState({ bLoadingPartnerEvent: !1, existingEventModel: t }));
     }
   }
   OnOpenPreviewAsPartnerEvent(e) {
     let { newsData: t, clanSteamID: n } = this.props,
       r = new c();
-    (r.GID = `PreviewPartnerEventRow_0`),
+    ((r.GID = `PreviewPartnerEventRow_0`),
       (r.clanSteamID = n),
       (r.postTime = Date.now() / 1e3),
       (r.startTime = Date.now() / 1e3),
@@ -1812,9 +1812,9 @@ var Q = class extends K.Component {
       r.name.set(0, t.title),
       r.description.set(0, t.desc),
       this.ValidateJSONDefault(t.jsondata) && (r.jsondata = t.jsondata),
-      r.jsondata.read_more_link || (r.jsondata.read_more_link = t.unique_id);
+      r.jsondata.read_more_link || (r.jsondata.read_more_link = t.unique_id));
     let i = this.props.admin.GetFeedLanguageHandleUnset();
-    !r.jsondata.localized_summary &&
+    (!r.jsondata.localized_summary &&
       t.post.event_summary &&
       ((r.jsondata.localized_summary = ae(
         r.jsondata.localized_summary,
@@ -1832,18 +1832,18 @@ var Q = class extends K.Component {
         )),
         (r.jsondata.localized_subtitle[0] = t.post.event_subtitle),
         i != 0 && (r.jsondata.localized_subtitle[i] = t.post.event_subtitle)),
-      this.ShowModalEvent(r);
+      this.ShowModalEvent(r));
   }
   OnViewEvent() {
     this.ShowModalEvent(d.GetClanEventModel(this.state.clan_event_gid));
   }
   ShowModalEvent(e) {
     let t = document.getElementById(`curator_header_area_ctn_id`);
-    t &&
+    (t &&
       (e
         ? t.classList.add(`curator_header_area_ctn_hideme`)
         : t.classList.remove(`curator_header_area_ctn_hideme`)),
-      this.setState({ eventModelForPreviewNow: e });
+      this.setState({ eventModelForPreviewNow: e }));
   }
   ValidateJSONDefault(e) {
     let t = e;
@@ -2038,7 +2038,7 @@ var Q = class extends K.Component {
     });
   }
 };
-v([x], Q.prototype, `DoPartnerEventLoad`, null),
+(v([x], Q.prototype, `DoPartnerEventLoad`, null),
   v([x], Q.prototype, `OnOpenPreviewAsPartnerEvent`, null),
   v([x], Q.prototype, `OnViewEvent`, null),
   v([x], Q.prototype, `OnPostNewsEvent`, null),
@@ -2046,7 +2046,7 @@ v([x], Q.prototype, `DoPartnerEventLoad`, null),
   v([x], Q.prototype, `HideModalEvent`, null),
   v([x], Q.prototype, `OnClanEventCreateSuccess`, null),
   v([x], Q.prototype, `OnShowRawRSS`, null),
-  (Q = v([s], Q));
+  (Q = v([s], Q)));
 var $ = class e extends K.Component {
   state = {
     initialState: e.DetermineStartState(this.props),
@@ -2294,12 +2294,12 @@ var $ = class e extends K.Component {
     }
   }
 };
-v([x], $.prototype, `OnCreateNewsFeed`, null),
+(v([x], $.prototype, `OnCreateNewsFeed`, null),
   v([x], $.prototype, `DoCreateNewsFeed`, null),
   v([x], $.prototype, `OnCreatePost`, null),
   v([x], $.prototype, `DoCreatePost`, null),
   v([x], $.prototype, `OnChangeDraftMode`, null),
   v([x], $.prototype, `OnChangePermissionsCreateFeed`, null),
   v([x], $.prototype, `OnChangeConductCreateFeed`, null),
-  v([x], $.prototype, `GetStrTitle`, null);
+  v([x], $.prototype, `GetStrTitle`, null));
 export { Xe as n, G as r, X as t };

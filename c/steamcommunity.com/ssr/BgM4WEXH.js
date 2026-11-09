@@ -2,7 +2,7 @@ var _ = _(_(), 1);
 function _(_, _, _) {
   let _ = Array.from(_),
     [_] = _.splice(_, 1);
-  return _.splice(_, 0, _), _;
+  return (_.splice(_, 0, _), _);
 }
 function _(_) {
   if (_?.transform) {
@@ -44,11 +44,11 @@ function _(_) {
         _ &&
         _ &&
         ((_) => {
-          _({
+          (_({
             basis: _,
             names: _,
           }),
-            _(_);
+            _(_));
         }),
       [_, _],
     ),
@@ -312,7 +312,7 @@ function _(_) {
             marginBottom: -8,
           },
           ref: (_) => {
-            _.innerRef(_), (_.current = _);
+            (_.innerRef(_), (_.current = _));
           },
           ..._.droppableProps,
           children: (0, _.jsx)(_, {

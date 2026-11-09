@@ -80,10 +80,10 @@ var _ = _(_()),
         })
         .catch((_) => {
           let _ = _(_);
-          console.error(`EventInfiniteScrollModal failed ` + _.strErrorMsg, _),
+          (console.error(`EventInfiniteScrollModal failed ` + _.strErrorMsg, _),
             this.setState({
               bLoading: !1,
-            });
+            }));
         });
     }
     async HandleReadEvent() {
@@ -150,4 +150,3 @@ var _ = _(_()),
     }
   };
 _ = _([_], _);
-export { _ };

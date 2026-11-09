@@ -24,7 +24,7 @@ var _ = _(_(), 1),
     m_rgOnUnhandledButton = [];
     m_rgGlobalButtonHandlers = [];
     constructor(_, _, _, _, _) {
-      (this.m_Controller = _),
+      ((this.m_Controller = _),
         (this.m_context = _),
         (this.m_ID = _),
         (this.m_ParentNavTree = _),
@@ -32,7 +32,7 @@ var _ = _(_(), 1),
         this.m_Root.SetProperties({
           layout: _.COLUMN,
         }),
-        (this.m_Properties = _);
+        (this.m_Properties = _));
     }
     get id() {
       return this.m_ID;
@@ -78,7 +78,7 @@ var _ = _(_(), 1),
       return new _(this, _, _);
     }
     RegisterNavigationItem(_, _) {
-      return _.OnMount(_), () => _.OnUnmount();
+      return (_.OnMount(_), () => _.OnUnmount());
     }
     OnChildActivated(_) {
       this.m_valueIsMounted.Value &&
@@ -114,15 +114,15 @@ var _ = _(_(), 1),
       this.m_onActiveWithinWindowChangedCallbacks.Dispatch();
     }
     OnActivate(_) {
-      (this.m_tsLastActivated = performance.now()),
+      ((this.m_tsLastActivated = performance.now()),
         this.m_onActivateCallbacks.Dispatch(this, _),
-        this.m_onActiveFocusStateChangedCallbacks.Dispatch(!0, this);
+        this.m_onActiveFocusStateChangedCallbacks.Dispatch(!0, this));
       for (let _ = this.m_lastFocusNode; _; _ = _.Parent) _.SetFocusWithin(!0);
     }
     OnDeactivate(_) {
-      this.m_onDeactivateCallbacks.Dispatch(this, _),
+      (this.m_onDeactivateCallbacks.Dispatch(this, _),
         this.m_onActiveFocusStateChangedCallbacks.Dispatch(!1, this),
-        (this.m_bWasActiveForLastFocusChange = !1);
+        (this.m_bWasActiveForLastFocusChange = !1));
       for (let _ = this.m_lastFocusNode; _; _ = _.Parent) _.SetFocusWithin(!1);
     }
     OnContextActiveStateChanged(_) {
@@ -133,11 +133,11 @@ var _ = _(_(), 1),
     }
     TakeFocus(_, _ = !1) {
       let _ = !1;
-      _
+      (_
         ? (_ = this.Root.BVisibleChildTakeFocus(_))
         : this.m_lastFocusNode && (_ = this.m_lastFocusNode.BTakeFocus(_)),
         (_ ||= this.Root.BTakeFocus(_)),
-        _ || this.TransferFocus(_, this.Root);
+        _ || this.TransferFocus(_, this.Root));
     }
     Activate(_ = !1) {
       this.m_Controller.OnGamepadNavigationTreeActivated(
@@ -190,7 +190,8 @@ var _ = _(_(), 1),
     MountNavTree(_) {
       this.m_window = _;
       let _ = this.m_Root.Element;
-      (_.__nav_tree = this), _.__nav_wrapper && _.__nav_wrapper.BindTree(this);
+      ((_.__nav_tree = this),
+        _.__nav_wrapper && _.__nav_wrapper.BindTree(this));
       let _ = new _();
       return (
         this.m_valueIsMounted.Set(!0),
@@ -239,8 +240,8 @@ var _ = _(_(), 1),
         this.m_rgGlobalButtonHandlers.push(_),
         this.UpdateRootActionDescriptionMap(),
         () => {
-          _(this.m_rgGlobalButtonHandlers, _),
-            this.UpdateRootActionDescriptionMap();
+          (_(this.m_rgGlobalButtonHandlers, _),
+            this.UpdateRootActionDescriptionMap());
         }
       );
     }
@@ -291,17 +292,17 @@ var _ = _(_(), 1),
         this.m_rgChildNavTrees.push(_),
         this.OnChildTreesChangedCallbacks.Dispatch(`add`, _),
         () => {
-          _(this.m_rgChildNavTrees, _),
-            this.OnChildTreesChangedCallbacks.Dispatch(`remove`, _);
+          (_(this.m_rgChildNavTrees, _),
+            this.OnChildTreesChangedCallbacks.Dispatch(`remove`, _));
         }
       );
     }
     TransferFocus(_, _, _, _) {
-      (_ ??= _.INVALID),
+      ((_ ??= _.INVALID),
         (_ ??= !1),
         this.m_Controller.BatchedUpdate(() =>
           this.TransferFocusInternal(_, _, _, _),
-        );
+        ));
     }
     TransferFocusInternal(_, _, _, _) {
       let _ = _(_),
@@ -328,7 +329,7 @@ var _ = _(_(), 1),
         for (let _ = _; _ && _ != _; _ = _.Parent) _.SetFocusWithin(!0);
       }
       let _ = this.m_context.OnFocusChangeStart(_, this, _, _);
-      _ && _.SetDOMFocusAndScroll(_, _, _, _),
+      (_ && _.SetDOMFocusAndScroll(_, _, _, _),
         _ &&
           (_(_.Element, `vgp_onblur`, _),
           _.m_FocusRing &&
@@ -348,24 +349,24 @@ var _ = _(_(), 1),
             ? this.m_lastFocusNodeYMovement.SetNode(_?.Element)
             : (this.m_lastFocusNodeXMovement.Reset(),
               this.m_lastFocusNodeYMovement.Reset()),
-        this.m_context.OnFocusChangeComplete(_);
+        this.m_context.OnFocusChangeComplete(_));
     }
   };
 function _(_, _) {
   if (!_ || !_) return null;
   let _ = _,
     _ = _;
-  for (; _.GetDepth() > _.GetDepth() && _.Parent; ) _ = _.Parent;
-  for (; _.GetDepth() > _.GetDepth() && _.Parent; ) _ = _.Parent;
-  for (; _ != _ && _ && _; ) (_ = _.Parent), (_ = _.Parent);
+  for (; _.GetDepth() > _.GetDepth() && _.Parent;) _ = _.Parent;
+  for (; _.GetDepth() > _.GetDepth() && _.Parent;) _ = _.Parent;
+  for (; _ != _ && _ && _;) ((_ = _.Parent), (_ = _.Parent));
   return _;
 }
 var _ = class {
     m_element;
     m_rect;
     SetNode(_) {
-      (this.m_element = _),
-        (this.m_rect = _ ? _.getBoundingClientRect() : void 0);
+      ((this.m_element = _),
+        (this.m_rect = _ ? _.getBoundingClientRect() : void 0));
     }
     Reset() {
       this.SetNode(void 0);
@@ -394,7 +395,7 @@ var _ = class {
           !this.m_interval &&
             !this.m_bSuppressed &&
             this.m_schExecuteQueuedFocus.Schedule(1, () => {
-              (this.m_interval = void 0), this.ExecuteQueuedFocus();
+              ((this.m_interval = void 0), this.ExecuteQueuedFocus());
             }))
         : (this.m_target = void 0);
     }
@@ -405,10 +406,12 @@ var _ = class {
       return this.m_target && this.m_target.node == _;
     }
     SuppressFocus() {
-      (this.m_bSuppressed = !0), this.ClearInterval();
+      ((this.m_bSuppressed = !0), this.ClearInterval());
     }
     Reset() {
-      (this.m_bSuppressed = !1), (this.m_target = void 0), this.ClearInterval();
+      ((this.m_bSuppressed = !1),
+        (this.m_target = void 0),
+        this.ClearInterval());
     }
     ClearInterval() {
       this.m_schExecuteQueuedFocus.Cancel();
@@ -416,14 +419,14 @@ var _ = class {
     ExecuteQueuedFocus() {
       if (((this.m_bSuppressed = !1), this.m_target)) {
         let { node: _, bFocusDescendant: _ } = this.m_target;
-        (this.m_target = void 0),
+        ((this.m_target = void 0),
           _(
             `DeferredFocus in ${this.m_tree._} - focusing ${_ ? `descendant of` : `node`} ${_.NavKey}`,
           ),
           _
             ? _.BChildTakeFocus(_.AUTOFOCUS) ||
               this.m_tree.TransferFocus(_.AUTOFOCUS, _)
-            : _.BTakeFocus(_.AUTOFOCUS) || this.m_tree.TakeFocus(_.AUTOFOCUS);
+            : _.BTakeFocus(_.AUTOFOCUS) || this.m_tree.TakeFocus(_.AUTOFOCUS));
       }
     }
   },
@@ -446,11 +449,11 @@ var _ = class {
     m_bVR = !1;
     m_fnGetNavTreeToActivateOverride;
     constructor(_, _, _, _) {
-      (this.m_controller = _),
+      ((this.m_controller = _),
         (this.m_rootWindow = _),
         (this.m_activeWindow = _),
         (this.m_bIsGamepadInputSuppressed = _),
-        (this.m_bVR = _);
+        (this.m_bVR = _));
     }
     get RootWindow() {
       return this.m_rootWindow;
@@ -491,14 +494,14 @@ var _ = class {
           return;
         }
         let _ = this.m_valueIsActive.Value != _;
-        _
+        (_
           ? ((this.m_activeWindow = _),
             (this.m_activeBrowserView = _),
             this.m_controller.OnContextActivated(this))
           : ((this.m_activeBrowserView = void 0),
             this.m_controller.OnContextDeactivated(this, !1)),
           this.m_valueIsActive.Set(_),
-          _ && this.m_LastActiveFocusNavTree?.OnContextActiveStateChanged(_);
+          _ && this.m_LastActiveFocusNavTree?.OnContextActiveStateChanged(_));
         let _ = this.m_LastActiveFocusNavTree;
         if (_ && _ === void 0 && _?.Window == (_ ?? this.m_rootWindow)) {
           let _ = _?.GetLastFocusedNode()?.Element,
@@ -543,8 +546,8 @@ var _ = class {
           );
     }
     OnDeactivateBrowserView(_, _) {
-      _(`${this.LogName(_)} Browser View "${_}" deactivated in context`),
-        this.m_activeBrowserView == _ && this.SetActive(!1, _, _);
+      (_(`${this.LogName(_)} Browser View "${_}" deactivated in context`),
+        this.m_activeBrowserView == _ && this.SetActive(!1, _, _));
     }
     SetGamepadInputSuppressed(_) {
       this.m_bIsGamepadInputSuppressed = _;
@@ -592,19 +595,19 @@ var _ = class {
         return;
       }
       let _ = this.m_LastActiveNavTree;
-      _ && _(this.m_rgGamepadNavigationTrees, _),
-        (_ ||= this.FindNavTreeToActivate());
+      (_ && _(this.m_rgGamepadNavigationTrees, _),
+        (_ ||= this.FindNavTreeToActivate()));
       let _ = this.m_LastActiveFocusNavTree == _;
-      _ && _(this.m_rgGamepadNavigationTrees, _),
+      (_ && _(this.m_rgGamepadNavigationTrees, _),
         (this.m_LastActiveNavTree = _),
-        (_ && _.BUseVirtualFocus()) || (this.m_LastActiveFocusNavTree = _);
+        (_ && _.BUseVirtualFocus()) || (this.m_LastActiveFocusNavTree = _));
       let _ = [],
         _ = _?.TopWindow;
       if (_ && _) {
         let _ = this.m_mapLastActiveNavTreesByWindow.get(_);
         _ || ((_ = {}), this.m_mapLastActiveNavTreesByWindow.set(_, _));
         let _ = [_.tree, _.treeFocus];
-        (_.tree = _), _.BUseVirtualFocus() || (_.treeFocus = _);
+        ((_.tree = _), _.BUseVirtualFocus() || (_.treeFocus = _));
         for (let _ of _)
           _ &&
             _ != _ &&
@@ -614,7 +617,7 @@ var _ = class {
             !_.includes(_) &&
             _.push(_);
       }
-      _(
+      (_(
         `${this.LogName(_?.Window)} Move from nav tree ${_?._} to nav tree ${_?._} ${_ ? `taking focus` : `no focus`}`,
       ),
         _ && this.m_rgGamepadNavigationTrees.push(_),
@@ -626,7 +629,7 @@ var _ = class {
             _.DeferredFocus.RequestFocus(_.Root),
           this.m_NavTreeActivatedOrReactivatedCallbacks.Dispatch(_)),
         _ && _ != this.m_LastActiveFocusNavTree && _.OnDeactivate(_),
-        _ && !_ && _.OnActivate(_);
+        _ && !_ && _.OnActivate(_));
       for (let _ of _) _.OnActiveWithinWindowChanged();
     }
     BIsLastActiveNavTreeInWindow(_) {
@@ -635,26 +638,26 @@ var _ = class {
       return !!_ && (_.tree == _ || _.treeFocus == _);
     }
     BlurNavTree(_) {
-      this.m_LastActiveNavTree == _ && this.SetActiveNavTree(void 0, !0),
+      (this.m_LastActiveNavTree == _ && this.SetActiveNavTree(void 0, !0),
         _(this.m_rgGamepadNavigationTrees, _),
-        this.m_rgGamepadNavigationTrees.unshift(_);
+        this.m_rgGamepadNavigationTrees.unshift(_));
     }
     async UnregisterGamepadNavigationTree(_) {
-      _(this.m_rgGamepadNavigationTrees, _),
+      (_(this.m_rgGamepadNavigationTrees, _),
         _(
           `(${this.m_rootWindow.name}) Unregister tree ${_?._} ${this.m_LastActiveFocusNavTree == _ ? `(was active)` : `(inactive)`}`,
         ),
-        _.SetIsEnabled(!1);
+        _.SetIsEnabled(!1));
       let _ = _.TopWindow,
         _ = _ && this.m_mapLastActiveNavTreesByWindow.get(_);
-      _?.tree == _ && (_.tree = void 0),
+      (_?.tree == _ && (_.tree = void 0),
         _?.treeFocus == _ && (_.treeFocus = void 0),
         this.m_LastActiveNavTree == _ &&
           this.m_bMounted &&
           (await this.m_schDeferredActivate.AsyncSchedule(1, () => {
             (this.m_LastActiveNavTree && this.m_LastActiveNavTree != _) ||
               this.SetActiveNavTree(void 0, !0);
-          }));
+          })));
     }
     get FocusChangedCallbacks() {
       return this.m_FocusChangedCallbacks;
@@ -754,7 +757,7 @@ var _ = class {
     );
   }
   DestroyContext(_) {
-    _(this.m_rgAllContexts, _), this.m_ContextSetChangedCallbacks.Dispatch();
+    (_(this.m_rgAllContexts, _), this.m_ContextSetChangedCallbacks.Dispatch());
   }
   GetDefaultContext() {
     return (
@@ -782,11 +785,11 @@ var _ = class {
       for (let _ of this.m_rgAllContexts) {
         let _ = _.FindNavTreeInFocusedWindow();
         if (_ && this.BCanActivateContext(_)) {
-          _(
+          (_(
             `${_.LogName(_.Window)} Found a focused window; setting this context as active.`,
           ),
             (this.m_ActiveContext = _),
-            this.m_ActiveContext.OnActivate(_.Window);
+            this.m_ActiveContext.OnActivate(_.Window));
           break;
         }
       }
@@ -806,7 +809,7 @@ var _ = class {
     );
   }
   SetShowDebugFocusRing(_) {
-    this.m_bShowDebugFocusRing.Set(_), _(_);
+    (this.m_bShowDebugFocusRing.Set(_), _(_));
   }
   GetShowDebugFocusRing() {
     return this.m_bShowDebugFocusRing;
@@ -859,8 +862,8 @@ var _ = class {
         _.Root.Element &&
         ((_ = _.Root.Element), (_ = _));
     }
-    this.OnButtonDown(_, _ ?? _.GAMEPAD, -1, void 0, void 0, void 0, _, _, !0),
-      this.OnButtonUp(_, _ ?? _.GAMEPAD, -1, void 0, void 0, void 0, _, _, !0);
+    (this.OnButtonDown(_, _ ?? _.GAMEPAD, -1, void 0, void 0, void 0, _, _, !0),
+      this.OnButtonUp(_, _ ?? _.GAMEPAD, -1, void 0, void 0, void 0, _, _, !0));
   }
   DispatchVirtualGamepad(_, _) {
     switch (_) {
@@ -951,7 +954,7 @@ var _ = class {
     );
     let _ = _,
       _ = _;
-    (_ == null || _ == null) && ([_, _] = this.GetEventTarget(_, _, _)),
+    ((_ == null || _ == null) && ([_, _] = this.GetEventTarget(_, _, _)),
       _?.BIsGamepadInputSuppressed() && !_
         ? _(
             `Suppressing ${_[_]} input on element ${_?.className} because tree ${_?.m_LastActiveNavTree?._} has it disabled`,
@@ -964,7 +967,7 @@ var _ = class {
               source: _,
               is_repeat: _,
             }),
-          ));
+          )));
   }
   OnButtonDown(_, _, _, _, _, _, _, _, _) {
     this.OnButtonActionInternal(!0, _, _, _, _, _, _, _, _, _);
@@ -1011,7 +1014,7 @@ var _ = class {
   }
   OnGamepadNavigationTreeFocused(_, _, _ = !1) {
     let _ = _.WindowContext;
-    _ != this.m_ActiveContext &&
+    (_ != this.m_ActiveContext &&
       _(`(${_.LogName(_.Window)}) Focus event in inactive window`),
       _ != _.m_LastActiveFocusNavTree &&
         _ != _.m_LastActiveNavTree &&
@@ -1027,7 +1030,7 @@ var _ = class {
               _.Activate())
           : _(
               `There was a focus event in ${_._}, but the active nav tree is ${_.m_LastActiveFocusNavTree?._} so it is being ignored.  Source: ${_ && _[_]}.`,
-            ));
+            )));
   }
   BlurNavTree(_) {
     _.WindowContext.BlurNavTree(_);
@@ -1081,13 +1084,13 @@ var _ = class {
     _ && _.TakeFocus(_.APPLICATION);
   }
   OnContextActivated(_) {
-    (this.m_ActiveContext = _), (this.m_LastActiveContext = _);
+    ((this.m_ActiveContext = _), (this.m_LastActiveContext = _));
   }
   OnContextDeactivated(_, _) {
-    _ &&
+    (_ &&
       (this.m_LastActiveContext == _ && (this.m_LastActiveContext = void 0),
       this.DestroyContext(_)),
-      this.m_ActiveContext == _ && (this.m_ActiveContext = void 0);
+      this.m_ActiveContext == _ && (this.m_ActiveContext = void 0));
   }
   BIsRestoringHistory() {
     return this.m_bRestoringHistory;
@@ -1101,9 +1104,9 @@ var _ = class {
     }
   }
 };
-_([_], _.prototype, `OnButtonDown`, null),
+(_([_], _.prototype, `OnButtonDown`, null),
   _([_], _.prototype, `OnButtonUp`, null),
-  _([_], _.prototype, `OnNavigationTypeChange`, null);
+  _([_], _.prototype, `OnNavigationTypeChange`, null));
 function _(_) {
   if (!_(_)) return !1;
   let _ = _.tagName,
@@ -1153,7 +1156,7 @@ var _ = `nlTg10o51PM-`,
   _ = `p7dHTFbUaGA-`,
   _ = `PjCIRmdNpcU-`,
   _ = {};
-(_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.brazilian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.bulgarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.czech = () => _(() => import(`./chunk.js`), [], import.meta.url)),
@@ -1184,7 +1187,7 @@ var _ = `nlTg10o51PM-`,
   (_.thai = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.turkish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.ukrainian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
-  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url));
+  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -1192,7 +1195,7 @@ var _ = _(_);
 async function _(_) {
   let _ = _.STORE_BASE_URL + `account/ajaxsetcookiepreferences`,
     _ = new FormData();
-  _.set(`bAllow`, _.toString()), _.set(`sessionId`, _(_));
+  (_.set(`bAllow`, _.toString()), _.set(`sessionId`, _(_)));
   let _ = await fetch(_, {
     method: `POST`,
     credentials: `include`,
@@ -1204,12 +1207,12 @@ async function _(_) {
       _.transfer_params &&
       _.transfer_urls.forEach(async (_) => {
         let _ = new FormData();
-        _.set(`transfer_params`, _.transfer_params),
+        (_.set(`transfer_params`, _.transfer_params),
           fetch(_, {
             method: `POST`,
             credentials: `include`,
             body: _,
-          });
+          }));
       });
   }
 }
@@ -1255,14 +1258,14 @@ function _() {
             (0, _.jsx)(`button`, {
               className: _,
               onClick: async () => {
-                await _(1), _.current?.close();
+                (await _(1), _.current?.close());
               },
               children: _.Localize(`#CookiePrefPopup_AcceptAll`),
             }),
             (0, _.jsx)(`button`, {
               className: _,
               onClick: async () => {
-                await _(0), _.current?.close();
+                (await _(0), _.current?.close());
               },
               children: _.Localize(`#CookiePrefPopup_RejectAll`),
             }),
@@ -1334,7 +1337,8 @@ var _ = class {
   m_postWindow;
   m_fnCallback = void 0;
   constructor(_) {
-    (this.m_postWindow = _), window.addEventListener(`message`, this.OnMessage);
+    ((this.m_postWindow = _),
+      window.addEventListener(`message`, this.OnMessage));
   }
   RegisterForMessage(_) {
     this.m_fnCallback = _;
@@ -1364,9 +1368,9 @@ var _ = class {
   m_bIsGamepadInputExternallyControlled = !1;
   constructor(_) {
     if (((this.m_NavigationController = _), _()))
-      (this.m_bIsGamepadInputExternallyControlled = !0),
+      ((this.m_bIsGamepadInputExternallyControlled = !0),
         (this.m_postMessage = new _()),
-        this.m_NavigationController.UpdateSourceToGamepad();
+        this.m_NavigationController.UpdateSourceToGamepad());
     else {
       let _ = window.top;
       _ && _ != window.self
@@ -1375,13 +1379,13 @@ var _ = class {
         : ((this.m_bIsGamepadInputExternallyControlled = !1),
           (this.m_postMessage = new _()));
     }
-    this.m_postMessage.RegisterForMessage(this.OnMessage),
+    (this.m_postMessage.RegisterForMessage(this.OnMessage),
       window.addEventListener(`unload`, this.PostPageUnloading),
       this.m_NavigationController.RegisterForUnhandledButtonDownEvents((_) =>
         this.PostButtonPressToSteam(_.detail.button),
       ),
       this.UpdateActionDescriptions({}),
-      this.SendGameInputState(`CGamepadWebBridgeClient constructor`);
+      this.SendGameInputState(`CGamepadWebBridgeClient constructor`));
   }
   RegisterForFocusChanged(_) {
     return _.FocusChangedCallbacks.Register(this.OnFocusChanged).Unregister;
@@ -1391,7 +1395,7 @@ var _ = class {
   }
   BFromActiveNavTree(_, _) {
     let _ = _?.Tree;
-    return (_ ||= _?.Tree), _ && _.Controller.IsActiveFocusNavTree(_);
+    return ((_ ||= _?.Tree), _ && _.Controller.IsActiveFocusNavTree(_));
   }
   OnFocusChanged(_, _, _) {
     this.BFromActiveNavTree(_, _) && this.OnActionDescriptionTargetChanged(_);
@@ -1434,14 +1438,14 @@ var _ = class {
   }
   SendGameInputState(_) {
     let _ = _.Basic;
-    window.bSupportsGamepadUI && (_ = _.Full),
+    (window.bSupportsGamepadUI && (_ = _.Full),
       this.m_postMessage.PostMessage({
         type: `GameInputState`,
         data: {
           source: _,
           support: _,
         },
-      });
+      }));
   }
   PostButtonPressToSteam(_) {
     this.m_postMessage.PostMessage({
@@ -1460,9 +1464,9 @@ var _ = class {
     });
   }
 };
-_([_], _.prototype, `OnFocusChanged`, null),
+(_([_], _.prototype, `OnFocusChanged`, null),
   _([_], _.prototype, `OnMessage`, null),
-  _([_], _.prototype, `PostPageUnloading`, null);
+  _([_], _.prototype, `PostPageUnloading`, null));
 function _() {
   return (
     _(`BrowserView.RegisterForMessageFromParent`) &&
@@ -1564,12 +1568,12 @@ var _ = [
   _ = class extends _ {
     m_rgGamepadStatus = [];
     constructor() {
-      super(),
+      (super(),
         this.SetSourceType(_.GAMEPAD),
         window.addEventListener(`gamepadconnected`, (_) => {
           this.m_bGamepadDetected ||
             (this.OnGamepadDetected(), this.PollGamepads());
-        });
+        }));
     }
     PollGamepads() {
       let _ = navigator.getGamepads();
@@ -1742,7 +1746,7 @@ var _ = class extends _ {
   m_strLastKeyDown;
   m_targetWindow;
   constructor(_) {
-    super(),
+    (super(),
       (this.m_targetWindow = _),
       this.SetSourceType(_.KEYBOARD_SIMULATOR),
       _.addEventListener(`keydown`, this.OnKeyDown, {
@@ -1751,7 +1755,7 @@ var _ = class extends _ {
       _.addEventListener(`keyup`, this.OnKeyUp, {
         capture: !0,
       }),
-      _.addEventListener(`blur`, this.Reset);
+      _.addEventListener(`blur`, this.Reset));
   }
   OnKeyDown(_) {
     if (_(this.m_targetWindow)) return;
@@ -1854,9 +1858,9 @@ var _ = class extends _ {
         )?.button ?? _.INVALID);
   }
 };
-_([_], _.prototype, `OnKeyDown`, null),
+(_([_], _.prototype, `OnKeyDown`, null),
   _([_], _.prototype, `OnKeyUp`, null),
-  _([_], _.prototype, `Reset`, null);
+  _([_], _.prototype, `Reset`, null));
 var _ = class extends _ {
   m_nAccumulatedMouseMovement = 0;
   m_bFirstMouseUpdate = !0;
@@ -1864,12 +1868,12 @@ var _ = class extends _ {
   m_nLastScreenY;
   m_lastButtonDown = _.INVALID;
   constructor(_) {
-    super(),
+    (super(),
       this.SetSourceType(_.MOUSE),
       _.addEventListener(`mousedown`, this.OnMouseDown),
       _.addEventListener(`mouseup`, this.OnMouseUp),
       _.addEventListener(`mousemove`, this.OnMouseMove),
-      _.addEventListener(`blur`, this.Reset);
+      _.addEventListener(`blur`, this.Reset));
   }
   TranslateKey(_) {
     switch (_.button) {
@@ -1908,24 +1912,24 @@ var _ = class extends _ {
             (this.Reset(), this.OnNavigationTypeChanged(_.MOUSE))));
   }
   Reset() {
-    (this.m_nAccumulatedMouseMovement = 0),
+    ((this.m_nAccumulatedMouseMovement = 0),
       (this.m_bFirstMouseUpdate = !0),
       this.m_lastButtonDown != _.INVALID &&
         (this.OnButtonUp(this.m_lastButtonDown),
-        (this.m_lastButtonDown = _.INVALID));
+        (this.m_lastButtonDown = _.INVALID)));
   }
 };
-_([_], _.prototype, `TranslateKey`, null),
+(_([_], _.prototype, `TranslateKey`, null),
   _([_], _.prototype, `OnMouseDown`, null),
   _([_], _.prototype, `OnMouseUp`, null),
   _([_], _.prototype, `OnMouseMove`, null),
-  _([_], _.prototype, `Reset`, null);
+  _([_], _.prototype, `Reset`, null));
 var _ = class extends _ {
   constructor(_) {
-    super(),
+    (super(),
       this.SetSourceType(_.TOUCH),
       _.addEventListener(`touchstart`, this.OnTouchStart),
-      _.addEventListener(`touchend`, this.OnTouchEnd);
+      _.addEventListener(`touchend`, this.OnTouchEnd));
   }
   OnTouchStart(_) {
     _.defaultPrevented || this.OnNavigationTypeChanged(_.TOUCH);
@@ -1934,8 +1938,8 @@ var _ = class extends _ {
     _.defaultPrevented || this.OnNavigationTypeChanged(_.TOUCH);
   }
 };
-_([_], _.prototype, `OnTouchStart`, null),
-  _([_], _.prototype, `OnTouchEnd`, null);
+(_([_], _.prototype, `OnTouchStart`, null),
+  _([_], _.prototype, `OnTouchEnd`, null));
 var _ = `VirtualKeyboardMessage`;
 function _(_) {
   return _ && _.type === _;
@@ -1948,8 +1952,8 @@ var _ = class {
       (this.m_ownerWindow = _),
       this.m_ownerWindow.addEventListener(`message`, this.OnMessage),
       () => {
-        this.m_ownerWindow.removeEventListener(`message`, this.OnMessage),
-          (this.m_ownerWindow = void 0);
+        (this.m_ownerWindow.removeEventListener(`message`, this.OnMessage),
+          (this.m_ownerWindow = void 0));
       }
     );
   }
@@ -2005,7 +2009,7 @@ var _ = class {
         this.m_ownerWindow.parent.postMessage(_, `*`));
   }
 };
-_([_], _.prototype, `ShowVirtualKeyboard`, null),
+(_([_], _.prototype, `ShowVirtualKeyboard`, null),
   _([_], _.prototype, `ShowModalKeyboard`, null),
   _([_], _.prototype, `HideVirtualKeyboard`, null),
   _([_], _.prototype, `OnBrowserViewMessage`, null),
@@ -2017,10 +2021,10 @@ _([_], _.prototype, `ShowVirtualKeyboard`, null),
       m_showModalKeyboard;
       m_hideKeyboard;
       constructor(_, _, _, _) {
-        (this.m_showKeyboard = _),
+        ((this.m_showKeyboard = _),
           (this.m_showModalKeyboard = _),
           (this.m_hideKeyboard = _),
-          _._(`message`, this.OnMessage);
+          _._(`message`, this.OnMessage));
       }
       OnMessage(_, _, _) {
         if (_ == _) {
@@ -2041,12 +2045,12 @@ _([_], _.prototype, `ShowVirtualKeyboard`, null),
     }.prototype,
     `OnMessage`,
     null,
-  );
+  ));
 function _(_) {
   let _ = _(),
     [_] = _.useState(() => {
       let _ = new _();
-      return _ && _.UpdateSourceToGamepad(), _;
+      return (_ && _.UpdateSourceToGamepad(), _);
     }),
     [_, _] = _.useState(),
     [_] = _.useState(() => new _()),
@@ -2055,7 +2059,7 @@ function _(_) {
     _.useEffect(() => {
       if (_ && !_) {
         let _ = new _(_);
-        _(_), _(_.BIsGamepadInputExternallyControlled());
+        (_(_), _(_.BIsGamepadInputExternallyControlled()));
       }
     }, [_, _, _]),
     _.useEffect(() => {
@@ -2096,17 +2100,17 @@ function _(_) {
 }
 function _() {
   let [_] = _.useState(() => new _());
-  return _(_), null;
+  return (_(_), null);
 }
 function _(_) {
   let [_, _] = _.useState(void 0);
-  _.useEffect(() => _(new _(window)), [_]), _(_);
+  (_.useEffect(() => _(new _(window)), [_]), _(_));
 }
 function _() {
-  return _(_), null;
+  return (_(_), null);
 }
 function _() {
-  return _(_), _(_), null;
+  return (_(_), _(_), null);
 }
 var _ = `SZDk3YnqgsA-`,
   _ = `QWXMPVkRhGI-`,
@@ -2137,7 +2141,7 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -2162,12 +2166,12 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CBilling_GetRecurringSubscriptionsCount_Request`;
@@ -2176,9 +2180,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.active_subscriptions_count || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -2203,7 +2207,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -2224,14 +2228,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CBilling_GetRecurringSubscriptionsCount_Response`;
@@ -2564,7 +2568,7 @@ function _(_) {
       });
 }
 var _ = {};
-(_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.brazilian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.bulgarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.czech = () => _(() => import(`./chunk.js`), [], import.meta.url)),
@@ -2595,7 +2599,7 @@ var _ = {};
   (_.thai = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.turkish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.ukrainian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
-  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url));
+  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -3002,10 +3006,10 @@ var _ = class {
       return Promise.resolve(localStorage.getItem(_));
     }
     StoreString(_, _) {
-      return localStorage.setItem(_, _), Promise.resolve();
+      return (localStorage.setItem(_, _), Promise.resolve());
     }
     RemoveObject(_) {
-      return localStorage.removeItem(_), Promise.resolve();
+      return (localStorage.removeItem(_), Promise.resolve());
     }
   };
 function _(_) {
@@ -3015,7 +3019,8 @@ function _(_) {
     _ = `strWebAPIToken` in _ ? _.strWebAPIToken : void 0,
     _ = _.useCallback(
       () => (
-        (_.current ||= new _(new _(_.WEBAPI_BASE_URL, _, !1, _))), _.current
+        (_.current ||= new _(new _(_.WEBAPI_BASE_URL, _, !1, _))),
+        _.current
       ),
       [_],
     ),
@@ -3044,7 +3049,7 @@ async function _(_) {
       })
     ).json();
     if (!_ || !_.success)
-      return console.error(`ajaxrefresh failed: "${_.error}"`), ``;
+      return (console.error(`ajaxrefresh failed: "${_.error}"`), ``);
     if (_.success) {
       let _ = await (
         await fetch(_.login_url, {
@@ -3480,7 +3485,7 @@ function _(_) {
       let _ = _.map((_) => _(_, `header`)).filter(Boolean),
         _ = [],
         _ = _(_);
-      for (; _.length < 9; ) _.push(..._(_.slice(0, 9 - _.length), 0, _));
+      for (; _.length < 9;) _.push(..._(_.slice(0, 9 - _.length), 0, _));
       let _ = [];
       for (let _ = 0; _ < _; _++) _.push(_.slice(_ * _, (_ + 1) * _));
       return _;
@@ -3637,7 +3642,7 @@ function _(_) {
     ],
   });
 }
-_.memo(function (_) {
+(_.memo(function (_) {
   return (0, _.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 31 30`,
@@ -3696,9 +3701,9 @@ _.memo(function (_) {
         }),
       ],
     });
-  });
+  }));
 var _ = {};
-(_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+((_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.brazilian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.bulgarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.czech = () => _(() => import(`./chunk.js`), [], import.meta.url)),
@@ -3729,7 +3734,7 @@ var _ = {};
   (_.thai = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.turkish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
   (_.ukrainian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
-  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url));
+  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -3897,9 +3902,9 @@ function _(_, _) {
 }
 async function _(_, _) {
   let _ = _.Init(_);
-  _.Body().set_language(_.language),
+  (_.Body().set_language(_.language),
     _.Body().set_country_code(_.country),
-    _.Body().set_favor_rarer_tags(!0);
+    _.Body().set_favor_rarer_tags(!0));
   let _ = await _.GetRecommendedTagsForUser(_, _);
   if (!_.BSuccess())
     throw `Error loading recommended tags: ${_.GetErrorMessage()}`;
@@ -3931,7 +3936,7 @@ function _(_) {
     case `wide`:
       return `${_.STORE_CDN_URL}categories/searchsuggestionsimage/`;
     default:
-      return _(_, `Unknown type: ${_}`), ``;
+      return (_(_, `Unknown type: ${_}`), ``);
   }
 }
 function _(_) {
@@ -3972,9 +3977,9 @@ function _(_) {
 var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.recent_apps || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -3995,7 +4000,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -4016,14 +4021,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CUserStoreVisitData`;
@@ -4032,9 +4037,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.item_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4058,7 +4063,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -4079,14 +4084,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CUserStoreVisitData_RecentApps`;
@@ -4095,7 +4100,7 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -4120,12 +4125,12 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {}
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CUserStoreVisit_GetFrequentlyVisitedPages_Request`;
@@ -4134,9 +4139,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.visit_data || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [2], null);
+        _.Message.initialize(this, _, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -4161,7 +4166,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -4182,14 +4187,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CUserStoreVisit_GetFrequentlyVisitedPages_Response`;
@@ -4198,9 +4203,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.item_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4229,7 +4234,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -4250,14 +4255,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CUserStoreVisit_GetFrequentlyVisitedPages_Response_FrequentHubs`;
@@ -4266,9 +4271,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.context || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4297,7 +4302,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -4318,14 +4323,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CUserStoreVisit_GetMostVisitedItemsOnStore_Request`;
@@ -4334,9 +4339,9 @@ var _ = class _ extends _.Message {
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.item_ids || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1, 2], null);
+        _.Message.initialize(this, _, 0, -1, [1, 2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -4363,7 +4368,7 @@ var _ = class _ extends _.Message {
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -4384,14 +4389,14 @@ var _ = class _ extends _.Message {
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CUserStoreVisit_GetMostVisitedItemsOnStore_Response`;
@@ -4525,7 +4530,7 @@ function _() {
   });
 }
 function _() {
-  return _(_.LANGUAGE), _(_.logged_in), _(), null;
+  return (_(_.LANGUAGE), _(_.logged_in), _(), null);
 }
 var _ = _.memo(function () {
     let [_, _] = _();
@@ -4641,7 +4646,7 @@ function* _(_, _, _) {
   let _ = _.slice(),
     _ = _.slice(),
     _ = _.slice();
-  for (; _.length || _.length; ) {
+  for (; _.length || _.length;) {
     if (_.length) {
       let _ = _.shift();
       `hubconfig` in _
@@ -4662,7 +4667,7 @@ function* _(_, _, _) {
         unTagID: _.shift().tagid,
       });
   }
-  for (; _.length; ) {
+  for (; _.length;) {
     let _ = _.shift();
     yield {
       type: `hub`,
@@ -4755,7 +4760,7 @@ function _() {
       return (
         _.forEach(({ groups: _ }) => {
           _.forEach(({ header: _, items: _ }) => {
-            _.push(_), (_[_] = _);
+            (_.push(_), (_[_] = _));
           });
         }),
         [_, _]
@@ -5109,7 +5114,7 @@ var _ = _.memo(function (_) {
       (0, _.useEffect)(() => {
         let _ = _.findIndex((_) => _[0] == _) || 0,
           _ = _.findIndex((_) => _[0] == _) || 0;
-        _(_ < _ ? _ : _ > _ ? _ : void 0), _(_);
+        (_(_ < _ ? _ : _ > _ ? _ : void 0), _(_));
       }, [_, _]),
       (0, _.jsx)(`div`, {
         className: _,
@@ -5152,12 +5157,12 @@ function _(_, _) {
             }
             if (_ > 0 && (_ == 0 ? 0 : Math.abs(_) / _) < _) return;
           }
-          _(_),
+          (_(_),
             (_.current = {
               _: _.clientX,
               _: _.clientY,
               section: _,
-            });
+            }));
         },
         [_],
       ),
@@ -5369,7 +5374,7 @@ function _() {
   });
 }
 function _() {
-  return _(_), _(), null;
+  return (_(_), _(), null);
 }
 function _() {
   let _ = _();
@@ -5417,7 +5422,7 @@ function _(_) {
     { showDiscoveryQueue: _ } = _(_),
     _ = _.useCallback(
       (_) => {
-        _(), _.preventDefault();
+        (_(), _.preventDefault());
       },
       [_],
     );
@@ -5710,7 +5715,7 @@ var _ = _.memo(function (_) {
       }),
     });
   });
-_.memo(function (_) {
+(_.memo(function (_) {
   return (0, _.jsxs)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 36 36`,
@@ -5763,7 +5768,7 @@ _.memo(function (_) {
         }),
       ],
     });
-  });
+  }));
 function _() {
   let _ = _();
   return (0, _.jsxs)(_, {
@@ -6027,7 +6032,7 @@ function _(_, _) {
         excludedSections: _,
       });
     default:
-      return _(_, `unhandled section ${_}`), null;
+      return (_(_, `unhandled section ${_}`), null);
   }
 }
 function _(_) {
@@ -6048,7 +6053,7 @@ function _(_) {
     case `more`:
       return null;
     default:
-      return _(_, `unhandled section ${_}`), null;
+      return (_(_, `unhandled section ${_}`), null);
   }
 }
 var _ = `380px`,
@@ -6118,7 +6123,7 @@ function _(_ = 10, _ = {}, _ = !0) {
 }
 async function _(_, _, _ = 10, _ = void 0) {
   let _ = _.Init(_);
-  _.Body().set_count(_), _(_, _), _ && _(_, _.data_request);
+  (_.Body().set_count(_), _(_, _), _ && _(_, _.data_request));
   let _ = await _.GetMostVisitedItemsOnStore(_, _);
   if (!_.BSuccess())
     throw `Error loading most visited items: ${_.GetErrorMessage()}`;
@@ -6154,7 +6159,7 @@ function _() {
   }
   let _ = 2166136261;
   for (let _ = 0; _ < _.length; _++)
-    (_ ^= _.charCodeAt(_)), (_ = Math.imul(_, 16777619) >>> 0);
+    ((_ ^= _.charCodeAt(_)), (_ = Math.imul(_, 16777619) >>> 0));
   return _ % 100 < _;
 }
 function _(_) {
@@ -6194,7 +6199,7 @@ function _(_) {
     _,
     _,
     _;
-  _.rgMainItems.length
+  (_.rgMainItems.length
     ? (_ = (0, _.jsx)(_, {
         title: _.strMainTitle,
         children: _.rgMainItems.map(({ item_id: _ }, _) =>
@@ -6255,7 +6260,7 @@ function _(_) {
                   _(_),
                 ),
               ),
-            }));
+            })));
   let { feature: _, mainFeature: _ } = _(_.eListType);
   return (0, _.jsxs)(_, {
     ..._,
@@ -6480,7 +6485,7 @@ function _(_, _) {
         case `advancedsearch`:
           return 1;
         default:
-          return _(_, `unknown section ${_}`), 0;
+          return (_(_, `unknown section ${_}`), 0);
       }
     },
     _ = (_, _ = !1) => {
@@ -6866,20 +6871,20 @@ var _ = _.memo(function (_) {
     } = _(),
     _ = _(_),
     _ = _.useCallback(() => {
-      _(), _();
+      (_(), _());
     }, [_, _]),
     _ = _.useCallback(
       (_) => {
-        _(_.currentTarget.value), _();
+        (_(_.currentTarget.value), _());
       },
       [_, _],
     ),
     _ = _.useCallback(() => {
-      _(``), _();
+      (_(``), _());
     }, [_, _]),
     _ = _.useCallback(
       (_) => {
-        _(), _.preventDefault();
+        (_(), _.preventDefault());
       },
       [_],
     ),
@@ -7021,24 +7026,24 @@ var _ = _.memo(function (_) {
       _ = _(),
       _ = _ && _,
       _ = _.useCallback(() => {
-        _.current?.TakeFocus(), _(void 0);
+        (_.current?.TakeFocus(), _(void 0));
       }, []),
       { fnReturnFocusToPage: _ } = _(_),
       _ = _(_),
       _ = _.useCallback(() => {
-        _(void 0), _();
+        (_(void 0), _());
       }, [_]),
       _ = _.useCallback(
         (_) => {
-          _((_) => (_ === _ ? void 0 : _)), _();
+          (_((_) => (_ === _ ? void 0 : _)), _());
         },
         [_],
       ),
       _ = _.useCallback(() => _(`more`), [_]);
-    (0, _.useEffect)(() => {
+    ((0, _.useEffect)(() => {
       _ && _();
     }, [_, _]),
-      (0, _.useEffect)(() => _(_), [_]);
+      (0, _.useEffect)(() => _(_), [_]));
     let _ = _.useRef(null),
       _ = _.useRef(null);
     return (0, _.jsxs)(_, {
@@ -7120,13 +7125,13 @@ function _(_) {
     }
     let _ = _.NavTree(),
       _ = _;
-    for (; _.GetParentEmbeddedNavTree(); ) _ = _.GetParentEmbeddedNavTree();
+    for (; _.GetParentEmbeddedNavTree();) _ = _.GetParentEmbeddedNavTree();
     return _.RegisterGlobalButtonHandler(
       _.START,
       (_) => {
         let _ = _.NavTree().Controller.GetActiveNavTree(),
           _ = _?.GetLastFocusedNode() || void 0;
-        _(
+        (_(
           _ && {
             tree: _,
             node: _,
@@ -7138,7 +7143,7 @@ function _(_) {
                 `event should have occurred in menu tree`,
               ),
               _.TakeFocus(_.START))
-            : _.Activate(!0);
+            : _.Activate(!0));
       },
       _(`#Menu_Label`),
     );
@@ -7146,7 +7151,7 @@ function _(_) {
   let _ = _.useCallback(() => {
     if (_) {
       let { tree: _, node: _ } = _;
-      return _.Activate(!_), _?.BTakeFocus(), _(void 0), !0;
+      return (_.Activate(!_), _?.BTakeFocus(), _(void 0), !0);
     }
     return !1;
   }, [_]);
@@ -7160,7 +7165,9 @@ function _(_) {
     (_, _) => {
       let _ = _.current;
       if (!_)
-        return console.assert(!_, `Expected to have menuNode in gamepadui`), !1;
+        return (
+          console.assert(!_, `Expected to have menuNode in gamepadui`), !1
+        );
       if (!_.Element?.ownerDocument.defaultView) return !1;
       let _ = new _.Element.ownerDocument.defaultView.CustomEvent(
         `vgp_onbuttondown`,
@@ -7191,14 +7198,14 @@ function _(_) {
     [_, _] = _.useState(!1),
     [_, _] = _.useState(!1),
     _ = _.useRef(void 0);
-  (_.current ||= new WeakMap()),
+  ((_.current ||= new WeakMap()),
     (0, _.useLayoutEffect)(() => {
       _(`visible`);
     }, [_]),
     (0, _.useEffect)(() => {
-      document.body.classList.toggle(`store_menu_hidden`, _ === `hidden`),
-        _ === `visible` && (_.current = new WeakMap());
-    }, [_]);
+      (document.body.classList.toggle(`store_menu_hidden`, _ === `hidden`),
+        _ === `visible` && (_.current = new WeakMap()));
+    }, [_]));
   let _ = _.useCallback(() => _(_), [_]),
     _ = _.useCallback((_) => {
       let _ = _.current,
@@ -7227,14 +7234,14 @@ function _(_) {
       ),
     ),
     _ = _.useCallback((_) => _(_), []);
-  (0, _.useEffect)(() => {
+  ((0, _.useEffect)(() => {
     if (!_ || _ || !_) return;
     let _ = window.setTimeout(() => _(), 1);
     return () => window.clearTimeout(_);
   }, [_, _, _, _]),
     (0, _.useEffect)(() => {
       _ && _((_) => (_ == `visible` ? _ : `show`));
-    }, [_]);
+    }, [_]));
   let _ = _(_, _),
     _ = _(
       _.useCallback((_) => {
@@ -7318,8 +7325,8 @@ function _(_, _) {
         ),
         _.style.setProperty(`--store-menu-floating-height`, `${_}px`),
         () => {
-          _?.style.removeProperty(`--store-menu-overlap-height`),
-            _?.style.removeProperty(`--store-menu-floating-height`);
+          (_?.style.removeProperty(`--store-menu-overlap-height`),
+            _?.style.removeProperty(`--store-menu-floating-height`));
         }
       );
     }, [_, _, _]),
@@ -7350,17 +7357,18 @@ function _(_) {
     _ = _(),
     _ = _(),
     _ = _ && !_;
-  _.useLayoutEffect(() => {
+  (_.useLayoutEffect(() => {
     if (!_ || _ === void 0) return;
     let _ = _ ? parseInt(_) : 0,
       _ = _[_.length - 1],
       _ = _.slice(0, -1),
       _ = _ - _,
       _ = [];
-    for (let _ = 0; _ < _.length && _[_] < _; _++) (_ -= _[_]), _.push(_[_][0]);
+    for (let _ = 0; _ < _.length && _[_] < _; _++)
+      ((_ -= _[_]), _.push(_[_][0]));
     if (_.length < _.length - 1) {
-      for (; _.length && _ < _; ) (_ += _[_.length - 1]), _.pop();
-      _.length == 1 && _.splice(0, _.length), _.push(_[_.length - 1][0]);
+      for (; _.length && _ < _;) ((_ += _[_.length - 1]), _.pop());
+      (_.length == 1 && _.splice(0, _.length), _.push(_[_.length - 1][0]));
     }
     _(new Set(_));
   }, [_, _, _, _, _]),
@@ -7369,7 +7377,7 @@ function _(_) {
         let _ = _.findIndex((_) => _ === _[0]);
         _.current = _.current[_].current;
       } else _.current = null;
-    }, [_, _, _]);
+    }, [_, _, _]));
   let _,
     _ = (_, _, _ = !1) => {
       let [_, _] = _;
@@ -7642,7 +7650,7 @@ var _ = _.memo(function (_) {
                   window.location.href = _(_.term, _);
                   break;
                 case `set_search_query`:
-                  _(), _(_.term), _();
+                  (_(), _(_.term), _());
                   break;
                 case `close_search_results`:
                   window.setTimeout(() => {
@@ -7675,7 +7683,7 @@ function _(_) {
 function _(_, _) {
   if (!_) return null;
   let _ = _;
-  for (; (_ = _.parentElement); ) if (_.classList.contains(_)) return _;
+  for (; (_ = _.parentElement);) if (_.classList.contains(_)) return _;
   return null;
 }
 function _() {
@@ -7686,7 +7694,7 @@ function _() {
         _.classList.add(_),
         _.classList.add(_),
         () => {
-          _.classList.remove(_), _.classList.remove(_);
+          (_.classList.remove(_), _.classList.remove(_));
         }
       );
     console.warn(`Couldn't find responsive header menu`);
@@ -7717,17 +7725,18 @@ var _ = class {
   AddImpression(_, _) {
     if (!_(_)) return;
     let _ = !1;
-    this.m_mapAppToSNRs.has(_)
+    (this.m_mapAppToSNRs.has(_)
       ? this.m_mapAppToSNRs.get(_).indexOf(_) == -1 &&
         (this.m_mapAppToSNRs.get(_).push(_), (_ = !0))
       : (this.m_mapAppToSNRs.set(_, [_]), (_ = !0)),
       _ &&
-        (this.m_rgImpressionsToAdd.push(`${_}@${_}`), this.QueueCookieUpdate());
+        (this.m_rgImpressionsToAdd.push(`${_}@${_}`),
+        this.QueueCookieUpdate()));
   }
   m_iUpdateInterval;
   QueueCookieUpdate() {
     this.m_iUpdateInterval ||= window.setTimeout(() => {
-      this.UpdateCookie(), (this.m_iUpdateInterval = void 0);
+      (this.UpdateCookie(), (this.m_iUpdateInterval = void 0));
     }, 1e3);
   }
   UpdateCookie() {

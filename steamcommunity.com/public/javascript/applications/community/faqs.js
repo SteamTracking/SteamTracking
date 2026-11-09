@@ -201,7 +201,7 @@ function Ht(e, n, r) {
   return (
     t(() => {
       r.forEach((t) => {
-        a.forEach((r) => {
+        (a.forEach((r) => {
           let i = n.GetLocalization(r, t) || ``;
           if (r === zt) {
             let n = e.GetDraftTitle(t);
@@ -212,7 +212,7 @@ function Ht(e, n, r) {
             (i || (n && n.length > 0)) && e.SetDraftContent(t, i);
           }
         }),
-          i.add(t);
+          i.add(t));
       });
     }),
     Array.from(i)
@@ -350,7 +350,7 @@ var Ut = (e) => {
         let n = r.includes(t);
         if (e && !n) {
           let e = r.slice();
-          e.push(t), i(e);
+          (e.push(t), i(e));
         } else if (!e && n) {
           let e = r.filter((e) => e !== t);
           i(e);
@@ -453,7 +453,7 @@ function Xt(e) {
           let t = qt.slice(e, e + 5);
           r.push(z.Get().ImportNonEnglishDraftsFromCrowdin(n.faq_id, t, d));
         }
-        await Promise.all(r),
+        (await Promise.all(r),
           z.Get().BHasLiveEnglishVersion(n.faq_id)
             ? ((f.current[e] = z.Get().GetNonEnglishDraftsToPublish(n.faq_id)),
               console.log(
@@ -461,7 +461,7 @@ function Xt(e) {
                 n.faq_id,
                 f.current[e].map((e) => pe(e)),
               ))
-            : console.log(`No live english version for:`, n.faq_id);
+            : console.log(`No live english version for:`, n.faq_id));
       }
       for (let e = 0; e < f.current.length; e++) {
         let n = t[e],
@@ -476,7 +476,7 @@ function Xt(e) {
           }
         }
       }
-      c(!0), o(!1);
+      (c(!0), o(!1));
     };
   if (l)
     return (0, H.jsx)(C, {
@@ -950,7 +950,7 @@ var $t = `NBUvJ8CE384-`,
                   strOKText: E(`#FAQEditor_DeleteAction`),
                   strCancelText: r || a ? E(`#Button_OK`) : void 0,
                   onOK: async () => {
-                    i(!0),
+                    (i(!0),
                       z
                         .Get()
                         .DeleteFAQ(t.GetFAQID())
@@ -967,13 +967,13 @@ var $t = `NBUvJ8CE384-`,
                         })
                         .catch((e) => {
                           let t = v(e);
-                          console.error(
+                          (console.error(
                             `FAQDeleteDialog: hit error: ` + t.strErrorMsg,
                             t,
                           ),
-                            o(2);
+                            o(2));
                         })
-                        .finally(() => i(!1));
+                        .finally(() => i(!1)));
                   },
                 }),
               }),
@@ -1073,22 +1073,22 @@ var $t = `NBUvJ8CE384-`,
                 strOKText: E(`#FAQPublish_Publish`),
                 strCancelText: r || a || s ? E(`#Button_OK`) : void 0,
                 onOK: async () => {
-                  i(!0),
+                  (i(!0),
                     z
                       .Get()
                       .PublishDraftByLanguage(t.GetFAQID(), d)
                       .then((e) => {
-                        e == 1 && o(!0), c(e);
+                        (e == 1 && o(!0), c(e));
                       })
                       .catch((e) => {
                         let t = v(e);
-                        console.error(
+                        (console.error(
                           `FAQPublishDialog: hit error: ` + t.strErrorMsg,
                           t,
                         ),
-                          c(2);
+                          c(2));
                       })
-                      .finally(() => i(!1));
+                      .finally(() => i(!1)));
                 },
               }),
             }),
@@ -1166,23 +1166,23 @@ var $t = `NBUvJ8CE384-`,
                   strOKText: E(`#FAQEditor_ChangeVisible`),
                   strCancelText: r || a || s ? E(`#Button_OK`) : void 0,
                   onOK: async () => {
-                    i(!0),
+                    (i(!0),
                       z
                         .Get()
                         .UpdateVisibility(t.GetFAQID(), u, f)
                         .then((e) => {
-                          e == 1 && o(!0), c(e);
+                          (e == 1 && o(!0), c(e));
                         })
                         .catch((e) => {
                           let t = v(e);
-                          console.error(
+                          (console.error(
                             `FAQChangeVisibilityDialog: hit error: ` +
                               t.strErrorMsg,
                             t,
                           ),
-                            c(2);
+                            c(2));
                         })
-                        .finally(() => i(!1));
+                        .finally(() => i(!1)));
                   },
                 }),
               }),
@@ -1447,10 +1447,10 @@ var Jn = n((e) => {
           let e = await t.SaveDrafts();
           o(e);
         } catch (e) {
-          o(2),
+          (o(2),
             console.log(
               `FAQSaveProgressDialog hit exception ` + v(e).strErrorMsg,
-            );
+            ));
         } finally {
           i(!1);
         }
@@ -1613,14 +1613,14 @@ var Jn = n((e) => {
             onCancel: t,
             strCancelText: E(l ? `#Button_Close` : `#Button_Cancel`),
             onOK: async () => {
-              o(!0),
+              (o(!0),
                 z
                   .Get()
                   .UpdateInternalName(n.GetFAQID(), r)
                   .then((e) => c(e))
                   .finally(() => {
                     u(!0);
-                  });
+                  }));
             },
           }),
         }),

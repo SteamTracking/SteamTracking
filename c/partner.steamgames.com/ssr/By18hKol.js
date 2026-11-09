@@ -9,4 +9,3 @@ var _ = (function (_) {
 function _(_) {
   return _ === _.k_ESteamRealmChina;
 }
-export { _, _ };

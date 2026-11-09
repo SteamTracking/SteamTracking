@@ -59,4 +59,3 @@ function _(_) {
     children: _.strURL,
   });
 }
-export { _, _, _, _, _ };

@@ -72,7 +72,7 @@ var v = o(a()),
         let r = a && a(n.eLang),
           i = o && o(n.eLang),
           s = n.sLocName;
-        i &&
+        (i &&
           i !== 0 &&
           ((s += ` `),
           (s += d(
@@ -89,7 +89,7 @@ var v = o(a()),
               },
               `langpicker` + n.eLang + (r ? `_hasdata` : ``),
             ),
-          );
+          ));
       }
       return t;
     }
@@ -112,7 +112,7 @@ var v = o(a()),
       });
     }
   };
-i([s], b.prototype, `OnLanguageChange`, null), (b = i([p], b));
+(i([s], b.prototype, `OnLanguageChange`, null), (b = i([p], b)));
 function x(e) {
   let [t, n] = m(() => [
     h.Get().GetHasLocalizationContext(),

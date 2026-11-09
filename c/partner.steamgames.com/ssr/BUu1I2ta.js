@@ -1,14 +1,14 @@
 var _ = class {
     constructor() {
-      (this.listeners = new Set()),
-        (this.subscribe = this.subscribe.bind(this));
+      ((this.listeners = new Set()),
+        (this.subscribe = this.subscribe.bind(this)));
     }
     subscribe(_) {
       return (
         this.listeners.add(_),
         this.onSubscribe(),
         () => {
-          this.listeners.delete(_), this.onUnsubscribe();
+          (this.listeners.delete(_), this.onUnsubscribe());
         }
       );
     }
@@ -167,7 +167,7 @@ var _ = new (class extends _ {
     #t;
     #n;
     constructor() {
-      super(),
+      (super(),
         (this.#n = (_) => {
           if (!_ && window.addEventListener) {
             let _ = () => _();
@@ -178,7 +178,7 @@ var _ = new (class extends _ {
               }
             );
           }
-        });
+        }));
     }
     onSubscribe() {
       this.#t || this.setEventListener(this.#n);
@@ -187,11 +187,11 @@ var _ = new (class extends _ {
       this.hasListeners() || (this.#t?.(), (this.#t = void 0));
     }
     setEventListener(_) {
-      (this.#n = _),
+      ((this.#n = _),
         this.#t?.(),
         (this.#t = _((_) => {
           typeof _ == `boolean` ? this.setFocused(_) : this.onFocus();
-        }));
+        })));
     }
     setFocused(_) {
       this.#e !== _ && ((this.#e = _), this.onFocus());
@@ -213,7 +213,7 @@ var _ = new (class extends _ {
     #t;
     #n;
     constructor() {
-      super(),
+      (super(),
         (this.#n = (_) => {
           if (!_ && window.addEventListener) {
             let _ = () => _(!0),
@@ -222,12 +222,12 @@ var _ = new (class extends _ {
               window.addEventListener(`online`, _, !1),
               window.addEventListener(`offline`, _, !1),
               () => {
-                window.removeEventListener(`online`, _),
-                  window.removeEventListener(`offline`, _);
+                (window.removeEventListener(`online`, _),
+                  window.removeEventListener(`offline`, _));
               }
             );
           }
-        });
+        }));
     }
     onSubscribe() {
       this.#t || this.setEventListener(this.#n);
@@ -236,7 +236,7 @@ var _ = new (class extends _ {
       this.hasListeners() || (this.#t?.(), (this.#t = void 0));
     }
     setEventListener(_) {
-      (this.#n = _), this.#t?.(), (this.#t = _(this.setOnline.bind(this)));
+      ((this.#n = _), this.#t?.(), (this.#t = _(this.setOnline.bind(this))));
     }
     setOnline(_) {
       this.#e !== _ &&
@@ -253,26 +253,26 @@ function _() {
   let _,
     _,
     _ = new Promise((_, _) => {
-      (_ = _), (_ = _);
+      ((_ = _), (_ = _));
     });
-  (_.status = `pending`), _.catch(() => {});
+  ((_.status = `pending`), _.catch(() => {}));
   function _(_) {
-    Object.assign(_, _), delete _.resolve, delete _.reject;
+    (Object.assign(_, _), delete _.resolve, delete _.reject);
   }
   return (
     (_.resolve = (_) => {
-      _({
+      (_({
         status: `fulfilled`,
         value: _,
       }),
-        _(_);
+        _(_));
     }),
     (_.reject = (_) => {
-      _({
+      (_({
         status: `rejected`,
         reason: _,
       }),
-        _(_);
+        _(_));
     }),
     _
   );
@@ -285,9 +285,9 @@ function _(_) {
 }
 var _ = class extends Error {
   constructor(_) {
-    super(`CancelledError`),
+    (super(`CancelledError`),
       (this.revert = _?.revert),
-      (this.silent = _?.silent);
+      (this.silent = _?.silent));
   }
 };
 function _(_) {
@@ -321,12 +321,12 @@ function _(_) {
     },
     _ = () =>
       new Promise((_) => {
-        (_ = (_) => {
+        ((_ = (_) => {
           (_ || _()) && _(_);
         }),
-          _.onPause?.();
+          _.onPause?.());
       }).then(() => {
-        (_ = void 0), _ || _.onContinue?.();
+        ((_ = void 0), _ || _.onContinue?.());
       }),
     _ = () => {
       if (_) return;
@@ -388,7 +388,7 @@ function _() {
     },
     _ = () => {
       let _ = _;
-      (_ = []),
+      ((_ = []),
         _.length &&
           _(() => {
             _(() => {
@@ -396,7 +396,7 @@ function _() {
                 _(_);
               });
             });
-          });
+          }));
     };
   return {
     batch: (_) => {
@@ -405,7 +405,7 @@ function _() {
       try {
         _ = _();
       } finally {
-        _--, _ || _();
+        (_--, _ || _());
       }
       return _;
     },
@@ -435,11 +435,11 @@ var _ = _(),
       this.clearGcTimeout();
     }
     scheduleGc() {
-      this.clearGcTimeout(),
+      (this.clearGcTimeout(),
         _(this.gcTime) &&
           (this.#e = setTimeout(() => {
             this.optionalRemove();
-          }, this.gcTime));
+          }, this.gcTime)));
     }
     updateGcTime(_) {
       this.gcTime = Math.max(this.gcTime || 0, _ ?? (_ ? 1 / 0 : 3e5));
@@ -456,7 +456,7 @@ var _ = _(),
     #i;
     #a;
     constructor(_) {
-      super(),
+      (super(),
         (this.#a = !1),
         (this.#i = _.defaultOptions),
         this.setOptions(_.options),
@@ -466,7 +466,7 @@ var _ = _(),
         (this.queryHash = _.queryHash),
         (this.#e = _(this.options)),
         (this.state = _.state ?? this.#e),
-        this.scheduleGc();
+        this.scheduleGc());
     }
     get meta() {
       return this.options.meta;
@@ -475,11 +475,11 @@ var _ = _(),
       return this.#r?.promise;
     }
     setOptions(_) {
-      (this.options = {
+      ((this.options = {
         ...this.#i,
         ..._,
       }),
-        this.updateGcTime(this.options.gcTime);
+        this.updateGcTime(this.options.gcTime));
     }
     optionalRemove() {
       !this.observers.length &&
@@ -507,16 +507,16 @@ var _ = _(),
     }
     cancel(_) {
       let _ = this.#r?.promise;
-      return this.#r?.cancel(_), _ ? _.then(_).catch(_) : Promise.resolve();
+      return (this.#r?.cancel(_), _ ? _.then(_).catch(_) : Promise.resolve());
     }
     destroy() {
-      super.destroy(),
+      (super.destroy(),
         this.cancel({
           silent: !0,
-        });
+        }));
     }
     reset() {
-      this.destroy(), this.setState(this.#e);
+      (this.destroy(), this.setState(this.#e));
     }
     isActive() {
       return this.observers.some((_) => _(_.options.enabled, this) !== !1);
@@ -542,20 +542,20 @@ var _ = _(),
       );
     }
     onFocus() {
-      this.observers
+      (this.observers
         .find((_) => _.shouldFetchOnWindowFocus())
         ?.refetch({
           cancelRefetch: !1,
         }),
-        this.#r?.continue();
+        this.#r?.continue());
     }
     onOnline() {
-      this.observers
+      (this.observers
         .find((_) => _.shouldFetchOnReconnect())
         ?.refetch({
           cancelRefetch: !1,
         }),
-        this.#r?.continue();
+        this.#r?.continue());
     }
     addObserver(_) {
       this.observers.includes(_) ||
@@ -599,7 +599,7 @@ var _ = _(),
           this.cancel({
             silent: !0,
           });
-        else if (this.#r) return this.#r.continueRetry(), this.#r.promise;
+        else if (this.#r) return (this.#r.continueRetry(), this.#r.promise);
       }
       if ((_ && this.setOptions(_), !this.options.queryFn)) {
         let _ = this.observers.find((_) => _.options.queryFn);
@@ -630,7 +630,7 @@ var _ = _(),
             );
           },
         };
-      _(_),
+      (_(_),
         this.options.behavior?.onFetch(_, this),
         (this.#t = this.state),
         (this.state.fetchStatus === `idle` ||
@@ -638,9 +638,9 @@ var _ = _(),
           this.#o({
             type: `fetch`,
             meta: _.fetchOptions?.meta,
-          });
+          }));
       let _ = (_) => {
-        (_(_) && _.silent) ||
+        ((_(_) && _.silent) ||
           this.#o({
             type: `error`,
             error: _,
@@ -648,7 +648,7 @@ var _ = _(),
           _(_) ||
             (this.#n.config.onError?.(_, this),
             this.#n.config.onSettled?.(this.state.data, _, this)),
-          this.scheduleGc();
+          this.scheduleGc());
       };
       return (
         (this.#r = _({
@@ -664,9 +664,9 @@ var _ = _(),
                 _(_);
                 return;
               }
-              this.#n.config.onSuccess?.(_, this),
+              (this.#n.config.onSuccess?.(_, this),
                 this.#n.config.onSettled?.(_, this.state.error, this),
-                this.scheduleGc();
+                this.scheduleGc());
             }
           },
           onError: _,
@@ -764,17 +764,17 @@ var _ = _(),
             };
         }
       };
-      (this.state = _(this.state)),
+      ((this.state = _(this.state)),
         _.batch(() => {
-          this.observers.forEach((_) => {
+          (this.observers.forEach((_) => {
             _.onQueryUpdate();
           }),
             this.#n.notify({
               query: this,
               type: `updated`,
               action: _,
-            });
-        });
+            }));
+        }));
     }
   };
 function _(_, _) {
@@ -836,35 +836,3 @@ var _ = _(_(), 1),
       children: _,
     })
   );
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};

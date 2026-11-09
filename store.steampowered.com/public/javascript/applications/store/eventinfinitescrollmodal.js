@@ -82,8 +82,8 @@ var y = e(i()),
         })
         .catch((e) => {
           let t = s(e);
-          console.error(`EventInfiniteScrollModal failed ` + t.strErrorMsg, t),
-            this.setState({ bLoading: !1 });
+          (console.error(`EventInfiniteScrollModal failed ` + t.strErrorMsg, t),
+            this.setState({ bLoading: !1 }));
         });
     }
     async HandleReadEvent() {

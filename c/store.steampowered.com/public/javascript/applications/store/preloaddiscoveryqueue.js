@@ -14,4 +14,3 @@ function _() {
     _ && !_
   );
 }
-export { _ };

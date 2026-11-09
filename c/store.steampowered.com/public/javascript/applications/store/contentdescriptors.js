@@ -7,7 +7,7 @@ function _(_) {
   let _ = [];
   switch (_) {
     case 5:
-      _.push(2), _.push(1);
+      (_.push(2), _.push(1));
     case 1:
       _.push(4);
     case 4:
@@ -16,11 +16,11 @@ function _(_) {
   return _;
 }
 var _ = new Map();
-_.set(2, 5), _.set(1, 5), _.set(4, 1), _.set(3, 4);
+(_.set(2, 5), _.set(1, 5), _.set(4, 1), _.set(3, 4));
 function _(_) {
   let _ = [],
     _ = _.get(_);
-  return _ && (_.push(_), _.push(..._(_))), _;
+  return (_ && (_.push(_), _.push(..._(_))), _);
 }
 function _(_) {
   return _({
@@ -99,4 +99,3 @@ function _(_, _ = !1) {
     _
   );
 }
-export { _, _, _, _, _, _ };

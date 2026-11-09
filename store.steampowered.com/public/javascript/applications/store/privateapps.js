@@ -24,9 +24,9 @@ var b = e(t(), 1),
   x = class e extends b.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.appids || d(e.M()),
-        b.Message.initialize(this, t, 0, -1, [1], null);
+        b.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -49,7 +49,7 @@ var b = e(t(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= a(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= a(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -70,14 +70,14 @@ var b = e(t(), 1),
     }
     serializeBinary() {
       var t = new b.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       p(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new b.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivateAppList`;
@@ -86,9 +86,9 @@ var b = e(t(), 1),
   S = class e extends b.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.appids || d(e.M()),
-        b.Message.initialize(this, t, 0, -1, [1], null);
+        b.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -112,7 +112,7 @@ var b = e(t(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= a(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= a(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -133,14 +133,14 @@ var b = e(t(), 1),
     }
     serializeBinary() {
       var t = new b.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       p(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new b.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivateApps_ToggleAppPrivacy_Request`;
@@ -149,7 +149,7 @@ var b = e(t(), 1),
   C = class e extends b.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), b.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), b.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -170,12 +170,12 @@ var b = e(t(), 1),
     }
     serializeBinary() {
       var t = new b.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new b.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivateApps_ToggleAppPrivacy_Response`;
@@ -184,7 +184,7 @@ var b = e(t(), 1),
   w = class e extends b.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      super(), b.Message.initialize(this, e, 0, -1, void 0, null);
+      (super(), b.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -205,12 +205,12 @@ var b = e(t(), 1),
     }
     serializeBinary() {
       var t = new b.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
       var t = new b.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivateApps_GetPrivateAppList_Request`;
@@ -219,9 +219,9 @@ var b = e(t(), 1),
   T = class e extends b.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.private_apps || d(e.M()),
-        b.Message.initialize(this, t, 0, -1, void 0, null);
+        b.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -232,7 +232,7 @@ var b = e(t(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= a(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= a(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -253,14 +253,14 @@ var b = e(t(), 1),
     }
     serializeBinary() {
       var t = new b.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       p(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new b.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivateApps_GetPrivateAppList_Response`;
@@ -269,9 +269,9 @@ var b = e(t(), 1),
   E = class e extends b.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.private_apps || d(e.M()),
-        b.Message.initialize(this, t, 0, -1, void 0, null);
+        b.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -282,7 +282,7 @@ var b = e(t(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= a(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= a(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -303,14 +303,14 @@ var b = e(t(), 1),
     }
     serializeBinary() {
       var t = new b.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       p(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new b.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAccountPrivateApsClient_NotifyPrivateAppListChanged_Notification`;
@@ -357,7 +357,7 @@ async function M(e, t) {
     let t = Error(
       `WritePrivateAppsToLocalCache failed with result ${e?.result}, ${e?.message}`,
     );
-    c().ReportError(t, { bIncludeMessageInIdentifier: !0 }), console.warn(t);
+    (c().ReportError(t, { bIncludeMessageInIdentifier: !0 }), console.warn(t));
   }
 }
 var N = [`AccountPrivateApps`];
@@ -422,7 +422,7 @@ function R() {
 }
 async function z(e, t, n) {
   let r = g.Init(S);
-  r.Body().set_appids(t.slice()), r.Body().set_private(n);
+  (r.Body().set_appids(t.slice()), r.Body().set_private(n));
   let i = await D.ToggleAppPrivacy(e, r);
   if (!i.BSuccess()) throw i.GetErrorMessage();
 }

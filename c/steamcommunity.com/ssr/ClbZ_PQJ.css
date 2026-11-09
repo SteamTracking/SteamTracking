@@ -18,7 +18,7 @@
 }
 .OxjeFj7C-bw- img,
 .OxjeFj7C-bw- canvas {
-  aspect-ratio: 1920 / 620;
+  aspect-ratio: 1920/620;
   filter: opacity(0.4);
   -webkit-mask-image: linear-gradient(#000 78%, #0000 98%);
   height: 100%;

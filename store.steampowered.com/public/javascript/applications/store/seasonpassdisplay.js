@@ -271,7 +271,7 @@ function X(e) {
             underline: `always`,
             contrast: `title`,
             onClick: (e) => {
-              e.preventDefault(), e.stopPropagation(), i(!0);
+              (e.preventDefault(), e.stopPropagation(), i(!0));
             },
             children: y(`#SeasonPass_ReadEvent`),
           }),

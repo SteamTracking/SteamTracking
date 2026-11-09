@@ -15,10 +15,10 @@ function _(_) {
   _();
 }
 function _(_) {
-  (_ ||= _),
+  ((_ ||= _),
     _({
       reactionScheduler: _,
-    });
+    }));
 }
 function _(_) {
   return _(_);
@@ -32,7 +32,7 @@ var _ = 1e4,
   _ = (function () {
     function _(_) {
       var _ = this;
-      Object.defineProperty(this, "finalize", {
+      (Object.defineProperty(this, "finalize", {
         enumerable: !0,
         configurable: !0,
         writable: !0,
@@ -55,15 +55,15 @@ var _ = 1e4,
           configurable: !0,
           writable: !0,
           value: function (_) {
-            _ === void 0 && (_ = _),
+            (_ === void 0 && (_ = _),
               clearTimeout(_.sweepTimeout),
-              (_.sweepTimeout = void 0);
+              (_.sweepTimeout = void 0));
             var _ = Date.now();
-            _.registrations.forEach(function (_, _) {
+            (_.registrations.forEach(function (_, _) {
               _ - _.registeredAt >= _ &&
                 (_.finalize(_.value), _.registrations.delete(_));
             }),
-              _.registrations.size > 0 && _.scheduleSweep();
+              _.registrations.size > 0 && _.scheduleSweep());
           },
         }),
         Object.defineProperty(this, "finalizeAllImmediately", {
@@ -73,7 +73,7 @@ var _ = 1e4,
           value: function () {
             _.sweep(0);
           },
-        });
+        }));
     }
     return (
       Object.defineProperty(_.prototype, "register", {
@@ -81,11 +81,11 @@ var _ = 1e4,
         configurable: !0,
         writable: !0,
         value: function (_, _, _) {
-          this.registrations.set(_, {
+          (this.registrations.set(_, {
             value: _,
             registeredAt: Date.now(),
           }),
-            this.scheduleSweep();
+            this.scheduleSweep());
         },
       }),
       Object.defineProperty(_.prototype, "unregister", {
@@ -111,7 +111,7 @@ var _ = 1e4,
   _ = new (typeof FinalizationRegistry < `u` ? FinalizationRegistry : _)(
     function (_) {
       var _;
-      (_ = _.reaction) == null || _.dispose(), (_.reaction = null);
+      ((_ = _.reaction) == null || _.dispose(), (_.reaction = null));
     },
   ),
   _ = _(),
@@ -119,7 +119,7 @@ var _ = 1e4,
 function _(_) {
   _.reaction = new _(`observer${_.name}`, function () {
     var _;
-    (_.stateVersion = Symbol()), (_ = _.onStoreChange) == null || _.call(_);
+    ((_.stateVersion = Symbol()), (_ = _.onStoreChange) == null || _.call(_));
   });
 }
 function _(_, _) {
@@ -138,9 +138,9 @@ function _(_, _) {
           _.reaction || (_(_), (_.stateVersion = Symbol())),
           function () {
             var _;
-            (_.onStoreChange = null),
+            ((_.onStoreChange = null),
               (_ = _.reaction) == null || _.dispose(),
-              (_.reaction = null);
+              (_.reaction = null));
           }
         );
       },
@@ -151,9 +151,9 @@ function _(_, _) {
     _.current = _;
   }
   var _ = _.current;
-  _.reaction || (_(_), _.register(_, _, _)),
+  (_.reaction || (_(_), _.register(_, _, _)),
     _.useDebugValue(_.reaction, _),
-    (0, _.useSyncExternalStore)(_.subscribe, _.getSnapshot, _);
+    (0, _.useSyncExternalStore)(_.subscribe, _.getSnapshot, _));
   var _, _;
   if (
     (_.reaction.track(function () {
@@ -229,9 +229,9 @@ function _(_, _) {
     _[_] || Object.defineProperty(_, _, Object.getOwnPropertyDescriptor(_, _));
   });
 }
-_(_.unstable_batchedUpdates), _.finalizeAllImmediately;
+(_(_.unstable_batchedUpdates), _.finalizeAllImmediately);
 function _(_, _) {
-  return _ === void 0 && (_ = `observed`), _(_, _);
+  return (_ === void 0 && (_ = `observed`), _(_, _));
 }
 var _ = _();
 function _(_) {
@@ -263,11 +263,11 @@ function _(_) {
       if (!_ || !_ || !_ || (_ && _ && !_)) return;
       let _ = _.ownerDocument.defaultView;
       if (!_ || _.closed) return;
-      (_.style.display = `flex`),
+      ((_.style.display = `flex`),
         requestAnimationFrame(() => {
           _.style.display = `block`;
         }),
-        _.showPopover && _.showPopover();
+        _.showPopover && _.showPopover());
       let _ = _.querySelector(`.hover_arrow.left`),
         _ = _.querySelector(`.hover_arrow.right`),
         _ = _.querySelector(`.hover_arrow.top`),
@@ -276,10 +276,10 @@ function _(_) {
         _ = _.getBoundingClientRect(),
         _ = _ == `overlay` || _ == `overlay-center`,
         _ = _.getBoundingClientRect();
-      _ && _.setAttribute(`style`, `display: none;`),
+      (_ && _.setAttribute(`style`, `display: none;`),
         _ && _.setAttribute(`style`, `display: none;`),
         _ && _.setAttribute(`style`, `display: none;`),
-        _ && _.setAttribute(`style`, `display: none;`);
+        _ && _.setAttribute(`style`, `display: none;`));
       let _ = _;
       _.matches(`:dir(rtl)`) &&
         (_ === `left` ? (_ = `right`) : _ === `right` && (_ = `left`));
@@ -302,12 +302,12 @@ function _(_) {
           (_ < _ && ((_ = _), (_ = _), (_ = _), (_ = _), (_ = _)),
           _ > (_ ?? 10))
         ) {
-          console.log(
+          (console.log(
             `Not showing hover because it didn't fit in the main or alt direction`,
           ),
             _.setAttribute(`style`, `display: none;`),
             _(!0),
-            _?.();
+            _?.());
           return;
         }
       }
@@ -326,10 +326,10 @@ function _(_) {
         case `bottom`:
           _ = _;
       }
-      _ && _.setAttribute(`style`, ``),
+      (_ && _.setAttribute(`style`, ``),
         _ != _ && _(_),
         _ != _ && _(_),
-        _ || _(!0);
+        _ || _(!0));
     }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _]);
   _.useEffect(() => _(), [_]);
   let _ = Object.assign(
@@ -384,37 +384,37 @@ function _(_, _, _, _, _, _, _) {
     _;
   switch (_) {
     case `right`:
-      (_ = _.right + _ - _.left),
+      ((_ = _.right + _ - _.left),
         (_ = _(_.top - _.top, _.height, _.height, _)),
         (_ = Math.max(0, _ + _.width - _)),
-        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
+        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]));
       break;
     case `left`:
-      (_ = _.left - _ - _.width - _.left),
+      ((_ = _.left - _ - _.width - _.left),
         (_ = _(_.top - _.top, _.height, _.height, _)),
         (_ = Math.max(0, 0 - _)),
-        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
+        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]));
       break;
     case `bottom`:
-      (_ = _(_.left - _.left, _.width, _.width, _)),
+      ((_ = _(_.left - _.left, _.width, _.width, _)),
         (_ = _.bottom + _ - _.top),
         (_ = Math.max(0, _ + _.height - _)),
-        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
+        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]));
       break;
     case `top`:
-      (_ = _(_.left - _.left, _.width, _.width, _)),
+      ((_ = _(_.left - _.left, _.width, _.width, _)),
         (_ = _.top - _ - _.height - _.top),
         (_ = Math.max(0, 0 - _)),
-        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
+        (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]));
       break;
     case `overlay`:
-      (_ = _.left - _.left), (_ = _.top - _.top), (_ = 0), (_ = [0, 0]);
+      ((_ = _.left - _.left), (_ = _.top - _.top), (_ = 0), (_ = [0, 0]));
       break;
     case `overlay-center`:
-      (_ = _.left - _.left + 0.5 * _.width - 0.5 * _.width),
+      ((_ = _.left - _.left + 0.5 * _.width - 0.5 * _.width),
         (_ = _.top - _.top + 0.5 * _.height - 0.5 * _.height),
         (_ = 0),
-        (_ = [0, 0]);
+        (_ = [0, 0]));
   }
   return {
     nLeft: _,
@@ -428,9 +428,9 @@ function _(_, _, _, _) {
 }
 function _(_, _, _, _, _) {
   let _ = Math.max(_[0], _[1]);
-  _ !== void 0 && (_ = Math.min(_, _)), (_ = Math.max(0, _));
+  (_ !== void 0 && (_ = Math.min(_, _)), (_ = Math.max(0, _)));
   let _ = _[0] > _[1] ? _ : -_;
-  return _ === `left` || _ === `right` ? (_ += _) : (_ += _), [_, _];
+  return (_ === `left` || _ === `right` ? (_ += _) : (_ += _), [_, _]);
 }
 var _ = `oQJ4ZJN3E6g-`,
   _ = `b1ZLfKTPdqk-`;
@@ -610,4 +610,3 @@ function _(_) {
   });
   return _ ? _.createPortal(_, _.ownerDocument.body) : _;
 }
-export { _, _, _, _, _, _, _, _, _, _, _ };

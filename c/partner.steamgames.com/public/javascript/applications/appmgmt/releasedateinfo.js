@@ -176,7 +176,7 @@ var _ = class {
   }
   add(_) {
     let _ = JSON.stringify(_);
-    return this.rgSet.add(_), this;
+    return (this.rgSet.add(_), this);
   }
   delete(_) {
     let _ = JSON.stringify(_);
@@ -228,7 +228,7 @@ function _(_) {
         _ instanceof File && _.set(_, _);
       });
       let _ = [];
-      _.forEach((_, _) => {
+      (_.forEach((_, _) => {
         _.has(_) || _.push(_);
       }),
         _.mutate({
@@ -237,13 +237,13 @@ function _(_) {
           mapAltText: _,
           rgGraphicsToDelete: _,
         }),
-        _(`alert`);
+        _(`alert`));
     },
     _ = () => {
-      _(new _(_)), _(`closed`);
+      (_(new _(_)), _(`closed`));
     },
     _ = () => {
-      _(`refreshing`), window.location.reload();
+      (_(`refreshing`), window.location.reload());
     },
     _ = _.useId();
   return (0, _.jsxs)(_.Fragment, {
@@ -442,7 +442,7 @@ function _(_) {
   let [_, _] = (0, _.useState)(``),
     _ = (_, _) => (_) => {
       let _ = new _(_);
-      _.target.checked
+      (_.target.checked
         ? _.add(
             _ === `package`
               ? {
@@ -461,7 +461,7 @@ function _(_) {
                   bundleid: _,
                 },
           ),
-        _(_);
+        _(_));
     },
     _ = (_) => {
       let _ = _.target.value;
@@ -598,20 +598,20 @@ function _(_) {
           return;
         }
         let _ = new Map(_);
-        _.set(_, _), _(_), _(null);
+        (_.set(_, _), _(_), _(null));
       }
     },
     _ = (_) => {
       let _ = new Map(_);
-      _.set(_, _.target.value), _(_);
+      (_.set(_, _.target.value), _(_));
     },
     _ = (_) => {
-      _(_.target.value), _(null);
+      (_(_.target.value), _(null));
     },
     _ = () => {
       if (_.has(_)) {
         let _ = new Map(_);
-        _.delete(_), _(_), _(null);
+        (_.delete(_), _(_), _(null));
       }
     },
     _ = (_) => (_.has(_) && _.get(_) instanceof File ? _ : _.has(_) ? _ : _);
@@ -688,7 +688,7 @@ function _(_) {
               return;
             }
             let _ = new Map(_);
-            _.set(_, _), _(_), _(null);
+            (_.set(_, _), _(_), _(null));
           }
         },
         children: _
@@ -803,10 +803,10 @@ function _(_) {
     _ = _?.strReleaseState == `prerelease`,
     _ = _.useCallback(
       (_, _) => {
-        _.invalidateQueries({
+        (_.invalidateQueries({
           queryKey: [`ReleaseRequest`, _],
         }),
-          _(_, _, _);
+          _(_, _, _));
       },
       [_, _, _],
     ),
@@ -862,7 +862,7 @@ var _ = _.memo(function (_) {
     [_, _] = _.useState(`none`),
     [_, _] = _.useState(),
     _ = _.useCallback((_) => {
-      _(_), _(`none`);
+      (_(_), _(`none`));
     }, []),
     _ = _.useCallback(() => {
       _
@@ -875,7 +875,7 @@ var _ = _.memo(function (_) {
               strComingSoonDisplay: _,
             })
               .then(() => {
-                _(`refreshing`), _(_, _);
+                (_(`refreshing`), _(_, _));
               })
               .catch((_) => {
                 _(_);
@@ -1095,9 +1095,9 @@ async function _(_) {
   let { unAppID: _, rtReleaseDate: _, strComingSoonDisplay: _ } = _,
     _ = `${_.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${_}`,
     _ = new FormData();
-  _.append(`sessionid`, _()),
+  (_.append(`sessionid`, _()),
     _ && _.append(`release_date`, _.toString()),
-    _.append(`coming_soon_display`, _);
+    _.append(`coming_soon_display`, _));
   let _ = await _.default.post(_, _);
   if (!_.data || _.data.success != 1)
     throw _(
@@ -1140,7 +1140,7 @@ function _(_) {
     _ = _.useCallback(() => _(!0), []),
     _ = _.useCallback(() => _(!1), []),
     _ = _.useCallback((_, _, _) => {
-      _(_), _(_), _(!1), _ && _(!0);
+      (_(_), _(_), _(!1), _ && _(!0));
     }, []);
   return (0, _.jsxs)(_.Fragment, {
     children: [
@@ -1246,11 +1246,11 @@ function _(_) {
 function _(_) {
   let { appid: _, bIsGameEdit: _, closeModal: _ } = _,
     _ = _.useCallback(() => {
-      _
+      (_
         ? (window.TabSelect(`tab_publish`), window.scrollTo(0, 0))
         : (window.location.href =
             _.GameEditByAppID(_.toString()) + `?activetab=tab_publish`),
-        _();
+        _());
     }, [_, _, _]);
   return (0, _.jsx)(_, {
     active: !0,
@@ -1264,4 +1264,3 @@ function _(_) {
     }),
   });
 }
-export { _, _, _, _, _, _, _, _, _ };

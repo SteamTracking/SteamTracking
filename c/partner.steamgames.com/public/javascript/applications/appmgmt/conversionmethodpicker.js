@@ -77,7 +77,7 @@ function _(_) {
                   },
                   selectedOption: _,
                   onChange: (_) => {
-                    _(_.data), _ && _(_.data);
+                    (_(_.data), _ && _(_.data));
                   },
                 }),
               }),

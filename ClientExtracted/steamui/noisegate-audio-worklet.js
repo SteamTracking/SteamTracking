@@ -57,7 +57,7 @@
           "Noise gate had to re-initialize due to parameters changing",
         );
         let a = 0.0025;
-        (this.alpha_ = this.getAlphaFromTimeConstant_(
+        ((this.alpha_ = this.getAlphaFromTimeConstant_(
           a,
           this.parameters.sampleRate,
         )),
@@ -66,19 +66,19 @@
           (this.channelIndex = 0),
           (this.channel_ = new Float32Array(this.parameters.bufferSize)),
           (this.envelope_ = new Float32Array(this.parameters.bufferSize)),
-          (this.weights_ = new Float32Array(this.parameters.bufferSize));
+          (this.weights_ = new Float32Array(this.parameters.bufferSize)));
       }
       let h = e[0][0],
         c = e[0].length;
       for (let a = 0; a < h.length; ++a) {
         let n = h[a];
         for (let i = 1; i < c; ++i) n = Math.max(n, e[0][i][a]);
-        (this.channel_[this.channelIndex] = n),
+        ((this.channel_[this.channelIndex] = n),
           this.channelIndex++,
           this.channelIndex >= this.parameters.bufferSize &&
-            (this.channelIndex = 0);
+            (this.channelIndex = 0));
       }
-      this.detectLevel_(), this.computeWeights_();
+      (this.detectLevel_(), this.computeWeights_());
       let l = e[0];
       for (let a = 0; a < s.length; ++a) {
         let n = s[a];
@@ -87,7 +87,7 @@
             u = n[i];
           for (let p = 0; p < f.length; ++p) {
             let o = this.weights_[p];
-            o < 0.2 && !this.m_bWasLastCutting
+            (o < 0.2 && !this.m_bWasLastCutting
               ? ((this.m_bWasLastCutting = !0),
                 (this.m_bWasLastOpen = !1),
                 this.port.postMessage(
@@ -98,7 +98,7 @@
                 (this.port.postMessage("Mic input now above threshold."),
                 (this.m_bWasLastOpen = !0),
                 (this.m_bWasLastCutting = !1)),
-              (u[p] = f[p] * o);
+              (u[p] = f[p] * o));
           }
         }
       }
@@ -119,14 +119,14 @@
         s = 1,
         t = 1,
         r = 1;
-      this.parameters.attack > 0 &&
+      (this.parameters.attack > 0 &&
         ((e = Math.ceil(this.parameters.sampleRate * this.parameters.attack)),
         (t = 1 / e)),
         this.parameters.release > 0 &&
           ((s = Math.ceil(
             this.parameters.sampleRate * this.parameters.release,
           )),
-          (r = 1 / s));
+          (r = 1 / s)));
       for (let h = 0; h < this.parameters.bufferSize; h++) {
         if (m.toDecibel(2 * this.envelope_[h]) < this.parameters.threshold) {
           const l = this.previousWeight_ - t;

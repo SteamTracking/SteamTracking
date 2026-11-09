@@ -34,7 +34,7 @@ var _ = _(_()),
   _ = _();
 _();
 var _ = new Map();
-_.set(2, 5), _.set(1, 5), _.set(4, 1), _.set(3, 4);
+(_.set(2, 5), _.set(1, 5), _.set(4, 1), _.set(3, 4));
 function _(_) {
   let _ = null;
   switch (_) {
@@ -81,11 +81,11 @@ var _ = `ZPIxJReBVKs-`,
       [_, _] = _.useState(!1);
     _.useEffect(() => {
       _().then((_) => {
-        _(_.rgCategories), _(_.bHasUnpublishedChanges), _(!0);
+        (_(_.rgCategories), _(_.bHasUnpublishedChanges), _(!0));
       });
     }, []);
     let _ = _.useCallback((_) => {
-      _(_), _(!0);
+      (_(_), _(!0));
     }, []);
     return _
       ? (0, _.jsxs)(`div`, {
@@ -134,7 +134,7 @@ var _ = `ZPIxJReBVKs-`,
                       (0, _.jsx)(_, {
                         categories: _,
                         onSave: () => {
-                          _(!1), _(!0);
+                          (_(!1), _(!0));
                         },
                       }),
                       window,
@@ -242,7 +242,7 @@ function _(_) {
   let { item: _, rgTags: _, fnSaveCategory: _, bOpenEditor: _ } = _,
     [_, _, _] = _(_),
     _ = (_, _) => {
-      _.preventDefault(), _.stopPropagation(), _();
+      (_.preventDefault(), _.stopPropagation(), _());
     };
   return (0, _.jsx)(`div`, {
     className: _,
@@ -431,7 +431,7 @@ function _(_) {
         children: (0, _.jsx)(_, {
           onCancel: _,
           onOK: () => {
-            _(_), _();
+            (_(_), _());
           },
           strOKText: `Save`,
         }),
@@ -539,10 +539,10 @@ function _(_) {
       (0, _.jsx)(_, {
         onClick: () => {
           let _ = [];
-          _.push([`AppID`, `Sale Rank`]),
+          (_.push([`AppID`, `Sale Rank`]),
             _.top_games.forEach((_) => {
               _.push([`` + _.appid, `` + _.long_term_sale_rank]);
-            });
+            }));
           let _ = (_.handle || `top100`).replace(` `, `_`) + `.csv`;
           _.WriteCSVToFile(_, _);
         },
@@ -551,10 +551,10 @@ function _(_) {
       (0, _.jsx)(_, {
         onClick: () => {
           let _ = [];
-          _.push([`AppID`]),
+          (_.push([`AppID`]),
             _.all_appid.forEach((_) => {
               _.push([`` + _]);
-            });
+            }));
           let _ = (_.handle || `allgames`).replace(` `, `_`) + `.csv`;
           _.WriteCSVToFile(_, _);
         },

@@ -51,4 +51,3 @@ function _(_) {
     return new _(_, _(_), _.LANGUAGE);
   }, []);
 }
-export { _, _, _, _ };

@@ -136,7 +136,7 @@ function k(e) {
     interactions: {
       hover: (e) => {
         let t = { ...e, delay: { open: r, close: 0 } };
-        return i && (t = { ...t, handleClose: null }), t;
+        return (i && (t = { ...t, handleClose: null }), t);
       },
     },
     presentation: `anchor`,

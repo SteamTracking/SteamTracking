@@ -6,8 +6,8 @@ var t = `fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb`,
   n = `https://steamloopback.host/clientassets/avatars/`;
 function r(r, i, a = `auto`) {
   let o = `.jpg`;
-  (r && r !== `0000000000000000000000000000000000000000`) || (r = t),
-    r.length == 44 && ((o = r.substr(-4)), (r = r.substr(0, 40)));
+  ((r && r !== `0000000000000000000000000000000000000000`) || (r = t),
+    r.length == 44 && ((o = r.substr(-4)), (r = r.substr(0, 40))));
   let s = a == `client` || (a == `auto` && e.IN_STEAMUI),
     c = e.AVATAR_BASE_URL;
   return (

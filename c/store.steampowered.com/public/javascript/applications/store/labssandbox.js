@@ -56,7 +56,7 @@ var _ = _(_()),
         if (_.data) {
           let _ = [];
           for (let _ of _.data) _ != "default" && _.push(_);
-          _.sort(), (_ = [`default`, ..._]), (this.rgModelNames = _);
+          (_.sort(), (_ = [`default`, ..._]), (this.rgModelNames = _));
         }
       });
     }
@@ -84,11 +84,11 @@ var _ = _(_()),
         for (let _ = 0; _ < _.path.length; _++) {
           let _ = _.path[_],
             _ = _.cost - _;
-          (_ = _.cost),
+          ((_ = _.cost),
             _.push({
               appid: _.node,
               similarity: Math.cos(_),
-            });
+            }));
         }
         return _;
       }
@@ -114,9 +114,9 @@ var _ = _(_()),
       throw Error(`Unable to fetch cost estimates`);
     }
   };
-_([_], _.prototype, `rgModelNames`, void 0),
+(_([_], _.prototype, `rgModelNames`, void 0),
   _([_], _.prototype, `GetNeighbors`, null),
-  _([_], _.prototype, `EstimateCosts`, null);
+  _([_], _.prototype, `EstimateCosts`, null));
 var _ = class {
     m_fnCompare;
     m_Heap = [];
@@ -128,7 +128,7 @@ var _ = class {
       return this.m_Length;
     }
     Clear() {
-      (this.m_Heap = []), (this.m_Length = 0);
+      ((this.m_Heap = []), (this.m_Length = 0));
     }
     Peek() {
       if (this.m_Length > 0) return this.m_Heap[0];
@@ -145,11 +145,11 @@ var _ = class {
       }
     }
     Push(_) {
-      this.m_Heap.length == this.m_Length
+      (this.m_Heap.length == this.m_Length
         ? this.m_Heap.push(_)
         : (this.m_Heap[this.m_Length] = _),
         this.m_Length++,
-        this.BubbleUp();
+        this.BubbleUp());
     }
     FindElement(_) {
       for (let _ = 0; _ < this.m_Length; _++)
@@ -160,7 +160,7 @@ var _ = class {
           };
     }
     LowerPriorityOfElement(_, _) {
-      (this.m_Heap[_] = _), this.BubbleUp(_);
+      ((this.m_Heap[_] = _), this.BubbleUp(_));
     }
     BubbleDown() {
       let _ = 0;
@@ -178,17 +178,17 @@ var _ = class {
           _ != _)
         ) {
           let _ = this.m_Heap[_];
-          (this.m_Heap[_] = this.m_Heap[_]), (this.m_Heap[_] = _), (_ = _);
+          ((this.m_Heap[_] = this.m_Heap[_]), (this.m_Heap[_] = _), (_ = _));
         } else break;
       } while (_ < this.m_Length);
     }
     BubbleUp(_) {
       let _ = _ || this.m_Length - 1;
-      for (; _ > 0; ) {
+      for (; _ > 0;) {
         let _ = (_ - 1) >> 1;
         if (this.m_fnCompare(this.m_Heap[_], this.m_Heap[_]) > 0) {
           let _ = this.m_Heap[_];
-          (this.m_Heap[_] = this.m_Heap[_]), (this.m_Heap[_] = _), (_ = _);
+          ((this.m_Heap[_] = this.m_Heap[_]), (this.m_Heap[_] = _), (_ = _));
         } else break;
       }
     }
@@ -199,10 +199,10 @@ var _ = class {
     m_fnEquality;
     m_fnIterationCallback;
     constructor(_, _, _, _) {
-      (this.m_fnGetNeighbors = _),
+      ((this.m_fnGetNeighbors = _),
         (this.m_fnEstimateCosts = _),
         (this.m_fnEquality = _),
-        (this.m_fnIterationCallback = _);
+        (this.m_fnIterationCallback = _));
     }
     async FindPath(_, _, _) {
       let _ = new _((_, _) => _.cost - _.cost),
@@ -215,14 +215,14 @@ var _ = class {
         _ = new Map(),
         _ = new Map(),
         _ = (await this.m_fnEstimateCosts([_], _))[0];
-      _.set(_, _), _.set(_, 0);
+      (_.set(_, _), _.set(_, 0));
       let _ = 0;
-      for (; _.length > 0 && _ < _; ) {
+      for (; _.length > 0 && _ < _;) {
         let _ = _.Pop();
         if (this.m_fnEquality(_.node, _)) {
           let _ = [],
             _ = _.node;
-          for (; _.has(_); ) _.push(_), (_ = _.get(_));
+          for (; _.has(_);) (_.push(_), (_ = _.get(_)));
           let _ = [];
           for (let _ = _.length - 1; _ >= 0; _--)
             _.push({
@@ -273,7 +273,7 @@ var _ = class {
             }
           }
         }
-        _++, this.m_fnIterationCallback && this.m_fnIterationCallback();
+        (_++, this.m_fnIterationCallback && this.m_fnIterationCallback());
       }
       throw Error(`No path found.`);
     }
@@ -322,16 +322,16 @@ var _ = _(_()),
     };
     m_currentRequest = 0;
     constructor(_) {
-      super(_),
+      (super(_),
         this.props.appidInitial &&
           (_.EnsureAppInfoForAppIDs([this.props.appidInitial]).then(() => {
-            _.GetAppInfo(this.props.appidInitial),
+            (_.GetAppInfo(this.props.appidInitial),
               this.setState({
                 appid: this.props.appidInitial,
                 appinfo: _.GetAppInfo(this.props.appidInitial),
-              });
+              }));
           }),
-          (this.state.appid = this.props.appidInitial));
+          (this.state.appid = this.props.appidInitial)));
     }
     OnDisplayClicked() {
       this.setState({
@@ -360,7 +360,7 @@ var _ = _(_()),
                 withCredentials: !0,
               }),
               _;
-            (_ = _?.data?.length
+            ((_ = _?.data?.length
               ? _.data.map((_) =>
                   (0, _.jsxs)(
                     `div`,
@@ -386,7 +386,7 @@ var _ = _(_()),
               this.setState({
                 strSearch: _,
                 rgSuggestions: _,
-              });
+              }));
           }, 250)))
         : this.setState({
             strSearch: ``,
@@ -396,13 +396,13 @@ var _ = _(_()),
     SetSelectedApp(_) {
       _ && _ != 0
         ? _.EnsureAppInfoForAppIDs([_]).then(() => {
-            _.GetAppInfo(_),
+            (_.GetAppInfo(_),
               this.setState({
                 appid: _,
                 appinfo: _.GetAppInfo(_),
                 mode: `display`,
               }),
-              this.props.fnOnSelection && this.props.fnOnSelection(_, this);
+              this.props.fnOnSelection && this.props.fnOnSelection(_, this));
           })
         : this.setState({
             appid: 0,
@@ -457,9 +457,9 @@ var _ = _(_()),
       });
     }
   };
-_([_], _.prototype, `OnDisplayClicked`, null),
+(_([_], _.prototype, `OnDisplayClicked`, null),
   _([_], _.prototype, `UpdateAppSuggestions`, null),
-  _([_], _.prototype, `OnKeyUp`, null);
+  _([_], _.prototype, `OnKeyUp`, null));
 var _ = class extends _.Component {
     render() {
       if (this.props.appid == 0)
@@ -586,7 +586,7 @@ var _ = class extends _.Component {
   similarity_model = `default`;
   app_selector_ref = _.createRef();
   constructor(_) {
-    super(_), _(this), _.default_app && this.SetSelectedApp(_.default_app);
+    (super(_), _(this), _.default_app && this.SetSelectedApp(_.default_app));
   }
   componentDidMount() {
     this.app_selector_ref.current &&
@@ -597,28 +597,28 @@ var _ = class extends _.Component {
   }
   SetSelectedApp(_, _) {
     if (_ || _ != this.selected_app) {
-      (this.similar_apps = []),
+      ((this.similar_apps = []),
         (this.selected_app = _),
         this.app_selector_ref.current &&
-          this.app_selector_ref.current.SetSelectedApp(_);
+          this.app_selector_ref.current.SetSelectedApp(_));
       let _ = `${_.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${_}&model=${this.similarity_model}`;
       _.default.get(_).then((_) => {
         if (_.data && _.data.appid == this.selected_app) {
           let _ = new Set(
             _.data.similar_appids.slice(0, this.props.max_similar),
           );
-          _.add(_.data.appid),
+          (_.add(_.data.appid),
             _.EnsureAppInfoForAppIDs(_).then(() => {
-              (this.similar_apps = _.data.similar_appids),
-                (this.similarity_scores = _.data.similarity_scores);
-            });
+              ((this.similar_apps = _.data.similar_appids),
+                (this.similarity_scores = _.data.similarity_scores));
+            }));
         }
       });
     }
   }
   OnModelChanged(_, _) {
-    (this.similarity_model = _.data),
-      this.SetSelectedApp(this.selected_app, !0);
+    ((this.similarity_model = _.data),
+      this.SetSelectedApp(this.selected_app, !0));
   }
   render() {
     let _ = [],
@@ -682,22 +682,22 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `selected_app`, void 0),
+(_([_], _.prototype, `selected_app`, void 0),
   _([_], _.prototype, `similar_apps`, void 0),
   _([_], _.prototype, `similarity_scores`, void 0),
   _([_], _.prototype, `similarity_model`, void 0),
   _([_], _.prototype, `OnSelectedApp`, null),
   _([_], _.prototype, `SetSelectedApp`, null),
   _([_], _.prototype, `OnModelChanged`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class extends _.Component {
   selected_app = void 0;
   selected_operator = void 0;
   constructor(_) {
-    super(_),
+    (super(_),
       _(this),
       (this.selected_app = _.app),
-      (this.selected_operator = _.operator);
+      (this.selected_operator = _.operator));
   }
   OnSelectedApp(_) {
     _ &&
@@ -706,8 +706,8 @@ var _ = class extends _.Component {
       this.props.fnOnChange && this.props.fnOnChange());
   }
   OnSelectedOperator(_, _) {
-    (this.selected_operator = _.data),
-      this.props.fnOnChange && this.props.fnOnChange();
+    ((this.selected_operator = _.data),
+      this.props.fnOnChange && this.props.fnOnChange());
   }
   render() {
     let _ = [
@@ -750,11 +750,11 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `selected_app`, void 0),
+(_([_], _.prototype, `selected_app`, void 0),
   _([_], _.prototype, `selected_operator`, void 0),
   _([_], _.prototype, `OnSelectedApp`, null),
   _([_], _.prototype, `OnSelectedOperator`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class extends _.Component {
   operands = [];
   similarity_model = `default`;
@@ -762,12 +762,12 @@ var _ = class extends _.Component {
   similarity_scores = [];
   operand_refs;
   constructor(_) {
-    super(_), _(this), (this.operand_refs = []);
+    (super(_), _(this), (this.operand_refs = []));
     for (let _ = 0; _ < _.max_operands; _++)
       this.operand_refs.push(_.createRef());
   }
   OnModelChanged(_, _) {
-    (this.similarity_model = _.data), this.RecomputeExpression();
+    ((this.similarity_model = _.data), this.RecomputeExpression());
   }
   OnAddOperand() {
     this.operands.length < this.props.max_operands &&
@@ -779,8 +779,8 @@ var _ = class extends _.Component {
   OnOperandChanged() {
     for (let _ = 0; _ < this.operands.length; _++) {
       let _ = this.operand_refs[_].current;
-      (this.operands[_].app = _.selected_app),
-        (this.operands[_].operator = _.selected_operator);
+      ((this.operands[_].app = _.selected_app),
+        (this.operands[_].operator = _.selected_operator));
     }
     this.RecomputeExpression();
   }
@@ -815,8 +815,8 @@ var _ = class extends _.Component {
               _.data.similar_appids.slice(0, this.props.max_similar),
             );
             _.EnsureAppInfoForAppIDs(_).then(() => {
-              (this.similar_apps = _.data.similar_appids),
-                (this.similarity_scores = _.data.similarity_scores);
+              ((this.similar_apps = _.data.similar_appids),
+                (this.similarity_scores = _.data.similarity_scores));
             });
           });
         }
@@ -841,7 +841,7 @@ var _ = class extends _.Component {
     let _ = [],
       _ = 0;
     for (let _ of this.operands)
-      _.push(
+      (_.push(
         (0, _.jsx)(
           _,
           {
@@ -853,7 +853,7 @@ var _ = class extends _.Component {
           _,
         ),
       ),
-        _++;
+        _++);
     let _ = null;
     this.operands.length < this.props.max_operands &&
       (_ = (0, _.jsx)(`div`, {
@@ -905,17 +905,17 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `operands`, void 0),
+(_([_], _.prototype, `operands`, void 0),
   _([_], _.prototype, `similarity_model`, void 0),
   _([_], _.prototype, `similar_apps`, void 0),
   _([_], _.prototype, `similarity_scores`, void 0),
   _([_], _.prototype, `OnModelChanged`, null),
   _([_], _.prototype, `OnAddOperand`, null),
   _([_], _.prototype, `OnOperandChanged`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 var _ = class extends _.Component {
   constructor(_) {
-    super(_), _(this);
+    (super(_), _(this));
   }
   app_start = 0;
   app_end = 0;
@@ -940,15 +940,15 @@ var _ = class extends _.Component {
         this.IterationCallback,
       )
         .then((_) => {
-          (this.in_progress = !1),
+          ((this.in_progress = !1),
             _.EnsureAppInfoForAppIDs(_.map((_) => _.appid)).then(() => {
               this.found_path = _;
-            });
+            }));
         })
         .catch((_) => {
-          console.warn(`Caught pathfinding failure because: ` + _.toString()),
+          (console.warn(`Caught pathfinding failure because: ` + _.toString()),
             (this.in_progress = !1),
-            (this.found_path = void 0);
+            (this.found_path = void 0));
         }));
   }
   OnSelectedStartApp(_) {
@@ -1028,7 +1028,7 @@ var _ = class extends _.Component {
     });
   }
 };
-_([_], _.prototype, `app_start`, void 0),
+(_([_], _.prototype, `app_start`, void 0),
   _([_], _.prototype, `app_end`, void 0),
   _([_], _.prototype, `in_progress`, void 0),
   _([_], _.prototype, `progress_iteration`, void 0),
@@ -1037,7 +1037,7 @@ _([_], _.prototype, `app_start`, void 0),
   _([_], _.prototype, `Pathfind`, null),
   _([_], _.prototype, `OnSelectedStartApp`, null),
   _([_], _.prototype, `OnSelectedEndApp`, null),
-  (_ = _([_], _));
+  (_ = _([_], _)));
 function _() {
   return (0, _.jsxs)(_.Fragment, {
     children: [
@@ -1078,9 +1078,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.tag_score_factor || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1142,7 +1142,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1163,14 +1163,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `StoreAppSimilarityPriorityOptions`;
@@ -1179,9 +1179,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.steamid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [3], null);
+        _.Message.initialize(this, _, 0, -1, [3], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1226,7 +1226,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1247,14 +1247,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Request`;
@@ -1263,9 +1263,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.items || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1286,7 +1286,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1307,14 +1307,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Response`;
@@ -1323,9 +1323,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype._ || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [50], null);
+        _.Message.initialize(this, _, 0, -1, [50], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1369,7 +1369,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1390,14 +1390,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem`;
@@ -1406,9 +1406,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.source_app || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1438,7 +1438,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1459,14 +1459,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem_MatchDebugInfo`;
@@ -1475,9 +1475,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.rank || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1507,7 +1507,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1528,14 +1528,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem_PopularityDebugInfo`;
@@ -1544,9 +1544,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.steamid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1590,7 +1590,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1611,14 +1611,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_IdentifyClustersFromPlaytime_Request`;
@@ -1627,9 +1627,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.clusters || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.Message.initialize(this, _, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1650,7 +1650,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1671,14 +1671,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response`;
@@ -1687,9 +1687,9 @@ var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
-      super(),
+      (super(),
         _.prototype.cluster_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [5, 6, 7], null);
+        _.Message.initialize(this, _, 0, -1, [5, 6, 7], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1751,7 +1751,7 @@ var _ = _(_(), 1),
       );
     }
     static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
     }
     toObject(_ = !1) {
       return _.toObject(_, this);
@@ -1772,14 +1772,14 @@ var _ = _(_(), 1),
     }
     serializeBinary() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
     }
     static serializeBinaryToWriter(_, _) {
       _(_._(), _, _);
     }
     serializeBase64String() {
       var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response_Cluster`;
@@ -1827,7 +1827,7 @@ var _ = class {
     m_rgClusters;
     constructor(_, _, _, _, _) {
       let _ = _.Init(_);
-      _(_),
+      (_(_),
         _ && _(_, _),
         _.Body().set_steamid(_ || _.steamid),
         _ && _.Body().set_clusters_to_return(_),
@@ -1838,7 +1838,7 @@ var _ = class {
           for (let _ of _.clusters())
             this.m_rgClusters.push(this.ReadCluster(_, _));
           this.m_callbacksLoaded.Dispatch(this.m_rgClusters);
-        });
+        }));
     }
     ReadCluster(_, _) {
       let _;
@@ -2173,7 +2173,7 @@ function _(_) {
     _ = _();
   if (
     ((0, _.useEffect)(() => {
-      _.Init(_), _(!0);
+      (_.Init(_), _(!0));
     }, [_]),
     !_)
   )

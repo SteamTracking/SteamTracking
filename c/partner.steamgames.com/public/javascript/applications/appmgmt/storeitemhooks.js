@@ -64,7 +64,7 @@ function _(_, _, _, _) {
           _.Get()
             .QueueStoreItemRequest(_, _, _)
             .then((_) => {
-              !_?.token.reason && _.current === _ && _(_ == 1), _();
+              (!_?.token.reason && _.current === _ && _(_ == 1), _());
             })),
         () => _?.cancel(`useStoreItemCache: unmounting`)
       );
@@ -169,4 +169,3 @@ function _(_, _, _) {
 function _(_, _, _) {
   return _(_, 1, _, _);
 }
-export { _, _, _, _, _, _, _ };

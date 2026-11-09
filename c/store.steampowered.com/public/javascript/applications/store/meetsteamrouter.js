@@ -38,13 +38,13 @@ function _(_, _, _, _) {
   return _({
     mutationFn: async ({ bIncludeSelf: _, rgGuests: _ }) => {
       let _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`gid`, _),
         _.append(`accountid`, `` + _),
         _.append(`meetsteam_group_id`, `` + _),
         _.append(`meetsteam_session_id`, `` + _),
         _.append(`include_self`, `` + +!!_),
-        _?.length && _.append(`guests`, _.join(`|`));
+        _?.length && _.append(`guests`, _.join(`|`)));
       let _ = `${_.STORE_BASE_URL}meetsteam/ajaxupdateattendance`;
       return (
         (
@@ -60,11 +60,11 @@ function _(_, _, _) {
   return _({
     mutationFn: async ({ nCapacity: _ }) => {
       let _ = new FormData();
-      _.append(`sessionid`, _()),
+      (_.append(`sessionid`, _()),
         _.append(`gid`, _),
         _.append(`meetsteam_group_id`, `` + _),
         _.append(`meetsteam_session_id`, `` + _),
-        _.append(`capacity`, `` + _);
+        _.append(`capacity`, `` + _));
       let _ = `${_.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`;
       return (
         (
@@ -430,7 +430,7 @@ function _(_) {
         strTitle: _(`#Button_Submit`),
         bAllowFullSize: !0,
         onOK: async () => {
-          _.fnSetLoading(!0),
+          (_.fnSetLoading(!0),
             _.mutateAsync({
               bIncludeSelf: _,
               rgGuests: _,
@@ -445,7 +445,7 @@ function _(_) {
               })
               .catch(() =>
                 _.fnSetStrError(_(`#Login_Error_Network_Description`)),
-              );
+              ));
         },
         children: `Mark as checked in?`,
       });
@@ -505,14 +505,14 @@ var _ = `nRDp-l61YHE-`,
   _ = `_05vyEbktq5k-`;
 function _(_) {
   let _ = new Date(_.getTime());
-  return _.setHours(0, 0, 0, 0), _;
+  return (_.setHours(0, 0, 0, 0), _);
 }
 function _(_, _) {
   return _.reduce((_, _) => {
     let _ = _(_),
       _ = Math.floor(_.getTime() / 1e3),
       _ = _.get(_) || [];
-    return _.set(_, [..._, _]), _;
+    return (_.set(_, [..._, _]), _);
   }, new Map());
 }
 function _(_) {
@@ -679,7 +679,7 @@ function _(_) {
         return _.reduce((_, _) => {
           let _ = `${_.group_id}_${_.session_id}`,
             _ = _.get(_) ?? [];
-          return _.push(_), _.set(_, _), _;
+          return (_.push(_), _.set(_, _), _);
         }, new Map());
     }, []);
   if (!_ || (_.size == 0 && !_)) return;

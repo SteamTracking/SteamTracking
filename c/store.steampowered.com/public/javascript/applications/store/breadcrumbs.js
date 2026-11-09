@@ -47,10 +47,10 @@ var _ = _(_()),
           className: _(`YoutubePreviewContainer`, _, _.imageClassnames),
           onClick: _
             ? (_) => {
-                _.onPlayerActivated && _.onPlayerActivated(),
+                (_.onPlayerActivated && _.onPlayerActivated(),
                   _(!0),
                   _.stopPropagation(),
-                  _.preventDefault();
+                  _.preventDefault());
               }
             : void 0,
           children: [
@@ -137,4 +137,3 @@ function _(_) {
         ],
       });
 }
-export { _, _, _, _ };

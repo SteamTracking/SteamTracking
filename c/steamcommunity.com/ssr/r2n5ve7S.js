@@ -29,4 +29,3 @@ var _ = [
     cssProperty: `--object-position`,
   },
 ];
-export { _ };

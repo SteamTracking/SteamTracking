@@ -210,6 +210,5 @@ function _() {
     _ = _(`rgRecentUnreleasedApps`, `application_config`),
     _ = _ ? Object.keys(_).map((_) => _[_]) : [],
     _ = _(_, _);
-  return _.sort((_, _) => _.nOrder - _.nOrder), _;
+  return (_.sort((_, _) => _.nOrder - _.nOrder), _);
 }
-export { _, _, _ };

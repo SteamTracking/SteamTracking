@@ -76,7 +76,7 @@ function w(e) {
         replaces_tags: c,
         content_descriptors: l,
       } = r;
-    a &&
+    (a &&
       (i.must = Array.isArray(a)
         ? a.map((e) => ({ id: Number(e) }))
         : [{ id: Number(a) }]),
@@ -95,7 +95,7 @@ function w(e) {
       l &&
         typeof l == `string` &&
         (i.content_descriptors = l.split(`,`).map((e) => parseInt(e))),
-      t.push(i);
+      t.push(i));
   }
   return t;
 }
@@ -113,7 +113,7 @@ function T() {
 async function E(e) {
   let t = {};
   for (let n of e)
-    (t[n.handle] = {
+    ((t[n.handle] = {
       handle: n.handle,
       type: n.type,
       loc_token: n.loc_token,
@@ -135,24 +135,24 @@ async function E(e) {
       t[n.handle].mustnot?.length === 1 &&
         (t[n.handle].mustnot = t[n.handle].mustnot[0]),
       t[n.handle].replaces_tags?.length === 1 &&
-        (t[n.handle].replaces_tags = t[n.handle].replaces_tags[0]);
+        (t[n.handle].replaces_tags = t[n.handle].replaces_tags[0]));
   let r =
       o.PARTNER_BASE_URL +
       `admin/store/contenthub/ajaxsavecontenthubcategorieskv`,
     i = new FormData();
-  i.append(`sessionid`, n()),
+  (i.append(`sessionid`, n()),
     i.append(`origin`, self.origin),
-    i.append(`json`, JSON.stringify(t));
+    i.append(`json`, JSON.stringify(t)));
   let a = null;
   try {
     let e = await x.default.post(r, i, { withCredentials: !0 });
     if (e.status === 200 && e.data?.success === 1)
-      return D.Get().ClearDirty(), null;
+      return (D.Get().ClearDirty(), null);
     a = v(e);
   } catch (e) {
     a = v(e);
   }
-  return console.error(`SaveCategoriesKV failed: ` + a.strErrorMsg, a), a;
+  return (console.error(`SaveCategoriesKV failed: ` + a.strErrorMsg, a), a);
 }
 async function se() {
   let e =
@@ -203,7 +203,7 @@ var D = class e {
     return this.m_mapStoreCategories;
   }
   async HintLoad() {
-    return (this.m_promise ||= this.Load()), this.m_promise;
+    return ((this.m_promise ||= this.Load()), this.m_promise);
   }
   async Load() {
     let e =
@@ -214,19 +214,19 @@ var D = class e {
     try {
       let n = await x.default.get(e, { params: t });
       if (n.status === 200 && n.data?.success === 1) {
-        (this.m_rgTags = n.data.tags),
+        ((this.m_rgTags = n.data.tags),
           (this.m_rgCategories = n.data.categories),
           (this.m_mapStoreTags = new Map()),
           this.m_rgTags.forEach((e) => this.m_mapStoreTags.set(e.tagid, e)),
           (this.m_mapStoreCategories = new Map()),
           this.m_rgCategories.forEach((e) =>
             this.m_mapStoreCategories.set(e.categoryid, e),
-          );
+          ));
         return;
       }
-      (this.m_promise = null), (r = v(n));
+      ((this.m_promise = null), (r = v(n)));
     } catch (e) {
-      (this.m_promise = null), (r = v(e));
+      ((this.m_promise = null), (r = v(e)));
     }
     console.error(
       `CStoreTagsAndCategoriesStore.Load failed: ` + r.strErrorMsg,
@@ -234,10 +234,11 @@ var D = class e {
     );
   }
   static Get() {
-    return (e.s_singleton ||= new e()), e.s_singleton;
+    return ((e.s_singleton ||= new e()), e.s_singleton);
   }
 };
-i([t], D.prototype, `m_bDirty`, void 0), i([f], D.prototype, `SetDirty`, null);
+(i([t], D.prototype, `m_bDirty`, void 0),
+  i([f], D.prototype, `SetDirty`, null));
 function ce() {
   return D.Get().BIsDirty();
 }
@@ -250,7 +251,7 @@ function le() {
         D.Get()
           .HintLoad()
           .then(() => {
-            t(D.Get().GetTags()), r(D.Get().GetCategories());
+            (t(D.Get().GetTags()), r(D.Get().GetCategories()));
           });
     }, [n, e]),
     { rgTags: e, rgCategories: n }
@@ -265,7 +266,7 @@ function O() {
         D.Get()
           .HintLoad()
           .then(() => {
-            t(D.Get().GetStoreTagMap()), r(D.Get().GetStoreCategoryMap());
+            (t(D.Get().GetStoreTagMap()), r(D.Get().GetStoreCategoryMap()));
           });
     }, [n, e]),
     { mapStoreTags: e, mapStoreCategories: n }
@@ -310,18 +311,18 @@ var ue = 5e3,
             gross_units_sold: 0,
           }),
           this.m_mapAppSaleSummary.forEach((e) => {
-            (this.m_totalSummary.net_sales_usd += e.net_sales_usd),
+            ((this.m_totalSummary.net_sales_usd += e.net_sales_usd),
               (this.m_totalSummary.net_units_sold += e.net_units_sold),
               (this.m_totalSummary.gross_sales_usd += e.gross_sales_usd),
-              (this.m_totalSummary.gross_units_sold += e.gross_units_sold);
+              (this.m_totalSummary.gross_units_sold += e.gross_units_sold));
           })),
         this.m_totalSummary
       );
     }
     SetAppSaleSummary(e) {
-      this.m_mapAppSaleSummary.set(e.appid, e),
+      (this.m_mapAppSaleSummary.set(e.appid, e),
         this.m_mapAppSaleSummaryChange.has(e.appid) &&
-          this.m_mapAppSaleSummaryChange.get(e.appid).Dispatch(e);
+          this.m_mapAppSaleSummaryChange.get(e.appid).Dispatch(e));
     }
     GetTopNApps(e) {
       let t = Array.from(this.m_mapAppSaleSummary.values());
@@ -334,7 +335,7 @@ var ue = 5e3,
       let t = [...e],
         n = [],
         r = [];
-      for (; t.length > 0; ) {
+      for (; t.length > 0;) {
         t = t.filter(
           (e) =>
             !this.m_mapAppToLoadPromises.has(e) ||
@@ -342,7 +343,9 @@ var ue = 5e3,
         );
         let e = t.splice(0, ue),
           i = this.InternalLoadAppBatch(e);
-        n.push(i), r.push(i), r.length > 0 && (await Promise.all(r), (r = []));
+        (n.push(i),
+          r.push(i),
+          r.length > 0 && (await Promise.all(r), (r = [])));
       }
       await Promise.all(n);
     }
@@ -350,10 +353,10 @@ var ue = 5e3,
       let t;
       try {
         let r = new FormData();
-        r.append(`sessionid`, n()),
+        (r.append(`sessionid`, n()),
           r.append(`rgAppIDs`, e.join(`,`)),
           r.append(`rtimeStart`, `` + this.m_rtStartTime),
-          r.append(`rtimeEnd`, `` + this.m_rtEndTime);
+          r.append(`rtimeEnd`, `` + this.m_rtEndTime));
         let i = `${o.PARTNER_BASE_URL}promotion/planning/ajaxgetappsalesummaries`,
           a = await x.default.post(i, r, { withCredentials: !0 });
         if (a.status == 200 && a.data?.apps_to_packages?.length > 0)
@@ -371,7 +374,7 @@ var ue = 5e3,
                 net_sales_usd: 0,
                 net_units_sold: 0,
               };
-              t.forEach((e) => {
+              (t.forEach((e) => {
                 let t = this.m_mapPackageSummary.get(e);
                 t &&
                   ((n.gross_sales_usd += t.gross_sales_usd),
@@ -381,7 +384,7 @@ var ue = 5e3,
               }),
                 this.m_mapAppSaleSummary.set(e.appid, n),
                 this.BHasAppSaleSummaryChangeCallback(e.appid) &&
-                  this.GetAppSaleSummaryChangeCallback(e.appid).Dispatch(n);
+                  this.GetAppSaleSummaryChangeCallback(e.appid).Dispatch(n));
             }),
             !0
           );
@@ -398,16 +401,16 @@ var ue = 5e3,
       );
     }
     constructor(e, t) {
-      if (t) (this.m_rtStartTime = e), (this.m_rtEndTime = t);
+      if (t) ((this.m_rtStartTime = e), (this.m_rtEndTime = t));
       else {
         let t = new Date();
-        t.setUTCHours(0),
+        (t.setUTCHours(0),
           t.setUTCMinutes(0),
           t.setUTCSeconds(0),
-          t.setUTCMilliseconds(0);
+          t.setUTCMilliseconds(0));
         let n = Math.floor(t.getTime() / 1e3);
-        (this.m_rtEndTime = n - 86400),
-          (this.m_rtStartTime = n - (e + 1) * 24 * 60 * 60);
+        ((this.m_rtEndTime = n - 86400),
+          (this.m_rtStartTime = n - (e + 1) * 24 * 60 * 60));
       }
     }
   },
@@ -480,16 +483,16 @@ var ue = 5e3,
           net_units_sold: 0,
         },
         i = [];
-      t.forEach((e) => {
+      (t.forEach((e) => {
         let t = this.m_appAndPackagesSummuries.GetAppSaleSummary(e);
-        t &&
+        (t &&
           ((r.gross_sales_usd += t.gross_sales_usd),
           (r.gross_units_sold += t.gross_units_sold),
           (r.net_sales_usd += t.net_sales_usd),
           (r.net_units_sold += t.net_units_sold)),
-          i.push(t);
+          i.push(t));
       }),
-        i.sort((e, t) => t.gross_sales_usd - e.gross_sales_usd);
+        i.sort((e, t) => t.gross_sales_usd - e.gross_sales_usd));
       let a = {
         gross_sales_usd: 0,
         gross_units_sold: 0,
@@ -498,10 +501,10 @@ var ue = 5e3,
       };
       return (
         i.slice(0, 10).forEach((e) => {
-          (a.gross_sales_usd += e.gross_sales_usd),
+          ((a.gross_sales_usd += e.gross_sales_usd),
             (a.gross_units_sold += e.gross_units_sold),
             (a.net_sales_usd += e.net_sales_usd),
-            (a.net_units_sold += e.net_units_sold);
+            (a.net_units_sold += e.net_units_sold));
         }),
         this.m_mapContentHubTopAppSaleSummary.set(n, a),
         this.m_mapContentHubSummary.set(n, r),
@@ -533,11 +536,11 @@ var ue = 5e3,
         r = await x.default.get(t, { params: e });
       if (r.status == 200 && r.data?.cache?.length > 0) {
         let e = [];
-        r.data.cache.forEach((t) => {
+        (r.data.cache.forEach((t) => {
           let n = JSON.parse(t),
             r = { handle: n.handle, type: n.type },
             i = this.GetKey(r);
-          this.m_mapContentHubTopAppSaleSummary.set(i, n.topAppSummary),
+          (this.m_mapContentHubTopAppSaleSummary.set(i, n.topAppSummary),
             this.m_mapContentHubSummary.set(i, n.hubSummary),
             this.m_mapContentHubToAppCount.set(i, n.appCount),
             n.topApps.forEach((e) =>
@@ -549,10 +552,10 @@ var ue = 5e3,
               this.m_mapContentHubTopAppSaleSummaryChange
                 .get(i)
                 .Dispatch(n.topAppSummary),
-            e.push(this.BuildAnalysis(r));
+            e.push(this.BuildAnalysis(r)));
         }),
           (this.m_rgSummaries = e),
-          this.m_summaryAnalysisChange.Dispatch(e);
+          this.m_summaryAnalysisChange.Dispatch(e));
       }
       return null;
     }
@@ -585,7 +588,7 @@ var ue = 5e3,
           appCount: a,
         },
         c = new FormData();
-      c.append(`sessionid`, n()),
+      (c.append(`sessionid`, n()),
         c.append(
           `rtStartTime`,
           `` + this.m_appAndPackagesSummuries.GetRTStartTime(),
@@ -596,7 +599,7 @@ var ue = 5e3,
         ),
         c.append(`bClear`, `false`),
         c.append(`key`, this.GetKey(e)),
-        c.append(`rgStats`, JSON.stringify(s));
+        c.append(`rgStats`, JSON.stringify(s)));
       let u = `${o.PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats`,
         d = await x.default.post(u, c, { withCredentials: !0 });
       d.status != 200 &&
@@ -604,7 +607,7 @@ var ue = 5e3,
     }
     static s_Singleton;
     static Get() {
-      return (e.s_Singleton ||= new e()), e.s_Singleton;
+      return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
   };
 i([f], A.prototype, `LoadCachedSaleSummaries`, null);
@@ -718,7 +721,7 @@ function I(e, t, n) {
       return { type: `category_editor`, handle: r + `_` + i + `_` + a };
     }, [e, t, n]),
     [i, a] = (0, S.useState)(A.Get().GetTopAppSummary(r));
-  return d(A.Get().GetContentHubTopAppSaleSummaryChangeCallback(r), a), i;
+  return (d(A.Get().GetContentHubTopAppSaleSummaryChangeCallback(r), a), i);
 }
 function L(e) {
   let t = j(e),
@@ -741,7 +744,7 @@ function R(e) {
 }
 function z(e) {
   let [t, n] = (0, S.useState)(A.Get().GetTopAppSummary(e));
-  return d(A.Get().GetContentHubTopAppSaleSummaryChangeCallback(e), n), t;
+  return (d(A.Get().GetContentHubTopAppSaleSummaryChangeCallback(e), n), t);
 }
 function B() {
   let [e, t] = (0, S.useState)(A.Get().GetSummaryAnalysis());

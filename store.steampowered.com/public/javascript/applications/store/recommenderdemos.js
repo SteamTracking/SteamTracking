@@ -120,7 +120,7 @@ var w = e(t()),
               `${b.STORE_BASE_URL}recommenderdemos/getlist`,
               { params: t, timeout: 1e4 },
             );
-            n(e.data.appids), i(e.data.weights);
+            (n(e.data.appids), i(e.data.weights));
           } catch (e) {
             console.error(`Error fetching data`, e);
           }
@@ -248,7 +248,7 @@ var w = e(t()),
               `${b.STORE_BASE_URL}recommenderdemos/getcreatorsales`,
               { params: t, timeout: 1e4 },
             );
-            n(e.data.sales), i(e.data.error);
+            (n(e.data.sales), i(e.data.error));
           } catch (e) {
             console.error(`Error fetching data`, e);
           }
@@ -321,7 +321,7 @@ var de = (e) => {
               `${b.STORE_BASE_URL}recommenderdemos/getdiscountreasons`,
               { params: t, timeout: 1e4 },
             );
-            n(e.data.reason_lists), i(e.data.error);
+            (n(e.data.reason_lists), i(e.data.error));
           } catch (e) {
             console.error(`Error fetching data`, e);
           }
@@ -396,7 +396,7 @@ var de = (e) => {
                         disabled: !e,
                         className: A,
                         onClick: () => {
-                          t(!1), r(0), a(``);
+                          (t(!1), r(0), a(``));
                         },
                         children: `Clear`,
                       }),

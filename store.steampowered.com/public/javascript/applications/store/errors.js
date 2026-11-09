@@ -4,7 +4,7 @@
 var e = class extends Error {
   eResult;
   constructor(e, t) {
-    super(t ? `EResult ${e}: ${t}` : `EResult ${e}`), (this.eResult = e);
+    (super(t ? `EResult ${e}: ${t}` : `EResult ${e}`), (this.eResult = e));
   }
 };
 export { e as t };

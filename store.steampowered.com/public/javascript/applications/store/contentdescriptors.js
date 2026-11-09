@@ -10,7 +10,7 @@ function s(e) {
   let t = [];
   switch (e) {
     case 5:
-      t.push(2), t.push(1);
+      (t.push(2), t.push(1));
     case 1:
       t.push(4);
     case 4:
@@ -19,11 +19,11 @@ function s(e) {
   return t;
 }
 var c = new Map();
-c.set(2, 5), c.set(1, 5), c.set(4, 1), c.set(3, 4);
+(c.set(2, 5), c.set(1, 5), c.set(4, 1), c.set(3, 4));
 function l(e) {
   let t = [],
     n = c.get(e);
-  return n && (t.push(n), t.push(...l(n))), t;
+  return (n && (t.push(n), t.push(...l(n))), t);
 }
 function u(e) {
   return t({

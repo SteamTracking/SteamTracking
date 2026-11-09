@@ -57,7 +57,7 @@ var _ = `lzdS-shJ99Q-`,
         );
       if (_.has(_)) {
         let _ = ``;
-        _.get(_).choice == 1
+        (_.get(_).choice == 1
           ? (_ = _.strResultA + `_Summary`)
           : _.get(_).choice == 2 && (_ = _.strResultB + `_Summary`),
           _.push(
@@ -74,10 +74,10 @@ var _ = `lzdS-shJ99Q-`,
               },
               _,
             ),
-          );
+          ));
       } else {
         let _ = ``;
-        _.length || (_ = `next`),
+        (_.length || (_ = `next`),
           _.push(
             (0, _.jsx)(
               _,
@@ -93,7 +93,7 @@ var _ = `lzdS-shJ99Q-`,
               },
               _,
             ),
-          );
+          ));
       }
     });
     let _ = _.concat(_);

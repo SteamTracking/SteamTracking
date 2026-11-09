@@ -41,7 +41,7 @@ function _(_) {
           let _ = _[_];
           if (_.dataset.radioId && _.dataset.radioId === _) {
             let _ = _[(_ + _ + _.length) % _.length];
-            _.click(), _.focus();
+            (_.click(), _.focus());
           }
         }
     }, []),
@@ -113,15 +113,15 @@ function _(_) {
         if (!_)
           switch (_.key) {
             case ` `:
-              _(), _.preventDefault(), _.stopPropagation();
+              (_(), _.preventDefault(), _.stopPropagation());
               break;
             case `ArrowRight`:
             case `ArrowDown`:
-              _(_), _.preventDefault(), _.stopPropagation();
+              (_(_), _.preventDefault(), _.stopPropagation());
               break;
             case `ArrowLeft`:
             case `ArrowUp`:
-              _(_), _.preventDefault(), _.stopPropagation();
+              (_(_), _.preventDefault(), _.stopPropagation());
           }
       },
       tabIndex: _ || _ === null ? 0 : -1,
@@ -156,4 +156,3 @@ var _ = Object.assign(_, {
     Option: _,
   }),
   _ = (0, _.createContext)(null);
-export { _ };

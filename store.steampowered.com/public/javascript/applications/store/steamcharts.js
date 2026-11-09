@@ -84,9 +84,9 @@ var L = e(a(), 1),
   Ke = class e extends L.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.country_code || k(e.M()),
-        L.Message.initialize(this, t, 0, -1, void 0, null);
+        L.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -107,7 +107,7 @@ var L = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= y(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= y(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -128,14 +128,14 @@ var L = e(a(), 1),
     }
     serializeBinary() {
       var t = new L.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new L.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreTopSellers_GetWeeklyTopSellers_Request`;
@@ -144,9 +144,9 @@ var L = e(a(), 1),
   qe = class e extends L.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.start_date || k(e.M()),
-        L.Message.initialize(this, t, 0, -1, [2], null);
+        L.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -164,7 +164,7 @@ var L = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= y(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= y(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -185,14 +185,14 @@ var L = e(a(), 1),
     }
     serializeBinary() {
       var t = new L.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new L.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreTopSellers_GetWeeklyTopSellers_Response`;
@@ -201,9 +201,9 @@ var L = e(a(), 1),
   Je = class e extends L.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.rank || k(e.M()),
-        L.Message.initialize(this, t, 0, -1, void 0, null);
+        L.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -224,7 +224,7 @@ var L = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= y(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= y(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -245,14 +245,14 @@ var L = e(a(), 1),
     }
     serializeBinary() {
       var t = new L.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new L.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreTopSellers_GetWeeklyTopSellers_Response_TopSellersRank`;
@@ -261,9 +261,9 @@ var L = e(a(), 1),
   Ye = class e extends L.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.language || k(e.M()),
-        L.Message.initialize(this, t, 0, -1, void 0, null);
+        L.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -277,7 +277,7 @@ var L = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= y(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= y(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -298,14 +298,14 @@ var L = e(a(), 1),
     }
     serializeBinary() {
       var t = new L.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new L.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreTopSellers_GetCountryList_Request`;
@@ -314,9 +314,9 @@ var L = e(a(), 1),
   Xe = class e extends L.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.countries || k(e.M()),
-        L.Message.initialize(this, t, 0, -1, [1], null);
+        L.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -330,7 +330,7 @@ var L = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= y(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= y(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -351,14 +351,14 @@ var L = e(a(), 1),
     }
     serializeBinary() {
       var t = new L.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new L.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreTopSellers_GetCountryList_Response`;
@@ -367,9 +367,9 @@ var L = e(a(), 1),
   Ze = class e extends L.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
-      super(),
+      (super(),
         e.prototype.country_code || k(e.M()),
-        L.Message.initialize(this, t, 0, -1, void 0, null);
+        L.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -386,7 +386,7 @@ var L = e(a(), 1),
       );
     }
     static MBF() {
-      return (e.sm_mbf ||= y(e.M())), e.sm_mbf;
+      return ((e.sm_mbf ||= y(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -407,14 +407,14 @@ var L = e(a(), 1),
     }
     serializeBinary() {
       var t = new L.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBuffer();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new L.BinaryWriter();
-      return e.serializeBinaryToWriter(this, t), t.getResultBase64String();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreTopSellers_GetCountryList_Response_Country`;
@@ -447,20 +447,20 @@ var $e = 20,
     m_promiseInitialize;
     m_rtCurrentWeek;
     constructor(e, t) {
-      (this.m_WebAPI = e), (this.m_Storage = t);
+      ((this.m_WebAPI = e), (this.m_Storage = t));
     }
     async Initialize(e) {
       return (
         (this.m_promiseInitialize ||= new Promise((t, n) => {
           let r;
-          (F.EUNIVERSE == 2 || F.EUNIVERSE == 4) && (r = 1539068400),
+          ((F.EUNIVERSE == 2 || F.EUNIVERSE == 4) && (r = 1539068400),
             this.LoadCountryList()
               .then(() =>
                 this.LoadCurrentWeekStart(r, e).then((e) => {
-                  (this.m_rtCurrentWeek = e), t();
+                  ((this.m_rtCurrentWeek = e), t());
                 }),
               )
-              .catch(n);
+              .catch(n));
         })),
         this.m_promiseInitialize
       );
@@ -487,12 +487,12 @@ var $e = 20,
               .Body()
               .countries()
               .map((e) => e.toObject());
-            e.sort((e, t) => (e.name < t.name ? -1 : 1)),
+            (e.sort((e, t) => (e.name < t.name ? -1 : 1)),
               (this.m_rgCountryList = {
                 rgCountryCodes: e,
                 dtTimeStored: Date.now(),
               }),
-              this.m_Storage.StoreObject(t, this.m_rgCountryList);
+              this.m_Storage.StoreObject(t, this.m_rgCountryList));
           } else
             this.m_rgCountryList = {
               rgCountryCodes: [{ country_code: `US`, name: `United States` }],
@@ -519,11 +519,11 @@ var $e = 20,
     async LoadCurrentWeekStart(e, t) {
       let n = this.ValidateCountryCode(t),
         r = N.Init(Ke);
-      Te(r),
+      (Te(r),
         Ee(r, dt),
         n && r.Body().set_country_code(n),
         e && r.Body().set_start_date(e),
-        r.Body().set_page_count($e);
+        r.Body().set_page_count($e));
       let i = await Qe.GetWeeklyTopSellers(
         this.m_WebAPI.GetAnonymousServiceTransport(),
         r,
@@ -549,7 +549,7 @@ function nt(e, t) {
 }
 function rt(e) {
   let t = 50;
-  return e < 2009 ? (t = 5) : e < 2014 ? (t = 10) : e < 2018 && (t = 25), t;
+  return (e < 2009 ? (t = 5) : e < 2014 ? (t = 10) : e < 2018 && (t = 25), t);
 }
 var it = class {
     m_WebAPI;
@@ -559,8 +559,8 @@ var it = class {
     async LoadTopMonthlyReleases(e, t) {
       let n = N.Init(d),
         r = new Date(e, t, 15);
-      n.Body().set_rtime_month(Math.floor(r.getTime() / 1e3)),
-        n.Body().set_include_dlc(!0);
+      (n.Body().set_rtime_month(Math.floor(r.getTime() / 1e3)),
+        n.Body().set_include_dlc(!0));
       let i = rt(e);
       n.Body().set_top_results_limit(i);
       let a = await p.GetMonthTopAppReleases(
@@ -591,8 +591,8 @@ var st = class {
     async LoadTopYearlyReleases(e) {
       let t = N.Init(u),
         n = new Date(e, 1, 15);
-      t.Body().set_rtime_year(Math.floor(n.getTime() / 1e3)),
-        t.Body().set_include_dlc(!0);
+      (t.Body().set_rtime_year(Math.floor(n.getTime() / 1e3)),
+        t.Body().set_include_dlc(!0));
       let r = (me.is_support, this.m_WebAPI.GetAnonymousServiceTransport()),
         i = await p.GetYearTopAppReleases(r, t);
       if (i.GetEResult() != 1) {
@@ -601,7 +601,7 @@ var st = class {
         throw `error loading top releases`;
       }
       let a = i.Body().toObject();
-      return me.is_support && a.top_app_list.length, a;
+      return (me.is_support && a.top_app_list.length, a);
     }
   },
   ct = `useYearlyTopRelease`;
@@ -619,11 +619,11 @@ var ut = class {
     m_TopYearlyReleasesStore;
     m_WebAPI;
     async Initialize(e, t) {
-      (this.m_WebAPI = e),
+      ((this.m_WebAPI = e),
         (this.m_TopSellersStore = new et(this.m_WebAPI, t)),
         (this.m_TopMonthlyReleasesStore = new it(this.m_WebAPI)),
         (this.m_TopYearlyReleasesStore = new st(this.m_WebAPI)),
-        (this.m_DynamicUserStore = await Be.Get().HintLoad());
+        (this.m_DynamicUserStore = await Be.Get().HintLoad()));
     }
     get TopSellersStore() {
       return this.m_TopSellersStore;
@@ -716,7 +716,7 @@ function Ft(e) {
     ),
     c = (0, q.useCallback)(
       (e) => {
-        n(e.unix()), a.current.Hide();
+        (n(e.unix()), a.current.Hide());
       },
       [n],
     ),
@@ -738,7 +738,7 @@ function Ft(e) {
       className: Mt,
       children: (0, Y.jsx)(`div`, {
         onClick: (e) => {
-          e.preventDefault(), e.stopPropagation();
+          (e.preventDefault(), e.stopPropagation());
         },
         children: (0, Y.jsx)(At.default, {
           ref: o,
@@ -774,7 +774,7 @@ function Wt(e) {
     o = (0, q.useMemo)(() => {
       let e = 0,
         n = [...t];
-      for (; n.length < 25; ) n.push(t[e % t.length]), e++;
+      for (; n.length < 25;) (n.push(t[e % t.length]), e++);
       return n.map((e) => D.Get().GetApp(e)).filter(Boolean);
     }, [t]);
   return (0, Y.jsxs)(Y.Fragment, {
@@ -832,8 +832,8 @@ function Gt(e) {
     o = n.getHours(),
     s,
     c;
-  for (s = a > 15 || (a === 15 && o >= 10) ? r - 1 : r - 2; s < 0; )
-    (s += 12), (c = (c ?? i) - 1);
+  for (s = a > 15 || (a === 15 && o >= 10) ? r - 1 : r - 2; s < 0;)
+    ((s += 12), (c = (c ?? i) - 1));
   c ??= i;
   let l = new Date(Date.UTC(c, s, 15, 17, 0));
   return Math.floor(l.getTime() / 1e3);
@@ -1082,7 +1082,7 @@ function on(e, t, n, r, i) {
       try {
         return an(e, t, n, r, i);
       } catch (t) {
-        return console.error(`Montly new release: ${e} failed: `, t), null;
+        return (console.error(`Montly new release: ${e} failed: `, t), null);
       }
     },
   });
@@ -1263,7 +1263,7 @@ function vn(e, t, n, r) {
           .filter((e) => !D.Get().BIsAppMissing(e.appid))
           .map((e) => {
             let n = e.app_release_rank;
-            return t[n] || (t[n] = []), t[n].push(e.appid), e.appid;
+            return (t[n] || (t[n] = []), t[n].push(e.appid), e.appid);
           }),
         rgFilteredAppIDByTier: t,
       };
@@ -1772,7 +1772,7 @@ function zn(e, t, n) {
           prefer_demo_store_page: !!n.bShowDemoInfo,
         });
       }
-      tn(
+      (tn(
         r,
         u,
         c,
@@ -1801,7 +1801,7 @@ function zn(e, t, n) {
           i.tabs[a].unique_id,
           !!n.bShowDeckCompat,
           !!n.bShowDemoInfo,
-        );
+        ));
     }),
     r.jsondata.sale_sections.push({
       ...v(`text_section`, ``),
@@ -1825,7 +1825,7 @@ function Bn(e, t, n) {
       try {
         return zn(e, t, n);
       } catch (t) {
-        return console.error(`Yearly new release: ${e} failed: `, t), null;
+        return (console.error(`Yearly new release: ${e} failed: `, t), null);
       }
     },
   });
@@ -2083,10 +2083,10 @@ function qn(e) {
       },
       [l.active_modal, o, c, n, a, s],
     );
-  g(`ArrowLeft`, () => u(!1), !0, !0),
+  (g(`ArrowLeft`, () => u(!1), !0, !0),
     g(`Left`, () => u(!1), !0, !0),
     g(`ArrowRight`, () => u(!0), !0, !0),
-    g(`Right`, () => u(!0), !0, !0);
+    g(`Right`, () => u(!0), !0, !0));
   let d = i == 1 ? `` : `?tab=${i}`;
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
@@ -2177,7 +2177,7 @@ var $ = {
 };
 async function Jn(e, t) {
   let n = new ut();
-  return await n.Initialize(e, t), n;
+  return (await n.Initialize(e, t), n);
 }
 function Yn(e) {
   let [t, i] = (0, q.useState)(void 0),

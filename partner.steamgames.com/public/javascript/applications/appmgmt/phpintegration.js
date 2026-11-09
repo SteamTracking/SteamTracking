@@ -75,10 +75,10 @@ function y(e) {
   return (
     p.useEffect(() => {
       let e = `[data-featuretarget=${t}]`;
-      (r.current = []), (i.current = 0);
+      ((r.current = []), (i.current = 0));
       let a = (e) => r.current.push({ key: i.current++, elem: e }),
         o = (e) => s(r.current, (t) => t.elem == e);
-      document.querySelectorAll(e).forEach(a), r.current.length && n();
+      (document.querySelectorAll(e).forEach(a), r.current.length && n());
       let c = new MutationObserver((t) => {
         let r = !1;
         for (let n of t)
@@ -86,12 +86,12 @@ function y(e) {
             n,
             (t) => {
               S(t, e).forEach((e) => {
-                a(e), (r = !0);
+                (a(e), (r = !0));
               });
             },
             (t) => {
               S(t, e).forEach((e) => {
-                o(e), (r = !0);
+                (o(e), (r = !0));
               });
             },
           );

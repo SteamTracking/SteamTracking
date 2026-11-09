@@ -692,7 +692,8 @@ import {
 import { n as Ld, r as Rd, t as zd } from "./collapseablesection.js";
 function Bd(e) {
   return () => (
-    (e = (e * 1664525 + 1013904223) % 4294967296), (e >>> 0) / 4294967296
+    (e = (e * 1664525 + 1013904223) % 4294967296),
+    (e >>> 0) / 4294967296
   );
 }
 function Vd() {
@@ -715,7 +716,7 @@ function Wd() {
         window.addEventListener(`popstate`, e),
         t(location.search),
         () => {
-          Hd.delete(t), window.removeEventListener(`popstate`, e);
+          (Hd.delete(t), window.removeEventListener(`popstate`, e));
         }
       );
     }, []),
@@ -745,7 +746,7 @@ function Gd(e, t) {
           if (!r.has(e)) return;
           r.delete(e);
         }
-        n
+        (n
           ? history.replaceState(
               history.state,
               ``,
@@ -756,7 +757,7 @@ function Gd(e, t) {
               ``,
               decodeURIComponent(`${window.location.pathname}?${r}`),
             ),
-          (0, q.startTransition)(Ud);
+          (0, q.startTransition)(Ud));
       },
       [e],
     ),
@@ -797,7 +798,7 @@ function Xd(e) {
           let i = n[r];
           if (i.dataset.radioId && i.dataset.radioId === e) {
             let e = n[(r + t + n.length) % n.length];
-            e.click(), e.focus();
+            (e.click(), e.focus());
           }
         }
     }, []),
@@ -859,15 +860,15 @@ function Zd(e) {
         if (!l)
           switch (e.key) {
             case ` `:
-              p(), e.preventDefault(), e.stopPropagation();
+              (p(), e.preventDefault(), e.stopPropagation());
               break;
             case `ArrowRight`:
             case `ArrowDown`:
-              u(o), e.preventDefault(), e.stopPropagation();
+              (u(o), e.preventDefault(), e.stopPropagation());
               break;
             case `ArrowLeft`:
             case `ArrowUp`:
-              d(o), e.preventDefault(), e.stopPropagation();
+              (d(o), e.preventDefault(), e.stopPropagation());
           }
       },
       tabIndex: f || s === null ? 0 : -1,
@@ -898,7 +899,7 @@ function tf({ fnOnSetDirty: e, section: t, property: n, color: r }) {
     i(a, {
       color: r,
       onChange: (r) => {
-        (t[n] = r), e(t);
+        ((t[n] = r), e(t));
       },
     });
   };
@@ -1049,7 +1050,7 @@ function sf(e) {
             value: a,
             onValueChange: (e) => {
               let r = t ? { ...t } : {};
-              (r.collection_time_term_and_conditions_url = e), n(r);
+              ((r.collection_time_term_and_conditions_url = e), n(r));
             },
           }),
           (0, J.jsx)(rf, {
@@ -1058,7 +1059,7 @@ function sf(e) {
             value: s,
             onValueChange: (e) => {
               let r = t ? { ...t } : {};
-              (r.collection_time_learn_more_url = e), n(r);
+              ((r.collection_time_learn_more_url = e), n(r));
             },
           }),
           (0, J.jsx)(of, {
@@ -1067,14 +1068,14 @@ function sf(e) {
             rtime: o,
             onValueChange: (e) => {
               let r = t ? { ...t } : {};
-              (r.collection_rtime_end = e), n(r);
+              ((r.collection_rtime_end = e), n(r));
             },
           }),
           (0, J.jsxs)(zl, {
             checked: c,
             onChange: (e) => {
               let r = t ? { ...t } : {};
-              (r.collection_time_allow_multiple_models = e), n(r);
+              ((r.collection_time_allow_multiple_models = e), n(r));
             },
             children: [
               `Allow Signing Up For Multiple Models`,
@@ -1091,7 +1092,7 @@ function sf(e) {
             value: l,
             onValueChange: (e) => {
               let r = t ? { ...t } : {};
-              (r.waiting_learn_more_url = e), n(r);
+              ((r.waiting_learn_more_url = e), n(r));
             },
           }),
         ],
@@ -1114,9 +1115,9 @@ function cf(e) {
     o = (0, q.useCallback)(
       (e) => {
         let i = { ...t };
-        (i.localized_callout = F(i.localized_callout || [], 32, null)),
+        ((i.localized_callout = F(i.localized_callout || [], 32, null)),
           (i.localized_callout[r] = e),
-          n(i);
+          n(i));
       },
       [n, r, t],
     ),
@@ -1310,9 +1311,9 @@ function _f(e) {
 var vf = 100;
 async function yf(e, t) {
   let n = new URLSearchParams();
-  n.set(`event_gids`, [...new Set(e)].sort().join(`,`)),
+  (n.set(`event_gids`, [...new Set(e)].sort().join(`,`)),
     n.set(`lang_list`, Ta(t)),
-    n.set(`origin`, location.origin);
+    n.set(`origin`, location.origin));
   let r =
       Hl.STORE_BASE_URL + `events/ajaxgetbatchedpartnerevent/?` + n.toString(),
     i = await fetch(r);
@@ -1582,7 +1583,7 @@ var Vf = c((e) => {
       strLinkButtonClasses: n,
       bSmallButton: r,
     } = Bf(t);
-    e &&
+    (e &&
       (S =
         f && c
           ? (0, J.jsx)(Ef, { label: e, shown: !!s })
@@ -1595,7 +1596,7 @@ var Vf = c((e) => {
                 }),
               })
             : (0, J.jsx)(ti, { url: _, className: n, children: e })),
-      (b = (0, J.jsx)(ti, { url: _, bFocusable: !S, children: b }));
+      (b = (0, J.jsx)(ti, { url: _, bFocusable: !S, children: b })));
   }
   return (0, J.jsxs)(`div`, {
     className: G(Nf, `SaleSectionLabelCtn`),
@@ -1673,8 +1674,8 @@ function Gf(e) {
   let { saleSection: t, editLanguage: n, eventModel: r, index: i } = e,
     a = xa(),
     o;
-  (o = w(() => Af(t, r, n, r.clanSteamID.GetAccountID(), a.eLocation))),
-    (o ||= H(`#Sale_Section_Header`, i + 1));
+  ((o = w(() => Af(t, r, n, r.clanSteamID.GetAccountID(), a.eLocation))),
+    (o ||= H(`#Sale_Section_Header`, i + 1)));
   let s = `#Sale_Section_Type_` + t.section_type,
     c = H(s);
   return c === s
@@ -1705,7 +1706,7 @@ function Yf(e) {
 }
 function Xf(e, t, n) {
   let r = Yf(e).filter((e) => e != t);
-  return r.push(n), Jf(r);
+  return (r.push(n), Jf(r));
 }
 function Zf(e) {
   let { value: t, onValueChange: n, type: r, label: i, tooltip: a } = e,
@@ -2216,7 +2217,7 @@ function Ip(e) {
 }
 function Lp(e) {
   e?.forEach((e) => {
-    (e.unique_id = Ip(e)), Lp(e.rgChildren);
+    ((e.unique_id = Ip(e)), Lp(e.rgChildren));
   });
 }
 function Rp(e) {
@@ -2368,11 +2369,11 @@ function dm(e) {
   q.useEffect(() => {
     if (p && !_.current) {
       let e = window.setTimeout(() => {
-        (_.current = !0), g(!0);
+        ((_.current = !0), g(!0));
       }, 500);
       return () => window.clearTimeout(e);
     }
-    return g(p || d), () => {};
+    return (g(p || d), () => {});
   }, [p, d]);
   let { data: v } = hi(),
     y = !!v?.preferences?.disable_microtrailers,
@@ -2695,8 +2696,10 @@ function Sm(e, t) {
         let n = t.name.find((t) => e.has(t));
         return { facet: t, pri: n ? e.get(n) : void 0 };
       });
-    r.sort((e, t) => (e.pri ?? Number.MAX_VALUE) - (t.pri ?? Number.MAX_VALUE)),
-      (n = r.map((e) => e.facet));
+    (r.sort(
+      (e, t) => (e.pri ?? Number.MAX_VALUE) - (t.pri ?? Number.MAX_VALUE),
+    ),
+      (n = r.map((e) => e.facet)));
   }
   return n;
 }
@@ -2712,7 +2715,7 @@ function wm(e) {
       if (e)
         for (let r of e) {
           let e = t.get(r);
-          e || ((e = []), t.set(r, e)), e.push(n);
+          (e || ((e = []), t.set(r, e)), e.push(n));
         }
     }),
     t
@@ -2736,24 +2739,24 @@ function Tm(e) {
     };
   for (let e of t) {
     let t = [];
-    r.set(e, t), e === `theme_mood` ? (i(t, `theme`), i(t, `mood`)) : i(t, e);
+    (r.set(e, t), e === `theme_mood` ? (i(t, `theme`), i(t, `mood`)) : i(t, e));
   }
   return r;
 }
 function Em(e) {
   let t = new Map();
-  t.set(`supergenre`, `#App_Taxonomy_Survey_QSuperGenreTitle`),
+  (t.set(`supergenre`, `#App_Taxonomy_Survey_QSuperGenreTitle`),
     t.set(`genre`, `#App_Taxonomy_Survey_QGenreTitle`),
     t.set(`subgenre`, `#App_Taxonomy_Survey_QSubGenreTitle`),
     t.set(`visuals`, `#App_Taxonomy_Survey_QVisualsTitle`),
     t.set(`theme_mood`, `#App_Taxonomy_Survey_QThemeMoodTitle`),
     t.set(`feature`, `#App_Taxonomy_Survey_QFeaturesTitle`),
-    t.set(`players`, `#App_Taxonomy_Survey_QPlayersTitle`);
+    t.set(`players`, `#App_Taxonomy_Survey_QPlayersTitle`));
   let n = new Map();
   return (
     e.mapLocalizedCategoryNames.forEach((e, r) => {
       let i = Array(32);
-      (i[0] = t.get(r) ?? ``), n.set(r, i);
+      ((i[0] = t.get(r) ?? ``), n.set(r, i));
     }),
     n
   );
@@ -2764,14 +2767,14 @@ function Dm(e) {
     e.mapLocalizedTagNames.forEach((n, r) => {
       let i = n,
         a = Array(32);
-      a.fill(``),
+      (a.fill(``),
         e.rgLanguages.forEach((e, t) => {
           let n = Eu(e, -1);
           n === -1
             ? console.warn(`Unrecognized language: ` + e)
             : 0 <= n && n < 32 && (a[n] = i[t]);
         }),
-        t.set(r, a);
+        t.set(r, a));
     }),
     t
   );
@@ -2807,12 +2810,12 @@ function Om(e, t, n) {
         };
         a.facetValues.push(r);
       }
-      o.length > 0 &&
+      (o.length > 0 &&
         console.warn(
           `No name information found for tag count ` + o.length + `, skipping.`,
           o,
         ),
-        r.push(a);
+        r.push(a));
     }),
     r
   );
@@ -2825,8 +2828,8 @@ function Am(e, t) {
     for (let e of n.facetValues) {
       let n = e.nAtomicStoreTagID ?? 0,
         r = [km(String(t.get(n)))];
-      (e.type = M.k_ESaleTagFilter),
-        (e.filter = { clauses: [{ type: `Must have`, or_tags: r }] });
+      ((e.type = M.k_ESaleTagFilter),
+        (e.filter = { clauses: [{ type: `Must have`, or_tags: r }] }));
     }
 }
 function jm(e) {
@@ -2867,7 +2870,7 @@ function Nm(e) {
     logical_and: !1,
     single_selection: !0,
   };
-  t.facetValues.push({
+  (t.facetValues.push({
     name: [`#Platform_Windows`],
     type: M.k_ESaleTagFilter,
     filter: {
@@ -2889,7 +2892,7 @@ function Nm(e) {
       filter: { clauses: [{ type: `Must have`, or_tags: [`[Feature] Mac`] }] },
       rgStoreTagFilter: null,
     }),
-    e.push(t);
+    e.push(t));
 }
 function Pm(e) {
   let t = { name: [`#LanguageTitle`], facetValues: [], logical_and: !1 };
@@ -2905,7 +2908,7 @@ function Pm(e) {
 }
 function Fm(e) {
   let t = { name: [`#ContentDescriptor`], facetValues: [], logical_and: !1 };
-  t.facetValues.push({
+  (t.facetValues.push({
     name: [`#ContentDescriptor_GeneralMatureContent`],
     type: M.k_EContentDescriptor,
     contentDescriptor: 5,
@@ -2940,11 +2943,11 @@ function Fm(e) {
       filter: null,
       rgStoreTagFilter: null,
     }),
-    e.push(t);
+    e.push(t));
 }
 function Im(e) {
   let t = { name: [`#Sale_Preferences`], facetValues: [] };
-  t.facetValues.push({
+  (t.facetValues.push({
     name: [`#UserPreference_HideOwnedItems`],
     type: M.k_EUserPreference,
     userPreference: Pr.k_EHideOwnedItems,
@@ -2966,7 +2969,7 @@ function Im(e) {
       filter: null,
       rgStoreTagFilter: null,
     }),
-    e.push(t);
+    e.push(t));
 }
 function Lm(e) {
   let t = {
@@ -3313,13 +3316,13 @@ function uh(e, t) {
   {
     let n = i.single_item_style ? i.single_item_style : fi,
       a;
-    `overrideNavigation` in e &&
+    (`overrideNavigation` in e &&
       (a = (t) => (
         e.overrideNavigation(t),
         t && (t.preventDefault(), t.stopPropagation()),
         !1
       )),
-      st() && (n == `library` || n == `animated`) && (n = `bordered`);
+      st() && (n == `library` || n == `animated`) && (n = `bordered`));
     let o = G({
       [Qe]: !l && n == `bordered`,
       [be]: l && n == `bordered`,
@@ -3455,7 +3458,7 @@ function mh(e, t, n, r, i, a, o, s, c, l) {
   else {
     let e = o(f),
       r = !0;
-    if (p) (e = a), (r = C);
+    if (p) ((e = a), (r = C));
     else if (f == 0 && e > 0) {
       let t = 0,
         r = 0;
@@ -3479,18 +3482,18 @@ function mh(e, t, n, r, i, a, o, s, c, l) {
           if (h) return { content: null, bAdditionalContent: !1 };
           r = Math.max(a === `tall` ? 3 : 2, i);
         }
-        s.push(
+        (s.push(
           (0, J.jsx)(
             gh,
             { nMaxItems: r, nItems: i, children: v(n, l, l + i, r, a) },
             `Row_` + t,
           ),
         ),
-          (l += i);
+          (l += i));
       }
       if (r || (l >= n.length && i.length === 0)) break;
       let o = i.length || void 0;
-      i.push(
+      (i.push(
         (0, J.jsx)(
           `div`,
           {
@@ -3500,7 +3503,7 @@ function mh(e, t, n, r, i, a, o, s, c, l) {
           `Page_${t}`,
         ),
       ),
-        (s = []);
+        (s = []));
     }
     i.length == 0
       ? ((b = n.length > l),
@@ -3570,10 +3573,10 @@ var gh = (e) => {
     o = null;
   if (r > 0) {
     let e = Math.floor((r + 1) / 2);
-    (a = []), (o = []);
+    ((a = []), (o = []));
     for (let t = 0; t < e; t++)
-      a.push((0, J.jsx)(`div`, {}, `front_` + t)),
-        o.push((0, J.jsx)(`div`, {}, `back_` + t));
+      (a.push((0, J.jsx)(`div`, {}, `front_` + t)),
+        o.push((0, J.jsx)(`div`, {}, `back_` + t)));
   }
   return (0, J.jsxs)(`div`, {
     className: G(
@@ -4310,7 +4313,7 @@ var hg = (typeof Symbol == `function` && Symbol.observable) || `@@observable`,
 function vg(e) {
   if (typeof e != `object` || !e) return !1;
   let t = e;
-  for (; Object.getPrototypeOf(t) !== null; ) t = Object.getPrototypeOf(t);
+  for (; Object.getPrototypeOf(t) !== null;) t = Object.getPrototypeOf(t);
   return Object.getPrototypeOf(e) === t || Object.getPrototypeOf(e) === null;
 }
 function yg(e, t, n) {
@@ -4355,7 +4358,7 @@ function yg(e, t, n) {
       function () {
         if (t) {
           if (c) throw Error(mg(6));
-          (t = !1), l(), o.delete(n), (a = null);
+          ((t = !1), l(), o.delete(n), (a = null));
         }
       }
     );
@@ -4366,7 +4369,7 @@ function yg(e, t, n) {
     if (typeof e.type != `string`) throw Error(mg(17));
     if (c) throw Error(mg(9));
     try {
-      (c = !0), (i = r(i, e));
+      ((c = !0), (i = r(i, e)));
     } finally {
       c = !1;
     }
@@ -4379,7 +4382,7 @@ function yg(e, t, n) {
   }
   function p(e) {
     if (typeof e != `function`) throw Error(mg(10));
-    (r = e), f({ type: _g.REPLACE });
+    ((r = e), f({ type: _g.REPLACE }));
   }
   function m() {
     let e = d;
@@ -4390,7 +4393,7 @@ function yg(e, t, n) {
           let e = t;
           e.next && e.next(u());
         }
-        return n(), { unsubscribe: e(n) };
+        return (n(), { unsubscribe: e(n) });
       },
       [hg]() {
         return this;
@@ -4435,7 +4438,7 @@ function Cg(...e) {
         throw Error(mg(15));
       },
       o = { getState: i.getState, dispatch: (e, ...t) => a(e, ...t) };
-    return (a = Sg(...e.map((e) => e(o)))(i.dispatch)), { ...i, dispatch: a };
+    return ((a = Sg(...e.map((e) => e(o)))(i.dispatch)), { ...i, dispatch: a });
   };
 }
 Va();
@@ -4526,12 +4529,12 @@ function Bg(
   function g() {
     let t = e(c, l),
       r = !o(t, u);
-    return (u = t), r && (f = n(u, d, l)), f;
+    return ((u = t), r && (f = n(u, d, l)), f);
   }
   function _(e, t) {
     let n = !a(t, l),
       r = !i(e, c, t, l);
-    return (c = e), (l = t), n && r ? m() : n ? h() : r ? g() : f;
+    return ((c = e), (l = t), n && r ? m() : n ? h() : r ? g() : f);
   }
   return function (e, t) {
     return s ? _(e, t) : p(e, t);
@@ -4562,7 +4565,7 @@ function Ug(e) {
     function r() {
       return n;
     }
-    return (r.dependsOnOwnProps = !1), r;
+    return ((r.dependsOnOwnProps = !1), r);
   };
 }
 function Wg(e) {
@@ -4576,7 +4579,7 @@ function Gg(e, t) {
     return (
       (r.dependsOnOwnProps = !0),
       (r.mapToProps = function (t, n) {
-        (r.mapToProps = e), (r.dependsOnOwnProps = Wg(e));
+        ((r.mapToProps = e), (r.dependsOnOwnProps = Wg(e)));
         let i = r(t, n);
         return (
           typeof i == `function` &&
@@ -4620,7 +4623,7 @@ function Xg(e) {
       a;
     return function (t, n, o) {
       let s = e(t, n, o);
-      return i ? r(s, a) || (a = s) : ((i = !0), (a = s)), a;
+      return (i ? r(s, a) || (a = s) : ((i = !0), (a = s)), a);
     };
   };
 }
@@ -4635,18 +4638,18 @@ function $g() {
     t = null;
   return {
     clear() {
-      (e = null), (t = null);
+      ((e = null), (t = null));
     },
     notify() {
       Qg(() => {
         let t = e;
-        for (; t; ) t.callback(), (t = t.next);
+        for (; t;) (t.callback(), (t = t.next));
       });
     },
     get() {
       let t = [],
         n = e;
-      for (; n; ) t.push(n), (n = n.next);
+      for (; n;) (t.push(n), (n = n.next));
       return t;
     },
     subscribe(n) {
@@ -4689,10 +4692,10 @@ function t_(e, t) {
     return a;
   }
   function u() {
-    i++, n || ((n = t ? t.addNestedSub(c) : e.subscribe(c)), (r = $g()));
+    (i++, n || ((n = t ? t.addNestedSub(c) : e.subscribe(c)), (r = $g())));
   }
   function d() {
-    i--, n && i === 0 && (n(), (n = void 0), r.clear(), (r = e_));
+    (i--, n && i === 0 && (n(), (n = void 0), r.clear(), (r = e_)));
   }
   function f() {
     a || ((a = !0), u());
@@ -4806,7 +4809,7 @@ function S_() {
   if (!q.createContext) return {};
   let e = (x_[b_] ??= new Map()),
     t = e.get(q.createContext);
-  return t || ((t = q.createContext(null)), e.set(q.createContext, t)), t;
+  return (t || ((t = q.createContext(null)), e.set(q.createContext, t)), t);
 }
 var C_ = S_(),
   w_ = [null, null];
@@ -4814,7 +4817,7 @@ function T_(e, t, n) {
   i_(() => e(...t), n);
 }
 function E_(e, t, n, r, i, a) {
-  (e.current = r), (n.current = !1), i.current && ((i.current = null), a());
+  ((e.current = r), (n.current = !1), i.current && ((i.current = null), a()));
 }
 function D_(e, t, n, r, i, a, o, s, c, l, u) {
   if (!e) return () => {};
@@ -4828,12 +4831,12 @@ function D_(e, t, n, r, i, a, o, s, c, l, u) {
       try {
         n = r(e, i.current);
       } catch (e) {
-        (p = e), (f = e);
+        ((p = e), (f = e));
       }
-      p || (f = null),
+      (p || (f = null),
         n === a.current
           ? o.current || l()
-          : ((a.current = n), (c.current = n), (o.current = !0), u());
+          : ((a.current = n), (c.current = n), (o.current = !0), u()));
     };
   return (
     (n.onStateChange = p),
@@ -4889,7 +4892,7 @@ function k_(
         }, [t]),
         o = q.useMemo(() => {
           let e = u;
-          return n?.Consumer, e;
+          return (n?.Consumer, e);
         }, [n, u]),
         s = q.useContext(o),
         c = !!t.store && !!t.store.getState && !!t.store.dispatch,
@@ -4933,17 +4936,17 @@ function k_(
         E = q.useSyncExternalStore(T, w, f ? () => p(f(), a) : w);
       } catch (e) {
         throw (
-          (C.current &&
+          C.current &&
             (e.message += `
 The error may be correlated with this previous error:
 ${C.current.stack}
 
 `),
-          e)
+          e
         );
       }
       i_(() => {
-        (C.current = void 0), (b.current = void 0), (v.current = E);
+        ((C.current = void 0), (b.current = void 0), (v.current = E));
       });
       let D = q.useMemo(() => q.createElement(e, { ...E, ref: i }), [i, e, E]);
       return q.useMemo(
@@ -4956,7 +4959,7 @@ ${C.current.stack}
       let t = q.forwardRef(function (e, t) {
         return q.createElement(h, { ...e, reactReduxForwardedRef: t });
       });
-      return (t.displayName = n), (t.WrappedComponent = e), y_(t, e);
+      return ((t.displayName = n), (t.WrappedComponent = e), y_(t, e));
     }
     return y_(h, e);
   };
@@ -4980,7 +4983,7 @@ function j_(e) {
       e.trySubscribe(),
       o !== i.getState() && e.notifyNestedSubs(),
       () => {
-        e.tryUnsubscribe(), (e.onStateChange = void 0);
+        (e.tryUnsubscribe(), (e.onStateChange = void 0));
       }
     );
   }, [a, o]);
@@ -5055,7 +5058,7 @@ var M_ = j_,
     var t = e.slice(0, -2);
     if (e.slice(-2) !== `px`) return 0;
     var n = Number(t);
-    return isNaN(n) && S(!1), n;
+    return (isNaN(n) && S(!1), n);
   },
   B_ = function () {
     return { x: window.pageXOffset, y: window.pageYOffset };
@@ -5068,7 +5071,7 @@ var M_ = j_,
     return R_({ borderBox: I_(n, t), border: r, margin: i, padding: a });
   },
   H_ = function (e, t) {
-    return t === void 0 && (t = B_()), V_(e, t);
+    return (t === void 0 && (t = B_()), V_(e, t));
   },
   U_ = function (e, t) {
     return R_({
@@ -5100,11 +5103,11 @@ var M_ = j_,
     var t = [],
       n = null,
       r = function () {
-        (t = [...arguments]),
+        ((t = [...arguments]),
           !n &&
             (n = requestAnimationFrame(function () {
-              (n = null), e.apply(void 0, t);
-            }));
+              ((n = null), e.apply(void 0, t));
+            })));
       };
     return (
       (r.cancel = function () {
@@ -5115,7 +5118,7 @@ var M_ = j_,
   },
   K_ = n(d());
 function q_(e, t) {}
-q_.bind(null, `warn`), q_.bind(null, `error`);
+(q_.bind(null, `warn`), q_.bind(null, `error`));
 function J_() {}
 function Y_(e, t) {
   return { ...e, ...t };
@@ -5146,13 +5149,13 @@ function Y(e, t) {
 }
 var $_ = class extends q.Component {
     constructor(...e) {
-      super(...e),
+      (super(...e),
         (this.callbacks = null),
         (this.unbind = J_),
         (this.onWindowError = (e) => {
           let t = this.getCallbacks();
-          t.isDragging() && t.tryAbort(),
-            e.error instanceof Q_ && e.preventDefault();
+          (t.isDragging() && t.tryAbort(),
+            e.error instanceof Q_ && e.preventDefault());
         }),
         (this.getCallbacks = () => {
           if (!this.callbacks)
@@ -5161,7 +5164,7 @@ var $_ = class extends q.Component {
         }),
         (this.setCallbacks = (e) => {
           this.callbacks = e;
-        });
+        }));
     }
     componentDidMount() {
       this.unbind = X_(window, [
@@ -5273,7 +5276,7 @@ function uv(e, t) {
         : { inputs: t, result: e() };
   return (
     (0, q.useEffect)(() => {
-      (r.current = !1), (i.current = a);
+      ((r.current = !1), (i.current = a));
     }, [a]),
     a.result
   );
@@ -5350,7 +5353,7 @@ function kv(e, t = lv) {
   function r(...r) {
     if (n && n.lastThis === this && t(r, n.lastArgs)) return n.lastResult;
     let i = e.apply(this, r);
-    return (n = { lastResult: i, lastArgs: r, lastThis: this }), i;
+    return ((n = { lastResult: i, lastArgs: r, lastThis: this }), i);
   }
   return (
     (r.clear = function () {
@@ -5506,9 +5509,9 @@ function iy({
           withDroppableDisplacement: !0,
         }))
       )
-        return (e.invisible[o.descriptor.id] = !0), e;
+        return ((e.invisible[o.descriptor.id] = !0), e);
       let l = { draggableId: c, shouldAnimate: ny(c, a, i) };
-      return (e.visible[c] = l), e;
+      return ((e.visible[c] = l), e);
     },
     { all: [], visible: {}, invisible: {} },
   );
@@ -5911,7 +5914,7 @@ var Dy = ({
   },
   My = (e) => {
     let t = e.subject.active;
-    return !t && Y(), t;
+    return (!t && Y(), t);
   },
   Ny = ({
     isMovingForward: e,
@@ -6010,7 +6013,7 @@ var Dy = ({
   zy = (e, t) => ({ ...e, scroll: { ...e.scroll, max: t } }),
   By = (e, t, n) => {
     let r = e.frame;
-    zv(t, e) && Y(), e.subject.withPlaceholder && Y();
+    (zv(t, e) && Y(), e.subject.withPlaceholder && Y());
     let i = Ly(e.axis, t.displaceBy).point,
       a = Ry(e, i, n),
       o = {
@@ -6580,7 +6583,7 @@ var db = ({
   },
   vb = (e) => {
     let t = e.frame;
-    return !t && Y(), t;
+    return (!t && Y(), t);
   },
   yb = ({ additions: e, updatedDroppables: t, viewport: n }) => {
     let r = n.scroll.diff.value;
@@ -6754,7 +6757,7 @@ var wb = { phase: `IDLE`, completed: null, shouldFlush: !1 },
     }
     if (t.type === `MOVE_BY_WINDOW_SCROLL`) {
       if (e.phase === `DROP_PENDING` || e.phase === `DROP_ANIMATING`) return e;
-      !qy(e) && Y(), !e.isWindowScrollAllowed && Y();
+      (!qy(e) && Y(), !e.isWindowScrollAllowed && Y());
       let n = t.payload.newScroll;
       if (mv(e.viewport.scroll.current, n)) return Cb(e);
       let r = wy(e.viewport, n);
@@ -6848,10 +6851,10 @@ var Db = (e) => ({ type: `BEFORE_INITIAL_CAPTURE`, payload: e }),
       }
       let { id: a, clientSelection: o, movementMode: s } = i.payload,
         c = t();
-      c.phase === `DROP_ANIMATING` && n(Wb({ completed: c.completed })),
+      (c.phase === `DROP_ANIMATING` && n(Wb({ completed: c.completed })),
         t().phase !== `IDLE` && Y(),
         n(Hb()),
-        n(Db({ draggableId: a, movementMode: s }));
+        n(Db({ draggableId: a, movementMode: s })));
       let l = {
           draggableId: a,
           scrollOptions: { shouldPublishImmediately: s === `SNAP` },
@@ -6868,10 +6871,10 @@ var Db = (e) => ({ type: `BEFORE_INITIAL_CAPTURE`, payload: e }),
       );
     },
   Yb = (e) => () => (t) => (n) => {
-    Eb(n, `INITIAL_PUBLISH`) && e.dragging(),
+    (Eb(n, `INITIAL_PUBLISH`) && e.dragging(),
       Eb(n, `DROP_ANIMATE`) && e.dropping(n.payload.completed.result.reason),
       (Eb(n, `FLUSH`) || Eb(n, `DROP_COMPLETE`)) && e.resting(),
-      t(n);
+      t(n));
   },
   Xb = {
     outOfTheWay: `cubic-bezier(0.2, 0, 0, 1)`,
@@ -6970,8 +6973,8 @@ var Db = (e) => ({ type: `BEFORE_INITIAL_CAPTURE`, payload: e }),
         return;
       }
       if (i.phase === `IDLE`) return;
-      i.phase === `DROP_PENDING` && i.isWaiting && Y(),
-        i.phase !== `DRAGGING` && i.phase !== `DROP_PENDING` && Y();
+      (i.phase === `DROP_PENDING` && i.isWaiting && Y(),
+        i.phase !== `DRAGGING` && i.phase !== `DROP_PENDING` && Y());
       let o = i.critical,
         s = i.dimensions,
         c = s.draggables[i.critical.draggable.id],
@@ -7044,10 +7047,10 @@ function mx({ onWindowScroll: e }) {
     return i !== J_;
   }
   function o() {
-    a() && Y(), (i = X_(window, [r]));
+    (a() && Y(), (i = X_(window, [r])));
   }
   function s() {
-    !a() && Y(), n.cancel(), i(), (i = J_);
+    (!a() && Y(), n.cancel(), i(), (i = J_));
   }
   return { start: o, stop: s, isActive: a };
 }
@@ -7060,9 +7063,9 @@ var hx = (e) =>
       },
     });
     return (e) => (n) => {
-      !t.isActive() && Eb(n, `INITIAL_PUBLISH`) && t.start(),
+      (!t.isActive() && Eb(n, `INITIAL_PUBLISH`) && t.start(),
         t.isActive() && hx(n) && t.stop(),
-        e(n);
+        e(n));
     };
   },
   _x = (e) => {
@@ -7074,7 +7077,7 @@ var hx = (e) =>
       i = (i) => {
         t || n || ((t = !0), e(i), clearTimeout(r));
       };
-    return (i.wasCalled = () => t), i;
+    return ((i.wasCalled = () => t), i);
   },
   vx = () => {
     let e = [],
@@ -7093,10 +7096,10 @@ var hx = (e) =>
       flush: () => {
         if (!e.length) return;
         let t = [...e];
-        (e.length = 0),
+        ((e.length = 0),
           t.forEach((e) => {
-            clearTimeout(e.timerId), e.callback();
-          });
+            (clearTimeout(e.timerId), e.callback());
+          }));
       },
     };
   },
@@ -7139,29 +7142,29 @@ function wx(e, t, n, r) {
     return;
   }
   let i = _x(n);
-  e(t, { announce: i }), i.wasCalled() || n(r(t));
+  (e(t, { announce: i }), i.wasCalled() || n(r(t)));
 }
 var Tx = (e, t) => {
     let n = vx(),
       r = null,
       i = (t, n) => {
-        r && Y(),
+        (r && Y(),
           Sx(`onBeforeCapture`, () => {
             let r = e().onBeforeCapture;
             r && r({ draggableId: t, mode: n });
-          });
+          }));
       },
       a = (t, n) => {
-        r && Y(),
+        (r && Y(),
           Sx(`onBeforeDragStart`, () => {
             let r = e().onBeforeDragStart;
             r && r(Cx(t, n));
-          });
+          }));
       },
       o = (i, a) => {
         r && Y();
         let o = Cx(i, a);
-        (r = {
+        ((r = {
           mode: a,
           lastCritical: i,
           lastLocation: o.source,
@@ -7169,7 +7172,7 @@ var Tx = (e, t) => {
         }),
           n.add(() => {
             Sx(`onDragStart`, () => wx(e().onDragStart, o, t, sv.onDragStart));
-          });
+          }));
       },
       s = (i, a) => {
         let o = Fv(a),
@@ -7187,12 +7190,12 @@ var Tx = (e, t) => {
         });
       },
       c = () => {
-        !r && Y(), n.flush();
+        (!r && Y(), n.flush());
       },
       l = (n) => {
-        !r && Y(),
+        (!r && Y(),
           (r = null),
-          Sx(`onDragEnd`, () => wx(e().onDragEnd, n, t, sv.onDragEnd));
+          Sx(`onDragEnd`, () => wx(e().onDragEnd, n, t, sv.onDragEnd)));
       };
     return {
       beforeCapture: i,
@@ -7222,14 +7225,14 @@ var Tx = (e, t) => {
       }
       if (Eb(r, `INITIAL_PUBLISH`)) {
         let e = r.payload.critical;
-        n.beforeStart(e, r.payload.movementMode),
+        (n.beforeStart(e, r.payload.movementMode),
           t(r),
-          n.start(e, r.payload.movementMode);
+          n.start(e, r.payload.movementMode));
         return;
       }
       if (Eb(r, `DROP_COMPLETE`)) {
         let e = r.payload.completed.result;
-        n.flush(), t(r), n.drop(e);
+        (n.flush(), t(r), n.drop(e));
         return;
       }
       if ((t(r), Eb(r, `FLUSH`))) {
@@ -7246,14 +7249,14 @@ var Tx = (e, t) => {
       return;
     }
     let r = e.getState();
-    r.phase !== `DROP_ANIMATING` && Y(),
-      e.dispatch(Wb({ completed: r.completed }));
+    (r.phase !== `DROP_ANIMATING` && Y(),
+      e.dispatch(Wb({ completed: r.completed })));
   },
   Ox = (e) => {
     let t = null,
       n = null;
     function r() {
-      (n &&= (cancelAnimationFrame(n), null)), (t &&= (t(), null));
+      ((n &&= (cancelAnimationFrame(n), null)), (t &&= (t(), null)));
     }
     return (i) => (a) => {
       if (
@@ -7273,42 +7276,42 @@ var Tx = (e, t) => {
         },
       };
       n = requestAnimationFrame(() => {
-        (n = null), (t = X_(window, [o]));
+        ((n = null), (t = X_(window, [o])));
       });
     };
   },
   kx = (e) => () => (t) => (n) => {
-    (Eb(n, `DROP_COMPLETE`) || Eb(n, `FLUSH`) || Eb(n, `DROP_ANIMATE`)) &&
+    ((Eb(n, `DROP_COMPLETE`) || Eb(n, `FLUSH`) || Eb(n, `DROP_ANIMATE`)) &&
       e.stopPublishing(),
-      t(n);
+      t(n));
   },
   Ax = (e) => {
     let t = !1;
     return () => (n) => (r) => {
       if (Eb(r, `INITIAL_PUBLISH`))
-        (t = !0),
+        ((t = !0),
           e.tryRecordFocus(r.payload.critical.draggable.id),
           n(r),
-          e.tryRestoreFocusRecorded();
+          e.tryRestoreFocusRecorded());
       else if ((n(r), t)) {
-        if (Eb(r, `FLUSH`)) (t = !1), e.tryRestoreFocusRecorded();
+        if (Eb(r, `FLUSH`)) ((t = !1), e.tryRestoreFocusRecorded());
         else if (Eb(r, `DROP_COMPLETE`)) {
           t = !1;
           let n = r.payload.completed.result;
-          n.combine && e.tryShiftRecord(n.draggableId, n.combine.draggableId),
-            e.tryRestoreFocusRecorded();
+          (n.combine && e.tryShiftRecord(n.draggableId, n.combine.draggableId),
+            e.tryRestoreFocusRecorded());
         }
       }
     };
   },
   jx = (e) => Eb(e, `DROP_COMPLETE`) || Eb(e, `DROP_ANIMATE`) || Eb(e, `FLUSH`),
   Mx = (e) => (t) => (n) => (r) => {
-    if (jx(r)) e.stop(), n(r);
+    if (jx(r)) (e.stop(), n(r));
     else if (Eb(r, `INITIAL_PUBLISH`)) {
       n(r);
       let i = t.getState();
-      i.phase !== `DRAGGING` && Y(), e.start(i);
-    } else n(r), e.scroll(t.getState());
+      (i.phase !== `DRAGGING` && Y(), e.start(i));
+    } else (n(r), e.scroll(t.getState()));
   },
   Nx = (e) => (t) => (n) => {
     if ((t(n), !Eb(n, `PUBLISH_WHILE_DRAGGING`))) return;
@@ -7347,23 +7350,23 @@ function Lx({ registry: e, callbacks: t }) {
               scroll: e.droppable.getById(t).callbacks.getScrollWhileDragging(),
             })),
             l = { additions: s, removals: Object.keys(a), modified: c };
-          (n = Ix()), t.publish(l);
+          ((n = Ix()), t.publish(l));
         }));
     };
   return {
     add: (e) => {
       let t = e.descriptor.id;
-      (n.additions[t] = e),
+      ((n.additions[t] = e),
         (n.modified[e.descriptor.droppableId] = !0),
         n.removals[t] && delete n.removals[t],
-        i();
+        i());
     },
     remove: (e) => {
       let t = e.descriptor;
-      (n.removals[t.id] = !0),
+      ((n.removals[t.id] = !0),
         (n.modified[t.droppableId] = !0),
         n.additions[t.id] && delete n.additions[t.id],
-        i();
+        i());
     },
     stop: () => {
       r && (cancelAnimationFrame(r), (r = null), (n = Ix()));
@@ -7376,7 +7379,7 @@ var Rx = ({ scrollHeight: e, scrollWidth: t, height: n, width: r }) => {
   },
   zx = (e = window) => {
     let t = e.document.documentElement;
-    return !t && Y(), t;
+    return (!t && Y(), t);
   },
   Bx = (e = window) => {
     let t = zx(e);
@@ -7442,8 +7445,8 @@ var Wx = (e, t, n) => {
         registry: t,
       }),
       a = (e, i) => {
-        !t.droppable.exists(e) && Y(),
-          r && n.updateDroppableIsEnabled({ id: e, isEnabled: i });
+        (!t.droppable.exists(e) && Y(),
+          r && n.updateDroppableIsEnabled({ id: e, isEnabled: i }));
       },
       o = (e, i) => {
         r &&
@@ -7462,17 +7465,17 @@ var Wx = (e, t, n) => {
         if (!r) return;
         i.stop();
         let e = r.critical.droppable;
-        t.droppable
+        (t.droppable
           .getAllByType(e.type)
           .forEach((e) => e.callbacks.dragStopped()),
           r.unsubscribe(),
-          (r = null);
+          (r = null));
       },
       u = (e) => {
         !r && Y();
         let n = r.critical.draggable;
-        e.type === `ADDITION` && Ux(t, n, e.value) && i.add(e.value),
-          e.type === `REMOVAL` && Ux(t, n, e.value) && i.remove(e.value);
+        (e.type === `ADDITION` && Ux(t, n, e.value) && i.add(e.value),
+          e.type === `REMOVAL` && Ux(t, n, e.value) && i.remove(e.value));
       };
     return {
       updateDroppableIsEnabled: a,
@@ -7785,7 +7788,7 @@ var Wx = (e, t, n) => {
           i = () => {
             r = !0;
           };
-        gS({
+        (gS({
           state: e,
           dragStartTime: 0,
           shouldUseTimeDampening: !1,
@@ -7794,7 +7797,7 @@ var Wx = (e, t, n) => {
           getAutoScrollerOptions: n,
         }),
           (a = { dragStartTime: t, shouldUseTimeDampening: r }),
-          r && o(e);
+          r && o(e));
       },
       stop: () => {
         a &&= (r.cancel(), i.cancel(), null);
@@ -7809,16 +7812,16 @@ var Wx = (e, t, n) => {
       i = (e, n) => {
         if (!fS(e, n)) return n;
         let r = pS(e, n);
-        if (!r) return t(e.descriptor.id, n), null;
+        if (!r) return (t(e.descriptor.id, n), null);
         let i = pv(n, r);
-        return t(e.descriptor.id, i), pv(n, i);
+        return (t(e.descriptor.id, i), pv(n, i));
       },
       a = (e, t, r) => {
         if (!e || !uS(t, r)) return r;
         let i = dS(t, r);
-        if (!i) return n(r), null;
+        if (!i) return (n(r), null);
         let a = pv(r, i);
-        return n(a), pv(r, a);
+        return (n(a), pv(r, a));
       };
     return (e) => {
       let t = e.scrollJumpRequest;
@@ -7950,11 +7953,11 @@ var Wx = (e, t, n) => {
       : q.useEffect,
   AS = (e) => {
     let t = e || document.querySelector(`head`);
-    return !t && Y(), t;
+    return (!t && Y(), t);
   },
   jS = (e) => {
     let t = document.createElement(`style`);
-    return e && t.setAttribute(`nonce`, e), (t.type = `text/css`), t;
+    return (e && t.setAttribute(`nonce`, e), (t.type = `text/css`), t);
   };
 function MS(e, t, n) {
   let r = uv(() => OS(e), [e]),
@@ -7963,22 +7966,22 @@ function MS(e, t, n) {
     o = X(
       kv((e) => {
         let t = a.current;
-        !t && Y(), (t.textContent = e);
+        (!t && Y(), (t.textContent = e));
       }),
       [],
     ),
     s = X((e) => {
       let t = i.current;
-      !t && Y(), (t.textContent = e);
+      (!t && Y(), (t.textContent = e));
     }, []);
   kS(() => {
     (i.current || a.current) && Y();
     let c = jS(t),
       l = jS(t);
-    (i.current = c),
+    ((i.current = c),
       (a.current = l),
       c.setAttribute(`${bS}-always`, e),
-      l.setAttribute(`${bS}-dynamic`, e);
+      l.setAttribute(`${bS}-dynamic`, e));
     let u = AS(n);
     return (
       u.appendChild(c),
@@ -7988,9 +7991,9 @@ function MS(e, t, n) {
       () => {
         let e = (e) => {
           let t = e.current;
-          !t && Y(), u.removeChild(t), (e.current = null);
+          (!t && Y(), u.removeChild(t), (e.current = null));
         };
-        e(i), e(a);
+        (e(i), e(a));
       }
     );
   }, [t, s, o, r.always, r.resting, e, n]);
@@ -8122,11 +8125,11 @@ function VS() {
   }
   function a(e) {
     let t = i(e);
-    return !t && Y(), t;
+    return (!t && Y(), t);
   }
   let o = {
     register: (t) => {
-      (e.draggables[t.descriptor.id] = t), r({ type: `ADDITION`, value: t });
+      ((e.draggables[t.descriptor.id] = t), r({ type: `ADDITION`, value: t }));
     },
     update: (t, n) => {
       let r = e.draggables[n.descriptor.id];
@@ -8155,7 +8158,7 @@ function VS() {
   }
   function c(e) {
     let t = s(e);
-    return !t && Y(), t;
+    return (!t && Y(), t);
   }
   let l = {
     register: (t) => {
@@ -8172,7 +8175,7 @@ function VS() {
       Object.values(e.droppables).filter((e) => e.descriptor.type === t),
   };
   function u() {
-    (e.draggables = {}), (e.droppables = {}), (t.length = 0);
+    ((e.draggables = {}), (e.droppables = {}), (t.length = 0));
   }
   return { draggable: o, droppable: l, subscribe: n, clean: u };
 }
@@ -8192,7 +8195,7 @@ function HS() {
 var US = q.createContext(null),
   WS = () => {
     let e = document.body;
-    return !e && Y(), e;
+    return (!e && Y(), e);
   },
   GS = {
     position: `absolute`,
@@ -8223,8 +8226,8 @@ function qS(e) {
           function () {
             setTimeout(function () {
               let t = WS();
-              t.contains(e) && t.removeChild(e),
-                e === n.current && (n.current = null);
+              (t.contains(e) && t.removeChild(e),
+                e === n.current && (n.current = null));
             });
           }
         );
@@ -8289,10 +8292,10 @@ function eC() {
   function r(t) {
     e && Y();
     let n = { abandon: t };
-    return (e = n), n;
+    return ((e = n), n);
   }
   function i() {
-    !e && Y(), (e = null);
+    (!e && Y(), (e = null));
   }
   function a() {
     e && (e.abandon(), i());
@@ -8342,7 +8345,7 @@ function xC({ cancel: e, completed: t, getPhase: n, setPhase: r }) {
         let o = { x: i, y: a },
           s = n();
         if (s.type === `DRAGGING`) {
-          e.preventDefault(), s.actions.move(o);
+          (e.preventDefault(), s.actions.move(o));
           return;
         }
         s.type !== `PENDING` && Y();
@@ -8366,7 +8369,7 @@ function xC({ cancel: e, completed: t, getPhase: n, setPhase: r }) {
     {
       eventName: `mousedown`,
       fn: (t) => {
-        n().type === `DRAGGING` && t.preventDefault(), e();
+        (n().type === `DRAGGING` && t.preventDefault(), e());
       },
     },
     {
@@ -8391,8 +8394,8 @@ function xC({ cancel: e, completed: t, getPhase: n, setPhase: r }) {
       eventName: `webkitmouseforcedown`,
       fn: (t) => {
         let r = n();
-        r.type === `IDLE` && Y(),
-          r.actions.shouldRespectForcePress() ? e() : t.preventDefault();
+        (r.type === `IDLE` && Y(),
+          r.actions.shouldRespectForcePress() ? e() : t.preventDefault());
       },
     },
     { eventName: gC, fn: e },
@@ -8420,7 +8423,7 @@ function SC(e) {
           if (!i) return;
           t.preventDefault();
           let a = { x: t.clientX, y: t.clientY };
-          n.current(), l(i, a);
+          (n.current(), l(i, a));
         },
       }),
       [e],
@@ -8451,9 +8454,9 @@ function SC(e) {
     }, [a]),
     s = X(() => {
       let e = t.current;
-      o(),
+      (o(),
         e.type === `DRAGGING` && e.actions.cancel({ shouldBlockNextClick: !0 }),
-        e.type === `PENDING` && e.actions.abort();
+        e.type === `PENDING` && e.actions.abort());
     }, [o]),
     c = X(
       function () {
@@ -8472,9 +8475,9 @@ function SC(e) {
     ),
     l = X(
       function (e, n) {
-        t.current.type !== `IDLE` && Y(),
+        (t.current.type !== `IDLE` && Y(),
           (t.current = { type: `PENDING`, point: n, actions: e }),
-          c();
+          c());
       },
       [c],
     );
@@ -8494,10 +8497,10 @@ function CC() {}
 var wC = { [sC]: !0, [oC]: !0, [lC]: !0, [cC]: !0 };
 function TC(e, t) {
   function n() {
-    t(), e.cancel();
+    (t(), e.cancel());
   }
   function r() {
-    t(), e.drop();
+    (t(), e.drop());
   }
   return [
     {
@@ -8545,7 +8548,7 @@ function EC(e) {
             s = a.snapLift();
           t.current();
           function c() {
-            !o && Y(), (o = !1), t.current(), r();
+            (!o && Y(), (o = !1), t.current(), r());
           }
           t.current = X_(e.getWindow(), TC(s, c), { capture: !0, passive: !1 });
         },
@@ -8586,7 +8589,8 @@ function AC({ cancel: e, getPhase: t }) {
     {
       eventName: `keydown`,
       fn: (n) => {
-        t().type === `DRAGGING` && n.keyCode === iC && n.preventDefault(), e();
+        (t().type === `DRAGGING` && n.keyCode === iC && n.preventDefault(),
+          e());
       },
     },
     { eventName: gC, fn: e },
@@ -8606,7 +8610,7 @@ function jC({ cancel: e, completed: t, getPhase: n }) {
         r.hasMoved = !0;
         let { clientX: i, clientY: a } = t.touches[0],
           o = { x: i, y: a };
-        t.preventDefault(), r.actions.move(o);
+        (t.preventDefault(), r.actions.move(o));
       },
     },
     {
@@ -8623,7 +8627,7 @@ function jC({ cancel: e, completed: t, getPhase: n }) {
     {
       eventName: `touchcancel`,
       fn: (t) => {
-        n().type === `DRAGGING` && t.preventDefault(), e();
+        (n().type === `DRAGGING` && t.preventDefault(), e());
       },
     },
     {
@@ -8667,7 +8671,7 @@ function MC(e) {
           if (!i) return;
           let { clientX: a, clientY: o } = t.touches[0],
             c = { x: a, y: o };
-          n.current(), d(i, c);
+          (n.current(), d(i, c));
         },
       }),
       [e],
@@ -8688,9 +8692,9 @@ function MC(e) {
     }, [o, i]),
     c = X(() => {
       let e = t.current;
-      s(),
+      (s(),
         e.type === `DRAGGING` && e.actions.cancel({ shouldBlockNextClick: !0 }),
-        e.type === `PENDING` && e.actions.abort();
+        e.type === `PENDING` && e.actions.abort());
     }, [s]),
     l = X(
       function () {
@@ -8699,7 +8703,7 @@ function MC(e) {
           a = X_(e.getWindow(), jC(i), t),
           o = X_(e.getWindow(), AC(i), t);
         n.current = function () {
-          a(), o();
+          (a(), o());
         };
       },
       [e, c, r, s],
@@ -8717,11 +8721,12 @@ function MC(e) {
       function (e, t) {
         r().type !== `IDLE` && Y();
         let n = setTimeout(u, OC);
-        i({ type: `PENDING`, point: t, actions: e, longPressTimerId: n }), l();
+        (i({ type: `PENDING`, point: t, actions: e, longPressTimerId: n }),
+          l());
       },
       [l, r, i, u],
     );
-  kS(
+  (kS(
     function () {
       return (
         o(),
@@ -8745,7 +8750,7 @@ function MC(e) {
         ]);
       },
       [e],
-    );
+    ));
 }
 var NC = [
   `input`,
@@ -8847,11 +8852,11 @@ function YC({
   let m = p.bind(null, `DRAGGING`);
   function h(t) {
     function r() {
-      e.release(), (u = `COMPLETED`);
+      (e.release(), (u = `COMPLETED`));
     }
-    u !== `PRE_DRAG` && (r(), Y()),
+    (u !== `PRE_DRAG` && (r(), Y()),
       n.dispatch(Ob(t.liftActionArgs)),
-      (u = `DRAGGING`);
+      (u = `DRAGGING`));
     function i(e, i = { shouldBlockNextClick: !1 }) {
       if ((t.cleanup(), i.shouldBlockNextClick)) {
         let e = X_(window, [
@@ -8863,7 +8868,7 @@ function YC({
         ]);
         setTimeout(e);
       }
-      r(), n.dispatch(Gb({ reason: e }));
+      (r(), n.dispatch(Gb({ reason: e })));
     }
     return {
       isActive: () =>
@@ -8929,17 +8934,17 @@ function ZC({
       },
       [s],
     );
-  kS(
+  (kS(
     function () {
       let e = t.getState();
       return t.subscribe(() => {
         let n = t.getState();
-        c(e, n), (e = n);
+        (c(e, n), (e = n));
       });
     },
     [s, t, c],
   ),
-    kS(() => s.tryAbandon, [s.tryAbandon]);
+    kS(() => s.tryAbandon, [s.tryAbandon]));
   let l = X(
       (e) => JC({ lockAPI: s, registry: n, store: t, draggableId: e }),
       [s, n, t],
@@ -9005,7 +9010,7 @@ var QC = (e) => ({
     durationDampening: { ...Xx.durationDampening, ...e.autoScrollerOptions },
   });
 function ew(e) {
-  return !e.current && Y(), e.current;
+  return (!e.current && Y(), e.current);
 }
 function tw(e) {
   let {
@@ -9213,7 +9218,7 @@ function fw(e) {
     l = X(
       (e) => {
         let t = i();
-        return !t && Y(), dw(n, t, e);
+        return (!t && Y(), dw(n, t, e));
       },
       [n, i],
     ),
@@ -9223,9 +9228,10 @@ function fw(e) {
     ),
     d = (0, q.useRef)(u),
     f = (0, q.useRef)(!0);
-  kS(
+  (kS(
     () => (
-      r.draggable.register(d.current), () => r.draggable.unregister(d.current)
+      r.draggable.register(d.current),
+      () => r.draggable.unregister(d.current)
     ),
     [r.draggable],
   ),
@@ -9235,13 +9241,13 @@ function fw(e) {
         return;
       }
       let e = d.current;
-      (d.current = u), r.draggable.update(u, e);
-    }, [u, r.draggable]);
+      ((d.current = u), r.draggable.update(u, e));
+    }, [u, r.draggable]));
 }
 var pw = q.createContext(null);
 function mw(e) {
   let t = (0, q.useContext)(e);
-  return !t && Y(), t;
+  return (!t && Y(), t);
 }
 function hw(e) {
   e.preventDefault();
@@ -9662,7 +9668,7 @@ function Gw(e) {
     p = X(() => {
       let e = t.current,
         n = Ww(e);
-      !(e && n) && Y(), e.scrollOptions.shouldPublishImmediately ? d() : f();
+      (!(e && n) && Y(), e.scrollOptions.shouldPublishImmediately ? d() : f());
     }, [f, d]),
     m = X(
       (e, r) => {
@@ -9696,23 +9702,23 @@ function Gw(e) {
     h = X(() => {
       let e = t.current,
         n = Ww(e);
-      return !(e && n) && Y(), Fw(n);
+      return (!(e && n) && Y(), Fw(n));
     }, []),
     g = X(() => {
       let e = t.current;
       !e && Y();
       let n = Ww(e);
-      (t.current = null),
+      ((t.current = null),
         n &&
           (f.cancel(),
           n.removeAttribute(wS.contextId),
-          n.removeEventListener(`scroll`, p, Uw(e.scrollOptions)));
+          n.removeEventListener(`scroll`, p, Uw(e.scrollOptions))));
     }, [p, f]),
     _ = X((e) => {
       let n = t.current;
       !n && Y();
       let r = Ww(n);
-      !r && Y(), (r.scrollTop += e.y), (r.scrollLeft += e.x);
+      (!r && Y(), (r.scrollTop += e.y), (r.scrollLeft += e.x));
     }, []),
     v = uv(
       () => ({
@@ -9724,12 +9730,12 @@ function Gw(e) {
       [g, m, h, _],
     ),
     y = uv(() => ({ uniqueId: r, descriptor: s, callbacks: v }), [v, s, r]);
-  kS(
+  (kS(
     () => (
       (c.current = y.descriptor),
       i.droppable.register(y),
       () => {
-        t.current && g(), i.droppable.unregister(y);
+        (t.current && g(), i.droppable.unregister(y));
       }
     ),
     [v, s, g, y, a, i.droppable],
@@ -9740,7 +9746,7 @@ function Gw(e) {
     kS(() => {
       t.current &&
         a.updateDroppableIsCombineEnabled(c.current.id, e.isCombineEnabled);
-    }, [e.isCombineEnabled, a]);
+    }, [e.isCombineEnabled, a]));
 }
 function Kw() {}
 var qw = { width: 0, height: 0, margin: Cv },
@@ -9783,7 +9789,7 @@ var qw = { width: 0, height: 0, margin: Cv },
             ? t.current
               ? Kw
               : ((t.current = setTimeout(() => {
-                  (t.current = null), c(!1);
+                  ((t.current = null), c(!1));
                 })),
                 n)
             : (n(), c(!1), Kw)
@@ -9810,7 +9816,7 @@ var qw = { width: 0, height: 0, margin: Cv },
   }),
   Zw = class extends q.PureComponent {
     constructor(...e) {
-      super(...e),
+      (super(...e),
         (this.state = {
           isVisible: !!this.props.on,
           data: this.props.on,
@@ -9818,7 +9824,7 @@ var qw = { width: 0, height: 0, margin: Cv },
         }),
         (this.onClose = () => {
           this.state.animate === `close` && this.setState({ isVisible: !1 });
-        });
+        }));
     }
     static getDerivedStateFromProps(e, t) {
       return e.shouldAnimate
@@ -9938,7 +9944,7 @@ var qw = { width: 0, height: 0, margin: Cv },
     return q.createElement(pw.Provider, { value: T }, o(C, m), E());
   };
 function $w() {
-  return !document.body && Y(), document.body;
+  return (!document.body && Y(), document.body);
 }
 var eT = {
     mode: `standard`,
@@ -10060,7 +10066,7 @@ function oT(e) {
     } = e,
     [l, u, d] = Ku();
   q.useCallback(() => {
-    d(), c();
+    (d(), c());
   }, [d, c]);
   let f = i.GetClanSteamID(),
     p = q.useMemo(() => {
@@ -10185,7 +10191,7 @@ function lT(e) {
       [i],
     ),
     f = q.useCallback(() => {
-      r(l, s), t();
+      (r(l, s), t());
     }, [r, t, l, s]),
     p = q.useCallback((e) => {
       e.destination &&
@@ -10344,7 +10350,7 @@ var dT = (function (e) {
   hT = class {
     m_setting = void 0;
     constructor(e) {
-      m(this), (this.m_setting = e);
+      (m(this), (this.m_setting = e));
     }
     BIsEnableEnabled() {
       return this.m_setting.bEnable;
@@ -10477,12 +10483,12 @@ var dT = (function (e) {
       );
     }
   };
-N([g], hT.prototype, `m_setting`, void 0),
-  N([P], hT.prototype, `BHasSomeLanguage`, null);
+(N([g], hT.prototype, `m_setting`, void 0),
+  N([P], hT.prototype, `BHasSomeLanguage`, null));
 var gT = class {
   m_section = void 0;
   constructor(e) {
-    m(this), (this.m_section = e);
+    (m(this), (this.m_section = e));
   }
   BHasHeadline() {
     return this.m_section.localized_headline !== void 0;
@@ -10522,7 +10528,7 @@ var gT = class {
   GetHeadlineWithFallback(e) {
     let t = this.GetHeadline(e),
       n = Hs.GetELanguageFallback(e);
-    return t.length == 0 && e != n && (t = this.GetHeadline(n)), t;
+    return (t.length == 0 && e != n && (t = this.GetHeadline(n)), t);
   }
   GetBody(e) {
     return this.m_section.localized_body &&
@@ -10534,7 +10540,7 @@ var gT = class {
   GetBodyWithFallback(e) {
     let t = this.GetBody(e),
       n = Hs.GetELanguageFallback(e);
-    return t.length == 0 && e != n && (t = this.GetBody(n)), t;
+    return (t.length == 0 && e != n && (t = this.GetBody(n)), t);
   }
   GetImageHashAndExtRaw(e) {
     return this.m_section.localized_image &&
@@ -10550,7 +10556,7 @@ var gT = class {
   GetImageHashAndExtWithFallback(e) {
     let t = this.GetImageHashAndExtRaw(e),
       n = Hs.GetELanguageFallback(e);
-    return t === void 0 && e != n && (t = this.GetImageHashAndExtRaw(n)), t;
+    return (t === void 0 && e != n && (t = this.GetImageHashAndExtRaw(n)), t);
   }
   RemoveImage(e) {
     this.m_section.localized_image &&
@@ -10615,7 +10621,7 @@ var Z = n(a()),
     m_mapOptInData = new Map();
     static s_Singleton;
     static Get() {
-      return (this.s_Singleton ||= new e()), this.s_Singleton;
+      return ((this.s_Singleton ||= new e()), this.s_Singleton);
     }
     async ForceLoadOptInPage(e) {
       let t = {
@@ -10632,7 +10638,7 @@ var Z = n(a()),
       } catch (e) {
         console.error(`Failed getting opt in summary: ` + Qs(e).strErrorMsg);
       }
-      return this.AddOptInPageToCache(e, r), r;
+      return (this.AddOptInPageToCache(e, r), r);
     }
     AddOptInPageToCache(e, t) {
       let n = new Map();
@@ -10683,7 +10689,7 @@ var Z = n(a()),
     constructor() {}
     static s_singleton;
     static Get() {
-      return (e.s_singleton ||= new e()), e.s_singleton;
+      return ((e.s_singleton ||= new e()), e.s_singleton);
     }
   };
 function yT() {
@@ -10691,10 +10697,10 @@ function yT() {
     [t, n] = (0, q.useState)(!0);
   return (
     (0, q.useEffect)(() => {
-      n(!0),
+      (n(!0),
         e.LoadOptIns().then(() => {
           n(!1);
-        });
+        }));
     }, [e]),
     { bLoading: t, rgOptIns: e.GetOptIns() }
   );
@@ -10703,7 +10709,7 @@ async function bT(e) {
   let t = e?.GetEventModel()?.jsondata,
     n = t?.prune_list_optin_name;
   if (n == null || n.length === 0) {
-    (t.optin_tagid = void 0), (t.optin_prune_tagid = void 0);
+    ((t.optin_tagid = void 0), (t.optin_prune_tagid = void 0));
     return;
   }
   let r = U.COMMUNITY_BASE_URL + `saleoptin/ajaxgetoptintagids`,
@@ -10712,8 +10718,8 @@ async function bT(e) {
   try {
     let e = await Z.default.get(r, { params: i, withCredentials: !0 });
     if (e?.data?.success === 1) {
-      (t.optin_tagid = e.data.tagid),
-        (t.optin_prune_tagid = e.data.prune_tagid);
+      ((t.optin_tagid = e.data.tagid),
+        (t.optin_prune_tagid = e.data.prune_tagid));
       return;
     }
     a = Qs(e);
@@ -10887,7 +10893,7 @@ var PD = new (class {
     if (this.m_categories) return this.m_categories;
     let e = await this.Load();
     if (!e) throw Error(`Unable to load tag category data`);
-    return (this.m_categories = xm(e)), this.m_categories;
+    return ((this.m_categories = xm(e)), this.m_categories);
   }
   async Load() {
     let e = null;
@@ -10944,7 +10950,7 @@ async function RD(e, t, n, r, i) {
     f = [];
   l && d && f.push(_T.Get().HintLoadOptInPageData(d));
   let p;
-  a && (p = await Je(e, t, `english`)), await Promise.all(f);
+  (a && (p = await Je(e, t, `english`)), await Promise.all(f));
   let m = !1,
     h = l && d ? _T.Get().GetOptInPageData(d) : null,
     g = new Map();
@@ -10978,9 +10984,9 @@ async function RD(e, t, n, r, i) {
           }
           ZD(e, Array.from(n), gm.Store) && (t = !0);
         }
-        o && ZD(e, dO(e.capsule), gm.Feature) && (t = !0),
+        (o && ZD(e, dO(e.capsule), gm.Feature) && (t = !0),
           c && ZD(e, lO(e.capsule), gm.AppType) && (t = !0),
-          t && (oO(n.GetEventModel().jsondata.auto_item_tags, e), (m = !0));
+          t && (oO(n.GetEventModel().jsondata.auto_item_tags, e), (m = !0)));
       }
     }),
     m
@@ -10992,15 +10998,15 @@ async function zD(e, t, n, r) {
   let i = t.GetEventModel().GetTaggedItems();
   if (i.find((e) => e.capsule.id === r && e.capsule.type === n)) return;
   let a = { capsule: { id: r, type: n }, tags: [] };
-  await e(t, [a]), i.push(a), aO(t), t.SetDirty(Q.jsondata_sales);
+  (await e(t, [a]), i.push(a), aO(t), t.SetDirty(Q.jsondata_sales));
 }
 function BD(e, t) {
-  (e.manually_added_tags &&= e.manually_added_tags.filter(
+  ((e.manually_added_tags &&= e.manually_added_tags.filter(
     (e) => e.toLocaleLowerCase() != t,
   )),
     (e.manually_removed_tags &&= e.manually_removed_tags.filter(
       (e) => e.toLocaleLowerCase() != t,
-    ));
+    )));
 }
 function VD(e, t) {
   let n = !1,
@@ -11017,10 +11023,10 @@ function VD(e, t) {
   }
   return (
     r.forEach((t, r) => {
-      BD(e, r),
+      (BD(e, r),
         (e.manually_removed_tags ||= []),
         e.manually_removed_tags.push(t),
-        (n = !0);
+        (n = !0));
     }),
     n && (e.tags = t),
     n
@@ -11043,7 +11049,7 @@ function WD(e) {
 }
 function GD(e) {
   let t = new Set();
-  return e.forEach((e) => t.add(e.toLocaleLowerCase())), t;
+  return (e.forEach((e) => t.add(e.toLocaleLowerCase())), t);
 }
 function KD(e, t) {
   if (t && t.clauses)
@@ -11164,7 +11170,7 @@ function iO(e, t, n) {
     n === void 0 ? a.push(e.capsule) : n === !1 && r.set(t, !0);
   }
   let o = n.filter((e) => r.get(e.type + e.id));
-  return o.push(...a), o;
+  return (o.push(...a), o);
 }
 function aO(e) {
   s(() => {
@@ -11209,11 +11215,11 @@ function dO(e) {
   let t = [],
     n = vc.Get().GetApp(e.id);
   if (n) {
-    n.BHasDemo() && t.push(`Has Demo`),
+    (n.BHasDemo() && t.push(`Has Demo`),
       n.BIsComingSoon() && t.push(`Coming Soon`),
-      n.BIsEarlyAccess() && t.push(`Early Access`);
+      n.BIsEarlyAccess() && t.push(`Early Access`));
     let e = n.GetPlatforms();
-    e &&
+    (e &&
       (e.steamos_linux && t.push(`Linux`),
       e.mac && t.push(`Mac`),
       e.vr_support?.vrhmd && t.push(`VR`),
@@ -11231,9 +11237,9 @@ function dO(e) {
         (n.GetBestPurchaseOption()?.bundle_discount_pct &&
           n.GetBestPurchaseOption()?.bundle_discount_pct > 0)) &&
         t.push(`Discounted`),
-      n.BIsFree() && t.push(`Free`);
+      n.BIsFree() && t.push(`Free`));
     let r = n.GetAppType();
-    r === 11 && t.push(`Soundtrack`),
+    (r === 11 && t.push(`Soundtrack`),
       r == 4 && t.push(`DLC`),
       r == 12 && t.push(`PlayTest`),
       n.HasContentDescriptorID(3) && t.push(`Adult Only Sexual Content`),
@@ -11258,7 +11264,7 @@ function dO(e) {
         t.push(`Remote Play`),
       n.BHasStoreCategory(44) && t.push(`Remote Play Together`),
       n.BHasStoreCategory(61) && t.push(`HDR`),
-      n.BHasTrailers(!1) && t.push(`Has Trailer`);
+      n.BHasTrailers(!1) && t.push(`Has Trailer`));
   } else console.log(`Could not load storeinfo for`, e.type, e.id);
   return t;
 }
@@ -11287,14 +11293,14 @@ var pO = class e {
   m_sLastEventModelJson;
   static s_Singleton;
   static Get() {
-    return (e.s_Singleton ||= new e()), e.s_Singleton;
+    return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
   constructor() {
-    m(this),
+    (m(this),
       window.addEventListener(`message`, this.HandleMessage),
       window.addEventListener(`beforeunload`, () =>
         this.m_previewWindow?.close(),
-      );
+      ));
   }
   BIsConnected() {
     return this.m_bIsConnected;
@@ -11304,18 +11310,18 @@ var pO = class e {
       (this.m_previewWindow && this.m_bReceivedClientReady) ?? !1;
   }
   async ShowPreviewWindow(e, t, n, r, i) {
-    this.m_previewWindow &&
+    (this.m_previewWindow &&
       (this.m_previewWindow.close(),
       (this.m_bReceivedClientReady = !1),
       this.UpdateConnectedState()),
-      this.ExtractLastEventModelData(t);
+      this.ExtractLastEventModelData(t));
     let a = new URL(e);
     if (
       (a.searchParams.set(`livepreview`, `1`),
       a.searchParams.set(`parentOrigin`, window.location.origin),
       n)
     ) {
-      i?.forEach((e) => a.searchParams.set(e.key, e.value)),
+      (i?.forEach((e) => a.searchParams.set(e.key, e.value)),
         (r ??= { width: 1500, height: 1100 }),
         (this.m_previewWindow = window.open(
           a,
@@ -11323,34 +11329,34 @@ var pO = class e {
           `toolbar=yes,location=yes,resizable=yes,scrollbars=yes,width=${r.width},height=${r.height}`,
         )),
         (this.m_sPreviewWindowOrigin = a.origin),
-        await this.WaitForLoad(this.m_previewWindow);
+        await this.WaitForLoad(this.m_previewWindow));
       let e = this.m_previewWindow,
         t = r.width + (e.outerWidth - e.innerWidth),
         n = r.height + (e.outerHeight - e.innerHeight);
       e.resizeTo(Math.round(t), Math.round(n));
     } else
-      (this.m_previewWindow = window.open(a, `_blank`)),
+      ((this.m_previewWindow = window.open(a, `_blank`)),
         (this.m_sPreviewWindowOrigin = a.origin),
-        await this.WaitForLoad(this.m_previewWindow);
+        await this.WaitForLoad(this.m_previewWindow));
   }
   WaitForLoad(e) {
     let { promise: t, resolve: n } = $e();
-    if (e.document?.readyState === `complete`) return n(), t;
+    if (e.document?.readyState === `complete`) return (n(), t);
     let r = () => {
-        n(), a();
+        (n(), a());
       },
       i = () => {
         e.document?.readyState === `complete` && (n(), a());
       };
     function a() {
       try {
-        e.removeEventListener(`load`, r),
-          e.document?.removeEventListener(`readystatechange`, i);
+        (e.removeEventListener(`load`, r),
+          e.document?.removeEventListener(`readystatechange`, i));
       } catch {}
     }
     try {
-      e.addEventListener(`load`, r),
-        e.document?.addEventListener(`readystatechange`, i);
+      (e.addEventListener(`load`, r),
+        e.document?.addEventListener(`readystatechange`, i));
     } catch {
       setTimeout(() => n(), 300);
     }
@@ -11373,15 +11379,15 @@ var pO = class e {
     s(() => (this.m_jumpToSection = void 0));
   }
   PostMessage(e) {
-    hl(
+    (hl(
       this.BIsConnected(),
       `PostMessage called when not connected. BIsConnected should be checked early before sending messages`,
     ),
-      this.m_previewWindow.postMessage(e, this.m_sPreviewWindowOrigin);
+      this.m_previewWindow.postMessage(e, this.m_sPreviewWindowOrigin));
   }
   UpdatePreview(e) {
-    this.m_previewWindow && this.ExtractLastEventModelData(e),
-      this.UpdatePreviewInternal();
+    (this.m_previewWindow && this.ExtractLastEventModelData(e),
+      this.UpdatePreviewInternal());
   }
   ExtractLastEventModelData(e) {
     this.m_sLastEventModelJson = JSON.stringify(e.toJSON());
@@ -11439,12 +11445,12 @@ var pO = class e {
     if (n)
       switch (n.message) {
         case `PartnerEventEditor_ClientReady`:
-          (this.m_bReceivedClientReady = !0),
+          ((this.m_bReceivedClientReady = !0),
             this.UpdateConnectedState(),
-            this.m_sLastEventModelJson && this.UpdatePreviewInternal();
+            this.m_sLastEventModelJson && this.UpdatePreviewInternal());
           break;
         case `PartnerEventEditor_ClientUnready`:
-          (this.m_bReceivedClientReady = !1), this.UpdateConnectedState();
+          ((this.m_bReceivedClientReady = !1), this.UpdateConnectedState());
           break;
         case `PartnerEventEditor_MouseOverViewSection`:
           if (`nSectionID` in n) {
@@ -11474,11 +11480,11 @@ var pO = class e {
       }
   }
 };
-N([g], pO.prototype, `m_bIsConnected`, void 0),
+(N([g], pO.prototype, `m_bIsConnected`, void 0),
   N([g], pO.prototype, `m_setMouseOverSectionID`, void 0),
   N([g], pO.prototype, `m_setMouseOverSubsectionID`, void 0),
   N([g], pO.prototype, `m_jumpToSection`, void 0),
-  N([P], pO.prototype, `HandleMessage`, null);
+  N([P], pO.prototype, `HandleMessage`, null));
 function mO() {
   return w(() => pO.Get().BIsConnected());
 }
@@ -11496,7 +11502,7 @@ function gO(e, t) {
 function _O(e, t = Ah.k_HorizontalMediaFirst) {
   let n = Oh + Math.floor(Math.random() * 1e6),
     r = e.media_container.media_rows;
-  for (; gO(r, n); ) n = Oh + Math.floor(Math.random() * 1e6);
+  for (; gO(r, n);) n = Oh + Math.floor(Math.random() * 1e6);
   return {
     unique_id: n,
     media_type: kh.k_MediaImage,
@@ -11522,7 +11528,7 @@ function yO(e, t, n, r = 1) {
     let e = _O(t, r > 1 ? Ah.k_MediaTitleDesc : Ah.k_HorizontalMediaFirst);
     i.media_columns.push(e);
   }
-  (t.media_container.media_rows = [...t.media_container.media_rows, i]), n();
+  ((t.media_container.media_rows = [...t.media_container.media_rows, i]), n());
 }
 var bO = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC`;
 function xO(e) {
@@ -11554,25 +11560,25 @@ function xO(e) {
         (b(D.current.firstElementChild.getBoundingClientRect().height),
         S(D.current.firstElementChild.getBoundingClientRect().width));
     };
-  q.useEffect(() => {
+  (q.useEffect(() => {
     ee();
   }, []),
-    q.useEffect(() => () => A.cancel(`ReorderableList unmounting`), [A]);
+    q.useEffect(() => () => A.cancel(`ReorderableList unmounting`), [A]));
   let te = (e, t) => {
       let n = O.current[e]?.current;
       if (!n) {
         console.error(`start element grab missing element at index ` + e);
         return;
       }
-      u(!0), g(e), w(void 0), v(e);
+      (u(!0), g(e), w(void 0), v(e));
       let r = t.clientX - n.getBoundingClientRect().left;
       f(r);
       let i = t.clientY - n.getBoundingClientRect().top;
-      m(i),
+      (m(i),
         (n.style.position = `fixed`),
         (n.style.left = t.clientX - r + `px`),
         (n.style.top = t.clientY - i + `px`),
-        (n.style.zIndex = `1`);
+        (n.style.zIndex = `1`));
     },
     ne = q.useCallback(
       (e) => {
@@ -11586,13 +11592,13 @@ function xO(e) {
     ),
     re = q.useCallback(() => {
       let e = O.current[h]?.current;
-      e
+      (e
         ? ((e.style.position = ``), (e.style.zIndex = ``))
         : console.error(`end element drag missing element`),
         u(!1),
         g(-1),
         w(void 0),
-        v(void 0);
+        v(void 0));
     }, [h]),
     ie = (e, t) => {
       A.token.reason ||
@@ -11624,16 +11630,16 @@ function xO(e) {
             n = e;
             break;
           }
-        v(n ?? k.current.length), ne(e);
+        (v(n ?? k.current.length), ne(e));
       },
       [l, A, ne],
     );
-  ks(window, `mousemove`, l ? j : void 0),
+  (ks(window, `mousemove`, l ? j : void 0),
     ks(window, `mouseup`, l ? oe : void 0),
     q.useEffect(() => {
       for (let e = O.current.length; e < t.length; e++)
-        O.current.push(q.createRef()), k.current.push(q.createRef());
-    }, [t.length]);
+        (O.current.push(q.createRef()), k.current.push(q.createRef()));
+    }, [t.length]));
   let se = (e) => {
       w(void 0);
       let t = T?.trim(),
@@ -11705,7 +11711,7 @@ function xO(e) {
                   onChange: (e) => E(e.target.value),
                   onKeyDown: (e) => ce(e, a),
                   onFocus: (e) => {
-                    w(a), E(e.target.value);
+                    (w(a), E(e.target.value));
                   },
                   onBlur: () => se(a),
                 }),
@@ -11839,9 +11845,9 @@ var CO = `_8TDxbSoMrZ8-`,
       let t = e.GetGID();
       if (this.m_setLoaded.has(t)) return;
       let n = R1(`esmin-${t}`) || {};
-      this.m_mapMinimizedState.set(t, n),
+      (this.m_mapMinimizedState.set(t, n),
         this.m_setLoaded.add(t),
-        this.SetSoloMode(e, B1(`saleeditor-solomode`) ?? !0);
+        this.SetSoloMode(e, B1(`saleeditor-solomode`) ?? !0));
     }
     IsMinimized(e, t, n) {
       let r = this.m_mapMinimizedState.get(e.GetGID()),
@@ -11851,7 +11857,7 @@ var CO = `_8TDxbSoMrZ8-`,
     SetMinimized(e, t, n) {
       this.m_bSoloMode && !n && tA(e).includes(t) && rA();
       let r = this.m_mapMinimizedState.get(e.GetGID()) || {};
-      (r[t] = n), L1(`esmin-${e.GetGID()}`, r);
+      ((r[t] = n), L1(`esmin-${e.GetGID()}`, r));
     }
     ToggleMinimized(e, t, n) {
       let r = (this.m_mapMinimizedState.get(e.GetGID()) || {})[t],
@@ -11872,7 +11878,7 @@ var CO = `_8TDxbSoMrZ8-`,
     SetSoloMode(e, t) {
       if (((this.m_bSoloMode = t), z1(`saleeditor-solomode`, t), t)) {
         let t = tA(e).find((e) => !iA(e));
-        rA(), t && oA(t);
+        (rA(), t && oA(t));
       }
     }
     m_mapMinimizedState = new Map();
@@ -11880,15 +11886,15 @@ var CO = `_8TDxbSoMrZ8-`,
     m_bSoloMode = !1;
     static s_Singleton;
     static Get() {
-      return (e.s_Singleton ||= new e()), e.s_Singleton;
+      return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
   };
-N([x], eA.prototype, `EnsureLoaded`, null),
+(N([x], eA.prototype, `EnsureLoaded`, null),
   N([x], eA.prototype, `SetMinimized`, null),
   N([x], eA.prototype, `ToggleMinimized`, null),
   N([x], eA.prototype, `SetMinimizedList`, null),
   N([g], eA.prototype, `m_mapMinimizedState`, void 0),
-  N([g], eA.prototype, `m_bSoloMode`, void 0);
+  N([g], eA.prototype, `m_bSoloMode`, void 0));
 function tA(e) {
   let t = [];
   return (
@@ -12013,7 +12019,7 @@ var cA = class e {
       return this.m_eventDetailsMap.get(e);
     }
     static Get() {
-      return (e.s_DiscountEvent ||= new e()), e.s_DiscountEvent;
+      return ((e.s_DiscountEvent ||= new e()), e.s_DiscountEvent);
     }
     constructor() {
       window.g_discountEventStore = this;
@@ -12038,9 +12044,9 @@ var cA = class e {
         n.apply(null, arguments)
       );
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   uA = i((e, t) => {
     function n(e) {
@@ -12064,9 +12070,9 @@ var cA = class e {
         n(e)
       );
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   dA = i((e, t) => {
     var n = uA().default;
@@ -12080,9 +12086,9 @@ var cA = class e {
       }
       return (t === `string` ? String : Number)(e);
     }
-    (t.exports = r),
+    ((t.exports = r),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   fA = i((e, t) => {
     var n = uA().default,
@@ -12091,9 +12097,9 @@ var cA = class e {
       var t = r(e, `string`);
       return n(t) == `symbol` ? t : t + ``;
     }
-    (t.exports = i),
+    ((t.exports = i),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   pA = i((e, t) => {
     var n = fA();
@@ -12110,9 +12116,9 @@ var cA = class e {
         e
       );
     }
-    (t.exports = r),
+    ((t.exports = r),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   mA = i((e, t) => {
     var n = pA();
@@ -12120,11 +12126,11 @@ var cA = class e {
       var n = Object.keys(e);
       if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
           (r = r.filter(function (t) {
             return Object.getOwnPropertyDescriptor(e, t).enumerable;
           })),
-          n.push.apply(n, r);
+          n.push.apply(n, r));
       }
       return n;
     }
@@ -12147,28 +12153,28 @@ var cA = class e {
       }
       return e;
     }
-    (t.exports = i),
+    ((t.exports = i),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   hA = i((e, t) => {
     function n(e, t) {
       if (!(e instanceof t))
         throw TypeError(`Cannot call a class as a function`);
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   gA = i((e, t) => {
     var n = fA();
     function r(e, t) {
       for (var r = 0; r < t.length; r++) {
         var i = t[r];
-        (i.enumerable = i.enumerable || !1),
+        ((i.enumerable = i.enumerable || !1),
           (i.configurable = !0),
           `value` in i && (i.writable = !0),
-          Object.defineProperty(e, n(i.key), i);
+          Object.defineProperty(e, n(i.key), i));
       }
     }
     function i(e, t, n) {
@@ -12179,9 +12185,9 @@ var cA = class e {
         e
       );
     }
-    (t.exports = i),
+    ((t.exports = i),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   _A = i((e, t) => {
     function n(e, r) {
@@ -12190,31 +12196,31 @@ var cA = class e {
           Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (e, t) {
-                return (e.__proto__ = t), e;
+                return ((e.__proto__ = t), e);
               }),
         (t.exports.__esModule = !0),
         (t.exports.default = t.exports),
         n(e, r)
       );
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   vA = i((e, t) => {
     var n = _A();
     function r(e, t) {
       if (typeof t != `function` && t !== null)
         throw TypeError(`Super expression must either be null or a function`);
-      (e.prototype = Object.create(t && t.prototype, {
+      ((e.prototype = Object.create(t && t.prototype, {
         constructor: { value: e, writable: !0, configurable: !0 },
       })),
         Object.defineProperty(e, "prototype", { writable: !1 }),
-        t && n(e, t);
+        t && n(e, t));
     }
-    (t.exports = r),
+    ((t.exports = r),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   yA = i((e, t) => {
     function n(e) {
@@ -12230,9 +12236,9 @@ var cA = class e {
         n(e)
       );
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   bA = i((e, t) => {
     function n() {
@@ -12248,9 +12254,9 @@ var cA = class e {
       (t.exports.__esModule = !0),
       (t.exports.default = t.exports))();
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   xA = i((e, t) => {
     function n(e) {
@@ -12260,9 +12266,9 @@ var cA = class e {
         );
       return e;
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   SA = i((e, t) => {
     var n = uA().default,
@@ -12275,9 +12281,9 @@ var cA = class e {
         );
       return r(e);
     }
-    (t.exports = i),
+    ((t.exports = i),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   CA = i((e, t) => {
     var n = yA(),
@@ -12295,9 +12301,9 @@ var cA = class e {
         return i(this, r);
       };
     }
-    (t.exports = a),
+    ((t.exports = a),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   wA = i((e, t) => {
     function n(e, t) {
@@ -12305,18 +12311,18 @@ var cA = class e {
       for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
       return r;
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   TA = i((e, t) => {
     var n = wA();
     function r(e) {
       if (Array.isArray(e)) return n(e);
     }
-    (t.exports = r),
+    ((t.exports = r),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   EA = i((e, t) => {
     function n(e) {
@@ -12326,9 +12332,9 @@ var cA = class e {
       )
         return Array.from(e);
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   DA = i((e, t) => {
     var n = wA();
@@ -12347,18 +12353,18 @@ var cA = class e {
         );
       }
     }
-    (t.exports = r),
+    ((t.exports = r),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   OA = i((e, t) => {
     function n() {
       throw TypeError(`Invalid attempt to spread non-iterable instance.
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   kA = i((e, t) => {
     var n = TA(),
@@ -12368,9 +12374,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function o(e) {
       return n(e) || r(e) || i(e) || a();
     }
-    (t.exports = o),
+    ((t.exports = o),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   AA = i((e) => {
     Object.defineProperty(e, "__esModule", { value: !0 });
@@ -12393,7 +12399,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     e.StyleSheet = (function () {
       function e(e) {
         var t = this;
-        (this._insertTag = function (e) {
+        ((this._insertTag = function (e) {
           var n =
             t.tags.length === 0
               ? t.insertionPoint
@@ -12402,7 +12408,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   ? t.container.firstChild
                   : t.before
               : t.tags[t.tags.length - 1].nextSibling;
-          t.container.insertBefore(e, n), t.tags.push(e);
+          (t.container.insertBefore(e, n), t.tags.push(e));
         }),
           (this.isSpeedy = e.speedy === void 0 || e.speedy),
           (this.tags = []),
@@ -12412,7 +12418,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           (this.container = e.container),
           (this.prepend = e.prepend),
           (this.insertionPoint = e.insertionPoint),
-          (this.before = null);
+          (this.before = null));
       }
       var r = e.prototype;
       return (
@@ -12432,11 +12438,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           this.ctr++;
         }),
         (r.flush = function () {
-          this.tags.forEach(function (e) {
+          (this.tags.forEach(function (e) {
             return e.parentNode && e.parentNode.removeChild(e);
           }),
             (this.tags = []),
-            (this.ctr = 0);
+            (this.ctr = 0));
         }),
         e
       );
@@ -12506,17 +12512,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return e.length;
       }
       function te(e, t) {
-        return t.push(e), e;
+        return (t.push(e), e);
       }
       function ne(e, t) {
         return e.map(t).join(``);
       }
-      (e.line = 1),
+      ((e.line = 1),
         (e.column = 1),
         (e.length = 0),
         (e.position = 0),
         (e.character = 0),
-        (e.characters = ``);
+        (e.characters = ``));
       function re(t, n, r, i, a, o, s) {
         return {
           value: t,
@@ -12609,7 +12615,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         );
       }
       function fe(t) {
-        return (e.characters = ``), t;
+        return ((e.characters = ``), t);
       }
       function pe(t) {
         return w(
@@ -12620,11 +12626,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return fe(ge(de(e)));
       }
       function he(t) {
-        for (; (e.character = se()) && e.character < 33; ) j();
+        for (; (e.character = se()) && e.character < 33;) j();
         return ue(t) > 2 || ue(e.character) > 3 ? `` : ` `;
       }
       function ge(t) {
-        for (; j(); )
+        for (; j();)
           switch (ue(e.character)) {
             case 0:
               te(be(e.position - 1), t);
@@ -12652,7 +12658,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return le(t, ce() + (n < 6 && se() == 32 && j() == 32));
       }
       function ve(t) {
-        for (; j(); )
+        for (; j();)
           switch (e.character) {
             case t:
               return e.position;
@@ -12678,7 +12684,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return `/*` + le(n, e.position - 1) + `*` + x(t === 47 ? t : j());
       }
       function be(t) {
-        for (; !ue(se()); ) j();
+        for (; !ue(se());) j();
         return le(t, e.position);
       }
       function xe(e) {
@@ -12743,7 +12749,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 case 125:
                   g = 0;
                 case 59 + u:
-                  _ == -1 && (w = E(w, /\f/g, ``)),
+                  (_ == -1 && (w = E(w, /\f/g, ``)),
                     p > 0 &&
                       A(w) - d &&
                       te(
@@ -12751,7 +12757,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           ? Te(w + `;`, r, n, d - 1)
                           : Te(E(w, ` `, ``) + `;`, r, n, d - 2),
                         c,
-                      );
+                      ));
                   break;
                 case 59:
                   w += `;`;
@@ -12788,10 +12794,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       }
                   }
               }
-              (l = u = p = 0), (h = _ = 1), (y = w = ``), (d = o);
+              ((l = u = p = 0), (h = _ = 1), (y = w = ``), (d = o));
               break;
             case 58:
-              (d = 1 + A(w)), (p = m);
+              ((d = 1 + A(w)), (p = m));
             default:
               if (h < 1) {
                 if (v == 123) --h;
@@ -12802,13 +12808,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   _ = u > 0 ? 1 : ((w += `\f`), -1);
                   break;
                 case 44:
-                  (s[l++] = (A(w) - 1) * _), (_ = 1);
+                  ((s[l++] = (A(w) - 1) * _), (_ = 1));
                   break;
                 case 64:
-                  se() === 45 && (w += pe(j())),
+                  (se() === 45 && (w += pe(j())),
                     (f = se()),
                     (u = d = A((y = w += be(ce())))),
-                    v++;
+                    v++);
                   break;
                 case 45:
                   m === 45 && A(w) == 2 && (h = 0);
@@ -12972,7 +12978,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           case 3616:
             return a &&
               a.some(function (e, t) {
-                return (i = t), T(e.props, /grid-\w+-end/);
+                return ((i = t), T(e.props, /grid-\w+-end/));
               })
               ? ~D(e + (a = a[i].value), `span`)
                 ? e
@@ -13180,7 +13186,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   default:
                     switch (n) {
                       case 0:
-                        return (e = t), ee(r) > 1 ? `` : t;
+                        return ((e = t), ee(r) > 1 ? `` : t);
                       case (n = ee(r) - 1):
                       case 2:
                         return n === 2 ? t + e + e : t + e;
@@ -13192,7 +13198,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             });
         }
       }
-      (e.CHARSET = u),
+      ((e.CHARSET = u),
         (e.COMMENT = i),
         (e.COUNTER_STYLE = _),
         (e.DECLARATION = o),
@@ -13256,19 +13262,19 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         (e.tokenizer = ge),
         (e.trim = w),
         (e.whitespace = he),
-        Object.defineProperty(e, "__esModule", { value: !0 });
+        Object.defineProperty(e, "__esModule", { value: !0 }));
     });
   }),
   NA = i((e) => {
-    Object.defineProperty(e, "__esModule", { value: !0 }),
+    (Object.defineProperty(e, "__esModule", { value: !0 }),
       (e.default = function (e) {
         var t = new WeakMap();
         return function (n) {
           if (t.has(n)) return t.get(n);
           var r = e(n);
-          return t.set(n, r), r;
+          return (t.set(n, r), r);
         };
-      });
+      }));
   }),
   PA = i((e, t) => {
     t.exports = NA();
@@ -13278,7 +13284,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function t(e) {
       var t = Object.create(null);
       return function (n) {
-        return t[n] === void 0 && (t[n] = e(n)), t[n];
+        return (t[n] === void 0 && (t[n] = e(n)), t[n]);
       };
     }
     e.default = t;
@@ -13314,15 +13320,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         do
           switch (n.token(i)) {
             case 0:
-              i === 38 && n.peek() === 12 && (t[r] = 1),
-                (e[r] += c(n.position - 1, t, r));
+              (i === 38 && n.peek() === 12 && (t[r] = 1),
+                (e[r] += c(n.position - 1, t, r)));
               break;
             case 2:
               e[r] += n.delimit(i);
               break;
             case 4:
               if (i === 44) {
-                (e[++r] = n.peek() === 58 ? `&\f` : ``), (t[r] = e[r].length);
+                ((e[++r] = n.peek() === 58 ? `&\f` : ``), (t[r] = e[r].length));
                 break;
               }
             default:
@@ -13698,9 +13704,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             return n.serialize(n.compile(e), h);
           };
         l = function (e, t, n, r) {
-          (d = n),
+          ((d = n),
             y(e ? e + `{` + t.styles + `}` : t.styles),
-            r && (T.inserted[t.name] = !0);
+            r && (T.inserted[t.name] = !0));
         };
       } else {
         var b = [n.stringify],
@@ -13720,7 +13726,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         l = function (e, t, n, r) {
           var i = t.name,
             a = w(e, t);
-          if (T.compat === void 0) return r && (T.inserted[i] = !0), a;
+          if (T.compat === void 0) return (r && (T.inserted[i] = !0), a);
           if (r) T.inserted[i] = a;
           else return a;
         };
@@ -13740,7 +13746,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         registered: {},
         insert: l,
       };
-      return T.sheet.hydrate(c), T;
+      return (T.sheet.hydrate(c), T);
     };
   }),
   RA = i((e, t) => {
@@ -13775,7 +13781,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         e.registered[i] === void 0 &&
         (e.registered[i] = n.styles);
     };
-    (e.getRegisteredStyles = n),
+    ((e.getRegisteredStyles = n),
       (e.insertStyles = function (e, n, i) {
         r(e, n, i);
         var a = e.key + `-` + n.name;
@@ -13784,12 +13790,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             s = n;
           do {
             var c = e.insert(n === s ? `.` + a : ``, s, e.sheet, !0);
-            !t && c !== void 0 && (o += c), (s = s.next);
+            (!t && c !== void 0 && (o += c), (s = s.next));
           } while (s !== void 0);
           if (!t && o.length !== 0) return o;
         }
       }),
-      (e.registerStyles = r);
+      (e.registerStyles = r));
   }),
   VA = i((e, t) => {
     t.exports = BA();
@@ -13798,7 +13804,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     Object.defineProperty(e, "__esModule", { value: !0 });
     function t(e) {
       for (var t = 0, n, r = 0, i = e.length; i >= 4; ++r, i -= 4)
-        (n =
+        ((n =
           (e.charCodeAt(r) & 255) |
           ((e.charCodeAt(++r) & 255) << 8) |
           ((e.charCodeAt(++r) & 255) << 16) |
@@ -13807,15 +13813,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           (n ^= n >>> 24),
           (t =
             ((n & 65535) * 1540483477 + (((n >>> 16) * 59797) << 16)) ^
-            ((t & 65535) * 1540483477 + (((t >>> 16) * 59797) << 16)));
+            ((t & 65535) * 1540483477 + (((t >>> 16) * 59797) << 16))));
       switch (i) {
         case 3:
           t ^= (e.charCodeAt(r + 2) & 255) << 16;
         case 2:
           t ^= (e.charCodeAt(r + 1) & 255) << 8;
         case 1:
-          (t ^= e.charCodeAt(r) & 255),
-            (t = (t & 65535) * 1540483477 + (((t >>> 16) * 59797) << 16));
+          ((t ^= e.charCodeAt(r) & 255),
+            (t = (t & 65535) * 1540483477 + (((t >>> 16) * 59797) << 16)));
       }
       return (
         (t ^= t >>> 13),
@@ -13829,7 +13835,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     t.exports = HA();
   }),
   WA = i((e) => {
-    Object.defineProperty(e, "__esModule", { value: !0 }),
+    (Object.defineProperty(e, "__esModule", { value: !0 }),
       (e.default = {
         animationIterationCount: 1,
         aspectRatio: 1,
@@ -13877,7 +13883,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         strokeMiterlimit: 1,
         strokeOpacity: 1,
         strokeWidth: 1,
-      });
+      }));
   }),
   GA = i((e, t) => {
     t.exports = WA();
@@ -13910,7 +13916,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           case `animationName`:
             if (typeof t == `string`)
               return t.replace(l, function (e, t, n) {
-                return (_ = { name: t, styles: n, next: _ }), t;
+                return ((_ = { name: t, styles: n, next: _ }), t);
               });
         }
         return o.default[e] !== 1 && !u(e) && typeof t == `number` && t !== 0
@@ -13925,12 +13931,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           return ``;
         case `object`:
           if (n.anim === 1)
-            return (_ = { name: n.name, styles: n.styles, next: _ }), n.name;
+            return ((_ = { name: n.name, styles: n.styles, next: _ }), n.name);
           if (n.styles !== void 0) {
             var r = n.next;
             if (r !== void 0)
-              for (; r !== void 0; )
-                (_ = { name: r.name, styles: r.styles, next: _ }), (r = r.next);
+              for (; r !== void 0;)
+                ((_ = { name: r.name, styles: r.styles, next: _ }),
+                  (r = r.next));
             return n.styles + `;`;
           }
           return h(e, t, n);
@@ -13938,7 +13945,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           if (e !== void 0) {
             var i = _,
               a = n(e);
-            return (_ = i), m(e, t, a);
+            return ((_ = i), m(e, t, a));
           }
       }
       if (t == null) return n;
@@ -13994,9 +14001,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       o == null || o.raw === void 0
         ? ((r = !1), (i += m(n, t, o)))
         : (i += o[0]);
-      for (var s = 1; s < e.length; s++) (i += m(n, t, e[s])), r && (i += o[s]);
+      for (var s = 1; s < e.length; s++)
+        ((i += m(n, t, e[s])), r && (i += o[s]));
       g.lastIndex = 0;
-      for (var c = ``, l; (l = g.exec(i)) !== null; ) c += `-` + l[1];
+      for (var c = ``, l; (l = g.exec(i)) !== null;) c += `-` + l[1];
       return { name: a.default(i) + c, styles: i, next: _ };
     };
   }),
@@ -14040,8 +14048,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       o = r.useInsertionEffect ? r.useInsertionEffect : !1,
       s = (i && o) || a,
       c = o || r.useLayoutEffect;
-    (e.useInsertionEffectAlwaysWithSyncFallback = s),
-      (e.useInsertionEffectWithLayoutFallback = c);
+    ((e.useInsertionEffectAlwaysWithSyncFallback = s),
+      (e.useInsertionEffectWithLayoutFallback = c));
   }),
   YA = i((e, t) => {
     t.exports = JA();
@@ -14096,7 +14104,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       y = function () {
         return t.useContext(_);
       };
-    (e.withEmotionCache = function (e) {
+    ((e.withEmotionCache = function (e) {
       return t.forwardRef(function (n, r) {
         return e(n, t.useContext(_), r);
       });
@@ -14110,7 +14118,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 d.createElement(_.Provider, { value: r }, e(n, r)))
               : e(n, r);
           };
-        });
+        }));
     var b = d.createContext({}),
       x = function () {
         return d.useContext(b);
@@ -14136,13 +14144,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           var i = d.useContext(b);
           return d.createElement(e, r({ theme: i, ref: n }, t));
         });
-      return (n.displayName = `WithTheme(` + t + `)`), a.default(n, e);
+      return ((n.displayName = `WithTheme(` + t + `)`), a.default(n, e));
     }
     var E = `__EMOTION_TYPE_PLEASE_DO_NOT_USE__`,
       D = function (e, t) {
         var n = {};
         for (var r in t) g.call(t, r) && (n[r] = t[r]);
-        return (n[E] = e), n;
+        return ((n[E] = e), n);
       },
       O = function (e) {
         var t = e.cache,
@@ -14153,8 +14161,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           return o.insertStyles(t, n, r);
         });
         if (!m && i !== void 0) {
-          for (var a, s = n.name, l = n.next; l !== void 0; )
-            (s += ` ` + l.name), (l = l.next);
+          for (var a, s = n.name, l = n.next; l !== void 0;)
+            ((s += ` ` + l.name), (l = l.next));
           return d.createElement(
             `style`,
             ((a = {}),
@@ -14197,7 +14205,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           )
         );
       });
-    (e.CacheProvider = v),
+    ((e.CacheProvider = v),
       (e.Emotion = k),
       (e.ThemeContext = b),
       (e.ThemeProvider = w),
@@ -14206,7 +14214,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       (e.hasOwnProperty = g),
       (e.isBrowser = m),
       (e.useTheme = x),
-      (e.withTheme = T);
+      (e.withTheme = T));
   }),
   ZA = i((e) => {
     Object.defineProperty(e, "__esModule", { value: !0 });
@@ -14215,7 +14223,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       r = VA(),
       i = YA(),
       a = qA();
-    RA(), lA(), PA(), zA(), u();
+    (RA(), lA(), PA(), zA(), u());
     function o(e) {
       if (e && e.__esModule) return e;
       var t = Object.create(null);
@@ -14249,7 +14257,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           return s.createElement.apply(void 0, r);
         var i = r.length,
           a = Array(i);
-        (a[0] = t.Emotion), (a[1] = t.createEmotionProps(e, n));
+        ((a[0] = t.Emotion), (a[1] = t.createEmotionProps(e, n)));
         for (var o = 2; o < i; o++) a[o] = r[o];
         return s.createElement.apply(null, a);
       },
@@ -14257,8 +14265,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         var o = e.styles,
           c = a.serializeStyles([o], void 0, s.useContext(t.ThemeContext));
         if (!t.isBrowser) {
-          for (var l, u = c.name, d = c.styles, f = c.next; f !== void 0; )
-            (u += ` ` + f.name), (d += f.styles), (f = f.next);
+          for (var l, u = c.name, d = c.styles, f = c.next; f !== void 0;)
+            ((u += ` ` + f.name), (d += f.styles), (f = f.next));
           var p = n.compat === !0,
             m = n.insert(``, { name: u, styles: d }, n.sheet, p);
           return p
@@ -14394,7 +14402,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           o = function () {
             var e = [...arguments],
               t = a.serializeStyles(e, n.registered);
-            return i.push(t), r.registerStyles(n, t, !1), n.key + `-` + t.name;
+            return (
+              i.push(t), r.registerStyles(n, t, !1), n.key + `-` + t.name
+            );
           },
           c = {
             css: o,
@@ -14412,7 +14422,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           l,
         );
       });
-    (e.CacheProvider = t.CacheProvider),
+    ((e.CacheProvider = t.CacheProvider),
       (e.ThemeContext = t.ThemeContext),
       (e.ThemeProvider = t.ThemeProvider),
       (e.__unsafe_useEmotionCache = t.__unsafe_useEmotionCache),
@@ -14429,7 +14439,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       (e.createElement = c),
       (e.css = d),
       (e.jsx = c),
-      (e.keyframes = f);
+      (e.keyframes = f));
   }),
   QA = i((e, t) => {
     t.exports = ZA();
@@ -14438,9 +14448,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function n(e) {
       if (Array.isArray(e)) return e;
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   ej = i((e, t) => {
     function n(e, t) {
@@ -14467,7 +14477,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               c = !0
             );
         } catch (e) {
-          (l = !0), (i = e);
+          ((l = !0), (i = e));
         } finally {
           try {
             if (!c && n.return != null && ((o = n.return()), Object(o) !== o))
@@ -14479,18 +14489,18 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return s;
       }
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   tj = i((e, t) => {
     function n() {
       throw TypeError(`Invalid attempt to destructure non-iterable instance.
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   nj = i((e, t) => {
     var n = $A(),
@@ -14500,9 +14510,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function o(e, t) {
       return n(e) || r(e, t) || i(e, t) || a();
     }
-    (t.exports = o),
+    ((t.exports = o),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   rj = i((e, t) => {
     function n(e, t) {
@@ -14515,9 +14525,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }
       return n;
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   ij = i((e, t) => {
     var n = rj();
@@ -14529,16 +14539,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (i = 0; i < o.length; i++)
-          (r = o[i]),
+          ((r = o[i]),
             t.indexOf(r) === -1 &&
               {}.propertyIsEnumerable.call(e, r) &&
-              (a[r] = e[r]);
+              (a[r] = e[r]));
       }
       return a;
     }
-    (t.exports = r),
+    ((t.exports = r),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   aj = i((e, t) => {
     function n(e, t) {
@@ -14549,9 +14559,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         )
       );
     }
-    (t.exports = n),
+    ((t.exports = n),
       (t.exports.__esModule = !0),
-      (t.exports.default = t.exports);
+      (t.exports.default = t.exports));
   }),
   oj = i((e, t, n) => {
     (function (n, r) {
@@ -14606,7 +14616,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               : r === `start`
                 ? `bottom`
                 : `top`;
-        return t.reference[a] > t.floating[a] && (o = w(o)), [o, w(o)];
+        return (t.reference[a] > t.floating[a] && (o = w(o)), [o, w(o)]);
       }
       function g(e) {
         let t = w(e);
@@ -14699,7 +14709,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             v = { x: r.x, y: r.y };
         }
         let y = u(t);
-        return y && (v[o] += _ * (y === `end` ? 1 : -1) * (n && d ? -1 : 1)), v;
+        return (
+          y && (v[o] += _ * (y === `end` ? 1 : -1) * (n && d ? -1 : 1)), v
+        );
       }
       async function k(e, t) {
         t === void 0 && (t = {});
@@ -14799,7 +14811,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 platform: s,
                 elements: { reference: e, floating: t },
               });
-            (u = v ?? u),
+            ((u = v ?? u),
               (d = y ?? d),
               (m[g] = { ...m[g], ...b }),
               x &&
@@ -14817,7 +14829,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           })
                         : x.rects),
                   ({ x: u, y: d } = O(l, f, c))),
-                (n = -1));
+                (n = -1)));
           }
           return { x: u, y: d, placement: f, strategy: i, middlewareData: m };
         },
@@ -15106,10 +15118,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           r = null;
         for (let e = 0; e < t.length; e++) {
           let i = t[e];
-          !r || i.y - r.y > r.height / 2
+          (!r || i.y - r.y > r.height / 2
             ? n.push([i])
             : n[n.length - 1].push(i),
-            (r = i);
+            (r = i));
         }
         return n.map((e) => D(j(e)));
       }
@@ -15219,7 +15231,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           d ? { x: _ * m, y: g * f } : { x: g * f, y: _ * m }
         );
       }
-      (e.arrow = ee),
+      ((e.arrow = ee),
         (e.autoPlacement = ne),
         (e.computePosition = A),
         (e.detectOverflow = k),
@@ -15334,7 +15346,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       t,
                       t - h[e === `y` ? `bottom` : `right`],
                     );
-                o && (v = b(_, v)), l && (y = b(g, y));
+                (o && (v = b(_, v)), l && (y = b(g, y)));
                 let x = u.fn({ ...t, [_]: v, [g]: y });
                 return {
                   ...x,
@@ -15378,14 +15390,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   D = !E,
                   O = w,
                   k = T;
-                E != null && E.enabled.x && (k = C),
+                (E != null && E.enabled.x && (k = C),
                   E != null && E.enabled.y && (O = S),
                   D &&
                     !g &&
                     (_
                       ? (k = v - 2 * a(m.left, m.right))
                       : (O = y - 2 * a(m.top, m.bottom))),
-                  await d({ ...t, availableWidth: k, availableHeight: O });
+                  await d({ ...t, availableWidth: k, availableHeight: O }));
                 let A = await o.getDimensions(s.floating);
                 return v !== A.width || y !== A.height
                   ? { reset: { rects: !0 } }
@@ -15393,7 +15405,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               },
             }
           );
-        });
+        }));
     });
   }),
   sj = i((e, t, n) => {
@@ -15484,7 +15496,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       }
       function C(e) {
         let t = O(e);
-        for (; p(t) && !T(t); ) {
+        for (; p(t) && !T(t);) {
           if (S(t)) return t;
           if (_(t)) return null;
           t = O(t);
@@ -15521,7 +15533,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return T(t) ? (e.ownerDocument || e).body : p(t) && h(t) ? t : k(t);
       }
       function A(e, t, n) {
-        t === void 0 && (t = []), n === void 0 && (n = !0);
+        (t === void 0 && (t = []), n === void 0 && (n = !0));
         let r = k(e),
           i = r === e.ownerDocument?.body,
           a = l(r);
@@ -15549,7 +15561,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           o = a ? e.offsetWidth : n,
           s = a ? e.offsetHeight : r,
           c = i(n) !== o || i(r) !== s;
-        return c && ((n = o), (r = s)), { width: n, height: r, $: c };
+        return (c && ((n = o), (r = s)), { width: n, height: r, $: c });
       }
       function ne(e) {
         return f(e) ? e : e.contextElement;
@@ -15575,10 +15587,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           : { x: t.visualViewport.offsetLeft, y: t.visualViewport.offsetTop };
       }
       function oe(e, t, n) {
-        return t === void 0 && (t = !1), !!n && t && n === l(e);
+        return (t === void 0 && (t = !1), !!n && t && n === l(e));
       }
       function j(e, n, r, i) {
-        n === void 0 && (n = !1), r === void 0 && (r = !1);
+        (n === void 0 && (n = !1), r === void 0 && (r = !1));
         let a = e.getBoundingClientRect(),
           s = ne(e),
           c = o(1);
@@ -15593,20 +15605,20 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             t = f(i) ? l(i) : i,
             n = e,
             r = ee(n);
-          for (; r && t !== n; ) {
+          for (; r && t !== n;) {
             let e = re(r),
               t = r.getBoundingClientRect(),
               i = E(r),
               a = t.left + (r.clientLeft + parseFloat(i.paddingLeft)) * e.x,
               o = t.top + (r.clientTop + parseFloat(i.paddingTop)) * e.y;
-            (d *= e.x),
+            ((d *= e.x),
               (p *= e.y),
               (m *= e.x),
               (h *= e.y),
               (d += a),
               (p += o),
               (n = l(r)),
-              (r = ee(n));
+              (r = ee(n)));
           }
         }
         return t.rectToClientRect({ width: m, height: h, x: d, y: p });
@@ -15631,7 +15643,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           g = p(r);
         if ((g || !a) && ((c(r) !== `body` || h(s)) && (d = D(r)), g)) {
           let e = j(r);
-          (f = re(r)), (m.x = e.x + r.clientLeft), (m.y = e.y + r.clientTop);
+          ((f = re(r)), (m.x = e.x + r.clientLeft), (m.y = e.y + r.clientTop));
         }
         let v = s && !g && !a ? ce(s, d) : o(0);
         return {
@@ -15722,16 +15734,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           i = null,
           a = E(e).position === `fixed`,
           o = a ? O(e) : e;
-        for (; f(o) && !T(o); ) {
+        for (; f(o) && !T(o);) {
           let e = E(o),
             t = S(o),
             n = i ? i.position : a ? `fixed` : ``;
-          !t && (n === `fixed` || (n === `absolute` && e.position === `static`))
+          (!t &&
+          (n === `fixed` || (n === `absolute` && e.position === `static`))
             ? (r = r.filter((e) => e !== o))
             : (i = e),
-            (o = O(o));
+            (o = O(o)));
         }
-        return t.set(e, r), r;
+        return (t.set(e, r), r);
       }
       function ge(e) {
         let { element: t, boundary: i, rootBoundary: a, strategy: o } = e,
@@ -15750,10 +15763,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           f = c.left;
         for (let e = 1; e < s.length; e++) {
           let i = me(t, s[e], o);
-          (l = r(i.top, l)),
+          ((l = r(i.top, l)),
             (u = n(i.right, u)),
             (d = n(i.bottom, d)),
-            (f = r(i.left, f));
+            (f = r(i.left, f)));
         }
         return { width: u - f, height: d - l, x: f, y: l };
       }
@@ -15770,7 +15783,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           d = o(0);
         if ((r || !a) && ((c(t) !== `body` || h(i)) && (l = D(t)), r)) {
           let e = j(t, !0, a, t);
-          (d.x = e.x + t.clientLeft), (d.y = e.y + t.clientTop);
+          ((d.x = e.x + t.clientLeft), (d.y = e.y + t.clientTop));
         }
         !r && i && (d.x = se(i));
         let f = i && !r && !a ? ce(i, l) : o(0);
@@ -15788,21 +15801,21 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         if (!p(e) || E(e).position === `fixed`) return null;
         if (t) return t(e);
         let n = e.offsetParent;
-        return u(e) === n && (n = n.ownerDocument.body), n;
+        return (u(e) === n && (n = n.ownerDocument.body), n);
       }
       function xe(e, t) {
         let n = l(e);
         if (_(e)) return n;
         if (!p(e)) {
           let t = O(e);
-          for (; t && !T(t); ) {
+          for (; t && !T(t);) {
             if (f(t) && !ye(t)) return t;
             t = O(t);
           }
           return n;
         }
         let r = be(e, t);
-        for (; r && g(r) && ye(r); ) r = be(r, t);
+        for (; r && g(r) && ye(r);) r = be(r, t);
         return r && T(r) && ye(r) && !S(r) ? n : r || C(e) || n;
       }
       let Se = async function (e) {
@@ -15843,10 +15856,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           c = u(e);
         function d() {
           var e;
-          clearTimeout(s), (e = o) == null || e.disconnect(), (o = null);
+          (clearTimeout(s), (e = o) == null || e.disconnect(), (o = null));
         }
         function f(i, l) {
-          i === void 0 && (i = !1), l === void 0 && (l = 1), d();
+          (i === void 0 && (i = !1), l === void 0 && (l = 1), d());
           let u = e.getBoundingClientRect(),
             { left: p, top: m, width: h, height: g } = u;
           if ((i || t(), !h || !g)) return;
@@ -15885,7 +15898,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           p.addEventListener(`resize`, m),
           f(!0),
           () => {
-            p.removeEventListener(`resize`, m), d();
+            (p.removeEventListener(`resize`, m), d());
           }
         );
       }
@@ -15901,8 +15914,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           l = ne(e),
           u = i || a ? [...(l ? A(l) : []), ...(t ? A(t) : [])] : [];
         u.forEach((e) => {
-          i && e.addEventListener(`scroll`, n),
-            a && e.addEventListener(`resize`, n);
+          (i && e.addEventListener(`scroll`, n),
+            a && e.addEventListener(`resize`, n));
         });
         let d = l && s ? Ee(l, n, a) : null,
           f = -1,
@@ -15910,7 +15923,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         o &&
           ((p = new ResizeObserver((e) => {
             let [r] = e;
-            r &&
+            (r &&
               r.target === l &&
               p &&
               t &&
@@ -15920,7 +15933,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 var e;
                 (e = p) == null || e.observe(t);
               }))),
-              n();
+              n());
           })),
           l && !c && p.observe(l),
           t && p.observe(t));
@@ -15929,20 +15942,20 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         c && g();
         function g() {
           let t = j(e);
-          h && !Te(h, t) && n(), (h = t), (m = requestAnimationFrame(g));
+          (h && !Te(h, t) && n(), (h = t), (m = requestAnimationFrame(g)));
         }
         return (
           n(),
           () => {
             var e;
-            u.forEach((e) => {
-              i && e.removeEventListener(`scroll`, n),
-                a && e.removeEventListener(`resize`, n);
+            (u.forEach((e) => {
+              (i && e.removeEventListener(`scroll`, n),
+                a && e.removeEventListener(`resize`, n));
             }),
               d?.(),
               (e = p) == null || e.disconnect(),
               (p = null),
-              c && cancelAnimationFrame(m);
+              c && cancelAnimationFrame(m));
           }
         );
       }
@@ -15956,7 +15969,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         Fe = t.arrow,
         Ie = t.inline,
         Le = t.limitShift;
-      (e.arrow = Fe),
+      ((e.arrow = Fe),
         (e.autoPlacement = Ae),
         (e.autoUpdate = De),
         (e.computePosition = (e, n, r) => {
@@ -15974,12 +15987,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         (e.offset = ke),
         (e.platform = we),
         (e.shift = je),
-        (e.size = Ne);
+        (e.size = Ne));
     });
   }),
   cj = i((e) => {
-    Object.defineProperty(e, "__esModule", { value: !0 }),
-      (e.default = h().useLayoutEffect);
+    (Object.defineProperty(e, "__esModule", { value: !0 }),
+      (e.default = h().useLayoutEffect));
   }),
   lj = i((e) => {
     var t = mA(),
@@ -16089,7 +16102,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         n = t.position === `absolute`,
         r = /(auto|scroll)/;
       if (t.position === `fixed`) return document.documentElement;
-      for (var i = e; (i = i.parentElement); )
+      for (var i = e; (i = i.parentElement);)
         if (
           ((t = getComputedStyle(i)),
           !(n && t.position === `static`) &&
@@ -16110,9 +16123,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         o = 10,
         s = 0;
       function c() {
-        (s += o),
+        ((s += o),
           O(e, A(s, i, a, n)),
-          s < n ? window.requestAnimationFrame(c) : r(e);
+          s < n ? window.requestAnimationFrame(c) : r(e));
       }
       c();
     }
@@ -16143,7 +16156,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     }
     function re() {
       try {
-        return document.createEvent(`TouchEvent`), !0;
+        return (document.createEvent(`TouchEvent`), !0);
       } catch {
         return !1;
       }
@@ -16193,7 +16206,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           .reduce(function (e, t) {
             var n = i(t, 2),
               r = n[0];
-            return (e[r] = n[1]), e;
+            return ((e[r] = n[1]), e);
           }, {});
       },
       me = [`children`, `innerProps`],
@@ -16231,7 +16244,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         case `bottom`:
           if (x >= p) return { placement: `bottom`, maxHeight: t };
           if (C >= p && !o)
-            return a && ee(c, w, A), { placement: `bottom`, maxHeight: t };
+            return (a && ee(c, w, A), { placement: `bottom`, maxHeight: t });
           if ((!o && C >= r) || (o && x >= r))
             return (
               a && ee(c, w, A),
@@ -16246,12 +16259,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             );
           }
           if (i === `bottom`)
-            return a && O(c, w), { placement: `bottom`, maxHeight: t };
+            return (a && O(c, w), { placement: `bottom`, maxHeight: t });
           break;
         case `top`:
           if (b >= p) return { placement: `top`, maxHeight: t };
           if (S >= p && !o)
-            return a && ee(c, T, A), { placement: `top`, maxHeight: t };
+            return (a && ee(c, T, A), { placement: `top`, maxHeight: t });
           if ((!o && S >= r) || (o && b >= r)) {
             var re = t;
             return (
@@ -16330,7 +16343,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     isFixedPosition: t,
                     controlHeight: b,
                   });
-                h(n.maxHeight), y(n.placement), d?.(n.placement);
+                (h(n.maxHeight), y(n.placement), d?.(n.placement));
               }
             },
             [a, o, s, c, r, d, b],
@@ -16479,12 +16492,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         );
         var E = l.useCallback(
           function () {
-            typeof h.current == `function` && (h.current(), (h.current = null)),
+            (typeof h.current == `function` &&
+              (h.current(), (h.current = null)),
               s &&
                 m.current &&
                 (h.current = f.autoUpdate(s, m.current, T, {
                   elementResize: `ResizeObserver` in window,
-                }));
+                })));
           },
           [s, T],
         );
@@ -16496,7 +16510,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         );
         var D = l.useCallback(
           function (e) {
-            (m.current = e), E();
+            ((m.current = e), E());
           },
           [E],
         );
@@ -17256,7 +17270,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         },
         ValueContainer: Fe,
       };
-    (e.MenuPlacer = xe),
+    ((e.MenuPlacer = xe),
       (e.classNames = b),
       (e.cleanValue = x),
       (e.clearIndicatorCSS = Je),
@@ -17296,7 +17310,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       (e.singleValueAsValue = de),
       (e.supportsPassiveEvents = se),
       (e.valueContainerCSS = Pe),
-      (e.valueTernary = ue);
+      (e.valueTernary = ue));
   }),
   uj = r({ default: () => pj });
 function dj(e, t) {
@@ -17314,7 +17328,7 @@ function pj(e, t) {
     var r = [...arguments];
     if (n && n.lastThis === this && t(r, n.lastArgs)) return n.lastResult;
     var i = e.apply(this, r);
-    return (n = { lastResult: i, lastArgs: r, lastThis: this }), i;
+    return ((n = { lastResult: i, lastArgs: r, lastThis: this }), i);
   }
   return (
     (r.clear = function () {
@@ -17761,7 +17775,7 @@ var mj,
       );
     }
     var ae = function (e) {
-      e.cancelable && e.preventDefault(), e.stopPropagation();
+      (e.cancelable && e.preventDefault(), e.stopPropagation());
     };
     function oe(e) {
       var t = e.isEnabled,
@@ -17784,7 +17798,7 @@ var mj,
                 m = t > 0,
                 h = u - f - l,
                 g = !1;
-              h > t && o.current && (r && r(e), (o.current = !1)),
+              (h > t && o.current && (r && r(e), (o.current = !1)),
                 m && s.current && (a && a(e), (s.current = !1)),
                 m && t > h
                   ? (n && !o.current && n(e),
@@ -17797,7 +17811,7 @@ var mj,
                     (p.scrollTop = 0),
                     (g = !0),
                     (s.current = !0)),
-                g && ae(e);
+                g && ae(e));
             }
           },
           [n, r, i, a],
@@ -17821,9 +17835,9 @@ var mj,
           function (e) {
             if (e) {
               var t = u.supportsPassiveEvents ? { passive: !1 } : !1;
-              e.addEventListener(`wheel`, p, t),
+              (e.addEventListener(`wheel`, p, t),
                 e.addEventListener(`touchstart`, m, t),
-                e.addEventListener(`touchmove`, h, t);
+                e.addEventListener(`touchmove`, h, t));
             }
           },
           [h, m, p],
@@ -17908,19 +17922,19 @@ var mj,
                 var a = parseInt(i.current.paddingRight, 10) || 0,
                   o = document.body ? document.body.clientWidth : 0,
                   s = window.innerWidth - o + a || 0;
-                Object.keys(se).forEach(function (e) {
+                (Object.keys(se).forEach(function (e) {
                   var t = se[e];
                   n && (n[e] = t);
                 }),
-                  n && (n.paddingRight = `${s}px`);
+                  n && (n.paddingRight = `${s}px`));
               }
-              t &&
+              (t &&
                 de() &&
                 (t.addEventListener(`touchmove`, ce, me),
                 e &&
                   (e.addEventListener(`touchstart`, ue, me),
                   e.addEventListener(`touchmove`, le, me))),
-                (pe += 1);
+                (pe += 1));
             }
           },
           [r],
@@ -17930,7 +17944,7 @@ var mj,
             if (fe) {
               var t = document.body,
                 n = t && t.style;
-              (pe = Math.max(pe - 1, 0)),
+              ((pe = Math.max(pe - 1, 0)),
                 r &&
                   pe < 1 &&
                   j.forEach(function (e) {
@@ -17942,7 +17956,7 @@ var mj,
                   (t.removeEventListener(`touchmove`, ce, me),
                   e &&
                     (e.removeEventListener(`touchstart`, ue, me),
-                    e.removeEventListener(`touchmove`, le, me)));
+                    e.removeEventListener(`touchmove`, le, me))));
             }
           },
           [r],
@@ -17999,7 +18013,7 @@ var mj,
         null,
         n && d.jsx(`div`, { onClick: ge, css: _e }),
         t(function (e) {
-          u(e), f(e);
+          (u(e), f(e));
         }),
       );
     }
@@ -18350,19 +18364,19 @@ var mj,
             (n.onChange = function (e, t) {
               var r = n.props,
                 i = r.onChange;
-              (t.name = r.name), n.ariaOnChange(e, t), i(e, t);
+              ((t.name = r.name), n.ariaOnChange(e, t), i(e, t));
             }),
             (n.setValue = function (e, t, r) {
               var i = n.props,
                 a = i.closeMenuOnSelect,
                 o = i.isMulti,
                 s = i.inputValue;
-              n.onInputChange(``, { action: `set-value`, prevInputValue: s }),
+              (n.onInputChange(``, { action: `set-value`, prevInputValue: s }),
                 a &&
                   (n.setState({ inputIsHiddenAfterUpdate: !o }),
                   n.onMenuClose()),
                 n.setState({ clearFocusValueOnUpdate: !0 }),
-                n.onChange(e, { action: t, option: r });
+                n.onChange(e, { action: t, option: r }));
             }),
             (n.selectOption = function (e) {
               var t = n.props,
@@ -18409,8 +18423,8 @@ var mj,
                   return n.getOptionValue(e) !== i;
                 }),
                 o = u.valueTernary(t, a, a[0] || null);
-              n.onChange(o, { action: `remove-value`, removedValue: e }),
-                n.focusInput();
+              (n.onChange(o, { action: `remove-value`, removedValue: e }),
+                n.focusInput());
             }),
             (n.clearValue = function () {
               var e = n.state.selectValue;
@@ -18494,7 +18508,7 @@ var mj,
             (n.onControlMouseDown = function (e) {
               if (!e.defaultPrevented) {
                 var t = n.props.openMenuOnClick;
-                n.state.isFocused
+                (n.state.isFocused
                   ? n.props.menuIsOpen
                     ? e.target.tagName !== `INPUT` &&
                       e.target.tagName !== `TEXTAREA` &&
@@ -18503,7 +18517,7 @@ var mj,
                   : (t && (n.openAfterFocus = !0), n.focusInput()),
                   e.target.tagName !== `INPUT` &&
                     e.target.tagName !== `TEXTAREA` &&
-                    e.preventDefault();
+                    e.preventDefault());
               }
             }),
             (n.onDropdownIndicatorMouseDown = function (e) {
@@ -18514,12 +18528,12 @@ var mj,
                 var t = n.props,
                   r = t.isMulti,
                   i = t.menuIsOpen;
-                n.focusInput(),
+                (n.focusInput(),
                   i
                     ? (n.setState({ inputIsHiddenAfterUpdate: !r }),
                       n.onMenuClose())
                     : n.openMenu(`first`),
-                  e.preventDefault();
+                  e.preventDefault());
               }
             }),
             (n.onClearIndicatorMouseDown = function (e) {
@@ -18588,19 +18602,19 @@ var mj,
             (n.handleInputChange = function (e) {
               var t = n.props.inputValue,
                 r = e.currentTarget.value;
-              n.setState({ inputIsHiddenAfterUpdate: !1 }),
+              (n.setState({ inputIsHiddenAfterUpdate: !1 }),
                 n.onInputChange(r, {
                   action: `input-change`,
                   prevInputValue: t,
                 }),
-                n.props.menuIsOpen || n.onMenuOpen();
+                n.props.menuIsOpen || n.onMenuOpen());
             }),
             (n.onInputFocus = function (e) {
-              n.props.onFocus && n.props.onFocus(e),
+              (n.props.onFocus && n.props.onFocus(e),
                 n.setState({ inputIsHiddenAfterUpdate: !1, isFocused: !0 }),
                 (n.openAfterFocus || n.props.openMenuOnFocus) &&
                   n.openMenu(`first`),
-                (n.openAfterFocus = !1);
+                (n.openAfterFocus = !1));
             }),
             (n.onInputBlur = function (e) {
               var t = n.props.inputValue;
@@ -18627,7 +18641,7 @@ var mj,
               return Qe(n.props);
             }),
             (n.onValueInputFocus = function (e) {
-              e.preventDefault(), e.stopPropagation(), n.focus();
+              (e.preventDefault(), e.stopPropagation(), n.focus());
             }),
             (n.onKeyDown = function (e) {
               var t = n.props,
@@ -18742,9 +18756,9 @@ var mj,
             var a = n.getFocusableOptionsWithIds(),
               o = n.buildFocusableOptions(),
               s = o.indexOf(n.state.selectValue[0]);
-            (n.state.focusableOptionsWithIds = a),
+            ((n.state.focusableOptionsWithIds = a),
               (n.state.focusedOption = o[s]),
-              (n.state.focusedOptionId = Ke(a, o[s]));
+              (n.state.focusedOptionId = Ke(a, o[s])));
           }
           return n;
         }
@@ -18755,7 +18769,7 @@ var mj,
               {
                 key: `componentDidMount`,
                 value: function () {
-                  this.startListeningComposition(),
+                  (this.startListeningComposition(),
                     this.startListeningToTouch(),
                     this.props.closeMenuOnScroll &&
                       document &&
@@ -18766,7 +18780,10 @@ var mj,
                       this.state.focusedOption &&
                       this.menuListRef &&
                       this.focusedOptionRef &&
-                      u.scrollIntoView(this.menuListRef, this.focusedOptionRef);
+                      u.scrollIntoView(
+                        this.menuListRef,
+                        this.focusedOptionRef,
+                      ));
                 },
               },
               {
@@ -18776,7 +18793,7 @@ var mj,
                     n = t.isDisabled,
                     r = t.menuIsOpen,
                     i = this.state.isFocused;
-                  ((i && !n && e.isDisabled) || (i && r && !e.menuIsOpen)) &&
+                  (((i && !n && e.isDisabled) || (i && r && !e.menuIsOpen)) &&
                     this.focusInput(),
                     i && n && !e.isDisabled
                       ? this.setState({ isFocused: !1 }, this.onMenuClose)
@@ -18792,15 +18809,15 @@ var mj,
                         this.menuListRef,
                         this.focusedOptionRef,
                       ),
-                      (this.scrollToFocusedOptionOnUpdate = !1));
+                      (this.scrollToFocusedOptionOnUpdate = !1)));
                 },
               },
               {
                 key: `componentWillUnmount`,
                 value: function () {
-                  this.stopListeningComposition(),
+                  (this.stopListeningComposition(),
                     this.stopListeningToTouch(),
-                    document.removeEventListener(`scroll`, this.onScroll, !0);
+                    document.removeEventListener(`scroll`, this.onScroll, !0));
                 },
               },
               {
@@ -18812,11 +18829,11 @@ var mj,
               {
                 key: `onMenuClose`,
                 value: function () {
-                  this.onInputChange(``, {
+                  (this.onInputChange(``, {
                     action: `menu-close`,
                     prevInputValue: this.props.inputValue,
                   }),
-                    this.props.onMenuClose();
+                    this.props.onMenuClose());
                 },
               },
               {
@@ -18850,7 +18867,7 @@ var mj,
                     var s = a.indexOf(r[0]);
                     s > -1 && (o = s);
                   }
-                  (this.scrollToFocusedOptionOnUpdate = !(
+                  ((this.scrollToFocusedOptionOnUpdate = !(
                     i && this.menuListRef
                   )),
                     this.setState(
@@ -18863,7 +18880,7 @@ var mj,
                       function () {
                         return t.onMenuOpen();
                       },
-                    );
+                    ));
                 },
               },
               {
@@ -18907,7 +18924,7 @@ var mj,
                   if (r.length) {
                     var i = 0,
                       a = r.indexOf(n);
-                    n || (a = -1),
+                    (n || (a = -1),
                       e === `up`
                         ? (i = a > 0 ? a - 1 : r.length - 1)
                         : e === `down`
@@ -18923,7 +18940,7 @@ var mj,
                         focusedOption: r[i],
                         focusedValue: null,
                         focusedOptionId: this.getFocusedOptionId(r[i]),
-                      });
+                      }));
                   }
                 },
               },
@@ -19492,7 +19509,7 @@ var mj,
                                 o,
                                 n({}, f, {
                                   innerRef: function (n) {
-                                    e.getMenuListRef(n), t(n);
+                                    (e.getMenuListRef(n), t(n));
                                   },
                                   innerProps: {
                                     role: `listbox`,
@@ -19730,14 +19747,14 @@ var mj,
           l
         );
       })(l.Component);
-    (et.defaultProps = Le),
+    ((et.defaultProps = Le),
       (t.Select = et),
       (t.createFilter = ne),
       (t.defaultProps = Le),
       (t.defaultTheme = Ie),
       (t.getOptionLabel = Oe),
       (t.getOptionValue = ke),
-      (t.mergeStyles = Me);
+      (t.mergeStyles = Me));
   }),
   _j = i((e) => {
     var t = mA(),
@@ -19782,26 +19799,26 @@ var mj,
         O = E[1],
         k = i.useCallback(
           function (e, t) {
-            typeof m == `function` && m(e, t), O(e);
+            (typeof m == `function` && m(e, t), O(e));
           },
           [m],
         ),
         A = i.useCallback(
           function (e, t) {
             var n;
-            typeof h == `function` && (n = h(e, t)), S(n === void 0 ? e : n);
+            (typeof h == `function` && (n = h(e, t)), S(n === void 0 ? e : n));
           },
           [h],
         ),
         ee = i.useCallback(
           function () {
-            typeof _ == `function` && _(), T(!0);
+            (typeof _ == `function` && _(), T(!0));
           },
           [_],
         ),
         te = i.useCallback(
           function () {
-            typeof g == `function` && g(), T(!1);
+            (typeof g == `function` && g(), T(!1));
           },
           [g],
         ),
@@ -19942,7 +19959,7 @@ var mj,
       r = gj(),
       i = _j(),
       a = vj();
-    mA(),
+    (mA(),
       hA(),
       gA(),
       vA(),
@@ -19958,7 +19975,7 @@ var mj,
       d(),
       sj(),
       cj(),
-      hj();
+      hj());
     function o(e) {
       if (e && e.__esModule) return e;
       var t = Object.create(null);
@@ -19991,7 +20008,7 @@ var mj,
           c = a.useCreatable(o);
         return s.createElement(r.Select, t({ ref: n }, c));
       });
-    (e.useCreatable = a.useCreatable), (e.default = c);
+    ((e.useCreatable = a.useCreatable), (e.default = c));
   }),
   bj = i((e, t) => {
     t.exports = yj();
@@ -20027,7 +20044,7 @@ var mj,
                 bOKDisabled: !a,
                 strOKText: H(`#Sale_New_CreateEvent`),
                 onOK: () => {
-                  Tj.Get().UpdateSaleSection(n), t();
+                  (Tj.Get().UpdateSaleSection(n), t());
                 },
               }),
             }),
@@ -20102,9 +20119,9 @@ var mj,
       o = (0, q.useRef)(null);
     if (
       ((0, q.useEffect)(() => {
-        r(!0),
+        (r(!0),
           o.current &&
-            o.current(`SelectAppsAndPackagesFromDiscountEvent reloading`);
+            o.current(`SelectAppsAndPackagesFromDiscountEvent reloading`));
         let e = Z.default.CancelToken.source();
         return (
           (o.current = e.cancel),
@@ -20116,7 +20133,7 @@ var mj,
                 let n = cA.Get().GetDiscountEventDetails(t);
                 if (n && !e.token.reason) {
                   let e = [];
-                  n.apps,
+                  (n.apps,
                     n.packages.map((t) =>
                       e.push(
                         typeof t.subid == `string`
@@ -20124,7 +20141,7 @@ var mj,
                           : t.subid,
                       ),
                     ),
-                    r(!1);
+                    r(!1));
                 }
               } catch (e) {
                 let t = Qs(e);
@@ -20226,16 +20243,16 @@ var mj,
       return this.m_selectedSubs.has(e);
     }
     AddApp(e) {
-      this.m_selectedApps.add(e), this.UpdateSelected();
+      (this.m_selectedApps.add(e), this.UpdateSelected());
     }
     AddPackage(e) {
-      this.m_selectedSubs.add(e), this.UpdateSelected();
+      (this.m_selectedSubs.add(e), this.UpdateSelected());
     }
     RemoveApp(e) {
-      this.m_selectedApps.delete(e), this.UpdateSelected();
+      (this.m_selectedApps.delete(e), this.UpdateSelected());
     }
     RemovePackage(e) {
-      this.m_selectedSubs.delete(e), this.UpdateSelected();
+      (this.m_selectedSubs.delete(e), this.UpdateSelected());
     }
     UpdateApp(e, t) {
       t ? this.AddApp(e) : this.RemoveApp(e);
@@ -20256,15 +20273,15 @@ var mj,
       return this.m_nTotalSelected;
     }
     SelectAllApps(e) {
-      e.forEach((e) => this.m_selectedApps.add(e)), this.UpdateSelected();
+      (e.forEach((e) => this.m_selectedApps.add(e)), this.UpdateSelected());
     }
     Reset() {
-      this.m_selectedApps.clear(),
+      (this.m_selectedApps.clear(),
         this.m_selectedSubs.clear(),
-        this.UpdateSelected();
+        this.UpdateSelected());
     }
     ClearAllSelectedApps() {
-      this.m_selectedApps.clear(), this.UpdateSelected();
+      (this.m_selectedApps.clear(), this.UpdateSelected());
     }
     UpdateSelected() {
       let e = this.AppCount() + this.PackageCount();
@@ -20286,9 +20303,9 @@ var mj,
       m(this);
     }
   };
-N([g], Tj.prototype, `m_nTotalSelected`, void 0),
+(N([g], Tj.prototype, `m_nTotalSelected`, void 0),
   N([x], Tj.prototype, `SelectAllApps`, null),
-  N([x], Tj.prototype, `ClearAllSelectedApps`, null);
+  N([x], Tj.prototype, `ClearAllSelectedApps`, null));
 var Ej = (e) => {
     let { appid: t, strFilter: n } = e,
       [r] = Go(typeof t == `string` ? Number.parseInt(t) : t, {});
@@ -20338,7 +20355,7 @@ var Ej = (e) => {
       a = QA(),
       o = RA(),
       s = lj();
-    mA(),
+    (mA(),
       nj(),
       ij(),
       hA(),
@@ -20352,7 +20369,7 @@ var Ej = (e) => {
       pA(),
       d(),
       sj(),
-      cj();
+      cj());
     function c(e) {
       return e && e.__esModule ? e : { default: e };
     }
@@ -20388,7 +20405,7 @@ var Ej = (e) => {
         var a = t.useStateManager(e);
         return u.createElement(i.Select, n({ ref: r }, a));
       });
-    (e.useStateManager = t.useStateManager),
+    ((e.useStateManager = t.useStateManager),
       (e.createFilter = i.createFilter),
       (e.defaultTheme = i.defaultTheme),
       (e.mergeStyles = i.mergeStyles),
@@ -20405,7 +20422,7 @@ var Ej = (e) => {
           );
         return u.createElement(a.CacheProvider, { value: o }, n);
       }),
-      (e.default = p);
+      (e.default = p));
   }),
   kj = i((e, t) => {
     t.exports = Oj();
@@ -20449,7 +20466,7 @@ var Ej = (e) => {
     static s_singleton;
     constructor() {}
     static Get() {
-      return (e.s_singleton ||= new e()), e.s_singleton;
+      return ((e.s_singleton ||= new e()), e.s_singleton);
     }
   };
 function Mj() {
@@ -20467,7 +20484,7 @@ function Mj() {
   );
 }
 var Nj = i((e) => {
-    (e.read = function (e, t, n, r, i) {
+    ((e.read = function (e, t, n, r, i) {
       var a,
         o,
         s = i * 8 - r - 1,
@@ -20489,7 +20506,7 @@ var Nj = i((e) => {
       );
       if (a === 0) a = 1 - l;
       else if (a === c) return o ? NaN : (p ? -1 : 1) * (1 / 0);
-      else (o += 2 ** r), (a -= l);
+      else ((o += 2 ** r), (a -= l));
       return (p ? -1 : 1) * o * 2 ** (a - r);
     }),
       (e.write = function (e, t, n, r, i, a) {
@@ -20525,7 +20542,7 @@ var Nj = i((e) => {
           e[n + p] = o & 255, p += m, o /= 256, l -= 8
         );
         e[n + p - m] |= h * 128;
-      });
+      }));
   }),
   Pj = i((e) => {
     var t = f(),
@@ -20534,16 +20551,16 @@ var Nj = i((e) => {
         typeof Symbol == `function` && typeof Symbol.for == `function`
           ? Symbol.for(`nodejs.util.inspect.custom`)
           : null;
-    (e.Buffer = s), (e.SlowBuffer = y), (e.INSPECT_MAX_BYTES = 50);
+    ((e.Buffer = s), (e.SlowBuffer = y), (e.INSPECT_MAX_BYTES = 50));
     var i = 2147483647;
-    (e.kMaxLength = i),
+    ((e.kMaxLength = i),
       (s.TYPED_ARRAY_SUPPORT = a()),
       !s.TYPED_ARRAY_SUPPORT &&
         typeof console < `u` &&
         typeof console.error == `function` &&
         console.error(
           "This browser lacks typed array (Uint8Array) support which is required by `buffer` v5.x. Use `buffer` v4.x if you require old browser support.",
-        );
+        ));
     function a() {
       try {
         let e = new Uint8Array(1),
@@ -20561,7 +20578,7 @@ var Nj = i((e) => {
         return !1;
       }
     }
-    Object.defineProperty(s.prototype, "parent", {
+    (Object.defineProperty(s.prototype, "parent", {
       enumerable: !0,
       get: function () {
         if (s.isBuffer(this)) return this.buffer;
@@ -20572,12 +20589,12 @@ var Nj = i((e) => {
         get: function () {
           if (s.isBuffer(this)) return this.byteOffset;
         },
-      });
+      }));
     function o(e) {
       if (e > i)
         throw RangeError(`The value "` + e + `" is invalid for option "size"`);
       let t = new Uint8Array(e);
-      return Object.setPrototypeOf(t, s.prototype), t;
+      return (Object.setPrototypeOf(t, s.prototype), t);
     }
     function s(e, t, n) {
       if (typeof e == `number`) {
@@ -20624,11 +20641,11 @@ var Nj = i((e) => {
           typeof e,
       );
     }
-    (s.from = function (e, t, n) {
+    ((s.from = function (e, t, n) {
       return c(e, t, n);
     }),
       Object.setPrototypeOf(s.prototype, Uint8Array.prototype),
-      Object.setPrototypeOf(s, Uint8Array);
+      Object.setPrototypeOf(s, Uint8Array));
     function l(e) {
       if (typeof e != `number`)
         throw TypeError(`"size" argument must be of type number`);
@@ -20649,14 +20666,14 @@ var Nj = i((e) => {
       return u(e, t, n);
     };
     function d(e) {
-      return l(e), o(e < 0 ? 0 : v(e) | 0);
+      return (l(e), o(e < 0 ? 0 : v(e) | 0));
     }
-    (s.allocUnsafe = function (e) {
+    ((s.allocUnsafe = function (e) {
       return d(e);
     }),
       (s.allocUnsafeSlow = function (e) {
         return d(e);
-      });
+      }));
     function p(e, t) {
       if (
         ((typeof t != `string` || t === ``) && (t = `utf8`), !s.isEncoding(t))
@@ -20665,7 +20682,7 @@ var Nj = i((e) => {
       let n = b(e, t) | 0,
         r = o(n),
         i = r.write(e, t);
-      return i !== n && (r = r.slice(0, i)), r;
+      return (i !== n && (r = r.slice(0, i)), r);
     }
     function m(e) {
       let t = e.length < 0 ? 0 : v(e.length) | 0,
@@ -20701,7 +20718,7 @@ var Nj = i((e) => {
       if (s.isBuffer(e)) {
         let t = v(e.length) | 0,
           n = o(t);
-        return n.length === 0 || e.copy(n, 0, 0, t), n;
+        return (n.length === 0 || e.copy(n, 0, 0, t), n);
       }
       if (e.length !== void 0)
         return typeof e.length != `number` || Oe(e.length) ? o(0) : m(e);
@@ -20717,9 +20734,9 @@ var Nj = i((e) => {
       return e | 0;
     }
     function y(e) {
-      return +e != e && (e = 0), s.alloc(+e);
+      return (+e != e && (e = 0), s.alloc(+e));
     }
-    (s.isBuffer = function (e) {
+    ((s.isBuffer = function (e) {
       return e != null && e._isBuffer === !0 && e !== s.prototype;
     }),
       (s.compare = function (e, t) {
@@ -20736,7 +20753,7 @@ var Nj = i((e) => {
           r = t.length;
         for (let i = 0, a = Math.min(n, r); i < a; ++i)
           if (e[i] !== t[i]) {
-            (n = e[i]), (r = t[i]);
+            ((n = e[i]), (r = t[i]));
             break;
           }
         return n < r ? -1 : +(r < n);
@@ -20779,7 +20796,7 @@ var Nj = i((e) => {
           i += t.length;
         }
         return r;
-      });
+      }));
     function b(e, t) {
       if (s.isBuffer(e)) return e.length;
       if (ArrayBuffer.isView(e) || De(e, ArrayBuffer)) return e.byteLength;
@@ -20812,7 +20829,7 @@ var Nj = i((e) => {
             return Te(e).length;
           default:
             if (i) return r ? -1 : Se(e).length;
-            (t = (`` + t).toLowerCase()), (i = !0);
+            ((t = (`` + t).toLowerCase()), (i = !0));
         }
     }
     s.byteLength = b;
@@ -20825,7 +20842,7 @@ var Nj = i((e) => {
           ((n >>>= 0), (t >>>= 0), n <= t))
       )
         return ``;
-      for (e ||= `utf8`; ; )
+      for (e ||= `utf8`; ;)
         switch (e) {
           case `hex`:
             return ae(this, t, n);
@@ -20846,15 +20863,15 @@ var Nj = i((e) => {
             return oe(this, t, n);
           default:
             if (r) throw TypeError(`Unknown encoding: ` + e);
-            (e = (e + ``).toLowerCase()), (r = !0);
+            ((e = (e + ``).toLowerCase()), (r = !0));
         }
     }
     s.prototype._isBuffer = !0;
     function S(e, t, n) {
       let r = e[t];
-      (e[t] = e[n]), (e[n] = r);
+      ((e[t] = e[n]), (e[n] = r));
     }
-    (s.prototype.swap16 = function () {
+    ((s.prototype.swap16 = function () {
       let e = this.length;
       if (e % 2 != 0)
         throw RangeError(`Buffer size must be a multiple of 16-bits`);
@@ -20865,7 +20882,8 @@ var Nj = i((e) => {
         let e = this.length;
         if (e % 4 != 0)
           throw RangeError(`Buffer size must be a multiple of 32-bits`);
-        for (let t = 0; t < e; t += 4) S(this, t, t + 3), S(this, t + 1, t + 2);
+        for (let t = 0; t < e; t += 4)
+          (S(this, t, t + 3), S(this, t + 1, t + 2));
         return this;
       }),
       (s.prototype.swap64 = function () {
@@ -20873,10 +20891,10 @@ var Nj = i((e) => {
         if (e % 8 != 0)
           throw RangeError(`Buffer size must be a multiple of 64-bits`);
         for (let t = 0; t < e; t += 8)
-          S(this, t, t + 7),
+          (S(this, t, t + 7),
             S(this, t + 1, t + 6),
             S(this, t + 2, t + 5),
-            S(this, t + 3, t + 4);
+            S(this, t + 3, t + 4));
         return this;
       }),
       (s.prototype.toString = function () {
@@ -20933,11 +20951,11 @@ var Nj = i((e) => {
           u = e.slice(t, n);
         for (let e = 0; e < c; ++e)
           if (l[e] !== u[e]) {
-            (a = l[e]), (o = u[e]);
+            ((a = l[e]), (o = u[e]));
             break;
           }
         return a < o ? -1 : +(o < a);
-      });
+      }));
     function C(e, t, n, r, i) {
       if (e.length === 0) return -1;
       if (
@@ -20980,7 +20998,7 @@ var Nj = i((e) => {
         r === `ucs2` || r === `ucs-2` || r === `utf16le` || r === `utf-16le`)
       ) {
         if (e.length < 2 || t.length < 2) return -1;
-        (a = 2), (o /= 2), (s /= 2), (n /= 2);
+        ((a = 2), (o /= 2), (s /= 2), (n /= 2));
       }
       function c(e, t) {
         return a === 1 ? e[t] : e.readUInt16BE(t * a);
@@ -20991,7 +21009,7 @@ var Nj = i((e) => {
         for (l = n; l < o; l++)
           if (c(e, l) === c(t, r === -1 ? 0 : l - r)) {
             if ((r === -1 && (r = l), l - r + 1 === s)) return r * a;
-          } else r !== -1 && (l -= l - r), (r = -1);
+          } else (r !== -1 && (l -= l - r), (r = -1));
       } else
         for (n + s > o && (n = o - s), l = n; l >= 0; l--) {
           let n = !0;
@@ -21004,7 +21022,7 @@ var Nj = i((e) => {
         }
       return -1;
     }
-    (s.prototype.includes = function (e, t, n) {
+    ((s.prototype.includes = function (e, t, n) {
       return this.indexOf(e, t, n) !== -1;
     }),
       (s.prototype.indexOf = function (e, t, n) {
@@ -21012,7 +21030,7 @@ var Nj = i((e) => {
       }),
       (s.prototype.lastIndexOf = function (e, t, n) {
         return C(this, e, t, n, !1);
-      });
+      }));
     function T(e, t, n, r) {
       n = Number(n) || 0;
       let i = e.length - n;
@@ -21039,15 +21057,15 @@ var Nj = i((e) => {
     function k(e, t, n, r) {
       return Ee(we(t, e.length - n), e, n, r);
     }
-    (s.prototype.write = function (e, t, n, r) {
-      if (t === void 0) (r = `utf8`), (n = this.length), (t = 0);
+    ((s.prototype.write = function (e, t, n, r) {
+      if (t === void 0) ((r = `utf8`), (n = this.length), (t = 0));
       else if (n === void 0 && typeof t == `string`)
-        (r = t), (n = this.length), (t = 0);
+        ((r = t), (n = this.length), (t = 0));
       else if (isFinite(t))
-        (t >>>= 0),
+        ((t >>>= 0),
           isFinite(n)
             ? ((n >>>= 0), r === void 0 && (r = `utf8`))
-            : ((r = n), (n = void 0));
+            : ((r = n), (n = void 0)));
       else
         throw Error(
           `Buffer.write(string, encoding, offset[, length]) is no longer supported`,
@@ -21080,7 +21098,7 @@ var Nj = i((e) => {
             return k(this, e, t, n);
           default:
             if (a) throw TypeError(`Unknown encoding: ` + r);
-            (r = (`` + r).toLowerCase()), (a = !0);
+            ((r = (`` + r).toLowerCase()), (a = !0));
         }
     }),
       (s.prototype.toJSON = function () {
@@ -21088,7 +21106,7 @@ var Nj = i((e) => {
           type: `Buffer`,
           data: Array.prototype.slice.call(this._arr || this, 0),
         };
-      });
+      }));
     function A(e, n, r) {
       return n === 0 && r === e.length
         ? t.fromByteArray(e)
@@ -21098,7 +21116,7 @@ var Nj = i((e) => {
       n = Math.min(e.length, n);
       let r = [],
         i = t;
-      for (; i < n; ) {
+      for (; i < n;) {
         let t = e[i],
           a = null,
           o = t > 239 ? 4 : t > 223 ? 3 : t > 191 ? 2 : 1;
@@ -21109,20 +21127,20 @@ var Nj = i((e) => {
               t < 128 && (a = t);
               break;
             case 2:
-              (n = e[i + 1]),
+              ((n = e[i + 1]),
                 (n & 192) == 128 &&
-                  ((c = ((t & 31) << 6) | (n & 63)), c > 127 && (a = c));
+                  ((c = ((t & 31) << 6) | (n & 63)), c > 127 && (a = c)));
               break;
             case 3:
-              (n = e[i + 1]),
+              ((n = e[i + 1]),
                 (r = e[i + 2]),
                 (n & 192) == 128 &&
                   (r & 192) == 128 &&
                   ((c = ((t & 15) << 12) | ((n & 63) << 6) | (r & 63)),
-                  c > 2047 && (c < 55296 || c > 57343) && (a = c));
+                  c > 2047 && (c < 55296 || c > 57343) && (a = c)));
               break;
             case 4:
-              (n = e[i + 1]),
+              ((n = e[i + 1]),
                 (r = e[i + 2]),
                 (s = e[i + 3]),
                 (n & 192) == 128 &&
@@ -21133,17 +21151,17 @@ var Nj = i((e) => {
                     ((n & 63) << 12) |
                     ((r & 63) << 6) |
                     (s & 63)),
-                  c > 65535 && c < 1114112 && (a = c));
+                  c > 65535 && c < 1114112 && (a = c)));
           }
         }
-        a === null
+        (a === null
           ? ((a = 65533), (o = 1))
           : a > 65535 &&
             ((a -= 65536),
             r.push(((a >>> 10) & 1023) | 55296),
             (a = 56320 | (a & 1023))),
           r.push(a),
-          (i += o);
+          (i += o));
       }
       return ne(r);
     }
@@ -21153,7 +21171,7 @@ var Nj = i((e) => {
       if (t <= te) return String.fromCharCode.apply(String, e);
       let n = ``,
         r = 0;
-      for (; r < t; )
+      for (; r < t;)
         n += String.fromCharCode.apply(String, e.slice(r, (r += te)));
       return n;
     }
@@ -21171,7 +21189,7 @@ var Nj = i((e) => {
     }
     function ae(e, t, n) {
       let r = e.length;
-      (!t || t < 0) && (t = 0), (!n || n < 0 || n > r) && (n = r);
+      ((!t || t < 0) && (t = 0), (!n || n < 0 || n > r) && (n = r));
       let i = ``;
       for (let r = t; r < n; ++r) i += ke[e[r]];
       return i;
@@ -21185,38 +21203,38 @@ var Nj = i((e) => {
     }
     s.prototype.slice = function (e, t) {
       let n = this.length;
-      (e = ~~e),
+      ((e = ~~e),
         (t = t === void 0 ? n : ~~t),
         e < 0 ? ((e += n), e < 0 && (e = 0)) : e > n && (e = n),
         t < 0 ? ((t += n), t < 0 && (t = 0)) : t > n && (t = n),
-        t < e && (t = e);
+        t < e && (t = e));
       let r = this.subarray(e, t);
-      return Object.setPrototypeOf(r, s.prototype), r;
+      return (Object.setPrototypeOf(r, s.prototype), r);
     };
     function j(e, t, n) {
       if (e % 1 != 0 || e < 0) throw RangeError(`offset is not uint`);
       if (e + t > n) throw RangeError(`Trying to access beyond buffer length`);
     }
-    (s.prototype.readUintLE = s.prototype.readUIntLE =
+    ((s.prototype.readUintLE = s.prototype.readUIntLE =
       function (e, t, n) {
-        (e >>>= 0), (t >>>= 0), n || j(e, t, this.length);
+        ((e >>>= 0), (t >>>= 0), n || j(e, t, this.length));
         let r = this[e],
           i = 1,
           a = 0;
-        for (; ++a < t && (i *= 256); ) r += this[e + a] * i;
+        for (; ++a < t && (i *= 256);) r += this[e + a] * i;
         return r;
       }),
       (s.prototype.readUintBE = s.prototype.readUIntBE =
         function (e, t, n) {
-          (e >>>= 0), (t >>>= 0), n || j(e, t, this.length);
+          ((e >>>= 0), (t >>>= 0), n || j(e, t, this.length));
           let r = this[e + --t],
             i = 1;
-          for (; t > 0 && (i *= 256); ) r += this[e + --t] * i;
+          for (; t > 0 && (i *= 256);) r += this[e + --t] * i;
           return r;
         }),
       (s.prototype.readUint8 = s.prototype.readUInt8 =
         function (e, t) {
-          return (e >>>= 0), t || j(e, 1, this.length), this[e];
+          return ((e >>>= 0), t || j(e, 1, this.length), this[e]);
         }),
       (s.prototype.readUint16LE = s.prototype.readUInt16LE =
         function (e, t) {
@@ -21249,7 +21267,7 @@ var Nj = i((e) => {
           );
         }),
       (s.prototype.readBigUInt64LE = Ae(function (e) {
-        (e >>>= 0), ve(e, `offset`);
+        ((e >>>= 0), ve(e, `offset`));
         let t = this[e],
           n = this[e + 7];
         (t === void 0 || n === void 0) && ye(e, this.length - 8);
@@ -21258,7 +21276,7 @@ var Nj = i((e) => {
         return BigInt(r) + (BigInt(i) << BigInt(32));
       })),
       (s.prototype.readBigUInt64BE = Ae(function (e) {
-        (e >>>= 0), ve(e, `offset`);
+        ((e >>>= 0), ve(e, `offset`));
         let t = this[e],
           n = this[e + 7];
         (t === void 0 || n === void 0) && ye(e, this.length - 8);
@@ -21267,20 +21285,20 @@ var Nj = i((e) => {
         return (BigInt(r) << BigInt(32)) + BigInt(i);
       })),
       (s.prototype.readIntLE = function (e, t, n) {
-        (e >>>= 0), (t >>>= 0), n || j(e, t, this.length);
+        ((e >>>= 0), (t >>>= 0), n || j(e, t, this.length));
         let r = this[e],
           i = 1,
           a = 0;
-        for (; ++a < t && (i *= 256); ) r += this[e + a] * i;
-        return (i *= 128), r >= i && (r -= 2 ** (8 * t)), r;
+        for (; ++a < t && (i *= 256);) r += this[e + a] * i;
+        return ((i *= 128), r >= i && (r -= 2 ** (8 * t)), r);
       }),
       (s.prototype.readIntBE = function (e, t, n) {
-        (e >>>= 0), (t >>>= 0), n || j(e, t, this.length);
+        ((e >>>= 0), (t >>>= 0), n || j(e, t, this.length));
         let r = t,
           i = 1,
           a = this[e + --r];
-        for (; r > 0 && (i *= 256); ) a += this[e + --r] * i;
-        return (i *= 128), a >= i && (a -= 2 ** (8 * t)), a;
+        for (; r > 0 && (i *= 256);) a += this[e + --r] * i;
+        return ((i *= 128), a >= i && (a -= 2 ** (8 * t)), a);
       }),
       (s.prototype.readInt8 = function (e, t) {
         return (
@@ -21290,12 +21308,12 @@ var Nj = i((e) => {
         );
       }),
       (s.prototype.readInt16LE = function (e, t) {
-        (e >>>= 0), t || j(e, 2, this.length);
+        ((e >>>= 0), t || j(e, 2, this.length));
         let n = this[e] | (this[e + 1] << 8);
         return n & 32768 ? n | 4294901760 : n;
       }),
       (s.prototype.readInt16BE = function (e, t) {
-        (e >>>= 0), t || j(e, 2, this.length);
+        ((e >>>= 0), t || j(e, 2, this.length));
         let n = this[e + 1] | (this[e] << 8);
         return n & 32768 ? n | 4294901760 : n;
       }),
@@ -21320,7 +21338,7 @@ var Nj = i((e) => {
         );
       }),
       (s.prototype.readBigInt64LE = Ae(function (e) {
-        (e >>>= 0), ve(e, `offset`);
+        ((e >>>= 0), ve(e, `offset`));
         let t = this[e],
           n = this[e + 7];
         (t === void 0 || n === void 0) && ye(e, this.length - 8);
@@ -21334,7 +21352,7 @@ var Nj = i((e) => {
         );
       })),
       (s.prototype.readBigInt64BE = Ae(function (e) {
-        (e >>>= 0), ve(e, `offset`);
+        ((e >>>= 0), ve(e, `offset`));
         let t = this[e],
           n = this[e + 7];
         (t === void 0 || n === void 0) && ye(e, this.length - 8);
@@ -21365,14 +21383,14 @@ var Nj = i((e) => {
         return (
           (e >>>= 0), t || j(e, 8, this.length), n.read(this, e, !1, 52, 8)
         );
-      });
+      }));
     function se(e, t, n, r, i, a) {
       if (!s.isBuffer(e))
         throw TypeError(`"buffer" argument must be a Buffer instance`);
       if (t > i || t < a) throw RangeError(`"value" argument is out of bounds`);
       if (n + r > e.length) throw RangeError(`Index out of range`);
     }
-    (s.prototype.writeUintLE = s.prototype.writeUIntLE =
+    ((s.prototype.writeUintLE = s.prototype.writeUIntLE =
       function (e, t, n, r) {
         if (((e = +e), (t >>>= 0), (n >>>= 0), !r)) {
           let r = 2 ** (8 * n) - 1;
@@ -21380,7 +21398,7 @@ var Nj = i((e) => {
         }
         let i = 1,
           a = 0;
-        for (this[t] = e & 255; ++a < n && (i *= 256); )
+        for (this[t] = e & 255; ++a < n && (i *= 256);)
           this[t + a] = (e / i) & 255;
         return t + n;
       }),
@@ -21392,7 +21410,7 @@ var Nj = i((e) => {
           }
           let i = n - 1,
             a = 1;
-          for (this[t + i] = e & 255; --i >= 0 && (a *= 256); )
+          for (this[t + i] = e & 255; --i >= 0 && (a *= 256);)
             this[t + i] = (e / a) & 255;
           return t + n;
         }),
@@ -21453,17 +21471,17 @@ var Nj = i((e) => {
             (this[t + 3] = e & 255),
             t + 4
           );
-        });
+        }));
     function ce(e, t, n, r, i) {
       _e(t, r, i, e, n, 7);
       let a = Number(t & BigInt(4294967295));
-      (e[n++] = a),
+      ((e[n++] = a),
         (a >>= 8),
         (e[n++] = a),
         (a >>= 8),
         (e[n++] = a),
         (a >>= 8),
-        (e[n++] = a);
+        (e[n++] = a));
       let o = Number((t >> BigInt(32)) & BigInt(4294967295));
       return (
         (e[n++] = o),
@@ -21479,13 +21497,13 @@ var Nj = i((e) => {
     function le(e, t, n, r, i) {
       _e(t, r, i, e, n, 7);
       let a = Number(t & BigInt(4294967295));
-      (e[n + 7] = a),
+      ((e[n + 7] = a),
         (a >>= 8),
         (e[n + 6] = a),
         (a >>= 8),
         (e[n + 5] = a),
         (a >>= 8),
-        (e[n + 4] = a);
+        (e[n + 4] = a));
       let o = Number((t >> BigInt(32)) & BigInt(4294967295));
       return (
         (e[n + 3] = o),
@@ -21498,7 +21516,7 @@ var Nj = i((e) => {
         n + 8
       );
     }
-    (s.prototype.writeBigUInt64LE = Ae(function (e, t = 0) {
+    ((s.prototype.writeBigUInt64LE = Ae(function (e, t = 0) {
       return ce(this, e, t, BigInt(0), BigInt(`0xffffffffffffffff`));
     })),
       (s.prototype.writeBigUInt64BE = Ae(function (e, t = 0) {
@@ -21512,9 +21530,9 @@ var Nj = i((e) => {
         let i = 0,
           a = 1,
           o = 0;
-        for (this[t] = e & 255; ++i < n && (a *= 256); )
-          e < 0 && o === 0 && this[t + i - 1] !== 0 && (o = 1),
-            (this[t + i] = (((e / a) | 0) - o) & 255);
+        for (this[t] = e & 255; ++i < n && (a *= 256);)
+          (e < 0 && o === 0 && this[t + i - 1] !== 0 && (o = 1),
+            (this[t + i] = (((e / a) | 0) - o) & 255));
         return t + n;
       }),
       (s.prototype.writeIntBE = function (e, t, n, r) {
@@ -21525,9 +21543,9 @@ var Nj = i((e) => {
         let i = n - 1,
           a = 1,
           o = 0;
-        for (this[t + i] = e & 255; --i >= 0 && (a *= 256); )
-          e < 0 && o === 0 && this[t + i + 1] !== 0 && (o = 1),
-            (this[t + i] = (((e / a) | 0) - o) & 255);
+        for (this[t + i] = e & 255; --i >= 0 && (a *= 256);)
+          (e < 0 && o === 0 && this[t + i + 1] !== 0 && (o = 1),
+            (this[t + i] = (((e / a) | 0) - o) & 255));
         return t + n;
       }),
       (s.prototype.writeInt8 = function (e, t, n) {
@@ -21602,7 +21620,7 @@ var Nj = i((e) => {
           -BigInt(`0x8000000000000000`),
           BigInt(`0x7fffffffffffffff`),
         );
-      }));
+      })));
     function ue(e, t, n, r, i, a) {
       if (n + r > e.length || n < 0) throw RangeError(`Index out of range`);
     }
@@ -21615,12 +21633,12 @@ var Nj = i((e) => {
         r + 4
       );
     }
-    (s.prototype.writeFloatLE = function (e, t, n) {
+    ((s.prototype.writeFloatLE = function (e, t, n) {
       return de(this, e, t, !0, n);
     }),
       (s.prototype.writeFloatBE = function (e, t, n) {
         return de(this, e, t, !1, n);
-      });
+      }));
     function fe(e, t, r, i, a) {
       return (
         (t = +t),
@@ -21630,7 +21648,7 @@ var Nj = i((e) => {
         r + 8
       );
     }
-    (s.prototype.writeDoubleLE = function (e, t, n) {
+    ((s.prototype.writeDoubleLE = function (e, t, n) {
       return fe(this, e, t, !0, n);
     }),
       (s.prototype.writeDoubleBE = function (e, t, n) {
@@ -21650,8 +21668,8 @@ var Nj = i((e) => {
         if (t < 0) throw RangeError(`targetStart out of bounds`);
         if (n < 0 || n >= this.length) throw RangeError(`Index out of range`);
         if (r < 0) throw RangeError(`sourceEnd out of bounds`);
-        r > this.length && (r = this.length),
-          e.length - t < r - n && (r = e.length - t + n);
+        (r > this.length && (r = this.length),
+          e.length - t < r - n && (r = e.length - t + n));
         let i = r - n;
         return (
           this === e && typeof Uint8Array.prototype.copyWithin == `function`
@@ -21682,7 +21700,7 @@ var Nj = i((e) => {
         if (t < 0 || this.length < t || this.length < n)
           throw RangeError(`Out of range index`);
         if (n <= t) return this;
-        (t >>>= 0), (n = n === void 0 ? this.length : n >>> 0), (e ||= 0);
+        ((t >>>= 0), (n = n === void 0 ? this.length : n >>> 0), (e ||= 0));
         let i;
         if (typeof e == `number`) for (i = t; i < n; ++i) this[i] = e;
         else {
@@ -21695,12 +21713,12 @@ var Nj = i((e) => {
           for (i = 0; i < n - t; ++i) this[i + t] = a[i % o];
         }
         return this;
-      });
+      }));
     var pe = {};
     function me(e, t, n) {
       pe[e] = class extends n {
         constructor() {
-          super(),
+          (super(),
             Object.defineProperty(this, "message", {
               value: t.apply(this, arguments),
               writable: !0,
@@ -21708,7 +21726,7 @@ var Nj = i((e) => {
             }),
             (this.name = `${this.name} [${e}]`),
             this.stack,
-            delete this.name;
+            delete this.name);
         }
         get code() {
           return e;
@@ -21726,7 +21744,7 @@ var Nj = i((e) => {
         }
       };
     }
-    me(
+    (me(
       `ERR_BUFFER_OUT_OF_BOUNDS`,
       function (e) {
         return e
@@ -21761,7 +21779,7 @@ var Nj = i((e) => {
           );
         },
         RangeError,
-      );
+      ));
     function he(e) {
       let t = ``,
         n = e.length,
@@ -21770,21 +21788,21 @@ var Nj = i((e) => {
       return `${e.slice(0, n)}${t}`;
     }
     function ge(e, t, n) {
-      ve(t, `offset`),
-        (e[t] === void 0 || e[t + n] === void 0) && ye(t, e.length - (n + 1));
+      (ve(t, `offset`),
+        (e[t] === void 0 || e[t + n] === void 0) && ye(t, e.length - (n + 1)));
     }
     function _e(e, t, n, r, i, a) {
       if (e > n || e < t) {
         let r = typeof t == `bigint` ? `n` : ``,
           i;
         throw (
-          ((i =
+          (i =
             a > 3
               ? t === 0 || t === BigInt(0)
                 ? `>= 0${r} and < 2${r} ** ${(a + 1) * 8}${r}`
                 : `>= -(2${r} ** ${(a + 1) * 8 - 1}${r}) and < 2 ** ${(a + 1) * 8 - 1}${r}`
               : `>= ${t}${r} and <= ${n}${r}`),
-          new pe.ERR_OUT_OF_RANGE(`value`, i, e))
+          new pe.ERR_OUT_OF_RANGE(`value`, i, e)
         );
       }
       ge(r, i, a);
@@ -21804,7 +21822,7 @@ var Nj = i((e) => {
     function xe(e) {
       if (((e = e.split(`=`)[0]), (e = e.trim().replace(be, ``)), e.length < 2))
         return ``;
-      for (; e.length % 4 != 0; ) e += `=`;
+      for (; e.length % 4 != 0;) e += `=`;
       return e;
     }
     function Se(e, t) {
@@ -21824,7 +21842,7 @@ var Nj = i((e) => {
             continue;
           }
           if (n < 56320) {
-            (t -= 3) > -1 && a.push(239, 191, 189), (i = n);
+            ((t -= 3) > -1 && a.push(239, 191, 189), (i = n));
             continue;
           }
           n = (((i - 55296) << 10) | (n - 56320)) + 65536;
@@ -21861,11 +21879,11 @@ var Nj = i((e) => {
         i,
         a = [];
       for (let o = 0; o < e.length && !((t -= 2) < 0); ++o)
-        (n = e.charCodeAt(o)),
+        ((n = e.charCodeAt(o)),
           (r = n >> 8),
           (i = n % 256),
           a.push(i),
-          a.push(r);
+          a.push(r));
       return a;
     }
     function Te(e) {
@@ -21906,7 +21924,7 @@ var Nj = i((e) => {
     }
   }),
   Fj = (function (e) {
-    return (e.k_EventData_SubMenu = `submenu`), e;
+    return ((e.k_EventData_SubMenu = `submenu`), e);
   })({}),
   Ij = class e extends yo {
     m_filesToUpload = g.array();
@@ -21917,13 +21935,13 @@ var Nj = i((e) => {
     m_bTwoPhaseUpload = !1;
     m_bDirectTempStorageUpload = !1;
     constructor(e, t, n, r, i) {
-      super(),
+      (super(),
         m(this),
         (this.m_strUploadPath = e),
         (this.m_rgImageOptions = so(t)),
         (this.m_bSynchronousUpload = n),
         (this.m_bTwoPhaseUpload = r),
-        (this.m_bDirectTempStorageUpload = i);
+        (this.m_bDirectTempStorageUpload = i));
     }
     GetUploadPath() {
       return this.m_strUploadPath;
@@ -21969,11 +21987,11 @@ var Nj = i((e) => {
             e,
             void 0,
           );
-          return (this.m_filesToUpload = [...this.m_filesToUpload, r]), !0;
+          return ((this.m_filesToUpload = [...this.m_filesToUpload, r]), !0);
         }
         if (e instanceof HTMLVideoElement) {
           let r = new lo(t, t.name, n, this.m_rgImageOptions, e.src, sn(e), e);
-          return (this.m_filesToUpload = [...this.m_filesToUpload, r]), !0;
+          return ((this.m_filesToUpload = [...this.m_filesToUpload, r]), !0);
         }
       } else if (e.isSubtitleTextFile(t))
         return (
@@ -21987,9 +22005,9 @@ var Nj = i((e) => {
     }
     async UploadSingleImage(t, n, r, i) {
       let a = new FormData();
-      a.append(`sessionid`, Tl()),
+      (a.append(`sessionid`, Tl()),
         a.append(`elanguage`, `` + r),
-        a.append(`originalname`, n);
+        a.append(`originalname`, n));
       let o = t.GetCurrentImageOption();
       o?.artworkType && a.append(`arttype`, o.artworkType);
       let s = Yt(n);
@@ -22078,7 +22096,7 @@ var Nj = i((e) => {
     }
     async HandleDirectUploadToTempFromBrowser(e, t) {
       let n = new FormData();
-      n.append(`filesize`, `` + e.file.size), n.append(`sessionid`, Tl());
+      (n.append(`filesize`, `` + e.file.size), n.append(`sessionid`, Tl()));
       let r =
           Dc(this.m_strUploadPath, `ajax`, `uploadurl`) || this.m_strUploadPath,
         i = await Z.default.post(r, n, { withCredentials: !0, cancelToken: t });
@@ -22104,11 +22122,11 @@ var Nj = i((e) => {
       };
     }
   };
-N([g], Ij.prototype, `m_filesToUpload`, void 0),
+(N([g], Ij.prototype, `m_filesToUpload`, void 0),
   N([P], Ij.prototype, `GetUploadImages`, null),
   N([P], Ij.prototype, `ClearImages`, null),
   N([P], Ij.prototype, `DeleteUploadImage`, null),
-  N([P], Ij.prototype, `AddImageForLanguage`, null);
+  N([P], Ij.prototype, `AddImageForLanguage`, null));
 function Lj(e, t, n, r, i) {
   let a = Gl(t instanceof Array ? t : [t]);
   return q.useMemo(() => new Ij(e, a, n, r, i), [e, a, n, r, i]);
@@ -22132,9 +22150,9 @@ function Gj() {
     [
       e,
       (0, q.useCallback)((e) => {
-        window.clearTimeout(n.current),
+        (window.clearTimeout(n.current),
           t((t) => ({ eToast: e, nShowCount: (t?.nShowCount ?? 0) + 1 })),
-          (n.current = window.setTimeout(() => t(void 0), Wj));
+          (n.current = window.setTimeout(() => t(void 0), Wj)));
       }, []),
     ]
   );
@@ -22283,7 +22301,7 @@ function eM(e) {
     } else if (Array.isArray(e)) for (let t of e) r(t);
     else if (e && typeof e == `object`) for (let t of Object.keys(e)) r(e[t]);
   }
-  return r(e), Array.from(t);
+  return (r(e), Array.from(t));
 }
 function tM(e) {
   let { dataToPaste: t } = e,
@@ -22313,7 +22331,7 @@ function nM(e) {
               .jsondata.sale_sections.findIndex((e) => e == t),
             i = n.contents,
             o = r + 1;
-          for (; e.GetSaleSectionByID(o); ) o++;
+          for (; e.GetSaleSectionByID(o);) o++;
           if (
             ((i.unique_id = o),
             (e.GetEventModel().jsondata.sale_sections[r] = i),
@@ -22418,18 +22436,18 @@ function iM(e) {
                 let o = await n.blob(),
                   s = t.split(`/`).pop() || `tempfile.avif`,
                   c = new File([o], s, { type: o.type });
-                a.fnSetThrobber(
+                (a.fnSetThrobber(
                   H(`#Template_Copy_Assets_UploadConvert`, r, e.length),
                 ),
                   await i.AddImageForLanguage(c, 0),
                   await i.UploadAllImages(),
                   a.fnSetLoading(!1),
-                  a.fnSetSuccess(!0);
+                  a.fnSetSuccess(!0));
               }
             } catch (e) {
-              console.error(`fail to upload assets `, e),
+              (console.error(`fail to upload assets `, e),
                 a.fnSetLoading(!1),
-                a.fnSetError(!0);
+                a.fnSetError(!0));
             }
           } else a.fnSetSuccess(!0);
         },
@@ -22453,14 +22471,14 @@ function iM(e) {
 }
 function aM(e, t, n) {
   let r = () => {
-    n(),
+    (n(),
       window.setTimeout(() => {
         let n = e
           .GetEventModel()
           .jsondata.sale_sections.findIndex((e) => e == t);
-        e.GetEventModel().jsondata.sale_sections.splice(n, 1),
-          e.SetDirty(Q.jsondata_sales);
-      }, 500);
+        (e.GetEventModel().jsondata.sale_sections.splice(n, 1),
+          e.SetDirty(Q.jsondata_sales));
+      }, 500));
   };
   z(
     (0, J.jsx)(I, {
@@ -22503,8 +22521,8 @@ var oM = `new_event_gid`,
           let e = this.m_mapPrivateData.get(this.m_gidDirty),
             t = this.m_mapOriginalJSON.get(this.m_gidDirty),
             n = { ...e, jsonData: t };
-          this.m_mapPrivateData.set(this.m_gidDirty, n),
-            this.DispatchUpdate(this.m_clanAccountIDDirty, this.m_gidDirty);
+          (this.m_mapPrivateData.set(this.m_gidDirty, n),
+            this.DispatchUpdate(this.m_clanAccountIDDirty, this.m_gidDirty));
         }
         return (
           (a.jsonData = n),
@@ -22533,11 +22551,11 @@ var oM = `new_event_gid`,
       if (this.m_gidDirty) {
         let e = this.m_clanAccountIDDirty,
           t = this.m_gidDirty;
-        (this.m_clanAccountIDDirty = null), (this.m_gidDirty = null);
+        ((this.m_clanAccountIDDirty = null), (this.m_gidDirty = null));
         let n = this.m_mapPrivateData.get(t),
           r = this.m_mapOriginalJSON.get(t);
-        this.m_mapPrivateData.set(t, { ...n, jsonData: r }),
-          this.DispatchUpdate(e, t);
+        (this.m_mapPrivateData.set(t, { ...n, jsonData: r }),
+          this.DispatchUpdate(e, t));
       }
     }
     DispatchUpdate(e, t) {
@@ -22655,10 +22673,10 @@ var oM = `new_event_gid`,
       if (this.BIsEqual(n, this.m_mapOriginalJSON.get(t))) return 1;
       try {
         let r = new FormData();
-        r.append(`sessionid`, Tl()),
+        (r.append(`sessionid`, Tl()),
           r.append(`clanAccountID`, `` + e.GetAccountID()),
           r.append(`gidClanEvent`, `` + t),
-          r.append(`jsonData`, JSON.stringify(n));
+          r.append(`jsonData`, JSON.stringify(n)));
         let i =
             Cs() == `partner`
               ? U.PARTNER_BASE_URL + `partnerevents/ajaxsetprivatedata`
@@ -22713,8 +22731,8 @@ var oM = `new_event_gid`,
             nAccountLastUpdate: e.data.account_writer,
             jsonData: e.data.json_data || {},
           };
-          this.m_mapOriginalJSON.set(e.gid, t.jsonData),
-            this.m_mapPrivateData.set(e.gid, t);
+          (this.m_mapOriginalJSON.set(e.gid, t.jsonData),
+            this.m_mapPrivateData.set(e.gid, t));
         });
     }
     ValidateStoreDefault(e) {
@@ -22726,9 +22744,9 @@ var oM = `new_event_gid`,
         : !1;
     }
   };
-N([P], sM.prototype, `BIsEventDirty`, null),
+(N([P], sM.prototype, `BIsEventDirty`, null),
   N([P], sM.prototype, `DiscardChanges`, null),
-  N([P], sM.prototype, `SaveDirtyChanges`, null);
+  N([P], sM.prototype, `SaveDirtyChanges`, null));
 function cM(e, t) {
   let n = sM.Get(),
     [r, i] = (0, q.useState)(n.GetPrivateDataCopy(e, t));
@@ -22739,7 +22757,7 @@ function cM(e, t) {
       if (!n.BLoaded(e, t)) {
         let r = Wc.InitFromClanID(e, U.EUNIVERSE);
         n.LoadPrivateData(r, t).then((e) => {
-          i(e), o(!1);
+          (i(e), o(!1));
         });
       }
     }, [e, t, n]),
@@ -23035,13 +23053,13 @@ var pM = (function (e) {
       return this.m_listEvents;
     }
     static Get() {
-      return (e.s_Singleton ||= new e()), e.s_Singleton;
+      return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
     constructor() {
       m(this);
     }
     ClearAllSolrEvents() {
-      (this.m_mapEventGIDToSolrData = new Map()), (this.m_listEvents = []);
+      ((this.m_mapEventGIDToSolrData = new Map()), (this.m_listEvents = []));
     }
     async LoadPartnerEventForModerationIncremental(e, t = 30) {
       let n =
@@ -23112,19 +23130,19 @@ var pM = (function (e) {
     async UpdatePartnerEventType(e, t, n, r) {
       let i = U.STORE_BASE_URL + `events_admin/ajaxupdateeventtype`,
         a = new FormData();
-      a.append(`sessionid`, Tl()),
+      (a.append(`sessionid`, Tl()),
         a.append(`clan_accountid`, `` + t.GetAccountID()),
         a.append(`gid_event`, n),
         a.append(`new_event_type`, `` + r),
         await Z.default.post(i, a, {
           withCredentials: !0,
           cancelToken: e.token,
-        });
+        }));
     }
   };
-N([g], gM.prototype, `m_mapEventGIDToSolrData`, void 0),
+(N([g], gM.prototype, `m_mapEventGIDToSolrData`, void 0),
   N([g], gM.prototype, `m_listEvents`, void 0),
-  N([x], gM.prototype, `ClearAllSolrEvents`, null);
+  N([x], gM.prototype, `ClearAllSolrEvents`, null));
 var _M = `iQE696qa-gQ-`;
 function vM(e) {
   let { accountID: t, locToken: n } = e,
@@ -23240,7 +23258,7 @@ function bM(e) {
       let { eventModel: n } = e;
       return t.map((e) => {
         let t = new hM();
-        return t.FromString(e), (0, J.jsx)(yM, { modAction: t }, n.GID + e);
+        return (t.FromString(e), (0, J.jsx)(yM, { modAction: t }, n.GID + e));
       });
     },
     { eventModel: i } = e,
@@ -23306,7 +23324,7 @@ function SM(e, t, n) {
       ) {
         let e = o?.data?.versions[0],
           t = e.jsondata;
-        return (e.jsondata = JSON.parse(t)), e;
+        return ((e.jsondata = JSON.parse(t)), e);
       }
       return (
         console.error(`EventHistorySingleDetail failed to load`, Qs(o), o), null
@@ -23567,30 +23585,30 @@ var CM = `nZ4Fa2ZECh0-`,
       let e = AM(t, void 0, 1, void 0, r.undefinedBehavior).split(`
 `);
       for (let t = 0; t < e.length; t++)
-        a.push({ level: n, type: `equal`, text: `` }),
+        (a.push({ level: n, type: `equal`, text: `` }),
           o.push({
             level: n + (e[t].match(/^\s+/)?.[0]?.length || 0),
             type: `add`,
             text: e[t].replace(/^\s+/, ``).replace(/,$/g, ``),
-          });
+          }));
       return [a, o];
     }
     if (t == null) {
       let t = AM(e, void 0, 1, void 0, r.undefinedBehavior).split(`
 `);
       for (let e = 0; e < t.length; e++)
-        a.push({
+        (a.push({
           level: n + (t[e].match(/^\s+/)?.[0]?.length || 0),
           type: `remove`,
           text: t[e].replace(/^\s+/, ``).replace(/,$/g, ``),
         }),
-          o.push({ level: n, type: `equal`, text: `` });
+          o.push({ level: n, type: `equal`, text: `` }));
       return [a, o];
     }
     let s = Object.keys(e),
       c = Object.keys(t),
       l = new Map();
-    if (!r.preserveKeyOrder) LM(s, r), LM(c, r);
+    if (!r.preserveKeyOrder) (LM(s, r), LM(c, r));
     else if (r.preserveKeyOrder === `before`) {
       for (let e = 0; e < s.length; e++) l.set(s[e], e);
       for (let e = 0; e < c.length; e++)
@@ -23603,7 +23621,7 @@ var CM = `nZ4Fa2ZECh0-`,
       s.sort((e, t) => l.get(e) - l.get(t));
     }
     let u = { ignoreCase: r.ignoreCaseForKey, keyOrdersMap: l };
-    for (; s.length || c.length; ) {
+    for (; s.length || c.length;) {
       let l = s[0],
         d = c[0],
         f = PM(l, d, u);
@@ -23611,18 +23629,18 @@ var CM = `nZ4Fa2ZECh0-`,
         if (FM(e[l]) !== FM(t[d])) IM(a, o, l, d, e[l], t[d], n, r);
         else if (Array.isArray(e[l])) {
           let [s, c] = i([...e[l]], [...t[d]], l, d, n, r, [], []);
-          (a = OM(a, s)), (o = OM(o, c));
+          ((a = OM(a, s)), (o = OM(o, c)));
         } else if (e[l] === null)
-          a.push({ level: n, type: `equal`, text: `"${l}": null` }),
-            o.push({ level: n, type: `equal`, text: `"${d}": null` });
+          (a.push({ level: n, type: `equal`, text: `"${l}": null` }),
+            o.push({ level: n, type: `equal`, text: `"${d}": null` }));
         else if (typeof e[l] == `object`) {
           let s = RM(e[l], t[d], n + 1, r, i);
-          a.push({ level: n, type: `equal`, text: `"${l}": {` }),
+          (a.push({ level: n, type: `equal`, text: `"${l}": {` }),
             (a = OM(a, s[0])),
             a.push({ level: n, type: `equal`, text: `}` }),
             o.push({ level: n, type: `equal`, text: `"${d}": {` }),
             (o = OM(o, s[1])),
-            o.push({ level: n, type: `equal`, text: `}` });
+            o.push({ level: n, type: `equal`, text: `}` }));
         } else IM(a, o, l, d, e[l], t[d], n, r);
       } else if (s.length && c.length) {
         if (f < 0) {
@@ -23630,24 +23648,24 @@ var CM = `nZ4Fa2ZECh0-`,
 `);
           for (let e = 0; e < t.length; e++) {
             let r = t[e].replace(/^\s+/, ``).replace(/,$/g, ``);
-            a.push({
+            (a.push({
               level: n + (t[e].match(/^\s+/)?.[0]?.length || 0),
               type: `remove`,
               text: e ? r : `"${l}": ${r}`,
             }),
-              o.push({ level: n, type: `equal`, text: `` });
+              o.push({ level: n, type: `equal`, text: `` }));
           }
         } else {
           let e = AM(t[d], void 0, 1, void 0, r.undefinedBehavior).split(`
 `);
           for (let t = 0; t < e.length; t++) {
             let r = e[t].replace(/^\s+/, ``).replace(/,$/g, ``);
-            a.push({ level: n, type: `equal`, text: `` }),
+            (a.push({ level: n, type: `equal`, text: `` }),
               o.push({
                 level: n + (e[t].match(/^\s+/)?.[0]?.length || 0),
                 type: `add`,
                 text: t ? r : `"${d}": ${r}`,
-              });
+              }));
           }
         }
       } else if (s.length) {
@@ -23655,24 +23673,24 @@ var CM = `nZ4Fa2ZECh0-`,
 `);
         for (let e = 0; e < t.length; e++) {
           let r = t[e].replace(/^\s+/, ``).replace(/,$/g, ``);
-          a.push({
+          (a.push({
             level: n + (t[e].match(/^\s+/)?.[0]?.length || 0),
             type: `remove`,
             text: e ? r : `"${l}": ${r}`,
           }),
-            o.push({ level: n, type: `equal`, text: `` });
+            o.push({ level: n, type: `equal`, text: `` }));
         }
       } else if (c.length) {
         let e = AM(t[d], void 0, 1, void 0, r.undefinedBehavior).split(`
 `);
         for (let t = 0; t < e.length; t++) {
           let r = e[t].replace(/^\s+/, ``).replace(/,$/g, ``);
-          a.push({ level: n, type: `equal`, text: `` }),
+          (a.push({ level: n, type: `equal`, text: `` }),
             o.push({
               level: n + (e[t].match(/^\s+/)?.[0]?.length || 0),
               type: `add`,
               text: t ? r : `"${d}": ${r}`,
-            });
+            }));
         }
       }
       l
@@ -23692,7 +23710,7 @@ var CM = `nZ4Fa2ZECh0-`,
     return [a, o];
   };
 function zM() {
-  (this.__data__ = []), (this.size = 0);
+  ((this.__data__ = []), (this.size = 0));
 }
 var BM = zM;
 function VM(e, t) {
@@ -23701,7 +23719,7 @@ function VM(e, t) {
 var HM = VM,
   UM = HM;
 function WM(e, t) {
-  for (var n = e.length; n--; ) if (UM(e[n][0], t)) return n;
+  for (var n = e.length; n--;) if (UM(e[n][0], t)) return n;
   return -1;
 }
 var GM = WM,
@@ -23731,7 +23749,7 @@ var tN = eN,
 function rN(e, t) {
   var n = this.__data__,
     r = nN(n, e);
-  return r < 0 ? (++this.size, n.push([e, t])) : (n[r][1] = t), this;
+  return (r < 0 ? (++this.size, n.push([e, t])) : (n[r][1] = t), this);
 }
 var iN = rN,
   aN = BM,
@@ -23742,26 +23760,26 @@ var iN = rN,
 function uN(e) {
   var t = -1,
     n = e == null ? 0 : e.length;
-  for (this.clear(); ++t < n; ) {
+  for (this.clear(); ++t < n;) {
     var r = e[t];
     this.set(r[0], r[1]);
   }
 }
-(uN.prototype.clear = aN),
+((uN.prototype.clear = aN),
   (uN.prototype.delete = oN),
   (uN.prototype.get = sN),
   (uN.prototype.has = cN),
-  (uN.prototype.set = lN);
+  (uN.prototype.set = lN));
 var dN = uN,
   fN = dN;
 function pN() {
-  (this.__data__ = new fN()), (this.size = 0);
+  ((this.__data__ = new fN()), (this.size = 0));
 }
 var mN = pN;
 function hN(e) {
   var t = this.__data__,
     n = t.delete(e);
-  return (this.size = t.size), n;
+  return ((this.size = t.size), n);
 }
 var gN = hN;
 function _N(e) {
@@ -23800,7 +23818,7 @@ function MN(e) {
     var r = !0;
   } catch {}
   var i = AN.call(e);
-  return r && (t ? (e[jN] = n) : delete e[jN]), i;
+  return (r && (t ? (e[jN] = n) : delete e[jN]), i);
 }
 var NN = MN,
   PN = Object.prototype.toString;
@@ -23903,12 +23921,12 @@ var EP = TP,
   OP = EP(Object, `create`),
   kP = OP;
 function AP() {
-  (this.__data__ = kP ? kP(null) : {}), (this.size = 0);
+  ((this.__data__ = kP ? kP(null) : {}), (this.size = 0));
 }
 var jP = AP;
 function MP(e) {
   var t = this.has(e) && delete this.__data__[e];
-  return (this.size -= +!!t), t;
+  return ((this.size -= +!!t), t);
 }
 var NP = MP,
   PP = OP,
@@ -23947,26 +23965,26 @@ var KP = GP,
 function QP(e) {
   var t = -1,
     n = e == null ? 0 : e.length;
-  for (this.clear(); ++t < n; ) {
+  for (this.clear(); ++t < n;) {
     var r = e[t];
     this.set(r[0], r[1]);
   }
 }
-(QP.prototype.clear = qP),
+((QP.prototype.clear = qP),
   (QP.prototype.delete = JP),
   (QP.prototype.get = YP),
   (QP.prototype.has = XP),
-  (QP.prototype.set = ZP);
+  (QP.prototype.set = ZP));
 var $P = QP,
   eF = dN,
   tF = DP;
 function nF() {
-  (this.size = 0),
+  ((this.size = 0),
     (this.__data__ = {
       hash: new $P(),
       map: new (tF || eF)(),
       string: new $P(),
-    });
+    }));
 }
 var rF = nF;
 function iF(e) {
@@ -23984,7 +24002,7 @@ var sF = oF,
   cF = sF;
 function lF(e) {
   var t = cF(this, e).delete(e);
-  return (this.size -= +!!t), t;
+  return ((this.size -= +!!t), t);
 }
 var uF = lF,
   dF = sF;
@@ -24001,7 +24019,7 @@ var gF = hF,
 function vF(e, t) {
   var n = _F(this, e),
     r = n.size;
-  return n.set(e, t), (this.size += n.size == r ? 0 : 1), this;
+  return (n.set(e, t), (this.size += n.size == r ? 0 : 1), this);
 }
 var yF = vF,
   bF = rF,
@@ -24012,16 +24030,16 @@ var yF = vF,
 function TF(e) {
   var t = -1,
     n = e == null ? 0 : e.length;
-  for (this.clear(); ++t < n; ) {
+  for (this.clear(); ++t < n;) {
     var r = e[t];
     this.set(r[0], r[1]);
   }
 }
-(TF.prototype.clear = bF),
+((TF.prototype.clear = bF),
   (TF.prototype.delete = xF),
   (TF.prototype.get = SF),
   (TF.prototype.has = CF),
-  (TF.prototype.set = wF);
+  (TF.prototype.set = wF));
 var EF = TF,
   DF = dN,
   OF = DP,
@@ -24032,10 +24050,10 @@ function jF(e, t) {
   if (n instanceof DF) {
     var r = n.__data__;
     if (!OF || r.length < AF - 1)
-      return r.push([e, t]), (this.size = ++n.size), this;
+      return (r.push([e, t]), (this.size = ++n.size), this);
     n = this.__data__ = new kF(r);
   }
-  return n.set(e, t), (this.size = n.size), this;
+  return (n.set(e, t), (this.size = n.size), this);
 }
 var MF = jF,
   NF = dN,
@@ -24048,15 +24066,15 @@ function zF(e) {
   var t = (this.__data__ = new NF(e));
   this.size = t.size;
 }
-(zF.prototype.clear = PF),
+((zF.prototype.clear = PF),
   (zF.prototype.delete = FF),
   (zF.prototype.get = IF),
   (zF.prototype.has = LF),
-  (zF.prototype.set = RF);
+  (zF.prototype.set = RF));
 var BF = zF,
   VF = `__lodash_hash_undefined__`;
 function HF(e) {
-  return this.__data__.set(e, VF), this;
+  return (this.__data__.set(e, VF), this);
 }
 var UF = HF;
 function WF(e) {
@@ -24069,12 +24087,12 @@ var GF = WF,
 function YF(e) {
   var t = -1,
     n = e == null ? 0 : e.length;
-  for (this.__data__ = new KF(); ++t < n; ) this.add(e[t]);
+  for (this.__data__ = new KF(); ++t < n;) this.add(e[t]);
 }
-(YF.prototype.add = YF.prototype.push = qF), (YF.prototype.has = JF);
+((YF.prototype.add = YF.prototype.push = qF), (YF.prototype.has = JF));
 var XF = YF;
 function ZF(e, t) {
-  for (var n = -1, r = e == null ? 0 : e.length; ++n < r; )
+  for (var n = -1, r = e == null ? 0 : e.length; ++n < r;)
     if (t(e[n], n, e)) return !0;
   return !1;
 }
@@ -24099,7 +24117,7 @@ function oI(e, t, n, r, i, a) {
   var d = -1,
     f = !0,
     p = n & aI ? new tI() : void 0;
-  for (a.set(e, t), a.set(t, e); ++d < s; ) {
+  for (a.set(e, t), a.set(t, e); ++d < s;) {
     var m = e[d],
       h = t[d];
     if (r) var g = o ? r(h, m, d, t, e, a) : r(m, h, d, e, t, a);
@@ -24122,7 +24140,7 @@ function oI(e, t, n, r, i, a) {
       break;
     }
   }
-  return a.delete(e), a.delete(t), f;
+  return (a.delete(e), a.delete(t), f);
 }
 var sI = oI,
   cI = TN.Uint8Array;
@@ -24174,7 +24192,7 @@ function PI(e, t, n, r, i, a, o) {
     case jI:
       if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset)
         return !1;
-      (e = e.buffer), (t = t.buffer);
+      ((e = e.buffer), (t = t.buffer));
     case AI:
       return !(e.byteLength != t.byteLength || !a(new mI(e), new mI(t)));
     case xI:
@@ -24193,9 +24211,9 @@ function PI(e, t, n, r, i, a, o) {
       if (((s ||= vI), e.size != t.size && !c)) return !1;
       var l = o.get(e);
       if (l) return l == t;
-      (r |= bI), o.set(e, t);
+      ((r |= bI), o.set(e, t));
       var u = gI(s(e), s(t), r, i, a, o);
-      return o.delete(e), u;
+      return (o.delete(e), u);
     case kI:
       if (NI) return NI.call(e) == NI.call(t);
   }
@@ -24203,7 +24221,7 @@ function PI(e, t, n, r, i, a, o) {
 }
 var FI = PI;
 function II(e, t) {
-  for (var n = -1, r = t.length, i = e.length; ++n < r; ) e[i + n] = t[n];
+  for (var n = -1, r = t.length, i = e.length; ++n < r;) e[i + n] = t[n];
   return e;
 }
 var LI = II,
@@ -24216,7 +24234,7 @@ function VI(e, t, n) {
 }
 var HI = VI;
 function UI(e, t) {
-  for (var n = -1, r = e == null ? 0 : e.length, i = 0, a = []; ++n < r; ) {
+  for (var n = -1, r = e == null ? 0 : e.length, i = 0, a = []; ++n < r;) {
     var o = e[n];
     t(o, n, e) && (a[i++] = o);
   }
@@ -24242,7 +24260,7 @@ var KI = GI,
       }
     : JI;
 function QI(e, t) {
-  for (var n = -1, r = Array(e); ++n < e; ) r[n] = t(n);
+  for (var n = -1, r = Array(e); ++n < e;) r[n] = t(n);
   return r;
 }
 var $I = QI;
@@ -24330,7 +24348,7 @@ var xL = bL,
   qL = `[object Uint16Array]`,
   JL = `[object Uint32Array]`,
   YL = {};
-(YL[BL] =
+((YL[BL] =
   YL[VL] =
   YL[HL] =
   YL[UL] =
@@ -24355,7 +24373,7 @@ var xL = bL,
     YL[FL] =
     YL[IL] =
     YL[LL] =
-      !1);
+      !1));
 function XL(e) {
   return wL(e) && CL(e.length) && !!YL[SL(e)];
 }
@@ -24463,7 +24481,7 @@ function VR(e, t, n, r, i, a) {
     s = RR(e),
     c = s.length;
   if (c != RR(t).length && !o) return !1;
-  for (var l = c; l--; ) {
+  for (var l = c; l--;) {
     var u = s[l];
     if (!(o ? u in t : BR.call(t, u))) return !1;
   }
@@ -24471,8 +24489,8 @@ function VR(e, t, n, r, i, a) {
     f = a.get(t);
   if (d && f) return d == t && f == e;
   var p = !0;
-  a.set(e, t), a.set(t, e);
-  for (var m = o; ++l < c; ) {
+  (a.set(e, t), a.set(t, e));
+  for (var m = o; ++l < c;) {
     u = s[l];
     var h = e[u],
       g = t[u];
@@ -24497,7 +24515,7 @@ function VR(e, t, n, r, i, a) {
       ) &&
       (p = !1);
   }
-  return a.delete(e), a.delete(t), p;
+  return (a.delete(e), a.delete(t), p);
 }
 var HR = VR,
   UR = EP(TN, `DataView`),
@@ -24566,13 +24584,13 @@ function Ez(e, t, n, r, i, a) {
     s = vz(t),
     c = o ? Cz : _z(e),
     l = s ? Cz : _z(t);
-  (c = c == Sz ? wz : c), (l = l == Sz ? wz : l);
+  ((c = c == Sz ? wz : c), (l = l == Sz ? wz : l));
   var u = c == wz,
     d = l == wz,
     f = c == l;
   if (f && yz(e)) {
     if (!yz(t)) return !1;
-    (o = !0), (u = !1);
+    ((o = !0), (u = !1));
   }
   if (f && !u)
     return (
@@ -24585,7 +24603,7 @@ function Ez(e, t, n, r, i, a) {
     if (p || m) {
       var h = p ? e.value() : e,
         g = m ? t.value() : t;
-      return (a ||= new pz()), i(h, g, n, r, a);
+      return ((a ||= new pz()), i(h, g, n, r, a));
     }
   }
   return f ? ((a ||= new pz()), gz(e, t, n, r, i, a)) : !1;
@@ -24645,12 +24663,12 @@ var Mz = jz,
         t.push({ level: i, type: `equal`, text: `[` }));
   },
   Iz = (e, t, n) => {
-    e.push({ level: n, type: `equal`, text: `]` }),
-      t.push({ level: n, type: `equal`, text: `]` });
+    (e.push({ level: n, type: `equal`, text: `]` }),
+      t.push({ level: n, type: `equal`, text: `]` }));
   },
   Lz = (e, t, n) => {
-    e.push({ level: n + 1, type: `equal`, text: `...` }),
-      t.push({ level: n + 1, type: `equal`, text: `...` });
+    (e.push({ level: n + 1, type: `equal`, text: `...` }),
+      t.push({ level: n + 1, type: `equal`, text: `...` }));
   },
   Rz = (e, t, n, r, i, a) => {
     let o = Array(e.length + 1)
@@ -24682,7 +24700,7 @@ var Mz = jz,
       l = t.length,
       u = [],
       d = [];
-    for (; c > 0 || l > 0; )
+    for (; c > 0 || l > 0;)
       if (s[c][l] === `diag`) {
         let o = FM(e[c - 1]);
         if (
@@ -24692,45 +24710,45 @@ var Mz = jz,
         ) {
           let n = [],
             r = [];
-          IM(n, r, ``, ``, e[c - 1], t[l - 1], i + 1, a),
+          (IM(n, r, ``, ``, e[c - 1], t[l - 1], i + 1, a),
             (u = OM(u, n.reverse(), !0)),
-            (d = OM(d, r.reverse(), !0));
+            (d = OM(d, r.reverse(), !0)));
         } else if (o === `array`) {
           let [o, s] = zz(e[c - 1], t[l - 1], n, r, i + 1, a);
-          (u = OM(u, o.reverse(), !0)), (d = OM(d, s.reverse(), !0));
+          ((u = OM(u, o.reverse(), !0)), (d = OM(d, s.reverse(), !0)));
         } else if (o === `object`) {
           let [n, r] = RM(e[c - 1], t[l - 1], i + 2, a, zz);
-          u.unshift({ level: i + 1, type: `equal`, text: `}` }),
+          (u.unshift({ level: i + 1, type: `equal`, text: `}` }),
             d.unshift({ level: i + 1, type: `equal`, text: `}` }),
             (u = OM(u, n.reverse(), !0)),
             (d = OM(d, r.reverse(), !0)),
             u.unshift({ level: i + 1, type: `equal`, text: `{` }),
-            d.unshift({ level: i + 1, type: `equal`, text: `{` });
+            d.unshift({ level: i + 1, type: `equal`, text: `{` }));
         } else {
           let n = [],
             r = [];
-          IM(n, r, ``, ``, e[c - 1], t[l - 1], i + 1, a),
+          (IM(n, r, ``, ``, e[c - 1], t[l - 1], i + 1, a),
             (u = OM(u, n.reverse(), !0)),
-            (d = OM(d, r.reverse(), !0));
+            (d = OM(d, r.reverse(), !0)));
         }
-        c--, l--;
+        (c--, l--);
       } else if (s[c][l] === `up`) {
         if (a.showModifications && c > 1 && s[c - 1][l] === `left`) {
           let o = FM(e[c - 1]);
           if (o === FM(t[l - 1])) {
             if (o === `array`) {
               let [o, s] = zz(e[c - 1], t[l - 1], n, r, i + 1, a);
-              (u = OM(u, o.reverse(), !0)), (d = OM(d, s.reverse(), !0));
+              ((u = OM(u, o.reverse(), !0)), (d = OM(d, s.reverse(), !0)));
             } else if (o === `object`) {
               let [n, r] = RM(e[c - 1], t[l - 1], i + 2, a, zz);
-              u.unshift({ level: i + 1, type: `equal`, text: `}` }),
+              (u.unshift({ level: i + 1, type: `equal`, text: `}` }),
                 d.unshift({ level: i + 1, type: `equal`, text: `}` }),
                 (u = OM(u, n.reverse(), !0)),
                 (d = OM(d, r.reverse(), !0)),
                 u.unshift({ level: i + 1, type: `equal`, text: `{` }),
-                d.unshift({ level: i + 1, type: `equal`, text: `{` });
+                d.unshift({ level: i + 1, type: `equal`, text: `{` }));
             } else
-              u.unshift({
+              (u.unshift({
                 level: i + 1,
                 type: `modify`,
                 text: MM(e[c - 1], void 0, void 0, a.undefinedBehavior),
@@ -24739,37 +24757,37 @@ var Mz = jz,
                   level: i + 1,
                   type: `modify`,
                   text: MM(t[l - 1], void 0, void 0, a.undefinedBehavior),
-                });
+                }));
           } else {
             let n = [],
               r = [];
-            IM(n, r, ``, ``, e[c - 1], t[l - 1], i + 1, a),
+            (IM(n, r, ``, ``, e[c - 1], t[l - 1], i + 1, a),
               (u = OM(u, n.reverse(), !0)),
-              (d = OM(d, r.reverse(), !0));
+              (d = OM(d, r.reverse(), !0)));
           }
-          c--, l--;
+          (c--, l--);
         } else {
           let t = AM(e[c - 1], void 0, 1, void 0, a.undefinedBehavior).split(`
 `);
           for (let e = t.length - 1; e >= 0; e--)
-            u.unshift({
+            (u.unshift({
               level: i + 1 + (t[e].match(/^\s+/)?.[0]?.length || 0),
               type: `remove`,
               text: t[e].replace(/^\s+/, ``).replace(/,$/g, ``),
             }),
-              d.unshift({ level: i + 1, type: `equal`, text: `` });
+              d.unshift({ level: i + 1, type: `equal`, text: `` }));
           c--;
         }
       } else {
         let e = AM(t[l - 1], void 0, 1, void 0, a.undefinedBehavior).split(`
 `);
         for (let t = e.length - 1; t >= 0; t--)
-          u.unshift({ level: i + 1, type: `equal`, text: `` }),
+          (u.unshift({ level: i + 1, type: `equal`, text: `` }),
             d.unshift({
               level: i + 1 + (e[t].match(/^\s+/)?.[0]?.length || 0),
               type: `add`,
               text: e[t].replace(/^\s+/, ``).replace(/,$/g, ``),
-            });
+            }));
         l--;
       }
     return [u, d];
@@ -24778,9 +24796,9 @@ var Mz = jz,
     if ((Fz(o, s, n, r, i), i >= (a.maxDepth || 1 / 0))) Lz(o, s, i);
     else {
       let [c, l] = Rz(e, t, n, r, i, a);
-      (o = OM(o, c)), (s = OM(s, l));
+      ((o = OM(o, c)), (s = OM(s, l)));
     }
-    return Iz(o, s, i), [o, s];
+    return (Iz(o, s, i), [o, s]);
   };
 function Bz(e, t) {
   for (let n of e)
@@ -24820,27 +24838,27 @@ function Vz(e, t, n, r, i, a, o = [], s = []) {
           u = FM(l);
         if (u !== FM(e)) IM(o, s, ``, ``, l, e, i + 1, a);
         else if (u === `object`) {
-          o.push({ level: i + 1, type: `equal`, text: `{` }),
-            s.push({ level: i + 1, type: `equal`, text: `{` });
+          (o.push({ level: i + 1, type: `equal`, text: `{` }),
+            s.push({ level: i + 1, type: `equal`, text: `{` }));
           let t = Array.from(new Set([...Object.keys(l), ...Object.keys(e)]));
           for (let n of t) {
             let t = l[n],
               r = e[n];
             if (Array.isArray(t) && Array.isArray(r)) {
               let [e, c] = Vz(t, r, n, n, i + 2, a, [], []);
-              (o = OM(o, e)), (s = OM(s, c));
+              ((o = OM(o, e)), (s = OM(s, c)));
             } else if (Array.isArray(t) || Array.isArray(r))
               IM(o, s, n, n, t, r, i + 2, a);
             else {
               let [e, c] = RM({ [n]: t }, { [n]: r }, i + 2, a, Vz);
-              (o = OM(o, e)), (s = OM(s, c));
+              ((o = OM(o, e)), (s = OM(s, c)));
             }
           }
-          o.push({ level: i + 1, type: `equal`, text: `}` }),
-            s.push({ level: i + 1, type: `equal`, text: `}` });
+          (o.push({ level: i + 1, type: `equal`, text: `}` }),
+            s.push({ level: i + 1, type: `equal`, text: `}` }));
         } else if (u === `array`) {
           let [t, n] = Vz(l, e, ``, ``, i + 1, a, [], []);
-          (o = OM(o, t)), (s = OM(s, n));
+          ((o = OM(o, t)), (s = OM(s, n)));
         } else
           Nz(l, e, a)
             ? (o.push({
@@ -24876,7 +24894,7 @@ function Vz(e, t, n, r, i, a, o = [], s = []) {
                   type: `add`,
                   text: MM(e, void 0, void 0, a.undefinedBehavior),
                 }));
-        n.add(c), r.add(d);
+        (n.add(c), r.add(d));
       }
     }
     for (let t = 0; t < e.length; t++) {
@@ -24885,12 +24903,12 @@ function Vz(e, t, n, r, i, a, o = [], s = []) {
         c = AM(r, void 0, 1, void 0, a.undefinedBehavior).split(`
 `);
       for (let e = 0; e < c.length; e++)
-        o.push({
+        (o.push({
           level: i + 1 + (c[e].match(/^\s+/)?.[0]?.length || 0),
           type: `remove`,
           text: c[e].replace(/^\s+/, ``).replace(/,$/g, ``),
         }),
-          s.push({ level: i + 1, type: `equal`, text: `` });
+          s.push({ level: i + 1, type: `equal`, text: `` }));
     }
     for (let e = 0; e < t.length; e++) {
       if (r.has(e)) continue;
@@ -24898,15 +24916,15 @@ function Vz(e, t, n, r, i, a, o = [], s = []) {
         c = AM(n, void 0, 1, void 0, a.undefinedBehavior).split(`
 `);
       for (let e = 0; e < c.length; e++)
-        o.push({ level: i + 1, type: `equal`, text: `` }),
+        (o.push({ level: i + 1, type: `equal`, text: `` }),
           s.push({
             level: i + 1 + (c[e].match(/^\s+/)?.[0]?.length || 0),
             type: `add`,
             text: c[e].replace(/^\s+/, ``).replace(/,$/g, ``),
-          });
+          }));
     }
   }
-  return Iz(o, s, i), [o, s];
+  return (Iz(o, s, i), [o, s]);
 }
 var Hz = Vz;
 function Uz(e, t, n, r, i, a, o) {
@@ -24924,15 +24942,15 @@ function Uz(e, t, n, r, i, a, o) {
       o(d, r.compareKey)
     ) {
       let [e, t] = a(l, d, ``, ``, n + 2, r, [], []);
-      (s = OM(s, e)), (c = OM(c, t));
+      ((s = OM(s, e)), (c = OM(c, t)));
     } else if (Array.isArray(l) && Array.isArray(d)) {
       let [e, t] = i(l, d, ``, ``, n + 2, r, [], []);
-      (s = OM(s, e)), (c = OM(c, t));
+      ((s = OM(s, e)), (c = OM(c, t)));
     } else if (Array.isArray(l) || Array.isArray(d))
       IM(s, c, u, u, l, d, n + 2, r);
     else {
       let [e, t] = RM({ [u]: l }, { [u]: d }, n + 2, r, i);
-      (s = OM(s, e)), (c = OM(c, t));
+      ((s = OM(s, e)), (c = OM(c, t)));
     }
   }
   return [s, c];
@@ -24946,7 +24964,7 @@ var Wz = (e, t, n, r, i, a, o = [], s = []) => {
     )
       Lz(o, s, i);
     else
-      for (; e.length || t.length; ) {
+      for (; e.length || t.length;) {
         let n = e[0],
           r = t[0],
           c = FM(n),
@@ -24960,23 +24978,23 @@ var Wz = (e, t, n, r, i, a, o = [], s = []) => {
           )
             IM(o, s, ``, ``, n, r, i + 1, a);
           else if (c === `object`) {
-            o.push({ level: i + 1, type: `equal`, text: `{` }),
-              s.push({ level: i + 1, type: `equal`, text: `{` });
+            (o.push({ level: i + 1, type: `equal`, text: `{` }),
+              s.push({ level: i + 1, type: `equal`, text: `{` }));
             let e, t;
-            a.arrayDiffMethod === `compare-key`
+            (a.arrayDiffMethod === `compare-key`
               ? ([e, t] = Uz(n, r, i, a, Wz, Hz, Bz))
               : ([e, t] = RM(n, r, i + 2, a, Wz)),
               (o = OM(o, e)),
               (s = OM(s, t)),
               o.push({ level: i + 1, type: `equal`, text: `}` }),
-              s.push({ level: i + 1, type: `equal`, text: `}` });
+              s.push({ level: i + 1, type: `equal`, text: `}` }));
           } else if (c === `array`) {
             if (a.compareKey && Bz(n, a.compareKey) && Bz(r, a.compareKey)) {
               let [e, t] = Hz(n, r, ``, ``, i + 1, a, [], []);
-              (o = OM(o, e)), (s = OM(s, t));
+              ((o = OM(o, e)), (s = OM(s, t)));
             } else {
               let [e, t] = Wz(n, r, ``, ``, i + 1, a, [], []);
-              (o = OM(o, e)), (s = OM(s, t));
+              ((o = OM(o, e)), (s = OM(s, t)));
             }
           } else
             PM(n, r, { ignoreCase: a.ignoreCase }) === 0
@@ -25013,32 +25031,32 @@ var Wz = (e, t, n, r, i, a, o = [], s = []) => {
                     type: `add`,
                     text: MM(r, void 0, void 0, a.undefinedBehavior),
                   }));
-          e.shift(), t.shift();
+          (e.shift(), t.shift());
         } else if (e.length) {
           let t = MM(n, void 0, !0, a.undefinedBehavior).split(`
 `);
           for (let e = 0; e < t.length; e++)
-            o.push({
+            (o.push({
               level: i + 1 + (t[e].match(/^\s+/)?.[0]?.length || 0),
               type: `remove`,
               text: t[e].replace(/^\s+/, ``).replace(/,$/g, ``),
             }),
-              s.push({ level: i + 1, type: `equal`, text: `` });
+              s.push({ level: i + 1, type: `equal`, text: `` }));
           e.shift();
         } else if (t.length) {
           let e = MM(r, void 0, !0, a.undefinedBehavior).split(`
 `);
           for (let t = 0; t < e.length; t++)
-            o.push({ level: i + 1, type: `equal`, text: `` }),
+            (o.push({ level: i + 1, type: `equal`, text: `` }),
               s.push({
                 level: i + 1 + (e[t].match(/^\s+/)?.[0]?.length || 0),
                 type: `add`,
                 text: e[t].replace(/^\s+/, ``).replace(/,$/g, ``),
-              });
+              }));
           t.shift();
         }
       }
-    return Iz(o, s, i), [o, s];
+    return (Iz(o, s, i), [o, s]);
   },
   Gz = (e, t) => {
     if (!e || typeof e != `object`) return e;
@@ -25081,9 +25099,9 @@ var Wz = (e, t, n, r, i, a, o = [], s = []) => {
             t[r - 1].type === `add`
           ) {
             let i = e[r - 1];
-            (e[r - 1] = e[r]), (e[r] = i);
+            ((e[r - 1] = e[r]), (e[r] = i));
             let a = t[r - 1];
-            (t[r - 1] = t[r]), (t[r] = a), (n = !0);
+            ((t[r - 1] = t[r]), (t[r] = a), (n = !0));
           }
         if (!n) break;
       }
@@ -25105,18 +25123,18 @@ var Wz = (e, t, n, r, i, a, o = [], s = []) => {
           (e[n].comma = !0);
     }
     diff(e, t) {
-      this.detectCircular(e),
+      (this.detectCircular(e),
         this.detectCircular(t),
         (this.options.arrayDiffMethod === `unorder-normal` ||
           this.options.arrayDiffMethod === `unorder-lcs`) &&
           ((e = Gz(e, this.options)), (t = Gz(t, this.options))),
         this.options.undefinedBehavior === `ignore` &&
-          ((e = DM(e) ?? null), (t = DM(t) ?? null));
+          ((e = DM(e) ?? null), (t = DM(t) ?? null)));
       let n = [],
         r = [],
         i = FM(e);
       if (i !== FM(t)) {
-        (n = AM(
+        ((n = AM(
           e,
           void 0,
           1,
@@ -25145,10 +25163,10 @@ var Wz = (e, t, n, r, i, a, o = [], s = []) => {
               type: `add`,
               text: e.replace(/^\s+/, ``).replace(/,$/g, ``),
               comma: e.endsWith(`,`),
-            })));
+            }))));
         let i = n.length,
           a = r.length;
-        (n = OM(
+        ((n = OM(
           n,
           Array(a)
             .fill(0)
@@ -25160,7 +25178,7 @@ var Wz = (e, t, n, r, i, a, o = [], s = []) => {
               .fill(0)
               .map(() => ({ ...qz })),
             !0,
-          ));
+          )));
       } else
         i === `object`
           ? (([n, r] = RM(e, t, 1, this.options, this.arrayDiffFunc)),
@@ -25279,7 +25297,7 @@ var Wz = (e, t, n, r, i, a, o = [], s = []) => {
       compareKey: c,
       undefinedBehavior: l = `stringify`,
     } = {}) {
-      (this.options = {
+      ((this.options = {
         detectCircular: e,
         maxDepth: t,
         showModifications: n,
@@ -25296,7 +25314,7 @@ var Wz = (e, t, n, r, i, a, o = [], s = []) => {
             ? Hz
             : r === `lcs` || r === `unorder-lcs`
               ? zz
-              : Wz);
+              : Wz));
     }
   },
   Zz = (e) => `hasLinesBefore` in e || `hasLinesAfter` in e,
@@ -25312,17 +25330,17 @@ var Wz = (e, t, n, r, i, a, o = [], s = []) => {
       ) {
         if (r.start === i.start) {
           let e = Math.min(r.end, i.end);
-          n.push({ ...r, ...i, end: e }), (r.start = i.start = e);
+          (n.push({ ...r, ...i, end: e }), (r.start = i.start = e));
         } else if (r.start < i.start) {
           let e = Math.min(r.end, i.start);
-          n.push({ ...i, ...r, end: e }), (r.start = e);
+          (n.push({ ...i, ...r, end: e }), (r.start = e));
         } else {
           let e = Math.min(r.start, i.end);
-          n.push({ ...r, ...i, end: e }), (i.start = e);
+          (n.push({ ...r, ...i, end: e }), (i.start = e));
         }
         if (!e.length || !t.length) break;
-        r.start === r.end && (r = { ...e.shift() }),
-          i.start === i.end && (i = { ...t.shift() });
+        (r.start === r.end && (r = { ...e.shift() }),
+          i.start === i.end && (i = { ...t.shift() }));
       }
     return (
       e.length ||
@@ -25338,7 +25356,7 @@ var Wz = (e, t, n, r, i, a, o = [], s = []) => {
       d = e[n];
     l = Zz(d) ? t[n] : t[n] + (r - d.start) * o;
     let f = e[i];
-    return (u = Zz(f) ? c - t[i] - s : c - t[i] - (a - f.start) * o), [l, u];
+    return ((u = Zz(f) ? c - t[i] - s : c - t[i] - (a - f.start) * o), [l, u]);
   },
   tB = (e, t, n, r, i, a) => {
     if (!t.length) return [0, 0, 0, 0];
@@ -25374,21 +25392,21 @@ var Wz = (e, t, n, r, i, a, o = [], s = []) => {
     );
   },
   nB = {};
-Object.defineProperty(nB, "__esModule", { value: !0 }),
+(Object.defineProperty(nB, "__esModule", { value: !0 }),
   (nB.applyPatch =
     nB.calcPatch =
     lB =
     nB.lcs =
     nB.diff =
     nB.diff_core =
-      void 0);
+      void 0));
 function rB(e, t) {
   let { b: n, eq: r, stack_base: i } = e,
     { i: a, N: o, j: s, M: c, Z: l, stack_top: u } = e;
   for (;;)
     switch (t) {
       case 0:
-        Z_block: for (; o > 0 && c > 0; ) {
+        Z_block: for (; o > 0 && c > 0;) {
           n.fill(0, 0, 2 * l);
           let e = o - c,
             t = o + c,
@@ -25407,7 +25425,7 @@ function rB(e, t) {
                 _ = g - f,
                 v = g,
                 y = _;
-              for (; v < o && y < c && r(a + v, s + y); ) v++, y++;
+              for (; v < o && y < c && r(a + v, s + y);) (v++, y++);
               if (
                 ((n[f - l * Math.floor(f / l)] = v),
                 d === 1 &&
@@ -25416,13 +25434,13 @@ function rB(e, t) {
                   v + n[l + h - l * Math.floor(h / l)] >= o)
               ) {
                 if (t > 1 || v !== g) {
-                  (i[u++] = a + v),
+                  ((i[u++] = a + v),
                     (i[u++] = o - v),
                     (i[u++] = s + y),
                     (i[u++] = c - y),
                     (o = g),
                     (c = _),
-                    (l = 2 * (Math.min(o, c) + 1));
+                    (l = 2 * (Math.min(o, c) + 1)));
                   continue Z_block;
                 }
                 break h_loop;
@@ -25435,7 +25453,7 @@ function rB(e, t) {
                 y = v - _,
                 b = v,
                 x = y;
-              for (; b < o && x < c && r(f - b, p - x); ) b++, x++;
+              for (; b < o && x < c && r(f - b, p - x);) (b++, x++);
               if (
                 ((n[l + _ - l * Math.floor(_ / l)] = b),
                 d === 0 &&
@@ -25444,13 +25462,13 @@ function rB(e, t) {
                   b + n[h - l * Math.floor(h / l)] >= o)
               ) {
                 if (t > 0 || b !== v) {
-                  (i[u++] = a + o - v),
+                  ((i[u++] = a + o - v),
                     (i[u++] = v),
                     (i[u++] = s + c - y),
                     (i[u++] = y),
                     (o -= b),
                     (c -= x),
-                    (l = 2 * (Math.min(o, c) + 1));
+                    (l = 2 * (Math.min(o, c) + 1)));
                   continue Z_block;
                 }
                 break h_loop;
@@ -25465,7 +25483,7 @@ function rB(e, t) {
           }
         }
         if (o + c !== 0) {
-          if (e.pxe === a || e.pye === s) (e.pxe = a + o), (e.pye = s + c);
+          if (e.pxe === a || e.pye === s) ((e.pxe = a + o), (e.pye = s + c));
           else {
             let t = e.pxs;
             if (
@@ -25492,12 +25510,12 @@ function rB(e, t) {
         }
       case 1:
         if (u === 0) return 2;
-        (c = i[--u]),
+        ((c = i[--u]),
           (s = i[--u]),
           (o = i[--u]),
           (a = i[--u]),
           (l = 2 * (Math.min(o, c) + 1)),
-          (t = 0);
+          (t = 0));
     }
 }
 var iB = class {
@@ -25506,7 +25524,7 @@ var iB = class {
   }
   next() {
     let { state: e, result: t } = this;
-    if (this.c > 1) return (t.done = !0), (t.value = void 0), t;
+    if (this.c > 1) return ((t.done = !0), (t.value = void 0), t);
     let n = rB(e, this.c);
     return (
       (this.c = n),
@@ -25518,7 +25536,7 @@ var iB = class {
     );
   }
   constructor(e) {
-    (this.state = e), (this.c = 0), (this.result = { value: null, done: !1 });
+    ((this.state = e), (this.c = 0), (this.result = { value: null, done: !1 }));
   }
 };
 function aB(e, t, n, r, i) {
@@ -25549,9 +25567,9 @@ function aB(e, t, n, r, i) {
 nB.diff_core = aB;
 function oB(e, t) {
   let [n, r, i] = [0, e.length, t.length];
-  for (; n < r && n < i && e[n] === t[n]; ) n++;
+  for (; n < r && n < i && e[n] === t[n];) n++;
   if (n === r && n === i) return [][Symbol.iterator]();
-  for (; e[--r] === t[--i] && r > n && i > n; );
+  for (; e[--r] === t[--i] && r > n && i > n;);
   return aB(n, r + 1 - n, n, i + 1 - n, (n, r) => e[n] === t[r]);
 }
 nB.diff = oB;
@@ -25580,7 +25598,7 @@ var sB = class {
     );
   }
   constructor(e, t) {
-    (this.diff = e), (this.N = t), (this.i = 0), (this.j = 0);
+    ((this.diff = e), (this.N = t), (this.i = 0), (this.j = 0));
   }
 };
 function cB(e, t) {
@@ -25589,22 +25607,22 @@ function cB(e, t) {
 var lB = (nB.lcs = cB);
 function* uB(e, t) {
   let n = ArrayBuffer.isView(e) ? Uint8Array.prototype.subarray : e.slice;
-  for (let r of oB(e, t)) (r[2] = n.call(t, r[2], r[3])), yield r;
+  for (let r of oB(e, t)) ((r[2] = n.call(t, r[2], r[3])), yield r);
 }
 nB.calcPatch = uB;
 function* dB(e, t) {
   let n = 0,
     r = ArrayBuffer.isView(e) ? Uint8Array.prototype.subarray : e.slice;
   for (let [i, a, o] of t)
-    n < i && (yield r.call(e, n, i)), o.length > 0 && (yield o), (n = a);
+    (n < i && (yield r.call(e, n, i)), o.length > 0 && (yield o), (n = a));
   n < e.length && (yield r.call(e, n));
 }
 nB.applyPatch = dB;
 var fB = (e, t) => {
     let n = [],
       r = 0;
-    for (let i of e) n.push(r), (r += i.length + t);
-    return n.push(r - t), n;
+    for (let i of e) (n.push(r), (r += i.length + t));
+    return (n.push(r - t), n);
   },
   pB = (e) => e.filter((e) => e.end > e.start),
   mB = (e, t, n) => {
@@ -25621,12 +25639,12 @@ var fB = (e, t) => {
         f = fB(c, d),
         p = fB(l, d);
       for (let [e, t, n] of u)
-        e > a && r.push({ type: `remove`, start: f[a], end: f[e] }),
+        (e > a && r.push({ type: `remove`, start: f[a], end: f[e] }),
           t > o && i.push({ type: `add`, start: p[o], end: p[t] }),
           (a = e + n),
           (o = t + n),
           r.push({ start: f[e], end: f[a] }),
-          i.push({ start: p[t], end: p[o] });
+          i.push({ start: p[t], end: p[o] }));
       return (
         e.length > a && r.push({ type: `remove`, start: f[a], end: e.length }),
         t.length > o && i.push({ type: `add`, start: p[o], end: t.length }),
@@ -25637,12 +25655,12 @@ var fB = (e, t) => {
     }
     let s = lB(e, t);
     for (let [e, t, n] of s)
-      e > a && r.push({ type: `remove`, start: a, end: e }),
+      (e > a && r.push({ type: `remove`, start: a, end: e }),
         t > o && i.push({ type: `add`, start: o, end: t }),
         (a = e + n),
         (o = t + n),
         r.push({ start: e, end: a }),
-        i.push({ start: t, end: o });
+        i.push({ start: t, end: o }));
     return (
       e.length > a && r.push({ type: `remove`, start: a, end: e.length }),
       t.length > o && i.push({ type: `add`, start: o, end: t.length }),
@@ -25678,7 +25696,7 @@ var fB = (e, t) => {
           { token: `punctuation`, start: t.length - 1, end: t.length + n },
         ];
       let r = 1;
-      for (; r < t.length && t[r] !== `"`; ) t[r] === `\\` && ++r, ++r;
+      for (; r < t.length && t[r] !== `"`;) (t[r] === `\\` && ++r, ++r);
       return r === t.length - 1
         ? [{ token: `string`, start: n, end: t.length + n }]
         : [
@@ -25798,8 +25816,8 @@ var fB = (e, t) => {
         }
         x({});
       };
-    q.useEffect(() => {
-      (h.current = t), (g.current = n), (_.current = _B(t, n, u, r)), S();
+    (q.useEffect(() => {
+      ((h.current = t), (g.current = n), (_.current = _B(t, n, u, r)), S());
     }, [u, t, n]),
       q.useEffect(() => {
         if (!e.virtual || !m) return;
@@ -25810,34 +25828,34 @@ var fB = (e, t) => {
             m.removeEventListener(`scroll`, t);
           }
         );
-      }, [e.virtual, m]);
+      }, [e.virtual, m]));
     let C = (e) => (t) => {
         let n = [..._.current],
           r = n[e];
-        (n[e] = { ...r, end: Math.max(r.end - t, r.start) }),
+        ((n[e] = { ...r, end: Math.max(r.end - t, r.start) }),
           e + 1 < _.current.length - 1 &&
             (n[e + 1] = { ...n[e + 1], start: Math.max(r.end - t, r.start) }),
           (_.current = n),
-          S();
+          S());
       },
       w = (e) => (t) => {
         let n = [..._.current],
           r = n[e];
-        (n[e] = { ...r, start: Math.min(r.start + t, r.end) }),
+        ((n[e] = { ...r, start: Math.min(r.start + t, r.end) }),
           e > 1 &&
             (n[e - 1] = { ...n[e - 1], end: Math.min(r.start + t, r.end) }),
           (_.current = n),
-          S();
+          S());
       },
       T = (e) => () => {
         let t = [..._.current],
           n = t[e];
-        (t[e] = { ...n, start: n.start, end: n.start }),
+        ((t[e] = { ...n, start: n.start, end: n.start }),
           e + 1 < _.current.length - 1
             ? (t[e + 1] = { ...t[e + 1], start: n.start })
             : (t[e - 1] = { ...t[e - 1], end: n.end }),
           (_.current = t),
-          S();
+          S());
       },
       E = (e, t = [], n = !1, r = !1) =>
         q.createElement(
@@ -25983,8 +26001,8 @@ var fB = (e, t) => {
           o = a + n,
           s = b.current,
           c = s?.offsetTop ?? 0;
-        for (; s?.offsetParent && s?.offsetParent !== m; )
-          (s = s.offsetParent), (c += s.offsetTop);
+        for (; s?.offsetParent && s?.offsetParent !== m;)
+          ((s = s.offsetParent), (c += s.offsetTop));
         if (c > o || c + y.current < a)
           return q.createElement(
             `tr`,
@@ -26080,7 +26098,7 @@ function DB(e) {
           (0, J.jsxs)(V, {
             className: wB,
             onClick: () => {
-              t?.(), i();
+              (t?.(), i());
             },
             children: [
               H(`#EventEditor_ShowDiff`),
@@ -26094,7 +26112,7 @@ function DB(e) {
             active: r,
             children: (0, J.jsx)(I, {
               closeModal: () => {
-                n?.(), a();
+                (n?.(), a());
               },
               bAlertDialog: !0,
               bAllowFullSize: !0,
@@ -26378,7 +26396,7 @@ var VB = (e) => {
       [i, a] = q.useState(`rollback`);
     q.useEffect(() => {
       let e = new URLSearchParams();
-      e.append(`version_id`, n), e.append(`event_gid`, t.GetGID());
+      (e.append(`version_id`, n), e.append(`event_gid`, t.GetGID()));
       let r =
         U.COMMUNITY_BASE_URL +
         `gid/${t.GetClanSteamID().ConvertTo64BitString()}/ajaxrollbackevent`;
@@ -26447,19 +26465,19 @@ function YB(e, t, n, r) {
     for (let e of i.data.groups) {
       let t = n.splice(0, e.nCount),
         r = Bd(e.nSeed);
-      sl(t, Math.min(s, t.length), r),
+      (sl(t, Math.min(s, t.length), r),
         (s -= Math.min(s, t.length)),
         a.push(...t),
-        o.push(e);
+        o.push(e));
     }
   if (n.length > 0) {
     if (s > 0) {
       let r = { nCount: s, nSeed: Vd() },
         i = Bd(r.nSeed);
-      sl(n, s, i),
+      (sl(n, s, i),
         a.push(...n),
         o.push(r),
-        nV(t, e.rtime32_last_modified, { groups: o });
+        nV(t, e.rtime32_last_modified, { groups: o }));
     } else a.push(...n);
   }
   return a;
@@ -26536,8 +26554,8 @@ function tV(e, t, n) {
 }
 function nV(e, t, n, r) {
   let i = { nVersion: qB, rtLastModified: t, data: n };
-  r > 0 && (i.rtExpires = Math.floor(Date.now() / 1e3) + r),
-    window.sessionStorage.setItem(e, JSON.stringify(i));
+  (r > 0 && (i.rtExpires = Math.floor(Date.now() / 1e3) + r),
+    window.sessionStorage.setItem(e, JSON.stringify(i)));
 }
 function rV(e) {
   return (U.IN_CLIENT ? `library-` : Cs() + `-`) + e;
@@ -26593,7 +26611,7 @@ function oV() {
 function sV(e, t, n) {
   let r = oh(e, n),
     i = 0;
-  for (; t > 0; ) (t -= r[i % r.length]), i++;
+  for (; t > 0;) ((t -= r[i % r.length]), i++);
   return i;
 }
 function cV(e, t, n) {
@@ -26950,7 +26968,7 @@ function TV(e, t, n, r) {
         if (a.length === 1) {
           let a = t,
             o = t.length;
-          a.splice(+!!r), a.push(n.replace(`%1$s`, `` + o)), (i[e] = a);
+          (a.splice(+!!r), a.push(n.replace(`%1$s`, `` + o)), (i[e] = a));
         } else i[e] = t.map((e) => TV(e, a.slice(1).join(`.`), n, r));
       } else
         i[e] =
@@ -26965,7 +26983,7 @@ function EV(e) {
     for (let n in e)
       if (Array.isArray(e[n])) {
         let r = -1;
-        e[n].forEach((i, a) => {
+        (e[n].forEach((i, a) => {
           i != null &&
             i !== `` &&
             ((r = a), typeof i == `object` && (e[n][a] = t(i)));
@@ -26973,7 +26991,7 @@ function EV(e) {
           r == -1
             ? (e[n] = `[all empty array]`)
             : r < e[n].length - 1 &&
-              (e[n].splice(r + 1), e[n].push(`... rest are empty ...`));
+              (e[n].splice(r + 1), e[n].push(`... rest are empty ...`)));
       } else typeof e[n] == `object` && (e[n] = t(e[n]));
     return e;
   };
@@ -27004,7 +27022,7 @@ var DV = c((e) => {
     ),
     x = new Map(Object.entries(v).map(([e, t]) => [e, y(t)])),
     S = t.GetEventModel().jsondata;
-  n && (S = EV(S)),
+  (n && (S = EV(S)),
     o
       ? (S = TV(
           S,
@@ -27044,7 +27062,7 @@ var DV = c((e) => {
         `sale_sections.facets.facetValues.matchingCapsules`,
         `... %1$s facet sale items hidden ...`,
         !1,
-      )));
+      ))));
   let C = t.GetCreatorUserSteamID(),
     w = t.GetLastUpdater(),
     [T, E] = mn(t.GetEventModel());
@@ -27486,7 +27504,7 @@ var AV = (e) => {
         onChange: c,
       } = e,
       l = (e) => {
-        (n[r] = e), t.SetDirty(Q.jsondata_sales), c && c(n, e);
+        ((n[r] = e), t.SetDirty(Q.jsondata_sales), c && c(n, e));
       };
     return i
       ? (0, J.jsx)(ds, {
@@ -28061,11 +28079,11 @@ function eH(e, t, n, r) {
       strTitle: H(`#Sale_Section_ShowOnTabs_DialogTitle`),
       strDescription: H(`#Sale_Section_ShowOnTabs_DialogDesc`),
       onOK: () => {
-        r
+        (r
           ? r(Array.from(a.keys()))
           : ((t.show_on_tabs = Array.from(a.keys())),
             t.show_on_tabs.length == 0 && (t.reverse_show_on_tabs = void 0)),
-          e.SetDirty(Q.jsondata_sales);
+          e.SetDirty(Q.jsondata_sales));
       },
       children: (0, J.jsx)(`div`, { className: Fk, children: o }),
     }),
@@ -28121,14 +28139,14 @@ function rH(e) {
               (0, J.jsx)(`div`, {
                 className: Vk,
                 onClick: () => {
-                  u(),
+                  (u(),
                     t.item_browse_section_data.tabs ||
                       (t.item_browse_section_data.tabs = []),
                     (t.item_browse_section_data.tabs = [
                       ...t.item_browse_section_data.tabs,
                       e,
                     ]),
-                    n.SetDirty(Q.jsondata_sales);
+                    n.SetDirty(Q.jsondata_sales));
                 },
                 children: (0, J.jsx)(lu, {}),
               }),
@@ -28144,9 +28162,9 @@ function rH(e) {
         label: H(`#Sale_Section_EnableSearch`),
         tooltip: H(`#Sale_Section_EnableSearch_ttip`),
         onChange: (e) => {
-          u(),
+          (u(),
             (t.item_browse_section_data.enable_search = e),
-            n.SetDirty(Q.jsondata_sales);
+            n.SetDirty(Q.jsondata_sales));
         },
         checked: r.enable_search,
       }),
@@ -28154,9 +28172,9 @@ function rH(e) {
         label: H(`#Sale_Section_UseDemoLayout`),
         tooltip: H(`#Sale_Section_UseDemoLayout_ttip`),
         onChange: (e) => {
-          u(),
+          (u(),
             (t.item_browse_section_data.show_as_demos = e),
-            n.SetDirty(Q.jsondata_sales);
+            n.SetDirty(Q.jsondata_sales));
         },
         checked: r.show_as_demos,
       }),
@@ -28164,9 +28182,9 @@ function rH(e) {
         label: H(`#Sale_Section_PreferDemoStorePage`),
         tooltip: H(`#Sale_Section_PreferDemoStorePage_tooltip`),
         onChange: (e) => {
-          u(),
+          (u(),
             (t.item_browse_section_data.prefer_demo_store_page = e),
-            n.SetDirty(Q.jsondata_sales);
+            n.SetDirty(Q.jsondata_sales));
         },
         checked: r.prefer_demo_store_page,
       }),
@@ -28175,9 +28193,9 @@ function rH(e) {
           label: H(`#Sale_Section_ShowDeckCompatibility`),
           tooltip: H(`#Sale_Section_ShowDeckCompatibility_ttip`),
           onChange: (e) => {
-            u(),
+            (u(),
               (t.item_browse_section_data.show_deck_compability_details = e),
-              n.SetDirty(Q.jsondata_sales);
+              n.SetDirty(Q.jsondata_sales));
           },
           checked: o,
         }),
@@ -28186,10 +28204,10 @@ function rH(e) {
         label: H(`#Sale_BrowseSection_SubscriptionID`),
         tooltip: H(`#Sale_BrowseSection_SubscriptionID_ttip`),
         onChange: (e) => {
-          u(),
+          (u(),
             (t.item_browse_section_data.master_subscription =
               Number.parseInt(e.target.value) || 0),
-            n.SetDirty(Q.jsondata_sales);
+            n.SetDirty(Q.jsondata_sales));
         },
         value: a,
       }),
@@ -28200,10 +28218,10 @@ function rH(e) {
         rgOptions: l,
         selectedOption: s,
         onChange: (e) => {
-          u(),
+          (u(),
             (t.item_browse_section_data.display_hw_compatibility_details =
               e.data),
-            n.SetDirty(Q.jsondata_sales);
+            n.SetDirty(Q.jsondata_sales));
         },
       }),
       (0, J.jsx)(R, {
@@ -28305,20 +28323,20 @@ function iH(e) {
         (0, J.jsxs)(`a`, {
           className: `YQe2NmzcuNY-`,
           onClick: (e) => {
-            e.preventDefault(),
+            (e.preventDefault(),
               e.stopPropagation(),
               eH(
                 t,
                 n,
                 () => (l && l[r]) || [],
                 (e) => {
-                  n.item_browse_section_data.show_flavor_on_sale_tabs ||
+                  (n.item_browse_section_data.show_flavor_on_sale_tabs ||
                     (n.item_browse_section_data.show_flavor_on_sale_tabs = {}),
                     (n.item_browse_section_data.show_flavor_on_sale_tabs[r] =
                       e),
-                    u();
+                    u());
                 },
-              );
+              ));
           },
           children: [H(`#Sale_Section_ShowOnTabs`), aH(n, t, c, r)],
         }),
@@ -28415,7 +28433,7 @@ function sH(e) {
                     max: 3,
                     value: p,
                     onChange: (e) => {
-                      (t.carousel_rows = e), r.SetDirty(Q.jsondata_sales);
+                      ((t.carousel_rows = e), r.SetDirty(Q.jsondata_sales));
                     },
                     tooltip: H(`#Sale_Section_CarouselRows_Tooltip`),
                   },
@@ -28468,10 +28486,10 @@ function sH(e) {
                       tooltip: H(`#Sale_Section_CapSectionContentCount_hint`),
                       onChange: (e) => {
                         let n = Number(e.currentTarget.value);
-                        n > 0 &&
+                        (n > 0 &&
                           ((t.cap_section_row_count = n),
                           r.SetDirty(Q.jsondata_sales)),
-                          o(e.currentTarget.value);
+                          o(e.currentTarget.value));
                       },
                       value: a,
                     }),
@@ -28647,39 +28665,39 @@ function sH(e) {
 function cH(e) {
   let { saleSection: t, editModel: n } = e,
     r = (e) => {
-      (t.show_as_carousel = !0),
+      ((t.show_as_carousel = !0),
         (t.capsules_per_row_array = [2, 3, 4, 3]),
         (t.carousel_rows = 2),
         (t.single_item_style = void 0),
         (t.capsule_style_per_row_array = null),
         e(),
-        n.SetDirty(Q.jsondata_sales);
+        n.SetDirty(Q.jsondata_sales));
     },
     i = [
       {
         label: H(`#Sale_Section_Layout_Preset_Detailed`),
         image: (0, J.jsx)(YV, { arrows: !0 }),
         action: () => {
-          (t.show_as_carousel = !0),
+          ((t.show_as_carousel = !0),
             (t.carousel_rows = 1),
             (t.capsules_per_row_array = [1]),
-            (t.single_item_style = `library`);
+            (t.single_item_style = `library`));
         },
       },
       {
         label: H(`#Sale_Section_Layout_Preset_Carousel3Tall`),
         image: (0, J.jsx)(XV, { arrows: !0 }),
         action: () => {
-          (t.capsules_per_row_array = [3]),
+          ((t.capsules_per_row_array = [3]),
             (t.capsule_style_per_row_array = [`tall`]),
-            (t.carousel_rows = 1);
+            (t.carousel_rows = 1));
         },
       },
       {
         label: H(`#Sale_Section_Layout_Preset_Carousel4`),
         image: (0, J.jsx)(QV, { arrows: !0 }),
         action: () => {
-          (t.capsules_per_row_array = [4]), (t.carousel_rows = 1);
+          ((t.capsules_per_row_array = [4]), (t.carousel_rows = 1));
         },
       },
       {
@@ -28834,7 +28852,7 @@ function fH(e) {
       (0, J.jsx)(jV, {
         varName: `use_random_order`,
         onChange: (e, n) => {
-          n || (t.cap_item_count = 0), r(lr(t).toString());
+          (n || (t.cap_item_count = 0), r(lr(t).toString()));
         },
         editModel: i,
         section: t,
@@ -29022,10 +29040,10 @@ var _H = c((e) => {
             label: H(`#Sale_Section_AllowCompactBrowserItemSwitch`),
             tooltip: H(`#Sale_Section_AllowCompactBrowserItemSwitch_ttip`),
             onChange: (e) => {
-              s(),
+              (s(),
                 (n.item_browse_section_data.item_browser_has_compact_toggle =
                   e),
-                t.SetDirty(Q.jsondata_sales);
+                t.SetDirty(Q.jsondata_sales));
             },
             checked: o,
           }),
@@ -29081,9 +29099,9 @@ function xH(e) {
     s = q.useCallback(
       (e, t) => {
         let { rows: r, styles: i } = bH(t);
-        (e.capsules_per_row_array = r),
+        ((e.capsules_per_row_array = r),
           (e.capsule_style_per_row_array = !i || !i.length ? null : i),
-          n.SetDirty(Q.jsondata_sales);
+          n.SetDirty(Q.jsondata_sales));
       },
       [n],
     ),
@@ -29155,10 +29173,10 @@ function SH(e) {
   let [s] = w(() => [t.discovery_queue_localized_desc?.[r] ?? ``]),
     c = (0, q.useCallback)(
       (e) => {
-        t.discovery_queue_localized_desc ||
+        (t.discovery_queue_localized_desc ||
           ((t.discovery_queue_localized_desc = F([], 32, null)), a()),
           e != t.discovery_queue_localized_desc[r] &&
-            ((t.discovery_queue_localized_desc[r] = e), a());
+            ((t.discovery_queue_localized_desc[r] = e), a()));
       },
       [a, r, t],
     );
@@ -29202,8 +29220,8 @@ var CH = c((e) =>
           tooltip: H(`#Sale_Section_CarouselRows_Tooltip`),
           value: e.section.carousel_rows || 2,
           onChange: (t) => {
-            (e.section.carousel_rows = t),
-              e.editModel.SetDirty(Q.jsondata_sales);
+            ((e.section.carousel_rows = t),
+              e.editModel.SetDirty(Q.jsondata_sales));
           },
         }),
       }),
@@ -29347,10 +29365,10 @@ var EH = class extends q.Component {
       );
     let n = e.filter((e) => e.trim().length > 0).map((e) => parseInt(e.trim())),
       r = n.map((e) => ({ id: e, type: this.state.type }));
-    await Oi(r, Ai),
+    (await Oi(r, Ai),
       n.forEach((e) => this.props.fnAddCapsule(e, this.state.type)),
       this.setState({ bImporting: !1 }),
-      this.props.closeModal();
+      this.props.closeModal());
   }
   OnTypeChange(e) {
     this.setState({ type: e });
@@ -29437,11 +29455,11 @@ var EH = class extends q.Component {
     );
   }
 };
-N([P], EH.prototype, `OnImportAction`, null),
+(N([P], EH.prototype, `OnImportAction`, null),
   N([P], EH.prototype, `DoImport`, null),
   N([P], EH.prototype, `OnTypeChange`, null),
   N([P], EH.prototype, `OnImportChange`, null),
-  (EH = N([c], EH));
+  (EH = N([c], EH)));
 function DH(e) {
   let { info: t } = e,
     n = t.label;
@@ -29531,7 +29549,7 @@ function RH(e) {
     rgOptions: a ?? [],
     selectedOption: i,
     onChange: (e) => {
-      (n.smart_section_creator_listid = e.data), t.SetDirty(Q.jsondata_sales);
+      ((n.smart_section_creator_listid = e.data), t.SetDirty(Q.jsondata_sales));
     },
     contextMenuPositionOptions: { bDisablePopTop: !0 },
   });
@@ -29918,8 +29936,8 @@ function KH(e) {
     value: r,
     onChange: (e) => {
       let r = Number.parseInt(e.target.value);
-      (n.smart_section_max_apps = r > 0 ? r : void 0),
-        t.SetDirty(Q.jsondata_sales);
+      ((n.smart_section_max_apps = r > 0 ? r : void 0),
+        t.SetDirty(Q.jsondata_sales));
     },
   });
 }
@@ -29952,9 +29970,9 @@ function JH(e) {
       value: r,
       onChange: (e) => {
         let r = Number.parseInt(e.target.value);
-        (n.smart_section_min_discount_percent =
+        ((n.smart_section_min_discount_percent =
           r > 0 ? Math.min(r, 99) : void 0),
-          t.SetDirty(Q.jsondata_sales);
+          t.SetDirty(Q.jsondata_sales));
       },
     }),
   });
@@ -29997,8 +30015,8 @@ function XH(e) {
           rgOptions: o,
           selectedOption: r,
           onChange: (e) => {
-            (t.smart_section_category = Number(e.data)),
-              n.SetDirty(Q.jsondata_sales);
+            ((t.smart_section_category = Number(e.data)),
+              n.SetDirty(Q.jsondata_sales));
           },
           contextMenuPositionOptions: { bDisablePopTop: !0 },
         },
@@ -30036,10 +30054,10 @@ function ZH(e) {
       rgOptions: l,
       selectedValue: d,
       onSelectionChange: (e) => {
-        QH(t, n, e.data == `linked_app_list`),
+        (QH(t, n, e.data == `linked_app_list`),
           (t.smart_section_type =
             e.data == `linked_app_list` ? void 0 : e.data),
-          n.SetDirty(Q.jsondata_sales);
+          n.SetDirty(Q.jsondata_sales));
       },
       filter: (e, t) =>
         OH(t).toLocaleLowerCase().includes(e.toLocaleLowerCase()),
@@ -30074,11 +30092,11 @@ function ZH(e) {
 function QH(e, t, n) {
   if (n) {
     let n = cO(t);
-    (e.sale_tag_filter = { clauses: [] }),
-      (e.capsules = iO(n, e.sale_tag_filter, e.capsules));
+    ((e.sale_tag_filter = { clauses: [] }),
+      (e.capsules = iO(n, e.sale_tag_filter, e.capsules)));
   } else
-    e.sale_tag_filter?.clauses?.length || (e.capsules = []),
-      (e.sale_tag_filter = null);
+    (e.sale_tag_filter?.clauses?.length || (e.capsules = []),
+      (e.sale_tag_filter = null));
 }
 function $H(e) {
   let { saleSection: t, editModel: n } = e,
@@ -30135,8 +30153,8 @@ function $H(e) {
         ].filter((e) => !!e),
         selectedOption: r,
         onChange: (e) => {
-          (t.smart_section_personalized_carousel_sort = e.data),
-            n.SetDirty(Q.jsondata_sales);
+          ((t.smart_section_personalized_carousel_sort = e.data),
+            n.SetDirty(Q.jsondata_sales));
         },
         contextMenuPositionOptions: { bDisablePopTop: !0 },
       }),
@@ -30148,8 +30166,8 @@ function $H(e) {
         tooltip: H(`#Sale_SmartSection_PersonalizedCarousel_MinCount_ttip`),
         value: i,
         onChange: (e) => {
-          (t.smart_section_personalized_carousel_min_items = e),
-            n.SetDirty(Q.jsondata_sales);
+          ((t.smart_section_personalized_carousel_min_items = e),
+            n.SetDirty(Q.jsondata_sales));
         },
       }),
       (0, J.jsx)(B, {
@@ -30157,8 +30175,8 @@ function $H(e) {
         tooltip: H(`#Sale_SmartSection_PersonalizedCarousel_Randomize_ttip`),
         checked: a,
         onChange: (e) => {
-          (t.smart_section_personalized_carousel_randomize = e),
-            n.SetDirty(Q.jsondata_sales);
+          ((t.smart_section_personalized_carousel_randomize = e),
+            n.SetDirty(Q.jsondata_sales));
         },
       }),
       o > 0 &&
@@ -30194,9 +30212,9 @@ function tU(e) {
                 (0, J.jsx)(EH, {
                   fnAddCapsule: (e, i) => {
                     s(() => {
-                      (t.capsules = [{ id: e, type: i }]),
+                      ((t.capsules = [{ id: e, type: i }]),
                         Oi(r, Ai),
-                        n.SetDirty(Q.jsondata_sales);
+                        n.SetDirty(Q.jsondata_sales));
                     });
                   },
                 }),
@@ -30227,8 +30245,8 @@ function nU(e) {
     ],
     selectedOption: r || 3,
     onChange: (e) => {
-      (t.smart_section_deck_compatibility = e.data),
-        n.SetDirty(Q.jsondata_sales);
+      ((t.smart_section_deck_compatibility = e.data),
+        n.SetDirty(Q.jsondata_sales));
     },
     contextMenuPositionOptions: { bDisablePopTop: !0 },
   });
@@ -30285,7 +30303,8 @@ function iU(e) {
         ],
         selectedOption: i || `library`,
         onChange: (e) => {
-          (t.smart_section_data_source = e.data), n.SetDirty(Q.jsondata_sales);
+          ((t.smart_section_data_source = e.data),
+            n.SetDirty(Q.jsondata_sales));
         },
         contextMenuPositionOptions: { bDisablePopTop: !0 },
       }),
@@ -30338,9 +30357,9 @@ function aU(e) {
                         sc,
                         {
                           onSelected: () => {
-                            (o.current.element.value = ``),
+                            ((o.current.element.value = ``),
                               (t.smart_section_tag = Number(e.id)),
-                              n.SetDirty(Q.jsondata_sales);
+                              n.SetDirty(Q.jsondata_sales));
                           },
                           children: (0, J.jsxs)(`div`, {
                             style: { display: `flex`, alignItems: `center` },
@@ -30406,16 +30425,16 @@ function cU(e) {
     [p, m, h] = w(() => [t.GetEventType(), n.capsules?.length || 0, oU(n)]),
     g = p == 36,
     _ = (e) => {
-      o(e),
+      (o(e),
         s(() => {
-          e && (n.capsules = []),
+          (e && (n.capsules = []),
             (n.smart_section = e),
             (n.smart_section_type = e ? (g ? `all_released` : r) : void 0),
             !n.smart_section_max_apps && i && (n.smart_section_max_apps = i),
             QH(n, t, e && n.smart_section_type == null),
             e || sU(n),
-            t.SetDirty(Q.jsondata_sales);
-        });
+            t.SetDirty(Q.jsondata_sales));
+        }));
     },
     v = (e) => {
       e != a && ((e ? m > 0 : h.length > 0) ? (f(e), l()) : _(e));
@@ -30565,8 +30584,8 @@ function dU(e) {
         (0, J.jsx)(uU, {
           strFlavor: i,
           fnSetFlavor: (e) => {
-            (t.dlc_for_you_data = { ...t.dlc_for_you_data, filter: e }),
-              n.SetDirty(Q.jsondata_sales);
+            ((t.dlc_for_you_data = { ...t.dlc_for_you_data, filter: e }),
+              n.SetDirty(Q.jsondata_sales));
           },
         }),
         (0, J.jsx)(B, {
@@ -30574,11 +30593,11 @@ function dU(e) {
           tooltip: H(`#Sale_DLCForYou_GroupByParentApp_ttip`),
           checked: a,
           onChange: (e) => {
-            (t.dlc_for_you_data = {
+            ((t.dlc_for_you_data = {
               ...t.dlc_for_you_data,
               group_by_parent_app: e,
             }),
-              n.SetDirty(Q.jsondata_sales);
+              n.SetDirty(Q.jsondata_sales));
           },
         }),
         !a &&
@@ -30587,11 +30606,11 @@ function dU(e) {
             tooltip: H(`#Sale_DLCForYou_HideDLCStats_ttip`),
             checked: o,
             onChange: (e) => {
-              (t.dlc_for_you_data = {
+              ((t.dlc_for_you_data = {
                 ...t.dlc_for_you_data,
                 hide_dlc_stats: e,
               }),
-                n.SetDirty(Q.jsondata_sales);
+                n.SetDirty(Q.jsondata_sales));
             },
           }),
         a &&
@@ -30600,8 +30619,8 @@ function dU(e) {
               (0, J.jsx)(xO, {
                 items: s,
                 onDelete: (e) => {
-                  t.dlc_for_you_data.parent_app_sorts.splice(e, 1),
-                    n.SetDirty(Q.jsondata_sales);
+                  (t.dlc_for_you_data.parent_app_sorts.splice(e, 1),
+                    n.SetDirty(Q.jsondata_sales));
                 },
                 onReorder: () => {
                   n.SetDirty(Q.jsondata_sales);
@@ -30612,18 +30631,18 @@ function dU(e) {
                     rgOptions: r,
                     selectedOption: e.value,
                     onChange: (t) => {
-                      (e.value = t.data), n.SetDirty(Q.jsondata_sales);
+                      ((e.value = t.data), n.SetDirty(Q.jsondata_sales));
                     },
                   }),
               }),
               (0, J.jsx)(V, {
                 onClick: () => {
-                  t.dlc_for_you_data.parent_app_sorts ||
+                  (t.dlc_for_you_data.parent_app_sorts ||
                     (t.dlc_for_you_data.parent_app_sorts = []),
                     t.dlc_for_you_data.parent_app_sorts.push({
                       value: `last_played`,
                     }),
-                    n.SetDirty(Q.jsondata_sales);
+                    n.SetDirty(Q.jsondata_sales));
                 },
                 children: `Add Sort Order Tab`,
               }),
@@ -30636,11 +30655,11 @@ function dU(e) {
           rangeMin: 0,
           value: c,
           onChange: (e) => {
-            (t.dlc_for_you_data = {
+            ((t.dlc_for_you_data = {
               ...t.dlc_for_you_data,
               max_last_played: Number(e.target.value),
             }),
-              n.SetDirty(Q.jsondata_sales);
+              n.SetDirty(Q.jsondata_sales));
           },
         }),
         (0, J.jsx)(R, {
@@ -30650,11 +30669,11 @@ function dU(e) {
           rangeMin: 0,
           value: l,
           onChange: (e) => {
-            (t.dlc_for_you_data = {
+            ((t.dlc_for_you_data = {
               ...t.dlc_for_you_data,
               min_playtime: Number(e.target.value),
             }),
-              n.SetDirty(Q.jsondata_sales);
+              n.SetDirty(Q.jsondata_sales));
           },
         }),
         (0, J.jsx)(R, {
@@ -30665,11 +30684,11 @@ function dU(e) {
           rangeMin: 0,
           value: u,
           onChange: (e) => {
-            (t.dlc_for_you_data = {
+            ((t.dlc_for_you_data = {
               ...t.dlc_for_you_data,
               parent_app_page_size: Number(e.target.value),
             }),
-              n.SetDirty(Q.jsondata_sales);
+              n.SetDirty(Q.jsondata_sales));
           },
         }),
       ],
@@ -30719,7 +30738,7 @@ function gU(e) {
     [i] = w(() => [t.media_layout?.layout_type]),
     a = (0, q.useCallback)(
       (e) => {
-        (t.media_layout.layout_type = e),
+        ((t.media_layout.layout_type = e),
           (e === Fh.DoubleMedia || e === Fh.QuadMedia) &&
             t.media_layout.media_content.length < 2 &&
             t.media_layout.media_content.push({
@@ -30742,7 +30761,7 @@ function gU(e) {
                 localized_media_desc: [],
               }),
           n(),
-          r();
+          r());
       },
       [r, t, n],
     );
@@ -30793,37 +30812,37 @@ function _U(e) {
     o = w(() => Qa.Get().GetCurEditLanguage()),
     s = (0, q.useCallback)(
       (e, t) => {
-        (a[t].media_type = e), r(), n();
+        ((a[t].media_type = e), r(), n());
       },
       [n, r, a],
     ),
     c = (0, q.useCallback)(
       (e, t) => {
-        (a[t].video_webm_src = e), r(), n();
+        ((a[t].video_webm_src = e), r(), n());
       },
       [n, r, a],
     ),
     l = (0, q.useCallback)(
       (e, t) => {
-        (a[t].video_mp4_src = e), r(), n();
+        ((a[t].video_mp4_src = e), r(), n());
       },
       [n, r, a],
     ),
     u = (0, q.useCallback)(
       (e, t) => {
-        (a[t].video_poster_image = e), r(), n();
+        ((a[t].video_poster_image = e), r(), n());
       },
       [n, r, a],
     ),
     d = (0, q.useCallback)(
       (e, t) => {
-        (a[t].image_source = e), r(), n();
+        ((a[t].image_source = e), r(), n());
       },
       [n, r, a],
     ),
     f = (0, q.useCallback)(
       (e, t) => {
-        (a[t].localized_media_desc[o] = e), r(), n();
+        ((a[t].localized_media_desc[o] = e), r(), n());
       },
       [n, o, r, a],
     ),
@@ -31208,8 +31227,8 @@ var yU = n(Ga()),
       initialSaleJSON: vU(),
     },
   };
-(0, yU.default)(`2022-02-21T10:00:00-08:00`).unix(),
-  (0, yU.default)(`2022-02-28T10:00:00-08:00`).unix();
+((0, yU.default)(`2022-02-21T10:00:00-08:00`).unix(),
+  (0, yU.default)(`2022-02-28T10:00:00-08:00`).unix());
 var CU = class e {
   m_mapOptInSpecialEventDef = new Map();
   m_mapOptInSpecialEventDefPromises = new Map();
@@ -31269,7 +31288,7 @@ var CU = class e {
   }
   static s_Singleton;
   static Get() {
-    return (e.s_Singleton ||= new e()), e.s_Singleton;
+    return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
   constructor() {}
 };
@@ -31301,7 +31320,7 @@ function TU(e) {
     m = t.GetAccountID(),
     [h] = w(() => [p.GetFilesToUpload().length - p.GetCompletedFiles()]);
   (0, q.useEffect)(() => {
-    f(!1),
+    (f(!1),
       is.ClearImageGroup(),
       a?.forEach((e, t) => {
         let n = Wc.InitFromClanID(m, U.EUNIVERSE);
@@ -31312,7 +31331,7 @@ function TU(e) {
         }
         is.SetLocalizedImageGroupAtLang(t, n, e ?? null);
       }),
-      f(!0);
+      f(!0));
   }, [a, m, o]);
   let g = (0, q.useCallback)(
       (e, t, n = 0) => {
@@ -31358,7 +31377,7 @@ function TU(e) {
           );
         } else l(o, null, e);
       }
-      is.ClearImageGroup(), e.onOK ? e.onOK() : c?.();
+      (is.ClearImageGroup(), e.onOK ? e.onOK() : c?.());
     },
     strOKButtonText: h > 0 ? H(`#ImagePickerLoc_DismissWarning`) : void 0,
     children: [
@@ -31412,7 +31431,7 @@ var DU = `KMppINq9bGg-`,
       function n(r) {
         if (t[r]) return t[r].exports;
         var i = (t[r] = { i: r, l: !1, exports: {} });
-        return e[r].call(i.exports, i, i.exports, n), (i.l = !0), i.exports;
+        return (e[r].call(i.exports, i, i.exports, n), (i.l = !0), i.exports);
       }
       return (
         (n.m = e),
@@ -31421,10 +31440,10 @@ var DU = `KMppINq9bGg-`,
           n.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r });
         }),
         (n.r = function (e) {
-          typeof Symbol < `u` &&
+          (typeof Symbol < `u` &&
             Symbol.toStringTag &&
             Object.defineProperty(e, Symbol.toStringTag, { value: `Module` }),
-            Object.defineProperty(e, "__esModule", { value: !0 });
+            Object.defineProperty(e, "__esModule", { value: !0 }));
         }),
         (n.t = function (e, t) {
           if (
@@ -31457,7 +31476,7 @@ var DU = `KMppINq9bGg-`,
               : function () {
                   return e;
                 };
-          return n.d(t, `a`, t), t;
+          return (n.d(t, `a`, t), t);
         }),
         (n.o = function (e, t) {
           return Object.prototype.hasOwnProperty.call(e, t);
@@ -31485,7 +31504,7 @@ var DU = `KMppINq9bGg-`,
         var r = n(6);
         function i() {}
         function a() {}
-        (a.resetWarningCache = i),
+        ((a.resetWarningCache = i),
           (e.exports = function () {
             function e(e, t, n, i, a, o) {
               if (o !== r) {
@@ -31522,8 +31541,8 @@ var DU = `KMppINq9bGg-`,
               checkPropTypes: a,
               resetWarningCache: i,
             };
-            return (n.PropTypes = n), n;
-          });
+            return ((n.PropTypes = n), n);
+          }));
       },
       function (e, t, n) {
         e.exports = `SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED`;
@@ -31597,17 +31616,17 @@ var DU = `KMppINq9bGg-`,
         function p(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            (r.enumerable = r.enumerable || !1),
+            ((r.enumerable = r.enumerable || !1),
               (r.configurable = !0),
               `value` in r && (r.writable = !0),
-              Object.defineProperty(e, r.key, r);
+              Object.defineProperty(e, r.key, r));
           }
         }
         function m(e, t) {
           return (m = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (e, t) {
-                return (e.__proto__ = t), e;
+                return ((e.__proto__ = t), e);
               })(e, t);
         }
         function h(e) {
@@ -31681,11 +31700,11 @@ var DU = `KMppINq9bGg-`,
               throw TypeError(
                 `Super expression must either be null or a function`,
               );
-            (e.prototype = Object.create(t && t.prototype, {
+            ((e.prototype = Object.create(t && t.prototype, {
               constructor: { value: e, writable: !0, configurable: !0 },
             })),
               Object.defineProperty(e, "prototype", { writable: !1 }),
-              t && m(e, t);
+              t && m(e, t));
           })(a, e);
           var t,
             n,
@@ -31784,8 +31803,8 @@ var DU = `KMppINq9bGg-`,
                     r = [[], [], [], [], [], []],
                     i = e.clone().subtract(1, `months`);
                   i.date(i.daysInMonth()).startOf(`week`);
-                  for (var a = i.clone().add(42, `d`), o = 0; i.isBefore(a); )
-                    x(r, o++).push(this.renderDay(i, t, n)), i.add(1, `d`);
+                  for (var a = i.clone().add(42, `d`), o = 0; i.isBefore(a);)
+                    (x(r, o++).push(this.renderDay(i, t, n)), i.add(1, `d`));
                   return r.map(function (e, t) {
                     return c.a.createElement(
                       `tr`,
@@ -31879,17 +31898,17 @@ var DU = `KMppINq9bGg-`,
         function w(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            (r.enumerable = r.enumerable || !1),
+            ((r.enumerable = r.enumerable || !1),
               (r.configurable = !0),
               `value` in r && (r.writable = !0),
-              Object.defineProperty(e, r.key, r);
+              Object.defineProperty(e, r.key, r));
           }
         }
         function T(e, t) {
           return (T = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (e, t) {
-                return (e.__proto__ = t), e;
+                return ((e.__proto__ = t), e);
               })(e, t);
         }
         function E(e) {
@@ -31971,11 +31990,11 @@ var DU = `KMppINq9bGg-`,
               throw TypeError(
                 `Super expression must either be null or a function`,
               );
-            (e.prototype = Object.create(t && t.prototype, {
+            ((e.prototype = Object.create(t && t.prototype, {
               constructor: { value: e, writable: !0, configurable: !0 },
             })),
               Object.defineProperty(e, "prototype", { writable: !1 }),
-              t && T(e, t);
+              t && T(e, t));
           })(a, e);
           var t,
             n,
@@ -32054,13 +32073,13 @@ var DU = `KMppINq9bGg-`,
                   var t,
                     n = this.props.selectedDate,
                     r = `rdtMonth`;
-                  this.isDisabledMonth(e)
+                  (this.isDisabledMonth(e)
                     ? (r += ` rdtDisabled`)
                     : (t = this._updateSelectedMonth),
                     n &&
                       n.year() === this.props.viewDate.year() &&
                       n.month() === e &&
-                      (r += ` rdtActive`);
+                      (r += ` rdtActive`));
                   var i = { key: e, className: r, "data-value": e, onClick: t };
                   return this.props.renderMonth
                     ? this.props.renderMonth(
@@ -32130,17 +32149,17 @@ var DU = `KMppINq9bGg-`,
         function ie(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            (r.enumerable = r.enumerable || !1),
+            ((r.enumerable = r.enumerable || !1),
               (r.configurable = !0),
               `value` in r && (r.writable = !0),
-              Object.defineProperty(e, r.key, r);
+              Object.defineProperty(e, r.key, r));
           }
         }
         function ae(e, t) {
           return (ae = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (e, t) {
-                return (e.__proto__ = t), e;
+                return ((e.__proto__ = t), e);
               })(e, t);
         }
         function oe(e) {
@@ -32214,11 +32233,11 @@ var DU = `KMppINq9bGg-`,
               throw TypeError(
                 `Super expression must either be null or a function`,
               );
-            (e.prototype = Object.create(t && t.prototype, {
+            ((e.prototype = Object.create(t && t.prototype, {
               constructor: { value: e, writable: !0, configurable: !0 },
             })),
               Object.defineProperty(e, "prototype", { writable: !1 }),
-              t && ae(e, t);
+              t && ae(e, t));
           })(a, e);
           var t,
             n,
@@ -32301,10 +32320,10 @@ var DU = `KMppINq9bGg-`,
                   var t,
                     n = this.getSelectedYear(),
                     r = `rdtYear`;
-                  this.isDisabledYear(e)
+                  (this.isDisabledYear(e)
                     ? (r += ` rdtDisabled`)
                     : (t = this._updateSelectedYear),
-                    n === e && (r += ` rdtActive`);
+                    n === e && (r += ` rdtActive`));
                   var i = { key: e, className: r, "data-value": e, onClick: t };
                   return this.props.renderYear(
                     i,
@@ -32339,8 +32358,8 @@ var DU = `KMppINq9bGg-`,
                       i = r.endOf(`year`).dayOfYear() + 1;
                     i-- > 1;
                   )
-                    if (n(r.dayOfYear(i))) return (t[e] = !1), !1;
-                  return (t[e] = !0), !0;
+                    if (n(r.dayOfYear(i))) return ((t[e] = !1), !1);
+                  return ((t[e] = !0), !0);
                 },
               },
             ]) && ie(t.prototype, n),
@@ -32370,17 +32389,17 @@ var DU = `KMppINq9bGg-`,
         function pe(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            (r.enumerable = r.enumerable || !1),
+            ((r.enumerable = r.enumerable || !1),
               (r.configurable = !0),
               `value` in r && (r.writable = !0),
-              Object.defineProperty(e, r.key, r);
+              Object.defineProperty(e, r.key, r));
           }
         }
         function me(e, t) {
           return (me = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (e, t) {
-                return (e.__proto__ = t), e;
+                return ((e.__proto__ = t), e);
               })(e, t);
         }
         function he(e) {
@@ -32438,11 +32457,11 @@ var DU = `KMppINq9bGg-`,
           var n = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
             var r = Object.getOwnPropertySymbols(e);
-            t &&
+            (t &&
               (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
               })),
-              n.push.apply(n, r);
+              n.push.apply(n, r));
           }
           return n;
         }
@@ -32498,11 +32517,11 @@ var DU = `KMppINq9bGg-`,
                 throw TypeError(
                   `Super expression must either be null or a function`,
                 );
-              (e.prototype = Object.create(t && t.prototype, {
+              ((e.prototype = Object.create(t && t.prototype, {
                 constructor: { value: e, writable: !0, configurable: !0 },
               })),
                 Object.defineProperty(e, "prototype", { writable: !1 }),
-                t && me(e, t);
+                t && me(e, t));
             })(a, e);
             var t,
               n,
@@ -32537,7 +32556,7 @@ var DU = `KMppINq9bGg-`,
                       n = this.state;
                     return (
                       this.getCounters().forEach(function (r, i) {
-                        i &&
+                        (i &&
                           r !== `ampm` &&
                           t.push(
                             c.a.createElement(
@@ -32549,7 +32568,7 @@ var DU = `KMppINq9bGg-`,
                               `:`,
                             ),
                           ),
-                          t.push(e.renderCounter(r, n[r]));
+                          t.push(e.renderCounter(r, n[r])));
                       }),
                       c.a.createElement(
                         `div`,
@@ -32658,25 +32677,31 @@ var DU = `KMppINq9bGg-`,
                       if (n === `ampm`) return this.toggleDayPart();
                       var i = {},
                         a = document.body;
-                      (i[n] = this[t](n)),
+                      ((i[n] = this[t](n)),
                         this.setState(i),
-                        (this.timer = setTimeout(function () {
-                          r.increaseTimer = setInterval(function () {
-                            (i[n] = r[t](n)), r.setState(i);
-                          }, 70);
-                        }, 500)),
+                        (this.timer = setTimeout(
+                          function () {
+                            r.increaseTimer = setInterval(
+                              function () {
+                                ((i[n] = r[t](n)), r.setState(i));
+                              },
+                              70,
+                            );
+                          },
+                          500,
+                        )),
                         (this.mouseUpListener = function () {
-                          clearTimeout(r.timer),
+                          (clearTimeout(r.timer),
                             clearInterval(r.increaseTimer),
                             r.props.setTime(n, parseInt(r.state[n], 10)),
                             a.removeEventListener(`mouseup`, r.mouseUpListener),
                             a.removeEventListener(
                               `touchend`,
                               r.mouseUpListener,
-                            );
+                            ));
                         }),
                         a.addEventListener(`mouseup`, this.mouseUpListener),
-                        a.addEventListener(`touchend`, this.mouseUpListener);
+                        a.addEventListener(`touchend`, this.mouseUpListener));
                     }
                   },
                 },
@@ -32684,8 +32709,8 @@ var DU = `KMppINq9bGg-`,
                   key: `toggleDayPart`,
                   value: function () {
                     var e = parseInt(this.state.hours, 10);
-                    e >= 12 ? (e -= 12) : (e += 12),
-                      this.props.setTime(`hours`, e);
+                    (e >= 12 ? (e -= 12) : (e += 12),
+                      this.props.setTime(`hours`, e));
                   },
                 },
                 {
@@ -32703,7 +32728,9 @@ var DU = `KMppINq9bGg-`,
                   value: function (e) {
                     var t = this.constraints[e],
                       n = parseInt(this.state[e], 10) - t.step;
-                    return n < t.min && (n = t.max + 1 - (t.min - n)), Ce(e, n);
+                    return (
+                      n < t.min && (n = t.max + 1 - (t.min - n)), Ce(e, n)
+                    );
                   },
                 },
                 {
@@ -32777,7 +32804,7 @@ var DU = `KMppINq9bGg-`,
           return (Te =
             Object.setPrototypeOf ||
             function (e, t) {
-              return (e.__proto__ = t), e;
+              return ((e.__proto__ = t), e);
             })(e, t);
         }
         function Ee(e) {
@@ -32850,7 +32877,7 @@ var DU = `KMppINq9bGg-`,
                     }),
                     (r.enableOnClickOutside = function () {
                       if (typeof document < `u` && !Me[r._uid]) {
-                        ke === void 0 &&
+                        (ke === void 0 &&
                           (ke = (function () {
                             if (
                               typeof window < `u` &&
@@ -32878,9 +32905,9 @@ var DU = `KMppINq9bGg-`,
                               );
                             }
                           })()),
-                          (Me[r._uid] = !0);
+                          (Me[r._uid] = !0));
                         var e = r.props.eventTypes;
-                        e.forEach || (e = [e]),
+                        (e.forEach || (e = [e]),
                           (je[r._uid] = function (e) {
                             var t;
                             r.componentNode !== null &&
@@ -32894,7 +32921,7 @@ var DU = `KMppINq9bGg-`,
                                     t.clientY)) ||
                                 ((function (e, t, n) {
                                   if (e === t) return !0;
-                                  for (; e.parentNode || e.host; ) {
+                                  for (; e.parentNode || e.host;) {
                                     if (e.parentNode && De(e, t, n)) return !0;
                                     e = e.parentNode || e.host;
                                   }
@@ -32915,7 +32942,7 @@ var DU = `KMppINq9bGg-`,
                               je[r._uid],
                               Pe(Ee(r), e),
                             );
-                          });
+                          }));
                       }
                     }),
                     (r.disableOnClickOutside = function () {
@@ -32923,7 +32950,7 @@ var DU = `KMppINq9bGg-`,
                       var e = je[r._uid];
                       if (e && typeof document < `u`) {
                         var t = r.props.eventTypes;
-                        t.forEach || (t = [t]),
+                        (t.forEach || (t = [t]),
                           t.forEach(function (t) {
                             return document.removeEventListener(
                               t,
@@ -32931,7 +32958,7 @@ var DU = `KMppINq9bGg-`,
                               Pe(Ee(r), t),
                             );
                           }),
-                          delete je[r._uid];
+                          delete je[r._uid]);
                       }
                     }),
                     (r.getRef = function (e) {
@@ -32941,10 +32968,10 @@ var DU = `KMppINq9bGg-`,
                     r
                   );
                 }
-                (a = n),
+                ((a = n),
                   ((r = o).prototype = Object.create(a.prototype)),
                   (r.prototype.constructor = r),
-                  Te(r, a);
+                  Te(r, a));
                 var c = o.prototype;
                 return (
                   (c.getInstance = function () {
@@ -32968,9 +32995,9 @@ var DU = `KMppINq9bGg-`,
                             i +
                             ` lacks a function for processing outside click events specified by the handleClickOutside config option.`,
                         );
-                      (this.componentNode = this.__getComponentNode()),
+                      ((this.componentNode = this.__getComponentNode()),
                         this.props.disableOnClickOutside ||
-                          this.enableOnClickOutside();
+                          this.enableOnClickOutside());
                     }
                   }),
                   (c.componentDidUpdate = function () {
@@ -32989,7 +33016,7 @@ var DU = `KMppINq9bGg-`,
                         i = {},
                         a = Object.keys(e);
                       for (r = 0; r < a.length; r++)
-                        (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                       return i;
                     })(t, [`excludeScrollbar`]);
                     return (
@@ -33037,11 +33064,11 @@ var DU = `KMppINq9bGg-`,
           var n = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
             var r = Object.getOwnPropertySymbols(e);
-            t &&
+            (t &&
               (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
               })),
-              n.push.apply(n, r);
+              n.push.apply(n, r));
           }
           return n;
         }
@@ -33074,10 +33101,10 @@ var DU = `KMppINq9bGg-`,
         function Be(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            (r.enumerable = r.enumerable || !1),
+            ((r.enumerable = r.enumerable || !1),
               (r.configurable = !0),
               `value` in r && (r.writable = !0),
-              Object.defineProperty(e, r.key, r);
+              Object.defineProperty(e, r.key, r));
           }
         }
         function Ve(e, t, n) {
@@ -33093,17 +33120,17 @@ var DU = `KMppINq9bGg-`,
             throw TypeError(
               `Super expression must either be null or a function`,
             );
-          (e.prototype = Object.create(t && t.prototype, {
+          ((e.prototype = Object.create(t && t.prototype, {
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
             Object.defineProperty(e, "prototype", { writable: !1 }),
-            t && Ue(e, t);
+            t && Ue(e, t));
         }
         function Ue(e, t) {
           return (Ue = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (e, t) {
-                return (e.__proto__ = t), e;
+                return ((e.__proto__ = t), e);
               })(e, t);
         }
         function We(e) {
@@ -33251,16 +33278,18 @@ var DU = `KMppINq9bGg-`,
                   var t = r.state.currentView,
                     n = r.getUpdateOn(r.getFormat(`date`)),
                     i = r.state.viewDate.clone();
-                  i[r.viewToMethod[t]](
+                  (i[r.viewToMethod[t]](
                     parseInt(e.target.getAttribute(`data-value`), 10),
                   ),
                     t === `days` &&
                       (i.month(
                         parseInt(e.target.getAttribute(`data-month`), 10),
                       ),
-                      i.year(parseInt(e.target.getAttribute(`data-year`), 10)));
+                      i.year(
+                        parseInt(e.target.getAttribute(`data-year`), 10),
+                      )));
                   var a = { viewDate: i };
-                  t === n
+                  (t === n
                     ? ((a.selectedDate = i.clone()),
                       (a.inputValue = i.format(r.getFormat(`datetime`))),
                       r.props.open === void 0 &&
@@ -33269,26 +33298,26 @@ var DU = `KMppINq9bGg-`,
                         r._closeCalendar(),
                       r.props.onChange(i.clone()))
                     : r._showView(r.nextView[t], i),
-                    r.setState(a);
+                    r.setState(a));
                 }),
                 Je(Ke(r), `_viewNavigate`, function (e, t) {
                   var n = r.state.viewDate.clone();
-                  n.add(e, t),
+                  (n.add(e, t),
                     e > 0
                       ? r.props.onNavigateForward(e, t)
                       : r.props.onNavigateBack(-e, t),
-                    r.setState({ viewDate: n });
+                    r.setState({ viewDate: n }));
                 }),
                 Je(Ke(r), `_setTime`, function (e, t) {
                   var n = (r.getSelectedDate() || r.state.viewDate).clone();
-                  n[e](t),
+                  (n[e](t),
                     r.props.value ||
                       r.setState({
                         selectedDate: n,
                         viewDate: n.clone(),
                         inputValue: n.format(r.getFormat(`datetime`)),
                       }),
-                    r.props.onChange(n);
+                    r.props.onChange(n));
                 }),
                 Je(Ke(r), `_openCalendar`, function () {
                   r.isOpen() || r.setState({ open: !0 }, r.props.onOpen);
@@ -33318,13 +33347,13 @@ var DU = `KMppINq9bGg-`,
                     var t = e.target ? e.target.value : e,
                       n = r.localMoment(t, r.getFormat(`datetime`)),
                       i = { inputValue: t };
-                    n.isValid()
+                    (n.isValid()
                       ? ((i.selectedDate = n),
                         (i.viewDate = n.clone().startOf(`month`)))
                       : (i.selectedDate = null),
                       r.setState(i, function () {
                         r.props.onChange(n.isValid() ? n : r.state.inputValue);
-                      });
+                      }));
                   }
                 }),
                 Je(Ke(r), `_onInputKeyDown`, function (e) {
@@ -33447,7 +33476,7 @@ var DU = `KMppINq9bGg-`,
                   key: `getInitialDate`,
                   value: function () {
                     var e = this.localMoment();
-                    return e.hour(0).minute(0).second(0).millisecond(0), e;
+                    return (e.hour(0).minute(0).second(0).millisecond(0), e);
                   },
                 },
                 {
@@ -33551,7 +33580,7 @@ var DU = `KMppINq9bGg-`,
                   value: function (e, t, n, r) {
                     var i = {},
                       a = r ? `selectedDate` : `viewDate`;
-                    (i[a] = this.state[a].clone()[e](t, n)), this.setState(i);
+                    ((i[a] = this.state[a].clone()[e](t, n)), this.setState(i));
                   },
                 },
                 {
@@ -33591,7 +33620,7 @@ var DU = `KMppINq9bGg-`,
                     if (e !== this.props) {
                       var t = !1,
                         n = this.props;
-                      [
+                      ([
                         `locale`,
                         `utc`,
                         `displayZone`,
@@ -33604,7 +33633,7 @@ var DU = `KMppINq9bGg-`,
                         n.value &&
                           n.value !== e.value &&
                           this.setViewDate(n.value),
-                        this.checkTZ();
+                        this.checkTZ());
                     }
                   },
                 },
@@ -33616,18 +33645,18 @@ var DU = `KMppINq9bGg-`,
                       n =
                         this.state.selectedDate &&
                         this.state.selectedDate.clone();
-                    e.locale && (t.locale(e.locale), n && n.locale(e.locale)),
+                    (e.locale && (t.locale(e.locale), n && n.locale(e.locale)),
                       e.utc
                         ? (t.utc(), n && n.utc())
                         : e.displayTimeZone
                           ? (t.tz(e.displayTimeZone),
                             n && n.tz(e.displayTimeZone))
-                          : (t.locale(), n && n.locale());
+                          : (t.locale(), n && n.locale()));
                     var r = { viewDate: t, selectedDate: n };
-                    n &&
+                    (n &&
                       n.isValid() &&
                       (r.inputValue = n.format(this.getFormat(`datetime`))),
-                      this.setState(r);
+                      this.setState(r));
                   },
                 },
                 {
@@ -33705,7 +33734,7 @@ var DU = `KMppINq9bGg-`,
           var n = typeof window < `u` && window.console;
           n && ((t ||= `warn`), n[t](`***react-datetime:` + e));
         }
-        Je(nt, `propTypes`, {
+        (Je(nt, `propTypes`, {
           value: tt,
           initialValue: tt,
           initialViewDate: tt,
@@ -33767,7 +33796,7 @@ var DU = `KMppINq9bGg-`,
               return t();
             },
           }),
-          Je(nt, `moment`, o.a);
+          Je(nt, `moment`, o.a));
         var it = Fe(
           (function (e) {
             He(n, e);
@@ -33857,13 +33886,13 @@ function HU(e) {
     A;
   if (t && n && t == n && n > Wa.GetTimeNowWithOverride()) {
     let e = zU.default.unix(n);
-    (A = {
+    ((A = {
       hours: { max: e.hour(), min: e.hour(), step: 0 },
       minutes: { max: e.minute(), min: e.minute(), step: 0 },
       seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
       milliseconds: { max: 0, min: 0, step: 0 },
     }),
-      (v = VU);
+      (v = VU));
   }
   let ee;
   !y && n && !s && (ee = zU.default.unix(n));
@@ -33881,12 +33910,12 @@ function HU(e) {
         D(null);
         let t = r(),
           n = zU.default.unix(t || Wa.GetTimeNowWithOverride());
-        (e = e.clone()),
+        ((e = e.clone()),
           e.hour(n.hour()),
           e.minute(n.minute()),
           e.second(0),
           h(e.unix()),
-          x(e);
+          x(e));
       },
       D,
     ),
@@ -33908,13 +33937,13 @@ function HU(e) {
             60 * e.minutes();
         else {
           let n = zU.default.unix(t);
-          (e = e.clone()),
+          ((e = e.clone()),
             e.year(n.year()),
             e.month(n.month()),
             e.date(n.date()),
-            (i = e.unix());
+            (i = e.unix()));
         }
-        h(i), x(zU.default.unix(i));
+        (h(i), x(zU.default.unix(i)));
       },
       T,
     ),
@@ -34036,7 +34065,7 @@ function UU(e, t, n) {
   let [r, i] = q.useState(!1);
   return {
     fnOnInput: (e) => {
-      n(e), i(!0);
+      (n(e), i(!0));
     },
     fnOnInputBlur: (n) => {
       if (r) {
@@ -34079,7 +34108,7 @@ function JU(e, t, n, r) {
     let e = zU.default.unix(t).hour(23).minute(59).seconds(59);
     a = r.unix() <= e.unix();
   }
-  return a && n && (r.weekday() == 0 || r.weekday() == 6) && (a = !1), a;
+  return (a && n && (r.weekday() == 0 || r.weekday() == 6) && (a = !1), a);
 }
 function YU(e, t, n, r, i) {
   let a = r && r(),
@@ -34112,13 +34141,13 @@ var XU = class e {
     return this.m_listEvents;
   }
   static Get() {
-    return (e.s_Singleton ||= new e()), e.s_Singleton;
+    return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
   constructor() {
     m(this);
   }
   ClearAllSolrEvents() {
-    (this.m_mapEventGIDToSolrData = new Map()), (this.m_listEvents = []);
+    ((this.m_mapEventGIDToSolrData = new Map()), (this.m_listEvents = []));
   }
   async LoadPartnerEventForQueryIncremental(
     e,
@@ -34169,9 +34198,9 @@ var XU = class e {
     return h.data ? h.data.docs : [];
   }
 };
-N([g], XU.prototype, `m_mapEventGIDToSolrData`, void 0),
+(N([g], XU.prototype, `m_mapEventGIDToSolrData`, void 0),
   N([g], XU.prototype, `m_listEvents`, void 0),
-  N([x], XU.prototype, `ClearAllSolrEvents`, null);
+  N([x], XU.prototype, `ClearAllSolrEvents`, null));
 var ZU = `qmAnWYfXGFA-`,
   QU = `YbDiwWqWeBs-`;
 function $U(e) {
@@ -34197,7 +34226,7 @@ function $U(e) {
                 sc,
                 {
                   onSelected: () => {
-                    (u.current.element.value = ``), t(e);
+                    ((u.current.element.value = ``), t(e));
                   },
                   children: (0, J.jsxs)(`div`, {
                     style: { display: `flex`, alignItems: `center` },
@@ -34272,17 +34301,20 @@ function $U(e) {
             _ = null,
             v = null,
             y = null;
-          if (r && r?.length >= 3) (m = Number.parseInt(r[1])), (_ = r[2]);
-          else if (i && i?.length >= 3) (g = Number.parseInt(i[1])), (_ = i[2]);
-          else if (o && o?.length >= 3) (h = o[1]), (v = o[2]);
-          else if (s && s.length >= 3) (m = Number.parseInt(s[1])), (v = s[2]);
+          if (r && r?.length >= 3) ((m = Number.parseInt(r[1])), (_ = r[2]));
+          else if (i && i?.length >= 3)
+            ((g = Number.parseInt(i[1])), (_ = i[2]));
+          else if (o && o?.length >= 3) ((h = o[1]), (v = o[2]));
+          else if (s && s.length >= 3)
+            ((m = Number.parseInt(s[1])), (v = s[2]));
           else if (c && c.length >= 3) {
             let e = c[1];
             v = c[2];
             let t = await Ri.LoadOGGClanInfoForIdentifier(e);
             t && (m = t.appid);
-          } else if (l && l.length >= 3) (h = l[1]), (_ = l[2]);
-          else if (u && u.length >= 3) (m = Number.parseInt(u[1])), (_ = u[2]);
+          } else if (l && l.length >= 3) ((h = l[1]), (_ = l[2]));
+          else if (u && u.length >= 3)
+            ((m = Number.parseInt(u[1])), (_ = u[2]));
           else if (p && p.length >= 3) {
             let e = p[1];
             v = p[2];
@@ -34318,14 +34350,14 @@ function $U(e) {
                 ));
           }
           if (y) {
-            e.push({
+            (e.push({
               name: y.GetNameWithFallback(n) ?? ``,
               type: y.GetEventType(),
               clanSteamID: y.clanSteamID,
               gidClanAnnouncement: y.GetAnnouncementGID(),
               gidClanEvent: y.GID,
             }),
-              f(e);
+              f(e));
             return;
           }
           d.current &&= (window.clearTimeout(d.current), null);
@@ -34404,7 +34436,7 @@ function eW(e) {
   }, [i, t.events]);
   let a = q.useCallback(
       async (e) => {
-        Qn.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+        (Qn.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
           e.clanSteamID,
           e.gidClanAnnouncement,
           null,
@@ -34414,7 +34446,7 @@ function eW(e) {
             clan_steamid: e.clanSteamID.ConvertTo64BitString(),
             event_gid: e.gidClanEvent,
           }),
-          n.SetDirty(Q.jsondata_sales);
+          n.SetDirty(Q.jsondata_sales));
       },
       [n, t.events],
     ),
@@ -34457,12 +34489,12 @@ function tW(e) {
       items: a,
       onDelete: (e) => {
         s(() => {
-          (n.events = a), n.events.splice(e, 1), t.SetDirty(Q.jsondata_sales);
+          ((n.events = a), n.events.splice(e, 1), t.SetDirty(Q.jsondata_sales));
         });
       },
       onMove: (e, r) => {
         s(() => {
-          (n.events = a), Ws(n.events, e, r), t.SetDirty(Q.jsondata_sales);
+          ((n.events = a), Ws(n.events, e, r), t.SetDirty(Q.jsondata_sales));
         });
       },
       render: (e) => {
@@ -34588,10 +34620,10 @@ function iW(e) {
   (0, q.useEffect)(() => {
     if (((n.event_schedule_categories ||= []), !n.event_schedule_rtime_start)) {
       let e = new Date();
-      e.setHours(10),
+      (e.setHours(10),
         e.setMinutes(0),
         e.setSeconds(0),
-        (n.event_schedule_rtime_start = Math.floor(e.getTime() / 1e3));
+        (n.event_schedule_rtime_start = Math.floor(e.getTime() / 1e3)));
     }
     n.event_schedule_rtime_end ||= n.event_schedule_rtime_start + 3600;
   }, [n]);
@@ -34625,16 +34657,16 @@ function iW(e) {
         elSetStartTime: (0, J.jsx)(V, {
           disabled: t.GetEventStartTime() == 0,
           onClick: () => {
-            (n.event_schedule_rtime_start = t.GetEventStartTime()),
-              t.SetDirty(Q.jsondata_sales);
+            ((n.event_schedule_rtime_start = t.GetEventStartTime()),
+              t.SetDirty(Q.jsondata_sales));
           },
           children: H(`#EventEditor_SaleEventSchedule_SetToStart`),
         }),
         elSetEndTime: (0, J.jsx)(V, {
           disabled: t.GetEventEndTime() == 0,
           onClick: () => {
-            (n.event_schedule_rtime_end = t.GetEventEndTime()),
-              t.SetDirty(Q.jsondata_sales);
+            ((n.event_schedule_rtime_end = t.GetEventEndTime()),
+              t.SetDirty(Q.jsondata_sales));
           },
           children: H(`#EventEditor_SaleEventSchedule_SetToEnd`),
         }),
@@ -34662,9 +34694,9 @@ function iW(e) {
         tooltip: H(`#EventEditor_SaleEventSchedule_ShowApps_ttip`),
         checked: !s,
         onChange: (e) => {
-          (n.event_schedule_prevent_apps = !e),
+          ((n.event_schedule_prevent_apps = !e),
             n.event_schedule_prevent_apps && (n.event_schedule_categories = []),
-            t.SetDirty(Q.jsondata_sales);
+            t.SetDirty(Q.jsondata_sales));
         },
       }),
       !s && (0, J.jsx)(aW, { ...e }),
@@ -34832,9 +34864,9 @@ var oW = (e) => {
                     strTitle: H(`#EventSchedule_DeletePrompt_Title`),
                     strDescription: H(`#EventSchedule_DeletePrompt_Body`),
                     onOK: () => {
-                      n.event_schedule_tracks.splice(e, 1),
+                      (n.event_schedule_tracks.splice(e, 1),
                         t.SetDirty(Q.jsondata_sales),
-                        r(null);
+                        r(null));
                     },
                   }),
                   window,
@@ -34861,12 +34893,12 @@ var oW = (e) => {
                   (e, t) => Math.max(e, t.unique_id),
                   0,
                 );
-                n.event_schedule_tracks.push({
+                (n.event_schedule_tracks.push({
                   unique_id: e + 1,
                   localized_track_image: [],
                   events: [],
                 }),
-                  t.SetDirty(Q.jsondata_sales);
+                  t.SetDirty(Q.jsondata_sales));
               },
               children: H(`#EventSchedule_AddTrack`),
             }),
@@ -34885,7 +34917,7 @@ function lW(e, t, n, r, i) {
   e(t, {
     color: n[i],
     onChange: (e) => {
-      (n[i] = e), r.SetDirty(Q.jsondata_sales);
+      ((n[i] = e), r.SetDirty(Q.jsondata_sales));
     },
   });
 }
@@ -35095,10 +35127,10 @@ function fW(e) {
           let t = U.STORE_BASE_URL + `events_admin/ajaxupdatetags`,
             n = new Wc(e.clan_steamid),
             r = new FormData();
-          r.append(`sessionid`, Tl()),
+          (r.append(`sessionid`, Tl()),
             r.append(`clan_accountid`, `` + n.GetAccountID()),
             r.append(`gid_announcement`, e.announcement_gid),
-            r.append(`add_tags`, i);
+            r.append(`add_tags`, i));
           let a = await Z.default.post(t, r, { withCredentials: !0 }),
             o = a?.status == 200 && a?.data?.success == 1;
           return (
@@ -35109,7 +35141,7 @@ function fW(e) {
           );
         }),
         t = await Promise.all(e);
-      p(t.filter(Boolean).length), d(!0), s(!1);
+      (p(t.filter(Boolean).length), d(!0), s(!1));
     },
     strCancelButtonText: u ? H(`#Done`) : void 0,
     closeModal: r,
@@ -35138,7 +35170,7 @@ function fW(e) {
 }
 var pW = (e) => {
     let t = new Date(e * 1e3);
-    return t.setSeconds(0), Math.floor(t.getTime() / 1e3);
+    return (t.setSeconds(0), Math.floor(t.getTime() / 1e3));
   },
   mW = c((e) => {
     let { saleSection: t, editModel: n, bSetDefaultIfMissing: r } = e;
@@ -35148,11 +35180,11 @@ var pW = (e) => {
           s(() => {
             if (!t.event_schedule_rtime_start) {
               let e = new Date();
-              e.setHours(10),
+              (e.setHours(10),
                 e.setMinutes(0),
                 e.setSeconds(0),
                 (t.event_schedule_rtime_start = Math.floor(e.getTime() / 1e3)),
-                n.SetDirty(Q.jsondata_sales);
+                n.SetDirty(Q.jsondata_sales));
             }
             t.event_schedule_rtime_end ||
               ((t.event_schedule_rtime_end =
@@ -35179,8 +35211,8 @@ var pW = (e) => {
                     label: `Start date (in number of weeks ago)`,
                     value: t.event_schedule_start_weeks,
                     onChange: (e) => {
-                      (t.event_schedule_start_weeks = Number(e.target.value)),
-                        n.SetDirty(Q.jsondata_sales);
+                      ((t.event_schedule_start_weeks = Number(e.target.value)),
+                        n.SetDirty(Q.jsondata_sales));
                     },
                   }),
                   (0, J.jsx)(R, {
@@ -35189,8 +35221,8 @@ var pW = (e) => {
                     label: `End date (in number of weeks from now)`,
                     value: t.event_schedule_end_weeks,
                     onChange: (e) => {
-                      (t.event_schedule_end_weeks = Number(e.target.value)),
-                        n.SetDirty(Q.jsondata_sales);
+                      ((t.event_schedule_end_weeks = Number(e.target.value)),
+                        n.SetDirty(Q.jsondata_sales));
                     },
                   }),
                 ],
@@ -35202,12 +35234,12 @@ var pW = (e) => {
                     nEarliestTime: 0,
                     fnGetTimeToUpdate: () => t.event_schedule_rtime_start,
                     fnSetTimeToUpdate: (e) => {
-                      (e = pW(e)),
+                      ((e = pW(e)),
                         t.event_schedule_rtime_start != e &&
                           ((t.event_schedule_rtime_start = e),
                           t.event_schedule_rtime_end < e &&
                             (t.event_schedule_rtime_end = e + 3600),
-                          n.SetDirty(Q.jsondata_sales));
+                          n.SetDirty(Q.jsondata_sales)));
                     },
                     fnIsValidDateTime: () => !0,
                     bShowTimeZone: !0,
@@ -35223,14 +35255,14 @@ var pW = (e) => {
                     nEarliestTime: 0,
                     fnGetTimeToUpdate: () => t.event_schedule_rtime_end,
                     fnSetTimeToUpdate: (e) => {
-                      (e = pW(e)),
+                      ((e = pW(e)),
                         t.event_schedule_rtime_end != e &&
                           ((t.event_schedule_rtime_end = e),
                           t.event_schedule_rtime_end <
                             t.event_schedule_rtime_start &&
                             (t.event_schedule_rtime_end =
                               t.event_schedule_rtime_start + 3600),
-                          n.SetDirty(Q.jsondata_sales));
+                          n.SetDirty(Q.jsondata_sales)));
                     },
                     fnIsValidDateTime: () => !0,
                     bShowTimeZone: !0,
@@ -35263,9 +35295,9 @@ function vW(e) {
     } = e,
     l = (0, q.useCallback)(
       (e) => {
-        (t.localized_description = F(t.localized_description || [], 32, null)),
+        ((t.localized_description = F(t.localized_description || [], 32, null)),
           (t.localized_description[i] = e),
-          n();
+          n());
       },
       [n, i, t],
     ),
@@ -35276,9 +35308,9 @@ function vW(e) {
     ),
     d = (0, q.useCallback)(
       (e) => {
-        (t.text_section_contents = F(t.text_section_contents || [], 32, null)),
+        ((t.text_section_contents = F(t.text_section_contents || [], 32, null)),
           (t.text_section_contents[i] = e),
-          n();
+          n());
       },
       [n, i, t],
     ),
@@ -35291,9 +35323,9 @@ function vW(e) {
     ),
     p = (0, q.useCallback)(
       (e) => {
-        (t.localized_title = F(t.localized_title || [], 32, null)),
+        ((t.localized_title = F(t.localized_title || [], 32, null)),
           (t.localized_title[i] = e),
-          n();
+          n());
       },
       [n, i, t],
     );
@@ -35398,8 +35430,8 @@ function TW(e, t, n) {
 function EW(e, t, n) {
   let r = SW(t);
   for (let e of n)
-    CW.forEach((n) => TW(t, e, n)),
-      r && SW(e) && wW.forEach((n) => TW(t, e, n));
+    (CW.forEach((n) => TW(t, e, n)),
+      r && SW(e) && wW.forEach((n) => TW(t, e, n)));
   e.SetDirty(Q.jsondata_sales);
 }
 var DW = c((e) => {
@@ -35482,7 +35514,8 @@ var DW = c((e) => {
                       clanSteamID: t.GetClanSteamID(),
                       OnClanImageSelected: async (e, r) => {
                         let i = _n.GetHashAndExt(e);
-                        (n.background_image = i), t.SetDirty(Q.jsondata_sales);
+                        ((n.background_image = i),
+                          t.SetDirty(Q.jsondata_sales));
                       },
                     },
                     `salesection_clanimageupload`,
@@ -35491,7 +35524,7 @@ var DW = c((e) => {
                 onDropFiles: async (e) => {
                   if (e && e.length > 0) {
                     if (!(await s.AddImage(e[0], 0)))
-                      console.error(
+                      (console.error(
                         `SaleSection.OnDropFiles: failed file=` + e[0].name,
                       ),
                         z(
@@ -35499,18 +35532,18 @@ var DW = c((e) => {
                             strDescription: H(`#ImagePicker_Error`, e[0].name),
                           }),
                           window,
-                        );
+                        ));
                     else {
                       let e = (await s.UploadAllImages())[0].uploadResult,
                         r = _n.GetHashAndExt(e);
-                      (n.background_image = r), t.SetDirty(Q.jsondata_sales);
+                      ((n.background_image = r), t.SetDirty(Q.jsondata_sales));
                     }
                   }
                 },
               }),
               (0, J.jsx)(V, {
                 onClick: () => {
-                  (n.background_image = null), t.SetDirty(Q.jsondata_sales);
+                  ((n.background_image = null), t.SetDirty(Q.jsondata_sales));
                 },
                 className: `ized0rR3LUQ-`,
                 children: H(`#Sale_Section_Background_Clear`),
@@ -35560,7 +35593,7 @@ function AW(e) {
     ]),
     d = (0, q.useCallback)(
       (e) => {
-        (t.background_color = void 0),
+        ((t.background_color = void 0),
           (t.background_gradient_bottom = void 0),
           (t.background_gradient_top = void 0),
           (t.background_repeat = void 0),
@@ -35570,7 +35603,7 @@ function AW(e) {
           (t.label_color = void 0),
           (t.collapse_header_space = void 0),
           s && s(),
-          a();
+          a());
       },
       [a, t, s],
     );
@@ -35621,7 +35654,7 @@ function MW(e) {
     { openColorPicker: o } = ra(),
     s = (0, q.useCallback)(
       (e, t, r) => {
-        (e[r] = t), n();
+        ((e[r] = t), n());
       },
       [n],
     ),
@@ -35637,11 +35670,11 @@ function MW(e) {
         label: H(`#Sale_Section_Background_border`),
         checked: a,
         onChange: (e) => {
-          e
+          (e
             ? ((t.border_width = 1),
               (t.border_color = t.label_color || `black`))
             : ((t.border_color = void 0), (t.border_width = void 0)),
-            n();
+            n());
         },
       }),
       !!a &&
@@ -35688,9 +35721,9 @@ function NW(e) {
         type: `text`,
         label: `MP4 URL`,
         onChange: (e) => {
-          t.video_info.mp4_url != e?.currentTarget?.value &&
+          (t.video_info.mp4_url != e?.currentTarget?.value &&
             (t.video_info.mp4_url = e?.currentTarget?.value || ``),
-            n();
+            n());
         },
         placeholder: `https://<MP4 URL?`,
         value: i,
@@ -35699,9 +35732,9 @@ function NW(e) {
         type: `text`,
         label: `WebM URL`,
         onChange: (e) => {
-          t.video_info.webm_url != e?.currentTarget?.value &&
+          (t.video_info.webm_url != e?.currentTarget?.value &&
             (t.video_info.webm_url = e?.currentTarget?.value || ``),
-            n();
+            n());
         },
         placeholder: `https://<WebM URL>`,
         value: a,
@@ -35710,7 +35743,7 @@ function NW(e) {
         type: `text`,
         label: `Poster Image URL`,
         onChange: (e) => {
-          t.localized_poster_url?.length !== 32 &&
+          (t.localized_poster_url?.length !== 32 &&
             (t.localized_poster_url = F(
               t.localized_poster_url || [],
               32,
@@ -35718,7 +35751,7 @@ function NW(e) {
             )),
             t.localized_poster_url[0] !== (e?.currentTarget?.value || ``) &&
               ((t.localized_poster_url[0] = e?.currentTarget?.value || ``),
-              n());
+              n()));
         },
         placeholder: `https://<poster url>`,
         value: o,
@@ -35808,19 +35841,19 @@ function FW(e) {
 }
 function IW(e, t) {
   let n = hW + Math.floor(Math.random() * 1e6);
-  for (; e.quiz.questions.find((e) => e.unique_id == n); )
+  for (; e.quiz.questions.find((e) => e.unique_id == n);)
     n = hW + Math.floor(Math.random() * 1e6);
   let r = { unique_id: n, localized_question: [], answers: [] };
-  (e.quiz.questions = [...e.quiz.questions, r]), t();
+  ((e.quiz.questions = [...e.quiz.questions, r]), t());
 }
 function LW(e, t, n) {
   let r = e.quiz.questions.filter((e, n) => n !== t);
-  (e.quiz.questions = r), n();
+  ((e.quiz.questions = r), n());
 }
 function RW(e, t, n, r) {
-  (e.localized_question = F(e.localized_question || [], 32, null)),
+  ((e.localized_question = F(e.localized_question || [], 32, null)),
     (e.localized_question[n] = t),
-    r();
+    r());
 }
 function zW(e, t) {
   return e.localized_question?.length > t ? e.localized_question[t] : ``;
@@ -35828,17 +35861,14 @@ function zW(e, t) {
 function BW(e, t, n) {
   t.answers ||= [];
   let r = gW + Math.floor(Math.random() * 1e6);
-  for (
-    ;
-    e.quiz.questions.some((e) => e.answers.find((e) => e.unique_id == r));
-  )
+  for (; e.quiz.questions.some((e) => e.answers.find((e) => e.unique_id == r));)
     r = gW + Math.floor(Math.random() * 1e6);
-  t.answers.push({ unique_id: r, localized_answer: [] }), n();
+  (t.answers.push({ unique_id: r, localized_answer: [] }), n());
 }
 function VW(e, t, n, r) {
-  (e.localized_answer = F(e.localized_answer || [], 32, null)),
+  ((e.localized_answer = F(e.localized_answer || [], 32, null)),
     (e.localized_answer[n] = t),
-    r();
+    r());
 }
 function HW(e, t) {
   return e?.localized_answer?.length > t ? e.localized_answer[t] : ``;
@@ -35908,11 +35938,11 @@ function UW(e) {
                   type: `text`,
                   label: H(`#Sale_Section_Quiz_Reveal_Footer`),
                   onChange: (e) => {
-                    t.quiz.last_revealed_footer_img_url !=
+                    (t.quiz.last_revealed_footer_img_url !=
                       e?.currentTarget?.value &&
                       (t.quiz.last_revealed_footer_img_url =
                         e?.currentTarget?.value || ``),
-                      i();
+                      i());
                   },
                   placeholder: `https://<Image URL?`,
                   value: s,
@@ -35971,7 +36001,7 @@ function GW(e) {
   let { question: t, fnOnDirty: n, language: r, saleSection: i } = e,
     a = (0, q.useCallback)(
       (e) => {
-        t.answers.splice(e, 1), n();
+        (t.answers.splice(e, 1), n());
       },
       [n, t.answers],
     ),
@@ -36078,7 +36108,7 @@ function qW(e) {
             isClearable: !0,
             onChange: (e) => {
               let t = e?.map((e) => e.value) || [];
-              (n.category_ids = t), r();
+              ((n.category_ids = t), r());
             },
             value: a.map((e) => s.find((t) => t.value == e)),
             options: s,
@@ -36129,11 +36159,11 @@ function JW(e) {
 function YW(e) {
   let { item: t, fnOnDirty: n, buttonToken: r, tooltipToken: i } = e,
     a = (0, q.useCallback)(() => {
-      (t.associated_video ||= { video_info: {} }),
+      ((t.associated_video ||= { video_info: {} }),
         z(
           (0, J.jsx)(NW, { videoDef: t.associated_video, fnOnDirty: n }),
           window,
-        );
+        ));
     }, [n, t]),
     o = w(
       () =>
@@ -36161,20 +36191,20 @@ function XW(e) {
     i = Al(),
     a = (0, q.useCallback)(() => {
       let e = _W + Math.floor(Math.random() * 1e6);
-      for (; t.quiz.questions.find((t) => t.unique_id == e); )
+      for (; t.quiz.questions.find((t) => t.unique_id == e);)
         e = _W + Math.floor(Math.random() * 1e6);
-      t.quiz.answer_categories || (t.quiz.answer_categories = []),
+      (t.quiz.answer_categories || (t.quiz.answer_categories = []),
         t.quiz.answer_categories.push({
           category_id: e,
           category_name: ``,
           door_index: 0,
         }),
         n(),
-        i();
+        i());
     }, [n, t, i]),
     o = (0, q.useCallback)(
       (e) => {
-        t.quiz.answer_categories.splice(e, 1), n();
+        (t.quiz.answer_categories.splice(e, 1), n());
       },
       [n, t.quiz.answer_categories],
     ),
@@ -36240,9 +36270,9 @@ function ZW(e) {
         label: H(`#Sale_Section_Quiz_Category_Name`),
         tooltip: H(`#Sale_Section_Quiz_Category_Name_ttip`),
         onChange: (e) => {
-          i != e?.currentTarget?.value &&
+          (i != e?.currentTarget?.value &&
             (t.category_name = e?.currentTarget?.value || ``),
-            n();
+            n());
         },
         value: i,
       }),
@@ -36254,7 +36284,7 @@ function ZW(e) {
         value: r,
         onChange: (e) => {
           let i = Number.parseInt(e.target.value);
-          r != i && (t.door_index = i), n();
+          (r != i && (t.door_index = i), n());
         },
       }),
     ],
@@ -36289,36 +36319,36 @@ function $W(e) {
     ]),
     d = (0, q.useCallback)(
       (e) => {
-        e != t.badge_progress.localized_initial_description[r] &&
+        (e != t.badge_progress.localized_initial_description[r] &&
           (t.badge_progress.localized_initial_description[r] = e),
-          i();
+          i());
       },
       [i, r, t.badge_progress.localized_initial_description],
     ),
     f = (0, q.useCallback)(
       (e) => {
-        e != t.badge_progress.localized_progress_description[r] &&
+        (e != t.badge_progress.localized_progress_description[r] &&
           (t.badge_progress.localized_progress_description[r] = e),
-          i();
+          i());
       },
       [i, r, t.badge_progress.localized_progress_description],
     ),
     p = (0, q.useCallback)(
       (e) => {
-        e != t.badge_progress.localized_maxtier_description[r] &&
+        (e != t.badge_progress.localized_maxtier_description[r] &&
           (t.badge_progress.localized_maxtier_description[r] = e),
-          i();
+          i());
       },
       [i, r, t.badge_progress.localized_maxtier_description],
     ),
     m = (0, q.useCallback)(
       (e) => {
-        t.badge_progress.levels.splice(e, 1), i();
+        (t.badge_progress.levels.splice(e, 1), i());
       },
       [i, t.badge_progress.levels],
     ),
     h = (0, q.useCallback)(() => {
-      t.badge_progress.levels.push({ level: 1, badge_icon_url: `` }), i();
+      (t.badge_progress.levels.push({ level: 1, badge_icon_url: `` }), i());
     }, [i, t.badge_progress.levels]);
   return (0, J.jsxs)(`div`, {
     children: [
@@ -36340,11 +36370,11 @@ function $W(e) {
         type: `text`,
         label: H(`#Sale_Section_BadgeProgress_Name`),
         onChange: (e) => {
-          t.badge_progress.localized_name[r] !=
+          (t.badge_progress.localized_name[r] !=
             (e?.currentTarget?.value || ``) &&
             (t.badge_progress.localized_name[r] =
               e?.currentTarget?.value || ``),
-            i();
+            i());
         },
         placeholder: H(`#Sale_Section_BadgeProgress_Name`),
         value: a,
@@ -36354,7 +36384,7 @@ function $W(e) {
         tooltip: H(`#Sale_Section_BadgeProgress_DiscoveryQueue_ttip`),
         checked: u,
         onChange: (e) => {
-          (t.badge_progress.granted_by_discovery_queue = e), i();
+          ((t.badge_progress.granted_by_discovery_queue = e), i());
         },
       }),
       (0, J.jsx)(Xl, {
@@ -36466,7 +36496,7 @@ function tG(e) {
     i = w(() => Qa.Get().GetCurEditLanguage()),
     a = (0, q.useCallback)(
       (e) => {
-        (t.claim_item_section_data ||= {
+        ((t.claim_item_section_data ||= {
           localized_claim_button: F([], 32, null),
         }),
           (t.claim_item_section_data.localized_claim_button = F(
@@ -36475,7 +36505,7 @@ function tG(e) {
             null,
           )),
           (t.claim_item_section_data.localized_claim_button[i] = e),
-          r();
+          r());
       },
       [r, i, t],
     ),
@@ -36555,12 +36585,12 @@ function sG(e, t) {
   let n = (n, r) => {
     if (n) {
       let n = cO(t);
-      (e.sale_tag_filter = { clauses: [] }),
-        (e.capsules = iO(n, e.sale_tag_filter, e.capsules));
+      ((e.sale_tag_filter = { clauses: [] }),
+        (e.capsules = iO(n, e.sale_tag_filter, e.capsules)));
     } else
-      e.sale_tag_filter?.clauses?.length || (e.capsules = []),
-        (e.sale_tag_filter = null);
-    r?.(), t.SetDirty(Q.jsondata_sales);
+      (e.sale_tag_filter?.clauses?.length || (e.capsules = []),
+        (e.sale_tag_filter = null));
+    (r?.(), t.SetDirty(Q.jsondata_sales));
   };
   return (t, r) => {
     if (t) {
@@ -36685,8 +36715,8 @@ var cG = c((e) => {
           return (
             t.capsules.forEach((e) => {
               if (e?.visibility_index !== void 0) {
-                for (; r.length <= e.visibility_index; ) r.push(0);
-                (i = !0), (r[e.visibility_index] += 1);
+                for (; r.length <= e.visibility_index;) r.push(0);
+                ((i = !0), (r[e.visibility_index] += 1));
               }
             }),
             i ? r : void 0
@@ -36697,7 +36727,7 @@ var cG = c((e) => {
     if (_) {
       let e = `CountFilter_Sale` + r,
         t = `CountFilter_Sale` + r + `_day_all`;
-      v.push(
+      (v.push(
         (0, J.jsxs)(
           `div`,
           {
@@ -36749,10 +36779,10 @@ var cG = c((e) => {
               `CountFilter_sale` + r + `_` + n,
             ),
           );
-        });
+        }));
     }
     let y = (e) => {
-        hl(
+        (hl(
           e >= 0 && e < (t.capsules?.length ?? 0),
           `Remove capsule called outside of range: ` +
             e +
@@ -36761,11 +36791,11 @@ var cG = c((e) => {
         ),
           e >= 0 &&
             e < (t.capsules?.length ?? 0) &&
-            (t.capsules.splice(e, 1), n.SetDirty(Q.jsondata_sales));
+            (t.capsules.splice(e, 1), n.SetDirty(Q.jsondata_sales)));
       },
       b = (e, r) => {
         let i = { id: e, type: r, visibility_index: c == iG ? void 0 : c };
-        t.capsules.push(i), Oi([i], Ai), n.SetDirty(Q.jsondata_sales);
+        (t.capsules.push(i), Oi([i], Ai), n.SetDirty(Q.jsondata_sales));
       },
       x = (e) => {
         z((0, J.jsx)(EH, { fnAddCapsule: b }), Vu(e));
@@ -36781,7 +36811,7 @@ var cG = c((e) => {
         );
       },
       C = () => {
-        (t.capsules = []), n.SetDirty(Q.jsondata_sales);
+        ((t.capsules = []), n.SetDirty(Q.jsondata_sales));
       },
       w = (e) => {
         z((0, J.jsx)(uG, { editModel: n, capsuleContainer: t }), Vu(e));
@@ -36791,7 +36821,7 @@ var cG = c((e) => {
           (0, J.jsx)(Sj, {
             onDiscountEventSelected: (e, r) => {
               let i = c == iG ? void 0 : c;
-              e.forEach((e) => {
+              (e.forEach((e) => {
                 if (!t.capsules.find((t) => t.id === e && t.type !== `sub`)) {
                   let n = vc.Get().GetApp(e),
                     r = Ec(n?.GetStoreItemType(), n?.GetAppType());
@@ -36806,7 +36836,7 @@ var cG = c((e) => {
                       visibility_index: i,
                     });
                 }),
-                n.SetDirty(Q.jsondata_sales);
+                n.SetDirty(Q.jsondata_sales));
             },
           }),
           Vu(e),
@@ -36953,11 +36983,11 @@ var cG = c((e) => {
         if (!r) continue;
         let e = vc.Get().GetStoreItem(r.id, xs(r.type))?.GetName() || ``,
           i = `${r.id}\t${r.type}`;
-        r.visibility_index === void 0
+        (r.visibility_index === void 0
           ? t && (i += `	`)
           : (i += `\tDay ${r.visibility_index}`),
           e && (i += `\t\"${e}\"`),
-          (n += `${i}\n`);
+          (n += `${i}\n`));
       }
       return n;
     }
@@ -36973,7 +37003,7 @@ var cG = c((e) => {
         );
       i && ((r.type = i[1]), (t = i[2]));
       let a = /^day\s+(\d+)\W+/i.exec(t);
-      return a && (r.visibility_index = parseInt(a[1])), r;
+      return (a && (r.visibility_index = parseInt(a[1])), r);
     }
     OnCompleteEdit() {
       this.setState({ bImporting: !0, errMsg: void 0 }, this.DoImport);
@@ -36995,11 +37025,11 @@ var cG = c((e) => {
           i = H(`#Sale_EditRaw_Error_InvalidDay`, e.id, e.visibility_index);
           break;
         }
-      this.setState({ bImporting: !1, errMsg: i }),
+      (this.setState({ bImporting: !1, errMsg: i }),
         i ||
           (JSON.stringify(t.capsules) !== JSON.stringify(n) &&
             ((t.capsules = n), e.SetDirty(Q.jsondata_sales)),
-          this.props.closeModal());
+          this.props.closeModal()));
     }
     OnTextChange(e) {
       this.setState({ editValue: e.currentTarget.value });
@@ -37070,10 +37100,10 @@ var cG = c((e) => {
       });
     }
   };
-N([P], uG.prototype, `OnCompleteEdit`, null),
+(N([P], uG.prototype, `OnCompleteEdit`, null),
   N([P], uG.prototype, `DoImport`, null),
   N([P], uG.prototype, `OnTextChange`, null),
-  (uG = N([c], uG));
+  (uG = N([c], uG)));
 function dG(e) {
   let { saleSection: t, editModel: n } = e;
   return (0, J.jsx)(fG, { editModel: n, saleSection: t });
@@ -37120,19 +37150,19 @@ function pG(e) {
   }, [u]);
   let d = (0, q.useCallback)(
       (e) => {
-        u(), i(e), (t.calendar_section_data.day_count = parseInt(e)), l();
+        (u(), i(e), (t.calendar_section_data.day_count = parseInt(e)), l());
       },
       [u, l, i, t],
     ),
     f = (0, q.useCallback)(
       (e) => {
-        u(), c(e), (t.calendar_section_data.height = parseInt(e)), l();
+        (u(), c(e), (t.calendar_section_data.height = parseInt(e)), l());
       },
       [u, l, c, t],
     ),
     p = (0, q.useCallback)(
       (e) => {
-        u(), o(e), (t.calendar_section_data.forward = e), l();
+        (u(), o(e), (t.calendar_section_data.forward = e), l());
       },
       [u, l, o, t],
     ),
@@ -37184,7 +37214,7 @@ function hG(e) {
       (e.list_jsondata = {}));
 }
 function gG(e, t) {
-  (t.localized_flat_title = F([], 32, null)),
+  ((t.localized_flat_title = F([], 32, null)),
     (t.localized_flat_blurb = F([], 32, null)),
     (t.localized_flat_link = F([], 32, null)),
     t.title !== `0` && (t.localized_flat_title[e] = t.title),
@@ -37201,7 +37231,7 @@ function gG(e, t) {
     t.link_localization.forEach((e) => {
       e.localized_string?.length > 0 &&
         (t.localized_flat_link[e.language] = e.localized_string);
-    });
+    }));
 }
 var _G = class e {
   m_mapList = new Map();
@@ -37295,20 +37325,20 @@ var _G = class e {
         let e = [];
         return (
           s(() => {
-            n.data.matches &&
+            (n.data.matches &&
               n.data.matches.forEach((t) => {
                 t.multi_detail_lists.forEach((n) => {
-                  this.m_mapListIDToClanAccount.set(
+                  (this.m_mapListIDToClanAccount.set(
                     n.listid,
                     t.clan_account_id,
                   ),
                     hG(n),
                     gG(t.curation_language, n),
                     this.m_mapList.set(n.listid, n),
-                    e.push(n);
+                    e.push(n));
                 });
               }),
-              this.m_mapEventGIDToLists.set(i, e);
+              this.m_mapEventGIDToLists.set(i, e));
           }),
           e
         );
@@ -37321,7 +37351,7 @@ var _G = class e {
   }
   static s_Singleton;
   static Get() {
-    return (e.s_Singleton ||= new e()), e.s_Singleton;
+    return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
   constructor() {
     m(this);
@@ -37330,7 +37360,9 @@ var _G = class e {
       s(() => {
         e.forEach((e) => {
           e.multi_detail_lists.forEach((t) => {
-            hG(t), gG(e.curation_language, t), this.m_mapList.set(t.listid, t);
+            (hG(t),
+              gG(e.curation_language, t),
+              this.m_mapList.set(t.listid, t));
           });
         });
       });
@@ -37697,16 +37729,16 @@ var jG = `dYe9VMwheKM-`,
       });
     }
   };
-N([P], PG.prototype, `OnShowOnlySaleWhiteListedBroadcasts`, null),
-  (PG = N([c], PG));
+(N([P], PG.prototype, `OnShowOnlySaleWhiteListedBroadcasts`, null),
+  (PG = N([c], PG)));
 var FG = class extends q.Component {
   m_currentRequest = 0;
   m_searchResultsMenu;
   m_refInput;
   m_cancelSignal = Z.default.CancelToken.source();
   componentWillUnmount() {
-    this.m_cancelSignal.cancel(`CuratorSaleSection component unmounted`),
-      window.clearTimeout(this.m_currentRequest);
+    (this.m_cancelSignal.cancel(`CuratorSaleSection component unmounted`),
+      window.clearTimeout(this.m_currentRequest));
   }
   SetCurator(e) {
     this.props.saleSection.curator_clan_id != e.GetClanAccountID() &&
@@ -37795,9 +37827,9 @@ var FG = class extends q.Component {
     });
   }
 };
-N([P], FG.prototype, `SetCurator`, null),
+(N([P], FG.prototype, `SetCurator`, null),
   N([P], FG.prototype, `UpdateCuratorSuggestions`, null),
-  (FG = N([c], FG));
+  (FG = N([c], FG)));
 var IG = c((e) => {
     let { editModel: t, index: n } = e,
       r = t.GetEventModel();
@@ -37824,14 +37856,14 @@ var IG = c((e) => {
         let e = null;
         if (a) {
           if (((e = Z.default.CancelToken.source()), !i.featured_curator_list))
-            (i.featured_curator_list = []), o(!1);
+            ((i.featured_curator_list = []), o(!1));
           else {
             let t = [];
-            i.featured_curator_list.forEach((n) => {
+            (i.featured_curator_list.forEach((n) => {
               let r = Wc.InitFromClanID(n.clanAccountID, U.EUNIVERSE);
               t.push(_G.Get().LoadListDetails(r, n.listID, e));
             }),
-              Promise.all(t).then(() => o(!1));
+              Promise.all(t).then(() => o(!1)));
           }
         }
         return () => e?.cancel(`CuratorRecommendationWidgetEditor: unmounting`);
@@ -37857,10 +37889,10 @@ var IG = c((e) => {
           fnGetTimeToUpdate: () =>
             i.featured_curator_list_rtime_start || t.GetEventStartTime(),
           fnSetTimeToUpdate: (e) => {
-            (e = pW(e)),
+            ((e = pW(e)),
               i.featured_curator_list_rtime_start != e &&
                 ((i.featured_curator_list_rtime_start = e),
-                t.SetDirty(Q.jsondata_sales));
+                t.SetDirty(Q.jsondata_sales)));
           },
           fnIsValidDateTime: () => !0,
           bShowTimeZone: !0,
@@ -37877,7 +37909,8 @@ var IG = c((e) => {
         (0, J.jsx)(xO, {
           items: i.featured_curator_list,
           onDelete: (e) => {
-            i.featured_curator_list.splice(e, 1), t.SetDirty(Q.jsondata_sales);
+            (i.featured_curator_list.splice(e, 1),
+              t.SetDirty(Q.jsondata_sales));
           },
           onReorder: () => t.SetDirty(Q.jsondata_sales),
           render: (e) => (0, J.jsx)(zG, { tuple: e }),
@@ -37942,12 +37975,12 @@ var zG = c((e) => {
               .then((e) => {
                 if (e?.length > 0) {
                   let t = [];
-                  e.forEach((e) => {
+                  (e.forEach((e) => {
                     let n = _G.Get().GetClanAccountFromListID(e.listid),
                       r = Wc.InitFromClanID(n, U.EUNIVERSE);
                     t.push(Ri.LoadClanInfoForClanSteamID(r));
                   }),
-                    Promise.all(t).then(() => o(!1));
+                    Promise.all(t).then(() => o(!1)));
                 }
               }))
           : o(!1),
@@ -37969,7 +38002,7 @@ var zG = c((e) => {
     let p = f.map((e) => {
       let t = Ri.GetClanInfoByClanAccountID(e.clanAccountID),
         n = t ? t.group_name : `GroupID ` + e.clanAccountID;
-      return (n += `: ` + e.list.title), { label: n, value: e.list.listid };
+      return ((n += `: ` + e.list.title), { label: n, value: e.list.listid });
     });
     return (0, J.jsx)(ed, {
       children: (0, J.jsx)(Vc, {
@@ -38020,12 +38053,12 @@ var zG = c((e) => {
                 bOKDisabled: s == null,
                 onOK: () => {
                   let e = s.value;
-                  t.featured_curator_list.push({
+                  (t.featured_curator_list.push({
                     clanAccountID: _G.Get().GetClanAccountFromListID(e),
                     listID: e,
                   }),
                     n.SetDirty(Q.jsondata_sales),
-                    l();
+                    l());
                 },
               }),
             }),
@@ -38067,8 +38100,8 @@ function UG(e) {
 }
 function WG(e) {
   let t = (t) => {
-      e.saleSection.itemdefs.splice(t, 1),
-        e.editModel.SetDirty(Q.jsondata_sales);
+      (e.saleSection.itemdefs.splice(t, 1),
+        e.editModel.SetDirty(Q.jsondata_sales));
     },
     n = w(() => e.saleSection.itemdefs);
   return (0, J.jsx)(xO, {
@@ -38097,7 +38130,7 @@ function GG(e) {
     c += +!!e;
   });
   let l = (e, t) => {
-    e.preventDefault(),
+    (e.preventDefault(),
       e.stopPropagation(),
       z(
         (0, J.jsx)(TU, {
@@ -38120,7 +38153,7 @@ function GG(e) {
           artworkType: `link_capsule`,
         }),
         Vu(e),
-      );
+      ));
   };
   return r
     ? (0, J.jsxs)(`div`, {
@@ -38200,9 +38233,9 @@ function KG(e) {
       (0, J.jsx)(gu, {
         disabled: t == 0 || r == 0,
         onClick: () => {
-          e.saleSection.itemdefs || (e.saleSection.itemdefs = []),
+          (e.saleSection.itemdefs || (e.saleSection.itemdefs = []),
             e.saleSection.itemdefs.push({ nAppID: t, nItemDefID: r }),
-            e.editModel.SetDirty(Q.jsondata_sales);
+            e.editModel.SetDirty(Q.jsondata_sales));
         },
         children: H(`#Sale_ItemDef_Add`),
       }),
@@ -38225,10 +38258,10 @@ function JG(e) {
           !!a &&
             (0, J.jsx)(wd, {
               onClick: (e) => {
-                e?.currentTarget?.focus(),
+                (e?.currentTarget?.focus(),
                   jh.k_HeaderFullWidth == n
                     ? r(void 0)
-                    : r(jh.k_HeaderFullWidth);
+                    : r(jh.k_HeaderFullWidth));
               },
               toggled: n == jh.k_HeaderFullWidth,
               tooltip: H(`#FormattingToolbar_FullWidth`),
@@ -38240,7 +38273,7 @@ function JG(e) {
               {
                 tooltip: ZG(e),
                 onClick: (t) => {
-                  t?.currentTarget?.focus(), r(e == n ? void 0 : e);
+                  (t?.currentTarget?.focus(), r(e == n ? void 0 : e));
                 },
                 toggled: e == n,
                 children: H(`#Template_Section_Header_` + e),
@@ -38285,7 +38318,7 @@ function QG(e) {
               children: (0, J.jsx)(`div`, {
                 children: (0, J.jsx)(wd, {
                   onClick: (t) => {
-                    t?.currentTarget?.focus(), r(e);
+                    (t?.currentTarget?.focus(), r(e));
                   },
                   toggled: e == n,
                   children: (0, J.jsx)($G, {
@@ -38391,7 +38424,7 @@ var tK = q.memo(function (e) {
                 )
                   if (e.nodeName == `A` && `getBoundingClientRect` in e) {
                     let t = e.getBoundingClientRect();
-                    o(t.left + t.width / 2), c(t.bottom + 2), u(e);
+                    (o(t.left + t.width / 2), c(t.bottom + 2), u(e));
                     return;
                   }
                 u(void 0);
@@ -38437,7 +38470,7 @@ var rK = `bkkuDr2zbWs-`,
   iK = `g68KM8JsaU4-`,
   aK = q.memo(function (e) {
     let { strPlaceholder: t } = e;
-    return md(q.useMemo(() => (t ? oK(t) : void 0), [t])), null;
+    return (md(q.useMemo(() => (t ? oK(t) : void 0), [t])), null);
   });
 function oK(e) {
   return new _d({
@@ -38973,7 +39006,7 @@ function IK(e, t) {
   return q.useCallback(
     (...e) => {
       let t = `default`;
-      return r && (t = r(...e)), t == "default" && i && (t = i(...e)), t;
+      return (r && (t = r(...e)), t == "default" && i && (t = i(...e)), t);
     },
     [r, i],
   );
@@ -39162,7 +39195,7 @@ function WK(e) {
               checked: r,
               controlled: !0,
               onChange: () => {
-                (t.title_image_selected = `image`), i();
+                ((t.title_image_selected = `image`), i());
               },
               label: H(`#Sale_Section_Media_Layout_ContentTypeImage`),
             }),
@@ -39171,7 +39204,7 @@ function WK(e) {
               checked: !r,
               controlled: !0,
               onChange: () => {
-                (t.title_image_selected = `title`), i();
+                ((t.title_image_selected = `title`), i());
               },
               label: H(`#Sale_Section_Media_Layout_ContentTypeText`),
             }),
@@ -39196,10 +39229,10 @@ function GK(e) {
         label: H(`#Sale_TitleHeader_title`),
         value: i,
         onChange: (e) => {
-          (t.localized_label ||= F([], 32, null)),
+          ((t.localized_label ||= F([], 32, null)),
             e.currentTarget.value != t.localized_label[r] &&
               ((t.localized_label[r] = e.currentTarget.value),
-              n.SetDirty(Q.jsondata_sales));
+              n.SetDirty(Q.jsondata_sales)));
         },
       }),
       (0, J.jsx)(R, {
@@ -39207,10 +39240,10 @@ function GK(e) {
         label: H(`#Sale_TitleHeader_subtitle`),
         value: a,
         onChange: (e) => {
-          (t.localized_subtitle ||= F([], 32, null)),
+          ((t.localized_subtitle ||= F([], 32, null)),
             e.currentTarget.value != t.localized_subtitle[r] &&
               ((t.localized_subtitle[r] = e.currentTarget.value),
-              n.SetDirty(Q.jsondata_sales));
+              n.SetDirty(Q.jsondata_sales)));
         },
       }),
     ],
@@ -39259,16 +39292,16 @@ function qK(e) {
       (0, J.jsx)(xO, {
         items: r,
         onDelete: (e) => {
-          t.links.splice(e, 1), n.SetDirty(Q.jsondata_sales), i();
+          (t.links.splice(e, 1), n.SetDirty(Q.jsondata_sales), i());
         },
         onReorder: () => n.SetDirty(Q.jsondata_sales),
         render: (e) => (0, J.jsx)(YK, { editModel: n, link: e }),
       }),
       (0, J.jsx)(gu, {
         onClick: (e) => {
-          t.links.push({ url: null, localized_link_capsule: F([], 32, null) }),
+          (t.links.push({ url: null, localized_link_capsule: F([], 32, null) }),
             n.SetDirty(Q.jsondata_sales),
-            i();
+            i());
         },
         children: H(`#Sale_AddImage`),
       }),
@@ -39292,8 +39325,8 @@ function JK(e) {
     clanSteamID: o,
     fnSetImageURL: (e, r, i = 0) => {
       let a = _n.GetHashAndExt(r);
-      (t.localized_link_capsule = L.Set(t.localized_link_capsule || [], i, a)),
-        n.SetDirty(Q.jsondata_sales);
+      ((t.localized_link_capsule = L.Set(t.localized_link_capsule || [], i, a)),
+        n.SetDirty(Q.jsondata_sales));
     },
     fnLangHasData: (e) => L.BHas(t.localized_link_capsule || [], e),
     fnGetImageHash: (e, n) => t.localized_link_capsule?.[n],
@@ -39375,8 +39408,8 @@ function XK(e) {
     bOKDisabled: !(u || d) || !(!l || f),
     closeModal: r,
     onOK: () => {
-      n.url != i && ((n.url = i), t.SetDirty(Q.jsondata_sales)),
-        n.sc_url != o && ((n.sc_url = o), t.SetDirty(Q.jsondata_sales));
+      (n.url != i && ((n.url = i), t.SetDirty(Q.jsondata_sales)),
+        n.sc_url != o && ((n.sc_url = o), t.SetDirty(Q.jsondata_sales)));
     },
     bAllowFullSize: !0,
     children: [
@@ -39476,24 +39509,24 @@ function QK(e) {
     s = (0, q.useCallback)(
       (e) => {
         let n = vp + Math.floor(Math.random() * 1e6);
-        for (; t.quest.door_info.find((e) => e.unique_id == n); )
+        for (; t.quest.door_info.find((e) => e.unique_id == n);)
           n = vp + Math.floor(Math.random() * 1e6);
         let r = {
           unique_id: n,
           localized_closed_door_description: [],
           localized_open_door_description: [],
         };
-        e || t.quest.door_info.length === 0
+        (e || t.quest.door_info.length === 0
           ? t.quest.door_info.push(r)
           : (t.quest.door_info = [r, ...t.quest.door_info]),
           i(),
-          a();
+          a());
       },
       [i, t, a],
     ),
     c = (0, q.useCallback)(
       (e) => {
-        t.quest.door_info.splice(e, 1), i();
+        (t.quest.door_info.splice(e, 1), i());
       },
       [i, t.quest?.door_info],
     );
@@ -39553,13 +39586,13 @@ function eq(e) {
   let { questInfo: t, fnOnDirty: n, language: r, saleSection: i, index: a } = e,
     o = (0, q.useCallback)(
       (e) => {
-        (t.localized_closed_door_description = F(
+        ((t.localized_closed_door_description = F(
           t.localized_closed_door_description || [],
           32,
           null,
         )),
           (t.localized_closed_door_description[r] = e),
-          n();
+          n());
       },
       [n, r, t],
     ),
@@ -39572,13 +39605,13 @@ function eq(e) {
     ),
     c = (0, q.useCallback)(
       (e) => {
-        (t.localized_open_door_description = F(
+        ((t.localized_open_door_description = F(
           t.localized_open_door_description || [],
           32,
           null,
         )),
           (t.localized_open_door_description[r] = e),
-          n();
+          n());
       },
       [n, r, t],
     ),
@@ -39682,7 +39715,7 @@ var tq = class e {
   }
   static s_Singleton;
   static Get() {
-    return (e.s_Singleton ||= new e()), e.s_Singleton;
+    return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
   constructor() {}
 };
@@ -39782,9 +39815,9 @@ var oq = class e {
     let i = Nc.Init(la),
       a = null;
     try {
-      i.Body().set_eventid(e), i.Body().set_action(1);
+      (i.Body().set_eventid(e), i.Body().set_action(1));
       let o = i.Body().add_itemsdefs();
-      o.set_eventid(e),
+      (o.set_eventid(e),
         o.set_active(!0),
         o.set_item_bucket(r),
         o.set_rarity(1),
@@ -39797,7 +39830,7 @@ var oq = class e {
         o.set_loyalty_reward_defid(n || 0),
         o.set_loyalty_point_type(0),
         o.set_user_badge_level(0),
-        o.set_user_badge_to_grant(0);
+        o.set_user_badge_to_grant(0));
       let s = await oa.SetVirtualItemRewardDefinition(
         this.m_SteamInterface.GetServiceTransport(),
         i,
@@ -39828,9 +39861,9 @@ var oq = class e {
     let n = Nc.Init(la),
       r = null;
     try {
-      n.Body().set_eventid(e), n.Body().set_action(3);
+      (n.Body().set_eventid(e), n.Body().set_action(3));
       let i = n.Body().add_itemsdefs();
-      i.set_eventid(e), i.set_virtual_item_def_id(t);
+      (i.set_eventid(e), i.set_virtual_item_def_id(t));
       let a = await oa.SetVirtualItemRewardDefinition(
         this.m_SteamInterface.GetServiceTransport(),
         n,
@@ -39867,12 +39900,12 @@ var oq = class e {
   constructor() {}
   Init() {
     let e = hu(`promotion_operation_token`, `application_config`);
-    hl(e, `CVirtualItemRewardDefStore: promotion operation token is missing`),
-      (this.m_SteamInterface = new ic(new yu(U.WEBAPI_BASE_URL, e)));
+    (hl(e, `CVirtualItemRewardDefStore: promotion operation token is missing`),
+      (this.m_SteamInterface = new ic(new yu(U.WEBAPI_BASE_URL, e))));
   }
 };
-N([P], oq.prototype, `CreateNewVirtualItemRewardDef`, null),
-  N([P], oq.prototype, `MarkVirtualItemRewardInactive`, null);
+(N([P], oq.prototype, `CreateNewVirtualItemRewardDef`, null),
+  N([P], oq.prototype, `MarkVirtualItemRewardInactive`, null));
 function sq(e) {
   let [t, n] = (0, q.useState)(oq.Get().GetVirtualItemDefsForEventID(e));
   return (
@@ -39965,11 +39998,11 @@ var lq = class e {
     try {
       r.Body().set_action(t);
       let a = r.Body().add_definitions();
-      a.set_virtual_item_reward_event_id(e.virtual_item_reward_event_id),
+      (a.set_virtual_item_reward_event_id(e.virtual_item_reward_event_id),
         a.set_appid(e.appid),
         a.set_rtime_start_time(e.rtime_start_time),
         a.set_rtime_end_time(e.rtime_end_time),
-        t != 1 && a.set_sale_reward_def_id(e.sale_reward_def_id);
+        t != 1 && a.set_sale_reward_def_id(e.sale_reward_def_id));
       let o = await Sa.SetRewardDefinitions(
         this.m_SteamInterface.GetServiceTransport(),
         r,
@@ -40007,11 +40040,11 @@ var lq = class e {
   constructor() {}
   Init() {
     let e = hu(`promotion_operation_token`, `application_config`);
-    hl(
+    (hl(
       e,
       `CSaleItemRewardsDefinitionStore: promotion operation token is missing`,
     ),
-      (this.m_SteamInterface = new ic(new yu(U.WEBAPI_BASE_URL, e)));
+      (this.m_SteamInterface = new ic(new yu(U.WEBAPI_BASE_URL, e))));
   }
 };
 N([P], lq.prototype, `SetSaleItemRewardDef`, null);
@@ -40172,7 +40205,7 @@ function hq(e) {
           bDisableBackgroundDismiss: !0,
           bAllowFullSize: !0,
           onOK: () => {
-            g.fnSetLoading(!0),
+            (g.fnSetLoading(!0),
               o(
                 {
                   appid: u,
@@ -40185,7 +40218,7 @@ function hq(e) {
                 .then((e) => {
                   e == 1 ? g.fnSetSuccess(!0) : g.fnSetError(!0);
                 })
-                .catch((e) => g.fnSetError(!0));
+                .catch((e) => g.fnSetError(!0)));
           },
           children: [
             (0, J.jsx)(R, {
@@ -40245,7 +40278,7 @@ function gq(e) {
     ]),
     c = (0, q.useCallback)(
       (e) => {
-        t.rewards.reward_items.splice(e, 1), i();
+        (t.rewards.reward_items.splice(e, 1), i());
       },
       [i, t.rewards?.reward_items],
     );
@@ -40365,7 +40398,7 @@ function vq(e) {
     (0, q.useEffect)(() => {
       if (o) {
         let e = [];
-        o.forEach((t) => {
+        (o.forEach((t) => {
           (a && t.user_badge_to_grant) ||
             e.push({
               virtual_item_reward_def_id: t.virtual_item_def_id,
@@ -40380,7 +40413,7 @@ function vq(e) {
           (t.rewards.rtime_last_sycned = Math.floor(
             new Date().getTime() / 1e3,
           )),
-          n.SetDirty(Q.jsondata_sales);
+          n.SetDirty(Q.jsondata_sales));
       }
     }, [n, o, t.rewards, a]),
     (0, J.jsx)(I, {
@@ -40438,13 +40471,13 @@ function bq(e) {
     })),
     s = (0, q.useCallback)(
       (e) => {
-        (n.localized_reward_description = F(
+        ((n.localized_reward_description = F(
           n.localized_reward_description || [],
           32,
           null,
         )),
           (n.localized_reward_description[i] = e),
-          t();
+          t());
       },
       [t, i, n],
     ),
@@ -40471,7 +40504,7 @@ function bq(e) {
                 rgOptions: o,
                 selectedOption: n.community_class || 0,
                 onChange: (e) => {
-                  (n.community_class = e.data), t();
+                  ((n.community_class = e.data), t());
                 },
                 bDisableMouseOverlay: !0,
                 contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
@@ -40578,13 +40611,13 @@ function xq(e) {
     strTitle: H(`#Sale_Section_RewardShelf_AddItem`),
     onCancel: t,
     onOK: () => {
-      D.fnSetLoading(!0),
+      (D.fnSetLoading(!0),
         hl(
           l[u].item_class == 1 || f,
           `Unexpected, we expected item to have layalty reward definition ID`,
           _(l[u]),
         ),
-        E(r, l[u], f, h).then((e) => Vo(D, e));
+        E(r, l[u], f, h).then((e) => Vo(D, e)));
     },
     bOKDisabled: u == null || u >= l.length || O || !f,
     strOKButtonText: f
@@ -40712,9 +40745,9 @@ function wq(e, t, n, r) {
     a = new Set();
   (t ?? []).forEach((e) => {
     let t = `${e.appid}:${e.community_item_type}`;
-    i.has(t) || i.set(t, new Set()),
+    (i.has(t) || i.set(t, new Set()),
       i.get(t).add(e.item_bucket),
-      e.active && a.add(e.item_bucket);
+      e.active && a.add(e.item_bucket));
   });
   let o = Array(e.length).fill(-1),
     s = new Set();
@@ -40725,7 +40758,7 @@ function wq(e, t, n, r) {
       (e, r) => !s.has(r) && !i.get(`${n}:${e.item_type}`)?.has(t),
     );
     if (r < 0) return null;
-    (o[r] = t), s.add(r);
+    ((o[r] = t), s.add(r));
   }
   return o;
 }
@@ -40737,13 +40770,13 @@ function Eq(e) {
     n = [];
   if (t.length == 0) return n;
   let r = new Map();
-  t.forEach((e) => r.set(e.item_bucket, 1 + (r.get(e.item_bucket) ?? 0))),
+  (t.forEach((e) => r.set(e.item_bucket, 1 + (r.get(e.item_bucket) ?? 0))),
     r.forEach((e, t) => {
       e > 1 &&
         n.push(
           `Bucket ${t} holds ${e} items. Opening the door only grants one of them, picked at random.`,
         );
-    });
+    }));
   for (let e = 0; e < r.size; ++e)
     r.has(e) ||
       n.push(
@@ -40842,8 +40875,8 @@ function kq(e) {
         onCancel: t,
         bOKDisabled: a.bLoading,
         onOK: () => {
-          a.fnSetLoading(!0),
-            i(r, n.virtual_item_reward_def_id).then((e) => Vo(a, e));
+          (a.fnSetLoading(!0),
+            i(r, n.virtual_item_reward_def_id).then((e) => Vo(a, e)));
         },
       });
 }
@@ -41125,7 +41158,7 @@ var zq = class extends q.Component {
         let n = H(t);
         t === n ? i++ : ((i = 0), r.push({ value: t, label: n }));
       }
-      return r.sort((e, t) => e.label.localeCompare(t.label)), [t, n, ...r];
+      return (r.sort((e, t) => e.label.localeCompare(t.label)), [t, n, ...r]);
     }
     static IsValidTitleOption(e, t) {
       return (
@@ -41134,23 +41167,23 @@ var zq = class extends q.Component {
     }
     OnTitleChange(e) {
       let t = Bq.IsValidTitleOption(e.value, this.GetNameType()) ? e.value : ``;
-      this.props.default_label !== t && this.props.onSetDefaultLabel(t),
+      (this.props.default_label !== t && this.props.onSetDefaultLabel(t),
         this.setState({
           bSelectedCustomTitle:
             e.value === Bq.GetCustomLabelToken(this.GetNameType()),
-        });
+        }));
     }
     OnCustomTitleChange(e) {
       let t = [...(this.state.rgLocalizedLabel ?? [])];
-      (t[this.props.editModel.GetCurEditLanguage()] = e.target.value),
+      ((t[this.props.editModel.GetCurEditLanguage()] = e.target.value),
         this.setState({
           rgLocalizedLabel: t,
           bSelectedCustomTitle: this.state.bSelectedCustomTitle,
-        });
+        }));
     }
     OnClearCustomTitle() {
-      this.setState({ bSelectedCustomTitle: !1, rgLocalizedLabel: null }),
-        this.props.onClearCustomTitle();
+      (this.setState({ bSelectedCustomTitle: !1, rgLocalizedLabel: null }),
+        this.props.onClearCustomTitle());
     }
     OnSaveCustomTitle() {
       this.props.onSetCustomTitle(
@@ -41263,11 +41296,11 @@ var zq = class extends q.Component {
       });
     }
   });
-N([P], Vq.prototype, `OnTitleChange`, null),
+(N([P], Vq.prototype, `OnTitleChange`, null),
   N([P], Vq.prototype, `OnCustomTitleChange`, null),
   N([P], Vq.prototype, `OnClearCustomTitle`, null),
   N([P], Vq.prototype, `OnSaveCustomTitle`, null),
-  (Vq = Bq = N([c], Vq));
+  (Vq = Bq = N([c], Vq)));
 function Hq(e, t) {
   return e.filter((e) => e.visibility_index == null || e.visibility_index == t);
 }
@@ -41330,7 +41363,7 @@ var Wq = class e {
     m_tagSelection;
     m_tagStoreFilter;
     constructor(e, t, n = !0, r, i) {
-      (this.m_nSaleDay = t),
+      ((this.m_nSaleDay = t),
         (this.m_tagSelection = r),
         (this.m_tagStoreFilter = Jp(r, e?.tab_tag_filter, i)),
         e &&
@@ -41341,7 +41374,7 @@ var Wq = class e {
             : ((this.m_capsuleFilter = new Set()),
               (Hq ? Hq(e.capsules, t) : e.capsules).forEach((e) => {
                 this.m_capsuleFilter.add(Number(e.id));
-              })));
+              }))));
     }
     GetSaleDay() {
       return this.m_nSaleDay;
@@ -41531,11 +41564,11 @@ function tJ(e) {
               onChange: (e) => {
                 if (e.currentTarget.value) {
                   let r = e.currentTarget.value.trim();
-                  r.length == 0
+                  (r.length == 0
                     ? (t.country_allow_list = void 0)
                     : (t.country_allow_list = r),
-                    n();
-                } else (t.country_allow_list = void 0), n();
+                    n());
+                } else ((t.country_allow_list = void 0), n());
               },
             }),
             (0, J.jsx)(R, {
@@ -41546,11 +41579,11 @@ function tJ(e) {
               onChange: (e) => {
                 if (e.currentTarget.value) {
                   let r = e.currentTarget.value.trim();
-                  r.length == 0
+                  (r.length == 0
                     ? (t.country_deny_list = void 0)
                     : (t.country_deny_list = r),
-                    n();
-                } else (t.country_deny_list = void 0), n();
+                    n());
+                } else ((t.country_deny_list = void 0), n());
               },
             }),
           ],
@@ -41577,14 +41610,14 @@ var nJ = class e {
   }
   static s_Singleton;
   static Get() {
-    return (e.s_Singleton ||= new e()), e.s_Singleton;
+    return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
   constructor() {
     m(this);
   }
 };
-N([g], nJ.prototype, `m_nShowOnTab`, void 0),
-  N([x], nJ.prototype, `SetFilterTab`, null);
+(N([g], nJ.prototype, `m_nShowOnTab`, void 0),
+  N([x], nJ.prototype, `SetFilterTab`, null));
 function rJ(e) {
   nJ.Get().SetFilterTab(e);
 }
@@ -41730,16 +41763,16 @@ function TJ(e) {
 function EJ(e) {
   return new Promise((t) => {
     let n = new Image();
-    (n.onload = () => t(!0)), (n.onerror = () => t(!1)), (n.src = e);
+    ((n.onload = () => t(!0)), (n.onerror = () => t(!1)), (n.src = e));
   });
 }
 function DJ(e) {
   return new Promise((t) => {
     let n = document.createElement(`video`);
-    (n.preload = `metadata`),
+    ((n.preload = `metadata`),
       (n.onloadedmetadata = () => t(!0)),
       (n.onerror = () => t(!1)),
-      (n.src = e);
+      (n.src = e));
   });
 }
 function OJ(e) {
@@ -41802,7 +41835,7 @@ function OJ(e) {
                 href: `#`,
                 className: `oyKuVDO21ZA-`,
                 onClick: (e) => {
-                  h(), e.preventDefault();
+                  (h(), e.preventDefault());
                 },
                 children: H(`#Button_DeleteAll`),
               }),
@@ -41829,7 +41862,7 @@ function kJ(e) {
         (0, J.jsx)(`a`, {
           href: `#`,
           onClick: (e) => {
-            e.preventDefault(), r(t);
+            (e.preventDefault(), r(t));
           },
           children:
             t === n
@@ -41839,7 +41872,7 @@ function kJ(e) {
         (0, J.jsx)(`a`, {
           href: `#`,
           onClick: (e) => {
-            e.preventDefault(), i(t);
+            (e.preventDefault(), i(t));
           },
           children: (0, J.jsx)(Bl, {}),
         }),
@@ -41936,13 +41969,13 @@ function IJ(e) {
     r = Jo(),
     i = (0, q.useCallback)(
       (e, r, i, a, o, s, c) => {
-        hl(i != null && i >= 0 && i < 32, `Unexpected value for elang: ` + i),
-          hl(o === `template_asset`, `Unexpected artwork type ` + o);
+        (hl(i != null && i >= 0 && i < 32, `Unexpected value for elang: ` + i),
+          hl(o === `template_asset`, `Unexpected artwork type ` + o));
         let l = FJ(e, r);
         if (l) {
           l.aspect_ratio = ma(s, c);
           let e = F([...(n.localized_media || [])], 32, null);
-          (e[i] = l), (n.localized_media = e), t();
+          ((e[i] = l), (n.localized_media = e), t());
         }
       },
       [t, n],
@@ -41970,11 +42003,11 @@ function IJ(e) {
         fnDeletAssetLang: (e) => {
           if (n.localized_media) {
             let r = [...(n.localized_media || [])];
-            (r[e] = null), (n.localized_media = r), t();
+            ((r[e] = null), (n.localized_media = r), t());
           }
         },
         fnDeleteAllAssets: () => {
-          (n.localized_media = F([], 32, null)), t();
+          ((n.localized_media = F([], 32, null)), t());
         },
         fnGetAssetUrl: (e) => {
           if (n.localized_media && n.localized_media[e]) {
@@ -41996,7 +42029,7 @@ function LJ(e) {
     ]),
     i = (0, q.useCallback)(() => t.SetDirty(Q.jsondata_sales), [t]),
     a = (0, q.useCallback)(() => {
-      (t.GetEventModel().jsondata.sale_sub_menu = void 0), i();
+      ((t.GetEventModel().jsondata.sale_sub_menu = void 0), i());
     }, [t, i]),
     o = (0, q.useCallback)(() => {
       t.GetEventModel().jsondata.sale_sub_menu ||
@@ -42056,7 +42089,7 @@ function RJ(e) {
             subMenuSection: t,
           }),
           fnOnClearSettings: () => {
-            (t.selected_label_color = void 0), (t.hover_label_color = void 0);
+            ((t.selected_label_color = void 0), (t.hover_label_color = void 0));
           },
         }),
       },
@@ -42127,7 +42160,7 @@ function BJ(e) {
         ? (0, J.jsx)(xO, {
             items: d,
             onDelete: (e) => {
-              p(e), h();
+              (p(e), h());
             },
             onReorder: t,
             render: (e) =>
@@ -42156,14 +42189,14 @@ function BJ(e) {
       (0, J.jsx)(gu, {
         onClick: (e) => {
           let r = Math.floor(Math.random() * 1e6);
-          for (; n.menu_items.find((e) => e.unique_id == r); )
+          for (; n.menu_items.find((e) => e.unique_id == r);)
             r = Math.floor(Math.random() * 1e6);
-          n.menu_items.push({
+          (n.menu_items.push({
             unique_id: r,
             sub_menu_icon: { media_type: kh.k_MediaImage },
           }),
             t(),
-            l();
+            l());
         },
         children: H(a ?? `#Sale_SubMenu_AddItems`),
       }),
@@ -42270,7 +42303,7 @@ function UJ(e) {
             strTitle: H(a ?? `#Sale_SubMenu_Clear`),
             strDescription: H(o ?? `#Sale_SubMenu_warning`),
             onOK: () => {
-              p?.current?.setState({ checked: !1 }), l(!0);
+              (p?.current?.setState({ checked: !1 }), l(!0));
             },
             closeModal: f,
           }),
@@ -42316,7 +42349,7 @@ function GJ(e) {
       n.SetDirty(Q.jsondata_sales);
     }, [n]),
     c = (0, q.useCallback)(() => {
-      (t.tab_jump_list = void 0), s();
+      ((t.tab_jump_list = void 0), s());
     }, [t, s]),
     l = (0, q.useCallback)(() => {
       t.tab_jump_list || ((t.tab_jump_list = { menu_items: [] }), s());
@@ -42428,8 +42461,8 @@ function eY(e) {
     l = KJ(a),
     u = (0, q.useCallback)(
       (e) => {
-        (t.tab_tag_filter = e.length > 0 ? { rgNodes: e } : void 0),
-          n.SetDirty(Q.jsondata_sales);
+        ((t.tab_tag_filter = e.length > 0 ? { rgNodes: e } : void 0),
+          n.SetDirty(Q.jsondata_sales));
       },
       [t, n],
     ),
@@ -42531,11 +42564,11 @@ function aY(e) {
     [c, l] = q.useState([]),
     u = (e) => {
       let n = t.map((e, t) => !!c[t]);
-      e(n), l(n);
+      (e(n), l(n));
     },
     d = () => a([...t, rY(`storetag`, n ? [] : void 0)]),
     f = (e) => {
-      a(t.filter((t, n) => n !== e)), u((t) => t.splice(e, 1));
+      (a(t.filter((t, n) => n !== e)), u((t) => t.splice(e, 1)));
     },
     p = (e, t) => {
       n
@@ -42550,7 +42583,7 @@ function aY(e) {
         : f(e);
     },
     m = (e, n) => {
-      a(Ws([...t], e, n)), u((t) => Ws(t, e, n));
+      (a(Ws([...t], e, n)), u((t) => Ws(t, e, n)));
     },
     h = (e, n) => a(t.map((t, r) => (r === e ? n : t)));
   return (0, J.jsxs)(`div`, {
@@ -42869,7 +42902,7 @@ var pY = c((e) => {
 });
 function mY(e, t) {
   let n = Rf(e, t);
-  return (n ||= H(`#Sale_Tabs_UnnamedTab`, e.unique_id)), n;
+  return ((n ||= H(`#Sale_Tabs_UnnamedTab`, e.unique_id)), n);
 }
 var hY = c((e) => {
     let { tab: t } = e,
@@ -42906,9 +42939,9 @@ var hY = c((e) => {
         localized_label: null,
         capsules: [],
       };
-      this.props.saleSection.tabs.push(e),
+      (this.props.saleSection.tabs.push(e),
         this.props.editModel.SetDirty(Q.jsondata_sales),
-        this.forceUpdate();
+        this.forceUpdate());
     }
     OnDeleteTabPrompt(e) {
       let t = this.props.saleSection.tabs[e];
@@ -42928,11 +42961,11 @@ var hY = c((e) => {
       this.props.onTabSelected(e);
     }
     OnDeleteTabConfirmed(e) {
-      (this.props.saleSection.tabs = this.props.saleSection.tabs.filter(
+      ((this.props.saleSection.tabs = this.props.saleSection.tabs.filter(
         (t) => t != e,
       )),
         this.props.editModel.SetDirty(Q.jsondata_sales),
-        this.props.selectedTab === e && this.OnSelectTab(null);
+        this.props.selectedTab === e && this.OnSelectTab(null));
     }
     RenderTab(e, t, n, r) {
       let i = e === t;
@@ -42997,11 +43030,11 @@ var hY = c((e) => {
       });
     }
   };
-N([P], gY.prototype, `OnAddTab`, null),
+(N([P], gY.prototype, `OnAddTab`, null),
   N([P], gY.prototype, `OnDeleteTabPrompt`, null),
   N([P], gY.prototype, `OnSelectTab`, null),
   N([P], gY.prototype, `RenderTab`, null),
-  (gY = N([c], gY));
+  (gY = N([c], gY)));
 function _Y(e) {
   let { tab: t, editLanguage: n, editModel: r } = e,
     [i, a] = q.useState(
@@ -43039,7 +43072,7 @@ function _Y(e) {
           onClearCustomTitle: () => r.SetSaleSectionTabName(n, t, ``),
           onSetCustomTitle: (e) => r.SetSaleSectionTabName(n, t, e),
           onSetDefaultLabel: (e) => {
-            (t.default_label = e), r.SetDirty(Q.jsondata_sales);
+            ((t.default_label = e), r.SetDirty(Q.jsondata_sales));
           },
         },
         `TabName` + t.unique_id,
@@ -43166,7 +43199,7 @@ function bY(e) {
           r(e, {
             color: t.tab_highlight_label_color,
             onChange: (e) => {
-              (t.tab_highlight_label_color = e), n.SetDirty(Q.jsondata_sales);
+              ((t.tab_highlight_label_color = e), n.SetDirty(Q.jsondata_sales));
             },
           }),
         className: Js,
@@ -43209,7 +43242,7 @@ var xY = c((e) => {
               clanSteamID: n.GetClanSteamID(),
               OnClanImageSelected: async (e, r) => {
                 let i = _n.GetHashAndExt(e);
-                (t.tab_bar_bg_image = i), n.SetDirty(Q.jsondata_sales);
+                ((t.tab_bar_bg_image = i), n.SetDirty(Q.jsondata_sales));
               },
             },
             `saletabeditor_` + t.unique_id,
@@ -43220,7 +43253,7 @@ var xY = c((e) => {
             o(!0);
             try {
               if (!(await i.AddImage(e[0], 0)))
-                console.error(
+                (console.error(
                   `TabSaleBackgroundImageEditor.OnDropFiles: failed file=` +
                     e[0].name,
                 ),
@@ -43229,12 +43262,12 @@ var xY = c((e) => {
                       strDescription: H(`#ImagePicker_Error`, e[0].name),
                     }),
                     window,
-                  );
+                  ));
               else {
                 let e = (await i.UploadAllImages())[0],
                   r = e ? _n.GetExtensionString(e.uploadResult) : null,
                   a = e ? e.uploadResult.image_hash + r : null;
-                (t.tab_bar_bg_image = a), n.SetDirty(Q.jsondata_sales);
+                ((t.tab_bar_bg_image = a), n.SetDirty(Q.jsondata_sales));
               }
             } catch (e) {
               let t = Qs(e);
@@ -43424,9 +43457,9 @@ function TY(e) {
     } = e,
     c = (0, q.useCallback)(() => {
       let e = Ih + Math.floor(Math.random() * 1e6);
-      for (; t.social_share.content_options.find((t) => t.unique_id == e); )
+      for (; t.social_share.content_options.find((t) => t.unique_id == e);)
         e = Ih + Math.floor(Math.random() * 1e6);
-      t.social_share.content_options.push({
+      (t.social_share.content_options.push({
         unique_id: e,
         door: void 0,
         twitter_card: Vr.SummaryLargeImage,
@@ -43438,11 +43471,11 @@ function TY(e) {
         },
       }),
         r(),
-        a();
+        a());
     }, [r, t, a]),
     l = (0, q.useCallback)(
       (e) => {
-        t.social_share?.content_options.splice(e, 1), r();
+        (t.social_share?.content_options.splice(e, 1), r());
       },
       [r, t.social_share?.content_options],
     );
@@ -43508,14 +43541,14 @@ function kY(e) {
     d = (e) =>
       (0, q.useCallback)(
         (t) => {
-          (n.localized_option_fields[e] = F(
+          ((n.localized_option_fields[e] = F(
             n.localized_option_fields[e] || [],
             32,
             null,
           )),
             (n.localized_option_fields[e][i] = t),
             r(),
-            a();
+            a());
         },
         [e],
       ),
@@ -43532,17 +43565,17 @@ function kY(e) {
         ? n.localized_option_fields.localized_header[i]
         : ``,
     m = (e) => {
-      (n.localized_option_fields.localized_header = F(
+      ((n.localized_option_fields.localized_header = F(
         n.localized_option_fields.localized_header || [],
         32,
         null,
       )),
         (n.localized_option_fields.localized_header[i] = e),
         r(),
-        a();
+        a());
     },
     h = (e) => {
-      (n.door = parseInt(e.target.value)), r();
+      ((n.door = parseInt(e.target.value)), r());
     },
     g = [
       {
@@ -43626,7 +43659,7 @@ function kY(e) {
               rgOptions: g,
               selectedOption: n.twitter_card,
               onChange: (e) => {
-                (n.twitter_card = e.data), r();
+                ((n.twitter_card = e.data), r());
               },
             }),
           ],
@@ -43673,7 +43706,7 @@ function MY(e) {
       [i, t, n.localized_media],
     ),
     f = (0, q.useCallback)(async () => {
-      u(!0), c(await NY(r.GetClanSteamID(), o)), u(!1);
+      (u(!0), c(await NY(r.GetClanSteamID(), o)), u(!1));
     }, [r, o]);
   if (!o) return null;
   let p = s && s !== `none` ? s : void 0,
@@ -43747,7 +43780,7 @@ function MY(e) {
 }
 async function NY(e, t) {
   let n = new URLSearchParams();
-  n.append(`sessionid`, Tl()), n.append(`filename`, t);
+  (n.append(`sessionid`, Tl()), n.append(`filename`, t));
   try {
     let t = await fetch(Bj(e), {
       method: `POST`,
@@ -43807,9 +43840,9 @@ function LY(e) {
                 tooltip: H(`#Template_Section_Alternative_Text_ttip`),
                 value: a,
                 onChange: (e) => {
-                  (t.localized_alt_text ||= F([], 32, null)),
+                  ((t.localized_alt_text ||= F([], 32, null)),
                     t.localized_alt_text[r] != e.currentTarget.value &&
-                      ((t.localized_alt_text[r] = e.currentTarget.value), n());
+                      ((t.localized_alt_text[r] = e.currentTarget.value), n()));
                 },
               }),
             ],
@@ -43981,12 +44014,12 @@ function GY(e) {
             toggled: a && o == kh.k_MediaImage,
             tooltip: H(`#Sale_Section_Media_Layout_Title_ContentTypeMedia`),
             onClick: () => {
-              t.title_media
+              (t.title_media
                 ? (t.title_media.media_type = kh.k_MediaImage)
                 : ((t.title_media = { media_type: kh.k_MediaImage }),
                   (t.title_media.localized_media = F([], 32, null))),
                 (t.is_title_as_image = !0),
-                n();
+                n());
             },
             children: (0, J.jsx)(Qu, {}),
           }),
@@ -44030,13 +44063,14 @@ function JY(e) {
           value: u,
           onChange: (e) => {
             let r = e;
-            a && (r = 100 - r), t.text_scale != r && ((t.text_scale = r), n());
+            (a && (r = 100 - r),
+              t.text_scale != r && ((t.text_scale = r), n()));
           },
         }),
         s !== o &&
           (0, J.jsx)(V, {
             onClick: () => {
-              (t.text_scale = void 0), n();
+              ((t.text_scale = void 0), n());
             },
             children: H(`#Template_SEction_Slider_Reset`),
           }),
@@ -44067,7 +44101,7 @@ function XY(e) {
               children: (0, J.jsx)(`div`, {
                 children: (0, J.jsx)(wd, {
                   onClick: (t) => {
-                    t?.currentTarget?.focus(), r(e);
+                    (t?.currentTarget?.focus(), r(e));
                   },
                   toggled: e == n,
                   children: (0, J.jsx)(QY, { alignment: e }),
@@ -44116,9 +44150,9 @@ function eX(e) {
     l = q.useCallback(() => n.localized_media_title?.[r] || ``, [n, r]),
     u = q.useCallback(
       (e) => {
-        (n.localized_media_title ??= F([], 32, null)),
+        ((n.localized_media_title ??= F([], 32, null)),
           n.localized_media_title[r] != e &&
-            ((n.localized_media_title[r] = e), i());
+            ((n.localized_media_title[r] = e), i()));
       },
       [n, r, i],
     );
@@ -44173,9 +44207,9 @@ function tX(e) {
     c = q.useCallback(() => t.localized_media_subtitle?.[n] || ``, [t, n]),
     l = q.useCallback(
       (e) => {
-        (t.localized_media_subtitle ??= F([], 32, null)),
+        ((t.localized_media_subtitle ??= F([], 32, null)),
           t.localized_media_subtitle?.[n] != e &&
-            ((t.localized_media_subtitle[n] = e), r());
+            ((t.localized_media_subtitle[n] = e), r()));
       },
       [t, n, r],
     );
@@ -44420,7 +44454,7 @@ function SX(e) {
         children: (0, J.jsx)(V, {
           className: r,
           onClick: () => {
-            o(() => Array.from({ length: t.length }, (e, t) => t)), c();
+            (o(() => Array.from({ length: t.length }, (e, t) => t)), c());
           },
           children: d,
         }),
@@ -44472,9 +44506,9 @@ function CX(e) {
             { row: a, col: s } = o(t.droppableId),
             { row: c, col: l } = o(i.droppableId),
             u = n[a].media_columns[s];
-          (e[a].media_columns[s] = e[c].media_columns[l]),
+          ((e[a].media_columns[s] = e[c].media_columns[l]),
             (e[c].media_columns[l] = u),
-            r(e);
+            r(e));
         }
         a(null);
       },
@@ -44664,10 +44698,10 @@ function OX(e) {
                   n.media_columns.length < EX)
                 ) {
                   let e = [...n.media_columns];
-                  e.splice(t, 0, null),
+                  (e.splice(t, 0, null),
                     (n.media_columns = e),
                     n.media_columns.length == EX && (n.grow_index = void 0),
-                    r(n, t);
+                    r(n, t));
                 }
               },
               children: (0, J.jsx)(ku, {}),
@@ -44693,10 +44727,10 @@ function OX(e) {
                 disabled: !c,
                 className: `bs1zSy4ck64-`,
                 onClick: (e) => {
-                  e.preventDefault(),
+                  (e.preventDefault(),
                     e.stopPropagation(),
                     d == t ? (n.grow_index = void 0) : (n.grow_index = t),
-                    r(n, t);
+                    r(n, t));
                 },
                 children: [
                   (0, J.jsx)(Zs, {}),
@@ -44710,7 +44744,7 @@ function OX(e) {
               children: (0, J.jsx)(`button`, {
                 className: `REN-0fTbjKo-`,
                 onClick: (e) => {
-                  o(), e.stopPropagation();
+                  (o(), e.stopPropagation());
                 },
                 children: H(`#Sale_Debug_LivePreview_GoTo`),
               }),
@@ -44755,12 +44789,12 @@ function jX(e) {
     } = e,
     [o, s, c] = Ku(!1),
     l = (0, q.useCallback)(() => {
-      r.media_columns.splice(t, 1),
+      (r.media_columns.splice(t, 1),
         (r.media_columns = [...r.media_columns]),
         (r.media_columns.length < 2 ||
           r.grow_index >= r.media_columns.length) &&
           (r.grow_index = void 0),
-        a(r, t - 1 >= 0 ? t - 1 : 0);
+        a(r, t - 1 >= 0 ? t - 1 : 0));
     }, [a, r, t]),
     [u] = w(() => [i > 1 || r.media_columns.length > 1]);
   return (0, J.jsxs)(J.Fragment, {
@@ -44817,7 +44851,7 @@ function MX(e) {
           children: (0, J.jsx)(V, {
             className: xX,
             onClick: (e) => {
-              e.preventDefault(), e.stopPropagation(), o();
+              (e.preventDefault(), e.stopPropagation(), o());
             },
             children: (0, J.jsx)(Rc, {}),
           }),
@@ -44888,7 +44922,7 @@ function IX(e) {
             selectedMedia: a,
             fnUpdateColumnsOfMediaRow: (e, t) => {
               let r = n.media_container.media_rows.findIndex((t) => t === e);
-              e.media_columns.length == 0
+              (e.media_columns.length == 0
                 ? (n.media_container.media_rows.splice(r, 1),
                   (n.media_container.media_rows = [
                     ...n.media_container.media_rows,
@@ -44898,7 +44932,7 @@ function IX(e) {
                     e.media_columns[r] || (e.media_columns[r] = _O(n));
                   }),
                   t && o({ row: r, col: t })),
-                s();
+                s());
             },
             fnUpdateMediaRows: i,
           }),
@@ -44935,7 +44969,7 @@ function LX(e) {
                 className: G({ [PX]: !0, [FX]: e == o }),
                 onClick: () => s(e),
                 onDoubleClick: () => {
-                  yO(c, t, n, e), a();
+                  (yO(c, t, n, e), a());
                 },
                 children: (0, J.jsx)(RX, { nColCount: e }),
               },
@@ -45184,30 +45218,30 @@ function iZ(e) {
           (0, J.jsx)(hZ, {
             bHasMobileOrTabletVersion: !!o,
             fnOnDeleteMobileOrTablet: () => {
-              (t.media_overlay_mobile_content_varient = void 0), r();
+              ((t.media_overlay_mobile_content_varient = void 0), r());
             },
             fnOnCreateMobileOrTablet: () => {
-              (t.media_overlay_mobile_content_varient = JSON.parse(
+              ((t.media_overlay_mobile_content_varient = JSON.parse(
                 JSON.stringify(a),
               )),
                 (t.media_overlay_mobile_content_varient.display_order =
                   Ah.k_OverlayMedia),
-                r();
+                r());
             },
             bIsMobile: !0,
           }),
           (0, J.jsx)(hZ, {
             bHasMobileOrTabletVersion: !!s,
             fnOnDeleteMobileOrTablet: () => {
-              (t.media_overlay_tablet_content_varient = void 0), r();
+              ((t.media_overlay_tablet_content_varient = void 0), r());
             },
             fnOnCreateMobileOrTablet: () => {
-              (t.media_overlay_tablet_content_varient = JSON.parse(
+              ((t.media_overlay_tablet_content_varient = JSON.parse(
                 JSON.stringify(a),
               )),
                 (t.media_overlay_tablet_content_varient.display_order =
                   Ah.k_OverlayMedia),
-                r();
+                r());
             },
             bIsMobile: !1,
           }),
@@ -45364,7 +45398,7 @@ function lZ(e) {
         : null,
     p = (0, q.useCallback)(
       (e) => {
-        (t.media_container.media_rows = e), r();
+        ((t.media_container.media_rows = e), r());
       },
       [r, t.media_container],
     ),
@@ -45496,30 +45530,30 @@ function fZ(e) {
           (0, J.jsx)(hZ, {
             bHasMobileOrTabletVersion: !!o,
             fnOnCreateMobileOrTablet: () => {
-              (t.mobile_content_varient = mZ(t, [
+              ((t.mobile_content_varient = mZ(t, [
                 `unique_id`,
                 `mobile_content_varient`,
                 `internal_name`,
               ])),
-                n();
+                n());
             },
             fnOnDeleteMobileOrTablet: () => {
-              (t.mobile_content_varient = void 0), n();
+              ((t.mobile_content_varient = void 0), n());
             },
             bIsMobile: !0,
           }),
           (0, J.jsx)(hZ, {
             bHasMobileOrTabletVersion: !!s,
             fnOnCreateMobileOrTablet: () => {
-              (t.tablet_content_varient = mZ(t, [
+              ((t.tablet_content_varient = mZ(t, [
                 `unique_id`,
                 `tablet_content_varient`,
                 `internal_name`,
               ])),
-                n();
+                n());
             },
             fnOnDeleteMobileOrTablet: () => {
-              (t.tablet_content_varient = void 0), n();
+              ((t.tablet_content_varient = void 0), n());
             },
             bIsMobile: !1,
           }),
@@ -45751,9 +45785,9 @@ function yZ(e) {
     u = q.useCallback(() => t.localized_media_description?.[n] || ``, [t, n]),
     d = q.useCallback(
       (e) => {
-        (t.localized_media_description ??= F([], 32, null)),
+        ((t.localized_media_description ??= F([], 32, null)),
           t.localized_media_description[n] != e &&
-            ((t.localized_media_description[n] = e), r());
+            ((t.localized_media_description[n] = e), r()));
       },
       [t, n, r],
     );
@@ -45795,7 +45829,7 @@ function bZ(e) {
   let { saleSection: t, editModel: n } = e,
     r = (0, q.useCallback)(
       (e) => {
-        (t.steam_review_section_data = e), n.SetDirty(Q.jsondata_sales);
+        ((t.steam_review_section_data = e), n.SetDirty(Q.jsondata_sales));
       },
       [t, n],
     );
@@ -45806,23 +45840,23 @@ function bZ(e) {
 }
 function xZ(e, t) {
   let n = Eh + Math.floor(Math.random() * 1e6);
-  for (; e.tech_specs.tech_spec_block_list.find((e) => e.unique_id == n); )
+  for (; e.tech_specs.tech_spec_block_list.find((e) => e.unique_id == n);)
     n = Eh + Math.floor(Math.random() * 1e6);
   let r = { unique_id: n, localized_block_title: [], spec_list: [] };
-  (e.tech_specs.tech_spec_block_list = [
+  ((e.tech_specs.tech_spec_block_list = [
     ...e.tech_specs.tech_spec_block_list,
     r,
   ]),
-    t();
+    t());
 }
 function SZ(e, t, n) {
   let r = e.tech_specs.tech_spec_block_list.filter((e, n) => n !== t);
-  (e.tech_specs.tech_spec_block_list = r), n();
+  ((e.tech_specs.tech_spec_block_list = r), n());
 }
 function CZ(e, t, n, r) {
-  (e.localized_block_title = F(e.localized_block_title || [], 32, null)),
+  ((e.localized_block_title = F(e.localized_block_title || [], 32, null)),
     (e.localized_block_title[n] = t),
-    r();
+    r());
 }
 function wZ(e, t) {
   return e.localized_block_title?.length > t ? e.localized_block_title[t] : ``;
@@ -45842,27 +45876,27 @@ function TZ(e, t, n) {
     localized_spec_name: [],
     localized_spec_description: [],
   };
-  (t.spec_list = [...t.spec_list, i]), n();
+  ((t.spec_list = [...t.spec_list, i]), n());
 }
 function EZ(e, t, n) {
-  (e.spec_list = e.spec_list.filter((e, n) => n !== t)), n();
+  ((e.spec_list = e.spec_list.filter((e, n) => n !== t)), n());
 }
 function DZ(e, t, n, r) {
-  (e.localized_spec_name = F(e.localized_spec_name || [], 32, null)),
+  ((e.localized_spec_name = F(e.localized_spec_name || [], 32, null)),
     (e.localized_spec_name[n] = t),
-    r();
+    r());
 }
 function OZ(e, t) {
   return e.localized_spec_name?.length > t ? e.localized_spec_name[t] : ``;
 }
 function kZ(e, t, n, r) {
-  (e.localized_spec_description = F(
+  ((e.localized_spec_description = F(
     e.localized_spec_description || [],
     32,
     null,
   )),
     (e.localized_spec_description[n] = t),
-    r();
+    r());
 }
 function AZ(e, t) {
   return e.localized_spec_description?.length > t
@@ -46061,8 +46095,8 @@ function IZ(e) {
         rgOptions: r,
         selectedOption: n.recent_tagged_events_source,
         onChange: (e) => {
-          (n.recent_tagged_events_source = e.data),
-            t.SetDirty(Q.jsondata_sales);
+          ((n.recent_tagged_events_source = e.data),
+            t.SetDirty(Q.jsondata_sales));
         },
       }),
     ],
@@ -46104,7 +46138,8 @@ function LZ(e) {
         rgOptions: r,
         selectedOption: n.recent_tagged_events_sort,
         onChange: (e) => {
-          (n.recent_tagged_events_sort = e.data), t.SetDirty(Q.jsondata_sales);
+          ((n.recent_tagged_events_sort = e.data),
+            t.SetDirty(Q.jsondata_sales));
         },
       }),
     ],
@@ -46150,13 +46185,13 @@ var RZ = c((e) => {
         label: `Show events newer than (in number of weeks ago)`,
         value: t.event_schedule_start_weeks ?? 4,
         onChange: (e) => {
-          (t.event_schedule_start_weeks = Number.isFinite(
+          ((t.event_schedule_start_weeks = Number.isFinite(
             Number(e.target.value),
           )
             ? Number(e.target.value)
             : 0),
             (t.event_schedule_use_relative_time = !0),
-            n.SetDirty(Q.jsondata_sales);
+            n.SetDirty(Q.jsondata_sales));
         },
       }),
     ],
@@ -46239,7 +46274,7 @@ function WZ(e) {
             onDelete:
               i.length > 1
                 ? (e) => {
-                    i.splice(e, 1), n.SetDirty(Q.jsondata_sales);
+                    (i.splice(e, 1), n.SetDirty(Q.jsondata_sales));
                   }
                 : void 0,
             render: (e) =>
@@ -46247,11 +46282,11 @@ function WZ(e) {
           }),
         (0, J.jsx)(V, {
           onClick: () => {
-            (t.sale_page_cross_promo_sales = [
+            ((t.sale_page_cross_promo_sales = [
               ...(t.sale_page_cross_promo_sales ?? []),
               {},
             ]),
-              n.SetDirty(Q.jsondata_sales);
+              n.SetDirty(Q.jsondata_sales));
           },
           children: H(`#Sale_CrossPromoSale_AddSale`),
         }),
@@ -46418,7 +46453,7 @@ function QZ(e) {
             (0, J.jsx)(`a`, {
               href: `#`,
               onClick: (e) => {
-                e.preventDefault(), e.stopPropagation(), a();
+                (e.preventDefault(), e.stopPropagation(), a());
               },
             }),
           ),
@@ -46438,11 +46473,11 @@ function QZ(e) {
                 let e = r.match(/\/([^\/]+\.(png|jpg|gif))/i);
                 if (e) {
                   let t = e[1];
-                  (n.section_type = `title_image`),
+                  ((n.section_type = `title_image`),
                     (n.localized_label_image = void 0),
                     (n.links = [
                       { url: null, localized_link_capsule: F([t], 32, null) },
-                    ]);
+                    ]));
                 }
               },
             }),
@@ -46585,7 +46620,7 @@ function eQ(e) {
     f = (0, q.useCallback)(
       (e) => {
         let t = F(r || [], 32, null);
-        (t[i] = e), c(t);
+        ((t[i] = e), c(t));
       },
       [c, i, r],
     ),
@@ -46652,13 +46687,13 @@ function tQ(e) {
         );
       )
         e = `reservation_` + Math.floor(Math.random() * 1e6);
-      n.internal_section_data.reservation_options.push({
+      (n.internal_section_data.reservation_options.push({
         unique_id: e,
         localized_reservation_desc: [],
         localized_out_of_stock_override: [],
         localized_delivery_override_desc: [],
       }),
-        t();
+        t());
     }, [t, n.internal_section_data]),
     [l, u] = (0, q.useState)(null),
     [d, f, p] = Ku();
@@ -46673,7 +46708,7 @@ function tQ(e) {
       (0, J.jsx)(sf, {
         settings: s,
         fnOnUpdate: (e) => {
-          (n.internal_section_data.reservation_advanced = e), t();
+          ((n.internal_section_data.reservation_advanced = e), t());
         },
       }),
       (0, J.jsxs)(vW, {
@@ -46684,7 +46719,7 @@ function tQ(e) {
           (0, J.jsx)(xO, {
             items: a,
             onDelete: (e) => {
-              u(e), f();
+              (u(e), f());
             },
             onReorder: t,
             render: (e) =>
@@ -46729,11 +46764,13 @@ function nQ(e) {
       (0, J.jsx)(Ji, {
         value: r,
         onTextChange: (e) => {
-          (n.internal_section_data ||= { internal_type: `reservation_widget` }),
+          ((n.internal_section_data ||= {
+            internal_type: `reservation_widget`,
+          }),
             e
               ? (n.internal_section_data.reservation_learn_more_link = e)
               : (n.internal_section_data.reservation_learn_more_link = void 0),
-            t();
+            t());
         },
         clearable: !0,
         placeholder: `Optional url... start with https://`,
@@ -46748,11 +46785,11 @@ function rQ(e) {
     children: (0, J.jsx)(Zf, {
       value: i,
       onValueChange: (e) => {
-        (n.internal_section_data ||= { internal_type: `reservation_widget` }),
+        ((n.internal_section_data ||= { internal_type: `reservation_widget` }),
           e
             ? (n.internal_section_data.reservation_appid_wishlist = e)
             : (n.internal_section_data.reservation_appid_wishlist = void 0),
-          t();
+          t());
       },
       label: `AppID for Wishlists`,
       tooltip: `Only a single appid can be selected for the entire reservation widget. This is only used for collecting wishlists from users`,
@@ -46807,10 +46844,10 @@ function oQ(e) {
     strEditTitle: H(`#Sale_ReserveEditor_EditTitle`),
     strEditDesc: H(`#Sale_ReserveEditor_EditDesc`),
     fnSetUsePackageDescription: (e) => {
-      (t.use_package_description = e), n();
+      ((t.use_package_description = e), n());
     },
     fnSetLocalizedDesc: (e) => {
-      (t.localized_reservation_desc = e), n();
+      ((t.localized_reservation_desc = e), n());
     },
     children: [
       (0, J.jsxs)(zl, {
@@ -46829,7 +46866,7 @@ function oQ(e) {
       (0, J.jsx)(cf, {
         callout: c,
         fnOnChange: (e) => {
-          (t.callout = { ...e }), n();
+          ((t.callout = { ...e }), n());
         },
       }),
     ],
@@ -46851,9 +46888,9 @@ function cQ(e) {
       t.purchase_requires_owned_appid ?? 0,
     ]),
     o = (0, q.useCallback)(() => {
-      (t.purchase_requires_purchasable_packages ||= []),
+      ((t.purchase_requires_purchasable_packages ||= []),
         t.purchase_requires_purchasable_packages.push(0),
-        n();
+        n());
     }, [n, t]);
   return (0, J.jsxs)(J.Fragment, {
     children: [
@@ -46882,10 +46919,10 @@ function cQ(e) {
               }),
               (0, J.jsxs)(V, {
                 onClick: () => {
-                  (t.purchase_requires_purchasable_packages = r.filter(
+                  ((t.purchase_requires_purchasable_packages = r.filter(
                     (e, t) => t !== i,
                   )),
-                    n();
+                    n());
                 },
                 children: [`Remove Package `, i + 1],
               }),
@@ -46936,13 +46973,13 @@ function uQ(e) {
     [o, s] = (0, q.useState)(() => a.length > 0),
     c = (0, q.useCallback)(
       (e) => {
-        (t.localized_out_of_stock_override = F(
+        ((t.localized_out_of_stock_override = F(
           t.localized_out_of_stock_override || [],
           32,
           null,
         )),
           (t.localized_out_of_stock_override[i] = e),
-          n();
+          n());
       },
       [n, i, t],
     );
@@ -46959,7 +46996,7 @@ function uQ(e) {
             }),
             (0, J.jsx)(V, {
               onClick: () => {
-                (t.localized_out_of_stock_override = []), s(!1), n();
+                ((t.localized_out_of_stock_override = []), s(!1), n());
               },
               children: `Clear Override`,
             }),
@@ -46988,13 +47025,13 @@ function dQ(e) {
     [s, c] = (0, q.useState)(a.length > 0),
     l = (0, q.useCallback)(
       (e) => {
-        (t.localized_delivery_override_desc = F(
+        ((t.localized_delivery_override_desc = F(
           t.localized_delivery_override_desc || [],
           32,
           null,
         )),
           (t.localized_delivery_override_desc[i] = e),
-          n();
+          n());
       },
       [n, i, t],
     );
@@ -47023,15 +47060,15 @@ function dQ(e) {
               label: `Only override delivery when out-of-stock`,
               tooltip: `By default, we will override delivery all of the time. If check, we only override when out of stock`,
               onChange: (e) => {
-                (t.override_delivery_only_out_of_stock = e), n();
+                ((t.override_delivery_only_out_of_stock = e), n());
               },
             }),
             (0, J.jsx)(V, {
               onClick: () => {
-                (t.localized_delivery_override_desc = []),
+                ((t.localized_delivery_override_desc = []),
                   (t.override_delivery_only_out_of_stock = !1),
                   c(!1),
-                  n();
+                  n());
               },
               children: `Clear Delivery Msg Override`,
             }),
@@ -47062,15 +47099,15 @@ function fQ(e) {
         );
       )
         e = `last_` + Math.floor(Math.random() * 1e6);
-      n.internal_section_data.while_supplies_last_option.push({
+      (n.internal_section_data.while_supplies_last_option.push({
         unique_id: e,
         localized_supply_desc: [],
       }),
-        t();
+        t());
     }, [t, n.internal_section_data]),
     o = (0, q.useCallback)(
       (e) => {
-        i.splice(e, 1), t();
+        (i.splice(e, 1), t());
       },
       [t, i],
     );
@@ -47128,10 +47165,10 @@ function pQ(e) {
         strEditTitle: H(`#Sale_WhileSuppliesLastEditor_EditTitle`),
         strEditDesc: H(`#Sale_WhileSuppliesLastEditor_EditDesc`),
         fnSetUsePackageDescription: (e) => {
-          (t.use_package_description = e), n();
+          ((t.use_package_description = e), n());
         },
         fnSetLocalizedDesc: (e) => {
-          (t.localized_supply_desc = e), n();
+          ((t.localized_supply_desc = e), n());
         },
       }),
       !a &&
@@ -47145,14 +47182,14 @@ var mQ = c((e) => {
     let { editModel: t, saleSection: n, index: r } = e,
       { internal_section_data: i } = n,
       a = (e) => {
-        (i.internal_type = e.data), t.SetDirty(Q.jsondata_sales);
+        ((i.internal_type = e.data), t.SetDirty(Q.jsondata_sales));
       },
       o = (e) => {
-        (i.subscription_logo_image = e.target.value),
-          t.SetDirty(Q.jsondata_sales);
+        ((i.subscription_logo_image = e.target.value),
+          t.SetDirty(Q.jsondata_sales));
       },
       s = (e) => {
-        (i.cyoa_story_genre = e.data), t.SetDirty(Q.jsondata_sales);
+        ((i.cyoa_story_genre = e.data), t.SetDirty(Q.jsondata_sales));
       },
       c = [
         {
@@ -47264,8 +47301,8 @@ function gQ(e) {
             label: H(`#Sale_TrailerCarouselType_IntroVideo`),
             tooltip: H(`#Sale_TrailerCarouselType_IntroVideo_ttip`),
             onChange: (e) => {
-              (t.trailer_carousel_intro_video_appid = e.target.value),
-                n.SetDirty(Q.jsondata_sales);
+              ((t.trailer_carousel_intro_video_appid = e.target.value),
+                n.SetDirty(Q.jsondata_sales));
             },
             value: r || ``,
           }),
@@ -47274,8 +47311,8 @@ function gQ(e) {
             label: H(`#Sale_TrailerCarouselType_IntroTrailer`),
             tooltip: H(`#Sale_TrailerCarouselType_IntroTrailer_ttip`),
             onChange: (e) => {
-              (t.trailer_carousel_intro_trailer_base_id = e.target.value),
-                n.SetDirty(Q.jsondata_sales);
+              ((t.trailer_carousel_intro_trailer_base_id = e.target.value),
+                n.SetDirty(Q.jsondata_sales));
             },
             value: i || ``,
           }),
@@ -47508,10 +47545,10 @@ function wQ(e) {
     [i, a] = q.useState(r?.length > 0),
     o = new Set(r),
     s = (e) => {
-      a(e), o.clear(), (t.hardware_allow_list = [...o]), n();
+      (a(e), o.clear(), (t.hardware_allow_list = [...o]), n());
     },
     c = (e, r) => {
-      r ? o.add(e) : o.delete(e), (t.hardware_allow_list = [...o]), n();
+      (r ? o.add(e) : o.delete(e), (t.hardware_allow_list = [...o]), n());
     };
   return (0, J.jsxs)(J.Fragment, {
     children: [
@@ -47611,8 +47648,8 @@ function TQ(e) {
           value: o || 0,
           onChange: (e) => {
             let r = Number.parseInt(e.target.value);
-            o != r && (t.door_index_visibility = r),
-              n.SetDirty(Q.jsondata_sales);
+            (o != r && (t.door_index_visibility = r),
+              n.SetDirty(Q.jsondata_sales));
           },
         }),
     ],
@@ -47660,7 +47697,8 @@ function EQ(e) {
               nEarliestTime: 0,
               fnGetTimeToUpdate: () => a,
               fnSetTimeToUpdate: (e) => {
-                (n.hide_section_before_rtime = e), t.SetDirty(Q.jsondata_sales);
+                ((n.hide_section_before_rtime = e),
+                  t.SetDirty(Q.jsondata_sales));
               },
             }),
             H(`#Sale_Section_Visibility_TimeZone`),
@@ -47686,7 +47724,8 @@ function EQ(e) {
               nEarliestTime: 0,
               fnGetTimeToUpdate: () => i,
               fnSetTimeToUpdate: (e) => {
-                (n.hide_section_after_rtime = e), t.SetDirty(Q.jsondata_sales);
+                ((n.hide_section_after_rtime = e),
+                  t.SetDirty(Q.jsondata_sales));
               },
             }),
             H(`#Sale_Section_Visibility_TimeZone`),
@@ -47885,7 +47924,7 @@ function jQ(e) {
       (0, J.jsx)(xO, {
         items: r,
         onDelete: (e) => {
-          a(e), s();
+          (a(e), s());
         },
         onReorder: t,
         render: (e) =>
@@ -47899,7 +47938,7 @@ function jQ(e) {
         onClick: () => {
           n.product_configs ||= [];
           let e = Math.floor(1 + Math.random() * 1e5);
-          for (; n.product_configs.find((t) => t.unique_id == e); )
+          for (; n.product_configs.find((t) => t.unique_id == e);)
             e = Math.floor(1 + Math.random() * 1e5);
           n.product_configs = [
             ...n.product_configs,
@@ -47988,14 +48027,14 @@ function NQ(e) {
               null,
             ));
           let r = [...t.localized_product_config_title];
-          (r[i] = e), (t.localized_product_config_title = r), n();
+          ((r[i] = e), (t.localized_product_config_title = r), n());
         },
         placeholder: `Category name like Model or bundle...`,
       }),
       (0, J.jsx)(xO, {
         items: o,
         onDelete: (e) => {
-          c(e), u();
+          (c(e), u());
         },
         onReorder: n,
         render: (e) => (0, J.jsx)(PQ, { fnOnDirty: n, variation: e }),
@@ -48005,7 +48044,7 @@ function NQ(e) {
           t.variations ||= [];
           let e = Math.floor(1 + Math.random() * 1e5),
             n = r.flatMap((e) => e.variations ?? []);
-          for (; n.find((t) => t.unique_id == e); )
+          for (; n.find((t) => t.unique_id == e);)
             e = Math.floor(1 + Math.random() * 1e5);
           t.variations = [
             ...t.variations,
@@ -48051,7 +48090,7 @@ function PQ(e) {
               null,
             ));
           let i = [...n.localized_variation_name];
-          (i[r] = e), (n.localized_variation_name = i), t();
+          ((i[r] = e), (n.localized_variation_name = i), t());
         },
         placeholder: `Enter the variable name...`,
       }),
@@ -48106,7 +48145,7 @@ function LQ(e) {
       ),
       (0, J.jsx)(Xs, {
         onClick: () => {
-          (n.package_to_config_tuple = []), t();
+          ((n.package_to_config_tuple = []), t());
         },
         children: `Reset Variation to Package Mapping`,
       }),
@@ -48287,8 +48326,8 @@ function KQ(e) {
         let r = t.internal_section_data,
           i = { ...r.while_supplies_last_row_style, ...e };
         for (let e of Object.keys(i)) i[e] || delete i[e];
-        (r.while_supplies_last_row_style = Object.keys(i).length ? i : void 0),
-          n.SetDirty(Q.jsondata_sales);
+        ((r.while_supplies_last_row_style = Object.keys(i).length ? i : void 0),
+          n.SetDirty(Q.jsondata_sales));
       },
       [n, t.internal_section_data],
     );
@@ -48441,8 +48480,8 @@ function qQ(e, t, n, r, i, a, o, s, c, l, u) {
           children: (0, J.jsx)(R, {
             value: t.contenthub_override_section,
             onChange: (n) => {
-              (t.contenthub_override_section = n.target.value.trim()),
-                e.SetDirty(Q.jsondata_sales);
+              ((t.contenthub_override_section = n.target.value.trim()),
+                e.SetDirty(Q.jsondata_sales));
             },
             label: `Section override ID (for content hubs only)`,
             tooltip: `Set this to any string value. When rendering a content hub, if this sale event is a time-bound override, then this section will be shown in place of the section with the same override ID in the "normal" content hub sale page.`,
@@ -48512,15 +48551,19 @@ var JQ = `ASrRByRF-bQ-`,
                 localized_label: a,
                 editModel: e.editModel,
                 onClearCustomTitle: () => {
-                  (t.localized_label = L.Set(t.localized_label || [], r, null)),
-                    n.SetDirty(Q.jsondata_sales);
+                  ((t.localized_label = L.Set(
+                    t.localized_label || [],
+                    r,
+                    null,
+                  )),
+                    n.SetDirty(Q.jsondata_sales));
                 },
                 onSetCustomTitle: (e) => {
-                  (t.localized_label = L.Set(t.localized_label || [], r, e)),
-                    n.SetDirty(Q.jsondata_sales);
+                  ((t.localized_label = L.Set(t.localized_label || [], r, e)),
+                    n.SetDirty(Q.jsondata_sales));
                 },
                 onSetDefaultLabel: (e) => {
-                  (t.default_label = e), n.SetDirty(Q.jsondata_sales);
+                  ((t.default_label = e), n.SetDirty(Q.jsondata_sales));
                 },
               }),
             ],
@@ -48539,7 +48582,7 @@ var JQ = `ASrRByRF-bQ-`,
                 className: `-ZSejjJJ5yU-`,
                 children: (0, J.jsx)(gu, {
                   onClick: (e) => {
-                    e.preventDefault(),
+                    (e.preventDefault(),
                       e.stopPropagation(),
                       z(
                         (0, J.jsx)(TU, {
@@ -48559,7 +48602,7 @@ var JQ = `ASrRByRF-bQ-`,
                           },
                         }),
                         Vu(e),
-                      );
+                      ));
                   },
                   children:
                     y > 0
@@ -48579,7 +48622,8 @@ var JQ = `ASrRByRF-bQ-`,
                 tooltip: H(`#Sale_LinkURL_title_hint`),
                 placeholder: H(`#Sale_LinkURL`),
                 onChange: (e) => {
-                  (t.label_link = e.target.value), n.SetDirty(Q.jsondata_sales);
+                  ((t.label_link = e.target.value),
+                    n.SetDirty(Q.jsondata_sales));
                 },
                 value: o,
               }),
@@ -48597,23 +48641,23 @@ var JQ = `ASrRByRF-bQ-`,
                 localized_label: l,
                 editModel: n,
                 onClearCustomTitle: () => {
-                  (t.localized_subtitle = L.Set(
+                  ((t.localized_subtitle = L.Set(
                     t.localized_subtitle || [],
                     r,
                     null,
                   )),
-                    n.SetDirty(Q.jsondata_sales);
+                    n.SetDirty(Q.jsondata_sales));
                 },
                 onSetCustomTitle: (e) => {
-                  (t.localized_subtitle = L.Set(
+                  ((t.localized_subtitle = L.Set(
                     t.localized_subtitle || [],
                     r,
                     e,
                   )),
-                    n.SetDirty(Q.jsondata_sales);
+                    n.SetDirty(Q.jsondata_sales));
                 },
                 onSetDefaultLabel: (e) => {
-                  (t.default_subtitle = e), n.SetDirty(Q.jsondata_sales);
+                  ((t.default_subtitle = e), n.SetDirty(Q.jsondata_sales));
                 },
               }),
             ],
@@ -48676,8 +48720,8 @@ function XQ(e) {
         clanSteamID: n.GetClanSteamID(),
         children: (0, J.jsx)(Rl, {
           onChange: (e) => {
-            (t.label_link_style = e ? `browseall` : void 0),
-              n.SetDirty(Q.jsondata_sales);
+            ((t.label_link_style = e ? `browseall` : void 0),
+              n.SetDirty(Q.jsondata_sales));
           },
           label: `(VO) ` + H(`#Sale_Section_TitleLink_BrowseAll`),
           tooltip: H(`#Sale_Section_TitleLink_BrowseAll_ttip`),
@@ -48696,10 +48740,10 @@ function ZQ(e) {
           (0, J.jsx)(`div`, {
             className: JQ,
             onClick: (e) => {
-              c(JSON.parse(JSON.stringify(t))),
+              (c(JSON.parse(JSON.stringify(t))),
                 a(),
                 e.stopPropagation(),
-                e.preventDefault();
+                e.preventDefault());
             },
             children: (0, J.jsx)(Tc, {}),
           }),
@@ -48712,7 +48756,7 @@ function ZQ(e) {
                 strTitle: H(`#Sale_Section_EditTitle`),
                 onCancel: () => {
                   for (let e of Object.keys(t)) e in s || delete t[e];
-                  Object.assign(t, s), n.SetDirty(Q.jsondata_sales), o();
+                  (Object.assign(t, s), n.SetDirty(Q.jsondata_sales), o());
                 },
                 closeModal: o,
                 children: (0, J.jsx)(YQ, { editModel: n, saleSection: t }),
@@ -48955,7 +48999,7 @@ var n$ = c((e) => {
     let e = new Set(),
       n = new Set(),
       r = new Set();
-    t.capsules?.forEach((t) => {
+    (t.capsules?.forEach((t) => {
       t &&
         (t.type === `bundle`
           ? n.add(Number(t.id))
@@ -48971,11 +49015,11 @@ var n$ = c((e) => {
         t.events
           .filter((e) => !!e?.announcement_gid)
           .map((e) => e.announcement_gid),
-      );
+      ));
   }, [t]);
   let u = (e) => {
-      $.SetSaleSectionType(n.GetEventType(), t, e),
-        n.SetDirty(Q.jsondata_sales);
+      ($.SetSaleSectionType(n.GetEventType(), t, e),
+        n.SetDirty(Q.jsondata_sales));
     },
     d = (e) => iA(nA(t), e),
     f = (e) => {
@@ -48986,7 +49030,7 @@ var n$ = c((e) => {
     h = Jc(m),
     [g, _] = q.useState(!1),
     v = () => {
-      p && f(!0), m.current?.scrollIntoView(), _(!0);
+      (p && f(!0), m.current?.scrollIntoView(), _(!0));
     },
     y = mO(),
     { bHighlighted: b, fnJumpTo: x } = u$(t.unique_id, h, v),
@@ -49041,7 +49085,7 @@ var n$ = c((e) => {
                 children: (0, J.jsx)(`button`, {
                   className: `OeL3uQRIdtI-`,
                   onClick: (e) => {
-                    x(), e.stopPropagation();
+                    (x(), e.stopPropagation());
                   },
                   children: H(`#Sale_Debug_LivePreview_GoTo`),
                 }),
@@ -49275,9 +49319,9 @@ var a$ = (e) => {
             category: t.GetEventModel().GetContentHubCategory(),
             tagid: t.GetEventModel().GetContentHubTag(),
           };
-          (t.GetEventModel().jsondata.source_content_hub = e),
+          ((t.GetEventModel().jsondata.source_content_hub = e),
             t.GetEventModel().jsondata.bAutoUpdateVanityURLForContentHub &&
-              s$(e, t);
+              s$(e, t));
         }
         t.SetDirty(Q.jsondata_sales);
       },
@@ -49334,7 +49378,7 @@ function s$(e, t) {
     );
   else {
     let n = `contenthubsalepage_`;
-    t.GetEventModel().jsondata.sale_defines_specific_contenthub
+    (t.GetEventModel().jsondata.sale_defines_specific_contenthub
       ? ((n += e.type),
         e.type === `category`
           ? (n += `_` + e.category)
@@ -49342,7 +49386,7 @@ function s$(e, t) {
       : (n += `default`),
       t.GetEventModel().jsondata.sale_defines_temporary_contenthub &&
         (n = `override_` + n),
-      (t.GetEventModel().jsondata.sale_vanity_id = n);
+      (t.GetEventModel().jsondata.sale_vanity_id = n));
   }
 }
 function c$(e) {
@@ -49391,7 +49435,7 @@ function m$(e) {
     m = p ? a?.filter((e) => (e.title() ?? ``).toLowerCase().includes(p)) : a,
     h = !!a && a.length >= p$,
     g = () => {
-      i(l === f$ ? void 0 : l), t?.();
+      (i(l === f$ ? void 0 : l), t?.());
     },
     _ = (e) => {
       let t =
@@ -49564,8 +49608,8 @@ function b$(e) {
           closeModal: l,
           onSelect: (e) => {
             s(() => {
-              (t.GetEventModel().jsondata.sale_creator_home_filter_listid = e),
-                t.SetDirty(Q.jsondata_sales);
+              ((t.GetEventModel().jsondata.sale_creator_home_filter_listid = e),
+                t.SetDirty(Q.jsondata_sales));
             });
           },
         }),
@@ -49625,7 +49669,7 @@ var C$ = (e) =>
     m_storageKey;
     m_Tags = [];
     constructor(e) {
-      m(this), (this.m_storageKey = `RecentTags_` + e);
+      (m(this), (this.m_storageKey = `RecentTags_` + e));
       let t = window.localStorage.getItem(this.m_storageKey);
       this.m_Tags = t ? JSON.parse(t) : [];
     }
@@ -49686,7 +49730,7 @@ function O$(e) {
     a = q.useRef(0),
     o = q.useRef(void 0),
     s = (e, n) => {
-      (o.current.element.value = ``), t(e, n);
+      ((o.current.element.value = ``), t(e, n));
     };
   return (0, J.jsx)(`div`, {
     className: sE,
@@ -49766,9 +49810,9 @@ function k$(e) {
     r = w(() => n.sale_tag_filter),
     i = (e) => {
       let r = cO(t);
-      (n.sale_tag_filter = e),
+      ((n.sale_tag_filter = e),
         (n.capsules = iO(r, e, n.capsules)),
-        t.SetDirty(Q.jsondata_sales);
+        t.SetDirty(Q.jsondata_sales));
     };
   return (0, J.jsx)(`div`, {
     className: mE,
@@ -49935,7 +49979,7 @@ function M$(e) {
         let r = [],
           i = [],
           a = [];
-        e.forEach((e) => {
+        (e.forEach((e) => {
           e.capsule.type == `bundle`
             ? a.push(e.capsule.id)
             : e.capsule.type == `sub`
@@ -49947,7 +49991,7 @@ function M$(e) {
             .HintLoadStoreItems(r, i, a, null, null, null, jD)
             .finally(() => {
               t.token?.reason || n(!1);
-            });
+            }));
       }
       return () => t.cancel(`TagItemEditor: unmounting`);
     }, []),
@@ -50219,9 +50263,9 @@ function F$(e) {
           filter: r,
           title: H(`#Sale_TagFilter_EditFilter`),
           onApplyFilter: (e) => {
-            (t.GetEventModel().jsondata.tagged_item_filter = e),
+            ((t.GetEventModel().jsondata.tagged_item_filter = e),
               aO(t),
-              t.SetDirty(Q.jsondata_sales);
+              t.SetDirty(Q.jsondata_sales));
           },
           ignoreEventFilter: !0,
         }),
@@ -50245,7 +50289,7 @@ function I$(e) {
         (0, J.jsx)(Sj, {
           onDiscountEventSelected: async (e, i) => {
             let a = [];
-            e.forEach((e) => {
+            (e.forEach((e) => {
               if (
                 !n.find((t) => t.capsule.id === e && t.capsule.type !== `sub`)
               ) {
@@ -50264,7 +50308,7 @@ function I$(e) {
                   .GetEventModel()
                   .GetTaggedItems()
                   .push(...a),
-                t.SetDirty(Q.jsondata_sales));
+                t.SetDirty(Q.jsondata_sales)));
           },
         }),
         window,
@@ -50499,7 +50543,7 @@ var V$ = c((e) => {
           .GetSaleSections()
           .forEach((n, a) => {
             let o = !1;
-            n.sale_tag_filter
+            (n.sale_tag_filter
               ? (o = qD(e, n.sale_tag_filter))
               : n.capsules &&
                 (o = !!n.capsules.find(
@@ -50514,7 +50558,7 @@ var V$ = c((e) => {
                     t.GetEventModel(),
                     a,
                   ),
-                );
+                ));
           }),
         r.sort((e, t) => e.localeCompare(t)),
         r
@@ -50528,8 +50572,8 @@ var V$ = c((e) => {
       let n = new Map();
       for (let e of this.props.editModel.GetEventModel().GetTaggedItems())
         e.tags && e.tags.forEach((e) => n.set(e.toLocaleLowerCase(), e));
-      t.forEach((e) => n.set(e.toLocaleLowerCase(), e)),
-        this.setState({ defaultTags: t, otherTags: n });
+      (t.forEach((e) => n.set(e.toLocaleLowerCase(), e)),
+        this.setState({ defaultTags: t, otherTags: n }));
     }
     UpdateTagList(e) {
       this.setState({
@@ -50552,10 +50596,10 @@ var V$ = c((e) => {
       )
         return;
       let r = this.state.otherTags.get(n);
-      r && (e = r), this.UpdateTagList([...t, e]);
+      (r && (e = r), this.UpdateTagList([...t, e]));
     }
     OnOK() {
-      VD(this.props.item, this.state.currentTags) &&
+      (VD(this.props.item, this.state.currentTags) &&
         (oO(
           this.props.editModel.GetEventModel().jsondata.auto_item_tags,
           this.props.item,
@@ -50563,7 +50607,7 @@ var V$ = c((e) => {
         aO(this.props.editModel),
         this.props.onTagsModified && this.props.onTagsModified(),
         this.props.editModel.SetDirty(Q.jsondata_sales)),
-        this.props.closeModal();
+        this.props.closeModal());
     }
     RenderSectionList() {
       let { startingSections: e, includedSections: t } = this.state;
@@ -50590,10 +50634,10 @@ var V$ = c((e) => {
           );
         }),
         c = [];
-      i.forEach((e, t) => {
+      (i.forEach((e, t) => {
         a.has(t) || c.push(e);
       }),
-        c.sort((e, t) => e.localeCompare(t));
+        c.sort((e, t) => e.localeCompare(t)));
       let l = [];
       c.forEach((e) => {
         if (r.has(e)) {
@@ -50753,10 +50797,10 @@ var V$ = c((e) => {
       });
     }
   };
-N([P], U$.prototype, `RemoveTag`, null),
+(N([P], U$.prototype, `RemoveTag`, null),
   N([P], U$.prototype, `AddTag`, null),
   N([P], U$.prototype, `OnOK`, null),
-  (U$ = N([c], U$));
+  (U$ = N([c], U$)));
 var W$ = class extends q.Component {
   m_timerForChange = new Uc();
   state = {
@@ -50772,7 +50816,7 @@ var W$ = class extends q.Component {
   }
   CloneModifiedTags() {
     let e = new Map();
-    return this.state.modifiedTags.forEach((t, n) => e.set(n, t)), e;
+    return (this.state.modifiedTags.forEach((t, n) => e.set(n, t)), e);
   }
   OnApplyFilter(e) {
     let t = JD(this.props.editModel.GetEventModel().GetTaggedItems(), e),
@@ -50819,7 +50863,7 @@ var W$ = class extends q.Component {
   }
   OnOK() {
     let e = !1;
-    this.state.modifiedTags.forEach((t, n) => {
+    (this.state.modifiedTags.forEach((t, n) => {
       VD(n, t) &&
         ((e = !0),
         oO(this.props.editModel.GetEventModel().jsondata.auto_item_tags, n));
@@ -50827,7 +50871,7 @@ var W$ = class extends q.Component {
       e &&
         (aO(this.props.editModel),
         this.props.editModel.SetDirty(Q.jsondata_sales)),
-      this.props.closeModal();
+      this.props.closeModal());
   }
   UpdateCurrentTagToItemMap() {
     let e = new Map();
@@ -50845,22 +50889,22 @@ var W$ = class extends q.Component {
       n.add(Number(r[1]));
     }
     let r = this.props.editModel.GetEventModel().GetTaggedItems();
-    n.size > 0 && (r = r.filter((e) => n.has(e.capsule.id))),
-      this.setState({ editItems: r }, () => this.UpdateCurrentTagToItemMap());
+    (n.size > 0 && (r = r.filter((e) => n.has(e.capsule.id))),
+      this.setState({ editItems: r }, () => this.UpdateCurrentTagToItemMap()));
   }
   OnTextChanged(e) {
-    this.setState({ editText: e }),
+    (this.setState({ editText: e }),
       this.m_timerForChange.Cancel(),
-      this.m_timerForChange.Schedule(300, this.OnUpdateItemListFromText);
+      this.m_timerForChange.Schedule(300, this.OnUpdateItemListFromText));
   }
   render() {
     let { closeModal: e } = this.props,
       { editItems: t, currentTags: n, otherTags: r } = this.state,
       i = [];
-    n.forEach((e, t) => {
+    (n.forEach((e, t) => {
       i.push({ tag: e.properCaseString, count: e.items.length });
     }),
-      i.sort((e, t) => e.tag.localeCompare(t.tag));
+      i.sort((e, t) => e.tag.localeCompare(t.tag)));
     let a = i.map((e) => {
         let t = G(GE, KE);
         return (0, J.jsx)(
@@ -50874,10 +50918,10 @@ var W$ = class extends q.Component {
         );
       }),
       o = [];
-    r.forEach((e, t) => {
+    (r.forEach((e, t) => {
       o.push(e.properCaseString);
     }),
-      o.sort((e, t) => e.localeCompare(t));
+      o.sort((e, t) => e.localeCompare(t)));
     let s = [];
     E$.Get(this.props.editModel)
       .GetRecentTags()
@@ -51059,14 +51103,14 @@ var W$ = class extends q.Component {
     });
   }
 };
-N([P], W$.prototype, `OnApplyFilter`, null),
+(N([P], W$.prototype, `OnApplyFilter`, null),
   N([P], W$.prototype, `OnPopulateFromFilter`, null),
   N([P], W$.prototype, `RemoveTag`, null),
   N([P], W$.prototype, `AddTag`, null),
   N([P], W$.prototype, `OnOK`, null),
   N([P], W$.prototype, `OnUpdateItemListFromText`, null),
   N([P], W$.prototype, `OnTextChanged`, null),
-  (W$ = N([c], W$));
+  (W$ = N([c], W$)));
 function G$(e) {
   let {
       onClauseChanged: t,
@@ -51103,7 +51147,7 @@ function G$(e) {
         });
         let c = s ? r : JD(r, i),
           d = new Set(c.map((e) => e.capsule.id));
-        e.forEach((e) => {
+        (e.forEach((e) => {
           i.clauses[a].or_tags[o] = e.properCaseString;
           let n = 0,
             r = 0;
@@ -51124,7 +51168,7 @@ function G$(e) {
         }),
           (i.clauses[a].or_tags[o] = n),
           t.sort((e, t) => e.value.localeCompare(t.value)),
-          l(t);
+          l(t));
       }
     },
     onMenuClose: () => {
@@ -51176,7 +51220,7 @@ var q$ = class extends q.Component {
         this.props.editModel.GetEventModel().jsondata.auto_item_tags,
       ),
       t = [{ label: H(`#Sale_TagFilter_SelectTag`), value: `` }];
-    return e.forEach((e) => t.push({ label: e, value: e })), t;
+    return (e.forEach((e) => t.push({ label: e, value: e })), t);
   }
   GenerateInitialState() {
     let e = this.SetupInitialFilter(),
@@ -51275,10 +51319,10 @@ var q$ = class extends q.Component {
   }
   SetupInitialFilter() {
     let e = HD(this.props.filter);
-    this.SanitizeFilter(e),
+    (this.SanitizeFilter(e),
       (e.clauses ||= []),
       e.clauses.length === 0 &&
-        e.clauses.push({ type: `Must have`, or_tags: [``] });
+        e.clauses.push({ type: `Must have`, or_tags: [``] }));
     for (let t of e.clauses)
       (t.or_tags && t.or_tags.length !== 0) || (t.or_tags = [``]);
     return e;
@@ -51400,12 +51444,12 @@ var q$ = class extends q.Component {
   RenderTagBreakdown(e, t) {
     let { tagHighlight: n } = this.state,
       r = [];
-    t.forEach((e) =>
+    (t.forEach((e) =>
       r.push({ tag: e.properCaseString, count: e.items.length }),
     ),
       r.sort((e, t) =>
         e.count == t.count ? e.tag.localeCompare(t.tag) : t.count - e.count,
-      );
+      ));
     let i = r.map((t) =>
       (0, J.jsxs)(
         `div`,
@@ -51441,11 +51485,11 @@ var q$ = class extends q.Component {
   }
   ModifyFilter(e) {
     let t = HD(this.state.currentFilter);
-    e(t),
+    (e(t),
       this.setState({
         currentFilter: t,
         ...this.CalculateItemsAndTags(t, this.state.startingUnreferencedItems),
-      });
+      }));
   }
   OnChangeClauseType(e, t) {
     this.ModifyFilter((n) => (n.clauses[e].type = t));
@@ -51489,9 +51533,9 @@ var q$ = class extends q.Component {
   OnOK() {
     if (this.props.onApplyFilter) {
       let e = HD(this.state.currentFilter);
-      this.SanitizeFilter(e), this.props.onApplyFilter(e);
+      (this.SanitizeFilter(e), this.props.onApplyFilter(e));
     }
-    this.props.editModel.SetDirty(Q.jsondata_sales), this.props.closeModal();
+    (this.props.editModel.SetDirty(Q.jsondata_sales), this.props.closeModal());
   }
   render() {
     let { editModel: e, closeModal: t, title: n } = this.props,
@@ -51657,7 +51701,7 @@ var q$ = class extends q.Component {
     });
   }
 };
-N([P], q$.prototype, `OnChangeClauseType`, null),
+(N([P], q$.prototype, `OnChangeClauseType`, null),
   N([P], q$.prototype, `OnChangeClauseTag`, null),
   N([P], q$.prototype, `OnAddClause`, null),
   N([P], q$.prototype, `OnRemoveClause`, null),
@@ -51668,7 +51712,7 @@ N([P], q$.prototype, `OnChangeClauseType`, null),
   N([P], q$.prototype, `OnSetViewMode`, null),
   N([P], q$.prototype, `OnTagsModified`, null),
   N([P], q$.prototype, `UpdateSearchText`, null),
-  N([P], q$.prototype, `OnOK`, null);
+  N([P], q$.prototype, `OnOK`, null));
 function J$(e, t) {
   let n = e.GetEventModel(),
     r = Ri.GetClanInfoByClanAccountID(n.clanSteamID.GetAccountID());
@@ -51709,7 +51753,7 @@ var X$ = class extends q.Component {
         s = (t ? i.filter((e) => YD(e, t)) : i).join(`;`);
       o += `\t\"${s}\"`;
       let c = a?.GetName() || ``;
-      c && (o += `\t// \"${c}\"`), (n += `${o}\n`);
+      (c && (o += `\t// \"${c}\"`), (n += `${o}\n`));
     }
     return n;
   }
@@ -51725,7 +51769,7 @@ var X$ = class extends q.Component {
       /^(game|software|dlc|bundle|video|sub|event|tag|music)[\'\,\"\s]+(.*)/i.exec(
         n,
       );
-    if (a) (i.type = a[1]), (n = a[2]);
+    if (a) ((i.type = a[1]), (n = a[2]));
     else
       for (let e of this.props.editModel.GetEventModel().GetTaggedItems())
         if (e.capsule.id === i.id) {
@@ -51769,17 +51813,17 @@ var X$ = class extends q.Component {
         e.tags.some((e) => YD(e, gm.Store)) || a.push(e);
       },
       c = !0;
-    r &&
+    (r &&
       t.forEach((e) => {
         e.tags.some((e) => !!vm(e)) && (c = !1);
       }),
       s(() => {
-        (i.tagged_items ||= []),
+        ((i.tagged_items ||= []),
           n &&
             (i.tagged_items = i.tagged_items.filter((e) => {
               let n = t.get(e.capsule.id)?.capsule.type;
               return e.capsule.type === n;
-            }));
+            })));
         for (let e of i.tagged_items) {
           let n = t.get(e.capsule.id);
           n &&
@@ -51791,16 +51835,16 @@ var X$ = class extends q.Component {
             t.delete(e.capsule.id));
         }
         t.forEach((e) => {
-          oO(i.auto_item_tags, e),
+          (oO(i.auto_item_tags, e),
             i.tagged_items.push(e),
-            o(i.tagged_items[i.tagged_items.length - 1]);
+            o(i.tagged_items[i.tagged_items.length - 1]));
         });
       }),
       a.length > 0 && (await this.props.UpdateDefaultTagsForItems(e, a)),
       this.setState({ bImporting: !1, errMsg: `` }),
       e.SetDirty(Q.jsondata_sales),
       aO(e),
-      this.props.closeModal();
+      this.props.closeModal());
   }
   OnTextChange(e) {
     this.setState({ editValue: e.currentTarget.value });
@@ -51871,10 +51915,10 @@ var X$ = class extends q.Component {
     });
   }
 };
-N([P], X$.prototype, `OnCompleteEdit`, null),
+(N([P], X$.prototype, `OnCompleteEdit`, null),
   N([P], X$.prototype, `DoImport`, null),
   N([P], X$.prototype, `OnTextChange`, null),
-  (X$ = N([c], X$));
+  (X$ = N([c], X$)));
 var Z$ = { include_release: !0 },
   Q$ = class extends q.Component {
     state = {
@@ -51938,7 +51982,7 @@ var Z$ = { include_release: !0 },
         s(() => {
           l = l.filter((e) => {
             let t = !!u.has(e.capsule.id);
-            return (o ||= !t), t;
+            return ((o ||= !t), t);
           });
         });
         let e = [];
@@ -51949,11 +51993,11 @@ var Z$ = { include_release: !0 },
               if (!e || !e.BIsVisible()) continue;
             }
             let r = { capsule: this.ConvertToCapsule(t.appid), tags: [] };
-            e.push(r), (o = !0);
+            (e.push(r), (o = !0));
           }
-        await this.props.UpdateDefaultTagsForItems(r, e), l.push(...e);
+        (await this.props.UpdateDefaultTagsForItems(r, e), l.push(...e));
       }
-      return o && (r.GetEventModel().jsondata.tagged_items = l), o;
+      return (o && (r.GetEventModel().jsondata.tagged_items = l), o);
     }
     async DoImport() {
       let {
@@ -51967,7 +52011,7 @@ var Z$ = { include_release: !0 },
         o = !1;
       (t || n) && (o = (await this.ImportOptInPage(t, n, a)) || o);
       let s = this.props.editModel.GetEventModel().GetTaggedItems();
-      this.setState({
+      (this.setState({
         statusMsg: H(`#Sale_SyncTaggedItems_Progress_LoadingStore`, s.length),
       }),
         (r || e || i) &&
@@ -51987,7 +52031,7 @@ var Z$ = { include_release: !0 },
           (aO(this.props.editModel),
           this.props.editModel.SetDirty(Q.jsondata_sales)),
         this.setState({ bImporting: !1, errMsg: `` }),
-        this.props.closeModal();
+        this.props.closeModal());
     }
     OnPerformSync() {
       this.setState(
@@ -52094,9 +52138,9 @@ var Z$ = { include_release: !0 },
       });
     }
   };
-N([P], Q$.prototype, `ImportOptInPage`, null),
+(N([P], Q$.prototype, `ImportOptInPage`, null),
   N([P], Q$.prototype, `OnPerformSync`, null),
-  (Q$ = N([c], Q$));
+  (Q$ = N([c], Q$)));
 function $$(e) {
   let t = new Set();
   for (let n of e) {
@@ -52114,10 +52158,10 @@ var e1 = (e) => {
       [l, u] = q.useState([...(r.auto_item_tags || [])]),
       d = () => {
         let e = { tag_name: ``, filter: { clauses: [] } };
-        u([...l, e]), a(!1);
+        (u([...l, e]), a(!1));
       },
       f = () => {
-        i &&
+        (i &&
           o &&
           s(() => {
             r.auto_item_tags = l;
@@ -52125,13 +52169,13 @@ var e1 = (e) => {
               oO(r.auto_item_tags, e);
             n.SetDirty(Q.jsondata_sales);
           }),
-          e.closeModal();
+          e.closeModal());
       },
       p = () => {
-        a($$(l)), c(!0);
+        (a($$(l)), c(!0));
       },
       m = (e) => {
-        u(l.filter((t, n) => n != e)), a($$(l));
+        (u(l.filter((t, n) => n != e)), a($$(l)));
       },
       h = l.map((e, t) =>
         (0, J.jsx)(
@@ -52176,12 +52220,12 @@ var e1 = (e) => {
     let [t, n] = q.useState(e.autoTag.tag_name),
       [r, i] = q.useState(e.autoTag.filter),
       a = (t) => {
-        n(t.target.value),
+        (n(t.target.value),
           (e.autoTag.tag_name = t.target.value.trim()),
-          e.fnOnEdited();
+          e.fnOnEdited());
       },
       o = (t) => {
-        (e.autoTag.filter = t), e.fnOnEdited(), i(t);
+        ((e.autoTag.filter = t), e.fnOnEdited(), i(t));
       };
     return (0, J.jsxs)(`div`, {
       className: SD,
@@ -52237,7 +52281,7 @@ var e1 = (e) => {
                   jD,
                 )
                 .then(() => {
-                  o(e), i(!1);
+                  (o(e), i(!1));
                 })
             : i(!1);
         });
@@ -52380,7 +52424,7 @@ var s1 = c((e) => {
         a();
       },
       s = (e) => {
-        (n.filter = e), a();
+        ((n.filter = e), a());
       },
       c = () => {
         gl(
@@ -52431,7 +52475,7 @@ var s1 = c((e) => {
               rgOptions: l,
               selectedOption: n.type || M.k_ESaleTagFilter,
               onChange: (e) => {
-                (n.type = e.data),
+                ((n.type = e.data),
                   n.type === M.k_ELanguage &&
                     n.language == null &&
                     (n.language = Eu(U.LANGUAGE)),
@@ -52444,7 +52488,7 @@ var s1 = c((e) => {
                   n.type === M.k_EAppType &&
                     n.appType == null &&
                     (n.appType = `game`),
-                  a();
+                  a());
               },
             }),
           ],
@@ -52492,7 +52536,7 @@ var s1 = c((e) => {
                     children: (0, J.jsx)(bo, {
                       selectedLang: n.language || Eu(U.LANGUAGE),
                       fnOnLanguageChanged: (e) => {
-                        (n.language = e), a();
+                        ((n.language = e), a());
                       },
                     }),
                   }),
@@ -52507,7 +52551,7 @@ var s1 = c((e) => {
                       rgOptions: u,
                       selectedOption: n.contentDescriptor || 5,
                       onChange: (e) => {
-                        (n.contentDescriptor = e.data), a();
+                        ((n.contentDescriptor = e.data), a());
                       },
                     }),
                   }),
@@ -52522,7 +52566,7 @@ var s1 = c((e) => {
                       rgOptions: d,
                       selectedOption: n.userPreference || Pr.k_EHideOwnedItems,
                       onChange: (e) => {
-                        (n.userPreference = e.data), a();
+                        ((n.userPreference = e.data), a());
                       },
                     }),
                   }),
@@ -52537,7 +52581,7 @@ var s1 = c((e) => {
                       rgOptions: f,
                       selectedOption: n.appType || `game`,
                       onChange: (e) => {
-                        (n.appType = e.data), a();
+                        ((n.appType = e.data), a());
                       },
                     }),
                   }),
@@ -52551,7 +52595,7 @@ var s1 = c((e) => {
               label: H(`#FacetedBrowseEditor_EnabledByDefault`),
               checked: n.bEnabledByDefault,
               onChange: (e) => {
-                (n.bEnabledByDefault = e), a();
+                ((n.bEnabledByDefault = e), a());
               },
             }),
           }),
@@ -52584,7 +52628,7 @@ var s1 = c((e) => {
             (0, J.jsx)(zd, {
               bIsMinimized: !c,
               fnToggleMinimize: () => {
-                s(!c), l(!c);
+                (s(!c), l(!c));
               },
             }),
           ],
@@ -52595,7 +52639,7 @@ var s1 = c((e) => {
               (0, J.jsx)(xO, {
                 items: r,
                 onDelete: (e, t) => {
-                  r.splice(e, 1), o();
+                  (r.splice(e, 1), o());
                 },
                 onReorder: () => {
                   o();
@@ -52611,14 +52655,14 @@ var s1 = c((e) => {
               }),
               (0, J.jsx)(V, {
                 onClick: (e) => {
-                  r.push({
+                  (r.push({
                     unique_id: i.GenerateFacetValueUniqueID(n),
                     name: [],
                     subtitle: [],
                     filter: { clauses: [] },
                     rgStoreTagFilter: null,
                   }),
-                    o();
+                    o());
                 },
                 children: H(`#FacetedBrowseEditor_AddFacetValue`),
               }),
@@ -52661,7 +52705,7 @@ var s1 = c((e) => {
               tooltip: H(`#FacetedBrowseEditor_LogicalAND_Tooltip`),
               checked: n.logical_and,
               onChange: (e) => {
-                (n.logical_and = e), a();
+                ((n.logical_and = e), a());
               },
             }),
             (0, J.jsx)(B, {
@@ -52669,7 +52713,7 @@ var s1 = c((e) => {
               tooltip: H(`#FacetedBrowseEditor_InitiallyExpanded_Tooltip`),
               checked: n.bInitiallyExpanded,
               onChange: (e) => {
-                (n.bInitiallyExpanded = e), a();
+                ((n.bInitiallyExpanded = e), a());
               },
             }),
             (0, J.jsx)(B, {
@@ -52677,7 +52721,7 @@ var s1 = c((e) => {
               tooltip: H(`#FacetedBrowseEditor_SingleSelect_Tooltip`),
               checked: n.single_selection,
               onChange: (e) => {
-                (n.single_selection = e), a();
+                ((n.single_selection = e), a());
               },
             }),
           ],
@@ -52734,7 +52778,7 @@ var s1 = c((e) => {
               (0, J.jsx)(xO, {
                 items: r,
                 onDelete: (e, t) => {
-                  r.splice(e, 1), o();
+                  (r.splice(e, 1), o());
                 },
                 onReorder: () => {
                   o();
@@ -52752,12 +52796,12 @@ var s1 = c((e) => {
               }),
               (0, J.jsx)(V, {
                 onClick: (e) => {
-                  r.push({
+                  (r.push({
                     unique_id: i.GenerateFacetUniqueID(n),
                     name: [],
                     facetValues: [],
                   }),
-                    o();
+                    o());
                 },
                 children: H(`#FacetedBrowseEditor_AddFacet`),
               }),
@@ -52775,18 +52819,19 @@ var s1 = c((e) => {
       } = e,
       [a, o] = (0, q.useState)(!1),
       s = (e) => {
-        (n.enable_faceted_browsing = e),
+        ((n.enable_faceted_browsing = e),
           e && !n.facets && (n.facets = []),
-          r.SetDirty(Q.jsondata_sales);
+          r.SetDirty(Q.jsondata_sales));
       },
       c = () => {
         r.SetDirty(Q.jsondata_sales);
       },
       l = (e) => {
-        (n.min_capsule_matches_for_facet_values = Number(e.target.value)), c();
+        ((n.min_capsule_matches_for_facet_values = Number(e.target.value)),
+          c());
       },
       u = (e) => {
-        (n.max_facet_values_for_facet = Number(e.target.value)), c();
+        ((n.max_facet_values_for_facet = Number(e.target.value)), c());
       },
       d = [
         {
@@ -52806,18 +52851,18 @@ var s1 = c((e) => {
         },
       ],
       f = (e) => {
-        (n.facet_sort_order = e.data), c();
+        ((n.facet_sort_order = e.data), c());
       },
       p = (e) => {
-        (n.facets_generate_debug_info = e), c();
+        ((n.facets_generate_debug_info = e), c());
       },
       m = () => {
         let e = async (e) => {
             o(!0);
             try {
-              (n.facets = await FD(e)),
+              ((n.facets = await FD(e)),
                 i && (await h()),
-                r.SetDirty(Q.jsondata_sales);
+                r.SetDirty(Q.jsondata_sales));
             } finally {
               o(!1);
             }
@@ -52907,7 +52952,7 @@ var s1 = c((e) => {
                             g(e, {
                               color: n.highlighted_facet_color,
                               onChange: (e) => {
-                                (n.highlighted_facet_color = e), c();
+                                ((n.highlighted_facet_color = e), c());
                               },
                             });
                           },
@@ -52927,7 +52972,7 @@ var s1 = c((e) => {
                             g(e, {
                               color: n.heading_color,
                               onChange: (e) => {
-                                (n.heading_color = e), c();
+                                ((n.heading_color = e), c());
                               },
                             });
                           },
@@ -53138,7 +53183,7 @@ var p1 = c((e) => {
         children: [
           (0, J.jsx)(gu, {
             onClick: () => {
-              n(a()), t();
+              (n(a()), t());
             },
             children: H(`#Button_OK`),
           }),
@@ -53172,18 +53217,18 @@ async function m1(e) {
       try {
         e = g1(o.sale_tag_filter, i, a);
       } catch (n) {
-        console.error(
+        (console.error(
           `Unable to convert section filter for section ` +
             o.unique_id +
             ` to store filter format: ` +
             n,
         ),
           (e = null),
-          (t = !0);
+          (t = !0));
       }
       t || (o.store_filter = e);
     } else o.store_filter &&= void 0;
-    o.section_type === `tabs` &&
+    (o.section_type === `tabs` &&
       o.tabs &&
       o.tabs.forEach((e) => {
         if (e.sale_tag_filter) {
@@ -53192,14 +53237,14 @@ async function m1(e) {
           try {
             t = g1(e.sale_tag_filter, i, a);
           } catch (r) {
-            console.error(
+            (console.error(
               `Unable to convert tab filter for tab ` +
                 e.unique_id +
                 ` to store filter format: ` +
                 r,
             ),
               (t = null),
-              (n = !0);
+              (n = !0));
           }
           n || (e.store_filter = t);
         } else e.store_filter &&= void 0;
@@ -53207,7 +53252,7 @@ async function m1(e) {
       o.enable_faceted_browsing &&
         (x1(o, i, a),
         S1(o, t, n, r),
-        (o.metadata_matching_capsules &&= void 0));
+        (o.metadata_matching_capsules &&= void 0)));
   }
 }
 function h1(e) {
@@ -53333,7 +53378,7 @@ function x1(e, t, n) {
         try {
           o = g1(a.filter, t, n);
         } catch (e) {
-          console.error(
+          (console.error(
             `Unable to convert facet value filter for facet ` +
               r.unique_id +
               `, facet value ` +
@@ -53342,7 +53387,7 @@ function x1(e, t, n) {
               e,
           ),
             (o = null),
-            (s = !0);
+            (s = !0));
         }
         s || (e.set(a, o), i.set(a, _1(a.filter, t)));
       }
@@ -53393,10 +53438,10 @@ function S1(e, t, n, r) {
   });
 }
 var C1 = (function (e) {
-    return (e.k_ENow = `now`), (e.k_ESpecified = `specified`), e;
+    return ((e.k_ENow = `now`), (e.k_ESpecified = `specified`), e);
   })({}),
   w1 = (function (e) {
-    return (e.k_EDuration = `duration`), (e.k_ESpecified = `specified`), e;
+    return ((e.k_EDuration = `duration`), (e.k_ESpecified = `specified`), e);
   })({}),
   Q = (function (e) {
     return (
@@ -53416,7 +53461,7 @@ var C1 = (function (e) {
     );
   })({}),
   T1 = (function (e) {
-    return (e.k_EHour = `hour`), (e.k_EDay = `day`), (e.k_EWeek = `week`), e;
+    return ((e.k_EHour = `hour`), (e.k_EDay = `day`), (e.k_EWeek = `week`), e);
   })({}),
   E1 = 1e3,
   D1 = (function (e) {
@@ -53453,19 +53498,19 @@ var $ = class e {
   m_editDurationValue = void 0;
   m_schPreviewUpdate = new Uc();
   constructor(e) {
-    m(this),
+    (m(this),
       (this.m_originalEvent = e),
       this.SetCurrentModel(e.clone(!0)),
       this.DeriveTimeEditChoices(),
       this.DeriveVisibilitySetting(),
       this.EnsureCurrentLanguageValid(),
       e.BIsOGGEvent() && Ri.LoadOGGClanInfoForAppID(e.appid),
-      this.ClearDirty();
+      this.ClearDirty());
   }
   SetCurrentModel(e) {
-    (e.fnGetLocalizedGroupImages = () =>
+    ((e.fnGetLocalizedGroupImages = () =>
       is.GetAllLocalizedGroupImageHashAndExts()),
-      (this.m_curModel = e);
+      (this.m_curModel = e));
   }
   GetCreatorUserSteamID() {
     return new Wc(this.m_originalEvent.creator_steamid);
@@ -54007,13 +54052,13 @@ var $ = class e {
       ((this.visibilitySetting = e), this.SetDirty(16));
   }
   SetGIDs(e, t, n) {
-    (this.m_curModel.clanSteamID = e),
+    ((this.m_curModel.clanSteamID = e),
       hl(
         this.m_curModel.clanSteamID && this.m_curModel.clanSteamID.BIsValid(),
         `Invalid Clan SteamID: ` + e.ConvertTo64BitString(),
       ),
       (this.m_curModel.GID = t),
-      (this.m_curModel.AnnouncementGID = n);
+      (this.m_curModel.AnnouncementGID = n));
   }
   SetVisibilityState(e) {
     this.m_curModel.visibility_state != e &&
@@ -54060,7 +54105,7 @@ var $ = class e {
   }
   PrepareAsClone(e) {
     let t = e.GID;
-    this.SetCurrentModel(e),
+    (this.SetCurrentModel(e),
       (this.m_curModel.GID = void 0),
       (this.m_curModel.AnnouncementGID = void 0),
       (this.m_curModel.visibility_state = Cn.k_EEventStateUnpublished),
@@ -54081,7 +54126,7 @@ var $ = class e {
       this.DeriveTimeEditChoices(),
       this.DeriveVisibilitySetting(),
       this.EnsureCurrentLanguageValid(),
-      this.m_curModel.timestamp_loc_updated.clear();
+      this.m_curModel.timestamp_loc_updated.clear());
     for (let e = this.m_curModel.vecTags.length - 1; e >= 0; --e) {
       let t = this.m_curModel.vecTags[e];
       (t.startsWith(`mod_`) ||
@@ -54092,10 +54137,10 @@ var $ = class e {
         t == `autocreate_promotools`) &&
         this.m_curModel.vecTags.splice(e, 1);
     }
-    (this.m_originalEvent = new rr()),
+    ((this.m_originalEvent = new rr()),
       (this.m_originalEvent.loadedAllLanguages = !0),
       _i(this.m_curModel.GetEventType(), this.m_curModel.jsondata, t),
-      this.SetDirty(239);
+      this.SetDirty(239));
   }
   setEventType(e) {
     this.m_curModel.type != e && ((this.m_curModel.type = e), this.SetDirty(1));
@@ -54141,30 +54186,30 @@ var $ = class e {
       ((this.m_curModel.visibilityStartTime = e), this.SetDirty(16));
   }
   ResetSetVisibilityStartTime() {
-    this.SetVisibilityStartTime(this.m_originalEvent.visibilityStartTime),
-      this.DeriveVisibilitySetting();
+    (this.SetVisibilityStartTime(this.m_originalEvent.visibilityStartTime),
+      this.DeriveVisibilitySetting());
   }
   SetVisibilityEndTime(e) {
     this.m_curModel.visibilityEndTime != e &&
       ((this.m_curModel.visibilityEndTime = e), this.SetDirty(16));
   }
   SetActionEndTime(e) {
-    (this.m_curModel.jsondata.action_end_time = e), this.SetDirty(32);
+    ((this.m_curModel.jsondata.action_end_time = e), this.SetDirty(32));
   }
   BIsDirty() {
     return this.m_bChanged;
   }
   ClearDirty() {
-    (this.m_bChanged = !1), (this.m_changes = 0);
+    ((this.m_bChanged = !1), (this.m_changes = 0));
   }
   SetDirty(e) {
-    !this.m_bChanged && e != 0 && (this.m_bChanged = !0),
+    (!this.m_bChanged && e != 0 && (this.m_bChanged = !0),
       (this.m_changes & e) != e && (this.m_changes |= e),
       (this.m_curModel.rtime32_last_local_modification = Date.now() / 1e3),
       pO.Get().BIsConnected() &&
         this.m_schPreviewUpdate.Schedule(E1, () =>
           m1(this).then(() => pO.Get().UpdatePreview(this.GetEventModel())),
-        );
+        ));
   }
   GetChangeTypes() {
     return this.m_changes;
@@ -54173,7 +54218,7 @@ var $ = class e {
     return { bChanged: this.m_bChanged, changes: this.m_changes };
   }
   RestoreChangeState(e) {
-    (this.m_bChanged = e.bChanged), (this.m_changes = e.changes);
+    ((this.m_bChanged = e.bChanged), (this.m_changes = e.changes));
   }
   BIsDirtyType(e) {
     return !!(this.m_changes & e);
@@ -54181,12 +54226,12 @@ var $ = class e {
   DeriveTimeEditChoices() {
     let e = this.ComputeDurationSetting(),
       t = e != null;
-    (e ??= this.ComputeDefaultDuration()),
+    ((e ??= this.ComputeDefaultDuration()),
       this.SetEndEditDurationType(e.durationType),
       this.SetEndEditDurationValue(e.value),
       !this.BPublished() &&
         this.GetEventStartTime() < Wa.GetTimeNowWithOverride() &&
-        this.SetEventStartTime(0);
+        this.SetEventStartTime(0));
     let n =
         !this.GetEventStartTime() || this.GetEventStartTime() <= 1
           ? `now`
@@ -54195,7 +54240,7 @@ var $ = class e {
         !this.GetEventEndTime() || this.GetEventEndTime() <= 1 || t
           ? `duration`
           : `specified`;
-    this.SetStartTimeEditChoice(n), this.SetEndTimeEditChoice(r);
+    (this.SetStartTimeEditChoice(n), this.SetEndTimeEditChoice(r));
   }
   DeriveVisibilitySetting() {
     this.BHidden() &&
@@ -54207,7 +54252,7 @@ var $ = class e {
   }
   static ComputeVisibilitySetting(e, t) {
     let n = 2;
-    return !t || t <= 1 ? (n = 0) : t == e && (n = 1), n;
+    return (!t || t <= 1 ? (n = 0) : t == e && (n = 1), n);
   }
   static CalculateEndTimeFromStartAndDuration(e, t, n) {
     return t == `week`
@@ -54229,11 +54274,11 @@ var $ = class e {
     this.m_curModel.jsondata.bResyncableTagsStripped = void 0;
   }
   OnPreSave() {
-    this.RemoveNullCapsules(),
+    (this.RemoveNullCapsules(),
       this.PreSaveEventTimeAssignment(),
       this.FixupTabVisibilitySettings(),
       this.FixupMediaRowUniqueID(),
-      this.BTagsNeedResync() || aO(this);
+      this.BTagsNeedResync() || aO(this));
   }
   FixupMediaRowUniqueID() {
     for (let e of this.GetSaleSections())
@@ -54245,12 +54290,12 @@ var $ = class e {
   FixupTabVisibilitySettings() {
     let e = null;
     for (let t of this.GetSaleSections())
-      t.show_on_tabs &&
+      (t.show_on_tabs &&
         ((t.show_on_tabs = t.show_on_tabs.filter(
           (t) => e && e.tabs.some((e) => t === e.unique_id),
         )),
         t.show_on_tabs.length === 0 && (t.show_on_tabs = void 0)),
-        t.section_type === `tabs` && t.tabs && t.tabs.length > 0 && (e = t);
+        t.section_type === `tabs` && t.tabs && t.tabs.length > 0 && (e = t));
   }
   PreSaveEventTimeAssignment() {
     let e = Wa.GetTimeNowWithOverride();
@@ -54282,7 +54327,7 @@ var $ = class e {
   ComputeVisibilityStartTime(e, t) {
     switch (this.visibilitySetting) {
       default:
-        return console.error(`Unexpected: ` + this.visibilitySetting), 0;
+        return (console.error(`Unexpected: ` + this.visibilitySetting), 0);
       case 0:
         return 0;
       case 1:
@@ -54353,19 +54398,19 @@ var $ = class e {
     let r = _n.GetHashAndExt(t),
       i = this.m_curModel.jsondata;
     if (e === `background` && i.localized_title_image[n] !== r)
-      (i.localized_title_image[n] = r), this.SetDirty(64);
+      ((i.localized_title_image[n] = r), this.SetDirty(64));
     else if (e === `capsule` && i.localized_capsule_image[n] !== r)
-      (i.localized_capsule_image[n] = r), this.SetDirty(64);
+      ((i.localized_capsule_image[n] = r), this.SetDirty(64));
     else if (e === `spotlight` && i.localized_spotlight_image[n] !== r)
-      (i.localized_spotlight_image[n] = r),
+      ((i.localized_spotlight_image[n] = r),
         this.GetImageURL(`spotlight`, 0) || (i.library_spotlight = !1),
-        this.SetDirty(64);
+        this.SetDirty(64));
     else if (
       e === `localized_store_app_spotlight` &&
       (!i.localized_store_app_spotlight ||
         i.localized_store_app_spotlight[n] !== r)
     )
-      (i.localized_store_app_spotlight ||= F(
+      ((i.localized_store_app_spotlight ||= F(
         i.localized_store_app_spotlight || [],
         32,
         null,
@@ -54373,13 +54418,13 @@ var $ = class e {
         (i.localized_store_app_spotlight[n] = r),
         this.GetImageURL(`localized_store_app_spotlight`, 0) ||
           (i.library_spotlight = !1),
-        this.SetDirty(64);
+        this.SetDirty(64));
     else if (
       e === `localized_store_app_spotlight_mobile` &&
       (!i.localized_store_app_spotlight_mobile ||
         i.localized_store_app_spotlight_mobile[n] !== r)
     )
-      (i.localized_store_app_spotlight_mobile ||= F(
+      ((i.localized_store_app_spotlight_mobile ||= F(
         i.localized_store_app_spotlight_mobile || [],
         32,
         null,
@@ -54387,26 +54432,26 @@ var $ = class e {
         (i.localized_store_app_spotlight_mobile[n] = r),
         this.GetImageURL(`localized_store_app_spotlight_mobile`, 0) ||
           (i.library_spotlight = !1),
-        this.SetDirty(64);
+        this.SetDirty(64));
     else if (
       e === `broadcast_left` &&
       i.localized_broadcast_left_image[n] !== r
     )
-      (i.localized_broadcast_left_image[n] = r), this.SetDirty(64);
+      ((i.localized_broadcast_left_image[n] = r), this.SetDirty(64));
     else if (
       e === `broadcast_right` &&
       i.localized_broadcast_right_image[n] !== r
     )
-      (i.localized_broadcast_right_image[n] = r), this.SetDirty(64);
+      ((i.localized_broadcast_right_image[n] = r), this.SetDirty(64));
     else if (e === `sale_header`) {
       let e;
-      (e =
+      ((e =
         i.sale_num_headers > 1
           ? i.localized_per_day_sales_header[
               this.m_curModel.GetDayIndexFromEventStart()
             ]
           : i.localized_sale_header),
-        e[n] !== r && ((e[n] = r), this.SetDirty(64));
+        e[n] !== r && ((e[n] = r), this.SetDirty(64)));
     } else
       e === `sale_logo` && L.Get(i.localized_sale_logo, n) !== r
         ? ((i.localized_sale_logo = L.Set(i.localized_sale_logo || [], n, r)),
@@ -54549,7 +54594,9 @@ var $ = class e {
       n = Wa.GetTimeNowWithOverride();
     e = this.ComputeStartTime(n);
     let r = this.ComputeDurationBasedRoundedEndTime();
-    return r != null && (t = r), { nOverrideEndTime: t, nOverrideStartTime: e };
+    return (
+      r != null && (t = r), { nOverrideEndTime: t, nOverrideStartTime: e }
+    );
   }
   GetStrVanityOrAppID() {
     return qu.VANITY_ID;
@@ -54637,10 +54684,10 @@ var $ = class e {
   }
   ToggleTag(e) {
     let t = this.m_curModel.vecTags.indexOf(e);
-    t == -1
+    (t == -1
       ? this.m_curModel.vecTags.push(e)
       : this.m_curModel.vecTags.splice(t, 1),
-      this.SetDirty(16);
+      this.SetDirty(16));
   }
   SetTag(e, t) {
     t ? this.AddTag(e) : this.ClearTags([e]);
@@ -54665,15 +54712,15 @@ var $ = class e {
     });
   }
   SetSteamAwardCategory(e) {
-    (this.m_curModel.jsondata.steam_award_category_suggestion = e),
-      this.SetDirty(32);
+    ((this.m_curModel.jsondata.steam_award_category_suggestion = e),
+      this.SetDirty(32));
   }
   GetSteamAwardCategory() {
     return this.m_curModel.GetSteamAwardCategory();
   }
   SetSteamAwardNomineeVoteIDs(e) {
-    (this.m_curModel.jsondata.steam_award_category_voteids = e),
-      this.SetDirty(32);
+    ((this.m_curModel.jsondata.steam_award_category_voteids = e),
+      this.SetDirty(32));
   }
   GetSteamAwareNomineeVoteIDs() {
     return this.m_curModel.GetSteamAwardNomineeCategories();
@@ -54690,7 +54737,7 @@ var $ = class e {
   BDoesSupportLanguage(e) {
     if (this.m_curModel && this.m_curModel.appid) {
       let t = vc.Get().GetApp(this.m_curModel.appid);
-      if (t) return e === 29 && (e = 6), qs(e), t.BHasSomeLanguageSupport(e);
+      if (t) return (e === 29 && (e = 6), qs(e), t.BHasSomeLanguageSupport(e));
     }
     return !1;
   }
@@ -54750,7 +54797,7 @@ var $ = class e {
       : this.m_curModel.jsondata.sale_num_headers;
   }
   SetNumSalesBackgroundHeader(e) {
-    e !== void 0 && e <= 1 && (e = void 0),
+    (e !== void 0 && e <= 1 && (e = void 0),
       this.m_curModel.jsondata.sale_num_headers !== e &&
         (this.m_curModel.jsondata.sale_num_headers === void 0 &&
           (this.m_curModel.jsondata.localized_sale_header.forEach(
@@ -54764,11 +54811,11 @@ var $ = class e {
         e !== void 0 &&
           ((this.m_curModel.jsondata.localized_per_day_sales_header = void 0),
           K1.HelperInitializeNumSalesHeaderArray(this.m_curModel)),
-        this.SetDirty(512));
+        this.SetDirty(512)));
   }
   MarkUpdateSuccessful(e, t) {
-    (this.m_originalEvent.last_update_steamid = t),
-      (this.m_originalEvent.rtime32_last_modified = e);
+    ((this.m_originalEvent.last_update_steamid = t),
+      (this.m_originalEvent.rtime32_last_modified = e));
   }
   GetSaleSectionCount(e) {
     return e
@@ -54798,16 +54845,16 @@ var $ = class e {
       e?.capsules && e.capsules.forEach(i);
     });
     let a = this.GetTabSaleSection();
-    return a && a.tabs.forEach((e) => e.capsules.forEach(i)), t;
+    return (a && a.tabs.forEach((e) => e.capsules.forEach(i)), t);
   }
   GenerateBackgroundImageGroupUniqueID() {
     let e = it();
-    for (; this.GetBackgroundImageGroupByID(e); ) e = it();
+    for (; this.GetBackgroundImageGroupByID(e);) e = it();
     return e;
   }
   GenerateSaleSectionUniqueID() {
     let e = it();
-    for (; this.GetSaleSectionByID(e); ) e = it();
+    for (; this.GetSaleSectionByID(e);) e = it();
     return e;
   }
   GetFacetByID(e, t) {
@@ -54818,12 +54865,12 @@ var $ = class e {
   }
   GenerateFacetUniqueID(e) {
     let t = Math.floor(1 + Math.random() * 1e5);
-    for (; this.GetFacetByID(e, t); ) t = Math.floor(1 + Math.random() * 1e5);
+    for (; this.GetFacetByID(e, t);) t = Math.floor(1 + Math.random() * 1e5);
     return t;
   }
   GenerateFacetValueUniqueID(e) {
     let t = Math.floor(1 + Math.random() * 1e5);
-    for (; this.GetFacetValueByID(e, t); )
+    for (; this.GetFacetValueByID(e, t);)
       t = Math.floor(1 + Math.random() * 1e5);
     return t;
   }
@@ -54839,7 +54886,7 @@ var $ = class e {
     return this.m_curModel.jsondata.bInvisibleGameOptIn;
   }
   SetOptedInForOGGWithoutVisibleStorePage(e) {
-    (this.m_curModel.jsondata.bInvisibleGameOptIn = e), this.SetDirty(32);
+    ((this.m_curModel.jsondata.bInvisibleGameOptIn = e), this.SetDirty(32));
   }
   SetMigrated(e) {
     this.m_curModel.jsondata.rt_migrated_time = e;
@@ -54850,20 +54897,20 @@ var $ = class e {
       this.m_curModel.jsondata.sale_sections.forEach((e, t) => {
         if (!e.unique_id) {
           let e = t + 1;
-          for (; this.GetSaleSectionByID(e); ) e++;
+          for (; this.GetSaleSectionByID(e);) e++;
           this.m_curModel.jsondata.sale_sections[t].unique_id = e;
         }
         e.enable_faceted_browsing &&
           e.facets.forEach((n, r) => {
             if (!n.unique_id) {
               let n = r + 1;
-              for (; this.GetFacetByID(e, n); ) n++;
+              for (; this.GetFacetByID(e, n);) n++;
               this.m_curModel.jsondata.sale_sections[t].facets[r].unique_id = n;
             }
             n.facetValues.forEach((e, i) => {
               if (!e.unique_id) {
                 let e = r + 1;
-                for (; this.GetFacetValueByID(n, e); ) e++;
+                for (; this.GetFacetValueByID(n, e);) e++;
                 this.m_curModel.jsondata.sale_sections[t].facets[r].facetValues[
                   i
                 ].unique_id = e;
@@ -54900,14 +54947,14 @@ var $ = class e {
     };
   }
   SetBackgroundImageEnabled(e) {
-    this.m_curModel.jsondata.sale_background_img_groups ||
+    (this.m_curModel.jsondata.sale_background_img_groups ||
       (this.m_curModel.jsondata.sale_background_img_groups = {
         enabled: e,
         groups: [this.CreateAndReturnNewDefaultBackgroundImageGroup()],
         last_group_until_cover_section_until_end: !1,
       }),
       (this.m_curModel.jsondata.sale_background_img_groups.enabled = e),
-      this.SetDirty(512);
+      this.SetDirty(512));
   }
   SetSalePageBackgroundGroup(e, t) {
     for (
@@ -54917,8 +54964,8 @@ var $ = class e {
       this.m_curModel.jsondata.sale_background_img_groups.groups.push({
         num_sections: 1,
       });
-    (this.m_curModel.jsondata.sale_background_img_groups.groups[e] = t),
-      this.SetDirty(512);
+    ((this.m_curModel.jsondata.sale_background_img_groups.groups[e] = t),
+      this.SetDirty(512));
   }
   AddSalePageBackgroundGroup() {
     this.SetSalePageBackgroundGroup(
@@ -54932,16 +54979,16 @@ var $ = class e {
       e < this.m_curModel.jsondata.sale_background_img_groups?.groups?.length
     ) {
       let t = [...this.m_curModel.jsondata.sale_background_img_groups.groups];
-      t.splice(e, 1),
+      (t.splice(e, 1),
         (this.m_curModel.jsondata.sale_background_img_groups.groups = t),
-        this.SetDirty(512);
+        this.SetDirty(512));
     }
   }
   SetSalePageLastCoverSectionUntilEnd(e) {
-    this.SetBackgroundImageEnabled(!0),
+    (this.SetBackgroundImageEnabled(!0),
       (this.m_curModel.jsondata.sale_background_img_groups.last_group_until_cover_section_until_end =
         e),
-      this.SetDirty(512);
+      this.SetDirty(512));
   }
   ClearAllBackgroundImageGroupSettings() {
     this.m_curModel.jsondata.sale_background_img_groups = void 0;
@@ -54986,9 +55033,9 @@ var $ = class e {
   SetTabBackgroundGroup(e, t, n) {
     let r = this.GetTabDefintionByID(e);
     if (r) {
-      for (; r.tab_background_img_groups?.groups?.length <= t; )
+      for (; r.tab_background_img_groups?.groups?.length <= t;)
         r.tab_background_img_groups.groups.push({ num_sections: 1 });
-      (r.tab_background_img_groups.groups[t] = n), this.SetDirty(512);
+      ((r.tab_background_img_groups.groups[t] = n), this.SetDirty(512));
     }
   }
   AddTabBackgroundGroup(e) {
@@ -55002,27 +55049,27 @@ var $ = class e {
     let n = this.GetTabDefintionByID(e);
     if (n && t > 0 && t < n.tab_background_img_groups?.groups?.length) {
       let e = [...n.tab_background_img_groups.groups];
-      e.splice(t, 1),
+      (e.splice(t, 1),
         (n.tab_background_img_groups.groups = e),
-        this.SetDirty(512);
+        this.SetDirty(512));
     }
   }
   SetTabLastCoverSectionUntilEnd(e, t) {
     this.SetTabEnabled(e, !0);
     let n = this.GetTabDefintionByID(e);
-    (n.tab_background_img_groups.last_group_until_cover_section_until_end = t),
-      this.SetDirty(512);
+    ((n.tab_background_img_groups.last_group_until_cover_section_until_end = t),
+      this.SetDirty(512));
   }
   GetTabLastCoverSectionUntilEnd(e) {
     return this.GetTabDefintionByID(e)?.tab_background_img_groups
       ?.last_group_until_cover_section_until_end;
   }
   ReplaceFrom(e) {
-    (this.m_curModel.name = e.m_curModel.name),
+    ((this.m_curModel.name = e.m_curModel.name),
       (this.m_curModel.description = e.m_curModel.description),
       (this.m_curModel.m_nBuildID = e.m_curModel.m_nBuildID),
       (this.m_curModel.m_strBuildBranch = e.m_curModel.m_strBuildBranch),
-      (this.m_curModel.broadcaster = e.m_curModel.broadcaster);
+      (this.m_curModel.broadcaster = e.m_curModel.broadcaster));
     let t = this.m_curModel.jsondata.sale_vanity_id,
       n =
         this.m_curModel.jsondata.sale_vanity_id_valve_approved_for_sale_subpath,
@@ -55030,7 +55077,7 @@ var $ = class e {
       i = this.m_curModel.jsondata.valve_access_log,
       a = this.m_curModel.jsondata.clone_from_event_gid,
       o = this.m_curModel.jsondata.rt_migrated_time;
-    (this.m_curModel.jsondata = JSON.parse(
+    ((this.m_curModel.jsondata = JSON.parse(
       JSON.stringify(e.m_curModel.jsondata),
     )),
       (this.m_curModel.jsondata.sale_vanity_id = t),
@@ -55039,10 +55086,10 @@ var $ = class e {
       (this.m_curModel.jsondata.sale_update_landing_page_vanity_id = r),
       (this.m_curModel.jsondata.valve_access_log = i),
       (this.m_curModel.jsondata.clone_from_event_gid = a),
-      (this.m_curModel.jsondata.rt_migrated_time = o);
+      (this.m_curModel.jsondata.rt_migrated_time = o));
   }
 };
-N([g], $.prototype, `m_curModel`, void 0),
+(N([g], $.prototype, `m_curModel`, void 0),
   N([g], $.prototype, `m_bChanged`, void 0),
   N([g], $.prototype, `m_changes`, void 0),
   N([g], $.prototype, `m_bEnglishTextChanged`, void 0),
@@ -55125,7 +55172,7 @@ N([g], $.prototype, `m_curModel`, void 0),
   N([x.bound], $.prototype, `SetTabBackgroundGroup`, null),
   N([x.bound], $.prototype, `AddTabBackgroundGroup`, null),
   N([x.bound], $.prototype, `RemoveTabBackgroundGroup`, null),
-  N([x.bound], $.prototype, `SetTabLastCoverSectionUntilEnd`, null);
+  N([x.bound], $.prototype, `SetTabLastCoverSectionUntilEnd`, null));
 var k1 = {
     capability: 1,
     appids: [],
@@ -55138,7 +55185,7 @@ var k1 = {
     m_editModel;
     m_sections = void 0;
     constructor(e) {
-      super(e.GetEmailSettings()),
+      (super(e.GetEmailSettings()),
         m(this),
         (this.m_editModel = e),
         (this.m_sections = []),
@@ -55149,7 +55196,7 @@ var k1 = {
           (this.m_setting.internal_targeting
             ? this.m_setting.internal_targeting.partnerids ||
               (this.m_setting.internal_targeting.partnerids = [])
-            : (this.m_setting.internal_targeting = { ...k1 }));
+            : (this.m_setting.internal_targeting = { ...k1 })));
     }
     BSameEditModel(e) {
       return e === this.m_editModel;
@@ -55186,78 +55233,78 @@ var k1 = {
       }
     }
     SetFilterIRTopN(e) {
-      this.EnsureFilteringExists(),
+      (this.EnsureFilteringExists(),
         this.m_setting.filtering.ir_topn !== e &&
           ((this.m_setting.filtering.ir_topn = e),
-          this.m_editModel.SetDirty(Q.jsondata_email));
+          this.m_editModel.SetDirty(Q.jsondata_email)));
     }
     SetFilterWishlist(e) {
-      this.EnsureFilteringExists(),
+      (this.EnsureFilteringExists(),
         this.m_setting.filtering.wishlist !== e &&
           ((this.m_setting.filtering.wishlist = e),
-          this.m_editModel.SetDirty(Q.jsondata_email));
+          this.m_editModel.SetDirty(Q.jsondata_email)));
     }
     SetControlGroupPercent(e) {
-      hl(e >= 0 && e <= 99, `SetControlGroupPercent outside of bounds: ` + e),
+      (hl(e >= 0 && e <= 99, `SetControlGroupPercent outside of bounds: ` + e),
         (!e || e <= 0) && (e = 0),
         e > 99 && (e = 99),
         this.EnsureFilteringExists(),
         this.m_setting.filtering.control_group_percent !== e &&
           ((this.m_setting.filtering.control_group_percent = e),
-          this.m_editModel.SetDirty(Q.jsondata_email));
+          this.m_editModel.SetDirty(Q.jsondata_email)));
     }
     SetTargetingExistingPlayer(e) {
-      this.EnsureTargetingExists(),
+      (this.EnsureTargetingExists(),
         this.m_setting.targeting.game_players !== e &&
           ((this.m_setting.targeting.game_players = e),
           e && (this.m_setting.targeting.game_owner_with_no_playtime = !1),
-          this.m_editModel.SetDirty(Q.jsondata_email));
+          this.m_editModel.SetDirty(Q.jsondata_email)));
     }
     SetTargetingGameWishlist(e) {
-      this.EnsureTargetingExists(),
+      (this.EnsureTargetingExists(),
         this.m_setting.targeting.game_wishlister !== e &&
           ((this.m_setting.targeting.game_wishlister = e),
-          this.m_editModel.SetDirty(Q.jsondata_email));
+          this.m_editModel.SetDirty(Q.jsondata_email)));
     }
     SetExcludeGameOwners(e) {
-      this.EnsureTargetingExists(),
+      (this.EnsureTargetingExists(),
         this.m_setting.targeting.game_exclude_owners !== e &&
           ((this.m_setting.targeting.game_exclude_owners = e),
           e && (this.m_setting.targeting.game_owner_with_no_playtime = !1),
-          this.m_editModel.SetDirty(Q.jsondata_email));
+          this.m_editModel.SetDirty(Q.jsondata_email)));
     }
     SetOwnersWithNoPlaytime(e) {
-      this.EnsureTargetingExists(),
+      (this.EnsureTargetingExists(),
         this.m_setting.targeting.game_owner_with_no_playtime !== e &&
           ((this.m_setting.targeting.game_owner_with_no_playtime = e),
           e &&
             ((this.m_setting.targeting.game_exclude_owners = !1),
             (this.m_setting.targeting.game_players = !1),
             (this.m_setting.targeting.creator_home_player = void 0)),
-          this.m_editModel.SetDirty(Q.jsondata_email));
+          this.m_editModel.SetDirty(Q.jsondata_email)));
     }
     SetTargetingGameFollower(e) {
-      this.EnsureTargetingExists(),
+      (this.EnsureTargetingExists(),
         this.m_setting.targeting.game_followers !== e &&
           ((this.m_setting.targeting.game_followers = e),
-          this.m_editModel.SetDirty(Q.jsondata_email));
+          this.m_editModel.SetDirty(Q.jsondata_email)));
     }
     SetTargetingCreator(e, t) {
-      this.EnsureTargetingExists(),
+      (this.EnsureTargetingExists(),
         (this.m_setting.targeting.creator_home = e ? [t] : void 0),
         this.m_setting.targeting.creator_home_player &&
           this.m_setting.targeting.creator_home_player[0] != t &&
           (this.m_setting.targeting.creator_home_player = void 0),
-        this.m_editModel.SetDirty(Q.jsondata_email);
+        this.m_editModel.SetDirty(Q.jsondata_email));
     }
     SetTargetingCreatorPlayer(e, t) {
-      this.EnsureTargetingExists(),
+      (this.EnsureTargetingExists(),
         (this.m_setting.targeting.creator_home_player = e ? [t] : void 0),
         this.m_setting.targeting.creator_home &&
           this.m_setting.targeting.creator_home[0] != t &&
           (this.m_setting.targeting.creator_home = void 0),
         e && (this.m_setting.targeting.game_owner_with_no_playtime = !1),
-        this.m_editModel.SetDirty(Q.jsondata_email);
+        this.m_editModel.SetDirty(Q.jsondata_email));
     }
     SetForceFeatureID(e) {
       this.m_setting.force_feature_id != e &&
@@ -55287,14 +55334,14 @@ var k1 = {
         this.m_editModel.SetDirty(Q.jsondata_email));
     }
     AddSection(e) {
-      this.m_setting.sections.push({ ...e }),
+      (this.m_setting.sections.push({ ...e }),
         this.m_sections.push(
           new j1(
             this.m_setting.sections[this.m_setting.sections.length - 1],
             this.m_editModel,
           ),
         ),
-        this.m_editModel.SetDirty(Q.jsondata_email);
+        this.m_editModel.SetDirty(Q.jsondata_email));
     }
     SetInternalTargetPriority(e) {
       this.m_setting.internal_targeting.priority !== e &&
@@ -55321,15 +55368,15 @@ var k1 = {
         this.m_editModel.SetDirty(Q.jsondata_email));
     }
     SetInternalAppIDs(e) {
-      (this.m_setting.internal_targeting.appids = e),
-        this.m_editModel.SetDirty(Q.jsondata_email);
+      ((this.m_setting.internal_targeting.appids = e),
+        this.m_editModel.SetDirty(Q.jsondata_email));
     }
     SetInternalPublisherIDs(e) {
-      (this.m_setting.internal_targeting.partnerids = e),
-        this.m_editModel.SetDirty(Q.jsondata_email);
+      ((this.m_setting.internal_targeting.partnerids = e),
+        this.m_editModel.SetDirty(Q.jsondata_email));
     }
   };
-N([g], A1.prototype, `m_sections`, void 0),
+(N([g], A1.prototype, `m_sections`, void 0),
   N([x], A1.prototype, `SetFilterIRTopN`, null),
   N([x], A1.prototype, `SetFilterWishlist`, null),
   N([x], A1.prototype, `SetControlGroupPercent`, null),
@@ -55349,11 +55396,11 @@ N([g], A1.prototype, `m_sections`, void 0),
   N([x], A1.prototype, `UpdateInternalTargetPublisherRights`, null),
   N([x], A1.prototype, `UpdateInternalTargetAppRights`, null),
   N([x], A1.prototype, `SetInternalAppIDs`, null),
-  N([x], A1.prototype, `SetInternalPublisherIDs`, null);
+  N([x], A1.prototype, `SetInternalPublisherIDs`, null));
 var j1 = class e extends gT {
   m_editModel = void 0;
   constructor(e, t) {
-    super(e), m(this), (this.m_editModel = t);
+    (super(e), m(this), (this.m_editModel = t));
   }
   SetHeadline(e, t) {
     return this.m_section.localized_headline.length < t ||
@@ -55461,7 +55508,7 @@ var j1 = class e extends gT {
     );
   }
 };
-N([x], j1.prototype, `SetHeadline`, null),
+(N([x], j1.prototype, `SetHeadline`, null),
   N([x], j1.prototype, `SetBody`, null),
   N([x], j1.prototype, `SetVideoLink`, null),
   N([x], j1.prototype, `SetVideoHashAndExt`, null),
@@ -55470,7 +55517,7 @@ N([x], j1.prototype, `SetHeadline`, null),
   N([x], j1.prototype, `SetButtonDestination`, null),
   N([x.bound], j1.prototype, `SetButtonDestinationStoreURL`, null),
   N([x], j1.prototype, `SetButtonAppOverride`, null),
-  N([x], j1.prototype, `RemoveSubSection`, null);
+  N([x], j1.prototype, `RemoveSubSection`, null));
 var M1 = 100,
   N1 = 100,
   P1 = {
@@ -55478,37 +55525,37 @@ var M1 = 100,
       let o,
         s = null,
         c = new Image();
-      (c.crossOrigin = `anonymous`),
+      ((c.crossOrigin = `anonymous`),
         (c.onerror = (e) => {
-          (o = `Load fail on url ` + n + ` with error: ` + Qs(e).strErrorMsg),
-            console.error(o);
+          ((o = `Load fail on url ` + n + ` with error: ` + Qs(e).strErrorMsg),
+            console.error(o));
         }),
         (c.onload = () => {
           let e = new Image();
-          (e.crossOrigin = `anonymous`),
+          ((e.crossOrigin = `anonymous`),
             (e.onerror = (e) => {
-              (o =
+              ((o =
                 `Load fail on url ` + t + ` with error: ` + Qs(e).strErrorMsg),
-                console.error(o);
+                console.error(o));
             }),
             (e.onload = () => {
               try {
                 let t = document.createElement(`canvas`),
                   n = t.getContext(`2d`);
-                (t.width = i), (t.height = a), n?.drawImage(e, 0, 0, i, a);
+                ((t.width = i), (t.height = a), n?.drawImage(e, 0, 0, i, a));
                 let r = (i - c.width) / 2,
                   o = (a - c.height) / 2;
-                n?.drawImage(c, r, o), t.toBlob((e) => (s = e), `image/jpeg`);
+                (n?.drawImage(c, r, o), t.toBlob((e) => (s = e), `image/jpeg`));
               } catch (e) {
                 o = `Failed during image processing for ` + r + ` with ` + e;
               }
             }),
-            (e.src = t);
+            (e.src = t));
         }),
-        (c.src = n);
+        (c.src = n));
       let l = 0,
         u = M1;
-      for (; s === void 0 && l < u; ) await El(N1), (l += 1);
+      for (; s === void 0 && l < u;) (await El(N1), (l += 1));
       if (
         (l >= u &&
           s === void 0 &&
@@ -55535,7 +55582,7 @@ var M1 = 100,
   },
   F1 = class e extends Di {
     constructor(e = !1) {
-      super(e), m(this);
+      (super(e), m(this));
     }
     m_editModel;
     m_curHoverCategoryType = void 0;
@@ -55547,8 +55594,8 @@ var M1 = 100,
       };
     }
     SetCurHoverCategory(e, t) {
-      this.m_curHoverCategoryType !== e && (this.m_curHoverCategoryType = e),
-        this.m_curHoverCategoryTags !== t && (this.m_curHoverCategoryTags = t);
+      (this.m_curHoverCategoryType !== e && (this.m_curHoverCategoryType = e),
+        this.m_curHoverCategoryTags !== t && (this.m_curHoverCategoryTags = t));
     }
     BHasEditModel() {
       return this.m_editModel != null;
@@ -55567,7 +55614,7 @@ var M1 = 100,
     }
     ResetModel(e, t) {
       let n = new rr();
-      (n.GID = e),
+      ((n.GID = e),
         (n.clanSteamID = t || Wc.InitFromClanID(qu.CLANACCOUNTID, U.EUNIVERSE)),
         hl(
           n.clanSteamID && n.clanSteamID.BIsValid(),
@@ -55594,7 +55641,7 @@ var M1 = 100,
               include_supported_languages: !0,
               include_release: !0,
               include_platforms: !0,
-            });
+            }));
     }
     async LoadEditorModel(e, t) {
       if (
@@ -55605,7 +55652,7 @@ var M1 = 100,
         )
       ) {
         if (t) {
-          this.ResetModel(t, e), await this.LoadHiddenPartnerEvent(e, t);
+          (this.ResetModel(t, e), await this.LoadHiddenPartnerEvent(e, t));
           let n = this.GetClanEventModel(t);
           n &&
             (this.m_editModel.Refresh(n),
@@ -55619,7 +55666,7 @@ var M1 = 100,
     }
     CreateClone() {
       let e = this.GetEditModel().GetEventModel().clone();
-      return this.m_editModel.PrepareAsClone(e), this.m_editModel;
+      return (this.m_editModel.PrepareAsClone(e), this.m_editModel);
     }
     async PublishModel(e, t) {
       let n = await this.InternalSaveAction(e, !0, !1, t);
@@ -55792,7 +55839,7 @@ var M1 = 100,
             this.m_editModel.SetName(0, t || e);
           }
         }
-        c.append(`hidden`, `` + this.m_editModel.BHidden()),
+        (c.append(`hidden`, `` + this.m_editModel.BHidden()),
           c.append(`published`, `` + this.m_editModel.BPublished()),
           c.append(`appid`, `` + this.m_editModel.GetAppID()),
           c.append(`event_name`, this.m_editModel.GetName(0)),
@@ -55825,7 +55872,7 @@ var M1 = 100,
             c.append(
               `broadcaster_accountid`,
               `` + this.m_editModel.GetBroadcaster().GetAccountID(),
-            );
+            ));
         for (let e = 0; e < 32; ++e)
           this.m_editModel.BHasLanguage(e) &&
             (c.append(
@@ -55857,7 +55904,7 @@ var M1 = 100,
             r.data.success != 1 && console.error(`InternalSaveAction`, r.data),
             this.m_editModel.GetGID() == o)
           ) {
-            this.m_editModel.ClearDirty(),
+            (this.m_editModel.ClearDirty(),
               n
                 ? (this.m_editModel.UpdateVisibilityState(
                     r.data.published,
@@ -55879,9 +55926,10 @@ var M1 = 100,
                       this.m_editModel
                         .GetEventModel()
                         .timestamp_loc_updated.set(e.lang, e.timestamp_updated);
-                    }));
+                    })));
             let e = this.m_editModel.GetEventModel();
-            this.m_mapExistingEvents.set(e.GID, e), this.m_editModel.Refresh(e);
+            (this.m_mapExistingEvents.set(e.GID, e),
+              this.m_editModel.Refresh(e));
           }
         });
         let i = await e.GetLastUpdateTimeForEvent(
@@ -55924,12 +55972,12 @@ var M1 = 100,
               s(() => {
                 r.loadedAllLanguages = !0;
                 for (let t of e)
-                  r.name.set(t.language, t.headline),
+                  (r.name.set(t.language, t.headline),
                     r.description.set(t.language, t.body),
                     r.timestamp_loc_updated.set(
                       t.language,
                       t.timestamp_updated,
-                    );
+                    ));
                 this.m_editModel.Refresh(r);
               });
           },
@@ -55972,9 +56020,9 @@ var M1 = 100,
     async SetupPartnerEmailCampaign(e, t, n) {
       let r = U.COMMUNITY_BASE_URL + `eventemail/ajaxsetuppartneremail`,
         i = new URLSearchParams();
-      i.append(`sessionid`, Tl()),
+      (i.append(`sessionid`, Tl()),
         i.append(`clanid`, `` + e.GetAccountID()),
-        i.append(`gidevent`, t);
+        i.append(`gidevent`, t));
       let a = await Z.default.post(r, i, {
         withCredentials: !0,
         cancelToken: n.token,
@@ -56041,7 +56089,7 @@ var M1 = 100,
     async SetupInternalPartnerCommunication(e, t, n, r) {
       let i = U.COMMUNITY_BASE_URL + `eventadmin/ajaxupdatepartneremailtarget`,
         a = new URLSearchParams();
-      a.append(`sessionid`, Tl()),
+      (a.append(`sessionid`, Tl()),
         a.append(`clan_accountid`, `` + t.GetAccountID()),
         a.append(`gid_event`, n),
         a.append(`partner_capability`, `` + r.capability),
@@ -56049,7 +56097,7 @@ var M1 = 100,
         a.append(`publisher_right_flags`, `` + r.pub_rights),
         a.append(`mark_urgent`, `` + r.priority),
         a.append(`appids`, r.appids.join(`,`)),
-        a.append(`publisherids`, r.partnerids.join(`,`));
+        a.append(`publisherids`, r.partnerids.join(`,`)));
       let o = await Z.default.post(i, a, {
         withCredentials: !0,
         cancelToken: e.token,
@@ -56070,10 +56118,10 @@ var M1 = 100,
       );
     }
   };
-N([g], F1.prototype, `m_curHoverCategoryType`, void 0),
+(N([g], F1.prototype, `m_curHoverCategoryType`, void 0),
   N([g], F1.prototype, `m_curHoverCategoryTags`, void 0),
   N([x], F1.prototype, `ResetModel`, null),
-  N([x], F1.prototype, `LoadClanEventLocalization`, null);
+  N([x], F1.prototype, `LoadClanEventLocalization`, null));
 function I1(e) {
   return `U${Kl.accountid || `anon`}-${e}`;
 }
@@ -56139,8 +56187,8 @@ function G1(e, t) {
       let n = await U1(e);
       if (n?.success == 1) {
         let r = [];
-        n.announcement_gids?.forEach((n) => r.push(W1(e, n, t))),
-          n.hidden_announcement_gids?.forEach((n) => r.push(W1(e, n, t)));
+        (n.announcement_gids?.forEach((n) => r.push(W1(e, n, t))),
+          n.hidden_announcement_gids?.forEach((n) => r.push(W1(e, n, t))));
         let i = await Promise.all(r);
         return {
           rgEventModels: Lc(i),
@@ -56219,7 +56267,7 @@ function Y1(e) {
       nodeAttrs: g,
     }),
     v = q.useCallback(() => {
-      l(), h();
+      (l(), h());
     }, [l, h]),
     y = q.useCallback((e) => d(pd(e)), [d]),
     [b, x] = sT(y, {
@@ -56237,10 +56285,10 @@ function Y1(e) {
     }, [n, C]),
     E = q.useCallback(() => {
       let e = { ...n.attrs };
-      `style` in e && e.style === `inline`
+      (`style` in e && e.style === `inline`
         ? delete e.style
         : (e.style = `inline`),
-        y(n.type.create(e, n.content, n.marks));
+        y(n.type.create(e, n.content, n.marks)));
     }, [n.attrs, n.content, n.marks, n.type, y]),
     D = {
       createCarousel: o ? S : void 0,
@@ -56394,7 +56442,7 @@ function r0(e) {
     } = e,
     [o, s] = q.useState(),
     c = q.useCallback(() => {
-      s(void 0), a && a();
+      (s(void 0), a && a());
     }, [a]);
   return {
     showInsertImageModal: q.useCallback(() => {
@@ -56441,13 +56489,13 @@ function i0(e) {
     ),
     p = q.useCallback(
       (e) => {
-        a({ src: e }, o), r();
+        (a({ src: e }, o), r());
       },
       [a, r, o],
     ),
     m = q.useCallback(
       (e) => {
-        a({ ...l, ...e }, s), r();
+        (a({ ...l, ...e }, s), r());
       },
       [l, a, r, s],
     ),
@@ -56455,7 +56503,7 @@ function i0(e) {
     g = null,
     _;
   if (c == `image`)
-    (g = (0, J.jsx)(a0, {
+    ((g = (0, J.jsx)(a0, {
       active: d == `hotlink`,
       bIsEdit: t,
       hideModal: r,
@@ -56466,17 +56514,17 @@ function i0(e) {
         t
           ? `#EventEditor_ReplaceImage_Title`
           : `#EventEditor_InsertImage_Title`,
-      ));
+      )));
   else if (c == `video`)
-    (g = (0, J.jsx)(o0, {
+    ((g = (0, J.jsx)(o0, {
       active: d == `hotlink`,
       bIsEdit: t,
       hideModal: r,
       attrs: l,
       setAttrs: a,
     })),
-      (_ = H(`#EventEditor_EditVideo_Title`));
-  else return fl(c, `Unhandled type`), null;
+      (_ = H(`#EventEditor_EditVideo_Title`)));
+  else return (fl(c, `Unhandled type`), null);
   return (0, J.jsxs)(Yu, {
     active: !0,
     onDismiss: r,
@@ -56557,7 +56605,7 @@ function o0(e) {
     }, [t]),
     (0, J.jsxs)(Wl, {
       onSubmit: (e) => {
-        a({
+        (a({
           ...i,
           mp4: Do(o) || void 0,
           webm: Do(c) || void 0,
@@ -56565,7 +56613,7 @@ function o0(e) {
           autoplay: f,
           controls: m,
         }),
-          r();
+          r());
       },
       children: [
         (0, J.jsxs)(oc, {
@@ -56637,7 +56685,7 @@ function s0(e) {
     ),
     f = q.useCallback(
       (e, t) => {
-        l(e), t && d(e);
+        (l(e), t && d(e));
       },
       [d],
     );
@@ -56743,10 +56791,10 @@ function d0(e, t, n, r, i) {
           break;
         case _s.k_eInsertVideo:
           let i;
-          e.file_type == 4
+          (e.file_type == 4
             ? (i = { mp4: Yo(e) })
             : e.file_type == 5 && (i = { webm: Yo(e) }),
-            i && n && (o = n.create(i));
+            i && n && (o = n.create(i)));
           break;
         case _s.k_eShowImageGroup:
           break;
@@ -56755,7 +56803,7 @@ function d0(e, t, n, r, i) {
       }
       if (o) {
         let e = i.state.tr;
-        e.selection.replaceWith(e, o), i.dispatch(e);
+        (e.selection.replaceWith(e, o), i.dispatch(e));
       }
     };
     return (
@@ -56816,20 +56864,20 @@ var f0 = c((e) => {
                   t.BIsVisibleEvent() &&
                   (s.RecordEventRead(t, i), (e = !0));
               }
-              t.length > 0 &&
+              (t.length > 0 &&
                 (o
                   .filter((e) => e.BIsPartnerEvent())
                   .forEach((e) => s.RecordEventShown(e, i)),
                 (e = !0)),
-                e && s.Flush();
+                e && s.Flush());
             }
           }
         })().catch((e) => {
-          console.error(
+          (console.error(
             `PartnerEventRow: loading the adjacent events failed`,
             e,
           ),
-            f(!1);
+            f(!1));
         }),
         () => {
           c.current && c.current(`PartnerEventRow: unmounting`);

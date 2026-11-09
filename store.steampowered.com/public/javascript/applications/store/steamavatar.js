@@ -32,7 +32,7 @@ function b(e) {
     case `FillArea`:
       return m;
     default:
-      return s(e, `Unhandled size ${e}`), p;
+      return (s(e, `Unhandled size ${e}`), p);
   }
 }
 var x = d.memo(function (e) {
@@ -48,7 +48,9 @@ var x = d.memo(function (e) {
       { rgSources: f, bClientAsset: p } = d.useMemo(() => {
         if (a(t)) return { rgSources: [t], bClientAsset: !0 };
         let e = [];
-        return t && e.push(t), e.push(b(n)), { rgSources: e, bClientAsset: !1 };
+        return (
+          t && e.push(t), e.push(b(n)), { rgSources: e, bClientAsset: !1 }
+        );
       }, [t, n]);
     return (0, y.jsxs)(`div`, {
       className: l(h, `avatarHolder`, `no-drag`, n, r),
@@ -115,9 +117,9 @@ var C = r((e) => {
   w = class extends d.Component {
     m_timer;
     constructor(e) {
-      super(e),
+      (super(e),
         (this.state = { bAnimate: this.props.loopDuration != `None` }),
-        (this.m_timer = 0);
+        (this.m_timer = 0));
     }
     componentDidMount() {
       this.props.bParentHovered || this.SetupAnimationTimer();
@@ -151,7 +153,7 @@ var C = r((e) => {
       this.StopAnimationTimer();
     }
     componentDidUpdate(e) {
-      this.props.loopDuration != e.loopDuration &&
+      (this.props.loopDuration != e.loopDuration &&
         (this.props.loopDuration == `None`
           ? (this.setState({ bAnimate: !1 }), this.StopAnimationTimer())
           : this.props.loopDuration == `Infinite`
@@ -162,7 +164,7 @@ var C = r((e) => {
           this.props.loopDuration != `None` &&
           this.props.loopDuration != `Infinite`
             ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
-            : this.state.bAnimate && this.SetupAnimationTimer());
+            : this.state.bAnimate && this.SetupAnimationTimer()));
     }
     render() {
       let {

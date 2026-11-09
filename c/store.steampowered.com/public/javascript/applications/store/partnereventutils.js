@@ -51,7 +51,7 @@ function _(_, _) {
     _.announcement_body)
   ) {
     let _ = _.announcement_body;
-    (_.AnnouncementGID = _.gid),
+    ((_.AnnouncementGID = _.gid),
       _.name.set(_.language, _.headline),
       _.description.set(_.language, _.body),
       _.timestamp_loc_updated.clear(),
@@ -64,9 +64,9 @@ function _(_, _) {
       !_.rtime32_last_solr_search_col_updated &&
         _.rtime32_last_modified &&
         ((_.rtime32_last_solr_search_col_updated = _.rtime32_last_modified),
-        (_.rtime32_last_modified = _.updatetime));
+        (_.rtime32_last_modified = _.updatetime)));
   } else
-    (_.AnnouncementGID = `0`),
+    ((_.AnnouncementGID = `0`),
       (_.forumTopicGID = _.forum_topic_id),
       _.name.clear(),
       _.description.clear(),
@@ -74,7 +74,7 @@ function _(_, _) {
       (_.postTime = _.rtime32_start_time),
       (_.nCommentCount = _.comment_count ?? 0),
       _.name.set(0, _.event_name ?? ``),
-      _.description.set(0, _.event_notes ?? ``);
+      _.description.set(0, _.event_notes ?? ``));
   _.broadcaster_accountid && (_.broadcaster = new _(_.broadcaster_accountid));
   let _ = _;
   try {
@@ -85,12 +85,12 @@ function _(_, _) {
   } catch (_) {
     let _ = _(_);
     throw (
-      (console.error(
+      console.error(
         `PartnerEventStore::InsertEventModelFromClanEventData: failed to parse embedded json model` +
           _.strErrorMsg,
         _,
       ),
-      _)
+      _
     );
   }
   if (
@@ -166,18 +166,18 @@ function _(_, _) {
   return (
     _.jsondata.sale_sections &&
       _.jsondata.sale_sections.forEach((_, _) => {
-        (_.localized_label &&= _(_.localized_label, 32, null)),
+        ((_.localized_label &&= _(_.localized_label, 32, null)),
           _.section_type === `trailercarousel` && (_.show_as_carousel = !1),
           _(_),
           (_.jsondata.sale_sections[_] = {
             ..._,
             ..._,
-          });
+          }));
       }),
     _.jsondata.email_setting &&
       _.jsondata.email_setting.sections &&
       _.jsondata.email_setting.sections.forEach((_) => {
-        _.localized_headline !== void 0 &&
+        (_.localized_headline !== void 0 &&
           _.localized_headline !== null &&
           (_.localized_headline = _(_.localized_headline, 32, null)),
           _.localized_body !== void 0 &&
@@ -185,7 +185,7 @@ function _(_, _) {
             (_.localized_body = _(_.localized_body, 32, null)),
           _.localized_image !== void 0 &&
             _.localized_image !== null &&
-            (_.localized_image = _(_.localized_image, 32, null));
+            (_.localized_image = _(_.localized_image, 32, null)));
       }),
     _.jsondata.localized_title_image.forEach((_, _) => {
       if (_ != null && _.substr(0, 4) == `http`) {
@@ -205,4 +205,3 @@ function _(_, _) {
     _
   );
 }
-export { _, _ };

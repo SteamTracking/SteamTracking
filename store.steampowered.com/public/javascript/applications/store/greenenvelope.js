@@ -225,7 +225,7 @@ function B(e) {
     } = e,
     [s, c] = I.useState(+!!i),
     [l, u] = I.useState(void 0);
-  I.useEffect(() => {
+  (I.useEffect(() => {
     s == 1 && !i ? c(2) : s == 2 && i && c(1);
   }, [s, i]),
     I.useEffect(() => {
@@ -236,10 +236,10 @@ function B(e) {
       t && t > 0 && l !== `_78CF9aUvUeY-` && n != 2 && n != 1
         ? u(yt)
         : !t && l == `_78CF9aUvUeY-` && u(vt);
-    }, [t, n, l]);
+    }, [t, n, l]));
   let d = e.onActivate;
-  (d ||= () => console.log(`Missing activate function`)),
-    s == 1 && (d = void 0);
+  ((d ||= () => console.log(`Missing activate function`)),
+    s == 1 && (d = void 0));
   let f = it;
   n == 4 ? (f = pt) : n == 2 ? (f = ht) : (r == 7 || r == 3) && (f = mt);
   let p = null;
@@ -353,7 +353,7 @@ function W(e) {
 function Pt(e, t) {
   return I.useCallback(
     (n) => {
-      e && e(n), t && t();
+      (e && e(n), t && t());
     },
     [e, t],
   );
@@ -985,7 +985,7 @@ function rn(e) {
     v = null;
   if (d) {
     let e = d.name ?? ``;
-    (_ = e),
+    ((_ = e),
       n.count == 1
         ? c
           ? (_ = p(
@@ -1018,7 +1018,7 @@ function rn(e) {
             : (v = x(
                 `#SteamNotifications_Wishlist_OnSale_PlusMany`,
                 n.count - 1,
-              ));
+              )));
   } else _ = x(`#SteamNotifications_Wishlist_Generic`);
   return c
     ? (0, z.jsx)(G, {
@@ -1081,10 +1081,10 @@ function J(e) {
   return (0, z.jsx)(`div`, {
     className: Gt,
     onClick: (t) => {
-      e.onHide(), t.stopPropagation(), t.preventDefault();
+      (e.onHide(), t.stopPropagation(), t.preventDefault());
     },
     onMouseDown: (e) => {
-      e.stopPropagation(), e.preventDefault();
+      (e.stopPropagation(), e.preventDefault());
     },
     children: (0, z.jsx)(ue, {}),
   });
@@ -1095,7 +1095,7 @@ function Y(e) {
 var X = null,
   Z = !1;
 function on() {
-  return (X ||= new a({ BIsFriend: i() })), X;
+  return ((X ||= new a({ BIsFriend: i() })), X);
 }
 function sn() {
   let e = ae(),
@@ -1108,7 +1108,7 @@ function sn() {
 }
 function cn(e) {
   let t = null;
-  return be(e) ? (t = pn) : ke(e) ? (t = un) : Cn[e] && (t = Cn[e]), t;
+  return (be(e) ? (t = pn) : ke(e) ? (t = un) : Cn[e] && (t = Cn[e]), t);
 }
 function ln(e) {
   let { rollup: t, uimode: n, location: r } = e,
@@ -1547,7 +1547,7 @@ var Cn = { 3: bn, 8: xn, 5: yn, 4: vn, 2: gn, 9: mn, 12: dn, 22: _n, 29: hn },
     }, [n]);
     let r = ae();
     (0, I.useEffect)(() => {
-      Q.setTransport(r), (window.RefreshSteamNotifications = () => Fn(r));
+      (Q.setTransport(r), (window.RefreshSteamNotifications = () => Fn(r)));
     }, [r]);
     let i = $();
     return t
@@ -1590,8 +1590,8 @@ function En(e) {
       )),
       n.current.Hide());
     let e = document.getElementById(`header_notification_link`);
-    e && (e.style.cssText = `background-color: rgba(0,0,0,0)`),
-      window.setTimeout(() => a(null), 2e3);
+    (e && (e.style.cssText = `background-color: rgba(0,0,0,0)`),
+      window.setTimeout(() => a(null), 2e3));
   }, []);
   let o = () => {
       n.current?.visible ||
@@ -1676,11 +1676,11 @@ var Dn = (e) => {
     });
   };
 function An(e, t, n) {
-  t.read ||
+  (t.read ||
     (n && n.button != 0 && n.button != 1) ||
     !t.notification_id ||
     Q.MarkItemRead(t.notification_id),
-    e();
+    e());
 }
 function jn() {
   let e = Tn();

@@ -16,10 +16,9 @@ function _(_, _ = !0, _) {
         contributorData: _,
         playerLinkDetails: _,
       } = await _(`/workshop/actions`, `GetUGCDetailsForItemPreview`, _, _);
-      return _.setQueryData(_(_), _), _(_, _), _;
+      return (_.setQueryData(_(_), _), _(_, _), _);
     },
     enabled: _,
     staleTime: 36e5,
   });
 }
-export { _, _ };

@@ -174,7 +174,7 @@ async function L(e, t, r) {
       ]));
   }
   let s = new Set();
-  o?.forEach((e) => {
+  (o?.forEach((e) => {
     u.Get()
       .GetBundle(e)
       ?.GetIncludedAppIDs()
@@ -185,7 +185,7 @@ async function L(e, t, r) {
         .GetPackage(e)
         ?.GetIncludedAppIDs()
         .forEach((e) => s.add(e));
-    });
+    }));
   let c = Array.from(s).filter((e) => !u.Get().BHasApp(e, t));
   if (
     (c.length > 0 && (await u.Get().QueueMultipleAppRequests(c, t)),
@@ -285,10 +285,10 @@ async function V(e, t, n, r, i, a, o) {
     if (!t) continue;
     let i = t?.GetIncludedAppIDsOrSelf(),
       s = !1;
-    n && (s ||= i.every((e) => b.Get().BIsGameOwned(e))),
+    (n && (s ||= i.every((e) => b.Get().BIsGameOwned(e))),
       r && (s ||= i.every((e) => b.Get().BIsGameWishlisted(e))),
       a && (s ||= i.every((e) => b.Get().BIsGameIgnored(e))),
-      s ? o && o.push(e) : c.push(e);
+      s ? o && o.push(e) : c.push(e));
   }
   return c;
 }

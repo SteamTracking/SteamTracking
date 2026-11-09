@@ -62,7 +62,7 @@ function ce(e) {
           let i = n[r];
           if (i.dataset.radioId && i.dataset.radioId === e) {
             let e = n[(r + t + n.length) % n.length];
-            e.click(), e.focus();
+            (e.click(), e.focus());
           }
         }
     }, []),
@@ -124,15 +124,15 @@ function le(e) {
         if (!l)
           switch (e.key) {
             case ` `:
-              p(), e.preventDefault(), e.stopPropagation();
+              (p(), e.preventDefault(), e.stopPropagation());
               break;
             case `ArrowRight`:
             case `ArrowDown`:
-              u(o), e.preventDefault(), e.stopPropagation();
+              (u(o), e.preventDefault(), e.stopPropagation());
               break;
             case `ArrowLeft`:
             case `ArrowUp`:
-              d(o), e.preventDefault(), e.stopPropagation();
+              (d(o), e.preventDefault(), e.stopPropagation());
           }
       },
       tabIndex: f || s === null ? 0 : -1,
@@ -267,18 +267,18 @@ var j = l(re()),
     }
     UpdateVisiblePackageList(e) {
       let t = e.getVisibleRows().filter((e) => !e.getCanExpand());
-      (this.m_rgVisiblePackageIDs = []),
+      ((this.m_rgVisiblePackageIDs = []),
         t.forEach((e) => this.m_rgVisiblePackageIDs.push(e.original.packageID)),
         this.m_visiblePackageIDsCallbackList.Dispatch(
           this.m_rgVisiblePackageIDs,
         ),
-        this.UpdatePackageNameSearchState(e);
+        this.UpdatePackageNameSearchState(e));
     }
     SetVisiblePackageList(e) {
-      (this.m_rgVisiblePackageIDs = [...e]),
+      ((this.m_rgVisiblePackageIDs = [...e]),
         this.m_visiblePackageIDsCallbackList.Dispatch(
           this.m_rgVisiblePackageIDs,
-        );
+        ));
     }
   };
 function ge() {
@@ -310,7 +310,7 @@ function ye(e) {
 }
 function L() {
   let [e, t] = E.useState(M.Get().m_rgVisiblePackageIDs);
-  return h(M.Get().m_visiblePackageIDsCallbackList, t), e;
+  return (h(M.Get().m_visiblePackageIDsCallbackList, t), e);
 }
 function be() {
   return E.useMemo(() => r(`publisherid`, `application_config`), []);
@@ -337,7 +337,7 @@ function R(t, n, r, i, a) {
     u = c.price;
   if (u != r) {
     let e = r / u;
-    (o *= e), (l = Math.ceil(l * e));
+    ((o *= e), (l = Math.ceil(l * e)));
   }
   return { nSuggestedPriceInCents: l, nGuidelinesLevel: o };
 }
@@ -507,7 +507,7 @@ var z = class t {
     this.m_mapPriceGridCellCallbackList.has(e) ||
       this.m_mapPriceGridCellCallbackList.set(e, new Map());
     let n = this.m_mapPriceGridCellCallbackList.get(e);
-    return n.has(t) || n.set(t, new m()), n.get(t);
+    return (n.has(t) || n.set(t, new m()), n.get(t));
   }
   GetPackageOverridesCallbackList(e) {
     if (!e) return null;
@@ -535,21 +535,21 @@ var z = class t {
     for (let e = 0; e < n.length; ++e) {
       let i = n[e],
         a = r[e];
-      this.m_mapLocalPackagePriceOverrides.has(t) ||
+      (this.m_mapLocalPackagePriceOverrides.has(t) ||
         this.m_mapLocalPackagePriceOverrides.set(t, new Map()),
         a == this.GetSavedPrice(t, i)
           ? this.m_mapLocalPackagePriceOverrides.get(t).delete(i)
           : this.m_mapLocalPackagePriceOverrides.get(t).set(i, a),
-        this.GetPriceGridCellCallbackList(t, i).Dispatch(a);
+        this.GetPriceGridCellCallbackList(t, i).Dispatch(a));
     }
-    this.GetPackageOverridesCallbackList(t).Dispatch(),
-      i && this.DispatchPriceOverridesCallbacks();
+    (this.GetPackageOverridesCallbackList(t).Dispatch(),
+      i && this.DispatchPriceOverridesCallbacks());
   }
   DispatchPriceOverridesCallbacks() {
-    this.m_allPriceOverridesCallbackList.Dispatch(
+    (this.m_allPriceOverridesCallbackList.Dispatch(
       this.GetAllLocalPriceOverrides(),
     ),
-      this.UpdateOverridesPerPriceKey();
+      this.UpdateOverridesPerPriceKey());
   }
   BHasLocalPriceOverrides(e) {
     return this.m_mapLocalPackagePriceOverrides.get(e)?.size > 0;
@@ -577,13 +577,13 @@ var z = class t {
     return n ? n.has(t) : !1;
   }
   UpdateOverridesPerPriceKey() {
-    this.m_mapOverridesPerPriceKey.clear(),
+    (this.m_mapOverridesPerPriceKey.clear(),
       this.m_mapLocalPackagePriceOverrides.forEach((e, t) => {
         e.forEach((e, t) => {
           let n = this.m_mapOverridesPerPriceKey.get(t);
-          (n ||= 0), n++, this.m_mapOverridesPerPriceKey.set(t, n);
+          ((n ||= 0), n++, this.m_mapOverridesPerPriceKey.set(t, n));
         });
-      });
+      }));
   }
   DiscardAllLocalPriceOverrides() {
     let e = this.GetAllLocalPriceOverrides();
@@ -591,8 +591,8 @@ var z = class t {
     let t = new Set();
     for (let n of e) {
       let { packageID: e, strPriceKey: r } = n;
-      this.GetPriceGridCellCallbackList(e, r).Dispatch(this.GetPrice(e, r)),
-        t.add(e);
+      (this.GetPriceGridCellCallbackList(e, r).Dispatch(this.GetPrice(e, r)),
+        t.add(e));
     }
     for (let e of t) this.GetPackageOverridesCallbackList(e).Dispatch();
     this.DispatchPriceOverridesCallbacks();
@@ -611,14 +611,14 @@ var z = class t {
     t && this.DispatchPriceOverridesCallbacks();
   }
   DiscardLocalPriceOverridesForPackage(e) {
-    this.m_mapLocalPackagePriceOverrides.get(e)?.forEach((t, n) => {
+    (this.m_mapLocalPackagePriceOverrides.get(e)?.forEach((t, n) => {
       this.GetPriceGridCellCallbackList(e, n).Dispatch(
         this.GetSavedPrice(e, n),
       );
     }),
       this.m_mapLocalPackagePriceOverrides.delete(e),
       this.GetPackageOverridesCallbackList(e).Dispatch(),
-      this.DispatchPriceOverridesCallbacks();
+      this.DispatchPriceOverridesCallbacks());
   }
   BuildNewPricingProposal(e, t) {
     let n = {
@@ -640,10 +640,10 @@ var z = class t {
       l = r(`publisherid`, `application_config`),
       u = c.PARTNER_BASE_URL + `pricing/ajaxsubmitproposal/` + l + `/` + e,
       d = new FormData();
-    d.append(`sessionid`, n()),
+    (d.append(`sessionid`, n()),
       d.append(`partner_will_publish`, t ? `1` : `0`),
       d.append(`cancel_unapplied`, i ? `1` : `0`),
-      d.append(`prices`, s);
+      d.append(`prices`, s));
     let f = null;
     try {
       let t = await j.default.post(u, d, {
@@ -654,14 +654,14 @@ var z = class t {
         if (t.data.eState == 3) {
           this.m_mapPriceProposals.delete(e);
           for (let t of this.m_rgKnownPriceKeys)
-            this.m_mapPackagePrice.has(e) ||
+            (this.m_mapPackagePrice.has(e) ||
               this.m_mapPackagePrice.set(e, new Map()),
-              this.m_mapPackagePrice.get(e).set(t, o.prices[t]);
+              this.m_mapPackagePrice.get(e).set(t, o.prices[t]));
         } else
-          (o.eState = t.data.eState),
+          ((o.eState = t.data.eState),
             (o.proposalKey = t.data.proposalKey),
-            this.m_mapPriceProposals.set(e, o);
-        return this.DiscardLocalPriceOverridesForPackage(e), t.data;
+            this.m_mapPriceProposals.set(e, o));
+        return (this.DiscardLocalPriceOverridesForPackage(e), t.data);
       }
     } catch (e) {
       f = e;
@@ -683,7 +683,7 @@ var z = class t {
     let o = r(`publisherid`, `application_config`),
       s = c.PARTNER_BASE_URL + `pricing/ajaxpublishproposal/` + o + `/` + e,
       l = new FormData();
-    l.append(`sessionid`, n()), l.append(`proposal_key`, a.proposalKey);
+    (l.append(`sessionid`, n()), l.append(`proposal_key`, a.proposalKey));
     let u = null;
     try {
       let n = await j.default.post(s, l, {
@@ -694,10 +694,10 @@ var z = class t {
       if (n?.status == 200 && n.data?.success == 1) {
         this.m_mapPriceProposals.delete(e);
         for (let t of this.m_rgKnownPriceKeys)
-          this.m_mapPackagePrice.get(e).set(t, a.prices[t]),
+          (this.m_mapPackagePrice.get(e).set(t, a.prices[t]),
             this.GetPriceGridCellCallbackList(e, t).Dispatch(
               this.GetSavedPrice(e, t),
-            );
+            ));
         return (
           this.GetPackageOverridesCallbackList(e).Dispatch(),
           this.DispatchPriceOverridesCallbacks(),
@@ -723,7 +723,7 @@ var z = class t {
     let a = r(`publisherid`, `application_config`),
       o = c.PARTNER_BASE_URL + `pricing/ajaxcancelproposal/` + a + `/` + e,
       s = new FormData();
-    s.append(`sessionid`, n()), s.append(`proposal_key`, i.proposalKey);
+    (s.append(`sessionid`, n()), s.append(`proposal_key`, i.proposalKey));
     let l = null;
     try {
       let n = await j.default.post(o, s, {
@@ -769,9 +769,9 @@ var z = class t {
     return !1;
   }
 };
-o([t], z.prototype, `m_mapOverridesPerPriceKey`, void 0),
+(o([t], z.prototype, `m_mapOverridesPerPriceKey`, void 0),
   o([ee], z.prototype, `OverridePrice`, null),
-  o([a], z.prototype, `UpdateOverridesPerPriceKey`, null);
+  o([a], z.prototype, `UpdateOverridesPerPriceKey`, null));
 function xe(e, t) {
   if (e.strPriceKey == t.strPriceKey) {
     let n = P(e.packageID),
@@ -794,11 +794,11 @@ function V(e, t) {
     let i = t.length - 2;
     for (let e = 0; e < i; e++) {
       let a = t.charAt(e);
-      (r += a),
+      ((r += a),
         e < i - 1 &&
           (i - e - 1) % 3 == 0 &&
           a != `-` &&
-          (r += n.strThousandsSeparator);
+          (r += n.strThousandsSeparator));
     }
     n.bWholeUnitsOnly ||
       ((r += n.strDecimalSymbol), (r += t.substr(t.length - 2)));
@@ -845,7 +845,7 @@ function De(e) {
 }
 function G() {
   let [e, t] = E.useState(z.Get().m_strDisplayPriceKey);
-  return h(z.Get().m_displayPriceKeyCallbackList, t), e;
+  return (h(z.Get().m_displayPriceKeyCallbackList, t), e);
 }
 function K(e, t) {
   let [n, r] = E.useState(z.Get().GetPrice(e, t));
@@ -956,7 +956,7 @@ function Ie(e) {
       let t = z.Get().BAnyPackagePriceBelowMin(e);
       n(t);
     }, [e, n]);
-  return h(z.Get().GetPackageOverridesCallbackList(e), r), t;
+  return (h(z.Get().GetPackageOverridesCallbackList(e), r), t);
 }
 function Le(e) {
   return z.Get().BAnyPackagePriceBelowMin(e);
@@ -1051,9 +1051,9 @@ function Je() {
     strPriceKey: e,
     rgSupportedPriceKeys: z.Get().m_rgKnownPriceKeys,
     fnSetPriceKey: E.useCallback((e) => {
-      t(e),
+      (t(e),
         (z.Get().m_strDisplayPriceKey = e),
-        z.Get().m_displayPriceKeyCallbackList.Dispatch(e);
+        z.Get().m_displayPriceKeyCallbackList.Dispatch(e));
     }, []),
   };
 }
@@ -1069,7 +1069,7 @@ function Xe(e) {
 }
 function Ze() {
   let [e, t] = E.useState(() => z.Get().GetAllLocalPriceOverrides());
-  return h(z.Get().m_allPriceOverridesCallbackList, t), e;
+  return (h(z.Get().m_allPriceOverridesCallbackList, t), e);
 }
 function Qe(e) {
   return te(() => z.Get().GetLocalOverrideCountForPriceKey(e));
@@ -1147,7 +1147,7 @@ var Z = (e) => e.nextElementSibling,
     let n = e.getAttribute(`data-table-column-id`),
       r = e.parentElement,
       i = r && t(r);
-    for (; n && i; ) {
+    for (; n && i;) {
       for (let e of Array.from(i.children))
         if (n == e.getAttribute(`data-table-column-id`)) return e;
       i = t(i);
@@ -1167,7 +1167,7 @@ function st(e) {
 }
 function ct(e) {
   let t = Array.prototype.slice.call(e.children).reverse();
-  for (; t.length > 0; ) {
+  for (; t.length > 0;) {
     let e = t.pop();
     if (e.tagName.toLowerCase() === `input`) return e;
     t.push(...Array.prototype.slice.call(e.children).reverse());
@@ -1179,10 +1179,10 @@ function lt(e) {
   if ((e.keyCode === 9 && e.shiftKey && (t = (e) => $(e, Q)), !t)) return;
   let n = st(e.currentTarget),
     r = t(n);
-  for (; r; ) {
+  for (; r;) {
     let n = ct(r);
     if (n) {
-      n.focus(), e.preventDefault();
+      (n.focus(), e.preventDefault());
       return;
     }
     r = t(r);

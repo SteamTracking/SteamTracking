@@ -198,9 +198,9 @@ function _(_) {
   return (0, _.jsxs)(_, {
     className: _(_, _),
     onClick: async (_) => {
-      _.preventDefault(),
+      (_.preventDefault(),
         _.stopPropagation(),
-        _.logged_in ? (_(!0), await _(), _.token.reason || _(!1)) : _();
+        _.logged_in ? (_(!0), await _(), _.token.reason || _(!1)) : _());
     },
     style: _,
     children: [
@@ -533,10 +533,10 @@ function _(_) {
                   iDoorIndex: _,
                 })
                   .then((_) => {
-                    _ || _(!0), _(!1);
+                    (_ || _(!0), _(!1));
                   })
                   .catch(() => {
-                    _(!0), _(!1);
+                    (_(!0), _(!1));
                   }))
               : _());
         },
@@ -805,11 +805,11 @@ function _(_, _) {
 }
 function _(_) {
   let [_, _] = (0, _.useState)(!1);
-  (0, _.useEffect)(() => {
+  ((0, _.useEffect)(() => {
     let _ = window.setTimeout(() => _(!0), _);
     return () => window.clearTimeout(_);
   }, [_]),
-    _(_);
+    _(_));
 }
 function _(_) {
   let { bSalePage: _ } = _,
@@ -817,7 +817,7 @@ function _(_) {
   return (
     _(_, _),
     _.useEffect(() => {
-      _.Init(_(new _(_.WEBAPI_BASE_URL))), _.Init(), _(!0);
+      (_.Init(_(new _(_.WEBAPI_BASE_URL))), _.Init(), _(!0));
     }, []),
     _.useEffect(() => {
       let _ = _();
@@ -833,4 +833,3 @@ function _(_) {
       : null
   );
 }
-export { _, _ };

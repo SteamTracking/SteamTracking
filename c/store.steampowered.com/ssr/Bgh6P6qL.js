@@ -84,4 +84,3 @@ function _(_) {
     children: _,
   });
 }
-export { _ };

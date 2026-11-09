@@ -19,4 +19,3 @@ function _(_) {
     _,
   );
 }
-export { _, _ };

@@ -124,11 +124,11 @@ function _(_) {
   _.useEffect(() => {
     if (_ && !_.current) {
       let _ = window.setTimeout(() => {
-        (_.current = !0), _(!0);
+        ((_.current = !0), _(!0));
       }, 500);
       return () => window.clearTimeout(_);
     }
-    return _(_ || _), () => {};
+    return (_(_ || _), () => {});
   }, [_, _]);
   let { data: _ } = _(),
     _ = !!_?.preferences?.disable_microtrailers,
@@ -395,8 +395,8 @@ function _(_, _) {
   let _ = `0000000000000000000000000000000000000000`;
   typeof _ == `string` ? (_ = _) : _ && (_ = _(_) || _);
   let _ = `.jpg`;
-  _ === `0000000000000000000000000000000000000000` && (_ = _),
-    _.length == 44 && ((_ = _.slice(-4)), (_ = _.slice(0, 40)));
+  (_ === `0000000000000000000000000000000000000000` && (_ = _),
+    _.length == 44 && ((_ = _.slice(-4)), (_ = _.slice(0, 40))));
   let _ = _.AVATAR_BASE_URL;
   switch (
     (_ ||
@@ -417,7 +417,7 @@ function _(_, _) {
     case `FillArea`:
       _ += `_full`;
   }
-  return (_ += _), _;
+  return ((_ += _), _);
 }
 function _(_) {
   return _
@@ -665,7 +665,7 @@ var _ = class _ {
   }
   static s_Singleton;
   static Get() {
-    return (_.s_Singleton ||= new _()), _.s_Singleton;
+    return ((_.s_Singleton ||= new _()), _.s_Singleton);
   }
   constructor() {}
 };
@@ -698,10 +698,10 @@ function _(_) {
         let _ = _.map((_) => _.Get().LoadStoreItemPartnerInfo(_, 0));
         Promise.all(_).then(() => {
           let _ = new Map();
-          _.forEach((_) => {
+          (_.forEach((_) => {
             _.Get().BHasInfoForApp(_) && _.set(_, _.Get().GetInfoForApp(_));
           }),
-            _(_);
+            _(_));
         });
       }
     }, [_]),
@@ -974,16 +974,16 @@ function _(_) {
             _ = `${_.PARTNER_BASE_URL}bundles/suggestbundle`;
             break;
           default:
-            _ ? (_.includedlc = !0) : _ === !1 && (_.includedlc = !1),
+            (_ ? (_.includedlc = !0) : _ === !1 && (_.includedlc = !1),
               _ &&
                 ((_.bfilterappids = !0),
-                (_.rgParentAppIds = JSON.stringify(_)));
+                (_.rgParentAppIds = JSON.stringify(_))));
         }
         let _ = await _.default.get(_, {
           params: _,
           withCredentials: !0,
         });
-        _?.status == 200 && _.data?.success == 1
+        (_?.status == 200 && _.data?.success == 1
           ? _
             ? (_(_.data.matches?.filter((_) => _(_._)) || []),
               _(_.data.package_matches?.filter((_) => _(_.packageid)) || []),
@@ -992,13 +992,13 @@ function _(_) {
               _(_.data.package_matches || []),
               _(_.data.bundle_matches || []))
           : (_([]), _([]), _([])),
-          _(!1);
+          _(!1));
       },
       [_, _, _, _, _],
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        _(_), _(_.current?.value, _);
+        (_(_), _(_.current?.value, _));
       },
       [_, _],
     ),
@@ -1074,7 +1074,7 @@ function _(_) {
                   is_visible: !0,
                   type: 0,
                   fnSetItemID: () => {
-                    _([]), _(_._, _.itemid);
+                    (_([]), _(_._, _.itemid));
                   },
                 },
                 _._,
@@ -1090,7 +1090,7 @@ function _(_) {
                   type: 1,
                   is_visible: _.is_visible,
                   fnSetItemID: () => {
-                    _([]), _(_.packageid);
+                    (_([]), _(_.packageid));
                   },
                 },
                 _.packageid,
@@ -1106,7 +1106,7 @@ function _(_) {
                   type: 2,
                   is_visible: _.is_visible,
                   fnSetItemID: () => {
-                    _([]), _(_.bundleid);
+                    (_([]), _(_.bundleid));
                   },
                 },
                 _.bundleid,
@@ -1368,4 +1368,3 @@ function _(_) {
           ],
         });
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };
