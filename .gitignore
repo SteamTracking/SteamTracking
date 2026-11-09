@@ -24,7 +24,10 @@
 *.dylib
 *.pak
 *.bin
+*.dat
+*.ttf
 
+/ClientExtracted/resource/crl-set
 /ClientExtracted/steamcmd
 /ClientExtracted/steam_osx
 /ClientExtracted/steamchina_osx

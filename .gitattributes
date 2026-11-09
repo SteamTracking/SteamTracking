@@ -1,7 +1,5 @@
 * text eol=lf
 
-*.bin binary
-*.dat binary
 *.doc binary
 *.gif binary
 *.ico binary
@@ -9,9 +7,6 @@
 *.m4a binary
 *.png binary
 *.tga binary
-*.ttf binary
-*.wav binary
-*.uifont binary
 *.webp binary
 
 ClientManifest/* linguist-generated=true
