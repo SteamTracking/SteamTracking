@@ -42,6 +42,7 @@ import type {
 	Statement,
 } from "estree";
 import { ParseJavascript } from "./dump_javascript_paths.ts"; // also fixes estraverse Syntax and VisitorKeys
+import { Log } from "./log.ts";
 
 // Gives each Syntax member its literal type so that comparisons narrow the node union.
 const Syntax = EstraverseSyntax as { [K in NodeType | "PropertyDefinition"]: K };
@@ -466,7 +467,7 @@ function normalizeAst(ast: Program, isSsrFile: boolean): Program {
 					};
 				} catch (err) {
 					// Leave invalid JSON unchanged
-					console.warn(`Warning: Failed to parse JSON in JSON.parse call: ${(err as Error).message}`);
+					Log(`{yellow}Failed to parse JSON in JSON.parse call: ${err}`);
 				}
 			}
 		},

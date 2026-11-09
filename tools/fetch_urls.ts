@@ -49,7 +49,7 @@ export function ParseUrls(): UrlToFetch[] {
 		}
 
 		if (!URL.canParse(line)) {
-			Log(`${line} is malformed`);
+			Log(`{lightred}Malformed url: ${line}`);
 			continue;
 		}
 
@@ -69,7 +69,7 @@ export async function FetchQueued(windowSize: number): Promise<void> {
 	state.urlsToFetch = [];
 	let nextIndex = 0;
 
-	Log(`{yellow}${urls.length} urls to be fetched...`);
+	Log(`{lightblue}Fetching ${urls.length} urls`);
 
 	async function Worker(): Promise<void> {
 		while (nextIndex < urls.length) {
@@ -90,8 +90,6 @@ export async function FetchQueued(windowSize: number): Promise<void> {
 	await Promise.all(workers);
 
 	if (state.filesToFormat.size > 0) {
-		Log(`{lightblue}Formatting ${state.filesToFormat.size} files`);
-
 		await FormatFiles([...state.filesToFormat]);
 		state.filesToFormat.clear();
 	}
@@ -138,18 +136,16 @@ async function Download(url: string, file: string): Promise<DownloadResult> {
 function HandleDownload(file: string, url: string, result: DownloadResult): void {
 	const code = result.code;
 
-	if (code === 429 && file === ssrRequest) {
-		Log(`{yellow}Error ${code}{normal}    - ${url} (but continuing)`);
-		return;
-	}
-
 	if (code === 304) {
 		Log(`{green}HTTP Cache  {normal} - ${url}`);
 		return;
 	}
 
 	if (code !== 200) {
-		Log(`{yellow}Error ${code}{normal}    - ${url}`);
+		// Download already logged why it got no response
+		if (code !== 0) {
+			Log(`{yellow}Error ${code}{normal}    - ${url}`);
+		}
 
 		if (code < 100 || code >= 500) {
 			state.urlsToFetch.push({ url, file });

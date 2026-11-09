@@ -231,7 +231,7 @@ function QueueClientArchives(file: string, data: string): void {
 	const archives = [...data.matchAll(/"([a-z0-9_]+\.zip)\.([a-f0-9]{40})"/g)];
 
 	if (archives.length === 0) {
-		Log("{yellow}Failed to find any archives");
+		Log(`{yellow}Failed to find any archives in ${file}`);
 		return;
 	}
 
@@ -239,18 +239,18 @@ function QueueClientArchives(file: string, data: string): void {
 		const path = `.support/${folder}/${archive}`;
 
 		if (state.clientArchiveHashes.has(path)) {
-			Log(`Matched {lightblue}${path}{normal}, but it is already queued`);
+			Log(`Archive ${path} is already queued`);
 			continue;
 		}
 
 		const fullPath = join(rootDir, path);
 
 		if (existsSync(fullPath) && hash("sha1", readFileSync(fullPath)) === archiveHash) {
-			Log(`Matched {lightblue}${path}{normal}, but we already have it cached`);
+			Log(`Archive ${path} is already cached`);
 			continue;
 		}
 
-		Log(`Downloading {lightblue}${path}{normal} - checksum: ${archiveHash}`);
+		Log(`Archive ${path} is queued with checksum ${archiveHash}`);
 
 		state.clientArchiveHashes.set(path, archiveHash);
 		state.urlsToFetch.push({
@@ -288,7 +288,7 @@ function FormatJobs(text: string): string | null {
 }
 
 function HandleApk(body: Buffer): boolean {
-	Log("Dumping mobile app");
+	Log("Dumping strings from the mobile app");
 
 	const bundleName = "assets/index.android.bundle";
 
@@ -300,6 +300,8 @@ function HandleApk(body: Buffer): boolean {
 
 	if (bundle !== undefined) {
 		writeFileSync(join(rootDir, "Random/SteamApkStrings.txt"), ExtractHermesStrings(bundle));
+	} else {
+		Log(`{yellow}Failed to find ${bundleName} in the mobile app`);
 	}
 
 	return true;

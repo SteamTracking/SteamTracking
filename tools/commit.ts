@@ -1,5 +1,6 @@
 import { execFileSync } from "node:child_process";
 import { basename } from "node:path";
+import { Log } from "./log.ts";
 
 execFileSync("git", ["add", "-A"], { stdio: "inherit" });
 
@@ -9,6 +10,7 @@ const status = execFileSync("git", ["status", "--porcelain"], {
 }).trimEnd();
 
 if (status === "") {
+	Log("No changes to commit");
 	process.exit(0);
 }
 

@@ -183,7 +183,6 @@ function DumpStringsFromBinaries(): void {
 			continue;
 		}
 
-		Log(`Dumping ${basename(file)}`);
 		DumpStringsFile(file);
 	}
 
@@ -195,6 +194,8 @@ function DumpStringsFromBinaries(): void {
 }
 
 function DumpStringsFile(file: string): void {
+	Log(`Dumping ${basename(file)}`);
+
 	let output: string;
 
 	try {
@@ -203,7 +204,7 @@ function DumpStringsFile(file: string): void {
 			maxBuffer: maxOutputSize,
 		});
 	} catch {
-		Log(`{lightred}Failed to dump strings from: ${basename(file)}`);
+		Log(`{lightred}Failed to dump strings from ${basename(file)}`);
 		return;
 	}
 
@@ -265,7 +266,7 @@ function FindFiles(dir: string, extensions: string[]): string[] {
 }
 
 async function ProcessJavascript(): Promise<void> {
-	Log("Prettifying javascript");
+	Log("Processing javascript");
 
 	const directories = [
 		join(clientExtractedDir, "steamui"),
@@ -280,6 +281,7 @@ async function ProcessJavascript(): Promise<void> {
 	}
 
 	const filesToFormat: string[] = [];
+	let jsonFiles = 0;
 
 	for (const file of files) {
 		const relativePath = relative(clientExtractedDir, file);
@@ -287,7 +289,7 @@ async function ProcessJavascript(): Promise<void> {
 
 		if (extname(file) === ".js") {
 			if (!filename.startsWith("libraries~") && ExtractJsonFromWebpack(file)) {
-				Log(`Extracted json from ${relativePath}`);
+				jsonFiles++;
 				continue;
 			}
 
@@ -300,7 +302,7 @@ async function ProcessJavascript(): Promise<void> {
 					GenerateCleanJs(file, cleanFile, false);
 					filesToFormat.push(cleanFile);
 				} catch (error) {
-					Log(`{lightred}Failed to clean ${relativePath}: ${(error as Error).message}`);
+					Log(`{lightred}Failed to clean ${relativePath}: ${error}`);
 				}
 			}
 		}
@@ -308,7 +310,7 @@ async function ProcessJavascript(): Promise<void> {
 		filesToFormat.push(file);
 	}
 
-	Log(`Formatting ${filesToFormat.length} files`);
+	Log(`Extracted json from ${jsonFiles} files`);
 
 	await FormatFiles(filesToFormat);
 }

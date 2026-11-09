@@ -18,6 +18,7 @@ import type {
 import { create as createXml } from "xmlbuilder2";
 import type { XMLBuilder } from "xmlbuilder2/lib/interfaces.js";
 import { GetFilesToParse, ParseJavascript } from "./dump_javascript_paths.ts";
+import { Log } from "./log.ts";
 
 const __dirname = import.meta.dirname;
 const rootDir = pathResolve(__dirname, "..");
@@ -129,7 +130,7 @@ export async function DumpSvg(): Promise<void> {
 						} else if (header === "data:image/svg+xml") {
 							extension = "svg";
 						} else {
-							console.warn(`Unknown data URI header: ${header}`);
+							Log(`{yellow}Unknown data URI header: ${header}`);
 							return;
 						}
 
@@ -139,19 +140,19 @@ export async function DumpSvg(): Promise<void> {
 				},
 			});
 		} catch (e) {
-			console.error(`Unable to parse "${file}": ${e}`);
+			Log(`{lightred}Failed to parse ${file}: ${e}`);
 		}
 	}
 
 	const allFiles = readdirSync(outputPath).map((f) => `${outputPath}/${f}`);
 	for (const file of allFiles) {
 		if (!writtenFiles.has(file)) {
-			console.log("Removing unused file:", file);
+			Log(`Deleting ${file}`);
 			rmSync(file);
 		}
 	}
 
-	console.log("Extracted", writtenFiles.size, "files.");
+	Log(`Found ${writtenFiles.size} images`);
 }
 
 function createSvgBody(node: CallExpression, xml: XMLBuilder = createXml()): XMLBuilder {
@@ -209,7 +210,7 @@ function createSvgBody(node: CallExpression, xml: XMLBuilder = createXml()): XML
 			}
 		}
 	} catch (e) {
-		console.error(e, node);
+		Log(`{lightred}Failed to build an SVG: ${e}`);
 	}
 
 	return xml;
@@ -234,7 +235,7 @@ function OutputToFile(writtenFiles: Set<string>, extension: string, content: Buf
 		return;
 	}
 
-	console.log("Writing file:", fileName);
+	Log(`Writing ${fileName}`);
 
 	writeFileSync(fileName, content);
 }

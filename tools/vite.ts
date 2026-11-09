@@ -87,7 +87,7 @@ export async function GenerateViteUrls(): Promise<void> {
 		}
 	}
 
-	console.log("Found", urls.size, "Vite urls");
+	Log(`Found ${urls.size} Vite urls`);
 
 	const strings = `${[...urls].toSorted().join("\n")}\n`;
 
@@ -134,19 +134,19 @@ export function DeleteOldViteChunks(previousUrls: string[], knownUrls: Set<strin
 		const savedPath = join(rootDir, GetSavedPath(file));
 
 		if (existsSync(filePath)) {
-			Log(`Chunk ${filePath} is no longer referenced`);
+			Log(`Deleting ${filePath}`);
 
 			unlinkSync(filePath);
 		}
 
 		if (existsSync(cleanPath)) {
-			Log(`Deleting clean file ${cleanPath}`);
+			Log(`Deleting ${cleanPath}`);
 
 			unlinkSync(cleanPath);
 		}
 
 		if (savedPath !== filePath && existsSync(savedPath)) {
-			Log(`Deleting strings file ${savedPath}`);
+			Log(`Deleting ${savedPath}`);
 
 			unlinkSync(savedPath);
 		}

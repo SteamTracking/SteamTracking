@@ -22,6 +22,7 @@ import type {
 	SpreadElement,
 } from "estree";
 import { GetFilesToParse, ParseJavascript } from "./dump_javascript_paths.ts";
+import { Log } from "./log.ts";
 
 const __dirname = import.meta.dirname;
 const rootDir = pathResolve(__dirname, "..");
@@ -137,7 +138,7 @@ export async function DumpProtobufs(): Promise<void> {
 
 	const globalModuleExportedMessages: ExportedIds = new Map();
 
-	console.log("Found", files.length, "files to parse");
+	Log(`Found ${files.length} files to parse`);
 
 	for (const file of files) {
 		try {
@@ -267,7 +268,7 @@ export async function DumpProtobufs(): Promise<void> {
 			allMessages.push(...messages);
 			allEnums.push(...enums);
 		} catch (e) {
-			console.error(`Unable to parse "${file}":`, e);
+			Log(`{lightred}Failed to parse ${file}: ${e}`);
 		}
 	}
 
@@ -275,7 +276,7 @@ export async function DumpProtobufs(): Promise<void> {
 
 	const mergedMessages = MergeMessages(allMessages);
 
-	console.log("Found", mergedMessages.size, "messages");
+	Log(`Found ${mergedMessages.size} messages`);
 
 	await OutputSplitServices(allServices, mergedMessages);
 	await OutputCommon(mergedMessages);
@@ -283,7 +284,7 @@ export async function DumpProtobufs(): Promise<void> {
 
 	const mergedEnums = MergeEnums(allEnums);
 
-	console.log("Found", mergedEnums.size, "enums");
+	Log(`Found ${mergedEnums.size} enums`);
 
 	const stream = createWriteStream(pathResolve(rootDir, "Structs/webui_enums.steamd"), {
 		flags: "w",
@@ -298,7 +299,7 @@ async function OutputSplitServices(allServices: Service[], mergedMessages: Map<s
 	MarkMethodDependants(splitServices, mergedMessages);
 	const groupedServices = GroupServices(splitServices);
 
-	console.log("Found", splitServices.size, "services");
+	Log(`Found ${splitServices.size} services`);
 
 	for (const [name, services] of groupedServices) {
 		const fileName = pathJoin(outputPath, `service_${name.toLowerCase()}.proto`);
@@ -357,7 +358,7 @@ async function OutputCommon(mergedMessages: Map<string, Message>) {
 		}
 	}
 
-	console.log("Found", commonMessages.size, "common messages");
+	Log(`Found ${commonMessages.size} common messages`);
 
 	await OutputToFile(pathJoin(outputPath, "common.proto"), imports, [], commonMessages);
 }
@@ -989,7 +990,7 @@ function TraverseModule(ast: FunctionExpression | ArrowFunctionExpression, fileN
 								continue;
 							}
 
-							console.error("Unexpected webpack function", fileName);
+							Log(`{yellow}Unexpected webpack function in ${fileName}`);
 							return;
 						}
 
@@ -1011,7 +1012,7 @@ function TraverseModule(ast: FunctionExpression | ArrowFunctionExpression, fileN
 						return; // dynamic import?
 					}
 
-					console.error("Unexpected webpack function ", node.arguments[2].type, fileName);
+					Log(`{yellow}Unexpected webpack function ${node.arguments[2].type} in ${fileName}`);
 					return;
 				}
 
@@ -1671,7 +1672,7 @@ function TraverseFields(ast: Node, importedIds: Map<string, string>, constants: 
 							// pbr?: ( this: jspb.BinaryReader ) => any //[p]acked [b]inary [r]eader
 							// readPacked type
 						} else {
-							console.warn(`Unexpected field: ${fieldProp.key.name}`);
+							Log(`{yellow}Unexpected field: ${fieldProp.key.name}`);
 						}
 					}
 
@@ -1813,7 +1814,7 @@ function GetSendMsg(
 	}
 
 	if (node.arguments[3].type !== Syntax.ObjectExpression) {
-		console.error("Rejected SendMsg", node.arguments[0].value);
+		Log(`{yellow}Rejected SendMsg ${node.arguments[0].value}`);
 		return null;
 	}
 
@@ -1899,7 +1900,7 @@ function GetSendNotification(node: Node): Service | null {
 	}
 
 	if (node.arguments[2].type !== Syntax.ObjectExpression) {
-		console.error("Rejected SendNotification", node.arguments[0].value);
+		Log(`{yellow}Rejected SendNotification ${node.arguments[0].value}`);
 		return null;
 	}
 

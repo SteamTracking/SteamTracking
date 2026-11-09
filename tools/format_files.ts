@@ -10,6 +10,8 @@ const formattedExtensions = new Set([".css", ".js", ".json"]);
  * template literals stay untouched. Files that fail to parse are left as they are.
  */
 export async function FormatFiles(files: string[]): Promise<void> {
+	Log(`Formatting ${files.length} files`);
+
 	for (const file of files) {
 		if (!formattedExtensions.has(extname(file))) {
 			continue;

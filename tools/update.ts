@@ -71,13 +71,16 @@ async function Update(): Promise<void> {
 
 	if (state.dumpJavascriptFiles) {
 		Log("{lightblue}Dumping web protobufs");
-
 		await DumpProtobufs();
+
+		Log("{lightblue}Dumping web urls");
 		await DumpUrls();
+
+		Log("{lightblue}Dumping web images");
 		await DumpSvg();
 	}
 
-	Log("{lightblue}Done");
+	Log("{green}Done");
 }
 
 /**
@@ -91,6 +94,10 @@ async function FetchListedUrls(): Promise<void> {
 		await FetchQueued(windowSize);
 		windowSize = 1;
 	} while (state.urlsToFetch.length > 0 && tries-- > 0);
+
+	if (state.urlsToFetch.length > 0) {
+		Log(`{lightred}${state.urlsToFetch.length} urls still failing after retries`);
+	}
 }
 
 /**
@@ -98,6 +105,8 @@ async function FetchListedUrls(): Promise<void> {
  * Chunks that are no longer referenced are deleted only when that point was reached.
  */
 async function UpdateViteChunks(knownUrls: Set<string>): Promise<void> {
+	Log("{lightblue}Updating Vite chunks");
+
 	const previousUrls = ReadViteUrls();
 	let foundEverything = false;
 
@@ -115,6 +124,8 @@ async function UpdateViteChunks(knownUrls: Set<string>): Promise<void> {
 
 	if (foundEverything) {
 		DeleteOldViteChunks(previousUrls, knownUrls);
+	} else {
+		Log("{yellow}Keeping old Vite chunks because discovery did not finish");
 	}
 }
 
@@ -123,7 +134,13 @@ async function UpdateViteChunks(knownUrls: Set<string>): Promise<void> {
  * Old files are deleted only when every SSR page was parsed, because the pages list the files to keep.
  */
 async function UpdateSsrFiles(): Promise<void> {
+	Log("{lightblue}Updating SSR files");
+
 	const allPagesParsed = state.ssrPagesParsed === state.ssrPagesToParse;
+
+	if (!allPagesParsed) {
+		Log(`{yellow}Keeping old SSR files because only ${state.ssrPagesParsed} of ${state.ssrPagesToParse} pages parsed`);
+	}
 
 	for (let round = 0; round < maxDiscoveryRounds; round++) {
 		// Old files would otherwise be read for imports and kept alive

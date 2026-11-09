@@ -14,6 +14,7 @@ import type {
 	TemplateLiteral,
 } from "estree";
 import { GetFilesToParse } from "./dump_javascript_paths.ts";
+import { Log } from "./log.ts";
 
 const __dirname = import.meta.dirname;
 
@@ -44,11 +45,11 @@ export async function DumpUrls(): Promise<void> {
 				},
 			});
 		} catch (e) {
-			console.error(`Unable to parse "${file}": ${e}`);
+			Log(`{lightred}Failed to parse ${file}: ${e}`);
 		}
 	}
 
-	console.log("Found", allStrings.size, "strings");
+	Log(`Found ${allStrings.size} urls`);
 
 	const strings = [...allStrings.values()].toSorted().join("\n") + "\n";
 

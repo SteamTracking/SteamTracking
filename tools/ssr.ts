@@ -162,7 +162,7 @@ export function DeleteOldSsrFiles(): void {
 
 			const filePath = join(folderPath, entry.name);
 
-			Log(`Chunk ${filePath} no longer exists`);
+			Log(`Deleting ${filePath}`);
 
 			delete state.etags[`${folder}/${entry.name}`];
 			delete state.hashes[`${folder}/${entry.name}`];
@@ -183,7 +183,7 @@ export function DeleteOldSsrFiles(): void {
 
 			const filePath = join(cleanFolderPath, entry.name);
 
-			Log(`Deleting clean file ${filePath}`);
+			Log(`Deleting ${filePath}`);
 
 			unlinkSync(filePath);
 		}
@@ -241,7 +241,7 @@ async function MergeEnglishChunks(
 				continue;
 			}
 
-			console.error(`Unable to extract strings from "${chunk}": ${e}`);
+			Log(`{lightred}Failed to extract strings from ${chunk}: ${e}`);
 			continue;
 		}
 
@@ -260,7 +260,7 @@ async function MergeEnglishChunks(
 		return;
 	}
 
-	console.log("Merged", found, "English chunks into", Object.keys(merged).length, "strings");
+	Log(`Merged ${found} English chunks into ${Object.keys(merged).length} strings in ${stringsFile}`);
 
 	await writeFile(stringsFile, FormatStrings(merged));
 }
@@ -312,14 +312,14 @@ export async function GenerateSsrUrls(): Promise<void> {
 					},
 				});
 			} catch (e) {
-				console.error(`Unable to parse "${file}": ${e}`);
+				Log(`{lightred}Failed to parse ${file}: ${e}`);
 			}
 		}
 
 		await MergeEnglishChunks(folder, cleanFolder, englishChunks, stringsFile);
 	}
 
-	console.log("Found", urls.size, "SSR urls");
+	Log(`Found ${urls.size} SSR urls`);
 
 	const strings = `${[...urls].toSorted().join("\n")}\n`;
 
