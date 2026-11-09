@@ -1,0 +1,839 @@
+
+html.GamepadMode body {
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLightestGrey);
+}
+
+html.GamepadMode .community_space_clear {
+	display: none;
+}
+
+
+
+
+/* MINI PROFILE */
+html.GamepadMode .miniprofile_hover {
+	display: none !important;
+}
+
+
+
+
+/* PAGE */
+html.GamepadMode .responsive_page_content {
+	min-height: 100vh;
+	background: var(--gpGradient-StoreBackground);
+}
+
+@media screen and (max-width: 1120px) {
+	html.GamepadMode .responsive_page_content {
+		background-attachment: fixed; /*fixed background causes perf issues on larger monitors*/
+	}
+}
+
+html.GamepadMode #profileBlock {
+	width: unset;
+	float: unset;
+	max-width: unset;
+}
+
+
+
+/* TEXT */
+html.GamepadMode body,
+html.GamepadMode textarea,
+html.GamepadMode input {
+	font-weight: 400;
+}
+
+
+
+/* BREADCRUMBS */
+html.GamepadMode .breadcrumbs {
+	padding: unset;
+	width: 100%;
+}
+
+
+
+/* HEADER */
+html.GamepadMode .profile_small_header_name {
+	font: var(--gpText-HeadingLarge);
+}
+
+html.GamepadMode .profile_small_header_additional .gameLogo a {
+	display: flex;
+}
+
+html.GamepadMode .profile_small_header_bg {
+	background: none;
+	height: unset;
+	margin: unset;
+	background-color: var(--gpStoreDarkerGrey);
+	max-width: unset;
+}
+
+html.GamepadMode .profile_small_header_texture {
+	background: #4c515d80;
+	height: unset;
+	display: flex;
+	flex-direction: row;
+	padding: 24px;
+	gap: 16px;
+	align-items: center;
+	max-width: 1120px;
+}
+
+html.GamepadMode .profile_small_header_text {
+	position: unset;
+	padding: unset;
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	column-gap: 6px;
+	max-height: unset;
+}
+html.GamepadMode .profile_small_header_text h1 {
+	padding-bottom: unset;
+}
+html.GamepadMode .profile_small_header_text h2 {
+	padding-top: unset;
+}
+
+html.GamepadMode .profile_small_header_avatar {
+	position: unset;
+	left: unset;
+}
+
+html.GamepadMode .profile_small_header_avatar .playerAvatar.medium {
+	width: 44px;
+	height: 44px;
+}
+
+html.GamepadMode .profile_small_header_avatar .playerAvatar.medium img {
+	width: 42px;
+	height: 42px;
+}
+
+html.GamepadMode .profile_small_header_additional {
+	position: unset;
+	margin: -16px 0px -16px auto;
+}
+
+html.GamepadMode .profile_small_header_additional .gameLogo {
+	padding: unset;
+	box-shadow: var(--gpShadow-Medium);
+	margin: unset;
+}
+
+
+
+
+
+/* MAIN CONTAINER */
+html.GamepadMode body.migrated_profile_page #BG_bottom.maincontent {
+	margin: 0px auto;
+	padding: 0px var(--gpSpace-Gutter);
+	padding-bottom: 24px;
+	background: none;
+}
+
+html.GamepadMode .maincontent {
+	flex: auto;
+	max-width: unset;
+	width: 100%;
+}
+
+html.GamepadMode #mainContents {
+	max-width: unset;
+	width: 100%;
+}
+
+html.GamepadMode #tabs_basebg {
+	max-width: unset;
+}
+
+
+
+
+
+/* TABS */
+
+/* Container */
+html.GamepadMode .sectionTabs,
+html.GamepadMode .apphub_sectionTabs {
+	animation: fade-mask linear;
+	animation-timeline: scroll(self inline);
+	display: flex !important;
+	column-gap: 6px;
+	font-size: unset;
+	margin: 0;
+	overflow-x: scroll;
+	padding: 24px 0;
+	scroll-padding: 0px 96px;
+}
+
+@keyframes fade-mask {
+  from { mask-image: linear-gradient(90deg, black, black calc(100% - 20px), transparent); }
+  50% { mask-image: linear-gradient(90deg, transparent, black 20px, black calc(100% - 20px), transparent); }
+  to { mask-image: linear-gradient(90deg, transparent, black 20px, black); }
+}
+
+html.GamepadMode .sectionTabs:has(> :nth-child(2).gpfocus),
+html.GamepadMode .apphub_sectionTabs:has(> :nth-child(2).gpfocus) {
+	padding-inline-start: 4px;
+	margin-inline-start: -4px;
+}
+
+html.GamepadMode .sectionTabs:has(> :last-child.gpfocus),
+html.GamepadMode .apphub_sectionTabs:has(> :last-child.gpfocus) {
+	padding-inline-end: 4px;
+	margin-inline-end: -4px;
+}
+
+html.GamepadMode .sectionTabs {
+	background: none;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+html.GamepadMode .apphub_sectionTabs {
+	padding-top: 20px;
+	scroll-snap-align: start;
+}
+
+
+/* Items */
+html.GamepadMode .sectionTab,
+html.GamepadMode a.sectionTab,
+html.GamepadMode .apphub_sectionTab {
+	margin: unset;
+	float: unset;
+	height: unset;
+	padding: 10px 16px;
+	font: var(--gpText-BodyLarge);
+	border-radius: var(--gpCorner-Medium);
+	background: none;
+	background-color: var(--gpBackground-LightSofter);
+	transition: all 0.2s ease;
+}
+
+html.GamepadMode a.sectionTab span {
+	white-space: nowrap;
+}
+
+html.GamepadMode .apphub_sectionTab {
+	background-color: var(--gpBackground-Neutral-LightSofter);
+}
+
+/* Hovers */
+html.GamepadMode .sectionTab:hover,
+html.GamepadMode a.sectionTab:hover {
+	background-color: var(--gpBackground-LightMedium);
+}
+
+html.GamepadMode .apphub_sectionTab:hover {
+	background-color: var(--gpBackground-Neutral-LightSoft);
+	opacity: 1;
+}
+
+/* Active */
+html.GamepadMode .sectionTab.active {
+	background: unset;
+	box-shadow: var(--gpShadow-Medium);
+	background-color: var(--gpBackground-LightHard);
+	border-bottom: unset;
+}
+
+html.GamepadMode .apphub_sectionTab.active {
+	background-color: var(--gpBackground-Neutral-LightHard);
+	border-bottom: unset;
+	opacity: 1;
+}
+
+html.GamepadMode .apphub_sectionTab.active:hover {
+	padding: 10px 16px;
+	background: unset;
+	background-color: var(--gpBackground-Neutral-LightHarder);
+}
+
+/* Focus */
+html.GamepadMode .sectionTab.gpfocus,
+html.GamepadMode a.sectionTab.gpfocus,
+html.GamepadMode .apphub_sectionTab.gpfocus {
+	border-radius: 0px;
+	background-color: white;
+	opacity: 1;
+}
+
+html.GamepadMode .sectionTab.gpfocus > span,
+html.GamepadMode a.sectionTab.gpfocus > span,
+html.GamepadMode .apphub_sectionTab.gpfocus > span {
+	color: black !important;
+}
+
+/* Hide tab select */
+html.GamepadMode div.nonresponsive_hidden.responsive_tab_ctn {
+	display: none;
+}
+
+
+
+
+/* PAGINATION */
+html.GamepadMode.touch .commentthread_pagedropdown,
+html.GamepadMode .commentthread_pagedropdown {
+	display: none;
+}
+
+html.GamepadMode .pagebtn,
+html.GamepadMode a.pagebtn,
+html.GamepadMode a.pagelink {
+	font: var(--gpText-BodyMedium) !important;
+	padding: 6px 16px;
+	color: white;
+	background-color: #FFFFFF20;
+	border-radius: var(--gpCorner-Medium);
+	transition: all 0.2s ease;
+	font-weight: 700;
+	display: inline-block;
+}
+
+html.GamepadMode .pagination_space {
+	/* we need this spacer to exist so that the selected page looks okay */
+
+}
+
+html.GamepadMode a.pagelink {
+	padding: 6px 12px;
+	font-weight: 400;
+}
+
+html.GamepadMode .pagebtn:hover,
+html.GamepadMode a.pagebtn:hover {
+	color: #FFFFFF;
+	background-color: #ffffff30;
+}
+
+html.GamepadMode .pagebtn.gpfocus,
+html.GamepadMode a.pagebtn.gpfocus {
+	color: black;
+	background-color: white;
+	border-radius: 0px;
+}
+
+
+/* Items per page */
+html.GamepadMode .commentthread_pagination_ctn {
+	float: unset !important;
+}
+
+html.GamepadMode .forum_pagesize_options {
+	float: unset !important;
+	display: flex;
+	justify-content: center;
+	padding: 16px;
+	margin-top: 16px;
+	border-top: 1px solid var(--gpBackground-LightSoft);
+	color: var(--gpStoreLighterGrey);
+	font: var(--gpText-BodyMedium);
+	margin: unset;
+}
+
+html.GamepadMode .commentthread_pagination_link {
+	padding: 8px 16px;
+	background-color: #FFFFFF40;
+	display: inline-flex;
+	border-radius: var(--gpCorner-Medium);
+	transition: all 0.2s ease;
+	background-color: var(--gpBackground-LightHard);
+	color: white;
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode a.commentthread_pagination_link {
+	background-color: var(--gpBackground-LightSoft);
+	box-shadow: unset;
+	color: var(--gpStoreLightestGrey);
+}
+
+html.GamepadMode a.commentthread_pagination_link:hover {
+	color: white;
+	background-color: var(--gpBackground-LightMedium);
+}
+
+html.GamepadMode a.commentthread_pagination_link.gpfocus {
+	background-color: white;
+	color: black;
+	border-radius: 0px;
+}
+
+
+
+
+/* COMMUNITY AGE CHECK */
+html.GamepadMode .adult_content_age_gate {
+	padding: 48px 48px;
+}
+
+html.GamepadMode .adult_content_age_gate_header {
+	box-shadow: var(--gpShadow-Medium);
+	width: 240px;
+}
+
+html.GamepadMode .adult_content_age_gate p.descriptor {
+	font: var(--gpText-HeadingSmall);
+	font-weight: 500;
+	padding: unset;
+	margin: 16px 0px;
+}
+
+html.GamepadMode .adult_content_age_gate_warning_check {
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLightestGrey);
+	display: inline-flex;
+	align-items: center;
+	column-gap: 8px;
+	justify-content: center;
+	margin-bottom: 16px;
+	padding: 10px 16px;
+	transition: background-color 0.2 ease,
+				color 0.2 ease;
+}
+
+html.GamepadMode .edit_preferences {
+	margin-top: 40px;
+	border-top: 1px solid var(--gpBackground-LightSoft);
+	padding-bottom: 24px;
+}
+
+html.GamepadMode .adult_content_age_gate_warning_check:hover,
+html.GamepadMode .adult_content_age_gate_warning_check.gpfocus {
+	background-color: var(--gpBackground-LightSoft);
+	color: white;
+}
+
+html.GamepadMode .adult_content_age_gate_warning_check #ViewAllForApp {
+	margin: unset;
+}
+
+
+
+
+/* CARDS */
+html.GamepadMode .apphub_Card {
+	margin: unset;
+	background-color: var(--gpStoreDarkestGrey);
+	box-shadow: var(--gpShadow-Medium);
+	border: none;
+	flex: auto;
+	margin-right: 6px;
+	margin-left: 6px;
+	margin-bottom: 12px;
+}
+
+html.GamepadMode .apphub_Card.interactable:hover {
+	border: none;
+}
+
+html.GamepadMode .apphub_CardContentAuthorBlock {
+	border-top: none;
+}
+
+html.GamepadMode .apphub_CardContentDiscussionType {
+	border-top: none;
+}
+
+html.GamepadMode .apphub_CardContentPreviewImageBorder {
+	padding: 8px;
+}
+
+html.GamepadMode .apphub_CardContentType {
+	margin: 8px;
+}
+
+html.GamepadMode .apphub_CardContentTitle {
+	font: var(--gpText-BodyMedium);
+	color: var(--gpStoreLighterGrey);
+}
+
+html.GamepadMode .apphub_CardClear {
+	display: none;
+}
+
+
+
+
+
+/* RIGHT PANEL */
+html.GamepadMode .responsive_page_menu_ctn {
+	box-shadow: var(--gpShadow-XLarge);
+}
+
+html.GamepadMode .responsive_page_menu_ctn.localmenu .responsive_page_menu {
+	background: var(--gpStoreDarkerGrey);
+}
+
+html.GamepadMode .apphub_ResponsiveMenuCtn {
+	display: flex;
+	column-gap: 8px;
+}
+
+html.GamepadMode .apphub_ResponsiveMenuCtn a {
+	flex-grow: 1;
+}
+
+html.GamepadMode .responsive_page_menu_ctn.localmenu .localmenu_subarea {
+	background: unset;
+	padding: unset;
+}
+
+html.GamepadMode .responsive_page_menu_ctn.localmenu .localmenu_subarea .subheader,
+html.GamepadMode .rightbox_content_header,
+html.GamepadMode .rightSectionTopTitle {
+	font: var(--gpText-BodySmall);
+	font-weight: 700;
+	color: var(--gpStoreLighterGrey);
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	padding-top: 0px;
+}
+
+html.GamepadMode .rightDetailsBlock {
+	font: var(--gpText-BodyMedium);
+}
+
+html.GamepadMode .responsive_page_menu_ctn.localmenu .localmenu_subarea .subheader {
+	margin: 20px 0px 4px;
+}
+
+html.GamepadMode .rightSectionTopTitle {
+	margin-bottom: 8px;
+}
+
+html.GamepadMode .rightcol,
+html.GamepadMode .right_column {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+html.GamepadMode .thread .rightcol {
+	margin-top: 16px;
+}
+
+html.GamepadMode .thread .rightcol .rightbox {
+	background: none;
+	border: 2px solid var(--gpBackground-Neutral-LightSofter);
+}
+
+html.GamepadMode .rightbox .rule,
+html.GamepadMode #ig_bottom .rightSectionDivider {
+	margin: 0px 16px;
+}
+
+html.GamepadMode .panel .hr {
+	margin: 0px;
+}
+
+html.GamepadMode .rightbox .rule,
+html.GamepadMode #ig_bottom .rightSectionDivider,
+html.GamepadMode .panel .hr {
+	border: none;
+	background-color: var(--gpBackground-Neutral-LightSofter);
+	left: -16px;
+}
+
+html.GamepadMode .thread .rightcol .rightbox .content {
+	padding: 16px;
+}
+
+html.GamepadMode .thread .rightcol .rightbox .content .topicstats {
+	font: var(--gpText-BodyMedium);
+}
+
+html.GamepadMode .topicstats_label {
+	color: var(--gpStoreLighterGrey);
+}
+
+html.GamepadMode .topicstats_value {
+	color: var(--gpStoreLightestGrey);
+}
+
+html.GamepadMode .rightbox .content,
+html.GamepadMode .rightbox_content_header,
+html.GamepadMode #ig_bottom .sidebar .panel,
+html.GamepadMode #ig_bottom .sidebar .detailPanel {
+	padding: 16px;
+}
+
+html.GamepadMode #your_guides .content {
+	padding-top: 12px;
+}
+
+
+
+/* Panel seach */
+html.GamepadMode .discussionSearchTextContainer {
+	background: none;
+
+	/* TODO: Hiding search until we investigate why search loads a different template */
+	display: none;
+}
+
+html.GamepadMode .discussionSearchTextContainer input.discussionSearchText {
+	width: 100%;
+}
+
+html.GamepadMode .discussionSearchTextContainer .discussionSearchTextSubmitImg {
+	display: none;
+}
+
+
+
+/* WORKSHOP FILES HEADER */
+html.GamepadMode .current_player_files_ctn .current_player_workshop_title a {
+	font: var(--gpText-BodyLarge);
+	font-weight: 500;
+}
+
+
+
+/* PAGINATION */
+html.GamepadMode .workshopBrowsePaging.withBG {
+	background: unset;
+	padding: unset;
+	align-items: center;
+	margin: 0px 0px 8px;
+}
+
+html.GamepadMode .workshopBrowsePagingInfo {
+	color: white;
+	opacity: 0.6;
+	font: var(--gpText-BodyMedium);
+}
+
+html.GamepadMode .workshopBrowsePagingControls {
+	display: flex;
+	column-gap: 4px;
+	align-items: center;
+	font: var(--gpText-BodyMedium);
+}
+
+
+
+
+/* SEARCH TERMS */
+html.GamepadMode .searchedForTerm {
+	color: white;
+	background-color: var(--gpColor-Green);
+	border: unset;
+	padding: 6px 8px;
+	transition: background-color 0.2s ease, border-radius 0.2s ease;
+}
+
+html.GamepadMode .searchedForTerm:hover {
+	background-color: var(--gpColor-GreenHi);
+}
+
+html.GamepadMode .searchedForTerm.gpfocus {
+	background-color: var(--gpColor-GreenHi);
+	border-radius: 0px;
+}
+
+
+
+
+/* COMMENTS */
+html.GamepadMode .profile_comment_area {
+	margin-top: 48px;
+	border-radius: 0px;
+}
+
+html.GamepadMode .profile_comment_area .commentthread_header {
+	background: none;
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 12px 16px;
+	border-radius: 0px;
+}
+
+html.GamepadMode .commentthread_comment_container {
+	margin-top: 6px;
+}
+
+html.GamepadMode .profile_comment_area .commentthread_header .commentthread_count {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+html.GamepadMode .commentthread_header_label {
+	font-weight: 500;
+	color: white;
+}
+
+html.GamepadMode .commentthread_count_label {
+	margin-right: unset;
+}
+
+html.GamepadMode .commentthread_user_avatar a {
+	display: flex;
+}
+
+html.GamepadMode .commentthread_comment_avatar a {
+	display: flex;
+}
+
+html.GamepadMode .commentthread_entry_quotebox {
+	border: unset;
+	border-radius: unset;
+	background: none;
+	box-shadow: unset;
+	padding: unset;
+	margin: unset;
+}
+
+html.GamepadMode .commentthread_area {
+	border-radius: 0px;
+}
+
+
+/* Comment items */
+html.GamepadMode .profile_comment_area .commentthread_comment_container {
+	border: none;
+}
+
+html.GamepadMode .commentthread_comments {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+html.GamepadMode .commentthread_comment {
+	transition: background-color 0.1s ease;
+	background-color: #ffffff10;
+	margin: unset;
+	display: flex;
+	padding: 16px;
+	min-height: unset;
+	gap: 16px;
+}
+
+html.GamepadMode .commentthread_comment_avatar {
+	position: unset;
+}
+
+html.GamepadMode .commentthread_comment_content {
+	flex: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+html.GamepadMode .commentthread_comment.gpfocus {
+	background-color: #ffffff20;
+}
+
+html.GamepadMode .commentthread_comment_author {
+	margin: unset;
+	line-height: unset;
+	font: var(--gpText-BodyMedium);
+	color: rgba(255, 255, 255, 0.8);
+}
+
+html.GamepadMode .commentthread_comment_author a {
+	font-size: unset;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+html.GamepadMode .commentthread_comment_timestamp {
+	font-size: unset;
+	color: unset;
+	margin: unset;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+html.GamepadMode .commentthread_comment_text {
+	font-size: unset;
+	color: unset;
+	color: rgba(255, 255, 255, 0.9);
+	line-height: unset;
+}
+
+
+/* Comment box */
+html.GamepadMode .commentthread_entry_quotebox textarea {
+	background-color: #FFFFFF20;
+	border-radius: var(--gpCorner-Medium);
+	font: var(--gpText-BodyLarge);
+	color: white;
+	transition: all 0.1s ease;
+	padding: 8px 10px;
+	box-shadow: unset;
+	border: unset;
+	margin: unset;
+	box-sizing: border-box;
+	text-shadow: unset;
+	height: unset !important;
+}
+
+html.GamepadMode .commentthread_entry_quotebox textarea::placeholder {
+	color: unset;
+	opacity: 0.5;
+}
+
+html.GamepadMode .commentthread_entry_quotebox textarea:hover {
+	background-color: #ffffff30;
+}
+
+html.GamepadMode .commentthread_entry_quotebox textarea:focus {
+	background-color: white;
+	color: black;
+	height: 80px !important;
+}
+
+html.GamepadMode .commentthread_entry_quotebox textarea.gpfocus {
+	border-radius: 0px;
+}
+
+html.GamepadMode .commentthread_footer {
+	border: none;
+}
+
+html.GamepadMode .profile_comment_area .commentthread_header .commentthread_allcommentslink {
+	font: var(--gpText-BodyMedium);
+}
+
+html.GamepadMode .profile_comment_area .commentthread_subscribe_checkbox {
+	width: 20px;
+	height: 20px;
+	border: none;
+	background-color: var(--gpBackground-LightSoft);
+	border-radius: var(--gpCorner-Medium);
+}
+
+html.GamepadMode .commentthread_subscribe_hint {
+	display: none;
+}
+
+html.GamepadMode .commentthread_entry {
+	background-color: unset;
+}
+
+
+/* Subscribe link */
+html.GamepadMode .commentthread_subscribe_ctn {
+	display: inline-flex;
+	align-items: center;
+	padding: 4px 12px 4px 4px;
+	gap: 4px;
+	border-radius: var(--gpCorner-Medium);
+	transition: background-color 0.2s ease;
+}
+
+html.GamepadMode .commentthread_subscribe_ctn:hover {
+	background-color: #FFFFFF20;
+}
+
+html.GamepadMode .commentthread_subscribe_ctn {
+	font: var(--gpText-BodyMedium);
+}

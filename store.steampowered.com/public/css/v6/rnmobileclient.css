@@ -1,0 +1,162 @@
+/**
+ * Styles for rendering store content within the react native mobile client
+ */ 
+
+/* we don't show the search text input or button when the page is being viewed in the app. */
+@media screen and (max-width: 910px) {
+
+	html.responsive .search_page .responsive_store_nav_ctn_spacer,
+	html.responsive .search_page .page_header_ctn.search {
+		display: none;
+	}
+
+	html.responsive .search_page .page_content_ctn {
+		background-color: #171A24;
+	}
+
+	html.responsive .search_page .page_content_ctn .label {
+		color: white;
+		font-size: 14px;
+	}
+
+	html.responsive .search_page .page_header_ctn.search .breadcrumbs {
+		padding-top: 0px;
+	}
+
+	html.responsive .search_page .searchbar {
+		display: flex;
+		flex-direction: row;
+		padding: 10px;
+		background: unset;
+		padding-top: 20px;
+	}
+
+	html.responsive .search_page .searchbar_left {
+		margin-top: 2px;
+	}
+
+	html.responsive .search_page .searchbar_left {
+		margin-top: 2px;
+	}
+
+	html.responsive .search_page .sortbox {
+		display: flex;
+		flex-grow: 1;
+		flex-direction: row;
+		max-width: 220px;
+		margin-top: 0px;
+		background-color: #242835;
+		padding: 2px 10px;
+	}
+
+	html.responsive .search_page .sortbox .dselect_container {
+		display: flex;
+		vertical-align: middle;
+		flex-grow: 1;
+	}
+
+	html.responsive .search_page .sortbox .label {
+		flex-shrink: 0;
+		color: #67C1F5;
+		opacity: 0.5;
+		align-self: center;
+		vertical-align: middle;
+		font-size: 14px;
+	}
+
+	html.responsive .search_page a.trigger {
+		background: unset;
+		color: white;
+		flex-grow: 1;
+	}
+
+	html.responsive .search_page .termcontainer {
+		background-color: unset;
+		padding: 0px 10px 10px 10px;
+	}
+
+	html.responsive .search_page div.dselect_container {
+		font-size: 14px;
+	}
+
+	html.responsive .search_page #sort_by_trigger {
+		line-height: 26px;
+		font-size: 14px;
+	}
+
+	html.responsive .search_page .searchtag {
+		font-size: 14px;
+		background-color: #242835;
+		line-height: 22px;
+		padding-block: 4px;
+		padding-inline: 12px 6px;
+	}
+
+	html.responsive .search_page .searchtag a.btn {
+		height: 9px;
+		width: 9px;
+		background-image: url('/public/shared/images/v6/icon_dismiss.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		padding: 7px 7px;
+		margin-top: 0;
+		margin-inline-start: 5px;
+	}
+
+	html.responsive .search_page .filter_button_ctn {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin-bottom: 0px;
+	}
+
+	html.responsive .search_page .filter_button_ctn button {
+		margin: 2px;
+	}
+
+	html.responsive .search_page .responsive_page_menu_ctn.localmenu {
+		display: none;
+		inset-inline-end: unset;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		width: calc(min(80vw, 350px));
+		margin-inline-start: calc((100vw - min(80vw, 350px)) / 2);
+	}
+
+	html.responsive .search_page .responsive_page_frame.localmenu_active .responsive_page_menu_ctn.localmenu {
+		display: flex;
+	}
+
+	html.responsive .search_page .responsive_local_menu_tab.active {
+		background: unset;
+		box-shadow: unset;
+		z-index: unset;
+		border: unset;
+		border-start-start-radius: unset;
+		border-end-start-radius: unset;
+
+		display: flex;
+		width: auto;
+		height: auto;
+		position: static;
+		background-color: #242835;
+		margin-inline-start: 20px;
+		color: white;
+		font-size: 14px;
+		padding: 0px 20px;
+	}
+
+	html.responsive .search_page .num_active_filters {
+		align-self: center;
+	}
+
+	html.responsive .search_page #sort_by_droplist {
+		background-color: #171A24;
+		padding: 5px;
+	}
+
+	html.responsive .search_page #sort_by_droplist a {
+		color: white;
+		padding: 5px;
+	}
+}

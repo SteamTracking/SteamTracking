@@ -1,0 +1,42 @@
+.LmkT5QnOTis- {
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.j7hhFXqpOZg- {
+  object-fit: contain;
+  background-color: #000;
+  max-width: 100%;
+  height: 100%;
+}
+._7S2BHWEEG14- {
+  z-index: 5;
+  opacity: 1;
+  background: linear-gradient(#000000f2 0%, #0009 60%, #1d1e2300 100%);
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  transform: translateY(0%);
+}
+.HidePlayerControls ._7S2BHWEEG14- {
+  opacity: 0;
+  transform: translateY(-50%);
+}
+img.IEQXsRLxyAI- {
+  z-index: 2;
+  height: 100%;
+  max-width: unset;
+}

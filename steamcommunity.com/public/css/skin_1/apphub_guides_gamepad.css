@@ -1,0 +1,240 @@
+
+html.GamepadMode #ig_bottom {
+	padding: unset;
+	width: unset;
+	max-width: unset;
+	margin: 0px var(--gpSpace-Gutter);
+}
+
+html.GamepadMode .apphub_Guides .subtitle_ctn {
+	border-bottom: 1px solid var(--gpBackground-Neutral-LightSoft);
+	padding-bottom: 20px;
+	padding: unset;
+	background: unset;
+	padding-bottom: 16px;
+	align-items: center;
+}
+
+html.GamepadMode .apphub_Guides .subtitle {
+	font: var(--gpText-HeadingSmall);
+	font-weight: 400;
+	color: var(--gpStoreLightestGrey);
+	padding-right: 60px;
+	margin: unset;
+}
+
+html.GamepadMode #create_guide_btn {
+	white-space: nowrap;
+	height: fit-content;
+
+}
+
+html.GamepadMode .guides_home_section_title {
+	font: var(--gpText-BodySmall);
+	font-weight: 700;
+	color: white;
+	padding: 4px 0px;
+	display: flex;
+	flex-direction: column;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+
+html.GamepadMode .guides_home_section_title .guides_home_section_desc {
+	font: var(--gpText-BodyMedium);
+	color: white;
+	opacity: 0.6;
+	text-transform: uppercase;
+}
+
+html.GamepadMode .guides_home_section_title img {
+	display: none;
+}
+
+
+
+/* GUIDE CATETOGIES */
+html.GamepadMode .guide_categories {
+	height: unset;
+	width: unset;
+	position: relative;
+	overflow: unset;
+	margin: 12px 0px 0px;
+	padding: unset;
+}
+
+html.GamepadMode .category_blocks_ctn {
+	animation: fade-mask linear;
+	animation-timeline: scroll(self inline);
+	display: flex;
+	column-gap: 6px;
+	padding-block: 8px;
+	scroll-padding-inline: 96px;
+	overflow-x: scroll;
+	box-sizing: border-box;
+}
+
+@keyframes fade-mask {
+  from { mask-image: linear-gradient(90deg, black, black calc(100% - 20px), transparent); }
+  50% { mask-image: linear-gradient(90deg, transparent, black 20px, black calc(100% - 20px), transparent); }
+  to { mask-image: linear-gradient(90deg, transparent, black 20px, black); }
+}
+
+html.GamepadMode .category_blocks_ctn:has(> :nth-child(2).gpfocus) {
+	padding-inline-start: 4px;
+	margin-inline-start: -4px;
+}
+
+html.GamepadMode .category_blocks_ctn:has(> :last-child.gpfocus) {
+	padding-inline-end: 4px;
+	margin-inline-end: -4px;
+}
+
+html.GamepadMode .guide_home_category_selection {
+	margin: 0px;
+	float: unset;
+	width: unset;
+	border: unset;
+	height: unset;
+	background: unset;
+	box-shadow: var(--gpShadow-Medium);
+	background-color: var(--gpColor-DustyBlue);
+	padding: 16px;
+	padding-right: 48px;
+	transition: all 0.1s ease;
+	color: white;
+}
+
+html.GamepadMode .guide_home_category_selection:hover .guide_home_category_count {
+	color: unset;
+}
+
+html.GamepadMode .guide_home_category_name {
+	white-space: nowrap;
+	padding: unset;
+	font: var(--gpText-BodyLarge);
+	color: unset;
+}
+
+html.GamepadMode .guide_home_category_count {
+	white-space: nowrap;
+	font: var(--gpText-BodyMedium);
+	color: unset;
+	opacity: 0.8;
+}
+
+html.GamepadMode .guide_home_category_selection.gpfocus {
+	border-radius: 0px;
+	background-color: white;
+	color: black;
+}
+
+
+
+html.GamepadMode .guide_home_category_selection img {
+	display: none !important;
+}
+
+html.GamepadMode #ViewAllGuideCategoriesLink {
+	display: none;
+}
+
+
+
+/* GUIDE LIST */
+html.GamepadMode .detailBox {
+	background: none;
+	padding: unset;
+	margin: 12px 0px;
+}
+
+html.GamepadMode .workshopItemClear {
+	display: none;
+}
+
+html.GamepadMode .guides_home_list_ctn {
+	margin: 8px 0px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 6px;
+}
+
+html.GamepadMode .apphub_ContentGuides .workshopItemCollectionContainer {
+	margin: unset;
+}
+
+html.GamepadMode .apphub_ContentGuides .workshopItemCollection {
+	margin: unset;
+	background-color: var(--gpBackground-Neutral-LightSofter);
+	border-radius: 0px;
+	min-height: unset;
+	padding: 8px 12px;
+	transition: all 0.2s ease;
+	font: var(--gpText-HeadingSmall);
+	font-weight: 500;
+	height: unset;
+	box-shadow: unset;
+	transition: background-color 0.2s ease;
+}
+
+html.GamepadMode .apphub_ContentGuides .workshopItemCollectionContainer.gpfocus a.workshopItemCollection,
+html.GamepadMode .apphub_ContentGuides a.workshopItemCollection:hover {
+	background-color: var(--gpBackground-Neutral-LightSoft);
+}
+
+html.GamepadMode .apphub_ContentGuides .workshopItemCollection .workshopItemDetails {
+	margin-left: 16px;
+	padding-top: 4px;
+}
+
+html.GamepadMode .apphub_ContentGuides .workshopItemCollection .workshopItemTitle {
+	font: var(--gpText-HeadingSmall);
+	color: white;
+	border: unset;
+	padding: unset;
+	font-weight: 500;
+}
+
+html.GamepadMode .workshopItemCollection .workshopItemAuthorLine,
+html.GamepadMode .workshopItemCollection .workshopItemAuthorName {
+	font: var(--gpText-BodyMedium);
+	color: var(--gpStoreLighterGrey);
+	opacity: 0.8;
+}
+
+html.GamepadMode .apphub_ContentGuides .workshopItemCollection .workshopItemShortDesc {
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLightestGrey);
+}
+
+@media screen and (min-width: 1120px) {
+	html.GamepadMode .apphub_ContentGuides .workshopItemCollection .workshopItemShortDesc {
+		width: 80%;
+	}
+}
+
+
+html.GamepadMode .fileRating {
+	max-width: 80px;
+}
+
+html.GamepadMode .guides_browse_box {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+
+
+
+/* WORKSHOP ITEM HOVER */
+html.GamepadMode #workshop_item_hover {
+	display: none;
+}
+
+
+
+/* RIGHT PANEL */
+html.GamepadMode .guide_category_tags {
+	display: none;
+}

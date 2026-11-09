@@ -1,0 +1,270 @@
+
+
+/* PAGE */
+html.GamepadMode #ig_bottom {
+	padding: unset;
+	max-width: unset;
+}
+
+html.GamepadMode .mediaBody {
+	margin: 0px var(--gpSpace-Gutter) !important;
+}
+
+html.GamepadMode .workshopItemDetailsHeader {
+	margin: 12px 0px;
+}
+
+html.GamepadMode .highlight_ctn {
+	max-width: unset;
+}
+
+html.GamepadMode .workshopItemPreviewArea.accent {
+	background: none;
+}
+
+html.GamepadMode .workshop_item_header {
+	box-shadow: var(--gpShadow-Large);
+	border-radius: 0px;
+}
+
+/* Comments */
+html.GamepadMode .commentthread_area .commentthread_header {
+	background-color: unset;
+}
+
+
+
+/* Description */
+html.GamepadMode .detailBox {
+	background: none;
+}
+
+html.GamepadMode .workshopItemDescriptionTitle {
+	font: var(--gpText-BodySmall);
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: white;
+	border-top: 1px solid var(--gpBackground-LightSoft);
+	padding-top: 16px;
+}
+
+html.GamepadMode .workshopItemDescription {
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLightestGrey);
+}
+
+html.GamepadMode .workshopItemDescription hr {
+	border: none;
+	border-top: 1px solid var(--gpBackground-LightSoft);
+}
+
+
+/* Tabs */
+html.GamepadMode #ig_bottom .sectionTabs {
+	background: unset !important;
+}
+
+
+
+/* GUIDES */
+
+/* Guide header */
+html.GamepadMode .guideTop {
+	max-width: unset;
+	padding: 20px 24px;
+	box-shadow: var(--gpShadow-Large);
+	border: unset;
+	background: unset;
+	transition: background-color 0.2s ease;
+	background-color: var(--gpBackground-Neutral-LightSoft);
+	margin-bottom: 24px;
+	backdrop-filter: blur(64px);
+}
+
+html.GamepadMode .guideTopContent {
+	padding: unset;
+}
+
+html.GamepadMode .guidePreviewImage {
+	margin-right: 16px;
+	width: 64px;
+	height: 64px;
+	margin-bottom: 0px;
+}
+
+html.GamepadMode .guidePreviewImage img {
+	border: unset;
+	width: 64px;
+	height: 64px;
+}
+
+html.GamepadMode .workshopItemTitle {
+	font: var(--gpText-HeadingLarge);
+	line-height: 1.2;
+	margin-top: 0px;
+	padding-top: 4px;
+}
+
+html.GamepadMode .guideTopDescription {
+	font: var(--gpText-HeadingSmall);
+	font-weight: 400;
+	margin-left: 80px;
+}
+
+html.GamepadMode .guideAuthors {
+	font: var(--gpText-BodyMedium);
+	color: white;
+	opacity: 0.6;
+	margin-top: 4px;
+}
+
+html.GamepadMode .guideTopContent .dotHR {
+	display: none;
+}
+
+/* Awards list */
+html.GamepadMode .guideTop .workshopItemControlsCtn.fixed_in_scroll {
+	position: unset;
+}
+
+html.GamepadMode #ScrollWrapperPadding_ScrollingItemControls {
+	display: none;
+}
+
+html.GamepadMode .guideTop .workshopItemControls {
+	box-shadow: unset;
+	background-color: unset;
+	padding: unset;
+	margin-top: 8px;
+	max-width: unset;
+	margin-left: 80px;
+}
+
+
+
+/* BB CODE */
+html.GamepadMode .subSectionDesc,
+html.GamepadMode .detailBox ul,
+html.GamepadMode .detailBox ol {
+	font: var(--gpText-BodyLarge);
+	line-height: 1.5;
+}
+
+html.GamepadMode .detailBox ul,
+html.GamepadMode .detailBox ol {
+	margin: 0px 0px 24px 24px;
+}
+
+html.GamepadMode a.bb_link {
+	color: var(--gpColor-BlueHi);
+	display: inline-flex;
+}
+
+html.GamepadMode .subSectionTitle {
+	font: var(--gpText-HeadingMedium);
+	font-weight: 700;
+	color: white;
+	padding: 16px 0px;
+	margin: unset;
+	border-top: 1px solid var(--gpBackground-Neutral-LightSoft);
+}
+
+
+
+html.GamepadMode div.bb_h1,
+html.GamepadMode .bb_wysiwyg h1 {
+	font: var(--gpText-HeadingSmall);
+	font-weight: 500;
+}
+
+html.GamepadMode .subSectionDesc a {
+	display: inline-flex;
+	margin: 12px 0px;
+}
+
+html.GamepadMode .guideTopDescription img {
+	width: 100%;
+}
+
+html.GamepadMode .subSectionDesc img {
+	/* width: 100%; */
+}
+
+html.GamepadMode .sharedFilePreviewYouTubeVideo {
+	margin: 12px 0px;
+}
+
+
+
+/* HEADER */
+html.GamepadMode .just_added_to_list {
+	margin: 12px 0px 0px 0px;
+	color: unset;
+	display: flex;
+	align-items: center;
+}
+
+html.GamepadMode .just_added_to_list .close_notification {
+	margin-left: auto;
+	display: flex;
+	height: auto;
+	margin-right: 24px;
+}
+
+html.GamepadMode .just_added_to_list .close_notification span {
+	padding: 8px 12px;
+	background-color: var(--gpBackground-DarkSofter);
+	display: flex;
+}
+
+
+
+
+/* AWARDS */
+html.GamepadMode .review_award_ctn {
+	display: flex;
+	column-gap: 3px;
+}
+
+html.GamepadMode .review_award {
+	transition: all 0.2s ease;
+	display: flex;
+	align-items: center;
+	padding: 0px 8px;
+	margin: unset;
+	border-radius: var(--gpCorner-Large);
+	margin-bottom: 3px;
+}
+
+html.GamepadMode .review_award.gpfocus {
+	border-radius: 0px;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+html.GamepadMode .workshopItemControls .vertical_divider {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+/* PAGE */
+
+/* Subscribe button */
+html.GamepadMode #SubscribeItemBtn {
+	display: inline-flex;
+	margin-left: 24px;
+}
+
+html.GamepadMode #SubscribeItemBtn .subscribeIcon {
+	position: unset;
+}
+
+html.GamepadMode .btn_medium > span.subscribeText {
+	padding-left: unset;
+}
+
+html.GamepadMode .game_area_purchase_game > h1 {
+	width: 100%;
+}

@@ -1,0 +1,28 @@
+/**
+ * Styles for rendering community content within the react native mobile client
+ */
+html.responsive .profile_friend_invite_banner {
+    background-color: #171A24;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+html.responsive .profile_friend_invite_title {
+    color: #FFFFFF;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+html.responsive .profile_friend_invite_btn_container {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;    
+}
+
+html.responsive .profile_friend_invite_btn_container > a {
+    background-color: #199FFF;
+    border-radius: 2px;
+    color: white;
+}

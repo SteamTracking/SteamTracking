@@ -1,0 +1,338 @@
+
+
+/* HUB CONTENT */
+html.GamepadMode  .apphub_CardControls {
+	display: none;
+}
+
+html.GamepadMode  .apphub_Chat a,
+html.GamepadMode  .statsselect_text {
+	text-decoration: none;
+	border-bottom: 1px solid var(--gpBackground-Neutral-LightSoft);
+}
+
+html.GamepadMode  .pipe_separator {
+	display: none;
+}
+
+html.GamepadMode  .apphub_NoMoreContent {
+	background: none;
+}
+
+
+
+/* APP HUB HEADER */
+html.GamepadMode  .apphub_HomeHeader {
+	max-width: unset;
+}
+
+html.GamepadMode  .apphub_HomeHeaderContent {
+	padding: unset;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 24px;
+	padding: 24px var(--gpSpace-Gutter) 0px;
+	background-color: var(--gpBackground-DarkHard);
+	max-width: unset;
+}
+
+html.GamepadMode  .apphub_HeaderBottomBG_ctn {
+	display: none;
+}
+
+html.GamepadMode  .apphub_HeaderTop {
+	padding: 0px;
+	margin: unset;
+}
+
+html.GamepadMode .apphub_OtherSiteInfo.responsive_hidden {
+	display: none;
+}
+
+html.GamepadMode  .social_links {
+	padding: 0px var(--gpSpace-Gutter);
+}
+
+html.GamepadMode  .apphub_AppDetails {
+	align-items: center;
+	box-sizing: border-box;
+	display: inline-flex;
+	/* Don't cover the app details with the `.responsive_local_menu_tab`. This is fixed-positioned 24px from the
+	 * inline-end edge of the viewport with width 0 and inline padding 40px (each side), for a total reserved space
+	 * of 104px.  The containing `.apphub_Content` adds inline padding of `var(--gpSpace-Gutter)`, which
+	 * conveniently ensures that much gap between the app details and the menu button, so we don't adjust for that
+	 * at all. */
+	padding-inline-end: 104px;
+	width: 100%;
+}
+
+html.GamepadMode  .apphub_AppName {
+	font: var(--gpText-HeadingLarge);
+}
+
+html.GamepadMode  .apphub_AppIcon {
+	display: inline-flex;
+	border-radius: var(--gpCorner-Medium);
+	overflow: hidden;
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode  .apphub_AppIcon img {
+	/* width: 32px;
+	height: 32px; */
+	display: none;
+	margin-inline-end: 16px;
+}
+
+/* App hub background */
+html.GamepadMode  .apphub_background_gamepad_blur {
+	filter: blur(3px);
+	position: absolute;
+	height: 1000px;
+	inset: 0 0 auto 0;
+	z-index: -10;
+	-webkit-mask-image: linear-gradient(to bottom, black 40%, transparent);
+}
+
+/* Filters */
+html.GamepadMode  .apphub_SectionFilter {
+	background: none;
+	min-height: unset;
+	padding: 0px;
+	padding-bottom: 12px;
+	max-width: unset;
+}
+
+html.GamepadMode  .apphub_SectionFilterLabel {
+	float: unset;
+	padding: unset;
+	font: var(--gpText-BodyMedium);
+	text-transform: unset;
+	color: var(--gpStoreLightestGrey);
+}
+
+html.GamepadMode  .apphub_SectionFilter .learnMore {
+	padding: unset;
+	margin-inline-start: auto;
+}
+
+/* Dropdowns */
+html.GamepadMode  div.filterselect {
+	width: 160px;
+}
+
+html.GamepadMode  #filterrating {
+	min-width: 80px;
+	width: 80px;
+}
+
+/* Hide (?) on deck */
+html.GamepadMode  .apphub_MostPopularLink {
+	display: none;
+}
+
+/* Content */
+html.GamepadMode  .apphub_Content {
+	margin-inline: var(--gpSpace-Gutter);
+	max-width: unset;
+}
+
+html.GamepadMode  #AppHubContent {
+	margin-inline: var(--gpSpace-Gutter);
+	max-width: unset;
+	display: flex;
+	flex-direction: row;
+}
+
+html.GamepadMode  .leftcol {
+	flex: 1 0 0;
+	max-width: unset;
+	width: unset;
+}
+
+html.GamepadMode  .maincontent {
+	display: flex;
+}
+
+/* Stats */
+html.GamepadMode  .apphub_HeaderBottom {
+	min-height: unset;
+	background-color: unset;
+	height: unset;
+	display: flex;
+	align-items: center;
+	margin-top: 0px;
+	font: var(--gpText-BodyLarge);
+	flex-wrap: wrap;
+	column-gap: 12px;
+	row-gap: 8px;
+	padding-bottom: 16px;
+	margin-top: -8px;
+}
+
+html.GamepadMode  .apphub_NumInApp {
+	font-weight: 500;
+}
+
+html.GamepadMode  .apphub_HeaderBottom .apphub_Stats .responsive_hidden {
+	display: unset;
+}
+
+html.GamepadMode  .apphub_HeaderBottom .apphub_Stats {
+	line-height: unset;
+	font-size: unset;
+}
+
+html.GamepadMode  .apphub_HeaderBottom .apphub_Stats div.statsselect {
+	margin-top: unset;
+	font-size: unset;
+	height: unset;
+}
+
+html.GamepadMode  .apphub_HeaderBottom .apphub_Stats .statsselect_text {
+	font-size: unset;
+	padding-inline-start: 0px;
+}
+
+html.GamepadMode  .apphub_HeaderBottom .apphub_recentFriendsArea {
+	padding-top: unset;
+	display: flex;
+	align-items: center;
+	column-gap: 12px;
+	padding: unset;
+}
+
+html.GamepadMode  .apphub_friend_block_row {
+	padding-inline-start: unset;
+	display: flex;
+	column-gap: 6px;
+}
+
+html.GamepadMode  .apphub_friend_block_row .playerAvatar {
+	margin: unset;
+}
+
+html.GamepadMode  .apphub_friend_block_row .playerAvatar a {
+	display: flex;
+}
+
+/* Store info header */
+html.GamepadMode  .apphub_StoreInfoHeader {
+	border: 1px solid var(--gpBackground-LightSoft);
+	border: unset;
+	background-color: unset;
+	padding: 0px;
+	margin: -12px var(--gpSpace-Gutter) 12px;
+	min-height: unset;
+	padding: 12px;
+	background-color: #0e141b4a;
+	max-width: unset;
+}
+
+html.GamepadMode  .apphub_StoreAppLogo {
+	width: 200px;
+	box-shadow: var(--gpShadow-Medium);
+}
+
+@media screen and (min-width:  1280px) {
+	html.GamepadMode  .apphub_StoreAppLogo {
+		width: 280px;
+	}
+}
+
+html.GamepadMode  .apphub_StoreAppText {
+	color: unset;
+	opacity: 0.8;
+	max-width: 920px;
+}
+
+html.GamepadMode  .apphub_StoreAppData {
+	padding-top: 8px;
+}
+
+html.GamepadMode  .apphub_StoreAppData #app_header_view_store_page_btn {
+	display: none;
+}
+
+html.GamepadMode  .apphub_StorePrice {
+	border: unset;
+	height: unset;
+	display: flex;
+	align-items: center;
+	column-gap: 6px;
+}
+
+html.GamepadMode  .apphub_StorePrice .discount_pct {
+	position: unset;
+	font: var(--gpText-BodyMedium);
+	background-color: var(--gpColor-Green);
+	padding: 1px 4px;
+	border-radius: var(--gpCorner-Small);
+}
+
+html.GamepadMode  .apphub_StorePrice .discount_prices {
+	display: flex;
+	align-items: center;
+	column-gap: 6px;
+}
+
+html.GamepadMode  .apphub_StorePrice .discount_original_price {
+	font: var(--gpText-BodyMedium);
+	color: white;
+	opacity: 0.5;
+}
+
+html.GamepadMode  .apphub_StorePrice .discount_final_price {
+	font: var(--gpText-BodyMedium);
+	color: white;
+	top: unset;
+}
+
+html.GamepadMode  .apphub_StorePrice .price {
+	font: var(--gpText-BodyMedium);
+	text-align: unset;
+}
+
+html.GamepadMode  .apphub_HubDivider {
+	display: none;
+}
+
+/* Early access strip */
+html.GamepadMode  .apphub_EarlyAccess {
+	background: none;
+	background-color: var(--gpColor-DustyBlue);
+	height: unset;
+	line-height: unset;
+	padding: 8px 12px;
+	margin: 0px var(--gpSpace-Gutter);
+}
+
+html.GamepadMode  .apphub_EarlyAccess .apphub_EarlyAccess_Title {
+	font-size: unset;
+	padding: unset;
+	margin-inline-end: 4px;
+}
+
+html.GamepadMode  .apphub_EarlyAccess .apphub_EarlyAccess_Desc {
+	font-size: unset;
+	padding: unset;
+	color: unset;
+}
+
+html.GamepadMode  .apphub_EarlyAccess .apphub_EarlyAccess_Desc a {
+	display: none;
+}
+
+/* Description */
+html.GamepadMode  .apphub_AllContentText {
+	color: unset;
+	font: var(--gpText-BodyMedium);
+	opacity: 0.6;
+	border-top: 1px solid var(--gpBackground-Neutral-LightSoft);
+	padding-top: 12px;
+	margin: 12px var(--gpSpace-Gutter) 0px;
+}
+
+html.GamepadMode  .responsive_tab_control {
+	text-align: start;
+}

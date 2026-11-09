@@ -1,0 +1,34 @@
+html:has(dialog.aHbF6AHXFR4-[open]) {
+  scrollbar-gutter: stable;
+  overflow: hidden;
+}
+.rFPyDezD-xE- {
+  color: #acb2b8;
+  background: 0 0;
+  border: none;
+  outline: none;
+  max-width: calc(100% - 48px);
+  margin: auto;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
+  display: flex;
+  overflow: visible;
+  box-shadow: 0 8px 38px 5px #000000bf;
+}
+.rFPyDezD-xE- :where(.cdNyC6dv2kE-) {
+  overscroll-behavior: contain;
+  background:
+    radial-gradient(circle at 0 0, #4a515c66 0%, #4b515c00 60%), #25282e;
+  overflow: auto;
+}
+.rFPyDezD-xE- :where(.cdNyC6dv2kE-):before {
+  content: " ";
+  background: linear-gradient(90deg, #0cf, #36f);
+  width: 100%;
+  height: 1px;
+  display: block;
+}
+.rFPyDezD-xE-::backdrop {
+  background: #000c;
+}

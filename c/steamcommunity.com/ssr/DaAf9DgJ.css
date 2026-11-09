@@ -1,0 +1,43 @@
+div._0WzdJbbB0tA- {
+  max-width: 600px;
+  padding: 24px;
+}
+._0WzdJbbB0tA- {
+  flex-direction: column;
+  gap: 12px;
+  max-height: 90vh;
+  display: flex;
+}
+._0WzdJbbB0tA- .vMdSOHSXoMo- {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+._0WzdJbbB0tA- .vMdSOHSXoMo- h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+._0WzdJbbB0tA- .vMdSOHSXoMo- button {
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+}
+._0WzdJbbB0tA- .vMdSOHSXoMo- button svg {
+  color: #fff;
+  width: 14px;
+  height: 14px;
+}
+._0dG-xurkjK8- {
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: auto;
+  display: flex;
+}
+._0dG-xurkjK8-:has(> button + button) {
+  justify-content: space-between;
+}
+._0dG-xurkjK8- button {
+  min-width: 25px;
+}

@@ -1,0 +1,434 @@
+
+
+/* PAGE SETUP */
+
+/* Remove background */
+html.GamepadMode .page_header_ctn {
+	background: unset;
+	padding-bottom: 0px;
+	margin-bottom: 16px;
+}
+
+html.GamepadMode .block {
+	background: unset;
+}
+
+html.GamepadMode .page_content_ctn {
+	padding-bottom: 24px;
+}
+
+
+
+
+/* ADD FUNDS TO WALLET */
+
+/* Heading */
+html.GamepadMode body.v6 h2.addfunds_pageheader {
+	font: var(--gpText-HeadingLarge);
+	font-weight: 700;
+	text-shadow: unset;
+	text-transform: unset;
+	margin-top: 0px;
+	padding: unset;
+	letter-spacing: 0px;
+}
+
+
+/* Hide duplicate text */
+html.GamepadMode .addfunds_pageheader {
+	display: none;
+}
+
+
+/* Text */
+html.GamepadMode .addfunds_about {
+	font-size: unset;
+}
+
+html.GamepadMode .block .block_header {
+	font: var(--gpText-HeadingSmall);
+	text-transform: unset;
+	letter-spacing: unset;
+	font-weight: 500;
+	margin-bottom: 8px;
+}
+
+
+/* Your steam account block */
+html.GamepadMode .accountInfoBlock {
+	margin-bottom: 16px;
+}
+
+html.GamepadMode .block_header {
+	display: none;
+}
+
+html.GamepadMode .addfunds_accountBalance {
+	padding: 12px 0px;
+	margin-bottom: 0px;
+	border-top: 1px solid var(--gpBackground-LightSoft);
+}
+
+html.GamepadMode .addfunds_about {
+	margin-bottom: 16px;
+}
+
+html.GamepadMode .accountInfoBlock .block_content {
+	background: unset;
+	color: unset;
+	padding: 0px;
+	overflow: visible;
+}
+
+html.GamepadMode .accountBalance .price {
+	font: var(--gpText-HeadingLarge);
+	font-weight: 700;
+}
+
+html.GamepadMode .addfunds_accountBalance .accountLabel {
+	font: var(--gpText-HeadingSmall);
+	font-weight: 500;
+	color: white;
+}
+
+html.GamepadMode .accountRow.accountBalance {
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+	margin-top: 12px;
+}
+
+html.GamepadMode .linkbar {
+	margin: 4px 0px;
+	background: var(--gpBackground-LightSoft);
+	padding: 8px 16px;
+	display: inline-block;
+	transition: all 0.1s ease;
+	border-radius: unset;
+	color: var(--gpColor-Blue);
+	height: unset;
+	font: var(--gpText-BodyLarge);
+}
+
+html.GamepadMode .linkbar:hover {
+	background: var(--gpBackground-LightMedium);
+	color: white;
+}
+
+html.GamepadMode .linkbar.gpfocus {
+	background-color: white;
+	color: black;
+}
+
+
+/* Add funds purchase area */
+html.GamepadMode .game_area_purchase_game {
+	padding: 10px 16px;
+	background: var(--gpBackground-DarkSoft);
+	transition: all 0.3s ease;
+	border-radius: unset;
+}
+
+html.GamepadMode .game_area_purchase_game:focus-within {
+	background: var(--gpBackground-LightMedium);
+}
+
+html.GamepadMode .game_area_purchase_game .game_purchase_action_bg {
+	background: unset;
+}
+
+html.GamepadMode .game_area_purchase_game .game_purchase_price {
+	background: unset;
+	font: var(--gpText-BodyLarge);
+}
+
+html.GamepadMode .addfunds_area_purchase_game {
+	margin-bottom: 4px;
+}
+
+html.GamepadMode .game_area_purchase_game .game_purchase_action_bg {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+html.GamepadMode .game_area_purchase_game .addfunds_purchase_action.game_purchase_action {
+	margin-top: 6px;
+}
+
+
+
+
+/* PUCHASE HISTORY */
+
+/* Page setup */
+html.GamepadMode .account_management {
+
+}
+
+/* Click hint */
+html.GamepadMode .wallet_history_click_hint {
+	color: var(--gpStoreLightestGrey);
+}
+
+/* Load more button */
+html.GamepadMode #load_more_button {
+	width: unset;
+	text-transform: unset;
+	padding: 10px 20px;
+}
+
+/* Wallet history table */
+html.GamepadMode .wallet_history_table {
+	border: unset;
+}
+
+/* Table header */
+html.GamepadMode .wallet_history_table th,
+html.GamepadMode .account_table th {
+	background-color: var(--gpColor-Blue);
+	font: var(--gpText-BodyMedium);
+	font-weight: 700;
+	color: white;
+	text-align: start;
+	padding-inline-start: 12px;
+	text-transform: unset;
+}
+
+/* Table rows */
+html.GamepadMode .wallet_history_table tr,
+html.GamepadMode .account_table tr {
+	background: var(--gpBackground-LightSofter);
+	transition: all 0.1s ease;
+	border: none;
+}
+
+html.GamepadMode .wallet_history_table tr:hover,
+html.GamepadMode .wallet_history_table tr.gpfocus {
+	background: var(--gpBackground-LightMedium);
+	color: white;
+}
+
+html.GamepadMode .wallet_history_table td {
+	padding: 4px 12px;
+}
+
+html.GamepadMode td.wht_date {
+	text-align: unset;
+	width: 24%;
+	color: unset;
+	font-size: unset;
+}
+
+html.GamepadMode td.wht_wallet_change {
+	color: unset;
+	border-inline-start: unset;
+}
+
+html.GamepadMode td.wht_wallet_balance {
+	color: unset;
+}
+
+html.GamepadMode .wth_payment {
+	color: var(--gpStoreLighterGrey);
+}
+
+
+/* Licenses */
+html.GamepadMode th.license_date_col,
+html.GamepadMode th.license_acquisition_col {
+	width: 20%;
+}
+
+html.GamepadMode .account_table th.license_date_col,
+html.GamepadMode .account_table td.license_date_col {
+	text-align: start;
+}
+
+html.GamepadMode table.account_table td {
+	word-wrap: unset;
+}
+
+html.GamepadMode .account_table tr,
+html.GamepadMode .wallet_history_table tr {
+	line-height: unset;
+}
+
+html.GamepadMode th.license_acquisition_col {
+	text-align: end;
+}
+
+html.GamepadMode th {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+
+/* Family library sharing */
+html.GamepadMode .accountTable > tbody > tr:nth-child(odd) {
+	background-color: unset;
+	background-color: var(--gpBackground-LightSofter);
+}
+
+html.GamepadMode .accountTable > tbody > tr:nth-child(even) {
+	background-color: unset;
+	background-color: var(--gpBackground-LightSofter);
+}
+
+html.GamepadMode .accountTable > tbody > tr {
+	transition: background-color 0.2s ease;
+}
+
+html.GamepadMode .accountTable > tbody > tr:focus-within {
+	background-color: var(--gpBackground-LightMedium);
+	color: white;
+}
+
+html.GamepadMode .accountTable th {
+	font: var(--gpText-BodySmall);
+	color: var(--gpStoreLighterGrey);
+	font-weight: 500;
+}
+
+html.GamepadMode .accountTable > thead > tr {
+	background-color: var(--gpBackground-LightMedium);
+}
+
+html.GamepadMode .accountTable a {
+	color: var(--gpColor-Blue);
+}
+
+html.GamepadMode .accountTable td {
+	padding: 8px 12px;
+}
+
+
+
+/* GIFT CARD OR WALLET CODE */
+
+html.GamepadMode .redeem_wallet_code_login {
+	padding: unset;
+}
+
+html.GamepadMode #wallet_code_form {
+	flex-direction: row-reverse;
+	gap: 10px;
+}
+
+html.GamepadMode .wallet_code_label {
+	font: var(--gpText-HeadingSmall);
+	color: white;
+	font-weight: 500;
+}
+
+html.GamepadMode body.v6 .redeem_wallet_code_login h2 {
+	font: var(--gpText-HeadingSmall);
+	color: white;
+	font-weight: 500;
+	text-transform: unset;
+}
+
+html.GamepadMode .wallet_code_input_ctn,
+html.GamepadMode .registerkey_input_and_button {
+	display: flex;
+	gap: var(--gpSpace-Gap);
+	margin: 12px 0px 16px;
+}
+
+html.GamepadMode #wallet_code {
+	margin: unset;
+}
+
+html.GamepadMode body.redeemwalletcode .page_content_ctn .page_content .wallet_code_ctn {
+	background: none;
+	padding: unset;
+}
+
+html.GamepadMode body.redeemwalletcode .page_content_ctn .page_content .wallet_code_input_ctn {
+	justify-self: unset;
+}
+
+/* Login buttons */
+html.GamepadMode .button_row {
+	display: flex;
+	gap: 12px;
+}
+
+html.GamepadMode .button_row .btn_medium {
+	margin-inline-start: unset;
+}
+
+/* Upsell */
+html.GamepadMode .redeem_wallet_code_upsell {
+	line-height: unset;
+	padding: var(--gpSpace-Gutter);
+	background: var(--gpBackground-DarkSoft);
+	margin: 24px 0px;
+}
+
+html.GamepadMode .redeem_wallet_code_upsell div {
+	font: var(--gpText-BodyMedium);
+	padding-top: unset;
+	padding-bottom: 16px;
+	color: var(--gpStoreLighterGrey);
+}
+
+html.GamepadMode .redeemwalletcode .upsell_and_graphic.page_content .wallet_card_image {
+	display: none;
+}
+
+html.GamepadMode body.redeemwalletcode .redeem_wallet_code_form .wallet_card_image_mobile {
+	display: none;
+
+	img {
+		width: 30%;
+	}
+}
+
+html.GamepadMode body.redeemwalletcode .upsell_and_graphic.page_content .redeem_wallet_code_upsell {
+		max-width: unset;
+}
+
+html.responsive body.redeemwalletcode .redeem_wallet_upsell_button {
+	justify-self: center;
+	padding-inline-start: unset;
+}
+
+html.GamepadMode .redeemwalletcode #main_content {
+	flex-direction: column;
+}
+
+html.GamepadMode .registerkey #main_content {
+	flex-direction: column;
+}
+
+/* EMAIL PREFERENCES */
+html.GamepadMode .checkout_content.cart_send_choice {
+	background-color: var(--gpBackground-DarkMedium);
+}
+
+html.GamepadMode label.send_choice_txt {
+	font: var(--gpText-HeadingSmall);
+	font-weight: 500;
+}
+
+html.GamepadMode .email_pref_ctn.individual_pref {
+	font: var(--gpText-BodyLarge);
+	margin: 0px;
+	background: none;
+	border-top: 1px solid var(--gpBackground-LightSoft);
+}
+
+html.GamepadMode .send_choice_inner.email_pref_ctn label {
+	line-height: unset;
+	padding: 0px;
+}
+
+html.GamepadMode .checkout_content_box h3.tab_header {
+	font: var(--gpText-BodyLarge);
+	letter-spacing: unset;
+	text-transform: unset;
+	margin: 0px 0px 24px;
+}

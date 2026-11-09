@@ -1,0 +1,715 @@
+
+/* GAMES AND CAROUSELS */
+
+/* Set shadows */
+html.GamepadMode .store_capsule,
+html.GamepadMode .big_button,
+html.GamepadMode .home_area_spotlight,
+html.GamepadMode .store_main_capsule,
+html.GamepadMode .home_marketing_message,
+html.GamepadMode .home_page_takeover_link,
+html.GamepadMode .community_recommendation_app,
+html.GamepadMode .recommended_creators_ctn .store_capsule,
+html.GamepadMode body.v6 .newonsteam_capsules > a,
+html.GamepadMode .dailydeal_ctn,
+html.GamepadMode .recommendation_carousel_item .carousel_cap {
+	scroll-snap-align: start;
+}
+
+
+/* Set consistent gap between tiles */
+html.GamepadMode .carousel_container .carousel_items > *,
+html.GamepadMode #live_streams_carousel .carousel_items .store_capsule,
+html.GamepadMode .contenthub_specials_grid_cell,
+html.GamepadMode body.v6.newonsteam .newonsteam_headercaps a:first-child,
+html.GamepadMode .store_capsule:not(:last-child) {
+	margin-inline-end: var(--gpSpace-Gap);
+}
+
+/* Make carousels peek left and right */
+html.GamepadMode .peeking_carousel,
+html.GamepadMode .carousel_container.paging_capsules .carousel_items:not(.no_paging),
+html.GamepadMode:not(.legacy_mobile) .responsive_scroll_snap_ctn,
+html.GamepadMode .carousel_container .carousel_items:not(.no_paging),
+html.GamepadMode .carousel_container.maincap .carousel_items:not(.no_paging),
+html.GamepadMode .best_selling_vr_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging),
+html.GamepadMode .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging),
+html.GamepadMode .contenthub_popular_tags_grid,
+html.GamepadMode .contenthub_specials_grid,
+html.GamepadMode .marketingmessage_container,
+html.GamepadMode .recommendation_carousel_scroll,
+html.GamepadMode .home_page_content.gp_contiguous_singles {
+	padding-inline-start: var(--gpSpace-Gutter);
+	scroll-padding: 0px var(--gpSpace-Gutter);
+	margin-inline-start: calc( 0px - var(--gpSpace-Gutter) );
+	margin-inline-end: calc( 0px - var(--gpSpace-Gutter) );
+	padding-bottom: 12px !important;
+	padding-top: 8px;
+}
+
+/* Adds margin to end of carousels */
+html.GamepadMode .tab_content:after,
+html.GamepadMode .peeking_carousel:after,
+html.GamepadMode .carousel_container.paging_capsules .carousel_items:not(.no_paging):after,
+html.GamepadMode:not(.legacy_mobile) .responsive_scroll_snap_ctn:after,
+html.GamepadMode .carousel_container .carousel_items:not(.no_paging):after,
+html.GamepadMode .carousel_container.maincap .carousel_items:not(.no_paging):after,
+html.GamepadMode .best_selling_vr_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging):after,
+html.GamepadMode .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging):after,
+html.GamepadMode .contenthub_popular_tags_grid:after,
+html.GamepadMode .contenthub_specials_grid:after,
+html.GamepadMode .marketingmessage_container:after,
+html.GamepadMode .recommendation_carousel_scroll:after,
+html.GamepadMode .home_page_content.gp_contiguous_singles:after {
+	content: "\00a0";
+	min-width: var(--gpSpace-Gutter);
+}
+
+/* Turn container into a carousel */
+html.GamepadMode .peeking_carousel,
+html.GamepadMode .contenthub_popular_tags_grid,
+html.GamepadMode .contenthub_specials_grid,
+html.GamepadMode .newonsteam_headercaps,
+html.GamepadMode .marketingmessage_container,
+html.GamepadMode .recommendation_carousel_scroll {
+	display: inline-flex;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+	width: calc( 100% + var(--gpSpace-Gutter) );
+	padding-bottom: var(--gpSpace-Gap);
+}
+
+
+
+/* TAB CONTAINER */
+html.GamepadMode .tab_container {
+	background: unset;
+}
+
+html.GamepadMode .home_tabs_content {
+	min-height: unset;
+}
+
+html.GamepadMode .home_tabs_row {
+	display: none;
+}
+
+html.GamepadMode .tab_content_items
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	overflow: scroll;
+	scroll-snap-type: x mandatory;
+	scroll-padding: var(--gpSpace-Gutter);
+	padding: 8px var(--gpSpace-Gutter) calc(var(--gpVerticalResponsivePadding-Medium) + 8px) var(--gpSpace-Gutter);
+	margin: 0px calc(0px - var(--gpSpace-Gutter));
+	width: 100%;
+
+}
+
+html.GamepadMode .tab_content:not(:last-child) {
+	margin-bottom: var(--gpSpace-Gap);
+}
+
+html.GamepadMode .tab_see_more, .tab_controls {
+	display: none;
+}
+
+html.GamepadMode .tab_content#tab_topgrossing_content {
+	margin-bottom: 0px;
+}
+
+
+/* Tab item tiles */
+html.GamepadMode .tab_item {
+	display: flex;
+	flex-direction: column;
+	background: var( --gpStoreDarkestGrey );
+	height: unset;
+	padding: 8px;
+	margin-inline-end: var(--gpSpace-Gap);
+	margin-bottom: unset;
+	box-shadow: var(--gpShadow-Medium);
+	scroll-snap-align: start;
+	box-sizing: border-box;
+	/* max-height: 196px; */
+}
+
+html.GamepadMode .tab_item .release_date {
+	display: none;
+}
+html.GamepadMode .tab_item .tab_item_content_clear_ctn {
+	display: none;
+}
+
+html.GamepadMode .tab_item .discount_block.empty {
+	height: 0;
+}
+
+html.GamepadMode .tab_item .platform_img {
+	display: none;
+}
+
+html.GamepadMode .tab_item.focus {
+	background: var( --gpStoreDarkestGrey );
+}
+
+html.GamepadMode .tab_item.focus .tab_item_name {
+	color: white;
+}
+
+html.GamepadMode .tab_item.ds_flagged:not(.ds_wishlist):not(:hover) .tab_item_content .tab_item_name {
+	color: white;
+}
+
+html.GamepadMode .tab_item.ds_flagged:not(.ds_wishlist):not(:hover) .tab_item_cap {
+	opacity: 1;
+}
+
+html.GamepadMode .tab_item .tab_item_name {
+	font: var(--gpText-BodyMedium);
+	color: white;
+}
+
+html.GamepadMode .tab_item .tab_item_top_tags {
+	font: var(--gpText-BodySmall);
+	color: var(--gpStoreLighterGrey);
+}
+
+html.GamepadMode .tab_item_cap {
+	max-width: unset;
+	margin-inline-end: unset;
+	float: unset;
+	position: unset;
+	inset-inline-start: unset;
+	inset-inline-end: unset;
+	line-height: unset;
+	top: unset;
+	height: auto;
+}
+
+html.GamepadMode .tab_item .tab_item_discount,
+html.GamepadMode .tab_item .tab_item_discount.no_discount {
+	width: 100%;
+	margin-inline-end: unset;
+	margin-top: 4px;
+	font: var(--gpText-BodySmall);
+}
+
+html.GamepadMode .home_tabs_content .tab_item_content {
+	padding-top: 2px;
+}
+
+html.GamepadMode .tab_item .discount_original_price {
+	margin-inline-end: 4px;
+}
+
+html.GamepadMode .tab_item_discount .discount_pct {
+	display: inline-block;
+	float: unset;
+	margin-inline-end: 4px;
+	margin-top: unset;
+}
+html.GamepadMode .tab_item_discount .discount_pct:dir(rtl) {
+	margin-right: 0;
+	margin-left: 4px;
+}
+
+html.GamepadMode .tab_item_top_tags {
+	height: auto;
+	margin-top: 2px;
+	text-overflow: ellipsis;
+}
+
+html.GamepadMode .home_ctn.tab_container {
+	margin-top: 32px;
+}
+
+.home_ctn.tab_container > div {
+	margin-top: unset;
+}
+
+html.GamepadMode .home_leftcol.home_tab_col {
+	margin-bottom: unset;
+}
+
+html.GamepadMode .home_tabs_content h2.tab_content_title {
+	display: block;
+}
+
+html.GamepadMode .tab_item .ds_steam_deck_compat {
+	top: 12px;
+	inset-inline-end: 12px;
+}
+
+
+
+
+
+/* PRICING */
+html.GamepadMode .discount_block .discount_pct,
+html.GamepadMode .discount_block .discount_original_price,
+html.GamepadMode .discount_block .discount_final_price,
+html.GamepadMode .store_capsule .discount_block:not(.discount_block_large) .discount_pct,
+html.GamepadMode .price {
+	font: var(--gpText-BodyMedium);
+	padding: 0px;
+	margin: 0px;
+}
+
+/* The purchase box keeps its prices side by side, at full size */
+html.GamepadMode .discount_block:not(.game_purchase_discount) .discount_original_price {
+	font-size: 11px;
+}
+
+html.GamepadMode .discount_block .discount_prices,
+html.GamepadMode .discount_block,
+html.GamepadMode .carousel_container.maincap .discount_block {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+}
+
+/* Side by side prices need a space; stacked ones sit as close as on the desktop store */
+html.GamepadMode .discount_block .discount_prices {
+	column-gap: 6px;
+}
+
+/* A sale percent butts up against its black price box; a bundle-only percent has no box to meet */
+html.GamepadMode .discount_block.no_discount {
+	gap: 6px;
+}
+
+html.GamepadMode .discount_block_inline .discount_prices,
+html.GamepadMode .store_capsule .discount_block.no_discount .discount_final_price {
+	padding: unset;
+}
+
+html.GamepadMode .discount_block .discount_pct,
+html.GamepadMode .discount_pct,
+html.GamepadMode .store_capsule .discount_block:not(.discount_block_large) .discount_pct {
+	background: #a1cd44; /* Same as the desktop store */
+	color: black;
+	font-weight: 700;
+	padding: 0px 4px;
+	display: inline-flex;
+	align-items: center;
+	border-radius: 1px;
+}
+
+/* A bundle-only block has the bundle percent as its discount_pct too; the desktop store hides it as well */
+html.GamepadMode .discount_block.no_discount .discount_pct,
+html.GamepadMode .store_capsule .discount_block.no_discount .discount_pct {
+	display: none;
+}
+
+/* The struck bundle percent stacked over the sale percent's lime pill */
+html.GamepadMode body:not(.v7) .discount_block:not(.discount_block_inline):not(.no_discount) .bundle_base_discount {
+	color: rgba( 0, 0, 0, 0.5 );
+	font-size: 11px; /* Same as the struck original price */
+}
+html.GamepadMode body:not(.v7) .discount_block:not(.discount_block_inline):not(.no_discount) .bundle_base_discount::before {
+	box-shadow: 0 0 2px #a1cd44;
+}
+
+
+/* Discount block large */
+html.GamepadMode .discount_block_large,
+html.GamepadMode .discount_block_large .discount_block {
+	gap: 0px;
+}
+
+html.GamepadMode .discount_block_large .discount_prices {
+	padding: 4px 6px;
+	display: block;
+}
+
+html.GamepadMode .discount_block_large .discount_original_price, {
+	font: var(--gpText-BodySmall);
+}
+
+html.GamepadMode .discount_block_large .discount_pct {
+	font: var(--gpText-HeadingLarge);
+	padding: 3px 6px;
+	border-radius: 0px;
+	line-height: 1.1;
+}
+
+html.GamepadMode .discount_block_large .discount_final_price,
+html.GamepadMode .discount_block_large .discount_original_price {
+	line-height: 1;
+}
+
+
+/* Discount block large (NOT CURATORS OR DAILY DEALS) */
+html.GamepadMode .community_recommendation_capsule .discount_block_large .discount_prices {
+	display: inline-flex;
+	align-items: center;
+}
+
+html.GamepadMode .community_recommendation_capsule .discount_block_large .discount_pct {
+	font: var(--gpText-BodyMedium);
+	font-weight: 700;
+	padding: 0px 4px;
+	border-start-end-radius: 1px;
+	border-end-end-radius: 1px;
+}
+
+/* Regular prices */
+html.GamepadMode .similar_grid_price {
+	display: flex;
+	justify-content: flex-end;
+}
+
+html.GamepadMode .discount_block.empty {
+	height: 0;
+}
+
+
+
+/* TOOLTIPS */
+html.GamepadMode .store_tooltip {
+	padding: 12px 16px;
+	font: var(--gpText-BodyMedium);
+	box-shadow: var(--gpShadow-Large);
+	background-color: var(--gpStoreDarkestGrey);
+	color: var(--gpStoreLighterGrey);
+	border-radius: var(--gpCorner-Large);
+}
+
+html.GamepadMode .tooltip_q_ctn {
+	background: unset;
+	background-color: var(--gpBackground-LightHard);
+	font: var(--gpText-BodyMedium);
+	font-weight: 700;
+	padding: 4px 10px;
+	margin-inline-start: 4px;
+	border-radius: 80px;
+	outline: 2px solid;
+	outline-color: rgba(255,255,255,0);
+	transition: outline-color background-color color 0.2s ease;
+}
+
+html.GamepadMode .tooltip_q_ctn.gpfocus {
+	background-color: white;
+	color: black;
+	box-shadow: var(--gpShadow-Medium);
+	outline: 2px solid;
+	outline-color: rgba(255,255,255,0.6);
+	outline-offset: 2px;
+}
+
+
+
+
+
+/* MATURE CONTENT */
+html.GamepadMode .mature_content_filtered {
+	padding: 16px;
+	background-color: var(--gpBackground-DarkSoft);
+	font: var(--gpText-BodyLarge);
+	margin-bottom: var(--gpSpace-Gutter);
+}
+
+html.GamepadMode .mature_content_filtered:focus-within {
+	background-color: var(--gpBackground-DarkMedium);
+}
+
+html.GamepadMode .mature_content_filtered a {
+	color: white;
+	display: inline-block;
+	background-color: var(--gpBackground-LightSoft);
+	border-radius: var(--gpCorner-Medium);
+	padding: 10px 12px;
+	text-decoration: none;
+	margin-inline-start: 6px;
+	transition: all 0.2s ease;
+}
+
+html.GamepadMode .mature_content_filtered a:hover,
+html.GamepadMode .mature_content_filtered a.gpfocus {
+	background-color: var(--gpBackground-LightMedium);
+}
+
+
+
+
+/* MORE LIKE THIS */
+html.GamepadMode body.v6 h2.morelike_section_divider {
+	border-bottom: none;
+	margin-top: 0px;
+}
+
+html.GamepadMode .similar_grid_flex {
+	margin: unset;
+	gap: 12px;
+	padding-bottom: 16px;
+	margin-bottom: 24px;
+}
+
+html.GamepadMode .similar_grid_item {
+	margin: unset;
+	max-width: unset;
+	min-width: calc(100vw / 3);
+	background: none;
+	padding: 0px 0px 16px;
+	transition: all 0.2s ease;
+	padding-bottom: 48px;
+}
+
+html.GamepadMode .similar_grid_item .buttons {
+	visibility: visible;
+}
+
+html.GamepadMode .similar_grid_item .buttons .wishlist {
+	display: none;
+}
+
+html.GamepadMode .similar_grid_item .similar_grid_capsule {
+	border: none;
+	box-shadow: var(--gpShadow-Medium);
+	transition: all 0.2s ease;
+	inset-inline-start: unset;
+	margin-bottom: 8px;
+}
+
+html.GamepadMode .similar_grid_item .similar_grid_capsule.gpfocus {
+	box-shadow: var(--gpShadow-Large);
+}
+
+html.GamepadMode .similar_grid_item .similar_grid_price {
+	margin-bottom: 8px;
+}
+
+html.GamepadMode .recommendation_btn {
+	padding: 10px 20px;
+	background: var(--gpBackground-LightSoft);
+	border-radius: var(--gpCorner-Medium);
+	transition: all 0.2s ease;
+}
+
+html.GamepadMode .similar_grid_item:focus-within .recommendation_btn {
+	background: var(--gpBackground-LightMedium);
+}
+
+html.GamepadMode .recommendation_btn:hover {
+	background: var(--gpBackground-LightHard) !important;
+	color: white;
+}
+
+html.GamepadMode .recommendation_btn.gpfocus {
+	background: white !important;
+	color: black;
+	border-radius: 0px;
+}
+
+html.GamepadMode .app_page_morelike .similar_grid_item > * {
+	width: unset;
+}
+
+html.GamepadMode .similar_grid_item .buttons {
+	padding-top: 8px;
+}
+
+html.GamepadMode .similar_grid_capsule .ds_steam_deck_compat {
+	background-color: var(--gpBackground-DarkMedium);
+	backdrop-filter: blur(24px);
+}
+
+
+
+
+
+/* SUGGESTED CURATORS */
+
+/* Global */
+html.GamepadMode body.v6 .store_capsule_frame.curator_spotlight h2 span.right {
+	display: none;
+}
+
+html.GamepadMode .carousel_container.paging_capsules .carousel_items .curator_page {
+	width: calc(100vw - (2 * var(--gpSpace-Gutter)));
+	padding: var(--gpSpace-Gutter);
+	min-height: unset;
+	scroll-snap-align: start;
+	background: none;
+	background-color: var(--gpBackground-LightSoft);
+	box-shadow: none;
+	gap: 16px;
+	transition: var(--gpTransition-Short);
+	margin-bottom: 12px;
+	flex-direction: column;
+	scroll-snap-align: start;
+}
+
+html.GamepadMode .carousel_container.paging_capsules .carousel_items .curator_page:focus-within {
+	background-color: var(--gpBackground-LightMedium);
+}
+
+html.GamepadMode .carousel_container .carousel_thumbs {
+	display: none;
+}
+
+/* Profiles */
+html.GamepadMode .curator_recommendation_capsule .carousel_container.paging_capsules .curator_page .profile {
+	background: none;
+	margin: unset;
+	padding: unset;
+	gap: 12px;
+}
+
+html.GamepadMode .curator_page .name span {
+	color: white;
+}
+
+html.GamepadMode .curator_page .avatar {
+	margin-inline-end: unset;
+	width: 100%;
+	height: 100%;
+}
+
+html.GamepadMode .curator_page .profile_avatar {
+	display: flex;
+	border-radius: var(--gpCorner-Large);
+	overflow: hidden;
+	box-shadow: var(--gpShadow-Small);
+	padding: 0px;
+	width: 70px;
+	height: 70px;
+}
+
+html.GamepadMode .curator_page .profile_avatar.gpfocus {
+	border-radius: 0px;
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode .curator_page .actions {
+	align-items: center;
+	gap: 12px;
+	padding: unset;
+	background: none;
+}
+
+html.GamepadMode .curator_page .socialmedia {
+	font-size: unset;
+	padding: unset;
+	margin: unset;
+	column-gap: 12px;
+}
+
+html.GamepadMode .curator_page .socialmedia > div {
+	margin-inline-start: unset;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding-inline-start: 8px;
+	border-inline-start: 1px solid var(--gpBackground-LightMedium);
+}
+
+html.GamepadMode .curator_page .socialmedia > div:first-child {
+	border-inline-start: none;
+	padding-inline-start: 0px;
+}
+
+html.GamepadMode .curator_page .name {
+	font-size: unset;
+	font-weight: unset;
+	color: unset;
+}
+
+html.GamepadMode .curator_page .ignore_button_area a {
+	text-decoration: unset;
+	padding: 8px 12px;
+	background: var(--gpBackground-LightMedium);
+	border-radius: var(--gpCorner-Medium);
+	color: white;
+	transition: var(--gpTransition-Short);
+}
+
+html.GamepadMode .curator_page .ignore_button_area a:hover {
+	background: var(--gpBackground-LightHard);
+}
+
+html.GamepadMode .curator_page .ignore_button_area a.gpfocus {
+	background: white;
+	color: black;
+	border-radius: 0px;
+}
+
+html.GamepadMode .curator_recommendation_capsule .curator_page .followers {
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLighterGrey);
+	display: flex;
+	gap: 4px;
+	margin: unset;
+}
+
+html.GamepadMode .curator_page .followers span {
+	display: unset;
+	font-size: unset;
+}
+
+/* Carousel items */
+html.GamepadMode .carousel_container.paging_capsules .carousel_items {
+	padding-top: 0px;
+	scroll-snap-type: x mandatory;
+}
+
+html.GamepadMode .carousel_container.paging_capsules .carousel_items .curator_page .curations {
+	margin-inline-end: unset;
+	gap: 12px;
+	overflow: hidden;
+	align-items: stretch;
+	padding-top: 16px;
+	border-top: 1px solid var(--gpBackground-LightMedium);
+}
+
+html.GamepadMode .carousel_container.paging_capsules .carousel_items .curator_page .curations > div {
+	flex-basis: unset;
+	max-width: unset;
+	margin: unset;
+	flex-grow: unset;
+	flex-shrink: unset;
+	width: 33%;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+html.GamepadMode .carousel_container.paging_capsules .carousel_items .curator_page .curations > div:last-child {
+	display: none;
+}
+
+html.GamepadMode .carousel_container.paging_capsules .carousel_items .curator_page .curations .store_capsule {
+	box-shadow: var( --gpShadow-Medium );
+	overflow: hidden;
+	width: 100%;
+	min-width: 100%;
+}
+
+html.GamepadMode .carousel_container.paging_capsules .carousel_items .curator_page .curations .store_capsule .ds_steam_deck_compat {
+	background-color: var(--gpBackground-DarkMedium);
+	backdrop-filter: blur(24px);
+}
+
+html.GamepadMode .curator_page .text {
+	font: var(--gpText-BodyMedium);
+	line-height: 1.2;
+	color: var(--gpStoreLightestGrey);
+	padding-inline-end: unset;
+}
+
+html.GamepadMode .curator_page .review_direction {
+	font: var(--gpText-BodySmall);
+	font-weight: 500;
+	padding-top: 4px;
+}
+
+html.GamepadMode .SliderBody ul
+{
+	gap: var(--gpSpace-Gap);
+}
+

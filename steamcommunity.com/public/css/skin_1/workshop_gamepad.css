@@ -1,0 +1,466 @@
+
+html.GamepadMode .detailBox {
+	background: none;
+}
+
+html.GamepadMode .ratingSection {
+	margin: unset;
+}
+
+html.GamepadMode .fileRatingDetails img {
+	height: 20px;
+}
+
+html.GamepadMode .workshop_home_content {
+	overflow: visible;
+}
+
+
+/* Comments */
+html.GamepadMode .commentthread_header {
+	background-color: unset;
+}
+
+
+/* Page */
+html.GamepadMode #ig_bottom {
+	margin: 0px var(--gpSpace-Gutter);
+}
+
+html.GamepadMode .workshop_home_content {
+	width: unset;
+}
+
+html.GamepadMode .left_column {
+	width: 100%;
+}
+
+html.GamepadMode #apphub_workshop_content_ctn {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+
+/* Right column */
+html.GamepadMode .primary_panel_border {
+	box-shadow: unset;
+	padding: 0px;
+}
+
+html.GamepadMode .primary_panel_border.panel_margin_small {
+	margin: unset;
+	background: none;
+	padding-top: 24px;
+}
+
+html.GamepadMode .menu_panel .title,
+html.GamepadMode .panel .browseTitle {
+	font: var(--gpText-BodySmall);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	opacity: 0.7;
+}
+
+/* Hide filter button on deck */
+html.GamepadMode .general_btn.createCollection {
+	display: none;
+}
+
+
+
+
+
+/* Header */
+html.GamepadMode .workshop_header {
+	height: unset;
+	box-shadow: unset;
+	margin-block: -24px 24px;
+	background-size: contain;
+	max-width: unset;
+}
+
+html.GamepadMode .browseAppDetails {
+	height: 21.4vw;
+	width: 100%;
+}
+
+html.GamepadMode .customBrowseTitle {
+	font-weight: 500;
+	margin-bottom: 12px;
+}
+
+html.GamepadMode .customBrowseText {
+	font: var(--gpText-BodyMedium);
+}
+
+html.GamepadMode .customBrowseDesc {
+	padding-right: 0px;
+}
+
+html.GamepadMode .workshop_browse_menu_area {
+	background: unset;
+	backdrop-filter: blur(24px);
+	background-color: rgba(0,0,0,0.2);
+	height: unset;
+	padding: 0px var(--gpSpace-Gutter);
+	display: flex;
+	position: unset;
+	align-items: center;
+}
+
+
+/* Search */
+html.GamepadMode .workshop_browse_search {
+	border: none;
+	background-color: var(--gpBackground-DarkHard);
+	font: var(--gpText-BodyLarge);
+}
+
+html.GamepadMode .workshop_browse_search .search_text_submit_img {
+	right: unset;
+	margin-left: 8px;
+}
+
+
+
+
+/* Layout */
+html.GamepadMode .left_column {
+	max-width: unset;
+}
+
+html.GamepadMode .workshop_home_content {
+	margin: 0px var(--gpSpace-Gutter);
+}
+
+
+/* Navigation */
+html.GamepadMode .workshop_browse_tab {
+	font: var(--gpText-BodyLarge);
+	padding: unset;
+	display: inline-flex;
+}
+
+html.GamepadMode .workshop_browse_tab a {
+	padding: 10px 16px;
+	margin: unset;
+	transition: all 0.2s ease;
+}
+
+html.GamepadMode .workshop_browse_tab a:hover,
+html.GamepadMode .workshop_browse_tab a.gpfocus {
+	color: white;
+	background-color: rgba(255,255,255,0.1);
+}
+
+html.GamepadMode .workshop_browse_tab a.dropdown {
+	padding-right: 28px;
+	background-position: calc(100% - 8px) calc(50% - 2px);
+}
+
+html.GamepadMode .workshop_browse_tab a.dropdown:hover {
+	border-radius: unset;
+	padding-right: 28px;
+	margin: unset;
+	height: unset;
+}
+
+html.GamepadMode .workshop_browse_tab a.dropdown.hover {
+	border-radius: unset;
+	margin: unset;
+	height: unset;
+	background-color: unset;
+	color: unset;
+}
+
+
+/* Tabs */
+html.GamepadMode .home_tab_bg {
+	background: none;
+}
+
+
+/* Sections */
+html.GamepadMode .section_title_ctn {
+	margin: unset;
+}
+
+html.GamepadMode .section_title_ctn .checkbox {
+	display: none;
+}
+
+html.GamepadMode .section_title,
+html.GamepadMode .section_title a {
+	font: var(--gpText-HeadingSmall);
+	font-weight: 500;
+}
+
+html.GamepadMode .section_bottom_bar {
+	background: none;
+	padding: 8px 0px;
+}
+
+
+/* Grid items */
+html.GamepadMode .section_contents.with_background {
+	background: unset;
+	padding: unset;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (min-width:  1280px) {
+	html.GamepadMode .section_contents.with_background {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	html.GamepadMode .section_contents.with_background {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
+}
+
+html.GamepadMode .section_contents {
+	justify-content: unset;
+	column-gap: 12px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+html.GamepadMode .workshop_item {
+	padding: unset;
+	margin-bottom: 12px;
+}
+
+html.GamepadMode .workshop_item.grid {
+	/* width: var(--gpWidth-4colcap); */
+	padding: 8px;
+	background-color: var(--gpStoreDarkestGrey);
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode .workshop_item a .preview_image {
+	border: unset;
+	box-shadow: var(--gpShadow-Medium);
+	width: 100%;
+	height: auto;
+}
+
+html.GamepadMode .popular_items_row .workshop_item.grid,
+html.GamepadMode .followed_authors_row .workshop_item.grid,
+html.GamepadMode .merch_row .workshop_item.grid,
+html.GamepadMode .friends_favorites_row .workshop_item.grid {
+	margin-bottom: 12px;
+	box-sizing: border-box;
+}
+
+html.GamepadMode .workshop_item.grid a .preview_image {
+	max-width: unset;
+	max-height: unset;
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode .workshop_item .preview_image.landscape {
+	width: 100%;
+}
+
+html.GamepadMode .workshop_item.accepted a {
+	display: flex;
+}
+
+
+/* Browsing grid items */
+html.GamepadMode .workshopBrowseItems {
+	grid-column-gap: 4px;
+	grid-row-gap: 4px;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (min-width:  1280px) {
+	html.GamepadMode .workshopBrowseItems {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	html.GamepadMode .workshopBrowseItems {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem {
+	padding: 12px;
+	box-sizing: border-box;
+	background-color: var(--gpBackground-DarkSoft);
+	margin: unset;
+	min-width: 0px;
+	transition: background-color 0.2s ease;
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem.gpfocus {
+	background-color: var(--gpBackground-DarkHard);
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem a {
+	display: flex;
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem a .workshopItemPreviewHolder {
+	box-shadow: var(--gpShadow-Medium);
+	margin: unset;
+	width: 100%;
+	height: unset;
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem.gpfocus .workshopItemTitle {
+	color: white;
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem .item_link {
+	margin-top: 6px;
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem .workshopItemTitle {
+	font: var(--gpText-BodyLarge);
+	margin-top: 0px;
+	color: var(--gpStoreLightestGrey);
+	transition: color 0.2s ease;
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItemPreviewImage {
+	max-height: unset;
+	width: 100%;
+	height: auto;
+}
+
+html.GamepadMode .workshopItem .workshopItemAuthorName {
+	max-width: 100%;
+}
+
+html.GamepadMode .workshopItem .workshopItemAuthorName a.workshop_author_link {
+	display: inline-flex;
+}
+
+html.GamepadMode .workshopItemSubscriptionControls {
+	visibility: visible !important;
+	position: relative;
+}
+
+html.GamepadMode .user_action_history_icon.subscribed {
+	display: none !important;
+}
+
+html.GamepadMode .user_action_history_icon.favorited {
+	margin-top: 4px;
+}
+
+
+
+
+/* Voting queue */
+html.GamepadMode .section_contents.voting_queue {
+	height: 230px;
+}
+
+html.GamepadMode .voting_queue_border {
+	background: var(--gpStoreDarkestGrey);
+	padding: unset;
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode .voting_queue_link {
+	background: unset;
+	left: unset;
+	width: unset;
+	top: unset;
+	height: unset;
+
+	right: 0px;
+	margin: 12px;
+	top: 44%;
+	max-width: 44%;
+	text-align: right;
+	transform: translateY(-50%);
+
+	border-radius: var(--gpCorner-Medium);
+	font: var(--gpText-BodyLarge);
+	font-weight: 500;
+	color: white;
+	background: var(--gpColor-Blue);
+	transition: all 0.2s ease;
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode .voting_queue_link div {
+	padding: 12px 16px;
+}
+
+html.GamepadMode a.queue_area:hover .voting_queue_border,
+html.GamepadMode a.queue_area.gpfocus .voting_queue_border {
+	background: var(--gpStoreDarkestGrey);
+}
+
+html.GamepadMode a.queue_area:hover .voting_queue_link,
+html.GamepadMode a.queue_area.gpfocus .voting_queue_link {
+	background: var(--gpColor-BlueHi);
+	box-shadow: var(--gpShadow-Large);
+}
+
+
+
+
+/* DISCUSSIONS */
+html.GamepadMode #ig_bottom,
+html.GamepadMode .breadcrumbs {
+	max-width: unset;
+}
+
+html.GamepadMode .sharedfiles_item_page_header .breadcrumbs {
+	margin: 0 var(--gpSpace-Gutter);
+}
+
+html.GamepadMode .leftcol {
+	margin: 0px !important;
+}
+
+html.GamepadMode #group_tab_content_discussions {
+	padding-top: 12px;
+}
+
+html.GamepadMode #ig_bottom .forum_paging {
+	margin-bottom: 12px;
+}
+
+html.GamepadMode #ig_bottom .forum_paging.forum_paging_footer {
+	margin-top: 12px;
+}
+
+
+
+/* ABOUT */
+html.GamepadMode .page_title {
+	font: var(--gpText-HeadingLarge);
+}
+
+html.GamepadMode .about_workshop_content_ctn {
+	display: flex;
+	column-gap: 24px;
+}
+
+html.GamepadMode .feature_body {
+	width: unset;
+}
+
+html.GamepadMode .service_provider_row {
+	line-height: unset;
+}
+
+html.GamepadMode .about_workshop_content_ctn #profileBlock p {
+	font: var(--gpText-BodyLarge);
+}
+
+html.GamepadMode .about_workshop_content_ctn .primary_panel_border {
+	box-shadow: var(--gpShadow-Medium);
+}

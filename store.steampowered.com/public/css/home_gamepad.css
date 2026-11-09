@@ -1,0 +1,1347 @@
+:root {
+	/* System greys */
+	--gpSystemLightestGrey: #DCDEDF;
+	--gpSystemLighterGrey: #B8BCBF;
+	--gpSystemLightGrey: #8B929A;
+	--gpSystemGrey: #67707B;
+	--gpSystemDarkGrey: #3D4450;
+	--gpSystemDarkerGrey: #23262E;
+	--gpSystemDarkestGrey: #0E141B;
+
+	/* Store blue greys */
+	--gpStoreLightestGrey: #CCD8E3;
+	--gpStoreLighterGrey: #A7BACC;
+	--gpStoreLightGrey: #7C8EA3;
+	--gpStoreGrey: #4e697d;
+	--gpStoreDarkGrey: #2A475E;
+	--gpStoreDarkerGrey: #1B2838;
+	--gpStoreDarkestGrey: #000F18;
+
+	/* Gradients */
+	--gpGradient-StoreBackground: linear-gradient(180deg, var(--gpStoreDarkGrey) 0%, var(--gpStoreDarkerGrey) 80%);
+	--gpGradient-LibraryBackground: radial-gradient(farthest-corner at 40px 40px,#3D4450 0%, #23262E 80%);
+
+	/* Colours */
+	--gpColor-Blue: #1A9FFF;
+	--gpColor-BlueHi: #00BBFF;
+	--gpColor-Green: #5ba32b;
+	--gpColor-GreenHi: #59BF40;
+	--gpColor-Orange: #E35E1C;
+	--gpColor-Red: #D94126;
+	--gpColor-RedHi: #EE563B;
+	--gpColor-DustyBlue: #417a9b;
+	--gpColor-LightBlue: #B3DFFF;
+	--gpColor-Yellow: #FFC82C;
+	--gpColor-ChalkyBlue: #66C0F4;
+
+	/* Backgrounds */
+	--gpBackground-LightSofter: #6998bb24;
+	--gpBackground-LightSoft: #3b5a7280;
+	--gpBackground-LightMedium: #678BA670;
+	--gpBackground-LightHard: #93B8D480;
+	--gpBackground-LightHarder: #aacce6a6;
+
+	--gpBackground-DarkSofter: #0e141b33;
+	--gpBackground-DarkSoft: #0e141b66;
+	--gpBackground-DarkMedium: #0e141b99;
+	--gpBackground-DarkHard: #0e141bcc;
+
+	--gpBackground-Neutral-LightSofter: rgba(235, 246, 255, 0.10);
+	--gpBackground-Neutral-LightSoft: rgba(235, 246, 255, 0.20);
+	--gpBackground-Neutral-LightMedium: rgba(235, 246, 255, 0.30);
+	--gpBackground-Neutral-LightHard: rgba(235, 246, 255, 0.40);
+	--gpBackground-Neutral-LightHarder: rgba(235, 246, 255, 0.50);
+
+
+	/* Corners */
+	--gpCorner-Small: 1px;
+	--gpCorner-Medium: 2px;
+	--gpCorner-Large: 3px;
+
+	/* Spacing */
+	--gpSpace-Gutter: 24px;
+	--gpSpace-Gap: 12px;
+	--gpSpace-FocusRingAffordance: 10px;
+
+	/* Fixed widths */
+	--gpNavWidth: 240px;
+	--gpPaymentsNavWidth: 340px;
+	--gpDselectWidth: 340px;
+	--gpSidePanelWidth: 340px;
+	--gpGiftingPanelWidth: 280px;
+	--gpVerticalResponsivePadding-Small: calc( (100vw - 854px) / 60 );
+	--gpVerticalResponsivePadding-Medium: calc( (100vw - 854px) / 20 );
+	--gpVerticalResponsivePadding-Large: calc( (100vw - 854px) / 12 );
+
+	/* Game capsule widths */
+	--screen-width: 100vw;
+	--gpWidth-6colcap: calc((var(--screen-width) - (5 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 6);
+	--gpWidth-5colcap: calc((var(--screen-width) - (4 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 5);
+	--gpWidth-4colcap: calc((var(--screen-width) - (3 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 4);
+	--gpWidth-3colcap: calc((var(--screen-width) - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
+	--gpWidth-2colcap: calc((var(--screen-width) - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
+	--gpWidth-1colcap: calc((var(--screen-width) - (2 * var(--gpSpace-Gutter))));
+
+    /* Fixed heights */
+    --gpStoreMenuHeight: 24px;
+
+	/* Surfaces */
+	--gpShadow-Small: 0px 2px 2px 0px #0000003D;
+	--gpShadow-Medium: 0px 3px 6px 0px #0000003D;
+	--gpShadow-Large: 0px 12px 16px 0px #0000003D;
+	--gpShadow-XLarge: 0px 24px 32px 0px #0000003D;
+
+	/* Type styles */
+	--gpText-HeadingLarge: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingMedium: normal 700 22px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingSmall: normal 700 18px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+}
+
+@media screen and (min-width:  1280px) {
+	:root {
+		--gpSpace-Gutter: calc(24px + 2vw);
+	}
+}
+
+/* Color variables for normal use */
+:root {
+	--page-background: #0f1924;
+	--dark-ctn-bg: rgba(0, 0, 0, .2);
+	--price-dark-bg: rgba(0, 0, 0, 0.25);
+	--dark-ctn-bg-gradient: linear-gradient(180deg, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 0) 100%);
+	--light-ctn-bg: rgba(179, 218, 255, 0.08);
+	--light-ctn-bg-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0) 10%, rgba(28, 50, 70, 0.5) 65%, rgba(40, 70, 98, 0.45) 95%, rgba(40, 70, 98, 0.65) 100%);
+	--light-ctn-bg-gradient-top-color: rgba(40, 70, 98, 0.65);
+	--light-ctn-bg-hover: rgba(115, 150, 184, 0.25);
+	--light-fg: rgba(255,255,255,0.8);
+	--midlight-fg: rgba(255,255,255,0.5);
+	--dimlight-fg: rgba(255,255,255,0.2);
+	--dimmestlight-fg: rgba(255,255,255,0.1);
+	--mid-ctn-bg: rgba(179, 218, 255, 0.12);
+	--green: #A1CD44;
+	--green-mid: #59BF40;
+	--bright-teal: #00e4e4;
+	--blue: #1a9fff;
+	--blue-translucent: #1aa0ff20;
+	--blue-gradient-bg-bold: radial-gradient(ellipse 161.29% 1235.17% at -3.10% 130.83%, rgb(37, 134, 183) 0%, rgb(28, 71, 140) 60%, rgb(14, 61, 97) 100%);
+	--blue-gradient-bg-muted: radial-gradient(ellipse 161.29% 1235.17% at -3.10% 130.83%, rgb(43, 82, 128) 0%, rgb(25, 51, 87) 60%, rgb(33, 63, 98) 100%);
+	--multi-color-bg-gradient-1: linear-gradient(315deg, rgba(49, 72, 113, .90) 5%, rgba(10, 94, 94, .90) 95%);
+	--multi-color-bg-gradient-2:  linear-gradient(0deg, rgba(31, 49, 74, .45) 5%, rgba(33, 54, 77, .65) 20%, rgba(28, 50, 70, 0.5) 65%, rgba(40, 70, 98, 0.45) 95%, rgba(43, 83, 118, 0.55) 100%),  radial-gradient(circle at 10% 0%, rgba(94, 174, 255, 0.2) 0%,rgba(34, 53, 77, 0.05) 50%,rgba(94, 174, 255, 0.00) 90%), radial-gradient(circle at 80% 100%, rgba(94, 174, 255, 0.1) 0%,rgba(94, 174, 255, 0.05) 50%,rgba(94, 174, 255, 0.00) 90%);
+	--multi-color-bg-gradient-3: linear-gradient(315deg, rgb(16 124 101) 5%, rgb(46 121 159) 50%, rgb(55 73 132) 95%);
+	--multi-color-bg-gradient-4: linear-gradient(115deg, rgb(16 124 101 / 25%) 5%, rgb(46 121 159 / 18%) 50%, rgb(55 73 132 / 29%) 95%);
+	--multi-color-bg-gradient-5: linear-gradient(315deg, rgb(183, 37, 90) 5%, rgb(140, 28, 95) 50%, rgb(97, 14, 93) 95%);
+}
+
+/* Color variable overrides for use during a seasonal sale */
+:root .seasonal_sale {
+	--light-ctn-bg: rgba(50, 48, 75, 0.836);
+	--light-ctn-bg-hover: rgba(77, 74, 124, 0.788);
+	--bright-fg: #e2f9b2;
+	--bright-teal: #794df3;
+	--dark-ctn-bg: rgba(15, 19, 39, 0.671);
+	--price-dark-bg: rgba(24, 28, 56, 0.788);
+	--mid-ctn-bg: rgba(102, 98, 172, 0.24);
+	--blue-gradient-bg-muted: radial-gradient(ellipse 160% 1235% at -30% 130%, rgba(33, 51, 110, 0.842) 0%, rgba(39, 71, 90, 0.904) 60%, rgba(48, 62, 99, 0.959) 100%);
+	--blue-gradient-bg-muted-opaque: radial-gradient(ellipse 160% 1235% at -45% 130%, rgb(82, 63, 116) 0%, rgb(41, 52, 79) 60%, rgb(48, 49, 78) 100%);
+	--light-ctn-bg-gradient: linear-gradient(0deg, rgba(35, 111, 94, 0) 10%, rgba(46, 56, 109, 0.336) 65%, rgba(22, 53, 89, 0.404) 95%, rgba(40, 60, 98, 0.425) 100%);
+	--light-ctn-bg-gradient-top-color: rgba(40, 91, 98, 0.37);
+	--multi-color-bg-gradient-1: linear-gradient(285deg, rgba(21, 30, 57, 0.9) 5%, rgba(18, 32, 50, 0.9) 95%);
+	--multi-color-bg-gradient-2: linear-gradient(285deg, rgba(50, 48, 75, 0.836) 5%, rgba(50, 48, 75, 0.836) 95%);
+}
+
+/* Other variables */
+
+:root {
+	--gpShadow-Small: 0px 2px 2px 0px #0000003D;
+    --gpShadow-Medium: 0px 3px 6px 0px #0000003D;
+    --gpShadow-Large: 0px 12px 16px 0px #0000003D;
+    --gpShadow-XLarge: 0px 24px 32px 0px #0000003D;
+	--hightlight-bottom: inset 0px -2px 10px 0px rgba(30, 62, 92, 0.35);
+}
+
+ /* Wrapper */
+ html.GamepadMode .home_page_body_ctn {
+	 padding-bottom: 12px;
+ }
+
+html.GamepadMode .responsive_page_template_content {
+	padding-top: unset;
+}
+
+html.GamepadMode .home_pagecontent_ctn {
+	overflow: visible;
+	margin: 0;
+	max-width: unset;
+}
+
+html.GamepadMode .recently_updated_block {
+	padding: calc( 8px + var(--gpVerticalResponsivePadding-Small) ) var(--gpSpace-Gutter);
+}
+
+html.GamepadMode body.v6 .page_content {
+	max-width: unset !important;
+	padding: 0px var(--gpSpace-Gutter);
+}
+
+html.GamepadMode body.v6 .home_ctn .page_content {
+	/* padding: unset; */
+}
+
+html.GamepadMode .menu_takeover_background {
+	 display: none;
+}
+
+html.GamepadMode body.v7 .discount_block_inline .discount_prices,
+html.GamepadMode body.v7 .discount_block .discount_prices {
+	background: var(--price-dark-bg);
+}
+
+/* Text */
+html.GamepadMode .home_page_content h2 {
+	margin-bottom: 8px;
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+}
+
+@media screen and (min-width: 1920px) {
+	/* Show 3 */
+	html.GamepadMode .carousel_container.maincap .carousel_items > * {
+		width: var(--gpWidth-3colcap);
+		min-width: var(--gpWidth-3colcap);
+	}
+}
+
+/* Trending among friends */
+html.GamepadMode .friends_recently_purchased {
+	margin: unset;
+}
+
+html.GamepadMode .friends_recently_purchased .carousel_items {
+	height: unset;
+}
+
+html.GamepadMode .friends_recently_purchased .store_capsule {
+	/* height: 148px; */
+	background-size: cover;
+}
+
+html.GamepadMode img.nonresponsive_hidden {
+	display: none !important;
+}
+
+html.GamepadMode .responsive_content_dive {
+	opacity: unset;
+	font: var(--gpText-BodyMedium);
+}
+
+
+/* Carousel "more" buttons */
+html.GamepadMode .home_page_content h2 span.right,
+html.GamepadMode .recommendation_section h2 span.right,
+html.GamepadMode .recommendation_mainsection h2 span.right,
+html.GamepadMode .user_reviews_header span.right,
+html.GamepadMode .bucket h2 span.right {
+	position: absolute;
+	top: -12px;
+	inset-inline-end: 0px;
+}
+
+
+/* Sign in module */
+html.GamepadMode .home_page_sign_in_ctn {
+	height: unset;
+	padding: unset;
+	background-color: unset;
+	color: var(--gpStoreLighterGrey)
+}
+
+html.GamepadMode .page_content_ctn.dark:last-child {
+	margin-bottom: unset;
+}
+
+
+/* Featured and recommended */
+html.GamepadMode .carousel_container.maincap {
+	margin: unset;
+	max-width: unset;
+}
+
+html.GamepadMode .carousel_container.maincap .carousel_items > * {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto 1fr;
+	width: 30%;
+	min-width: 325px;
+}
+
+html.GamepadMode .sale_capsule_video {
+	max-height: 100%;
+	height: 100%;
+}
+
+html.GamepadMode .carousel_container.maincap .carousel_items {
+	box-shadow: unset;
+	margin: 0px;
+}
+
+html.GamepadMode .store_main_capsule .app_name > div {
+	font: var(--gpText-HeadingSmall);
+	font-weight: 500;
+	max-height: unset;
+	overflow: unset;
+	display: block;
+	padding-bottom: 0;
+}
+
+#home_maincap_v7:focus-within {
+	outline-color: unset;
+	box-shadow: unset;
+}
+
+html.gpnav_active .maincap:focus-within {
+	outline: unset;
+}
+
+html.GamepadMode .carousel_container.maincap .discount_block {
+	padding-top: 0px;
+	text-align: end;
+	display: flex;
+	max-height: 24px;
+	gap: 0;
+}
+
+html.GamepadMode .store_main_capsule.no_screenshots .app_name {
+	width: unset;
+	margin-top: unset;
+}
+
+html.GamepadMode .store_main_capsule.no_screenshots .app_name > div {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+html.GamepadMode .store_main_capsule .screenshots {
+	display: none;
+}
+
+html.GamepadMode .home_beta_link.gpfocus {
+	border-radius: 0;
+}
+
+
+/* Takeunder */
+html.GamepadMode #home_takeunder_ctn {
+	padding-bottom: 32px;
+}
+
+html.GamepadMode .home_page_content.takeunder a {
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode .home_page_content.takeunder a:hover {
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode .home_page_content.takeunder, html.GamepadMode .home_page_takeunder {
+	max-width: unset;
+}
+
+html.GamepadMode .spotlight_weeklong_ctn {
+	height: 32vw;
+	/* border: none; */
+}
+html.GamepadMode .spotlight_weeklong_ctn .spotlight_text_overlay {
+	background-size: contain;
+	width: 100%;
+}
+html.GamepadMode .spotlight_weeklong_ctn .spotlight_count {
+	margin-top: 22vw;
+}
+
+
+/* Browse Steam */
+html.GamepadMode .big_buttons .button_container {
+	grid-template-columns: repeat( 4, 1fr );
+}
+
+html.GamepadMode .big_buttons .button_container {
+	gap: var(--gpSpace-Gap);
+}
+
+html.GamepadMode .big_buttons h2.home_page_content_title {
+	margin-bottom: 12px;
+}
+
+html.GamepadMode .big_button {
+	text-transform: unset;
+	font: var(--gpText-BodyLarge);
+	font-weight: 500;
+	border-radius: var(--gpCorner-Medium);
+	background: var(--gpColor-Blue);
+	letter-spacing: unset;
+	transition: all 0.1s ease;
+}
+
+html.GamepadMode .big_button:hover {
+	background: var(--gpColor-BlueHi);
+}
+
+html.GamepadMode .big_button.gpfocus {
+	background: white;
+	color: black;
+	outline: none;
+	border-radius: 0px;
+}
+
+
+/* Specials */
+.specials_under10 .carousel_items:not(.no_paging),
+.wishlist_on_sale .carousel_items:not(.no_paging) {
+	height: unset;
+}
+
+html.GamepadMode .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+	padding-bottom: unset;
+}
+
+
+.carousel_container .carousel_items:not(.no_paging) > * {
+	width: unset;
+}
+
+.carousel_container .carousel_view_all {
+	background: linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%);
+}
+
+.carousel_container .carousel_view_all > div {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+}
+
+/* Deck Section */
+html.GamepadMode #home_deck_content .home_deck_section.ctn_background {
+	background: none;
+}
+
+html.GamepadMode #home_deck_content .sale_capsule_carousel .carousel_container.paging_capsules, html.GamepadMode #home_deck_content .title_grid {
+	padding: 0;
+}
+
+/* Streaming */
+.live_stream_play_icon {
+	top: 34px !important;
+	inset-inline-start: 90px !important;
+}
+
+#live_streams_carousel .title {
+	margin-top: 4px;
+}
+
+.live_streams_ctn .home_right_btn {
+	margin-top: -10px;
+}
+
+html.GamepadMode .live_streams_ctn {
+	overflow: visible;
+}
+
+
+/* Recommendations */
+html.GamepadMode body.v6 .page_content_ctn.dark {
+	background-color: unset;
+}
+
+html.GamepadMode .home_ctn.home_content_ctn {
+	padding: var(--gpSpace-Gutter);
+}
+
+.community_recommendation_app {
+	margin-bottom: unset;
+}
+
+html.responsive.GamepadMode body.v6 .home_content_ctn .page_content_ctn.dark {
+	padding: 0 var(--gpSpace-Gutter);
+}
+
+html.responsive.GamepadMode body.v7 .home_content_ctn .page_content_ctn.dark {
+	padding: 0;
+}
+
+html.GamepadMode .page_content_ctn.dark .home_content {
+	padding: unset;
+	margin-bottom: calc(var(--gpSpace-Gutter));
+}
+
+html.GamepadMode #content_more .home_content h2 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+
+html.GamepadMode #content_more .home_content h2 span {
+	margin-inline-start: 0px;
+	font: var(--gpText-BodyMedium);
+	color: var(--gpStoreLightestGrey);
+}
+
+html.GamepadMode #content_more .home_content h2 a {
+	width: fit-content;
+	padding: 8px 16px;
+	border-radius: var(--gpCorner-Medium);
+	background-color: var(--gpBackground-LightSoft);
+	transition: all 0.1s ease;
+}
+
+html.GamepadMode #content_more .home_content h2 a:hover,
+html.GamepadMode #content_more .home_content h2 a.gpfocus {
+	background-color: var(--gpBackground-LightMedium);
+	color: white;
+}
+
+html.GamepadMode #content_more .home_content h2 a.gpfocus {
+	border-radius: 0px;
+}
+
+html.GamepadMode .home_content_items {
+	display: flex;
+	gap: 12px;
+}
+
+html.GamepadMode .home_content a.home_content_item {
+	margin: unset !important;
+	width: var(--gpWidth-2colcap) !important;
+}
+
+html.GamepadMode .home_content.single {
+	width: var(--gpWidth-3colcap);
+	box-sizing: border-box;
+	padding: 12px;
+}
+
+html.GamepadMode .home_content.single .capsule {
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode .home_content .home_smallcap_title {
+	background: none;
+}
+
+html.GamepadMode .single_header_ctn {
+    flex-grow: 1;
+	padding-bottom: 0;
+}
+
+
+/* Hardware banners */
+html.GamepadMode .home_hardware_banner {
+	padding: 0px var(--gpSpace-Gutter);
+	margin: 8px 0px 16px;
+}
+
+html.GamepadMode .home_hardware_banner > a {
+	height: 5.9vw;
+	background-size: cover;
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode .hardware_index_banner {
+	margin-inline-start: 12px;
+}
+
+html.GamepadMode .home_hardware_banner > a:hover {
+	box-shadow: var(--gpShadow-Medium);
+}
+
+
+/* Takeover */
+html.GamepadMode body.v7 .fullscreen-bg__video, html.GamepadMode body.v7 .page_background_holder, html.GamepadMode body.v7 .home_page_takeover_sizer {
+	height: auto;
+	max-width: calc( 100vw - ( 2 * var(--gpSpace-Gutter) ) );
+	aspect-ratio: 1850 / 450;
+	margin-inline-end: auto;
+	margin-inline-start: auto;
+}
+
+html.GamepadMode body.v7 .home_page_takeover_sizer {
+	margin-top: 15px;
+}
+
+
+/* Seasonal Takeover */
+html.GamepadMode body.v7.seasonal_sale .fullscreen-bg__video, html.GamepadMode body.v7.seasonal_sale .page_background_holder {
+	height: 30vw;
+	background-size: contain;
+	margin-top: 0;
+}
+
+html.GamepadMode body.v7.seasonal_sale .home_page_takeover_sizer {
+	height: 20vw;
+}
+
+html.GamepadMode body.v7.seasonal_sale .page_background_overlay {
+	display: none;
+}
+
+
+html.GamepadMode body.v7 video.fullscreen-bg__video {
+	margin-inline-start: 50%;
+}
+
+html.GamepadMode body.v7 .home_page_takeover_link {
+	box-shadow: none;
+}
+
+.fullscreen-bg a {
+	overflow: hidden;
+}
+
+html.GamepadMode body:not(.no_home_gutter) .home_page_body_ctn .page_background_holder {
+	inset-inline-end: 0px;
+}
+
+html.GamepadMode .store_bg_overlay {
+	display: none;
+}
+
+html.GamepadMode .page_background_holder {
+	background-size: cover;
+}
+
+/* Browse by Category */
+
+html.GamepadMode .content_hub_carousel_ctn .content_hub_capsule_ctn.gpfocus {
+	border-radius: 0;
+}
+
+/* Community recommends */
+.community_recommendation_app > .community_recommendation_capsule {
+	box-shadow: unset;
+	background: unset;
+	width: 100%;
+}
+
+.community_recommendations_block > .review_box .view_more,
+.community_recommendation_app > .right_col > .paging_thumbs {
+	display: none;
+}
+
+html.responsive .community_recommendation_app > .right_col > .community_recommendations_block {
+	height: 115px;
+}
+
+html.GamepadMode .community_recommendation_app .review_box .content {
+	height: unset;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	padding-inline-end: 8px;
+	font-size: 11px;
+}
+
+html.GamepadMode .community_recommendation_app .ds_steam_deck_compat {
+	bottom: -34px;
+}
+
+.community_recommendation_app > .community_recommendation_capsule > .capsule {
+	height: auto;
+	display: flex;
+}
+
+html.GamepadMode .community_recommendation_app {
+	max-width: 30vw;
+	flex-direction: column;
+	background-color: var(--gpStoreDarkestGrey);
+}
+
+.main_cap_discount, .main_cap_price {
+	bottom: var(--gpSpace-Gap);
+}
+
+.community_recommendations_block > .review_box .author_block {
+	color: #b8bcc0;
+}
+
+.community_recommendations_block > .review_box .persona_name a {
+	color: white;
+}
+
+
+/* Under $10 */
+html.GamepadMode .home_page_content > *[data-content-dive=true] .btn_small_tall > span {
+	padding: unset;
+}
+
+html.GamepadMode .home_page_content > *[data-content-dive=true] {
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+}
+
+
+/* Updates and offers marketing messages */
+html.GamepadMode .marketingmessage_container {
+	display: inline-flex;
+}
+
+html.GamepadMode .home_marketing_message .discount_block {
+	padding: 6px;
+	height: unset;
+}
+
+html.GamepadMode .home_marketing_message .ds_steam_deck_compat {
+	/* bottom: 2px; */
+}
+
+
+/* Inline more buttons */
+html.GamepadMode h2.home_page_content_title span.right,
+html.GamepadMode h2.home_page_content_title a,
+html.GamepadMode h2.giant_curator_title span.right,
+html.GamepadMode .home_right_btn {
+	display: none;
+}
+
+
+/* Deep dive */
+#module_deep_dive {
+	display: none;
+}
+
+html.GamepadMode .deep_dive_key_tags {
+	max-width: unset;
+}
+
+html.GamepadMode .deep_dive_block .sale_capsule {
+	width: 25vw;
+	max-width: 400px;
+}
+
+
+/* Tabs container */
+
+html.GamepadMode .home_tabs_sections {
+	width: 60%;
+}
+
+html.GamepadMode .home_tabs_row_ctn {
+	gap: 12px;
+}
+
+html.GamepadMode .home_tab_button {
+	font-size: 14px;
+	background: var(--light-ctn-bg);
+	padding: 12px;
+	border-radius: 3px;
+	color: #ffffff;
+	opacity: .7;
+	font-weight: 500;
+	display: inline-block;
+	cursor: pointer;
+}
+
+html.GamepadMode .home_tab_button.gpfocus {
+	border-radius: 0;
+}
+
+html.GamepadMode .home_tab_button.active {
+	opacity: 1;
+	background: var(--blue-translucent);
+}
+
+html.GamepadMode .home_tab_button:hover:not( .active ) {
+	color: white;
+}
+
+html.GamepadMode .home_tab_button:hover {
+	opacity: .8;
+	color: #ffffff;
+}
+
+html.GamepadMode .home_rightcol {
+	width: 40%;
+}
+
+html.GamepadMode .tab_preview .tab_screenshots_ctn {
+	display: none;
+}
+
+html.GamepadMode .tab_content#tab_topgrossing_content {
+	/* display: none !important; */
+}
+
+html.GamepadMode .home_leftcol.home_tab_col {
+	margin-bottom: unset;
+}
+
+html.GamepadMode .tab_content_items {
+	padding: 10px;
+	margin: 0 0 10px 0;
+	width: unset;
+}
+
+/* Top grossing tab container */
+html.GamepadMode #tab_topgrossing_content {
+	flex-direction: column;
+}
+
+html.GamepadMode .home_tabs_sections .tab_content_items .tab_item_header .tab_row_capsule {
+	max-height: 100px;
+}
+
+html.responsive .home_tabs_sections .tab_content_items .tab_item_tags {
+	display: block;
+}
+
+
+/* Top new releases */
+html.GamepadMode #module_top_new_releases {
+	margin: unset;
+}
+
+html.GamepadMode .top_new_releases {
+	margin: unset;
+}
+
+html.GamepadMode .top_new_releases_banner_ctn .title {
+	font: var(--gpText-HeadingLarge);
+	text-transform: unset;
+	letter-spacing: unset;
+	text-shadow: unset;
+}
+
+html.GamepadMode .top_new_releases_banner_ctn .dateline {
+	font: var(--gpText-BodyMedium);
+	text-transform: unset;
+	letter-spacing: unset;
+	font-weight: 400;
+	color: white;
+	opacity: 0.8;
+}
+
+html.GamepadMode .top_new_releases_banner_ctn .title,
+html.GamepadMode .top_new_releases_banner_ctn .dateline {
+	text-shadow: 0px 8px 40px black;
+}
+
+html.GamepadMode .top_new_releases_banner_ctn a {
+	background :unset;
+	box-shadow: unset;
+	height: unset;
+	padding: var(--gpSpace-Gutter) 0px var(--gpSpace-Gap) 0px;
+	border-radius: 0px;
+}
+
+html.GamepadMode .top_new_releases_background {
+	-webkit-mask-image: linear-gradient( 0deg, transparent 10%, black 50%, black 100%, transparent 0%);
+	top: -18px;
+	width: 150%;
+	background-size: cover;
+}
+
+html.GamepadMode .top_new_releases_carousel .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+	padding-bottom: var(--gpSpace-Gap);
+}
+
+
+/* Giant Curator Recommnends */
+html.GamepadMode .responsive_giant_curator_capsule .curator_giant_capsule {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+html.GamepadMode body.v7 .responsive_hidden .curator_giant_capsule {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.responsive_giant_curator_capsule .capsule_image {
+	width: 50%;
+}
+
+.responsive_giant_curator_capsule .curator_details_row {
+	justify-content: flex-end;
+}
+
+html.GamepadMode body.v7 .responsive_hidden {
+	display: block;
+}
+
+html.GamepadMode body.v7 div.nonresponsive_hidden {
+	display: none;
+}
+
+html.GamepadMode body.v7 .apps_recommended_by_curators {
+	background: none;
+}
+
+
+/* More Curator Recommnends */
+html.GamepadMode body.v6 h2.giant_curator_title {
+	margin-bottom: 14px;
+}
+
+div#apps_recommended_by_curators_v2 {
+	height: auto;
+}
+
+html.GamepadMode div.carousel_container.paging_capsules.more_apps_by_curators_capsule {
+	padding: 0;
+}
+
+html.GamepadMode .apps_recommended_by_curators_ctn .store_capsule_frame {
+	margin: unset;
+	padding: unset;
+}
+
+html.GamepadMode .more_apps_by_curators_capsule .apps_recommended_by_curators_v2 .curated_app_curators {
+	inset-inline-start: 6px;
+	top: unset;
+	bottom: 5px;
+}
+
+html.GamepadMode .steam_curator_for_app {
+	box-shadow: var(--gpShadow-Small);
+}
+
+
+/* Developers and publishers */
+html.GamepadMode .recommended_creators_ctn .store_capsule {
+	padding-bottom: unset;
+	background-size: cover;
+}
+
+html.GamepadMode .recommended_creators_ctn .recommended_creators_container {
+	background: none;
+	border: none;
+	bottom: -4px;
+	height: unset;
+	position: absolute;
+}
+
+html.GamepadMode .recommended_creators_ctn .recommended_creators_container .avatars {
+	top: 0px;
+}
+
+html.GamepadMode .recommended_creators_ctn .recommended_creators_container .avatars > .actions {
+	display: none;
+}
+
+html.GamepadMode .recommended_creators_ctn .recommended_creators_container .avatars > a img {
+	width: 32px;
+	height: 32px;
+	box-shadow: unset;
+	border-radius: var(--gpCorner-Medium);
+	overflow: hidden;
+}
+
+
+/* Player like you like */
+#module_recommender {
+	margin-bottom: unset;
+}
+
+html.GamepadMode .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+	padding-bottom: unset;
+}
+
+html.GamepadMode .best_selling_vr_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+	padding-bottom: unset;
+}
+
+.recommended_by_steam_labs_ctn.home_ctn.ir_ctn .btnv6_white_transparent {
+	display: none;
+}
+
+html.GamepadMode .recommended_by_steam_labs_ctn {
+	margin-bottom: 0px !important; /* overriding inline style */
+}
+
+html.GamepadMode body.v6 .header_inline_reason {
+	display: inline;
+	float: unset;
+	text-transform: none;
+	font: var(--gpText-BodyMedium);
+	color: var(--gpStoreLighterGrey);
+	letter-spacing: 0px;
+	margin-inline-start: 6px;
+}
+
+
+/* VO */
+#module_shuffle_cohort_display {
+	display: none;
+}
+
+
+/* Discovery queue */
+html.GamepadMode #module_discovery_queue {
+	margin-bottom: 12px;
+}
+
+html.GamepadMode .discovery_queue_static {
+	margin-top: 12px;
+}
+
+html.GamepadMode #discovery_queue .dq_item {
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode #module_discovery_queue .right {
+	display: none;
+}
+
+html.GamepadMode #module_discovery_queue .begin_exploring {
+	font-weight: 400;
+}
+
+html.GamepadMode body.newonsteam .discovery_queue_ctn {
+	display: none !important;
+}
+
+html.GamepadMode body.v7 .DiscoveryQueueWidgetCtn.gpfocus {
+	scale: 1.01;
+}
+
+
+/* More recommendations */
+.home_page_content .more_content_title {
+	color: unset;
+}
+
+html.GamepadMode .gp_contiguous_singles {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	box-sizing: content-box;
+	display: flex;
+	flex-wrap: nowrap;
+	margin-bottom: 24px;
+	scroll-padding: 6px;
+}
+
+html.GamepadMode .home_page_content.gp_contiguous_singles {
+	margin-inline-start: unset;
+	margin-inline-end: unset;
+}
+
+html.GamepadMode .responsive_app_menu {
+	display: none;
+}
+
+html.GamepadMode .home_content.single {
+	margin: calc(var(--gpSpace-Gap) / 2);
+	width: 262px;
+	scroll-snap-align: start;
+	overflow: visible;
+}
+
+html.GamepadMode .home_content.single .screenshots {
+	display: flex;
+}
+
+html.GamepadMode .home_content.single .review {
+	display: none;
+}
+
+html.GamepadMode .home_content.single .ds_steam_deck_compat  {
+	bottom: 35px;
+}
+html.GamepadMode .home_content.twowide .ds_steam_deck_compat,
+html.GamepadMode .home_content.fourwide .ds_steam_deck_compat{
+	/* bottom: unset;
+	top: 160px; */
+}
+
+html.GamepadMode .home_content.home_content.single .single_buttonbar,
+html.GamepadMode #content_more .home_content.home_content.single h2.single_title {
+	display: none;
+}
+
+html.GamepadMode .home_content.single .capsule {
+	height: auto;
+	width: 100%;
+	max-width: 292px;
+	display: block;
+}
+
+html.GamepadMode .home_content_reason {
+	font-weight: 300;
+	font-size: 13px;
+	margin-bottom: 5px;
+}
+
+/* Keep scrolling for more content */
+html.GamepadMode .home_page_content .more_content_title {
+	font: var(--gpText-HeadingSmall);
+	color: white;
+	margin-bottom: 4px;
+	font-weight: 500;
+}
+
+html.GamepadMode .home_page_content .more_content_desc {
+	font: var(--gpText-BodyMedium);
+	color: var(--gpStoreLighterGrey);
+}
+
+html.GamepadMode #content_callout {
+	padding: 64px 0px 48px 0px;
+	background-image: url( '/public/images/v6/home/logo_steam_logo.svg' );
+	background-size: 48px;
+	background-position-y: 0px;
+	border-bottom: 1px solid var(--gpBackground-LightSoft);
+	margin: var(--gpSpace-Gutter);
+}
+
+html.GamepadMode #content_callout .home_page_content {
+	padding: 0px 20%;
+}
+
+
+/* Marketing messaging area */
+html.GamepadMode .marketingmessage_area {
+	margin: unset;
+}
+
+html.GamepadMode .marketingmessage_container {
+	gap: var(--gpSpace-Gap);
+}
+
+
+/* RECENTLY UPDATED */
+html.GamepadMode .recently_updated_apps .carousel_items {
+	height: unset;
+}
+
+html.GamepadMode .recently_updated_announcement_link {
+	display: none;
+}
+
+html.GamepadMode .recently_updated .store_capsule {
+	background-size: cover;
+}
+
+html.GamepadMode .recently_updated .store_capsule .recently_updated_desc {
+	border: none;
+}
+
+html.GamepadMode .recently_updated_desc {
+	font-size: 12px;
+}
+
+
+/* NEW RELEASES */
+html.GamepadMode .newonsteam_headercaps {
+	overflow: visible;
+}
+
+/* Hide breadcrumbs */
+html.GamepadMode .breadcrumbs {
+	display: none;
+}
+
+
+/* Page header */
+html.GamepadMode body.v6.newonsteam .page_header_ctn {
+	margin-bottom: -56px;
+}
+
+
+/* Remove background */
+html.GamepadMode .game_page_background {
+	background-image: unset !important;
+}
+
+
+/* Header caps */
+html.GamepadMode body.v6.newonsteam .top_capsules.page_ctn {
+	margin-bottom: 0px;
+}
+
+html.GamepadMode body.v6.newonsteam .newonsteam_headercaps > a {
+	background: var(--gpStoreDarkestGrey);
+	padding-bottom: 12px;
+	min-height: unset;
+}
+
+html.GamepadMode .newonsteam_capsules > a > div.info {
+	padding: 4px 12px;
+	font: var(--gpText-HeadingSmall);
+	font-weight: 500;
+	color: white;
+}
+
+
+/* Bucket containers */
+html.GamepadMode .newonsteam_buckets {
+	display: flex;
+	flex-direction: column;
+}
+
+html.GamepadMode .bucket {
+	margin: 8px 0px;
+}
+
+html.GamepadMode body.v6 h2 {
+	padding: 0px;
+}
+
+html.GamepadMode body.v6 h2 span.header_inline {
+	margin-inline-start: 4px;
+}
+
+html.GamepadMode body.v6 h2 .header_inline {
+	color: var(--gpStoreLighterGrey);
+	font: var(--gpText-BodyLarge);
+}
+
+
+/* Bucket carousels */
+html.GamepadMode .store_autoslider {
+	display: none !important; /*overriding inline style*/
+}
+
+html.GamepadMode .bucket .store_capsule {
+	height: unset;
+}
+
+html.GamepadMode .store_horizontal_autoslider_ctn {
+	overflow: unset;
+	margin-bottom: unset;
+	height: unset !important;
+}
+
+
+/* Tab containers */
+html.GamepadMode .home_tab_bg {
+	display: none;
+}
+
+
+/* broadcast carousel */
+html.GamepadMode .live_streams_ctn .broadcast_capsule .ds_steam_deck_compat {
+	bottom: 40px;
+}
+
+/* ds options on capsules for hover */
+html.GamepadMode .tab_item .ds_options {
+	top: 0;
+	inset-inline-end: 0;
+	inset-inline-start: auto;
+	z-index: 10;
+}
+
+html.GamepadMode .store_main_capsule .ds_options {
+	top: 0;
+	inset-inline-end: 0;
+	inset-inline-start: auto;
+	z-index: 10;
+}
+
+/* Disable scroll snap on focus devices */
+html.GamepadMode body.v7 .carousel_container.paging_capsules .carousel_items > * > *,
+html.GamepadMode body.v7 .sale_capsule,
+html.GamepadMode body.v7 .responsive_scroll_snap_start,
+html.GamepadMode body.v7 .store_capsule {
+	scroll-snap-align: unset !important;
+}
+
+
+/* Misc Tablet/SteamDeck Overrides */
+
+html.GamepadMode .discount_block_inline .discount_prices {
+	padding: 4px;
+}
+
+html.GamepadMode body.v7 .store_capsule .discount_block .discount_prices,
+html.GamepadMode body.v7 .discount_block_large .discount_prices,
+html.GamepadMode body.v7 .discount_block .discount_prices {
+	padding: 4px;
+	display: flex;
+	gap: 4px;
+}
+
+html.GamepadMode body.v7 .discount_block .discount_pct,
+html.GamepadMode  body.v7 .discount_pct,
+html.GamepadMode  body.v7 .store_capsule .discount_block:not(.discount_block_large) .discount_pct {
+	border-radius: 0px;
+}
+
+html.GamepadMode body.v7 .discount_block .discount_final_price {
+	color: #ffffff;
+}
+
+html.GamepadMode .sale_capsule.ds_flagged .broadcast_live_stream_icon {
+	display: none;
+}
+
+html.GamepadMode .sale_capsule .ds_flag {
+	top: 4px;
+}
+
+
+html.GamepadMode .discount_block {
+	gap: 0;
+}
+
+html.GamepadMode body.v7 .hero_add_to_cart  {
+	display: none;
+}
+
+html.GamepadMode body.v7 .home_featured_ctn {
+	margin-top: 0;
+}
+
+html.GamepadMode body.v7 .home_page_body_ctn .home_page_takeover_size {
+	height: 0;
+}
+
+html.GamepadMode body.v7 .pill_tab_menu_item {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+html.GamepadMode body.v7 .pill_tab_menu_item.active {
+	background: #e5574b;
+}
+
+html.GamepadMode body.v7 .pill_tab_menu_item.gpfocus {
+	background: #ffffff;
+	color: #000000;
+}
+
+html.GamepadMode body.v7 .carousel_container .carousel_items:not(.no_paging).hero_row {
+	justify-content: unset;
+}
+
+html.GamepadMode body.v7 .hero_parent_ctn .arrow.right, html.GamepadMode body.v7 .hero_parent_ctn .arrow.left {
+	visibility: hidden;
+}
+
+html.GamepadMode body.v7 .carousel_container .carousel_items .hero_capsule {
+	width: 30vw;
+	margin-inline-end: 8px;
+	height: max-content;
+}
+
+html.GamepadMode body.v7 .carousel_container .carousel_items .hero_name {
+	font-size: 16px;
+}
+
+html.GamepadMode body.v7 .hero_capsule img.hero_capsule_img {
+	height: auto;
+}
+
+html.GamepadMode body.v7 .salerow4, html.GamepadMode body.v7 .salerow3 {
+	flex-wrap: nowrap;
+}

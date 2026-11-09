@@ -1,0 +1,3066 @@
+:root {
+	/* System greys */
+	--gpSystemLightestGrey: #DCDEDF;
+	--gpSystemLighterGrey: #B8BCBF;
+	--gpSystemLightGrey: #8B929A;
+	--gpSystemGrey: #67707B;
+	--gpSystemDarkGrey: #3D4450;
+	--gpSystemDarkerGrey: #23262E;
+	--gpSystemDarkestGrey: #0E141B;
+
+	/* Store blue greys */
+	--gpStoreLightestGrey: #CCD8E3;
+	--gpStoreLighterGrey: #A7BACC;
+	--gpStoreLightGrey: #7C8EA3;
+	--gpStoreGrey: #4e697d;
+	--gpStoreDarkGrey: #2A475E;
+	--gpStoreDarkerGrey: #1B2838;
+	--gpStoreDarkestGrey: #000F18;
+
+	/* Gradients */
+	--gpGradient-StoreBackground: linear-gradient(180deg, var(--gpStoreDarkGrey) 0%, var(--gpStoreDarkerGrey) 80%);
+	--gpGradient-LibraryBackground: radial-gradient(farthest-corner at 40px 40px,#3D4450 0%, #23262E 80%);
+
+	/* Colours */
+	--gpColor-Blue: #1A9FFF;
+	--gpColor-BlueHi: #00BBFF;
+	--gpColor-Green: #5ba32b;
+	--gpColor-GreenHi: #59BF40;
+	--gpColor-Orange: #E35E1C;
+	--gpColor-Red: #D94126;
+	--gpColor-RedHi: #EE563B;
+	--gpColor-DustyBlue: #417a9b;
+	--gpColor-LightBlue: #B3DFFF;
+	--gpColor-Yellow: #FFC82C;
+	--gpColor-ChalkyBlue: #66C0F4;
+
+	/* Backgrounds */
+	--gpBackground-LightSofter: #6998bb24;
+	--gpBackground-LightSoft: #3b5a7280;
+	--gpBackground-LightMedium: #678BA670;
+	--gpBackground-LightHard: #93B8D480;
+	--gpBackground-LightHarder: #aacce6a6;
+
+	--gpBackground-DarkSofter: #0e141b33;
+	--gpBackground-DarkSoft: #0e141b66;
+	--gpBackground-DarkMedium: #0e141b99;
+	--gpBackground-DarkHard: #0e141bcc;
+
+	--gpBackground-Neutral-LightSofter: rgba(235, 246, 255, 0.10);
+	--gpBackground-Neutral-LightSoft: rgba(235, 246, 255, 0.20);
+	--gpBackground-Neutral-LightMedium: rgba(235, 246, 255, 0.30);
+	--gpBackground-Neutral-LightHard: rgba(235, 246, 255, 0.40);
+	--gpBackground-Neutral-LightHarder: rgba(235, 246, 255, 0.50);
+
+
+	/* Corners */
+	--gpCorner-Small: 1px;
+	--gpCorner-Medium: 2px;
+	--gpCorner-Large: 3px;
+
+	/* Spacing */
+	--gpSpace-Gutter: 24px;
+	--gpSpace-Gap: 12px;
+	--gpSpace-FocusRingAffordance: 10px;
+
+	/* Fixed widths */
+	--gpNavWidth: 240px;
+	--gpPaymentsNavWidth: 340px;
+	--gpDselectWidth: 340px;
+	--gpSidePanelWidth: 340px;
+	--gpGiftingPanelWidth: 280px;
+	--gpVerticalResponsivePadding-Small: calc( (100vw - 854px) / 60 );
+	--gpVerticalResponsivePadding-Medium: calc( (100vw - 854px) / 20 );
+	--gpVerticalResponsivePadding-Large: calc( (100vw - 854px) / 12 );
+
+	/* Game capsule widths */
+	--screen-width: 100vw;
+	--gpWidth-6colcap: calc((var(--screen-width) - (5 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 6);
+	--gpWidth-5colcap: calc((var(--screen-width) - (4 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 5);
+	--gpWidth-4colcap: calc((var(--screen-width) - (3 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 4);
+	--gpWidth-3colcap: calc((var(--screen-width) - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
+	--gpWidth-2colcap: calc((var(--screen-width) - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
+	--gpWidth-1colcap: calc((var(--screen-width) - (2 * var(--gpSpace-Gutter))));
+
+    /* Fixed heights */
+    --gpStoreMenuHeight: 24px;
+
+	/* Surfaces */
+	--gpShadow-Small: 0px 2px 2px 0px #0000003D;
+	--gpShadow-Medium: 0px 3px 6px 0px #0000003D;
+	--gpShadow-Large: 0px 12px 16px 0px #0000003D;
+	--gpShadow-XLarge: 0px 24px 32px 0px #0000003D;
+
+	/* Type styles */
+	--gpText-HeadingLarge: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingMedium: normal 700 22px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingSmall: normal 700 18px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+}
+
+@media screen and (min-width:  1280px) {
+	:root {
+		--gpSpace-Gutter: calc(24px + 2vw);
+	}
+}
+
+/* Tablet specific layout changes, not intended for smaller than tablet width screens */
+html.GamepadMode .tablet_grid {
+	margin: 0px auto;
+	padding: 0px var(--gpSpace-Gutter) 0px var(--gpSpace-Gutter);
+	--horizontal-bleed-space: var( --gpSpace-Gutter );
+	max-width:  1280px;
+}
+
+html.GamepadMode .tablet_hidden {
+	display: none;
+}
+
+html.GamepadMode .page_content_ctn {
+	padding: 0px var( --gpSpace-FocusRingAffordance );
+	--horizontal-bleed-space: calc( var( --gpSpace-Gutter ) + var( --gpSpace-FocusRingAffordance ) );
+}
+
+html.GamepadMode #responsive_apppage_details_left_ctn,
+html.GamepadMode .game_header_image_ctn {
+	width: unset !important;
+	float: unset !important;
+}
+
+html.GamepadMode h2 {
+	background-image: unset;
+	font-size: 16px;
+}
+
+/* hide because we instead create a Y button action for this link */
+html.GamepadMode .deck_view_all_action_link {
+	display: none;
+}
+
+/* hide sections */
+html.GamepadMode #votingImage,
+html.GamepadMode .breadcrumbs,
+html.GamepadMode .apphub_OtherSiteInfo,
+html.GamepadMode .glance_tags_label,
+html.GamepadMode .wishlist_added_temp_notice,
+html.GamepadMode .apphub_HeaderStandardTop,
+html.GamepadMode .user_reviews_filter_score,
+html.GamepadMode .block.recommendation_reasons hr,
+html.GamepadMode .item_store_items_block,
+html.GamepadMode .slider_ctn,
+html.GamepadMode .store_tooltip {
+	display: none;
+}
+
+html.GamepadMode #game_highlights {
+	width: unset;
+	height: unset;
+	background: unset;
+	margin: 0 2%;
+	padding: unset;
+}
+html.GamepadMode .glance_ctn {
+	padding: unset;
+}
+
+/* hide the developer and publisher rows since we're using a different layout for tablet */
+html.GamepadMode .details_block .dev_row {
+	display: none;
+}
+
+/* reduce layers */
+html.GamepadMode .game_page_background,
+html.GamepadMode .game_background_glow {
+	background-image: unset !important; /* Needed to override inline style */
+	min-width: unset !important; /* Needed to fix SteamOS game details page alignment */
+}
+html.GamepadMode .game_page_background_ctn {
+	display: none;
+}
+
+/* move the 'read more' links to the center, use larger font, and hide the down arrow */
+html.GamepadMode .game_page_autocollapse_readmore {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+	font-size: 14px;
+	background-image: unset;
+	padding-inline-end: 0px;
+}
+
+html.GamepadMode .page_top_area {
+	overflow-y: unset;
+}
+
+/* switch to a full screen width header image */
+html.GamepadMode .game_header_image_ctn > img {
+	display: none !important;
+}
+
+/* style the game's name.  some of this is to support a ... menu if we choose to use that */
+
+/* game description below the title */
+html.GamepadMode .game_description_snippet {
+	display: none;
+}
+
+/* reduce padding and margins on the page header */
+html.GamepadMode .game_header_image_ctn {
+	margin-inline-end: unset;
+}
+html.GamepadMode .game_meta_data.rightcol {
+	margin-top: unset;
+	width: 30%;
+}
+html.GamepadMode .game_description_column.leftcol {
+	margin-top: unset;
+	width: 68%;
+}
+
+/* let About This Game grow into the left column's spare height when the right column is taller */
+html.GamepadMode .middle_page .game_description_column.leftcol:has( > [data-featuretarget="about-this-game"] ) {
+	display: flex;
+	flex-direction: column;
+}
+html.GamepadMode .middle_page [data-featuretarget="about-this-game"],
+html.GamepadMode #FeatureTarget_about-this-game {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+html.GamepadMode .bundle .game_description_column.leftcol,
+html.GamepadMode .bundle .game_meta_data.rightcol {
+	width: unset;
+}
+
+html.GamepadMode .middle_page .clear_both {
+	display: none;
+}
+
+/* Tags */
+html.GamepadMode .glance_tags_ctn {
+	margin-top: 0px;
+	width: 100%;
+}
+html.GamepadMode .glance_tags_ctn .glance_tags {
+	font-size: 14px;
+	height: unset !important;
+}
+html.GamepadMode .glance_tags_ctn .glance_tags .app_tag {
+	padding: 8px 12px;
+	margin-inline-end: 2px;
+}
+
+html.GamepadMode .glance_tags_ctn .glance_tags .app_tag:hover {
+	background: var(--gpColor-Blue);
+}
+
+html.GamepadMode .glance_ctn_responsive_right {
+	padding: 0px;
+}
+
+/* Hide "add" tag on Deck */
+html.GamepadMode .glance_tags_ctn .glance_tags .app_tag.add_button {
+	display: none;
+}
+
+
+
+
+
+/* More from developer */
+html.GamepadMode #franchise_block,
+html.GamepadMode #recommended_block {
+	margin-top: 32px;
+}
+
+
+
+/* Critic */
+html.GamepadMode #responsive_apppage_reviewblock_ctn .responsive_apppage_reviewblock {
+	padding: unset;
+	margin: unset;
+	margin-bottom: 16px;
+}
+
+html.GamepadMode #game_area_metascore {
+	padding-inline-start: unset;
+}
+
+html.GamepadMode #game_area_metascore .score.high {
+	background: var(--gpColor-Green);
+}
+
+
+
+
+
+
+
+/* section explaining reviews are in an anomalous state */
+html.GamepadMode .responsive_reviews_off_topic_asterisk {
+	display: inline-block !important;
+}
+html.GamepadMode .review_recent_events.has_events .review_anomalous_events_title {
+	margin-inline-start: 0px;
+}
+html.GamepadMode .review_recent_events.has_events .review_anomalous_events_title,
+html.GamepadMode .review_recent_events.has_events .review_anomalous_events_des {
+	font-size: 14px;
+}
+
+
+html.GamepadMode .game_area_description h2:not(#aboutThisGame h2, h2.bb_tag),
+html.GamepadMode #aboutThisGame h2:not(h2.bb_tag)
+{
+	text-transform: uppercase;
+	display: inline-block;
+	color: #ffffff !important;
+	font-size: 12px;
+	font-weight: 700;
+	margin-bottom: 8px;
+	padding-inline-start: 0px !important;
+	letter-spacing: 0.5px;
+}
+
+/* section headers */
+html.GamepadMode .responsive_block_header,
+html.GamepadMode .block_title.vrsupport,
+html.GamepadMode .details_block.vrsupport,
+html.GamepadMode #LanguagesHeader,
+html.GamepadMode .responsive_apppage_details_right.heading:not(.responsive_hidden),
+html.GamepadMode .early_access_announcements h2,
+html.GamepadMode #franchise_block h2,
+html.GamepadMode #recommended_block h2,
+html.GamepadMode #app_reviews_hash h2,
+html.GamepadMode .package_group,
+html.GamepadMode #gameAreaDLCSection h2,
+html.GamepadMode .referring_curator_ctn h2,
+html.GamepadMode .game_area_purchase h2,
+html.GamepadMode .block_header h4 {
+	text-transform: uppercase;
+	display: inline-block;
+	color: #ffffff !important;
+	font-size: 12px;
+	font-weight: 700;
+	margin-bottom: 8px;
+	padding-inline-start: 0px !important;
+	letter-spacing: 0.5px;
+}
+html.GamepadMode #aboutThisGame h2:not(h2.bb_tag) {
+	display: block;
+}
+html.GamepadMode .block_title.vrsupport {
+	display: block;
+	padding-top: 10px;
+	margin-bottom: 0px;
+}
+html.GamepadMode .details_block.vrsupport {
+	text-transform: none;
+	margin-top: 5px;
+	margin-bottom: 3px;
+	font-size: 13px !important;
+}
+
+/* html.GamepadMode .block_header h4 {
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	background-image: unset !important;
+	font-size: 16px;
+} */
+html.GamepadMode .responsive_apppage_details_right a {
+	font-size: 14px;
+}
+html.GamepadMode .responsive_apppage_details_right {
+	padding-inline-start: 0px !important;
+	padding-inline-end: 0px !important;
+	padding-top: 0px !important;
+}
+html.GamepadMode .responsive_apppage_details_left {
+	padding: 0px !important;
+}
+html.GamepadMode #responsive_apppage_details_right_ctn,
+html.GamepadMode #responsive_apppage_details_left_ctn {
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+html.GamepadMode #FeatureTarget_interest-buttons {
+	margin-bottom: 10px;
+}
+
+/* list of game features such as single-player, online co-op, etc */
+html.GamepadMode .game_area_details_specs .icon,
+html.GamepadMode .game_area_details_specs .name {
+	background: unset;
+}
+
+/* remove top margins: early access announcements, game description column */
+html.GamepadMode .early_access_announcements,
+html.GamepadMode .game_description_column {
+	margin-top: unset;
+}
+
+html.GamepadMode .early_access_banner {
+	height: unset;
+	margin: 15px 0px 0px 0px;
+}
+
+/*  The list of available DLC */
+html.GamepadMode .game_area_dlc_section {
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+html.GamepadMode #gameAreaDLCSection h2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+html.GamepadMode .game_area_dlc_row .ds_owned_flag.ds_flag {
+	background-position-x: 4px;
+	background-position-y: 6px;
+	padding-inline-start: 18px;
+	margin-top: 5px;
+}
+html.GamepadMode .game_area_dlc_row .ds_owned_flag.ds_flag:dir(rtl) {
+	background-position-x: right 4px;
+}
+html.GamepadMode .game_area_dlc_row.ds_flagged {
+	background-color: #417a9b;
+}
+html.GamepadMode .game_area_dlc_row.ds_flagged .ds_flag {
+	max-width: unset;
+}
+html.GamepadMode .game_area_dlc_row.ds_flagged .game_area_dlc_name {
+	padding-top: 28px;
+	color: white;
+}
+html.GamepadMode .game_area_dlc_name {
+	font-size: 14px;
+	padding-inline-start: 0px;
+}
+html.GamepadMode .game_area_dlc_price {
+	font-size: 14px;
+}
+
+html.GamepadMode .discount_block {
+	line-height: unset;
+}
+html.GamepadMode .dlc_footer_element {
+	font-size: 14px;
+}
+/* hide the DLC item mouse over menu (which doesn't seem very useful on any screen but especially not mobile) */
+html.GamepadMode .ds_options {
+	display: none;
+}
+
+/* hide the 'buy this game for a friend' text */
+html.GamepadMode .game_area_description_bodylabel {
+	display: none;
+}
+
+/* recommendation reasons and ratings need extra left margin*/
+html.GamepadMode .shared_game_rating,
+html.GamepadMode .responsive_apppage_details_right.recommendation_reasons {
+	margin: 0px;
+}
+html.GamepadMode .responsive_apppage_details_right.recommendation_reasons {
+	margin-bottom: 8px;
+}
+
+html.gamepad	.ratings_title {
+	display: inline-block !important;
+	padding: 16px 0px 4px;
+}
+
+html.GamepadMode .shared_game_rating .game_rating_details {
+	gap: 8px;
+}
+
+html.GamepadMode .app_ratings_block {
+	margin-top: 10px !important;
+}
+
+/* reduce franchise notice font */
+html.GamepadMode .franchise_name {
+	font-size: 16px;
+}
+
+
+/* Rolled up sections such as achievements, languages, points shop
+	and other content moved into the Links & Info section */
+html.GamepadMode .block a.linkbar {
+	min-height: unset;
+}
+/* html.GamepadMode .block_content_inner {
+	margin-top: 10px;
+	margin-left: 6px;
+} */
+html.GamepadMode .details_block > a {
+	margin-block: 0px;
+	margin-inline: 0px 5px;
+}
+html.GamepadMode .details_block a.linkbar {
+	margin: 0px 0px 2px 0px;
+}
+html.GamepadMode .responsive_banner_link {
+	display: flex !important;
+	flex-direction: row;
+	color: #67C1F5;
+	font-size: 14px;
+	line-height: 16px;
+	margin: 0px 0px 2px 0px;
+	align-items: center;
+	cursor: pointer;
+}
+/* improve img spacing on the Links and Info section */
+html.GamepadMode a.linkbar > img:first-of-type {
+	padding-inline-end: 5px;
+}
+html.GamepadMode a.linkbar > img:last-of-type {
+	padding-inline-start: 5px;
+}
+html.GamepadMode a.linkbar > span.social_account {
+	max-width: unset;
+}
+
+html.GamepadMode .responsive_banner_link .responsive_banner_link_title {
+	flex-grow: 1;
+	padding: 8px 12px !important;
+	font: var(--gpText-BodySmall);
+}
+html.GamepadMode .responsive_banner_link .responsive_banner_link_total {
+	color: var(--gpStoreLighterGrey);
+}
+
+/* list of packages which appear when clicking the purchase options banner */
+html.GamepadMode .purchase_options_content {
+	display: block !important;
+	box-sizing: border-box;
+}
+html.GamepadMode .game_area_purchase h1 {
+	font-size: 16px;
+	color: white !important;
+}
+
+html.GamepadMode #gamePurchaseAddToCartBtn {
+	display: none;
+}
+html.GamepadMode #gamePurchaseAddToCartBtn_responsive {
+	display: inline-block !important;
+}
+
+/* reduce bottom padding in game purchase area */
+html.GamepadMode .game_area_purchase_game,
+html.GamepadMode .game_area_offsite_purchase {
+	padding: 16px;
+	background: var(--gpBackground-LightSoft);
+	transition: all 0.3s ease;
+}
+
+html.GamepadMode .game_area_purchase_platform {
+	height: 20px;
+	margin-inline-start: 0;
+	opacity: 0.6;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+html.GamepadMode .game_area_purchase_game:focus-within {
+	background: var(--gpBackground-LightMedium);
+	transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 1120px ) {
+	html.GamepadMode .game_area_purchase_game,
+	html.GamepadMode .game_area_offsite_purchase {
+		padding: 24px;
+	}
+}
+
+
+
+
+
+/* height restriction was cutting off the bottom, and needs bottom padding on small screens */
+html.GamepadMode .game_purchase_area_friends_want {
+	height: unset;
+	padding-bottom: 20px;
+}
+
+/* formatting for the "This game is already in your library" message */
+html.GamepadMode .game_area_already_owned.page_content {
+	line-height: unset !important;
+	display: flex;
+	flex-direction: row;
+	height: unset;
+	padding: 5px 0px;
+}
+html.GamepadMode .game_area_already_owned .already_in_library {
+	font-size: 14px;
+	white-space: normal;
+	flex: 1;
+	padding: 0px 5px;
+}
+html.GamepadMode .game_area_already_owned .ds_owned_flag.ds_flag {
+	top: unset;
+	inset-inline-start: unset;
+}
+
+/* the free weekend button area is empty on mobile so remove the padding and height */
+html.GamepadMode .game_area_purchase_game.demo_above_purchase .game_purchase_action_bg,
+html.GamepadMode .game_area_purchase_game.free_weekend .game_purchase_action_bg {
+	padding: 0px;
+	height: 0px;
+}
+html.GamepadMode .game_area_purchase_game.demo_above_purchase,
+html.GamepadMode .game_area_purchase_game.free_weekend {
+	margin-bottom: 28px;
+}
+
+html.GamepadMode .game_area_purchase_game .game_purchase_action,
+html.GamepadMode .game_area_comingsoon .game_purchase_action,
+html.GamepadMode .game_area_offsite_purchase .game_purchase_action {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: static;
+	justify-content: flex-end;
+	padding-top: 3px;
+	width: 100%;
+}
+html.GamepadMode .game_purchase_discount .discount_pct,
+html.GamepadMode .game_purchase_discount .bundle_base_discount {
+	font-size: unset;
+}
+html.GamepadMode #purchaseOptionsBanner_hidden {
+	display: flex;
+}
+html.GamepadMode .game_purchase_action_bg a {
+	color: white !important;
+}
+html.GamepadMode .game_purchase_action_bg {
+	padding: 0px;
+}
+
+/* Hide margin at top of page */
+html.GamepadMode .responsive_page_template_content {
+	padding-top: unset;
+	overflow-x: hidden;
+}
+
+
+
+/* wishlist */
+html.GamepadMode #add_to_wishlist_area,
+html.GamepadMode #add_to_wishlist_area_success,
+html.GamepadMode #add_to_wishlist_area_fail {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+html.GamepadMode #add_to_wishlist_area a,
+html.GamepadMode #add_to_wishlist_area_success a,
+html.GamepadMode #add_to_wishlist_area_fail a {
+	width: 100%;
+	text-align: center;
+	white-space: nowrap;
+}
+
+html.GamepadMode #wishlistDropDown {
+	display: none;
+}
+
+html.GamepadMode #view_wishlist_btn.btnv6_blue_hoverfade {
+	border-radius: var(--gpCorner-Medium);
+}
+
+html.GamepadMode #view_wishlist_btn.btnv6_blue_hoverfade {
+	background: var(--gpBackground-LightSoft);
+}
+
+
+
+
+/* button row below wishlist */
+html.GamepadMode .queue_actions_ctn {
+	padding: 15px 24px 0px !important;
+	flex-wrap: wrap;
+}
+html.GamepadMode .queue_actions_ctn p {
+	margin-bottom: 10px;
+}
+html.GamepadMode #rowBtnActions {
+	display: flex !important;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+}
+html.GamepadMode #shareBtn span,
+html.GamepadMode #reportBtn span {
+	padding: 0px 10px;
+}
+html.GamepadMode .queue_btn_follow,
+html.GamepadMode #shareBtn,
+html.GamepadMode #reportBtn {
+	display: flex !important;
+	flex-grow: 1 !important;
+	margin-top: 4px;
+}
+
+html.GamepadMode #queue_btn_ignore_menu {
+	display: none;
+}
+
+html.GamepadMode #reportBtn img, html.GamepadMode #shareBtn img {
+	filter: saturate(0) contrast(3) brightness(1) hue-rotate(0deg);
+}
+
+html.GamepadMode .queue_btn_ignore > .btnv6_blue_hoverfade {
+	border-radius: var(--gpCorner-Medium);
+}
+
+
+
+/* using a share img instead of 'share' text on desktop */
+html.GamepadMode #reportBtn img,
+html.GamepadMode #shareBtn img {
+	vertical-align: middle;
+	height: 16px;
+	width: 16px;
+	padding-bottom: 3px;
+}
+html.GamepadMode #shareBtn a,
+html.GamepadMode #reportBtn a,
+html.GamepadMode #queueBtnFollow > div,
+html.GamepadMode #queueBtnFollow > button {
+	width: 100%;
+	text-align: center;
+}
+
+
+
+/* discovery queue */
+html.GamepadMode .queue_ctn {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 7px;
+	width: unset;
+}
+html.GamepadMode .queue_controls_description {
+	display: flex;
+	flex-direction: column;
+	margin: 5px 16px;
+	width: unset;
+}
+html.GamepadMode .next_in_queue_area {
+	position: relative;
+	align-content: center;
+	max-width: unset;
+	top: unset;
+}
+
+/* use 20px top-margin for consistent spacing between description sections */
+html.GamepadMode .game_area_description {
+	margin-top: 20px;
+}
+
+html.GamepadMode #AwardsDefault .game_page_autocollapse {
+	max-height: unset !important;
+}
+
+/* clickable images in the MORE LIKE THIS and AWARDS sections */
+
+
+html.GamepadMode .game_description_column .block .block_content a .ds_steam_deck_compat {
+	/* bottom: unset;
+	top: 55px;
+	left: 13px;
+	background-color: var(--gpBackground-DarkMedium);
+	backdrop-filter: blur(24px); */
+	top: 12px;
+	inset-inline-end: 12px;
+}
+
+/* 'ignore' button flyout position */
+html.GamepadMode .queue_menu_flyout {
+	inset-inline-start: unset;
+	inset-inline-end: 0px;
+}
+
+
+/* shown in purchase popup when game is not yet released */
+html.GamepadMode .wishlist_note {
+	padding-bottom: 10px;
+}
+
+/* Reviews switch to using the responsive title */
+html.GamepadMode #reviews_filter_title {
+	display: none !important;
+}
+html.GamepadMode #reviews_filter_title_responsive {
+	display: inline-block !important;
+}
+html.GamepadMode #reviews_filter_title_responsive > img {
+	height: 16px;
+	padding-inline-end: 7px;
+}
+
+/* Reviews filters are moved into a popup */
+html.GamepadMode .review_settings_popup_header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: #1B2838;
+	font-size: 16px;
+}
+html.GamepadMode .review_settings_popup_content {
+	padding: 5px;
+	background-color: #1B2838;
+}
+
+html.GamepadMode .user_reviews_filter_options {
+	flex-wrap: wrap;
+}
+
+html.GamepadMode .review_score_summaries {
+	display: none;
+}
+html.GamepadMode .review_language_outliers,
+html.GamepadMode .review_recent_events {
+	max-width: 100%;
+}
+html.GamepadMode .outlier_title {
+	font-size: 15px;
+}
+html.GamepadMode body.v6 #app_reviews_hash h2.user_reviews_header {
+	display: flex;
+	flex-direction: column;
+}
+
+/* remove horizontal borders */
+html.GamepadMode .review_ctn {
+	border-top: unset;
+}
+
+html.GamepadMode .reviews_info_ctn {
+	border-bottom: unset;
+	padding-bottom: 10px;
+	margin-top: 12px;
+}
+
+html.GamepadMode .user_reviews_sub_header span {
+	display: inline-block;
+	padding-inline-start: 0px;
+}
+
+/* top of the review details section showing the active filters */
+html.GamepadMode .user_reviews_active_filters {
+	padding: 7px;
+	margin: 10px 0px 0px 0px;
+	background-color: var(--gpBackground-LightSoft);
+	border-radius: var(--gpCorner-Medium);
+}
+html.GamepadMode .user_reviews_active_filters .title {
+	padding: 5px !important;
+	justify-content: center;
+}
+html.GamepadMode .user_reviews_active_filters img {
+	vertical-align: middle;
+	padding-bottom: 3px;
+}
+
+/* use smaller player avatar image in the review details */
+html.GamepadMode .review_box .playerAvatar,
+html.GamepadMode .review_box .playerAvatar img {
+	height: 24px;
+	width: 24px;
+}
+html.GamepadMode .review_box .playerAvatar_friendindicator {
+	display: none;
+}
+html.GamepadMode .friend_reviews .review_box {
+	border-inline-start: unset;
+	border-top: unset;
+}
+html.GamepadMode .friend_reviews .review_box a.vote_header {
+	width: unset;
+}
+
+html.GamepadMode .review_box .review_award {
+	background-color: #1B2838;
+}
+
+/* formatting for the avatar | name | products owned | number of reviews row
+	which is parented by a div with class responsive_review_leftcol_ctn */
+html.GamepadMode .review_box .responsive_review_leftcol_ctn .leftcol {
+	display: flex;
+	flex-direction: row;
+	float: none;
+	margin-inline-end: 8px;
+	padding: 4px 0px 8px 0px;
+	width: 100%;
+	align-items: center;
+	opacity: 1;
+}
+html.GamepadMode .review_box:hover .responsive_review_leftcol_ctn .leftcol {
+	opacity: 1;
+}
+
+html.GamepadMode .review_box .responsive_review_leftcol_ctn .leftcol .num_owned_games,
+html.GamepadMode .review_box .responsive_review_leftcol_ctn .leftcol .num_reviews {
+	padding: 0px 7px;
+	align-items: center;
+	height: 100%;
+	word-wrap: normal;
+}
+html.GamepadMode .review_box .responsive_review_leftcol_ctn .leftcol .persona_name {
+	width: unset;
+	flex-shrink: 1;
+	padding-inline-end: 7px;
+}
+
+/* 'Recommended/Not Recommended' row */
+html.GamepadMode .review_box .title.ellipsis {
+	margin-bottom: 2px;
+}
+
+/* hours on record */
+html.GamepadMode .review_box .hours.ellipsis {
+	font-size: 13px;
+}
+
+/* tooltips are annoying on mobile - worth considering hiding them all*/
+html.GamepadMode .review_box .review_source.tooltip {
+	display: none;
+}
+
+/* posted date and purchase source are on the same row */
+html.GamepadMode .review_box .postedDate {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-inline-end: 8px;
+	font-size: 12px;
+}
+html.GamepadMode .responsive_purchase_source {
+	display: inline-block;
+}
+
+/* make the review detail header fit flush against the top border  */
+html.GamepadMode .review_box .rightcol {
+	padding: 1px 0px 0px 0px;
+}
+
+/* review thumb up/down image */
+html.GamepadMode .responsive_voting_image {
+	display: inline-block;
+	padding-top: 4px;
+	height: 26px;
+	width: 26px;
+}
+
+
+/* hide div in the developer response section which only has nbsp as content and some padding*/
+html.GamepadMode .review_developer_response_container .leftcol {
+	display: none;
+}
+
+/*
+	The below styles are for content which is only used in responsive UX
+*/
+
+/* grid of developer, publisher, released data */
+html.GamepadMode .app_header_grid_container {
+	display: inline-block !important;
+	margin-top: 8px;
+}
+	html.GamepadMode .app_header_grid_container .grid_label,
+	html.GamepadMode .app_header_grid_container .grid_content {
+		font-size: 12px;
+		float: inline-start;
+	}
+	html.GamepadMode .app_header_grid_container .grid_label {
+		color: var(--gpStoreLightGrey);
+		text-transform: none;
+		margin-inline-end: 5px;
+	}
+	html.GamepadMode .app_header_grid_container .grid_content {
+		margin-inline-end: 8px;
+	}
+	html.GamepadMode .app_header_grid_container .grid_label.grid_date {
+		display: inline-block;
+		clear: inline-start;
+	}
+	html.GamepadMode .app_header_grid_container .grid_content.grid_date {
+		display: inline-block;
+		color: var(--gpStoreLightGrey);
+		max-height: 30px;
+		overflow: hidden;
+	}
+
+/* apply a right chevron to the right side of the element's background  */
+html.GamepadMode .responsive_chevron_right {
+	background-image: url('/public/images//v6/chevron_right.png');
+	background-repeat: no-repeat;
+	background-position: calc(100% - 7px);
+}
+
+/* a plus image that changes to minus when section is expanded*/
+html.GamepadMode .expand_section {
+	background-image: url('/public/shared/images//v6/icon_plus.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 16px;
+	height: 16px;
+	padding-inline-end: 20px;
+}
+html.GamepadMode .expand_section.expanded {
+	background-image: url('/public/shared/images//v6/icon_minus.svg');
+}
+
+/* show summary of supported languages and expand it when clicked */
+html.GamepadMode #bannerLanguages.responsive_banner_link {
+	display: flex;
+	flex-grow: 1;
+	text-transform: none;
+}
+html.GamepadMode #languageTable {
+	margin-inline-start: 10px;
+	margin-inline-end: 10px;
+}
+html.GamepadMode #languageTable .game_language_options {
+	width: 100%;
+	margin-top: 10px;
+}
+
+/* Container for the purchase options banner floating at the bottom */
+html.GamepadMode .responsive_purchase_options_ctn {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	position: fixed;
+	bottom: 0px;
+	inset-inline-start: 0px;
+	width: 100%;
+	z-index: 1100;
+}
+html.GamepadMode .purchase_options_empty_space {
+	display: none;
+	flex: 1;
+	opacity: 0.7;
+	background-color:black;
+	width: 100%;
+	touch-action: none;
+}
+html.GamepadMode .purchase_options_banners {
+	display: block;
+	align-items: center;
+	color: white !important;
+	border-radius: 4px;
+	touch-action: none;
+}
+html.GamepadMode .purchase_options_banners > div {
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+
+/* purchase options banner button styling */
+html.GamepadMode .purchase_options_banners .purchase_banner_link_discount {
+	align-items: center;
+	font-size: 16px;
+}
+html.GamepadMode .purchase_options_banners .purchase_banner_link_starting_at {
+	/* color: #8A97A0 !important; */
+	flex: 1;
+	font-size: 14px;
+	padding-bottom: 5px;
+}
+html.GamepadMode .purchase_options_banners .purchase_banner_link_close,
+html.GamepadMode .purchase_options_banners .purchase_banner_link_open {
+	font-size: 16px;
+	padding: 5px;
+	width: 70%;
+	border-radius: 2px;
+}
+html.GamepadMode .purchase_options_banners .purchase_banner_link_open {
+	background: #75B022;
+}
+html.GamepadMode .purchase_options_banners .purchase_banner_link_close {
+	background: #8A97A0;
+}
+html.GamepadMode #purchaseOptionsBanner_visible {
+	padding: 32px 0px 30px 0px;
+}
+html.GamepadMode #purchaseOptionsBanner_hidden {
+	border-top: 2px solid #111111;
+}
+
+
+
+/* Framework */
+html.GamepadMode #game_highlights,
+html.GamepadMode body.v6 .page_content {
+	margin: 0;
+	padding: 12px 24px;
+	background-color: var(--gpBackground-DarkHard);
+}
+
+html.GamepadMode body.v6 .review_ctn .page_content {
+	padding: 12px 0px;
+	background-color: unset;
+}
+
+html.GamepadMode .responsive_store_nav_ctn_spacer {
+	height: 0px;
+}
+
+
+html.GamepadMode body.v6 .related_items_ctn {
+	padding-top: 0;
+	background: transparent;
+}
+
+html.GamepadMode body.v6 .related_items_ctn .page_content {
+	padding: 0;
+	background: transparent;
+}
+
+
+/* Discovery queue */
+html.GamepadMode .queue_ctn .queue_reason_description {
+	font: var(--gpText-BodyLarge);
+	color: unset;
+	margin-bottom: 12px;
+}
+
+html.GamepadMode .queue_ctn .queue_reason_description a {
+	color: var(--gpColor-Blue);
+}
+
+html.GamepadMode .queue_controls_description {
+	margin: 0px var(--gpSpace-Gutter);
+	padding: 12px;
+	border-radius: var(--gpCorner-Medium);
+	font: var(--gpText-BodyMedium);
+	background: none;
+	background-color: rgba( 196, 158, 82, 0.2 );
+}
+
+html.GamepadMode #nextInDiscoveryQueue {
+	margin: 0px var(--gpSpace-Gutter);
+	border-bottom: 1px solid var(--gpBackground-LightMedium);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 0px 16px;
+}
+
+html.GamepadMode .queue_ctn .queue_settings_link_ctn.queue_reason_description {
+	margin-inline-end: unset;
+	text-align: start;
+}
+
+html.GamepadMode #nextInDiscoveryQueue .queue_reason_description {
+	margin-bottom: 0px;
+}
+
+html.GamepadMode .btn_next_in_queue {
+	margin-inline-end: unset;
+	background: none;
+	width: unset;
+	height: unset;
+	background-color: rgba( 196, 158, 82, 0.4 );
+	margin: unset;
+	padding-block: 10px;
+	padding-inline: 20px 24px;
+	border-radius: var(--gpCorner-Medium);
+	clip-path: polygon(0px 0px, calc(100% - 12px) 0px, 100% 50%, calc(100% - 12px) 100%, 0px 100%, 0px 100%);
+	transition: var(--gpTransition-Short);
+}
+
+html.GamepadMode .btn_next_in_queue.gpfocus {
+	color: white;
+	background: #d89b29;
+}
+
+html.GamepadMode .btn_next_in_queue.gpfocus span {
+	color: white;
+}
+
+html.GamepadMode .btn_next_in_queue .next_in_queue_content {
+	padding: 0px;
+}
+
+html.GamepadMode .btn_next_in_queue .next_in_queue_content br {
+	display: none;
+}
+
+html.GamepadMode .btn_next_in_queue span {
+	font: var(--gpText-BodyLarge);
+	font-weight: 400;
+}
+
+html.GamepadMode .btn_next_in_queue span .queue_sub_text {
+	text-transform: unset;
+	font: var(--gpText-BodyMedium);
+	font-weight: 400;
+}
+
+/* Purchase options */
+.game_area_purchase_game,
+.game_area_offsite_purchase {
+	background: none;
+	padding: 0;
+	border-radius: 0;
+	margin-bottom: 16px;
+}
+
+html.GamepadMode .game_area_purchase_game_wrapper,
+html.GamepadMode .game_area_purchase_game.free_weekend {
+	margin-bottom: 4px;
+	box-shadow: unset;
+}
+
+.game_area_purchase_game.free_weekend {
+	background: unset;
+}
+
+html.GamepadMode .rightcol.game_meta_data .block {
+	background: none;
+}
+
+html.GamepadMode body.v6 .page_title_area.game_title_area.page_content {
+	padding: 0px;
+	background-color: unset;
+}
+
+html.GamepadMode .saleEventBannerStyle:hover {
+	filter: saturate(1.0);
+	transform: unset;
+}
+
+html.GamepadMode .free_weekend p {
+	margin-bottom: 8px;
+}
+
+html.GamepadMode .game_area_purchase_game_wrapper .ds_completetheset {
+	box-shadow: unset;
+	height: unset;
+	color: white;
+	border-radius: var(--gpCorner-Medium);
+	padding: 0px 6px;
+	top: -8px;
+	inset-inline-end: 0px;
+	inset-inline-start: unset;
+}
+
+
+
+
+/* Download demo */
+html.GamepadMode .game_area_purchase_game.demo_above_purchase {
+	border-radius: 0px;
+	box-shadow: unset;
+	margin-bottom: 4px;
+}
+
+html.GamepadMode .game_area_purchase_game.demo_above_purchase h1 {
+	margin-bottom: 8px;
+}
+
+html.GamepadMode .game_area_purchase_game.demo_above_purchase .game_purchase_action_bg,
+html.GamepadMode .game_area_purchase_game.free_weekend .game_purchase_action_bg {
+	height: unset;
+}
+
+html.GamepadMode .download_demo_button {
+	margin-top: 8px !important;
+}
+
+html.GamepadMode .download_demo_buttons_ctn .btn_medium {
+	height: 16px;
+	padding: 10px 20px;
+	background-color: #3d4450;
+
+	span {
+		font-size: 13px;
+	}
+}
+
+
+/* Pricing */
+html.GamepadMode .game_area_comingsoon {
+	box-shadow: unset;
+	display: flex;
+}
+
+html.GamepadMode .game_area_purchase_game {
+	margin-bottom: 4px;
+	display: flex;
+	flex-direction: column;
+
+}
+
+html.GamepadMode .game_area_purchase_game h2.title.title {
+	order: -1;
+}
+
+html.GamepadMode .game_area_purchase_game .game_purchase_action,
+html.GamepadMode .game_area_comingsoon .game_purchase_action,
+html.GamepadMode .game_area_offsite_purchase .game_purchase_action {
+	justify-content: unset;
+	flex-direction: unset;
+	flex-wrap: unset;
+	display: inline-block;
+	margin-top: 0px;
+	padding-top: 0px;
+	display: grid;
+	gap: 8px;
+}
+
+html.GamepadMode .game_purchase_action_bg {
+	display: grid;
+	gap: 12px;
+	height: auto;
+	background: none;
+	margin-inline-start: unset;
+}
+
+html.GamepadMode .game_area_purchase_game_wrapper .game_area_purchase_game h1 {
+	margin-bottom: 6px;
+	font: var(--gpText-BodyLarge);
+}
+html.GamepadMode .game_purchase_discount_countdown_pricehistorygrid {
+    flex-direction: column;
+}
+html.GamepadMode .game_purchase_discount_countdown_pricehistorygrid .history_ttip {
+    display: none;
+}
+html.GamepadMode .game_purchase_price_history {
+    margin-inline-end: 0;
+}
+html.GamepadMode .game_purchase_price_history td {
+    padding-inline-end: 8px;
+}
+
+html.GamepadMode .game_area_purchase_game.free_weekend .game_purchase_action_bg {
+	height: unset;
+}
+
+html.GamepadMode .btn_addtocart,
+html.GamepadMode .btn_green_steamui,
+html.GamepadMode .btn_blue_steamui {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.game_purchase_discount {
+	height: unset;
+}
+
+.game_purchase_action_bg > * {
+	margin-inline-start: unset;
+}
+
+html.GamepadMode .game_purchase_discount .discount_pct, html.GamepadMode .game_purchase_discount .bundle_base_discount {
+	height: unset;
+	line-height: unset;
+	margin-inline-start: 0px;
+	font-weight: 700;
+}
+
+html.GamepadMode .game_purchase_discount .discount_prices {
+	display: flex;
+	position: unset;
+	vertical-align: unset;
+	height: unset;
+	align-items: center;
+}
+
+html.GamepadMode .discount_block .discount_prices {
+	display: flex;
+	flex-direction: row;
+	vertical-align: unset;
+	text-align: unset;
+	background: unset;
+}
+
+html.GamepadMode .game_purchase_action_bg .discount_block {
+	margin-bottom: 0px;
+}
+
+html.GamepadMode .game_purchase_discount .discount_original_price {
+	position: relative;
+	inset-inline-start: unset;
+	inset-inline-end: unset;
+	top: unset;
+	font-size: unset;
+}
+
+html.GamepadMode .game_purchase_discount .discount_final_price {
+	padding: unset;
+	color: white;
+}
+
+html.GamepadMode .discount_block {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	margin-bottom: 4px;
+}
+
+html.GamepadMode .game_purchase_discount .discount_original_price,
+html.GamepadMode .game_purchase_discount .discount_final_price,
+html.GamepadMode .discount_block {
+	font: var(--gpText-BodyLarge);
+}
+
+html.GamepadMode .game_purchase_price {
+	background: unset;
+	font-size: unset;
+	font: var(--gpText-BodyLarge);
+	padding: unset;
+	height: unset;
+	text-align: start;
+	color: white;
+	white-space: initial;
+}
+
+html.GamepadMode .discount_block.game_purchase_discount.no_discount .discount_final_price {
+	line-height: unset;
+}
+
+/* The price box is as tall as a stacked percent beside it */
+html.GamepadMode .game_purchase_discount {
+	align-items: stretch;
+}
+
+/* Side by side here, so without store.css's room for a stacked original price */
+html.GamepadMode .discount_block.game_purchase_discount.no_discount:has(.discount_original_price) .discount_final_price {
+	padding: 0;
+}
+
+html.GamepadMode body.v6 .full_width_carousel_container {
+	width: calc( 100% + var( --horizontal-bleed-space ) + var( --horizontal-bleed-space ) );
+	margin-inline-start: calc( var(--horizontal-bleed-space) * -1 );
+	margin-inline-end: calc( var( --horizontal-bleed-space ) * -1 );
+}
+
+html.GamepadMode #summaryBarTop {
+	margin-top: 10px;
+}
+
+html.GamepadMode #gamepadPurchaseOptions {
+	margin-top: 10px;
+}
+
+/* Hide now broadcasting */
+html.GamepadMode .broadcast_embed_top_ctn_trgt,
+html.GamepadMode #broadcast {
+	display: none;
+}
+
+html.GamepadMode .video_placeholder_trgt {
+	display: none;
+}
+
+
+
+
+/* VR notice */
+html.GamepadMode .notice_box_content {
+	border: 2px solid var(--gpColor-Orange);
+	border-radius: var(--gpCorner-Large);
+	margin-bottom: 12px;
+	color: unset;
+	padding: 8px 12px;
+	width: auto;
+}
+
+html.GamepadMode .notice_box_content b {
+	font-weight: 700;
+	color: var(--gpColor-Orange);
+}
+
+
+
+
+/* Purchase options groups and dropdown */
+body.v6 .game_area_purchase h2.package_group {
+	margin-bottom: 12px;
+}
+
+html.GamepadMode .game_area_purchase_game_dropdown_right_panel {
+	height: unset;
+	position: unset;
+	bottom: unset;
+	inset-inline-end: unset;
+}
+
+html.GamepadMode .game_area_purchase_not_refundable, .game_area_purchase_custom_cart_credit {
+	height: unset;
+	padding: unset;
+	text-align: start;
+	color: var(--gpStoreLightGrey);
+	font: var(--gpText-BodySmall);
+	background: unset;
+	margin-top: 4px;
+}
+
+html.GamepadMode .game_area_purchase_game a {
+	color: unset;
+	/* width: 100%; */
+	box-sizing: border-box;
+}
+
+html.GamepadMode .game_area_purchase_not_refundable a {
+	color: unset;
+}
+
+html.GamepadMode .game_area_purchase_game_dropdown_selection {
+	background: unset;
+	border: none;
+	border-radius: var(--gpCorner-Large);
+	transition: all 0.1s ease;
+	padding-block: 8px;
+	padding-inline: 12px 8px;
+	float: unset;
+	height: unset;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	white-space: normal;
+	font: var(--gpText-BodyLarge);
+	background: var(--gpBackground-LightMedium);
+}
+
+html.GamepadMode .game_area_purchase_game_dropdown_selection:hover {
+	/* border: 1px solid white; */
+	background: var(--gpBackground-LightHard);
+}
+
+html.GamepadMode .game_area_purchase_game_dropdown_selection.gpfocus {
+	border-radius: 0px;
+	background: white;
+	color: black;
+}
+
+html.GamepadMode .game_area_purchase_game_dropdown br, html.GamepadMode .game_area_purchase_game_dropdown_subscription br { /*hide inline BR*/
+	display: none;
+}
+
+html.GamepadMode .game_area_purchase_game_dropdown_description {
+	padding: 0px 0px 12px 0px;
+}
+
+html.GamepadMode .game_area_purchase h2.package_group {
+	margin-top: 12px;
+}
+
+
+
+/* Purchase option bundles */
+html.GamepadMode .bundle_label {
+	font: var(--gpText-BodyLarge);
+	font-weight: 400;
+}
+
+
+
+/* DLC content puchase options */
+html.GamepadMode #gameAreaDLCSection h2 {
+	display: grid;
+	gap: 8px;
+	justify-content: unset;
+}
+
+html.GamepadMode h2 span.note {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	border: unset;
+	border-radius: unset;
+	padding: unset;
+	float: unset;
+}
+
+html.GamepadMode h2 span.note a {
+	border: none;
+	border-radius: var(--gpCorner-Large);
+	transition: all 0.1s ease;
+	padding: 8px;
+	text-align: center;
+	font: var(--gpText-BodyLarge);
+	background: var(--gpBackground-LightMedium);
+}
+
+html.GamepadMode h2 span.note a:hover {
+	background: var(--gpBackground-LightHard);
+}
+html.GamepadMode h2 span.note a.gpfocus {
+	background: white;
+	color: black;
+	border-radius: 0px;
+}
+html.GamepadMode h2 span.note a.gpfocus em {
+	color: black;
+}
+
+html.GamepadMode .game_area_dlc_price {
+	padding-inline-end: unset;
+	font-size: unset;
+}
+
+html.GamepadMode .game_area_dlc_name {
+	font-size: unset;
+	color: var(--gpStoreLightestGrey);
+}
+
+html.GamepadMode .game_area_dlc_row.dlc_highlight {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+    "capsule"
+"text"
+"price";
+}
+
+html.GamepadMode .game_area_dlc_row.dlc_highlight .capsule_container {
+	width: 100%;
+}
+
+html.GamepadMode .game_area_dlc_row.odd,
+html.GamepadMode .game_area_dlc_row.even {
+	background: unset;
+	background-color: var(--gpBackground-LightSofter);
+	margin: 2px 0px;
+}
+
+html.GamepadMode .game_area_dlc_row {
+	padding: 4px 8px !important; /* overriding important */
+	font: var(--gpText-BodyMedium);
+	transition: all 0.1s ease;
+	border-radius: var(--gpCorner-Medium);
+}
+
+html.GamepadMode .game_area_dlc_row:hover,
+html.GamepadMode .game_area_dlc_row.gpfocus {
+	background-color: var(--gpBackground-LightSoft);
+}
+
+html.GamepadMode .discount_block_inline .discount_prices {
+	padding: unset;
+}
+
+html.GamepadMode .game_area_dlc_row .discount_block_inline .discount_final_price {
+	font-size: unset;
+	color: white;
+}
+
+html.GamepadMode .game_area_dlc_row .discount_block_inline {
+	font: var(--gpText-BodyMedium);
+}
+
+html.GamepadMode #dlc_purchase_action {
+	float: unset;
+	margin-top: 8px;
+}
+
+html.GamepadMode .game_area_purchase_game p.package_contents, .game_area_offsite_purchase p.package_contents {
+	color: unset;
+}
+
+html.GamepadMode .game_area_purchase_game p.package_contents {
+	/*display: flex;*/
+	/*flex-direction: column;*/
+	/*This was breaking on deck*/
+}
+
+html.GamepadMode .game_area_purchase_game .package_contents_capsules_ctn {
+	margin-inline-start: unset;
+}
+
+html.GamepadMode .bundle_contents_preview {
+	margin: 8px 0px;
+	background: var(--gpBackground-DarkHard);
+	border-radius: var(--gpCorner-Medium);
+}
+
+html.GamepadMode #dlc_footer {
+	display: flex;
+	flex-direction: column-reverse;
+	margin: unset;
+	text-transform: unset;
+}
+
+html.GamepadMode #dlc_footer div.dlc_footer_element {
+	padding: 4px 0px;
+	font: var(--gpText-BodyMedium);
+	color: var(--gpStoreLightGrey);
+}
+
+html.GamepadMode .pulldown {
+	padding: 8px 12px;
+	border-radius: 2px;
+	font: var(--gpText-BodyMedium);
+	color: var(--gpStoreLightestGrey);
+}
+
+
+
+
+/* Coming soon block */
+html.GamepadMode .game_area_comingsoon .not_yet {
+	font: var(--gpText-BodyMedium);
+	color: var(--gpStoreLightestGrey);
+}
+
+html.GamepadMode .game_area_comingsoon .content {
+	padding-bottom: 0px;
+	flex: 1 1 0;
+}
+
+html.GamepadMode .game_area_comingsoon .wishlist_add_reminder {
+	height: unset;
+	color: unset;
+	flex-direction: column;
+	flex: 1 1 0;
+}
+
+html.GamepadMode .game_area_comingsoon .wishlist_add_reminder .wishlist_note {
+	color: var(--gpStoreLightestGrey);
+	font: var(--gpText-BodyMedium);
+	padding-top: 12px;
+	margin-top: 0px;
+	border-top: 1px solid var(--gpBackground-LightMedium);
+}
+
+html.GamepadMode #add_to_wishlist_area2 {
+	background: unset;
+	padding-top: 0px;
+}
+
+html.GamepadMode .game_area_comingsoon h1 {
+	font: var(--gpText-HeadingSmall);
+	line-height: 1.2;
+	margin-top: 4px;
+	max-height: 42px;
+}
+
+
+
+
+
+/* Purchase option bubbles */
+html.GamepadMode .game_area_bubble {
+	margin-bottom: 16px;
+	border-radius: var(--gpCorner-Medium);
+}
+
+html.GamepadMode .game_area_bubble .content {
+	padding: 12px 16px;
+	color: white;
+}
+
+html.GamepadMode .game_area_bubble .content p {
+	opacity: 0.8;
+}
+
+html.GamepadMode .game_area_bubble .content p a {
+	color: unset;
+}
+
+html.GamepadMode .game_area_bubble .content h1 {
+	font-weight: 700;
+}
+
+html.GamepadMode .game_area_dlc_bubble {
+	background: linear-gradient(135deg,  #884a86 10%,rgba(165,84,177,0.8) 100%);
+}
+
+
+
+/* Heading dividers */
+html.GamepadMode #aboutThisGame h2:not(h2.bb_tag) {
+	border-top: 1px solid #54748C66;
+	padding-top: var(--gpSpace-Gutter);
+	display: block;
+}
+
+html.GamepadMode #app_reviews_hash h2 {
+	margin-top: 0;
+}
+
+
+
+
+/* Game advertisement */
+html.GamepadMode .saleEventBannerLink {
+	display: flex !important;
+	margin-bottom: unset;
+	box-shadow: var(--gpShadow-Medium);
+	margin-bottom: 12px;
+	margin-top: 10px;
+	padding: 0;
+	background: unset;
+}
+
+html.GamepadMode .saleEventBannerLink .event_context {
+	display: none;
+}
+
+
+
+/* Review summary */
+.game_review_summary.positive {
+	color: var(--gpColor-ChalkyBlue);
+}
+
+
+
+/* Game is in your library */
+body.v6 .game_area_already_owned.page_content {
+	background: none;
+	align-items: center;
+}
+
+html.GamepadMode .game_area_already_owned .already_in_library {
+	font: var(--gpText-BodyLarge);
+}
+
+
+
+/* Friend wants this */
+html.GamepadMode .game_purchase_area_friends_want {
+	background-color: var(--gpBackground-LightSoft);
+	padding: 12px 16px;
+	display: flex;
+	column-gap: 12px;
+	font: var(--gpText-BodySmall);
+	color: var(--gpStoreLighterGrey);
+}
+
+html.GamepadMode .game_purchase_area_friends_want a {
+	color: white;
+}
+
+html.GamepadMode .game_purchase_area_friends_want .gift_icon {
+	position: unset;
+}
+
+html.GamepadMode .game_purchase_area_friends_want .gift_instructions {
+	padding: unset;
+}
+
+/* A member of family owns this game */
+html.GamepadMode .game_purchase_area_owned_by_family {
+	background-color: var(--gpBackground-LightSoft);
+	padding: 12px 16px;
+	margin-bottom: 1px;
+	display: flex;
+	align-items: center;
+	column-gap: 12px;
+	font: var(--gpText-BodySmall);
+	color: var(--gpStoreLighterGrey);
+	border-radius: 0px;
+}
+
+html.GamepadMode .game_purchase_area_owned_by_family .family_icon {
+	position: unset;
+}
+
+html.GamepadMode .game_purchase_area_owned_by_family .family_info {
+	padding: unset;
+}
+
+html.GamepadMode body.v6 .game_area_already_owned {
+	padding-bottom: 0px;
+}
+
+html.GamepadMode body.v6 .game_area_already_owned .master_sub {
+	top: unset;
+	inset-inline-start: unset;
+}
+
+html.GamepadMode .game_area_already_owned_ctn {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	padding-bottom: 12px;
+	border-bottom: 1px solid var(--gpBackground-LightSoft);
+	width: 100%;
+	flex-direction: row-reverse;
+}
+
+html.GamepadMode .game_area_already_owned_ctn .already_in_library {
+	padding: 0px;
+}
+
+
+
+/* Links */
+#game_highlights a {
+	color: var(--gpColor-Blue);
+}
+
+
+
+/* Tags */
+html.GamepadMode .details_block a.linkbar,
+html.GamepadMode .responsive_banner_link,
+html.GamepadMode .purchase_options_banners,
+html.GamepadMode .glance_tags_ctn .glance_tags .app_tag {
+	background-color: var(--gpBackground-LightSoft);
+	border-radius: var(--gpCorner-Medium);
+	color: var(--gpColor-Blue);
+	transition: all 0.1s ease;
+}
+
+html.GamepadMode .details_block a.linkbar.gpfocus,
+html.GamepadMode .responsive_banner_link.gpfocus,
+html.GamepadMode .purchase_options_banners.gpfocus,
+html.GamepadMode .glance_tags_ctn .glance_tags .app_tag.gpfocus {
+	background-color: var(--gpBackground-LightHard);
+	border-radius: 0px;
+	color: white !important;
+}
+
+
+
+
+/* Features */
+html.GamepadMode #category_block {
+	margin-top: 4px;
+	margin-bottom: 12px;
+}
+
+html.GamepadMode .game_area_details_specs_ctn {
+	background: none;
+	border-radius: var(--gpCorner-Medium);
+	margin-bottom: 0px;
+	transition: all 0.1s ease;
+}
+
+html.GamepadMode .game_area_details_specs_ctn .label {
+	color: var(--gpColor-Blue);
+	background: unset;
+	font: var(--gpText-BodyMedium);
+	padding: 4px 8px;
+	transition: all 0.1s ease;
+}
+
+html.GamepadMode .game_area_details_specs_ctn:hover {
+	background: var(--gpBackground-LightSoft);
+}
+
+html.GamepadMode .game_area_details_specs_ctn.gpfocus {
+	background: var(--gpBackground-LightSoft);
+	border-radius: 0px;
+}
+
+html.GamepadMode .game_area_details_specs_ctn:hover .label {
+	color: white;
+}
+
+html.GamepadMode .game_area_details_specs_ctn.gpfocus .label {
+	color: white;
+}
+
+
+
+
+html.GamepadMode #bannerLanguages.responsive_banner_link {
+	background: var(--gpBackground-LightSoft);
+	border-radius: var(--gpCorner-Medium);
+	color: var(--gpColor-Blue);
+}
+
+html.GamepadMode .game_area_details_specs a {
+	color: var(--gpColor-Blue);
+}
+
+html.GamepadMode .responsive_banner_link_title {
+	border-radius: var(--gpCorner-Medium);
+	color: var(--gpColor-Blue);
+	transition: 0.1s all ease;
+}
+
+html.GamepadMode .responsive_banner_link_title:hover,
+html.GamepadMode .responsive_banner_link.gpfocus .responsive_banner_link_title {
+	color: white;
+}
+
+#bannerLanguages .responsive_banner_link_title {
+	background: unset;
+}
+
+
+
+
+
+
+
+
+
+
+/* Notice */
+html.GamepadMode .DRM_notice {
+	border-radius: var(--gpCorner-Medium);
+	padding: 8px 12px;
+	color: #e1c48a;
+	margin-top: 8px;
+	line-height: unset;
+}
+
+html.GamepadMode .DRM_notice a {
+	color: white !important;
+}
+
+html.GamepadMode .anticheat_nonkernel_notice {
+	border-radius: var(--gpCorner-Medium);
+	padding: 8px 12px;
+	margin-top: 8px;
+	line-height: unset;
+}
+
+
+
+
+/* Franchise notice */
+html.GamepadMode .franchise_notice {
+	text-shadow: unset;
+	box-shadow: unset;
+	border-radius: var(--gpCorner-Medium);
+}
+
+html.reponsive .franchise_notice:hover .franchise_highlight {
+	box-shadow: unset;
+}
+
+html.GamepadMode .franchise_notice .franchise_highlight {
+	box-shadow: unset;
+	background: var(--gpBackground-LightSoft);
+}
+
+
+
+
+html.GamepadMode .block a.linkbar {
+	background: var(--gpBackground-LightSoft);
+	border-radius: var(--gpCorner-Medium);
+	padding: 8px 12px;
+	color: var(--gpColor-Blue);
+	font: var(--gpText-BodyMedium);
+	transition: all 0.1s ease;
+}
+
+html.GamepadMode .block a.linkbar:hover {
+	background: var(--gpBackground-LightMedium);
+	color: white;
+}
+
+html.GamepadMode .details_block a {
+	font-weight: unset;
+}
+
+
+
+/* Sign in queue */
+html.GamepadMode .game_background_glow {
+	padding-bottom: unset;
+}
+
+html.GamepadMode .queue_ctn {
+	background: var(--gpBackground-DarkHard);
+	margin-bottom: 0px;
+	gap: 8px;
+	max-width: unset;
+}
+
+
+
+
+/* Curator review */
+html.GamepadMode .referring_curator_ctn {
+	margin: unset;
+}
+
+html.GamepadMode .referring_curator_ctn .referring_curator {
+	border: 1px solid var(--gpBackground-LightSoft);
+	background: unset;
+	margin: unset;
+	box-shadow: unset;
+	border-radius: var(--gpCorner-Large);
+}
+
+html.GamepadMode .referring_curator .avatar,
+html.GamepadMode .referring_curator .avatar img {
+	border-radius: var(--gpCorner-Medium);
+}
+
+html.GamepadMode .referring_curator .blurb {
+	font-weight: 400;
+}
+
+html.GamepadMode .referring_curator .blurb .review_title {
+	font: var(--gpText-BodyLarge);
+	text-transform: unset;
+	letter-spacing: unset;
+}
+
+html.GamepadMode .referring_curator .blurb p {
+	margin-bottom: 12px;
+	color: var(--gpStoreLightestGrey);
+	line-height: 1.4;
+}
+
+html.GamepadMode .referringSteamCurator,
+html.GamepadMode .referringSteamCurator .curator_review_date,
+html.GamepadMode .referringSteamCurator a {
+	color: var(--gpStoreLighterGrey);
+}
+
+
+
+/* Notice box */
+html.GamepadMode .notice_box_content_blue_box {
+	background: var(--gpBackground-LightSoft);
+	color: unset;
+}
+
+html.GamepadMode .notice_box_content_blue_box b {
+	font-size: unset;
+	font-weight: 500;
+}
+
+
+
+/* Bundle contents preview */
+html.GamepadMode .bundle_contents_preview_position {
+	scroll-snap-type: x mandatory;
+	overflow-x: scroll;
+}
+
+html.GamepadMode .bundle_contents_preview_position a.gpfocus {
+	z-index: 99 !important;
+}
+
+
+/* Recent events and announcements */
+html.GamepadMode body.v6 .early_access_announcements h2 {
+	margin-bottom: 16px;
+}
+
+/* Hide iFrames */
+html.GamepadMode .game_description_column p iframe {
+	display: none;
+}
+
+html.GamepadMode .localdateandtime_DateAndTime_2V6GL,
+html.GamepadMode .localdateandtime_DateAndTime_2V6GL span {
+	font: var(--gpText-BodySmall);
+}
+
+html.GamepadMode .partnereventwebrowembed_LatestUpdateButton_1TRFt {
+	padding: 8px 12px;
+	border-radius: var(--gpCorner-Large);
+	font: var(--gpText-BodyLarge);
+	transition: all 0.1s ease;
+}
+
+html.GamepadMode .partnereventwebrowembed_LatestUpdateIcon_mq3RO {
+	display: none;
+}
+
+html.GamepadMode .eventrow_OtherEvents_EventCtn_1MwNf {
+	border-radius: 0px;
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode .eventrow_OtherEvents_EventCtn_1MwNf.eventrow_HorizontalEvent_1ruRS {
+	background: var(--gpBackground-LightSoft);
+	box-shadow: unset;
+	border-radius: var(--gpCorner-Medium);
+}
+
+html.GamepadMode .eventrow_OtherEvents_EventCtn_1MwNf.eventrow_HorizontalEvent_1ruRS .eventrow_HorizontalTitle_B9-wl {
+	font-size: unset;
+	color: var(--gpStoreLightestGrey);
+	font-weight: 400;
+}
+
+
+
+
+/* Game description */
+html.GamepadMode .game_description_column {
+	color: unset;
+}
+
+html.GamepadMode body.v6 .game_area_description h2.bb_tag {
+	color: var(--gpStoreLighterGrey);
+	font: var(--gpText-BodyLarge);
+	font-weight: 700;
+	margin-top: unset;
+}
+
+html.GamepadMode .game_area_description ul {
+	color: unset;
+}
+
+html.GamepadMode .game_area_description img {
+	margin: 12px 0px;
+	/* float: left; */
+}
+
+html.GamepadMode .game_area_description a {
+	display: inline-flex;
+}
+
+html.GamepadMode .page_content_ctn .page_content.middle_page {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+
+/* Content requires base game */
+html.GamepadMode .glance_details {
+	border: 1px solid var(--gpBackground-LightSoft);
+	padding: 8px 12px;
+	margin-bottom: 12px;
+}
+
+html.GamepadMode .glance_details a {
+	display: inline-flex;
+}
+
+html.GamepadMode .glance_details p {
+	margin-bottom: 8px;
+	font: var(--gpText-BodyMedium);
+}
+
+
+
+
+/* Legal */
+#game_area_legal {
+	color: var(--gpStoreLightGrey);
+	font: var(--gpText-BodySmall);
+}
+
+#game_area_legal a {
+	color: var(--gpColor-Blue);
+}
+
+
+
+
+
+/* Sliders */
+html.GamepadMode .block_header {
+	margin-bottom: 8px;
+}
+
+html.GamepadMode #recommended_block .block_header .right {
+	margin-inline-end: unset;
+}
+
+html.GamepadMode .slider_ctn {
+	display: none !important; /* overriding inline style */
+}
+
+html.GamepadMode .block_responsive_horizontal_scroll.block_content {
+	scroll-snap-type: x mandatory;
+	margin: 0px calc(0px - 24px);
+	padding: 0px 24px;
+	scroll-padding: 0px 24px;
+	width: calc(100% + (24px * 2));
+	box-sizing: border-box;
+	display: flex;
+}
+
+html.GamepadMode .block_responsive_horizontal_scroll.block_content::after {
+	content: "\00a0";
+	min-width: 24px;
+}
+
+html.GamepadMode .game_description_column .block .block_content a {
+	border:unset;
+	background: var(--gpStoreDarkestGrey);
+	margin-block: 8px;
+	margin-inline: 0 8px;
+	padding: 8px;
+	height: auto;
+	scroll-snap-align: start;
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode .game_description_column .block .block_content a h4 {
+	color: white;
+}
+
+html.GamepadMode .store_horizontal_autoslider_ctn {
+	overflow: unset;
+	height: auto !important; /* to override inline style */
+}
+
+html.GamepadMode .game_description_column .block .block_header .right a {
+	background-color: unset;
+	border-radius: var(--gpCorner-Large);
+	border: 1px solid #FFFFFF52;
+	transition: all 0.2s ease;
+	font: var(--gpText-BodyMedium);
+	color: white;
+	padding: 4px 8px;
+	margin-top: -8px;
+}
+
+html.GamepadMode .game_description_column .block .block_header .right a:hover {
+	background: unset;
+	border: 1px solid white;
+}
+
+html.GamepadMode .game_description_column .block .block_header .right a.gpfocus {
+	background: var(--gpBackground-LightMedium);
+	border-radius: 0px;
+}
+
+
+
+
+/* Game relevance */
+html.GamepadMode .block.recommendation_reasons, .block.recommendation_reasons p {
+	color: unset;
+	margin: unset;
+	margin-top: 4px;
+}
+
+html.GamepadMode .block.recommendation_reasons a {
+	color: var(--gpColor-Blue);
+	font: var(--gpText-BodySmall);
+}
+
+html.GamepadMode .block.recommendation_reasons .similar_recent_apps_container > a {
+	margin-inline-end: 8px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	line-height: 1;
+	margin-bottom: 3px;
+}
+
+html.GamepadMode .block.recommendation_reasons .similar_recent_apps_container > a br {
+	display: none;
+}
+
+html.GamepadMode .similar_recent_apps_container {
+	margin: 6px 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+html.GamepadMode .similar_recent_apps_container .similarapp {
+	img {
+	  width: 100%;
+	  height: auto;
+	  display: block;
+	}
+  }
+
+html.GamepadMode .recommendation_reasons {
+	margin: unset;
+	margin-bottom: 24px;
+	padding-block: 0px 8px !important;
+	padding-inline: 20px 0px !important;
+}
+
+html.GamepadMode .responsive_apppage_details_right.heading {
+	margin-bottom: 12px;
+}
+
+html.GamepadMode .friend_blocks_grid {
+	margin-bottom: unset;
+	margin-inline-end: 0px;
+}
+
+
+
+/* Merchandise */
+html.GamepadMode .merchandise_ctn a {
+	display: inline-flex;
+}
+
+
+
+
+/* Customer reviews */
+html.GamepadMode #reviews_active_filters {
+	display: none; /* hide filters on deck until optimised */
+}
+
+html.GamepadMode .review_box {
+	background: var(--gpStoreDarkestGrey);
+	padding: 16px;
+	margin-bottom: 6px;
+}
+
+html.GamepadMode .review_box .rightcol .vote_header {
+	background: unset;
+	height: unset;
+	padding: 0px;
+	margin-top: 0px;
+}
+
+html.GamepadMode .review_box .vote_header .title {
+	color: unset;
+	font-weight: 600;
+}
+
+html.GamepadMode .review_box .hours.ellipsis {
+	font: var(--gpText-BodySmall);
+	color: var(--gpStoreLighterGrey);
+}
+
+html.GamepadMode .user_reviews_sub_header,
+html.GamepadMode .user_reviews_sub_header span {
+	letter-spacing: unset;
+	text-transform: unset;
+	font: var(--gpText-BodyMedium);
+	font-weight: 400;
+}
+
+html.GamepadMode .user_reviews_sub_header {
+	margin-bottom: 4px;
+}
+
+html.GamepadMode .user_reviews_sub_header span {
+	color: var(--gpStoreLighterGrey);
+}
+
+html.GamepadMode .review_developer_response_container,
+html.GamepadMode .review_box .responsive_review_leftcol_ctn,
+html.GamepadMode .review_box .postedDate,
+html.GamepadMode .review_box .content,
+html.GamepadMode .review_box .shortcol .control_block,
+html.GamepadMode .review_box .rightcol .control_block,
+html.GamepadMode .review_box .shortcol .vote_info,
+html.GamepadMode .review_box .rightcol .vote_info,
+html.GamepadMode .review_box .review_award_ctn,
+html.GamepadMode .review_box .receivedCompensation {
+	padding: 0px;
+	margin: 0px;
+}
+
+html.GamepadMode .review_box .short_header {
+	background: none;
+}
+
+html.GamepadMode .review_box.short .shortcol {
+	padding-inline-start: unset;
+}
+
+html.GamepadMode .review_box .review_award,
+html.GamepadMode .review_box .btnv6_grey_black {
+	padding: 6px;
+	border-radius: var(--gpCorner-Medium);
+	margin-block: 0px;
+	margin-inline: 0px 4px;
+	background: var(--gpBackground-LightSoft);
+}
+
+html.GamepadMode #reviews_active_filters .active_filter {
+	border: 1px solid var(--gpBackground-LightHard);
+	border-radius: var(--gpCorner-Large);
+	background-color: unset;
+}
+
+html.GamepadMode .review_box .hr {
+	/* margin: 12px 0px; */
+	display: none;
+}
+
+html.GamepadMode .review_box .content {
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLighterGrey);
+	font-weight: 400;
+}
+
+html.GamepadMode .review_box .review_was_helpful,
+html.GamepadMode .review_box .vote_info {
+	font: var(--gpText-BodyMedium);
+	color: var(--gpStoreLightGrey);
+	font-weight: 400;
+	opacity: 1;
+}
+
+html.GamepadMode .review_box.partial .content .gradient {
+	background: -webkit-linear-gradient( top, rgba( 16,21,30,0) 5%, var(--gpStoreDarkestGrey));
+}
+
+html.GamepadMode .responsive_review_leftcol_ctn {
+	opacity: 1;
+}
+
+html.GamepadMode .responsive_review_leftcol_ctn .persona_name a,
+html.GamepadMode .responsive_review_leftcol_ctn .num_owned_games a,
+html.GamepadMode .responsive_review_leftcol_ctn .num_reviews a {
+	font: var(--gpText-BodyMedium);
+	color: var(--gpColor-Blue);
+}
+
+html.GamepadMode .responsive_review_leftcol_ctn .num_owned_games,
+html.GamepadMode .responsive_review_leftcol_ctn .num_reviews {
+	border-inline-start: 1px solid var(--gpBackground-LightSoft);
+}
+
+html.GamepadMode .review_box.partial .content {
+	max-height: 80px;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+html.GamepadMode .vote_button_ctn {
+	padding: 4px 0px;
+}
+
+html.GamepadMode .review_box.partial .view_more {
+	margin-inline-end: unset;
+	display: flex;
+}
+
+html.GamepadMode .review_box.partial .view_more a {
+	font: var(--gpText-BodyMedium);
+	color: var(--gpStoreLighterGrey);
+	padding: 3px 8px;
+	background: var(--gpBackground-LightSofter);
+	border-radius: var(--gpCorner-Medium);
+	text-transform: unset;
+	transition: all 0.2s ease;
+}
+
+html.GamepadMode .review_box.partial .view_more a:hover,
+html.GamepadMode .review_box.partial .view_more a.gpfocus {
+	color: var(--gpStoreLightestGrey);
+	background: var(--gpBackground-LightHard);
+}
+
+html.GamepadMode .review_box.partial .view_more a.gpfocus {
+	border-radius: 0px;
+}
+
+
+html.GamepadMode .review_control_ctn {
+	/* display: none; */
+}
+
+html.GamepadMode .review_box .review_content_summary:focus-within .review_control_ctn {
+	display: block;
+}
+
+html.GamepadMode .review_award_ctn {
+	display: flex;
+	column-gap: 8px;
+	flex-wrap: wrap;
+}
+
+html.GamepadMode .review_box .review_award_ctn {
+	margin-top: 12px;
+}
+
+html.GamepadMode .review_award_ctn .review_award {
+	margin: unset;
+}
+
+
+
+
+/* Report bugs and leave feedback */
+html.GamepadMode .early_access_banner {
+	background: var(--gpStoreDarkestGrey);
+	height: unset;
+}
+
+html.GamepadMode .early_access_banner > .img {
+	background-image: url(/store/public/images/v6/icon_bug.png);
+	background-size: cover;
+	width: 36px;
+	height: 36px;
+	inset-inline-start: 8px;
+	top: 8px;
+}
+
+html.GamepadMode .early_access_banner p {
+	color: var(--gpStoreLightestGrey);
+}
+
+html.GamepadMode .early_access_banner a {
+	border: 1px solid white;
+	background: unset;
+	color: white;
+}
+
+
+
+
+/* Purchase options modal */
+html.GamepadMode .game_area_purchase_game_dropdown_menu_container {
+	box-shadow: unset;
+	background: unset;
+	border-radius: unset;
+	padding: unset;
+}
+
+html.GamepadMode .game_area_purchase_game_dropdown_menu_items_container_background {
+	background-image: unset;
+}
+
+html.GamepadMode .game_area_purchase_game_dropdown_menu_items_container_background tr {
+	height: unset;
+	padding: unset;
+}
+
+html.GamepadMode .game_area_purchase_game_dropdown_menu_items_container tr:first-child td,
+html.GamepadMode .game_area_purchase_game_dropdown_menu_items_container tr:last-child td {
+	border: unset !important;
+}
+
+html.GamepadMode .game_area_purchase_game_dropdown_menu_item_savings {
+	border: unset;
+	display: none;
+}
+
+html.GamepadMode .game_area_purchase_game_dropdown_menu_item_text {
+	border: unset;
+	padding: 10px;
+}
+
+html.GamepadMode .game_area_purchase_game_dropdown_menu_items_container td {
+	font: var(--gpText-BodyLarge);
+}
+
+html.GamepadMode .game_area_purchase_game_dropdown_menu_items_container tr:hover {
+	background: var(--gpBackground-LightSoft);
+}
+
+html.GamepadMode .game_area_purchase_game_dropdown_menu_items_container tr.gpfocus {
+	background: white;
+	color: black;
+}
+
+html.GamepadMode #ageYear_droplist, html.GamepadMode #ageDay_droplist, html.GamepadMode #ageMonth_droplist {
+	overflow-y: auto;
+	max-height: 90vh;
+}
+
+
+
+
+/* BUNDLES */
+
+/* Hide header image below title */
+html.GamepadMode #package_header_container {
+	display: none;
+}
+
+html.GamepadMode .package_header_container {
+	display: flex;
+}
+
+html.GamepadMode .package_header_container .package_header {
+	width: 100%;
+	margin: 0px;
+	box-shadow: var(--gpShadow-Medium);
+}
+
+
+/* Bundle items */
+html.GamepadMode .tablet_list_item {
+	display: block;
+	margin-inline-end: unset;
+	background: var(--gpBackground-LightSofter);
+	min-height: 76px;
+	box-shadow: none;
+	transition: all 0.1s ease;
+	margin-bottom: 4px;
+	width: 100%;
+}
+
+html.GamepadMode .tablet_list_item .tab_item_cap {
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode .tab_item .ds_steam_deck_compat {
+	inset-inline-end: unset;
+	inset-inline-start: 100px;
+	top: 12px;
+}
+
+html.GamepadMode .tablet_list_item .tab_item_discount {
+	position: absolute;
+	inset-inline-end: 8px;
+	bottom: 4px;
+}
+
+
+
+html.GamepadMode .tablet_list_item .tab_item_overlay img {
+	display: none;
+}
+
+html.GamepadMode .tablet_list_item:hover,
+html.GamepadMode .tablet_list_item:focus-within {
+	background: var(--gpBackground-LightMedium);
+}
+
+html.GamepadMode .tablet_list_item:hover .tab_item_name {
+	color: white;
+}
+
+html.GamepadMode .tablet_list_item .tab_item_cap {
+	margin-block: 0px;
+	margin-inline: 0px 12px;
+	float: inline-start;
+	width: unset;
+}
+
+html.GamepadMode  .tablet_list_item .tab_item_cap_img {
+	height: unset;
+	width: 160px;
+}
+
+html.GamepadMode  .tablet_list_item .tab_item_discount,
+html.GamepadMode  .tablet_list_item .tab_item_discount.no_discount {
+	width: unset;
+}
+
+html.GamepadMode .tablet_list_item .tab_item_content {
+	font-size: unset;
+	padding-top: 2px;
+	white-space: unset;
+}
+
+html.GamepadMode .tablet_list_item .tab_item_name {
+	font: var(--gpText-BodyLarge);
+	white-space: unset;
+	overflow: unset;
+	text-overflow: unset;
+	margin-bottom: 24px;
+}
+
+html.GamepadMode .tablet_list_item .tab_item_details {
+	font: var(--gpText-BodyMedium);
+	color: var(--gpStoreLighterGrey);
+	display: none;
+}
+
+html.GamepadMode a.bundle_contents_preview_item .ds_steam_deck_compat {
+	display: none;
+}
+
+html.GamepadMode .dynamic_bundle_description .ds_steam_deck_compat {
+	display: none;
+}
+
+
+/* Price totals */
+html.GamepadMode .package_info_block_content {
+	padding: unset;
+	margin: 16px 0px 32px;
+	background: none;
+}
+
+html.GamepadMode .package_totals_area {
+	color: var(--gpStoreLightestGrey);
+	font: var(--gpText-BodyLarge);
+}
+
+html.GamepadMode .package_totals_row {
+	text-align: start;
+	margin-bottom: 2px;
+}
+
+html.GamepadMode .package_totals_area .price {
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLighterGrey);
+}
+
+html.GamepadMode .bundle_final_package_price {
+	color: var(--gpStoreLightestGrey);
+}
+
+html.GamepadMode .package_totals_row.highlight .price,
+html.GamepadMode .package_totals_row.highlight {
+	color: white;
+	font: var(--gpText-HeadingSmall);
+	font-weight: 500;
+}
+
+html.GamepadMode .package_totals_area .price.bundle_discount {
+	color: var(--gpColor-GreenHi);
+}
+
+
+/* Price savings */
+html.GamepadMode #package_savings_bar {
+	background-color: unset;
+	border-radius: unset;
+	min-height: unset;
+	font: var(--gpText-BodyMedium);
+	color: var(--gpColor-GreenHi);
+	margin-top: 12px;
+	padding-top: 12px;
+	border-top: 1px solid var(--gpBackground-LightSoft);
+}
+
+html.GamepadMode #package_savings_bar > .message {
+	padding: unset;
+	font-size: unset;
+}
+
+html.GamepadMode #package_savings_bar > .savings {
+	padding: unset;
+	font-size: unset;
+	background: unset;
+
+}
+
+
+/* Package details */
+html.GamepadMode .rightcol.game_meta_data .block {
+	padding: unset;
+}
+
+html.GamepadMode .rightcol.game_meta_data .block .block_header {
+	margin-top: 12px;
+}
+
+html.GamepadMode .block_content_inner {
+	margin: none;
+}
+
+html.GamepadMode .game_meta_data p,
+html.GamepadMode .game_meta_data b {
+	font: var(--gpText-BodySmall);
+}
+
+html.GamepadMode .game_meta_data b {
+	color: var(--gpStoreLightGrey);
+	text-transform: none;
+	display: block;
+	border-top: 1px solid var(--gpBackground-LightSoft);
+	padding-top: 4px;
+	margin-top: 4px;
+}
+
+html.GamepadMode .game_meta_data p {
+	color: var(--gpStoreLightestGrey);
+}
+
+html.GamepadMode .game_meta_data i {
+	color: var(--gpStoreLightGrey);
+}
+
+html.GamepadMode .game_meta_data a {
+	color: var(--gpColor-Blue);
+	transition: all 0.1s ease;
+}
+
+html.GamepadMode .game_meta_data a:hover,
+html.GamepadMode .game_meta_data a.gpfocus {
+	color: white;
+}
+
+
+/* Rating */
+html.GamepadMode .game_rating_area {
+	margin-top: 24px;
+	background: unset;
+	padding: unset;
+}
+
+
+/* Game specs */
+html.GamepadMode .details_specs_ctn {
+	margin-top: 24px;
+}
+
+
+/* More like this carousel */
+html.GamepadMode .game_description_column .block .block_content a img {
+	width: 200px;
+	max-width: 200px;
+}
+
+
+/* AGE GATE */
+
+html.GamepadMode .age_gate {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+html.GamepadMode .agegate_birthday_selector {
+	background-color: var(--gpBackground-LightSofter);
+	border-radius: var(--gpCorner-Large);
+	margin-top: 16px;
+	border: 1px solid var(--gpBackground-LightSoft);
+	background: none;
+}
+
+html.GamepadMode .agegate_birthday_desc {
+	font: var(--gpText-BodyLarge);
+}
+
+html.GamepadMode #app_agegate {
+	background: none;
+	font-weight: unset;
+	margin: 48px auto;
+	padding: 0px;
+	padding-top: var(--gpVerticalResponsivePadding-Large);
+}
+
+html.GamepadMode #app_agegate .main_content_ctn {
+	border-radius: 8px;
+	border: 1px solid var(--gpBackground-LightSoft);
+	border: none;
+}
+
+html.GamepadMode .agegate_text_container {
+	max-width: 640px;
+}
+
+html.GamepadMode .agegate_text_container img {
+	box-shadow: var(--gpShadow-Medium);
+	width: 44%;
+}
+
+html.GamepadMode .agegate_text_container .img_ctn {
+	margin: -40px 0px 8px;
+}
+
+html.GamepadMode .agegate_text_container.btns {
+	height: unset;
+	margin: 16px auto 24px;
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+	max-width: 50%;
+	flex-direction: column;
+}
+
+html.GamepadMode .agegate_tags {
+	width: unset;
+	margin: 8px 0px;
+	display: flex;
+	column-gap: 4px;
+	justify-content: center;
+}
+
+html.GamepadMode .agegate_tags .app_tag {
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLightestGrey);
+	border-bottom: unset;
+	background-color: var(--gpBackground-DarkSoft);
+	padding: 2px 10px;
+	border-radius: var(--gpCorner-Medium);
+	margin: unset;
+	transition: all 0.1s ease;
+}
+
+html.GamepadMode .agegate_tags .app_tag:hover {
+	color: white;
+	background: none;
+	background-color: var(--gpBackground-LightSoft);
+}
+
+html.GamepadMode .agegate_text_container .agegate_btn_ctn {
+	display: flex;
+	column-gap: 12px;
+}
+
+html.GamepadMode .agegate_text_container.btns a {
+	width: 100%;
+}
+
+html.GamepadMode #app_agegate h2 {
+	font: var(--gpText-HeadingSmall);
+	font-weight: 500;
+	letter-spacing: 0px;
+	text-transform: unset;
+	margin: calc( 8px + var(--gpVerticalResponsivePadding-Small) ) 0px;
+}
+
+html.GamepadMode #view_product_page_btn {
+	background: var(--gpColor-Blue);
+	box-shadow: var(--gpShadow-Medium);
+}
+
+html.GamepadMode #view_product_page_btn:not(.gpfocus):not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+	background: var(--gpColor-BlueHi) !important;
+}
+
+html.GamepadMode .block .block_content_inner #AwardsDefault img {
+	max-width: 100px;
+}
+
+html.GamepadMode #AwardsDefault .game_page_autocollapse {
+	align-items: center;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 10px;
+	justify-items: center;
+}
+
+html.GamepadMode #AwardsDefault br {
+	display: none;
+}
+
+html.GamepadMode .agegate_content_descriptors_notes {
+	margin-top: 12px;
+	font: var(--gpText-BodyMedium);
+}
+
+html.GamepadMode .modal_media_carousel {
+	display: none;
+	height: 100vh;
+	position: fixed;
+	vertical-align: middle;
+	top: 0;
+	inset-inline-start: 0;
+	background: rgba(0, 0, 0, 80% );
+}
+
+html.GamepadMode #modalMediaCarouselContainer {
+	display: flex;
+}
+
+html.GamepadMode #modalMediaCarouselContents {
+	display: flex;
+	align-items: center;
+}
+
+html.GamepadMode #modalMediaCarouselItems {
+	margin-inline-start: 0;
+}
+
+html.GamepadMode #modalMediaCarouselItems img {
+	object-fit: scale-down;
+}

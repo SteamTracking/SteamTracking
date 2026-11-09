@@ -1,0 +1,31 @@
+.tEcMq-I-lRg-,
+.lIObVcVDNR8- {
+  color: var(--text-color, var(--color-blue-10));
+  box-sizing: border-box;
+  font-size: var(--font-size, var(--default-font-size));
+  line-height: var(--line-height, var(--default-line-height));
+  letter-spacing: var(--letter-spacing, var(--default-letter-spacing));
+  font-family: var(--font-family);
+}
+.tEcMq-I-lRg-:where(._3313PM0GCHI-),
+.lIObVcVDNR8-:where(._3313PM0GCHI-) {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+}
+.lIObVcVDNR8- {
+  cursor: pointer;
+}
+:where(.EuZlR-CTcaY-) {
+  text-decoration: underline;
+}
+:where(.ZVurbohLIZM-),
+:where(.MhcW6UA5-LA-),
+:where(.kyBbJiUN23c-) {
+  text-decoration: none;
+}
+:where(.MhcW6UA5-LA-):hover,
+:where(.kyBbJiUN23c-):hover {
+  text-decoration: underline;
+}

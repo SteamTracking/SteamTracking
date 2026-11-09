@@ -1,0 +1,718 @@
+
+/* GLOBAL */
+html.GamepadMode .profile_leftcol {
+	padding: 0px var(--gpSpace-Gutter);
+}
+
+html.GamepadMode .profile_rightcol {
+	padding: 0px var(--gpSpace-Gutter);
+	background: none;
+	backdrop-filter: unset;
+}
+
+html.GamepadMode .actual_persona_name {
+	font-weight: 700;
+}
+
+html.GamepadMode .profile_content {
+	padding: 0 0 64px;
+	max-width: min( 100%, 1120px );
+}
+
+html.GamepadMode .profile_customization {
+	border-radius: unset;
+}
+
+html.GamepadMode .profile_customization_header {
+	font: var(--gpText-BodySmall);
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	border-radius: unset;
+	padding: 12px;
+}
+
+
+/* White link */
+html.GamepadMode .game_info_achievement_summary a.whiteLink,
+html.GamepadMode .recentgame_quicklinks a.whiteLink,
+html.GamepadMode .profile_summary_footer span.whiteLink {
+	padding: 6px 12px;
+	background-color: #ffffff20;
+	border-radius: var(--gpCorner-Medium);
+	transition: all 0.2s ease;
+}
+
+html.GamepadMode .game_info_achievement_summary a.whiteLink:hover,
+html.GamepadMode .recentgame_quicklinks a.whiteLink:hover,
+html.GamepadMode .profile_summary_footer span.whiteLink:hover {
+	color: #FFFFFF;
+	background-color: #ffffff30;
+}
+
+html.GamepadMode .game_info_achievement_summary a.whiteLink.gpfocus,
+html.GamepadMode .recentgame_quicklinks a.whiteLink.gpfocus,
+html.GamepadMode .profile_summary_footer span.whiteLink.gpfocus {
+	color: black;
+	background-color: white;
+	border-radius: 0px;
+}
+
+/* TODO: Create new link style for Deck to replace above */
+
+
+
+
+/* VALVE EMPLOYEE HEADER */
+html.GamepadMode .profile_header_valve_employee {
+	padding:8px;
+	margin-bottom: 0px;
+	margin-left: calc(0px - var(--gpSpace-Gutter));
+	margin-right: calc(0px - var(--gpSpace-Gutter));
+
+}
+
+html.GamepadMode .profile_header_valve_employee_desc {
+	font-weight: 400;
+	opacity: 0.8;
+}
+
+
+
+/* HEADER */
+html.GamepadMode .profile_header_content {
+	padding-right: unset;
+	padding: 24px 0px 0px;
+	width: 100%;
+	min-height: 190px;
+}
+
+html.GamepadMode .profile_header_bg_texture {
+	max-width: 1120px;
+}
+
+html.GamepadMode .profile_header {
+	padding: 0px var(--gpSpace-Gutter) 16px;
+	max-width: unset;
+}
+
+html.GamepadMode .profile_summary_footer {
+	display: flex;
+}
+
+html.GamepadMode .profile_header .persona_name {
+	font-weight: 400;
+}
+
+html.GamepadMode .profile_header .persona_name .namehistory_link {
+	display: none;
+}
+
+html.GamepadMode .persona_level_btn {
+	display: flex;
+	margin-bottom: 4px;
+	background-color: rgba( 0, 0, 0, 0.3 );
+	padding: 8px 16px;
+	backdrop-filter: blur(12px);
+}
+
+html.GamepadMode .profile_header_badgeinfo .persona_level {
+	margin-bottom: 0px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+html.GamepadMode .profile_header_badge {
+	backdrop-filter: blur(12px);
+	border-radius: 0px;
+}
+
+html.GamepadMode .friendPlayerLevel {
+	margin-top: 0px;
+}
+
+html.GamepadMode .profile_header_actions {
+	display: flex;
+	column-gap: 6px;
+}
+
+/* Add friend button */
+html.GamepadMode .btn_profile_action {
+	flex: auto;
+}
+
+html.GamepadMode .btn_profile_action,
+html.GamepadMode .btn_profile_action span {
+	transition: all 0.2s ease;
+}
+
+html.GamepadMode .btn_profile_action.gpfocus {
+	background: white;
+	border-radius: 0px;
+}
+
+html.GamepadMode .btn_profile_action.gpfocus span {
+	color: black;
+}
+
+html.GamepadMode .header_real_name_spacer {
+	height: 28px;
+}
+
+html.GamepadMode .profile_header .profile_summary {
+	height: unset;
+	overflow: scroll;
+	max-height: 140px;
+	margin: unset;
+	padding: 8px 0px;
+	-webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 1.0) 8px, rgba(0, 0, 0, 1.0) calc(100% - 8px), rgba(0, 0, 0, 0) 100%);
+	scroll-padding: 16px 0px;
+}
+
+/* TODO: Re-enable after solving the header panel direction */
+html.GamepadMode .profile_summary_footer {
+	display: none;
+}
+
+
+
+/* STATUS */
+html.GamepadMode .responsive_status_info {
+	margin: 12px 0px;
+	margin-top: 0px;
+}
+
+html.GamepadMode .profile_in_game_header {
+	font: var(--gpText-HeadingSmall);
+	font-weight: 500;
+}
+
+html.GamepadMode .responsive_status_info .profile_in_game {
+	display: flex;
+	align-items: baseline;
+	gap: 12px;
+	margin: unset;
+}
+
+html.GamepadMode .responsive_status_info .profile_in_game_name,
+html.GamepadMode .responsive_status_info .profile_ban_status,
+html.GamepadMode .responsive_status_info .profile_in_game_broadcastpreview,
+html.GamepadMode .responsive_status_info .profile_in_game_joingame {
+	margin: unset;
+}
+
+
+
+/* BUCKETS */
+html.GamepadMode .responsive_count_link_area {
+	display: flex;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	column-gap: 6px;
+	margin-left: calc( 0px - var(--gpSpace-Gutter) );
+	margin-right: calc( 0px - var(--gpSpace-Gutter) );
+	scroll-padding-left: var(--gpSpace-Gutter);
+	scroll-padding-right: var(--gpSpace-Gutter);
+	padding: 0px var(--gpSpace-Gutter);
+}
+
+html.GamepadMode .responsive_count_link_area::after {
+	content: "\00a0";
+	min-width: var(--gpSpace-Gutter);
+}
+
+html.GamepadMode .responsive_count_link_area > div {
+	backdrop-filter: blur(12px);
+}
+
+html.GamepadMode .profile_item_links {
+	display: flex;
+	column-gap: 6px;
+	margin: 8px 0px;
+}
+
+html.GamepadMode #responsive_groupfriends_element_ctn {
+	display: flex;
+	column-gap: 6px;
+	margin: 8px 0px;
+}
+
+html.GamepadMode .profile_awards {
+	display: flex;
+	gap: 6px;
+	margin: 8px 0px;
+}
+
+html.GamepadMode .profile_badges {
+	display: flex;
+	gap: 6px;
+	margin: 8px 0px;
+}
+
+html.GamepadMode .profile_count_link,
+html.GamepadMode .profile_count_link_preview_ctn {
+	float: unset;
+	width: 160px;
+	scroll-snap-align: start;
+	margin: 0px;
+	height: 96px;
+	box-shadow: unset;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	background: rgba( 0, 0, 0, 0.5 );
+	padding: 8px;
+}
+
+html.GamepadMode .profile_count_link_preview {
+	height: 100px;
+	overflow: hidden;
+	line-height: unset;
+}
+
+
+
+
+/* CUSTOMISATION AREA */
+html.GamepadMode .profile_customization_area {
+	margin-top: 24px;
+}
+
+html.GamepadMode .customization_edit_instructions {
+    padding-top: 4px;
+}
+
+html.GamepadMode .favoritegroup_avatar a {
+	display: flex;
+}
+
+html.GamepadMode .profile_customization_block {
+	padding: 12px;
+}
+
+html.GamepadMode .showcase_content_bg {
+	border-radius: unset;
+	padding: 12px;
+}
+
+html.GamepadMode .profile_customization {
+	transition: background-color 0.2s ease;
+}
+
+html.GamepadMode .profile_customization.gpfocus {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* SHOWCASE */
+html.GamepadMode .showcase_slot a {
+	display: flex;
+}
+
+html.GamepadMode .showcase_achievement a {
+	display: flex;
+}
+
+
+
+/* RECENT ACTIVITY */
+html.GamepadMode .recent_game .game_info .game_info_cap {
+	margin-right: 16px;
+}
+
+html.GamepadMode .game_info_cap a {
+	display: flex;
+}
+
+html.GamepadMode .game_info_achievement a {
+	display: flex;
+}
+
+html.GamepadMode .recent_game .game_info .game_name {
+	font: var(--gpText-BodyLarge);
+}
+
+html.GamepadMode .profile_recentgame_header {
+	background: none;
+	margin: unset;
+	padding: 12px;
+	display: flex;
+	align-items: baseline;
+	width: 100%;
+	gap: 12px;
+	box-sizing: border-box;
+}
+
+html.GamepadMode .profile_content h2 {
+	font: var(--gpText-HeadingSmall);
+	font-weight: 500;
+	color: white;
+}
+
+html.GamepadMode .recentgame_quicklinks h2 {
+	font: var(--gpText-BodyLarge);
+	font-weight: 400;
+	opacity: 0.6;
+}
+
+html.GamepadMode .recent_game {
+	border-radius: unset;
+	margin-bottom: 16px;
+}
+
+html.GamepadMode .link_separator {
+	display: none;
+}
+
+html.GamepadMode .game_info_details {
+	font: var(--gpText-BodyMedium);
+}
+
+html.GamepadMode .game_info_achievement_summary .ellipsis {
+	font: var(--gpText-BodyMedium);
+}
+
+html.GamepadMode .commentthread_paging {
+	gap: 10px;
+}
+
+
+/* USER CONTENT */
+
+/* Header */
+html.GamepadMode #mainContents_sharedfiles {
+	padding-top: 0px;
+}
+
+html.GamepadMode .sharedfiles_header_ctn {
+	background-color: var(--gpStoreDarkerGrey);
+	max-width: unset;
+	padding: 24px var(--gpSpace-Gutter) 12px;
+}
+
+html.GamepadMode .sharedfiles_tabs_ctn {
+	max-width: unset;
+	padding-inline: var(--gpSpace-Gutter);
+}
+
+html.GamepadMode #HeaderUserBreadcrumbs {
+	font: var(--gpText-HeadingLarge);
+	padding: unset;
+	padding-bottom: 4px;
+	margin-left: 16px;
+	border-bottom: 1px solid var(--gpBackground-LightSoft);
+}
+
+html.GamepadMode #HeaderUserBreadcrumbs .HeaderUserInfoSection {
+	font: var(--gpText-BodyMedium);
+}
+
+html.GamepadMode #FilterContainer {
+	padding: unset;
+	padding-top: 8px;
+	margin-left: 16px;
+	display: flex;
+	align-items: center;
+	column-gap: 8px;
+}
+
+html.GamepadMode #tabs_basebg_workshop {
+	padding: 0px var(--gpSpace-Gutter);
+	min-height: unset;
+	width: unset;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+html.GamepadMode .workshopBrowsePagingInfo {
+	font: var(--gpText-BodyMedium);
+	opacity: 0.8;
+}
+
+html.GamepadMode .sharedfiles_usercontrol_ctn {
+	display: flex;
+	align-items: center;
+	column-gap: 6px;
+}
+
+html.GamepadMode .sharedfiles_usercontrol_ctn .favoritesRadioText {
+	background-color: var(--gpBackground-LightSofter);
+	border-radius: var(--gpCorner-Medium);
+	display: flex;
+    align-items: center;
+    column-gap: 4px;
+    padding: 4px 12px 4px 6px;
+	transition: background-color 0.2s ease, border-radius 0.2s ease;
+}
+
+html.GamepadMode .sharedfiles_usercontrol_ctn .favoritesRadioText:hover {
+	background-color: var(--gpBackground-LightSoft);
+}
+
+html.GamepadMode .sharedfiles_usercontrol_ctn .favoritesRadioText.gpfocus {
+	background-color: var(--gpBackground-LightMedium);
+	border-radius: 0px;
+}
+
+html.GamepadMode .sharedfiles_usercontrols_label {
+	color: var(--gpStoreLighterGrey);
+	font: var(--gpText-BodyLarge);
+}
+
+html.GamepadMode div.sharedfiles_filterselect {
+	color: var(--gpStoreLighterGrey);
+	font: var(--gpText-BodyLarge);
+	height: unset;
+	border: unset;
+}
+
+html.GamepadMode div.sharedfiles_filterselect div.option {
+	font: var(--gpText-BodyLarge);
+	height: unset;
+}
+
+
+/* Containers */
+html.GamepadMode #tabs_basebg {
+	margin: 24px var(--gpSpace-Gutter);
+	min-height: unset;
+}
+
+html.GamepadMode #BG_bottom_sharedfiles {
+	max-width: unset;
+}
+
+html.GamepadMode #leftContents {
+	width: unset;
+}
+
+html.GamepadMode #profileBlock {
+	width: 100% !important;
+}
+
+
+/* No results */
+html.GamepadMode .view_inventory_page {
+	background-color: unset;
+}
+
+html.GamepadMode .view_inventory_page.inventory_msg_ctn,
+html.GamepadMode #NoItemsContainer {
+	height: unset;
+	min-height: unset;
+	border: 2px solid var(--gpBackground-LightMedium);
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLighterGrey);
+	padding: 32px 32px;
+	background-color: unset;
+}
+
+html.GamepadMode .inventory_msg_content {
+	padding: 0px;
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLighterGrey);
+}
+
+
+/* Guides */
+html.GamepadMode .workshopItemCollectionContainer {
+	box-shadow: unset;
+	background: none;
+	border-radius: unset;
+}
+
+html.GamepadMode .workshopItemCollectionContainer .workshopItemCollection {
+	box-shadow: unset;
+	background: none;
+	background-color: var(--gpBackground-Neutral-LightSofter);
+}
+
+html.GamepadMode .workshopItemCollectionContainer .workshopItemCollection .workshopItemDetails {
+	width: 100%;
+	padding-top: unset;
+}
+
+html.GamepadMode .workshopItemCollectionContainer .workshopItemCollection .workshopItemTitle {
+	font: var(--gpText-HeadingSmall);
+	font-weight: 500;
+	max-width: unset;
+}
+
+html.GamepadMode .workshopItemCollectionContainer .workshopItemCollection .workshopItemAuthorLine {
+	font: var(--gpText-BodyMedium);
+	color: var(--gpStoreLightestGrey);
+	opacity: 0.8;
+}
+
+html.GamepadMode .workshopItemCollectionContainer .workshopItemCollection .workshopItemAuthorLine span {
+	color: var(--gpStoreLightestGrey)
+}
+
+html.GamepadMode .workshopItemCollectionContainer .workshopItemCollection .workshopItemShortDesc {
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLightestGrey);
+}
+
+
+/* Screenshots */
+html.GamepadMode #instructions_main_container {
+	width: unset;
+	background-color: unset;
+	border: unset;
+	margin: unset;
+	padding: unset;
+}
+
+html.GamepadMode #instructions_main {
+	margin: unset;
+	margin-right: auto;
+}
+
+html.GamepadMode #instructions_main h2 {
+	font: var(--gpText-HeadingMedium);
+	font-weight: 400;
+	color: var(--gpStoreLightestGrey);
+	width: 90%;
+}
+
+html.GamepadMode #BatchScreenshotManagement {
+	padding-bottom: 24px;
+}
+
+
+/* Workshop items */
+html.GamepadMode .workshopBrowseItems {
+	grid-column-gap: 4px;
+	grid-row-gap: 4px;
+	margin-bottom: 12px;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (min-width:  1280px) {
+	html.GamepadMode .workshopBrowseItems {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	html.GamepadMode .workshopBrowseItems {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem {
+	padding: 12px;
+	box-sizing: border-box;
+	background-color: var(--gpBackground-DarkSoft);
+	margin: unset;
+	transition: background-color 0.2s ease;
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem.gpfocus {
+	background-color: var(--gpBackground-DarkHard);
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem a {
+	display: flex;
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem a .workshopItemPreviewHolder {
+	box-shadow: var(--gpShadow-Medium);
+	margin: unset;
+	width: 100%;
+	height: unset;
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem a .workshopItemPreviewHolder .workshopItemPreviewImage {
+	width: 100%;
+	max-height: unset;
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem.gpfocus .workshopItemTitle {
+	color: white;
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem .item_link {
+	margin-top: 6px;
+}
+
+html.GamepadMode .workshopBrowseItems .workshopItem .workshopItemTitle {
+	font: var(--gpText-BodyLarge);
+	margin-top: 0px;
+	color: var(--gpStoreLightestGrey);
+	transition: color 0.2s ease;
+}
+
+
+html.GamepadMode .workshopItem .workshopItemAuthorName {
+	max-width: 100%;
+}
+
+html.GamepadMode .workshopItem .workshopItemAuthorName a.workshop_author_link {
+	display: inline-flex;
+}
+
+html.GamepadMode .workshopItemSubscriptionControls {
+	visibility: visible !important;
+	position: relative;
+}
+
+html.GamepadMode .user_action_history_icon.subscribed {
+	display: none !important;
+}
+
+html.GamepadMode .user_action_history_icon.favorited {
+	margin-top: 4px;
+}
+
+
+
+/* FATAL ERROR */
+html.GamepadMode .profile_subpage_general .maincontent {
+	margin: 0px auto;
+	border: none;
+	background: none;
+	box-shadow: unset;
+	max-width: 1120px;
+}
+
+html.GamepadMode .profile_fatalerror {
+	padding: unset;
+}
+
+html.GamepadMode .profile_fatalerror h1 {
+	margin: unset;
+	color: white;
+}
+
+html.GamepadMode .profile_fatalerror h3 {
+	margin-left: unset;
+	color: var(--gpStoreLightestGrey);
+}
+
+html.GamepadMode .profile_fatalerror_message {
+	background: none;
+	border: 1px solid var(--gpBackground-LightMedium);
+	padding: 20px;
+	border-radius: 0px;
+}
+
+html.GamepadMode .profile_fatalerror_links {
+	display: flex;
+	column-gap: 6px;
+}
+
+html.GamepadMode .profile_fatalerror_links a {
+	padding: 10px 16px;
+	background-color: var(--gpBackground-LightSoft);
+	border-radius: var(--gpCorner-Medium);
+}
+
+html.GamepadMode .profile_fatalerror_links a.gpfocus {
+	background-color: white;
+	color: black;
+	border-radius: 0px;
+	box-shadow: var(--gpShadow-Medium);
+}

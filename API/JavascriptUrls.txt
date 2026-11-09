@@ -283,6 +283,7 @@ ${COMMUNITY_BASE_URL}invites/ajaxcreate
 ${COMMUNITY_BASE_URL}invites/ajaxgetall
 ${COMMUNITY_BASE_URL}linkfilter/?u=${}
 ${COMMUNITY_BASE_URL}login/home/?goto=${}
+${COMMUNITY_BASE_URL}login/home/?goto=%2Fmy%2Fworkshoppaymentinfo
 ${COMMUNITY_BASE_URL}market
 ${COMMUNITY_BASE_URL}market/
 ${COMMUNITY_BASE_URL}market/${}${_ ? _ : ``}
@@ -328,6 +329,7 @@ ${COMMUNITY_BASE_URL}my/inventory/?${_ ? `modal=1&` : ``}market=1#${}___${}
 ${COMMUNITY_BASE_URL}my/itemcollection
 ${COMMUNITY_BASE_URL}my/moderatormessages
 ${COMMUNITY_BASE_URL}my/moderatormessages/${msgid}
+${COMMUNITY_BASE_URL}my/myworkshopfiles
 ${COMMUNITY_BASE_URL}my/myworkshopfiles/?appid=${appid}${_ ? _ : ``}
 ${COMMUNITY_BASE_URL}my/reportedcontent/${}
 ${COMMUNITY_BASE_URL}my/revenueactivity
@@ -378,6 +380,7 @@ ${COMMUNITY_BASE_URL}profiles/${}/previewsingleshowcase/?customization_type=${}&
 ${COMMUNITY_BASE_URL}profiles/${}/tradeoffers
 ${COMMUNITY_BASE_URL}profiles/${}/tradeoffers/sent/#tradeofferid_${}
 ${COMMUNITY_BASE_URL}profiles/${}?previewprofile=1&appid=${}&itemtype=${}
+${COMMUNITY_BASE_URL}public/captcha.php?gid=${gid}
 ${COMMUNITY_BASE_URL}public/images/events/media_play_icon.png
 ${COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png
 ${COMMUNITY_BASE_URL}questions/${VANITY_ID}${}${}
@@ -411,6 +414,7 @@ ${COMMUNITY_BASE_URL}sharedfiles/edititem/${}/${}/${}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/${}/${publishedfileid}/
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${published_file_id}
+${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${}
 ${COMMUNITY_BASE_URL}sharedfiles/moderationqueueview/?appid=${appid}
 ${COMMUNITY_BASE_URL}sharedfiles/reportitem
 ${COMMUNITY_BASE_URL}sharedfiles/uploadartwork/?appid=${}
@@ -426,11 +430,13 @@ ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}&for_items[]=${}_${}_${}
 ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}&token=${}
 ${COMMUNITY_BASE_URL}tradingcards/boostercreator/
 ${COMMUNITY_BASE_URL}vtt/video/${}
+${COMMUNITY_BASE_URL}workshop/
 ${COMMUNITY_BASE_URL}workshop/${}${_ ? _ : ``}
 ${COMMUNITY_BASE_URL}workshop/about/?appid=${appid}
 ${COMMUNITY_BASE_URL}workshop/browse/?appid=${appid}${_ ? _ : ``}
 ${COMMUNITY_BASE_URL}workshop/discussions/?appid=${appid}
 ${COMMUNITY_BASE_URL}workshop/editcollection/?appid=${appid}
+${COMMUNITY_BASE_URL}workshop/workshoplegalagreement/?appid=${}
 ${COMMUNITY_CDN_ASSET_URL}${imgHeadshot}
 ${COMMUNITY_CDN_ASSET_URL}${screenshot}
 ${COMMUNITY_CDN_ASSET_URL}${}/roomeffects/${}/${}
@@ -457,6 +463,7 @@ ${COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png
 ${COMMUNITY_CDN_URL}public/images/economy/protected_items_badge2.png
 ${COMMUNITY_CDN_URL}public/images/profile/2020/bg_dots.png
 ${COMMUNITY_CDN_URL}public/images/sharedfiles/guides/
+${COMMUNITY_CDN_URL}public/images/sharedfiles/icons/icon_check_green_large.png
 ${COMMUNITY_CDN_URL}public/images/skin_1/comment_modindicator_moderator.png
 ${COMMUNITY_CDN_URL}public/images/skin_1/comment_modindicator_officer.png
 ${COMMUNITY_CDN_URL}public/images/trans.gif
@@ -488,6 +495,7 @@ ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=fil
 ${HELP_BASE_URL}
 ${HELP_BASE_URL}${strISOCode}/
 ${HELP_BASE_URL}${strISOCode}/faqs/view/0CAD-3B4D-B874-A065
+${HELP_BASE_URL}${strISOCode}/wizard/HelpWithPublishing
 ${HELP_BASE_URL}${}
 ${HELP_BASE_URL}${}/
 ${HELP_BASE_URL}/faqs/view/4F8E-AE41-B6B1-F836
@@ -504,6 +512,7 @@ ${HELP_BASE_URL}faqs/view/29A9-9EEE-09F0-75F9
 ${HELP_BASE_URL}faqs/view/338D-F465-0937-FA65
 ${HELP_BASE_URL}faqs/view/548F-BC55-89EB-1BC8
 ${HELP_BASE_URL}faqs/view/6639-EB3C-EC79-FF60
+${HELP_BASE_URL}faqs/view/71D3-35C2-AD96-AA3A
 ${HELP_BASE_URL}faqs/view/7EFD-3CAE-64D3-1C31
 ${HELP_BASE_URL}kb/${}
 ${HELP_BASE_URL}ticketmaster/ticket/${owner_dispute_details}
@@ -916,6 +925,7 @@ ${MEDIA_CDN_COMMUNITY_URL}images/chaticons/${}/${}/${}/
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_image_large}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${}
+${MEDIA_CDN_COMMUNITY_URL}images/items/${}/
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${hero_carousel_image}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${item_image_large}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${item_image_small}
@@ -1063,12 +1073,15 @@ ${PARTNER_BASE_URL}doc/accessibility_features#tts
 ${PARTNER_BASE_URL}doc/accessibility_features#visual_recommendations
 ${PARTNER_BASE_URL}doc/accessibility_features#volume_controls
 ${PARTNER_BASE_URL}doc/features/achievements
+${PARTNER_BASE_URL}doc/features/microtransactions
 ${PARTNER_BASE_URL}doc/features/playtest#4
 ${PARTNER_BASE_URL}doc/features/timeline
 ${PARTNER_BASE_URL}doc/finance/taxfaq
+${PARTNER_BASE_URL}doc/gettingstarted/contentsurvey#6
 ${PARTNER_BASE_URL}doc/gettingstarted/contentsurvey/germany
 ${PARTNER_BASE_URL}doc/gettingstarted/managing_users
 ${PARTNER_BASE_URL}doc/gettingstarted/managing_users/communication
+${PARTNER_BASE_URL}doc/gettingstarted/onboarding#5
 ${PARTNER_BASE_URL}doc/marketing/discounts
 ${PARTNER_BASE_URL}doc/marketing/discounts#limits
 ${PARTNER_BASE_URL}doc/marketing/discounts/${_ ? `midweek` : `weekend`}
@@ -1082,6 +1095,7 @@ ${PARTNER_BASE_URL}doc/marketing/event_tools/steamawards
 ${PARTNER_BASE_URL}doc/marketing/upcoming_events/themed_sales
 ${PARTNER_BASE_URL}doc/marketing/wishlist
 ${PARTNER_BASE_URL}doc/store/application/demos
+${PARTNER_BASE_URL}doc/store/application/dlc
 ${PARTNER_BASE_URL}doc/store/assets/promos
 ${PARTNER_BASE_URL}doc/store/assets/promos#popup_update
 ${PARTNER_BASE_URL}doc/store/assets/rules
@@ -1094,6 +1108,7 @@ ${PARTNER_BASE_URL}doc/store/pricing
 ${PARTNER_BASE_URL}doc/store/pricing#5
 ${PARTNER_BASE_URL}doc/store/pricing/csv
 ${PARTNER_BASE_URL}doc/store/pricing/currencies
+${PARTNER_BASE_URL}doc/store/pricing/subscriptions
 ${PARTNER_BASE_URL}doc/store/promo/${}_page
 ${PARTNER_BASE_URL}doc/store/promo/itemdrops
 ${PARTNER_BASE_URL}doc/store/promo/itemdrops#event
@@ -1758,6 +1773,7 @@ ${STORE_BASE_URL}wishlist/profiles/${}/?wng=${}#sort=discount
 ${STORE_BASE_URL}yearinreview/
 ${STORE_CDN_URL}${image_url}
 ${STORE_CDN_URL}${image_url}?${image_target ? `v=3` : `v=2`}
+${STORE_CDN_URL}${}${image_path}${}.png?${}
 ${STORE_CDN_URL}/categories/headerimage/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/categories/headerimage/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/public/shared/images/footer/pw_logo.svg?v=1
@@ -3441,6 +3457,7 @@ url( ${IMG_URL}springcleaning22/keyart.jpg )
 url( ${IMG_URL}springcleaning22/list.jpg )
 url( ${IMG_URL}units/${name}.png )
 url( ${strBackgroundImageURL} )
+url( '${COMMUNITY_CDN_URL}public/images/sharedfiles/ig/bg_top_workshop_v3.png' )
 url( '${thumb_url}' )
 url(${STORE_CDN_URL}${image_url}) no-repeat center center/cover
 url(${avatar_full_url})
