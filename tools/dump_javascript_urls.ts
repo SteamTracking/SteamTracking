@@ -1,6 +1,5 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve as pathResolve } from "node:path";
-import { latestEcmaVersion, parse } from "espree";
 import { Syntax, traverse } from "estraverse";
 import type {
 	BinaryExpression,
@@ -9,11 +8,10 @@ import type {
 	Literal,
 	MemberExpression,
 	Node,
-	Program,
 	TemplateElement,
 	TemplateLiteral,
 } from "estree";
-import { GetFilesToParse } from "./dump_javascript_paths.ts";
+import { GetFilesToParse, ParseJavascript } from "./dump_javascript_paths.ts";
 import { Log } from "./log.ts";
 
 const __dirname = import.meta.dirname;
@@ -24,11 +22,7 @@ export async function DumpUrls(): Promise<void> {
 	for (const file of await GetFilesToParse()) {
 		try {
 			const code = await readFile(file, "utf8");
-			const ast = parse(code, {
-				ecmaVersion: latestEcmaVersion,
-				sourceType: "module",
-				loc: true,
-			}) as unknown as Program;
+			const ast = ParseJavascript(code, { loc: true });
 
 			traverse(ast, {
 				enter: function (node) {

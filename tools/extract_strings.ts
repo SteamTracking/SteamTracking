@@ -1,5 +1,5 @@
-import { latestEcmaVersion, parse } from "espree";
-import type { Expression, Identifier, Node, Program } from "estree";
+import type { Expression, Identifier, Node } from "estree";
+import { ParseJavascript } from "./dump_javascript_paths.ts";
 
 /**
  * Returns the string value of a literal or an expression-free template literal, or null for anything else.
@@ -25,10 +25,7 @@ export function GetStringValue(node: Node | null | undefined): string | null {
  * Returns an object of export name to string.
  */
 export function ExtractStrings(code: string): Record<string, string> {
-	const ast = parse(code, {
-		ecmaVersion: latestEcmaVersion,
-		sourceType: "module",
-	}) as unknown as Program;
+	const ast = ParseJavascript(code);
 
 	const variables = new Map<string, Expression | null | undefined>();
 

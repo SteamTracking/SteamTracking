@@ -1,7 +1,6 @@
 import { existsSync, readdirSync, unlinkSync } from "node:fs";
 import { readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { basename, dirname, extname, join } from "node:path";
-import { latestEcmaVersion, parse } from "espree";
 import { Syntax, traverse } from "estraverse";
 import type {
 	AssignmentExpression,
@@ -11,11 +10,10 @@ import type {
 	Literal,
 	MemberExpression,
 	Node,
-	Program,
 	Property,
 } from "estree";
+import { ParseJavascript } from "./dump_javascript_paths.ts"; // also fixes estraverse Syntax and VisitorKeys
 import { ExtractStrings, FormatStrings, GetStringValue } from "./extract_strings.ts";
-import "./dump_javascript_paths.ts"; // fixing estraverse Syntax and VisitorKeys
 import { languages } from "./languages.ts";
 import { Log } from "./log.ts";
 import type { UrlToFetch } from "./state.ts";
@@ -281,10 +279,7 @@ export async function GenerateSsrUrls(): Promise<void> {
 		for (const file of files) {
 			try {
 				const code = await readFile(join(folder, file), "utf8");
-				const ast = parse(code, {
-					ecmaVersion: latestEcmaVersion,
-					sourceType: "module",
-				}) as unknown as Program;
+				const ast = ParseJavascript(code);
 
 				traverse(ast, {
 					enter: function (node) {

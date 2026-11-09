@@ -2,9 +2,9 @@ import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, unlinkSync, writeFileSync } from "node:fs";
 import { basename, dirname, extname, join, relative, resolve, sep } from "node:path";
 import { crc32 } from "node:zlib";
-import { latestEcmaVersion, parse } from "espree";
-import type { ExpressionStatement, Program } from "estree";
+import type { ExpressionStatement } from "estree";
 import { unzipSync } from "fflate";
+import { ParseJavascript } from "./dump_javascript_paths.ts";
 import { GetStringValue } from "./extract_strings.ts";
 import { FormatFiles } from "./format_files.ts";
 import { GenerateCleanJs } from "./generate_clean_js.ts";
@@ -237,7 +237,7 @@ export function ExtractJsonFromWebpack(filename: string): boolean {
 		return false;
 	}
 
-	const program = parse(match[1], { ecmaVersion: latestEcmaVersion }) as unknown as Program;
+	const program = ParseJavascript(match[1]);
 	const statement = program.body[0] as ExpressionStatement;
 	const value = GetStringValue(statement.expression);
 

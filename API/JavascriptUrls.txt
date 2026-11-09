@@ -1908,6 +1908,16 @@ ${baseSocialShareURL}${appendQueryParam}site=facebook&t=${}
 ${baseSocialShareURL}${appendQueryParam}site=reddit
 ${baseSocialShareURL}${appendQueryParam}site=twitter
 ${baseURL}/ajaxsaveuserpaymentinfo/
+${baseURL}/userreviews/ajaxgetcontentcheckresults/${recommendationID}
+${baseURL}/userreviews/ajaxgetreports/${recommendationID}
+${baseURL}/userreviews/ajaxgetsavedhardware
+${baseURL}/userreviews/cleardeveloperflag/${recommendationID}
+${baseURL}/userreviews/moderate/${recommendationID}
+${baseURL}/userreviews/rate/${recommendationID}
+${baseURL}/userreviews/report/${recommendationID}
+${baseURL}/userreviews/setdeveloperresponse/${recommendationID}
+${baseURL}/userreviews/update/${recommendationID}
+${baseURL}/userreviews/votetag/${recommendationID}
 ${baseURL}account/preferences
 ${cdnURL}/labs/diving_bell/back.svg
 ${cdnURL}/labs/diving_bell/openinnewtab_icon.svg
