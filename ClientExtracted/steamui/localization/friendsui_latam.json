@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Copiar el enlace al portapapeles",
     "Chat_Visit_Link": "Abrir",
     "Chat_CloseTabAction": "Cerrar pestaña",
-    "Chat_CloseTabAction_SteamDeck": "Finalizar chat",
+    "Chat_CloseTabAction_SteamDeck": "Cerrar chat",
     "Chat_Tab_ContextMenu": "Opciones",
     "Chat_VoiceEmptyChannel": "No hay nadie en este canal de voz",
     "Chat_AddFriend_Hint": "Agregar un amigo para crear un chat de grupo",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Se corrigió un problema por el que las ventanas de amigos y de chat no se mostraban en la interfaz de la partida en Linux y macOS.",
     "BBCode_Loading": "Cargando",
     "BBCode_Failed": "Error al cargar",
-    "broadcastDetails_Playing": "Reproduciendo"
+    "broadcastDetails_Playing": "Reproduciendo",
+    "FriendsList_LoadFailed": "No se pudo cargar tu lista de amigos.",
+    "FriendsList_LoadFailed_Retry": "Reintentar",
+    "Voice_WaitingForResponse": "Esperando respuesta",
+    "Friend_Menu_VoiceVolume": "Volumen de voz",
+    "ChatRoom_GameInvite_Dismiss": "Ignorar"
 }

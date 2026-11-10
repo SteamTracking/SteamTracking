@@ -1858,9 +1858,6 @@ $ORIGIN
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
-18:15:03
-18:15:10
-18:15:11
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CFutureSharedStateIbE
@@ -1934,6 +1931,10 @@ $ORIGIN
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21UserSystemInformation
+22:37:53
+22:38:11
+22:38:12
+22:38:14
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -6727,7 +6728,7 @@ Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing to do
-Nov  7 2026
+Nov  9 2026
 November
 NullMetrics()
 NumTickets
@@ -8317,7 +8318,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Nov  7 2026 18:15:11
+Startup - updater built Nov  9 2026 22:38:13
 State
 StaticFileWriterThread()
 Steam

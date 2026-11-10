@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Copiar link para a área de transferência",
     "Chat_Visit_Link": "Abrir",
     "Chat_CloseTabAction": "Fechar aba",
-    "Chat_CloseTabAction_SteamDeck": "Encerrar conversa",
+    "Chat_CloseTabAction_SteamDeck": "Fechar conversa",
     "Chat_Tab_ContextMenu": "Opções",
     "Chat_VoiceEmptyChannel": "Não há mais ninguém neste canal de voz",
     "Chat_AddFriend_Hint": "Adicione um amigo para criar uma sala de conversa",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Correção de erro que impedia a exibição da lista de amigos e janelas de conversa no Painel Steam no Linux e macOS.",
     "BBCode_Loading": "Carregando",
     "BBCode_Failed": "Erro ao carregar",
-    "broadcastDetails_Playing": "Jogando"
+    "broadcastDetails_Playing": "Jogando",
+    "FriendsList_LoadFailed": "Não foi possível carregar a sua lista de amigos.",
+    "FriendsList_LoadFailed_Retry": "Tentar novamente",
+    "Voice_WaitingForResponse": "Aguardando resposta",
+    "Friend_Menu_VoiceVolume": "Volume da voz",
+    "ChatRoom_GameInvite_Dismiss": "Descartar"
 }

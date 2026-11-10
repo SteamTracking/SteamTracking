@@ -991,7 +991,7 @@
     "FriendSettings_Notification_Table_Show": "Afișează o notificare",
     "FriendSettings_Notification_Table_Play": "Redă un sunet",
     "FriendSettings_Notification_FriendJoins": "Când un prieten pornește un joc",
-    "FriendSettings_Notification_FriendOnline": "Când un prieten devine online",
+    "FriendSettings_Notification_FriendOnline": "Când un prieten intră online",
     "FriendSettings_Notification_ChatMessage": "Când primesc un mesaj de chat direct",
     "FriendSettings_Notification_DirectChat": "Notifică-mă când primesc un mesaj direct",
     "FriendSettings_Notification_DirectChatDescOn": "Cu excepția cazului în care am setări specifice pentru acel prieten",
@@ -1000,7 +1000,7 @@
     "FriendSettings_Notification_GroupChatDescOn": "Cu excepția cazului în care am setări specifice pentru acel grup de chat",
     "FriendSettings_Notification_GroupChatDescOff": "Nu primești notificări pentru grupurile de chat",
     "FriendSettings_FriendNotification_FriendJoins": "Când prietenul acesta pornește un joc",
-    "FriendSettings_FriendNotification_FriendOnline": "Când prietenul acesta devine online",
+    "FriendSettings_FriendNotification_FriendOnline": "Când prietenul acesta intră online",
     "FriendSettings_Notification_GroupEvent": "Evenimente și anunțuri ale grupului",
     "FriendSettings_Notification_ChatRoomNotification": "Când primesc o notificare privind o cameră de chat",
     "FriendSettings_Notification_Explanation": "Vom încerca să nu-ți trimitem notificări dacă folosești Steam de pe un alt dispozitiv.",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "S-a reparat faptul că ferestrele pentru prieteni și chat nu erau afișate în interfața din joc pe Linux și macOS.",
     "BBCode_Loading": "Se încarcă",
     "BBCode_Failed": "Nu s-a putut încărca",
-    "broadcastDetails_Playing": "Se joacă"
+    "broadcastDetails_Playing": "Se joacă",
+    "FriendsList_LoadFailed": "Lista ta de prieteni nu a putut fi încărcată.",
+    "FriendsList_LoadFailed_Retry": "Reîncearcă",
+    "Voice_WaitingForResponse": "Se așteaptă un răspuns",
+    "Friend_Menu_VoiceVolume": "Volumul vocii",
+    "ChatRoom_GameInvite_Dismiss": "Ignoră"
 }

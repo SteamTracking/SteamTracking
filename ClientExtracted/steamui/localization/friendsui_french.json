@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Copier le lien dans le Presse-papier",
     "Chat_Visit_Link": "Ouvrir",
     "Chat_CloseTabAction": "Fermer l'onglet",
-    "Chat_CloseTabAction_SteamDeck": "Mettre fin au chat",
+    "Chat_CloseTabAction_SteamDeck": "Fermer le chat",
     "Chat_Tab_ContextMenu": "Options",
     "Chat_VoiceEmptyChannel": "Il n'y a personne d'autre dans ce canal vocal",
     "Chat_AddFriend_Hint": "Ajouter un contact pour former un chat de groupe",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Correction du problème suivant : les fenêtres de contacts et de chat ne s'affichaient pas dans l'overlay en jeu sur Linux et macOS.",
     "BBCode_Loading": "Chargement",
     "BBCode_Failed": "Échec du chargement",
-    "broadcastDetails_Playing": "Joue à"
+    "broadcastDetails_Playing": "Joue à",
+    "FriendsList_LoadFailed": "Échec du chargement de votre liste de contacts.",
+    "FriendsList_LoadFailed_Retry": "Réessayer",
+    "Voice_WaitingForResponse": "En attente d'une réponse",
+    "Friend_Menu_VoiceVolume": "Volume de la voix",
+    "ChatRoom_GameInvite_Dismiss": "Ignorer"
 }

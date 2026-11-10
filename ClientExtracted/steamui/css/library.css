@@ -154,15 +154,19 @@ button.DialogButton::-moz-focus-inner {
   width: 640px;
   font-weight: 400;
 }
-.DeckVerifiedModalDialogClient .DialogContent,
-.DeckVerifiedModalDialog .DialogContent {
-  padding: calc(1.4vw + 12px) 2.8vw;
+.DeckVerifiedModalDialogClient .DialogContent._DialogLayout,
+.DeckVerifiedModalDialog .DialogContent._DialogLayout {
+  padding: 0;
   background: #0e141b !important;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   border: 2px solid #23262e;
 }
 .DeckVerifiedModalDialog .DialogContent {
   max-height: 85vh;
+}
+.DeckVerifiedModalDialogClient .DialogContent_InnerWidth,
+.DeckVerifiedModalDialog .DialogContent_InnerWidth {
+  max-width: none;
 }
 .DeckVerifiedModalDialogClient .ModalPosition_TopBar,
 .DeckVerifiedModalDialog .ModalPosition_TopBar {

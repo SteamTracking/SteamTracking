@@ -16710,7 +16710,7 @@ Controller Info: HWID: %d, FWTimestamp: 0x%X\n
 Controller PollState Changed from %d to %d\n
 Controller Quality of Service (QoS) report for %u\n
 Controller Serial# invalid\n
-Controller VDF:\r\n, %s
+Controller VDF:
 Controller Work Item Thread
 Controller detected on wireless receiver\n
 Controller device closed after hid_read failure\n
@@ -46646,7 +46646,7 @@ stderr
 stdin
 stdout
 steam
-steam Nov  7 2026 18:15:09
+steam Nov  9 2026 22:37:59
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &

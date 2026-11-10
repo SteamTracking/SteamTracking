@@ -168,7 +168,7 @@
     "ChatEntry_UploadImage": "Загрузить изображение",
     "ChatEntry_UploadLastScreenshot": "Загрузить последний скриншот",
     "ChatEntry_SendTradeURL": "Поделиться ссылкой на обмен",
-    "ChatEntry_TagAsSpoiler": "Пометить как спойлер",
+    "ChatEntry_TagAsSpoiler": "Спойлер",
     "ChatEntry_TakePhoto": "Сделать снимок",
     "ChatEntry_ChooseFromLibrary": "Выбрать изображение из библиотеки",
     "ChatEntryButton_SendSnowfall": "Пусть идёт снег!",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Исправлена ошибка, из-за которой окна друзей и чата не отображались во внутриигровом оверлее на Linux и macOS.",
     "BBCode_Loading": "Загрузка",
     "BBCode_Failed": "Ошибка загрузки",
-    "broadcastDetails_Playing": "Воспроизведение"
+    "broadcastDetails_Playing": "Воспроизведение",
+    "FriendsList_LoadFailed": "Не удалось загрузить ваш список друзей.",
+    "FriendsList_LoadFailed_Retry": "Повторить попытку",
+    "Voice_WaitingForResponse": "Ожидает ответа",
+    "Friend_Menu_VoiceVolume": "Громкость голосового чата",
+    "ChatRoom_GameInvite_Dismiss": "Отклонить"
 }

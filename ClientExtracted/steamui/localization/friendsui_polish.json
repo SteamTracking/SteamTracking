@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Kopiuj link do schowka",
     "Chat_Visit_Link": "Otwórz",
     "Chat_CloseTabAction": "Zamknij zakładkę",
-    "Chat_CloseTabAction_SteamDeck": "Zakończ czat",
+    "Chat_CloseTabAction_SteamDeck": "Zamknij czat",
     "Chat_Tab_ContextMenu": "Opcje",
     "Chat_VoiceEmptyChannel": "Nikogo innego tu nie ma",
     "Chat_AddFriend_Hint": "Dodaj znajomego, by utworzyć czat grupowy",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Naprawiono błąd powodujący, że okna czatu i znajomych nie wyświetlały się w nakładce w systemach Linux i macOS.",
     "BBCode_Loading": "Wczytywanie",
     "BBCode_Failed": "Nie udało się wczytać",
-    "broadcastDetails_Playing": "Gra w"
+    "broadcastDetails_Playing": "Gra w",
+    "FriendsList_LoadFailed": "Nie udało się wczytać twojej listy znajomych.",
+    "FriendsList_LoadFailed_Retry": "Spróbuj ponownie",
+    "Voice_WaitingForResponse": "Oczekuje na odpowiedź",
+    "Friend_Menu_VoiceVolume": "Głośność głosu",
+    "ChatRoom_GameInvite_Dismiss": "Zamknij"
 }

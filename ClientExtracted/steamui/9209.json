@@ -32,7 +32,7 @@
     "Achievements_Summary_FromDLCCount": "<2>DLC</2>: <1>%1$s개</1>",
     "Achievements_Summary_SetCount": "<2>세트</2>: <1>%1$s개</1>",
     "Achievements_Summary_SetCount_Plural": "<2>세트</2>: <1>%1$s개</1>",
-    "Achievements_Summary_NotOwned": "이 게임을 소유하고 있지 않습니다.",
+    "Achievements_Summary_NotOwned": "라이브러리에 없는 게임",
     "Achievements_Toolbar_ShowGlobalStats": "전 세계 통계 보기",
     "Achievements_Toolbar_PinAchievements": "도전 과제 고정",
     "Achievements_Toolbar_SearchPlaceholder": "검색",
@@ -93,5 +93,16 @@
     "Achievements_Compare_SelectedFriendCount_Plural": "친구: %1$s명",
     "Achievements_Friends_FriendsWhoPlayCount": "이 게임을 플레이하는 친구: <1>%1$s명</1>",
     "Achievements_Friends_FriendsWhoPlayCount_Plural": "이 게임을 플레이하는 친구: <1>%1$s명</1>",
-    "dummy": "dummy"
+    "dummy": "dummy",
+    "Achievements_Header_CompletedSetsTitle": "완료한 도전 과제 세트",
+    "Achievements_Header_CompletedSetsMore": "외 %1$s개...",
+    "Achievements_Summary_AchievementTotal": "도전 과제 %1$s개",
+    "Achievements_Summary_AchievementTotal_Plural": "도전 과제 %1$s개",
+    "Achievements_Summary_FromBaseGameAcrossSets": "기본 게임의 도전 과제 <2>세트 %1$s개</2>에 포함된 도전 과제 <1>%2$s개</1>",
+    "Achievements_Summary_FromBaseGameAcrossSets_Plural": "기본 게임의 도전 과제 <2>세트 %1$s개</2>에 포함된 도전 과제 <1>%2$s개</1>",
+    "Achievements_Summary_FromDLCAcrossSets": "DLC의 도전 과제 <2>세트 %1$s개</2>에 포함된 도전 과제 <1>%2$s개</1>",
+    "Achievements_Summary_FromDLCAcrossSets_Plural": "DLC의 도전 과제 <2>세트 %1$s개</2>에 포함된 도전 과제 <1>%2$s개</1>",
+    "Achievements_Hidden_Description": "도전 과제를 달성하면 세부 정보가 공개됩니다.",
+    "Achievements_Hidden_Description_Plural": "도전 과제를 달성하면 세부 정보가 공개됩니다.",
+    "Achievements_PercentFormat": "%1$s%"
 }

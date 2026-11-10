@@ -272,5 +272,10 @@
     "setcooldown_dialogdescription": "Sekat pengguna daripada melaporkan kandungan atau mempertikaikan penyelarasan apabila mereka telah menyalahgunakan sistem.",
     "setcooldown_setbutton": "Tetapkan masa cooldown",
     "setcooldown_clearopenreports": "Kosongkan laporan pengguna ini yang tidak diselesaikan",
-    "setcooldown_statssummary": "Laporan %1$s/%2$s dibebaskan, %3$s/%4$s pada minggu lepas."
+    "setcooldown_statssummary": "Laporan %1$s/%2$s dibebaskan, %3$s/%4$s pada minggu lepas.",
+    "moderation_ugcfile_desc": "sebuah kandungan yang dijanakan oleh pengguna",
+    "moderation_ugcban_default_note": "Mengalih keluar kandungan atas sebab berikut: %1$s",
+    "moderation_subjettype_ugcfile": "Kandungan yang Dijanakan oleh Pengguna",
+    "reportforumpost_description_disruptive": "Tingkah laku yang mengganggu komuniti, termasuk hasut maya, bahasa kesat, spam, atau menyiarkan semula kandungan yang telah ditutup atau dipadamkan",
+    "reportedcontent_disputesanctioned_2": "Setelah dinilai oleh kakitangan semakan pertikaian Steam, kandungan yang anda laporkan didapati melanggar %1$s Steam. Secara khususnya, kandungan tersebut didapati: %2$s"
 }

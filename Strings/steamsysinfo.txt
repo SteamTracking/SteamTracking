@@ -649,7 +649,6 @@ $ORIGIN
 16IKeyValuesSystem
 17CFileWriterThread
 17CStreamReaderBase
-18:15:03
 18CUtlCharConversion
 19CDirContentsWatcher
 19CUtlNoEscConversion
@@ -661,6 +660,7 @@ $ORIGIN
 20IUniformRandomStream
 21CLogFileAsyncCallback
 21CUtlCStringConversion
+22:37:53
 24 Mbps
 24CDirWatcherPollingThread
 256 Kbps
@@ -1775,7 +1775,7 @@ Norwegian
 Not implemented field number
 Not supported.
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-Nov  7 2026
+Nov  9 2026
 November
 Numbers starting with leading zero must be in octal.
 OSX1010

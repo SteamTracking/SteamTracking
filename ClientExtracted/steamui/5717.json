@@ -32,7 +32,7 @@
     "Achievements_Summary_FromDLCCount": "<1>%1$s</1><2>από DLC</2>",
     "Achievements_Summary_SetCount": "<1>%1$s</1><2>σετ</2>",
     "Achievements_Summary_SetCount_Plural": "<1>%1$s</1><2>σετ</2>",
-    "Achievements_Summary_NotOwned": "Δεν έχετε αυτό το παιχνίδι",
+    "Achievements_Summary_NotOwned": "Αυτό το παιχνίδι δεν είναι στη Συλλογή σας",
     "Achievements_Toolbar_ShowGlobalStats": "Εμφάνιση γενικών στατιστικών",
     "Achievements_Toolbar_PinAchievements": "Καρφίτσωμα επιτευγμάτων",
     "Achievements_Toolbar_SearchPlaceholder": "Αναζήτηση…",
@@ -93,5 +93,16 @@
     "Achievements_Compare_SelectedFriendCount_Plural": "%1$s φίλοι",
     "Achievements_Friends_FriendsWhoPlayCount": "<1>%1$s φίλος</1> παίζει αυτό το παιχνίδι",
     "Achievements_Friends_FriendsWhoPlayCount_Plural": "<1>%1$s φίλοι</1> παίζουν αυτό το παιχνίδι",
-    "dummy": "dummy"
+    "dummy": "dummy",
+    "Achievements_Header_CompletedSetsTitle": "Ολοκληρωμένα σετ",
+    "Achievements_Header_CompletedSetsMore": "και %1$s ακόμα…",
+    "Achievements_Summary_AchievementTotal": "%1$s επίτευγμα",
+    "Achievements_Summary_AchievementTotal_Plural": "%1$s επιτεύγματα",
+    "Achievements_Summary_FromBaseGameAcrossSets": "<1>%2$s</1> από το βασικό παιχνίδι σε <2>%1$s σετ</2>",
+    "Achievements_Summary_FromBaseGameAcrossSets_Plural": "<1>%2$s</1> από το βασικό παιχνίδι σε <2>%1$s σετ</2>",
+    "Achievements_Summary_FromDLCAcrossSets": "<1>%2$s</1> από DLC σε <2>%1$s σετ</2>",
+    "Achievements_Summary_FromDLCAcrossSets_Plural": "<1>%2$s</1> από DLC σε <2>%1$s σετ</2>",
+    "Achievements_Hidden_Description": "Οι λεπτομέρειες για αυτό το επίτευγμα θα αποκαλυφθούν αφού το ξεκλειδώσετε",
+    "Achievements_Hidden_Description_Plural": "Οι λεπτομέρειες για αυτά τα επιτεύγματα θα αποκαλυφθούν αφού τα ξεκλειδώσετε",
+    "Achievements_PercentFormat": "%1$s%"
 }

@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Copiar link para área de transferência",
     "Chat_Visit_Link": "Abrir",
     "Chat_CloseTabAction": "Fechar separador",
-    "Chat_CloseTabAction_SteamDeck": "Terminar chat",
+    "Chat_CloseTabAction_SteamDeck": "Fechar chat",
     "Chat_Tab_ContextMenu": "Opções",
     "Chat_VoiceEmptyChannel": "Não há mais ninguém neste canal",
     "Chat_AddFriend_Hint": "Adiciona um amigo para criares uma sala de chat",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Foi resolvido um problema em que as janelas do chat e dos amigos não apareciam no Painel Steam durante jogos no Linux e no macOS.",
     "BBCode_Loading": "A carregar",
     "BBCode_Failed": "Erro ao carregar",
-    "broadcastDetails_Playing": "A jogar"
+    "broadcastDetails_Playing": "A jogar",
+    "FriendsList_LoadFailed": "Não foi possível carregar a tua lista de amigos.",
+    "FriendsList_LoadFailed_Retry": "Tentar de novo",
+    "Voice_WaitingForResponse": "A aguardar resposta",
+    "Friend_Menu_VoiceVolume": "Volume de voz",
+    "ChatRoom_GameInvite_Dismiss": "Ignorar"
 }

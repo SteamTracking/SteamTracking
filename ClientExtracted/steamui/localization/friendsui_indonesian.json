@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Salin Tautan ke Clipboard",
     "Chat_Visit_Link": "Buka",
     "Chat_CloseTabAction": "Tutup Tab",
-    "Chat_CloseTabAction_SteamDeck": "Akhiri Obrolan",
+    "Chat_CloseTabAction_SteamDeck": "Obrolan Tertutup",
     "Chat_Tab_ContextMenu": "Opsi",
     "Chat_VoiceEmptyChannel": "Tidak ada orang lain di saluran suara ini",
     "Chat_AddFriend_Hint": "Tambahkan teman untuk membuat obrolan grup",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Memperbaiki jendela Teman dan Obrolan yang tidak tampil di overlay dalam game pada Linux dan macOS.",
     "BBCode_Loading": "Memuat",
     "BBCode_Failed": "Gagal memuat",
-    "broadcastDetails_Playing": "Bermain"
+    "broadcastDetails_Playing": "Bermain",
+    "FriendsList_LoadFailed": "Tidak dapat memuat daftar teman.",
+    "FriendsList_LoadFailed_Retry": "Coba Lagi",
+    "Voice_WaitingForResponse": "Menunggu respons",
+    "Friend_Menu_VoiceVolume": "Volume Suara",
+    "ChatRoom_GameInvite_Dismiss": "Tutup"
 }

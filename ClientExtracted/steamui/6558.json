@@ -32,7 +32,7 @@
     "Achievements_Summary_FromDLCCount": "<2>DLC'lerden:</2><1>%1$s</1>",
     "Achievements_Summary_SetCount": "<1>%1$s</1><2>set</2>",
     "Achievements_Summary_SetCount_Plural": "<1>%1$s</1><2>set</2>",
-    "Achievements_Summary_NotOwned": "Bu oyuna sahip değilsiniz",
+    "Achievements_Summary_NotOwned": "Bu oyun kütüphanenizde değil",
     "Achievements_Toolbar_ShowGlobalStats": "Global İstatistikleri Göster",
     "Achievements_Toolbar_PinAchievements": "Başarımları Sabitle",
     "Achievements_Toolbar_SearchPlaceholder": "Ara...",
@@ -93,5 +93,16 @@
     "Achievements_Compare_SelectedFriendCount_Plural": "%1$s Arkadaş",
     "Achievements_Friends_FriendsWhoPlayCount": "<1>%1$s arkadaşınız</1> bu oyunu oynuyor",
     "Achievements_Friends_FriendsWhoPlayCount_Plural": "<1>%1$s arkadaşınız</1> bu oyunu oynuyor",
-    "dummy": "dummy"
+    "dummy": "dummy",
+    "Achievements_Header_CompletedSetsTitle": "Tamamlanan Setler",
+    "Achievements_Header_CompletedSetsMore": "+%1$s…",
+    "Achievements_Summary_AchievementTotal": "%1$s başarım",
+    "Achievements_Summary_AchievementTotal_Plural": "%1$s başarım",
+    "Achievements_Summary_FromBaseGameAcrossSets": "Ana oyundan: <2>%1$s sette</2> <1>%2$s</1>",
+    "Achievements_Summary_FromBaseGameAcrossSets_Plural": "Ana oyundan: <2>%1$s sette</2> <1>%2$s</1>",
+    "Achievements_Summary_FromDLCAcrossSets": "DLC'lerden: <2>%1$s sette</2> <1>%2$s</1>",
+    "Achievements_Summary_FromDLCAcrossSets_Plural": "DLC'lerden: <2>%1$s sette</2> <1>%2$s</1>",
+    "Achievements_Hidden_Description": "Bu başarımın detayları, başarım açılınca gösterilecektir.",
+    "Achievements_Hidden_Description_Plural": "Bu başarımların detayları, başarımlar açılınca gösterilecektir.",
+    "Achievements_PercentFormat": "%%1$s"
 }

@@ -32,7 +32,7 @@
     "Achievements_Summary_FromDLCCount": "<1>%1$s</1><2>der Zusatzinhalte</2>",
     "Achievements_Summary_SetCount": "<1>%1$s</1><2>Set</2>",
     "Achievements_Summary_SetCount_Plural": "<1>%1$s</1><2>Sets</2>",
-    "Achievements_Summary_NotOwned": "Sie besitzen dieses Spiel nicht",
+    "Achievements_Summary_NotOwned": "Dieses Spiel ist nicht in Ihrer Bibliothek",
     "Achievements_Toolbar_ShowGlobalStats": "Globale Statistiken anzeigen",
     "Achievements_Toolbar_PinAchievements": "Errungenschaften anheften",
     "Achievements_Toolbar_SearchPlaceholder": "Suchen …",
@@ -93,5 +93,16 @@
     "Achievements_Compare_SelectedFriendCount_Plural": "%1$s Freunde",
     "Achievements_Friends_FriendsWhoPlayCount": "<1>%1$s Freund</1> spielt dieses Spiel",
     "Achievements_Friends_FriendsWhoPlayCount_Plural": "<1>%1$s Freunde</1> spielen dieses Spiel",
-    "dummy": "dummy"
+    "dummy": "dummy",
+    "Achievements_Header_CompletedSetsTitle": "Abgeschlossene Sets",
+    "Achievements_Header_CompletedSetsMore": "und %1$s weitere …",
+    "Achievements_Summary_AchievementTotal": "%1$s Errungenschaft",
+    "Achievements_Summary_AchievementTotal_Plural": "%1$s Errungenschaften",
+    "Achievements_Summary_FromBaseGameAcrossSets": "<1>%2$s</1> vom Basisspiel aus <2>%1$s Set</2>",
+    "Achievements_Summary_FromBaseGameAcrossSets_Plural": "<1>%2$s</1> vom Basisspiel aus <2>%1$s Sets</2>",
+    "Achievements_Summary_FromDLCAcrossSets": "<1>%2$s</1> vom Zusatzinhalt aus <2>%1$s Set</2>",
+    "Achievements_Summary_FromDLCAcrossSets_Plural": "<1>%2$s</1> vom Zusatzinhalt aus <2>%1$s Sets</2>",
+    "Achievements_Hidden_Description": "Details zu dieser Errungenschaft werden enthüllt, sobald Sie diese freigeschaltet haben.",
+    "Achievements_Hidden_Description_Plural": "Details zu diesen Errungenschaften werden enthüllt, sobald Sie diese freigeschaltet haben.",
+    "Achievements_PercentFormat": "%1$s %"
 }

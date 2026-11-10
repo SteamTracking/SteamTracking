@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Kopier lenken til utklippstavlen",
     "Chat_Visit_Link": "Åpne",
     "Chat_CloseTabAction": "Lukk fanen",
-    "Chat_CloseTabAction_SteamDeck": "Avslutt samtale",
+    "Chat_CloseTabAction_SteamDeck": "Lukk samtale",
     "Chat_Tab_ContextMenu": "Innstillinger",
     "Chat_VoiceEmptyChannel": "Det er ingen andre i denne stemmekanalen",
     "Chat_AddFriend_Hint": "Legg til en venn for å opprette en gruppesamtale",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Fikset at venne- og samtalevinduer ikke ble vist i spilloverlegget på Linux og macOS.",
     "BBCode_Loading": "Laster",
     "BBCode_Failed": "Kunne ikke laste inn",
-    "broadcastDetails_Playing": "Spiller"
+    "broadcastDetails_Playing": "Spiller",
+    "FriendsList_LoadFailed": "Kunne ikke laste vennelisten.",
+    "FriendsList_LoadFailed_Retry": "Prøv igjen",
+    "Voice_WaitingForResponse": "Venter på svar",
+    "Friend_Menu_VoiceVolume": "Stemmevolum",
+    "ChatRoom_GameInvite_Dismiss": "Avvis"
 }

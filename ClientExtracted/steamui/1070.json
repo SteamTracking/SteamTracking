@@ -32,7 +32,7 @@
     "Achievements_Summary_FromDLCCount": "<1>%1$s</1><2>de los DLC</2>",
     "Achievements_Summary_SetCount": "<1>%1$s</1><2>set</2>",
     "Achievements_Summary_SetCount_Plural": "<1>%1$s</1><2>sets</2>",
-    "Achievements_Summary_NotOwned": "No tienes este juego",
+    "Achievements_Summary_NotOwned": "Este juego no está en tu biblioteca",
     "Achievements_Toolbar_ShowGlobalStats": "Mostrar estadísticas mundiales",
     "Achievements_Toolbar_PinAchievements": "Fijar logros",
     "Achievements_Toolbar_SearchPlaceholder": "Buscar...",
@@ -93,5 +93,16 @@
     "Achievements_Compare_SelectedFriendCount_Plural": "%1$s amigos",
     "Achievements_Friends_FriendsWhoPlayCount": "<1>%1$s amigo</1> juega a este juego",
     "Achievements_Friends_FriendsWhoPlayCount_Plural": "<1>%1$s amigos</1> juegan a este juego",
-    "dummy": "dummy"
+    "dummy": "dummy",
+    "Achievements_Header_CompletedSetsTitle": "Sets completados",
+    "Achievements_Header_CompletedSetsMore": "y %1$s más…",
+    "Achievements_Summary_AchievementTotal": "%1$s logro",
+    "Achievements_Summary_AchievementTotal_Plural": "%1$s logros",
+    "Achievements_Summary_FromBaseGameAcrossSets": "<1>%2$s</1> logros del juego base repartidos en <2>%1$s set</2>",
+    "Achievements_Summary_FromBaseGameAcrossSets_Plural": "<1>%2$s</1> logros del juego base repartidos en <2>%1$s sets</2>",
+    "Achievements_Summary_FromDLCAcrossSets": "<1>%2$s</1> logros del DLC repartidos en <2>%1$s set</2>",
+    "Achievements_Summary_FromDLCAcrossSets_Plural": "<1>%2$s</1> logros del DLC repartidos en <2>%1$s sets</2>",
+    "Achievements_Hidden_Description": "Los detalles de este logro se revelarán una vez desbloqueado",
+    "Achievements_Hidden_Description_Plural": "Los detalles de estos logros se revelarán una vez desbloqueados",
+    "Achievements_PercentFormat": "%1$s %"
 }

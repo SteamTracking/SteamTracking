@@ -32,7 +32,7 @@
     "Achievements_Summary_FromDLCCount": "<1>%1$s</1><2>từ DLC</2>",
     "Achievements_Summary_SetCount": "<1>%1$s</1><2>bộ</2>",
     "Achievements_Summary_SetCount_Plural": "<1>%1$s</1><2>bộ</2>",
-    "Achievements_Summary_NotOwned": "Bạn không sở hữu trò chơi này",
+    "Achievements_Summary_NotOwned": "Trò chơi này không có trong thư viện",
     "Achievements_Toolbar_ShowGlobalStats": "Hiện số liệu toàn cầu",
     "Achievements_Toolbar_PinAchievements": "Ghim thành tựu",
     "Achievements_Toolbar_SearchPlaceholder": "Tìm kiếm...",
@@ -93,5 +93,16 @@
     "Achievements_Compare_SelectedFriendCount_Plural": "%1$s bạn bè",
     "Achievements_Friends_FriendsWhoPlayCount": "<1>%1$s bạn bè</1> chơi trò chơi này",
     "Achievements_Friends_FriendsWhoPlayCount_Plural": "<1>%1$s bạn bè</1> chơi trò chơi này",
-    "dummy": "dummy"
+    "dummy": "dummy",
+    "Achievements_Header_CompletedSetsTitle": "Bộ đã hoàn thành",
+    "Achievements_Header_CompletedSetsMore": "và %1$s bộ khác…",
+    "Achievements_Summary_AchievementTotal": "%1$s thành tựu",
+    "Achievements_Summary_AchievementTotal_Plural": "%1$s thành tựu",
+    "Achievements_Summary_FromBaseGameAcrossSets": "<1>%2$s</1> từ trò chơi gốc thuộc <2>%1$s bộ</2>",
+    "Achievements_Summary_FromBaseGameAcrossSets_Plural": "<1>%2$s</1> từ trò chơi gốc thuộc <2>%1$s bộ</2>",
+    "Achievements_Summary_FromDLCAcrossSets": "<1>%2$s</1> từ DLC thuộc <2>%1$s bộ</2>",
+    "Achievements_Summary_FromDLCAcrossSets_Plural": "<1>%2$s</1> từ DLC thuộc <2>%1$s bộ</2>",
+    "Achievements_Hidden_Description": "Chi tiết của thành tựu này sẽ được tiết lộ khi mở khoá",
+    "Achievements_Hidden_Description_Plural": "Chi tiết của các thành tựu này sẽ được tiết lộ khi mở khoá",
+    "Achievements_PercentFormat": "%1$s%"
 }

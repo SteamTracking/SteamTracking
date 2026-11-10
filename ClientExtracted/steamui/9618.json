@@ -32,7 +32,7 @@
     "Achievements_Summary_FromDLCCount": "<1>%1$s</1><2>dari DLC</2>",
     "Achievements_Summary_SetCount": "<1>%1$s</1><2>set</2>",
     "Achievements_Summary_SetCount_Plural": "<1>%1$s</1><2>set</2>",
-    "Achievements_Summary_NotOwned": "Kamu tidak memiliki game ini",
+    "Achievements_Summary_NotOwned": "Game ini tidak ada di perpustakaanmu",
     "Achievements_Toolbar_ShowGlobalStats": "Tampilkan Statistik Global",
     "Achievements_Toolbar_PinAchievements": "Sematkan Pencapaian",
     "Achievements_Toolbar_SearchPlaceholder": "Cari...",
@@ -93,5 +93,16 @@
     "Achievements_Compare_SelectedFriendCount_Plural": "%1$s Teman",
     "Achievements_Friends_FriendsWhoPlayCount": "<1>%1$s teman</1> bermain game ini",
     "Achievements_Friends_FriendsWhoPlayCount_Plural": "<1>%1$s teman</1> bermain game ini",
-    "dummy": "dummy"
+    "dummy": "dummy",
+    "Achievements_Header_CompletedSetsTitle": "Set lengkap",
+    "Achievements_Header_CompletedSetsMore": "dan %1$s lainnya…",
+    "Achievements_Summary_AchievementTotal": "%1$s pencapaian",
+    "Achievements_Summary_AchievementTotal_Plural": "%1$s pencapaian",
+    "Achievements_Summary_FromBaseGameAcrossSets": "<1>%2$s</1> dari base game dalam <2>%1$s set</2>",
+    "Achievements_Summary_FromBaseGameAcrossSets_Plural": "<1>%2$s</1> dari base game dalam <2>%1$s set</2>",
+    "Achievements_Summary_FromDLCAcrossSets": "<1>%2$s</1> dari DLC dalam <2>%1$s set</2>",
+    "Achievements_Summary_FromDLCAcrossSets_Plural": "<1>%2$s</1> dari DLC dalam <2>%1$s set</2>",
+    "Achievements_Hidden_Description": "Rincian dari pencapaian ini akan ditampilkan setelah kamu membukanya",
+    "Achievements_Hidden_Description_Plural": "Rincian dari pencapaian-pencapaian ini akan ditampilkan setelah kamu membukanya.",
+    "Achievements_PercentFormat": "%1$s%"
 }

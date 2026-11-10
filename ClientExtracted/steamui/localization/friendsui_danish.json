@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Kopier link til udklipsholder",
     "Chat_Visit_Link": "Åbn",
     "Chat_CloseTabAction": "Luk fanen",
-    "Chat_CloseTabAction_SteamDeck": "Afslut chat",
+    "Chat_CloseTabAction_SteamDeck": "Luk chat",
     "Chat_Tab_ContextMenu": "Indstillinger",
     "Chat_VoiceEmptyChannel": "Der er ingen andre i denne stemmekanal",
     "Chat_AddFriend_Hint": "Tilføj en ven for at oprette en gruppechat",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Rettelse af venne- og chatvinduer, som ikke blev vist i overlayet i spil i Linux og macOS.",
     "BBCode_Loading": "Indlæser",
     "BBCode_Failed": "Indlæsningen mislykkedes",
-    "broadcastDetails_Playing": "Spiller"
+    "broadcastDetails_Playing": "Spiller",
+    "FriendsList_LoadFailed": "Kunne ikke indlæse din venneliste.",
+    "FriendsList_LoadFailed_Retry": "Prøv igen",
+    "Voice_WaitingForResponse": "Afventer svar",
+    "Friend_Menu_VoiceVolume": "Stemmelydstyrke",
+    "ChatRoom_GameInvite_Dismiss": "Afvis"
 }

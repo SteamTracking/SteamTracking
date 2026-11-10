@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Kopioi linkki leikepöydälle",
     "Chat_Visit_Link": "Avaa",
     "Chat_CloseTabAction": "Sulje välilehti",
-    "Chat_CloseTabAction_SteamDeck": "Lopeta chat",
+    "Chat_CloseTabAction_SteamDeck": "Sulje chat",
     "Chat_Tab_ContextMenu": "Asetukset",
     "Chat_VoiceEmptyChannel": "Muita ei ole tällä äänikanavalla",
     "Chat_AddFriend_Hint": "Lisää kaveri aloittaaksesi ryhmächat",
@@ -981,7 +981,7 @@
     "FriendSettings_Notification_ChatMessageDesc": "Poista palveluilmoitukset kavereilta, joilla ei ole käyttäjäkohtaisia asetuksia.",
     "FriendSettings_Notification_ChatRoomNotificationDesc": "Poista palveluilmoitukset ryhmächateistä",
     "FriendSettings_DisableRoomEffects": "Poista animoidut chat-tehosteet käytöstä",
-    "FriendSettings_AnimatedAvatars": "Ota käyttöön animoidut avatarit ja avatar-kehykset kaverilistassa ja chatissa",
+    "FriendSettings_AnimatedAvatars": "Ota käyttöön animoidut avatarit ja avatarkehykset kaverilistassa ja chatissa",
     "FriendSettings_ChatFontSize": "Fonttikoko",
     "FriendSetting_ChatFontSmall": "Pieni",
     "FriendSetting_ChatFontDefault": "Oletus",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Korjattiin kaveri- ja chat-ikkunoiden piiloutuminen yhteisönäkymässä Linux- ja macOS -käyttöjärjestelmissä.",
     "BBCode_Loading": "Lataa",
     "BBCode_Failed": "Lataus epäonnistui",
-    "broadcastDetails_Playing": "Pelissä"
+    "broadcastDetails_Playing": "Pelissä",
+    "FriendsList_LoadFailed": "Kaverilistaa ei voitu ladata.",
+    "FriendsList_LoadFailed_Retry": "Yritä uudelleen",
+    "Voice_WaitingForResponse": "Odotetaan vastausta",
+    "Friend_Menu_VoiceVolume": "Puheäänen äänenvoimakkuus",
+    "ChatRoom_GameInvite_Dismiss": "Sulje"
 }

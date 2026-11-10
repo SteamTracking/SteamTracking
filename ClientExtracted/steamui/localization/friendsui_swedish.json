@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Kopiera länk till Urklipp",
     "Chat_Visit_Link": "Öppna",
     "Chat_CloseTabAction": "Stäng flik",
-    "Chat_CloseTabAction_SteamDeck": "Avsluta chatt",
+    "Chat_CloseTabAction_SteamDeck": "Stäng chatten",
     "Chat_Tab_ContextMenu": "Alternativ",
     "Chat_VoiceEmptyChannel": "Det finns ingen annan i denna röstkanal",
     "Chat_AddFriend_Hint": "Lägg till en vän för att skapa en gruppchatt",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Fixade att vän- och chattfönster inte visades i spelövertoningen på Linux och macOS.",
     "BBCode_Loading": "Läser in",
     "BBCode_Failed": "Inläsning misslyckades",
-    "broadcastDetails_Playing": "Spelar"
+    "broadcastDetails_Playing": "Spelar",
+    "FriendsList_LoadFailed": "Det gick inte att läsa in vänlistan.",
+    "FriendsList_LoadFailed_Retry": "Försök igen",
+    "Voice_WaitingForResponse": "Väntar på svar",
+    "Friend_Menu_VoiceVolume": "Röstvolym",
+    "ChatRoom_GameInvite_Dismiss": "Avvisa"
 }

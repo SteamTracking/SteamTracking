@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Hivatkozás másolása vágólapra",
     "Chat_Visit_Link": "Megnyitás",
     "Chat_CloseTabAction": "Fül bezárása",
-    "Chat_CloseTabAction_SteamDeck": "Csevegés vége",
+    "Chat_CloseTabAction_SteamDeck": "Csevegés bezárása",
     "Chat_Tab_ContextMenu": "Beállítások",
     "Chat_VoiceEmptyChannel": "Senki sincs ebben a hangcsatornában",
     "Chat_AddFriend_Hint": "Csoportos csevegés indításához adj hozzá barátot",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Javítottuk, hogy a barát- és csevegésablakok Linuxon és macOS-en nem jelentek meg a játékbeli átfedésen.",
     "BBCode_Loading": "Betöltés",
     "BBCode_Failed": "Nem sikerült betölteni",
-    "broadcastDetails_Playing": "Ezzel játszik:"
+    "broadcastDetails_Playing": "Ezzel játszik:",
+    "FriendsList_LoadFailed": "Nem sikerült betölteni a barátlistádat.",
+    "FriendsList_LoadFailed_Retry": "Újrapróbálás",
+    "Voice_WaitingForResponse": "Várakozás a válaszra",
+    "Friend_Menu_VoiceVolume": "Beszédhangerő",
+    "ChatRoom_GameInvite_Dismiss": "Elutasít"
 }

@@ -2277,8 +2277,6 @@ ${FILENAME}
 17CUtlPriorityQueueIPN25SteamNetworkingSocketsLib8IThinkerENS0_11ThinkerLessENS0_15ThinkerSetIndexEE
 17CVideoFrameHeader
 17StoreItem_Reviews
-18:15:03
-18:15:07
 18CControllerOverlay
 18CFrameStatsListMsg
 18CGetCursorImageMsg
@@ -2388,6 +2386,8 @@ ${FILENAME}
 21StoreItem_ReleaseInfo
 21StoreItem_Screenshots
 21UserSystemInformation
+22:37:53
+22:37:57
 22AES_ECB_DecryptContext
 22AES_ECB_EncryptContext
 22AES_GCM_DecryptContext
@@ -8663,7 +8663,7 @@ NotoSansCJKkr-Regular.otf
 NotoSansCJKsc-Regular.otf
 NotoSansCJKtc-Regular.otf
 NotoSansThai-Regular.ttf
-Nov  7 2026
+Nov  9 2026
 November
 Nu s-a putut g
 Nu s-a putut porni transmisiunea pe calculatorul de la distan
@@ -18182,7 +18182,7 @@ lg inputtilstand for %s
 lg maskinen, der skal forbindes til
 lg maskinen, der skal forbindes til:
 lhatod r
-lib Nov  7 2026 18:15:06
+lib Nov  9 2026 22:37:57
 lib(%lu)
 libEGL.so.1
 libGL.so.1

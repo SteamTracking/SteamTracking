@@ -32,7 +32,7 @@
     "Achievements_Summary_FromDLCCount": "<1>%1$s</1><2>från DLC</2>",
     "Achievements_Summary_SetCount": "<1>%1$s</1><2>uppsättning</2>",
     "Achievements_Summary_SetCount_Plural": "<1>%1$s</1><2>uppsättningar</2>",
-    "Achievements_Summary_NotOwned": "Du äger inte det här spelet",
+    "Achievements_Summary_NotOwned": "Det här spelet finns inte i ditt bibliotek",
     "Achievements_Toolbar_ShowGlobalStats": "Visa global statistik",
     "Achievements_Toolbar_PinAchievements": "Fäst prestationer",
     "Achievements_Toolbar_SearchPlaceholder": "Sök ...",
@@ -93,5 +93,16 @@
     "Achievements_Compare_SelectedFriendCount_Plural": "%1$s vänner",
     "Achievements_Friends_FriendsWhoPlayCount": "<1>%1$s vän</1> spelar det här spelet",
     "Achievements_Friends_FriendsWhoPlayCount_Plural": "<1>%1$s vänner</1> spelar det här spelet",
-    "dummy": "dummy"
+    "dummy": "dummy",
+    "Achievements_Header_CompletedSetsTitle": "Kompletta uppsättningar",
+    "Achievements_Header_CompletedSetsMore": "och %1$s till …",
+    "Achievements_Summary_AchievementTotal": "%1$s prestation",
+    "Achievements_Summary_AchievementTotal_Plural": "%1$s prestationer",
+    "Achievements_Summary_FromBaseGameAcrossSets": "<1>%2$s</1> från basspelet i <2>%1$s uppsättning</2>",
+    "Achievements_Summary_FromBaseGameAcrossSets_Plural": "<1>%2$s</1> från basspelet i <2>%1$s uppsättningar</2>",
+    "Achievements_Summary_FromDLCAcrossSets": "<1>%2$s</1> från DLC i <2>%1$s uppsättning</2>",
+    "Achievements_Summary_FromDLCAcrossSets_Plural": "<1>%2$s</1> från DLC i <2>%1$s uppsättningar</2>",
+    "Achievements_Hidden_Description": "Information om prestationen avslöjas när den blir upplåst",
+    "Achievements_Hidden_Description_Plural": "Information om prestationerna avslöjas när de blir upplåsta",
+    "Achievements_PercentFormat": "%1$s %"
 }

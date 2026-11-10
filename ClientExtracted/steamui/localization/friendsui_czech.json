@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Kopírovat odkaz do schránky",
     "Chat_Visit_Link": "Otevřít",
     "Chat_CloseTabAction": "Zavřít panel",
-    "Chat_CloseTabAction_SteamDeck": "Ukončit konverzaci",
+    "Chat_CloseTabAction_SteamDeck": "Zavřít konverzaci",
     "Chat_Tab_ContextMenu": "Možnosti",
     "Chat_VoiceEmptyChannel": "V tomto hlasovém kanálu jste sami",
     "Chat_AddFriend_Hint": "Přidat přítele a vytvořit konverzační místnost",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Byl opraven seznam přátel a okna konverzací, která se v systémech Linux a macOS nezobrazovala v překrytí služby Steam.",
     "BBCode_Loading": "Načítání",
     "BBCode_Failed": "Načítání se nezdařilo",
-    "broadcastDetails_Playing": "Hraje"
+    "broadcastDetails_Playing": "Hraje",
+    "FriendsList_LoadFailed": "Nepodařilo se načíst Váš seznam přátel.",
+    "FriendsList_LoadFailed_Retry": "Opakovat",
+    "Voice_WaitingForResponse": "Čeká se na odpověď",
+    "Friend_Menu_VoiceVolume": "Hlasitost hlasu",
+    "ChatRoom_GameInvite_Dismiss": "Zavřít"
 }

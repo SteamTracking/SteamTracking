@@ -2257,6 +2257,7 @@ http://www.dota2.com/threespirits/
 http://www.dota2.com/winter2016
 http://www.dota2.com/wraithnight/
 http://www.w3.org/1998/Math/MathML
+http://www.w3.org/1999/xhtml
 http://www.w3.org/1999/xlink
 http://www.w3.org/2000/svg
 http://www.w3.org/2000/svg${namespaceURI}
@@ -2780,7 +2781,6 @@ https://steamcommunity.com/groups/${groupid}/deleterecommendation/
 https://steamcommunity.com/groups/${groupid}/followcurator/
 https://steamcommunity.com/groups/${groupid}/setcuratordetails/
 https://steamcommunity.com/groups/${url}
-https://steamcommunity.com/groups/SteamClientBeta/discussions/
 https://steamcommunity.com/inventory/${m_steamid}/${m_appid}/${m_contextid}
 https://steamcommunity.com/invites/ajaxcreate
 https://steamcommunity.com/invites/ajaxrevoke

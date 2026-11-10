@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "クリップボードにリンクをコピー",
     "Chat_Visit_Link": "開く",
     "Chat_CloseTabAction": "タブを閉じる",
-    "Chat_CloseTabAction_SteamDeck": "チャットを終了",
+    "Chat_CloseTabAction_SteamDeck": "チャットを閉じる",
     "Chat_Tab_ContextMenu": "オプション",
     "Chat_VoiceEmptyChannel": "このボイスチャンネルには誰もいません",
     "Chat_AddFriend_Hint": "フレンドを追加してグループチャットを作成",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Linux および macOS のゲーム内オーバーレイで、フレンドとチャットウィンドウが表示されない問題を修正。",
     "BBCode_Loading": "読み込み中",
     "BBCode_Failed": "読み込みに失敗しました",
-    "broadcastDetails_Playing": "プレイ中"
+    "broadcastDetails_Playing": "プレイ中",
+    "FriendsList_LoadFailed": "フレンドリストを読み込めませんでした。",
+    "FriendsList_LoadFailed_Retry": "再試行",
+    "Voice_WaitingForResponse": "返答待ち",
+    "Friend_Menu_VoiceVolume": "ボイス音量",
+    "ChatRoom_GameInvite_Dismiss": "辞退"
 }

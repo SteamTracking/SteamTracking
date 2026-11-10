@@ -2119,6 +2119,14 @@
       },
       chunkid: (module) => {
         module.exports = {
+          HistogramChartContainer: "B6RsrH8xoriB-HdZKCO0_",
+          ChartYAxisLabel: "_1B0uo6uwXmD3OWO1kTeQ0S",
+          NoData: "_2bX9QrXyNS0IOiH7Wsfs_e",
+          ChartTooltipContent: "_1k2PEPzpqWHCourh-nuAuP",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
           Login: "_3EoMsOmqpdSZOFkxEPOqTw",
           SideBySide: "_26GwL4e6kWGCQPYX9_ZAC8",
           GuestContainer: "rLcB9iUxp0k1vOk6m_BRU",
@@ -3486,10 +3494,17 @@
           AppTitleCategory: "_23sFZwpTqnM3Ameqew-ZuX",
           CompatibilityDetailsStillLearning: "_1WWwtz2-hqx1OnhlEOCTLl",
           CompatibilityDetailsContainer: "_1-O8t3AxzpNsipTPfHVktW",
-          CompatibilityDetailsInterior_NoScroll: "_3oQPVwTgG0CmSxwl3e1cI4",
-          CompatibilityDetailsInterior_Scroll: "_2uCLczcyA7K90OppYPMeBA",
           GamePerformance: "_5LMNcPZPMKt07G9Atmv_d",
+          GamePerformanceSummary: "_1A4nGdaj6zwBL-kLmAuMK2",
+          GamePerformanceSummaryRow: "_21HEw91Ex24Tv5M6nbqy5c",
+          GamePerformanceLastUpdated: "_1hh2CwOav19PBwQBtRg2Q-",
           GamePerformanceValue: "rRMEH3oJvrQFGd520RdY0",
+          MoreInfoContainer: "_2v696E3H0_C_Nwl2j63Ors",
+          MoreInfoBody: "_12ygSYdEUuRnstjlBrbHzG",
+          Title: "_3kfKfB-pGu8SzCuHslLD42",
+          CompatibilityDetailsScroll: "_1Lr7DXWKD_uN7PaE8U1qo1",
+          CompatibilityDetailsScrollContent: "_26BT4COvbKsjGyni-i3veI",
+          CompatReportDialogBody: "_3qLtGkch9FuPc9azIltBRt",
           CompatibilityDetailsRow: "_32fPpbyivR63XHk0qiRv5n",
           CompatibilityDetailRatingSummary: "mJGYScROtrnXBuQ-LU507",
           Verified: "ewmg-iZH8r2ghippaDEbq",
@@ -3497,6 +3512,7 @@
           Unsupported: "_2Q0ld2nJ3334gwZJ4LVzPW",
           Compatible: "_2XeA02URQukjyKp0fh__XL",
           CompatibilityDetailRatingDescription: "_3456EX4aC94XtIz6d_Qhsl",
+          FrameRateDetailsSeparator: "_1QsTJEJDkP7BMwXD_fqVFA",
           CompatibilityDetailsSeparator: "_2mwbdnqm9Lk1-Bzs8FIdCU",
           CompatibilityDetailsResultIcon: "-L3Xub7NtXchyErJuHnKk",
           CompatabilityDetailsNoteContainer: "_6_vookxUbQB-_K6ZSHoOs",
@@ -3510,11 +3526,13 @@
           DeveloperComments_LinkIcon: "_3OZNUKYm6BQ2AVO-NCNw2t",
           CompatibilityTabContent: "_3c5UMEMwi7F5tnSJiw26TQ",
           CompatibilityTabs: "_1ALZVqWCl2J8DJg4XxemH1",
+          FramerateTabs: "cFpoydZeap3XrfLo3ef2O",
           pillContent: "_1M5TZawv5Y4CRNXAISchG2",
           RatingIcon: "JpPKQ9u62K6FUa-N8VbN8",
           SteamMachineDeviceIcon: "_1nTDsg_9olpJdf7qqVpGfL",
           SteamFrameDeviceIcon: "_34S3mEk7xRyS1Lnlnkd0hu",
           SteamDeckDeviceIcon: "_3IOFFIoATruXDCEVO_7Jqd",
+          MoreInfoCaret: "_38dt1RGdPyDg27Rpa3ou6z",
         };
       },
       chunkid: (module) => {
@@ -5649,7 +5667,6 @@
           DeckVerifiedFeedbackQuestion: "r0XD8O3skurvTEXlfd785",
           DeckVerifiedFeedbackConfirmation: "_2ddhhLURoNqjxfvcR5ivuM",
           GameFrameRateReportingTitle: "_3Z39smzWXIq1GCE5LBW_Tk",
-          GameFrameRateReportingHowToChange: "riys10287oEwHrU6iOvFz",
         };
       },
       chunkid: (module) => {
@@ -11412,6 +11429,28 @@
           GamepadUIBreakNarrow: "853px",
           GamepadUIBreakWide: "1280px",
           GamepadUIBreakShort: "500px",
+          FramerateReportingBanner: "v66w8s0IBeRURM9hD5nAw",
+          Question: "_2d9pc_ziCjBFV-KGQ-nsCh",
+          Title: "_2T8UwmbZ9jJzntqjQU4czU",
+          Buttons: "D94L8oSsJf2NM5kl2aZh4",
+          Button: "_3Hl9CmBQ_z_kwNChjoX_3X",
+          Confirmation: "_1zb2MrzgdBlkpvIFIjM_t",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          BreakNarrow: "1158px",
+          BreakWide: "1774px",
+          BreakUltraWide: "2100px",
+          BreakShort: "600px",
+          BreakTall: "1200px",
+          RightBreakUltraNarrow: "600px",
+          RightBreakNarrow: "884px",
+          RightBreakWide: "1500px",
+          RightBreakUltraWide: "1826px",
+          GamepadUIBreakNarrow: "853px",
+          GamepadUIBreakWide: "1280px",
+          GamepadUIBreakShort: "500px",
           "duration-app-launch": "800ms",
           narrowWidth: "500px",
           FriendsSection: "qGJMO0uQwngYsOvMwgGWa",
@@ -12074,6 +12113,13 @@
           ShowControlsOverview: "_2g15HS4KUNrtbpURYQzimT",
           LegionGoSvg: "_3BgZj3ZAXTDRBFr4x80Xfi",
           ShowControlOverviewContainerAnimation: "MNeWPl9B4t7DNMXB0HIDA",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          Description: "D2l4_sWFC_kkULZRV9xbD",
+          HowToChange: "soab1lEt89s3fbWJCs-hE",
+          SettingsLink: "_23RARDE01pZtYMsu4MCtQv",
         };
       },
       chunkid: (module) => {
@@ -35984,7 +36030,7 @@
           ShowChatUnreadMessages(_) {
             if (
               this.m_FriendsUIApp.ParentalStore.BIsFriendsBlocked() ||
-              this.m_FriendsUIApp.SettingsStore.IsSteamInTournamentMode
+              this.m_FriendsUIApp.SettingsStore.IsSteamInTournamentMode()
             ) {
               console.log(
                 "Blocked friends list popup due to parental controls or tournament mode",
@@ -36303,7 +36349,7 @@
               {
                 message: "SignOutRequest",
                 bShowLoaderWindow: _,
-                browserContext: _,
+                browserContext: (0, _._)(_),
               },
               "https://steamloopback.host",
             ),
@@ -39617,6 +39663,7 @@
           m_bParentalLocked = void 0;
           m_stateToRestoreFrom = void 0;
           m_bRestoringPopups = !1;
+          m_promiseRestorePopups = void 0;
           m_bShuttingDown = !1;
           m_eUIMode = _.Cnj;
           m_bTheaterMode = !1;
@@ -40232,19 +40279,29 @@
           SetStateToRestoreFrom(_) {
             this.m_stateToRestoreFrom = _;
           }
-          async RestorePopupState() {
+          RestorePopupState() {
+            return this.m_promiseRestorePopups
+              ? this.m_promiseRestorePopups
+              : ((this.m_promiseRestorePopups =
+                  this.RestorePopupStateInternal().finally(() => {
+                    this.m_promiseRestorePopups = void 0;
+                  })),
+                this.m_promiseRestorePopups);
+          }
+          BFriendsUILocked() {
+            return (
+              _._.ParentalStore.BIsFriendsBlocked() ||
+              _._.SettingsStore.IsSteamInTournamentMode()
+            );
+          }
+          async RestorePopupStateInternal() {
             if (
               _._.IsGamepadUIActive() ||
               ((0, _._)(
                 !this.m_bRestoredPopupState,
                 "Second restore popup state",
               ),
-              (0, _._)(
-                !this.m_bRestoringPopups,
-                "RestorePopupState called while already restoring",
-              ),
-              _._.ParentalStore.BIsFriendsBlocked() ||
-                _._.SettingsStore.IsSteamInTournamentMode())
+              this.BFriendsUILocked())
             )
               return;
             if (((this.m_bRestoringPopups = !0), this.m_stateToRestoreFrom)) {
@@ -40256,10 +40313,15 @@
             let _ =
                 await _._.SettingsStore.GetObjectFromLocalStorageWhenReady(_),
               _ = !1;
-            ((0, _._)("WebChat.BSuppressPopupsInRestore") &&
-              (_ = await SteamClient.WebChat.BSuppressPopupsInRestore()),
-              this.RestoreFromStateObject(_, _),
-              (this.m_bRestoringPopups = !1));
+            if (
+              ((0, _._)("WebChat.BSuppressPopupsInRestore") &&
+                (_ = await SteamClient.WebChat.BSuppressPopupsInRestore()),
+              this.BFriendsUILocked())
+            ) {
+              this.m_bRestoringPopups = !1;
+              return;
+            }
+            (this.RestoreFromStateObject(_, _), (this.m_bRestoringPopups = !1));
           }
           RestoreFromStateObject(_, _) {
             let _ = this.GetPerContextChatData(_._);
@@ -90586,16 +90648,6 @@
                 children: _._.Localize("#Achievements_Links_Stats"),
               });
         }
-        function _() {
-          const _ =
-              "https://steamcommunity.com/groups/SteamClientBeta/discussions/",
-            _ = _._.Localize("#Achievements_Links_BetaFeedback");
-          return (0, _.jsx)(_._, {
-            href: _,
-            whiteSpace: "nowrap",
-            children: _,
-          });
-        }
         function _(_) {
           const { appid: _, textLink: _ } = _,
             _ = (0, _._)(),
@@ -90762,7 +90814,6 @@
                   direction: "row",
                   align: "center",
                   children: [
-                    (0, _.jsx)(_, {}),
                     (0, _.jsx)(_, {}),
                     (0, _.jsx)(_, {}),
                     (0, _.jsx)(_._, {
@@ -312531,6 +312582,7 @@ ${_}`;
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         function _(_) {
           return _ != null && _.focus !== void 0;
@@ -378966,6 +379018,8 @@ ${_}`;
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         class _ extends _.Message {
@@ -379128,11 +379182,6 @@ ${_}`;
                       _: _._.readDouble,
                       _: _._.writeDouble,
                     },
-                    mean_frame_rate_stddev: {
-                      _: 7,
-                      _: _._.readDouble,
-                      _: _._.writeDouble,
-                    },
                     frame_rate_histogram: {
                       _: 8,
                       _: !0,
@@ -379145,6 +379194,11 @@ ${_}`;
                       _: 9,
                       _: _._.readUint64String,
                       _: _._.writeUint64String,
+                    },
+                    last_updated: {
+                      _: 10,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
                     },
                   },
                 }),
@@ -379197,33 +379251,173 @@ ${_}`;
               _,
               {
                 bConstMethod: !0,
-                ePrivilege: 1,
+                ePrivilege: 2,
                 eWebAPIKeyRequirement: 2,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "store", "community"],
               },
             );
           }
           _.GetGameFrameRateStats = _;
         })(_ || (_ = {}));
         function _(_) {
-          const _ = useActiveServiceTransport();
-          return useQuery({
-            queryKey: ["performancestats_" + _],
+          const _ = (0, _._)(),
+            { data: _ } = (0, _._)({
+              queryKey: ["performancestats_" + _],
+              queryFn: async () => {
+                if (!_) return null;
+                const _ = _._.Init(_);
+                _.Body().set_appid(_);
+                const _ = await _.GetGameFrameRateStats(_, _);
+                return _.BSuccess() ? _.Body().toObject() : null;
+              },
+            });
+          return _ ?? void 0;
+        }
+        function _(_, _ = !0) {
+          return (0, _._)({
+            queryKey: ["GetControllersUsed"],
             queryFn: async () => {
-              if (!_) return null;
-              const _ = CProtoBufMsg.Init(
-                CGamePerformanceStats_GetGameFrameRateStats_Request,
-              );
-              _.Body().set_appid(_);
-              const _ = await GamePerformanceStatsService.GetGameFrameRateStats(
-                _,
-                _,
-              );
-              return _.BSuccess() ? _.Body().toObject() : null;
+              let _;
+              try {
+                const _ = `${_._.STORE_BASE_URL}account/ajaxgetcontrollersused`,
+                  _ = await _().get(_, {
+                    withCredentials: !0,
+                  });
+                if (_?.status === 200 && _?.data?.success === _._)
+                  return _.data.data;
+                _ = (0, _._)(_);
+              } catch (_) {
+                _ = (0, _._)(_);
+              }
+              return (console.error("usePlayerHardwareUsed failed:", _), null);
             },
+            select: _,
+            enabled: _ && !!_._.accountid,
           });
         }
         var _ = __webpack_require__("chunkid");
+        const _ = 3,
+          _ = 4;
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = 5;
+        function _({ active: _, payload: _ }) {
+          if (!_ || !_?.length) return null;
+          const _ = _[0].payload;
+          return (0, _.jsx)("div", {
+            className: _.ChartTooltipContent,
+            children: `${_._.Localize("#GamePerformanceStats_FPS", _.framerate ?? 0)}: ${_.percentage ?? 0}%`,
+          });
+        }
+        function _(_) {
+          return !!_?.length && Math.max(..._) > 0;
+        }
+        function _(_) {
+          const {
+              histogram: _,
+              className: _,
+              minWidth: _ = 400,
+              minHeight: _ = 300,
+            } = _,
+            _ = _.useMemo(() => {
+              if (!_) return;
+              let _ = -1;
+              if (
+                (_.forEach((_, _) => {
+                  Math.floor(_) > 0 && (_ = _);
+                }),
+                _ < 0)
+              )
+                return;
+              const _ = [];
+              return (
+                _.slice(0, _ + 1).forEach((_, _) => {
+                  _.push({
+                    framerate: _ * _,
+                    percentage: Math.round(_),
+                  });
+                }),
+                _.sort((_, _) => _.framerate - _.framerate)
+              );
+            }, [_]);
+          return _?.length
+            ? (0, _.jsxs)("div", {
+                className: (0, _._)(_.HistogramChartContainer, _),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.ChartYAxisLabel,
+                    children: _._.Localize(
+                      "#GamePerformanceStats_SessionLabel",
+                    ),
+                  }),
+                  (0, _.jsx)(_._, {
+                    width: "100%",
+                    minWidth: _,
+                    minHeight: _,
+                    children: (0, _.jsxs)(_._, {
+                      accessibilityLayer: !1,
+                      margin: {
+                        top: 35,
+                        left: 0,
+                        right: 0,
+                        bottom: 25,
+                      },
+                      data: _,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          stroke: "#888",
+                          strokeWidth: "0.5",
+                          vertical: !1,
+                        }),
+                        (0, _.jsx)(_._, {
+                          dataKey: "framerate",
+                          stroke: "white",
+                          label: {
+                            value: _._.Localize(
+                              "#GamePerformanceStats_Framerate",
+                            ),
+                            position: "bottom",
+                            fill: "#A9A9A9",
+                            fontSize: 14,
+                          },
+                        }),
+                        (0, _.jsx)(_._, {
+                          stroke: "white",
+                          domain: [() => 0, (_) => Math.max(_, 100)],
+                        }),
+                        (0, _.jsx)(_._, {
+                          content: _,
+                          cursor: !1,
+                          isAnimationActive: !1,
+                        }),
+                        (0, _.jsx)(_._, {
+                          fill: "#1a9fff",
+                          dataKey: "percentage",
+                          name: "",
+                        }),
+                      ],
+                    }),
+                  }),
+                ],
+              })
+            : (0, _.jsx)("div", {
+                className: (0, _._)(_.HistogramChartContainer, _),
+                children: (0, _.jsx)("div", {
+                  className: _.NoData,
+                  children: _._.Localize(
+                    "#GamePerformanceStats_StillGatheringData_NoDevice",
+                  ),
+                }),
+              });
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_) {
           const {
             results: _,
@@ -379316,31 +379510,36 @@ ${_}`;
                         appName: _,
                       })),
                       (_ = _)),
-              (0, _.jsxs)(_._, {
-                autoFocus: _,
-                focusableIfEmpty: _,
-                noFocusRing: !0,
-                className: _().CompatibilityDetailsContainer,
-                ..._,
-                children: [
-                  (0, _.jsxs)("div", {
-                    _: _,
-                    className: _().DialogHeader,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().DialogTitle,
-                        children: _,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().AppTitleCategory,
-                        children: _,
-                      }),
-                    ],
-                  }),
-                  _,
-                  _,
-                  !1,
-                ],
+              (0, _.jsx)(_, {
+                children: (0, _.jsxs)(_._, {
+                  autoFocus: _,
+                  focusableIfEmpty: _,
+                  noFocusRing: !0,
+                  className: _().CompatibilityDetailsContainer,
+                  ..._,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      _: _,
+                      className: _().DialogHeader,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().DialogTitle,
+                          children: _,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().AppTitleCategory,
+                          children: _,
+                        }),
+                      ],
+                    }),
+                    _,
+                    _,
+                    (0, _.jsx)(_, {
+                      appid: _.appid,
+                      appName: _,
+                    }),
+                  ],
+                }),
               })
             );
           }
@@ -379376,7 +379575,9 @@ ${_}`;
                 });
             }
             return (0, _.jsx)(_._, {
-              children: _,
+              children: (0, _.jsx)(_, {
+                children: _,
+              }),
             });
           }
           const _ = (_) =>
@@ -379467,76 +379668,81 @@ ${_}`;
               },
             ];
           return (0, _.jsx)(_, {
-            tabs: _,
-            classNameCtn: _().CompatibilityTabs,
-            classNameTabContent: _().CompatibilityTabContent,
-            startingTab: _.toString(),
-            preferredFocus: !0,
-            bDisableRouting: !0,
-            focusRingHasBorderRadius: !0,
+            children: (0, _.jsx)(_, {
+              tabs: _,
+              classNameCtn: _().CompatibilityTabs,
+              classNameTabContent: _().CompatibilityTabContent,
+              startingTab: _.toString(),
+              preferredFocus: !0,
+              bDisableRouting: !0,
+              focusRingHasBorderRadius: !0,
+            }),
+          });
+        }
+        function _(_) {
+          const [_, _] = _.useState(!1),
+            _ = _.useRef(null),
+            _ = _.useCallback(() => {
+              const _ = _.current;
+              _ && _(_.scrollHeight > _.clientHeight);
+            }, []),
+            _ = (0, _._)(_);
+          return (0, _.jsx)(_._, {
+            ref: _,
+            className: _().CompatibilityDetailsScroll,
+            children: (0, _.jsx)(_._, {
+              ref: _,
+              className: _().CompatibilityDetailsScrollContent,
+              focusableIfEmpty: _,
+              noFocusRing: !0,
+              children: _.children,
+            }),
           });
         }
         function _(_) {
           const {
-              titleId: _,
-              title: _,
-              autoFocus: _,
-              buttonProps: _,
-              ratingIcon: _,
-              ratingSummary: _,
-              deckBlogContent: _,
-              children: _,
-            } = _,
-            [_, _] = _.useState(!1),
-            _ = _.useCallback(() => _, [_]),
-            _ = _.useRef(null),
-            _ = (0, _._)();
+            titleId: _,
+            title: _,
+            autoFocus: _,
+            buttonProps: _,
+            ratingIcon: _,
+            ratingSummary: _,
+            deckBlogContent: _,
+            children: _,
+          } = _;
           let _ = _ ?? {};
-          return (
-            _.useEffect(() => {
-              _?.current?.scrollHeight !== void 0 &&
-                _?.current?.clientHeight !== void 0 &&
-                _(_?.current?.scrollHeight > _?.current?.clientHeight);
-            }, []),
-            (0, _.jsxs)(_._, {
-              className: _().CompatibilityDetailsContainer,
-              ..._,
-              children: [
-                (0, _.jsxs)("div", {
-                  children: [
-                    (0, _.jsxs)("div", {
-                      _: _,
-                      className: _().DialogHeader,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().DialogTitle,
-                          children: _,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().AppTitleCategory,
-                          children: _,
-                        }),
-                      ],
-                    }),
-                    _,
-                  ],
-                }),
-                _,
-                (0, _.jsx)(_._, {
-                  ref: _,
-                  className: _()
-                    ? _().CompatibilityDetailsInterior_Scroll
-                    : _().CompatibilityDetailsInterior_NoScroll,
-                  children: (0, _.jsx)(_._, {
-                    autoFocus: _,
-                    focusableIfEmpty: _ || _(),
-                    noFocusRing: !0,
-                    children: _,
+          return (0, _.jsxs)(_._, {
+            className: _().CompatibilityDetailsContainer,
+            ..._,
+            children: [
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsxs)("div", {
+                    _: _,
+                    className: _().DialogHeader,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().DialogTitle,
+                        children: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().AppTitleCategory,
+                        children: _,
+                      }),
+                    ],
                   }),
-                }),
-              ],
-            })
-          );
+                  _,
+                ],
+              }),
+              _,
+              (0, _.jsx)(_._, {
+                autoFocus: _,
+                focusableIfEmpty: _,
+                noFocusRing: !0,
+                children: _,
+              }),
+            ],
+          });
         }
         function _(_) {
           const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
@@ -379684,7 +379890,10 @@ ${_}`;
                         ),
                       ),
                   }),
-                !1,
+                (0, _.jsx)(_, {
+                  appid: _.appid,
+                  appName: _,
+                }),
               ],
             }),
           });
@@ -379915,19 +380124,186 @@ ${_}`;
           }
         }
         function _(_) {
-          const _ = usePerformanceStats(_.appid);
-          return useMemo(
-            () =>
-              _?.data?.frame_rates
-                ?.find((_) => _.clusterid == "1")
-                ?.mean_frame_rate?.toFixed(0),
-            [_],
-          )
-            ? jsx("div", {
-                className: styles.GamePerformance,
-                children: null,
-              })
-            : null;
+          const { histogram: _, deviceName: _, appName: _ } = _;
+          let _ = _
+            ? _._.Localize("#GamePerformanceStats_FrameRateDistribution", _, _)
+            : _._.Localize(
+                "#GamePerformanceStats_FrameRateDistribution_ThisGame",
+                _,
+              );
+          return (0, _.jsxs)("div", {
+            className: _().MoreInfoBody,
+            children: [
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().Title,
+                    children: _._.Localize(
+                      "#GamePerformanceStats_MoreInfoTitle",
+                    ),
+                  }),
+                  (0, _.jsx)("div", {
+                    children: _,
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                histogram: _,
+                minWidth: 200,
+                minHeight: 200,
+              }),
+            ],
+          });
+        }
+        const _ = [_, _];
+        function _(_) {
+          const { appid: _, appName: _ } = _,
+            _ = _(_),
+            { data: _ } = _(void 0, !!_),
+            [_, _] = _.useState(!1),
+            [_, _] = _.useState(void 0),
+            _ = _.useRef(null),
+            _ = (0, _.useMemo)(() => {
+              const _ = new Map();
+              for (const _ of _) {
+                const _ = _?.frame_rates?.find((_) => _.clusterid == "" + _);
+                if (_) {
+                  const _ = _.mean_frame_rate ?? 0;
+                  _.set(_, {
+                    average: _ > 0 ? _.toFixed(0) : void 0,
+                    histogram: _.frame_rate_histogram,
+                    lastUpdated: _.last_updated,
+                  });
+                }
+              }
+              return _;
+            }, [_]),
+            _ = (0, _.useMemo)(() => {
+              const _ = !!_.get(_)?.average,
+                _ = !!_.get(_)?.average;
+              return _ &&
+                ((_?.has_steam_deck_neptune && !_?.has_steam_deck_galileo) ||
+                  !_)
+                ? _
+                : _;
+            }, [_, _]),
+            _ = _.useMemo(
+              () =>
+                new Map([
+                  [_, _._.Localize("#GamePerformanceStats_SteamDeckLCD")],
+                  [_, _._.Localize("#GamePerformanceStats_SteamDeckOLED")],
+                ]),
+              [],
+            );
+          if (!_) return null;
+          if (!Array.from(_.values()).some((_) => !!_.average))
+            return (0, _.jsxs)("div", {
+              className: _().GamePerformance,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().FrameRateDetailsSeparator,
+                }),
+                (0, _.jsx)("div", {
+                  className: _().GamePerformanceSummary,
+                  children: _._.Localize(
+                    "#GamePerformanceStats_StillGatheringData_NoDevice",
+                  ),
+                }),
+              ],
+            });
+          const _ = _.map((_) => ({
+              name: (0, _.jsx)("div", {
+                className: _().pillContent,
+                children: _.get(_),
+              }),
+              key: _.toString(),
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  histogram: _.get(_)?.histogram,
+                  deviceName: _.get(_) ?? "",
+                  appName: _,
+                }),
+              }),
+              onClick: () => _(_),
+            })),
+            _ = _ ?? _,
+            _ = _.get(_) ?? "",
+            _ = _.get(_)?.average,
+            _ = _.get(_)?.lastUpdated ?? 0;
+          let _;
+          if (_) {
+            const _ = (0, _.jsx)("span", {
+              className: _().GamePerformanceValue,
+              children: _._.Localize("#GameFrameRate_FPS", _),
+            });
+            _ = _._.LocalizeReact("#GameFrameRate_Description_ThisGame", _, _);
+          } else
+            _ = _
+              ? _._.Localize("#GamePerformanceStats_StillGatheringData", _, _)
+              : _._.Localize(
+                  "#GamePerformanceStats_StillGatheringData_ThisGame",
+                  _,
+                );
+          const _ = !!_ && !_,
+            _ = (_) => {
+              _.propertyName == "height" &&
+                _.current?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "nearest",
+                });
+            };
+          return (0, _.jsxs)("div", {
+            className: _().GamePerformance,
+            onTransitionEnd: _,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().FrameRateDetailsSeparator,
+              }),
+              (0, _.jsxs)(_._, {
+                className: _().GamePerformanceSummary,
+                onActivate: _ ? () => _(!_) : void 0,
+                focusable: _,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().GamePerformanceSummaryRow,
+                    children: [
+                      _,
+                      _ &&
+                        (0, _.jsx)(_.Chevron, {
+                          className: _().MoreInfoCaret,
+                          direction: _ ? "up" : "down",
+                        }),
+                    ],
+                  }),
+                  !!_ &&
+                    _ > 0 &&
+                    (0, _.jsx)("div", {
+                      className: _().GamePerformanceLastUpdated,
+                      children: _._.Localize(
+                        "#GameFrameRate_LastUpdated",
+                        (0, _._)(_),
+                      ),
+                    }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                visible: _,
+                children: (0, _.jsx)("div", {
+                  ref: _,
+                  className: _().MoreInfoContainer,
+                  children: (0, _.jsx)(_, {
+                    tabs: _,
+                    classNameCtn: _().FramerateTabs,
+                    startingTab: _.toString(),
+                    controlledTab: _.toString(),
+                    preferredFocus: !0,
+                    bDisableRouting: !0,
+                    focusRingHasBorderRadius: !0,
+                  }),
+                }),
+              }),
+            ],
+          });
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
@@ -380048,6 +380424,7 @@ ${_}`;
               children: (0, _.jsx)(_._, {
                 focusable: !1,
                 "flow-children": "column",
+                className: _().CompatReportDialogBody,
                 children: _
                   ? (0, _.jsx)(_, {
                       titleId: _,
@@ -471995,7 +472372,9 @@ Status Code:` +
               break;
             case _.Workshop:
               ((_ = _),
-                (_ = _._.GetFriendState(_.accountID).display_name),
+                (_ = _.accountID
+                  ? _._.GetFriendState(_.accountID).display_name
+                  : void 0),
                 (_ = _?.user_vote_summary?.vote_for === !0),
                 (_ = !0));
               break;
@@ -473532,7 +473911,10 @@ Status Code:` +
                   ).display_name));
                 break;
               case 4:
-                ((_ = _), (_ = _._.GetFriendState(_.accountID).display_name));
+                ((_ = _),
+                  (_ = _.accountID
+                    ? _._.GetFriendState(_.accountID).display_name
+                    : void 0));
                 break;
               case 5:
                 ((_ = _),
@@ -473977,11 +474359,13 @@ Status Code:` +
                 ),
                 closeModal: _.closeModal,
               });
-            const _ = (0, _._)(_, _?.strDisplayName),
-              _ = _.bOfficial
-                ? _?.strDeveloperName
-                : _._.GetFriendState(_.accountID).display_name,
-              _ = (0, _._)(_, _),
+            const _ = (0, _._)(_, _?.strDisplayName);
+            let _;
+            _.bOfficial
+              ? (_ = _?.strDeveloperName)
+              : _.accountID &&
+                (_ = _._.GetFriendState(_.accountID).display_name);
+            const _ = (0, _._)(_, _),
               _ = _ && _._.settings?.bIsValveEmail,
               _ = _._.EditingConfiguration?.error_msg
                 ?.split(`
@@ -474895,8 +475279,9 @@ Status Code:` +
                   _,
                 ),
               );
-            };
-          (0, _._)(() => _._.EnsureEditingConfiguration(_, _));
+            },
+            _ = _._.SelectedConfigChangeIdx;
+          _.useEffect(() => _._.EnsureEditingConfiguration(_, _), [_, _, _]);
           const _ = (0, _._)(),
             _ = _.length > 0 && _?.bConfigurationEnabled,
             [_, _] = _.useState(!0),
@@ -475183,6 +475568,26 @@ Status Code:` +
                     ));
                 }
               }, [_, _, _, _.pathname]),
+              _.useEffect(() => {
+                if (!_._.BIsPreviewing) return;
+                ((0, _._)(_.pathname, {
+                  path: _._.GamepadUI.ControllerConfigurator.Root(),
+                  exact: !0,
+                }) != null ||
+                  (0, _._)(
+                    _.pathname,
+                    _._.GamepadUI.ControllerConfigurator.Main(),
+                  ) != null ||
+                  (0, _._)(
+                    _.pathname,
+                    _._.GamepadUI.ControllerConfigurator.Summary(),
+                  ) != null ||
+                  (0, _._)(
+                    _.pathname,
+                    _._.GamepadUI.ControllerConfigurator.ChooseConfiguration.Root(),
+                  ) != null) &&
+                  _._.ClearPreviewConfiguration(_, _);
+              }, [_, _, _.pathname]),
               (0, _.jsxs)(_._, {
                 children: [
                   (0, _.jsx)(_._, {
@@ -482704,10 +483109,42 @@ Status Code:` +
             ? _.key || _.code
             : _.code || _.key;
         }
+        const _ = 150,
+          _ = 0.3;
+        function _(_) {
+          switch (_) {
+            case _._.GAMEPAD_LEFTSTICK_UP:
+            case _._.GAMEPAD_LEFTSTICK_DOWN:
+            case _._.GAMEPAD_LEFTSTICK_LEFT:
+            case _._.GAMEPAD_LEFTSTICK_RIGHT:
+            case _._.GAMEPAD_LEFTSTICK_CLICK:
+            case _._.GAMEPAD_RIGHTSTICK_CLICK:
+            case _._.GAMEPAD_BUTTON_RPAD_CLICKED:
+              return !0;
+            default:
+              return !1;
+          }
+        }
         function _(_) {
           const { appid: _, address: _, onResult: _, ..._ } = _,
             [_, _] = _.useState(!1),
-            { fnStopTimer: _, fnRestartTimer: _ } = (0, _._)(
+            _ = _.useRef(!1),
+            _ = _.useCallback(
+              (_) => {
+                _.current || _ == _._ || ((_.current = !0), (0, _._)(_, _, _));
+              },
+              [_, _],
+            ),
+            _ = _.useRef(void 0),
+            _ = _.useCallback(() => {
+              const _ = _.current;
+              _ &&
+                ((_.current = void 0),
+                window.clearTimeout(_.timer),
+                _(_.button));
+            }, [_]);
+          _.useEffect(() => () => window.clearTimeout(_.current?.timer), []);
+          const { fnStopTimer: _, fnRestartTimer: _ } = (0, _._)(
               1e3,
               () => _.closeModal(),
               !1,
@@ -482741,16 +483178,25 @@ Status Code:` +
                   _.closeModal());
               },
               _ = (_, _, _, _, _) => {
-                _ <= _._.GAMEPAD_BUTTON_LAST &&
-                  (_
+                if (_ <= _._.GAMEPAD_BUTTON_LAST) {
+                  const _ = _(_);
+                  _
                     ? (_(!0),
                       _ == _._.GAMEPAD_BUTTON_B
                         ? _()
-                        : (0, _._)(_, _, (0, _._)(_)))
+                        : _
+                          ? _.current ||
+                            (_.current = {
+                              button: (0, _._)(_),
+                              timer: window.setTimeout(_, _),
+                            })
+                          : _((0, _._)(_)))
                     : _ ||
-                      (_ == _._.GAMEPAD_BUTTON_B &&
-                        (_(), (0, _._)(_, _, (0, _._)(_))),
-                      _ && _.closeModal()));
+                      (_ == _._.GAMEPAD_BUTTON_B
+                        ? (_(), _((0, _._)(_)))
+                        : _ && _(),
+                      _ && _.closeModal());
+                }
               },
               _ = (0, _._)(_.ownerWindow),
               _ = _.ownerWindow;
@@ -482773,32 +483219,31 @@ Status Code:` +
                 _.unregister(),
                 _());
             };
-          }, [_.ownerWindow, _, _, _, _, _, _, _]);
+          }, [_.ownerWindow, _, _, _, _, _, _, _, _, _]);
           const _ = _.useCallback(
             (_) => {
-              (_(!0), (0, _._)(_, _, _), _.closeModal());
+              (_(!0), _(_), _.closeModal());
             },
-            [_, _, _],
+            [_, _],
           );
           _.useEffect(() => {
-            _.LeftTrackpad._ > 1e4
+            _.LeftTrackpad._ > _
               ? _(_._)
-              : _.LeftTrackpad._ < -1e4
+              : _.LeftTrackpad._ < -_
                 ? _(_._)
-                : _.LeftTrackpad._ > 1e4
+                : _.LeftTrackpad._ > _
                   ? _(_._)
-                  : _.LeftTrackpad._ < -1e4
+                  : _.LeftTrackpad._ < -_
                     ? _(_._)
                     : _.bLeftStickClick
                       ? _(_._)
-                      : _.RightTrackpad._ > 1e4 || _.RightJoystick._ > 1e4
+                      : _.RightTrackpad._ > _ || _.RightJoystick._ > _
                         ? _(_._)
-                        : _.RightTrackpad._ < -1e4 || _.RightJoystick._ < -1e4
+                        : _.RightTrackpad._ < -_ || _.RightJoystick._ < -_
                           ? _(_._)
-                          : _.RightTrackpad._ > 1e4 || _.RightJoystick._ > 1e4
+                          : _.RightTrackpad._ > _ || _.RightJoystick._ > _
                             ? _(_._)
-                            : _.RightTrackpad._ < -1e4 ||
-                                _.RightJoystick._ < -1e4
+                            : _.RightTrackpad._ < -_ || _.RightJoystick._ < -_
                               ? _(_._)
                               : _.bRightStickClick || _.bRightTrackpadClick
                                 ? _(_._)
@@ -482808,7 +483253,15 @@ Status Code:` +
                                     ? _(_._)
                                     : _.bDpadLeft
                                       ? _(_._)
-                                      : _.bDpadRight && _(_._);
+                                      : _.bDpadRight
+                                        ? _(_._)
+                                        : _.LeftJoystick._ > _
+                                          ? _(_._)
+                                          : _.LeftJoystick._ < -_
+                                            ? _(_._)
+                                            : _.LeftJoystick._ > _
+                                              ? _(_._)
+                                              : _.LeftJoystick._ < -_ && _(_._);
           }, [_, _, _, _]);
           const _ = () => !_,
             _ = _.useId();
@@ -496737,6 +497190,9 @@ Status Code:` +
           get PreviewedConfiguration() {
             return this.m_mapLoadedConfigs.get(this.m_PreviewConfiguration);
           }
+          get BIsPreviewing() {
+            return this.m_PreviewConfiguration != null;
+          }
           get ChordConfiguration() {
             return this.m_mapLoadedConfigs.get(
               this.m_ChordSummaryConfiguration,
@@ -497140,6 +497596,13 @@ Status Code:` +
                 !0);
           }
           SetEditingConfigurationValue(_, _, _, _) {
+            if (this.BIsPreviewing) {
+              _.Warning(
+                "SetEditingConfigurationValue: ignoring edit while previewing a layout",
+                (0, _._)(_),
+              );
+              return;
+            }
             const _ = new _.BinaryWriter();
             _.serializeBinaryToWriter(_.fromObject(_), _);
             const _ = _.getResultBase64String();
@@ -507997,7 +508460,6 @@ Status Code:` +
         }
         function _(_) {
           const _ = (0, _._)(),
-            _ = (0, _._)(),
             [_, _] = (0, _._)("AppDetailsTabsActive", !1),
             _ = _.useRef(void 0),
             _ = _.useRef(void 0),
@@ -508013,14 +508475,7 @@ Status Code:` +
                 _ &&
                 _._.BShouldPromptForDeckCompatibilityFeedback(_.overview.appid),
             ),
-            _ = (0, _._)(
-              () =>
-                _ &&
-                !_ &&
-                _.details?.bStorePagePublished &&
-                (0, _._)() &&
-                _._.storePreferences.game_frame_rate_reporting == _._,
-            ),
+            _ = (0, _._)(_.details),
             _ = _.useCallback(() => {
               (_(!1), _?.ScrollToTop());
             }, [_, _]),
@@ -508141,52 +508596,7 @@ Status Code:` +
           });
         }
         function _() {
-          const [_, _] = _.useState("");
-          async function _(_) {
-            const _ = `${_._.GetStoreURL()}account/savepreferences`,
-              _ = new FormData();
-            (_.append("sessionid", (0, _._)()),
-              _.append("game_frame_rate_reporting", "" + _));
-            try {
-              let _ = await _._.post(_, _, {
-                retrycount: 1,
-              });
-              if (!_.success || _.success != _._) throw _.success;
-              return _.success;
-            } catch (_) {
-              console.error("Setting permission failed", _);
-            }
-          }
-          function _(_) {
-            (_ == _._
-              ? _((0, _._)("#GameFrameRateReporting_Confirmation_No"))
-              : _((0, _._)("#GameFrameRateReporting_Confirmation_Yes")),
-              window.setTimeout(() => _(_), 6e3));
-          }
-          const _ = (_) => {
-            let _ = (0, _._)(_),
-              _ = (0, _.jsx)(_._, {
-                strTitle: (0, _._)("#GameFrameRateReporting_Details_Title"),
-                strDescription: (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)("div", {
-                      children: (0, _._)(
-                        "#GameFrameRateReporting_Details_Desc",
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _().GameFrameRateReportingHowToChange,
-                      children: (0, _._)(
-                        "#GameFrameRateReporting_Details_HowToChange",
-                      ),
-                    }),
-                  ],
-                }),
-                strOKButtonText: (0, _._)("#Button_OK"),
-                bAlertDialog: !0,
-              });
-            (0, _._)(_, _);
-          };
+          const [_, _] = (0, _._)();
           return _ !== ""
             ? (0, _.jsx)(_._, {
                 className: _().DeckVerifiedFeedbackConfirmationContainer,
@@ -508224,7 +508634,8 @@ Status Code:` +
                   }),
                   (0, _.jsx)(_._, {
                     noFocusRing: !0,
-                    onActivate: _,
+                    onActivate: (_) =>
+                      (0, _._)((0, _.jsx)(_._, {}), (0, _._)(_)),
                     className: (0, _._)(_().DeckVerifiedFeedbackButton),
                     focusClassName: _().Focused,
                     children: (0, _._)("#GameFrameRateReporting_LearnMore"),
@@ -512674,6 +513085,7 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -582796,7 +583208,7 @@ Status Code:` +
                 this.m_CMInterface.GetServiceTransport(),
                 _,
               ).then((_) => {
-                if (!_) return;
+                if (!_?.BSuccess()) return;
                 const _ = this.m_rgDeckCompatibilityFeedback_Ask.findIndex(
                     (_) => _ == _.unAppID,
                   ),
@@ -604757,6 +605169,11 @@ Status Code:` +
               ? this.m_mapAppOverlayToasts.set(_, [])
               : !_ && _ && this.m_mapAppOverlayToasts.delete(_);
           }
+          GetAppsWithOverlayRunning() {
+            return Array.from(this.m_mapAppOverlayToasts.keys()).filter(
+              (_) => !!_,
+            );
+          }
           BIsUserInGame() {
             return _._.BIsOverlayPath(_._.m_history?.location.pathname);
           }
@@ -605164,9 +605581,9 @@ Status Code:` +
                 _.serializeBinary(),
               );
             else
-              for (const _ of _._.RunningApps)
+              for (const _ of this.GetAppsWithOverlayRunning())
                 this.AddAppOverlayNotification(
-                  _.appid,
+                  _,
                   this.m_nNextTestNotificationID++,
                   _._._,
                   _.serializeBinary(),
@@ -605249,9 +605666,9 @@ Status Code:` +
               this.m_eErrorConditionNotificationShowing = _;
               const _ = _.serializeBinary(),
                 _ = () => this.m_eErrorConditionNotificationShowing != _;
-              for (const _ of _._.RunningApps)
+              for (const _ of this.GetAppsWithOverlayRunning())
                 this.AddAppOverlayNotification(
-                  _.appid,
+                  _,
                   this.m_nNextTestNotificationID++,
                   _,
                   _,
@@ -609405,6 +609822,7 @@ Status Code:` +
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -610012,7 +610430,7 @@ Status Code:` +
           return (0, _._)(() => [_.friendSettings[_], _]);
         }
         function _(_) {
-          return useObserver(() => [_.storePreferences[_]]);
+          return (0, _._)(() => [_.storePreferences[_]]);
         }
         function _(_) {
           const _ = (0, _.useCallback)(
@@ -648574,6 +648992,7 @@ Status Code:` +
                 popupHeight: 480,
                 refPopup: _,
                 onlyPopoutIfNeeded: !0,
+                modalClassName: "InstallRequestDialog",
                 className: _().InstallRequestModal,
                 onDismiss: _,
                 bGamepadUIScrollWithin: !0,
@@ -682641,7 +683060,73 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const _ = (0, _._)(_.details),
+            [_, _] = (0, _._)();
+          return _
+            ? _
+              ? (0, _.jsx)("div", {
+                  className: _().FramerateReportingBanner,
+                  children: (0, _.jsx)("div", {
+                    className: _().Confirmation,
+                    children: _,
+                  }),
+                })
+              : (0, _.jsxs)("div", {
+                  className: _().FramerateReportingBanner,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _().Question,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().Title,
+                          children: (0, _._)("#GameFrameRateReporting_TitlePC"),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().Prompt,
+                          children: (0, _._)("#GameFrameRateReporting_Prompt"),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().Buttons,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          className: _().Button,
+                          onClick: () => _(_._),
+                          children: (0, _._)(
+                            "#GameFrameRateReporting_Response_Yes",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          className: _().Button,
+                          onClick: () => _(_._),
+                          children: (0, _._)(
+                            "#GameFrameRateReporting_Response_No",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          className: _().Button,
+                          onClick: (_) =>
+                            (0, _._)((0, _.jsx)(_._, {}), (0, _._)(_)),
+                          children: (0, _._)(
+                            "#GameFrameRateReporting_LearnMore",
+                          ),
+                        }),
+                      ],
+                    }),
+                  ],
+                })
+            : null;
+        }
+        var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _) =>
             _ in _
@@ -682745,6 +683230,7 @@ Status Code:` +
                 "mastersubincluded",
                 "timedtrialbanner",
                 "playtestinvites",
+                "frameratereporting",
               ],
               _ = [
                 "info",
@@ -682908,6 +683394,10 @@ Status Code:` +
                         _.has("spotlightdemo") &&
                           (0, _.jsx)(_._, {
                             overview: _,
+                            details: _,
+                          }),
+                        _.has("frameratereporting") &&
+                          (0, _.jsx)(_, {
                             details: _,
                           }),
                       ],
@@ -688769,6 +689259,100 @@ Status Code:` +
           render() {
             return this.parser.ParseBBCode(this.props.text, {});
           }
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = 6e3;
+        function _(_) {
+          const _ = (0, _._)(),
+            _ = (0, _._)(),
+            [_] = (0, _._)("game_frame_rate_reporting");
+          return _ && !_ && !!_?.bStorePagePublished && _ == _._;
+        }
+        async function _(_) {
+          const _ = `${_._.GetStoreURL()}account/savepreferences`,
+            _ = new FormData();
+          (_.append("sessionid", (0, _._)()),
+            _.append("game_frame_rate_reporting", "" + _));
+          try {
+            const _ = await _._.post(_, _, {
+              retrycount: 1,
+            });
+            if (!_.success || _.success != _._) throw _.success;
+            return !0;
+          } catch (_) {
+            return (
+              console.error(
+                "Setting game frame rate reporting permission failed",
+                _,
+              ),
+              !1
+            );
+          }
+        }
+        function _() {
+          const [_, _] = _.useState(""),
+            _ = _.useCallback((_) => {
+              (_ == _._
+                ? _((0, _._)("#GameFrameRateReporting_Confirmation_No"))
+                : _((0, _._)("#GameFrameRateReporting_Confirmation_Yes")),
+                window.setTimeout(() => _(_), _));
+            }, []);
+          return [_, _];
+        }
+        function _(_) {
+          const _ = (0, _._)(
+              `${_._.GetStoreURL()}account/cookiepreferences/#FrameRateReporting`,
+            ),
+            _ = () => {
+              (_(), _.closeModal && _.closeModal());
+            };
+          return (0, _.jsx)(_._, {
+            strTitle: (0, _._)("#GameFrameRateReporting_Details_Title"),
+            strDescription: (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().Description,
+                  children: (0, _._)("#GameFrameRateReporting_Details_Desc"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _().HowToChange,
+                  children: (0, _._)(
+                    "#GameFrameRateReporting_Details_HowToChange",
+                    (0, _.jsx)(_._, {
+                      className: _().SettingsLink,
+                      onClick: _,
+                    }),
+                  ),
+                }),
+              ],
+            }),
+            strOKButtonText: (0, _._)("#Button_OK"),
+            closeModal: _.closeModal,
+            bAlertDialog: !0,
+          });
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -704160,7 +704744,7 @@ Status Code:` +
               _.nSteamVersion > 0
                 ? _.nSteamVersion.toString()
                 : (0, _._)("#Settings_System_SteamLocalBuild"),
-            _ = parseInt(1794075078),
+            _ = parseInt(1794263641),
             _ = _ && (0, _._)(_, _, _),
             _ = _.sSteamBuildDate,
             _ = (0, _._)() ? " GMT+0000" : " GMT-0800",
@@ -744969,7 +745553,7 @@ Status Code:` +
             _ = (0, _._)(_),
             _ = !0,
             _ = _.nSteamVersion > 0 ? _.nSteamVersion.toString() : "local",
-            _ = parseInt(1794075078),
+            _ = parseInt(1794263641),
             _ = _ && (0, _._)(_, _, _),
             _ = ((_.nCPUHz || 0) / 1e3 / 1e3 / 1e3).toFixed(2) + " GHz",
             _ = (0, _._)(_.nSystemRAMSizeMB * 1024 * 1024, 0),

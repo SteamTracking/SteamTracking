@@ -32,7 +32,7 @@
     "Achievements_Summary_FromDLCCount": "<1>%1$s</1><2>fra DLC</2>",
     "Achievements_Summary_SetCount": "<1>%1$s</1><2>sæt</2>",
     "Achievements_Summary_SetCount_Plural": "<1>%1$s</1><2>sæt</2>",
-    "Achievements_Summary_NotOwned": "Du ejer ikke dette spil",
+    "Achievements_Summary_NotOwned": "Dette spil er ikke i dit bibliotek",
     "Achievements_Toolbar_ShowGlobalStats": "Vis globale statistikker",
     "Achievements_Toolbar_PinAchievements": "Fastgør præstationer",
     "Achievements_Toolbar_SearchPlaceholder": "Søg...",
@@ -93,5 +93,16 @@
     "Achievements_Compare_SelectedFriendCount_Plural": "%1$s venner",
     "Achievements_Friends_FriendsWhoPlayCount": "<1>%1$s ven</1> spiller dette spil",
     "Achievements_Friends_FriendsWhoPlayCount_Plural": "<1>%1$s venner</1> spiller dette spil",
-    "dummy": "dummy"
+    "dummy": "dummy",
+    "Achievements_Header_CompletedSetsTitle": "Gennemførte sæt",
+    "Achievements_Header_CompletedSetsMore": "og %1$s til…",
+    "Achievements_Summary_AchievementTotal": "%1$s præstation",
+    "Achievements_Summary_AchievementTotal_Plural": "%1$s præstationer",
+    "Achievements_Summary_FromBaseGameAcrossSets": "<1>%2$s</1> fra grundspillet i <2>%1$s sæt</2>",
+    "Achievements_Summary_FromBaseGameAcrossSets_Plural": "<1>%2$s</1> fra grundspillet i <2>%1$s sæt</2>",
+    "Achievements_Summary_FromDLCAcrossSets": "<1>%2$s</1> fra DLC i <2>%1$s sæt</2>",
+    "Achievements_Summary_FromDLCAcrossSets_Plural": "<1>%2$s</1> fra DLC i <2>%1$s sæt</2>",
+    "Achievements_Hidden_Description": "Oplysninger om denne præstation bliver afsløret, når den oplåses",
+    "Achievements_Hidden_Description_Plural": "Oplysninger om disse præstationer bliver afsløret, når de oplåses",
+    "Achievements_PercentFormat": "%1$s%"
 }

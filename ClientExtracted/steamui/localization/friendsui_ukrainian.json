@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Копіювати посилання до буфера обміну",
     "Chat_Visit_Link": "Перейти",
     "Chat_CloseTabAction": "Закрити вкладку",
-    "Chat_CloseTabAction_SteamDeck": "Завершити чат",
+    "Chat_CloseTabAction_SteamDeck": "Закрити чат",
     "Chat_Tab_ContextMenu": "Параметри",
     "Chat_VoiceEmptyChannel": "У цьому голосовому каналі більше нікого немає",
     "Chat_AddFriend_Hint": "Додайте друга, щоби створити груповий чат",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Виправлено помилку, внаслідок якої вікна списку друзів і чату не зображувалися в оверлеї Linux і macOS.",
     "BBCode_Loading": "Завантаження",
     "BBCode_Failed": "Не вдалося завантажити",
-    "broadcastDetails_Playing": "Відтворення"
+    "broadcastDetails_Playing": "Відтворення",
+    "FriendsList_LoadFailed": "Не вдалося завантажити ваш список друзів.",
+    "FriendsList_LoadFailed_Retry": "Повторити спробу",
+    "Voice_WaitingForResponse": "Очікують відповіді",
+    "Friend_Menu_VoiceVolume": "Гучність голосового чату",
+    "ChatRoom_GameInvite_Dismiss": "Відхилити"
 }

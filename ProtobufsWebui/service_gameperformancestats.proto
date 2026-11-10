@@ -12,14 +12,13 @@ message CGamePerformanceStats_GetGameFrameRateStats_Response_FrameRate {
 	optional uint32 report_days = 4;
 	optional uint64 report_count = 5;
 	optional double mean_frame_rate = 6;
-	optional double mean_frame_rate_stddev = 7;
 	repeated double frame_rate_histogram = 8;
 	optional uint64 histogram_report_count = 9;
 	optional uint32 last_updated = 10;
 }
 
 service GamePerformanceStats {
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetGameFrameRateStats (.CGamePerformanceStats_GetGameFrameRateStats_Request) returns (.CGamePerformanceStats_GetGameFrameRateStats_Response);
 }
 

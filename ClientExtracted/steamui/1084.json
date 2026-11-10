@@ -31,7 +31,7 @@
     "Achievements_Summary_FromDLCCount": "<1>%1$s</1><2>จากเนื้อหาดาวน์โหลด</2>",
     "Achievements_Summary_SetCount": "<1>%1$s</1><2>ชุด</2>",
     "Achievements_Summary_SetCount_Plural": "<1>%1$s</1><2>ชุด</2>",
-    "Achievements_Summary_NotOwned": "คุณไม่ได้เป็นเจ้าของเกมนี้",
+    "Achievements_Summary_NotOwned": "เกมนี้ไม่อยู่ในคลังของคุณ",
     "Achievements_Toolbar_ShowGlobalStats": "แสดงสถิติโดยรวม",
     "Achievements_Toolbar_PinAchievements": "ปักหมุดรางวัลความสำเร็จ",
     "Achievements_Toolbar_SearchPlaceholder": "ค้นหา...",
@@ -92,5 +92,17 @@
     "Achievements_Compare_SelectedFriendCount_Plural": "เพื่อน %1$s คน",
     "Achievements_Friends_FriendsWhoPlayCount": "<1>เพื่อน %1$s คน</1>เล่นเกมนี้",
     "Achievements_Friends_FriendsWhoPlayCount_Plural": "<1>เพื่อน %1$s คน</1>เล่นเกมนี้",
-    "dummy": "dummy"
+    "dummy": "dummy",
+    "Achievements_Header_LatestCompletedSet": "ชุดที่สะสมครบถ้วนล่าสุด",
+    "Achievements_Header_CompletedSetsTitle": "ชุดที่สะสมครบถ้วนแล้ว",
+    "Achievements_Header_CompletedSetsMore": "และอีก %1$s ชุด…",
+    "Achievements_Summary_AchievementTotal": "รางวัลความสำเร็จ %1$s รายการ",
+    "Achievements_Summary_AchievementTotal_Plural": "รางวัลความสำเร็จ %1$s รายการ",
+    "Achievements_Summary_FromBaseGameAcrossSets": "<1>%2$s</1> จากเกมหลักที่มีทั้งหมด <2>%1$s ชุด</2>",
+    "Achievements_Summary_FromBaseGameAcrossSets_Plural": "<1>%2$s</1> จากเกมหลักที่มีทั้งหมด <2>%1$s ชุด</2>",
+    "Achievements_Summary_FromDLCAcrossSets": "<1>%2$s</1> จากเนื้อหาดาวน์โหลดที่มีทั้งหมด <2>%1$s ชุด</2>",
+    "Achievements_Summary_FromDLCAcrossSets_Plural": "<1>%2$s</1> จากเนื้อหาดาวน์โหลดที่มีทั้งหมด <2>%1$s ชุด</2>",
+    "Achievements_Hidden_Description": "รายละเอียดเกี่ยวกับรางวัลความสำเร็จนี้จะถูกเปิดเผย เมื่อคุณปลดล็อกได้แล้ว",
+    "Achievements_Hidden_Description_Plural": "รายละเอียดเกี่ยวกับรางวัลความสำเร็จเหล่านี้จะถูกเปิดเผย เมื่อคุณปลดล็อกได้แล้ว",
+    "Achievements_PercentFormat": "%1$s%"
 }

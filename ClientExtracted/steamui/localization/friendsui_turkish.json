@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Bağlantıyı Panoya Kopyala",
     "Chat_Visit_Link": "Aç",
     "Chat_CloseTabAction": "Sekmeyi Kapat",
-    "Chat_CloseTabAction_SteamDeck": "Sohbeti Sonlandır",
+    "Chat_CloseTabAction_SteamDeck": "Sohbeti Kapat",
     "Chat_Tab_ContextMenu": "Seçenekler",
     "Chat_VoiceEmptyChannel": "Bu sesli sohbet kanalında başkası yok",
     "Chat_AddFriend_Hint": "Grup sohbeti oluşturmak için arkadaş ekleyin",
@@ -981,7 +981,7 @@
     "FriendSettings_Notification_ChatMessageDesc": "Özel arkadaş ayarlarına sahip olmayan arkadaşlardan gelecek anlık bildirimleri devre dışı bırak",
     "FriendSettings_Notification_ChatRoomNotificationDesc": "Grup sohbetlerinden gelen anlık bildirimleri devre dışı bırak",
     "FriendSettings_DisableRoomEffects": "Hareketli oda efektlerini devre dışı bırak",
-    "FriendSettings_AnimatedAvatars": "Arkadaş listenizde ve sohbette hareketli avatarları ve hareketli avatar çerçevelerini etkinleştirin",
+    "FriendSettings_AnimatedAvatars": "Arkadaş listesinde ve sohbette hareketli avatarları ve hareketli avatar çerçevelerini etkinleştir",
     "FriendSettings_ChatFontSize": "Sohbet Yazı TİPİ Boyutu",
     "FriendSetting_ChatFontSmall": "Küçük",
     "FriendSetting_ChatFontDefault": "Varsayılan",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Linux ve macOS'teki oyun içi arayüzlerde arkadaşlar ve sohbet pencerelerinin görünmemesi hatası giderildi.",
     "BBCode_Loading": "Yükleniyor",
     "BBCode_Failed": "Yüklenemedi",
-    "broadcastDetails_Playing": "Oynuyor:"
+    "broadcastDetails_Playing": "Oynuyor:",
+    "FriendsList_LoadFailed": "Arkadaş listeniz yüklenemedi.",
+    "FriendsList_LoadFailed_Retry": "Tekrar Dene",
+    "Voice_WaitingForResponse": "Yanıt bekleniyor",
+    "Friend_Menu_VoiceVolume": "Sesli Sohbet Ses Düzeyi",
+    "ChatRoom_GameInvite_Dismiss": "Yok say"
 }

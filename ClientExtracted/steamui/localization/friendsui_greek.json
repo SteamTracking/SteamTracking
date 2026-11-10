@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Αντιγραφή συνδέσμου",
     "Chat_Visit_Link": "Άνοιγμα",
     "Chat_CloseTabAction": "Κλείσιμο καρτέλας",
-    "Chat_CloseTabAction_SteamDeck": "Λήξη συνομιλίας",
+    "Chat_CloseTabAction_SteamDeck": "Κλείσιμο συνομιλίας",
     "Chat_Tab_ContextMenu": "Επιλογές",
     "Chat_VoiceEmptyChannel": "Κανένας άλλος στο φωνητικό κανάλι",
     "Chat_AddFriend_Hint": "Προσθήκη φίλου για δημιουργία ομαδικής συνομιλίας",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Διορθώθηκαν τα παράθυρα φίλων και συνομιλίας να μην εμφανίζουν την επικάλυψη εντός παιχνιδιού σε Linux και macOS.",
     "BBCode_Loading": "Φόρτωση",
     "BBCode_Failed": "Αποτυχία φόρτωσης",
-    "broadcastDetails_Playing": "Παίζει"
+    "broadcastDetails_Playing": "Παίζει",
+    "FriendsList_LoadFailed": "Δεν ήταν δυνατή η φόρτωση της λίστας φίλων σας.",
+    "FriendsList_LoadFailed_Retry": "Επανάληψη",
+    "Voice_WaitingForResponse": "Σε αναμονή απάντησης",
+    "Friend_Menu_VoiceVolume": "Ένταση φωνής",
+    "ChatRoom_GameInvite_Dismiss": "Απόρριψη"
 }

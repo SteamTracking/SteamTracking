@@ -32,7 +32,7 @@
     "Achievements_Summary_FromDLCCount": "<1>%1$s</1><2>DLCから</2>",
     "Achievements_Summary_SetCount": "<1>%1$s</1><2>セット</2>",
     "Achievements_Summary_SetCount_Plural": "<1>%1$s</1><2>セット</2>",
-    "Achievements_Summary_NotOwned": "このゲームは所有していません",
+    "Achievements_Summary_NotOwned": "このゲームはライブラリ内にありません",
     "Achievements_Toolbar_ShowGlobalStats": "グローバルデータを表示",
     "Achievements_Toolbar_PinAchievements": "実績をピン留め",
     "Achievements_Toolbar_SearchPlaceholder": "検索...",
@@ -93,5 +93,16 @@
     "Achievements_Compare_SelectedFriendCount_Plural": "%1$s人のフレンド",
     "Achievements_Friends_FriendsWhoPlayCount": "<1>%1$s人のフレンド</1>がこのゲームをプレイしています",
     "Achievements_Friends_FriendsWhoPlayCount_Plural": "<1>%1$s人のフレンド</1>がこのゲームをプレイしています",
-    "dummy": "dummy"
+    "dummy": "dummy",
+    "Achievements_Header_CompletedSetsTitle": "コンプリート済みのセット",
+    "Achievements_Header_CompletedSetsMore": "他%1$s個…",
+    "Achievements_Summary_AchievementTotal": "%1$s個の実績",
+    "Achievements_Summary_AchievementTotal_Plural": "%1$s個の実績",
+    "Achievements_Summary_FromBaseGameAcrossSets": "ベースゲームの<2>%1$sセット</2>から<1>%2$s</1>個 ",
+    "Achievements_Summary_FromBaseGameAcrossSets_Plural": "ベースゲームの<2>%1$sセット</2>から<1>%2$s</1>個 ",
+    "Achievements_Summary_FromDLCAcrossSets": "DLCの<2>%1$sセット</2>から<1>%2$s</1>個 ",
+    "Achievements_Summary_FromDLCAcrossSets_Plural": "DLCの<2>%1$sセット</2>から<1>%2$s</1>個 ",
+    "Achievements_Hidden_Description": "この実績の詳細はアンロックすると表示されます",
+    "Achievements_Hidden_Description_Plural": "これらの実績の詳細は解除すると表示されます",
+    "Achievements_PercentFormat": "%1$s%"
 }

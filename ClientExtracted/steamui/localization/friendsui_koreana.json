@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "클립보드에 링크 복사",
     "Chat_Visit_Link": "열기",
     "Chat_CloseTabAction": "탭 닫기",
-    "Chat_CloseTabAction_SteamDeck": "채팅 종료",
+    "Chat_CloseTabAction_SteamDeck": "채팅 닫기",
     "Chat_Tab_ContextMenu": "옵션",
     "Chat_VoiceEmptyChannel": "이 음성 채널에는 아무도 없습니다",
     "Chat_AddFriend_Hint": "그룹 채팅을 하려면 친구를 추가하세요",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Linux와 macOS의 게임 내 오버레이에서 친구와 채팅창이 표시되지 않는 문제를 해결했습니다.",
     "BBCode_Loading": "불러오는 중",
     "BBCode_Failed": "불러오기 실패",
-    "broadcastDetails_Playing": "플레이 중"
+    "broadcastDetails_Playing": "플레이 중",
+    "FriendsList_LoadFailed": "친구 목록을 불러올 수 없습니다.",
+    "FriendsList_LoadFailed_Retry": "다시 시도",
+    "Voice_WaitingForResponse": "응답 대기 중",
+    "Friend_Menu_VoiceVolume": "음성 음량",
+    "ChatRoom_GameInvite_Dismiss": "닫기"
 }

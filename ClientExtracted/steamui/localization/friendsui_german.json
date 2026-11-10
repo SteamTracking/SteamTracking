@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Link in Zwischenablage kopieren",
     "Chat_Visit_Link": "Öffnen",
     "Chat_CloseTabAction": "Tab schließen",
-    "Chat_CloseTabAction_SteamDeck": "Chat beenden",
+    "Chat_CloseTabAction_SteamDeck": "Chat schließen",
     "Chat_Tab_ContextMenu": "Optionen",
     "Chat_VoiceEmptyChannel": "Es befindet sich niemand im Sprachkanal",
     "Chat_AddFriend_Hint": "Einen Freund zum Gruppenchat hinzufügen",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Fehler behoben, durch den Freunde- und Chatfenster im In-Game-Overlay unter Linux und macOS nicht angezeigt wurden.",
     "BBCode_Loading": "Ladevorgang läuft",
     "BBCode_Failed": "Konnte nicht geladen werden",
-    "broadcastDetails_Playing": "Spielt"
+    "broadcastDetails_Playing": "Spielt",
+    "FriendsList_LoadFailed": "Ihre Freundesliste konnte nicht geladen werden.",
+    "FriendsList_LoadFailed_Retry": "Erneut versuchen",
+    "Voice_WaitingForResponse": "Antwort ausstehend",
+    "Friend_Menu_VoiceVolume": "Lautstärke",
+    "ChatRoom_GameInvite_Dismiss": "Verwerfen"
 }

@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "复制链接至剪贴板",
     "Chat_Visit_Link": "打开",
     "Chat_CloseTabAction": "关闭选项卡",
-    "Chat_CloseTabAction_SteamDeck": "结束聊天",
+    "Chat_CloseTabAction_SteamDeck": "关闭聊天",
     "Chat_Tab_ContextMenu": "选项",
     "Chat_VoiceEmptyChannel": "此语音频道中没有其他人",
     "Chat_AddFriend_Hint": "添加好友进行群组聊天",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "修复了好友和聊天窗口在 Linux 及 macOS 上的游戏内叠加界面中不显示的问题。",
     "BBCode_Loading": "正在载入",
     "BBCode_Failed": "载入失败",
-    "broadcastDetails_Playing": "正在播放"
+    "broadcastDetails_Playing": "正在播放",
+    "FriendsList_LoadFailed": "无法载入您的好友列表。",
+    "FriendsList_LoadFailed_Retry": "重试",
+    "Voice_WaitingForResponse": "等待回应",
+    "Friend_Menu_VoiceVolume": "语音音量",
+    "ChatRoom_GameInvite_Dismiss": "忽略"
 }

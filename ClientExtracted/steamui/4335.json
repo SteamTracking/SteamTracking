@@ -32,7 +32,7 @@
     "Achievements_Summary_FromDLCCount": "<1>%1$s</1> <2>z DLC</2>",
     "Achievements_Summary_SetCount": "<2>Zestawy:</2><1>%1$s</1>",
     "Achievements_Summary_SetCount_Plural": "<2>Zestawy:</2><1>%1$s</1>",
-    "Achievements_Summary_NotOwned": "Nie posiadasz tej gry",
+    "Achievements_Summary_NotOwned": "Tej gry nie ma w twojej bibliotece",
     "Achievements_Toolbar_ShowGlobalStats": "Pokaż statystyki globalne",
     "Achievements_Toolbar_PinAchievements": "Przypnij osiągnięcia",
     "Achievements_Toolbar_SearchPlaceholder": "Szukaj…",
@@ -93,5 +93,16 @@
     "Achievements_Compare_SelectedFriendCount_Plural": "Znajomi: %1$s",
     "Achievements_Friends_FriendsWhoPlayCount": "<1>%1$s znajomy</1> gra w tę grę",
     "Achievements_Friends_FriendsWhoPlayCount_Plural": "<1>%1$s znajomych</1> gra w tę grę",
-    "dummy": "dummy"
+    "dummy": "dummy",
+    "Achievements_Header_CompletedSetsTitle": "Ukończone zestawy",
+    "Achievements_Header_CompletedSetsMore": "i jeszcze %1$s…",
+    "Achievements_Summary_AchievementTotal": "Osiągnięcia: %1$s",
+    "Achievements_Summary_AchievementTotal_Plural": "Osiągnięcia: %1$s",
+    "Achievements_Summary_FromBaseGameAcrossSets": "<1>%2$s</1> z gry bazowej w obrębie <2>%1$s zestawu</2>",
+    "Achievements_Summary_FromBaseGameAcrossSets_Plural": "<1>%2$s</1> z gry bazowej w obrębie <2>%1$s zestawów</2>",
+    "Achievements_Summary_FromDLCAcrossSets": "<1>%2$s</1> z DLC w obrębie <2>%1$s zestawu</2>",
+    "Achievements_Summary_FromDLCAcrossSets_Plural": "<1>%2$s</1> z DLC w obrębie <2>%1$s zestawów</2>",
+    "Achievements_Hidden_Description": "Szczegóły dla tego osiągnięcia zostaną podane po jego odblokowaniu.",
+    "Achievements_Hidden_Description_Plural": "Szczegóły dla tych osiągnięć zostaną podane po ich odblokowaniu.",
+    "Achievements_PercentFormat": "%1$s%"
 }

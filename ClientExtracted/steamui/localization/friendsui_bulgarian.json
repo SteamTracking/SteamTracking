@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Копиране на връзката в клипборда",
     "Chat_Visit_Link": "Отваряне",
     "Chat_CloseTabAction": "Затваряне на раздела",
-    "Chat_CloseTabAction_SteamDeck": "Приключване на чата",
+    "Chat_CloseTabAction_SteamDeck": "Затваряне на чата",
     "Chat_Tab_ContextMenu": "Опции",
     "Chat_VoiceEmptyChannel": "Няма никой друг в този гласов канал",
     "Chat_AddFriend_Hint": "Добавяне на приятел, за да направите групов чат",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Поправено е, че списъкът с приятели и чат прозорците не се изобразяваха в игралния Steam слой под Linux и macOS.",
     "BBCode_Loading": "Зареждане",
     "BBCode_Failed": "Неуспешно зареждане",
-    "broadcastDetails_Playing": "Играе"
+    "broadcastDetails_Playing": "Играе",
+    "FriendsList_LoadFailed": "Невъзможно зареждане на списъка Ви с приятели.",
+    "FriendsList_LoadFailed_Retry": "Повторен опит",
+    "Voice_WaitingForResponse": "В очакване на отговор",
+    "Friend_Menu_VoiceVolume": "Сила на гласа",
+    "ChatRoom_GameInvite_Dismiss": "Отхвърляне"
 }

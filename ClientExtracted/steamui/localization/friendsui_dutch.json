@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "Link naar klembord kopiëren",
     "Chat_Visit_Link": "Openen",
     "Chat_CloseTabAction": "Tabblad sluiten",
-    "Chat_CloseTabAction_SteamDeck": "Chat beëindigen ",
+    "Chat_CloseTabAction_SteamDeck": "Chat sluiten",
     "Chat_Tab_ContextMenu": "Opties",
     "Chat_VoiceEmptyChannel": "Er is niemand anders in dit spraakkanaal",
     "Chat_AddFriend_Hint": "Een vriend toevoegen om een groepschat te maken",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "Opgelost dat vrienden- en chatvensters niet in de overlay in het spel werden weergegeven op Linux en macOS.",
     "BBCode_Loading": "Laden",
     "BBCode_Failed": "Laden mislukt",
-    "broadcastDetails_Playing": "Speelt"
+    "broadcastDetails_Playing": "Speelt",
+    "FriendsList_LoadFailed": "Laden van je vriendenlijst mislukt.",
+    "FriendsList_LoadFailed_Retry": "Opnieuw proberen",
+    "Voice_WaitingForResponse": "Wachten op antwoord",
+    "Friend_Menu_VoiceVolume": "Volume spraak",
+    "ChatRoom_GameInvite_Dismiss": "Negeren"
 }

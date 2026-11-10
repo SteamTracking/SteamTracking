@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "คัดลอกลิงก์ไปยังคลิปบอร์ด",
     "Chat_Visit_Link": "เปิด",
     "Chat_CloseTabAction": "ปิดแท็บ",
-    "Chat_CloseTabAction_SteamDeck": "หยุดแช็ต",
+    "Chat_CloseTabAction_SteamDeck": "ปิดแช็ต",
     "Chat_Tab_ContextMenu": "ตัวเลือก",
     "Chat_VoiceEmptyChannel": "ไม่มีใครในช่องเสียงนี้",
     "Chat_AddFriend_Hint": "เพิ่มเพื่อนเพื่อสร้างกลุ่มแช็ต",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "แก้ไขหน้าต่างเพื่อนและแช็ตที่ไม่แสดงในโอเวอร์เลย์ภายในเกมบน Linux และ macOS",
     "BBCode_Loading": "กำลังโหลด",
     "BBCode_Failed": "ล้มเหลวในการโหลด",
-    "broadcastDetails_Playing": "กำลังเล่น"
+    "broadcastDetails_Playing": "กำลังเล่น",
+    "FriendsList_LoadFailed": "ไม่สามารถโหลดรายชื่อเพื่อนของคุณได้",
+    "FriendsList_LoadFailed_Retry": "ลองใหม่อีกครั้ง",
+    "Voice_WaitingForResponse": "กำลังรอการตอบกลับ",
+    "Friend_Menu_VoiceVolume": "ระดับเสียงพูด",
+    "ChatRoom_GameInvite_Dismiss": "ไม่สนใจ"
 }

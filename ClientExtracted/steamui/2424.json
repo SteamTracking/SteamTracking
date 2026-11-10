@@ -32,8 +32,8 @@
     "Achievements_Summary_FromDLCCount": "<1>%1$s</1><2>van DLC's</2>",
     "Achievements_Summary_SetCount": "<1>%1$s</1><2>set</2>",
     "Achievements_Summary_SetCount_Plural": "<1>%1$s</1><2>sets</2>",
-    "Achievements_Summary_NotOwned": "Je hebt dit spel niet",
-    "Achievements_Toolbar_ShowGlobalStats": "Globale statistieken weergeven",
+    "Achievements_Summary_NotOwned": "Dit spel zit niet in je bibliotheek",
+    "Achievements_Toolbar_ShowGlobalStats": "Algemene statistieken weergeven",
     "Achievements_Toolbar_PinAchievements": "Prestaties vastzetten",
     "Achievements_Toolbar_SearchPlaceholder": "Zoeken ...",
     "Achievements_Filter_AllAchievements": "Alle prestaties",
@@ -93,5 +93,16 @@
     "Achievements_Compare_SelectedFriendCount_Plural": "%1$s vrienden",
     "Achievements_Friends_FriendsWhoPlayCount": "<1>%1$s vriend</1> speelt dit spel",
     "Achievements_Friends_FriendsWhoPlayCount_Plural": "<1>%1$s vrienden</1> spelen dit spel",
-    "dummy": "dummy"
+    "dummy": "dummy",
+    "Achievements_Header_CompletedSetsTitle": "Voltooide sets",
+    "Achievements_Header_CompletedSetsMore": "en nog %1$s …",
+    "Achievements_Summary_AchievementTotal": "%1$s prestatie",
+    "Achievements_Summary_AchievementTotal_Plural": "%1$s prestaties",
+    "Achievements_Summary_FromBaseGameAcrossSets": "<1>%2$s</1> van het basisspel in <2>%1$s set</2>",
+    "Achievements_Summary_FromBaseGameAcrossSets_Plural": "<1>%2$s</1> van het basisspel in <2>%1$s sets</2>",
+    "Achievements_Summary_FromDLCAcrossSets": "<1>%2$s</1> van DLC's in <2>%1$s set</2>",
+    "Achievements_Summary_FromDLCAcrossSets_Plural": "<1>%2$s</1> van DLC's in <2>%1$s sets</2>",
+    "Achievements_Hidden_Description": "Details over deze prestatie worden weergegeven zodra deze ontgrendeld is",
+    "Achievements_Hidden_Description_Plural": "Details over deze prestaties worden weergegeven zodra ze ontgrendeld zijn",
+    "Achievements_PercentFormat": "%1$s%"
 }

@@ -536,5 +536,6 @@
     "HardwarePromo_FrameHLAlyx_Redeem_Duplicate": "似乎此台 Frame 免费附赠的《半衰期：爱莉克斯》已经被兑换。如果这一信息有误，请联系蒸汽平台客服，并提供您设备的序列号：%1$s",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "在您将自己的 PC 配置添加到评测中前，我们会检测并存储您相关的详情。蒸汽平台检测到您系统的软硬件如下：",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "保存此信息到蒸汽平台时出错。请稍后重试。",
-    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。"
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。",
+    "ContentManagement_Error_NotSharedWithContainer": "这不是蒸汽平台库文件夹支持的位置。"
 }

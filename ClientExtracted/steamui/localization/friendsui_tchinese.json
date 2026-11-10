@@ -296,7 +296,7 @@
     "Chat_Copy_Link_Clipboard": "複製連結至剪貼簿",
     "Chat_Visit_Link": "開啟",
     "Chat_CloseTabAction": "關閉分頁",
-    "Chat_CloseTabAction_SteamDeck": "結束聊天",
+    "Chat_CloseTabAction_SteamDeck": "關閉聊天",
     "Chat_Tab_ContextMenu": "選項",
     "Chat_VoiceEmptyChannel": "語音頻道中沒有其他人",
     "Chat_AddFriend_Hint": "加入其他好友進行群組聊天",
@@ -1220,5 +1220,10 @@
     "changeLog_UpdateItem57": "修正在 Linux 和 macOS 中，好友與聊天視窗無法顯示於遊戲內嵌介面中的問題",
     "BBCode_Loading": "載入中",
     "BBCode_Failed": "載入失敗",
-    "broadcastDetails_Playing": "正在遊玩"
+    "broadcastDetails_Playing": "正在遊玩",
+    "FriendsList_LoadFailed": "無法載入您的好友名單。",
+    "FriendsList_LoadFailed_Retry": "重試",
+    "Voice_WaitingForResponse": "等待語音聊天回應",
+    "Friend_Menu_VoiceVolume": "語音音量",
+    "ChatRoom_GameInvite_Dismiss": "關閉"
 }

@@ -4147,6 +4147,8 @@
     "SteamNotifications_TradeReversal_Body": "تم التراجع عن المبادلة",
     "SteamNotifications_TradeReversal_Body_Short": "تم التراجع عن المبادلة",
     "SteamNotifications_TradeReversal_Description": "تراجع شريكك في عملية المبادلة عن عمليات المبادلة الأخيرة.",
+    "GameFrameRate_Description": "متوسط اللاعبين الذين لديهم Steam Decks بلغ %1$s أثناء لعب هذا اللعبة",
+    "GameFrameRate_FPS": "%1$s إطارًا في الثانية",
     "GameFrameRateReporting_Title": "بيانات معدل إطارات خفية المصدر:",
     "GameFrameRateReporting_Prompt": "هل يمكننا جمع بيانات معدل الإطارات خفية المصدر أثناء لعبك للألعاب وتسجيل دخولك باستخدام حساب Steam الخاص بك؟ تساعدنا هذه البيانات على فهم توافق الألعاب وتحسين Steam.",
     "GameFrameRateReporting_Details_Title": "بيانات معدل إطارات خفية المصدر",
