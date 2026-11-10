@@ -6,13 +6,13 @@ import { st as t, u as n } from "./libraries.js";
 import { t as r } from "./meetsteamclanid.js";
 import { t as i } from "./moment-timezone.js";
 import {
-  $y as a,
-  Hb as o,
-  Qi as s,
-  ab as c,
-  eb as l,
-  ob as u,
-  yb as d,
+  $i as a,
+  Ub as o,
+  bb as s,
+  eb as c,
+  ob as l,
+  sb as u,
+  tb as d,
 } from "./main.js";
 var f = `meetsteam/updateregistration`,
   p = `meetsteam/attendance_qrcode`;
@@ -67,7 +67,7 @@ function C(e, t) {
     queryKey: T(e, t),
     queryFn: () => h(t),
     enabled: r() == e,
-    staleTime: d.PerMinute * 10,
+    staleTime: s.PerMinute * 10,
   };
 }
 function w(e, n) {
@@ -93,7 +93,7 @@ function k(e) {
     queryKey: [`MeetSteamRegistrantInfo`, e],
     queryFn: () => v(),
     enabled: !!e,
-    staleTime: d.PerMinute * 10,
+    staleTime: s.PerMinute * 10,
   };
 }
 function A(e) {
@@ -104,7 +104,7 @@ function j(e, t) {
     queryKey: [`useMeetSteamQRCode`, e, t],
     queryFn: () => y(e, t),
     enabled: !!t && !0,
-    staleTime: d.PerMinute * 10,
+    staleTime: s.PerMinute * 10,
   };
 }
 function M(e, n) {
@@ -116,7 +116,7 @@ function N(e, t = Intl.DateTimeFormat().resolvedOptions().timeZone) {
     : t;
 }
 function P(e) {
-  let t = s();
+  let t = a();
   return n(() => ({
     rtime_start: e.rtime_start,
     rtime_end: e.rtime_end,
@@ -131,12 +131,12 @@ function F(e, t) {
 function I(e, t) {
   let n = F(e, t),
     r = new Date();
-  return n.getFullYear() == r.getFullYear() ? a(n) : l(n);
+  return n.getFullYear() == r.getFullYear() ? c(n) : d(n);
 }
 function L(e, t) {
   let n = x.default.unix(e),
     r = x.default.unix(e).tz(t).utcOffset() - n.utcOffset();
-  return c(e + r * 60);
+  return l(e + r * 60);
 }
 function R(e, t, n, r) {
   let i = x.default.unix(e),

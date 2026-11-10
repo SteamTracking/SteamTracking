@@ -6038,6 +6038,9 @@ var _ = _((_) => {
   _ = `LP-33YQYWi4-`,
   _ = `JhfnnsDIxK8-`,
   _ = `-Tx6zpEqmwg-`,
+  _ = `xGkyVngC4NQ-`,
+  _ = `grsNWKOSm7g-`,
+  _ = `Ey-R7LUpf8g-`,
   _ = `-r51rfl-tA4-`,
   _ = `_8h5vBdpL6fo-`,
   _ = `TFD7ACJlZeI-`,
@@ -22857,29 +22860,76 @@ var _ = `NukcxEx5MbA-`,
       }),
     });
   };
+function _(_, _ = 0) {
+  let _ = /^(\d{4})-(\d{2})-(\d{2})$/.exec(_ || ``);
+  if (!_) return null;
+  let _ = new Date(Number(_[1]), Number(_[2]) - 1, Number(_[3]) + _);
+  return Math.floor(_.getTime() / 1e3);
+}
+function _(_, _, _) {
+  if (!_.rtStartTime) return !1;
+  let _ = _.rtEndTime || 2 ** 53 - 1;
+  return !((_ != null && _ <= _) || (_ != null && _.rtStartTime >= _));
+}
 function _(_) {
   let { saleDescList: _, fnSetFilteredSaleDescList: _ } = _,
     [_, _] = _(`search`, ``),
+    [_, _] = _(`start`, ``),
+    [_, _] = _(`end`, ``),
     _ = _.useRef(void 0);
   return (
     (0, _.useEffect)(() => {
-      if (!_) return _(_);
+      let _ = _(_),
+        _ = _(_, 1);
+      if (!_ && _ == null && _ == null) return _(_);
       let _ = _.filter(
         (_) =>
-          (_.strEventName || ``).toLocaleLowerCase().includes(_) ||
-          (_.strVanity || ``).toLocaleLowerCase().includes(_),
+          !(
+            (_ &&
+              !(_.strEventName || ``).toLocaleLowerCase().includes(_) &&
+              !(_.strVanity || ``).toLocaleLowerCase().includes(_)) ||
+            ((_ != null || _ != null) && !_(_, _, _))
+          ),
       );
       _(_);
-    }, [_, _, _]),
-    (0, _.jsx)(_, {
-      ref: _,
-      type: `text`,
-      label: `Search by Sale Page Name`,
-      placeholder: `type at least 2 characters..`,
-      onChange: (_) => {
-        let _ = String(_.target.value).toLocaleLowerCase();
-        ((!_ || _.trim().length < 2) && _(null), _(_.trim()));
-      },
+    }, [_, _, _, _, _]),
+    (0, _.jsxs)(`div`, {
+      className: _,
+      children: [
+        (0, _.jsx)(`div`, {
+          className: _,
+          children: (0, _.jsx)(_, {
+            ref: _,
+            type: `text`,
+            label: `Search by Sale Page Name`,
+            placeholder: `type at least 2 characters..`,
+            onChange: (_) => {
+              let _ = String(_.target.value).toLocaleLowerCase();
+              ((!_ || _.trim().length < 2) && _(null), _(_.trim()));
+            },
+          }),
+        }),
+        (0, _.jsx)(`div`, {
+          className: _,
+          children: (0, _.jsx)(_, {
+            type: `date`,
+            label: _(`#Sale_Filter_DateFrom`),
+            value: _ || ``,
+            max: _ || void 0,
+            onChange: (_) => _(_.target.value || null, !0),
+          }),
+        }),
+        (0, _.jsx)(`div`, {
+          className: _,
+          children: (0, _.jsx)(_, {
+            type: `date`,
+            label: _(`#Sale_Filter_DateTo`),
+            value: _ || ``,
+            min: _ || void 0,
+            onChange: (_) => _(_.target.value || null, !0),
+          }),
+        }),
+      ],
     })
   );
 }

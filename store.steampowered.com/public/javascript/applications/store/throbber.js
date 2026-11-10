@@ -3,7 +3,7 @@
 
 import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, ft as n } from "./libraries.js";
-import { Sc as r, Ub as i, Vb as a, oS as o } from "./main.js";
+import { Cc as r, Hb as i, Wb as a, sS as o } from "./main.js";
 var s = e(t()),
   c = `_5ZSIN7wAn6E-`,
   l = `zuEsqPx3FlM-`,
@@ -38,7 +38,7 @@ var s = e(t()),
     import.meta.url,
   ).href;
 function L() {
-  let e = i();
+  let e = a();
   return e ? o(e.LAUNCHER_TYPE) : !1;
 }
 var R = n(),
@@ -46,7 +46,7 @@ var R = n(),
     let {
         className: t,
         size: n,
-        string: i,
+        string: a,
         position: o,
         static: u,
         msDelayAppear: f,
@@ -60,7 +60,7 @@ var R = n(),
         let e = setTimeout(() => h(!0), f);
         return () => clearTimeout(e);
       }, [f, m]),
-      i === void 0 && p.push(d),
+      a === void 0 && p.push(d),
       t && p.push(t),
       u && p.push(l),
       (0, R.jsxs)(`div`, {
@@ -76,10 +76,10 @@ var R = n(),
               className: p.join(` `),
               children: (0, R.jsx)(`div`, {
                 className: `Laj-8wPgPBM-`,
-                children: (0, R.jsx)(`img`, { src: a(I) }),
+                children: (0, R.jsx)(`img`, { src: i(I) }),
               }),
             }),
-          !!i && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: i }),
+          !!a && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: a }),
         ],
       })
     );

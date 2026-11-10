@@ -13,11 +13,11 @@ import {
 } from "./libraries.js";
 import { B as c } from "./storelink.js";
 import {
-  Cr as l,
-  Ft as u,
-  H as d,
-  et as f,
-  wr as p,
+  Ea as l,
+  H as u,
+  Lr as d,
+  Ta as f,
+  et as p,
   z as m,
 } from "./saletags.js";
 import { t as h } from "./simplemodaldialog.js";
@@ -28,74 +28,74 @@ import { r as ne, t as re } from "./privateapps.js";
 import { n as ie, t as ae } from "./steammessages_friendslist_pb.js";
 import { t as oe } from "./getprofileurl.js";
 import {
+  Ac as b,
   At as se,
+  Av as x,
   Bt as ce,
-  Cb as le,
-  Ct as b,
-  Ft as ue,
-  Gb as x,
-  Gt as de,
-  Gv as fe,
-  Hb as S,
-  Ht as pe,
-  It as me,
-  Iv as he,
-  Iy as C,
-  Jc as ge,
-  Jt as w,
-  Jx as _e,
-  Kt as ve,
-  Lr as ye,
-  Lt as be,
-  Mi as xe,
-  Mt as Se,
+  Bv as le,
+  Cb as S,
+  Ct as ue,
+  Ft as de,
+  Fv as fe,
+  Gt as pe,
+  Ht as me,
+  Hv as he,
+  It as ge,
+  Jt as C,
+  Jv as w,
+  Kb as T,
+  Kt as _e,
+  Kv as ve,
+  Lt as ye,
+  Lv as be,
+  Ly as E,
+  Mt as xe,
+  Ni as Se,
   Nt as Ce,
-  Ov as we,
-  Pt as Te,
-  Pv as Ee,
-  Rt as De,
-  Sb as T,
-  St as Oe,
+  Pt as we,
+  Qv as Te,
+  Rr as Ee,
+  Rt as D,
+  Sb as O,
+  St as De,
+  Tv as Oe,
+  Ub as k,
   Ut as ke,
-  Uu as Ae,
-  Vt as E,
-  Vv as je,
-  Wt as Me,
-  Xv as Ne,
-  Yt as D,
+  Vt as A,
+  Wt as Ae,
+  Wu as je,
+  Yc as Me,
+  Yt as j,
+  Yx as Ne,
   Zt as Pe,
   Zv as Fe,
   _n as Ie,
-  av as Le,
-  by as Re,
-  cy as ze,
-  dn as Be,
-  f as Ve,
-  fn as O,
-  gn as He,
-  iy as k,
-  jt as Ue,
-  kc as A,
-  kt as We,
-  kv as j,
-  la as Ge,
-  ma as Ke,
-  mx as M,
-  qt as qe,
-  qv as N,
-  rv as Je,
-  s as P,
-  sa as Ye,
-  sd as Xe,
-  sv as Ze,
-  sy as Qe,
-  un as $e,
-  vy as et,
-  wv as tt,
-  xb as F,
-  yy as nt,
-  zt as rt,
-  zv as it,
+  ay as M,
+  by as Le,
+  ca as Re,
+  cd as ze,
+  cv as Be,
+  cy as Ve,
+  dn as He,
+  f as Ue,
+  fn as We,
+  ha as Ge,
+  hx as N,
+  iv as Ke,
+  jt as qe,
+  kt as Je,
+  kv as Ye,
+  ly as Xe,
+  ov as Ze,
+  pn as P,
+  qt as Qe,
+  s as F,
+  ua as $e,
+  vn as et,
+  wb as tt,
+  xy as nt,
+  yy as rt,
+  zt as it,
 } from "./main.js";
 var I = `giftee-hint-2`,
   at = 600;
@@ -110,9 +110,9 @@ function ot() {
           gifteeHint: e,
           gifteePlayerDetails: {
             public_data: {
-              steamid: C.InitFromAccountID(
+              steamid: E.InitFromAccountID(
                 e.nGifteeAccountID,
-                S.EUNIVERSE,
+                k.EUNIVERSE,
               ).ConvertTo64BitString(),
               persona_name: e.strPersonaName,
               sha_digest_avatar: e.rgAvatarDigest
@@ -123,7 +123,7 @@ function ot() {
         };
 }
 function st() {
-  let e = Qe();
+  let e = Ve();
   return s({
     queryKey: [I],
     queryFn: async () => {
@@ -138,7 +138,7 @@ function st() {
 }
 function ct() {
   let e = r(),
-    t = Qe();
+    t = Ve();
   return o({
     mutationFn: async (e) => {
       e
@@ -154,14 +154,14 @@ function ct() {
 }
 var L = e(t(), 1);
 async function lt(e, t, n, r, i, a) {
-  if (E(t)) {
-    let t = M.Init(rt);
+  if (A(t)) {
+    let t = N.Init(it);
     (t.Body().set_line_item_id(n),
-      t.Body().set_user_country(x.country_code),
-      i && t.Body().set_gift_info(O.fromObject(i)),
-      r && t.Body().set_flags(be.fromObject(r)),
+      t.Body().set_user_country(T.country_code),
+      i && t.Body().set_gift_info(P.fromObject(i)),
+      r && t.Body().set_flags(ye.fromObject(r)),
       a && t.Body().set_apply_gidcoupon(a));
-    let o = await De.ModifyLineItem(e, t);
+    let o = await D.ModifyLineItem(e, t);
     return (
       o.BSuccess() ||
         console.warn(`Failed to update gift info: ${o.GetEResult()}`),
@@ -169,18 +169,18 @@ async function lt(e, t, n, r, i, a) {
     );
   }
   {
-    let a = M.Init(Te);
+    let a = N.Init(we);
     (a.Body().set_gidlineitem(n),
       a.Body().set_gidshoppingcart(t.gid),
       i
-        ? a.Body().set_gift_info(O.fromObject(i))
+        ? a.Body().set_gift_info(P.fromObject(i))
         : r?.is_gift &&
           a
             .Body()
             .set_gift_info(
-              O.fromObject({ accountid_giftee: 0, email_giftee: `` }),
+              P.fromObject({ accountid_giftee: 0, email_giftee: `` }),
             ));
-    let o = await me.ModifyLineItem(e, a);
+    let o = await ge.ModifyLineItem(e, a);
     return (
       o.BSuccess() ||
         console.warn(
@@ -191,10 +191,10 @@ async function lt(e, t, n, r, i, a) {
   }
 }
 function ut() {
-  let e = D(),
-    t = k(),
+  let e = j(),
+    t = M(),
     n = r(),
-    i = Ue(e);
+    i = qe(e);
   return o({
     mutationFn: (n) =>
       lt(t, e, n.lineItemID, n.lineItemFlags, n.giftInfo, n.gidCoupon),
@@ -219,7 +219,7 @@ function ut() {
       );
     },
     onSuccess: (t) => {
-      `cart` in t ? Ce(n, e, t.cart) : Se(n, e);
+      `cart` in t ? Ce(n, e, t.cart) : xe(n, e);
     },
     onError: (e, t, r) => {
       r?.previousCart && n.setQueryData(i, r.previousCart);
@@ -228,122 +228,122 @@ function ut() {
 }
 var R = {};
 ((R.arabic = () =>
-  T(() => import(`./shoppingcart_arabic.js`), [], import.meta.url)),
+  S(() => import(`./shoppingcart_arabic.js`), [], import.meta.url)),
   (R.brazilian = () =>
-    T(() => import(`./shoppingcart_brazilian.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_brazilian.js`), [], import.meta.url)),
   (R.bulgarian = () =>
-    T(() => import(`./shoppingcart_bulgarian.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_bulgarian.js`), [], import.meta.url)),
   (R.czech = () =>
-    T(() => import(`./shoppingcart_czech.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_czech.js`), [], import.meta.url)),
   (R.danish = () =>
-    T(() => import(`./shoppingcart_danish.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_danish.js`), [], import.meta.url)),
   (R.dutch = () =>
-    T(() => import(`./shoppingcart_dutch.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_dutch.js`), [], import.meta.url)),
   (R.english = () =>
-    T(() => import(`./shoppingcart_english.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_english.js`), [], import.meta.url)),
   (R.finnish = () =>
-    T(() => import(`./shoppingcart_finnish.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_finnish.js`), [], import.meta.url)),
   (R.french = () =>
-    T(() => import(`./shoppingcart_french.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_french.js`), [], import.meta.url)),
   (R.german = () =>
-    T(() => import(`./shoppingcart_german.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_german.js`), [], import.meta.url)),
   (R.greek = () =>
-    T(() => import(`./shoppingcart_greek.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_greek.js`), [], import.meta.url)),
   (R.hungarian = () =>
-    T(() => import(`./shoppingcart_hungarian.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_hungarian.js`), [], import.meta.url)),
   (R.indonesian = () =>
-    T(() => import(`./shoppingcart_indonesian.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_indonesian.js`), [], import.meta.url)),
   (R.italian = () =>
-    T(() => import(`./shoppingcart_italian.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_italian.js`), [], import.meta.url)),
   (R.japanese = () =>
-    T(() => import(`./shoppingcart_japanese.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_japanese.js`), [], import.meta.url)),
   (R.koreana = () =>
-    T(() => import(`./shoppingcart_koreana.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_koreana.js`), [], import.meta.url)),
   (R.latam = () =>
-    T(() => import(`./shoppingcart_latam.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_latam.js`), [], import.meta.url)),
   (R.malay = () =>
-    T(() => import(`./shoppingcart_malay.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_malay.js`), [], import.meta.url)),
   (R.norwegian = () =>
-    T(() => import(`./shoppingcart_norwegian.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_norwegian.js`), [], import.meta.url)),
   (R.polish = () =>
-    T(() => import(`./shoppingcart_polish.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_polish.js`), [], import.meta.url)),
   (R.portuguese = () =>
-    T(() => import(`./shoppingcart_portuguese.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_portuguese.js`), [], import.meta.url)),
   (R.romanian = () =>
-    T(() => import(`./shoppingcart_romanian.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_romanian.js`), [], import.meta.url)),
   (R.russian = () =>
-    T(() => import(`./shoppingcart_russian.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_russian.js`), [], import.meta.url)),
   (R.sc_schinese = () =>
-    T(() => import(`./shoppingcart_sc_schinese.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_sc_schinese.js`), [], import.meta.url)),
   (R.schinese = () =>
-    T(() => import(`./shoppingcart_schinese.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_schinese.js`), [], import.meta.url)),
   (R.spanish = () =>
-    T(() => import(`./shoppingcart_spanish.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_spanish.js`), [], import.meta.url)),
   (R.swedish = () =>
-    T(() => import(`./shoppingcart_swedish.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_swedish.js`), [], import.meta.url)),
   (R.tchinese = () =>
-    T(() => import(`./shoppingcart_tchinese.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_tchinese.js`), [], import.meta.url)),
   (R.thai = () =>
-    T(() => import(`./shoppingcart_thai.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_thai.js`), [], import.meta.url)),
   (R.turkish = () =>
-    T(() => import(`./shoppingcart_turkish.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_turkish.js`), [], import.meta.url)),
   (R.ukrainian = () =>
-    T(() => import(`./shoppingcart_ukrainian.js`), [], import.meta.url)),
+    S(() => import(`./shoppingcart_ukrainian.js`), [], import.meta.url)),
   (R.vietnamese = () =>
-    T(() => import(`./shoppingcart_vietnamese.js`), [], import.meta.url)));
+    S(() => import(`./shoppingcart_vietnamese.js`), [], import.meta.url)));
 async function dt(e) {
   if (R[e]) return await R[e]();
 }
-var z = le(dt);
+var z = tt(dt);
 function ft() {
-  return Oe(z);
+  return De(z);
 }
 var B = i(),
   pt = L.createContext({ step: `initial`, setStep: () => {} });
 function mt() {
   return (0, L.useContext)(pt);
 }
-function V() {
+function ht() {
   let e = mt();
   return [e.cartWideGiftInfo, e.onCartWideGiftInfoChange];
 }
-var ht = {
+var gt = {
     include_basic_info: !0,
     include_assets: !0,
     include_platforms: !0,
     include_release: !0,
     include_included_items: !0,
   },
-  gt = {
-    ...ht,
+  _t = {
+    ...gt,
     include_included_items: !0,
     include_all_purchase_options: !0,
-    included_item_data_request: ht,
+    included_item_data_request: gt,
   };
-function _t() {
-  let e = k(),
-    t = D(),
-    [n] = V(),
-    { storeBrowseContext: r, cacheStoreItemData: i } = Je();
-  return s(vt(e, t, r, n, i));
+function vt() {
+  let e = M(),
+    t = j(),
+    [n] = ht(),
+    { storeBrowseContext: r, cacheStoreItemData: i } = Ke();
+  return s(yt(e, t, r, n, i));
 }
-function vt(e, t, n, r, i) {
+function yt(e, t, n, r, i) {
   return {
     queryKey: se(t, r),
-    queryFn: async () => yt(e, t, n, r, gt, i),
+    queryFn: async () => bt(e, t, n, r, _t, i),
     staleTime: 1 / 0,
-    enabled: x.logged_in || !E(t),
+    enabled: T.logged_in || !A(t),
   };
 }
-async function yt(e, t, n, r, i, a) {
-  let o = M.Init($e);
-  (pe(t) || de(t) || ke(t)
+async function bt(e, t, n, r, i, a) {
+  let o = N.Init(He);
+  (me(t) || pe(t) || ke(t)
     ? (o.Body().set_gidshoppingcart(t.gid),
-      r && o.Body().set_gift_info(O.fromObject(r)))
-    : Me(t) && o.Body().set_gidreplayoftransid(t.gid),
-    Ne(n, o),
-    i && Fe(o, i));
-  let s = await Be.ValidateCart(e, o);
+      r && o.Body().set_gift_info(P.fromObject(r)))
+    : Ae(t) && o.Body().set_gidreplayoftransid(t.gid),
+    Fe(n, o),
+    i && Te(o, i));
+  let s = await We.ValidateCart(e, o);
   if (
     (s.BSuccess() ||
       console.warn(`Failed to validate shopping cart: ${s.GetEResult()}`),
@@ -352,23 +352,23 @@ async function yt(e, t, n, r, i, a) {
     for (let e of s.Body().cart_items()) a(e.store_item(), i);
   return s.Body().toObject();
 }
-function bt() {
-  let e = k(),
-    t = ze();
-  return s(xt(e, t));
+function xt() {
+  let e = M(),
+    t = Xe();
+  return s(St(e, t));
 }
-function xt(e, t) {
+function St(e, t) {
   return {
     queryKey: [`GetFriendsList`, t],
     queryFn: async () => {
-      let t = M.Init(ae);
+      let t = N.Init(ae);
       return (await ie.GetFriendsList(e, t))
         .Body()
         .friendslist()
         ?.friends()
         ?.filter((e) => {
           if (!e.ulfriendid()) return !1;
-          let t = new C(e.ulfriendid());
+          let t = new E(e.ulfriendid());
           return (
             (e.efriendrelationship() == 3 || e.efriendrelationship() == 6) &&
             t.BIsIndividualAccount()
@@ -379,75 +379,75 @@ function xt(e, t) {
     enabled: !!t,
   };
 }
-var H = e(n(), 1),
-  St = `uOP1ZkYNoFQ-`,
-  Ct = {
+var V = e(n(), 1),
+  Ct = `uOP1ZkYNoFQ-`,
+  wt = {
     direction: `right`,
     style: { width: `320px`, height: `${(125 / 184) * 320}px` },
   };
-function U(e) {
+function H(e) {
   let { name_override: t, ...n } = e,
-    { data: r } = j(t ? void 0 : n),
+    { data: r } = x(t ? void 0 : n),
     i = t ?? r?.name;
-  return (0, B.jsx)(f, {
+  return (0, B.jsx)(p, {
     id: n,
-    hoverProps: Ct,
+    hoverProps: wt,
     name: i,
-    className: St,
+    className: Ct,
     bShowWishlistButton: !1,
     children: i,
   });
 }
-var wt = `_9S-gQP3e12M-`,
-  Tt = `NJNFsZf9YrI-`,
-  Et = `yFHYAHoPEy8-`,
-  Dt = `aQXIxE2O-bw-`,
-  Ot = `zE-2vFloBXg-`,
-  kt = `J5uOz7I-g34-`,
-  At = `a-PBsBWN7Ew-`,
-  jt = `NLDpkX2-k0Y-`,
-  Mt = `_6R2xLnrhkc4-`,
-  Nt = `z66txPTkjOk-`,
-  Pt = `haDNiI9PDxc-`,
-  Ft = `-CYOytt4xeQ-`,
-  It = `hL9xW9hmCcM-`,
-  Lt = `NJvD2dQAdEE-`,
-  W = `Q-SR0Ngi7UY-`,
-  G = `g0ewCCmscXQ-`,
-  Rt = `PcWMqwHyN0w-`,
-  zt = `YZ2FSdnFGNg-`,
-  Bt = `-gvj4rjzEMk-`,
-  Vt = `-Lo4RVrld3g-`,
-  Ht = `sqWiZ3b7qNM-`,
-  Ut = `_2nsTn7Qpi44-`,
-  Wt = `vvbx2mm1tEg-`,
-  Gt = `XnArREOl6S0-`,
-  Kt = `mnKMNo5wbDI-`,
-  qt = `mkK-nN-gPGA-`,
-  Jt = `-RJKTpjhcpU-`;
-function Yt(e) {
+var Tt = `_9S-gQP3e12M-`,
+  Et = `NJNFsZf9YrI-`,
+  Dt = `yFHYAHoPEy8-`,
+  Ot = `aQXIxE2O-bw-`,
+  kt = `zE-2vFloBXg-`,
+  At = `J5uOz7I-g34-`,
+  jt = `a-PBsBWN7Ew-`,
+  Mt = `NLDpkX2-k0Y-`,
+  Nt = `_6R2xLnrhkc4-`,
+  Pt = `z66txPTkjOk-`,
+  Ft = `haDNiI9PDxc-`,
+  It = `-CYOytt4xeQ-`,
+  Lt = `hL9xW9hmCcM-`,
+  Rt = `NJvD2dQAdEE-`,
+  U = `Q-SR0Ngi7UY-`,
+  W = `g0ewCCmscXQ-`,
+  zt = `PcWMqwHyN0w-`,
+  Bt = `YZ2FSdnFGNg-`,
+  Vt = `-gvj4rjzEMk-`,
+  Ht = `-Lo4RVrld3g-`,
+  Ut = `sqWiZ3b7qNM-`,
+  Wt = `_2nsTn7Qpi44-`,
+  Gt = `vvbx2mm1tEg-`,
+  Kt = `XnArREOl6S0-`,
+  qt = `mnKMNo5wbDI-`,
+  Jt = `mkK-nN-gPGA-`,
+  Yt = `-RJKTpjhcpU-`;
+function Xt(e) {
   let { scrollable: t = !1, children: n } = e;
-  return (0, B.jsx)(t ? Ie : A, {
-    className: (0, H.default)(wt, t && `B6f9D7PKzn0-`),
+  return (0, B.jsx)(t ? et : b, {
+    className: (0, V.default)(Tt, t && `B6f9D7PKzn0-`),
     focusableIfEmpty: !0,
     children: n,
   });
 }
-function K(e) {
+function G(e) {
   let { text: t, children: n, className: r, noWrap: i } = e;
-  return (0, B.jsx)(A, {
+  return (0, B.jsx)(b, {
     "flow-children": `row`,
-    className: (0, H.default)(Ft, t && `mvfriedG5SI-`, i && `JZyr8vKCuBY-`, r),
+    className: (0, V.default)(It, t && `mvfriedG5SI-`, i && `JZyr8vKCuBY-`, r),
     children: n,
   });
 }
-var Xt = L.createContext(!1);
-function q(e) {
+var Zt = L.createContext(!1);
+function K(e) {
   let { placeholder: t, className: n, children: r } = e,
-    i = L.useContext(Xt);
-  return (0, B.jsx)(He, {
-    className: (0, H.default)(
-      Tt,
+    i = L.useContext(Zt);
+  return (0, B.jsx)(Ie, {
+    className: (0, V.default)(
+      Et,
       t && `_2oROE-3IZEQ-`,
       i && !t && `rgdhFhG-mQI-`,
       n,
@@ -455,12 +455,12 @@ function q(e) {
     children: r,
   });
 }
-function J() {
-  return (0, B.jsx)(q, { placeholder: !0, children: (0, B.jsx)(Y, {}) });
+function q() {
+  return (0, B.jsx)(K, { placeholder: !0, children: (0, B.jsx)(J, {}) });
 }
-function Y() {
+function J() {
   return (0, B.jsx)(`div`, {
-    className: Ht,
+    className: Ut,
     children: (0, B.jsx)(_, {
       size: `medium`,
       position: `center`,
@@ -468,20 +468,20 @@ function Y() {
     }),
   });
 }
-function X(e) {
+function Y(e) {
   let { children: t } = e;
-  return (0, B.jsx)(K, {
+  return (0, B.jsx)(G, {
     text: !0,
-    children: (0, B.jsx)(`div`, { className: Vt, children: t }),
+    children: (0, B.jsx)(`div`, { className: Ht, children: t }),
   });
 }
-function Zt(e) {
+function Qt(e) {
   if (e.coupon_applied) return e.coupon_applied.discount_pct;
   let t = parseInt(e.original_price.amount_in_cents),
     n = parseInt(e.subtotal.amount_in_cents);
   return Math.min(99, Math.floor(((t - n) / t) * 100 + 0.5));
 }
-var Qt = (function (e) {
+var $t = (function (e) {
     return (
       (e[(e.k_ECartDisplayType_Unknown = 0)] = `k_ECartDisplayType_Unknown`),
       (e[(e.k_ECartDisplayType_Modal = 1)] = `k_ECartDisplayType_Modal`),
@@ -489,26 +489,26 @@ var Qt = (function (e) {
       e
     );
   })({}),
-  Z = L.createContext({
+  X = L.createContext({
     rgCartLevelNotices: [],
     mapValidateNoticesToFootnote: new Map(),
     eDisplayType: 0,
   });
-function $t(e) {
+function en(e) {
   let { validateCart: t, eDisplayType: n, children: r } = e,
     i = un(t, n);
-  return (0, B.jsx)(Z.Provider, { value: i, children: r });
+  return (0, B.jsx)(X.Provider, { value: i, children: r });
 }
-function en(e) {
-  return L.useContext(Z)?.mapValidateNoticesToFootnote.get(e)?.index;
+function tn(e) {
+  return L.useContext(X)?.mapValidateNoticesToFootnote.get(e)?.index;
 }
-function tn() {
-  return L.useContext(Z)?.eDisplayType ?? 0;
+function Z() {
+  return L.useContext(X)?.eDisplayType ?? 0;
 }
 function nn(e) {
   let { lineItem: t } = e,
-    n = tn(),
-    { bShowValidationNotices: r } = qe();
+    n = Z(),
+    { bShowValidationNotices: r } = Qe();
   if (!r) return null;
   let i = [],
     a = !!t.gift_info?.accountid_giftee;
@@ -686,9 +686,9 @@ function nn(e) {
 }
 function Q(e) {
   let { purchase_state: t, notice_text: n, appids: r } = e,
-    i = en(t),
-    a = tn() === 2 && !!i;
-  return (0, B.jsxs)(X, {
+    i = tn(t),
+    a = Z() === 2 && !!i;
+  return (0, B.jsxs)(Y, {
     children: [
       n,
       a && (0, B.jsx)(`sup`, { children: i }),
@@ -707,11 +707,11 @@ function rn(e) {
 }
 function an(e) {
   let { appid: t, last: n } = e,
-    { data: r } = j({ appid: t });
+    { data: r } = x({ appid: t });
   return r
     ? (0, B.jsxs)(B.Fragment, {
         children: [
-          (0, B.jsx)(U, { appid: t, name_override: r.name }),
+          (0, B.jsx)(H, { appid: t, name_override: r.name }),
           !n && (0, B.jsx)(B.Fragment, { children: `, ` }),
         ],
       })
@@ -719,24 +719,24 @@ function an(e) {
 }
 function on(e) {
   let { lineItem: t } = e,
-    { data: n } = it(t.item_id),
-    { data: r } = we(t.item_id);
-  if (t.gift_info?.accountid_giftee || !n || !r || fe(n, r)) return null;
+    { data: n } = le(t.item_id),
+    { data: r } = Ye(t.item_id);
+  if (t.gift_info?.accountid_giftee || !n || !r || ve(n, r)) return null;
   let i = r.packageid ? { packageid: r.packageid } : { bundleid: r.bundleid };
-  return (0, B.jsx)(X, {
+  return (0, B.jsx)(Y, {
     children: z.LocalizeReact(
       `#Cart_Warning_AvailableAtALowerPrice`,
-      (0, B.jsx)(U, { ...i, name_override: r.purchase_option_name }),
+      (0, B.jsx)(H, { ...i, name_override: r.purchase_option_name }),
     ),
   });
 }
 function sn(e) {
   let { nGifteeAccountID: t } = e,
-    n = C.InitFromAccountID(t, S.EUNIVERSE).ConvertTo64BitString(),
-    { data: r } = bt();
-  return L.useMemo(() => !r || r.includes(n), [r, n]) || !x.logged_in
+    n = E.InitFromAccountID(t, k.EUNIVERSE).ConvertTo64BitString(),
+    { data: r } = xt();
+  return L.useMemo(() => !r || r.includes(n), [r, n]) || !T.logged_in
     ? null
-    : (0, B.jsx)(X, { children: z.Localize(`#Cart_Warning_GiftToNonFriend`) });
+    : (0, B.jsx)(Y, { children: z.Localize(`#Cart_Warning_GiftToNonFriend`) });
 }
 function cn(e) {
   let { lineItem: t } = e;
@@ -855,27 +855,27 @@ var dn = `Ph5BwsFNGeI-`,
   vn = `Da1FmLfrtGI-`,
   yn = `rD7WvZ-sx5A-`;
 async function bn(e, t, n) {
-  if (E(t)) {
-    let t = M.Init(ce);
+  if (A(t)) {
+    let t = N.Init(ce);
     t.Body().set_line_item_id(n);
-    let r = await De.RemoveItemFromCart(e, t);
-    return (Xe(), r.Body().toObject());
+    let r = await D.RemoveItemFromCart(e, t);
+    return (ze(), r.Body().toObject());
   }
   {
-    let r = M.Init(ue);
+    let r = N.Init(de);
     (r.Body().set_gidlineitems([n]), r.Body().set_gidshoppingcart(t.gid));
-    let i = await me.RemoveLineItems(e, r);
-    return (Xe(), i.Body().toObject());
+    let i = await ge.RemoveLineItems(e, r);
+    return (ze(), i.Body().toObject());
   }
 }
 function $(e) {
-  let t = k(),
+  let t = M(),
     n = r(),
-    i = D();
+    i = j();
   return o({
     mutationFn: async () => await bn(t, i, e),
     onSuccess: (e) => {
-      `cart` in e ? Ce(n, i, e.cart) : Se(n, i);
+      `cart` in e ? Ce(n, i, e.cart) : xe(n, i);
     },
   });
 }
@@ -892,15 +892,15 @@ function xn(e) {
   let s = n?.cart_items
     ? n.cart_items.reduce((e, t) => ((e[t.line_item_id] = t), e), {})
     : {};
-  return (0, B.jsx)(Yt, {
+  return (0, B.jsx)(Xt, {
     scrollable: a,
     children: t.map((e, t) =>
       e
         ? (0, B.jsx)(
-            Xt.Provider,
+            Zt.Provider,
             {
               value: !o.has(e.line_item_id),
-              children: (0, B.jsx)(ge, {
+              children: (0, B.jsx)(Me, {
                 fallback: (t) => (0, B.jsx)(Cn, { item: e, error: t }),
                 children: (0, B.jsx)(Sn, {
                   item: e,
@@ -912,7 +912,7 @@ function xn(e) {
             },
             e.line_item_id || t,
           )
-        : (0, B.jsx)(J, {}, t),
+        : (0, B.jsx)(q, {}, t),
     ),
   });
 }
@@ -920,13 +920,13 @@ function Sn(e) {
   let { item: t, validatedItem: n, bCartValidated: r, renderLineItem: i } = e,
     a = Tn(t);
   if (!a) throw `Unknown line item type (${t.type})`;
-  let { data: o } = j(a),
-    { data: s } = Ee(a),
-    { data: c } = it(a),
-    l = s ? N(s) : a;
+  let { data: o } = x(a),
+    { data: s } = fe(a),
+    { data: c } = le(a),
+    l = s ? w(s) : a;
   return (
-    tt(l),
-    je(l),
+    Oe(l),
+    he(l),
     o && (!o.visible || c === null || (r && !n))
       ? (0, B.jsx)(Dn, {
           lineItemID: t.line_item_id,
@@ -934,7 +934,7 @@ function Sn(e) {
           storeItem: o,
         })
       : !o || !s || !c || !n
-        ? (0, B.jsx)(J, {})
+        ? (0, B.jsx)(q, {})
         : (0, B.jsx)(En, {
             lineItem: t,
             validatedItem: n,
@@ -948,22 +948,22 @@ function Sn(e) {
 function Cn(e) {
   let { item: t, error: n } = e,
     r = $(t.line_item_id),
-    i = w();
-  return (0, B.jsxs)(q, {
-    className: Ut,
+    i = C();
+  return (0, B.jsxs)(K, {
+    className: Wt,
     children: [
       (0, B.jsxs)(`div`, {
-        className: Wt,
+        className: Gt,
         children: [
           (0, B.jsx)(`div`, {
-            className: Gt,
+            className: Kt,
             children: z.Localize(`#Cart_LineItem_ErrorBoundary`),
           }),
-          (0, B.jsx)(`div`, { className: Kt, children: n.message }),
+          (0, B.jsx)(`div`, { className: qt, children: n.message }),
         ],
       }),
       !i &&
-        (0, B.jsx)(A, {
+        (0, B.jsx)(b, {
           onActivate: () => r.mutate(),
           className: `-j4iOb4uWn8-`,
           children: z.Localize(`#Cart_Remove`),
@@ -972,12 +972,12 @@ function Cn(e) {
   });
 }
 function wn() {
-  return (0, B.jsx)(q, {
-    className: Ut,
+  return (0, B.jsx)(K, {
+    className: Wt,
     children: (0, B.jsx)(`div`, {
-      className: Wt,
+      className: Gt,
       children: (0, B.jsx)(`div`, {
-        className: G,
+        className: W,
         children: z.Localize(`#Cart_Empty`),
       }),
     }),
@@ -993,7 +993,7 @@ function Tn(e) {
     case 0:
       return;
     default:
-      _e(t, `Unhandled type: ${t}`);
+      Ne(t, `Unhandled type: ${t}`);
   }
 }
 function En(e) {
@@ -1006,15 +1006,15 @@ function En(e) {
       renderLineItem: o,
     } = e,
     s = r.line_item_id,
-    l = N(t),
+    l = w(t),
     u = $(s),
     d = u.isPending || u.isSuccess,
-    { data: f } = he(l),
+    { data: f } = be(l),
     p = c(l),
     { data: m, isLoading: h } = ne(),
     _ = L.useMemo(() => p.filter((e) => m?.has(e)), [p, m]),
     v = L.useId();
-  if (h) return (0, B.jsx)(J, {});
+  if (h) return (0, B.jsx)(q, {});
   let ee = r.flags?.is_gift,
     y = p.length > 0 && _.length === p.length,
     te = !ee && _.length > 0 && !y;
@@ -1024,18 +1024,18 @@ function En(e) {
     validatedItem: a,
     children: (0, B.jsxs)(B.Fragment, {
       children: [
-        d && (0, B.jsx)(Y, {}),
-        (0, B.jsxs)(A, {
-          className: (0, H.default)(Mt, d && `YLk5YkN8SWA-`),
+        d && (0, B.jsx)(J, {}),
+        (0, B.jsxs)(b, {
+          className: (0, V.default)(Nt, d && `YLk5YkN8SWA-`),
           "flow-children": `row`,
           children: [
             (0, B.jsx)(`div`, {
-              className: (0, H.default)(void 0, Dt),
-              children: (0, B.jsx)(b, {
+              className: (0, V.default)(void 0, Ot),
+              children: (0, B.jsx)(ue, {
                 storeItem: n,
                 feature: `cart-items`,
                 noImpressionTracking: !0,
-                className: Et,
+                className: Dt,
                 children: (0, B.jsx)(On, {
                   storeItem: n,
                   alt: t.name,
@@ -1044,12 +1044,12 @@ function En(e) {
               }),
             }),
             (0, B.jsxs)(`div`, {
-              className: Nt,
+              className: Pt,
               children: [
-                (0, B.jsx)(K, {
-                  className: Lt,
+                (0, B.jsx)(G, {
+                  className: Rt,
                   children: (0, B.jsx)(`div`, {
-                    className: G,
+                    className: W,
                     id: v,
                     children: t.name,
                   }),
@@ -1065,12 +1065,12 @@ function En(e) {
                 }),
                 (0, B.jsx)(Hn, { validatedItem: a }),
                 te && (0, B.jsx)(Un, { appids: _ }),
-                (0, B.jsxs)(K, {
-                  className: W,
+                (0, B.jsxs)(G, {
+                  className: U,
                   children: [
                     (0, B.jsx)(`div`, {
-                      className: (0, H.default)(Pt, Rt),
-                      children: (0, B.jsx)(g, { id: N(n) }),
+                      className: (0, V.default)(Ft, zt),
+                      children: (0, B.jsx)(g, { id: w(n) }),
                     }),
                     (0, B.jsx)(Mn, { purchaseOption: i, validatedItem: a }),
                   ],
@@ -1095,39 +1095,39 @@ function En(e) {
 function Dn(e) {
   let { lineItemID: t, validatedItem: n, storeItem: r } = e,
     i = $(t),
-    a = w(),
+    a = C(),
     o = i.isPending;
-  return (0, B.jsxs)(q, {
+  return (0, B.jsxs)(K, {
     placeholder: !0,
     children: [
-      o && (0, B.jsx)(Y, {}),
-      (0, B.jsxs)(A, {
-        className: (0, H.default)(Mt, o && `YLk5YkN8SWA-`),
+      o && (0, B.jsx)(J, {}),
+      (0, B.jsxs)(b, {
+        className: (0, V.default)(Nt, o && `YLk5YkN8SWA-`),
         "flow-children": `row`,
         children: [
           (0, B.jsx)(`div`, {
-            className: (0, H.default)(void 0, Dt),
-            children: (0, B.jsx)(b, {
+            className: (0, V.default)(void 0, Ot),
+            children: (0, B.jsx)(ue, {
               storeItem: r,
               noImpressionTracking: !0,
               children: (0, B.jsx)(On, { storeItem: r }),
             }),
           }),
           (0, B.jsxs)(`div`, {
-            className: Nt,
+            className: Pt,
             children: [
-              (0, B.jsx)(K, {
-                className: Lt,
+              (0, B.jsx)(G, {
+                className: Rt,
                 children: (0, B.jsx)(`div`, {
-                  className: G,
+                  className: W,
                   children: r?.name,
                 }),
               }),
               !!n && (0, B.jsx)(An, { validatedItem: n }),
               !a &&
-                (0, B.jsx)(K, {
+                (0, B.jsx)(G, {
                   className: `Q-SR0Ngi7UY-`,
-                  children: (0, B.jsx)(A, {
+                  children: (0, B.jsx)(b, {
                     focusable: !0,
                     onActivate: () => i.mutate(),
                     className: `JyfzQzsaL08-`,
@@ -1143,39 +1143,39 @@ function Dn(e) {
 }
 function On(e) {
   let { storeItem: t, alt: n, blurred: r } = e,
-    { data: i } = tt(N(t)),
-    a = `${S.STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png`;
+    { data: i } = Oe(w(t)),
+    a = `${k.STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png`;
   return (
     i?.header
       ? (a =
-          S.STORE_ITEM_BASE_URL +
+          k.STORE_ITEM_BASE_URL +
           i.asset_url_format.replace("${FILENAME}", i.header))
       : i?.small_capsule &&
         (a =
-          S.STORE_ITEM_BASE_URL +
+          k.STORE_ITEM_BASE_URL +
           i.asset_url_format.replace("${FILENAME}", i.small_capsule)),
-    (0, B.jsx)(`img`, { alt: n ?? t.name, className: r ? kt : Ot, src: a })
+    (0, B.jsx)(`img`, { alt: n ?? t.name, className: r ? At : kt, src: a })
   );
 }
 function kn(e) {
-  return (0, B.jsx)(A, { children: (0, B.jsx)(q, { children: e.children }) });
+  return (0, B.jsx)(b, { children: (0, B.jsx)(K, { children: e.children }) });
 }
 function An(e) {
   let { validatedItem: t, children: n } = e;
   return (0, B.jsxs)(`div`, {
-    className: W,
+    className: U,
     children: [(0, B.jsx)(nn, { lineItem: t }), n],
   });
 }
 function jn(e) {
   let { storeItem: t } = e,
-    { data: n } = he(N(t)),
-    r = u(n);
+    { data: n } = be(w(t)),
+    r = d(n);
   if (!n) return null;
   let i = z.Localize(`#Cart_ComingSoon`, r);
   return (
     [`text_tba`, `text_comingsoon`].includes(n.coming_soon_display) && (i = r),
-    (0, B.jsx)(X, { children: i })
+    (0, B.jsx)(Y, { children: i })
   );
 }
 function Mn(e) {
@@ -1191,11 +1191,11 @@ function Mn(e) {
       s &&
       ((i = n.original_price.formatted_amount),
       (a = n.subtotal.formatted_amount),
-      (o = Zt(n))),
+      (o = Qt(n))),
     (0, B.jsx)(`div`, {
-      className: jt,
+      className: Mt,
       children: (0, B.jsx)(y, {
-        className: Bt,
+        className: Vt,
         formatted_orig_price: i,
         formatted_final_price: a,
         discount_percent: o,
@@ -1216,22 +1216,22 @@ function Nn(e) {
       fnRemoveLineItem: o,
       accessibilityId: s,
     } = e,
-    c = w(),
-    [l] = V(),
-    u = l?.accountid_giftee || (c ? t.gift_info?.accountid_giftee : void 0),
-    f = D(),
-    p = ve() && !r?.restrict_add_additional_to_cart && !pe(f),
+    c = C(),
+    [l] = ht(),
+    d = l?.accountid_giftee || (c ? t.gift_info?.accountid_giftee : void 0),
+    f = j(),
+    p = _e() && !r?.restrict_add_additional_to_cart && !me(f),
     m = r.errors?.adult_content_restricted,
-    h = d(t.packageid, t.bundleid, zn(n), void 0, `cart-add-additional`),
+    h = u(t.packageid, t.bundleid, zn(n), void 0, `cart-add-additional`),
     g = L.useId(),
     _ = L.useId();
-  return (0, B.jsxs)(K, {
-    className: W,
+  return (0, B.jsxs)(G, {
+    className: U,
     children: [
       (0, B.jsx)(`div`, {
-        className: (0, H.default)(Pt, zt),
-        children: u
-          ? (0, B.jsx)(Pn, { recipient: u })
+        className: (0, V.default)(Ft, Bt),
+        children: d
+          ? (0, B.jsx)(Pn, { recipient: d })
           : (0, B.jsx)(Vn, {
               lineItem: t,
               rgAppIDs: i,
@@ -1240,15 +1240,15 @@ function Nn(e) {
             }),
       }),
       (0, B.jsxs)(`div`, {
-        className: (0, H.default)(jt, At),
+        className: (0, V.default)(Mt, jt),
         children: [
           p &&
             (0, B.jsxs)(B.Fragment, {
               children: [
-                (0, B.jsx)(ye, {
+                (0, B.jsx)(Ee, {
                   toolTipContent: z.Localize(`#Cart_LineItem_Add_Tooltip`),
                   usePointerEvents: !0,
-                  children: (0, B.jsx)(A, {
+                  children: (0, B.jsx)(b, {
                     onActivate: () => !h.isPending && h.mutate(),
                     className: `TIoqnPCGd54-`,
                     id: g,
@@ -1260,7 +1260,7 @@ function Nn(e) {
               ],
             }),
           !c &&
-            (0, B.jsx)(A, {
+            (0, B.jsx)(b, {
               onActivate: () => o(),
               className: `JyfzQzsaL08-`,
               id: _,
@@ -1272,7 +1272,7 @@ function Nn(e) {
               children: [
                 `| `,
                 (0, B.jsx)(`a`, {
-                  href: `${S.STORE_CHECKOUT_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=cart`,
+                  href: `${k.STORE_CHECKOUT_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=cart`,
                   className: `SWPhz00mDeg-`,
                   children: z.Localize(`#Cart_Verify`),
                 }),
@@ -1288,10 +1288,10 @@ function Pn(e) {
   let { data: t } = v(e.recipient),
     n = t?.public_data?.persona_name;
   return (0, B.jsx)(`div`, {
-    className: qt,
+    className: Jt,
     children: z.LocalizeReact(
       `#Cart_GiftForNotice`,
-      n ? (0, B.jsx)(`span`, { className: Jt, children: n }) : ``,
+      n ? (0, B.jsx)(`span`, { className: Yt, children: n }) : ``,
     ),
   });
 }
@@ -1300,7 +1300,7 @@ function Fn(e) {
     r = !!n.requires_shipping && t.item_type === 1,
     { data: i } = m(r ? t.id : void 0);
   return i
-    ? (0, B.jsx)(X, {
+    ? (0, B.jsx)(Y, {
         children: z.Localize(`#Cart_ShippingEstimate_DeliveryDate`, te(i)),
       })
     : null;
@@ -1308,12 +1308,12 @@ function Fn(e) {
 function In(e) {
   let { purchaseOption: t } = e;
   if (!t.requires_shipping) return null;
-  let n = x.country_code;
+  let n = T.country_code;
   return [`GB`].includes(n)
-    ? (0, B.jsx)(X, {
-        children: (0, B.jsx)(A, {
+    ? (0, B.jsx)(Y, {
+        children: (0, B.jsx)(b, {
           children: (0, B.jsx)(`a`, {
-            className: It,
+            className: Lt,
             target: `_blank`,
             href: `https://www.valvesoftware.com/legal/statement-of-compliance`,
             rel: `noreferrer`,
@@ -1342,7 +1342,7 @@ function Rn(e) {
     n.formatted_final_price && n.discount_pct && (i += `WithDiscount`));
   let a = Ln[r.renewal_time_unit],
     o = i + `CostIncludesSubscriptionBy` + a;
-  return (0, B.jsx)(X, {
+  return (0, B.jsx)(Y, {
     children: z.Localize(
       o,
       n.formatted_final_price,
@@ -1362,8 +1362,8 @@ function Vn(e) {
   let { lineItem: t, rgAppIDs: n, bAllAppsPrivate: r, purchaseOption: i } = e,
     a = ut(),
     o = re(),
-    s = w(),
-    { bShowPurchaseOptionPicker: c } = qe(),
+    s = C(),
+    { bShowPurchaseOptionPicker: c } = Qe(),
     { data: l } = v(
       t.gift_info?.accountid_giftee ? t.gift_info.accountid_giftee : null,
     );
@@ -1396,7 +1396,7 @@ function Vn(e) {
     p === `myself` && r && (p = `private`),
     f.length === 1
       ? null
-      : (0, B.jsx)(xe, {
+      : (0, B.jsx)(Se, {
           onSelectionChange: (e) => {
             if (p === e.data) return;
             let r = (e) => o.mutate({ rgAppIDs: n, bPrivate: e }),
@@ -1413,7 +1413,7 @@ function Vn(e) {
           options: f,
           getOptionLabel: (e) =>
             e.tooltip
-              ? (0, B.jsx)(ye, {
+              ? (0, B.jsx)(Ee, {
                   toolTipContent: e.tooltip,
                   usePointerEvents: !0,
                   children: (0, B.jsx)(`span`, { children: e.label }),
@@ -1427,8 +1427,8 @@ function Vn(e) {
 var Hn = L.memo(function (e) {
   let { validatedItem: t } = e,
     n = t.included_packageids ?? [],
-    r = Le(),
-    i = a({ queries: n.map((e) => Ze(r, { packageid: e })) }),
+    r = Ze(),
+    i = a({ queries: n.map((e) => Be(r, { packageid: e })) }),
     o = [
       ...new Set(
         i
@@ -1439,7 +1439,7 @@ var Hn = L.memo(function (e) {
     ];
   return !o.length || (o.length == 1 && !t.item_id?.bundleid)
     ? null
-    : (0, B.jsxs)(K, {
+    : (0, B.jsxs)(G, {
         text: !0,
         children: [
           (0, B.jsxs)(`span`, {
@@ -1452,7 +1452,7 @@ var Hn = L.memo(function (e) {
           o.map((e, t) =>
             (0, B.jsxs)(
               L.Fragment,
-              { children: [t > 0 && `, `, (0, B.jsx)(U, { appid: e })] },
+              { children: [t > 0 && `, `, (0, B.jsx)(H, { appid: e })] },
               e,
             ),
           ),
@@ -1464,11 +1464,11 @@ function Un(e) {
     n = t.map((e, t) =>
       (0, B.jsxs)(
         L.Fragment,
-        { children: [t > 0 && `, `, (0, B.jsx)(U, { appid: e })] },
+        { children: [t > 0 && `, `, (0, B.jsx)(H, { appid: e })] },
         e,
       ),
     );
-  return (0, B.jsxs)(K, {
+  return (0, B.jsxs)(G, {
     children: [
       (0, B.jsxs)(`span`, {
         children: [z.Localize(`#Cart_Notice_SomeAppsPrivate`), `\xA0`],
@@ -1480,10 +1480,10 @@ function Un(e) {
 function Wn(e) {
   let { closeCart: t, lineItemIDs: n, bPackagesReplaced: r } = e,
     i = ft(),
-    { data: a } = We(),
-    { data: o, isFetching: s } = _t(),
-    c = Ve(n),
-    u = Ae(`${S.STORE_BASE_URL}cart/`);
+    { data: a } = Je(),
+    { data: o, isFetching: s } = vt(),
+    c = Ue(n),
+    u = je(`${k.STORE_BASE_URL}cart/`);
   if (
     (L.useEffect(() => {
       c && c?.length == 0 && t();
@@ -1492,14 +1492,14 @@ function Wn(e) {
   )
     return null;
   let d = z.Localize(r ? `#Cart_UpdatedYourCart` : `#Cart_AddedToYourCart`);
-  return (0, B.jsx)($t, {
+  return (0, B.jsx)(en, {
     validateCart: o,
-    eDisplayType: Qt.k_ECartDisplayType_Modal,
+    eDisplayType: $t.k_ECartDisplayType_Modal,
     children: (0, B.jsx)(h, {
       onClose: t,
       navID: `CartModal`,
       strTitle: d,
-      children: (0, B.jsxs)(A, {
+      children: (0, B.jsxs)(b, {
         className: dn,
         "flow-children": `column`,
         children: [
@@ -1510,14 +1510,14 @@ function Wn(e) {
             scrollable: !0,
           }),
           (0, B.jsx)(Kn, { lineItems: c, cartValidation: o }),
-          (0, B.jsxs)(A, {
+          (0, B.jsxs)(b, {
             className: fn,
             children: [
-              (0, B.jsx)(p, {
+              (0, B.jsx)(l, {
                 onClick: t,
                 children: z.Localize(`#Cart_ContinueShopping`),
               }),
-              (0, B.jsx)(l, {
+              (0, B.jsx)(f, {
                 autoFocus: !0,
                 href: u,
                 children: z.Localize(
@@ -1538,7 +1538,7 @@ function Gn(e) {
     ? (0, B.jsx)(h, {
         onClose: n,
         navID: `CartErrorModal`,
-        strTitle: F.Localize(`#Error_Generic`),
+        strTitle: O.Localize(`#Error_Generic`),
         children: (0, B.jsxs)(`div`, {
           className: gn,
           children: [
@@ -1552,10 +1552,10 @@ function Gn(e) {
             }),
             (0, B.jsx)(`div`, {
               className: vn,
-              children: (0, B.jsx)(p, {
+              children: (0, B.jsx)(l, {
                 autoFocus: !0,
                 onClick: n,
-                children: F.Localize(`#Button_Close`),
+                children: O.Localize(`#Button_Close`),
               }),
             }),
           ],
@@ -1568,7 +1568,7 @@ function Kn(e) {
     r = L.useRef(!1),
     [i, a] = L.useState(!1),
     { gifteeHint: o, gifteePlayerDetails: s } = ot(),
-    c = w(),
+    c = C(),
     l = ct(),
     u = ut(),
     d = s?.public_data,
@@ -1584,13 +1584,13 @@ function Kn(e) {
   }
   if (
     (L.useEffect(() => {
-      p && !r.current && (P()?.AddEvent(Re), (r.current = !0));
+      p && !r.current && (F()?.AddEvent(nt), (r.current = !0));
     }, [p]),
     !p)
   )
     return null;
   let m = () => {
-      (P()?.AddEvent(nt), l.mutate(null));
+      (F()?.AddEvent(Le), l.mutate(null));
     },
     h = () => {
       for (let e of n)
@@ -1600,7 +1600,7 @@ function Kn(e) {
           giftInfo: { ...e.gift_info, accountid_giftee: o.nGifteeAccountID },
           gidCoupon: e.gidcoupon_applied,
         });
-      (l.mutate(o), a(!0), P()?.AddEvent(et));
+      (l.mutate(o), a(!0), F()?.AddEvent(rt));
     },
     g = (0, B.jsxs)(`a`, {
       href: oe(s),
@@ -1616,34 +1616,34 @@ function Kn(e) {
         (0, B.jsx)(`div`, { className: hn, children: d.persona_name }),
       ],
     });
-  return (0, B.jsxs)(Ke, {
+  return (0, B.jsxs)(Ge, {
     className: pn,
     align: `center`,
     gap: `3`,
     direction: `row`,
     justify: `center`,
     children: [
-      (0, B.jsx)(Ye, {
+      (0, B.jsx)(Re, {
         as: `div`,
         align: `center`,
         className: mn,
         children: z.LocalizeReact(`#Cart_GifteeHint_Wishlist`, g),
       }),
-      (0, B.jsxs)(Ke, {
+      (0, B.jsxs)(Ge, {
         gap: `2`,
         direction: `row`,
         align: `center`,
         children: [
-          (0, B.jsx)(Ge, {
+          (0, B.jsx)($e, {
             size: `1`,
             color: `dull`,
             onClick: m,
-            children: F.Localize(`#Button_No`),
+            children: O.Localize(`#Button_No`),
           }),
-          (0, B.jsx)(Ge, {
+          (0, B.jsx)($e, {
             size: `1`,
             onClick: h,
-            children: F.Localize(`#Button_Yes`),
+            children: O.Localize(`#Button_Yes`),
           }),
         ],
       }),

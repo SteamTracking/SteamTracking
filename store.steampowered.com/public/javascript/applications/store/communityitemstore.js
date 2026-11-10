@@ -2,45 +2,45 @@
  ****/
 
 import { At as e, kt as t } from "./libraries.js";
-import { Hb as n, Mb as r, qx as i } from "./main.js";
+import { Jx as n, Nb as r, Ub as i } from "./main.js";
 var a = class {
   m_ItemDefinition = {};
   m_ItemKV = {};
   constructor(e) {
     t(this);
-    let { itemDef: n, communityItemDef: r } = e;
-    (i(
+    let { itemDef: r, communityItemDef: i } = e;
+    (n(
       e.itemDef || e.communityItemDef,
       `CCommunityItem must be initialized by an itemDef or a communityItemDef`,
     ),
-      n
+      r
         ? (this.m_ItemDefinition = {
-            item_type: n.item_type,
-            item_class: n.item_class,
-            item_description: n.item_description,
-            editor_accountid: n.editor_accountid,
-            deleted: n.deleted,
-            active: n.active,
-            appid: n.appid,
-            item_image_composed: n.item_image_composed,
-            item_image_large: n.item_image_large,
-            item_image_small: n.item_image_small,
-            item_key_values: n.item_key_values,
-            item_movie_mp4: n.item_movie_mp4,
-            item_movie_mp4_small: n.item_movie_mp4_small,
-            item_internal_name: n.item_name,
-            item_series: n.item_series,
-            item_movie_webm: n.item_movie_webm,
-            item_movie_webm_small: n.item_movie_webm_small,
-            item_image_composed_foil: n.item_image_composed_foil,
-            item_last_changed: n.item_last_changed,
-            broadcast_channel_id: n.broadcast_channel_id,
+            item_type: r.item_type,
+            item_class: r.item_class,
+            item_description: r.item_description,
+            editor_accountid: r.editor_accountid,
+            deleted: r.deleted,
+            active: r.active,
+            appid: r.appid,
+            item_image_composed: r.item_image_composed,
+            item_image_large: r.item_image_large,
+            item_image_small: r.item_image_small,
+            item_key_values: r.item_key_values,
+            item_movie_mp4: r.item_movie_mp4,
+            item_movie_mp4_small: r.item_movie_mp4_small,
+            item_internal_name: r.item_name,
+            item_series: r.item_series,
+            item_movie_webm: r.item_movie_webm,
+            item_movie_webm_small: r.item_movie_webm_small,
+            item_image_composed_foil: r.item_image_composed_foil,
+            item_last_changed: r.item_last_changed,
+            broadcast_channel_id: r.broadcast_channel_id,
           })
-        : (i(
-            !!r,
+        : (n(
+            !!i,
             `Managed to get into LoadItemDefinition with neither itemDef nor communityItemDef`,
           ),
-          (this.m_ItemDefinition = r)),
+          (this.m_ItemDefinition = i)),
       this.m_ItemDefinition.item_key_values &&
         (this.m_ItemKV = JSON.parse(this.m_ItemDefinition.item_key_values)));
   }
@@ -66,6 +66,6 @@ var a = class {
 (r([e], a.prototype, `m_ItemDefinition`, void 0),
   r([e], a.prototype, `m_ItemKV`, void 0));
 function o(e, t) {
-  return `${n.MEDIA_CDN_COMMUNITY_URL}images/items/${e}/${t}`;
+  return `${i.MEDIA_CDN_COMMUNITY_URL}images/items/${e}/${t}`;
 }
 export { o as t };

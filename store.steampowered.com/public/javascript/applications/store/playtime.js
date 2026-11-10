@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { Hy as e, Uy as t } from "./main.js";
+import { Uy as e, Wy as t } from "./main.js";
 function n(n, r = `#Played_`, i = !1) {
   if (n >= 120) {
     let i = n / 60;

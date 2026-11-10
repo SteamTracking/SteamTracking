@@ -9,7 +9,7 @@ import {
   p as i,
   w as a,
 } from "./partnerevent.js";
-import { Fu as o, Gx as s, Iy as c, qx as l, rx as u } from "./main.js";
+import { Iu as o, Jx as s, Kx as c, Ly as l, ix as u } from "./main.js";
 function d(e) {
   return (
     (e.gid == null || e.gid == null || e.gid == `0`) &&
@@ -24,7 +24,7 @@ function p(e, p) {
   let m = new a();
   if (
     ((m.clanSteamID = e),
-    l(
+    s(
       m.clanSteamID && m.clanSteamID.BIsValid(),
       `Invalid Clan SteamID: ` +
         m.clanSteamID.ConvertTo64BitString() +
@@ -69,7 +69,7 @@ function p(e, p) {
       (m.nCommentCount = e.commentcount),
       (m.postTime = e.posttime),
       m.bOldAnnouncement && !e.hidden && (m.startTime = e.posttime),
-      (m.announcementClanSteamID = new c(e.clanid)),
+      (m.announcementClanSteamID = new l(e.clanid)),
       e.tags && e.tags.length > 0 && e.tags.forEach((e) => m.vecTags.push(e)),
       !m.rtime32_last_solr_search_col_updated &&
         m.rtime32_last_modified &&
@@ -85,7 +85,7 @@ function p(e, p) {
       (m.nCommentCount = p.comment_count ?? 0),
       m.name.set(0, p.event_name ?? ``),
       m.description.set(0, p.event_notes ?? ``));
-  p.broadcaster_accountid && (m.broadcaster = new c(p.broadcaster_accountid));
+  p.broadcaster_accountid && (m.broadcaster = new l(p.broadcaster_accountid));
   let h = i;
   try {
     m.jsondata = { ...h, ...(p.jsondata ? JSON.parse(p.jsondata) : void 0) };
@@ -101,62 +101,62 @@ function p(e, p) {
     );
   }
   if (
-    ((m.jsondata.localized_capsule_image = s(
+    ((m.jsondata.localized_capsule_image = c(
       m.jsondata.localized_capsule_image || [],
       32,
       null,
     )),
-    (m.jsondata.localized_title_image = s(
+    (m.jsondata.localized_title_image = c(
       m.jsondata.localized_title_image || [],
       32,
       null,
     )),
-    (m.jsondata.localized_subtitle = s(
+    (m.jsondata.localized_subtitle = c(
       m.jsondata.localized_subtitle || [],
       32,
       null,
     )),
-    (m.jsondata.localized_summary = s(
+    (m.jsondata.localized_summary = c(
       m.jsondata.localized_summary || [],
       32,
       null,
     )),
-    (m.jsondata.localized_broadcast_title = s(
+    (m.jsondata.localized_broadcast_title = c(
       m.jsondata.localized_broadcast_title || [],
       32,
       null,
     )),
-    (m.jsondata.localized_broadcast_left_image = s(
+    (m.jsondata.localized_broadcast_left_image = c(
       m.jsondata.localized_broadcast_left_image || [],
       32,
       null,
     )),
-    (m.jsondata.localized_broadcast_right_image = s(
+    (m.jsondata.localized_broadcast_right_image = c(
       m.jsondata.localized_broadcast_right_image || [],
       32,
       null,
     )),
-    (m.jsondata.localized_sale_header = s(
+    (m.jsondata.localized_sale_header = c(
       m.jsondata.localized_sale_header || [],
       32,
       null,
     )),
-    (m.jsondata.localized_sale_overlay = s(
+    (m.jsondata.localized_sale_overlay = c(
       m.jsondata.localized_sale_overlay || [],
       32,
       null,
     )),
-    (m.jsondata.localized_sale_product_banner = s(
+    (m.jsondata.localized_sale_product_banner = c(
       m.jsondata.localized_sale_product_banner || [],
       32,
       null,
     )),
-    (m.jsondata.localized_sale_product_mobile_banner = s(
+    (m.jsondata.localized_sale_product_mobile_banner = c(
       m.jsondata.localized_sale_product_mobile_banner || [],
       32,
       null,
     )),
-    (m.jsondata.localized_sale_logo = s(
+    (m.jsondata.localized_sale_logo = c(
       m.jsondata.localized_sale_logo || [],
       32,
       null,
@@ -165,7 +165,7 @@ function p(e, p) {
       m.jsondata.localized_per_day_sales_header)
   )
     for (let e = 0; e < m.jsondata.sale_num_headers; ++e)
-      m.jsondata.localized_per_day_sales_header[e] = s(
+      m.jsondata.localized_per_day_sales_header[e] = c(
         m.jsondata.localized_per_day_sales_header[e],
         32,
         null,
@@ -173,7 +173,7 @@ function p(e, p) {
   return (
     m.jsondata.sale_sections &&
       m.jsondata.sale_sections.forEach((e, n) => {
-        ((e.localized_label &&= s(e.localized_label, 32, null)),
+        ((e.localized_label &&= c(e.localized_label, 32, null)),
           e.section_type === `trailercarousel` && (e.show_as_carousel = !1),
           t(e),
           (m.jsondata.sale_sections[n] = { ...r, ...e }));
@@ -183,13 +183,13 @@ function p(e, p) {
       m.jsondata.email_setting.sections.forEach((e) => {
         (e.localized_headline !== void 0 &&
           e.localized_headline !== null &&
-          (e.localized_headline = s(e.localized_headline, 32, null)),
+          (e.localized_headline = c(e.localized_headline, 32, null)),
           e.localized_body !== void 0 &&
             e.localized_body !== null &&
-            (e.localized_body = s(e.localized_body, 32, null)),
+            (e.localized_body = c(e.localized_body, 32, null)),
           e.localized_image !== void 0 &&
             e.localized_image !== null &&
-            (e.localized_image = s(e.localized_image, 32, null)));
+            (e.localized_image = c(e.localized_image, 32, null)));
       }),
     m.jsondata.localized_title_image.forEach((e, t) => {
       if (e != null && e.substr(0, 4) == `http`) {

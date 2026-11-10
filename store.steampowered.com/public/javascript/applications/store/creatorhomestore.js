@@ -14,33 +14,33 @@ import {
 import "./steammessages_clan_pb.js";
 import {
   $x as c,
-  Iy as l,
+  Ey as l,
   Jb as u,
-  Mb as d,
-  Oy as f,
-  Qx as p,
-  Ty as m,
-  Xu as h,
-  Xx as g,
-  Yu as _,
-  Yx as v,
+  Ly as d,
+  Nb as f,
+  Qu as p,
+  Qx as m,
+  Su as h,
+  Xu as g,
+  Xx as _,
+  Yb as v,
   Zu as y,
   Zx as b,
   eS as x,
-  hx as S,
-  mx as C,
-  nS as w,
-  qb as T,
-  rx as E,
-  tS as D,
-  xu as O,
+  gx as S,
+  hx as C,
+  ix as w,
+  ky as T,
+  nS as E,
+  rS as D,
+  tS as O,
 } from "./main.js";
 var k = e(r(), 1),
   A = class e extends k.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.appid || v(e.M()),
+        e.prototype.appid || _(e.M()),
         k.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -50,31 +50,31 @@ var k = e(r(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            appid: { n: 1, br: p.readUint32, bw: w.writeUint32 },
+            appid: { n: 1, br: c.readUint32, bw: D.writeUint32 },
             clan_steamid: {
               n: 2,
-              br: p.readFixed64String,
-              bw: w.writeFixed64String,
+              br: c.readFixed64String,
+              bw: D.writeFixed64String,
             },
-            relation: { n: 3, br: p.readEnum, bw: w.writeEnum },
-            linkname: { n: 4, br: p.readString, bw: w.writeString },
-            json: { n: 5, br: p.readString, bw: w.writeString },
+            relation: { n: 3, br: c.readEnum, bw: D.writeEnum },
+            linkname: { n: 4, br: c.readString, bw: D.writeString },
+            json: { n: 5, br: c.readString, bw: D.writeString },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= c(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return D(e.M(), t, n);
+      return E(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return m(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new k.BinaryReader(t),
@@ -82,14 +82,14 @@ var k = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return g(e.MBF(), t, n);
+      return b(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new k.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      x(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new k.BinaryWriter();
@@ -103,7 +103,7 @@ var k = e(r(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.clan_account_id || v(e.M()),
+        e.prototype.clan_account_id || _(e.M()),
         k.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
@@ -113,14 +113,14 @@ var k = e(r(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            clan_account_id: { n: 1, br: p.readUint32, bw: w.writeUint32 },
+            clan_account_id: { n: 1, br: c.readUint32, bw: D.writeUint32 },
             appid_list: {
               n: 2,
               r: !0,
               q: !0,
-              br: p.readUint32,
-              pbr: p.readPackedUint32,
-              bw: w.writeRepeatedUint32,
+              br: c.readUint32,
+              pbr: c.readPackedUint32,
+              bw: D.writeRepeatedUint32,
             },
           },
         }),
@@ -128,16 +128,16 @@ var k = e(r(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= c(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return D(e.M(), t, n);
+      return E(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return m(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new k.BinaryReader(t),
@@ -145,14 +145,14 @@ var k = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return g(e.MBF(), t, n);
+      return b(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new k.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      x(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new k.BinaryWriter();
@@ -166,7 +166,7 @@ var k = e(r(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.appid || v(e.M()),
+        e.prototype.appid || _(e.M()),
         k.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -176,33 +176,33 @@ var k = e(r(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            appid: { n: 1, br: p.readUint32, bw: w.writeUint32 },
+            appid: { n: 1, br: c.readUint32, bw: D.writeUint32 },
             link: { n: 2, c: A },
-            remove: { n: 3, d: !1, br: p.readBool, bw: w.writeBool },
-            update_json_only: { n: 4, d: !1, br: p.readBool, bw: w.writeBool },
+            remove: { n: 3, d: !1, br: c.readBool, bw: D.writeBool },
+            update_json_only: { n: 4, d: !1, br: c.readBool, bw: D.writeBool },
             skip_clan_permissions: {
               n: 5,
               d: !1,
-              br: p.readBool,
-              bw: w.writeBool,
+              br: c.readBool,
+              bw: D.writeBool,
             },
-            partner_id: { n: 6, br: p.readUint32, bw: w.writeUint32 },
+            partner_id: { n: 6, br: c.readUint32, bw: D.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= c(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return D(e.M(), t, n);
+      return E(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return m(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new k.BinaryReader(t),
@@ -210,14 +210,14 @@ var k = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return g(e.MBF(), t, n);
+      return b(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new k.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      x(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new k.BinaryWriter();
@@ -266,7 +266,7 @@ var k = e(r(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.appid || v(e.M()),
+        e.prototype.appid || _(e.M()),
         k.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -275,22 +275,22 @@ var k = e(r(), 1),
       return (
         (e.sm_m ||= {
           proto: e,
-          fields: { appid: { n: 1, br: p.readUint32, bw: w.writeUint32 } },
+          fields: { appid: { n: 1, br: c.readUint32, bw: D.writeUint32 } },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= c(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return D(e.M(), t, n);
+      return E(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return m(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new k.BinaryReader(t),
@@ -298,14 +298,14 @@ var k = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return g(e.MBF(), t, n);
+      return b(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new k.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      x(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new k.BinaryWriter();
@@ -319,7 +319,7 @@ var k = e(r(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.links || v(e.M()),
+        e.prototype.links || _(e.M()),
         k.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -334,16 +334,16 @@ var k = e(r(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= c(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return D(e.M(), t, n);
+      return E(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return m(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new k.BinaryReader(t),
@@ -351,14 +351,14 @@ var k = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return g(e.MBF(), t, n);
+      return b(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new k.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      x(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new k.BinaryWriter();
@@ -372,7 +372,7 @@ var k = e(r(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.clan_account_ids || v(e.M()),
+        e.prototype.clan_account_ids || _(e.M()),
         k.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -386,27 +386,27 @@ var k = e(r(), 1),
               n: 1,
               r: !0,
               q: !0,
-              br: p.readUint32,
-              pbr: p.readPackedUint32,
-              bw: w.writeRepeatedUint32,
+              br: c.readUint32,
+              pbr: c.readPackedUint32,
+              bw: D.writeRepeatedUint32,
             },
-            ignore_dlc: { n: 2, br: p.readBool, bw: w.writeBool },
+            ignore_dlc: { n: 2, br: c.readBool, bw: D.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= c(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return D(e.M(), t, n);
+      return E(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return m(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new k.BinaryReader(t),
@@ -414,14 +414,14 @@ var k = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return g(e.MBF(), t, n);
+      return b(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new k.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      x(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new k.BinaryWriter();
@@ -435,7 +435,7 @@ var k = e(r(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.results || v(e.M()),
+        e.prototype.results || _(e.M()),
         k.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -450,16 +450,16 @@ var k = e(r(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= c(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return D(e.M(), t, n);
+      return E(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return m(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new k.BinaryReader(t),
@@ -467,14 +467,14 @@ var k = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return g(e.MBF(), t, n);
+      return b(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new k.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      x(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new k.BinaryWriter();
@@ -488,7 +488,7 @@ var k = e(r(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.clan_account_id || v(e.M()),
+        e.prototype.clan_account_id || _(e.M()),
         k.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -498,25 +498,25 @@ var k = e(r(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            clan_account_id: { n: 1, br: p.readUint32, bw: w.writeUint32 },
-            listid: { n: 2, br: p.readUint64String, bw: w.writeUint64String },
-            ignore_dlc: { n: 3, br: p.readBool, bw: w.writeBool },
+            clan_account_id: { n: 1, br: c.readUint32, bw: D.writeUint32 },
+            listid: { n: 2, br: c.readUint64String, bw: D.writeUint64String },
+            ignore_dlc: { n: 3, br: c.readBool, bw: D.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= c(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return D(e.M(), t, n);
+      return E(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return m(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new k.BinaryReader(t),
@@ -524,14 +524,14 @@ var k = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return g(e.MBF(), t, n);
+      return b(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new k.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      x(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new k.BinaryWriter();
@@ -545,7 +545,7 @@ var k = e(r(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.apps || v(e.M()),
+        e.prototype.apps || _(e.M()),
         k.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -560,16 +560,16 @@ var k = e(r(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= c(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return D(e.M(), t, n);
+      return E(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return m(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new k.BinaryReader(t),
@@ -577,14 +577,14 @@ var k = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return g(e.MBF(), t, n);
+      return b(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new k.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      x(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new k.BinaryWriter();
@@ -598,7 +598,7 @@ var k = e(r(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.appid || v(e.M()),
+        e.prototype.appid || _(e.M()),
         k.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -608,24 +608,24 @@ var k = e(r(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            appid: { n: 1, br: p.readUint32, bw: w.writeUint32 },
-            sort_order: { n: 2, br: p.readUint32, bw: w.writeUint32 },
+            appid: { n: 1, br: c.readUint32, bw: D.writeUint32 },
+            sort_order: { n: 2, br: c.readUint32, bw: D.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= c(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return D(e.M(), t, n);
+      return E(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return m(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new k.BinaryReader(t),
@@ -633,14 +633,14 @@ var k = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return g(e.MBF(), t, n);
+      return b(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new k.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      x(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new k.BinaryWriter();
@@ -654,7 +654,7 @@ var k = e(r(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.partnerid || v(e.M()),
+        e.prototype.partnerid || _(e.M()),
         k.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -663,22 +663,22 @@ var k = e(r(), 1),
       return (
         (e.sm_m ||= {
           proto: e,
-          fields: { partnerid: { n: 1, br: p.readUint32, bw: w.writeUint32 } },
+          fields: { partnerid: { n: 1, br: c.readUint32, bw: D.writeUint32 } },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= c(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return D(e.M(), t, n);
+      return E(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return m(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new k.BinaryReader(t),
@@ -686,14 +686,14 @@ var k = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return g(e.MBF(), t, n);
+      return b(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new k.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      x(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new k.BinaryWriter();
@@ -707,7 +707,7 @@ var k = e(r(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.results || v(e.M()),
+        e.prototype.results || _(e.M()),
         k.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -722,16 +722,16 @@ var k = e(r(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= c(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return D(e.M(), t, n);
+      return E(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return m(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new k.BinaryReader(t),
@@ -739,14 +739,14 @@ var k = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return g(e.MBF(), t, n);
+      return b(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new k.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      x(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new k.BinaryWriter();
@@ -760,7 +760,7 @@ var k = e(r(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.clan_accountid || v(e.M()),
+        e.prototype.clan_accountid || _(e.M()),
         k.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
@@ -770,13 +770,13 @@ var k = e(r(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            clan_accountid: { n: 1, br: p.readUint32, bw: w.writeUint32 },
+            clan_accountid: { n: 1, br: c.readUint32, bw: D.writeUint32 },
             linknames: {
               n: 2,
               r: !0,
               q: !0,
-              br: p.readString,
-              bw: w.writeRepeatedString,
+              br: c.readString,
+              bw: D.writeRepeatedString,
             },
           },
         }),
@@ -784,16 +784,16 @@ var k = e(r(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= c(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return D(e.M(), t, n);
+      return E(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return m(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new k.BinaryReader(t),
@@ -801,14 +801,14 @@ var k = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return g(e.MBF(), t, n);
+      return b(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new k.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      x(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new k.BinaryWriter();
@@ -942,14 +942,14 @@ var W = e(s()),
       if (this.m_strVanity) {
         switch (e) {
           case `publisher`:
-            return E.STORE_BASE_URL + `publisher/` + this.m_strVanity + `/`;
+            return w.STORE_BASE_URL + `publisher/` + this.m_strVanity + `/`;
           case `franchise`:
-            return E.STORE_BASE_URL + `franchise/` + this.m_strVanity + `/`;
+            return w.STORE_BASE_URL + `franchise/` + this.m_strVanity + `/`;
         }
-        return E.STORE_BASE_URL + `developer/` + this.m_strVanity + `/`;
+        return w.STORE_BASE_URL + `developer/` + this.m_strVanity + `/`;
       }
       return (
-        E.STORE_BASE_URL + `curator/` + this.m_clanSteamID.GetAccountID() + `/`
+        w.STORE_BASE_URL + `curator/` + this.m_clanSteamID.GetAccountID() + `/`
       );
     }
     BHasWebLink() {
@@ -975,7 +975,7 @@ var W = e(s()),
         (await this.UpdateGroupFlagsFeature([2, 8], !0));
     }
     async UpdateGroupFlagsFeature(e, t) {
-      let n = E.PARTNER_BASE_URL + `sales/ajaxupdateclanaccountflags`,
+      let n = w.PARTNER_BASE_URL + `sales/ajaxupdateclanaccountflags`,
         r = this.m_clanAccountFlags;
       if (
         (e.forEach((e) => {
@@ -995,7 +995,7 @@ var W = e(s()),
         r & 128 && i.push(128),
         r & 256 && i.push(256));
       let a = new FormData();
-      (a.append(`sessionid`, T()),
+      (a.append(`sessionid`, u()),
         a.append(`clan_account_id`, this.GetClanAccountID().toString()),
         a.append(`accountflags`, JSON.stringify(i)));
       let o = await W.default.post(n, a);
@@ -1005,9 +1005,9 @@ var W = e(s()),
         (this.m_clanAccountFlags = r);
     }
   };
-(d([t], G.prototype, `m_appidList`, void 0),
-  d([t], G.prototype, `m_nFollowers`, void 0),
-  d([t], G.prototype, `m_clanAccountFlags`, void 0));
+(f([t], G.prototype, `m_appidList`, void 0),
+  f([t], G.prototype, `m_nFollowers`, void 0),
+  f([t], G.prototype, `m_clanAccountFlags`, void 0));
 var K = class e {
   constructor() {
     a(this);
@@ -1018,16 +1018,16 @@ var K = class e {
   m_serviceTransport = void 0;
   LazyInit() {
     if (!this.m_bLoadedFromConfig) {
-      let t = u(`creatorhome`, `application_config`);
+      let t = v(`creatorhome`, `application_config`);
       this.ValidateStoreDefault(t) &&
         t.forEach((t) => {
           let n = Number(t.creator_clan_id),
-            r = new G(l.InitFromClanID(n, E.EUNIVERSE));
+            r = new G(d.InitFromClanID(n, w.EUNIVERSE));
           (r.Initialize(t),
             (r.m_promise = e.GetAsPromise(r)),
             this.m_mapClanToCreatorHome.set(n, r));
         });
-      let n = u(`creatorhomeforapp`, `application_config`);
+      let n = v(`creatorhomeforapp`, `application_config`);
       (this.ValidateStoreDefaultAppList(n) &&
         n.forEach((e) => {
           e.appid !== void 0 &&
@@ -1040,8 +1040,8 @@ var K = class e {
   }
   GetServiceTransport() {
     if (!this.m_serviceTransport) {
-      let e = u(`loyalty_webapi_token`, `application_config`),
-        t = m(new f(E.WEBAPI_BASE_URL, e || void 0));
+      let e = v(`loyalty_webapi_token`, `application_config`),
+        t = l(new T(w.WEBAPI_BASE_URL, e || void 0));
       this.m_serviceTransport = t.GetServiceTransport();
     }
     return this.m_serviceTransport;
@@ -1090,9 +1090,9 @@ var K = class e {
     return this.m_mapClanToCreatorHome.get(e.GetAccountID()).m_promise;
   }
   async InternalCreatorHome(e, t) {
-    let n = { get_appids: !0, l: E.LANGUAGE },
+    let n = { get_appids: !0, l: w.LANGUAGE },
       r =
-        E.STORE_BASE_URL +
+        w.STORE_BASE_URL +
         `curator/` +
         e.GetClanAccountID() +
         `/ajaxgetcreatorhomeinfo`,
@@ -1102,7 +1102,7 @@ var K = class e {
   async LoadCreatorHomeListForAppIncludeHiddden(e, t) {
     if ((this.LazyInit(), !this.m_mapAppToCreatorIDList.has(e))) {
       let n = { appid: e },
-        r = E.STORE_BASE_URL + `events/ajaxgetcreatorhomeidforapp`,
+        r = w.STORE_BASE_URL + `events/ajaxgetcreatorhomeidforapp`,
         i = await W.default.get(r, {
           params: n,
           cancelToken: t && t.token,
@@ -1113,12 +1113,12 @@ var K = class e {
     return this.m_mapAppToCreatorIDList.get(e);
   }
   async SearchCreatorHomeStore(e, t, n) {
-    let r = `${E.STORE_BASE_URL}curator/0/ajaxsearchcurators`,
+    let r = `${w.STORE_BASE_URL}curator/0/ajaxsearchcurators`,
       a = {
         term: e.replace(` `, `+`),
         require_creator: t,
-        cc: E.COUNTRY,
-        l: E.LANGUAGE,
+        cc: w.COUNTRY,
+        l: w.LANGUAGE,
         origin: self.origin,
       },
       o = [],
@@ -1128,7 +1128,7 @@ var K = class e {
         i(() => {
           s.data.curators.forEach((e) => {
             if (!this.m_mapClanToCreatorHome.has(e.creator_clan_id)) {
-              let t = new G(l.InitFromClanID(e.creator_clan_id, E.EUNIVERSE));
+              let t = new G(d.InitFromClanID(e.creator_clan_id, w.EUNIVERSE));
               (t.Initialize(e),
                 this.m_mapClanToCreatorHome.set(e.creator_clan_id, t));
             }
@@ -1144,11 +1144,11 @@ var K = class e {
       : [];
   }
 };
-(d([t], K.prototype, `m_mapClanToCreatorHome`, void 0),
-  d([t], K.prototype, `m_mapAppToCreatorIDList`, void 0),
-  d([n], K.prototype, `LazyInit`, null));
+(f([t], K.prototype, `m_mapClanToCreatorHome`, void 0),
+  f([t], K.prototype, `m_mapAppToCreatorIDList`, void 0),
+  f([n], K.prototype, `LazyInit`, null));
 var q = new K();
-O(`g_CreatorHomeStore`, q);
+h(`g_CreatorHomeStore`, q);
 function J(e) {
   if (!e) return null;
   let t = q.BHasCreatorHomeLoaded(e.clanSteamID)
@@ -1158,7 +1158,7 @@ function J(e) {
 }
 function Y(e) {
   if (!e) return;
-  let t = u(`creator_home_list_info`, `application_config`);
+  let t = v(`creator_home_list_info`, `application_config`);
   if (typeof t != `object` || !t || Array.isArray(t)) return;
   let n = t[e];
   if (n && n.title)
@@ -1178,12 +1178,12 @@ function Q(e) {
   return Y(e)?.imageUrl;
 }
 function $(e) {
-  let t = l.InitFromClanID(e, E.EUNIVERSE);
+  let t = d.InitFromClanID(e, w.EUNIVERSE);
   return {
     queryKey: [`CreatorHome`, e],
     initialData: () => q.GetCreatorHome(t),
     queryFn: async () => {
-      let t = l.InitFromClanID(e, E.EUNIVERSE);
+      let t = d.InitFromClanID(e, w.EUNIVERSE);
       return await q.LoadCreatorHome(t, !0);
     },
   };
@@ -1222,10 +1222,10 @@ function re(e, t) {
     queryKey: [`GetCreatorHomeGetAllListsQuery`, e, t],
     queryFn: async () => {
       let n = q.GetServiceTransport(),
-        r = C.Init(h);
-      (r.Body().set_steamid(new l(e, E.EUNIVERSE, 7, 0).ConvertTo64BitString()),
+        r = C.Init(y);
+      (r.Body().set_steamid(new d(e, w.EUNIVERSE, 7, 0).ConvertTo64BitString()),
         r.Body().set_count(100));
-      let i = await y.GetLists(n, r);
+      let i = await p.GetLists(n, r);
       return i.BSuccess()
         ? i
             .Body()
@@ -1241,10 +1241,10 @@ function ie(e, t) {
     queryKey: [`GetCreatorHomeGetListsDetailsQuery`, e, t],
     queryFn: async () => {
       let n = q.GetServiceTransport(),
-        r = C.Init(_);
-      (r.Body().set_steamid(new l(e, E.EUNIVERSE, 7, 0).ConvertTo64BitString()),
+        r = C.Init(g);
+      (r.Body().set_steamid(new d(e, w.EUNIVERSE, 7, 0).ConvertTo64BitString()),
         r.Body().set_listid(t));
-      let i = await y.GetListDetails(n, r);
+      let i = await p.GetListDetails(n, r);
       return i.BSuccess() ? (i.Body().list_details() ?? null) : null;
     },
     enabled: e > 0,

@@ -2,26 +2,26 @@
  ****/
 
 import { dt as e, st as t } from "./libraries.js";
-import { Hb as n, Iy as r } from "./main.js";
+import { Ly as n, Ub as r } from "./main.js";
 async function i(e) {
   return c(
-    `${n.COMMUNITY_BASE_URL}ogg/${e}/ajaxgetvanityandclanid/?origin=${location.origin}`,
+    `${r.COMMUNITY_BASE_URL}ogg/${e}/ajaxgetvanityandclanid/?origin=${location.origin}`,
   );
 }
 async function a(e) {
-  let t = r.InitFromClanID(e, n.EUNIVERSE);
+  let t = n.InitFromClanID(e, r.EUNIVERSE);
   return c(
-    `${n.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${location.origin}`,
+    `${r.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${location.origin}`,
   );
 }
 async function o(e) {
   return c(
-    `${n.COMMUNITY_BASE_URL}groups/${e}/ajaxgetvanityandclanid/?origin=${location.origin}`,
+    `${r.COMMUNITY_BASE_URL}groups/${e}/ajaxgetvanityandclanid/?origin=${location.origin}`,
   );
 }
 async function s(e) {
   return c(
-    `${n.COMMUNITY_BASE_URL}games/${e}/ajaxgetvanityandclanid/?origin=${location.origin}`,
+    `${r.COMMUNITY_BASE_URL}games/${e}/ajaxgetvanityandclanid/?origin=${location.origin}`,
   );
 }
 async function c(e) {
@@ -61,8 +61,8 @@ function g(e) {
       ((t = {
         ...e,
         clanSteamID: e.clanSteamIDString
-          ? new r(e.clanSteamIDString)
-          : r.InitFromClanID(e.clanAccountID, n.EUNIVERSE),
+          ? new n(e.clanSteamIDString)
+          : n.InitFromClanID(e.clanAccountID, r.EUNIVERSE),
       }),
       h.set(e, t)),
     t

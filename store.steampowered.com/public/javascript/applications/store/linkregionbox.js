@@ -4,15 +4,15 @@
 import { o as e, r as t } from "./rolldown-runtime.js";
 import { Lt as n, ft as r, l as i } from "./libraries.js";
 import {
-  Ex as a,
-  Mb as o,
-  Rx as s,
-  Uy as c,
-  Yo as l,
-  Zn as u,
-  kb as d,
-  nr as f,
-  yc as p,
+  Ab as a,
+  Dx as o,
+  Nb as s,
+  Qn as c,
+  Wy as l,
+  Xo as u,
+  bc as d,
+  rr as f,
+  zx as p,
 } from "./main.js";
 var m = e(n()),
   h = t({
@@ -112,7 +112,7 @@ var m = e(n()),
     m_nLocalOffsetYPct;
     m_fnMouseUp = null;
     m_fnMouseMove = null;
-    m_listeners = new d();
+    m_listeners = new a();
     m_strDescription = ``;
     m_aspectRatio = 1;
     componentWillUnmount() {
@@ -219,13 +219,13 @@ var m = e(n()),
             });
             break;
           case `middle`: {
-            let t = a(
+            let t = o(
                 this.CalcLeftEdge(e.clientX),
                 0,
                 100 - this.state.curWidthPct,
               ),
               n = 100 - (t + this.state.curWidthPct),
-              r = a(
+              r = o(
                 this.CalcTopEdge(e.clientY),
                 0,
                 100 - this.state.curHeightPct,
@@ -261,21 +261,21 @@ var m = e(n()),
           e.curRightPosPct === void 0
             ? this.state.curRightPosPct
             : e.curRightPosPct,
-        o = a(
+        a = o(
           100 - i - r,
           this.props.widthMinPct || 0,
           this.props.widthMaxPct || 100,
         ),
-        s = a(
+        s = o(
           100 - n - t,
           this.props.heightMinPct || 0,
           this.props.heightMaxPct || 100,
         );
       (this.props.bLockAspectRatio &&
         (e.curLeftPosPct !== void 0 || e.curRightPosPct !== void 0
-          ? (s = o / this.m_aspectRatio)
-          : (o = s * this.m_aspectRatio)),
-        e.curLeftPosPct === void 0 ? (i = 100 - (r + o)) : (r = 100 - i - o),
+          ? (s = a / this.m_aspectRatio)
+          : (a = s * this.m_aspectRatio)),
+        e.curLeftPosPct === void 0 ? (i = 100 - (r + a)) : (r = 100 - i - a),
         e.curTopPosPct === void 0 ? (n = 100 - (t + s)) : (t = 100 - n - s));
       let c = 100 - i - r,
         l = 100 - n - t;
@@ -309,16 +309,16 @@ var m = e(n()),
         : 0;
     }
     CalcLeftEdge(e) {
-      return a(this.GetXPercent(e), 0, 100);
+      return o(this.GetXPercent(e), 0, 100);
     }
     CalcRightEdge(e) {
-      return a(100 - (this.GetXPercent(e) + this.state.curWidthPct), 0, 100);
+      return o(100 - (this.GetXPercent(e) + this.state.curWidthPct), 0, 100);
     }
     CalcTopEdge(e) {
-      return a(this.GetYPercent(e), 0, 100);
+      return o(this.GetYPercent(e), 0, 100);
     }
     CalcBottomEdge(e) {
-      return a(100 - (this.GetYPercent(e) + this.state.curHeightPct), 0, 100);
+      return o(100 - (this.GetYPercent(e) + this.state.curHeightPct), 0, 100);
     }
     OnMouseUp(e, t) {
       (this.setState({
@@ -431,13 +431,13 @@ var m = e(n()),
                       (0, G.jsx)(`div`, {
                         className: `o5BUe1m-4BM-`,
                         onClick: this.HandleDelete,
-                        children: (0, G.jsx)(p, {}),
+                        children: (0, G.jsx)(d, {}),
                       }),
                     !this.props.bDisableLink &&
                       (0, G.jsx)(`div`, {
                         className: `-e4w8MaVU8k-`,
                         onClick: this.OnEditLink,
-                        children: (0, G.jsx)(l, {}),
+                        children: (0, G.jsx)(u, {}),
                       }),
                     (0, G.jsxs)(`div`, {
                       className: U,
@@ -479,23 +479,23 @@ var m = e(n()),
               (0, G.jsxs)(`div`, {
                 className: `_1Be3592R7Ao-`,
                 children: [
-                  (0, G.jsx)(u, {
+                  (0, G.jsx)(c, {
                     className: void 0,
                     type: `text`,
                     name: `link_url`,
                     value: this.state.text_link_url,
-                    label: c(`#SteamTV_LinkURL`),
+                    label: l(`#SteamTV_LinkURL`),
                     placeholder: `https://www.example.com`,
                     onChange: this.OnSetLinkURLChange,
                     mustBeURL: !0,
                   }),
-                  (0, G.jsx)(u, {
+                  (0, G.jsx)(c, {
                     className: void 0,
                     type: `text`,
                     name: `link_description`,
                     value: this.state.text_link_description,
-                    label: c(`#SteamTV_LinkDescription`),
-                    placeholder: c(`#SteamTV_LinkDescription_Placeholder`),
+                    label: l(`#SteamTV_LinkDescription`),
+                    placeholder: l(`#SteamTV_LinkDescription_Placeholder`),
                     onChange: this.OnSetLinkDescriptionChange,
                   }),
                   (0, G.jsxs)(`div`, {
@@ -504,11 +504,11 @@ var m = e(n()),
                       (0, G.jsxs)(f, {
                         disabled: !this.state.valid_link,
                         onClick: this.OnSaveLink,
-                        children: [` `, c(`#Button_OK`), ` `],
+                        children: [` `, l(`#Button_OK`), ` `],
                       }),
                       (0, G.jsxs)(f, {
                         onClick: this.OnEditLink,
-                        children: [` `, c(`#Button_Cancel`)],
+                        children: [` `, l(`#Button_Cancel`)],
                       }),
                     ],
                   }),
@@ -519,14 +519,14 @@ var m = e(n()),
       );
     }
   };
-(o([s], K.prototype, `LinkRegionBoxRef`, null),
-  o([s], K.prototype, `OnMouseDown`, null),
-  o([s], K.prototype, `OnMouseMove`, null),
-  o([s], K.prototype, `OnMouseUp`, null),
-  o([s], K.prototype, `HandleDelete`, null),
-  o([s], K.prototype, `OnSetLinkURLChange`, null),
-  o([s], K.prototype, `OnSetLinkDescriptionChange`, null),
-  o([s], K.prototype, `OnSaveLink`, null),
-  o([s], K.prototype, `OnEditLink`, null),
-  (K = o([i], K)));
+(s([p], K.prototype, `LinkRegionBoxRef`, null),
+  s([p], K.prototype, `OnMouseDown`, null),
+  s([p], K.prototype, `OnMouseMove`, null),
+  s([p], K.prototype, `OnMouseUp`, null),
+  s([p], K.prototype, `HandleDelete`, null),
+  s([p], K.prototype, `OnSetLinkURLChange`, null),
+  s([p], K.prototype, `OnSetLinkDescriptionChange`, null),
+  s([p], K.prototype, `OnSaveLink`, null),
+  s([p], K.prototype, `OnEditLink`, null),
+  (K = s([i], K)));
 export { K as t };

@@ -1014,17 +1014,27 @@ var _ = `ayIA6SQf2ec-`,
   _ = `-dmW-rw3MCQ-`,
   _ = `_4j8qorM28hk-`,
   _ = `_3q6-XUC00B4-`,
-  _ = `-KOYB4TSvIo-`,
-  _ = `fiHzWsYWBuc-`,
+  _ = `pb8jFImBN2M-`,
+  _ = `_51ovu0v0lsQ-`,
+  _ = `fgvV7-5XAt8-`,
+  _ = `G1doS4LhZj8-`,
+  _ = `qYTl2U56a-E-`,
+  _ = `Gx2uBl3FbRs-`,
+  _ = `Mk9-Sqg7OAU-`,
+  _ = `rJKBzzDDyIE-`,
+  _ = `ZhxezKK7RTk-`,
+  _ = `dbgMdgZxxYY-`,
   _ = `cqZoN-yOepI-`,
   _ = `k1TOwivfAZk-`,
   _ = `fVdE331pmpc-`,
   _ = `R-3-Z6WIyQU-`,
   _ = `qgRWWqLKJoA-`,
+  _ = `j-PVQp1kNz0-`,
   _ = `_2u2TVldFhrw-`,
   _ = `YPLbpAzDUsA-`,
   _ = `Lgpy4Rz7864-`,
   _ = `SQCaCafOE6k-`,
+  _ = `L4u4MaB3Aak-`,
   _ = `_4-M7ufdg-nY-`,
   _ = `_70-4z37p8Ks-`,
   _ = `sj7NnsbCJko-`,
@@ -2823,6 +2833,154 @@ var _ = class _ extends _.Message {
   _.GetGameFrameRateStats = _;
 })((_ ||= {}));
 function _(_) {
+  let _ = _(),
+    { data: _ } = _({
+      queryKey: [`performancestats_` + _],
+      queryFn: async () => {
+        if (!_) return null;
+        let _ = _.Init(_);
+        _.Body().set_appid(_);
+        let _ = await _.GetGameFrameRateStats(_, _);
+        return _.BSuccess() ? _.Body().toObject() : null;
+      },
+    });
+  return _ ?? void 0;
+}
+function _(_, _ = !0) {
+  return _({
+    queryKey: [`GetControllersUsed`],
+    queryFn: async () => {
+      let _;
+      try {
+        let _ = `${_.STORE_BASE_URL}account/ajaxgetcontrollersused`,
+          _ = await _.default.get(_, {
+            withCredentials: !0,
+          });
+        if (_?.status === 200 && _?.data?.success === 1) return _.data.data;
+        _ = _(_);
+      } catch (_) {
+        _ = _(_);
+      }
+      return (console.error(`usePlayerHardwareUsed failed:`, _), null);
+    },
+    select: _,
+    enabled: _ && !!_.accountid,
+  });
+}
+var _ = [`axis`, `item`],
+  _ = (0, _.forwardRef)((_, _) =>
+    _.createElement(_, {
+      chartName: `BarChart`,
+      defaultTooltipEventType: `axis`,
+      validateTooltipEventTypes: _,
+      tooltipPayloadSearcher: _,
+      categoricalChartProps: _,
+      ref: _,
+    }),
+  ),
+  _ = `_5tKh-7uOS0I-`,
+  _ = `m-xRqa0jmsU-`,
+  _ = `fB2-08CluaI-`,
+  _ = `_6hUeq4Kq5rs-`,
+  _ = 5;
+function _({ active: _, payload: _ }) {
+  if (!_ || !_?.length) return null;
+  let _ = _[0].payload;
+  return (0, _.jsx)(`div`, {
+    className: _,
+    children: `${_.Localize(`#GamePerformanceStats_FPS`, _.framerate ?? 0)}: ${_.percentage ?? 0}%`,
+  });
+}
+function _(_) {
+  let { histogram: _, className: _, minWidth: _ = 400, minHeight: _ = 300 } = _,
+    _ = _.useMemo(() => {
+      if (!_) return;
+      let _ = -1;
+      if (
+        (_.forEach((_, _) => {
+          Math.floor(_) > 0 && (_ = _);
+        }),
+        _ < 0)
+      )
+        return;
+      let _ = [];
+      return (
+        _.slice(0, _ + 1).forEach((_, _) => {
+          _.push({
+            framerate: _ * _,
+            percentage: Math.round(_),
+          });
+        }),
+        _.sort((_, _) => _.framerate - _.framerate)
+      );
+    }, [_]);
+  return _?.length
+    ? (0, _.jsxs)(`div`, {
+        className: _(_, _),
+        children: [
+          (0, _.jsx)(`div`, {
+            className: _,
+            children: _.Localize(`#GamePerformanceStats_SessionLabel`),
+          }),
+          (0, _.jsx)(_, {
+            width: `100%`,
+            minWidth: _,
+            minHeight: _,
+            children: (0, _.jsxs)(_, {
+              accessibilityLayer: !1,
+              margin: {
+                top: 35,
+                left: 0,
+                right: 0,
+                bottom: 25,
+              },
+              data: _,
+              children: [
+                (0, _.jsx)(_, {
+                  stroke: `#888`,
+                  strokeWidth: `0.5`,
+                  vertical: !1,
+                }),
+                (0, _.jsx)(_, {
+                  dataKey: `framerate`,
+                  stroke: `white`,
+                  label: {
+                    value: _.Localize(`#GamePerformanceStats_Framerate`),
+                    position: `bottom`,
+                    fill: `#A9A9A9`,
+                    fontSize: 14,
+                  },
+                }),
+                (0, _.jsx)(_, {
+                  stroke: `white`,
+                  domain: [() => 0, (_) => Math.max(_, 100)],
+                }),
+                (0, _.jsx)(_, {
+                  content: _,
+                  cursor: !1,
+                  isAnimationActive: !1,
+                }),
+                (0, _.jsx)(_, {
+                  fill: `#1a9fff`,
+                  dataKey: `percentage`,
+                  name: ``,
+                }),
+              ],
+            }),
+          }),
+        ],
+      })
+    : (0, _.jsx)(`div`, {
+        className: _(_, _),
+        children: (0, _.jsx)(`div`, {
+          className: _,
+          children: _.Localize(
+            `#GamePerformanceStats_StillGatheringData_NoDevice`,
+          ),
+        }),
+      });
+}
+function _(_) {
   let {
     results: _,
     titleId: _,
@@ -2914,31 +3072,36 @@ function _(_) {
                 appName: _,
               })),
               (_ = _)),
-      (0, _.jsxs)(_, {
-        autoFocus: _,
-        focusableIfEmpty: _,
-        noFocusRing: !0,
-        className: _,
-        ..._,
-        children: [
-          (0, _.jsxs)(`div`, {
-            _: _,
-            className: _,
-            children: [
-              (0, _.jsx)(`div`, {
-                className: _,
-                children: _,
-              }),
-              (0, _.jsx)(`div`, {
-                className: _,
-                children: _,
-              }),
-            ],
-          }),
-          _,
-          _,
-          !1,
-        ],
+      (0, _.jsx)(_, {
+        children: (0, _.jsxs)(_, {
+          autoFocus: _,
+          focusableIfEmpty: _,
+          noFocusRing: !0,
+          className: _,
+          ..._,
+          children: [
+            (0, _.jsxs)(`div`, {
+              _: _,
+              className: _,
+              children: [
+                (0, _.jsx)(`div`, {
+                  className: _,
+                  children: _,
+                }),
+                (0, _.jsx)(`div`, {
+                  className: _,
+                  children: _,
+                }),
+              ],
+            }),
+            _,
+            _,
+            (0, _.jsx)(_, {
+              appid: _.appid,
+              appName: _,
+            }),
+          ],
+        }),
       })
     );
   }
@@ -2973,7 +3136,9 @@ function _(_) {
         });
     }
     return (0, _.jsx)(_, {
-      children: _,
+      children: (0, _.jsx)(_, {
+        children: _,
+      }),
     });
   }
   let _ = (_) =>
@@ -3061,13 +3226,35 @@ function _(_) {
       },
     ];
   return (0, _.jsx)(_, {
-    tabs: _,
-    classNameCtn: _,
-    classNameTabContent: _,
-    startingTab: _.toString(),
-    preferredFocus: !0,
-    bDisableRouting: !0,
-    focusRingHasBorderRadius: !0,
+    children: (0, _.jsx)(_, {
+      tabs: _,
+      classNameCtn: _,
+      classNameTabContent: _,
+      startingTab: _.toString(),
+      preferredFocus: !0,
+      bDisableRouting: !0,
+      focusRingHasBorderRadius: !0,
+    }),
+  });
+}
+function _(_) {
+  let [_, _] = _.useState(!1),
+    _ = _.useRef(null),
+    _ = _.useCallback(() => {
+      let _ = _.current;
+      _ && _(_.scrollHeight > _.clientHeight);
+    }, []),
+    _ = _(_);
+  return (0, _.jsx)(_, {
+    ref: _,
+    className: _,
+    children: (0, _.jsx)(_, {
+      ref: _,
+      className: _,
+      focusableIfEmpty: _,
+      noFocusRing: !0,
+      children: _.children,
+    }),
   });
 }
 function _(_) {
@@ -3081,54 +3268,39 @@ function _(_) {
       deckBlogContent: _,
       children: _,
     } = _,
-    [_, _] = _.useState(!1),
-    _ = _.useCallback(() => _, [_]),
-    _ = _.useRef(null);
-  _();
-  let _ = _ ?? {};
-  return (
-    _.useEffect(() => {
-      _?.current?.scrollHeight !== void 0 &&
-        _?.current?.clientHeight !== void 0 &&
-        _(_?.current?.scrollHeight > _?.current?.clientHeight);
-    }, []),
-    (0, _.jsxs)(_, {
-      className: _,
-      ..._,
-      children: [
-        (0, _.jsxs)(`div`, {
-          children: [
-            (0, _.jsxs)(`div`, {
-              _: _,
-              className: _,
-              children: [
-                (0, _.jsx)(`div`, {
-                  className: _,
-                  children: _,
-                }),
-                (0, _.jsx)(`div`, {
-                  className: _,
-                  children: _,
-                }),
-              ],
-            }),
-            _,
-          ],
-        }),
-        _,
-        (0, _.jsx)(_, {
-          ref: _,
-          className: _() ? _ : _,
-          children: (0, _.jsx)(_, {
-            autoFocus: _,
-            focusableIfEmpty: _ || _(),
-            noFocusRing: !0,
-            children: _,
+    _ = _ ?? {};
+  return (0, _.jsxs)(_, {
+    className: _,
+    ..._,
+    children: [
+      (0, _.jsxs)(`div`, {
+        children: [
+          (0, _.jsxs)(`div`, {
+            _: _,
+            className: _,
+            children: [
+              (0, _.jsx)(`div`, {
+                className: _,
+                children: _,
+              }),
+              (0, _.jsx)(`div`, {
+                className: _,
+                children: _,
+              }),
+            ],
           }),
-        }),
-      ],
-    })
-  );
+          _,
+        ],
+      }),
+      _,
+      (0, _.jsx)(_, {
+        autoFocus: _,
+        focusableIfEmpty: _,
+        noFocusRing: !0,
+        children: _,
+      }),
+    ],
+  });
 }
 function _(_) {
   let { titleId: _, descriptionId: _, results: _, appName: _ } = _,
@@ -3271,7 +3443,10 @@ function _(_) {
                 ),
               ),
           }),
-        !1,
+        (0, _.jsx)(_, {
+          appid: _.appid,
+          appName: _,
+        }),
       ],
     }),
   });
@@ -3494,6 +3669,175 @@ function _(_) {
   }
 }
 function _(_) {
+  let { histogram: _, deviceName: _, appName: _ } = _,
+    _ = _
+      ? _.Localize(`#GamePerformanceStats_FrameRateDistribution`, _, _)
+      : _.Localize(`#GamePerformanceStats_FrameRateDistribution_ThisGame`, _);
+  return (0, _.jsxs)(`div`, {
+    className: _,
+    children: [
+      (0, _.jsxs)(`div`, {
+        children: [
+          (0, _.jsx)(`div`, {
+            className: _,
+            children: _.Localize(`#GamePerformanceStats_MoreInfoTitle`),
+          }),
+          (0, _.jsx)(`div`, {
+            children: _,
+          }),
+        ],
+      }),
+      (0, _.jsx)(_, {
+        histogram: _,
+        minWidth: 200,
+        minHeight: 200,
+      }),
+    ],
+  });
+}
+var _ = [4, 3];
+function _(_) {
+  let { appid: _, appName: _ } = _,
+    _ = _(_),
+    { data: _ } = _(void 0, !!_),
+    [_, _] = _.useState(!1),
+    [_, _] = _.useState(void 0),
+    _ = _.useRef(null),
+    _ = (0, _.useMemo)(() => {
+      let _ = new Map();
+      for (let _ of _) {
+        let _ = _?.frame_rates?.find((_) => _.clusterid == `` + _);
+        if (_) {
+          let _ = _.mean_frame_rate ?? 0;
+          _.set(_, {
+            average: _ > 0 ? _.toFixed(0) : void 0,
+            histogram: _.frame_rate_histogram,
+            lastUpdated: _.last_updated,
+          });
+        }
+      }
+      return _;
+    }, [_]),
+    _ = (0, _.useMemo)(() => {
+      let _ = !!_.get(3)?.average,
+        _ = !!_.get(4)?.average;
+      return _ &&
+        ((_?.has_steam_deck_neptune && !_?.has_steam_deck_galileo) || !_)
+        ? 3
+        : 4;
+    }, [_, _]),
+    _ = _.useMemo(
+      () =>
+        new Map([
+          [3, _.Localize(`#GamePerformanceStats_SteamDeckLCD`)],
+          [4, _.Localize(`#GamePerformanceStats_SteamDeckOLED`)],
+        ]),
+      [],
+    );
+  if (!_) return null;
+  if (!Array.from(_.values()).some((_) => !!_.average))
+    return (0, _.jsxs)(`div`, {
+      className: _,
+      children: [
+        (0, _.jsx)(`div`, {
+          className: _,
+        }),
+        (0, _.jsx)(`div`, {
+          className: _,
+          children: _.Localize(
+            `#GamePerformanceStats_StillGatheringData_NoDevice`,
+          ),
+        }),
+      ],
+    });
+  let _ = _.map((_) => ({
+      name: (0, _.jsx)(`div`, {
+        className: _,
+        children: _.get(_),
+      }),
+      key: _.toString(),
+      contents: (0, _.jsx)(_, {
+        children: (0, _.jsx)(_, {
+          histogram: _.get(_)?.histogram,
+          deviceName: _.get(_) ?? ``,
+          appName: _,
+        }),
+      }),
+      onClick: () => _(_),
+    })),
+    _ = _ ?? _,
+    _ = _.get(_) ?? ``,
+    _ = _.get(_)?.average,
+    _ = _.get(_)?.lastUpdated ?? 0,
+    _;
+  if (_) {
+    let _ = (0, _.jsx)(`span`, {
+      className: _,
+      children: _.Localize(`#GameFrameRate_FPS`, _),
+    });
+    _ = _.LocalizeReact(`#GameFrameRate_Description_ThisGame`, _, _);
+  } else
+    _ = _
+      ? _.Localize(`#GamePerformanceStats_StillGatheringData`, _, _)
+      : _.Localize(`#GamePerformanceStats_StillGatheringData_ThisGame`, _);
+  let _ = !!_ && !_;
+  return (0, _.jsxs)(`div`, {
+    className: _,
+    onTransitionEnd: (_) => {
+      _.propertyName == `height` &&
+        _.current?.scrollIntoView({
+          behavior: `smooth`,
+          block: `nearest`,
+        });
+    },
+    children: [
+      (0, _.jsx)(`div`, {
+        className: _,
+      }),
+      (0, _.jsxs)(_, {
+        className: _,
+        onActivate: _ ? () => _(!_) : void 0,
+        focusable: _,
+        children: [
+          (0, _.jsxs)(`div`, {
+            className: _,
+            children: [
+              _,
+              _ &&
+                (0, _.jsx)(_, {
+                  className: `Tg0pxtzBwV4-`,
+                  direction: _ ? `up` : `down`,
+                }),
+            ],
+          }),
+          !!_ &&
+            _ > 0 &&
+            (0, _.jsx)(`div`, {
+              className: `gU46P2A34e4-`,
+              children: _.Localize(`#GameFrameRate_LastUpdated`, _(_)),
+            }),
+        ],
+      }),
+      (0, _.jsx)(_, {
+        visible: _,
+        children: (0, _.jsx)(`div`, {
+          ref: _,
+          className: _,
+          children: (0, _.jsx)(_, {
+            tabs: _,
+            classNameCtn: _,
+            startingTab: _.toString(),
+            controlledTab: _.toString(),
+            preferredFocus: !0,
+            bDisableRouting: !0,
+            focusRingHasBorderRadius: !0,
+          }),
+        }),
+      }),
+    ],
+  });
+}
+function _(_) {
   let { _: _, compatibility: _, onShowDialog: _ } = _,
     { data: _ } = _(_),
     { data: _ } = _(_),
@@ -3573,6 +3917,7 @@ function _(_) {
       children: (0, _.jsx)(_, {
         focusable: !1,
         "flow-children": `column`,
+        className: _,
         children: _
           ? (0, _.jsx)(_, {
               titleId: _,

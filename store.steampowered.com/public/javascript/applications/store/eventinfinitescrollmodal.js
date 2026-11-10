@@ -7,27 +7,27 @@ import { t as a } from "./apppartnereventspage.js";
 import "./modals.js";
 import { t as o } from "./throbber.js";
 import {
-  Fu as s,
-  Hb as c,
-  Jc as l,
+  Bb as s,
+  Cr as c,
+  Iu as l,
   L as u,
-  Mb as d,
-  Rn as f,
-  Sr as p,
-  i as m,
-  pn as h,
-  t as g,
-  yu as _,
-  zb as v,
+  Nb as d,
+  Ub as f,
+  Yc as p,
+  bu as m,
+  i as h,
+  mn as g,
+  t as _,
+  zn as v,
 } from "./main.js";
 var y = e(i()),
   b = e(t()),
   x = n(),
   S = (e) => {
     let { bShowOnlyInitialEvent: t } = e,
-      n = v(),
+      n = s(),
       r = u();
-    return (0, x.jsx)(l, {
+    return (0, x.jsx)(p, {
       children: (0, x.jsx)(C, {
         ...e,
         bShowOnlyInitialEvent: t || n,
@@ -42,12 +42,12 @@ var y = e(i()),
     componentDidMount() {
       this.state.eventModel || this.setState({ bLoading: !0 }, this.LoadEvent);
       let e = this.GetBodyElement();
-      e && this.props.bPrimaryPageFeature && e.classList.add(f);
+      e && this.props.bPrimaryPageFeature && e.classList.add(v);
     }
     componentWillUnmount() {
       this.m_cancelSignal.cancel(`EventInfiniteScrollModal unmounting`);
       let e = this.GetBodyElement();
-      e && this.props.bPrimaryPageFeature && e.classList.remove(f);
+      e && this.props.bPrimaryPageFeature && e.classList.remove(v);
     }
     GetBodyElement() {
       return this.m_refParent.current
@@ -81,7 +81,7 @@ var y = e(i()),
               this.setState({ bLoading: !1 }));
         })
         .catch((e) => {
-          let t = s(e);
+          let t = l(e);
           (console.error(`EventInfiniteScrollModal failed ` + t.strErrorMsg, t),
             this.setState({ bLoading: !1 }));
         });
@@ -95,10 +95,10 @@ var y = e(i()),
       let { bShowOnlyInitialEvent: e } = this.props,
         { bLoading: t, eventModel: n } = this.state;
       if (t)
-        return (0, x.jsx)(h, {
+        return (0, x.jsx)(g, {
           active: !0,
           children: (0, x.jsx)(`div`, {
-            className: g,
+            className: _,
             style: { height: `400px` },
             children: (0, x.jsx)(o, {}),
           }),
@@ -110,17 +110,17 @@ var y = e(i()),
           className: l,
           partnerEventStore: u,
           showAppHeader: d,
-          bPrimaryPageFeature: f,
+          bPrimaryPageFeature: p,
           additionalParams: v,
           eventClassName: y,
         } = this.props,
         b;
-      c.IN_CLIENT &&
+      f.IN_CLIENT &&
         n?.appid &&
-        (_.Get().HintLoad(),
-        _.Get().BOwnsApp(n.appid) &&
-          (b = (e) => p(e, `steam://nav/games/details/` + n.appid)));
-      let S = (0, x.jsx)(m, {
+        (m.Get().HintLoad(),
+        m.Get().BOwnsApp(n.appid) &&
+          (b = (e) => c(e, `steam://nav/games/details/` + n.appid)));
+      let S = (0, x.jsx)(h, {
         children: (t) =>
           (0, x.jsx)(a, {
             initialEvent: n,
@@ -128,7 +128,7 @@ var y = e(i()),
             clanSteamID: s,
             partnerEventStore: u,
             emoticonStore: t,
-            closeModal: f ? void 0 : r,
+            closeModal: p ? void 0 : r,
             showAppHeader: d,
             bShowOnlyInitialEvent: e,
             additionalParams: v,
@@ -136,9 +136,9 @@ var y = e(i()),
             onAppIconClick: b,
           }),
       });
-      return f
+      return p
         ? S
-        : (0, x.jsx)(h, {
+        : (0, x.jsx)(g, {
             active: !0,
             children: (0, x.jsx)(`div`, { className: l, children: S }),
           });

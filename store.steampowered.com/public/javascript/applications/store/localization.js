@@ -3,9 +3,9 @@
 
 import { o as e, r as t } from "./rolldown-runtime.js";
 import { Lt as n } from "./libraries.js";
-import { Cb as ee, Sb as r } from "./main.js";
-var i = e(n(), 1),
-  te = t({
+import { Cb as r, wb as i } from "./main.js";
+var a = e(n(), 1),
+  ee = t({
     AchievementBlock: () => M,
     AllGamesBGImage: () => Ce,
     Avatar: () => Me,
@@ -74,8 +74,8 @@ var i = e(n(), 1),
     chartAccentColorAlt: () => x,
     default: () => ze,
     monthOthersColor: () => y,
-    new_games_color: () => ne,
-    old_games_color: () => a,
+    new_games_color: () => te,
+    old_games_color: () => re,
     pie_deck: () => c,
     pie_linux: () => s,
     pie_mac: () => l,
@@ -89,11 +89,11 @@ var i = e(n(), 1),
     topApp_5: () => g,
     topApp_6: () => _,
     topApp_7: () => v,
-    used_games_color: () => re,
+    used_games_color: () => ne,
   }),
-  ne = `rgb(60, 223, 106)`,
-  re = `rgb(68, 221, 255)`,
-  a = `rgb(228, 150, 255)`,
+  te = `rgb(60, 223, 106)`,
+  ne = `rgb(68, 221, 255)`,
+  re = `rgb(228, 150, 255)`,
   o = `#28aee1`,
   s = `#cd4141`,
   c = `#9c85d1`,
@@ -175,9 +175,9 @@ var i = e(n(), 1),
   Le = `cP7Gr1eZGVU-`,
   Re = `EXx6XLewMm0-`,
   ze = {
-    new_games_color: ne,
-    used_games_color: re,
-    old_games_color: a,
+    new_games_color: te,
+    used_games_color: ne,
+    old_games_color: re,
     pie_windows: o,
     pie_linux: s,
     pie_deck: c,
@@ -1224,11 +1224,11 @@ var i = e(n(), 1),
     Description: Lo,
     OtherYearLink: Ro,
   },
-  Q = { 2022: te, 2023: Be, 2024: gn, 2025: Vr, 2026: pa },
+  Q = { 2022: ee, 2023: Be, 2024: gn, 2025: Vr, 2026: pa },
   Bo = Object.values(Q).reduce((e, t) => ({ ...e, ...t }), {}),
   Vo = 2022;
 function Ho(e) {
-  return (0, i.useMemo)(() => {
+  return (0, a.useMemo)(() => {
     let t = Q[e] ?? Q[Vo];
     return { ...Bo, ...t };
   }, [e]);
@@ -1301,11 +1301,11 @@ var $ = {};
 async function Uo(e) {
   if ($[e]) return await $[e]();
 }
-var Wo = ee(Uo);
-function Go(e, t, n, ee, ...r) {
-  let i = `${t}${n ? `_second` : `_third`}`;
-  if (e.HasKey(i))
-    return n ? e.LocalizeReact(i, ...r) : e.LocalizeReact(i, ee, ...r);
-  if (e.HasKey(t)) return e.LocalizeReact(t, ...r);
+var Wo = i(Uo);
+function Go(e, t, n, r, ...i) {
+  let a = `${t}${n ? `_second` : `_third`}`;
+  if (e.HasKey(a))
+    return n ? e.LocalizeReact(a, ...i) : e.LocalizeReact(a, r, ...i);
+  if (e.HasKey(t)) return e.LocalizeReact(t, ...i);
 }
 export { Wo as n, Ho as r, Go as t };

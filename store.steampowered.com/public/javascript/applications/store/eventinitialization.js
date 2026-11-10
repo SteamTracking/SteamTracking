@@ -20,7 +20,7 @@ import {
 } from "./salesectionfactory.js";
 import { pt as v } from "./linkwidget.js";
 import { V as ee } from "./storelink.js";
-import { N as te, P as ne, Tt as re, r as y, z as b } from "./saletags.js";
+import { Dr as te, N as ne, P as re, r as y, z as b } from "./saletags.js";
 import { u as x } from "./apppartnereventspage.js";
 import { i as S, r as C } from "./salepreviewwidgets.js";
 import { t as ie } from "./ajaxhooks.js";
@@ -35,26 +35,26 @@ import { n as O } from "./partnereventeditorcontext.js";
 import { t as k } from "./appinfostore.js";
 import { n as A } from "./partnereventstore.js";
 import {
-  By as j,
-  Fc as M,
-  Gb as N,
-  Gx as P,
-  Jc as F,
-  Oo as I,
-  Oy as L,
-  Sc as R,
-  Ty as z,
-  Uy as B,
-  Vu as V,
-  Wy as H,
-  Xi as U,
-  ac as de,
-  ax as W,
-  fl as fe,
-  kc as pe,
-  nr as me,
-  rx as he,
-  to as ge,
+  Ac as j,
+  Cc as M,
+  Ey as N,
+  Gy as P,
+  Hu as F,
+  Ic as I,
+  Kb as L,
+  Kx as R,
+  Vy as z,
+  Wy as B,
+  Yc as V,
+  Zi as H,
+  ix as U,
+  ko as de,
+  ky as fe,
+  no as pe,
+  oc as me,
+  ox as W,
+  pl as he,
+  rr as ge,
 } from "./main.js";
 import { a as _e } from "./discoveryqueuestore.js";
 import { t as ve } from "./giveawaystore.js";
@@ -138,9 +138,9 @@ function Te(e) {
           unique_id: `reservation_bbcode_` + t,
           reservation_package: t,
           deposit_package: n,
-          localized_reservation_desc: P([], 32, null),
-          localized_out_of_stock_override: P([a || null], 32, null),
-          localized_delivery_override_desc: P([o || null], 32, null),
+          localized_reservation_desc: R([], 32, null),
+          localized_out_of_stock_override: R([a || null], 32, null),
+          localized_delivery_override_desc: R([o || null], 32, null),
           override_delivery_only_out_of_stock: !!s,
           psu_less_package: i,
         },
@@ -153,12 +153,12 @@ function Te(e) {
       size: `small`,
       position: `center`,
     });
-  let g = !N.logged_in || !f.account_restricted_from_purchasing,
+  let g = !L.logged_in || !f.account_restricted_from_purchasing,
     _ =
       f.reservation_state == d.k_EPurchaseReservationState_Reserved
         ? f
         : void 0;
-  return (0, K.jsxs)(F, {
+  return (0, K.jsxs)(V, {
     children: [
       l &&
         (0, K.jsx)(G.Suspense, {
@@ -202,10 +202,10 @@ function Oe(e) {
     [i, a] = (0, G.useState)(!1),
     o = ie(`GameHoverFollowButton`),
     { elDialogElement: s, fnShowLogonDialog: c } = T(),
-    l = ne(t),
-    { mutateAsync: u } = te(t, !l, void 0);
-  return (0, K.jsxs)(pe, {
-    className: R(Ee, n),
+    l = re(t),
+    { mutateAsync: u } = ne(t, !l, void 0);
+  return (0, K.jsxs)(j, {
+    className: M(Ee, n),
     onClick: async (e) => {
       (e.preventDefault(),
         e.stopPropagation(),
@@ -213,9 +213,9 @@ function Oe(e) {
     },
     style: r,
     children: [
-      l ? (0, K.jsx)(de, {}) : (0, K.jsx)(I, {}),
+      l ? (0, K.jsx)(me, {}) : (0, K.jsx)(de, {}),
       (0, K.jsx)(`div`, {
-        className: R(De, i && `ijKnSJ3VcqM-`, `FollowGameButton`),
+        className: M(De, i && `ijKnSJ3VcqM-`, `FollowGameButton`),
         children: B(l ? `#Sale_StopFollowingGame` : `#Sale_FollowGame`),
       }),
       s,
@@ -245,7 +245,7 @@ function Pe(e) {
   let { clanAccountID: t, color: n, bgcolor: r } = e,
     [i, a] = G.useState(!1);
   return (0, K.jsx)(`div`, {
-    className: R(Ne, i && `Cc5dEagASNE-`),
+    className: M(Ne, i && `Cc5dEagASNE-`),
     onMouseEnter: () => a(!0),
     onMouseLeave: () => a(!1),
     children: (0, K.jsx)(y, {
@@ -268,15 +268,15 @@ var Ie = `FClDTpQrpCc-`,
   Le = `MYmTqhwexFc-`;
 function Re(e) {
   let { appid: t, color: n, bgcolor: r } = e,
-    i = V(),
+    i = F(),
     a = ee(t),
-    o = M(i);
+    o = I(i);
   return (0, K.jsx)(`div`, {
     className: Ie,
-    children: (0, K.jsx)(re, {
+    children: (0, K.jsx)(te, {
       snr: o,
       id: a,
-      classOverride: R(S, Le, `WishlistButton`),
+      classOverride: M(S, Le, `WishlistButton`),
       styleOverride: { color: n, backgroundColor: r },
       bShowInGamepadUI: !0,
     }),
@@ -307,10 +307,10 @@ var Ve = `XJDpqo3kSV4-`;
 function He(e) {
   let { appid: t, color: n, bgcolor: r } = e;
   return (
-    V(),
+    F(),
     (0, K.jsx)(Oe, {
       appID: t,
-      classOverride: R(C, Ve),
+      classOverride: M(C, Ve),
       styleOverride: { color: n, backgroundColor: r },
     })
   );
@@ -344,7 +344,7 @@ function Ge(e) {
               className: `baDBPeinwws-`,
               children:
                 r > 0
-                  ? B(`#Giveaway_Closed`, U(r))
+                  ? B(`#Giveaway_Closed`, H(r))
                   : B(`#Giveaway_Closed_NoWinnerInfo`),
             }),
           !i &&
@@ -383,7 +383,7 @@ function Ge(e) {
                     children: [
                       (0, K.jsx)(`div`, {
                         className: `_4V6epCns4jI-`,
-                        children: U(r),
+                        children: H(r),
                       }),
                       (0, K.jsx)(`div`, {
                         className: `EVJMTmpF-Vc-`,
@@ -417,7 +417,7 @@ function Ke(e) {
     }
     return (0, K.jsx)(`span`, {
       className: `DisplayBadgeProgress`,
-      children: U(e),
+      children: H(e),
     });
   }
   return null;
@@ -438,7 +438,7 @@ function qe(e) {
     l = Math.min(n + s, r);
   return (0, K.jsx)(`span`, {
     className: `DisplayBadgeProgress`,
-    children: U(l),
+    children: H(l),
   });
 }
 function Je(e) {
@@ -457,7 +457,7 @@ function Ye(e) {
     { elDialogElement: d, fnShowLogonDialog: f } = T();
   return (0, K.jsxs)(K.Fragment, {
     children: [
-      (0, K.jsx)(me, {
+      (0, K.jsx)(ge, {
         disabled: r,
         onClick: (e) => {
           a ||
@@ -477,7 +477,7 @@ function Ye(e) {
           : (0, K.jsxs)(K.Fragment, {
               children: [
                 !!a && (0, K.jsx)(w, { size: `small` }),
-                !!r && (0, K.jsx)(ge, {}),
+                !!r && (0, K.jsx)(pe, {}),
                 n,
               ],
             }),
@@ -573,7 +573,7 @@ function et(e) {
   let t = Ce();
   if (!t) return (0, K.jsx)(w, { size: `small` });
   let n = Number.parseInt(E(e.args));
-  return (0, K.jsx)(`span`, { children: U(Number(we(t, n))) });
+  return (0, K.jsx)(`span`, { children: H(Number(we(t, n))) });
 }
 function tt(e) {
   let t = o(W.accountid, `library`);
@@ -590,7 +590,7 @@ function tt(e) {
     case 0:
       r = t.unknownList?.length || 0;
   }
-  return (0, K.jsx)(`span`, { children: U(Number(r)) });
+  return (0, K.jsx)(`span`, { children: H(Number(r)) });
 }
 function nt(e) {
   let t = Number.parseInt(E(e.args)),
@@ -611,7 +611,7 @@ function rt(e) {
 function it(e) {
   return (0, K.jsx)(`span`, {
     className: ue,
-    children: H(
+    children: P(
       e.children,
       (0, K.jsx)(`b`, {}),
       (0, K.jsx)(`b`, {}),
@@ -635,7 +635,7 @@ function $(e, t) {
       return (
         Q++,
         () => {
-          --Q == 0 && fe();
+          --Q == 0 && he();
         }
       );
   }, [e, t]);
@@ -654,10 +654,10 @@ function lt(e) {
   return (
     $(n, t),
     G.useEffect(() => {
-      (k.Init(z(new L(he.WEBAPI_BASE_URL))), A.Init(), r(!0));
+      (k.Init(N(new fe(U.WEBAPI_BASE_URL))), A.Init(), r(!0));
     }, []),
     G.useEffect(() => {
-      let e = j();
+      let e = z();
       e && ke.locale(e);
     }, []),
     n

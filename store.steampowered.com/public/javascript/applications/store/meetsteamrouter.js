@@ -16,32 +16,32 @@ import { i as l, r as u } from "./eventdevfeaturestore.js";
 import { n as d, t as f } from "./simplesuccesserror.js";
 import { o as p } from "./partnereventstore.js";
 import {
-  $y as m,
-  Cl as h,
-  En as g,
-  Iu as _,
-  Iy as v,
-  Jb as y,
-  Jc as b,
-  Sc as x,
-  Uy as S,
-  Zn as C,
-  dr as ee,
-  gb as w,
-  lb as T,
-  mS as E,
-  nr as D,
-  pn as O,
-  qb as k,
+  Cc as m,
+  Dn as h,
+  Jb as g,
+  Lu as _,
+  Ly as v,
+  Qn as y,
+  Wy as b,
+  Yb as x,
+  Yc as S,
+  _b as C,
+  do as w,
+  eb as T,
+  fr as ee,
+  hS as E,
+  ir as D,
+  ix as O,
+  mn as k,
   rr as A,
-  rx as j,
-  uo as M,
+  ub as j,
+  wl as M,
   x as te,
 } from "./main.js";
 import {
-  a as N,
-  d as P,
-  i as ne,
+  a as ne,
+  d as N,
+  i as P,
   n as F,
   r as I,
   t as L,
@@ -55,14 +55,14 @@ function oe(e, t, n, r) {
   return a({
     mutationFn: async ({ bIncludeSelf: i, rgGuests: a }) => {
       let o = new FormData();
-      (o.append(`sessionid`, k()),
+      (o.append(`sessionid`, g()),
         o.append(`gid`, e),
         o.append(`accountid`, `` + t),
         o.append(`meetsteam_group_id`, `` + n),
         o.append(`meetsteam_session_id`, `` + r),
         o.append(`include_self`, `` + +!!i),
         a?.length && o.append(`guests`, a.join(`|`)));
-      let s = `${j.STORE_BASE_URL}meetsteam/ajaxupdateattendance`;
+      let s = `${O.STORE_BASE_URL}meetsteam/ajaxupdateattendance`;
       return (
         (await R.default.post(s, o, { withCredentials: !0 }))?.data?.success ==
         1
@@ -74,12 +74,12 @@ function se(e, t, n) {
   return a({
     mutationFn: async ({ nCapacity: r }) => {
       let i = new FormData();
-      (i.append(`sessionid`, k()),
+      (i.append(`sessionid`, g()),
         i.append(`gid`, e),
         i.append(`meetsteam_group_id`, `` + t),
         i.append(`meetsteam_session_id`, `` + n),
         i.append(`capacity`, `` + r));
-      let a = `${j.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`;
+      let a = `${O.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`;
       return (
         (await R.default.post(a, i, { withCredentials: !0 }))?.data?.success ==
         1
@@ -108,7 +108,7 @@ function B(e, t, n) {
 function V(e, t) {
   let n = l(),
     [r] = (0, z.useState)(() =>
-      y(`registrations`, `application_config`)
+      x(`registrations`, `application_config`)
         .map((e) => ((e.userReg = JSON.parse(e.jsondata)), e))
         .sort((t, n) => {
           let r = B(e.jsondata.meet_steam_groups, t.group_id, t.session_id);
@@ -168,11 +168,11 @@ var W = `qp3ftpND5iU-`,
 function _e(e) {
   let [t] = s(`gid`),
     n = p(t),
-    r = E(j.LANGUAGE),
+    r = E(O.LANGUAGE),
     i = (0, z.useCallback)(
       () =>
         window.location.assign(
-          `${j.STORE_BASE_URL}meetsteam/attendeelist?gid=${t}`,
+          `${O.STORE_BASE_URL}meetsteam/attendeelist?gid=${t}`,
         ),
       [t],
     );
@@ -185,7 +185,7 @@ function _e(e) {
             children: [
               (0, J.jsx)(`h2`, { children: n.GetNameWithFallback(r) }),
               (0, J.jsx)(`a`, {
-                href: `${j.STORE_BASE_URL}meetsteam/${t}`,
+                href: `${O.STORE_BASE_URL}meetsteam/${t}`,
                 target: `_blank`,
                 children: `See Event Details`,
               }),
@@ -193,10 +193,10 @@ function _e(e) {
           }),
           (0, J.jsx)(`div`, {
             className: K,
-            children: (0, J.jsxs)(D, {
+            children: (0, J.jsxs)(A, {
               onClick: i,
               children: [
-                (0, J.jsx)(M, { angle: 180, className: q }),
+                (0, J.jsx)(w, { angle: 180, className: q }),
                 `Back to full list`,
               ],
             }),
@@ -204,7 +204,7 @@ function _e(e) {
           (0, J.jsx)(ve, { eventModel: n }),
         ],
       })
-    : (0, J.jsx)(c, { string: S(`#Loading`) });
+    : (0, J.jsx)(c, { string: b(`#Loading`) });
 }
 function ve(e) {
   let { eventModel: t } = e,
@@ -220,7 +220,7 @@ function ve(e) {
       (0, J.jsx)(Y, {
         eventModel: t,
         rgUserRegs: n.today,
-        strTitle: `Today ` + T(i),
+        strTitle: `Today ` + j(i),
       }),
       (0, J.jsx)(Y, {
         eventModel: t,
@@ -265,7 +265,7 @@ function ye(e) {
     [n, r] = (0, z.useState)(!1),
     i = (0, z.useCallback)(() => r((e) => !e), []);
   return (0, J.jsx)(`div`, {
-    className: x({ [ge]: !0, [void 0]: n }),
+    className: m({ [ge]: !0, [void 0]: n }),
     onClick: i,
     onMouseEnter: () => r(!0),
     onMouseLeave: () => r(!1),
@@ -285,13 +285,13 @@ function be(e) {
       t.group_id,
       t.session_id,
     ),
-    [m, g, _] = h(),
-    y = oe(n.GID, r, t.group_id, t.session_id),
-    x = new Set(
+    [m, h, g] = M(),
+    _ = oe(n.GID, r, t.group_id, t.session_id),
+    y = new Set(
       t.guests_attendance?.length > 0 ? t.guests_attendance.split(`|`) : [],
     ),
-    S = t.attendance_count > x.size,
-    C = (e, t, n, r) =>
+    b = t.attendance_count > y.size,
+    x = (e, t, n, r) =>
       (0, J.jsxs)(J.Fragment, {
         children: [
           (0, J.jsxs)(`span`, { className: he, children: [e, `:`, `\xA0`] }),
@@ -328,13 +328,13 @@ function be(e) {
         : (0, J.jsxs)(`div`, {
             className: pe,
             children: [
-              (0, J.jsx)(A, {
+              (0, J.jsx)(D, {
                 label: (0, J.jsx)(J.Fragment, {
-                  children: C(
+                  children: x(
                     `Attendee`,
                     d.name || i.persona_name,
                     d.email_override,
-                    S,
+                    b,
                   ),
                 }),
                 checked: a,
@@ -344,10 +344,10 @@ function be(e) {
                 (0, J.jsx)(J.Fragment, {
                   children: d.guest_names.map((e) =>
                     (0, J.jsx)(
-                      A,
+                      D,
                       {
                         label: (0, J.jsx)(J.Fragment, {
-                          children: C(`Guest`, e, void 0, x.has(e)),
+                          children: x(`Guest`, e, void 0, y.has(e)),
                         }),
                         checked: s.includes(e),
                         onChange: (t) => {
@@ -365,19 +365,19 @@ function be(e) {
                   ),
                 }),
               (0, J.jsx)(ee, {
-                onClick: g,
+                onClick: h,
                 children: `Check in selected people`,
               }),
             ],
           }),
-      (0, J.jsx)(O, {
+      (0, J.jsx)(k, {
         active: m,
-        children: (0, J.jsx)(b, {
+        children: (0, J.jsx)(S, {
           children: (0, J.jsx)(xe, {
-            closeModal: _,
+            closeModal: g,
             bIncludeSelf: a,
             rgGuestsAttending: s,
-            fnMarkAttendance: y,
+            fnMarkAttendance: _,
             fnOnSuccess: () => u(!0),
           }),
         }),
@@ -395,10 +395,10 @@ function xe(e) {
     } = e,
     o = d();
   return o.bLoading
-    ? (0, J.jsx)(f, { state: o, strDialogTitle: S(`#Saving`), closeModal: t })
-    : (0, J.jsx)(g, {
+    ? (0, J.jsx)(f, { state: o, strDialogTitle: b(`#Saving`), closeModal: t })
+    : (0, J.jsx)(h, {
         onCancel: t,
-        strTitle: S(`#Button_Submit`),
+        strTitle: b(`#Button_Submit`),
         bAllowFullSize: !0,
         onOK: async () => {
           (o.fnSetLoading(!0),
@@ -410,10 +410,10 @@ function xe(e) {
                     o.fnSetStrSuccess(
                       `Success! This person has been checked in.`,
                     ))
-                  : o.fnSetStrError(S(`#Login_Error_Network_Description`));
+                  : o.fnSetStrError(b(`#Login_Error_Network_Description`));
               })
               .catch(() =>
-                o.fnSetStrError(S(`#Login_Error_Network_Description`)),
+                o.fnSetStrError(b(`#Login_Error_Network_Description`)),
               ));
         },
         children: `Mark as checked in?`,
@@ -421,9 +421,9 @@ function xe(e) {
 }
 function Se(e) {
   let { session: t, group: n } = e,
-    { sDisplayTimeZone: r, rtime_start: i, rtime_end: a } = P(e.session),
+    { sDisplayTimeZone: r, rtime_start: i, rtime_end: a } = N(e.session),
     o = I(i, r),
-    s = ne(i, a, r);
+    s = P(i, a, r);
   return !t || !n
     ? (0, J.jsx)(`div`, { children: `Session Infomrmation Missing` })
     : (0, J.jsxs)(`div`, {
@@ -479,7 +479,7 @@ function Be(e, t) {
 function Ve(e) {
   let [t] = s(`gid`),
     n = p(t),
-    r = E(j.LANGUAGE),
+    r = E(O.LANGUAGE),
     [i, a] = (0, z.useState)(``);
   return n
     ? (0, J.jsxs)(`div`, {
@@ -490,7 +490,7 @@ function Ve(e) {
             children: [
               (0, J.jsx)(`h1`, { children: n.GetNameWithFallback(r) }),
               (0, J.jsx)(`a`, {
-                href: `${j.STORE_BASE_URL}meetsteam/${t}`,
+                href: `${O.STORE_BASE_URL}meetsteam/${t}`,
                 target: `_blank`,
                 children: `See Event Details`,
               }),
@@ -499,7 +499,7 @@ function Ve(e) {
           (0, J.jsx)(We, { eventModel: n }),
           (0, J.jsx)(`div`, {
             className: Te,
-            children: (0, J.jsx)(C, {
+            children: (0, J.jsx)(y, {
               type: `text`,
               label: `Search for an attendee`,
               value: i,
@@ -511,7 +511,7 @@ function Ve(e) {
           (0, J.jsx)(He, { eventModel: n, strSearch: i.toLowerCase() }),
         ],
       })
-    : (0, J.jsx)(c, { string: S(`#Loading`) });
+    : (0, J.jsx)(c, { string: b(`#Loading`) });
 }
 function He(e) {
   let { eventModel: t, strSearch: n } = e,
@@ -551,7 +551,7 @@ function He(e) {
                     `div`,
                     {
                       className: Ee,
-                      children: (0, J.jsx)(D, {
+                      children: (0, J.jsx)(A, {
                         onClick: () => a(o.get(e.toLowerCase())),
                         children: e,
                       }),
@@ -572,10 +572,10 @@ function Ue(e) {
     children: [
       (0, J.jsx)(`div`, {
         className: K,
-        children: (0, J.jsxs)(D, {
+        children: (0, J.jsxs)(A, {
           onClick: i,
           children: [
-            (0, J.jsx)(M, { angle: 180, className: q }),
+            (0, J.jsx)(w, { angle: 180, className: q }),
             `Back to full list`,
           ],
         }),
@@ -583,7 +583,7 @@ function Ue(e) {
       (0, J.jsx)(Y, {
         eventModel: t,
         rgUserRegs: o.today,
-        strTitle: `Today ` + T(a),
+        strTitle: `Today ` + j(a),
       }),
       (0, J.jsx)(Y, {
         eventModel: t,
@@ -619,7 +619,7 @@ function We(e) {
       };
     }, [t?.jsondata?.meet_steam_groups, n, r]),
     s = z.useMemo(() => {
-      let e = y(`registrations`, `application_config`);
+      let e = x(`registrations`, `application_config`);
       if (e && typeof e == `object`)
         return e.reduce((e, t) => {
           let n = `${t.group_id}_${t.session_id}`,
@@ -633,12 +633,12 @@ function We(e) {
         (e, t) => (e == null || (t * 1e3 > n.getTime() && t < e) ? t : e),
         void 0,
       ) ?? 0,
-    l = Array.from(a.keys()).some((e) => w(n, new Date(e * 1e3)));
+    l = Array.from(a.keys()).some((e) => C(n, new Date(e * 1e3)));
   return (0, J.jsxs)(`div`, {
     className: De,
     children: [
       o &&
-        (0, J.jsx)(A, { label: `Show past events`, checked: r, onChange: i }),
+        (0, J.jsx)(D, { label: `Show past events`, checked: r, onChange: i }),
       (0, J.jsx)(`div`, {
         className: Oe,
         children: Array.from(a.keys()).map((e) =>
@@ -649,7 +649,7 @@ function We(e) {
               date: new Date(e * 1e3),
               sessionsAndGroups: a.get(e),
               rgRegistrationInfo: s,
-              isToday: w(l ? n : new Date(c * 1e3), new Date(e * 1e3)),
+              isToday: C(l ? n : new Date(c * 1e3), new Date(e * 1e3)),
             },
             e,
           ),
@@ -667,9 +667,9 @@ function Ge(e) {
     isToday: a,
   } = e;
   return (0, J.jsxs)(`div`, {
-    className: x(Ae, !a && `dfDPmr4MFBA-`),
+    className: m(Ae, !a && `dfDPmr4MFBA-`),
     children: [
-      (0, J.jsx)(`div`, { className: ke, children: m(n) }),
+      (0, J.jsx)(`div`, { className: ke, children: T(n) }),
       (0, J.jsx)(`div`, {
         className: je,
         children: r.map((e) =>
@@ -691,10 +691,10 @@ function Ge(e) {
 }
 function Ke(e) {
   let { eventModel: t, date: n, group: r, session: i, registrations: a } = e,
-    o = E(j.LANGUAGE),
+    o = E(O.LANGUAGE),
     s = u(),
-    { sDisplayTimeZone: c, rtime_start: l } = P(i),
-    d = N(l, c),
+    { sDisplayTimeZone: c, rtime_start: l } = N(i),
+    d = ne(l, c),
     f = a.reduce((e, t) => e + (t.guests_registered ?? 0), 0),
     p = a.reduce(
       (e, t) =>
@@ -704,7 +704,7 @@ function Ke(e) {
           : 0),
       0,
     ),
-    [m, g, _] = h(),
+    [h, g, _] = M(),
     v = se(t.GID, r.group_id, i.id),
     y = () => window.location.reload();
   return (0, J.jsxs)(`div`, {
@@ -734,14 +734,14 @@ function Ke(e) {
       Z(n) >= Z(s) &&
         (0, J.jsxs)(J.Fragment, {
           children: [
-            (0, J.jsx)(D, {
-              className: x(`-nD2J-ewBfk-`),
+            (0, J.jsx)(A, {
+              className: m(`-nD2J-ewBfk-`),
               onClick: g,
               children: `Update capacity...`,
             }),
-            (0, J.jsx)(O, {
-              active: m,
-              children: (0, J.jsx)(b, {
+            (0, J.jsx)(k, {
+              active: h,
+              children: (0, J.jsx)(S, {
                 children: (0, J.jsx)(qe, {
                   closeModal: _,
                   nCapacity: i.max_capacity ?? 0,
@@ -760,10 +760,10 @@ function qe(e) {
     [a, o] = z.useState(n.toString()),
     s = d();
   return s.bLoading
-    ? (0, J.jsx)(f, { state: s, strDialogTitle: S(`#Saving`), closeModal: t })
-    : (0, J.jsx)(g, {
+    ? (0, J.jsx)(f, { state: s, strDialogTitle: b(`#Saving`), closeModal: t })
+    : (0, J.jsx)(h, {
         onCancel: t,
-        strTitle: S(`Update Capacity`),
+        strTitle: b(`Update Capacity`),
         bAllowFullSize: !0,
         onOK: async () => {
           s.fnSetLoading(!0);
@@ -774,13 +774,13 @@ function qe(e) {
             .then((e) => {
               e
                 ? (i(), s.fnSetStrSuccess(`Max capacity updated.`))
-                : s.fnSetStrError(S(`#Login_Error_Network_Description`));
+                : s.fnSetStrError(b(`#Login_Error_Network_Description`));
             })
             .catch(() =>
-              s.fnSetStrError(S(`#Login_Error_Network_Description`)),
+              s.fnSetStrError(b(`#Login_Error_Network_Description`)),
             );
         },
-        children: (0, J.jsx)(C, {
+        children: (0, J.jsx)(y, {
           className: ze,
           label: `New capacity`,
           type: `text`,
@@ -802,7 +802,7 @@ function Q(e) {
       (0, J.jsx)(`div`, {
         className: Le,
         children: (0, J.jsx)(`div`, {
-          className: x(X, i ? Re : ``),
+          className: m(X, i ? Re : ``),
           style: { width: o },
         }),
       }),

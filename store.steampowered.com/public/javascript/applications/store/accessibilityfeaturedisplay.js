@@ -3,7 +3,7 @@
 
 import { o as e, r as t } from "./rolldown-runtime.js";
 import { Lt as n, ft as r } from "./libraries.js";
-import { Uy as i, ll as a, nl as o, rx as s } from "./main.js";
+import { Wy as i, ix as a, rl as o, ul as s } from "./main.js";
 var c = e(n()),
   l = `ut9Zlzvv8tU-`,
   u = `_918ET1T3Q44-`,
@@ -132,7 +132,7 @@ function D(e) {
     open: t,
     onToggle: (e) => n(e.currentTarget.open),
     children: [
-      (0, x.jsxs)(a, {
+      (0, x.jsxs)(s, {
         className: u,
         children: [
           (0, x.jsx)(`div`, {
@@ -151,7 +151,7 @@ function D(e) {
               }),
               (0, x.jsx)(`a`, {
                 className: y,
-                href: `${s.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36`,
+                href: `${a.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36`,
                 target: `_blank`,
                 children: `?`,
               }),
@@ -259,7 +259,7 @@ function k(e) {
 }
 function A(e) {
   return (0, x.jsx)(o, {
-    href: `${s.STORE_BASE_URL}category/${C[e.feature]}`,
+    href: `${a.STORE_BASE_URL}category/${C[e.feature]}`,
     className: g,
     focusable: e.open,
     children: (0, x.jsx)(`span`, {

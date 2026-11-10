@@ -2,7 +2,7 @@
  ****/
 
 import { t as e } from "./errors.js";
-import { Hb as t } from "./main.js";
+import { Ub as t } from "./main.js";
 async function n(t, n) {
   let r = await t.json().catch(() => ``);
   if (!r || typeof r != `object`) throw new e(76, `Malformed ${n} response`);

@@ -10,13 +10,13 @@ import { n as s, t as c } from "./eventinitialization.js";
 import { t as l } from "./throbber.js";
 import { n as u } from "./partnereventstore.js";
 import {
-  Iy as d,
-  Uy as f,
-  fd as p,
+  Ly as d,
+  Wy as f,
+  ax as p,
   gt as m,
   ht as h,
-  ix as g,
-  nx as _,
+  pd as g,
+  rx as _,
   t as v,
 } from "./main.js";
 var y = e(t()),
@@ -30,20 +30,20 @@ function x(e) {
 }
 function S(e) {
   let { promotionName: t, language: n, overrideEventModel: c } = e,
-    [p, x] = y.useState(
-      c ?? u.GetClanEventFromAnnouncementGID(g.ANNOUNCEMENT_GID),
+    [g, x] = y.useState(
+      c ?? u.GetClanEventFromAnnouncementGID(p.ANNOUNCEMENT_GID),
     );
   y.useEffect(() => {
-    if (!c && p?.AnnouncementGID != g.ANNOUNCEMENT_GID) {
+    if (!c && g?.AnnouncementGID != p.ANNOUNCEMENT_GID) {
       let e = new d(_.CLANSTEAMID);
       u.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
         e,
-        g.ANNOUNCEMENT_GID,
+        p.ANNOUNCEMENT_GID,
         null,
       ).then(x);
     }
-  }, [p, c]);
-  let S = r() ?? p,
+  }, [g, c]);
+  let S = r() ?? g,
     w = i();
   if ((s(1500), !S))
     return (0, b.jsx)(`div`, {
@@ -73,7 +73,7 @@ function S(e) {
 function C(e) {
   let { eventModel: t, children: n } = e,
     r = t.GetContentHubType() == `adultonly`;
-  return (0, b.jsx)(p, {
+  return (0, b.jsx)(g, {
     eAdultOnlyMediaBehavior: r ? `allowed` : `masked`,
     children: n,
   });

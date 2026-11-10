@@ -5,12 +5,12 @@ import { o as e } from "./rolldown-runtime.js";
 import { At as t, Lt as n, kt as r, tt as i } from "./libraries.js";
 import "./steammessages_quest_pb.js";
 import {
-  Fu as a,
+  Iu as a,
   Jb as o,
-  Mb as s,
-  ax as c,
-  qb as l,
-  rx as u,
+  Nb as s,
+  Yb as c,
+  ix as l,
+  ox as u,
 } from "./main.js";
 var d = e(i()),
   f = e(n()),
@@ -25,7 +25,7 @@ var d = e(i()),
     }
     constructor() {
       r(this);
-      let e = o(`summerstory`, `application_config`);
+      let e = c(`summerstory`, `application_config`);
       if (e) {
         if (e.story_choices) {
           let t = e.story_choices;
@@ -56,12 +56,12 @@ var d = e(i()),
       return this.m_mapGenreToStickerResponse.get(e);
     }
     async LoadClaimForGenre(e, t) {
-      if (this.m_mapGenreToStickerResponse.has(e) || !c.logged_in) return;
+      if (this.m_mapGenreToStickerResponse.has(e) || !u.logged_in) return;
       this.m_mapGenreToStickerResponse.set(e, {});
       let n = null;
       try {
         let r = await d.default.get(
-          u.STORE_BASE_URL + `promotion/ajaxhasclaimedgenresticker`,
+          l.STORE_BASE_URL + `promotion/ajaxhasclaimedgenresticker`,
           { params: { genre: e }, cancelToken: t?.token },
         );
         if (r?.status == 200 && r.data?.success == 1 && r.data?.results) {
@@ -77,15 +77,15 @@ var d = e(i()),
       console.error(`Could not check claim on genre`, e, r.strErrorMsg, r);
     }
     async MakeClaimForGenre(e, t, n) {
-      if (!c.logged_in) return 21;
+      if (!u.logged_in) return 21;
       let r = new FormData();
       (r.append(`genre`, e.toString()),
         r.append(`choice`, t.toString()),
-        r.append(`sessionid`, l()));
+        r.append(`sessionid`, o()));
       let i = null;
       try {
         let a = await d.default.post(
-          u.STORE_BASE_URL + `promotion/ajaxclaimstickerforgenre`,
+          l.STORE_BASE_URL + `promotion/ajaxclaimstickerforgenre`,
           r,
           { withCredentials: !0, cancelToken: n?.token },
         );
@@ -103,9 +103,9 @@ var d = e(i()),
       } catch (e) {
         i = e;
       }
-      let o = a(i);
+      let s = a(i);
       return (
-        console.error(`Could not make claim on genre`, e, o.strErrorMsg, o),
+        console.error(`Could not make claim on genre`, e, s.strErrorMsg, s),
         i?.data?.success || 2
       );
     }
@@ -144,7 +144,7 @@ var y = 1658760;
 function b(e) {
   let [t] = v(e);
   return t?.sticker_def
-    ? `${u.MEDIA_CDN_COMMUNITY_URL}images/items/${y}/${t.sticker_def.item_image_small}`
+    ? `${l.MEDIA_CDN_COMMUNITY_URL}images/items/${y}/${t.sticker_def.item_image_small}`
     : null;
 }
 function x(e) {

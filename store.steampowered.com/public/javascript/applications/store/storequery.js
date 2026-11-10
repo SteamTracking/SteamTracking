@@ -4,15 +4,15 @@
 import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, ft as n, st as r } from "./libraries.js";
 import {
-  Qv as i,
-  Vl as a,
-  du as o,
-  ey as s,
+  $v as i,
+  Hl as a,
+  Jx as o,
+  ay as s,
   fu as c,
-  iy as l,
-  mx as u,
-  ny as d,
-  qx as f,
+  hx as l,
+  pu as u,
+  ry as d,
+  ty as f,
 } from "./main.js";
 var p = e(t()),
   m = n(),
@@ -26,44 +26,44 @@ function _(e) {
 var v = `StoreQueryStore`;
 function y(e, t, n, i) {
   let a = g(),
-    o = l();
-  a || f(!1, `useStoreQuery called outside of a <StoreQueryRoot>`);
-  let s = a.defaultOptions,
-    c = p.useMemo(() => {
+    c = s();
+  a || o(!1, `useStoreQuery called outside of a <StoreQueryRoot>`);
+  let l = a.defaultOptions,
+    u = p.useMemo(() => {
       let e = [];
       return (
         i?.content_descriptors_excluded
           ? (e = i.content_descriptors_excluded)
-          : s?.content_descriptors_excluded &&
-            (e = s.content_descriptors_excluded),
+          : l?.content_descriptors_excluded &&
+            (e = l.content_descriptors_excluded),
         { ...t, filters: { content_descriptors_excluded: e, ...t.filters } }
       );
-    }, [t, i, s]),
-    u;
+    }, [t, i, l]),
+    d;
   i?.override_country_code === void 0
-    ? s?.override_country_code !== void 0 && (u = s.override_country_code)
-    : (u = i.override_country_code);
-  let d = { staleTime: 36e5 };
+    ? l?.override_country_code !== void 0 && (d = l.override_country_code)
+    : (d = i.override_country_code);
+  let f = { staleTime: 36e5 };
   return (
-    i?.reactQuery && (d = { ...d, ...i.reactQuery }),
+    i?.reactQuery && (f = { ...f, ...i.reactQuery }),
     r({
-      queryKey: [v, c, n ?? {}, i ?? {}],
-      queryFn: () => b(o, e, c, n ?? {}, u),
-      ...d,
+      queryKey: [v, u, n ?? {}, i ?? {}],
+      queryFn: () => b(c, e, u, n ?? {}, d),
+      ...f,
     })
   );
 }
 async function b(e, t, n, r, a) {
-  let l = u.Init(s);
-  (o(l),
-    r && c(l, r),
-    a && l.Body().set_override_country_code(a),
-    l.Body().set_query(i.fromObject(n)),
-    l.Body().set_query_name(t));
-  let f = await d.Query(e, l);
-  if (f.GetEResult() != 1)
-    throw `Error executing StoreQuery "${t}", EResult: ${f.GetEResult()}`;
-  return new x(f, r);
+  let o = l.Init(f);
+  (c(o),
+    r && u(o, r),
+    a && o.Body().set_override_country_code(a),
+    o.Body().set_query(i.fromObject(n)),
+    o.Body().set_query_name(t));
+  let s = await d.Query(e, o);
+  if (s.GetEResult() != 1)
+    throw `Error executing StoreQuery "${t}", EResult: ${s.GetEResult()}`;
+  return new x(s, r);
 }
 var x = class {
   m_Items = void 0;
@@ -83,7 +83,7 @@ var x = class {
   }
   ReadResults(e, t) {
     this.m_Items ||=
-      (f(
+      (o(
         e.Body().metadata().start() == 0,
         `Empty item list - expected to start at 0`,
       ),

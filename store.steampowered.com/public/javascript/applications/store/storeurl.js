@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { Hb as e } from "./main.js";
+import { Ub as e } from "./main.js";
 function t(e) {
   return e
     ? !!(

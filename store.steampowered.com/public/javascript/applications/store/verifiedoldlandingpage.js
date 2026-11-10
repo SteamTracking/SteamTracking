@@ -12,23 +12,23 @@ import { r as l } from "./saletechredirectsignin.js";
 import { r as u } from "./trailertitlebar.js";
 import { t as d } from "./trailerstate.js";
 import {
-  Hb as f,
-  Jc as p,
-  Jl as m,
-  Sc as h,
-  Uu as g,
-  ht as _,
-  kv as v,
-  mS as y,
-  nl as b,
-  ql as x,
-  wc as S,
-  wv as C,
-  zb as w,
+  Av as f,
+  Bb as p,
+  Cc as m,
+  Jl as h,
+  Tc as g,
+  Tv as _,
+  Ub as v,
+  Wu as y,
+  Yc as b,
+  Yl as x,
+  hS as S,
+  ht as C,
+  rl as w,
 } from "./main.js";
 var T = n();
 function E(e) {
-  return w()
+  return p()
     ? (0, T.jsx)(s, { ...e })
     : o()
       ? (0, T.jsx)(s, { ...e, bShowReviewSummary: !0 })
@@ -51,11 +51,11 @@ var D = `eNekHvzmFIU-`,
 function V(e) {
   let { appid: t, strUrlOverride: n } = e,
     i = r(t),
-    { data: a } = v(i);
+    { data: a } = f(i);
   return (
     (0, B.useEffect)(() => {
       if (a) {
-        let e = `${f.STORE_BASE_URL}${a.store_url_path}`.replace(
+        let e = `${v.STORE_BASE_URL}${a.store_url_path}`.replace(
           `/app/`,
           n ?? `/verified/`,
         );
@@ -64,16 +64,16 @@ function V(e) {
     }, [a, n]),
     !a || !i
       ? null
-      : (0, T.jsx)(_, {
+      : (0, T.jsx)(C, {
           method: `verifiedprogram`,
-          children: (0, T.jsx)(p, { children: (0, T.jsx)(U, { id: i }) }),
+          children: (0, T.jsx)(b, { children: (0, T.jsx)(U, { id: i }) }),
         })
   );
 }
 function H(e) {
   let { id: t } = e,
-    { data: n } = v(t),
-    r = `${f.CLAN_CDN_ASSET_URL}images/41316928/846f603df6057b070667f2741730c2038648955d.png`;
+    { data: n } = f(t),
+    r = `${v.CLAN_CDN_ASSET_URL}images/41316928/846f603df6057b070667f2741730c2038648955d.png`;
   return (0, T.jsxs)(T.Fragment, {
     children: [
       (0, T.jsx)(`div`, {
@@ -97,9 +97,9 @@ function H(e) {
         className: N,
         children: l.LocalizeReact(
           `#VerifiedProgram_DeckSubTitle`,
-          (0, T.jsx)(b, {
+          (0, T.jsx)(w, {
             className: O,
-            href: `${f.STORE_BASE_URL}greatondeck`,
+            href: `${v.STORE_BASE_URL}greatondeck`,
             children: l.Localize(`#VerifiedProgram_GreatOnDeck`),
           }),
         ),
@@ -114,7 +114,7 @@ function U(e) {
     children: [
       (0, T.jsx)(W, { id: t }),
       (0, T.jsxs)(`div`, {
-        className: h(`page_content`),
+        className: m(`page_content`),
         children: [
           (0, T.jsx)(H, { id: t }),
           (0, T.jsx)(q, { id: t }),
@@ -127,9 +127,9 @@ function U(e) {
 }
 function W(e) {
   let { id: t } = e,
-    { data: n } = C(t);
+    { data: n } = _(t);
   if (!n) return null;
-  let r = S(n, `library_hero_2x`) ?? S(n, `library_hero`);
+  let r = g(n, `library_hero_2x`) ?? g(n, `library_hero`);
   return (0, T.jsxs)(T.Fragment, {
     children: [
       (0, T.jsx)(`div`, {
@@ -158,25 +158,25 @@ function G(e) {
   });
 }
 function K(e) {
-  let t = g(`${f.STORE_BASE_URL}steamdeck?utm_source=verifiedpage`, `banner`);
-  return (0, T.jsx)(b, {
+  let t = y(`${v.STORE_BASE_URL}steamdeck?utm_source=verifiedpage`, `banner`);
+  return (0, T.jsx)(w, {
     href: t,
-    className: h(R),
+    className: m(R),
     children: (0, T.jsx)(J, {}),
   });
 }
 function q(e) {
   let { id: t } = e,
-    { data: n } = v(t),
-    r = m(t);
+    { data: n } = f(t),
+    r = x(t);
   if (!r) return null;
-  let i = `${f.CLAN_CDN_ASSET_URL}images/39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png`,
-    { rgDashTrailers: a, rgHlsTrailers: o } = x(r);
+  let i = `${v.CLAN_CDN_ASSET_URL}images/39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png`,
+    { rgDashTrailers: a, rgHlsTrailers: o } = h(r);
   return (0, T.jsxs)(`div`, {
     className: P,
     children: [
       (0, T.jsxs)(`div`, {
-        className: h(I),
+        className: m(I),
         children: [
           (0, T.jsx)(d, {
             children: (0, T.jsx)(`div`, {
@@ -205,7 +205,7 @@ function q(e) {
 }
 function J(e) {
   let t = a(),
-    n = y(f.LANGUAGE);
+    n = S(v.LANGUAGE);
   return (0, T.jsx)(i, {
     language: n,
     strAltText: l.Localize(`#VerifiedProgram_DeckShopBannerAlt`),

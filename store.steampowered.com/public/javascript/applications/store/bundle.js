@@ -17,7 +17,7 @@ import {
   x as m,
 } from "./rewardsshop.js";
 import "./steammessages_loyalty_rewards_pb.js";
-import { Iu as h, Sc as g, Uy as _ } from "./main.js";
+import { Cc as h, Lu as g, Wy as _ } from "./main.js";
 import { t as v } from "./layout.js";
 e();
 var y = `YUOqKgPXmCU-`,
@@ -28,7 +28,7 @@ var y = `YUOqKgPXmCU-`,
   w = r((e) => {
     let { bundleid: n } = e.match.params,
       r = parseInt(n),
-      i = (0, C.jsx)(t, { to: h.LoyaltyStore() });
+      i = (0, C.jsx)(t, { to: g.LoyaltyStore() });
     if (isNaN(r)) return i;
     let [o] = a.Get().GetRewardDefinitions(r);
     return o
@@ -72,7 +72,7 @@ var y = `YUOqKgPXmCU-`,
   }),
   D = ({ className: e }) =>
     (0, C.jsxs)(`div`, {
-      className: g(e, x),
+      className: h(e, x),
       children: [
         (0, C.jsx)(s, { className: b }),
         (0, C.jsx)(`span`, {

@@ -15,7 +15,7 @@ import {
   g as f,
   y as p,
 } from "./rewardsshop.js";
-import { Mb as m, Uy as h } from "./main.js";
+import { Nb as m, Wy as h } from "./main.js";
 import { o as g, t as _ } from "./layout.js";
 var v = e(t()),
   y = `VlcajOpXVIQ-`,

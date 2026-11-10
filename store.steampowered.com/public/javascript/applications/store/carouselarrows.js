@@ -6,45 +6,45 @@ import { Lt as t, N as n, ft as r } from "./libraries.js";
 import { N as i } from "./partnerevent.js";
 import { n as a } from "./lazyrenderchildren.js";
 import {
-  $c as o,
-  Do as s,
-  Fa as c,
-  Ha as l,
-  Sc as u,
-  Sl as d,
-  Ta as f,
-  Ua as p,
-  Uy as m,
-  Va as h,
-  Xb as g,
-  Xs as _,
-  Zb as v,
-  _t as y,
-  ex as b,
-  ka as x,
-  kc as S,
-  po as C,
-  qy as w,
-  rr as ee,
-  uo as te,
-  zb as T,
+  Aa as o,
+  Ac as s,
+  Bb as c,
+  Cc as l,
+  Cl as u,
+  Ea as d,
+  Ha as f,
+  Ia as p,
+  Jy as m,
+  Oo as h,
+  Qb as g,
+  Ua as _,
+  Wa as v,
+  Wy as y,
+  Zb as b,
+  Zs as x,
+  _t as S,
+  do as C,
+  el as w,
+  ir as ee,
+  mo as te,
+  tx as ne,
 } from "./main.js";
-var E = e(t(), 1),
-  ne = `100% 0px 100% 0px`,
-  re = `SaleSection_`;
-function ie() {
+var T = e(t(), 1),
+  re = `100% 0px 100% 0px`,
+  ie = `SaleSection_`;
+function E() {
   return window.innerWidth ?? 1920;
 }
 function ae() {
-  return ie() >= 940;
+  return E() >= 940;
 }
 function oe() {
-  f();
-  let [e, t] = (0, E.useState)(() => ie());
+  d();
+  let [e, t] = (0, T.useState)(() => E());
   return (
-    (0, E.useEffect)(() => {
+    (0, T.useEffect)(() => {
       let e = () => {
-        t(ie());
+        t(E());
       };
       return (
         e(),
@@ -302,8 +302,8 @@ function L(e) {
 }
 function R(e, t, n) {
   if (e === t) return !0;
-  var r = K[Ze(e)],
-    i = K[Ze(t)];
+  var r = W[$e(e)],
+    i = W[$e(t)];
   return !(!r || r !== i) && r(e, t, n);
 }
 function Oe(e) {
@@ -346,7 +346,7 @@ function Ne(e) {
   return t === `[object RegExp]` || t === `[object Date]` || Pe(e);
 }
 function Pe(e) {
-  return e.$$typeof === et;
+  return e.$$typeof === nt;
 }
 function Fe(e) {
   return Array.isArray(e) ? [] : {};
@@ -408,7 +408,7 @@ function He(e, t, n) {
 }
 function B(e, t, n) {
   (((n ||= {}).arrayMerge = n.arrayMerge || Ie),
-    (n.isMergeableObject = n.isMergeableObject || $e),
+    (n.isMergeableObject = n.isMergeableObject || tt),
     (n.cloneUnlessOtherwiseSpecified = z));
   var r = Array.isArray(t);
   return r === Array.isArray(e)
@@ -448,7 +448,7 @@ function V(e) {
           {
             key: `shouldComponentUpdate`,
             value: function (e, t) {
-              return !Qe(t, this.state) || !Qe(e, this.props);
+              return !et(t, this.state) || !et(e, this.props);
             },
           },
           {
@@ -469,9 +469,9 @@ function V(e) {
               var t = this,
                 n = this.props,
                 r = n.children,
-                i = N(n, ct),
-                a = tt(this.state, i, G);
-              return E.createElement(
+                i = N(n, lt),
+                a = G(this.state, i, Ye);
+              return T.createElement(
                 e,
                 j(
                   {
@@ -502,9 +502,9 @@ function V(e) {
         ]),
         r
       );
-    })(E.Component);
+    })(T.Component);
   return (
-    A(n, `contextType`, q),
+    A(n, `contextType`, K),
     A(n, `propTypes`, { children: U.children }),
     A(n, `defaultProps`, { children: null }),
     n
@@ -577,13 +577,13 @@ var We = function () {
         : null;
     },
   },
-  W = function (e) {
+  Je = function (e) {
     var t = e.min,
       n = e.max,
       r = e.x;
     return Math.min(n, Math.max(t, r));
   },
-  G = {
+  Ye = {
     arrayMerge: function (e, t) {
       return t;
     },
@@ -601,8 +601,8 @@ var We = function () {
         };
     },
   },
-  Je = { buttonBack: `buttonBack___1mlaL` },
-  Ye = [
+  Xe = { buttonBack: `buttonBack___1mlaL` },
+  Ze = [
     `carouselStore`,
     `className`,
     `currentSlide`,
@@ -613,7 +613,7 @@ var We = function () {
     `visibleSlides`,
     `infinite`,
   ],
-  Xe = (function (e) {
+  Qe = (function (e) {
     function t(e) {
       var r;
       return (
@@ -661,14 +661,14 @@ var We = function () {
                   e.totalSlides,
                   e.visibleSlides,
                   e.infinite),
-                i = N(e, Ye),
-                a = I([Je.buttonBack, `carousel__back-button`, n]),
+                i = N(e, Ze),
+                a = I([Xe.buttonBack, `carousel__back-button`, n]),
                 o = t.setDisabled(
                   this.props.disabled,
                   this.props.currentSlide,
                   r,
                 );
-              return E.createElement(
+              return T.createElement(
                 `button`,
                 j(
                   {
@@ -696,8 +696,8 @@ var We = function () {
       ),
       t
     );
-  })(E.Component);
-(A(Xe, `propTypes`, {
+  })(T.Component);
+(A(Qe, `propTypes`, {
   carouselStore: H.object.isRequired,
   children: U.children.isRequired,
   className: H.string,
@@ -709,13 +709,13 @@ var We = function () {
   visibleSlides: H.number.isRequired,
   infinite: H.bool,
 }),
-  A(Xe, `defaultProps`, {
+  A(Qe, `defaultProps`, {
     className: null,
     disabled: null,
     onClick: null,
     infinite: !1,
   }));
-var Ze = Ce(function (e, t) {
+var $e = Ce(function (e, t) {
   var n = {}.toString,
     r = typeof window < `u` ? window.Node : Function;
   e.exports = t = function (e) {
@@ -763,37 +763,37 @@ var Ze = Ce(function (e, t) {
     "[object Blob]": `blob`,
   });
 });
-Ze.types;
-var K = {};
-((K.number = function (e, t) {
+$e.types;
+var W = {};
+((W.number = function (e, t) {
   return e !== e && t !== t;
 }),
-  (K.function = function (e, t, n) {
+  (W.function = function (e, t, n) {
     return (
       e.toString() === t.toString() &&
-      K.object(e, t, n) &&
+      W.object(e, t, n) &&
       R(e.prototype, t.prototype)
     );
   }),
-  (K.date = function (e, t) {
+  (W.date = function (e, t) {
     return +e == +t;
   }),
-  (K.regexp = function (e, t) {
+  (W.regexp = function (e, t) {
     return e.toString() === t.toString();
   }),
-  (K.element = function (e, t) {
+  (W.element = function (e, t) {
     return e.outerHTML === t.outerHTML;
   }),
-  (K.textnode = function (e, t) {
+  (W.textnode = function (e, t) {
     return e.textContent === t.textContent;
   }),
-  (K.arguments = K[`bit-array`] = K.array = Oe(ke)),
-  (K.object = Oe(Ae)));
-var Qe = R,
-  $e = function (e) {
+  (W.arguments = W[`bit-array`] = W.array = Oe(ke)),
+  (W.object = Oe(Ae)));
+var et = R,
+  tt = function (e) {
     return Me(e) && !Ne(e);
   },
-  et =
+  nt =
     typeof Symbol == `function` && Symbol.for
       ? Symbol.for(`react.element`)
       : 60103;
@@ -803,9 +803,9 @@ B.all = function (e, t) {
     return B(e, n, t);
   }, {});
 };
-var tt = B,
-  q = E.createContext(),
-  nt = function e(t) {
+var G = B,
+  K = T.createContext(),
+  rt = function e(t) {
     return (
       Object.freeze(t),
       Object.getOwnPropertyNames(t).forEach(function (n) {
@@ -818,11 +818,11 @@ var tt = B,
       t
     );
   },
-  rt = { masterSpinnerFinished: !1 },
-  it = (function () {
+  it = { masterSpinnerFinished: !1 },
+  at = (function () {
     function e(t) {
       (O(this, e),
-        (this.state = nt(tt(rt, t, G))),
+        (this.state = rt(G(it, t, Ye))),
         (this.subscriptions = []),
         (this.masterSpinnerSubscriptions = {}),
         (this.setStoreState = this.setStoreState.bind(this)),
@@ -843,14 +843,14 @@ var tt = B,
         {
           key: `setStoreState`,
           value: function (e, t) {
-            ((this.state = nt(tt(this.state, e, G))),
+            ((this.state = rt(G(this.state, e, Ye))),
               this.updateSubscribers(t));
           },
         },
         {
           key: `getStoreState`,
           value: function () {
-            return tt({}, this.state, G);
+            return G({}, this.state, Ye);
           },
         },
         {
@@ -942,7 +942,7 @@ var tt = B,
       e
     );
   })(),
-  at = [
+  ot = [
     `children`,
     `className`,
     `currentSlide`,
@@ -967,7 +967,7 @@ var tt = B,
     `infinite`,
     `isIntrinsicHeight`,
   ],
-  ot = (function (e) {
+  st = (function (e) {
     function t(e) {
       var r;
       if (
@@ -1006,7 +1006,7 @@ var tt = B,
         infinite: e.infinite,
         isIntrinsicHeight: e.isIntrinsicHeight,
       };
-      return ((r.carouselStore = new it(i)), r);
+      return ((r.carouselStore = new at(i)), r);
     }
     M(t, e);
     var n = F(t);
@@ -1097,13 +1097,13 @@ var tt = B,
                 e.visibleSlides,
                 e.infinite,
                 e.isIntrinsicHeight,
-                N(e, at)),
+                N(e, ot)),
               r = I([`carousel`, this.props.className]);
-            return E.createElement(
+            return T.createElement(
               t,
               j({ className: r }, n),
-              E.createElement(
-                q.Provider,
+              T.createElement(
+                K.Provider,
                 { value: this.carouselStore },
                 this.props.children,
               ),
@@ -1113,9 +1113,9 @@ var tt = B,
       ]),
       t
     );
-  })(E.Component),
-  st =
-    (A(ot, `propTypes`, {
+  })(T.Component),
+  ct =
+    (A(st, `propTypes`, {
       children: U.children.isRequired,
       className: H.string,
       currentSlide: H.number,
@@ -1140,7 +1140,7 @@ var tt = B,
       infinite: H.bool,
       isIntrinsicHeight: H.bool,
     }),
-    A(ot, `defaultProps`, {
+    A(st, `defaultProps`, {
       className: null,
       currentSlide: 0,
       disableAnimation: !1,
@@ -1161,10 +1161,10 @@ var tt = B,
       infinite: !1,
       isIntrinsicHeight: !1,
     }),
-    ot);
-q.Consumer;
-var ct = [`children`],
-  lt = V(Xe, function (e) {
+    st);
+K.Consumer;
+var lt = [`children`],
+  ut = V(Qe, function (e) {
     return {
       currentSlide: e.currentSlide,
       step: e.step,
@@ -1173,8 +1173,8 @@ var ct = [`children`],
       infinite: e.infinite,
     };
   }),
-  ut = { buttonFirst: `buttonFirst___2rhFr` },
-  dt = [
+  dt = { buttonFirst: `buttonFirst___2rhFr` },
+  ft = [
     `carouselStore`,
     `className`,
     `currentSlide`,
@@ -1182,7 +1182,7 @@ var ct = [`children`],
     `onClick`,
     `totalSlides`,
   ],
-  ft = (function (e) {
+  pt = (function (e) {
     function t() {
       var e;
       return (
@@ -1215,10 +1215,10 @@ var ct = [`children`],
               t = (e.carouselStore, e.className),
               n = e.currentSlide,
               r = e.disabled,
-              i = (e.onClick, e.totalSlides, N(e, dt)),
-              a = I([ut.buttonFirst, `carousel__first-button`, t]),
+              i = (e.onClick, e.totalSlides, N(e, ft)),
+              a = I([dt.buttonFirst, `carousel__first-button`, t]),
               o = r === null ? n === 0 : r;
-            return E.createElement(
+            return T.createElement(
               `button`,
               j(
                 {
@@ -1237,9 +1237,9 @@ var ct = [`children`],
       ]),
       t
     );
-  })(E.Component);
+  })(T.Component);
 V(
-  (A(ft, `propTypes`, {
+  (A(pt, `propTypes`, {
     carouselStore: H.object.isRequired,
     children: U.children.isRequired,
     className: H.string,
@@ -1248,14 +1248,14 @@ V(
     onClick: H.func,
     totalSlides: H.number.isRequired,
   }),
-  A(ft, `defaultProps`, { className: null, disabled: null, onClick: null }),
-  ft),
+  A(pt, `defaultProps`, { className: null, disabled: null, onClick: null }),
+  pt),
   function (e) {
     return { currentSlide: e.currentSlide, totalSlides: e.totalSlides };
   },
 );
-var pt = { buttonLast: `buttonLast___2yuh0` },
-  mt = [
+var mt = { buttonLast: `buttonLast___2yuh0` },
+  ht = [
     `carouselStore`,
     `className`,
     `currentSlide`,
@@ -1264,7 +1264,7 @@ var pt = { buttonLast: `buttonLast___2yuh0` },
     `totalSlides`,
     `visibleSlides`,
   ],
-  ht = (function (e) {
+  gt = (function (e) {
     function t() {
       var e;
       return (
@@ -1301,10 +1301,10 @@ var pt = { buttonLast: `buttonLast___2yuh0` },
               r = e.disabled,
               i = (e.onClick, e.totalSlides),
               a = e.visibleSlides,
-              o = N(e, mt),
-              s = I([pt.buttonLast, `carousel__last-button`, t]),
+              o = N(e, ht),
+              s = I([mt.buttonLast, `carousel__last-button`, t]),
               c = r === null ? n >= i - a : r;
-            return E.createElement(
+            return T.createElement(
               `button`,
               j(
                 {
@@ -1323,9 +1323,9 @@ var pt = { buttonLast: `buttonLast___2yuh0` },
       ]),
       t
     );
-  })(E.Component);
+  })(T.Component);
 V(
-  (A(ht, `propTypes`, {
+  (A(gt, `propTypes`, {
     carouselStore: H.object.isRequired,
     children: U.children.isRequired,
     className: H.string,
@@ -1335,8 +1335,8 @@ V(
     totalSlides: H.number.isRequired,
     visibleSlides: H.number.isRequired,
   }),
-  A(ht, `defaultProps`, { className: null, disabled: null, onClick: null }),
-  ht),
+  A(gt, `defaultProps`, { className: null, disabled: null, onClick: null }),
+  gt),
   function (e) {
     return {
       currentSlide: e.currentSlide,
@@ -1345,8 +1345,8 @@ V(
     };
   },
 );
-var gt = { buttonNext: `buttonNext___2mOCa` },
-  _t = [
+var _t = { buttonNext: `buttonNext___2mOCa` },
+  vt = [
     `carouselStore`,
     `className`,
     `currentSlide`,
@@ -1357,7 +1357,7 @@ var gt = { buttonNext: `buttonNext___2mOCa` },
     `visibleSlides`,
     `infinite`,
   ],
-  vt = (function (e) {
+  yt = (function (e) {
     function t(e) {
       var r;
       return (
@@ -1402,10 +1402,10 @@ var gt = { buttonNext: `buttonNext___2mOCa` },
                 a = (e.onClick, e.step, e.totalSlides),
                 o = e.visibleSlides,
                 s = e.infinite,
-                c = N(e, _t),
-                l = I([gt.buttonNext, `carousel__next-button`, n]),
+                c = N(e, vt),
+                l = I([_t.buttonNext, `carousel__next-button`, n]),
                 u = t.setDisabled(i, r, o, a, s);
-              return E.createElement(
+              return T.createElement(
                 `button`,
                 j(
                   {
@@ -1433,9 +1433,9 @@ var gt = { buttonNext: `buttonNext___2mOCa` },
       ),
       t
     );
-  })(E.PureComponent),
-  yt = V(
-    (A(vt, `propTypes`, {
+  })(T.PureComponent),
+  bt = V(
+    (A(yt, `propTypes`, {
       carouselStore: H.object.isRequired,
       children: U.children.isRequired,
       className: H.string,
@@ -1447,13 +1447,13 @@ var gt = { buttonNext: `buttonNext___2mOCa` },
       visibleSlides: H.number.isRequired,
       infinite: H.bool,
     }),
-    A(vt, `defaultProps`, {
+    A(yt, `defaultProps`, {
       className: null,
       disabled: null,
       onClick: null,
       infinite: !1,
     }),
-    vt),
+    yt),
     function (e) {
       return {
         currentSlide: e.currentSlide,
@@ -1464,8 +1464,8 @@ var gt = { buttonNext: `buttonNext___2mOCa` },
       };
     },
   ),
-  bt = { buttonNext: `buttonNext___3Lm3s` },
-  xt = [
+  xt = { buttonNext: `buttonNext___3Lm3s` },
+  St = [
     `carouselStore`,
     `children`,
     `childrenPaused`,
@@ -1474,7 +1474,7 @@ var gt = { buttonNext: `buttonNext___2mOCa` },
     `isPlaying`,
     `onClick`,
   ],
-  St = (function (e) {
+  Ct = (function (e) {
     function t(e) {
       var r;
       return (
@@ -1506,9 +1506,9 @@ var gt = { buttonNext: `buttonNext___2mOCa` },
               n = e.childrenPlaying,
               r = e.className,
               i = e.isPlaying,
-              a = (e.onClick, N(e, xt)),
-              o = I([bt.buttonNext, `carousel__play-button`, r]);
-            return E.createElement(
+              a = (e.onClick, N(e, St)),
+              o = I([xt.buttonNext, `carousel__play-button`, r]);
+            return T.createElement(
               `button`,
               j(
                 {
@@ -1528,9 +1528,9 @@ var gt = { buttonNext: `buttonNext___2mOCa` },
       ]),
       t
     );
-  })(E.PureComponent);
+  })(T.PureComponent);
 V(
-  (A(St, `propTypes`, {
+  (A(Ct, `propTypes`, {
     carouselStore: H.object.isRequired,
     children: H.node,
     childrenPaused: H.node,
@@ -1539,20 +1539,20 @@ V(
     isPlaying: H.bool.isRequired,
     onClick: H.func,
   }),
-  A(St, `defaultProps`, {
+  A(Ct, `defaultProps`, {
     children: null,
     childrenPaused: null,
     childrenPlaying: null,
     className: null,
     onClick: null,
   }),
-  St),
+  Ct),
   function (e) {
     return { isPlaying: e.isPlaying };
   },
 );
-var Ct = { dot: `dot___3c3SI` },
-  wt = [
+var wt = { dot: `dot___3c3SI` },
+  Tt = [
     `carouselStore`,
     `children`,
     `className`,
@@ -1564,7 +1564,7 @@ var Ct = { dot: `dot___3c3SI` },
     `totalSlides`,
     `visibleSlides`,
   ],
-  Tt = (function (e) {
+  Et = (function (e) {
     function t(e) {
       var r;
       return (
@@ -1604,19 +1604,19 @@ var Ct = { dot: `dot___3c3SI` },
               i = (e.onClick, e.selected),
               a = e.slide,
               o = (e.totalSlides, e.visibleSlides),
-              s = N(e, wt),
+              s = N(e, Tt),
               c = a >= n && a < n + o,
               l = typeof i == `boolean` ? i : c,
               u = typeof r == `boolean` ? r : !0 === c,
               d = I([
-                Ct.dot,
-                l && Ct.dotSelected,
+                wt.dot,
+                l && wt.dotSelected,
                 `carousel__dot`,
                 `carousel__dot--${a}`,
                 l && `carousel__dot--selected`,
                 t,
               ]);
-            return E.createElement(
+            return T.createElement(
               `button`,
               j(
                 {
@@ -1635,9 +1635,9 @@ var Ct = { dot: `dot___3c3SI` },
       ]),
       t
     );
-  })(E.Component),
-  Et = V(
-    (A(Tt, `propTypes`, {
+  })(T.Component),
+  Dt = V(
+    (A(Et, `propTypes`, {
       carouselStore: H.object.isRequired,
       children: U.children,
       className: H.string,
@@ -1649,14 +1649,14 @@ var Ct = { dot: `dot___3c3SI` },
       totalSlides: H.number.isRequired,
       visibleSlides: H.number.isRequired,
     }),
-    A(Tt, `defaultProps`, {
+    A(Et, `defaultProps`, {
       children: null,
       className: null,
       disabled: null,
       onClick: null,
       selected: null,
     }),
-    Tt),
+    Et),
     function (e) {
       return {
         currentSlide: e.currentSlide,
@@ -1665,9 +1665,9 @@ var Ct = { dot: `dot___3c3SI` },
       };
     },
   ),
-  Dt = {},
-  Ot = [`renderDots`],
-  kt = [
+  Ot = {},
+  kt = [`renderDots`],
+  At = [
     `carouselStore`,
     `children`,
     `className`,
@@ -1679,7 +1679,7 @@ var Ct = { dot: `dot___3c3SI` },
     `showAsSelectedForCurrentSlideOnly`,
     `renderDots`,
   ],
-  At = (function (e) {
+  jt = (function (e) {
     function t() {
       return (O(this, t), n.apply(this, arguments));
     }
@@ -1699,17 +1699,17 @@ var Ct = { dot: `dot___3c3SI` },
               o = e.renderDots;
             if (o) {
               var s = this.props;
-              return (s.renderDots, o(N(s, Ot)));
+              return (s.renderDots, o(N(s, kt)));
             }
             for (var c = [], l = 0; l < n; l += 1) {
               var u = l >= t && l < t + r,
                 d = a ? l === t : u,
                 f = l >= n - r ? n - r : l;
               c.push(
-                E.createElement(
-                  Et,
+                T.createElement(
+                  Dt,
                   { key: l, slide: f, selected: d, disabled: !!i && d },
-                  E.createElement(
+                  T.createElement(
                     `span`,
                     { className: I[`carousel__dot-group-dot`] },
                     this.props.dotNumbers && l + 1,
@@ -1734,9 +1734,9 @@ var Ct = { dot: `dot___3c3SI` },
                 e.disableActiveDots,
                 e.showAsSelectedForCurrentSlideOnly,
                 e.renderDots,
-                N(e, kt)),
-              i = I([Dt.DotGroup, `carousel__dot-group`, n]);
-            return E.createElement(
+                N(e, At)),
+              i = I([Ot.DotGroup, `carousel__dot-group`, n]);
+            return T.createElement(
               `div`,
               j({ className: i }, r),
               this.renderDots(),
@@ -1747,9 +1747,9 @@ var Ct = { dot: `dot___3c3SI` },
       ]),
       t
     );
-  })(E.Component);
+  })(T.Component);
 V(
-  (A(At, `propTypes`, {
+  (A(jt, `propTypes`, {
     children: U.children,
     className: H.string,
     currentSlide: H.number.isRequired,
@@ -1761,7 +1761,7 @@ V(
     showAsSelectedForCurrentSlideOnly: H.bool,
     renderDots: H.func,
   }),
-  A(At, `defaultProps`, {
+  A(jt, `defaultProps`, {
     children: null,
     className: null,
     dotNumbers: !1,
@@ -1769,7 +1769,7 @@ V(
     showAsSelectedForCurrentSlideOnly: !1,
     renderDots: null,
   }),
-  At),
+  jt),
   function (e) {
     return {
       currentSlide: e.currentSlide,
@@ -1778,9 +1778,9 @@ V(
     };
   },
 );
-var J = { image: `image___xtQGH` },
-  jt = [`src`, `alt`],
-  Mt = [
+var q = { image: `image___xtQGH` },
+  Mt = [`src`, `alt`],
+  Nt = [
     `carouselStore`,
     `children`,
     `className`,
@@ -1793,7 +1793,7 @@ var J = { image: `image___xtQGH` },
     `style`,
     `tag`,
   ],
-  Nt = (function (e) {
+  Pt = (function (e) {
     function t(e) {
       var r;
       return (
@@ -1890,14 +1890,14 @@ var J = { image: `image___xtQGH` },
             value: function (e) {
               var t = this.tempTag(),
                 n = I([
-                  J.image,
-                  J.imageLoading,
+                  q.image,
+                  q.imageLoading,
                   `carousel__image`,
                   this.props.isBgImage && `carousel__image--with-background`,
                   `carousel__image--loading`,
                   this.props.className,
                 ]);
-              return E.createElement(
+              return T.createElement(
                 t,
                 j({ className: n }, e),
                 this.customRender(`renderLoading`),
@@ -1909,14 +1909,14 @@ var J = { image: `image___xtQGH` },
             value: function (e) {
               var t = this.tempTag(),
                 n = I([
-                  J.image,
-                  J.imageError,
+                  q.image,
+                  q.imageError,
                   `carousel__image`,
                   this.props.isBgImage && `carousel__image--with-background`,
                   `carousel__image--error`,
                   this.props.className,
                 ]);
-              return E.createElement(
+              return T.createElement(
                 t,
                 j({ className: n }, e),
                 this.customRender(`renderError`),
@@ -1930,7 +1930,7 @@ var J = { image: `image___xtQGH` },
                 n = t.style,
                 r = t.tag,
                 i = I([
-                  J.image,
+                  q.image,
                   `carousel__image`,
                   this.props.isBgImage && `carousel__image--with-background`,
                   `carousel__image--success`,
@@ -1941,13 +1941,13 @@ var J = { image: `image___xtQGH` },
               if (r !== `img`) {
                 var s = e.src;
                 (e.alt,
-                  (o = N(e, jt)),
+                  (o = N(e, Mt)),
                   (a = j({}, n, {
                     backgroundImage: `url("${s}")`,
                     backgroundSize: `cover`,
                   })));
               }
-              return E.createElement(
+              return T.createElement(
                 r,
                 j({ className: i, style: a }, o),
                 this.props.children,
@@ -1970,7 +1970,7 @@ var J = { image: `image___xtQGH` },
                   e.renderLoading,
                   e.style,
                   e.tag,
-                  N(e, Mt));
+                  N(e, Nt));
               switch (this.state.imageStatus) {
                 case Ge:
                   return this.renderLoading(t);
@@ -2003,8 +2003,8 @@ var J = { image: `image___xtQGH` },
       ),
       t
     );
-  })(E.Component);
-(A(Nt, `propTypes`, {
+  })(T.Component);
+(A(Pt, `propTypes`, {
   alt: H.string,
   carouselStore: H.object.isRequired,
   children: U.children,
@@ -2019,7 +2019,7 @@ var J = { image: `image___xtQGH` },
   style: H.object,
   tag: H.string,
 }),
-  A(Nt, `defaultProps`, {
+  A(Pt, `defaultProps`, {
     alt: ``,
     children: null,
     className: null,
@@ -2031,12 +2031,12 @@ var J = { image: `image___xtQGH` },
     style: null,
     tag: `img`,
   }));
-var Pt = V(Nt, function (e) {
+var Ft = V(Pt, function (e) {
     return { hasMasterSpinner: e.hasMasterSpinner, orientation: e.orientation };
   }),
-  Ft = { spinner: `spinner___27VUp`, spin: `spin___S3UuE` },
-  It = [`className`],
-  Lt = (function (e) {
+  It = { spinner: `spinner___27VUp`, spin: `spin___S3UuE` },
+  Lt = [`className`],
+  Rt = (function (e) {
     function t() {
       return (O(this, t), n.apply(this, arguments));
     }
@@ -2049,20 +2049,20 @@ var Pt = V(Nt, function (e) {
           value: function () {
             var e = this.props,
               t = e.className,
-              n = N(e, It),
-              r = I([Ft.spinner, `carousel__spinner`, t]);
-            return E.createElement(`div`, j({ className: r }, n));
+              n = N(e, Lt),
+              r = I([It.spinner, `carousel__spinner`, t]);
+            return T.createElement(`div`, j({ className: r }, n));
           },
         },
       ]),
       t
     );
-  })(E.PureComponent),
-  Rt =
-    (A(Lt, `propTypes`, { className: H.string }),
-    A(Lt, `defaultProps`, { className: null }),
-    Lt),
-  Y = {
+  })(T.PureComponent),
+  zt =
+    (A(Rt, `propTypes`, { className: H.string }),
+    A(Rt, `defaultProps`, { className: null }),
+    Rt),
+  J = {
     container: `container___2O72F`,
     overlay: `overlay___IV4qY`,
     hover: `hover___MYy31`,
@@ -2070,7 +2070,7 @@ var Pt = V(Nt, function (e) {
     loading: `loading___1pvNI`,
     imageLoadingSpinnerContainer: `imageLoadingSpinnerContainer___3UIPD`,
   },
-  zt = [
+  Bt = [
     `alt`,
     `bgImageProps`,
     `bgImageTag`,
@@ -2084,11 +2084,11 @@ var Pt = V(Nt, function (e) {
     `srcZoomed`,
     `tag`,
   ],
-  Bt,
+  Y,
   Vt = 2,
   Ht = 3;
 V(
-  ((Bt = (function (e) {
+  ((Y = (function (e) {
     function t(e) {
       var r;
       return (
@@ -2227,21 +2227,21 @@ V(
                   var u = t.midpointBetweenTwoTouches(D({}, l));
                   ((l.cx = u.x), (l.cy = u.y));
                   var d = L(
-                      W({
+                      Je({
                         min: 0,
                         max: 100,
                         x: ((l.cx - i.left) / i.width) * 100,
                       }),
                     ),
                     f = L(
-                      W({
+                      Je({
                         min: 0,
                         max: 100,
                         x: ((l.cy - i.top) / i.height) * 100,
                       }),
                     ),
                     p = function (e) {
-                      return W({
+                      return Je({
                         min: 1,
                         max: Ht,
                         x: e.scale + (l.distance - s.distance) / 100,
@@ -2271,16 +2271,16 @@ V(
             value: function () {
               if (this.state.isImageLoading) {
                 var e = this.props.spinner;
-                return E.createElement(
+                return T.createElement(
                   `div`,
                   {
                     className: I([
-                      Y.imageLoadingSpinnerContainer,
+                      J.imageLoadingSpinnerContainer,
                       `carousel__image-loading-spinner-container`,
                     ]),
                   },
                   e && e(),
-                  !e && E.createElement(Rt, null),
+                  !e && T.createElement(zt, null),
                 );
               }
               return null;
@@ -2299,14 +2299,14 @@ V(
                 s = (e.isPinchZoomEnabled, e.spinner, e.src),
                 c = e.srcZoomed,
                 l = e.tag,
-                u = N(e, zt),
-                d = I([Y.container, i]),
-                f = I([Y.image, `carousel__zoom-image`, a]),
+                u = N(e, Bt),
+                d = I([J.container, i]),
+                f = I([J.image, `carousel__zoom-image`, a]),
                 p = I([
-                  Y.overlay,
+                  J.overlay,
                   `carousel__zoom-image-overlay`,
-                  this.state.isHovering && Y.hover,
-                  this.state.isZooming && Y.zoom,
+                  this.state.isHovering && J.hover,
+                  this.state.isZooming && J.zoom,
                   this.state.isHovering &&
                     `carousel__zoom-image-overlay--hovering`,
                   this.state.isZooming &&
@@ -2318,11 +2318,11 @@ V(
                 (this.state.isHovering || this.state.isZooming) &&
                   ((m.transformOrigin = `${this.state.x} ${this.state.y}`),
                   (m.transform = `scale(${this.state.scale})`)),
-                E.createElement(
+                T.createElement(
                   l,
                   j({ className: d }, u),
-                  E.createElement(
-                    Pt,
+                  T.createElement(
+                    Ft,
                     j(
                       {
                         alt: t,
@@ -2335,7 +2335,7 @@ V(
                       n,
                     ),
                   ),
-                  E.createElement(Pt, {
+                  T.createElement(Ft, {
                     className: p,
                     tag: `div`,
                     src: c || s,
@@ -2379,8 +2379,8 @@ V(
       ),
       t
     );
-  })(E.Component)),
-  A(Bt, `propTypes`, {
+  })(T.Component)),
+  A(Y, `propTypes`, {
     alt: H.string,
     bgImageProps: H.object,
     bgImageTag: H.string,
@@ -2396,7 +2396,7 @@ V(
     tag: H.string,
     isPinchZoomEnabled: H.bool,
   }),
-  A(Bt, `defaultProps`, {
+  A(Y, `defaultProps`, {
     alt: void 0,
     bgImageProps: {},
     bgImageTag: `div`,
@@ -2410,7 +2410,7 @@ V(
     srcZoomed: null,
     tag: `div`,
   }),
-  Bt),
+  Y),
   function () {
     return {};
   },
@@ -2494,7 +2494,7 @@ var Ut = {
           key: `renderFocusRing`,
           value: function () {
             return this.state.focused
-              ? E.createElement(`div`, {
+              ? T.createElement(`div`, {
                   className: [Ut.focusRing, `carousel__slide-focus-ring`].join(
                     ` `,
                   ),
@@ -2545,7 +2545,7 @@ var Ut = {
                 r,
               ]),
               S = I([Ut.slideInner, `carousel__inner-slide`, o]);
-            return E.createElement(
+            return T.createElement(
               p,
               j(
                 {
@@ -2562,7 +2562,7 @@ var Ut = {
                 },
                 g,
               ),
-              E.createElement(
+              T.createElement(
                 s,
                 {
                   ref: function (t) {
@@ -2580,7 +2580,7 @@ var Ut = {
       ]),
       t
     );
-  })(E.PureComponent),
+  })(T.PureComponent),
   Kt = V(
     (A(Gt, `propTypes`, {
       ariaLabel: H.string,
@@ -3175,7 +3175,7 @@ var Ut = {
                 r =
                   this.props.totalSlides -
                   Math.min(this.props.totalSlides, this.props.visibleSlides),
-                i = W({ min: 0, max: r, x: this.props.currentSlide + n });
+                i = Je({ min: 0, max: r, x: this.props.currentSlide + n });
               (this.props.infinite &&
                 (this.props.currentSlide >= r && n > 0 && (i = 0),
                 this.props.currentSlide === 0 && n < 0 && (i = r)),
@@ -3216,7 +3216,7 @@ var Ut = {
               return t && !n
                 ? (typeof this.props.onMasterSpinner == `function` &&
                     this.props.onMasterSpinner(),
-                  E.createElement(
+                  T.createElement(
                     `div`,
                     {
                       className: I([
@@ -3225,7 +3225,7 @@ var Ut = {
                       ]),
                     },
                     r && r(),
-                    !r && E.createElement(Rt, null),
+                    !r && T.createElement(zt, null),
                   ))
                 : null;
             },
@@ -3294,7 +3294,7 @@ var Ut = {
                     : `carousel__slider--horizontal`,
                   i,
                 ]),
-                T = I([
+                ne = I([
                   X.sliderTrayWrap,
                   `carousel__slider-tray-wrapper`,
                   f === `vertical`
@@ -3305,7 +3305,7 @@ var Ut = {
                     : `carousel__slider-tray-wrap--horizontal`,
                   s,
                 ]),
-                ne = I([
+                re = I([
                   X.sliderTray,
                   a || X.sliderAnimation,
                   `carousel__slider-tray`,
@@ -3315,7 +3315,7 @@ var Ut = {
                     : `carousel__slider-tray--horizontal`,
                   o,
                 ]),
-                re =
+                ie =
                   (x.dragStep,
                   x.step,
                   x.infinite,
@@ -3324,7 +3324,7 @@ var Ut = {
                   x.horizontalPixelThreshold,
                   x.verticalPixelThreshold,
                   N(x, Yt)),
-                ie =
+                E =
                   (_.className,
                   _.onClickCapture,
                   _.onMouseDown,
@@ -3335,7 +3335,7 @@ var Ut = {
                   _.ref,
                   _.style,
                   N(_, Xt));
-              return E.createElement(
+              return T.createElement(
                 `div`,
                 j(
                   {
@@ -3349,17 +3349,17 @@ var Ut = {
                     style: S,
                     onKeyDown: this.handleOnKeyDown,
                   },
-                  re,
+                  ie,
                 ),
-                E.createElement(
+                T.createElement(
                   `div`,
-                  { className: T, style: C },
-                  E.createElement(
+                  { className: ne, style: C },
+                  T.createElement(
                     v,
                     j(
                       {
                         ref: this.getSliderRef,
-                        className: ne,
+                        className: re,
                         style: w,
                         onTouchStart: this.handleOnTouchStart,
                         onTouchMove: this.handleOnTouchMove,
@@ -3368,7 +3368,7 @@ var Ut = {
                         onMouseDown: this.handleOnMouseDown,
                         onClickCapture: this.handleOnClickCapture,
                       },
-                      ie,
+                      E,
                     ),
                     r,
                   ),
@@ -3401,7 +3401,7 @@ var Ut = {
       ),
       t
     );
-  })(E.Component),
+  })(T.Component),
   Qt = V(
     (A(Zt, `propTypes`, {
       ariaLabel: H.string,
@@ -3529,43 +3529,43 @@ function sn(e) {
       pauseReason: o,
       countdownToken: s = `#SaleTrailerCarousel_NextGameInSeconds`,
     } = e,
-    c = E.useMemo(() => {
-      let e = g(an);
+    c = T.useMemo(() => {
+      let e = b(an);
       return !e || e?.toLowerCase() === `true`;
     }, []),
-    [l, f] = E.useState(c),
+    [d, f] = T.useState(c),
     p = r === void 0 ? on : r,
-    [h, _] = E.useState(p),
-    y = o !== void 0,
-    b = cn(o);
-  d(
+    [h, _] = T.useState(p),
+    v = o !== void 0,
+    x = cn(o);
+  u(
     () => {
       let e = h - 30;
       e <= 0 ? (i(), _(p)) : _(Math.max(e, 0));
     },
     30,
     [p],
-    a && l && !y && p > 0 && h > 0,
+    a && d && !v && p > 0 && h > 0,
   );
-  let x = E.useCallback(
+  let S = T.useCallback(
     (e) => {
-      (v(an, String(e), 3650), f(e), _(p));
+      (g(an, String(e), 3650), f(e), _(p));
     },
     [p],
   );
   return (
-    E.useEffect(() => {
+    T.useEffect(() => {
       _(p);
     }, [n, p]),
     (0, Z.jsxs)(`div`, {
       className: t,
       children: [
         (0, Z.jsxs)(`div`, {
-          className: u($t, (!a || !l) && `X8q-iPdWKKw-`, y && `_3E-10Et-w2o-`),
+          className: l($t, (!a || !d) && `X8q-iPdWKKw-`, v && `_3E-10Et-w2o-`),
           children: [
             (0, Z.jsx)(`div`, {
               className: en,
-              children: !y || !b ? w(s, Math.ceil(h / 1e3)) : b,
+              children: !v || !x ? m(s, Math.ceil(h / 1e3)) : x,
             }),
             (0, Z.jsx)(`div`, {
               className: tn,
@@ -3574,13 +3574,13 @@ function sn(e) {
           ],
         }),
         (0, Z.jsx)(`div`, {
-          className: u(rn),
+          className: l(rn),
           children: (0, Z.jsx)(ee, {
             className: nn,
             controlled: !0,
-            checked: l,
-            label: m(`#SaleTrailerCarousel_AutoAdvanceEnabled`),
-            onChange: x,
+            checked: d,
+            label: y(`#SaleTrailerCarousel_AutoAdvanceEnabled`),
+            onChange: S,
           }),
         }),
       ],
@@ -3590,25 +3590,25 @@ function sn(e) {
 function cn(e) {
   switch (e) {
     case 4:
-      return m(`#SaleTrailerCarousel_AutoAdvanceVideoPaused`);
+      return y(`#SaleTrailerCarousel_AutoAdvanceVideoPaused`);
     case 3:
     case 5:
-      return m(`#SaleTrailerCarousel_AutoAdvanceHover`);
+      return y(`#SaleTrailerCarousel_AutoAdvanceHover`);
   }
 }
 function ln() {
-  let [e, t] = E.useState(!1),
-    [n, r] = E.useState(!1);
-  E.useEffect(() => {
+  let [e, t] = T.useState(!1),
+    [n, r] = T.useState(!1);
+  T.useEffect(() => {
     let e = () => t(document.hidden);
     return (
       document.addEventListener(`visibilitychange`, e),
       () => document.removeEventListener(`visibilitychange`, e)
     );
   }, []);
-  let i = E.useCallback((e) => r(!e.isIntersecting), []),
-    a = E.useMemo(() => ({ threshold: 0.5 }), []);
-  return { bTabHidden: e, bOffscreen: n, refIntersection: o(i, a) };
+  let i = T.useCallback((e) => r(!e.isIntersecting), []),
+    a = T.useMemo(() => ({ threshold: 0.5 }), []);
+  return { bTabHidden: e, bOffscreen: n, refIntersection: w(i, a) };
 }
 var un = `_--jO3lLROzo-`,
   dn = `DyOrE-LFQDQ-`,
@@ -3627,10 +3627,10 @@ var un = `_--jO3lLROzo-`,
   wn = `_1MsO62M-piw-`,
   Tn = 0.6;
 function En(e, t, n) {
-  let r = E.useRef(t);
+  let r = T.useRef(t);
   r.current = t;
   let i = !!t;
-  E.useEffect(() => {
+  T.useEffect(() => {
     let t = e.current;
     if (!i || !t || typeof IntersectionObserver > `u`) return;
     let n = Array.from(t.children);
@@ -3663,69 +3663,69 @@ function On(e) {
       children: r,
       bLazyRenderChildren: i,
       lazyRenderPlaceholderWidth: o,
-      lazyRenderPlaceholderHeight: s,
-      startingSlide: c,
-      onSlide: l,
+      lazyRenderPlaceholderHeight: u,
+      startingSlide: d,
+      onSlide: f,
     } = e,
-    d = E.useRef(null),
-    f = E.useRef(null),
-    p = T();
-  (En(d, l, E.Children.count(r)),
-    E.useLayoutEffect(() => {
-      d.current &&
-        f.current &&
-        (d.current.scrollLeft +=
-          f.current.getBoundingClientRect().left -
-          d.current.getBoundingClientRect().left);
-    }, [c]));
-  let m = E.Children.map(r, (e, t) =>
+    p = T.useRef(null),
+    m = T.useRef(null),
+    h = c();
+  (En(p, f, T.Children.count(r)),
+    T.useLayoutEffect(() => {
+      p.current &&
+        m.current &&
+        (p.current.scrollLeft +=
+          m.current.getBoundingClientRect().left -
+          p.current.getBoundingClientRect().left);
+    }, [d]));
+  let g = T.Children.map(r, (e, t) =>
       i
         ? (0, Z.jsx)(a, {
             rootMargin: `0px 50% 0px 50%`,
             horizontal: !0,
             placeholderWidth: o ?? 1,
             placeholderHeight: 1,
-            holdGamepadFocus: p,
+            holdGamepadFocus: h,
             children: (0, Z.jsx)(Dn, {
               nSlideIndex: t,
-              nStartingSlideIndex: c,
-              ref: f,
+              nStartingSlideIndex: d,
+              ref: m,
               children: e,
             }),
           })
         : (0, Z.jsx)(Dn, {
             nSlideIndex: t,
-            nStartingSlideIndex: c,
-            ref: f,
+            nStartingSlideIndex: d,
+            ref: m,
             children: e,
           }),
     ),
-    h = (0, Z.jsx)(S, {
+    _ = (0, Z.jsx)(s, {
       "flow-children": `row`,
       style: { gap: n ? n + `px` : void 0 },
-      className: u(
+      className: l(
         { SaleSectionCarouselPadding: t },
         `ScrollSnapCarousel`,
         `SaleSectionCarousel`,
         wn,
         e.className,
       ),
-      ref: d,
-      children: m,
+      ref: p,
+      children: g,
     });
   return i
     ? (0, Z.jsx)(a, {
         rootMargin: `50% 0px 50% 0px`,
         horizontal: !1,
         placeholderWidth: 1,
-        placeholderHeight: s ?? 1,
-        children: h,
+        placeholderHeight: u ?? 1,
+        children: _,
       })
-    : h;
+    : _;
 }
 var kn = e(n()),
   An = V(
-    class extends E.Component {
+    class extends T.Component {
       render() {
         let { showArrows: e, arrowFill: t, arrowStyle: n } = this.props,
           r = this.props.visibleSlides,
@@ -3735,13 +3735,13 @@ var kn = e(n()),
         let o = (100 * a) / i,
           s = 100 * (1 - Math.min(a + r, i) / i),
           c = o + (50 * r) / i,
-          l = 100 - c;
+          u = 100 - c;
         return (0, Z.jsxs)(`div`, {
           className: gn,
           children: [
             e &&
-              (0, Z.jsx)(lt, {
-                className: u(`iqx2UWGqqKU-`, `oKffwUnx6co-`, `_--jO3lLROzo-`),
+              (0, Z.jsx)(ut, {
+                className: l(`iqx2UWGqqKU-`, `oKffwUnx6co-`, `_--jO3lLROzo-`),
                 children: (0, Z.jsx)($, {
                   arrowFill: t,
                   arrowStyle: n,
@@ -3759,25 +3759,25 @@ var kn = e(n()),
                 (0, Z.jsx)(`div`, {
                   className: _n,
                   style: { insetInlineStart: `0%`, width: c + `%` },
-                  children: (0, Z.jsx)(lt, {
-                    className: u(un, vn),
+                  children: (0, Z.jsx)(ut, {
+                    className: l(un, vn),
                     style: { color: `red` },
                     children: (0, Z.jsx)(`div`, {}),
                   }),
                 }),
                 (0, Z.jsx)(`div`, {
                   className: _n,
-                  style: { insetInlineEnd: `0%`, width: l + `%` },
-                  children: (0, Z.jsx)(yt, {
-                    className: u(un, vn),
+                  style: { insetInlineEnd: `0%`, width: u + `%` },
+                  children: (0, Z.jsx)(bt, {
+                    className: l(un, vn),
                     children: (0, Z.jsx)(`div`, {}),
                   }),
                 }),
               ],
             }),
             e &&
-              (0, Z.jsx)(yt, {
-                className: u(`iqx2UWGqqKU-`, `O2Vg9rmPwSE-`, `_--jO3lLROzo-`),
+              (0, Z.jsx)(bt, {
+                className: l(`iqx2UWGqqKU-`, `O2Vg9rmPwSE-`, `_--jO3lLROzo-`),
                 children: (0, Z.jsx)($, {
                   arrowFill: t,
                   arrowStyle: n,
@@ -3796,19 +3796,19 @@ var kn = e(n()),
   );
 function jn(e) {
   let { bForceSimpleCarousel: t, screenIsWide: n, children: r } = e,
-    i = T();
+    i = c();
   return (n || i) && !t
     ? (0, Z.jsx)(Mn, { ...e, children: r })
     : (0, Z.jsx)(On, { ...e, children: r });
 }
 function Mn(e) {
-  let t = T(),
-    [n, r] = E.useState(!1),
-    { bTabHidden: i, bOffscreen: o, refIntersection: s } = ln(),
-    c = () => E.Children.count(e.children),
-    l = () => Math.min(c(), e.visibleElements),
-    d = () =>
-      E.Children.map(e.children, (n, r) => {
+  let t = c(),
+    [n, r] = T.useState(!1),
+    { bTabHidden: i, bOffscreen: o, refIntersection: u } = ln(),
+    d = () => T.Children.count(e.children),
+    f = () => Math.min(d(), e.visibleElements),
+    p = () =>
+      T.Children.map(e.children, (n, r) => {
         let i = e.bLazyRenderChildren
           ? (0, Z.jsx)(a, {
               rootMargin: `0px 100% 0px 100%`,
@@ -3831,34 +3831,34 @@ function Mn(e) {
           `slide_` + r,
         );
       }),
-    f = c(),
-    p = l();
-  if (!f || !p) return null;
-  let m = p < f,
-    h = e.hideArrows || !m,
-    g = !m || e.hidePips,
-    _ = !!e.bAutoAdvance && m && !t,
-    v;
-  n && !b() ? (v = 5) : i ? (v = 1) : o && (v = 2);
-  let y = 4 / 3,
-    x = !0;
-  e.slideAspectRatio && ((y = e.slideAspectRatio), (x = !1));
+    m = d(),
+    h = f();
+  if (!m || !h) return null;
+  let g = h < m,
+    _ = e.hideArrows || !g,
+    v = !g || e.hidePips,
+    y = !!e.bAutoAdvance && g && !t,
+    b;
+  n && !ne() ? (b = 5) : i ? (b = 1) : o && (b = 2);
+  let x = 4 / 3,
+    S = !0;
+  e.slideAspectRatio && ((x = e.slideAspectRatio), (S = !1));
   let C = `items_in_row_${e.visibleElements}`;
-  return (0, Z.jsx)(S, {
+  return (0, Z.jsx)(s, {
     "flow-children": `row`,
-    className: u(dn, e.className, C),
+    className: l(dn, e.className, C),
     navKey: e.navKey,
-    ref: s,
+    ref: u,
     onMouseEnter: () => r(!0),
     onMouseLeave: () => r(!1),
-    children: (0, Z.jsxs)(st, {
+    children: (0, Z.jsxs)(ct, {
       visibleSlides: e.visibleElements,
-      totalSlides: c(),
-      naturalSlideWidth: 100 * y,
+      totalSlides: d(),
+      naturalSlideWidth: 100 * x,
       naturalSlideHeight: 100,
       step: e.visibleElements,
       infinite: !e.disableEdgeWrap,
-      isIntrinsicHeight: x,
+      isIntrinsicHeight: S,
       dragEnabled: !1,
       touchEnabled: !1,
       lockOnWindowScroll: !0,
@@ -3867,15 +3867,15 @@ function Mn(e) {
       currentSlide: e.startingSlide,
       children: [
         (0, Z.jsx)(Ln, {
-          bHideArrows: h,
+          bHideArrows: _,
           onSlide: e.onSlide,
           arrowFill: e.arrowFill,
           arrowStyle: e.arrowStyle,
-          children: d(),
+          children: p(),
         }),
-        !g &&
+        !v &&
           (e.useTestScrollbar
-            ? (0, Z.jsx)(An, { showArrows: h, carouselStore: null })
+            ? (0, Z.jsx)(An, { showArrows: _, carouselStore: null })
             : (0, Z.jsx)(`div`, {
                 className: (0, kn.default)({
                   "I8j65FBXdOY-": !0,
@@ -3883,21 +3883,21 @@ function Mn(e) {
                 }),
                 children: (0, Z.jsx)(Nn, {
                   ...e,
-                  nPageSize: p,
+                  nPageSize: h,
                   children: e.children,
                 }),
               })),
-        _ && (0, Z.jsx)(Fn, { pauseReason: v }),
+        y && (0, Z.jsx)(Fn, { pauseReason: b }),
       ],
     }),
   });
 }
 function Nn(e) {
   let { nPageSize: t } = e,
-    n = E.useContext(q),
-    [r, i] = E.useState(n.state.currentSlide);
+    n = T.useContext(K),
+    [r, i] = T.useState(n.state.currentSlide);
   return (
-    E.useEffect(
+    T.useEffect(
       () =>
         n.subscribe(() => {
           i(n.state.currentSlide);
@@ -3905,11 +3905,11 @@ function Nn(e) {
       [n],
     ),
     (0, Z.jsx)(Z.Fragment, {
-      children: E.Children.map(e.children, (n, i) => {
+      children: T.Children.map(e.children, (n, i) => {
         if (i % t !== 0) return null;
         let a = r >= i && r < i + t;
         return (0, Z.jsx)(
-          Et,
+          Dt,
           {
             slide: i,
             className: hn,
@@ -3926,12 +3926,12 @@ function Pn(e) {
 }
 function Fn(e) {
   let { pauseReason: t } = e,
-    n = E.useContext(q),
-    [r, i] = E.useState(n.state.currentSlide),
-    [a, o] = E.useState(!0),
-    s = E.useRef(null),
-    c = E.useRef(n.state.currentSlide);
-  E.useEffect(() => {
+    n = T.useContext(K),
+    [r, i] = T.useState(n.state.currentSlide),
+    [a, o] = T.useState(!0),
+    s = T.useRef(null),
+    c = T.useRef(n.state.currentSlide);
+  T.useEffect(() => {
     let e = () => {
       let e = n.state.currentSlide;
       e !== c.current &&
@@ -3941,7 +3941,7 @@ function Fn(e) {
     };
     return (n.subscribe(e), () => n.unsubscribe(e));
   }, [n]);
-  let l = E.useCallback(() => {
+  let l = T.useCallback(() => {
     let { currentSlide: e, visibleSlides: t, totalSlides: r } = n.state,
       i = 0;
     (e + t < r && (i = Math.min(e + t, r - t)),
@@ -3968,45 +3968,45 @@ function Ln(e) {
       arrowFill: i,
       arrowStyle: a,
     } = e,
-    o = E.useContext(q),
-    s = E.useRef(o.state.currentSlide),
-    [c, l] = E.useState(null),
-    [d, f] = E.useState(In(o.state)),
-    p = E.useRef(null);
-  E.useEffect(() => {
+    s = T.useContext(K),
+    c = T.useRef(s.state.currentSlide),
+    [u, d] = T.useState(null),
+    [f, p] = T.useState(In(s.state)),
+    m = T.useRef(null);
+  T.useEffect(() => {
     let e = () => {
-      let e = s.current,
-        t = o.state.currentSlide;
-      (f(In(o.state)),
+      let e = c.current,
+        t = s.state.currentSlide;
+      (p(In(s.state)),
         r && r(t),
-        l(t > e ? `Right` : t < e ? `Left` : null),
-        Pn(p),
-        (p.current = window.setTimeout(() => {
-          p.current && (l(null), Pn(p));
+        d(t > e ? `Right` : t < e ? `Left` : null),
+        Pn(m),
+        (m.current = window.setTimeout(() => {
+          m.current && (d(null), Pn(m));
         }, 1e3)),
-        (s.current = t));
+        (c.current = t));
     };
     return (
-      o.subscribe(e),
+      s.subscribe(e),
       () => {
-        (o.unsubscribe(e), Pn(p));
+        (s.unsubscribe(e), Pn(m));
       }
     );
-  }, [o]);
-  let h = !!c && `CarouselSliding` + c;
+  }, [s]);
+  let h = !!u && `CarouselSliding` + u;
   return (0, Z.jsxs)(`div`, {
-    className: u(fn, `SliderBody`, h),
-    style: { "--carousel-rtl-tray-offset": d },
+    className: l(fn, `SliderBody`, h),
+    style: { "--carousel-rtl-tray-offset": f },
     children: [
       !t &&
-        (0, Z.jsx)(lt, {
-          className: u(
+        (0, Z.jsx)(ut, {
+          className: l(
             `_6KbJ1ZwTIeY-`,
             `oKffwUnx6co-`,
             `_--jO3lLROzo-`,
             `CarouselBtnLeft`,
           ),
-          "aria-label": m(`#Carousel_Prev`),
+          "aria-label": y(`#Carousel_Prev`),
           children: (0, Z.jsx)($, {
             arrowFill: i,
             arrowStyle: a,
@@ -4014,21 +4014,21 @@ function Ln(e) {
           }),
         }),
       (0, Z.jsx)(Qt, {
-        className: y.GetScrollableClassname(),
+        className: S.GetScrollableClassname(),
         classNameTray: pn,
         classNameAnimation: Cn,
         role: `list`,
-        children: (0, Z.jsx)(x, { children: n }),
+        children: (0, Z.jsx)(o, { children: n }),
       }),
       !t &&
-        (0, Z.jsx)(yt, {
-          className: u(
+        (0, Z.jsx)(bt, {
+          className: l(
             `_6KbJ1ZwTIeY-`,
             `O2Vg9rmPwSE-`,
             `_--jO3lLROzo-`,
             `CarouselBtnRight`,
           ),
-          "aria-label": m(`#Carousel_Next`),
+          "aria-label": y(`#Carousel_Next`),
           children: (0, Z.jsx)($, {
             arrowFill: i,
             arrowStyle: a,
@@ -4062,7 +4062,7 @@ function $(e) {
     default:
     case Q.k_ECutArrowStyle: {
       let e = r == `right` ? 0 : 180;
-      return (0, Z.jsx)(te, {
+      return (0, Z.jsx)(C, {
         fill: t || `white`,
         role: `presentation`,
         angle: e,
@@ -4070,7 +4070,7 @@ function $(e) {
     }
     case Q.k_EDoubleArrowStyle: {
       let e = r == `right` ? 180 : 0;
-      return (0, Z.jsx)(C, {
+      return (0, Z.jsx)(te, {
         fill: t || `white`,
         role: `presentation`,
         angle: e,
@@ -4078,7 +4078,7 @@ function $(e) {
     }
     case Q.k_EThickChevron: {
       let e = r == `right` ? 0 : 180;
-      return (0, Z.jsx)(_, {
+      return (0, Z.jsx)(x, {
         fill: t || `white`,
         role: `presentation`,
         angle: e,
@@ -4086,14 +4086,14 @@ function $(e) {
     }
     case Q.k_EFilledArrow: {
       let e = r == `right` ? 90 : 270;
-      return (0, Z.jsx)(s, {
+      return (0, Z.jsx)(h, {
         fill: t || `white`,
         role: `presentation`,
         angle: e,
       });
     }
     case Q.k_EPointyArrow:
-      return (0, Z.jsx)(c, {
+      return (0, Z.jsx)(p, {
         fill: t || `white`,
         role: `presentation`,
         direction: r || `left`,
@@ -4111,20 +4111,20 @@ function zn(e) {
   switch (i) {
     default:
     case Rn.k_EPillCrumb:
-      return (0, Z.jsx)(l, { fill: a, role: `presentation` });
+      return (0, Z.jsx)(_, { fill: a, role: `presentation` });
     case Rn.k_ECircularCrumb:
-      return (0, Z.jsx)(h, { fill: a, role: `presentation` });
+      return (0, Z.jsx)(f, { fill: a, role: `presentation` });
     case Rn.k_ESquareCrumb:
-      return (0, Z.jsx)(p, { fill: a, role: `presentation` });
+      return (0, Z.jsx)(v, { fill: a, role: `presentation` });
   }
 }
 export {
   ln as a,
-  ne as c,
+  re as c,
   ce as d,
   oe as f,
   sn as i,
-  re as l,
+  ie as l,
   zn as n,
   ae as o,
   jn as r,

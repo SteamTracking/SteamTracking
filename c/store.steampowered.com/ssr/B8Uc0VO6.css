@@ -147,10 +147,10 @@ button.DialogButton::-moz-focus-inner {
   width: 640px;
   font-weight: 400;
 }
-.DeckVerifiedModalDialogClient .DialogContent,
-.DeckVerifiedModalDialog .DialogContent {
+.DeckVerifiedModalDialogClient .DialogContent._DialogLayout,
+.DeckVerifiedModalDialog .DialogContent._DialogLayout {
   border: 2px solid #23262e;
-  padding: calc(1.4vw + 12px) 2.8vw;
+  padding: 0;
   font-family:
     Motiva Sans,
     Motiva Sans fallback,
@@ -161,6 +161,10 @@ button.DialogButton::-moz-focus-inner {
 }
 .DeckVerifiedModalDialog .DialogContent {
   max-height: 85vh;
+}
+.DeckVerifiedModalDialogClient .DialogContent_InnerWidth,
+.DeckVerifiedModalDialog .DialogContent_InnerWidth {
+  max-width: none;
 }
 .DeckVerifiedModalDialogClient .ModalPosition_TopBar,
 .DeckVerifiedModalDialog .ModalPosition_TopBar {

@@ -9,19 +9,19 @@ import { t as s } from "./storegamehover.js";
 import { t as c } from "./crosspromotesalelayouts.js";
 import { i as l } from "./partnereventstore.js";
 import {
-  Dv as u,
-  Sc as d,
-  Uy as f,
-  ax as p,
-  b as m,
-  c as h,
-  ht as g,
-  kv as _,
-  mS as v,
-  nr as y,
-  rx as b,
-  wv as ee,
-  zb as te,
+  Av as ee,
+  Bb as u,
+  Cc as d,
+  Ov as f,
+  Tv as p,
+  Wy as m,
+  b as h,
+  c as g,
+  hS as _,
+  ht as v,
+  ix as y,
+  ox as te,
+  rr as b,
 } from "./main.js";
 import x from "./discountsandeventshome.js";
 import { t as S } from "./assetutils.js";
@@ -51,9 +51,9 @@ var w = e(t()),
   G = n(),
   K = (e) => {
     let t = i(e.nAppID),
-      n = ee(t),
-      r = _(t),
-      { data: a } = u(t);
+      n = p(t),
+      r = ee(t),
+      { data: a } = f(t);
     if (!n.data || !r.data) return null;
     let o = S(n.data, `header`);
     return (0, G.jsxs)(`div`, {
@@ -78,7 +78,7 @@ var w = e(t()),
   },
   q = (e) =>
     e.purchaseOption
-      ? (0, G.jsx)(h, {
+      ? (0, G.jsx)(g, {
           purchaseOption: e.purchaseOption,
           size: `inline`,
           legacyStyle: !0,
@@ -86,7 +86,7 @@ var w = e(t()),
       : e.bIsFree
         ? (0, G.jsx)(`div`, {
             className: W,
-            children: m.Localize(`#Price_Free`),
+            children: h.Localize(`#Price_Free`),
           })
         : null,
   J = 5,
@@ -117,7 +117,7 @@ var w = e(t()),
           };
           try {
             let e = await T.default.get(
-              `${b.STORE_BASE_URL}recommenderdemos/getlist`,
+              `${y.STORE_BASE_URL}recommenderdemos/getlist`,
               { params: t, timeout: 1e4 },
             );
             (n(e.data.appids), i(e.data.weights));
@@ -147,7 +147,7 @@ var w = e(t()),
         (0, G.jsx)(`div`, { className: M, children: e.strName }),
         (0, G.jsx)(`div`, {
           className: N,
-          children: f(`#RecommenderDemos_ReleasedGames`),
+          children: m(`#RecommenderDemos_ReleasedGames`),
         }),
         (0, G.jsx)(X, {
           children: e.arrPlaytimeAppIDs.map((t, n) =>
@@ -157,7 +157,7 @@ var w = e(t()),
         (0, G.jsx)(`div`, { className: R }),
         (0, G.jsx)(`div`, {
           className: N,
-          children: f(`#RecommenderDemos_UnreleasedGames`),
+          children: m(`#RecommenderDemos_UnreleasedGames`),
         }),
         (0, G.jsx)(X, {
           children: e.arrWishlistAppIDs.map((t, n) =>
@@ -174,7 +174,7 @@ var w = e(t()),
           let t = { max: 40, exclude: +!!e.bExclude, accountid: e.nAccountID };
           try {
             let e = await T.default.get(
-              `${b.STORE_BASE_URL}recommenderdemos/getfests`,
+              `${y.STORE_BASE_URL}recommenderdemos/getfests`,
               { params: t, timeout: 1e4 },
             );
             n(e.data);
@@ -212,7 +212,7 @@ var w = e(t()),
   oe = (e) => {
     let { sale: t } = e,
       { eventModel: n } = l(t.clan_account_id, t.clan_event_gid),
-      r = te();
+      r = u();
     return (0, G.jsxs)(`div`, {
       children: [
         (0, G.jsx)(`div`, {
@@ -223,7 +223,7 @@ var w = e(t()),
           (0, G.jsx)(c, {
             event: n,
             section: ae,
-            language: v(b.LANGUAGE),
+            language: _(y.LANGUAGE),
             bInGamepadUI: r,
             placeholderHeight: 300,
             promotedSale: n,
@@ -245,7 +245,7 @@ var w = e(t()),
           let t = { max_sales: 5, max_apps: 5, accountid: e.nAccountID };
           try {
             let e = await T.default.get(
-              `${b.STORE_BASE_URL}recommenderdemos/getcreatorsales`,
+              `${y.STORE_BASE_URL}recommenderdemos/getcreatorsales`,
               { params: t, timeout: 1e4 },
             );
             (n(e.data.sales), i(e.data.error));
@@ -259,11 +259,11 @@ var w = e(t()),
         children: [
           (0, G.jsx)(`div`, {
             className: M,
-            children: f(`#RecommenderDemos_CreatorSales`),
+            children: m(`#RecommenderDemos_CreatorSales`),
           }),
           (0, G.jsx)(`div`, {
             className: N,
-            children: f(`#RecommenderDemos_CreatorSales_Desc`),
+            children: m(`#RecommenderDemos_CreatorSales_Desc`),
           }),
           r && (0, G.jsx)(`div`, { className: `CsfvVIa26qA-`, children: r }),
           (0, G.jsx)(`div`, {
@@ -307,7 +307,7 @@ var w = e(t()),
   };
 function ue(e) {
   let t = le[e];
-  return t ? f(t) : e;
+  return t ? m(t) : e;
 }
 var de = (e) => {
     let [t, n] = w.useState(void 0),
@@ -318,7 +318,7 @@ var de = (e) => {
           let t = { accountid: e.nAccountID };
           try {
             let e = await T.default.get(
-              `${b.STORE_BASE_URL}recommenderdemos/getdiscountreasons`,
+              `${y.STORE_BASE_URL}recommenderdemos/getdiscountreasons`,
               { params: t, timeout: 1e4 },
             );
             (n(e.data.reason_lists), i(e.data.error));
@@ -332,11 +332,11 @@ var de = (e) => {
         children: [
           (0, G.jsx)(`div`, {
             className: M,
-            children: f(`#RecommenderDemos_DiscountReasons`),
+            children: m(`#RecommenderDemos_DiscountReasons`),
           }),
           (0, G.jsx)(`div`, {
             className: N,
-            children: f(`#RecommenderDemos_DiscountReasons_Desc`),
+            children: m(`#RecommenderDemos_DiscountReasons_Desc`),
           }),
           r && (0, G.jsx)(`div`, { className: `CsfvVIa26qA-`, children: r }),
           t?.map((e) =>
@@ -365,8 +365,8 @@ var de = (e) => {
       [n, r] = w.useState(0),
       [i, a] = w.useState(``),
       [o, s] = w.useState(!0);
-    return p.logged_in
-      ? (0, G.jsx)(g, {
+    return te.logged_in
+      ? (0, G.jsx)(v, {
           controller: `recommenderdemos`,
           method: `default`,
           feature: `capsule`,
@@ -385,14 +385,14 @@ var de = (e) => {
                         value: i,
                         onChange: (e) => a(e.target.value),
                       }),
-                      (0, G.jsx)(y, {
+                      (0, G.jsx)(b, {
                         className: A,
                         onClick: () => {
                           isNaN(parseInt(i)) || (t(!0), r(parseInt(i)));
                         },
                         children: `Use AccountID`,
                       }),
-                      (0, G.jsx)(y, {
+                      (0, G.jsx)(b, {
                         disabled: !e,
                         className: A,
                         onClick: () => {
@@ -406,7 +406,7 @@ var de = (e) => {
                     (0, G.jsxs)(`div`, {
                       className: `gh60-zeqs54-`,
                       children: [
-                        f(`#RecommenderDemos_OverrideAccountID`),
+                        m(`#RecommenderDemos_OverrideAccountID`),
                         (0, G.jsx)(`div`, {
                           className: `NXkGB7Y5tWc-`,
                           children: n,
@@ -424,7 +424,7 @@ var de = (e) => {
                       }),
                       (0, G.jsx)(`label`, {
                         htmlFor: `exclude_owned_wishlisted`,
-                        children: f(`#RecommenderDemos_Exclude`),
+                        children: m(`#RecommenderDemos_Exclude`),
                       }),
                     ],
                   }),
@@ -434,70 +434,70 @@ var de = (e) => {
                 nAccountID: n,
                 bExclude: o,
                 strName: `WishlistsOneWeek`,
-                strTitle: f(`#RecommenderDemos_HotWishlists`),
-                strSubtitle: f(`#RecommenderDemos_HotWishlists_Desc`),
+                strTitle: m(`#RecommenderDemos_HotWishlists`),
+                strSubtitle: m(`#RecommenderDemos_HotWishlists_Desc`),
               }),
               (0, G.jsx)(Z, {
                 nAccountID: n,
                 bExclude: o,
                 strName: `NextFest`,
-                strTitle: f(`#RecommenderDemos_NextFest`),
-                strSubtitle: f(`#RecommenderDemos_NextFestDesc`),
+                strTitle: m(`#RecommenderDemos_NextFest`),
+                strSubtitle: m(`#RecommenderDemos_NextFestDesc`),
               }),
               (0, G.jsx)(ie, { nAccountID: n, bExclude: o }),
               (0, G.jsx)(se, { nAccountID: n }),
               (0, G.jsx)($, {
                 nAccountID: n,
                 switches: Q,
-                strTitle: f(`#RecommenderDemos_DiscountsNoScheduled`),
-                strSubtitle: f(`#RecommenderDemos_DiscountsNoScheduled_Desc`),
+                strTitle: m(`#RecommenderDemos_DiscountsNoScheduled`),
+                strSubtitle: m(`#RecommenderDemos_DiscountsNoScheduled_Desc`),
               }),
               (0, G.jsx)($, {
                 switches: ce,
-                strTitle: f(`#RecommenderDemos_DiscountsAnonymous`),
-                strSubtitle: f(`#RecommenderDemos_DiscountsAnonymous_Desc`),
+                strTitle: m(`#RecommenderDemos_DiscountsAnonymous`),
+                strSubtitle: m(`#RecommenderDemos_DiscountsAnonymous_Desc`),
               }),
               (0, G.jsx)(de, { nAccountID: n }),
               (0, G.jsx)(Z, {
                 nAccountID: n,
                 bExclude: o,
                 strName: `RecAllTime`,
-                strTitle: f(`#RecommenderDemos_RecAllTime`),
-                strSubtitle: f(`#RecommenderDemos_Rec_Desc`),
+                strTitle: m(`#RecommenderDemos_RecAllTime`),
+                strSubtitle: m(`#RecommenderDemos_Rec_Desc`),
               }),
               (0, G.jsx)(Z, {
                 nAccountID: n,
                 bExclude: o,
                 strName: `RecFiveYear`,
-                strTitle: f(`#RecommenderDemos_RecFiveYear`),
-                strSubtitle: f(`#RecommenderDemos_Rec_Desc`),
+                strTitle: m(`#RecommenderDemos_RecFiveYear`),
+                strSubtitle: m(`#RecommenderDemos_Rec_Desc`),
               }),
               (0, G.jsx)(Z, {
                 nAccountID: n,
                 bExclude: o,
                 strName: `RecTwoYear`,
-                strTitle: f(`#RecommenderDemos_RecTwoYear`),
-                strSubtitle: f(`#RecommenderDemos_Rec_Desc`),
+                strTitle: m(`#RecommenderDemos_RecTwoYear`),
+                strSubtitle: m(`#RecommenderDemos_Rec_Desc`),
               }),
               (0, G.jsx)(Z, {
                 nAccountID: n,
                 bExclude: o,
                 strName: `RecOneYear`,
-                strTitle: f(`#RecommenderDemos_RecOneYear`),
-                strSubtitle: f(`#RecommenderDemos_Rec_Desc`),
+                strTitle: m(`#RecommenderDemos_RecOneYear`),
+                strSubtitle: m(`#RecommenderDemos_Rec_Desc`),
               }),
               (0, G.jsx)(Z, {
                 nAccountID: n,
                 bExclude: o,
                 strName: `RecSixMonths`,
-                strTitle: f(`#RecommenderDemos_RecSixMonths`),
-                strSubtitle: f(`#RecommenderDemos_Rec_Desc`),
+                strTitle: m(`#RecommenderDemos_RecSixMonths`),
+                strSubtitle: m(`#RecommenderDemos_Rec_Desc`),
               }),
               (0, G.jsx)(Z, {
                 nAccountID: n,
                 bExclude: o,
                 strName: `RecEmbedding`,
-                strTitle: f(`#RecommenderDemos_RecEmbedding`),
+                strTitle: m(`#RecommenderDemos_RecEmbedding`),
                 strSubtitle: ``,
               }),
             ],
@@ -510,12 +510,12 @@ var de = (e) => {
             children: [
               (0, G.jsx)(`div`, {
                 className: void 0,
-                children: f(`#LoginText`),
+                children: m(`#LoginText`),
               }),
               (0, G.jsx)(`div`, {
                 className: d(`btn_green_white_innerfade`, ` btn_medium`),
                 onClick: C,
-                children: (0, G.jsx)(`span`, { children: f(`#LoginButton`) }),
+                children: (0, G.jsx)(`span`, { children: m(`#LoginButton`) }),
               }),
             ],
           }),

@@ -6,34 +6,34 @@ import { Lt as t, ft as n, i as r, l as i } from "./libraries.js";
 import { B as a } from "./storelink.js";
 import {
   $ as o,
-  At as s,
-  Gt as c,
-  Jt as l,
-  Pt as u,
-  Tt as d,
-  Un as f,
-  Vn as p,
-  W as ee,
-  Xn as m,
-  Yn as h,
-  Yt as g,
-  Zn as _,
-  Zt as v,
-  ar as y,
-  bn as b,
-  cr as x,
-  hn as S,
-  ir as te,
-  lr as ne,
-  mn as C,
-  n as re,
-  nr as w,
-  on as T,
-  qt as E,
-  rr as D,
-  sr as O,
-  tr as k,
-  tt as A,
+  $i as s,
+  $r as c,
+  Dr as ee,
+  Gi as l,
+  Ir as u,
+  Mr as d,
+  Qi as f,
+  Si as p,
+  Ui as m,
+  W as h,
+  Xr as g,
+  Yr as _,
+  Zi as v,
+  Zr as y,
+  _i as b,
+  aa as x,
+  ci as S,
+  da as te,
+  gi as C,
+  ia as ne,
+  la as re,
+  n as w,
+  oa as T,
+  qr as E,
+  ra as D,
+  sa as O,
+  tt as k,
+  ua as A,
 } from "./saletags.js";
 import {
   d as j,
@@ -47,16 +47,16 @@ import { t as R } from "./saleghostsections.js";
 import { r as z } from "./salehilightplayerembed.js";
 import { t as ie } from "./storegamehover.js";
 import {
-  Cv as B,
-  Ev as V,
-  Fc as H,
-  Hv as U,
-  Iv as W,
-  Jv as G,
-  Pv as K,
-  Sc as q,
-  Vu as J,
-  xb as Y,
+  Cc as B,
+  Dv as V,
+  Fv as H,
+  Hu as U,
+  Ic as W,
+  Lv as G,
+  Sb as K,
+  Uv as q,
+  Yv as J,
+  wv as Y,
 } from "./main.js";
 var X = e(t(), 1),
   Z = n();
@@ -67,31 +67,31 @@ function ae(e) {
       fnCollapseOptions: i,
       bPreferAssetWithoutOverride: a,
     } = e,
-    { data: o } = B(t),
+    { data: o } = Y(t),
     s = (0, X.useRef)(null);
   if (!o) return null;
-  let u = o.purchase_options;
-  return u
+  let c = o.purchase_options;
+  return c
     ? (0, Z.jsx)(r, {
         nodeRef: s,
         in: n,
         mountOnEnter: !0,
         unmountOnExit: !0,
         timeout: 2e3,
-        classNames: { enterActive: S, enterDone: C, exit: C, exitActive: T },
+        classNames: { enterActive: b, enterDone: C, exit: C, exitActive: S },
         children: (0, Z.jsxs)(`div`, {
           ref: s,
-          className: l,
+          className: g,
           children: [
             (0, Z.jsx)(`div`, {
-              className: E,
-              children: u
+              className: _,
+              children: c
                 .filter((e) => !!e.packageid)
                 .map((e) =>
                   (0, Z.jsx)(
                     `div`,
                     {
-                      className: c,
+                      className: E,
                       children: (0, Z.jsx)(L, {
                         id: e.packageid || 0,
                         type: `sub`,
@@ -99,16 +99,16 @@ function ae(e) {
                         bPreferAssetWithoutOverride: a,
                       }),
                     },
-                    `purchaseitem_` + G(t) + `_` + e.packageid,
+                    `purchaseitem_` + J(t) + `_` + e.packageid,
                   ),
                 ),
             }),
             (0, Z.jsx)(`div`, {
               onClick: i,
-              className: g,
+              className: y,
               children: (0, Z.jsx)(`button`, {
-                className: p,
-                children: Y.Localize(`#Button_Close`),
+                className: m,
+                children: K.Localize(`#Button_Close`),
               }),
             }),
           ],
@@ -121,45 +121,45 @@ var Q = i((e) => {
     r = j(t, n),
     {
       bHidePrice: i,
-      bShowDemoButton: c,
-      bPreferDemoStorePage: l,
-      bShowPurchaseOptionsButton: p,
-      bUseSubscriptionLayout: g,
-      bPreferAssetWithoutOverride: S,
+      bShowDemoButton: m,
+      bPreferDemoStorePage: g,
+      bShowPurchaseOptionsButton: _,
+      bUseSubscriptionLayout: y,
+      bPreferAssetWithoutOverride: b,
     } = e,
-    [C, T] = X.useState(!1),
-    E = () => T(!C),
-    { data: L } = K(r),
-    { data: B } = V(r),
-    { data: G } = W(r),
-    { data: Q } = U(r),
+    [S, C] = X.useState(!1),
+    E = () => C(!S),
+    { data: L } = H(r),
+    { data: J } = V(r),
+    { data: Y } = G(r),
+    { data: Q } = q(r),
     oe = a(r),
-    se = J();
-  if (!L || !B)
+    se = U();
+  if (!L || !J)
     return (0, Z.jsx)(R, { capsules_per_row: [1], is_expanded_display: !0 });
-  let ce = H(se),
+  let ce = W(se),
     $ = L.item_type == 0;
   return (0, Z.jsx)(`div`, {
-    className: q(D, b, `LibraryAssetExpandedDisplay`),
-    children: (0, Z.jsxs)(A, {
+    className: B(x, p, `LibraryAssetExpandedDisplay`),
+    children: (0, Z.jsxs)(k, {
       appid: $ ? L.appid : void 0,
       children: [
         (0, Z.jsxs)(`div`, {
-          className: ne,
+          className: te,
           children: [
             (0, Z.jsx)(`div`, {
-              className: q(x),
+              className: B(A),
               children: (0, Z.jsx)(ie, {
                 id: r,
-                bPreferDemoStorePage: l,
+                bPreferDemoStorePage: g,
                 children: (0, Z.jsxs)(`div`, {
-                  className: O,
+                  className: re,
                   children: [
                     (0, Z.jsx)(P, { appids: oe }),
                     (0, Z.jsx)(M, {
                       id: r,
                       imageType: `library`,
-                      bPreferAssetWithoutOverride: S,
+                      bPreferAssetWithoutOverride: b,
                     }),
                     (0, Z.jsx)(N, { id: r }),
                   ],
@@ -167,30 +167,30 @@ var Q = i((e) => {
               }),
             }),
             (0, Z.jsxs)(`div`, {
-              className: y,
+              className: O,
               children: [
                 $ &&
-                  (0, Z.jsx)(d, {
+                  (0, Z.jsx)(ee, {
                     id: r,
-                    classOverride: q(`x33TRfA9NLE-`, `WishlistButton`),
+                    classOverride: B(`x33TRfA9NLE-`, `WishlistButton`),
                     snr: ce,
                   }),
                 (0, Z.jsxs)(`div`, {
-                  className: te,
+                  className: T,
                   children: [
                     (0, Z.jsxs)(`div`, {
-                      className: w,
+                      className: ne,
                       children: [
-                        B.short_description &&
-                          B.short_description.length > 0 &&
+                        J.short_description &&
+                          J.short_description.length > 0 &&
                           (0, Z.jsx)(`div`, {
-                            className: q(
+                            className: B(
                               `lsjYiHotCwA-`,
                               `StoreSaleWidgetShortDesc`,
                             ),
-                            children: B.short_description,
+                            children: J.short_description,
                           }),
-                        (0, Z.jsx)(re, {
+                        (0, Z.jsx)(w, {
                           rgTagIDs: Q
                             ? Q.slice(0, 10).map((e) => e.tagid || 0)
                             : [],
@@ -198,34 +198,34 @@ var Q = i((e) => {
                           bNoStoreLinks: !1,
                         }),
                         (0, Z.jsxs)(`div`, {
-                          className: f,
+                          className: l,
                           children: [
                             (0, Z.jsx)(`div`, {
-                              className: h,
-                              children: Y.LocalizeReact(
+                              className: v,
+                              children: K.LocalizeReact(
                                 `#Sale_ReleaseDate`,
-                                (0, Z.jsx)(`span`, { children: u(G) }),
+                                (0, Z.jsx)(`span`, { children: u(Y) }),
                               ),
                             }),
-                            B.developers &&
-                              B.developers.length > 0 &&
+                            J.developers &&
+                              J.developers.length > 0 &&
                               (0, Z.jsxs)(`div`, {
                                 className: `llT8dhJgnqw-`,
                                 children: [
-                                  Y.Localize(`#CreatorHome_DevelopedBy`),
+                                  K.Localize(`#CreatorHome_DevelopedBy`),
                                   (0, Z.jsx)(`span`, {
-                                    children: B.developers[0].name,
+                                    children: J.developers[0].name,
                                   }),
                                 ],
                               }),
-                            B.publishers &&
-                              B.publishers.length > 0 &&
+                            J.publishers &&
+                              J.publishers.length > 0 &&
                               (0, Z.jsxs)(`div`, {
                                 className: `llT8dhJgnqw-`,
                                 children: [
-                                  Y.Localize(`#CreatorHome_PublishedBy`),
+                                  K.Localize(`#CreatorHome_PublishedBy`),
                                   (0, Z.jsx)(`span`, {
-                                    children: B.publishers[0].name,
+                                    children: J.publishers[0].name,
                                   }),
                                 ],
                               }),
@@ -234,7 +234,7 @@ var Q = i((e) => {
                       ],
                     }),
                     (0, Z.jsx)(`div`, {
-                      className: _,
+                      className: s,
                       children: (0, Z.jsx)(z, {
                         id: r,
                         bPopOutTrailerPlayback: !0,
@@ -243,22 +243,22 @@ var Q = i((e) => {
                   ],
                 }),
                 (0, Z.jsx)(`div`, {
-                  className: m,
-                  children: (0, Z.jsx)(s, { id: r }),
+                  className: f,
+                  children: (0, Z.jsx)(d, { id: r }),
                 }),
                 (0, Z.jsx)(`div`, {
-                  className: v,
+                  className: c,
                   children:
-                    g && $
-                      ? (0, Z.jsx)(ee, { appid: L.appid, bIsMuted: !1 })
+                    y && $
+                      ? (0, Z.jsx)(h, { appid: L.appid, bIsMuted: !1 })
                       : (0, Z.jsxs)(Z.Fragment, {
                           children: [
                             (0, Z.jsx)(o, { id: r }),
                             (0, Z.jsx)(I, {
                               id: r,
-                              bShowDemoButton: c,
+                              bShowDemoButton: m,
                               bHidePrice: i,
-                              bShowPurchaseOptionsButton: p,
+                              bShowPurchaseOptionsButton: _,
                               fnOnPurchaseOptionsClick: E,
                               bHideWishlistButton: L.is_coming_soon,
                             }),
@@ -266,9 +266,9 @@ var Q = i((e) => {
                         }),
                 }),
                 (0, Z.jsxs)(`div`, {
-                  className: k,
+                  className: D,
                   children: [
-                    (0, Z.jsx)(F, { id: r, bPreferAssetWithoutOverride: S }),
+                    (0, Z.jsx)(F, { id: r, bPreferAssetWithoutOverride: b }),
                     (0, Z.jsx)(N, { id: r }),
                   ],
                 }),
@@ -278,9 +278,9 @@ var Q = i((e) => {
         }),
         (0, Z.jsx)(ae, {
           id: r,
-          bPurchaseOptionsExpanded: C,
+          bPurchaseOptionsExpanded: S,
           fnCollapseOptions: E,
-          bPreferAssetWithoutOverride: S,
+          bPreferAssetWithoutOverride: b,
         }),
       ],
     }),

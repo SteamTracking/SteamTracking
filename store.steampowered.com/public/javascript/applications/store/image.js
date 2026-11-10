@@ -7,13 +7,13 @@ import { t as r } from "./usehotkeys.js";
 import "./modals.js";
 import { i } from "./ostype.js";
 import {
-  Do as a,
-  Sc as o,
-  Uy as s,
-  kn as c,
-  pn as l,
-  rs as u,
-  vc as d,
+  An as a,
+  Cc as o,
+  Oo as s,
+  Wy as c,
+  is as l,
+  mn as u,
+  yc as d,
 } from "./main.js";
 var f = e(t(), 1),
   p = n(),
@@ -28,7 +28,7 @@ function b() {
     n = f.useCallback(() => t(void 0), []);
   return [
     t,
-    (0, p.jsx)(l, {
+    (0, p.jsx)(u, {
       active: e !== void 0,
       children: (0, p.jsx)(x, { closeModal: n, rgImageURL: e }),
     }),
@@ -37,15 +37,15 @@ function b() {
 function x(e) {
   let { closeModal: t, rgImageURL: n } = e,
     [r, i] = f.useState(0),
-    a = n?.length ?? 0,
-    o = f.useCallback(() => {
-      i(r == 0 ? a - 1 : r - 1);
-    }, [r, a]),
+    o = n?.length ?? 0,
+    s = f.useCallback(() => {
+      i(r == 0 ? o - 1 : r - 1);
+    }, [r, o]),
     l = f.useCallback(() => {
-      n && r + 1 >= a ? i(0) : i(r + 1);
-    }, [r, n, a]);
-  return (0, p.jsxs)(c, {
-    title: s(`#SaleTech_Screenshot_Viewer`),
+      n && r + 1 >= o ? i(0) : i(r + 1);
+    }, [r, n, o]);
+  return (0, p.jsxs)(a, {
+    title: c(`#SaleTech_Screenshot_Viewer`),
     bAllowFullSize: !0,
     bOKDisabled: !0,
     closeModal: t,
@@ -56,7 +56,7 @@ function x(e) {
         index: r,
         numElements: n?.length || 0,
         fnForward: l,
-        fnBackwards: o,
+        fnBackwards: s,
         fnClose: t,
         bCircular: !0,
       }),
@@ -72,12 +72,12 @@ function S(e) {
     index: t,
     numElements: n,
     fnForward: i,
-    fnBackwards: c,
+    fnBackwards: a,
     fnClose: l,
     bCircular: u,
   } = e;
-  (r(`ArrowLeft`, () => c?.(), !0, !0),
-    r(`Left`, () => c?.(), !0, !0),
+  (r(`ArrowLeft`, () => a?.(), !0, !0),
+    r(`Left`, () => a?.(), !0, !0),
     r(`ArrowRight`, () => i?.(), !0, !0),
     r(`Right`, () => i?.(), !0, !0),
     r(`Escape`, () => l && l(), !0, !0),
@@ -95,9 +95,9 @@ function S(e) {
                 `-WD8g17w7iA-`,
                 t === 0 && !u ? `apJ9YvEIT9k-` : null,
               ),
-              onClick: c,
-              "aria-label": s(`#Carousel_Prev`),
-              children: (0, p.jsx)(a, { angle: 270 }),
+              onClick: a,
+              "aria-label": c(`#Carousel_Prev`),
+              children: (0, p.jsx)(s, { angle: 270 }),
             }),
             (0, p.jsx)(`button`, {
               type: `button`,
@@ -106,8 +106,8 @@ function S(e) {
                 t === n - 1 && !u ? `apJ9YvEIT9k-` : null,
               ),
               onClick: i,
-              "aria-label": s(`#Carousel_Next`),
-              children: (0, p.jsx)(a, { angle: 90 }),
+              "aria-label": c(`#Carousel_Next`),
+              children: (0, p.jsx)(s, { angle: 90 }),
             }),
           ],
         }),
@@ -115,7 +115,7 @@ function S(e) {
         type: `button`,
         className: y,
         onClick: l,
-        "aria-label": s(`#Button_Close`),
+        "aria-label": c(`#Button_Close`),
         children: (0, p.jsx)(d, {}),
       }),
     ],
@@ -135,7 +135,7 @@ function O(e) {
       displayHeight: 0,
     }),
     s = (0, f.useRef)(null),
-    [c, l] = b();
+    [c, u] = b();
   return (
     (0, f.useEffect)(() => {
       r.naturalWidth > r.displayWidth * T &&
@@ -148,8 +148,8 @@ function O(e) {
       ? (0, p.jsxs)(`span`, {
           className: C,
           children: [
-            l,
-            (0, p.jsx)(`span`, { className: w, children: (0, p.jsx)(u, {}) }),
+            u,
+            (0, p.jsx)(`span`, { className: w, children: (0, p.jsx)(l, {}) }),
             (0, p.jsx)(`img`, {
               ...e,
               className: o({ ...(e.className && { [e.className]: !0 }) }),
@@ -220,7 +220,7 @@ function A(e) {
       src: i,
       lazyLoad: a,
       width: o,
-      height: c,
+      height: s,
       alt: l,
       crossOrigin: u,
     } = e;
@@ -228,11 +228,11 @@ function A(e) {
     ? (0, p.jsxs)(`div`, {
         className: m,
         children: [
-          (0, p.jsx)(`p`, { children: s(`#Image_ErrorTitle`, i) }),
+          (0, p.jsx)(`p`, { children: c(`#Image_ErrorTitle`, i) }),
           (0, p.jsx)(`ul`, {
-            children: (0, p.jsx)(`li`, { children: s(`#Image_Error_msg1`) }),
+            children: (0, p.jsx)(`li`, { children: c(`#Image_Error_msg1`) }),
           }),
-          (0, p.jsx)(`p`, { children: s(`#Image_Error_suggestion`) }),
+          (0, p.jsx)(`p`, { children: c(`#Image_Error_suggestion`) }),
         ],
       })
     : (0, p.jsx)(O, {
@@ -242,7 +242,7 @@ function A(e) {
         crossOrigin: u,
         loading: a ? `lazy` : void 0,
         width: o,
-        height: c,
+        height: s,
         alt: l,
       });
 }

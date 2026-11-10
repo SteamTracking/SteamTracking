@@ -6,20 +6,20 @@ import { Lt as t, ft as n, st as r, u as i } from "./libraries.js";
 import "./steammessages_salerewards_pb.js";
 import { r as a } from "./saleclaim.js";
 import {
-  Kx as o,
-  Sc as s,
-  Uy as c,
-  Vl as l,
-  Vx as u,
-  ax as d,
-  bu as f,
-  dd as p,
-  h as m,
+  Bb as o,
+  Cc as s,
+  Hl as c,
+  Hx as l,
+  Wy as u,
+  db as d,
+  fd as f,
+  h as p,
+  ix as m,
   m as h,
-  p as g,
-  rx as _,
-  ub as v,
-  zb as y,
+  ox as g,
+  p as _,
+  qx as v,
+  xu as y,
 } from "./main.js";
 import { n as b } from "./discoveryqueuestore.js";
 import { t as x } from "./preloaddiscoveryqueue.js";
@@ -41,13 +41,13 @@ function I(e) {
     ? (0, F.jsxs)(L, {
         children: [
           (0, F.jsx)(U, {}),
-          d.logged_in ? (0, F.jsx)(z, { ...e }) : (0, F.jsx)(V, { ...e }),
+          g.logged_in ? (0, F.jsx)(z, { ...e }) : (0, F.jsx)(V, { ...e }),
         ],
       })
     : null;
 }
 function L(e) {
-  let [t, n] = f(),
+  let [t, n] = y(),
     r = i(() => n.ExcludedContentDescriptor),
     a = w.useMemo(() => ({ content_descriptors_excluded: r }), [r]);
   return t ? null : (0, F.jsx)(C, { defaultOptions: a, children: e.children });
@@ -61,18 +61,18 @@ function R(e, t) {
           .GetDiscoveryQueueAppsOfType(e, !1, t),
         i = { ...h, include_screenshots: !0 };
       return (
-        await l.Get().QueueMultipleAppRequests(n ?? [], i),
+        await c.Get().QueueMultipleAppRequests(n ?? [], i),
         { rgDiscoveryApps: n, exhausted: r }
       );
     },
-    enabled: d.logged_in,
+    enabled: g.logged_in,
   });
   return [n?.rgDiscoveryApps, n?.exhausted];
 }
 function z(e) {
   let { eStoreDiscoveryQueueType: t, strQueueDescriptionOverride: n, ...r } = e,
-    { showDiscoveryQueue: i, bQueueVisible: a } = m(t, r),
-    o = p(),
+    { showDiscoveryQueue: i, bQueueVisible: a } = p(t, r),
+    o = f(),
     [s, c] = R(t, r.storePageFilter),
     l = a || !!o.data?.preferences?.disable_animated_marketing,
     u = w.useCallback(() => {
@@ -80,7 +80,7 @@ function z(e) {
     }, [c, i]),
     d = w.useId();
   return (0, F.jsx)(F.Fragment, {
-    children: (0, F.jsx)(g, {
+    children: (0, F.jsx)(_, {
       "aria-labelledby": d,
       onClick: u,
       arrDiscoveryApps: s,
@@ -92,14 +92,14 @@ function z(e) {
 }
 function B(e) {
   let { strQueueDescriptionOverride: t, id: n } = e,
-    r = t ?? c(`#DiscoveryQueue_WidgetHeader`);
+    r = t ?? u(`#DiscoveryQueue_WidgetHeader`);
   return (0, F.jsxs)(`div`, {
     id: n,
     className: s(T, `WidgetHeaderCtn`),
     children: [
       (0, F.jsx)(`div`, {
         className: D,
-        children: c(`#DiscoveryQueue_WidgetHeader_Yours`),
+        children: u(`#DiscoveryQueue_WidgetHeader_Yours`),
       }),
       (0, F.jsx)(`div`, { className: O, children: r }),
     ],
@@ -108,25 +108,25 @@ function B(e) {
 function V(e) {
   let t = H(!0),
     n = w.useCallback(() => {
-      window.location.href = `${_.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`;
+      window.location.href = `${m.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`;
     }, []);
-  return (0, F.jsx)(g, {
+  return (0, F.jsx)(_, {
     onClick: n,
-    arrDiscoveryApps: t ? u(t) : void 0,
+    arrDiscoveryApps: t ? l(t) : void 0,
     children: (0, F.jsxs)(`div`, {
       className: s(T, `WidgetHeaderCtn`),
       children: [
         (0, F.jsx)(`div`, {
           className: D,
-          children: c(`#DiscoveryQueue_WidgetHeader_Yours`),
+          children: u(`#DiscoveryQueue_WidgetHeader_Yours`),
         }),
         (0, F.jsx)(`div`, {
           className: O,
-          children: c(`#DiscoveryQueue_WidgetHeader_LoggedOut`),
+          children: u(`#DiscoveryQueue_WidgetHeader_LoggedOut`),
         }),
         (0, F.jsx)(`div`, {
           className: k,
-          children: c(`#DiscoveryQueue_Error_Login_Title`),
+          children: u(`#DiscoveryQueue_Error_Login_Title`),
         }),
       ],
     }),
@@ -147,23 +147,23 @@ function H(e) {
   return (0, w.useMemo)(() => t && t.GetItemIDs().map((e) => e.appid), [t]);
 }
 function U() {
-  let e = a(2, _.LANGUAGE, !0),
-    t = y();
+  let e = a(2, m.LANGUAGE, !0),
+    t = o();
   if (!e.data?.definition || (e.data?.reward_items?.length ?? 0) == 0)
     return null;
   let n = e?.data.reward_items ?? [];
-  o(n);
+  v(n);
   let r = n.slice(0, 3),
     i = null;
   return (
-    d.logged_in &&
+    g.logged_in &&
       !t &&
       (i = (0, F.jsxs)(F.Fragment, {
         children: [
           ` - `,
           (0, F.jsx)(`a`, {
-            href: _.COMMUNITY_BASE_URL + `my/itemcollection`,
-            children: c(`#DiscoveryQueue_SaleStatus_Link`),
+            href: m.COMMUNITY_BASE_URL + `my/itemcollection`,
+            children: u(`#DiscoveryQueue_SaleStatus_Link`),
           }),
         ],
       })),
@@ -176,13 +176,13 @@ function U() {
           children: [
             (0, F.jsx)(`div`, {
               className: P,
-              children: c(`#DiscoveryQueue_Widget_SaleDesc`),
+              children: u(`#DiscoveryQueue_Widget_SaleDesc`),
             }),
             (0, F.jsxs)(`div`, {
               children: [
-                c(
+                u(
                   `#DiscoveryQueue_Widget_SaleTitle`,
-                  v(e.data.definition.rtime_end_time ?? 0, !1, !1, !1, !1),
+                  d(e.data.definition.rtime_end_time ?? 0, !1, !1, !1, !1),
                 ),
                 i,
               ],
@@ -198,13 +198,13 @@ function W(e) {
     n = t.map((e) => {
       if (!e.community_definition || !e.community_definition.item_name)
         return null;
-      let t = `${_.MEDIA_CDN_COMMUNITY_URL}images/items/${e.appid}/${e.community_definition.item_image_small}`;
+      let t = `${m.MEDIA_CDN_COMMUNITY_URL}images/items/${e.appid}/${e.community_definition.item_image_small}`;
       return (0, F.jsx)(
         `div`,
         { className: M, children: (0, F.jsx)(`img`, { src: t }) },
         e.community_definition.item_name.toString(),
       );
     });
-  return (0, F.jsx)(`div`, { className: j, children: u(n) });
+  return (0, F.jsx)(`div`, { className: j, children: l(n) });
 }
 export { I as t };

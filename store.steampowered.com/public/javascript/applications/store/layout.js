@@ -3,7 +3,7 @@
 
 import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, ft as n } from "./libraries.js";
-import { Sc as r, kc as i, zb as a } from "./main.js";
+import { Ac as r, Bb as i, Cc as a } from "./main.js";
 var o = e(t()),
   s = `ebvruITp5l4-`,
   c = `lpZBduTm0mM-`,
@@ -38,7 +38,7 @@ var d = n(),
   f = (0, o.forwardRef)(function (e, t) {
     let {
         component: n,
-        padding: a,
+        padding: i,
         paddingX: o,
         paddingY: s,
         paddingRight: c,
@@ -65,11 +65,11 @@ var d = n(),
         style: j,
         ...M
       } = e,
-      N = r(
-        w(`padding-left`, l || o || a),
-        w(`padding-top`, u || s || a),
-        w(`padding-right`, c || o || a),
-        w(`padding-bottom`, f || s || a),
+      N = a(
+        w(`padding-left`, l || o || i),
+        w(`padding-top`, u || s || i),
+        w(`padding-right`, c || o || i),
+        w(`padding-bottom`, f || s || i),
         w(`margin-left`, g || m || p),
         w(`margin-top`, _ || h || p),
         w(`margin-right`, v || m || p),
@@ -91,12 +91,12 @@ var d = n(),
       F = { className: N, style: P, ref: t, ...M };
     return n
       ? (0, d.jsx)(n, { ...F })
-      : (0, d.jsx)(i, { className: N, style: P, ref: t, ...M });
+      : (0, d.jsx)(r, { className: N, style: P, ref: t, ...M });
   }),
   p = (0, o.forwardRef)(function (e, t) {
     let {
         children: n,
-        style: r,
+        style: i,
         spacing: a,
         horizontalSpacing: c,
         verticalSpacing: l,
@@ -107,10 +107,10 @@ var d = n(),
       g = v(),
       _ = g.spacing[E(c || a || `none`)],
       y = g.spacing[E(l || a || `none`)];
-    return (0, d.jsx)(i, {
+    return (0, d.jsx)(r, {
       "flow-children": p,
       ref: t,
-      style: { ...(r || {}), marginTop: h(-y) },
+      style: { ...(i || {}), marginTop: h(-y) },
       ...m,
       children: (0, d.jsx)(`div`, {
         style: { marginInlineStart: h(-_) },
@@ -129,9 +129,9 @@ var d = n(),
     });
   }),
   m = (0, o.forwardRef)(function (e, t) {
-    let { spacing: n, itemClassName: a, children: s, className: l, ...u } = e,
+    let { spacing: n, itemClassName: i, children: s, className: l, ...u } = e,
       p = o.Children.count(s);
-    return (0, d.jsx)(i, {
+    return (0, d.jsx)(r, {
       "flow-children": `column`,
       ref: t,
       className: l,
@@ -141,7 +141,7 @@ var d = n(),
           ? null
           : (0, d.jsx)(f, {
               paddingBottom: t === p - 1 ? void 0 : n,
-              className: r(a, c),
+              className: a(i, c),
               children: e,
             }),
       ),
@@ -225,13 +225,13 @@ function D() {
     } = v(),
     n = u(`(min-width: ${e}px)`),
     r = u(`(min-width: ${t}px)`);
-  return a() ? `mobile` : r ? `desktop` : n ? `tablet` : `mobile`;
+  return i() ? `mobile` : r ? `desktop` : n ? `tablet` : `mobile`;
 }
 function O(e) {
   return e.children(D());
 }
 function k(e) {
-  return (0, d.jsx)(f, { component: i, ...e });
+  return (0, d.jsx)(f, { component: r, ...e });
 }
 export {
   k as a,

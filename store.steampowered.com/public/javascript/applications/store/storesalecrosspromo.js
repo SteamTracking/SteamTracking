@@ -20,40 +20,40 @@ import {
   Z as p,
   a as m,
   b as h,
-  d as g,
-  i as _,
-  k as ee,
-  l as te,
-  n as ne,
-  o as v,
-  r as y,
-  rt as b,
-  t as re,
-  v as x,
-  w as ie,
+  d as ee,
+  i as te,
+  k as ne,
+  l as g,
+  n as re,
+  o as _,
+  r as v,
+  rt as y,
+  t as b,
+  v as ie,
+  w as ae,
 } from "./linkwidget.js";
-import { N as S, T as C } from "./storelink.js";
+import { N as x, T as S } from "./storelink.js";
 import "./partnerevent.js";
-import { l as w, u as T } from "./salestoreitemutils.js";
-import { t as E } from "./saleghostsections.js";
-import { d as ae } from "./carouselarrows.js";
-import { i as D } from "./partnereventeditorcontext.js";
-import { i as O } from "./crosspromotesalelayouts.module.js";
-import { n as k, t as A } from "./crosspromotesalelayouts.js";
-import { n as j, t as M } from "./fakesalehelper.js";
+import { l as C, u as w } from "./salestoreitemutils.js";
+import { t as T } from "./saleghostsections.js";
+import { d as E } from "./carouselarrows.js";
+import { i as oe } from "./partnereventeditorcontext.js";
+import { i as D } from "./crosspromotesalelayouts.module.js";
+import { n as O, t as k } from "./crosspromotesalelayouts.js";
+import { n as A, t as j } from "./fakesalehelper.js";
 import {
-  Hb as N,
-  Jv as P,
-  L as F,
-  Oi as I,
-  Sc as oe,
-  Sv as L,
-  Uy as R,
-  av as z,
-  ht as B,
-  kv as V,
-  mS as H,
-  zb as U,
+  Av as M,
+  Bb as N,
+  Cc as P,
+  Cv as F,
+  L as I,
+  Ub as L,
+  Wy as R,
+  Yv as z,
+  hS as B,
+  ht as V,
+  ki as H,
+  ov as U,
 } from "./main.js";
 var W = e(t(), 1);
 function G(e, t, n) {
@@ -71,7 +71,7 @@ function K(e) {
   return e.map((e) => e.data);
 }
 function q(e, t, n, r) {
-  let i = z(),
+  let i = U(),
     o = e.BUsesContentHubForItemSource(),
     s = !!n?.bHideOwned,
     c = !!n?.bHideWishlisted,
@@ -79,7 +79,7 @@ function q(e, t, n, r) {
     u = !!n?.bHasHideIgnoredValue,
     d = a({
       queries: (t ?? []).map((e) => {
-        let t = L(i, w(e));
+        let t = F(i, C(e));
         return r ? { ...t, enabled: !1 } : t;
       }),
       combine: K,
@@ -104,15 +104,15 @@ function q(e, t, n, r) {
 }
 function se(e) {
   let { capsules: t } = e,
-    n = z();
-  return (a({ queries: (t ?? []).map((e) => L(n, w(e))), combine: ce }), null);
+    n = U();
+  return (a({ queries: (t ?? []).map((e) => F(n, C(e))), combine: J }), null);
 }
-function ce() {
+function J() {
   return null;
 }
-var J = i(),
-  le = 250;
-function Y(e) {
+var Y = i(),
+  ce = 250;
+function le(e) {
   let {
       event: t,
       section: n,
@@ -122,69 +122,69 @@ function Y(e) {
       Frame: o = m,
       nMaxCapsules: s,
     } = e,
-    d = U(),
-    p = D(),
-    { nMaxCapsulesPerRow: v, bScreenIsWide: b } = ae(n.section_type),
-    S = u(t, n, !0),
-    { capsules: C, nHiddenCapsules: w } = q(t, S, void 0, !0),
-    T = s ? C?.slice(0, s) : C,
-    O = W.useMemo(() => x(n, T?.length), [n, T?.length]),
-    k = c(t, n),
-    A = ee(t, n),
-    [j, M] = W.useState(0),
-    N = te(O, d);
+    d = N(),
+    p = oe(),
+    { nMaxCapsulesPerRow: _, bScreenIsWide: y } = E(n.section_type),
+    x = u(t, n, !0),
+    { capsules: S, nHiddenCapsules: C } = q(t, x, void 0, !0),
+    w = s ? S?.slice(0, s) : S,
+    D = W.useMemo(() => ie(n, w?.length), [n, w?.length]),
+    O = c(t, n),
+    k = ne(t, n),
+    [A, j] = W.useState(0),
+    M = g(D, d);
   if (f(t, n) === `personalized_carousel`) {
-    let e = ie(t, n, k);
-    if (e === void 0) return (0, J.jsx)(E, { capsules_per_row: N });
+    let e = ae(t, n, O);
+    if (e === void 0) return (0, Y.jsx)(T, { capsules_per_row: M });
     if (e === null) return null;
   }
   let P;
-  if (!T) P = (0, J.jsx)(E, { capsules_per_row: N });
+  if (!w) P = (0, Y.jsx)(T, { capsules_per_row: M });
   else {
-    let e = _({
+    let e = te({
         saleEvent: t,
-        section: O,
-        capsules: T,
+        section: D,
+        capsules: w,
         language: r,
         bInGamepadUI: d,
-        nMaxCapsulesPerRow: v,
-        bScreenIsWide: b,
-        nShowAdditionalRows: j,
+        nMaxCapsulesPerRow: _,
+        bScreenIsWide: y,
+        nShowAdditionalRows: A,
       }),
-      { content: i, bAdditionalContent: a } = g(e);
+      { content: i, bAdditionalContent: a } = ee(e);
     if (((P = i), !P && !p)) return null;
     P &&
       a &&
-      (P = (0, J.jsxs)(J.Fragment, {
+      (P = (0, Y.jsxs)(Y.Fragment, {
         children: [
           P,
-          (0, J.jsx)(y, {
-            section: O,
-            nRowsWithNext: h(O, j) + 1,
-            nCapsules: T.length,
-            rgRowSizes: N,
-            onShowMore: () => M(j + ne(n)),
+          (0, Y.jsx)(v, {
+            section: D,
+            nRowsWithNext: h(D, A) + 1,
+            nCapsules: w.length,
+            rgRowSizes: M,
+            onShowMore: () => j(A + re(n)),
           }),
         ],
       }));
   }
-  let { feature: F, depth: I } = re(n, t, A);
-  return (0, J.jsx)(B, {
+  let { feature: F, depth: I } = b(n, t, k);
+  return (0, Y.jsx)(V, {
     feature: F,
     depth: I,
-    children: (0, J.jsxs)(o, {
+    children: (0, Y.jsxs)(o, {
       event: t,
       section: n,
       language: r,
       bInGamepadUI: d,
-      placeholderHeight: ue(O, T?.length ?? 0, N) + `px`,
-      nHiddenCapsules: w,
-      personalizedCarousels: k,
+      placeholderHeight: ue(D, w?.length ?? 0, M) + `px`,
+      nHiddenCapsules: C,
+      personalizedCarousels: O,
       promotedSale: i,
       promotedSaleEvent: a,
       children: [
-        (0, J.jsx)(l, { event: t, section: n }),
-        (0, J.jsx)(se, { capsules: S }),
+        (0, Y.jsx)(l, { event: t, section: n }),
+        (0, Y.jsx)(se, { capsules: x }),
         P,
       ],
     }),
@@ -194,16 +194,16 @@ function ue(e, t, n) {
   let r = 0;
   if (n.length > 0) for (let e = t; e > 0; r++) e -= n[r % n.length];
   let i = Math.min(r, h(e, 0));
-  return Math.max(1, i) * le;
+  return Math.max(1, i) * ce;
 }
 function de(e) {
   let { event: t, section: n, language: r, strHeading: i, children: a } = e;
-  return (0, J.jsxs)(`div`, {
-    className: oe(C, O),
+  return (0, Y.jsxs)(`div`, {
+    className: P(S, D),
     children: [
-      (0, J.jsx)(`div`, {
-        className: S,
-        children: (0, J.jsx)(b, {
+      (0, Y.jsx)(`div`, {
+        className: x,
+        children: (0, Y.jsx)(y, {
           section: n,
           event: t,
           language: r,
@@ -217,7 +217,7 @@ function de(e) {
 }
 function fe(e, t) {
   return {
-    ...M(`crosspromotesalepage`, ``),
+    ...j(`crosspromotesalepage`, ``),
     sale_page_cross_promo_sales: e,
     use_random_order: !1,
     show_as_carousel: !0,
@@ -237,7 +237,7 @@ function me(e) {
   );
 }
 async function he(e) {
-  let t = `${N.STORE_BASE_URL}${pe}?${me(e)}`,
+  let t = `${L.STORE_BASE_URL}${pe}?${me(e)}`,
     n = await fetch(t);
   if (!n.ok) throw Error(`${t} answered ${n.status}`);
   let r = await n.json();
@@ -265,7 +265,7 @@ function ve(e) {
         rtEndTime: e.rtime32_end_time || void 0,
         strSummary: e.summary || void 0,
         strCapsuleURL: ye(e),
-        strSaleURL: e.store_path ? N.STORE_BASE_URL + e.store_path : void 0,
+        strSaleURL: e.store_path ? L.STORE_BASE_URL + e.store_path : void 0,
       };
 }
 function ye(e) {
@@ -294,7 +294,7 @@ function xe(e) {
   );
 }
 async function Se(e) {
-  let t = `${N.STORE_BASE_URL}${be}?${xe(e)}`,
+  let t = `${L.STORE_BASE_URL}${be}?${xe(e)}`,
     n = await fetch(t, { credentials: `include` });
   if (!n.ok) throw Error(`${t} answered ${n.status}`);
   let r = await n.json();
@@ -302,10 +302,10 @@ async function Se(e) {
   return r.rgItems;
 }
 function X(e) {
-  return [`StoreItemSaleCrossPromo`, P(e)];
+  return [`StoreItemSaleCrossPromo`, z(e)];
 }
 function Z(e, t) {
-  return [`StoreItemSaleCrossPromoItems`, P(e), t.strEventGID];
+  return [`StoreItemSaleCrossPromoItems`, z(e), t.strEventGID];
 }
 function Ce(e) {
   let { data: t } = o({ queryKey: X(e), queryFn: n, staleTime: 1 / 0 });
@@ -340,10 +340,10 @@ var Q = p(`event_capsule`) ?? 3,
 function Oe(e) {
   let { item: t } = e,
     n = Ce(t),
-    { data: r } = V(t),
+    { data: r } = M(t),
     i = n?.rgSales.length ?? 0,
     [a, o] = W.useState(!1),
-    s = I({
+    s = H({
       onEnter: () => {
         o(!0);
       },
@@ -362,7 +362,7 @@ function Oe(e) {
     p = W.useMemo(() => n?.rgSales[0] && $(n.rgSales[0], []), [n]);
   if (!n || !i || !p) return null;
   let m = n.rgSales.map((e, r) =>
-      (0, J.jsx)(
+      (0, Y.jsx)(
         ke,
         {
           item: t,
@@ -378,17 +378,17 @@ function Oe(e) {
     h = r?.name
       ? R(`#Sale_CrossPromoSale_EventCapsuleHeading_StoreItem`, r.name)
       : void 0;
-  return (0, J.jsx)(`div`, {
+  return (0, Y.jsx)(`div`, {
     ref: s,
-    children: (0, J.jsx)(de, {
+    children: (0, Y.jsx)(de, {
       event: p.event,
       section: p.section,
-      language: H(N.LANGUAGE),
+      language: B(L.LANGUAGE),
       strHeading: h,
       children:
         i === 1
           ? m[0]
-          : (0, J.jsx)(v, {
+          : (0, Y.jsx)(_, {
               event: p.event,
               section: p.section,
               rgSlides: m,
@@ -406,7 +406,7 @@ function ke(e) {
       bLoad: a,
       bRecordImpression: s,
     } = e,
-    c = H(N.LANGUAGE),
+    c = B(L.LANGUAGE),
     l = o({
       ..._e(
         {
@@ -421,7 +421,7 @@ function ke(e) {
     u = we(t, n, r, a),
     d = l.data,
     f = u.data,
-    p = F();
+    p = I();
   W.useEffect(() => {
     s &&
       i &&
@@ -430,37 +430,37 @@ function ke(e) {
   }, [s, i, d, r, p]);
   let { event: m, section: h } = W.useMemo(() => $(r, f ?? []), [r, f]);
   return !i || !d || !f?.length
-    ? (0, J.jsx)(Ae, { event: m, section: h })
-    : (0, J.jsx)(Y, {
+    ? (0, Y.jsx)(Ae, { event: m, section: h })
+    : (0, Y.jsx)(le, {
         event: m,
         section: h,
         language: c,
         promotedSaleEvent: d,
-        Frame: A,
+        Frame: k,
         nMaxCapsules: Q,
       });
 }
 function Ae(e) {
   let { event: t, section: n } = e,
-    r = U();
-  return (0, J.jsx)(k, {
+    r = N();
+  return (0, Y.jsx)(O, {
     event: t,
     section: n,
-    language: H(N.LANGUAGE),
+    language: B(L.LANGUAGE),
     bInGamepadUI: r,
     placeholderHeight: De,
-    children: (0, J.jsx)(je, {}),
+    children: (0, Y.jsx)(je, {}),
   });
 }
 function je() {
-  return (0, J.jsx)(E, { capsules_per_row: [Q] });
+  return (0, Y.jsx)(T, { capsules_per_row: [Q] });
 }
 function $(e, t) {
   let n = t.flatMap((e) => {
-      let t = T(e);
+      let t = w(e);
       return t ? [t] : [];
     }),
-    r = j(e.clanAccountID, 1, `crosspromote`, Math.floor(Date.now() / 1e3)),
+    r = A(e.clanAccountID, 1, `crosspromote`, Math.floor(Date.now() / 1e3)),
     i = fe(
       [
         {
@@ -489,11 +489,11 @@ function Ne(e) {
       (o(t, n, r), a(!0));
     }, [t, n, r, o]),
     i
-      ? (0, J.jsx)(B, {
+      ? (0, Y.jsx)(V, {
           feature: `sale-crosspromo`,
-          children: (0, J.jsx)(`div`, {
+          children: (0, Y.jsx)(`div`, {
             className: Me,
-            children: (0, J.jsx)(Oe, { item: t }),
+            children: (0, Y.jsx)(Oe, { item: t }),
           }),
         })
       : null

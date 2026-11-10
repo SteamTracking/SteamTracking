@@ -15,12 +15,12 @@ import {
 } from "./basicbbcodeparser.js";
 import {
   $b as f,
-  Hb as p,
-  Hc as m,
-  Qb as h,
-  ba as g,
-  nl as _,
-  va as v,
+  Ub as p,
+  Uc as m,
+  ba as h,
+  ex as g,
+  rl as _,
+  xa as v,
   ya as y,
 } from "./main.js";
 var b = e(n(), 1),
@@ -50,13 +50,13 @@ function k(e) {
   return (0, O.jsx)(`div`, {
     role: `separator`,
     "aria-orientation": t,
-    ...g({ ...r, size: n, className: S }, A),
+    ...v({ ...r, size: n, className: S }, A),
   });
 }
 var A = [
-  ...v,
+  ...y,
   { prop: `size`, className: (e) => x[`Size-${e}`], responsive: !0 },
-  { prop: `color`, cssProperty: (e) => [`--separator-color`, y(e)] },
+  { prop: `color`, cssProperty: (e) => [`--separator-color`, h(e)] },
 ];
 function j(e, t) {
   return {
@@ -131,7 +131,7 @@ function G(e) {
     let t = n(e.args.webm),
       i = n(e.args.mp4),
       a = n(e.args.poster),
-      o = f() || h();
+      o = g() || f();
     return (0, O.jsxs)(`video`, {
       className: R,
       poster: a,

@@ -15,39 +15,39 @@ import { n as l } from "./bottomrow.js";
 import { n as u, t as d } from "./storeitemhooks.js";
 import { r as f } from "./storedisplayutils.js";
 import {
-  Ai as p,
-  Mi as m,
-  Sc as h,
-  Uy as g,
-  ax as ee,
-  ht as _,
-  kc as v,
-  la as y,
-  qb as b,
-  rx as x,
-  xd as S,
+  Ac as p,
+  Cc as m,
+  Jb as h,
+  Ni as g,
+  Sd as ee,
+  Wy as _,
+  ht as te,
+  ix as v,
+  ji as y,
+  ox as b,
+  ua as x,
 } from "./main.js";
-import { t as C } from "./partnereventslogin.js";
-var w = e(o());
-function te(e, t, n, r, i) {
-  return a(ne(e, t, n, r, i));
-}
+import { t as S } from "./partnereventslogin.js";
+var C = e(o());
 function ne(e, t, n, r, i) {
+  return a(re(e, t, n, r, i));
+}
+function re(e, t, n, r, i) {
   return {
     queryKey: [`gamemixer`, e, t, n, r, i],
     queryFn: async () => {
       let a = {
           appids: e.join(`,`),
           appweights: t.join(`,`),
-          sessionid: b(),
+          sessionid: h(),
           selffactor: n,
           popularity: i ? 0 : r,
           scoperange: i ? 100 : 0,
           scopedecayrange: i ? 1e3 : 0,
           scopedecaystrength: i ? 20 : 0,
         },
-        o = await w.default.get(
-          `${x.STORE_BASE_URL}gameexplorer/exploreapplist`,
+        o = await C.default.get(
+          `${v.STORE_BASE_URL}gameexplorer/exploreapplist`,
           { params: a, withCredentials: !0, timeout: 1e4 },
         );
       if (o.data)
@@ -60,16 +60,16 @@ function ne(e, t, n, r, i) {
     placeholderData: (e) => e,
   };
 }
-function re() {
+function w() {
   return a(T());
 }
 function T() {
   return {
     queryKey: [`gamemixerplayed`],
     queryFn: async () => {
-      let e = { sessionid: b() },
-        t = await w.default.get(
-          `${x.STORE_BASE_URL}gameexplorer/exploreplayedlist`,
+      let e = { sessionid: h() },
+        t = await C.default.get(
+          `${v.STORE_BASE_URL}gameexplorer/exploreplayedlist`,
           { params: e, withCredentials: !0, timeout: 1e4 },
         );
       if (t.data) return t.data;
@@ -126,25 +126,25 @@ function se() {
     [r, i] = E.useState(e),
     [a, o] = E.useState(e),
     s = t(),
-    c = te(
+    c = ne(
       a.arrSelectedAppInfos.map((e) => e.nAppID),
       a.arrSelectedAppInfos.map((e) => e.nWeight),
       a.nSelfFactor,
       a.nPopularity,
       a.bSimilar,
     );
-  return (0, Z.jsx)(_, {
+  return (0, Z.jsx)(te, {
     controller: `gameexplorer`,
     method: `default`,
     feature: `capsule`,
-    children: (0, Z.jsx)(p, {
-      children: (0, Z.jsx)(v, {
-        className: h(D, c.isFetching && void 0),
-        children: (0, Z.jsxs)(v, {
+    children: (0, Z.jsx)(y, {
+      children: (0, Z.jsx)(p, {
+        className: m(D, c.isFetching && void 0),
+        children: (0, Z.jsxs)(p, {
           className: O,
           children: [
             (0, Z.jsx)(ce, {}),
-            !ee.steamid && (0, Z.jsx)(me, {}),
+            !b.steamid && (0, Z.jsx)(me, {}),
             (0, Z.jsx)(fe, {
               state: r,
               onChange: (e, t) => {
@@ -170,11 +170,11 @@ function se() {
   });
 }
 function ce() {
-  return (0, Z.jsxs)(v, {
+  return (0, Z.jsxs)(p, {
     className: k,
     children: [
-      (0, Z.jsx)(v, { className: A, children: `Game Explorer` }),
-      (0, Z.jsx)(v, { className: j, children: `Explore and Mix Games` }),
+      (0, Z.jsx)(p, { className: A, children: `Game Explorer` }),
+      (0, Z.jsx)(p, { className: j, children: `Explore and Mix Games` }),
     ],
   });
 }
@@ -190,7 +190,7 @@ function le(e) {
     children: [
       (0, Z.jsx)(`div`, {
         className: J,
-        children: (0, Z.jsx)(y, {
+        children: (0, Z.jsx)(x, {
           size: `1`,
           color: `red`,
           onClick: () => e.onRemove(e.selectedAppInfo.nAppID),
@@ -423,7 +423,7 @@ function pe(e) {
               `${(e.fDistance * 100).toFixed(2)}%`,
               (0, Z.jsx)(`div`, {
                 className: ae,
-                children: (0, Z.jsx)(y, {
+                children: (0, Z.jsx)(x, {
                   size: `1`,
                   color: `green`,
                   onClick: () => e.fnSetApp(e.nAppID),
@@ -440,7 +440,7 @@ function $(e) {
   return e.arrNearApps.length == 0
     ? null
     : (0, Z.jsx)(`div`, {
-        className: h(Y, e.bIsPending && `r9iZqJcYbak-`),
+        className: m(Y, e.bIsPending && `r9iZqJcYbak-`),
         children: e.arrNearApps?.map((t) =>
           (0, Z.jsx)(
             pe,
@@ -451,14 +451,14 @@ function $(e) {
       });
 }
 function me() {
-  return (0, Z.jsxs)(v, {
+  return (0, Z.jsxs)(p, {
     className: void 0,
     children: [
-      g(`#PersonalCalendar_LoginPrompt`),
+      _(`#PersonalCalendar_LoginPrompt`),
       (0, Z.jsx)(`button`, {
-        onClick: C,
+        onClick: S,
         className: void 0,
-        children: g(`#Login_SignIn`),
+        children: _(`#Login_SignIn`),
       }),
     ],
   });
@@ -480,14 +480,14 @@ function he(e) {
   });
 }
 var ge = E.forwardRef(function (e, t) {
-    let n = S(e.strSearch, null, 10),
+    let n = ee(e.strSearch, null, 10),
       r = e.fnSetResultApps;
     return (
       E.useEffect(() => {
         r(n.data?.rgItemIDs.map((e) => e.appid));
       }, [r, n.data]),
       (0, Z.jsx)(`div`, {
-        className: h(F, n.data?.rgItemIDs.length > 0 && `g6SP7v41-Kc-`),
+        className: m(F, n.data?.rgItemIDs.length > 0 && `g6SP7v41-Kc-`),
         ref: t,
         children: n.data?.rgItemIDs
           .filter((t) => !e.arrIgnoreAppIDs.includes(t.appid))
@@ -516,7 +516,7 @@ var ge = E.forwardRef(function (e, t) {
       p = (t) => {
         (e.fnSelectAppID(t), n(``), o(0), c([]), i(Date.now()));
       },
-      m = (e) => {
+      h = (e) => {
         switch (e) {
           case `Enter`:
             s.length > 0 && p(s[0]);
@@ -531,10 +531,10 @@ var ge = E.forwardRef(function (e, t) {
       children: [
         (0, Z.jsx)(`input`, {
           type: `text`,
-          className: h(P, g && `TAlX1lcqH8Y-`),
+          className: m(P, g && `TAlX1lcqH8Y-`),
           value: t,
           onChange: (e) => f(e.target.value),
-          onKeyDown: (e) => m(e.key),
+          onKeyDown: (e) => h(e.key),
           onBlur: (e) => n(``),
           placeholder: g ? `Max three games` : `Type any game name`,
           disabled: g,
@@ -551,11 +551,11 @@ var ge = E.forwardRef(function (e, t) {
     });
   },
   ve = (e) => {
-    let t = re().data,
+    let t = w().data,
       n = t?.appids ?? [];
     return (0, Z.jsx)(`div`, {
       className: void 0,
-      children: (0, Z.jsx)(m, {
+      children: (0, Z.jsx)(g, {
         options: n,
         size: `1`,
         selectedValue: 0,

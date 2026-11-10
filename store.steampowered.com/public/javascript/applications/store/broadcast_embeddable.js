@@ -8,14 +8,14 @@ import { n as u } from "./eventdevfeaturestore.js";
 import "./steammessages_experiments_pb.js";
 import { n as d } from "./partnereventstore.js";
 import {
-  Fu as f,
-  Iy as p,
-  Jb as m,
-  Mb as h,
-  Vl as g,
-  o as _,
-  qx as v,
-  rx as y,
+  Hl as f,
+  Iu as p,
+  Jx as m,
+  Ly as h,
+  Nb as g,
+  Yb as _,
+  ix as v,
+  o as y,
 } from "./main.js";
 import { t as b } from "./broadcastwatchstore.js";
 var x = class e {
@@ -38,7 +38,7 @@ var x = class e {
         o = i[2],
         s = e.GetBBCodeParam(a, `steamid`),
         c = {
-          steamID: s ? new p(s) : void 0,
+          steamID: s ? new h(s) : void 0,
           name: e.GetBBCodeParam(a, `name`),
           title: e.GetBBCodeParam(a, `title`),
           company: e.GetBBCodeParam(a, `company`),
@@ -78,7 +78,7 @@ var x = class e {
       d.QueueLoadPartnerEvent(e.clanid, e.unique_id);
     let r = n.rgCalendarItems.map((e) =>
         d.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-          p.InitFromClanID(e.clanid, y.EUNIVERSE),
+          h.InitFromClanID(e.clanid, v.EUNIVERSE),
           e.unique_id,
           0,
         ),
@@ -150,7 +150,7 @@ var x = class e {
     return this.m_mapBroadcasterSteamIDData.get(e)?.m_rgAppIDs;
   }
 };
-h([t], x.prototype, `m_mapBroadcasterSteamIDData`, void 0);
+g([t], x.prototype, `m_mapBroadcasterSteamIDData`, void 0);
 var S = new x(),
   C = e(a()),
   w = !1;
@@ -247,9 +247,9 @@ var D = class e {
     let t;
     return (
       (t = e.steamid
-        ? new p(e.steamid)
-        : p.InitFromAccountID(e.accountid, y.EUNIVERSE)),
-      y.COMMUNITY_BASE_URL + `broadcast/watch/` + t.ConvertTo64BitString()
+        ? new h(e.steamid)
+        : h.InitFromAccountID(e.accountid, v.EUNIVERSE)),
+      v.COMMUNITY_BASE_URL + `broadcast/watch/` + t.ConvertTo64BitString()
     );
   }
   BIsAppStreaming(e) {
@@ -282,15 +282,15 @@ var D = class e {
   }
   async LoadBIsEmbeddedBroadcastHidden(e) {
     if (this.m_bUserPreferenceHideBroadcastByDefault === void 0) {
-      let t = m(`broadcastuser`, `application_config`);
+      let t = _(`broadcastuser`, `application_config`);
       if (!t)
         try {
           let n =
-            y.STORE_BASE_URL + `broadcast/ajaxgetuserbroadcastpreferences`;
+            v.STORE_BASE_URL + `broadcast/ajaxgetuserbroadcastpreferences`;
           t = (await C.default.get(n, { params: {}, cancelToken: e.token }))
             .data;
         } catch (e) {
-          (console.log(`LoadBIsEmbeddedBroadcastHidden: ` + f(e).strErrorMsg),
+          (console.log(`LoadBIsEmbeddedBroadcastHidden: ` + p(e).strErrorMsg),
             (t = { bHideStoreBroadcast: !1 }));
         }
       r(() => {
@@ -303,14 +303,14 @@ var D = class e {
   async SetupEmbeddableVOD(e, t) {
     ((this.m_bUseFakeData = !1),
       (this.m_streamChatStatus = `remove`),
-      v(!!e.nAppIDVOD, `SetupEmbeddableVOD requires a VOD appid`),
-      await g
+      m(!!e.nAppIDVOD, `SetupEmbeddableVOD requires a VOD appid`),
+      await f
         .Get()
         .QueueAppRequest(e.nAppIDVOD, {
           include_assets: !0,
           include_trailers: !0,
         }));
-    let n = g.Get().GetApp(e.nAppIDVOD),
+    let n = f.Get().GetApp(e.nAppIDVOD),
       r = new l();
     ((r.accountid = 0),
       (r.nAppIDVOD = e.nAppIDVOD),
@@ -320,7 +320,7 @@ var D = class e {
       (r.title = n?.GetName() || ``));
     let i = this.GetStreams(e);
     if (
-      (v(
+      (m(
         !!i,
         `SetupEmbeddableVOD called before the streams loaded`,
         e.nAppIDVOD,
@@ -342,12 +342,12 @@ var D = class e {
     };
     try {
       let n = await C.default.get(
-        y.STORE_BASE_URL + `broadcast/ajaxgetstreamersforpreview`,
+        v.STORE_BASE_URL + `broadcast/ajaxgetstreamersforpreview`,
         { params: t },
       );
       return this.HandleHintLoadBroadcastResponse(e, n.data);
     } catch (e) {
-      let t = f(e);
+      let t = p(e);
       console.error(
         `HintLoadEmbeddablePreviewStreams hit error loading: ` + t.strErrorMsg,
         t,
@@ -368,16 +368,16 @@ var D = class e {
     );
   }
   async InternalHintLoadEmbeddableStreams(e, t) {
-    let n = m(`broadcast_available_for_page`, `application_config`);
+    let n = _(`broadcast_available_for_page`, `application_config`);
     if (s(n)) return this.HandleHintLoadBroadcastResponse(e, n);
     try {
       let n = await C.default.get(
-        y.STORE_BASE_URL + `broadcast/ajaxgetstreamersforpage`,
+        v.STORE_BASE_URL + `broadcast/ajaxgetstreamersforpage`,
         { params: t },
       );
       return this.HandleHintLoadBroadcastResponse(e, n.data);
     } catch (e) {
-      let t = f(e);
+      let t = p(e);
       console.error(
         `HintLoadEmbeddableStreams hit error loading: ` + t.strErrorMsg,
         t,
@@ -389,7 +389,7 @@ var D = class e {
     ((this.m_bUseFakeData = !1),
       e.bIsPreview &&
         (t?.filtered?.length > 0
-          ? (v(!!e.event, `Broadcast preview requires an event`),
+          ? (m(!!e.event, `Broadcast preview requires an event`),
             this.ExtractBroadcastPrioritiesFromPartnerEventForPreview(
               e.event,
               t.filtered,
@@ -407,8 +407,8 @@ var D = class e {
     let n = [];
     r(() => {
       t.filtered.forEach((e) => {
-        e.steamid ||= p
-          .InitFromAccountID(e.accountid, y.EUNIVERSE)
+        e.steamid ||= h
+          .InitFromAccountID(e.accountid, v.EUNIVERSE)
           .ConvertTo64BitString();
         let t = b.GetOrCreateBroadcastInfo(e.steamid),
           r = e.appid ? Number(e.appid) : 7;
@@ -498,7 +498,7 @@ var D = class e {
   async InternalAttemptToPlayStream(e, t) {
     this.GetStreamsLookupKeyFromDef(e);
     try {
-      let e = y.STORE_BASE_URL + `broadcast/ajaxcheckbroadcast`,
+      let e = v.STORE_BASE_URL + `broadcast/ajaxcheckbroadcast`,
         n = {
           broadcastaccountid: t.accountid,
           viewer_token: b.GetViewerToken(),
@@ -506,7 +506,7 @@ var D = class e {
         };
       return (await C.default.get(e, { params: n })).data;
     } catch (e) {
-      let t = f(e);
+      let t = p(e);
       console.error(`Broadcast.AttemptToPlayStream: ` + t.strErrorMsg, t);
     }
     return null;
@@ -536,8 +536,8 @@ var D = class e {
           ? e.accountIDs.slice().sort().join(`,`)
           : void 0,
       test: w,
-      cc: y.COUNTRY,
-      l: y.LANGUAGE,
+      cc: v.COUNTRY,
+      l: v.LANGUAGE,
       hubtype: e.event?.GetContentHubType(),
       hubcategory: e.event?.GetContentHubCategory(),
       hubtagid: e.event?.GetContentHubTag(),
@@ -564,15 +564,15 @@ var D = class e {
   }
   Init() {}
 };
-(h([t], D.prototype, `m_lookupStreams`, void 0),
-  h([t], D.prototype, `m_playReadyStream`, void 0),
-  h([t], D.prototype, `m_pageChatStatus`, void 0),
-  h([t], D.prototype, `m_streamChatStatus`, void 0),
-  h([t], D.prototype, `m_bUserChatExpanded`, void 0),
-  h([t], D.prototype, `m_bUserPreferenceHideBroadcastByDefault`, void 0),
-  h([t], D.prototype, `m_bCollapsed`, void 0),
-  h([n], D.prototype, `HintLoadEmbeddablePreviewStreams`, null),
-  h([n], D.prototype, `AttemptToPlayStream`, null));
+(g([t], D.prototype, `m_lookupStreams`, void 0),
+  g([t], D.prototype, `m_playReadyStream`, void 0),
+  g([t], D.prototype, `m_pageChatStatus`, void 0),
+  g([t], D.prototype, `m_streamChatStatus`, void 0),
+  g([t], D.prototype, `m_bUserChatExpanded`, void 0),
+  g([t], D.prototype, `m_bUserPreferenceHideBroadcastByDefault`, void 0),
+  g([t], D.prototype, `m_bCollapsed`, void 0),
+  g([n], D.prototype, `HintLoadEmbeddablePreviewStreams`, null),
+  g([n], D.prototype, `AttemptToPlayStream`, null));
 function O(e) {
   return e.current_selection_priority || c.k_eGeneral;
 }
@@ -591,12 +591,12 @@ async function A(e, t, n) {
     (r.append(`page_action`, `` + t),
       r.append(`snr`, n),
       C.default.post(
-        y.STORE_BASE_URL + `ajaxreportproductaction/` + e + `/`,
+        v.STORE_BASE_URL + `ajaxreportproductaction/` + e + `/`,
         r,
       ));
   }
 }
-var j = new _();
+var j = new y();
 export {
   A as a,
   x as c,

@@ -6,21 +6,21 @@ import { t as n } from "./storetypes.js";
 import { v as r, y as i } from "./partnerevent.js";
 import { r as a } from "./storedisplayutils.js";
 import {
-  Jb as o,
-  Ly as s,
+  Hl as o,
+  Jx as s,
   Ry as c,
-  Uy as l,
-  Vl as u,
-  ax as d,
-  cx as f,
-  dx as p,
-  iv as m,
-  mx as h,
-  nu as g,
-  qx as _,
-  rx as v,
-  ry as y,
-  yu as b,
+  Wy as l,
+  Yb as u,
+  av as d,
+  bu as f,
+  fx as p,
+  hx as m,
+  ix as h,
+  iy as g,
+  lx as _,
+  ox as v,
+  ru as y,
+  zy as b,
 } from "./main.js";
 function x(e) {
   return [`StoreBrowsePriceStops`, e];
@@ -30,7 +30,7 @@ function S(e, t) {
   return { queryKey: x(n), queryFn: async () => C(e, n), staleTime: 864e5 };
 }
 async function C(e, t) {
-  let n = h.Init(f);
+  let n = m.Init(_);
   n.Body().set_country_code(t);
   let r = await p.GetPriceStops(e, n);
   if (!r.BSuccess()) throw `Error loading price stops: ${r.GetErrorMessage()}`;
@@ -49,8 +49,8 @@ function w(e) {
     : [];
 }
 function T() {
-  let e = m(),
-    n = y(),
+  let e = d(),
+    n = g(),
     { data: r } = t({ ...S(n, e), select: w });
   return r ?? [];
 }
@@ -63,7 +63,7 @@ function D(e, t, n) {
     let e = parseInt(r[0].substring(7));
     if (e > 0) return n && n[e];
   }
-  return l((c.GetWithFallback(r, t) || ``).trim());
+  return l((b.GetWithFallback(r, t) || ``).trim());
 }
 function O(e) {
   return String(e.type) + e.id;
@@ -83,7 +83,7 @@ function A(e) {
   return !1;
 }
 function j(e) {
-  _(!0, `Unexpected code running in SSR Server: ` + e);
+  s(!0, `Unexpected code running in SSR Server: ` + e);
 }
 var M = class e {
   m_HomeView = void 0;
@@ -102,9 +102,9 @@ var M = class e {
     );
   }
   constructor() {
-    let e = o(`home_view_setting`, `application_config`);
+    let e = u(`home_view_setting`, `application_config`);
     this.ValidateHomeViewData(e) && this.SetHomeViewSetting(e);
-    let t = o(`home_view_setting_override`, `application_config`);
+    let t = u(`home_view_setting_override`, `application_config`);
     this.ValidateHomeViewDataOverride(t) && this.SetHomeViewSettingOverride(t);
   }
   ValidateHomeViewData(e) {
@@ -133,7 +133,7 @@ var M = class e {
   }
 };
 function N(e) {
-  return u.Get().BIsStoreItemMissing(e.id, g(e.type));
+  return o.Get().BIsStoreItemMissing(e.id, y(e.type));
 }
 function P(e, t, n) {
   let r = [];
@@ -146,63 +146,63 @@ function P(e, t, n) {
 }
 function F(e) {
   return (
-    (u.Get().GetStoreItem(e.id, g(e.type))?.GetBestPurchaseOption()
+    (o.Get().GetStoreItem(e.id, y(e.type))?.GetBestPurchaseOption()
       ?.discount_pct ?? 0) > 0
   );
 }
 function I(e) {
   if (!M.Get().GetHomeView()?.localized) return !0;
-  let t = u.Get().GetStoreItem(e.id, g(e.type));
+  let t = o.Get().GetStoreItem(e.id, y(e.type));
   return (
-    !t || b.Get().BIsAnyLanguageEnabled(t.GetAllLanguagesWithSomeSupport())
+    !t || f.Get().BIsAnyLanguageEnabled(t.GetAllLanguagesWithSomeSupport())
   );
 }
 async function L(e, t, r) {
   if (!e || e.length == 0) return [];
   let i = e.filter((e) => n(e.type)).map((e) => e.id),
     a = e.filter((e) => e.type === `sub`).map((e) => e.id),
-    o = e.filter((e) => e.type === `bundle`).map((e) => e.id);
+    s = e.filter((e) => e.type === `bundle`).map((e) => e.id);
   {
-    let e = i.filter((e) => !u.Get().BHasApp(e, t)),
-      n = a.filter((e) => !u.Get().BHasApp(e, t)),
-      r = o.filter((e) => !u.Get().BHasApp(e, t));
+    let e = i.filter((e) => !o.Get().BHasApp(e, t)),
+      n = a.filter((e) => !o.Get().BHasApp(e, t)),
+      r = s.filter((e) => !o.Get().BHasApp(e, t));
     (e.length > 0 || n.length > 0 || r.length > 0) &&
       (await Promise.all([
-        u.Get().QueueMultipleAppRequests(e, t),
-        u.Get().QueueMultiplePackageRequests(n, t),
-        u.Get().QueueMultipleBundleRequests(r, t),
+        o.Get().QueueMultipleAppRequests(e, t),
+        o.Get().QueueMultiplePackageRequests(n, t),
+        o.Get().QueueMultipleBundleRequests(r, t),
       ]));
   }
-  let s = new Set();
-  (o?.forEach((e) => {
-    u.Get()
+  let c = new Set();
+  (s?.forEach((e) => {
+    o.Get()
       .GetBundle(e)
       ?.GetIncludedAppIDs()
-      .forEach((e) => s.add(e));
+      .forEach((e) => c.add(e));
   }),
     a?.forEach((e) => {
-      u.Get()
+      o.Get()
         .GetPackage(e)
         ?.GetIncludedAppIDs()
-        .forEach((e) => s.add(e));
+        .forEach((e) => c.add(e));
     }));
-  let c = Array.from(s).filter((e) => !u.Get().BHasApp(e, t));
+  let l = Array.from(c).filter((e) => !o.Get().BHasApp(e, t));
   if (
-    (c.length > 0 && (await u.Get().QueueMultipleAppRequests(c, t)),
-    i.forEach((e) => s.add(e)),
+    (l.length > 0 && (await o.Get().QueueMultipleAppRequests(l, t)),
+    i.forEach((e) => c.add(e)),
     r)
   ) {
-    let e = Array.from(s)
+    let e = Array.from(c)
       .map((e) => {
-        let t = u.Get().GetApp(e)?.GetParentAppID();
-        return t ? (s.add(t), t) : null;
+        let t = o.Get().GetApp(e)?.GetParentAppID();
+        return t ? (c.add(t), t) : null;
       })
       .filter((e) => e !== null)
-      .filter((e) => !u.Get().BHasApp(e, t));
-    e.length > 0 && (await u.Get().QueueMultipleAppRequests(e, t));
+      .filter((e) => !o.Get().BHasApp(e, t));
+    e.length > 0 && (await o.Get().QueueMultipleAppRequests(e, t));
   }
-  return Array.from(s).filter((e) => {
-    let t = u.Get().GetApp(e);
+  return Array.from(c).filter((e) => {
+    let t = o.Get().GetApp(e);
     return t && !t.GetParentAppID();
   });
 }
@@ -213,9 +213,9 @@ var R = {
 };
 function z(e, t = !1) {
   if (!e) return !0;
-  let n = b.Get();
+  let n = f.Get();
   if (
-    (_(n.BIsLoaded(), `Dynamic Store not loaded`),
+    (s(n.BIsLoaded(), `Dynamic Store not loaded`),
     !t && e.GetStoreItemType() == 0)
   ) {
     let t = e.GetParentAppID();
@@ -241,69 +241,69 @@ function z(e, t = !1) {
 }
 async function B(e, t, n, r) {
   let i = 0,
-    o = 0,
-    s = [];
+    s = 0,
+    c = [];
   await L(e, a, t);
   for (let a of e) {
-    let e = u.Get().GetStoreItem(a.id, g(a.type));
+    let e = o.Get().GetStoreItem(a.id, y(a.type));
     if (!e) {
       i++;
       continue;
     }
-    let c = e
+    let l = e
       .GetIncludedAppIDs()
-      .map((e) => u.Get().GetApp(e))
+      .map((e) => o.Get().GetApp(e))
       .filter((e) => !!e);
-    if ((c.push(e), t)) {
-      let e = new Set(c.map((e) => e.GetParentAppID()).filter((e) => !!e)),
+    if ((l.push(e), t)) {
+      let e = new Set(l.map((e) => e.GetParentAppID()).filter((e) => !!e)),
         t = Array.from(e)
-          .map((e) => u.Get().GetApp(e))
+          .map((e) => o.Get().GetApp(e))
           .filter((e) => !!e);
-      t && c.push(...t);
+      t && l.push(...t);
     }
-    c.some((e) => (r || z)(e))
-      ? (o++, n && (b.Get().BIsStoreItemOwned(e) || n.push(a)))
-      : s.push(a);
-  }
-  return s;
-}
-async function V(e, t, n, r, i, a, o) {
-  let s = await B(
-      e,
-      t,
-      o,
-      i
-        ? (e) =>
-            !e ||
-            b.Get().BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
-            b.Get().BExcludeTagIDs(e.GetTagIDs())
-        : z,
-    ),
-    c = [];
-  for (let e of s) {
-    let t = u.Get().GetStoreItem(e.id, g(e.type));
-    if (!t) continue;
-    let i = t?.GetIncludedAppIDsOrSelf(),
-      s = !1;
-    (n && (s ||= i.every((e) => b.Get().BIsGameOwned(e))),
-      r && (s ||= i.every((e) => b.Get().BIsGameWishlisted(e))),
-      a && (s ||= i.every((e) => b.Get().BIsGameIgnored(e))),
-      s ? o && o.push(e) : c.push(e));
+    l.some((e) => (r || z)(e))
+      ? (s++, n && (f.Get().BIsStoreItemOwned(e) || n.push(a)))
+      : c.push(a);
   }
   return c;
 }
+async function V(e, t, n, r, i, a, s) {
+  let c = await B(
+      e,
+      t,
+      s,
+      i
+        ? (e) =>
+            !e ||
+            f.Get().BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
+            f.Get().BExcludeTagIDs(e.GetTagIDs())
+        : z,
+    ),
+    l = [];
+  for (let e of c) {
+    let t = o.Get().GetStoreItem(e.id, y(e.type));
+    if (!t) continue;
+    let i = t?.GetIncludedAppIDsOrSelf(),
+      c = !1;
+    (n && (c ||= i.every((e) => f.Get().BIsGameOwned(e))),
+      r && (c ||= i.every((e) => f.Get().BIsGameWishlisted(e))),
+      a && (c ||= i.every((e) => f.Get().BIsGameIgnored(e))),
+      c ? s && s.push(e) : l.push(e));
+  }
+  return l;
+}
 function H() {
-  let e = b.Get();
+  let e = f.Get();
   if (e.BIsLoaded())
     return {
-      bSignedIn: !!d.logged_in,
+      bSignedIn: !!v.logged_in,
       ePrimaryLanguage: e.GetPrimaryLanguage(),
       setSecondaryLanguages: e.GetSecondaryLanguages(),
       setExcludedContentDescriptors: new Set(e.ExcludedContentDescriptor),
     };
 }
 function U() {
-  return E(s, v.COUNTRY);
+  return E(c, h.COUNTRY);
 }
 function W(e) {
   return !(

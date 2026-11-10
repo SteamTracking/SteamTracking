@@ -5,31 +5,31 @@ import { st as e } from "./libraries.js";
 import "./playerstore.js";
 import { n as t, t as n } from "./steammessages_friendslist_pb.js";
 import {
-  Iy as r,
-  J as i,
+  J as r,
+  Ly as i,
   X as a,
-  cy as o,
-  iy as s,
-  mx as c,
+  ay as o,
+  hx as s,
+  ly as c,
   ut as l,
 } from "./main.js";
 function u() {
-  let t = s(),
-    n = o();
+  let t = o(),
+    n = c();
   return e(d(t, n));
 }
-function d(e, i) {
+function d(e, r) {
   return {
-    queryKey: [`GetFriendsList`, i],
+    queryKey: [`GetFriendsList`, r],
     queryFn: async () => {
-      let i = c.Init(n),
-        a = await t.GetFriendsList(e, i),
+      let r = s.Init(n),
+        a = await t.GetFriendsList(e, r),
         o = [];
       for (let e of a.Body().friendslist()?.friends() ?? []) {
         let t = e.ulfriendid();
         t &&
           (e.efriendrelationship() == 3 || e.efriendrelationship() == 6) &&
-          new r(t).BIsIndividualAccount() &&
+          new i(t).BIsIndividualAccount() &&
           o.push(t);
       }
       return o;
@@ -37,18 +37,18 @@ function d(e, i) {
   };
 }
 function f() {
-  let i = s(),
-    a = o();
+  let r = o(),
+    a = c();
   return e({
     queryKey: [`GetIgnoredAccounts`, a],
     queryFn: async () => {
-      let e = c.Init(n);
-      return (await t.GetFriendsList(i, e))
+      let e = s.Init(n);
+      return (await t.GetFriendsList(r, e))
         .Body()
         .friendslist()
         ?.friends()
         ?.filter((e) => {
-          let t = new r(e.ulfriendid());
+          let t = new i(e.ulfriendid());
           return (
             (e.efriendrelationship() == 5 || e.efriendrelationship() == 6) &&
             t.BIsIndividualAccount()
@@ -59,15 +59,15 @@ function f() {
   });
 }
 function p(t = {}) {
-  let n = s(),
-    r = o();
+  let n = o(),
+    r = c();
   return e({ ...m(n, r), ...t });
 }
 function m(e, t) {
   return {
     queryKey: [`GetFriendNicknameList`, t],
     queryFn: async () => {
-      let t = c.Init(a);
+      let t = s.Init(a);
       return (await l.GetNicknameList(e, t)).Body().toObject();
     },
   };
@@ -84,18 +84,18 @@ function g(e) {
   return t;
 }
 async function _(e, t) {
-  let n = c.Init(i);
+  let n = s.Init(r);
   n.Body().set_appid(t);
-  let r = await l.GetFriendsGameplayInfo(e, n);
+  let i = await l.GetFriendsGameplayInfo(e, n);
   return (
-    r.BSuccess() ||
-      console.warn(`Failed to get gameplay info: ${r.GetEResult()}`),
-    r.Body().toObject()
+    i.BSuccess() ||
+      console.warn(`Failed to get gameplay info: ${i.GetEResult()}`),
+    i.Body().toObject()
   );
 }
 function v(t, n = {}) {
-  let r = s(),
-    i = o();
+  let r = o(),
+    i = c();
   return e({
     queryKey: [`GameplayInfo_${i}_${t}`],
     queryFn: async () => await _(r, t),

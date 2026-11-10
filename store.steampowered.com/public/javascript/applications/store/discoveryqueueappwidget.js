@@ -4,7 +4,7 @@
 import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, ft as n } from "./libraries.js";
 import { o as r } from "./historyutils.js";
-import { Uy as i, h as a, jo as o, kc as s, vc as c, zb as l } from "./main.js";
+import { Ac as i, Bb as a, Mo as o, Wy as s, h as c, yc as l } from "./main.js";
 import { i as u, r as d } from "./discoveryqueuestore.js";
 import { t as f } from "./preloaddiscoveryqueue.js";
 var p = e(t(), 1),
@@ -16,7 +16,7 @@ function _(e) {
     n = f(),
     [_] = r(`inqueue`, `0`),
     [v, y] = (0, p.useState)(!1),
-    b = l(),
+    b = a(),
     { eStoreDiscoveryQueueType: x, storePageFilter: S } = p.useMemo(() => {
       if (_?.length > 0) {
         let e = _.split(`_`),
@@ -29,27 +29,27 @@ function _(e) {
       }
       return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
     }, [_]),
-    { showDiscoveryQueue: C } = a(x, { includeAppID: t, storePageFilter: S }),
+    { showDiscoveryQueue: C } = c(x, { includeAppID: t, storePageFilter: S }),
     w = p.useCallback(() => {
       y(!0);
     }, []),
     T = u(x, S);
   return !n || v
     ? null
-    : (0, g.jsxs)(s, {
+    : (0, g.jsxs)(i, {
         focusable: !0,
         className: m,
         onSecondaryButton: w,
         onOKButton: C,
-        onOKActionDescription: i(`#DiscoveryQueue_ResumeWizard`),
-        onSecondaryActionDescription: i(`#Button_Close`),
+        onOKActionDescription: s(`#DiscoveryQueue_ResumeWizard`),
+        onSecondaryActionDescription: s(`#Button_Close`),
         children: [
           (0, g.jsxs)(`div`, {
             onClick: C,
             className: h,
             children: [
               (0, g.jsx)(o, {}),
-              i(`#DiscoveryQueue_ResumeWizard`),
+              s(`#DiscoveryQueue_ResumeWizard`),
               T?.length > 0 && `: ` + T,
             ],
           }),
@@ -57,7 +57,7 @@ function _(e) {
             (0, g.jsx)(`div`, {
               className: `CqOWAiNFmcU-`,
               onClick: w,
-              children: (0, g.jsx)(c, {}),
+              children: (0, g.jsx)(l, {}),
             }),
         ],
       });

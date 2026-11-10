@@ -5,37 +5,37 @@ import { o as e } from "./rolldown-runtime.js";
 import { It as t, Lt as n, ft as r } from "./libraries.js";
 import {
   Ai as i,
-  Bn as a,
-  Da as o,
-  Er as s,
-  Fn as c,
-  Hn as l,
+  Bb as a,
+  Bn as o,
+  Cc as s,
+  Dr as c,
+  Fu as l,
   In as u,
-  Nn as d,
-  Oa as f,
-  Pu as p,
-  Rl as m,
-  Sc as h,
-  Un as g,
-  ar as _,
-  ir as v,
-  jr as y,
-  ki as b,
-  pn as x,
-  zb as S,
-  zn as C,
+  Ln as d,
+  Mr as f,
+  Oa as p,
+  Pn as m,
+  Un as h,
+  Vn as g,
+  Wn as _,
+  ar as v,
+  ji as y,
+  ka as b,
+  mn as x,
+  or as S,
+  zl as C,
 } from "./main.js";
 var w = e(t()),
   T = e(n()),
   E = r();
 function D(e) {
   let { popup: t, className: n, ...r } = e,
-    i = a(t),
-    o = T.useRef(null);
+    i = g(t),
+    a = T.useRef(null);
   return (
     T.useEffect(() => {
-      let e = o.current;
-      if (e && p(t, `Window.SetResizeGrip`)) {
+      let e = a.current;
+      if (e && l(t, `Window.SetResizeGrip`)) {
         let n = 0,
           r = 0,
           a = e.getBoundingClientRect(),
@@ -48,23 +48,23 @@ function D(e) {
           t.SteamClient.Window.SetResizeGrip(n, r));
       }
       return () => {
-        p(t, `Window.SetResizeGrip`) &&
+        l(t, `Window.SetResizeGrip`) &&
           t.SteamClient.Window.SetResizeGrip(0, 0);
       };
     }, [t, i]),
     i
       ? null
       : (0, E.jsx)(`div`, {
-          className: h(`window_resize_grip`, n),
-          ref: o,
+          className: s(`window_resize_grip`, n),
+          ref: a,
           ...r,
         })
   );
 }
 var O = (e) => k({ modal: !0, ...e });
 function k(e) {
-  let t = f().ownerWindow,
-    n = S(),
+  let t = b().ownerWindow,
+    n = a(),
     [r, i] = T.useState(() =>
       n ||
       (e.onlyPopoutIfNeeded === !0 &&
@@ -81,8 +81,8 @@ function k(e) {
       : null;
 }
 function A(e) {
-  let { popup: t, children: n, bFitToContent: r, className: i, ...a } = e,
-    o = T.useCallback(
+  let { popup: t, children: n, bFitToContent: r, className: a, ...o } = e,
+    c = T.useCallback(
       (e) => {
         let n = Math.ceil(e.borderBoxSize[0].inlineSize),
           r = Math.ceil(e.borderBoxSize[0].blockSize);
@@ -90,11 +90,11 @@ function A(e) {
       },
       [t],
     ),
-    s = b(o);
+    l = i(c);
   return (0, E.jsx)(`div`, {
-    className: h(`PopupFullWindow`, r && `FitToContent`, i),
-    ref: r ? s : void 0,
-    ...a,
+    className: s(`PopupFullWindow`, r && `FitToContent`, a),
+    ref: r ? l : void 0,
+    ...o,
     children: n,
   });
 }
@@ -103,32 +103,32 @@ function j(e) {
       strName: t,
       strTitle: n,
       popupWidth: r,
-      popupHeight: a,
-      browserType: d,
-      onDismiss: p,
-      bFitToContent: h,
-      refPopup: _,
-      children: v,
-      titleBarClassName: b,
+      popupHeight: i,
+      browserType: a,
+      onDismiss: s,
+      bFitToContent: l,
+      refPopup: m,
+      children: g,
+      titleBarClassName: v,
       saveDimensionsKey: x,
     } = e,
-    S = f()?.ownerWindow,
-    O = u(),
-    k = { ...g(x), onClose: p },
+    S = b()?.ownerWindow,
+    O = d(),
+    k = { ..._(x), onClose: s },
     j = 0;
-  (e.resizable && (j |= s.Resizable),
-    (e.minWidth || e.minHeight) && (j |= s.ApplyBrowserScaleToDimensions),
-    e.fullscreen && (j |= s.FullScreen));
+  (e.resizable && (j |= c.Resizable),
+    (e.minWidth || e.minHeight) && (j |= c.ApplyBrowserScaleToDimensions),
+    e.fullscreen && (j |= c.FullScreen));
   let N = `PopupWindow_` + (t ? `${t}_` : ``) + T.useId(),
-    { popup: P, element: F } = l(
+    { popup: P, element: F } = h(
       N,
       {
         title: n,
-        dimensions: { width: r, height: a },
+        dimensions: { width: r, height: i },
         html_class: `client_chat_frame fullheight ModalDialogPopup`,
         body_class: `fullheight ModalDialogBody`,
         popup_class: `fullheight`,
-        browserType: d,
+        browserType: a,
         minWidth: e.minWidth,
         minHeight: e.minHeight,
         replace_existing_popup: !0,
@@ -139,7 +139,7 @@ function j(e) {
       k,
     );
   if (
-    (T.useEffect(() => (m(_, P), () => m(_, void 0)), [_, P]),
+    (T.useEffect(() => (C(m, P), () => C(m, void 0)), [m, P]),
     T.useEffect(() => {
       P && (P.document.title = n ?? t);
     }, [P, n, t]),
@@ -152,30 +152,30 @@ function j(e) {
     children: [
       I && (0, E.jsx)(M, { popup: P }),
       w.createPortal(
-        (0, E.jsx)(o, {
+        (0, E.jsx)(p, {
           ownerWindow: P,
-          children: (0, E.jsxs)(i, {
+          children: (0, E.jsxs)(y, {
             children: [
               (0, E.jsxs)(A, {
                 popup: P,
-                bFitToContent: h,
-                onContextMenu: y,
+                bFitToContent: l,
+                onContextMenu: f,
                 children: [
-                  (0, E.jsx)(C, {
-                    className: b,
+                  (0, E.jsx)(o, {
+                    className: v,
                     hideMin: L,
                     hideMax: L,
                     popup: P,
-                    hideActions: !p,
+                    hideActions: !s,
                   }),
-                  (0, E.jsx)(c, {
+                  (0, E.jsx)(u, {
                     bCenterPopupsOnWindow: O?.BCenterPopupsOnWindow(),
                     browserInfo: O?.GetBrowserInfo(),
-                    children: v,
+                    children: g,
                   }),
                 ],
               }),
-              e.resizable && !h && (0, E.jsx)(D, { popup: P }),
+              e.resizable && !l && (0, E.jsx)(D, { popup: P }),
             ],
           }),
         }),
@@ -217,11 +217,11 @@ function P(e) {
       ...s
     } = e,
     { headerId: c, context: l } = N({ labelledBy: e[`aria-labelledby`] });
-  return (0, E.jsx)(_.Provider, {
+  return (0, E.jsx)(S.Provider, {
     value: l,
     children: (0, E.jsx)(x, {
       active: t,
-      children: (0, E.jsx)(d, {
+      children: (0, E.jsx)(m, {
         onEscKeypress: n,
         className: i,
         bGamepadUIScrollWithin: a,

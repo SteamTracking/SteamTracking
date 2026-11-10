@@ -27,54 +27,54 @@ import { l as re, t as x } from "./emoticonbutton.js";
 import "./reorderablelist.module.js";
 import { n as ie } from "./friendsstore.js";
 import {
-  $n as ae,
-  Ar as oe,
-  Au as S,
-  Dn as se,
-  Dr as ce,
-  En as C,
-  Fu as le,
-  Gb as w,
-  Hb as T,
-  Iy as E,
-  Jy as ue,
-  Mb as D,
-  Mn as O,
-  Rr as k,
-  Rx as A,
-  Sc as j,
-  Uy as M,
-  Wn as de,
-  Zn as fe,
-  ax as pe,
-  jn as N,
-  kn as me,
-  mx as he,
-  nr as P,
-  nt as ge,
-  nx as _e,
-  or as ve,
-  qb as ye,
-  qx as be,
-  rx as F,
-  tr as xe,
-  ur as Se,
-  ut as Ce,
-  vr as we,
+  An as ae,
+  Cc as S,
+  Dn as C,
+  Gn as oe,
+  Iu as se,
+  Jb as ce,
+  Jx as le,
+  Kb as w,
+  Ly as T,
+  Mn as E,
+  Nb as D,
+  Nn as O,
+  On as ue,
+  Or as de,
+  Qn as k,
+  Ub as A,
+  Wy as j,
+  Yy as fe,
+  dr as pe,
+  er as me,
+  hx as he,
+  ix as M,
+  jr as ge,
+  ju as N,
+  nr as _e,
+  nt as ve,
+  ox as ye,
+  rr as P,
+  rx as be,
+  sr as xe,
+  ut as Se,
+  yr as Ce,
+  zr as F,
+  zx as I,
 } from "./main.js";
-var I = e(t()),
-  L = e(a()),
-  Te = `_0ayR5P4snOQ-`,
-  Ee = `CTubiAgon4c-`,
-  De = `_4Y5F2iyNmd4-`,
-  Oe = `_7zJSazZLpTI-`,
-  ke = `xFTxNDMXZvw-`,
-  R = n(),
-  z = class extends I.Component {
+var L = e(t()),
+  R = e(a()),
+  we = `_0ayR5P4snOQ-`,
+  Te = `CTubiAgon4c-`,
+  Ee = `_4Y5F2iyNmd4-`,
+  De = `_7zJSazZLpTI-`,
+  Oe = `xFTxNDMXZvw-`,
+  z = n(),
+  B = class extends L.Component {
     m_strLastSearch;
     m_rgCurrentMatches = [];
     m_mapMatchByKey = new Map();
-    containerRef = I.createRef();
+    containerRef = L.createRef();
     constructor(e) {
       (super(e),
         (this.m_hMobxSearchDisposer = o(async () => {
@@ -212,8 +212,8 @@ var I = e(t()),
             r = this.getKey(t),
             i = n === this.state.selectedIndex;
           e.push(
-            (0, R.jsx)(
-              B,
+            (0, z.jsx)(
+              ke,
               {
                 matchKey: r,
                 fnOnClick: this.OnClickSuggestion,
@@ -237,11 +237,11 @@ var I = e(t()),
         if (!t) return null;
         e.push(t);
       }
-      return (0, R.jsx)(`div`, {
-        className: Te,
+      return (0, z.jsx)(`div`, {
+        className: we,
         ref: this.containerRef,
-        children: (0, R.jsxs)(`div`, {
-          className: Ee,
+        children: (0, z.jsxs)(`div`, {
+          className: Te,
           tabIndex: 0,
           onKeyDown: this.OnKeyDown,
           children: [this.renderHeader(), e],
@@ -249,12 +249,12 @@ var I = e(t()),
       });
     }
   };
-(D([A], z.prototype, `OnKeyDown`, null),
-  D([A], z.prototype, `OnClickSuggestion`, null),
-  D([A], z.prototype, `OnMouseOverSuggestion`, null),
-  D([A], z.prototype, `BindSelectedElement`, null));
-var B = class extends I.PureComponent {
-  containerRef = I.createRef();
+(D([I], B.prototype, `OnKeyDown`, null),
+  D([I], B.prototype, `OnClickSuggestion`, null),
+  D([I], B.prototype, `OnMouseOverSuggestion`, null),
+  D([I], B.prototype, `BindSelectedElement`, null));
+var ke = class extends L.PureComponent {
+  containerRef = L.createRef();
   OnMouseOver(e) {
     this.props.fnOnMouseOver(this.props.matchKey);
   }
@@ -262,8 +262,8 @@ var B = class extends I.PureComponent {
     this.props.fnOnClick(this.props.matchKey);
   }
   render() {
-    return (0, R.jsx)(`div`, {
-      className: j(De, Oe, this.props.bIsSelected ? ke : ``),
+    return (0, z.jsx)(`div`, {
+      className: S(Ee, De, this.props.bIsSelected ? Oe : ``),
       onMouseEnter: this.OnMouseOver,
       onClick: this.OnClick,
       ref: this.containerRef,
@@ -271,10 +271,10 @@ var B = class extends I.PureComponent {
     });
   }
 };
-(D([A], B.prototype, `OnMouseOver`, null),
-  D([A], B.prototype, `OnClick`, null));
+(D([I], ke.prototype, `OnMouseOver`, null),
+  D([I], ke.prototype, `OnClick`, null));
 var Ae = `ARyrUoFBJKQ-`,
-  je = class extends z {
+  je = class extends B {
     performSearch(e) {
       return this.props.emoticonStore.SearchEmoticons(e, 10, !1);
     }
@@ -285,14 +285,14 @@ var Ae = `ARyrUoFBJKQ-`,
       return e.name;
     }
     renderMatch(e) {
-      return (0, R.jsxs)(`div`, {
-        className: j(void 0, e.recent ? `Recent` : ``),
+      return (0, z.jsxs)(`div`, {
+        className: S(void 0, e.recent ? `Recent` : ``),
         children: [
-          (0, R.jsxs)(`div`, {
+          (0, z.jsxs)(`div`, {
             className: Ae,
             children: [
-              (0, R.jsx)(_, { emoticon: e.name }),
-              e.new && (0, R.jsx)(re, {}),
+              (0, z.jsx)(_, { emoticon: e.name }),
+              e.new && (0, z.jsx)(re, {}),
             ],
           }),
           `:`,
@@ -315,7 +315,7 @@ var Ae = `ARyrUoFBJKQ-`,
     }
   },
   Me = `hgRTS5e4dgI-`,
-  Ne = class extends z {
+  Ne = class extends B {
     performSearch(e) {
       let t = [];
       return (
@@ -332,12 +332,12 @@ var Ae = `ARyrUoFBJKQ-`,
       return e.name;
     }
     renderMatch(e) {
-      return (0, R.jsxs)(
+      return (0, z.jsxs)(
         `div`,
         {
-          className: j(void 0),
+          className: S(void 0),
           children: [
-            (0, R.jsx)(`div`, { className: Me, children: e.name }),
+            (0, z.jsx)(`div`, { className: Me, children: e.name }),
             `[`,
             e.name,
             `]...[/`,
@@ -349,9 +349,9 @@ var Ae = `ARyrUoFBJKQ-`,
       );
     }
     renderNoMatchMessage() {
-      return (0, R.jsx)(
+      return (0, z.jsx)(
         `div`,
-        { className: j(Oe, void 0), children: M(`#Bbcode_No_Match`) },
+        { className: S(De, void 0), children: j(`#Bbcode_No_Match`) },
         `nomatches`,
       );
     }
@@ -365,8 +365,8 @@ var Ae = `ARyrUoFBJKQ-`,
       return Number.MAX_VALUE;
     }
   },
-  V = class extends I.Component {
-    descTextAreaRef = I.createRef();
+  V = class extends L.Component {
+    descTextAreaRef = L.createRef();
     m_MentionDialog;
     m_bDisabled = !0;
     m_iMentionSearchStartOffset;
@@ -523,7 +523,7 @@ var Ae = `ARyrUoFBJKQ-`,
       switch (this.state.activeSuggestSearchType) {
         case `Emoticon`:
           e &&
-            (i = (0, R.jsx)(je, {
+            (i = (0, z.jsx)(je, {
               emoticonStore: e,
               strSearch: this.state.mentionSearch,
               nMinimumSearchLengthBeforeAutoSelection: 2,
@@ -532,7 +532,7 @@ var Ae = `ARyrUoFBJKQ-`,
             }));
           break;
         case `BBCode`:
-          i = (0, R.jsx)(Ne, {
+          i = (0, z.jsx)(Ne, {
             supportBBCodes: t,
             strSearch: this.state.mentionSearch,
             nMinimumSearchLengthBeforeAutoSelection: 2,
@@ -540,10 +540,10 @@ var Ae = `ARyrUoFBJKQ-`,
             ref: this.BindMentionDialog,
           });
       }
-      return (0, R.jsxs)(I.Fragment, {
+      return (0, z.jsxs)(L.Fragment, {
         children: [
           i,
-          (0, R.jsx)(`textarea`, {
+          (0, z.jsx)(`textarea`, {
             ...r,
             ref: this.descTextAreaRef,
             onKeyDown: this.OnKeyDown,
@@ -555,16 +555,16 @@ var Ae = `ARyrUoFBJKQ-`,
       });
     }
   };
-(D([A], V.prototype, `BindMentionDialog`, null),
-  D([A], V.prototype, `OnKeyDown`, null),
-  D([A], V.prototype, `OnFocus`, null),
-  D([A], V.prototype, `OnKeyPress`, null),
-  D([A], V.prototype, `OnClick`, null),
-  D([A], V.prototype, `OnEmoticonSuggestionSelected`, null),
-  D([A], V.prototype, `OnBBCodeSuggestionSelected`, null),
-  D([A], V.prototype, `FocusTextInput`, null),
-  D([A], V.prototype, `GetTextAreaRef`, null),
-  D([A], V.prototype, `GetTextAreaCurrent`, null));
+(D([I], V.prototype, `BindMentionDialog`, null),
+  D([I], V.prototype, `OnKeyDown`, null),
+  D([I], V.prototype, `OnFocus`, null),
+  D([I], V.prototype, `OnKeyPress`, null),
+  D([I], V.prototype, `OnClick`, null),
+  D([I], V.prototype, `OnEmoticonSuggestionSelected`, null),
+  D([I], V.prototype, `OnBBCodeSuggestionSelected`, null),
+  D([I], V.prototype, `FocusTextInput`, null),
+  D([I], V.prototype, `GetTextAreaRef`, null),
+  D([I], V.prototype, `GetTextAreaCurrent`, null));
 var Pe = `nIUbxO5p4A8-`,
   Fe = `_0VP7ctGOadU-`,
   Ie = `siVkCB-BeMc-`,
@@ -591,12 +591,12 @@ var Pe = `nIUbxO5p4A8-`,
         nHeight: i,
         setImage: a,
       } = e,
-      o = I.useMemo(() => ({ width: r, height: i }), [r, i]),
-      [s, l] = I.useState(void 0),
-      [u, p] = I.useState(!!n),
-      [m, h] = I.useState(!1),
+      o = L.useMemo(() => ({ width: r, height: i }), [r, i]),
+      [s, l] = L.useState(void 0),
+      [u, p] = L.useState(!!n),
+      [m, h] = L.useState(!1),
       g = ne(t, `dummy`),
-      _ = I.useCallback(
+      _ = L.useCallback(
         async (e) => {
           if (
             (g.ClearImages(), e && (p(!0), await g.AddExistingClanImage(e, 0)))
@@ -612,21 +612,21 @@ var Pe = `nIUbxO5p4A8-`,
         },
         [g, n, a, o],
       );
-    I.useEffect(() => {
+    L.useEffect(() => {
       _(n);
     }, [_, n]);
     let ee = (e) => {
-        let t = new E(_e.CLANSTEAMID);
+        let t = new T(be.CLANSTEAMID);
         O(
-          (0, R.jsx)(f, { clanSteamID: t, fnImageSelectCallBack: (e) => _(e) }),
-          S(e) ?? window,
+          (0, z.jsx)(f, { clanSteamID: t, fnImageSelectCallBack: (e) => _(e) }),
+          N(e) ?? window,
         );
       },
       v = (e) => {
-        let t = S(e) ?? window,
+        let t = N(e) ?? window,
           n = g.GetUploadImages()[0];
         O(
-          (0, R.jsx)(te, {
+          (0, z.jsx)(te, {
             ownerWin: t,
             uploadFile: n,
             forceResolution: { width: r, height: i },
@@ -641,7 +641,7 @@ var Pe = `nIUbxO5p4A8-`,
           let e = await g.UploadAllImages(o),
             n = Object.values(e);
           if (n && n.length > 0) {
-            be(
+            le(
               n.length == 1,
               `ClanImagePickForCertainSize expected size 1, got ` + n.length,
             );
@@ -677,12 +677,12 @@ var Pe = `nIUbxO5p4A8-`,
       let e = x.IsValidAssetType(o);
       ((b = e.error), (re = e.needsCrop));
     }
-    return (0, R.jsxs)(R.Fragment, {
+    return (0, z.jsxs)(z.Fragment, {
       children: [
         u
-          ? (0, R.jsx)(d, { size: `medium`, string: M(`#Loading`) })
+          ? (0, z.jsx)(d, { size: `medium`, string: j(`#Loading`) })
           : s &&
-            (0, R.jsx)(`div`, {
+            (0, z.jsx)(`div`, {
               className: `_9Z5REaLWRq4-`,
               style: {
                 backgroundImage: `url( '${x ? x.dataUrl : s.url}' )`,
@@ -690,36 +690,36 @@ var Pe = `nIUbxO5p4A8-`,
                 width: `${r}px`,
               },
             }),
-        !!b && (0, R.jsx)(`p`, { children: b }),
-        re && (0, R.jsx)(P, { onClick: v, children: M(`#BBCode_ResizeImage`) }),
+        !!b && (0, z.jsx)(`p`, { children: b }),
+        re && (0, z.jsx)(P, { onClick: v, children: j(`#BBCode_ResizeImage`) }),
         x &&
           x.bCropped &&
-          (0, R.jsxs)(R.Fragment, {
+          (0, z.jsxs)(z.Fragment, {
             children: [
-              (0, R.jsx)(`div`, {
-                children: M(`#ClanImagePickAndResize_UploadStatus`, x.status),
+              (0, z.jsx)(`div`, {
+                children: j(`#ClanImagePickAndResize_UploadStatus`, x.status),
               }),
               m
-                ? (0, R.jsx)(d, { string: M(`#Uploading`), size: `small` })
-                : (0, R.jsx)(P, {
+                ? (0, z.jsx)(d, { string: j(`#Uploading`), size: `small` })
+                : (0, z.jsx)(P, {
                     onClick: y,
-                    children: M(`#ClanImagePickAndResize_UploadImage`),
+                    children: j(`#ClanImagePickAndResize_UploadImage`),
                   }),
             ],
           }),
-        (0, R.jsx)(P, {
+        (0, z.jsx)(P, {
           onClick: ee,
-          children: M(`#BBCode_ChooseImage`, r, i),
+          children: j(`#BBCode_ChooseImage`, r, i),
         }),
       ],
     });
   }),
   W,
-  G = class extends I.Component {
+  G = class extends L.Component {
     static {
       W = this;
     }
-    m_cancelSignal = L.default.CancelToken.source();
+    m_cancelSignal = R.default.CancelToken.source();
     static s_formattingHelp = new Map();
     constructor(e) {
       (super(e),
@@ -731,7 +731,7 @@ var Pe = `nIUbxO5p4A8-`,
     }
     componentDidMount() {
       this.AjaxGetFormattingHelp().catch((e) => {
-        this.setState(le(e));
+        this.setState(se(e));
       });
     }
     componentWillUnmount() {
@@ -739,7 +739,7 @@ var Pe = `nIUbxO5p4A8-`,
     }
     static GetHelpURL(e, t) {
       return (
-        F.COMMUNITY_BASE_URL +
+        M.COMMUNITY_BASE_URL +
         `comment/` +
         e +
         `/formattinghelp` +
@@ -748,9 +748,9 @@ var Pe = `nIUbxO5p4A8-`,
     }
     async AjaxGetFormattingHelp() {
       if (this.state.formattingHelp.__html == ``) {
-        let e = { sessionid: ye() },
+        let e = { sessionid: ce() },
           t;
-        ((t = await L.default.get(W.GetHelpURL(this.props.formatType, !0), {
+        ((t = await R.default.get(W.GetHelpURL(this.props.formatType, !0), {
           params: e,
           cancelToken: this.m_cancelSignal.token,
         })),
@@ -760,24 +760,24 @@ var Pe = `nIUbxO5p4A8-`,
     }
     render() {
       return this.state.strErrorMsg
-        ? (0, R.jsxs)(`div`, {
+        ? (0, z.jsxs)(`div`, {
             children: [
               this.state.strErrorMsg,
-              (0, R.jsx)(`br`, {}),
+              (0, z.jsx)(`br`, {}),
               this.state.errorCode,
             ],
           })
         : this.state.formattingHelp.__html == ``
-          ? (0, R.jsx)(d, {})
-          : (0, R.jsx)(C, {
-              strTitle: M(`#EventEditor_FormattingHelp_GetHelpLink`),
+          ? (0, z.jsx)(d, {})
+          : (0, z.jsx)(C, {
+              strTitle: j(`#EventEditor_FormattingHelp_GetHelpLink`),
               strDescription: ``,
               closeModal: this.props.closeModal,
               onOK: this.props.closeModal,
               onCancel: this.props.closeModal,
               bAlertDialog: !0,
               className: `ModernBBStyles`,
-              children: (0, R.jsx)(`div`, {
+              children: (0, z.jsx)(`div`, {
                 dangerouslySetInnerHTML: this.state.formattingHelp,
               }),
             });
@@ -785,8 +785,8 @@ var Pe = `nIUbxO5p4A8-`,
   };
 G = W = D([r], G);
 var Ze,
-  K = class extends I.Component {
-    descAutoTextAreaRef = I.createRef();
+  K = class extends L.Component {
+    descAutoTextAreaRef = L.createRef();
     constructor(e) {
       (super(e), (this.state = { bShowDragTarget: !1 }));
     }
@@ -826,11 +826,11 @@ var Ze,
       return this.descAutoTextAreaRef.current?.GetTextAreaRef();
     }
     render() {
-      return (0, R.jsxs)(I.Fragment, {
+      return (0, z.jsxs)(L.Fragment, {
         children: [
-          (0, R.jsx)(J, {
+          (0, z.jsx)(J, {
             pathToImages:
-              F.COMMUNITY_CDN_URL + `public/images/sharedfiles/guides/`,
+              M.COMMUNITY_CDN_URL + `public/images/sharedfiles/guides/`,
             fnTextareaRef: this.GetTextAreaRef,
             emoticonStore: this.props.emoticonStore,
             supportBBCodes: this.props.limitBBCode ? this.props.limitBBCode : l,
@@ -839,18 +839,18 @@ var Ze,
             bEmbeddedInDialog: this.props.bEmbeddedInDialog,
             clanSteamID: this.props.clanSteamID,
           }),
-          (0, R.jsx)(`div`, {
-            className: j(
+          (0, z.jsx)(`div`, {
+            className: S(
               Fe,
               U,
               this.state.bShowDragTarget ? Pe : ``,
               this.props.className ? this.props.className : ``,
             ),
-            children: (0, R.jsx)(V, {
+            children: (0, z.jsx)(V, {
               cols: 90,
               rows: this.props.nOverridesRows || 22,
               maxLength: 64e3,
-              className: j(
+              className: S(
                 Le,
                 this.props.classNameForTextArea
                   ? this.props.classNameForTextArea
@@ -872,10 +872,10 @@ var Ze,
       });
     }
   };
-(D([A], K.prototype, `ClanImageDragListener`, null),
-  D([A], K.prototype, `onFocus`, null),
-  D([A], K.prototype, `OnTextAreaDropListener`, null),
-  D([A], K.prototype, `GetTextAreaRef`, null),
+(D([I], K.prototype, `ClanImageDragListener`, null),
+  D([I], K.prototype, `onFocus`, null),
+  D([I], K.prototype, `OnTextAreaDropListener`, null),
+  D([I], K.prototype, `GetTextAreaRef`, null),
   (K = D([r], K)));
 var q = class e {
     static BIsFireFox() {
@@ -942,8 +942,8 @@ var q = class e {
       t.focus();
     }
   },
-  J = class extends I.Component {
-    m_linkPopupRef = I.createRef();
+  J = class extends L.Component {
+    m_linkPopupRef = L.createRef();
     onBold() {
       q.wrapBBCode(`[b]`, `[/b]`, this.props.fnTextareaRef()?.current);
     }
@@ -1008,37 +1008,37 @@ var q = class e {
     }
     OnAddLink(e) {
       let t = this.props.fnTextareaRef();
-      t && N((0, R.jsx)(Z, { textareaRef: t }), S(e) ?? window);
+      t && E((0, z.jsx)(Z, { textareaRef: t }), N(e) ?? window);
     }
     ShowHelpDialog(e) {
       this.props.showFormatHelp &&
-        N(
-          (0, R.jsx)(G, { formatType: this.props.showFormatHelp }),
-          S(e) ?? window,
+        E(
+          (0, z.jsx)(G, { formatType: this.props.showFormatHelp }),
+          N(e) ?? window,
         );
     }
     OnConvertHTMLToBBCodeDialog(e) {
       let t = this.props.fnTextareaRef();
       if (!t) return;
-      let n = S(e) ?? window;
-      N((0, R.jsx)($, { ownerWindow: n, textareaRef: t }), n);
+      let n = N(e) ?? window;
+      E((0, z.jsx)($, { ownerWindow: n, textareaRef: t }), n);
     }
     OnOpenYoutubeDialog(e) {
       let t = this.props.fnTextareaRef();
       if (!t) return;
-      let n = F.IMG_URL + `applications/community/`;
-      N((0, R.jsx)(X, { textareaRef: t, pathToImages: n }), S(e) ?? window);
+      let n = M.IMG_URL + `applications/community/`;
+      E((0, z.jsx)(X, { textareaRef: t, pathToImages: n }), N(e) ?? window);
     }
     OnOpenImageDialog(e) {
       let t = this.props.fnTextareaRef();
-      t && N((0, R.jsx)(Q, { textareaRef: t }), S(e) ?? window);
+      t && E((0, z.jsx)(Q, { textareaRef: t }), N(e) ?? window);
     }
     OnOpenSpeakerDialog(e) {
       let t = this.props.fnTextareaRef(),
         n = this.props.clanSteamID;
       t &&
         n &&
-        O((0, R.jsx)(Qe, { clanSteamID: n, textareaRef: t }), S(e) ?? window);
+        O((0, z.jsx)(Qe, { clanSteamID: n, textareaRef: t }), N(e) ?? window);
     }
     OnEmoticonSelected(e, t = !1) {
       let n = `\u02D0${e}\u02D0`;
@@ -1059,111 +1059,111 @@ var q = class e {
       return (
         e &&
           (i = t
-            ? (0, R.jsx)(`span`, {
-                className: j(`ttip`, void 0),
-                children: (0, R.jsx)(k, {
-                  toolTipContent: M(`#EventEditor_FormattingHelp_GetHelpLink`),
-                  children: (0, R.jsxs)(`a`, {
+            ? (0, z.jsx)(`span`, {
+                className: S(`ttip`, void 0),
+                children: (0, z.jsx)(F, {
+                  toolTipContent: j(`#EventEditor_FormattingHelp_GetHelpLink`),
+                  children: (0, z.jsxs)(`a`, {
                     href: G.GetHelpURL(e, !1),
-                    target: F.IN_CLIENT ? void 0 : `_blank`,
+                    target: M.IN_CLIENT ? void 0 : `_blank`,
                     children: [
-                      (0, R.jsx)(`img`, { src: r + `/action_help.png` }),
+                      (0, z.jsx)(`img`, { src: r + `/action_help.png` }),
                       ` `,
-                      M(`#EventEditor_FormattingHelp_GetHelpLink`),
+                      j(`#EventEditor_FormattingHelp_GetHelpLink`),
                     ],
                   }),
                 }),
               })
-            : (0, R.jsx)(`span`, {
+            : (0, z.jsx)(`span`, {
                 onClick: this.ShowHelpDialog,
-                className: j(`ttip`, void 0),
-                children: (0, R.jsxs)(k, {
-                  toolTipContent: M(`#EventEditor_FormattingHelp_GetHelpLink`),
+                className: S(`ttip`, void 0),
+                children: (0, z.jsxs)(F, {
+                  toolTipContent: j(`#EventEditor_FormattingHelp_GetHelpLink`),
                   children: [
-                    (0, R.jsx)(`img`, { src: r + `/action_help.png` }),
+                    (0, z.jsx)(`img`, { src: r + `/action_help.png` }),
                     ` `,
-                    M(`#EventEditor_FormattingHelp_GetHelpLink`),
+                    j(`#EventEditor_FormattingHelp_GetHelpLink`),
                   ],
                 }),
               })),
-        (0, R.jsxs)(`div`, {
+        (0, z.jsxs)(`div`, {
           className: Ve,
           children: [
             this.BSupports(`b`) &&
-              (0, R.jsx)(Y, {
+              (0, z.jsx)(Y, {
                 onClick: this.onBold,
-                tooltip: M(`#Editor_Bold`),
+                tooltip: j(`#Editor_Bold`),
                 imgURL: this.props.pathToImages + `/format_bold.png`,
               }),
             this.BSupports(`u`) &&
-              (0, R.jsx)(Y, {
+              (0, z.jsx)(Y, {
                 onClick: this.onUnderline,
-                tooltip: M(`#Editor_Underline`),
+                tooltip: j(`#Editor_Underline`),
                 imgURL: this.props.pathToImages + `/format_underline.png`,
               }),
             this.BSupports(`i`) &&
-              (0, R.jsx)(Y, {
+              (0, z.jsx)(Y, {
                 onClick: this.onItalics,
-                tooltip: M(`#Editor_Italics`),
+                tooltip: j(`#Editor_Italics`),
                 imgURL: this.props.pathToImages + `/format_italic.png`,
               }),
             this.BSupports(`strike`) &&
-              (0, R.jsx)(Y, {
+              (0, z.jsx)(Y, {
                 onClick: this.onStrikeThrough,
-                tooltip: M(`#Editor_StrikeThrough`),
+                tooltip: j(`#Editor_StrikeThrough`),
                 imgURL: this.props.pathToImages + `/format_strike.png`,
               }),
             !(!this.BSupports(`url`) || t) &&
-              (0, R.jsx)(Y, {
+              (0, z.jsx)(Y, {
                 onClick: this.OnAddLink,
-                tooltip: M(`#Editor_Link`),
+                tooltip: j(`#Editor_Link`),
                 imgURL: this.props.pathToImages + `/format_link.png`,
               }),
             this.BSupports(`list`) &&
-              (0, R.jsx)(Y, {
+              (0, z.jsx)(Y, {
                 onClick: this.onUnorderedList,
-                tooltip: M(`#Editor_Unordered`),
+                tooltip: j(`#Editor_Unordered`),
                 imgURL: this.props.pathToImages + `/format_bullet.png`,
               }),
             this.BSupports(`olist`) &&
-              (0, R.jsx)(Y, {
+              (0, z.jsx)(Y, {
                 onClick: this.onOrderedList,
-                tooltip: M(`#Editor_Ordered`),
+                tooltip: j(`#Editor_Ordered`),
                 imgURL: this.props.pathToImages + `/format_numbered.png`,
               }),
             this.BSupports(`h1`) &&
-              (0, R.jsx)(Y, {
+              (0, z.jsx)(Y, {
                 onClick: this.onHeader,
-                tooltip: M(`#Editor_Header`),
+                tooltip: j(`#Editor_Header`),
                 imgURL: this.props.pathToImages + `/format_header1.png`,
               }),
             this.BSupports(`h2`) &&
-              (0, R.jsx)(Y, {
+              (0, z.jsx)(Y, {
                 onClick: this.onHeader2,
-                tooltip: M(`#Editor_Header2`),
+                tooltip: j(`#Editor_Header2`),
                 imgURL: this.props.pathToImages + `/format_header2.png`,
               }),
             this.BSupports(`h3`) &&
-              (0, R.jsx)(Y, {
+              (0, z.jsx)(Y, {
                 onClick: this.onHeader3,
-                tooltip: M(`#Editor_Header3`),
+                tooltip: j(`#Editor_Header3`),
                 imgURL: this.props.pathToImages + `/format_header3.png`,
               }),
             this.BSupports(`previewyoutube`) &&
-              (0, R.jsx)(Y, {
+              (0, z.jsx)(Y, {
                 onClick: this.OnOpenYoutubeDialog,
-                tooltip: M(`#EventEditor_InsertYouTube`),
+                tooltip: j(`#EventEditor_InsertYouTube`),
                 imgURL: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYyNjlFOEM1MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYyNjlFOEM2MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjI2OUU4QzMyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjI2OUU4QzQyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4IrEPeAAABJ0lEQVR42mL8//8/AzmABUScEOZJI1HfLBaoppmk2sh4Ql/r/69HD0jSxCanwMD07eVzhl9ADgz/ZmJikMjOY2CUlEIRR8YgPYzbBLhQQoeJl4/B7uY9hv9//jC8XLWc4UFfD8OPZ08xbGX6CSSQ8XdgKH/79o3h+69fDHwBwQy6ew8ySOYXMfxiZERRx/ILPTqA/K9fv8K5f4EG3Pn5i+EfSB2SWpaf6G6A2vgP6NSrWzYz3J8zk0Hk9SsGVka0ePzLxs7w9ydC+3+gpn29PQzv9uxiEHz7mkEY6ESQPb+QHMbMwcHAwiotw/Dj3h2E6L+/DIyrljKIgCMLGMoMmCmLQ0qagdnh66fn/xgYfP+B9BCJv79/lw5KcrPISKqzGMlN5AABBgBSmY83jVsiQAAAAABJRU5ErkJggg==`,
               }),
-            (0, R.jsx)(`span`, {
+            (0, z.jsx)(`span`, {
               className: `ttip`,
               children:
                 this.props.emoticonStore &&
-                (0, R.jsx)(k, {
-                  toolTipContent: M(`#Editor_Emoticon`),
-                  children: (0, R.jsx)(x, {
+                (0, z.jsx)(F, {
+                  toolTipContent: j(`#Editor_Emoticon`),
+                  children: (0, z.jsx)(x, {
                     title: ` `,
-                    className: j(`_5LFNlKLTFJM-`),
+                    className: S(`_5LFNlKLTFJM-`),
                     disabled: !1,
                     OnEmoticonSelected: this.OnEmoticonSelected,
                     rtLastAckedNewEmoticons: Number.MAX_VALUE,
@@ -1177,27 +1177,27 @@ var q = class e {
                 }),
             }),
             !(!this.BSupports(`img`) || t) &&
-              (0, R.jsx)(Y, {
+              (0, z.jsx)(Y, {
                 onClick: this.OnOpenImageDialog,
-                tooltip: M(`#EventEditor_InsertImage`),
+                tooltip: j(`#EventEditor_InsertImage`),
                 imgURL: this.props.pathToImages + `/insert_img.png`,
               }),
             !!(
-              pe.is_support &&
+              ye.is_support &&
               this.props.clanSteamID &&
               this.BSupports(`speaker`)
             ) &&
-              (0, R.jsx)(Y, {
+              (0, z.jsx)(Y, {
                 onClick: this.OnOpenSpeakerDialog,
-                tooltip: M(`#EventEditor_AddSpeaker`),
+                tooltip: j(`#EventEditor_AddSpeaker`),
                 imgURL: this.props.pathToImages + `/insert_img.png`,
               }),
             !(!n || t) &&
-              (0, R.jsx)(Y, {
+              (0, z.jsx)(Y, {
                 onClick: this.OnConvertHTMLToBBCodeDialog,
                 className: void 0,
-                tooltip: M(`#EventEditor_ImportFromHTML_ttip`),
-                children: M(`#EventEditor_ImportHTML`),
+                tooltip: j(`#EventEditor_ImportFromHTML_ttip`),
+                children: j(`#EventEditor_ImportHTML`),
               }),
             i,
           ],
@@ -1205,42 +1205,42 @@ var q = class e {
       );
     }
   };
-(D([A], J.prototype, `onBold`, null),
-  D([A], J.prototype, `onItalics`, null),
-  D([A], J.prototype, `onUnderline`, null),
-  D([A], J.prototype, `onStrikeThrough`, null),
-  D([A], J.prototype, `onHeader`, null),
-  D([A], J.prototype, `onHeader2`, null),
-  D([A], J.prototype, `onHeader3`, null),
-  D([A], J.prototype, `onUnorderedList`, null),
-  D([A], J.prototype, `onOrderedList`, null),
-  D([A], J.prototype, `OnAddLink`, null),
-  D([A], J.prototype, `ShowHelpDialog`, null),
-  D([A], J.prototype, `OnConvertHTMLToBBCodeDialog`, null),
-  D([A], J.prototype, `OnOpenYoutubeDialog`, null),
-  D([A], J.prototype, `OnOpenImageDialog`, null),
-  D([A], J.prototype, `OnOpenSpeakerDialog`, null),
-  D([A], J.prototype, `OnEmoticonSelected`, null),
+(D([I], J.prototype, `onBold`, null),
+  D([I], J.prototype, `onItalics`, null),
+  D([I], J.prototype, `onUnderline`, null),
+  D([I], J.prototype, `onStrikeThrough`, null),
+  D([I], J.prototype, `onHeader`, null),
+  D([I], J.prototype, `onHeader2`, null),
+  D([I], J.prototype, `onHeader3`, null),
+  D([I], J.prototype, `onUnorderedList`, null),
+  D([I], J.prototype, `onOrderedList`, null),
+  D([I], J.prototype, `OnAddLink`, null),
+  D([I], J.prototype, `ShowHelpDialog`, null),
+  D([I], J.prototype, `OnConvertHTMLToBBCodeDialog`, null),
+  D([I], J.prototype, `OnOpenYoutubeDialog`, null),
+  D([I], J.prototype, `OnOpenImageDialog`, null),
+  D([I], J.prototype, `OnOpenSpeakerDialog`, null),
+  D([I], J.prototype, `OnEmoticonSelected`, null),
   (J = D([r], J)));
 function Y(e) {
-  return (0, R.jsx)(`span`, {
+  return (0, z.jsx)(`span`, {
     onClick: e.onClick,
     className: e.className,
-    children: (0, R.jsxs)(k, {
+    children: (0, z.jsxs)(F, {
       toolTipContent: e.tooltip,
       className: `ttip`,
       children: [
-        !!e.imgURL && (0, R.jsx)(`img`, { src: e.imgURL }),
+        !!e.imgURL && (0, z.jsx)(`img`, { src: e.imgURL }),
         e.children,
       ],
     }),
   });
 }
-var X = class extends I.Component {
+var X = class extends L.Component {
   state = { youtubeInput: ``, alignment: m.left };
   OnYoutubeInsertLink() {
     let e = this.state.youtubeInput && g(this.state.youtubeInput);
-    if (!e) alert(M(`#EventEditor_InsertYouTube_NoURL`));
+    if (!e) alert(j(`#EventEditor_InsertYouTube_NoURL`));
     else {
       if (this.state.alignment == m.summary) {
         let t =
@@ -1274,28 +1274,28 @@ var X = class extends I.Component {
   }
   OnOuterDivClickPassDown(e) {}
   render() {
-    return (0, R.jsx)(C, {
-      strTitle: M(`#EventEditor_InsertYouTube`),
+    return (0, z.jsx)(C, {
+      strTitle: j(`#EventEditor_InsertYouTube`),
       strDescription: ``,
       closeModal: this.props.closeModal,
       onCancel: this.props.closeModal,
       onOK: this.OnYoutubeInsertLink,
-      strOKButtonText: M(`#EventEditor_InsertYouTube`),
+      strOKButtonText: j(`#EventEditor_InsertYouTube`),
       className: U,
-      children: (0, R.jsxs)(`div`, {
+      children: (0, z.jsxs)(`div`, {
         className: He,
         children: [
-          (0, R.jsx)(`div`, {
+          (0, z.jsx)(`div`, {
             className: `DialogInputLabelGroup`,
-            children: (0, R.jsxs)(`label`, {
+            children: (0, z.jsxs)(`label`, {
               children: [
-                (0, R.jsx)(`div`, {
+                (0, z.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: M(`#EventEditor_InsertYouTube_URL`),
+                  children: j(`#EventEditor_InsertYouTube_URL`),
                 }),
-                (0, R.jsx)(`div`, {
+                (0, z.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
-                  children: (0, R.jsx)(`input`, {
+                  children: (0, z.jsx)(`input`, {
                     className: `DialogInput DialogTextInputBase`,
                     ref: (e) => {
                       e?.focus();
@@ -1303,24 +1303,24 @@ var X = class extends I.Component {
                     type: `text`,
                     value: this.state.youtubeInput,
                     onChange: this.OnUrlChange,
-                    placeholder: M(`#EventEditor_InsertYouTube_Placholder`),
+                    placeholder: j(`#EventEditor_InsertYouTube_Placholder`),
                   }),
                 }),
               ],
             }),
           }),
-          (0, R.jsxs)(`div`, {
+          (0, z.jsxs)(`div`, {
             className: `DialogInputLabelGroup`,
             children: [
-              (0, R.jsx)(`div`, {
+              (0, z.jsx)(`div`, {
                 className: `DialogLabel`,
-                children: M(`#EventEditor_InsertYouTube_Position`),
+                children: j(`#EventEditor_InsertYouTube_Position`),
               }),
-              (0, R.jsxs)(`div`, {
+              (0, z.jsxs)(`div`, {
                 className: H,
                 onClick: this.OnOuterDivClickPassDown,
                 children: [
-                  (0, R.jsx)(`input`, {
+                  (0, z.jsx)(`input`, {
                     type: `radio`,
                     name: `YouTubePreviewInsertType`,
                     id: m.left,
@@ -1328,19 +1328,19 @@ var X = class extends I.Component {
                     checked: this.state.alignment == m.left,
                     onChange: this.OnLeftSelected,
                   }),
-                  (0, R.jsx)(`label`, {
+                  (0, z.jsx)(`label`, {
                     htmlFor: m.left,
-                    children: (0, R.jsx)(`span`, {
-                      children: M(`#EventEditor_InsertYouTube_Left`),
+                    children: (0, z.jsx)(`span`, {
+                      children: j(`#EventEditor_InsertYouTube_Left`),
                     }),
                   }),
                 ],
               }),
-              (0, R.jsxs)(`div`, {
+              (0, z.jsxs)(`div`, {
                 className: H,
                 onClick: this.OnOuterDivClickPassDown,
                 children: [
-                  (0, R.jsx)(`input`, {
+                  (0, z.jsx)(`input`, {
                     type: `radio`,
                     name: `YouTubePreviewInsertType`,
                     id: m.right,
@@ -1348,19 +1348,19 @@ var X = class extends I.Component {
                     checked: this.state.alignment == m.right,
                     onChange: this.OnRightSelected,
                   }),
-                  (0, R.jsx)(`label`, {
+                  (0, z.jsx)(`label`, {
                     htmlFor: m.right,
-                    children: (0, R.jsx)(`span`, {
-                      children: M(`#EventEditor_InsertYouTube_Right`),
+                    children: (0, z.jsx)(`span`, {
+                      children: j(`#EventEditor_InsertYouTube_Right`),
                     }),
                   }),
                 ],
               }),
-              (0, R.jsxs)(`div`, {
+              (0, z.jsxs)(`div`, {
                 className: H,
                 onClick: this.OnOuterDivClickPassDown,
                 children: [
-                  (0, R.jsx)(`input`, {
+                  (0, z.jsx)(`input`, {
                     type: `radio`,
                     name: `YouTubePreviewInsertType`,
                     id: m.full,
@@ -1368,19 +1368,19 @@ var X = class extends I.Component {
                     checked: this.state.alignment == m.full,
                     onChange: this.OnFullSelected,
                   }),
-                  (0, R.jsx)(`label`, {
+                  (0, z.jsx)(`label`, {
                     htmlFor: m.full,
-                    children: (0, R.jsx)(`span`, {
-                      children: M(`#EventEditor_InsertYouTube_Full`),
+                    children: (0, z.jsx)(`span`, {
+                      children: j(`#EventEditor_InsertYouTube_Full`),
                     }),
                   }),
                 ],
               }),
-              (0, R.jsxs)(`div`, {
+              (0, z.jsxs)(`div`, {
                 className: H,
                 onClick: this.OnOuterDivClickPassDown,
                 children: [
-                  (0, R.jsx)(`input`, {
+                  (0, z.jsx)(`input`, {
                     type: `radio`,
                     name: `YouTubePreviewInsertType`,
                     id: m.summary,
@@ -1388,10 +1388,10 @@ var X = class extends I.Component {
                     checked: this.state.alignment == m.summary,
                     onChange: this.OnSummarySelected,
                   }),
-                  (0, R.jsx)(`label`, {
+                  (0, z.jsx)(`label`, {
                     htmlFor: m.summary,
-                    children: (0, R.jsx)(`span`, {
-                      children: M(`#EventEditor_InsertYouTube_Summary`),
+                    children: (0, z.jsx)(`span`, {
+                      children: j(`#EventEditor_InsertYouTube_Summary`),
                     }),
                   }),
                 ],
@@ -1403,15 +1403,15 @@ var X = class extends I.Component {
     });
   }
 };
-(D([A], X.prototype, `OnYoutubeInsertLink`, null),
-  D([A], X.prototype, `OnUrlChange`, null),
-  D([A], X.prototype, `OnLeftSelected`, null),
-  D([A], X.prototype, `OnRightSelected`, null),
-  D([A], X.prototype, `OnFullSelected`, null),
-  D([A], X.prototype, `OnSummarySelected`, null),
-  D([A], X.prototype, `OnOuterDivClickPassDown`, null),
+(D([I], X.prototype, `OnYoutubeInsertLink`, null),
+  D([I], X.prototype, `OnUrlChange`, null),
+  D([I], X.prototype, `OnLeftSelected`, null),
+  D([I], X.prototype, `OnRightSelected`, null),
+  D([I], X.prototype, `OnFullSelected`, null),
+  D([I], X.prototype, `OnSummarySelected`, null),
+  D([I], X.prototype, `OnOuterDivClickPassDown`, null),
   (X = D([r], X)));
-var Z = class extends I.Component {
+var Z = class extends L.Component {
   static {
     Ze = this;
   }
@@ -1442,28 +1442,28 @@ var Z = class extends I.Component {
     q.replaceSelection(this.props.textareaRef.current, n);
   }
   render() {
-    return (0, R.jsx)(C, {
-      strTitle: M(`#Editor_Link`),
+    return (0, z.jsx)(C, {
+      strTitle: j(`#Editor_Link`),
       strDescription: ``,
       closeModal: this.props.closeModal,
       onOK: this.onInsertLink,
       onCancel: this.props.closeModal,
-      strOKButtonText: M(`#EventEditor_InsertLinkURL`),
+      strOKButtonText: j(`#EventEditor_InsertLinkURL`),
       className: U,
-      children: (0, R.jsxs)(`div`, {
+      children: (0, z.jsxs)(`div`, {
         className: Ie,
         children: [
-          (0, R.jsx)(`div`, {
+          (0, z.jsx)(`div`, {
             className: `DialogInputLabelGroup`,
-            children: (0, R.jsxs)(`label`, {
+            children: (0, z.jsxs)(`label`, {
               children: [
-                (0, R.jsx)(`div`, {
+                (0, z.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: M(`#EventEditor_LinkDescription`),
+                  children: j(`#EventEditor_LinkDescription`),
                 }),
-                (0, R.jsx)(`div`, {
+                (0, z.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
-                  children: (0, R.jsx)(`input`, {
+                  children: (0, z.jsx)(`input`, {
                     type: `text`,
                     onChange: this.onLinkTitleUpdate,
                     value: this.state.textToDisplay,
@@ -1473,17 +1473,17 @@ var Z = class extends I.Component {
               ],
             }),
           }),
-          (0, R.jsx)(`div`, {
+          (0, z.jsx)(`div`, {
             className: `DialogInputLabelGroup`,
-            children: (0, R.jsxs)(`label`, {
+            children: (0, z.jsxs)(`label`, {
               children: [
-                (0, R.jsx)(`div`, {
+                (0, z.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: M(`#EventEditor_LinkURL`),
+                  children: j(`#EventEditor_LinkURL`),
                 }),
-                (0, R.jsx)(`div`, {
+                (0, z.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
-                  children: (0, R.jsx)(`input`, {
+                  children: (0, z.jsx)(`input`, {
                     type: `text`,
                     onChange: this.onLinkURLUpdate,
                     value: this.state.strURL,
@@ -1498,12 +1498,12 @@ var Z = class extends I.Component {
     });
   }
 };
-(D([A], Z.prototype, `onLinkTitleUpdate`, null),
-  D([A], Z.prototype, `onLinkURLUpdate`, null),
-  D([A], Z.prototype, `onInsertLink`, null),
+(D([I], Z.prototype, `onLinkTitleUpdate`, null),
+  D([I], Z.prototype, `onLinkURLUpdate`, null),
+  D([I], Z.prototype, `onInsertLink`, null),
   (Z = Ze = D([r], Z)));
-var Q = class extends I.Component {
-  refFirstInput = I.createRef();
+var Q = class extends L.Component {
+  refFirstInput = L.createRef();
   state = { imgURL: ``, anchorURL: `` };
   componentDidMount() {
     this.refFirstInput.current?.focus();
@@ -1527,56 +1527,56 @@ var Q = class extends I.Component {
   }
   render() {
     let { imgURL: e, anchorURL: t } = this.state;
-    return (0, R.jsx)(C, {
-      strTitle: M(`#EventEditor_InsertImage_Title`),
+    return (0, z.jsx)(C, {
+      strTitle: j(`#EventEditor_InsertImage_Title`),
       strDescription: ``,
       closeModal: this.props.closeModal,
       onCancel: this.props.closeModal,
       onOK: this.OnImageInsert,
-      strOKButtonText: M(`#EventEditor_InsertImage_Title`),
+      strOKButtonText: j(`#EventEditor_InsertImage_Title`),
       className: U,
-      children: (0, R.jsxs)(`div`, {
+      children: (0, z.jsxs)(`div`, {
         className: Ie,
         children: [
-          (0, R.jsx)(`p`, { children: M(`#EventEditor_InsertImage_Desc`) }),
-          (0, R.jsx)(`div`, {
+          (0, z.jsx)(`p`, { children: j(`#EventEditor_InsertImage_Desc`) }),
+          (0, z.jsx)(`div`, {
             className: `DialogInputLabelGroup`,
-            children: (0, R.jsxs)(`label`, {
+            children: (0, z.jsxs)(`label`, {
               children: [
-                (0, R.jsx)(`div`, {
+                (0, z.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: M(`#EventEditor_InsertImage_URL`),
+                  children: j(`#EventEditor_InsertImage_URL`),
                 }),
-                (0, R.jsx)(`div`, {
+                (0, z.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
-                  children: (0, R.jsx)(`input`, {
+                  children: (0, z.jsx)(`input`, {
                     className: `DialogInput DialogTextInputBase`,
                     type: `text`,
                     value: e,
                     onChange: this.OnImageURLChange,
-                    placeholder: M(`#EventEditor_InsertImage_Placeholder`),
+                    placeholder: j(`#EventEditor_InsertImage_Placeholder`),
                     ref: this.refFirstInput,
                   }),
                 }),
               ],
             }),
           }),
-          (0, R.jsx)(`div`, {
+          (0, z.jsx)(`div`, {
             className: `DialogInputLabelGroup`,
-            children: (0, R.jsxs)(`label`, {
+            children: (0, z.jsxs)(`label`, {
               children: [
-                (0, R.jsx)(`div`, {
+                (0, z.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: M(`#EventEditor_InsertImage_Anchor`),
+                  children: j(`#EventEditor_InsertImage_Anchor`),
                 }),
-                (0, R.jsx)(`div`, {
+                (0, z.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
-                  children: (0, R.jsx)(`input`, {
+                  children: (0, z.jsx)(`input`, {
                     className: `DialogInput DialogTextInputBase`,
                     type: `text`,
                     value: t,
                     onChange: this.OnAnchorURLChange,
-                    placeholder: M(`#EventEditor_InsertImage_Placeholder`),
+                    placeholder: j(`#EventEditor_InsertImage_Placeholder`),
                   }),
                 }),
               ],
@@ -1587,17 +1587,17 @@ var Q = class extends I.Component {
     });
   }
 };
-(D([A], Q.prototype, `OnImageInsert`, null),
-  D([A], Q.prototype, `OnImageURLChange`, null),
-  D([A], Q.prototype, `OnAnchorURLChange`, null),
+(D([I], Q.prototype, `OnImageInsert`, null),
+  D([I], Q.prototype, `OnImageURLChange`, null),
+  D([I], Q.prototype, `OnAnchorURLChange`, null),
   (Q = D([r], Q)));
 var Qe = (e) => {
-  let [t, n] = I.useState(``),
-    [r, i] = I.useState(``),
-    [a, o] = I.useState(``),
-    [l, u] = I.useState(``),
-    [f, p] = I.useState(void 0),
-    [m, h] = I.useState(void 0),
+  let [t, n] = L.useState(``),
+    [r, i] = L.useState(``),
+    [a, o] = L.useState(``),
+    [l, u] = L.useState(``),
+    [f, p] = L.useState(void 0),
+    [m, h] = L.useState(void 0),
     { data: g } = ie(),
     { isLoading: _, data: v } = y(m?.GetAccountID()),
     te = () => {
@@ -1615,60 +1615,60 @@ var Qe = (e) => {
         q.replaceSelection(e.textareaRef.current, n));
     },
     ne = t.trim().length != 0 && l.trim().length != 0;
-  return (0, R.jsx)(C, {
-    strTitle: M(`#EventEditor_AddSpeaker`),
-    strDescription: M(`#EventEditor_AddSpeaker_Desc`),
+  return (0, z.jsx)(C, {
+    strTitle: j(`#EventEditor_AddSpeaker`),
+    strDescription: j(`#EventEditor_AddSpeaker_Desc`),
     closeModal: e.closeModal,
     onCancel: e.closeModal,
     bOKDisabled: !ne,
     onOK: te,
     className: U,
-    children: (0, R.jsxs)(`div`, {
+    children: (0, z.jsxs)(`div`, {
       className: We,
       children: [
-        (0, R.jsx)(fe, {
+        (0, z.jsx)(k, {
           type: `text`,
-          label: M(`#EventEditor_AddSpeaker_Name`),
+          label: j(`#EventEditor_AddSpeaker_Name`),
           value: t,
           onChange: (e) => n(e.target.value),
           focusOnMount: !0,
         }),
-        (0, R.jsxs)(`div`, {
+        (0, z.jsxs)(`div`, {
           className: Ge,
           children: [
-            (0, R.jsx)(fe, {
+            (0, z.jsx)(k, {
               type: `text`,
-              label: M(`#EventEditor_AddSpeaker_Title`),
+              label: j(`#EventEditor_AddSpeaker_Title`),
               value: r,
               onChange: (e) => i(e.target.value),
             }),
-            (0, R.jsx)(fe, {
+            (0, z.jsx)(k, {
               type: `text`,
-              label: M(`#EventEditor_AddSpeaker_Company`),
+              label: j(`#EventEditor_AddSpeaker_Company`),
               value: a,
               onChange: (e) => o(e.target.value),
             }),
           ],
         }),
-        (0, R.jsx)(k, {
-          toolTipContent: M(`#EventEditor_AssociateSteamAccount_ttip`),
-          children: (0, R.jsxs)(`div`, {
+        (0, z.jsx)(F, {
+          toolTipContent: j(`#EventEditor_AssociateSteamAccount_ttip`),
+          children: (0, z.jsxs)(`div`, {
             className: `DialogLabel`,
-            children: [M(`#EventEditor_AssociateSteamAccount`), ` (?)`],
+            children: [j(`#EventEditor_AssociateSteamAccount`), ` (?)`],
           }),
         }),
-        (0, R.jsxs)(`div`, {
+        (0, z.jsxs)(`div`, {
           children: [
-            _ && (0, R.jsx)(d, { string: M(`#Loading`), size: `small` }),
+            _ && (0, z.jsx)(d, { string: j(`#Loading`), size: `small` }),
             m &&
               v &&
-              (0, R.jsxs)(`a`, {
+              (0, z.jsxs)(`a`, {
                 href:
-                  F.COMMUNITY_BASE_URL + `profiles/` + m.ConvertTo64BitString(),
+                  M.COMMUNITY_BASE_URL + `profiles/` + m.ConvertTo64BitString(),
                 target: `_blank`,
                 children: [
                   v
-                    ? (0, R.jsx)(`img`, {
+                    ? (0, z.jsx)(`img`, {
                         style: { marginRight: `8px` },
                         src: v.avatar_url,
                       })
@@ -1676,34 +1676,34 @@ var Qe = (e) => {
                   v ? v.m_strPlayerName : null,
                 ],
               }),
-            (0, R.jsxs)(`div`, {
+            (0, z.jsxs)(`div`, {
               className: Ke,
               children: [
-                (0, R.jsx)(P, {
-                  onClick: () => h(new E(pe.steamid)),
-                  children: M(`#EventEditor_SteamAccount_addme`),
+                (0, z.jsx)(P, {
+                  onClick: () => h(new T(ye.steamid)),
+                  children: j(`#EventEditor_SteamAccount_addme`),
                 }),
-                (0, R.jsx)(P, {
+                (0, z.jsx)(P, {
                   onClick: (e) =>
-                    ce((0, R.jsx)($e, { friends: g ?? [], setSteamID: h }), e),
-                  children: M(`#EventEditor_SteamAccount_addfriend`),
+                    de((0, z.jsx)($e, { friends: g ?? [], setSteamID: h }), e),
+                  children: j(`#EventEditor_SteamAccount_addfriend`),
                 }),
-                (0, R.jsx)(P, {
+                (0, z.jsx)(P, {
                   onClick: () => h(void 0),
-                  children: M(`#EventEditor_SteamAccount_clear`),
+                  children: j(`#EventEditor_SteamAccount_clear`),
                 }),
               ],
             }),
           ],
         }),
-        (0, R.jsxs)(`div`, {
+        (0, z.jsxs)(`div`, {
           className: qe,
           children: [
-            (0, R.jsx)(`div`, {
+            (0, z.jsx)(`div`, {
               className: `DialogLabel`,
-              children: M(`#EventEditor_ChoosePhoto`),
+              children: j(`#EventEditor_ChoosePhoto`),
             }),
-            (0, R.jsx)(Xe, {
+            (0, z.jsx)(Xe, {
               clanSteamID: e.clanSteamID,
               inputClanImage: f,
               setImage: p,
@@ -1712,31 +1712,31 @@ var Qe = (e) => {
             }),
           ],
         }),
-        (0, R.jsxs)(`div`, {
+        (0, z.jsxs)(`div`, {
           className: Je,
           children: [
-            (0, R.jsx)(`div`, {
+            (0, z.jsx)(`div`, {
               className: `DialogLabel`,
-              children: M(`#EventEditor_AddSpeaker_About`),
+              children: j(`#EventEditor_AddSpeaker_About`),
             }),
-            (0, R.jsx)(de, {
+            (0, z.jsx)(oe, {
               value: l,
               onChange: (e) => u(e.target.value),
               rows: 8,
               cols: 80,
               nMinHeight: 40,
-              placeholder: M(`#EventEditor_AddSpeaker_About_Placeholder`),
+              placeholder: j(`#EventEditor_AddSpeaker_About_Placeholder`),
             }),
           ],
         }),
-        (0, R.jsxs)(`div`, {
+        (0, z.jsxs)(`div`, {
           className: Ye,
           children: [
-            (0, R.jsx)(`div`, {
+            (0, z.jsx)(`div`, {
               className: `DialogLabel`,
-              children: M(`#Button_Preview`),
+              children: j(`#Button_Preview`),
             }),
-            (0, R.jsx)(ee, {
+            (0, z.jsx)(ee, {
               company: a,
               name: t,
               title: r,
@@ -1751,27 +1751,27 @@ var Qe = (e) => {
 };
 function $e(e) {
   let { friends: t, setSteamID: n } = e;
-  return (0, R.jsx)(`div`, {
+  return (0, z.jsx)(`div`, {
     className: Ue,
-    children: t.map((e) => (0, R.jsx)(et, { steamid: e, setSteamID: n }, e)),
+    children: t.map((e) => (0, z.jsx)(et, { steamid: e, setSteamID: n }, e)),
   });
 }
 function et(e) {
   let { steamid: t, setSteamID: n } = e,
     { data: r } = y(t);
-  return (0, R.jsx)(oe, {
-    onSelected: () => n(new E(t)),
-    children: (0, R.jsxs)(`div`, {
+  return (0, z.jsx)(ge, {
+    onSelected: () => n(new T(t)),
+    children: (0, z.jsxs)(`div`, {
       style: { display: `flex`, alignItems: `center` },
       children: [
         r &&
-          (0, R.jsx)(`img`, { className: `SZCLgazwykY-`, src: r.avatar_url }),
+          (0, z.jsx)(`img`, { className: `SZCLgazwykY-`, src: r.avatar_url }),
         r?.m_strPlayerName,
       ],
     }),
   });
 }
-var $ = class extends I.Component {
+var $ = class extends L.Component {
   m_isMounted = !1;
   m_bAppend = !1;
   constructor(e) {
@@ -1795,8 +1795,8 @@ var $ = class extends I.Component {
       n.append(`content`, e),
       n.append(`preserve_newlines`, t ? `1` : `0`),
       (
-        await L.default.post(
-          F.COMMUNITY_BASE_URL + `/actions/ConvertHTMLToBBCode`,
+        await R.default.post(
+          M.COMMUNITY_BASE_URL + `/actions/ConvertHTMLToBBCode`,
           n,
         )
       ).data.content
@@ -1817,9 +1817,9 @@ var $ = class extends I.Component {
         })
         .catch((e) => {
           O(
-            (0, R.jsx)(se, {
-              strTitle: M(`#EventEditor_ConvertHTML_Error`),
-              strDescription: M(
+            (0, z.jsx)(ue, {
+              strTitle: j(`#EventEditor_ConvertHTML_Error`),
+              strDescription: j(
                 `#EventEditor_ConvertHTML_Error_Desc`,
                 e.response && e.response.data ? e.response.data.msg : e,
               ),
@@ -1827,7 +1827,7 @@ var $ = class extends I.Component {
               bDestructiveWarning: !0,
             }),
             this.props.ownerWindow,
-            { strTitle: M(`#EventEditor_ConvertHTML_Error`) },
+            { strTitle: j(`#EventEditor_ConvertHTML_Error`) },
           );
         }));
   }
@@ -1842,51 +1842,51 @@ var $ = class extends I.Component {
   render() {
     let { closeModal: e } = this.props;
     return this.state.bConverting
-      ? (0, R.jsx)(C, {
-          strTitle: M(`#EventEditor_ImportFromHTML`),
-          strDescription: M(`#EventEditor_ImportFromHTML_ConversionInProgress`),
+      ? (0, z.jsx)(C, {
+          strTitle: j(`#EventEditor_ImportFromHTML`),
+          strDescription: j(`#EventEditor_ImportFromHTML_ConversionInProgress`),
           closeModal: e,
           bAlertDialog: !0,
           onOK: e,
           onCancel: e,
-          children: (0, R.jsx)(d, {}),
+          children: (0, z.jsx)(d, {}),
         })
       : this.state.bFinishedConverting
-        ? (0, R.jsx)(C, {
-            strTitle: M(`#EventEditor_ImportFromHTML`),
-            strDescription: M(`#EventEditor_ImportFromHTML_ConvertFinished`),
+        ? (0, z.jsx)(C, {
+            strTitle: j(`#EventEditor_ImportFromHTML`),
+            strDescription: j(`#EventEditor_ImportFromHTML_ConvertFinished`),
             closeModal: e,
             bAlertDialog: !0,
             onOK: e,
             onCancel: e,
           })
-        : (0, R.jsx)(me, {
-            title: M(`#EventEditor_ImportFromHTML`),
+        : (0, z.jsx)(ae, {
+            title: j(`#EventEditor_ImportFromHTML`),
             onOK: this.OnConvertAndOverriteHTML,
             onCancel: e,
             className: U,
-            children: (0, R.jsxs)(ae, {
+            children: (0, z.jsxs)(me, {
               children: [
-                (0, R.jsx)(xe, {
-                  children: (0, R.jsxs)(`div`, {
-                    className: j(p, Re),
+                (0, z.jsx)(_e, {
+                  children: (0, z.jsxs)(`div`, {
+                    className: S(p, Re),
                     children: [
-                      (0, R.jsx)(`div`, {
+                      (0, z.jsx)(`div`, {
                         className: p,
-                        children: ue(
+                        children: fe(
                           `#EventEditor_ImportFromHTML_ConvertDescription`,
-                          (0, R.jsx)(`a`, {
-                            target: F.IN_CLIENT ? void 0 : `_blank`,
+                          (0, z.jsx)(`a`, {
+                            target: M.IN_CLIENT ? void 0 : `_blank`,
                             href: `https://partner.steamgames.com/doc/marketing/event_tools/import`,
-                            children: M(
+                            children: j(
                               `#EventEditor_ImportFromHTML_ConvertLearn`,
                             ),
                           }),
                         ),
                       }),
-                      (0, R.jsx)(`textarea`, {
+                      (0, z.jsx)(`textarea`, {
                         value: this.state.strHTMLData,
-                        placeholder: M(
+                        placeholder: j(
                           `#EventEditor_ImportFromHTML_Instruction`,
                         ),
                         className: ze,
@@ -1895,21 +1895,21 @@ var $ = class extends I.Component {
                           e?.focus();
                         },
                       }),
-                      (0, R.jsxs)(`div`, {
+                      (0, z.jsxs)(`div`, {
                         className: Be,
                         children: [
-                          (0, R.jsx)(`input`, {
+                          (0, z.jsx)(`input`, {
                             id: `ImportFromHTMLNewLines`,
                             type: `checkbox`,
                             checked: this.state.bPreserveNewLines,
                             onChange: this.OnCheckboxChange,
                           }),
-                          (0, R.jsxs)(`label`, {
+                          (0, z.jsxs)(`label`, {
                             htmlFor: `ImportFromHTMLNewLines`,
                             children: [
-                              M(`#EventEditor_ImportFromHTML_PreserveNewlines`),
-                              (0, R.jsx)(we, {
-                                tooltip: M(
+                              j(`#EventEditor_ImportFromHTML_PreserveNewlines`),
+                              (0, z.jsx)(Ce, {
+                                tooltip: j(
                                   `#EventEditor_ImportFromHTML_PreserveNewlines_Hint`,
                                 ),
                               }),
@@ -1917,20 +1917,20 @@ var $ = class extends I.Component {
                           }),
                         ],
                       }),
-                      (0, R.jsx)(`div`, {
-                        children: M(
+                      (0, z.jsx)(`div`, {
+                        children: j(
                           `#EventEditor_ImportFromHTML_ConvertToBBCode`,
                         ),
                       }),
                     ],
                   }),
                 }),
-                (0, R.jsx)(ve, {
-                  children: (0, R.jsx)(Se, {
+                (0, z.jsx)(xe, {
+                  children: (0, z.jsx)(pe, {
                     onCancel: () => e?.(),
-                    strOKText: M(`#Button_Overwrite`),
+                    strOKText: j(`#Button_Overwrite`),
                     onUpdate: this.OnConvertAndAppendHTML,
-                    strUpdateText: M(`#Button_Append`),
+                    strUpdateText: j(`#Button_Append`),
                   }),
                 }),
               ],
@@ -1938,10 +1938,10 @@ var $ = class extends I.Component {
           });
   }
 };
-(D([A], $.prototype, `OnConvertAndOverriteHTML`, null),
-  D([A], $.prototype, `OnConvertAndAppendHTML`, null),
-  D([A], $.prototype, `OnCheckboxChange`, null),
-  D([A], $.prototype, `OnTextAreaChange`, null),
+(D([I], $.prototype, `OnConvertAndOverriteHTML`, null),
+  D([I], $.prototype, `OnConvertAndAppendHTML`, null),
+  D([I], $.prototype, `OnCheckboxChange`, null),
+  D([I], $.prototype, `OnTextAreaChange`, null),
   ($ = D([r], $)));
 var tt = `j59mI0R4Mls-`,
   nt = `hYzeNZ6Fv5E-`,
@@ -1957,10 +1957,10 @@ function at(e, t) {
     : t;
 }
 async function ot(e, t, n) {
-  if (T.IN_STEAMUI) {
-    let e = he.Init(ge);
+  if (A.IN_STEAMUI) {
+    let e = he.Init(ve);
     (e.Body().set_appid(t), e.Body().set_status_text(n));
-    let r = await Ce.PostStatusToFriends(
+    let r = await Se.PostStatusToFriends(
       v.CMInterface.GetServiceTransport(),
       e,
     );
@@ -1970,7 +1970,7 @@ async function ot(e, t, n) {
   let r = new FormData();
   (r.append(`appid`, String(t ?? 0)),
     r.append(`status_text`, n),
-    r.append(`sessionid`, ye()));
+    r.append(`sessionid`, ce()));
   let i = await fetch(e + `ajaxpostuserstatus`, {
       method: `POST`,
       body: r,
@@ -1987,41 +1987,41 @@ async function ot(e, t, n) {
 function st(e) {
   let { appid: t, eventLink: n, emoticonStore: r, closeModal: a } = e,
     { data: o } = y(w.steamid),
-    [s, c] = I.useState(``),
+    [s, c] = L.useState(``),
     l =
-      T.COMMUNITY_BASE_URL +
+      A.COMMUNITY_BASE_URL +
       `profiles/` +
-      E.InitFromAccountID(w.accountid, T.EUNIVERSE).ConvertTo64BitString() +
+      T.InitFromAccountID(w.accountid, A.EUNIVERSE).ConvertTo64BitString() +
       `/`,
     f = i({ mutationFn: () => ot(l, t, at(s, n)) });
   return f.isIdle
-    ? (0, R.jsx)(C, {
+    ? (0, z.jsx)(C, {
         strDescription: ``,
-        strTitle: M(`#Button_Share`),
+        strTitle: j(`#Button_Share`),
         onCancel: a,
         onOK: () => f.mutate(),
-        strOKButtonText: M(`#Button_Post`),
-        children: (0, R.jsxs)(`div`, {
+        strOKButtonText: j(`#Button_Post`),
+        children: (0, z.jsxs)(`div`, {
           className: p,
           children: [
-            (0, R.jsx)(`div`, {
-              children: M(`#EventDisplay_Share_OnMyStatus_Details`),
+            (0, z.jsx)(`div`, {
+              children: j(`#EventDisplay_Share_OnMyStatus_Details`),
             }),
-            (0, R.jsxs)(`div`, {
-              className: j(tt, p),
+            (0, z.jsxs)(`div`, {
+              className: S(tt, p),
               children: [
-                (0, R.jsxs)(`div`, {
+                (0, z.jsxs)(`div`, {
                   children: [
-                    (0, R.jsx)(`img`, {
+                    (0, z.jsx)(`img`, {
                       className: nt,
                       src: o?.avatar_url,
                       alt: ``,
                       "data-miniprofile": `s` + w.steamid,
                     }),
-                    (0, R.jsx)(`div`, {
-                      className: j(p),
-                      children: (0, R.jsx)(K, {
-                        strPlaceholder: M(
+                    (0, z.jsx)(`div`, {
+                      className: S(p),
+                      children: (0, z.jsx)(K, {
+                        strPlaceholder: j(
                           `#EventDisplay_Share_OnMyStatus_Placeholder`,
                         ),
                         fnGetCurText: () => s,
@@ -2037,50 +2037,50 @@ function st(e) {
                     }),
                   ],
                 }),
-                (0, R.jsx)(`div`, {
+                (0, z.jsx)(`div`, {
                   className: it,
-                  children: (0, R.jsx)(h, { text: n }),
+                  children: (0, z.jsx)(h, { text: n }),
                 }),
               ],
             }),
           ],
         }),
       })
-    : (0, R.jsx)(C, {
+    : (0, z.jsx)(C, {
         strDescription: ``,
-        strTitle: M(`#Button_Share`),
+        strTitle: j(`#Button_Share`),
         onCancel: a,
         onOK: a,
         bAlertDialog: !0,
-        children: (0, R.jsxs)(`div`, {
+        children: (0, z.jsxs)(`div`, {
           className: p,
           children: [
-            (0, R.jsx)(`div`, {
-              children: M(`#EventDisplay_Share_OnMyStatus_Details`),
+            (0, z.jsx)(`div`, {
+              children: j(`#EventDisplay_Share_OnMyStatus_Details`),
             }),
-            (0, R.jsxs)(`div`, {
+            (0, z.jsxs)(`div`, {
               className: tt,
               children: [
-                f.isPending && (0, R.jsx)(d, { position: `center` }),
+                f.isPending && (0, z.jsx)(d, { position: `center` }),
                 f.isSuccess &&
-                  (0, R.jsx)(`div`, {
-                    children: M(`#EventDisplay_Share_Success`),
+                  (0, z.jsx)(`div`, {
+                    children: j(`#EventDisplay_Share_Success`),
                   }),
                 f.isError &&
-                  (0, R.jsx)(`div`, {
+                  (0, z.jsx)(`div`, {
                     children:
-                      M(`#EventDisplay_Share_Failure`) +
+                      j(`#EventDisplay_Share_Failure`) +
                       `
 
 ` +
                       f.error.message,
                   }),
                 f.isSuccess &&
-                  (0, R.jsx)(`a`, {
+                  (0, z.jsx)(`a`, {
                     href: l + `home`,
-                    target: T.IN_CLIENT ? void 0 : `_blank`,
+                    target: A.IN_CLIENT ? void 0 : `_blank`,
                     rel: `noreferrer`,
-                    children: M(`#EventDisplay_Share_OpenActivityFeed`),
+                    children: j(`#EventDisplay_Share_OpenActivityFeed`),
                   }),
               ],
             }),

@@ -2,12 +2,12 @@
  ****/
 
 import { S as e, h as t, w as n, x as r } from "./partnerevent.js";
-import { Hb as i, Iy as a } from "./main.js";
+import { Ly as i, Ub as a } from "./main.js";
 function o(e, r, o, c) {
   let l = new n();
   return (
     (l.type = r),
-    (l.clanSteamID = new a(e, i.EUNIVERSE, 7, 0)),
+    (l.clanSteamID = new i(e, a.EUNIVERSE, 7, 0)),
     (l.GID = `fakeevent_` + s++),
     (l.visibility_state = t.k_EEventStateUnlisted),
     (l.visibilityStartTime = c - 1),

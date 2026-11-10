@@ -2077,6 +2077,8 @@
     "Sale_EventStats_Read": "Unique Logged In Account Visits",
     "Sale_EventStats_Read_Title": "Visitors",
     "Sale_FeaturingHidden": "(Not Visible)",
+    "Sale_Filter_DateFrom": "Sale running from",
+    "Sale_Filter_DateTo": "Sale running until",
     "Sale_HasIM": "Marketing Message (IM)",
     "Sale_HasSpotlight": "Spotlight",
     "Sale_InDraftModeHasApp": "This event is not yet visible but we're showing this to you because you have a game that has been listed on the sale page. If this is unexpected, please contact the sale organizers.",

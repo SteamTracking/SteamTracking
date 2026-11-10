@@ -4,13 +4,13 @@
 import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, ft as n } from "./libraries.js";
 import {
-  Hb as r,
-  Kv as i,
-  Pc as a,
-  Vc as o,
-  Vu as s,
-  Xt as c,
-  nl as l,
+  Fc as r,
+  Hc as i,
+  Hu as a,
+  Ub as o,
+  Xt as s,
+  qv as c,
+  rl as l,
 } from "./main.js";
 var u = e(t(), 1),
   d = n();
@@ -26,57 +26,57 @@ function p(e) {
       id: t,
       hoverClassName: n,
       fnGetIDOverride: r,
-      fnHoverState: a,
-      disableScreenshots: o,
-      children: s,
+      fnHoverState: i,
+      disableScreenshots: a,
+      children: o,
     } = e,
-    c = u.useRef(null),
+    s = u.useRef(null),
     l = u.useCallback(
       (e) => {
         let n = f(t);
         n &&
-          (a && a(!0),
+          (i && i(!0),
           window.GameHover &&
-            (c.current &&
-              o &&
-              (c.current.dataset.hoverDisableScreenshots = `true`),
-            window.GameHover(r ? r() : c.current, e, `global_hover`, {
+            (s.current &&
+              a &&
+              (s.current.dataset.hoverDisableScreenshots = `true`),
+            window.GameHover(r ? r() : s.current, e, `global_hover`, {
               type: n,
-              id: i(t).id,
+              id: c(t).id,
               v6: 1,
             })));
       },
-      [a, r, o, t],
+      [i, r, a, t],
     ),
     p = u.useCallback(
       (e) => {
         f(t) &&
-          (a && e.relatedTarget && a(!1),
+          (i && e.relatedTarget && i(!1),
           window.HideGameHover &&
-            window.HideGameHover(r ? r() : c.current, e, `global_hover`));
+            window.HideGameHover(r ? r() : s.current, e, `global_hover`));
       },
-      [t, a, r],
+      [t, i, r],
     );
   return (0, d.jsx)(`div`, {
-    ref: c,
+    ref: s,
     className: n,
     onMouseEnter: l,
     onMouseLeave: p,
     onFocus: l,
     onBlur: p,
-    children: s,
+    children: o,
   });
 }
 function m(e) {
   let { id: t, strExtraParams: n, fnOnClickOverride: u, strOverrideURL: m } = e,
-    h = s(),
-    g = c(),
-    _ = o(
+    h = a(),
+    g = s(),
+    _ = i(
       m ||
         (t && `creatorid` in t
-          ? a(`${r.STORE_BASE_URL}curator/${i(t).id}${n ? `?${n}` : ``}`, h, g)
-          : a(
-              `${r.STORE_BASE_URL}${f(t)}/${i(t).id}${n ? `?${n}` : ``}`,
+          ? r(`${o.STORE_BASE_URL}curator/${c(t).id}${n ? `?${n}` : ``}`, h, g)
+          : r(
+              `${o.STORE_BASE_URL}${f(t)}/${c(t).id}${n ? `?${n}` : ``}`,
               h,
               g,
             )),
@@ -86,7 +86,7 @@ function m(e) {
     children: (0, d.jsx)(l, {
       className: e.className,
       href: u ? void 0 : _,
-      target: r.IN_CLIENT || u ? void 0 : `_blank`,
+      target: o.IN_CLIENT || u ? void 0 : `_blank`,
       rel: `noopener noreferrer`,
       onClick: u,
       children: e.children,

@@ -3,7 +3,7 @@
 
 import { o as e, r as t } from "./rolldown-runtime.js";
 import { Lt as n, N as r, ft as i } from "./libraries.js";
-import { ba as a, ga as o, oa as s, va as c } from "./main.js";
+import { _a as a, sa as o, xa as s, ya as c } from "./main.js";
 var l = e(n(), 1),
   u = t({
     Heading: () => d,
@@ -50,11 +50,11 @@ function E(e) {
   let { level: t = `auto`, className: n, color: r } = e,
     i = O(t, w());
   return (0, S.jsx)(i, {
-    ...a({ ...e, className: (0, T.default)(o(), d, n) }, D),
+    ...s({ ...e, className: (0, T.default)(a(), d, n) }, D),
   });
 }
 var D = [
-  ...s,
+  ...o,
   ...c,
   { prop: `size`, responsive: !0, className: (e) => u[`HeadingSize-${e}`] },
 ];

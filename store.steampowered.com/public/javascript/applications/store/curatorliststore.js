@@ -6,16 +6,16 @@ import { At as t, Lt as n, jt as r, kt as i, tt as a } from "./libraries.js";
 import { d as o, f as s } from "./salecapsuleutils.js";
 import { n as c } from "./partnereventstore.js";
 import {
-  Fu as l,
-  Gx as u,
-  Iy as d,
-  Jb as f,
-  Mb as p,
-  ax as m,
-  qx as h,
-  rx as g,
-  xl as _,
-  yu as v,
+  Iu as l,
+  Jx as u,
+  Kx as d,
+  Ly as f,
+  Nb as p,
+  Sl as m,
+  Yb as h,
+  bu as g,
+  ix as _,
+  ox as v,
 } from "./main.js";
 import { t as y } from "./clanstore.js";
 var b = e(a()),
@@ -23,7 +23,7 @@ var b = e(a()),
 function S(e) {
   e.list_jsondata && typeof e.list_jsondata == `string`
     ? (e.list_jsondata = JSON.parse(e.list_jsondata))
-    : (h(
+    : (u(
         !e.list_jsondata,
         `Found unexpected ListDetails_t.list_jsondata type: ` +
           typeof e.list_jsondata,
@@ -31,9 +31,9 @@ function S(e) {
       (e.list_jsondata = {}));
 }
 function C(e, t) {
-  ((t.localized_flat_title = u([], 32, null)),
-    (t.localized_flat_blurb = u([], 32, null)),
-    (t.localized_flat_link = u([], 32, null)),
+  ((t.localized_flat_title = d([], 32, null)),
+    (t.localized_flat_blurb = d([], 32, null)),
+    (t.localized_flat_link = d([], 32, null)),
     t.title !== `0` && (t.localized_flat_title[e] = t.title),
     t.blurb !== `0` && (t.localized_flat_blurb[e] = t.blurb),
     t.link !== `0` && (t.localized_flat_link[e] = t.link),
@@ -66,7 +66,7 @@ var w = class e {
   async LoadListDetails(e, t, n) {
     if (this.m_mapList.has(t)) return this.m_mapList.get(t);
     let r =
-        g.STORE_BASE_URL +
+        _.STORE_BASE_URL +
         `curator/` +
         e.GetAccountID() +
         `/admin/ajaxgetlistdetails`,
@@ -76,7 +76,7 @@ var w = class e {
       if (a?.data?.success == 1) {
         let n = { ...a.data.list_details };
         return (
-          h(t == n?.listid, `Wanted` + t + `but got` + n?.listid),
+          u(t == n?.listid, `Wanted` + t + `but got` + n?.listid),
           S(n),
           C(a.data.curation_language, n),
           this.m_mapList.set(t, n),
@@ -95,17 +95,17 @@ var w = class e {
   }
   async LoadMyFollowedSaleCurationLists(e, t, n) {
     if (
-      !m.logged_in ||
-      (v.Get().BIsLoaded() && v.Get().GetFollowedCuratorCount() == 0)
+      !v.logged_in ||
+      (g.Get().BIsLoaded() && g.Get().GetFollowedCuratorCount() == 0)
     )
       return [];
-    let r = g.STORE_BASE_URL + `curators/ajaxgetmycuratorsalelists`,
+    let r = _.STORE_BASE_URL + `curators/ajaxgetmycuratorsalelists`,
       i = {
         clan_account_id: e.GetAccountID(),
         clan_event_gid: t,
         origin: self.origin,
-        curator_clan_account_followed: v.Get().BIsLoaded()
-          ? v.Get().GetFollowedCuratorsAccountID().join(`,`)
+        curator_clan_account_followed: g.Get().BIsLoaded()
+          ? g.Get().GetFollowedCuratorsAccountID().join(`,`)
           : void 0,
       };
     return this.InternalLoadSaleCuratorLists(
@@ -120,7 +120,7 @@ var w = class e {
   async LoadAllSaleCurationLists(e, t, n) {
     if (this.m_mapEventGIDToLists.has(t))
       return this.m_mapEventGIDToLists.get(t);
-    let r = g.STORE_BASE_URL + `curators/ajaxfindcuratorlists`,
+    let r = _.STORE_BASE_URL + `curators/ajaxfindcuratorlists`,
       i = {
         clan_account_id: e.GetAccountID(),
         clan_event_gid: t,
@@ -172,7 +172,7 @@ var w = class e {
   }
   constructor() {
     i(this);
-    let e = f(`curatorlistdata`, `application_config`);
+    let e = h(`curatorlistdata`, `application_config`);
     this.ValidateStoreDefault(e) &&
       r(() => {
         e.forEach((e) => {
@@ -196,7 +196,7 @@ var w = class e {
 };
 p([t], w.prototype, `m_mapList`, void 0);
 function T(e, t) {
-  let n = _();
+  let n = m();
   return (
     (0, x.useEffect)(() => {
       if (w.Get().GetListDetails(t) || !e) return;
@@ -227,7 +227,7 @@ function E(e) {
   return (
     (0, x.useEffect)(() => {
       if (n && e) {
-        let t = d.InitFromClanID(e, g.EUNIVERSE);
+        let t = f.InitFromClanID(e, _.EUNIVERSE);
         y.LoadClanInfoForClanSteamID(t).finally(() => {
           r(!0);
         });
@@ -240,7 +240,7 @@ function D(e) {
   return !!e?.sale_clan_event_gid && !!e?.sale_clan_steamid;
 }
 function O(e) {
-  let t = _(),
+  let t = m(),
     n = D(e) ? e.sale_clan_event_gid : null,
     r = n && c.GetClanEventModel(n);
   return (
@@ -251,7 +251,7 @@ function O(e) {
         (async () => {
           (c.Init(),
             await c.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-              new d(e.sale_clan_steamid),
+              new f(e.sale_clan_steamid),
               n,
               0,
             ),

@@ -3,7 +3,7 @@
 
 import "./rolldown-runtime.js";
 import { Lt as e, ft as t } from "./libraries.js";
-import { Sc as n, Uy as r, ax as i, kc as a } from "./main.js";
+import { Ac as n, Cc as r, Wy as i, ox as a } from "./main.js";
 import { t as o } from "./useavatarandpersona.js";
 import { i as s, t as c } from "./marketingmessageutilhooks.js";
 import { n as l, r as u } from "./localization.js";
@@ -25,29 +25,29 @@ var d = `TxsjnMc7Ba4-`,
   T = t();
 function E(e) {
   let t = u(e.year),
-    r = N();
+    n = N();
   return (0, T.jsxs)(`div`, {
-    className: n(d, t.MMFrame, t.MMOverride),
-    onClick: r,
+    className: r(d, t.MMFrame, t.MMOverride),
+    onClick: n,
     children: [
       (0, T.jsxs)(`div`, {
         className: f,
         children: [
           (0, T.jsx)(A, {
-            baseClass: n(g, t.ReplayLogo),
-            accentClass: n(_, t.ReplayLogoAccent),
+            baseClass: r(g, t.ReplayLogo),
+            accentClass: r(_, t.ReplayLogoAccent),
           }),
           (0, T.jsx)(j, { year: e.year, theme: t }),
         ],
       }),
-      (0, T.jsx)(k, { className: n(h, t.SteamLogo) }),
+      (0, T.jsx)(k, { className: r(h, t.SteamLogo) }),
       (0, T.jsx)(M, { theme: t }),
       (0, T.jsxs)(`div`, {
-        className: n(y, t.Content),
+        className: r(y, t.Content),
         children: [
           (0, T.jsx)(D, { theme: t }),
           (0, T.jsx)(`div`, {
-            className: n(w, t.Description),
+            className: r(w, t.Description),
             children: l.Localize(`#YIR_MM_Generic_Desc`),
           }),
           (0, T.jsx)(O, { theme: t }),
@@ -58,24 +58,24 @@ function E(e) {
 }
 function D(e) {
   let { theme: t } = e,
-    [r] = o(i.accountid);
-  return r
+    [n] = o(a.accountid);
+  return n
     ? (0, T.jsxs)(T.Fragment, {
         children: [
           (0, T.jsx)(`div`, {
-            className: n(b, t.Avatar),
+            className: r(b, t.Avatar),
             children:
-              r &&
-              r.avatar_url &&
+              n &&
+              n.avatar_url &&
               (0, T.jsx)(`img`, {
-                src: r.avatar_url.replace(/\.jpg$/, `_full.jpg`),
+                src: n.avatar_url.replace(/\.jpg$/, `_full.jpg`),
               }),
           }),
           (0, T.jsx)(`div`, {
-            className: n(x, t.DataBlock),
+            className: r(x, t.DataBlock),
             children: (0, T.jsx)(`div`, {
-              className: n(S, t.PersonaName),
-              children: r ? r.persona_name : ``,
+              className: r(S, t.PersonaName),
+              children: n ? n.persona_name : ``,
             }),
           }),
         ],
@@ -84,10 +84,10 @@ function D(e) {
 }
 function O(e) {
   let { theme: t } = e,
-    r = N();
-  return (0, T.jsx)(a, {
-    className: n(C, t.ViewPageButton),
-    onActivate: r,
+    i = N();
+  return (0, T.jsx)(n, {
+    className: r(C, t.ViewPageButton),
+    onActivate: i,
     children: l.Localize(`#YIR_MM_Generic_Action`),
   });
 }
@@ -144,22 +144,22 @@ function A(e) {
   });
 }
 function j(e) {
-  let { year: t, theme: i } = e;
+  let { year: t, theme: n } = e;
   return (0, T.jsx)(`div`, {
-    className: n(p, i.Header),
+    className: r(p, n.Header),
     children: l.LocalizeReact(
       `#YIR_MM_Header`,
       (0, T.jsx)(`br`, {}),
       (0, T.jsx)(`div`, {
-        className: n(m, i.YearSubtitle),
-        children: r(`#date_year`, t),
+        className: r(m, n.YearSubtitle),
+        children: i(`#date_year`, t),
       }),
     ),
   });
 }
 function M(e) {
   return (0, T.jsx)(`div`, {
-    className: n(v, e.theme.Hashtag),
+    className: r(v, e.theme.Hashtag),
     children: l.Localize(`#YIR_MM_HashTag`),
   });
 }

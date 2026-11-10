@@ -1856,6 +1856,21 @@ html.responsive.touch .FQuVIvXzECY- .EtG3bD1IPJE- ._25-ogODAwZc- .wvR9NvCjhik- {
   cursor: pointer;
   text-decoration: underline;
 }
+.xGkyVngC4NQ- {
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+  display: flex;
+}
+.grsNWKOSm7g- {
+  flex: 300px;
+}
+.Ey-R7LUpf8g- {
+  flex: 0 0 180px;
+}
+.Ey-R7LUpf8g- input {
+  color-scheme: dark;
+}
 .-r51rfl-tA4- {
   grid-template-columns: 192px 1fr auto;
   grid-template-areas: "text text buttons" "status status buttons";

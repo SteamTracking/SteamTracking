@@ -3,7 +3,7 @@
 
 import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, ft as n } from "./libraries.js";
-import { _t as r, kc as i } from "./main.js";
+import { Ac as r, _t as i } from "./main.js";
 var a = e(t(), 1),
   o = n(),
   s = a.createContext({ enabled: !0 });
@@ -59,7 +59,7 @@ function l(e) {
     (r !== void 0 || e !== void 0) && (b = { ...u, minHeight: r, minWidth: e });
   }
   let x = v ? `repeated` : `once`,
-    S = (0, o.jsx)(r, {
+    S = (0, o.jsx)(i, {
       containerRef: _,
       style: b,
       ...p,
@@ -69,7 +69,7 @@ function l(e) {
     });
   return (
     c &&
-      (S = (0, o.jsx)(i, {
+      (S = (0, o.jsx)(r, {
         focusableIfEmpty: !0,
         style: { height: `100%` },
         children: S,

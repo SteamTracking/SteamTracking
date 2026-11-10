@@ -9,16 +9,16 @@ import { n as s } from "./bottomrow.js";
 import { a as c, t as l } from "./storeitemhooks.js";
 import { r as u } from "./storedisplayutils.js";
 import {
-  Sc as d,
-  Uy as f,
-  Vl as p,
-  bu as m,
-  eu as h,
-  ka as g,
-  kc as _,
-  nl as v,
-  pl as y,
-  zb as b,
+  Aa as d,
+  Ac as f,
+  Bb as p,
+  Cc as m,
+  Hl as h,
+  Wy as g,
+  ml as _,
+  rl as v,
+  tu as y,
+  xu as b,
 } from "./main.js";
 var x = `OmrgUJdrKyI-`,
   S = `nKsKxQO2ePs-`,
@@ -44,20 +44,20 @@ function L(e) {
       sortOrder: o,
       scorePenaltyIfOwned: s,
       capsuleSize: l,
-      maxItemCount: f,
-      mapAppToCreatorClan: h,
+      maxItemCount: d,
+      mapAppToCreatorClan: f,
       strFeatureFirstAppMsg: g,
       setNumberVisibleItems: _,
     } = e,
     v = i(910),
-    y = b(),
-    [x, S] = m(),
+    y = p(),
+    [x, S] = b(),
     [C, w] = T.useState(a),
     E = c(a, u),
     [O, k] = T.useState(null);
   T.useEffect(() => {
     if (E == 1) return;
-    let e = a.filter((e) => !p.Get().BIsStoreItemMissing(e, 0));
+    let e = a.filter((e) => !h.Get().BIsStoreItemMissing(e, 0));
     if (g && v && !y && e.length > 0 && e[0] == a[0]) {
       let t = [e[0], P, ...e.slice(1)];
       (w(t), k(g), _?.(t.length));
@@ -65,8 +65,8 @@ function L(e) {
   }, [a, y, v, E, _, g]);
   let A = y;
   return (0, N.jsx)(r, {
-    className: d(n, { SaleSectionCarousel: !0, [D]: !0 }),
-    visibleElements: f,
+    className: m(n, { SaleSectionCarousel: !0, [D]: !0 }),
+    visibleElements: d,
     useTestScrollbar: !0,
     bLazyRenderChildren: !0,
     lazyRenderPlaceholderHeight: F,
@@ -82,7 +82,7 @@ function L(e) {
         {
           appID: e,
           size: l,
-          creatorClanAccountID: h?.get(e),
+          creatorClanAccountID: f?.get(e),
           strFeaturingMsg: t == 0 && O ? O : void 0,
         },
         e,
@@ -94,20 +94,20 @@ function R(e) {
   let { appID: t, size: n, creatorClanAccountID: r, strFeaturingMsg: i } = e,
     [a] = l(t, 0, u);
   if (t == P)
-    return (0, N.jsx)(`div`, { className: d({ [O]: !0, [k]: n == `small` }) });
-  if (!a) return (0, N.jsx)(`div`, { className: d(O, j) });
-  let o = h(a.GetStoreItemType(), a.GetAppType()),
+    return (0, N.jsx)(`div`, { className: m({ [O]: !0, [k]: n == `small` }) });
+  if (!a) return (0, N.jsx)(`div`, { className: m(O, j) });
+  let o = y(a.GetStoreItemType(), a.GetAppType()),
     c = { id: a.GetID(), type: o },
-    p = !!i;
+    d = !!i;
   return (0, N.jsx)(`div`, {
-    className: d({ [O]: !0, [A]: p, [k]: n == `small` }),
+    className: m({ [O]: !0, [A]: d, [k]: n == `small` }),
     children: (0, N.jsx)(s, {
       capsule: c,
       imageType: `header`,
       bHidePlatforms: !0,
-      bHideStoreHover: p,
+      bHideStoreHover: d,
       creatorAccountID: r,
-      strDoubleCapsuleMessage: p ? f(i) : void 0,
+      strDoubleCapsuleMessage: d ? g(i) : void 0,
       bPreferAssetWithoutOverride: !1,
     }),
   });
@@ -141,8 +141,8 @@ function B(e) {
   return t
     ? (0, N.jsx)(v, {
         href: t,
-        className: d(M, `btnv6_grey_black btn_medium`),
-        children: (0, N.jsx)(`span`, { children: f(`#StoreApp_SeeAll`) }),
+        className: m(M, `btnv6_grey_black btn_medium`),
+        children: (0, N.jsx)(`span`, { children: g(`#StoreApp_SeeAll`) }),
       })
     : void 0;
 }
@@ -157,23 +157,23 @@ function V(e) {
       capsuleSize: l,
       bFullWidth: u,
     } = e,
-    p = b(),
-    { bShowSeeMoreHint: m, panelProps: h } = a(r);
-  return (0, N.jsx)(_, {
-    className: d(S, u && `YmSKmufcDTw-`),
-    navEntryPreferPosition: y.PREFERRED_CHILD,
-    ...h,
-    children: (0, N.jsxs)(g, {
+    h = p(),
+    { bShowSeeMoreHint: v, panelProps: y } = a(r);
+  return (0, N.jsx)(f, {
+    className: m(S, u && `YmSKmufcDTw-`),
+    navEntryPreferPosition: _.PREFERRED_CHILD,
+    ...y,
+    children: (0, N.jsxs)(d, {
       children: [
         (0, N.jsxs)(`div`, {
           className: x,
           children: [
             (0, N.jsx)(`div`, { className: w, children: t }),
-            !p && (0, N.jsx)(B, { url: r }),
-            p && (0, N.jsx)(o, { label: f(`#StoreApp_SeeAll`), shown: m }),
+            !h && (0, N.jsx)(B, { url: r }),
+            h && (0, N.jsx)(o, { label: g(`#StoreApp_SeeAll`), shown: v }),
           ],
         }),
-        (0, N.jsx)(_, {
+        (0, N.jsx)(f, {
           preferredFocus: !0,
           children: (0, N.jsx)(L, {
             navKey: n,

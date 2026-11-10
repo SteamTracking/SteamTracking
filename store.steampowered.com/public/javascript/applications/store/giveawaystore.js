@@ -12,12 +12,12 @@ import {
   u as s,
 } from "./libraries.js";
 import {
-  Jb as c,
-  Lx as l,
-  Mb as u,
-  Rx as d,
-  rx as f,
-  xl as p,
+  Nb as c,
+  Rx as l,
+  Sl as u,
+  Yb as d,
+  ix as f,
+  zx as p,
 } from "./main.js";
 var m = e(o()),
   h = e(r()),
@@ -54,12 +54,12 @@ var m = e(o()),
       );
     }
   };
-(u([t], g.prototype, `giveaway_id`, void 0),
-  u([t], g.prototype, `seconds_until_drawing`, void 0),
-  u([t], g.prototype, `rtime_start`, void 0),
-  u([t], g.prototype, `rtime_end`, void 0),
-  u([t], g.prototype, `closed`, void 0),
-  u([t], g.prototype, `winner_count`, void 0));
+(c([t], g.prototype, `giveaway_id`, void 0),
+  c([t], g.prototype, `seconds_until_drawing`, void 0),
+  c([t], g.prototype, `rtime_start`, void 0),
+  c([t], g.prototype, `rtime_end`, void 0),
+  c([t], g.prototype, `closed`, void 0),
+  c([t], g.prototype, `winner_count`, void 0));
 var _ = class e {
   constructor() {
     a(this);
@@ -121,7 +121,7 @@ var _ = class e {
   }
   Init() {
     if (!this.m_bLoadedFromConfig) {
-      let e = c(`giveawaynextdraw`, `application_config`);
+      let e = d(`giveawaynextdraw`, `application_config`);
       if (e && e.giveaway_id) {
         let t = new g();
         (this.CopyToGiveaway(e, t),
@@ -131,8 +131,8 @@ var _ = class e {
     }
   }
 };
-(u([t], _.prototype, `m_mapGiveawayIDToNextDrawInfo`, void 0),
-  u([n], _.prototype, `CopyToGiveaway`, null));
+(c([t], _.prototype, `m_mapGiveawayIDToNextDrawInfo`, void 0),
+  c([n], _.prototype, `CopyToGiveaway`, null));
 var v = class e {
   m_intervalID;
   m_intervalCountDownID;
@@ -165,10 +165,10 @@ var v = class e {
       (this.m_intervalCountDownID = window.setInterval(t, 1e3));
   }
 };
-(u([d], v.prototype, `ClearRefreshInterval`, null),
-  u([d], v.prototype, `ClearCountDown`, null),
-  u([d], v.prototype, `SetupRefreshDataInterval`, null),
-  u([d], v.prototype, `SetupCountDown`, null));
+(c([p], v.prototype, `ClearRefreshInterval`, null),
+  c([p], v.prototype, `ClearCountDown`, null),
+  c([p], v.prototype, `SetupRefreshDataInterval`, null),
+  c([p], v.prototype, `SetupCountDown`, null));
 function y(e, t) {
   let n = _.Get().GetInfoByInstance(e, t.m_myInstanceNumber);
   n &&
@@ -192,7 +192,7 @@ function b(e, t) {
 }
 function x(e) {
   let [t] = (0, h.useState)(new v()),
-    n = p();
+    n = u();
   (0, h.useEffect)(
     () => (
       _.Get()

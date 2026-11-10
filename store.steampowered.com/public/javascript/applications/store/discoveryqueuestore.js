@@ -5,20 +5,20 @@ import { o as e } from "./rolldown-runtime.js";
 import { At as t, Lt as n, kt as r } from "./libraries.js";
 import { n as i, t as a } from "./stringutils.js";
 import {
-  Dl as o,
-  Jb as s,
-  Lx as c,
-  Ly as l,
-  Mb as u,
-  _y as d,
-  ax as f,
-  bl as p,
-  fy as m,
-  jb as h,
-  mt as g,
-  mx as _,
-  my as v,
-  pt as y,
+  Mb as o,
+  Nb as s,
+  Ol as c,
+  Rx as l,
+  Ry as u,
+  Yb as d,
+  hx as f,
+  hy as p,
+  mt as m,
+  ox as h,
+  pt as g,
+  py as _,
+  vy as v,
+  xl as y,
 } from "./main.js";
 var b = e(n());
 function x(e, t) {
@@ -82,7 +82,7 @@ var w = class e {
     let n = x(e, t);
     return (
       this.m_mapInClientCompletedCallback.has(n) ||
-        this.m_mapInClientCompletedCallback.set(n, new c()),
+        this.m_mapInClientCompletedCallback.set(n, new l()),
       this.m_mapInClientCompletedCallback.get(n)
     );
   }
@@ -90,7 +90,7 @@ var w = class e {
     let n = x(e, t);
     return (
       this.m_mapExhuastedCallback.has(n) ||
-        this.m_mapExhuastedCallback.set(n, h(!1)),
+        this.m_mapExhuastedCallback.set(n, o(!1)),
       this.m_mapExhuastedCallback.get(n)
     );
   }
@@ -102,9 +102,9 @@ var w = class e {
     let r = x(e, n);
     if (!this.m_transport) return 2;
     try {
-      let i = y(this.m_transport, e, t, n);
-      t && (await l.invalidateQueries({ queryKey: i.queryKey }));
-      let a = await l.fetchQuery(i);
+      let i = g(this.m_transport, e, t, n);
+      t && (await u.invalidateQueries({ queryKey: i.queryKey }));
+      let a = await u.fetchQuery(i);
       return (
         this.m_mapDiscoveryQueues.set(r, a),
         a.exhausted
@@ -151,12 +151,12 @@ var w = class e {
           i,
           (this.m_mapSkippedAppCount.get(i) || 0) + 1,
         ));
-      let s = _.Init(v);
+      let s = f.Init(p);
       if (
         (s.Body().set_appid(e),
         s.Body().set_queue_type(t),
         (n?.nSaleTagID || n?.strContentHubType) &&
-          s.Body().set_store_page_filter(g(n, !0)),
+          s.Body().set_store_page_filter(m(n, !0)),
         !this.m_transport)
       ) {
         (console.warn(`Error`, `no transport`, `failed to skip appid `, e),
@@ -164,7 +164,7 @@ var w = class e {
         return;
       }
       let c = (
-        await d.SkipDiscoveryQueueItem(this.m_transport, s)
+        await v.SkipDiscoveryQueueItem(this.m_transport, s)
       ).GetEResult();
       c != 1 && c != 29
         ? (console.warn(`Error`, c, `failed to skip appid `, e),
@@ -184,12 +184,12 @@ var w = class e {
   }
   async LoadSkippedApps(e, t) {
     x(e, t);
-    let n = _.Init(m);
+    let n = f.Init(_);
     if (
-      (n.Body().set_steamid(f.steamid),
+      (n.Body().set_steamid(h.steamid),
       n.Body().set_queue_type(e),
       (t?.nSaleTagID || t?.strContentHubType) &&
-        n.Body().set_store_page_filter(g(t, !0)),
+        n.Body().set_store_page_filter(m(t, !0)),
       !this.m_transport)
     )
       return (
@@ -200,7 +200,7 @@ var w = class e {
         ),
         []
       );
-    let r = await d.GetDiscoveryQueueSkippedApps(this.m_transport, n);
+    let r = await v.GetDiscoveryQueueSkippedApps(this.m_transport, n);
     return r.GetEResult() === 1
       ? r.Body().appids() || []
       : (console.warn(
@@ -227,16 +227,16 @@ var w = class e {
     r(this);
   }
 };
-u([t], w.prototype, `m_mapDiscoveryQueues`, void 0);
+s([t], w.prototype, `m_mapDiscoveryQueues`, void 0);
 function T(e, t) {
   let [n, r] = (0, b.useState)(w.Get().GetInClientCompletedQueues(e, t));
-  return (p(w.Get().GetInClientCompletedQueuesCallback(e, t), r), n);
+  return (y(w.Get().GetInClientCompletedQueuesCallback(e, t), r), n);
 }
 function E(e, t) {
-  return o(w.Get().GetExhaustedCallback(e, t));
+  return c(w.Get().GetExhaustedCallback(e, t));
 }
 function D(e, t) {
-  let n = b.useMemo(() => s(`discovery_queue_name`, `application_config`), []);
+  let n = b.useMemo(() => d(`discovery_queue_name`, `application_config`), []);
   return typeof n == `string` && n.length > 0 ? n : ``;
 }
 export { T as a, D as i, w as n, E as o, C as r, S as t };

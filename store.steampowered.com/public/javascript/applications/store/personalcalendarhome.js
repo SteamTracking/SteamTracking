@@ -9,27 +9,27 @@ import { n as o } from "./lazyrenderchildren.js";
 import { n as s, t as c } from "./seemorebutton.js";
 import { t as l } from "./storegamehover.js";
 import {
-  $i as u,
-  $t as d,
-  Ay as f,
-  Dc as p,
-  Gb as m,
-  Hb as h,
-  Pc as g,
-  Ru as _,
-  Sc as v,
-  Sl as y,
-  Vu as b,
-  Xt as x,
-  Zi as S,
+  $t as u,
+  Ac as d,
+  Bb as f,
+  Cc as p,
+  Cl as m,
+  Fc as h,
+  Hu as g,
+  Kb as _,
+  Oc as v,
+  Qi as y,
+  Tv as b,
+  Ub as x,
+  Xt as S,
   b as C,
-  dd as w,
-  kc as T,
-  nl as E,
-  pl as D,
-  rx as O,
-  wv as k,
-  zb as A,
+  ea as w,
+  fd as T,
+  ix as E,
+  jy as D,
+  ml as O,
+  rl as k,
+  zu as A,
 } from "./main.js";
 import { n as j, r as M } from "./personalcalendarstore.js";
 import { t as N } from "./assetutils.js";
@@ -55,23 +55,23 @@ var P = e(t(), 1),
   };
 function X(e) {
   let { bShowNewBadge: t, bHasFooterActionLegend: n, onSeeMore: r } = e,
-    o = f(Y),
+    o = D(Y),
     l = o ? JSON.parse(o) : void 0,
     u = a(940),
-    d = b(),
-    p = x(),
-    m = A(),
-    _ = new Date().getDay(),
-    v = 13 + _,
-    y = 22 - _,
-    S = M(0, v, y),
-    w = j(v, y, !0, !0).flat(),
-    E = g(`${h.STORE_BASE_URL}personalcalendar`, d, p),
-    { bShowSeeMoreHint: O, panelProps: k } = s(E),
+    p = g(),
+    m = S(),
+    _ = f(),
+    v = new Date().getDay(),
+    y = 13 + v,
+    b = 22 - v,
+    w = M(0, y, b),
+    T = j(y, b, !0, !0).flat(),
+    E = h(`${x.STORE_BASE_URL}personalcalendar`, p, m),
+    { bShowSeeMoreHint: k, panelProps: A } = s(E),
     N = C.Localize(`#PersonalCalendar_Explore`),
     B = P.useCallback(() => r?.(E), [r, E]);
-  if (!S.data) return (0, J.jsx)(T, { className: F });
-  let V = S.data.arrAppInfos;
+  if (!w.data) return (0, J.jsx)(d, { className: F });
+  let V = w.data.arrAppInfos;
   return (
     l &&
       ((V = V.filter((e) => !l.bHideOwned || !e.bIsOwned)),
@@ -88,11 +88,11 @@ function X(e) {
             return !0;
         }
       }))),
-    (0, J.jsxs)(T, {
+    (0, J.jsxs)(d, {
       className: F,
-      navEntryPreferPosition: D.PREFERRED_CHILD,
-      ...k,
-      onOptionsButton: r ? B : k.onOptionsButton,
+      navEntryPreferPosition: O.PREFERRED_CHILD,
+      ...A,
+      onOptionsButton: r ? B : A.onOptionsButton,
       onOptionsActionDescription: N,
       children: [
         (0, J.jsxs)(`div`, {
@@ -118,25 +118,25 @@ function X(e) {
                 }),
               ],
             }),
-            !m && (0, J.jsx)(Z, { calendarURL: E, location: `desktop` }),
-            m && !n && (0, J.jsx)(c, { label: N, shown: O }),
+            !_ && (0, J.jsx)(Z, { calendarURL: E, location: `desktop` }),
+            _ && !n && (0, J.jsx)(c, { label: N, shown: k }),
           ],
         }),
         (0, J.jsx)(i, {
           visibleElements: 5,
           hideArrows: !1,
           disableEdgeWrap: !0,
-          hidePips: m,
+          hidePips: _,
           screenIsWide: u,
           startingSlide: 10,
-          className: m ? void 0 : `fiveElementEightGap`,
-          children: w.map((e, t) =>
+          className: _ ? void 0 : `fiveElementEightGap`,
+          children: T.map((e, t) =>
             (0, J.jsx)(
               Q,
               {
                 bInitialFocus: t === 10,
                 nTimestamp: e,
-                nNextTimestamp: t < w.length - 1 ? w[t + 1] : e + 86400,
+                nNextTimestamp: t < T.length - 1 ? T[t + 1] : e + 86400,
                 arrAppInfos: V,
                 nRankThreshold: l?.nResultsToShow ?? 100,
               },
@@ -144,7 +144,7 @@ function X(e) {
             ),
           ),
         }),
-        !m && (0, J.jsx)(Z, { calendarURL: E, location: `mobile` }),
+        !_ && (0, J.jsx)(Z, { calendarURL: E, location: `mobile` }),
       ],
     })
   );
@@ -170,21 +170,21 @@ function Q(e) {
       arrAppInfos: i,
       nRankThreshold: a,
     } = e,
-    o = b(),
-    s = x(),
-    c = g(`${h.STORE_BASE_URL}personalcalendar`, o, s),
+    o = g(),
+    s = S(),
+    c = h(`${x.STORE_BASE_URL}personalcalendar`, o, s),
     l = { weekday: `short` },
-    d = { day: `numeric`, month: `numeric` },
-    f = new Date(t * 1e3),
-    p = new Date(),
-    m =
-      f.getDate() === p.getDate() &&
-      f.getMonth() === p.getMonth() &&
-      f.getFullYear() === p.getFullYear(),
-    _ = f > p,
-    y = f.toLocaleDateString(S(), l),
-    w = f.toLocaleString(S(), d),
-    O = i
+    u = { day: `numeric`, month: `numeric` },
+    m = new Date(t * 1e3),
+    _ = new Date(),
+    v =
+      m.getDate() === _.getDate() &&
+      m.getMonth() === _.getMonth() &&
+      m.getFullYear() === _.getFullYear(),
+    b = m > _,
+    T = m.toLocaleDateString(y(), l),
+    E = m.toLocaleString(y(), u),
+    D = i
       .filter((e) => e.nReleaseDate > t && e.nReleaseDate < n)
       .sort((e, t) =>
         e.bIsWishlisted && !t.bIsWishlisted
@@ -193,11 +193,11 @@ function Q(e) {
             ? 1
             : e.nRank - t.nRank,
       ),
-    k = a ?? 100,
-    j = O.filter((e) => e.nRank <= k).length - 2,
-    M = O.length == 0,
+    A = a ?? 100,
+    j = D.filter((e) => e.nRank <= A).length - 2,
+    M = D.length == 0,
     [N, F] = P.useState(!1),
-    I = A(),
+    I = f(),
     L = P.useRef(null);
   return (
     P.useEffect(() => {
@@ -207,38 +207,38 @@ function Q(e) {
         t && e && (t.scrollLeft = e.offsetLeft);
       }
     }, [r, I]),
-    (0, J.jsxs)(T, {
-      className: v(B, m && `_8XPG-IbvHHs-`, _ && `N3v3VnhKgU8-`, M && void 0),
+    (0, J.jsxs)(d, {
+      className: p(B, v && `_8XPG-IbvHHs-`, b && `N3v3VnhKgU8-`, M && void 0),
       "flow-children": `column`,
       children: [
         (0, J.jsxs)(`div`, {
           className: V,
           children: [
-            !m && (0, J.jsx)(`div`, { className: `FeN6na6SvAg-`, children: y }),
-            !m && (0, J.jsx)(`div`, { className: `bLQQ-syFWHg-`, children: w }),
-            m &&
+            !v && (0, J.jsx)(`div`, { className: `FeN6na6SvAg-`, children: T }),
+            !v && (0, J.jsx)(`div`, { className: `bLQQ-syFWHg-`, children: E }),
+            v &&
               (0, J.jsx)(`div`, {
                 className: `lGsGMjZ-9IE-`,
                 children: C.Localize(`#Time_Today`),
               }),
           ],
         }),
-        (0, J.jsx)(T, {
+        (0, J.jsx)(d, {
           className: H,
           "flow-children": `column`,
-          navEntryPreferPosition: D.MAINTAIN_Y,
+          navEntryPreferPosition: O.MAINTAIN_Y,
           preferredFocus: r && !N,
           ref: L,
           onFocusWithin: () => F(!0),
           children: (0, J.jsxs)(J.Fragment, {
             children: [
-              O.slice(0, 2).map((e) =>
+              D.slice(0, 2).map((e) =>
                 (0, J.jsx)($, { nAppID: e.nAppID }, e.nAppID),
               ),
               M &&
                 (0, J.jsx)(`div`, {
                   className: `MDx-yf8h-Ww-`,
-                  children: u(
+                  children: w(
                     C.Localize(`#PersonalCalendar_EmptyDay`),
                     (0, J.jsx)(`a`, { href: c }),
                   ),
@@ -248,7 +248,7 @@ function Q(e) {
         }),
         !I &&
           j > 0 &&
-          (0, J.jsx)(E, {
+          (0, J.jsx)(k, {
             href: c,
             className: `rsPEubiF9HI-`,
             children: C.Localize(`#PersonalCalendar_More`, j),
@@ -258,53 +258,53 @@ function Q(e) {
   );
 }
 function $(e) {
-  let t = k({ appid: e.nAppID }),
+  let t = b({ appid: e.nAppID }),
     n = a(940),
-    i = A(),
+    i = f(),
     [o, s] = P.useState(!1),
-    [c, u] = P.useState(!1),
-    f = P.useRef(null),
-    p = t.data === null ? void 0 : t.data,
-    m = N(p, n || i ? `main_capsule` : `hero_capsule`),
-    { data: h } = w(),
-    g = h?.preferences?.disable_microtrailers,
-    y = o || c;
+    [c, m] = P.useState(!1),
+    h = P.useRef(null),
+    g = t.data === null ? void 0 : t.data,
+    _ = N(g, n || i ? `main_capsule` : `hero_capsule`),
+    { data: v } = T(),
+    y = v?.preferences?.disable_microtrailers,
+    x = o || c;
   return (
     P.useEffect(() => {
       if (
-        (f.current &&
-          f.current.setAttribute(`data-ds-appid`, e.nAppID.toString() ?? ``),
+        (h.current &&
+          h.current.setAttribute(`data-ds-appid`, e.nAppID.toString() ?? ``),
         window.GDynamicStore && window.$J)
       ) {
-        let e = window.$J(f.current);
+        let e = window.$J(h.current);
         window.GDynamicStore.DecorateDynamicItems(e);
       }
-    }, [e.nAppID, f]),
-    (0, J.jsx)(_, {
+    }, [e.nAppID, h]),
+    (0, J.jsx)(A, {
       feature: `personalcalendar-homepage`,
-      children: (0, J.jsx)(T, {
-        onGamepadFocus: () => u(!0),
-        onGamepadBlur: () => u(!1),
+      children: (0, J.jsx)(d, {
+        onGamepadFocus: () => m(!0),
+        onGamepadBlur: () => m(!1),
         children: (0, J.jsx)(l, {
           id: { appid: e.nAppID },
           hoverClassName: U,
           disableScreenshots: !0,
-          children: (0, J.jsx)(d, {
+          children: (0, J.jsx)(u, {
             appID: e.nAppID,
-            children: (0, J.jsxs)(T, {
-              ref: f,
-              className: v(W, o && `T5zU104tmR0-`),
+            children: (0, J.jsxs)(d, {
+              ref: h,
+              className: p(W, o && `T5zU104tmR0-`),
               onMouseOver: () => s(!0),
               onMouseOut: () => s(!1),
               children: [
-                (0, J.jsx)(`img`, { className: G, src: m, alt: `` }),
-                g &&
-                  y &&
+                (0, J.jsx)(`img`, { className: G, src: _, alt: `` }),
+                y &&
+                  x &&
                   (0, J.jsx)(ee, { id: { appid: e.nAppID }, nIntervalMS: 1e3 }),
-                !g &&
+                !y &&
                   (0, J.jsx)(r, {
                     id: { appid: e.nAppID },
-                    active: y,
+                    active: x,
                     bIsHoverMode: !0,
                   }),
               ],
@@ -316,10 +316,10 @@ function $(e) {
   );
 }
 function ee(e) {
-  let t = p(e.id) ?? [],
+  let t = v(e.id) ?? [],
     [n, r] = P.useState(0);
   return (
-    y(() => {
+    m(() => {
       t.length > 0 && r((n + 1) % t.length);
     }, e.nIntervalMS),
     !t?.length || n == -1
@@ -330,8 +330,8 @@ function ee(e) {
             (0, J.jsx)(
               `img`,
               {
-                className: v(q, t == n && `B638L5YAOi8-`),
-                src: O.BASE_URL_SHARED_CDN + `/store_item_assets/` + e.filename,
+                className: p(q, t == n && `B638L5YAOi8-`),
+                src: E.BASE_URL_SHARED_CDN + `/store_item_assets/` + e.filename,
                 alt: ``,
               },
               e.filename,
@@ -341,7 +341,7 @@ function ee(e) {
   );
 }
 function te(e) {
-  return m.logged_in
+  return _.logged_in
     ? (0, J.jsx)(o, {
         placeholderHeight: 390,
         rootMargin: `100% 0px 100% 0px`,

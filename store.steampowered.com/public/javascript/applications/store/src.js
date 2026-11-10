@@ -8,30 +8,30 @@ import { t as a } from "./textlink.js";
 import { n as o, t as s } from "./hoversource.js";
 import {
   Ay as c,
-  Ca as l,
+  Bb as l,
   Cb as u,
-  Hb as d,
-  Lu as f,
-  Ny as p,
-  Ru as m,
-  Sb as h,
-  Vu as g,
-  ea as _,
-  ha as v,
-  ji as ee,
-  ky as y,
-  la as b,
-  ma as x,
-  sa as S,
-  ua as C,
-  yS as te,
-  zb as w,
+  Hu as d,
+  Mi as ee,
+  Py as f,
+  Ru as p,
+  Ub as m,
+  bS as h,
+  ca as g,
+  da as _,
+  ga as v,
+  ha as y,
+  jy as b,
+  ta as x,
+  ua as S,
+  wa as C,
+  wb as te,
+  zu as w,
 } from "./main.js";
 function T() {
-  return c(p) === `desktop`;
+  return b(f) === `desktop`;
 }
 function E() {
-  (T() && y(p), `location` in window && location.reload());
+  (T() && c(f), `location` in window && location.reload());
 }
 var D = e(t(), 1),
   O = e(n(), 1),
@@ -131,9 +131,9 @@ function z() {
 }
 function B(e) {
   let { href: t, ...n } = e,
-    r = g();
+    r = d();
   return (
-    t?.startsWith(d.STORE_BASE_URL) && (t = f(r, t)),
+    t?.startsWith(m.STORE_BASE_URL) && (t = p(r, t)),
     (0, I.jsx)(a, {
       href: t,
       color: `dull-11`,
@@ -144,7 +144,7 @@ function B(e) {
   );
 }
 function V(e) {
-  let t = l();
+  let t = C();
   return t === `initial` || t === `sm`
     ? null
     : (0, I.jsx)(`footer`, {
@@ -152,12 +152,12 @@ function V(e) {
         children: (0, I.jsxs)(v, {
           className: P,
           children: [
-            (0, I.jsxs)(x, {
+            (0, I.jsxs)(y, {
               align: `center`,
               justify: `between`,
               children: [
                 (0, I.jsx)(B, {
-                  href: d.STORE_BASE_URL,
+                  href: m.STORE_BASE_URL,
                   children: (0, I.jsx)(L, {}),
                 }),
                 (0, I.jsxs)(v, {
@@ -169,27 +169,27 @@ function V(e) {
                     }),
                     `\xA0 | \xA0`,
                     (0, I.jsx)(B, {
-                      href: d.STORE_BASE_URL + `about`,
+                      href: m.STORE_BASE_URL + `about`,
                       children: `关于蒸汽平台`,
                     }),
                     `\xA0 | \xA0`,
                     (0, I.jsx)(B, {
-                      href: d.STORE_BASE_URL + `steam_refunds`,
+                      href: m.STORE_BASE_URL + `steam_refunds`,
                       children: `退款政策`,
                     }),
                     `\xA0 | \xA0`,
                     (0, I.jsx)(B, {
-                      href: d.STORE_BASE_URL + `subscriber_agreement`,
+                      href: m.STORE_BASE_URL + `subscriber_agreement`,
                       children: `软件许可服务协议`,
                     }),
                     `\xA0 | \xA0`,
                     (0, I.jsx)(B, {
-                      href: d.STORE_BASE_URL + `privacy_agreement`,
+                      href: m.STORE_BASE_URL + `privacy_agreement`,
                       children: `个人信息保护政策`,
                     }),
                     `\xA0 | \xA0`,
                     (0, I.jsx)(B, {
-                      href: d.STORE_BASE_URL + `data_outbound`,
+                      href: m.STORE_BASE_URL + `data_outbound`,
                       children: `个人信息出境告知书`,
                     }),
                     `\xA0 | \xA0`,
@@ -213,11 +213,11 @@ function V(e) {
               ],
             }),
             (0, I.jsx)(`hr`, {}),
-            (0, I.jsxs)(x, {
+            (0, I.jsxs)(y, {
               align: `center`,
               justify: `between`,
               children: [
-                (0, I.jsxs)(x, {
+                (0, I.jsxs)(y, {
                   gap: `2`,
                   children: [
                     (0, I.jsx)(B, {
@@ -230,26 +230,26 @@ function V(e) {
                     }),
                   ],
                 }),
-                (0, I.jsxs)(x, {
+                (0, I.jsxs)(y, {
                   gap: `5`,
                   children: [
                     (0, I.jsx)(s, {
                       hoverContent: (0, I.jsx)(`img`, {
                         alt: ``,
                         src:
-                          d.STORE_CDN_URL +
+                          m.STORE_CDN_URL +
                           `public/shared/images/footer/Weibo-QR.png?v=2`,
                       }),
-                      children: (0, I.jsxs)(x, {
+                      children: (0, I.jsxs)(y, {
                         align: `center`,
                         children: [
                           (0, I.jsx)(`img`, {
                             alt: `微博`,
                             src:
-                              d.STORE_CDN_URL +
+                              m.STORE_CDN_URL +
                               `public/shared/images/footer/weibo_logo.svg?v=1`,
                           }),
-                          (0, I.jsx)(S, { children: `微博` }),
+                          (0, I.jsx)(g, { children: `微博` }),
                         ],
                       }),
                     }),
@@ -257,19 +257,19 @@ function V(e) {
                       hoverContent: (0, I.jsx)(`img`, {
                         alt: ``,
                         src:
-                          d.STORE_CDN_URL +
+                          m.STORE_CDN_URL +
                           `public/shared/images/footer/WeChat-QR.png?v=2`,
                       }),
-                      children: (0, I.jsxs)(x, {
+                      children: (0, I.jsxs)(y, {
                         align: `center`,
                         children: [
                           (0, I.jsx)(`img`, {
                             alt: `微信`,
                             src:
-                              d.STORE_CDN_URL +
+                              m.STORE_CDN_URL +
                               `public/shared/images/footer/wechat_logo.svg?v=1`,
                           }),
-                          (0, I.jsx)(S, { children: `微信` }),
+                          (0, I.jsx)(g, { children: `微信` }),
                         ],
                       }),
                     }),
@@ -277,7 +277,7 @@ function V(e) {
                 }),
               ],
             }),
-            (0, I.jsxs)(x, {
+            (0, I.jsxs)(y, {
               align: `center`,
               justify: `between`,
               marginTop: `5`,
@@ -317,73 +317,73 @@ function V(e) {
 }
 var H = {};
 ((H.arabic = () =>
-  h(() => import(`./globalfooter_arabic.js`), [], import.meta.url)),
+  u(() => import(`./globalfooter_arabic.js`), [], import.meta.url)),
   (H.brazilian = () =>
-    h(() => import(`./globalfooter_brazilian.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_brazilian.js`), [], import.meta.url)),
   (H.bulgarian = () =>
-    h(() => import(`./globalfooter_bulgarian.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_bulgarian.js`), [], import.meta.url)),
   (H.czech = () =>
-    h(() => import(`./globalfooter_czech.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_czech.js`), [], import.meta.url)),
   (H.danish = () =>
-    h(() => import(`./globalfooter_danish.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_danish.js`), [], import.meta.url)),
   (H.dutch = () =>
-    h(() => import(`./globalfooter_dutch.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_dutch.js`), [], import.meta.url)),
   (H.english = () =>
-    h(() => import(`./globalfooter_english.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_english.js`), [], import.meta.url)),
   (H.finnish = () =>
-    h(() => import(`./globalfooter_finnish.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_finnish.js`), [], import.meta.url)),
   (H.french = () =>
-    h(() => import(`./globalfooter_french.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_french.js`), [], import.meta.url)),
   (H.german = () =>
-    h(() => import(`./globalfooter_german.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_german.js`), [], import.meta.url)),
   (H.greek = () =>
-    h(() => import(`./globalfooter_greek.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_greek.js`), [], import.meta.url)),
   (H.hungarian = () =>
-    h(() => import(`./globalfooter_hungarian.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_hungarian.js`), [], import.meta.url)),
   (H.indonesian = () =>
-    h(() => import(`./globalfooter_indonesian.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_indonesian.js`), [], import.meta.url)),
   (H.italian = () =>
-    h(() => import(`./globalfooter_italian.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_italian.js`), [], import.meta.url)),
   (H.japanese = () =>
-    h(() => import(`./globalfooter_japanese.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_japanese.js`), [], import.meta.url)),
   (H.koreana = () =>
-    h(() => import(`./globalfooter_koreana.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_koreana.js`), [], import.meta.url)),
   (H.latam = () =>
-    h(() => import(`./globalfooter_latam.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_latam.js`), [], import.meta.url)),
   (H.malay = () =>
-    h(() => import(`./globalfooter_malay.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_malay.js`), [], import.meta.url)),
   (H.norwegian = () =>
-    h(() => import(`./globalfooter_norwegian.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_norwegian.js`), [], import.meta.url)),
   (H.polish = () =>
-    h(() => import(`./globalfooter_polish.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_polish.js`), [], import.meta.url)),
   (H.portuguese = () =>
-    h(() => import(`./globalfooter_portuguese.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_portuguese.js`), [], import.meta.url)),
   (H.romanian = () =>
-    h(() => import(`./globalfooter_romanian.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_romanian.js`), [], import.meta.url)),
   (H.russian = () =>
-    h(() => import(`./globalfooter_russian.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_russian.js`), [], import.meta.url)),
   (H.sc_schinese = () =>
-    h(() => import(`./globalfooter_sc_schinese.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_sc_schinese.js`), [], import.meta.url)),
   (H.schinese = () =>
-    h(() => import(`./globalfooter_schinese.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_schinese.js`), [], import.meta.url)),
   (H.spanish = () =>
-    h(() => import(`./globalfooter_spanish.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_spanish.js`), [], import.meta.url)),
   (H.swedish = () =>
-    h(() => import(`./globalfooter_swedish.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_swedish.js`), [], import.meta.url)),
   (H.tchinese = () =>
-    h(() => import(`./globalfooter_tchinese.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_tchinese.js`), [], import.meta.url)),
   (H.thai = () =>
-    h(() => import(`./globalfooter_thai.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_thai.js`), [], import.meta.url)),
   (H.turkish = () =>
-    h(() => import(`./globalfooter_turkish.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_turkish.js`), [], import.meta.url)),
   (H.ukrainian = () =>
-    h(() => import(`./globalfooter_ukrainian.js`), [], import.meta.url)),
+    u(() => import(`./globalfooter_ukrainian.js`), [], import.meta.url)),
   (H.vietnamese = () =>
-    h(() => import(`./globalfooter_vietnamese.js`), [], import.meta.url)));
+    u(() => import(`./globalfooter_vietnamese.js`), [], import.meta.url)));
 async function U(e) {
   if (H[e]) return await H[e]();
 }
-var W = u(U);
+var W = te(U);
 function G() {
   return (0, I.jsxs)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
@@ -507,7 +507,7 @@ function X() {
   });
 }
 function Z(e) {
-  return (0, I.jsx)(x, { direction: `column`, gap: `4`, ...e });
+  return (0, I.jsx)(y, { direction: `column`, gap: `4`, ...e });
 }
 function Q(e) {
   return (0, I.jsx)(i, {
@@ -520,9 +520,9 @@ function Q(e) {
 }
 function $(e) {
   let { href: t, ...n } = e,
-    r = g();
+    r = d();
   return (
-    t?.startsWith(d.STORE_BASE_URL) && (t = f(r, t)),
+    t?.startsWith(m.STORE_BASE_URL) && (t = p(r, t)),
     (0, I.jsx)(a, {
       href: t,
       color: `dull-11`,
@@ -533,19 +533,19 @@ function $(e) {
   );
 }
 function ne() {
-  let e = l();
-  return (0, I.jsxs)(x, {
+  let e = C();
+  return (0, I.jsxs)(y, {
     gridArea: `main`,
     direction: `column`,
     gap: `5`,
     align: `start`,
     children: [
-      (0, I.jsxs)(x, {
+      (0, I.jsxs)(y, {
         gap: `6`,
         align: `center`,
         children: [
           (0, I.jsx)($, {
-            href: d.STORE_BASE_URL,
+            href: m.STORE_BASE_URL,
             children: (0, I.jsx)(G, {}),
           }),
           (0, I.jsx)($, {
@@ -554,15 +554,15 @@ function ne() {
           }),
         ],
       }),
-      (0, I.jsx)(S, {
+      (0, I.jsx)(g, {
         as: `p`,
         size: `1`,
         className: A,
-        children: _(
+        children: x(
           W.Localize(`#footer_legal_notice`, new Date().getFullYear()),
         ),
       }),
-      (0, I.jsxs)(x, {
+      (0, I.jsxs)(y, {
         gap: `6`,
         align: `center`,
         className: j,
@@ -585,17 +585,17 @@ function ne() {
           }),
         ],
       }),
-      (0, I.jsxs)(x, {
+      (0, I.jsxs)(y, {
         gap: `5`,
         children: [
           e === `initial` &&
-            !d.IN_MOBILE_WEBVIEW &&
-            (0, I.jsx)(C, {
-              href: d.STORE_BASE_URL + `mobile/`,
+            !m.IN_MOBILE_WEBVIEW &&
+            (0, I.jsx)(_, {
+              href: m.STORE_BASE_URL + `mobile/`,
               children: W.Localize(`#footer_link_get_mobile_apps`),
             }),
           T() &&
-            (0, I.jsx)(b, {
+            (0, I.jsx)(S, {
               color: `dull`,
               onClick: E,
               children: W.Localize(`#footer_view_mobile_website`),
@@ -638,23 +638,23 @@ function re(e) {
                 children: W.Localize(`#footer_link_header_steam`),
               }),
               (0, I.jsx)($, {
-                href: d.STORE_BASE_URL + `about/`,
+                href: m.STORE_BASE_URL + `about/`,
                 children: W.Localize(`#footer_link_about_steam`),
               }),
               (0, I.jsx)($, {
-                href: d.STORE_BASE_URL + `subscriber_agreement/`,
+                href: m.STORE_BASE_URL + `subscriber_agreement/`,
                 children: W.Localize(`#footer_link_steam_ssa`),
               }),
               (0, I.jsx)($, {
-                href: d.PARTNER_BASE_URL,
+                href: m.PARTNER_BASE_URL,
                 children: W.Localize(`#footer_link_steamworks`),
               }),
               (0, I.jsx)($, {
-                href: d.PARTNER_BASE_URL + `steamdirect`,
+                href: m.PARTNER_BASE_URL + `steamdirect`,
                 children: W.Localize(`#footer_link_steam_distribution`),
               }),
               (0, I.jsx)($, {
-                href: d.STORE_BASE_URL + `digitalgiftcards/`,
+                href: m.STORE_BASE_URL + `digitalgiftcards/`,
                 children: W.Localize(`#footer_link_gift_cards`),
               }),
             ],
@@ -674,11 +674,11 @@ function re(e) {
                 children: W.Localize(`#footer_link_jobs`),
               }),
               (0, I.jsx)($, {
-                href: d.STORE_BASE_URL + `hardware/`,
+                href: m.STORE_BASE_URL + `hardware/`,
                 children: W.Localize(`#footer_link_hardware`),
               }),
               (0, I.jsx)($, {
-                href: d.STORE_BASE_URL + `hardware_recycling/`,
+                href: m.STORE_BASE_URL + `hardware_recycling/`,
                 children: W.Localize(`#footer_link_recycling`),
               }),
             ],
@@ -690,7 +690,7 @@ function re(e) {
                 children: W.Localize(`#footer_link_header_legal`),
               }),
               (0, I.jsx)($, {
-                href: d.STORE_BASE_URL + `privacy_agreement/`,
+                href: m.STORE_BASE_URL + `privacy_agreement/`,
                 children: W.Localize(`#footer_link_privacy`),
               }),
               (0, I.jsx)($, {
@@ -698,15 +698,15 @@ function re(e) {
                 children: W.Localize(`#footer_link_accessibility`),
               }),
               (0, I.jsx)($, {
-                href: d.STORE_BASE_URL + `legal/`,
+                href: m.STORE_BASE_URL + `legal/`,
                 children: W.Localize(`#footer_link_notices_and_policies`),
               }),
               (0, I.jsx)($, {
-                href: d.STORE_BASE_URL + `account/cookiepreferences/`,
+                href: m.STORE_BASE_URL + `account/cookiepreferences/`,
                 children: W.Localize(`#footer_link_cookies`),
               }),
               (0, I.jsx)($, {
-                href: d.STORE_BASE_URL + `steam_refunds/`,
+                href: m.STORE_BASE_URL + `steam_refunds/`,
                 children: W.Localize(`#footer_link_refunds`),
               }),
             ],
@@ -718,19 +718,19 @@ function re(e) {
                 children: W.Localize(`#footer_link_header_more`),
               }),
               (0, I.jsx)($, {
-                href: d.STORE_BASE_URL + `about/`,
+                href: m.STORE_BASE_URL + `about/`,
                 children: W.Localize(`#footer_link_get_steam`),
               }),
               (0, I.jsx)($, {
-                href: d.STORE_BASE_URL + `mobile/`,
+                href: m.STORE_BASE_URL + `mobile/`,
                 children: W.Localize(`#footer_link_get_mobile_apps`),
               }),
               (0, I.jsx)($, {
-                href: d.HELP_BASE_URL,
+                href: m.HELP_BASE_URL,
                 children: W.Localize(`#footer_link_get_support`),
               }),
               (0, I.jsx)($, {
-                href: d.STORE_BASE_URL + `account/`,
+                href: m.STORE_BASE_URL + `account/`,
                 children: W.Localize(`#footer_link_my_account`),
               }),
             ],
@@ -741,8 +741,8 @@ function re(e) {
   );
 }
 function ie(e) {
-  if (w()) return null;
-  let t = te(d.EREALM) ? (0, I.jsx)(V, { ...e }) : (0, I.jsx)(re, { ...e });
-  return (0, I.jsx)(m, { controller: `footer`, method: `footer`, children: t });
+  if (l()) return null;
+  let t = h(m.EREALM) ? (0, I.jsx)(V, { ...e }) : (0, I.jsx)(re, { ...e });
+  return (0, I.jsx)(w, { controller: `footer`, method: `footer`, children: t });
 }
 export { ie as GlobalFooter };

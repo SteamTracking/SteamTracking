@@ -16,37 +16,37 @@ import { t as c } from "./throbber.js";
 import { S as l, j as u } from "./partnereventshared.module.js";
 import { h as d, p as f } from "./clanimageupload.js";
 import {
-  $n as p,
-  Gx as m,
-  Jc as h,
-  Lx as g,
-  Mb as _,
-  Nn as v,
-  Rr as y,
-  Rx as b,
-  Sc as x,
-  Uy as S,
-  Zn as C,
-  ab as w,
-  bS as T,
-  ir as E,
-  lS as D,
-  lb as O,
-  mS as k,
-  nr as A,
-  or as j,
-  rx as M,
-  sr as N,
-  tr as P,
-  zy as F,
+  By as p,
+  Cc as m,
+  Kx as h,
+  Nb as g,
+  Pn as _,
+  Qn as v,
+  Rx as y,
+  Wy as b,
+  Yc as x,
+  ar as S,
+  cr as C,
+  er as w,
+  hS as T,
+  ix as E,
+  nr as D,
+  ob as O,
+  rr as k,
+  sr as A,
+  uS as j,
+  ub as M,
+  xS as N,
+  zr as P,
+  zx as F,
 } from "./main.js";
 var I = e(r()),
   L = i(),
   R = class e {
-    m_eCurLang = k(M.LANGUAGE);
-    m_rgHasData = m([], 32, !1);
+    m_eCurLang = T(E.LANGUAGE);
+    m_rgHasData = h([], 32, !1);
     m_bHasLocalizationContext = !1;
-    m_callback = new g();
+    m_callback = new y();
     GetCallback() {
       return this.m_callback;
     }
@@ -82,13 +82,13 @@ var I = e(r()),
       a(this);
     }
   };
-(_([t], R.prototype, `m_eCurLang`, void 0),
-  _([t], R.prototype, `m_rgHasData`, void 0),
-  _([t], R.prototype, `m_bHasLocalizationContext`, void 0),
-  _([b], R.prototype, `GetCurEditLanguage`, null),
-  _([b], R.prototype, `SetCurEditLanguage`, null),
-  _([n.bound], R.prototype, `SetHasLanguage`, null),
-  _([b], R.prototype, `BHasLanguageData`, null));
+(g([t], R.prototype, `m_eCurLang`, void 0),
+  g([t], R.prototype, `m_rgHasData`, void 0),
+  g([t], R.prototype, `m_bHasLocalizationContext`, void 0),
+  g([F], R.prototype, `GetCurEditLanguage`, null),
+  g([F], R.prototype, `SetCurEditLanguage`, null),
+  g([n.bound], R.prototype, `SetHasLanguage`, null),
+  g([F], R.prototype, `BHasLanguageData`, null));
 function z() {
   return s(() => R.Get().GetCurEditLanguage());
 }
@@ -106,25 +106,25 @@ var B = `_1ZQxfdsiPgM-`,
       l = (e) => {
         (n(e), o());
       };
-    return (0, L.jsx)(h, {
-      children: (0, L.jsx)(v, {
+    return (0, L.jsx)(x, {
+      children: (0, L.jsx)(_, {
         onEscKeypress: o,
-        children: (0, L.jsxs)(E, {
+        children: (0, L.jsxs)(S, {
           children: [
-            (0, L.jsx)(N, { children: S(`#ClanImageChooser_Title`) }),
-            (0, L.jsx)(p, {
-              children: (0, L.jsxs)(P, {
+            (0, L.jsx)(C, { children: b(`#ClanImageChooser_Title`) }),
+            (0, L.jsx)(w, {
+              children: (0, L.jsxs)(D, {
                 children: [
-                  (0, L.jsx)(`p`, { children: S(`#ClanImageChooser_Desc`) }),
-                  (0, L.jsx)(C, {
-                    placeholder: S(`#ClanImageChooser_Search`),
+                  (0, L.jsx)(`p`, { children: b(`#ClanImageChooser_Desc`) }),
+                  (0, L.jsx)(v, {
+                    placeholder: b(`#ClanImageChooser_Search`),
                     value: r,
                     onChange: (e) => i(e.currentTarget.value),
                   }),
                   (0, L.jsx)(`div`, {
                     className: B,
                     children: a
-                      ? (0, L.jsx)(c, { size: `medium`, string: S(`#Loading`) })
+                      ? (0, L.jsx)(c, { size: `medium`, string: b(`#Loading`) })
                       : s.length > 0
                         ? s.map((e) =>
                             (0, L.jsx)(
@@ -139,10 +139,10 @@ var B = `_1ZQxfdsiPgM-`,
                           )
                         : r.trim().length == 0
                           ? (0, L.jsx)(`div`, {
-                              children: S(`#ClanImageChooser_None`),
+                              children: b(`#ClanImageChooser_None`),
                             })
                           : (0, L.jsx)(`div`, {
-                              children: S(
+                              children: b(
                                 `#EventCalendar_GameSearch_NoneFound`,
                               ),
                             }),
@@ -150,10 +150,10 @@ var B = `_1ZQxfdsiPgM-`,
                 ],
               }),
             }),
-            (0, L.jsx)(j, {
-              children: (0, L.jsx)(A, {
+            (0, L.jsx)(A, {
+              children: (0, L.jsx)(k, {
                 onClick: o,
-                children: S(`#Button_Cancel`),
+                children: b(`#Button_Cancel`),
               }),
             }),
           ],
@@ -222,16 +222,16 @@ var J = class extends I.Component {
       e.push(
         (0, L.jsx)(
           `option`,
-          { value: -1, children: S(`#language_selection_none`) },
+          { value: -1, children: b(`#language_selection_none`) },
           `langpicker_unset`,
         ),
       );
     let a = [],
-      o = this.props.realms || [T.k_ESteamRealmGlobal];
-    for (let e of F.GetLanguageListForRealms(o)) {
+      o = this.props.realms || [N.k_ESteamRealmGlobal];
+    for (let e of p.GetLanguageListForRealms(o)) {
       if (t && !t(e)) continue;
-      let n = D(e),
-        r = S(`#Language_` + n),
+      let n = j(e),
+        r = b(`#Language_` + n),
         o = !!(i && i(e));
       a.push({ eLang: e, sLocName: r, bSupported: o });
     }
@@ -251,7 +251,7 @@ var J = class extends I.Component {
             {
               className: u,
               disabled: !0,
-              children: S(
+              children: b(
                 t.bSupported
                   ? `#LanguageGroup_Supported`
                   : `#LanguageGroup_Unsupported`,
@@ -267,16 +267,16 @@ var J = class extends I.Component {
       (a &&
         a !== 0 &&
         ((o += ` `),
-        (o += S(
+        (o += b(
           `#Language_Last_Update`,
-          O(a) + ` @ ` + w(a, { bForce24HourClock: !1 }),
+          M(a) + ` @ ` + O(a, { bForce24HourClock: !1 }),
         ))),
         e.push(
           (0, L.jsx)(
             `option`,
             {
               value: t.eLang,
-              className: x({ [l]: i }, (t.bSupported, void 0)),
+              className: m({ [l]: i }, (t.bSupported, void 0)),
               children: o,
             },
             `langpicker` + t.eLang + (i ? `_hasdata` : ``),
@@ -293,7 +293,7 @@ var J = class extends I.Component {
   render() {
     let { selectedLang: e, bDisabled: t, strTooltip: n } = this.props,
       r = this.GenerateLanguageOptions();
-    return (0, L.jsx)(y, {
+    return (0, L.jsx)(P, {
       toolTipContent: n,
       children: (0, L.jsx)(`select`, {
         value: e,
@@ -304,5 +304,5 @@ var J = class extends I.Component {
     });
   }
 };
-(_([b], J.prototype, `OnLanguageChange`, null), (J = _([o], J)));
+(g([F], J.prototype, `OnLanguageChange`, null), (J = g([o], J)));
 export { z as a, R as i, G as n, q as r, J as t };

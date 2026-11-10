@@ -6,18 +6,18 @@ import { Lt as t, V as n, ft as r, nt as i, st as a } from "./libraries.js";
 import { t as o } from "./throbber.js";
 import { r as s, t as c } from "./remotedownloadhooks.js";
 import {
-  Jb as l,
-  Kc as u,
-  Uy as d,
-  ax as f,
-  cr as p,
-  iy as m,
-  mS as h,
-  mx as g,
-  nr as _,
-  qc as v,
-  rx as y,
-  sy as b,
+  Jc as l,
+  Wy as u,
+  Yb as d,
+  ay as f,
+  cy as p,
+  hS as m,
+  hx as h,
+  ix as g,
+  lr as _,
+  ox as v,
+  qc as y,
+  rr as b,
 } from "./main.js";
 import { t as x } from "./partnereventslogin.js";
 function S(e) {
@@ -54,7 +54,7 @@ var w = `HQgdwH5tXUk-`,
   I,
   L = 864e5;
 function R(e) {
-  return `appinfo_${e}_${y.LANGUAGE}`;
+  return `appinfo_${e}_${g.LANGUAGE}`;
 }
 function z(e) {
   return !!(e && Date.now() - e.timeCached < L);
@@ -69,9 +69,9 @@ function B(e, t) {
           .forEach(({ value: e }) => r.set(e.appid, e));
         let i = n.slice().filter((e) => !r.has(e));
         if (i.length) {
-          let n = g.Init(u);
-          (n.Body().set_language(h(y.LANGUAGE)), n.Body().set_appids(i));
-          let a = await v.GetApps(e, n);
+          let n = h.Init(y);
+          (n.Body().set_language(m(g.LANGUAGE)), n.Body().set_appids(i));
+          let a = await l.GetApps(e, n);
           if (a.GetEResult() != 1) throw a.GetErrorMessage();
           a.Body()
             .toObject()
@@ -88,8 +88,8 @@ function B(e, t) {
   );
 }
 function V(e) {
-  let t = m(),
-    n = b();
+  let t = f(),
+    n = p();
   return a({
     queryKey: [`appinfo`, e],
     queryFn: async () => B(t, n).load(e),
@@ -102,7 +102,7 @@ function U(e) {
   return `?joinsessionid=${e}`;
 }
 function W(e) {
-  return (0, H.jsx)(_, {
+  return (0, H.jsx)(b, {
     className: D,
     onClick: () =>
       (window.location.href =
@@ -112,12 +112,12 @@ function W(e) {
 }
 function G(e) {
   let t = s(),
-    n = m();
+    n = f();
   return t.isSuccess
     ? t.data?.sessions?.length > 0
       ? (0, H.jsxs)(H.Fragment, {
           children: [
-            (0, H.jsx)(p, {
+            (0, H.jsx)(_, {
               className: M,
               children: `Available Steam Sessions:`,
             }),
@@ -134,7 +134,7 @@ function G(e) {
                         children: t.machine_name,
                       }),
                       (0, H.jsx)(`div`, { className: j, children: t.os_name }),
-                      (0, H.jsx)(_, {
+                      (0, H.jsx)(b, {
                         className: D,
                         onClick: () =>
                           c(
@@ -182,7 +182,7 @@ function K(e) {
             className: T,
             children: (0, H.jsx)(`iframe`, { src: e.sessionLiveDataUrl }),
           }),
-          y.IN_CLIENT
+          g.IN_CLIENT
             ? (0, H.jsx)(`div`, {
                 className: E,
                 children: (0, H.jsx)(W, { ...e, children: `Launch Game` }),
@@ -191,25 +191,25 @@ function K(e) {
                 children: [
                   (0, H.jsx)(`div`, {
                     className: E,
-                    children: f.logged_in
+                    children: v.logged_in
                       ? (0, H.jsx)(G, { ...e })
                       : (0, H.jsxs)(H.Fragment, {
                           children: [
-                            (0, H.jsx)(p, {
+                            (0, H.jsx)(_, {
                               children: `Login to join on another device`,
                             }),
-                            (0, H.jsx)(_, {
+                            (0, H.jsx)(b, {
                               onClick: x,
-                              children: d(`#Login_SignIn`),
+                              children: u(`#Login_SignIn`),
                             }),
                           ],
                         }),
                   }),
-                  !y.IN_MOBILE_WEBVIEW &&
+                  !g.IN_MOBILE_WEBVIEW &&
                     (0, H.jsxs)(`div`, {
                       className: `SqHuEyf-R0c-`,
                       children: [
-                        (0, H.jsx)(p, { children: `Or launch on this PC` }),
+                        (0, H.jsx)(_, { children: `Or launch on this PC` }),
                         (0, H.jsx)(W, { ...e, children: `Launch Game Here` }),
                       ],
                     }),
@@ -220,7 +220,7 @@ function K(e) {
     : (0, H.jsx)(o, {});
 }
 function q() {
-  let e = l(`multiplayersession_join`, `application_config`),
+  let e = d(`multiplayersession_join`, `application_config`),
     { header: t, body: r } = S(new URLSearchParams(n().search).get(`jws`)) || {
       header: {},
       body: {},

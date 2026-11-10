@@ -17,55 +17,55 @@ import { t as u } from "./throbber.js";
 import { t as d } from "./appinfostore.js";
 import { n as f } from "./storeitemhooks.js";
 import {
-  $n as ee,
   $x as p,
-  Iu as m,
-  Iy as te,
-  Jc as h,
-  Lx as ne,
-  Mb as g,
-  Oi as re,
-  Qx as _,
-  Rx as v,
-  Sc as ie,
-  Vl as ae,
-  Xx as y,
-  Yx as b,
-  Zn as x,
-  Zx as S,
-  _u as oe,
-  ax as C,
-  bS as se,
-  du as ce,
+  Cc as m,
+  Hl as h,
+  Jn as g,
+  Lu as _,
+  Ly as ee,
+  Nb as v,
+  Qn as y,
+  Qx as b,
+  Rx as te,
+  Xx as x,
+  Yc as S,
+  Zx as C,
+  dx as ne,
   eS as w,
-  fu as le,
-  fx as ue,
-  hx as T,
-  lb as de,
-  lx as fe,
-  mx as pe,
-  nS as E,
-  nr as me,
-  oy as he,
-  px as D,
-  qn as O,
-  rx as k,
-  ry as ge,
-  tS as A,
-  ux as _e,
+  er as re,
+  fu as ie,
+  gx as T,
+  hx as ae,
+  ix as E,
+  iy as oe,
+  ki as se,
+  mx as D,
+  nS as O,
+  ox as k,
+  pu as ce,
+  px as le,
+  rS as A,
+  rr as ue,
+  sy as de,
+  tS as j,
+  ub as fe,
+  ux as pe,
+  vu as me,
+  xS as he,
+  zx as M,
 } from "./main.js";
 import "./steammessages_twofactor_pb.js";
-import { t as ve } from "./logindialog.js";
-var j = e(l()),
-  M = class {
+import { t as ge } from "./logindialog.js";
+var N = e(l()),
+  P = class {
     rgModelNames = [];
     constructor() {
       s(this);
     }
     Init(e) {
       d.Init(e);
-      let t = `${k.STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames`;
-      j.default.get(t).then((e) => {
+      let t = `${E.STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames`;
+      N.default.get(t).then((e) => {
         if (e.data) {
           let t = [];
           for (let n of e.data) n != "default" && t.push(n);
@@ -75,7 +75,7 @@ var j = e(l()),
     }
     async ComputePathBetweenApps(e, t, n, r, i, a, o) {
       let s = Math.acos(n),
-        c = await new be(
+        c = await new ve(
           async (e) => {
             let t = await this.GetNeighbors(e),
               n = [];
@@ -104,8 +104,8 @@ var j = e(l()),
       throw Error(`Unable to compute path.`);
     }
     async GetNeighbors(e) {
-      let t = `${k.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}`,
-        n = await j.default.get(t),
+      let t = `${E.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}`,
+        n = await N.default.get(t),
         r = [];
       if (n.data && n.data.appid == e)
         for (let e = 0; e < n.data.similar_appids.length; e++)
@@ -116,17 +116,17 @@ var j = e(l()),
       return r;
     }
     async EstimateCosts(e, t) {
-      let n = `${k.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${t}&${e.map((e) => `appid[]=` + e.toString()).join(`&`)}`,
-        r = await j.default.get(n);
+      let n = `${E.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${t}&${e.map((e) => `appid[]=` + e.toString()).join(`&`)}`,
+        r = await N.default.get(n);
       if (r.data && r.data.similarity_scores)
         return r.data.similarity_scores.map((e) => Math.acos(parseFloat(e)));
       throw Error(`Unable to fetch cost estimates`);
     }
   };
-(g([t], M.prototype, `rgModelNames`, void 0),
-  g([v], M.prototype, `GetNeighbors`, null),
-  g([v], M.prototype, `EstimateCosts`, null));
-var ye = class {
+(v([t], P.prototype, `rgModelNames`, void 0),
+  v([M], P.prototype, `GetNeighbors`, null),
+  v([M], P.prototype, `EstimateCosts`, null));
+var _e = class {
     m_fnCompare;
     m_Heap = [];
     m_Length = 0;
@@ -198,7 +198,7 @@ var ye = class {
       }
     }
   },
-  be = class {
+  ve = class {
     m_fnGetNeighbors;
     m_fnEstimateCosts;
     m_fnEquality;
@@ -210,7 +210,7 @@ var ye = class {
         (this.m_fnIterationCallback = r));
     }
     async FindPath(e, t, n) {
-      let r = new ye((e, t) => e.cost - t.cost),
+      let r = new _e((e, t) => e.cost - t.cost),
         i = new Set();
       r.Push({ node: e, cost: 0 });
       let a = new Map(),
@@ -269,41 +269,41 @@ var ye = class {
       throw Error(`No path found.`);
     }
   },
-  N = new M();
-window.g_LabsSandbox = N;
-var P = e(i()),
-  xe = `WVhYXTPPa5Q-`,
-  Se = `x3LMY1wB7Z8-`,
-  F = `n0-NbgKnVgg-`,
-  Ce = `_72I-MQtMZj8-`,
-  we = `MtuwGZaUAng-`,
-  I = `CvXL-Wwt9TQ-`,
-  L = `rCcaMabbZx4-`,
-  R = `ddPMSRBRHGw-`,
-  z = `_8cUEY8q0nYU-`,
-  Te = `NgWhKdDUzuY-`,
-  Ee = `lgXtUsuljdc-`,
-  De = `_-5Y-zHiqGtQ-`,
-  Oe = `ZUZRryOqfLs-`,
-  ke = `QlNwd-gOVoA-`,
-  Ae = `LEzgtgE3TQM-`,
-  B = `BrotS3tOfxw-`,
-  je = `AkJ02HXKMhs-`,
-  V = `TauA-sfyWB8-`,
-  Me = `HHHUlYd80sY-`,
-  Ne = `UiEMtH5V5hM-`,
-  H = `_0xUYDLGHKic-`,
-  U = `oMov3TXH87I-`,
-  Pe = `Q7tllLDG5wk-`,
-  Fe = `N27spIgX8-A-`,
-  Ie = `fgvlHXQJgVM-`,
-  Le = `z3E2YTZo-D4-`,
-  Re = `AVkSlVChUus-`,
-  ze = `-tfmW4i7r-U-`,
-  Be = `_8NYUdIS8vVE-`,
-  Ve = `c7rqBghcJoQ-`,
-  W = o(),
-  G = class extends P.Component {
+  F = new P();
+window.g_LabsSandbox = F;
+var I = e(i()),
+  ye = `WVhYXTPPa5Q-`,
+  be = `x3LMY1wB7Z8-`,
+  L = `n0-NbgKnVgg-`,
+  xe = `_72I-MQtMZj8-`,
+  Se = `MtuwGZaUAng-`,
+  R = `CvXL-Wwt9TQ-`,
+  z = `rCcaMabbZx4-`,
+  B = `ddPMSRBRHGw-`,
+  Ce = `_8cUEY8q0nYU-`,
+  we = `NgWhKdDUzuY-`,
+  Te = `lgXtUsuljdc-`,
+  Ee = `_-5Y-zHiqGtQ-`,
+  De = `ZUZRryOqfLs-`,
+  Oe = `QlNwd-gOVoA-`,
+  ke = `LEzgtgE3TQM-`,
+  V = `BrotS3tOfxw-`,
+  Ae = `AkJ02HXKMhs-`,
+  H = `TauA-sfyWB8-`,
+  je = `HHHUlYd80sY-`,
+  Me = `UiEMtH5V5hM-`,
+  U = `_0xUYDLGHKic-`,
+  W = `oMov3TXH87I-`,
+  Ne = `Q7tllLDG5wk-`,
+  Pe = `N27spIgX8-A-`,
+  Fe = `fgvlHXQJgVM-`,
+  Ie = `z3E2YTZo-D4-`,
+  Le = `AVkSlVChUus-`,
+  Re = `-tfmW4i7r-U-`,
+  ze = `_8NYUdIS8vVE-`,
+  Be = `c7rqBghcJoQ-`,
+  G = o(),
+  K = class extends I.Component {
     state = {
       appid: 0,
       appinfo: null,
@@ -333,9 +333,9 @@ var P = e(i()),
         ? (window.clearTimeout(this.m_currentRequest),
           (this.m_currentRequest = window.setTimeout(async () => {
             let e = {
-                cc: k.COUNTRY,
-                l: k.LANGUAGE,
-                realm: se.k_ESteamRealmGlobal,
+                cc: E.COUNTRY,
+                l: E.LANGUAGE,
+                realm: he.k_ESteamRealmGlobal,
                 origin: self.origin,
                 f: `jsonfull`,
                 term: t.replace(` `, `+`),
@@ -343,20 +343,20 @@ var P = e(i()),
                 excluded_tags: [],
                 excluded_content_descriptors: [],
               },
-              n = `${k.STORE_BASE_URL}search/suggest`,
-              r = await j.default.get(n, { params: e, withCredentials: !0 }),
+              n = `${E.STORE_BASE_URL}search/suggest`,
+              r = await N.default.get(n, { params: e, withCredentials: !0 }),
               i;
             ((i = r?.data?.length
               ? r.data.map((e) =>
-                  (0, W.jsxs)(
+                  (0, G.jsxs)(
                     `div`,
                     {
-                      className: we,
+                      className: Se,
                       onClickCapture: () => this.SetSelectedApp(parseInt(e.id)),
                       children: [
-                        (0, W.jsx)(`img`, { src: e.img, className: Se }),
-                        (0, W.jsx)(`div`, {
-                          className: F,
+                        (0, G.jsx)(`img`, { src: e.img, className: be }),
+                        (0, G.jsx)(`div`, {
+                          className: L,
                           children:
                             e.name +
                             (this.props.showAppIds ? ` (${e.id})` : ``),
@@ -390,7 +390,7 @@ var P = e(i()),
     render() {
       let e = this.props.classOverride ?? `gekZDtV16Ho-`,
         t = null,
-        n = (0, W.jsx)(x, {
+        n = (0, G.jsx)(y, {
           type: `text`,
           onChange: this.UpdateAppSuggestions,
         });
@@ -399,25 +399,25 @@ var P = e(i()),
           ? this.state.appinfo.name +
             (this.props.showAppIds ? ` (${this.state.appid})` : ``)
           : (this.props.strPrompt ?? `Select game`);
-        t = (0, W.jsx)(`div`, {
-          className: xe,
-          children: (0, W.jsx)(`div`, { className: F, children: e }),
+        t = (0, G.jsx)(`div`, {
+          className: ye,
+          children: (0, G.jsx)(`div`, { className: L, children: e }),
         });
       } else if (this.state.mode == `select`) {
         let e = this.state.strSearch.length > 0;
-        t = (0, W.jsxs)(`div`, {
-          className: Ce,
+        t = (0, G.jsxs)(`div`, {
+          className: xe,
           children: [
             n,
             e &&
-              (0, W.jsx)(`div`, {
+              (0, G.jsx)(`div`, {
                 className: `u6Os1UrBFLs-`,
                 children: this.state.rgSuggestions,
               }),
           ],
         });
       }
-      return (0, W.jsx)(`div`, {
+      return (0, G.jsx)(`div`, {
         className: e,
         onClick: this.OnDisplayClicked,
         onKeyUpCapture: this.OnKeyUp,
@@ -425,37 +425,37 @@ var P = e(i()),
       });
     }
   };
-(g([v], G.prototype, `OnDisplayClicked`, null),
-  g([v], G.prototype, `UpdateAppSuggestions`, null),
-  g([v], G.prototype, `OnKeyUp`, null));
-var K = class extends P.Component {
+(v([M], K.prototype, `OnDisplayClicked`, null),
+  v([M], K.prototype, `UpdateAppSuggestions`, null),
+  v([M], K.prototype, `OnKeyUp`, null));
+var q = class extends I.Component {
     render() {
-      if (this.props.appid == 0) return (0, W.jsx)(`div`, { className: I });
+      if (this.props.appid == 0) return (0, G.jsx)(`div`, { className: R });
       {
         let e = d.GetAppInfo(this.props.appid);
-        if (!e || !e.is_valid) return (0, W.jsx)(`div`, { className: I });
+        if (!e || !e.is_valid) return (0, G.jsx)(`div`, { className: R });
         let t = [];
         if (this.props.score) {
-          t.push((0, W.jsx)(`div`, { className: L }, `score-spacer`));
+          t.push((0, G.jsx)(`div`, { className: z }, `score-spacer`));
           let e = Math.round(this.props.score * 100).toString() + `%`;
           t.push(
-            (0, W.jsx)(`div`, { className: R, children: e }, `score-value`),
+            (0, G.jsx)(`div`, { className: B, children: e }, `score-value`),
           );
         }
         let n = e.name + ` (` + this.props.appid.toString() + `)`,
           r = this.props.fnOnSelected ? this.props.fnOnSelected : (e) => {};
-        return (0, W.jsxs)(`div`, {
-          className: I,
+        return (0, G.jsxs)(`div`, {
+          className: R,
           onClick: () => r(this.props.appid),
-          children: [(0, W.jsx)(`div`, { className: F, children: n }), t],
+          children: [(0, G.jsx)(`div`, { className: L, children: n }), t],
         });
       }
     }
   },
-  q = class extends P.Component {
+  J = class extends I.Component {
     state = {};
-    ref_app_a = P.createRef();
-    ref_app_b = P.createRef();
+    ref_app_a = I.createRef();
+    ref_app_b = I.createRef();
     componentDidMount() {
       this.OnAppSelected();
     }
@@ -468,8 +468,8 @@ var K = class extends P.Component {
       ) {
         let e = this.ref_app_a.current.state.appid,
           t = this.ref_app_b.current.state.appid,
-          n = `${k.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${e}&appid[]=${t}`;
-        j.default.get(n).then((e) => {
+          n = `${E.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${e}&appid[]=${t}`;
+        N.default.get(n).then((e) => {
           e.data && e.data.similarity_scores
             ? this.setState({ score: e.data.similarity_scores[0] })
             : this.setState({ score: null });
@@ -478,11 +478,11 @@ var K = class extends P.Component {
     }
     render() {
       let e = this.state.score ? (this.state.score * 100).toFixed(1) + `%` : ``;
-      return (0, W.jsxs)(`div`, {
-        className: je,
+      return (0, G.jsxs)(`div`, {
+        className: Ae,
         children: [
-          (0, W.jsx)(
-            G,
+          (0, G.jsx)(
+            K,
             {
               fnOnSelection: this.OnAppSelected,
               ref: this.ref_app_a,
@@ -491,11 +491,11 @@ var K = class extends P.Component {
             },
             `similar_app_a`,
           ),
-          (0, W.jsx)(`div`, { className: V }),
-          (0, W.jsx)(`div`, { className: R, children: e }),
-          (0, W.jsx)(`div`, { className: V }),
-          (0, W.jsx)(
-            G,
+          (0, G.jsx)(`div`, { className: H }),
+          (0, G.jsx)(`div`, { className: B, children: e }),
+          (0, G.jsx)(`div`, { className: H }),
+          (0, G.jsx)(
+            K,
             {
               fnOnSelection: this.OnAppSelected,
               ref: this.ref_app_b,
@@ -508,13 +508,13 @@ var K = class extends P.Component {
       });
     }
   };
-g([v], q.prototype, `OnAppSelected`, null);
-var J = class extends P.Component {
+v([M], J.prototype, `OnAppSelected`, null);
+var Y = class extends I.Component {
   selected_app = 0;
   similar_apps = [];
   similarity_scores = [];
   similarity_model = `default`;
-  app_selector_ref = P.createRef();
+  app_selector_ref = I.createRef();
   constructor(e) {
     (super(e), s(this), e.default_app && this.SetSelectedApp(e.default_app));
   }
@@ -531,8 +531,8 @@ var J = class extends P.Component {
         (this.selected_app = e),
         this.app_selector_ref.current &&
           this.app_selector_ref.current.SetSelectedApp(e));
-      let t = `${k.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}&model=${this.similarity_model}`;
-      j.default.get(t).then((e) => {
+      let t = `${E.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}&model=${this.similarity_model}`;
+      N.default.get(t).then((e) => {
         if (e.data && e.data.appid == this.selected_app) {
           let t = new Set(
             e.data.similar_appids.slice(0, this.props.max_similar),
@@ -562,47 +562,47 @@ var J = class extends P.Component {
       let n = this.similar_apps[t],
         r = this.similarity_scores[t];
       e.push(
-        (0, W.jsx)(
-          K,
+        (0, G.jsx)(
+          q,
           { appid: n, score: r, fnOnSelected: this.SetSelectedApp },
           n,
         ),
       );
     }
     let r = [];
-    for (let e of N.rgModelNames) {
-      let t = { label: (0, W.jsx)(`div`, { children: e }, e), data: e };
+    for (let e of F.rgModelNames) {
+      let t = { label: (0, G.jsx)(`div`, { children: e }, e), data: e };
       r.push(t);
     }
-    return (0, W.jsxs)(`div`, {
-      className: Ae,
+    return (0, G.jsxs)(`div`, {
+      className: ke,
       children: [
-        (0, W.jsx)(O, {
+        (0, G.jsx)(g, {
           rgOptions: r,
           onChange: this.OnModelChanged,
           selectedOption: `default`,
         }),
-        (0, W.jsx)(`h1`, { children: `Games similar to:` }),
-        (0, W.jsx)(G, {
+        (0, G.jsx)(`h1`, { children: `Games similar to:` }),
+        (0, G.jsx)(K, {
           fnOnSelection: this.OnSelectedApp,
           ref: this.app_selector_ref,
           appidInitial: 268500,
           showAppIds: !0,
         }),
-        (0, W.jsx)(`div`, { className: B, children: e }),
+        (0, G.jsx)(`div`, { className: V, children: e }),
       ],
     });
   }
 };
-(g([t], J.prototype, `selected_app`, void 0),
-  g([t], J.prototype, `similar_apps`, void 0),
-  g([t], J.prototype, `similarity_scores`, void 0),
-  g([t], J.prototype, `similarity_model`, void 0),
-  g([v], J.prototype, `OnSelectedApp`, null),
-  g([v], J.prototype, `SetSelectedApp`, null),
-  g([v], J.prototype, `OnModelChanged`, null),
-  (J = g([c], J)));
-var Y = class extends P.Component {
+(v([t], Y.prototype, `selected_app`, void 0),
+  v([t], Y.prototype, `similar_apps`, void 0),
+  v([t], Y.prototype, `similarity_scores`, void 0),
+  v([t], Y.prototype, `similarity_model`, void 0),
+  v([M], Y.prototype, `OnSelectedApp`, null),
+  v([M], Y.prototype, `SetSelectedApp`, null),
+  v([M], Y.prototype, `OnModelChanged`, null),
+  (Y = v([c], Y)));
+var X = class extends I.Component {
   selected_app = void 0;
   selected_operator = void 0;
   constructor(e) {
@@ -623,34 +623,34 @@ var Y = class extends P.Component {
   }
   render() {
     let e = [
-      { label: (0, W.jsx)(`div`, { children: `Plus` }, `Plus`), data: `Plus` },
+      { label: (0, G.jsx)(`div`, { children: `Plus` }, `Plus`), data: `Plus` },
       {
-        label: (0, W.jsx)(`div`, { children: `Minus` }, `Minus`),
+        label: (0, G.jsx)(`div`, { children: `Minus` }, `Minus`),
         data: `Minus`,
       },
     ];
-    return (0, W.jsxs)(`div`, {
-      className: Ie,
+    return (0, G.jsxs)(`div`, {
+      className: Fe,
       children: [
-        (0, W.jsx)(`div`, {
-          className: Le,
-          children: (0, W.jsx)(O, {
+        (0, G.jsx)(`div`, {
+          className: Ie,
+          children: (0, G.jsx)(g, {
             rgOptions: e,
             onChange: this.OnSelectedOperator,
             selectedOption: `Plus`,
           }),
         }),
-        (0, W.jsx)(G, { fnOnSelection: this.OnSelectedApp }),
+        (0, G.jsx)(K, { fnOnSelection: this.OnSelectedApp }),
       ],
     });
   }
 };
-(g([t], Y.prototype, `selected_app`, void 0),
-  g([t], Y.prototype, `selected_operator`, void 0),
-  g([v], Y.prototype, `OnSelectedApp`, null),
-  g([v], Y.prototype, `OnSelectedOperator`, null),
-  (Y = g([c], Y)));
-var X = class extends P.Component {
+(v([t], X.prototype, `selected_app`, void 0),
+  v([t], X.prototype, `selected_operator`, void 0),
+  v([M], X.prototype, `OnSelectedApp`, null),
+  v([M], X.prototype, `OnSelectedOperator`, null),
+  (X = v([c], X)));
+var Z = class extends I.Component {
   operands = [];
   similarity_model = `default`;
   similar_apps = [];
@@ -659,7 +659,7 @@ var X = class extends P.Component {
   constructor(e) {
     (super(e), s(this), (this.operand_refs = []));
     for (let t = 0; t < e.max_operands; t++)
-      this.operand_refs.push(P.createRef());
+      this.operand_refs.push(I.createRef());
   }
   OnModelChanged(e, t) {
     ((this.similarity_model = e.data), this.RecomputeExpression());
@@ -682,8 +682,8 @@ var X = class extends P.Component {
   RecomputeExpression() {
     if (this.operands.length == 0) return;
     let e = this.operands.map((e) => `appid[]=` + e.app.toString()),
-      t = `${k.STORE_BASE_URL}labs/ajaxgetappvectors?${e.join(`&`)}&model=${this.similarity_model}`;
-    j.default.get(t).then((e) => {
+      t = `${E.STORE_BASE_URL}labs/ajaxgetappvectors?${e.join(`&`)}&model=${this.similarity_model}`;
+    N.default.get(t).then((e) => {
       if (
         ((this.similar_apps = []),
         (this.similarity_scores = []),
@@ -705,8 +705,8 @@ var X = class extends P.Component {
               .map((e) => e / r)
               .map((e) => `x[]=` + e)
               .join(`&`),
-            n = `${k.STORE_BASE_URL}labs/ajaxgetmostsimilarappstovector?${e}&model=${this.similarity_model}`;
-          j.default.get(n).then((e) => {
+            n = `${E.STORE_BASE_URL}labs/ajaxgetmostsimilarappstovector?${e}&model=${this.similarity_model}`;
+          N.default.get(n).then((e) => {
             let t = new Set(
               e.data.similar_appids.slice(0, this.props.max_similar),
             );
@@ -721,16 +721,16 @@ var X = class extends P.Component {
   }
   render() {
     let e = [];
-    for (let t of N.rgModelNames) {
-      let n = { label: (0, W.jsx)(`div`, { children: t }, t), data: t };
+    for (let t of F.rgModelNames) {
+      let n = { label: (0, G.jsx)(`div`, { children: t }, t), data: t };
       e.push(n);
     }
     let t = [],
       n = 0;
     for (let e of this.operands)
       (t.push(
-        (0, W.jsx)(
-          Y,
+        (0, G.jsx)(
+          X,
           {
             app: e.app,
             operator: e.operator,
@@ -743,8 +743,8 @@ var X = class extends P.Component {
         n++);
     let r = null;
     this.operands.length < this.props.max_operands &&
-      (r = (0, W.jsx)(`div`, {
-        className: Re,
+      (r = (0, G.jsx)(`div`, {
+        className: Le,
         onClick: this.OnAddOperand,
         children: `+`,
       }));
@@ -757,34 +757,34 @@ var X = class extends P.Component {
     for (let e = 0; e < a; e++) {
       let t = this.similar_apps[e],
         n = this.similarity_scores[e];
-      i.push((0, W.jsx)(K, { appid: t, score: n }, t));
+      i.push((0, G.jsx)(q, { appid: t, score: n }, t));
     }
-    return (0, W.jsxs)(`div`, {
-      className: Fe,
+    return (0, G.jsxs)(`div`, {
+      className: Pe,
       children: [
-        (0, W.jsx)(O, {
+        (0, G.jsx)(g, {
           rgOptions: e,
           onChange: this.OnModelChanged,
           selectedOption: `default`,
         }),
-        (0, W.jsx)(`h1`, { children: `Mixture` }),
+        (0, G.jsx)(`h1`, { children: `Mixture` }),
         t,
         r,
-        (0, W.jsx)(`h1`, { children: `Games similar to mixture` }),
-        (0, W.jsx)(`div`, { className: B, children: i }),
+        (0, G.jsx)(`h1`, { children: `Games similar to mixture` }),
+        (0, G.jsx)(`div`, { className: V, children: i }),
       ],
     });
   }
 };
-(g([t], X.prototype, `operands`, void 0),
-  g([t], X.prototype, `similarity_model`, void 0),
-  g([t], X.prototype, `similar_apps`, void 0),
-  g([t], X.prototype, `similarity_scores`, void 0),
-  g([v], X.prototype, `OnModelChanged`, null),
-  g([v], X.prototype, `OnAddOperand`, null),
-  g([v], X.prototype, `OnOperandChanged`, null),
-  (X = g([c], X)));
-var Z = class extends P.Component {
+(v([t], Z.prototype, `operands`, void 0),
+  v([t], Z.prototype, `similarity_model`, void 0),
+  v([t], Z.prototype, `similar_apps`, void 0),
+  v([t], Z.prototype, `similarity_scores`, void 0),
+  v([M], Z.prototype, `OnModelChanged`, null),
+  v([M], Z.prototype, `OnAddOperand`, null),
+  v([M], Z.prototype, `OnOperandChanged`, null),
+  (Z = v([c], Z)));
+var Q = class extends I.Component {
   constructor(e) {
     (super(e), s(this));
   }
@@ -801,7 +801,7 @@ var Z = class extends P.Component {
       ((this.in_progress = !0),
       (this.progress_iteration = 0),
       (this.found_path = void 0),
-      N.ComputePathBetweenApps(
+      F.ComputePathBetweenApps(
         this.app_start,
         this.app_end,
         0.75,
@@ -838,89 +838,89 @@ var Z = class extends P.Component {
         this.app_end != 0 &&
         !this.in_progress &&
         this.app_start != this.app_end,
-      t = e ? H : ie(H, void 0),
+      t = e ? U : m(U, void 0),
       n = null;
     n = this.in_progress
-      ? (0, W.jsx)(`div`, {
-          className: U,
+      ? (0, G.jsx)(`div`, {
+          className: W,
           children: `Finding path, step ` + this.progress_iteration,
         })
       : this.found_path
-        ? (0, W.jsx)(`div`, { className: U, children: `Found path` })
-        : (0, W.jsx)(`div`, { className: U, children: `No path found` });
+        ? (0, G.jsx)(`div`, { className: W, children: `Found path` })
+        : (0, G.jsx)(`div`, { className: W, children: `No path found` });
     let r = [];
     if (this.found_path)
       for (let e = 0; e < this.found_path.length; e++) {
         let t = this.found_path[e];
         r.push(
-          (0, W.jsx)(
-            K,
+          (0, G.jsx)(
+            q,
             { appid: t.appid, score: t.similarity },
             `pathstep` + e,
           ),
         );
       }
-    return (0, W.jsxs)(`div`, {
-      className: Me,
+    return (0, G.jsxs)(`div`, {
+      className: je,
       children: [
-        (0, W.jsxs)(`div`, {
-          className: Ne,
+        (0, G.jsxs)(`div`, {
+          className: Me,
           children: [
-            (0, W.jsx)(G, {
+            (0, G.jsx)(K, {
               fnOnSelection: this.OnSelectedStartApp,
               strPrompt: `Select start game`,
             }),
-            (0, W.jsx)(G, {
+            (0, G.jsx)(K, {
               fnOnSelection: this.OnSelectedEndApp,
               strPrompt: `Select end game`,
             }),
           ],
         }),
-        (0, W.jsx)(`div`, {
+        (0, G.jsx)(`div`, {
           className: t,
           onClick: e ? this.Pathfind : () => {},
           children: `Pathfind!`,
         }),
         n,
-        (0, W.jsx)(`div`, { className: Pe, children: r }),
+        (0, G.jsx)(`div`, { className: Ne, children: r }),
       ],
     });
   }
 };
-(g([t], Z.prototype, `app_start`, void 0),
-  g([t], Z.prototype, `app_end`, void 0),
-  g([t], Z.prototype, `in_progress`, void 0),
-  g([t], Z.prototype, `progress_iteration`, void 0),
-  g([t], Z.prototype, `found_path`, void 0),
-  g([v], Z.prototype, `IterationCallback`, null),
-  g([v], Z.prototype, `Pathfind`, null),
-  g([v], Z.prototype, `OnSelectedStartApp`, null),
-  g([v], Z.prototype, `OnSelectedEndApp`, null),
-  (Z = g([c], Z)));
-function He() {
-  return (0, W.jsxs)(W.Fragment, {
+(v([t], Q.prototype, `app_start`, void 0),
+  v([t], Q.prototype, `app_end`, void 0),
+  v([t], Q.prototype, `in_progress`, void 0),
+  v([t], Q.prototype, `progress_iteration`, void 0),
+  v([t], Q.prototype, `found_path`, void 0),
+  v([M], Q.prototype, `IterationCallback`, null),
+  v([M], Q.prototype, `Pathfind`, null),
+  v([M], Q.prototype, `OnSelectedStartApp`, null),
+  v([M], Q.prototype, `OnSelectedEndApp`, null),
+  (Q = v([c], Q)));
+function Ve() {
+  return (0, G.jsxs)(G.Fragment, {
     children: [
-      (0, W.jsx)(`h1`, { children: `Similar Games` }),
-      (0, W.jsx)(J, { max_similar: 10 }),
-      (0, W.jsx)(`div`, { className: L }),
-      (0, W.jsx)(`h1`, { children: `Similarity` }),
-      (0, W.jsx)(q, {}),
-      (0, W.jsx)(`div`, { className: L }),
-      (0, W.jsx)(`h1`, { children: `Mixer` }),
-      (0, W.jsx)(X, { max_similar: 10, max_operands: 6 }),
-      (0, W.jsx)(`div`, { className: L }),
-      (0, W.jsx)(`h1`, { children: `Pathfinder` }),
-      (0, W.jsx)(Z, {}),
+      (0, G.jsx)(`h1`, { children: `Similar Games` }),
+      (0, G.jsx)(Y, { max_similar: 10 }),
+      (0, G.jsx)(`div`, { className: z }),
+      (0, G.jsx)(`h1`, { children: `Similarity` }),
+      (0, G.jsx)(J, {}),
+      (0, G.jsx)(`div`, { className: z }),
+      (0, G.jsx)(`h1`, { children: `Mixer` }),
+      (0, G.jsx)(Z, { max_similar: 10, max_operands: 6 }),
+      (0, G.jsx)(`div`, { className: z }),
+      (0, G.jsx)(`h1`, { children: `Pathfinder` }),
+      (0, G.jsx)(Q, {}),
     ],
   });
 }
-var Q = e(a(), 1),
-  Ue = class e extends Q.Message {
+var $ = e(a(), 1),
+  He = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.tag_score_factor || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.tag_score_factor || x(e.M()),
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -932,87 +932,87 @@ var Q = e(a(), 1),
             tag_score_factor: {
               n: 1,
               d: 1,
-              br: _.readDouble,
-              bw: E.writeDouble,
+              br: p.readDouble,
+              bw: A.writeDouble,
             },
             playtime_max_seconds: {
               n: 10,
               d: 36e4,
-              br: _.readInt32,
-              bw: E.writeInt32,
+              br: p.readInt32,
+              bw: A.writeInt32,
             },
             playtime_max_games: {
               n: 11,
               d: 3,
-              br: _.readInt32,
-              bw: E.writeInt32,
+              br: p.readInt32,
+              bw: A.writeInt32,
             },
             playtime_score_factor: {
               n: 12,
               d: 0.9,
-              br: _.readDouble,
-              bw: E.writeDouble,
+              br: p.readDouble,
+              bw: A.writeDouble,
             },
-            popularity_factor: { n: 20, d: 5, br: _.readEnum, bw: E.writeEnum },
+            popularity_factor: { n: 20, d: 5, br: p.readEnum, bw: A.writeEnum },
             popularity_reciprocal: {
               n: 21,
               d: 1e4,
-              br: _.readInt32,
-              bw: E.writeInt32,
+              br: p.readInt32,
+              bw: A.writeInt32,
             },
             popularity_base_score: {
               n: 22,
               d: `5000000`,
-              br: _.readInt64String,
-              bw: E.writeInt64String,
+              br: p.readInt64String,
+              bw: A.writeInt64String,
             },
-            played_since: { n: 23, br: _.readUint32, bw: E.writeUint32 },
+            played_since: { n: 23, br: p.readUint32, bw: A.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return A(e.M(), t, n);
+      return O(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return y(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      w(e.M(), t, n);
+      j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `StoreAppSimilarityPriorityOptions`;
     }
   },
-  We = class e extends Q.Message {
+  Ue = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [3], null));
+        e.prototype.steamid || x(e.M()),
+        $.Message.initialize(this, t, 0, -1, [3], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1023,60 +1023,60 @@ var Q = e(a(), 1),
           fields: {
             steamid: {
               n: 1,
-              br: _.readFixed64String,
-              bw: E.writeFixed64String,
+              br: p.readFixed64String,
+              bw: A.writeFixed64String,
             },
-            country_code: { n: 2, br: _.readString, bw: E.writeString },
+            country_code: { n: 2, br: p.readString, bw: A.writeString },
             ids: { n: 3, c: D, r: !0, q: !0 },
-            options: { n: 4, c: Ue },
-            debug: { n: 5, br: _.readBool, bw: E.writeBool },
-            include_owned_games: { n: 6, br: _.readBool, bw: E.writeBool },
+            options: { n: 4, c: He },
+            debug: { n: 5, br: p.readBool, bw: A.writeBool },
+            include_owned_games: { n: 6, br: p.readBool, bw: A.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return A(e.M(), t, n);
+      return O(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return y(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      w(e.M(), t, n);
+      j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Request`;
     }
   },
-  Ge = class e extends Q.Message {
+  We = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.items || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [1], null));
+        e.prototype.items || x(e.M()),
+        $.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1084,52 +1084,52 @@ var Q = e(a(), 1),
       return (
         (e.sm_m ||= {
           proto: e,
-          fields: { items: { n: 1, c: Ke, r: !0, q: !0 } },
+          fields: { items: { n: 1, c: Ge, r: !0, q: !0 } },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return A(e.M(), t, n);
+      return O(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return y(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      w(e.M(), t, n);
+      j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Response`;
     }
   },
-  Ke = class e extends Q.Message {
+  Ge = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.id || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [50], null));
+        e.prototype.id || x(e.M()),
+        $.Message.initialize(this, t, 0, -1, [50], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1139,57 +1139,57 @@ var Q = e(a(), 1),
           proto: e,
           fields: {
             id: { n: 1, c: D },
-            already_owned: { n: 2, br: _.readBool, bw: E.writeBool },
-            weight: { n: 3, br: _.readDouble, bw: E.writeDouble },
-            weight_before_dedupe: { n: 4, br: _.readDouble, bw: E.writeDouble },
-            debug_matches: { n: 50, c: qe, r: !0, q: !0 },
-            debug_popularity: { n: 51, c: Je },
+            already_owned: { n: 2, br: p.readBool, bw: A.writeBool },
+            weight: { n: 3, br: p.readDouble, bw: A.writeDouble },
+            weight_before_dedupe: { n: 4, br: p.readDouble, bw: A.writeDouble },
+            debug_matches: { n: 50, c: Ke, r: !0, q: !0 },
+            debug_popularity: { n: 51, c: qe },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return A(e.M(), t, n);
+      return O(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return y(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      w(e.M(), t, n);
+      j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem`;
     }
   },
-  qe = class e extends Q.Message {
+  Ke = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.source_app || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.source_app || x(e.M()),
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1198,55 +1198,55 @@ var Q = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            source_app: { n: 1, br: _.readInt32, bw: E.writeInt32 },
-            weight: { n: 2, br: _.readDouble, bw: E.writeDouble },
-            similarity: { n: 3, br: _.readDouble, bw: E.writeDouble },
+            source_app: { n: 1, br: p.readInt32, bw: A.writeInt32 },
+            weight: { n: 2, br: p.readDouble, bw: A.writeDouble },
+            similarity: { n: 3, br: p.readDouble, bw: A.writeDouble },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return A(e.M(), t, n);
+      return O(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return y(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      w(e.M(), t, n);
+      j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem_MatchDebugInfo`;
     }
   },
-  Je = class e extends Q.Message {
+  qe = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.rank || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.rank || x(e.M()),
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1255,12 +1255,12 @@ var Q = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            rank: { n: 1, br: _.readUint32, bw: E.writeUint32 },
-            popularity_factor: { n: 2, br: _.readDouble, bw: E.writeDouble },
+            rank: { n: 1, br: p.readUint32, bw: A.writeUint32 },
+            popularity_factor: { n: 2, br: p.readDouble, bw: A.writeDouble },
             weight_before_popularity: {
               n: 3,
-              br: _.readDouble,
-              bw: E.writeDouble,
+              br: p.readDouble,
+              bw: A.writeDouble,
             },
           },
         }),
@@ -1268,46 +1268,46 @@ var Q = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return A(e.M(), t, n);
+      return O(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return y(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      w(e.M(), t, n);
+      j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem_PopularityDebugInfo`;
     }
   },
-  $ = class e extends Q.Message {
+  Je = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.steamid || x(e.M()),
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1318,60 +1318,60 @@ var Q = e(a(), 1),
           fields: {
             steamid: {
               n: 1,
-              br: _.readFixed64String,
-              bw: E.writeFixed64String,
+              br: p.readFixed64String,
+              bw: A.writeFixed64String,
             },
-            sort: { n: 2, d: 1, br: _.readEnum, bw: E.writeEnum },
-            clusters_to_return: { n: 3, br: _.readInt32, bw: E.writeInt32 },
-            cluster_index: { n: 4, br: _.readInt32, bw: E.writeInt32 },
-            context: { n: 10, c: fe },
-            data_request: { n: 11, c: _e },
+            sort: { n: 2, d: 1, br: p.readEnum, bw: A.writeEnum },
+            clusters_to_return: { n: 3, br: p.readInt32, bw: A.writeInt32 },
+            cluster_index: { n: 4, br: p.readInt32, bw: A.writeInt32 },
+            context: { n: 10, c: pe },
+            data_request: { n: 11, c: ne },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return A(e.M(), t, n);
+      return O(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return y(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      w(e.M(), t, n);
+      j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_IdentifyClustersFromPlaytime_Request`;
     }
   },
-  Ye = class e extends Q.Message {
+  Ye = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.clusters || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [1], null));
+        e.prototype.clusters || x(e.M()),
+        $.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1385,46 +1385,46 @@ var Q = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return A(e.M(), t, n);
+      return O(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return y(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      w(e.M(), t, n);
+      j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response`;
     }
   },
-  Xe = class e extends Q.Message {
+  Xe = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.cluster_id || b(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [5, 6, 7], null));
+        e.prototype.cluster_id || x(e.M()),
+        $.Message.initialize(this, t, 0, -1, [5, 6, 7], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1433,31 +1433,31 @@ var Q = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            cluster_id: { n: 1, br: _.readInt32, bw: E.writeInt32 },
-            playtime_forever: { n: 2, br: _.readInt32, bw: E.writeInt32 },
-            playtime_2weeks: { n: 3, br: _.readInt32, bw: E.writeInt32 },
-            last_played: { n: 4, br: _.readUint32, bw: E.writeUint32 },
+            cluster_id: { n: 1, br: p.readInt32, bw: A.writeInt32 },
+            playtime_forever: { n: 2, br: p.readInt32, bw: A.writeInt32 },
+            playtime_2weeks: { n: 3, br: p.readInt32, bw: A.writeInt32 },
+            last_played: { n: 4, br: p.readUint32, bw: A.writeUint32 },
             played_appids: {
               n: 5,
               r: !0,
               q: !0,
-              br: _.readInt32,
-              pbr: _.readPackedInt32,
-              bw: E.writeRepeatedInt32,
+              br: p.readInt32,
+              pbr: p.readPackedInt32,
+              bw: A.writeRepeatedInt32,
             },
             similar_items_appids: {
               n: 6,
               r: !0,
               q: !0,
-              br: _.readInt32,
-              pbr: _.readPackedInt32,
-              bw: E.writeRepeatedInt32,
+              br: p.readInt32,
+              pbr: p.readPackedInt32,
+              bw: A.writeRepeatedInt32,
             },
-            similar_items: { n: 7, c: ue, r: !0, q: !0 },
+            similar_items: { n: 7, c: le, r: !0, q: !0 },
             similar_item_popularity_score: {
               n: 8,
-              br: _.readDouble,
-              bw: E.writeDouble,
+              br: p.readDouble,
+              bw: A.writeDouble,
             },
           },
         }),
@@ -1465,34 +1465,34 @@ var Q = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= p(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return A(e.M(), t, n);
+      return O(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return y(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      w(e.M(), t, n);
+      j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
@@ -1504,8 +1504,8 @@ var Q = e(a(), 1),
   function t(e, t, n) {
     return e.SendMsg(
       `StoreAppSimilarity.PrioritizeAppsForUser#1`,
-      T(We, t, n),
-      Ge,
+      T(Ue, t, n),
+      We,
       { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
     );
   }
@@ -1513,7 +1513,7 @@ var Q = e(a(), 1),
   function n(e, t, n) {
     return e.SendMsg(
       `StoreAppSimilarity.IdentifyClustersFromPlaytime#1`,
-      T($, t, n),
+      T(Je, t, n),
       Ye,
       { ePrivilege: 2, eWebAPIKeyRequirement: 2 },
     );
@@ -1530,13 +1530,13 @@ var Qe = class {
     }
   },
   $e = class {
-    m_callbacksLoaded = new ne();
+    m_callbacksLoaded = new te();
     m_rgClusters;
     constructor(e, t, n, r, i) {
-      let a = pe.Init($);
-      (ce(a),
-        i && le(a, i),
-        a.Body().set_steamid(t || C.steamid),
+      let a = ae.Init(Je);
+      (ie(a),
+        i && ce(a, i),
+        a.Body().set_steamid(t || k.steamid),
         r && a.Body().set_clusters_to_return(r),
         a.Body().set_sort(n),
         Ze.IdentifyClustersFromPlaytime(e.GetServiceTransport(), a).then(
@@ -1552,7 +1552,7 @@ var Qe = class {
     ReadCluster(e, t) {
       let n;
       return (
-        t && (n = e.similar_items().map((e) => ae.Get().ReadItem(e, t))),
+        t && (n = e.similar_items().map((e) => h.Get().ReadItem(e, t))),
         {
           nClusterID: e.cluster_id(),
           nPlaytimeMinutes: e.playtime_forever(),
@@ -1575,9 +1575,9 @@ var Qe = class {
     }
   };
 function et(e, t, n, r = 1, i = null, a = []) {
-  let [o, s] = P.useState(null);
+  let [o, s] = I.useState(null);
   return (
-    P.useEffect(() => {
+    I.useEffect(() => {
       if ((s(null), n))
         return e.LoadPlaytimeClusters(n, r, i, t).RegisterOnReadyCallback(s)
           .Unregister;
@@ -1592,20 +1592,20 @@ var tt = `U1eVOPgq7Qs-`,
   at = `sxMHArvxX2E-`;
 function ot(e) {
   let { SteamInterface: t } = e,
-    n = P.useRef(void 0);
+    n = I.useRef(void 0);
   return (
     (n.current ||= new Qe(t)),
-    (0, W.jsxs)(W.Fragment, {
+    (0, G.jsxs)(G.Fragment, {
       children: [
-        (0, W.jsxs)(`div`, {
+        (0, G.jsxs)(`div`, {
           children: [
-            (0, W.jsx)(`p`, {
+            (0, G.jsx)(`p`, {
               children: `This data is generated by analyzing games based on similar tags, and generating clusters from that.  We then look at your playtime history to see what games are in clusters together, and suggest other popular games in those clusters.`,
             }),
-            (0, W.jsxs)(`p`, {
+            (0, G.jsxs)(`p`, {
               children: [
                 `You can also `,
-                (0, W.jsx)(`a`, {
+                (0, G.jsx)(`a`, {
                   href: `http://store-tc.k.steam.net/graph`,
                   target: `_blank`,
                   children: `browse the cluster data graphically`,
@@ -1615,7 +1615,7 @@ function ot(e) {
             }),
           ],
         }),
-        (0, W.jsx)(ct, { SimilarityStore: n.current }),
+        (0, G.jsx)(ct, { SimilarityStore: n.current }),
       ],
     })
   );
@@ -1627,122 +1627,122 @@ var st = {
 };
 function ct(e) {
   let { SimilarityStore: t } = e,
-    [n, r] = P.useState(C.steamid),
-    [i, a] = P.useState(`10`),
-    [o, s] = P.useState(1),
-    c = P.useCallback((e) => r(e.currentTarget.value), [r]),
-    l = P.useCallback((e) => a(e.currentTarget.value), [a]),
-    d = P.useCallback((e) => s(e.data), [s]),
+    [n, r] = I.useState(k.steamid),
+    [i, a] = I.useState(`10`),
+    [o, s] = I.useState(1),
+    c = I.useCallback((e) => r(e.currentTarget.value), [r]),
+    l = I.useCallback((e) => a(e.currentTarget.value), [a]),
+    d = I.useCallback((e) => s(e.data), [s]),
     f = !1,
-    p = P.useRef(C.steamid),
-    m = n && new te(n);
+    p = I.useRef(k.steamid),
+    m = n && new ee(n);
   m &&
     m.BIsValid() &&
     m.BIsIndividualAccount() &&
     ((p.current = m.ConvertTo64BitString()), (f = !0));
   let h;
   i && !isNaN(parseInt(i)) && (h = parseInt(i));
-  let ne = P.useMemo(() => {
+  let _ = I.useMemo(() => {
       let e = [];
       for (let t in st) e.push({ data: Number(t), label: st[t] });
       return e;
     }, []),
-    g = et(t, { include_assets: !0, include_basic_info: !0 }, p.current, o, h);
-  return (0, W.jsxs)(`div`, {
+    v = et(t, { include_assets: !0, include_basic_info: !0 }, p.current, o, h);
+  return (0, G.jsxs)(`div`, {
     children: [
-      (0, W.jsxs)(ee, {
+      (0, G.jsxs)(re, {
         className: tt,
         children: [
-          (0, W.jsx)(x, {
+          (0, G.jsx)(y, {
             label: `SteamID`,
             type: `text`,
             value: n,
             onChange: c,
             description: !f && `Invalid SteamID`,
           }),
-          (0, W.jsx)(x, {
+          (0, G.jsx)(y, {
             label: `Clusters to return (Set to blank for all clusters)`,
             type: `text`,
             value: i,
             onChange: l,
           }),
-          (0, W.jsx)(O, {
+          (0, G.jsx)(g, {
             label: `Sort clusters by`,
-            rgOptions: ne,
+            rgOptions: _,
             selectedOption: o,
             onChange: d,
           }),
         ],
       }),
-      f && !g && (0, W.jsx)(u, {}),
-      g && (0, W.jsx)(lt, { rgPlaytimeClusters: g }),
+      f && !v && (0, G.jsx)(u, {}),
+      v && (0, G.jsx)(lt, { rgPlaytimeClusters: v }),
     ],
   });
 }
 function lt(e) {
   let { rgPlaytimeClusters: t } = e;
-  return (0, W.jsx)(`div`, {
+  return (0, G.jsx)(`div`, {
     children: t.map((e) =>
-      (0, W.jsx)(h, { children: (0, W.jsx)(ut, { cluster: e }) }, e.nClusterID),
+      (0, G.jsx)(S, { children: (0, G.jsx)(ut, { cluster: e }) }, e.nClusterID),
     ),
   });
 }
 function ut(e) {
   let { cluster: t } = e,
-    [n, r] = P.useState(!1),
-    i = P.useCallback(() => r(!0), [r]),
-    [a, o] = P.useState(!1),
-    s = P.useCallback(() => o(!0), [o]),
-    c = re({ onEnter: s });
-  return (0, W.jsxs)(`div`, {
+    [n, r] = I.useState(!1),
+    i = I.useCallback(() => r(!0), [r]),
+    [a, o] = I.useState(!1),
+    s = I.useCallback(() => o(!0), [o]),
+    c = se({ onEnter: s });
+  return (0, G.jsxs)(`div`, {
     ref: c,
     className: nt,
     children: [
-      (0, W.jsxs)(`div`, {
+      (0, G.jsxs)(`div`, {
         className: rt,
         children: [
-          (0, W.jsxs)(`h1`, { children: [`Cluster `, t.nClusterID] }),
-          (0, W.jsx)(h, {
-            children: (0, W.jsxs)(`div`, {
+          (0, G.jsxs)(`h1`, { children: [`Cluster `, t.nClusterID] }),
+          (0, G.jsx)(S, {
+            children: (0, G.jsxs)(`div`, {
               className: void 0,
               children: [
-                (0, W.jsxs)(`div`, {
+                (0, G.jsxs)(`div`, {
                   children: [
-                    (0, W.jsx)(`b`, { children: `Total Playtime:` }),
+                    (0, G.jsx)(`b`, { children: `Total Playtime:` }),
                     ` `,
                     Math.floor(t.nPlaytimeMinutes / 6) / 10,
                     `hr`,
                   ],
                 }),
-                (0, W.jsxs)(`div`, {
+                (0, G.jsxs)(`div`, {
                   children: [
-                    (0, W.jsx)(`b`, { children: `Last Played:` }),
+                    (0, G.jsx)(`b`, { children: `Last Played:` }),
                     ` `,
-                    de(t.rtLastPlayed),
+                    fe(t.rtLastPlayed),
                     ` `,
                   ],
                 }),
-                (0, W.jsxs)(`div`, {
+                (0, G.jsxs)(`div`, {
                   children: [
-                    (0, W.jsx)(`b`, { children: `Games played:` }),
+                    (0, G.jsx)(`b`, { children: `Games played:` }),
                     ` `,
                     a &&
                       t.rgAppIDsPlayed.map((e) =>
-                        (0, W.jsxs)(
-                          P.Fragment,
-                          { children: [(0, W.jsx)(ft, { appid: e }), `, `] },
+                        (0, G.jsxs)(
+                          I.Fragment,
+                          { children: [(0, G.jsx)(ft, { appid: e }), `, `] },
                           e,
                         ),
                       ),
                   ],
                 }),
-                (0, W.jsxs)(`div`, {
+                (0, G.jsxs)(`div`, {
                   children: [
-                    (0, W.jsx)(`b`, { children: `Popularity Score:` }),
+                    (0, G.jsx)(`b`, { children: `Popularity Score:` }),
                     ` `,
                     Math.floor(t.flPopularityScore * 100),
                     `% \xA0`,
-                    (0, W.jsx)(`span`, {
+                    (0, G.jsx)(`span`, {
                       title: `Based on the top four items; we might decide not to show clusters if this score is less than some threshold, maybe 90%`,
                       style: { cursor: `default` },
                       children: `(?)`,
@@ -1754,17 +1754,17 @@ function ut(e) {
           }),
         ],
       }),
-      (0, W.jsxs)(`div`, {
+      (0, G.jsxs)(`div`, {
         className: it,
         children: [
-          (0, W.jsx)(`h3`, { children: `Similar titles:` }),
-          (0, W.jsx)(h, {
-            children: (0, W.jsx)(`ul`, {
+          (0, G.jsx)(`h3`, { children: `Similar titles:` }),
+          (0, G.jsx)(S, {
+            children: (0, G.jsx)(`ul`, {
               children: t.rgSimilarItems.map((e, t) =>
                 n || t < 4
-                  ? (0, W.jsx)(
+                  ? (0, G.jsx)(
                       `li`,
-                      { children: (0, W.jsx)(pt, { item: e }) },
+                      { children: (0, G.jsx)(pt, { item: e }) },
                       e.GetUniqueID(),
                     )
                   : null,
@@ -1772,7 +1772,7 @@ function ut(e) {
             }),
           }),
           !n &&
-            (0, W.jsxs)(me, {
+            (0, G.jsxs)(ue, {
               onClick: i,
               children: [`Show all `, t.rgSimilarItems.length],
             }),
@@ -1786,7 +1786,7 @@ function ft(e) {
   let { appid: t } = e,
     [n] = f(t, dt);
   return n
-    ? (0, W.jsx)(`a`, {
+    ? (0, G.jsx)(`a`, {
         className: void 0,
         href: n.GetStorePageURL(),
         children: n.GetName(),
@@ -1795,11 +1795,11 @@ function ft(e) {
 }
 function pt(e) {
   let { item: t } = e;
-  return (0, W.jsxs)(`a`, {
+  return (0, G.jsxs)(`a`, {
     className: at,
     href: t.GetStorePageURL(),
     children: [
-      (0, W.jsx)(`img`, {
+      (0, G.jsx)(`img`, {
         src: t.GetAssets().GetSmallCapsuleURL(),
         loading: `lazy`,
       }),
@@ -1810,71 +1810,71 @@ function pt(e) {
 var mt = [
   {
     path: `similarity`,
-    render: () => (0, W.jsx)(He, {}),
+    render: () => (0, G.jsx)(Ve, {}),
     name: `ML Similarity`,
   },
   {
     path: `clustering`,
-    render: (e) => (0, W.jsx)(ot, { SteamInterface: e.SteamInterface }),
+    render: (e) => (0, G.jsx)(ot, { SteamInterface: e.SteamInterface }),
     name: `Tag Clustering`,
     requires_login: !0,
   },
 ];
 function ht(e) {
-  let [t, i] = P.useState(!1),
-    a = C.logged_in,
-    o = he();
+  let [t, i] = I.useState(!1),
+    a = k.logged_in,
+    o = de();
   if (
-    ((0, P.useEffect)(() => {
-      (N.Init(o), i(!0));
+    ((0, I.useEffect)(() => {
+      (F.Init(o), i(!0));
     }, [o]),
     !t)
   )
-    return (0, W.jsx)(`div`, { className: z });
+    return (0, G.jsx)(`div`, { className: Ce });
   let s = { SteamInterface: o };
-  return (0, W.jsx)(`div`, {
-    className: z,
-    children: (0, W.jsxs)(`div`, {
-      className: Te,
+  return (0, G.jsx)(`div`, {
+    className: Ce,
+    children: (0, G.jsxs)(`div`, {
+      className: we,
       children: [
-        (0, W.jsxs)(`div`, {
-          className: Ee,
+        (0, G.jsxs)(`div`, {
+          className: Te,
           children: [
-            (0, W.jsx)(`div`, { className: De, children: `Labs Sandbox` }),
-            (0, W.jsx)(`div`, {
-              className: Oe,
+            (0, G.jsx)(`div`, { className: Ee, children: `Labs Sandbox` }),
+            (0, G.jsx)(`div`, {
+              className: De,
               children: `Internal testbed page for Steam Labs experiments`,
             }),
           ],
         }),
-        (0, W.jsx)(`div`, {
-          className: ze,
+        (0, G.jsx)(`div`, {
+          className: Re,
           children: mt.map((e) =>
-            (0, W.jsx)(
-              oe,
+            (0, G.jsx)(
+              me,
               {
-                to: `${m.LabsSandbox()}/${e.path}`,
-                className: Be,
-                activeClassName: Ve,
+                to: `${_.LabsSandbox()}/${e.path}`,
+                className: ze,
+                activeClassName: Be,
                 children: e.name,
               },
               e.path,
             ),
           ),
         }),
-        (0, W.jsx)(`div`, {
-          className: ke,
-          children: (0, W.jsx)(h, {
-            children: (0, W.jsx)(r, {
+        (0, G.jsx)(`div`, {
+          className: Oe,
+          children: (0, G.jsx)(S, {
+            children: (0, G.jsx)(r, {
               children: mt.map((e, t) =>
-                (0, W.jsx)(
+                (0, G.jsx)(
                   n,
                   {
-                    path: `${m.LabsSandbox()}/${e.path}`,
+                    path: `${_.LabsSandbox()}/${e.path}`,
                     render: (t) =>
                       !e.requires_login || a
                         ? e.render({ ...t, ...s })
-                        : (0, W.jsx)(gt, {}),
+                        : (0, G.jsx)(gt, {}),
                   },
                   e.path,
                 ),
@@ -1887,11 +1887,11 @@ function ht(e) {
   });
 }
 function gt() {
-  let e = ge();
-  return (0, W.jsxs)(`div`, {
+  let e = oe();
+  return (0, G.jsxs)(`div`, {
     children: [
-      (0, W.jsx)(`h3`, { children: `Please login to view this page.` }),
-      (0, W.jsx)(ve, {
+      (0, G.jsx)(`h3`, { children: `Please login to view this page.` }),
+      (0, G.jsx)(ge, {
         transport: e,
         platform: 2,
         onComplete: () => window.location.reload(),

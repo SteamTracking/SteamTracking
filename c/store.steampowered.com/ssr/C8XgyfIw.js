@@ -1,4 +1,106 @@
 function _(_) {
+  return _(
+    _.coming_soon_display,
+    _.steam_release_date,
+    _.custom_release_date_message,
+  );
+}
+function _(_, _, _, _) {
+  switch (_) {
+    case `date_full`:
+      return _(_);
+    case `date_month`:
+      return _(new Date(_ * 1e3));
+    case `date_quarter`:
+      return _(new Date(_ * 1e3), _);
+    case `date_year`:
+      return _(new Date(_ * 1e3));
+    case `text_comingsoon`:
+      return _ || _(`#Store_ComingSoon_ComingSoon`);
+    case `text_tba`:
+      return _ || _(`#Store_ComingSoon_TBA`);
+    default:
+      return ``;
+  }
+}
+function _(_) {
+  return _?.is_coming_soon
+    ? _(
+        _.coming_soon_display,
+        _.steam_release_date,
+        _.custom_release_date_message,
+      )
+    : _?.steam_release_date
+      ? _(_.steam_release_date)
+      : ``;
+}
+function _(_, _, _) {
+  switch (_) {
+    case `date_full`:
+      return _(_);
+    case `date_month`:
+      return _(new Date(_ * 1e3));
+    case `date_quarter`:
+      return _(new Date(_ * 1e3));
+    case `date_year`:
+      return _(new Date(_ * 1e3));
+    case `text_comingsoon`:
+      return _ || _.Localize(`#Store_ComingSoon_ComingSoon`);
+    case `text_tba`:
+      return _ || _.Localize(`#Store_ComingSoon_TBA`);
+    default:
+      return ``;
+  }
+}
+function _(_) {
+  if (!_) return ``;
+  if (_ && _.is_coming_soon) {
+    if (_.coming_soon_display) return _(_);
+    if (_.custom_release_date_message) return _.custom_release_date_message;
+    let _ = _.steam_release_date;
+    return _ ? (_.is_abridged_release_date ? _(new Date(_ * 1e3)) : _(_)) : ``;
+  }
+  let _ = _.steam_release_date;
+  return ((_ ||= _.original_release_date), _ ? _(_) : ``);
+}
+function _(_, _ = !1) {
+  if (_.is_coming_soon && !_) return 0;
+  let _ = _.steam_release_date;
+  return ((_ ||= _.original_release_date), _);
+}
+var _ = 7;
+function _(_, _) {
+  if (!_) return !1;
+  let _ = _(_);
+  return _ ? !_.is_coming_soon && _ + _ * _.PerDay > _ : !1;
+}
+function _(_, _) {
+  return !!(_ && _.is_coming_soon && _ && _.packageid);
+}
+function _(_, _) {
+  return !!(_ && _ && _.packageid);
+}
+function _(_) {
+  let _ = _(),
+    _ = _();
+  return _({
+    mutationFn: () => _(_, _),
+    onSuccess(_) {
+      let [
+        _,
+        { packageids_added: _, appids_added: _, purchase_result_detail: _ },
+      ] = _;
+      _ && _(_);
+    },
+  });
+}
+async function _(_, _) {
+  let _ = _.Init(_);
+  _.Body().set_item_id(_.fromObject(_));
+  let _ = await _.AddFreeLicense(_, _);
+  return [_.GetEResult(), _.Body().toObject()];
+}
+function _(_) {
   switch (_?.toUpperCase()) {
     case `AE`:
       return 32;
@@ -311,106 +413,4 @@ function _(_, _) {
     _ = _ ? ` ` : ``,
     _ = _ ? `-` : ``;
   return _ ? `${_}${_}${_}${_}` : `${_}${_}${_}${_}`;
-}
-function _(_) {
-  let _ = _(),
-    _ = _();
-  return _({
-    mutationFn: () => _(_, _),
-    onSuccess(_) {
-      let [
-        _,
-        { packageids_added: _, appids_added: _, purchase_result_detail: _ },
-      ] = _;
-      _ && _(_);
-    },
-  });
-}
-async function _(_, _) {
-  let _ = _.Init(_);
-  _.Body().set_item_id(_.fromObject(_));
-  let _ = await _.AddFreeLicense(_, _);
-  return [_.GetEResult(), _.Body().toObject()];
-}
-function _(_, _ = !1) {
-  if (_.is_coming_soon && !_) return 0;
-  let _ = _.steam_release_date;
-  return ((_ ||= _.original_release_date), _);
-}
-var _ = 7;
-function _(_, _) {
-  if (!_) return !1;
-  let _ = _(_);
-  return _ ? !_.is_coming_soon && _ + _ * _.PerDay > _ : !1;
-}
-function _(_, _) {
-  return !!(_ && _.is_coming_soon && _ && _.packageid);
-}
-function _(_, _) {
-  return !!(_ && _ && _.packageid);
-}
-function _(_) {
-  return _(
-    _.coming_soon_display,
-    _.steam_release_date,
-    _.custom_release_date_message,
-  );
-}
-function _(_, _, _, _) {
-  switch (_) {
-    case `date_full`:
-      return _(_);
-    case `date_month`:
-      return _(new Date(_ * 1e3));
-    case `date_quarter`:
-      return _(new Date(_ * 1e3), _);
-    case `date_year`:
-      return _(new Date(_ * 1e3));
-    case `text_comingsoon`:
-      return _ || _(`#Store_ComingSoon_ComingSoon`);
-    case `text_tba`:
-      return _ || _(`#Store_ComingSoon_TBA`);
-    default:
-      return ``;
-  }
-}
-function _(_) {
-  return _?.is_coming_soon
-    ? _(
-        _.coming_soon_display,
-        _.steam_release_date,
-        _.custom_release_date_message,
-      )
-    : _?.steam_release_date
-      ? _(_.steam_release_date)
-      : ``;
-}
-function _(_, _, _) {
-  switch (_) {
-    case `date_full`:
-      return _(_);
-    case `date_month`:
-      return _(new Date(_ * 1e3));
-    case `date_quarter`:
-      return _(new Date(_ * 1e3));
-    case `date_year`:
-      return _(new Date(_ * 1e3));
-    case `text_comingsoon`:
-      return _ || _.Localize(`#Store_ComingSoon_ComingSoon`);
-    case `text_tba`:
-      return _ || _.Localize(`#Store_ComingSoon_TBA`);
-    default:
-      return ``;
-  }
-}
-function _(_) {
-  if (!_) return ``;
-  if (_ && _.is_coming_soon) {
-    if (_.coming_soon_display) return _(_);
-    if (_.custom_release_date_message) return _.custom_release_date_message;
-    let _ = _.steam_release_date;
-    return _ ? (_.is_abridged_release_date ? _(new Date(_ * 1e3)) : _(_)) : ``;
-  }
-  let _ = _.steam_release_date;
-  return ((_ ||= _.original_release_date), _ ? _(_) : ``);
 }

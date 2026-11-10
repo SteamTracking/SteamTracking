@@ -4,12 +4,12 @@
 import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, N as n, ft as r } from "./libraries.js";
 import {
-  bc as i,
-  dl as a,
-  ka as o,
-  kc as s,
-  ul as c,
-  zb as l,
+  Aa as i,
+  Ac as a,
+  Bb as o,
+  dl as s,
+  fl as c,
+  xc as l,
 } from "./main.js";
 var u = e(t(), 1),
   d = e(n(), 1),
@@ -29,8 +29,8 @@ function _(e) {
       onClose: t,
       className: n,
       navID: r,
-      children: i,
-      allowScrollBehind: a,
+      children: a,
+      allowScrollBehind: o,
       ...s
     } = e,
     [c, l] = u.useState(!1),
@@ -54,26 +54,26 @@ function _(e) {
     onClose: t,
     children: (0, m.jsx)(`dialog`, {
       ref: p,
-      className: (0, d.default)(f, !a && c && `egtbEvvs2Oc-`, n),
+      className: (0, d.default)(f, !o && c && `egtbEvvs2Oc-`, n),
       onClose: () => t(`onclose`),
       onClick: h,
       ...s,
-      children: (0, m.jsx)(o, { children: i }),
+      children: (0, m.jsx)(i, { children: a }),
     }),
   });
 }
 function v(e) {
   let { navID: t, onClose: n, children: r } = e,
     i = u.useCallback(() => n(`cancelbutton`), [n]),
-    o = u.useRef(void 0);
+    a = u.useRef(void 0);
   return (
-    c(o, !0, !0),
-    l()
-      ? (0, m.jsx)(a, {
+    s(a, !0, !0),
+    o()
+      ? (0, m.jsx)(c, {
           navID: t ?? `ModalDialog`,
           onCancelButton: i,
           modal: !0,
-          navTreeRef: o,
+          navTreeRef: a,
           children: r,
         })
       : (0, m.jsx)(m.Fragment, { children: r })
@@ -96,31 +96,31 @@ function w(e) {
     onClose: t,
     className: n,
     navID: r,
-    children: a,
+    children: i,
     strTitle: o,
-    wideMode: c,
-    ...l
+    wideMode: s,
+    ...c
   } = e;
   return (0, m.jsx)(h, {
     onClose: t,
     navID: r ?? `SimpleModalDialog`,
-    ...l,
+    ...c,
     children: (0, m.jsxs)(`div`, {
-      className: (0, d.default)(n, b, c && `GJxb9L6ppZw-`),
+      className: (0, d.default)(n, b, s && `GJxb9L6ppZw-`),
       children: [
         ` `,
-        (0, m.jsxs)(s, {
+        (0, m.jsxs)(a, {
           className: x,
           children: [
             o && (0, m.jsx)(`div`, { className: `pxN-7GRnbkY-`, children: o }),
             (0, m.jsx)(`button`, {
               onClick: (e) => (t(`xclick`), e.preventDefault(), !1),
               className: S,
-              children: (0, m.jsx)(i, {}),
+              children: (0, m.jsx)(l, {}),
             }),
           ],
         }),
-        (0, m.jsx)(`div`, { className: C, children: a }),
+        (0, m.jsx)(`div`, { className: C, children: i }),
       ],
     }),
   });

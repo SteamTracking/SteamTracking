@@ -6,13 +6,13 @@ import { Lt as t, dt as n, ot as r, st as i } from "./libraries.js";
 import { r as a } from "./steammessages_quest_pb.js";
 import { r as o } from "./steammessages_salerewards_pb.js";
 import {
-  Dy as s,
-  Hb as c,
-  Oy as l,
-  Ty as u,
-  Yb as d,
-  iy as f,
-  mu as p,
+  Ey as s,
+  Oy as c,
+  Ub as l,
+  Xb as u,
+  ay as d,
+  hu as f,
+  ky as p,
 } from "./main.js";
 var m = e(t(), 1),
   h = { bCanClaimNewItem: !1, bAlreadyClaimedCurrentItem: !1 };
@@ -83,11 +83,11 @@ async function b(e, t, n, r) {
 }
 var x;
 function S() {
-  let e = p();
+  let e = f();
   if (e) return e.GetServiceTransport();
   if (!x) {
-    let e = d(`loyalty_webapi_token`, `application_config`);
-    x = u(e ? new l(c.WEBAPI_BASE_URL, e) : s());
+    let e = u(`loyalty_webapi_token`, `application_config`);
+    x = s(e ? new p(l.WEBAPI_BASE_URL, e) : c());
   }
   return x.GetServiceTransport();
 }
@@ -117,7 +117,7 @@ function j(e) {
   };
 }
 function M() {
-  let e = c.LANGUAGE,
+  let e = l.LANGUAGE,
     t = n(),
     { data: r, isLoading: a } = i(j(e)),
     o = r?.rtNextClaimTime;
@@ -147,10 +147,10 @@ function N() {
           return ((O = null), Promise.resolve(e));
         }
         return D
-          ? Promise.resolve(e.getQueryData(A(c.LANGUAGE)) ?? h)
-          : w(c.LANGUAGE);
+          ? Promise.resolve(e.getQueryData(A(l.LANGUAGE)) ?? h)
+          : w(l.LANGUAGE);
       },
-      onSuccess: (t) => e.setQueryData(A(c.LANGUAGE), t),
+      onSuccess: (t) => e.setQueryData(A(l.LANGUAGE), t),
     });
   return { fnClaimItem: (0, m.useCallback)(() => t(), [t]) };
 }
@@ -171,7 +171,7 @@ function F() {
                 ...k,
               }
             : null),
-          e.setQueryData(A(c.LANGUAGE), t));
+          e.setQueryData(A(l.LANGUAGE), t));
       },
       [e],
     ),
@@ -188,7 +188,7 @@ function L(e, t, n, r) {
   };
 }
 function R(e, t, n) {
-  let r = f();
+  let r = d();
   return i(L(r, e, t, n));
 }
 function z(e, t, n, r) {
@@ -202,7 +202,7 @@ function B(e, t, n, r, i) {
   };
 }
 function V(e, t, n, r) {
-  let a = f();
+  let a = d();
   return i(B(a, e, t, n, r));
 }
 export { M as a, N as i, V as n, F as o, R as r, P as t };

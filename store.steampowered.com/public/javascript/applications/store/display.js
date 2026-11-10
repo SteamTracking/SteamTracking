@@ -19,21 +19,21 @@ import { n as p, t as m } from "./steammessages_storesales_pb.js";
 import "./steammessages_quest_pb.js";
 import { n as h, r as g } from "./eventadminpanel.js";
 import {
-  Cl as _,
-  En as v,
-  Gb as y,
-  Hb as b,
-  Jb as ee,
-  Pi as x,
-  Sc as S,
-  Vc as te,
-  iy as C,
-  kv as w,
-  pn as T,
-  rr as ne,
-  wc as E,
-  wv as D,
-  xb as O,
+  Av as _,
+  Cc as v,
+  Dn as y,
+  Fi as ee,
+  Hc as te,
+  Kb as b,
+  Sb as x,
+  Tc as S,
+  Tv as C,
+  Ub as w,
+  Yb as T,
+  ay as E,
+  ir as ne,
+  mn as D,
+  wl as O,
 } from "./main.js";
 import { i as re, n as ie, r as ae, t as oe } from "./event.js";
 var k = e(n(), 1),
@@ -48,7 +48,7 @@ function j() {
   return 2025;
 }
 function M(e) {
-  return `${b.MEDIA_CDN_URL}store/promo/${e}`;
+  return `${w.MEDIA_CDN_URL}store/promo/${e}`;
 }
 function le() {
   return {
@@ -65,7 +65,7 @@ function le() {
   };
 }
 function ue() {
-  return `${b.STORE_BASE_URL}steamawards/ajaxgetwidgetstyle`;
+  return `${w.STORE_BASE_URL}steamawards/ajaxgetwidgetstyle`;
 }
 ((0, A.default)(`2026-12-17T09:30:00-08:00`).unix(),
   (0, A.default)(`2027-01-02T10:00:00-08:00`).unix());
@@ -108,11 +108,11 @@ function R(e) {
 }
 function z(e, t) {
   let n = r(),
-    i = L(y.accountid),
+    i = L(b.accountid),
     { data: s, isPending: c } = o({
       queryKey: i,
       queryFn: async () => await t.GetMySteamAwardNominations(),
-      enabled: !!y.accountid,
+      enabled: !!b.accountid,
     }),
     { mutate: l } = a({
       mutationFn: async (n) => {
@@ -131,17 +131,17 @@ function z(e, t) {
     });
   return {
     unNominatedAppID: s?.find((t) => t.category_id == e)?.appid,
-    bAnswered: s != null || !y.accountid || !c,
+    bAnswered: s != null || !b.accountid || !c,
     Nominate: l,
   };
 }
 function B(e, t) {
   let n = r(),
-    i = R(y.accountid),
+    i = R(b.accountid),
     { data: s, isPending: c } = o({
       queryKey: i,
       queryFn: async () => await t.GetMySteamAwardVotes(),
-      enabled: !!y.accountid,
+      enabled: !!b.accountid,
     }),
     { mutate: l } = a({
       mutationFn: async (n) => {
@@ -157,7 +157,7 @@ function B(e, t) {
     });
   return {
     unVotedAppID: s?.find((t) => t.voteid == e)?.appid,
-    bAnswered: s != null || !y.accountid || !c,
+    bAnswered: s != null || !b.accountid || !c,
     Vote: l,
   };
 }
@@ -170,7 +170,7 @@ function pe(e, t) {
     queryFn: async () => {
       let n = await p.GetVoteDefinitions(e, {
         sale_appid: t,
-        language: x().strLanguage,
+        language: ee().strLanguage,
       });
       return n.BSuccess() ? n.Body().toObject() : null;
     },
@@ -179,7 +179,7 @@ function pe(e, t) {
   };
 }
 function me(e) {
-  return o(pe(C(), e));
+  return o(pe(E(), e));
 }
 async function he(e) {
   let t = await m.GetUserNominations(e, {});
@@ -253,7 +253,7 @@ function K(e) {
     };
   return (0, U.jsxs)(`div`, {
     style: c,
-    className: S(V, f),
+    className: v(V, f),
     children: [
       (0, U.jsxs)(`div`, {
         className: ye,
@@ -284,50 +284,50 @@ function K(e) {
   });
 }
 function q(e) {
-  return `${b.STORE_BASE_URL}steamawards/${e ? `nominations/` : ``}`;
+  return `${w.STORE_BASE_URL}steamawards/${e ? `nominations/` : ``}`;
 }
 function J() {
   return (0, U.jsx)(c, {
     className: V,
     size: `medium`,
     position: `center`,
-    string: O.Localize(`#Loading`),
+    string: x.Localize(`#Loading`),
   });
 }
 function Y(e) {
   let { elDialogElement: t, fnShowLogonDialog: n } = l(),
-    [r, i, a] = _();
+    [r, i, a] = O();
   return {
     elDialogElement: (0, U.jsxs)(U.Fragment, {
       children: [
         t,
-        (0, U.jsx)(T, {
+        (0, U.jsx)(D, {
           active: r,
           children: (0, U.jsx)(Re, { bVote: e, closeModal: a }),
         }),
       ],
     }),
     BCanTakeAction: () =>
-      y.logged_in ? !y.is_limited || (i(), !1) : (n(), !1),
+      b.logged_in ? !b.is_limited || (i(), !1) : (n(), !1),
   };
 }
 function Re(e) {
   let { bVote: t, closeModal: n } = e;
-  return (0, U.jsx)(v, {
-    strTitle: O.Localize(`#Informational_Message`),
+  return (0, U.jsx)(y, {
+    strTitle: x.Localize(`#Informational_Message`),
     onCancel: n,
     onOK: n,
     bAlertDialog: !0,
     children: (0, U.jsx)(`div`, {
-      children: O.LocalizeReact(
+      children: x.LocalizeReact(
         t
           ? `#SteamAward_Vote_LimitedAccount`
           : `#SteamAward_Nominate_LimitedAccount`,
         (0, U.jsx)(`a`, {
-          href: `${b.HELP_BASE_URL}wizard/HelpWithLimitedAccount`,
-          target: b.IN_CLIENT ? void 0 : `_blank`,
+          href: `${w.HELP_BASE_URL}wizard/HelpWithLimitedAccount`,
+          target: w.IN_CLIENT ? void 0 : `_blank`,
           rel: `noreferrer`,
-          children: O.Localize(`#User_LimitedAccount_UrlInfo`),
+          children: x.Localize(`#User_LimitedAccount_UrlInfo`),
         }),
       ),
     }),
@@ -341,15 +341,15 @@ function X(e) {
       fnOnConfirm: i,
       closeModal: a,
     } = e,
-    { data: o } = w({ appid: n }),
-    { data: s } = w({ appid: r }),
-    { data: l } = D({ appid: n }),
-    { data: u } = D({ appid: r }),
-    d = l ? E(l, `small_capsule`) : void 0,
-    f = u ? E(u, `small_capsule`) : void 0;
-  return (0, U.jsx)(v, {
+    { data: o } = _({ appid: n }),
+    { data: s } = _({ appid: r }),
+    { data: l } = C({ appid: n }),
+    { data: u } = C({ appid: r }),
+    d = l ? S(l, `small_capsule`) : void 0,
+    f = u ? S(u, `small_capsule`) : void 0;
+  return (0, U.jsx)(y, {
     modalClassName: Pe,
-    strTitle: O.Localize(
+    strTitle: x.Localize(
       t == `Vote`
         ? `#SteamAward_VoteConflictWarning_Title`
         : `#SteamAward_NominationConflictWarning_Title`,
@@ -360,7 +360,7 @@ function X(e) {
     children: (0, U.jsxs)(`div`, {
       className: Fe,
       children: [
-        O.LocalizeReact(
+        x.LocalizeReact(
           t == `Vote`
             ? `#SteamAward_VoteConflictWarning_Explanation`
             : `#SteamAward_NominationConflictWarning_Explanation`,
@@ -379,7 +379,7 @@ function X(e) {
           : (0, U.jsx)(c, {
               size: `small`,
               position: `center`,
-              string: O.Localize(`#Loading`),
+              string: x.Localize(`#Loading`),
             }),
       ],
     }),
@@ -388,7 +388,7 @@ function X(e) {
 function ze(e) {
   let { unAppID: t, widget: n, actions: r, bNominationsOpen: i } = e,
     a = n.rgCategories[0],
-    { data: o } = w({ appid: t }),
+    { data: o } = _({ appid: t }),
     { unNominatedAppID: s, bAnswered: c, Nominate: l } = z(a.eCategoryID, r),
     { elDialogElement: u, BCanTakeAction: d } = Y(!1),
     {
@@ -398,77 +398,77 @@ function ze(e) {
       strFallbackCategoryBGColor: h,
       strCategoryTextColor: g,
     } = G(),
-    [v, y, b] = _(),
-    ee = m?.[a.internal_name] ?? h;
+    [y, ee, b] = O(),
+    S = m?.[a.internal_name] ?? h;
   if (!n.bNominationsLive) return null;
   if (!c) return (0, U.jsx)(J, {});
-  let x = te(q(!0)),
-    C = s == t,
-    E = n.rgCategories.length == 1,
-    D = i && !a.bLaborOfLove;
+  let C = te(q(!0)),
+    w = s == t,
+    T = n.rgCategories.length == 1,
+    E = i && !a.bLaborOfLove;
   return (0, U.jsxs)(K, {
-    strMainTitle: O.Localize(`#SteamAwards_EventMainTitle`),
+    strMainTitle: x.Localize(`#SteamAwards_EventMainTitle`),
     subtitle: (0, U.jsxs)(`div`, {
       className: Ce,
       children: [
         i
-          ? O.Localize(`#SteamAwards_EventCallToAction`)
-          : O.Localize(`#SteamAwards_EventVotingDateTeaser`, j()),
+          ? x.Localize(`#SteamAwards_EventCallToAction`)
+          : x.Localize(`#SteamAwards_EventVotingDateTeaser`, j()),
         i &&
           (0, U.jsxs)(`a`, {
-            href: x,
+            href: C,
             className: `OztIiH5vYRE-`,
             children: [
               `(`,
-              O.Localize(`#EventDisplay_CallToAction_LearnMore`),
+              x.Localize(`#EventDisplay_CallToAction_LearnMore`),
               `)`,
             ],
           }),
       ],
     }),
     headerText: i
-      ? E
-        ? O.Localize(`#SteamAwards_EventNominateGamePrompt_Long`, o?.name ?? ``)
+      ? T
+        ? x.Localize(`#SteamAwards_EventNominateGamePrompt_Long`, o?.name ?? ``)
         : (0, U.jsx)(`a`, {
             className: H,
-            href: x,
-            children: O.Localize(
+            href: C,
+            children: x.Localize(
               `#SteamAwards_EventNominateGamePrompt_NoCategory`,
               o?.name ?? ``,
             ),
           })
-      : O.Localize(`#SteamAwards_Event_NominationsClosed`),
+      : x.Localize(`#SteamAwards_Event_NominationsClosed`),
     footer:
-      D &&
+      E &&
       (0, U.jsx)(`a`, {
-        href: x,
-        children: O.Localize(`#SteamAwards_EventNominationAlternativeLinkText`),
+        href: C,
+        children: x.Localize(`#SteamAwards_EventNominationAlternativeLinkText`),
       }),
     children: [
-      !!(E && (i || C)) &&
+      !!(T && (i || w)) &&
         (0, U.jsx)(`div`, {
-          style: { background: ee },
-          className: S(`eU1VNUlajE0-`, `eWqTMj--x0o-`),
+          style: { background: S },
+          className: v(`eU1VNUlajE0-`, `eWqTMj--x0o-`),
           children: (0, U.jsxs)(`div`, {
             className: `gO70X8GBo-E-`,
             children: [
               (0, U.jsx)(`div`, {
                 style: { background: f, color: p },
-                className: S(`SNoK7p5tEVU-`, C && `eIE9nuLmVLE-`),
+                className: v(`SNoK7p5tEVU-`, w && `eIE9nuLmVLE-`),
                 children: (0, U.jsx)(ne, {
                   controlled: !0,
-                  className: S(`_1IIojhfpy34-`, C && `eIE9nuLmVLE-`),
-                  checked: C,
+                  className: v(`_1IIojhfpy34-`, w && `eIE9nuLmVLE-`),
+                  checked: w,
                   onChange: (e) => {
-                    e && d() && (s && s != t ? y() : l(t));
+                    e && d() && (s && s != t ? ee() : l(t));
                   },
-                  disabled: C,
+                  disabled: w,
                   color: p,
                   highlightColor: p,
                   label: (0, U.jsx)(`div`, {
                     className: `bwYOMwZYlP0-`,
-                    children: O.Localize(
-                      C
+                    children: x.Localize(
+                      w
                         ? `#SteamAwards_NominateWidget_CTA_PastTense`
                         : `#SteamAwards_NominateWidget_CTA`,
                       a.strTitle,
@@ -485,8 +485,8 @@ function ze(e) {
           }),
         }),
       u,
-      (0, U.jsx)(T, {
-        active: v,
+      (0, U.jsx)(D, {
+        active: y,
         children: (0, U.jsx)(X, {
           strLocTokenInfix: `Nomination`,
           unCurrentAppID: s,
@@ -506,16 +506,16 @@ function Z(e) {
       bVotesOpen: i,
       bHideCategoryDescriptions: a,
     } = e,
-    { data: o } = w({ appid: t }),
+    { data: o } = _({ appid: t }),
     s = te(q(!1));
   return (0, U.jsx)(K, {
-    strMainTitle: O.Localize(`#SteamAwards_EventMainTitleCombined`),
+    strMainTitle: x.Localize(`#SteamAwards_EventMainTitleCombined`),
     headerText: i
-      ? O.Localize(`#SteamAwards_EventVoteForGamePrompt`, o?.name ?? ``)
+      ? x.Localize(`#SteamAwards_EventVoteForGamePrompt`, o?.name ?? ``)
       : (0, U.jsx)(`a`, {
           href: s,
           className: H,
-          children: O.Localize(`#SteamAwards_Event_VotesClosed`),
+          children: x.Localize(`#SteamAwards_Event_VotesClosed`),
         }),
     headerContent: (0, U.jsx)(`div`, {
       className: Ne,
@@ -535,7 +535,7 @@ function Z(e) {
     }),
     footer: (0, U.jsx)(`a`, {
       href: s,
-      children: O.Localize(`#EventDisplay_CallToAction_LearnMore`),
+      children: x.Localize(`#EventDisplay_CallToAction_LearnMore`),
     }),
   });
 }
@@ -550,10 +550,10 @@ function Be(e) {
     { unVotedAppID: o, bAnswered: s, Vote: c } = B(n.eCategoryID, r),
     { elDialogElement: l, BCanTakeAction: u } = Y(!0),
     { strFallbackCategoryBGColor: d, rgCategoryBackgrounds: f } = G(),
-    [p, m, h] = _(),
+    [p, m, h] = O(),
     g = f?.[n.internal_name] ?? d,
-    v = o == t;
-  return !i && !v
+    _ = o == t;
+  return !i && !_
     ? null
     : (0, U.jsxs)(`div`, {
         style: { backgroundColor: g },
@@ -562,18 +562,18 @@ function Be(e) {
           (0, U.jsxs)(`div`, {
             className: Oe,
             children: [
-              (0, U.jsx)(`div`, { className: S(Ee, De), children: n.strTitle }),
+              (0, U.jsx)(`div`, { className: v(Ee, De), children: n.strTitle }),
               !a &&
                 (0, U.jsx)(`div`, {
                   className: `C-uxCDYX7oo-`,
                   children: n.strDescription,
                 }),
-              v
+              _
                 ? (0, U.jsx)(`button`, {
                     className: je,
                     children: (0, U.jsx)(`span`, {
                       className: Ae,
-                      children: O.Localize(`#SteamAward_VoteButton_VotedText`),
+                      children: x.Localize(`#SteamAward_VoteButton_VotedText`),
                     }),
                   })
                 : (0, U.jsx)(`button`, {
@@ -583,13 +583,13 @@ function Be(e) {
                     },
                     children: (0, U.jsx)(`span`, {
                       className: Ae,
-                      children: O.Localize(`#SteamAward_VoteButton_PromptText`),
+                      children: x.Localize(`#SteamAward_VoteButton_PromptText`),
                     }),
                   }),
             ],
           }),
           l,
-          (0, U.jsx)(T, {
+          (0, U.jsx)(D, {
             active: p,
             children: (0, U.jsx)(X, {
               strLocTokenInfix: `Vote`,
@@ -603,7 +603,7 @@ function Be(e) {
       });
 }
 function Ve(e) {
-  let t = C();
+  let t = E();
   return (0, k.useMemo)(
     () => ({
       GetMySteamAwardNominations: () => he(t),
@@ -651,7 +651,7 @@ function We(e, t) {
   return t ? { ...e, bNominationsLive: !0 } : e;
 }
 function Ge(e) {
-  return !!e && b.EUNIVERSE == 1;
+  return !!e && w.EUNIVERSE == 1;
 }
 function Ke(e) {
   let { event: t, previewMode: n } = e,
@@ -701,7 +701,7 @@ function $(e) {
       : null;
 }
 function qe(e) {
-  let t = ee(`steamwawards`, `application_config`)?.votecategories;
+  let t = T(`steamwawards`, `application_config`)?.votecategories;
   return t
     ? (0, U.jsx)($, {
         appID: e.appID,

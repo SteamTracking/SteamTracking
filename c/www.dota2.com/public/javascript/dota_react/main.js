@@ -82617,6 +82617,20 @@
           _ = 20,
           _ = 0,
           _ = 0;
+        function _(_) {
+          switch (_) {
+            case 1:
+              return _().Dot;
+            case 2:
+              return _().EmptyDot;
+            case 3:
+              return _().FilledSquare;
+            case 4:
+              return _().EmptySquare;
+            default:
+              return _().Dot;
+          }
+        }
         let _ = 0;
         const _ = (0, _._)(({ infoText: _, bPlaceLeft: _ = !1 }) =>
             (0, _.jsxs)("div", {
@@ -82708,16 +82722,21 @@
                       },
                     }),
                     (0, _.jsx)("div", {
-                      className: (0, _._)(_().Dot, _.hide_dot && _().IsHidden),
+                      className: (0, _._)(
+                        _(_.indent_level),
+                        _.hide_dot && _().IsHidden,
+                      ),
                     }),
-                    (0, _.jsx)("div", {
+                    (0, _.jsxs)("div", {
                       className: _().Note,
-                      children: (0, _._)(_),
+                      children: [
+                        (0, _._)(_),
+                        _.info &&
+                          (0, _.jsx)(_, {
+                            infoText: _.info,
+                          }),
+                      ],
                     }),
-                    _.info &&
-                      (0, _.jsx)(_, {
-                        infoText: _.info,
-                      }),
                   ],
                 }),
               })
@@ -82839,19 +82858,28 @@
                         className: _().NoteElement,
                         children: [
                           (0, _.jsx)("div", {
+                            className: _().Indent,
+                            style: {
+                              width: _ * _.indent_level,
+                              minWidth: _ * _.indent_level,
+                            },
+                          }),
+                          (0, _.jsx)("div", {
                             className: (0, _._)(
-                              _().Dot,
+                              _(_.indent_level),
                               _.hide_dot && _().IsHidden,
                             ),
                           }),
-                          (0, _.jsx)("div", {
+                          (0, _.jsxs)("div", {
                             className: _().Note,
-                            children: (0, _._)((0, _._)(_.note)),
+                            children: [
+                              (0, _._)((0, _._)(_.note)),
+                              _.info &&
+                                (0, _.jsx)(_, {
+                                  infoText: _.info,
+                                }),
+                            ],
                           }),
-                          _.info &&
-                            (0, _.jsx)(_, {
-                              infoText: _.info,
-                            }),
                         ],
                       },
                       _.note + _,
@@ -83017,14 +83045,16 @@
                                 _.hide_dot && _().IsHidden,
                               ),
                             }),
-                            (0, _.jsx)("div", {
+                            (0, _.jsxs)("div", {
                               className: _().Note,
-                              children: (0, _._)(_.note),
+                              children: [
+                                (0, _._)(_.note),
+                                _.info &&
+                                  (0, _.jsx)(_, {
+                                    infoText: _.info,
+                                  }),
+                              ],
                             }),
-                            _.info &&
-                              (0, _.jsx)(_, {
-                                infoText: _.info,
-                              }),
                           ],
                         },
                         _.note,
@@ -83486,14 +83516,16 @@
                                               _.hide_dot && _().IsHidden,
                                             ),
                                           }),
-                                          (0, _.jsx)("div", {
+                                          (0, _.jsxs)("div", {
                                             className: _().Note,
-                                            children: (0, _._)(_.note),
+                                            children: [
+                                              (0, _._)(_.note),
+                                              _.info &&
+                                                (0, _.jsx)(_, {
+                                                  infoText: _.info,
+                                                }),
+                                            ],
                                           }),
-                                          _.info &&
-                                            (0, _.jsx)(_, {
-                                              infoText: _.info,
-                                            }),
                                         ],
                                       },
                                       _.note,
@@ -83544,14 +83576,16 @@
                                     _.hide_dot && _().IsHidden,
                                   ),
                                 }),
-                                (0, _.jsx)("div", {
+                                (0, _.jsxs)("div", {
                                   className: _().Note,
-                                  children: (0, _._)(_.note),
+                                  children: [
+                                    (0, _._)(_.note),
+                                    _.info &&
+                                      (0, _.jsx)(_, {
+                                        infoText: _.info,
+                                      }),
+                                  ],
                                 }),
-                                _.info &&
-                                  (0, _.jsx)(_, {
-                                    infoText: _.info,
-                                  }),
                               ],
                             },
                             _.note,
@@ -83643,14 +83677,16 @@
                                                 _.hide_dot && _().IsHidden,
                                               ),
                                             }),
-                                            (0, _.jsx)("div", {
+                                            (0, _.jsxs)("div", {
                                               className: _().Note,
-                                              children: (0, _._)(_.note),
+                                              children: [
+                                                (0, _._)(_.note),
+                                                _.info &&
+                                                  (0, _.jsx)(_, {
+                                                    infoText: _.info,
+                                                  }),
+                                              ],
                                             }),
-                                            _.info &&
-                                              (0, _.jsx)(_, {
-                                                infoText: _.info,
-                                              }),
                                           ],
                                         },
                                         _.note,
@@ -83704,14 +83740,16 @@
                                             _.hide_dot && _().IsHidden,
                                           ),
                                         }),
-                                        (0, _.jsx)("div", {
+                                        (0, _.jsxs)("div", {
                                           className: _().Note,
-                                          children: (0, _._)(_.note),
+                                          children: [
+                                            (0, _._)(_.note),
+                                            _.info &&
+                                              (0, _.jsx)(_, {
+                                                infoText: _.info,
+                                              }),
+                                          ],
                                         }),
-                                        _.info &&
-                                          (0, _.jsx)(_, {
-                                            infoText: _.info,
-                                          }),
                                       ],
                                     },
                                     _.note,
@@ -83748,14 +83786,16 @@
                                   _.hide_dot && _().IsHidden,
                                 ),
                               }),
-                              (0, _.jsx)("div", {
+                              (0, _.jsxs)("div", {
                                 className: _().Note,
-                                children: (0, _._)(_.note),
+                                children: [
+                                  (0, _._)(_.note),
+                                  _.info &&
+                                    (0, _.jsx)(_, {
+                                      infoText: _.info,
+                                    }),
+                                ],
                               }),
-                              _.info &&
-                                (0, _.jsx)(_, {
-                                  infoText: _.info,
-                                }),
                             ],
                           },
                           _.note,
@@ -83858,19 +83898,28 @@
                         className: _().NoteElement,
                         children: [
                           (0, _.jsx)("div", {
+                            className: _().Indent,
+                            style: {
+                              width: _ * _.indent_level,
+                              minWidth: _ * _.indent_level,
+                            },
+                          }),
+                          (0, _.jsx)("div", {
                             className: (0, _._)(
                               _().Dot,
                               _.hide_dot && _().IsHidden,
                             ),
                           }),
-                          (0, _.jsx)("div", {
+                          (0, _.jsxs)("div", {
                             className: _().Note,
-                            children: (0, _._)((0, _._)(_.note)),
+                            children: [
+                              (0, _._)((0, _._)(_.note)),
+                              _.info &&
+                                (0, _.jsx)(_, {
+                                  infoText: _.info,
+                                }),
+                            ],
                           }),
-                          _.info &&
-                            (0, _.jsx)(_, {
-                              infoText: _.info,
-                            }),
                         ],
                       },
                       _.note + _,
@@ -134794,6 +134843,9 @@ Status Code:` +
           PatchNoteGeneric: "_3780o1c91ESe44gnPBnlBy",
           GenericName: "_1hRqixIG6P5cskeNbTeZrL",
           NoteElement: "_1gbgxXB1xPzbrmV9U5RoWd",
+          EmptyDot: "_18vIaitg6w0DDKfRDfy9UF",
+          FilledSquare: "_3ZIdNy99mc0cEYPlZD8CE3",
+          EmptySquare: "_2LaU6W9LWt_gDXgxNW3QRD",
           Indent_2: "V3z41L9Gc_yqykDggGKHF",
           Icon_strength: "_3QMdEPqcghn6MwXQma18Fv",
           Icon_agility: "_3yEP6bE45VXkWpmSuZVjWv",

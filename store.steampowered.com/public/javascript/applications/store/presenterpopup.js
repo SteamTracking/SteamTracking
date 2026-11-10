@@ -6,16 +6,16 @@ import { Lt as t, ft as n, l as r, st as i } from "./libraries.js";
 import { i as a } from "./clanimagemodels.js";
 import { t as o } from "./basicbbcodeparser.js";
 import {
-  Cx as s,
-  Gn as c,
-  Hb as l,
-  Hr as u,
-  Mb as d,
-  Nl as f,
-  Rx as p,
-  Sc as m,
-  mS as h,
-  yt as g,
+  Cc as s,
+  Kn as c,
+  Nb as l,
+  Pl as u,
+  Ub as d,
+  Ur as f,
+  hS as p,
+  wx as m,
+  yt as h,
+  zx as g,
 } from "./main.js";
 var _ = e(t()),
   v = n();
@@ -59,19 +59,19 @@ var b = `EYdF9T-t7r0-`,
   P = `_7tqUEqEzFXI-`;
 function F(e) {
   let { emoticon: t, large: n } = e,
-    [r, i] = f(),
+    [r, i] = u(),
     [a, o] = _.useState(null),
-    s = `:${t}:`,
-    c = g(t, n);
+    c = `:${t}:`,
+    l = h(t, n);
   return (0, v.jsxs)(v.Fragment, {
     children: [
       (0, v.jsx)(y, {
-        text: s,
+        text: c,
         style: `merge-adjacent`,
         children: (0, v.jsx)(`img`, {
           ...i,
-          src: c,
-          className: m(S, n ? C : void 0),
+          src: l,
+          className: s(S, n ? C : void 0),
           "data-emoticon": t,
           alt: t,
           ref: o,
@@ -95,7 +95,7 @@ function L(e) {
   return i({
     queryKey: [`EmoticonHover`, e],
     queryFn: async () => {
-      let t = `${l.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(e)}?l=${encodeURIComponent(l.LANGUAGE)}&origin=${self.origin}`,
+      let t = `${d.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(e)}?l=${encodeURIComponent(d.LANGUAGE)}&origin=${self.origin}`,
         n = await fetch(t);
       if (n.status != 200)
         throw `Error fetching emoticon: ${n.status} ${n.statusText}`;
@@ -104,7 +104,7 @@ function L(e) {
   });
 }
 var R = ({ target: e, title: t, subtitle: n, children: r }) =>
-    (0, v.jsxs)(u, {
+    (0, v.jsxs)(f, {
       target: e,
       style: { zIndex: 1700 },
       className: E,
@@ -132,7 +132,7 @@ var R = ({ target: e, title: t, subtitle: n, children: r }) =>
   U = `PBXxHejQZTU-`,
   W = `JX6irDhLeng-`,
   G = r((e) => {
-    let t = a(e.photo, h(l.LANGUAGE)),
+    let t = a(e.photo, p(d.LANGUAGE)),
       n = t ? (typeof t == `string` ? t : t[1]) : void 0,
       r = !!e.title,
       i = !!e.company;
@@ -181,7 +181,7 @@ var R = ({ target: e, title: t, subtitle: n, children: r }) =>
     m_fnHidePopup = null;
     m_nScrollPosAtHoverStart = 0;
     ClosePopup() {
-      s() ||
+      m() ||
         (this.m_fnHidePopup &&
           (this.m_fnHidePopup(),
           (this.m_fnHidePopup = null),
@@ -211,7 +211,7 @@ var R = ({ target: e, title: t, subtitle: n, children: r }) =>
         e.sm_embeddedElements.ShowElementDelayed(
           n.ownerDocument,
           150,
-          (0, v.jsx)(u, {
+          (0, v.jsx)(f, {
             ...r,
             children: (0, v.jsx)(G, { ...this.props, fnClose: this.OnLeave }),
           }),
@@ -233,10 +233,10 @@ var R = ({ target: e, title: t, subtitle: n, children: r }) =>
       });
     }
   };
-(d([p], K.prototype, `ClosePopup`, null),
-  d([p], K.prototype, `OnScroll`, null),
-  d([p], K.prototype, `OnHover`, null),
-  d([p], K.prototype, `OnLeave`, null));
+(l([g], K.prototype, `ClosePopup`, null),
+  l([g], K.prototype, `OnScroll`, null),
+  l([g], K.prototype, `OnHover`, null),
+  l([g], K.prototype, `OnLeave`, null));
 function q(e) {
   let {
       photo: t,
@@ -245,10 +245,10 @@ function q(e) {
       company: i,
       hidePhotoInCompactView: o,
     } = e,
-    s = a(t, h(l.LANGUAGE)),
+    s = a(t, p(d.LANGUAGE)),
     c = s && !o ? (typeof s == `string` ? s : s[1]) : null,
-    u = !!r,
-    d = !!i;
+    l = !!r,
+    u = !!i;
   return (0, v.jsx)(`div`, {
     className: z,
     children: (0, v.jsx)(K, {
@@ -263,16 +263,16 @@ function q(e) {
               className: U,
               children: [
                 (0, v.jsx)(`div`, { children: n }),
-                (u || d) &&
+                (l || u) &&
                   (0, v.jsxs)(`div`, {
                     children: [
-                      u &&
+                      l &&
                         (0, v.jsx)(`span`, {
                           className: `zv2bYEkwS4A-`,
                           children: r,
                         }),
-                      u && d && (0, v.jsx)(`span`, { children: `, ` }),
-                      d && (0, v.jsx)(`span`, { children: i }),
+                      l && u && (0, v.jsx)(`span`, { children: `, ` }),
+                      u && (0, v.jsx)(`span`, { children: i }),
                     ],
                   }),
               ],

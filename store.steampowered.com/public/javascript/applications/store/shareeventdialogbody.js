@@ -19,20 +19,20 @@ import {
 import { t as _ } from "./sharewithfriends.js";
 import { n as v, t as y } from "./reddit_large.js";
 import {
-  En as b,
-  Gb as x,
-  Hb as S,
-  Lr as C,
+  Ac as b,
+  Cc as x,
+  Dn as S,
+  Kb as C,
   Rr as w,
-  Sc as T,
-  Uy as E,
+  Ub as T,
+  Wy as E,
   a as D,
-  bS as O,
-  br as k,
-  kc as A,
-  lS as j,
-  mS as M,
-  r as N,
+  hS as O,
+  r as k,
+  uS as A,
+  xS as j,
+  xr as M,
+  zr as N,
 } from "./main.js";
 import "./twitter_large.js";
 var P = e(t(), 1),
@@ -56,7 +56,7 @@ function I(e) {
   return (0, F.jsxs)(`div`, {
     children: [
       (0, F.jsxs)(`div`, {
-        className: T(c, u),
+        className: x(c, u),
         children: [
           (0, F.jsx)(`span`, {
             className: f,
@@ -69,10 +69,10 @@ function I(e) {
             readOnly: !0,
             onClick: o,
           }),
-          (0, F.jsx)(A, {
-            className: T(s, l, g),
+          (0, F.jsx)(b, {
+            className: x(s, l, g),
             onActivate: o,
-            children: (0, F.jsx)(C, {
+            children: (0, F.jsx)(w, {
               toolTipContent: E(`#ToolTip_CopyLinkToClipboard`),
               children: (0, F.jsx)(`img`, {
                 className: h,
@@ -90,13 +90,13 @@ function I(e) {
 var L = `l`;
 function R(e) {
   let { emoticonStore: t, ...n } = e;
-  return (0, F.jsx)(N, { store: t, children: (0, F.jsx)(z, { ...n }) });
+  return (0, F.jsx)(k, { store: t, children: (0, F.jsx)(z, { ...n }) });
 }
 function z(e) {
   let { eventModel: t, strEventLink: n, closeModal: s } = e,
     c = r(t),
     l = D(),
-    [u, d] = P.useState(() => M(S.LANGUAGE)),
+    [u, d] = P.useState(() => O(T.LANGUAGE)),
     [f, m] = P.useState(!1),
     { elDialogElement: h, fnShowLogonDialog: g } = i(
       E(`#EventDisplay_Share_NotLoggedIn_Description`),
@@ -104,9 +104,9 @@ function z(e) {
     v = P.useMemo(() => {
       if (!n) return ``;
       let e = new URL(n);
-      return (e.searchParams.set(L, j(u)), e.href);
+      return (e.searchParams.set(L, A(u)), e.href);
     }, [u, n]),
-    C = S.EREALM === O.k_ESteamRealmChina;
+    w = T.EREALM === j.k_ESteamRealmChina;
   return f
     ? (0, F.jsx)(_, {
         eventLink: n,
@@ -114,7 +114,7 @@ function z(e) {
         emoticonStore: l,
         closeModal: s,
       })
-    : (0, F.jsxs)(b, {
+    : (0, F.jsxs)(S, {
         strDescription: ``,
         strTitle: E(`#Button_Share`),
         onCancel: s,
@@ -123,9 +123,9 @@ function z(e) {
         modalClassName: `EventDisplay_Share_Dialog`,
         children: [
           (0, F.jsxs)(`div`, {
-            className: T(o, p),
+            className: x(o, p),
             children: [
-              !C &&
+              !w &&
                 (0, F.jsxs)(F.Fragment, {
                   children: [
                     (0, F.jsxs)(`div`, {
@@ -144,16 +144,16 @@ function z(e) {
                       ],
                     }),
                     (0, F.jsxs)(`div`, {
-                      className: T(`befdhdeb-HY-`, `bPmDLn-lEoc-`),
+                      className: x(`befdhdeb-HY-`, `bPmDLn-lEoc-`),
                       style: { flexWrap: `wrap` },
                       children: [
-                        (0, F.jsx)(w, {
+                        (0, F.jsx)(N, {
                           toolTipContent: E(`#EventDisplay_Share_OnSteam`),
-                          children: (0, F.jsxs)(A, {
+                          children: (0, F.jsxs)(b, {
                             onClick: () => {
-                              x.logged_in ? m(!0) : g();
+                              C.logged_in ? m(!0) : g();
                             },
-                            className: T(
+                            className: x(
                               `yYL-OrX9PtQ-`,
                               `D4J8JhjevEo-`,
                               `LQrwY5m9KjE-`,
@@ -171,37 +171,37 @@ function z(e) {
                             ],
                           }),
                         }),
-                        (0, F.jsx)(w, {
+                        (0, F.jsx)(N, {
                           toolTipContent: E(`#EventDisplay_Share_OnFaceBook`),
-                          children: (0, F.jsx)(k, {
+                          children: (0, F.jsx)(M, {
                             href: c.strFacebookUrl,
                             className: `D4J8JhjevEo-`,
                             children: (0, F.jsx)(`img`, {
-                              className: T(`yYL-OrX9PtQ-`),
+                              className: x(`yYL-OrX9PtQ-`),
                               src: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNrsmz1Lw1AUhnP8qB+Qkk0pItbVxcX/IM6Cky7iFH+Jk79BwclBB3+AszgUwdVNBxFaCw1E7fW9cAep5pa0NiT3vgdeLjRJm/Ocm/NRiCilAp9tKvDcCIAACIAAsiyEzqAepCqqnvEhzHJSLGVQX7jvSKDPoYO8ADS9BUcAJNBiXgCudUjCJEgABPDLZip2v12obwIXur4DdBK+MeVrHaqJSB2KzKqT2izUgLZd2wH30CF8bFnTusgnlhdUsjmXAFxBe3Au9TEJ3hXpfNkA9M22T4v80TIBuIbzDz73ARe+9wG31pqo1DSWGNqBlgcO16oO4A3b/3XIOafQ8b9PSCWZBh8BYMMSfd3wvEPzrk6DH0OON8Z0vvLDkHAaJAACIICJJJeCy+Aa1Pnj8y+Uwa6lDOpA1S3fewSdjJJIi26EOnC0nTtKInpQalsALfn+CDQJgAA8BYDnP8IS+bwDmuNcXHQVWDURG7QUmf7ZEmV9nysZh7dcGIdbALBpAaD7h6dJDFRshQmAAAiAAAiAAAiAAAiAAAiAAAiAAAjgpyUO+ZmMAuDSIQCZvtj+E4zNuhtU98WJxDgfZ50gfHOUSZAACIAAPLZvAQYAZ32YkpymkAcAAAAASUVORK5CYII=`,
                               alt: E(`#EventDisplay_Share_OnFaceBook`),
                             }),
                           }),
                         }),
-                        (0, F.jsx)(w, {
+                        (0, F.jsx)(N, {
                           toolTipContent: E(`#EventDisplay_Share_OnTwitter`),
-                          children: (0, F.jsx)(k, {
+                          children: (0, F.jsx)(M, {
                             href: c.strTwitterUrl,
                             className: `D4J8JhjevEo-`,
                             children: (0, F.jsx)(`img`, {
-                              className: T(`yYL-OrX9PtQ-`),
+                              className: x(`yYL-OrX9PtQ-`),
                               src: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABApJREFUeNrsm2tIFUEUx2evRl5ISnugZuULIwoVtIykIIkgowdmERERUh9CqQ/Rh+gFCX4oKCIjyi8VQtETsoLoARViJEokRYlako9Iy4JKfLX9hz2CwXrv7t6ZvbvcPfDjwr3uzJ7/npk5c3ZUVFVlkWw+FuHmCeAJ4AngCeAJ4AkQwRbtgnucBzJALPgNPoJ28FdI6zwTdCDp4DToUvWtF1SDHIPtFUz0m5GLp9noeAw4BYZV43YFxOm05QNF4DmosirADNABMm1wPgE0qdasHWSAKJALKkAr/TYIUq0KcIAa4Y0lS3Q+HjSroVk/+Knz/eFAfQe7sfpxDckU4bYqx2opKsb6UcwIMElnLPLhsECw8xskOc9F9RPFoIaGyX/9B8oDknSWybmgHhQJXOaOSlg634AP4AH4Dm6Bh6DVzDKYE0ThSoqSUJ5+lmqPVUx0D4EioDeIygdBA8gL4UmtsiGROhcoygIJ8AUMBGk8G7wC1SDRws1lSXb+OCjngW5FgFHw0kAnCthF6ekZkGLiBhMlOT4ENoNjoW6GrpvoNAbsBW3gLtgKpgS5ZkCSAD3gpojdYA34ZmGHuQ5cpWtrSZilJNJ46w/3TksxUBbfDS4K6m+ElqdO0A3mg2WSlsFsUQLwMX4DbHLRNr/eqLCBhkAm2EgC7ABPXCRAr9E/DFQQ8YM7FK61FAUJYKELBGgTIUA3fSaDPS6rdBkWIFgm+M6lpb4mUUXRey50fhA0ihLgLBh2mQANlAkKEaCTNhNusvuiEyE/7QmyXCJAhqhJcHy+vtZMo2G0RrP3afTNEB8KBeCpwwUwnbIrJo/I8KxwJzgCUh3mfD/lLH9kRAC3eLCIabW1FWA/bTudYufNOm82AuJAF02KzIFPPw38MHuhz2Qnlxw69iutOG9lDuDDoAVMd5Dzb0EuZYBMZgRw4zV2XuoadYjz/BV5qVXnrQjA7THY7pAU+STTqtKWTQnhpCjPCy6D9DA5/wIUMq3MFhYBxtJkXncvY9pJDrusAywBX0NtSBF0VthHe4Xl9FnK5J0/6qPoaxF146Imo9dUQFkj2flCUc6LFIDvwK7RBDlbYtjzCGsW2Wiop8TyafxvA1ESx3wdKGHa+0oWTgGmgsVgNVjPtBcbMo1PUCdo8yVl2dUTYBY4BOYw7VxeLGWAKbTbUmya6d8z7aVrnVyJ9Q8ORINy0KPab31gn4DDF4YItgz66SmU2RDun0AVuAB+2ZVQGM0DeNivBFtAMZgpcBvLi5j8LfQjJur4q+REiM/2eSRIPiU+aQZzhc+UL/DS9TOmFVtHWBhNVCY4mWmnypJo2IwdjBikp8xTVl5XHGIOM8X7t7kIN08ATwBPAE8ATwBPgAi2fwIMABJGc33swO3GAAAAAElFTkSuQmCC`,
                               alt: E(`#EventDisplay_Share_OnTwitter`),
                             }),
                           }),
                         }),
-                        (0, F.jsx)(w, {
+                        (0, F.jsx)(N, {
                           toolTipContent: E(`#EventDisplay_Share_OnReddit`),
-                          children: (0, F.jsx)(k, {
+                          children: (0, F.jsx)(M, {
                             href: c.strRedditUrl,
                             className: `D4J8JhjevEo-`,
                             children: (0, F.jsx)(`img`, {
-                              className: T(`yYL-OrX9PtQ-`),
+                              className: x(`yYL-OrX9PtQ-`),
                               src: y,
                               alt: E(`#EventDisplay_Share_OnReddit`),
                             }),

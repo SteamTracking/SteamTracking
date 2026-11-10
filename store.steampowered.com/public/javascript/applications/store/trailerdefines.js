@@ -5,58 +5,58 @@ import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, ft as n, st as r } from "./libraries.js";
 import { V as i } from "./storelink.js";
 import {
-  Et as a,
-  M as o,
-  Ot as s,
-  ht as c,
-  j as l,
-  mt as u,
-  pt as d,
-  wt as f,
+  Ar as a,
+  Er as o,
+  M as s,
+  Or as c,
+  _r as l,
+  gr as u,
+  hr as d,
+  j as f,
 } from "./saletags.js";
 import { r as p } from "./microtrailerdisplay.js";
 import { r as m, t as h } from "./trailertitlebar.js";
 import { t as g } from "./trailerstate.js";
 import {
-  Dc as _,
-  Gb as v,
-  Sc as y,
-  Tc as b,
-  Uy as x,
-  Vv as S,
-  Wl as C,
-  Wu as w,
-  Xb as T,
-  Yl as E,
-  Zb as D,
-  ax as O,
-  cn as k,
-  dc as A,
-  in as j,
-  iy as M,
-  kc as N,
-  kv as P,
-  md as F,
-  od as I,
-  pd as ee,
-  ql as L,
-  rr as R,
-  rx as z,
-  vl as B,
-  vt as V,
-  wc as te,
-  wv as ne,
-  xb as H,
-  zb as U,
+  Ac as _,
+  Av as v,
+  Bb as y,
+  Cc as b,
+  Ec as x,
+  Gl as S,
+  Gu as C,
+  Hv as w,
+  Jl as T,
+  Kb as E,
+  Oc as D,
+  Qb as O,
+  Sb as k,
+  Tc as A,
+  Tv as j,
+  Wy as M,
+  Xl as N,
+  Zb as P,
+  an as F,
+  ay as I,
+  fc as L,
+  hd as ee,
+  ir as R,
+  ix as z,
+  ln as B,
+  md as te,
+  ox as V,
+  sd as H,
+  vt as U,
+  yl as W,
 } from "./main.js";
-var W = e(t()),
-  G = `tYEw8zCMszM-`,
-  re = `NCpHzW0zAz4-`,
-  ie = `_8LSrWZvsPDA-`,
-  ae = `bUpZq7n9J9M-`,
-  oe = `qXndu6aUanY-`,
-  K = n();
-function q(e) {
+var G = e(t()),
+  K = `tYEw8zCMszM-`,
+  ne = `NCpHzW0zAz4-`,
+  re = `_8LSrWZvsPDA-`,
+  ie = `bUpZq7n9J9M-`,
+  ae = `qXndu6aUanY-`,
+  q = n();
+function oe(e) {
   let {
     className: t,
     showPriorAsActive: n,
@@ -64,14 +64,14 @@ function q(e) {
     selectedIndex: i,
     fnNavigate: a,
   } = e;
-  return (0, K.jsx)(N, {
+  return (0, q.jsx)(_, {
     "flow-children": `row`,
-    className: y(G, t),
+    className: b(K, t),
     children: Array.from({ length: r }).map((e, t) =>
-      (0, K.jsx)(
+      (0, q.jsx)(
         `div`,
         {
-          className: y({ [re]: !0, [ie]: n && t < i, [ae]: t == i, [oe]: !!a }),
+          className: b({ [ne]: !0, [re]: n && t < i, [ie]: t == i, [ae]: !!a }),
           onClick: a ? () => a(t) : void 0,
         },
         `dot_` + t,
@@ -80,12 +80,12 @@ function q(e) {
   });
 }
 async function se(e, t) {
-  let n = I(z.STORE_BASE_URL, t, O.country_code);
+  let n = H(z.STORE_BASE_URL, t, V.country_code);
   return (await (await fetch(n)).json()).rgRecommendedTags || [];
 }
 function ce() {
-  let e = M(),
-    t = v.accountid;
+  let e = I(),
+    t = E.accountid;
   return r(le(e, t));
 }
 function le(e, t) {
@@ -118,7 +118,7 @@ var de = `_1wbMyxGnGy8-`,
   Oe = `_4KA4WmZc39M-`,
   ke = `lnv5hodvZ5U-`;
 function Ae(e, t) {
-  W.useEffect(() => {
+  G.useEffect(() => {
     if (!t || !t.onended || !e) return;
     let n = t.onended,
       r = setTimeout(() => {
@@ -128,7 +128,7 @@ function Ae(e, t) {
   }, [e, t]);
 }
 function je(e, t) {
-  W.useEffect(() => {
+  G.useEffect(() => {
     if (!e) return;
     let n = () => t(!0),
       r = () => t(!1);
@@ -142,7 +142,7 @@ function je(e, t) {
   }, [t, e]);
 }
 function Me(e, t, n, r) {
-  return W.useCallback(() => {
+  return G.useCallback(() => {
     e == 0
       ? t(!0)
       : e == 1 && n
@@ -153,8 +153,8 @@ function Me(e, t, n, r) {
   }, [e, n, r, t]);
 }
 function Ne(e, t, n, r, i, a) {
-  let [o, s] = W.useState(!1);
-  W.useEffect(() => {
+  let [o, s] = G.useState(!1);
+  G.useEffect(() => {
     e && !o
       ? t == 1 && n && r
         ? (n.pause(), s(!0))
@@ -162,7 +162,7 @@ function Ne(e, t, n, r, i, a) {
       : !e && o && (t == 1 && n ? n.play() : t == 2 && i && i.Play(), s(!1));
   }, [t, e, o, r, a, n, i]);
 }
-var J = new B(`TrailerAppVideo`),
+var J = new W(`TrailerAppVideo`),
   Y = `bGameHighlightAutoplayDisabled`;
 function Pe(e) {
   let {
@@ -176,94 +176,94 @@ function Pe(e) {
       bShowAOAutoPlayWarning: c,
       ...l
     } = e,
-    [u, d] = W.useState(!1),
-    [f, p] = W.useState(!1),
-    m = ee(),
-    g = E(t, i, !0, c),
-    { data: v } = P(t),
-    { data: S } = ne(t),
-    C = _(t),
+    [u, d] = G.useState(!1),
+    [f, p] = G.useState(!1),
+    m = te(),
+    g = N(t, i, !0, c),
+    { data: y } = v(t),
+    { data: S } = j(t),
+    C = D(t),
     w = (c ?? !0) && g && !g.all_ages && m == `masked`,
-    T = F(),
-    [O, k] = W.useState(!1),
-    [A, j] = W.useState(0),
-    [M, I] = (0, W.useState)(null),
-    [L, R] = (0, W.useState)(null),
-    { bCookieLoaded: z } = Ie(r, n, d),
-    B = z;
-  (W.useEffect(() => {
-    n && B && u && !w && p(!0);
-  }, [u, B, n, w]),
-    W.useEffect(() => {
+    T = ee(),
+    [E, P] = G.useState(!1),
+    [F, I] = G.useState(0),
+    [L, R] = (0, G.useState)(null),
+    [z, B] = (0, G.useState)(null),
+    { bCookieLoaded: V } = Ie(r, n, d),
+    H = V;
+  (G.useEffect(() => {
+    n && H && u && !w && p(!0);
+  }, [u, H, n, w]),
+    G.useEffect(() => {
       w && f && u && T();
     }, [f, w, u, T]));
-  let V = (e) => {
-      (D(r ?? Y, String(!e), 3650), d(e), p(e));
+  let U = (e) => {
+      (O(r ?? Y, String(!e), 3650), d(e), p(e));
     },
-    U = Me(A, p, L, M);
-  W.useEffect(() => {
-    s && (s.current = U);
-  }, [U, s]);
-  let G =
+    W = Me(F, p, z, L);
+  G.useEffect(() => {
+    s && (s.current = W);
+  }, [W, s]);
+  let K =
     a && C && C.length > 0
-      ? b(C[0], `600x338`)
+      ? x(C[0], `600x338`)
       : S
-        ? te(S, `main_capsule`)
+        ? A(S, `main_capsule`)
         : void 0;
-  return (0, K.jsxs)(N, {
+  return (0, q.jsxs)(_, {
     className: be,
-    onMouseEnter: () => k(!0),
-    onMouseLeave: () => k(!1),
+    onMouseEnter: () => P(!0),
+    onMouseLeave: () => P(!1),
     children: [
-      (0, K.jsx)(`button`, {
-        onClick: U,
-        "aria-label": H.Localize(`#SaleTrailerCarousel_PlayPause`),
-        children: (0, K.jsx)(`img`, {
-          className: y(Oe, A != 0 && void 0),
-          src: G,
+      (0, q.jsx)(`button`, {
+        onClick: W,
+        "aria-label": k.Localize(`#SaleTrailerCarousel_PlayPause`),
+        children: (0, q.jsx)(`img`, {
+          className: b(Oe, F != 0 && void 0),
+          src: K,
           alt: ``,
         }),
       }),
-      v &&
-        (0, K.jsx)(Ve, {
-          appID: v.appid,
+      y &&
+        (0, q.jsx)(Ve, {
+          appID: y.appid,
           bAutoplayVideos: u,
           autoplayCheckboxPosition: o,
-          fnSetAutoPlayVideos: V,
+          fnSetAutoPlayVideos: U,
         }),
-      (0, K.jsx)(h, {
-        name: v?.name ?? ``,
+      (0, q.jsx)(h, {
+        name: y?.name ?? ``,
         trailerCategory: g?.trailer_category,
-        trailerDisplay: A,
-        mouseOver: O,
+        trailerDisplay: F,
+        mouseOver: E,
       }),
-      (0, K.jsx)(Le, {
-        eTrailerDisplay: A,
-        setTrailerDisplay: j,
+      (0, q.jsx)(Le, {
+        eTrailerDisplay: F,
+        setTrailerDisplay: I,
         featuredTrailer: g,
-        fnSetMainTrailer: I,
-        fnSetMicroTrailer: R,
-        loadedAndActive: B && n,
+        fnSetMainTrailer: R,
+        fnSetMicroTrailer: B,
+        loadedAndActive: H && n,
         setVideoShouldStart: p,
-        bMouseOverVideo: O,
+        bMouseOverVideo: E,
         id: t,
-        fnTogglePlayPause: U,
+        fnTogglePlayPause: W,
         bAutoplayVideos: u,
         bVideoShouldStart: f,
         ...l,
       }),
       w &&
         u &&
-        (0, K.jsxs)(`div`, {
+        (0, q.jsxs)(`div`, {
           className: `pTTlmyp5hVo-`,
           children: [
-            (0, K.jsx)(`div`, {
+            (0, q.jsx)(`div`, {
               className: `ERlbHjA197s-`,
-              children: x(`#StoreTrailer_AOWarning_1`),
+              children: M(`#StoreTrailer_AOWarning_1`),
             }),
-            (0, K.jsx)(`div`, {
+            (0, q.jsx)(`div`, {
               className: `ERlbHjA197s-`,
-              children: x(`#StoreTrailer_AOWarning_2`),
+              children: M(`#StoreTrailer_AOWarning_2`),
             }),
           ],
         }),
@@ -271,17 +271,17 @@ function Pe(e) {
   });
 }
 function Fe(e, t) {
-  let [n, r] = W.useState(!1);
+  let [n, r] = G.useState(!1);
   return (
-    W.useEffect(() => (e && (t(), r(!0)), () => r(!1)), [e, t]),
+    G.useEffect(() => (e && (t(), r(!0)), () => r(!1)), [e, t]),
     { bCookieLoaded: n }
   );
 }
 function Ie(e, t, n) {
   return Fe(
     t,
-    W.useCallback(() => {
-      let t = T(e ?? Y);
+    G.useCallback(() => {
+      let t = P(e ?? Y);
       n(!(t && t.toLowerCase() === `true`));
     }, [e, n]),
   );
@@ -303,82 +303,82 @@ function Le(e) {
       setVideoShouldStart: m,
       fnTogglePlayPause: h,
       bAutoplayVideos: g,
-      bVideoShouldStart: _,
+      bVideoShouldStart: y,
     } = e,
-    [v, y] = W.useState(!1),
-    [b, x] = W.useState(!1),
-    [S, C] = W.useState(!1),
-    [w, T] = W.useState(!1),
-    [E, D] = (0, W.useState)(null),
-    [O, k] = (0, W.useState)(null),
-    { data: j } = P(t),
-    M = !!n;
-  (W.useEffect(() => {
+    [b, x] = G.useState(!1),
+    [S, C] = G.useState(!1),
+    [w, T] = G.useState(!1),
+    [E, D] = G.useState(!1),
+    [O, k] = (0, G.useState)(null),
+    [A, j] = (0, G.useState)(null),
+    { data: M } = v(t),
+    N = !!n;
+  (G.useEffect(() => {
     let e = !1;
-    (f && b && M && (e = c === 0 || (c === 1 && !S) || (c === 2 && !w)),
-      y(e),
+    (f && S && N && (e = c === 0 || (c === 1 && !w) || (c === 2 && !E)),
+      x(e),
       a?.(g && e));
-  }, [a, c, w, S, f, g, b, M]),
-    je(O, C),
-    W.useEffect(() => {
-      _ ||
+  }, [a, c, E, w, f, g, S, N]),
+    je(A, T),
+    G.useEffect(() => {
+      y ||
         (l(0),
-        y(!1),
         x(!1),
-        O && (O.pause(), (O.currentTime = 0)),
-        E && (E.Pause(), E.SeekToStart()));
-    }, [_, E, O, l]));
-  let F = W.useRef(!1);
-  (W.useEffect(() => {
+        C(!1),
+        A && (A.pause(), (A.currentTime = 0)),
+        O && (O.Pause(), O.SeekToStart()));
+    }, [y, O, A, l]));
+  let P = G.useRef(!1);
+  (G.useEffect(() => {
     if (f && c === 0) {
-      if ((x(!0), _)) {
-        if (E) {
+      if ((C(!0), y)) {
+        if (O) {
           (J.Debug(`Starting microtrailer`), l(1));
-          let e = () => ze(F, l, E);
-          r || !O
+          let e = () => ze(P, l, O);
+          r || !A
             ? e()
-            : (C(!0), (O.onended = e), Be(O, `microtrailer`, () => C(!1)));
+            : (T(!0), (A.onended = e), Be(A, `microtrailer`, () => T(!1)));
         }
       } else J.Debug(`Showing image`);
     }
-  }, [f, c, r, _, s, l, E, O]),
-    Ae(S, O),
-    W.useEffect(() => {
+  }, [f, c, r, y, s, l, O, A]),
+    Ae(w, A),
+    G.useEffect(() => {
       f || m(!1);
     }, [f, m]),
-    Ne(!!o, c, O, S, E, w));
-  let I = (0, W.useCallback)((e) => {
-    (d(e), k(e));
+    Ne(!!o, c, A, w, O, E));
+  let F = (0, G.useCallback)((e) => {
+    (d(e), j(e));
   }, []);
-  return !j || !j.visible || !n
+  return !M || !M.visible || !n
     ? null
-    : (0, K.jsxs)(K.Fragment, {
+    : (0, q.jsxs)(q.Fragment, {
         children: [
-          v &&
-            (0, K.jsx)(N, {
+          b &&
+            (0, q.jsx)(_, {
               focusable: !0,
               onClick: h,
               className: `z39v7Mbdy8s-`,
-              children: (0, K.jsx)(A, {}),
+              children: (0, q.jsx)(L, {}),
             }),
           n.microtrailer &&
-            (0, K.jsx)(`video`, {
+            (0, q.jsx)(`video`, {
               className: X(!0, c),
-              ref: I,
+              ref: F,
               preload: `auto`,
               playsInline: !0,
               muted: !0,
               onClick: h,
-              children: (0, K.jsx)(p, { trailer: n }),
+              children: (0, q.jsx)(p, { trailer: n }),
             }),
-          (0, K.jsx)(Re, {
+          (0, q.jsx)(Re, {
             trailer: n,
             onRefChange: (e) => {
-              (D(e), u(e));
+              (k(e), u(e));
             },
             eTrailerDisplay: c,
             fadeRatio: i,
-            onPlayPauseChange: T,
+            onPlayPauseChange: D,
             onPlaybackEnd: s,
           }),
         ],
@@ -393,8 +393,8 @@ function Re(e) {
       onPlaybackEnd: a,
       onRefChange: o,
     } = e,
-    [s, c] = (0, W.useState)(null);
-  (0, W.useEffect)(() => {
+    [s, c] = (0, G.useState)(null);
+  (0, G.useEffect)(() => {
     if (r !== void 0 && s) {
       let e = s.GetVolume() * r;
       s.SetVolume(e, !0);
@@ -402,21 +402,21 @@ function Re(e) {
   }, [r, s]);
   let l = n != 2,
     u = X(!1, n),
-    d = (0, W.useMemo)(() => L(t), [t]),
-    f = (0, W.useCallback)((e) => {
+    d = (0, G.useMemo)(() => T(t), [t]),
+    f = (0, G.useCallback)((e) => {
       (c(e), o(e));
     }, []),
-    p = (0, W.useCallback)(() => {
+    p = (0, G.useCallback)(() => {
       i(!0);
     }, [i]);
-  return (0, K.jsx)(g, {
-    children: (0, K.jsx)(`div`, {
+  return (0, q.jsx)(g, {
+    children: (0, q.jsx)(`div`, {
       className: u,
-      children: (0, K.jsx)(m, {
+      children: (0, q.jsx)(m, {
         ref: f,
         dashManifests: d.rgDashTrailers,
         hlsManifest: d.rgHlsTrailers[0],
-        captionManifest: C(t),
+        captionManifest: S(t),
         screenshot: ``,
         altText: t.trailer_name,
         forcePause: l,
@@ -438,7 +438,7 @@ function Be(e, t, n) {
   });
 }
 function X(e, t) {
-  return y({
+  return b({
     [Se]: !0,
     [we]: t == 2,
     [Te]: t == 1,
@@ -455,20 +455,20 @@ function Ve(e) {
       autoplayCheckboxPosition: i,
     } = e,
     a = { [i || `top`]: 0 };
-  return (0, K.jsx)(K.Fragment, {
-    children: (0, K.jsx)(`div`, {
+  return (0, q.jsx)(q.Fragment, {
+    children: (0, q.jsx)(`div`, {
       onClick: (e) => {
         (e.preventDefault(), e.stopPropagation());
       },
       className: ke,
-      children: (0, K.jsx)(
+      children: (0, q.jsx)(
         R,
         {
           controlled: !0,
           checked: n,
           className: xe,
           style: a,
-          label: V.Localize(`#StoreTrailer_AutoPlayVideos`),
+          label: U.Localize(`#StoreTrailer_AutoPlayVideos`),
           onChange: r,
         },
         t,
@@ -492,35 +492,35 @@ function He(e) {
       fnComplete: p,
     } = e,
     m = i(t),
-    { data: h } = P(m),
-    { data: g } = S(m),
-    { bIsIgnored: _ } = Z(t),
-    { bIsWishlisted: v } = Q(t),
-    { bIsWishlisted: b } = Q(h?.related_items?.parent_appid),
-    [C, w] = k();
-  return (0, K.jsxs)(N, {
-    className: y(de, `AppVideoCtn`),
+    { data: h } = v(m),
+    { data: g } = w(m),
+    { bIsIgnored: y } = Z(t),
+    { bIsWishlisted: x } = Q(t),
+    { bIsWishlisted: S } = Q(h?.related_items?.parent_appid),
+    [C, T] = B();
+  return (0, q.jsxs)(_, {
+    className: b(de, `AppVideoCtn`),
     children: [
-      (0, K.jsx)(`div`, {
-        className: y(fe, (v || b) && `cIdEvZnHFHs-`),
-        children: x(`#Sale_OnWishlist`),
+      (0, q.jsx)(`div`, {
+        className: b(fe, (x || S) && `cIdEvZnHFHs-`),
+        children: M(`#Sale_OnWishlist`),
       }),
       C &&
-        (0, K.jsx)(j, {
-          eDisplay: w,
+        (0, q.jsx)(F, {
+          eDisplay: T,
           className: `ojoUrkK-4ss-`,
           storeItemPlatform: g,
         }),
-      (0, K.jsxs)(`div`, {
+      (0, q.jsxs)(`div`, {
         className: pe,
         children: [
-          (0, K.jsx)(Ue, { appID: t }),
-          (0, K.jsx)(
+          (0, q.jsx)(Ue, { appID: t }),
+          (0, q.jsx)(
             Pe,
             {
               id: m,
               trailerBaseID: n,
-              bCurrentlyActive: r && !_,
+              bCurrentlyActive: r && !y,
               autoplayCheckboxPosition: `top`,
               autoPlayCookieName: o,
               bShowAOAutoPlayWarning: s,
@@ -540,34 +540,34 @@ function He(e) {
   });
 }
 function Z(e) {
-  let t = o(e),
-    n = w(),
-    { mutateAsync: r } = l(e, !t, n);
+  let t = s(e),
+    n = C(),
+    { mutateAsync: r } = f(e, !t, n);
   return { bIsIgnored: t, fnUpdateIgnored: r };
 }
 function Ue(e) {
   let { appID: t } = e,
-    n = U(),
+    n = y(),
     { bIsIgnored: r, fnUpdateIgnored: i } = Z(t);
-  return (0, K.jsx)(`div`, {
-    className: y(me, r && `cIdEvZnHFHs-`),
-    children: (0, K.jsxs)(`div`, {
-      className: y(he, r && `cIdEvZnHFHs-`),
+  return (0, q.jsx)(`div`, {
+    className: b(me, r && `cIdEvZnHFHs-`),
+    children: (0, q.jsxs)(`div`, {
+      className: b(he, r && `cIdEvZnHFHs-`),
       children: [
-        (0, K.jsx)(`div`, {
+        (0, q.jsx)(`div`, {
           className: ge,
-          children: x(`#SaleTrailerCarousel_Ignored`),
+          children: M(`#SaleTrailerCarousel_Ignored`),
         }),
-        (0, K.jsx)(`div`, {
+        (0, q.jsx)(`div`, {
           className: _e,
-          children: x(`#SaleTrailerCarousel_IgnoredConfirmation`),
+          children: M(`#SaleTrailerCarousel_IgnoredConfirmation`),
         }),
-        (0, K.jsxs)(N, {
-          className: y(ye, ve),
+        (0, q.jsxs)(_, {
+          className: b(ye, ve),
           onClick: i,
           children: [
-            n && (0, K.jsx)(d, { button: f.X, type: c.Light, size: u.Medium }),
-            x(`#SaleTrailerCarousel_Undo`),
+            n && (0, q.jsx)(d, { button: o.X, type: l.Light, size: u.Medium }),
+            M(`#SaleTrailerCarousel_Undo`),
           ],
         }),
       ],
@@ -575,19 +575,19 @@ function Ue(e) {
   });
 }
 function Q(e) {
-  let t = !!s(e),
-    n = w(),
-    { mutate: r } = a(e, !t, n);
+  let t = !!a(e),
+    n = C(),
+    { mutate: r } = c(e, !t, n);
   return { bIsWishlisted: t, fnUpdateWishlist: r };
 }
 function We(e) {
   let { data: t } = ce(),
-    n = W.useMemo(
+    n = G.useMemo(
       () => new Map((t || []).map((e) => e.tagid).map((e, t) => [e, t])),
       [t],
     ),
-    r = W.useMemo(() => new Map(e.map((e, t) => [e, t])), [e]);
-  return W.useMemo(
+    r = G.useMemo(() => new Map(e.map((e, t) => [e, t])), [e]);
+  return G.useMemo(
     () =>
       e
         .slice()
@@ -745,7 +745,7 @@ export {
   Jt as it,
   Pt as j,
   tn as k,
-  q as kt,
+  oe as kt,
   ct as l,
   en as lt,
   St as m,

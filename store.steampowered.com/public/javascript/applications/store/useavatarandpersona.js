@@ -4,14 +4,14 @@
 import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, dt as n, nt as r, st as i, tt as a } from "./libraries.js";
 import {
-  Fu as o,
-  Iy as s,
-  Pb as c,
+  Fb as o,
+  Iu as s,
+  Ly as c,
   X as l,
-  ax as u,
-  iy as d,
-  mx as f,
-  rx as p,
+  ay as u,
+  hx as d,
+  ix as f,
+  ox as p,
   ut as m,
 } from "./main.js";
 var h = e(a()),
@@ -19,13 +19,13 @@ var h = e(a()),
   _ = e(t()),
   v = `nicknames`;
 function y(e) {
-  let t = d(),
+  let t = u(),
     { data: n, isLoading: r } = i({
       queryKey: [v],
       queryFn: async () => {
         let e = new Map();
-        if (u.logged_in) {
-          let n = f.Init(l),
+        if (p.logged_in) {
+          let n = d.Init(l),
             r = (await m.GetNicknameList(t, n)).Body().toObject();
           r?.nicknames &&
             r.nicknames.length > 0 &&
@@ -40,14 +40,14 @@ function y(e) {
 }
 async function b(e) {
   if (!e || e.length == 0) return [];
-  let t = c() == `community` ? p.COMMUNITY_BASE_URL : p.STORE_BASE_URL;
+  let t = o() == `community` ? f.COMMUNITY_BASE_URL : f.STORE_BASE_URL;
   if (e.length == 1) {
     let n = { accountid: e[0], origin: self.origin },
       r = await h.default.get(`${t}actions/ajaxgetavatarpersona`, {
         params: n,
       });
     if (!r || r.status != 200 || r.data?.success != 1 || !r.data?.userinfo)
-      throw `Load single avatar/persona failed ${o(r).strErrorMsg}`;
+      throw `Load single avatar/persona failed ${s(r).strErrorMsg}`;
     return [r.data.userinfo];
   }
   {
@@ -56,11 +56,11 @@ async function b(e) {
         params: n,
       });
     if (!r || r.status != 200 || r.data?.success != 1 || !r.data?.userinfos)
-      throw `Load single avatar/persona failed ${o(r).strErrorMsg}`;
+      throw `Load single avatar/persona failed ${s(r).strErrorMsg}`;
     let i = new Map();
     return (
       r.data.userinfos.forEach((e) =>
-        i.set(new s(e.steamid).GetAccountID(), e),
+        i.set(new c(e.steamid).GetAccountID(), e),
       ),
       e.map((e) => i.get(e))
     );
@@ -87,7 +87,7 @@ function T(e) {
         return (
           n.forEach((e) => {
             if (e instanceof Error) return;
-            let n = [S, new s(e.steamid).GetAccountID()];
+            let n = [S, new c(e.steamid).GetAccountID()];
             t.setQueryData(n, e);
           }),
           n

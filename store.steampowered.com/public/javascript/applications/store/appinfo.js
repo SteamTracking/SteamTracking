@@ -2,7 +2,7 @@
  ****/
 
 import { n as e } from "./personautils.js";
-import { qx as t, rx as n } from "./main.js";
+import { Jx as t, ix as n } from "./main.js";
 var r = `061818254b2c99ac49e6626adb128ed1282a392f`,
   i = class {
     m_unAppID;

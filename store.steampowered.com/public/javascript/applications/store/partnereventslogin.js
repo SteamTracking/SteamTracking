@@ -5,12 +5,12 @@ import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, ft as n } from "./libraries.js";
 import "./modals.js";
 import {
-  Ey as r,
-  Mn as i,
-  Nn as a,
-  Oy as o,
-  Uy as s,
-  rx as c,
+  Dy as r,
+  Nn as i,
+  Pn as a,
+  Wy as o,
+  ix as s,
+  ky as c,
 } from "./main.js";
 import "./steammessages_twofactor_pb.js";
 import { i as l, n as u, r as d, t as f } from "./logindialog.js";
@@ -30,22 +30,22 @@ function g() {
   i(
     (0, m.jsx)(h, { ownerWin: window, redirectURL: window.location.href }),
     window,
-    { strTitle: s(`#Login_SignInTitle`) },
+    { strTitle: o(`#Login_SignInTitle`) },
   );
 }
 function _(e, t) {
   i(
     (0, m.jsx)(h, { ownerWin: window, redirectURL: e, guestOption: t }),
     window,
-    { strTitle: s(`#Login_SignInTitle`) },
+    { strTitle: o(`#Login_SignInTitle`) },
   );
 }
 function v(e) {
   let { redirectURL: t, guestOption: n } = e,
     [i] = (0, p.useState)(
-      new r(new o(c.WEBAPI_BASE_URL)).GetAnonymousServiceTransport(),
+      new r(new c(s.WEBAPI_BASE_URL)).GetAnonymousServiceTransport(),
     ),
-    [a, s] = (0, p.useState)(!1);
+    [a, o] = (0, p.useState)(!1);
   return (0, m.jsx)(`div`, {
     children: a
       ? (0, m.jsx)(u, {})
@@ -54,7 +54,7 @@ function v(e) {
           transport: i,
           platform: 2,
           onComplete: (e) => {
-            e == l.k_PrimaryDomainFail ? s(!0) : window.location.assign(t);
+            e == l.k_PrimaryDomainFail ? o(!0) : window.location.assign(t);
           },
           redirectUrl: t,
           theme: `modal`,

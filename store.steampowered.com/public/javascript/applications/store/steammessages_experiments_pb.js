@@ -5,22 +5,22 @@ import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, Pt as n, dt as r, ot as i, st as a } from "./libraries.js";
 import {
   $x as o,
-  Gb as s,
-  Hb as c,
-  Qx as l,
+  Kb as s,
+  Qx as c,
+  Ub as l,
   Xx as u,
-  Yx as d,
-  Zx as f,
-  eS as p,
-  hx as m,
-  nS as h,
+  Zx as d,
+  eS as f,
+  gx as p,
+  nS as m,
+  rS as h,
   tS as g,
 } from "./main.js";
 var _ = e(t(), 1),
   v = `saleaction/creategiveawayregistration`;
 async function y(e) {
   let t =
-    c.STORE_BASE_URL +
+    l.STORE_BASE_URL +
     `saleaction/giveawayregistration?name=` +
     encodeURIComponent(e);
   return await x(
@@ -31,7 +31,7 @@ async function y(e) {
   );
 }
 async function b(e) {
-  let t = c.STORE_BASE_URL + v;
+  let t = l.STORE_BASE_URL + v;
   return await x(
     `UpdateUserGiveawayRegistration`,
     e,
@@ -87,7 +87,7 @@ var D = e(n(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.impressions || d(e.M()),
+        e.prototype.impressions || u(e.M()),
         D.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -102,16 +102,16 @@ var D = e(n(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= o(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= f(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return g(e.M(), t, n);
+      return m(e.M(), t, n);
     }
     static fromObject(t) {
-      return f(e.M(), t);
+      return c(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new D.BinaryReader(t),
@@ -119,14 +119,14 @@ var D = e(n(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return u(e.MBF(), t, n);
+      return d(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new D.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      p(e.M(), t, n);
+      g(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new D.BinaryWriter();
@@ -140,7 +140,7 @@ var D = e(n(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.type || d(e.M()),
+        e.prototype.type || u(e.M()),
         D.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -150,25 +150,25 @@ var D = e(n(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            type: { n: 1, br: l.readEnum, bw: h.writeEnum },
-            appid: { n: 2, br: l.readUint32, bw: h.writeUint32 },
-            num_impressions: { n: 3, br: l.readUint32, bw: h.writeUint32 },
+            type: { n: 1, br: o.readEnum, bw: h.writeEnum },
+            appid: { n: 2, br: o.readUint32, bw: h.writeUint32 },
+            num_impressions: { n: 3, br: o.readUint32, bw: h.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= o(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= f(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return g(e.M(), t, n);
+      return m(e.M(), t, n);
     }
     static fromObject(t) {
-      return f(e.M(), t);
+      return c(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new D.BinaryReader(t),
@@ -176,14 +176,14 @@ var D = e(n(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return u(e.MBF(), t, n);
+      return d(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new D.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      p(e.M(), t, n);
+      g(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new D.BinaryWriter();
@@ -198,7 +198,7 @@ var D = e(n(), 1),
   function t(e, t) {
     return e.SendNotification(
       `ExperimentService.ReportProductImpressionsFromClient#1`,
-      m(O, t),
+      p(O, t),
       { ePrivilege: 1 },
     );
   }

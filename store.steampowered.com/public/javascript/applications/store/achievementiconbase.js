@@ -3,13 +3,13 @@
 
 import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, ft as n } from "./libraries.js";
-import { Cb as r, Hb as i, Sb as a, Sc as o } from "./main.js";
+import { Cb as r, Cc as i, Ub as a, wb as o } from "./main.js";
 function s(e) {
   let { appid: t, profileUrl: n, dlc: r } = e,
-    a = n
+    i = n
       ? `${n}/achievements/${t}`
-      : `${i.COMMUNITY_BASE_URL}achievements/${t}`;
-  return r === void 0 ? a : `${a}?dlc=${r}`;
+      : `${a.COMMUNITY_BASE_URL}achievements/${t}`;
+  return r === void 0 ? i : `${i}?dlc=${r}`;
 }
 function c(e) {
   return s(e);
@@ -20,73 +20,73 @@ var l = e(t(), 1),
   f = `gKxbRyrbiIU-`,
   p = {};
 ((p.arabic = () =>
-  a(() => import(`./achievements_arabic.js`), [], import.meta.url)),
+  r(() => import(`./achievements_arabic.js`), [], import.meta.url)),
   (p.brazilian = () =>
-    a(() => import(`./achievements_brazilian.js`), [], import.meta.url)),
+    r(() => import(`./achievements_brazilian.js`), [], import.meta.url)),
   (p.bulgarian = () =>
-    a(() => import(`./achievements_bulgarian.js`), [], import.meta.url)),
+    r(() => import(`./achievements_bulgarian.js`), [], import.meta.url)),
   (p.czech = () =>
-    a(() => import(`./achievements_czech.js`), [], import.meta.url)),
+    r(() => import(`./achievements_czech.js`), [], import.meta.url)),
   (p.danish = () =>
-    a(() => import(`./achievements_danish.js`), [], import.meta.url)),
+    r(() => import(`./achievements_danish.js`), [], import.meta.url)),
   (p.dutch = () =>
-    a(() => import(`./achievements_dutch.js`), [], import.meta.url)),
+    r(() => import(`./achievements_dutch.js`), [], import.meta.url)),
   (p.english = () =>
-    a(() => import(`./achievements_english.js`), [], import.meta.url)),
+    r(() => import(`./achievements_english.js`), [], import.meta.url)),
   (p.finnish = () =>
-    a(() => import(`./achievements_finnish.js`), [], import.meta.url)),
+    r(() => import(`./achievements_finnish.js`), [], import.meta.url)),
   (p.french = () =>
-    a(() => import(`./achievements_french.js`), [], import.meta.url)),
+    r(() => import(`./achievements_french.js`), [], import.meta.url)),
   (p.german = () =>
-    a(() => import(`./achievements_german.js`), [], import.meta.url)),
+    r(() => import(`./achievements_german.js`), [], import.meta.url)),
   (p.greek = () =>
-    a(() => import(`./achievements_greek.js`), [], import.meta.url)),
+    r(() => import(`./achievements_greek.js`), [], import.meta.url)),
   (p.hungarian = () =>
-    a(() => import(`./achievements_hungarian.js`), [], import.meta.url)),
+    r(() => import(`./achievements_hungarian.js`), [], import.meta.url)),
   (p.indonesian = () =>
-    a(() => import(`./achievements_indonesian.js`), [], import.meta.url)),
+    r(() => import(`./achievements_indonesian.js`), [], import.meta.url)),
   (p.italian = () =>
-    a(() => import(`./achievements_italian.js`), [], import.meta.url)),
+    r(() => import(`./achievements_italian.js`), [], import.meta.url)),
   (p.japanese = () =>
-    a(() => import(`./achievements_japanese.js`), [], import.meta.url)),
+    r(() => import(`./achievements_japanese.js`), [], import.meta.url)),
   (p.koreana = () =>
-    a(() => import(`./achievements_koreana.js`), [], import.meta.url)),
+    r(() => import(`./achievements_koreana.js`), [], import.meta.url)),
   (p.latam = () =>
-    a(() => import(`./achievements_latam.js`), [], import.meta.url)),
+    r(() => import(`./achievements_latam.js`), [], import.meta.url)),
   (p.malay = () =>
-    a(() => import(`./achievements_malay.js`), [], import.meta.url)),
+    r(() => import(`./achievements_malay.js`), [], import.meta.url)),
   (p.norwegian = () =>
-    a(() => import(`./achievements_norwegian.js`), [], import.meta.url)),
+    r(() => import(`./achievements_norwegian.js`), [], import.meta.url)),
   (p.polish = () =>
-    a(() => import(`./achievements_polish.js`), [], import.meta.url)),
+    r(() => import(`./achievements_polish.js`), [], import.meta.url)),
   (p.portuguese = () =>
-    a(() => import(`./achievements_portuguese.js`), [], import.meta.url)),
+    r(() => import(`./achievements_portuguese.js`), [], import.meta.url)),
   (p.romanian = () =>
-    a(() => import(`./achievements_romanian.js`), [], import.meta.url)),
+    r(() => import(`./achievements_romanian.js`), [], import.meta.url)),
   (p.russian = () =>
-    a(() => import(`./achievements_russian.js`), [], import.meta.url)),
+    r(() => import(`./achievements_russian.js`), [], import.meta.url)),
   (p.sc_schinese = () =>
-    a(() => import(`./achievements_sc_schinese.js`), [], import.meta.url)),
+    r(() => import(`./achievements_sc_schinese.js`), [], import.meta.url)),
   (p.schinese = () =>
-    a(() => import(`./achievements_schinese.js`), [], import.meta.url)),
+    r(() => import(`./achievements_schinese.js`), [], import.meta.url)),
   (p.spanish = () =>
-    a(() => import(`./achievements_spanish.js`), [], import.meta.url)),
+    r(() => import(`./achievements_spanish.js`), [], import.meta.url)),
   (p.swedish = () =>
-    a(() => import(`./achievements_swedish.js`), [], import.meta.url)),
+    r(() => import(`./achievements_swedish.js`), [], import.meta.url)),
   (p.tchinese = () =>
-    a(() => import(`./achievements_tchinese.js`), [], import.meta.url)),
+    r(() => import(`./achievements_tchinese.js`), [], import.meta.url)),
   (p.thai = () =>
-    a(() => import(`./achievements_thai.js`), [], import.meta.url)),
+    r(() => import(`./achievements_thai.js`), [], import.meta.url)),
   (p.turkish = () =>
-    a(() => import(`./achievements_turkish.js`), [], import.meta.url)),
+    r(() => import(`./achievements_turkish.js`), [], import.meta.url)),
   (p.ukrainian = () =>
-    a(() => import(`./achievements_ukrainian.js`), [], import.meta.url)),
+    r(() => import(`./achievements_ukrainian.js`), [], import.meta.url)),
   (p.vietnamese = () =>
-    a(() => import(`./achievements_vietnamese.js`), [], import.meta.url)));
+    r(() => import(`./achievements_vietnamese.js`), [], import.meta.url)));
 async function m(e) {
   if (p[e]) return await p[e]();
 }
-var h = r(m);
+var h = o(m);
 function g(e) {
   return e !== void 0 && e < 10;
 }
@@ -99,8 +99,8 @@ function y(e) {
       imgURL: t,
       glow: n,
       pauseAnimation: r,
-      hidden: i,
-      alt: a,
+      hidden: a,
+      alt: o,
       hideNativeTooltip: s = !1,
       className: c,
       size: p,
@@ -115,10 +115,10 @@ function y(e) {
               g(!0);
             }));
     }, []),
-    b = n && (i || h),
+    b = n && (a || h),
     x = v(p);
   return (0, _.jsxs)(`div`, {
-    className: o(d, c, r && `QitWOKeXzIo-`),
+    className: i(d, c, r && `QitWOKeXzIo-`),
     style: x,
     ...m,
     children: [
@@ -130,18 +130,18 @@ function y(e) {
             children: (0, _.jsx)(`div`, { className: `rl2nPtOHt2k-` }),
           }),
         }),
-      i
+      a
         ? (0, _.jsx)(`div`, {
-            className: o(f, b && `HTU-WDYrxMw-`),
+            className: i(f, b && `HTU-WDYrxMw-`),
             children: `?`,
           })
         : (0, _.jsx)(`img`, {
             ref: y,
-            className: o(u, b && `HTU-WDYrxMw-`),
+            className: i(u, b && `HTU-WDYrxMw-`),
             src: t == `` ? void 0 : t,
             loading: `lazy`,
-            alt: a,
-            title: s ? void 0 : a,
+            alt: o,
+            title: s ? void 0 : o,
           }),
     ],
   });

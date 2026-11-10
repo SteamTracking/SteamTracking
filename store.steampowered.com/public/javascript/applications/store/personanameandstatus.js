@@ -7,34 +7,34 @@ import { n as i } from "./enums_epersonastateflag.js";
 import { n as a } from "./persona.js";
 import { n as o } from "./alternate_icons.js";
 import {
-  Ba as s,
-  Fo as c,
-  Mb as l,
-  Sc as u,
-  Ub as d,
-  Uy as f,
-  aS as p,
-  fo as m,
-  ho as h,
+  Bs as s,
+  Cc as c,
+  Io as l,
+  Nb as u,
+  Va as d,
+  Wb as f,
+  Wy as p,
+  aS as m,
+  go as h,
   iS as g,
-  lc as _,
-  rS as ee,
-  ro as te,
-  zs as v,
+  io as _,
+  oS as v,
+  po as y,
+  uc as b,
 } from "./main.js";
-var y = e(t()),
-  b = `SF1sJnuMqxw-`,
-  x = `rALHh8gNXzk-`,
-  S = `BPUdGzLfnOs-`,
-  C = `JOLhLnwh07k-`,
-  w = `ZNkrEoiqVl8-`,
-  T = `QJ-7IJ25nrU-`,
-  E = `PxCAsy1vdvA-`,
-  D = `mJ-ovG6Q-Nw-`,
-  O = n(),
-  k = class extends y.Component {
+var x = e(t()),
+  S = `SF1sJnuMqxw-`,
+  C = `rALHh8gNXzk-`,
+  w = `BPUdGzLfnOs-`,
+  T = `JOLhLnwh07k-`,
+  E = `ZNkrEoiqVl8-`,
+  D = `QJ-7IJ25nrU-`,
+  O = `PxCAsy1vdvA-`,
+  k = `mJ-ovG6Q-Nw-`,
+  A = n(),
+  j = class extends x.Component {
     static get hoverClass() {
-      return D;
+      return k;
     }
     render() {
       let {
@@ -47,10 +47,10 @@ var y = e(t()),
         } = this.props,
         o = ``;
       return (
-        r == `medium` ? (o = S) : r == `large` && (o = C),
-        (0, O.jsxs)(`div`, {
-          className: u(
-            b,
+        r == `medium` ? (o = w) : r == `large` && (o = T),
+        (0, A.jsxs)(`div`, {
+          className: c(
+            S,
             e.online_state,
             n,
             t && `h-MpRJExIDY-`,
@@ -59,19 +59,19 @@ var y = e(t()),
           ),
           ...a,
           children: [
-            (0, O.jsx)(`div`, {
+            (0, A.jsx)(`div`, {
               "data-text": `Z`,
-              className: u(x, w),
+              className: c(C, E),
               children: `Z`,
             }),
-            (0, O.jsx)(`div`, {
+            (0, A.jsx)(`div`, {
               "data-text": `Z`,
-              className: u(x, T),
+              className: c(C, D),
               children: `Z`,
             }),
-            (0, O.jsx)(`div`, {
+            (0, A.jsx)(`div`, {
               "data-text": `Z`,
-              className: u(x, E),
+              className: c(C, O),
               children: `Z`,
             }),
           ],
@@ -79,76 +79,76 @@ var y = e(t()),
       );
     }
   };
-k = l([r], k);
-var A = r((e) => {
+j = u([r], j);
+var ee = r((e) => {
     let { persona: t, className: n, ...r } = e;
     if (!t || !t.is_online) return null;
-    let c = t.HasStateFlag(512),
-      l = t.HasStateFlag(i),
-      d = t.m_eGamingDeviceType == 544,
-      p = t.m_eGamingDeviceType == 545,
-      m = !d && !p && !l && t.HasStateFlag(1024);
-    return (0, O.jsxs)(y.Fragment, {
+    let l = t.HasStateFlag(512),
+      u = t.HasStateFlag(i),
+      f = t.m_eGamingDeviceType == 544,
+      m = t.m_eGamingDeviceType == 545,
+      h = !f && !m && !u && t.HasStateFlag(1024);
+    return (0, A.jsxs)(x.Fragment, {
       children: [
-        c &&
-          (0, O.jsx)(`div`, {
-            className: u(n, `da-aiolTzeA-`, `blHJJNodWx8-`, a(t)),
-            title: f(`#Platform_Hint_Mobile`),
-            ...r,
-            children: (0, O.jsx)(o, {}),
-          }),
         l &&
-          (0, O.jsx)(`div`, {
-            className: u(n, `da-aiolTzeA-`, `BcFXA8lWH3E-`, a(t)),
-            title: f(`#Platform_Hint_VR`),
+          (0, A.jsx)(`div`, {
+            className: c(n, `da-aiolTzeA-`, `blHJJNodWx8-`, a(t)),
+            title: p(`#Platform_Hint_Mobile`),
             ...r,
-            children: (0, O.jsx)(_, {}),
+            children: (0, A.jsx)(o, {}),
+          }),
+        u &&
+          (0, A.jsx)(`div`, {
+            className: c(n, `da-aiolTzeA-`, `BcFXA8lWH3E-`, a(t)),
+            title: p(`#Platform_Hint_VR`),
+            ...r,
+            children: (0, A.jsx)(b, {}),
+          }),
+        h &&
+          (0, A.jsx)(`div`, {
+            className: c(n, `da-aiolTzeA-`, void 0, a(t)),
+            title: p(`#Platform_Hint_BigPicture`),
+            ...r,
+            children: (0, A.jsx)(d, {}),
+          }),
+        f &&
+          (0, A.jsx)(`div`, {
+            className: c(n, `da-aiolTzeA-`, `mTNeCLqRe-M-`, a(t)),
+            title: p(`#Platform_Hint_SteamDeck`),
+            ...r,
+            children: (0, A.jsx)(s, {}),
           }),
         m &&
-          (0, O.jsx)(`div`, {
-            className: u(n, `da-aiolTzeA-`, void 0, a(t)),
-            title: f(`#Platform_Hint_BigPicture`),
+          (0, A.jsx)(`div`, {
+            className: c(n, `da-aiolTzeA-`, `mTNeCLqRe-M-`, a(t)),
+            title: p(`#Platform_Hint_LegionGoS`),
             ...r,
-            children: (0, O.jsx)(s, {}),
-          }),
-        d &&
-          (0, O.jsx)(`div`, {
-            className: u(n, `da-aiolTzeA-`, `mTNeCLqRe-M-`, a(t)),
-            title: f(`#Platform_Hint_SteamDeck`),
-            ...r,
-            children: (0, O.jsx)(v, {}),
-          }),
-        p &&
-          (0, O.jsx)(`div`, {
-            className: u(n, `da-aiolTzeA-`, `mTNeCLqRe-M-`, a(t)),
-            title: f(`#Platform_Hint_LegionGoS`),
-            ...r,
-            children: (0, O.jsx)(v, {}),
+            children: (0, A.jsx)(s, {}),
           }),
       ],
     });
   }),
-  j = `JT7Tc3-HVD8-`,
-  M = `j-7wpj1lnTs-`,
-  N = `YSmzqRXBp-c-`,
-  P = `DiM-YEuAiRQ-`,
-  F = `cTbg3n7roHw-`,
-  I = `VoqT3Dd8TPE-`,
-  L = `nBCm-QvuKr8-`,
+  M = `JT7Tc3-HVD8-`,
+  N = `j-7wpj1lnTs-`,
+  P = `YSmzqRXBp-c-`,
+  F = `DiM-YEuAiRQ-`,
+  I = `cTbg3n7roHw-`,
+  L = `VoqT3Dd8TPE-`,
+  te = `nBCm-QvuKr8-`,
   R = `VirJ-To7GvQ-`,
-  z = `cj674wkduhQ-`,
-  B = `ne8a3CldZh4-`,
-  ne = `bTQkmHfshdg-`;
-function re(e) {
-  return (0, O.jsxs)(y.Fragment, {
+  ne = `cj674wkduhQ-`,
+  re = `ne8a3CldZh4-`,
+  z = `bTQkmHfshdg-`;
+function B(e) {
+  return (0, A.jsxs)(x.Fragment, {
     children: [
-      (0, O.jsx)(`span`, { className: R, children: f(`#User_WantsToPlay`) }),
+      (0, A.jsx)(`span`, { className: R, children: p(`#User_WantsToPlay`) }),
       `\xA0–\xA0`,
       e.persona.GetCurrentGameName(),
     ],
   });
 }
-var V = class extends y.Component {
+var V = class extends x.Component {
   render() {
     let {
         className: e,
@@ -158,18 +158,18 @@ var V = class extends y.Component {
         bIsSelf: i,
         bParenthesizeNicknames: o,
         strNickname: s,
-        bCompactView: l,
-        bHideGameName: _,
-        bHideEnhancedRichPresenceLabel: v,
-        bHideSnooze: y,
-        bHideStatus: b,
-        renderStatus: x,
-        renderRichPresence: S,
-        bHidePersona: C,
-        bDNDSet: w,
-        bHasPartyBeacon: T,
-        bHasGamePrivacy: E,
-        bNoMask: D,
+        bCompactView: u,
+        bHideGameName: d,
+        bHideEnhancedRichPresenceLabel: b,
+        bHideSnooze: x,
+        bHideStatus: S,
+        renderStatus: C,
+        renderRichPresence: w,
+        bHidePersona: T,
+        bDNDSet: E,
+        bHasPartyBeacon: D,
+        bHasGamePrivacy: O,
+        bNoMask: k,
         bEllipsisName: R,
         bDropPadding: V,
         ...H
@@ -177,94 +177,94 @@ var V = class extends y.Component {
       U = null,
       W = null,
       G = null,
-      K = [e, void 0, a(n), l ? B : void 0, D ? I : void 0];
-    (T || n.has_public_party_beacon
-      ? (W = (0, O.jsx)(re, { persona: n }))
-      : g(r)
-        ? ((W = f(`#PersonaStateBlocked`)), K.push(N))
+      K = [e, void 0, a(n), u ? re : void 0, k ? L : void 0];
+    (D || n.has_public_party_beacon
+      ? (W = (0, A.jsx)(B, { persona: n }))
+      : m(r)
+        ? ((W = p(`#PersonaStateBlocked`)), K.push(P))
         : n.is_ingame
           ? ((W =
-              !n.is_in_nonsteam_game || i || p(r)
+              !n.is_in_nonsteam_game || i || v(r)
                 ? n.GetCurrentGameName()
-                : f(`#PersonaStateInNonSteamGame`)),
-            !i && !C
+                : p(`#PersonaStateInNonSteamGame`)),
+            !i && !T
               ? (G = n.GetCurrentGameRichPresence())
-              : i && n.is_awayOrSnooze && (G = f(`#PersonaStateAway`)))
-          : n.m_broadcastAccountId && (W = f(`#PersonaStateWatchingBroadcast`)),
+              : i && n.is_awayOrSnooze && (G = p(`#PersonaStateAway`)))
+          : n.m_broadcastAccountId && (W = p(`#PersonaStateWatchingBroadcast`)),
       (W ||= n.GetLocalizedOnlineStatus()),
-      x && (W = x()));
-    let q = !C && !y;
-    (y === !1 && (q = !0),
-      n.is_awayOrSnooze && q && (U = (0, O.jsx)(k, { persona: n })));
-    let J = (0, O.jsx)(O.Fragment, {});
+      C && (W = C()));
+    let q = !T && !x;
+    (x === !1 && (q = !0),
+      n.is_awayOrSnooze && q && (U = (0, A.jsx)(j, { persona: n })));
+    let J = (0, A.jsx)(A.Fragment, {});
     (t
-      ? (J = (0, O.jsx)(`div`, {
+      ? (J = (0, A.jsx)(`div`, {
           className: `ContextMenuButton`,
           onClick: t,
-          children: (0, O.jsx)(h, {}),
+          children: (0, A.jsx)(h, {}),
         }))
-      : K.push(ne),
-      C && K.push(z),
-      S && (G = S()),
-      (_ || !G) && K.push(L));
-    let Y = !n.is_ingame && !b,
-      X = !v && G,
-      Z = W && (!_ || !X),
-      ie = ee(d()?.LAUNCHER_TYPE ?? 0),
+      : K.push(z),
+      T && K.push(ne),
+      w && (G = w()),
+      (d || !G) && K.push(te));
+    let Y = !n.is_ingame && !S,
+      X = !b && G,
+      Z = W && (!d || !X),
+      ie = g(f()?.LAUNCHER_TYPE ?? 0),
       Q = s && !o,
       ae = Q ? s : n.m_strPlayerName,
-      $ = !C && (Z || Y) && X;
-    return (0, O.jsxs)(`div`, {
+      $ = !T && (Z || Y) && X;
+    return (0, A.jsxs)(`div`, {
       ...H,
-      className: u(...K),
+      className: c(...K),
       onContextMenu: t,
       children: [
-        (0, O.jsxs)(`div`, {
-          className: u(j, $ ? M : void 0),
+        (0, A.jsxs)(`div`, {
+          className: c(M, $ ? N : void 0),
           children: [
-            (0, O.jsxs)(`div`, {
-              className: u(P, R ? F : void 0),
+            (0, A.jsxs)(`div`, {
+              className: c(F, R ? I : void 0),
               children: [
                 ae || `\xA0`,
                 o &&
                   s &&
-                  (0, O.jsxs)(`span`, {
+                  (0, A.jsxs)(`span`, {
                     className: `eOmjO6XkTx4-`,
                     children: [`(`, s, `)`],
                   }),
               ],
             }),
-            w &&
-              (0, O.jsx)(`div`, {
+            E &&
+              (0, A.jsx)(`div`, {
                 className: `TGKbpc7Wcyk-`,
-                title: f(`#User_ToggleDoNotDisturb`),
-                children: (0, O.jsx)(m, {}),
+                title: p(`#User_ToggleDoNotDisturb`),
+                children: (0, A.jsx)(y, {}),
               }),
             Q &&
-              (0, O.jsx)(`span`, {
+              (0, A.jsx)(`span`, {
                 className: `-oIKqTeuyo8-`,
-                title: f(`#isNickname`),
+                title: p(`#isNickname`),
                 children: ` *`,
               }),
-            (0, O.jsx)(A, { persona: n }),
+            (0, A.jsx)(ee, { persona: n }),
             U,
             (n.m_bPlayerNamePending || n.m_bAvatarPending) &&
               ie &&
-              (0, O.jsx)(`div`, {
+              (0, A.jsx)(`div`, {
                 className: `qAItuMOYwsU-`,
-                title: f(`#SteamChina_PendingPersonaName`),
-                children: (0, O.jsx)(te, {}),
+                title: p(`#SteamChina_PendingPersonaName`),
+                children: (0, A.jsx)(_, {}),
               }),
             J,
           ],
         }),
-        !C &&
-          (0, O.jsxs)(`div`, {
+        !T &&
+          (0, A.jsxs)(`div`, {
             className: `_9lhfreYH7b4-`,
             children: [
               (Z || Y) &&
-                (0, O.jsxs)(`div`, {
-                  className: u(
+                (0, A.jsxs)(`div`, {
+                  className: c(
                     `-rLUGeiOB5k-`,
                     $ ? `j-7wpj1lnTs-` : void 0,
                     `KzNkmPbkAaI-`,
@@ -272,18 +272,18 @@ var V = class extends y.Component {
                     `no-drag`,
                   ),
                   children: [
-                    E &&
-                      (0, O.jsx)(`div`, {
+                    O &&
+                      (0, A.jsx)(`div`, {
                         className: `RUAwoGhbIvU-`,
-                        title: f(`#User_GameInfoHidden`),
-                        children: (0, O.jsx)(c, {}),
+                        title: p(`#User_GameInfoHidden`),
+                        children: (0, A.jsx)(l, {}),
                       }),
                     W,
                   ],
                 }),
               X &&
-                (0, O.jsxs)(`div`, {
-                  className: u(`KzNkmPbkAaI-`, V && `VWRtCEXAYxQ-`, `no-drag`),
+                (0, A.jsxs)(`div`, {
+                  className: c(`KzNkmPbkAaI-`, V && `VWRtCEXAYxQ-`, `no-drag`),
                   children: [G, ` `],
                 }),
             ],
@@ -292,7 +292,7 @@ var V = class extends y.Component {
     });
   }
 };
-V = l([r], V);
+V = u([r], V);
 var H = r((e) => {
   let {
       persona: t,
@@ -301,19 +301,19 @@ var H = r((e) => {
       bIgnorePersonaStatus: i,
       bDisableColoring: o,
       className: s,
-      ...c
+      ...l
     } = e,
-    l = r && !n ? r : t.m_strPlayerName;
-  return (0, O.jsx)(`span`, {
-    ...c,
-    className: u(s, o && `Zhs6svnnbFQ-`, !i && a(t)),
-    children: (0, O.jsxs)(`span`, {
-      className: P,
+    u = r && !n ? r : t.m_strPlayerName;
+  return (0, A.jsx)(`span`, {
+    ...l,
+    className: c(s, o && `Zhs6svnnbFQ-`, !i && a(t)),
+    children: (0, A.jsxs)(`span`, {
+      className: F,
       children: [
-        l || `\xA0`,
+        u || `\xA0`,
         n &&
           r &&
-          (0, O.jsxs)(`span`, {
+          (0, A.jsxs)(`span`, {
             className: `eOmjO6XkTx4-`,
             children: [`(`, r, `)`],
           }),

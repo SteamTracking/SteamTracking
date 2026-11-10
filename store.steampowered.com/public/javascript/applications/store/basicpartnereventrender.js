@@ -7,22 +7,22 @@ import { B as a } from "./partnerevent.js";
 import { n as o, t as s } from "./apppartnereventspage.js";
 import { n as c, t as l } from "./partnereventstore.js";
 import {
-  Mb as u,
-  Mn as d,
-  Rx as f,
+  Jb as u,
+  Nb as d,
+  Nn as f,
   a as p,
   i as m,
-  qb as h,
-  rx as g,
+  ix as h,
+  zx as g,
 } from "./main.js";
 var _ = e(t()),
   v = e(i()),
   y = class e extends l {
     async DeleteOldAnnouncement(e, t) {
       let n = new URLSearchParams();
-      n.append(`sessionid`, h());
+      n.append(`sessionid`, u());
       let r =
-          g.COMMUNITY_BASE_URL +
+          h.COMMUNITY_BASE_URL +
           `/gid/` +
           e.ConvertTo64BitString() +
           `/announcements/ajaxdeleteannouncement/` +
@@ -62,7 +62,7 @@ function S(e) {
   });
 }
 function C(e, t) {
-  d((0, x.jsx)(S, { event: e }), t);
+  f((0, x.jsx)(S, { event: e }), t);
 }
 var w = class extends _.Component {
   m_refFocus = _.createRef();
@@ -106,7 +106,7 @@ var w = class extends _.Component {
     });
   }
 };
-(u([f], w.prototype, `escFunction`, null),
-  u([f], w.prototype, `OnBackgroundClick`, null),
-  (w = u([r], w)));
+(d([g], w.prototype, `escFunction`, null),
+  d([g], w.prototype, `OnBackgroundClick`, null),
+  (w = d([r], w)));
 export { w as n, y as r, C as t };

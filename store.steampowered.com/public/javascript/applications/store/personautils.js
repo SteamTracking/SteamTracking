@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { rx as e } from "./main.js";
+import { ix as e } from "./main.js";
 var t = `fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb`,
   n = `https://steamloopback.host/clientassets/avatars/`;
 function r(r, i, a = `auto`) {

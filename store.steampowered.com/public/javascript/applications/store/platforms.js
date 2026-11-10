@@ -3,7 +3,7 @@
 
 import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, N as n, ft as r } from "./libraries.js";
-import { Jx as i, Vv as a, qx as o, xb as s } from "./main.js";
+import { Hv as i, Jx as a, Sb as o, Yx as s } from "./main.js";
 var c = e(t(), 1),
   l = e(n(), 1),
   u = `-a-3HG4gESE-`,
@@ -21,12 +21,12 @@ var c = e(t(), 1),
   S = `otywAXtYosA-`,
   C = r();
 function w(e) {
-  let { data: t } = a(e.id);
+  let { data: t } = i(e.id);
   return (0, C.jsx)(E, { platforms: t });
 }
 function T(e) {
   let { id: t, ...n } = e,
-    { data: r } = a(t);
+    { data: r } = i(t);
   return (0, C.jsx)(D, { ...n, platforms: r });
 }
 var E = c.memo(function (e) {
@@ -45,10 +45,10 @@ var E = c.memo(function (e) {
   }),
   D = c.memo(function (e) {
     let { platforms: t, eHWCompat: n, size: r = `small` } = e,
-      a;
+      i;
     if (n == 0)
       return (
-        o(!1, `SteamHWCompatIndicator called for k_ESteamHWCompatibility_None`),
+        a(!1, `SteamHWCompatIndicator called for k_ESteamHWCompatibility_None`),
         null
       );
     if (n == 2) {
@@ -56,16 +56,16 @@ var E = c.memo(function (e) {
       if (e === void 0) return null;
       switch (e) {
         case 2:
-          a = U;
+          i = U;
           break;
         case 1:
-          a = V;
+          i = V;
           break;
         case 0:
-          a = H;
+          i = H;
           break;
         default:
-          return (i(e, `Unhandled steam os category: ${e}`), null);
+          return (s(e, `Unhandled steam os category: ${e}`), null);
       }
     } else {
       let e;
@@ -81,19 +81,19 @@ var E = c.memo(function (e) {
         return null;
       switch (e) {
         case 3:
-          a = z;
+          i = z;
           break;
         case 2:
-          a = B;
+          i = B;
           break;
         case 1:
-          a = V;
+          i = V;
           break;
         case 0:
-          a = H;
+          i = H;
           break;
         default:
-          return (i(e, `Unhandled deck compat category: ${e}`), null);
+          return (s(e, `Unhandled deck compat category: ${e}`), null);
       }
     }
     return (0, C.jsxs)(`span`, {
@@ -106,35 +106,35 @@ var E = c.memo(function (e) {
         n == 1 && (0, C.jsx)(I, {}),
         n == 3 && (0, C.jsx)(L, {}),
         n == 4 && (0, C.jsx)(R, {}),
-        (0, C.jsx)(a, {}),
+        (0, C.jsx)(i, {}),
       ],
     });
   });
 function O() {
   return (0, C.jsx)(`span`, {
     className: (0, l.default)(d, f),
-    title: s.Localize(`#Platform_Windows`),
+    title: o.Localize(`#Platform_Windows`),
     children: (0, C.jsx)(M, {}),
   });
 }
 function k() {
   return (0, C.jsx)(`span`, {
     className: (0, l.default)(d, m),
-    title: s.Localize(`#Platform_Mac`),
+    title: o.Localize(`#Platform_Mac`),
     children: (0, C.jsx)(N, {}),
   });
 }
 function A() {
   return (0, C.jsx)(`span`, {
     className: (0, l.default)(d, p),
-    title: s.Localize(`#Platform_Linux`),
+    title: o.Localize(`#Platform_Linux`),
     children: (0, C.jsx)(P, {}),
   });
 }
 function j() {
   return (0, C.jsx)(`span`, {
     className: d,
-    title: s.Localize(`#Platform_VR`),
+    title: o.Localize(`#Platform_VR`),
     children: (0, C.jsx)(F, {}),
   });
 }
@@ -243,7 +243,7 @@ function F() {
 }
 function I() {
   return (0, C.jsx)(`span`, {
-    title: s.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_Desktop`),
+    title: o.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_Desktop`),
     className: (0, l.default)(g),
     children: (0, C.jsx)(`svg`, {
       viewBox: `0 0 20 20`,
@@ -261,7 +261,7 @@ function I() {
 }
 function L() {
   return (0, C.jsx)(`span`, {
-    title: s.Localize(
+    title: o.Localize(
       `#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI`,
     ),
     className: (0, l.default)(g),
@@ -290,7 +290,7 @@ function L() {
 }
 function R() {
   return (0, C.jsx)(`span`, {
-    title: s.Localize(
+    title: o.Localize(
       `#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI`,
     ),
     className: (0, l.default)(g),
@@ -317,7 +317,7 @@ function R() {
 }
 function z() {
   return (0, C.jsx)(`span`, {
-    title: s.Localize(`#SteamDeckVerified_Category_Verified`),
+    title: o.Localize(`#SteamDeckVerified_Category_Verified`),
     className: _,
     children: (0, C.jsx)(`svg`, {
       className: (0, l.default)(v),
@@ -335,7 +335,7 @@ function z() {
 }
 function B() {
   return (0, C.jsx)(`span`, {
-    title: s.Localize(`#SteamDeckVerified_Category_Playable`),
+    title: o.Localize(`#SteamDeckVerified_Category_Playable`),
     className: _,
     children: (0, C.jsx)(`svg`, {
       className: (0, l.default)(y),
@@ -353,7 +353,7 @@ function B() {
 }
 function V() {
   return (0, C.jsx)(`span`, {
-    title: s.Localize(`#SteamDeckVerified_Category_Unsupported`),
+    title: o.Localize(`#SteamDeckVerified_Category_Unsupported`),
     className: _,
     children: (0, C.jsx)(`svg`, {
       className: (0, l.default)(b),
@@ -371,7 +371,7 @@ function V() {
 }
 function H() {
   return (0, C.jsx)(`span`, {
-    title: s.Localize(`#SteamDeckVerified_Category_Unknown`),
+    title: o.Localize(`#SteamDeckVerified_Category_Unknown`),
     className: _,
     children: (0, C.jsx)(`svg`, {
       className: (0, l.default)(x),
@@ -389,7 +389,7 @@ function H() {
 }
 function U() {
   return (0, C.jsx)(`span`, {
-    title: s.Localize(`#SteamOSCompatibility_Category_Compatible`),
+    title: o.Localize(`#SteamOSCompatibility_Category_Compatible`),
     className: _,
     children: (0, C.jsx)(`svg`, {
       className: (0, l.default)(S),

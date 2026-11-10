@@ -4,14 +4,14 @@
 import { o as e, r as t } from "./rolldown-runtime.js";
 import { Lt as n, ft as r } from "./libraries.js";
 import {
-  Fb as i,
-  Gb as a,
-  Xb as o,
+  Ib as i,
+  Kb as a,
+  Zb as o,
   b as s,
-  ha as c,
-  la as l,
-  ma as u,
-  sa as d,
+  ca as c,
+  ga as l,
+  ha as u,
+  ua as d,
 } from "./main.js";
 var f = e(n(), 1),
   p = `Y6jQLvaUs3E-`,
@@ -19,7 +19,7 @@ var f = e(n(), 1),
   h = r();
 function g(e) {
   let { children: t, ...n } = e;
-  return (0, h.jsx)(c, {
+  return (0, h.jsx)(l, {
     className: p,
     ...n,
     children: (0, h.jsx)(`div`, { className: m, children: e.children }),
@@ -58,7 +58,7 @@ function T() {
 function E() {
   let { fnOpenInSteamClient: e } = D();
   return T()
-    ? (0, h.jsx)(c, {
+    ? (0, h.jsx)(l, {
         className: b,
         children: (0, h.jsx)(g, {
           children: (0, h.jsxs)(u, {
@@ -66,19 +66,19 @@ function E() {
             gap: `5`,
             padding: `3`,
             children: [
-              (0, h.jsx)(c, {
+              (0, h.jsx)(l, {
                 className: C,
-                children: (0, h.jsx)(l, {
+                children: (0, h.jsx)(d, {
                   onClick: e,
                   children: s.Localize(`#OpenInDesktopAppBanner_OpenAppButton`),
                 }),
               }),
-              (0, h.jsxs)(d, {
+              (0, h.jsxs)(c, {
                 as: `div`,
                 size: `4`,
                 className: x,
                 children: [
-                  (0, h.jsx)(d, {
+                  (0, h.jsx)(c, {
                     weight: `heavy`,
                     className: S,
                     children: s.Localize(`#OpenInDesktopAppBanner_NotSignedIn`),

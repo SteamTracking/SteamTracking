@@ -4,7 +4,7 @@
 import { At as e, St as t, kt as n } from "./libraries.js";
 import { n as r, r as i } from "./personautils.js";
 import { t as a } from "./appinfostore.js";
-import { Mb as o, Uy as s, pb as c, rx as l } from "./main.js";
+import { Nb as o, Wy as s, ix as c, mb as l } from "./main.js";
 function u(e) {
   let t = `offline`;
   return (
@@ -175,11 +175,11 @@ var d = class {
   GetOfflineStatusTime() {
     if (this.last_seen_online == 0) return s(`#PersonaStateOffline`);
     let e = this.GetOfflineStatusUpdateRate();
-    (!l.IN_MOBILE || e <= 60) && t(e);
+    (!c.IN_MOBILE || e <= 60) && t(e);
     let n = a.CMInterface.GetServerRTime32() - this.last_seen_online;
     return n < 60
       ? s(`#PersonaStateLastSeen_JustNow`)
-      : s(`#PersonaStateLastSeen`, c(n));
+      : s(`#PersonaStateLastSeen`, l(n));
   }
   GetLocalizedOnlineStatus() {
     switch (this.m_ePersonaState) {
@@ -260,8 +260,8 @@ var d = class {
   }
   GetCommunityProfileURL() {
     return this.m_strProfileURL
-      ? `${l.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
-      : `${l.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
+      ? `${c.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
+      : `${c.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
   }
 };
 (o([e], d.prototype, `m_bInitialized`, void 0),

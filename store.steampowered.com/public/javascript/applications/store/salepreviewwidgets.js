@@ -7,85 +7,85 @@ import { n as i } from "./storetypes.js";
 import { B as a } from "./storelink.js";
 import {
   $ as o,
-  Ar as s,
-  At as c,
-  Dn as l,
-  F as u,
-  Fn as d,
-  Hn as f,
-  I as ee,
-  It as p,
-  Kt as m,
-  Mn as h,
-  Nn as g,
-  Nt as te,
-  Pn as _,
-  Pt as v,
-  Qn as ne,
-  Tn as y,
-  Tt as b,
-  U as x,
-  W as S,
-  Wt as re,
-  _r as ie,
-  br as ae,
-  ct as C,
-  dr as w,
-  et as T,
-  fr as oe,
-  hr as se,
-  kr as E,
-  mr as ce,
-  nt as D,
-  or as le,
-  pr as ue,
-  q as de,
-  rr as fe,
-  sn as O,
-  sr as pe,
-  t as me,
-  tr as he,
-  tt as ge,
-  ur as _e,
-  zn as ve,
-  zt as k,
+  Di as s,
+  Dr as c,
+  F as l,
+  Fi as u,
+  Fr as d,
+  I as f,
+  Ii as p,
+  Ir as m,
+  Jr as h,
+  Kr as ee,
+  Li as te,
+  Ma as g,
+  Mr as ne,
+  Pi as _,
+  Rr as v,
+  Sa as y,
+  U as b,
+  Vi as re,
+  Vr as x,
+  W as ie,
+  Wi as ae,
+  _a as oe,
+  aa as se,
+  ca as ce,
+  ct as S,
+  ea as C,
+  et as w,
+  fa as le,
+  ga as T,
+  ha as ue,
+  ja as E,
+  ki as de,
+  la as fe,
+  li as D,
+  ma as pe,
+  nt as me,
+  pa as he,
+  q as ge,
+  ra as _e,
+  t as O,
+  tt as ve,
+  ya as ye,
 } from "./saletags.js";
-import { i as ye, r as be } from "./storeurl.js";
+import { i as be, r as xe } from "./storeurl.js";
 import {
-  d as xe,
-  h as A,
-  m as Se,
-  n as Ce,
-  r as we,
+  d as Se,
+  h as k,
+  m as Ce,
+  n as we,
+  r as Te,
 } from "./salestoreitemutils.js";
-import { n as Te, t as Ee } from "./microtrailerdisplay.js";
-import { t as De } from "./saleghostsections.js";
+import { n as Ee, t as De } from "./microtrailerdisplay.js";
+import { t as Oe } from "./saleghostsections.js";
 import {
-  Dv as j,
-  Ev as M,
+  Ac as ke,
+  Av as A,
+  Bb as Ae,
+  Cc as j,
+  Dv as M,
   Fv as N,
-  Hv as P,
+  Gy as P,
+  Hu as je,
   Iv as F,
-  Jv as I,
-  Pv as L,
-  Sc as R,
-  Uy as z,
-  Vu as Oe,
-  Wy as B,
-  ab as V,
-  an as ke,
-  av as H,
-  bv as Ae,
-  il as je,
-  kc as Me,
-  kv as U,
-  lb as Ne,
-  pl as Pe,
-  rx as Fe,
-  vr as W,
-  wc as Ie,
-  xb as G,
-  zb as Le,
+  Lv as I,
+  Ov as L,
+  Sb as R,
+  Tc as z,
+  Uv as B,
+  Wy as V,
+  Yv as H,
+  al as Me,
+  ix as Ne,
+  ml as Pe,
+  ob as U,
+  on as Fe,
+  ov as W,
+  ub as G,
+  xv as Ie,
+  yr as Le,
 } from "./main.js";
 var K = e(t(), 1),
   q = `x33TRfA9NLE-`,
@@ -94,9 +94,9 @@ var K = e(t(), 1),
   X = 6;
 function Re(e) {
   let { id: t, bHideInLibraryApps: n } = e,
-    { data: r } = U(t),
+    { data: r } = A(t),
     i = r?.item_type == 2,
-    { data: a } = s(),
+    { data: a } = g(),
     o = K.useMemo(() => {
       if (r)
         return r.item_type === 1 || r.item_type === 2
@@ -110,48 +110,48 @@ function Re(e) {
             null);
     }, [r, n, i, a]);
   if (!o || o.length == 0) return null;
-  let c = o.length,
-    l = G.LocalizePlural(`#Sale_ContentPreview`, c);
+  let s = o.length,
+    c = R.LocalizePlural(`#Sale_ContentPreview`, s);
   if (i && r) {
     let e = r.included_appids?.length || 0;
-    e != c && (l = G.Localize(`#Sale_Bundle_CompletePartialSet`, e - c, e));
+    e != s && (c = R.Localize(`#Sale_Bundle_CompletePartialSet`, e - s, e));
   }
   return (0, Y.jsxs)(`div`, {
-    className: m,
+    className: h,
     children: [
       (0, Y.jsxs)(`div`, {
-        className: O,
+        className: D,
         children: [
           i &&
             (0, Y.jsx)(`span`, {
               className: `_8o-dkC5O1co-`,
-              children: G.Localize(`#AppType_bundle`),
+              children: R.Localize(`#AppType_bundle`),
             }),
-          l,
+          c,
         ],
       }),
       (0, Y.jsx)(`div`, {
-        className: h,
+        className: _,
         children: o
           .slice(0, X)
-          .map((e) => (0, Y.jsx)(Z, { id: e }, `preview${I(e)}`)),
+          .map((e) => (0, Y.jsx)(Z, { id: e }, `preview${H(e)}`)),
       }),
     ],
   });
 }
 function Z(e) {
   let { id: t } = e,
-    { data: n } = N(t),
-    { data: r } = L(t);
+    { data: n } = F(t),
+    { data: r } = N(t);
   if (!n || !r) return null;
-  let i = Ie(n, `small_capsule`);
-  return (0, Y.jsx)(T, {
+  let i = z(n, `small_capsule`);
+  return (0, Y.jsx)(w, {
     id: t,
-    className: _,
+    className: p,
     hoverProps: { direction: `right`, style: { minWidth: `350px` } },
     children: (0, Y.jsx)(`img`, {
       src: i,
-      className: g,
+      className: u,
       loading: `lazy`,
       alt: r.name || ``,
     }),
@@ -159,10 +159,10 @@ function Z(e) {
 }
 function ze(e) {
   let [t, r] = (0, K.useState)(void 0),
-    { data: i } = U(e),
-    { data: a } = P(e),
+    { data: i } = A(e),
+    { data: a } = B(e),
     o = n(),
-    s = H();
+    s = W();
   return (
     (0, K.useEffect)(() => {
       if (i) {
@@ -170,7 +170,7 @@ function ze(e) {
         else if (i.related_items?.parent_appid) {
           let e = { appid: i.related_items?.parent_appid };
           (async () => {
-            let t = await o.fetchQuery(Ae(s, e));
+            let t = await o.fetchQuery(Ie(s, e));
             t && t.length > 0 && r(t);
           })();
         }
@@ -188,11 +188,11 @@ function Ve(e) {
     n = ze(t);
   return n
     ? (0, Y.jsx)(`div`, {
-        className: ce,
+        className: T,
         children: n
           .slice(0, 10)
           .map((e) =>
-            (0, Y.jsx)(me, { tagid: e.tagid, className: k }, `tag_` + e.tagid),
+            (0, Y.jsx)(O, { tagid: e.tagid, className: x }, `tag_` + e.tagid),
           ),
       })
     : null;
@@ -206,57 +206,57 @@ function Q(e) {
       bHidePrice: o,
       bShowDeckCompatibilityDialog: s,
       eHardwareCompatibilityDisplay: c,
-      className: l,
-      bShowCartButton: p,
+      className: u,
+      bShowCartButton: d,
     } = e,
-    { data: m } = U(t),
-    { data: h } = F(t),
-    { data: g } = j(t),
-    { bIsOwned: te } = E(t),
-    [_, v] = D(s, c);
-  if (!m) return null;
-  let y =
-      (m.type === 1 && !h?.is_coming_soon) ||
-      (m.related_items?.demo_appid && m.related_items?.demo_appid.length > 0),
-    b = i(m.type),
-    x = n && b && y,
-    S = null;
-  if (!te && g?.is_free_to_keep && g?.free_to_keep_ends) {
-    let e = g.free_to_keep_ends,
-      t = z(
+    { data: p } = A(t),
+    { data: m } = I(t),
+    { data: h } = L(t),
+    { bIsOwned: ee } = E(t),
+    [g, ne] = me(s, c);
+  if (!p) return null;
+  let _ =
+      (p.type === 1 && !m?.is_coming_soon) ||
+      (p.related_items?.demo_appid && p.related_items?.demo_appid.length > 0),
+    v = i(p.type),
+    y = n && v && _,
+    b = null;
+  if (!ee && h?.is_free_to_keep && h?.free_to_keep_ends) {
+    let e = h.free_to_keep_ends,
+      t = V(
         `#Sale_default_label_Free_Promo_Description_Short`,
-        Ne(e) + ` @ ` + V(e, { bForce24HourClock: !1 }),
+        G(e) + ` @ ` + U(e, { bForce24HourClock: !1 }),
       );
-    S = (0, Y.jsxs)(`div`, {
-      className: d,
+    b = (0, Y.jsxs)(`div`, {
+      className: te,
       children: [
         t,
-        (0, Y.jsx)(W, {
-          tooltip: z(`#Sale_default_Tooltip_Free_Promo_Limitation`),
+        (0, Y.jsx)(Le, {
+          tooltip: V(`#Sale_default_Tooltip_Free_Promo_Limitation`),
         }),
       ],
     });
   }
   return (0, Y.jsxs)(`div`, {
-    className: R(f, l),
+    className: j(ae, u),
     children: [
-      S,
+      b,
       (0, Y.jsxs)(`div`, {
-        className: ne,
+        className: C,
         children: [
-          !!x && (0, Y.jsx)(u, { id: t, className: `R0sGSaFdUWo-` }),
+          !!y && (0, Y.jsx)(l, { id: t, className: `R0sGSaFdUWo-` }),
           !o &&
-            m.type !== 1 &&
+            p.type !== 1 &&
             (0, Y.jsxs)(Y.Fragment, {
               children: [
-                !(!r || m.is_free) &&
+                !(!r || p.is_free) &&
                   (0, Y.jsx)(He, { fnOnPurchaseOptionsClick: a }),
-                !(!p || m.is_free) &&
-                  (0, Y.jsx)(ee, { id: t, className: `CartBtn` }),
+                !(!d || p.is_free) &&
+                  (0, Y.jsx)(f, { id: t, className: `CartBtn` }),
               ],
             }),
-          !o && (0, Y.jsx)(de, { id: t }),
-          _ && (0, Y.jsx)(C, { id: t, compatibility: v }),
+          !o && (0, Y.jsx)(ge, { id: t }),
+          g && (0, Y.jsx)(S, { id: t, compatibility: ne }),
         ],
       }),
     ],
@@ -264,10 +264,10 @@ function Q(e) {
 }
 function He(e) {
   return (0, Y.jsx)(`div`, {
-    className: p,
+    className: v,
     onClick: e.fnOnPurchaseOptionsClick,
     children: (0, Y.jsx)(`span`, {
-      children: z(`#EventDisplay_CallToAction_ShowPurchaseOptions_Button`),
+      children: V(`#EventDisplay_CallToAction_ShowPurchaseOptions_Button`),
     }),
   });
 }
@@ -277,179 +277,179 @@ function Ue(e) {
       type: n,
       bShowDemoButton: r,
       bPreferDemoStorePage: i,
-      bHidePrice: u,
-      bUseSubscriptionLayout: d,
-      bHidePlatforms: ee,
-      bHideContainedApps: p,
-      bAllowTwoLinesForHeader: m,
-      bShowReviewSummary: h,
-      bShowDeckCompatibilityDialog: g,
-      eHardwareCompatibilityDisplay: _,
-      bAutoFocus: v,
-      fnOnClickOverride: y,
-      bIsMarketingMessage: C,
-      bPreferAssetWithoutOverride: w,
+      bHidePrice: s,
+      bUseSubscriptionLayout: l,
+      bHidePlatforms: u,
+      bHideContainedApps: f,
+      bAllowTwoLinesForHeader: p,
+      bShowReviewSummary: m,
+      bShowDeckCompatibilityDialog: h,
+      eHardwareCompatibilityDisplay: te,
+      bAutoFocus: _,
+      fnOnClickOverride: v,
+      bIsMarketingMessage: x,
+      bPreferAssetWithoutOverride: S,
     } = e,
-    T = xe(t, n),
-    [E, ce] = (0, K.useState)(!1),
-    ue = Oe(),
-    { data: O, isPending: me } = L(T),
-    { data: k } = j(T),
-    { data: M } = F(T),
-    { data: N } = s(),
-    P = a(T),
-    z = (0, K.useRef)(null),
-    [B, V] = (0, K.useState)(!1),
-    H = Le();
+    w = Se(t, n),
+    [T, ue] = (0, K.useState)(!1),
+    E = je(),
+    { data: D, isPending: he } = N(w),
+    { data: O } = L(w),
+    { data: A } = I(w),
+    { data: M } = g(),
+    P = a(w),
+    F = (0, K.useRef)(null),
+    [R, z] = (0, K.useState)(!1),
+    B = Ae();
   (0, K.useEffect)(() => {
-    z.current && V(z.current.offsetWidth < 370);
-  }, [z]);
-  let Ae = (0, K.useMemo)(
-      () => (i && O && be(O) ? { appid: ye(O)[0] } : T),
-      [i, T, O],
+    F.current && z(F.current.offsetWidth < 370);
+  }, [F]);
+  let V = (0, K.useMemo)(
+      () => (i && D && xe(D) ? { appid: be(D)[0] } : w),
+      [i, w, D],
     ),
-    { strStoreURL: U, snr: Ne } = x(O, i);
-  if (!O)
-    return me
-      ? (0, Y.jsx)(De, { capsules_per_row: [1], is_item_browser: !0 })
+    { strStoreURL: U, snr: W } = b(D, i);
+  if (!D)
+    return he
+      ? (0, Y.jsx)(Oe, { capsules_per_row: [1], is_item_browser: !0 })
       : null;
-  let W = O.included_appids?.length || 0,
-    Ie = O.included_appids?.filter((e) => N?.has(e))?.length || 0,
-    G = O.item_type == 2 && !!k?.must_purchase_as_set,
-    q = !p && W > 1,
-    J = O.item_type == 1 && W == 1,
-    X = O.item_type == 0 || J,
-    Z = J && O.appid,
-    ze = O.name || ``,
-    Ve = te(M, k),
-    He = H || !M?.is_coming_soon || Ve,
-    [Ue, $] = D(g, _);
-  return (0, Y.jsxs)(Me, {
-    className: R({ [_e]: !0, [void 0]: m, StoreSaleWidgetOuterContainer: !0 }),
+  let G = D.included_appids?.length || 0,
+    Ie = D.included_appids?.filter((e) => M?.has(e))?.length || 0,
+    Le = D.item_type == 2 && !!O?.must_purchase_as_set,
+    q = !f && G > 1,
+    J = D.item_type == 1 && G == 1,
+    X = D.item_type == 0 || J,
+    Z = J && D.appid,
+    ze = D.name || ``,
+    Ve = d(A, O),
+    He = B || !A?.is_coming_soon || Ve,
+    [Ue, $] = me(h, te);
+  return (0, Y.jsxs)(ke, {
+    className: j({ [le]: !0, [void 0]: p, StoreSaleWidgetOuterContainer: !0 }),
     "flow-children": `grid`,
     navEntryPreferPosition: Pe.PREFERRED_CHILD,
-    autoFocus: v,
-    navKey: `preview_widget_` + I(T),
+    autoFocus: _,
+    navKey: `preview_widget_` + H(w),
     children: [
-      (0, Y.jsx)(ge, {
-        appid: X && `appid` in T ? T.appid : void 0,
-        children: (0, Y.jsxs)(je, {
-          onClick: C ? y : void 0,
-          className: R({ [fe]: !0, [ve]: !0, [l]: C }),
-          ...Ce(O, ue, H, !!i, void 0, y),
+      (0, Y.jsx)(ve, {
+        appid: X && `appid` in w ? w.appid : void 0,
+        children: (0, Y.jsxs)(Me, {
+          onClick: x ? v : void 0,
+          className: j({ [se]: !0, [re]: !0, [de]: x }),
+          ...we(D, E, B, !!i, void 0, v),
           preferredFocus: q,
           children: [
             (0, Y.jsx)(`div`, {
-              className: R(le),
+              className: j(ce),
               children: (0, Y.jsx)(We, {
-                id: Ae,
+                id: V,
                 strURL: U,
                 children: (0, Y.jsxs)(`div`, {
-                  className: pe,
+                  className: fe,
                   children: [
-                    (0, Y.jsx)(we, { appids: P }),
-                    (0, Y.jsx)(A, {
-                      id: T,
+                    (0, Y.jsx)(Te, { appids: P }),
+                    (0, Y.jsx)(k, {
+                      id: w,
                       imageType: `header`,
-                      bPreferAssetWithoutOverride: w,
+                      bPreferAssetWithoutOverride: S,
                     }),
-                    (0, Y.jsx)(Se, { id: T }),
-                    (0, Y.jsx)(Ee, {
-                      id: T,
-                      active: T && E,
+                    (0, Y.jsx)(Ce, { id: w }),
+                    (0, Y.jsx)(De, {
+                      id: w,
+                      active: w && T,
                       bIsHoverMode: !0,
-                      eGrowOnActivate: Te.k_ETrailerGrowAmount_Medium,
+                      eGrowOnActivate: Ee.k_ETrailerGrowAmount_Medium,
                     }),
                   ],
                 }),
               }),
             }),
             (0, Y.jsxs)(`div`, {
-              className: R({ [oe]: !0, [re]: q }),
+              className: j({ [pe]: !0, [ee]: q }),
               children: [
-                !(!X || y) &&
-                  (0, Y.jsx)(b, {
-                    id: T,
-                    classOverride: R(`x33TRfA9NLE-`, `WishlistButton`),
-                    snr: Ne,
+                !(!X || v) &&
+                  (0, Y.jsx)(c, {
+                    id: w,
+                    classOverride: j(`x33TRfA9NLE-`, `WishlistButton`),
+                    snr: W,
                   }),
                 (0, Y.jsx)(`div`, {
-                  className: ie,
+                  className: ye,
                   children: (0, Y.jsx)(`a`, {
-                    href: y ? void 0 : U,
-                    target: Fe.IN_CLIENT ? void 0 : `_blank`,
-                    onClick: y,
+                    href: v ? void 0 : U,
+                    target: Ne.IN_CLIENT ? void 0 : `_blank`,
+                    onClick: v,
                     children: (0, Y.jsx)(`div`, {
-                      className: R(se, `StoreSaleWidgetTitle`),
+                      className: j(oe, `StoreSaleWidgetTitle`),
                       children: ze,
                     }),
                   }),
                 }),
-                !q && (0, Y.jsx)(Be, { id: T }),
+                !q && (0, Y.jsx)(Be, { id: w }),
                 (0, Y.jsxs)(`div`, {
-                  className: ae,
-                  ref: z,
+                  className: y,
+                  ref: F,
                   children: [
-                    X && (0, Y.jsx)(Ge, { id: T }),
+                    X && (0, Y.jsx)(Ge, { id: w }),
                     !q &&
-                      !ee &&
-                      T &&
+                      !u &&
+                      w &&
                       (0, Y.jsxs)(Y.Fragment, {
                         children: [
                           (0, Y.jsx)(o, {
-                            id: T,
-                            bMinimizePlatforms: B,
-                            bHideWindows: B,
+                            id: w,
+                            bMinimizePlatforms: R,
+                            bHideWindows: R,
                           }),
-                          !!(Ue && O.item_type == 0) &&
-                            (0, Y.jsx)(ke, {
+                          !!(Ue && D.item_type == 0) &&
+                            (0, Y.jsx)(Fe, {
                               eHWCompat: $,
                               className: `tUIs-i3NWoU-`,
-                              id: T,
+                              id: w,
                             }),
                         ],
                       }),
                   ],
                 }),
                 !q &&
-                  h &&
-                  T &&
+                  m &&
+                  w &&
                   (0, Y.jsx)(`div`, {
                     className: `BZ9dZKOmXqE-`,
-                    children: (0, Y.jsx)(c, { id: T }),
+                    children: (0, Y.jsx)(ne, { id: w }),
                   }),
                 q &&
-                  T &&
+                  w &&
                   (0, Y.jsx)(Re, {
-                    id: T,
-                    bHideInLibraryApps: !G && O.item_type == 2 && Ie < W,
+                    id: w,
+                    bHideInLibraryApps: !Le && D.item_type == 2 && Ie < G,
                   }),
-                !!X && (0, Y.jsx)(Ke, { id: T }),
-                y
+                !!X && (0, Y.jsx)(Ke, { id: w }),
+                v
                   ? (0, Y.jsx)(`div`, {
-                      className: f,
+                      className: ae,
                       children: (0, Y.jsx)(`div`, {
-                        className: ne,
-                        children: (0, Y.jsx)(de, { id: T }),
+                        className: C,
+                        children: (0, Y.jsx)(ge, { id: w }),
                       }),
                     })
                   : (0, Y.jsx)(Y.Fragment, {
                       children:
-                        d && X && Z
-                          ? (0, Y.jsx)(S, { appid: Z, bIsMuted: !!E })
+                        l && X && Z
+                          ? (0, Y.jsx)(ie, { appid: Z, bIsMuted: !!T })
                           : (0, Y.jsx)(Q, {
-                              id: T,
+                              id: w,
                               bShowDemoButton: r,
-                              bHidePrice: u,
+                              bHidePrice: s,
                               bHideWishlistButton: He,
                               eHardwareCompatibilityDisplay: $,
                             }),
                     }),
                 (0, Y.jsx)(`div`, {
-                  className: he,
-                  children: (0, Y.jsx)(A, {
-                    id: T,
-                    bPreferAssetWithoutOverride: w,
+                  className: _e,
+                  children: (0, Y.jsx)(k, {
+                    id: w,
+                    bPreferAssetWithoutOverride: S,
                     imageType: `header`,
                   }),
                 }),
@@ -466,20 +466,20 @@ function Ue(e) {
 function We(e) {
   let { id: t, strURL: n, children: r } = e;
   return `appid` in t
-    ? (0, Y.jsxs)(T, { id: t, children: [r, ` `] })
+    ? (0, Y.jsxs)(w, { id: t, children: [r, ` `] })
     : (0, Y.jsx)(`a`, { href: n, children: r });
 }
 function Ge(e) {
   let { id: t } = e,
-    { data: n } = F(t);
-  return n ? (0, Y.jsx)(`div`, { className: w, children: v(n) }) : null;
+    { data: n } = I(t);
+  return n ? (0, Y.jsx)(`div`, { className: he, children: m(n) }) : null;
 }
 function Ke(e) {
   let { id: t } = e,
-    { data: n } = L(t),
-    { data: r } = j(t),
+    { data: n } = N(t),
+    { data: r } = L(t),
     { data: i } = M(t),
-    { data: a } = s();
+    { data: a } = g();
   if (!n || !i || !i.short_description || !a) return null;
   let o = r?.discount_pct || 0,
     c = n.included_appids?.length || 0,
@@ -491,17 +491,17 @@ function Ke(e) {
     (n.item_type == 2 || (n.item_type == 1 && !d)) &&
       (u =
         !f && l > 0 && l < c
-          ? z(`#Sale_Bundle_CompletePartialSet`, l, c)
+          ? V(`#Sale_Bundle_CompletePartialSet`, l, c)
           : o > 0
-            ? z(`#Sale_BundleSave_WithDiscount`, o, c)
-            : z(`#Sale_BundleSave`, c)),
+            ? V(`#Sale_BundleSave_WithDiscount`, o, c)
+            : V(`#Sale_BundleSave`, c)),
     (0, Y.jsx)(`div`, {
-      className: R(ue, `StoreSaleWidgetShortDesc`),
+      className: j(ue, `StoreSaleWidgetShortDesc`),
       children:
         u.startsWith(`#`) && u.indexOf(` `) == -1
           ? (0, Y.jsx)(`span`, {
-              className: y,
-              children: B(
+              className: s,
+              children: P(
                 u,
                 (0, Y.jsx)(`i`, {}),
                 (0, Y.jsx)(`i`, {}),

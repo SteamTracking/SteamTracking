@@ -3,7 +3,7 @@
 
 import { r as e } from "./rolldown-runtime.js";
 import { Lt as t, ft as n } from "./libraries.js";
-import { Sa as r, ba as i, ca as a, fa as o, zb as s } from "./main.js";
+import { Bb as r, Ca as i, la as a, pa as o, xa as s } from "./main.js";
 t();
 var c = e({
     TextLink: () => l,
@@ -34,20 +34,20 @@ var c = e({
   _ = n();
 function v(e) {
   let { underline: t = `auto`, ...n } = e,
-    r = i({ ...n, underline: t, className: l }, y);
+    r = s({ ...n, underline: t, className: l }, y);
   return (0, _.jsx)(o, { ...r });
 }
 var y = [...a, { prop: `underline`, className: (e) => c[`Underline-${e}`] }];
 function b(e) {
   let { underline: t = `auto`, focusable: n, navProps: a, ...o } = e,
-    c = s(),
+    c = r(),
     l = n ?? a?.focusable ?? !!o.onClick,
     d = (0, _.jsx)(`span`, {
       role: `button`,
-      ...i({ ...o, underline: t, className: u }, y),
+      ...s({ ...o, underline: t, className: u }, y),
     });
   return c && (l || a)
-    ? (0, _.jsx)(r, { ...(a || {}), focusable: l, children: d })
+    ? (0, _.jsx)(i, { ...(a || {}), focusable: l, children: d })
     : d;
 }
 export { b as n, v as t };

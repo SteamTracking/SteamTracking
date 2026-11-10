@@ -5,17 +5,17 @@ import { dt as e, st as t } from "./libraries.js";
 import { t as n } from "./clanimagemodels.js";
 import { c as r } from "./claninfo.js";
 import {
-  Hb as i,
-  Rc as a,
-  _v as o,
-  av as s,
-  cv as c,
-  wc as l,
-  zy as u,
+  By as i,
+  Tc as a,
+  Ub as o,
+  lv as s,
+  ov as c,
+  vv as l,
+  zc as u,
 } from "./main.js";
 function d(n) {
   let r = e(),
-    i = s();
+    i = c();
   return t(f(r, i, n)).data ?? void 0;
 }
 function f(e, t, n) {
@@ -24,13 +24,13 @@ function f(e, t, n) {
     enabled: !!n?.GID,
     queryFn: async () => {
       if (!n) return null;
-      let a = n.appid
-          ? await e.ensureQueryData(o(t, { appid: n.appid }))
+      let i = n.appid
+          ? await e.ensureQueryData(l(t, { appid: n.appid }))
           : null,
-        s = await e.ensureQueryData(r(n.clanSteamID.GetAccountID(), e));
+        a = await e.ensureQueryData(r(n.clanSteamID.GetAccountID(), e));
       if (n.appid) {
-        if (a) {
-          if (a.all_ages_screenshots && a.all_ages_screenshots.length > 0) {
+        if (i) {
+          if (i.all_ages_screenshots && i.all_ages_screenshots.length > 0) {
             let e = Number(
               n.bOldAnnouncement
                 ? n.AnnouncementGID
@@ -39,16 +39,16 @@ function f(e, t, n) {
                   : n.GID,
             );
             return (
-              (e %= a.all_ages_screenshots.length),
-              `${i.STORE_ITEM_BASE_URL}${a.all_ages_screenshots[e].filename}`
+              (e %= i.all_ages_screenshots.length),
+              `${o.STORE_ITEM_BASE_URL}${i.all_ages_screenshots[e].filename}`
             );
           }
         } else return ``;
       }
       return n.GetEventType() != 36 &&
-        s &&
-        ((s.is_creator_home && !s.is_ogg) || s.is_curator)
-        ? (s.avatar_full_url ?? null)
+        a &&
+        ((a.is_creator_home && !a.is_ogg) || a.is_curator)
+        ? (a.avatar_full_url ?? null)
         : null;
     },
   };
@@ -56,58 +56,58 @@ function f(e, t, n) {
 function p(e) {
   return [`useFallbackArtworkScreenshot`, e?.GID];
 }
-function m(r, i, a, o = n.full, c = !0) {
+function m(r, i, a, o = n.full, s = !0) {
   let l = e(),
-    u = s();
-  return t(g(l, u, r, i, a, o, c)).data ?? void 0;
+    u = c();
+  return t(g(l, u, r, i, a, o, s)).data ?? void 0;
 }
 function h(e, t, r, i = n.full, a = !0) {
   return [`useEventImageURLWithFallback`, e?.GID, t, r, i, a];
 }
-function g(e, t, a, o, s, u = n.full, d = !0) {
+function g(e, t, i, c, l, u = n.full, d = !0) {
   return {
-    queryKey: h(a, o, s, u, d),
-    enabled: !!a?.GID,
-    initialData: () => _(a, o, s, u, d),
+    queryKey: h(i, c, l, u, d),
+    enabled: !!i?.GID,
+    initialData: () => _(i, c, l, u, d),
     queryFn: async () => {
-      if (!a) return null;
-      let n = _(a, o, s, u, d);
+      if (!i) return null;
+      let n = _(i, c, l, u, d);
       if (n) return n;
-      let p = await e.ensureQueryData(r(a.clanSteamID.GetAccountID(), e));
-      if (o == `capsule`) {
-        let n = a.appid;
+      let p = await e.ensureQueryData(r(i.clanSteamID.GetAccountID(), e));
+      if (c == `capsule`) {
+        let n = i.appid;
         if (!n && p && ((p.is_creator_home && !p.is_ogg) || p.is_curator)) {
-          if (a.jsondata?.referenced_appids?.length)
-            n = a.jsondata.referenced_appids[0];
+          if (i.jsondata?.referenced_appids?.length)
+            n = i.jsondata.referenced_appids[0];
           else return p.avatar_full_url ?? null;
         }
-        let r = await e.ensureQueryData(c(t, { appid: n }));
+        let r = await e.ensureQueryData(s(t, { appid: n }));
         return r
-          ? (l(r, `main_capsule`) ?? null)
+          ? (a(r, `main_capsule`) ?? null)
           : p?.avatar_full_url
             ? p.avatar_full_url
-            : `${i.STORE_ITEM_BASE_URL}steam/apps/${n}/header.jpg`;
+            : `${o.STORE_ITEM_BASE_URL}steam/apps/${n}/header.jpg`;
       }
-      return o == `background` &&
+      return c == `background` &&
         p &&
         ((p.is_creator_home && !p.is_ogg) || p.is_curator)
         ? (p.creator_page_bg_url ?? null)
-        : await e.ensureQueryData(f(e, t, a));
+        : await e.ensureQueryData(f(e, t, i));
     },
   };
 }
-function _(e, t, r, i = n.full, o = !0) {
+function _(e, t, r, a = n.full, o = !0) {
   if (!e) return;
-  let s = e.GetImageURL(t, r, i);
+  let s = e.GetImageURL(t, r, a);
   if (s && s.trim().length > 0) return s;
-  let c = u.GetELanguageFallback(r);
+  let c = i.GetELanguageFallback(r);
   if (r != c) {
-    let n = e.GetImageURL(t, c, i);
+    let n = e.GetImageURL(t, c, a);
     if (n && n.trim().length > 0) return n;
   }
   if (t == `capsule`) {
     let t = e.GetImageFromBeginningOfDescription(r, Number.MAX_VALUE);
-    if (t && (o || a(t))) return t;
+    if (t && (o || u(t))) return t;
   }
 }
 export { d as i, m as n, f as r, g as t };

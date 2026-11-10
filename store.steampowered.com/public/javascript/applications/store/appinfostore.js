@@ -4,15 +4,15 @@
 import { At as e, Ct as t, kt as n } from "./libraries.js";
 import { t as r } from "./appinfo.js";
 import {
-  Gc as i,
-  Kc as a,
-  Lx as o,
-  Mb as s,
-  mS as c,
-  mx as l,
-  qc as u,
-  qx as d,
-  rx as f,
+  Jc as i,
+  Jx as a,
+  Kc as o,
+  Nb as s,
+  Rx as c,
+  hS as l,
+  hx as u,
+  ix as d,
+  qc as f,
 } from "./main.js";
 var p = class {
   m_nLastUpdated = 0;
@@ -29,7 +29,7 @@ var p = class {
     return this.m_mapLanguages.has(e) ? this.m_mapLanguages.get(e) : null;
   }
   Localize(e, t) {
-    let n = f.LANGUAGE;
+    let n = d.LANGUAGE;
     return m(
       e,
       this.GetTokenList(n),
@@ -39,7 +39,7 @@ var p = class {
     );
   }
   SubstituteParams(e, t) {
-    let n = f.LANGUAGE;
+    let n = d.LANGUAGE;
     return h(
       e,
       this.GetTokenList(n),
@@ -64,7 +64,7 @@ function m(e, t, n, r, i) {
   else if (
     ((t || n) &&
       console.log(`No loc found for appid`, r, a, `Tokens:`, t, `Fallback:`, n),
-    t && f.EUNIVERSE != 1)
+    t && d.EUNIVERSE != 1)
   )
     return e;
   return o;
@@ -101,7 +101,7 @@ var _ = 1209600,
     m_PendingAppInfoPromise;
     m_PendingAppInfoResolve;
     m_CacheStorage = null;
-    m_fnCallbackOnAppInfoLoaded = new o();
+    m_fnCallbackOnAppInfoLoaded = new c();
     constructor() {
       n(this);
     }
@@ -119,7 +119,7 @@ var _ = 1209600,
     RegisterCallbackOnLoad(e) {
       this.BHavePendingAppInfoRequests()
         ? this.m_fnCallbackOnAppInfoLoaded.Register(e)
-        : (d(
+        : (a(
             !1,
             `Registering for callback on appinfo load, but nothing queued`,
           ),
@@ -130,7 +130,7 @@ var _ = 1209600,
     }
     GetAppInfo(e) {
       if (
-        (d(this.m_CMInterface, `CAppInfoStore.GetAppInfo called before Init`),
+        (a(this.m_CMInterface, `CAppInfoStore.GetAppInfo called before Init`),
         !this.m_mapAppInfo.has(e))
       ) {
         let t = new r(e);
@@ -164,16 +164,16 @@ var _ = 1209600,
       if (t.length) {
         (console.log(`Loading batch of App Info from Steam: `, t),
           await this.m_CMInterface?.WaitUntilLoggedOn());
-        let e = l.Init(a);
-        for (e.Body().set_language(c(f.LANGUAGE)); t.length > 0;) {
+        let e = u.Init(f);
+        for (e.Body().set_language(l(d.LANGUAGE)); t.length > 0;) {
           let n = Math.min(50, t.length),
             r = t.slice(0, n);
           ((t = t.slice(n)), e.Body().set_appids(r));
-          let i = await u.GetApps(this.m_CMInterface.GetServiceTransport(), e);
-          i.GetEResult() == 1
-            ? this.OnGetAppsResponse(i)
+          let a = await i.GetApps(this.m_CMInterface.GetServiceTransport(), e);
+          a.GetEResult() == 1
+            ? this.OnGetAppsResponse(a)
             : console.error(
-                `Error when calling CommunityService.GetApps: EResult=${i.GetEResult()}, AppIDs:`,
+                `Error when calling CommunityService.GetApps: EResult=${a.GetEResult()}, AppIDs:`,
                 r,
               );
         }
@@ -187,7 +187,7 @@ var _ = 1209600,
       let t = [];
       for (let n of e.Body().apps()) {
         let e = this.m_mapAppInfo.get(n.appid());
-        (d(e, `Got AppInfo response for unrequested AppID: ${n.appid()}`),
+        (a(e, `Got AppInfo response for unrequested AppID: ${n.appid()}`),
           e &&
             ((e = new r(n.appid())),
             e.DeserializeFromMessage(n),
@@ -237,7 +237,7 @@ var _ = 1209600,
           if (!n) return e;
           let i = this.m_mapAppInfo.get(e);
           return (
-            d(
+            a(
               i,
               `Didn't find AppInfo in our map when loading from cache but it should've been there?`,
             ),
@@ -279,7 +279,7 @@ var _ = 1209600,
       let r = this.GetRichPresenceLoc(e);
       return r
         ? r.Localize(t, n)
-        : f.EUNIVERSE == 1
+        : d.EUNIVERSE == 1
           ? ``
           : (console.log(
               `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`,
@@ -323,11 +323,11 @@ var _ = 1209600,
           ((e.m_fetching = this.m_CMInterface
             .WaitUntilLoggedOn()
             .then(() => {
-              let t = l.Init(i);
+              let t = u.Init(o);
               return (
                 t.Body().set_appid(e.GetAppID()),
-                t.Body().set_language(f.LANGUAGE),
-                u.GetAppRichPresenceLocalization(
+                t.Body().set_language(d.LANGUAGE),
+                i.GetAppRichPresenceLocalization(
                   this.m_CMInterface.GetServiceTransport(),
                   t,
                 )

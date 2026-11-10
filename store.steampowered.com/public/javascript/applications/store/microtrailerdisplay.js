@@ -4,14 +4,14 @@
 import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, N as n, ft as r } from "./libraries.js";
 import {
-  Hb as i,
-  Kl as a,
-  Rv as o,
-  Sl as s,
-  Tc as c,
-  Xl as l,
-  hd as u,
-  kv as d,
+  Av as i,
+  Cl as a,
+  Ec as o,
+  Ub as s,
+  Zl as c,
+  gd as l,
+  ql as u,
+  zv as d,
 } from "./main.js";
 var f = e(t(), 1),
   p = e(n(), 1),
@@ -33,20 +33,20 @@ var f = e(t(), 1),
   })({});
 function S(e) {
   let { id: t, active: n, bIsHoverMode: r, eGrowOnActivate: a } = e,
-    { data: o } = d(t),
-    s = f.useRef(0),
-    c = f.useRef(null);
+    { data: o } = i(t),
+    u = f.useRef(0),
+    d = f.useRef(null);
   f.useLayoutEffect(() => {
-    n && c.current && (c.current.currentTime = s.current);
+    n && d.current && (d.current.currentTime = u.current);
   }, [n]);
   let _ = (e) => {
-      s.current = e.currentTarget.currentTime;
+      u.current = e.currentTarget.currentTime;
     },
-    y = u(t),
+    y = l(t),
     b = n && !y ? t : void 0,
-    x = l(b),
-    E = l(b, !0);
-  if ((r && i.IN_MOBILE) || !n || !o || !o.visible) return null;
+    x = c(b),
+    E = c(b, !0);
+  if ((r && s.IN_MOBILE) || !n || !o || !o.visible) return null;
   if (y) return (0, v.jsx)(w, { id: t });
   if (!x) return null;
   let D = x.filter(C);
@@ -71,7 +71,7 @@ function S(e) {
     muted: !0,
     controls: !1,
     autoPlay: !0,
-    ref: c,
+    ref: d,
     playsInline: !0,
     onTimeUpdate: _,
     children: (0, v.jsx)(T, { trailer: k }),
@@ -82,9 +82,9 @@ function C(e) {
 }
 function w(e) {
   let { id: t } = e,
-    { data: n } = o(t),
+    { data: n } = d(t),
     [r, i] = f.useState(0),
-    a = f.useMemo(
+    s = f.useMemo(
       () =>
         [...(n?.all_ages_screenshots || [])]
           .sort((e, t) => e.ordinal - t.ordinal)
@@ -92,19 +92,19 @@ function w(e) {
       [n],
     );
   return (
-    s(() => {
-      a.length > 0 && i((e) => (e + 1) % a.length);
+    a(() => {
+      s.length > 0 && i((e) => (e + 1) % s.length);
     }, b),
-    a.length == 0
+    s.length == 0
       ? null
       : (0, v.jsx)(`div`, {
           className: m,
-          children: a.map((e, t) =>
+          children: s.map((e, t) =>
             (0, v.jsx)(
               `img`,
               {
                 className: (0, p.default)(_, t == r && `_8Ek7qtVBxvk-`),
-                src: c(e, `600x338`),
+                src: o(e, `600x338`),
                 alt: ``,
               },
               e.filename,
@@ -119,11 +119,11 @@ function T(e) {
     ? null
     : (0, v.jsx)(v.Fragment, {
         children: t.microtrailer?.map((e) =>
-          i.IN_CLIENT && e.type == `video/mp4`
+          s.IN_CLIENT && e.type == `video/mp4`
             ? null
             : (0, v.jsx)(
                 `source`,
-                { src: a(t, e.filename || ``), type: e.type },
+                { src: u(t, e.filename || ``), type: e.type },
                 e.filename,
               ),
         ),

@@ -4,12 +4,12 @@
 import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, ft as n } from "./libraries.js";
 import {
-  Fu as r,
-  Hb as i,
-  Iy as a,
-  lS as o,
-  pS as s,
-  qx as c,
+  Iu as r,
+  Jx as i,
+  Ly as a,
+  Ub as o,
+  mS as s,
+  uS as c,
 } from "./main.js";
 function l() {
   let e, t;
@@ -146,10 +146,10 @@ function E(e, t, n = 0, r) {
 }
 var D = {
     GetBaseURL() {
-      return `${i.CLAN_CDN_ASSET_URL}images/`;
+      return `${o.CLAN_CDN_ASSET_URL}images/`;
     },
     GetBaseURLV2() {
-      return `${i.CLAN_CDN_ASSET_URL}locimages/`;
+      return `${o.CLAN_CDN_ASSET_URL}locimages/`;
     },
     ReplacementTokenToClanImageURL(e) {
       return (
@@ -185,23 +185,23 @@ var D = {
       if (t == null) return [];
       let n = this.GetHashFromHashAndExt(e),
         r = this.GetExtStringFromHashAndExt(e),
-        i = [n + `/` + o(t) + r];
-      return (t == 4 && i.push(n + `/` + s(o(t)) + r), i);
+        i = [n + `/` + c(t) + r];
+      return (t == 4 && i.push(n + `/` + s(c(t)) + r), i);
     },
     GenerateURLFromHashAndExt(e, t, n = O.full) {
       return this.GenerateURLFromHashAndExtAndLang(e, t, n, -1, void 0);
     },
     GenerateURLFromHashAndExtAndLang(e, t, n = O.full, r, i) {
       e instanceof a && (e = e.GetAccountID());
-      let c = this.GetBaseURL(),
+      let o = this.GetBaseURL(),
         l = r != null && r != -1;
-      if (n == O.full && !l) return c + e + `/` + t;
+      if (n == O.full && !l) return o + e + `/` + t;
       {
         let a = t.substring(t.lastIndexOf(`.`)),
           u = t.substring(0, t.length - a.length);
         return !l || r == 0 || i != `localized_image_group`
-          ? c + e + `/` + u + n + a
-          : c + e + `/` + u + `/` + s(o(r)) + a;
+          ? o + e + `/` + u + n + a
+          : o + e + `/` + u + `/` + s(c(r)) + a;
       }
     },
     GetHashAndExtFromURL(e) {
@@ -213,7 +213,7 @@ var D = {
     },
     GenerateEditableURLFromHashAndExt(e, t, n) {
       let r =
-        i.COMMUNITY_BASE_URL +
+        o.COMMUNITY_BASE_URL +
         `gid/` +
         e.ConvertTo64BitString() +
         `/showclanimage/?image_hash_and_ext=` +
@@ -229,48 +229,48 @@ var D = {
       return await this.AsyncGetImageResolutionInternal(o, r, i);
     },
     async AsyncGetImageResolutionInternal(e, t, n) {
-      let i = l(),
-        a = new Image();
-      ((a.crossOrigin = `anonymous`),
-        (a.onerror = (t) => {
-          let a = { success: 2 };
+      let a = l(),
+        o = new Image();
+      ((o.crossOrigin = `anonymous`),
+        (o.onerror = (t) => {
+          let i = { success: 2 };
           (n ||
-            ((a.err_msg =
+            ((i.err_msg =
               `Load fail on url ` + e + ` with error: ` + r(t).strErrorMsg),
-            console.error(a.err_msg)),
-            (a.success = 2),
-            i.resolve(a));
+            console.error(i.err_msg)),
+            (i.success = 2),
+            a.resolve(i));
         }),
-        (a.onload = () => {
+        (o.onload = () => {
           let t = { success: 2 };
-          ((t.width = a.width),
-            (t.height = a.height),
-            !(a.width > 0) || !(a.height > 0)
-              ? (c(
+          ((t.width = o.width),
+            (t.height = o.height),
+            !(o.width > 0) || !(o.height > 0)
+              ? (i(
                   !1,
                   `unexpected image resolution discovered for strURL: ` + e,
                 ),
                 (t.err_msg = `No resolution reported for url ` + e),
-                i.resolve(t))
-              : ((t.success = 1), i.resolve(t)));
+                a.resolve(t))
+              : ((t.success = 1), a.resolve(t)));
         }),
-        (a.src = e),
+        (o.src = e),
         t.token.promise.catch(() => {
-          ((a.onload = () => {}),
-            (a.onerror = () => {}),
-            i.resolve({ success: 52 }));
+          ((o.onload = () => {}),
+            (o.onerror = () => {}),
+            a.resolve({ success: 52 }));
         }));
-      let o,
-        s = new Promise((e, t) => {
-          o = setTimeout(() => t(), 1e4);
+      let s,
+        c = new Promise((e, t) => {
+          s = setTimeout(() => t(), 1e4);
         }),
         u;
       try {
-        u = await Promise.race([s, i.promise]);
+        u = await Promise.race([c, a.promise]);
       } catch {
         u = { success: 16, err_msg: `We timed out processing images` };
       } finally {
-        clearTimeout(o);
+        clearTimeout(s);
       }
       return u;
     },

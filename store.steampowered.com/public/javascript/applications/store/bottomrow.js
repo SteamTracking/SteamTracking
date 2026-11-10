@@ -6,54 +6,54 @@ import { Lt as t, ft as n } from "./libraries.js";
 import { B as r, V as i } from "./storelink.js";
 import {
   $ as a,
-  An as o,
+  Gr as o,
   I as s,
-  Pt as c,
-  Qt as l,
-  Ut as u,
+  Ir as c,
+  Mi as l,
+  Ni as u,
   W as d,
-  cn as f,
-  et as p,
-  jn as m,
-  kr as h,
-  ln as g,
-  n as _,
-  nn as v,
+  ba as f,
+  di as p,
+  ei as m,
+  et as h,
+  ii as g,
+  ja as _,
+  n as v,
   q as y,
-  tn as b,
+  ri as b,
   tt as x,
-  vr as S,
+  ui as S,
 } from "./saletags.js";
 import { t as C } from "./storeurl.js";
 import {
-  f as w,
-  h as T,
-  m as E,
-  n as D,
-  r as O,
+  f as ee,
+  h as w,
+  m as T,
+  n as E,
+  r as D,
 } from "./salestoreitemutils.js";
-import { n as k, t as A } from "./microtrailerdisplay.js";
-import { t as j } from "./storegamehover.js";
-import { n as M } from "./salewishlistbutton.js";
+import { n as O, t as k } from "./microtrailerdisplay.js";
+import { t as A } from "./storegamehover.js";
+import { n as j } from "./salewishlistbutton.js";
 import {
-  H as ee,
-  Hv as te,
-  Iv as N,
-  Pc as P,
-  Sc as F,
-  Uy as I,
-  Vc as ne,
-  Vu as L,
-  Xt as re,
-  dd as ie,
-  il as ae,
-  kc as R,
-  kv as z,
-  nl as B,
-  pl as V,
-  wc as H,
-  wv as U,
-  zb as W,
+  Ac as M,
+  Av as N,
+  Bb as P,
+  Cc as F,
+  Fc as te,
+  H as I,
+  Hc as ne,
+  Hu as L,
+  Lv as re,
+  Tc as ie,
+  Tv as R,
+  Uv as ae,
+  Wy as z,
+  Xt as B,
+  al as V,
+  fd as H,
+  ml as U,
+  rl as W,
 } from "./main.js";
 function G() {
   return { width: 231, height: 87 };
@@ -97,62 +97,62 @@ function Me(e) {
       bShowParentApp: n,
       elElementToAppendToHover: r,
       index: a,
-      navKey: s,
-      bHideStoreHover: c,
-      onlyOneDiscountPct: u,
-      bPreferDemoStorePage: d,
-      bShowEarlyAccessBanner: f,
+      navKey: o,
+      bHideStoreHover: s,
+      onlyOneDiscountPct: c,
+      bPreferDemoStorePage: u,
+      bShowEarlyAccessBanner: d,
     } = e,
-    m = W(),
-    [h, g] = K.useState(!1),
-    [_, v] = K.useState(!1),
-    [y, b] = K.useState(!1),
+    p = P(),
+    [g, _] = K.useState(!1),
+    [v, y] = K.useState(!1),
+    [b, S] = K.useState(!1),
     C = K.useRef(!1);
   K.useEffect(() => {
-    if (_ && !C.current) {
+    if (v && !C.current) {
       let e = window.setTimeout(() => {
-        ((C.current = !0), b(!0));
+        ((C.current = !0), S(!0));
       }, 500);
       return () => window.clearTimeout(e);
     }
-    return (b(_ || h), () => {});
-  }, [_, h]);
-  let { data: T } = ie(),
-    E = !!T?.preferences?.disable_microtrailers,
-    D = w(t),
-    { data: O } = z(D),
-    k = i(n ? O?.related_items?.parent_appid : void 0),
-    { data: A } = z(k);
-  if (!O || !D) return null;
-  let j = !!A && !!k,
-    M = (0, Z.jsx)(Pe, {
+    return (S(v || g), () => {});
+  }, [v, g]);
+  let { data: w } = H(),
+    T = !!w?.preferences?.disable_microtrailers,
+    E = ee(t),
+    { data: D } = N(E),
+    O = i(n ? D?.related_items?.parent_appid : void 0),
+    { data: k } = N(O);
+  if (!D || !E) return null;
+  let A = !!k && !!O,
+    j = (0, Z.jsx)(Pe, {
       ...e,
       strExtraParams: e.strExtraParams,
-      id: D,
-      bIsHovered: y && !E,
-      bHasParentAppToDisplay: j,
-      onlyOneDiscountPct: u,
-      bShowEarlyAccessBanner: f,
-      bUsePanel: !c && !m,
+      id: E,
+      bIsHovered: b && !T,
+      bHasParentAppToDisplay: A,
+      onlyOneDiscountPct: c,
+      bShowEarlyAccessBanner: d,
+      bUsePanel: !s && !p,
     });
-  return (0, Z.jsxs)(R, {
-    className: F({ [o]: !0, [S]: y && !E && m, [Q + a]: a == 0 }),
-    navEntryPreferPosition: V.PREFERRED_CHILD,
-    navKey: s,
-    onFocusWithin: e.imageType == `library` ? void 0 : v,
+  return (0, Z.jsxs)(M, {
+    className: F({ [l]: !0, [f]: b && !T && p, [Q + a]: a == 0 }),
+    navEntryPreferPosition: U.PREFERRED_CHILD,
+    navKey: o,
+    onFocusWithin: e.imageType == `library` ? void 0 : y,
     children: [
       (0, Z.jsxs)(x, {
-        appid: O.appid,
+        appid: D.appid,
         children: [
-          c
+          s
             ? (0, Z.jsx)(`div`, {
-                onMouseEnter: () => g(!0),
-                onMouseLeave: () => g(!1),
-                children: M,
+                onMouseEnter: () => _(!0),
+                onMouseLeave: () => _(!1),
+                children: j,
               })
-            : (0, Z.jsx)(p, {
-                className: l,
-                id: D,
+            : (0, Z.jsx)(h, {
+                className: m,
+                id: E,
                 elElementToAppend: e.elElementToAppendToHover,
                 bShowDemoButton: e.bShowDemoButton,
                 bPreferDemoStorePage: e.bPreferDemoStorePage,
@@ -165,18 +165,18 @@ function Me(e) {
                 nWidthMultiplier: e.nWidthMultiplier,
                 bShowIgnoreButton: e.bShowIgnoreButton,
                 bShowDescription: e.bShowDescriptionInHover,
-                children: M,
+                children: j,
               }),
           !!r && (0, Z.jsx)(Z.Fragment, { children: r }),
         ],
       }),
-      j &&
+      A &&
         (0, Z.jsx)(Ne, {
           strExtraParams: e.strExtraParams,
-          parentID: k,
-          parentStoreItemDefaultInfo: A,
-          childAppType: O.type,
-          bPreferDemoStorePage: !!d,
+          parentID: O,
+          parentStoreItemDefaultInfo: k,
+          childAppType: D.type,
+          bPreferDemoStorePage: !!u,
         }),
     ],
   });
@@ -190,31 +190,31 @@ function Ne(e) {
       bPreferDemoStorePage: a,
     } = e,
     o = L(),
-    s = W(),
-    { data: c } = U(n);
+    s = P(),
+    { data: c } = R(n);
   return c
-    ? (0, Z.jsx)(ae, {
-        className: v,
-        ...D(r, o, s, a, t),
+    ? (0, Z.jsx)(V, {
+        className: g,
+        ...E(r, o, s, a, t),
         children: (0, Z.jsxs)(x, {
           appid: r.appid,
           children: [
             (0, Z.jsx)(`div`, {
-              className: m,
-              children: I(
+              className: u,
+              children: z(
                 i == 11
                   ? `#SalePage_ParentApp_SoundTrack`
                   : `#SalePage_ParentApp_DLC`,
               ),
             }),
-            (0, Z.jsx)(j, {
+            (0, Z.jsx)(A, {
               id: n,
               strExtraParams: t,
               children: (0, Z.jsx)(`img`, {
                 loading: `lazy`,
                 className: Y,
                 alt: r.name || ``,
-                src: H(c, `small_capsule`),
+                src: ie(c, `small_capsule`),
                 ...G(),
               }),
             }),
@@ -239,13 +239,13 @@ function Pe(e) {
       bPreferAssetWithoutOverride: p,
     } = e,
     m = L(),
-    h = re(),
-    g = W(),
+    h = B(),
+    g = P(),
     _ = r(t),
-    { data: v } = z(t);
+    { data: v } = N(t);
   if (!v) return null;
-  let y = i ? void 0 : ne(P(`${C(v, d)}${a ? `?${a}` : ``}`, m, h)),
-    b = i ? R : B,
+  let y = i ? void 0 : ne(te(`${C(v, d)}${a ? `?${a}` : ``}`, m, h)),
+    b = i ? M : W,
     x = l && g,
     S = !!u;
   return (0, Z.jsxs)(Z.Fragment, {
@@ -266,25 +266,25 @@ function Pe(e) {
             focusable: !0,
             noFocusRing: x,
             children: [
-              (0, Z.jsx)(O, {
+              (0, Z.jsx)(D, {
                 appids: _,
                 hide_status_banners: n,
                 show_early_access: f,
               }),
               s != `none` &&
-                (0, Z.jsx)(T, {
+                (0, Z.jsx)(w, {
                   imageType: s,
                   id: t,
                   bPreferAssetWithoutOverride: p,
                 }),
-              (0, Z.jsx)(E, { id: t }),
+              (0, Z.jsx)(T, { id: t }),
               (0, Z.jsx)(`div`, {
                 className: F({ [je]: x }),
-                children: (0, Z.jsx)(A, {
+                children: (0, Z.jsx)(k, {
                   id: t,
                   active: l,
                   bIsHoverMode: !0,
-                  eGrowOnActivate: x ? k.k_ETrailerGrowAmount_Implicit : void 0,
+                  eGrowOnActivate: x ? O.k_ETrailerGrowAmount_Implicit : void 0,
                 }),
               }),
             ],
@@ -298,8 +298,8 @@ function Pe(e) {
 }
 function Fe(e) {
   let { id: t, strDoubleCapsuleMessage: n, index: r } = e,
-    { data: i } = N(t),
-    { data: a } = te(t);
+    { data: i } = re(t),
+    { data: a } = ae(t);
   return (0, Z.jsxs)(`div`, {
     className: F(ke, `TwoWidthSideInfo`),
     children: [
@@ -308,7 +308,7 @@ function Fe(e) {
         className: X,
         children: (0, Z.jsx)(`span`, { children: i ? c(i) : `` }),
       }),
-      (0, Z.jsx)(_, {
+      (0, Z.jsx)(v, {
         bHideTitle: !0,
         rgTagIDs: a?.map((e) => e.tagid) || [],
         instanceNum: r,
@@ -330,8 +330,8 @@ function Ie(e) {
       onlyOneDiscountPct: u,
       strDoubleCapsuleMessage: f,
     } = e,
-    { data: p } = z(t),
-    { bIsOwned: m } = h(t);
+    { data: p } = N(t),
+    { bIsOwned: m } = _(t);
   return i && p && p.item_type == 0 && p.appid
     ? (0, Z.jsx)(d, { appid: p.appid, bIsMuted: l })
     : a
@@ -362,7 +362,7 @@ function $(e) {
     } = e,
     p = (0, K.useRef)(null),
     [m, h] = (0, K.useState)(!1),
-    { data: g } = z(t);
+    { data: g } = N(t);
   if (
     ((0, K.useEffect)(() => {
       p.current && h(p.current.offsetWidth < 370);
@@ -386,7 +386,7 @@ function $(e) {
               }),
             _ &&
               `appid` in t &&
-              (0, Z.jsx)(M, {
+              (0, Z.jsx)(j, {
                 appid: t.appid,
                 className: F(`RAahmG4F6sc-`, `GRw4r5TpD5s-`),
               }),
@@ -409,22 +409,22 @@ function $(e) {
 }
 function Le(e) {
   let { id: t } = e,
-    { data: n } = z(t);
+    { data: n } = N(t);
   return n?.name ? (0, Z.jsx)(`div`, { className: b, children: n.name }) : null;
 }
 function Re(e) {
   let { creatorAccountID: t, strClassName: n } = e,
     r = (0, K.useMemo)(() => ({ creatorid: t }), [t]),
-    { data: i } = z(r),
-    { data: a } = U(r);
+    { data: i } = N(r),
+    { data: a } = R(r);
   if (!i) return null;
-  let o = ee(a?.clan_avatar, `Medium`),
-    s = i.name || ``;
+  let s = I(a?.clan_avatar, `Medium`),
+    c = i.name || ``;
   return (0, Z.jsxs)(`div`, {
-    className: F(u, n),
+    className: F(o, n),
     children: [
-      (0, Z.jsx)(`img`, { className: F(f), src: o, alt: s }),
-      (0, Z.jsx)(`span`, { className: g, children: s }),
+      (0, Z.jsx)(`img`, { className: F(S), src: s, alt: c }),
+      (0, Z.jsx)(`span`, { className: p, children: c }),
     ],
   });
 }

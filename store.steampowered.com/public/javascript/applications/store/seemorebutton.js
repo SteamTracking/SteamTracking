@@ -3,7 +3,7 @@
 
 import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, N as n, ft as r } from "./libraries.js";
-import { rx as i } from "./main.js";
+import { ix as i } from "./main.js";
 var a = e(t(), 1),
   o = e(n(), 1),
   s = `ewL7epZsubk-`,

@@ -6,7 +6,7 @@ import { Lt as t } from "./libraries.js";
 import "./ajaxhooks.js";
 import { t as n } from "./moment.js";
 import { i as r, n as i, r as a, t as o } from "./eventtime.js";
-import { xu as s } from "./main.js";
+import { Su as s } from "./main.js";
 n();
 var c = e(t()),
   l = new (class {

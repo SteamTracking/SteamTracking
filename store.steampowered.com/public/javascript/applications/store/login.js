@@ -3,7 +3,7 @@
 
 import { o as e } from "./rolldown-runtime.js";
 import { Lt as t, ft as n } from "./libraries.js";
-import { rx as r, ry as i } from "./main.js";
+import { ix as r, iy as i } from "./main.js";
 import "./steammessages_twofactor_pb.js";
 import { i as a, n as o, r as s, t as c } from "./logindialog.js";
 var l = `PvNen1Rhhrk-`,
