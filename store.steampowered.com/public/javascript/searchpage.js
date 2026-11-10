@@ -250,10 +250,7 @@ function FillFormFromNavigation( querystring, link_click, initial_load )
 
 	$J('.tab_filter_control.checked').removeClass('checked');
 
-	if ( rgLocationParams['term'] )
-		rgLocationParams['displayterm'] = rgLocationParams['term'];
-	else
-		rgLocationParams['displayterm'] = 'enter search term or tag';
+	rgLocationParams['displayterm'] = rgLocationParams['term'] || '';
 
 	$J( "#hide_filtered_results_warning" ).val( link_click ? 1 : "" );
 
