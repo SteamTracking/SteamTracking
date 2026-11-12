@@ -8,7 +8,7 @@ import { FetchQueued, ParseUrls } from "./fetch_urls.ts";
 import { Log } from "./log.ts";
 import { DeleteOldSsrFiles, GenerateSsrUrls, ProcessSsrFiles, ssrRequest, WriteSsrRoutes } from "./ssr.ts";
 import { apiKey, rootDir, state, useCache } from "./state.ts";
-import { DeleteOldViteFiles, DiscoverViteFiles, ProcessViteChunks } from "./vite.ts";
+import { DeleteOldViteFiles, DiscoverViteFiles, HasMissingViteFiles, ProcessViteChunks } from "./vite.ts";
 
 const etagsPath = join(rootDir, ".support/etags.json");
 
@@ -60,7 +60,8 @@ async function Update(): Promise<void> {
 		await WriteSsrRoutes();
 	}
 
-	if (state.updateViteUrls) {
+	// Saved names come from the chunk name table, so a table change must be applied even when nothing was downloaded
+	if (state.updateViteUrls || HasMissingViteFiles()) {
 		await UpdateViteChunks(knownUrls, listedFiles);
 	}
 

@@ -123,8 +123,8 @@ function SaveUntracked(originalFile: string, data: string): boolean {
  * The hash of the downloaded data is stored last, so a failure leaves the file to be processed again.
  */
 function SaveTracked(originalFile: string, data: string, isSsr: boolean): boolean {
-	const file = join(rootDir, originalFile);
-	const savedFile = join(rootDir, GetSavedPath(originalFile));
+	const savedPath = GetSavedPath(originalFile);
+	const savedFile = join(rootDir, savedPath);
 	const unmodifiedHash = createHash("sha256").update(data).digest("hex");
 
 	if (state.hashes[originalFile] === unmodifiedHash && existsSync(savedFile)) {
@@ -142,6 +142,8 @@ function SaveTracked(originalFile: string, data: string, isSsr: boolean): boolea
 	}
 
 	if (originalFile.endsWith("_english-json.js")) {
+		const file = join(rootDir, originalFile);
+
 		writeFileSync(file, data);
 
 		if (!ExtractJsonFromWebpack(file)) {
@@ -158,15 +160,15 @@ function SaveTracked(originalFile: string, data: string, isSsr: boolean): boolea
 	// Content hashes change with every build and would mark every importing file as changed
 	data = data.replace(/\.(js|css)\?contenthash=[\w-]{8}/g, ".$1");
 
-	writeFileSync(file, data);
+	writeFileSync(savedFile, data);
 
-	const cleanFile = join(rootDir, "c", originalFile);
+	const cleanFile = join(rootDir, "c", savedPath);
 
 	if (isSsr) {
 		state.updateSsrUrls = true;
 	}
 
-	if (file.endsWith(".js")) {
+	if (savedFile.endsWith(".js")) {
 		const isViteFile = originalFile.includes("/applications/");
 		const isLocalization = originalFile.includes("/localization/");
 
@@ -177,13 +179,13 @@ function SaveTracked(originalFile: string, data: string, isSsr: boolean): boolea
 		if (!originalFile.endsWith("/manifest.js") && !isLocalization) {
 			mkdirSync(dirname(cleanFile), { recursive: true });
 
-			GenerateCleanJs(file, cleanFile, isSsr);
+			GenerateCleanJs(savedFile, cleanFile, isSsr);
 
 			state.filesToFormat.add(cleanFile);
 		}
 
 		state.dumpJavascriptFiles = true;
-	} else if (isSsr && file.endsWith(".css")) {
+	} else if (isSsr && savedFile.endsWith(".css")) {
 		mkdirSync(dirname(cleanFile), { recursive: true });
 
 		writeFileSync(cleanFile, data);
@@ -191,7 +193,7 @@ function SaveTracked(originalFile: string, data: string, isSsr: boolean): boolea
 		state.filesToFormat.add(cleanFile);
 	}
 
-	state.filesToFormat.add(file);
+	state.filesToFormat.add(savedFile);
 	state.hashes[originalFile] = unmodifiedHash;
 
 	return true;

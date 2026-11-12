@@ -1,6 +1,8 @@
 # SteamTracking
 
-Tracks Steam web and client files over time. Keep diff noise per commit low.
+Tracks Steam web and client files over time. Keep diff noise per commit low: where the tools choose a saved name or output format, keep it stable across builds.
+
+Tools only support what is currently fetched and served. When a format or file is no longer served, delete the code that handled it.
 
 `tools/update.ts` updates the files and `tools/commit.ts` commits and pushes. To test locally, run `node tools/update.ts` with `STEAM_API_KEY` set.
 
@@ -19,6 +21,8 @@ Tools are TypeScript run directly by Node, with no build step. Fix lint and form
 ## Saved files
 
 - The four web apps (store, community, help, partner) are Vite builds. Dota 2, Counter-Strike, Deadlock and the client are webpack builds.
+- `chunk~<id>` file names are hashes of source paths. `tools/chunk_names.ts` explains the hash and lists the known source paths; add new ones there. Files are saved under the readable name when one is known, and keep the `chunk~` name otherwise.
+- To follow a `chunk~` import to its saved file, run `node tools/chunk_lookup.ts <file or id>`.
 - `contenthash` is stripped from saved files.
 - `c/` holds normalized JS. Do not mark it `linguist-generated`: its diffs are the ones to read.
 - English chunks under `applications/` and `*_english-json.js` bundles are saved as JSON only. SSR English chunks merge into `Strings/*_ssr_english.json`. Web files in other languages are skipped; `ClientExtracted/` keeps them.
