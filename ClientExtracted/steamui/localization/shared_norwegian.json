@@ -4187,7 +4187,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Histogramdata er basert på rapporter om bildefrekvens for dette spillet fra kunder på %1$s som har valgt å gi data om bildefrekvens.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Bildefrekvensfordeling",
     "GamePerformanceStats_Framerate": "Bildefrekvens",
-    "GamePerformanceStats_SessionLabel": "% økt",
+    "GamePerformanceStats_SessionLabel": "% av målingene",
     "GamePerformanceStats_Chart_NoData": "Et diagram blir tilgjengelig etter at tilstrekkelig data er blitt samlet inn",
     "NewToolTitleSuffix_Beta": "BETA",
     "DynamicLinkType_WorkshopItem": "En workshopgjenstand for %1$s",
@@ -4214,6 +4214,9 @@
     "GamePerformanceStats_StillGatheringData": "Steam samler fortsatt inn data om bildefrekvens for %1$s på %2$s.",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam samler fortsatt inn data om bildefrekvens for dette spillet på %1$s.",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam samler fortsatt inn data om bildefrekvens for dette spillet.",
-    "GamePerformanceStats_FrameRateDistribution": "Dette bildefrekvensdiagrammet er basert på anonym spilldata fra kunder som har valgt å dele, og som spiller %1$s på %2$s.",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Dette bildefrekvensdiagrammet er basert på anonym spilldata fra kunder som har valgt å dele, og som spiller dette spillet på %1$s."
+    "GamePerformanceStats_FrameRateDistribution": "Dette diagrammet viser målinger av bildefrekvens fra kunder som har valgt å dele anonymiserte data under spilling av %1$s på %2$s. Hver stolpe viser prosentandelen av målinger ved den aktuelle bildefrekvensen.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Dette diagrammet viser målinger av bildefrekvens fra kunder som har valgt å dele anonymiserte data under spilling av dette spillet på %1$s. Hver stolpe viser prosentandelen av målinger ved den aktuelle bildefrekvensen.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "Spillet krever at man manuelt slår på kontrollerstøtte i spillets innstillinger.",
+    "GamePerformanceStats_MoreDetailsTitle": "Flere detaljer",
+    "GamePerformanceStats_MoreDetails_VSync": "Tomrom i diagrammet (f.eks. mellom %1$s og %2$s bilder per sekund) kan skyldes VSync, som synkroniserer bildelevering med skjermens oppdateringsfrekvens for å forhindre skjermriving. Dette kan føre til at målinger hoper seg opp på %1$s og %2$s bilder per sekund, selv om spillets gjennomsnittlige bildefrekvens ligger mellom dem. Dette er normal atferd med VSync, og selv om det kan gå ut over bildelevering, betyr det ikke nødvendigvis at det oppstår merkbar hakking."
 }

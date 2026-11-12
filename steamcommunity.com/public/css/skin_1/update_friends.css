@@ -61,7 +61,7 @@ div.page_content {
 	letter-spacing: 4px;
 	font-weight: 100;
 	line-height: 36px;
-	text-align: left;
+	text-align: start;
 }
 
  p {
@@ -91,7 +91,8 @@ html.responsive.touch .friends_update .responsive_page_frame.with_header div.res
 }
 
 .hero .wrapper {
-	padding: 0 630px 60px 30px;
+	padding-block: 0 60px;
+	padding-inline: 30px 630px;
 	min-height: 540px;
 }
 
@@ -121,10 +122,10 @@ html.responsive.touch .friends_update .responsive_page_frame.with_header div.res
 }
 
 .hero blockquote {
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	margin: 15px 0 65px 0 ;
 	font-size: 16px;
-	border-left: 2px solid #00b9fa;
+	border-inline-start: 2px solid #00b9fa;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-weight: 400;
@@ -132,7 +133,7 @@ html.responsive.touch .friends_update .responsive_page_frame.with_header div.res
 }
 
 .hero p {
-	padding-right: 20px;
+	padding-inline-end: 20px;
 }
 
 .hero a {
@@ -186,7 +187,7 @@ a.button:hover {
 }
 
 .friendslist_first .title, .friendslist_first p {
-	text-align: right;
+	text-align: end;
 }
 
 .friends_hover_ctn {
@@ -223,7 +224,7 @@ a.button:hover {
 	text-align: center;
 	display: inline-block;
 	position: absolute;
-	left: 25px;
+	inset-inline-start: 25px;
 }
 
 .friendslist_media .focus img, .friendslist_media .focus video {
@@ -278,11 +279,11 @@ a.button:hover {
 .friendsfeature_ctn {
 	padding: 30px;
 	position: relative;
-	text-align: right;
+	text-align: end;
 }
 
 .friendslist_second .friendsfeature_ctn {
-	text-align: left;
+	text-align: start;
 }
 
 .friendsfeature .title {
@@ -319,7 +320,7 @@ a.button:hover {
 	transition: opacity var(--transition-speed);
 
 	position: absolute;
-	right: -25px;
+	inset-inline-end: -25px;
 	width: 25px;
 	height: 1px;
 	top: 50%;
@@ -334,7 +335,7 @@ a.button:hover {
 
 .friendsfeature .pip.left {
 
-	left: -25px;
+	inset-inline-start: -25px;
 
 }
 
@@ -456,8 +457,8 @@ a.button:hover {
 }
 
 .sidebyside .left{
-	margin-right: 30px;
-	text-align: right;
+	margin-inline-end: 30px;
+	text-align: end;
 }
 
 .paddedbox {
@@ -577,7 +578,8 @@ a.button:hover {
 .flex_sidebyside > div:not(.extended) {
 	flex: 1 1;
 	justify-content: flex-start;
-	padding: 0 15px 15px 30px;
+	padding-block: 0 15px;
+	padding-inline: 30px 15px;
 }
 
 .flex_sidebyside .heading, .sidebyside .heading {
@@ -608,7 +610,7 @@ a.button:hover {
 .button_container2 > div {
 	display: flex;
 	align-items: center;
-	margin-right: 15px;
+	margin-inline-end: 15px;
 }
 
 .lb_grad {
@@ -681,14 +683,14 @@ dialog:has(.allowmodal) {
 	color: #81adde;
 }
 .voice_inset {
-	margin-left: 72px;
-	margin-right: 104px;
+	margin-inline-start: 72px;
+	margin-inline-end: 104px;
 	z-index: 3;
 }
 
 .friends_update .full.voice_video {
 	box-shadow: none;
-	margin-left: 88px;
+	margin-inline-start: 88px;
 	width: 120%;
 }
 
@@ -700,12 +702,12 @@ dialog:has(.allowmodal) {
 	letter-spacing: 4px;
 	font-weight: 100;
 	line-height: 36px;
-	text-align: left;
+	text-align: start;
 }
 .steamlogotiny {
 	height: 19px;
 	vertical-align: text-top;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 
@@ -714,7 +716,7 @@ dialog:has(.allowmodal) {
 {
 	.flex_sidebyside {
 		width: 120%;
-		margin-left: -10%;
+		margin-inline-start: -10%;
 	}
 
 	.friends_list .page_content {
@@ -774,24 +776,24 @@ dialog:has(.allowmodal) {
 	}
 
 	.heading, .heading3, p, .cl_heading {
-		margin-left: 25px;
-		margin-right: 25px;
+		margin-inline-start: 25px;
+		margin-inline-end: 25px;
 	}
 
 	.friendsfeature p {
-		margin-left: 0;
-		margin-right: 0;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
 	}
 
 	.voice_inset {
-		margin-left: -80px;
-		margin-right: 0;
+		margin-inline-start: -80px;
+		margin-inline-end: 0;
 	}
 	
 	.friends_update .full.voice_video
 	{
 		width: 100%;
-		margin-left: 0;
+		margin-inline-start: 0;
 	}
 
 }
@@ -808,7 +810,7 @@ dialog:has(.allowmodal) {
 		position: -webkit-sticky;
 		position: sticky;
 		top: 65px;
-		text-align: right;
+		text-align: end;
 		max-height: calc( 95vh - 65px);
 
 	}
@@ -822,13 +824,13 @@ dialog:has(.allowmodal) {
 	}
 
 	.sidebyside .left{
-		margin-right: 0;
+		margin-inline-end: 0;
 		margin-bottom: 25px;
-		text-align: left;
+		text-align: start;
 	}
 
 	.voice_inset {
-		margin-left: 0px;
+		margin-inline-start: 0px;
 	}
 
 	.page_content.sidebyside > div {

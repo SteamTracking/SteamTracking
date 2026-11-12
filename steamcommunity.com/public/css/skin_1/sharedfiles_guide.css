@@ -13,15 +13,16 @@
 .guideTopContent
 {
 	position: relative;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding-inline-start: 16px;
+	padding-inline-end: 16px;
 }
 
 .guideTopContent .dotHR
 {
 	height: 1px;
 	border-bottom: 1px #61696d dotted;
-	margin: 10px 0px 10px 84px;
+	margin-block: 10px;
+	margin-inline: 84px 0px;
 }
 
 .guideTopDescription
@@ -32,7 +33,7 @@
 	margin-top: 10px;
 	line-height: 22px;
 	padding-bottom: 16px;
-	padding-right: 8px;
+	padding-inline-end: 8px;
 	overflow: hidden;
 }
 
@@ -61,8 +62,8 @@
 .guideTop .workshopItemControlsCtn.fixed_in_scroll
 {
 	position: fixed;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 }
 
 /* don't float the controls down at small widths (they wrap poorly) or small heights */
@@ -87,7 +88,7 @@
 .guidePreviewImagesToUpload
 {
 	padding: 0px;
-	padding-left: 5px;
+	padding-inline-start: 5px;
 }
 
 .guidePreviewImagesToUpload li
@@ -97,10 +98,10 @@
 
 .guidePreviewImage
 {
-	float: left;
+	float: inline-start;
 	width: 74px;
 	height: 74px;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 	margin-bottom: 3px;
 }
 
@@ -111,17 +112,17 @@
 	width: auto;
 	height: auto;
 	border-top: 1px solid #262626;
-	border-left: 1px solid #262626;
-	border-right: 1px solid #111111;
+	border-inline-start: 1px solid #262626;
+	border-inline-end: 1px solid #111111;
 	border-bottom: 1px solid #111111;
 }
 
 .guidePreviewImageSmall
 {
-	float: left;
+	float: inline-start;
 	width: 36px;
 	height: 74px;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 	margin-bottom: 3px;
 }
 
@@ -191,10 +192,10 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 {
 	position: relative;
 	color: #aaaaaa;
-	float: left;
-	padding-left: 5px;
-	padding-right: 5px;
-	margin-right: 5px;
+	float: inline-start;
+	padding-inline-start: 5px;
+	padding-inline-end: 5px;
+	margin-inline-end: 5px;
 	padding-top: 12px;
 	padding-bottom: 12px;
 }
@@ -206,18 +207,18 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 
 .editGuideHeaderTab.first
 {
-	padding-left: 18px;
+	padding-inline-start: 18px;
 }
 
 .editGuideHeaderTab.last
 {
-	float: right;
-	padding-right: 18px;
+	float: inline-end;
+	padding-inline-end: 18px;
 }
 
 .editGuideHeaderTab.publish
 {
-	float: right;
+	float: inline-end;
 	padding-top: 4px;
 	padding-bottom: 3px;
 }
@@ -225,39 +226,39 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 .editGuideHeaderTab.publish .btn_small_thin > span
 {
 	line-height: 30px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-inline-start: 15px;
+	padding-inline-end: 15px;
 }
 
 .editGuideHeaderTab.selected
 {
 	color: white;
 	background-color: #3b4f6c;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 .editGuideHeaderBullet
 {
 	margin-top: 16px;
-	float: left;
+	float: inline-start;
 	width: 4px;
 	height: 8px;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/workshop_collection_processArrow.png);
 	background-repeat: no-repeat;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 .editGuideHeaderBullet.last
 {
-	float: right;
+	float: inline-end;
 }
 
 .editGuideHeader .general_btn
 {
-	float: right;
+	float: inline-end;
 	background-color: white;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-inline-start: 10px;
+	padding-inline-end: 10px;
 	color: black;
 }
 
@@ -265,8 +266,8 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 {
 	position: absolute;
 	bottom: -8px;
-	left: 50%;
-	margin-left: -7.5px;
+	inset-inline-start: 50%;
+	margin-inline-start: -7.5px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/guides/selection_bubble_arrow.png');
 	background-repeat:no-repeat;
 	width: 15px;
@@ -308,15 +309,15 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 .editGuidePageSectionDesc
 {
 	font-size: 13px;
-	padding-right: 16px;
+	padding-inline-end: 16px;
 }
 
 .editGuideAlertHeader {
-	text-align: left;
+	text-align: start;
 	margin: 10px 0px 5px 0px;
 	padding: 0px;
-	padding-left: 8px;
-	padding-right: 8px;
+	padding-inline-start: 8px;
+	padding-inline-end: 8px;
 	height: 27px;
 	line-height: 27px;
 	color: #FFC369;
@@ -351,13 +352,13 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 .editGuideTableOfContents
 {
 	margin-top: 20px;
-	padding-right: 16px;
+	padding-inline-end: 16px;
 }
 
 .editGuideTOCSection
 {
 	padding: 3px;
-	padding-right: 15px;
+	padding-inline-end: 15px;
 	background-color: rgba( 84, 133, 183, 0.2);
 	margin-top: 2px;
 	line-height: 35px;
@@ -374,10 +375,10 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 	width: 10px;
 	cursor: move;
 	cursor: -moz-grab;
-	float: left;
+	float: inline-start;
 	padding-top: 13px;
-	padding-left: 5px;
-	margin-right: 10px;
+	padding-inline-start: 5px;
+	margin-inline-end: 10px;
 }
 
 .editGuideTOCSectionGrabberTop
@@ -400,7 +401,7 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 
 .editGuideTOCSectionTitle
 {
-	float: left;
+	float: inline-start;
 	min-width: 300px;
 	color: white;
 	font-size: 14px;
@@ -411,7 +412,7 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 
 .editGuideTOCSectionControls
 {
-	float: right;
+	float: inline-end;
 }
 
 .editGuideTOCSectionControls .btn_grey_black
@@ -422,15 +423,15 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 .editGuideTOCSectionControls img
 {
 	vertical-align: middle;
-	margin-left: -6px;
+	margin-inline-start: -6px;
 	margin-top: -2px;
-	margin-right: 3px;
+	margin-inline-end: 3px;
 }
 
 .editGuideTOCSectionControls .btn_small_thin
 {
 	line-height: 30px;
-	padding-right: 5px;
+	padding-inline-end: 5px;
 }
 
 .editGuideTOCControls
@@ -455,21 +456,21 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 .editGuideUploadImagesDesc
 {
 	padding-top: 10px;
-	padding-left: 5px;
+	padding-inline-start: 5px;
 	font-size: 12px;
 }
 
 /* contributors */
 .editGuideContributorName
 {
-	float: left;
+	float: inline-start;
 	min-width: 300px;
 	color: white;
 }
 
 .editGuideContributorsControls
 {
-	float: right;
+	float: inline-end;
 }
 
 .editGuideContributorsControls a, .editGuideContributorsControls a:visited
@@ -486,13 +487,13 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 .editGuideContributorsControls img
 {
 	vertical-align: middle;
-	padding-left: 5px;
+	padding-inline-start: 5px;
 }
 
 .editGuideContributorsControls .btn_small_thin
 {
 	line-height: 30px;
-	padding-right: 5px;
+	padding-inline-end: 5px;
 }
 
 #sortable_previews
@@ -510,7 +511,7 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 .editGuidePreviews
 {
 	padding-top: 15px;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 .editGuidePreviewsContainer
@@ -534,7 +535,7 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 
 #ExpandAllImagesAreaBtn
 {
-	float: right;
+	float: inline-end;
 
 }
 
@@ -544,7 +545,7 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 	width: 15px;
 	height: 16px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/icons/icon_double_arrows.png');
-	float: right;
+	float: inline-end;
 	background-position: 15px 0px;
 }
 
@@ -552,7 +553,7 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 {
 	color: #e5e5e5;
 	text-decoration: none;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	text-transform: lowercase;
 }
 
@@ -564,14 +565,14 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 .editGuideContributors
 {
 	padding-top: 15px;
-	margin-right: 16px;
+	margin-inline-end: 16px;
 }
 
 .editGuidePageControls
 {
 	margin-top: -10px;
 	margin-bottom: 10px;
-	float: right;
+	float: inline-end;
 }
 
 
@@ -584,7 +585,7 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 
 .editGuideSubSectionPageControls
 {
-	float: right;
+	float: inline-end;
 }
 
 .editGuideSubSectionPageControlsContainer
@@ -607,7 +608,7 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 {
 	color: #ffd09e;
 	display: none;
-	float: left;
+	float: inline-start;
 	line-height: 22px;
 }
 
@@ -619,7 +620,7 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 .editGuideSubSectionContentsSavedText
 {
 	color: #ffd09e;
-	float: left;
+	float: inline-start;
 	line-height: 22px;
 }
 
@@ -647,7 +648,8 @@ input[type=text].editGuideSubSectionTitleField
 	border: solid 1px #000;
 	box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
 	border-radius: 3px;
-	padding: 4px 5px 6px 8px;
+	padding-block: 4px 6px;
+	padding-inline: 8px 5px;
 	color: #BFBFBF;
 	margin-bottom: 20px;
 }
@@ -671,7 +673,7 @@ input[type=text].editGuideSubSectionTitleField
 	position: absolute;
 	width: 278px;
 	top: 146px;
-	right: 10px;
+	inset-inline-end: 10px;
 }
 
 #EditorPane
@@ -697,8 +699,8 @@ input[type=text].editGuideSubSectionTitleField
 	background-color: rgba(0, 0, 0, 0.5);
 	border-radius: 3px;
 	border-top: none;
-	border-top-left-radius: 0px;
-	border-top-right-radius: 0px;
+	border-start-start-radius: 0px;
+	border-start-end-radius: 0px;
 	padding: 6px;
 	height: 590px;
 }
@@ -716,7 +718,7 @@ input[type=text].editGuideSubSectionTitleField
 
 .editGuideSubSectionPreviewImages
 {
-	padding-left: 2px;
+	padding-inline-start: 2px;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	background-color: rgba( 255, 255, 255, 0.1);
@@ -732,7 +734,7 @@ input[type=text].editGuideSubSectionTitleField
 
 #UploadPreviewImages
 {
-	margin-left: 2px;
+	margin-inline-start: 2px;
 	margin-top: 5px;
 }
 
@@ -741,7 +743,7 @@ input[type=text].editGuideSubSectionTitleField
 {
 	display: inline-block;
 	margin-top: 2px;
-	margin-right: 2px;
+	margin-inline-end: 2px;
 	margin-bottom: 2px;
 	cursor: pointer;
 	max-height: 66px;
@@ -805,7 +807,7 @@ input[type=text].editGuideSubSectionTitleField
 	background-repeat: no-repeat;
 	width: 11px;
 	height: 6px;
-	margin-left: 30px;
+	margin-inline-start: 30px;
 	position: relative;
 	top: 12px;
 }
@@ -816,10 +818,10 @@ input[type=text].editGuideSubSectionTitleField
 	background-repeat: no-repeat;
 	width: 5px;
 	height: 9px;
-	float: right;
+	float: inline-end;
 	position: relative;
 	top: 100px;
-	right: -15px;
+	inset-inline-end: -15px;
 }
 
 .editGuideInsertOptionControls .popupContainer
@@ -852,7 +854,7 @@ input[type=text].editGuideSubSectionTitleField
 .previewImageInsertColumn
 {
 	color: black;
-	float: left;
+	float: inline-start;
 	width: 124px;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -860,7 +862,7 @@ input[type=text].editGuideSubSectionTitleField
 
 .previewImageInsertColumn.left
 {
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 
 .previewImageInsertOption
@@ -880,7 +882,7 @@ input[type=text].editGuideSubSectionTitleField
 .previewImageInsertOption img
 {
 	vertical-align: middle;
-	padding-right: 5px;
+	padding-inline-end: 5px;
 }
 
 .previewImageInsertOption label
@@ -905,15 +907,15 @@ input[type=text].inputYouTubeVideo {
 
 .guide .bb_ul
 {
-	padding-left: 0px;
-	margin-left: 1em;
+	padding-inline-start: 0px;
+	margin-inline-start: 1em;
 }
 
 .guide .bb_ul li
 {
 	position: relative;
-	left: 1em;
-	padding-right: 1em;
+	inset-inline-start: 1em;
+	padding-inline-end: 1em;
 }
 
 /* A left- or right-floated [previewimg] or [previewyoutube] overlaps the band an outside marker is drawn
@@ -946,7 +948,7 @@ input[type=text].inputYouTubeVideo {
 .editGuideChangesDesc
 {
 	padding: 5px;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	font-size: 14px;
 	line-height: 20px;
 }
@@ -990,5 +992,5 @@ input[type=text].inputYouTubeVideo {
 #WaitingForIntegratedGuide img
 {
 	vertical-align: middle;;
-	padding-right: 20px;
+	padding-inline-end: 20px;
 }

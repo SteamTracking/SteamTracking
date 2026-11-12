@@ -3,10 +3,14 @@
 
 .current_player_workshop_link a.dropdown {
 	line-height: 27px;
-	padding-right: 18px;
+	padding-inline-end: 18px;
 	background-image: url(  'data:image/gif;base64,R0lGODlhEwAMAIABAMXDwgAAACH5BAEAAAEALAAAAAATAAwAAAIUjI+py+0PEZh0wmpjjSfzD4aiUQAAOw==' );
 	background-position: right center;
 	background-repeat: no-repeat;
+}
+
+.current_player_workshop_link a.dropdown:dir(rtl) {
+	background-position: left center;
 }
 
 /* body */
@@ -15,14 +19,14 @@
 {
 	margin: 30px auto 8px auto;
 	width: 948px;
-	text-align: left;
+	text-align: start;
 }
 
 /* right column */
 .right_column
 {
 	position: relative;
-	float: right;
+	float: inline-end;
 	width: 295px;
 	margin: 0;
 	padding: 0;
@@ -83,12 +87,12 @@
 	width: 84px;
 	position: absolute;
 	top: 0px;
-	left: 0px;
+	inset-inline-start: 0px;
 }
 .avatar_ctn {
 	position: relative;
 	height: 84px;
-	float: left;
+	float: inline-start;
 }
 .avatar_workshop_overlay {
 	background: url('https://community.fastly.steamstatic.com/public/images/workshop/avatar_overlay.png') no-repeat 0px 0px;
@@ -96,7 +100,7 @@
 	width: 84px;
 	position: absolute;
 	top: 0px;
-	left: 0px;
+	inset-inline-start: 0px;
 }
 .menu_panel {
 	padding: 12px;
@@ -115,13 +119,13 @@
 	font-size: 14px;
 	color: white;
 	line-height: 30px;
-	margin-left: -12px;
+	margin-inline-start: -12px;
 }
 	.browse_option a
 	{
 		width: 100%;
 		display: block;
-		padding-left: 12px;
+		padding-inline-start: 12px;
 	}
 	.browse_option a:hover
 	{
@@ -140,13 +144,13 @@
 
 .playerAvatar.float_left
 {
-	float: left;
+	float: inline-start;
 	margin-bottom: 20px;
 }
 .current_player_workshop_title a {
 	padding-top: 10px;
-	padding-left: 50px;
-	float: left;
+	padding-inline-start: 50px;
+	float: inline-start;
 	color: #67c1f5;
 	font-size: 16px;
 	font-family: 'Motiva Sans Light', Arial, Tahoma;
@@ -156,8 +160,8 @@
 }
 .current_player_workshop_link
 {
-	padding-left: 50px;
-	float: left;
+	padding-inline-start: 50px;
+	float: inline-start;
 }
 .current_player_workshop_link a
 {
@@ -171,9 +175,9 @@
 {
 	width: 638px;
 	margin: 0;
-	float: left;
+	float: inline-start;
 	padding-bottom: 7px;
-	text-align: left
+	text-align: start
 }
 
 /* voting queue */
@@ -185,8 +189,8 @@
 }
 .voting_queue_item
 {
-	float: left;
-	padding-right: 10px;
+	float: inline-start;
+	padding-inline-end: 10px;
 }
 .voting_queue_done_title
 {
@@ -209,7 +213,8 @@
 
 /* detail box */
 .detailBox {
-	padding: 10px 0px 0 0;
+	padding-block: 10px 0;
+	padding-inline: 0 0px;
 
 	position: relative;
 	padding-bottom: 20px;
@@ -219,7 +224,8 @@
 }
 
 .detailBox.altFooter {
-	padding: 10px 0px 0 0;
+	padding-block: 10px 0;
+	padding-inline: 0 0px;
 
 	position: relative;
 	padding-bottom: 7px;
@@ -265,7 +271,7 @@
 }
 .section_title_ctn .ico16 {
 	margin-top: -4px;
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 .special_event_row {
 	padding-top: 16px;
@@ -282,7 +288,7 @@
 	color: #67c1f5;
 	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	font-weight: normal;
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 .section_title a:hover
 {
@@ -324,7 +330,7 @@
 }
 .section_bottom_bar a
 {
-	float: right;
+	float: inline-end;
 }
 
 .workshop_item_link
@@ -383,7 +389,7 @@
 .workshop_item .workshop_item_price
 {
 	position: absolute;
-	right: 5px;
+	inset-inline-end: 5px;
 	font-size: 14px;
 }
 
@@ -417,13 +423,13 @@
 }
 .voting_queue_item_position_0{
 	top: 15px;
-	left: 15px;
+	inset-inline-start: 15px;
 	z-index: 6;
 	opacity: 1;
 }
 .voting_queue_item_position_0.landscape
 {
-	left: 15px;
+	inset-inline-start: 15px;
 }
 .voting_queue_item_position_1, .voting_queue_item_position_1 .preview_image
 {
@@ -443,13 +449,13 @@
 }
 .voting_queue_item_position_1{
 	top: 23px;
-	left: 205px;
+	inset-inline-start: 205px;
 	z-index: 5;
 	opacity: 1;
 }
 .voting_queue_item_position_1.landscape
 {
-	left: 263px;
+	inset-inline-start: 263px;
 }
 .voting_queue_item_position_2, .voting_queue_item_position_2 .preview_image
 {
@@ -469,13 +475,13 @@
 }
 .voting_queue_item_position_2{
 	top: 32px;
-	left: 378px;
+	inset-inline-start: 378px;
 	z-index: 4;
 	opacity: 1;
 }
 .voting_queue_item_position_2.landscape
 {
-	left: 513px;
+	inset-inline-start: 513px;
 }
 .voting_queue_item_position_3, .voting_queue_item_position_3 .preview_image
 {
@@ -495,13 +501,13 @@
 }
 .voting_queue_item_position_3{
 	top: 40px;
-	left: 535px;
+	inset-inline-start: 535px;
 	z-index: 3;
 	opacity: 1;
 }
 .voting_queue_item_position_3.landscape
 {
-	left: 673px;
+	inset-inline-start: 673px;
 }
 .voting_queue_item_position_4, .voting_queue_item_position_4 .preview_image
 {
@@ -521,13 +527,13 @@
 }
 .voting_queue_item_position_4{
 	top: 47px;
-	left: 675px;
+	inset-inline-start: 675px;
 	z-index: 2;
 	opacity: 1;
 }
 .voting_queue_item_position_4.landscape
 {
-	left: 15px;
+	inset-inline-start: 15px;
 }
 .voting_queue_item_position_5, .voting_queue_item_position_5 .preview_image
 {
@@ -547,22 +553,22 @@
 }
 .voting_queue_item_position_5{
 	top: 51px;
-	left: 803px;
+	inset-inline-start: 803px;
 	z-index: 1;
 	opacity: 1;
 }
 .voting_queue_item_position_5.landscape
 {
-	left: 15px;
+	inset-inline-start: 15px;
 }
 
 .voting_queue_item_overlay
 {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 	z-index: 10;
 }
 
@@ -573,7 +579,7 @@
 	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	font-size: 18px;
 	top: 80px;
-	left: 120px;
+	inset-inline-start: 120px;
 	width: 825px;
 	height: 67px;
 	padding: 0px;
@@ -626,14 +632,14 @@ a.queue_area.gpfocus .voting_queue_link{
 /* large promotion area for square items */
 .workshop_item.square
 {
-	float: left;
+	float: inline-start;
 	background-color: black;
 }
 .workshop_item.square.large
 {
 	width: 437px;
 	height: 487px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 .workshop_item.square.large .preview_image
 {
@@ -682,8 +688,8 @@ a.queue_area.gpfocus .voting_queue_link{
 }
 .friend_who_favorited
 {
-	float: left;
-	margin-right: 5px;
+	float: inline-start;
+	margin-inline-end: 5px;
 }
 .friend_who_favorited.more, .friend_who_favorited.more a
 {
@@ -712,7 +718,7 @@ a.queue_area.gpfocus .voting_queue_link{
  {
 	 position: absolute;
 	 top: 6px;
-	 left: -1px;
+	 inset-inline-start: -1px;
 	 padding: 3px;
 	 pointer-events: none;
 	background: -webkit-linear-gradient( top, #769605 0%, #566c04 100%);
@@ -722,7 +728,7 @@ a.queue_area.gpfocus .voting_queue_link{
 {
 	position: absolute;
 	top: 6px;
-	left: -1px;
+	inset-inline-start: -1px;
 	padding: 3px;
 	pointer-events: none;
 	background-color: #799905;
@@ -738,7 +744,7 @@ a.queue_area.gpfocus .voting_queue_link{
 	height: 127px;
 
 	top: -99px;
-	left: -66px;
+	inset-inline-start: -66px;
 	pointer-events: none;
 }
 
@@ -752,10 +758,10 @@ a.queue_area.gpfocus .voting_queue_link{
 .home_tab
 {
 	display: inline-block;
-	margin-right: 0px;
+	margin-inline-end: 0px;
 	background: rgba( 42, 63, 90, 0.6 );
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+	border-start-start-radius: 3px;
+	border-start-end-radius: 3px;
 
 	font-size: 13px;
 	color: #2f89bc;
@@ -775,8 +781,8 @@ a.queue_area.gpfocus .voting_queue_link{
 }
 .home_tab .tab_content
 {
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+	border-start-start-radius: 3px;
+	border-start-end-radius: 3px;
 	font-size: 13px;
 	color: #4f94bc;
 	line-height: 24px;
@@ -840,8 +846,8 @@ a.queue_area.gpfocus .voting_queue_link{
 {
 	width: 77px;
 	height: 77px;
-	float: left;
-	margin-right: 14px;
+	float: inline-start;
+	margin-inline-end: 14px;
 }
 .workshop_item_row .preview_image.aspectratio_16x9
 {
@@ -875,7 +881,7 @@ a.queue_area.gpfocus .voting_queue_link{
 .workshop_item_row .workshop_item_price
 {
 	position: absolute;
-	right: 20px;
+	inset-inline-end: 20px;
 	font-size: 16px;
 }
 
@@ -883,11 +889,11 @@ a.queue_area.gpfocus .voting_queue_link{
 .user_actions
 {
 	position: absolute;
-	right: 0px;
+	inset-inline-end: 0px;
 }
 .workshop_item_row .user_actions
 {
-	right: 12px;
+	inset-inline-end: 12px;
 }
 .user_action_history_icon
 {
@@ -897,7 +903,7 @@ a.queue_area.gpfocus .voting_queue_link{
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/icon_show_state.png');
 	background-repeat: no-repeat;
 	display: inline-block;
-	margin-left: 2px;
+	margin-inline-start: 2px;
 }
 .user_action_history_icon.subscribed
 {
@@ -926,7 +932,7 @@ a.queue_area.gpfocus .voting_queue_link{
 	font-size: 11px;
 }
 .group_overview_announcement {
-	float: left;
+	float: inline-start;
 	width: 302px;
 	margin: 0 0 15px 0;
 }
@@ -934,9 +940,9 @@ a.queue_area.gpfocus .voting_queue_link{
 	width: 630px;
 }
 .group_overview_announcement.first {
-	border-right: 1px solid #000000;
-	padding-right: 12px;
-	margin-right: 14px;
+	border-inline-end: 1px solid #000000;
+	padding-inline-end: 12px;
+	margin-inline-end: 14px;
 }
 
 .group_overview_announcement_footer {
@@ -968,8 +974,8 @@ a.queue_area.gpfocus .voting_queue_link{
 
 .group_overview_announcement_fade {
 	position: absolute;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 	height: 36px;
 	/*background: url( 'https://community.fastly.steamstatic.com/public/images/groups/group_overview_announcement_fade.png' ) bottom left repeat-x;*/
@@ -1034,7 +1040,7 @@ a.readmore_link
 .slideshow_item
 {
 	position: relative;
-	float: left;
+	float: inline-start;
 	width: 638px;
 	padding-bottom: 10px;
 	background-color: black;
@@ -1066,33 +1072,33 @@ a.readmore_link
 {
 	font-size: 24px;
 	padding-top: 7px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-inline-start: 10px;
+	padding-inline-end: 10px;
 	color: #dedede;
 	font-family: 'Motiva Sans Bold', Arial, Tahoma;
 	border-top: 1px dotted #223249;
 }
 .slideshow_item_desc
 {
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-inline-start: 10px;
+	padding-inline-end: 10px;
 	max-width: 600px;
 	color: #bfbfbf;
 	height: 15px;
 }
 .slideshow_item .workshop_item_rating
 {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	padding-top: 4px;
 }
  .slideshow_item .square .workshop_item_rating {
-	 margin-left: 0px;
+	 margin-inline-start: 0px;
 	 padding-top: 0px;
 }
 .slideshow_item .workshop_item_price
 {
 	position: absolute;
-	right: 10px;
+	inset-inline-end: 10px;
 	font-size: 14px;
 	color: white;
 }
@@ -1107,8 +1113,8 @@ a.readmore_link
 .slider
 {
 	position: absolute;
-	left: 39px;
-	right: 39px;
+	inset-inline-start: 39px;
+	inset-inline-end: 39px;
 	top: 0px;
 	bottom: 0px;
 	background-color: rgba( 0, 0, 0, 0.2 );
@@ -1147,11 +1153,11 @@ a.readmore_link
 }
 
 .slider_left {
-	left: 0;
+	inset-inline-start: 0;
 }
 
 .slider_right {
-	right: 0;
+	inset-inline-end: 0;
 }
 .slider_right span {
 	display: inline-block;
@@ -1160,7 +1166,7 @@ a.readmore_link
 	background-image: url('https://community.fastly.steamstatic.com/public/images//workshop/icon_cluster_controls.png');
 	width: 9px;
 	height: 7px;
-	margin-left: 15px;
+	margin-inline-start: 15px;
 	margin-top: 5px;
 }
 .slider_left span {
@@ -1170,7 +1176,7 @@ a.readmore_link
 	background-image: url('https://community.fastly.steamstatic.com/public/images//workshop/icon_cluster_controls.png');
 	width: 9px;
 	height: 7px;
-	margin-left: 13px;
+	margin-inline-start: 13px;
 	margin-top: 5px;
 }
 .slider_right:hover span {
@@ -1205,8 +1211,8 @@ input.inputTagsFilter + label {
 	display: inline-block;
 	vertical-align: top;
 	padding-top: 4px;
-	margin-left: -31px;
-	padding-left: 31px;
+	margin-inline-start: -31px;
+	padding-inline-start: 31px;
 }
 input.inputTagsFilter:hover + label,
 input.inputTagsFilter:checked + label:hover
@@ -1214,9 +1220,9 @@ input.inputTagsFilter:checked + label:hover
 	color: #67c1f5;
 }
 .filterOption {
-	margin-left: -10px;
-	padding-left: 10px;
-	margin-right: -10px;
+	margin-inline-start: -10px;
+	padding-inline-start: 10px;
+	margin-inline-end: -10px;
 	padding-top: 0px;
 	padding-bottom: 3px;
 }
@@ -1248,7 +1254,7 @@ input.inputTagsFilter:checked + label:hover
 @media screen and (max-width: 910px)
 {
 	html.responsive .section_title_ctn {
-		margin-left: 10px;
+		margin-inline-start: 10px;
 	}
 	html.responsive .workshop_home_content {
 		width: auto;
@@ -1265,7 +1271,7 @@ input.inputTagsFilter:checked + label:hover
 	}
 
 	html.responsive .voting_queue_link {
-		left: 20px;
+		inset-inline-start: 20px;
 	}
 
 	html.responsive .popular_items_row .workshop_item.grid,

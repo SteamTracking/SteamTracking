@@ -1,0 +1,93 @@
+.bkCqOWe6u70- {
+  flex-grow: 1;
+  position: relative;
+}
+.F-Iu9ouJkU4- {
+  inset-inline-end: 8px;
+  opacity: 1;
+  z-index: 1;
+  flex-direction: row-reverse;
+  transition: opacity 0.25s;
+  display: flex;
+  position: absolute;
+  top: 8px;
+}
+.Orxop48kS2w- {
+  position: relative;
+}
+button.DialogButton.p-atMVHbHCY- {
+  margin-inline-start: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  display: flex;
+}
+button.DialogButton.p-atMVHbHCY- svg {
+  width: 70%;
+  height: auto;
+}
+.-dznvStnO7w- {
+  min-width: 500px;
+}
+.UXQ6tbkrOG0- {
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+}
+.UXQ6tbkrOG0- > div {
+  margin-inline-end: 8px;
+}
+.tKQoekDRds8-.DialogTextInputBase {
+  box-sizing: border-box;
+  background: #0003;
+  outline: none;
+  width: 100%;
+  padding: 11px;
+}
+.TfGEx4iodHc- {
+  position: relative;
+}
+.EbkD9oXySts- {
+  inset-inline-end: 8px;
+  opacity: 1;
+  z-index: 1;
+  flex-direction: row-reverse;
+  transition: opacity 0.25s;
+  display: flex;
+  position: absolute;
+  top: 8px;
+}
+.KJ1XyPiGQj0- {
+  min-width: 500px;
+}
+.fiKe4PCXweM- {
+  border: 1px solid #4d5560;
+  border-radius: 3px;
+  margin-bottom: 12px;
+  padding: 8px;
+}
+.fiKe4PCXweM- img {
+  max-width: 100%;
+}
+._1iRX-KtzqgY- {
+  margin-inline-start: 36px;
+  margin-bottom: 12px;
+}
+._1iRX-KtzqgY- .DialogInput_Wrapper {
+  max-width: 25%;
+}
+.yuw8NnJmdB8- {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 6px;
+  width: fit-content;
+  display: flex;
+}
+.yuw8NnJmdB8- button.DialogButton {
+  text-align: start;
+  background: 0 0;
+  border: 1px solid #ffffff6c;
+  padding: 3px 6px;
+}
+/*$vite$:1*/

@@ -4186,7 +4186,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Dữ liệu biểu đồ tần suất dựa trên báo cáo tốc độ khung hình cho trò chơi này bởi khách hàng dùng %1$s chọn cung cấp phản hồi về dữ liệu tốc độ khung hình.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Phân phối tốc độ khung hình",
     "GamePerformanceStats_Framerate": "Tốc độ khung hình",
-    "GamePerformanceStats_SessionLabel": "% Phiên chơi",
+    "GamePerformanceStats_SessionLabel": "% số mẫu dữ liệu",
     "GamePerformanceStats_Chart_NoData": "Một bảng sẽ xuất hiện sau khi thu thập đủ dữ liệu",
     "NewToolTitleSuffix_Beta": "BETA",
     "DynamicLinkType_WorkshopItem": "Một nội dung Workshop cho %1$s",
@@ -4213,6 +4213,11 @@
     "GamePerformanceStats_StillGatheringData": "Steam vẫn đang thu thập dữ liệu tốc độ khung hình cho %1$s trên %2$s",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam vẫn đang thu thập dữ liệu tốc độ khung hình cho trò chơi này trên %1$s",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam vẫn đang thu thập dữ liệu tốc độ khung hình cho trò chơi này",
-    "GamePerformanceStats_FrameRateDistribution": "Biểu đồ tốc độ khung hình này dựa trên dữ liệu ẩn danh từ khách hàng chơi %1$s đồng ý đóng góp trên %2$s",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Biểu đồ tốc độ khung hình này dựa trên dữ liệu ẩn danh từ khách hàng chơi sản phẩm này đồng ý đóng góp trên %1$s"
+    "GamePerformanceStats_FrameRateDistribution": "Biểu đồ này hiển thị mẫu khung hình từ khách hàng chơi %1$s đồng ý đóng góp dữ liệu ẩn danh trên %2$s. Mỗi thanh hiển thị phần trăm mẫu ở mức khung hình đó.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Biểu đồ này hiển thị mẫu khung hình từ khách hàng chơi sản phẩm này đồng ý đóng góp dữ liệu ẩn danh trên %1$s. Mỗi thanh hiển thị phần trăm mẫu ở mức khung hình đó.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "Trò chơi này yêu cầu tự bật hỗ trợ tay cầm qua thiết lập trong trò chơi",
+    "GameFrameRateReporting_Details_HowToChange": "Nếu về sau muốn thay đổi thiết lập này, bạn có thể tìm trong <1>Thiết lập tài khoản Steam > Dữ liệu & Duyệt web</1>",
+    "GamePerformanceStats_MoreDetailsTitle": "Xem chi tiết",
+    "GamePerformanceStats_MoreDetails_Filtering": "Chỉ bao gồm dữ liệu thu thập từ giới hạn khung hình mặc định của %1$s (%2$s FPS). Đã loại bỏ thời gian nghỉ và mẫu không hợp lệ. Nhiều mẫu khác nhau được thu thập từ mỗi phiên chơi.",
+    "GamePerformanceStats_MoreDetails_VSync": "Khoảng lệch trong biểu đồ (vd: giữa %1$s và %2$s FPS) có thể gây ra do VSync, tính năng đồng bộ tốc độ khung hình của trò chơi với tần số quét của màn hình để tránh hiện tượng xé hình. Điều này có thể dẫn tới mẫu cụm lại ở %1$s và %2$s FPS cho dù tốc độ khung hình trung bình của trò chơi ở giữa khoảng đó. Hiện tượng này khá bình thường với VSync, và dù có thể ảnh hưởng tới nhịp độ khung hình, điều này không nhất thiết gây ra hiện tượng giật khung hình đáng kể."
 }

@@ -1,12 +1,4 @@
 // <script type="text/javascript">
-// programmatic name of language the user is editing
-var g_language = '';
-
-// list of programmatic names of languages the user has indicated the app supports
-var g_rgEditingLanguages = {'token': 1};
-
-// is there more than one editing language?
-var g_bLocalized = false;
 
 //
 // Common client side request handler for apps AJAX calls. This routine
@@ -501,32 +493,6 @@ function AppMigrateFromSelector( appidSrc, bForce, bMergeLite, selector, bStatsO
 
 
 
-function PerformNewAchievement( appid )
-{
-	AppsAjaxRequest( g_szBaseURL + '/apps/newachievement/' + appid,
-		{
-			'maxstatid' : $('max_statid_used').innerHTML,
-			'maxbitid' : $('max_bitid_used').innerHTML
-		},
-		function( results )
-		{
-			if ( results['success'] == 1 )
-			{
-				$('max_statid_used').innerHTML = results[ 'maxstatid' ];
-				$('max_bitid_used').innerHTML = results[ 'maxbitid' ];
-				NewAchievement( appid, results[ 'achievement' ] );
-				var id = EditAchievement( appid, results[ 'achievement' ] );
-				location.hash = id + "_edit";
-			}
-			else
-			{
-				ShowAlertDialog( 'Error', results['error'] );
-			}
-		}
-		);
-}
-
-
 function PerformNewStat( appid )
 {
 	AppsAjaxRequest( g_szBaseURL + '/apps/newstat/' + appid,
@@ -541,23 +507,6 @@ function PerformNewStat( appid )
 			location.hash = id + "_edit";
 		}
 		);
-}
-
-
-function EditAchievementClosure( appid, statid, bitid )
-{
-	theClosure = function()
-		{
-		AppsAjaxRequest( g_szBaseURL + "/apps/fetchachievement/" + appid + "/" + statid + "/" + bitid,
-			{},
-			function( results )
-			{
-				EditAchievement( appid, results );
-			}
-			);
-		};
-
-	return theClosure;
 }
 
 
@@ -578,51 +527,16 @@ function EditStatClosure( appid, statid )
 }
 
 
-function IDFromAchievement( statid, bitid )
-{
-	return "a" + statid + "_" + bitid;
-}
-
 function IDFromStat( statid )
 {
 	return "s" + statid;
 }
 
 
-function DeleteAchievementRow( statid, bitid )
-{
-	var theRow = $( IDFromAchievement( statid, bitid ) );
-	theRow.parentNode.removeChild( theRow );
-}
-
 function DeleteStatRow( statid )
 {
 	var theRow = $( IDFromStat( statid ) );
 	theRow.parentNode.removeChild( theRow );
-}
-
-
-function DeleteAchievementClosure( appid, statid, bitid, apiname )
-{
-	theClosure = function()
-		{
-		if ( !confirm( "Delete achievement " + apiname + " (" + statid + "/" + bitid + ")?" ) )
-		{
-			return;
-		}
-		AppsAjaxRequest( g_szBaseURL + "/apps/deleteachievement/" + appid + "/" + statid + "/" + bitid,
-			{},
-			function( results )
-			{
-				if ( results[ 'deleted' ] )
-				{
-					DeleteAchievementRow( statid, bitid );
-				}
-			}
-			);
-		};
-
-	return theClosure;
 }
 
 
@@ -637,30 +551,6 @@ function DeleteStatClosure( appid, statid )
 				if ( results[ 'deleted' ] )
 				{
 					DeleteStatRow( statid );
-				}
-			}
-			);
-		};
-
-	return theClosure;
-}
-
-
-function RevertAchievementClosure( appid, statid, bitid )
-{
-	theClosure = function()
-		{
-		AppsAjaxRequest( g_szBaseURL + "/apps/fetchachievement/" + appid + "/" + statid + "/" + bitid,
-			{},
-			function( results )
-			{
-				if ( typeof( results ) == "object" )
-				{
-					ReplaceAchievement( appid, results );
-				}
-				else
-				{
-					DeleteAchievementRow( statid, bitid );
 				}
 			}
 			);
@@ -693,84 +583,6 @@ function RevertStatClosure( appid, statid )
 	return theClosure;
 }
 
-
-function FetchLocalizedForm( elt, key )
-{
-	var formData = elt.serialize( true );
-	if ( key in formData )
-	{
-		// nonlocalized value; marshal as a single string
-		formData = formData[ key ];
-	}
-	else
-	{
-		// form has an associative array of language => string.
-		// drop languages with empty values so we don't clutter up
-		// the KV.
-		for ( lang in formData )
-		{
-			if ( formData[ lang ] == "" )
-			{
-				delete formData[ lang ];
-			}
-		}
-
-		// now catch the case where there's only an english string
-		// in the otherwise localized form, and back the data off
-		// to a regular string
-		var keysRemaining = Object.keys( formData );
-		if ( keysRemaining.length == 1 && keysRemaining[ 0 ] == 'english' )
-		{
-			formData = formData[ 'english' ];
-		}
-	}
-	// either way, marshal as JSON for convenience of the server side code
-	return Object.toJSON( formData );
-}
-
-
-function SaveAchievementClosure( appid, statid, bitid )
-{
-	theClosure = function()
-		{
-		var id = "ach" + statid + "_" + bitid;
-
-		var displayName = FetchLocalizedForm( $( id + '_displayname' ), 'display_name' );
-		var description = FetchLocalizedForm( $( id + '_description' ), 'description' );
-		var progressSelect = $( id + '_progress' );
-
-		AppsAjaxRequest( g_szBaseURL + "/apps/saveachievement/" + appid,
-			{
-			'statid' : statid,
-			'bitid' : bitid,
-			'apiname' : $( id + '_apiname' ).value,
-			'displayname' : displayName,
-			'description' : description,
-			'permission' : $( id + '_permission' ).selectedIndex,
-			'hidden' : $( id + '_hidden' ).checked,
-			'progressStat' : progressSelect.value,
-			'progressMin' : $( id + '_minval' ).value,
-			'progressMax' : $( id + '_maxval' ).value
-			},
-			function( results )
-			{
-				if ( results['success'] != 1 )
-				{
-					ShowAlertDialog( 'Error', results['error'] );
-					return;
-				}
-				if ( results[ 'saved' ] )
-				{
-					ReplaceAchievement( appid, results[ 'achievement' ] );
-				}
-				// leave it in edit mode otherwise
-			},
-			'post'
-			);
-		};
-
-	return theClosure;
-}
 
 function SaveStatClosure( appid, statid )
 {
@@ -807,98 +619,6 @@ function SaveStatClosure( appid, statid )
 	return theClosure;
 }
 
-function BAchievementFieldLocalized( achievement, field )
-{
-	return typeof( achievement[ field ] ) != "string";
-}
-
-
-function LocalizedAchievementField( achievement, field, fallback, language )
-{
-	// fallback is used only for loc tokens, as they are required where
-	// language strings are not.
-
-	var results = {};
-	if ( typeof( achievement[ field ] ) == "string" )
-	{
-		// non-localized field: treat it as the english field.
-		// emit bPresent iff we are asking for english.
-		// if we're asking for loc tokens, emit the fallback token.
-		// otherwise emit the fallback english string.
-
-		if ( language == "token" )
-		{
-			results[ 'bPresent' ] = false;
-			results[ 'string' ] = fallback;
-		}
-		else
-		{
-			results[ 'bPresent' ] = ( language == "english" );
-			results[ 'string' ] = achievement[ field ];
-		}
-	}
-	else if ( language in achievement[ field ] )
-	{
-		// have this language; emit the localized field.
-		results[ 'bPresent' ] = true;
-		results[ 'string' ] = achievement[ field ][ language ];
-	}
-	else
-	{
-		// don't have this language; emit the English string instead,
-		// or the fallback string if we're doing loc tokens, or the
-		// empty string otherwise.
-
-		results[ 'bPresent' ] = false;
-		if ( 'english' in achievement[ field ] )
-			results[ 'string' ] = achievement[ field ][ 'english' ];
-		else if ( language == 'token' )
-			results[ 'string' ] = fallback;
-		else
-			results[ 'string' ] = '';
-	}
-
-	return results;
-}
-
-
-function AchievementSpan( achievement, field, fallback, language )
-{
-	data = LocalizedAchievementField( achievement, field, fallback, language );
-
-	var text = "";
-	var newSpan = $J( '<span>' );
-
-	if ( data[ 'bPresent' ] )
-	{
-		newSpan.text( data[ 'string' ] );
-	}
-	else
-	{
-		// don't display "fallback" english text for the loc token
-		if ( language != "token" )
-		{
-			var firstSpan = $J( '<span>' );
-			firstSpan.text( data['string'] );
-			newSpan.append( firstSpan );
-		}
-
-		var secondSpan = $J( '<span>' );
-
-		if ( language == "english" )
-			secondSpan.text( " [no English string]" );
-		else if ( language == "token" )
-			secondSpan.text( "[no localization token]" );
-		else
-			secondSpan.text( " [fallback English string]" );
-		secondSpan.addClass( 'outputNeutral' );
-		newSpan.append( secondSpan );
-	}
-
-	return newSpan;
-}
-
-
 //
 // helper for jamming new cells into stat/achievement rows safely
 //
@@ -916,132 +636,6 @@ function addCell( tr, txt )
 	return theCell;
 }
 
-
-
-//
-// pokes a given achievement into a given DOM element for its TR.
-//
-// assumes the row is empty at entry.
-//
-function SetAchievement( appid, destRow, achievement )
-{
-	var row = $J( destRow );
-
-	var nameCell = $J( '<td>' );
-	nameCell.text( achievement[ "api_name" ] );
-	nameCell.append( $J( '<br>' ) );
-
-	// Add the achievement progress stat line
-	if ( typeof achievement[ 'progress' ] === 'object' )
-	{
-		// currently only support direct stat value mapping
-		var progressSpan = $J( '<span>' );
-		progressSpan.text( achievement.progress.value.operand1 + ' (' + achievement.progress.min_val + '-' + achievement.progress.max_val + ')' );
-
-		nameCell.append( progressSpan );
-		nameCell.append( $J( '<br>' ) );
-	}
-	row.append( nameCell );
-
-	// TODO need to do the below shenanigans for the display name as well.
-	// obviously some kind of helper would be handy here. maybe it could just
-	// return the span DOM object instead of going through the parser.
-	var descCell = $J( '<td>' );
-
-	var rgLanguageDisplay = g_rgLanguages;
-
-	var bPrefix = false;
-	var languages;
-	if ( g_language == "all" )
-	{
-		languages = g_rgEditingLanguages;
-		bPrefix = true;
-	}
-	else
-	{
-		languages = {};
-		languages[ g_language ] = 1;
-	}
-
-	for ( language in languages )
-	{
-		if ( bPrefix )
-		{
-			var prefixSpan = $J( '<span>' );
-			prefixSpan.text( "[" + rgLanguageDisplay[ language ] + "] " );
-			descCell.append( prefixSpan );
-		}
-		descCell.append( AchievementSpan( achievement, "display_name", achievement.api_name + '_NAME', language ) );
-		descCell.append( $J( '<br>' ) );
-	}
-
-	// TODO Commonify description and display name
-	for ( language in languages )
-	{
-		if ( bPrefix )
-		{
-			var prefixSpan = $J( '<span>' ).text( "[" + rgLanguageDisplay[ language ] + "] " );
-			descCell.append( prefixSpan );
-		}
-		descCell.append( AchievementSpan( achievement, "description", achievement.api_name + '_DESC', language ) );
-		descCell.append( $J( '<br>' ) );
-	}
-	row.append( descCell );
-
-	switch ( achievement[ "permission" ] )
-	{
-	case "1": addCell( row, "GS" ); break;
-	case "2": addCell( row, "Official GS" ); break;
-
-	case "0":
-	default:
-		addCell( row, "Client" );
-	}
-
-	addCell( row, ( achievement[ "hidden" ] != 0 ) ? "Yes" : "" );
-
-	if ( achievement[ "icon" ] )
-	{
-		var newImg = document.createElement( "img" );
-		newImg.src = achievement[ "icon" ];
-		newImg.height = 64;
-		newImg.width = 64;
-		addCell( row, "" ).append( newImg );
-	}
-	else
-	{
-		addCell( row, "" );
-	}
-
-	if ( achievement[ "icon_gray" ] )
-	{
-		newImg = document.createElement( "img" );
-		newImg.src = achievement[ "icon_gray" ];
-		newImg.height = 64;
-		newImg.width = 64;
-		addCell( row, "" ).append( newImg );
-	}
-	else
-	{
-		addCell( row, "" );
-	}
-
-	var btnCell = destRow.insertCell( -1 );
-
-	var btn = document.createElement( "input" );
-	btn.type= "submit";
- 	btn.onclick = EditAchievementClosure( appid, achievement[ "stat_id" ], achievement[ "bit_id" ] );
-	btn.value = "Edit";
-	btnCell.appendChild( btn );
-
-	btnCell.appendChild( document.createElement( "br" ) );
-
-	var btn2 = document.createElement( "input" );
-	btn2.type = "submit";
- 	btn2.onclick = DeleteAchievementClosure( appid, achievement[ "stat_id" ], achievement[ "bit_id" ], achievement[ "api_name" ] );
-	btn2.value = "Delete";
-	btnCell.appendChild( btn2 );
-}
 
 
 //
@@ -1064,26 +658,6 @@ function NewStat( appid, stat )
 }
 
 
-//
-// server callback - here's a new achievement we need to add
-//
-// would be nice to commonify this with the SetItemsWorker code path
-//
-function NewAchievement( appid, achievement )
-{
-	var parentDiv = document.getElementById( "appAchievementDisplay" );
-	var sourceDiv = document.getElementById( "achievementTableSource" );
-	theTable = parentDiv.firstChild;
-
-	var newRow = theTable.tBodies[ 0 ].insertRow( -1 );
-	newRow.vAlign = "top";
-
-	newRow.id = "a" + achievement[ "stat_id" ] + "_" + achievement[ "bit_id" ];
-
-	SetAchievement( appid, newRow, achievement );
-}
-
-
 // utility/compatibility routine
 function ClearRow( theRow )
 {
@@ -1092,57 +666,6 @@ function ClearRow( theRow )
 	theRow.empty();
 }
 
-
-//
-// pokes a given achievement back into the achievements table - used
-// for "revert edited achievement" case.
-//
-function ReplaceAchievement( appid, achievement )
-{
-	var achievementRow = document.getElementById( "a" + achievement[ "stat_id" ] + "_" + achievement[ "bit_id" ] );
-	ReplaceWorker( appid, achievement, achievementRow, SetAchievement );
-}
-
-
-function AchievementEditLocalizeHelper( container, form, achievement, field, fallbackSuffix )
-{
-	var languages = g_rgLanguages;
-
-	for ( language in languages )
-	{
-		var subItem = $J( '<input>' );
-
-		if ( ( g_language == "all" && language in g_rgEditingLanguages ) )
-		{
-			// viewing all languages and this is a lang we're editing; add a prefix
-			var subPrefix = $J( '<span>' );
-			subPrefix.innerHTML = "[" + languages[ language ] + "] ";
-			$J( form ).append( subPrefix );
-			subItem.css( "width", "100%" );
-			subItem.attr( 'size', '30' );
-		}
-		else if ( language == g_language )
-		{
-			// this is the selected language; it's already an edit control, so we're done
-			subItem.css( "width", "100%" );
-			subItem.attr( 'size', '30' );
-		}
-		else
-		{
-			// not our language -> hidden form control
-			subItem.attr( 'type', 'hidden' );
-		}
-
-		subItem.attr( 'name', language );
-		data = LocalizedAchievementField( achievement, field, achievement.api_name + fallbackSuffix, language );
-		if ( data.bPresent || language == "token" )
-		{
-			subItem.val( data.string );
-		}
-
-		$J( form ).append( subItem );
-	}
-}
 
 //
 // Adds an option item to a select
@@ -1204,211 +727,6 @@ function StatsNavigateWarning()
 
 
 //
-// fills in a given row of the achievement table, in edit mode
-//
-function EditAchievement( appid, achievement )
-{
-	// TODO clone a <tr> from the static area of the template to ease the transition here;
-	// could set it up templatized (like we do the upload forms) or we could templatize the IDs
-	// then access it via $().
-	//
-	// this will, one hopes, be cleaner than all this DOM munging herein.
-	//
-	// Was the IE table model brokenness the reason we had to do all this in script? be sure
-	// to test this mechanism in IE before going very far with it.
-	var achievementRow = document.getElementById( "a" + achievement[ "stat_id" ] + "_" + achievement[ "bit_id" ] );
-
-	if ( typeof( achievementRow ) == "object" )
-	{
-		var id = "ach" + achievement[ 'stat_id' ] + "_" + achievement[ 'bit_id' ];
-		var row = achievementRow; // less typing
-		var item;
-		var newHash;
-
-		ClearRow( row );
-
-		row.className = "selected";
-
-		item = document.createElement( "input" );
-		item.id = id + "_apiname";
-		item.style.width = "100%";
-		item.size = 30;
-		item.value = achievement[ 'api_name' ];
-		item.onchange = DirtyRowClosure( row );
-		var nameCell = row.insertCell( -1 );
-		// ensure nameCell is extended
-		Element.extend( nameCell );
-		nameCell.appendChild( item );
-
-		// achievement progress
-		// insert some descriptive text and a select
-		nameCell.appendChild( document.createElement( 'br' ) );
-		textSpan = document.createElement( "span" );
-		textSpan.innerHTML = "Progress Stat" + ' ';
-		nameCell.appendChild( textSpan );
-
-		var progressSelect = document.createElement( "select" );
-		progressSelect.onchange = DirtyRowClosure( row );
-		progressSelect.id = id + "_progress";
-		var noProgressOption = document.createElement( "option" );
-		noProgressOption.text = "["+"Loading"+"]";
-		noProgressOption.value = "-1";
-		AddOptionToSelect( progressSelect, noProgressOption );
-		progressSelect.selectedIndex = 0;
-		nameCell.appendChild( progressSelect );
-
-		var minVal = 0;
-		var maxVal = 0;
-		if ( typeof achievement.progress === 'object' )
-		{
-			minVal = achievement.progress.min_val;
-			maxVal = achievement.progress.max_val;
-		}
-
-		var theInput;
-		nameCell.insert( new Element( 'br' ) );
-		nameCell.insert( { 'bottom' : "Min value:" + ' ' } );
-		theInput = new Element( 'input', { 'size' : '10', 'value' : minVal, 'id' : id + '_minval' } );
-		theInput.onchange = DirtyRowClosure( row );
-		nameCell.insert( theInput );
-		nameCell.insert( { 'bottom' : "Max:"+' ' } );
-		theInput = new Element( 'input', { 'size' : '10', 'value' : maxVal, 'id' : id + '_maxval' } );
-		nameCell.insert( theInput );
-
-		// fetch gameplay stats and feed them to a closure to jam them into the progress select
-		AppsAjaxRequest(
-				g_szBaseURL + '/apps/fetchstats/' + appid,
-				{},
-				function FetchProgressClosure( results )
-				{
-					var elt = $( progressSelect.id );
-					var statThisOne = null;
-					if ( typeof achievement.progress === 'object' )
-					{
-						// here we hardcode that we only support direct stat access;
-						// later when we do the expression-evaluator thing we'll redo this.
-						statThisOne = achievement.progress.value.operand1;
-					}
-
-					results.sort(
-						function( statLeft, statRight )
-							{
-								if ( statLeft.name < statRight.name )
-								{
-									return -1;
-								}
-								else if ( statLeft.name > statRight.name )
-								{
-									return 1;
-								}
-								else
-								{
-									return 0;
-								}
-							}
-						);
-
-					for ( i = 0; i < results.length; i++ )
-					{
-						option = document.createElement( "option" );
-						option.text = results[i]['name'];
-						option.value = results[i]['name'];
-
-						AddOptionToSelect( elt, option );
-
-						if ( results[i].name === statThisOne )
-						{
-							option.selected = true;
-						}
-					}
-
-					noProgressOption.text = "None";
-				},
-				'get'
-			);
-
-		// we use a form to contain each localizable field;
-		// this gives us a convenient json serialization path
-		// through prototype.
-		doubleCell = row.insertCell( -1 );
-
-		item = document.createElement( "form" );
-		item.onchange = DirtyRowClosure( row );
-		item.id = id + "_displayname";
-		doubleCell.appendChild( item );
-		AchievementEditLocalizeHelper( doubleCell, item, achievement, 'display_name', '_NAME' );
-
-		item = document.createElement( "form" );
-		item.onchange = DirtyRowClosure( row );
-		item.id = id + "_description";
-		doubleCell.appendChild( item );
-		AchievementEditLocalizeHelper( doubleCell, item, achievement, 'description', '_DESC' );
-
-		item = CreateStatPermissionSelect( id );
-		item.onchange = DirtyRowClosure( row );
-		item.selectedIndex = achievement[ "permission" ];
-		row.insertCell( -1 ).appendChild( item );
-
-		item = document.createElement( "input" );
-		item.onclick = DirtyRowClosure( row );
-		item.type = "checkbox";
-		item.id = id + "_hidden";
-		if ( achievement[ "hidden" ] != 0 )
-		{
-			item.checked = true;
-		}
-		row.insertCell( -1 ).appendChild( item );
-
-		var achievementID = "a" + achievement[ "stat_id" ] + "_" + achievement[ "bit_id" ];
-
-		// image upload forms
-		formText = $('stock_upload_form').innerHTML;
-		formText = formText.replace( /APPID/g, appid );
-		formText = formText.replace( /STATID/g, achievement[ 'stat_id' ] );
-		formText = formText.replace( /ACHIEVEMENTID/g, achievement[ 'bit_id' ] );
-		formText = formText.replace( /REQUEST_TYPE/g, "achievement" );
-		formText = formText.replace( /sxxxrc/g, "src" );
-		formText = formText.replace( /IMAGE_SOURCE/g, achievement[ "icon" ] );
-		formText = formText.replace( /IMAGE_ID/g, achievementID + "_icon" );
-		formText = formText.replace( /GRAY/g, false );
-
-		row.insertCell( -1 ).innerHTML = formText;
-
-		formText = $('stock_upload_form').innerHTML;
-		formText = formText.replace( /APPID/g, appid );
-		formText = formText.replace( /STATID/g, achievement[ 'stat_id' ] );
-		formText = formText.replace( /ACHIEVEMENTID/g, achievement[ 'bit_id' ] );
-		formText = formText.replace( /REQUEST_TYPE/g, "achievement_gray" );
-		formText = formText.replace( /sxxxrc/g, "src" );
-		formText = formText.replace( /IMAGE_SOURCE/g, achievement[ "icon_gray" ] );
-		formText = formText.replace( /IMAGE_ID/g, achievementID + "_icon_gray" );
-		formText = formText.replace( /GRAY/g, true );
-
-		row.insertCell( -1 ).innerHTML = formText;
-
-		var btnCell = row.insertCell( -1 );
-
-		var btn = document.createElement( "input" );
-		btn.type= "submit";
-		btn.onclick = RevertAchievementClosure( appid, achievement[ "stat_id" ], achievement[ "bit_id" ] );
-		btn.value = "Cancel";
-		btnCell.appendChild( btn );
-
-		btnCell.appendChild( document.createElement( "br" ) );
-
-		btn = document.createElement( "input" );
-		btn.type= "submit";
-		btn.onclick = SaveAchievementClosure( appid,
-								   achievement[ "stat_id" ],
-								   achievement[ "bit_id" ] );
-		btn.value = "Save";
-		btnCell.appendChild( btn );
-		return id;
-	}
-}
-
-
-//
 // this function handles the grunt work of poking a stat or
 // achievement into the document. It's just for doing the table grunt
 // work and iterating; the item-specific stuff is handled by function
@@ -1452,162 +770,6 @@ function SetItemsWorker( appid, items, parentDivID, sourceDivID, newTableID, fId
 
 		newRow.id = fIdMaker( theItem );
 		fSetter( appid, newRow, theItem );
-	}
-}
-
-
-//
-// sets up achievement table with given achievements
-//
-function SetAchievements( appid, achievements )
-{
-	SetItemsWorker( appid,
-				achievements,
-				"appAchievementDisplay",
-				"achievementTableSource",
-				"achievementTable",
-				function( theItem ) { return "a" + theItem[ "stat_id" ] + "_" + theItem[ "bit_id" ]; },
-				SetAchievement
-				);
-}
-
-
-//
-//sets up a bunch of divs with given achievements
-//
-function SetAchievementsDiv( appid, achievements )
-{
-	var parentDiv = $('appAchievementDisplay');
-	var theItem;
-	var index;
-	var items = achievements;
-	var elt;
-	var eltSub;
-	var eltRow;
-	var text;
-	var newImg;
-
-	parentDiv.update('');
-
-	// crack parameter and iterate achievements/stats
-	for ( index = 0; index < items.length; index++ )
-	{
-		theItem = items[ index ];
-
-		// make a new container "row" div for the whole item
-		eltRow = new Element( 'div' );
-		parentDiv.insert( eltRow );
-
-		var achievement = theItem;
-
-		// achievement specific:
-		// jam a bunch of floated-left divs in there to hold the item's fields
-		elt = new Element( 'div', { 'style' : 'float: left; width: 6em' } );
-		elt.update( achievement[ "stat_id" ] + "/" + achievement[ "bit_id" ] );
-		eltRow.insert( elt );
-
-		elt = new Element( 'div', { 'style' : 'float: left; width: 24em' } );
-		elt.update( achievement[ 'api_name' ] );
-		elt.insert( new Element( 'br' ) );
-		// Add the achievement progress stat line
-		if ( typeof achievement[ 'progress' ] === 'object' )
-		{
-			// currently only support direct stat value mapping
-			progressSpan = new Element( 'span' );
-			progressSpan.innerHTML = achievement.progress.value.operand1 + ' (' + achievement.progress.min_val + '-' + achievement.progress.max_val + ')';
-
-			elt.insert( progressSpan );
-		}
-		eltRow.insert( elt );
-
-
-		elt = new Element( 'div', { 'style' : 'float: left; width: 36em' } );
-		var rgLanguageDisplay = g_rgLanguages;
-		var bPrefix = false;
-		var languages;
-		if ( g_language == "all" )
-		{
-			languages = g_rgEditingLanguages;
-			bPrefix = true;
-		}
-		else
-		{
-			languages = {};
-			languages[ g_language ] = 1;
-		}
-
-		for ( language in languages )
-		{
-			eltSub = AchievementSpan( achievement, "display_name", achievement.api_name + '_NAME', language );
-			if ( bPrefix )
-			{
-				eltSub.insert( { 'top' : new Element( 'span' ).update( "[" + rgLanguageDisplay[ language ] + "] ") } );
-			}
-			elt.insert( eltSub );
-		}
-
-		// TODO Commonify description and display name
-		for ( language in languages )
-		{
-			eltSub = AchievementSpan( achievement, "description", achievement.api_name + '_DESC', language );
-			if ( bPrefix )
-			{
-				eltSub.insert( { 'top' : new Element( 'span' ).update( "[" + rgLanguageDisplay[ language ] + "] ") } );
-			}
-			elt.insert( eltSub );
-		}
-		eltRow.insert( elt );
-
-		elt = new Element( 'div', { 'style': 'float: left; width: 5em' } );
-		switch ( achievement[ "permission" ] )
-		{
-		case "1": elt.update( "GS" ); break;
-		case "2": elt.update( "Official GS" ); break;
-
-		case "0":
-		default:
-			elt.update( "Client" );
-		}
-		eltRow.insert( elt );
-
-		// give this element a minimum height, since it is often empty of content and
-		// would snap to zero height
-		elt = new Element( 'div', { 'style': 'float: left; width: 4em; height: 1em' } );
-		if ( achievement[ "hidden" ] != 0 )
-		{
-			elt.update( "<b>"+"Yes"+"</b>" );
-		}
-		eltRow.insert( elt );
-
-		newImg = new Element( 'img', { 'style': 'float: left' } );
-		newImg.src = achievement[ "icon" ];
-		newImg.height = 64;
-		newImg.width = 64;
-		eltRow.insert( newImg );
-
-		newImg = new Element( 'img' );
-		newImg.src = achievement[ "icon_gray" ];
-		newImg.height = 64;
-		newImg.width = 64;
-		eltRow.insert( newImg );
-//		var btnCell = destRow.insertCell( -1 );
-//
-//		var btn = document.createElement( "input" );
-//		btn.type= "submit";
-//	 	btn.onclick = EditAchievementClosure( appid, achievement[ "stat_id" ], achievement[ "bit_id" ] );
-//		btn.value = "Edit";
-//		btnCell.appendChild( btn );
-//
-//		btnCell.appendChild( document.createElement( "br" ) );
-//
-//		var btn2 = document.createElement( "input" );
-//		btn2.type = "submit";
-//	 	btn2.onclick = DeleteAchievementClosure( appid, achievement[ "stat_id" ], achievement[ "bit_id" ] );
-//		btn2.value = "Delete";
-//		btnCell.appendChild( btn2 );
-//
-		// all done with this row
-		eltRow.insert( new Element( 'div', { 'style' : 'clear: both' } ) );
 	}
 }
 
@@ -2211,23 +1373,6 @@ function AsyncNotificationsLocCallbackClosure( appid )
 	return theClosure;
 }
 
-function AchievementLocCallbackClosure( appid )
-{
-	theClosure = function( jsonResponse )
-		{
-			// the json is wrapped in a <pre> tag, so we must unwrap it.
-			var div = new Element("div");
-			div.innerHTML = jsonResponse;
-			var results = div.childElements()[0].innerHTML.evalJSON(true);
-
-			// poke in results
-			StandardCallback( results, 'loc_upload_response' );
-			return false;
-		};
-
-	return theClosure;
-}
-
 function RichPresenceLocCallbackClosure( appid )
 {
 	theClosure = function( jsonResponse )
@@ -2282,29 +1427,6 @@ function BroadcastGameDataCallbackClosure( appid )
 	return theClosure;
 }
 
-
-function AchievementImageUploadCallbackClosure( appid, statid, bitid, gray )
-{
-	theClosure = function( jsonResponse )
-		{
-			var response = jsonResponse.evalJSON(true);
-			StandardCallback( response, 'achievement_upload_response' );
-
-			AppsAjaxRequest( g_szBaseURL + "/apps/fetchachievement/" + appid + "/" + statid + "/" + bitid,
-				{},
-				function( results )
-				{
-					var val = gray ? "icon_gray" : "icon";
-					$( IDFromAchievement( statid, bitid) + "_" + val ).src = results[ val ];
-
-					fn = DirtyRowClosure( $( IDFromAchievement( statid, bitid ) ) );
-					fn();
-				}
-				);
-		};
-
-	return theClosure;
-}
 
 function SteamworksDRMCallback(appid, jsonResponse)
 {
@@ -2559,110 +1681,6 @@ function startChunkUploads( inputItem, progressItem, onFinish )
 
 
 //
-// sets up the language UI in the achievements page
-//
-// preselect English if available, or the first if not
-//
-function PopulateAchievementLanguages( appid, languages )
-{
-	langSelect = $('languageSelect');
-
-	// mutate languages global to include our loc tokens item
-	g_rgLanguages[ 'token' ] = 'Localization Token';
-
-	// select the english language if it is available; otherwise
-	// pick the first one in the list.
-	var victim = "english"
-	if ( !( "english" in languages ) )
-	{
-		victim = Object.keys(languages)[ 0 ];
-	}
-	g_language = victim;
-
-	var cLanguages = 0;
-	var i = 2;								// leave two holes - for "all" and "tokens"
-	for ( lang in languages )
-	{
-		// add language to language selector
-		langSelect.options[i] = new Option( g_rgLanguages[lang], lang);
-		langSelect.options[i].id = "opt" + lang;
-
-		if ( lang == victim )
-		{
-			langSelect.options[i].selected = true;
-		}
-
-		// add language to list of current editing languages
-		g_rgEditingLanguages[ lang ] = 1;
-		i++;
-		cLanguages++;
-	}
-
-	// this routine is also side effecting through the g_bLocalized global,
-	// which indicates whether the app supports more than one language (thus
-	// enabling a bunch of localization-related UI).
-	if ( cLanguages > 1 )
-	{
-		$( 'languageDiv' ).style.display = '';
-		g_bLocalized = true;
-	}
-
-}
-
-
-//
-// handler for selecting a language while editing achievements.
-// re-fetches achievements; when they display, they will pick up
-// the new language.
-//
-function LanguageSelect( appid )
-{
-	var langSelect = $('languageSelect');
-	g_language = langSelect.options[ langSelect.selectedIndex ].value;
-
-	// issue ajax request to fetch achievements,
-	// then when they come back, poke them into the document
-
-	$('appAchievementDisplay').innerHTML = "Loading achievements...";
-
-	AppsAjaxRequest( g_szBaseURL + "/apps/fetchachievements/" + appid,
-		{},
-		function( results )
-		{
-			SetAchievements( appid, results[ 'achievements' ] );
-		}, 'get'
-		);
-}
-
-
-//
-// startup function for the achievements page
-//
-function LoadAchievements( appid )
-{
-	// issue ajax request to fetch achievements,
-	// then when they come back, poke them into the document
-
-	$('appAchievementDisplay').innerHTML = "Loading achievements...";
-
-	AppsAjaxRequest( g_szBaseURL + "/apps/fetchachievements/" + appid,
-		{},
-		function( results )
-		{
-			// this operation needs to happen before the other AJAX
-			// requests are initiated, so the languages dropdown
-			// and current language are populated prior to examining
-			// or populating the achievements.
-			PopulateAchievementLanguages( appid, results[ 'languages' ] );
-
- 			LoadAchievementCounts( appid );
-			SetAchievements( appid, results[ 'achievements' ] );
- 		}, 'get'
-		);
-}
-
-
-//
 // startup function for the stats page
 //
 function LoadStats( appid )
@@ -2913,19 +1931,6 @@ function DeleteAvatarClosure( appid, screenid )
 }
 
 
-// handler for saving app language list
-//
-function SetAppLanguages( appid )
-{
-	AppsAjaxRequest( g_szBaseURL + '/apps/savelanguages/' + appid,
-		$('languages_form').serialize(true),
-		function( results )
-		{
-			StandardCallback( results, 'locOutput' );
-		}
-		);
-}
-
 function SetAppDrmGuid( appid )
 {
 	AppsAjaxRequest( g_szBaseURL + '/apps/setdrmguid/' + appid,
@@ -2996,86 +2001,6 @@ function AddModuleForChallengeGroup( appid, groupid, modulename )
 						RefreshCallback(results) ;
 					}
 					) ;
-}
-
-//
-// achievements tab helper; fills in achievement
-// localization counts
-//
-function LoadAchievementCounts( appid )
-{
-	AppsAjaxRequest( g_szBaseURL + '/apps/getachievementcounts/' + appid,
-		{},
-		function( results )
-		{
-			var cAchievements = results[ 'total' ];
-			$('achievementCount').innerHTML = cAchievements;
-			delete results[ 'total' ];
-			var unlocalized = results[ 'unlocalized' ];
-			delete results[ 'unlocalized' ];
-
-			if ( 0 && ( unlocalized[ 'descs' ] != 0 || unlocalized[ 'names' ] != 0 ) )
-			{
-				var elt = $( 'missing_unlocalized' );
-				var text = '';
-				if ( unlocalized[ 'names' ] )
-				{
-					text += "%1$s names are completely unlocalized.".replace(/%1\$s/, unlocalized[ 'names' ].toString() );
-				}
-				if ( unlocalized[ 'descs' ] )
-				{
-					text += "%1$s descriptions are completely unlocalized.".replace(/%1\$s/, unlocalized[ 'descs' ].toString() );
-				}
-				elt.innerHTML = text;
-				elt.style.display = '';
-				elt.className = "outputNeutral";
-
-			}
-
-			for ( lang in results )
-			{
-				var langName = g_rgLanguages[ lang ];
-				if ( lang == 'token' )
-					langName = 'localization tokens';
-				var elt = $( 'missing_' + lang );
-
-				if ( elt != null )
-				{
-					var text = '';
-					var cNames = results[ lang ][ 'names' ];
-					var cDescs = results[ lang ][ 'descs' ];
-
-					if ( lang == "english" )
-					{
-						cNames += unlocalized[ 'names' ];
-						cDescs += unlocalized[ 'descs' ];
-					}
-
-					if ( cNames < cAchievements )
-					{
-						text = "Missing %1$s names in %2$s.".replace(/%1\$s/, ( cAchievements - cNames ) ).replace(/%2\$s/, langName ) + " ";
-					}
-					if ( cDescs < cAchievements )
-					{
-						text = text + "Missing %1$s descriptions in %2$s.".replace(/%1\$s/, ( cAchievements - cDescs ) ).replace(/%2\$s/, langName )  + " ";
-					}
-
-					if ( text != '' )
-					{
-						elt.style.display = '';
-						elt.innerHTML = text;
-						elt.className = "outputNeutral";
-					}
-					else if ( lang != 'token' )
-					{
-						elt.style.display = '';
-						elt.innerHTML = "%1$s is fully localized.".replace(/%1\$s/, g_rgLanguages[ lang ]);
-						elt.className = "outputSuccess";
-					}
-				}
-			}
-		}, 'get'
-		);
 }
 
 //

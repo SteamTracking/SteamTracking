@@ -4193,7 +4193,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "直方图数据基于选择加入提供帧率数据的顾客在 %1$s 上为此游戏所提交的帧率报告而得出。",
     "GamePerformanceStats_FrameRateHistogram_Title": "帧率分布",
     "GamePerformanceStats_Framerate": "帧率",
-    "GamePerformanceStats_SessionLabel": "会话数量占比",
+    "GamePerformanceStats_SessionLabel": "样本百分比",
     "GamePerformanceStats_Chart_NoData": "收集到足够数据后就会生成图表",
     "NewToolTitleSuffix_Beta": "测试版",
     "DynamicLinkType_WorkshopItem": "一个 %1$s 的创意工坊项目",
@@ -4220,6 +4220,10 @@
     "GamePerformanceStats_StillGatheringData": "Steam 仍在收集 %1$s 在 %2$s 上的帧率数据",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam 仍在收集此游戏在 %1$s 上的帧率数据",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam 仍在收集此游戏的帧率数据",
-    "GamePerformanceStats_FrameRateDistribution": "此帧率图表是基于已选择加入的顾客在 %2$s 上玩 %1$s 时的匿名游戏数据而得出",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "此帧率图表是基于已选择加入的顾客在 %1$s 上玩此游戏时的匿名游戏数据而得出"
+    "GamePerformanceStats_FrameRateDistribution": "此图表显示了选择加入分享匿名数据的顾客在 %2$s 上玩 %1$s 时的帧率样本。每个柱状图都显示了该帧率下的样本百分比。",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "此图表显示了选择加入分享匿名数据的顾客在 %2$s 上玩此游戏时的帧率样本。每个柱状图都显示了该帧率下的样本百分比。",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "此游戏需要使用游戏内设置手动启用控制器支持",
+    "GamePerformanceStats_MoreDetailsTitle": "更多详情",
+    "GamePerformanceStats_MoreDetails_Filtering": "只包含了在 %1$s 的 %2$s FPS 默认帧率限制下收集的数据。闲置时间和无效样本已被筛选排除。每次游戏会话会收集多个样本。",
+    "GamePerformanceStats_MoreDetails_VSync": "图表中的落差（如 %1$s 和 %2$s FPS）可能是垂直同步造成的，这个功能会使帧交付与显示器的刷新率同步，以便避免画面撕裂。这可能会导致样本集中在 %1$s 和 %2$s FPS，即便游戏的平均帧率介于两者之间也是如此。这是垂直同步的预期行为，虽然可能会影响帧节奏，但不一定会导致明显的卡顿。"
 }

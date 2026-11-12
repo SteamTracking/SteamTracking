@@ -13,9 +13,9 @@
 	min-width:936px;
 	margin:0;
 	padding:0;
-	text-align:left;
-	padding-left:17px;
-	padding-right:5px;
+	text-align:start;
+	padding-inline-start:17px;
+	padding-inline-end:5px;
 }
 
 #mainContents h2 {
@@ -54,9 +54,9 @@
     word-wrap: break-word;
     width:936px;
     min-width:936px;
-    text-align:left;
-    padding-left:17px;
-    padding-right:5px;
+    text-align:start;
+    padding-inline-start:17px;
+    padding-inline-end:5px;
 }
 
 .headerblue {
@@ -97,7 +97,7 @@
 #OnlineStatus{
 	margin:0;
 	padding:0;
-	padding-left:0px;
+	padding-inline-start:0px;
 	font-size:11px;
 	font-weight:bold;
 	height: 77px;
@@ -125,28 +125,28 @@
 }
 
 #profileBlock,#primaryGroupBlock {
-	float: left;
+	float: inline-start;
 	width:647px;
 	margin:0;
 	padding:0;
-	padding-right:0px;
+	padding-inline-end:0px;
 }
 
 #currentlyPlayingIcon {
-	float:left;
+	float:inline-start;
 	width:40px;
 	height:40px;
 	margin:0;
 	padding:0;
-	padding-right:6px;
+	padding-inline-end:6px;
 }
 
 #profileAvatar,#primaryGroupAvatar {
-	float:left;
+	float:inline-start;
 	width:192px;
 	margin:0;
 	padding:0;
-	padding-right:12px;
+	padding-inline-end:12px;
 	padding-bottom:8px;
 }
 
@@ -189,27 +189,28 @@
 	width:367px;
 	margin:0;
 	padding:0;
-	padding-left:152px;
+	padding-inline-start:152px;
 	padding-bottom:8px;
-	padding-right:22px;
+	padding-inline-end:22px;
 }
 
 .membersBlockMember {
 	width:40px;
 	height:40px;
-	float:left;
+	float:inline-start;
 	margin:0;
 	padding:0;
 	padding-top:6px;
 	padding-bottom:6px;
-	padding-right:12px;
+	padding-inline-end:12px;
 }
 
 p.sectionText {
 	color: #939393;
 	font-size: 11px;
 	padding:0;
-	margin: 12px 0 12px 8px;
+	margin-block: 12px;
+	margin-inline: 8px 0;
 	word-wrap: break-word;
 }
 
@@ -228,14 +229,15 @@ p.sectionText {
 	color:#000000;
 	width:246px;
 	height:18px;
-	padding:5px 0px 0px 8px;
+	padding-block: 5px 0px;
+	padding-inline: 8px 0px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/rightColHeadRibbon.gif');
 }
 
 .rightSectionHolder {
 	width:249px;
-	border-left:solid #4a4a4a 1px;
-	padding-left:4px;
+	border-inline-start:solid #4a4a4a 1px;
+	padding-inline-start:4px;
 	padding-top:4px;
 }
 
@@ -264,7 +266,7 @@ p.sectionText {
 }
 .rightStatsBlock {
 	width:253px;
-	border-left:solid #4a4a4a 1px;
+	border-inline-start:solid #4a4a4a 1px;
 	margin:0;
 	padding:4px 0px 4px 0px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/rightStatsBlockBG.gif');
@@ -300,16 +302,16 @@ p.sectionText {
 	width:245px;
 	margin:0;
 	padding:0;
-	padding-left:9px;
+	padding-inline-start:9px;
 }
 
 #groupTypeIcon {
-	float:left;
+	float:inline-start;
 	width:16px;
 	height:16px;
 	margin:0;
 	padding:0;
-	padding-right:4px;
+	padding-inline-end:4px;
 }
 
 #groupType p {
@@ -322,27 +324,27 @@ p.sectionText {
 }
 
 .groupBlock {
-	padding-left:120px;
+	padding-inline-start:120px;
 	height: 72px;
 	margin-bottom: 12px;
 }
 
 .groupBlockIcon {
-	float:left;
+	float:inline-start;
 	width:40px;
 	height:40px;
 	margin:0;
 	padding:0;
-	margin-right:8px;
+	margin-inline-end:8px;
 }
 
 .groupBlockMedium {
-	float:left;
+	float:inline-start;
 	width:72px;
 	height:72px;
 	margin:0;
 	padding:0;
-	margin-right:8px;
+	margin-inline-end:8px;
 }
 
 .groupSmallText {
@@ -369,9 +371,9 @@ p.sectionText {
 	border:none;
 	padding:0;
 	margin:0;
-	padding-left:10px;
-	padding-right:6px;
-	float:left;
+	padding-inline-start:10px;
+	padding-inline-end:6px;
+	float:inline-start;
 }
 
 .actionItemNoIcon {
@@ -379,7 +381,7 @@ p.sectionText {
 	height:22px;
 	margin:0;
 	padding:0;
-	padding-left:10px;
+	padding-inline-start:10px;
 	font-size: 11px;
 	color: #62a7e3;
 }
@@ -390,7 +392,8 @@ p.sectionText {
 
 .profileActionRule {
 	color: #595959;
-	margin: 4px 12px 6px 10px;
+	margin-block: 4px 6px;
+	margin-inline: 10px 12px;
 	border-top: 1px solid #595959;
 }
 
@@ -401,14 +404,14 @@ p.sectionText {
 	padding:12px;
 	z-index:1000;
 	background-color:#3a3a3a;
-	text-align:left;
+	text-align:start;
 }
 
 #limitedUserModalClose {
 	position:absolute;
 	width:11px;
 	height:11px;
-	right:12px;
+	inset-inline-end:12px;
 	top:12px;
 }
 
@@ -432,18 +435,18 @@ p.sectionText {
 	color: #939393;
 	font-weight:normal;
 	line-height:12px;
-	clear:left;
+	clear:inline-start;
 }
 
 .statsItemName {
 	padding:0;
 	margin:0;
-	float:left;
+	float:inline-start;
 	font-size: 11px;
 	color: #545454;
 	line-height: 12px;
 	width:95px;
-	padding-left:8px;
+	padding-inline-start:8px;
 	font-weight:normal;
 }
 
@@ -455,7 +458,7 @@ p.sectionText {
 	background-color:#363636;
 	margin-top:4px;
 	margin-bottom:4px;
-	clear:left;
+	clear:inline-start;
 }
 
 .mostPlayedBlock {
@@ -463,20 +466,20 @@ p.sectionText {
 	height:40px;
 	margin:0;
 	padding:0;
-	padding-left:8px;
+	padding-inline-start:8px;
 	font-size: 11px;
 	color: #939393;
 	font-weight:normal;
-	padding-right: 4px;
+	padding-inline-end: 4px;
 	white-space: nowrap;
 }
 
 .mostPlayedBlockIcon {
-	float:left;
+	float:inline-start;
 	width:40px;
 	margin:0;
 	padding:0;
-	margin-right:6px;
+	margin-inline-end:6px;
 }
 
 .mostPlayedSmallText {
@@ -498,7 +501,7 @@ p.rightText {
 	background-color:#202020;
 	border:solid #6e6e6e 1px;
 	font-size:15px;
-	text-align:left;
+	text-align:start;
 	box-shadow:0 0 4px #000;
 }
 
@@ -521,7 +524,7 @@ p.rightText {
 .indentText {
 	margin:0;
 	padding:0;
-	padding-left:152px;
+	padding-inline-start:152px;
 	padding-bottom:5px;
 }
 
@@ -542,7 +545,7 @@ p.rightText {
 }
 
 #moreGamesLink	{
-	padding-left:10px;
+	padding-inline-start:10px;
 	padding-top:0px;
 }
 
@@ -553,7 +556,7 @@ p.rightText {
 }
 
 #wishlistLink	{
-	padding-left:10px;
+	padding-inline-start:10px;
 	padding-top:0px;
 }
 
@@ -565,7 +568,7 @@ p.rightText {
 
 
 #lessGamesLink	{
-	padding-left:10px;
+	padding-inline-start:10px;
 	padding-top:3px;
 	display:none;
 }
@@ -578,11 +581,11 @@ p.rightText {
 	padding:3px;
 	font-size:11px;
 	line-height:18px;
-	text-align:left;
+	text-align:start;
 }
 
 .ignoreInfo {
-	padding-left:10px;
+	padding-inline-start:10px;
 	color:#f26c4f;
 	font-size:11px;
 	font-weight:bold;
@@ -603,12 +606,12 @@ p.rightText {
 }
 
 .groupBlockOGGLogo {
-	float:left;
+	float:inline-start;
 	width:192px;
 	height:78px;
 	margin:0;
 	padding:0;
-	margin-right:11px;
+	margin-inline-end:11px;
 	padding-bottom:10px;
 }
 
@@ -624,7 +627,7 @@ p.rightText {
 }
 
 .groupBlockOGG {
-	clear:left;
+	clear:inline-start;
 	padding-bottom:6px;
 }
 
@@ -634,13 +637,13 @@ p.rightText {
 
 .commentBlock {
 	width:669px;
-	clear:left;
+	clear:inline-start;
 }
 
 .commentContentBlock {
 	width:467px;
 	padding-bottom:15px;
-	float:left;
+	float:inline-start;
 }
 
 .commentByline {
@@ -651,7 +654,7 @@ p.rightText {
 
 .commentContent {
 	width:459px;
-	padding-right: 8px;
+	padding-inline-end: 8px;
 	color:#939393;
 	font-size:11px;
 	word-wrap: break-word;
@@ -662,17 +665,17 @@ p.rightText {
 }
 
 .commentAuthorAvatar {
-	float:left;
+	float:inline-start;
 	width:40px;
-	margin-right:10px;
+	margin-inline-end:10px;
 }
 
 .commentBlockControl {
-	float:left;
+	float:inline-start;
 	width:142px;
 	padding-top:10px;
-	padding-right:10px;
-	text-align:right;
+	padding-inline-end:10px;
+	text-align:end;
 	visibility: hidden;
 }
 
@@ -682,7 +685,7 @@ p.rightText {
 
 
 .commentNotes {
-	padding-left:202px;
+	padding-inline-start:202px;
 	color:#959595;
 	font-size:11px;
 	width: 467px;
@@ -708,7 +711,7 @@ p.rightText {
 	width: 230px;
 	height: 172px;
 	margin-bottom: 8px;
-	margin-left: 6px;
+	margin-inline-start: 6px;
 	margin-top: 4px;
 }
 
@@ -721,7 +724,7 @@ p.rightText {
 
 #profileScreenshotSlideshow .slideshowSlideItem {
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 0px;
 }
 
@@ -732,7 +735,7 @@ p.rightText {
 
 
 .recommendationRow {
-	padding-left: 208px;
+	padding-inline-start: 208px;
 	min-height: 77px;
 	margin-bottom: 32px;
 	position: relative;
@@ -776,7 +779,7 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 .profileRecommendation
 {
 	position: relative;
-	padding-left: 202px;
+	padding-inline-start: 202px;
 	min-height: 78px;
 	margin-bottom: 16px;
 }
@@ -789,7 +792,7 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 .profileRecommendation .profileRecommendationLogo
 {
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 0px;
 	width: 192px;
 	height: 78px;
@@ -834,11 +837,12 @@ p.profileRecommendedInstructions {
 
 
 .pullup_item {
-	float:left;
+	float:inline-start;
 	display: block;
 	background-color:#1a1a1a;
-	padding:3px 8px 3px 0px;
-	margin-right:6px;
+	padding-block: 3px;
+	padding-inline: 0px 8px;
+	margin-inline-end:6px;
 	cursor: pointer;
 }
 
@@ -853,8 +857,9 @@ a.pullup_item:hover {
 }
 
 .menu_ico {
-	float:left;
-	padding:0px 7px 0px 6px;
+	float:inline-start;
+	padding-block: 0px;
+	padding-inline: 6px 7px;
 }
 .namehistory_item {
     padding: 5px 12px;
@@ -880,7 +885,7 @@ a.popup_menu_item:hover h4 {
 	font-family:arial;
 	color:#dbdbe1;
 	top:5px;
-	left:40px
+	inset-inline-start:40px
 }
 
 .smallBannerText:hover {
@@ -906,7 +911,8 @@ a.popup_menu_item:hover h4 {
 	border: 1px;
 	border-style: solid none solid none;
 	border-color: #2e2e2e #000 #4b4b4b #000;
-	margin: 3px 0 8px 1px;
+	margin-block: 3px 8px;
+	margin-inline: 1px 0;
 }
 
 #NamePopup {
@@ -914,7 +920,7 @@ a.popup_menu_item:hover h4 {
 	padding:7px;
 	background-color:#202020;
 	border:solid #6e6e6e 1px;
-	text-align:left;
+	text-align:start;
 	box-shadow:0 0 4px #000;
 	z-index:1;
 	padding:7px 12px 7px 12px;
@@ -924,11 +930,12 @@ a.popup_menu_item:hover h4 {
 
 #NamePopupAliases p {
 	margin:0px;
-	padding:4px 5px 0px 13px;
+	padding-block: 4px 0px;
+	padding-inline: 13px 5px;
 }
 
 #NotificationArea {
-	border-left: solid #4A4A4A 1px;
+	border-inline-start: solid #4A4A4A 1px;
 	color:#000;
 	box-shadow:inset 0 0 4px #000;
 	-webkit-box-shadow:inset 0 0 4px #000;
@@ -993,7 +1000,8 @@ a.popup_menu_item:hover h4 {
 .joinGameButton {
 	width:234px;
 	height:40px;
-	padding:4px 0 4px 4px;
+	padding-block: 4px;
+	padding-inline: 4px 0;
 	background-color:#2d2d2c;
 	font-size:11px;
 	line-height:13px;
@@ -1035,7 +1043,7 @@ a.popup_menu_item:hover h4 {
 	padding:12px;
 	z-index:1000;
 	background-color:#3a3a3a;
-	text-align:left;
+	text-align:start;
 	border-radius: 3px;
 }
 
@@ -1043,13 +1051,14 @@ a.popup_menu_item:hover h4 {
 	position:absolute;
 	width:11px;
 	height:11px;
-	right:12px;
+	inset-inline-end:12px;
 	top:12px;
 }
 
 #NicknameModal .name {
 	display: inline-block;
-	padding: 0 0 0 5px;
+	padding-block: 0;
+	padding-inline: 5px 0;
 	vertical-align: 70%;
 	font-size: 16px;
 	font-weight: bold;
@@ -1074,8 +1083,8 @@ a.popup_menu_item:hover h4 {
 
 #NicknameModal .button {
 	display: block;
-	float: right;
-	margin-left: 10px;
+	float: inline-end;
+	margin-inline-start: 10px;
 	color: #fff;
 	padding: 3px 8px 3px 8px;
 	border: 1px solid #706d69;
@@ -1130,21 +1139,21 @@ a.popup_menu_item:hover h4 {
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
-	text-align: left;
+	text-align: start;
 }
 #BG_bottom {
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
-	text-align:left;
+	text-align:start;
 }
 /* subpages use the same "#mainContents" id, so override it here based on the use of BG_bottom */
 #BG_bottom #mainContents {
 	width:936px;
 	margin:0;
 	padding:0;
-	text-align:left;
-	padding-left:17px;
+	text-align:start;
+	padding-inline-start:17px;
 	padding-top:10px;
 	background: none;
 }
@@ -1155,7 +1164,7 @@ a.popup_menu_item:hover h4 {
 	padding-top:21px;
 	font-size: 26px;
 	color: #898989;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 #BG_top h1 {
 	font-weight:normal;
@@ -1165,7 +1174,7 @@ a.popup_menu_item:hover h4 {
 	padding:0;
 	padding-top:0px;
 	padding-bottom:5px;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 
 .profile_awards {
@@ -1173,8 +1182,8 @@ a.popup_menu_item:hover h4 {
 }
 
 .profile_awards .profile_award {
-	float: left;
-	margin-right: 4px;
+	float: inline-start;
+	margin-inline-end: 4px;
 	margin-bottom: 4px;
 }
 
@@ -1188,8 +1197,8 @@ a.popup_menu_item:hover h4 {
 }
 
 .profile_badges .profile_badge {
-	float: left;
-	margin-right: 4px;
+	float: inline-start;
+	margin-inline-end: 4px;
 	margin-bottom: 4px;
 }
 
@@ -1211,7 +1220,8 @@ a.popup_menu_item:hover h4 {
 	border: 1px solid #454545;
 	border-radius: 3px;
 	height: 80px;
-	padding: 8px 11px 8px 88px;
+	padding-block: 8px;
+	padding-inline: 88px 11px;
 
 	z-index: 2;
 }
@@ -1223,7 +1233,7 @@ a.popup_menu_item:hover h4 {
 
 .badge_logo {
 	position: absolute;
-	left: 8px;
+	inset-inline-start: 8px;
 	top: 8px;
 	height: 80px;
 	width: 80px;
@@ -1232,7 +1242,7 @@ a.popup_menu_item:hover h4 {
 }
 .badge_content {
 	padding-top: 20px;
-	padding-left: 14px;
+	padding-inline-start: 14px;
 }
 .badge_name {
 	color: #e1e1e1;
@@ -1243,13 +1253,13 @@ a.popup_menu_item:hover h4 {
 }
 
 .badge_xp_value {
-	float: right;
+	float: inline-end;
 }
 
 .badge_quest_separator {
 	position: absolute;
 	top: -4px;
-	left: -1px;
+	inset-inline-start: -1px;
 	background-image: url('https://community.fastly.steamstatic.com/public/images/skin_1/badge_quest_transition.png' );
 	width: 851px;
 	height: 19px;
@@ -1257,17 +1267,18 @@ a.popup_menu_item:hover h4 {
 .badge_quests {
 	position: relative;
 	z-index: 1;
-	padding: 18px 0px 18px 44px;
-	border-left: 1px solid #454545;
+	padding-block: 18px;
+	padding-inline: 44px 0px;
+	border-inline-start: 1px solid #454545;
 	border-bottom: 1px solid #454545;
-	border-right: 1px solid #454545;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
+	border-inline-end: 1px solid #454545;
+	border-end-start-radius: 3px;
+	border-end-end-radius: 3px;
 }
 .badge_quests .quest {
 	width: 388px;
 	height: 48px;
-	float: left;
+	float: inline-start;
 	margin-bottom: 10px;
 }
 .badge_quests_title {
@@ -1276,20 +1287,20 @@ a.popup_menu_item:hover h4 {
 	font-weight: bold;
 	margin-bottom: 2px;
 	margin-top: 2px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 .badge_quests_desc {
 	color: #888888;
 	font-size: 10px;
 	font-weight: normal;
-	padding-right: 12px;
+	padding-inline-end: 12px;
 }
 .badge_quests .quest .quest_icon {
 	width: 48px;
 	height: 48px;
 	vertical-align: middle;
-	margin-right: 8px;
-	float: left;
+	margin-inline-end: 8px;
+	float: inline-start;
 }
 
 .migrated_profile_page_old .rightSectionHolder .friendBlock, .migrated_profile_page .rightSectionHolder .friendBlock

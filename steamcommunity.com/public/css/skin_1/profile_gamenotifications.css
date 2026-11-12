@@ -12,7 +12,7 @@
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
-	text-align: left;
+	text-align: start;
 }
 
 #gamenotifications_maincontents {
@@ -20,8 +20,8 @@
 	min-width:936px;
 	margin:0;
 	padding:0;
-	text-align:left;
-	padding-left:12px;
+	text-align:start;
+	padding-inline-start:12px;
 	padding-top:21px;
 }
 #gamenotifications_maincontents h2 {
@@ -31,7 +31,7 @@
 	padding:0;
 	font-size: 26px;
 	color: #898989;
-	padding-left:5px;
+	padding-inline-start:5px;
 }
 #gamenotifications_maincontents h1 {
 	font-weight:normal;
@@ -40,7 +40,7 @@
 	margin:0;
 	padding:0;
 	padding-bottom:13px;
-	padding-left:5px;
+	padding-inline-start:5px;
 }
 
 .gamenotifications_shadow_section {
@@ -65,13 +65,13 @@
 	/* 940 x 75 */
 	width: 881px;
 	height: 75px;
-	padding-left: 65px;
+	padding-inline-start: 65px;
 
 	margin-bottom: 15px;
 }
 
 .gamenotifications_header_notificationcount {
-	float: left;
+	float: inline-start;
 	color: white;
 	height: 51px;
 	line-height: 51px;
@@ -80,7 +80,7 @@
 	font-weight: bold;
 	padding-top: 15px;
 
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 
 .gamenotifications_header_content {
@@ -110,9 +110,13 @@
 	background-position: 13px 21px;
 	width: 249px;
 	height: 65px;
-	padding-left: 41px;
+	padding-inline-start: 41px;
 	padding-top: 20px;
-	float: right;
+	float: inline-end;
+}
+
+#gamenotifications_right_content:dir(rtl) {
+	background-position: right 13px top 21px;
 }
 
 .gamenotifications_right_title {
@@ -144,9 +148,9 @@
 }
 
 .gamenotifications_app_image {
-	margin-left: 10px;
-	margin-right: 20px;
-	float: left;
+	margin-inline-start: 10px;
+	margin-inline-end: 20px;
+	float: inline-start;
 }
 
 .gamenotifications_app_info {
@@ -178,7 +182,7 @@
 }
 
 .gamenotifications_launch_game_text {
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 
 .gamenotifications_app_separator {
@@ -198,7 +202,7 @@
 	background: rgba(15,15,14,.36);
 	box-shadow: 1px 1px 0 0 #2f2f30;
 	padding-top: 10px;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	padding-bottom: 10px;
 }
 
@@ -227,8 +231,8 @@ gamenotifications_app_session_message {
 
 .gamenotifications_app_session_controls {
 	clear: both;
-	float: right;
-	margin-right: 6px;
+	float: inline-end;
+	margin-inline-end: 6px;
 }
 
 .gamenotifications_show_sessions {
@@ -239,9 +243,13 @@ gamenotifications_app_session_message {
 	font-size: 11px;
 	color: white;
 	padding-top: 5px;
-	padding-left: 25px;
+	padding-inline-start: 25px;
 	padding-bottom: 5px;
 	cursor: pointer;
+}
+
+.gamenotifications_show_sessions:dir(rtl) {
+	background-position: right 10px top 7px;
 }
 
 .gamenotifications_hide_sessions {
@@ -252,13 +260,17 @@ gamenotifications_app_session_message {
 	font-size: 11px;
 	color: white;
 	padding-top: 5px;
-	padding-left: 25px;
+	padding-inline-start: 25px;
 	padding-bottom: 5px;
 	cursor: pointer;
 }
 
+.gamenotifications_hide_sessions:dir(rtl) {
+	background-position: right 10px top 7px;
+}
+
 .gamenotifications_no_notifications {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	font-size: 12px;
 	font-family: 'MotivaSans ExtraLight', Arial, Tahoma;
 	color: white;

@@ -5,7 +5,7 @@ body {
 	background-image: url( https://community.fastly.steamstatic.com/public/images/economy/noheader_content.png );
 	background-repeat: repeat-x;
 	background-color: #000000;
-	text-align: left;
+	text-align: start;
 }
 
 body.headerless_page {
@@ -25,7 +25,7 @@ body.headerless_page {
 }
 
 #headerlogo {
-	float: right;
+	float: inline-end;
 }
 
 #mainContent {
@@ -60,12 +60,12 @@ body.headerless_page {
 
 .black_square_btn .cap.left {
 	background-position: left top;
-	left: 0px;
+	inset-inline-start: 0px;
 }
 
 .black_square_btn .cap.right {
 	background-position: right top;
-	right: 0px;
+	inset-inline-end: 0px;
 }
 
 #error_page_bg {
@@ -105,7 +105,7 @@ body.headerless_page {
 }
 
 .popup_page.buttons {
-	text-align: right;
+	text-align: end;
 	margin-top: 12px;
 	margin-bottom: 48px;
 }

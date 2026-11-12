@@ -3,266 +3,284 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./rootlogin.js",
-      "./mobx.esm.js",
-      "./dialogs.js",
-      "./src.js",
-      "./react-router.js",
-      "../../../css/applications/appmgmt/dialogs.css",
-      "./logindialog.js",
-      "./cookies.client.js",
-      "./button.js",
-      "./flex.js",
-      "./formfactor.js",
-      "./useclienthints.js",
-      "./focuselement.js",
-      "./layout.js",
-      "../../../css/applications/appmgmt/layout.css",
-      "./variantdefaults.js",
-      "../../../css/applications/appmgmt/variantdefaults.css",
-      "../../../css/applications/appmgmt/flex.css",
-      "./linkbase.js",
-      "./storenaveventcontext.js",
-      "../../../css/applications/appmgmt/button.css",
-      "./axios.js",
-      "./throbber.js",
-      "../../../css/applications/appmgmt/throbber.css",
-      "./base64-js.js",
-      "./browserapi.js",
-      "../../../css/applications/appmgmt/logindialog.css",
-      "./modals.js",
-      "./steamml_routing.js",
-      "./react-router-dom.js",
-      "./formatnumber.js",
-      "./getpreferredlocales.js",
-      "../../../css/applications/appmgmt/steamml_routing.css",
-      "./steamdeckcompatibilitydetails.js",
-      "./deckverified.js",
-      "./storebrowsequerycontext.js",
-      "./servicetransportprovider.js",
-      "./utils.js",
-      "./useQuery.js",
-      "./dataloader.js",
-      "./axiosutils.js",
-      "./historyutils.js",
-      "./stringutils.js",
-      "../../../css/applications/appmgmt/deckverified.css",
-      "./steamdeckcompatibilitydetails_admin.js",
-      "./pricing_routing.js",
-      "./pricingguidelineobject.js",
-      "./reactqueryroot.js",
-      "./mutation.js",
-      "./currencyutils.js",
-      "./tabulatorutils.js",
-      "./text.js",
-      "../../../css/applications/appmgmt/text.css",
-      "./render.js",
-      "../../../css/applications/appmgmt/tabulatorutils.css",
-      "./eventdevfeaturestore.js",
-      "./ajaxhooks.js",
-      "./eventtime.js",
-      "./debugglobal.js",
-      "./playerstore.js",
-      "./usedataloader.client.js",
-      "./steamid.js",
-      "./personautils.js",
-      "./steammessages_player_pb.js",
-      "./appinfostore.js",
-      "./appinfo.js",
-      "./steammessages_community_pb.js",
-      "./pricinggridcell.js",
-      "./useMutation.js",
-      "./simplesuccesserror.js",
-      "./partnereventdialog.module.js",
-      "../../../css/applications/appmgmt/partnereventdialog.css",
-      "./localization3.js",
-      "../../../css/applications/appmgmt/pricinggridcell.css",
-      "../../../css/applications/appmgmt/shared_dialog.css",
-      "./configdatadiag.js",
-      "./unknownroute.js",
-      "./importexport.js",
-      "./storebrowsesetup.js",
-      "./storeitemcache.js",
-      "./storeitem.js",
-      "./shared_common.module.js",
-      "../../../css/applications/appmgmt/shared_common.css",
-      "./fancytable.js",
-      "./esm.js",
-      "../../../css/applications/appmgmt/fancytable.css",
-      "./profilestore.js",
-      "./timeutils.js",
-      "./moment-timezone.js",
-      "../../../css/applications/appmgmt/profilestore.css",
-      "./discountgridheaders.module.js",
-      "../../../css/applications/appmgmt/discountgridheaders.css",
-      "./saveprices.js",
-      "../../../css/applications/appmgmt/saveprices.css",
-      "../../../css/applications/appmgmt/pricing_routing.css",
-      "./buildpatchnotes.js",
-      "./saletags.js",
-      "./steammessages_store_pb.js",
-      "./steammessages_clan_pb.js",
-      "./appidutils.js",
-      "./csstransitionwrapper.js",
-      "./localization2.js",
-      "./partnereventshared.module.js",
-      "../../../css/applications/appmgmt/partnereventshared.css",
-      "./loadingspinner.js",
-      "../../../css/applications/appmgmt/loadingspinner.css",
-      "../../../css/applications/appmgmt/saletags.css",
-      "./emoticonstorecontext.js",
-      "./lazyrenderchildren.js",
-      "./useresizeobserver.js",
-      "./emoticon_php.js",
-      "../../../css/applications/appmgmt/emoticonstorecontext.css",
-      "./partnereventstore.js",
-      "./partnereventutils.js",
-      "./uploadutils.js",
-      "./importexportdialog.js",
-      "./eventimageurlwithfallback.js",
-      "./salestoreitemutils.js",
-      "../../../css/applications/appmgmt/salestoreitemutils.css",
-      "../../../css/applications/appmgmt/eventimageurlwithfallback.css",
-      "./src2.js",
-      "./textlink.js",
-      "../../../css/applications/appmgmt/textlink.css",
-      "./emoticonbutton.js",
-      "./bbcodes.module.js",
-      "../../../css/applications/appmgmt/bbcodes.css",
-      "./numberformats.js",
-      "./storeitemhooks.js",
-      "../../../css/applications/appmgmt/emoticonbutton.css",
-      "./bbcodeeditor.js",
-      "./multisourceimage.js",
-      "./meetsteamclanid.js",
-      "./shared_svg_gamerecordings.js",
-      "../../../css/applications/appmgmt/shared_svg_gamerecordings.css",
-      "./dashplayer.js",
-      "./reorderablelist.module.js",
-      "../../../css/applications/appmgmt/reorderablelist.css",
-      "./genericimageupload.js",
-      "./linkregionbox.js",
-      "../../../css/applications/appmgmt/linkregionbox.css",
-      "../../../css/applications/appmgmt/genericimageupload.css",
-      "../../../css/applications/appmgmt/bbcodeeditor.css",
-      "./steammessages_experiments_pb.js",
-      "./meetsteamregistrationhooks.js",
-      "./vodquery.js",
-      "../../../css/applications/appmgmt/importexportdialog.css",
-      "./creatorhomestore.js",
-      "./storegamehover.js",
-      "./eventtrackinghook.js",
-      "./discussionwidget.module.js",
-      "../../../css/applications/appmgmt/discussionwidget.css",
-      "./crosspromotesalelayouts.js",
-      "../../../css/applications/appmgmt/crosspromotesalelayouts.css",
-      "./clanstore.js",
-      "./languagepicker.js",
-      "./editorlocalizationstore.js",
-      "../../../css/applications/appmgmt/buildpatchnotes.css",
-      "./promotion_routing.js",
-      "./promotionoperationowner.js",
-      "./marketingmessageevent.js",
-      "../../../css/applications/appmgmt/marketingmessageevent.css",
-      "./primarypartnercontext.js",
-      "./assertThisInitialized.js",
-      "./fast-deep-equal.js",
-      "./localization.js",
-      "./popoversurface.js",
-      "../../../css/applications/appmgmt/popoversurface.css",
-      "../../../css/applications/appmgmt/localization.css",
-      "./dashboardutilities.js",
-      "../../../css/applications/appmgmt/dashboardutilities.css",
-      "../../../css/applications/appmgmt/fast-deep-equal.css",
-      "./heading.js",
-      "../../../css/applications/appmgmt/heading.css",
-      "./imageuploaderpanel.js",
-      "./slider.js",
-      "../../../css/applications/appmgmt/slider.css",
-      "../../../css/applications/appmgmt/imageuploaderpanel.css",
-      "./partnerstats.module.js",
-      "./with-selector.js",
-      "../../../css/applications/appmgmt/partnerstats.css",
-      "./filechangepoll.js",
-      "../../../css/applications/appmgmt/filechangepoll.css",
-      "./adminshared.module.js",
-      "../../../css/applications/appmgmt/adminshared.css",
-      "./partnereventshareddates.js",
-      "./cross.js",
-      "../../../css/applications/appmgmt/partnereventshareddates.css",
-      "../../../css/applications/appmgmt/react-datetime2.css",
-      "./themefestplanning.js",
-      "../../../css/applications/appmgmt/themefestplanning.css",
-      "./react-select.cjs.js",
-      "./reorderablelist.js",
-      "./partnervalvecontactstore.js",
-      "../../../css/applications/appmgmt/partnervalvecontactstore.css",
-      "./adminaccount.js",
-      "./collapseablesection.js",
-      "../../../css/applications/appmgmt/collapseablesection.css",
-      "./userprofile.js",
-      "../../../css/applications/appmgmt/userprofile.css",
-      "./partnerinfostore.js",
-      "./localization4.js",
-      "../../../css/applications/appmgmt/localization2.css",
-      "./gamerecordinglog.js",
-      "./cloudlocalizedartdisplay.js",
-      "../../../css/applications/appmgmt/cloudlocalizedartdisplay.css",
-      "../../../css/applications/appmgmt/promotionoperationowner.css",
-      "./salesrouting.js",
-      "./optin_routing.js",
-      "./appadminrouter.js",
-      "./phpintegration.js",
-      "./releasedateinfo.js",
-      "../../../css/applications/appmgmt/releasedateinfo.css",
-      "../../../css/applications/appmgmt/appadminrouter.css",
-      "./storeadmin.js",
-      "./select.js",
-      "./grid.js",
-      "../../../css/applications/appmgmt/grid.css",
-      "./richgamedescriptioneditor.js",
-      "../../../css/applications/appmgmt/richgamedescriptioneditor.css",
-      "../../../css/applications/appmgmt/storeadmin.css",
-      "./packageadmin.js",
-      "../../../css/applications/appmgmt/packageadmin.css",
-      "./connections.js",
-      "../../../css/applications/appmgmt/connections.css",
-      "./landing.js",
-      "./recentapps.js",
-      "../../../css/applications/appmgmt/recentapps.css",
-      "./steammessages_partnerdeadline_pb.js",
-      "./seasonpasshooks.js",
-      "../../../css/applications/appmgmt/landing.css",
-      "./timelinemarkereditorlanding.js",
-      "./webuitransportdefaults.js",
-      "./dnd.esm.js",
-      "./tour.js",
-      "../../../css/applications/appmgmt/tour.css",
-      "../../../css/applications/appmgmt/timelinemarkereditorlanding.css",
-      "./promotionreviewdashboard.js",
-      "../../../css/applications/appmgmt/promotionreviewdashboard.css",
-      "./reservationqueuemessagingdashboard.js",
-      "../../../css/applications/appmgmt/reservationqueuemessagingdashboard.css",
-      "./contenthub_routing.js",
-      "../../../css/applications/appmgmt/contenthub_routing.css",
-      "./recap_routing.js",
-      "./deadlinelanding.js",
-      "../../../css/applications/appmgmt/deadlinelanding.css",
-      "./taxrequirementlanding.js",
-      "../../../css/applications/appmgmt/taxrequirementlanding.css",
-      "./meetsteamrouting.js",
-      "../../../css/applications/appmgmt/meetsteamrouting.css",
-      "./achievementseditorlanding.js",
-      "../../../css/applications/appmgmt/achievementseditorlanding.css",
-      "./creatorhomeadmindashboard.js",
-      "../../../css/applications/appmgmt/creatorhomeadmindashboard.css",
-      "./logoedtior.js",
-      "./canvas.js",
-      "../../../css/applications/appmgmt/logoedtior.css",
+      "./chunk~a8a12c686e.js",
+      "./chunk~de7f2df91c.js",
+      "./chunk~1fa4b8f2ff.js",
+      "./chunk~25a6634263.js",
+      "./chunk~44f252525d.js",
+      "../../../css/applications/appmgmt/chunk~1fc66b8190.css",
+      "./chunk~2e8feda0b1.js",
+      "./chunk~d9c3dab17a.js",
+      "./chunk~baca8b8889.js",
+      "./chunk~971d501580.js",
+      "./chunk~f7fdc3d084.js",
+      "./chunk~e7f5a67b58.js",
+      "./chunk~4cdb5412a1.js",
+      "./chunk~5f339e9a5f.js",
+      "../../../css/applications/appmgmt/chunk~14131c2b6b.css",
+      "./chunk~a292304e38.js",
+      "../../../css/applications/appmgmt/chunk~909c5188bd.css",
+      "../../../css/applications/appmgmt/chunk~2deb5b0668.css",
+      "./chunk~b066ecd357.js",
+      "./chunk~9a06851bec.js",
+      "../../../css/applications/appmgmt/chunk~76e31ebf24.css",
+      "./chunk~f4e4ed5c17.js",
+      "./chunk~eefd71512b.js",
+      "../../../css/applications/appmgmt/chunk~73d2876771.css",
+      "./chunk~4571d27d07.js",
+      "./chunk~70c16cc80c.js",
+      "../../../css/applications/appmgmt/chunk~21fdd7c699.css",
+      "./chunk~8681f5c764.js",
+      "./chunk~cad0693c0c.js",
+      "./chunk~9fc22a4638.js",
+      "./chunk~726542bc75.js",
+      "./chunk~e29b7ee76a.js",
+      "../../../css/applications/appmgmt/chunk~cad0693c0c.css",
+      "./chunk~91e3af12c1.js",
+      "./chunk~2201b8cb3d.js",
+      "./chunk~0a99e05c44.js",
+      "./chunk~f8b6a4beb3.js",
+      "./chunk~8fb30ea08b.js",
+      "./chunk~ede3e357a2.js",
+      "./chunk~4406a7b793.js",
+      "./chunk~c55709d290.js",
+      "./chunk~af36c62e9f.js",
+      "./chunk~b00bc5ccc1.js",
+      "./chunk~29743c399d.js",
+      "./chunk~e867464c75.js",
+      "../../../css/applications/appmgmt/chunk~8a883cca81.css",
+      "./chunk~a2cb8ea8dc.js",
+      "./chunk~9661a67253.js",
+      "./chunk~fa5480ab25.js",
+      "./chunk~9aa05d2c7d.js",
+      "./chunk~bf46c905a4.js",
+      "./chunk~38a44beba7.js",
+      "./chunk~360b8fa68b.js",
+      "./chunk~a58194c5d9.js",
+      "../../../css/applications/appmgmt/chunk~4db64f4907.css",
+      "./chunk~0c46413ed4.js",
+      "../../../css/applications/appmgmt/chunk~e923f610c9.css",
+      "./chunk~0111fcd096.js",
+      "./chunk~92931c6310.js",
+      "./chunk~521597d5f9.js",
+      "./chunk~f3a565e188.js",
+      "./chunk~d382bdf2cf.js",
+      "./chunk~68b7e78d68.js",
+      "./chunk~a6b9ae1345.js",
+      "./chunk~0278ae6236.js",
+      "./chunk~f25232ab1e.js",
+      "./chunk~c55d6473b2.js",
+      "./chunk~19394a4118.js",
+      "./chunk~ca0c999570.js",
+      "./chunk~55bac8fc8b.js",
+      "./chunk~6257ebd2d4.js",
+      "./chunk~95ecbf576c.js",
+      "./chunk~739842ca30.js",
+      "../../../css/applications/appmgmt/chunk~78ae40994c.css",
+      "./chunk~74d773532d.js",
+      "../../../css/applications/appmgmt/chunk~884833f38b.css",
+      "../../../css/applications/appmgmt/chunk~c7675f109e.css",
+      "./chunk~59af5622dd.js",
+      "./chunk~58c6c52d52.js",
+      "./chunk~f8f9713b0c.js",
+      "./chunk~9b35b2d482.js",
+      "./chunk~3ee5188744.js",
+      "./chunk~a825a84845.js",
+      "./chunk~166eab4331.js",
+      "../../../css/applications/appmgmt/chunk~c27bafa118.css",
+      "./chunk~8c0cff8a60.js",
+      "./chunk~5ab42519dc.js",
+      "../../../css/applications/appmgmt/chunk~6203020a69.css",
+      "./chunk~cb393b4e7b.js",
+      "./chunk~90fbfc6dc2.js",
+      "./chunk~429133cc70.js",
+      "../../../css/applications/appmgmt/chunk~85b919c08c.css",
+      "./chunk~e23b40d2bf.js",
+      "../../../css/applications/appmgmt/chunk~498e4d5f51.css",
+      "./chunk~91d759d956.js",
+      "../../../css/applications/appmgmt/chunk~3934641559.css",
+      "../../../css/applications/appmgmt/chunk~9661a67253.css",
+      "./chunk~6151aaad06.js",
+      "./chunk~6b8ddcaac8.js",
+      "./chunk~428594b857.js",
+      "./chunk~b7c2818157.js",
+      "./chunk~b390ee0f78.js",
+      "./chunk~90b9831ad2.js",
+      "./chunk~8ceeb46076.js",
+      "./chunk~2f8c67b4de.js",
+      "../../../css/applications/appmgmt/chunk~bc10934db3.css",
+      "./chunk~ada233e34d.js",
+      "../../../css/applications/appmgmt/chunk~2854714fbb.css",
+      "../../../css/applications/appmgmt/chunk~7e3e341a02.css",
+      "./chunk~43407e91ef.js",
+      "./chunk~9d71b14b50.js",
+      "./chunk~710e3cfd2f.js",
+      "./chunk~967b42dac9.js",
+      "../../../css/applications/appmgmt/chunk~84f339f8d2.css",
+      "./chunk~fc8a9e4879.js",
+      "./chunk~2bee5a7d08.js",
+      "./chunk~b4171a8747.js",
+      "./chunk~fd80c4b5eb.js",
+      "./chunk~e70aabe4d7.js",
+      "./chunk~cbbb6ae37c.js",
+      "../../../css/applications/appmgmt/chunk~9f001c4d7c.css",
+      "../../../css/applications/appmgmt/chunk~6e16192cd9.css",
+      "./chunk~25a66342632.js",
+      "./chunk~cfd048ddd7.js",
+      "../../../css/applications/appmgmt/chunk~1cdae5a58d.css",
+      "./chunk~05a38bc848.js",
+      "./chunk~af1574091f.js",
+      "../../../css/applications/appmgmt/chunk~bc29451df5.css",
+      "./chunk~a7c5e71e12.js",
+      "../../../css/applications/appmgmt/chunk~d22a22fa8b.css",
+      "./chunk~3f2c78281d.js",
+      "./chunk~f0141d9521.js",
+      "./chunk~93fc7377c2.js",
+      "./chunk~9658266888.js",
+      "../../../css/applications/appmgmt/chunk~a22934a9e6.css",
+      "./chunk~b980797e15.js",
+      "./chunk~6f51836c6e.js",
+      "../../../css/applications/appmgmt/chunk~6f4f273dbc.css",
+      "./chunk~d6693aba87.js",
+      "./chunk~874b4cd3a1.js",
+      "../../../css/applications/appmgmt/chunk~12e15c8243.css",
+      "../../../css/applications/appmgmt/chunk~ed398c56a0.css",
+      "../../../css/applications/appmgmt/chunk~b469dad00d.css",
+      "./chunk~3f4314f3b4.js",
+      "../../../css/applications/appmgmt/chunk~863c097d06.css",
+      "./chunk~5243628dd6.js",
+      "./chunk~de7a25f8e2.js",
+      "../../../css/applications/appmgmt/chunk~2ca7b3868d.css",
+      "./chunk~7b4b9eb713.js",
+      "./chunk~4d16ce5d1a.js",
+      "./chunk~5c6be4668b.js",
+      "./chunk~8628c845f2.js",
+      "../../../css/applications/appmgmt/chunk~d21212ed71.css",
+      "./chunk~3720b337f3.js",
+      "../../../css/applications/appmgmt/chunk~b3cb27b5e1.css",
+      "./chunk~d902bc74d6.js",
+      "./chunk~437071091c.js",
+      "./chunk~91ae5e1167.js",
+      "./chunk~802e967112.js",
+      "../../../css/applications/appmgmt/chunk~6151aaad06.css",
+      "./chunk~af3bd1e68d.js",
+      "./chunk~54f70c90c1.js",
+      "./chunk~03224452d3.js",
+      "../../../css/applications/appmgmt/chunk~3a717e066a.css",
+      "./chunk~b0a84aab1b.js",
+      "./chunk~aae8417744.js",
+      "./chunk~91ffd0567f.js",
+      "./chunk~c12081e677.js",
+      "./chunk~ecf04667fe.js",
+      "../../../css/applications/appmgmt/chunk~197eb6470c.css",
+      "../../../css/applications/appmgmt/chunk~e6f9e52c61.css",
+      "./chunk~0aa5028ef4.js",
+      "../../../css/applications/appmgmt/chunk~d1c2004d62.css",
+      "../../../css/applications/appmgmt/chunk~34ce0dff4c.css",
+      "./chunk~e53a8c8667.js",
+      "../../../css/applications/appmgmt/chunk~02bdaece1c.css",
+      "./chunk~a6402cc243.js",
+      "./chunk~16aefcf65f.js",
+      "../../../css/applications/appmgmt/chunk~65c4848332.css",
+      "../../../css/applications/appmgmt/chunk~c2695db100.css",
+      "./chunk~bd435de487.js",
+      "../../../css/applications/appmgmt/chunk~40821b6cd5.css",
+      "./chunk~6446a0f79a.js",
+      "../../../css/applications/appmgmt/chunk~5d4a89c549.css",
+      "./chunk~6110f63e8e.js",
+      "../../../css/applications/appmgmt/chunk~1f33a9908b.css",
+      "./chunk~b3f4ae92bc.js",
+      "./chunk~cf8a297cc4.js",
+      "../../../css/applications/appmgmt/chunk~2fd3de7973.css",
+      "../../../css/applications/appmgmt/chunk~9a4b0369522.css",
+      "./chunk~209a3e6c2e.js",
+      "../../../css/applications/appmgmt/chunk~b8220eff79.css",
+      "./chunk~fb7b5d9c48.js",
+      "./chunk~ea4856d3e2.js",
+      "./chunk~30ccd6dee5.js",
+      "../../../css/applications/appmgmt/chunk~52199da225.css",
+      "./chunk~8255136f90.js",
+      "./chunk~ec644f97c6.js",
+      "../../../css/applications/appmgmt/chunk~2b9f3c130a.css",
+      "./chunk~10ec219681.js",
+      "../../../css/applications/appmgmt/chunk~6f9130c355.css",
+      "./chunk~4f3a47e991.js",
+      "./chunk~44547eeba5.js",
+      "../../../css/applications/appmgmt/chunk~1dc2296506.css",
+      "./chunk~57b6ba168b.js",
+      "./chunk~d3a2e79917.js",
+      "../../../css/applications/appmgmt/chunk~469dc86e61.css",
+      "../../../css/applications/appmgmt/chunk~2141a86144.css",
+      "./chunk~ac46798222.js",
+      "./chunk~f5466f3e0e.js",
+      "./chunk~6bd490454e.js",
+      "./chunk~234d4d786c.js",
+      "./chunk~eae65d56a7.js",
+      "../../../css/applications/appmgmt/chunk~a2dda6d2e6.css",
+      "../../../css/applications/appmgmt/chunk~6bd490454e.css",
+      "./chunk~5e6874a411.js",
+      "./chunk~93195fc4a9.js",
+      "../../../css/applications/appmgmt/chunk~142e655cd6.css",
+      "./chunk~e97d53a9c6.js",
+      "../../../css/applications/appmgmt/chunk~a67e96666b.css",
+      "../../../css/applications/appmgmt/chunk~5e6874a411.css",
+      "./chunk~2dcd698413.js",
+      "../../../css/applications/appmgmt/chunk~2dcd698413.css",
+      "./chunk~a3c2cda769.js",
+      "../../../css/applications/appmgmt/chunk~a3c2cda769.css",
+      "./chunk~92973ecf63.js",
+      "./chunk~7e6646f5a7.js",
+      "../../../css/applications/appmgmt/chunk~fdfd7b9e19.css",
+      "./chunk~8e34816c9e.js",
+      "./chunk~80765d41ae.js",
+      "../../../css/applications/appmgmt/chunk~92973ecf63.css",
+      "./chunk~7a45b43a5d.js",
+      "./chunk~7b8a87bd30.js",
+      "./chunk~f95b379b4d.js",
+      "./chunk~c627bf7efa.js",
+      "../../../css/applications/appmgmt/chunk~f609af6c02.css",
+      "../../../css/applications/appmgmt/chunk~7a45b43a5d.css",
+      "./chunk~be64a9384d.js",
+      "../../../css/applications/appmgmt/chunk~be64a9384d.css",
+      "./chunk~0242e5eb11.js",
+      "../../../css/applications/appmgmt/chunk~0242e5eb11.css",
+      "./chunk~4d6a0703cb.js",
+      "../../../css/applications/appmgmt/chunk~4d6a0703cb.css",
+      "./chunk~cf0982cd3a.js",
+      "./chunk~9ea24a5c24.js",
+      "../../../css/applications/appmgmt/chunk~9ea24a5c24.css",
+      "./chunk~8bbbc35117.js",
+      "../../../css/applications/appmgmt/chunk~8bbbc35117.css",
+      "./chunk~a7bc2e23e5.js",
+      "../../../css/applications/appmgmt/chunk~a7bc2e23e5.css",
+      "./chunk~7ec67c8c4e.js",
+      "../../../css/applications/appmgmt/chunk~7ec67c8c4e.css",
+      "./chunk~5173a490dd.js",
+      "../../../css/applications/appmgmt/chunk~5173a490dd.css",
+      "./chunk~79627e9162.js",
+      "./chunk~9a3ef4764b.js",
+      "../../../css/applications/appmgmt/chunk~79627e9162.css",
     ]),
 ) => _.map((_) => _[_]);
-import { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./mobx.esm.js";
-import { _, _, _, _, _, _, _, _, _, _, _ } from "./src.js";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./chunk~de7f2df91c.js";
+import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~25a6634263.js";
 import {
   _,
   _,
@@ -289,30 +307,30 @@ import {
   _,
   _,
   _,
-} from "./dialogs.js";
-import { _ } from "./storebrowsequerycontext.js";
-import { _, _, _, _ } from "./react-router.js";
-import { _ } from "./servicetransportprovider.js";
-import { _ } from "./reactqueryroot.js";
-import { _ } from "./useMutation.js";
-import { _, _, _ } from "./react-router-dom.js";
-import { _ } from "./primarypartnercontext.js";
-import { _, _ } from "./emoticonstorecontext.js";
-import { _, _ } from "./formfactor.js";
-import { _ } from "./variantdefaults.js";
-import { _ } from "./popoversurface.js";
-import { _ } from "./formatnumber.js";
-import { _ } from "./modals.js";
-import { _ } from "./axios.js";
-import { _ } from "./historyutils.js";
-import { _, _, _ } from "./browserapi.js";
-import { _, _ } from "./simplesuccesserror.js";
-import { _ } from "./eventtrackinghook.js";
-import { _ } from "./localstorage.js";
-import { _ } from "./configdatadiag.js";
-import { _ } from "./phpintegration.js";
-import { _ } from "./unknownroute.js";
-import { _, _ } from "./filechangepoll.js";
+} from "./chunk~1fa4b8f2ff.js";
+import { _ } from "./chunk~0a99e05c44.js";
+import { _, _, _, _ } from "./chunk~44f252525d.js";
+import { _ } from "./chunk~f8b6a4beb3.js";
+import { _ } from "./chunk~9aa05d2c7d.js";
+import { _ } from "./chunk~6257ebd2d4.js";
+import { _, _, _ } from "./chunk~9fc22a4638.js";
+import { _ } from "./chunk~b0a84aab1b.js";
+import { _, _ } from "./chunk~43407e91ef.js";
+import { _ } from "./chunk~726542bc75.js";
+import { _, _, _ } from "./chunk~f7fdc3d084.js";
+import { _, _ } from "./chunk~a292304e38.js";
+import { _ } from "./chunk~ecf04667fe.js";
+import { _ } from "./chunk~8681f5c764.js";
+import { _ } from "./chunk~f4e4ed5c17.js";
+import { _ } from "./chunk~af36c62e9f.js";
+import { _, _, _ } from "./chunk~70c16cc80c.js";
+import { _, _ } from "./chunk~95ecbf576c.js";
+import { _ } from "./chunk~5c6be4668b.js";
+import { _ } from "./chunk~14243866ee.js";
+import { _ } from "./chunk~59af5622dd.js";
+import { _ } from "./chunk~234d4d786c.js";
+import { _ } from "./chunk~58c6c52d52.js";
+import { _, _ } from "./chunk~6446a0f79a.js";
 var _ = (_, _, _) => {
   let _ = _.lastIndexOf(`?`),
     _ = _[_ === -1 || _ < _.lastIndexOf(`/`) ? _ : _.slice(0, _)];
@@ -379,10 +397,38 @@ function _(_) {
       breakpoints: _,
       variants: _,
       popoverPresentation: _,
+      spacing: _,
+      radius: _,
+      textSizes: _,
+      defaultTextSize: _,
+      controlHeights: _,
+      controlRadius: _,
+      controlSize: _,
     } = _,
     _ = {
       display: `contents`,
     },
+    _ = (0, _.use)(_),
+    _ = _(
+      _,
+      {
+        spacing: _,
+        radius: _,
+        textSizes: _,
+        defaultTextSize: _,
+        controlHeights: _,
+        controlRadius: _,
+      },
+      _,
+    ),
+    { defaultTextSize: _, controlRadius: _ } = _,
+    _ = (0, _.useMemo)(
+      () => ({
+        defaultTextSize: _,
+        controlRadius: _,
+      }),
+      [_, _],
+    ),
     _;
   typeof _ == `string` ? (_ = _) : _ && _(_, `accent`, _);
   let _;
@@ -412,6 +458,16 @@ function _(_) {
     }),
   });
   return (
+    _ !== _ &&
+      (_ = (0, _.jsx)(_, {
+        value: _,
+        children: _,
+      })),
+    _ &&
+      (_ = (0, _.jsx)(_, {
+        size: _,
+        children: _,
+      })),
     _ &&
       (_ = (0, _.jsx)(_, {
         presentation: _,
@@ -423,6 +479,43 @@ function _(_) {
           children: _,
         })
       : _
+  );
+}
+var _ = (0, _.createContext)({
+  defaultTextSize: `3`,
+  controlRadius: `sm`,
+});
+function _(_, _, _) {
+  let { spacing: _, radius: _, textSizes: _, controlHeights: _ } = _,
+    _ = _.defaultTextSize ?? _.defaultTextSize,
+    _ = _.controlRadius ?? _.controlRadius;
+  for (let [_, _] of Object.entries(_ ?? {})) _ && (_[`--spacing-${_}`] = _);
+  for (let [_, _] of Object.entries(_ ?? {})) _ && (_[`--radius-${_}`] = _);
+  for (let [_, _] of Object.entries(_ ?? {}))
+    _ && (_[`--control-height-${_}`] = _);
+  for (let [_, _] of Object.entries(_ ?? {}))
+    _ &&
+      (_.size &&
+        ((_[`--text-size-${_}`] = _.size),
+        (_[`--heading-size-${_}`] = `var(--text-size-${_})`)),
+      _.lineHeight &&
+        ((_[`--line-height-${_}`] = _.lineHeight),
+        (_[`--heading-line-height-${_}`] = `var(--line-height-${_})`)),
+      _.letterSpacing && (_[`--letter-spacing-${_}`] = _.letterSpacing));
+  (_.defaultTextSize || _?.[_]) &&
+    ((_[`--default-font-size`] = `var(--text-size-${_})`),
+    (_[`--default-line-height`] = `var(--line-height-${_})`),
+    (_[`--default-letter-spacing`] = `var(--letter-spacing-${_})`));
+  let _ = _(_);
+  return (
+    (_.controlRadius || (_ && _?.[_])) &&
+      (_[`--control-radius`] = _ ? `var(--radius-${_})` : _),
+    _ === _.defaultTextSize && _ === _.controlRadius
+      ? _
+      : {
+          defaultTextSize: _,
+          controlRadius: _,
+        }
   );
 }
 function _(_, _, _) {
@@ -437,7 +530,6 @@ function _(_, _, _) {
 }
 var _ = _.memo(function (_) {
   let {
-      defaultTextSize: _,
       accentColor: _ = `blue`,
       dullColor: _ = `greyneutral`,
       successColor: _ = `green`,
@@ -452,17 +544,11 @@ var _ = _.memo(function (_) {
       popoverPresentation: _,
       children: _,
       zoo: _,
+      ..._
     } = _,
     _ = _.useRef(null);
-  _(_, _, _, _);
-  let _;
   return (
-    _ &&
-      (_ = {
-        "--default-font-size": `var(--text-size-${_})`,
-        "--default-line-height": `var(--line-height-${_})`,
-        "--default-letter-spacing": `var(--letter-spacing-${_})`,
-      }),
+    _(_, _, _, _),
     (0, _.jsx)(_, {
       children: (0, _.jsx)(_, {
         breakpoints: _,
@@ -470,8 +556,8 @@ var _ = _.memo(function (_) {
           children: (0, _.jsx)(`div`, {
             ref: _,
             className: (0, _.default)(_, `noOpinionatedGlobalStyles`),
-            style: _,
             children: (0, _.jsxs)(_, {
+              ..._,
               accentColor: _,
               dullColor: _,
               successColor: _,
@@ -1301,7 +1387,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
     _(
-      () => import(`./rootlogin.js`),
+      () => import(`./chunk~a8a12c686e.js`),
       __vite__mapDeps([
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
         20, 21, 22, 23, 24, 25, 26, 27,
@@ -1311,312 +1397,314 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./steamml_routing.js`),
+      () => import(`./chunk~cad0693c0c.js`),
       __vite__mapDeps([28, 1, 4, 29, 30, 31, 21, 32]),
       import.meta.url,
     ),
   );
 _.lazy(() =>
   _(
-    () => import(`./steamdeckcompatibilitydetails.js`),
+    () => import(`./chunk~91e3af12c1.js`),
     __vite__mapDeps([
-      33, 34, 1, 3, 2, 4, 5, 35, 36, 37, 38, 39, 27, 21, 40, 41, 22, 23, 42, 43,
+      33, 34, 1, 3, 2, 4, 5, 35, 36, 37, 38, 39, 27, 21, 40, 41, 42, 43, 22, 23,
+      44, 45,
     ]),
     import.meta.url,
   ),
 );
 var _ = _.lazy(() =>
     _(
-      () => import(`./steamdeckcompatibilitydetails_admin.js`),
+      () => import(`./chunk~a2cb8ea8dc.js`),
       __vite__mapDeps([
-        44, 1, 34, 3, 2, 4, 5, 35, 36, 37, 38, 39, 27, 21, 40, 41, 22, 23, 42,
-        43,
+        46, 1, 34, 3, 2, 4, 5, 35, 36, 37, 38, 39, 27, 21, 40, 41, 42, 43, 22,
+        23, 44, 45,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./pricing_routing.js`),
+      () => import(`./chunk~9661a67253.js`),
       __vite__mapDeps([
-        45, 1, 3, 2, 4, 5, 46, 38, 37, 47, 48, 49, 29, 50, 9, 10, 11, 12, 13,
-        14, 15, 16, 17, 51, 52, 53, 21, 40, 42, 54, 27, 41, 22, 23, 55, 56, 57,
-        58, 59, 60, 36, 39, 61, 62, 63, 64, 65, 66, 67, 35, 68, 8, 18, 19, 20,
-        69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 25, 7, 24, 79, 80, 81, 82, 83,
-        84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94,
+        47, 1, 3, 2, 4, 5, 48, 38, 37, 49, 50, 51, 29, 52, 9, 10, 11, 12, 13,
+        14, 15, 16, 17, 53, 54, 55, 21, 40, 44, 56, 27, 41, 22, 23, 57, 58, 59,
+        60, 61, 62, 36, 39, 63, 64, 65, 66, 67, 68, 69, 35, 70, 8, 18, 19, 20,
+        71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 25, 7, 24, 81, 82, 83, 84, 85,
+        86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./buildpatchnotes.js`),
+      () => import(`./chunk~6151aaad06.js`),
       __vite__mapDeps([
-        95, 1, 3, 60, 37, 38, 2, 4, 5, 35, 36, 39, 96, 19, 47, 48, 68, 97, 7,
-        80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43, 56, 49, 101,
-        102, 103, 61, 62, 104, 105, 106, 107, 108, 109, 110, 111, 112, 65, 58,
-        113, 114, 66, 57, 115, 116, 117, 118, 119, 30, 120, 121, 12, 13, 10, 11,
-        14, 18, 51, 52, 122, 55, 88, 123, 124, 125, 24, 126, 127, 79, 25, 128,
-        129, 130, 131, 132, 133, 134, 63, 59, 64, 135, 136, 137, 138, 139, 140,
-        141, 70, 71, 69, 142, 77, 143, 144, 145, 74, 146, 147, 148, 149, 150,
-        151, 152, 153, 154, 155, 156,
+        97, 1, 3, 62, 37, 38, 2, 4, 5, 35, 36, 39, 98, 19, 49, 50, 70, 99, 7,
+        82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22, 23, 44, 45, 58,
+        51, 103, 104, 105, 63, 64, 106, 107, 108, 109, 110, 111, 112, 113, 114,
+        67, 60, 115, 116, 68, 59, 117, 118, 119, 120, 121, 30, 122, 123, 12, 13,
+        10, 11, 14, 18, 53, 54, 124, 57, 90, 125, 126, 127, 24, 128, 81, 25,
+        129, 130, 131, 132, 133, 134, 135, 65, 61, 66, 136, 137, 138, 139, 140,
+        141, 142, 72, 73, 143, 144, 71, 145, 79, 146, 147, 76, 148, 149, 150,
+        151, 152, 153, 154, 155, 156, 157, 158, 159,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./promotion_routing.js`),
+      () => import(`./chunk~af3bd1e68d.js`),
       __vite__mapDeps([
-        157, 158, 1, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
-        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
-        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 117, 118, 55, 57, 58,
-        70, 71, 126, 146, 25, 24, 147, 127, 79, 153, 160, 116, 113, 119, 29,
-        161, 107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15,
-        16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170, 8, 18,
-        20, 6, 26, 112, 30, 171, 172, 121, 122, 50, 46, 54, 173, 174, 175, 155,
-        137, 138, 139, 140, 81, 82, 176, 177, 178, 179, 115, 88, 123, 124, 125,
-        128, 129, 130, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 69, 142,
-        77, 143, 144, 145, 74, 75, 76, 180, 181, 182, 183, 78, 87, 184, 185,
-        186, 187, 83, 85, 154, 188, 189, 190, 191, 192, 193, 194, 86, 89, 195,
-        196, 197, 198, 199, 90, 91, 200, 201, 202, 203, 204, 205,
+        160, 161, 1, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
+        50, 70, 99, 7, 82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22,
+        23, 44, 45, 58, 51, 103, 104, 105, 63, 64, 106, 107, 108, 162, 110, 57,
+        59, 60, 72, 73, 148, 25, 24, 128, 81, 156, 163, 118, 119, 120, 115, 121,
+        29, 164, 109, 111, 112, 113, 67, 165, 6, 8, 9, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 20, 26, 114, 30, 122, 166, 53, 54, 167, 168, 169, 55, 170,
+        171, 172, 86, 173, 174, 175, 123, 124, 52, 48, 56, 176, 177, 178, 158,
+        138, 139, 140, 141, 83, 84, 179, 180, 181, 117, 90, 125, 126, 127, 129,
+        130, 131, 132, 133, 134, 135, 65, 61, 66, 136, 137, 142, 143, 144, 71,
+        145, 79, 146, 147, 76, 77, 78, 182, 183, 184, 185, 80, 89, 186, 187,
+        188, 189, 85, 87, 157, 190, 191, 192, 193, 194, 195, 196, 88, 91, 197,
+        198, 199, 200, 201, 92, 93, 202, 203, 204, 205, 206, 207,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./salesrouting.js`),
+      () => import(`./chunk~ac46798222.js`),
       __vite__mapDeps([
-        206, 1, 158, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
-        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
-        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 117, 118, 55, 57, 58,
-        70, 71, 126, 146, 25, 24, 147, 127, 79, 153, 160, 116, 113, 119, 29,
-        161, 107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15,
-        16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170, 8, 18,
-        20, 6, 26, 112, 30, 171, 172, 121, 122, 50, 46, 54, 173, 174, 175, 155,
-        137, 138, 139, 140, 81, 82, 176, 177, 178, 179, 115, 88, 123, 124, 125,
-        128, 129, 130, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 69, 142,
-        77, 143, 144, 145, 74, 75, 76, 180, 181, 182, 183, 78, 87, 184, 185,
-        186, 187, 83, 85, 154, 188, 189, 190, 191, 192, 193, 194, 86, 89, 195,
-        196, 197, 198, 199, 90, 91, 200, 201, 202, 203, 204, 205,
+        208, 1, 161, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
+        50, 70, 99, 7, 82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22,
+        23, 44, 45, 58, 51, 103, 104, 105, 63, 64, 106, 107, 108, 162, 110, 57,
+        59, 60, 72, 73, 148, 25, 24, 128, 81, 156, 163, 118, 119, 120, 115, 121,
+        29, 164, 109, 111, 112, 113, 67, 165, 6, 8, 9, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 20, 26, 114, 30, 122, 166, 53, 54, 167, 168, 169, 55, 170,
+        171, 172, 86, 173, 174, 175, 123, 124, 52, 48, 56, 176, 177, 178, 158,
+        138, 139, 140, 141, 83, 84, 179, 180, 181, 117, 90, 125, 126, 127, 129,
+        130, 131, 132, 133, 134, 135, 65, 61, 66, 136, 137, 142, 143, 144, 71,
+        145, 79, 146, 147, 76, 77, 78, 182, 183, 184, 185, 80, 89, 186, 187,
+        188, 189, 85, 87, 157, 190, 191, 192, 193, 194, 195, 196, 88, 91, 197,
+        198, 199, 200, 201, 92, 93, 202, 203, 204, 205, 206, 207,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./optin_routing.js`),
+      () => import(`./chunk~f5466f3e0e.js`),
       __vite__mapDeps([
-        207, 158, 1, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
-        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
-        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 117, 118, 55, 57, 58,
-        70, 71, 126, 146, 25, 24, 147, 127, 79, 153, 160, 116, 113, 119, 29,
-        161, 107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15,
-        16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170, 8, 18,
-        20, 6, 26, 112, 30, 171, 172, 121, 122, 50, 46, 54, 173, 174, 175, 155,
-        137, 138, 139, 140, 81, 82, 176, 177, 178, 179, 115, 88, 123, 124, 125,
-        128, 129, 130, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 69, 142,
-        77, 143, 144, 145, 74, 75, 76, 180, 181, 182, 183, 78, 87, 184, 185,
-        186, 187, 83, 85, 154, 188, 189, 190, 191, 192, 193, 194, 86, 89, 195,
-        196, 197, 198, 199, 90, 91, 200, 201, 202, 203, 204, 205,
+        209, 161, 1, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
+        50, 70, 99, 7, 82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22,
+        23, 44, 45, 58, 51, 103, 104, 105, 63, 64, 106, 107, 108, 162, 110, 57,
+        59, 60, 72, 73, 148, 25, 24, 128, 81, 156, 163, 118, 119, 120, 115, 121,
+        29, 164, 109, 111, 112, 113, 67, 165, 6, 8, 9, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 20, 26, 114, 30, 122, 166, 53, 54, 167, 168, 169, 55, 170,
+        171, 172, 86, 173, 174, 175, 123, 124, 52, 48, 56, 176, 177, 178, 158,
+        138, 139, 140, 141, 83, 84, 179, 180, 181, 117, 90, 125, 126, 127, 129,
+        130, 131, 132, 133, 134, 135, 65, 61, 66, 136, 137, 142, 143, 144, 71,
+        145, 79, 146, 147, 76, 77, 78, 182, 183, 184, 185, 80, 89, 186, 187,
+        188, 189, 85, 87, 157, 190, 191, 192, 193, 194, 195, 196, 88, 91, 197,
+        198, 199, 200, 201, 92, 93, 202, 203, 204, 205, 206, 207,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./appadminrouter.js`),
+      () => import(`./chunk~6bd490454e.js`),
       __vite__mapDeps([
-        208, 1, 3, 114, 66, 2, 4, 5, 35, 36, 37, 38, 39, 47, 48, 97, 99, 161,
-        30, 31, 173, 174, 13, 10, 11, 14, 53, 175, 27, 40, 21, 22, 23, 155, 102,
-        103, 137, 138, 139, 140, 81, 82, 176, 177, 80, 7, 178, 25, 24, 179, 127,
-        79, 58, 209, 210, 68, 87, 88, 55, 56, 57, 184, 185, 186, 187, 211, 78,
-        212,
+        210, 1, 3, 116, 68, 2, 4, 5, 35, 36, 37, 38, 39, 49, 50, 99, 101, 164,
+        30, 31, 176, 177, 13, 10, 11, 14, 55, 178, 27, 40, 21, 22, 23, 158, 104,
+        105, 138, 139, 140, 141, 83, 84, 179, 42, 43, 180, 82, 7, 25, 24, 181,
+        128, 81, 60, 211, 212, 70, 89, 90, 57, 58, 59, 186, 187, 188, 189, 213,
+        80, 214,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./storeadmin.js`),
+      () => import(`./chunk~5e6874a411.js`),
       __vite__mapDeps([
-        213, 1, 3, 60, 37, 38, 2, 4, 5, 35, 36, 39, 96, 19, 47, 48, 68, 97, 7,
-        80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43, 56, 49, 101,
-        102, 103, 61, 62, 104, 105, 106, 159, 117, 118, 55, 57, 58, 70, 71, 126,
-        146, 25, 24, 147, 127, 79, 153, 160, 46, 9, 10, 11, 12, 13, 14, 15, 16,
-        17, 8, 18, 20, 51, 52, 164, 165, 166, 53, 167, 214, 120, 171, 172, 168,
-        169, 215, 216, 50, 54, 155, 69, 67, 59, 63, 64, 65, 66, 72, 73, 74, 209,
-        76, 182, 183, 210, 173, 174, 175, 137, 114, 138, 139, 140, 81, 82, 176,
-        87, 88, 184, 185, 186, 187, 211, 78, 154, 190, 191, 135, 136, 194, 195,
-        196, 197, 198, 199, 217, 109, 124, 125, 203, 204, 218, 219,
+        215, 1, 3, 62, 37, 38, 2, 4, 5, 35, 36, 39, 98, 19, 49, 50, 70, 99, 7,
+        82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22, 23, 44, 45, 58,
+        51, 103, 104, 105, 63, 64, 106, 107, 108, 162, 110, 57, 59, 60, 72, 73,
+        148, 25, 24, 128, 81, 156, 163, 48, 119, 120, 9, 10, 11, 12, 13, 14, 15,
+        16, 17, 8, 18, 20, 53, 54, 167, 122, 168, 169, 55, 170, 174, 175, 171,
+        172, 216, 217, 52, 56, 158, 149, 71, 69, 61, 65, 66, 67, 68, 74, 75, 76,
+        155, 211, 78, 184, 185, 212, 176, 177, 178, 138, 116, 139, 140, 141, 83,
+        84, 179, 89, 90, 186, 187, 188, 189, 213, 80, 157, 192, 193, 136, 137,
+        196, 197, 198, 199, 200, 201, 218, 126, 127, 205, 206, 219, 220,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./packageadmin.js`),
+      () => import(`./chunk~2dcd698413.js`),
       __vite__mapDeps([
-        220, 1, 3, 60, 37, 38, 2, 4, 5, 46, 47, 48, 49, 9, 10, 11, 12, 13, 14,
-        15, 16, 17, 8, 18, 19, 20, 51, 52, 171, 172, 121, 122, 50, 53, 21, 40,
-        42, 54, 27, 22, 23, 67, 35, 36, 39, 68, 69, 70, 71, 59, 61, 62, 63, 64,
-        65, 66, 72, 73, 74, 209, 76, 83, 84, 85, 86, 56, 55, 57, 58, 79, 80, 7,
-        25, 24, 87, 88, 89, 92, 93, 200, 201, 221,
+        221, 1, 3, 62, 37, 38, 2, 4, 5, 48, 49, 50, 51, 9, 10, 11, 12, 13, 14,
+        15, 16, 17, 8, 18, 19, 20, 53, 54, 174, 175, 123, 124, 52, 55, 21, 40,
+        44, 56, 27, 22, 23, 69, 35, 36, 39, 70, 71, 72, 73, 61, 63, 64, 65, 66,
+        67, 68, 74, 75, 76, 211, 78, 85, 86, 87, 88, 58, 57, 59, 60, 81, 82, 7,
+        25, 24, 89, 90, 91, 94, 95, 202, 203, 222,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./connections.js`),
-      __vite__mapDeps([222, 1, 3, 2, 4, 5, 31, 21, 40, 22, 23, 223]),
+      () => import(`./chunk~a3c2cda769.js`),
+      __vite__mapDeps([223, 1, 3, 2, 4, 5, 31, 21, 40, 22, 23, 224]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./landing.js`),
+      () => import(`./chunk~92973ecf63.js`),
       __vite__mapDeps([
-        224, 1, 3, 158, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
-        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
-        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 117, 118, 55, 57, 58,
-        70, 71, 126, 146, 25, 24, 147, 127, 79, 153, 160, 116, 113, 119, 29,
-        161, 107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15,
-        16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170, 8, 18,
-        20, 6, 26, 112, 30, 171, 172, 121, 122, 50, 46, 54, 173, 174, 175, 155,
-        137, 138, 139, 140, 81, 82, 176, 177, 178, 179, 115, 88, 123, 124, 125,
-        128, 129, 130, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 69, 142,
-        77, 143, 144, 145, 74, 75, 76, 180, 181, 182, 183, 78, 87, 184, 185,
-        186, 187, 83, 85, 154, 188, 189, 190, 191, 192, 193, 194, 86, 89, 195,
-        196, 197, 198, 199, 90, 91, 200, 201, 202, 203, 204, 205, 225, 226, 227,
-        228, 229,
+        225, 1, 3, 161, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
+        50, 70, 99, 7, 82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22,
+        23, 44, 45, 58, 51, 103, 104, 105, 63, 64, 106, 107, 108, 162, 110, 57,
+        59, 60, 72, 73, 148, 25, 24, 128, 81, 156, 163, 118, 119, 120, 115, 121,
+        29, 164, 109, 111, 112, 113, 67, 165, 6, 8, 9, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 20, 26, 114, 30, 122, 166, 53, 54, 167, 168, 169, 55, 170,
+        171, 172, 86, 173, 174, 175, 123, 124, 52, 48, 56, 176, 177, 178, 158,
+        138, 139, 140, 141, 83, 84, 179, 180, 181, 117, 90, 125, 126, 127, 129,
+        130, 131, 132, 133, 134, 135, 65, 61, 66, 136, 137, 142, 143, 144, 71,
+        145, 79, 146, 147, 76, 77, 78, 182, 183, 184, 185, 80, 89, 186, 187,
+        188, 189, 85, 87, 157, 190, 191, 192, 193, 194, 195, 196, 88, 91, 197,
+        198, 199, 200, 201, 92, 93, 202, 203, 204, 205, 206, 207, 226, 227, 228,
+        229, 230,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./timelinemarkereditorlanding.js`),
+      () => import(`./chunk~7a45b43a5d.js`),
       __vite__mapDeps([
-        230, 1, 3, 2, 4, 5, 231, 65, 62, 27, 21, 56, 40, 41, 102, 103, 70, 71,
-        132, 133, 134, 61, 126, 31, 25, 7, 24, 69, 22, 23, 64, 66, 182, 183,
-        232, 178, 202, 233, 36, 234, 235,
+        231, 1, 3, 2, 4, 5, 232, 67, 64, 27, 21, 58, 40, 41, 104, 105, 72, 73,
+        133, 134, 135, 110, 31, 63, 25, 7, 24, 71, 22, 23, 66, 68, 184, 185,
+        233, 43, 204, 234, 36, 235, 236,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./promotionreviewdashboard.js`),
+      () => import(`./chunk~be64a9384d.js`),
       __vite__mapDeps([
-        236, 1, 158, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
-        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
-        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 117, 118, 55, 57, 58,
-        70, 71, 126, 146, 25, 24, 147, 127, 79, 153, 160, 116, 113, 119, 29,
-        161, 107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15,
-        16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170, 8, 18,
-        20, 6, 26, 112, 30, 171, 172, 121, 122, 50, 46, 54, 173, 174, 175, 155,
-        137, 138, 139, 140, 81, 82, 176, 177, 178, 179, 115, 88, 123, 124, 125,
-        128, 129, 130, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 69, 142,
-        77, 143, 144, 145, 74, 75, 76, 180, 181, 182, 183, 78, 87, 184, 185,
-        186, 187, 83, 85, 154, 188, 189, 190, 191, 192, 193, 194, 86, 89, 195,
-        196, 197, 198, 199, 90, 91, 200, 201, 202, 203, 204, 205, 237,
+        237, 1, 161, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
+        50, 70, 99, 7, 82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22,
+        23, 44, 45, 58, 51, 103, 104, 105, 63, 64, 106, 107, 108, 162, 110, 57,
+        59, 60, 72, 73, 148, 25, 24, 128, 81, 156, 163, 118, 119, 120, 115, 121,
+        29, 164, 109, 111, 112, 113, 67, 165, 6, 8, 9, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 20, 26, 114, 30, 122, 166, 53, 54, 167, 168, 169, 55, 170,
+        171, 172, 86, 173, 174, 175, 123, 124, 52, 48, 56, 176, 177, 178, 158,
+        138, 139, 140, 141, 83, 84, 179, 180, 181, 117, 90, 125, 126, 127, 129,
+        130, 131, 132, 133, 134, 135, 65, 61, 66, 136, 137, 142, 143, 144, 71,
+        145, 79, 146, 147, 76, 77, 78, 182, 183, 184, 185, 80, 89, 186, 187,
+        188, 189, 85, 87, 157, 190, 191, 192, 193, 194, 195, 196, 88, 91, 197,
+        198, 199, 200, 201, 92, 93, 202, 203, 204, 205, 206, 207, 238,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./reservationqueuemessagingdashboard.js`),
+      () => import(`./chunk~0242e5eb11.js`),
       __vite__mapDeps([
-        238, 1, 3, 2, 4, 5, 97, 30, 31, 27, 40, 21, 101, 19, 55, 56, 57, 58,
-        102, 103, 25, 7, 24, 69, 22, 23, 70, 71, 182, 183, 184, 88, 185, 186,
-        187, 190, 195, 36, 37, 38, 47, 48, 39, 61, 63, 196, 197, 198, 239,
+        239, 1, 3, 2, 4, 5, 99, 30, 31, 27, 40, 21, 103, 19, 57, 58, 59, 60,
+        104, 105, 25, 7, 24, 71, 22, 23, 72, 73, 184, 185, 186, 90, 187, 188,
+        189, 192, 197, 36, 37, 38, 49, 50, 39, 63, 65, 198, 199, 200, 240,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./contenthub_routing.js`),
+      () => import(`./chunk~4d6a0703cb.js`),
       __vite__mapDeps([
-        240, 1, 3, 2, 4, 5, 29, 214, 9, 10, 11, 12, 13, 14, 15, 16, 17, 51, 52,
-        164, 165, 166, 53, 167, 120, 27, 21, 41, 22, 23, 76, 182, 183, 77, 188,
-        35, 36, 37, 38, 39, 96, 60, 19, 47, 48, 68, 97, 7, 80, 98, 99, 100, 31,
-        34, 40, 42, 43, 56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 108, 109,
-        126, 189, 190, 191, 135, 136, 185, 81, 82, 241,
+        241, 1, 3, 2, 4, 5, 29, 167, 122, 9, 10, 11, 12, 13, 14, 15, 16, 17, 53,
+        54, 168, 169, 55, 170, 27, 21, 41, 22, 23, 78, 184, 185, 79, 190, 35,
+        36, 37, 38, 39, 98, 62, 19, 49, 50, 70, 99, 7, 82, 100, 101, 102, 31,
+        34, 40, 42, 43, 44, 45, 58, 51, 103, 104, 105, 63, 64, 106, 107, 108,
+        110, 111, 191, 192, 193, 136, 137, 187, 83, 84, 242,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./recap_routing.js`),
+      () => import(`./chunk~cf0982cd3a.js`),
       __vite__mapDeps([
-        242, 1, 158, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
-        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
-        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 117, 118, 55, 57, 58,
-        70, 71, 126, 146, 25, 24, 147, 127, 79, 153, 160, 116, 113, 119, 29,
-        161, 107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15,
-        16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170, 8, 18,
-        20, 6, 26, 112, 30, 171, 172, 121, 122, 50, 46, 54, 173, 174, 175, 155,
-        137, 138, 139, 140, 81, 82, 176, 177, 178, 179, 115, 88, 123, 124, 125,
-        128, 129, 130, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 69, 142,
-        77, 143, 144, 145, 74, 75, 76, 180, 181, 182, 183, 78, 87, 184, 185,
-        186, 187, 83, 85, 154, 188, 189, 190, 191, 192, 193, 194, 86, 89, 195,
-        196, 197, 198, 199, 90, 91, 200, 201, 202, 203, 204, 205,
+        243, 1, 161, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
+        50, 70, 99, 7, 82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22,
+        23, 44, 45, 58, 51, 103, 104, 105, 63, 64, 106, 107, 108, 162, 110, 57,
+        59, 60, 72, 73, 148, 25, 24, 128, 81, 156, 163, 118, 119, 120, 115, 121,
+        29, 164, 109, 111, 112, 113, 67, 165, 6, 8, 9, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 20, 26, 114, 30, 122, 166, 53, 54, 167, 168, 169, 55, 170,
+        171, 172, 86, 173, 174, 175, 123, 124, 52, 48, 56, 176, 177, 178, 158,
+        138, 139, 140, 141, 83, 84, 179, 180, 181, 117, 90, 125, 126, 127, 129,
+        130, 131, 132, 133, 134, 135, 65, 61, 66, 136, 137, 142, 143, 144, 71,
+        145, 79, 146, 147, 76, 77, 78, 182, 183, 184, 185, 80, 89, 186, 187,
+        188, 189, 85, 87, 157, 190, 191, 192, 193, 194, 195, 196, 88, 91, 197,
+        198, 199, 200, 201, 92, 93, 202, 203, 204, 205, 206, 207,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./deadlinelanding.js`),
+      () => import(`./chunk~9ea24a5c24.js`),
       __vite__mapDeps([
-        243, 1, 3, 2, 4, 5, 38, 37, 21, 41, 102, 103, 104, 105, 79, 35, 36, 39,
-        80, 7, 40, 58, 25, 24, 127, 227, 199, 228, 244,
+        244, 1, 3, 2, 4, 5, 38, 37, 21, 41, 104, 105, 106, 107, 81, 35, 36, 39,
+        82, 7, 40, 60, 25, 24, 128, 228, 201, 229, 245,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./taxrequirementlanding.js`),
-      __vite__mapDeps([245, 1, 3, 2, 4, 5, 21, 40, 182, 183, 227, 246]),
+      () => import(`./chunk~8bbbc35117.js`),
+      __vite__mapDeps([246, 1, 3, 2, 4, 5, 21, 40, 184, 185, 228, 247]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./meetsteamrouting.js`),
+      () => import(`./chunk~a7bc2e23e5.js`),
       __vite__mapDeps([
-        247, 1, 3, 60, 37, 38, 2, 4, 5, 35, 36, 39, 96, 19, 47, 48, 68, 97, 7,
-        80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43, 56, 49, 101,
-        102, 103, 61, 62, 104, 105, 106, 29, 112, 65, 58, 113, 114, 66, 57, 30,
-        55, 70, 71, 131, 25, 24, 79, 59, 63, 64, 75, 76, 182, 183, 77, 78, 143,
-        88, 83, 11, 84, 85, 154, 155, 192, 193, 194, 195, 196, 199, 248,
+        248, 1, 3, 62, 37, 38, 2, 4, 5, 35, 36, 39, 98, 19, 49, 50, 70, 99, 7,
+        82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22, 23, 44, 45, 58,
+        51, 103, 104, 105, 63, 64, 106, 107, 108, 29, 114, 67, 60, 115, 116, 68,
+        59, 30, 57, 72, 73, 132, 25, 24, 81, 61, 65, 66, 77, 78, 184, 185, 79,
+        80, 146, 90, 85, 11, 86, 87, 157, 158, 194, 195, 196, 197, 198, 201,
+        249,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./achievementseditorlanding.js`),
+      () => import(`./chunk~7ec67c8c4e.js`),
       __vite__mapDeps([
-        249, 1, 3, 2, 4, 5, 35, 36, 37, 38, 39, 68, 48, 163, 9, 10, 11, 12, 13,
-        14, 15, 16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170,
-        8, 18, 19, 20, 31, 214, 121, 122, 215, 216, 174, 175, 27, 21, 40, 24,
-        132, 133, 63, 182, 183, 77, 232, 178, 225, 226, 250,
+        250, 1, 3, 2, 4, 5, 35, 36, 37, 38, 39, 70, 50, 31, 166, 122, 9, 10, 11,
+        12, 13, 14, 15, 16, 17, 53, 54, 167, 168, 169, 55, 170, 171, 172, 86,
+        173, 8, 18, 19, 20, 123, 124, 216, 217, 177, 178, 27, 21, 40, 24, 133,
+        134, 65, 184, 185, 79, 233, 43, 226, 227, 251,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./creatorhomeadmindashboard.js`),
+      () => import(`./chunk~5173a490dd.js`),
       __vite__mapDeps([
-        251, 1, 3, 47, 37, 38, 48, 22, 23, 146, 98, 21, 58, 61, 25, 7, 24, 252,
+        252, 1, 3, 49, 37, 38, 50, 22, 23, 148, 100, 21, 60, 63, 25, 7, 24, 253,
       ]),
       import.meta.url,
     ),
@@ -1975,12 +2063,14 @@ function _() {
       case `LibraryLogoEditorPopup`:
         _(
           async () => {
-            let { Init_LibraryLogoEditor: _ } = await import(`./logoedtior.js`);
+            let { Init_LibraryLogoEditor: _ } = await import(
+              `./chunk~79627e9162.js`
+            );
             return {
               Init_LibraryLogoEditor: _,
             };
           },
-          __vite__mapDeps([253, 1, 3, 2, 4, 5, 100, 21, 22, 23, 130, 254, 255]),
+          __vite__mapDeps([254, 1, 3, 2, 4, 5, 102, 21, 22, 23, 131, 255, 256]),
           import.meta.url,
         ).then(({ Init_LibraryLogoEditor: _ }) =>
           _(_ == `LibraryLogoEditorPopup`, _),
@@ -2005,86 +2095,69 @@ async function _(_) {
       _(
         Object.assign({
           "../../../shared/localization/marketing/marketing_arabic.json": () =>
-            _(() => import(`./marketing_arabic.js`), [], import.meta.url),
+            _(() => import(`./chunk~d06d52ad94.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_brazilian.json":
-            () =>
-              _(() => import(`./marketing_brazilian.js`), [], import.meta.url),
+            () => _(() => import(`./chunk~c7efe4b325.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_bulgarian.json":
-            () =>
-              _(() => import(`./marketing_bulgarian.js`), [], import.meta.url),
+            () => _(() => import(`./chunk~f4c02deb1c.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_czech.json": () =>
-            _(() => import(`./marketing_czech.js`), [], import.meta.url),
+            _(() => import(`./chunk~1e1a737e57.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_danish.json": () =>
-            _(() => import(`./marketing_danish.js`), [], import.meta.url),
+            _(() => import(`./chunk~8adbd8d2a7.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_dutch.json": () =>
-            _(() => import(`./marketing_dutch.js`), [], import.meta.url),
+            _(() => import(`./chunk~9432315ae6.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_english.json": () =>
-            _(() => import(`./marketing_english.js`), [], import.meta.url),
+            _(() => import(`./chunk~672dff74b8.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_finnish.json": () =>
-            _(() => import(`./marketing_finnish.js`), [], import.meta.url),
+            _(() => import(`./chunk~c71a2bb9d4.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_french.json": () =>
-            _(() => import(`./marketing_french.js`), [], import.meta.url),
+            _(() => import(`./chunk~b174530c55.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_german.json": () =>
-            _(() => import(`./marketing_german.js`), [], import.meta.url),
+            _(() => import(`./chunk~e5ec045f75.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_greek.json": () =>
-            _(() => import(`./marketing_greek.js`), [], import.meta.url),
+            _(() => import(`./chunk~e9e4c994fc.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_hungarian.json":
-            () =>
-              _(() => import(`./marketing_hungarian.js`), [], import.meta.url),
+            () => _(() => import(`./chunk~0f8f5b66ea.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_indonesian.json":
-            () =>
-              _(() => import(`./marketing_indonesian.js`), [], import.meta.url),
+            () => _(() => import(`./chunk~afa19427a6.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_italian.json": () =>
-            _(() => import(`./marketing_italian.js`), [], import.meta.url),
+            _(() => import(`./chunk~cc110d9310.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_japanese.json":
-            () =>
-              _(() => import(`./marketing_japanese.js`), [], import.meta.url),
+            () => _(() => import(`./chunk~5cdf6e1887.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_koreana.json": () =>
-            _(() => import(`./marketing_koreana.js`), [], import.meta.url),
+            _(() => import(`./chunk~f8d1c3eb39.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_latam.json": () =>
-            _(() => import(`./marketing_latam.js`), [], import.meta.url),
+            _(() => import(`./chunk~dcb198cb70.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_malay.json": () =>
-            _(() => import(`./marketing_malay.js`), [], import.meta.url),
+            _(() => import(`./chunk~7794cfc016.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_norwegian.json":
-            () =>
-              _(() => import(`./marketing_norwegian.js`), [], import.meta.url),
+            () => _(() => import(`./chunk~75ca050ede.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_polish.json": () =>
-            _(() => import(`./marketing_polish.js`), [], import.meta.url),
+            _(() => import(`./chunk~ab26257a4b.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_portuguese.json":
-            () =>
-              _(() => import(`./marketing_portuguese.js`), [], import.meta.url),
+            () => _(() => import(`./chunk~7e6a0dfeac.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_romanian.json":
-            () =>
-              _(() => import(`./marketing_romanian.js`), [], import.meta.url),
+            () => _(() => import(`./chunk~c25ddcf2dd.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_russian.json": () =>
-            _(() => import(`./marketing_russian.js`), [], import.meta.url),
+            _(() => import(`./chunk~e7e9152c82.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_sc_schinese.json":
-            () =>
-              _(
-                () => import(`./marketing_sc_schinese.js`),
-                [],
-                import.meta.url,
-              ),
+            () => _(() => import(`./chunk~f03332406a.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_schinese.json":
-            () =>
-              _(() => import(`./marketing_schinese.js`), [], import.meta.url),
+            () => _(() => import(`./chunk~fe42bc9af6.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_spanish.json": () =>
-            _(() => import(`./marketing_spanish.js`), [], import.meta.url),
+            _(() => import(`./chunk~84913aa7ea.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_swedish.json": () =>
-            _(() => import(`./marketing_swedish.js`), [], import.meta.url),
+            _(() => import(`./chunk~d51cfc3d8e.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_tchinese.json":
-            () =>
-              _(() => import(`./marketing_tchinese.js`), [], import.meta.url),
+            () => _(() => import(`./chunk~c468013b32.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_thai.json": () =>
-            _(() => import(`./marketing_thai.js`), [], import.meta.url),
+            _(() => import(`./chunk~e9a21f2d23.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_turkish.json": () =>
-            _(() => import(`./marketing_turkish.js`), [], import.meta.url),
+            _(() => import(`./chunk~a65681121d.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_ukrainian.json":
-            () =>
-              _(() => import(`./marketing_ukrainian.js`), [], import.meta.url),
+            () => _(() => import(`./chunk~89a480c739.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_vietnamese.json":
-            () =>
-              _(() => import(`./marketing_vietnamese.js`), [], import.meta.url),
+            () => _(() => import(`./chunk~bd7a2449df.js`), [], import.meta.url),
         }),
         `../../../shared/localization/marketing/marketing_${_}.json`,
         7,
@@ -2092,69 +2165,69 @@ async function _(_) {
       _(
         Object.assign({
           "../../../shared/localization/sales/sales_arabic.json": () =>
-            _(() => import(`./sales_arabic.js`), [], import.meta.url),
+            _(() => import(`./chunk~a2651acc01.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_brazilian.json": () =>
-            _(() => import(`./sales_brazilian.js`), [], import.meta.url),
+            _(() => import(`./chunk~137fe161a3.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_bulgarian.json": () =>
-            _(() => import(`./sales_bulgarian.js`), [], import.meta.url),
+            _(() => import(`./chunk~3388f59a8c.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_czech.json": () =>
-            _(() => import(`./sales_czech.js`), [], import.meta.url),
+            _(() => import(`./chunk~684fc3a48f.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_danish.json": () =>
-            _(() => import(`./sales_danish.js`), [], import.meta.url),
+            _(() => import(`./chunk~478dcdfd50.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_dutch.json": () =>
-            _(() => import(`./sales_dutch.js`), [], import.meta.url),
+            _(() => import(`./chunk~07af9aa5c9.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_english.json": () =>
-            _(() => import(`./sales_english.js`), [], import.meta.url),
+            _(() => import(`./chunk~467c065f96.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_finnish.json": () =>
-            _(() => import(`./sales_finnish.js`), [], import.meta.url),
+            _(() => import(`./chunk~17f8e94605.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_french.json": () =>
-            _(() => import(`./sales_french.js`), [], import.meta.url),
+            _(() => import(`./chunk~0d8952bf3a.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_german.json": () =>
-            _(() => import(`./sales_german.js`), [], import.meta.url),
+            _(() => import(`./chunk~4cde817ea0.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_greek.json": () =>
-            _(() => import(`./sales_greek.js`), [], import.meta.url),
+            _(() => import(`./chunk~eadaa09f2d.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_hungarian.json": () =>
-            _(() => import(`./sales_hungarian.js`), [], import.meta.url),
+            _(() => import(`./chunk~c3cd1630c5.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_indonesian.json": () =>
-            _(() => import(`./sales_indonesian.js`), [], import.meta.url),
+            _(() => import(`./chunk~f01fd3cdae.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_italian.json": () =>
-            _(() => import(`./sales_italian.js`), [], import.meta.url),
+            _(() => import(`./chunk~7530843e6f.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_japanese.json": () =>
-            _(() => import(`./sales_japanese.js`), [], import.meta.url),
+            _(() => import(`./chunk~8c1b5f00ab.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_koreana.json": () =>
-            _(() => import(`./sales_koreana.js`), [], import.meta.url),
+            _(() => import(`./chunk~5dd04956c2.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_latam.json": () =>
-            _(() => import(`./sales_latam.js`), [], import.meta.url),
+            _(() => import(`./chunk~cd7cbec106.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_malay.json": () =>
-            _(() => import(`./sales_malay.js`), [], import.meta.url),
+            _(() => import(`./chunk~19e4851e4a.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_norwegian.json": () =>
-            _(() => import(`./sales_norwegian.js`), [], import.meta.url),
+            _(() => import(`./chunk~cead22bc95.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_polish.json": () =>
-            _(() => import(`./sales_polish.js`), [], import.meta.url),
+            _(() => import(`./chunk~59fe5ba68d.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_portuguese.json": () =>
-            _(() => import(`./sales_portuguese.js`), [], import.meta.url),
+            _(() => import(`./chunk~4ce4f00e1d.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_romanian.json": () =>
-            _(() => import(`./sales_romanian.js`), [], import.meta.url),
+            _(() => import(`./chunk~396e8e03ab.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_russian.json": () =>
-            _(() => import(`./sales_russian.js`), [], import.meta.url),
+            _(() => import(`./chunk~b90af23307.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_sc_schinese.json": () =>
-            _(() => import(`./sales_sc_schinese.js`), [], import.meta.url),
+            _(() => import(`./chunk~62f4ec6297.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_schinese.json": () =>
-            _(() => import(`./sales_schinese.js`), [], import.meta.url),
+            _(() => import(`./chunk~fd02ec7ab8.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_spanish.json": () =>
-            _(() => import(`./sales_spanish.js`), [], import.meta.url),
+            _(() => import(`./chunk~5b296efd25.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_swedish.json": () =>
-            _(() => import(`./sales_swedish.js`), [], import.meta.url),
+            _(() => import(`./chunk~c2dd4b566b.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_tchinese.json": () =>
-            _(() => import(`./sales_tchinese.js`), [], import.meta.url),
+            _(() => import(`./chunk~8eb6adf994.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_thai.json": () =>
-            _(() => import(`./sales_thai.js`), [], import.meta.url),
+            _(() => import(`./chunk~d1918a051e.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_turkish.json": () =>
-            _(() => import(`./sales_turkish.js`), [], import.meta.url),
+            _(() => import(`./chunk~151ab2fec5.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_ukrainian.json": () =>
-            _(() => import(`./sales_ukrainian.js`), [], import.meta.url),
+            _(() => import(`./chunk~ec9b4ec76d.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_vietnamese.json": () =>
-            _(() => import(`./sales_vietnamese.js`), [], import.meta.url),
+            _(() => import(`./chunk~bf026fe6b0.js`), [], import.meta.url),
         }),
         `../../../shared/localization/sales/sales_${_}.json`,
         7,
@@ -2162,67 +2235,67 @@ async function _(_) {
       _(
         Object.assign({
           "../localization/main_arabic.json": () =>
-            _(() => import(`./main_arabic.js`), [], import.meta.url),
+            _(() => import(`./chunk~a1afcc6b49.js`), [], import.meta.url),
           "../localization/main_brazilian.json": () =>
-            _(() => import(`./main_brazilian.js`), [], import.meta.url),
+            _(() => import(`./chunk~efce32a0fd.js`), [], import.meta.url),
           "../localization/main_bulgarian.json": () =>
-            _(() => import(`./main_bulgarian.js`), [], import.meta.url),
+            _(() => import(`./chunk~a0c563b312.js`), [], import.meta.url),
           "../localization/main_czech.json": () =>
-            _(() => import(`./main_czech.js`), [], import.meta.url),
+            _(() => import(`./chunk~86e73de564.js`), [], import.meta.url),
           "../localization/main_danish.json": () =>
-            _(() => import(`./main_danish.js`), [], import.meta.url),
+            _(() => import(`./chunk~8ed5a1f992.js`), [], import.meta.url),
           "../localization/main_dutch.json": () =>
-            _(() => import(`./main_dutch.js`), [], import.meta.url),
+            _(() => import(`./chunk~c177c2c91d.js`), [], import.meta.url),
           "../localization/main_english.json": () =>
-            _(() => import(`./main_english.js`), [], import.meta.url),
+            _(() => import(`./chunk~fbc9faf024.js`), [], import.meta.url),
           "../localization/main_finnish.json": () =>
-            _(() => import(`./main_finnish.js`), [], import.meta.url),
+            _(() => import(`./chunk~2985c8f3da.js`), [], import.meta.url),
           "../localization/main_french.json": () =>
-            _(() => import(`./main_french.js`), [], import.meta.url),
+            _(() => import(`./chunk~3fa8b7849a.js`), [], import.meta.url),
           "../localization/main_german.json": () =>
-            _(() => import(`./main_german.js`), [], import.meta.url),
+            _(() => import(`./chunk~897d980c88.js`), [], import.meta.url),
           "../localization/main_greek.json": () =>
-            _(() => import(`./main_greek.js`), [], import.meta.url),
+            _(() => import(`./chunk~d4f65e6d28.js`), [], import.meta.url),
           "../localization/main_hungarian.json": () =>
-            _(() => import(`./main_hungarian.js`), [], import.meta.url),
+            _(() => import(`./chunk~2f837a1fa1.js`), [], import.meta.url),
           "../localization/main_indonesian.json": () =>
-            _(() => import(`./main_indonesian.js`), [], import.meta.url),
+            _(() => import(`./chunk~cd202e69b5.js`), [], import.meta.url),
           "../localization/main_italian.json": () =>
-            _(() => import(`./main_italian.js`), [], import.meta.url),
+            _(() => import(`./chunk~34938c270d.js`), [], import.meta.url),
           "../localization/main_japanese.json": () =>
-            _(() => import(`./main_japanese.js`), [], import.meta.url),
+            _(() => import(`./chunk~359677a3c7.js`), [], import.meta.url),
           "../localization/main_koreana.json": () =>
-            _(() => import(`./main_koreana.js`), [], import.meta.url),
+            _(() => import(`./chunk~15f48863a2.js`), [], import.meta.url),
           "../localization/main_latam.json": () =>
-            _(() => import(`./main_latam.js`), [], import.meta.url),
+            _(() => import(`./chunk~826d3b5250.js`), [], import.meta.url),
           "../localization/main_malay.json": () =>
-            _(() => import(`./main_malay.js`), [], import.meta.url),
+            _(() => import(`./chunk~1865eab4be.js`), [], import.meta.url),
           "../localization/main_norwegian.json": () =>
-            _(() => import(`./main_norwegian.js`), [], import.meta.url),
+            _(() => import(`./chunk~0f3103bc69.js`), [], import.meta.url),
           "../localization/main_polish.json": () =>
-            _(() => import(`./main_polish.js`), [], import.meta.url),
+            _(() => import(`./chunk~d757c1664f.js`), [], import.meta.url),
           "../localization/main_portuguese.json": () =>
-            _(() => import(`./main_portuguese.js`), [], import.meta.url),
+            _(() => import(`./chunk~e45f96fdb3.js`), [], import.meta.url),
           "../localization/main_romanian.json": () =>
-            _(() => import(`./main_romanian.js`), [], import.meta.url),
+            _(() => import(`./chunk~6bfef4da5d.js`), [], import.meta.url),
           "../localization/main_russian.json": () =>
-            _(() => import(`./main_russian.js`), [], import.meta.url),
+            _(() => import(`./chunk~f6efdfaf9b.js`), [], import.meta.url),
           "../localization/main_schinese.json": () =>
-            _(() => import(`./main_schinese.js`), [], import.meta.url),
+            _(() => import(`./chunk~e325844ad5.js`), [], import.meta.url),
           "../localization/main_spanish.json": () =>
-            _(() => import(`./main_spanish.js`), [], import.meta.url),
+            _(() => import(`./chunk~2d97981d2c.js`), [], import.meta.url),
           "../localization/main_swedish.json": () =>
-            _(() => import(`./main_swedish.js`), [], import.meta.url),
+            _(() => import(`./chunk~a18566ab59.js`), [], import.meta.url),
           "../localization/main_tchinese.json": () =>
-            _(() => import(`./main_tchinese.js`), [], import.meta.url),
+            _(() => import(`./chunk~a7cc5d09d2.js`), [], import.meta.url),
           "../localization/main_thai.json": () =>
-            _(() => import(`./main_thai.js`), [], import.meta.url),
+            _(() => import(`./chunk~378a998550.js`), [], import.meta.url),
           "../localization/main_turkish.json": () =>
-            _(() => import(`./main_turkish.js`), [], import.meta.url),
+            _(() => import(`./chunk~454f02dbb5.js`), [], import.meta.url),
           "../localization/main_ukrainian.json": () =>
-            _(() => import(`./main_ukrainian.js`), [], import.meta.url),
+            _(() => import(`./chunk~1c557f5550.js`), [], import.meta.url),
           "../localization/main_vietnamese.json": () =>
-            _(() => import(`./main_vietnamese.js`), [], import.meta.url),
+            _(() => import(`./chunk~312af0dfee.js`), [], import.meta.url),
         }),
         `../localization/main_${_}.json`,
         3,
@@ -2239,130 +2312,94 @@ async function _(_) {
           Object.assign({
             "../../../shared/localization/marketing/marketing_arabic.json":
               () =>
-                _(() => import(`./marketing_arabic.js`), [], import.meta.url),
+                _(() => import(`./chunk~d06d52ad94.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_brazilian.json":
               () =>
-                _(
-                  () => import(`./marketing_brazilian.js`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./chunk~c7efe4b325.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_bulgarian.json":
               () =>
-                _(
-                  () => import(`./marketing_bulgarian.js`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./chunk~f4c02deb1c.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_czech.json": () =>
-              _(() => import(`./marketing_czech.js`), [], import.meta.url),
+              _(() => import(`./chunk~1e1a737e57.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_danish.json":
               () =>
-                _(() => import(`./marketing_danish.js`), [], import.meta.url),
+                _(() => import(`./chunk~8adbd8d2a7.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_dutch.json": () =>
-              _(() => import(`./marketing_dutch.js`), [], import.meta.url),
+              _(() => import(`./chunk~9432315ae6.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_english.json":
               () =>
-                _(() => import(`./marketing_english.js`), [], import.meta.url),
+                _(() => import(`./chunk~672dff74b8.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_finnish.json":
               () =>
-                _(() => import(`./marketing_finnish.js`), [], import.meta.url),
+                _(() => import(`./chunk~c71a2bb9d4.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_french.json":
               () =>
-                _(() => import(`./marketing_french.js`), [], import.meta.url),
+                _(() => import(`./chunk~b174530c55.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_german.json":
               () =>
-                _(() => import(`./marketing_german.js`), [], import.meta.url),
+                _(() => import(`./chunk~e5ec045f75.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_greek.json": () =>
-              _(() => import(`./marketing_greek.js`), [], import.meta.url),
+              _(() => import(`./chunk~e9e4c994fc.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_hungarian.json":
               () =>
-                _(
-                  () => import(`./marketing_hungarian.js`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./chunk~0f8f5b66ea.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_indonesian.json":
               () =>
-                _(
-                  () => import(`./marketing_indonesian.js`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./chunk~afa19427a6.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_italian.json":
               () =>
-                _(() => import(`./marketing_italian.js`), [], import.meta.url),
+                _(() => import(`./chunk~cc110d9310.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_japanese.json":
               () =>
-                _(() => import(`./marketing_japanese.js`), [], import.meta.url),
+                _(() => import(`./chunk~5cdf6e1887.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_koreana.json":
               () =>
-                _(() => import(`./marketing_koreana.js`), [], import.meta.url),
+                _(() => import(`./chunk~f8d1c3eb39.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_latam.json": () =>
-              _(() => import(`./marketing_latam.js`), [], import.meta.url),
+              _(() => import(`./chunk~dcb198cb70.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_malay.json": () =>
-              _(() => import(`./marketing_malay.js`), [], import.meta.url),
+              _(() => import(`./chunk~7794cfc016.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_norwegian.json":
               () =>
-                _(
-                  () => import(`./marketing_norwegian.js`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./chunk~75ca050ede.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_polish.json":
               () =>
-                _(() => import(`./marketing_polish.js`), [], import.meta.url),
+                _(() => import(`./chunk~ab26257a4b.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_portuguese.json":
               () =>
-                _(
-                  () => import(`./marketing_portuguese.js`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./chunk~7e6a0dfeac.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_romanian.json":
               () =>
-                _(() => import(`./marketing_romanian.js`), [], import.meta.url),
+                _(() => import(`./chunk~c25ddcf2dd.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_russian.json":
               () =>
-                _(() => import(`./marketing_russian.js`), [], import.meta.url),
+                _(() => import(`./chunk~e7e9152c82.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_sc_schinese.json":
               () =>
-                _(
-                  () => import(`./marketing_sc_schinese.js`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./chunk~f03332406a.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_schinese.json":
               () =>
-                _(() => import(`./marketing_schinese.js`), [], import.meta.url),
+                _(() => import(`./chunk~fe42bc9af6.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_spanish.json":
               () =>
-                _(() => import(`./marketing_spanish.js`), [], import.meta.url),
+                _(() => import(`./chunk~84913aa7ea.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_swedish.json":
               () =>
-                _(() => import(`./marketing_swedish.js`), [], import.meta.url),
+                _(() => import(`./chunk~d51cfc3d8e.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_tchinese.json":
               () =>
-                _(() => import(`./marketing_tchinese.js`), [], import.meta.url),
+                _(() => import(`./chunk~c468013b32.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_thai.json": () =>
-              _(() => import(`./marketing_thai.js`), [], import.meta.url),
+              _(() => import(`./chunk~e9a21f2d23.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_turkish.json":
               () =>
-                _(() => import(`./marketing_turkish.js`), [], import.meta.url),
+                _(() => import(`./chunk~a65681121d.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_ukrainian.json":
               () =>
-                _(
-                  () => import(`./marketing_ukrainian.js`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./chunk~89a480c739.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_vietnamese.json":
               () =>
-                _(
-                  () => import(`./marketing_vietnamese.js`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./chunk~bd7a2449df.js`), [], import.meta.url),
           }),
           `../../../shared/localization/marketing/marketing_${_}.json`,
           7,
@@ -2370,69 +2407,69 @@ async function _(_) {
         _(
           Object.assign({
             "../../../shared/localization/sales/sales_arabic.json": () =>
-              _(() => import(`./sales_arabic.js`), [], import.meta.url),
+              _(() => import(`./chunk~a2651acc01.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_brazilian.json": () =>
-              _(() => import(`./sales_brazilian.js`), [], import.meta.url),
+              _(() => import(`./chunk~137fe161a3.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_bulgarian.json": () =>
-              _(() => import(`./sales_bulgarian.js`), [], import.meta.url),
+              _(() => import(`./chunk~3388f59a8c.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_czech.json": () =>
-              _(() => import(`./sales_czech.js`), [], import.meta.url),
+              _(() => import(`./chunk~684fc3a48f.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_danish.json": () =>
-              _(() => import(`./sales_danish.js`), [], import.meta.url),
+              _(() => import(`./chunk~478dcdfd50.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_dutch.json": () =>
-              _(() => import(`./sales_dutch.js`), [], import.meta.url),
+              _(() => import(`./chunk~07af9aa5c9.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_english.json": () =>
-              _(() => import(`./sales_english.js`), [], import.meta.url),
+              _(() => import(`./chunk~467c065f96.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_finnish.json": () =>
-              _(() => import(`./sales_finnish.js`), [], import.meta.url),
+              _(() => import(`./chunk~17f8e94605.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_french.json": () =>
-              _(() => import(`./sales_french.js`), [], import.meta.url),
+              _(() => import(`./chunk~0d8952bf3a.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_german.json": () =>
-              _(() => import(`./sales_german.js`), [], import.meta.url),
+              _(() => import(`./chunk~4cde817ea0.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_greek.json": () =>
-              _(() => import(`./sales_greek.js`), [], import.meta.url),
+              _(() => import(`./chunk~eadaa09f2d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_hungarian.json": () =>
-              _(() => import(`./sales_hungarian.js`), [], import.meta.url),
+              _(() => import(`./chunk~c3cd1630c5.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_indonesian.json": () =>
-              _(() => import(`./sales_indonesian.js`), [], import.meta.url),
+              _(() => import(`./chunk~f01fd3cdae.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_italian.json": () =>
-              _(() => import(`./sales_italian.js`), [], import.meta.url),
+              _(() => import(`./chunk~7530843e6f.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_japanese.json": () =>
-              _(() => import(`./sales_japanese.js`), [], import.meta.url),
+              _(() => import(`./chunk~8c1b5f00ab.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_koreana.json": () =>
-              _(() => import(`./sales_koreana.js`), [], import.meta.url),
+              _(() => import(`./chunk~5dd04956c2.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_latam.json": () =>
-              _(() => import(`./sales_latam.js`), [], import.meta.url),
+              _(() => import(`./chunk~cd7cbec106.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_malay.json": () =>
-              _(() => import(`./sales_malay.js`), [], import.meta.url),
+              _(() => import(`./chunk~19e4851e4a.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_norwegian.json": () =>
-              _(() => import(`./sales_norwegian.js`), [], import.meta.url),
+              _(() => import(`./chunk~cead22bc95.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_polish.json": () =>
-              _(() => import(`./sales_polish.js`), [], import.meta.url),
+              _(() => import(`./chunk~59fe5ba68d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_portuguese.json": () =>
-              _(() => import(`./sales_portuguese.js`), [], import.meta.url),
+              _(() => import(`./chunk~4ce4f00e1d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_romanian.json": () =>
-              _(() => import(`./sales_romanian.js`), [], import.meta.url),
+              _(() => import(`./chunk~396e8e03ab.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_russian.json": () =>
-              _(() => import(`./sales_russian.js`), [], import.meta.url),
+              _(() => import(`./chunk~b90af23307.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_sc_schinese.json": () =>
-              _(() => import(`./sales_sc_schinese.js`), [], import.meta.url),
+              _(() => import(`./chunk~62f4ec6297.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_schinese.json": () =>
-              _(() => import(`./sales_schinese.js`), [], import.meta.url),
+              _(() => import(`./chunk~fd02ec7ab8.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_spanish.json": () =>
-              _(() => import(`./sales_spanish.js`), [], import.meta.url),
+              _(() => import(`./chunk~5b296efd25.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_swedish.json": () =>
-              _(() => import(`./sales_swedish.js`), [], import.meta.url),
+              _(() => import(`./chunk~c2dd4b566b.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_tchinese.json": () =>
-              _(() => import(`./sales_tchinese.js`), [], import.meta.url),
+              _(() => import(`./chunk~8eb6adf994.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_thai.json": () =>
-              _(() => import(`./sales_thai.js`), [], import.meta.url),
+              _(() => import(`./chunk~d1918a051e.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_turkish.json": () =>
-              _(() => import(`./sales_turkish.js`), [], import.meta.url),
+              _(() => import(`./chunk~151ab2fec5.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_ukrainian.json": () =>
-              _(() => import(`./sales_ukrainian.js`), [], import.meta.url),
+              _(() => import(`./chunk~ec9b4ec76d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_vietnamese.json": () =>
-              _(() => import(`./sales_vietnamese.js`), [], import.meta.url),
+              _(() => import(`./chunk~bf026fe6b0.js`), [], import.meta.url),
           }),
           `../../../shared/localization/sales/sales_${_}.json`,
           7,
@@ -2440,67 +2477,67 @@ async function _(_) {
         _(
           Object.assign({
             "../localization/main_arabic.json": () =>
-              _(() => import(`./main_arabic.js`), [], import.meta.url),
+              _(() => import(`./chunk~a1afcc6b49.js`), [], import.meta.url),
             "../localization/main_brazilian.json": () =>
-              _(() => import(`./main_brazilian.js`), [], import.meta.url),
+              _(() => import(`./chunk~efce32a0fd.js`), [], import.meta.url),
             "../localization/main_bulgarian.json": () =>
-              _(() => import(`./main_bulgarian.js`), [], import.meta.url),
+              _(() => import(`./chunk~a0c563b312.js`), [], import.meta.url),
             "../localization/main_czech.json": () =>
-              _(() => import(`./main_czech.js`), [], import.meta.url),
+              _(() => import(`./chunk~86e73de564.js`), [], import.meta.url),
             "../localization/main_danish.json": () =>
-              _(() => import(`./main_danish.js`), [], import.meta.url),
+              _(() => import(`./chunk~8ed5a1f992.js`), [], import.meta.url),
             "../localization/main_dutch.json": () =>
-              _(() => import(`./main_dutch.js`), [], import.meta.url),
+              _(() => import(`./chunk~c177c2c91d.js`), [], import.meta.url),
             "../localization/main_english.json": () =>
-              _(() => import(`./main_english.js`), [], import.meta.url),
+              _(() => import(`./chunk~fbc9faf024.js`), [], import.meta.url),
             "../localization/main_finnish.json": () =>
-              _(() => import(`./main_finnish.js`), [], import.meta.url),
+              _(() => import(`./chunk~2985c8f3da.js`), [], import.meta.url),
             "../localization/main_french.json": () =>
-              _(() => import(`./main_french.js`), [], import.meta.url),
+              _(() => import(`./chunk~3fa8b7849a.js`), [], import.meta.url),
             "../localization/main_german.json": () =>
-              _(() => import(`./main_german.js`), [], import.meta.url),
+              _(() => import(`./chunk~897d980c88.js`), [], import.meta.url),
             "../localization/main_greek.json": () =>
-              _(() => import(`./main_greek.js`), [], import.meta.url),
+              _(() => import(`./chunk~d4f65e6d28.js`), [], import.meta.url),
             "../localization/main_hungarian.json": () =>
-              _(() => import(`./main_hungarian.js`), [], import.meta.url),
+              _(() => import(`./chunk~2f837a1fa1.js`), [], import.meta.url),
             "../localization/main_indonesian.json": () =>
-              _(() => import(`./main_indonesian.js`), [], import.meta.url),
+              _(() => import(`./chunk~cd202e69b5.js`), [], import.meta.url),
             "../localization/main_italian.json": () =>
-              _(() => import(`./main_italian.js`), [], import.meta.url),
+              _(() => import(`./chunk~34938c270d.js`), [], import.meta.url),
             "../localization/main_japanese.json": () =>
-              _(() => import(`./main_japanese.js`), [], import.meta.url),
+              _(() => import(`./chunk~359677a3c7.js`), [], import.meta.url),
             "../localization/main_koreana.json": () =>
-              _(() => import(`./main_koreana.js`), [], import.meta.url),
+              _(() => import(`./chunk~15f48863a2.js`), [], import.meta.url),
             "../localization/main_latam.json": () =>
-              _(() => import(`./main_latam.js`), [], import.meta.url),
+              _(() => import(`./chunk~826d3b5250.js`), [], import.meta.url),
             "../localization/main_malay.json": () =>
-              _(() => import(`./main_malay.js`), [], import.meta.url),
+              _(() => import(`./chunk~1865eab4be.js`), [], import.meta.url),
             "../localization/main_norwegian.json": () =>
-              _(() => import(`./main_norwegian.js`), [], import.meta.url),
+              _(() => import(`./chunk~0f3103bc69.js`), [], import.meta.url),
             "../localization/main_polish.json": () =>
-              _(() => import(`./main_polish.js`), [], import.meta.url),
+              _(() => import(`./chunk~d757c1664f.js`), [], import.meta.url),
             "../localization/main_portuguese.json": () =>
-              _(() => import(`./main_portuguese.js`), [], import.meta.url),
+              _(() => import(`./chunk~e45f96fdb3.js`), [], import.meta.url),
             "../localization/main_romanian.json": () =>
-              _(() => import(`./main_romanian.js`), [], import.meta.url),
+              _(() => import(`./chunk~6bfef4da5d.js`), [], import.meta.url),
             "../localization/main_russian.json": () =>
-              _(() => import(`./main_russian.js`), [], import.meta.url),
+              _(() => import(`./chunk~f6efdfaf9b.js`), [], import.meta.url),
             "../localization/main_schinese.json": () =>
-              _(() => import(`./main_schinese.js`), [], import.meta.url),
+              _(() => import(`./chunk~e325844ad5.js`), [], import.meta.url),
             "../localization/main_spanish.json": () =>
-              _(() => import(`./main_spanish.js`), [], import.meta.url),
+              _(() => import(`./chunk~2d97981d2c.js`), [], import.meta.url),
             "../localization/main_swedish.json": () =>
-              _(() => import(`./main_swedish.js`), [], import.meta.url),
+              _(() => import(`./chunk~a18566ab59.js`), [], import.meta.url),
             "../localization/main_tchinese.json": () =>
-              _(() => import(`./main_tchinese.js`), [], import.meta.url),
+              _(() => import(`./chunk~a7cc5d09d2.js`), [], import.meta.url),
             "../localization/main_thai.json": () =>
-              _(() => import(`./main_thai.js`), [], import.meta.url),
+              _(() => import(`./chunk~378a998550.js`), [], import.meta.url),
             "../localization/main_turkish.json": () =>
-              _(() => import(`./main_turkish.js`), [], import.meta.url),
+              _(() => import(`./chunk~454f02dbb5.js`), [], import.meta.url),
             "../localization/main_ukrainian.json": () =>
-              _(() => import(`./main_ukrainian.js`), [], import.meta.url),
+              _(() => import(`./chunk~1c557f5550.js`), [], import.meta.url),
             "../localization/main_vietnamese.json": () =>
-              _(() => import(`./main_vietnamese.js`), [], import.meta.url),
+              _(() => import(`./chunk~312af0dfee.js`), [], import.meta.url),
           }),
           `../localization/main_${_}.json`,
           3,

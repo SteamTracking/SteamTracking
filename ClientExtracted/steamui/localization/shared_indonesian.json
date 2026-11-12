@@ -4187,7 +4187,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Data histogram didasarkan pada laporan FPS game ini yang diberikan oleh pengguna perangkat %2$s yang setuju untuk membagikan data FPS.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Distribusi FPS",
     "GamePerformanceStats_Framerate": "FPS",
-    "GamePerformanceStats_SessionLabel": "% Sesi",
+    "GamePerformanceStats_SessionLabel": "% sampel",
     "GamePerformanceStats_Chart_NoData": "Grafik akan tersedia setelah data yang memadai terkumpul",
     "NewToolTitleSuffix_Beta": "BETA",
     "DynamicLinkType_WorkshopItem": "Item Workshop untuk %1$s",
@@ -4214,6 +4214,10 @@
     "GamePerformanceStats_StillGatheringData": "Steam masih mengumpulkan data FPS untuk %1$s di %2$s",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam masih mengumpulkan data FPS untuk game ini di %1$s",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam masih mengumpulkan data FPS untuk game ini",
-    "GamePerformanceStats_FrameRateDistribution": "Grafik FPS ini didasarkan pada data gameplay anonim dari pelanggan yang memilih untuk berpartisipasi dan memainkan %1$s di %2$s",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Grafik FPS ini didasarkan pada data gameplay anonim dari pelanggan yang memilih untuk berpartisipasi dan memainkan game ini di %1$s"
+    "GamePerformanceStats_FrameRateDistribution": "Grafik ini menunjukkan sampel FPS dari pelanggan yang memilih untuk berbagi data anonim saat bermain game %1$s pada %2$s. Setiap bilah menunjukkan persentase sampel pada FPS tersebut.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Grafik ini menunjukkan sampel FPS dari pelanggan yang memilih untuk berbagi data anonim saat bermain game ini pada %1$s. Setiap bilah menunjukkan persentase sampel pada FPS tersebut.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "Game ini memerlukan dukungan kontroler yang diaktifkan secara manual melalui pengaturan di dalam game",
+    "GamePerformanceStats_MoreDetailsTitle": "Rincian Lengkap",
+    "GamePerformanceStats_MoreDetails_Filtering": "Hanya data yang dikumpulkan pada batas frame default %1$s, yaitu %2$s FPS, yang disertakan. Waktu tidak aktif dan sampel yang tidak valid akan difilter. Beberapa sampel dikumpulkan dari setiap sesi bermain.",
+    "GamePerformanceStats_MoreDetails_VSync": "Perbedaan pada grafik (mis. antara %1$s dan %2$s FPS) dapat disebabkan oleh VSync, yang menyinkronkan pengiriman frame dengan kecepatan refresh layar untuk mencegah tearing pada tampilan. Hal ini dapat menyebabkan sampel menumpuk pada %1$s dan %2$s FPS bahkan ketika FPS rata-rata game berada di antara keduanya. Ini adalah perilaku VSync yang wajar, dan meskipun dapat memengaruhi frame pacing, hal ini tidak selalu menyebabkan stuttering yang terlihat."
 }

@@ -12,15 +12,15 @@
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
-	text-align: left;
+	text-align: start;
 }
 #gamenotificationsettings_maincontents {
 	width:936px;
 	min-width:936px;
 	margin:0;
 	padding:0;
-	text-align:left;
-	padding-left:12px;
+	text-align:start;
+	padding-inline-start:12px;
 	padding-top:21px;
 }
 #gamenotificationsettings_maincontents h2 {
@@ -30,7 +30,7 @@
 	padding:0;
 	font-size: 26px;
 	color: #898989;
-	padding-left:5px;
+	padding-inline-start:5px;
 }
 #gamenotificationsettings_maincontents h1 {
 	font-weight:normal;
@@ -39,7 +39,7 @@
 	margin:0;
 	padding:0;
 	padding-bottom:13px;
-	padding-left:5px;
+	padding-inline-start:5px;
 }
 
 .gamenotifications_settings_top_content {
@@ -47,7 +47,7 @@
 	height: 72px
 	padding-top: 15px;
 	font-size: 26px;
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	margin-bottom: 25px;
 	font-family: 'MotivaSans ExtraLight', Arial, Tahoma;
 	color: white;
@@ -59,8 +59,8 @@
 }
 
 .gamenotifications_settings_title_left {
-	float: left;
-	margin-left: 5px;
+	float: inline-start;
+	margin-inline-start: 5px;
 	text-transform: uppercase;
 	font-size: 10px;
 	font-family: Arial, Tahoma;
@@ -68,8 +68,8 @@
 }
 
 .gamenotifications_settings_title_right {
-	float: right;
-	margin-right: 5px;
+	float: inline-end;
+	margin-inline-end: 5px;
 	text-transform: uppercase;
 	font-size: 10px;
 	font-family: Arial, Tahoma;
@@ -95,10 +95,14 @@
 	background-position: 13px 21px;
 	width: 249px;
 	height: 65px;
-	padding-left: 41px;
+	padding-inline-start: 41px;
 	padding-top: 20px;
 	margin-top: 16px;
-	float: right;
+	float: inline-end;
+}
+
+#gamenotifications_settings_right_content:dir(rtl) {
+	background-position: right 13px top 21px;
 }
 
 .gamenotifications_settings_right_title {
@@ -131,10 +135,10 @@
 }
 
 .gamenotifications_settings_app_image {
-	margin-left: 10px;
-	margin-right: 20px;
+	margin-inline-start: 10px;
+	margin-inline-end: 20px;
 	margin-bottom: 5px;
-	float: left;
+	float: inline-start;
 }
 
 .gamenotifications_settings_app_name {
@@ -145,21 +149,21 @@
 }
 
 .gamenotifications_settings_app_checkbox {
-	float: right;
+	float: inline-end;
 	margin-top: -20px;
-	margin-right: 20px;
+	margin-inline-end: 20px;
 }
 
 .gamenotifications_no_notifications {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	font-size: 12px;
 	font-family: 'MotivaSans ExtraLight', Arial, Tahoma;
 	color: white;
 }
 
 .gamenotifications_settings_save_result {
-	margin-left: 1px;
-	padding-left: 5px;
+	margin-inline-start: 1px;
+	padding-inline-start: 5px;
 	width: 625px;
 	height: 25px;
 	line-height: 25px;

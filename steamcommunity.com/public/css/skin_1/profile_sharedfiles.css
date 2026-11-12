@@ -16,7 +16,7 @@
 	height: 114px;
 	position:relative;
 	min-height:70px;
-	text-align: left;
+	text-align: start;
 	display: flex;
 	flex-direction: row;
 	align-items: start;
@@ -30,11 +30,11 @@
 	color: #e1e1e1;
 	margin:0;
 	margin-top: 3px;
-	margin-left: 3px;
+	margin-inline-start: 3px;
 	padding:0;
 	padding-top:0px;
 	padding-bottom:16px;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 
 #BG_top_sharedfiles h2 {
@@ -42,21 +42,21 @@
 	font-size: 14px;
 	color: #e1e1e1;
 	margin:0;
-	margin-left: 3px;
+	margin-inline-start: 3px;
 	padding:0;
 	padding-top:0px;
 	padding-bottom:5px;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 
 #BG_bottom_sharedfiles {
-	text-align:left;
+	text-align:start;
 	margin: 0 auto;
 }
 
 #mainContents_sharedfiles {
 	padding:0;
-	text-align:left;
+	text-align:start;
 }
 
 #HeaderUserAvatar {
@@ -73,7 +73,7 @@
 
 #HeaderUserBreadcrumbs {
 	padding-top: 0px;
-	padding-left: 15px;
+	padding-inline-start: 15px;
 	padding-bottom: 2px;
 	font-size: 26px;
 	border-bottom: 1px solid #4c4c4c;
@@ -86,13 +86,13 @@
 
 
 #followButtonHolder {
-	float: right;
+	float: inline-end;
 }
 
 
 .followStatsBlock {
 	font-size: 18px;
-	margin-left: 6px;
+	margin-inline-start: 6px;
 }
 
 .separatorArrows {
@@ -126,7 +126,7 @@
 }
 
 .tab {
-	float:left;
+	float:inline-start;
 	margin-bottom: 0px;
 }
 .tab a,.tab a:hover,.tab a:visited,.tab a:active {
@@ -135,7 +135,7 @@
 	text-decoration:none;
 }
 .tabOff,.tabOn {
-	float:left;
+	float:inline-start;
 	padding:8px 8px 6px 8px;
 	height:15px;
 	font-size:12px;
@@ -146,7 +146,7 @@
 	background-color:#3a3a3a;
 }
 .tabOnL,.tabOnR,.tabOffL,.tabOffR {
-	float:left;
+	float:inline-start;
 	width:2px;
 	height:29px;
 }
@@ -159,7 +159,7 @@
 }
 
 .tabOnR,.tabOffR {
-	margin-right:6px;
+	margin-inline-end:6px;
 }
 
 /* FOLLOWING */
@@ -182,7 +182,7 @@ a.general_btn:hover {
 .btn_darkblue_white_innerfade.btn_medium.follow span
 {
 	position: relative;
-	padding-left: 28px;
+	padding-inline-start: 28px;
 
 }
 
@@ -204,7 +204,7 @@ a.general_btn:hover {
 {
 	position: absolute;
 	top: 5px;
-	left: 8px;
+	inset-inline-start: 8px;
 	height: 16px;
 	width: 16px;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/ico_follow_tiled.png);
@@ -257,7 +257,8 @@ a.general_btn:hover {
 	flex-direction: row;
 	flex-wrap: wrap;
 	column-gap: 16px;
-	padding: 2px 0 0 15px;
+	padding-block: 2px 0;
+	padding-inline: 15px 0;
 }
 
 .sharedfiles_usercontrol_ctn {
@@ -281,7 +282,7 @@ div.sharedfiles_filterselect {
 	display: inline-block;
 	font-size: 12px;
 	position: relative;
-	text-align: left;
+	text-align: start;
 	user-select: none;
 	-moz-user-select: none;
 	-webkit-user-select: none;
@@ -295,13 +296,13 @@ div.sharedfiles_filterselect.focus
 {
 	background-color: #7095ca;
 	border-top: 1px solid #79a1db;
-	border-left: 1px solid #79a1db;
-	border-right: 1px solid #79a1db;
+	border-inline-start: 1px solid #79a1db;
+	border-inline-end: 1px solid #79a1db;
 	border-bottom: 1px solid #7095ca;
 }
 
 div.sharedfiles_filterselect_options {
-	text-align: left;
+	text-align: start;
 	min-width: 95px;
 	line-height: 26px;
 	color: white;
@@ -313,13 +314,13 @@ div.sharedfiles_filterselect_options {
 
 .popup_block
 {
-	margin-left: 0px;
+	margin-inline-start: 0px;
 	margin-top: 0px;
 }
 
 div#sharedfiles_filterselect_app_filterable
 {
-	text-align: left;
+	text-align: start;
 	line-height: 26px;
 	color: white;
 	font-size: 12px;
@@ -351,8 +352,12 @@ div.sharedfiles_filterselect div.sharedfiles_filterselect_activeoption {
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/sharedfiles/workshop_dateselect_arrow.png' );
 	background-repeat: no-repeat;
 	background-position: top calc( 50% - 10px ) right;
-	padding-right: 17px;
+	padding-inline-end: 17px;
 	color: #ebebeb;
+}
+
+div.sharedfiles_filterselect div.sharedfiles_filterselect_activeoption:dir(rtl) {
+	background-position: top calc( 50% - 10px ) left;
 }
 
 
@@ -397,7 +402,7 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 	background-color: #2f3e55;
 	font-size: 11px;
 	color: white;
-	margin-left: 5px;
+	margin-inline-start: 5px;
 	padding-bottom: 5px;
 	display: inline;
 }
@@ -405,7 +410,7 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 #sharedfiles_filterselect_search_img {
 	position: absolute;
 	top: 8px;
-	right: 15px;
+	inset-inline-end: 15px;
 	width: 23px;
 	height: 18px;
 	padding: 0;
@@ -419,18 +424,18 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 	cursor: pointer;
 	color: white;
 	font-size: 12px;
-	text-align: left;
+	text-align: start;
 }
 
 #sharedfiles_view
 {
 	height: 26px;
 	line-height: 26px;
-	padding-right: 5px;
+	padding-inline-end: 5px;
 	cursor: pointer;
 	color: white;
 	font-size: 12px;
-	text-align: left;
+	text-align: start;
 	margin-top: 3px;
 }
 
@@ -480,13 +485,17 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 	-moz-border-radius: 4px;
 	font-size: 14px;
 	padding: 5px;
-	padding-right: 25px;
+	padding-inline-end: 25px;
 	text-align: center;
 	color: #828282;
 	background-color: #e8e8e8;
 	text-transform: none;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+#ScreenshotManagementToggle:dir(rtl) {
+	background-position: left;
 }
 
 #ScreenshotManagementToggle:hover {
@@ -504,11 +513,11 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 	-moz-border-radius: 4px;
 	font-size: 14px;
 	padding: 5px;
-	padding-right: 5px;
+	padding-inline-end: 5px;
 	margin-top: 3px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	text-align: center;
-	float: left;
+	float: inline-start;
 	color: #828282;
 	background-color: #e8e8e8;
 	text-transform: none;
@@ -538,9 +547,9 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 	height: 30px;
 	line-height: 30px;
 	padding: 0px;
-	padding-left: 12px;
-	padding-right: 12px;
-	margin-right: 5px;
+	padding-inline-start: 12px;
+	padding-inline-end: 12px;
+	margin-inline-end: 5px;
 	margin-bottom: 5px;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/groups/tab_blue_active.png);
 	background-repeat: repeat-x;
@@ -570,11 +579,11 @@ a.ScreenshotManagementButtonInactive, a.ScreenshotManagementButtonInactive:hover
 }
 
 #ScreenshotManagementButtonCancel {
-	float: right;
+	float: inline-end;
 }
 
 #ScreenshotDeleteLabel {
-	margin-left: 25px;
+	margin-inline-start: 25px;
 }
 
 #confirmBatchModal, #noSelectedShotsModal, #changeVisibilityModal, #privacyFailedModal, #confirmUnlinkAccountModal, #showVideoPrivacyModal {
@@ -583,7 +592,7 @@ a.ScreenshotManagementButtonInactive, a.ScreenshotManagementButtonInactive:hover
 	padding:10px;
 	z-index:1000;
 	background-color:#3a3a3a;
-	text-align:left;
+	text-align:start;
 }
 
 .video_footer_ctn {
@@ -596,24 +605,25 @@ a.ScreenshotManagementButtonInactive, a.ScreenshotManagementButtonInactive:hover
 	position:absolute;
 	width:11px;
 	height:11px;
-	right:12px;
+	inset-inline-end:12px;
 	top:12px;
 }
 
 #modalWarningImg, #modalWarningImg2 {
 	width:32px;
-	float:left;
-	padding-left:24px;
+	float:inline-start;
+	padding-inline-start:24px;
 }
 
 #modalWarningImg2 {
-	padding:0px 16px 52px 24px;
+	padding-block: 0px 52px;
+	padding-inline: 24px 16px;
 }
 
 .modalWarningText {
 	width:388px;
-	padding-left:12px;
-	float:left;
+	padding-inline-start:12px;
+	float:inline-start;
 	margin-bottom:14px;
 	line-height:18px;
 }
@@ -638,12 +648,12 @@ a.ScreenshotManagementButtonInactive, a.ScreenshotManagementButtonInactive:hover
 }
 
 .modalActionButtons {
-	margin-right:2px;
+	margin-inline-end:2px;
 	margin-top:30px;
 }
 
 #modalWarningContinueBtn {
-	margin-left:12px;
+	margin-inline-start:12px;
 }
 
 
@@ -653,7 +663,8 @@ a.ScreenshotManagementButtonInactive, a.ScreenshotManagementButtonInactive:hover
 	position:relative;
 	height:17px;
 	padding:0;
-	margin:8px 26px 10px 4px;
+	margin-block: 8px 10px;
+	margin-inline: 4px 26px;
 	font-size:12px;
 	color:#c9c9c9;
 }
@@ -661,15 +672,15 @@ a.ScreenshotManagementButtonInactive, a.ScreenshotManagementButtonInactive:hover
 .pagingBar p {
 	margin:0;
 	padding:0;
-	margin-left:8px;
+	margin-inline-start:8px;
 	padding-top:2px;
 	font-size:12px;
 	color:#959595;
 }
 
 .pagingPageLinks {
-	float:right;
-	margin-right:0px;
+	float:inline-end;
+	margin-inline-end:0px;
 	padding-top:2px;
 	font-size:12px;
 	color:#959595;
@@ -697,7 +708,7 @@ a.pagingPageLink,a.pagingPageLink:hover,a.pagingPageLink:visited,a.pagingPageLin
 }
 
 .video_items_ctn .video_item {
-	float: left;
+	float: inline-start;
 	width: 33%;
 }
 

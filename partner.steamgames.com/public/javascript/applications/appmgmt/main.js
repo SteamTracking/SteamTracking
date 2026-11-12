@@ -5,347 +5,348 @@ const __vite__mapDeps = (
   m = __vite__mapDeps,
   d = m.f ||
     (m.f = [
-      "./rootlogin.js",
-      "./mobx.esm.js",
-      "./dialogs.js",
-      "./src.js",
-      "./react-router.js",
-      "../../../css/applications/appmgmt/dialogs.css",
-      "./logindialog.js",
-      "./cookies.client.js",
-      "./button.js",
-      "./flex.js",
-      "./formfactor.js",
-      "./useclienthints.js",
-      "./focuselement.js",
-      "./layout.js",
-      "../../../css/applications/appmgmt/layout.css",
-      "./variantdefaults.js",
-      "../../../css/applications/appmgmt/variantdefaults.css",
-      "../../../css/applications/appmgmt/flex.css",
-      "./linkbase.js",
-      "./storenaveventcontext.js",
-      "../../../css/applications/appmgmt/button.css",
-      "./axios.js",
-      "./throbber.js",
-      "../../../css/applications/appmgmt/throbber.css",
-      "./base64-js.js",
-      "./browserapi.js",
-      "../../../css/applications/appmgmt/logindialog.css",
-      "./modals.js",
-      "./steamml_routing.js",
-      "./react-router-dom.js",
-      "./formatnumber.js",
-      "./getpreferredlocales.js",
-      "../../../css/applications/appmgmt/steamml_routing.css",
-      "./steamdeckcompatibilitydetails.js",
-      "./deckverified.js",
-      "./storebrowsequerycontext.js",
-      "./servicetransportprovider.js",
-      "./utils.js",
-      "./useQuery.js",
-      "./dataloader.js",
-      "./axiosutils.js",
-      "./historyutils.js",
-      "./stringutils.js",
-      "../../../css/applications/appmgmt/deckverified.css",
-      "./steamdeckcompatibilitydetails_admin.js",
-      "./pricing_routing.js",
-      "./pricingguidelineobject.js",
-      "./reactqueryroot.js",
-      "./mutation.js",
-      "./currencyutils.js",
-      "./tabulatorutils.js",
-      "./text.js",
-      "../../../css/applications/appmgmt/text.css",
-      "./render.js",
-      "../../../css/applications/appmgmt/tabulatorutils.css",
-      "./eventdevfeaturestore.js",
-      "./ajaxhooks.js",
-      "./eventtime.js",
-      "./debugglobal.js",
-      "./playerstore.js",
-      "./usedataloader.client.js",
-      "./steamid.js",
-      "./personautils.js",
-      "./steammessages_player_pb.js",
-      "./appinfostore.js",
-      "./appinfo.js",
-      "./steammessages_community_pb.js",
-      "./pricinggridcell.js",
-      "./useMutation.js",
-      "./simplesuccesserror.js",
-      "./partnereventdialog.module.js",
-      "../../../css/applications/appmgmt/partnereventdialog.css",
-      "./localization3.js",
-      "../../../css/applications/appmgmt/pricinggridcell.css",
-      "../../../css/applications/appmgmt/shared_dialog.css",
-      "./configdatadiag.js",
-      "./unknownroute.js",
-      "./importexport.js",
-      "./storebrowsesetup.js",
-      "./storeitemcache.js",
-      "./storeitem.js",
-      "./shared_common.module.js",
-      "../../../css/applications/appmgmt/shared_common.css",
-      "./fancytable.js",
-      "./esm.js",
-      "../../../css/applications/appmgmt/fancytable.css",
-      "./profilestore.js",
-      "./timeutils.js",
-      "./moment-timezone.js",
-      "../../../css/applications/appmgmt/profilestore.css",
-      "./discountgridheaders.module.js",
-      "../../../css/applications/appmgmt/discountgridheaders.css",
-      "./saveprices.js",
-      "../../../css/applications/appmgmt/saveprices.css",
-      "../../../css/applications/appmgmt/pricing_routing.css",
-      "./buildpatchnotes.js",
-      "./saletags.js",
-      "./steammessages_store_pb.js",
-      "./steammessages_clan_pb.js",
-      "./appidutils.js",
-      "./csstransitionwrapper.js",
-      "./localization2.js",
-      "./partnereventshared.module.js",
-      "../../../css/applications/appmgmt/partnereventshared.css",
-      "./loadingspinner.js",
-      "../../../css/applications/appmgmt/loadingspinner.css",
-      "../../../css/applications/appmgmt/saletags.css",
-      "./emoticonstorecontext.js",
-      "./lazyrenderchildren.js",
-      "./useresizeobserver.js",
-      "./emoticon_php.js",
-      "../../../css/applications/appmgmt/emoticonstorecontext.css",
-      "./partnereventstore.js",
-      "./partnereventutils.js",
-      "./uploadutils.js",
-      "./importexportdialog.js",
-      "./eventimageurlwithfallback.js",
-      "./salestoreitemutils.js",
-      "../../../css/applications/appmgmt/salestoreitemutils.css",
-      "../../../css/applications/appmgmt/eventimageurlwithfallback.css",
-      "./src2.js",
-      "./textlink.js",
-      "../../../css/applications/appmgmt/textlink.css",
-      "./emoticonbutton.js",
-      "./bbcodes.module.js",
-      "../../../css/applications/appmgmt/bbcodes.css",
-      "./numberformats.js",
-      "./storeitemhooks.js",
-      "../../../css/applications/appmgmt/emoticonbutton.css",
-      "./bbcodeeditor.js",
-      "./multisourceimage.js",
-      "./meetsteamclanid.js",
-      "./shared_svg_gamerecordings.js",
-      "../../../css/applications/appmgmt/shared_svg_gamerecordings.css",
-      "./dashplayer.js",
-      "./reorderablelist.module.js",
-      "../../../css/applications/appmgmt/reorderablelist.css",
-      "./genericimageupload.js",
-      "./linkregionbox.js",
-      "../../../css/applications/appmgmt/linkregionbox.css",
-      "../../../css/applications/appmgmt/genericimageupload.css",
-      "../../../css/applications/appmgmt/bbcodeeditor.css",
-      "./steammessages_experiments_pb.js",
-      "./meetsteamregistrationhooks.js",
-      "./vodquery.js",
-      "../../../css/applications/appmgmt/importexportdialog.css",
-      "./creatorhomestore.js",
-      "./storegamehover.js",
-      "./eventtrackinghook.js",
-      "./discussionwidget.module.js",
-      "../../../css/applications/appmgmt/discussionwidget.css",
-      "./crosspromotesalelayouts.js",
-      "../../../css/applications/appmgmt/crosspromotesalelayouts.css",
-      "./clanstore.js",
-      "./languagepicker.js",
-      "./editorlocalizationstore.js",
-      "../../../css/applications/appmgmt/buildpatchnotes.css",
-      "./promotion_routing.js",
-      "./promotionoperationowner.js",
-      "./marketingmessageevent.js",
-      "../../../css/applications/appmgmt/marketingmessageevent.css",
-      "./primarypartnercontext.js",
-      "./assertThisInitialized.js",
-      "./fast-deep-equal.js",
-      "./localization.js",
-      "./popoversurface.js",
-      "../../../css/applications/appmgmt/popoversurface.css",
-      "../../../css/applications/appmgmt/localization.css",
-      "./dashboardutilities.js",
-      "../../../css/applications/appmgmt/dashboardutilities.css",
-      "../../../css/applications/appmgmt/fast-deep-equal.css",
-      "./heading.js",
-      "../../../css/applications/appmgmt/heading.css",
-      "./imageuploaderpanel.js",
-      "./slider.js",
-      "../../../css/applications/appmgmt/slider.css",
-      "../../../css/applications/appmgmt/imageuploaderpanel.css",
-      "./partnerstats.module.js",
-      "./with-selector.js",
-      "../../../css/applications/appmgmt/partnerstats.css",
-      "./filechangepoll.js",
-      "../../../css/applications/appmgmt/filechangepoll.css",
-      "./adminshared.module.js",
-      "../../../css/applications/appmgmt/adminshared.css",
-      "./partnereventshareddates.js",
-      "./cross.js",
-      "../../../css/applications/appmgmt/partnereventshareddates.css",
-      "../../../css/applications/appmgmt/react-datetime2.css",
-      "./themefestplanning.js",
-      "../../../css/applications/appmgmt/themefestplanning.css",
-      "./react-select.cjs.js",
-      "./reorderablelist.js",
-      "./partnervalvecontactstore.js",
-      "../../../css/applications/appmgmt/partnervalvecontactstore.css",
-      "./adminaccount.js",
-      "./collapseablesection.js",
-      "../../../css/applications/appmgmt/collapseablesection.css",
-      "./userprofile.js",
-      "../../../css/applications/appmgmt/userprofile.css",
-      "./partnerinfostore.js",
-      "./localization4.js",
-      "../../../css/applications/appmgmt/localization2.css",
-      "./gamerecordinglog.js",
-      "./cloudlocalizedartdisplay.js",
-      "../../../css/applications/appmgmt/cloudlocalizedartdisplay.css",
-      "../../../css/applications/appmgmt/promotionoperationowner.css",
-      "./salesrouting.js",
-      "./optin_routing.js",
-      "./appadminrouter.js",
-      "./phpintegration.js",
-      "./releasedateinfo.js",
-      "../../../css/applications/appmgmt/releasedateinfo.css",
-      "../../../css/applications/appmgmt/appadminrouter.css",
-      "./storeadmin.js",
-      "./select.js",
-      "./grid.js",
-      "../../../css/applications/appmgmt/grid.css",
-      "./richgamedescriptioneditor.js",
-      "../../../css/applications/appmgmt/richgamedescriptioneditor.css",
-      "../../../css/applications/appmgmt/storeadmin.css",
-      "./packageadmin.js",
-      "../../../css/applications/appmgmt/packageadmin.css",
-      "./connections.js",
-      "../../../css/applications/appmgmt/connections.css",
-      "./landing.js",
-      "./recentapps.js",
-      "../../../css/applications/appmgmt/recentapps.css",
-      "./steammessages_partnerdeadline_pb.js",
-      "./seasonpasshooks.js",
-      "../../../css/applications/appmgmt/landing.css",
-      "./timelinemarkereditorlanding.js",
-      "./webuitransportdefaults.js",
-      "./dnd.esm.js",
-      "./tour.js",
-      "../../../css/applications/appmgmt/tour.css",
-      "../../../css/applications/appmgmt/timelinemarkereditorlanding.css",
-      "./promotionreviewdashboard.js",
-      "../../../css/applications/appmgmt/promotionreviewdashboard.css",
-      "./reservationqueuemessagingdashboard.js",
-      "../../../css/applications/appmgmt/reservationqueuemessagingdashboard.css",
-      "./contenthub_routing.js",
-      "../../../css/applications/appmgmt/contenthub_routing.css",
-      "./recap_routing.js",
-      "./deadlinelanding.js",
-      "../../../css/applications/appmgmt/deadlinelanding.css",
-      "./taxrequirementlanding.js",
-      "../../../css/applications/appmgmt/taxrequirementlanding.css",
-      "./meetsteamrouting.js",
-      "../../../css/applications/appmgmt/meetsteamrouting.css",
-      "./achievementseditorlanding.js",
-      "../../../css/applications/appmgmt/achievementseditorlanding.css",
-      "./creatorhomeadmindashboard.js",
-      "../../../css/applications/appmgmt/creatorhomeadmindashboard.css",
-      "./logoedtior.js",
-      "./canvas.js",
-      "../../../css/applications/appmgmt/logoedtior.css",
+      "./chunk~a8a12c686e.js",
+      "./chunk~de7f2df91c.js",
+      "./chunk~1fa4b8f2ff.js",
+      "./chunk~25a6634263.js",
+      "./chunk~44f252525d.js",
+      "../../../css/applications/appmgmt/chunk~1fc66b8190.css",
+      "./chunk~2e8feda0b1.js",
+      "./chunk~d9c3dab17a.js",
+      "./chunk~baca8b8889.js",
+      "./chunk~971d501580.js",
+      "./chunk~f7fdc3d084.js",
+      "./chunk~e7f5a67b58.js",
+      "./chunk~4cdb5412a1.js",
+      "./chunk~5f339e9a5f.js",
+      "../../../css/applications/appmgmt/chunk~14131c2b6b.css",
+      "./chunk~a292304e38.js",
+      "../../../css/applications/appmgmt/chunk~909c5188bd.css",
+      "../../../css/applications/appmgmt/chunk~2deb5b0668.css",
+      "./chunk~b066ecd357.js",
+      "./chunk~9a06851bec.js",
+      "../../../css/applications/appmgmt/chunk~76e31ebf24.css",
+      "./chunk~f4e4ed5c17.js",
+      "./chunk~eefd71512b.js",
+      "../../../css/applications/appmgmt/chunk~73d2876771.css",
+      "./chunk~4571d27d07.js",
+      "./chunk~70c16cc80c.js",
+      "../../../css/applications/appmgmt/chunk~21fdd7c699.css",
+      "./chunk~8681f5c764.js",
+      "./chunk~cad0693c0c.js",
+      "./chunk~9fc22a4638.js",
+      "./chunk~726542bc75.js",
+      "./chunk~e29b7ee76a.js",
+      "../../../css/applications/appmgmt/chunk~cad0693c0c.css",
+      "./chunk~91e3af12c1.js",
+      "./chunk~2201b8cb3d.js",
+      "./chunk~0a99e05c44.js",
+      "./chunk~f8b6a4beb3.js",
+      "./chunk~8fb30ea08b.js",
+      "./chunk~ede3e357a2.js",
+      "./chunk~4406a7b793.js",
+      "./chunk~c55709d290.js",
+      "./chunk~af36c62e9f.js",
+      "./chunk~b00bc5ccc1.js",
+      "./chunk~29743c399d.js",
+      "./chunk~e867464c75.js",
+      "../../../css/applications/appmgmt/chunk~8a883cca81.css",
+      "./chunk~a2cb8ea8dc.js",
+      "./chunk~9661a67253.js",
+      "./chunk~fa5480ab25.js",
+      "./chunk~9aa05d2c7d.js",
+      "./chunk~bf46c905a4.js",
+      "./chunk~38a44beba7.js",
+      "./chunk~360b8fa68b.js",
+      "./chunk~a58194c5d9.js",
+      "../../../css/applications/appmgmt/chunk~4db64f4907.css",
+      "./chunk~0c46413ed4.js",
+      "../../../css/applications/appmgmt/chunk~e923f610c9.css",
+      "./chunk~0111fcd096.js",
+      "./chunk~92931c6310.js",
+      "./chunk~521597d5f9.js",
+      "./chunk~f3a565e188.js",
+      "./chunk~d382bdf2cf.js",
+      "./chunk~68b7e78d68.js",
+      "./chunk~a6b9ae1345.js",
+      "./chunk~0278ae6236.js",
+      "./chunk~f25232ab1e.js",
+      "./chunk~c55d6473b2.js",
+      "./chunk~19394a4118.js",
+      "./chunk~ca0c999570.js",
+      "./chunk~55bac8fc8b.js",
+      "./chunk~6257ebd2d4.js",
+      "./chunk~95ecbf576c.js",
+      "./chunk~739842ca30.js",
+      "../../../css/applications/appmgmt/chunk~78ae40994c.css",
+      "./chunk~74d773532d.js",
+      "../../../css/applications/appmgmt/chunk~884833f38b.css",
+      "../../../css/applications/appmgmt/chunk~c7675f109e.css",
+      "./chunk~59af5622dd.js",
+      "./chunk~58c6c52d52.js",
+      "./chunk~f8f9713b0c.js",
+      "./chunk~9b35b2d482.js",
+      "./chunk~3ee5188744.js",
+      "./chunk~a825a84845.js",
+      "./chunk~166eab4331.js",
+      "../../../css/applications/appmgmt/chunk~c27bafa118.css",
+      "./chunk~8c0cff8a60.js",
+      "./chunk~5ab42519dc.js",
+      "../../../css/applications/appmgmt/chunk~6203020a69.css",
+      "./chunk~cb393b4e7b.js",
+      "./chunk~90fbfc6dc2.js",
+      "./chunk~429133cc70.js",
+      "../../../css/applications/appmgmt/chunk~85b919c08c.css",
+      "./chunk~e23b40d2bf.js",
+      "../../../css/applications/appmgmt/chunk~498e4d5f51.css",
+      "./chunk~91d759d956.js",
+      "../../../css/applications/appmgmt/chunk~3934641559.css",
+      "../../../css/applications/appmgmt/chunk~9661a67253.css",
+      "./chunk~6151aaad06.js",
+      "./chunk~6b8ddcaac8.js",
+      "./chunk~428594b857.js",
+      "./chunk~b7c2818157.js",
+      "./chunk~b390ee0f78.js",
+      "./chunk~90b9831ad2.js",
+      "./chunk~8ceeb46076.js",
+      "./chunk~2f8c67b4de.js",
+      "../../../css/applications/appmgmt/chunk~bc10934db3.css",
+      "./chunk~ada233e34d.js",
+      "../../../css/applications/appmgmt/chunk~2854714fbb.css",
+      "../../../css/applications/appmgmt/chunk~7e3e341a02.css",
+      "./chunk~43407e91ef.js",
+      "./chunk~9d71b14b50.js",
+      "./chunk~710e3cfd2f.js",
+      "./chunk~967b42dac9.js",
+      "../../../css/applications/appmgmt/chunk~84f339f8d2.css",
+      "./chunk~fc8a9e4879.js",
+      "./chunk~2bee5a7d08.js",
+      "./chunk~b4171a8747.js",
+      "./chunk~fd80c4b5eb.js",
+      "./chunk~e70aabe4d7.js",
+      "./chunk~cbbb6ae37c.js",
+      "../../../css/applications/appmgmt/chunk~9f001c4d7c.css",
+      "../../../css/applications/appmgmt/chunk~6e16192cd9.css",
+      "./chunk~25a66342632.js",
+      "./chunk~cfd048ddd7.js",
+      "../../../css/applications/appmgmt/chunk~1cdae5a58d.css",
+      "./chunk~05a38bc848.js",
+      "./chunk~af1574091f.js",
+      "../../../css/applications/appmgmt/chunk~bc29451df5.css",
+      "./chunk~a7c5e71e12.js",
+      "../../../css/applications/appmgmt/chunk~d22a22fa8b.css",
+      "./chunk~3f2c78281d.js",
+      "./chunk~f0141d9521.js",
+      "./chunk~93fc7377c2.js",
+      "./chunk~9658266888.js",
+      "../../../css/applications/appmgmt/chunk~a22934a9e6.css",
+      "./chunk~b980797e15.js",
+      "./chunk~6f51836c6e.js",
+      "../../../css/applications/appmgmt/chunk~6f4f273dbc.css",
+      "./chunk~d6693aba87.js",
+      "./chunk~874b4cd3a1.js",
+      "../../../css/applications/appmgmt/chunk~12e15c8243.css",
+      "../../../css/applications/appmgmt/chunk~ed398c56a0.css",
+      "../../../css/applications/appmgmt/chunk~b469dad00d.css",
+      "./chunk~3f4314f3b4.js",
+      "../../../css/applications/appmgmt/chunk~863c097d06.css",
+      "./chunk~5243628dd6.js",
+      "./chunk~de7a25f8e2.js",
+      "../../../css/applications/appmgmt/chunk~2ca7b3868d.css",
+      "./chunk~7b4b9eb713.js",
+      "./chunk~4d16ce5d1a.js",
+      "./chunk~5c6be4668b.js",
+      "./chunk~8628c845f2.js",
+      "../../../css/applications/appmgmt/chunk~d21212ed71.css",
+      "./chunk~3720b337f3.js",
+      "../../../css/applications/appmgmt/chunk~b3cb27b5e1.css",
+      "./chunk~d902bc74d6.js",
+      "./chunk~437071091c.js",
+      "./chunk~91ae5e1167.js",
+      "./chunk~802e967112.js",
+      "../../../css/applications/appmgmt/chunk~6151aaad06.css",
+      "./chunk~af3bd1e68d.js",
+      "./chunk~54f70c90c1.js",
+      "./chunk~03224452d3.js",
+      "../../../css/applications/appmgmt/chunk~3a717e066a.css",
+      "./chunk~b0a84aab1b.js",
+      "./chunk~aae8417744.js",
+      "./chunk~91ffd0567f.js",
+      "./chunk~c12081e677.js",
+      "./chunk~ecf04667fe.js",
+      "../../../css/applications/appmgmt/chunk~197eb6470c.css",
+      "../../../css/applications/appmgmt/chunk~e6f9e52c61.css",
+      "./chunk~0aa5028ef4.js",
+      "../../../css/applications/appmgmt/chunk~d1c2004d62.css",
+      "../../../css/applications/appmgmt/chunk~34ce0dff4c.css",
+      "./chunk~e53a8c8667.js",
+      "../../../css/applications/appmgmt/chunk~02bdaece1c.css",
+      "./chunk~a6402cc243.js",
+      "./chunk~16aefcf65f.js",
+      "../../../css/applications/appmgmt/chunk~65c4848332.css",
+      "../../../css/applications/appmgmt/chunk~c2695db100.css",
+      "./chunk~bd435de487.js",
+      "../../../css/applications/appmgmt/chunk~40821b6cd5.css",
+      "./chunk~6446a0f79a.js",
+      "../../../css/applications/appmgmt/chunk~5d4a89c549.css",
+      "./chunk~6110f63e8e.js",
+      "../../../css/applications/appmgmt/chunk~1f33a9908b.css",
+      "./chunk~b3f4ae92bc.js",
+      "./chunk~cf8a297cc4.js",
+      "../../../css/applications/appmgmt/chunk~2fd3de7973.css",
+      "../../../css/applications/appmgmt/chunk~9a4b0369522.css",
+      "./chunk~209a3e6c2e.js",
+      "../../../css/applications/appmgmt/chunk~b8220eff79.css",
+      "./chunk~fb7b5d9c48.js",
+      "./chunk~ea4856d3e2.js",
+      "./chunk~30ccd6dee5.js",
+      "../../../css/applications/appmgmt/chunk~52199da225.css",
+      "./chunk~8255136f90.js",
+      "./chunk~ec644f97c6.js",
+      "../../../css/applications/appmgmt/chunk~2b9f3c130a.css",
+      "./chunk~10ec219681.js",
+      "../../../css/applications/appmgmt/chunk~6f9130c355.css",
+      "./chunk~4f3a47e991.js",
+      "./chunk~44547eeba5.js",
+      "../../../css/applications/appmgmt/chunk~1dc2296506.css",
+      "./chunk~57b6ba168b.js",
+      "./chunk~d3a2e79917.js",
+      "../../../css/applications/appmgmt/chunk~469dc86e61.css",
+      "../../../css/applications/appmgmt/chunk~2141a86144.css",
+      "./chunk~ac46798222.js",
+      "./chunk~f5466f3e0e.js",
+      "./chunk~6bd490454e.js",
+      "./chunk~234d4d786c.js",
+      "./chunk~eae65d56a7.js",
+      "../../../css/applications/appmgmt/chunk~a2dda6d2e6.css",
+      "../../../css/applications/appmgmt/chunk~6bd490454e.css",
+      "./chunk~5e6874a411.js",
+      "./chunk~93195fc4a9.js",
+      "../../../css/applications/appmgmt/chunk~142e655cd6.css",
+      "./chunk~e97d53a9c6.js",
+      "../../../css/applications/appmgmt/chunk~a67e96666b.css",
+      "../../../css/applications/appmgmt/chunk~5e6874a411.css",
+      "./chunk~2dcd698413.js",
+      "../../../css/applications/appmgmt/chunk~2dcd698413.css",
+      "./chunk~a3c2cda769.js",
+      "../../../css/applications/appmgmt/chunk~a3c2cda769.css",
+      "./chunk~92973ecf63.js",
+      "./chunk~7e6646f5a7.js",
+      "../../../css/applications/appmgmt/chunk~fdfd7b9e19.css",
+      "./chunk~8e34816c9e.js",
+      "./chunk~80765d41ae.js",
+      "../../../css/applications/appmgmt/chunk~92973ecf63.css",
+      "./chunk~7a45b43a5d.js",
+      "./chunk~7b8a87bd30.js",
+      "./chunk~f95b379b4d.js",
+      "./chunk~c627bf7efa.js",
+      "../../../css/applications/appmgmt/chunk~f609af6c02.css",
+      "../../../css/applications/appmgmt/chunk~7a45b43a5d.css",
+      "./chunk~be64a9384d.js",
+      "../../../css/applications/appmgmt/chunk~be64a9384d.css",
+      "./chunk~0242e5eb11.js",
+      "../../../css/applications/appmgmt/chunk~0242e5eb11.css",
+      "./chunk~4d6a0703cb.js",
+      "../../../css/applications/appmgmt/chunk~4d6a0703cb.css",
+      "./chunk~cf0982cd3a.js",
+      "./chunk~9ea24a5c24.js",
+      "../../../css/applications/appmgmt/chunk~9ea24a5c24.css",
+      "./chunk~8bbbc35117.js",
+      "../../../css/applications/appmgmt/chunk~8bbbc35117.css",
+      "./chunk~a7bc2e23e5.js",
+      "../../../css/applications/appmgmt/chunk~a7bc2e23e5.css",
+      "./chunk~7ec67c8c4e.js",
+      "../../../css/applications/appmgmt/chunk~7ec67c8c4e.css",
+      "./chunk~5173a490dd.js",
+      "../../../css/applications/appmgmt/chunk~5173a490dd.css",
+      "./chunk~79627e9162.js",
+      "./chunk~9a3ef4764b.js",
+      "../../../css/applications/appmgmt/chunk~79627e9162.css",
     ]),
 ) => i.map((i) => d[i]);
 
 import {
-  $t as e,
-  A as t,
-  Ot as n,
+  $ as e,
+  At as t,
+  M as n,
   Q as r,
-  R as i,
-  U as a,
-  X as o,
-  Y as s,
-  Z as c,
-  _t as l,
-  c as u,
-  j as d,
-  kt as f,
-  nt as p,
-  on as m,
-  rn as h,
-} from "./mobx.esm.js";
-/* empty css                                   */ import {
-  At as g,
-  F as _,
-  It as v,
-  L as ee,
-  M as te,
-  N as ne,
-  P as re,
-  T as ie,
-  h as ae,
-  r as y,
-  ut as oe,
-} from "./src.js";
+  W as i,
+  X as a,
+  Z as o,
+  en as s,
+  in as c,
+  j as l,
+  kt as u,
+  l as d,
+  rt as f,
+  sn as p,
+  vt as m,
+  z as h,
+} from "./chunk~de7f2df91c.js";
+/* empty css                                     */ import {
+  A as g,
+  C as _,
+  F as v,
+  M as ee,
+  N as y,
+  Ot as b,
+  Pt as x,
+  ct as S,
+  j as C,
+  p as w,
+  r as T,
+} from "./chunk~25a6634263.js";
 import {
-  Ga as b,
-  It as se,
-  La as ce,
-  Qt as le,
-  Ra as ue,
-  S as de,
-  Sa as fe,
-  Ta as pe,
-  _ as me,
-  a as he,
-  aa as x,
-  ea as ge,
-  h as _e,
-  kt as ve,
-  ln as ye,
-  m as be,
-  nn as xe,
-  o as Se,
-  oa as S,
-  p as Ce,
-  t as we,
-  ta as Te,
-  w as Ee,
-  za as De,
-  zn as Oe,
-} from "./dialogs.js";
-import { t as ke } from "./storebrowsequerycontext.js";
-import { a as Ae, k as je, r as C, w as Me } from "./react-router.js";
-import { t as Ne } from "./servicetransportprovider.js";
-import { n as Pe } from "./reactqueryroot.js";
-import { t as Fe } from "./useMutation.js";
-import { i as w, r as Ie, t as Le } from "./react-router-dom.js";
-import { t as Re } from "./primarypartnercontext.js";
-import { i as ze, t as Be } from "./emoticonstorecontext.js";
-import { n as Ve, t as He } from "./formfactor.js";
-import { t as Ue } from "./variantdefaults.js";
-import { t as We } from "./popoversurface.js";
-import { t as T } from "./formatnumber.js";
-import { r as Ge } from "./modals.js";
-import { t as Ke } from "./axios.js";
-import { a as qe } from "./historyutils.js";
-import { n as Je, r as Ye, t as Xe } from "./browserapi.js";
-import { n as Ze, t as Qe } from "./simplesuccesserror.js";
-import { t as $e } from "./eventtrackinghook.js";
-/* empty css                                  */ import { t as et } from "./localstorage.js";
-import { t as tt } from "./configdatadiag.js";
-import { t as E } from "./phpintegration.js";
-import { t as nt } from "./unknownroute.js";
-import { i as rt, o as it } from "./filechangepoll.js";
-var D = (e, t, n) => {
+  E,
+  Ea as D,
+  Ha as O,
+  Hn as k,
+  Mt as te,
+  Ua as ne,
+  Va as re,
+  Ya as A,
+  _ as ie,
+  a as ae,
+  aa as oe,
+  an as se,
+  c as ce,
+  fn as le,
+  g as ue,
+  h as de,
+  ia as fe,
+  ka as pe,
+  la as j,
+  t as me,
+  tn as he,
+  ua as M,
+  w as ge,
+  y as _e,
+  zt as ve,
+} from "./chunk~1fa4b8f2ff.js";
+import { t as ye } from "./chunk~0a99e05c44.js";
+import { O as be, a as xe, r as N, w as Se } from "./chunk~44f252525d.js";
+import { t as Ce } from "./chunk~f8b6a4beb3.js";
+import { n as we } from "./chunk~9aa05d2c7d.js";
+import { t as Te } from "./chunk~6257ebd2d4.js";
+import { i as P, r as Ee, t as De } from "./chunk~9fc22a4638.js";
+import { t as Oe } from "./chunk~b0a84aab1b.js";
+import { i as ke, t as Ae } from "./chunk~43407e91ef.js";
+import { t as F } from "./chunk~726542bc75.js";
+import { i as je, r as Me, t as Ne } from "./chunk~f7fdc3d084.js";
+import { n as Pe, t as Fe } from "./chunk~a292304e38.js";
+import { t as Ie } from "./chunk~ecf04667fe.js";
+import { r as Le } from "./chunk~8681f5c764.js";
+import { t as Re } from "./chunk~f4e4ed5c17.js";
+import { r as ze } from "./chunk~af36c62e9f.js";
+import { n as Be, r as Ve, t as He } from "./chunk~70c16cc80c.js";
+import { n as Ue, t as We } from "./chunk~95ecbf576c.js";
+import { t as Ge } from "./chunk~5c6be4668b.js";
+/* empty css                                     */ import { t as Ke } from "./chunk~14243866ee.js";
+import { t as qe } from "./chunk~59af5622dd.js";
+import { t as I } from "./chunk~234d4d786c.js";
+import { t as Je } from "./chunk~58c6c52d52.js";
+import { i as Ye, o as Xe } from "./chunk~6446a0f79a.js";
+var L = (e, t, n) => {
   let r = t.lastIndexOf(`?`),
     i = e[r === -1 || r < t.lastIndexOf(`/`) ? t : t.slice(0, r)];
   return i
@@ -374,26 +375,26 @@ var D = (e, t, n) => {
     ),
   Array.from(new Set([123]))[0] !== 123 &&
     console.error(`Should not include prototypejs.`));
-var O = m(v(), 1),
-  at = `_7u8JcHTlx8M-`,
-  ot = `KWtRH19ERaI-`,
-  k = m(f(), 1),
-  A = l(),
-  j = (0, k.createContext)({}),
-  st = (0, k.createContext)(() => {});
-function ct(e) {
-  let [t, n] = (0, k.useState)({});
-  return (0, A.jsx)(j.Provider, {
+var Ze = p(x(), 1),
+  Qe = `_7u8JcHTlx8M-`,
+  $e = `KWtRH19ERaI-`,
+  R = p(t(), 1),
+  z = m(),
+  et = (0, R.createContext)({}),
+  tt = (0, R.createContext)(() => {});
+function nt(e) {
+  let [t, n] = (0, R.useState)({});
+  return (0, z.jsx)(et.Provider, {
     value: t,
-    children: (0, A.jsx)(st.Provider, { value: n, children: e.children }),
+    children: (0, z.jsx)(tt.Provider, { value: n, children: e.children }),
   });
 }
-function lt() {
-  return (0, k.useContext)(j);
+function rt() {
+  return (0, R.useContext)(et);
 }
-var ut = [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`],
-  dt = [`title`, `subtitle`, `body`, `description`, `note`];
-function ft(e) {
+var it = [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`],
+  at = [`title`, `subtitle`, `body`, `description`, `note`];
+function ot(e) {
   let {
       accentColor: t,
       dullColor: n,
@@ -408,97 +409,148 @@ function ft(e) {
       breakpoints: d,
       variants: f,
       popoverPresentation: p,
+      spacing: m,
+      radius: h,
+      textSizes: g,
+      defaultTextSize: _,
+      controlHeights: v,
+      controlRadius: ee,
+      controlSize: y,
     } = e,
-    m = { display: `contents` },
-    h;
-  typeof t == `string` ? (h = t) : t && M(m, `accent`, t);
-  let g;
-  typeof n == `string` ? (g = n) : n && M(m, `dull`, n);
-  let _;
-  (typeof r == `string` ? (_ = r) : r && N(m, `body`, r),
-    i && M(m, `success`, i),
-    a && M(m, `warning`, a),
-    o && M(m, `error`, o),
-    s && N(m, `success`, s),
-    c && N(m, `warning`, c),
-    l && N(m, `error`, l));
-  let v = (0, A.jsx)(Ue, {
+    b = { display: `contents` },
+    x = (0, R.use)(st),
+    S = ct(
+      b,
+      {
+        spacing: m,
+        radius: h,
+        textSizes: g,
+        defaultTextSize: _,
+        controlHeights: v,
+        controlRadius: ee,
+      },
+      x,
+    ),
+    { defaultTextSize: C, controlRadius: w } = S,
+    T = (0, R.useMemo)(
+      () => ({ defaultTextSize: C, controlRadius: w }),
+      [C, w],
+    ),
+    E;
+  typeof t == `string` ? (E = t) : t && B(b, `accent`, t);
+  let D;
+  typeof n == `string` ? (D = n) : n && B(b, `dull`, n);
+  let O;
+  (typeof r == `string` ? (O = r) : r && V(b, `body`, r),
+    i && B(b, `success`, i),
+    a && B(b, `warning`, a),
+    o && B(b, `error`, o),
+    s && V(b, `success`, s),
+    c && V(b, `warning`, c),
+    l && V(b, `error`, l));
+  let k = (0, z.jsx)(Pe, {
     variants: f,
-    children: (0, A.jsx)(`div`, {
-      "data-accent-color": h,
-      "data-dull-color": g,
-      "data-body-text-color": _,
-      style: m,
-      children: (0, A.jsx)(`div`, {
+    children: (0, z.jsx)(`div`, {
+      "data-accent-color": E,
+      "data-dull-color": D,
+      "data-body-text-color": O,
+      style: b,
+      children: (0, z.jsx)(`div`, {
         style: { display: `contents`, color: `var(--color-text-body-body)` },
         children: u,
       }),
     }),
   });
   return (
-    p && (v = (0, A.jsx)(We, { presentation: p, children: v })),
-    d ? (0, A.jsx)(He, { breakpoints: d, children: v }) : v
+    S !== x && (k = (0, z.jsx)(st, { value: T, children: k })),
+    y && (k = (0, z.jsx)(Fe, { size: y, children: k })),
+    p && (k = (0, z.jsx)(Ie, { presentation: p, children: k })),
+    d ? (0, z.jsx)(Me, { breakpoints: d, children: k }) : k
   );
 }
-function M(e, t, n) {
+var st = (0, R.createContext)({ defaultTextSize: `3`, controlRadius: `sm` });
+function ct(e, t, n) {
+  let { spacing: r, radius: i, textSizes: a, controlHeights: o } = t,
+    s = t.defaultTextSize ?? n.defaultTextSize,
+    c = t.controlRadius ?? n.controlRadius;
+  for (let [t, n] of Object.entries(r ?? {})) n && (e[`--spacing-${t}`] = n);
+  for (let [t, n] of Object.entries(i ?? {})) n && (e[`--radius-${t}`] = n);
+  for (let [t, n] of Object.entries(o ?? {}))
+    n && (e[`--control-height-${t}`] = n);
+  for (let [t, n] of Object.entries(a ?? {}))
+    n &&
+      (n.size &&
+        ((e[`--text-size-${t}`] = n.size),
+        (e[`--heading-size-${t}`] = `var(--text-size-${t})`)),
+      n.lineHeight &&
+        ((e[`--line-height-${t}`] = n.lineHeight),
+        (e[`--heading-line-height-${t}`] = `var(--line-height-${t})`)),
+      n.letterSpacing && (e[`--letter-spacing-${t}`] = n.letterSpacing));
+  (t.defaultTextSize || a?.[s]) &&
+    ((e[`--default-font-size`] = `var(--text-size-${s})`),
+    (e[`--default-line-height`] = `var(--line-height-${s})`),
+    (e[`--default-letter-spacing`] = `var(--letter-spacing-${s})`));
+  let l = Ne(c);
+  return (
+    (t.controlRadius || (l && i?.[c])) &&
+      (e[`--control-radius`] = l ? `var(--radius-${c})` : c),
+    s === n.defaultTextSize && c === n.controlRadius
+      ? n
+      : { defaultTextSize: s, controlRadius: c }
+  );
+}
+function B(e, t, n) {
   if (typeof n == `string`)
-    for (let r of ut) e[`--color-${t}-${r}`] = `var(--color-${n}-${r})`;
+    for (let r of it) e[`--color-${t}-${r}`] = `var(--color-${n}-${r})`;
   else for (let [r, i] of Object.entries(n)) e[`--color-${t}-${r}`] = i;
 }
-function N(e, t, n) {
+function V(e, t, n) {
   if (typeof n == `string`)
-    for (let r of dt) e[`--color-text-${t}-${r}`] = `var(--color-${n}-${r})`;
+    for (let r of at) e[`--color-text-${t}-${r}`] = `var(--color-${n}-${r})`;
   else for (let [r, i] of Object.entries(n)) e[`--color-text-${t}-${r}`] = i;
 }
-var pt = k.memo(function (e) {
+var lt = R.memo(function (e) {
   let {
-      defaultTextSize: t,
-      accentColor: n = `blue`,
-      dullColor: r = `greyneutral`,
-      successColor: i = `green`,
-      warningColor: a = `yellow`,
-      errorColor: o = `red`,
-      bodyTextColor: s = `text-light`,
-      successTextColor: c = `text-green`,
-      warningTextColor: l = `text-yellow`,
-      errorTextColor: u = `text-red`,
-      breakpoints: d,
-      variants: f,
-      popoverPresentation: p,
-      children: m,
-      zoo: h,
+      accentColor: t = `blue`,
+      dullColor: n = `greyneutral`,
+      successColor: r = `green`,
+      warningColor: i = `yellow`,
+      errorColor: a = `red`,
+      bodyTextColor: o = `text-light`,
+      successTextColor: s = `text-green`,
+      warningTextColor: c = `text-yellow`,
+      errorTextColor: l = `text-red`,
+      breakpoints: u,
+      variants: d,
+      popoverPresentation: f,
+      children: p,
+      zoo: m,
+      ...h
     } = e,
-    g = k.useRef(null);
-  mt(g, n, r, s);
-  let _;
+    g = R.useRef(null);
   return (
-    t &&
-      (_ = {
-        "--default-font-size": `var(--text-size-${t})`,
-        "--default-line-height": `var(--line-height-${t})`,
-        "--default-letter-spacing": `var(--letter-spacing-${t})`,
-      }),
-    (0, A.jsx)(ct, {
-      children: (0, A.jsx)(He, {
-        breakpoints: d,
-        children: (0, A.jsx)(ht, {
-          children: (0, A.jsx)(`div`, {
+    ut(g, t, n, o),
+    (0, z.jsx)(nt, {
+      children: (0, z.jsx)(Me, {
+        breakpoints: u,
+        children: (0, z.jsx)(dt, {
+          children: (0, z.jsx)(`div`, {
             ref: g,
-            className: (0, O.default)(ot, `noOpinionatedGlobalStyles`),
-            style: _,
-            children: (0, A.jsxs)(ft, {
-              accentColor: n,
-              dullColor: r,
-              successColor: i,
-              warningColor: a,
-              errorColor: o,
-              bodyTextColor: s,
-              successTextColor: c,
-              warningTextColor: l,
-              errorTextColor: u,
-              variants: f,
-              popoverPresentation: p,
-              children: [m, !1],
+            className: (0, Ze.default)($e, `noOpinionatedGlobalStyles`),
+            children: (0, z.jsxs)(ot, {
+              ...h,
+              accentColor: t,
+              dullColor: n,
+              successColor: r,
+              warningColor: i,
+              errorColor: a,
+              bodyTextColor: o,
+              successTextColor: s,
+              warningTextColor: c,
+              errorTextColor: l,
+              variants: d,
+              popoverPresentation: f,
+              children: [p, !1],
             }),
           }),
         }),
@@ -506,8 +558,8 @@ var pt = k.memo(function (e) {
     })
   );
 });
-function mt(e, t, n, r) {
-  k.useLayoutEffect(() => {
+function ut(e, t, n, r) {
+  R.useLayoutEffect(() => {
     let i = e.current?.ownerDocument.documentElement;
     if (!i) return;
     let a = [],
@@ -526,122 +578,122 @@ function mt(e, t, n, r) {
     );
   }, [e, t, n, r]);
 }
-function ht(e) {
+function dt(e) {
   let { children: t } = e,
-    { formFactorOverride: n } = lt();
-  return (0, A.jsx)(Ve, { formFactor: n, children: t });
+    { formFactorOverride: n } = rt();
+  return (0, z.jsx)(je, { formFactor: n, children: t });
 }
-var gt = `zFLaTiNrHiA-`,
-  _t = `AqiNZa8VC60-`,
-  vt = `_8tMz3xKeNAs-`,
-  yt = `tHNWhS0YeUA-`,
-  bt = `ifygCy-3uNI-`,
-  xt = `_8oIJtH-J0JA-`,
-  St = `Kignul3K9OE-`,
-  Ct = `iMDvo-zOOqs-`,
-  wt = `_0mS7Tngyoow-`,
-  Tt = `eSqLQD-aPaE-`,
-  Et = `e86kqPhqfq4-`,
-  Dt = `vCYbRpq2iJQ-`,
-  Ot = (e) =>
-    (0, A.jsxs)(A.Fragment, {
+var ft = `zFLaTiNrHiA-`,
+  pt = `AqiNZa8VC60-`,
+  mt = `_8tMz3xKeNAs-`,
+  ht = `tHNWhS0YeUA-`,
+  gt = `ifygCy-3uNI-`,
+  _t = `_8oIJtH-J0JA-`,
+  vt = `Kignul3K9OE-`,
+  yt = `iMDvo-zOOqs-`,
+  bt = `_0mS7Tngyoow-`,
+  xt = `eSqLQD-aPaE-`,
+  St = `e86kqPhqfq4-`,
+  Ct = `vCYbRpq2iJQ-`,
+  wt = (e) =>
+    (0, z.jsxs)(z.Fragment, {
       children: [
-        (0, A.jsx)(kt, {}),
-        (0, A.jsx)(`div`, {
+        (0, z.jsx)(Tt, {}),
+        (0, z.jsx)(`div`, {
           className: `agenda_title`,
-          children: S(`#SteamworksEvents_BuildingCommunity_Speakers`),
+          children: M(`#SteamworksEvents_BuildingCommunity_Speakers`),
         }),
-        (0, A.jsx)(At, {}),
+        (0, z.jsx)(Et, {}),
       ],
     }),
-  P = (e) =>
-    (0, A.jsxs)(`div`, {
-      className: gt,
+  H = (e) =>
+    (0, z.jsxs)(`div`, {
+      className: ft,
       children: [
-        (0, A.jsx)(`div`, {
-          className: vt,
-          children: (0, A.jsx)(`img`, {
-            className: yt,
-            src: p.COMMUNITY_CDN_ASSET_URL + e.screenshot,
+        (0, z.jsx)(`div`, {
+          className: mt,
+          children: (0, z.jsx)(`img`, {
+            className: ht,
+            src: f.COMMUNITY_CDN_ASSET_URL + e.screenshot,
           }),
         }),
-        (0, A.jsxs)(`div`, {
-          className: bt,
+        (0, z.jsxs)(`div`, {
+          className: gt,
           children: [
-            (0, A.jsxs)(`div`, {
-              className: xt,
+            (0, z.jsxs)(`div`, {
+              className: _t,
               children: [
-                (0, A.jsx)(`div`, {
+                (0, z.jsx)(`div`, {
                   className: void 0,
                   children: e.strSpeakers,
                 }),
-                (0, A.jsx)(`div`, { className: void 0, children: e.strTime }),
-                (0, A.jsx)(`div`, { className: St, children: e.strTitle }),
+                (0, z.jsx)(`div`, { className: void 0, children: e.strTime }),
+                (0, z.jsx)(`div`, { className: vt, children: e.strTitle }),
               ],
             }),
-            (0, A.jsx)(`div`, { className: Ct, children: e.strDesc }),
+            (0, z.jsx)(`div`, { className: yt, children: e.strDesc }),
           ],
         }),
       ],
     }),
-  kt = (e) =>
-    (0, A.jsx)(`div`, {
+  Tt = (e) =>
+    (0, z.jsx)(`div`, {
       className: void 0,
-      children: (0, A.jsxs)(ze, {
+      children: (0, z.jsxs)(ke, {
         hideArrows: !1,
         visibleElements: 1,
         useTestScrollbar: !1,
         bLazyRenderChildren: !1,
         disableEdgeWrap: !1,
-        className: t(_t),
+        className: l(pt),
         children: [
-          (0, A.jsx)(
-            P,
+          (0, z.jsx)(
+            H,
             {
-              strDesc: S(`#SteamworksEvents_BuildingCommunity_Session1_Desc`),
+              strDesc: M(`#SteamworksEvents_BuildingCommunity_Session1_Desc`),
               screenshot: `steamworksevents/screenshot_gautam.png`,
-              strTime: S(`#SteamworksEvents_BuildingCommunity_Session1_Time`),
-              strTitle: S(`#SteamworksEvents_BuildingCommunity_Session1_Title`),
-              strSpeakers: S(
+              strTime: M(`#SteamworksEvents_BuildingCommunity_Session1_Time`),
+              strTitle: M(`#SteamworksEvents_BuildingCommunity_Session1_Title`),
+              strSpeakers: M(
                 `#SteamworksEvents_BuildingCommunity_Session1_Speakers`,
               ),
             },
             1,
           ),
-          (0, A.jsx)(
-            P,
+          (0, z.jsx)(
+            H,
             {
-              strDesc: S(`#SteamworksEvents_BuildingCommunity_Session2_Desc`),
+              strDesc: M(`#SteamworksEvents_BuildingCommunity_Session2_Desc`),
               screenshot: `steamworksevents/screenshot_alden_and_adil.png`,
-              strTime: S(`#SteamworksEvents_BuildingCommunity_Session2_Time`),
-              strTitle: S(`#SteamworksEvents_BuildingCommunity_Session2_Title`),
-              strSpeakers: S(
+              strTime: M(`#SteamworksEvents_BuildingCommunity_Session2_Time`),
+              strTitle: M(`#SteamworksEvents_BuildingCommunity_Session2_Title`),
+              strSpeakers: M(
                 `#SteamworksEvents_BuildingCommunity_Session2_Speakers`,
               ),
             },
             2,
           ),
-          (0, A.jsx)(
-            P,
+          (0, z.jsx)(
+            H,
             {
-              strDesc: S(`#SteamworksEvents_BuildingCommunity_Session3_Desc`),
+              strDesc: M(`#SteamworksEvents_BuildingCommunity_Session3_Desc`),
               screenshot: `steamworksevents/screenshot_jenny.png`,
-              strTime: S(`#SteamworksEvents_BuildingCommunity_Session3_Time`),
-              strTitle: S(`#SteamworksEvents_BuildingCommunity_Session3_Title`),
-              strSpeakers: S(
+              strTime: M(`#SteamworksEvents_BuildingCommunity_Session3_Time`),
+              strTitle: M(`#SteamworksEvents_BuildingCommunity_Session3_Title`),
+              strSpeakers: M(
                 `#SteamworksEvents_BuildingCommunity_Session3_Speakers`,
               ),
             },
             3,
           ),
-          (0, A.jsx)(
-            P,
+          (0, z.jsx)(
+            H,
             {
-              strDesc: S(`#SteamworksEvents_BuildingCommunity_Session4_Desc`),
+              strDesc: M(`#SteamworksEvents_BuildingCommunity_Session4_Desc`),
               screenshot: `steamworksevents/screenshot_joe.png`,
-              strTime: S(`#SteamworksEvents_BuildingCommunity_Session4_Time`),
-              strTitle: S(`#SteamworksEvents_BuildingCommunity_Session4_Title`),
-              strSpeakers: S(
+              strTime: M(`#SteamworksEvents_BuildingCommunity_Session4_Time`),
+              strTitle: M(`#SteamworksEvents_BuildingCommunity_Session4_Title`),
+              strSpeakers: M(
                 `#SteamworksEvents_BuildingCommunity_Session4_Speakers`,
               ),
             },
@@ -650,208 +702,208 @@ var gt = `zFLaTiNrHiA-`,
         ],
       }),
     }),
-  F = (e) =>
-    (0, A.jsxs)(`div`, {
-      className: Tt,
+  U = (e) =>
+    (0, z.jsxs)(`div`, {
+      className: xt,
       children: [
-        (0, A.jsx)(`img`, {
+        (0, z.jsx)(`img`, {
           title: e.strTitle,
-          src: p.COMMUNITY_CDN_ASSET_URL + e.imgHeadshot,
+          src: f.COMMUNITY_CDN_ASSET_URL + e.imgHeadshot,
         }),
-        (0, A.jsxs)(`div`, {
-          className: Et,
+        (0, z.jsxs)(`div`, {
+          className: St,
           children: [
-            (0, A.jsx)(`div`, { className: Dt, children: e.strTitle }),
+            (0, z.jsx)(`div`, { className: Ct, children: e.strTitle }),
             e.strBio,
           ],
         }),
       ],
     }),
-  At = (e) =>
-    (0, A.jsxs)(`div`, {
-      className: wt,
+  Et = (e) =>
+    (0, z.jsxs)(`div`, {
+      className: bt,
       children: [
-        (0, A.jsx)(F, {
+        (0, z.jsx)(U, {
           imgHeadshot: `steamworksevents/gautam_headshot.png`,
-          strTitle: S(`#SteamworksEvents_BuildingCommunity_GautamTitle`),
-          strBio: S(`#SteamworksEvents_BuildingCommunity_Gautam`),
+          strTitle: M(`#SteamworksEvents_BuildingCommunity_GautamTitle`),
+          strBio: M(`#SteamworksEvents_BuildingCommunity_Gautam`),
         }),
-        (0, A.jsx)(F, {
+        (0, z.jsx)(U, {
           imgHeadshot: `steamworksevents/alden_headshot.png`,
-          strTitle: S(`#SteamworksEvents_BuildingCommunity_AldenTitle`),
-          strBio: S(`#SteamworksEvents_BuildingCommunity_Alden`),
+          strTitle: M(`#SteamworksEvents_BuildingCommunity_AldenTitle`),
+          strBio: M(`#SteamworksEvents_BuildingCommunity_Alden`),
         }),
-        (0, A.jsx)(F, {
+        (0, z.jsx)(U, {
           imgHeadshot: `steamworksevents/adil_headshot.png`,
-          strTitle: S(`#SteamworksEvents_BuildingCommunity_AdilTitle`),
-          strBio: S(`#SteamworksEvents_BuildingCommunity_Adil`),
+          strTitle: M(`#SteamworksEvents_BuildingCommunity_AdilTitle`),
+          strBio: M(`#SteamworksEvents_BuildingCommunity_Adil`),
         }),
-        (0, A.jsx)(F, {
+        (0, z.jsx)(U, {
           imgHeadshot: `steamworksevents/jenny_headshot.png`,
-          strTitle: S(`#SteamworksEvents_BuildingCommunity_JennyTitle`),
-          strBio: S(`#SteamworksEvents_BuildingCommunity_Jenny`),
+          strTitle: M(`#SteamworksEvents_BuildingCommunity_JennyTitle`),
+          strBio: M(`#SteamworksEvents_BuildingCommunity_Jenny`),
         }),
-        (0, A.jsx)(F, {
+        (0, z.jsx)(U, {
           imgHeadshot: `steamworksevents/joe_headshot.png`,
-          strTitle: S(`#SteamworksEvents_BuildingCommunity_JoeTitle`),
-          strBio: S(`#SteamworksEvents_BuildingCommunity_Joe`),
+          strTitle: M(`#SteamworksEvents_BuildingCommunity_JoeTitle`),
+          strBio: M(`#SteamworksEvents_BuildingCommunity_Joe`),
         }),
       ],
     }),
-  jt = h({
-    Arrow: () => Vt,
-    BasicContextMenuContainer: () => L,
-    BasicContextMenuHeader: () => Nt,
-    BasicContextMenuHeaderShrinkableSpacing: () => Pt,
-    BasicContextMenuModal: () => I,
-    Capitalized: () => It,
-    ContextMenuSeparator: () => zt,
-    Destructive: () => W,
-    Emphasis: () => K,
-    Focused: () => Ft,
-    Label: () => Bt,
-    MenuSectionHeader: () => Lt,
-    Positive: () => G,
-    Selected: () => J,
-    SubMenu: () => Y,
-    UpperCase: () => Rt,
-    active: () => q,
-    contextMenu: () => z,
-    contextMenuContents: () => B,
-    contextMenuFade: () => H,
-    contextMenuItem: () => U,
-    default: () => Ht,
-    "duration-app-launch": () => Mt,
-    hasSubMenu: () => V,
-    slideInAnimation: () => R,
+  Dt = c({
+    Arrow: () => Gt,
+    BasicContextMenuContainer: () => q,
+    BasicContextMenuHeader: () => G,
+    BasicContextMenuHeaderShrinkableSpacing: () => K,
+    BasicContextMenuModal: () => W,
+    Capitalized: () => Bt,
+    ContextMenuSeparator: () => Ut,
+    Destructive: () => Pt,
+    Emphasis: () => It,
+    Focused: () => zt,
+    Label: () => Wt,
+    MenuSectionHeader: () => Vt,
+    Positive: () => Ft,
+    Selected: () => Rt,
+    SubMenu: () => Ht,
+    UpperCase: () => Y,
+    active: () => Lt,
+    contextMenu: () => kt,
+    contextMenuContents: () => At,
+    contextMenuFade: () => Mt,
+    contextMenuItem: () => Nt,
+    default: () => Kt,
+    "duration-app-launch": () => Ot,
+    hasSubMenu: () => jt,
+    slideInAnimation: () => J,
   }),
-  Mt = `800ms`,
-  I = `_8DByIe8Ea8E-`,
-  Nt = `q3pFgCOI2yI-`,
-  Pt = `QHsAQy5yu8A-`,
-  L = `MTKb4J7AMgY-`,
-  R = `poBGSvpOAGo-`,
-  z = `tWKaLgB0owM-`,
-  B = `OFr-eEHnljA-`,
-  V = `AjGNGR6Osiw-`,
-  H = `TRlECVEmgU0-`,
-  U = `O19fZ13-A5w-`,
-  W = `POMfRmARNdU-`,
-  G = `MgaegAYKrxw-`,
-  K = `XIMPVrkcMWM-`,
-  q = `KeQUqD1Sdrg-`,
-  J = `o-m6qQ4jCNo-`,
-  Ft = `I9gEZvVo2Eg-`,
-  It = `DcYAZDy2pgM-`,
-  Lt = `lTpANgOhAS0-`,
-  Rt = `_6v6Y4gGN8Zc-`,
-  Y = `jz-34Yr9NBQ-`,
-  zt = `kn3J3BWkqGc-`,
-  Bt = `u3qomCoD6qk-`,
-  Vt = `DhXuCxvuF58-`,
-  Ht = {
+  Ot = `800ms`,
+  W = `_8DByIe8Ea8E-`,
+  G = `q3pFgCOI2yI-`,
+  K = `QHsAQy5yu8A-`,
+  q = `MTKb4J7AMgY-`,
+  J = `poBGSvpOAGo-`,
+  kt = `tWKaLgB0owM-`,
+  At = `OFr-eEHnljA-`,
+  jt = `AjGNGR6Osiw-`,
+  Mt = `TRlECVEmgU0-`,
+  Nt = `O19fZ13-A5w-`,
+  Pt = `POMfRmARNdU-`,
+  Ft = `MgaegAYKrxw-`,
+  It = `XIMPVrkcMWM-`,
+  Lt = `KeQUqD1Sdrg-`,
+  Rt = `o-m6qQ4jCNo-`,
+  zt = `I9gEZvVo2Eg-`,
+  Bt = `DcYAZDy2pgM-`,
+  Vt = `lTpANgOhAS0-`,
+  Y = `_6v6Y4gGN8Zc-`,
+  Ht = `jz-34Yr9NBQ-`,
+  Ut = `kn3J3BWkqGc-`,
+  Wt = `u3qomCoD6qk-`,
+  Gt = `DhXuCxvuF58-`,
+  Kt = {
     "duration-app-launch": `800ms`,
-    BasicContextMenuModal: I,
-    BasicContextMenuHeader: Nt,
-    BasicContextMenuHeaderShrinkableSpacing: Pt,
-    BasicContextMenuContainer: L,
-    slideInAnimation: R,
-    contextMenu: z,
-    contextMenuContents: B,
-    hasSubMenu: V,
-    contextMenuFade: H,
-    contextMenuItem: U,
-    Destructive: W,
-    Positive: G,
-    Emphasis: K,
-    active: q,
-    Selected: J,
-    Focused: Ft,
-    Capitalized: It,
-    MenuSectionHeader: Lt,
-    UpperCase: Rt,
-    SubMenu: Y,
-    ContextMenuSeparator: zt,
-    Label: Bt,
-    Arrow: Vt,
+    BasicContextMenuModal: W,
+    BasicContextMenuHeader: G,
+    BasicContextMenuHeaderShrinkableSpacing: K,
+    BasicContextMenuContainer: q,
+    slideInAnimation: J,
+    contextMenu: kt,
+    contextMenuContents: At,
+    hasSubMenu: jt,
+    contextMenuFade: Mt,
+    contextMenuItem: Nt,
+    Destructive: Pt,
+    Positive: Ft,
+    Emphasis: It,
+    active: Lt,
+    Selected: Rt,
+    Focused: zt,
+    Capitalized: Bt,
+    MenuSectionHeader: Vt,
+    UpperCase: Y,
+    SubMenu: Ht,
+    ContextMenuSeparator: Ut,
+    Label: Wt,
+    Arrow: Gt,
   };
-function Ut(e) {
+function qt(e) {
   let { managerOverride: t } = e,
-    n = de(),
+    n = ge(),
     r = t ?? n,
-    i = _();
+    i = y();
   return (
-    re(r.OnMenusChanged, i),
-    (0, A.jsx)(Ge, {
+    ee(r.OnMenusChanged, i),
+    (0, z.jsx)(Le, {
       active: !!r.ActiveMenu,
-      children: (0, A.jsx)(Wt, { ActiveMenu: r.ActiveMenu }),
+      children: (0, z.jsx)(Jt, { ActiveMenu: r.ActiveMenu }),
     })
   );
 }
-function Wt(e) {
-  let { ActiveMenu: n } = e,
-    r = k.useCallback(() => {
-      n?.OnCancel();
-    }, [n]);
-  k.useEffect(() => () => n?.Hide(), [n]);
-  let i = [],
-    a = null;
-  Me(() => {
-    for (let e = n; e && e.visible; e = e.submenu)
-      (i.push((0, A.jsx)(Gt, { instance: e }, e.key)), (a = e.label));
+function Jt(e) {
+  let { ActiveMenu: t } = e,
+    n = R.useCallback(() => {
+      t?.OnCancel();
+    }, [t]);
+  R.useEffect(() => () => t?.Hide(), [t]);
+  let r = [],
+    i = null;
+  Se(() => {
+    for (let e = t; e && e.visible; e = e.submenu)
+      (r.push((0, z.jsx)(Yt, { instance: e }, e.key)), (i = e.label));
   });
-  let o = k.useCallback(
+  let a = R.useCallback(
     (e) => {
-      e.currentTarget == e.target && r();
+      e.currentTarget == e.target && n();
     },
-    [r],
+    [n],
   );
-  return (0, A.jsx)(be, {
+  return (0, z.jsx)(ue, {
     padding: `none`,
-    children: (0, A.jsxs)(`div`, {
-      onClick: o,
-      className: t(`BasicUIContextMenu`, I),
+    children: (0, z.jsxs)(`div`, {
+      onClick: a,
+      className: l(`BasicUIContextMenu`, W),
       children: [
-        a &&
-          (0, A.jsx)(A.Fragment, {
-            children: (0, A.jsx)(`div`, {
+        i &&
+          (0, z.jsx)(z.Fragment, {
+            children: (0, z.jsx)(`div`, {
               className: `q3pFgCOI2yI-`,
-              children: a,
+              children: i,
             }),
           }),
-        (0, A.jsx)(ue, {
-          className: L,
-          onCancelButton: r,
-          onClick: o,
-          children: i,
+        (0, z.jsx)(O, {
+          className: q,
+          onCancelButton: n,
+          onClick: a,
+          children: r,
         }),
       ],
     }),
   });
 }
-function Gt(e) {
+function Yt(e) {
   let { instance: t } = e,
-    n = i(),
-    r = k.useCallback(() => {
-      n && te.PlayNavSound(ne.FailedNav);
+    n = h(),
+    r = R.useCallback(() => {
+      n && g.PlayNavSound(C.FailedNav);
     }, [n]),
-    a = k.useMemo(
+    i = R.useMemo(
       () => ({
         instance: t,
-        styles: jt,
+        styles: Dt,
         presentation: 1,
         callbacks: { onDisabledItemSelected: r },
       }),
       [t, r],
     );
-  return (0, A.jsx)(y, {
-    children: (0, A.jsx)(Oe.Provider, { value: a, children: t.ReactElement }),
+  return (0, z.jsx)(T, {
+    children: (0, z.jsx)(k.Provider, { value: i, children: t.ReactElement }),
   });
 }
-function Kt() {
-  return k.useMemo(() => qt(), []);
+function Xt() {
+  return R.useMemo(() => Zt(), []);
 }
-function qt() {
+function Zt() {
   return function (e) {
     let {
         refNavTree: t,
@@ -860,10 +912,10 @@ function qt() {
         children: i,
         modalKey: a,
       } = e,
-      o = k.useRef(void 0);
-    ae(o, r, !0);
-    let s = g(o, t);
-    return (0, A.jsx)(ie, {
+      o = R.useRef(void 0);
+    w(o, r, !0);
+    let s = b(o, t);
+    return (0, z.jsx)(_, {
       className: n,
       navTreeRef: s,
       modal: !0,
@@ -873,68 +925,68 @@ function qt() {
     });
   };
 }
-function Jt(e) {
+function Qt(e) {
   let {
-      className: n,
-      onEscKeypress: r,
-      padding: i = `standard`,
-      bGamepadUIScrollWithin: a,
-      children: o,
+      className: t,
+      onEscKeypress: n,
+      padding: r = `standard`,
+      bGamepadUIScrollWithin: i,
+      children: a,
     } = e,
-    s = t(Ee, i == `standard` && `S9g96mcfmi4-`, a && `_3voolpCtr6w-`, n);
-  return (0, A.jsx)(ue, {
-    className: s,
-    onCancelButton: r,
+    o = l(E, r == `standard` && `S9g96mcfmi4-`, i && `_3voolpCtr6w-`, t);
+  return (0, z.jsx)(O, {
+    className: o,
+    onCancelButton: n,
     focusableIfEmpty: !0,
-    children: (0, A.jsx)(De, { children: (0, A.jsx)(y, { children: o }) }),
+    children: (0, z.jsx)(ne, { children: (0, z.jsx)(T, { children: a }) }),
   });
 }
-function Yt(e) {
-  let t = k.useMemo(() => ({ ModalPosition: Jt }), []);
-  return (0, A.jsx)(_e.Provider, { value: t, children: e.children });
+function $t(e) {
+  let t = R.useMemo(() => ({ ModalPosition: Qt }), []);
+  return (0, z.jsx)(ie.Provider, { value: t, children: e.children });
 }
-function Xt(e) {
-  let t = Kt(),
-    n = k.useMemo(() => ({ DropDownMenu: Se, Content: we }), []);
-  return (0, A.jsx)(ye.Provider, {
+function en(e) {
+  let t = Xt(),
+    n = R.useMemo(() => ({ DropDownMenu: ce, Content: me }), []);
+  return (0, z.jsx)(le.Provider, {
     value: n,
-    children: (0, A.jsx)(Yt, {
-      children: (0, A.jsx)(me, {
+    children: (0, z.jsx)($t, {
+      children: (0, z.jsx)(_e, {
         ...e,
         bUseDialogElement: !1,
         DialogWrapper: t,
-        ContextMenuComponent: Ut,
+        ContextMenuComponent: qt,
       }),
     }),
   });
 }
-function Zt(e) {
-  let t = i(),
+function tn(e) {
+  let t = h(),
     n = { bRenderOverlayAtRoot: !0, bUsePopups: !1, ...e };
-  return t ? (0, A.jsx)(Xt, { ...n }) : (0, A.jsx)(me, { ...n });
+  return t ? (0, z.jsx)(en, { ...n }) : (0, z.jsx)(_e, { ...n });
 }
-var Qt = m(Ke()),
-  $t = `NRLdpp5SW8Q-`,
-  en = `XWkt0fWtpXM-`,
-  tn = `_05insej4ZsY-`,
-  nn = `BfhwqcpG0-8-`;
-function rn() {
-  let [e] = (0, k.useState)(() => r(`rgPackageInfo`, `application_config`));
-  return e;
+var nn = p(Re()),
+  rn = `NRLdpp5SW8Q-`,
+  an = `XWkt0fWtpXM-`,
+  on = `_05insej4ZsY-`,
+  sn = `BfhwqcpG0-8-`;
+function cn() {
+  let [t] = (0, R.useState)(() => e(`rgPackageInfo`, `application_config`));
+  return t;
 }
-async function an(e, t) {
+async function ln(e, t) {
   let n = new FormData();
-  (n.append(`sessionid`, s()), n.append(`keys`, JSON.stringify(t)));
-  let r = `${p.PARTNER_BASE_URL}apps/requestkeys/${e}`,
-    i = await Qt.default.post(r, n);
+  (n.append(`sessionid`, a()), n.append(`keys`, JSON.stringify(t)));
+  let r = `${f.PARTNER_BASE_URL}apps/requestkeys/${e}`,
+    i = await nn.default.post(r, n);
   return i?.data?.message
     ? i.data
-    : { success: !1, message: S(`#Error_Generic`) };
+    : { success: !1, message: M(`#Error_Generic`) };
 }
-function on(e, t, n, r, i) {
-  return Fe({
+function un(e, t, n, r, i) {
+  return Te({
     mutationFn: () =>
-      an(e, [
+      ln(e, [
         {
           packageid: `` + t,
           game_code: 4602,
@@ -945,67 +997,67 @@ function on(e, t, n, r, i) {
         },
       ]),
     onSuccess: (e) => i(e.success, e.message),
-    onError: () => i(!1, S(`#Error_Generic`)),
+    onError: () => i(!1, M(`#Error_Generic`)),
   });
 }
-function sn(e) {
-  let n = (0, k.useMemo)(() => Number.parseInt(e.appId), [e.appId]),
-    r = rn(),
-    [i, a] = (0, k.useState)(1),
-    [o, s] = (0, k.useState)(``);
-  return (0, A.jsxs)(`div`, {
-    className: $t,
+function dn(e) {
+  let t = (0, R.useMemo)(() => Number.parseInt(e.appId), [e.appId]),
+    n = cn(),
+    [r, i] = (0, R.useState)(1),
+    [a, o] = (0, R.useState)(``);
+  return (0, z.jsxs)(`div`, {
+    className: rn,
     children: [
-      (0, A.jsx)(`div`, {
+      (0, z.jsx)(`div`, {
         className: `title2`,
-        children: S(`#KeyWizard_Title`),
+        children: M(`#KeyWizard_Title`),
       }),
-      (0, A.jsx)(`div`, {
+      (0, z.jsx)(`div`, {
         className: `titleHelper`,
-        children: (0, A.jsx)(`a`, {
-          href: `${p.PARTNER_BASE_URL}doc/features/playtest#4`,
+        children: (0, z.jsx)(`a`, {
+          href: `${f.PARTNER_BASE_URL}doc/features/playtest#4`,
           target: `_blank`,
-          children: S(`#ViewDocumentation`),
+          children: M(`#ViewDocumentation`),
         }),
       }),
-      (0, A.jsx)(`br`, { style: { clear: `left` } }),
-      (0, A.jsxs)(`div`, {
+      (0, z.jsx)(`br`, { style: { clear: `left` } }),
+      (0, z.jsxs)(`div`, {
         className: `instructions`,
         children: [
-          (0, A.jsx)(`p`, { children: S(`#KeyWizard_Playtest_Desc`) }),
-          (0, A.jsx)(`p`, { children: S(`#KeyWizard_Request_notes`) }),
-          (0, A.jsx)(`div`, {
-            className: tn,
-            children: (0, A.jsx)(se, {
+          (0, z.jsx)(`p`, { children: M(`#KeyWizard_Playtest_Desc`) }),
+          (0, z.jsx)(`p`, { children: M(`#KeyWizard_Request_notes`) }),
+          (0, z.jsx)(`div`, {
+            className: on,
+            children: (0, z.jsx)(ve, {
               type: `number`,
-              label: S(`#KeyWizard_NumKeys`, r.name),
+              label: M(`#KeyWizard_NumKeys`, n.name),
               min: 1,
               max: 1e8,
-              value: i,
-              onChange: (e) => a(Number.parseInt(e.currentTarget.value)),
+              value: r,
+              onChange: (e) => i(Number.parseInt(e.currentTarget.value)),
             }),
           }),
-          (0, A.jsx)(le, { children: S(`#KeyWizard_KeyUsage`) }),
-          (0, A.jsx)(`textarea`, {
-            className: t(`DialogTextInputBase`, nn),
-            value: o || ``,
-            onChange: (e) => s(e?.currentTarget?.value || ``),
+          (0, z.jsx)(he, { children: M(`#KeyWizard_KeyUsage`) }),
+          (0, z.jsx)(`textarea`, {
+            className: l(`DialogTextInputBase`, sn),
+            value: a || ``,
+            onChange: (e) => o(e?.currentTarget?.value || ``),
           }),
-          (0, A.jsx)(`div`, {
-            className: en,
-            children: (0, A.jsx)(xe, {
+          (0, z.jsx)(`div`, {
+            className: an,
+            children: (0, z.jsx)(se, {
               onClick: (e) =>
-                Ce(
-                  (0, A.jsx)(cn, {
-                    unAppID: n,
-                    oPackage: r,
-                    nKeys: i,
-                    strNotes: o,
+                de(
+                  (0, z.jsx)(fn, {
+                    unAppID: t,
+                    oPackage: n,
+                    nKeys: r,
+                    strNotes: a,
                   }),
-                  oe(e),
+                  S(e),
                 ),
-              disabled: i <= 0,
-              children: S(`#Button_Submit`),
+              disabled: r <= 0,
+              children: M(`#Button_Submit`),
             }),
           }),
         ],
@@ -1013,55 +1065,55 @@ function sn(e) {
     ],
   });
 }
-function cn(e) {
+function fn(e) {
   let { unAppID: t, oPackage: n, nKeys: r, strNotes: i, closeModal: a } = e,
-    o = Ze(),
-    s = on(t, n.packageid, r, i, (e, t) => {
+    o = Ue(),
+    s = un(t, n.packageid, r, i, (e, t) => {
       e
         ? (o.fnSetSuccess(!0), o.fnSetStrSuccess(t))
         : (o.fnSetError(!0), o.fnSetStrError(t));
     });
   return (
-    (0, k.useEffect)(() => {
+    (0, R.useEffect)(() => {
       (o.fnSetLoading(!0), s.mutate());
     }, []),
-    (0, A.jsx)(Qe, {
+    (0, z.jsx)(We, {
       state: o,
-      strDialogTitle: S(`#KeyWizard_Dialog_Title`),
+      strDialogTitle: M(`#KeyWizard_Dialog_Title`),
       closeModal: a,
     })
   );
 }
-function ln() {
-  let [e] = (0, k.useState)(() =>
-    c(`year_in_review_proress`, `application_config`),
+function pn() {
+  let [e] = (0, R.useState)(() =>
+    r(`year_in_review_proress`, `application_config`),
   );
   return e;
 }
-function un(e) {
-  let t = ln(),
-    [n] = qe(`year`, new Date().getFullYear());
+function mn(e) {
+  let t = pn(),
+    [n] = ze(`year`, new Date().getFullYear());
   return (
     new Date().getMonth() + 1,
-    (0, A.jsx)(y, {
-      children: (0, A.jsxs)(`div`, {
-        className: rt,
+    (0, z.jsx)(T, {
+      children: (0, z.jsxs)(`div`, {
+        className: Ye,
         children: [
-          (0, A.jsxs)(`h1`, {
+          (0, z.jsxs)(`h1`, {
             children: [`Steam Replay Progress Monitoring: `, n],
           }),
-          (0, A.jsx)(`hr`, {}),
-          (0, A.jsxs)(`p`, {
+          (0, z.jsx)(`hr`, {}),
+          (0, z.jsxs)(`p`, {
             children: [
               `We are running batches in `,
-              T(t.queue_batch_size),
+              F(t.queue_batch_size),
               ` accounts at a time. Active phase 2 queue size is `,
-              T(t.monthly_active_queue_size),
+              F(t.monthly_active_queue_size),
             ],
           }),
           t.progress.map((e) =>
-            (0, A.jsx)(
-              dn,
+            (0, z.jsx)(
+              hn,
               { oMonth: e, nActiveQueue: t.monthly_active_queue_size },
               e.month,
             ),
@@ -1071,12 +1123,12 @@ function un(e) {
     })
   );
 }
-function dn(e) {
-  let { oMonth: n, nActiveQueue: r } = e;
-  return (0, A.jsxs)(`div`, {
-    className: t(it, void 0),
+function hn(e) {
+  let { oMonth: t, nActiveQueue: n } = e;
+  return (0, z.jsxs)(`div`, {
+    className: l(Xe, void 0),
     children: [
-      (0, A.jsxs)(`h3`, {
+      (0, z.jsxs)(`h3`, {
         children: [
           `Month: `,
           [
@@ -1092,114 +1144,114 @@ function dn(e) {
             `October`,
             `November`,
             `December`,
-          ][n.month - 1],
+          ][t.month - 1],
         ],
       }),
-      (0, A.jsxs)(`div`, {
+      (0, z.jsxs)(`div`, {
         children: [
-          (0, A.jsx)(`b`, { children: `Phase 1:` }),
+          (0, z.jsx)(`b`, { children: `Phase 1:` }),
           ` Pre-Fetching Accounts to Process `,
-          !n.rt_start_processing &&
-            (0, A.jsx)(`span`, { children: `- In Progress` }),
+          !t.rt_start_processing &&
+            (0, z.jsx)(`span`, { children: `- In Progress` }),
         ],
       }),
-      (0, A.jsxs)(`div`, {
+      (0, z.jsxs)(`div`, {
         children: [
           `Started: `,
-          (0, A.jsx)(X, { rtTime: n.rt_start_finding_accounts }),
+          (0, z.jsx)(X, { rtTime: t.rt_start_finding_accounts }),
         ],
       }),
-      (0, A.jsxs)(`div`, {
-        children: [`Account prefetched `, T(n.prefetched_accounts_count)],
+      (0, z.jsxs)(`div`, {
+        children: [`Account prefetched `, F(t.prefetched_accounts_count)],
       }),
-      n.rt_end_finding_accounts
-        ? (0, A.jsxs)(`div`, {
+      t.rt_end_finding_accounts
+        ? (0, z.jsxs)(`div`, {
             children: [
               `Completed `,
-              (0, A.jsx)(X, { rtTime: n.rt_end_finding_accounts }),
+              (0, z.jsx)(X, { rtTime: t.rt_end_finding_accounts }),
               ` prefetched upto accountid `,
-              T(n.largest_account_id_prefetched),
+              F(t.largest_account_id_prefetched),
             ],
           })
-        : (0, A.jsxs)(`div`, {
+        : (0, z.jsxs)(`div`, {
             children: [
               `Pre-fetched upto Account ID `,
-              T(n.largest_account_id_prefetched),
+              F(t.largest_account_id_prefetched),
             ],
           }),
-      !!n.rt_start_processing &&
-        (0, A.jsxs)(`div`, {
+      !!t.rt_start_processing &&
+        (0, z.jsxs)(`div`, {
           children: [
-            (0, A.jsxs)(`div`, {
+            (0, z.jsxs)(`div`, {
               children: [
-                (0, A.jsx)(`b`, { children: `Phase 2:` }),
+                (0, z.jsx)(`b`, { children: `Phase 2:` }),
                 ` Processing Monthly Playtime Summary `,
-                !n.rt_end_processing &&
-                  (0, A.jsx)(`span`, { children: `- In Progress` }),
+                !t.rt_end_processing &&
+                  (0, z.jsx)(`span`, { children: `- In Progress` }),
               ],
             }),
-            (0, A.jsxs)(`div`, {
+            (0, z.jsxs)(`div`, {
               children: [
                 `Started:`,
-                (0, A.jsx)(X, { rtTime: n.rt_start_processing }),
+                (0, z.jsx)(X, { rtTime: t.rt_start_processing }),
               ],
             }),
-            n.rt_end_processing
-              ? (0, A.jsxs)(`div`, {
+            t.rt_end_processing
+              ? (0, z.jsxs)(`div`, {
                   children: [
                     `Completed `,
-                    (0, A.jsx)(X, { rtTime: n.rt_end_processing }),
+                    (0, z.jsx)(X, { rtTime: t.rt_end_processing }),
                     `\xA0 queue'ed upto account ID `,
-                    T(n.largest_account_queued),
+                    F(t.largest_account_queued),
                     `total accounts queued `,
-                    T(n.queued_accounts),
+                    F(t.queued_accounts),
                   ],
                 })
-              : (0, A.jsxs)(`div`, {
+              : (0, z.jsxs)(`div`, {
                   children: [
                     `Queue'ed upto Account ID `,
-                    T(n.largest_account_queued),
+                    F(t.largest_account_queued),
                     `total accounts queued `,
-                    T(n.queued_accounts),
+                    F(t.queued_accounts),
                   ],
                 }),
           ],
         }),
       !!(
-        (n.rt_end_processing && r == 0) ||
-        n.rt_platform_summary ||
-        n.rt_queue_empty
+        (t.rt_end_processing && n == 0) ||
+        t.rt_platform_summary ||
+        t.rt_queue_empty
       ) &&
-        (0, A.jsxs)(`div`, {
+        (0, z.jsxs)(`div`, {
           children: [
-            (0, A.jsxs)(`div`, {
+            (0, z.jsxs)(`div`, {
               children: [
-                (0, A.jsx)(`b`, { children: `Phase 3:` }),
+                (0, z.jsx)(`b`, { children: `Phase 3:` }),
                 ` Global Playtime Distribution`,
               ],
             }),
-            (0, A.jsxs)(`div`, {
+            (0, z.jsxs)(`div`, {
               children: [
                 `Started: `,
-                (0, A.jsx)(X, { rtTime: n.rt_queue_empty }),
+                (0, z.jsx)(X, { rtTime: t.rt_queue_empty }),
               ],
             }),
-            n.rt_platform_summary
-              ? (0, A.jsxs)(`div`, {
+            t.rt_platform_summary
+              ? (0, z.jsxs)(`div`, {
                   children: [
                     `Completed at `,
-                    (0, A.jsx)(X, { rtTime: n.rt_platform_summary }),
+                    (0, z.jsx)(X, { rtTime: t.rt_platform_summary }),
                   ],
                 })
-              : (0, A.jsx)(`div`, { children: `In progress started at` }),
+              : (0, z.jsx)(`div`, { children: `In progress started at` }),
           ],
         }),
-      !!n.rt_community_stats &&
-        (0, A.jsxs)(`div`, {
+      !!t.rt_community_stats &&
+        (0, z.jsxs)(`div`, {
           children: [
-            (0, A.jsx)(`b`, { children: `Phase Idependant:` }),
+            (0, z.jsx)(`b`, { children: `Phase Idependant:` }),
             ` Community Stats calculation Completed at `,
-            (0, A.jsx)(X, { rtTime: n.rt_community_stats }),
+            (0, z.jsx)(X, { rtTime: t.rt_community_stats }),
           ],
         }),
     ],
@@ -1207,11 +1259,11 @@ function dn(e) {
 }
 function X(e) {
   let { rtTime: t } = e;
-  return (0, A.jsxs)(`span`, { children: [fe(t), ` as `, pe(t)] });
+  return (0, z.jsxs)(`span`, { children: [D(t), ` as `, pe(t)] });
 }
-var fn = k.lazy(() =>
-    b(
-      () => import(`./rootlogin.js`),
+var gn = R.lazy(() =>
+    A(
+      () => import(`./chunk~a8a12c686e.js`),
       __vite__mapDeps([
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
         20, 21, 22, 23, 24, 25, 26, 27,
@@ -1219,335 +1271,337 @@ var fn = k.lazy(() =>
       import.meta.url,
     ),
   ),
-  pn = k.lazy(() =>
-    b(
-      () => import(`./steamml_routing.js`),
+  _n = R.lazy(() =>
+    A(
+      () => import(`./chunk~cad0693c0c.js`),
       __vite__mapDeps([28, 1, 4, 29, 30, 31, 21, 32]),
       import.meta.url,
     ),
   );
-k.lazy(() =>
-  b(
-    () => import(`./steamdeckcompatibilitydetails.js`),
+R.lazy(() =>
+  A(
+    () => import(`./chunk~91e3af12c1.js`),
     __vite__mapDeps([
-      33, 34, 1, 3, 2, 4, 5, 35, 36, 37, 38, 39, 27, 21, 40, 41, 22, 23, 42, 43,
+      33, 34, 1, 3, 2, 4, 5, 35, 36, 37, 38, 39, 27, 21, 40, 41, 42, 43, 22, 23,
+      44, 45,
     ]),
     import.meta.url,
   ),
 );
-var Z = k.lazy(() =>
-    b(
-      () => import(`./steamdeckcompatibilitydetails_admin.js`),
+var Z = R.lazy(() =>
+    A(
+      () => import(`./chunk~a2cb8ea8dc.js`),
       __vite__mapDeps([
-        44, 1, 34, 3, 2, 4, 5, 35, 36, 37, 38, 39, 27, 21, 40, 41, 22, 23, 42,
-        43,
+        46, 1, 34, 3, 2, 4, 5, 35, 36, 37, 38, 39, 27, 21, 40, 41, 42, 43, 22,
+        23, 44, 45,
       ]),
       import.meta.url,
     ),
   ),
-  mn = k.lazy(() =>
-    b(
-      () => import(`./pricing_routing.js`),
+  vn = R.lazy(() =>
+    A(
+      () => import(`./chunk~9661a67253.js`),
       __vite__mapDeps([
-        45, 1, 3, 2, 4, 5, 46, 38, 37, 47, 48, 49, 29, 50, 9, 10, 11, 12, 13,
-        14, 15, 16, 17, 51, 52, 53, 21, 40, 42, 54, 27, 41, 22, 23, 55, 56, 57,
-        58, 59, 60, 36, 39, 61, 62, 63, 64, 65, 66, 67, 35, 68, 8, 18, 19, 20,
-        69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 25, 7, 24, 79, 80, 81, 82, 83,
-        84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94,
+        47, 1, 3, 2, 4, 5, 48, 38, 37, 49, 50, 51, 29, 52, 9, 10, 11, 12, 13,
+        14, 15, 16, 17, 53, 54, 55, 21, 40, 44, 56, 27, 41, 22, 23, 57, 58, 59,
+        60, 61, 62, 36, 39, 63, 64, 65, 66, 67, 68, 69, 35, 70, 8, 18, 19, 20,
+        71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 25, 7, 24, 81, 82, 83, 84, 85,
+        86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96,
       ]),
       import.meta.url,
     ),
   ),
-  hn = k.lazy(() =>
-    b(
-      () => import(`./buildpatchnotes.js`),
+  yn = R.lazy(() =>
+    A(
+      () => import(`./chunk~6151aaad06.js`),
       __vite__mapDeps([
-        95, 1, 3, 60, 37, 38, 2, 4, 5, 35, 36, 39, 96, 19, 47, 48, 68, 97, 7,
-        80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43, 56, 49, 101,
-        102, 103, 61, 62, 104, 105, 106, 107, 108, 109, 110, 111, 112, 65, 58,
-        113, 114, 66, 57, 115, 116, 117, 118, 119, 30, 120, 121, 12, 13, 10, 11,
-        14, 18, 51, 52, 122, 55, 88, 123, 124, 125, 24, 126, 127, 79, 25, 128,
-        129, 130, 131, 132, 133, 134, 63, 59, 64, 135, 136, 137, 138, 139, 140,
-        141, 70, 71, 69, 142, 77, 143, 144, 145, 74, 146, 147, 148, 149, 150,
-        151, 152, 153, 154, 155, 156,
+        97, 1, 3, 62, 37, 38, 2, 4, 5, 35, 36, 39, 98, 19, 49, 50, 70, 99, 7,
+        82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22, 23, 44, 45, 58,
+        51, 103, 104, 105, 63, 64, 106, 107, 108, 109, 110, 111, 112, 113, 114,
+        67, 60, 115, 116, 68, 59, 117, 118, 119, 120, 121, 30, 122, 123, 12, 13,
+        10, 11, 14, 18, 53, 54, 124, 57, 90, 125, 126, 127, 24, 128, 81, 25,
+        129, 130, 131, 132, 133, 134, 135, 65, 61, 66, 136, 137, 138, 139, 140,
+        141, 142, 72, 73, 143, 144, 71, 145, 79, 146, 147, 76, 148, 149, 150,
+        151, 152, 153, 154, 155, 156, 157, 158, 159,
       ]),
       import.meta.url,
     ),
   ),
-  gn = k.lazy(() =>
-    b(
-      () => import(`./promotion_routing.js`),
+  bn = R.lazy(() =>
+    A(
+      () => import(`./chunk~af3bd1e68d.js`),
       __vite__mapDeps([
-        157, 158, 1, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
-        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
-        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 117, 118, 55, 57, 58,
-        70, 71, 126, 146, 25, 24, 147, 127, 79, 153, 160, 116, 113, 119, 29,
-        161, 107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15,
-        16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170, 8, 18,
-        20, 6, 26, 112, 30, 171, 172, 121, 122, 50, 46, 54, 173, 174, 175, 155,
-        137, 138, 139, 140, 81, 82, 176, 177, 178, 179, 115, 88, 123, 124, 125,
-        128, 129, 130, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 69, 142,
-        77, 143, 144, 145, 74, 75, 76, 180, 181, 182, 183, 78, 87, 184, 185,
-        186, 187, 83, 85, 154, 188, 189, 190, 191, 192, 193, 194, 86, 89, 195,
-        196, 197, 198, 199, 90, 91, 200, 201, 202, 203, 204, 205,
+        160, 161, 1, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
+        50, 70, 99, 7, 82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22,
+        23, 44, 45, 58, 51, 103, 104, 105, 63, 64, 106, 107, 108, 162, 110, 57,
+        59, 60, 72, 73, 148, 25, 24, 128, 81, 156, 163, 118, 119, 120, 115, 121,
+        29, 164, 109, 111, 112, 113, 67, 165, 6, 8, 9, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 20, 26, 114, 30, 122, 166, 53, 54, 167, 168, 169, 55, 170,
+        171, 172, 86, 173, 174, 175, 123, 124, 52, 48, 56, 176, 177, 178, 158,
+        138, 139, 140, 141, 83, 84, 179, 180, 181, 117, 90, 125, 126, 127, 129,
+        130, 131, 132, 133, 134, 135, 65, 61, 66, 136, 137, 142, 143, 144, 71,
+        145, 79, 146, 147, 76, 77, 78, 182, 183, 184, 185, 80, 89, 186, 187,
+        188, 189, 85, 87, 157, 190, 191, 192, 193, 194, 195, 196, 88, 91, 197,
+        198, 199, 200, 201, 92, 93, 202, 203, 204, 205, 206, 207,
       ]),
       import.meta.url,
     ),
   ),
-  _n = k.lazy(() =>
-    b(
-      () => import(`./salesrouting.js`),
+  xn = R.lazy(() =>
+    A(
+      () => import(`./chunk~ac46798222.js`),
       __vite__mapDeps([
-        206, 1, 158, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
-        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
-        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 117, 118, 55, 57, 58,
-        70, 71, 126, 146, 25, 24, 147, 127, 79, 153, 160, 116, 113, 119, 29,
-        161, 107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15,
-        16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170, 8, 18,
-        20, 6, 26, 112, 30, 171, 172, 121, 122, 50, 46, 54, 173, 174, 175, 155,
-        137, 138, 139, 140, 81, 82, 176, 177, 178, 179, 115, 88, 123, 124, 125,
-        128, 129, 130, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 69, 142,
-        77, 143, 144, 145, 74, 75, 76, 180, 181, 182, 183, 78, 87, 184, 185,
-        186, 187, 83, 85, 154, 188, 189, 190, 191, 192, 193, 194, 86, 89, 195,
-        196, 197, 198, 199, 90, 91, 200, 201, 202, 203, 204, 205,
+        208, 1, 161, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
+        50, 70, 99, 7, 82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22,
+        23, 44, 45, 58, 51, 103, 104, 105, 63, 64, 106, 107, 108, 162, 110, 57,
+        59, 60, 72, 73, 148, 25, 24, 128, 81, 156, 163, 118, 119, 120, 115, 121,
+        29, 164, 109, 111, 112, 113, 67, 165, 6, 8, 9, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 20, 26, 114, 30, 122, 166, 53, 54, 167, 168, 169, 55, 170,
+        171, 172, 86, 173, 174, 175, 123, 124, 52, 48, 56, 176, 177, 178, 158,
+        138, 139, 140, 141, 83, 84, 179, 180, 181, 117, 90, 125, 126, 127, 129,
+        130, 131, 132, 133, 134, 135, 65, 61, 66, 136, 137, 142, 143, 144, 71,
+        145, 79, 146, 147, 76, 77, 78, 182, 183, 184, 185, 80, 89, 186, 187,
+        188, 189, 85, 87, 157, 190, 191, 192, 193, 194, 195, 196, 88, 91, 197,
+        198, 199, 200, 201, 92, 93, 202, 203, 204, 205, 206, 207,
       ]),
       import.meta.url,
     ),
   ),
-  vn = k.lazy(() =>
-    b(
-      () => import(`./optin_routing.js`),
+  Sn = R.lazy(() =>
+    A(
+      () => import(`./chunk~f5466f3e0e.js`),
       __vite__mapDeps([
-        207, 158, 1, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
-        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
-        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 117, 118, 55, 57, 58,
-        70, 71, 126, 146, 25, 24, 147, 127, 79, 153, 160, 116, 113, 119, 29,
-        161, 107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15,
-        16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170, 8, 18,
-        20, 6, 26, 112, 30, 171, 172, 121, 122, 50, 46, 54, 173, 174, 175, 155,
-        137, 138, 139, 140, 81, 82, 176, 177, 178, 179, 115, 88, 123, 124, 125,
-        128, 129, 130, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 69, 142,
-        77, 143, 144, 145, 74, 75, 76, 180, 181, 182, 183, 78, 87, 184, 185,
-        186, 187, 83, 85, 154, 188, 189, 190, 191, 192, 193, 194, 86, 89, 195,
-        196, 197, 198, 199, 90, 91, 200, 201, 202, 203, 204, 205,
+        209, 161, 1, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
+        50, 70, 99, 7, 82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22,
+        23, 44, 45, 58, 51, 103, 104, 105, 63, 64, 106, 107, 108, 162, 110, 57,
+        59, 60, 72, 73, 148, 25, 24, 128, 81, 156, 163, 118, 119, 120, 115, 121,
+        29, 164, 109, 111, 112, 113, 67, 165, 6, 8, 9, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 20, 26, 114, 30, 122, 166, 53, 54, 167, 168, 169, 55, 170,
+        171, 172, 86, 173, 174, 175, 123, 124, 52, 48, 56, 176, 177, 178, 158,
+        138, 139, 140, 141, 83, 84, 179, 180, 181, 117, 90, 125, 126, 127, 129,
+        130, 131, 132, 133, 134, 135, 65, 61, 66, 136, 137, 142, 143, 144, 71,
+        145, 79, 146, 147, 76, 77, 78, 182, 183, 184, 185, 80, 89, 186, 187,
+        188, 189, 85, 87, 157, 190, 191, 192, 193, 194, 195, 196, 88, 91, 197,
+        198, 199, 200, 201, 92, 93, 202, 203, 204, 205, 206, 207,
       ]),
       import.meta.url,
     ),
   ),
-  Q = k.lazy(() =>
-    b(
-      () => import(`./appadminrouter.js`),
+  Q = R.lazy(() =>
+    A(
+      () => import(`./chunk~6bd490454e.js`),
       __vite__mapDeps([
-        208, 1, 3, 114, 66, 2, 4, 5, 35, 36, 37, 38, 39, 47, 48, 97, 99, 161,
-        30, 31, 173, 174, 13, 10, 11, 14, 53, 175, 27, 40, 21, 22, 23, 155, 102,
-        103, 137, 138, 139, 140, 81, 82, 176, 177, 80, 7, 178, 25, 24, 179, 127,
-        79, 58, 209, 210, 68, 87, 88, 55, 56, 57, 184, 185, 186, 187, 211, 78,
-        212,
+        210, 1, 3, 116, 68, 2, 4, 5, 35, 36, 37, 38, 39, 49, 50, 99, 101, 164,
+        30, 31, 176, 177, 13, 10, 11, 14, 55, 178, 27, 40, 21, 22, 23, 158, 104,
+        105, 138, 139, 140, 141, 83, 84, 179, 42, 43, 180, 82, 7, 25, 24, 181,
+        128, 81, 60, 211, 212, 70, 89, 90, 57, 58, 59, 186, 187, 188, 189, 213,
+        80, 214,
       ]),
       import.meta.url,
     ),
   ),
-  $ = k.lazy(() =>
-    b(
-      () => import(`./storeadmin.js`),
+  $ = R.lazy(() =>
+    A(
+      () => import(`./chunk~5e6874a411.js`),
       __vite__mapDeps([
-        213, 1, 3, 60, 37, 38, 2, 4, 5, 35, 36, 39, 96, 19, 47, 48, 68, 97, 7,
-        80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43, 56, 49, 101,
-        102, 103, 61, 62, 104, 105, 106, 159, 117, 118, 55, 57, 58, 70, 71, 126,
-        146, 25, 24, 147, 127, 79, 153, 160, 46, 9, 10, 11, 12, 13, 14, 15, 16,
-        17, 8, 18, 20, 51, 52, 164, 165, 166, 53, 167, 214, 120, 171, 172, 168,
-        169, 215, 216, 50, 54, 155, 69, 67, 59, 63, 64, 65, 66, 72, 73, 74, 209,
-        76, 182, 183, 210, 173, 174, 175, 137, 114, 138, 139, 140, 81, 82, 176,
-        87, 88, 184, 185, 186, 187, 211, 78, 154, 190, 191, 135, 136, 194, 195,
-        196, 197, 198, 199, 217, 109, 124, 125, 203, 204, 218, 219,
+        215, 1, 3, 62, 37, 38, 2, 4, 5, 35, 36, 39, 98, 19, 49, 50, 70, 99, 7,
+        82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22, 23, 44, 45, 58,
+        51, 103, 104, 105, 63, 64, 106, 107, 108, 162, 110, 57, 59, 60, 72, 73,
+        148, 25, 24, 128, 81, 156, 163, 48, 119, 120, 9, 10, 11, 12, 13, 14, 15,
+        16, 17, 8, 18, 20, 53, 54, 167, 122, 168, 169, 55, 170, 174, 175, 171,
+        172, 216, 217, 52, 56, 158, 149, 71, 69, 61, 65, 66, 67, 68, 74, 75, 76,
+        155, 211, 78, 184, 185, 212, 176, 177, 178, 138, 116, 139, 140, 141, 83,
+        84, 179, 89, 90, 186, 187, 188, 189, 213, 80, 157, 192, 193, 136, 137,
+        196, 197, 198, 199, 200, 201, 218, 126, 127, 205, 206, 219, 220,
       ]),
       import.meta.url,
     ),
   ),
-  yn = k.lazy(() =>
-    b(
-      () => import(`./packageadmin.js`),
+  Cn = R.lazy(() =>
+    A(
+      () => import(`./chunk~2dcd698413.js`),
       __vite__mapDeps([
-        220, 1, 3, 60, 37, 38, 2, 4, 5, 46, 47, 48, 49, 9, 10, 11, 12, 13, 14,
-        15, 16, 17, 8, 18, 19, 20, 51, 52, 171, 172, 121, 122, 50, 53, 21, 40,
-        42, 54, 27, 22, 23, 67, 35, 36, 39, 68, 69, 70, 71, 59, 61, 62, 63, 64,
-        65, 66, 72, 73, 74, 209, 76, 83, 84, 85, 86, 56, 55, 57, 58, 79, 80, 7,
-        25, 24, 87, 88, 89, 92, 93, 200, 201, 221,
+        221, 1, 3, 62, 37, 38, 2, 4, 5, 48, 49, 50, 51, 9, 10, 11, 12, 13, 14,
+        15, 16, 17, 8, 18, 19, 20, 53, 54, 174, 175, 123, 124, 52, 55, 21, 40,
+        44, 56, 27, 22, 23, 69, 35, 36, 39, 70, 71, 72, 73, 61, 63, 64, 65, 66,
+        67, 68, 74, 75, 76, 211, 78, 85, 86, 87, 88, 58, 57, 59, 60, 81, 82, 7,
+        25, 24, 89, 90, 91, 94, 95, 202, 203, 222,
       ]),
       import.meta.url,
     ),
   ),
-  bn = k.lazy(() =>
-    b(
-      () => import(`./connections.js`),
-      __vite__mapDeps([222, 1, 3, 2, 4, 5, 31, 21, 40, 22, 23, 223]),
+  wn = R.lazy(() =>
+    A(
+      () => import(`./chunk~a3c2cda769.js`),
+      __vite__mapDeps([223, 1, 3, 2, 4, 5, 31, 21, 40, 22, 23, 224]),
       import.meta.url,
     ),
   ),
-  xn = k.lazy(() =>
-    b(
-      () => import(`./landing.js`),
+  Tn = R.lazy(() =>
+    A(
+      () => import(`./chunk~92973ecf63.js`),
       __vite__mapDeps([
-        224, 1, 3, 158, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
-        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
-        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 117, 118, 55, 57, 58,
-        70, 71, 126, 146, 25, 24, 147, 127, 79, 153, 160, 116, 113, 119, 29,
-        161, 107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15,
-        16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170, 8, 18,
-        20, 6, 26, 112, 30, 171, 172, 121, 122, 50, 46, 54, 173, 174, 175, 155,
-        137, 138, 139, 140, 81, 82, 176, 177, 178, 179, 115, 88, 123, 124, 125,
-        128, 129, 130, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 69, 142,
-        77, 143, 144, 145, 74, 75, 76, 180, 181, 182, 183, 78, 87, 184, 185,
-        186, 187, 83, 85, 154, 188, 189, 190, 191, 192, 193, 194, 86, 89, 195,
-        196, 197, 198, 199, 90, 91, 200, 201, 202, 203, 204, 205, 225, 226, 227,
-        228, 229,
+        225, 1, 3, 161, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
+        50, 70, 99, 7, 82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22,
+        23, 44, 45, 58, 51, 103, 104, 105, 63, 64, 106, 107, 108, 162, 110, 57,
+        59, 60, 72, 73, 148, 25, 24, 128, 81, 156, 163, 118, 119, 120, 115, 121,
+        29, 164, 109, 111, 112, 113, 67, 165, 6, 8, 9, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 20, 26, 114, 30, 122, 166, 53, 54, 167, 168, 169, 55, 170,
+        171, 172, 86, 173, 174, 175, 123, 124, 52, 48, 56, 176, 177, 178, 158,
+        138, 139, 140, 141, 83, 84, 179, 180, 181, 117, 90, 125, 126, 127, 129,
+        130, 131, 132, 133, 134, 135, 65, 61, 66, 136, 137, 142, 143, 144, 71,
+        145, 79, 146, 147, 76, 77, 78, 182, 183, 184, 185, 80, 89, 186, 187,
+        188, 189, 85, 87, 157, 190, 191, 192, 193, 194, 195, 196, 88, 91, 197,
+        198, 199, 200, 201, 92, 93, 202, 203, 204, 205, 206, 207, 226, 227, 228,
+        229, 230,
       ]),
       import.meta.url,
     ),
   ),
-  Sn = k.lazy(() =>
-    b(
-      () => import(`./timelinemarkereditorlanding.js`),
+  En = R.lazy(() =>
+    A(
+      () => import(`./chunk~7a45b43a5d.js`),
       __vite__mapDeps([
-        230, 1, 3, 2, 4, 5, 231, 65, 62, 27, 21, 56, 40, 41, 102, 103, 70, 71,
-        132, 133, 134, 61, 126, 31, 25, 7, 24, 69, 22, 23, 64, 66, 182, 183,
-        232, 178, 202, 233, 36, 234, 235,
+        231, 1, 3, 2, 4, 5, 232, 67, 64, 27, 21, 58, 40, 41, 104, 105, 72, 73,
+        133, 134, 135, 110, 31, 63, 25, 7, 24, 71, 22, 23, 66, 68, 184, 185,
+        233, 43, 204, 234, 36, 235, 236,
       ]),
       import.meta.url,
     ),
   ),
-  Cn = k.lazy(() =>
-    b(
-      () => import(`./promotionreviewdashboard.js`),
+  Dn = R.lazy(() =>
+    A(
+      () => import(`./chunk~be64a9384d.js`),
       __vite__mapDeps([
-        236, 1, 158, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
-        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
-        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 117, 118, 55, 57, 58,
-        70, 71, 126, 146, 25, 24, 147, 127, 79, 153, 160, 116, 113, 119, 29,
-        161, 107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15,
-        16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170, 8, 18,
-        20, 6, 26, 112, 30, 171, 172, 121, 122, 50, 46, 54, 173, 174, 175, 155,
-        137, 138, 139, 140, 81, 82, 176, 177, 178, 179, 115, 88, 123, 124, 125,
-        128, 129, 130, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 69, 142,
-        77, 143, 144, 145, 74, 75, 76, 180, 181, 182, 183, 78, 87, 184, 185,
-        186, 187, 83, 85, 154, 188, 189, 190, 191, 192, 193, 194, 86, 89, 195,
-        196, 197, 198, 199, 90, 91, 200, 201, 202, 203, 204, 205, 237,
+        237, 1, 161, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
+        50, 70, 99, 7, 82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22,
+        23, 44, 45, 58, 51, 103, 104, 105, 63, 64, 106, 107, 108, 162, 110, 57,
+        59, 60, 72, 73, 148, 25, 24, 128, 81, 156, 163, 118, 119, 120, 115, 121,
+        29, 164, 109, 111, 112, 113, 67, 165, 6, 8, 9, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 20, 26, 114, 30, 122, 166, 53, 54, 167, 168, 169, 55, 170,
+        171, 172, 86, 173, 174, 175, 123, 124, 52, 48, 56, 176, 177, 178, 158,
+        138, 139, 140, 141, 83, 84, 179, 180, 181, 117, 90, 125, 126, 127, 129,
+        130, 131, 132, 133, 134, 135, 65, 61, 66, 136, 137, 142, 143, 144, 71,
+        145, 79, 146, 147, 76, 77, 78, 182, 183, 184, 185, 80, 89, 186, 187,
+        188, 189, 85, 87, 157, 190, 191, 192, 193, 194, 195, 196, 88, 91, 197,
+        198, 199, 200, 201, 92, 93, 202, 203, 204, 205, 206, 207, 238,
       ]),
       import.meta.url,
     ),
   ),
-  wn = k.lazy(() =>
-    b(
-      () => import(`./reservationqueuemessagingdashboard.js`),
+  On = R.lazy(() =>
+    A(
+      () => import(`./chunk~0242e5eb11.js`),
       __vite__mapDeps([
-        238, 1, 3, 2, 4, 5, 97, 30, 31, 27, 40, 21, 101, 19, 55, 56, 57, 58,
-        102, 103, 25, 7, 24, 69, 22, 23, 70, 71, 182, 183, 184, 88, 185, 186,
-        187, 190, 195, 36, 37, 38, 47, 48, 39, 61, 63, 196, 197, 198, 239,
+        239, 1, 3, 2, 4, 5, 99, 30, 31, 27, 40, 21, 103, 19, 57, 58, 59, 60,
+        104, 105, 25, 7, 24, 71, 22, 23, 72, 73, 184, 185, 186, 90, 187, 188,
+        189, 192, 197, 36, 37, 38, 49, 50, 39, 63, 65, 198, 199, 200, 240,
       ]),
       import.meta.url,
     ),
   ),
-  Tn = k.lazy(() =>
-    b(
-      () => import(`./contenthub_routing.js`),
+  kn = R.lazy(() =>
+    A(
+      () => import(`./chunk~4d6a0703cb.js`),
       __vite__mapDeps([
-        240, 1, 3, 2, 4, 5, 29, 214, 9, 10, 11, 12, 13, 14, 15, 16, 17, 51, 52,
-        164, 165, 166, 53, 167, 120, 27, 21, 41, 22, 23, 76, 182, 183, 77, 188,
-        35, 36, 37, 38, 39, 96, 60, 19, 47, 48, 68, 97, 7, 80, 98, 99, 100, 31,
-        34, 40, 42, 43, 56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 108, 109,
-        126, 189, 190, 191, 135, 136, 185, 81, 82, 241,
+        241, 1, 3, 2, 4, 5, 29, 167, 122, 9, 10, 11, 12, 13, 14, 15, 16, 17, 53,
+        54, 168, 169, 55, 170, 27, 21, 41, 22, 23, 78, 184, 185, 79, 190, 35,
+        36, 37, 38, 39, 98, 62, 19, 49, 50, 70, 99, 7, 82, 100, 101, 102, 31,
+        34, 40, 42, 43, 44, 45, 58, 51, 103, 104, 105, 63, 64, 106, 107, 108,
+        110, 111, 191, 192, 193, 136, 137, 187, 83, 84, 242,
       ]),
       import.meta.url,
     ),
   ),
-  En = k.lazy(() =>
-    b(
-      () => import(`./recap_routing.js`),
+  An = R.lazy(() =>
+    A(
+      () => import(`./chunk~cf0982cd3a.js`),
       __vite__mapDeps([
-        242, 1, 158, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
-        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
-        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 117, 118, 55, 57, 58,
-        70, 71, 126, 146, 25, 24, 147, 127, 79, 153, 160, 116, 113, 119, 29,
-        161, 107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15,
-        16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170, 8, 18,
-        20, 6, 26, 112, 30, 171, 172, 121, 122, 50, 46, 54, 173, 174, 175, 155,
-        137, 138, 139, 140, 81, 82, 176, 177, 178, 179, 115, 88, 123, 124, 125,
-        128, 129, 130, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 69, 142,
-        77, 143, 144, 145, 74, 75, 76, 180, 181, 182, 183, 78, 87, 184, 185,
-        186, 187, 83, 85, 154, 188, 189, 190, 191, 192, 193, 194, 86, 89, 195,
-        196, 197, 198, 199, 90, 91, 200, 201, 202, 203, 204, 205,
+        243, 1, 161, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
+        50, 70, 99, 7, 82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22,
+        23, 44, 45, 58, 51, 103, 104, 105, 63, 64, 106, 107, 108, 162, 110, 57,
+        59, 60, 72, 73, 148, 25, 24, 128, 81, 156, 163, 118, 119, 120, 115, 121,
+        29, 164, 109, 111, 112, 113, 67, 165, 6, 8, 9, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 20, 26, 114, 30, 122, 166, 53, 54, 167, 168, 169, 55, 170,
+        171, 172, 86, 173, 174, 175, 123, 124, 52, 48, 56, 176, 177, 178, 158,
+        138, 139, 140, 141, 83, 84, 179, 180, 181, 117, 90, 125, 126, 127, 129,
+        130, 131, 132, 133, 134, 135, 65, 61, 66, 136, 137, 142, 143, 144, 71,
+        145, 79, 146, 147, 76, 77, 78, 182, 183, 184, 185, 80, 89, 186, 187,
+        188, 189, 85, 87, 157, 190, 191, 192, 193, 194, 195, 196, 88, 91, 197,
+        198, 199, 200, 201, 92, 93, 202, 203, 204, 205, 206, 207,
       ]),
       import.meta.url,
     ),
   ),
-  Dn = k.lazy(() =>
-    b(
-      () => import(`./deadlinelanding.js`),
+  jn = R.lazy(() =>
+    A(
+      () => import(`./chunk~9ea24a5c24.js`),
       __vite__mapDeps([
-        243, 1, 3, 2, 4, 5, 38, 37, 21, 41, 102, 103, 104, 105, 79, 35, 36, 39,
-        80, 7, 40, 58, 25, 24, 127, 227, 199, 228, 244,
+        244, 1, 3, 2, 4, 5, 38, 37, 21, 41, 104, 105, 106, 107, 81, 35, 36, 39,
+        82, 7, 40, 60, 25, 24, 128, 228, 201, 229, 245,
       ]),
       import.meta.url,
     ),
   ),
-  On = k.lazy(() =>
-    b(
-      () => import(`./taxrequirementlanding.js`),
-      __vite__mapDeps([245, 1, 3, 2, 4, 5, 21, 40, 182, 183, 227, 246]),
+  Mn = R.lazy(() =>
+    A(
+      () => import(`./chunk~8bbbc35117.js`),
+      __vite__mapDeps([246, 1, 3, 2, 4, 5, 21, 40, 184, 185, 228, 247]),
       import.meta.url,
     ),
   ),
-  kn = k.lazy(() =>
-    b(
-      () => import(`./meetsteamrouting.js`),
+  Nn = R.lazy(() =>
+    A(
+      () => import(`./chunk~a7bc2e23e5.js`),
       __vite__mapDeps([
-        247, 1, 3, 60, 37, 38, 2, 4, 5, 35, 36, 39, 96, 19, 47, 48, 68, 97, 7,
-        80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43, 56, 49, 101,
-        102, 103, 61, 62, 104, 105, 106, 29, 112, 65, 58, 113, 114, 66, 57, 30,
-        55, 70, 71, 131, 25, 24, 79, 59, 63, 64, 75, 76, 182, 183, 77, 78, 143,
-        88, 83, 11, 84, 85, 154, 155, 192, 193, 194, 195, 196, 199, 248,
+        248, 1, 3, 62, 37, 38, 2, 4, 5, 35, 36, 39, 98, 19, 49, 50, 70, 99, 7,
+        82, 100, 101, 102, 31, 27, 34, 21, 40, 41, 42, 43, 22, 23, 44, 45, 58,
+        51, 103, 104, 105, 63, 64, 106, 107, 108, 29, 114, 67, 60, 115, 116, 68,
+        59, 30, 57, 72, 73, 132, 25, 24, 81, 61, 65, 66, 77, 78, 184, 185, 79,
+        80, 146, 90, 85, 11, 86, 87, 157, 158, 194, 195, 196, 197, 198, 201,
+        249,
       ]),
       import.meta.url,
     ),
   ),
-  An = k.lazy(() =>
-    b(
-      () => import(`./achievementseditorlanding.js`),
+  Pn = R.lazy(() =>
+    A(
+      () => import(`./chunk~7ec67c8c4e.js`),
       __vite__mapDeps([
-        249, 1, 3, 2, 4, 5, 35, 36, 37, 38, 39, 68, 48, 163, 9, 10, 11, 12, 13,
-        14, 15, 16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170,
-        8, 18, 19, 20, 31, 214, 121, 122, 215, 216, 174, 175, 27, 21, 40, 24,
-        132, 133, 63, 182, 183, 77, 232, 178, 225, 226, 250,
+        250, 1, 3, 2, 4, 5, 35, 36, 37, 38, 39, 70, 50, 31, 166, 122, 9, 10, 11,
+        12, 13, 14, 15, 16, 17, 53, 54, 167, 168, 169, 55, 170, 171, 172, 86,
+        173, 8, 18, 19, 20, 123, 124, 216, 217, 177, 178, 27, 21, 40, 24, 133,
+        134, 65, 184, 185, 79, 233, 43, 226, 227, 251,
       ]),
       import.meta.url,
     ),
   ),
-  jn = k.lazy(() =>
-    b(
-      () => import(`./creatorhomeadmindashboard.js`),
+  Fn = R.lazy(() =>
+    A(
+      () => import(`./chunk~5173a490dd.js`),
       __vite__mapDeps([
-        251, 1, 3, 47, 37, 38, 48, 22, 23, 146, 98, 21, 58, 61, 25, 7, 24, 252,
+        252, 1, 3, 49, 37, 38, 50, 22, 23, 148, 100, 21, 60, 63, 25, 7, 24, 253,
       ]),
       import.meta.url,
     ),
   );
-function Mn(e) {
-  let t = c(`publisherid`, `application_config`),
-    n = k.useMemo(() => ({ country: p.COUNTRY, language: p.LANGUAGE }), []);
-  return (0, A.jsx)(d, {
+function In(e) {
+  let t = r(`publisherid`, `application_config`),
+    i = R.useMemo(() => ({ country: f.COUNTRY, language: f.LANGUAGE }), []);
+  return (0, z.jsx)(n, {
     IN_DESKTOPUI: !1,
     IN_GAMEPADUI: !1,
     IN_VR: !1,
-    children: (0, A.jsx)(Re.Provider, {
+    children: (0, z.jsx)(Oe.Provider, {
       value: parseInt(t),
-      children: (0, A.jsx)($e, {
-        children: (0, A.jsx)(Pe, {
-          children: (0, A.jsx)(In, {
-            children: (0, A.jsx)(ke, {
-              context: n,
-              children: (0, A.jsx)(pt, {
-                children: (0, A.jsx)(Zt, {
-                  children: (0, A.jsx)(Be, { children: e.children }),
+      children: (0, z.jsx)(Ge, {
+        children: (0, z.jsx)(we, {
+          children: (0, z.jsx)(Bn, {
+            children: (0, z.jsx)(ye, {
+              context: i,
+              children: (0, z.jsx)(lt, {
+                children: (0, z.jsx)(tn, {
+                  children: (0, z.jsx)(Ae, { children: e.children }),
                 }),
               }),
             }),
@@ -1557,105 +1611,105 @@ function Mn(e) {
     }),
   });
 }
-function Nn(e) {
+function Ln(e) {
   let { children: t } = e,
-    n = he([w.PricingTools(), w.PromotionTools()]);
-  return (0, A.jsx)(`div`, {
-    className: (0, O.default)(at, n && `mh5mngcGbRY-`),
+    n = ae([P.PricingTools(), P.PromotionTools()]);
+  return (0, z.jsx)(`div`, {
+    className: (0, Ze.default)(Qe, n && `mh5mngcGbRY-`),
     children: t,
   });
 }
-function Pn(e) {
-  let [t, n] = k.useState(!1);
+function Rn(e) {
+  let [t, n] = R.useState(!1);
   return (
-    k.useEffect(() => {
-      let e = Te();
+    R.useEffect(() => {
+      let e = oe();
       (e &&
         (document.documentElement.setAttribute(`lang`, e),
-        x.SetPreferredLocales([e])),
+        j.SetPreferredLocales([e])),
         n(!0));
     }, []),
     t
-      ? (0, A.jsx)(Le, {
-          basename: Ie(),
-          children: (0, A.jsx)(Mn, {
-            children: (0, A.jsx)(Nn, {
-              children: (0, A.jsx)(k.Suspense, {
+      ? (0, z.jsx)(De, {
+          basename: Ee(),
+          children: (0, z.jsx)(In, {
+            children: (0, z.jsx)(Ln, {
+              children: (0, z.jsx)(R.Suspense, {
                 fallback: null,
-                children: (0, A.jsxs)(Ae, {
+                children: (0, z.jsxs)(xe, {
                   children: [
-                    (0, A.jsx)(C, { exact: !0, path: `/`, component: fn }),
-                    (0, A.jsx)(C, {
+                    (0, z.jsx)(N, { exact: !0, path: `/`, component: gn }),
+                    (0, z.jsx)(N, {
                       exact: !0,
-                      path: w.DiagData(),
+                      path: P.DiagData(),
                       render: (e) =>
-                        (0, k.createElement)(tt, {
+                        (0, R.createElement)(qe, {
                           ...e,
                           key: e.match.params.gid,
                           strConfigID: `application_config`,
                         }),
                     }),
-                    (0, A.jsx)(C, { path: w.SalePages(), component: _n }),
-                    (0, A.jsx)(C, { path: w.OptInPages(), component: vn }),
-                    (0, A.jsx)(C, { path: w.ContentHubPages(), component: Tn }),
-                    (0, A.jsx)(C, { path: w.RecapPages(), component: En }),
-                    (0, A.jsx)(C, { path: w.DeadlinesAdmin(), component: Dn }),
-                    (0, A.jsx)(C, {
-                      path: w.StoreGameAdminRoot(),
+                    (0, z.jsx)(N, { path: P.SalePages(), component: xn }),
+                    (0, z.jsx)(N, { path: P.OptInPages(), component: Sn }),
+                    (0, z.jsx)(N, { path: P.ContentHubPages(), component: kn }),
+                    (0, z.jsx)(N, { path: P.RecapPages(), component: An }),
+                    (0, z.jsx)(N, { path: P.DeadlinesAdmin(), component: jn }),
+                    (0, z.jsx)(N, {
+                      path: P.StoreGameAdminRoot(),
                       component: $,
                     }),
-                    (0, A.jsx)(C, {
-                      path: w.StoreAdminReviewPriceProposals(),
+                    (0, z.jsx)(N, {
+                      path: P.StoreAdminReviewPriceProposals(),
                       component: $,
                     }),
-                    (0, A.jsx)(C, {
-                      path: w.StoreAdminPackagePricingComparison(),
+                    (0, z.jsx)(N, {
+                      path: P.StoreAdminPackagePricingComparison(),
                       component: $,
                     }),
-                    (0, A.jsx)(C, { path: w.PackageLanding(), component: $ }),
-                    (0, A.jsx)(C, { path: w.StoreAdminRoot(), component: $ }),
-                    (0, A.jsx)(C, { path: w.BundlesEditor(), component: $ }),
-                    (0, A.jsx)(C, {
-                      path: w.CreatorHomeAdminPage(),
-                      children: (0, A.jsx)(E, {
+                    (0, z.jsx)(N, { path: P.PackageLanding(), component: $ }),
+                    (0, z.jsx)(N, { path: P.StoreAdminRoot(), component: $ }),
+                    (0, z.jsx)(N, { path: P.BundlesEditor(), component: $ }),
+                    (0, z.jsx)(N, {
+                      path: P.CreatorHomeAdminPage(),
+                      children: (0, z.jsx)(I, {
                         config: {
                           "admin-creatorhome": (e) =>
-                            (0, A.jsx)(jn, { creatorHomes: e.creator_homes }),
+                            (0, z.jsx)(Fn, { creatorHomes: e.creator_homes }),
                         },
                       }),
                     }),
-                    (0, A.jsx)(C, { path: w.AppCommunityItem(), component: Q }),
-                    (0, A.jsx)(C, { path: w.AppLandingPage(), component: Q }),
-                    (0, A.jsx)(C, { path: w.AppInstallerPage(), component: Q }),
-                    (0, A.jsx)(C, { path: w.AppEconomyPage(), component: Q }),
-                    (0, A.jsx)(C, {
-                      path: w.PackageAdminRoot(),
-                      component: yn,
+                    (0, z.jsx)(N, { path: P.AppCommunityItem(), component: Q }),
+                    (0, z.jsx)(N, { path: P.AppLandingPage(), component: Q }),
+                    (0, z.jsx)(N, { path: P.AppInstallerPage(), component: Q }),
+                    (0, z.jsx)(N, { path: P.AppEconomyPage(), component: Q }),
+                    (0, z.jsx)(N, {
+                      path: P.PackageAdminRoot(),
+                      component: Cn,
                     }),
-                    (0, A.jsx)(C, {
-                      path: w.SteamML(),
-                      render: () => (0, A.jsx)(pn, {}),
+                    (0, z.jsx)(N, {
+                      path: P.SteamML(),
+                      render: () => (0, z.jsx)(_n, {}),
                     }),
-                    (0, A.jsx)(C, {
-                      path: w.BuildPatchNotes(),
+                    (0, z.jsx)(N, {
+                      path: P.BuildPatchNotes(),
                       render: (e) =>
-                        (0, A.jsx)(hn, { appId: e.match.params.appid }),
+                        (0, z.jsx)(yn, { appId: e.match.params.appid }),
                     }),
-                    (0, A.jsx)(C, {
-                      path: w.SteamworksEvents(),
-                      render: () => (0, A.jsx)(Ot, {}),
+                    (0, z.jsx)(N, {
+                      path: P.SteamworksEvents(),
+                      render: () => (0, z.jsx)(wt, {}),
                     }),
-                    (0, A.jsx)(C, { path: w.PromotionTools(), component: gn }),
-                    (0, A.jsx)(C, { path: w.PricingTools(), component: mn }),
-                    (0, A.jsx)(C, {
-                      path: w.DeckVerifiedAdmin(),
+                    (0, z.jsx)(N, { path: P.PromotionTools(), component: bn }),
+                    (0, z.jsx)(N, { path: P.PricingTools(), component: vn }),
+                    (0, z.jsx)(N, {
+                      path: P.DeckVerifiedAdmin(),
                       render: () =>
-                        (0, A.jsx)(E, {
+                        (0, z.jsx)(I, {
                           config: {
                             "deck-verified-results": (e) =>
-                              (0, A.jsx)(Z, {
+                              (0, z.jsx)(Z, {
                                 dataprops: e,
-                                results: c(
+                                results: r(
                                   `deckcompatibility`,
                                   `application_config`,
                                 ),
@@ -1663,31 +1717,31 @@ function Pn(e) {
                           },
                         }),
                     }),
-                    (0, A.jsx)(C, {
-                      path: w.DeckCompatTestingDashboard(),
+                    (0, z.jsx)(N, {
+                      path: P.DeckCompatTestingDashboard(),
                       render: () =>
-                        (0, A.jsx)(E, {
+                        (0, z.jsx)(I, {
                           config: {
                             "deck-verified-results-inflight": (e) =>
-                              (0, A.jsx)(Z, {
+                              (0, z.jsx)(Z, {
                                 dataprops: e,
-                                results: c(
+                                results: r(
                                   `deckcompatibility_inflight`,
                                   `application_config`,
                                 ),
                               }),
                             "deck-verified-results-submitted": (e) =>
-                              (0, A.jsx)(Z, {
+                              (0, z.jsx)(Z, {
                                 dataprops: e,
-                                results: c(
+                                results: r(
                                   `deckcompatibility_submitted`,
                                   `application_config`,
                                 ),
                               }),
                             "deck-verified-results-published": (e) =>
-                              (0, A.jsx)(Z, {
+                              (0, z.jsx)(Z, {
                                 dataprops: e,
-                                results: c(
+                                results: r(
                                   `deckcompatibility_published`,
                                   `application_config`,
                                 ),
@@ -1695,15 +1749,15 @@ function Pn(e) {
                           },
                         }),
                     }),
-                    (0, A.jsx)(C, {
-                      path: w.DeckCompatTestingAppHistory(),
+                    (0, z.jsx)(N, {
+                      path: P.DeckCompatTestingAppHistory(),
                       render: () =>
-                        (0, A.jsx)(E, {
+                        (0, z.jsx)(I, {
                           config: {
                             "deck-verified-results-reports": (e) =>
-                              (0, A.jsx)(Z, {
+                              (0, z.jsx)(Z, {
                                 dataprops: e,
-                                results: c(
+                                results: r(
                                   `deckcompatibility_reports`,
                                   `application_config`,
                                 ),
@@ -1711,63 +1765,63 @@ function Pn(e) {
                           },
                         }),
                     }),
-                    (0, A.jsx)(C, {
-                      path: w.SDRConnections(),
+                    (0, z.jsx)(N, {
+                      path: P.SDRConnections(),
                       render: (e) =>
-                        (0, A.jsx)(bn, { appId: e.match.params.appid }),
+                        (0, z.jsx)(wn, { appId: e.match.params.appid }),
                     }),
-                    (0, A.jsx)(C, {
-                      path: w.PublisherDashboard(),
+                    (0, z.jsx)(N, {
+                      path: P.PublisherDashboard(),
                       render: () =>
-                        (0, A.jsx)(E, {
+                        (0, z.jsx)(I, {
                           config: {
-                            "publisher-dashboard": () => (0, A.jsx)(xn, {}),
+                            "publisher-dashboard": () => (0, z.jsx)(Tn, {}),
                             "promotion-review-dashboard": () =>
-                              (0, A.jsx)(Cn, {}),
+                              (0, z.jsx)(Dn, {}),
                           },
                         }),
                     }),
-                    (0, A.jsx)(C, {
-                      path: w.TimelineMarkerEditor(),
+                    (0, z.jsx)(N, {
+                      path: P.TimelineMarkerEditor(),
                       render: (e) =>
-                        (0, A.jsx)(E, {
+                        (0, z.jsx)(I, {
                           config: {
                             "timeline-marker-editor": () =>
-                              (0, A.jsx)(Sn, { appId: e.match.params.appid }),
+                              (0, z.jsx)(En, { appId: e.match.params.appid }),
                           },
                         }),
                     }),
-                    (0, A.jsx)(C, {
-                      path: w.AchievementsEditor(),
+                    (0, z.jsx)(N, {
+                      path: P.AchievementsEditor(),
                       render: (e) =>
-                        (0, A.jsx)(E, {
+                        (0, z.jsx)(I, {
                           config: {
                             "achievements-editor": () =>
-                              (0, A.jsx)(An, { appId: e.match.params.appid }),
+                              (0, z.jsx)(Pn, { appId: e.match.params.appid }),
                           },
                         }),
                     }),
-                    (0, A.jsx)(C, {
-                      path: w.HardwareReservationQueueMessaging(),
-                      component: wn,
+                    (0, z.jsx)(N, {
+                      path: P.HardwareReservationQueueMessaging(),
+                      component: On,
                     }),
-                    (0, A.jsx)(C, {
-                      path: w.KeyWizardPackagePage(),
+                    (0, z.jsx)(N, {
+                      path: P.KeyWizardPackagePage(),
                       render: (e) =>
-                        (0, A.jsx)(E, {
+                        (0, z.jsx)(I, {
                           config: {
                             "key-wizard": () =>
-                              (0, A.jsx)(sn, { appId: e.match.params.appid }),
+                              (0, z.jsx)(dn, { appId: e.match.params.appid }),
                           },
                         }),
                     }),
-                    (0, A.jsx)(C, {
-                      path: w.YearInReviewProgressMonitor(),
-                      component: un,
+                    (0, z.jsx)(N, {
+                      path: P.YearInReviewProgressMonitor(),
+                      component: mn,
                     }),
-                    (0, A.jsx)(C, { path: w.TaxRequirement(), component: On }),
-                    (0, A.jsx)(C, { path: w.MeetSteam(), component: kn }),
-                    (0, A.jsx)(C, { children: (0, A.jsx)(nt, {}) }),
+                    (0, z.jsx)(N, { path: P.TaxRequirement(), component: Mn }),
+                    (0, z.jsx)(N, { path: P.MeetSteam(), component: Nn }),
+                    (0, z.jsx)(N, { children: (0, z.jsx)(Je, {}) }),
                   ],
                 }),
               }),
@@ -1777,572 +1831,521 @@ function Pn(e) {
       : null
   );
 }
-function Fn() {
-  return Xe(new Ye(p.WEBAPI_BASE_URL));
+function zn() {
+  return He(new Ve(f.WEBAPI_BASE_URL));
 }
-function In(e) {
-  let t = ee(Fn),
-    n = ee(k.useCallback(() => new et(), []));
-  return (0, A.jsx)(Ne, {
+function Bn(e) {
+  let t = v(zn),
+    n = v(R.useCallback(() => new Ke(), []));
+  return (0, z.jsx)(Ce, {
     useActiveSteamInterface: t,
     useStorage: n,
     children: e.children,
   });
 }
-var Ln = m(ve());
-function Rn() {
+var Vn = p(te());
+function Hn() {
   let e = [];
   return (
-    a.IN_MOBILE_WEBVIEW && e.push(`in_mobile_app`),
-    a.IN_CLIENT && e.push(`in_client`),
+    i.IN_MOBILE_WEBVIEW && e.push(`in_mobile_app`),
+    i.IN_CLIENT && e.push(`in_client`),
     e
   );
 }
-u({ enforceActions: `never` });
-function zn() {
-  let t = document.querySelectorAll(`.StoreAdminReactRoot`);
-  for (let n = 0; n < t.length; n++) {
-    let r = t[n],
-      i = r.getAttribute(`data-component`);
-    switch (i) {
+d({ enforceActions: `never` });
+function Un() {
+  let e = document.querySelectorAll(`.StoreAdminReactRoot`);
+  for (let t = 0; t < e.length; t++) {
+    let n = e[t],
+      r = n.getAttribute(`data-component`);
+    switch (r) {
       case `LibraryLogoEditor`:
       case `LibraryLogoEditorPopup`:
-        b(
+        A(
           async () => {
-            let { Init_LibraryLogoEditor: e } = await import(`./logoedtior.js`);
+            let { Init_LibraryLogoEditor: e } = await import(
+              `./chunk~79627e9162.js`
+            );
             return { Init_LibraryLogoEditor: e };
           },
-          __vite__mapDeps([253, 1, 3, 2, 4, 5, 100, 21, 22, 23, 130, 254, 255]),
+          __vite__mapDeps([254, 1, 3, 2, 4, 5, 102, 21, 22, 23, 131, 255, 256]),
           import.meta.url,
         ).then(({ Init_LibraryLogoEditor: e }) =>
-          e(i == `LibraryLogoEditorPopup`, r),
+          e(r == `LibraryLogoEditorPopup`, n),
         );
         break;
       default:
-        e(!1, `unknown component: "${i}"`);
+        s(!1, `unknown component: "${r}"`);
     }
   }
 }
 document.addEventListener(`DOMContentLoaded`, async function () {
   let e = document.getElementById(`application_root`);
   (o(e ? `application_config` : void 0),
-    n().Init(`Partner`, CLSTAMP, new Je().GetServiceTransport(), {
-      fnGetReportTags: Rn,
+    u().Init(`Partner`, CLSTAMP, new Be().GetServiceTransport(), {
+      fnGetReportTags: Hn,
     }),
-    await Bn(p.LANGUAGE),
-    e ? Ln.createRoot(e).render(k.createElement(Pn, {})) : zn());
+    await Wn(f.LANGUAGE),
+    e ? Vn.createRoot(e).render(R.createElement(Rn, {})) : Un());
 });
-async function Bn(e) {
+async function Wn(e) {
   let [t, n, r] = await Promise.all([
-      D(
+      L(
         Object.assign({
           "../../../shared/localization/marketing/marketing_arabic.json": () =>
-            b(() => import(`./marketing_arabic.js`), [], import.meta.url),
+            A(() => import(`./chunk~d06d52ad94.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_brazilian.json":
-            () =>
-              b(() => import(`./marketing_brazilian.js`), [], import.meta.url),
+            () => A(() => import(`./chunk~c7efe4b325.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_bulgarian.json":
-            () =>
-              b(() => import(`./marketing_bulgarian.js`), [], import.meta.url),
+            () => A(() => import(`./chunk~f4c02deb1c.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_czech.json": () =>
-            b(() => import(`./marketing_czech.js`), [], import.meta.url),
+            A(() => import(`./chunk~1e1a737e57.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_danish.json": () =>
-            b(() => import(`./marketing_danish.js`), [], import.meta.url),
+            A(() => import(`./chunk~8adbd8d2a7.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_dutch.json": () =>
-            b(() => import(`./marketing_dutch.js`), [], import.meta.url),
+            A(() => import(`./chunk~9432315ae6.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_english.json": () =>
-            b(() => import(`./marketing_english.js`), [], import.meta.url),
+            A(() => import(`./chunk~672dff74b8.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_finnish.json": () =>
-            b(() => import(`./marketing_finnish.js`), [], import.meta.url),
+            A(() => import(`./chunk~c71a2bb9d4.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_french.json": () =>
-            b(() => import(`./marketing_french.js`), [], import.meta.url),
+            A(() => import(`./chunk~b174530c55.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_german.json": () =>
-            b(() => import(`./marketing_german.js`), [], import.meta.url),
+            A(() => import(`./chunk~e5ec045f75.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_greek.json": () =>
-            b(() => import(`./marketing_greek.js`), [], import.meta.url),
+            A(() => import(`./chunk~e9e4c994fc.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_hungarian.json":
-            () =>
-              b(() => import(`./marketing_hungarian.js`), [], import.meta.url),
+            () => A(() => import(`./chunk~0f8f5b66ea.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_indonesian.json":
-            () =>
-              b(() => import(`./marketing_indonesian.js`), [], import.meta.url),
+            () => A(() => import(`./chunk~afa19427a6.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_italian.json": () =>
-            b(() => import(`./marketing_italian.js`), [], import.meta.url),
+            A(() => import(`./chunk~cc110d9310.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_japanese.json":
-            () =>
-              b(() => import(`./marketing_japanese.js`), [], import.meta.url),
+            () => A(() => import(`./chunk~5cdf6e1887.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_koreana.json": () =>
-            b(() => import(`./marketing_koreana.js`), [], import.meta.url),
+            A(() => import(`./chunk~f8d1c3eb39.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_latam.json": () =>
-            b(() => import(`./marketing_latam.js`), [], import.meta.url),
+            A(() => import(`./chunk~dcb198cb70.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_malay.json": () =>
-            b(() => import(`./marketing_malay.js`), [], import.meta.url),
+            A(() => import(`./chunk~7794cfc016.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_norwegian.json":
-            () =>
-              b(() => import(`./marketing_norwegian.js`), [], import.meta.url),
+            () => A(() => import(`./chunk~75ca050ede.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_polish.json": () =>
-            b(() => import(`./marketing_polish.js`), [], import.meta.url),
+            A(() => import(`./chunk~ab26257a4b.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_portuguese.json":
-            () =>
-              b(() => import(`./marketing_portuguese.js`), [], import.meta.url),
+            () => A(() => import(`./chunk~7e6a0dfeac.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_romanian.json":
-            () =>
-              b(() => import(`./marketing_romanian.js`), [], import.meta.url),
+            () => A(() => import(`./chunk~c25ddcf2dd.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_russian.json": () =>
-            b(() => import(`./marketing_russian.js`), [], import.meta.url),
+            A(() => import(`./chunk~e7e9152c82.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_sc_schinese.json":
-            () =>
-              b(
-                () => import(`./marketing_sc_schinese.js`),
-                [],
-                import.meta.url,
-              ),
+            () => A(() => import(`./chunk~f03332406a.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_schinese.json":
-            () =>
-              b(() => import(`./marketing_schinese.js`), [], import.meta.url),
+            () => A(() => import(`./chunk~fe42bc9af6.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_spanish.json": () =>
-            b(() => import(`./marketing_spanish.js`), [], import.meta.url),
+            A(() => import(`./chunk~84913aa7ea.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_swedish.json": () =>
-            b(() => import(`./marketing_swedish.js`), [], import.meta.url),
+            A(() => import(`./chunk~d51cfc3d8e.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_tchinese.json":
-            () =>
-              b(() => import(`./marketing_tchinese.js`), [], import.meta.url),
+            () => A(() => import(`./chunk~c468013b32.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_thai.json": () =>
-            b(() => import(`./marketing_thai.js`), [], import.meta.url),
+            A(() => import(`./chunk~e9a21f2d23.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_turkish.json": () =>
-            b(() => import(`./marketing_turkish.js`), [], import.meta.url),
+            A(() => import(`./chunk~a65681121d.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_ukrainian.json":
-            () =>
-              b(() => import(`./marketing_ukrainian.js`), [], import.meta.url),
+            () => A(() => import(`./chunk~89a480c739.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_vietnamese.json":
-            () =>
-              b(() => import(`./marketing_vietnamese.js`), [], import.meta.url),
+            () => A(() => import(`./chunk~bd7a2449df.js`), [], import.meta.url),
         }),
         `../../../shared/localization/marketing/marketing_${e}.json`,
         7,
       ),
-      D(
+      L(
         Object.assign({
           "../../../shared/localization/sales/sales_arabic.json": () =>
-            b(() => import(`./sales_arabic.js`), [], import.meta.url),
+            A(() => import(`./chunk~a2651acc01.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_brazilian.json": () =>
-            b(() => import(`./sales_brazilian.js`), [], import.meta.url),
+            A(() => import(`./chunk~137fe161a3.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_bulgarian.json": () =>
-            b(() => import(`./sales_bulgarian.js`), [], import.meta.url),
+            A(() => import(`./chunk~3388f59a8c.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_czech.json": () =>
-            b(() => import(`./sales_czech.js`), [], import.meta.url),
+            A(() => import(`./chunk~684fc3a48f.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_danish.json": () =>
-            b(() => import(`./sales_danish.js`), [], import.meta.url),
+            A(() => import(`./chunk~478dcdfd50.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_dutch.json": () =>
-            b(() => import(`./sales_dutch.js`), [], import.meta.url),
+            A(() => import(`./chunk~07af9aa5c9.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_english.json": () =>
-            b(() => import(`./sales_english.js`), [], import.meta.url),
+            A(() => import(`./chunk~467c065f96.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_finnish.json": () =>
-            b(() => import(`./sales_finnish.js`), [], import.meta.url),
+            A(() => import(`./chunk~17f8e94605.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_french.json": () =>
-            b(() => import(`./sales_french.js`), [], import.meta.url),
+            A(() => import(`./chunk~0d8952bf3a.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_german.json": () =>
-            b(() => import(`./sales_german.js`), [], import.meta.url),
+            A(() => import(`./chunk~4cde817ea0.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_greek.json": () =>
-            b(() => import(`./sales_greek.js`), [], import.meta.url),
+            A(() => import(`./chunk~eadaa09f2d.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_hungarian.json": () =>
-            b(() => import(`./sales_hungarian.js`), [], import.meta.url),
+            A(() => import(`./chunk~c3cd1630c5.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_indonesian.json": () =>
-            b(() => import(`./sales_indonesian.js`), [], import.meta.url),
+            A(() => import(`./chunk~f01fd3cdae.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_italian.json": () =>
-            b(() => import(`./sales_italian.js`), [], import.meta.url),
+            A(() => import(`./chunk~7530843e6f.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_japanese.json": () =>
-            b(() => import(`./sales_japanese.js`), [], import.meta.url),
+            A(() => import(`./chunk~8c1b5f00ab.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_koreana.json": () =>
-            b(() => import(`./sales_koreana.js`), [], import.meta.url),
+            A(() => import(`./chunk~5dd04956c2.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_latam.json": () =>
-            b(() => import(`./sales_latam.js`), [], import.meta.url),
+            A(() => import(`./chunk~cd7cbec106.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_malay.json": () =>
-            b(() => import(`./sales_malay.js`), [], import.meta.url),
+            A(() => import(`./chunk~19e4851e4a.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_norwegian.json": () =>
-            b(() => import(`./sales_norwegian.js`), [], import.meta.url),
+            A(() => import(`./chunk~cead22bc95.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_polish.json": () =>
-            b(() => import(`./sales_polish.js`), [], import.meta.url),
+            A(() => import(`./chunk~59fe5ba68d.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_portuguese.json": () =>
-            b(() => import(`./sales_portuguese.js`), [], import.meta.url),
+            A(() => import(`./chunk~4ce4f00e1d.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_romanian.json": () =>
-            b(() => import(`./sales_romanian.js`), [], import.meta.url),
+            A(() => import(`./chunk~396e8e03ab.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_russian.json": () =>
-            b(() => import(`./sales_russian.js`), [], import.meta.url),
+            A(() => import(`./chunk~b90af23307.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_sc_schinese.json": () =>
-            b(() => import(`./sales_sc_schinese.js`), [], import.meta.url),
+            A(() => import(`./chunk~62f4ec6297.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_schinese.json": () =>
-            b(() => import(`./sales_schinese.js`), [], import.meta.url),
+            A(() => import(`./chunk~fd02ec7ab8.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_spanish.json": () =>
-            b(() => import(`./sales_spanish.js`), [], import.meta.url),
+            A(() => import(`./chunk~5b296efd25.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_swedish.json": () =>
-            b(() => import(`./sales_swedish.js`), [], import.meta.url),
+            A(() => import(`./chunk~c2dd4b566b.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_tchinese.json": () =>
-            b(() => import(`./sales_tchinese.js`), [], import.meta.url),
+            A(() => import(`./chunk~8eb6adf994.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_thai.json": () =>
-            b(() => import(`./sales_thai.js`), [], import.meta.url),
+            A(() => import(`./chunk~d1918a051e.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_turkish.json": () =>
-            b(() => import(`./sales_turkish.js`), [], import.meta.url),
+            A(() => import(`./chunk~151ab2fec5.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_ukrainian.json": () =>
-            b(() => import(`./sales_ukrainian.js`), [], import.meta.url),
+            A(() => import(`./chunk~ec9b4ec76d.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_vietnamese.json": () =>
-            b(() => import(`./sales_vietnamese.js`), [], import.meta.url),
+            A(() => import(`./chunk~bf026fe6b0.js`), [], import.meta.url),
         }),
         `../../../shared/localization/sales/sales_${e}.json`,
         7,
       ).then((e) => e.default),
-      D(
+      L(
         Object.assign({
           "../localization/main_arabic.json": () =>
-            b(() => import(`./main_arabic.js`), [], import.meta.url),
+            A(() => import(`./chunk~a1afcc6b49.js`), [], import.meta.url),
           "../localization/main_brazilian.json": () =>
-            b(() => import(`./main_brazilian.js`), [], import.meta.url),
+            A(() => import(`./chunk~efce32a0fd.js`), [], import.meta.url),
           "../localization/main_bulgarian.json": () =>
-            b(() => import(`./main_bulgarian.js`), [], import.meta.url),
+            A(() => import(`./chunk~a0c563b312.js`), [], import.meta.url),
           "../localization/main_czech.json": () =>
-            b(() => import(`./main_czech.js`), [], import.meta.url),
+            A(() => import(`./chunk~86e73de564.js`), [], import.meta.url),
           "../localization/main_danish.json": () =>
-            b(() => import(`./main_danish.js`), [], import.meta.url),
+            A(() => import(`./chunk~8ed5a1f992.js`), [], import.meta.url),
           "../localization/main_dutch.json": () =>
-            b(() => import(`./main_dutch.js`), [], import.meta.url),
+            A(() => import(`./chunk~c177c2c91d.js`), [], import.meta.url),
           "../localization/main_english.json": () =>
-            b(() => import(`./main_english.js`), [], import.meta.url),
+            A(() => import(`./chunk~fbc9faf024.js`), [], import.meta.url),
           "../localization/main_finnish.json": () =>
-            b(() => import(`./main_finnish.js`), [], import.meta.url),
+            A(() => import(`./chunk~2985c8f3da.js`), [], import.meta.url),
           "../localization/main_french.json": () =>
-            b(() => import(`./main_french.js`), [], import.meta.url),
+            A(() => import(`./chunk~3fa8b7849a.js`), [], import.meta.url),
           "../localization/main_german.json": () =>
-            b(() => import(`./main_german.js`), [], import.meta.url),
+            A(() => import(`./chunk~897d980c88.js`), [], import.meta.url),
           "../localization/main_greek.json": () =>
-            b(() => import(`./main_greek.js`), [], import.meta.url),
+            A(() => import(`./chunk~d4f65e6d28.js`), [], import.meta.url),
           "../localization/main_hungarian.json": () =>
-            b(() => import(`./main_hungarian.js`), [], import.meta.url),
+            A(() => import(`./chunk~2f837a1fa1.js`), [], import.meta.url),
           "../localization/main_indonesian.json": () =>
-            b(() => import(`./main_indonesian.js`), [], import.meta.url),
+            A(() => import(`./chunk~cd202e69b5.js`), [], import.meta.url),
           "../localization/main_italian.json": () =>
-            b(() => import(`./main_italian.js`), [], import.meta.url),
+            A(() => import(`./chunk~34938c270d.js`), [], import.meta.url),
           "../localization/main_japanese.json": () =>
-            b(() => import(`./main_japanese.js`), [], import.meta.url),
+            A(() => import(`./chunk~359677a3c7.js`), [], import.meta.url),
           "../localization/main_koreana.json": () =>
-            b(() => import(`./main_koreana.js`), [], import.meta.url),
+            A(() => import(`./chunk~15f48863a2.js`), [], import.meta.url),
           "../localization/main_latam.json": () =>
-            b(() => import(`./main_latam.js`), [], import.meta.url),
+            A(() => import(`./chunk~826d3b5250.js`), [], import.meta.url),
           "../localization/main_malay.json": () =>
-            b(() => import(`./main_malay.js`), [], import.meta.url),
+            A(() => import(`./chunk~1865eab4be.js`), [], import.meta.url),
           "../localization/main_norwegian.json": () =>
-            b(() => import(`./main_norwegian.js`), [], import.meta.url),
+            A(() => import(`./chunk~0f3103bc69.js`), [], import.meta.url),
           "../localization/main_polish.json": () =>
-            b(() => import(`./main_polish.js`), [], import.meta.url),
+            A(() => import(`./chunk~d757c1664f.js`), [], import.meta.url),
           "../localization/main_portuguese.json": () =>
-            b(() => import(`./main_portuguese.js`), [], import.meta.url),
+            A(() => import(`./chunk~e45f96fdb3.js`), [], import.meta.url),
           "../localization/main_romanian.json": () =>
-            b(() => import(`./main_romanian.js`), [], import.meta.url),
+            A(() => import(`./chunk~6bfef4da5d.js`), [], import.meta.url),
           "../localization/main_russian.json": () =>
-            b(() => import(`./main_russian.js`), [], import.meta.url),
+            A(() => import(`./chunk~f6efdfaf9b.js`), [], import.meta.url),
           "../localization/main_schinese.json": () =>
-            b(() => import(`./main_schinese.js`), [], import.meta.url),
+            A(() => import(`./chunk~e325844ad5.js`), [], import.meta.url),
           "../localization/main_spanish.json": () =>
-            b(() => import(`./main_spanish.js`), [], import.meta.url),
+            A(() => import(`./chunk~2d97981d2c.js`), [], import.meta.url),
           "../localization/main_swedish.json": () =>
-            b(() => import(`./main_swedish.js`), [], import.meta.url),
+            A(() => import(`./chunk~a18566ab59.js`), [], import.meta.url),
           "../localization/main_tchinese.json": () =>
-            b(() => import(`./main_tchinese.js`), [], import.meta.url),
+            A(() => import(`./chunk~a7cc5d09d2.js`), [], import.meta.url),
           "../localization/main_thai.json": () =>
-            b(() => import(`./main_thai.js`), [], import.meta.url),
+            A(() => import(`./chunk~378a998550.js`), [], import.meta.url),
           "../localization/main_turkish.json": () =>
-            b(() => import(`./main_turkish.js`), [], import.meta.url),
+            A(() => import(`./chunk~454f02dbb5.js`), [], import.meta.url),
           "../localization/main_ukrainian.json": () =>
-            b(() => import(`./main_ukrainian.js`), [], import.meta.url),
+            A(() => import(`./chunk~1c557f5550.js`), [], import.meta.url),
           "../localization/main_vietnamese.json": () =>
-            b(() => import(`./main_vietnamese.js`), [], import.meta.url),
+            A(() => import(`./chunk~312af0dfee.js`), [], import.meta.url),
         }),
         `../localization/main_${e}.json`,
         3,
       ),
-      je(),
+      be(),
     ]),
     i = { ...r.default },
-    a = ge.GetLanguageFallback(e);
+    a = fe.GetLanguageFallback(e);
   if (e !== a) {
     let [e, r, o] = await Promise.all([
-        D(
+        L(
           Object.assign({
             "../../../shared/localization/marketing/marketing_arabic.json":
               () =>
-                b(() => import(`./marketing_arabic.js`), [], import.meta.url),
+                A(() => import(`./chunk~d06d52ad94.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_brazilian.json":
               () =>
-                b(
-                  () => import(`./marketing_brazilian.js`),
-                  [],
-                  import.meta.url,
-                ),
+                A(() => import(`./chunk~c7efe4b325.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_bulgarian.json":
               () =>
-                b(
-                  () => import(`./marketing_bulgarian.js`),
-                  [],
-                  import.meta.url,
-                ),
+                A(() => import(`./chunk~f4c02deb1c.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_czech.json": () =>
-              b(() => import(`./marketing_czech.js`), [], import.meta.url),
+              A(() => import(`./chunk~1e1a737e57.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_danish.json":
               () =>
-                b(() => import(`./marketing_danish.js`), [], import.meta.url),
+                A(() => import(`./chunk~8adbd8d2a7.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_dutch.json": () =>
-              b(() => import(`./marketing_dutch.js`), [], import.meta.url),
+              A(() => import(`./chunk~9432315ae6.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_english.json":
               () =>
-                b(() => import(`./marketing_english.js`), [], import.meta.url),
+                A(() => import(`./chunk~672dff74b8.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_finnish.json":
               () =>
-                b(() => import(`./marketing_finnish.js`), [], import.meta.url),
+                A(() => import(`./chunk~c71a2bb9d4.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_french.json":
               () =>
-                b(() => import(`./marketing_french.js`), [], import.meta.url),
+                A(() => import(`./chunk~b174530c55.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_german.json":
               () =>
-                b(() => import(`./marketing_german.js`), [], import.meta.url),
+                A(() => import(`./chunk~e5ec045f75.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_greek.json": () =>
-              b(() => import(`./marketing_greek.js`), [], import.meta.url),
+              A(() => import(`./chunk~e9e4c994fc.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_hungarian.json":
               () =>
-                b(
-                  () => import(`./marketing_hungarian.js`),
-                  [],
-                  import.meta.url,
-                ),
+                A(() => import(`./chunk~0f8f5b66ea.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_indonesian.json":
               () =>
-                b(
-                  () => import(`./marketing_indonesian.js`),
-                  [],
-                  import.meta.url,
-                ),
+                A(() => import(`./chunk~afa19427a6.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_italian.json":
               () =>
-                b(() => import(`./marketing_italian.js`), [], import.meta.url),
+                A(() => import(`./chunk~cc110d9310.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_japanese.json":
               () =>
-                b(() => import(`./marketing_japanese.js`), [], import.meta.url),
+                A(() => import(`./chunk~5cdf6e1887.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_koreana.json":
               () =>
-                b(() => import(`./marketing_koreana.js`), [], import.meta.url),
+                A(() => import(`./chunk~f8d1c3eb39.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_latam.json": () =>
-              b(() => import(`./marketing_latam.js`), [], import.meta.url),
+              A(() => import(`./chunk~dcb198cb70.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_malay.json": () =>
-              b(() => import(`./marketing_malay.js`), [], import.meta.url),
+              A(() => import(`./chunk~7794cfc016.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_norwegian.json":
               () =>
-                b(
-                  () => import(`./marketing_norwegian.js`),
-                  [],
-                  import.meta.url,
-                ),
+                A(() => import(`./chunk~75ca050ede.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_polish.json":
               () =>
-                b(() => import(`./marketing_polish.js`), [], import.meta.url),
+                A(() => import(`./chunk~ab26257a4b.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_portuguese.json":
               () =>
-                b(
-                  () => import(`./marketing_portuguese.js`),
-                  [],
-                  import.meta.url,
-                ),
+                A(() => import(`./chunk~7e6a0dfeac.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_romanian.json":
               () =>
-                b(() => import(`./marketing_romanian.js`), [], import.meta.url),
+                A(() => import(`./chunk~c25ddcf2dd.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_russian.json":
               () =>
-                b(() => import(`./marketing_russian.js`), [], import.meta.url),
+                A(() => import(`./chunk~e7e9152c82.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_sc_schinese.json":
               () =>
-                b(
-                  () => import(`./marketing_sc_schinese.js`),
-                  [],
-                  import.meta.url,
-                ),
+                A(() => import(`./chunk~f03332406a.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_schinese.json":
               () =>
-                b(() => import(`./marketing_schinese.js`), [], import.meta.url),
+                A(() => import(`./chunk~fe42bc9af6.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_spanish.json":
               () =>
-                b(() => import(`./marketing_spanish.js`), [], import.meta.url),
+                A(() => import(`./chunk~84913aa7ea.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_swedish.json":
               () =>
-                b(() => import(`./marketing_swedish.js`), [], import.meta.url),
+                A(() => import(`./chunk~d51cfc3d8e.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_tchinese.json":
               () =>
-                b(() => import(`./marketing_tchinese.js`), [], import.meta.url),
+                A(() => import(`./chunk~c468013b32.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_thai.json": () =>
-              b(() => import(`./marketing_thai.js`), [], import.meta.url),
+              A(() => import(`./chunk~e9a21f2d23.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_turkish.json":
               () =>
-                b(() => import(`./marketing_turkish.js`), [], import.meta.url),
+                A(() => import(`./chunk~a65681121d.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_ukrainian.json":
               () =>
-                b(
-                  () => import(`./marketing_ukrainian.js`),
-                  [],
-                  import.meta.url,
-                ),
+                A(() => import(`./chunk~89a480c739.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_vietnamese.json":
               () =>
-                b(
-                  () => import(`./marketing_vietnamese.js`),
-                  [],
-                  import.meta.url,
-                ),
+                A(() => import(`./chunk~bd7a2449df.js`), [], import.meta.url),
           }),
           `../../../shared/localization/marketing/marketing_${a}.json`,
           7,
         ),
-        D(
+        L(
           Object.assign({
             "../../../shared/localization/sales/sales_arabic.json": () =>
-              b(() => import(`./sales_arabic.js`), [], import.meta.url),
+              A(() => import(`./chunk~a2651acc01.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_brazilian.json": () =>
-              b(() => import(`./sales_brazilian.js`), [], import.meta.url),
+              A(() => import(`./chunk~137fe161a3.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_bulgarian.json": () =>
-              b(() => import(`./sales_bulgarian.js`), [], import.meta.url),
+              A(() => import(`./chunk~3388f59a8c.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_czech.json": () =>
-              b(() => import(`./sales_czech.js`), [], import.meta.url),
+              A(() => import(`./chunk~684fc3a48f.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_danish.json": () =>
-              b(() => import(`./sales_danish.js`), [], import.meta.url),
+              A(() => import(`./chunk~478dcdfd50.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_dutch.json": () =>
-              b(() => import(`./sales_dutch.js`), [], import.meta.url),
+              A(() => import(`./chunk~07af9aa5c9.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_english.json": () =>
-              b(() => import(`./sales_english.js`), [], import.meta.url),
+              A(() => import(`./chunk~467c065f96.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_finnish.json": () =>
-              b(() => import(`./sales_finnish.js`), [], import.meta.url),
+              A(() => import(`./chunk~17f8e94605.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_french.json": () =>
-              b(() => import(`./sales_french.js`), [], import.meta.url),
+              A(() => import(`./chunk~0d8952bf3a.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_german.json": () =>
-              b(() => import(`./sales_german.js`), [], import.meta.url),
+              A(() => import(`./chunk~4cde817ea0.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_greek.json": () =>
-              b(() => import(`./sales_greek.js`), [], import.meta.url),
+              A(() => import(`./chunk~eadaa09f2d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_hungarian.json": () =>
-              b(() => import(`./sales_hungarian.js`), [], import.meta.url),
+              A(() => import(`./chunk~c3cd1630c5.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_indonesian.json": () =>
-              b(() => import(`./sales_indonesian.js`), [], import.meta.url),
+              A(() => import(`./chunk~f01fd3cdae.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_italian.json": () =>
-              b(() => import(`./sales_italian.js`), [], import.meta.url),
+              A(() => import(`./chunk~7530843e6f.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_japanese.json": () =>
-              b(() => import(`./sales_japanese.js`), [], import.meta.url),
+              A(() => import(`./chunk~8c1b5f00ab.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_koreana.json": () =>
-              b(() => import(`./sales_koreana.js`), [], import.meta.url),
+              A(() => import(`./chunk~5dd04956c2.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_latam.json": () =>
-              b(() => import(`./sales_latam.js`), [], import.meta.url),
+              A(() => import(`./chunk~cd7cbec106.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_malay.json": () =>
-              b(() => import(`./sales_malay.js`), [], import.meta.url),
+              A(() => import(`./chunk~19e4851e4a.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_norwegian.json": () =>
-              b(() => import(`./sales_norwegian.js`), [], import.meta.url),
+              A(() => import(`./chunk~cead22bc95.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_polish.json": () =>
-              b(() => import(`./sales_polish.js`), [], import.meta.url),
+              A(() => import(`./chunk~59fe5ba68d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_portuguese.json": () =>
-              b(() => import(`./sales_portuguese.js`), [], import.meta.url),
+              A(() => import(`./chunk~4ce4f00e1d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_romanian.json": () =>
-              b(() => import(`./sales_romanian.js`), [], import.meta.url),
+              A(() => import(`./chunk~396e8e03ab.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_russian.json": () =>
-              b(() => import(`./sales_russian.js`), [], import.meta.url),
+              A(() => import(`./chunk~b90af23307.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_sc_schinese.json": () =>
-              b(() => import(`./sales_sc_schinese.js`), [], import.meta.url),
+              A(() => import(`./chunk~62f4ec6297.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_schinese.json": () =>
-              b(() => import(`./sales_schinese.js`), [], import.meta.url),
+              A(() => import(`./chunk~fd02ec7ab8.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_spanish.json": () =>
-              b(() => import(`./sales_spanish.js`), [], import.meta.url),
+              A(() => import(`./chunk~5b296efd25.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_swedish.json": () =>
-              b(() => import(`./sales_swedish.js`), [], import.meta.url),
+              A(() => import(`./chunk~c2dd4b566b.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_tchinese.json": () =>
-              b(() => import(`./sales_tchinese.js`), [], import.meta.url),
+              A(() => import(`./chunk~8eb6adf994.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_thai.json": () =>
-              b(() => import(`./sales_thai.js`), [], import.meta.url),
+              A(() => import(`./chunk~d1918a051e.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_turkish.json": () =>
-              b(() => import(`./sales_turkish.js`), [], import.meta.url),
+              A(() => import(`./chunk~151ab2fec5.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_ukrainian.json": () =>
-              b(() => import(`./sales_ukrainian.js`), [], import.meta.url),
+              A(() => import(`./chunk~ec9b4ec76d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_vietnamese.json": () =>
-              b(() => import(`./sales_vietnamese.js`), [], import.meta.url),
+              A(() => import(`./chunk~bf026fe6b0.js`), [], import.meta.url),
           }),
           `../../../shared/localization/sales/sales_${a}.json`,
           7,
         ),
-        D(
+        L(
           Object.assign({
             "../localization/main_arabic.json": () =>
-              b(() => import(`./main_arabic.js`), [], import.meta.url),
+              A(() => import(`./chunk~a1afcc6b49.js`), [], import.meta.url),
             "../localization/main_brazilian.json": () =>
-              b(() => import(`./main_brazilian.js`), [], import.meta.url),
+              A(() => import(`./chunk~efce32a0fd.js`), [], import.meta.url),
             "../localization/main_bulgarian.json": () =>
-              b(() => import(`./main_bulgarian.js`), [], import.meta.url),
+              A(() => import(`./chunk~a0c563b312.js`), [], import.meta.url),
             "../localization/main_czech.json": () =>
-              b(() => import(`./main_czech.js`), [], import.meta.url),
+              A(() => import(`./chunk~86e73de564.js`), [], import.meta.url),
             "../localization/main_danish.json": () =>
-              b(() => import(`./main_danish.js`), [], import.meta.url),
+              A(() => import(`./chunk~8ed5a1f992.js`), [], import.meta.url),
             "../localization/main_dutch.json": () =>
-              b(() => import(`./main_dutch.js`), [], import.meta.url),
+              A(() => import(`./chunk~c177c2c91d.js`), [], import.meta.url),
             "../localization/main_english.json": () =>
-              b(() => import(`./main_english.js`), [], import.meta.url),
+              A(() => import(`./chunk~fbc9faf024.js`), [], import.meta.url),
             "../localization/main_finnish.json": () =>
-              b(() => import(`./main_finnish.js`), [], import.meta.url),
+              A(() => import(`./chunk~2985c8f3da.js`), [], import.meta.url),
             "../localization/main_french.json": () =>
-              b(() => import(`./main_french.js`), [], import.meta.url),
+              A(() => import(`./chunk~3fa8b7849a.js`), [], import.meta.url),
             "../localization/main_german.json": () =>
-              b(() => import(`./main_german.js`), [], import.meta.url),
+              A(() => import(`./chunk~897d980c88.js`), [], import.meta.url),
             "../localization/main_greek.json": () =>
-              b(() => import(`./main_greek.js`), [], import.meta.url),
+              A(() => import(`./chunk~d4f65e6d28.js`), [], import.meta.url),
             "../localization/main_hungarian.json": () =>
-              b(() => import(`./main_hungarian.js`), [], import.meta.url),
+              A(() => import(`./chunk~2f837a1fa1.js`), [], import.meta.url),
             "../localization/main_indonesian.json": () =>
-              b(() => import(`./main_indonesian.js`), [], import.meta.url),
+              A(() => import(`./chunk~cd202e69b5.js`), [], import.meta.url),
             "../localization/main_italian.json": () =>
-              b(() => import(`./main_italian.js`), [], import.meta.url),
+              A(() => import(`./chunk~34938c270d.js`), [], import.meta.url),
             "../localization/main_japanese.json": () =>
-              b(() => import(`./main_japanese.js`), [], import.meta.url),
+              A(() => import(`./chunk~359677a3c7.js`), [], import.meta.url),
             "../localization/main_koreana.json": () =>
-              b(() => import(`./main_koreana.js`), [], import.meta.url),
+              A(() => import(`./chunk~15f48863a2.js`), [], import.meta.url),
             "../localization/main_latam.json": () =>
-              b(() => import(`./main_latam.js`), [], import.meta.url),
+              A(() => import(`./chunk~826d3b5250.js`), [], import.meta.url),
             "../localization/main_malay.json": () =>
-              b(() => import(`./main_malay.js`), [], import.meta.url),
+              A(() => import(`./chunk~1865eab4be.js`), [], import.meta.url),
             "../localization/main_norwegian.json": () =>
-              b(() => import(`./main_norwegian.js`), [], import.meta.url),
+              A(() => import(`./chunk~0f3103bc69.js`), [], import.meta.url),
             "../localization/main_polish.json": () =>
-              b(() => import(`./main_polish.js`), [], import.meta.url),
+              A(() => import(`./chunk~d757c1664f.js`), [], import.meta.url),
             "../localization/main_portuguese.json": () =>
-              b(() => import(`./main_portuguese.js`), [], import.meta.url),
+              A(() => import(`./chunk~e45f96fdb3.js`), [], import.meta.url),
             "../localization/main_romanian.json": () =>
-              b(() => import(`./main_romanian.js`), [], import.meta.url),
+              A(() => import(`./chunk~6bfef4da5d.js`), [], import.meta.url),
             "../localization/main_russian.json": () =>
-              b(() => import(`./main_russian.js`), [], import.meta.url),
+              A(() => import(`./chunk~f6efdfaf9b.js`), [], import.meta.url),
             "../localization/main_schinese.json": () =>
-              b(() => import(`./main_schinese.js`), [], import.meta.url),
+              A(() => import(`./chunk~e325844ad5.js`), [], import.meta.url),
             "../localization/main_spanish.json": () =>
-              b(() => import(`./main_spanish.js`), [], import.meta.url),
+              A(() => import(`./chunk~2d97981d2c.js`), [], import.meta.url),
             "../localization/main_swedish.json": () =>
-              b(() => import(`./main_swedish.js`), [], import.meta.url),
+              A(() => import(`./chunk~a18566ab59.js`), [], import.meta.url),
             "../localization/main_tchinese.json": () =>
-              b(() => import(`./main_tchinese.js`), [], import.meta.url),
+              A(() => import(`./chunk~a7cc5d09d2.js`), [], import.meta.url),
             "../localization/main_thai.json": () =>
-              b(() => import(`./main_thai.js`), [], import.meta.url),
+              A(() => import(`./chunk~378a998550.js`), [], import.meta.url),
             "../localization/main_turkish.json": () =>
-              b(() => import(`./main_turkish.js`), [], import.meta.url),
+              A(() => import(`./chunk~454f02dbb5.js`), [], import.meta.url),
             "../localization/main_ukrainian.json": () =>
-              b(() => import(`./main_ukrainian.js`), [], import.meta.url),
+              A(() => import(`./chunk~1c557f5550.js`), [], import.meta.url),
             "../localization/main_vietnamese.json": () =>
-              b(() => import(`./main_vietnamese.js`), [], import.meta.url),
+              A(() => import(`./chunk~312af0dfee.js`), [], import.meta.url),
           }),
           `../localization/main_${a}.json`,
           3,
         ),
-        ce.Ready(),
+        re.Ready(),
       ]),
       s = { ...o.default };
-    (x.InitFromObjects(i, s), x.AddTokens(t, e), x.AddTokens(n, r));
+    (j.InitFromObjects(i, s), j.AddTokens(t, e), j.AddTokens(n, r));
   } else
-    (x.InitFromObjects(i, null), x.AddTokens(t, null), x.AddTokens(n, null));
+    (j.InitFromObjects(i, null), j.AddTokens(t, null), j.AddTokens(n, null));
 }
-function Vn(t, n, r) {
-  (e(n === `manifest`, `Expected manifest not "${n}"`), x.InitDirect(r));
+function Gn(e, t, n) {
+  (s(t === `manifest`, `Expected manifest not "${t}"`), j.InitDirect(n));
 }
-window.LocalizationManifestReady = Vn;
+window.LocalizationManifestReady = Gn;

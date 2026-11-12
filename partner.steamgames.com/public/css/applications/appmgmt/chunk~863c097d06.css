@@ -1,0 +1,19 @@
+.ewL7epZsubk- {
+  color: #fff;
+  opacity: 0;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+}
+.ewL7epZsubk- img {
+  width: 20px;
+  height: 20px;
+}
+.ewL7epZsubk-.lDd-amB-eCU- {
+  opacity: 1;
+}
+/*$vite$:1*/

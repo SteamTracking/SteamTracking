@@ -6,7 +6,7 @@
 	padding:0;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
-	text-align:left;
+	text-align:start;
 	background-color:transparent;
 }
 
@@ -27,7 +27,7 @@
 	color: #898989;
 	padding-top: 53px;
 	margin-top: 0px;
-	margin-left: 17px;
+	margin-inline-start: 17px;
 }
 
 .greyText {
@@ -46,7 +46,7 @@
 
 label {
 	font-weight:bold;
-	margin-left:100px;
+	margin-inline-start:100px;
 }
 
 #content {
@@ -57,7 +57,7 @@ label {
 }
 
 .indent {
-	margin-left:117px;
+	margin-inline-start:117px;
 	color:#8bc53f;
 }
 
@@ -84,10 +84,11 @@ label {
 label {
 	display:block;
 	width:107px;
-	float: left;
-	text-align: right;
+	float: inline-start;
+	text-align: end;
 	margin:0;
-	padding: 6px 10px 0px 0px;
+	padding-block: 6px 0px;
+	padding-inline: 0px 10px;
 	color: #e1e1e1;
 }
 .confirm {
@@ -116,8 +117,8 @@ label {
 
 .formRowTitle {
 	width:180px;
-	text-align:right;
-	padding-right:4px;
+	text-align:end;
+	padding-inline-end:4px;
 	font-size:13px;
 	color:#acb2b8;
 	font-weight:normal;
@@ -130,9 +131,9 @@ label {
 }
 
 .formRowFields {
-	float:right;
+	float:inline-end;
 	width:618px;
-	text-align:left;
+	text-align:start;
 	font-size: 13px;
 	line-height: 14px;
 	color:#acb2b8;
@@ -145,7 +146,7 @@ label {
 }
 
 .urlText {
-	float:left;
+	float:inline-start;
 	padding-top:6px;
 }
 
@@ -189,7 +190,7 @@ input {
 }
 
 .extendedInfo {
-	padding-left:50px;
+	padding-inline-start:50px;
 	font-size:11px;
 	color: #acb2b8;
 	display:none;
@@ -231,5 +232,5 @@ input[type=text], input[type=password], select {
 	width: 100px;
 }
 .profile_small_header_text {
-	left: 51px;
+	inset-inline-start: 51px;
 }

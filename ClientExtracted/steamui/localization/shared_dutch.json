@@ -4186,7 +4186,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Histogramgegevens zijn gebaseerd op meldingen over de framesnelheid voor dit spel door klanten op %1$s die ervoor hebben gekozen om gegevens over framesnelheid te delen.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Framesnelheidsverdeling",
     "GamePerformanceStats_Framerate": "Framesnelheid",
-    "GamePerformanceStats_SessionLabel": "% sessie",
+    "GamePerformanceStats_SessionLabel": "% van de samples",
     "GamePerformanceStats_Chart_NoData": "Nadat er voldoende gegevens zijn verzameld, wordt hier een grafiek weergegeven",
     "NewToolTitleSuffix_Beta": "BÈTA",
     "DynamicLinkType_WorkshopItem": "Een Workshop-item voor %1$s",
@@ -4213,6 +4213,11 @@
     "GamePerformanceStats_StillGatheringData": "Steam is nog bezig met het verzamelen van gegevens over framesnelheid voor %1$s op %2$s",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam is nog bezig met het verzamelen van gegevens over framesnelheid voor dit spel op %1$s",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam is nog bezig met het verzamelen van gegevens over framesnelheid voor dit spel",
-    "GamePerformanceStats_FrameRateDistribution": "Deze framesnelheidgrafiek is gebaseerd op geanonimiseerde gegevens van gebruikers die %1$s spelen op een %2$s en ervoor hebben gekozen deze gegevens te delen",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Deze framesnelheidgrafiek is gebaseerd op geanonimiseerde gegevens van gebruikers die deze titel spelen op een %1$s en ervoor hebben gekozen deze gegevens te delen"
+    "GamePerformanceStats_FrameRateDistribution": "Deze grafiek toont samples van de framesnelheid van klanten die ervoor hebben gekozen geanonimiseerde gegevens tijdens het spelen van %1$s op %2$s te delen. Elke balk geeft het percentage van samples bij die framesnelheid weer.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Deze grafiek toont samples van de framesnelheid van klanten die ervoor hebben gekozen geanonimiseerde gegevens tijdens het spelen van dit spel op %1$s te delen. Elke balk geeft het percentage van samples bij die framesnelheid weer.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "Voor dit spel moet controllerondersteuning handmatig worden ingeschakeld via de instellingen in het spel.",
+    "GameFrameRateReporting_Details_HowToChange": "Je kunt deze instelling later altijd wijzigen in je Steam-accountinstellingen onder <1>Gegevens en bladeren</1>",
+    "GamePerformanceStats_MoreDetailsTitle": "Meer informatie",
+    "GamePerformanceStats_MoreDetails_Filtering": "Alleen gegevens die zijn verzameld bij de standaardlimiet voor framesnelheid van %1$s, %2$s FPS, worden meegenomen. Samples met inactiviteit en ongeldige samples worden eruit gefilterd. Er worden meerdere samples verzameld van elke gameplay-sessie.",
+    "GamePerformanceStats_MoreDetails_VSync": "Grote verschillen tussen waarden in de grafiek (bijv. tussen %1$s en %2$s FPS) kunnen worden veroorzaakt door VSync, dat de framelevering synchroniseert met de vernieuwingsfrequentie van het beeldscherm om grafische storingen (tearing) te voorkomen. Dit kan ervoor zorgen dat samples zich concentreren rond de %1$s en %2$s FPS, zelfs wanneer de gemiddelde framesnelheid van het spel hiertussenin valt. Dit is normaal voor VSync en hoewel dit van invloed kan zijn op de frame pacing, zou het niet voor waarneembare haperingen moeten zorgen."
 }

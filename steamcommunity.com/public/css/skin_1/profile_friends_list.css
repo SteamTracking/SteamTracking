@@ -11,14 +11,14 @@ body.migrated_profile_page_old .pagecontent {
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
-	text-align: left;
+	text-align: start;
 	margin: 0 auto;
 }
 #BG_bottom {
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
-	text-align:left;
+	text-align:start;
 	margin: 0 auto;
 	padding-bottom: 128px;
 }
@@ -44,8 +44,8 @@ body.migrated_profile_page_old .pagecontent {
 	min-width:936px;
 	margin:0;
 	padding:0;
-	text-align:left;
-	padding-left:17px;
+	text-align:start;
+	padding-inline-start:17px;
 	padding-top:21px;
 }
 
@@ -56,8 +56,8 @@ h2 {
 }
 
 .pageLinks {
-	float:right;
-	margin-right:8px;
+	float:inline-end;
+	margin-inline-end:8px;
 	padding-top:2px;
 	font-size:10px;
 	color:#959595;
@@ -72,23 +72,23 @@ h2 {
 	margin:0;
 	padding:0;
 	margin-bottom:6px;
-	margin-left:23px;
+	margin-inline-start:23px;
 	border:solid #252525 4px;
 }
 
 .friendBlock_offline,.friendBlock_online,.friendBlock_in-game {
-	float:left;
+	float:inline-start;
 	width:286px;
 	height:40px;
 	padding:0;
 	margin:0;
-	padding-left:4px;
+	padding-inline-start:4px;
 	padding-top:4px;
 	padding-bottom:4px;
 	margin-bottom:4px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/playerBlockBG.gif');
 	font-size:10px;
-	margin-right:8px;
+	margin-inline-end:8px;
 }
 
 .friendBlock_offline:hover,.friendBlock_online:hover,.friendBlock_in-game:hover {
@@ -100,7 +100,7 @@ h2 {
 #game_logo {
 	position:absolute;
 	width:192px;
-	left:748px;
+	inset-inline-start:748px;
 	top:7px;
 }
 
@@ -123,11 +123,11 @@ h2 {
 
 .profile_friends .friendBlock {
 	position: relative;
-	float: left;
+	float: inline-start;
 	width: 290px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 
 .profile_friends .friendBlock:nth-child(3n) {
-	margin-right: 0;
+	margin-inline-end: 0;
 }

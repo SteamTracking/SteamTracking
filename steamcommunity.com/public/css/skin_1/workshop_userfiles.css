@@ -4,7 +4,7 @@
 	background-repeat:no-repeat;
 	width:958px;
 	height:70px;
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 }
 #BG_top_workshop {
@@ -13,7 +13,7 @@
 	background-repeat:no-repeat;
 	width:958px;
 	height:96px;
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	cursor: pointer;
 	font-size: 14px;
@@ -25,7 +25,7 @@
 	background-repeat:no-repeat;
 	width:958px;
 	height:56px;
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	cursor: pointer;
 	font-size: 14px;
@@ -35,7 +35,7 @@
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
-	text-align:left;
+	text-align:start;
 	margin: 0px auto;
 }
 #BG_top h2 {
@@ -45,7 +45,7 @@
 	padding-top:11px;
 	font-size: 26px;
 	color: #898989;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 #BG_top_workshop h1 {
 	font-weight:normal;
@@ -55,7 +55,7 @@
 	padding:0;
 	padding-top:0px;
 	padding-bottom:5px;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 #BG_top_workshop_small h1 {
 	font-weight:normal;
@@ -65,7 +65,7 @@
 	padding:0;
 	padding-top:0px;
 	padding-bottom:5px;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 
 .browseAppDetails
@@ -85,10 +85,10 @@
 
 .customBrowseDesc
 {
-	text-align: left;
+	text-align: start;
 	width: 381px;
-	float: right;
-	margin-right: 50px;
+	float: inline-end;
+	margin-inline-end: 50px;
 }
 
 
@@ -126,8 +126,8 @@
 {
 	width: 958px;
 	height: 722px;
-	left: 50%;
-	margin-left: -479px;
+	inset-inline-start: 50%;
+	margin-inline-start: -479px;
 	position: absolute;
 	background-repeat:no-repeat;
 }
@@ -136,21 +136,21 @@
 	width:622px;
 	margin:0;
 	padding:0;
-	padding-right:0px;
-	float: left;
+	padding-inline-end:0px;
+	float: inline-start;
 }
 
 .general_btn {
 	display: block;
 	background-color: #1A1A1A;
 	padding: 5px 8px 5px 8px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	cursor: pointer;
 }
 .general_btn:last-child {
-    margin-right: 0px;
+    margin-inline-end: 0px;
 }
 
 a.general_btn {
@@ -167,12 +167,12 @@ a.general_btn:hover {
 {
 	background-color: #FFFFFF;
 	margin-top: 40px;
-	margin-right: 25px;
-	float: right;
+	margin-inline-end: 25px;
+	float: inline-end;
 	color: #727477;
 	font-size: 12px;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-inline-start: 30px;
+	padding-inline-end: 30px;
 	height: 20px;
 	line-height: 20px;
 }
@@ -182,12 +182,12 @@ a.general_btn:hover {
 	background-color: #FFFFFF;
 	margin-top: 16px;
 	margin-top: 15px;
-	margin-right: 25px;
-	float: right;
+	margin-inline-end: 25px;
+	float: inline-end;
 	color: #727477;
 	font-size: 12px;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-inline-start: 30px;
+	padding-inline-end: 30px;
 	height: 20px;
 	line-height: 20px;
 }
@@ -209,7 +209,7 @@ a.general_btn:hover {
 	color: #e8e8e8;
 	vertical-align: bottom;
 	padding-top: 115px;
-	padding-left:25px;
+	padding-inline-start:25px;
 }
 
 .workshopWelcomeText {
@@ -218,8 +218,8 @@ a.general_btn:hover {
 	line-height: 18px;
 	color: #e9f2ff;
 	padding-top: 5px;
-	padding-left:25px;
-	margin-right: 80px;
+	padding-inline-start:25px;
+	margin-inline-end: 80px;
 }
 
 .workshopWelcomeText a {
@@ -227,7 +227,7 @@ a.general_btn:hover {
 }
 
 .mainContentsBG {
-	margin-left: 5px;
+	margin-inline-start: 5px;
 	width: 948px;
 	height: 400px;
 	position: absolute;
@@ -242,9 +242,9 @@ a.general_btn:hover {
 	width:932px;
 	margin:0;
 	padding:0;
-	text-align:left;
-	padding-left:21px;
-	padding-right:0px;
+	text-align:start;
+	padding-inline-start:21px;
+	padding-inline-end:0px;
 	position: relative;
 }
 
@@ -252,7 +252,7 @@ a.general_btn:hover {
 {
 	display: flex;
 	flex-direction: column;
-	float: right;
+	float: inline-end;
 	gap: 12px;
 	padding-top: 8px;
 	position: relative;
@@ -274,7 +274,7 @@ a.general_btn:hover {
 .toolsRightSectionHolder {
 	font-size: 14px;
 	position: relative;
-	padding-left:13px;
+	padding-inline-start:13px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/rightWorkshopToolsBG.png');
 }
 
@@ -349,7 +349,7 @@ a.general_btn:hover {
 	width: 84px;
 }
 .avatar_ctn {
-	float: left;
+	float: inline-start;
 	height: 84px;
 	position: relative;
 	width: 84px;
@@ -360,16 +360,16 @@ a.general_btn:hover {
 	width: 84px;
 	position: absolute;
 	top: 0px;
-	left: 0px;
+	inset-inline-start: 0px;
 }
 .playerAvatar.float_left
 {
-	float: left;
+	float: inline-start;
 	margin-bottom: 20px;
 }
 .current_player_workshop_title {
 	padding-top: 30px;
-	float: left;
+	float: inline-start;
 	color: #67c1f5;
 	font-size: 16px;
 			font-family: "Motiva Sans", Sans-serif;
@@ -415,7 +415,7 @@ a.general_btn:hover {
 {
 	padding-top: 5px;
 	padding-bottom: 5px;
-	padding-right: 17px;
+	padding-inline-end: 17px;
 }
 
 .rightSectionBrowseBar
@@ -424,7 +424,7 @@ a.general_btn:hover {
 	position: relative;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/rightWorkshopBlockBG.gif');
 	cursor: pointer;
-	padding-left: 2px;
+	padding-inline-start: 2px;
 	padding-bottom: 5px;
 }
 
@@ -436,15 +436,15 @@ a.general_btn:hover {
 	font-size: 10px;
 	height: 27px;
 	line-height: 27px;
-	padding-left: 8px;
+	padding-inline-start: 8px;
 	text-transform:uppercase;
 }
 
 .rightSectionBrowseBarArrow
 {
 	margin-top: 3px;
-	margin-right: 10px;
-	float: right;
+	margin-inline-end: 10px;
+	float: inline-end;
 	height: 20px;
 	width: 17px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/workshop_section_arrow.png');
@@ -482,7 +482,7 @@ h3 {
 .hasLinkedItems
 {
 	max-width: 940px;
-	text-align: left;
+	text-align: start;
 	margin: 0 auto 8px auto;
 	padding: 10px;
 	background: linear-gradient( 180deg, #5c822b, #658f30);
@@ -501,7 +501,7 @@ h3 {
 
 .hasLinkedItems img
 {
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 .bannedBy
@@ -516,7 +516,7 @@ h3 {
 
 .bannedNotification
 {
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	margin-bottom: 8px;
 	padding: 18px;
@@ -528,12 +528,12 @@ h3 {
 	border-color: #4c2c2a;
 	border-style: solid;
 	border-width: 2px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .incompatibleNotification
 {
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	margin-bottom: 8px;
 	padding: 18px;
@@ -545,7 +545,7 @@ h3 {
 	border-color: #534436;
 	border-style: solid;
 	border-width: 2px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .incompatibleNotification a
@@ -555,7 +555,7 @@ h3 {
 
 .needsAcceptanceNotification
 {
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	padding: 18px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/notification_green.png');
@@ -567,12 +567,12 @@ h3 {
 	border-style: solid;
 	border-width: 2px;
 	margin-bottom: 8px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .needsFinalizeNotification
 {
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	padding: 8px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/notification_green.png');
@@ -584,7 +584,7 @@ h3 {
 	border-style: solid;
 	border-width: 2px;
 	margin-bottom: 8px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .needsFinalizeNotification .title
@@ -603,7 +603,7 @@ h3 {
 	position: absolute;
 	height: 46px;
 	width: 78px;
-	left: -87px;
+	inset-inline-start: -87px;
 	top: -10px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/hint_arrows_notext.png');
 	background-position: 0px 0px;
@@ -613,7 +613,7 @@ h3 {
 .payment_info
 {
 	height: 14px;
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	margin-bottom: 8px;
 	padding: 18px;
@@ -625,7 +625,7 @@ h3 {
 	border-color: #4c2c2a;
 	border-style: solid;
 	border-width: 2px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .view_inventory_page {
@@ -640,7 +640,7 @@ h3 {
 
 .view_inventory_page .inventory_page_right {
 	position: absolute;
-	right: 11px;
+	inset-inline-end: 11px;
 	top: 17px;
 	width: 350px;
 }
@@ -659,7 +659,7 @@ h3 {
 	margin:0;
 	padding:0;
 	margin-bottom:20px;
-	margin-left:3px;
+	margin-inline-start:3px;
 }
 
 .returnLink>a {
@@ -667,7 +667,7 @@ h3 {
 }
 
 #termsofservice {
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .greyHR,.greyHR2 {
@@ -691,7 +691,7 @@ h3 {
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	border: 2px #454341 solid;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 	margin-bottom: 25px;
 }
 
@@ -727,7 +727,7 @@ h3 {
 
 .sharedFilesTitleContainer
 {
-	margin-left: 19px;
+	margin-inline-start: 19px;
 	padding-top: 7px;
 	position: relative;
 	line-height: 50px;
@@ -736,7 +736,7 @@ h3 {
 
 .sharedFilesTitleContainer .iconHolder_default {
 	position: absolute;
-	left: 4px;
+	inset-inline-start: 4px;
 	top: 12px;
 	padding: 4px;
 	width: 32px;
@@ -747,9 +747,9 @@ h3 {
 .sharedFilesTitleProfileName {
 	color:#e1e1e1;
 	font-size:26px;
-	margin-left: 67px;
-	margin-right: 7px;
-	float: left;
+	margin-inline-start: 67px;
+	margin-inline-end: 7px;
+	float: inline-start;
 	cursor: pointer;
 }
 
@@ -757,13 +757,13 @@ h3 {
 	margin-top: 2px;
 	color:#828282;
 	font-size:18px;
-	float: left;
+	float: inline-start;
 }
 
 .browsePageGotoSharedFiles .iconHolder_default
 {
 	position: absolute;
-	left: 9px;
+	inset-inline-start: 9px;
 	padding: 4px;
 	width: 32px;
 	height: 32px;
@@ -771,7 +771,7 @@ h3 {
 
 .viewMyFiles
 {
-	margin-left:45px;
+	margin-inline-start:45px;
 	line-height: 40px;
 }
 
@@ -798,16 +798,16 @@ h3 {
 
 #BG_top_workshop .appselect_container
 {
-	margin-left: 368px;
+	margin-inline-start: 368px;
 	margin-top: 40px;
-	float: left;
+	float: inline-start;
 }
 
 #BG_top_workshop_small .appselect_container
 {
-	margin-left: 368px;
+	margin-inline-start: 368px;
 	margin-top: 15px;
-	float: left;
+	float: inline-start;
 }
 
 div.appselect
@@ -838,7 +838,7 @@ div.appselect_options, div.appselect {
 
 div.appselect #appselect_arrow {
 	position: absolute;
-	right: 0px;
+	inset-inline-end: 0px;
 	top: 0px;
 	width: 29px;
 	height: 23px;
@@ -905,14 +905,14 @@ div.appselect_nohighlight
 .instructions
 {
 	font-size: 14px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .appInstructionsBlock
 {
 	border: 1px #777777 solid;
 	min-height: 69px;
-	margin-right: 15px;
+	margin-inline-end: 15px;
 	margin-bottom: 15px;
 	padding: 5px 5px 5px 5px;
 }
@@ -920,16 +920,16 @@ div.appselect_nohighlight
 .appInstructionsTitle
 {
 	margin-top: 10px;
-	margin-left: 198px;
+	margin-inline-start: 198px;
 	font-size: 16px;
 }
 
 .instructionsBtn {
-	float: left;
+	float: inline-start;
 	background-color: #1A1A1A;
 	padding: 5px 8px 5px 8px;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-inline-start: 5px;
+	margin-inline-end: 5px;
 	margin-top: 10px;
 	cursor: pointer;
 	border-radius: 3px;
@@ -953,10 +953,10 @@ a.instructionsBtn:hover {
 	border:0;
 	padding:0;
 	margin:0;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 	top:4px;
-	left:4px;
-	float: left;
+	inset-inline-start:4px;
+	float: inline-start;
 }
 
 .instructionsAppLogo img {
@@ -990,18 +990,18 @@ a.instructionsBtn:hover {
 }
 
 .formRowDesc {
-	float:right;
+	float:inline-end;
 	width:244px;
-	padding-right:10px;
-	padding-left:10px;
+	padding-inline-end:10px;
+	padding-inline-start:10px;
 	font-size:10px;
 	color:#707070;
 }
 
 .formRowTitle {
 	width:300px;
-	text-align:right;
-	padding-right:4px;
+	text-align:end;
+	padding-inline-end:4px;
 	font-size:12px;
 	color:#707070;
 	padding-top:5px;
@@ -1009,14 +1009,14 @@ a.instructionsBtn:hover {
 
 .formRowFields
 {
-	float:right;
+	float:inline-end;
 	width:559px;
-	text-align:left;
+	text-align:start;
 }
 
 .taxinfo
 {
-	padding-right: 50px;
+	padding-inline-end: 50px;
 }
 
 .formHR
@@ -1027,7 +1027,7 @@ a.instructionsBtn:hover {
 	padding:0;
 	margin-top:20px;
 	margin-bottom:20px;
-	margin-right: 12px;
+	margin-inline-end: 12px;
 }
 
 input, select {
@@ -1096,7 +1096,7 @@ textarea {
 
 .savedPaymentInfo
 {
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	padding: 18px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/notification_green.png');
@@ -1108,12 +1108,12 @@ textarea {
 	border-style: solid;
 	border-width: 2px;
 	margin-bottom: 8px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .paymentformfaqdesc
 {
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	padding: 18px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/notification_green.png');
@@ -1125,7 +1125,7 @@ textarea {
 	border-style: solid;
 	border-width: 2px;
 	margin-bottom: 8px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .paymentformfaqdesc a
@@ -1178,10 +1178,10 @@ textarea {
 
 .workshopItemTitle .integratedGuideIcon
 {
-	float: left;
+	float: inline-start;
 	width: 19px;
 	height: 18px;
-	padding-right: 5px;
+	padding-inline-end: 5px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/icons/guides_integrated.png');
 	background-repeat:no-repeat;
 }
@@ -1207,7 +1207,7 @@ textarea {
 
 .workshopItem.right
 {
-	margin-right: 0;
+	margin-inline-end: 0;
 }
 
 .workshopItem .workshopItemAuthorName
@@ -1217,12 +1217,12 @@ textarea {
 
 .workshopItem .workshop_checkmark
 {
-	float: right;
+	float: inline-end;
 }
 
 .workshopItem .workshopItemPrice
 {
-	float: right;
+	float: inline-end;
 	font-size: 12px;
 	padding-top: 5px;
 	color: white;
@@ -1235,8 +1235,8 @@ textarea {
 	overflow: hidden;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/icon_show_state.png');
 	background-repeat: no-repeat;
-	float: right;
-	margin-right: 2px;
+	float: inline-end;
+	margin-inline-end: 2px;
 }
 
 .user_action_history_icon.subscribed
@@ -1259,7 +1259,7 @@ textarea {
 	visibility:hidden;
 	position: absolute;
 	bottom: 3px;
-	right: 3px;
+	inset-inline-end: 3px;
 }
 
 .workshopItemSubscriptionControls.aspectratio_16x9, .workshopItemSubscriptionControls.aspectratio_4x3
@@ -1274,7 +1274,7 @@ textarea {
 .workshopItemSubscriptionControls .general_btn.subscribe
 {
 	position: relative;
-	float: right;
+	float: inline-end;
 	height: 25px;
 	width: 25px;
 	padding: 0px;
@@ -1313,7 +1313,7 @@ textarea {
 
 .workshopItemSubscriptionControls .action_wait > img
 {
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	width: 22px;
 }
 
@@ -1369,13 +1369,13 @@ textarea {
 .workshopItemCollection .workshopItemDetails
 {
 	padding-top: 5px;
-	margin-left: 10px;
+	margin-inline-start: 10px;
 }
 
 .workshopItemCollection .fileRating
 {
 	margin-top: 0px;
-	float: right;
+	float: inline-end;
 }
 
 .workshopItemCollection .workshopItemShortDesc
@@ -1408,7 +1408,7 @@ textarea {
     background-color: #273b52;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
     margin-bottom: 10px;
-    margin-right: 0px;
+    margin-inline-end: 0px;
     height: 120px;
     overflow: hidden;
     border-radius: 4px;
@@ -1426,18 +1426,18 @@ textarea {
 
 #detailsHeaderRight
 {
-	float:right;
+	float:inline-end;
 	width:295px;
 	margin:0;
 	padding:0;
-	padding-left:10px;
+	padding-inline-start:10px;
 	padding-top:0px;
 }
 
 .workshopItemPreviewArea
 {
 	position: relative;
-	padding-left: 4px;
+	padding-inline-start: 4px;
 	width: 604px;
 }
 
@@ -1445,10 +1445,10 @@ textarea {
 {
 	cursor: pointer;
 	display:block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 	position: relative;
-	padding-right: 17px;
+	padding-inline-end: 17px;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	width: 268px;
@@ -1459,7 +1459,7 @@ textarea {
 {
 	visibility:hidden;
 	position:absolute;
-	right: 22px;
+	inset-inline-end: 22px;
 	bottom: 10px;
 }
 
@@ -1470,7 +1470,7 @@ textarea {
 
 .workshopItemPreviewAreaBG
 {
-	left: -16px;
+	inset-inline-start: -16px;
 	width: 638px;
 	height: 354px;
 	position: absolute;
@@ -1480,7 +1480,7 @@ textarea {
 
 .workshopItemPreviewAreaPreviewBG
 {
-	left: -16px;
+	inset-inline-start: -16px;
 	top: 354px;
 	width: 638px;
 	height: 94px;
@@ -1491,7 +1491,7 @@ textarea {
 
 .workshopItemPreviewAreaFooterBG
 {
-	left: 5px;
+	inset-inline-start: 5px;
 	width: 638px;
 	height: 17px;
 	position: absolute;
@@ -1505,8 +1505,8 @@ textarea {
 	display:block;
 	height:337px;
 	max-width:600px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 	position: relative;
 	padding-top: 17px;
 }
@@ -1520,7 +1520,7 @@ textarea {
 {
 	visibility:hidden;
 	position:absolute;
-	right: 5px;
+	inset-inline-end: 5px;
 	bottom: 5px;
 }
 
@@ -1620,8 +1620,8 @@ textarea {
 	color: #494947;
 	font-size: 11px;
 	align: right;
-	text-align: right;
-	margin-right: 20px;
+	text-align: end;
+	margin-inline-end: 20px;
 }
 
 .fileRatingDetails
@@ -1651,10 +1651,10 @@ textarea {
 
 .submit_btn
 {
-	float: left;
+	float: inline-start;
 	display: block;
 	padding: 5px 8px 5px 8px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	cursor: pointer;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/btn_green.png);
 	cursor: pointer;
@@ -1669,8 +1669,8 @@ a.submit_btn:hover
 .buynowprice
 {
 	color: #ffffff;
-	float: right;
-	margin-right: 15px;
+	float: inline-end;
+	margin-inline-end: 15px;
 	line-height: 26px;
 	font-size: 14px;
 }
@@ -1686,7 +1686,7 @@ a.submit_btn:hover
 	text-decoration: none;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/btn_buynow_mid.png );
 	background-repeat: repeat-x;
-	float: right;
+	float: inline-end;
 	font-size: 11px;
 	color: #ffffff;
 	text-align: center;
@@ -1707,14 +1707,14 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 .buynowbtn .leftcap
 {
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/btn_buynow_left.png );
-	left: 0px;
+	inset-inline-start: 0px;
 	width: 24px;
 }
 
 .buynowbtn .rightcap
 {
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/btn_buynow_right.png );
-	right: 0px;
+	inset-inline-end: 0px;
 	width: 4px;
 }
 
@@ -1743,8 +1743,8 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 {
 	background-color: #68932f;
 	color: #d2ff96;
-	padding-right: 2px;
-	padding-left: 2px;
+	padding-inline-end: 2px;
+	padding-inline-start: 2px;
 	background-color: #68932f;
 	color: #d2ff96;
 }
@@ -1758,7 +1758,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 }
 
 .workshopItemAdminControls .general_btn {
-	float: left;
+	float: inline-start;
 	margin-top: 5px;
 }
 
@@ -1785,12 +1785,12 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .commentsTab, a.commentsTab {
 	display: block;
-	float: left;
+	float: inline-start;
 	color: white;
 	background-color: #3A3A3A;
 	line-height: 25px;
 	padding: 0px 12px;
-	margin-left: 9px;
+	margin-inline-start: 9px;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -1801,8 +1801,8 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .publicComments
 {
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-inline-start: 10px;
+	margin-inline-end: 10px;
 }
 
 .developerCommentsDesc
@@ -1813,8 +1813,8 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .developerComments
 {
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-inline-start: 10px;
+	margin-inline-end: 10px;
 }
 
 .workshopItemSplitsCollapsed {
@@ -1836,7 +1836,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	display: inline-block;
-	float: right;
+	float: inline-end;
 }
 
 .splits_expand_btn:hover
@@ -1884,7 +1884,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .workshopItemSplit .iconHolder_default {
 	position: absolute;
-	left: 4px;
+	inset-inline-start: 4px;
 	top: 10px;
 	padding: 4px;
 	width: 32px;
@@ -1897,20 +1897,20 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	width:150px;
 	font-size:11;
 	font-weight: bold;
-	margin-right:0px;
-	margin-left:50px;
-	float: left;
+	margin-inline-end:0px;
+	margin-inline-start:50px;
+	float: inline-start;
 	cursor: pointer;
 }
 
 .workshopSplitPercentage {
-	float: left;
-	margin-left: 10px;
+	float: inline-start;
+	margin-inline-start: 10px;
 }
 
 .workshopSplitAcceptedDate {
-	float: left;
-	margin-left: 25px;
+	float: inline-start;
+	margin-inline-start: 25px;
 }
 
 .workshopSplitControls {
@@ -1920,7 +1920,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 }
 
 .workshopSplitControls .general_btn {
-	float: left;
+	float: inline-start;
 }
 
 .workshopTagsTitle
@@ -1948,7 +1948,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	color: #939393;
 	font-weight:normal;
 	line-height:12px;
-	clear:left;
+	clear:inline-start;
 }
 
 .viewAuthorFilesLink
@@ -1964,8 +1964,8 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	width: 264px;
 	padding: 0;
 	margin: 0;
-	margin-right: 12px;
-	padding-left: 4px;
+	margin-inline-end: 12px;
+	padding-inline-start: 4px;
 	padding-top: 4px;
 	padding-bottom: 4px;
 	margin-top: 4px;
@@ -1993,11 +1993,11 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 }
 
 .linkedAppIcon {
-	float:left;
+	float:inline-start;
 	width:40px;
 	margin:0;
 	padding:0;
-	margin-right:6px;
+	margin-inline-end:6px;
 }
 
 .linkedAppTitle {
@@ -2038,8 +2038,8 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	padding: 0;
 	margin: 0;
 	margin-top: 4px;
-	margin-right: 12px;
-	padding-left: 4px;
+	margin-inline-end: 12px;
+	padding-inline-start: 4px;
 	padding-top: 6px;
 	padding-bottom: 4px;
 	background-color: #2d2d2c;
@@ -2074,7 +2074,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	background-color:#363636;
 	margin-top:4px;
 	margin-bottom:4px;
-	clear:left;
+	clear:inline-start;
 }
 
 input, select {
@@ -2092,8 +2092,8 @@ input, select {
 	width:30px;
 	position: relative;
 	top:0px;
-	margin-left:10px;
-	text-align: right;
+	margin-inline-start:10px;
+	text-align: end;
 	padding: 5px 5px 5px 5px;
 }
 
@@ -2126,7 +2126,7 @@ input[type='checkbox'] {
 	border:none;
 	position:absolute;
 	top:6px;
-	left:6px;
+	inset-inline-start:6px;
 	width: 220px;
 	height: 20px;
 	background-color:#303030;
@@ -2136,7 +2136,7 @@ input[type='checkbox'] {
 {
 	position:absolute;
 	top:5px;
-	left:235px;
+	inset-inline-start:235px;
 	width:23px;
 	height:18px;
 	padding:0;
@@ -2152,7 +2152,7 @@ input[type='checkbox'] {
 
 .tagsFilterSubmitBtn
 {
-	padding-left: 4px;
+	padding-inline-start: 4px;
 	margin-top: 10px;
 }
 
@@ -2166,7 +2166,7 @@ input[type='checkbox'] {
 	color: #494947;
 	margin-top: 10px;
 	margin-bottom: 0px;
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	font-size: 14px;
 }
 
@@ -2175,7 +2175,7 @@ input[type='checkbox'] {
 	color: #494947;
 	margin-top: 10px;
 	margin-bottom: 5px;
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	font-size: 12px;
 }
 
@@ -2190,18 +2190,18 @@ input[type='checkbox'] {
 }
 
 .modal_close {
-	float:right;
+	float:inline-end;
 	width:9px;
 	height:9px;
-	margin-right:9px;
+	margin-inline-end:9px;
 	margin-top:7px;
 }
 
 .modal_close_image {
-	float:right;
+	float:inline-end;
 	width:9px;
 	height:9px;
-	margin-right:0px;
+	margin-inline-end:0px;
 	margin-top:10px;
 	margin-bottom: 10px;
 }
@@ -2216,7 +2216,7 @@ input[type='checkbox'] {
 
 	font-size: 12px;
 	color: #ffffff;
-	text-align: left;
+	text-align: start;
 }
 
 .modal_box_preview_image {
@@ -2228,7 +2228,7 @@ input[type='checkbox'] {
 
 	font-size: 12px;
 	color: #ffffff;
-	text-align: left;
+	text-align: start;
 }
 
 .modal_box h1, .modal_box h5 {
@@ -2244,28 +2244,28 @@ input[type='checkbox'] {
 }
 
 .modal_box h1 {
-	padding-left:20px;
+	padding-inline-start:20px;
 }
 
 .modal_box p {
-	padding-left:20px;
+	padding-inline-start:20px;
 }
 
 
 .modal_steam_ico {
-	float:left;
-	padding-right:18px;
+	float:inline-start;
+	padding-inline-end:18px;
 	margin-top:-4px;
 }
 
 
 
 .modal_buttons a.btn_white {
-	float: left;
+	float: inline-start;
 }
 
 .modal_buttons a.btn_white.leftbtn {
-	margin-right: 16px;
+	margin-inline-end: 16px;
 
 }
 
@@ -2309,8 +2309,8 @@ input[type='checkbox'] {
 #enlargedImage
 {
 	max-width:860px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-inline-start: 10px;
+	padding-inline-end: 10px;
 	padding-top: 10px;
 }
 
@@ -2318,7 +2318,7 @@ input[type='checkbox'] {
 
 .rightSectionHolder select
 {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	width: 222px;
 }
 
@@ -2339,7 +2339,7 @@ input[type='checkbox'] {
 .toolsIcon
 {
 	vertical-align: middle;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 	/** HOVER stuff */
@@ -2413,9 +2413,9 @@ div.hover {
 	color: #494947;
 	padding-top: 4px;
 	padding-bottom: 4px;
-	padding-left: 4px;
-	margin-left: 10px;
-	margin-right: 10px;
+	padding-inline-start: 4px;
+	margin-inline-start: 10px;
+	margin-inline-end: 10px;
 	margin-bottom: 10px;
 }
 
@@ -2425,7 +2425,7 @@ div.hover {
 	overflow: hidden;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/icon_show_state_blue.png');
 	background-repeat: no-repeat;
-	padding-left: 30px;
+	padding-inline-start: 30px;
 }
 
 .hover_user_action.subscribed
@@ -2449,8 +2449,8 @@ div.hover {
 
 .hover_friend_block_container
 {
-	float: left;
-	margin-right: 5px;
+	float: inline-start;
+	margin-inline-end: 5px;
 	height: 40px;
 	width: 40px;
 }
@@ -2464,7 +2464,7 @@ div.hover {
 .hover_friend_block_row .iconHolder_default
 {
 	position: absolute;
-	left: 4px;
+	inset-inline-start: 4px;
 	padding: 4px;
 	width: 32px;
 	height: 32px;
@@ -2482,8 +2482,8 @@ div.hover {
 
 .friend_favorited_block_container
 {
-	float: left;
-	margin-right: 5px;
+	float: inline-start;
+	margin-inline-end: 5px;
 	height: 40px;
 	width: 40px;
 }
@@ -2497,7 +2497,7 @@ div.hover {
 .friend_favorited_block_row .iconHolder_default
 {
 	position: absolute;
-	left: 4px;
+	inset-inline-start: 4px;
 	padding: 4px;
 	width: 32px;
 	height: 32px;
@@ -2518,11 +2518,11 @@ div.hover {
 .general_btn.follow
 {
 	position: relative;
-	float: left;
+	float: inline-start;
 	height: 30px;
 	padding: 0px;
-	padding-left: 28px;
-	padding-right: 12px;
+	padding-inline-start: 28px;
+	padding-inline-end: 12px;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/btn_green_borderless.png);
 	background-repeat: repeat-x;
 	display: inline-block;
@@ -2556,7 +2556,7 @@ div.hover {
 {
 	position: absolute;
 	top: 0px;
-	left: 8px;
+	inset-inline-start: 8px;
 	height: 30px;
 	width: 16px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png');
@@ -2593,8 +2593,8 @@ div.hover {
 
 .authorAvatar
 {
-	float: left;
-	margin-right: 10px;
+	float: inline-start;
+	margin-inline-end: 10px;
 }
 
 .authorName
@@ -2630,13 +2630,13 @@ div.hover {
 
 .followStatValue
 {
-	float: left;
+	float: inline-start;
 	padding-top: 8px;
 }
 
 .followStatsContainer
 {
-	float: left;
+	float: inline-start;
 }
 
 .follower_tt {
@@ -2658,8 +2658,8 @@ div.hover {
 
 .followStatsTitleContainer
 {
-	float: left;
-	margin-left: 20px;
+	float: inline-start;
+	margin-inline-start: 20px;
 }
 
 .followStatName
@@ -2693,7 +2693,7 @@ div.hover {
 {
 	position: absolute;
 	top: 38px;
-	left: 5px;
+	inset-inline-start: 5px;
 	width: 948px;
 	background-color:#4d4d4e;
 	height:1px;
@@ -2714,8 +2714,8 @@ div.hover {
 	position: relative;
 	height: 30px;
 	padding: 0px;
-	padding-left: 12px;
-	padding-right: 12px;
+	padding-inline-start: 12px;
+	padding-inline-end: 12px;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/btn_green_borderless.png);
 	background-repeat: repeat-x;
 	display: inline-block;
@@ -2732,7 +2732,7 @@ div.hover {
 	width:958px;
 	height:65px;
 	padding: 15px;
-	text-align: left;
+	text-align: start;
 	background-color: #4fabcf;
 	color: white;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/workshop_collection_progressBarGradient.png);
@@ -2753,10 +2753,10 @@ div.hover {
 .newCollectionTab
 {
 	color: white;
-	float: left;
-	padding-left: 5px;
-	padding-right: 5px;
-	margin-right: 10px;
+	float: inline-start;
+	padding-inline-start: 5px;
+	padding-inline-end: 5px;
+	margin-inline-end: 10px;
 	line-height: 25px;
 }
 
@@ -2768,20 +2768,20 @@ div.hover {
 .newCollectionBullet
 {
 	margin-top: 8px;
-	float: left;
+	float: inline-start;
 	width: 4px;
 	height: 8px;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/workshop_collection_processArrow.png);
 	background-repeat: no-repeat;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 #BG_top_new_collection .general_btn
 {
-	float: left;
+	float: inline-start;
 	background-color: white;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-inline-start: 10px;
+	padding-inline-end: 10px;
 	color: black;
 }
 
@@ -2833,8 +2833,8 @@ div.hover {
 .promptButtons a.general_btn.green
 {
 	color: #ffffff;
-	padding-left: 24px;
-	padding-right: 24px;
+	padding-inline-start: 24px;
+	padding-inline-end: 24px;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/btn_green.png);
 }
 
@@ -2861,10 +2861,10 @@ div.hover {
 }
 
 .publishedfile_popup_screenshot {
-	float: left;
+	float: inline-start;
 	border: 1px solid #000000;
 	cursor: pointer;
-	margin-right: 4px;
+	margin-inline-end: 4px;
 	width: 212px;
 
 	margin-bottom: 4px;

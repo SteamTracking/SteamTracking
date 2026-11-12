@@ -8,14 +8,14 @@
 	height: 230px;
 	overflow: hidden;
 	padding-top: 12px;
-	padding-left: 14px;
+	padding-inline-start: 14px;
 }
 
 .grouppage_membertiles_overlay {
 	position: absolute;
 	top: 12px;
-	left: 14px;
-	right: 0;
+	inset-inline-start: 14px;
+	inset-inline-end: 0;
 	height: 230px;
 	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA6gAAADmCAYAAADY+6ipAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAADHtJREFUeNrs3E1u40YQBtCuYO7grW/g+x8lQFbZZZddVgGzGQeOIrKruimpJb8HDDwjk1T/Nz9T43h7//i1AQAAwIP9ogkAAAAQUAEAAEBABQAAQEAFAAAAARUAAAABFQAAAARUAAAABFQAAAAQUAEAABBQAQAAQEAFAABAQAUAAAABFQAAAAEVAAAABFQAAAAEVAAAABBQAQAAEFABAABAQAUAAEBABQAAAAEVAAAAARUAAAAEVAAAAARUAAAAEFABAAAQUAEAAEBABQAAQEAFAAAAARUAAAABFQAAAARUAAAABFQAAAAQUAEAAEBABQAAQEAFAAAAARUAAAABFQAAAARUAAAABFQAAAAQUAEAABBQAQAAQEAFAABAQAUAAAABFQAAAAEVAAAABFQAAAAEVAAAABBQAQAAEFABAABAQAUAAEBABQAAAAEVAAAAARUAAAAEVAAAAARUAAAAEFABAAAQUAEAAEBABQAAQEAFAAAAARUAAAABFQAAAARUAAAABFQAAAAQUAEAABBQAQAAQEAFAAAAARUAAAABFQAAAARUAAAABFQAAAAQUAEAABBQAQAAQEAFAABAQAUAAAABFQAAAAEVAAAABFQAAAAEVAAAABBQAQAAEFABAABAQAUAAEBABQAAAAEVAAAAARUAAAAEVAAAAARUAAAAEFABAAAQUAEAAEBABQAAQEAFAAAAARUAAAABFQAAAARUAAAABFQAAAAQUAEAABBQAQAAQEAFAAAAARUAAAABFQAAAARUAAAABFQAAAAQUAEAABBQAQAAQEAFAABAQAUAAAABFQAAAAEVAAAABFQAAAAEVAAAABBQAQAAEFABAABAQAUAAEBABQAAAAEVAAAAARUAAAAEVAAAAARUAAAAEFABAAAQUAEAAEBABQAAQEAFAAAAARUAAAABFQAAAARUAAAABFQAAAAQUAEAABBQAQAAQEAFAABAQAUAAAABFQAAAARUAAAABFQAAAAQUAEAABBQAQAAQEAFAABAQAUAAAABFQAAAAEVAAAABFQAAAAEVAAAABBQAQAAEFABAABAQAUAAEBABQAAAAEVAAAAARUAAAAEVAAAAARUAAAAEFABAAAQUAEAAEBABQAAQEAFAAAA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' );
 	background-repeat: no-repeat;
@@ -36,7 +36,7 @@ body.nodatauri .grouppage_membertiles_overlay {
 	padding: 4px;
 
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
 
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/groups/group_avatar_holder.png' );
@@ -44,7 +44,7 @@ body.nodatauri .grouppage_membertiles_overlay {
 
 .grouppage_header_label {
 	position: absolute;
-	left: 188px;
+	inset-inline-start: 188px;
 	top: 52px;
 
 	padding: 0 11px;
@@ -59,10 +59,10 @@ body.nodatauri .grouppage_membertiles_overlay {
 
 .grouppage_header_name {
 	position: absolute;
-	left: 188px;
+	inset-inline-start: 188px;
 	top: 75px;
 
-	text-align: left;
+	text-align: start;
 
 	padding: 0 11px;
 	line-height: 42px;
@@ -88,7 +88,7 @@ body.nodatauri .grouppage_membertiles_overlay {
 	line-height: 30px;
 	padding: 6px;
 	position: absolute;
-	right: -6px;
+	inset-inline-end: -6px;
 	top: 75px;
 }
 
@@ -111,7 +111,7 @@ body.nodatauri .grouppage_membertiles_overlay {
 .grouppage_friendsingroup {
 	position: absolute;
 	top: 133px;
-	right: -6px;
+	inset-inline-end: -6px;
 
 	padding: 6px;
 	background-color: #000000;
@@ -124,16 +124,16 @@ body.nodatauri .grouppage_membertiles_overlay {
 .grouppage_friendsingroup .friendavatar {
 	width: 42px;
 	height: 42px;
-	float: right;
+	float: inline-end;
 }
 
 .grouppage_friendsingroup_title {
 	font-size: 12px;
 	color: #828282;
 	padding: 0 9px;
-	float: right;
+	float: inline-end;
 	white-space: nowrap;
-	text-align: right;
+	text-align: end;
 
 	padding-top: 4px;
 	line-height: 16px;
@@ -148,7 +148,7 @@ img.member_tile {
 	height: 85px;
 	margin: 0;
 	padding: 0;
-	float: left;
+	float: inline-start;
 }
 
 .group_tabs {
@@ -227,7 +227,7 @@ a.group_tab:hover {
 }
 
 .group_curator_recommends_block a {
-	float: left;
+	float: inline-start;
 	padding: 2px;
 }
 
@@ -262,7 +262,7 @@ a.group_tab:hover {
 	flex: auto;
 	background: rgba( 255, 255, 255, 0.2);
 	padding: 16px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	text-align: center;
 }
 .curator_summary_box .label {
@@ -277,14 +277,14 @@ a.group_tab:hover {
 }
 .curator_store_link_ctn {
 	margin-top: 5px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	background: rgba( 255, 255, 255, 0.2);
 	padding: 16px;
 	text-align: center;
 }
 
 .leftcol {
-	float: left;
+	float: inline-start;
 	width: 640px;
 }
 
@@ -312,7 +312,8 @@ a.group_tab:hover {
 	margin-bottom: 10px;
 	max-width: 640px;	/* backgrounds don't look good beyond this */
 	overflow: auto;
-	padding: 10px 0 0 5px;
+	padding-block: 10px 0;
+	padding-inline: 5px 0;
 	position: relative;
 }
 
@@ -341,8 +342,8 @@ a.group_tab:hover {
 
 /* for text on the page in a column with group content boxes */
 .group_content_bodytext {
-	padding-left: 5px;
-	padding-right: 9px;
+	padding-inline-start: 5px;
+	padding-inline-end: 9px;
 }
 
 /* members does not have the bottom background */
@@ -389,7 +390,7 @@ a.readmore_link {
 }
 
 .group_content_header .group_content_header_viewmore {
-	float: right;
+	float: inline-end;
 }
 
 .group_nodiscussions_create_area {
@@ -405,8 +406,8 @@ a.readmore_link {
 
 .group_overview_announcement.first {
 	/*border-right: 1px solid #000000;*/
-	padding-right: 10px;
-	margin-right: 10px;
+	padding-inline-end: 10px;
+	margin-inline-end: 10px;
 	padding-bottom: 40px;
 }
 
@@ -430,8 +431,8 @@ a.readmore_link {
 
 .group_overview_announcement_fade {
 	position: absolute;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 	height: 36px;
 	/*background: url( 'https://community.fastly.steamstatic.com/public/images/groups/group_overview_announcement_fade.png' ) bottom left repeat-x;*/
@@ -468,7 +469,7 @@ a.large_title:hover {
 
 .group_content.group_comments {
 	padding-bottom: 4px;
-	padding-right: 0px;
+	padding-inline-end: 0px;
 }
 
 .group_comments .commentthread_header, .group_comments .commentthread_footer {
@@ -494,13 +495,13 @@ a.large_title:hover {
 }
 
 .membergrid .playerAvatar {
-	margin-right: 12px;
+	margin-inline-end: 12px;
 	margin-bottom: 12px;
-	float: left;
+	float: inline-start;
 }
 
 .member_sectionheader {
-	clear: left;
+	clear: inline-start;
 	font-size: 11px;
 	line-height: 15px;
 	margin: 9px 0;;
@@ -519,7 +520,7 @@ a.large_title:hover {
 }
 
 .rightcol {
-	float: right;
+	float: inline-end;
 	width: 295px;
 }
 .thread .rightcol {
@@ -545,7 +546,7 @@ a.large_title:hover {
 }
 
 .membercounts .membercount {
-	float: left;
+	float: inline-start;
 	text-align: center;
 }
 .membercount.members {
@@ -592,7 +593,7 @@ a.large_title:hover {
 
 .joinchat_bg .joinchat_membercount {
 	position: absolute;
-	left: 8px;
+	inset-inline-start: 8px;
 	top: 9px;
 	width: 115px;
 	height: 32px;
@@ -615,7 +616,7 @@ a.large_title:hover {
 
 .joinchat_bg .joinchat_button {
 	position: absolute;
-	left: 128px;
+	inset-inline-start: 128px;
 	top: 9px;
 
 	width: 127px;
@@ -630,17 +631,17 @@ a.large_title:hover {
 .groupstat {
 	position: relative;
 	margin: 8px 0;
-	padding-left: 70px;
+	padding-inline-start: 70px;
 
 	color: #61686d;
 	font-size: 12px;
 }
 .groupstat.wide_label {
-	padding-left: 170px;
+	padding-inline-start: 170px;
 }
 .groupstat .label {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
 }
 
@@ -664,7 +665,7 @@ a.large_title:hover {
 
 .admin_option_icon {
 	vertical-align: middle;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 
 a.subtle {
@@ -706,7 +707,7 @@ a.subtle:hover {
 }
 
 .announcement_share {
-	float: right;
+	float: inline-end;
 }
 
 .announcement_control_container
@@ -719,13 +720,13 @@ a.subtle:hover {
 .announcement_control_container .rateUpCount
 {
 	color: #7CC5FB;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 .announcement_control_container .rateUpCount img
 {
 	vertical-align: middle;
-	padding-right: 0px;
+	padding-inline-end: 0px;
 }
 
 p.group_body_links {
@@ -764,14 +765,14 @@ p.group_body_links {
 	color:#8c8c8c;
 	font-size:11px;
 	margin:0;
-	margin-left:0;
+	margin-inline-start:0;
 	padding:4px;
 	height:12px;
 }
 
 .announcementsPaging .announcementsPagingLeft
 {
-	float: left;
+	float: inline-start;
 	width: 175px;
 }
 
@@ -779,9 +780,9 @@ p.group_body_links {
 {
 	font-weight:bold;
 	color:#939393;
-	float: right;
+	float: inline-end;
 	width: 225px;
-	text-align: right;
+	text-align: end;
 	height: 12px;
 	margin:0;
 	padding:0;
@@ -793,7 +794,7 @@ textarea {
 	border:solid 1px #777777;
 	color:#e1e1e1;
 	font-size:13px;
-	padding-left: 4px;
+	padding-inline-start: 4px;
 
 }
 
@@ -810,18 +811,18 @@ fieldset.editRow_textarea {
 }
 
 fieldset.editRow_textarea input {
-	margin-left:117px;
+	margin-inline-start:117px;
 	margin-bottom:6px;
 }
 
 fieldset.editRow_text label,fieldset.editRow_textID label,fieldset.editRow_textarea label,fieldset.editRow_select label {
-	float:left;
+	float:inline-start;
 	display:block;
-	text-align:right;
+	text-align:end;
 	width:107px;
 	padding:0;
 	margin:0;
-	padding-right:10px;
+	padding-inline-end:10px;
 	padding-top:9px;
 	color: #8c8c8c;
 }
@@ -860,14 +861,14 @@ fieldset.editRow_textarea label {
 
 .comment_type_filter_item {
 	padding: 10px;
-	padding-left: 20px;
+	padding-inline-start: 20px;
 	padding-bottom: 20px;
 	cursor: pointer;
 	color: white;
 }
 
 .comment_type_filter_option {
-	padding-left: 23px;
+	padding-inline-start: 23px;
 }
 
 .forum_list_unread {
@@ -876,8 +877,8 @@ fieldset.editRow_textarea label {
 }
 
 .forum_list_postcount {
-	float: right;
-	padding-right: 6px;
+	float: inline-end;
+	padding-inline-end: 6px;
 }
 
 .forum_list_name {
@@ -916,7 +917,8 @@ fieldset.editRow_textarea label {
 	font-size:15px;
 	font-weight:bold;
 	margin:0;
-	padding:0px 0px 4px 10px;
+	padding-block: 0px 4px;
+	padding-inline: 10px 0px;
 }
 
 .eventLeftBlock {
@@ -924,9 +926,9 @@ fieldset.editRow_textarea label {
 	padding:0;
 	width:122px;
 	height:36px;
-	float:left;
+	float:inline-start;
 	padding-top:12px;
-	padding-left:36px;
+	padding-inline-start:36px;
 	font-size: 10px;
 }
 
@@ -934,7 +936,7 @@ fieldset.editRow_textarea label {
 	margin:0;
 	padding:0;
 	width:120px;
-	float:left;
+	float:inline-start;
 	font-size:15px;
 	font-weight:bold;
 	color:#878787;
@@ -972,17 +974,17 @@ p.sectionText {
 	margin:0;
 	padding:0;
 	margin-top:12px;
-	margin-left:8px;
+	margin-inline-start:8px;
 	margin-bottom:12px;
 }
 
 .eventBlockIcon {
-	float:left;
+	float:inline-start;
 	width:40px;
 	height:40px;
 	margin:0;
 	padding:0;
-	margin-right:8px;
+	margin-inline-end:8px;
 }
 
 .eventSmallText {
@@ -998,11 +1000,11 @@ p.sectionText {
 .eventLogo {
 	position:absolute;
 	top: 17px;
-	left:6px;
+	inset-inline-start:6px;
 }
 
 .eventContent {
-	padding-left:210px;
+	padding-inline-start:210px;
 	padding-bottom:10px;
 	min-height:80px;
 
@@ -1060,16 +1062,16 @@ a.headlineLink:hover {
 	height: 48px;
 
 	margin-bottom: 4px;
-	margin-right: 4px;
+	margin-inline-end: 4px;
 
-	float: left;
+	float: inline-start;
 
 
 	color: #C6D4DF;
 	font-size: 11px;
 }
 .member_block_content {
-	padding-left: 52px;
+	padding-inline-start: 52px;
 	padding-top: 6px;
 
 	white-space: nowrap;
@@ -1093,19 +1095,19 @@ a.headlineLink:hover {
 }
 
 .member_block .rank_icon {
-	float: right;
+	float: inline-end;
 	height: 48px;
 	background-color: rgba( 117, 204, 255, 0.3);
 	line-height: 48px;
 	text-align: center;
 
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
+	border-start-end-radius: 3px;
+	border-end-end-radius: 3px;
 
 	padding: 0px 5px;
 }
 .member_block .friend_icon {
-	float: right;
+	float: inline-end;
 	height: 48px;
 	line-height: 48px;
 	padding: 0px 7px;
@@ -1123,12 +1125,12 @@ a.headlineLink:hover {
 }
 
 .member_block.last {
-	margin-right: 0;
+	margin-inline-end: 0;
 }
 .member_block .playerAvatar {
 	position: absolute;
 	top: 6px;
-	left: 6px;
+	inset-inline-start: 6px;
 }
 
 .group_paging {
@@ -1146,7 +1148,7 @@ a.headlineLink:hover {
 }
 
 .group_paging .pageLinks {
-	float: right;
+	float: inline-end;
 }
 
 .group_paging .pagebtn {
@@ -1160,7 +1162,7 @@ a.headlineLink:hover {
 }
 
 .search_controls .btn_medium {
-	margin-left: 4px;
+	margin-inline-start: 4px;
 }
 
 .grouppage_content_area .forum_paging_header {
@@ -1171,7 +1173,7 @@ a.headlineLink:hover {
 .searchedForTerm
 {
 	position: relative;
-	float: left;
+	float: inline-start;
 	display: block;
 	cursor: pointer;
 
@@ -1184,7 +1186,7 @@ a.headlineLink:hover {
 	-moz-border-radius: 2px;
 	color: #d2ff96;
 	font-size: 14px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	margin-bottom: 5px;
 }
 
@@ -1216,14 +1218,14 @@ a.headlineLink:hover {
 }
 
 .group_associated_game_icon {
-	float: left;
+	float: inline-start;
 
 	height: 32px;
 	width: 32px;
 	padding: 1px;
 	margin: 1px;
 
-	margin-right: 8px;
+	margin-inline-end: 8px;
 
 	background-color: #6f7072;
 }
@@ -1249,8 +1251,8 @@ a.headlineLink:hover {
 }
 
 .upcoming_event_icon {
-	float: left;
-	margin-right: 8px;
+	float: inline-start;
+	margin-inline-end: 8px;
 }
 
 #group_trending_topics {
@@ -1275,9 +1277,9 @@ a.headlineLink:hover {
 
 .apphub_SectionFilter .announcement_TagDescription {
 	line-height: 46px;
-	float: left;
-	padding-left: 10px;
-	padding-right: 2px;
+	float: inline-start;
+	padding-inline-start: 10px;
+	padding-inline-end: 2px;
 }
 
 .announcement_TagDescription:hover {
@@ -1291,7 +1293,7 @@ a.headlineLink:hover {
 	border: 1px solid #82807C;
 	background-color: #3b3938;
 	color: #b0aeac;
-	text-align: left;
+	text-align: start;
 	width: 300px;
 	z-index: 1000;
 	visibility: hidden;
@@ -1367,7 +1369,8 @@ a.headlineLink:hover {
 	max-width: 630px;
 	width: 95%;
 	background-color: rgba( 0, 0, 0, 0.2 );
-	padding: 4px 0px 4px 4px;
+	padding-block: 4px;
+	padding-inline: 4px 0px;
 	border-radius: 3px;
 	border: 1px solid #000;
 	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
@@ -1398,7 +1401,7 @@ a.headlineLink:hover {
 	background-color: #a3cf06;
 	color: #1b2838;
 	font-size: 11px;
-	margin-right: 4px;
+	margin-inline-end: 4px;
 	padding: 2px;
 	font-weight: bold;
 }
@@ -1417,12 +1420,12 @@ a.headlineLink:hover {
 
 
 .curation_app_form_buttons {
-	float: right;
+	float: inline-end;
 	padding-top: 10px;
 }
 
 .curation_app_form_buttons div {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 }
 
 .curation_app_block {
@@ -1436,7 +1439,7 @@ a.headlineLink:hover {
     color: #62696e;
 	height: 24px;
 	line-height: 24px;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	font-size: 11px;
 }
 
@@ -1445,7 +1448,7 @@ a.headlineLink:hover {
 }
 
 .leftcol.hasContentBoxes .curation_app_block_body img {
-	float: left;
+	float: inline-start;
     max-width: 184px;
 }
 
@@ -1458,7 +1461,7 @@ a.headlineLink:hover {
 
 
 .curation_app_block_content {
-	padding-left: 200px;
+	padding-inline-start: 200px;
 }
 
 .curation_app_block_name {
@@ -1496,11 +1499,11 @@ a.headlineLink:hover {
 }
 
 .curation_app_details_body {
-	margin-left: 200px;
+	margin-inline-start: 200px;
 }
 
 .curation_app_details_img {
-	float: left;
+	float: inline-start;
 }
 
 .curation_app_details_body {
@@ -1525,8 +1528,8 @@ a.headlineLink:hover {
 }
 
 .curation_app_details_header .thumb {
-	float: left;
-	margin-right: 10px;
+	float: inline-start;
+	margin-inline-end: 10px;
 }
 
 .curation_app_disclosures {
@@ -1589,18 +1592,18 @@ a.headlineLink:hover {
 }
 
 #curationAppCharacterCounter {
-	float: right;
+	float: inline-end;
 	font-size: 10px;
 	padding-top: 18px;
 }
 
 #curationAppRecommendLabel {
-	float: left;
+	float: inline-start;
 }
 .curator_link_icon {
     width: 16px;
     height: 16px;
-    margin-right: 6px;
+    margin-inline-end: 6px;
     display: inline-block;
     background-image: url( 'https://community.fastly.steamstatic.com/public/images//skin_1/discussions_links_icons.png' );
     background-repeat: no-repeat;
@@ -1630,12 +1633,12 @@ a.headlineLink:hover {
 .RecommendedApps_paging_summary
 {
 	color: #3b6e8c;
-	float: left;
+	float: inline-start;
 }
 
 .RecommendedApps_paging_controls
 {
-	float: right;
+	float: inline-end;
 }
 
 .RecommendedApps_paging_controls .pagebtn {
@@ -1715,7 +1718,7 @@ div.rule {
 	display: inline-block;
 	float: none;
 
-	margin-right: 20px;
+	margin-inline-end: 20px;
 	width: auto;
 }
 
@@ -1727,7 +1730,7 @@ div.rule {
 }
 
 .grouppage_resp_logo {
-	float: left;
+	float: inline-start;
 	width: 184px;
 	max-width: 30%;
 }
@@ -1739,7 +1742,7 @@ div.rule {
 .grouppage_resp_stats {
 	overflow: hidden;
 	padding-bottom: 41px;
-	padding-left: 2%;
+	padding-inline-start: 2%;
 }
 
 .grouppage_resp_title_ctn {
@@ -1752,12 +1755,14 @@ div.rule {
 	color: #ffffff;
 	font-size: 2.5em;
 	background: #000000;
-	padding: 4px 8px 4px 16px;
+	padding-block: 4px;
+	padding-inline: 16px 8px;
 }
 
 .grouppage_resp_title_ctn .grouppage_header_label {
 	position: static;
-	padding: 0 8px 0 16px;
+	padding-block: 0;
+	padding-inline: 16px 8px;
 	display: inline-block;
 }
 
@@ -1775,7 +1780,7 @@ div.rule {
 }
 .clan_image_list_container {
 	background-color: rgba( 0, 0, 0, 0.2 );
-	margin-left: -10px;
+	margin-inline-start: -10px;
 }
 
 .clan_image_list_container > div {
@@ -1805,24 +1810,24 @@ div.rule {
 	width: 18px;
 	height: 18px;
 	top: 2px;
-	right: 2px;
-	right: -100%;
+	inset-inline-end: 2px;
+	inset-inline-end: -100%;
 	opacity: 0;
-	transition: right 0.3s, opacity 0.3s;
+	transition: inset-inline-end 0.3s, opacity 0.3s;
 	cursor: pointer;
 
 }
 
 .clan_image .thumbnail, .clan_image .full {
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	background: rgba(0,0,0,0.8);
 	color: #67c1f5 ;
 	font-size: 10px;
 	padding: 1px 5px;
-	transition: left 0.3s, opacity 0.3s;
+	transition: inset-inline-start 0.3s, opacity 0.3s;
 	opacity: 0;
-	left: -100%;
+	inset-inline-start: -100%;
 	cursor: pointer;
 }
 
@@ -1836,12 +1841,12 @@ div.rule {
 }
 
 .clan_image:hover .thumbnail, .clan_image:hover .full {
-	left: 0px;
+	inset-inline-start: 0px;
 	opacity: 1;
 }
 
 .clan_image:hover .delete {
-	right: 2px;
+	inset-inline-end: 2px;
 	opacity: 1;
 }
 
@@ -1852,7 +1857,7 @@ div.rule {
 }
 
 .images_search_container {
-	float: right;
+	float: inline-end;
 }
 
 .images_search_container input {
@@ -1865,6 +1870,10 @@ div.rule {
 	font-size: 12px;
 	padding: 3px;
 	margin-top: -4px;
+}
+
+.images_search_container input:dir(rtl) {
+	background-position: left center;
 }
 
 .images_search_container input::-webkit-input-placeholder {
@@ -1894,7 +1903,7 @@ div.rule {
 	}
 
 	html.responsive .member_block.last {
-		margin-right: 4px;
+		margin-inline-end: 4px;
 	}
 
 	html.responsive .grouppage_header {
@@ -1927,7 +1936,7 @@ div.rule {
 	}
 
 	html.responsive.GamepadMode .member_block.last {
-		margin-right: 4px;
+		margin-inline-end: 4px;
 	}
 
 	html.responsive.GamepadMode .grouppage_header {
@@ -2005,7 +2014,7 @@ div.rule {
 
 #clan_images_container  .v_scrollbar {
 	position: absolute;
-	right: -5px;
+	inset-inline-end: -5px;
 	top: 5px;
 	bottom: 5px;
 	max-height: 490px; /* I am impressed this works. GOOD JOB CSS! */
@@ -2101,8 +2110,8 @@ div.rule {
 	background-color: rgba( 0, 0, 0, 0.2 );
 }
 .profile_text_content_check > .profile_text_content_check_controls {
-	margin-left: 20px;
-	float: right;
+	margin-inline-start: 20px;
+	float: inline-end;
 }
 .profile_text_content_check > .profile_text_content_check_controls > span {
 	cursor: pointer;

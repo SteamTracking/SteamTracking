@@ -2841,7 +2841,7 @@
     "SteamFrame_TestResult_TextInputDoesNotAutomaticallyInvokesKeyboard": "輸入某些文字需要手動叫出螢幕鍵盤",
     "SteamFrame_TestResult_DisplayOutputHasNonblockingIssues": "此遊戲在 Steam Frame 獨立運作模式中有輕微的圖像 / 顯示問題",
     "SteamFrame_TestResult_ResumeFromSleepNotFunctional": "此遊戲可能會在 Steam Frame 獨立運作模式中休眠後出現短暫問題",
-    "SteamFrame_TestResult_MultiWindowAppAutomaticallySetsFocus": "這款遊戲使用多個視窗，可能需要您透過 Steam 重疊介面手動聚焦於適當的視窗",
+    "SteamFrame_TestResult_MultiWindowAppAutomaticallySetsFocus": "這款遊戲使用多個視窗，可能需要您透過 Steam 內嵌介面手動聚焦於適當的視窗",
     "SteamFrame_TestResult_DefaultControllerConfigFullyFunctional": "使用預設控制器配置時所有功能皆可使用",
     "SteamFrame_TestResult_DefaultControllerConfigNotFullyFunctional": "使用預設控制器配置時會有些功能無法使用，需要使用虛擬鍵盤，或採用社群配置",
     "SteamFrame_TestResult_GamepadNotEnabledByDefault": "此遊戲需手動於遊戲內設定啟用控制器支援",
@@ -4186,7 +4186,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "直方圖資料是根據選擇同意提供幀率資料的顧客在 %1$s 上為此遊戲而做的幀率報告而來。",
     "GamePerformanceStats_FrameRateHistogram_Title": "幀率分佈",
     "GamePerformanceStats_Framerate": "幀率",
-    "GamePerformanceStats_SessionLabel": "% 遊戲階段",
+    "GamePerformanceStats_SessionLabel": "樣本百分比",
     "GamePerformanceStats_Chart_NoData": "收集到足夠的資料後即可提供圖表",
     "NewToolTitleSuffix_Beta": "測試版",
     "DynamicLinkType_WorkshopItem": "%1$s 的工作坊項目",
@@ -4213,6 +4213,11 @@
     "GamePerformanceStats_StillGatheringData": "Steam 仍在收集 %2$s 上 %1$s 的幀率資料",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam 仍在收集 %2$s 上此遊戲的幀率資料",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam 仍在收集此遊戲的幀率資料",
-    "GamePerformanceStats_FrameRateDistribution": "此幀率圖表是根據選擇同意參與的顧客在 %2$s 上遊玩 %1$s 時的匿名遊戲資料而來",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "此幀率圖表是根據選擇同意參與的顧客在 %1$s 上遊玩此遊戲時的匿名遊戲資料而來"
+    "GamePerformanceStats_FrameRateDistribution": "此圖表顯示了根據選擇參與分享匿名資料的顧客在 %2$s 上遊玩 %1$s 的幀率樣本。每個長條代表該幀率的樣本所佔百分比。",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "此圖表顯示了根據選擇參與分享匿名資料的顧客在 %$s 上遊玩此遊戲的幀率樣本。每個長條代表該幀率的樣本所佔百分比。",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "此遊戲需手動於遊戲內設定啟用控制器支援",
+    "GameFrameRateReporting_Details_HowToChange": "若稍後想要更改設定，可前往 <1>Steam 帳戶設定 > 資料與瀏覽</1>中完成",
+    "GamePerformanceStats_MoreDetailsTitle": "更多詳情",
+    "GamePerformanceStats_MoreDetails_Filtering": "僅包含在 %1$s 的預設幀率限制為 %2$s FPS 下收集的資料。已篩選排除閒置時間和無效樣本。會從每個遊戲階段收集多個樣本。",
+    "GamePerformanceStats_MoreDetails_VSync": "圖表中的間隙（例如：%1$s 和 %2$s FPS 之間的間隙）可能是垂直同步所導致的，會將幀率傳遞與幀率顯示器的更新頻率同步，以避免畫面撕裂。這可能會導致樣本集中在 %1$s 和 %2$s FPS，即使遊戲的平均幀率落在這兩者之間。這是預期中的垂直同步行為，雖然這可能會影響幀速調節，卻不一定會造成明顯的卡頓。"
 }

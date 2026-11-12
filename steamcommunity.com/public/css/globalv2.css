@@ -6,7 +6,7 @@ html {
 body {
 	background:  #1b2838;
 
-	text-align: left;
+	text-align: start;
 
 	color: #8F98A0;
 	font-size: 14px;
@@ -138,7 +138,7 @@ select:where(:not(.noOpinionatedGlobalStyles select)) {
 div#footer.compact {
     position: sticky;
     bottom: 0;
-    left: 0;
+    inset-inline-start: 0;
     width: fit-content;
     padding: 0;
     background: none;
@@ -148,14 +148,15 @@ div#footer.compact .footer_content {
     width: calc((100vw - 948px)/2);
 }
 div#footer.compact .footer_content #footerText {
-    padding: 0 0 24px 12px;
+    padding-block: 0 24px;
+    padding-inline: 12px 0;
     line-height: 16px;
     color: #537793;
 }
 
 div#footer.compact .footer_content #footerText a {
     display: inline-block;
-    margin-right: 12px;
+    margin-inline-end: 12px;
     margin-bottom: 7px;
     color: #799AB4;
 }
@@ -189,8 +190,8 @@ div#footer.compact .footer_content #footerText .copyright {
     html.responsive div#footer.compact .footer_content .copyIcon {
         display: inline-block !important;
         font-size: 20px;
-        margin-right: 8px;
-        margin-left: 4px;
+        margin-inline-end: 8px;
+        margin-inline-start: 4px;
     }
     html.responsive div#footer.compact .footer_content #footerText {
         padding: 4px;
@@ -208,7 +209,8 @@ div#footer.compact .footer_content #footerText .copyright {
 
 .friendBlock {
 	height:36px;
-	padding: 4px 0 4px 4px;
+	padding-block: 4px;
+	padding-inline: 4px 0;
 	margin-bottom:4px;
 	font-size:11px;
 	line-height:13px;
@@ -226,9 +228,9 @@ a.friendBlock {
 
 .friendBlockLinkOverlay {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 
 	z-index: 2;
@@ -246,8 +248,8 @@ a.friendBlock {
 }
 
 .friendBlock .playerAvatar {
-	float:left;
-	margin-right: 7px;
+	float:inline-start;
+	margin-inline-end: 7px;
 }
 
 .friendBlock .friendBlockContent {
@@ -270,7 +272,7 @@ a.friendBlock {
 }
 
 .friendBlockStatusIcon {
-	float: right;
+	float: inline-end;
 	height: 40px;
 	line-height: 40px;
 	padding: 0 7px;
@@ -281,8 +283,9 @@ a.friendBlock {
 
 
 .friendBlock .friendPlayerLevel {
-	float: right;
-	margin: 4px 4px 0 0;
+	float: inline-end;
+	margin-block: 4px 0;
+	margin-inline: 0 4px;
 }
 
 .responsive_friendblocks_ctn {
@@ -294,7 +297,7 @@ a.friendBlock {
 {
 	html.responsive .responsive_friendblocks .friendBlock,
 	html.responsive .responsive_friendblocks .friendBlock:nth-child(3n) {
-		margin-right: 0.8%;
+		margin-inline-end: 0.8%;
 	}
 }
 
@@ -306,7 +309,7 @@ a.friendBlock {
 	}
 
 	html.responsive .responsive_friendblocks .friendBlock:nth-child(3n) {
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 }
 
@@ -317,7 +320,7 @@ a.friendBlock {
 	}
 
 	html.responsive .responsive_friendblocks .friendBlock:nth-child(2n) {
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 }
 
@@ -385,7 +388,7 @@ a.friendBlock {
 
 body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .perf_timing_area .perf_timing_link {
 	position: absolute;
-	left: 15px;
+	inset-inline-start: 15px;
 	bottom: 15px;
 }
 
@@ -400,7 +403,7 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 	background-color: #000000;
 	margin: 0px auto 48px auto;
 	padding: 8px;
-	text-align: left;
+	text-align: start;
 	width: 936px;
 	font-size: 14px;
 }
@@ -452,7 +455,7 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 .rightbox_list_selection_background {
 	position: absolute;
 	display: none;
-	left: -26px;
+	inset-inline-start: -26px;
 	top: 0px;
 	background: url( 'https://community.fastly.steamstatic.com/public/images/rightcol_option_selected.png' ) left / cover;
 	width: calc( 100% + 26px );
@@ -483,7 +486,7 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 .commentthread_header .commentthread_count {
 	background-repeat: no-repeat;
 	background-position: 0 4px;
-	padding-left: 8px;
+	padding-inline-start: 8px;
 	overflow: hidden;
 }
 
@@ -491,14 +494,14 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAAMVJREFUeNqkk80RgjAQhb84FmAJ6UDtADohHWgFlqB2QAfaAZy44oE7KYEO9LJxdpxl5Oedwmb3y+Tl4ZquBygAz39FoNSFLXAFTkzXHjinD9d0/Zv5cmmxYZmydOWlAIAW8GsAO6BYA1jlwUsDnjOHazHxm4MgAcmAg9H8e/IdeGjAIMHIgEo1BwHohHrp8RpgKchprbhtaQBKy8RSfLkIJBqDN+AIRCc/U3pXrx1W9Ur5UwO59YyDMZzq+cje5ByMQj4DAOFqLALaHDbcAAAAAElFTkSuQmCC );
 	background-repeat: no-repeat;
 	background-position: 0 4px;
-	padding-left: 24px;
+	padding-inline-start: 24px;
 	overflow: hidden;
 	display: flex;
 	justify-content: space-between;
 }
 
 .commentthread_count_label {
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 
 .commentthread_subscribe_checkbox_ctn {
@@ -533,10 +536,10 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 
 	border: 1px solid #385377;
 	border-top-color: #070a0f;
-	border-left-color: #070a0f;
+	border-inline-start-color: #070a0f;
 
-	border-top-right-radius: 1px;
-	border-bottom-left-radius: 1px;
+	border-start-end-radius: 1px;
+	border-end-start-radius: 1px;
 
 	background: rgba( 0, 0, 0, 0.2 );
 }
@@ -545,8 +548,8 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 	position: absolute;
 	display: none;
 	top: -1px;
-	left: -1px;
-	right: -1px;
+	inset-inline-start: -1px;
+	inset-inline-end: -1px;
 	bottom: -1px;
 
 	background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASJJREFUeNpi/P//PwMlgIVcjcGLD70H0UzkaA6cv/cpkBIgywC/mdvOMLGwSsHMIskA145FM1m5eIxB7B+Pnz9YG2t3gGgDrArbi/mkFdJA7J+fPxzYWhWuSLQXlF0CfSUMLOtB7H9/fj87NaW+ESaHYoBJelWaXdWkBnQDdMIzehiZmHhB7Du71pS8unb+AFYD5G08ZopqGtQ7Nc3uZWRkBPvVa9K6TSwcnGog9uvrFxovL5++HFkPI3JC8p+98yayYhANMhBEf3//ZvP2/OBGoPqzOA1AN+T/v3+fQU7/8+P7reP9FenITsfqBRAAKQRpAJsO1Awy5MrKGSXYNGN1AQwELTzwCWTA83NHS471V/biiiFGSjMTEwOFgGIDAAIMAKHJfj735eNRAAAAAElFTkSuQmCC' ) no-repeat center;
@@ -619,7 +622,7 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 }
 
 .commentthread_allcommentslink {
-	margin-right: 12px;
+	margin-inline-end: 12px;
 }
 
 a.commentthread_allcommentslink:hover {
@@ -627,13 +630,13 @@ a.commentthread_allcommentslink:hover {
 }
 
 .commentthread_user_avatar {
-	float: left;
-	margin-right: 8px;
+	float: inline-start;
+	margin-inline-end: 8px;
 }
 
 .commentthread_entry_quotebox_quote {
 	position: absolute;
-	left: 50px;
+	inset-inline-start: 50px;
 	top: 13px;
 	width: 17px;
 	height: 18px;
@@ -645,9 +648,9 @@ a.commentthread_allcommentslink:hover {
 	font-size: 12px;
 	background-color: rgba( 0, 0, 0, 0.4 );
 	border-radius: 4px;
-	border-left: 1px solid #000;
+	border-inline-start: 1px solid #000;
 	border-top: 1px solid #000;
-	border-right: 1px solid #354357;
+	border-inline-end: 1px solid #354357;
 	border-bottom: 1px solid #354357;
 	overflow: hidden;
 }
@@ -663,12 +666,12 @@ a.commentthread_allcommentslink:hover {
 }
 
 .commentthread_entry_submitlink {
-	text-align: right;
+	text-align: end;
 	padding-top: 5px;
 }
 
 .commentthread_entry_submitlink .emoticon_button {
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 
 .commentthread_entry_autosubscribe {
@@ -692,14 +695,15 @@ a.commentthread_allcommentslink:hover {
 
 .commentthread_comment_container {
 	margin-top: 19px;
-	padding: 10px 10px 10px 0;
+	padding-block: 10px;
+	padding-inline: 0 10px;
 }
 
 .commentthread_comment {
 	position: relative;
 	padding-bottom: 8px;
 	padding-top: 8px;
-	padding-left: 11px;
+	padding-inline-start: 11px;
 	margin-bottom: 8px;
 	min-height: 40px;
 
@@ -729,7 +733,7 @@ a.commentthread_allcommentslink:hover {
 .commentthread_valve_icon
 {
 	vertical-align: middle;
-	margin-left: 5px;
+	margin-inline-start: 5px;
 	width: 59px;
 	height: 16px;
 }
@@ -796,7 +800,7 @@ a.commentthread_allcommentslink:hover {
 	text-decoration: underline;
 }
 .commentthread_comment_actions {
-	margin-right: 8px;
+	margin-inline-end: 8px;
 	display: flex;
 	flex-grow: 1;
 	justify-content: flex-end;
@@ -804,7 +808,7 @@ a.commentthread_allcommentslink:hover {
 }
 
 .commentthread_comment_actions .actionlink {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 }
 
 .commentthread_comment:hover .commentthread_comment_author .actionlink {
@@ -824,13 +828,13 @@ a.commentthread_allcommentslink:hover {
 .commentthread_comment_reportprob {
 	font-size: 14px;
 	color: #e16262;
-	margin-left: 4px;
+	margin-inline-start: 4px;
 }
 
 .commentthread_comment_reportprob.small {
 	font-size: 11px;
 	color: #e16262;
-	margin-left: 4px;
+	margin-inline-start: 4px;
 }
 
 .commentthread_comment_text {
@@ -840,13 +844,13 @@ a.commentthread_allcommentslink:hover {
 	overflow-y: auto;
 	max-height: 400px;
 	line-height: 18px;
-	padding-left: 52px;
+	padding-inline-start: 52px;
 }
 
 @media screen and (max-width: 480px )
 {
 	html.responsive .commentthread_comment_text {
-		padding-left: 0;
+		padding-inline-start: 0;
 		margin-top: 6px;
 	}
 }
@@ -886,7 +890,7 @@ a.commentthread_allcommentslink:hover {
 }
 
 .commentthread_comment_text .failed_content .content_check_controls {
-	margin-left: auto;
+	margin-inline-start: auto;
 }
 .commentthread_comment_text .failed_content .content_check_controls > a {
 	text-decoration: none;
@@ -894,7 +898,7 @@ a.commentthread_allcommentslink:hover {
 
 .commentthread_comment_friendindicator {
 	position: absolute;
-	left: 33px;
+	inset-inline-start: 33px;
 	top: 24px;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/skin_1/comment_friendindicator_small.png' );
 	width: 20px;
@@ -905,7 +909,7 @@ a.commentthread_allcommentslink:hover {
 }
 
 .commentthread_edit_buttons {
-	text-align: right;
+	text-align: end;
 }
 
 .commentthread_workshop_authorbadge {
@@ -973,7 +977,7 @@ a.commentthread_allcommentslink:hover {
 }
 .edit_content_descriptors .content_descriptor .content_descriptor_desc {
 	color: #97a0ab;
-	margin-left: 24px;
+	margin-inline-start: 24px;
 	font-size: 12px;
 }
 
@@ -987,10 +991,10 @@ a.commentthread_allcommentslink:hover {
 }
 
 .modal_close {
-	float:right;
+	float:inline-end;
 	width:9px;
 	height:9px;
-	margin-right:9px;
+	margin-inline-end:9px;
 	margin-top:7px;
 	line-height: 9px;
 	cursor: pointer;
@@ -1004,7 +1008,7 @@ a.commentthread_allcommentslink:hover {
 
 	font-size: 12px;
 	color: #ffffff;
-	text-align: left;
+	text-align: start;
 }
 .modal_box .modal_box_ctn
 {
@@ -1039,8 +1043,8 @@ a.commentthread_allcommentslink:hover {
 
 
 .modal_steam_ico {
-	float:left;
-	padding-right:18px;
+	float:inline-start;
+	padding-inline-end:18px;
 	margin-top:-4px;
 }
 
@@ -1054,8 +1058,8 @@ a.commentthread_allcommentslink:hover {
 	opacity:0.8;
 	top: 0;
 	bottom: 0;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 }
 
 .modal_frame {
@@ -1089,8 +1093,8 @@ a.gray_square_button:hover {
 }
 
 .modal_box .gray_square_button {
-	margin-left: 0;
-	margin-right: 16px;
+	margin-inline-start: 0;
+	margin-inline-end: 16px;
 }
 
 .gray_square_button .left, .gray_square_button .right, .gray_square_button .button_label {
@@ -1107,19 +1111,19 @@ a.gray_square_button:hover {
 
 .gray_square_button .left {
 	background-position: 0 0;
-	left: 0;
+	inset-inline-start: 0;
 }
 
 .gray_square_button .right {
 	background-position: -2px 0;
-	right: 0;
+	inset-inline-end: 0;
 }
 
 .gray_square_button .button_label {
 	background-repeat: repeat-x;
 	background-position: 0 -34px;
 	padding: 0 32px;
-	text-align: left;
+	text-align: start;
 }
 
 .modal_box .gray_square_button .button_label {
@@ -1161,7 +1165,7 @@ button.gray_square_button::-moz-focus-inner
 }
 
 .notLoggedInButtons > a {
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 
@@ -1263,7 +1267,7 @@ select.gray_bevel {
 	background-color: rgba(59, 63, 72, 0.5);
 	border-radius: 3px;
 	padding: 10px;
-	text-align: left;
+	text-align: start;
 }
 
 .share_controls_steam, .share_controls_steam a
@@ -1271,7 +1275,7 @@ select.gray_bevel {
 
 	width: 328px;
 	height: 50px;
-	margin-right: 15px;
+	margin-inline-end: 15px;
 	font-size: 16px;
 	font-family: Arial;
 	text-align: center;
@@ -1315,7 +1319,7 @@ select.gray_bevel {
 
 .shareItemLink
 {
-	padding-left: 5px;
+	padding-inline-start: 5px;
 }
 
 .shareItemLink .btn_medium {
@@ -1430,7 +1434,7 @@ img.emoticon {
 	height: 18px;
 	padding: 5px 0;
 
-	float: left;
+	float: inline-start;
 }
 
 .emoticon_popup_content .emoticon_option:hover {
@@ -1442,7 +1446,7 @@ img.emoticon {
 .economyitem_hover {
 	position: absolute;
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 	z-index: 1200;
 }
 .economyitem_hover_content {
@@ -1496,13 +1500,13 @@ img.emoticon {
 }
 
 .tagsyntax {
-	float: left;
+	float: inline-start;
 	width: 57%;
-	margin-right: 3%;
+	margin-inline-end: 3%;
 }
 
 .tagexample {
-	float: left;
+	float: inline-start;
 	width: 38%;
 }
 
@@ -1519,14 +1523,14 @@ img.emoticon {
 {
 	html.responsive .maincontent {
 		width: auto;
-		margin-left: 1%;
-		margin-right: 1%;
+		margin-inline-start: 1%;
+		margin-inline-end: 1%;
 	}
 
 	html.responsive .emoticon_popup_ctn {
 		position: fixed;
-		left: 5px;
-		right: 5px;
+		inset-inline-start: 5px;
+		inset-inline-end: 5px;
 		bottom: 5px;
 		overflow-y: auto;
 		z-index: 20;
@@ -1594,7 +1598,7 @@ img.emoticon {
 
 
 #tabs_baseline {
-	clear:left;
+	clear:inline-start;
 }
 
 .responsive_tab_baseline {

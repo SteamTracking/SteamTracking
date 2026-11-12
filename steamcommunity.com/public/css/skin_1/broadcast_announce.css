@@ -89,14 +89,14 @@ body {
 	height: 570px;
 	margin: 25px auto 0;
 	position: relative;
-	text-align: left;
+	text-align: start;
 }
 
 #mid .how > img {
 	position: absolute;
 	z-index: 1;
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 }
 
 #mid .how .title {
@@ -107,7 +107,7 @@ body {
 	color: #fff;
 	font-size: 30px;
 	padding-top: 15px;
-	padding-left: 25px;
+	padding-inline-start: 25px;
 }
 
 #mid .how .desc {
@@ -118,7 +118,7 @@ body {
 	font-size: 18px;
 	margin-top: 10px;
 	width: 500px;
-	padding-left: 25px;
+	padding-inline-start: 25px;
 	/*text-transform: uppercase;*/
 }
 
@@ -178,7 +178,7 @@ body {
 	width: 229px;
 
 	display: inline-block;
-	text-align: left;
+	text-align: start;
 }
 
 .friend_info {
@@ -186,7 +186,7 @@ body {
 	color: #90ba3c;
 	font-size: 14px;
 	vertical-align: top;
-	margin-left: 5px;
+	margin-inline-start: 5px;
 	width: 170px;
 }
 
@@ -249,11 +249,11 @@ body {
 	display: inline-block;
 	width: 415px;
 	vertical-align: top;
-	text-align: left;
+	text-align: start;
 }
 
 #bottom .block .col:first-child {
-	margin-right: 55px
+	margin-inline-end: 55px
 }
 
 #bottom .block.main .title {

@@ -21,6 +21,12 @@ message CStoreQuery_GetItemsByUserRecommendedTags_Request {
 	optional .CStorePageFilter filters = 2;
 	optional .StoreBrowseContext context = 5;
 	repeated .CStoreQuery_GetItemsByUserRecommendedTags_Request_Section sections = 6;
+	repeated .CStoreQuery_GetItemsByUserRecommendedTags_Request_RecommendedTag recommended_tags = 7;
+}
+
+message CStoreQuery_GetItemsByUserRecommendedTags_Request_RecommendedTag {
+	optional uint32 tagid = 1;
+	optional string name = 2;
 }
 
 message CStoreQuery_GetItemsByUserRecommendedTags_Request_Section {

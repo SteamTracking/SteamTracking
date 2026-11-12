@@ -19,7 +19,7 @@ html.GamepadMode .apphub_Guides .subtitle {
 	font: var(--gpText-HeadingSmall);
 	font-weight: 400;
 	color: var(--gpStoreLightestGrey);
-	padding-right: 60px;
+	padding-inline-end: 60px;
 	margin: unset;
 }
 
@@ -100,7 +100,7 @@ html.GamepadMode .guide_home_category_selection {
 	box-shadow: var(--gpShadow-Medium);
 	background-color: var(--gpColor-DustyBlue);
 	padding: 16px;
-	padding-right: 48px;
+	padding-inline-end: 48px;
 	transition: all 0.1s ease;
 	color: white;
 }
@@ -183,7 +183,7 @@ html.GamepadMode .apphub_ContentGuides a.workshopItemCollection:hover {
 }
 
 html.GamepadMode .apphub_ContentGuides .workshopItemCollection .workshopItemDetails {
-	margin-left: 16px;
+	margin-inline-start: 16px;
 	padding-top: 4px;
 }
 

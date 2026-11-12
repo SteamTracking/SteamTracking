@@ -342,8 +342,6 @@ service PromotionPlanning {
 	rpc CreatePlan (.CPromotionPlanning_CreatePlan_Request) returns (.CPromotionPlanning_CreatePlan_Response);
 	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc CreateSalePageForPromo (.CPromotionPlan_CreateSalePageForPromo_Request) returns (.CPromotionPlan_CreateSalePageForPromo_Response);
-	// ePrivilege=1
-	rpc CreateTentativePlan (.CPromotionPlanning_CreatePlan_Request) returns (.CPromotionPlanning_CreatePlan_Response);
 	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc DeletePlan (.CPromotionPlanning_DeletePlan_Request) returns (.CPromotionPlanning_DeletePlan_Response);
 	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression

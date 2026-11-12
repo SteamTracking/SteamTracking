@@ -24,7 +24,8 @@
 		font-weight: 200; /* thin */
 
 			font-weight: normal;
-	padding: 24px 0px 6px 18px;
+	padding-block: 24px 6px;
+	padding-inline: 18px 0px;
 	word-wrap: break-word;
 }
 
@@ -35,14 +36,15 @@
 		font-weight: 200; /* thin */
 
 			font-weight: normal;
-	padding: 10px 8px 8px 0px;
+	padding-block: 10px 8px;
+	padding-inline: 0px 8px;
 	min-height: 45px;
 	word-wrap: break-word;
 	overflow: hidden;	/* so it doesn't wrap below the floated icon */
 }
 
 .OpenID_MainHeader .logo {
-	float:right;
+	float:inline-end;
 	padding: 30px 20px;
 }
 
@@ -57,7 +59,7 @@
 }
 
 .OpenIDCol.right {
-	float: right;
+	float: inline-end;
 }
 
 .OpenIDCol.left {
@@ -66,7 +68,7 @@
 
 .OpenID_LowerContents_right {
 	padding: 0px 18px 0px 18px;
-	border-left: 1px solid #374862;
+	border-inline-start: 1px solid #374862;
 }
 .OpenID_LowerContents_right h2 {
 	color: #ffffff;
@@ -94,11 +96,11 @@
 	background-color: #000000;
 	border-radius: 3px;
 	padding: 8px;
-	margin-left: -8px;
-	margin-right: -8px;
+	margin-inline-start: -8px;
+	margin-inline-end: -8px;
 }
 .OpenID_UserName {
-	float: left;
+	float: inline-start;
 }
 .OpenID_loggedInName {
 	color: #86b5d9;
@@ -109,12 +111,12 @@
 .OpenID_loggedInAccount {
 }
 .playerAvatar {
-	float: left;
-	margin-right: 12px;
+	float: inline-start;
+	margin-inline-end: 12px;
 }
 
 .OpenID_Logout {
-	float: right;
+	float: inline-end;
 	text-decoration:underline;
 	margin-top: 21px;
 }
@@ -148,7 +150,7 @@
 
 .oauthPermissionBlock {
 	margin-bottom: 20px;
-	margin-left: 20px;
+	margin-inline-start: 20px;
 }
 
 .oauthPermissionText {
@@ -213,7 +215,7 @@
 	}
 
 	html.responsive .OpenID_LowerContents_right {
-		border-left: none;
+		border-inline-start: none;
 		margin-bottom: 24px;
 	}
 

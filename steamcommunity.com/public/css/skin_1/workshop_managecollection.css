@@ -2,7 +2,7 @@
 #mainContents
 {
 	width: 930px;
-	padding-left: 20px;
+	padding-inline-start: 20px;
 }
 
 .manageCollectionHeader
@@ -12,7 +12,7 @@
 
 .manageCollectionItemsBody
 {
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .manageCollectionPageTitle
@@ -30,7 +30,7 @@
 .createCollectionBody
 {
 	margin-top: 20px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .createCollectionSection
@@ -46,12 +46,12 @@
 
 .createCollectionArrow
 {
-	float: left;
+	float: inline-start;
 	width: 23px;
 	height: 13px;
 	background-image: url('https://community.fastly.steamstatic.com/public/images/sharedfiles/workshop_collection_creationBullet.png');
 	background-repeat: no-repeat;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 .title
@@ -82,7 +82,8 @@
 	border: solid 1px #262627;
 	box-shadow: 1px 1px 0px #39393A;
 	border-radius: 3px;
-	padding: 4px 5px 4px 8px;
+	padding-block: 4px;
+	padding-inline: 8px 5px;
 	color: #c6d4df;
 }
 
@@ -98,7 +99,8 @@
 	border: 1px solid #000;
 	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
 	border-radius: 3px;
-	padding: 4px 5px 4px 8px;
+	padding-block: 4px;
+	padding-inline: 8px 5px;
 	color: #c6d4df;
 }
 
@@ -109,7 +111,7 @@
 
 .collectionTypeLabel
 {
-	margin-left: 35px;
+	margin-inline-start: 35px;
 	cursor: pointer;
 }
 
@@ -127,7 +129,7 @@
 {
 	top: 0px;
 	padding:  0px;
-	float: left;
+	float: inline-start;
 	width: 25px;
 }
 
@@ -144,14 +146,14 @@
 
 .cancelCollection
 {
-	float: right;
+	float: inline-end;
 }
 
 .saveCollection
 {
-	float: right;
-	margin-right: 0px;
-	margin-left: 10px;
+	float: inline-end;
+	margin-inline-end: 0px;
+	margin-inline-start: 10px;
 }
 
 /* add items page */
@@ -201,12 +203,12 @@
 	border: 1px solid #66c0f4;
 	padding: 15px;
 	margin-top: 20px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .collectionChoiceTabs
 {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 }
 
 .collectionTabsBar
@@ -217,13 +219,13 @@
 
 .collectionChoiceTab, a.collectionChoiceTab {
 	display: block;
-	float: left;
+	float: inline-start;
 	color: black;
 	font-size: 14px;
 	background-color: #505051;
 	line-height: 25px;
 	padding: 0px 12px;
-	margin-left: 9px;
+	margin-inline-start: 9px;
 	text-decoration: none;
 }
 
@@ -256,7 +258,7 @@
 	font-size: 14px;
 	height: 30px;
 	line-height: 30px;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	color: #ffffff;
 	background-color: #4d4d4d;
 	margin-bottom: 1px;
@@ -296,7 +298,7 @@
 {
 	height: 30px;
 	width: 16px;
-	padding-left: 5px;
+	padding-inline-start: 5px;
 }
 .itemChoice:hover .itemChoiceStatus
 {
@@ -349,8 +351,8 @@
 {
 	margin-top: 3px;
 	padding: 4px;
-	padding-left: 8px;
-	padding-right: 8px;
+	padding-inline-start: 8px;
+	padding-inline-end: 8px;
 	line-height: 14px;
 	font-size: 10px;
 }
@@ -364,11 +366,11 @@
 {
 	visibility:hidden;
 	position: absolute;
-	float: right;
+	float: inline-end;
 	top: 50%;
-	right: 0%;
+	inset-inline-end: 0%;
 	margin-top: -15px;
-	margin-right: 20px;
+	margin-inline-end: 20px;
 }
 
 .managedCollectionItems
@@ -401,7 +403,7 @@
 .managedCollectionItemControls .general_btn
 {
 	position: relative;
-	float: right;
+	float: inline-end;
 	height: 30px;
 	width: 30px;
 	padding: 0px;
@@ -464,7 +466,7 @@
 
 .collectionItemDetails
 {
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 
 .workshopItemTitle
@@ -512,7 +514,7 @@
 
 #distribution_header .screenshot {
 	display: inline-block;
-	padding-right: 20px;
+	padding-inline-end: 20px;
 	vertical-align: middle;
 }
 
@@ -546,7 +548,8 @@
 	background: transparent url(https://community.fastly.steamstatic.com/public/images/sharedfiles/ig/greenlight_submit_logo.jpg) no-repeat;
 	height: 146px;
 	width: 419px;
-	padding: 30px 30px 0 500px;
+	padding-block: 30px 0;
+	padding-inline: 500px 30px;
 	color: #fff;
 	box-shadow: 0 0 6px #111;
 }
@@ -581,7 +584,7 @@
 }
 
 .workshopFormattingHelpContainer {
-	text-align: right;
+	text-align: end;
 }
 
 .join_now_block {
@@ -599,7 +602,7 @@
 }
 
 .join_now_block > a {
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 #ProgressSection {

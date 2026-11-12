@@ -4186,7 +4186,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Os dados do histograma são baseados nos relatórios de taxa de quadros neste jogo enviados por usuários do %1$s que aceitaram enviar esses dados.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Distribuição da taxa de quadros",
     "GamePerformanceStats_Framerate": "Taxa de quadros",
-    "GamePerformanceStats_SessionLabel": "% sessões",
+    "GamePerformanceStats_SessionLabel": "% de amostras",
     "GamePerformanceStats_Chart_NoData": "Um gráfico será disponibilizado assim que coletarmos dados suficientes.",
     "NewToolTitleSuffix_Beta": "BETA",
     "DynamicLinkType_WorkshopItem": "Um item da Oficina para %1$s",
@@ -4213,6 +4213,11 @@
     "GamePerformanceStats_StillGatheringData": "O Steam ainda está reunindo os dados de taxa de quadros para %1$s em %2$s.",
     "GamePerformanceStats_StillGatheringData_ThisGame": "O Steam ainda está reunindo os dados de taxa de quadros para este jogo em %1$s.",
     "GamePerformanceStats_StillGatheringData_NoDevice": "O Steam ainda está reunindo os dados de taxa de quadros para este jogo.",
-    "GamePerformanceStats_FrameRateDistribution": "Este gráfico de taxa de quadros é baseado nos dados anônimos de jogabilidade de usuários que jogaram %1$s em %2$s e que aceitaram compartilhar esses dados.",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Este gráfico de taxa de quadros é baseado nos dados anônimos de jogabilidade de usuários que jogaram este título em %1$s e que aceitaram compartilhar esses dados."
+    "GamePerformanceStats_FrameRateDistribution": "Este gráfico apresenta as amostras da taxa de quadros de usuários que aceitaram compartilhar dados anônimos ao jogar %1$s no %2$s. Cada barra representa a porcentagem de amostras naquela taxa de quadros.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Este gráfico apresenta as amostras da taxa de quadros de usuários que aceitaram compartilhar dados anônimos ao jogar este título no %1$s. Cada barra representa a porcentagem de amostras naquela taxa de quadros.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "O jogo exige que a compatibilidade com controles seja ativada manualmente nas configurações do jogo.",
+    "GameFrameRateReporting_Details_HowToChange": "Caso deseje alterar esta opção mais tarde, você pode encontrá-la nas <1>configurações da conta Steam > \"Dados e navegação\"</1>.",
+    "GamePerformanceStats_MoreDetailsTitle": "Mais detalhes",
+    "GamePerformanceStats_MoreDetails_Filtering": "Apenas os dados coletados no limite de quadros padrão do %1$s (%2$s QPS) são contabilizados. Momentos de ociosidade e amostras inválidas são removidas. Várias amostras são coletadas de cada sessão.",
+    "GamePerformanceStats_MoreDetails_VSync": "Lacunas no gráfico (ex.: entre %1$s e %2$s QPS) podem ser causadas pela sincronização vertical (VSync), que sincroniza a entrega dos quadros com a taxa de atualização da tela para evitar rasgos na imagem. Isso pode fazer com que as amostras se concentrem em %1$s e %2$s QPS, mesmo quando a taxa de quadros média do jogo estiver entre esses valores. Esse comportamento é esperado ao usar a sincronização vertical e, embora possa afetar o ritmo dos quadros, não necessariamente causa engasgos perceptíveis."
 }

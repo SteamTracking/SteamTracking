@@ -1,0 +1,156 @@
+.-SglDQW4JCw- {
+  background-color: var(--fancy-table-row-background, #444);
+  flex-direction: row;
+  align-items: stretch;
+  display: flex;
+}
+.-SglDQW4JCw-[data-even="true"] {
+  background-color: var(--fancy-table-even-row-background, #666);
+}
+._5jFPEmApcnI- {
+  background-color: var(--fancy-table-expandable-row-background, #303238);
+  color: var(--fancy-table-expandable-row-color, #8f96a3);
+  padding-top: 8px;
+  padding-bottom: 2px;
+}
+._5jFPEmApcnI-[data-even="true"] {
+  background-color: var(--fancy-table-expandable-even-row-background, #303238);
+}
+._5CKEsnJcFZ4- {
+  background-color: var(--fancy-table-header-background, #333);
+}
+.n0oy6VHMt10- {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+}
+:where(.Fi8Mmml9Xiw-) {
+  padding: var(--fancy-table-cell-padding, 4px);
+  box-sizing: border-box;
+  background-color: var(--fancy-table-row-background, #444);
+  border-bottom: var(--fancy-table-row-border, 0px solid transparent);
+  flex-direction: row;
+  align-items: center;
+  min-height: 100%;
+  display: flex;
+}
+[data-even="true"] > :where(.Fi8Mmml9Xiw-) {
+  background-color: var(--fancy-table-even-row-background, #666);
+}
+:where(.Fi8Mmml9Xiw-):not(:nth-last-child(1 of .Fi8Mmml9Xiw-)) {
+  border-inline-end: var(--fancy-table-cell-border, 1px solid #aaa);
+}
+:where(.Fi8Mmml9Xiw-) input {
+  scroll-margin: var(--fancy-table-scroll-margin);
+}
+.TspXOZgdFyE- {
+  text-align: initial;
+  color: inherit;
+  font: inherit;
+  background: 0 0;
+  border: none;
+  padding: 0;
+}
+.zjSagSmki10- {
+  align-items: var(--fancy-table-column-header-align-items, center);
+  padding: var(--fancy-table-column-header-padding, 4px);
+  box-sizing: border-box;
+  text-shadow: var(--fancy-table-header-text-shadow, none);
+  background-color: var(--fancy-table-header-background, #333);
+  flex-direction: row;
+  justify-content: center;
+  font-weight: 700;
+  display: flex;
+  position: relative;
+}
+.zjSagSmki10-[aria-sort] {
+  background-color: var(--fancy-table-column-header-sorted-background, #9297a5);
+}
+.zjSagSmki10-[data-pinned="true"] {
+  background-color: var(
+    --fancy-table-pinned-column-header-background,
+    var(--fancy-table-header-background, #333)
+  );
+}
+.zjSagSmki10-:not(:nth-last-child(1 of .zjSagSmki10-)) {
+  border-inline-end: var(--fancy-table-cell-border, 1px solid #aaa);
+}
+.zjSagSmki10-:hover {
+  background-color: var(--fancy-table-header-hover, #1a1a1a);
+}
+.xLOn3i2kI6w- {
+  top: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  user-select: none;
+  touch-action: none;
+  border: none;
+  width: 5px;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  inset-inline-end: 0;
+}
+.xLOn3i2kI6w-.BMuxqw936no- {
+  inset-inline-start: 0;
+  inset-inline-end: unset;
+}
+.uHMQKVKbTdQ- {
+  margin-inline: auto 5px;
+}
+.uHMQKVKbTdQ-:after {
+  content: "";
+  border-inline: 6px solid #0000;
+  border-top: none;
+  border-bottom: 6px solid var(--fancy-table-sort-arrow-color, currentColor);
+  width: 0;
+  height: 0;
+  display: block;
+}
+[aria-sort="descending"] > .uHMQKVKbTdQ-:after {
+  border-bottom: none;
+  border-top: 6px solid var(--fancy-table-sort-arrow-color, currentColor);
+  color: var(--fancy-table-sort-arrow-color, currentColor);
+}
+.arN6EhfAmTc- {
+  margin-inline: auto 10px;
+}
+.arN6EhfAmTc-:after {
+  content: "";
+  border-inline: 6px solid #0000;
+  border-top: none;
+  border-bottom: 6px solid var(--fancy-table-sort-arrow-color, currentColor);
+  width: 0;
+  height: 0;
+  transition: transform 80ms linear;
+  display: block;
+  transform: rotate(90deg);
+}
+[aria-expanded="true"] > .arN6EhfAmTc-:after {
+  transform: rotate(180deg);
+}
+._9t3ADNiQOSY- {
+  color: inherit;
+  background: 0 0;
+  border: none;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 5px;
+  font-size: 12px;
+  display: flex;
+  position: sticky;
+  inset-inline-start: 0;
+}
+.hqqGkrapjks- {
+  color: #b2b2b2;
+  --fancy-table-header-background: #434953;
+  --fancy-table-row-background: #23262b;
+  --fancy-table-even-row-background: #23262b;
+  --fancy-table-cell-border: 1px solid #1b1e22;
+  --fancy-table-row-border: 2px solid #1b1e22;
+  --fancy-table-cell-padding: 6px 6px 6px 12px;
+  --fancy-table-header-padding: 6px;
+}
+.hqqGkrapjks-._33jqkFIBWcU- {
+  --fancy-table-cell-border: 0px solid #1b1e22;
+}

@@ -2,7 +2,7 @@
 #mainContents
 {
 	width: 930px;
-	padding-left: 20px;
+	padding-inline-start: 20px;
 }
 
 .pageTitle
@@ -21,12 +21,12 @@
 
 .createCollectionArrow
 {
-	float: left;
+	float: inline-start;
 	width: 23px;
 	height: 13px;
 	background-image: url('https://community.fastly.steamstatic.com/public/images/sharedfiles/workshop_collection_creationBullet.png');
 	background-repeat: no-repeat;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 .title
@@ -54,7 +54,8 @@
 	border: solid 1px #262627;
 	box-shadow: 1px 1px 0px #39393A;
 	border-radius: 3px;
-	padding: 4px 5px 4px 8px;
+	padding-block: 4px;
+	padding-inline: 8px 5px;
 	color: #BFBFBF;
 }
 
@@ -69,7 +70,8 @@
 	border: solid 1px #262627;
 	box-shadow: 1px 1px 0px #39393A;
 	border-radius: 3px;
-	padding: 4px 5px 4px 8px;
+	padding-block: 4px;
+	padding-inline: 8px 5px;
 	color: #BFBFBF;
 }
 
@@ -87,13 +89,13 @@
 
 .page_controls
 {
-	float: right;
+	float: inline-end;
 	margin-bottom: 20px;
 }
 
 .cancelButton
 {
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 .workshopDescContainer {
@@ -101,14 +103,14 @@
 }
 
 .workshopFormattingHelpContainer {
-	text-align: right;
+	text-align: end;
 }
 
 /* visibility */
 .visibilityOption
 {
-	float: left;
-	padding-right: 30px;
+	float: inline-start;
+	padding-inline-end: 30px;
 	font-size: 14px;
 }
 
@@ -133,8 +135,8 @@
 .page_control_or
 {
 	display: inline-block;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-inline-start: 20px;
+	padding-inline-end: 20px;
 	color: #ffffff;
 	font-size: 15px;
 }

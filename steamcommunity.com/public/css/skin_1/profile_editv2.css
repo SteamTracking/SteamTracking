@@ -1,11 +1,11 @@
 
 
 .formRow.PrivacySettingsTitle {
-	padding-left: 0;
+	padding-inline-start: 0;
 	min-height: 0;
 }
 .formRow.PrivacySettings {
-	padding-left: 16px;
+	padding-inline-start: 16px;
 	margin-bottom: 32px;
 }
 
@@ -27,7 +27,7 @@
 
 .profile_showcase_sort_controls {
 	position: absolute;
-	right: 19px;
+	inset-inline-end: 19px;
 	top: calc( 50% - 9px );
 	display: none;
 }
@@ -37,20 +37,20 @@
 
 .profile_showcase_sort_btn {
 	cursor: pointer;
-	margin-left: 2px;
+	margin-inline-start: 2px;
 }
 .profile_showcase_sort_up {
 	width: 0px;
 	height: 0px;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
+	border-inline-start: 8px solid transparent;
+	border-inline-end: 8px solid transparent;
 	border-bottom: 10px solid #657081;
 }
 .profile_showcase_sort_down {
 	width: 0px;
 	height: 0px;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
+	border-inline-start: 8px solid transparent;
+	border-inline-end: 8px solid transparent;
 	border-top: 10px solid #657081;
 }
 .profile_showcase_sort_up:hover {
@@ -65,7 +65,7 @@
 	height: 18px;
 	padding: 10px 0px;
 	cursor: move;
-	padding-left: 1px;
+	padding-inline-start: 1px;
 }
 
 .profile_showcase_drag_and_drop_highlight {
@@ -115,7 +115,7 @@ select.gray_bevel {
     }
 
     .customization_controls .profile_showcase_selection_options_ctn select {
-        margin-right: 0px;
+        margin-inline-end: 0px;
     }
 
     .profile_showcase_selection_options_ctn .showcase_selection_pre,
@@ -138,18 +138,18 @@ select.gray_bevel {
     display: block;
     height: 14px;
     width: 20px;
-    margin-right: 4px;
+    margin-inline-end: 4px;
     margin-top: 14px;
-    border-left: 1px solid #4e5665;
+    border-inline-start: 1px solid #4e5665;
     border-top: 1px solid #4e5665;
 }
 .showcase_selection_post {
     display: block;
     height: 14px;
     width: 20px;
-    margin-left: 4px;
+    margin-inline-start: 4px;
     margin-top: 14px;
-    border-right: 1px solid #4e5665;
+    border-inline-end: 1px solid #4e5665;
     border-top: 1px solid #4e5665;
 }
 
@@ -167,15 +167,15 @@ select.gray_bevel {
 .customization_controls select {
 	flex-grow: 1;
     max-width: 50%;
-    text-align: left;
+    text-align: start;
     margin-bottom: 0;
     height: 29px;
     margin-top: 3px;
-    margin-right: 13px;
+    margin-inline-end: 13px;
 }
 
 .customization_controls_nextprev:first-child() {
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 
 .showcase_style_select_ctn {
@@ -202,9 +202,9 @@ select.gray_bevel {
 	display: none;
 	position: absolute;
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 	bottom: 0;
-	right: 0;
+	inset-inline-end: 0;
 	z-index: 2;
 
 	text-align: center;
@@ -223,7 +223,7 @@ select.gray_bevel {
 	opacity: 0.6;
 	position: absolute;
 	top: 6px;
-	right: 6px;
+	inset-inline-end: 6px;
 }
 
 .showcase_slot:hover .showcase_clearslot {
@@ -352,9 +352,9 @@ select.gray_bevel {
 }
 
 .profile_background_select_option {
-	float: left;
+	float: inline-start;
 	width: 47%;
-	margin-left: 5%;
+	margin-inline-start: 5%;
 
 	color: #6d6d6b;
 	font-size: 13px;
@@ -378,7 +378,7 @@ select.gray_bevel {
 }
 
 .profile_background_select_row .profile_background_select_option:first-child {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
 .profile_background_blank {
@@ -405,8 +405,8 @@ select.gray_bevel {
 	margin-bottom: 13px;
 
 	border-top: 1px solid #25384c;
-	border-left: 1px solid #25384c;
-	border-right: 1px solid #000;
+	border-inline-start: 1px solid #25384c;
+	border-inline-end: 1px solid #000;
 	border-bottom: 1px solid #000;
 	border-radius: 3px;
 
@@ -414,9 +414,9 @@ select.gray_bevel {
 
 .profile_background_current_image_ctn {
 	position: relative;
-	float: left;
+	float: inline-start;
 	width: 140px;
-	margin-right: 11px;
+	margin-inline-end: 11px;
 }
 
 .profile_background_current_image_ctn.primary_group {
@@ -450,9 +450,9 @@ select.gray_bevel {
 .publishedfile_modal_iframe {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 
 	border: none;
 	height: 100%;
@@ -476,7 +476,7 @@ select.gray_bevel {
 
 .group_list_option.badge_option {
 	height: 54px;
-	padding-left: 69px;
+	padding-inline-start: 69px;
 }
 
 .group_list_option.badge_option .badge_icon, .group_list_option.badge_option .badge_icon img {
@@ -487,7 +487,7 @@ select.gray_bevel {
 .group_list_option.badge_option .badge_icon {
 	position: absolute;
 	top: 5px;
-	left: 5px;
+	inset-inline-start: 5px;
 }
 
 .group_list_option.badge_option .group_list_groupname {
@@ -512,7 +512,7 @@ select.gray_bevel {
 .achievement_list_item {
 	min-height: 64px;
 	position: relative;
-	padding-left: 70px;
+	padding-inline-start: 70px;
 
 	margin-bottom: 12px;
 
@@ -525,7 +525,7 @@ select.gray_bevel {
 
 .achievement_list_item .achievement_icon {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
 	height: 64px;
 	width: 64px;
@@ -547,7 +547,7 @@ select.gray_bevel {
 }
 
 .edit_subpage_selector {
-	padding-left: 4%;
+	padding-inline-start: 4%;
 	margin-bottom: 16px;
 }
 
@@ -591,7 +591,7 @@ select.gray_bevel {
 
 .ProfilePrivacyRoot_Indent
 {
-	padding-left: 10%;
+	padding-inline-start: 10%;
 }
 
 .ProfilePrivacyHeader
@@ -618,7 +618,7 @@ select.gray_bevel {
 	width: unset;
 	color: #c6d4df;
 	text-decoration: underline;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 	cursor: pointer;
 }
 
@@ -634,7 +634,7 @@ select.gray_bevel {
 
 .ProfilePrivacyDropDown_Arrow
 {
-	margin-left: 6px;
+	margin-inline-start: 6px;
 }
 
 .ProfilePrivacyDropDown.readonly
@@ -660,7 +660,7 @@ select.gray_bevel {
 .ProfilePrivacyCheckbox
 {
 	margin-top: 12px;
-	padding-left: 12px;
+	padding-inline-start: 12px;
 }
 
 .ProfilePrivacyCheckbox > label
@@ -672,7 +672,7 @@ select.gray_bevel {
 .ProfilePrivacyCheckbox_Desc
 {
 	flex: 1;
-	padding-left: 6px;
+	padding-inline-start: 6px;
 	min-width: 0;
 	white-space: pre-line;
 }
@@ -681,7 +681,7 @@ select.gray_bevel {
 {
 	display: inline-block;
 	color: #737e87;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 }
 
 .PrivacySaveNotice.Error

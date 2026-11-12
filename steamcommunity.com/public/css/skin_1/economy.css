@@ -34,8 +34,8 @@ h2 {
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/economy/trade_itemholder.png' );
 	background-repeat: no-repeat;
 	background-position: center top;
-	float: left;
-	margin-right: 6px;
+	float: inline-start;
+	margin-inline-end: 6px;
 	margin-bottom: 6px;
 }
 
@@ -51,8 +51,8 @@ h2 {
 
 .item_currency_amount, .item_currency_name {
 	position: absolute;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	top: 65%;
 
 	text-align: center;
@@ -129,8 +129,8 @@ html.responsive .dynamicSizing .inventory_ctn
 a.inventory_item_link {
 	position: absolute;
 	top: 0;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 	display: block;
 	z-index: 2;
@@ -144,7 +144,8 @@ a.inventory_item_link:focus {
 .trade_item_box {
 	background-color: #000000;
 	border: 1px solid #2c2c2d;
-	padding: 6px 0 0 6px;
+	padding-block: 6px 0;
+	padding-inline: 6px 0;
 }
 
 .trade_item_box.dynamicSizing {
@@ -159,7 +160,7 @@ a.inventory_item_link:focus {
 }
 
 .item_actions .btn_small, .item_owner_actions .btn_small {
-	margin-right: 12px;
+	margin-inline-end: 12px;
 	margin-bottom: 16px;
 }
 
@@ -177,7 +178,7 @@ a.item_action {
 	font-size: 11px;
 	padding: 0 19px;
 
-	margin-right: 22px;
+	margin-inline-end: 22px;
 	margin-bottom: 13px;
 	background-repeat: repeat-x;
 
@@ -203,13 +204,14 @@ a.item_action:hover {
 	font-size: 11px;
 	color: #cccccc;
 
-	padding: 7px 28px 7px 8px;
+	padding-block: 7px;
+	padding-inline: 8px 28px;
 
 	margin-bottom: 10px;
 }
 
 #mainContents .economy_popup_msg {
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .economy_popup_msg.trade_welcome_msg {
@@ -227,7 +229,7 @@ a.item_action:hover {
 .welcome_dismiss {
 	position: absolute;
 	top: 5px;
-	right: 5px;
+	inset-inline-end: 5px;
 	background-color: #446501;
 	width: 18px;
 	height: 16px;
@@ -270,7 +272,8 @@ a.item_action:hover {
 
 .item_desc_content {
 	position: relative;
-	padding: 22px 0 22px 218px;
+	padding-block: 22px;
+	padding-inline: 218px 0;
 	min-height: 192px;
 
 	background-color: #1d1d1d;
@@ -287,9 +290,9 @@ a.item_action:hover {
 
 .item_desc_icon {
 	position: absolute;
-	left: 8px;
+	inset-inline-start: 8px;
 	top: 8px;
-	right: 8px;
+	inset-inline-end: 8px;
 }
 
 .item_desc_icon_center {
@@ -302,7 +305,7 @@ a.item_action:hover {
 .item_desc_content .item_desc_description {
 	color: #b4b4b4;
 	font-size: 14px;
-	padding-right: 8px;
+	padding-inline-end: 8px;
 }
 .item_desc_content .item_desc_description .descriptor.accessories_desc {
 	padding-top: 8px;
@@ -347,7 +350,7 @@ a.item_action:hover {
 
 .fraud_warning .fraud_warning_msg
 {
-	text-align: left;
+	text-align: start;
 }
 .fraud_warning .fraud_warning_msg:not(:last-child)
 {
@@ -360,7 +363,7 @@ a.item_action:hover {
 
 .item_desc_game_info {
 	position: relative;
-	padding-left: 36px;
+	padding-inline-start: 36px;
 	color: #767676;
 	min-height: 32px;
 	margin-bottom: 16px;
@@ -368,7 +371,7 @@ a.item_action:hover {
 
 .item_desc_game_info .item_desc_game_icon {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
 }
 
@@ -390,11 +393,11 @@ a.item_action:hover {
 #inventory_pagecontrols {
 	text-align: center;
 	line-height: 22px;
-	float: right;
+	float: inline-end;
 }
 
 #inventory_pagecontrols .pagecontrol_element {
-	float: right;
+	float: inline-end;
 }
 
 .pagecontrol_element.pagecounts {
@@ -420,7 +423,8 @@ a.item_action:hover {
 	background-repeat: no-repeat;
 	cursor: pointer;
 	height: 16px;
-	inset: 4px 4px auto auto;
+	inset-block: 4px auto;
+	inset-inline: auto 4px;
 	position: absolute;
 	width: 16px;
 	z-index: 12;
@@ -483,7 +487,7 @@ input.filter_search_box::placeholder {
 }
 
 .econ_tag_filter_collapsable_tags_showlink {
-	padding-left: 8px;
+	padding-inline-start: 8px;
 	line-height: 19px;
 }
 
@@ -638,7 +642,8 @@ body.compact_trading_ui .appselect {
 .market_dialog_purchase_confirmation_inner {
 	background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
 	margin: 0px 50px 0px 50px;
-	padding: 0px 50px 0px 20px;
+	padding-block: 0px;
+	padding-inline: 20px 50px;
 	display: flex;
 	align-items: center;
 	gap: 25px;
@@ -689,8 +694,8 @@ body.compact_trading_ui .appselect {
 	z-index: -1;
 	top: 0;
 	bottom: 0;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 
 	background-image: radial-gradient(90px 110px, circle closest-corner, #333, #1D1D1D);
 	background-image: -moz-radial-gradient(90px 110px, circle closest-corner, #333, #1D1D1D);
@@ -698,7 +703,7 @@ body.compact_trading_ui .appselect {
 }
 
 .market_dialog_title_cancel {
-	float: right;
+	float: inline-end;
 	font-size: 12px;
 	cursor: pointer;
 }
@@ -707,7 +712,7 @@ body.compact_trading_ui .appselect {
 	position: relative;
 	top: -1px;
 
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	color: #C4C4C4;
 	font-size: 14pt;
 	font-weight: bold;
@@ -743,7 +748,7 @@ a.market_dialog_title_cancel:hover .market_dialog_title_cancel_X {
 
 .market_sell_dialog_input_multiline {
 	display: inline-block;
-	text-align: left;
+	text-align: start;
 	vertical-align: top;
 }
 
@@ -809,8 +814,9 @@ input.market_dialog_input:focus {
 	}
 
 	html.responsive #marker_sell_dialog_terms input[type=checkbox] {
-		float: left;
-		margin: 0 6px 0 0;
+		float: inline-start;
+		margin-block: 0;
+		margin-inline: 0 6px;
 	}
 
 	html.responsive #marker_sell_dialog_terms label {
@@ -838,8 +844,9 @@ input.market_dialog_input:focus {
 	}
 
 	html.responsive.touch #marker_sell_dialog_terms input[type=checkbox] {
-		float: left;
-		margin: 0 6px 0 0;
+		float: inline-start;
+		margin-block: 0;
+		margin-inline: 0 6px;
 	}
 
 	html.responsive.touch #marker_sell_dialog_terms label {
@@ -856,8 +863,9 @@ input.market_dialog_input:focus {
 }
 
 .market_dialog_bottom_buttons > a {
-	float: right;
-	margin: 0 0 10px 10px;
+	float: inline-end;
+	margin-block: 0 10px;
+	margin-inline: 10px 0;
 	min-width: 100px;
 	text-align: center;
 }
@@ -891,7 +899,7 @@ input.market_dialog_input:focus {
 
 #market_sell_dialog_buyback_details_wrapper
 {
-	float: left;
+	float: inline-start;
 	margin-top: 8px;
 }
 
@@ -905,7 +913,7 @@ input.market_dialog_input:focus {
 {
 	color: #799905;
 	border-color: #799905;
-	padding-left: 2px;
+	padding-inline-start: 2px;
 }
 
 .market_item_action_buyback_at_price
@@ -933,21 +941,22 @@ input.market_dialog_input:focus {
 #market_sell_buyback_until
 {
 	color: #8f98a0;
-	text-align: left;
+	text-align: start;
 	padding-top: 10px;
 	clear: both;
 }
 
 #market_sell_dialog_accept, #market_sell_dialog_buyback_buttons {
-	float: right;
-	margin: 0.4em 0 0 1em;
+	float: inline-end;
+	margin-block: 0.4em 0;
+	margin-inline: 1em 0;
 	white-space: nowrap;
 	overflow: hidden;
 }
 
 #market_sell_dialog_declinebuyback
 {
-	padding-right: 4px;
+	padding-inline-end: 4px;
 }
 
 #market_sell_dialog_buyback_buttons
@@ -968,20 +977,21 @@ input.market_dialog_input:focus {
 #market_sell_dialog_throbber {
 	position: absolute;
 	bottom: -2px;
-	right: 34px;
+	inset-inline-end: 34px;
 }
 
 #marker_sell_dialog_terms {
-	float: left;
-	text-align: left;
+	float: inline-start;
+	text-align: start;
 }
 
 #market_sell_quantity_available {
-	margin-right: 26px;
+	margin-inline-end: 26px;
 }
 
 #market_removelisting_dialog_accept {
-	margin: 0 0.5em 0.5em 0;
+	margin-block: 0 0.5em;
+	margin-inline: 0 0.5em;
 }
 
 .item_market_action_button {
@@ -994,7 +1004,7 @@ input.market_dialog_input:focus {
 }
 
 .item_market_action_button_contents {
-	float: left;
+	float: inline-start;
 	height: 24px;
 	line-height: 24px;
 	padding: 0 4px;
@@ -1013,7 +1023,7 @@ a.item_market_action_button {
 }
 
 .item_market_action_button_edge {
-	float: left;
+	float: inline-start;
 	width: 3px;
 	height: 24px;
 }
@@ -1074,7 +1084,7 @@ a.item_market_action_button {
 }
 
 .game_button_contents {
-	float: left;
+	float: inline-start;
 	height: 34px;
 	line-height: 34px;
 	width: 237px;
@@ -1085,7 +1095,7 @@ a.item_market_action_button {
 
 .game_button_game_icon > img {
 	position: absolute;
-	left: 3px;
+	inset-inline-start: 3px;
 	top: 3px;
 
 	width: 32px;
@@ -1095,7 +1105,7 @@ a.item_market_action_button {
 
 .game_button_game_name {
 	display: inline-block;
-	padding-left: 42px;
+	padding-inline-start: 42px;
 
 	max-width: 195px;
 	overflow: hidden;
@@ -1112,7 +1122,7 @@ a.game_button {
 }
 
 .game_button_edge {
-	float: left;
+	float: inline-start;
 	width: 3px;
 	height: 34px;
 }
@@ -1131,8 +1141,8 @@ a.game_button {
 
 .market_dialog_iteminfo .item_desc_game_info .item_desc_game_icon {
 	position: inherit;
-	float: left;
-	margin-right: 0.525em;
+	float: inline-start;
+	margin-inline-end: 0.525em;
 	margin-top: 0.25em;
 }
 
@@ -1165,8 +1175,8 @@ a.game_button {
 }
 
 .market_restrictions img {
-	float:left;
-	margin-right: 5px;
+	float:inline-start;
+	margin-inline-end: 5px;
 
 	width: 38px;
 	height: 38px;
@@ -1249,8 +1259,8 @@ a.game_button {
 }
 
 .pricehistory_zoom_controls {
-	float: right;
-	margin-right: 45px;
+	float: inline-end;
+	margin-inline-end: 45px;
 }
 
 .pricehistory_notavailable_info {
@@ -1262,7 +1272,7 @@ a.game_button {
 
 .tradeoffer .btn_report {
 	margin-top: -8px;
-	float: right;
+	float: inline-end;
 }
 
 .trade_scam_report_label {
@@ -1271,7 +1281,7 @@ a.game_button {
 
 .slot_app_fraudwarning {
 	position: absolute;
-	left: 1px;
+	inset-inline-start: 1px;
 	top: 1px;
 	width: 16px;
 	height: 16px;
@@ -1283,7 +1293,7 @@ a.game_button {
 }
 
 .fraud_warning_image {
-	padding-right: 5px;
+	padding-inline-end: 5px;
 }
 
 .fraud_warning_box {
@@ -1309,7 +1319,7 @@ a.game_button {
 
 .goo_exchange_dialog_corner {
 	position: absolute;
-	right: -1px;
+	inset-inline-end: -1px;
 	bottom: -1px;
 	background: right bottom no-repeat url( 'https://community.fastly.steamstatic.com/public/images/economy/trade_currency_dialog_corner.png?v=1' );
 	width: 174px;
@@ -1319,14 +1329,14 @@ a.game_button {
 .goo_exchange_dialog_title {
 	position: absolute;
 	top: 27px;
-	left: 0;
+	inset-inline-start: 0;
 	width: 434px;
 }
 
 .goo_exchange_dialog_info {
 	position: absolute;
 	top: 42px;
-	left: 0;
+	inset-inline-start: 0;
 	width: 418px;
 
 	padding: 0 8px;
@@ -1339,19 +1349,19 @@ a.game_button {
 	background: no-repeat url( 'https://community.fastly.steamstatic.com/public/images/economy/trade_currency_entry_background.png?v=1' );
 	width: 136px;
 	height: 54px;
-	padding-left: 54px;
-	text-align: left;
+	padding-inline-start: 54px;
+	text-align: start;
 }
 
 #goo_exchange_dialog_input_area {
 	position: absolute;
-	left: 123px;
+	inset-inline-start: 123px;
 	top: 69px;
 }
 
 #goo_exchange_dialog_input_icon_area {
 	position: absolute;
-	left: 4px;
+	inset-inline-start: 4px;
 	top: 6px;
 	width: 42px;
 	height: 42px;
@@ -1381,13 +1391,13 @@ a.game_button {
 #goo_exchange_dialog_error {
 	position: absolute;
 	top: 118px;
-	left: 0;
+	inset-inline-start: 0;
 }
 
 #goo_exchange_dialog_remaining {
 	position: absolute;
 	top: 227px;
-	left: 0;
+	inset-inline-start: 0;
 
 	width: 434px;
 	line-height: 42px;
@@ -1400,16 +1410,16 @@ a.game_button {
 .goo_exchange_dialog_footer {
 	position: absolute;
 	bottom: 0;
-	left: 9px;
+	inset-inline-start: 9px;
 
 	width: 416px;
-	text-align: right;
+	text-align: end;
 }
 
 .goo_exchange_dialog_footer a.item_action {
-	margin-right: 0;
-	margin-left: 5px;
-	text-align: left;
+	margin-inline-end: 0;
+	margin-inline-start: 5px;
+	text-align: start;
 	padding: 0 5px;
 	width: 82px;
 }
@@ -1495,7 +1505,8 @@ a.game_button {
 	cursor: pointer;
 	font-size: 20px;
 	line-height: 30px;
-	inset: -16px -16px auto auto;
+	inset-block: -16px auto;
+	inset-inline: auto -16px;
 	position: absolute;
 	text-align: center;
 	width: 30px;
@@ -1551,7 +1562,7 @@ html.responsive .newmodal.economy_modal_ctn {
 @media screen and (max-width: 650px )
 {
 	html.responsive .market_sell_dialog_input_area {
-		text-align: left;
+		text-align: start;
 	}
 }
 
@@ -1565,7 +1576,7 @@ html.responsive .newmodal.economy_modal_ctn {
 	max-width: 354px;
 	margin: 24px auto;
 	padding: 0 10px;
-	text-align: left;
+	text-align: start;
 }
 
 .sendgift_area h2 {
@@ -1584,7 +1595,7 @@ html.responsive .newmodal.economy_modal_ctn {
 
 .sendgift_recipient .playerAvatar {
 	display: inline-block;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 
 .sendgift_description {

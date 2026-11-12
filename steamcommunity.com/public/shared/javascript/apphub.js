@@ -428,7 +428,7 @@ function AddRow( parentID, row, page, currentRow )
 	var fadeSecInc = 0.5;
 	var maxFadeSec = 2.0;
 	var rowDiv = new Element( 'div', { 'class' : 'apphub_CardRow', 'id': "page_" + page + "_row_" + currentRow + "_template_" + ( typeof row.template != "undefined" ? row.template.name : "undefined" ) , 'data-panel': '{"flow-children":"grid","maintainX":true}' } );
-	var rowDivClear = new Element( 'div', { 'class' : 'apphub_CardClear', 'style' : 'clear: left' } );
+	var rowDivClear = new Element( 'div', { 'class' : 'apphub_CardClear', 'style' : 'clear: inline-start' } );
 	rowDiv.appendChild( rowDivClear );
 	$( parentID ).appendChild( rowDiv );
 	for ( var i = 0; i < row.length; ++i )

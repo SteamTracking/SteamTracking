@@ -1464,7 +1464,7 @@ CInventory.prototype.BuildInventoryTagFilters = function()
 	}
 
 	// add a div to clear the floating
-	this.m_$TagContainer.append( new Element( 'div', { "style" : "clear: left;" } ) );
+	this.m_$TagContainer.append( new Element( 'div', { "style" : "clear: inline-start;" } ) );
 };
 
 

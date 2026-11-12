@@ -15,9 +15,9 @@
 	position: absolute;
 	z-index: 2;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 
 	background: url( 'https://community.fastly.steamstatic.com/public/images/profile/holidayprofile/header_front.png' ) no-repeat center top;
 	pointer-events: none;
@@ -70,7 +70,7 @@
 	height: 85px;
 	position: absolute;
 	z-index: 0;
-	left: -15px;
+	inset-inline-start: -15px;
 	top: -10px;
 	display: block;
 }
@@ -81,7 +81,7 @@
 	width: 664px;
 	height: 85px;
 	position: absolute;
-	left: -15px;
+	inset-inline-start: -15px;
 	display: block;
 }
 

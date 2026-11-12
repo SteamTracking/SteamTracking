@@ -5,14 +5,14 @@
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
-	text-align: left;
+	text-align: start;
 	margin: 0 auto;
 }
 #BG_bottom {
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
-	text-align:left;
+	text-align:start;
 	margin: 0 auto;
 }
 #BG_top h2 {
@@ -22,7 +22,7 @@
 	padding-top:21px;
 	font-size: 26px;
 	color: #898989;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 #BG_top h1 {
 	font-weight:normal;
@@ -32,20 +32,20 @@
 	padding:0;
 	padding-top:0px;
 	padding-bottom:5px;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 #mainContents {
 	max-width:936px;
 	margin:0;
 	padding:0;
-	text-align:left;
-	padding-left:17px;
+	text-align:start;
+	padding-inline-start:17px;
 	padding-top:10px;
 }
 
 .gameListLogo {
-	float:left;
-	margin-right:16px;
+	float:inline-start;
+	margin-inline-end:16px;
 }
 
 h4 {

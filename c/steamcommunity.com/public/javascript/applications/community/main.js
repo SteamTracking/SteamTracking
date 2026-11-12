@@ -3,194 +3,191 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./profile.js",
-      "./rolldown-runtime.js",
-      "./libraries.js",
-      "./steammessages_contentmoderation_pb.js",
-      "./moderationqueries.js",
-      "./throbber.js",
-      "../../../css/applications/community/throbber.css",
-      "./emoticonbutton.js",
-      "./reactbbcodeparser.js",
-      "./bbcodeparser.js",
-      "./bbcodes.module.js",
-      "../../../css/applications/community/bbcodes.css",
-      "./numberformats.js",
-      "./storeitemhooks.js",
-      "../../../css/applications/community/emoticonbutton.css",
-      "./personautils.js",
-      "./steammessages_loyalty_rewards_pb.js",
-      "./appinfostore.js",
-      "./persona.js",
-      "./awardmodal.js",
-      "../../../css/applications/community/awardmodal.css",
-      "./steamavatar2.js",
-      "../../../css/applications/community/steamavatar2.css",
-      "../../../css/applications/community/profile.css",
-      "./events.js",
-      "./partnereventmigrate.js",
-      "./eventrow.js",
-      "./playerlinkdetailsdataloader.js",
-      "./vodquery.js",
-      "./clanstore.js",
-      "./basebuttons.js",
-      "../../../css/applications/community/basebuttons.css",
-      "./storeassets.js",
-      "./ajaxhooks.js",
-      "./tabbar.js",
-      "./historyutils.js",
-      "../../../css/applications/community/tabbar.css",
-      "./expandonappear.js",
-      "./eventdevfeaturestore.js",
-      "./rewarditemdisplay.js",
-      "./partnereventdialog.module.js",
-      "../../../css/applications/community/partnereventdialog.css",
-      "./storeitemlink.js",
-      "./currencyformat.js",
-      "./visibilitytracker.js",
-      "../../../css/applications/community/vodquery.css",
-      "./eventinfinitescrollmodal.js",
-      "./apppartnereventspage.js",
-      "./textlink.js",
-      "../../../css/applications/community/textlink.css",
-      "./carouselarrows.js",
-      "./simplesuccesserror.js",
-      "../../../css/applications/community/simplesuccesserror.css",
-      "../../../css/applications/community/carouselarrows.css",
-      "./localdateandtime.js",
-      "../../../css/applications/community/localdateandtime.css",
-      "../../../css/applications/community/apppartnereventspage.css",
-      "./heading.js",
-      "../../../css/applications/community/heading.css",
-      "./coercingtextinput.js",
-      "./textentry.js",
-      "../../../css/applications/community/textentry.css",
-      "../../../css/applications/community/coercingtextinput.css",
-      "./segmentedcontrol.js",
-      "../../../css/applications/community/segmentedcontrol.css",
-      "./textarea.js",
-      "./avatarurl.js",
-      "./filehandling.js",
-      "./slider.js",
-      "../../../css/applications/community/slider.css",
-      "../../../css/applications/community/filehandling.css",
-      "./with-selector.js",
-      "./languagepicker.js",
-      "./playerstore.js",
-      "../../../css/applications/community/languagepicker.css",
-      "./bbcode_lists.js",
-      "../../../css/applications/community/bbcode_lists.css",
-      "./clanimagepicker.js",
-      "../../../css/applications/community/clanimagepicker.css",
-      "./pmbbcodeschema.js",
-      "../../../css/applications/community/pmbbcodeschema.css",
-      "./collapseablesection.js",
-      "../../../css/applications/community/collapseablesection.css",
-      "../../../css/applications/community/eventrow.css",
-      "./broadcastwatchstore.js",
-      "./loadingskeleton.js",
-      "../../../css/applications/community/loadingskeleton.css",
-      "./steamavatar.js",
-      "../../../css/applications/community/steamavatar.css",
-      "./broadcast_embeddable2.js",
-      "./twitter_large.js",
-      "./eventimpressiontracker.js",
-      "../../../css/applications/community/eventimpressiontracker.css",
-      "./partnereventsavebutton.module.js",
-      "../../../css/applications/community/partnereventsavebutton.css",
-      "../../../css/applications/community/partnereventmigrate2.css",
-      "../../../css/applications/community/events.css",
-      "./eventeditor.js",
-      "./linktoeventforusertocopy.js",
-      "./icn-copylink.js",
-      "./giveawaystore.js",
-      "./valvecrowdinsyncpanel.js",
-      "../../../css/applications/community/valvecrowdinsyncpanel.css",
-      "./managefriends.js",
-      "../../../css/applications/community/managefriends.css",
-      "../../../css/applications/community/eventeditor.css",
-      "./eventinternal.js",
-      "../../../css/applications/community/eventinternal.css",
-      "./communityawardsapp.js",
-      "./broadcasts.js",
-      "./broadcastplayer.js",
-      "../../../css/applications/community/broadcastplayer.css",
-      "./broadcast_embeddable.module.js",
-      "./textfilterstore.js",
-      "./webuitransportdefaults.js",
-      "./partnereventslogin.js",
-      "./logindialog.js",
-      "../../../css/applications/community/logindialog.css",
-      "../../../css/applications/community/broadcast_embeddable2.css",
-      "../../../css/applications/community/broadcasts.css",
-      "./gamenotes.js",
-      "./linkplugin.js",
-      "../../../css/applications/community/linkplugin.css",
-      "./reactusagereportingstore.js",
-      "../../../css/applications/community/gamenotes.css",
-      "./managefriends2.js",
-      "./faqs.js",
-      "./faqbbcode.js",
-      "../../../css/applications/community/faqbbcode.css",
-      "../../../css/applications/community/faqs.css",
-      "./conference.js",
-      "./broadcast_embeddable.js",
-      "./reddit_large.js",
-      "../../../css/applications/community/broadcast_embeddable.css",
-      "./questions.js",
-      "../../../css/applications/community/questions.css",
-      "../../../css/applications/community/conference.css",
-      "./questions2.js",
-      "./login.js",
-      "../../../css/applications/community/login.css",
-      "./itemcollection.js",
-      "../../../css/applications/community/itemcollection.css",
-      "./communityhomeheader.js",
-      "../../../css/applications/community/communityhomeheader.css",
-      "./greenenvelope.js",
-      "./webtemplates.js",
-      "./steammessages_econ_pb.js",
-      "../../../css/applications/community/webtemplates.css",
-      "../../../css/applications/community/greenenvelope.css",
-      "./notificationsapp.js",
-      "../../../css/applications/community/notificationsapp.css",
-      "./gamerecordingclip.js",
-      "../../../css/applications/community/gamerecordingclip.css",
-      "./market.js",
-      "./routing.js",
-      "./grid.js",
-      "../../../css/applications/community/grid.css",
-      "../../../css/applications/community/routing.css",
-      "./marketsearch.js",
-      "./iteminfo.js",
-      "./econbbcode.js",
-      "./playerlinkdetailsquery.js",
-      "../../../css/applications/community/econbbcode.css",
-      "./marketselldialog.js",
-      "../../../css/applications/community/marketselldialog.css",
-      "./src.js",
-      "../../../css/applications/community/src.css",
-      "./forumreportedsubjects.js",
-      "../../../css/applications/community/forumreportedsubjects.css",
-      "./forummoderationtool.js",
-      "./moderationdialog.js",
-      "./escalatesubjectdialog.js",
-      "../../../css/applications/community/escalatesubjectdialog.css",
-      "./moderationreasonpicker.js",
-      "../../../css/applications/community/moderationreasonpicker.css",
-      "../../../css/applications/community/moderationdialog.css",
-      "./copytoclipboardbutton.js",
-      "../../../css/applications/community/copytoclipboardbutton.css",
-      "./copycommentlinktoclipboardbutton.js",
-      "./inlinecommentmoderationtool.js",
-      "./commentthreadreportedsubjectslist.js",
-      "./ugcbandialog.js",
-      "../../../css/applications/community/ugcbandialog.css",
-      "./ugcmoderationsubjectpanel.js",
-      "../../../css/applications/community/ugcmoderationsubjectpanel.css",
+      "./chunk~42ec0f569d.js",
+      "./chunk~f025431ab0.js",
+      "./chunk~01cfc309bf.js",
+      "./chunk~93de6fa506.js",
+      "./chunk~1e67c3e4e4.js",
+      "./chunk~eefd71512b.js",
+      "../../../css/applications/community/chunk~73d2876771.css",
+      "./chunk~05a38bc848.js",
+      "./chunk~d6c6ad29fc.js",
+      "./chunk~727db9c01f.js",
+      "./chunk~af1574091f.js",
+      "../../../css/applications/community/chunk~bc29451df5.css",
+      "./chunk~9d71b14b50.js",
+      "./chunk~a7c5e71e12.js",
+      "../../../css/applications/community/chunk~d22a22fa8b.css",
+      "./chunk~0278ae6236.js",
+      "./chunk~4e18b7e430.js",
+      "./chunk~c55d6473b2.js",
+      "./chunk~a35e3605eb.js",
+      "./chunk~bc8f991cc0.js",
+      "../../../css/applications/community/chunk~4e92ec82ae.css",
+      "./chunk~65da1d3223.js",
+      "../../../css/applications/community/chunk~64876e5ad62.css",
+      "../../../css/applications/community/chunk~42ec0f569d.css",
+      "./chunk~3056eb587a.js",
+      "./chunk~35b0bf48ef.js",
+      "./chunk~cc40f6af5e.js",
+      "./chunk~3f4314f3b4.js",
+      "./chunk~437071091c.js",
+      "./chunk~75db1bf948.js",
+      "../../../css/applications/community/chunk~12fdcf9214.css",
+      "./chunk~2e61cac879.js",
+      "./chunk~92931c6310.js",
+      "./chunk~37e5316e27.js",
+      "./chunk~af36c62e9f.js",
+      "../../../css/applications/community/chunk~5e166c1093.css",
+      "./chunk~cfb555d6e5.js",
+      "./chunk~008c00a198.js",
+      "./chunk~0111fcd096.js",
+      "./chunk~79ae1444d5.js",
+      "./chunk~739842ca30.js",
+      "../../../css/applications/community/chunk~78ae40994c.css",
+      "./chunk~8d2b90a325.js",
+      "./chunk~395a1fb77b.js",
+      "../../../css/applications/community/chunk~863c097d06.css",
+      "./chunk~6eb508043a.js",
+      "./chunk~77ea210942.js",
+      "./chunk~cfd048ddd7.js",
+      "../../../css/applications/community/chunk~1cdae5a58d.css",
+      "./chunk~21cdc464a1.js",
+      "./chunk~95ecbf576c.js",
+      "../../../css/applications/community/chunk~e00867e6a0.css",
+      "../../../css/applications/community/chunk~70cbcbc9c7.css",
+      "./chunk~ec644f97c6.js",
+      "../../../css/applications/community/chunk~2b9f3c130a.css",
+      "../../../css/applications/community/chunk~b11171b90c.css",
+      "./chunk~e53a8c8667.js",
+      "../../../css/applications/community/chunk~02bdaece1c.css",
+      "./chunk~6e8a72cfb5.js",
+      "./chunk~e625c3ac3e.js",
+      "../../../css/applications/community/chunk~ad91017565.css",
+      "../../../css/applications/community/chunk~505ee6152f.css",
+      "./chunk~5412a9f1de.js",
+      "../../../css/applications/community/chunk~68fae779af.css",
+      "./chunk~91ffd0567f.js",
+      "./chunk~c17e16859d.js",
+      "./chunk~018ae802ee.js",
+      "./chunk~16aefcf65f.js",
+      "../../../css/applications/community/chunk~65c4848332.css",
+      "../../../css/applications/community/chunk~bd1005d448.css",
+      "./chunk~91ae5e1167.js",
+      "./chunk~d382bdf2cf.js",
+      "../../../css/applications/community/chunk~3360c4795c.css",
+      "./chunk~50a4210268.js",
+      "../../../css/applications/community/chunk~ecfad72e53.css",
+      "./chunk~2bb3c0c267.js",
+      "../../../css/applications/community/chunk~fc499e2343.css",
+      "./chunk~5c33f42766.js",
+      "../../../css/applications/community/chunk~188fa86612.css",
+      "../../../css/applications/community/chunk~01477faa052.css",
+      "./chunk~b986e50637.js",
+      "./chunk~10c934b72c.js",
+      "./chunk~4239b66179.js",
+      "../../../css/applications/community/chunk~4ea55b4917.css",
+      "./chunk~6c2bf73948.js",
+      "../../../css/applications/community/chunk~64876e5ad6.css",
+      "./chunk~cadb22900a.js",
+      "./chunk~56e6a40e9e.js",
+      "./chunk~dd13412f72.js",
+      "../../../css/applications/community/chunk~d7cd020859.css",
+      "./chunk~bf4b546728.js",
+      "../../../css/applications/community/chunk~67b2e015cc.css",
+      "../../../css/applications/community/chunk~0cfbacc617.css",
+      "../../../css/applications/community/chunk~3056eb587a.css",
+      "./chunk~3d19a4d13e.js",
+      "./chunk~f4fcdebd85.js",
+      "./chunk~5831a6de62.js",
+      "./chunk~383ae316bd.js",
+      "./chunk~cbfff8c814.js",
+      "../../../css/applications/community/chunk~5e7206b563.css",
+      "./chunk~4d0052905a.js",
+      "../../../css/applications/community/chunk~3a79842877.css",
+      "../../../css/applications/community/chunk~3d19a4d13e.css",
+      "./chunk~b4379065c0.js",
+      "../../../css/applications/community/chunk~b4379065c0.css",
+      "./chunk~131fd42dd2.js",
+      "./chunk~a660b35c87.js",
+      "./chunk~eee3bbd4cd.js",
+      "../../../css/applications/community/chunk~6bd2e40da3.css",
+      "./chunk~750c562b0a.js",
+      "./chunk~a0dd05a569.js",
+      "./chunk~7b8a87bd30.js",
+      "./chunk~85f65a382b.js",
+      "./chunk~2e8feda0b1.js",
+      "../../../css/applications/community/chunk~21fdd7c699.css",
+      "../../../css/applications/community/chunk~47ce7fdc012.css",
+      "../../../css/applications/community/chunk~a660b35c87.css",
+      "./chunk~b9c03b4bc1.js",
+      "./chunk~01d6da9524.js",
+      "../../../css/applications/community/chunk~8baaf5748a.css",
+      "./chunk~06da9a7953.js",
+      "../../../css/applications/community/chunk~b9c03b4bc1.css",
+      "./chunk~19b8772fda.js",
+      "./chunk~084244ab43.js",
+      "./chunk~f17215eefb.js",
+      "../../../css/applications/community/chunk~05e41d8aca.css",
+      "../../../css/applications/community/chunk~084244ab43.css",
+      "./chunk~a14d6256c9.js",
+      "./chunk~404eafa76f.js",
+      "./chunk~030d1d075f.js",
+      "../../../css/applications/community/chunk~47ce7fdc01.css",
+      "./chunk~eb66d0e2b2.js",
+      "../../../css/applications/community/chunk~6267a82ddf.css",
+      "../../../css/applications/community/chunk~a14d6256c9.css",
+      "./chunk~e4e8500939.js",
+      "./chunk~bb3c85a45d.js",
+      "../../../css/applications/community/chunk~bb3c85a45d.css",
+      "./chunk~c5879b2b1f.js",
+      "../../../css/applications/community/chunk~c5879b2b1f.css",
+      "./chunk~419fcc29ce.js",
+      "../../../css/applications/community/chunk~419fcc29ce.css",
+      "./chunk~ef6e72cfc2.js",
+      "./chunk~61f3bc8fe4.js",
+      "./chunk~23d4719eb3.js",
+      "../../../css/applications/community/chunk~199d23fafb.css",
+      "../../../css/applications/community/chunk~ef6e72cfc2.css",
+      "./chunk~a5ef2be4d8.js",
+      "../../../css/applications/community/chunk~a5ef2be4d8.css",
+      "./chunk~0cfd989355.js",
+      "../../../css/applications/community/chunk~0cfd989355.css",
+      "./chunk~6b2e92847b.js",
+      "./chunk~e8ef2e6942.js",
+      "./chunk~93195fc4a9.js",
+      "../../../css/applications/community/chunk~142e655cd6.css",
+      "../../../css/applications/community/chunk~e6a35d8a25.css",
+      "./chunk~1136f5743b.js",
+      "./chunk~8dc488a70b.js",
+      "./chunk~bb87983663.js",
+      "./chunk~bdc7e21194.js",
+      "../../../css/applications/community/chunk~ed7f2451e5.css",
+      "./chunk~735ee4eaca.js",
+      "../../../css/applications/community/chunk~735ee4eaca.css",
+      "./chunk~6183326f73.js",
+      "../../../css/applications/community/chunk~6183326f73.css",
+      "./chunk~a630fd1ed9.js",
+      "../../../css/applications/community/chunk~a630fd1ed9.css",
+      "./chunk~7dfa3522ea.js",
+      "./chunk~3a8474f307.js",
+      "./chunk~0f9e58b0a5.js",
+      "../../../css/applications/community/chunk~af8a7db98e.css",
+      "./chunk~62cf132e0e.js",
+      "../../../css/applications/community/chunk~491abece66.css",
+      "../../../css/applications/community/chunk~59f899dc95.css",
+      "./chunk~f0745bb5e2.js",
+      "../../../css/applications/community/chunk~c3a91d6ca7.css",
+      "./chunk~92d122cd6f.js",
+      "./chunk~84da070c72.js",
+      "./chunk~ffbd589b71.js",
+      "./chunk~809b202bec.js",
+      "../../../css/applications/community/chunk~809b202bec.css",
+      "./chunk~542201d3fa.js",
+      "../../../css/applications/community/chunk~542201d3fa.css",
     ]),
 ) => _.map((_) => _[_]);
-import { _, _ } from "./rolldown-runtime.js";
+import { _, _ } from "./chunk~f025431ab0.js";
 import {
   _,
   _,
@@ -244,7 +241,8 @@ import {
   _,
   _,
   _,
-} from "./libraries.js";
+  _,
+} from "./chunk~01cfc309bf.js";
 var _ = (_, _, _) => {
   let _ = _.lastIndexOf(`?`),
     _ = _[_ === -1 || _ < _.lastIndexOf(`/`) ? _ : _.slice(0, _)];
@@ -5313,7 +5311,7 @@ var _ = class _ {
             bIncludeMessageInIdentifier: !0,
           }),
           console.warn(_),
-          console.log(_.stack || _));
+          console.log((_ instanceof Error && _.stack) || _));
       }
     }
     BIsValid() {
@@ -7469,6 +7467,11 @@ var _ = class _ extends _.Message {
               _: 3,
               _: _,
             },
+            counts_all_purchases: {
+              _: 4,
+              _: _.readBool,
+              _: _.writeBool,
+            },
           },
         }),
         _.sm_m
@@ -9597,6 +9600,14 @@ var _ = class _ extends _.Message {
               _: _.readBool,
               _: _.writeBool,
             },
+            hardware_compatibility: {
+              _: 38,
+              _: _,
+            },
+            dlc_for_purchase: {
+              _: 39,
+              _: _,
+            },
           },
         }),
         _.sm_m
@@ -11104,6 +11115,444 @@ var _ = class _ extends _.Message {
     }
     getClassName() {
       return `StoreItem_ExtraDetails_SalePage`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.steam_deck_tests || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1, 2, 3, 4], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            steam_deck_tests: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            steam_os_tests: {
+              _: 2,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            steam_machine_tests: {
+              _: 3,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            steam_frame_tests: {
+              _: 4,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            steam_deck_blog_url: {
+              _: 5,
+              _: _.readString,
+              _: _.writeString,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `StoreItem_ExtraDetails_HardwareCompatibility`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.display_type || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            display_type: {
+              _: 1,
+              _: _.readEnum,
+              _: _.writeEnum,
+            },
+            loc_token: {
+              _: 2,
+              _: _.readString,
+              _: _.writeString,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `StoreItem_ExtraDetails_HardwareCompatibility_TestResult`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.display_type || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            display_type: {
+              _: 1,
+              _: _.readEnum,
+              _: _.writeEnum,
+            },
+            loc_token: {
+              _: 2,
+              _: _.readString,
+              _: _.writeString,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `StoreItem_ExtraDetails_HardwareCompatibility_SteamOSTestResult`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.dlc || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1, 3], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            dlc: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            dlc_count: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            dependencies: {
+              _: 3,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            packageid: {
+              _: 4,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            formatted_total_price: {
+              _: 5,
+              _: _.readString,
+              _: _.writeString,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `StoreItem_ExtraDetails_DLCForPurchase`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.appid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [3], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            appid: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            packageid: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            content_descriptorids: {
+              _: 3,
+              _: !0,
+              _: !0,
+              _: _.readEnum,
+              pbr: _.readPackedEnum,
+              _: _.writeRepeatedEnum,
+            },
+            highlight_reason: {
+              _: 4,
+              _: _.readEnum,
+              _: _.writeEnum,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `StoreItem_ExtraDetails_DLCForPurchase_DLC`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.appid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            appid: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            packageid: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            required: {
+              _: 3,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `StoreItem_ExtraDetails_DLCForPurchase_Dependency`;
     }
   },
   _ = class _ extends _.Message {
@@ -16144,7 +16593,7 @@ var _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
     constructor(_ = null) {
       (super(),
         _.prototype.filters || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [6], null));
+        _.Message.initialize(this, _, 0, -1, [6, 7], null));
     }
     static sm_m;
     static sm_mbf;
@@ -16166,6 +16615,12 @@ var _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
             context: {
               _: 5,
               _: _,
+            },
+            recommended_tags: {
+              _: 7,
+              _: _,
+              _: !0,
+              _: !0,
             },
           },
         }),
@@ -16297,6 +16752,70 @@ var _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
     }
     getClassName() {
       return `CStoreQuery_GetItemsByUserRecommendedTags_Request_Section`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.tagid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            tagid: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            name: {
+              _: 2,
+              _: _.readString,
+              _: _.writeString,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreQuery_GetItemsByUserRecommendedTags_Request_RecommendedTag`;
     }
   },
   _ = class _ extends _.Message {
@@ -18223,10 +18742,17 @@ var _ = (function () {
               _)
             )
               return new Promise((_, _) => {
-                (_.addEventListener(`load`, _),
-                  _.addEventListener(`error`, () =>
-                    _(Error(`Unable to preload CSS for ${_}`)),
-                  ));
+                (function _(_, _) {
+                  (_.addEventListener(`load`, _),
+                    _.addEventListener(`error`, () => {
+                      _
+                        ? setTimeout(() => {
+                            let _ = _.cloneNode();
+                            (_.replaceWith(_), _(_, !1));
+                          }, 500)
+                        : _(Error(`Unable to preload CSS for ${_}`));
+                    }));
+                })(_, !0);
               });
           });
         }).filter((_) => _ !== void 0),
@@ -18631,6 +19157,11 @@ function _(_) {
       strErrorMsg: `Action Cancelled:` + _,
       errorCode: 52,
     };
+  if (_ == null)
+    return {
+      strErrorMsg: `Unknown Error: ` + _,
+      errorCode: 2,
+    };
   if (
     _.response !== void 0 &&
     _.response.data &&
@@ -18656,7 +19187,7 @@ function _(_) {
         strErrorMsg: `error code: ` + _.response.data.success,
         errorCode: _.response.data.success,
       };
-  } else if (typeof _.data == `object`) {
+  } else if (typeof _.data == `object` && _.data) {
     if (`msg` in _.data)
       return {
         strErrorMsg: _.data.msg,
@@ -22328,59 +22859,70 @@ function _() {
   };
 }
 var _ = {};
-((_.arabic = () => _(() => import(`./shared_arabic.js`), [], import.meta.url)),
+((_.arabic = () =>
+  _(() => import(`./chunk~3a6e239816.js`), [], import.meta.url)),
   (_.brazilian = () =>
-    _(() => import(`./shared_brazilian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~56cf3a8f91.js`), [], import.meta.url)),
   (_.bulgarian = () =>
-    _(() => import(`./shared_bulgarian.js`), [], import.meta.url)),
-  (_.czech = () => _(() => import(`./shared_czech.js`), [], import.meta.url)),
-  (_.danish = () => _(() => import(`./shared_danish.js`), [], import.meta.url)),
-  (_.dutch = () => _(() => import(`./shared_dutch.js`), [], import.meta.url)),
+    _(() => import(`./chunk~32bcaabba5.js`), [], import.meta.url)),
+  (_.czech = () =>
+    _(() => import(`./chunk~ba7fea1d77.js`), [], import.meta.url)),
+  (_.danish = () =>
+    _(() => import(`./chunk~cc8303bb22.js`), [], import.meta.url)),
+  (_.dutch = () =>
+    _(() => import(`./chunk~fc1222aaf1.js`), [], import.meta.url)),
   (_.english = () =>
-    _(() => import(`./shared_english.js`), [], import.meta.url)),
+    _(() => import(`./chunk~f1fd99448b.js`), [], import.meta.url)),
   (_.finnish = () =>
-    _(() => import(`./shared_finnish.js`), [], import.meta.url)),
-  (_.french = () => _(() => import(`./shared_french.js`), [], import.meta.url)),
-  (_.german = () => _(() => import(`./shared_german.js`), [], import.meta.url)),
-  (_.greek = () => _(() => import(`./shared_greek.js`), [], import.meta.url)),
+    _(() => import(`./chunk~d9ca0ad933.js`), [], import.meta.url)),
+  (_.french = () =>
+    _(() => import(`./chunk~3de3447b84.js`), [], import.meta.url)),
+  (_.german = () =>
+    _(() => import(`./chunk~ea00651313.js`), [], import.meta.url)),
+  (_.greek = () =>
+    _(() => import(`./chunk~68b54eeea2.js`), [], import.meta.url)),
   (_.hungarian = () =>
-    _(() => import(`./shared_hungarian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~f6734412b4.js`), [], import.meta.url)),
   (_.indonesian = () =>
-    _(() => import(`./shared_indonesian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~922285515c.js`), [], import.meta.url)),
   (_.italian = () =>
-    _(() => import(`./shared_italian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~45c556733f.js`), [], import.meta.url)),
   (_.japanese = () =>
-    _(() => import(`./shared_japanese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~69d6fb556e.js`), [], import.meta.url)),
   (_.koreana = () =>
-    _(() => import(`./shared_koreana.js`), [], import.meta.url)),
-  (_.latam = () => _(() => import(`./shared_latam.js`), [], import.meta.url)),
-  (_.malay = () => _(() => import(`./shared_malay.js`), [], import.meta.url)),
+    _(() => import(`./chunk~68841cd49a.js`), [], import.meta.url)),
+  (_.latam = () =>
+    _(() => import(`./chunk~06486bf5f5.js`), [], import.meta.url)),
+  (_.malay = () =>
+    _(() => import(`./chunk~70b89fee0a.js`), [], import.meta.url)),
   (_.norwegian = () =>
-    _(() => import(`./shared_norwegian.js`), [], import.meta.url)),
-  (_.polish = () => _(() => import(`./shared_polish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~a580da97c7.js`), [], import.meta.url)),
+  (_.polish = () =>
+    _(() => import(`./chunk~8d44f8f48e.js`), [], import.meta.url)),
   (_.portuguese = () =>
-    _(() => import(`./shared_portuguese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~244052e10c.js`), [], import.meta.url)),
   (_.romanian = () =>
-    _(() => import(`./shared_romanian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~7b488a041e.js`), [], import.meta.url)),
   (_.russian = () =>
-    _(() => import(`./shared_russian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~5bf4d443d3.js`), [], import.meta.url)),
   (_.sc_schinese = () =>
-    _(() => import(`./shared_sc_schinese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~247907a80c.js`), [], import.meta.url)),
   (_.schinese = () =>
-    _(() => import(`./shared_schinese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~9d2cab4fcc.js`), [], import.meta.url)),
   (_.spanish = () =>
-    _(() => import(`./shared_spanish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~ed4a801b95.js`), [], import.meta.url)),
   (_.swedish = () =>
-    _(() => import(`./shared_swedish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~776d9e60dd.js`), [], import.meta.url)),
   (_.tchinese = () =>
-    _(() => import(`./shared_tchinese.js`), [], import.meta.url)),
-  (_.thai = () => _(() => import(`./shared_thai.js`), [], import.meta.url)),
+    _(() => import(`./chunk~71f78f7162.js`), [], import.meta.url)),
+  (_.thai = () =>
+    _(() => import(`./chunk~1556237471.js`), [], import.meta.url)),
   (_.turkish = () =>
-    _(() => import(`./shared_turkish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~9396cc6138.js`), [], import.meta.url)),
   (_.ukrainian = () =>
-    _(() => import(`./shared_ukrainian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~089bb8c39a.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./shared_vietnamese.js`), [], import.meta.url)));
+    _(() => import(`./chunk~85e3ad7c3b.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -26976,12 +27518,13 @@ function _(_, _) {
       let _ = _;
       _ &&
       !(
-        _.BHasNavTargetInDirection(_, !0) ||
+        _.BHasFocusableChildInDirection(_, !0) ||
         (_ != _ &&
           _.Element &&
           _.m_Properties?.scrollRegionToStartOrEnd &&
           _(_.Element, _, _, _ == _.Tree.Root),
-        _ == _)
+        _.HasMovementHandler(_)) ||
+        _ == _
       );
       _ = _.GetNavParentCrossingTrees()
     );
@@ -27877,8 +28420,7 @@ var _ = new _(`FocusNavigationMovement`),
     InternalFocusDescendant(_, _, _) {
       return _ ? (this.m_Tree.TransferFocus(_, _, _, !1), !0) : !1;
     }
-    BHasNavTargetInDirection(_, _) {
-      if (this.HasMovementHandler(_)) return !0;
+    BHasFocusableChildInDirection(_, _) {
       let _ = this.FindNextFocusableChild(_);
       if (_ && _) {
         let _ = _.GetWrappedTree();
@@ -30353,10 +30895,18 @@ function _(_, _) {
   return _(
     (_) => {
       if (!_) return;
-      let _ = _(_.ownerDocument.defaultView, (_) => {
-        _(_[0]);
-      });
-      return (_.observe(_), () => _.unobserve(_));
+      let _ = _.ownerDocument.defaultView;
+      if (!_) return;
+      let _ = !0,
+        _ = _(_, (_) => {
+          _ && _.length && _(_[_.length - 1]);
+        });
+      return (
+        _.observe(_),
+        () => {
+          ((_ = !1), _.disconnect());
+        }
+      );
     },
     [_, _],
   );
@@ -30379,13 +30929,45 @@ function _(_) {
   );
 }
 function _(_, _) {
+  let _ = _?.root,
+    _ = _?.rootMargin,
+    _ = _?.threshold;
   return _(
     _,
-    _.useCallback((_, _) => new _.IntersectionObserver(_, _), [_]),
+    _.useCallback(
+      (_, _) =>
+        new _.IntersectionObserver(_, {
+          root: _,
+          rootMargin: _,
+          threshold: _,
+        }),
+      [_, _, _],
+    ),
+  );
+}
+function _(_, _) {
+  let _ = _.useRef(void 0),
+    _ = _.useRef(_);
+  return (
+    (_.current = _),
+    _(
+      _.useCallback((_) => {
+        let _ = _.current;
+        (!_.current && _.isIntersecting && _.onEnter?.(_),
+          _.current && !_.isIntersecting && _.onLeave?.(_),
+          _.onIntersectionChange?.(_),
+          (_.current = _.isIntersecting));
+      }, []),
+      _,
+    )
   );
 }
 function _(_, ..._) {
   let _ = new _.ownerDocument.defaultView.ResizeObserver(..._);
+  return (_.observe(_), _);
+}
+function _(_, ..._) {
+  let _ = new _.ownerDocument.defaultView.IntersectionObserver(..._);
   return (_.observe(_), _);
 }
 function _() {
@@ -30410,6 +30992,20 @@ function _() {
       style: _,
       ref: _,
     }
+  );
+}
+var _ = _(_());
+function _(_, _, _) {
+  return _.createPortal(
+    _.createElement(
+      _.Suspense,
+      {
+        fallback: null,
+      },
+      _,
+    ),
+    _,
+    _,
   );
 }
 function _(_) {
@@ -30608,7 +31204,6 @@ var _ = ({ error: _, onDismiss: _ }) => {
       },
       children: _,
     }),
-  _ = _(_()),
   _ = _.createContext({
     Component: _,
   });
@@ -37781,7 +38376,7 @@ function _(_) {
       _.SetPopup(_);
     }, [_, _]),
     _
-      ? _.createPortal(
+      ? _(
           (0, _.jsx)(_, {
             ref: _,
             ..._.position,
@@ -38006,7 +38601,7 @@ function _(_) {
           }
         : void 0;
   return _
-    ? _.createPortal(
+    ? _(
         (0, _.jsx)(_, {
           ownerWindow: _,
           children: (0, _.jsxs)(`div`, {
@@ -38023,7 +38618,10 @@ function _(_) {
               (0, _.jsx)(_, {
                 browserInfo: _.browserContext,
                 bCenterPopupsOnWindow: _.bCenterOnWindow,
-                children: _.element,
+                children: (0, _.jsx)(_.Suspense, {
+                  fallback: null,
+                  children: _.element,
+                }),
               }),
             ],
           }),
@@ -42739,10 +43337,15 @@ function _(_) {
                   type: `8bitdo_ultimate`,
                   ..._,
                 })
-              : (0, _.jsx)(_, {
-                  type: `generic`,
-                  ..._,
-                });
+              : _ == 6 || _ == 7
+                ? (0, _.jsx)(_, {
+                    type: `xbox`,
+                    ..._,
+                  })
+                : (0, _.jsx)(_, {
+                    type: `generic`,
+                    ..._,
+                  });
   }
 }
 function _(_) {
@@ -46269,6 +46872,7 @@ var _ = _.forwardRef(function (_, _) {
         childrenContainerWidth: _,
         padding: _,
         inlineWrap: _,
+        transparentBackground: _,
         fieldClassName: _,
         fieldChildren: _,
         accessibilityNameOrder: _,
@@ -46508,13 +47112,185 @@ var _ = `500ms`,
   _ = `yUOhceFAk-c-`,
   _ = `YTUnL3ejwlA-`,
   _ = `_3N7jdKv05Dw-`,
-  _ = `Ns-2I9SmOro-`;
+  _ = `Ns-2I9SmOro-`,
+  _ = !!(typeof window < `u` && window.navigation);
+function _(_) {
+  if (_) {
+    let _ = _(window.navigation.currentEntry?.getState() ?? {});
+    window.navigation.updateCurrentEntry({
+      state: _,
+    });
+  } else history.replaceState(_(history.state ?? {}), ``);
+}
 function _(_, _) {
-  let _ = `${_}_HistoryValue`,
-    _ = _(),
+  if (_) {
+    console.assert(
+      !window.navigation.transition,
+      `ReplaceHistoryStateAndURL during transition`,
+    );
+    let _ = _(window.navigation.currentEntry?.getState());
+    window.navigation.navigate(typeof _ == `string` ? _ : _.toString(), {
+      state: _,
+      info: {
+        SSR: !0,
+      },
+      history: `replace`,
+    });
+  } else history.replaceState(_(history.state), ``, _);
+}
+function _(_, _) {
+  if (_) {
+    console.assert(
+      !window.navigation.transition,
+      `ReplaceHistoryStateAndURL during transition`,
+    );
+    let _ = _(window.navigation.currentEntry?.getState());
+    window.navigation.navigate(typeof _ == `string` ? _ : _.toString(), {
+      state: _,
+      info: {
+        SSR: !0,
+        bSkipFetch: !0,
+      },
+      history: `push`,
+    });
+  } else history.pushState(_(history.state), ``, _);
+}
+function _() {
+  return _
+    ? window.navigation?.currentEntry?.getState()
+    : window.history?.state;
+}
+var _ = new Set(),
+  _;
+function _() {
+  (location.href !== _ &&
+    _.forEach((_) => {
+      try {
+        _();
+      } catch {}
+    }),
+    (_ = location.href),
+    _.size > 0 && requestAnimationFrame(_));
+}
+function _(_) {
+  let _ = () => {
+    _();
+  };
+  return _
+    ? (window.navigation.addEventListener(`currententrychange`, _),
+      () => window.navigation.removeEventListener(`currententrychange`, _))
+    : ((_ = location.href),
+      requestAnimationFrame(_),
+      _.add(_),
+      () => _.delete(_));
+}
+var _, _, _;
+function _() {
+  return {
+    pathname: window.location.pathname,
+    search: window.location.search,
+    hash: window.location.hash,
+    state: _(),
+  };
+}
+function _() {
+  return _ ? window.navigation.currentEntry : window.history.state;
+}
+function _() {
+  let _ = _();
+  return (
+    (_ && _ == window.location.href && _ === _) ||
+      ((_ = window.location.href), (_ = _), (_ = _())),
+    _
+  );
+}
+var _, _;
+function _() {
+  return (
+    (_ && _ == window.location.href) ||
+      ((_ = window.location.href),
+      (_ = {
+        pathname: window.location.pathname,
+        search: window.location.search ?? ``,
+        hash: ``,
+        state: void 0,
+      })),
+    _
+  );
+}
+var _ = new Set(),
+  _;
+function _() {
+  ((_ = void 0), _.forEach((_) => _()));
+}
+function _(_) {
+  return (
+    _.size == 0 && (window.addEventListener(`popstate`, _), (_ = _(_))),
+    _.add(_),
+    () => {
+      (_.delete(_),
+        _.size == 0 &&
+          (window.removeEventListener(`popstate`, _), _?.(), (_ = void 0)));
+    }
+  );
+}
+var _ = `_HistoryValue`;
+function _(_) {
+  return (
+    _ && Object.fromEntries(Object.entries(_).filter(([_]) => !_.endsWith(_)))
+  );
+}
+function _(_, _, _) {
+  let _ = new URL(_, window.location.href),
+    _ = (_) => ({
+      ..._,
+      ..._,
+    });
+  (_
+    ? _(
+        (_) => ({
+          ..._(_),
+          ..._,
+        }),
+        _,
+      )
+    : _.href == window.location.href
+      ? _(_)
+      : _(_, _),
+    _());
+}
+function _() {
+  return () => {};
+}
+function _() {}
+function _() {
+  let _ = _.useContext(_),
+    _ = _,
+    _ = _,
+    _ = _;
+  _ && ((_ = _), (_ = _), (_ = _));
+  let _ = _.useSyncExternalStore(_, _, _);
+  return _ ? _.location : _;
+}
+var _ = {
+  get location() {
+    return _();
+  },
+  push(_, _) {
+    _(_, _, !0);
+  },
+  replace(_, _) {
+    _(_, _, !1);
+  },
+};
+function _() {
+  return _() ?? _;
+}
+function _(_, _) {
+  let _ = `${_}${_}`,
     _ = _();
   return [
-    (_.state && _.state[_]) ?? _,
+    _().state?.[_] ?? _,
     _.useCallback(
       (_) => {
         _.replace(_.location.pathname, {
@@ -46527,10 +47303,9 @@ function _(_, _) {
   ];
 }
 function _(_, _, _) {
-  let _ = `${_}_HistoryValue`,
+  let _ = `${_}${_}`,
     _ = _(),
-    _ = _(),
-    _ = (_.state && _.state[_]) ?? _,
+    _ = _().state?.[_] ?? _,
     _ = _.useRef(!1),
     _ = _.useRef(void 0),
     _ = _.useRef(void 0),
@@ -62606,7 +63381,7 @@ function _(_) {
   let { url: _, bHasRecoveryEmail: _, strPostFormID: _ } = _,
     [_, _] = _.useState(``),
     [_, _] = _.useState(``),
-    _ = _.useRef(void 0),
+    _ = _.useRef(null),
     _ = _.useCallback((_) => {
       (!_.target.value ||
         (_(_.target.value.slice(-1)) && _.target.value.length <= 4)) &&
@@ -62642,15 +63417,15 @@ function _(_) {
                 _.data.error_message ||
                   _(`#FamilyView_Unlock_ErrorUnknown`, _.data.eresult),
               ),
-              _.current.focus());
+              _.current?.focus());
             return;
           }
         if (!_.some((_) => _.data.success))
           (_(``),
             _(_(`#FamilyView_Unlock_ErrorUnknown`, 2)),
-            _.current.focus());
+            _.current?.focus());
         else if (_) {
-          let _ = _.current.ownerDocument.getElementById(_);
+          let _ = _.current?.ownerDocument.getElementById(_);
           _ ? _.submit() : console.error(`ID ${_} not found in document`);
         } else window.location.href = _;
       },
@@ -64230,6 +65005,7 @@ var _ = `Rzkafwfsmqs-`,
   _ = `myJn7NNMnpI-`,
   _ = `QNb3vHdws-s-`,
   _ = `FWBjPdaX-Nk-`,
+  _ = `_1k0t2Q-C2OU-`,
   _ = `m6H2njbbWSs-`,
   _ = `BgrsKgSro1E-`,
   _ = `z0NFw8S8xoo-`,
@@ -64605,6 +65381,16 @@ function _(_, _) {
 }
 function _(_) {
   return _(_, _());
+}
+var _ = {
+  none: !0,
+  _: !0,
+  _: !0,
+  _: !0,
+  full: !0,
+};
+function _(_) {
+  return !!_[_];
 }
 var _ = {
   0: !0,
@@ -65773,6 +66559,55 @@ var _ = [
 function _(_) {
   return /^(between|around|evenly)$/.test(_) ? `space-${_}` : _;
 }
+var _ = {
+    Button: `basic`,
+    Checkbox: `basic`,
+    Combobox: `basic`,
+    LoadingSpinner: `basic`,
+    SegmentedControl: `basic`,
+    Select: `basic`,
+    Tabs: `basic`,
+    TextArea: `basic`,
+    TextInput: `basic`,
+  },
+  _ = (0, _.createContext)(_);
+function _(_) {
+  let { variants: _ = {}, children: _ } = _,
+    _ = {
+      ...(0, _.use)(_),
+      ..._,
+    },
+    _ = (0, _.useRef)(_);
+  return (
+    _(_.current, _) || (_.current = _),
+    (0, _.jsx)(_, {
+      value: _.current,
+      children: _,
+    })
+  );
+}
+function _(_, _) {
+  return Object.keys(_).every((_) => _[_] === _[_]);
+}
+function _(_) {
+  return (0, _.use)(_)[_];
+}
+function _(_, _) {
+  let _ = _(_);
+  return !_ || _ === "default" ? _ : _;
+}
+var _ = (0, _.createContext)(`2`);
+function _(_) {
+  let { size: _, children: _ } = _;
+  return (0, _.jsx)(_, {
+    value: _,
+    children: _,
+  });
+}
+function _(_) {
+  let _ = (0, _.use)(_);
+  return _ ?? _;
+}
 var _ = _({
     Handle: () => _,
     Root: () => _,
@@ -65804,14 +66639,15 @@ function _(_) {
 }
 function _(_) {
   let {
-    value: _,
-    onChange: _,
-    size: _ = `2`,
-    color: _,
-    ref: _,
-    children: _,
-    ..._
-  } = _;
+      value: _,
+      onChange: _,
+      size: _,
+      color: _,
+      ref: _,
+      children: _,
+      ..._
+    } = _,
+    _ = _(_);
   return (0, _.jsx)(_, {
     ref: _,
     role: `switch`,
@@ -65937,36 +66773,7 @@ var _ = Object.assign(_, {
     "Variant-solid": `_88ugmg-q8D8-`,
     "Variant-bright": `MKSxe-MWyrs-`,
     ChildContainer: _,
-  },
-  _ = (0, _.createContext)({
-    Button: `basic`,
-    Checkbox: `basic`,
-    Combobox: `basic`,
-    LoadingSpinner: `basic`,
-    SegmentedControl: `basic`,
-    Select: `basic`,
-    Tabs: `basic`,
-    TextArea: `basic`,
-    TextInput: `basic`,
-  });
-function _(_) {
-  let { variants: _ = {}, children: _ } = _,
-    _ = (0, _.use)(_);
-  return (0, _.jsx)(_, {
-    value: {
-      ..._,
-      ..._,
-    },
-    children: _,
-  });
-}
-function _(_) {
-  return (0, _.use)(_)[_];
-}
-function _(_, _) {
-  let _ = _(_);
-  return !_ || _ === "default" ? _ : _;
-}
+  };
 function _(_) {
   let {
       size: _ = `3`,
@@ -66086,7 +66893,7 @@ function _(_, _) {
 function _(_) {
   let {
       variant: _,
-      size: _ = `2`,
+      size: _,
       minWidth: _ = `fit-content`,
       color: _,
       loading: _,
@@ -66098,6 +66905,7 @@ function _(_) {
       ..._
     } = _,
     _ = _(),
+    _ = _(_),
     _ = _
       ? (0, _.jsx)(_, {
           size: _,
@@ -66138,7 +66946,7 @@ function _(_) {
 function _(_) {
   let {
       variant: _,
-      size: _ = `2`,
+      size: _,
       minWidth: _ = `fit-content`,
       disabled: _,
       icon: _,
@@ -66146,6 +66954,7 @@ function _(_) {
       ..._
     } = _,
     _ = _(`Button`, _),
+    _ = _(_),
     _ = _(
       {
         onClick: _ ? _ : _,
@@ -67088,7 +67897,7 @@ function _(_) {
 function _(_) {
   let {
       variant: _ = `basic`,
-      size: _ = `2`,
+      size: _,
       radius: _,
       focusable: _ = !0,
       hoverable: _ = !0,
@@ -67099,6 +67908,7 @@ function _(_) {
       color: _,
       ..._
     } = _,
+    _ = _(_),
     _ = _ === `underline` ? `none` : _;
   return _(
     {
@@ -67218,69 +68028,69 @@ function _(_) {
 }
 var _ = {};
 ((_.arabic = () =>
-  _(() => import(`./localization_arabic.js`), [], import.meta.url)),
+  _(() => import(`./chunk~89a803f0a0.js`), [], import.meta.url)),
   (_.brazilian = () =>
-    _(() => import(`./localization_brazilian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~d00edbc9bc.js`), [], import.meta.url)),
   (_.bulgarian = () =>
-    _(() => import(`./localization_bulgarian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~6ff40f825a.js`), [], import.meta.url)),
   (_.czech = () =>
-    _(() => import(`./localization_czech.js`), [], import.meta.url)),
+    _(() => import(`./chunk~5481d27c11.js`), [], import.meta.url)),
   (_.danish = () =>
-    _(() => import(`./localization_danish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~38719df15b.js`), [], import.meta.url)),
   (_.dutch = () =>
-    _(() => import(`./localization_dutch.js`), [], import.meta.url)),
+    _(() => import(`./chunk~34eda9e5d0.js`), [], import.meta.url)),
   (_.english = () =>
-    _(() => import(`./localization_english.js`), [], import.meta.url)),
+    _(() => import(`./chunk~1f602198c6.js`), [], import.meta.url)),
   (_.finnish = () =>
-    _(() => import(`./localization_finnish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~951fbef41e.js`), [], import.meta.url)),
   (_.french = () =>
-    _(() => import(`./localization_french.js`), [], import.meta.url)),
+    _(() => import(`./chunk~8cdb223b4d.js`), [], import.meta.url)),
   (_.german = () =>
-    _(() => import(`./localization_german.js`), [], import.meta.url)),
+    _(() => import(`./chunk~dd7b2e8c9c.js`), [], import.meta.url)),
   (_.greek = () =>
-    _(() => import(`./localization_greek.js`), [], import.meta.url)),
+    _(() => import(`./chunk~8b8b32dca2.js`), [], import.meta.url)),
   (_.hungarian = () =>
-    _(() => import(`./localization_hungarian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~6cab8b1d2b.js`), [], import.meta.url)),
   (_.indonesian = () =>
-    _(() => import(`./localization_indonesian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~3e06799cd5.js`), [], import.meta.url)),
   (_.italian = () =>
-    _(() => import(`./localization_italian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~191fc766b2.js`), [], import.meta.url)),
   (_.japanese = () =>
-    _(() => import(`./localization_japanese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~bfb9245d4b.js`), [], import.meta.url)),
   (_.koreana = () =>
-    _(() => import(`./localization_koreana.js`), [], import.meta.url)),
+    _(() => import(`./chunk~937d60cb41.js`), [], import.meta.url)),
   (_.latam = () =>
-    _(() => import(`./localization_latam.js`), [], import.meta.url)),
+    _(() => import(`./chunk~f44c1cdaa6.js`), [], import.meta.url)),
   (_.malay = () =>
-    _(() => import(`./localization_malay.js`), [], import.meta.url)),
+    _(() => import(`./chunk~e549db3577.js`), [], import.meta.url)),
   (_.norwegian = () =>
-    _(() => import(`./localization_norwegian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~91df80654f.js`), [], import.meta.url)),
   (_.polish = () =>
-    _(() => import(`./localization_polish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~f510e2424a.js`), [], import.meta.url)),
   (_.portuguese = () =>
-    _(() => import(`./localization_portuguese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~33c59b3b51.js`), [], import.meta.url)),
   (_.romanian = () =>
-    _(() => import(`./localization_romanian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~0ce3fe2c7a.js`), [], import.meta.url)),
   (_.russian = () =>
-    _(() => import(`./localization_russian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~30e31cdd08.js`), [], import.meta.url)),
   (_.sc_schinese = () =>
-    _(() => import(`./localization_sc_schinese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~014d3780ee.js`), [], import.meta.url)),
   (_.schinese = () =>
-    _(() => import(`./localization_schinese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~615292967d.js`), [], import.meta.url)),
   (_.spanish = () =>
-    _(() => import(`./localization_spanish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~36cf0dbc2a.js`), [], import.meta.url)),
   (_.swedish = () =>
-    _(() => import(`./localization_swedish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~cb73f0619c.js`), [], import.meta.url)),
   (_.tchinese = () =>
-    _(() => import(`./localization_tchinese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~d710c4bf90.js`), [], import.meta.url)),
   (_.thai = () =>
-    _(() => import(`./localization_thai.js`), [], import.meta.url)),
+    _(() => import(`./chunk~ef16a772ee.js`), [], import.meta.url)),
   (_.turkish = () =>
-    _(() => import(`./localization_turkish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~3d2d033d5a.js`), [], import.meta.url)),
   (_.ukrainian = () =>
-    _(() => import(`./localization_ukrainian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~5f24a082ea.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./localization_vietnamese.js`), [], import.meta.url)));
+    _(() => import(`./chunk~32e8c88be8.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -67614,59 +68424,70 @@ function _(_) {
   });
 }
 var _ = {};
-((_.arabic = () => _(() => import(`./baseui_arabic.js`), [], import.meta.url)),
+((_.arabic = () =>
+  _(() => import(`./chunk~bcaf7074a2.js`), [], import.meta.url)),
   (_.brazilian = () =>
-    _(() => import(`./baseui_brazilian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~b5ab0bceb0.js`), [], import.meta.url)),
   (_.bulgarian = () =>
-    _(() => import(`./baseui_bulgarian.js`), [], import.meta.url)),
-  (_.czech = () => _(() => import(`./baseui_czech.js`), [], import.meta.url)),
-  (_.danish = () => _(() => import(`./baseui_danish.js`), [], import.meta.url)),
-  (_.dutch = () => _(() => import(`./baseui_dutch.js`), [], import.meta.url)),
+    _(() => import(`./chunk~2468249eb4.js`), [], import.meta.url)),
+  (_.czech = () =>
+    _(() => import(`./chunk~d8ac5da316.js`), [], import.meta.url)),
+  (_.danish = () =>
+    _(() => import(`./chunk~b16f5c2233.js`), [], import.meta.url)),
+  (_.dutch = () =>
+    _(() => import(`./chunk~da88d55f40.js`), [], import.meta.url)),
   (_.english = () =>
-    _(() => import(`./baseui_english.js`), [], import.meta.url)),
+    _(() => import(`./chunk~9a9b443366.js`), [], import.meta.url)),
   (_.finnish = () =>
-    _(() => import(`./baseui_finnish.js`), [], import.meta.url)),
-  (_.french = () => _(() => import(`./baseui_french.js`), [], import.meta.url)),
-  (_.german = () => _(() => import(`./baseui_german.js`), [], import.meta.url)),
-  (_.greek = () => _(() => import(`./baseui_greek.js`), [], import.meta.url)),
+    _(() => import(`./chunk~2889583767.js`), [], import.meta.url)),
+  (_.french = () =>
+    _(() => import(`./chunk~45b0ee0bd7.js`), [], import.meta.url)),
+  (_.german = () =>
+    _(() => import(`./chunk~8b9bc29636.js`), [], import.meta.url)),
+  (_.greek = () =>
+    _(() => import(`./chunk~5188b87c2c.js`), [], import.meta.url)),
   (_.hungarian = () =>
-    _(() => import(`./baseui_hungarian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~f2f3b39326.js`), [], import.meta.url)),
   (_.indonesian = () =>
-    _(() => import(`./baseui_indonesian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~5f6a9e9e95.js`), [], import.meta.url)),
   (_.italian = () =>
-    _(() => import(`./baseui_italian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~6d15d1d325.js`), [], import.meta.url)),
   (_.japanese = () =>
-    _(() => import(`./baseui_japanese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~ce7c034b01.js`), [], import.meta.url)),
   (_.koreana = () =>
-    _(() => import(`./baseui_koreana.js`), [], import.meta.url)),
-  (_.latam = () => _(() => import(`./baseui_latam.js`), [], import.meta.url)),
-  (_.malay = () => _(() => import(`./baseui_malay.js`), [], import.meta.url)),
+    _(() => import(`./chunk~1ddcd0f520.js`), [], import.meta.url)),
+  (_.latam = () =>
+    _(() => import(`./chunk~1eb3377858.js`), [], import.meta.url)),
+  (_.malay = () =>
+    _(() => import(`./chunk~f1abdc6c97.js`), [], import.meta.url)),
   (_.norwegian = () =>
-    _(() => import(`./baseui_norwegian.js`), [], import.meta.url)),
-  (_.polish = () => _(() => import(`./baseui_polish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~6d32dca426.js`), [], import.meta.url)),
+  (_.polish = () =>
+    _(() => import(`./chunk~145c768c73.js`), [], import.meta.url)),
   (_.portuguese = () =>
-    _(() => import(`./baseui_portuguese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~29063ababe.js`), [], import.meta.url)),
   (_.romanian = () =>
-    _(() => import(`./baseui_romanian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~f4f08fc04d.js`), [], import.meta.url)),
   (_.russian = () =>
-    _(() => import(`./baseui_russian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~df5b2337fa.js`), [], import.meta.url)),
   (_.sc_schinese = () =>
-    _(() => import(`./baseui_sc_schinese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~8d1e196945.js`), [], import.meta.url)),
   (_.schinese = () =>
-    _(() => import(`./baseui_schinese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~a0c0be1bdf.js`), [], import.meta.url)),
   (_.spanish = () =>
-    _(() => import(`./baseui_spanish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~1a9f02480e.js`), [], import.meta.url)),
   (_.swedish = () =>
-    _(() => import(`./baseui_swedish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~3b6820c187.js`), [], import.meta.url)),
   (_.tchinese = () =>
-    _(() => import(`./baseui_tchinese.js`), [], import.meta.url)),
-  (_.thai = () => _(() => import(`./baseui_thai.js`), [], import.meta.url)),
+    _(() => import(`./chunk~33c38c2b75.js`), [], import.meta.url)),
+  (_.thai = () =>
+    _(() => import(`./chunk~e6579e7374.js`), [], import.meta.url)),
   (_.turkish = () =>
-    _(() => import(`./baseui_turkish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~111982cadd.js`), [], import.meta.url)),
   (_.ukrainian = () =>
-    _(() => import(`./baseui_ukrainian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~43f9544495.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./baseui_vietnamese.js`), [], import.meta.url)));
+    _(() => import(`./chunk~905120269a.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -68075,10 +68896,38 @@ function _(_) {
       breakpoints: _,
       variants: _,
       popoverPresentation: _,
+      spacing: _,
+      radius: _,
+      textSizes: _,
+      defaultTextSize: _,
+      controlHeights: _,
+      controlRadius: _,
+      controlSize: _,
     } = _,
     _ = {
       display: `contents`,
     },
+    _ = (0, _.use)(_),
+    _ = _(
+      _,
+      {
+        spacing: _,
+        radius: _,
+        textSizes: _,
+        defaultTextSize: _,
+        controlHeights: _,
+        controlRadius: _,
+      },
+      _,
+    ),
+    { defaultTextSize: _, controlRadius: _ } = _,
+    _ = (0, _.useMemo)(
+      () => ({
+        defaultTextSize: _,
+        controlRadius: _,
+      }),
+      [_, _],
+    ),
     _;
   typeof _ == `string` ? (_ = _) : _ && _(_, `accent`, _);
   let _;
@@ -68108,6 +68957,16 @@ function _(_) {
     }),
   });
   return (
+    _ !== _ &&
+      (_ = (0, _.jsx)(_, {
+        value: _,
+        children: _,
+      })),
+    _ &&
+      (_ = (0, _.jsx)(_, {
+        size: _,
+        children: _,
+      })),
     _ &&
       (_ = (0, _.jsx)(_, {
         presentation: _,
@@ -68119,6 +68978,43 @@ function _(_) {
           children: _,
         })
       : _
+  );
+}
+var _ = (0, _.createContext)({
+  defaultTextSize: `3`,
+  controlRadius: `sm`,
+});
+function _(_, _, _) {
+  let { spacing: _, radius: _, textSizes: _, controlHeights: _ } = _,
+    _ = _.defaultTextSize ?? _.defaultTextSize,
+    _ = _.controlRadius ?? _.controlRadius;
+  for (let [_, _] of Object.entries(_ ?? {})) _ && (_[`--spacing-${_}`] = _);
+  for (let [_, _] of Object.entries(_ ?? {})) _ && (_[`--radius-${_}`] = _);
+  for (let [_, _] of Object.entries(_ ?? {}))
+    _ && (_[`--control-height-${_}`] = _);
+  for (let [_, _] of Object.entries(_ ?? {}))
+    _ &&
+      (_.size &&
+        ((_[`--text-size-${_}`] = _.size),
+        (_[`--heading-size-${_}`] = `var(--text-size-${_})`)),
+      _.lineHeight &&
+        ((_[`--line-height-${_}`] = _.lineHeight),
+        (_[`--heading-line-height-${_}`] = `var(--line-height-${_})`)),
+      _.letterSpacing && (_[`--letter-spacing-${_}`] = _.letterSpacing));
+  (_.defaultTextSize || _?.[_]) &&
+    ((_[`--default-font-size`] = `var(--text-size-${_})`),
+    (_[`--default-line-height`] = `var(--line-height-${_})`),
+    (_[`--default-letter-spacing`] = `var(--letter-spacing-${_})`));
+  let _ = _(_);
+  return (
+    (_.controlRadius || (_ && _?.[_])) &&
+      (_[`--control-radius`] = _ ? `var(--radius-${_})` : _),
+    _ === _.defaultTextSize && _ === _.controlRadius
+      ? _
+      : {
+          defaultTextSize: _,
+          controlRadius: _,
+        }
   );
 }
 function _(_, _, _) {
@@ -68133,7 +69029,6 @@ function _(_, _, _) {
 }
 var _ = _.memo(function (_) {
   let {
-      defaultTextSize: _,
       accentColor: _ = `blue`,
       dullColor: _ = `greyneutral`,
       successColor: _ = `green`,
@@ -68148,17 +69043,11 @@ var _ = _.memo(function (_) {
       popoverPresentation: _,
       children: _,
       zoo: _,
+      ..._
     } = _,
     _ = _.useRef(null);
-  _(_, _, _, _);
-  let _;
   return (
-    _ &&
-      (_ = {
-        "--default-font-size": `var(--text-size-${_})`,
-        "--default-line-height": `var(--line-height-${_})`,
-        "--default-letter-spacing": `var(--letter-spacing-${_})`,
-      }),
+    _(_, _, _, _),
     (0, _.jsx)(_, {
       children: (0, _.jsx)(_, {
         breakpoints: _,
@@ -68166,8 +69055,8 @@ var _ = _.memo(function (_) {
           children: (0, _.jsx)(`div`, {
             ref: _,
             className: (0, _.default)(_, `noOpinionatedGlobalStyles`),
-            style: _,
             children: (0, _.jsxs)(_, {
+              ..._,
               accentColor: _,
               dullColor: _,
               successColor: _,
@@ -68215,195 +69104,140 @@ function _(_) {
     children: _,
   });
 }
-function _(_, _) {
-  return _(
-    (_) => {
-      if (!_) return;
-      let _ = _(_.ownerDocument.defaultView, (_) => {
-        _(_[0]);
-      });
-      return (_.observe(_), () => _.unobserve(_));
-    },
-    [_, _],
-  );
-}
-function _(_) {
-  return _(
-    _,
-    _.useCallback(
-      (_, _) =>
-        _.ResizeObserver
-          ? new _.ResizeObserver(_)
-          : (_(!1, `ResizeObserver is not available`),
-            {
-              observe: () => {},
-              unobserve: () => {},
-              disconnect: () => {},
-            }),
-      [],
-    ),
-  );
-}
-function _(_, _) {
-  return _(
-    _,
-    _.useCallback((_, _) => new _.IntersectionObserver(_, _), [_]),
-  );
-}
-function _(_, _) {
-  let _ = _.useRef(void 0);
-  return _((_) => {
-    (!_.current && _.isIntersecting && _.onEnter?.(_),
-      _.current && !_.isIntersecting && _.onLeave?.(_),
-      _.onIntersectionChange?.(_),
-      (_.current = _.isIntersecting));
-  }, _);
-}
-function _(_, ..._) {
-  let _ = new _.ownerDocument.defaultView.IntersectionObserver(..._);
-  return (_.observe(_), _);
-}
 var _ = {};
 ((_.arabic = () =>
-  _(() => import(`./moderation_arabic.js`), [], import.meta.url)),
+  _(() => import(`./chunk~4eb3f4dff1.js`), [], import.meta.url)),
   (_.brazilian = () =>
-    _(() => import(`./moderation_brazilian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~09d034e455.js`), [], import.meta.url)),
   (_.bulgarian = () =>
-    _(() => import(`./moderation_bulgarian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~dc7bf07458.js`), [], import.meta.url)),
   (_.czech = () =>
-    _(() => import(`./moderation_czech.js`), [], import.meta.url)),
+    _(() => import(`./chunk~4ad06120c2.js`), [], import.meta.url)),
   (_.danish = () =>
-    _(() => import(`./moderation_danish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~2a77991396.js`), [], import.meta.url)),
   (_.dutch = () =>
-    _(() => import(`./moderation_dutch.js`), [], import.meta.url)),
+    _(() => import(`./chunk~164089af5b.js`), [], import.meta.url)),
   (_.english = () =>
-    _(() => import(`./moderation_english.js`), [], import.meta.url)),
+    _(() => import(`./chunk~4407759d3a.js`), [], import.meta.url)),
   (_.finnish = () =>
-    _(() => import(`./moderation_finnish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~6e967ee1c8.js`), [], import.meta.url)),
   (_.french = () =>
-    _(() => import(`./moderation_french.js`), [], import.meta.url)),
+    _(() => import(`./chunk~73189f3d07.js`), [], import.meta.url)),
   (_.german = () =>
-    _(() => import(`./moderation_german.js`), [], import.meta.url)),
+    _(() => import(`./chunk~a4631c16ad.js`), [], import.meta.url)),
   (_.greek = () =>
-    _(() => import(`./moderation_greek.js`), [], import.meta.url)),
+    _(() => import(`./chunk~3a121963ff.js`), [], import.meta.url)),
   (_.hungarian = () =>
-    _(() => import(`./moderation_hungarian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~710e6c7411.js`), [], import.meta.url)),
   (_.indonesian = () =>
-    _(() => import(`./moderation_indonesian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~01fc354d8f.js`), [], import.meta.url)),
   (_.italian = () =>
-    _(() => import(`./moderation_italian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~5ca50c1e4d.js`), [], import.meta.url)),
   (_.japanese = () =>
-    _(() => import(`./moderation_japanese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~eb4daecb57.js`), [], import.meta.url)),
   (_.koreana = () =>
-    _(() => import(`./moderation_koreana.js`), [], import.meta.url)),
+    _(() => import(`./chunk~94c5b095bf.js`), [], import.meta.url)),
   (_.latam = () =>
-    _(() => import(`./moderation_latam.js`), [], import.meta.url)),
+    _(() => import(`./chunk~4847f74419.js`), [], import.meta.url)),
   (_.malay = () =>
-    _(() => import(`./moderation_malay.js`), [], import.meta.url)),
+    _(() => import(`./chunk~428b91d953.js`), [], import.meta.url)),
   (_.norwegian = () =>
-    _(() => import(`./moderation_norwegian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~d4fc93c526.js`), [], import.meta.url)),
   (_.polish = () =>
-    _(() => import(`./moderation_polish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~b0ccf90930.js`), [], import.meta.url)),
   (_.portuguese = () =>
-    _(() => import(`./moderation_portuguese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~a710d39aad.js`), [], import.meta.url)),
   (_.romanian = () =>
-    _(() => import(`./moderation_romanian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~404995b799.js`), [], import.meta.url)),
   (_.russian = () =>
-    _(() => import(`./moderation_russian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~727b931e75.js`), [], import.meta.url)),
   (_.sc_schinese = () =>
-    _(() => import(`./moderation_sc_schinese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~8e746ebda1.js`), [], import.meta.url)),
   (_.schinese = () =>
-    _(() => import(`./moderation_schinese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~6e0ef7e31b.js`), [], import.meta.url)),
   (_.spanish = () =>
-    _(() => import(`./moderation_spanish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~35191ad5dd.js`), [], import.meta.url)),
   (_.swedish = () =>
-    _(() => import(`./moderation_swedish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~0ac5103c87.js`), [], import.meta.url)),
   (_.tchinese = () =>
-    _(() => import(`./moderation_tchinese.js`), [], import.meta.url)),
-  (_.thai = () => _(() => import(`./moderation_thai.js`), [], import.meta.url)),
+    _(() => import(`./chunk~c5176a2d1b.js`), [], import.meta.url)),
+  (_.thai = () =>
+    _(() => import(`./chunk~1dc3673872.js`), [], import.meta.url)),
   (_.turkish = () =>
-    _(() => import(`./moderation_turkish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~5bd763b529.js`), [], import.meta.url)),
   (_.ukrainian = () =>
-    _(() => import(`./moderation_ukrainian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~319fe33bee.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(() => import(`./moderation_vietnamese.js`), [], import.meta.url)));
+    _(() => import(`./chunk~7c3efb0a98.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
 var _ = _(_),
   _ = {};
 ((_.arabic = () =>
-  _(() => import(`./moderationinternal_arabic.js`), [], import.meta.url)),
+  _(() => import(`./chunk~899814fe04.js`), [], import.meta.url)),
   (_.brazilian = () =>
-    _(() => import(`./moderationinternal_brazilian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~c0d4bb8cf6.js`), [], import.meta.url)),
   (_.bulgarian = () =>
-    _(() => import(`./moderationinternal_bulgarian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~99fd9b28c3.js`), [], import.meta.url)),
   (_.czech = () =>
-    _(() => import(`./moderationinternal_czech.js`), [], import.meta.url)),
+    _(() => import(`./chunk~b85fa00d1e.js`), [], import.meta.url)),
   (_.danish = () =>
-    _(() => import(`./moderationinternal_danish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~da207f789f.js`), [], import.meta.url)),
   (_.dutch = () =>
-    _(() => import(`./moderationinternal_dutch.js`), [], import.meta.url)),
+    _(() => import(`./chunk~0f2641ad42.js`), [], import.meta.url)),
   (_.english = () =>
-    _(() => import(`./moderationinternal_english.js`), [], import.meta.url)),
+    _(() => import(`./chunk~123788c668.js`), [], import.meta.url)),
   (_.finnish = () =>
-    _(() => import(`./moderationinternal_finnish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~61a52c0c58.js`), [], import.meta.url)),
   (_.french = () =>
-    _(() => import(`./moderationinternal_french.js`), [], import.meta.url)),
+    _(() => import(`./chunk~74e4a1a013.js`), [], import.meta.url)),
   (_.german = () =>
-    _(() => import(`./moderationinternal_german.js`), [], import.meta.url)),
+    _(() => import(`./chunk~03e8fc63a4.js`), [], import.meta.url)),
   (_.greek = () =>
-    _(() => import(`./moderationinternal_greek.js`), [], import.meta.url)),
+    _(() => import(`./chunk~ade80bf8be.js`), [], import.meta.url)),
   (_.hungarian = () =>
-    _(() => import(`./moderationinternal_hungarian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~a5a81fb036.js`), [], import.meta.url)),
   (_.indonesian = () =>
-    _(() => import(`./moderationinternal_indonesian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~118d47612d.js`), [], import.meta.url)),
   (_.italian = () =>
-    _(() => import(`./moderationinternal_italian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~edaffbcc8a.js`), [], import.meta.url)),
   (_.japanese = () =>
-    _(() => import(`./moderationinternal_japanese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~7f602d431e.js`), [], import.meta.url)),
   (_.koreana = () =>
-    _(() => import(`./moderationinternal_koreana.js`), [], import.meta.url)),
+    _(() => import(`./chunk~94d4bdb6a7.js`), [], import.meta.url)),
   (_.latam = () =>
-    _(() => import(`./moderationinternal_latam.js`), [], import.meta.url)),
+    _(() => import(`./chunk~4b67cfb830.js`), [], import.meta.url)),
   (_.malay = () =>
-    _(() => import(`./moderationinternal_malay.js`), [], import.meta.url)),
+    _(() => import(`./chunk~c79059f971.js`), [], import.meta.url)),
   (_.norwegian = () =>
-    _(() => import(`./moderationinternal_norwegian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~41120e06a6.js`), [], import.meta.url)),
   (_.polish = () =>
-    _(() => import(`./moderationinternal_polish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~06190afddf.js`), [], import.meta.url)),
   (_.portuguese = () =>
-    _(() => import(`./moderationinternal_portuguese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~9328447581.js`), [], import.meta.url)),
   (_.romanian = () =>
-    _(() => import(`./moderationinternal_romanian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~2a5b6f1aae.js`), [], import.meta.url)),
   (_.russian = () =>
-    _(() => import(`./moderationinternal_russian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~e1be9b502f.js`), [], import.meta.url)),
   (_.sc_schinese = () =>
-    _(
-      () => import(`./moderationinternal_sc_schinese.js`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./chunk~78b80ae9d3.js`), [], import.meta.url)),
   (_.schinese = () =>
-    _(() => import(`./moderationinternal_schinese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~c254a05bd5.js`), [], import.meta.url)),
   (_.spanish = () =>
-    _(() => import(`./moderationinternal_spanish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~bf920d98b7.js`), [], import.meta.url)),
   (_.swedish = () =>
-    _(() => import(`./moderationinternal_swedish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~b8baa7275b.js`), [], import.meta.url)),
   (_.tchinese = () =>
-    _(() => import(`./moderationinternal_tchinese.js`), [], import.meta.url)),
+    _(() => import(`./chunk~7fe69265ad.js`), [], import.meta.url)),
   (_.thai = () =>
-    _(() => import(`./moderationinternal_thai.js`), [], import.meta.url)),
+    _(() => import(`./chunk~037fa76492.js`), [], import.meta.url)),
   (_.turkish = () =>
-    _(() => import(`./moderationinternal_turkish.js`), [], import.meta.url)),
+    _(() => import(`./chunk~0342b5f1df.js`), [], import.meta.url)),
   (_.ukrainian = () =>
-    _(() => import(`./moderationinternal_ukrainian.js`), [], import.meta.url)),
+    _(() => import(`./chunk~0e7ebb4cdf.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(
-      () => import(`./moderationinternal_vietnamese.js`),
-      [],
-      import.meta.url,
-    )));
+    _(() => import(`./chunk~d2a1a1961d.js`), [], import.meta.url)));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -70132,12 +70966,22 @@ function _(_, _) {
   );
 }
 var _ = new Set([42]),
+  _ = null,
   _ = null;
-function _() {
-  return ((_ ||= _(_, _)), _);
-}
 function _(_) {
-  return [
+  return (
+    (_ ||= _(_, _)),
+    (_ ||= [
+      {
+        value: 70,
+      },
+      ..._,
+    ]),
+    _ ? _ : _
+  );
+}
+function _(_, _) {
+  let _ = [
     {
       value: 27,
       strOverrideReasonNameLocToken: `#reportforumpost_reason_disruptive`,
@@ -70180,25 +71024,38 @@ function _(_) {
       strDescriptionLocToken: `#reportforumpost_description_childsafety`,
       bShowRightArrow: !0,
     },
-    {
-      strLocToken: `#reportforumpost_reason_intellectualproperty`,
-      strDescriptionLocToken: `#reportforumpost_description_intellectualproperty`,
-      children: [
-        {
-          value: 23,
-          strOverrideReasonNameLocToken: `#reportforumpost_reason_cheating`,
-        },
-        _(_),
-        _(_),
-      ],
-      bShowRightArrow: !0,
-    },
-    {
-      value: 2,
-      strOverrideReasonNameLocToken: `#reportforumpost_reason_notfound`,
-      bShowRightArrow: !0,
-    },
   ];
+  return (
+    _ &&
+      _.push({
+        value: 70,
+        strOverrideReasonNameLocToken: `#reportforumpost_reason_malware`,
+        strDescriptionLocToken: `#reportforumpost_description_malware`,
+        bShowRightArrow: !0,
+      }),
+    _(_),
+    [
+      ..._,
+      {
+        strLocToken: `#reportforumpost_reason_intellectualproperty`,
+        strDescriptionLocToken: `#reportforumpost_description_intellectualproperty`,
+        children: [
+          {
+            value: 23,
+            strOverrideReasonNameLocToken: `#reportforumpost_reason_cheating`,
+          },
+          _(_),
+          _(_),
+        ],
+        bShowRightArrow: !0,
+      },
+      {
+        value: 2,
+        strOverrideReasonNameLocToken: `#reportforumpost_reason_notfound`,
+        bShowRightArrow: !0,
+      },
+    ]
+  );
 }
 function _(_, _) {
   if (!_ || _.size === 0 || _(_)) return !1;
@@ -70414,6 +71271,8 @@ function _(_) {
       return _.Localize(`#ContentReportReason_Miscategorized`);
     case 68:
       return _.Localize(`#ContentReportReason_BypassingProfanityFilter`);
+    case 70:
+      return _.Localize(`#ContentReportReason_Malware`);
     default:
       return ``;
   }
@@ -76008,6 +76867,8 @@ function _(_) {
       navID: _,
       children: _,
       allowScrollBehind: _,
+      onPointerDown: _,
+      onPointerUp: _,
       ..._
     } = _,
     [_, _] = _.useState(!1),
@@ -76020,9 +76881,22 @@ function _(_) {
               _.ownerDocument.defaultView.innerHeight,
           ));
     }, []),
+    _ = _.useRef(!1),
     _ = _.useCallback(
       (_) => {
-        _.target == _.currentTarget && _(`backdropclick`);
+        ((_.current = _.target == _.currentTarget), _?.(_));
+      },
+      [_],
+    ),
+    _ = _.useCallback(
+      (_) => {
+        (_.target != _.currentTarget && (_.current = !1), _?.(_));
+      },
+      [_],
+    ),
+    _ = _.useCallback(
+      (_) => {
+        _.target == _.currentTarget && _.current && _(`backdropclick`);
       },
       [_],
     );
@@ -76035,6 +76909,8 @@ function _(_) {
       onClose: () => _(`onclose`),
       onClick: _,
       ..._,
+      onPointerDown: _,
+      onPointerUp: _,
       children: (0, _.jsx)(_, {
         children: _,
       }),
@@ -76254,7 +77130,7 @@ function _(_) {
         (0, _.jsx)(_, {
           popup: _,
         }),
-      _.createPortal(
+      _(
         (0, _.jsx)(_, {
           ownerWindow: _,
           children: (0, _.jsxs)(_, {
@@ -76274,7 +77150,10 @@ function _(_) {
                   (0, _.jsx)(_, {
                     bCenterPopupsOnWindow: _?.BCenterPopupsOnWindow(),
                     browserInfo: _?.GetBrowserInfo(),
-                    children: _,
+                    children: (0, _.jsx)(_.Suspense, {
+                      fallback: null,
+                      children: _,
+                    }),
                   }),
                 ],
               }),
@@ -76622,10 +77501,15 @@ function _() {
   });
 }
 function _(_) {
-  let { reportMutation: _, publishedFileId: _, onClose: _ } = _,
+  let {
+      reportMutation: _,
+      publishedFileId: _,
+      bWorkshopItem: _,
+      onClose: _,
+    } = _,
     { strTitle: _, elContent: _ } = _({
       reportMutation: _,
-      rgReportReasonTree: (0, _.useMemo)(() => _(_), [_]),
+      rgReportReasonTree: (0, _.useMemo)(() => _(_, _), [_, _]),
       onClose: _,
     });
   return (0, _.jsx)(_, {
@@ -90155,6 +91039,7 @@ function _() {
         ? (0, _.jsx)(_, {
             reportMutation: _,
             publishedFileId: _.type === `ugcfile` ? _.publishedFileId : void 0,
+            bWorkshopItem: _.type === `ugcfile` && !!_.bWorkshop,
             onClose: () => _(null),
           })
         : (0, _.jsx)(_, {
@@ -90759,7 +91644,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
     _(
-      () => import(`./profile.js`).then((_) => _._),
+      () => import(`./chunk~42ec0f569d.js`).then((_) => _._),
       __vite__mapDeps([
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
         20, 21, 22, 23,
@@ -90769,202 +91654,201 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./events.js`),
+      () => import(`./chunk~3056eb587a.js`),
       __vite__mapDeps([
-        24, 1, 2, 25, 26, 27, 28, 29, 5, 6, 30, 31, 7, 8, 9, 10, 11, 12, 13, 14,
-        32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 15, 17, 45, 46, 47,
-        48, 49, 50, 51, 52, 16, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64,
-        65, 66, 67, 68, 69, 70, 71, 72, 73, 18, 74, 75, 76, 77, 78, 79, 80, 81,
-        82, 83, 84, 85, 86, 87, 88, 19, 20, 89, 90, 91, 92, 93, 94, 95, 96,
+        24, 1, 2, 25, 26, 27, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14, 31,
+        32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 15, 17, 44, 45, 46, 47,
+        48, 49, 50, 51, 16, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64,
+        65, 66, 67, 68, 69, 70, 71, 18, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81,
+        82, 83, 84, 85, 19, 20, 86, 87, 88, 89, 90, 91, 92, 93,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./eventeditor.js`),
+      () => import(`./chunk~3d19a4d13e.js`),
       __vite__mapDeps([
-        97, 1, 2, 25, 26, 27, 28, 29, 5, 6, 30, 31, 7, 8, 9, 10, 11, 12, 13, 14,
-        32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 15, 17, 45, 46, 47,
-        48, 49, 50, 51, 52, 16, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64,
-        65, 66, 67, 68, 69, 70, 71, 72, 73, 18, 74, 75, 76, 77, 78, 79, 80, 81,
-        82, 83, 84, 85, 86, 87, 88, 19, 20, 89, 90, 91, 92, 93, 94, 95, 98, 99,
-        100, 101, 102, 103, 104, 105,
+        94, 1, 2, 25, 26, 27, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14, 31,
+        32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 15, 17, 44, 45, 46, 47,
+        48, 49, 50, 51, 16, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64,
+        65, 66, 67, 68, 69, 70, 71, 18, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81,
+        82, 83, 84, 85, 19, 20, 86, 87, 88, 89, 90, 91, 92, 95, 96, 97, 98, 99,
+        100, 101, 102,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./eventinternal.js`),
+      () => import(`./chunk~b4379065c0.js`),
       __vite__mapDeps([
-        106, 1, 2, 25, 26, 27, 28, 29, 5, 6, 30, 31, 7, 8, 9, 10, 11, 12, 13,
-        14, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 15, 17, 45, 46,
-        47, 48, 49, 50, 51, 52, 16, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
-        64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 18, 74, 75, 76, 77, 78, 79, 80,
-        81, 82, 83, 84, 85, 86, 87, 88, 19, 20, 89, 90, 91, 92, 93, 94, 95, 107,
+        103, 1, 2, 25, 26, 27, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14,
+        31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 15, 17, 44, 45, 46,
+        47, 48, 49, 50, 51, 16, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
+        64, 65, 66, 67, 68, 69, 70, 71, 18, 72, 73, 74, 75, 76, 77, 78, 79, 80,
+        81, 82, 83, 84, 85, 19, 20, 86, 87, 88, 89, 90, 91, 92, 104,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./communityawardsapp.js`),
-      __vite__mapDeps([108, 1, 2, 19, 5, 6, 16, 20]),
+      () => import(`./chunk~131fd42dd2.js`),
+      __vite__mapDeps([105, 1, 2, 19, 5, 6, 16, 20]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./broadcasts.js`),
+      () => import(`./chunk~a660b35c87.js`),
       __vite__mapDeps([
-        109, 1, 2, 26, 27, 28, 29, 5, 6, 30, 31, 7, 8, 9, 10, 11, 12, 13, 14,
-        32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 15, 17, 45, 46, 47,
-        48, 49, 50, 51, 52, 16, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64,
-        65, 66, 67, 68, 69, 70, 71, 72, 73, 18, 74, 75, 76, 77, 78, 79, 80, 81,
-        82, 83, 84, 110, 111, 112, 113, 114, 89, 115, 116, 117, 100, 118, 21,
-        22, 119,
+        106, 1, 2, 25, 26, 27, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14,
+        31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 15, 17, 44, 45, 46,
+        47, 48, 49, 50, 51, 16, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
+        64, 65, 66, 67, 68, 69, 70, 71, 18, 72, 73, 74, 75, 76, 77, 78, 79, 81,
+        107, 108, 109, 110, 111, 86, 112, 113, 114, 97, 115, 21, 22, 116,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./gamenotes.js`),
+      () => import(`./chunk~b9c03b4bc1.js`),
       __vite__mapDeps([
-        120, 1, 2, 5, 6, 67, 68, 69, 70, 37, 10, 11, 79, 9, 80, 121, 122, 123,
-        124,
+        117, 1, 2, 5, 6, 66, 67, 68, 69, 37, 10, 11, 77, 9, 78, 118, 119, 120,
+        121,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./managefriends2.js`),
-      __vite__mapDeps([125, 1, 2, 103, 15, 104]),
+      () => import(`./chunk~19b8772fda.js`),
+      __vite__mapDeps([122, 1, 2, 100, 15, 101]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./faqs.js`),
+      () => import(`./chunk~084244ab43.js`),
       __vite__mapDeps([
-        126, 1, 2, 28, 27, 29, 5, 6, 30, 31, 7, 8, 9, 10, 11, 12, 13, 14, 32,
-        33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 15, 17, 45, 54, 55, 72,
-        73, 18, 74, 77, 67, 68, 69, 70, 47, 48, 49, 50, 51, 52, 16, 53, 56, 78,
-        127, 128, 93, 94, 101, 102, 129,
+        123, 1, 2, 27, 26, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14, 31,
+        32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 15, 17, 44, 53, 54, 70,
+        71, 18, 72, 75, 66, 67, 68, 69, 46, 47, 48, 49, 50, 51, 16, 52, 55, 76,
+        124, 125, 90, 91, 98, 99, 126,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./conference.js`),
+      () => import(`./chunk~a14d6256c9.js`),
       __vite__mapDeps([
-        130, 1, 2, 28, 27, 29, 5, 6, 30, 31, 7, 8, 9, 10, 11, 12, 13, 14, 32,
-        33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 15, 17, 45, 46, 47, 48,
-        49, 50, 51, 52, 16, 53, 54, 55, 56, 131, 84, 110, 111, 99, 112, 113,
-        114, 89, 115, 116, 117, 100, 118, 90, 132, 133, 127, 128, 134, 73, 18,
-        81, 82, 135, 91, 92, 136,
+        127, 1, 2, 27, 26, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14, 31,
+        32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 15, 17, 44, 45, 46, 47,
+        48, 49, 50, 51, 16, 52, 53, 54, 55, 128, 81, 107, 108, 96, 109, 110,
+        111, 86, 112, 113, 114, 97, 115, 87, 129, 130, 124, 125, 131, 71, 18,
+        132, 88, 89, 133,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./questions2.js`),
+      () => import(`./chunk~e4e8500939.js`),
       __vite__mapDeps([
-        137, 1, 2, 134, 5, 6, 33, 38, 54, 55, 73, 27, 15, 18, 17, 81, 82, 115,
-        116, 117, 135,
+        134, 1, 2, 131, 5, 6, 32, 38, 53, 54, 71, 26, 15, 18, 17, 112, 113, 114,
+        132,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./login.js`),
-      __vite__mapDeps([138, 1, 2, 116, 5, 6, 117, 139]),
+      () => import(`./chunk~bb3c85a45d.js`),
+      __vite__mapDeps([135, 1, 2, 113, 5, 6, 114, 136]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./itemcollection.js`),
-      __vite__mapDeps([140, 1, 2, 39, 5, 6, 40, 41, 13, 141]),
+      () => import(`./chunk~c5879b2b1f.js`),
+      __vite__mapDeps([137, 1, 2, 39, 5, 6, 40, 41, 13, 138]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./communityhomeheader.js`),
-      __vite__mapDeps([142, 1, 2, 35, 13, 143]),
+      () => import(`./chunk~419fcc29ce.js`),
+      __vite__mapDeps([139, 1, 2, 34, 13, 140]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./greenenvelope.js`),
+      () => import(`./chunk~ef6e72cfc2.js`),
       __vite__mapDeps([
-        144, 1, 2, 44, 145, 29, 3, 32, 73, 27, 15, 18, 17, 146, 113, 114, 147,
-        148,
+        141, 1, 2, 43, 142, 28, 3, 31, 71, 26, 15, 18, 17, 143, 110, 111, 144,
+        145,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./notificationsapp.js`),
+      () => import(`./chunk~a5ef2be4d8.js`),
       __vite__mapDeps([
-        149, 1, 2, 145, 29, 3, 32, 73, 27, 15, 18, 17, 146, 113, 114, 147, 150,
+        146, 1, 2, 142, 28, 3, 31, 71, 26, 15, 18, 17, 143, 110, 111, 144, 147,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./gamerecordingclip.js`).then((_) => _._),
+      () => import(`./chunk~0cfd989355.js`).then((_) => _._),
       __vite__mapDeps([
-        151, 1, 2, 114, 33, 51, 5, 6, 40, 41, 12, 52, 17, 15, 123, 152,
+        148, 1, 2, 111, 32, 50, 5, 6, 40, 41, 12, 51, 17, 15, 120, 149,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./market.js`),
+      () => import(`./chunk~6b2e92847b.js`),
       __vite__mapDeps([
-        153, 1, 2, 57, 58, 59, 60, 61, 62, 154, 155, 156, 68, 69, 157, 63, 64,
-        85, 86,
+        150, 1, 2, 56, 57, 58, 59, 60, 61, 151, 152, 153, 67, 68, 154, 62, 63,
+        82, 83,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./marketsearch.js`),
+      () => import(`./chunk~1136f5743b.js`),
       __vite__mapDeps([
-        158, 1, 2, 154, 59, 60, 61, 62, 155, 156, 68, 69, 157, 153, 57, 58, 63,
-        64, 85, 86,
+        155, 1, 2, 151, 58, 59, 60, 61, 152, 153, 67, 68, 154, 150, 56, 57, 62,
+        63, 82, 83,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./iteminfo.js`),
+      () => import(`./chunk~8dc488a70b.js`),
       __vite__mapDeps([
-        159, 1, 2, 160, 27, 57, 58, 48, 49, 154, 59, 60, 61, 62, 155, 156, 68,
-        69, 157, 161, 32, 42, 8, 9, 75, 76, 146, 162,
+        156, 1, 2, 157, 26, 56, 57, 47, 48, 151, 58, 59, 60, 61, 152, 153, 67,
+        68, 154, 158, 31, 42, 8, 9, 73, 74, 143, 159,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./marketselldialog.js`),
+      () => import(`./chunk~735ee4eaca.js`),
       __vite__mapDeps([
-        163, 1, 2, 57, 58, 48, 49, 59, 60, 61, 62, 154, 155, 156, 68, 69, 157,
-        63, 64, 71, 37, 43, 160, 27, 161, 32, 42, 8, 9, 75, 76, 146, 162, 164,
+        160, 1, 2, 56, 57, 47, 48, 58, 59, 60, 61, 151, 152, 153, 67, 68, 154,
+        62, 63, 36, 37, 157, 26, 158, 31, 42, 8, 9, 73, 74, 143, 159, 161,
       ]),
       import.meta.url,
     ),
@@ -90973,54 +91857,54 @@ var _ = _.lazy(() =>
     default: (
       await _(
         async () => {
-          let { GlobalFooter: _ } = await import(`./src.js`);
+          let { GlobalFooter: _ } = await import(`./chunk~6183326f73.js`);
           return {
             GlobalFooter: _,
           };
         },
-        __vite__mapDeps([165, 1, 2, 57, 58, 48, 49, 155, 156, 166]),
+        __vite__mapDeps([162, 1, 2, 56, 57, 47, 48, 152, 153, 163]),
         import.meta.url,
       )
     ).GlobalFooter,
   })),
   _ = _.lazy(() =>
     _(
-      () => import(`./forumreportedsubjects.js`),
-      __vite__mapDeps([167, 1, 2, 4, 3, 5, 6, 168]),
+      () => import(`./chunk~a630fd1ed9.js`),
+      __vite__mapDeps([164, 1, 2, 4, 3, 5, 6, 165]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./forummoderationtool.js`),
+      () => import(`./chunk~7dfa3522ea.js`),
       __vite__mapDeps([
-        169, 2, 1, 4, 3, 170, 48, 49, 5, 6, 171, 65, 60, 61, 87, 66, 88, 161,
-        27, 172, 173, 30, 31, 174, 34, 35, 36, 175, 176, 177,
+        166, 2, 1, 4, 3, 167, 47, 48, 5, 6, 168, 64, 59, 60, 84, 65, 85, 158,
+        26, 169, 170, 29, 30, 171, 33, 34, 35, 172, 173, 174,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./copycommentlinktoclipboardbutton.js`),
-      __vite__mapDeps([178, 1, 2, 176, 177]),
+      () => import(`./chunk~92d122cd6f.js`),
+      __vite__mapDeps([175, 1, 2, 173, 174]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./inlinecommentmoderationtool.js`),
+      () => import(`./chunk~84da070c72.js`),
       __vite__mapDeps([
-        179, 2, 1, 4, 3, 170, 48, 49, 5, 6, 171, 65, 60, 61, 87, 66, 88, 161,
-        27, 172, 173, 30, 31, 174, 34, 35, 36, 175,
+        176, 2, 1, 4, 3, 167, 47, 48, 5, 6, 168, 64, 59, 60, 84, 65, 85, 158,
+        26, 169, 170, 29, 30, 171, 33, 34, 35, 172,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./commentthreadreportedsubjectslist.js`),
-      __vite__mapDeps([180, 2, 1, 4, 3, 167, 5, 6, 168]),
+      () => import(`./chunk~ffbd589b71.js`),
+      __vite__mapDeps([177, 2, 1, 4, 3, 164, 5, 6, 165]),
       import.meta.url,
     ),
   ),
@@ -91029,13 +91913,13 @@ var _ = _.lazy(() =>
       await _(
         async () => {
           let { UGCBanDialogOnGlobalVariable: _ } = await import(
-            `./ugcbandialog.js`
+            `./chunk~809b202bec.js`
           );
           return {
             UGCBanDialogOnGlobalVariable: _,
           };
         },
-        __vite__mapDeps([181, 1, 2, 63, 64, 65, 60, 61, 173, 30, 31, 174, 182]),
+        __vite__mapDeps([178, 1, 2, 62, 63, 64, 59, 60, 170, 29, 30, 171, 179]),
         import.meta.url,
       )
     ).UGCBanDialogOnGlobalVariable,
@@ -91045,15 +91929,15 @@ var _ = _.lazy(() =>
       await _(
         async () => {
           let { UGCModerationSubjectPanel: _ } = await import(
-            `./ugcmoderationsubjectpanel.js`
+            `./chunk~542201d3fa.js`
           );
           return {
             UGCModerationSubjectPanel: _,
           };
         },
         __vite__mapDeps([
-          183, 1, 2, 63, 64, 4, 3, 171, 48, 49, 65, 60, 61, 87, 66, 88, 161, 27,
-          5, 6, 172, 184,
+          180, 1, 2, 62, 63, 4, 3, 168, 47, 48, 64, 59, 60, 84, 65, 85, 158, 26,
+          5, 6, 169, 181,
         ]),
         import.meta.url,
       )
@@ -91629,69 +92513,69 @@ async function _(_) {
         _(
           Object.assign({
             "../../../shared/localization/sales/sales_arabic.json": () =>
-              _(() => import(`./sales_arabic.js`), [], import.meta.url),
+              _(() => import(`./chunk~a2651acc01.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_brazilian.json": () =>
-              _(() => import(`./sales_brazilian.js`), [], import.meta.url),
+              _(() => import(`./chunk~137fe161a3.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_bulgarian.json": () =>
-              _(() => import(`./sales_bulgarian.js`), [], import.meta.url),
+              _(() => import(`./chunk~3388f59a8c.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_czech.json": () =>
-              _(() => import(`./sales_czech.js`), [], import.meta.url),
+              _(() => import(`./chunk~684fc3a48f.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_danish.json": () =>
-              _(() => import(`./sales_danish.js`), [], import.meta.url),
+              _(() => import(`./chunk~478dcdfd50.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_dutch.json": () =>
-              _(() => import(`./sales_dutch.js`), [], import.meta.url),
+              _(() => import(`./chunk~07af9aa5c9.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_english.json": () =>
-              _(() => import(`./sales_english.js`), [], import.meta.url),
+              _(() => import(`./chunk~467c065f96.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_finnish.json": () =>
-              _(() => import(`./sales_finnish.js`), [], import.meta.url),
+              _(() => import(`./chunk~17f8e94605.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_french.json": () =>
-              _(() => import(`./sales_french.js`), [], import.meta.url),
+              _(() => import(`./chunk~0d8952bf3a.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_german.json": () =>
-              _(() => import(`./sales_german.js`), [], import.meta.url),
+              _(() => import(`./chunk~4cde817ea0.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_greek.json": () =>
-              _(() => import(`./sales_greek.js`), [], import.meta.url),
+              _(() => import(`./chunk~eadaa09f2d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_hungarian.json": () =>
-              _(() => import(`./sales_hungarian.js`), [], import.meta.url),
+              _(() => import(`./chunk~c3cd1630c5.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_indonesian.json": () =>
-              _(() => import(`./sales_indonesian.js`), [], import.meta.url),
+              _(() => import(`./chunk~f01fd3cdae.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_italian.json": () =>
-              _(() => import(`./sales_italian.js`), [], import.meta.url),
+              _(() => import(`./chunk~7530843e6f.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_japanese.json": () =>
-              _(() => import(`./sales_japanese.js`), [], import.meta.url),
+              _(() => import(`./chunk~8c1b5f00ab.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_koreana.json": () =>
-              _(() => import(`./sales_koreana.js`), [], import.meta.url),
+              _(() => import(`./chunk~5dd04956c2.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_latam.json": () =>
-              _(() => import(`./sales_latam.js`), [], import.meta.url),
+              _(() => import(`./chunk~cd7cbec106.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_malay.json": () =>
-              _(() => import(`./sales_malay.js`), [], import.meta.url),
+              _(() => import(`./chunk~19e4851e4a.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_norwegian.json": () =>
-              _(() => import(`./sales_norwegian.js`), [], import.meta.url),
+              _(() => import(`./chunk~cead22bc95.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_polish.json": () =>
-              _(() => import(`./sales_polish.js`), [], import.meta.url),
+              _(() => import(`./chunk~59fe5ba68d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_portuguese.json": () =>
-              _(() => import(`./sales_portuguese.js`), [], import.meta.url),
+              _(() => import(`./chunk~4ce4f00e1d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_romanian.json": () =>
-              _(() => import(`./sales_romanian.js`), [], import.meta.url),
+              _(() => import(`./chunk~396e8e03ab.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_russian.json": () =>
-              _(() => import(`./sales_russian.js`), [], import.meta.url),
+              _(() => import(`./chunk~b90af23307.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_sc_schinese.json": () =>
-              _(() => import(`./sales_sc_schinese.js`), [], import.meta.url),
+              _(() => import(`./chunk~62f4ec6297.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_schinese.json": () =>
-              _(() => import(`./sales_schinese.js`), [], import.meta.url),
+              _(() => import(`./chunk~fd02ec7ab8.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_spanish.json": () =>
-              _(() => import(`./sales_spanish.js`), [], import.meta.url),
+              _(() => import(`./chunk~5b296efd25.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_swedish.json": () =>
-              _(() => import(`./sales_swedish.js`), [], import.meta.url),
+              _(() => import(`./chunk~c2dd4b566b.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_tchinese.json": () =>
-              _(() => import(`./sales_tchinese.js`), [], import.meta.url),
+              _(() => import(`./chunk~8eb6adf994.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_thai.json": () =>
-              _(() => import(`./sales_thai.js`), [], import.meta.url),
+              _(() => import(`./chunk~d1918a051e.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_turkish.json": () =>
-              _(() => import(`./sales_turkish.js`), [], import.meta.url),
+              _(() => import(`./chunk~151ab2fec5.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_ukrainian.json": () =>
-              _(() => import(`./sales_ukrainian.js`), [], import.meta.url),
+              _(() => import(`./chunk~ec9b4ec76d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_vietnamese.json": () =>
-              _(() => import(`./sales_vietnamese.js`), [], import.meta.url),
+              _(() => import(`./chunk~bf026fe6b0.js`), [], import.meta.url),
           }),
           `../../../shared/localization/sales/sales_${_}.json`,
           7,
@@ -91699,69 +92583,69 @@ async function _(_) {
         _(
           Object.assign({
             "../localization/main_arabic.json": () =>
-              _(() => import(`./main_arabic.js`), [], import.meta.url),
+              _(() => import(`./chunk~a1afcc6b49.js`), [], import.meta.url),
             "../localization/main_brazilian.json": () =>
-              _(() => import(`./main_brazilian.js`), [], import.meta.url),
+              _(() => import(`./chunk~efce32a0fd.js`), [], import.meta.url),
             "../localization/main_bulgarian.json": () =>
-              _(() => import(`./main_bulgarian.js`), [], import.meta.url),
+              _(() => import(`./chunk~a0c563b312.js`), [], import.meta.url),
             "../localization/main_czech.json": () =>
-              _(() => import(`./main_czech.js`), [], import.meta.url),
+              _(() => import(`./chunk~86e73de564.js`), [], import.meta.url),
             "../localization/main_danish.json": () =>
-              _(() => import(`./main_danish.js`), [], import.meta.url),
+              _(() => import(`./chunk~8ed5a1f992.js`), [], import.meta.url),
             "../localization/main_dutch.json": () =>
-              _(() => import(`./main_dutch.js`), [], import.meta.url),
+              _(() => import(`./chunk~c177c2c91d.js`), [], import.meta.url),
             "../localization/main_english.json": () =>
-              _(() => import(`./main_english.js`), [], import.meta.url),
+              _(() => import(`./chunk~fbc9faf024.js`), [], import.meta.url),
             "../localization/main_finnish.json": () =>
-              _(() => import(`./main_finnish.js`), [], import.meta.url),
+              _(() => import(`./chunk~2985c8f3da.js`), [], import.meta.url),
             "../localization/main_french.json": () =>
-              _(() => import(`./main_french.js`), [], import.meta.url),
+              _(() => import(`./chunk~3fa8b7849a.js`), [], import.meta.url),
             "../localization/main_german.json": () =>
-              _(() => import(`./main_german.js`), [], import.meta.url),
+              _(() => import(`./chunk~897d980c88.js`), [], import.meta.url),
             "../localization/main_greek.json": () =>
-              _(() => import(`./main_greek.js`), [], import.meta.url),
+              _(() => import(`./chunk~d4f65e6d28.js`), [], import.meta.url),
             "../localization/main_hungarian.json": () =>
-              _(() => import(`./main_hungarian.js`), [], import.meta.url),
+              _(() => import(`./chunk~2f837a1fa1.js`), [], import.meta.url),
             "../localization/main_indonesian.json": () =>
-              _(() => import(`./main_indonesian.js`), [], import.meta.url),
+              _(() => import(`./chunk~cd202e69b5.js`), [], import.meta.url),
             "../localization/main_italian.json": () =>
-              _(() => import(`./main_italian.js`), [], import.meta.url),
+              _(() => import(`./chunk~34938c270d.js`), [], import.meta.url),
             "../localization/main_japanese.json": () =>
-              _(() => import(`./main_japanese.js`), [], import.meta.url),
+              _(() => import(`./chunk~359677a3c7.js`), [], import.meta.url),
             "../localization/main_koreana.json": () =>
-              _(() => import(`./main_koreana.js`), [], import.meta.url),
+              _(() => import(`./chunk~15f48863a2.js`), [], import.meta.url),
             "../localization/main_latam.json": () =>
-              _(() => import(`./main_latam.js`), [], import.meta.url),
+              _(() => import(`./chunk~826d3b5250.js`), [], import.meta.url),
             "../localization/main_malay.json": () =>
-              _(() => import(`./main_malay.js`), [], import.meta.url),
+              _(() => import(`./chunk~1865eab4be.js`), [], import.meta.url),
             "../localization/main_norwegian.json": () =>
-              _(() => import(`./main_norwegian.js`), [], import.meta.url),
+              _(() => import(`./chunk~0f3103bc69.js`), [], import.meta.url),
             "../localization/main_polish.json": () =>
-              _(() => import(`./main_polish.js`), [], import.meta.url),
+              _(() => import(`./chunk~d757c1664f.js`), [], import.meta.url),
             "../localization/main_portuguese.json": () =>
-              _(() => import(`./main_portuguese.js`), [], import.meta.url),
+              _(() => import(`./chunk~e45f96fdb3.js`), [], import.meta.url),
             "../localization/main_romanian.json": () =>
-              _(() => import(`./main_romanian.js`), [], import.meta.url),
+              _(() => import(`./chunk~6bfef4da5d.js`), [], import.meta.url),
             "../localization/main_russian.json": () =>
-              _(() => import(`./main_russian.js`), [], import.meta.url),
+              _(() => import(`./chunk~f6efdfaf9b.js`), [], import.meta.url),
             "../localization/main_sc_schinese.json": () =>
-              _(() => import(`./main_sc_schinese.js`), [], import.meta.url),
+              _(() => import(`./chunk~782a3815a0.js`), [], import.meta.url),
             "../localization/main_schinese.json": () =>
-              _(() => import(`./main_schinese.js`), [], import.meta.url),
+              _(() => import(`./chunk~e325844ad5.js`), [], import.meta.url),
             "../localization/main_spanish.json": () =>
-              _(() => import(`./main_spanish.js`), [], import.meta.url),
+              _(() => import(`./chunk~2d97981d2c.js`), [], import.meta.url),
             "../localization/main_swedish.json": () =>
-              _(() => import(`./main_swedish.js`), [], import.meta.url),
+              _(() => import(`./chunk~a18566ab59.js`), [], import.meta.url),
             "../localization/main_tchinese.json": () =>
-              _(() => import(`./main_tchinese.js`), [], import.meta.url),
+              _(() => import(`./chunk~a7cc5d09d2.js`), [], import.meta.url),
             "../localization/main_thai.json": () =>
-              _(() => import(`./main_thai.js`), [], import.meta.url),
+              _(() => import(`./chunk~378a998550.js`), [], import.meta.url),
             "../localization/main_turkish.json": () =>
-              _(() => import(`./main_turkish.js`), [], import.meta.url),
+              _(() => import(`./chunk~454f02dbb5.js`), [], import.meta.url),
             "../localization/main_ukrainian.json": () =>
-              _(() => import(`./main_ukrainian.js`), [], import.meta.url),
+              _(() => import(`./chunk~1c557f5550.js`), [], import.meta.url),
             "../localization/main_vietnamese.json": () =>
-              _(() => import(`./main_vietnamese.js`), [], import.meta.url),
+              _(() => import(`./chunk~312af0dfee.js`), [], import.meta.url),
           }),
           `../localization/main_${_}.json`,
           3,
@@ -91771,86 +92655,86 @@ async function _(_) {
           : _(
               Object.assign({
                 "../../../shared/localization/sales/sales_arabic.json": () =>
-                  _(() => import(`./sales_arabic.js`), [], import.meta.url),
+                  _(() => import(`./chunk~a2651acc01.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_brazilian.json": () =>
-                  _(() => import(`./sales_brazilian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~137fe161a3.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_bulgarian.json": () =>
-                  _(() => import(`./sales_bulgarian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~3388f59a8c.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_czech.json": () =>
-                  _(() => import(`./sales_czech.js`), [], import.meta.url),
+                  _(() => import(`./chunk~684fc3a48f.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_danish.json": () =>
-                  _(() => import(`./sales_danish.js`), [], import.meta.url),
+                  _(() => import(`./chunk~478dcdfd50.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_dutch.json": () =>
-                  _(() => import(`./sales_dutch.js`), [], import.meta.url),
+                  _(() => import(`./chunk~07af9aa5c9.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_english.json": () =>
-                  _(() => import(`./sales_english.js`), [], import.meta.url),
+                  _(() => import(`./chunk~467c065f96.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_finnish.json": () =>
-                  _(() => import(`./sales_finnish.js`), [], import.meta.url),
+                  _(() => import(`./chunk~17f8e94605.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_french.json": () =>
-                  _(() => import(`./sales_french.js`), [], import.meta.url),
+                  _(() => import(`./chunk~0d8952bf3a.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_german.json": () =>
-                  _(() => import(`./sales_german.js`), [], import.meta.url),
+                  _(() => import(`./chunk~4cde817ea0.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_greek.json": () =>
-                  _(() => import(`./sales_greek.js`), [], import.meta.url),
+                  _(() => import(`./chunk~eadaa09f2d.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_hungarian.json": () =>
-                  _(() => import(`./sales_hungarian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~c3cd1630c5.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_indonesian.json":
                   () =>
                     _(
-                      () => import(`./sales_indonesian.js`),
+                      () => import(`./chunk~f01fd3cdae.js`),
                       [],
                       import.meta.url,
                     ),
                 "../../../shared/localization/sales/sales_italian.json": () =>
-                  _(() => import(`./sales_italian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~7530843e6f.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_japanese.json": () =>
-                  _(() => import(`./sales_japanese.js`), [], import.meta.url),
+                  _(() => import(`./chunk~8c1b5f00ab.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_koreana.json": () =>
-                  _(() => import(`./sales_koreana.js`), [], import.meta.url),
+                  _(() => import(`./chunk~5dd04956c2.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_latam.json": () =>
-                  _(() => import(`./sales_latam.js`), [], import.meta.url),
+                  _(() => import(`./chunk~cd7cbec106.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_malay.json": () =>
-                  _(() => import(`./sales_malay.js`), [], import.meta.url),
+                  _(() => import(`./chunk~19e4851e4a.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_norwegian.json": () =>
-                  _(() => import(`./sales_norwegian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~cead22bc95.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_polish.json": () =>
-                  _(() => import(`./sales_polish.js`), [], import.meta.url),
+                  _(() => import(`./chunk~59fe5ba68d.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_portuguese.json":
                   () =>
                     _(
-                      () => import(`./sales_portuguese.js`),
+                      () => import(`./chunk~4ce4f00e1d.js`),
                       [],
                       import.meta.url,
                     ),
                 "../../../shared/localization/sales/sales_romanian.json": () =>
-                  _(() => import(`./sales_romanian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~396e8e03ab.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_russian.json": () =>
-                  _(() => import(`./sales_russian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~b90af23307.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_sc_schinese.json":
                   () =>
                     _(
-                      () => import(`./sales_sc_schinese.js`),
+                      () => import(`./chunk~62f4ec6297.js`),
                       [],
                       import.meta.url,
                     ),
                 "../../../shared/localization/sales/sales_schinese.json": () =>
-                  _(() => import(`./sales_schinese.js`), [], import.meta.url),
+                  _(() => import(`./chunk~fd02ec7ab8.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_spanish.json": () =>
-                  _(() => import(`./sales_spanish.js`), [], import.meta.url),
+                  _(() => import(`./chunk~5b296efd25.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_swedish.json": () =>
-                  _(() => import(`./sales_swedish.js`), [], import.meta.url),
+                  _(() => import(`./chunk~c2dd4b566b.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_tchinese.json": () =>
-                  _(() => import(`./sales_tchinese.js`), [], import.meta.url),
+                  _(() => import(`./chunk~8eb6adf994.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_thai.json": () =>
-                  _(() => import(`./sales_thai.js`), [], import.meta.url),
+                  _(() => import(`./chunk~d1918a051e.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_turkish.json": () =>
-                  _(() => import(`./sales_turkish.js`), [], import.meta.url),
+                  _(() => import(`./chunk~151ab2fec5.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_ukrainian.json": () =>
-                  _(() => import(`./sales_ukrainian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~ec9b4ec76d.js`), [], import.meta.url),
                 "../../../shared/localization/sales/sales_vietnamese.json":
                   () =>
                     _(
-                      () => import(`./sales_vietnamese.js`),
+                      () => import(`./chunk~bf026fe6b0.js`),
                       [],
                       import.meta.url,
                     ),
@@ -91863,69 +92747,69 @@ async function _(_) {
           : _(
               Object.assign({
                 "../localization/main_arabic.json": () =>
-                  _(() => import(`./main_arabic.js`), [], import.meta.url),
+                  _(() => import(`./chunk~a1afcc6b49.js`), [], import.meta.url),
                 "../localization/main_brazilian.json": () =>
-                  _(() => import(`./main_brazilian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~efce32a0fd.js`), [], import.meta.url),
                 "../localization/main_bulgarian.json": () =>
-                  _(() => import(`./main_bulgarian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~a0c563b312.js`), [], import.meta.url),
                 "../localization/main_czech.json": () =>
-                  _(() => import(`./main_czech.js`), [], import.meta.url),
+                  _(() => import(`./chunk~86e73de564.js`), [], import.meta.url),
                 "../localization/main_danish.json": () =>
-                  _(() => import(`./main_danish.js`), [], import.meta.url),
+                  _(() => import(`./chunk~8ed5a1f992.js`), [], import.meta.url),
                 "../localization/main_dutch.json": () =>
-                  _(() => import(`./main_dutch.js`), [], import.meta.url),
+                  _(() => import(`./chunk~c177c2c91d.js`), [], import.meta.url),
                 "../localization/main_english.json": () =>
-                  _(() => import(`./main_english.js`), [], import.meta.url),
+                  _(() => import(`./chunk~fbc9faf024.js`), [], import.meta.url),
                 "../localization/main_finnish.json": () =>
-                  _(() => import(`./main_finnish.js`), [], import.meta.url),
+                  _(() => import(`./chunk~2985c8f3da.js`), [], import.meta.url),
                 "../localization/main_french.json": () =>
-                  _(() => import(`./main_french.js`), [], import.meta.url),
+                  _(() => import(`./chunk~3fa8b7849a.js`), [], import.meta.url),
                 "../localization/main_german.json": () =>
-                  _(() => import(`./main_german.js`), [], import.meta.url),
+                  _(() => import(`./chunk~897d980c88.js`), [], import.meta.url),
                 "../localization/main_greek.json": () =>
-                  _(() => import(`./main_greek.js`), [], import.meta.url),
+                  _(() => import(`./chunk~d4f65e6d28.js`), [], import.meta.url),
                 "../localization/main_hungarian.json": () =>
-                  _(() => import(`./main_hungarian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~2f837a1fa1.js`), [], import.meta.url),
                 "../localization/main_indonesian.json": () =>
-                  _(() => import(`./main_indonesian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~cd202e69b5.js`), [], import.meta.url),
                 "../localization/main_italian.json": () =>
-                  _(() => import(`./main_italian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~34938c270d.js`), [], import.meta.url),
                 "../localization/main_japanese.json": () =>
-                  _(() => import(`./main_japanese.js`), [], import.meta.url),
+                  _(() => import(`./chunk~359677a3c7.js`), [], import.meta.url),
                 "../localization/main_koreana.json": () =>
-                  _(() => import(`./main_koreana.js`), [], import.meta.url),
+                  _(() => import(`./chunk~15f48863a2.js`), [], import.meta.url),
                 "../localization/main_latam.json": () =>
-                  _(() => import(`./main_latam.js`), [], import.meta.url),
+                  _(() => import(`./chunk~826d3b5250.js`), [], import.meta.url),
                 "../localization/main_malay.json": () =>
-                  _(() => import(`./main_malay.js`), [], import.meta.url),
+                  _(() => import(`./chunk~1865eab4be.js`), [], import.meta.url),
                 "../localization/main_norwegian.json": () =>
-                  _(() => import(`./main_norwegian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~0f3103bc69.js`), [], import.meta.url),
                 "../localization/main_polish.json": () =>
-                  _(() => import(`./main_polish.js`), [], import.meta.url),
+                  _(() => import(`./chunk~d757c1664f.js`), [], import.meta.url),
                 "../localization/main_portuguese.json": () =>
-                  _(() => import(`./main_portuguese.js`), [], import.meta.url),
+                  _(() => import(`./chunk~e45f96fdb3.js`), [], import.meta.url),
                 "../localization/main_romanian.json": () =>
-                  _(() => import(`./main_romanian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~6bfef4da5d.js`), [], import.meta.url),
                 "../localization/main_russian.json": () =>
-                  _(() => import(`./main_russian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~f6efdfaf9b.js`), [], import.meta.url),
                 "../localization/main_sc_schinese.json": () =>
-                  _(() => import(`./main_sc_schinese.js`), [], import.meta.url),
+                  _(() => import(`./chunk~782a3815a0.js`), [], import.meta.url),
                 "../localization/main_schinese.json": () =>
-                  _(() => import(`./main_schinese.js`), [], import.meta.url),
+                  _(() => import(`./chunk~e325844ad5.js`), [], import.meta.url),
                 "../localization/main_spanish.json": () =>
-                  _(() => import(`./main_spanish.js`), [], import.meta.url),
+                  _(() => import(`./chunk~2d97981d2c.js`), [], import.meta.url),
                 "../localization/main_swedish.json": () =>
-                  _(() => import(`./main_swedish.js`), [], import.meta.url),
+                  _(() => import(`./chunk~a18566ab59.js`), [], import.meta.url),
                 "../localization/main_tchinese.json": () =>
-                  _(() => import(`./main_tchinese.js`), [], import.meta.url),
+                  _(() => import(`./chunk~a7cc5d09d2.js`), [], import.meta.url),
                 "../localization/main_thai.json": () =>
-                  _(() => import(`./main_thai.js`), [], import.meta.url),
+                  _(() => import(`./chunk~378a998550.js`), [], import.meta.url),
                 "../localization/main_turkish.json": () =>
-                  _(() => import(`./main_turkish.js`), [], import.meta.url),
+                  _(() => import(`./chunk~454f02dbb5.js`), [], import.meta.url),
                 "../localization/main_ukrainian.json": () =>
-                  _(() => import(`./main_ukrainian.js`), [], import.meta.url),
+                  _(() => import(`./chunk~1c557f5550.js`), [], import.meta.url),
                 "../localization/main_vietnamese.json": () =>
-                  _(() => import(`./main_vietnamese.js`), [], import.meta.url),
+                  _(() => import(`./chunk~312af0dfee.js`), [], import.meta.url),
               }),
               `../localization/main_${_}.json`,
               3,

@@ -3349,6 +3349,7 @@
           MoreInfoContainer: "_2v696E3H0_C_Nwl2j63Ors",
           MoreInfoBody: "_12ygSYdEUuRnstjlBrbHzG",
           Title: "_3kfKfB-pGu8SzCuHslLD42",
+          MoreDetails: "_3MsaIEeUEGaLvKmY0aG7w5",
           CompatibilityDetailsScroll: "_1Lr7DXWKD_uN7PaE8U1qo1",
           CompatibilityDetailsScrollContent: "_26BT4COvbKsjGyni-i3veI",
           CompatReportDialogBody: "_3qLtGkch9FuPc9azIltBRt",
@@ -314073,6 +314074,7 @@ ${It}`;
               }
               this.m_mapPendingMethodRequests.set(Z, {
                 m_iSeq: Z,
+                m_sServiceName: H,
                 m_responseClass: U,
                 m_fnCallback: K,
                 m_fnError: V,
@@ -314183,7 +314185,14 @@ ${It}`;
             ),
               this.m_mapPendingMethodRequests.delete(q));
             const N = i.w.InitFromMsg(U.m_responseClass, H);
-            U.m_fnCallback(N);
+            (N.BIsValid() ||
+              (0, L.aj)()?.ReportError(
+                new Error(
+                  `WebUITransport: failed to parse response for ${U.m_sServiceName}`,
+                ),
+                { bIncludeMessageInIdentifier: !0 },
+              ),
+              U.m_fnCallback(N));
           }
           DispatchNotification(H) {
             const q = (U) => {
@@ -355256,6 +355265,7 @@ ${It}`;
                         }),
                         (0, e.jsx)(je.y, {
                           fill: "#1a9fff",
+                          activeBar: { fill: "white" },
                           dataKey: "percentage",
                           name: "",
                         }),
@@ -355948,11 +355958,16 @@ ${It}`;
           }
         }
         function de(Mt) {
-          const { histogram: Xt, deviceName: Gt, appName: Lt } = Mt;
-          let vt = Lt
+          const {
+            histogram: Xt,
+            deviceName: Gt,
+            nFrameLimit: Lt,
+            appName: vt,
+          } = Mt;
+          let tr = vt
             ? U.Z.Localize(
                 "#GamePerformanceStats_FrameRateDistribution",
-                Lt,
+                vt,
                 Gt,
               )
             : U.Z.Localize(
@@ -355970,10 +355985,35 @@ ${It}`;
                       "#GamePerformanceStats_MoreInfoTitle",
                     ),
                   }),
-                  (0, e.jsx)("div", { children: vt }),
+                  (0, e.jsx)("div", { children: tr }),
                 ],
               }),
               (0, e.jsx)(nt, { histogram: Xt, minWidth: 200, minHeight: 200 }),
+              (0, e.jsx)("div", {
+                className: H().Title,
+                children: U.Z.Localize(
+                  "#GamePerformanceStats_MoreDetailsTitle",
+                ),
+              }),
+              (0, e.jsxs)("div", {
+                className: H().MoreDetails,
+                children: [
+                  (0, e.jsx)("div", {
+                    children: U.Z.Localize(
+                      "#GamePerformanceStats_MoreDetails_Filtering",
+                      Gt,
+                      Lt,
+                    ),
+                  }),
+                  (0, e.jsx)("div", {
+                    children: U.Z.Localize(
+                      "#GamePerformanceStats_MoreDetails_VSync",
+                      Lt / 2,
+                      Lt,
+                    ),
+                  }),
+                ],
+              }),
             ],
           });
         }
@@ -356043,6 +356083,7 @@ ${It}`;
                 children: (0, e.jsx)(de, {
                   histogram: jt.get(nr)?.histogram,
                   deviceName: Ye.get(nr) ?? "",
+                  nFrameLimit: nr == dt ? 60 : 90,
                   appName: Gt,
                 }),
               }),
@@ -426215,23 +426256,23 @@ Status Code:` +
           const S = (0, c.l9)(),
             g = (0, l.NZ)().eBranch,
             m = (0, c.D5)(g),
-            w = (0, c.Ls)()?.event_tag,
-            h = (0, n.j3)(!0).IS_STEAMOS && g == s.NQ;
+            w = (0, n.j3)(!0).IS_STEAMOS && g == s.NQ;
           return e.useMemo(() => {
-            if (h) return [];
-            if ((0, n.j3)(!0).ON_FRAME)
-              return w ? [{ appid: o.IT, additionalParams: B(w) }] : [];
-            let j = [],
-              A;
+            if (w) return [];
+            let F = [],
+              j;
             return (
-              (0, n.j3)(!0).IS_STEAMOS &&
-                m &&
-                (j.push({ appid: o.qF, additionalParams: B(m) }),
-                (A = 1793761207)),
-              j.push(u(S, A)),
-              j
+              (0, n.j3)(!0).ON_FRAME && m
+                ? (F.push({ appid: o.IT, additionalParams: B(m) }),
+                  (j = S ? 1794052800 : 1794481007))
+                : (0, n.j3)(!0).IS_STEAMOS &&
+                  m &&
+                  (F.push({ appid: o.qF, additionalParams: B(m) }),
+                  (j = S ? 1793761207 : 1794481007)),
+              F.push(u(S, j)),
+              F
             );
-          }, [S, h, m, w]);
+          }, [S, w, m]);
         }
       },
       47098: (we, _, t) => {
@@ -654471,7 +654512,7 @@ Status Code:` +
               nr.nSteamVersion > 0
                 ? nr.nSteamVersion.toString()
                 : (0, h.we)("#Settings_System_SteamLocalBuild"),
-            ue = parseInt(1794263641),
+            ue = parseInt(1794423662),
             Qe = ue && (0, d.P0)(ue, rr, hr),
             mt = nr.sSteamBuildDate,
             Dt = (0, g.CI)() ? " GMT+0000" : " GMT-0800",
@@ -692832,7 +692873,7 @@ Status Code:` +
             Rt = (0, G.cZ)(He),
             Ot = !0,
             fe = Me.nSteamVersion > 0 ? Me.nSteamVersion.toString() : "local",
-            pe = parseInt(1794263641),
+            pe = parseInt(1794423662),
             Je = pe && (0, he.P0)(pe, De, Rt),
             re = ((Me.nCPUHz || 0) / 1e3 / 1e3 / 1e3).toFixed(2) + " GHz",
             Ie = (0, oe.dm)(Me.nSystemRAMSizeMB * 1024 * 1024, 0),

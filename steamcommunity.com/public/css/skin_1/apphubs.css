@@ -30,17 +30,17 @@ body
 	line-height: 18px;
 	color: #aac8f3;
 	position: absolute;
-	left: 365px;
+	inset-inline-start: 365px;
 	top: 32px;
-	text-align: left;
+	text-align: start;
 }
 
 /* stats */
 .appHubsHeaderCommunityStats
 {
 	top: 110px;
-	left: 55px;
-	text-align: left;
+	inset-inline-start: 55px;
+	text-align: start;
 	position: absolute;
 }
 
@@ -78,7 +78,7 @@ body
 /* right column */
 .appHubsRightContentWrapper
 {
-	float: right;
+	float: inline-end;
 	position: relative;
 	width: 281px;
 }
@@ -86,7 +86,7 @@ body
 .appHubsRightContent
 {
 	width: 281px;
-	text-align: left;
+	text-align: start;
 	padding-bottom: 20px;
 }
 
@@ -109,7 +109,8 @@ body
 	background: #1b1b1b;
 	background: rgba(27,27,27,.36);
 	border-radius: 4px;
-	padding: 10px 10px 10px 11px;
+	padding-block: 10px;
+	padding-inline: 11px 10px;
 	margin: 0 0 10px 0;
 	border: 1px solid #1f1f20;
 	box-shadow: 1px 1px 0 0 #39393a;
@@ -123,7 +124,7 @@ body
 	border-top: 1px solid black;
 	border-bottom: 1px solid #333333;
 	background-color: black;
-	left: -12px;
+	inset-inline-start: -12px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -143,7 +144,7 @@ body
 	position: absolute;
 	height: 35px;
 	width: 267px;
-	left: -6px;
+	inset-inline-start: -6px;
 }
 
 /* community details */
@@ -152,12 +153,12 @@ body
 {
 	color: #aeaeae;
 	font-size: 13px;
-	text-align: left;
+	text-align: start;
 	background-color: #303031;
 	padding-top: 18px;
 	padding-bottom: 21px;
-	padding-left: 13px;
-	padding-right: 13px;
+	padding-inline-start: 13px;
+	padding-inline-end: 13px;
 	-moz-box-shadow: 0px 0px 3px #000000 inset;
 	-webkit-box-shadow: 0px 0px 3px #000000 inset;
 	box-shadow: 0px 0px 3px #000000 inset;
@@ -170,10 +171,10 @@ body
 
 .community_activity_signin_buttons .btn_login_green, .community_activity_signin_buttons .community_activity_or
 {
-	float: left;
+	float: inline-start;
 	line-height: 32px;
-	margin-right: 8px;
-	margin-left: 8px;
+	margin-inline-end: 8px;
+	margin-inline-start: 8px;
 }
 
 .btn_login_green
@@ -209,7 +210,7 @@ body
 	padding: 13px;
 	font-size: 13px;
 	color: #aeaeae;
-	text-align: left;
+	text-align: start;
 }
 
 /* shortcuts */
@@ -222,8 +223,8 @@ body
 {
 	width: 28px;
 	height: 28px;
-	float: left;
-	margin-right: 5px;
+	float: inline-start;
+	margin-inline-end: 5px;
 }
 
 .appHubShortcut_Title
@@ -239,7 +240,7 @@ body
 	font-size: 12px;
 	color: #58769f;
 	text-transform: uppercase;
-	float: right;
+	float: inline-end;
 }
 
 .appHubShortcut_SeeAll:hover
@@ -262,7 +263,7 @@ a.appHubContainerLink:hover
 {
 	display: block;
 	position: relative;
-	text-align: left;
+	text-align: start;
 	cursor: pointer;
 	margin-bottom: 15px;
 }
@@ -286,7 +287,7 @@ a.appHubContainerLink:hover
 
 .apphubTop.middle
 {
-	left: 2px;
+	inset-inline-start: 2px;
 	width: 642px;
 	background-position: 0px -7px;
 	background-repeat: repeat-x;
@@ -294,13 +295,13 @@ a.appHubContainerLink:hover
 
 .apphubTop.leftcap
 {
-	left: 0px;
+	inset-inline-start: 0px;
 	background-position: 0px 0px;
 }
 
 .apphubTop.rightcap
 {
-	right: 0px;
+	inset-inline-end: 0px;
 	background-position: 0px -14px;
 }
 
@@ -329,7 +330,7 @@ a.appHubContainerLink:hover
 .apphub_AppIcon
 {
 	margin-top: 11px;
-	margin-right: 12px;
+	margin-inline-end: 12px;
 }
 
 .appHubTitle
@@ -344,23 +345,23 @@ a.appHubContainerLink:hover
 {
 	position: absolute;
 	top: 100px;
-	left: 2px;
+	inset-inline-start: 2px;
 	text-transform: uppercase;
 }
 
 .appHubStatContainer
 {
-	float: left;
+	float: inline-start;
 	height: 103px;
-	padding-left: 10px;
-	padding-right: 20px;
+	padding-inline-start: 10px;
+	padding-inline-end: 20px;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/apphubs/btn_hub_center.png' );
 	background-repeat: repeat-x;
 }
 
 .appHubStatBarEndCap
 {
-	float: left;
+	float: inline-start;
 	width: 6px;
 	height: 103px;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/apphubs/btn_hub_right.png' );
@@ -409,7 +410,7 @@ a.appHubContainerLink:hover
 .appHubs_ImageWallImageContainer
 {
 	display: block;
-	float: left;
+	float: inline-start;
 	overflow: hidden;
 	margin: 2px;
 }
@@ -431,7 +432,7 @@ a.appHubContainerLink:hover
 .appHubsQuickList
 {
 	padding-top: 5px;
-	float: left;
+	float: inline-start;
 }
 
 div.quicklistselect
@@ -445,12 +446,12 @@ div.quicklistselect
 	font-size: 12px;
 	background-color: #7095ca;
 	border: 1px solid #79a1db;
-	text-align: left;
+	text-align: start;
 	text-transform: uppercase;
 }
 
 div.quicklistselect_options {
-	text-align: left;
+	text-align: start;
 	width: 269px;
 	line-height: 26px;
 	color: white;
@@ -464,7 +465,7 @@ div.quicklistselect_options {
 
 div.quicklistselect #quicklistselect_arrow {
 	position: absolute;
-	right: 0px;
+	inset-inline-end: 0px;
 	top: 2px;
 	width: 17px;
 	height: 20px;
@@ -483,7 +484,7 @@ div.quicklistselect #quicklistselect_active
 }
 
 div.quicklistselect div.option, div.quicklistselect_options div.option {
-	padding-left: 7px;
+	padding-inline-start: 7px;
 	height: 24px;
 	line-height: 24px;
 	cursor: default;
@@ -543,15 +544,15 @@ div.quicklistselect div.option img, div.quicklistselect_options div.option img {
 .apphub_GetMoreContentWait img
 {
 	vertical-align: middle;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 .apphub_ProgressBarBG
 {
 	position: absolute;
 	top: 200px;
-	left: 15%;
-	right: 15%;
+	inset-inline-start: 15%;
+	inset-inline-end: 15%;
 	height: 25px;
 	background-color: #000000;
 	border: 2px solid #cccccc;
@@ -563,7 +564,7 @@ div.quicklistselect div.option img, div.quicklistselect_options div.option img {
 {
 	position: absolute;
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 	width: 0;
 	height: 25px;
 	background-color: #cccccc;
@@ -592,7 +593,7 @@ div.quicklistselect div.option img, div.quicklistselect_options div.option img {
 	display: block;
 	background-color: #1A1A1A;
 	padding: 5px 8px 5px 8px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	cursor: pointer;
@@ -616,8 +617,8 @@ a.general_btn:hover {
 .notLoggedInButtons a.general_btn.green
 {
 	color: #ffffff;
-	padding-left: 24px;
-	padding-right: 24px;
+	padding-inline-start: 24px;
+	padding-inline-end: 24px;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/btn_green.png);
 }
 

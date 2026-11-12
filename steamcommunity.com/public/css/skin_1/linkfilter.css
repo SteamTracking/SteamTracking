@@ -23,10 +23,10 @@ body {
 }
 
 .warningSign img {
-	float: left;
+	float: inline-start;
 	height: auto;
 	max-width: 20%;
-	margin-right: 30px;
+	margin-inline-end: 30px;
 }
 
 .warningSign h1, .warningSign h2 {

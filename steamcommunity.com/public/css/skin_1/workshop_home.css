@@ -64,7 +64,7 @@
 
 .searchApps
 {
-	float: right;
+	float: inline-end;
 	position: relative;
 	width:279px;
 	height:30px;
@@ -82,7 +82,7 @@ input.searchAppsInput
 	outline: none;
 	position: absolute;
 	top: 6px;
-	left: 6px;
+	inset-inline-start: 6px;
 	width: 215px;
 	font-style: italic;
 	background-color: transparent;
@@ -93,7 +93,7 @@ input.searchAppsInput
 {
 	position: absolute;
 	top: 6px;
-	right: 7px;
+	inset-inline-end: 7px;
 	width: 23px;
 	height: 18px;
 	padding: 0;
@@ -110,7 +110,7 @@ input.searchAppsInput
 
 .workshopAppsSort
 {
-	float: right;
+	float: inline-end;
 	width: 180px;
 }
 
@@ -142,12 +142,12 @@ input.searchAppsInput
 .workshop_apps_paging_summary
 {
 	color: #969696;
-	float: left;
+	float: inline-start;
 }
 
 .workshop_apps_paging_controls
 {
-	float: right;
+	float: inline-end;
 }
 
 .workshop_apps_paging_controls .pagebtn {
@@ -189,7 +189,7 @@ input.searchAppsInput
 	height: 180px;
 	padding-top: 10px;
 	padding-bottom: 0px;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	margin: 22px 0 30px 0;
 
 	border: 1px solid #1f1f20;
@@ -215,7 +215,7 @@ input.searchAppsInput
 .app
 {
 	position: relative;
-	float: left;
+	float: inline-start;
 	width: 175px;
 	height: 172px;
 	margin: 0 5px 10px 5px;
@@ -231,7 +231,7 @@ input.searchAppsInput
 	height: 172px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/Workshop_FeatureCover.png');
 	background-repeat: no-repeat;
-	left: 0px;
+	inset-inline-start: 0px;
 	bottom: -9px;
 }
 
@@ -243,7 +243,7 @@ input.searchAppsInput
 	visibility: hidden;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/Workshop_FeatureCover_Hover.png');
 	background-repeat: no-repeat;
-	left: 0px;
+	inset-inline-start: 0px;
 	bottom: -9px
 }
 
@@ -260,7 +260,7 @@ input.searchAppsInput
 .appItem
 {
 	position: absolute;
-	left: 9px;
+	inset-inline-start: 9px;
 	bottom: 8px;
 }
 
@@ -268,7 +268,7 @@ input.searchAppsInput
 {
 	position: absolute;
 	top: 6px;
-	left: 9px;
+	inset-inline-start: 9px;
 }
 
 .itemPreviewHolder
@@ -291,8 +291,8 @@ input.searchAppsInput
 {
 	position: absolute;
 	top: 100px;
-	margin-left: 50%;
-	left: -60px;
+	margin-inline-start: 50%;
+	inset-inline-start: -60px;
 	width: 120px;
 	text-align: center;
 }
@@ -324,21 +324,21 @@ input.searchAppsInput
 
 .moreTitles
 {
-	float: left;
+	float: inline-start;
 	text-align: center;
 	line-height: 149px;
 	vertical-align: middle;
 	font-size: 24px;
 	font-weight: bold;
 	color: #393939;
-	margin-left: 20px;
+	margin-inline-start: 20px;
 	text-shadow: -1px 0px 1px #181821;
 }
 
 .browseMoreContainer
 {
 	position: relative;
-	float: right;
+	float: inline-end;
 	height: 180px;
 }
 
@@ -346,7 +346,7 @@ input.searchAppsInput
 {
 	position: absolute;
 	top: 50px;
-	right: 18px;
+	inset-inline-end: 18px;
 	background-color: #6b9730;
 	width: 165px;
 	height: 65px;
@@ -365,13 +365,13 @@ input.searchAppsInput
 .browseMoreText
 {
 	padding-top: 12px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-inline-start: 15px;
+	padding-inline-end: 15px;
 }
 
 .joinGroup
 {
-	left: -5px;
+	inset-inline-start: -5px;
 	width: 275px;
 	height: 85px;
 	background-repeat: no-repeat;
@@ -392,8 +392,8 @@ input.searchAppsInput
 {
     color: #ffffff;
     padding-top: 16px;
-    padding-right: 8px;
-    margin-left: 56px;
+    padding-inline-end: 8px;
+    margin-inline-start: 56px;
     box-sizing: border-box;
     position: relative;
     word-wrap: break-word;
@@ -403,7 +403,7 @@ input.searchAppsInput
 {
 	color: #b8b8b4;
 	margin-top: 8px;
-	margin-left: 15px;
+	margin-inline-start: 15px;
 }
 
 .subscribeRSS
@@ -415,7 +415,7 @@ input.searchAppsInput
 .subscribeRSS img
 {
 	vertical-align: middle;
-	padding-right: 5px;
+	padding-inline-end: 5px;
 }
 
 .announcement
@@ -444,7 +444,7 @@ input.searchAppsInput
 	margin-bottom: 20px;
 	font-size: 14px;
 	line-height: 20px;
-	padding-right: 16px;
+	padding-inline-end: 16px;
 }
 
 .bodytext img {
@@ -453,7 +453,7 @@ input.searchAppsInput
 
 .commentsLink
 {
-	float: left;
+	float: inline-start;
 	margin-bottom: 10px;
 	font-size: 14px;
 }
@@ -461,5 +461,5 @@ input.searchAppsInput
 .quoteIcon
 {
 	vertical-align: middle;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }

@@ -65,7 +65,7 @@ a {
 	background-image: url( https://community.fastly.steamstatic.com/public/images/mobile/badge-frame-left.png );
 	background-size: 8px 62px;
 	background-repeat: no-repeat;
-	float: left;
+	float: inline-start;
 	width: 8px;
 	height: 62px;
 }
@@ -74,7 +74,7 @@ a {
 	background-image: url( https://community.fastly.steamstatic.com/public/images/mobile/badge-frame-right.png );
 	background-size: 8px 62px;
 	background-repeat: no-repeat;
-	float: right;
+	float: inline-end;
 	width: 8px;
 	height: 62px;
 }
@@ -84,13 +84,13 @@ a {
 	background-size: 2px 62px;
 	background-repeat: repeat-x;
 	height: 62px;
-	margin-left: 8px;
-	margin-right: 8px;
+	margin-inline-start: 8px;
+	margin-inline-end: 8px;
 }
 
 .profileBadgeSnippetBadgeContent {
-	float: left;
-	margin-left: 25px;
+	float: inline-start;
+	margin-inline-start: 25px;
 	margin-top: 11px;
 }
 
@@ -100,7 +100,7 @@ a {
 }
 
 .profileFavoriteBadgeDescription {
-	padding-left: 28px;
+	padding-inline-start: 28px;
 	padding-top: 14px;
 	white-space: nowrap;
 	overflow: hidden;
@@ -123,7 +123,7 @@ a {
 .profileCountLink {
 	color: #ffffff;
 	font-size: 18px;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 	min-height: 29px;
 }
 
@@ -135,7 +135,7 @@ a {
 	display: inline-block;
 	font-size: 20px;
 	margin-top: 5px;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 }
 
 .profileCountLinkTotal {
@@ -161,7 +161,7 @@ a {
 
 	position: absolute;
 	top: 5px;
-	left: 5px;
+	inset-inline-start: 5px;
 }
 
 .profileAvatarImgHolder img, .groupAvatarImgHolder img {
@@ -176,7 +176,7 @@ a {
 
 	position: absolute;
 	top: 6px;
-	left: 6px;
+	inset-inline-start: 6px;
 }
 
 .oggAvatarImgHolder {
@@ -185,7 +185,7 @@ a {
 
 	position: absolute;
 	top: 5px;
-	left: 5px;
+	inset-inline-start: 5px;
 }
 
 .oggAvatarImg {
@@ -195,18 +195,18 @@ a {
 
 	position: absolute;
 	top: 6px;
-	left: 6px;
+	inset-inline-start: 6px;
 }
 
 .profileMainTextBlock {
 	color: #FFFFFF;
-	padding-left: 110px;
+	padding-inline-start: 110px;
 	text-shadow: none;
 	word-wrap: break-word;
 }
 
 .groupMainTextBlock {
-	padding-left: 110px;
+	padding-inline-start: 110px;
 	padding-top: 15px;
 	text-shadow: none;
 	word-wrap: break-word;
@@ -214,7 +214,7 @@ a {
 }
 
 .oggMainTextBlock {
-	padding-left: 121px;
+	padding-inline-start: 121px;
 	text-shadow: none;
 	word-wrap: break-word;
 }
@@ -273,7 +273,7 @@ a {
 .profileLevelContainer {
 	position: absolute;
 	top: 105px;
-	left: 5px;
+	inset-inline-start: 5px;
 
 	width: 94px;
 	text-align: center;
@@ -299,8 +299,8 @@ a {
 }
 
 .profileSummaryBlock, .groupSummaryBlock {
-	margin-left: 12px;
-	margin-right: 12px;
+	margin-inline-start: 12px;
+	margin-inline-end: 12px;
 	padding: 8px;
 	text-shadow: none;
 	color: #898989;
@@ -555,19 +555,19 @@ span.membersOnline {
 }
 
 .remoteDownloadActivityText {
-	float: left;
+	float: inline-start;
 	text-align: center;
 	font-size: 13px;
 	color: #FFFFFF;
-	padding-left: 15px;
-	padding-right: 8px;
+	padding-inline-start: 15px;
+	padding-inline-end: 8px;
 }
 
 .remoteDownloadChevron {
 	background-image: url( https://community.fastly.steamstatic.com/public/images/remote/downloads-chevron-down.png );
 	background-repeat: no-repeat;
-	float: right;
-	padding-right: 8px;
+	float: inline-end;
+	padding-inline-end: 8px;
 	padding-top: 2px;
 	width: 12px;
 	height: 18px;
@@ -576,8 +576,8 @@ span.membersOnline {
 .remoteDownloadChevronHide {
 	background-image: url( https://community.fastly.steamstatic.com/public/images/remote/downloads-chevron-up.png );
 	background-repeat: no-repeat;
-	float: right;
-	padding-right: 8px;
+	float: inline-end;
+	padding-inline-end: 8px;
 	padding-top: 2px;
 	width: 12px;
 	height: 18px;
@@ -692,7 +692,7 @@ span.membersOnline {
 span.statsItemName {
 	color: #545454;
 	width: 40%;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 	font-size: 15px;
 	display: table-cell;
 }
@@ -718,18 +718,18 @@ span.statsItem {
 }
 
 .clientConnAdIcon {
-	float: left;
+	float: inline-start;
 	vertical-align: middle;
 	margin-top: 24px;
 	margin-bottom: 16px;
-	margin-left: 16px;
-	margin-right: 8px;
+	margin-inline-start: 16px;
+	margin-inline-end: 8px;
 }
 
 .clientConnAdTextBlock {
 	vertical-align: middle;
 	margin: 8px;
-	margin-left: 96px;
+	margin-inline-start: 96px;
 	white-space: normal;
 	font-weight: bold;
 	text-decoration: none;
@@ -805,8 +805,8 @@ span.statsItem {
 #uninstallConfirm {
 	display: none;
 	position: absolute;
-	left: 0px;
-	right: 0px;
+	inset-inline-start: 0px;
+	inset-inline-end: 0px;
 	width: 0px;
 	height: 0px;
 	z-index: 10;
@@ -856,7 +856,7 @@ span.statsItem {
 
 .rightFloatLinkIcon {
 	display: inline-block;
-	float: right;
+	float: inline-end;
 	margin: 5px;
 	margin-top: 20px;
 }
@@ -869,7 +869,7 @@ span.statsItem {
 .upperRightChevronIcon {
 	display: inline-block;
 	position: absolute;
-	right: 10px;
+	inset-inline-end: 10px;
 	top: 15px;
 }
 
@@ -880,8 +880,8 @@ span.statsItem {
 
 .rightFloatSmallIcon {
 	display: inline-block;
-	float: right;
-	margin-right: 5px;
+	float: inline-end;
+	margin-inline-end: 5px;
 	margin-top: 4px;
 }
 
@@ -894,7 +894,7 @@ span.statsItem {
 	display: inline-block;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/mobile/Icon_Delete.png );
 	background-size: 40px 32px;
-	float: right;
+	float: inline-end;
 	margin: 5px;
 	margin-top: 20px;
 	width: 40px;
@@ -969,7 +969,8 @@ span.statsItem {
 }
 
 .postTitleBlock {
-	padding: 2px 10px 10px 47px;
+	padding-block: 2px 10px;
+	padding-inline: 47px 10px;
 }
 
 .postHeadline {
@@ -1001,16 +1002,16 @@ a#postLink, a#blotterLink {
 }
 
 .postBody ul {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 }
 
 .postBody li {
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 
 
 .postDeleteLink {
-	float: right;
+	float: inline-end;
 	padding: 0px 4px 2px 4px;
 	margin: 2px;
 	color: #D0D0D0;
@@ -1025,13 +1026,13 @@ a#postLink, a#blotterLink {
 .blotterBody {
 	color: #929292;
 	min-height: 60px;
-	padding-left: 60px;
+	padding-inline-start: 60px;
 	padding-top: 10px;
 }
 
 .blotterIcon {
 	display: block;
-	float: right;
+	float: inline-end;
 	margin: 4px;
 	margin-top: 24px;
 	width: 24px;
@@ -1082,14 +1083,14 @@ a#postLink, a#blotterLink {
 
 .mobileSettingsCategoryLabel {
 	font-size: 13px;
-	padding-left: 12px;
+	padding-inline-start: 12px;
 	font-weight: bold;
 }
 
 .mobileSettingsCategoryDesc {
 	font-size: 11px;
-	padding-left: 12px;
-	padding-right: 12px;
+	padding-inline-start: 12px;
+	padding-inline-end: 12px;
 }
 
 /*
@@ -1231,7 +1232,7 @@ a#postLink, a#blotterLink {
 .itemName {
 	color: #545454;
 	width: 25%;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 	font-size: 13px;
 	display: inline-block;
 	vertical-align: top;
@@ -1279,7 +1280,7 @@ a#postLink, a#blotterLink {
 .inventoryFilterButton {
 	display: inline-block;
 	height: 35px;
-	margin-right: 6px;
+	margin-inline-end: 6px;
 	overflow: hidden;
 	vertical-align: top;
 
@@ -1379,7 +1380,7 @@ a#postLink, a#blotterLink {
 .inventoryItemColumn {
 	display: inline-block;
 	width: 64px;
-	margin-right: 3px;
+	margin-inline-end: 3px;
 	vertical-align: top;
 }
 
@@ -1408,12 +1409,12 @@ a#postLink, a#blotterLink {
 	display: block;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 }
 
 .inventoryResults {
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 
 .inventoryResults.inventoryResultsFiltered {
@@ -1427,9 +1428,9 @@ a#postLink, a#blotterLink {
 
 .singleInventoryItemView {
 	position: fixed;
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 	z-index: 10;
 	background-color: rgba( 0, 0, 0, .80 );
@@ -1447,9 +1448,9 @@ html.responsive .singleInventoryItemView {
 	background-image: radial-gradient(ellipse 50% 50% at 50% 30%, #404040 0%, #202020 100%);
 
 	position: absolute;
-	left: 15px;
+	inset-inline-start: 15px;
 	top: 15px;
-	right: 15px;
+	inset-inline-end: 15px;
 	bottom: 15px;
 
 	padding: 10px;
@@ -1465,7 +1466,7 @@ html.responsive .singleInventoryItemView {
 	width: 36px;
 	height: 36px;
 	background-size: 36px 36px;
-	right: 10px;
+	inset-inline-end: 10px;
 	top: 10px;
 	z-index: 20;
 }
@@ -1499,7 +1500,7 @@ html.responsive .singleInventoryItemView {
 .singleInventoryItemAppIcon {
 	position: absolute;
 	top: 2px;
-	left: 0px;
+	inset-inline-start: 0px;
 	height: 32px;
 	width: 32px;
 	border-radius: 2px;
@@ -1508,8 +1509,8 @@ html.responsive .singleInventoryItemView {
 .singleInventoryItemAppName {
 	position: absolute;
 	top: 0px;
-	left: 36px;
-	right: 0px;
+	inset-inline-start: 36px;
+	inset-inline-end: 0px;
 	line-height: 18px;
 
 	white-space: nowrap;
@@ -1520,8 +1521,8 @@ html.responsive .singleInventoryItemView {
 .singleInventoryItemType {
 	position: absolute;
 	top: 18px;
-	left: 36px;
-	right: 0px;
+	inset-inline-start: 36px;
+	inset-inline-end: 0px;
 	line-height: 18px;
 
 	white-space: nowrap;

@@ -72,8 +72,8 @@ input[type=time] {
 	color: #ffffff;
 	background-color: #324965;
 	border-top: solid 1px #182636;
-	border-left: solid 1px #182636;
-	border-right: solid 1px #45566a;
+	border-inline-start: solid 1px #182636;
+	border-inline-end: solid 1px #45566a;
 	border-bottom: solid 1px #45566a;
 	padding: 4px;
 }
@@ -238,7 +238,8 @@ html:not(.GamepadMode) .dselect_container .trigger {
 	color: #67C1F5;
 	font-size: 12px;
 	line-height: 24px;
-	padding: 0 32px 0 8px;
+	padding-block: 0;
+	padding-inline: 8px 32px;
 }
 
 /* `div` and `button` added here to increase specificity so as to override shared_gamepad.css. */
@@ -255,9 +256,13 @@ html:not(.GamepadMode) .dselect_container .activetrigger {
 .dselect_container .trigger::after {
 	background: url('https://help.steampowered.com/public/images//ico_arrow_dn_for_select.png') no-repeat right;
 	content: '';
-	inset: 0 0 0 auto;
+	inset-block: 0;
+	inset-inline: auto 0;
 	position: absolute;
 	width: 24px;
+}
+.dselect_container .trigger:dir(rtl)::after {
+	background-position: left;
 }
 
 html:not(.GamepadMode) .dselect_container .trigger:hover,
@@ -326,7 +331,7 @@ body.v6 > div#global_header {
 
 body.v6 > .perf_timing_area .perf_timing_link {
 	position: absolute;
-	left: 15px;
+	inset-inline-start: 15px;
 	bottom: 15px;
 }
 
@@ -335,7 +340,7 @@ body.v6 > .perf_timing_area .perf_timing_link {
 	background-color: #000000;
 	margin: 0px auto 48px auto;
 	padding: 8px;
-	text-align: left;
+	text-align: start;
 	width: 936px;
 	font-size: 14px;
 	z-index: 5;
@@ -441,7 +446,7 @@ body.v6 .page_content {
 
 div.leftcol {
 	width: 616px;
-	float: left;
+	float: inline-start;
 }
 div.leftcol.large {
     width: 686px;
@@ -449,8 +454,8 @@ div.leftcol.large {
 
 div.rightcol {
 	width: 308px;
-	margin-left: 14px;
-	float: right;
+	margin-inline-start: 14px;
+	float: inline-end;
 }
 div.rightcol.small {
     width: 238px;
@@ -485,7 +490,7 @@ body.v6 .page_content_ctn.dark:last-child {
 #page_background_holder {
 	position: absolute;
 	width: 100%;
-	left: 0px;
+	inset-inline-start: 0px;
 	overflow: hidden;
 	z-index: -1;
 	min-width: 972px;
@@ -532,8 +537,8 @@ body.v6 .page_content_ctn.dark:last-child {
 {
     position: absolute;
     top: 50%;
-    left: 0;
-    right: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     opacity: 1.0;
     visibility: visible;
 
@@ -544,7 +549,7 @@ body.v6 .page_content_ctn.dark:last-child {
 
 #system_report_label
 {
-	float: left;
+	float: inline-start;
 }
 
 #system_report_throbber
@@ -552,9 +557,9 @@ body.v6 .page_content_ctn.dark:last-child {
 	transition-delay: 0.1s;
 	transition:  opacity 0.3s linear;
 	opacity: 0.0;
-	float: left;
+	float: inline-start;
 	margin-top: -12px;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 	transform: scale( 0.75 );
 	-webkit-transform: scale( 0.75 );
 }
@@ -594,8 +599,8 @@ body.v6 .page_content_ctn.dark:last-child {
 {
 	position: absolute;
 	top: 0px;
-	left: 0px;
-	right: 0px;
+	inset-inline-start: 0px;
+	inset-inline-end: 0px;
 	z-index: 1;
 }
 
@@ -739,7 +744,7 @@ body.v6 .page_content_ctn.dark:last-child {
 .help_page_section_list{
 	font-size: 13px;
 	font-weight: 400;
-	padding-left: 16px;
+	padding-inline-start: 16px;
 	margin-bottom: 16px;
 }
 
@@ -801,7 +806,7 @@ body.v6 .page_content_ctn.dark:last-child {
 .help_page_trade_content {
 	display: flex;
 	gap: 20px;
-	padding-left: 32px;
+	padding-inline-start: 32px;
 }
 
 .help_page_trade_date {
@@ -846,8 +851,8 @@ body.v6 .page_content_ctn.dark:last-child {
 	background: #E25958;
 	border: none;
 	border-radius: 2px;
-	padding-right: 20px;
-	padding-left: 20px;
+	padding-inline-end: 20px;
+	padding-inline-start: 20px;
 	color: rgba(250, 250, 250, 0.8);
 	font-family: Motiva Sans;
 	font-weight: 400;
@@ -862,7 +867,8 @@ body.v6 .page_content_ctn.dark:last-child {
 }
 
 .help_page_trade_footer {
-	padding: 10px 0px 10px 32px;
+	padding-block: 10px;
+	padding-inline: 32px 0px;
 	font-size: 12px;
 	color: #9aa7b3;
 	margin-top: 16px;
@@ -894,7 +900,7 @@ body.v6 .page_content_ctn.dark:last-child {
 	box-sizing: border-box;
 
 	margin-top: 10px;
-	padding-right: 30px;
+	padding-inline-end: 30px;
 	border: solid 1px;
 	border-color: #445468;
 
@@ -931,12 +937,13 @@ body.v6 .page_content_ctn.dark:last-child {
 }
 
 .help_wizard_button > img {
-	float: left;
-	margin: 3px 8px 4px 6px;
+	float: inline-start;
+	margin-block: 3px 4px;
+	margin-inline: 6px 8px;
 }
 
 .help_wizard_button > img + span {
-	margin-left: 8px;
+	margin-inline-start: 8px;
 }
 
 .help_wizard_button_text {
@@ -1054,8 +1061,8 @@ body.v6 .page_content_ctn.dark:last-child {
 	color: #ffffff;
 	background-color: #324965;
 	border-top: solid 1px #182636;
-	border-left: solid 1px #182636;
-	border-right: solid 1px #45566a;
+	border-inline-start: solid 1px #182636;
+	border-inline-end: solid 1px #45566a;
 	border-bottom: solid 1px #45566a;
 	max-width: calc( 100% - 8px );
 }
@@ -1070,12 +1077,12 @@ body.v6 .page_content_ctn.dark:last-child {
 
 .loginbox #captchImg {
 	position: absolute;
-	left: 0px;
-	right: 0px;
+	inset-inline-start: 0px;
+	inset-inline-end: 0px;
 }
 
 .loginbox #captchaRefresh {
-	margin-left: 220px;
+	margin-inline-start: 220px;
 	padding-top: 8px;
 }
 
@@ -1092,8 +1099,8 @@ body.v6 .page_content_ctn.dark:last-child {
 }
 
 .loginbox {
-	float: left;
-	margin-right: 16px;
+	float: inline-start;
+	margin-inline-end: 16px;
 }
 
 .login_signin_msg {
@@ -1103,10 +1110,10 @@ body.v6 .page_content_ctn.dark:last-child {
 	padding: 34px 34px;
 	background-color: #24445f;
 	margin-top: 16px;
-	margin-right: 16px;
+	margin-inline-end: 16px;
 	text-align: center;
 	display: table;
-	float: right;
+	float: inline-end;
 }
 
 @media screen and (max-width: 800px)
@@ -1114,7 +1121,7 @@ body.v6 .page_content_ctn.dark:last-child {
 	html.responsive .login_signin_msg {
 		float: none;
 		overflow: hidden;
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 }
 
@@ -1122,7 +1129,7 @@ body.v6 .page_content_ctn.dark:last-child {
 {
 	html.responsive .loginbox {
 		float: none;
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 
 	html.responsive .login_signin_msg {
@@ -1203,7 +1210,7 @@ body.v6 .page_content_ctn.dark:last-child {
 }
 
 .help_arrow_right {
-	float: right;
+	float: inline-end;
 	padding: 14px;
 	background: url("https://help.steampowered.com/public/images/arrow_right.png") center no-repeat;
 	width: 16px;
@@ -1347,8 +1354,8 @@ body.v6 .help_refund_request_area h2 a:hover {
 .refund_token_balance_amount {
 	color: #c6d4df;
 	vertical-align: top;
-	padding-right: 20px;
-	text-align: right;
+	padding-inline-end: 20px;
+	text-align: end;
 }
 
 .refund_token_balance_hr {
@@ -1364,12 +1371,12 @@ body.v6 .help_refund_request_area h2 a:hover {
 .refund_item_header.title {
 	padding: 0 16px 14px;
 	max-width: 300px;
-	text-align: left;
+	text-align: start;
 }
 .refund_item_header.tokens {
 	vertical-align: top;
-	padding-right: 20px;
-	text-align: right;
+	padding-inline-end: 20px;
+	text-align: end;
 }
 
 .refund_item_image img {
@@ -1410,7 +1417,7 @@ body.v6 .help_refund_request_area h2 a:hover {
 
 .purchase_totals .refund_value
 {
-	text-align: right;
+	text-align: end;
 }
 
 .refund_value {
@@ -1419,7 +1426,7 @@ body.v6 .help_refund_request_area h2 a:hover {
 
 .refund_value_details {
 	color: #67c1f5;
-	text-align: left;
+	text-align: start;
 }
 
 .promotion_details {
@@ -1436,7 +1443,7 @@ body.v6 .help_refund_request_area h2 a:hover {
 .refund_info_box {
 	padding: 20px 10px 25px;
 	background-color: #1d2a3b;
-	margin-right: 9%;
+	margin-inline-end: 9%;
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
@@ -1454,15 +1461,16 @@ body.v6 .help_refund_request_area h2 a:hover {
 
 .refund_notes_box
 {
-	padding: 10px 10px 10px 0px;
-	margin-right: 9%;
+	padding-block: 10px;
+	padding-inline: 0px 10px;
+	margin-inline-end: 9%;
 }
 
 @media screen and (max-width: 480px)
 {
 	html.responsive .refund_info_box,
 	html.responsive .refund_notes_box {
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 }
 
@@ -1494,23 +1502,27 @@ html:not(.GamepadMode) .multiple_options {
 
 .purchase_detail_field {
 	color: #67c1f5;
-	text-align: right;
+	text-align: end;
 }
 
 .remove_app_field
 {
 	color: #67c1f5;
-	text-align: left;
-	float: left;
+	text-align: start;
+	float: inline-start;
 
 	max-width: 400px;
 	padding: 0px 16px;
 	background: url('https://help.steampowered.com/public/images//icon_remove.png') no-repeat top left;
 }
+.remove_app_field:dir(rtl)
+{
+	background-position: top right;
+}
 
 .view_in_store_link
 {
-	float: right;
+	float: inline-end;
 }
 
 .refund_game_name {
@@ -1519,11 +1531,14 @@ html:not(.GamepadMode) .multiple_options {
 	max-width: 300px;
 	background: url('https://help.steampowered.com/public/images//icon_remove.png') no-repeat top left;
 }
+.refund_game_name:dir(rtl) {
+	background-position: top right;
+}
 
 .refund_game_detail {
 	color: #c6d4df;
 	vertical-align: top;
-	padding-right: 20px;
+	padding-inline-end: 20px;
 }
 
 .refund_game_line_item {
@@ -1577,12 +1592,12 @@ html:not(.GamepadMode) .multiple_options {
 	padding: 6px;
 	width: 592px;
 	max-width: calc( 66% - 12px );
-	float: left;
+	float: inline-start;
 }
 
 .help_app_header img {
-	float: left;
-	margin-right: 12px;
+	float: inline-start;
+	margin-inline-end: 12px;
 	max-width: 40%;
 }
 
@@ -1604,13 +1619,13 @@ html:not(.GamepadMode) .multiple_options {
 .account_details {
     overflow: hidden;
     margin-top: 10px;
-    float: right;
+    float: inline-end;
     width: 33%;
 
 }
 
 .help_app_header .subbox {
-	float: left;
+	float: inline-start;
 	min-width: 130px;
 	margin-top: 8px;
 }
@@ -1655,7 +1670,7 @@ div.help_official_support_row {
 }
 
 .help_official_box .subbox {
-	float: left;
+	float: inline-start;
 	width: 33%;
 	margin-top: 10px;
 }
@@ -1676,12 +1691,12 @@ div.help_official_support_row {
 }
 
 .help_header_right {
-	float: right;
+	float: inline-end;
 	width: 33%;
 }
 
 .help_header_left {
-	float: left;
+	float: inline-start;
 	width: 66%;
 }
 
@@ -1724,7 +1739,7 @@ div.help_official_support_row {
 .help_game_header a {
 	font-size: 14px;
 	color: #3c739a;
-	float: right;
+	float: inline-end;
 }
 
 .help_game_header a:hover {
@@ -1766,14 +1781,14 @@ a.guide_row {
 }
 
 .guide_row img {
-	float: left;
-	margin-right: 6px;
+	float: inline-start;
+	margin-inline-end: 6px;
 }
 
 .guide_row .guide_views {
-	float: right;
-	margin-left: 20px;
-	padding-right: 4px;
+	float: inline-end;
+	margin-inline-start: 20px;
+	padding-inline-end: 4px;
 }
 
 .guide_row .guide_title {
@@ -1785,7 +1800,7 @@ a.guide_row {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	padding-left: 2px;
+	padding-inline-start: 2px;
 }
 
 .help_game_guides_box .guide a {
@@ -1808,12 +1823,12 @@ a.guide_row {
 
 .help_game_content_left {
 	width: 600px;
-	float: left;
+	float: inline-start;
 }
 
 .help_game_content_right {
-	float: right;
-	margin-right: 8px;
+	float: inline-end;
+	margin-inline-end: 8px;
 	width: 320px;
 	min-height: 800px;
 }
@@ -1831,13 +1846,13 @@ a.guide_row {
 
 	html.responsive .help_game_content_right .help_game_guides_box {
 		width: calc( 50% - 28px - 4px);
-		float: right;
+		float: inline-end;
 	}
 
 	html.responsive .help_game_content_right .help_game_guides_box:nth-child(2n + 1) {
-		clear: left;
-		float: left;
-		margin-right: 8px;
+		clear: inline-start;
+		float: inline-start;
+		margin-inline-end: 8px;
 	}
 }
 
@@ -1849,7 +1864,7 @@ a.guide_row {
 		float: none;
 		clear: none;
 		width: auto;
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 
 	html.responsive .help_official_box .subbox {
@@ -1882,22 +1897,23 @@ a.guide_row {
 }
 
 .help_purchase_time {
-	float: left;
+	float: inline-start;
 	min-width: 60px;
 }
 
 .help_purchase_img {
-	float: left;
+	float: inline-start;
 }
 
 .help_purchase_img img {
-	float: left;
-	margin: 0 6px 0 0;
+	float: inline-start;
+	margin-block: 0;
+	margin-inline: 0 6px;
 }
 
 .help_purchase_right {
-	float: right;
-	text-align: right;
+	float: inline-end;
+	text-align: end;
 }
 
 .help_purchase_detail_text {
@@ -1906,7 +1922,7 @@ a.guide_row {
 
 .help_purchase_price {
 	display: inline-block;
-	text-align: right;
+	text-align: end;
 }
 
 .help_purchase_price.price_strikeout {
@@ -1922,8 +1938,8 @@ a.guide_row {
 .help_purchase_qty {
 	color: #9cacba;
 	font-size: 14px;
-	float: right;
-	margin-right: 10px;
+	float: inline-end;
+	margin-inline-end: 10px;
 }
 
 .help_purchase_detail_box {
@@ -2010,7 +2026,7 @@ a.guide_row {
 }
 
 .help_purchase_money {
-	text-align: right;
+	text-align: end;
 	padding: 0px 8px 0px 8px;
 }
 
@@ -2019,7 +2035,7 @@ a.guide_row {
 }
 
 .help_purchase_recipient_block.is_gift .gift_line_items {
-	padding-left: 24px;
+	padding-inline-start: 24px;
 }
 
 .purchase_item_bundle {
@@ -2066,9 +2082,9 @@ a.guide_row {
 
 .help_issue_column
 {
-	float:left;
+	float:inline-start;
 	width: 40%;
-	margin-right: 50px;
+	margin-inline-end: 50px;
 	padding:10px;
 }
 
@@ -2183,7 +2199,7 @@ a.guide_row {
 }
 
 .microtxn_purchase_date {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 }
 
 .purchase_line_items {
@@ -2202,11 +2218,11 @@ a.guide_row {
 }
 
 .purchase_totals td {
-	padding-right: 8px;
+	padding-inline-end: 8px;
 }
 
 .purchase_total_header {
-	text-align: right;
+	text-align: end;
 }
 
 .help_search_result {
@@ -2243,8 +2259,8 @@ a.guide_row {
 	color: #ffffff;
 	background-color: #324965;
 	border-top: solid 1px #182636;
-	border-left: solid 1px #182636;
-	border-right: solid 1px #45566a;
+	border-inline-start: solid 1px #182636;
+	border-inline-end: solid 1px #45566a;
 	border-bottom: solid 1px #45566a;
 	padding: 8px;
 	margin-top: 8px;
@@ -2294,7 +2310,7 @@ a.guide_row {
 }
 
 .account_recovery_submit .throbber {
-	padding-left: 14px;
+	padding-inline-start: 14px;
 	margin-top: 0px;
 	display: none;
 }
@@ -2315,7 +2331,8 @@ a.guide_row {
 	color: #ffffff;
 	border: 1px solid #810000;
 	background-color: #500000;
-	margin: 30px 8px 8px 0px;
+	margin-block: 30px 8px;
+	margin-inline: 0px 8px;
 	padding: 8px;
 	display: inline-block;
 }
@@ -2324,7 +2341,8 @@ a.guide_row {
 	color: #ffffff;
 	border: 1px solid #3e75a3;
 	background-color: #24445f;
-	margin: 30px 8px 8px 0px;
+	margin-block: 30px 8px;
+	margin-inline: 0px 8px;
 	padding: 16px;
 	display: inline-block;
 	min-width: 90%;
@@ -2351,11 +2369,11 @@ a.guide_row {
 }
 
 .search_error_left {
-	float: left;
+	float: inline-start;
 }
 
 .search_error_right {
-	float: right;
+	float: inline-end;
 }
 
 .search_error_know_account {
@@ -2384,7 +2402,8 @@ a.guide_row {
 	color: #ffffff;
 	border: 1px solid #00adee;
 	background-color: #003f57;
-	margin: 30px 8px 8px 0px;
+	margin-block: 30px 8px;
+	margin-inline: 0px 8px;
 	padding: 8px;
 	display: inline-block;
 }
@@ -2414,7 +2433,7 @@ a.guide_row {
 
 .account_login_column
 {
-	padding-left: 6px;
+	padding-inline-start: 6px;
 }
 
 .account_profile_column
@@ -2430,7 +2449,7 @@ a.guide_row {
 .account_select_row .account_reset_column
 {
 	background-color: transparent;
-	padding-left: 8px;
+	padding-inline-start: 8px;
 	width: 80px;
 }
 
@@ -2458,7 +2477,8 @@ a.guide_row {
 
 .player_avatar
 {
-	padding: 2px 6px 0px 2px;
+	padding-block: 2px 0px;
+	padding-inline: 2px 6px;
 }
 
 .accountname_area
@@ -2472,7 +2492,7 @@ a.guide_row {
 
 .pwreset_left_column
 {
-	float: left;
+	float: inline-start;
 	width: 52%;
 }
 
@@ -2527,8 +2547,8 @@ a.guide_row {
 	color: #ffffff;
 	background-color: #324965;
 	border-top: solid 1px #182636;
-	border-left: solid 1px #182636;
-	border-right: solid 1px #45566a;
+	border-inline-start: solid 1px #182636;
+	border-inline-end: solid 1px #45566a;
 	border-bottom: solid 1px #45566a;
 	padding: 4px;
 	width: 300px;
@@ -2553,7 +2573,7 @@ a.guide_row {
 #twofactor_smscode
 {
 	width: 50px;
-	margin-right: 20px;
+	margin-inline-end: 20px;
 }
 
 .password_tag {
@@ -2562,7 +2582,7 @@ a.guide_row {
 	color: white;
 	padding: 8px;
 	border-radius: 4px;
-	margin-left: 6px;
+	margin-inline-start: 6px;
 	max-width: 500px;
 
 	display: inline-block;
@@ -2579,12 +2599,12 @@ a.guide_row {
 	display: inline-block;
 	content: "";
 	position: absolute;
-	right: 100%;
+	inset-inline-end: 100%;
 	top: 5px;
 	width: 0px;
 	height: 0px;
 	border-top: 10px solid transparent;
-	border-right: 11px solid #a0382b;
+	border-inline-end: 11px solid #a0382b;
 	border-bottom: 10px solid transparent;
 }
 
@@ -2597,7 +2617,7 @@ a.guide_row {
 }
 
 .password_tag.error:before {
-	border-right: 11px solid #a0382b;
+	border-inline-end: 11px solid #a0382b;
 }
 
 .password_tag.warning {
@@ -2605,7 +2625,7 @@ a.guide_row {
 }
 
 .password_tag.warning:before {
-	border-right: 11px solid #b78124;
+	border-inline-end: 11px solid #b78124;
 }
 
 .reset_complete_email {
@@ -2735,11 +2755,11 @@ a.guide_row {
 }
 
 .help_section_body ol {
-	margin-left: 20px;
+	margin-inline-start: 20px;
 }
 
 .help_section_body ul {
-	margin-left: 20px;
+	margin-inline-start: 20px;
 }
 
 .help_section_body li {
@@ -2758,8 +2778,8 @@ a.guide_row {
 
 .help_step_section {
 	max-width: 712px;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-inline-start: 20px;
+	padding-inline-end: 20px;
 	max-height: 1000px;
 	transition: max-height .25s;
 }
@@ -2803,15 +2823,15 @@ a.guide_row {
 .captcha_section #captchaRefresh {
 	height: 40px;
 	line-height: 40px;
-	margin-left: 220px;
+	margin-inline-start: 220px;
 }
 
 .captcha_section #input_captcha {
 	color: #ffffff;
 	background-color: #324965;
 	border-top: solid 1px #182636;
-	border-left: solid 1px #182636;
-	border-right: solid 1px #45566a;
+	border-inline-start: solid 1px #182636;
+	border-inline-end: solid 1px #45566a;
 	border-bottom: solid 1px #45566a;
 	padding: 4px;
 	width: 100px;
@@ -2889,8 +2909,8 @@ img.category_icon {
 {
 	margin-top: 3px;
 	-webkit-animation: test 2s infinite;
-	float: left;
-	margin-right: 4px;
+	float: inline-start;
+	margin-inline-end: 4px;
 	width: 9px;
 	height: 36px;
 	background-color: #67c1f5;
@@ -2929,7 +2949,7 @@ img.category_icon {
 
 .throbber > div
 {
-	float: left;
+	float: inline-start;
 	width: 25%;
 	height: 100%;
 	background-color: #67c1f5;
@@ -2947,14 +2967,14 @@ img.category_icon {
 
 .throbber > div:nth-child(2)
 {
-	margin-left: 12%;
+	margin-inline-start: 12%;
 	transform: scaleX( 1.0 ) scaleY( 0.6 );
 	animation-delay: 0.16s;
 }
 
 .throbber > div:nth-child(3)
 {
-	margin-left: 12%;
+	margin-inline-start: 12%;
 	transform: scaleX( 1.0 ) scaleY( 0.6 );
 	animation-delay: 0.32s;
 }
@@ -2988,10 +3008,10 @@ img.category_icon {
 
 .code_text
 {
-	float: left;
+	float: inline-start;
 	color: #ffffff;
 	font-size: 38px;
-	padding-right: 18px;
+	padding-inline-end: 18px;
 }
 
 .code_explanation
@@ -3037,15 +3057,15 @@ img.category_icon {
 	min-width: 170px;
 	background: #212c3d;
 	height: 70px;
-	float: left;
+	float: inline-start;
 	width: calc( (100% - 40px)/3 - 74px );
 	margin: 10px;
 
 	color: #67c1f5;
 	font-size: 14px;
 
-	padding-left: 60px;
-	padding-right: 10px;
+	padding-inline-start: 60px;
+	padding-inline-end: 10px;
 
 	display: table;
 	border: 2px solid transparent;
@@ -3083,15 +3103,21 @@ img.category_icon {
 	background-position: 14px 20px;
 	background-repeat: no-repeat;
 }
+.lock_button.ico_print:dir(rtl),
+.lock_button.ico_bookmark:dir(rtl),
+.lock_button.ico_nothing:dir(rtl)
+{
+	background-position: right 14px top 20px;
+}
 
 .lock_button_row .lock_button:nth-child( 1 )
 {
-	margin-left: 0px;
+	margin-inline-start: 0px;
 }
 
 .lock_button_row .lock_button:nth-last-child( 2 )
 {
-	margin-right: 0px;
+	margin-inline-end: 0px;
 }
 
 .lock_button_row .lock_button.selected
@@ -3169,8 +3195,8 @@ img.category_icon {
 {
 	.lock_button_row .lock_button
 	{
-		margin-left: 0px;
-		margin-right: 0px;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
 		clear: both;
 		width: calc( 100% - 70px );
 	}
@@ -3266,13 +3292,13 @@ img.category_icon {
 .unlockcode_entry_box {
 	height: 70px;
 	margin: 10px;
-	margin-left: 0px;
+	margin-inline-start: 0px;
 }
 
 input.authcode_entry_input, input.twofactorauthcode_entry_input {
 	border: none;
 	background-color: transparent;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 	margin-top: 2px;
 	color: #cdcac1;
 	outline: none;
@@ -3305,7 +3331,7 @@ input.unlockcode_entry_input
 
 .unlockcode_entry_box
 {
-	float: left;
+	float: inline-start;
 }
 
 .paypay_result_box
@@ -3339,29 +3365,30 @@ input.unlockcode_entry_input
 	background-color: #8f9eb1;
 	height: 1px;
 	width: auto;
-	margin: 6px 180px 12px 0px;
+	margin-block: 6px 12px;
+	margin-inline: 0px 180px;
 }
 
 .shipping_form_left
 {
-	clear: left;
-	float: left;
-	text-align: left;
+	clear: inline-start;
+	float: inline-start;
+	text-align: start;
 }
 
 .shipping_form_right
 {
-	clear: right;
-	float: left;
-	text-align: left;
+	clear: inline-end;
+	float: inline-start;
+	text-align: start;
 	width: 292px;
-	margin-left: 76px;
+	margin-inline-start: 76px;
 }
 
 .shipping_form_right label, .shipping_form_left label
 {
 	display: block;
-	text-align: left;
+	text-align: start;
 	margin-bottom: 2px;
 	font-size: 12px;
 }
@@ -3380,8 +3407,8 @@ input.unlockcode_entry_input
 	color: #ffffff;
 	background-color: #324965;
 	border-top: solid 1px #182636;
-	border-left: solid 1px #182636;
-	border-right: solid 1px #45566a;
+	border-inline-start: solid 1px #182636;
+	border-inline-end: solid 1px #45566a;
 	border-bottom: solid 1px #45566a;
 }
 
@@ -3431,8 +3458,8 @@ input.unlockcode_entry_input
 
 .change_password_form > .left {
 	min-width: 80px;
-	margin-right: 10px;
-	float: left;
+	margin-inline-end: 10px;
+	float: inline-start;
 }
 
 .change_password_form > .right {
@@ -3446,7 +3473,7 @@ input.unlockcode_entry_input
 }
 
 .change_password_form > .left > div {
-	text-align: right;
+	text-align: end;
 }
 
 
@@ -3457,8 +3484,8 @@ input.unlockcode_entry_input
 	min-width: 200px;
 	background-color: #000010;
 	border-top: solid 1px #182636;
-	border-left: solid 1px #182636;
-	border-right: solid 1px #45566a;
+	border-inline-start: solid 1px #182636;
+	border-inline-end: solid 1px #45566a;
 	border-bottom: solid 1px #45566a;
 }
 
@@ -3469,7 +3496,7 @@ input.unlockcode_entry_input
 	color: #6abcf0;
 	cursor: pointer;
 	border: none;
-	margin-right: 20px;
+	margin-inline-end: 20px;
 }
 
 .change_password_button:hover {
@@ -3486,7 +3513,8 @@ input.unlockcode_entry_input
 }
 
 #change_password_code_input {
-	margin: 10px 0 0 140px;
+	margin-block: 10px 0;
+	margin-inline: 140px 0;
 }
 
 #change_password_error {
@@ -3520,7 +3548,8 @@ input.unlockcode_entry_input
 
 .help_event_limiteduser_link {
 	display: block;
-	margin: 10px 0 10px 40px;
+	margin-block: 10px;
+	margin-inline: 40px 0;
 }
 
 .help_event_description {
@@ -3626,7 +3655,8 @@ input.unlockcode_entry_input
 }
 
 .create_help_request_instructions ul {
-	padding: 8px 0px 0px 40px;
+	padding-block: 8px 0px;
+	padding-inline: 40px 0px;
 }
 
 .create_help_request_secondary, #extended_field_event_name, #extended_field_linux_support, #extended_field_controller_support, #extended_field_anti_cheat {
@@ -3637,8 +3667,8 @@ input.unlockcode_entry_input
 }
 
 .create_help_request_avatar_ctn {
-	float: left;
-	padding-right: 8px;
+	float: inline-start;
+	padding-inline-end: 8px;
 }
 
 .help_request_textarea_ctn {
@@ -3665,7 +3695,7 @@ input.unlockcode_entry_input
 
 .help_request_create_action {
 	padding-top: 8px;
-	text-align: right;
+	text-align: end;
 }
 
 
@@ -3698,11 +3728,11 @@ input.unlockcode_entry_input
 
 .help_request_headers .col.message,
 .help_request_columns .col.message {
-	padding-left: 0px;
+	padding-inline-start: 0px;
 }
 
 .help_request_columns .col:not(.message) {
-	float: right;
+	float: inline-end;
 	width: 15%;
 }
 
@@ -3754,7 +3784,7 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 }
 
 .help_request_header_info {
-	float: right;
+	float: inline-end;
 }
 
 .help_request_header_row {
@@ -3814,8 +3844,8 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 .help_request_icon {
 	width: 32px;
 	height: 32px;
-	float: left;
-	margin-right: 12px;
+	float: inline-start;
+	margin-inline-end: 12px;
 }
 
 .help_request_title_container {
@@ -3880,11 +3910,13 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 }
 
 .help_request_message .help_request_text {
-	padding: 14px 30px 30px 60px;
+	padding-block: 14px 30px;
+	padding-inline: 60px 30px;
 }
 
 .help_request_author_bar {
-	padding: 14px 20px 0 14px;
+	padding-block: 14px 0;
+	padding-inline: 14px 20px;
 	min-height: 36px;
 }
 
@@ -3918,8 +3950,8 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 }
 
 .help_request_author_bar .playerAvatar {
-	float: left;
-	margin-right: 8px;
+	float: inline-start;
+	margin-inline-end: 8px;
 	vertical-align: middle;
 }
 
@@ -3929,7 +3961,8 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 
 .help_request_text ol,
 .help_request_text ul {
-	padding: 8px 0px 0px 40px;
+	padding-block: 8px 0px;
+	padding-inline: 40px 0px;
 }
 
 .help_request_footerbox {
@@ -3959,13 +3992,13 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 }
 
 .help_request_footerbox .update_options_left {
-	float: left;
-	margin-right: 40px;
+	float: inline-start;
+	margin-inline-end: 40px;
 }
 
 .help_request_footerbox .update_options_right {
 	overflow: hidden;
-	text-align: right;
+	text-align: end;
 }
 .help_request_footerbox.update_options a {
 	white-space: nowrap;
@@ -3984,7 +4017,7 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 		float: none;
 		margin-bottom: 16px;
 		text-align: center;
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 
 	.help_request_footerbox .update_options_right {
@@ -4034,9 +4067,9 @@ body.ready_for_drop .help_request_attachment_overlay_ctn .attachment_drop_overla
 .help_request_attachment_overlay_ctn .attachment_drop_overlay {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 
 	background: rgba( 0, 0, 0, 0.75 );
 	opacity: 0;
@@ -4053,7 +4086,7 @@ body.ready_for_drop .help_request_attachment_overlay_ctn .attachment_drop_overla
 }
 
 ul.attached_file_list {
-	padding-left: 24px;
+	padding-inline-start: 24px;
 }
 
 .attached_file_size {
@@ -4085,7 +4118,7 @@ ul.attached_file_list {
 {
     display: inline-block;
     width: 54px;
-    margin-right: 12px;
+    margin-inline-end: 12px;
     vertical-align: middle;
 }
 
@@ -4093,14 +4126,14 @@ ul.attached_file_list {
 {
     display: inline-block;
     width: 68px;
-    margin-right: 12px;
+    margin-inline-end: 12px;
     vertical-align: middle;
 }
 
 #security_code_section
 {
     display: inline-block;
-    margin-right: 12px;
+    margin-inline-end: 12px;
     vertical-align: middle;
     margin: 4px 0 18px 0;
 }
@@ -4112,8 +4145,8 @@ ul.attached_file_list {
 
 #what_is_this
 {
-    padding-left: 5px;
-    text-align: left;
+    padding-inline-start: 5px;
+    text-align: start;
     padding-top:5px;
 }
 
@@ -4137,8 +4170,9 @@ ul.attached_file_list {
     width: 150px;
     height: 150px;
     padding: 0 40px;
-    margin: 0 15px 0 6px;
-    float: left;
+    margin-block: 0;
+    margin-inline: 6px 15px;
+    float: inline-start;
     text-align: center;
 }
 
@@ -4220,7 +4254,8 @@ ul.attached_file_list {
 
 .help_restrictedaccount_instructions {
 	background: #111a25;
-	padding: 18px 28px 18px 18px;
+	padding-block: 18px;
+	padding-inline: 18px 28px;
 	border-top: 1px solid #5eafde;
 	margin-top: 20px;
 }
@@ -4326,7 +4361,7 @@ ul.attached_file_list {
 .scam_report_button{
 	position: absolute;
 	bottom:2px;
-	right:2px;
+	inset-inline-end:2px;
 }
 
 .abuse_report_profile > div {
@@ -4355,7 +4390,7 @@ ul.attached_file_list {
 .scam_report_trade {
 	position: relative;
 	background-color: #1f1f1f;
-	padding-left: 0;
+	padding-inline-start: 0;
 	padding-top: 19px;
 	padding-bottom: 7px;
 	min-height: 36px;
@@ -4363,14 +4398,14 @@ ul.attached_file_list {
 }
 
 .scam_report_date {
-	float: left;
+	float: inline-start;
 	width: 116px;
-	text-align: right;
+	text-align: end;
 	font-weight: bold;
 	font-size: 11px;
 	color: #8a8a8a;
 	max-width: 20%;
-	margin-right: 2%;
+	margin-inline-end: 2%;
 }
 
 .scam_report_content{
@@ -4389,7 +4424,7 @@ ul.attached_file_list {
 	position: absolute;
 	display:inline-block;
 	padding-top: 50px;
-	padding-left: 20px;
+	padding-inline-start: 20px;
 }
 
 .feature_banner {
@@ -4418,7 +4453,7 @@ ul.attached_file_list {
 
 .feature_banner_text{
 	padding-top: 36px;
-	left: 0;
+	inset-inline-start: 0;
 	text-align: center;
 	width: 100%;
 }
@@ -4525,13 +4560,14 @@ ul.attached_file_list {
 .help_install_steam_btn_text {
 	color: #ffffff;
 	font-size: 16px;
-	padding: 8px 24px 8px 12px;
+	padding-block: 8px;
+	padding-inline: 12px 24px;
 	line-height: 28px;
 }
 
 .help_install_steam_image {
 	height: 26px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 	vertical-align: top;
 }
 
@@ -4555,7 +4591,7 @@ table {
 
 .help_game_cooldown_expirationtime {
 	color: #ef5e30;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 }
 
 .help_game_cooldown_description_text {
@@ -4563,7 +4599,7 @@ table {
 }
 
 .help_game_cooldown_description_text ol {
-	padding-left: 40px;
+	padding-inline-start: 40px;
 }
 
 .help_game_cooldown_reason {
@@ -4580,15 +4616,15 @@ table {
 }
 
 .help_publisher_chooser {
-	float:right;
+	float:inline-end;
 }
 
 .steamworks_ctn {
 	background-image: url(https://help.steampowered.com/public/images//steamworks_bg.png);
 	background-repeat: no-repeat;
 	background-position-y: -16px;
-	margin-left: -40px;
-	padding-left: 40px;
+	margin-inline-start: -40px;
+	padding-inline-start: 40px;
 }
 .steamworks_ctn.tree {
 	margin-top: -26px;
@@ -4604,7 +4640,7 @@ table {
 	border-bottom: 1px dotted white;
 }
 .steamworks_ctn p.indent {
-	padding-left: 30px;
+	padding-inline-start: 30px;
 }
 
 #report_abuse_container {
@@ -4662,15 +4698,15 @@ table {
 
 .bb_ul
 {
-	padding-left: 0px;
-	margin-left: 1em;
+	padding-inline-start: 0px;
+	margin-inline-start: 1em;
 }
 
 .bb_ul > li
 {
 	position: relative;
-	left: 1em;
-	padding-right: 1em;
+	inset-inline-start: 1em;
+	padding-inline-end: 1em;
 	padding-bottom: 1em;
 }
 
@@ -4689,7 +4725,8 @@ table {
 .help_itembug_checkbox
 {
 	display: inline-block;
-	margin: 32px 5px 0 0;
+	margin-block: 32px 0;
+	margin-inline: 0 5px;
 }
 
 .help_itembug_check_disabled
@@ -4713,13 +4750,13 @@ table {
 .help_itembug_item_childitem
 {
 	display: block;
-	margin-left: 40px;
-	border-left: 2px solid #5eafde
+	margin-inline-start: 40px;
+	border-inline-start: 2px solid #5eafde
 }
 
 .help_itembug_itemexplanation
 {
-	margin-left: 1em;
+	margin-inline-start: 1em;
 	max-width: 400px;
 }
 
@@ -4730,7 +4767,7 @@ table {
 
 .help_itembug_list
 {
-	margin-left: 2em;
+	margin-inline-start: 2em;
 }
 
 .help_itembug_currency
@@ -4768,12 +4805,12 @@ table {
 }
 
 .orderdetails_block {
-	padding-left: 30px;
+	padding-inline-start: 30px;
 }
 
 .orderdetails_block:not( :last-child ) {
-	padding-right: 30px;
-	border-right: 1px solid rgb( 78, 88, 100 );
+	padding-inline-end: 30px;
+	border-inline-end: 1px solid rgb( 78, 88, 100 );
 }
 
 /*.orderdetails_block:first-child {*/
@@ -4820,7 +4857,7 @@ table {
 	font-size: 17px;
 	line-height: 22px;
 	color: #798089;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 }
 
 .orderdetails_shipstep.complete .orderdetails_shiptext {
@@ -4853,7 +4890,7 @@ table {
 	box-sizing: border-box;
 	position: absolute;
 	top: 0%;
-	left: 0%;
+	inset-inline-start: 0%;
 	background-clip: padding-box;
 }
 
@@ -4908,7 +4945,7 @@ table {
 }
 
 .orderdetails_editshipping_dialog #submit_payment_info_btn {
-	margin-left: 0px;
+	margin-inline-start: 0px;
 }
 
 .orderdetails_shippingdelay {
@@ -4917,15 +4954,15 @@ table {
 }
 
 .checkout_tab .form_left {
-	clear: left;
-	float: left;
-	text-align: left;
+	clear: inline-start;
+	float: inline-start;
+	text-align: start;
 }
 
 .checkout_tab .form_right {
-	clear: right;
-	float: right;
-	text-align: left;
+	clear: inline-end;
+	float: inline-end;
+	text-align: start;
 	width: 292px;
 }
 

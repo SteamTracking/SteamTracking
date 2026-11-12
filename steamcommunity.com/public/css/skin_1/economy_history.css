@@ -1,7 +1,7 @@
 
 #mainContents {
 	max-width: 894px;
-	padding-left: 0px;
+	padding-inline-start: 0px;
 }
 
 .inventory_history_pagingrow {
@@ -16,7 +16,7 @@
 }
 
 .inventory_history_nextbtn {
-	float: right;
+	float: inline-end;
 }
 
 .tradehistoryrow {
@@ -24,7 +24,7 @@
 
 	background-color: rgba( 0, 0, 0, 0.3);
 
-	padding-left: 0;
+	padding-inline-start: 0;
 	padding-top: 19px;
 	padding-bottom: 7px;
 
@@ -42,15 +42,15 @@
 }
 
 .tradehistory_date {
-	float: left;
+	float: inline-start;
 	width: 116px;
-	text-align: right;
+	text-align: end;
 	font-weight: bold;
 	font-size: 11px;
 	color: #8a8a8a;
 	max-width: 20%;
 	margin-top: 1px;
-	margin-right: 2%;
+	margin-inline-end: 2%;
 }
 
 .tradehistory_content {
@@ -67,7 +67,7 @@
 
 .tradehistory_items {
 	position: relative;
-	padding-left: 4%;
+	padding-inline-start: 4%;
 	margin-bottom: 8px;
 }
 
@@ -99,8 +99,8 @@
 	}
 
 	html.responsive .tradehistory_items {
-		clear: left;
-		padding-left: 10%;
+		clear: inline-start;
+		padding-inline-start: 10%;
 	}
 }
 
@@ -111,8 +111,8 @@
 .tradehistory_items img {
 	vertical-align: middle;
 	border: 1px solid #3A3A3A;
-	margin-left: 8px;
-	margin-right: 4px;
+	margin-inline-start: 8px;
+	margin-inline-end: 4px;
 	max-width: 42px;
 }
 
@@ -176,21 +176,21 @@ a.history_item:hover .history_item_name {
 }
 
 .inventory_history_filters_bottombuttons {
-	text-align: right;
-	margin-right: 24px;
+	text-align: end;
+	margin-inline-end: 24px;
 	margin-top: 20px;
 }
 
 .inventory_history_filters_bottombuttons > div {
 	vertical-align: middle;
-	margin-left: 30px;
+	margin-inline-start: 30px;
 }
 
 .econ_tag_filter_category {
 	color: #D2D2D2;
 	display: inline-block;
 	margin-bottom: 1em;
-	margin-right: 15px;
+	margin-inline-end: 15px;
 	vertical-align: top;
 }
 
@@ -224,7 +224,7 @@ a.history_item:hover .history_item_name {
 	border-radius: 2px;
 	color: #d2ff96;
 	font-size: 14px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 .inventory_history_active_filter:hover
@@ -238,7 +238,7 @@ a.history_item:hover .history_item_name {
 	display: inline-block;
 	width: 12px;
 	height: 12px;
-	margin-left: 5px;
+	margin-inline-start: 5px;
 
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images//sharedfiles/deleteSearchTerm.png' );
 	background-repeat: no-repeat;
@@ -286,10 +286,10 @@ a.history_item:hover .history_item_name {
 .inventory_history_message .dismiss
 {
 	cursor: pointer;
-	float: right;
+	float: inline-end;
 	width: 12px;
 	height: 12px;
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/x9x9.gif' );
 	background-repeat: no-repeat;
 	background-position: center;
@@ -306,7 +306,7 @@ a.history_item:hover .history_item_name {
 	height: 24px;
 	padding: 8px;
 	margin-bottom: 15px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 	font-size: 14px;
 	line-height: 20px;
 	color: #ffffff;

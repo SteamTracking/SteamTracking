@@ -1,0 +1,59 @@
+.U5oHEUJR3KU- {
+  --control-height-2: 42px;
+  height: 42px;
+}
+.U5oHEUJR3KU- form {
+  flex: 1;
+}
+.U5oHEUJR3KU- input {
+  color: #fff;
+  background: #00000087;
+  border: none;
+  height: 27px;
+  padding: 0 10px;
+}
+.U5oHEUJR3KU- .zsG6BJvEtlU- {
+  cursor: pointer;
+  background-color: #3d4450;
+  border-radius: 2px;
+  justify-content: center;
+  align-items: center;
+  min-width: 36px;
+  height: 100%;
+  display: flex;
+}
+.U5oHEUJR3KU- .zsG6BJvEtlU- svg {
+  width: 25px;
+}
+.U5oHEUJR3KU- .zsG6BJvEtlU- svg:hover {
+  color: #fff;
+}
+html.responsive.touch .U5oHEUJR3KU- {
+  margin-inline-end: 0;
+  width: 100%;
+  margin-bottom: 4px;
+}
+@media screen and (width <= 910px) {
+  html.responsive .U5oHEUJR3KU- {
+    margin-inline-end: 0;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+}
+.hBHIQ0nx1yU- {
+  max-width: 500px;
+  color: var(--color-text-body-body);
+  background: radial-gradient(
+    85.9% 84.18% at 34.28% 100%,
+    #29323d 27.5%,
+    #1c1e24 67.94%
+  );
+  border: none;
+  padding: 20px;
+  font-size: 13px;
+  box-shadow: 1px 1px 10px #000;
+}
+.hBHIQ0nx1yU- code {
+  white-space: pre;
+  color: #fff;
+}

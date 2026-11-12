@@ -4186,7 +4186,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Dane histogramu opierają się na raportach dotyczących liczby klatek na sekundę dla tej gry na urządzeniu (%1$s) od klientów, którzy wyrazili zgodę na udostępnianie danych dotyczących liczby klatek na sekundę.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Rozłożenie liczby klatek na sekundę",
     "GamePerformanceStats_Framerate": "Liczba klatek",
-    "GamePerformanceStats_SessionLabel": "Procent sesji",
+    "GamePerformanceStats_SessionLabel": "Procent próbek",
     "GamePerformanceStats_Chart_NoData": "Wykres będzie dostępny po zebraniu wystarczającej ilości danych.",
     "NewToolTitleSuffix_Beta": "BETA",
     "DynamicLinkType_WorkshopItem": "Przedmiot z warsztatu dla %1$s",
@@ -4213,6 +4213,11 @@
     "GamePerformanceStats_StillGatheringData": "Steam wciąż zbiera dane o liczbie klatek na sekundę dla %1$s na tym urządzeniu (%2$s).",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam wciąż zbiera dane o liczbie klatek na sekundę dla tej gry na tym urządzeniu (%1$s).",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam wciąż zbiera dane o liczbie klatek na sekundę dla tej gry.",
-    "GamePerformanceStats_FrameRateDistribution": "Ten wykres liczby klatek na sekundę opiera się na anonimowych danych z rozgrywki klientów, którzy przystąpili do udzielania tych informacji i grają w %1$s na tym urządzeniu (%2$s).",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Ten wykres liczby klatek na sekundę opiera się na anonimowych danych z rozgrywki klientów, którzy przystąpili do udzielania tych informacji i grają w ten tytuł na tym urządzeniu (%1$s)."
+    "GamePerformanceStats_FrameRateDistribution": "Ten wykres przedstawia próbki liczby klatek na sekundę od klientów, którzy przystąpili do udzielania anonimowych danych z gry w %1$s na urządzeniu (%2$s). Każdy słupek ukazuje odsetek próbek przy danej liczbie klatek na sekundę.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Ten wykres przedstawia próbki liczby klatek na sekundę od klientów, którzy przystąpili do udzielania anonimowych danych z gry w ten tytuł na urządzeniu (%1$s). Każdy słupek ukazuje odsetek próbek przy danej liczbie klatek na sekundę.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "Ta gra wymaga ręcznego włączenia obsługi kontrolera za pomocą ustawień w grze.",
+    "GameFrameRateReporting_Details_HowToChange": "Jeśli chcesz zmienić to ustawienie później, możesz znaleźć je w <1>menu ustawień konta Steam > Dane i przeglądanie.</1>",
+    "GamePerformanceStats_MoreDetailsTitle": "Więcej szczegółów",
+    "GamePerformanceStats_MoreDetails_Filtering": "Uwzględniane są tylko dane zebrane przy domyślnym limicie klatek gry %1$s wynoszącym %2$s kl./s. Czas w stanie bezczynności i nieprawidłowe próbki są odfiltrowywane. Z każdej sesji rozgrywki zbieranych jest wiele próbek.",
+    "GamePerformanceStats_MoreDetails_VSync": "Luki na wykresie (np. między %1$s a %2$s kl./s) mogą być spowodowane przez synchronizację pionową, która synchronizuje dostarczanie klatek z częstotliwością odświeżania wyświetlacza, aby zapobiec rozrywaniu obrazu. Może to powodować nagromadzanie się próbek przy %1$s i %2$s kl./s, nawet gdy średnia liczba klatek na sekundę w grze mieści się między tymi wartościami. Jest to oczekiwane zachowanie synchronizacji pionowej i choć może wpływać na płynność klatek, niekoniecznie powoduje zauważalne zacinanie się obrazu."
 }

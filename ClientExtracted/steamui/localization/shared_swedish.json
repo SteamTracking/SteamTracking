@@ -4184,7 +4184,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Histogramdata baseras på spelets bildfrekvensrapporter från kunder på %1$s som valt att ge bildfrekvensdata.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Bildfrekvensfördelning",
     "GamePerformanceStats_Framerate": "Bildfrekvens",
-    "GamePerformanceStats_SessionLabel": "% session",
+    "GamePerformanceStats_SessionLabel": "% av mätvärdena",
     "GamePerformanceStats_Chart_NoData": "Ett diagram blir tillgängligt när tillräckligt med data har samlats in.",
     "NewToolTitleSuffix_Beta": "BETA",
     "DynamicLinkType_WorkshopItem": "En workshopartikel till %1$s",
@@ -4212,6 +4212,11 @@
     "GamePerformanceStats_StillGatheringData": "Steam samlar fortfarande in bildfrekvensdata för %1$s på %2$s",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam samlar fortfarande in bildfrekvensdata för det här spelet på %1$s",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam samlar fortfarande in bildfrekvensdata för det här spelet",
-    "GamePerformanceStats_FrameRateDistribution": "Bildfrekvensdiagrammet baseras på anonymiserade speldata från kunder som har valt att dela data och som spelar %1$s på %2$s",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Bildfrekvensdiagrammet baseras på anonymiserade speldata från kunder som har valt att dela data och som spelar det här spelet på %1$s"
+    "GamePerformanceStats_FrameRateDistribution": "Det här diagrammet visar bildfrekvensmätvärden från kunder som har valt att dela anonymiserade data när de spelat %1$s på %2$s. Varje stapel visar andelen mätningar i procent vid aktuell bildhastighet.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Det här diagrammet visar bildfrekvensmätvärden från kunder som har valt att dela anonymiserade data när de spelat det här spelet på %1$s. Varje stapel visar andelen mätningar i procent vid aktuell bildhastighet.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "Det här spelet kräver manuell aktivering av handkontrollstöd via spelinställningarna.",
+    "GameFrameRateReporting_Details_HowToChange": "Om du vill ändra inställningen senare finns den i <1>Steam-kontoinställningar > Data och navigering</1>",
+    "GamePerformanceStats_MoreDetailsTitle": "Fler detaljer",
+    "GamePerformanceStats_MoreDetails_Filtering": "Endast data som samlats in vid standardgränsen på %2$s FPS för %1$s inkluderas. Overksam tid och ogiltiga mätvärden filtreras bort. Flera mätvärden samlas in från varje spelsession.",
+    "GamePerformanceStats_MoreDetails_VSync": "Luckor i diagrammet (t.ex. mellan %1$s och %2$s FPS) kan orsakas av VSync, som synkroniserar bildleveransen med skärmens uppdateringsfrekvens för att förhindra screen tearing. Detta kan göra att mätpunkterna samlas kring %1$s och %2$s FPS även när spelets genomsnittliga bildfrekvens ligger mellan dem. Detta är förväntat VSync-beteende, och även om det kan påverka bildtakten orsakar det inte nödvändigtvis märkbara hackningar."
 }

@@ -9,7 +9,7 @@ html.GamepadMode .breadcrumbs {
 html.GamepadMode .forum_topic_pinned_notice {
 	color: #78d660;
 	background-color: #59bf4038;
-	border-left: 2px solid var(--gpColor-GreenHi);
+	border-inline-start: 2px solid var(--gpColor-GreenHi);
 	font-weight: 500;
 }
 
@@ -20,8 +20,8 @@ html.GamepadMode .comment_breaking_space {
 
 /* Breacrumbs */
 html.GamepadMode .breadcrumbs.forum_breadcrumbs {
-	margin-left: 0px;
-	margin-right: 0px;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
 	margin-bottom: 12px;
 }
 
@@ -66,7 +66,7 @@ html.GamepadMode .forum_topic .forum_topic_name {
 	font-size: unset;
 	line-height: unset;
 	padding: unset;
-	padding-right: 16px;
+	padding-inline-end: 16px;
 	color: white;
 	font-weight: 300;
 }
@@ -94,7 +94,7 @@ html.GamepadMode .forum_topic_award_count {
 
 html.GamepadMode .forum_topic_lastpost {
 	font: var(--gpText-BodyMedium);
-	padding-right: 12px;
+	padding-inline-end: 12px;
 	padding-top: 4px;
 	color: var(--gpColor-LightBlue);
 }
@@ -183,7 +183,7 @@ html.GamepadMode .forum_op_avatar a {
 }
 
 html.GamepadMode .forum_comment_actions_ctn {
-	margin-left: auto;
+	margin-inline-start: auto;
 }
 
 html.GamepadMode .forum_op .date,
@@ -322,7 +322,7 @@ html.GamepadMode .forum_paging_controls {
 }
 
 html.GamepadMode .forum_paging_summary {
-	margin-right: auto;
+	margin-inline-end: auto;
 }
 
 html.GamepadMode .forumtopic_comments .commentthread_comment_container {
@@ -361,7 +361,7 @@ html.GamepadMode .forumtopic_comments .commentthread_comment:focus-within {
 html.GamepadMode .commentthread_comment_text {
 	color: var(--gpStoreLightestGrey);
 	font: var(--gpText-BodyLarge);
-	padding-right: 10%;
+	padding-inline-end: 10%;
 }
 
 html.GamepadMode .forumtopic_comments .commentthread_comment .commentthread_comment_author {
@@ -376,7 +376,7 @@ html.GamepadMode .forumtopic_comments .commentthread_comment .commentthread_comm
 
 html.GamepadMode .forumtopic_comments .commentthread_comment .commentthread_comment_avatar {
 	top: 14px;
-	left: 24px;
+	inset-inline-start: 24px;
 }
 
 html.GamepadMode .forumtopic_comments .commentthread_comment .commentthread_comment_avatar a {
@@ -384,7 +384,7 @@ html.GamepadMode .forumtopic_comments .commentthread_comment .commentthread_comm
 }
 
 html.GamepadMode .forum_comment_permlink {
-	right: 12px;
+	inset-inline-end: 12px;
 	bottom: 24px;
 	padding: 2px 8px;
 	border: 2px solid var(--gpBackground-LightSoft);
@@ -472,5 +472,5 @@ html.GamepadMode .forum_op .content,
 html.GamepadMode .forum_audit,
 html.GamepadMode .forumtopic_answer.answer_body {
 	/* margin-left: 48px; */
-	margin-right: 48px;
+	margin-inline-end: 48px;
 }

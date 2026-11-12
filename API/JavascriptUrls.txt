@@ -966,7 +966,6 @@ ${PARTNER_BASE_URL}/optin/ajaxadminpreprunesearch
 ${PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard
 ${PARTNER_BASE_URL}/packages/ajaxgetpackageforapp
 ${PARTNER_BASE_URL}/pccafe
-${PARTNER_BASE_URL}/vrlicensing
 ${PARTNER_BASE_URL}achievements/ajaxcreateorupdateachievement/${}
 ${PARTNER_BASE_URL}achievements/ajaxcreateorupdategroup/${}
 ${PARTNER_BASE_URL}achievements/ajaxdeleteachievement/${}
@@ -1248,6 +1247,7 @@ ${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventbyid
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetpackagediscounts/${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxupdatediscountevent
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/
+${PARTNER_BASE_URL}promotion/discounts/dashboard/${_ ? _ : ``}
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/${}?de=${}
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${discount_event_id}
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${}
@@ -1493,6 +1493,7 @@ ${STORE_BASE_URL}contenthub/ajaxgetdlcforyouplaytime
 ${STORE_BASE_URL}contenthub/ajaxgetdlcforyoupopular
 ${STORE_BASE_URL}contenthub/ajaxgetdlcstatsforuser
 ${STORE_BASE_URL}contenthub/ajaxgetsalepagediscountsummary
+${STORE_BASE_URL}crosspromo_preview/${}/${}
 ${STORE_BASE_URL}curator/${clanAccountID}
 ${STORE_BASE_URL}curator/${clanAccountID}/admin/manage_rss
 ${STORE_BASE_URL}curator/${clanAccountID}/list/${listid}
@@ -1734,7 +1735,7 @@ ${STORE_BASE_URL}steam_refunds/
 ${STORE_BASE_URL}steamaccount/addfunds?marketlisting=${listingid}&returnurl=${}
 ${STORE_BASE_URL}steamaccount/addfunds?marketlisting=1&returnurl=${}
 ${STORE_BASE_URL}steamawards/${_ ? "nominations/" : ""}
-${STORE_BASE_URL}steamawards/${_ ? `nominations/` : ``}
+${STORE_BASE_URL}steamawards/${}
 ${STORE_BASE_URL}steamawards/${}/
 ${STORE_BASE_URL}steamawards/ajaxgetwidgetstyle
 ${STORE_BASE_URL}steamawards/archive
@@ -1771,9 +1772,9 @@ ${STORE_BASE_URL}wishlist/profiles/${}
 ${STORE_BASE_URL}wishlist/profiles/${}/${}#sort=discount
 ${STORE_BASE_URL}wishlist/profiles/${}/?wng=${}#sort=discount
 ${STORE_BASE_URL}yearinreview/
+${STORE_CDN_URL}${image_path}${}.png?${}
 ${STORE_CDN_URL}${image_url}
 ${STORE_CDN_URL}${image_url}?${image_target ? `v=3` : `v=2`}
-${STORE_CDN_URL}${}${image_path}${}.png?${}
 ${STORE_CDN_URL}/categories/headerimage/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/categories/headerimage/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/public/shared/images/footer/pw_logo.svg?v=1
@@ -2040,7 +2041,6 @@ ${g_szBaseURL}/apps/communityitems/${appID}
 ${g_szBaseURL}/apps/communityitems/${appID}/${item_type}
 ${g_szBaseURL}/apps/createogg/${appid}
 ${g_szBaseURL}/apps/crossbranch/${appid}
-${g_szBaseURL}/apps/deleteachievement/${appid}/${statid}/${bitid}
 ${g_szBaseURL}/apps/deleteavatar/${appid}/${id}
 ${g_szBaseURL}/apps/deleteavatar/${appid}/${screenid}
 ${g_szBaseURL}/apps/deleteleaderboardentry/${appid}
@@ -2048,27 +2048,21 @@ ${g_szBaseURL}/apps/deletestat/${appid}/${statid}
 ${g_szBaseURL}/apps/diff/${appid}
 ${g_szBaseURL}/apps/diff/${g_AppId}
 ${g_szBaseURL}/apps/economyflushappearance/${appid}
-${g_szBaseURL}/apps/fetchachievement/${appid}/${statid}/${bitid}
-${g_szBaseURL}/apps/fetchachievements/${appid}
 ${g_szBaseURL}/apps/fetchavatars/${appid}
 ${g_szBaseURL}/apps/fetchdrm/${appid}
 ${g_szBaseURL}/apps/fetchscreens/${appid}
 ${g_szBaseURL}/apps/fetchsigninginfo/${appid}
 ${g_szBaseURL}/apps/fetchstat/${appid}/${statid}
 ${g_szBaseURL}/apps/fetchstats/${appid}
-${g_szBaseURL}/apps/getachievementcounts/${appid}
 ${g_szBaseURL}/apps/getcegpropstatus/${appid}
 ${g_szBaseURL}/apps/getleaderboardentries/${appid}
 ${g_szBaseURL}/apps/landing/${appid}
 ${g_szBaseURL}/apps/migrate/${appidSrc}/${appidDest}
-${g_szBaseURL}/apps/newachievement/${appid}
 ${g_szBaseURL}/apps/newstat/${appid}
 ${g_szBaseURL}/apps/prepare/${appid}
 ${g_szBaseURL}/apps/publishing/${victimID}
 ${g_szBaseURL}/apps/requestkeys/${appid}
 ${g_szBaseURL}/apps/revert/${appid}
-${g_szBaseURL}/apps/saveachievement/${appid}
-${g_szBaseURL}/apps/savelanguages/${appid}
 ${g_szBaseURL}/apps/savestat/${appid}
 ${g_szBaseURL}/apps/setappallowdevretirement/${appid}
 ${g_szBaseURL}/apps/setappallowdevretirementanydlc/${appid}

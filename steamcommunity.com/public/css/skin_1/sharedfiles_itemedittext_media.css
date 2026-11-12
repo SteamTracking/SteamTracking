@@ -12,7 +12,7 @@
 	height: 27px;
 	border: solid 1px #313131;
 	border-top-color: #666666;
-	border-left-color: #666666;
+	border-inline-start-color: #666666;
 	background-color: #888888;
 	color: #000000;
 	padding: 5px;
@@ -26,13 +26,13 @@
 
 #item_text_editor {
 	width: 638px;
-	float: left;
+	float: inline-start;
 }
 
 .itemEditFieldContainer
 {
 	margin-top: 5px;
-	padding-left: 5px;
+	padding-inline-start: 5px;
 	overflow: hidden;
 }
 
@@ -42,9 +42,9 @@
 	font-size: 12px;
 	background-color: rgba( 0, 0, 0, 0.4 );
 	border-radius: 4px;
-	border-left: 1px solid #000;
+	border-inline-start: 1px solid #000;
 	border-top: 1px solid #000;
-	border-right: 1px solid #354357;
+	border-inline-end: 1px solid #354357;
 	border-bottom: 1px solid #354357;
 	overflow: hidden;
 }
@@ -65,8 +65,8 @@
 
 .item_text_edit_button
 {
-	float: right;
-	margin-left: 5px;
+	float: inline-end;
+	margin-inline-start: 5px;
 }
 
 .item_text_editor

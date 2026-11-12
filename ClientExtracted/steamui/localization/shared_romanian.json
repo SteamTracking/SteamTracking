@@ -4186,7 +4186,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Aceste date se bazează pe rapoartele privind frecvențele de cadre de pe %1$s pentru acest joc de la clienții care au ales să furnizeze date privind frecvențele de cadre.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Distribuția datelor privind frecvențele de cadre",
     "GamePerformanceStats_Framerate": "Frecvența de cadre",
-    "GamePerformanceStats_SessionLabel": "% sesiuni",
+    "GamePerformanceStats_SessionLabel": "% din eșantioane",
     "GamePerformanceStats_Chart_NoData": "Un grafic va deveni disponibil după ce vor fi strânse suficiente date",
     "NewToolTitleSuffix_Beta": "VERSIUNE BETA",
     "DynamicLinkType_WorkshopItem": "Un articol din atelier pentru %1$s",
@@ -4213,6 +4213,11 @@
     "GamePerformanceStats_StillGatheringData": "Steam încă strânge date privind frecvența de cadre de pe %2$s pentru %1$s.",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam încă strânge date privind frecvența de cadre de pe %1$s pentru acest joc.",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam încă strânge date privind frecvența de cadre pentru acest joc.",
-    "GamePerformanceStats_FrameRateDistribution": "Acest grafic privind frecvențele de cadre folosește datele anonime de joc furnizate voluntar de clienții care joacă %1$s pe %2$s.",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Acest grafic privind frecvențele de cadre folosește datele anonime de joc furnizate voluntar de clienții care joacă acest titlu pe %1$s."
+    "GamePerformanceStats_FrameRateDistribution": "Acest grafic prezintă eșantioane de frecvențe de cadre de la clienții care au jucat %1$s pe %2$s și au ales să furnizeze date anonime. Fiecare bară indică procentul de eșantioane pentru frecvența de cadre respectivă.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Acest grafic prezintă eșantioane de frecvențe de cadre de la clienții care au jucat acest titlu pe %1$s și au ales să furnizeze date anonime. Fiecare bară indică procentul de eșantioane pentru frecvența de cadre respectivă.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "Acest joc necesită activarea manuală a compatibilității pentru controlere prin intermediul setărilor din joc.",
+    "GameFrameRateReporting_Details_HowToChange": "Dacă dorești să modifici această setare mai târziu, o poți face din <1>setările contului Steam > Date și navigare</1>",
+    "GamePerformanceStats_MoreDetailsTitle": "Mai multe detalii",
+    "GamePerformanceStats_MoreDetails_Filtering": "Sunt incluse doar datele strânse pentru limita de cadre implicită de %2$s CPS a dispozitivului %1$s. Perioadele de inactivitate și eșantioanele nevalide sunt excluse. Multiple eșantioane sunt obținute de la fiecare sesiune de joc.",
+    "GamePerformanceStats_MoreDetails_VSync": "Lacunele din grafic (de exemplu, dintre %1$s și %2$s CPS) pot fi cauzate de sincronizarea verticală, care sincronizează livrarea de cadre cu frecvența de reîmprospătare a ecranului, pentru a evita distorsionarea imaginii. Acest lucru poate face ca eșantioanele să se concentreze la valori de %1$s și %2$s CPS, chiar și atunci când frecvența de cadre medie a jocului se află între aceste valori. Acesta este un comportament normal pentru sincronizarea verticală și, deși poate afecta ritmul cadrelor, nu cauzează neapărat sacadări perceptibile."
 }

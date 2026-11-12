@@ -1,0 +1,93 @@
+.LrqeL6o22aQ-,
+.at-NoHOQJvQ-,
+.oS2hPC3gY6k- {
+  cursor: pointer;
+  text-shadow: 1px 1px #0000004d;
+  background: 0 0;
+  border: none;
+  border-radius: 2px;
+  padding: 1px;
+  display: inline-block;
+}
+.LrqeL6o22aQ- > span,
+.at-NoHOQJvQ- > span,
+.oS2hPC3gY6k- > span {
+  white-space: nowrap;
+  border-radius: 2px;
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 32px;
+  display: block;
+}
+.LrqeL6o22aQ-:hover,
+.at-NoHOQJvQ-:hover,
+.oS2hPC3gY6k-:hover {
+  color: #fff;
+}
+.LrqeL6o22aQ-:disabled,
+.LrqeL6o22aQ-:disabled:hover,
+.at-NoHOQJvQ-:disabled,
+.at-NoHOQJvQ-:disabled:hover,
+.oS2hPC3gY6k-:disabled,
+.oS2hPC3gY6k-:disabled:hover {
+  color: #464d58;
+  box-shadow: none;
+  cursor: default;
+  pointer-events: none;
+}
+.LrqeL6o22aQ-:disabled > span,
+.at-NoHOQJvQ-:disabled > span,
+.oS2hPC3gY6k-:disabled > span {
+  background: #3d434d59;
+}
+a.LrqeL6o22aQ-,
+a.at-NoHOQJvQ-,
+a.oS2hPC3gY6k- {
+  text-decoration: none;
+}
+.LrqeL6o22aQ- {
+  color: #d2efa9;
+}
+.LrqeL6o22aQ- > span {
+  background: var(
+    --basebuttons-green-label-background,
+    linear-gradient(to right, #75b022 5%, #588a1b 95%)
+  );
+}
+.LrqeL6o22aQ-:hover {
+  --basebuttons-green-label-background: linear-gradient(
+    to right,
+    #8ed629 5%,
+    #6aa621 95%
+  );
+}
+.oS2hPC3gY6k- {
+  color: #c3e1f8;
+}
+.oS2hPC3gY6k- > span {
+  background: linear-gradient(90deg, #47bfff 5%, #1a44c2 60%);
+  background-position: var(--basebuttons-blue-label-background-position, 25%);
+  background-size: 330% 100%;
+}
+.oS2hPC3gY6k-:hover {
+  --basebuttons-blue-label-background-position: 0%;
+}
+.at-NoHOQJvQ- {
+  color: #dfe3e6;
+}
+.at-NoHOQJvQ- > span {
+  background: var(
+    --basebuttons-grey-label-background,
+    linear-gradient(to right, #32363f 5%, #32363f 95%)
+  );
+  box-shadow: var(--basebuttons-grey-label-shadow, 2px 2px 5px #0003);
+  transition: all 0.2s ease-out;
+}
+.at-NoHOQJvQ-:hover {
+  --basebuttons-grey-label-background: linear-gradient(
+    to right,
+    #464d58 5%,
+    #464d58 95%
+  );
+  --basebuttons-grey-label-shadow: 2px 2px 15px #00000080;
+}

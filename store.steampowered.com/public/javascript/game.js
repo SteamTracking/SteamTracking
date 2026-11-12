@@ -553,35 +553,6 @@ function ToggleBannerContentVisibility( divContentID, divIconID )
 	}
 };
 
-// The review detail section is simplified for mobile screens
-// which requires some section moves here, and formatting changes in .css
-function ReparentReviewsForSmallScreens()
-{
-	var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
-	var fn_reparent = bUseGamepadScreenMode ? Responsive_ReparentItemsInGamepadMode : Responsive_ReparentItemsInMobileMode;
-
-	var $MoveReviewSections = $J('.user_reviews_container');
-	$MoveReviewSections.each( function() {
-
-		// move content within each review detail section for small screen layout
-		var $SummarySection = $J(this).find('[id^="ReviewContent"]');
-		$SummarySection.each( function() {
-
-			var $LeftColContent = $J(this).find('.leftcol');
-			var $NewLeftLocation = $J(this).find('.responsive_review_leftcol_ctn');
-			var $ReviewAwardCtn = $J(this).find('.review_award_ctn');
-			var $NewAwardLocation = $J(this).find('.rightcol');
-
-			// if we don't have the required destination containers bail (this shouldn't happen)
-			if ( $NewLeftLocation.length == 0 || $NewAwardLocation.length == 0 )
-				return;
-
-			fn_reparent( '#' + $LeftColContent.attr('id'), $J( '#' + $NewLeftLocation.attr('id') ) );
-			fn_reparent( '#' + $ReviewAwardCtn.attr('id'), $J( '#' + $NewAwardLocation.attr('id') ) );
-		} );
-	} );
-}
-
 // Share dialog calls this to copy the store page link to the clipboard
 function ShareDialogCopyToClipboard()
 {

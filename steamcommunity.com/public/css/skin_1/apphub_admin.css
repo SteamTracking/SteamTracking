@@ -19,23 +19,23 @@ P {
 
 .leftcol
 {
-	float: left;
+	float: inline-start;
 	width: 640px;
 	padding-bottom: 50px;
-	text-align: left;
+	text-align: start;
 }
 
 .rightcol
 {
 	position: relative;
-	float: right;
+	float: inline-end;
 	width: 295px;
 	margin: 0;
 	padding: 0;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	z-index: 90;
 	font-size: 14px;
-	text-align: left;
+	text-align: start;
 }
 
 .rightbox_list_option
@@ -46,13 +46,14 @@ P {
 .admin_option_icon
 {
 	vertical-align: middle;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 
 .rightcol .panel
 {
 	background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-	padding: 10px 10px 10px 11px;
+	padding-block: 10px;
+	padding-inline: 11px 10px;
 	margin: 0 0 10px 0;
 	/*border: 1px solid #1f1f20;
 	background: rgba(27,27,27,.36);
@@ -74,7 +75,7 @@ P {
 	background: #000;
 	border-bottom: 1px solid #17212e;
 	height: 1px;
-	left: -11px;
+	inset-inline-start: -11px;
 	width: 294px;
 	margin: 5px 0 5px 0;
 }
@@ -96,8 +97,8 @@ P {
 	height: 64px;
 	border: 0;
 	margin: 0;
-	float: left;
-	margin-right: 10px;
+	float: inline-start;
+	margin-inline-end: 10px;
 }
 
 .welcome_admin_iconHolder img

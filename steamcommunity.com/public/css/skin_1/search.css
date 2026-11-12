@@ -6,13 +6,13 @@
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
-	text-align: left;
+	text-align: start;
 }
 #BG_bottom {
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
-	text-align:left;
+	text-align:start;
 }
 #BG_top h2 {
 	font-weight:normal;
@@ -37,27 +37,27 @@
 	min-width:936px;
 	margin:0;
 	padding:0;
-	text-align:left;
-	padding-left:17px;
+	text-align:start;
+	padding-inline-start:17px;
 	padding-top:24px;
 }
 
 #searchBtn {
 	position:absolute;
-	left:170px;
+	inset-inline-start:170px;
 	top:4px;
 	border:none;
 }
 
 #errMsg {
-	margin-left:136px;
+	margin-inline-start:136px;
 	color:#f26c4f;
 	font-size:12px;
 	font-weight:bold;
 }
 
 #resultsMsg {
-	margin-left:136px;
+	margin-inline-start:136px;
 	color:#959595;
 	font-size:12px;
 	margin-bottom:8px;
@@ -65,12 +65,13 @@
 
 .resultItem,.resultItemOGG {
 	position:relative;
-	margin-left:72px;
+	margin-inline-start:72px;
 	width:645px;
 	background-color:#2e2e2e;
 	color:#959595;
 	font-size:11px;
-	padding:5px 0px 5px 130px;
+	padding-block: 5px;
+	padding-inline: 130px 0px;
 	height:72px;
 	margin-bottom:1px;
 	line-height:16px;
@@ -78,7 +79,7 @@
 
 .pgtag {
 	position:absolute;
-	left:10px;
+	inset-inline-start:10px;
 	top:30px;
 	color:#4a4a4a;
 	font-size:15px;
@@ -88,7 +89,7 @@
 .resultItemOGG {
 	height:77px;
 	width:766px;
-	padding-left:9px;
+	padding-inline-start:9px;
 }
 
 .resultItem>p,.resultItemOGG>p {
@@ -115,10 +116,10 @@
 	position: relative;
 	width: 166px;
 	height: 45px;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/apphubs/btn_search_hub.png');
-	float: left;
-	left: -11px;
+	float: inline-start;
+	inset-inline-start: -11px;
 	top: 7px;
 }
 
@@ -140,25 +141,25 @@
 .listOGGTag
 {
 	padding-top: 7px;
-	padding-left: 202px;
+	padding-inline-start: 202px;
 }
 
 .groupBlockMedium {
-	float:left;
+	float:inline-start;
 	width:72px;
 	height:72px;
 	margin:0;
 	padding:0;
-	margin-right:11px;
+	margin-inline-end:11px;
 }
 
 .groupBlockOGG {
-	float:left;
+	float:inline-start;
 	width:192px;
 	height:78px;
 	margin:0;
 	padding:0;
-	margin-right:11px;
+	margin-inline-end:11px;
 }
 
 .resultItem>a,.resultItem>a:hover,.resultItem>a:visited,.resultItem>a:active {
@@ -179,12 +180,12 @@
 .resultIcon {
 	position:absolute;
 	top:8px;
-	left:8px;
+	inset-inline-start:8px;
 }
 
 .pageLinks {
-	float:right;
-	margin-right:8px;
+	float:inline-end;
+	margin-inline-end:8px;
 	padding-top:2px;
 	font-size:10px;
 	color:#959595;
@@ -199,28 +200,28 @@
 	width:894px;
 	margin:0;
 	padding:0;
-	margin-left:23px;
+	margin-inline-start:23px;
 	border:solid #252525 4px;
 }
 
 #bottomRightLinks {
-	float:right;
+	float:inline-end;
 }
 
 .friendBlock_offline,.friendBlock_online,.friendBlock_in-game {
 	position:relative;
-	float:left;
+	float:inline-start;
 	width:244px;
 	height:40px;
 	padding:0;
 	margin:0;
-	padding-left:4px;
+	padding-inline-start:4px;
 	padding-top:4px;
 	padding-bottom:4px;
 	margin-bottom:4px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/playerBlockBG.gif');
 	font-size:10px;
-	margin-right:8px;
+	margin-inline-end:8px;
 }
 
 .friendBlock_offline:hover,.friendBlock_online:hover,.friendBlock_in-game:hover {
@@ -240,7 +241,7 @@
 
 .officerIcon {
 	position:absolute;
-	left:222px;
+	inset-inline-start:222px;
 	top:15px;
 }
 
@@ -253,7 +254,7 @@
 	position:relative;
 	margin:0;
 	padding:0;
-	margin-left:68px;
+	margin-inline-start:68px;
 	width:775px;
 	height:38px;
 	line-height: 38px;
@@ -264,14 +265,14 @@
 .infoBar p {
 	margin:0;
 	padding:0;
-	margin-left:8px;
+	margin-inline-start:8px;
 	padding-top:2px;
 	font-size:10px;
 	color:#959595;
 }
 
 .searchMsg {
-	margin-left:146px;
+	margin-inline-start:146px;
 	color:#b2b2b2;
 	font-size:12px;
 }
@@ -283,7 +284,7 @@
 
 #searchArea,#searchArea2 {
 	width:775px;
-	margin-left:72px;
+	margin-inline-start:72px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/bg_grey_diag.gif');
 	height:72px;
 	position:relative;
@@ -292,19 +293,19 @@
 #searchField {
 	position:absolute;
 	top:26px;
-	left:10px;
+	inset-inline-start:10px;
 }
 
 
 #tabs {
 	margin:0;
 	width:775px;
-	margin-left:72px;
+	margin-inline-start:72px;
 	border-bottom:solid #4d4d4e 1px;
 	height:29px;
 }
 .tab {
-	float:left;
+	float:inline-start;
 }
 .tab a,.tab a:hover,.tab a:visited,.tab a:active {
 	font-size:11px;
@@ -313,7 +314,7 @@
 	font-weight:bold;
 }
 .tabOff,.tabOn {
-	float:left;
+	float:inline-start;
 	padding:8px 16px 6px 16px;
 	height:15px;
 	font-size:11px;
@@ -325,7 +326,7 @@
 	background-color:#3a3a3a;
 }
 .tabOnL,.tabOnR,.tabOffL,.tabOffR {
-	float:left;
+	float:inline-start;
 	width:2px;
 	background-color:#4f4f4e;
 	height:29px;
@@ -334,35 +335,36 @@
 	background-color:#3a3a3a;
 }
 .tabOnR,.tabOffR {
-	margin-right:6px;
+	margin-inline-end:6px;
 }
 .vbreak {
 	height:71px;
 }
 
 #tabHolder {
-	padding-left:14px;
+	padding-inline-start:14px;
 }
 
 
 .searchRow {
 	background-color:#2e2e2e;
 	position:relative;
-	padding:12px 18px 12px 10px;
+	padding-block: 12px;
+	padding-inline: 10px 18px;
 	margin-bottom:4px;
 	width:747px;
-	margin-left:72px;
+	margin-inline-start:72px;
 }
 .searchResultType {
 	width:90px;
 	padding-top:26px;
-	float:left;
+	float:inline-start;
 	font-weight:bold;
 	font-size:18px;
 }
 .searchPersonaInfo {
-	padding-left:12px;
-	float:left;
+	padding-inline-start:12px;
+	float:inline-start;
 	padding-top:6px;
 	line-height:18px;
 }
@@ -375,12 +377,13 @@
 .searchAddFriend {
 	position:absolute;
 	top:12px;
-	right:18px;
+	inset-inline-end:18px;
 }
 .searchMatchInfo {
 	margin-top:6px;
-	margin-left:90px;
-	padding:12px 18px 12px 10px;
+	margin-inline-start:90px;
+	padding-block: 12px;
+	padding-inline: 10px 18px;
 	background-color:#363636;
 }
 
@@ -390,13 +393,13 @@
 	background-color: #242426;
 	border: solid 1px #242426;
 	border-radius: 2px;
-	border-right-color: #343436;
+	border-inline-end-color: #343436;
 	border-bottom-color: #343436;
 	padding-bottom: 20px;
 }
 
 .searchReport {
-	float:right;
+	float:inline-end;
 }
 
 #search_results {
@@ -404,27 +407,30 @@
 
 .search_row {
 	background-color: rgba( 0, 0, 0, 0.4 );
-	padding: 12px 18px 12px 10px;
+	padding-block: 12px;
+	padding-inline: 10px 18px;
 	margin-bottom: 10px;
 }
 
 
 .search_match_info {
 	margin-top:6px;
-	margin-left:00px;
-	padding:12px 18px 12px 10px;
+	margin-inline-start:00px;
+	padding-block: 12px;
+	padding-inline: 10px 18px;
 	background-color: rgba( 255, 255, 255, 0.1);
 	line-height: 18px;
 }
 
 .search_result_friend {
-	float: right;
-	padding: 10px 0 10px 10px;
+	float: inline-end;
+	padding-block: 10px;
+	padding-inline: 10px 0;
 	color: whitesmoke;
 }
 
 .search_result_friend img {
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 
 .search_group_summary_text {
@@ -434,23 +440,23 @@
 }
 
 .search_group_avatar_holder img {
-	float: left;
+	float: inline-start;
 	width: 96px;
 	height: 96px;
 }
 
 .search_gamegroup_avatar_holder img {
-	float: left;
+	float: inline-start;
 	width: 320px;
 }
 
 .search_group_type {
 	font-size: 16px;
-	padding-left: 4px;
+	padding-inline-start: 4px;
 }
 
 .community_search_paging_controls {
-	float: right;
+	float: inline-end;
 }
 
 #asearch_text_box {
@@ -465,7 +471,7 @@
 }
 
 .search_filters a {
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	cursor: pointer;
 }
 
@@ -491,7 +497,7 @@
 }
 .centerContainer {
 	width:775px;
-	margin-left:72px;
+	margin-inline-start:72px;
 	text-align:center;
 }
 .centerContainer h1 {
@@ -507,7 +513,7 @@
 #friendSearchField {
 	width:450px;
 	margin:auto;
-	text-align:left;
+	text-align:start;
 	position:relative;
 	margin-bottom:14px;
 }
@@ -516,14 +522,14 @@
 }
 #friendSearchBtn {
 	position:absolute;
-	right:0px;
+	inset-inline-end:0px;
 	top:3px;
 }
 
 .search_invite_link_tip {
 	margin-top: 10px;
 	color: #fff;
-	text-align: left;
+	text-align: start;
 }
 
 .search_invite_link_tip a{
@@ -541,7 +547,7 @@
 	font-size:12px;
 	color:#c9c9c9;
 	width:755px;
-	margin-left:72px;
+	margin-inline-start:72px;
 	margin-bottom:4px;
 	background-color:#000000;
 }
@@ -549,15 +555,15 @@
 .pagingBar p {
 	margin:0;
 	padding:0;
-	margin-left:8px;
+	margin-inline-start:8px;
 	padding-top:2px;
 	font-size:12px;
 	color:#959595;
 }
 
 .pagingPageLinks {
-	float:right;
-	margin-right:0px;
+	float:inline-end;
+	margin-inline-end:0px;
 	padding-top:2px;
 	font-size:12px;
 	color:#959595;
@@ -628,8 +634,8 @@ a.pagingPageLink,a.pagingPageLink:hover,a.pagingPageLink:visited,a.pagingPageLin
 {
 	min-width:936px;
 	width:775px;
-	margin-left:auto;
-	margin-right:auto;
+	margin-inline-start:auto;
+	margin-inline-end:auto;
 	text-align:center;
     padding-bottom: 25px;
 }
@@ -654,17 +660,17 @@ a.pagingPageLink,a.pagingPageLink:hover,a.pagingPageLink:visited,a.pagingPageLin
 		font-weight: normal; /* normal */
 
 			padding-top: 2px;
-    float: left;
+    float: inline-start;
 }
 
 .community_searchresults_paging{
-	float: right;
+	float: inline-end;
 	padding-bottom: 2px
 }
 
 .community_search_text_box
 {
-	text-align: left;
+	text-align: start;
 	height: 33px;
 	margin-top: 5px;
 	top: 15px;
@@ -680,6 +686,7 @@ a.pagingPageLink,a.pagingPageLink:hover,a.pagingPageLink:visited,a.pagingPageLin
 	border-radius: 3px;
 	box-shadow: 0 0 50px rgba(103,193,245,0.3);
 	color: #abdaf4;
-	padding: 5px 5px 5px 10px;
+	padding-block: 5px;
+	padding-inline: 10px 5px;
 	text-indent: 3px;
 }

@@ -8122,9 +8122,6 @@ button.DialogButton.fBKKfrxBO77AfTPu-9SOY svg {
   font-size: 10px;
   margin-top: 0px;
 }
-.ChatMessageEntryVoice.pushToTalkEnabled .activeVoiceButtons {
-  margin-top: -8px;
-}
 .ChatMessageEntryVoice.pushToTalkEnabled .VoiceControlPanelButton {
   min-height: 14px;
 }
@@ -78597,17 +78594,8 @@ html.GamepadMode ._2gXzKgnqPNSUzBWEYvQ4OP {
   }
 }
 ._1-O8t3AxzpNsipTPfHVktW ._5LMNcPZPMKt07G9Atmv_d ._21HEw91Ex24Tv5M6nbqy5c {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-@media screen and (max-width: 500px) {
-  html.responsive
-    ._1-O8t3AxzpNsipTPfHVktW
-    ._5LMNcPZPMKt07G9Atmv_d
-    ._21HEw91Ex24Tv5M6nbqy5c {
-    display: block;
-  }
+  display: block;
+  text-align: center;
 }
 ._1-O8t3AxzpNsipTPfHVktW ._5LMNcPZPMKt07G9Atmv_d ._1hh2CwOav19PBwQBtRg2Q- {
   font-size: 12px;
@@ -78616,15 +78604,6 @@ html.GamepadMode ._2gXzKgnqPNSUzBWEYvQ4OP {
 ._1-O8t3AxzpNsipTPfHVktW ._5LMNcPZPMKt07G9Atmv_d .rRMEH3oJvrQFGd520RdY0 {
   color: #199fff;
   font-weight: bold;
-  padding: 0px 5px;
-}
-@media screen and (max-width: 500px) {
-  html.responsive
-    ._1-O8t3AxzpNsipTPfHVktW
-    ._5LMNcPZPMKt07G9Atmv_d
-    .rRMEH3oJvrQFGd520RdY0 {
-    padding: 0px;
-  }
 }
 ._1-O8t3AxzpNsipTPfHVktW ._5LMNcPZPMKt07G9Atmv_d ._2v696E3H0_C_Nwl2j63Ors {
   margin-top: 10px;
@@ -78633,18 +78612,14 @@ html.GamepadMode ._2gXzKgnqPNSUzBWEYvQ4OP {
 }
 ._1-O8t3AxzpNsipTPfHVktW ._5LMNcPZPMKt07G9Atmv_d ._12ygSYdEUuRnstjlBrbHzG {
   overflow-x: auto;
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 20px;
-  padding: 20px;
+  padding: 10px 20px 20px 20px;
+  color: #b8bcbf;
 }
 @media screen and (max-width: 500px) {
   html.responsive
     ._1-O8t3AxzpNsipTPfHVktW
     ._5LMNcPZPMKt07G9Atmv_d
     ._12ygSYdEUuRnstjlBrbHzG {
-    grid-template-columns: 1fr;
-    gap: 0px;
     padding-top: 0px;
   }
 }
@@ -78654,6 +78629,15 @@ html.GamepadMode ._2gXzKgnqPNSUzBWEYvQ4OP {
   ._3kfKfB-pGu8SzCuHslLD42 {
   font-weight: bold;
   padding-bottom: 10px;
+  color: #fff;
+}
+._1-O8t3AxzpNsipTPfHVktW
+  ._5LMNcPZPMKt07G9Atmv_d
+  ._12ygSYdEUuRnstjlBrbHzG
+  ._3MsaIEeUEGaLvKmY0aG7w5 {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 ._1Lr7DXWKD_uN7PaE8U1qo1 {
   min-height: 0;
@@ -78925,13 +78909,9 @@ svg._38dt1RGdPyDg27Rpa3ou6z {
   height: 3ex;
   margin-left: 1ex;
   color: #199fff;
-}
-@media screen and (max-width: 500px) {
-  html.responsive svg._38dt1RGdPyDg27Rpa3ou6z {
-    vertical-align: middle;
-    margin-top: -1ex;
-    margin-bottom: -1ex;
-  }
+  vertical-align: middle;
+  margin-top: -1ex;
+  margin-bottom: -1ex;
 }
 ._3oSHTIvUhbK90D9Uvj438V {
   display: flex;
@@ -79084,7 +79064,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
 .B6RsrH8xoriB-HdZKCO0_ ._1B0uo6uwXmD3OWO1kTeQ0S {
   position: absolute;
   top: 40%;
-  left: -20px;
+  left: -30px;
   font-size: 14px;
   color: #a9a9a9;
   transform: rotate(270deg);

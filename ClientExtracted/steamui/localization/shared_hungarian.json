@@ -4187,7 +4187,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "A hisztogramadatok a(z) %1$s képkockaszám-jelentésein alapulnak, azoktól a vásárlóktól, akik beleegyeztek képkockaszám-adatok adásába.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Képkockaszám-eloszlás",
     "GamePerformanceStats_Framerate": "Képkockasebesség",
-    "GamePerformanceStats_SessionLabel": "% játékmenet",
+    "GamePerformanceStats_SessionLabel": "A minták %-a",
     "GamePerformanceStats_Chart_NoData": "Miután elegendő adat gyűlik össze, elérhetővé fog válni egy grafikon.",
     "NewToolTitleSuffix_Beta": "BÉTA",
     "DynamicLinkType_WorkshopItem": "%1$s műhely-elem",
@@ -4214,6 +4214,10 @@
     "GamePerformanceStats_StillGatheringData": "A Steam %2$s készüléken még gyűjti a(z) %1$s képkockasebesség-adatait.",
     "GamePerformanceStats_StillGatheringData_ThisGame": "A Steam %2$s készüléken még gyűjti e játék képkockasebesség-adatait.",
     "GamePerformanceStats_StillGatheringData_NoDevice": "A Steam még gyűjti e játék képkockasebesség-adatait.",
-    "GamePerformanceStats_FrameRateDistribution": "Ez a képkockasebesség-diagram a(z) %1$s játékkal %2$s készüléken játszó, feliratkozott vásárlók névtelen játékmenet-adatain alapul.",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Ez a képkockasebesség-diagram az e játékkal %1$s készüléken játszó, feliratkozott vásárlók névtelen játékmenet-adatain alapul."
+    "GamePerformanceStats_FrameRateDistribution": "Ez a diagram azon vásárlók képkockaszám-mintáit mutatja, akik %2$s készüléken a(z) %1$s játékot játszva hozzájárultak a névtelen adatok megosztásához. Az egyes oszlopok az adott képkockaszámú minták százalékos arányát mutatják.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Ez a diagram azon vásárlók képkockaszám-mintáit mutatja, akik %1$s készüléken ezt a játékot játszva hozzájárultak a névtelen adatok megosztásához. Az egyes oszlopok az adott képkockaszámú minták százalékos arányát mutatják.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "E játék a játékvezérlő-támogatás manuális bekapcsolását igényli a játékbeli beállításokban.",
+    "GamePerformanceStats_MoreDetailsTitle": "További részletek",
+    "GamePerformanceStats_MoreDetails_Filtering": "Csak a(z) %1$s alapértelmezett, %2$s FPS képkockaszám-korlátja mellett gyűjtött adatokat tartalmazza. A tétlen idő és az érvénytelen minták ki vannak szűrve. Minden játékmenetből több mintát gyűjtünk.",
+    "GamePerformanceStats_MoreDetails_VSync": "A diagram szakadékait (pl. %1$s és %2$s FPS között) a VSync okozhatja, amely szinkronizálja a játék képkockaszámát a kijelző frissítési ütemével, hogy elkerülje a kép szakadozását. Emiatt a minták %1$s és %2$s FPS körül csoportosulhatnak, még akkor is, ha a játék átlagos képkockasebessége a kettő közé esik. Ez a VSync várható viselkedése, és bár hatással lehet a képkockák egyenletes megjelenítésére, nem feltétlenül okoz észrevehető akadozást."
 }

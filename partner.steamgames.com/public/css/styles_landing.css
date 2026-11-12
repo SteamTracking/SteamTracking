@@ -2896,6 +2896,11 @@ ul.actualUL li,
     font-size: 14px;
 }
 
+.build_submission_notes .multiline_text {
+	height: 300px;
+	width: 100%;
+}
+
 /* App landing release steps */
 .releaseProgressContainer {
 			font-family: "Motiva Sans", Sans-serif;

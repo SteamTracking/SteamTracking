@@ -5,12 +5,12 @@
 	height: 86px;
 	padding-bottom: 10px;
 
-	padding-left: 76px;
+	padding-inline-start: 76px;
 }
 
 .group_admin_header .admin_avatar_dropshadow {
 	position: absolute;
-	left: -4px;
+	inset-inline-start: -4px;
 	top: 6px;
 	width: 64px;
 	height: 64px;
@@ -25,7 +25,7 @@
 }
 
 .group_admin_header.ogg {
-	padding-left: 202px;
+	padding-inline-start: 202px;
 }
 
 .group_admin_header.ogg .admin_avatar_dropshadow, .group_admin_header.ogg .admin_avatar_dropshadow img {
@@ -34,7 +34,7 @@
 }
 
 .group_admin_header.ogg .admin_avatar_dropshadow {
-	left: 0px;
+	inset-inline-start: 0px;
 	padding: 4px;
 	background: rgba( 0, 0, 0, 0.5 );
 }
@@ -52,7 +52,7 @@
 }
 
 .group_admin_header .groupadmin_header_name {
-	text-align: left;
+	text-align: start;
 
 	line-height: 32px;
 
@@ -85,25 +85,25 @@
 
 .groupadmin_content .group_content {
 	padding-bottom: 6px;
-	padding-right: 2%;
+	padding-inline-end: 2%;
 }
 
 .formRow {
 	position: relative;
 	min-height: 34px;
 	margin-bottom: 7px;
-	padding-left: 146px;
+	padding-inline-start: 146px;
 }
 
 .formRow .formRowTitle {
 	position: absolute;
 	display: block;
-	text-align: right;
+	text-align: end;
 	/* width: 110px; */
 	width: 156px;
 	height: 34px;
 	line-height: 34px;
-	left: -20px;
+	inset-inline-start: -20px;
 	top: 0px;
 
 	font-size: 14px;
@@ -123,8 +123,8 @@
 	font-size: 13px;
 }
 .formRowGroupings input[type="checkbox"] {
-	margin-left: 0px;
-	margin-right: 10px;
+	margin-inline-start: 0px;
+	margin-inline-end: 10px;
 	vertical-align: middle;
 }
 .formRow .formRowGroupings .formRowMultiLineText.disabled {
@@ -132,7 +132,7 @@
 }
 
 .formRowGroupings .select2-container {
-	margin-left: 26px;
+	margin-inline-start: 26px;
 }
 
 .formRowHR {
@@ -148,13 +148,13 @@
 	color: #6a7177;
 }
 html.responsive .formRow {
-	padding-left: 0;
+	padding-inline-start: 0;
 }
 
 html.responsive .formRow .formRowTitle {
 	position: static;
-	float: left;
-	margin-right: 10px;
+	float: inline-start;
+	margin-inline-end: 10px;
 	max-width: 20%;
 }
 
@@ -189,10 +189,10 @@ html.responsive .formRowFields .gray_bevel {
 	vertical-align: bottom;
 	font-size: 9px;
 	line-height: 11px;
-	margin-right: 2%;
+	margin-inline-end: 2%;
 }
 .formRowFields .avatar_edit_block:last-child {
-	margin-right: 0;
+	margin-inline-end: 0;
 }
 
 .avatar_edit_block.medium {
@@ -226,7 +226,7 @@ html.responsive .formRowFields .gray_bevel {
 	font-weight:bold;
 }
 .historyIcon {
-	float:left;
+	float:inline-start;
 	text-align:center;
 	width:35px;
 }
@@ -245,14 +245,14 @@ html.responsive .formRowFields .gray_bevel {
 	width:894px;
 	margin:0;
 	padding:0;
-	margin-left:23px;
+	margin-inline-start:23px;
 	margin-bottom:6px;
 	border:solid #252525 4px;
 }
 
 .pageLinks {
-	float:right;
-	margin-right:8px;
+	float:inline-end;
+	margin-inline-end:8px;
 	padding-top:2px;
 	font-size:10px;
 	color:#959595;
@@ -268,14 +268,14 @@ html.responsive .formRowFields .gray_bevel {
 	background-color:#000000;
 	margin:0;
 	padding:0;
-	margin-left:23px;
+	margin-inline-start:23px;
 	border:solid #252525 4px;
 }
 
 .infoBar p {
 	margin:0;
 	padding:0;
-	margin-left:8px;
+	margin-inline-start:8px;
 	padding-top:2px;
 	font-size:10px;
 	color:#959595;
@@ -285,7 +285,7 @@ html.responsive .formRowFields .gray_bevel {
 	margin:0;
 	padding:0;
 	padding-top:8px;
-	clear:left;
+	clear:inline-start;
 }
 
 .blotterBlock1 {
@@ -296,18 +296,18 @@ html.responsive .formRowFields .gray_bevel {
 	color:#8c8c8c;
 	font-size:11px;
 	font-weight:bold;
-	text-align:right;
+	text-align:end;
 	width:142px;
-	float:left;
+	float:inline-start;
 	margin-top:4px;
-	padding-right:10px;
+	padding-inline-end:10px;
 
 }
 
 .blotterIcon {
 	width:24px;
-	float:left;
-	padding-right:10px;
+	float:inline-start;
+	padding-inline-end:10px;
 }
 
 .blotterDesc {
@@ -316,7 +316,7 @@ html.responsive .formRowFields .gray_bevel {
 	padding-top:2px;
 	line-height:16px;
 	width:483px;
-	float:left;
+	float:inline-start;
 
 }
 
@@ -327,7 +327,7 @@ html.responsive .formRowFields .gray_bevel {
 	margin:0;
 	padding:0;
 	padding-top:0px;
-	margin-left:26px;
+	margin-inline-start:26px;
 }
 
 
@@ -362,8 +362,8 @@ html.responsive .formRowFields .gray_bevel {
 
 .forumlist_col_permission {
 	width: 148px;
-	float: right;
-	margin-left: 13px;
+	float: inline-end;
+	margin-inline-start: 13px;
 }
 
 .forumlist_col_name {
@@ -403,11 +403,11 @@ html.responsive .formRowFields .gray_bevel {
 }
 
 .forum_manage_actions {
-	float: right;
+	float: inline-end;
 }
 
 .forum_manage_actions .btn_medium {
-	margin-left: 12px;
+	margin-inline-start: 12px;
 }
 
 .forum_manage_create_area {
@@ -416,7 +416,7 @@ html.responsive .formRowFields .gray_bevel {
 }
 
 .forum_manage_create_area .forum_manage_actions {
-	padding-right: 8px;
+	padding-inline-end: 8px;
 }
 
 .forum_manage_create_area .groupadmin_forumlist_body {
@@ -449,7 +449,7 @@ html.responsive .formRowFields .gray_bevel {
 }
 
 .forum_dragdrop_titlebar .forum_delete_link {
-	float: right;
+	float: inline-end;
 	height: 27px;
 	line-height: 27px;
 	padding: 0px 10px;
@@ -508,15 +508,15 @@ html.responsive .formRowFields .gray_bevel {
 }
 
 .permissionRow .permissionCol {
-	float: right;
+	float: inline-end;
 	width: 58px;
-	margin-left: 10px;
+	margin-inline-start: 10px;
 
 	text-align: center;
 }
 
 .permissionRow .permissionText {
-	padding-left: 108px;
+	padding-inline-start: 108px;
 	font-size: 13px;
 }
 
@@ -555,24 +555,24 @@ html.responsive .formRowFields .gray_bevel {
 }
 
 .member_block.chat_banned_member {
-	margin-left: 0;
-	margin-right: 0;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
 	color:#898989;
 }
 
 .member_block.chat_banned_member:nth-child(even) {
-	margin-left: 4px;
+	margin-inline-start: 4px;
 }
 
 a.chat_ban_admin {
 }
 
 #group_associated_games_edit .group_associated_game {
-	float: left;
-	padding-right: 8px;
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
-	margin-right: 8px;
+	float: inline-start;
+	padding-inline-end: 8px;
+	border-start-end-radius: 3px;
+	border-end-end-radius: 3px;
+	margin-inline-end: 8px;
 	white-space: nowrap;
 
 	background-color: rgba( 102, 192, 244, 0.5);
@@ -589,7 +589,7 @@ a.chat_ban_admin {
 
 .group_associated_game_remove {
 	vertical-align: middle;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 
 	cursor: pointer;
 	opacity: 0.5;
@@ -603,7 +603,7 @@ a.chat_ban_admin {
 #game_select_suggestions_ctn {
 	position: absolute;
 
-	margin-left: -5px;
+	margin-inline-start: -5px;
 }
 
 #game_select_suggestions {
@@ -646,7 +646,7 @@ a.chat_ban_admin {
 }
 
 .upload_controls .upload_btn {
-	float: right;
+	float: inline-end;
 	margin-top: 2px;
 }
 
@@ -679,7 +679,7 @@ a.chat_ban_admin {
 @media screen and (max-width: 500px)
 {
 	html.responsive .formRow .formRowTitle {
-		text-align: left;
+		text-align: start;
 		width: auto;
 		max-width: none;
 		float: none;
@@ -690,7 +690,7 @@ a.chat_ban_admin {
 	}
 
 	html.responsive .formRow .formRowFields {
-		padding-left: 4%;
+		padding-inline-start: 4%;
 	}
 
 }
@@ -699,7 +699,7 @@ a.chat_ban_admin {
 @media screen and (max-width: 400px)
 {
 	html.responsive .formRowFields .avatar_edit_block:not(:last-child) {
-		margin-right: 1%;
+		margin-inline-end: 1%;
 	}
 }
 
@@ -709,11 +709,12 @@ a.chat_ban_admin {
 
 .joinRequestBulkTools {
 	background: #c9c9c9;
-	padding: 10px 25px 10px 10px;
+	padding-block: 10px;
+	padding-inline: 10px 25px;
 }
 
 .joinRequestBulkTools a {
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 .joinRequestBulkTools div {
@@ -731,7 +732,7 @@ a.chat_ban_admin {
 }
 
 .joinRequestManageButtons {
-	float: right;
+	float: inline-end;
 	margin-top: 13px;
 }
 

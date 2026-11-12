@@ -6,14 +6,14 @@
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 }
 #BG_bottom {
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
-	text-align:left;
+	text-align:start;
 	margin: 0px auto;
 }
 #BG_top h2 {
@@ -23,7 +23,7 @@
 	padding-top:21px;
 	font-size: 26px;
 	color: #898989;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 #BG_top h1 {
 	font-weight:normal;
@@ -33,7 +33,7 @@
 	padding:0;
 	padding-top:0px;
 	padding-bottom:5px;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 
 #tabcontent_inventory {
@@ -45,7 +45,7 @@
 #mainContents {
 	max-width:926px;
 	padding:0;
-	text-align:left;
+	text-align:start;
 	padding-top:10px;
 	margin: 0 auto;
 }
@@ -76,7 +76,7 @@
 	position: absolute;
 	width: 40px;
 	height: 40px;
-	left: 0px;
+	inset-inline-start: 0px;
 	bottom: 0px;
 	transform: translate( -3px, 6px );
 
@@ -87,7 +87,7 @@
 .listed_item_badge_ctn
 {
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	bottom: 0px;
 	height: 40px;
 
@@ -105,7 +105,7 @@
 	border-radius: 5px;
 
 	/* move the left edge to the center of the badge */
-	margin-left: 20px;
+	margin-inline-start: 20px;
 
 	/* push down to match the image */
 	transform: translate( 0px, 6px );
@@ -114,7 +114,8 @@
 	font-size: 14px;
 	font-weight: 500;
 	/* pad out the rest of the width of the badge */
-	padding: 2px 8px 2px 20px;
+	padding-block: 2px;
+	padding-inline: 20px 8px;
 }
 
 .listed_item_help_link_ctn
@@ -168,7 +169,7 @@
 .provisional_trades_hl .ttip
 {
 	flex-basis: 20%;
-	text-align: right;
+	text-align: end;
 }
 
 .provisional_trades_hl a {
@@ -190,7 +191,7 @@
 	position: absolute;
 	width: 40px;
 	height: 40px;
-	left: 0px;
+	inset-inline-start: 0px;
 	bottom: 0px;
 	transform: translate( -3px, 6px );
 
@@ -201,7 +202,7 @@
 .provisional_item_badge_ctn
 {
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	bottom: 0px;
 	height: 40px;
 
@@ -219,7 +220,7 @@
 	border-radius: 5px;
 
 	/* move the left edge to the center of the badge */
-	margin-left: 20px;
+	margin-inline-start: 20px;
 
 	/* push down to match the image */
 	transform: translate( 0px, 6px );
@@ -228,7 +229,8 @@
 	font-size: 14px;
 	font-weight: 500;
 	/* pad out the rest of the width of the badge */
-	padding: 2px 8px 2px 20px;
+	padding-block: 2px;
+	padding-inline: 20px 8px;
 }
 
 .provisional_item_help_link_ctn
@@ -272,8 +274,8 @@
     margin: 0 auto;
     width: 100%;
 
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+	border-start-start-radius: 3px;
+	border-start-end-radius: 3px;
 	-moz-border-radius-topleft: 3px;
 	-moz-border-radius-topright: 3px;
 
@@ -312,7 +314,7 @@
 
 .games_list_tab, a.games_list_tab {
 	display: block;
-	float: left;
+	float: inline-start;
     width: calc(25% - 2px);
     box-sizing: border-box;
 	color: #ffffff;
@@ -333,21 +335,21 @@
 }
 
 .games_list_tab.first_tab, a.games_list_tab.first_tab {
-	border-top-left-radius: 3px;
+	border-start-start-radius: 3px;
 	-moz-border-radius-topleft: 3px;
 }
 
 .games_list_tab.fourth_tab, a.games_list_tab.fourth_tab {
-	border-top-right-radius: 3px;
+	border-start-end-radius: 3px;
 	-moz-border-radius-topright: 3px;
 }
 
 .games_list_tab_icon {
 	width: 32px;
 	line-height: 54px;
-	padding-right: 8px;
+	padding-inline-end: 8px;
 
-	float: left;
+	float: inline-start;
 	display: block;
 	vertical-align: middle;
 	white-space: nowrap;
@@ -367,12 +369,12 @@
 	white-space: nowrap;
 
 	display: block;
-	float: left;
+	float: inline-start;
 }
 
 .games_list_tab_number {
 	max-width: fit-content;
-	padding-left: 4px;
+	padding-inline-start: 4px;
 	overflow: hidden;
 	white-space: nowrap;
 
@@ -382,8 +384,8 @@
 .games_list_tab_failed {
 	width: 24px;
 	line-height: 54px;
-	padding-left: 8px;
-	float: right;
+	padding-inline-start: 8px;
+	float: inline-end;
 	display: block;
 	vertical-align: middle;
 	white-space: nowrap;
@@ -397,7 +399,7 @@
 
 .games_list_tab_separator {
 	display: block;
-	float: left;
+	float: inline-start;
 	width: 2px;
 	height: 54px;
 
@@ -406,8 +408,8 @@
 }
 
 .games_list_tab_row_separator {
-	clear: left;
-	float: left;
+	clear: inline-start;
+	float: inline-start;
 	width: 100%;
 	height: 1px;
 
@@ -434,7 +436,7 @@ a.games_list_tab:hover {
 }
 
 .view_inventory_page .inventory_ctn .inventory_page {
-	float: left;
+	float: inline-start;
 	width: 520px;
 	height: 520px;
 }
@@ -449,9 +451,9 @@ a.games_list_tab:hover {
 	width: 904px;
 	height: 69px;
 	overflow: hidden;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-left: -6px;
+	padding-inline-start: 16px;
+	padding-inline-end: 16px;
+	margin-inline-start: -6px;
 	padding-top: 32px;
 	margin-bottom: 20px;
 }
@@ -486,7 +488,7 @@ a.games_list_tab:hover {
 }
 
 .view_inventory_page .inventory_page_right {
-	float: right;
+	float: inline-end;
 	width: 370px;
 	position: relative;
 }
@@ -517,7 +519,7 @@ a.games_list_tab:hover {
 	margin:0;
 	padding:0;
 	margin-bottom:20px;
-	margin-left:3px;
+	margin-inline-start:3px;
 }
 
 .returnLink>a {
@@ -531,8 +533,8 @@ a.games_list_tab:hover {
 }
 
 .econ_tag_filter_category {
-	float: left;
-	margin-right: 18px;
+	float: inline-start;
+	margin-inline-end: 18px;
 	margin-bottom: 12px;
 }
 
@@ -566,7 +568,7 @@ body.clienthoverpage {
 	margin:0;
 	padding:0;
 	background-image: none;
-	text-align: left;
+	text-align: start;
 
 }
 
@@ -588,18 +590,18 @@ body.clienthoverpage 	a:hover {
 	height: 40px;
 	line-height: 40px;
 	position: relative;
-	padding-left: 48px;
+	padding-inline-start: 48px;
 }
 
 .item_hover_owner .playerAvatar {
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 0px;
 }
 
 body.clienthoverpage .clienthoverpage_content {
 	width: 350px;
-	padding-right: 4px;
+	padding-inline-end: 4px;
 	padding-bottom: 4px;
 }
 
@@ -607,11 +609,11 @@ body.clienthoverpage .clienthoverpage_content {
 #pending_gift_link {
 	text-decoration: none;
 	position: absolute;
-	right: 5px;
+	inset-inline-end: 5px;
 	top: 19px;
 
 	display: block;
-	float: left;
+	float: inline-start;
 	color: #ffffff;
 	background-color: #1B1B1B;
 	line-height: 54px;
@@ -620,10 +622,10 @@ body.clienthoverpage .clienthoverpage_content {
 	font-size: 11px;
 
 	border: 1px solid #39393A;
-	border-right: 1px solid #0F0F0F;
-	border-top-left-radius: 3px;
+	border-inline-end: 1px solid #0F0F0F;
+	border-start-start-radius: 3px;
 	-moz-border-radius-topleft: 3px;
-	border-bottom-left-radius: 3px;
+	border-end-start-radius: 3px;
 	-moz-border-radius-bottomleft: 3px;
 
 	width: 218px;
@@ -631,7 +633,7 @@ body.clienthoverpage .clienthoverpage_content {
 
 #pending_gift_link.active {
 	border: 1px solid #565656;
-	border-right: 1px solid #0F0F0F;
+	border-inline-end: 1px solid #0F0F0F;
 
 	-webkit-box-shadow: 2px -2px 4px black inset;
 	-moz-box-shadow: 2px -2px 4px black inset;
@@ -694,7 +696,7 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 
 .pending_gifts_header span {
 	background-color: #1b2838;
-	padding-right: 6px;
+	padding-inline-end: 6px;
 }
 #tabcontent_pendinggifts.no_pending_gifts .pending_gifts_header span {
 	background-color: #1F1F1F;
@@ -729,9 +731,9 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 }
 
 .pending_gift_leftcol {
-	float: left;
+	float: inline-start;
 	width: 350px;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 	max-width: 48%;
 }
 
@@ -744,8 +746,8 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 	z-index: -1;
 
 	position:absolute;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	top: 0;
 	bottom: 0;
 }
@@ -843,8 +845,8 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 }
 
 .gift_message .signature_line .playerAvatar {
-	float: left;
-	margin-right: 8px;
+	float: inline-start;
+	margin-inline-end: 8px;
 }
 
 .pending_gift_accept_privately {
@@ -896,7 +898,7 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 
 .giftpopup_header {
 	color: #D7D7D7;
-	padding-left: 48px;
+	padding-inline-start: 48px;
 	padding-top: 24px;
 }
 
@@ -927,7 +929,7 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 }
 
 .sent_gift .gift_item .sent_gift_actions {
-	float: right;
+	float: inline-end;
 	padding-top: 36px;
 }
 
@@ -936,8 +938,8 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 }
 
 .sent_gift .gift_item .item_icon {
-	float: left;
-	margin-right: 10px;
+	float: inline-start;
+	margin-inline-end: 10px;
 	width: 96px;
 	height: 96px;
 	background-color: #292929;
@@ -1018,12 +1020,12 @@ p.pending_gifts_none {
 
 .alertbox_header .leftcap {
 	background-position: left top;
-	left: 0px;
+	inset-inline-start: 0px;
 }
 
 .alertbox_header .rightcap {
 	background-position: right top;
-	right: 0px;
+	inset-inline-end: 0px;
 }
 
 .alertbox_header .welcome_dismiss {
@@ -1041,8 +1043,8 @@ p.pending_gifts_none {
 	box-shadow: inset 0 0 5px #151515;
 	-webkit-box-shadow: inset 0 0 5px #1A1A1A;
 
-	border-bottom-right-radius: 3px;
-	border-bottom-left-radius: 3px;
+	border-end-end-radius: 3px;
+	border-end-start-radius: 3px;
 
 	overflow: hidden;
 }
@@ -1109,8 +1111,8 @@ a.newitem {
 	background-color: #313131;
 	border: 1px solid #3f3f3f;
 	padding: 16px 8px;
-	margin-right: 10px;
-	float: left;
+	margin-inline-end: 10px;
+	float: inline-start;
 	height: 50px;
 	line-height: 50px;
 
@@ -1138,7 +1140,7 @@ body.migrated_profile_page .inventory_links {
 .inventory_rightnav {
 	display: flex;
 	flex-direction: row;
-	float: right;
+	float: inline-end;
 	gap: 12px;
 }
 
@@ -1150,7 +1152,8 @@ html:not(.GamepadMode) #inventory_more_dselect_container .trigger {
 	font-size: 15px;
 	line-height: 30px;
 	min-width: 0;
-	padding: 1px 39px 1px 15px;
+	padding-block: 1px;
+	padding-inline: 15px 39px;
 	width: auto;
 }
 
@@ -1161,14 +1164,14 @@ html:not(.GamepadMode) #inventory_more_dselect_container .trigger {
 
 .activate_consumable_dialog {
 	position: relative;
-	padding-left: 324px;
-	padding-right: 25px;
+	padding-inline-start: 324px;
+	padding-inline-end: 25px;
 	min-height: 280px;
 }
 
 .activate_consumable_item_image {
 	position: absolute;
-	left: 33px;
+	inset-inline-start: 33px;
 	top: 33px;
 }
 
@@ -1209,7 +1212,7 @@ html:not(.GamepadMode) #inventory_more_dselect_container .trigger {
 
 	html.responsive #context_selector, html.responsive .filter_ctn, html.responsive .view_inventory_page {
 		width: auto;
-		margin-left: 0;
+		margin-inline-start: 0;
 		padding-inline: 1%;
 	}
 
@@ -1261,7 +1264,7 @@ html:not(.GamepadMode) #inventory_more_dselect_container .trigger {
 		display: flex;
 		flex-wrap: wrap;
 		padding-top: 6px;
-		padding-left: 6px;
+		padding-inline-start: 6px;
 	}
 
 	html.responsive .itemHolder {
@@ -1292,7 +1295,8 @@ html:not(.GamepadMode) #responsive_inventory_select_dselect_container .trigger {
 	border-radius: 3px;
 	font-size: 16px;
 	line-height: 24px;
-	padding: 0 28px 0 4px;
+	padding-block: 0;
+	padding-inline: 4px 28px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 
@@ -1373,7 +1377,8 @@ html.GamepadMode div.dselect_container button.trigger {
 .dselect_container .trigger::after {
 	background: url('https://community.fastly.steamstatic.com/public/images/economy/ico_arrow_dn_for_select.png') no-repeat left center;
 	content: '';
-	inset: 0 0 0 auto;
+	inset-block: 0;
+	inset-inline: auto 0;
 	position: absolute;
 	width: 24px;
 }

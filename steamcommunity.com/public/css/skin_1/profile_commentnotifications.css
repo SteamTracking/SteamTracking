@@ -8,15 +8,15 @@
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
-	text-align: left;
+	text-align: start;
 }
 #invites_maincontents {
 	width:936px;
 	min-width:936px;
 	margin:0;
 	padding:0;
-	text-align:left;
-	padding-left:12px;
+	text-align:start;
+	padding-inline-start:12px;
 	padding-top:21px;
 }
 #invites_maincontents h2 {
@@ -26,7 +26,7 @@
 	padding:0;
 	font-size: 26px;
 	color: #898989;
-	padding-left:5px;
+	padding-inline-start:5px;
 }
 #invites_maincontents h1 {
 	font-weight:normal;
@@ -35,7 +35,7 @@
 	margin:0;
 	padding:0;
 	padding-bottom:13px;
-	padding-left:5px;
+	padding-inline-start:5px;
 }
 
 
@@ -49,25 +49,25 @@
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/skin_1/commentnotifications_header.png?v=1' );
 	max-width: 871px;
 	height: 51px;
-	padding-left: 36px;
+	padding-inline-start: 36px;
 
 	margin-bottom: 15px;
 }
 
 .commentnotifications_header_commentcount {
-	float: left;
+	float: inline-start;
 	color: #66C0F4;
 	height: 51px;
 	line-height: 51px;
 	font-size: 48px;
 	font-weight: bold;
 
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 
 .commentnotifications_header_content {
 	padding-top: 13px;
-	padding-right: 20px;
+	padding-inline-end: 20px;
 	font-size: 11px;
 	line-height: 13px;
 	color: #7f7f7f;
@@ -96,7 +96,7 @@
 	border-radius: 3px;
 
 
-	padding-left: 34px;
+	padding-inline-start: 34px;
 
 	position: relative;
 }
@@ -113,7 +113,7 @@
 
 .commentnotification_icon {
 	position: absolute;
-	left: 10px;
+	inset-inline-start: 10px;
 	top: 17px;
 }
 
@@ -154,7 +154,7 @@
 }
 
 .commentnotification_col {
-	float: right;
+	float: inline-end;
 	line-height: 48px;
 	height: 48px;
 }
@@ -173,24 +173,24 @@
 .commentnotification_date {
 	color: #8F98A0;
 	font-size: 11px;
-	text-align: right;
+	text-align: end;
 	min-width: 80px;
-	padding-left: 12px;
+	padding-inline-start: 12px;
 }
 .commentnotification.unread .commentnotification_date {
 	color: #fefefe;
 }
 
 .commentnotification_friendpost {
-	padding-left: 12px;
+	padding-inline-start: 12px;
 }
 
 .commentnotification_click_overlay {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 }
 .commentnotification_click_overlay a {
 	outline: none;
@@ -206,7 +206,7 @@
 		display: none;
 	}
 	html.responsive .commentnotification.moderatormessage .commentnotification_date {
-		padding-right: 8px;
+		padding-inline-end: 8px;
 	}
 }
 
@@ -229,7 +229,7 @@
 .notification_paging_controls {
 	position: absolute;
 	top: 0px;
-	right: 6px;
+	inset-inline-end: 6px;
 
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -289,15 +289,15 @@
 @media screen and ( max-width: 480px )
 {
 	html.responsive .commentnotification_details {
-		float: right;
-		margin-left: 8px;
-		padding-right: 8px;
+		float: inline-end;
+		margin-inline-start: 8px;
+		padding-inline-end: 8px;
 	}
 	html.responsive .commentnotification_details > .commentnotification_col {
 		float: none;
 		line-height: 24px;
 		height: 24px;
-		text-align: right;
+		text-align: end;
 		margin: 0;
 		padding: 0;
 	}
@@ -328,12 +328,12 @@
 }
 
 .ban_row .group_avatar {
-	float: left;
-	margin-right: 12px;
+	float: inline-start;
+	margin-inline-end: 12px;
 }
 
 .ban_row .unban_action {
-	float: right;
+	float: inline-end;
 	padding: 12px;
 }
 

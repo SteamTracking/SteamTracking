@@ -15,7 +15,7 @@
 }
 
 .profile_badges_sortoptions {
-	float: right;
+	float: inline-end;
 }
 
 .badge_sort_option {
@@ -34,9 +34,9 @@
 	border-radius: 5px;
 	margin-bottom: 31px;
 	border-top: 1px solid #2e2c2c;
-	border-right: 1px solid #242425;
+	border-inline-end: 1px solid #242425;
 	border-bottom: 1px solid transparent;
-	border-left: 1px solid transparent;
+	border-inline-start: 1px solid transparent;
 	background-color: #212222;
 	background: -webkit-linear-gradient( top, #383939 5%, #000000 95%);
 	background: linear-gradient( to bottom, #383939 5%, #000000 95%);
@@ -69,9 +69,9 @@ a.badge_row {
 	display: block;
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 	z-index: 2;
 }
 
@@ -89,10 +89,10 @@ a.badge_row {
 }
 
 .badge_title_stats {
-	float: right;
+	float: inline-end;
 	font-size: 12px;
 	color: #7b7b7c;
-	text-align: right;
+	text-align: end;
 }
 
 .badge_title_stats_content {
@@ -100,10 +100,10 @@ a.badge_row {
 }
 
 .badge_title_playgame {
-	float: right;
+	float: inline-end;
 	height: 22px;
 	padding-top: 5px;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 }
 
 .badge_title_playgame a {
@@ -158,12 +158,12 @@ a.badge_row:hover .badge_view_details {
 	border-radius: 3px;
 	max-width: 320px;
 
-	padding-left: 12px;
+	padding-inline-start: 12px;
 }
 
 .badge_info_image {
-	float: left;
-	margin-right: 24px;
+	float: inline-start;
+	margin-inline-end: 24px;
 	width: 80px;
 	height: 80px;
 }
@@ -182,8 +182,8 @@ a.badge_row:hover .badge_view_details {
 
 .badge_progress_info {
 	width: 92px;
-	float: right;
-	margin-left: 10px;
+	float: inline-end;
+	margin-inline-start: 10px;
 
 	text-align: center;
 	font-size: 13px;
@@ -222,7 +222,7 @@ a.badge_row:hover .badge_view_details {
 }
 
 .card_drop_info_body {
-	margin-left: 18px;
+	margin-inline-start: 18px;
 	margin-top: 8px;
 	margin-bottom: 16px;
 }
@@ -343,7 +343,7 @@ a.badge_row:hover .badge_view_details {
 
 .badge_current {
 	width: 296px;
-	float: left;
+	float: inline-start;
 }
 
 .badge_description {
@@ -356,7 +356,7 @@ a.badge_row:hover .badge_view_details {
 }
 
 .badge_active {
-	float: left;
+	float: inline-start;
 	width: 268px;
 	border-radius: 3px;
 	margin: 16px;
@@ -364,7 +364,7 @@ a.badge_row:hover .badge_view_details {
 }
 
 .badge_empty_craftable {
-	float: left;
+	float: inline-start;
 	width: 268px;
 	border: solid 1px #5492cf;
 	border-radius: 3px;
@@ -372,7 +372,7 @@ a.badge_row:hover .badge_view_details {
 }
 
 .badge_active_craftable {
-	float: left;
+	float: inline-start;
 	width: 268px;
 	border: solid 1px #5492cf;
 	border-radius: 3px;
@@ -383,15 +383,17 @@ a.badge_row:hover .badge_view_details {
 .badge_empty_circle {
 	width: 46px;
 	height: 46px;
-	margin: 6px 14px 6px 6px;
+	margin-block: 6px;
+	margin-inline: 6px 14px;
 	border-radius: 23px;
 	border: 2px dashed #656565;
-	float: left;
+	float: inline-start;
 }
 
 .badge_filled {
-	float: left;
-	margin: 6px 14px 6px 6px;
+	float: inline-start;
+	margin-block: 6px;
+	margin-inline: 6px 14px;
 }
 
 .badge_filled img {
@@ -426,21 +428,21 @@ a.badge_row:hover .badge_view_details {
 }
 
 .badge_progress_cards {
-	float: left;
+	float: inline-start;
 	width: 522px;
 	margin-top: 12px;
 }
 
 .badge_progress_card {
-	float: left;
+	float: inline-start;
 	width: 98px;
 	height: 114px;
-	margin-left: 2px;
+	margin-inline-start: 2px;
 	border: 1px solid transparent;
 }
 
 .badge_progress_card:first-child {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
 .badge_progress_card img {
@@ -465,9 +467,10 @@ a.badge_row:hover .badge_view_details {
 
 .badge_progress_right {
 	width: 108px;
-	float: right;
+	float: inline-end;
 	font-size: 14px;
-	padding: 24px 6px 6px 0px;
+	padding-block: 24px 6px;
+	padding-inline: 0px 6px;
 }
 
 .badge_progress_right_collected {
@@ -476,14 +479,14 @@ a.badge_row:hover .badge_view_details {
 }
 
 .badge_progress_task {
-	float: left;
-	margin-left: 18px;
+	float: inline-start;
+	margin-inline-start: 18px;
 	margin-bottom: 16px;
 }
 
 .gamecard_badge_progress {
 	position: absolute;
-	right: 12px;
+	inset-inline-end: 12px;
 	bottom: 10px;
 }
 
@@ -506,12 +509,12 @@ a.badge_row:hover .badge_view_details {
 }
 
 .gamecard_badge_craftbtn_ctn .badge_info {
-	float: left;
-	margin-right: 12px;
+	float: inline-start;
+	margin-inline-end: 12px;
 }
 
 .gamecard_badge_craftbtn_ctn .badge_craft_button_ctn {
-	float: left;
+	float: inline-start;
 	width: 166px;
 	display: flex;
 	flex-direction: column;
@@ -550,7 +553,7 @@ a.badge_row:hover .badge_view_details {
 	}
 
 	html.responsive .gamecard_badge_craftbtn_ctn .badge_info {
-		margin-right: 2%;
+		margin-inline-end: 2%;
 	}
 
 	html.responsive .gamecard_badge_progress .badge_info {
@@ -569,9 +572,9 @@ a.badge_row:hover .badge_view_details {
 .game_card_unowned_border {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 	border: dashed 1px #504b45;
 	background-color: #101010;
 
@@ -591,7 +594,7 @@ a.badge_row:hover .badge_view_details {
 }
 
 .badge_card_set_text_qty {
-	float: right;
+	float: inline-end;
 }
 
 .badge_card_to_collect {
@@ -602,11 +605,11 @@ a.badge_row:hover .badge_view_details {
 
 .badge_card_set_unowned.small {
 	position: absolute;
-	left: 6px;
+	inset-inline-start: 6px;
 	top: 6px;
 	width: 98px;
 	height: 110px;
-	margin-right: 20px;
+	margin-inline-end: 20px;
 }
 
 .badge_card_set_unowned.small img {
@@ -617,28 +620,28 @@ a.badge_row:hover .badge_view_details {
 
 .badge_card_to_collect_header {
 	color: #8c8c8c;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 	margin-bottom: 4px;
 }
 
 .badge_card_to_collect_info {
-	padding-left: 114px;
+	padding-inline-start: 114px;
 }
 
 .badge_card_collect_text {
-	float: left;
+	float: inline-start;
 	padding-bottom: 10px;
 	max-width: 30%;
 }
 
 .badge_card_to_collect_links {
-	float: right;
+	float: inline-end;
 	max-width: 67%;
 }
 
 .badge_card_to_collect_links > a {
 	margin-bottom: 8px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 
 @media screen and (max-width: 640px)
@@ -659,9 +662,9 @@ a.badge_row:hover .badge_view_details {
 }
 
 .badge_friendwithgamecard {
-	float: left;
+	float: inline-start;
 	width: 23%;
-	margin-right: 1%;
+	margin-inline-end: 1%;
 	margin-bottom: 8px;
 
 	white-space: nowrap;
@@ -680,13 +683,13 @@ a.badge_row:hover .badge_view_details {
 {
 	html.responsive .badge_card_set_unowned.small {
 		position: static;
-		float: left;
-		margin-right: 10px;
+		float: inline-start;
+		margin-inline-end: 10px;
 		margin-bottom: 10px;
 	}
 
 	html.responsive .badge_card_to_collect_info {
-		padding-left: 0;
+		padding-inline-start: 0;
 	}
 }
 
@@ -698,7 +701,7 @@ a.badge_row:hover .badge_view_details {
 }
 
 .badge_friendwithgamecard .playerAvatar {
-	margin-right: 10px
+	margin-inline-end: 10px
 }
 
 .badge_friendwithgamecard .persona {
@@ -725,9 +728,9 @@ a.badge_row:hover .badge_view_details {
 	z-index: 100;
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 }
 
 .game_card_hover:hover {
@@ -743,7 +746,7 @@ a.badge_row:hover .badge_view_details {
 }
 
 .badge_card_set_card {
-	margin-left: 8px;
+	margin-inline-start: 8px;
 	margin-bottom: 18px;
 
 	width: 225px;
@@ -773,7 +776,7 @@ img.gamecard {
 	}
 
 	html.responsive .badge_card_set_card {
-		margin-left: 1%;
+		margin-inline-start: 1%;
 		margin-bottom: 2%;
 		width: 23%;
 		height: auto;
@@ -783,7 +786,7 @@ img.gamecard {
 @media screen and (max-width: 660px)
 {
 	html.responsive .badge_card_set_card {
-		margin-left: 1%;
+		margin-inline-start: 1%;
 		width: 31%;
 	}
 }
@@ -791,7 +794,7 @@ img.gamecard {
 @media screen and (max-width: 490px)
 {
 	html.responsive .badge_card_set_card {
-		margin-left: 1%;
+		margin-inline-start: 1%;
 		width: 48%;
 	}
 }
@@ -802,7 +805,7 @@ img.gamecard {
 }
 
 .badge_friends_have_earned {
-	padding-left: 12px;
+	padding-inline-start: 12px;
 	padding-bottom: 14px;
 }
 
@@ -811,8 +814,8 @@ img.gamecard {
 }
 
 .badge_friends_have_earned .badge_friends_have_earned_friends .playerAvatar {
-	float: left;
-	margin-right: 10px;
+	float: inline-start;
+	margin-inline-end: 10px;
 	margin-bottom: 10px;
 }
 
@@ -832,8 +835,8 @@ img.gamecard {
 }
 
 .badge_gamecard_page .badge_detail_tasks {
-	margin-left: 2px;
-	margin-right: 2px;
+	margin-inline-start: 2px;
+	margin-inline-end: 2px;
 }
 
 .badge_gamecard_seasonalnotice {
@@ -847,14 +850,14 @@ img.gamecard {
 
 .badge_detail_tasks .badge_task {
 	width: 292px;
-	margin-right: 16px;
+	margin-inline-end: 16px;
 	margin-bottom: 12px;
-	float: left;
+	float: inline-start;
 }
 
 .badge_detail_tasks.twocol .badge_task {
 	width: 45%;
-	margin-right: 5%;
+	margin-inline-end: 5%;
 }
 
 @media screen and (max-width: 910px) {
@@ -862,13 +865,13 @@ img.gamecard {
 	html.responsive	.badge_detail_tasks .badge_task,
 	html.responsive	.badge_detail_tasks.twocol .badge_task {
 		width: 292px;
-		margin-right: 16px;
+		margin-inline-end: 16px;
 	}
 }
 
 .badge_detail_tasks .badge_task img.quest_icon {
-	float: left;
-	margin-right: 15px;
+	float: inline-start;
+	margin-inline-end: 15px;
 }
 
 .badge_progress_task .quest_icon {
@@ -881,8 +884,8 @@ img.gamecard {
 }
 
 .badge_details_set_favorite {
-	text-align: right;
-	padding-right: 4px;
+	text-align: end;
+	padding-inline-end: 4px;
 	margin-bottom: 4px;
 }
 
@@ -895,20 +898,21 @@ img.gamecard {
 .profile_xp_block {
 	border-radius: 4px;
 	border: solid 1px;
-	border-color: #1a1819 #515153 #515153 #1a1819;
+	border-block-color: #1a1819 #515153;
+	border-inline-color: #1a1819 #515153;
 	background-color: #1d1e20;
 	padding: 20px;
 	margin-bottom: 24px;
 }
 
 .profile_xp_block_left {
-	float: left;
+	float: inline-start;
 }
 
 .profile_xp_block_level, .profile_xp_block_xp {
 	color: #e1e1e1;
 	font-size: 17px;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 }
 
 .profile_xp_block_level_num {
@@ -961,8 +965,8 @@ img.gamecard {
 
 .profile_xp_block_remaining_bar_progress {
 	background-color: #726e6f;
-	border-left: #b2b0b1 1px black;
-	border-right: #4d4d4d 1px black;
+	border-inline-start: #b2b0b1 1px black;
+	border-inline-end: #4d4d4d 1px black;
 	border-radius: 5px;
 	background-image: url( 'data:image/png;base64,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');
 	height: 10px;
@@ -971,7 +975,7 @@ img.gamecard {
 .profile_xp_block_right {
 	max-width: 280px;
 	text-align: center;
-	float: right;
+	float: inline-end;
 }
 
 .booster_eligibility_results {
@@ -995,8 +999,8 @@ img.gamecard {
 }
 
 .booster_creator_content {
-	padding-left: 16px;
-	padding-right: 16px;
+	padding-inline-start: 16px;
+	padding-inline-end: 16px;
 }
 
 .booster_creator_page h2, .booster_creator_page h3 {
@@ -1023,7 +1027,7 @@ img.gamecard {
 .booster_creator_art {
 	position: absolute;
 	top: -6px;
-	right: 0;
+	inset-inline-end: 0;
 	width: 356px;
 	height: 296px;
 
@@ -1054,7 +1058,7 @@ img.gamecard {
 
 .booster_creator_goostatus .goostatus_left {
 	line-height: 24px;
-	margin-right: 6px;
+	margin-inline-end: 6px;
 	overflow: hidden;
 	white-space: nowrap;
 	width: 250px;
@@ -1097,24 +1101,26 @@ img.gamecard {
 .booster_creator_left {
 	display: inline-block;
 	width: 300px;
-	margin: 18px 9px 18px 0;
+	margin-block: 18px;
+	margin-inline: 0 9px;
 }
 
 .booster_creator_right {
 	display: inline-block;
 	vertical-align: top;
 	width: 558px;
-	margin: 18px 0 18px 9px;
+	margin-block: 18px;
+	margin-inline: 9px 0;
 }
 
 p#recent_games_label {
-	padding-left: 20px;
+	padding-inline-start: 20px;
 }
 
 .booster_option {
 	text-align: center;
 	width: 182px;
-	float: left;
+	float: inline-start;
 	margin-bottom: 44px;
 }
 
@@ -1201,12 +1207,12 @@ select#booster_game_selector {
 }
 
 .limitedLevel {
-	float: left;
+	float: inline-start;
 }
 
 .limitedText {
-	margin-left: 10px;
-	float: right;
+	margin-inline-start: 10px;
+	float: inline-end;
 	padding-top: 5px;
 }
 
@@ -1219,7 +1225,7 @@ html.responsive.mobile .badge_title_playgame {
 {
 	html.responsive .badge_progress_card_ctn  {
 		width: 18%;
-		margin-left: 0;
+		margin-inline-start: 0;
 		display: inline-block;
 	}
 

@@ -4186,7 +4186,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Histogramdaki veriler, kare hızı verilerini göndermeyi kabul etmiş %1$s müşterileri tarafından bu oyun için gönderilen kare hızı raporlarına dayanmaktadır.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Kare Hızı Dağılımı",
     "GamePerformanceStats_Framerate": "Kare Hızı",
-    "GamePerformanceStats_SessionLabel": "Oturum Yüzdesi",
+    "GamePerformanceStats_SessionLabel": "Örneklerin yüzdesi",
     "GamePerformanceStats_Chart_NoData": "Yeterince veri toplandıktan sonra burada bir grafik görünecek.",
     "NewToolTitleSuffix_Beta": "BETA",
     "DynamicLinkType_WorkshopItem": "%1$s için Atölye Öğesi",
@@ -4213,6 +4213,11 @@
     "GamePerformanceStats_StillGatheringData": "Steam, %1$s için %2$s kare hızı verilerini toplamaya devam ediyor.",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam, bu oyun için %1$s kare hızı verilerini toplamaya devam ediyor.",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam, bu oyun için kare hızı verilerini toplamaya devam ediyor.",
-    "GamePerformanceStats_FrameRateDistribution": "Bu kare hızı grafiği, %2$s üzerinde %1$s oynayan ve veri göndermeyi kabul etmiş müşterilerin anonim oyun verilerine dayanmaktadır.",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Bu kare hızı grafiği, %1$s üzerinde bu oyunu oynayan ve veri göndermeyi kabul etmiş müşterilerin anonim oyun verilerine dayanmaktadır."
+    "GamePerformanceStats_FrameRateDistribution": "Bu grafik, %1$s oyununu %2$s üzerinde oynarken anonim verilerini paylaşmayı kabul eden müşterilerden alınan kare hızı örneklerini gösterir. Her çubuk, söz konusu kare hızındaki örneklerin yüzdesini gösterir.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Bu grafik, bu oyunu %1$s üzerinde oynarken anonim verilerini paylaşmayı kabul eden müşterilerden alınan kare hızı örneklerini gösterir. Her çubuk, söz konusu kare hızındaki örneklerin yüzdesini gösterir.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "Bu oyun, kontrolcü desteğinin oyun içi ayarlar kullanılarak manuel olarak etkinleştirilmesini gerektiriyor.",
+    "GameFrameRateReporting_Details_HowToChange": "Arzu ederseniz, bu ayarı daha sonra <1>Hesap Detayları > Veriler ve Göz Atma</1> bölümünden değiştirebilirsiniz.",
+    "GamePerformanceStats_MoreDetailsTitle": "Daha Fazla Detay",
+    "GamePerformanceStats_MoreDetails_Filtering": "Yalnızca %1$s için varsayılan kare sınırı olan %2$s FPS'de toplanan veriler dahil edilir. Boşta bekleme süresi ve geçersiz veri örnekleri dahil edilmez. Her oyun oturumundan birden fazla veri örneği toplanır.",
+    "GamePerformanceStats_MoreDetails_VSync": "Grafikteki boşluklar (ör. %1$s ile %2$s FPS arasında), ekran yırtılmasını önlemek için kare iletimini ekranın yenileme hızıyla eşitleyen VSync'ten kaynaklanabilir. Bu durum, oyunun ortalama kare hızı %1$s ve %2$s FPS arasında olsa bile veri örneklerinin bu değerlerin etrafında kümelenmesine neden olabilir. Bu beklenen bir VSync davranışıdır ve kare sıralamayı etkileyebilse de kesin olarak belirgin takılmalara yol açacağı söylenemez."
 }

@@ -17,7 +17,7 @@ body, textarea {
 
 body.flat_page {
 
-	text-align: left;
+	text-align: start;
 
 	font-size: 14px;
 }
@@ -73,7 +73,7 @@ select.language_select {
 	font-size:10px;
 	margin:0px;
 	padding:2px;
-	text-align:left;
+	text-align:start;
 	text-decoration:none;
 	width:200px;
 }
@@ -100,7 +100,7 @@ select.language_select {
 	width:770px;
 	margin:0;
 	padding:0px 15px 0px 15px;
-	text-align:left;
+	text-align:start;
 }
 
 a#topNameLink,a#topNameLink:hover,a#topNameLink:visited,a#topNameLink:active {
@@ -115,15 +115,15 @@ a#topNameLink:hover {
 }
 
 #topGroupAvatar,#topProfileAvatar {
-	float:left;
-	padding-right:16px;
+	float:inline-start;
+	padding-inline-end:16px;
 	margin-top:-10px;
 }
 
 #topOGGAvatar {
-	float:right;
-	padding-right:8px;
-	padding-left:16px;
+	float:inline-end;
+	padding-inline-end:8px;
+	padding-inline-start:16px;
 	margin-top:-14px;
 }
 
@@ -182,8 +182,8 @@ select {
 }
 
 #footerLanguageSelect {
-	float:left;
-	padding-right:6px;
+	float:inline-start;
+	padding-inline-end:6px;
 	padding-top:6px;
 }
 
@@ -223,7 +223,7 @@ select {
 	padding:0;
 	margin:0;
 	top:4px;
-	left:4px;
+	inset-inline-start:4px;
 }
 
 .avatarFull img {
@@ -304,7 +304,7 @@ select {
 	padding:0;
 	margin:0;
 	top:4px;
-	left:4px;
+	inset-inline-start:4px;
 }
 
 .avatarMedium img {
@@ -323,7 +323,7 @@ select {
 	padding:0;
 	margin:0;
 	top:4px;
-	left:4px;
+	inset-inline-start:4px;
 }
 
 .avatarIcon_48 img {
@@ -342,7 +342,7 @@ select {
 	padding:0;
 	margin:0;
 	top:4px;
-	left:4px;
+	inset-inline-start:4px;
 }
 .avatarIcon img {
 	border:0;
@@ -513,7 +513,7 @@ a.linkRed,a.linkRed:hover,a.linkRed:active,a.linkRed:visited {
 	height:40px;
 	padding:0;
 	margin:0;
-	padding-left:4px;
+	padding-inline-start:4px;
 	padding-top:4px;
 	padding-bottom:4px;
 	margin-bottom:4px;
@@ -572,12 +572,12 @@ a.linkRed,a.linkRed:hover,a.linkRed:active,a.linkRed:visited {
 }
 
 .friendBlockIcon {
-	float:left;
+	float:inline-start;
 	width:40px;
 	height:40px;
 	margin:0;
 	padding:0;
-	margin-right:7px;
+	margin-inline-end:7px;
 }
 
 a.linkFriend_online,a.linkFriend_online:hover,a.linkFriend_online:active,a.linkFriend_online:visited {
@@ -638,7 +638,7 @@ a.linkFriend_ignored,a.linkFriend_ignored:hover,a.linkFriend_ignored:active,a.li
 p.errorPrivate {
 	color:#f26c4f;
 	font-weight:bold;
-	margin-left:6px;
+	margin-inline-start:6px;
 }
 
 .mainSectionHeader,#mainSectionHeaderTop,.rightSectionHeader {
@@ -667,7 +667,7 @@ a.headlineLink:hover {
 	background-color: #000000;
 	margin: 0px auto 48px auto;
 	padding: 8px;
-	text-align: left;
+	text-align: start;
 	width: 936px;
 	font-size: 14px;
 }
@@ -679,10 +679,10 @@ a.headlineLink:hover {
 
 /* --------------- button crap -------------- */
 .fl_left {
-	float:left;
+	float:inline-start;
 }
 .fl_right {
-	float:right;
+	float:inline-end;
 }
 .btn_inactive, .btn_inactive_d, .btn_grey, .btn_dgrey, .btn_green {
 	display:block;
@@ -705,11 +705,11 @@ a.headlineLink:hover {
 }
 .btn_left {
 	background-position:bottom left;
-	left:-2px;
+	inset-inline-start:-2px;
 }
 .btn_right {
 	background-position:bottom right;
-	right:-2px;
+	inset-inline-end:-2px;
 }
 
 /* inactive, no rollover */
@@ -810,13 +810,13 @@ a.btn_green, a.btn_green:hover, a.btn_green:visited {
 .namehistory_list {
 	position:absolute;
 	top:0px;
-	left:0px;
+	inset-inline-start:0px;
 	z-index:900;
 	border:#6d6d6d;
 }
 
 /* override the body text-align for our newer elements on old pages */
 .miniprofile_hover, .newmodal {
-	text-align: left;
+	text-align: start;
 }
 

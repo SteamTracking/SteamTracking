@@ -5,7 +5,7 @@
 }
 
 #headerBar {
-	text-align:left;
+	text-align:start;
 	margin:0;
 	padding:0;
 	background-color:#111111;
@@ -21,10 +21,10 @@ a.headerLink,a.headerLink:active,a.headerLink:visited,a.headerLink:hover {
 }
 
 #headerRight {
-	float:right;
+	float:inline-end;
 	padding:0;
 	margin:0;
-	padding-right:27px;
+	padding-inline-end:27px;
 }
 
 #headerLinks>p {
@@ -42,7 +42,7 @@ a.headerLink,a.headerLink:active,a.headerLink:visited,a.headerLink:hover {
 }
 
 #steamLogo {
-	float:left;
+	float:inline-start;
 	margin:0;
 	padding:0;
 	width:105px;
@@ -62,7 +62,7 @@ a.headerLink,a.headerLink:active,a.headerLink:visited,a.headerLink:hover {
 }
 
 #headerLinks>p {
-	padding-left:6px;
+	padding-inline-start:6px;
 }
 
 #subHeader {
@@ -72,7 +72,7 @@ a.headerLink,a.headerLink:active,a.headerLink:visited,a.headerLink:hover {
 	height:36px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/header/lowerBarBG.gif');
 	background-repeat:repeat-x;
-	padding-left:111px;
+	padding-inline-start:111px;
 	color:#344c5f;
 	margin-top:1px;
 }
@@ -92,11 +92,11 @@ a.subHeaderLink,a.subHeaderLink:hover,a.subHeaderLink:visited,a.subHeaderLink:ac
 }
 
 #searchBox {
-	float:right;
+	float:inline-end;
 	position:relative;
 	margin:0;
 	padding:0;
-	padding-right:27px;
+	padding-inline-end:27px;
 	padding-top:7px;
 }
 
@@ -115,7 +115,7 @@ a.subHeaderLink,a.subHeaderLink:hover,a.subHeaderLink:visited,a.subHeaderLink:ac
 	text-align:center;
 	position:absolute;
 	top:4px;
-	left:45px;
+	inset-inline-start:45px;
 	border:none;
 	z-index:99;
 }
@@ -123,7 +123,7 @@ a.subHeaderLink,a.subHeaderLink:hover,a.subHeaderLink:visited,a.subHeaderLink:ac
 #betaText {
 	position:absolute;
 	top:34px;
-	left:115px;
+	inset-inline-start:115px;
 	border:none;
 	z-index:99;
 }
@@ -135,7 +135,7 @@ a.subHeaderLink,a.subHeaderLink:hover,a.subHeaderLink:visited,a.subHeaderLink:ac
 	width:auto;
 	height:auto;
 	top:32px;
-	left:0;
+	inset-inline-start:0;
 	margin:0;
 	padding:0;
 	color:#ffffff;
@@ -153,7 +153,7 @@ a.subHeaderLink,a.subHeaderLink:hover,a.subHeaderLink:visited,a.subHeaderLink:ac
 }
 
 #rAText {
-	float:left;
+	float:inline-start;
 	display:block;
 	visibility:visible;
 	background-color:#3f3f3f;
@@ -164,8 +164,8 @@ a.subHeaderLink,a.subHeaderLink:hover,a.subHeaderLink:visited,a.subHeaderLink:ac
 	padding:0;
 	height:20px;
 	line-height:18px;
-	padding-left:6px;
-	padding-right:6px;
+	padding-inline-start:6px;
+	padding-inline-end:6px;
 }
 
 #abuseReportLink {
@@ -174,7 +174,7 @@ a.subHeaderLink,a.subHeaderLink:hover,a.subHeaderLink:visited,a.subHeaderLink:ac
 }
 
 #rALeft,#rARight {
-	float:left;
+	float:inline-start;
 	width:3px;
 	height:20px;
 	margin:0;
@@ -197,7 +197,7 @@ a.subHeaderLink,a.subHeaderLink:hover,a.subHeaderLink:visited,a.subHeaderLink:ac
 	background-color:#3f3f3f;
 	margin:0;
 	width:200px;
-	left:-86px;
+	inset-inline-start:-86px;
 	top:20px;
 	padding:6px;
 	color:#898989;
@@ -215,7 +215,7 @@ a.subHeaderLink,a.subHeaderLink:hover,a.subHeaderLink:visited,a.subHeaderLink:ac
 }
 
 #reporter.profile {
-	left: 0;
+	inset-inline-start: 0;
 	top: 10px;
 }
 
@@ -243,7 +243,7 @@ img {
 .community_sub_nav
 {
 	position: absolute;
-	left: 7px;
+	inset-inline-start: 7px;
 	top: 65px;
 	width: 650px;
 	font-size: 14px;
@@ -256,8 +256,8 @@ img {
 
 
 .pulldown {
-	padding-left: 5px;
-	padding-right: 18px;
+	padding-inline-start: 5px;
+	padding-inline-end: 18px;
 	background-image: url(  'data:image/gif;base64,R0lGODlhEwAMAIABAMXDwgAAACH5BAEAAAEALAAAAAATAAwAAAIUjI+py+0PEZh0wmpjjSfzD4aiUQAAOw==' );
 	background-position: right center;
 	background-repeat: no-repeat;
@@ -265,8 +265,6 @@ img {
 	cursor: pointer;
 }
 .pulldown:dir(rtl) {
-	padding-left: 18px;
-	padding-right: 5px;
 	background-position: left center;
 }
 
@@ -303,8 +301,8 @@ img {
 	display: none;
 	position: absolute;
 	top: 0px;
-	right: 0px;
-	left: 0px;
+	inset-inline-end: 0px;
+	inset-inline-start: 0px;
 	bottom: 0px;
 	overflow: hidden;
 }
@@ -320,8 +318,9 @@ img.iepopupfix_img {
 
 div#userControls {
 	width:929px;
-	padding:18px 6px 20px 13px;
-	text-align:left;
+	padding-block: 18px 20px;
+	padding-inline: 13px 6px;
+	text-align:start;
 	position:relative;
 	margin: 0px auto;
 }
@@ -337,7 +336,7 @@ div#userControls a.userControlsLink {
 #CommunityNavigation
 {
 	position: relative;
-	text-align: left;
+	text-align: start;
 	width: 947px;
 	padding-top: 15px;
 	padding-bottom: 15px;
@@ -349,8 +348,8 @@ div#userControls a.userControlsLink {
 {
 	text-transform: uppercase;
 	padding-top: 24px;
-	padding-left: 7px;
-	padding-right: 7px;
+	padding-inline-start: 7px;
+	padding-inline-end: 7px;
 	padding-bottom: 10px;
 }
 
@@ -367,7 +366,7 @@ div#userControls a.userControlsLink {
 }
 
 div#headerSearch {
-	float:right;
+	float:inline-end;
 	position:relative;
 	width:280px;
 	height:27px;
@@ -385,7 +384,7 @@ div#headerSearch {
 	outline:none;
 	position:absolute;
 	top:6px;
-	left:6px;
+	inset-inline-start:6px;
 	width:212px;
 	background-color:#3a3a3a;
 }
@@ -393,7 +392,7 @@ div#headerSearch {
 #searchSubmitImg {
 	position:absolute;
 	top:5px;
-	right:4px;
+	inset-inline-end:4px;
 	width:23px;
 	height:18px;
 	padding:0;
@@ -495,14 +494,14 @@ div#headerSearch {
 	padding:16px;
 	z-index:1000;
 	background-color:#3a3a3a;
-	text-align:left;
+	text-align:start;
 }
 
 #reportAbuseModalClose {
 	position:absolute;
 	width:11px;
 	height:11px;
-	right:12px;
+	inset-inline-end:12px;
 	top:12px;
 }
 
@@ -521,7 +520,7 @@ div#headerSearch {
 #reportAbuseModalContents .halfBox
 {
 	width: 50%;
-	float: left;
+	float: inline-start;
 	margin-bottom: 10px;
 }
 
@@ -562,7 +561,7 @@ div#headerSearch {
 }
 
 .abuseOption {
-	float: left;
+	float: inline-start;
 	width: 50%;
 	margin-bottom: 8px;
 }
@@ -576,7 +575,7 @@ div#headerSearch {
 }
 
 .reportAbuseButtons {
-	text-align: right;
+	text-align: end;
 }
 
 .community_ban_notice {
@@ -617,7 +616,7 @@ div#headerSearch {
 .community_content_update_open_beta_bg
 {
 	position: absolute;
-	left: -108px;
+	inset-inline-start: -108px;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/updates/communitycontent/community_banner.png' );
 	width: 1200px;
 	height: 177px;
@@ -625,9 +624,9 @@ div#headerSearch {
 
 .community_content_update_text
 {
-	text-align: left;
+	text-align: start;
 	padding-top: 40px;
-	padding-left: 126px;
+	padding-inline-start: 126px;
 }
 
 .community_content_update_coming_soon
@@ -654,7 +653,7 @@ div#headerSearch {
 {
 	position: absolute;
 	width: 348px;
-	right: 171px;
+	inset-inline-end: 171px;
 	top: 60px;
 	font-size: 16px;
 	color: #ffffff;

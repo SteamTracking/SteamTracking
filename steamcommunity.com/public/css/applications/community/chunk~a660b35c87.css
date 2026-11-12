@@ -1,0 +1,200 @@
+.weRyAFSdhQU- {
+  padding-bottom: 10px;
+}
+.SmOFdA0bRKo- {
+  font-weight: bolder;
+}
+.PmXnIaInaq4- {
+  background-image: radial-gradient(at 0 0, #42454c, #25282e);
+  border-radius: 4px;
+  flex-grow: 2;
+  flex-basis: 0;
+  max-width: 800px;
+  margin-inline-end: 16px;
+  padding: 16px;
+  box-shadow: 2px 2px 10px #0006;
+}
+.kyjY09OhJaU- {
+  flex-direction: column;
+  display: flex;
+}
+.tEeWm8grpys- {
+  min-height: 540px;
+  position: relative;
+}
+.iJMHb7pHXRA- {
+  width: 100vh;
+}
+.vTYbvBh-uU0- {
+  color: #969fab;
+  flex-direction: column;
+  margin: 24px;
+  display: flex;
+}
+.vTYbvBh-uU0- .Rzioma-KL-Y- {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 200;
+}
+.vTYbvBh-uU0- .l5FXcZ2ERyE- {
+  border: 1px solid #343842;
+  flex-direction: row;
+  padding: 6px;
+}
+.vTYbvBh-uU0- .l5FXcZ2ERyE- .nxAiknUrAfg- {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+.vTYbvBh-uU0- .l5FXcZ2ERyE- .nxAiknUrAfg- > div {
+  flex-grow: 1;
+  width: 30%;
+  margin-inline-end: 8px;
+}
+.vTYbvBh-uU0- .l5FXcZ2ERyE- .nxAiknUrAfg- > button {
+  width: fit-content;
+  height: fit-content;
+  padding: 6px 20px;
+}
+.vTYbvBh-uU0- .k3hahr49YgY- {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+.vTYbvBh-uU0- .k3hahr49YgY- > button {
+  width: fit-content;
+  padding: 0 12px;
+}
+@media screen and (width <= 600px) {
+  .vTYbvBh-uU0- .l5FXcZ2ERyE- .nxAiknUrAfg- {
+    flex-direction: column;
+  }
+  .vTYbvBh-uU0- .l5FXcZ2ERyE- .nxAiknUrAfg- > div {
+    width: 100%;
+  }
+}
+._5xvPLzWi31g- {
+  max-width: 1000px;
+  margin: 60px 24px 0;
+}
+._5xvPLzWi31g- .ojYXlML59ag- {
+  padding-top: 44px;
+}
+._5xvPLzWi31g- .ojYXlML59ag- .StoreSaleWidgetShortDesc {
+  color: #969fab;
+  font-size: 14px;
+}
+._5xvPLzWi31g- .ySQxr-h7EDA- {
+  flex-direction: row;
+  display: flex;
+}
+._5xvPLzWi31g- .uhFcNuyHw60- {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #969fab;
+  font-size: 15px;
+  font-weight: 200;
+}
+._1tNQsmKtte8- {
+  max-width: 1000px;
+  margin: 20px 0;
+  padding: 0 24px;
+}
+._1tNQsmKtte8- .EventSectionTitle {
+  letter-spacing: 2px;
+  color: #969fab;
+  font-size: 15px;
+  font-weight: 200;
+}
+.JCVGLJqumRQ- {
+  margin: 0 24px;
+}
+.jmmkRcWSmcg- {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+._2Qqqqokoe50- {
+  margin-inline-start: 6px;
+}
+.PDuqTNJgeEs- {
+  flex-direction: row;
+  margin: 24px 24px 12px;
+  display: flex;
+}
+.PDuqTNJgeEs- ._4e7fDLjvdyY- {
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  display: flex;
+}
+.PDuqTNJgeEs- ._4e7fDLjvdyY- .BGLAeY7wCoA- {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+.PDuqTNJgeEs- .exDpHMtCrRk- {
+  color: #969fab;
+  font-size: 21px;
+  font-weight: 200;
+}
+.dCf-IQijhuA- {
+  flex-direction: column;
+  width: 100%;
+  margin-inline-start: 8px;
+  display: flex;
+}
+.HQCPHTJAjtw- {
+  pointer-events: none;
+  color: #969fab;
+  background-image: url("https://community.fastly.steamstatic.com/public/images/broadcast/icon_viewers.png");
+  background-position: 0;
+  background-repeat: no-repeat;
+  height: 22px;
+  margin-block: 2px 0;
+  margin-inline: 16px 0;
+  padding-inline-start: 28px;
+  font-size: 14px;
+  text-decoration: none;
+}
+.HQCPHTJAjtw-:dir(rtl) {
+  background-position: 100%;
+}
+.P6rJQE6tQ5Q- {
+  flex-direction: row;
+  justify-content: flex-end;
+  display: flex;
+}
+.P6rJQE6tQ5Q- > button {
+  white-space: nowrap;
+  width: fit-content;
+  margin-inline-start: 4px;
+  padding-inline: 12px;
+}
+.A8QAZQrKuJo- img {
+  width: 200px;
+}
+@media screen and (width <= 910px) {
+  .A8QAZQrKuJo- {
+    display: none;
+  }
+  .dCf-IQijhuA- {
+    margin-inline-start: 0;
+  }
+}
+._6XtxP-iuz1Y- {
+  flex-flow: wrap;
+  align-items: center;
+  margin: 24px;
+  padding: 4px;
+  display: flex;
+}
+._6XtxP-iuz1Y- > button {
+  white-space: nowrap;
+  width: fit-content;
+  margin-inline-start: 4px;
+  padding: 0 8px;
+}
+/*$vite$:1*/

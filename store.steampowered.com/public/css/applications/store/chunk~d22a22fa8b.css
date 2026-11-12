@@ -1,0 +1,676 @@
+._6Ymd3Ej4NCU- {
+  border-radius: 6px;
+  flex-direction: column;
+  min-width: 364px;
+  max-width: 364px;
+  min-height: 364px;
+  max-height: 364px;
+  display: flex;
+  overflow: hidden;
+}
+.BasicUIContextMenu ._6Ymd3Ej4NCU- {
+  background-color: #23262e;
+  border-radius: 0;
+}
+@media (prefers-contrast: more) {
+  ._6Ymd3Ej4NCU- {
+    background: #000;
+  }
+}
+.nnMTzvpAu6Y- {
+  border-bottom: 2px solid #2b2c2f;
+  flex-direction: row;
+  justify-content: space-evenly;
+  display: flex;
+}
+.plDm7MqblvA- {
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 4px solid #0000;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+  display: flex;
+}
+.plDm7MqblvA-._0SYoz2hcxOY- ._6gRC1q99lWw- {
+  background-color: #0003;
+  border-radius: 4px;
+}
+.plDm7MqblvA-.f-iRFuUHuSo- {
+  cursor: default;
+  border-bottom: 4px solid #4297f8;
+}
+.plDm7MqblvA- ._6gRC1q99lWw- {
+  text-align: center;
+  color: #fff;
+  opacity: 0.8;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  display: flex;
+}
+.plDm7MqblvA- ._6gRC1q99lWw-:hover:not(.f-iRFuUHuSo-) {
+  background-color: #0003;
+  border-radius: 4px;
+}
+.plDm7MqblvA- ._6gRC1q99lWw-.f-iRFuUHuSo- {
+  opacity: 1;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+.a1l1nhz8GFU- {
+  flex-direction: column;
+  flex: 1;
+  padding: 0 12px;
+  display: flex;
+  overflow-y: auto;
+}
+.wfpm6FahiQY- {
+  flex-flow: wrap;
+  display: flex;
+}
+.wfpm6FahiQY- .G30RxXBSXck- {
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  margin: 1px;
+  padding: 3px;
+  display: flex;
+}
+.wfpm6FahiQY- .G30RxXBSXck-:hover,
+.wfpm6FahiQY- .G30RxXBSXck-._0SYoz2hcxOY- {
+  background-color: #0003;
+}
+.Zcgr0x6gQMc-,
+.Mw7bdt52AuY- {
+  text-transform: uppercase;
+  color: gray;
+  letter-spacing: 1.5px;
+  width: 100%;
+  padding: 8px 0;
+}
+.Mw7bdt52AuY- {
+  font-size: 14px;
+}
+.Zcgr0x6gQMc- {
+  font-size: 16px;
+}
+._0ZS8IEfJKto- {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px;
+}
+._0ZS8IEfJKto- .R-BER3-p7c8- {
+  box-sizing: border-box;
+  background-color: #2b2c2f;
+  height: 28px;
+}
+._0ZS8IEfJKto- .R-BER3-p7c8-:hover,
+._0ZS8IEfJKto- .R-BER3-p7c8-:focus {
+  background-color: #2b2c2f !important;
+}
+.BasicUIContextMenu ._0ZS8IEfJKto- {
+  display: none;
+}
+.nCS2TzxRijY- {
+  flex-basis: 100%;
+  padding-bottom: 4px;
+  font-size: 13px;
+  font-style: italic;
+}
+.nCS2TzxRijY- a {
+  color: #4297f8;
+  text-decoration: none;
+}
+.pvP8JT4e7EA- {
+  color: #aaa;
+  background-color: #1b1c20;
+  border: 0 solid #0000;
+  outline: none;
+  flex-direction: row;
+  flex: 1;
+  padding-inline-end: 2px;
+  display: flex;
+  position: relative;
+  box-shadow: inset 0 0 4px #000;
+}
+.FcUxYTJ41iw- {
+  resize: none;
+  color: #aaa;
+  background-color: #0000;
+  border: 0 solid #0000;
+  outline: none;
+  flex-shrink: 1;
+  width: 100%;
+  height: 42px;
+  margin-inline-end: 4px;
+  padding-block: 4px;
+  padding-inline: 8px 4px;
+  font-family:
+    Motiva Sans,
+    Motiva Sans fallback,
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-size: 14px;
+  box-shadow: inset 0 0 4px #0000;
+}
+.GamepadMode .FcUxYTJ41iw- {
+  box-shadow: none;
+  height: 34px;
+  max-height: 34px;
+  margin-inline-end: 0;
+  padding-block: 10px 0;
+  padding-inline: 8px 0;
+  font-size: 16px;
+  transition: none;
+}
+.GamepadMode .FcUxYTJ41iw-.gpfocus {
+  color: #fff;
+}
+.CVH0kQ-5qJ4- {
+  background-color: #1b1c20;
+  margin-inline-start: 8px;
+  padding: 2px;
+  box-shadow: inset 0 0 4px #000;
+}
+.-OdMBhmRPrM-,
+.CVH0kQ-5qJ4- {
+  flex-direction: row;
+  display: flex;
+}
+.-OdMBhmRPrM- {
+  align-self: flex-end;
+  max-height: 50px;
+}
+.ht2q6zu-Yn8- {
+  min-height: 0;
+}
+.compactView .FcUxYTJ41iw- {
+  height: 24px;
+  line-height: 18px;
+}
+.kzKCSSWaRZ4- {
+  color: #c9c9c9;
+  margin: 0;
+  cursor: pointer;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  border: 1px solid #1b1c20;
+  min-width: 46px;
+  max-width: 46px;
+  max-height: 46px;
+  margin-top: 2px;
+  padding: 0;
+  position: relative;
+}
+.kzKCSSWaRZ4-.KRQYA30hbUE-,
+.kzKCSSWaRZ4-._1zsmA-mI3cU- {
+  background-color: #2c3036;
+  flex: 0;
+  justify-content: center;
+  align-items: center;
+  min-width: 46px;
+  max-width: 46px;
+  max-height: 46px;
+  margin: 0;
+  display: inline-flex;
+  position: relative;
+}
+.kzKCSSWaRZ4-.KRQYA30hbUE- svg,
+.kzKCSSWaRZ4-._1zsmA-mI3cU- svg {
+  color: #898989;
+  width: 24px;
+  height: 24px;
+}
+.kzKCSSWaRZ4-.KRQYA30hbUE- {
+  max-width: 46px;
+  max-height: 46px;
+}
+.kzKCSSWaRZ4-:focus {
+  outline: none;
+}
+.kzKCSSWaRZ4-.KRQYA30hbUE-:hover,
+.kzKCSSWaRZ4-.KRQYA30hbUE-:focus {
+  color: #fff;
+  background-color: #3d424b;
+}
+.GamepadMode .kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):focus {
+  background: #fff;
+}
+.GamepadMode
+  .kzKCSSWaRZ4-:not(._4X5-n9MaD8g-)
+  .SVGIcon_Button.SVGIcon_Submit
+  path,
+.kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):focus .SVGIcon_Button.SVGIcon_Submit path,
+.kzKCSSWaRZ4-:not(._4X5-n9MaD8g-) .SVGIcon_Button.SVGIcon_Submit path {
+  fill: #fff;
+}
+.GamepadMode
+  .kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):focus
+  .SVGIcon_Button.SVGIcon_Submit
+  path,
+.GamepadMode
+  .kzKCSSWaRZ4-:not(._4X5-n9MaD8g-)
+  .SVGIcon_Button.SVGIcon_Submit
+  path {
+  fill: #000;
+}
+.kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):focus .SVGIcon_Button,
+.kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):hover .SVGIcon_Button {
+  fill: #f5ffd7;
+}
+.GamepadMode .kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):focus .SVGIcon_Button,
+.GamepadMode .kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):hover .SVGIcon_Button {
+  fill: #000;
+}
+.kzKCSSWaRZ4-.oGnvD-iwoas- .SVGIcon_Microphone_Off {
+  opacity: 1;
+}
+.kzKCSSWaRZ4-._4X5-n9MaD8g- {
+  color: #898989;
+  cursor: default;
+  background-color: #2c3036;
+}
+.kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):focus .SVGIcon_VoiceRoom,
+.kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):hover .SVGIcon_VoiceRoom {
+  fill: #0000;
+  stroke: #f5ffd7;
+}
+.kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):focus .SVGIcon_VoiceRoom .VDPUW3nsNIQ-,
+.kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):hover .SVGIcon_VoiceRoom .VDPUW3nsNIQ- {
+  fill: #f5ffd7;
+}
+.Qa8A8WCx2xY-.kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):focus .SVGIcon_VoiceRoom,
+.Qa8A8WCx2xY-.kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):hover .SVGIcon_VoiceRoom {
+  fill: #fff;
+  stroke: #000;
+}
+.Qa8A8WCx2xY-.kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):focus
+  .SVGIcon_VoiceRoom
+  .VDPUW3nsNIQ-,
+.Qa8A8WCx2xY-.kzKCSSWaRZ4-:not(._4X5-n9MaD8g-):hover
+  .SVGIcon_VoiceRoom
+  .VDPUW3nsNIQ- {
+  fill: #000;
+}
+.kzKCSSWaRZ4- .SVGIcon_Submit {
+  width: 26px;
+  height: 26px;
+  margin-top: 4px;
+}
+.compactView .kzKCSSWaRZ4- .SVGIcon_Submit {
+  margin-top: 3px;
+}
+.kzKCSSWaRZ4- .SVGIcon_Submit path {
+  fill: #5f5f5f;
+  stroke-width: 2px;
+}
+.GamepadMode .kzKCSSWaRZ4- .SVGIcon_Submit path {
+  stroke-width: 0;
+  fill: #67707b;
+}
+.GamepadMode .kzKCSSWaRZ4- .SVGIcon_Submit {
+  margin-top: 4px;
+  margin-inline-start: 2px;
+}
+.KRQYA30hbUE- {
+  text-align: center;
+  color: #8492a4;
+  background-image: none;
+  margin-inline-end: 2px;
+  padding: 0;
+  font-size: 28px;
+}
+.KRQYA30hbUE- .SVGIcon_Paperclip {
+  width: 26px;
+  height: 26px;
+}
+.KRQYA30hbUE-:hover {
+  --chatentry-embed-icon-stroke: #fff;
+}
+.KRQYA30hbUE- .SVGIcon_Paperclip path {
+  stroke: var(--chatentry-embed-icon-stroke, #8492a4);
+  stroke-width: 12px;
+}
+.KRQYA30hbUE-:focus .SVGIcon_Paperclip path,
+.SVGIcon_Paperclip {
+  stroke: #fff;
+}
+._1zsmA-mI3cU- {
+  margin-inline-end: 1px;
+}
+._1zsmA-mI3cU-:hover,
+._1zsmA-mI3cU-:focus {
+  color: #fff;
+  background-color: #3d424b;
+}
+._1zsmA-mI3cU- .SVGIcon_Emoticon {
+  width: 26px;
+  height: 26px;
+}
+._1zsmA-mI3cU- .SVGIcon_CSGO {
+  fill: #dfc408;
+  margin-inline-start: 1px;
+  width: 32px;
+  height: 32px;
+  margin-top: 4px;
+}
+._1zsmA-mI3cU- .SVGIcon_Emoticon line,
+._1zsmA-mI3cU- .SVGIcon_Emoticon circle,
+._1zsmA-mI3cU- .SVGIcon_Emoticon path {
+  stroke: var(--chatentry-emoticon-icon-stroke, #8492a4);
+  stroke-width: 10px;
+}
+._1zsmA-mI3cU- .SVGIcon_Emoticon line {
+  stroke-width: 16px;
+}
+._1zsmA-mI3cU-:hover {
+  --chatentry-emoticon-icon-stroke: white;
+}
+._1zsmA-mI3cU-:focus .SVGIcon_Emoticon line,
+._1zsmA-mI3cU-:focus .SVGIcon_Emoticon circle,
+._1zsmA-mI3cU-:focus .SVGIcon_Emoticon path {
+  stroke: #fff;
+}
+.pvP8JT4e7EA- .kzKCSSWaRZ4- {
+  background: #24272b;
+  align-self: flex-end;
+  min-height: 46px;
+  margin-bottom: 2px;
+  transition: background 0.3s;
+}
+.pvP8JT4e7EA- .kzKCSSWaRZ4-:not(._4X5-n9MaD8g-) {
+  background: linear-gradient(136deg, #0056d6 1%, #1a9fff 60%);
+}
+.GamepadMode .pvP8JT4e7EA- .kzKCSSWaRZ4- {
+  background-color: #0000;
+  border: 0 solid #0000;
+  width: 100%;
+  min-width: 0;
+  max-width: 44px;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+.GamepadMode .pvP8JT4e7EA- .kzKCSSWaRZ4-:not(._4X5-n9MaD8g-) {
+  color: #fff;
+  background-color: #67707b;
+}
+.GamepadMode .pvP8JT4e7EA- .kzKCSSWaRZ4-:not(._4X5-n9MaD8g-).gpfocus {
+  background-color: #fff;
+}
+.compactView .pvP8JT4e7EA- .kzKCSSWaRZ4- {
+  height: 28px;
+  min-height: 28px;
+  margin-bottom: 2px;
+}
+.compactView .kzKCSSWaRZ4- {
+  min-width: 32px;
+}
+.chatEntry.compactView .kzKCSSWaRZ4- svg {
+  width: 20px;
+  height: 20px;
+}
+.ChatMessageEntryVoice {
+  color: #c9c9c9;
+  margin: 0;
+  background: #1b1c20
+    radial-gradient(128px 128px at 20%, #1da834 0%, #1b1c2000 100%) -190px
+    0/256px 128px no-repeat;
+  flex-direction: column;
+  flex: 0;
+  min-width: 46px;
+  max-width: 46px;
+  max-height: 50px;
+  margin-inline-start: 8px;
+  padding: 2px;
+  transition-property:
+    width, max-width, min-width, border-radius, background-position;
+  transition-duration: 0.3s, 0.3s, 0.3s, 0.6s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 4px #000;
+}
+.friendListHeaderContainer .activeVoicePushToTalk,
+.ChatMessageEntryVoice .activeVoicePushToTalk {
+  opacity: 1;
+  white-space: nowrap;
+  user-select: none;
+  margin-top: 12px;
+  margin-bottom: -18px;
+  font-size: 11px;
+  transition: opacity 0.3s ease-out;
+}
+.ChatMessageEntryVoice.Disabled {
+  opacity: 0.2;
+  border: 1px dashed #000;
+  outline: 2px solid #0007;
+}
+.ChatMessageEntryVoice.Active {
+  background-position: 0 0;
+  width: 136px;
+  min-width: 136px;
+  max-width: 136px;
+}
+.ChatMessageEntryVoice .buttonsContainer {
+  display: flex;
+}
+.ChatMessageEntryVoice .activeVoicePushToTalk {
+  top: 33px;
+  text-align: center;
+  color: #74c069;
+  background-color: #0005;
+  width: 87px;
+  margin-top: 0;
+  font-size: 10px;
+  position: absolute;
+  inset-inline-start: 49px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled .VoiceControlPanelButton {
+  min-height: 14px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons
+  .SVGIcon_Button.SVGIcon_Shadow {
+  top: 2px;
+}
+.ChatMessageEntryVoice .activeVoiceButtons {
+  width: 84px;
+  min-width: 0;
+}
+.ChatMessageEntryVoice .activeVoiceControls {
+  background: 0 0;
+  border-top: 0 solid #0000;
+  border-bottom: 0 solid #0000;
+  min-width: 0;
+}
+.ChatMessageEntryVoice.Inactive .VoiceControlPanelButton {
+  pointer-events: none;
+}
+.ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone
+  SVG,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone SVG {
+  color: #e64a35;
+}
+.ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active {
+  background-color: #c5170b80;
+  transition-duration: 0s;
+}
+.ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active
+  SVG,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active SVG {
+  color: #e64a35;
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleVoiceOutputButton {
+  opacity: 0;
+  cursor: pointer;
+  transition-property: transform, opacity;
+  transform: translate(-64px) scale(0.5);
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
+  opacity: 0;
+  cursor: pointer;
+  transition-property: transform, opacity;
+  transform: translate(-32px) scale(0.5);
+}
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleVoiceOutputButton,
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {
+  display: none;
+}
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton:active,
+.VoiceControlPanelButton:active {
+  background-color: #61fd9780;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone,
+.friendListHeaderContainer
+  .pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  fill: #c8f1c233;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.friendListHeaderContainer
+  .pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow {
+  fill: #0003;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.friendListHeaderContainer
+  .pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow {
+  fill: #000;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone,
+.friendListHeaderContainer
+  .pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  fill: #c8f1c2;
+}
+.chatEntry.compactView .VoiceToggle {
+  height: 28px;
+}
+.VoiceIconCtn {
+  color: #c8f1c2;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  position: relative;
+}
+.VoiceIconCtn:hover {
+  color: #fff;
+}
+.VoiceIconCtn .NoMicrophone SVG {
+  color: #f43;
+}
+.VoiceToggleIconCtn {
+  color: #898989;
+}
+.VoiceControlPanelButton.chatEndVoiceChat:hover .VoiceIconCtn {
+  color: #fff;
+}
+.chatEntry.compactView .VoiceToggleIconCtn {
+  height: 24px;
+  top: 3px;
+}
+.chatEntry.compactView .activeVoiceFlexBox {
+  height: 28px;
+}
+.chatEntry.compactView .activeVoiceButtons button {
+  min-width: 28px;
+  max-width: 28px;
+  min-height: 28px;
+  max-height: 28px;
+  margin-top: 2px;
+}
+.chatEntry.compactView .SVGIcon_Button.SVGIcon_Shadow {
+  top: 6px;
+  inset-inline-start: 10px;
+}
+.chatEntry.compactView
+  .VoiceControlPanelButton:active
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.chatEntry.compactView
+  .VoiceControlPanelButton:active
+  .SVGIcon_Headphones.SVGIcon_Shadow {
+  top: 3px;
+  inset-inline-start: 7px;
+}
+.chatEntry.compactView
+  .VoiceControlPanelButton.ToggleVoiceOutputButton
+  .SVGIcon_Headphones,
+.chatEntry.compactView
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  width: 20px;
+  height: 20px;
+  padding-top: 2px;
+}
+.VoiceToggle.Inactive:hover {
+  background-color: #3d424b;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceButtons,
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceControls {
+  width: 64px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice.Active {
+  width: 114px;
+  min-width: 114px;
+  max-width: 114px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons {
+  margin-top: -2px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton {
+  min-height: 14px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons
+  .SVGIcon_Button.SVGIcon_Shadow {
+  top: 2px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoicePushToTalk {
+  top: 18px;
+  text-align: center;
+  color: #74c069;
+  background-color: #0000;
+  width: 66px;
+  inset-inline-end: 0;
+}
+/*$vite$:1*/

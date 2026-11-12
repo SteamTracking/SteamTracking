@@ -4,7 +4,10 @@ const __vite__mapDeps = (
   i,
   m = __vite__mapDeps,
   d = m.f ||
-    (m.f = ["./login.js", "../../../css/applications/stats/login.css"]),
+    (m.f = [
+      "./chunk~bb3c85a45d.js",
+      "../../../css/applications/stats/chunk~bb3c85a45d.css",
+    ]),
 ) => i.map((i) => d[i]);
 /* Third-party software licenses can be found at licenses.txt */
 var __create = Object.create,
@@ -14716,7 +14719,7 @@ var CMsgIPAddress = class t extends import_google_protobuf.Message {
           r = `Exception parsing protobuf message body of type ${this.m_eMsg}.  Definitions may be out of sync with server version.`;
         (n && n.ReportError(Error(r), { bIncludeMessageInIdentifier: !0 }),
           console.warn(r),
-          console.log(t.stack || t));
+          console.log((t instanceof Error && t.stack) || t));
       }
     }
     BIsValid() {
@@ -19745,12 +19748,13 @@ function CheckScrollRegionToStartOrEnd(t, n) {
       let o = t;
       o &&
       !(
-        o.BHasNavTargetInDirection(n, !0) ||
+        o.BHasFocusableChildInDirection(n, !0) ||
         (o != t &&
           o.Element &&
           o.m_Properties?.scrollRegionToStartOrEnd &&
           PerformScrollToStartOrEnd(o.Element, n, r, o == o.Tree.Root),
-        o == i)
+        o.HasMovementHandler(n)) ||
+        o == i
       );
       o = o.GetNavParentCrossingTrees()
     );
@@ -20623,8 +20627,7 @@ var Logger = new CLog(`FocusNavigationMovement`),
     InternalFocusDescendant(t, n, r) {
       return t ? (this.m_Tree.TransferFocus(n, t, r, !1), !0) : !1;
     }
-    BHasNavTargetInDirection(t, n) {
-      if (this.HasMovementHandler(t)) return !0;
+    BHasFocusableChildInDirection(t, n) {
       let r = this.FindNextFocusableChild(t);
       if (n && r) {
         let t = r.GetWrappedTree();
@@ -23236,6 +23239,11 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
               n: 3,
               c: StoreItem_Reviews_StoreReviewSummary,
             },
+            counts_all_purchases: {
+              n: 4,
+              br: ReaderProto.readBool,
+              bw: WriterProto.writeBool,
+            },
           },
         }),
         t.sm_m
@@ -25469,6 +25477,14 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
               br: ReaderProto.readBool,
               bw: WriterProto.writeBool,
             },
+            hardware_compatibility: {
+              n: 38,
+              c: StoreItem_ExtraDetails_HardwareCompatibility,
+            },
+            dlc_for_purchase: {
+              n: 39,
+              c: StoreItem_ExtraDetails_DLCForPurchase,
+            },
           },
         }),
         t.sm_m
@@ -27117,6 +27133,491 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
     }
     getClassName() {
       return `StoreItem_ExtraDetails_SalePage`;
+    }
+  },
+  StoreItem_ExtraDetails_HardwareCompatibility = class t
+    extends import_google_protobuf.Message
+  {
+    static ImplementsStaticInterface() {}
+    constructor(n = null) {
+      (super(),
+        t.prototype.steam_deck_tests || AddAccessors(t.M()),
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          [1, 2, 3, 4],
+          null,
+        ));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: {
+            steam_deck_tests: {
+              n: 1,
+              c: StoreItem_ExtraDetails_HardwareCompatibility_TestResult,
+              r: !0,
+              q: !0,
+            },
+            steam_os_tests: {
+              n: 2,
+              c: StoreItem_ExtraDetails_HardwareCompatibility_SteamOSTestResult,
+              r: !0,
+              q: !0,
+            },
+            steam_machine_tests: {
+              n: 3,
+              c: StoreItem_ExtraDetails_HardwareCompatibility_TestResult,
+              r: !0,
+              q: !0,
+            },
+            steam_frame_tests: {
+              n: 4,
+              c: StoreItem_ExtraDetails_HardwareCompatibility_TestResult,
+              r: !0,
+              q: !0,
+            },
+            steam_deck_blog_url: {
+              n: 5,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+          },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
+    }
+    toObject(n = !1) {
+      return t.toObject(n, this);
+    }
+    static toObject(n, r) {
+      return ToObject(t.M(), n, r);
+    }
+    static fromObject(n) {
+      return FromObject(t.M(), n);
+    }
+    static deserializeBinary(n) {
+      let r = new import_google_protobuf.BinaryReader(n),
+        i = new t();
+      return t.deserializeBinaryFromReader(i, r);
+    }
+    static deserializeBinaryFromReader(n, r) {
+      return DeserializeBinary(t.MBF(), n, r);
+    }
+    serializeBinary() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
+    }
+    static serializeBinaryToWriter(n, r) {
+      SerializeBinary(t.M(), n, r);
+    }
+    serializeBase64String() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
+    }
+    getClassName() {
+      return `StoreItem_ExtraDetails_HardwareCompatibility`;
+    }
+  },
+  StoreItem_ExtraDetails_HardwareCompatibility_TestResult = class t
+    extends import_google_protobuf.Message
+  {
+    static ImplementsStaticInterface() {}
+    constructor(n = null) {
+      (super(),
+        t.prototype.display_type || AddAccessors(t.M()),
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: {
+            display_type: {
+              n: 1,
+              br: ReaderProto.readEnum,
+              bw: WriterProto.writeEnum,
+            },
+            loc_token: {
+              n: 2,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+          },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
+    }
+    toObject(n = !1) {
+      return t.toObject(n, this);
+    }
+    static toObject(n, r) {
+      return ToObject(t.M(), n, r);
+    }
+    static fromObject(n) {
+      return FromObject(t.M(), n);
+    }
+    static deserializeBinary(n) {
+      let r = new import_google_protobuf.BinaryReader(n),
+        i = new t();
+      return t.deserializeBinaryFromReader(i, r);
+    }
+    static deserializeBinaryFromReader(n, r) {
+      return DeserializeBinary(t.MBF(), n, r);
+    }
+    serializeBinary() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
+    }
+    static serializeBinaryToWriter(n, r) {
+      SerializeBinary(t.M(), n, r);
+    }
+    serializeBase64String() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
+    }
+    getClassName() {
+      return `StoreItem_ExtraDetails_HardwareCompatibility_TestResult`;
+    }
+  },
+  StoreItem_ExtraDetails_HardwareCompatibility_SteamOSTestResult = class t
+    extends import_google_protobuf.Message
+  {
+    static ImplementsStaticInterface() {}
+    constructor(n = null) {
+      (super(),
+        t.prototype.display_type || AddAccessors(t.M()),
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: {
+            display_type: {
+              n: 1,
+              br: ReaderProto.readEnum,
+              bw: WriterProto.writeEnum,
+            },
+            loc_token: {
+              n: 2,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+          },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
+    }
+    toObject(n = !1) {
+      return t.toObject(n, this);
+    }
+    static toObject(n, r) {
+      return ToObject(t.M(), n, r);
+    }
+    static fromObject(n) {
+      return FromObject(t.M(), n);
+    }
+    static deserializeBinary(n) {
+      let r = new import_google_protobuf.BinaryReader(n),
+        i = new t();
+      return t.deserializeBinaryFromReader(i, r);
+    }
+    static deserializeBinaryFromReader(n, r) {
+      return DeserializeBinary(t.MBF(), n, r);
+    }
+    serializeBinary() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
+    }
+    static serializeBinaryToWriter(n, r) {
+      SerializeBinary(t.M(), n, r);
+    }
+    serializeBase64String() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
+    }
+    getClassName() {
+      return `StoreItem_ExtraDetails_HardwareCompatibility_SteamOSTestResult`;
+    }
+  },
+  StoreItem_ExtraDetails_DLCForPurchase = class t
+    extends import_google_protobuf.Message
+  {
+    static ImplementsStaticInterface() {}
+    constructor(n = null) {
+      (super(),
+        t.prototype.dlc || AddAccessors(t.M()),
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          [1, 3],
+          null,
+        ));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: {
+            dlc: {
+              n: 1,
+              c: StoreItem_ExtraDetails_DLCForPurchase_DLC,
+              r: !0,
+              q: !0,
+            },
+            dlc_count: {
+              n: 2,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            dependencies: {
+              n: 3,
+              c: StoreItem_ExtraDetails_DLCForPurchase_Dependency,
+              r: !0,
+              q: !0,
+            },
+            packageid: {
+              n: 4,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            formatted_total_price: {
+              n: 5,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+          },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
+    }
+    toObject(n = !1) {
+      return t.toObject(n, this);
+    }
+    static toObject(n, r) {
+      return ToObject(t.M(), n, r);
+    }
+    static fromObject(n) {
+      return FromObject(t.M(), n);
+    }
+    static deserializeBinary(n) {
+      let r = new import_google_protobuf.BinaryReader(n),
+        i = new t();
+      return t.deserializeBinaryFromReader(i, r);
+    }
+    static deserializeBinaryFromReader(n, r) {
+      return DeserializeBinary(t.MBF(), n, r);
+    }
+    serializeBinary() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
+    }
+    static serializeBinaryToWriter(n, r) {
+      SerializeBinary(t.M(), n, r);
+    }
+    serializeBase64String() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
+    }
+    getClassName() {
+      return `StoreItem_ExtraDetails_DLCForPurchase`;
+    }
+  },
+  StoreItem_ExtraDetails_DLCForPurchase_DLC = class t
+    extends import_google_protobuf.Message
+  {
+    static ImplementsStaticInterface() {}
+    constructor(n = null) {
+      (super(),
+        t.prototype.appid || AddAccessors(t.M()),
+        import_google_protobuf.Message.initialize(this, n, 0, -1, [3], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: {
+            appid: {
+              n: 1,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            packageid: {
+              n: 2,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            content_descriptorids: {
+              n: 3,
+              r: !0,
+              q: !0,
+              br: ReaderProto.readEnum,
+              pbr: ReaderProto.readPackedEnum,
+              bw: WriterProto.writeRepeatedEnum,
+            },
+            highlight_reason: {
+              n: 4,
+              br: ReaderProto.readEnum,
+              bw: WriterProto.writeEnum,
+            },
+          },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
+    }
+    toObject(n = !1) {
+      return t.toObject(n, this);
+    }
+    static toObject(n, r) {
+      return ToObject(t.M(), n, r);
+    }
+    static fromObject(n) {
+      return FromObject(t.M(), n);
+    }
+    static deserializeBinary(n) {
+      let r = new import_google_protobuf.BinaryReader(n),
+        i = new t();
+      return t.deserializeBinaryFromReader(i, r);
+    }
+    static deserializeBinaryFromReader(n, r) {
+      return DeserializeBinary(t.MBF(), n, r);
+    }
+    serializeBinary() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
+    }
+    static serializeBinaryToWriter(n, r) {
+      SerializeBinary(t.M(), n, r);
+    }
+    serializeBase64String() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
+    }
+    getClassName() {
+      return `StoreItem_ExtraDetails_DLCForPurchase_DLC`;
+    }
+  },
+  StoreItem_ExtraDetails_DLCForPurchase_Dependency = class t
+    extends import_google_protobuf.Message
+  {
+    static ImplementsStaticInterface() {}
+    constructor(n = null) {
+      (super(),
+        t.prototype.appid || AddAccessors(t.M()),
+        import_google_protobuf.Message.initialize(
+          this,
+          n,
+          0,
+          -1,
+          void 0,
+          null,
+        ));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: {
+            appid: {
+              n: 1,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            packageid: {
+              n: 2,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            required: {
+              n: 3,
+              br: ReaderProto.readBool,
+              bw: WriterProto.writeBool,
+            },
+          },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
+    }
+    toObject(n = !1) {
+      return t.toObject(n, this);
+    }
+    static toObject(n, r) {
+      return ToObject(t.M(), n, r);
+    }
+    static fromObject(n) {
+      return FromObject(t.M(), n);
+    }
+    static deserializeBinary(n) {
+      let r = new import_google_protobuf.BinaryReader(n),
+        i = new t();
+      return t.deserializeBinaryFromReader(i, r);
+    }
+    static deserializeBinaryFromReader(n, r) {
+      return DeserializeBinary(t.MBF(), n, r);
+    }
+    serializeBinary() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
+    }
+    static serializeBinaryToWriter(n, r) {
+      SerializeBinary(t.M(), n, r);
+    }
+    serializeBase64String() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
+    }
+    getClassName() {
+      return `StoreItem_ExtraDetails_DLCForPurchase_Dependency`;
     }
   },
   StoreItem_OptInRegistrationTags = class t
@@ -35271,10 +35772,17 @@ var scriptRel = (function () {
                 o)
               )
                 return new Promise((t, r) => {
-                  (n.addEventListener(`load`, t),
-                    n.addEventListener(`error`, () =>
-                      r(Error(`Unable to preload CSS for ${i}`)),
-                    ));
+                  (function n(o, s) {
+                    (o.addEventListener(`load`, t),
+                      o.addEventListener(`error`, () => {
+                        s
+                          ? setTimeout(() => {
+                              let t = o.cloneNode();
+                              (o.replaceWith(t), n(t, !1));
+                            }, 500)
+                          : r(Error(`Unable to preload CSS for ${i}`));
+                      }));
+                  })(n, !0);
                 });
             });
           })
@@ -35293,77 +35801,69 @@ var scriptRel = (function () {
   },
   paths = {};
 ((paths.arabic = () =>
-  __vitePreload(() => import(`./shared_arabic.js`), [], import.meta.url)),
+  __vitePreload(() => import(`./chunk~13a764600c.js`), [], import.meta.url)),
   (paths.brazilian = () =>
-    __vitePreload(() => import(`./shared_brazilian.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~3ee385cbe1.js`), [], import.meta.url)),
   (paths.bulgarian = () =>
-    __vitePreload(() => import(`./shared_bulgarian.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~84186bfd9d.js`), [], import.meta.url)),
   (paths.czech = () =>
-    __vitePreload(() => import(`./shared_czech.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~1646310ccb.js`), [], import.meta.url)),
   (paths.danish = () =>
-    __vitePreload(() => import(`./shared_danish.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~14382be484.js`), [], import.meta.url)),
   (paths.dutch = () =>
-    __vitePreload(() => import(`./shared_dutch.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~d6c8c6f0b0.js`), [], import.meta.url)),
   (paths.english = () =>
-    __vitePreload(() => import(`./shared_english.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~f60e1612a3.js`), [], import.meta.url)),
   (paths.finnish = () =>
-    __vitePreload(() => import(`./shared_finnish.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~9e62260cc6.js`), [], import.meta.url)),
   (paths.french = () =>
-    __vitePreload(() => import(`./shared_french.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~08ae4a7490.js`), [], import.meta.url)),
   (paths.german = () =>
-    __vitePreload(() => import(`./shared_german.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~127fe8634e.js`), [], import.meta.url)),
   (paths.greek = () =>
-    __vitePreload(() => import(`./shared_greek.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~dcf4a0e355.js`), [], import.meta.url)),
   (paths.hungarian = () =>
-    __vitePreload(() => import(`./shared_hungarian.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~2f2996ac26.js`), [], import.meta.url)),
   (paths.indonesian = () =>
-    __vitePreload(() => import(`./shared_indonesian.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~b358f9b893.js`), [], import.meta.url)),
   (paths.italian = () =>
-    __vitePreload(() => import(`./shared_italian.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~73d01e1833.js`), [], import.meta.url)),
   (paths.japanese = () =>
-    __vitePreload(() => import(`./shared_japanese.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~a27f0e0931.js`), [], import.meta.url)),
   (paths.koreana = () =>
-    __vitePreload(() => import(`./shared_koreana.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~b85584dfb3.js`), [], import.meta.url)),
   (paths.latam = () =>
-    __vitePreload(() => import(`./shared_latam.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~a6bd4c09df.js`), [], import.meta.url)),
   (paths.malay = () =>
-    __vitePreload(() => import(`./shared_malay.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~a03dbd23e9.js`), [], import.meta.url)),
   (paths.norwegian = () =>
-    __vitePreload(() => import(`./shared_norwegian.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~9c615575b9.js`), [], import.meta.url)),
   (paths.polish = () =>
-    __vitePreload(() => import(`./shared_polish.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~6bb86b72b4.js`), [], import.meta.url)),
   (paths.portuguese = () =>
-    __vitePreload(() => import(`./shared_portuguese.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~8311670243.js`), [], import.meta.url)),
   (paths.romanian = () =>
-    __vitePreload(() => import(`./shared_romanian.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~8997d3cf81.js`), [], import.meta.url)),
   (paths.russian = () =>
-    __vitePreload(() => import(`./shared_russian.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~7d28d1f231.js`), [], import.meta.url)),
   (paths.sc_schinese = () =>
-    __vitePreload(
-      () => import(`./shared_sc_schinese.js`),
-      [],
-      import.meta.url,
-    )),
+    __vitePreload(() => import(`./chunk~15ee9c0cac.js`), [], import.meta.url)),
   (paths.schinese = () =>
-    __vitePreload(() => import(`./shared_schinese.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~69099344ca.js`), [], import.meta.url)),
   (paths.spanish = () =>
-    __vitePreload(() => import(`./shared_spanish.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~035b1d9b91.js`), [], import.meta.url)),
   (paths.swedish = () =>
-    __vitePreload(() => import(`./shared_swedish.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~ede438063b.js`), [], import.meta.url)),
   (paths.tchinese = () =>
-    __vitePreload(() => import(`./shared_tchinese.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~cd650c026b.js`), [], import.meta.url)),
   (paths.thai = () =>
-    __vitePreload(() => import(`./shared_thai.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~e25689e1cb.js`), [], import.meta.url)),
   (paths.turkish = () =>
-    __vitePreload(() => import(`./shared_turkish.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~2affa41e28.js`), [], import.meta.url)),
   (paths.ukrainian = () =>
-    __vitePreload(() => import(`./shared_ukrainian.js`), [], import.meta.url)),
+    __vitePreload(() => import(`./chunk~10a43e1662.js`), [], import.meta.url)),
   (paths.vietnamese = () =>
-    __vitePreload(
-      () => import(`./shared_vietnamese.js`),
-      [],
-      import.meta.url,
-    )));
+    __vitePreload(() => import(`./chunk~e27800c067.js`), [], import.meta.url)));
 async function LoadStrings(t) {
   if (paths[t]) return await paths[t]();
 }
@@ -35573,10 +36073,18 @@ function useHTMLObserver(t, n) {
   return useRefCallbackWithCleanup(
     (r) => {
       if (!r) return;
-      let i = n(r.ownerDocument.defaultView, (n) => {
-        t(n[0]);
-      });
-      return (i.observe(r), () => i.unobserve(r));
+      let i = r.ownerDocument.defaultView;
+      if (!i) return;
+      let o = !0,
+        s = n(i, (n) => {
+          o && n.length && t(n[n.length - 1]);
+        });
+      return (
+        s.observe(r),
+        () => {
+          ((o = !1), s.disconnect());
+        }
+      );
     },
     [t, n],
   );
@@ -35592,6 +36100,13 @@ function useResizeObserver(t) {
             { observe: () => {}, unobserve: () => {}, disconnect: () => {} }),
       [],
     ),
+  );
+}
+function CreateWindowPortal(t, n, r) {
+  return import_react_dom.createPortal(
+    import_react.createElement(import_react.Suspense, { fallback: null }, t),
+    n,
+    r,
   );
 }
 var ContextMenuInstanceContext = import_react.createContext(null),
@@ -53810,7 +54325,7 @@ function MenuInstancePopup(t) {
       n.SetPopup(h);
     }, [n, h]),
     g
-      ? import_react_dom.createPortal(
+      ? CreateWindowPortal(
           (0, import_jsx_runtime.jsx)(ContextMenuPosition, {
             ref: s,
             ...n.position,
@@ -54044,7 +54559,7 @@ function LegacyPopupModal(t) {
         ? { height: o.nDragAreaHeight }
         : void 0;
   return u
-    ? import_react_dom.createPortal(
+    ? CreateWindowPortal(
         (0, import_jsx_runtime.jsx)(BrowserContextRoot, {
           ownerWindow: l,
           children: (0, import_jsx_runtime.jsxs)(`div`, {
@@ -54061,7 +54576,10 @@ function LegacyPopupModal(t) {
               (0, import_jsx_runtime.jsx)(ModalRoot, {
                 browserInfo: i.browserContext,
                 bCenterPopupsOnWindow: o.bCenterOnWindow,
-                children: n.element,
+                children: (0, import_jsx_runtime.jsx)(import_react.Suspense, {
+                  fallback: null,
+                  children: n.element,
+                }),
               }),
             ],
           }),
@@ -55229,15 +55747,16 @@ var ButtonField = import_react.forwardRef(function (t, n) {
         childrenContainerWidth: v,
         padding: y,
         inlineWrap: x,
-        fieldClassName: S,
-        fieldChildren: C,
-        accessibilityNameOrder: w,
-        ...T
+        transparentBackground: S,
+        fieldClassName: C,
+        fieldChildren: w,
+        accessibilityNameOrder: T,
+        ...E
       } = t,
-      E = useButtonAriaProperties(r, t, w);
+      D = useButtonAriaProperties(r, t, T);
     return (0, import_jsx_runtime.jsx)(Button$2, {
-      ...T,
       ...E,
+      ...D,
       disabled: p,
       ref: n,
     });
@@ -55578,27 +56097,200 @@ var IPv4InputField = import_react.forwardRef(function (t, n) {
     CompoundSliderSubSliderLabelInternal,
     DefaultValueTickContainer,
     DefaultValueTick,
+  },
+  g_bUseNavigationAPI = !!(typeof window < `u` && window.navigation);
+function ReplaceHistoryState(t) {
+  if (g_bUseNavigationAPI) {
+    let n = t(window.navigation.currentEntry?.getState() ?? {});
+    window.navigation.updateCurrentEntry({ state: n });
+  } else history.replaceState(t(history.state ?? {}), ``);
+}
+function ReplaceHistoryStateAndURL(t, n) {
+  if (g_bUseNavigationAPI) {
+    console.assert(
+      !window.navigation.transition,
+      `ReplaceHistoryStateAndURL during transition`,
+    );
+    let r = t(window.navigation.currentEntry?.getState());
+    window.navigation.navigate(typeof n == `string` ? n : n.toString(), {
+      state: r,
+      info: { SSR: !0 },
+      history: `replace`,
+    });
+  } else history.replaceState(t(history.state), ``, n);
+}
+function PushHistoryStateAndURL(t, n) {
+  if (g_bUseNavigationAPI) {
+    console.assert(
+      !window.navigation.transition,
+      `ReplaceHistoryStateAndURL during transition`,
+    );
+    let r = t(window.navigation.currentEntry?.getState());
+    window.navigation.navigate(typeof n == `string` ? n : n.toString(), {
+      state: r,
+      info: { SSR: !0, bSkipFetch: !0 },
+      history: `push`,
+    });
+  } else history.pushState(t(history.state), ``, n);
+}
+function GetHistoryState() {
+  return g_bUseNavigationAPI
+    ? window.navigation?.currentEntry?.getState()
+    : window.history?.state;
+}
+var navigationFallbackListeners = new Set(),
+  lastSeenLocation;
+function NavigationFallbackURLChangeListenerAnimationFrame() {
+  (location.href !== lastSeenLocation &&
+    navigationFallbackListeners.forEach((t) => {
+      try {
+        t();
+      } catch {}
+    }),
+    (lastSeenLocation = location.href),
+    navigationFallbackListeners.size > 0 &&
+      requestAnimationFrame(NavigationFallbackURLChangeListenerAnimationFrame));
+}
+function RegisterOnNavigate(t) {
+  let n = () => {
+    t();
   };
+  return g_bUseNavigationAPI
+    ? (window.navigation.addEventListener(`currententrychange`, n),
+      () => window.navigation.removeEventListener(`currententrychange`, n))
+    : ((lastSeenLocation = location.href),
+      requestAnimationFrame(NavigationFallbackURLChangeListenerAnimationFrame),
+      navigationFallbackListeners.add(n),
+      () => navigationFallbackListeners.delete(n));
+}
+var g_browserLocation, g_strBrowserLocationHref, g_browserLocationEntry;
+function ReadBrowserLocation() {
+  return {
+    pathname: window.location.pathname,
+    search: window.location.search,
+    hash: window.location.hash,
+    state: GetHistoryState(),
+  };
+}
+function GetCurrentHistoryEntry() {
+  return g_bUseNavigationAPI
+    ? window.navigation.currentEntry
+    : window.history.state;
+}
+function GetBrowserLocation() {
+  let t = GetCurrentHistoryEntry();
+  return (
+    (g_browserLocation &&
+      g_strBrowserLocationHref == window.location.href &&
+      g_browserLocationEntry === t) ||
+      ((g_strBrowserLocationHref = window.location.href),
+      (g_browserLocationEntry = t),
+      (g_browserLocation = ReadBrowserLocation())),
+    g_browserLocation
+  );
+}
+var g_serverLocation, g_strServerLocationHref;
+function GetServerLocation() {
+  return (
+    (g_serverLocation && g_strServerLocationHref == window.location.href) ||
+      ((g_strServerLocationHref = window.location.href),
+      (g_serverLocation = {
+        pathname: window.location.pathname,
+        search: window.location.search ?? ``,
+        hash: ``,
+        state: void 0,
+      })),
+    g_serverLocation
+  );
+}
+var g_setBrowserLocationListeners = new Set(),
+  g_fnUnregisterOnNavigate;
+function OnBrowserLocationChanged() {
+  ((g_browserLocation = void 0),
+    g_setBrowserLocationListeners.forEach((t) => t()));
+}
+function SubscribeToBrowserLocation(t) {
+  return (
+    g_setBrowserLocationListeners.size == 0 &&
+      (window.addEventListener(`popstate`, OnBrowserLocationChanged),
+      (g_fnUnregisterOnNavigate = RegisterOnNavigate(
+        OnBrowserLocationChanged,
+      ))),
+    g_setBrowserLocationListeners.add(t),
+    () => {
+      (g_setBrowserLocationListeners.delete(t),
+        g_setBrowserLocationListeners.size == 0 &&
+          (window.removeEventListener(`popstate`, OnBrowserLocationChanged),
+          g_fnUnregisterOnNavigate?.(),
+          (g_fnUnregisterOnNavigate = void 0)));
+    }
+  );
+}
+var k_strHistoryValueSuffix = `_HistoryValue`;
+function OmitHistoryValues(t) {
+  return (
+    t &&
+    Object.fromEntries(
+      Object.entries(t).filter(([t]) => !t.endsWith(k_strHistoryValueSuffix)),
+    )
+  );
+}
+function UpdateBrowserHistory(t, n, r) {
+  let i = new URL(t, window.location.href),
+    o = (t) => ({ ...t, ...n });
+  (r
+    ? PushHistoryStateAndURL((t) => ({ ...OmitHistoryValues(t), ...n }), i)
+    : i.href == window.location.href
+      ? ReplaceHistoryState(o)
+      : ReplaceHistoryStateAndURL(o, i),
+    OnBrowserLocationChanged());
+}
+function SubscribeToNothing() {
+  return () => {};
+}
+function Noop() {}
+function useRouterOrBrowserLocation() {
+  let t = import_react.useContext(context),
+    n = SubscribeToBrowserLocation,
+    r = GetBrowserLocation,
+    i = GetServerLocation;
+  t && ((n = SubscribeToNothing), (r = Noop), (i = Noop));
+  let o = import_react.useSyncExternalStore(n, r, i);
+  return t ? t.location : o;
+}
+var g_browserHistory = {
+  get location() {
+    return ReadBrowserLocation();
+  },
+  push(t, n) {
+    UpdateBrowserHistory(t, n, !0);
+  },
+  replace(t, n) {
+    UpdateBrowserHistory(t, n, !1);
+  },
+};
+function useRouterOrBrowserHistory() {
+  return useHistory() ?? g_browserHistory;
+}
 function useHistoryStateValueWithDebounce(t, n, r) {
-  let i = `${t}_HistoryValue`,
-    o = useHistory(),
-    s = useLocation(),
-    l = (s.state && s.state[i]) ?? r,
-    u = import_react.useRef(!1),
+  let i = `${t}${k_strHistoryValueSuffix}`,
+    o = useRouterOrBrowserHistory(),
+    s = useRouterOrBrowserLocation().state?.[i] ?? r,
+    l = import_react.useRef(!1),
+    u = import_react.useRef(void 0),
     p = import_react.useRef(void 0),
-    m = import_react.useRef(void 0),
-    h = import_react.useCallback(
+    m = import_react.useCallback(
       (t) => {
-        if (u.current && ((p.current = t), !m.current)) {
+        if (l.current && ((u.current = t), !p.current)) {
           let t = o.location.pathname;
-          m.current = window.setTimeout(() => {
+          p.current = window.setTimeout(() => {
             (o.location.pathname != t ||
-              (o.location.state && o.location.state[i] == p.current) ||
+              (o.location.state && o.location.state[i] == u.current) ||
               o.replace(o.location.pathname, {
                 ...(o.location.state || {}),
-                [i]: p.current,
+                [i]: u.current,
               }),
-              (m.current = void 0));
+              (p.current = void 0));
           }, n);
         }
       },
@@ -55606,9 +56298,9 @@ function useHistoryStateValueWithDebounce(t, n, r) {
     );
   return (
     import_react.useEffect(() => {
-      u.current = !0;
+      l.current = !0;
     }, []),
-    [l, h]
+    [s, m]
   );
 }
 var Log$1 = new CLog(`ScrollSnap`).Debug;
@@ -59132,7 +59824,7 @@ function UnknownRoute(t) {
 }
 var Login = import_react.lazy(() =>
     __vitePreload(
-      () => import(`./login.js`),
+      () => import(`./chunk~bb3c85a45d.js`),
       __vite__mapDeps([0, 1]),
       import.meta.url,
     ),
@@ -59717,193 +60409,193 @@ async function InitLocalization(t) {
           Object.assign({
             "../localization/main_arabic.json": () =>
               __vitePreload(
-                () => import(`./main_arabic.js`),
+                () => import(`./chunk~a1afcc6b49.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_brazilian.json": () =>
               __vitePreload(
-                () => import(`./main_brazilian.js`),
+                () => import(`./chunk~efce32a0fd.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_bulgarian.json": () =>
               __vitePreload(
-                () => import(`./main_bulgarian.js`),
+                () => import(`./chunk~a0c563b312.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_czech.json": () =>
               __vitePreload(
-                () => import(`./main_czech.js`),
+                () => import(`./chunk~86e73de564.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_danish.json": () =>
               __vitePreload(
-                () => import(`./main_danish.js`),
+                () => import(`./chunk~8ed5a1f992.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_dutch.json": () =>
               __vitePreload(
-                () => import(`./main_dutch.js`),
+                () => import(`./chunk~c177c2c91d.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_english.json": () =>
               __vitePreload(
-                () => import(`./main_english.js`),
+                () => import(`./chunk~fbc9faf024.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_finnish.json": () =>
               __vitePreload(
-                () => import(`./main_finnish.js`),
+                () => import(`./chunk~2985c8f3da.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_french.json": () =>
               __vitePreload(
-                () => import(`./main_french.js`),
+                () => import(`./chunk~3fa8b7849a.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_german.json": () =>
               __vitePreload(
-                () => import(`./main_german.js`),
+                () => import(`./chunk~897d980c88.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_greek.json": () =>
               __vitePreload(
-                () => import(`./main_greek.js`),
+                () => import(`./chunk~d4f65e6d28.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_hungarian.json": () =>
               __vitePreload(
-                () => import(`./main_hungarian.js`),
+                () => import(`./chunk~2f837a1fa1.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_indonesian.json": () =>
               __vitePreload(
-                () => import(`./main_indonesian.js`),
+                () => import(`./chunk~cd202e69b5.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_italian.json": () =>
               __vitePreload(
-                () => import(`./main_italian.js`),
+                () => import(`./chunk~34938c270d.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_japanese.json": () =>
               __vitePreload(
-                () => import(`./main_japanese.js`),
+                () => import(`./chunk~359677a3c7.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_koreana.json": () =>
               __vitePreload(
-                () => import(`./main_koreana.js`),
+                () => import(`./chunk~15f48863a2.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_latam.json": () =>
               __vitePreload(
-                () => import(`./main_latam.js`),
+                () => import(`./chunk~826d3b5250.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_malay.json": () =>
               __vitePreload(
-                () => import(`./main_malay.js`),
+                () => import(`./chunk~1865eab4be.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_norwegian.json": () =>
               __vitePreload(
-                () => import(`./main_norwegian.js`),
+                () => import(`./chunk~0f3103bc69.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_polish.json": () =>
               __vitePreload(
-                () => import(`./main_polish.js`),
+                () => import(`./chunk~d757c1664f.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_portuguese.json": () =>
               __vitePreload(
-                () => import(`./main_portuguese.js`),
+                () => import(`./chunk~e45f96fdb3.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_romanian.json": () =>
               __vitePreload(
-                () => import(`./main_romanian.js`),
+                () => import(`./chunk~6bfef4da5d.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_russian.json": () =>
               __vitePreload(
-                () => import(`./main_russian.js`),
+                () => import(`./chunk~f6efdfaf9b.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_sc_schinese.json": () =>
               __vitePreload(
-                () => import(`./main_sc_schinese.js`),
+                () => import(`./chunk~782a3815a0.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_schinese.json": () =>
               __vitePreload(
-                () => import(`./main_schinese.js`),
+                () => import(`./chunk~e325844ad5.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_spanish.json": () =>
               __vitePreload(
-                () => import(`./main_spanish.js`),
+                () => import(`./chunk~2d97981d2c.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_swedish.json": () =>
               __vitePreload(
-                () => import(`./main_swedish.js`),
+                () => import(`./chunk~a18566ab59.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_tchinese.json": () =>
               __vitePreload(
-                () => import(`./main_tchinese.js`),
+                () => import(`./chunk~a7cc5d09d2.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_thai.json": () =>
               __vitePreload(
-                () => import(`./main_thai.js`),
+                () => import(`./chunk~378a998550.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_turkish.json": () =>
               __vitePreload(
-                () => import(`./main_turkish.js`),
+                () => import(`./chunk~454f02dbb5.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_ukrainian.json": () =>
               __vitePreload(
-                () => import(`./main_ukrainian.js`),
+                () => import(`./chunk~1c557f5550.js`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_vietnamese.json": () =>
               __vitePreload(
-                () => import(`./main_vietnamese.js`),
+                () => import(`./chunk~312af0dfee.js`),
                 [],
                 import.meta.url,
               ),
@@ -59917,193 +60609,193 @@ async function InitLocalization(t) {
               Object.assign({
                 "../localization/main_arabic.json": () =>
                   __vitePreload(
-                    () => import(`./main_arabic.js`),
+                    () => import(`./chunk~a1afcc6b49.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_brazilian.json": () =>
                   __vitePreload(
-                    () => import(`./main_brazilian.js`),
+                    () => import(`./chunk~efce32a0fd.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_bulgarian.json": () =>
                   __vitePreload(
-                    () => import(`./main_bulgarian.js`),
+                    () => import(`./chunk~a0c563b312.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_czech.json": () =>
                   __vitePreload(
-                    () => import(`./main_czech.js`),
+                    () => import(`./chunk~86e73de564.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_danish.json": () =>
                   __vitePreload(
-                    () => import(`./main_danish.js`),
+                    () => import(`./chunk~8ed5a1f992.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_dutch.json": () =>
                   __vitePreload(
-                    () => import(`./main_dutch.js`),
+                    () => import(`./chunk~c177c2c91d.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_english.json": () =>
                   __vitePreload(
-                    () => import(`./main_english.js`),
+                    () => import(`./chunk~fbc9faf024.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_finnish.json": () =>
                   __vitePreload(
-                    () => import(`./main_finnish.js`),
+                    () => import(`./chunk~2985c8f3da.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_french.json": () =>
                   __vitePreload(
-                    () => import(`./main_french.js`),
+                    () => import(`./chunk~3fa8b7849a.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_german.json": () =>
                   __vitePreload(
-                    () => import(`./main_german.js`),
+                    () => import(`./chunk~897d980c88.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_greek.json": () =>
                   __vitePreload(
-                    () => import(`./main_greek.js`),
+                    () => import(`./chunk~d4f65e6d28.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_hungarian.json": () =>
                   __vitePreload(
-                    () => import(`./main_hungarian.js`),
+                    () => import(`./chunk~2f837a1fa1.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_indonesian.json": () =>
                   __vitePreload(
-                    () => import(`./main_indonesian.js`),
+                    () => import(`./chunk~cd202e69b5.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_italian.json": () =>
                   __vitePreload(
-                    () => import(`./main_italian.js`),
+                    () => import(`./chunk~34938c270d.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_japanese.json": () =>
                   __vitePreload(
-                    () => import(`./main_japanese.js`),
+                    () => import(`./chunk~359677a3c7.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_koreana.json": () =>
                   __vitePreload(
-                    () => import(`./main_koreana.js`),
+                    () => import(`./chunk~15f48863a2.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_latam.json": () =>
                   __vitePreload(
-                    () => import(`./main_latam.js`),
+                    () => import(`./chunk~826d3b5250.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_malay.json": () =>
                   __vitePreload(
-                    () => import(`./main_malay.js`),
+                    () => import(`./chunk~1865eab4be.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_norwegian.json": () =>
                   __vitePreload(
-                    () => import(`./main_norwegian.js`),
+                    () => import(`./chunk~0f3103bc69.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_polish.json": () =>
                   __vitePreload(
-                    () => import(`./main_polish.js`),
+                    () => import(`./chunk~d757c1664f.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_portuguese.json": () =>
                   __vitePreload(
-                    () => import(`./main_portuguese.js`),
+                    () => import(`./chunk~e45f96fdb3.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_romanian.json": () =>
                   __vitePreload(
-                    () => import(`./main_romanian.js`),
+                    () => import(`./chunk~6bfef4da5d.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_russian.json": () =>
                   __vitePreload(
-                    () => import(`./main_russian.js`),
+                    () => import(`./chunk~f6efdfaf9b.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_sc_schinese.json": () =>
                   __vitePreload(
-                    () => import(`./main_sc_schinese.js`),
+                    () => import(`./chunk~782a3815a0.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_schinese.json": () =>
                   __vitePreload(
-                    () => import(`./main_schinese.js`),
+                    () => import(`./chunk~e325844ad5.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_spanish.json": () =>
                   __vitePreload(
-                    () => import(`./main_spanish.js`),
+                    () => import(`./chunk~2d97981d2c.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_swedish.json": () =>
                   __vitePreload(
-                    () => import(`./main_swedish.js`),
+                    () => import(`./chunk~a18566ab59.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_tchinese.json": () =>
                   __vitePreload(
-                    () => import(`./main_tchinese.js`),
+                    () => import(`./chunk~a7cc5d09d2.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_thai.json": () =>
                   __vitePreload(
-                    () => import(`./main_thai.js`),
+                    () => import(`./chunk~378a998550.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_turkish.json": () =>
                   __vitePreload(
-                    () => import(`./main_turkish.js`),
+                    () => import(`./chunk~454f02dbb5.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_ukrainian.json": () =>
                   __vitePreload(
-                    () => import(`./main_ukrainian.js`),
+                    () => import(`./chunk~1c557f5550.js`),
                     [],
                     import.meta.url,
                   ),
                 "../localization/main_vietnamese.json": () =>
                   __vitePreload(
-                    () => import(`./main_vietnamese.js`),
+                    () => import(`./chunk~312af0dfee.js`),
                     [],
                     import.meta.url,
                   ),

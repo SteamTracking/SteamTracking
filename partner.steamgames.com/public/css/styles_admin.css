@@ -4926,7 +4926,18 @@ select#package_included_app_list > option[disabled] {
 	margin-top: 5px;
 }
 
-/* publisher group page: add user / add application dialogs */
+/* ShowPageElementDialog (admin.js): keep the page behind an open dialog from scrolling. Matches the React ModalDialog. */
+html:has( dialog.newmodal.prevent_scroll[open] ) {
+	overflow: hidden;
+	scrollbar-gutter: stable;
+}
+
+/* publisher group page: dialogs shown in a CModal (newmodal) */
+.group_modal {
+	width: 500px;
+	max-width: 100%;
+}
+
 #add_user_selected_count, #add_app_selected_count {
 	margin-bottom: 6px;
 }
@@ -4947,7 +4958,7 @@ select#package_included_app_list > option[disabled] {
 }
 
 .checkbox_list {
-	max-height: 800px;
+	max-height: min( 800px, 50vh );	/* keep the dialog's buttons on screen in short windows */
 	overflow-y: auto;
 	background: #1b1d21;
 	border: 1px solid #4a515c;

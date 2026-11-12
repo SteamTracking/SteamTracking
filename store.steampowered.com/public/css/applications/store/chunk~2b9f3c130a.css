@@ -1,0 +1,45 @@
+.-POP4zTRo6U- {
+  justify-content: space-between;
+  display: flex;
+}
+.-POP4zTRo6U- .DialogButton {
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  display: flex;
+}
+.-POP4zTRo6U- .DialogButton SVG {
+  width: 16px;
+  height: 16px;
+}
+.dzdTC1QVCoU- {
+  gap: 5px;
+  margin-inline-end: 5px;
+  display: flex;
+}
+.p3qQHic3po0- {
+  display: flex;
+}
+.p3qQHic3po0-:not(:first-child) {
+  margin-top: 60px;
+}
+.-POP4zTRo6U- .EventEditorTextTitle {
+  padding-top: 6px;
+}
+button.DialogButton.ryiex66J3pM-.ryiex66J3pM- {
+  cursor: pointer;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 28px;
+  padding: 0;
+  display: flex;
+}
+button.DialogButton.ryiex66J3pM-.ryiex66J3pM- .SVGIcon_Button {
+  width: 20px;
+  height: 20px;
+  margin-inline-end: 0;
+}
+/*$vite$:1*/

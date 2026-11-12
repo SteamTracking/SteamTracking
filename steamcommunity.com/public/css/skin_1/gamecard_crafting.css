@@ -26,7 +26,7 @@
 		width: 360px;
 		height: 414px;
 		/*transform: rotate(45deg);*/
-		left: -31px;
+		inset-inline-start: -31px;
 		top: -160px;
 		opacity: 0;
 	}
@@ -34,7 +34,7 @@
 		width: 180px;
 		height: 207px;
 		/*transform: rotate(0deg);*/
-		left: -121px;
+		inset-inline-start: -121px;
 		top: 0;
 		opacity: 1;
 	}
@@ -50,14 +50,14 @@
 	from {
 		width: 360px;
 		height: 414px;
-		left: -31px;
+		inset-inline-start: -31px;
 		top: -160px;
 		opacity: 0;
 	}
 	16% {
 		width: 180px;
 		height: 207px;
-		left: -121px;
+		inset-inline-start: -121px;
 		top: 0;
 		opacity: 1;
 	}
@@ -111,7 +111,7 @@
 	width: 180px;
 	height: 207px;
 
-	left: -121px;
+	inset-inline-start: -121px;
 	top: 0;
 
 	opacity: 0;
@@ -143,7 +143,7 @@
 
 #badge_craft_loop_throbber {
 	position: absolute;
-	left: 193px;
+	inset-inline-start: 193px;
 	top: 0;
 }
 
@@ -155,9 +155,9 @@
 .badge_craft_header_step {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 	line-height: 93px;
 	text-align: center;
 	font-size: 24px;
@@ -190,7 +190,7 @@
 	border-top: 1px solid #7d7c7a;
 	border-radius: 3px;
 
-	text-align: left;
+	text-align: start;
 
 	background-color: #3d3d3b;
 	background: -webkit-linear-gradient( top, #474745 5%, #2b2b2a 95%);
@@ -213,7 +213,7 @@
 }
 
 .completed_badge_icon {
-	margin-left: 17px;
+	margin-inline-start: 17px;
 }
 
 .completed_badge_icon, .completed_badge_icon img {
@@ -222,8 +222,8 @@
 }
 
 .completed_badge_content {
-	padding-left: 16px;
-    padding-right: 8px;
+	padding-inline-start: 16px;
+    padding-inline-end: 8px;
 
 	font-size: 13px;
 	line-height: 18px;
@@ -267,7 +267,7 @@
 }
 
 .badge_reward_level .friendPlayerLevel {
-	margin-right: 14px;
+	margin-inline-end: 14px;
 }
 
 .badge_reward_ctn {
@@ -286,7 +286,7 @@
 	padding: 8px;
 	min-height: 62px;
 
-	text-align: left;
+	text-align: start;
 	font-size: 13px;
 	color: #6e6e6e;
 }
@@ -295,15 +295,15 @@
 	background-color: #5e8aca;
 	line-height: 18px;
 	color: #ffffff;
-	text-align: left;
+	text-align: start;
 	padding: 0 8px;
 	font-size: 13px;
 }
 
 .badge_reward_icon {
-	float: left;
+	float: inline-start;
 	min-height: 62px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 
 .badge_reward_content {
@@ -343,12 +343,12 @@
 }
 
 .booster_unpack_actions .btn_medium {
-	margin-right: 19px;
+	margin-inline-end: 19px;
 }
 
 .booster_unpack_actions .booster_unpack_closebtn {
-	float: right;
-	margin-right: 0;
+	float: inline-end;
+	margin-inline-end: 0;
 }
 
 .booster_unpack_card {
@@ -366,19 +366,19 @@
 
 .booster_unpack_card.card_back.card1{
 	z-index: 2;
-	left: 7px;
+	inset-inline-start: 7px;
 	top: 7px;
 }
 
 .booster_unpack_card.card_back.card2{
 	z-index: 3;
-	left: 4px;
+	inset-inline-start: 4px;
 	top: 4px;
 }
 
 .booster_unpack_card.card_back.card3{
 	z-index: 4;
-	left: 1px;
+	inset-inline-start: 1px;
 	top: 1px;
 }
 
@@ -389,20 +389,20 @@
 .booster_unpack_ribbon {
 	z-index: 5;
 	position: absolute;
-	left: -4px;
+	inset-inline-start: -4px;
 	top: 183px;
 }
 
 .booster_unpack_booster {
 	position: absolute;
-	left: 235px;
+	inset-inline-start: 235px;
 	top: 15px;
 	z-index: 5;
 }
 
 .booster_unpack_booster.move_to_position {
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 	animation-duration: 1s;
 	-webkit-animation-duration: 1s;
 	animation-timing-function: ease;
@@ -413,22 +413,22 @@
 
 @keyframes anim_booster_move_to_position {
 	from {
-		left: 235px;
+		inset-inline-start: 235px;
 		top: 15px;
 	}
 	to {
-		left: 0;
+		inset-inline-start: 0;
 		top: 0;
 	}
 }
 
 @-webkit-keyframes anim_booster_move_to_position {
 	from {
-		left: 235px;
+		inset-inline-start: 235px;
 		top: 15px;
 	}
 	to {
-		left: 0;
+		inset-inline-start: 0;
 		top: 0;
 	}
 }
@@ -436,7 +436,7 @@
 
 
 .booster_unpack_card.card1.final_position, .booster_unpack_card.card_front.card1 {
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
 }
 .booster_unpack_card.card1.final_position {
@@ -450,29 +450,29 @@
 
 @keyframes anim_card1_final_position {
 	from {
-		left: 7px;
+		inset-inline-start: 7px;
 		top: 7px;
 	}
 	to {
-		left: 0;
+		inset-inline-start: 0;
 		top: 0;
 	}
 }
 
 @-webkit-keyframes anim_card1_final_position {
 	from {
-		left: 7px;
+		inset-inline-start: 7px;
 		top: 7px;
 	}
 	to {
-		left: 0;
+		inset-inline-start: 0;
 		top: 0;
 	}
 }
 
 
 .booster_unpack_card.card2.final_position, .booster_unpack_card.card_front.card2 {
-	left: 235px;
+	inset-inline-start: 235px;
 	top: 0;
 
 }
@@ -488,29 +488,29 @@
 
 @keyframes anim_card2_final_position {
 	from {
-		left: 4px;
+		inset-inline-start: 4px;
 		top: 4px;
 	}
 	to {
-		left: 235px;
+		inset-inline-start: 235px;
 		top: 0;
 	}
 }
 
 @-webkit-keyframes anim_card2_final_position {
 	from {
-		left: 4px;
+		inset-inline-start: 4px;
 		top: 4px;
 	}
 	to {
-		left: 235px;
+		inset-inline-start: 235px;
 		top: 0;
 	}
 }
 
 
 .booster_unpack_card.card3.final_position, .booster_unpack_card.card_front.card3 {
-	left: 470px;
+	inset-inline-start: 470px;
 	top: 0;
 }
 .booster_unpack_card.card3.final_position{
@@ -525,22 +525,22 @@
 
 @keyframes anim_card3_final_position {
 	from {
-		left: 1px;
+		inset-inline-start: 1px;
 		top: 1px;
 	}
 	to {
-		left: 470px;
+		inset-inline-start: 470px;
 		top: 0;
 	}
 }
 
 @-webkit-keyframes anim_card3_final_position {
 	from {
-		left: 1px;
+		inset-inline-start: 1px;
 		top: 1px;
 	}
 	to {
-		left: 470px;
+		inset-inline-start: 470px;
 		top: 0;
 	}
 }
@@ -548,7 +548,7 @@
 
 .booster_unpack_card .booster_unpack_card_image_flip_gradient, .booster_unpack_card .booster_unpack_card_image {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
 	height: 261px;
 	z-index: 1;
@@ -592,26 +592,26 @@
 		width: 225px;
 	}
 	50% {
-		left: 115px;
+		inset-inline-start: 115px;
 		width: 1px;
 	}
 	to {
-		left: 115px;
+		inset-inline-start: 115px;
 		width: 1px;
 	}
 }
 
 @-webkit-keyframes anim_flip_card_back {
 	from {
-		left: 0;
+		inset-inline-start: 0;
 		width: 225px;
 	}
 	50% {
-		left: 115px;
+		inset-inline-start: 115px;
 		width: 1px;
 	}
 	to {
-		left: 115px;
+		inset-inline-start: 115px;
 		width: 1px;
 	}
 }
@@ -659,30 +659,30 @@
 
 @keyframes anim_flip_card {
 	from {
-		left: 115px;
+		inset-inline-start: 115px;
 		width: 0px;
 	}
 	50% {
-		left: 115px;
+		inset-inline-start: 115px;
 		width: 0px;
 	}
 	to {
-		left: 0;
+		inset-inline-start: 0;
 		width: 226px;
 	}
 }
 
 @-webkit-keyframes anim_flip_card {
 	from {
-		left: 115px;
+		inset-inline-start: 115px;
 		width: 0px;
 	}
 	50% {
-		left: 115px;
+		inset-inline-start: 115px;
 		width: 0px;
 	}
 	to {
-		left: 0;
+		inset-inline-start: 0;
 		width: 226px;
 	}
 }

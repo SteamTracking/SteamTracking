@@ -36,7 +36,7 @@ body.apphub_blue
 .apphub_GetMoreContentWait img
 {
 	vertical-align: middle;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 .apphub_NoMoreContent
@@ -93,14 +93,14 @@ body.apphub_blue
 .appHubLoadingPageModal img
 {
 	vertical-align: middle;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 .apphub_BackToTop
 {
 	position: fixed;
-	margin-right: -616px;
-	right: 50%;
+	margin-inline-end: -616px;
+	inset-inline-end: 50%;
 	bottom: 0px;
 	height: 33px;
 	width: 131px;
@@ -111,7 +111,7 @@ body.apphub_blue
 .apphub_BackTopTopShadow
 {
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/apphubs/btn_back_top_shadow.png' );
-	margin-left: 5px;
+	margin-inline-start: 5px;
 	width: 949px;
 	height: 20px;
 }
@@ -122,7 +122,7 @@ body.apphub_blue
 	width: 3px;
 	height: 33px;
 	line-height: 33px;
-	float: left;
+	float: inline-start;
 	display: inline-block;
 }
 
@@ -133,7 +133,7 @@ body.apphub_blue
 
 .apphub_BackToTopButton.middle
 {
-	left: 3px;
+	inset-inline-start: 3px;
 	width: 125px;
 	background-position: 0px -33px;
 	background-repeat: repeat-x;
@@ -141,13 +141,13 @@ body.apphub_blue
 
 .apphub_BackToTopButton.leftcap
 {
-	left: 0px;
+	inset-inline-start: 0px;
 	background-position: 0px 0px;
 }
 
 .apphub_BackToTopButton.rightcap
 {
-	right: 0px;
+	inset-inline-end: 0px;
 	background-position: 0px -66px;
 }
 
@@ -177,17 +177,17 @@ body.apphub_blue
 
 .apphub_SectionFilterLabel
 {
-	float: left;
+	float: inline-start;
 	color: #2f89bc;
 	text-transform: uppercase;
-	padding-left: 12px;
+	padding-inline-start: 12px;
 	line-height: 46px;
 	font-size: 11px;
 }
 
 .apphub_SectionFilterLabel.language
 {
-	padding-left: 20px;
+	padding-inline-start: 20px;
 }
 
 .apphub_SectionFilter .learnMore
@@ -210,8 +210,8 @@ body.apphub_blue
 	}
 
 	html.responsive .apphub_SectionFilterLabel.language {
-		clear: left;
-		padding-left: 12px;
+		clear: inline-start;
+		padding-inline-start: 12px;
 	}
 
 	html.responsive .apphub_SectionFilter {
@@ -219,11 +219,11 @@ body.apphub_blue
 		grid-template-columns: max-content 1fr;
 		gap: 0 10px;
 
-		padding-right: 12px;
+		padding-inline-end: 12px;
 	}
 
 	html.responsive .apphub_SectionFilter .apphub_SectionFilterLabel {
-		text-align: right;
+		text-align: end;
 	}
 
 	html.responsive .apphub_SectionFilter .filterselect {
@@ -232,7 +232,7 @@ body.apphub_blue
 	}
 
 	html.responsive .apphub_FollowGame {
-		margin-left: 10px;
+		margin-inline-start: 10px;
 		margin-top: 2px;
 		margin-bottom: 9px;
 	}
@@ -268,9 +268,9 @@ body.apphub_blue
 .apphub_SectionFilter .apphub_MostPopularLink
 {
 	line-height: 46px;
-	float: left;
-	padding-left: 10px;
-	padding-right: 2px;
+	float: inline-start;
+	padding-inline-start: 10px;
+	padding-inline-end: 2px;
 }
 
 .apphub_MostPopularExplanationTitle
@@ -286,21 +286,22 @@ body.apphub_blue
 
 .apphub_FollowGame
 {
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 .apphub_FollowGameTooltip
 {
 	font-size: 12px;
 	color: #6ca1d5;
 	cursor: pointer;
-	padding-left: 10px;
-	padding-right: 2px;
+	padding-inline-start: 10px;
+	padding-inline-end: 2px;
 }
 
 .apphub_UploadImageLink
 {
-	float: right;
-	margin: 5px 10px 5px 0;
+	float: inline-end;
+	margin-block: 5px;
+	margin-inline: 0 10px;
 }
 
 .responsive_page_menu .apphub_UploadImageLink
@@ -326,11 +327,11 @@ div.filterselect
 	font-size: 12px;
 	background: rgba( 103, 193, 245, 0.2 );
 	border-radius: 2px;
-	float: left;
+	float: inline-start;
 	margin-top: 9px;
     margin-bottom: 9px;
-	margin-left: 10px;
-	text-align: left;
+	margin-inline-start: 10px;
+	text-align: start;
 	text-transform: uppercase;
 }
 div.filterselect:hover {
@@ -339,7 +340,7 @@ div.filterselect:hover {
 }
 
 div.filterselect_options {
-	text-align: left;
+	text-align: start;
 	width: 215px;
 	line-height: 26px;
 	color: white;
@@ -355,7 +356,7 @@ div.filterselect_options.language {
 
 div.filterselect .filterselect_arrow, div.filterselect #filterselect_arrow {
 	position: absolute;
-	right: 0px;
+	inset-inline-end: 0px;
 	top: 2px;
 	width: 17px;
 	height: 20px;
@@ -369,7 +370,7 @@ div.filterselect.focus #filterselect_arrow{
 }
 
 div.filterselect div.option, div.filterselect_options div.option {
-	padding-left: 7px;
+	padding-inline-start: 7px;
 	height: 24px;
 	line-height: 24px;
 	cursor: default;
@@ -415,8 +416,8 @@ div.statsselect
 	color: white;
 	font-size: 12px;
 	margin-top: 26px;
-	margin-left: 6px;
-	text-align: left;
+	margin-inline-start: 6px;
+	text-align: start;
 	text-transform: uppercase;
 }
 
@@ -425,13 +426,13 @@ div.statsselect
 	font-size: 12px;
 	color: white;
 	text-transform: none;
-	margin-right: 17px;
-	padding-left: 5px;
+	margin-inline-end: 17px;
+	padding-inline-start: 5px;
 	text-decoration: underline;
 }
 
 div.statsselect_options {
-	text-align: left;
+	text-align: start;
 	width: 215px;
 	line-height: 26px;
 	color: white;
@@ -445,7 +446,7 @@ div.statsselect_options {
 
 div.statsselect #statsselect_arrow {
 	position: absolute;
-	right: 0px;
+	inset-inline-end: 0px;
 	top: -2px;
 	width: 17px;
 	height: 20px;
@@ -459,7 +460,7 @@ div.statsselect.focus #statsselect_arrow{
 }
 
 div.statsselect div.option, div.statsselect_options div.option {
-	padding-left: 7px;
+	padding-inline-start: 7px;
 	height: 24px;
 	line-height: 24px;
 	cursor: default;
@@ -499,7 +500,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	border-radius: 3px;
 	box-sizing: border-box;
 	max-width: 100%;
-	padding-left: 5px;
+	padding-inline-start: 5px;
 	width: 242px;
 }
 
@@ -537,7 +538,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
     background-color: rgba( 0, 0, 0, 0.8 );
 	max-width: 904px;
 	min-height: 182px;
-	text-align: left;
+	text-align: start;
 	padding: 15px 22px;
 	margin: 0 auto;
 }
@@ -546,8 +547,8 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 {
 	width: 374px;
 	height: auto;
-	float: left;
-	margin-right: 2%;
+	float: inline-start;
+	margin-inline-end: 2%;
 	max-width: 45%;
 }
 
@@ -558,13 +559,13 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 		font-weight: normal; /* normal */
 
 			font-size: 14px;
-	text-align: left;
+	text-align: start;
 }
 
 .apphub_StoreAppData
 {
 	padding-top: 20px;
-	float: left;
+	float: inline-start;
 }
 
 .apphub_StorePrice
@@ -573,8 +574,8 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	height: 28px;
 	width: 100px;
 	border: 1px solid #4e4c4a;
-	margin-right: 5px;
-	float: left;
+	margin-inline-end: 5px;
+	float: inline-start;
 }
 
 .apphub_StorePrice .price
@@ -587,13 +588,13 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 .apphub_StorePrice .discount_prices
 {
 	position: absolute;
-	left: 50px;
+	inset-inline-start: 50px;
 }
 
 .apphub_StorePrice .discount_prices_no_percentage
 {
 	position: absolute;
-	left: 5px;
+	inset-inline-start: 5px;
 	text-align: center;
 }
 
@@ -602,7 +603,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	background-color: #4c6b22;
 	color: white;
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	width: 40px;
 	line-height: 30px;
 	font-size: 14px;
@@ -628,7 +629,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 
 .apphub_SwitchSitesBtn.storeInfo
 {
-	float: left;
+	float: inline-start;
 }
 
 .apphub_EarlyAccess
@@ -642,8 +643,8 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 
 .apphub_EarlyAccess_Title
 {
-	padding-left: 15px;
-	float: left;
+	padding-inline-start: 15px;
+	float: inline-start;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -657,7 +658,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	padding-top: 1px;
 	font-size: 14px;
 	color: #a1b8cc;
@@ -666,12 +667,12 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 /* discussions */
 .leftcol
 {
-	float: left;
+	float: inline-start;
 	width: 640px;
 }
 
 .rightcol {
-	float: right;
+	float: inline-end;
 	width: 295px;
 }
 
@@ -724,8 +725,8 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 }
 
 .forum_list_postcount {
-	float: right;
-	padding-right: 6px;
+	float: inline-end;
+	padding-inline-end: 6px;
 }
 
 .forum_list_name {
@@ -742,7 +743,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 .reported_item {
 	display: inline-block;
 	padding: 10px;
-	text-align: left;
+	text-align: start;
 	width: 283px;
 	margin: 5px;
 	background-color: rgba(0,0,0,0.3);
@@ -852,7 +853,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	position: absolute;
 	width: 20px;
 	height: 20px;
-	right: 0px;
+	inset-inline-end: 0px;
 	bottom: 0px;
 }
 

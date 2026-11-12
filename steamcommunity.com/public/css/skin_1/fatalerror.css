@@ -8,12 +8,12 @@
 #BG_top {
 	position:relative;
 	height:54px;
-	text-align: left;
+	text-align: start;
 	background: rgba( 0, 0, 0, 0.2 );
 	border-bottom: 1px rgba( 0, 0, 0, 0.6 );
 }
 #BG_bottom {
-	text-align:left;
+	text-align:start;
 }
 #BG_top h2 {
 	font-weight:normal;
@@ -22,7 +22,7 @@
 	padding-top:21px;
 	font-size: 26px;
 	color: #898989;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 #BG_top h1 {
 	font-weight:normal;
@@ -32,11 +32,11 @@
 	padding:0;
 	padding-top:0px;
 	padding-bottom:5px;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 #mainContents {
 	max-width:936px;
-	text-align:left;
+	text-align:start;
 	padding: 10px 17px 0 17px;
 }
 #mainContents h2 {
@@ -85,8 +85,8 @@ h3 {
 	padding:0;
 	font-size:16px;
 	color:#66c0f4;
-	padding-right: 30px;
-	padding-left: 30px;
+	padding-inline-end: 30px;
+	padding-inline-start: 30px;
 }
 
 p.returnLink {
@@ -117,7 +117,7 @@ a.linkStandard:hover {
 	font-weight:bold;
 	color:#ffffff;
 	top:70px;
-	left:50px;
+	inset-inline-start:50px;
 	width:600px;
 }
 

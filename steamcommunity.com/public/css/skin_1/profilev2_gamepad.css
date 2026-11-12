@@ -67,8 +67,8 @@ html.GamepadMode .profile_summary_footer span.whiteLink.gpfocus {
 html.GamepadMode .profile_header_valve_employee {
 	padding:8px;
 	margin-bottom: 0px;
-	margin-left: calc(0px - var(--gpSpace-Gutter));
-	margin-right: calc(0px - var(--gpSpace-Gutter));
+	margin-inline-start: calc(0px - var(--gpSpace-Gutter));
+	margin-inline-end: calc(0px - var(--gpSpace-Gutter));
 
 }
 
@@ -81,7 +81,7 @@ html.GamepadMode .profile_header_valve_employee_desc {
 
 /* HEADER */
 html.GamepadMode .profile_header_content {
-	padding-right: unset;
+	padding-inline-end: unset;
 	padding: 24px 0px 0px;
 	width: 100%;
 	min-height: 190px;
@@ -210,8 +210,8 @@ html.GamepadMode .responsive_count_link_area {
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 	column-gap: 6px;
-	margin-left: calc( 0px - var(--gpSpace-Gutter) );
-	margin-right: calc( 0px - var(--gpSpace-Gutter) );
+	margin-inline-start: calc( 0px - var(--gpSpace-Gutter) );
+	margin-inline-end: calc( 0px - var(--gpSpace-Gutter) );
 	scroll-padding-left: var(--gpSpace-Gutter);
 	scroll-padding-right: var(--gpSpace-Gutter);
 	padding: 0px var(--gpSpace-Gutter);
@@ -319,7 +319,7 @@ html.GamepadMode .showcase_achievement a {
 
 /* RECENT ACTIVITY */
 html.GamepadMode .recent_game .game_info .game_info_cap {
-	margin-right: 16px;
+	margin-inline-end: 16px;
 }
 
 html.GamepadMode .game_info_cap a {
@@ -401,7 +401,7 @@ html.GamepadMode #HeaderUserBreadcrumbs {
 	font: var(--gpText-HeadingLarge);
 	padding: unset;
 	padding-bottom: 4px;
-	margin-left: 16px;
+	margin-inline-start: 16px;
 	border-bottom: 1px solid var(--gpBackground-LightSoft);
 }
 
@@ -412,7 +412,7 @@ html.GamepadMode #HeaderUserBreadcrumbs .HeaderUserInfoSection {
 html.GamepadMode #FilterContainer {
 	padding: unset;
 	padding-top: 8px;
-	margin-left: 16px;
+	margin-inline-start: 16px;
 	display: flex;
 	align-items: center;
 	column-gap: 8px;
@@ -443,7 +443,8 @@ html.GamepadMode .sharedfiles_usercontrol_ctn .favoritesRadioText {
 	display: flex;
     align-items: center;
     column-gap: 4px;
-    padding: 4px 12px 4px 6px;
+    padding-block: 4px;
+    padding-inline: 6px 12px;
 	transition: background-color 0.2s ease, border-radius 0.2s ease;
 }
 
@@ -567,7 +568,7 @@ html.GamepadMode #instructions_main_container {
 
 html.GamepadMode #instructions_main {
 	margin: unset;
-	margin-right: auto;
+	margin-inline-end: auto;
 }
 
 html.GamepadMode #instructions_main h2 {
@@ -688,7 +689,7 @@ html.GamepadMode .profile_fatalerror h1 {
 }
 
 html.GamepadMode .profile_fatalerror h3 {
-	margin-left: unset;
+	margin-inline-start: unset;
 	color: var(--gpStoreLightestGrey);
 }
 

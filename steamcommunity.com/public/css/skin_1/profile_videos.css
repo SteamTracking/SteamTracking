@@ -5,13 +5,13 @@
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
-	text-align: left;
+	text-align: start;
 }
 #BG_bottom {
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
-	text-align:left;
+	text-align:start;
 	position:relative;
 }
 #BG_top h2 {
@@ -21,7 +21,7 @@
 	padding-top:21px;
 	font-size: 26px;
 	color: #898989;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 #BG_top h1 {
 	font-weight:normal;
@@ -31,30 +31,30 @@
 	padding:0;
 	padding-top:0px;
 	padding-bottom:5px;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 #mainContents {
 	width:936px;
 	margin:0;
 	padding:0;
-	text-align:left;
-	padding-left:17px;
+	text-align:start;
+	padding-inline-start:17px;
 	padding-top:10px;
 }
 
 #profileBlock,#primaryGroupBlock {
-	float: left;
+	float: inline-start;
 	width:647px;
 	margin:0;
 	padding:0;
-	padding-right:0px;
+	padding-inline-end:0px;
 }
 
 .returnLink {
 	margin:0;
 	padding:0;
 	margin-bottom:20px;
-	margin-left:3px;
+	margin-inline-start:3px;
 }
 
 .returnLink>a {
@@ -73,23 +73,23 @@
 }
 
 .list_vid_thumb {
-	float:left;
+	float:inline-start;
 	position:relative;
-	margin-right:15px;
+	margin-inline-end:15px;
 	width:96px;
 	height:72px;
 }
 
 .list_vid_thumb_add {
-	float:left;
+	float:inline-start;
 	position:relative;
-	margin-right:15px;
+	margin-inline-end:15px;
 }	
 
 .vid_thumb_duration {
 	position:absolute;
 	bottom:0px;
-	right:0px;
+	inset-inline-end:0px;
 	background:rgb(0,0,0);
 	background:rgba(0,0,0,0.6);
 	padding:0px 4px;
@@ -104,7 +104,7 @@
 }
 
 #link_main {
-	margin-left:114px;
+	margin-inline-start:114px;
 }
 #link_error_box {
 	margin-top:10px;
@@ -137,16 +137,16 @@
 	margin-bottom:13px;
 }
 #link_chars {
-	float:right;
-	padding-right:49px;
+	float:inline-end;
+	padding-inline-end:49px;
 	padding-top:27px;
 }
 #link_actionblock {
 	margin-top:31px;
 }
 #link_ytp {
-	float:left;
-	margin-right:30px;
+	float:inline-start;
+	margin-inline-end:30px;
 	margin-top:4px;
 }
 #ytusername {
@@ -161,7 +161,7 @@
 	margin-top:8px;
 }
 #link_add_btn {
-	margin-left:16px;
+	margin-inline-start:16px;
 }
 #ytlinkform {
 	margin:0;
@@ -174,13 +174,13 @@
 	margin-bottom:6px;
 }
 #add_left_col {
-	float:left;
+	float:inline-start;
 	width:436px;
-	padding-left:16px;
+	padding-inline-start:16px;
 }
 
 #add_right_col1, #add_right_col2, #add_right_col3 {
-	float:left;
+	float:inline-start;
 	width:478px;
 }
 #add_right_col2, #add_right_col3 {
@@ -202,7 +202,8 @@
 #results_box, #error_box,.error_box {
 	color:#8bc53f;
 	font-size:24px;
-	margin:0px 32px 16px 16px;
+	margin-block: 0px 16px;
+	margin-inline: 16px 32px;
 	padding:6px;
 }
 #error_box,.error_box {
@@ -210,16 +211,17 @@
 	font-size:14px;
 }
 .error_desc {
-	margin:0px 32px 16px 16px;
+	margin-block: 0px 16px;
+	margin-inline: 16px 32px;
 	padding:6px;
 	line-height:18px;
 }	
 #video_top_links {
-	margin-left:16px;
+	margin-inline-start:16px;
 	margin-bottom:8px;
 }
 #video_top_links2 {
-	margin-left:4px;
+	margin-inline-start:4px;
 	margin-bottom:16px;
 }
 .video_top_link,.video_top_link:hover,.video_top_link:active,.video_top_link:visited {
@@ -236,7 +238,8 @@
 	overflow-y: scroll;
 	background-color:#1b1b1b;
 	border:solid #6f6f6f 1px;
-	margin:10px 20px 0px 0px;
+	margin-block: 10px 0px;
+	margin-inline: 0px 20px;
 	padding-top:5px;
 }
 
@@ -249,8 +252,9 @@
 
 
 .add_vid_cb {
-	float:left;
-	margin:30px 20px 0px 0px;
+	float:inline-start;
+	margin-block: 30px 0px;
+	margin-inline: 0px 20px;
 }
 
 .vid_cb {
@@ -278,26 +282,26 @@
 }
 #other_assoc_label {
 	padding-top:8px;
-	padding-right:8px;
+	padding-inline-end:8px;
 	display:block;
-	float:left;
+	float:inline-start;
 }
 #add_video_button,#link_acct_button {
-	margin-right:16px
+	margin-inline-end:16px
 }
 
 
 /* --- */
 .detail_right_col {
 	position: relative;
-	float:right;
+	float:inline-end;
 }
 #rc_more_videos {
-	float:right;
+	float:inline-end;
 	width:244px;
 	height:512px;
 	padding-top:5px;
-	padding-right:10px;
+	padding-inline-end:10px;
 }
 .detail_more_list_entry {
 	overflow:hidden;
@@ -305,7 +309,7 @@
 	margin-bottom:6px;
 }
 .vid_list_title {
-	float:left;
+	float:inline-start;
 	width:133px;
 	overflow:hidden;
 }
@@ -315,35 +319,36 @@
 
 
 #rightActionBlockHeader {
-	float:right;
+	float:inline-end;
 	width:254px;
 	height:9px;
 	margin:0;
 	padding:0;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/rightActionBlockHeader.gif');
-	clear:right;
+	clear:inline-end;
 }
 #rightActionBlockFooter {
-	float:right;
+	float:inline-end;
 	width:254px;
 	height:9px;
 	margin:0;
 	margin-bottom:16px;
 	padding:0;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/rightActionBlockFooter.gif');
-	clear:right;
+	clear:inline-end;
 }
 #rightActionBlock {
-	float:right;
+	float:inline-end;
 	width:246px;
 	margin:0;
-	padding:0px 0px 0px 8px;
+	padding-block: 0px;
+	padding-inline: 8px 0px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/rightActionBlockBG.gif');
 	background-repeat:repeat-y;
-	clear:right;
+	clear:inline-end;
 }
 .rightActionBlockHR {
-	margin-left:-8px;
+	margin-inline-start:-8px;
 	width:254px;
 	height:2px;
 	padding:4px 0px 6px 0px;
@@ -355,23 +360,23 @@
 }
 .action_link, .action_link:hover, .action_link:active, .action_link:visited {
 	font-size:14px;
-	clear:left;
+	clear:inline-start;
 }
 .action_link_img {
 	display:block;
-	float:left;
-	margin-right:8px;
-	clear:left;
+	float:inline-start;
+	margin-inline-end:8px;
+	clear:inline-start;
 }
 .video_list_entry {
-	float:left;
+	float:inline-start;
 	width:289px;
-	padding-right:16px;
+	padding-inline-end:16px;
 	margin-bottom:12px;
 }
 
 .video_list_entry_big {
-	float:left;
+	float:inline-start;
 	width:33%;
 	margin-bottom:12px;
 	text-align: center;
@@ -388,22 +393,22 @@
 	color: #CBCBCB;
 }
 .video_suggestions_section img {
-	padding-right: 16px;
-	margin-right: 12px;
+	padding-inline-end: 16px;
+	margin-inline-end: 12px;
 	padding: 10px;
-	padding-left: 2px;
-	border-right: solid #4d4d4e 1px;
+	padding-inline-start: 2px;
+	border-inline-end: solid #4d4d4e 1px;
 }
 .video_suggestions_extra {
 	margin-top: 4px;
-	margin-left: 22px;
+	margin-inline-start: 22px;
 }
 .videos_suggestions_title {
-	margin-left: 22px;
+	margin-inline-start: 22px;
 	margin-top: 40px;
 }
 #video_list_container {
-	margin-left:4px;
+	margin-inline-start:4px;
 }
 .vid_title_link,.vid_title_link:hover,.vid_title_link:active,.vid_title_link:visited {
 	font-size:12px;
@@ -427,33 +432,34 @@
 	font-size:14px;
 }
 #detail_vid_name {
-	clear:left;
+	clear:inline-start;
 	margin:10px 0px 20px 0px;
 	font-size:22px;
 	font-style:italic;
 	width:670px;
 }
 #video_list_top_actions {
-	text-align:right;
+	text-align:end;
 }
 #filterdropdown {
-	float:left;
+	float:inline-start;
 }
 #match_search {
 	line-height:22px;
-	margin:0px 6px 12px 0px;
+	margin-block: 0px 12px;
+	margin-inline: 0px 6px;
 }
 
 /* ---[ comments ] --- */
 .commentBlock {
 	width:669px;
-	clear:left;
+	clear:inline-start;
 }
 
 .commentContentBlock {
 	width:559px;
 	padding-bottom:15px;
-	float:left;
+	float:inline-start;
 }
 
 .commentByline {
@@ -464,7 +470,7 @@
 
 .commentContent {
 	width:551px;
-	padding-right: 8px;
+	padding-inline-end: 8px;
 	color:#939393;
 	font-size:11px;
 	word-wrap: break-word;
@@ -475,17 +481,17 @@
 }
 
 .commentAuthorAvatar {
-	float:left;
+	float:inline-start;
 	width:40px;
-	margin-right:10px;
+	margin-inline-end:10px;
 }
 
 .commentBlockControl {
-	float:left;
+	float:inline-start;
 	width:50px;
 	padding-top:10px;
-	padding-right:10px;
-	text-align:right;
+	padding-inline-end:10px;
+	text-align:end;
 	visibility: hidden;
 }
 
@@ -514,8 +520,8 @@
 	display:none;
 }
 .pageLinks {
-	float:right;
-	margin-right:8px;
+	float:inline-end;
+	margin-inline-end:8px;
 	padding-top:2px;
 	font-size:10px;
 	color:#959595;
@@ -530,7 +536,8 @@
 	width:662px;
 	height:17px;
 	padding:0;
-	margin:8px 0px 10px 12px;
+	margin-block: 8px 10px;
+	margin-inline: 12px 0px;
 }
 
 .infoBar {
@@ -546,7 +553,7 @@
 .infoBar p, .infoBar2 p {
 	margin:0;
 	padding:0;
-	margin-left:8px;
+	margin-inline-start:8px;
 	padding-top:2px;
 	font-size:10px;
 	color:#959595;
@@ -557,7 +564,8 @@
 	position:relative;
 	height:17px;
 	padding:0;
-	margin:8px 26px 10px 4px;
+	margin-block: 8px 10px;
+	margin-inline: 4px 26px;
 	font-size:12px;
 	color:#c9c9c9;
 }
@@ -565,15 +573,15 @@
 .pagingBar p {
 	margin:0;
 	padding:0;
-	margin-left:8px;
+	margin-inline-start:8px;
 	padding-top:2px;
 	font-size:12px;
 	color:#959595;
 }	
 
 .pagingPageLinks {
-	float:right;
-	margin-right:0px;
+	float:inline-end;
+	margin-inline-end:0px;
 	padding-top:2px;
 	font-size:12px;
 	color:#959595;

@@ -34,15 +34,15 @@ body.tutorial_mode .pagecontent {
 	/*border-top: 1px solid #000000;*/
 	-moz-border-radius-topleft: 3px;
 	-moz-border-radius-topright: 3px;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+	border-start-start-radius: 3px;
+	border-start-end-radius: 3px;
 }
 
 .trade_box_bgheader {
 	position: absolute;
 	top: 1px;
-	left: 1px;
-	right: 1px;
+	inset-inline-start: 1px;
+	inset-inline-end: 1px;
 	height: 34px;
 
 	background: -webkit-linear-gradient( top, #4E4E4E 5%, #1D1D1D 95%);
@@ -59,8 +59,8 @@ body.tutorial_mode .pagecontent {
 	border-top: 1px solid #333333;
 	-moz-border-radius-topleft: 0;
 	-moz-border-radius-topright: 0;
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
+	border-start-start-radius: 0;
+	border-start-end-radius: 0;
 }
 
 .item_description_hover {
@@ -69,8 +69,8 @@ body.tutorial_mode .pagecontent {
 }
 
 .econ_tag_filter_category {
-	float: left;
-	margin-right: 18px;
+	float: inline-start;
+	margin-inline-end: 18px;
 	margin-bottom: 12px;
 }
 
@@ -117,7 +117,7 @@ body.tutorial_mode .pagecontent {
 	margin-bottom: 12px;
 	padding: 8px;
 	color: white;
-	text-align: left;
+	text-align: start;
 	align-items: center;
 
 	a {
@@ -159,9 +159,9 @@ body.tutorial_mode .pagecontent {
 .trade_partner_info_block {
 	color: #63b7e7;
 	background-color: rgba( 0, 0, 0, 0.25 );
-	float: left;
+	float: inline-start;
 	padding: 5px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	margin-bottom: 10px;
 	min-height: 35px;
 }
@@ -173,8 +173,8 @@ body.tutorial_mode .pagecontent {
 }
 .trade_partner_info_block.limited {
 	position: relative;
-	right: 0px;
-	margin-right: 0px;
+	inset-inline-end: 0px;
+	margin-inline-end: 0px;
 }
 .trade_partner_info_block.group {
 	margin-top: 5px;
@@ -189,15 +189,15 @@ body.tutorial_mode .pagecontent {
 }
 .trade_partner_icon
 {
-	float: left;
-	margin-right: 5px;
+	float: inline-start;
+	margin-inline-end: 5px;
 	padding-top: 3px;
 	padding-bottom: 5px;
 	height: 25px;
 }
 .trade_partner_icon.years_of_service {
 	padding-top: 5px;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 .trade_partner_icon.group {
 	padding-top: 5px;
@@ -214,8 +214,8 @@ body.tutorial_mode .pagecontent {
 }
 .trade_partner_steam_level {
 	padding-top: 2px;
-	float: left;
-	margin-right: 10px;
+	float: inline-start;
+	margin-inline-end: 10px;
 }
 .trade_partner_member_since {
 	min-width: 400px;
@@ -231,11 +231,11 @@ body.tutorial_mode .pagecontent {
 
 .trade_area .trade_left {
 	width: 458px;
-	float: left;
+	float: inline-start;
 }
 
 .trade_area .trade_right {
-	float: right;
+	float: inline-end;
 }
 
 .trade_box#inventory_box > .trade_box_contents {
@@ -261,8 +261,8 @@ body.tutorial_mode .pagecontent {
 #inventories #dropmsg, .inventory_disabled {
 	position: absolute;
 	display: none;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	top: 0;
 	bottom: 0;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/economy/transparentbg.png' );
@@ -300,7 +300,7 @@ body.tutorial_mode .pagecontent {
 }
 
 .trade_area .inventory_ctn .inventory_page {
-	float: left;
+	float: inline-start;
 	width: 416px;
 	height: 416px;
 }
@@ -351,8 +351,8 @@ h2 {
 }
 
 .offerheader .offericon {
-	float: left;
-	margin-right: 12px;
+	float: inline-start;
+	margin-inline-end: 12px;
 }
 
 .trade_area .your_items, .trade_area .their_items  {
@@ -367,7 +367,8 @@ h2 {
 .slot_applogo {
 	display: flex;
 	height: 16px;
-	inset: auto 1px 1px auto;
+	inset-block: auto 1px;
+	inset-inline: auto 1px;
 	pointer-events: none;	/* click/hover go through to item */
 	position: absolute;
 	width: 16px;
@@ -377,7 +378,7 @@ h2 {
 .slot_actionmenu_button {
 	position: absolute;
 	z-index: 21;
-	right: 1px;
+	inset-inline-end: 1px;
 	bottom: 1px;
 	width: 16px;
 	height: 16px;
@@ -416,8 +417,8 @@ h2 {
 .readystate.short {
 	display: inline-block;
 	width: 226px;
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
+	border-start-end-radius: 3px;
+	border-end-end-radius: 3px;
 	margin-bottom: 8px;
 }
 
@@ -459,11 +460,11 @@ h2 {
 }
 
 .readystate#them_notready .content, .readystate#them_ready .content, .readystate#you_cantready .content {
-	padding-left: 12px;
+	padding-inline-start: 12px;
 }
 
 .readystate#you_notready .content, .readystate#you_ready .content {
-	padding-left: 34px;
+	padding-inline-start: 34px;
 }
 
 .readystate#you_notready {
@@ -499,9 +500,9 @@ h2 {
 #trade_theirs_timeout {
 	position: absolute;
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 	bottom: 0;
-	right: 0;
+	inset-inline-end: 0;
 	background-color: rgba( 29, 29, 29, 0.7 );
 	z-index: 100;
 	text-align: center;
@@ -535,13 +536,13 @@ div.appselect_options, div.appselect {
 	color: #8a8a8a;
 	font-size: 12px;
 	background-color: #000000;
-	border-left: 1px solid #707070;
-	border-right: 1px solid #707070;
+	border-inline-start: 1px solid #707070;
+	border-inline-end: 1px solid #707070;
 }
 
 div.appselect #appselect_arrow {
 	position: absolute;
-	right: 0;
+	inset-inline-end: 0;
 	top: 0;
 	width: 17px;
 	height: 40px;
@@ -659,7 +660,7 @@ table.chat_entry_table {
 
 td.chat_entry_cell {
 	width: 99%;
-	padding-right: 8px;
+	padding-inline-end: 8px;
 }
 
 td.chat_entry_cell div {
@@ -667,7 +668,8 @@ td.chat_entry_cell div {
 	background-color: #1d1d1d;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
-	padding: 2px 6px 2px 2px;
+	padding-block: 2px;
+	padding-inline: 2px 6px;
 	height: 36px;
 }
 
@@ -692,7 +694,7 @@ textarea#trade_offer_note {
 }
 
 .included_trade_offer_note_header .tooltip_hint {
-	float: right;
+	float: inline-end;
 	padding-top: 11px;
 }
 
@@ -702,7 +704,7 @@ div.included_trade_offer_note {
 }
 div.included_trade_offer_note_ctn {
 	position: relative;
-	padding-left: 58px;
+	padding-inline-start: 58px;
 	min-height: 40px;
 }
 .quote
@@ -731,13 +733,13 @@ div.included_trade_offer_note_ctn {
 .included_trade_offer_note_ctn .included_trade_offer_note_sender
 {
 	position: absolute;
-	left:0;
+	inset-inline-start:0;
 	top: 0;
 }
 
 .included_trade_offer_note_ctn .quote_arrow
 {
-	left: 42px;
+	inset-inline-start: 42px;
 	top: 12px;
 }
 
@@ -827,12 +829,12 @@ div#chat_send_btn.active {
 }
 
 .trade_confirmbtn .cap.left {
-	left: 0;
+	inset-inline-start: 0;
 	background-position: 0 0;
 }
 
 .trade_confirmbtn .cap.right {
-	right: 0;
+	inset-inline-end: 0;
 	background-position: -5px 0;
 }
 
@@ -941,8 +943,8 @@ div#chat_send_btn.active {
 	font-weight: bold;
 	font-size: 11px;
 	color: #ffffff;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-inline-start: 5px;
+	padding-inline-end: 5px;
 
 	white-space: nowrap;
 	cursor: default;
@@ -955,17 +957,17 @@ div#chat_send_btn.active {
 }
 
 .tutorial_arrow.right {
-	padding-left: 5px;
-	padding-right: 16px;
+	padding-inline-start: 5px;
+	padding-inline-end: 16px;
 }
 .tutorial_arrow.right .leftcap {
-	left: 0;
+	inset-inline-start: 0;
 	width: 5px;
 	background-position: 0 0;
 }
 
 .tutorial_arrow.right .rightcap {
-	right: 0;
+	inset-inline-end: 0;
 	width: 16px;
 	background-position: -26px 0;
 }
@@ -973,17 +975,17 @@ div#chat_send_btn.active {
 
 
 .tutorial_arrow.left {
-	padding-right: 5px;
-	padding-left: 16px;
+	padding-inline-end: 5px;
+	padding-inline-start: 16px;
 }
 .tutorial_arrow.left .leftcap {
-	left: 0;
+	inset-inline-start: 0;
 	width: 16px;
 	background-position: -10px 0;
 }
 
 .tutorial_arrow.left .rightcap {
-	right: 0;
+	inset-inline-end: 0;
 	width: 5px;
 	background-position: -5px 0;
 }
@@ -994,53 +996,53 @@ div#chat_send_btn.active {
 }
 
 #tutorial_arrow_step1 {
-	right: 410px;
+	inset-inline-end: 410px;
 	top: 5px;
 }
 
 #tutorial_arrow_step2 {
-	right: 407px;
+	inset-inline-end: 407px;
 	top: -8px;
 }
 
 #tutorial_arrow_step3 {
-	left: 400px;
+	inset-inline-start: 400px;
 	top: -2px;
 }
 
 #tutorial_arrow_step4 {
-	left: 380px;
+	inset-inline-start: 380px;
 	top: 55px;
 }
 
 #tutorial_arrow_ctn_2.activeArrow {
-	padding-left: 18px;
+	padding-inline-start: 18px;
 }
 
 
 
 .trade_offer_tutorial#tutorial_arrow_step1 {
-	right: 443px;
+	inset-inline-end: 443px;
 	top: 23px;
 }
 
 .trade_offer_tutorial#tutorial_arrow_step2 {
-	right: -50px;
+	inset-inline-end: -50px;
 	top: 23px;
 }
 
 .trade_offer_tutorial#tutorial_arrow_step3 {
-	left: -52px;
+	inset-inline-start: -52px;
 	top: 35px;
 }
 
 .trade_offer_tutorial#tutorial_arrow_step4 {
-	left: 400px;
+	inset-inline-start: 400px;
 	top: -2px;
 }
 
 .trade_offer_tutorial#tutorial_arrow_step5 {
-	left: 380px;
+	inset-inline-start: 380px;
 	top: 55px;
 }
 
@@ -1075,7 +1077,7 @@ div#chat_send_btn.active {
 
 .trade_currency_dialog_corner {
 	position: absolute;
-	right: -1px;
+	inset-inline-end: -1px;
 	bottom: -1px;
 	background: right bottom no-repeat url( 'https://community.fastly.steamstatic.com/public/images/economy/trade_currency_dialog_corner.png?v=1' );
 	width: 174px;
@@ -1113,14 +1115,14 @@ div#chat_send_btn.active {
 	background: no-repeat url( 'https://community.fastly.steamstatic.com/public/images/economy/trade_currency_entry_background.png?v=1' );
 	width: 136px;
 	height: 54px;
-	padding-left: 54px;
-	text-align: left;
+	padding-inline-start: 54px;
+	text-align: start;
 	margin: 0 auto 24px auto;
 }
 
 .currency_dialog_input_area_short {
 	background: no-repeat url( 'https://community.fastly.steamstatic.com/public/images/economy/trade_currency_entry_short_background.png?v=1' );
-	padding-left: 6px;
+	padding-inline-start: 6px;
 }
 
 #trade_currency_dialog_input_area {
@@ -1141,13 +1143,13 @@ div#chat_send_btn.active {
 
 #trade_currency_dialog_conversion_input_area_them {
 	position: absolute;
-	left: 232px;
+	inset-inline-start: 232px;
 	top: 129px;
 }
 
 #trade_currency_dialog_input_icon_area {
 	position: absolute;
-	left: 4px;
+	inset-inline-start: 4px;
 	top: 6px;
 	width: 42px;
 	height: 42px;
@@ -1177,13 +1179,13 @@ div#chat_send_btn.active {
 #trade_currency_dialog_error {
 	position: absolute;
 	top: 118px;
-	left: 0;
+	inset-inline-start: 0;
 }
 
 #trade_currency_dialog_conversion_error {
 	position: absolute;
 	top: 178px;
-	left: 0;
+	inset-inline-start: 0;
 }
 
 .trade_currency_fee_information {
@@ -1197,14 +1199,14 @@ div#chat_send_btn.active {
 #trade_currency_fee_information {
 	position: absolute;
 	top: 150px;
-	left: 0;
+	inset-inline-start: 0;
 	display: none;
 }
 
 #trade_currency_conversion_fee_information {
 	position: absolute;
 	top: 210px;
-	left: 0;
+	inset-inline-start: 0;
 }
 
 .trade_wallet #trade_currency_fee_information {
@@ -1213,13 +1215,13 @@ div#chat_send_btn.active {
 
 .trade_currency_fee_information_lines {
 	display: inline-block;
-	text-align: left;
+	text-align: start;
 	white-space: nowrap;
 }
 
 .trade_currency_fee_total {
 	font-weight: bold;
-	padding-left: 0.6em;
+	padding-inline-start: 0.6em;
 }
 
 .trade_currency_dialog_remaining {
@@ -1235,7 +1237,7 @@ div#chat_send_btn.active {
 #trade_currency_dialog_conversion_remaining {
 	position: absolute;
 	top: 327px;
-	left: 0;
+	inset-inline-start: 0;
 
 	font-size: 14px;
 }
@@ -1263,16 +1265,16 @@ div#chat_send_btn.active {
 .trade_currency_dialog_footer {
 	position: absolute;
 	bottom: 12px;
-	left: 9px;
+	inset-inline-start: 9px;
 
 	width: 416px;
-	text-align: right;
+	text-align: end;
 }
 
 .trade_currency_dialog_footer a.item_action {
-	margin-right: 0;
-	margin-left: 5px;
-	text-align: left;
+	margin-inline-end: 0;
+	margin-inline-start: 5px;
+	text-align: start;
 	padding: 0 5px;
 	width: 82px;
 }
@@ -1370,7 +1372,7 @@ div#chat_send_btn.active {
 #trade_currency_dialog_warning_contents {
 	position: absolute;
 	top: 52px;
-	left: 0;
+	inset-inline-start: 0;
 	width: 418px;
 
 	padding: 0 8px;
@@ -1380,7 +1382,7 @@ div#chat_send_btn.active {
 }
 
 .trade_box .itemHolder {
-	margin-right: 5.2px; /* 6px causes premature wrapping when zooming the page */
+	margin-inline-end: 5.2px; /* 6px causes premature wrapping when zooming the page */
 }
 
 .inventory_user_tabs {
@@ -1404,7 +1406,7 @@ div#chat_send_btn.active {
 }
 
 .inventory_user_tab, a.inventory_user_tab {
-	float: left;
+	float: inline-start;
 	line-height: 55px;
 	height: 55px;
 	width: 218px;
@@ -1418,8 +1420,8 @@ div#chat_send_btn.active {
 
 	text-decoration: none;
 	border-radius: 2px;
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
+	border-end-start-radius: 0;
+	border-end-end-radius: 0;
 	-moz-border-radius: 2px;
 	-moz-border-radius-bottomleft: 0;
 	-moz-border-radius-bottomright: 0;
@@ -1460,10 +1462,10 @@ div#chat_send_btn.active {
 }
 
 .captcha_img_ctn {
-	float: left;
+	float: inline-start;
 	width: 206px;
 	text-align: center;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 
 img#trade_confirm_captcha {
@@ -1472,7 +1474,7 @@ img#trade_confirm_captcha {
 }
 
 .captcha_entry_ctn {
-	text-align: left;
+	text-align: start;
 	padding-top: 4px;
 	display: inline-block;
 	margin-bottom: 12px;
@@ -1521,14 +1523,14 @@ html.responsive .trade_right {
 .responsive_trade_prompt .playerAvatar {
 	display: inline-block;
 	vertical-align: middle;
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 
 .responsivetrade_backtooffer_ctn {
 	position: fixed;
 	padding: 8px;
 	bottom: 0;
-	right: 0;
+	inset-inline-end: 0;
 	background: #171a21;
 	box-shadow: -1px -1px 6px 0 #000000;
 	z-index: 20;
@@ -1542,7 +1544,7 @@ html.responsive .trade_right {
 {
 	html.responsive .trade_partner_info_block {
 		float: none;
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 	html.responsive .trade_partner_info_block.group {
 		width: auto;
@@ -1607,8 +1609,8 @@ html.responsive .trade_right {
 	html.responsive .responsive_trade_fixedcontents {
 		position: fixed;
 		top: 0;
-		left: 0;
-		right: 0;
+		inset-inline-start: 0;
+		inset-inline-end: 0;
 		background: #171a21;
 		box-shadow: 0 2px 4px 0 #000000;
 		z-index: 15;

@@ -5,10 +5,10 @@ const __vite__mapDeps = (
   m = __vite__mapDeps,
   d = m.f ||
     (m.f = [
-      "./webgamepadnavigation.js",
-      "./clientpostmessage.js",
-      "../../css/legacy_web/webgamepadnavigation.css",
-      "./desktopbridge.js",
+      "./chunk~c9c5ab32ef.js",
+      "./chunk~b578cf0918.js",
+      "../../css/legacy_web/chunk~c9c5ab32ef.css",
+      "./chunk~ca4d832dec.js",
     ]),
 ) => i.map((i) => d[i]);
 
@@ -444,10 +444,17 @@ var _ = (function () {
                 i)
               )
                 return new Promise((e, n) => {
-                  (t.addEventListener(`load`, e),
-                    t.addEventListener(`error`, () =>
-                      n(Error(`Unable to preload CSS for ${r}`)),
-                    ));
+                  (function t(i, a) {
+                    (i.addEventListener(`load`, e),
+                      i.addEventListener(`error`, () => {
+                        a
+                          ? setTimeout(() => {
+                              let e = i.cloneNode();
+                              (i.replaceWith(e), t(e, !1));
+                            }, 500)
+                          : n(Error(`Unable to preload CSS for ${r}`));
+                      }));
+                  })(t, !0);
                 });
             });
           })
@@ -485,7 +492,7 @@ async function T(e) {
   let { InitializeGamepadNavigation: t } = await S(
     async () => {
       let { InitializeGamepadNavigation: e } = await import(
-        `./webgamepadnavigation.js`
+        `./chunk~c9c5ab32ef.js`
       );
       return { InitializeGamepadNavigation: e };
     },
@@ -497,7 +504,7 @@ async function T(e) {
 async function E() {
   let { InitializeForDesktop: e } = await S(
     async () => {
-      let { InitializeForDesktop: e } = await import(`./desktopbridge.js`);
+      let { InitializeForDesktop: e } = await import(`./chunk~ca4d832dec.js`);
       return { InitializeForDesktop: e };
     },
     __vite__mapDeps([3, 1]),

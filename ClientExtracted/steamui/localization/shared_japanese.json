@@ -4186,7 +4186,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "ヒストグラムデータは、フレームレートデータの提供に同意した%1$sユーザーによる、このゲームのフレームレートレポートに基づいています。",
     "GamePerformanceStats_FrameRateHistogram_Title": "フレームレート分布",
     "GamePerformanceStats_Framerate": "フレームレート",
-    "GamePerformanceStats_SessionLabel": "セッションの割合",
+    "GamePerformanceStats_SessionLabel": "サンプルの割合",
     "GamePerformanceStats_Chart_NoData": "十分なデータが収集されると、チャートが利用可能になります。",
     "NewToolTitleSuffix_Beta": "ベータ",
     "DynamicLinkType_WorkshopItem": "%1$sのワークショップアイテム",
@@ -4213,6 +4213,11 @@
     "GamePerformanceStats_StillGatheringData": "Steamは%2$sでの『%1$s』のフレームレートデータを収集中です",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steamは%1$sでのこのゲームのフレームレートデータを収集中です",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steamはこのゲームのフレームレートデータを収集中です",
-    "GamePerformanceStats_FrameRateDistribution": "このフレームレートのグラフは、データ提供に同意したユーザーが%2$sで『%1$s』をプレイする際の匿名のゲームプレイデータに基づいています",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "このフレームレートのグラフは、データ提供に同意したユーザーが%1$sでこのタイトルをプレイする際の匿名のゲームプレイデータに基づいています"
+    "GamePerformanceStats_FrameRateDistribution": "このグラフは、匿名のデータを共有することに同意したユーザーが%2$sで『%1$s』をプレイした際のフレームレートのサンプルを示しています。それぞれの棒は、そのフレームレートでのサンプルの割合を表しています。",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "このグラフは、匿名のデータを共有することに同意したユーザーが%1$sでこのタイトルをプレイした際のフレームレートのサンプルを示しています。それぞれの棒は、そのフレームレートでのサンプルの割合を表しています。",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "このゲームは、ゲーム内の設定を使用してコントローラサポートを手動で有効にする必要があります",
+    "GameFrameRateReporting_Details_HowToChange": "この設定を後で変更したい場合は、<1>Steam設定の「アカウント詳細」＞「データ＆閲覧」</1>から可能です。",
+    "GamePerformanceStats_MoreDetailsTitle": "詳細を表示",
+    "GamePerformanceStats_MoreDetails_Filtering": "ここに含まれるのは、『%1$s』のデフォルトのフレーム制限である%2$s FPSで収集されたデータのみです。アイドル時間と無効なサンプルは除外されます。各ゲームプレイセッションから複数のサンプルが収集されます。",
+    "GamePerformanceStats_MoreDetails_VSync": "グラフ内でデータが欠けている箇所がある場合（FPS %1$sと%2$sの間のデータなど）は、VSyncが原因の可能性があります。VSyncは画面のティアリングを防ぐために、ゲームのフレームレートをディスプレイのリフレッシュレートに同期させます。これにより、ゲームの平均フレームレートがFPS %1$sと%2$sの間にある場合でも、サンプルはその上限と下限に集中することがあります。これはVSyncの仕様であり、フレームペーシングに影響する可能性はありますが、必ずしも顕著なカクつきが発生するとは限りません。"
 }

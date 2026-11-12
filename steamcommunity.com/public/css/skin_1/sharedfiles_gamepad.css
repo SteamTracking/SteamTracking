@@ -87,7 +87,7 @@ html.GamepadMode .guideTopContent {
 }
 
 html.GamepadMode .guidePreviewImage {
-	margin-right: 16px;
+	margin-inline-end: 16px;
 	width: 64px;
 	height: 64px;
 	margin-bottom: 0px;
@@ -109,7 +109,7 @@ html.GamepadMode .workshopItemTitle {
 html.GamepadMode .guideTopDescription {
 	font: var(--gpText-HeadingSmall);
 	font-weight: 400;
-	margin-left: 80px;
+	margin-inline-start: 80px;
 }
 
 html.GamepadMode .guideAuthors {
@@ -138,7 +138,7 @@ html.GamepadMode .guideTop .workshopItemControls {
 	padding: unset;
 	margin-top: 8px;
 	max-width: unset;
-	margin-left: 80px;
+	margin-inline-start: 80px;
 }
 
 
@@ -153,7 +153,8 @@ html.GamepadMode .detailBox ol {
 
 html.GamepadMode .detailBox ul,
 html.GamepadMode .detailBox ol {
-	margin: 0px 0px 24px 24px;
+	margin-block: 0px 24px;
+	margin-inline: 24px 0px;
 }
 
 html.GamepadMode a.bb_link {
@@ -206,10 +207,10 @@ html.GamepadMode .just_added_to_list {
 }
 
 html.GamepadMode .just_added_to_list .close_notification {
-	margin-left: auto;
+	margin-inline-start: auto;
 	display: flex;
 	height: auto;
-	margin-right: 24px;
+	margin-inline-end: 24px;
 }
 
 html.GamepadMode .just_added_to_list .close_notification span {
@@ -254,7 +255,7 @@ html.GamepadMode .workshopItemControls .vertical_divider {
 /* Subscribe button */
 html.GamepadMode #SubscribeItemBtn {
 	display: inline-flex;
-	margin-left: 24px;
+	margin-inline-start: 24px;
 }
 
 html.GamepadMode #SubscribeItemBtn .subscribeIcon {
@@ -262,7 +263,7 @@ html.GamepadMode #SubscribeItemBtn .subscribeIcon {
 }
 
 html.GamepadMode .btn_medium > span.subscribeText {
-	padding-left: unset;
+	padding-inline-start: unset;
 }
 
 html.GamepadMode .game_area_purchase_game > h1 {

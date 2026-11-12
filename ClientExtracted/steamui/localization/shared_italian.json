@@ -4151,7 +4151,7 @@
     "SteamNotifications_TradeReversal_Description": "Uno dei tuoi scambi recenti è stato annullato dal tuo partner di scambio.",
     "GameFrameRate_FPS": "%1$s FPS",
     "GameFrameRate_Description_App": "I giocatori su %1$s hanno una media di %2$s quando giocano a %3$s",
-    "GameFrameRate_Description_ThisGame": "I giocatori su %1$s hanno una media di %2$s quando giocano a questo titolo",
+    "GameFrameRate_Description_ThisGame": "I giocatori su %1$s hanno una media di %2$s su questo titolo",
     "GameFrameRate_LastUpdated": "Ultimo aggiornamento: %1$s",
     "GameFrameRateReporting_Title": "Dati anonimi sul frame rate:",
     "GameFrameRateReporting_Prompt": "possiamo raccogliere dati anonimi sul frame rate mentre giochi e hai effettuato l'accesso al tuo account di Steam? Questi dati ci aiutano a comprendere al meglio la compatibilità dei giochi e a migliorare Steam.",
@@ -4187,7 +4187,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "I dati dell'istogramma si basano su segnalazioni di frame rate per questo gioco da parte di clienti su %2$s che hanno scelto di fornire dati sul frame rate.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Distribuzione del frame rate",
     "GamePerformanceStats_Framerate": "Frame rate",
-    "GamePerformanceStats_SessionLabel": "% sessione",
+    "GamePerformanceStats_SessionLabel": "% di campioni",
     "GamePerformanceStats_Chart_NoData": "Un grafico sarà disponibile dopo che saranno stati raccolti dati sufficienti",
     "NewToolTitleSuffix_Beta": "BETA",
     "DynamicLinkType_WorkshopItem": "Un oggetto del Workshop per %1$s",
@@ -4214,6 +4214,10 @@
     "GamePerformanceStats_StillGatheringData": "Steam sta ancora raccogliendo i dati sul frame rate di %1$s su %2$s",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam sta ancora raccogliendo i dati sul frame rate per questo gioco su %1$s",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam sta ancora raccogliendo i dati sul frame rate per questo gioco",
-    "GamePerformanceStats_FrameRateDistribution": "Questo grafico del frame rate si basa sui dati di gameplay anonimi dei clienti che hanno scelto di condividere tali informazioni e giocano a %1$s su %2$s",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Questo grafico del frame rate si basa sui dati di gameplay anonimi dei clienti che hanno scelto di condividere tali informazioni e che giocano a questo titolo su %1$s"
+    "GamePerformanceStats_FrameRateDistribution": "Questo grafico mostra i campioni di frame rate provenienti dai clienti che hanno accettato di condividere dati anonimi giocando a %1$s su %2$s. Ogni barra mostra la percentuale di campioni a quel frame rate.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Questo grafico mostra i campioni di frame rate provenienti dai clienti che hanno accettato di condividere dati anonimi giocando a questo titolo su %2$s. Ogni barra mostra la percentuale di campioni a quel frame rate.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "Questo gioco richiede l'abilitazione manuale del supporto ai controller usando le impostazioni di gioco",
+    "GamePerformanceStats_MoreDetailsTitle": "Ulteriori informazioni",
+    "GamePerformanceStats_MoreDetails_Filtering": "Vengono inclusi solo i dati raccolti al limite predefinito di frame di %1$s, pari a %2$s FPS. Sono esclusi i periodi di inattività e i campioni non validi. Vengono raccolti più campioni da ogni sessione di gioco.",
+    "GamePerformanceStats_MoreDetails_VSync": "Le interruzioni nel grafico (ad es. tra %1$s e %2$s FPS) possono essere causate dalla sincronizzazione verticale, che sincronizza la distribuzione dei frame con la frequenza di aggiornamento del display per evitare lo screen tearing. Questo può far sì che i campioni si concentrino a %1$s e %2$s FPS anche quando il frame rate medio del gioco è compreso tra i due valori. Si tratta di un comportamento normale della sincronizzazione verticale e, anche se può influire sul ritmo dei fotogrammi, non causa necessariamente scatti evidenti."
 }

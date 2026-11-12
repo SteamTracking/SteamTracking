@@ -70,9 +70,9 @@ div.hover {
 	color: #494947;
 	padding-top: 4px;
 	padding-bottom: 4px;
-	padding-left: 4px;
-	margin-left: 10px;
-	margin-right: 10px;
+	padding-inline-start: 4px;
+	margin-inline-start: 10px;
+	margin-inline-end: 10px;
 	margin-bottom: 10px;
 }
 
@@ -82,7 +82,7 @@ div.hover {
 	overflow: hidden;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/icon_show_state_blue.png');
 	background-repeat: no-repeat;
-	padding-left: 30px;
+	padding-inline-start: 30px;
 }
 
 .hover_user_action.subscribed
@@ -106,8 +106,8 @@ div.hover {
 
 .hover_friend_block_container
 {
-	float: left;
-	margin-right: 5px;
+	float: inline-start;
+	margin-inline-end: 5px;
 	height: 40px;
 	width: 40px;
 }
@@ -121,7 +121,7 @@ div.hover {
 .hover_friend_block_row .iconHolder_default
 {
 	position: absolute;
-	left: 4px;
+	inset-inline-start: 4px;
 	padding: 4px;
 	width: 32px;
 	height: 32px;
@@ -139,8 +139,8 @@ div.hover {
 
 .friend_favorited_block_container
 {
-	float: left;
-	margin-right: 5px;
+	float: inline-start;
+	margin-inline-end: 5px;
 	height: 40px;
 	width: 40px;
 }
@@ -154,7 +154,7 @@ div.hover {
 .friend_favorited_block_row .iconHolder_default
 {
 	position: absolute;
-	left: 4px;
+	inset-inline-start: 4px;
 	padding: 4px;
 	width: 32px;
 	height: 32px;

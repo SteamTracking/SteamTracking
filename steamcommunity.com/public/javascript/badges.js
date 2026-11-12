@@ -220,7 +220,7 @@ function BuildBadgeReward( rgRewardData )
 
 	$Content.append( $Title, $Desc );
 
-	$Reward.append( $Icon, $Content, $J('<div/>', {style: 'clear: left;' } ) );
+	$Reward.append( $Icon, $Content, $J('<div/>', {style: 'clear: inline-start;' } ) );
 	$RewardCtn.append( $Reward );
 	return $RewardCtn;
 }

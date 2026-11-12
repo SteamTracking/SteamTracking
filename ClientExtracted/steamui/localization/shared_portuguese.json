@@ -4151,8 +4151,8 @@
     "SteamNotifications_TradeReversal_Body_Short": "Uma troca foi revertida",
     "SteamNotifications_TradeReversal_Description": "Uma das tuas trocas recentes foi revertida pela pessoa com quem trocaste.",
     "GameFrameRate_FPS": "%1$s FPS",
-    "GameFrameRate_Description_App": "Os utilizadores do %1$s tiveram uma média de %2$s enquanto jogavam %3$s",
-    "GameFrameRate_Description_ThisGame": "Os utilizadores do dispositivo \"%1$s\" tiveram uma média de %2$s enquanto jogavam este jogo",
+    "GameFrameRate_Description_App": "Os utilizadores do %1$s tiveram uma média de %2$s no %3$s",
+    "GameFrameRate_Description_ThisGame": "Os utilizadores do %1$s tiveram uma média de %2$s neste jogo",
     "GameFrameRate_LastUpdated": "Última atualização: %1$s",
     "GameFrameRateReporting_Title": "Dados anónimos da taxa de frames:",
     "GameFrameRateReporting_Prompt": "Podemos recolher dados anónimos da taxa de frames enquanto jogas na tua conta Steam? Estes dados ajudam-nos a melhorar a compatibilidade de jogos e o Steam.",
@@ -4188,7 +4188,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Os dados do histograma são baseados em relatórios da taxa de frames deste jogo que foram fornecidos por utilizadores do dispositivo %1$s que aceitaram partilhar dados da taxa de frames.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Distribuição da taxa de frames",
     "GamePerformanceStats_Framerate": "Taxa de frames",
-    "GamePerformanceStats_SessionLabel": "% de sessões",
+    "GamePerformanceStats_SessionLabel": "% de amostras",
     "GamePerformanceStats_Chart_NoData": "Um gráfico estará disponível depois de dados suficientes terem sido recolhidos",
     "NewToolTitleSuffix_Beta": "BETA",
     "DynamicLinkType_WorkshopItem": "Item no Steam Workshop (%1$s)",
@@ -4215,6 +4215,10 @@
     "GamePerformanceStats_StillGatheringData": "O Steam ainda está a reunir dados da taxa de frames de %1$s no %2$s",
     "GamePerformanceStats_StillGatheringData_ThisGame": "O Steam ainda está a reunir dados da taxa de frames deste jogo no dispositivo \"%1$s\"",
     "GamePerformanceStats_StillGatheringData_NoDevice": "O Steam ainda está a reunir dados da taxa de frames deste jogo",
-    "GamePerformanceStats_FrameRateDistribution": "Este gráfico da taxa de frames baseia-se em dados de jogabilidade de utilizadores anónimos que jogaram %1$s no %2$s e que aceitaram partilhar dados da taxa de frames",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Este gráfico da taxa de frames baseia-se em dados de jogabilidade de utilizadores anónimos que jogaram este jogo no %1$s e que aceitaram partilhar dados da taxa de frames"
+    "GamePerformanceStats_FrameRateDistribution": "Este gráfico mostra amostras de taxa de frames de utilizadores que jogaram %1$s no %2$s e que aceitaram partilhar dados anónimos. Cada barra mostra a percentagem de amostras na taxa de frames em questão.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Este gráfico mostra amostras de taxa de frames de utilizadores que jogaram este jogo no %1$s e que aceitaram partilhar dados anónimos. Cada barra mostra a percentagem de amostras na taxa de frames em questão.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "Este jogo requer que o uso do comando seja ativado manualmente nas respetivas definições.",
+    "GamePerformanceStats_MoreDetailsTitle": "Mais detalhes",
+    "GamePerformanceStats_MoreDetails_Filtering": "Apenas são incluídos os dados recolhidos com o limite predefinido de frames por segundo no %1$s (%2$s FPS). Períodos de inatividade e amostras inválidas são excluídos. São recolhidas várias amostras durante cada sessão de jogo.",
+    "GamePerformanceStats_MoreDetails_VSync": "Espaços no gráfico (por exemplo, entre %1$s e %2$s FPS) podem ser causados por sincronização vertical (VSync), que sincroniza a apresentação das frames com a frequência de atualização do ecrã para evitar um efeito cortado na imagem (\"tearing\"). Isto pode fazer com que as amostras se concentrem nos valores de %1$s e %2$s FPS, mesmo quando a taxa média de frames do jogo se situa entre esses valores. Este é um comportamento normal da sincronização vertical e, embora possa afetar a regularidade de apresentação das frames, não causa necessariamente quebras percetíveis na fluidez."
 }

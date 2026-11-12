@@ -5,7 +5,7 @@
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/bg_bottom2.gif');
 	background-repeat:repeat-y;
 	width:958px;
-	text-align:left;
+	text-align:start;
 }
 .profile_subpage_column h2 {
 	font-weight:normal;
@@ -14,7 +14,7 @@
 	padding-top:21px;
 	font-size: 26px;
 	color: #67c1f5;
-	padding-left:12px;
+	padding-inline-start:12px;
 }
 .profile_subpage_column h1 {
 	font-weight:normal;
@@ -24,22 +24,22 @@
 	padding:0;
 	padding-top:0px;
 	padding-bottom:5px;
-	padding-left:12px;
+	padding-inline-start:12px;
 }
 #mainContents {
 	margin:0;
 	padding: 8px 12px;
-	text-align:left;
+	text-align:start;
 }
 #logo {
 	position:absolute;
 	width:192px;
-	left:748px;
+	inset-inline-start:748px;
 	top:7px;
 }
 
 #personalAchieve {
-	padding-left:16px;
+	padding-inline-start:16px;
 }
 
 .achieveHeader {
@@ -50,29 +50,31 @@
 }
 
 .topAvatarsLeft {
-	float:left;
-	margin-left:-4px;
+	float:inline-start;
+	margin-inline-start:-4px;
 	width:72px;
 	height:72px;
 }
 
 .topAvatarsRight {
-	float:right;
-	padding-right:23px;
+	float:inline-end;
+	padding-inline-end:23px;
 }
 
 .achieveImgHolder {
-	float:left;
+	float:inline-start;
 	width:64px;
 	height:64px;
-	padding:1px 9px 1px 0px;
+	padding-block: 1px;
+	padding-inline: 0px 9px;
 }
 
 .CachieveImgHolder {
-	float:left;
+	float:inline-start;
 	width:64px;
 	height:64px;
-	padding:1px 0px 1px 9px;
+	padding-block: 1px;
+	padding-inline: 9px 0px;
 }
 
 .achieveRow {
@@ -90,7 +92,7 @@
 .achieveFill {
 	position:absolute;
 	top:2px;
-	left:2px;
+	inset-inline-start:2px;
 	bottom: 2px;
 	z-index:10;
 	background: #17435c;
@@ -99,7 +101,7 @@
 .achieveFillCover {
 	position:absolute;
 	top:2px;
-	left:2px;
+	inset-inline-start:2px;
 	width:764px;
 	height:62px;
 	z-index:20;
@@ -108,7 +110,7 @@
 .achieveSurround {
 	position:absolute;
 	top:0px;
-	left:0px;
+	inset-inline-start:0px;
 	width:768px;
 	height:66px;
 	z-index:30;
@@ -121,10 +123,10 @@
 }
 
 .achievePercent {
-	float: right;
+	float: inline-end;
 	position: relative;
 	margin-top:27px;
-	margin-right: 20px;
+	margin-inline-end: 20px;
 	color:#66C0F4;
 	font-size:13px;
 	z-index:40;
@@ -146,14 +148,14 @@
 	width:838px;
 	height:4px;
 	margin:0;
-	margin-left:3px;
+	margin-inline-start:3px;
 	padding:0;
 }
 #headerBottom {
 	margin-bottom:15px;
 }
 #headerContent {
-	margin-left:3px;
+	margin-inline-start:3px;
 	background-color: rgba( 0, 0, 0, 0.4 );
 	padding: 12px;
 	color:#898989;
@@ -166,7 +168,7 @@
 }
 
 #headerContentRight {
-	float:right;
+	float:inline-end;
 }
 
 .wt {
@@ -174,27 +176,28 @@
 }
 
 #compareAvatar {
-	float:right;
+	float:inline-end;
 	padding: 5px 26px;
 }
 
 .compareImg {
-	float:right;
-	padding:1px 0px 0px 17px;
+	float:inline-end;
+	padding-block: 1px 0px;
+	padding-inline: 17px 0px;
 }
 #tabs {
 	margin:0;
-	padding-left:16px;
+	padding-inline-start:16px;
 }
 #subtabs {
 	height:43px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/statsSubtabsBG.gif?v=1');
-	padding-left:14px;
-	clear:left;
+	padding-inline-start:14px;
+	clear:inline-start;
 }
 
 .tab {
-	float:left;
+	float:inline-start;
 }
 .tab a,.tab a:hover,.tab a:visited,.tab a:active {
 	font-size:12px;
@@ -202,14 +205,14 @@
 	text-decoration:none;
 }
 .tabOff,.tabOn {
-	float:left;
+	float:inline-start;
 	padding:8px 8px 6px 8px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 	height:15px;
 	font-size:12px;
 	border-radius: 2px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
+	border-end-start-radius: 0px;
+	border-end-end-radius: 0px;
 	color: #ffffff;
 	background: #417B9C; /* Old browsers */
 	background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
@@ -219,7 +222,7 @@
 	background: rgba( 0, 0, 0, 0.5 );
 }
 .tabOnL,.tabOnR,.tabOffL,.tabOffR {
-	float:left;
+	float:inline-start;
 	width:2px;
 	background-color:#4f4f4e;
 	height:29px;
@@ -228,7 +231,7 @@
 	background-color:#3a3a3a;
 }
 .tabOnR,.tabOffR {
-	margin-right:6px;
+	margin-inline-end:6px;
 }
 
 @media screen and (max-width: 600px)

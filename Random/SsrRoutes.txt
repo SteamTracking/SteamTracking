@@ -6,6 +6,7 @@ partner.steamgames.com ^/contentsurvey/edit(?:/([^/]+?))/?$
 partner.steamgames.com ^/contentsurvey/export(?:/([^/]+?))/?$
 partner.steamgames.com ^/contentsurvey/history(?:/([^/]+?))(?:/([^/]+?))?/?$
 partner.steamgames.com ^/optin/address(?:/([^/]+?))(?:/([^/]+?))/?$
+partner.steamgames.com ^/optin/sale(?:/([^/]+?))(?:/([^/]+?))/?$
 partner.steamgames.com ^/pricing/explorer/?$
 partner.steamgames.com ^/steamlearn/dashboard/?$
 partner.steamgames.com ^/steamlearn/project(?:/([^/]+?))(?:/([^/]+?))/datasources/?$
@@ -97,8 +98,12 @@ store.steampowered.com ^/charts/support/?$
 store.steampowered.com ^/charts/topnewreleases_v2(?:/([^/]+?))/?$
 store.steampowered.com ^/charts/topsellers(?:/([^/]+?))?(?:/([^/]+?))?/?$
 store.steampowered.com ^/charts/topselling(?:/([^/]+?))?/?$
+store.steampowered.com ^/crosspromo_preview(?:/(\d+))(?:/(\d+))/?$
 store.steampowered.com ^/hardware_v2(?:/([^/]+?))?/?$
+store.steampowered.com ^/login/?$
+store.steampowered.com ^/login/login/?$
 store.steampowered.com ^/meetsteam(?:/([^/]+?))(?:/([^/]+?))?/?$
+store.steampowered.com ^/oauth/loginform/?$
 store.steampowered.com ^/personalcalendar/?$
 store.steampowered.com ^/recommender/?$
 store.steampowered.com ^/sitemap/?$

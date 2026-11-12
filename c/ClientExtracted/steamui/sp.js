@@ -3502,6 +3502,7 @@
           MoreInfoContainer: "_2v696E3H0_C_Nwl2j63Ors",
           MoreInfoBody: "_12ygSYdEUuRnstjlBrbHzG",
           Title: "_3kfKfB-pGu8SzCuHslLD42",
+          MoreDetails: "_3MsaIEeUEGaLvKmY0aG7w5",
           CompatibilityDetailsScroll: "_1Lr7DXWKD_uN7PaE8U1qo1",
           CompatibilityDetailsScrollContent: "_26BT4COvbKsjGyni-i3veI",
           CompatReportDialogBody: "_3qLtGkch9FuPc9azIltBRt",
@@ -335495,6 +335496,7 @@ ${_}`;
               }
               this.m_mapPendingMethodRequests.set(_, {
                 m_iSeq: _,
+                m_sServiceName: _,
                 m_responseClass: _,
                 m_fnCallback: _,
                 m_fnError: _,
@@ -335616,7 +335618,16 @@ ${_}`;
             ),
               this.m_mapPendingMethodRequests.delete(_));
             const _ = _._.InitFromMsg(_.m_responseClass, _);
-            _.m_fnCallback(_);
+            (_.BIsValid() ||
+              (0, _._)()?.ReportError(
+                new Error(
+                  `WebUITransport: failed to parse response for ${_.m_sServiceName}`,
+                ),
+                {
+                  bIncludeMessageInIdentifier: !0,
+                },
+              ),
+              _.m_fnCallback(_));
           }
           DispatchNotification(_) {
             const _ = (_) => {
@@ -379398,6 +379409,9 @@ ${_}`;
                         }),
                         (0, _.jsx)(_._, {
                           fill: "#1a9fff",
+                          activeBar: {
+                            fill: "white",
+                          },
                           dataKey: "percentage",
                           name: "",
                         }),
@@ -380124,7 +380138,7 @@ ${_}`;
           }
         }
         function _(_) {
-          const { histogram: _, deviceName: _, appName: _ } = _;
+          const { histogram: _, deviceName: _, nFrameLimit: _, appName: _ } = _;
           let _ = _
             ? _._.Localize("#GamePerformanceStats_FrameRateDistribution", _, _)
             : _._.Localize(
@@ -380151,6 +380165,31 @@ ${_}`;
                 histogram: _,
                 minWidth: 200,
                 minHeight: 200,
+              }),
+              (0, _.jsx)("div", {
+                className: _().Title,
+                children: _._.Localize(
+                  "#GamePerformanceStats_MoreDetailsTitle",
+                ),
+              }),
+              (0, _.jsxs)("div", {
+                className: _().MoreDetails,
+                children: [
+                  (0, _.jsx)("div", {
+                    children: _._.Localize(
+                      "#GamePerformanceStats_MoreDetails_Filtering",
+                      _,
+                      _,
+                    ),
+                  }),
+                  (0, _.jsx)("div", {
+                    children: _._.Localize(
+                      "#GamePerformanceStats_MoreDetails_VSync",
+                      _ / 2,
+                      _,
+                    ),
+                  }),
+                ],
               }),
             ],
           });
@@ -380221,6 +380260,7 @@ ${_}`;
                 children: (0, _.jsx)(_, {
                   histogram: _.get(_)?.histogram,
                   deviceName: _.get(_) ?? "",
+                  nFrameLimit: _ == _ ? 60 : 90,
                   appName: _,
                 }),
               }),
@@ -453266,33 +453306,29 @@ Status Code:` +
           const _ = (0, _._)(),
             _ = (0, _._)().eBranch,
             _ = (0, _._)(_),
-            _ = (0, _._)()?.event_tag,
             _ = (0, _._)(!0).IS_STEAMOS && _ == _._;
           return _.useMemo(() => {
             if (_) return [];
-            if ((0, _._)(!0).ON_FRAME)
-              return _
-                ? [
-                    {
-                      appid: _._,
-                      additionalParams: _(_),
-                    },
-                  ]
-                : [];
             let _ = [],
               _;
             return (
-              (0, _._)(!0).IS_STEAMOS &&
-                _ &&
-                (_.push({
-                  appid: _._,
-                  additionalParams: _(_),
-                }),
-                (_ = 1793761207)),
+              (0, _._)(!0).ON_FRAME && _
+                ? (_.push({
+                    appid: _._,
+                    additionalParams: _(_),
+                  }),
+                  (_ = _ ? 1794052800 : 1794481007))
+                : (0, _._)(!0).IS_STEAMOS &&
+                  _ &&
+                  (_.push({
+                    appid: _._,
+                    additionalParams: _(_),
+                  }),
+                  (_ = _ ? 1793761207 : 1794481007)),
               _.push(_(_, _)),
               _
             );
-          }, [_, _, _, _]);
+          }, [_, _, _]);
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -704744,7 +704780,7 @@ Status Code:` +
               _.nSteamVersion > 0
                 ? _.nSteamVersion.toString()
                 : (0, _._)("#Settings_System_SteamLocalBuild"),
-            _ = parseInt(1794263641),
+            _ = parseInt(1794423662),
             _ = _ && (0, _._)(_, _, _),
             _ = _.sSteamBuildDate,
             _ = (0, _._)() ? " GMT+0000" : " GMT-0800",
@@ -745553,7 +745589,7 @@ Status Code:` +
             _ = (0, _._)(_),
             _ = !0,
             _ = _.nSteamVersion > 0 ? _.nSteamVersion.toString() : "local",
-            _ = parseInt(1794263641),
+            _ = parseInt(1794423662),
             _ = _ && (0, _._)(_, _, _),
             _ = ((_.nCPUHz || 0) / 1e3 / 1e3 / 1e3).toFixed(2) + " GHz",
             _ = (0, _._)(_.nSystemRAMSizeMB * 1024 * 1024, 0),

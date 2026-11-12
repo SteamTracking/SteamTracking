@@ -15,8 +15,8 @@
 	height:28px;
 	margin:0;
 	padding:0;
-	padding-left:4px;
-	padding-right:4px;
+	padding-inline-start:4px;
+	padding-inline-end:4px;
 	padding-top:8px;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .calendarBox .monthRow .monthNav {
-	float:right;
+	float:inline-end;
 	margin:0;
 	padding:0;
 }
@@ -43,7 +43,7 @@
 }
 
 .calendarBox .weekHead .day {
-	float:left;
+	float:inline-start;
 	width:20px;
 	height:19px;
 	border:none;
@@ -57,7 +57,7 @@
 }
 
 .calendarBox .days a {
-	float:left;
+	float:inline-start;
 	width:20px;
 	height:18px;
 	border:none;

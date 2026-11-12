@@ -3,10 +3,10 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./webgamepadnavigation.js",
-      "./clientpostmessage.js",
-      "../../css/legacy_web/webgamepadnavigation.css",
-      "./desktopbridge.js",
+      "./chunk~c9c5ab32ef.js",
+      "./chunk~b578cf0918.js",
+      "../../css/legacy_web/chunk~c9c5ab32ef.css",
+      "./chunk~ca4d832dec.js",
     ]),
 ) => _.map((_) => _[_]);
 (`VALVE_PUBLIC_PATH` in window
@@ -527,10 +527,17 @@ var _ = (function () {
               _)
             )
               return new Promise((_, _) => {
-                (_.addEventListener(`load`, _),
-                  _.addEventListener(`error`, () =>
-                    _(Error(`Unable to preload CSS for ${_}`)),
-                  ));
+                (function _(_, _) {
+                  (_.addEventListener(`load`, _),
+                    _.addEventListener(`error`, () => {
+                      _
+                        ? setTimeout(() => {
+                            let _ = _.cloneNode();
+                            (_.replaceWith(_), _(_, !1));
+                          }, 500)
+                        : _(Error(`Unable to preload CSS for ${_}`));
+                    }));
+                })(_, !0);
               });
           });
         }).filter((_) => _ !== void 0),
@@ -569,7 +576,7 @@ async function _(_) {
   let { InitializeGamepadNavigation: _ } = await _(
     async () => {
       let { InitializeGamepadNavigation: _ } = await import(
-        `./webgamepadnavigation.js`
+        `./chunk~c9c5ab32ef.js`
       );
       return {
         InitializeGamepadNavigation: _,
@@ -583,7 +590,7 @@ async function _(_) {
 async function _() {
   let { InitializeForDesktop: _ } = await _(
     async () => {
-      let { InitializeForDesktop: _ } = await import(`./desktopbridge.js`);
+      let { InitializeForDesktop: _ } = await import(`./chunk~ca4d832dec.js`);
       return {
         InitializeForDesktop: _,
       };

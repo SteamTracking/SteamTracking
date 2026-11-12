@@ -2,7 +2,8 @@
 
 
 .detailBox {
-	padding: 10px 0px 0 0;
+	padding-block: 10px 0;
+	padding-inline: 0 0px;
 
 	position: relative;
 	padding-bottom: 20px;
@@ -15,7 +16,7 @@
 /* left column */
 .leftcol
 {
-	float: left;
+	float: inline-start;
 	width: 640px;
 	padding-bottom: 50px;
 	padding-top: 20px;
@@ -29,11 +30,11 @@
 
 .rightcol {
 	position: relative;
-	float: right;
+	float: inline-end;
 	width: 295px;
 	margin: 0;
 	padding: 0;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	padding-top: 5px;
 	padding-top: 107px;
 	z-index: 90;
@@ -49,7 +50,8 @@
 	background: #1b1b1b;
 	background: rgba(27,27,27,.36);
 	border-radius: 4px;
-	padding: 10px 10px 10px 11px;
+	padding-block: 10px;
+	padding-inline: 11px 10px;
 	margin: 0 0 10px 0;
 	border: 1px solid #1f1f20;
 	box-shadow: 1px 1px 0 0 #39393a;
@@ -104,13 +106,14 @@ li {
 }
 
 #notice_box {
-	padding-left: 40px;
+	padding-inline-start: 40px;
 	position: relative;
 	font-size: 12px;
 }
 
 #rp_nomatch_error {
-	padding:  5px 25px 5px 65px;
+	padding-block: 5px;
+	padding-inline: 65px 25px;
 	margin-top: -15px;
 	margin-bottom: 15px;
 	position: relative;
@@ -120,9 +123,13 @@ li {
 	color: #FFFFFF;
 }
 
+#rp_nomatch_error:dir(rtl) {
+	background-position: right 30px center;
+}
+
 .rp_location_section {
-	margin-right: 85px;
-	float: left;
+	margin-inline-end: 85px;
+	float: inline-start;
 }
 
 .rp_location_section h1 {
@@ -171,14 +178,18 @@ li {
 .location_nomatch {
 	color: #d70e2f;
 	background: url("https://community.fastly.steamstatic.com/public/images/steamguard/red_caution.png") no-repeat right center;
-	padding-right: 20px;
+	padding-inline-end: 20px;
+}
+
+.location_nomatch:dir(rtl) {
+	background-position: left center;
 }
 
 #contact_support_button {
 	background: url("https://community.fastly.steamstatic.com/public/images/steamguard/contact_support_button_v2.png") no-repeat scroll 0 0 transparent;
     display: table;
     height: 49px;
-	right: 10px;
+	inset-inline-end: 10px;
     position: absolute;
     top: 12px;
     width: 232px;
@@ -210,7 +221,7 @@ li {
     width: 16px;
 	position: absolute;
 	top: 8px;
-	left: 5px;
+	inset-inline-start: 5px;
 }
 
 #ssl_img, #valve_cert_img {
@@ -228,7 +239,7 @@ li {
 .auth_icon {
 	position: absolute;
 	top: 4px;
-	left: -19px;
+	inset-inline-start: -19px;
 	width: 67px;
 	height: 23px;
 
@@ -242,8 +253,8 @@ li {
 }
 
 .center {
-	margin-left: auto;
-	margin-right: auto;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 }
 
 .text_center{

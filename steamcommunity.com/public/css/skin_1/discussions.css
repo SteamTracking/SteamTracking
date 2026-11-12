@@ -29,13 +29,13 @@
 }
 
 .discussions_forumlist_topiccount, .discussions_forumlist_lastpost {
-	float: right;
-	text-align: right;
+	float: inline-end;
+	text-align: end;
 }
 
 .discussions_forumlist_topiccount {
 	width: 140px;
-	padding-right: 16px;
+	padding-inline-end: 16px;
 	overflow: hidden;
 }
 
@@ -44,11 +44,11 @@
 
 .forum_list_ctn .forum_list_left {
 	width: 608px;
-	float: left;
+	float: inline-start;
 }
 
 .forum_list_ctn .forum_list_right {
-	float: right;
+	float: inline-end;
 	width: 289px;
 	background: rgba( 0, 0, 0, 0.2 );
 	padding: 16px;
@@ -75,7 +75,7 @@
 }
 
 .discussions_forumlist_icon {
-	float: left;
+	float: inline-start;
 	width: 44px;
 	line-height: 60px;
 	text-align: center;
@@ -100,9 +100,9 @@
 .discussions_forumlist_linkoverlay {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 }
 
 .discussions_forumlist_linkoverlay img {
@@ -129,9 +129,9 @@
 }
 
 .discussions_tab_message {
-	float: left;
+	float: inline-start;
 	margin-top: 9px;
-	padding-left: 14px;
+	padding-inline-start: 14px;
 	line-height: 26px;
 }
 
@@ -142,7 +142,7 @@
 .discussions_link_icon {
 	width: 16px;
 	height: 16px;
-	margin-right: 6px;
+	margin-inline-end: 6px;
 	display: inline-block;
 
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/skin_1/discussions_links_icons.png' );
@@ -176,8 +176,8 @@
 }
 
 .discussions_game_header .discussions_game_logo {
-	float: left;
-	margin-right: 13px;
+	float: inline-start;
+	margin-inline-end: 13px;
 }
 
 
@@ -187,13 +187,13 @@
 }
 
 .discussions_game_header .discussions_game_discussioncount {
-	float: right;
+	float: inline-end;
 	line-height: 16px;
 	font-size: 12px;
 	color: #8e8e8e;
 	padding-top: 6px;
 
-	text-align: right;
+	text-align: end;
 }
 .discussions_game_discussioncount .discussions_total_count {
 	color: #e1e1e1;
@@ -208,7 +208,7 @@
 	font-size: 11px;
 	color: #e1e1e1;
 
-	text-align: right;
+	text-align: end;
 }
 
 .discussiontab_loading {
@@ -246,7 +246,8 @@
 	background-color: rgba( 0, 0, 0, 0.2 );
 	height: 39px;
 	line-height: 32px;
-	padding: 7px 7px 0 12px;
+	padding-block: 7px 0;
+	padding-inline: 12px 7px;
 }
 
 .discussions_game_searchoption {
@@ -266,14 +267,14 @@ div.quicklistselect
 	border-radius: 3px;
 	background-color: #424242;
 	border: 1px solid #535455;
-	text-align: left;
+	text-align: start;
 	text-transform: uppercase;
 
-	margin-left: 12px;
+	margin-inline-start: 12px;
 }
 
 div.quicklistselect_options {
-	text-align: left;
+	text-align: start;
 	width: 269px;
 	line-height: 26px;
 	color: white;
@@ -287,7 +288,7 @@ div.quicklistselect_options {
 
 div.quicklistselect #quicklistselect_arrow {
 	position: absolute;
-	right: 4px;
+	inset-inline-end: 4px;
 	top: 5px;
 	width: 17px;
 	height: 20px;
@@ -306,7 +307,7 @@ div.quicklistselect #quicklistselect_active
 }
 
 div.quicklistselect div.option, div.quicklistselect_options div.option {
-	padding-left: 7px;
+	padding-inline-start: 7px;
 	height: 30px;
 	line-height: 30px;
 	cursor: default;
@@ -357,7 +358,7 @@ div.quicklistselect div.option img, div.quicklistselect_options div.option img {
 }
 
 .report_row .report_icons {
-	float: left;
+	float: inline-start;
 	padding: 8px 8px;
 	font-size: 16px;
 	line-height: 20px;
@@ -368,15 +369,15 @@ div.quicklistselect div.option img, div.quicklistselect_options div.option img {
 }
 
 .report_row .report_author {
-	float: left;
+	float: inline-start;
 	width: 160px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 .report_row .report_content {
 }
 
 .report_row .report_reporter {
-	float: right;
+	float: inline-end;
 	width: 160px;
 }
 
@@ -435,12 +436,12 @@ table.wordfilter_table {
 }
 
 .wordfilter_table th {
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 .wordfilter_table td {
-	padding-left: 2px;
-	padding-right: 2px;
+	padding-inline-start: 2px;
+	padding-inline-end: 2px;
 }
 
 
@@ -498,7 +499,7 @@ td.wordfilter_action a:hover {
 }
 
 .wordfilter_addword_options {
-	float: right;
+	float: inline-end;
 }
 
 .wordfilter_testword_container {
@@ -506,8 +507,8 @@ td.wordfilter_action a:hover {
 }
 
 #testfilter_results {
-	float:right;
-	margin-right: 15px;
+	float:inline-end;
+	margin-inline-end: 15px;
 }
 
 .wordfilter_import_succeeded {
@@ -522,10 +523,11 @@ td.wordfilter_action a:hover {
 	cursor: pointer;
 	width: 12px;
 	height: 12px;
-	margin: 3px 0 4px 5px;
+	margin-block: 3px 4px;
+	margin-inline: 5px 0;
 	vertical-align: top;
 	background-image: url( '/store/public/images/v6/delete_search_term.png' );
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 
 .discussion_tab_content_area h2 {
@@ -546,7 +548,7 @@ td.wordfilter_action a:hover {
 }
 
 .discussions_view_more_link {
-	float: right;
+	float: inline-end;
 	line-height: 22px;
 }
 
@@ -568,7 +570,7 @@ a.recent_game_discussion {
 
 	padding: 3px;
 
-	margin-right: 16px;
+	margin-inline-end: 16px;
 	margin-bottom: 16px;
 
 	background-color: rgba( 84, 133, 183, 0.2);
@@ -580,25 +582,25 @@ a.recent_game_discussion:hover {
 
 a.recent_game_discussion.last
 {
-	margin-right: 0;
+	margin-inline-end: 0;
 }
 
 a.recent_game_discussion.quasi_official_group
 {
 	display: block;
-	margin-right: 0;
+	margin-inline-end: 0;
 	margin-bottom: 10px;
 	width: 280px;
 }
 
 .recent_game_discussion .playerAvatar {
-	float: left;
-	margin-right: 8px;
+	float: inline-start;
+	margin-inline-end: 8px;
 }
 
 .recent_game_discussion .recent_game_discussions_unread_indicator {
-	float: right;
-	margin-left: 8px;
+	float: inline-end;
+	margin-inline-start: 8px;
 
 	height: 40px;
 	line-height: 40px;
@@ -633,13 +635,13 @@ a.recent_game_discussion.quasi_official_group
 
 .moderator_list .friendBlock {
 	position: relative;
-	float: left;
+	float: inline-start;
 	width: 290px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 
 .moderator_list .friendBlock:nth-child(3n) {
-	margin-right: 0;
+	margin-inline-end: 0;
 }
 
 @media screen and (max-width: 910px)
@@ -670,7 +672,7 @@ a.recent_game_discussion.quasi_official_group
 	}
 
 	html.responsive .recent_game_discussion {
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 }
 
@@ -727,6 +729,6 @@ a.recent_game_discussion.quasi_official_group
 }
 
 .report_search_form_input {
-	float:left;
-	margin-right: 10px;
+	float:inline-start;
+	margin-inline-end: 10px;
 }

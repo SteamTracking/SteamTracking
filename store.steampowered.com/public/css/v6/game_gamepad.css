@@ -1246,11 +1246,6 @@ html.GamepadMode body.v6 .page_title_area.game_title_area.page_content {
 	background-color: unset;
 }
 
-html.GamepadMode .saleEventBannerStyle:hover {
-	filter: saturate(1.0);
-	transform: unset;
-}
-
 html.GamepadMode .free_weekend p {
 	margin-bottom: 8px;
 }
@@ -1803,25 +1798,6 @@ html.GamepadMode #aboutThisGame h2:not(h2.bb_tag) {
 html.GamepadMode #app_reviews_hash h2 {
 	margin-top: 0;
 }
-
-
-
-
-/* Game advertisement */
-html.GamepadMode .saleEventBannerLink {
-	display: flex !important;
-	margin-bottom: unset;
-	box-shadow: var(--gpShadow-Medium);
-	margin-bottom: 12px;
-	margin-top: 10px;
-	padding: 0;
-	background: unset;
-}
-
-html.GamepadMode .saleEventBannerLink .event_context {
-	display: none;
-}
-
 
 
 /* Review summary */

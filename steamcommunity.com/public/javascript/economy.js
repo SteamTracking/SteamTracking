@@ -614,7 +614,7 @@ var CInventory = Class.create( {
 		}
 
 		// add a div to clear the floating
-		this.elTagContainer.appendChild( new Element( 'div', { "style" : "clear: left;" } ) );
+		this.elTagContainer.appendChild( new Element( 'div', { "style" : "clear: inline-start;" } ) );
 	},
 
 	BuildInventoryDisplayElements: function()
@@ -748,7 +748,7 @@ var CInventory = Class.create( {
 		for ( var i = 0; i < rgPages.length; i++ )
 			rgPages[i].iPage = i;
 
-		this.elInventory.appendChild( new Element ('div', {'style': 'clear: left;' } ) );
+		this.elInventory.appendChild( new Element ('div', {'style': 'clear: inline-start;' } ) );
 
 		this.bNeedsRepagination = false;
 	},
@@ -1417,7 +1417,7 @@ var CAppwideInventory = Class.create( CInventory, {
 		for ( var i = 0; i < rgPages.length; i++ )
 			rgPages[i].iPage = i;
 
-		this.elInventory.appendChild( new Element ('div', {'style': 'clear: left;' } ) );
+		this.elInventory.appendChild( new Element ('div', {'style': 'clear: inline-start;' } ) );
 
 		this.bNeedsRepagination = false;
 	},

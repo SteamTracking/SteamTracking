@@ -1,7 +1,7 @@
 
 .trade_offers_escrow_explanation
 {
-	margin-left: 48px;
+	margin-inline-start: 48px;
 	margin-bottom: 20px;
 	background-color: #1e1e1e;
 }
@@ -25,7 +25,7 @@
 
 .tradeoffer {
 	padding-top: 24px;
-	padding-left: 48px;
+	padding-inline-start: 48px;
 
 	margin-bottom: 24px;
 
@@ -34,7 +34,7 @@
 
 .tradeoffer_partner {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	top: 16px;
 }
 
@@ -57,17 +57,17 @@
 	display:  block;
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 	z-index: 1;
 	cursor: pointer;
 }
 
 .tradeoffer_items_ctn.active {
 	border-top-color: #818181;
-	border-left-color: #5e5e61;
-	border-right-color: #5e5e61;
+	border-inline-start-color: #5e5e61;
+	border-inline-end-color: #5e5e61;
 	background: -webkit-linear-gradient( top, #636366 5%, #4a4a4c 95%);
 	background: linear-gradient( to bottom, #636366 5%, #4a4a4c 95%);
 }
@@ -78,7 +78,7 @@
 
 .tradeoffer_items {
 	position: relative;
-	padding-left: 36px;
+	padding-inline-start: 36px;
 	min-height: 106px;
 }
 
@@ -87,7 +87,7 @@
 	display: block;
 	position: absolute;
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 }
 
 .tradeoffer_items_header {
@@ -103,7 +103,7 @@
 }
 
 .tradeoffer_item_list .trade_item {
-	float: left;
+	float: inline-start;
 	background-color: #292929;
 	border: 1px solid #3a3a3a;
 	z-index: 2;
@@ -117,14 +117,14 @@
 .tradeoffer_items.primary .trade_item {
 	width: 96px;
 	height: 96px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 	margin-bottom: 8px;
 }
 
 .tradeoffer_items.secondary .trade_item {
 	width: 73px;
 	height: 73px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	margin-bottom: 5px;
 }
 
@@ -137,10 +137,10 @@
 
 	html.responsive .tradeoffer_partner {
 		position: static;
-		float: left;
+		float: inline-start;
 		margin-top: -8px;
 		margin-bottom: 16px;
-		margin-right: 8px;
+		margin-inline-end: 8px;
 	}
 
 	html.responsive .tradeoffer_items {
@@ -149,7 +149,7 @@
 
 	html.responsive .tradeoffer_items .trade_item {
 		height: auto;
-		margin-right: 1%;
+		margin-inline-end: 1%;
 		max-width: 18%;
 	}
 
@@ -193,9 +193,10 @@
 
 .tradeoffer_items_banner {
 	position: relative;
-	clear: left;
+	clear: inline-start;
 	margin: -12px -12px 12px -12px;
-	padding: 8px 8px 8px 0;
+	padding-block: 8px;
+	padding-inline: 0 8px;
 
 	box-shadow: 1px 1px 1px #000000;
 
@@ -231,7 +232,7 @@
 }
 
 .tradeoffer_footer_actions {
-	float: right;
+	float: inline-end;
 }
 
 .new_trade_offer_btn {
@@ -273,7 +274,7 @@ a.right_controls_large_block {
 	width: 265px;
 	height: 50px;
 
-	right: 0;
+	inset-inline-end: 0;
 	top: -5px;
 }
 
@@ -291,7 +292,7 @@ a.right_controls_large_block {
 	width: 265px;
 	height: 31px;
 
-	right: 0;
+	inset-inline-end: 0;
 	top: -5px;
 }
 
@@ -362,7 +363,7 @@ a.right_controls_large_block {
 	vertical-align: top;
 	width: 20px;
 	height: 20px;
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 
 .tradeoffer_privacy_secondary {
@@ -372,7 +373,7 @@ a.right_controls_large_block {
 }
 
 .tradeoffer_privacy_tradetopiclink {
-	padding-left: 10px;
+	padding-inline-start: 10px;
 }
 
 .tradeoffer_privacy_newurl {
@@ -380,8 +381,8 @@ a.right_controls_large_block {
 }
 
 .tradeoffer_privacy_newurl .newurl_button_ctn {
-	float: left;
-	margin-right: 14px;
+	float: inline-start;
+	margin-inline-end: 14px;
 	margin-bottom: 14px;	/* to prevent the text from wrapping below */
 }
 
@@ -393,7 +394,7 @@ div.gray_bevel.newurl_updated {
 .tradeoffer_message {
 	position: relative;
 	margin-bottom: 12px;
-	padding-left: 16px;
+	padding-inline-start: 16px;
 }
 
 .quote
@@ -421,7 +422,7 @@ div.gray_bevel.newurl_updated {
 
 .tradeoffer_message .quote_arrow
 {
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
 }
 
@@ -465,7 +466,7 @@ div.gray_bevel.newurl_updated {
 
 .trade_protection_explainer {
 	color: white;
-	padding-left: 8px;
+	padding-inline-start: 8px;
 
 	display: flex;
 	align-items: center;

@@ -19,16 +19,16 @@
 }
 .imageWall4Floaters .floatHelp {
 	width: 25%;
-	float: left;
+	float: inline-start;
 }
 .imageWall4Floaters .imgWallItem {
-	float: right;
+	float: inline-end;
 	margin-top: -2px;
 }
 
 .imageWall5Floaters .floatHelp {
 	width: 20%;
-	float: left;
+	float: inline-start;
 }
 
 .imageWall2Floaters {
@@ -43,8 +43,8 @@
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	left: 50%;
-	right: 0;
+	inset-inline-start: 50%;
+	inset-inline-end: 0;
 }
 
 .imageWall4Split {
@@ -56,10 +56,10 @@
 }
 
 .imageWall4Split.left .splitMain {
-	float: left;
+	float: inline-start;
 }
 .imageWall4Split.right .splitMain {
-	float: right;
+	float: inline-end;
 }
 
 .imageWall4Split .splitSubs {
@@ -69,24 +69,24 @@
 	bottom: 0;
 }
 .imageWall4Split.left .splitSubs {
-	right: 0;
+	inset-inline-end: 0;
 }
 .imageWall4Split.right .splitSubs {
-	left: 0;
+	inset-inline-start: 0;
 }
 
 .imageWall4Split .splitSubs .splitSubMain {
 	position: absolute;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	top: 0;
 	bottom: 40%;
 }
 
 .imageWall4Split .splitSubs .splitSubSubs {
 	position: absolute;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	top: 60%;
 	bottom: 0;
 }
@@ -94,14 +94,14 @@
 .imageWall4Split .splitSubs .splitSubSubs .splitSubSub {
 	width: 50%;
 	height: 100%;
-	float: left;
+	float: inline-start;
 }
 
 .imgWallHover {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 	margin: 0;
 	padding: 0;
@@ -117,9 +117,9 @@
 
 	position: absolute;
 	top: 3px;
-	right: 3px;
+	inset-inline-end: 3px;
 	bottom: 3px;
-	left: 3px;
+	inset-inline-start: 3px;
 	overflow: hidden;
 }
 
@@ -129,7 +129,7 @@ a.profile_media_item.auto_height .imgWallItem {
 }
 
 .imgWall5050 {
-	float: left;
+	float: inline-start;
 	width: 50%;
 }
 
@@ -158,22 +158,22 @@ a.profile_media_item.auto_height .imgWallItem {
 	position: absolute;
 	opacity: 0.75;
 	filter:alpha(opacity=75);
-	left: 0;
+	inset-inline-start: 0;
 	bottom: 0;
-	right: 0;
+	inset-inline-end: 0;
 }
 
 a.profile_media_item.auto_height .imgWallHoverBottom {
-	left: 4px;
+	inset-inline-start: 4px;
 	bottom: 1px;
-	right: 4px;
+	inset-inline-end: 4px;
 }
 
 .imgWallHoverDescription {
 	font-size: 13px;
 	font-style: italic;
 	height: 30px;
-	padding-left: 2px;
+	padding-inline-start: 2px;
 	background-color: black;
 	color: #7cc5fb;
 }
@@ -194,9 +194,14 @@ a.profile_media_item.auto_height .imgWallHoverBottom {
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/skin_1/comment_quoteicon.png' );
 	background-repeat: no-repeat;
 	background-position: 5px 7px;
-	padding-left: 24px;
-	padding-right: 4px;
-	float: right;
+	padding-inline-start: 24px;
+	padding-inline-end: 4px;
+	float: inline-end;
+}
+
+.imgWallHoverCommentCount:dir(rtl)
+{
+	background-position: right 5px top 7px;
 }
 
 	/* infinite scrolling controls */
@@ -235,14 +240,14 @@ a.profile_media_item.auto_height .imgWallHoverBottom {
 .imgWall_GetMoreContentWait img
 {
 	vertical-align: middle;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 .imgWall_ProgressBarBG
 {
 	position: absolute;
 	top: 200px;
-	left: 179px;
+	inset-inline-start: 179px;
 	width: 600px;
 	height: 25px;
 	background-color: #000000;
@@ -255,7 +260,7 @@ a.profile_media_item.auto_height .imgWallHoverBottom {
 {
 	position: absolute;
 	top: 0px;
-	left: 0px;
+	inset-inline-start: 0px;
 	width: 0px;
 	height: 25px;
 	background-color: #cccccc;
@@ -284,15 +289,15 @@ a.profile_media_item.auto_height .imgWallHoverBottom {
 .imgWallLoadingPageModal img
 {
 	vertical-align: middle;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 .imgWall_BackToTop
 {
 	position: fixed;
-	left: 50%;
+	inset-inline-start: 50%;
 	bottom: 0;
-	right: 10%;
+	inset-inline-end: 10%;
 	z-index: 800;
 
 	box-shadow: 0 0 10px 2px #000000;
@@ -327,7 +332,7 @@ a.profile_media_item.auto_height .imgWallHoverBottom {
 .imgWall_BackToTopButton.leftcap
 {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
 	bottom: 0;
 	width: 3px;
@@ -337,7 +342,7 @@ a.profile_media_item.auto_height .imgWallHoverBottom {
 .imgWall_BackToTopButton.rightcap
 {
 	position: absolute;
-	right: 0;
+	inset-inline-end: 0;
 	top: 0;
 	bottom: 0;
 	width: 3px;
@@ -359,8 +364,8 @@ a.profile_media_item.auto_height .imgWallHoverBottom {
 
 .image_grid_title
 {
-	float: left;
-	padding-right:6px;
+	float: inline-start;
+	padding-inline-end:6px;
 }
 
 .image_grid_rule
@@ -373,8 +378,8 @@ a.profile_media_item.auto_height .imgWallHoverBottom {
 .image_wall_spoiler_cover
 {
 	position: absolute;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	top: 10%;
 	bottom: 10%;
 	cursor: pointer;

@@ -197,7 +197,7 @@ CChatFriend.prototype.RenderChatDialog = function( WebChat )
 	this.RegisterPersonaElement( elHeader, 'PersonaStatusElements', { 'class': 'persona', element: elChatDialogName } );
 	this.RegisterPersonaElement( elHeader, 'PersonaNameElements', elChatDialogName );
 
-	elHeader.append( elChatDialogAvatar, $J('<h2/>', {'class': 'ellipsis'}).append( elChatDialogName ), '<div style="clear: left;"></div>' );
+	elHeader.append( elChatDialogAvatar, $J('<h2/>', {'class': 'ellipsis'}).append( elChatDialogName ), '<div style="clear: inline-start;"></div>' );
 
 	this.UpdateDisplayForPersonaState();	//set the right styles on avatar and name
 

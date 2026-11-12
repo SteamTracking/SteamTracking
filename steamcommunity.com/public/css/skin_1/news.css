@@ -14,7 +14,7 @@
 #BG_bottom {
 	background-color: #1b2838;
 	width:958px;
-	text-align:left;
+	text-align:start;
 	margin: 0px auto;
 }
 
@@ -35,9 +35,9 @@ h2
 
 #main {
 	min-height: 300px;
-	text-align: left;
-	padding-left: 17px;
-	padding-right: 17px;
+	text-align: start;
+	padding-inline-start: 17px;
+	padding-inline-end: 17px;
 	width: 648px;
 }
 
@@ -45,7 +45,7 @@ a.linkbar_active, a.linkbar_active:hover, a.linkbar_active:active, a.linkbar_act
 	color: #000000;
 	background-color: #aeadab;
 	background-image: none;
-	margin-left: 0px;
+	margin-inline-start: 0px;
 	width: 204px;
 }
 
@@ -55,13 +55,13 @@ div#main_content {
 }
 
 #main_header {
-	float: left;
+	float: inline-start;
 	margin-bottom: 12px;
 	margin-top: 6px;
 }
 
 #main_header_expanded {
-	float: left;
+	float: inline-start;
 	margin-bottom: 12px;
 }
 
@@ -82,17 +82,17 @@ div#main_content {
 }
 
 #viewmodelinks {
-	float: right;
+	float: inline-end;
 	margin-top: 8px;
-	margin-left: 50px;
+	margin-inline-start: 50px;
 	font-size: 10px;
 	text-transform: uppercase; 
 }
 
 
 .view_inactive {
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-inline-start: 5px;
+	padding-inline-end: 5px;
 	padding-top: 2px;
 	padding-bottom: 2px;
 }
@@ -103,8 +103,8 @@ a.view_inactive, a.view_inactive:hover, a.view_inactive:active, a.view_inactive:
 
 .view_active {
 	background-color: #5178a4;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-inline-start: 5px;
+	padding-inline-end: 5px;
 	padding-top: 2px;
 	padding-bottom: 2px;
 }
@@ -113,7 +113,7 @@ a.view_inactive, a.view_inactive:hover, a.view_inactive:active, a.view_inactive:
 	height: 1px;
 	width: 100%;
 	background-color: #363f4c;
-	clear: left;
+	clear: inline-start;
 }
 
 .newsHeadlineBlock {
@@ -121,8 +121,8 @@ a.view_inactive, a.view_inactive:hover, a.view_inactive:active, a.view_inactive:
 }
 
 .newsHeadlineBlock .feed { 
-	text-align: right;
-	float: right;
+	text-align: end;
+	float: inline-end;
 	color: #666465;
 	width: 140px;
 	overflow: hidden;
@@ -135,9 +135,9 @@ a.view_inactive, a.view_inactive:hover, a.view_inactive:active, a.view_inactive:
 }
 
 .newsHeadlineBlock .title {
-	float: left;
-	clear: left;
-	margin-left: 0px;
+	float: inline-start;
+	clear: inline-start;
+	margin-inline-start: 0px;
 	width: 440px;
 	overflow: hidden;
 	margin-bottom: 6px;
@@ -151,15 +151,15 @@ a.view_inactive, a.view_inactive:hover, a.view_inactive:active, a.view_inactive:
 }
 
 .newsHeadlineBlock .date {
-	float: left;
-	margin-left: 15px;
+	float: inline-start;
+	margin-inline-start: 15px;
 	color: #666465;
 }
 
 .newsPostBlock {
 	margin-top: 12px;
 	margin-bottom: 12px;
-	clear: left;
+	clear: inline-start;
 	vertical-align: top;
 	font-size: 14px;
 	color: #8c8b8a;
@@ -181,7 +181,7 @@ a.view_inactive, a.view_inactive:hover, a.view_inactive:active, a.view_inactive:
 }
 
 .newsPostBlock .headline .posttitle {
-	float: left;
+	float: inline-start;
 	font-weight: normal;
 	font-size: 24px;
 	width: 562px;
@@ -201,14 +201,14 @@ a.view_inactive, a.view_inactive:hover, a.view_inactive:active, a.view_inactive:
 	color: #acb2b8;
 	margin-top: 10px;
 	line-height: 20px;
-	clear: left;
+	clear: inline-start;
 	margin-bottom: 10px;
 }
 
 .body img {
-	float: left;
-	clear: left;
-	margin-right: 12px;
+	float: inline-start;
+	clear: inline-start;
+	margin-inline-end: 12px;
 	margin-bottom: 12px;
 	border-style: none;
 }
@@ -216,10 +216,10 @@ a.view_inactive, a.view_inactive:hover, a.view_inactive:active, a.view_inactive:
 .newsControlContainer
 {
 	position: relative;
-	float: left;
+	float: inline-start;
 	padding: 6px;
 	padding-top: 0px;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 	height: 30px;
 	line-height: 30px;
 	top: -2px;
@@ -228,35 +228,35 @@ a.view_inactive, a.view_inactive:hover, a.view_inactive:active, a.view_inactive:
 .rateUpCount
 {
 	color: #7CC5FB;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 	line-height: 30px;
 }
 
 .rateUpCount img
 {
 	vertical-align: middle;
-	padding-right: 5px;
+	padding-inline-end: 5px;
 }
 
 .newsShare
 {
-	float: right;
+	float: inline-end;
 }
 
 
 .shareItemTitle
 {
-	float: left;
+	float: inline-start;
 }
 
 .shareItemLink
 {
-	float: left;
-	padding-left: 10px;
+	float: inline-start;
+	padding-inline-start: 10px;
 }
 
 .newsPostBlock .body li {
-	margin-left: 32px;
+	margin-inline-start: 32px;
 	margin-top:8px;
 	color: #999999;
 }
@@ -264,7 +264,7 @@ a.view_inactive, a.view_inactive:hover, a.view_inactive:active, a.view_inactive:
 
 div.autocomplete {
 	margin-top: 6px; 
-	margin-left: -5px; 
+	margin-inline-start: -5px; 
 	width: 202px;
 }
 
@@ -273,8 +273,8 @@ div.autocomplete {
 	background-color:none;
 	border:1px solid #BBBBBB;
 	margin:12px;
-	margin-left:64px;
-	margin-right:64px;
+	margin-inline-start:64px;
+	margin-inline-end:64px;
 	padding:8px;
 	text-align:center;
 }
@@ -332,13 +332,15 @@ body.clientNews h1 {
     letter-spacing: 1px;
 	color: #FFFFFF;
 	margin: 0px;
-	padding: 6px 0px 0px 8px;
+	padding-block: 6px 0px;
+	padding-inline: 8px 0px;
 }
 body.clientNews h2 {
 	font-size: 10px;
 	color: #aab1b6;
 	font-weight: normal;
-	margin: 0px 0px 0px 8px;
+	margin-block: 0px;
+	margin-inline: 8px 0px;
 	padding: 0px;
 }
 body.clientNews .header {
@@ -357,10 +359,10 @@ body.clientNews .post_header {
 body.clientNews .content {
 	margin: 0px;
 	padding: 8px;
-	padding-right: 20px;
+	padding-inline-end: 20px;
 }
 body.clientNews .extImg {
-	float: right;
+	float: inline-end;
 	margin:10px;
 	background-image: url('https://community.fastly.steamstatic.com/public/images/skin_1/extImg_1.png');
     background-repeat: no-repeat;
@@ -371,7 +373,8 @@ body.clientNews .linky {
 	cursor: hand;
 }
 body.clientNews ul {
-	margin: 0px 0px 10px 16px;
+	margin-block: 0px 10px;
+	margin-inline: 16px 0px;
 	padding: 0px;
 	list-style-type: square;
 	color: #c5cace;
@@ -379,9 +382,9 @@ body.clientNews ul {
 body.clientNews .details {
 	padding: 0px;
 	margin-top: 5px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 	margin-bottom: 10px;
-	margin-left: 20px;
+	margin-inline-start: 20px;
 }
 
 body.clientNews .post_title {
@@ -396,7 +399,7 @@ body.clientNews .post_header {
 body.clientNews .post_pmbutton {
 	color:#81B3DA;
 	font-size: 12px;
-	margin-right:4px;
+	margin-inline-end:4px;
 }
 
 body.clientNews .post_date {
@@ -404,7 +407,8 @@ body.clientNews .post_date {
 }
 body.clientNews .post_content {
 	font-size: 12px;
-	padding: 12px 0px 12px 21px;
+	padding-block: 12px;
+	padding-inline: 21px 0px;
 }
 
 body.clientNews a {

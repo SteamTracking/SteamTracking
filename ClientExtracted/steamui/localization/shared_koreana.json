@@ -4186,7 +4186,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "히스토그램 데이터는 프레임 속도 데이터를 제공하는 데 동의한 사용자가 %1$s에서 제출한 해당 게임의 프레임 속도 보고서를 기반으로 합니다.",
     "GamePerformanceStats_FrameRateHistogram_Title": "프레임 속도 분포",
     "GamePerformanceStats_Framerate": "프레임 속도",
-    "GamePerformanceStats_SessionLabel": "% 세션",
+    "GamePerformanceStats_SessionLabel": "샘플 비율(%)",
     "GamePerformanceStats_Chart_NoData": "충분한 데이터가 수집되면 차트가 표시됩니다.",
     "NewToolTitleSuffix_Beta": "베타",
     "DynamicLinkType_WorkshopItem": "%1$s 창작마당 콘텐츠",
@@ -4214,6 +4214,11 @@
     "GamePerformanceStats_StillGatheringData": "Steam은 %2$s에서 %1$s에 대한 프레임 속도 데이터를 계속 수집하고 있습니다.",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam은 %1$s에서 해당 게임에 대한 프레임 속도 데이터를 계속 수집하고 있습니다.",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam은 해당 게임에 대한 프레임 속도 데이터를 계속 수집하고 있습니다.",
-    "GamePerformanceStats_FrameRateDistribution": "이 프레임 속도 차트는 데이터 수집에 동의한 사용자가 %2$s에서 %1$s 플레이 시 제공한 익명화된 게임플레이 데이터를 기반으로 합니다.",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "이 프레임 속도 차트는 데이터 수집에 동의한 사용자가 %1$s에서 이 게임을 플레이 시 제공한 익명화된 게임플레이 데이터를 기반으로 합니다."
+    "GamePerformanceStats_FrameRateDistribution": "이 차트는 %2$s에서 %1$s 플레이 시 익명화된 데이터 수집에 동의한 플레이어의 프레임 속도 샘플을 보여줍니다. 각 막대는 해당 프레임 속도에서 수집된 샘플의 비율을 나타냅니다.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "이 차트는 %1$s 플레이 시 익명화된 데이터 수집에 동의한 플레이어의 프레임 속도 샘플을 보여줍니다. 각 막대는 해당 프레임 속도에서 수집된 샘플의 비율을 나타냅니다.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "해당 게임은 게임 내 설정에서 직접 컨트롤러 지원을 활성화해야 합니다.",
+    "GameFrameRateReporting_Details_HowToChange": "이 설정은 <1>Steam '계정 정보' > '데이터 및 검색'</1>에서 확인하고 변경할 수 있습니다.",
+    "GamePerformanceStats_MoreDetailsTitle": "세부 정보",
+    "GamePerformanceStats_MoreDetails_Filtering": "%1$s의 기본 프레임 속도 제한인 %2$sFPS에서 수집된 데이터만 포함됩니다. 대기 시간이나 유효하지 않은 샘플은 필터링되어 제외되며, 각 게임플레이 세션에서 여러 개의 샘플을 수집합니다.",
+    "GamePerformanceStats_MoreDetails_VSync": "차트에 표시되는 간격(예: %1$sFPS와 %2$sFPS 사이)은 VSync로 인해 발생할 수 있습니다. VSync는 화면 찢김 현상을 방지하기 위해 게임의 프레임 속도를 디스플레이의 새로 고침 빈도에 맞춰 동기화합니다. 이에 따라 게임의 평균 프레임 속도가 %1$sFPS와 %2$sFPS 사이인 경우에도 샘플이 해당 구간에 집중될 수 있습니다. 이는 VSync의 정상적인 동작이며, 프레임 페이싱에 영향을 미칠 수는 있지만 눈에 띄게 끊김 현상을 유발하지는 않습니다."
 }

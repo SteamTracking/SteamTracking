@@ -1,0 +1,8 @@
+import { _, _ } from "./chunk~de7f2df91c.js";
+var _ = _((_) => {
+    var _ = _();
+    (_.useSyncExternalStore, _.useRef, _.useEffect, _.useMemo, _.useDebugValue);
+  }),
+  _ = _((_, _) => {
+    _.exports = _();
+  });

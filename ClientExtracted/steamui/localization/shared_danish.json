@@ -4186,7 +4186,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Histogramdata er baseret på rapporteringer om billedhastighed for dette spil af kunder på %1$s, som har valgt at give feedback om billedhastighed.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Billedhastighedsfordeling",
     "GamePerformanceStats_Framerate": "Billedhastighed",
-    "GamePerformanceStats_SessionLabel": "% session",
+    "GamePerformanceStats_SessionLabel": "% af målinger",
     "GamePerformanceStats_Chart_NoData": "Et diagram bliver tilgængeligt, når der er indsamlet tilstrækkelige data",
     "NewToolTitleSuffix_Beta": "BETA",
     "DynamicLinkType_WorkshopItem": "En værkstedsgenstand til %1$s",
@@ -4213,6 +4213,11 @@
     "GamePerformanceStats_StillGatheringData": "Steam indsamler stadig data om billedhastighed for %1$s på %2$s",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam indsamler stadig data om billedhastighed for dette spil på %1$s",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam indsamler stadig data om billedhastighed for dette spil",
-    "GamePerformanceStats_FrameRateDistribution": "Dette billedhastighedsdiagram er baseret på anonymiserede spildata fra kunder, som spiller %1$s på %2$s, og som har valgt at dele data",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Dette billedhastighedsdiagram er baseret på anonymiserede spildata fra kunder, som spiller dette spil på %1$s, og som har valgt at dele data"
+    "GamePerformanceStats_FrameRateDistribution": "Denne graf viser billedhastighedsmålinger fra kunder, som spiller %1$s på %2$s, og som har valgt at dele anonymiserede data. Hver søjle viser procentdelen af målinger ved den pågældende billedhastighed.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Denne graf viser billedhastighedsmålinger fra kunder, som spiller dette spil på %1$s, og som har valgt at dele anonymiserede data. Hver søjle viser procentdelen af målinger ved den pågældende billedhastighed.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "Dette spil kræver manuel aktivering af controllerunderstøttelse ved hjælp af indstillingerne i spillet",
+    "GameFrameRateReporting_Details_HowToChange": "Hvis du vil ændre indstillingen senere, kan du finde den under <1>kontoindstillingerne på Steam > Data og browsing</1>",
+    "GamePerformanceStats_MoreDetailsTitle": "Flere detaljer",
+    "GamePerformanceStats_MoreDetails_Filtering": "Kun data, som er indsamlet ved standardgrænsen på %2$s FPS for %1$s, er inkluderet. Inaktiv tid og ugyldige målinger er filtreret fra. Der indsamles flere målinger fra hver spilsession.",
+    "GamePerformanceStats_MoreDetails_VSync": "Spring i grafen (f.eks. mellem %1$s og %2$s FPS) kan skyldes VSync, som synkroniserer billedleveringen med skærmens opdateringshastighed for at undgå screen tearing. Dette kan gøre, at målinger samler sig ved %1$s og %2$s FPS, selvom spillets gennemsnitlige billedhastighed ligger imellem dem. Dette er forventet VSync-adfærd, og selvom det kan påvirke billedstyringen, skaber det ikke nødvendigvis påfaldende hakken."
 }

@@ -8,7 +8,7 @@ a:hover {
 	background-repeat:no-repeat;
 	width:958px;
 	height:70px;
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 }
 #BG_top_workshop {
@@ -17,7 +17,7 @@ a:hover {
 	background-repeat:no-repeat;
 	width:1023px;
 	height:102px;
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	cursor: pointer;
 	font-size: 14px;
@@ -26,7 +26,7 @@ a:hover {
 
 #BG_top_workshop #CommunityNavigation
 {
-	padding-left: 47px;
+	padding-inline-start: 47px;
 }
 
 #BG_top_workshop_small {
@@ -35,7 +35,7 @@ a:hover {
 	background-repeat:no-repeat;
 	width:958px;
 	height:56px;
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	cursor: pointer;
 	font-size: 14px;
@@ -48,7 +48,7 @@ a:hover {
 	background-repeat:no-repeat;
 	width:958px;
 	height:90px;
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	cursor: pointer;
 	font-size: 14px;
@@ -68,7 +68,7 @@ a:hover {
 	background: rgba( 0, 0, 0, 0.2 );
 	width: 950px;
 	margin: 0 auto 0 auto;
-	text-align:left;
+	text-align:start;
 }
 
 #BG_bottom.smallheader {
@@ -79,7 +79,7 @@ a:hover {
 	background: none;
 	width: 950px;
 	margin: 0 auto 0 auto;
-	text-align:left;
+	text-align:start;
 }
 
 #BG_bottom.paymentinfo_background .formSectionTitle {
@@ -101,7 +101,7 @@ a:hover {
 	padding-top:11px;
 	font-size: 26px;
 	color: #898989;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 #BG_top_workshop h1 {
 	font-weight:normal;
@@ -111,7 +111,7 @@ a:hover {
 	padding:0;
 	padding-top:0px;
 	padding-bottom:5px;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 #BG_top_workshop_small h1 {
 	font-weight:normal;
@@ -121,7 +121,7 @@ a:hover {
 	padding:0;
 	padding-top:0px;
 	padding-bottom:5px;
-	padding-left:17px;
+	padding-inline-start:17px;
 }
 
 .appid_373030 .customBrowseDesc, .appid_477220 .customBrowseDesc
@@ -170,7 +170,8 @@ a:hover {
 }
 
 .detailBox {
-	padding: 10px 0px 0 0;
+	padding-block: 10px 0;
+	padding-inline: 0 0px;
 
 	position: relative;
 	padding-bottom: 20px;
@@ -205,7 +206,8 @@ a:hover {
 
 .detailBox.collection {
 
-	padding: 16px 10px 20px 0;
+	padding-block: 16px 20px;
+	padding-inline: 0 10px;
 	margin: 0 0 20px 0;
 
 
@@ -298,7 +300,7 @@ a:hover {
 #profileBlock > div.bg {
 	background:url('https://community.fastly.steamstatic.com/public/images/groups/content_header_rule.png') top left no-repeat;
 	position: relative;
-	left: -4px;
+	inset-inline-start: -4px;
 	height: 8px;
 }
 
@@ -317,7 +319,7 @@ a:hover {
 	display: inline-block;
 	background-color: rgba( 0, 0, 0, 0.4 );
 	padding: 5px 8px 5px 8px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	cursor: pointer;
@@ -342,12 +344,12 @@ a.general_btn:hover {
 {
 	background-color: #FFFFFF;
 	margin-top: 40px;
-	margin-right: 25px;
-	float: right;
+	margin-inline-end: 25px;
+	float: inline-end;
 	color: #727477;
 	font-size: 12px;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-inline-start: 30px;
+	padding-inline-end: 30px;
 	height: 20px;
 	line-height: 20px;
 }
@@ -357,12 +359,12 @@ a.general_btn:hover {
 	background-color: #FFFFFF;
 	margin-top: 16px;
 	margin-top: 15px;
-	margin-right: 25px;
-	float: right;
+	margin-inline-end: 25px;
+	float: inline-end;
 	color: #727477;
 	font-size: 12px;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-inline-start: 30px;
+	padding-inline-end: 30px;
 	height: 20px;
 	line-height: 20px;
 }
@@ -380,7 +382,7 @@ a.general_btn:hover {
 	color: #e8e8e8;
 	vertical-align: bottom;
 	padding-top: 115px;
-	padding-left:25px;
+	padding-inline-start:25px;
 }
 
 .workshopWelcomeText {
@@ -389,8 +391,8 @@ a.general_btn:hover {
 	line-height: 18px;
 	color: #e9f2ff;
 	padding-top: 5px;
-	padding-left:25px;
-	margin-right: 80px;
+	padding-inline-start:25px;
+	margin-inline-end: 80px;
 }
 
 .workshopWelcomeText a {
@@ -398,7 +400,7 @@ a.general_btn:hover {
 }
 
 .mainContentsBG {
-	margin-left: 5px;
+	margin-inline-start: 5px;
 	width: 948px;
 	height: 400px;
 	position: absolute;
@@ -414,8 +416,8 @@ a.general_btn:hover {
 	max-width: 950px;
 	margin:0;
 	padding:0;
-	text-align:left;
-	padding-right:0px;
+	text-align:start;
+	padding-inline-end:0px;
 	position: relative;
 }
 
@@ -426,7 +428,7 @@ a.general_btn:hover {
 #rightContents
 {
 	position: relative;
-	float: right;
+	float: inline-end;
 	z-index: 20;
 }
 
@@ -447,7 +449,7 @@ a.general_btn:hover {
 .toolsRightSectionHolder {
 	font-size: 14px;
 	position: relative;
-	padding-left:13px;
+	padding-inline-start:13px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/rightWorkshopToolsBG.png');
 }
 
@@ -550,7 +552,7 @@ a.general_btn:hover {
 {
 	padding-top: 5px;
 	padding-bottom: 5px;
-	padding-right: 17px;
+	padding-inline-end: 17px;
 }
 
 .rightSectionBrowseBar
@@ -569,9 +571,9 @@ a.general_btn:hover {
 	font-size: 10px;
 	height: 27px;
 	line-height: 27px;
-	padding-left: 8px;
+	padding-inline-start: 8px;
 	text-transform:uppercase;
-	border-left: 3px solid #a55b13;
+	border-inline-start: 3px solid #a55b13;
 	margin-bottom: 20px;
 }
 .rightSectionBrowseBar.toggled .rightSectionBrowseBarContent {
@@ -581,8 +583,8 @@ a.general_btn:hover {
 .rightSectionBrowseBarArrow
 {
 	margin-top: 3px;
-	margin-right: 10px;
-	float: right;
+	margin-inline-end: 10px;
+	float: inline-end;
 	height: 20px;
 	width: 17px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/workshop_section_arrow.png');
@@ -642,7 +644,7 @@ h3 {
 
 .hasLinkedItems
 {
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	padding: 10px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/notification_green.png');
@@ -653,7 +655,7 @@ h3 {
 	border-style: solid;
 	border-width: 2px;
 	margin-bottom: 8px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .hasLinkedItems h1
@@ -664,7 +666,7 @@ h3 {
 
 .hasLinkedItems img
 {
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 .bannedBy
@@ -679,7 +681,7 @@ h3 {
 
 .bannedNotification
 {
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	margin-bottom: 8px;
 	padding: 18px;
@@ -691,12 +693,12 @@ h3 {
 	border-color: #4c2c2a;
 	border-style: solid;
 	border-width: 2px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .incompatibleNotification
 {
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	margin-bottom: 8px;
 	padding: 18px;
@@ -708,12 +710,12 @@ h3 {
 	border-color: #534436;
 	border-style: solid;
 	border-width: 2px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .inappropriateNotification
 {
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	margin-bottom: 8px;
 	padding: 18px;
@@ -725,7 +727,7 @@ h3 {
 	border-color: #534436;;
 	border-style: solid;
 	border-width: 2px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .incompatibleNotification a
@@ -735,7 +737,7 @@ h3 {
 
 .needsAcceptanceNotification
 {
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	padding: 18px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/notification_green.png');
@@ -748,12 +750,12 @@ h3 {
 	border-width: 2px;
 	margin-top: 8px;
 	margin-bottom: 8px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .needsFinalizeNotification
 {
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	padding: 12px;
 	background-color: #546b04;
@@ -784,7 +786,7 @@ h3 {
 	position: absolute;
 	height: 46px;
 	width: 78px;
-	left: -87px;
+	inset-inline-start: -87px;
 	top: -10px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/hint_arrows_notext.png');
 	background-position: 0px 0px;
@@ -794,7 +796,7 @@ h3 {
 .payment_info
 {
 	height: 14px;
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	margin-bottom: 8px;
 	padding: 18px;
@@ -806,7 +808,7 @@ h3 {
 	border-color: #4c2c2a;
 	border-style: solid;
 	border-width: 2px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .view_inventory_page {
@@ -821,7 +823,7 @@ h3 {
 
 .view_inventory_page .inventory_page_right {
 	position: absolute;
-	right: 11px;
+	inset-inline-end: 11px;
 	top: 17px;
 	width: 350px;
 }
@@ -845,7 +847,7 @@ h3 {
 	margin:0;
 	padding:0;
 	margin-bottom:20px;
-	margin-left:3px;
+	margin-inline-start:3px;
 }
 
 .returnLink>a {
@@ -873,7 +875,7 @@ h3 {
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	border: 2px #454341 solid;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 	margin-bottom: 25px;
 }
 
@@ -909,7 +911,7 @@ h3 {
 
 .sharedFilesTitleContainer
 {
-	margin-left: 19px;
+	margin-inline-start: 19px;
 	padding-top: 7px;
 	position: relative;
 	line-height: 50px;
@@ -918,7 +920,7 @@ h3 {
 
 .sharedFilesTitleContainer .iconHolder_default {
 	position: absolute;
-	left: 4px;
+	inset-inline-start: 4px;
 	top: 12px;
 	padding: 4px;
 	width: 32px;
@@ -929,9 +931,9 @@ h3 {
 .sharedFilesTitleProfileName {
 	color:#e1e1e1;
 	font-size:26px;
-	margin-left: 67px;
-	margin-right: 7px;
-	float: left;
+	margin-inline-start: 67px;
+	margin-inline-end: 7px;
+	float: inline-start;
 	cursor: pointer;
 }
 
@@ -939,7 +941,7 @@ h3 {
 	margin-top: 2px;
 	color:#828282;
 	font-size:18px;
-	float: left;
+	float: inline-start;
 }
 
 
@@ -954,7 +956,7 @@ h3 {
 
 .viewMyFiles
 {
-	margin-left:45px;
+	margin-inline-start:45px;
 	line-height: 40px;
 }
 
@@ -962,7 +964,7 @@ h3 {
 {
 	color:#ebebeb;
 	font-size: 14px;
-	margin-left: 4px;
+	margin-inline-start: 4px;
 }
 
 .browsePageGotoSharedFiles .viewSubscriptions
@@ -985,7 +987,8 @@ h3 {
 	height: 37px;
 	line-height: 37px;
 	margin-inline: -10px;
-	padding: 2px 0 1px 10px;
+	padding-block: 2px 1px;
+	padding-inline: 10px 0;
 	position: relative;
 }
 .browseOption.notSelected:hover,
@@ -1003,7 +1006,7 @@ h3 {
 }
 
 .browseOption .rightbox_list_selection_background {
-	left: -16px;
+	inset-inline-start: -16px;
 	width: calc(100% + 16px);
 }
 
@@ -1024,16 +1027,16 @@ h3 {
 
 #BG_top_workshop .appselect_container
 {
-	margin-left: 368px;
+	margin-inline-start: 368px;
 	margin-top: 40px;
-	float: left;
+	float: inline-start;
 }
 
 #BG_top_workshop_small .appselect_container
 {
-	margin-left: 368px;
+	margin-inline-start: 368px;
 	margin-top: 15px;
-	float: left;
+	float: inline-start;
 }
 
 div.appselect
@@ -1064,7 +1067,7 @@ div.appselect_options, div.appselect {
 
 div.appselect #appselect_arrow {
 	position: absolute;
-	right: 0px;
+	inset-inline-end: 0px;
 	top: 0px;
 	width: 29px;
 	height: 23px;
@@ -1122,10 +1125,10 @@ div.dayselect {
 	height: 20px;
 
 	position: relative;
-	float: right;
+	float: inline-end;
 
 	cursor: pointer;
-	margin-right: 15px;
+	margin-inline-end: 15px;
 	padding-inline-end: 17px;
 	top: 6px;
 
@@ -1147,7 +1150,7 @@ div.dayselect_options {
 
 div.dayselect #dayselect_arrow {
 	position: absolute;
-	right: 0px;
+	inset-inline-end: 0px;
 	top: 0px;
 	width: 17px;
 	height: 20px;
@@ -1192,10 +1195,10 @@ div.sortselect {
 	height: 20px;
 
 	position: relative;
-	float: right;
+	float: inline-end;
 
 	cursor: pointer;
-	margin-right: 15px;
+	margin-inline-end: 15px;
 	padding-inline-end: 17px;
 	top: 6px;
 
@@ -1216,7 +1219,7 @@ div.sortselect_options {
 
 div.sortselect #sortselect_arrow {
 	position: absolute;
-	right: 0px;
+	inset-inline-end: 0px;
 	top: 0px;
 	width: 17px;
 	height: 20px;
@@ -1266,14 +1269,14 @@ div.sortselect div.option img, div.sortselect_options div.option img {
 .instructions
 {
 	font-size: 14px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .appInstructionsBlock
 {
 	border: 1px #777777 solid;
 	min-height: 69px;
-	margin-right: 15px;
+	margin-inline-end: 15px;
 	margin-bottom: 15px;
 	padding: 5px 5px 5px 5px;
 }
@@ -1281,16 +1284,16 @@ div.sortselect div.option img, div.sortselect_options div.option img {
 .appInstructionsTitle
 {
 	margin-top: 10px;
-	margin-left: 198px;
+	margin-inline-start: 198px;
 	font-size: 16px;
 }
 
 .instructionsBtn {
-	float: left;
+	float: inline-start;
 	background-color: #1A1A1A;
 	padding: 5px 8px 5px 8px;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-inline-start: 5px;
+	margin-inline-end: 5px;
 	margin-top: 10px;
 	cursor: pointer;
 	border-radius: 3px;
@@ -1314,10 +1317,10 @@ a.instructionsBtn:hover {
 	border:0;
 	padding:0;
 	margin:0;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 	top:4px;
-	left:4px;
-	float: left;
+	inset-inline-start:4px;
+	float: inline-start;
 }
 
 .instructionsAppLogo img {
@@ -1346,7 +1349,8 @@ a.instructionsBtn:hover {
 {
 	color: #ff9900;
 	font-size: 17px;
-	padding: 16px 16px 0px 0px;
+	padding-block: 16px 0px;
+	padding-inline: 0px 16px;
 }
 
 .workshop_paymentinfo_workshop_notice
@@ -1374,7 +1378,8 @@ a.instructionsBtn:hover {
 	border: 1px solid #000;
 	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
 	border-radius: 3px;
-	padding: 4px 5px 4px 8px;
+	padding-block: 4px;
+	padding-inline: 8px 5px;
 	color: #BFBFBF;
 	top: 0px;
 }
@@ -1387,9 +1392,10 @@ a.instructionsBtn:hover {
 	border: 1px solid #000;
 	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
 	border-radius: 3px;
-	padding: 4px 5px 4px 8px;
+	padding-block: 4px;
+	padding-inline: 8px 5px;
 	color: #BFBFBF;
-	margin-left: 2px;
+	margin-inline-start: 2px;
 }
 
 .paymentinfo_background option
@@ -1407,20 +1413,21 @@ a.instructionsBtn:hover {
 }
 
 .formRowDesc {
-	float:right;
+	float:inline-end;
 	width:244px;
-	padding-right:10px;
-	padding-left:10px;
+	padding-inline-end:10px;
+	padding-inline-start:10px;
 	font-size:10px;
 	color:#707070;
 }
 
 .formRowTitle {
-	padding-right:4px;
+	padding-inline-end:4px;
 	font-size:10px;
 	color:#5c8699;
 	text-transform: uppercase;
-	padding: 9px 5px 2px 0px;
+	padding-block: 9px 2px;
+	padding-inline: 0px 5px;
 }
 .formSectionTitle {
 	font-size: 17px;
@@ -1430,13 +1437,14 @@ a.instructionsBtn:hover {
 
 .formRowFields
 {
-	text-align:left;
+	text-align:start;
 	font-size: 14px;
 }
 
 .formRowFields.text
 {
-	padding: 2px 5px 4px 0px;
+	padding-block: 2px 4px;
+	padding-inline: 0px 5px;
 }
 
 .formRowFields.completed
@@ -1495,7 +1503,7 @@ a.instructionsBtn:hover {
 
 .taxinfo
 {
-	padding-right: 50px;
+	padding-inline-end: 50px;
 }
 
 .workshop_payment_info_done
@@ -1527,7 +1535,7 @@ a.instructionsBtn:hover {
 	padding:0;
 	margin-top:20px;
 	margin-bottom:20px;
-	margin-right: 12px;
+	margin-inline-end: 12px;
 }
 
 input, select {
@@ -1597,7 +1605,7 @@ textarea {
 
 .savedPaymentInfo
 {
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	padding: 18px;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/groups/tab_blue_active.png);
@@ -1609,12 +1617,12 @@ textarea {
 	border-style: solid;
 	border-width: 2px;
 	margin-bottom: 8px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .paymentformfaqdesc
 {
-	text-align: left;
+	text-align: start;
 	padding: 0px;
 	color: #999999;
 	font-size: 14px;
@@ -1669,7 +1677,7 @@ textarea {
 	margin-bottom: 10px;
 	font-size: 14px;
 	line-height: 19px;
-	padding-left: 22px;
+	padding-inline-start: 22px;
 	font-family: 'Motiva Sans Light', Arial, Tahoma;
 }
 
@@ -1704,10 +1712,10 @@ textarea {
 
 .workshopItemTitle .integratedGuideIcon
 {
-	float: left;
+	float: inline-start;
 	width: 19px;
 	height: 18px;
-	padding-right: 5px;
+	padding-inline-end: 5px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/icons/guides_integrated.png');
 	background-repeat:no-repeat;
 }
@@ -1752,7 +1760,7 @@ textarea {
 
 .workshopItem.left, .workshopItem.middle
 {
-	margin-right: 19px;
+	margin-inline-end: 19px;
 }
 
 .workshopItem.right
@@ -1768,7 +1776,7 @@ textarea {
 
 	.workshopItem.medium.left, .workshopItem.medium.middle
 	{
-		margin-right: 12px;
+		margin-inline-end: 12px;
 	}
 
 
@@ -1780,16 +1788,16 @@ textarea {
 
 	.workshopItem.small.left, .workshopItem.small.middle
 	{
-		margin-right: 7px;
+		margin-inline-end: 7px;
 	}
 
 .workshopItem .workshop_checkmark
 {
-	float: right;
+	float: inline-end;
 }
 .workshopItem .workshopItemPrice
 {
-	float: right;
+	float: inline-end;
 	font-size: 12px;
 	padding-top: 5px;
 	color: white;
@@ -1802,8 +1810,8 @@ textarea {
 	overflow: hidden;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/icon_show_state.png?v=1');
 	background-repeat: no-repeat;
-	margin-left: 2px;
-	float: right;
+	margin-inline-start: 2px;
+	float: inline-end;
 }
 
 #highlight_player_area {
@@ -1817,7 +1825,7 @@ textarea {
 
 .highlight_player_item {
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 0px;
 	width: 100%;
 	height: 100%;
@@ -1846,7 +1854,7 @@ textarea {
 	visibility:hidden;
 	position: absolute;
 	bottom: 4px;
-	right: 0px;
+	inset-inline-end: 0px;
 }
 .workshopItemSubscriptionControls.aspectratio_16x9
 {
@@ -1861,7 +1869,7 @@ textarea {
 .workshopItemSubscriptionControls .general_btn.subscribe
 {
 	position: relative;
-	float: right;
+	float: inline-end;
 	height: 25px;
 	width: 25px;
 	padding: 0px;
@@ -1894,7 +1902,7 @@ textarea {
 }
 .workshopItemSubscriptionControls .action_wait > img
 {
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	width: 22px;
 }
 .workshopItemDetailsHeader
@@ -1952,13 +1960,13 @@ textarea {
 .workshopItemCollection .workshopItemDetails
 {
 	width: 100%;
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 
 .workshopItemCollection .fileRating
 {
 	margin-top: 2px;
-	float: right;
+	float: inline-end;
 }
 
 .workshopItemCollection .workshopItemShortDesc
@@ -1990,10 +1998,10 @@ textarea {
 
 #detailsHeaderRight
 {
-	float:right;
+	float:inline-end;
 	margin:0px;
 	padding:0;
-	padding-left:10px;
+	padding-inline-start:10px;
 	padding-top:0px;
 }
 
@@ -2004,7 +2012,7 @@ textarea {
 
 .guideTop .ratingSection
 {
-	margin-right: 16px;
+	margin-inline-end: 16px;
 }
 
 .workshopItemPreviewArea
@@ -2017,8 +2025,8 @@ textarea {
 {
 	cursor: pointer;
 	display:block;
-	margin-left: auto;
-    margin-right: auto;
+	margin-inline-start: auto;
+    margin-inline-end: auto;
 	position: relative;
 	padding: 0 0 5px 0;
 	margin-top: 5px;
@@ -2030,7 +2038,7 @@ textarea {
 {
 	visibility:hidden;
 	position:absolute;
-	right: 16px;
+	inset-inline-end: 16px;
 	bottom: 16px;
 }
 
@@ -2041,7 +2049,7 @@ textarea {
 
 .workshopItemPreviewAreaBG
 {
-	left: -16px;
+	inset-inline-start: -16px;
 	width: 638px;
 	height: 354px;
 	position: absolute;
@@ -2051,7 +2059,7 @@ textarea {
 
 .workshopItemPreviewAreaPreviewBG
 {
-	left: -16px;
+	inset-inline-start: -16px;
 	top: 354px;
 	width: 638px;
 	height: 94px;
@@ -2062,7 +2070,7 @@ textarea {
 
 .workshopItemPreviewAreaFooterBG
 {
-	left: 5px;
+	inset-inline-start: 5px;
 	width: 638px;
 	height: 17px;
 	position: absolute;
@@ -2076,8 +2084,8 @@ textarea {
 	display:block;
 	max-height: 358px;
 	max-width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 	position: relative;
 }
 
@@ -2091,7 +2099,7 @@ textarea {
 {
 	visibility:hidden;
 	position:absolute;
-	right: 16px;
+	inset-inline-end: 16px;
 	bottom: 16px;
 }
 
@@ -2202,8 +2210,8 @@ textarea {
 	color: #495f68;
 	font-size: 11px;
 	align: right;
-	text-align: right;
-	margin-right: 20px;
+	text-align: end;
+	margin-inline-end: 20px;
 }
 
 .fileRatingDetails
@@ -2235,35 +2243,40 @@ textarea {
 	font-size: 12px;
 	line-height: 24px;
 	margin-block: 0 8px;
-	padding: 2px 10px 2px 6px;
+	padding-block: 2px;
+	padding-inline: 6px 10px;
 }
 
 .workshopBrowseSortingControls
 {
-	margin-left: auto;
-	padding-left: 10px;
+	margin-inline-start: auto;
+	padding-inline-start: 10px;
 }
 
 .workshopBrowseSortingControls a.dropdown {
-	padding-right: 20px;
+	padding-inline-end: 20px;
 	background-image: url(  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAMCAYAAACA0IaCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MUFBQkYyMTI2QjhGMTFFNDlDQkJDQkEwNzc3NkZDQ0IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MUFBQkYyMTM2QjhGMTFFNDlDQkJDQkEwNzc3NkZDQ0IiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxQUFCRjIxMDZCOEYxMUU0OUNCQkNCQTA3Nzc2RkNDQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxQUFCRjIxMTZCOEYxMUU0OUNCQkNCQTA3Nzc2RkNDQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmBJsMgAAABKSURBVHjaYvz//z8DtQATAxXBqGGkAxZ0gWNHDuONXisbW0aiXWZta4dTMT45nN7EpomQQXjDDFkzMQZhDTO0HMGIRYw+sQkQYABhFRFejI1rLQAAAABJRU5ErkJggg==' );
 	background-position: right center;
 	background-repeat: no-repeat;
-	margin-right: 0px;
+	margin-inline-end: 0px;
 	padding-top: 5px;
-	padding-left: 10px;
+	padding-inline-start: 10px;
+}
+
+.workshopBrowseSortingControls a.dropdown:dir(rtl) {
+	background-position: left center;
 }
 .workshopBrowseSortingControls a.dropdown.hover {
 	color: #67c1f5;
 	margin-top: auto;
 	vertical-align: baseline;
-	border-right: none;
+	border-inline-end: none;
 	line-height: 20px;
 	height: auto;
 	background-color: #334256;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	margin-right: 4px;
+	border-start-start-radius: 3px;
+	border-start-end-radius: 3px;
+	margin-inline-end: 4px;
 }
 
 .workshopBrowsePagingInfo
@@ -2276,10 +2289,10 @@ textarea {
 
 .submit_btn
 {
-	float: left;
+	float: inline-start;
 	display: block;
 	padding: 5px 8px 5px 8px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	cursor: pointer;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/btn_green.png);
 	cursor: pointer;
@@ -2294,8 +2307,8 @@ a.submit_btn:hover
 .buynowprice
 {
 	color: #ffffff;
-	float: right;
-	margin-right: 15px;
+	float: inline-end;
+	margin-inline-end: 15px;
 	line-height: 26px;
 	font-size: 14px;
 }
@@ -2311,7 +2324,7 @@ a.submit_btn:hover
 	text-decoration: none;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/btn_buynow_mid.png );
 	background-repeat: repeat-x;
-	float: right;
+	float: inline-end;
 	font-size: 11px;
 	color: #ffffff;
 	text-align: center;
@@ -2332,14 +2345,14 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 .buynowbtn .leftcap
 {
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/btn_buynow_left.png );
-	left: 0px;
+	inset-inline-start: 0px;
 	width: 24px;
 }
 
 .buynowbtn .rightcap
 {
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/btn_buynow_right.png );
-	right: 0px;
+	inset-inline-end: 0px;
 	width: 4px;
 }
 
@@ -2379,7 +2392,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 }
 
 .workshopItemAdminControls .general_btn {
-	float: left;
+	float: inline-start;
 	margin-top: 5px;
 }
 
@@ -2391,9 +2404,9 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 }
 	.workshopItemDescriptionTitle > .detail {
 		display: inline-block;
-		float: right;
+		float: inline-end;
 		text-transform: none;
-		margin-right: 10px;
+		margin-inline-end: 10px;
 		font-size: 11px;
 	}
 
@@ -2403,7 +2416,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .workshopItemDescriptionHR {
 	position: relative;
-	left: -4px;
+	inset-inline-start: -4px;
 	background: url( 'https://community.fastly.steamstatic.com/public/images/groups/content_header_rule.png' ) 0px 0px no-repeat;
 	height:8px;
 }
@@ -2422,7 +2435,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	margin-top: 10px;
 	line-height: 20px;
 	padding-bottom: 16px;
-	padding-right: 8px;
+	padding-inline-end: 8px;
 	color: #acb2b8;
 }
 
@@ -2444,13 +2457,13 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	display: block;
 	color: white;
 	border-radius: 2px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
+	border-end-start-radius: 0px;
+	border-end-end-radius: 0px;
 
 	background-color: rgba( 0, 0, 0, 0.5 );
 	line-height: 25px;
 	padding: 0px 12px;
-	margin-left: 9px;
+	margin-inline-start: 9px;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -2460,8 +2473,8 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .commentsTab.active {
 	border-radius: 2px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
+	border-end-start-radius: 0px;
+	border-end-end-radius: 0px;
 
 
 	background: #417B9C; /* Old browsers */
@@ -2478,8 +2491,8 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .developerComments
 {
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-inline-start: 10px;
+	margin-inline-end: 10px;
 }
 .commentthread_area .commentthread_header {
 	background-color: #223349;
@@ -2549,7 +2562,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	display: inline-block;
-	float: right;
+	float: inline-end;
 }
 
 .splits_expand_btn:hover
@@ -2595,7 +2608,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 }
 
 .workshopItemSplit .iconHolder_default {
-	left: 4px;
+	inset-inline-start: 4px;
 	top: 10px;
 	padding: 4px;
 	width: 32px;
@@ -2608,18 +2621,18 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	width:150px;
 	font-size: 12px;
 	font-weight: bold;
-	margin-right:0px;
+	margin-inline-end:0px;
 	cursor: pointer;
 }
 
 .workshopSplitPercentage {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	color: #413c2f;
     line-height: 16px;
 }
 
 .workshopSplitAcceptedDate {
-	margin-left: 25px;
+	margin-inline-start: 25px;
 	color: #413c2f;
     line-height: 16px;
 }
@@ -2630,7 +2643,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 }
 
 .workshopSplitControls .general_btn {
-	float: left;
+	float: inline-start;
 }
 
 .workshopTagsTitle
@@ -2657,7 +2670,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	color: #939393;
 	font-weight:normal;
 	line-height:12px;
-	clear:left;
+	clear:inline-start;
 }
 
 .viewAuthorFilesLink
@@ -2673,8 +2686,8 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	width: 264px;
 	padding: 0;
 	margin: 0;
-	margin-right: 12px;
-	padding-left: 4px;
+	margin-inline-end: 12px;
+	padding-inline-start: 4px;
 	padding-top: 4px;
 	padding-bottom: 4px;
 	margin-top: 4px;
@@ -2697,20 +2710,20 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 }
 
 .linkedAppIcon {
-	float:left;
+	float:inline-start;
 	width:40px;
 	margin:0;
 	padding:0;
-	margin-right:6px;
+	margin-inline-end:6px;
 }
 
 .linkedAppSmallLogo
 {
-	float: left;
+	float: inline-start;
 	width: 107px;
 	margin:0;
 	padding:0;
-	margin-right:6px;
+	margin-inline-end:6px;
 }
 
 .linkedAppTitle {
@@ -2751,8 +2764,8 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	padding: 0;
 	margin: 0;
 	margin-top: 4px;
-	margin-right: 12px;
-	padding-left: 4px;
+	margin-inline-end: 12px;
+	padding-inline-start: 4px;
 	padding-top: 6px;
 	padding-bottom: 4px;
 	background-color: rgba( 84, 133, 183, 0.2);
@@ -2782,7 +2795,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	background-color:#363636;
 	margin-top:4px;
 	margin-bottom:4px;
-	clear:left;
+	clear:inline-start;
 }
 
 input, select {
@@ -2801,8 +2814,8 @@ input.inputSplits {
 	width:30px;
 	position: relative;
 	top:0px;
-	margin-left:10px;
-	text-align: right;
+	margin-inline-start:10px;
+	text-align: end;
 	padding: 5px 5px 5px 5px;
 }
 .workshopSplitPercentage input.inputSplits {
@@ -2821,8 +2834,8 @@ input.inputTagsFilter + label {
 	min-height: 19px;
 	vertical-align: top;
 	padding-top: 4px;
-	margin-left: -31px;
-	padding-left: 31px;
+	margin-inline-start: -31px;
+	padding-inline-start: 31px;
 }
 input.inputTagsFilter:checked + label
 {
@@ -2843,9 +2856,9 @@ input.inputTagsFilter:checked + label:hover
 	align-items: center;
 	display: flex;
 	flex-direction: row;
-	margin-left: -10px;
-	padding-left: 10px;
-	margin-right: -10px;
+	margin-inline-start: -10px;
+	padding-inline-start: 10px;
+	margin-inline-end: -10px;
 	min-height: 20px;
 	padding-block: 2px;
 }
@@ -2861,7 +2874,7 @@ input.inputTagsFilter:checked + label:hover
 }
 
 .filterOption .tag_filter_control_not {
-	float: right;
+	float: inline-end;
 	margin-inline-end: 3px;
 	width: 16px;
 	height: 16px;
@@ -2917,7 +2930,7 @@ input.searchText
 	position:absolute;
 	box-shadow: none;
 	top:14px;
-	left:12px;
+	inset-inline-start:12px;
 	max-width: 244px;
 	width: 100%;
 	height: 20px;
@@ -2928,7 +2941,7 @@ input.searchText
 {
 	position:absolute;
 	top:14px;
-	right:10px;
+	inset-inline-end:10px;
 	width:23px;
 	height:18px;
 	padding:0;
@@ -2956,7 +2969,7 @@ input.searchText
 }
 
 .profileAppFilter {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	margin-top: 6px;
 }
 
@@ -3001,19 +3014,19 @@ input.searchText
 {
     width: 12px;
     height: 12px;
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	vertical-align: middle;
 }
 
 .searchedForExcludedTermImage {
 	width: 14px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	vertical-align: middle;
 }
 
 .tagsFilterSubmitBtn
 {
-	padding-left: 4px;
+	padding-inline-start: 4px;
 	margin-top: 10px;
 }
 
@@ -3027,7 +3040,7 @@ input.searchText
 	color: #8F98A0;
 	margin-top: 10px;
 	margin-bottom: 0px;
-	margin-left: 0px;
+	margin-inline-start: 0px;
 	font-size: 11px;
 	text-transform: uppercase;
 }
@@ -3037,7 +3050,7 @@ input.searchText
 	color: #61686d;
 	margin-top: 10px;
 	margin-bottom: 5px;
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	font-size: 12px;
 }
 
@@ -3051,18 +3064,18 @@ input.searchText
 }
 
 .modal_close {
-	float:right;
+	float:inline-end;
 	width:9px;
 	height:9px;
-	margin-right:9px;
+	margin-inline-end:9px;
 	margin-top:7px;
 }
 
 .modal_close_image {
-	float:right;
+	float:inline-end;
 	width:9px;
 	height:9px;
-	margin-right:0px;
+	margin-inline-end:0px;
 	margin-top:3px;
 	margin-bottom: 10px;
 }
@@ -3086,7 +3099,7 @@ input.searchText
 
 	font-size: 12px;
 	color: #ffffff;
-	text-align: left;
+	text-align: start;
 }
 
 .modal_box h1, .modal_box h5 {
@@ -3102,28 +3115,28 @@ input.searchText
 }
 
 .modal_box h1 {
-	padding-left:20px;
+	padding-inline-start:20px;
 }
 
 .modal_box p {
-	padding-left:20px;
+	padding-inline-start:20px;
 }
 
 
 .modal_steam_ico {
-	float:left;
-	padding-right:18px;
+	float:inline-start;
+	padding-inline-end:18px;
 	margin-top:-4px;
 }
 
 
 
 .modal_buttons a.btn_white {
-	float: left;
+	float: inline-start;
 }
 
 .modal_buttons a.btn_white.leftbtn {
-	margin-right: 16px;
+	margin-inline-end: 16px;
 
 }
 
@@ -3224,7 +3237,7 @@ input.searchText
 
 .rightSectionHolder select
 {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	width: 222px;
 }
 
@@ -3232,7 +3245,7 @@ input.searchText
 .breadcrumbs
 {
 	text-decoration: none;
-	text-align: left;
+	text-align: start;
 	max-width: 948px;
 	padding: 20px 0 0 0;
 	margin: 0 auto;
@@ -3256,7 +3269,7 @@ input.searchText
 .toolsIcon
 {
 	vertical-align: middle;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 /** HOVER stuff */
@@ -3330,9 +3343,9 @@ div.hover {
 	color: #494947;
 	padding-top: 4px;
 	padding-bottom: 4px;
-	padding-left: 4px;
-	margin-left: 10px;
-	margin-right: 10px;
+	padding-inline-start: 4px;
+	margin-inline-start: 10px;
+	margin-inline-end: 10px;
 	margin-bottom: 10px;
 }
 
@@ -3342,7 +3355,7 @@ div.hover {
 	overflow: hidden;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/icon_show_state_blue.png');
 	background-repeat: no-repeat;
-	padding-left: 30px;
+	padding-inline-start: 30px;
 }
 
 .hover_user_action.subscribed
@@ -3366,8 +3379,8 @@ div.hover {
 
 .hover_friend_block_container
 {
-	float: left;
-	margin-right: 5px;
+	float: inline-start;
+	margin-inline-end: 5px;
 	height: 40px;
 	width: 40px;
 }
@@ -3381,7 +3394,7 @@ div.hover {
 .hover_friend_block_row .iconHolder_default
 {
 	position: absolute;
-	left: 4px;
+	inset-inline-start: 4px;
 	padding: 4px;
 	width: 32px;
 	height: 32px;
@@ -3399,8 +3412,8 @@ div.hover {
 
 .friend_favorited_block_container
 {
-	float: left;
-	margin-right: 5px;
+	float: inline-start;
+	margin-inline-end: 5px;
 	height: 40px;
 	width: 40px;
 }
@@ -3414,7 +3427,7 @@ div.hover {
 .friend_favorited_block_row .iconHolder_default
 {
 	position: absolute;
-	left: 4px;
+	inset-inline-start: 4px;
 	padding: 4px;
 	width: 32px;
 	height: 32px;
@@ -3435,11 +3448,11 @@ div.hover {
 .general_btn.follow
 {
 	position: relative;
-	float: left;
+	float: inline-start;
 	height: 30px;
 	padding: 0px;
-	padding-left: 28px;
-	padding-right: 12px;
+	padding-inline-start: 28px;
+	padding-inline-end: 12px;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/groups/tab_blue_active.png);
 	background-repeat: repeat-x;
 	display: inline-block;
@@ -3472,7 +3485,7 @@ div.hover {
 {
 	position: absolute;
 	top: 0px;
-	left: 8px;
+	inset-inline-start: 8px;
 	height: 30px;
 	width: 16px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png');
@@ -3509,8 +3522,8 @@ div.hover {
 
 .authorAvatar
 {
-	float: left;
-	margin-right: 10px;
+	float: inline-start;
+	margin-inline-end: 10px;
 }
 
 .authorName
@@ -3570,8 +3583,8 @@ div.hover {
 	position: relative;
 	height: 30px;
 	padding: 0px;
-	padding-left: 12px;
-	padding-right: 12px;
+	padding-inline-start: 12px;
+	padding-inline-end: 12px;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/groups/tab_blue_active.png);
 	background-repeat: repeat-x;
 	display: inline-block;
@@ -3588,7 +3601,7 @@ div.hover {
 	width:958px;
 	height:65px;
 	padding: 15px;
-	text-align: left;
+	text-align: start;
 	background-color: #4fabcf;
 	color: white;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/workshop_collection_progressBarGradient.png);
@@ -3609,10 +3622,10 @@ div.hover {
 .newCollectionTab
 {
 	color: white;
-	float: left;
-	padding-left: 5px;
-	padding-right: 5px;
-	margin-right: 10px;
+	float: inline-start;
+	padding-inline-start: 5px;
+	padding-inline-end: 5px;
+	margin-inline-end: 10px;
 	line-height: 25px;
 }
 
@@ -3624,20 +3637,20 @@ div.hover {
 .newCollectionBullet
 {
 	margin-top: 8px;
-	float: left;
+	float: inline-start;
 	width: 4px;
 	height: 8px;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/workshop_collection_processArrow.png);
 	background-repeat: no-repeat;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 #BG_top_new_collection .general_btn
 {
-	float: left;
+	float: inline-start;
 	background-color: white;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-inline-start: 10px;
+	padding-inline-end: 10px;
 	color: black;
 }
 
@@ -3690,8 +3703,8 @@ div.hover {
 .promptButtons a.general_btn.green
 {
 	color: #ffffff;
-	padding-left: 24px;
-	padding-right: 24px;
+	padding-inline-start: 24px;
+	padding-inline-end: 24px;
 	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/btn_green.png);
 }
 
@@ -3733,11 +3746,11 @@ html.responsive #ig_bottom {
 
 #ig_bottom .sidebar {
 	position: relative;
-	float: right;
+	float: inline-end;
 	width: 295px;
 	margin: 0;
 	padding: 0;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	padding-top: 5px;
 	z-index: 90;
 	font-size: 14px;
@@ -3747,14 +3760,16 @@ html.responsive #ig_bottom {
 #ig_bottom .sidebar .detailPanel
 {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-    padding: 10px 10px 10px 11px;
+    padding-block: 10px;
+    padding-inline: 11px 10px;
 	margin: 0 0 10px 0;
 	border: none;
 }
 #rightContents .panel,
 .revenue #rightContents .panel {
 	background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-	padding: 10px 10px 10px 11px;
+	padding-block: 10px;
+	padding-inline: 11px 10px;
 	margin: 0 0 10px 0;
 }
 .revenue .introduction {
@@ -3802,7 +3817,7 @@ html.responsive #ig_bottom {
 }
 
 #ig_bottom .sidebar .panel.admin {
-	border-left: 1px solid #a55b13;
+	border-inline-start: 1px solid #a55b13;
 }
 
 .panel.admin .title {
@@ -3832,7 +3847,8 @@ html.responsive #ig_bottom {
 .detailPanel {
 	background: #141415;
 	border: 1px solid #262627;
-	padding: 10px 10px 10px 11px;
+	padding-block: 10px;
+	padding-inline: 11px 10px;
 	margin-bottom: 20px;
 }
 
@@ -3858,10 +3874,11 @@ html.responsive #ig_bottom {
 	}
 
 .detailPanelHighlight {
-	border-right: 1px solid #000000;
-	border-left: 1px solid #213147;
+	border-inline-end: 1px solid #000000;
+	border-inline-start: 1px solid #213147;
 	border-top: 1px solid #213147;
-	padding: 10px 10px 10px 11px;
+	padding-block: 10px;
+	padding-inline: 11px 10px;
 	border-bottom: 1px solid #000000;
 	background: url('https://community.fastly.steamstatic.com/public/images/sharedfiles/workshop_about_section_highlight.jpg') center no-repeat;
 	box-shadow: 0 0 5px #111;
@@ -3901,7 +3918,7 @@ html.responsive #ig_bottom {
 #ig_bottom .searchTextContainer {
 	position: absolute;
 	top: -40px;
-	right: 0px;
+	inset-inline-end: 0px;
 }
 
 #ig_bottom .tabSpacer {
@@ -3914,7 +3931,7 @@ html.responsive #ig_bottom {
 	background: #000;
 	border-bottom: 1px solid #333333;
 	height: 1px;
-	left: -10px;
+	inset-inline-start: -10px;
 	width: 292px;
 	margin: 5px 0 5px 0;
 }
@@ -3923,7 +3940,8 @@ html.responsive #ig_bottom {
 	background: transparent url(https://community.fastly.steamstatic.com/public/images/sharedfiles/ig/greenlight_submit_logo.jpg) no-repeat;
 	height: 116px;
 	width: 419px;
-	padding: 60px 30px 0 500px;
+	padding-block: 60px 0;
+	padding-inline: 500px 30px;
 	color: #fff;
 	box-shadow: 0 0 6px #111;
 }
@@ -3955,14 +3973,15 @@ html.responsive #ig_bottom {
 }
 
 .imagesizepreview {
-	float: right;
+	float: inline-end;
 	border: 1px solid #8F98A0;
 	background-color: rgba( 0, 0, 0, 0.4 );
 	color: #8F98A0;
 	box-shadow: 0 0 2px 2px #262625;
 	width: 195px;
 	height: 195px;
-	margin: 10px 10px 0 25px
+	margin-block: 10px 0;
+	margin-inline: 25px 10px
 }
 
 .imagesizepreview > p {
@@ -3977,7 +3996,8 @@ html.responsive #ig_bottom {
 
 #ig_menu > .button {
 	padding: 5px 10px 5px 10px;
-	margin: 0 10px 0 0;
+	margin-block: 0;
+	margin-inline: 0 10px;
 	display: inline;
 }
 
@@ -4003,7 +4023,8 @@ html.responsive #ig_bottom {
 
 #ig_menu > .arrow {
 	display: inline-block;
-	margin: 5px 20px 0 0;
+	margin-block: 5px 0;
+	margin-inline: 0 20px;
 	width: 4px;
 	height: 8px;
 	background: url('https://community.fastly.steamstatic.com/public/images/sharedfiles/ig/rightarrow.png')
@@ -4012,7 +4033,8 @@ html.responsive #ig_bottom {
 .tag_category_container {
 	display: inline-block;
 	vertical-align: top;
-	margin: 0 50px 0 0;
+	margin-block: 0;
+	margin-inline: 0 50px;
 }
 
 #ig_item {
@@ -4044,9 +4066,9 @@ html.responsive #ig_bottom {
 .notification_blurb .num {
 	font-size: 38px;
 	color: #e9e9e8;
-	float: left;
+	float: inline-start;
 	font-weight: bold;
-	margin-right: 6px;
+	margin-inline-end: 6px;
 }
 
 .notification_blurb p {
@@ -4057,15 +4079,17 @@ html.responsive #ig_bottom {
 
 .headerOverride #userControls {
 	position: absolute;
-	margin: 10px 0 0 -476px;
-	left: 50%;
+	margin-block: 10px 0;
+	margin-inline: -476px 0;
+	inset-inline-start: 50%;
 	z-index: 10;
 }
 
 .headerOverride #userControls {
 	background: #232221;
 	background: rgba(35,34,33,.7);
-	padding: 8px 3px 3px 13px;
+	padding-block: 8px 3px;
+	padding-inline: 13px 3px;
 	margin-top: 10px;
 	margin-bottom: 18px;
 }
@@ -4081,12 +4105,12 @@ html.responsive #ig_bottom {
 
 #ig_bottom .forum_discussion_profileBlock#profileBlock {
 	max-width: 645px;
-	padding-left: 0px;
+	padding-inline-start: 0px;
 }
 
 .commentthread_area {
 	margin: 0px;
-	padding-right: 0px;
+	padding-inline-end: 0px;
 }
 
 .commentthread_footer {
@@ -4100,12 +4124,12 @@ html.responsive #ig_bottom {
 }
 
 .publicComments {
-	padding-right: 0px;
+	padding-inline-end: 0px;
 }
 
 .panel .hr {
-	margin-left: -10px;
-	margin-right: -10px;
+	margin-inline-start: -10px;
+	margin-inline-end: -10px;
 	height: 1px;
 	background-color: #000;
 	border-bottom: 1px solid #17212e;
@@ -4156,7 +4180,7 @@ html.responsive #ig_bottom {
 
 .greenlight_rate_blurb a.btn_medium {
 	text-decoration: none;
-	float: right;
+	float: inline-end;
 }
 
 .greenlight_rate_blurb p {
@@ -4179,13 +4203,14 @@ html.responsive #ig_bottom {
 	padding: 10px;
 	color: #c3c3c3;
 	width: 625px;
-	left: 0px;
+	inset-inline-start: 0px;
 }
 
 .greenlight_rate_blurb .user_callout {
-	float: right;
+	float: inline-end;
 	padding: 5px 8px;
-	margin: 20px 0 0 60px;
+	margin-block: 20px 0;
+	margin-inline: 60px 0;
 	border: 1px solid #afafaf;
 	color: #989898;
 	background-color: #ebebeb;
@@ -4206,7 +4231,7 @@ html.responsive #ig_bottom {
 }
 
 .greenlight_rate_blurb .user_callout .greeting {
-	margin-left: 48px;
+	margin-inline-start: 48px;
 }
 
 .greenlight_rate_blurb .hr {
@@ -4217,23 +4242,24 @@ html.responsive #ig_bottom {
 
 .greenlight_rate_blurb .x {
 	position: absolute;
-	right: 10px;
+	inset-inline-end: 10px;
 	top: 10px;
 }
 
 .greenlight_rate_blurb .user_callout .arrow {
 	position: absolute;
-	left: -35px;
+	inset-inline-start: -35px;
 	bottom: 1px;
 }
 
 .greenlight_rate_blurb .user_callout .num {
 	display: inline-block;
-	clear: left;
+	clear: inline-start;
 	font-size: 40px;
 	line-height: 38px;
 	font-weight: bold;
-	margin: 2px 5px 0 0;
+	margin-block: 2px 0;
+	margin-inline: 0 5px;
 }
 
 .greenlight_rate_blurb .user_callout .num_desc {
@@ -4247,7 +4273,7 @@ html.responsive #ig_bottom {
 }
 
 .greenlight_rate_blurb .check label {
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 
 #ig_bottom .sidebar .panel.owner.youritems {
@@ -4278,7 +4304,7 @@ div.ratings_bar > div {
 }
 
 .workshopItemRatings {
-	float: right;
+	float: inline-end;
 }
 
 div.negative_ratings_bar {
@@ -4338,19 +4364,19 @@ td.negative {
 }
 
 .shareIconContainer {
-	float: right;
+	float: inline-end;
 }
 
 .group_overview_announcement {
-	float: left;
+	float: inline-start;
 	width: 302px;
 	margin: 0 0 15px 0;
 }
 
 .group_overview_announcement.first {
-	border-right: 1px solid #000000;
-	padding-right: 12px;
-	margin-right: 14px;
+	border-inline-end: 1px solid #000000;
+	padding-inline-end: 12px;
+	margin-inline-end: 14px;
 }
 
 .group_overview_announcement_footer {
@@ -4377,8 +4403,8 @@ td.negative {
 
 .group_overview_announcement_fade {
 	position: absolute;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 	height: 36px;
 	/*background: url( 'https://community.fastly.steamstatic.com/public/images/groups/group_overview_announcement_fade.png' ) bottom left repeat-x;*/
@@ -4418,7 +4444,7 @@ td.negative {
 }
 
 .title .morelink {
-	float: right;
+	float: inline-end;
 	font-size: 11px;
 	text-transform: uppercase;
 }
@@ -4450,7 +4476,7 @@ td.negative {
 	font-style: italic;
 	position: absolute;
 	top: 26px;
-	left: 65px;
+	inset-inline-start: 65px;
 }
 
 .greenlight_home_vote_box .desc {
@@ -4458,7 +4484,7 @@ td.negative {
 	font-size: 14px;
 	position: absolute;
 	top: 45px;
-	left: 65px;
+	inset-inline-start: 65px;
 	width: 470px;
 }
 
@@ -4471,7 +4497,7 @@ td.negative {
 .greenlight_home_vote_box .iconHolder_default {
 	position: absolute;
 	top: 23px;
-	left: 15px;
+	inset-inline-start: 15px;
 	background: #3f3f3f;
 	border-radius: 2px;
 }
@@ -4483,7 +4509,7 @@ td.negative {
 .greenlight_home_vote_box .flag {
 	position: absolute;
 	top: -2px;
-	right: 15px;
+	inset-inline-end: 15px;
 	width: 79px;
 	height: 79px;
 	background-image: url(https://community.fastly.steamstatic.com/public/images/sharedfiles/ig/greenlight_banner_votes.png);
@@ -4529,7 +4555,7 @@ a.tooltip {
 .service_providers_dialog
 {
 	padding-top: 0px;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	padding-bottom: 10px;
 	margin-bottom: 8px;
 	max-height: 400px;
@@ -4558,7 +4584,7 @@ a.tooltip {
 .service_provider_row
 {
 	padding: 4px;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 	background-color: #323233;
 	margin-bottom: 1px;
 	line-height: 16px;
@@ -4576,7 +4602,7 @@ a.tooltip {
 
 .service_provider_info
 {
-	float: left;
+	float: inline-start;
 	font-size: 14px;
 	font-weight: bold;
 	color: #b1b1b1;
@@ -4584,7 +4610,7 @@ a.tooltip {
 
 .service_provider_desc
 {
-	padding-left: 23px;
+	padding-inline-start: 23px;
 	font-size: 12px;
 	color: #898989;
 	max-width: 500px;
@@ -4594,11 +4620,11 @@ a.tooltip {
 .service_provider_url
 {
 	visibility: hidden;
-	float: right;
+	float: inline-end;
 	text-transform: uppercase;
 	font-size: .75em;
 	line-height: 19px;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 .service_provider_url a.tooltip {
@@ -4658,11 +4684,11 @@ a.workshop_announcement_title:hover
 {
 	position: absolute;
 	display: block;
-	right: 8px;
+	inset-inline-end: 8px;
 	bottom: 0px;
 	background: #000;
-	padding-left: 30px;
-	padding-right: 2px;
+	padding-inline-start: 30px;
+	padding-inline-end: 2px;
 	padding-top: 2px;
 	padding-bottom: 2px;
 
@@ -4698,12 +4724,12 @@ a.readmore_link
 .announcement_content img
 {
 	max-width: 300px;
-	float: left;
-	margin-right: 10px;
+	float: inline-start;
+	margin-inline-end: 10px;
 }
 
 #greenlight_retired_modal  {
-	text-align: left;
+	text-align: start;
 }
 #greenlight_retired_modal .greenlight_home_vote_box {
 	margin: 0;
@@ -4758,10 +4784,11 @@ a.readmore_link
     box-shadow: inset 0px 0px 0px #0000;
 
     padding: 6px;
-    padding-left: 12px;
+    padding-inline-start: 12px;
 }
 .date_range_filter_dialog .date_range_filter_dates .date_range_word:not(first-child) {
-    margin: 0px 4px 0px 8px;
+    margin-block: 0px;
+    margin-inline: 8px 4px;
 
 }
 

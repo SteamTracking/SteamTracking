@@ -4,9 +4,9 @@
 	max-width: 638px;
 	width: 100%;
 	margin: 0;
-	float: left;
+	float: inline-start;
 	padding-bottom: 7px;
-	text-align: left;
+	text-align: start;
 }
 
 .apphub_Guides .subtitle_ctn {
@@ -24,7 +24,7 @@
 }
 
 .apphub_Guides #create_guide_btn {
-	margin-left: auto;
+	margin-inline-start: auto;
 	white-space: nowrap;
 	height: fit-content;
 }
@@ -42,7 +42,7 @@
 
 #ig_bottom
 {
-	text-align: left;
+	text-align: start;
 	width: 948px;
 }
 
@@ -115,7 +115,7 @@
 
 .apphub_ContentGuides .workshopItemCollection .workshopItemDetails
 {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	width: 100%;
 }
 
@@ -161,13 +161,13 @@
 
 .guides_home_section_title img
 {
-	float: left;
-	padding-right: 5px;
+	float: inline-start;
+	padding-inline-end: 5px;
 }
 
 .guides_home_view_all_link, .guides_home_view_all_link a, .guides_home_view_all_link a:visited
 {
-	float: right;
+	float: inline-end;
 	color: #e5e5e5;
 	text-transform: uppercase;
 	font-size: 11px;
@@ -183,13 +183,13 @@
 .integrated_guide
 {
 	width: 149px;
-	margin-left: 6px;
-	float: left;
+	margin-inline-start: 6px;
+	float: inline-start;
 }
 
 .integrated_guide.left
 {
-	margin-left: 0px;
+	margin-inline-start: 0px;
 }
 
 .integrated_guide_preview_image_holder
@@ -246,7 +246,7 @@
 	background-image: url('https://community.fastly.steamstatic.com/public/images//sharedfiles/workshop_section_arrow.png');
 	background-repeat: no-repeat;
 	background-position: bottom center;
-	margin-right: 0px;
+	margin-inline-end: 0px;
 }
 
 .guide_category_tags.collapsed .rightSectionBrowseBarArrow
@@ -256,7 +256,7 @@
 	background-image: url('https://community.fastly.steamstatic.com/public/images//sharedfiles/workshop_dateselect_arrow.png');
 	background-repeat: no-repeat;
 	background-position: top center;
-	margin-right: 0px;
+	margin-inline-end: 0px;
 }
 .guide_category_tags label {
 	color: #fff;
@@ -287,9 +287,9 @@
 	display: block;
 	height: 56px;
 	width: 202px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 	margin-bottom: 8px;
-	float: left;
+	float: inline-start;
 	background: #464646; /* Old browsers */
 	background: -webkit-linear-gradient( top, #17435c 5%, #21658a 95%);
 	background: linear-gradient( to bottom, #17435c 5%, #21658a 95%);
@@ -307,10 +307,10 @@
 
 .guide_home_category_selection .guide_category_icon
 {
-	float: left;
+	float: inline-start;
 	height: 56px;
 	width: 56px;
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 
 .guide_home_category_selection:hover .guide_category_icon
@@ -347,8 +347,8 @@
 .guideInfo
 {
 	margin-top: 12px;
-	margin-left: -2px;
-	left: -5px;
+	margin-inline-start: -2px;
+	inset-inline-start: -5px;
 	max-width: 275px;
 	width: 100%;
 	height: 112px;
@@ -365,7 +365,7 @@
 			font-size: 17px;
 	color: white;
 	padding-top: 28px;
-	padding-left: 12px;
+	padding-inline-start: 12px;
 }
 #your_guides .rightDetailsBlock p {
 	color: #c6d4df;

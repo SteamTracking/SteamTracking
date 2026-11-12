@@ -102,7 +102,7 @@ html.GamepadMode .profile_small_header_text h2 {
 
 html.GamepadMode .profile_small_header_avatar {
 	position: unset;
-	left: unset;
+	inset-inline-start: unset;
 }
 
 html.GamepadMode .profile_small_header_avatar .playerAvatar.medium {
@@ -117,7 +117,8 @@ html.GamepadMode .profile_small_header_avatar .playerAvatar.medium img {
 
 html.GamepadMode .profile_small_header_additional {
 	position: unset;
-	margin: -16px 0px -16px auto;
+	margin-block: -16px;
+	margin-inline: auto 0px;
 }
 
 html.GamepadMode .profile_small_header_additional .gameLogo {
@@ -427,8 +428,8 @@ html.GamepadMode .apphub_Card {
 	box-shadow: var(--gpShadow-Medium);
 	border: none;
 	flex: auto;
-	margin-right: 6px;
-	margin-left: 6px;
+	margin-inline-end: 6px;
+	margin-inline-start: 6px;
 	margin-bottom: 12px;
 }
 
@@ -540,7 +541,7 @@ html.GamepadMode #ig_bottom .rightSectionDivider,
 html.GamepadMode .panel .hr {
 	border: none;
 	background-color: var(--gpBackground-Neutral-LightSofter);
-	left: -16px;
+	inset-inline-start: -16px;
 }
 
 html.GamepadMode .thread .rightcol .rightbox .content {
@@ -672,7 +673,7 @@ html.GamepadMode .commentthread_header_label {
 }
 
 html.GamepadMode .commentthread_count_label {
-	margin-right: unset;
+	margin-inline-end: unset;
 }
 
 html.GamepadMode .commentthread_user_avatar a {
@@ -824,7 +825,8 @@ html.GamepadMode .commentthread_entry {
 html.GamepadMode .commentthread_subscribe_ctn {
 	display: inline-flex;
 	align-items: center;
-	padding: 4px 12px 4px 4px;
+	padding-block: 4px;
+	padding-inline: 4px 12px;
 	gap: 4px;
 	border-radius: var(--gpCorner-Medium);
 	transition: background-color 0.2s ease;

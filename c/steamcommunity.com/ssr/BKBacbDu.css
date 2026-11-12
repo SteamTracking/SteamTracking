@@ -1,0 +1,97 @@
+@property --block-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #8b6;
+}
+.ZIwL9PunOoE- {
+  --block-opacity: 0.06;
+  pointer-events: none;
+  position: absolute;
+  overflow: hidden;
+}
+.fzkUtBXYOMU- {
+  inset-block: 0;
+  z-index: -1;
+  width: 100vw;
+  left: 50%;
+  transform: translate(-50%);
+}
+._7FOdg52DOo4- {
+  --block-opacity: 0.12;
+  --block-color: var(--footer-block-color, #8b6);
+  z-index: -1;
+  transition: --block-color 0.4s ease-out;
+  inset: 0;
+}
+.TL-9H7COXIE- {
+  display: var(--blocks-display, none);
+  inset-inline-start: calc(var(--origin-x) + var(--block-x));
+  top: calc(var(--origin-y) + var(--block-y));
+  width: var(--block-size);
+  height: var(--block-size);
+  background: color-mix(
+    in srgb,
+    var(--block-color) calc(var(--block-opacity) * 100%),
+    transparent
+  );
+  animation:
+    I0qxKWpna9Q- var(--cycle-duration) ease-in-out
+      calc(var(--block-delay) - var(--clock-offset)) infinite both,
+    c9j-SjotXaY- var(--wander-duration) ease-in-out
+      calc(0s - var(--clock-offset)) infinite alternate;
+  position: absolute;
+}
+@media (prefers-reduced-motion: reduce) {
+  .TL-9H7COXIE- {
+    animation: none;
+  }
+}
+.M2t5cVjg3t0- {
+  display: var(--blocks-display, none);
+  inset-inline-start: calc(var(--origin-x) + var(--pixel-x));
+  top: calc(var(--origin-y) + var(--pixel-y));
+  width: 1px;
+  height: 1px;
+  animation:
+    Igz0cYD61d4- var(--flicker-duration) ease-in-out
+      calc(var(--flicker-delay) - var(--clock-offset)) infinite,
+    c9j-SjotXaY- var(--wander-duration) ease-in-out
+      calc(0s - var(--clock-offset)) infinite alternate;
+  background: #d8f5c2b3;
+  position: absolute;
+  box-shadow: 0 0 3px #d8f5c280;
+}
+@media (prefers-reduced-motion: reduce) {
+  .M2t5cVjg3t0- {
+    animation: none;
+  }
+}
+@keyframes I0qxKWpna9Q- {
+  0%,
+  to {
+    opacity: 0;
+    transform: translate(var(--block-dx), var(--block-dy))
+      rotate(var(--block-rotate));
+  }
+  50% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes c9j-SjotXaY- {
+  0% {
+    translate: 0;
+  }
+  to {
+    translate: var(--wander-x) var(--wander-y);
+  }
+}
+@keyframes Igz0cYD61d4- {
+  0%,
+  to {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}

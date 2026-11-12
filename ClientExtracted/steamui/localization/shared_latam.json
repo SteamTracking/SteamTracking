@@ -4186,7 +4186,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Los datos del histograma se basan en los informes de velocidad de fotogramas para este juego facilitados por clientes en %1$s que aceptaron proporcionar dichos datos.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Distribución de la velocidad de fotogramas",
     "GamePerformanceStats_Framerate": "Velocidad de fotogramas",
-    "GamePerformanceStats_SessionLabel": "% Sesión",
+    "GamePerformanceStats_SessionLabel": "% de muestras",
     "GamePerformanceStats_Chart_NoData": "Una gráfica estará disponible después de recopilar suficientes datos.",
     "NewToolTitleSuffix_Beta": "BETA",
     "DynamicLinkType_WorkshopItem": "Un artículo del Workshop para %1$s",
@@ -4213,6 +4213,11 @@
     "GamePerformanceStats_StillGatheringData": "Steam aún está recopilando datos sobre la velocidad de fotogramas de \"%1$s\" en %2$s.",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam aún está recopilando datos sobre la velocidad de fotogramas de este juego en %1$s.",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam aún está recopilando datos sobre la velocidad de fotogramas de este juego.",
-    "GamePerformanceStats_FrameRateDistribution": "Esta gráfica de velocidad de fotogramas se basa en datos anonimizados de juego de clientes que aceptaron participar y que juegan \"%1$s\" en %2$s.",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Esta gráfica de velocidad de fotogramas se basa en datos anonimizados de juegos de clientes que aceptaron participar y que juegan este título en %1$s."
+    "GamePerformanceStats_FrameRateDistribution": "Esta gráfica presenta muestras de clientes que aceptaron compartir datos anónimos al jugar \"%1$s\" en %2$s. Cada barra muestra el porcentaje de muestras a esa velocidad de fotogramas.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Esta gráfica presenta muestras de clientes que aceptaron compartir datos anónimos al jugar este título en %1$s. Cada barra muestra el porcentaje de muestras a esa velocidad de fotogramas.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "Este juego requiere que la compatibilidad del control se active manualmente con los ajustes dentro del juego.",
+    "GameFrameRateReporting_Details_HowToChange": "Si deseas cambiar la configuración más adelante, puedes encontrarla en <1>\"Configuraciones de tu cuenta de Steam\" > \"Datos y navegación\"<1>.",
+    "GamePerformanceStats_MoreDetailsTitle": "Más detalles",
+    "GamePerformanceStats_MoreDetails_Filtering": "Solo se incluyen los datos recopilados con el límite de fotogramas predeterminado de %1$s de %2$s FPS. El tiempo de inactividad y las muestras no válidas se filtran. Se recopilan varias muestras de cada sesión de juego.",
+    "GamePerformanceStats_MoreDetails_VSync": "Los espacios en la gráfica (p. ej., entre %1$s y %2$s FPS) pueden ser causados por VSync, que sincroniza la entrega de fotogramas con la frecuencia de actualización para impedir el rasgado de imagen. Esto puede provocar que las muestras se concentren en %1$s y %2$s FPS, incluso cuando la velocidad media de fotogramas caiga entre ellos. Este es el comportamiento esperado de VSync y, aunque puede afectar el ritmo de los fotogramas, no necesariamente causa tirones significativos."
 }

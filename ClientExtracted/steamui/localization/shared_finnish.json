@@ -4185,7 +4185,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Histogrammin tiedot perustuvat tästä pelistä laitteella %1$s saatuihin kuvataajuusraportteihin. Ne on saatu asiakkailta, jotka antoivat suostumuksensa kuvataajuustietojen keräämiseen.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Kuvataajuuden jakautuminen",
     "GamePerformanceStats_Framerate": "Kuvataajuus",
-    "GamePerformanceStats_SessionLabel": "% pelikerroista",
+    "GamePerformanceStats_SessionLabel": "% näytteistä",
     "GamePerformanceStats_Chart_NoData": "Kaavio julkaistaan, kun tietoa on kerätty riittävästi",
     "NewToolTitleSuffix_Beta": "BETA",
     "DynamicLinkType_WorkshopItem": "Pelin %1$s Workshop-luomus",
@@ -4213,6 +4213,11 @@
     "GamePerformanceStats_StillGatheringData": "Steam kerää edelleen pelin %1$s kuvataajuustietoja laitteella %2$s.",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam kerää edelleen pelin kuvataajuustietoja laitteella %1$s.",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam kerää edelleen pelin kuvataajuustietoja.",
-    "GamePerformanceStats_FrameRateDistribution": "Kuvataajuuskaavio perustuu anonymisoituun pelidataan asiakkailta, jotka ovat hyväksyneet tietojensa keräämisen ja pelaavat peliä %1$s laitteella %2$s.",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Kuvataajuuskaavio perustuu anonymisoituun pelidataan asiakkailta, jotka ovat hyväksyneet tietojensa keräämisen ja pelaavat peliä laitteella %1$s."
+    "GamePerformanceStats_FrameRateDistribution": "Diagrammissa näytetään kuvataajuuden näytteet pelille %1$s laitteella %2$s. Tiedot on saatu asiakkailta, jotka ovat hyväksyneet tietojen jakamisen anonyymisti. Kukin palkki näyttää näytteiden prosenttimäärän kyseisellä kuvataajuudella.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Diagrammissa näytetään kuvataajuuden näytteet tälle pelille laitteella %2$s. Tiedot on saatu asiakkailta, jotka ovat hyväksyneet tietojen jakamisen anonyymisti. Kukin palkki näyttää näytteiden prosenttimäärän kyseisellä kuvataajuudella.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "Peli vaatii ohjaintuen manuaalista käyttöönottoa pelinsisäisissä asetuksissa.",
+    "GameFrameRateReporting_Details_HowToChange": "Voit halutessasi muuttaa asetusta myöhemmin <1>Steam-tiliasetusten kohdassa Tiedot ja selaus</1>.",
+    "GamePerformanceStats_MoreDetailsTitle": "Lisätietoja",
+    "GamePerformanceStats_MoreDetails_Filtering": "Dataa kerätään ainoastaan niiltä käyttäjiltä, jotka käyttävät laitteen %1$s oletusarvoista kuvataajuuden rajaa (%2$s FPS). Toimeton aika ja virheelliset näytteet suodatetaan pois. Kustakin pelisessiosta kerätään useita näytteitä.",
+    "GamePerformanceStats_MoreDetails_VSync": "Suuret ailahtelut diagrammissa (esim. välillä %1$s–%2$s FPS) voivat johtua VSync-ominaisuudesta, joka synkronoi kuvaruutujen saapumisen näytön virkistystaajuuden kanssa repeämisen välttämiseksi. Tämä voi johtaa %1$s FPS:n ja %2$s FPS:n näyterykelmiin, vaikka pelin keskimääräinen kuvataajuus olisi niiden välillä. Tämä on odotettua toimintaa VSynciltä, ja vaikka se voi vaikuttaa kuvan tahdistamiseen, se ei välttämättä aiheuta huomattavaa nykimistä."
 }

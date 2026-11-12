@@ -1,0 +1,202 @@
+div.Yld-UJVw0gs-,
+div._6R22gkpEXq0-,
+div.RbY0ql6pF5c-,
+h1.Yld-UJVw0gs-,
+h2._6R22gkpEXq0-,
+h3.RbY0ql6pF5c- {
+  color: #fff;
+  clear: both;
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+div.Yld-UJVw0gs-,
+h1.Yld-UJVw0gs- {
+  font-size: clamp(15px, 5.5vw, 32px);
+  font-weight: 500;
+  line-height: clamp(17px, 6vw, 35px);
+}
+div._6R22gkpEXq0-,
+h2._6R22gkpEXq0- {
+  font-size: clamp(12px, 4.5vw, 26px);
+  font-weight: 400;
+  line-height: clamp(15px, 5vw, 29px);
+}
+div.RbY0ql6pF5c-,
+h3.RbY0ql6pF5c- {
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 22px;
+}
+.QGFP3JDyYcc- {
+  color: #969696;
+}
+.QGFP3JDyYcc-:hover {
+  color: #fff;
+}
+.Q-doE-Oo5lk- {
+  color: #7e8391;
+  padding: 4px;
+  font-size: 10px;
+  top: -1px;
+}
+a.D2lp-s8nCAk- {
+  color: #fff;
+  background-color: #2681da;
+  border-radius: 3px;
+  margin: 4px 0;
+  padding: 6px 20px;
+  font-size: 14px;
+  display: inline-block;
+}
+a.D2lp-s8nCAk- span {
+  color: #fff;
+  padding-bottom: 6px;
+}
+a.tExF7yi7GM8- {
+  color: #0e141b;
+  background-color: #fff;
+  border-radius: 28px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease-out;
+  display: inline-block;
+}
+a.tExF7yi7GM8-:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px #0b1b2933;
+}
+a.tExF7yi7GM8- span {
+  color: #0e141b;
+  padding-bottom: 6px;
+}
+.D2lp-s8nCAk-:hover {
+  color: #fff;
+  background-color: #3691fa;
+  box-shadow: 2px 2px 8px #00000080;
+}
+ul.LMmkqTQcXmY- {
+  margin-top: 14px;
+  margin-bottom: 0;
+  padding-inline-start: 40px;
+  line-height: 21px;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+ol.-ftFr9SCAOY- {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  padding-inline-start: 3em;
+}
+iframe.-teptmiAoH4- {
+  width: 100%;
+  height: 190px;
+}
+iframe.YhJL2MKYWd8- {
+  width: 100%;
+  height: 360px;
+}
+.-yzBBQ5kAHk- {
+  flex-grow: 2;
+  flex-basis: 0;
+}
+.DetailPageExample ._6R22gkpEXq0- {
+  font-size: 10px;
+  line-height: 10px;
+}
+.DetailPageExample .Yld-UJVw0gs- {
+  font-size: 11px;
+  line-height: 11px;
+}
+.SaleSectionCtn.text_section ._3qv-mCCE8jA-,
+.SaleSectionCtn.text_section .mHlcWnyUnK0- {
+  color: #c3c4d9;
+  font-size: clamp(13px, 1.3vw, 16px);
+}
+.SaleSectionCtn.text_section ._3qv-mCCE8jA- .yffCiHvxrYk-,
+.SaleSectionCtn.text_section .mHlcWnyUnK0- .yffCiHvxrYk- {
+  margin: 6px 0;
+}
+.SaleSectionCtn.text_section ._3qv-mCCE8jA- .yfheHs-klX8-,
+.SaleSectionCtn.text_section .mHlcWnyUnK0- .yfheHs-klX8- {
+  border: none;
+  width: 60%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+@media screen and (width <= 800px) {
+  .SaleSectionCtn.text_section ._3qv-mCCE8jA- .yfheHs-klX8-,
+  .SaleSectionCtn.text_section .mHlcWnyUnK0- .yfheHs-klX8- {
+    width: 100%;
+  }
+}
+.SaleSectionCtn.text_section ._3qv-mCCE8jA- .BB_TableData,
+.SaleSectionCtn.text_section .mHlcWnyUnK0- .BB_TableData {
+  font-size: 18px;
+}
+@media screen and (width <= 800px) {
+  .SaleSectionCtn.text_section ._3qv-mCCE8jA- .BB_TableData,
+  .SaleSectionCtn.text_section .mHlcWnyUnK0- .BB_TableData {
+    font-size: 16px;
+  }
+}
+@media screen and (width <= 600px) {
+  .SaleSectionCtn.text_section ._3qv-mCCE8jA- .BB_TableData,
+  .SaleSectionCtn.text_section .mHlcWnyUnK0- .BB_TableData {
+    font-size: 13px;
+  }
+}
+.SaleSectionCtn.text_section ._3qv-mCCE8jA- img,
+.SaleSectionCtn.text_section .mHlcWnyUnK0- img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+.SaleSectionCtn.text_section ._3qv-mCCE8jA- .CapsuleImageCtn img,
+.SaleSectionCtn.text_section .mHlcWnyUnK0- .CapsuleImageCtn img {
+  width: 100%;
+}
+.SaleSectionCtn.text_section ._3qv-mCCE8jA- .QGFP3JDyYcc-,
+.SaleSectionCtn.text_section .mHlcWnyUnK0- .QGFP3JDyYcc- {
+  color: #fff;
+}
+.u-DF8k7eUpw- {
+  display: inline-block;
+}
+.g5K2la-jusM- {
+  width: 1em;
+  height: 1em;
+  margin-inline-end: 8px;
+  display: inline-block;
+}
+.knEtaH7zRG4- {
+  white-space: pre-wrap;
+}
+.N90Ep0UC0gE- {
+  height: 32px;
+}
+.lV39hzwSIkY- .SliderBody {
+  background: #000;
+}
+.lV39hzwSIkY- .carousel__inner-slide,
+.lV39hzwSIkY- .carousel__inner-slide > div {
+  height: 100%;
+}
+.lV39hzwSIkY- button.CarouselBtnRight,
+.lV39hzwSIkY- button.CarouselBtnLeft {
+  opacity: 0.1;
+  background-color: #0006;
+  height: 50%;
+  transition: opacity 0.2s ease-in;
+  top: 25%;
+}
+.lV39hzwSIkY- button.CarouselBtnRight {
+  inset-inline-end: 0;
+}
+.lV39hzwSIkY- button.CarouselBtnLeft {
+  inset-inline-start: 0;
+}
+.lV39hzwSIkY-:hover button.CarouselBtnRight,
+.lV39hzwSIkY-:hover button.CarouselBtnLeft {
+  opacity: 1;
+}

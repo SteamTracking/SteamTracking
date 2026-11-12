@@ -4,7 +4,7 @@ body {
 }
 
 .modal_box h1 {
-	padding-left:20px;
+	padding-inline-start:20px;
 	font-size: 36px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
@@ -12,17 +12,17 @@ body {
 		}
 
 .modal_box p {
-	padding-left:20px;
+	padding-inline-start:20px;
 	margin: 0px;
 }
 
 
 .modal_buttons a.btn_white {
-	float: left;
+	float: inline-start;
 }
 
 .modal_buttons a.btn_white.leftbtn {
-	margin-right: 16px;	
+	margin-inline-end: 16px;	
 	
 }
 
@@ -47,14 +47,14 @@ body {
 
 .auth_message_area, .twofactorauth_message_area {
 	position: relative;
-	padding-left: 70px;
+	padding-inline-start: 70px;
 	min-height: 92px;
 }
 
 .auth_icon, .twofactorauth_icon {
 	position: absolute;
 	top: 16px;
-	left: 0px;
+	inset-inline-start: 0px;
 	width: 67px;
 	height: 48px;
 
@@ -87,7 +87,7 @@ body {
 	height: 62px;
 	width: 53px;
 
-	left: 12px;
+	inset-inline-start: 12px;
 	top: 6px;
 }
 
@@ -134,7 +134,7 @@ body {
 input.authcode_entry_input, input.twofactorauthcode_entry_input {
 	border: none;
 	background-color: transparent;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 	margin-top: 2px;
 	color: #cdcac1;	
 	outline: none;
@@ -204,7 +204,7 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 }
 
 .twofactorauth_button h3, .twofactorauth_button h5 {
-	margin-left: 16px;
+	margin-inline-start: 16px;
 }
 
 .auth_button h5, .twofactorauth_button h5 {
@@ -219,11 +219,11 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 
 
 .modal_buttons .auth_button, .modal_buttons .twofactorauth_button {
-	float: left;
+	float: inline-start;
 }
 
 .modal_buttons a.auth_button.leftbtn, .modal_buttons a.twofactorauth_button.leftbtn {
-	margin-right: 16px;		
+	margin-inline-end: 16px;		
 }
 
 .modal_box_ctn a.auth_button {
@@ -250,7 +250,7 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 #friendly_name_box{
     position: absolute; 
     bottom: 22px; 
-    left: 22px;
+    inset-inline-start: 22px;
 }
 .oauthLoginButton {
 	margin-top: 12px;
@@ -271,7 +271,8 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 		font-weight: 200; /* thin */
 
 				font-weight: normal;
-		padding: 24px 0px 0px 18px;
+		padding-block: 24px 0px;
+		padding-inline: 18px 0px;
 	}
 	
 	.OpenID_MainHeader h2{
@@ -281,7 +282,8 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 		font-weight: 200; /* thin */
 
 				font-weight: normal;
-		padding: 10px 8px 8px 0px;
+		padding-block: 10px 8px;
+		padding-inline: 0px 8px;
 		height: 45px;
 	}
 	
@@ -292,9 +294,9 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 }
 .OpenID_LowerContents_right {
 	width: 436px;
-	float: left;
+	float: inline-start;
 	padding: 0px 18px 0px 18px;
-	border-left: 1px solid #374862;
+	border-inline-start: 1px solid #374862;
 }
 	.OpenID_LowerContents_right h2 {
 		color: #ffffff;
@@ -305,7 +307,7 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 
 .OpenID_LowerContents_left {
 	width: 436px;
-	float: left;
+	float: inline-start;
 	padding: 0px 18px 0px 18px;
 }
 
@@ -324,11 +326,11 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 	background-color: #1c1c1c;
 	border-radius: 3px;
 	padding: 8px;
-	margin-left: -8px;
-	margin-right: -8px;
+	margin-inline-start: -8px;
+	margin-inline-end: -8px;
 }
 	.OpenID_UserName {
-		float: left;
+		float: inline-start;
 	}
 	.OpenID_loggedInName {
 		color: #86b5d9;
@@ -339,12 +341,12 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 	.OpenID_loggedInAccount {
 	}
 	.playerAvatar {
-		float: left;
-		margin-right: 12px;
+		float: inline-start;
+		margin-inline-end: 12px;
 	}
 	
 .OpenID_Logout {
-	float: right;
+	float: inline-end;
 	text-decoration:underline;
 	margin-top: 21px;
 }
@@ -355,7 +357,7 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 
 .OpenID_list
 {
-	float: left;
+	float: inline-start;
 	font-size: 13px;
 	width: 370px;
 }

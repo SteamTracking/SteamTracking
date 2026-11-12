@@ -1,0 +1,343 @@
+.hZ-dKtI-DOE- {
+  background-image: radial-gradient(at top, #ffffff1a 10%, #fff0 80%);
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px;
+  display: flex;
+}
+@media screen and (width <= 600px) {
+  .hZ-dKtI-DOE- {
+    padding: 4px;
+  }
+}
+._48uVrbfJQEM-,
+.Lt6SJZ-PR1A-,
+.vmIVedNuofw-,
+.gFqPN18pEI8- {
+  border-radius: 4px;
+  flex-flow: wrap;
+  margin-inline-end: 10px;
+  display: flex;
+}
+._48uVrbfJQEM-,
+.vmIVedNuofw-,
+.Lt6SJZ-PR1A- {
+  background-color: #1e212680;
+  padding: 10px;
+}
+@media screen and (width <= 910px) {
+  ._48uVrbfJQEM-,
+  .vmIVedNuofw-,
+  .Lt6SJZ-PR1A- {
+    padding: 0;
+  }
+  ._48uVrbfJQEM- .yGT3R-m6gZk- {
+    margin-inline-start: 0;
+  }
+}
+.Lt6SJZ-PR1A- {
+  margin-inline-end: 0;
+}
+@media screen and (width <= 910px) {
+  .Lt6SJZ-PR1A- .yGT3R-m6gZk- {
+    margin-inline-start: 0;
+    padding: 6px 11px 8px;
+  }
+}
+.vmIVedNuofw- {
+  white-space: nowrap;
+  align-items: center;
+  margin-inline-end: 0;
+  display: flex;
+}
+._9ZhxGmQLgIg- {
+  vertical-align: bottom;
+  width: 22px;
+  height: 22px;
+  margin-inline-end: 10px;
+}
+@media screen and (width <= 910px) {
+  ._9ZhxGmQLgIg- {
+    margin-inline: 0;
+    inset-inline-start: 15px;
+  }
+}
+.-I4fAFaLKxA- {
+  align-items: center;
+  margin-top: 10px;
+  font-size: 12px;
+}
+.-I4fAFaLKxA- span {
+  white-space: nowrap;
+  padding-inline: 2px 10px;
+}
+.bPmDLn-lEoc- {
+  justify-content: center;
+}
+@media screen and (width <= 700px) {
+  ._6txFjo9b8Zk- {
+    display: none;
+  }
+  .bPmDLn-lEoc- {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+  }
+  ._6y4EcbHPzTE- {
+    display: none !important;
+  }
+}
+.LQrwY5m9KjE- {
+  height: 33px;
+  padding-bottom: 8px;
+}
+@media screen and (width <= 700px) {
+  .LQrwY5m9KjE- {
+    height: 30px;
+    padding-top: 2px;
+    padding-inline: 0 !important;
+  }
+}
+.HHtwpv2BsZo- {
+  text-align: center;
+  min-height: 30px;
+  padding-top: 10px;
+}
+.tdXc-z1nXGI- {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #909090;
+  resize: none;
+  box-sizing: border-box;
+  background-color: #0003;
+  border: 1px solid #000;
+  border-radius: 3px;
+  outline: none;
+  flex-grow: 10;
+  width: 485px;
+  height: 32px;
+  padding: 8px;
+  font-family:
+    Motiva Sans,
+    Motiva Sans fallback,
+    sans-serif;
+  line-height: 14px;
+  overflow: hidden;
+}
+@media screen and (width <= 700px) {
+  .tdXc-z1nXGI- {
+    min-width: 250px;
+    min-height: 80px;
+  }
+}
+.D0L0mwSYCaE- {
+  margin-inline-end: 12px;
+  margin-top: 1px;
+  fill: #ffffffa8;
+  width: 19px;
+  height: 19px;
+  margin-inline-start: -10px;
+}
+@media screen and (width <= 500px) {
+  .D0L0mwSYCaE- {
+    margin-inline-end: -7px;
+  }
+}
+.SGi7-TqE4Rs- {
+  height: 18px;
+  margin-top: 0;
+}
+.uPjG9NaDuUg- {
+  margin-top: 1px;
+  margin-inline-start: -10px;
+  margin-bottom: -8px;
+  height: 30px;
+  margin-inline-end: 4px;
+}
+@media screen and (width <= 700px) {
+  .uPjG9NaDuUg- {
+    margin: 0;
+    padding-top: 0;
+    height: 26px !important;
+  }
+}
+.G9e5dN5XFKM- {
+  text-align: start;
+  background-color: #3b3f4880;
+  border-radius: 3px;
+  margin-top: 16px;
+  padding: 10px;
+}
+@media screen and (width <= 700px) {
+  .G9e5dN5XFKM- {
+    background: 0 0;
+    margin-top: 2px;
+    padding: 0;
+  }
+}
+.Cx2zVOdOEwU- {
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px 8px;
+  display: flex;
+}
+@media screen and (width <= 700px) {
+  .Cx2zVOdOEwU- {
+    flex-direction: column;
+  }
+}
+.Cx2zVOdOEwU- .rk6-75sKTfs- {
+  margin-bottom: 0;
+  padding: 0 8px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.D4J8JhjevEo-:not(:first-child) {
+  margin-inline-start: 8px;
+}
+@media screen and (width <= 700px) {
+  .D4J8JhjevEo-:not(:first-child) {
+    margin-inline-start: 2px;
+  }
+}
+.D4J8JhjevEo- > img {
+  vertical-align: bottom;
+  height: 33px;
+  padding-bottom: 8px;
+}
+@media screen and (width <= 700px) {
+  .D4J8JhjevEo- > img {
+    height: 30px;
+    padding: 5px 10px;
+  }
+}
+.D4J8JhjevEo- > span {
+  line-height: 33px;
+}
+@media screen and (width <= 700px) {
+  .D4J8JhjevEo- > span {
+    display: none;
+  }
+}
+.OobKWZLrT2Q-,
+.zoD9wRMnlzg- {
+  color: #399aec;
+  margin-inline: 5px 12px;
+  height: 20px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  padding-top: 7px;
+  font-size: 17px;
+  font-weight: 800;
+  display: flex;
+  position: relative;
+}
+@media screen and (width <= 910px) {
+  .OobKWZLrT2Q-,
+  .zoD9wRMnlzg- {
+    margin-inline-end: 6px;
+  }
+}
+.zoD9wRMnlzg- {
+  display: flex;
+}
+.zoD9wRMnlzg- > svg {
+  margin-inline: -1px 5px;
+  fill: #399aec;
+  width: 26px;
+  height: 26px;
+  margin-top: -1px;
+}
+@media screen and (width <= 500px) {
+  .zoD9wRMnlzg- > svg {
+    display: none;
+  }
+}
+.yGT3R-m6gZk- {
+  white-space: nowrap;
+  margin: 5px;
+  display: flex;
+}
+.yGT3R-m6gZk- .SVGIcon_ChatBubble {
+  fill: #ffffffa8;
+  width: 21px;
+  height: 21px;
+  display: none;
+}
+.yGT3R-m6gZk- .x25qTcshK-4- {
+  line-height: 22px;
+}
+@media screen and (width <= 500px) {
+  .yGT3R-m6gZk- .x25qTcshK-4- {
+    display: none;
+  }
+  .yGT3R-m6gZk- .SVGIcon_ChatBubble {
+    display: block;
+  }
+}
+.LQZsciPFbvE-,
+.oo8VFYEMJNU- {
+  bottom: 3px;
+  width: 32px;
+  height: 32px;
+  margin-bottom: -4px;
+  position: absolute;
+  inset-inline-start: 9px;
+  transform: scaleY(-1);
+}
+@media screen and (width <= 500px) {
+  .LQZsciPFbvE-,
+  .oo8VFYEMJNU- {
+    margin-bottom: -2px;
+  }
+}
+.LQZsciPFbvE- {
+  fill: #ffffffa8;
+}
+.oo8VFYEMJNU- {
+  fill: #9cccf5;
+}
+._6SdwjlcjQF4-,
+._8m3-fAAnr8I- {
+  margin-inline-end: 5px;
+  margin-top: -6px;
+  margin-bottom: -4px;
+  width: 32px;
+  height: 32px;
+  margin-inline-start: -20px;
+}
+@media screen and (width <= 500px) {
+  ._6SdwjlcjQF4-,
+  ._8m3-fAAnr8I- {
+    margin-top: initial;
+    margin-inline-start: initial;
+    bottom: 3px;
+    margin-bottom: -1px;
+    position: absolute;
+    inset-inline-start: 9px;
+  }
+}
+._6SdwjlcjQF4- {
+  fill: #ffffffa8;
+}
+._8m3-fAAnr8I- {
+  fill: #9cccf5;
+}
+.kg-spn-7ESc- {
+  margin-inline-end: 2px;
+  margin-top: -6px;
+  margin-bottom: -4px;
+  fill: #399aec;
+  width: 36px;
+  height: 36px;
+  margin-inline-start: -5px;
+}
+@media screen and (width <= 500px) {
+  .kg-spn-7ESc- {
+    display: none;
+  }
+}
+.wErgDaiILYk- {
+  background-color: #399aec;
+}
+/*$vite$:1*/

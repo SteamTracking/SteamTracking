@@ -452,7 +452,7 @@ body.Steam3000Theme html.responsive.GamepadMode .profile_rightcol {
 
 body.Steam3000Theme .profile_count_link.ellipsis {
     border: 1px dotted #20d038;
-    padding-left: 5px;
+    padding-inline-start: 5px;
     padding-bottom: 5px;
     margin-bottom: 8px;
 }
@@ -639,7 +639,8 @@ body.profile_page .responsive_page_template_content {
 .profile_header {
 	position: relative;
 	max-width: 976px;
-	padding: 24px 12px 0 24px;
+	padding-block: 24px 0;
+	padding-inline: 24px 12px;
 	margin: 0 auto;
 }
 
@@ -656,7 +657,8 @@ body.profile_page .responsive_page_template_content {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-	padding: 0 18px 0 36px;
+	padding-block: 0;
+	padding-inline: 36px 18px;
 }
 
 .profile_header_summary {
@@ -687,9 +689,9 @@ body.profile_page .responsive_page_template_content {
 .playerAvatar.profile_header_size .playerAvatarAutoSizeInner {
 	position: absolute;
 	top: 2px;
-	right: 2px;
+	inset-inline-end: 2px;
 	bottom: 2px;
-	left: 2px;
+	inset-inline-start: 2px;
 }
 
 .playerAvatar.profile_header_size .playerAvatarAutoSizeInner .profile_avatar_frame {
@@ -709,7 +711,7 @@ body.profile_page .responsive_page_template_content {
 	background-color: rgba( 0, 0, 0, 0.2 );
 }
 .profile_text_content_check > .profile_text_content_check_controls {
-	float: right;
+	float: inline-end;
 }
 .profile_text_content_check > .profile_text_content_check_controls > span {
 	cursor: pointer;
@@ -799,13 +801,15 @@ body.profile_page .responsive_page_template_content {
 	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0IyODU2QjE4MThEMTFFNEIxNUZBOUMwRkZDMkI3Q0IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0IyODU2QjI4MThEMTFFNEIxNUZBOUMwRkZDMkI3Q0IiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3QjI4NTZBRjgxOEQxMUU0QjE1RkE5QzBGRkMyQjdDQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3QjI4NTZCMDgxOEQxMUU0QjE1RkE5QzBGRkMyQjdDQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pqu1o0MAAAERSURBVHjapFOBDYIwECyEAWQAEkYoG+gE6ATIZjCBOoFsABtowgB2A7w3VywVDMZPPi3P3X3/+w2GYVCu9X1/xFLAt2pqDbxOkqRyg4EVADHFcoJruIAucEPcBp7DRbyDHyB0HwVIbuESLPGzUzPmJJE1ExEr0BKzQ9AQvCdYMeOZcTnNVfaIZSFr1gQZJ2Hu7LXdEFNKTLghG1bZmhy7OPtJSSxR+lRE7PbBr5dHDtSySYJTxA/jNUvqvLH7BmLxjMCLE84JeLb58m8USL3jL2X9EA45Ybn63YTTiEAtE4a69VomsXL99eIgEfhgSbHX4Pcg2UljH64cV9uL2CNrklN79WsekyFh+TH985yfAgwA6tSJc+P+wyYAAAAASUVORK5CYII=' );
 	background-repeat: no-repeat;
 	background-position: center;
-	padding: 5px 10px 10px 0px;
+	padding-block: 5px 10px;
+	padding-inline: 0px 10px;
 	width: 32px;
 	height: 32px;
 }
 .profile_header_valve_employee_desc {
 	display: inline-block;
-	padding: 5px 10px 10px 48px;
+	padding-block: 5px 10px;
+	padding-inline: 48px 10px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 
@@ -1053,7 +1057,7 @@ background-color: transparent;
 
 .profile_leftcol {
 	width: 652px;
-	float: left;
+	float: inline-start;
 }
 
 .profile_rightcol {
@@ -1063,12 +1067,12 @@ background-color: transparent;
 	padding: 10px;
 	border-radius: 3px;
 	width: 268px;
-	float: right;
+	float: inline-end;
 }
 
 #rightContents
 {
-	float: right;
+	float: inline-end;
 	width: 295px;
 }
 
@@ -1120,14 +1124,14 @@ background-color: transparent;
 }
 
 .profile_customization_block label {
-    margin-right: 8px;
+    margin-inline-end: 8px;
     flex-shrink: 0;
 }
 
 .profile_customization_block .helper_text {
-    margin-left: 8px;
+    margin-inline-start: 8px;
     flex-grow: 1;
-    text-align: right;
+    text-align: end;
     line-height: 15px;
 }
 
@@ -1158,7 +1162,7 @@ background-color: transparent;
 	display: none;
     line-height: 30px;
     position: absolute;
-    right: 5px;
+    inset-inline-end: 5px;
     top: 0;
 
 }
@@ -1236,7 +1240,7 @@ background-color: transparent;
 }
 
 .showcase_stats_row .showcase_stat {
-	margin-left: 42px;
+	margin-inline-start: 42px;
 	display: inline-block;
 }
 
@@ -1245,7 +1249,7 @@ background-color: transparent;
 }
 
 .showcase_stats_row .showcase_stat:first-child, html.responsive .showcase_stats_row .showcase_stat:first-child {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
 /* achievement stat labels can be long, so let them wrap instead of clipping */
@@ -1279,7 +1283,7 @@ a.showcase_stat:hover .label {
 @media screen and ( max-width: 600px )
 {
 	html.responsive .showcase_stats_row .showcase_stat {
-		margin-left: 6%;
+		margin-inline-start: 6%;
 	}
 
 	html.responsive .showcase_stat {
@@ -1313,9 +1317,9 @@ a.showcase_stat:hover .label {
 	width: 64px;
 	height: 64px;
 	line-height: 64px;
-	float: left;
+	float: inline-start;
 
-	margin-left: 4.5%;
+	margin-inline-start: 4.5%;
 	margin-bottom: 5px;
 }
 
@@ -1326,7 +1330,7 @@ a.showcase_stat:hover .label {
 
 .showcase_achievement:nth-child(7n-6),
 html.responsive .showcase_achievement:nth-child(7n-6) {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
 .showcase_achievement.openslot {
@@ -1369,7 +1373,7 @@ div.achievement_tooltip {
 	position: absolute;
 	width: 75%;
 	aspect-ratio: 1/1;
-	left: -12.5%;
+	inset-inline-start: -12.5%;
 	top: -12.5%;
 	filter: blur( 10px ) saturate( 2 );
 	opacity: 0.4;
@@ -1434,7 +1438,7 @@ div.achievement_tooltip {
 	display: flex;
 	align-items: center;
 	gap: 12px;
-	padding-right: 12px;
+	padding-inline-end: 12px;
 	background: linear-gradient( to bottom, rgb( 20, 26, 33, 0.7 ) 5%, rgb( 20, 26, 33, 0.4 ) 95% );
 }
 
@@ -1512,15 +1516,15 @@ div.achievement_tooltip {
 }
 
 .showcase_badges_icons .showcase_badge {
-	float: left;
+	float: inline-start;
 	position: relative;
 
-	margin-left: 26px;
+	margin-inline-start: 26px;
 	margin-bottom: 9px;
 }
 
 .showcase_badges_icons .showcase_badge.openslot {
-	margin-left: 22px;
+	margin-inline-start: 22px;
 }
 
 
@@ -1535,19 +1539,19 @@ div.achievement_tooltip {
 }
 
 .showcase_badges_icons .showcase_badge:nth-child(6n-5) {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
 .showcase_slot {
 	display: block;
-	float: left;
+	float: inline-start;
 	position: relative;
 }
 
 .showcase_gamecollector_game {
 	width: 148px;
 	height: 56px;
-	margin-left: 7px;
+	margin-inline-start: 7px;
 	margin-bottom: 7px;
 	line-height: 56px;
 }
@@ -1557,7 +1561,7 @@ div.achievement_tooltip {
 
 .showcase_gamecollector_games .showcase_gamecollector_game:nth-child(4n-3),
 html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-child(4n-3) {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
 .showcase_gamecollector_game img.game_capsule {
@@ -1635,7 +1639,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 .showcase_completion_ribbon_count {
 	font-size: 14px;
 	font-weight: 500;
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 
 .showcase_completion_ribbon {
@@ -1670,7 +1674,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	--trophy-h: calc( var(--trophy-base) * 0.875 );
 	--prev-h: var(--trophy-base);
 	--prev-w: calc( var(--prev-h) * 16 / 24 );
-	margin-left: calc( var(--prev-w) * -0.3 );
+	margin-inline-start: calc( var(--prev-w) * -0.3 );
 	z-index: 2;
 	filter: brightness( 0.8 );
 	-webkit-mask-image: linear-gradient( #000, #000 ), url( 'https://community.fastly.steamstatic.com/public/images/profile/achievement_trophy_dilated.svg' );
@@ -1700,8 +1704,8 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 
 			position: absolute;
 	bottom: 0;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	height: 40px;
 	padding: 0 8px;
 	z-index: 1; /* own stacking context, so trophies stay under the edit-mode hover overlay (z-index 2) */
@@ -1804,14 +1808,14 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 
 .showcase_achievementscompletionist_game_counts {
 	min-width: 0;
-	margin-left: 8px;
-	text-align: right;
+	margin-inline-start: 8px;
+	text-align: end;
 }
 
 /* a featured set's name sits next to its trophy instead */
 .showcase_achievementscompletionist_game_counts.set {
 	flex: 1;
-	text-align: left;
+	text-align: start;
 }
 
 .showcase_achievementscompletionist_game_counts .num_achievements,
@@ -1840,8 +1844,8 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	height: 45px;
 	position: absolute;
 	bottom: 0;
-	left: 260px;
-	right: 0;
+	inset-inline-start: 260px;
+	inset-inline-end: 0;
 	top: 130px;
 
 }
@@ -1896,7 +1900,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	z-index: 0;
 	max-width:100%;
 	top:0;
-	left:0;
+	inset-inline-start:0;
 }
 
 #showcase_salien_cryotube_front {
@@ -1907,17 +1911,17 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .showcase_salien_cont {
-	float: left;
+	float: inline-start;
 	width: 76.6%;
 	height: 100%;
 	display: block;
 	position: relative;
 	top: 15%;
-	left: 11%;
+	inset-inline-start: 11%;
 }
 
 .showcase_salienbadge_cont {
-	float:right;
+	float:inline-end;
 	height: 150px;
 	white-space: nowrap;
 	margin: 1em 0;
@@ -1934,7 +1938,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .showcase_salien {
-	float:left;
+	float:inline-start;
 	width:150px;
 	height:275px;
 }
@@ -1949,13 +1953,13 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .showcase_stats_salien {
-	float:left;
+	float:inline-start;
 	text-align:center;
 }
 
 .showcase_stats_row .showcase_stats_salien .showcase_stat {
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-inline-start: 20px;
+	margin-inline-end: 20px;
 }
 
 .awards_showcase .showcase_content_bg {
@@ -1999,18 +2003,18 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 
 	html.responsive .showcase_badges_icons .showcase_badge
 	{
-		margin-left: 4%;
+		margin-inline-start: 4%;
 	}
 
 	html.responsive .showcase_badges_icons .showcase_badge.openslot
 	{
-		margin-left: 3%;
+		margin-inline-start: 3%;
 	}
 
 	html.responsive .showcase_gamecollector_game {
 		width: 24%;
 		height: auto;
-		margin-left: 1%;
+		margin-inline-start: 1%;
 		line-height: 100%;
 	}
 
@@ -2021,7 +2025,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 
 	html.responsive .item_showcase_item {
 		width: 15%;
-		margin-left: 0.9%;
+		margin-inline-start: 0.9%;
 		line-height: 100%;
 		height: auto;
 	}
@@ -2037,9 +2041,9 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 		width: 10%;
 		height: auto;
 		line-height: 100%;
-		float: left;
+		float: inline-start;
 
-		margin-left: 4.5%;
+		margin-inline-start: 4.5%;
 		margin-bottom: 5px;
 	}
 
@@ -2050,24 +2054,24 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .item_showcase .item_count_stat {
-	float: left;
+	float: inline-start;
 	padding-top: 14px;
 	max-width: 30%;
 }
 
 .item_showcase .item_count_stat > div {
-	padding-left: 12px;
+	padding-inline-start: 12px;
 }
 
 .item_showcase .showcase_slot_row, .trade_showcase .showcase_slot_row {
-	margin-left: -5px;
+	margin-inline-start: -5px;
 }
 
 .item_showcase_item {
 	width: 96px;
 	height: 96px;
 	line-height: 96px;
-	margin-left: 5px;
+	margin-inline-start: 5px;
 	margin-bottom: 5px;
 	border: 1px solid #3a3a3a;
 }
@@ -2094,7 +2098,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 .favoritegame_showcase_game {
 	position: relative;
 	height: 69px;
-	padding-left: 200px;
+	padding-inline-start: 200px;
 
 	margin-bottom: 22px;
 }
@@ -2105,7 +2109,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 
 .favoritegame_showcase_game .favorite_game_cap {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
 }
 
@@ -2134,7 +2138,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 .favoritegroup_showcase_group {
 	position: relative;
 	height: 157px;
-	padding-left: 166px;
+	padding-inline-start: 166px;
 
 	margin-bottom: 22px;
 }
@@ -2145,7 +2149,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 
 .favoritegroup_showcase_group .favoritegroup_avatar {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
 	width: 157px;
 	height: 157px;
@@ -2183,12 +2187,13 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 {
 	html.responsive .favoritegroup_showcase_group .favoritegroup_avatar {
 		position: static;
-		float: left;
-		margin: 0 12px 12px 0;
+		float: inline-start;
+		margin-block: 0 12px;
+		margin-inline: 0 12px;
 	}
 
 	html.responsive	.favoritegroup_showcase_group {
-		padding-left: 0;
+		padding-inline-start: 0;
 	}
 
 	html.responsive .favoritegroup_showcase_group .favoritegroup_avatar,
@@ -2222,11 +2227,11 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 .showcase_stats_row.favoritegroup_stats .showcase_stat {
 	padding-top: 4px;
 	padding-bottom: 4px;
-	margin-left: 22px;
+	margin-inline-start: 22px;
 }
 
 .showcase_stats_row.favoritegroup_stats .showcase_stat:first-child {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
 .showcase_stats_row.favoritegroup_stats .showcase_stat .value {
@@ -2244,16 +2249,16 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 .showcase_stat.favoritegroup_inchat {
 	background-color: var(--color-showcase-header);
 	border-radius: 3px;
-	padding-left: 12px;
-	padding-right: 12px;
+	padding-inline-start: 12px;
+	padding-inline-end: 12px;
 	cursor: pointer;
 }
 
 .favoritegroup_stats.showcase_stats_row {
 	position: absolute;
 	bottom: 0;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 }
 
 .workshop_showcase_item {
@@ -2277,7 +2282,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .workshop_showcase_mutiitem_ctn {
-	float: left;
+	float: inline-start;
 	max-width: 20%;
 }
 
@@ -2293,16 +2298,17 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .workshop_showcase_multiitem.openslot {
-	margin: 0px 4px 0px 0px;
+	margin-block: 0px;
+	margin-inline: 0px 4px;
     height: 115px;
     width: 115px;
 }
 
 .workshop_showcase_item img.workshop_showcase_item_image {
-	float: left;
+	float: inline-start;
 	width: 160px;
 	max-width: 40%;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 	display: block;
 }
 
@@ -2324,8 +2330,8 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .myworkshop_showcase_header .playerAvatar {
-	float: left;
-	margin-right: 10px;
+	float: inline-start;
+	margin-inline-end: 10px;
 }
 
 .myworkshop_showcase_header .myworkshop_playerName {
@@ -2338,7 +2344,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 
 .workshop_showcase_mini_app {
 	position: absolute;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 }
 
@@ -2349,9 +2355,9 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 
 .workshop_showcase_details_row {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	bottom: 0;
-	right: 0;
+	inset-inline-end: 0;
 
 	padding-top: 10px;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/profile/showcase_content_fade.png' );
@@ -2383,7 +2389,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .workshop_showcase_stars {
-	float: right;
+	float: inline-end;
 }
 
 .guide_showcase_contributors {
@@ -2409,14 +2415,13 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
     padding: 8px;
     border-radius: 5px;
 
-	/*background: -webkit-linear-gradient( left, #000000 5%,#282828 95%);
+	background: -webkit-linear-gradient( left, #000000 5%,#282828 95%);
 	background: linear-gradient( to right, #000000 5%,#282828 95%);
-*/
 }
 
 .myguide_showcase_item_ctn {
 	width: 48%;
-	margin-right: 1%;
+	margin-inline-end: 1%;
 	overflow: hidden;
 
 	background-color: #101214;
@@ -2441,7 +2446,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .myguide_showcase_item.left {
-	margin-right: 2%;
+	margin-inline-end: 2%;
 }
 
 .myguide_showcase_item:hover {
@@ -2449,12 +2454,12 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .guide_showcase_img_ctn {
-	float: left;
+	float: inline-start;
 	position: relative;
 	width: 66px;
 	max-width: 25%;
 
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 
 .guide_showcase_img_ctn img.guide_showcase_image {
@@ -2469,7 +2474,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 @media screen and (max-width: 460px) {
 	html.responsive .myguide_showcase_item_ctn.left,
 	html.responsive .myguide_showcase_item_ctn {
-		margin-right: 0;
+		margin-inline-end: 0;
 		width: auto;
 		float: none;
 	}
@@ -2496,8 +2501,8 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 .screenshot_showcase_primary {
 	width: 508px;
 	max-width: calc( 83% - 7px );
-	float: left;
-    margin-right: 7px;
+	float: inline-start;
+    margin-inline-end: 7px;
 }
 
 .screenshot_showcase_primary.single {
@@ -2505,7 +2510,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	width: 100%;
 	min-height: 100px;
 	max-width: 100%;
-	margin-right: 0px;
+	margin-inline-end: 0px;
 }
 
 .screenshot_showcase_primary.showcase_slot.openslot {
@@ -2532,8 +2537,8 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .screenshot_showcase_primary .screenshot_showcase_screenshot img {
-	margin-left: auto;
-	margin-right: auto;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 }
 
 .screenshot_showcase_itemname {
@@ -2570,7 +2575,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .screenshot_showcase_stat {
-	margin-right: 12px;
+	margin-inline-end: 12px;
 	cursor: default;
 }
 
@@ -2597,9 +2602,9 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 {
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	inset-inline-start: 50%;
 	margin-top: -30px;
-	margin-left: -40px;
+	margin-inline-start: -40px;
 	z-index: 2;
 }
 
@@ -2610,7 +2615,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .recentgame_quicklinks {
-	float: right;
+	float: inline-end;
 	display: flex;
 	gap: 8px;
 	align-items: center;
@@ -2629,8 +2634,8 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .recent_game.in_game {
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
+	border-start-start-radius: 0;
+	border-start-end-radius: 0;
 }
 
 .recent_game_now_playing {
@@ -2662,8 +2667,8 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	height: 69px;
 }
 .recent_game .game_info .game_info_cap {
-	float: left;
-	margin-right: 8px;
+	float: inline-start;
+	margin-inline-end: 8px;
 	width: 184px;
 	max-width: 33%;
 }
@@ -2672,9 +2677,9 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 .recent_game .game_info .game_info_details {
 	position: absolute;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	text-align: right;
+	text-align: end;
 }
 .recent_game .game_info .game_name {
 	padding-top: 10px;
@@ -2825,11 +2830,11 @@ body:not(.DefaultTheme) .game_info_achievements_ribbons .showcase_completion_rib
 .game_info_achievement {
 	vertical-align: top;
 	display: inline-block;
-	margin-left: 4px;
+	margin-inline-start: 4px;
 }
 
 .game_info_achievement:first-child {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
 .game_info_achievement, .game_info_achievement img {
@@ -2886,7 +2891,7 @@ body:not(.DefaultTheme) .game_info_achievements_ribbons .showcase_completion_rib
 .game_info_badge_icon {
 	position: absolute;
 	top: 7px;
-	left: 7px;
+	inset-inline-start: 7px;
 }
 
 .game_info_badge_icon img.badge_icon.small {
@@ -2895,7 +2900,7 @@ body:not(.DefaultTheme) .game_info_achievements_ribbons .showcase_completion_rib
 }
 
 .game_info_badge_description {
-	padding-left: 52px;
+	padding-inline-start: 52px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -2926,7 +2931,7 @@ body:not(.DefaultTheme) .game_info_achievements_ribbons .showcase_completion_rib
 	}
 	html.responsive .game_info_achievements {
 		float: none;
-		clear: left;
+		clear: inline-start;
 		margin-top: 8px;
 		width: auto;
 		position: relative;
@@ -2951,7 +2956,7 @@ body:not(.DefaultTheme) .game_info_achievements_ribbons .showcase_completion_rib
 }
 
 .game_info_stats_publishedfilecounts .published_file_link {
-	margin-right: 12px;
+	margin-inline-end: 12px;
 	white-space: nowrap;
 	line-height: 19px;
 }
@@ -2964,7 +2969,7 @@ body:not(.DefaultTheme) .game_info_achievements_ribbons .showcase_completion_rib
 	width: 19px;
 	height: 19px;
 	display: inline-block;
-	margin-right: 4px;
+	margin-inline-end: 4px;
 	background-image: url('https://community.fastly.steamstatic.com/public/images/profile/icons_content.png?v=2');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -3122,11 +3127,11 @@ body:not(.DefaultTheme) .game_info_achievements_ribbons .showcase_completion_rib
 	height: 54px;
 }
 .profile_badges_badge {
-	float: left;
-	margin-right: 16px;
+	float: inline-start;
+	margin-inline-end: 16px;
 }
 .profile_badges_badge.last {
-	margin-right: 0;
+	margin-inline-end: 0;
 }
 
 .profile_awards img.award_icon {
@@ -3144,11 +3149,11 @@ body:not(.DefaultTheme) .game_info_achievements_ribbons .showcase_completion_rib
 
 html.responsive .localmenu_content .profile_badges_badge {
 	width: 19%;
-	margin-right: 7%;
+	margin-inline-end: 7%;
 }
 
 html.responsive .localmenu_content .profile_badges_badge.last {
-	margin-right: 0;
+	margin-inline-end: 0;
 }
 html.responsive .localmenu_content .profile_badges_badge img {
 	width: 100%;
@@ -3166,14 +3171,14 @@ html.responsive .localmenu_content .profile_badges_badge img {
 	overflow: hidden;
 
 	padding-top: 1px;
-	padding-left: 42px;
+	padding-inline-start: 42px;
 	height: 36px;
 
 }
 
 .profile_group.profile_primary_group {
 	padding-top: 10px;
-	padding-left: 80px;
+	padding-inline-start: 80px;
 	height: 60px;
 
 	margin-bottom: 12px;
@@ -3182,7 +3187,7 @@ html.responsive .localmenu_content .profile_badges_badge img {
 
 .profile_group_avatar {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
 
 	box-shadow: 2px 2px 3px #0c0c0c;
@@ -3219,8 +3224,8 @@ html.responsive .localmenu_content .profile_badges_badge img {
 
 .profile_small_header_text {
 	position: absolute;
-	left: 120px;
-	right: 30px;
+	inset-inline-start: 120px;
+	inset-inline-end: 30px;
 	bottom: 31px;
 	max-height: 65px;
 	color: white;
@@ -3236,7 +3241,7 @@ html.responsive .localmenu_content .profile_badges_badge img {
 
 .profile_small_header_avatar {
 	position: absolute;
-	left: 30px;
+	inset-inline-start: 30px;
 	top: 18px;
 	color: white;
 }
@@ -3248,7 +3253,7 @@ html.responsive .localmenu_content .profile_badges_badge img {
 
 .profile_small_header_additional {
 	position: absolute;
-	right: 30px;
+	inset-inline-end: 30px;
 	top: 0;
 	bottom: 0;
 }
@@ -3289,8 +3294,8 @@ body .pagecontent.profile_subpage_column {
 .profile_subpage_general .maincontent {
 	margin-top: -7px;
 
-	border-left: 1px solid #000000;
-	border-right: 1px solid #545454;
+	border-inline-start: 1px solid #000000;
+	border-inline-end: 1px solid #545454;
 	background-color: #262627;
 	padding: 12px;
 
@@ -3331,7 +3336,8 @@ body.migrated_profile_page #BG_bottom.maincontent {
 .group_list_option {
 	height: 40px;
 	position: relative;
-	padding: 5px 5px 5px 50px;
+	padding-block: 5px;
+	padding-inline: 50px 5px;
 	border-radius: 3px;
 	cursor: pointer;
 }
@@ -3342,7 +3348,7 @@ body.migrated_profile_page #BG_bottom.maincontent {
 
 .group_list_option .playerAvatar {
 	position: absolute;
-	left: 5px;
+	inset-inline-start: 5px;
 	top: 5px;
 }
 
@@ -3390,11 +3396,11 @@ body.migrated_profile_page #BG_bottom.maincontent {
 .profile_comment_area .commentthread_header_and_count {
 	width: 100%;
 	background-image: none;
-	padding-left: 0;;
+	padding-inline-start: 0;;
 }
 
 .profile_leftcol_header h2 {
-	float: left;
+	float: inline-start;
 }
 
 .profile_comment_area .commentthread_header .commentthread_count {
@@ -3402,7 +3408,7 @@ body.migrated_profile_page #BG_bottom.maincontent {
 		font-weight: 200; /* thin */
 
 			background: none;
-	padding-left: 0px;
+	padding-inline-start: 0px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -3464,8 +3470,8 @@ body.migrated_profile_page #BG_bottom.maincontent {
 	justify-content: center;
 	align-items: center;
 	border-top: 1px solid rgba(255,255,255,0.1);
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-inline-start: 10px;
+	margin-inline-end: 10px;
 }
 
 .profile_comment_area .pagebtn {
@@ -3480,9 +3486,9 @@ body.migrated_profile_page #BG_bottom.maincontent {
     vertical-align: middle;
     border: 1px solid rgba(255, 255, 255, .1);
     border-top-color: rgba(255, 255, 255, 0.2);
-    border-left-color: rgba(255, 255, 255, 0.2);
-    border-top-right-radius: 1px;
-    border-bottom-left-radius: 1px;
+    border-inline-start-color: rgba(255, 255, 255, 0.2);
+    border-start-end-radius: 1px;
+    border-end-start-radius: 1px;
     background: rgba(255, 255, 255, 0.2);
 }
 
@@ -3498,9 +3504,9 @@ body.migrated_profile_page #BG_bottom.maincontent {
 .profile_background_holder {
 	position: absolute;
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 	bottom: 0;
-	right: 0;
+	inset-inline-end: 0;
 	overflow: hidden;
 	z-index: 0;
 	min-width: 972px;
@@ -3509,9 +3515,9 @@ body.migrated_profile_page #BG_bottom.maincontent {
 .profile_background_image {
 	position: absolute;
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 	bottom: 0;
-	right: 0;
+	inset-inline-end: 0;
 	text-align: center;
 	background-position: center top;
 	background-repeat: no-repeat;
@@ -3520,9 +3526,9 @@ body.migrated_profile_page #BG_bottom.maincontent {
 .profile_background_holder_content {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 	background-color: #000000;
 	z-index: 0;
 }
@@ -3530,9 +3536,9 @@ body.migrated_profile_page #BG_bottom.maincontent {
 .profile_background_image_content {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 	background-position: center -226px;	/* 240px header, -14px margin .profile_content.has_profile_background */
 	background-repeat: no-repeat;
 	z-index: 0;
@@ -3541,9 +3547,9 @@ body.migrated_profile_page #BG_bottom.maincontent {
 .profile_background_overlay_content {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 	z-index: 1;
 
 	background-color: #171717;
@@ -3604,11 +3610,11 @@ body.migrated_profile_page #BG_bottom.maincontent {
 }
 
 .manage_friends_btn_ctn {
-	float: right;
+	float: inline-end;
 }
 
 .add_friends_btn_ctn {
-	float: right;
+	float: inline-end;
 	margin-top: 10px;
 }
 
@@ -3635,7 +3641,7 @@ body.migrated_profile_page #BG_bottom.maincontent {
 .gameListRow {
 	height: 77px;
 	margin-bottom: 15px;
-	padding-left: 208px;
+	padding-inline-start: 208px;
 	position: relative;
 }
 
@@ -3667,7 +3673,7 @@ body.migrated_profile_page #BG_bottom.maincontent {
 }
 
 .gameListRowLogo {
-	left: 0;
+	inset-inline-start: 0;
 	position: absolute;
 }
 
@@ -3694,7 +3700,8 @@ body.migrated_profile_page #BG_bottom.maincontent {
 .friends_limit_invites_maxed_out {
 	color: orange;
 	max-width: 600px;
-	margin: 0 6px 0 8px;
+	margin-block: 0;
+	margin-inline: 8px 6px;
 	font-size: 14px;
 }
 
@@ -3714,7 +3721,7 @@ body.migrated_profile_page #BG_bottom.maincontent {
 
 .manage_actions_instructions {
 	color: #ffffff;
-	margin-right: 15px;
+	margin-inline-end: 15px;
 }
 
 .manage_actions_buttons {
@@ -3722,13 +3729,13 @@ body.migrated_profile_page #BG_bottom.maincontent {
 }
 
 .manage_actions_buttons .btn_medium {
-	margin-right: 10px;
+	margin-inline-end: 10px;
 	margin-bottom: 10px;
 }
 
 .manage_friend_checkbox {
 	position: absolute;
-	right: 0;
+	inset-inline-end: 0;
 	top: 0;
 	bottom: 0;
 	width: 30px;
@@ -3750,13 +3757,13 @@ a.manage_friend_link {
 
 .profile_friends .friendBlock {
 	position: relative;
-	float: left;
+	float: inline-start;
 	width: 290px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 }
 
 .profile_friends .friendBlock:nth-child(3n) {
-	margin-right: 0;
+	margin-inline-end: 0;
 }
 
 .btn_manage_friends {
@@ -3789,8 +3796,8 @@ footer {
 }
 
 .player_list_results.cols .friendBlock {
-	float: left;
-	margin-right: 6px;
+	float: inline-start;
+	margin-inline-end: 6px;
 }
 
 @media screen and (max-width: 910px)
@@ -3800,7 +3807,7 @@ footer {
 	}
 
 	.player_list_results .friendBlock {
-		float: left;
+		float: inline-start;
 	}
 }
 
@@ -3823,7 +3830,7 @@ footer {
 }
 
 #NamePopupClearAliases {
-	float:right;
+	float:inline-end;
 	font-size:12px;
 }
 
@@ -3855,7 +3862,7 @@ footer {
 }
 
 .profile_fatalerror h1 {
-	margin-left: 8px;
+	margin-inline-start: 8px;
 }
 
 .profile_fatalerror h3 {
@@ -3863,7 +3870,7 @@ footer {
 	font-size: 17px;
 	font-weight: normal;
 	margin-bottom: 12px;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 }
 
 .profile_fatalerror_message {
@@ -3904,7 +3911,7 @@ footer {
 {
 	font-weight: 500;
 	font-size: 14px;
-	margin-right: 12px;
+	margin-inline-end: 12px;
 	color: white;
 	opacity: 0.7;
 	transition: opacity .2s ease;
@@ -3936,7 +3943,7 @@ footer {
 }
 
 .profile_paging .pageLinks {
-	float: right;
+	float: inline-end;
 }
 
 .profile_paging .pagebtn {
@@ -4009,7 +4016,7 @@ footer {
 	}
 
 	html.responsive .profile_badges_badge {
-		margin-right: 6px;
+		margin-inline-end: 6px;
 	}
 
 
@@ -4061,7 +4068,7 @@ footer {
 	}
 
 	html.responsive.GamepadMode .profile_badges_badge {
-		margin-right: 6px;
+		margin-inline-end: 6px;
 	}
 
 
@@ -4077,13 +4084,13 @@ footer {
 
 	html.responsive .profile_header {
 		width: auto;
-		padding-left: 8px;
-		padding-right: 8px;
+		padding-inline-start: 8px;
+		padding-inline-end: 8px;
 	}
 
 	html.responsive .profile_content.has_profile_background {
-		margin-left: auto;
-		margin-right: auto;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
 		padding: 0;
 	}
 
@@ -4122,8 +4129,8 @@ footer {
 
 	html.responsive .profile_subpage_general .maincontent {
 		width: auto;
-		padding-left: 1%;
-		padding-right: 1%;
+		padding-inline-start: 1%;
+		padding-inline-end: 1%;
 	}
 
 	html.responsive .graytab_body_wrapper {
@@ -4143,13 +4150,13 @@ footer {
 	}
 
 	html.responsive .profile_small_header_avatar {
-		left: 3%;
+		inset-inline-start: 3%;
 	}
 
 	html.responsive .profile_small_header_text {
-		left: 3%;
-		padding-left: calc( 68px + 3% );
-		right: 32px;	/* need to avoid right menu hamburger on profile subpages */
+		inset-inline-start: 3%;
+		padding-inline-start: calc( 68px + 3% );
+		inset-inline-end: 32px;	/* need to avoid right menu hamburger on profile subpages */
 	}
 
 	/*
@@ -4192,7 +4199,7 @@ footer {
 	html.responsive .profile_count_link_preview_ctn {
 		background: rgba( 0, 0, 0, 0.5 );
 		display: block;
-		float: left;
+		float: inline-start;
 		padding: 8px;
 		margin: 0 4px 4px 4px;
 		height: 29px;
@@ -4227,7 +4234,7 @@ footer {
 		margin: 0;
 		height: auto;
 		width: auto;
-		margin-right: 6px;
+		margin-inline-end: 6px;
 	}
 
 	html.responsive .profile_topfriends .friendBlock .playerAvatar {
@@ -4311,7 +4318,7 @@ footer {
 {
 	html.responsive .profile_leftcol_header > h2 {
 		display: inline-block;
-		margin-right: 8px;
+		margin-inline-end: 8px;
 		float: none;
 	}
 	html.responsive .recentgame_recentplaytime {
@@ -4333,8 +4340,8 @@ footer {
 body.flat_page .sectionTabsHR {
 	position: static;
 	width: auto;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	top: 0;
 	max-width: 958px;
 }
@@ -4477,7 +4484,7 @@ body.flat_page .sectionTabsHR {
 		display: block;
 		text-wrap: wrap;
 		overflow-wrap: break-word;
-		margin-left: 0;
+		margin-inline-start: 0;
 	}
 
 	html.responsive .header_location::before {
@@ -4512,7 +4519,8 @@ body.flat_page .sectionTabsHR {
 	}
 
 	html.responsive .profile_header_centered_col {
-		padding: 0 0 0 18px;
+		padding-block: 0;
+		padding-inline: 18px 0;
 	}
 
 	html.responsive .profile_header_badge_instructions {

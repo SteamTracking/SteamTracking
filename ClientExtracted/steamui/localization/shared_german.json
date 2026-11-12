@@ -4185,7 +4185,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "Die Histogrammdaten dieses Spiels basieren auf Meldungen von Kunden, die sich dazu bereit erklärt haben, die Daten zur Bildrate Ihres Geräts (%1$s) zu teilen.",
     "GamePerformanceStats_FrameRateHistogram_Title": "Bildratenverteilung",
     "GamePerformanceStats_Framerate": "Bildrate",
-    "GamePerformanceStats_SessionLabel": "% Sitzung",
+    "GamePerformanceStats_SessionLabel": " % der Stichproben",
     "GamePerformanceStats_Chart_NoData": "Es wird ein Diagramm angezeigt, sobald ausreichend Daten vorliegen",
     "NewToolTitleSuffix_Beta": "BETA",
     "DynamicLinkType_WorkshopItem": "Ein Workshop-Inhalt für %1$s",
@@ -4212,6 +4212,11 @@
     "GamePerformanceStats_StillGatheringData": "Steam sammelt zurzeit noch Daten zur Bildrate für %1$s auf folgendem Gerät: %2$s",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam sammelt zurzeit noch Daten zur Bildrate für dieses Spiel auf folgendem Gerät: %1$s",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam sammelt zurzeit noch Daten zur Bildrate für dieses Spiel.",
-    "GamePerformanceStats_FrameRateDistribution": "Dieses Diagramm zur Bildrate basiert auf anonymisierten Spieldaten von Kunden, die der Datenerfassung zugestimmt haben und %1$s auf folgendem Gerät spielen: %2$s",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Dieses Diagramm zur Bildrate basiert auf anonymisierten Spieldaten von Kunden, die der Datenerfassung zugestimmt haben und diesen Titel auf folgendem Gerät spielen: %1$s"
+    "GamePerformanceStats_FrameRateDistribution": "Dieses Diagramm zeigt Bildraten-Stichproben von Kunden, die der Bereitstellung von anonymisierten Daten beim Spielen von %1$s auf folgendem Gerät zugestimmt haben: %2$s. Jeder Balken gibt den Prozentsatz der mit dieser Bildrate durchgeführten Stichproben an.",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "Dieses Diagramm zeigt Bildraten-Stichproben von Kunden, die der Bereitstellung von anonymisierten Daten beim Spielen dieses Titels auf folgendem Gerät zugestimmt haben: %1$s. Jeder Balken gibt den Prozentsatz der mit dieser Bildrate durchgeführten Stichproben an.",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "Dieses Spiel erfordert die manuelle Aktivierung der Controllerunterstützung über die Einstellungen im Spiel.",
+    "GameFrameRateReporting_Details_HowToChange": "Sie können diese Einstellung jederzeit unter <1>Accountdetails > Daten und Browsernutzung</1> ändern.",
+    "GamePerformanceStats_MoreDetailsTitle": "Weitere Details",
+    "GamePerformanceStats_MoreDetails_Filtering": "Es werden nur Daten berücksichtigt, die bei der standardmäßigen Bildrateneinschränkung von %2$s FPS für dieses Gerät (%1$s) erfasst wurden. Leerlaufzeiten und ungültige Stichproben werden herausgefiltert. Während jeder Spielsitzung werden mehrere Stichproben erfasst.",
+    "GamePerformanceStats_MoreDetails_VSync": "In diesem Diagramm verzeichnete Sprünge, wie bspw. von %1$s auf %2$s FPS, können durch VSync verursacht werden, welches die Bildrate mit der Bildwiederholfrequenz der Anzeige synchronisiert, um Tearing zu verhindern. Dadurch können sich Stichproben von %1$s und %2$s FPS häufen, selbst wenn die durchschnittliche Bildrate des Spiels zwischen diesen Werten liegt. Dies ist ein durch VSync erwartetes Verhalten, welches die Bildwiederholungsfrequenz zwar beeinflussen kann, jedoch nicht zwangsläufig zu spürbaren Rucklern führt."
 }

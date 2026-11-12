@@ -29,11 +29,11 @@ h4 {
     width: 950px;
     margin: auto;
     background: none;
-    text-align: left;
+    text-align: start;
     min-height: 100%;
     padding-top: 40px;
     margin-top: 00px;
-    padding-left: 0;
+    padding-inline-start: 0;
 }
 #PageColumns
 {
@@ -43,7 +43,7 @@ h4 {
 }
 #PageColumns .rightCol {
     width: 30%;
-    margin-left: 16px;
+    margin-inline-start: 16px;
 }
 #PageColumns .leftCol {
     width: 70%
@@ -68,8 +68,8 @@ h4 {
 }
 .subCtn input {
     height: 24px;
-    padding-left: 6px;
-    margin-left: 4px;
+    padding-inline-start: 6px;
+    margin-inline-start: 4px;
 }
 
 .rightSectionTitle {
@@ -111,7 +111,7 @@ h4 {
     font-size: 11px;
     text-transform: uppercase;
     font-weight: normal;
-    text-align: left;
+    text-align: start;
     padding: 4px 14px;
 }
 
@@ -130,7 +130,7 @@ background: -webkit-linear-gradient( top, #373b43 5%, #2d3037 95%);
 .session_summary td {
     border-top: 1px solid #07BFFF;
     height: 30px;
-    padding-left: 14px;
+    padding-inline-start: 14px;
 }
 .session_summary_spacer td {
     height: 30px;
@@ -154,7 +154,7 @@ background: -webkit-linear-gradient( top, #373b43 5%, #2d3037 95%);
 }
 
 .UploadButtonColumn {
-	text-align: right;
+	text-align: end;
 }
 
 .upload_error_msg {
@@ -192,8 +192,8 @@ color: white;
 
 .uploadTable .broadcast_history_numeric,
 .broadcast_history_numeric {
-	text-align: right;
-	padding-right: 10px;
+	text-align: end;
+	padding-inline-end: 10px;
 }
 
 .broadcast_row_img {
@@ -210,7 +210,7 @@ color: white;
 }
 #UploadInfoToken {
     flex-grow: 1;
-    margin-right: 10px;
+    margin-inline-end: 10px;
 }
 .top_warning {
 	padding: 20px;

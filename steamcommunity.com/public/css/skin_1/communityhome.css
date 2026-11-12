@@ -18,9 +18,9 @@ body
 	margin: 0px auto;
 	padding-top: 20px;
 	padding-bottom: 0;
-	padding-left: 1%;
-	padding-right: 1%;
-	text-align: left;
+	padding-inline-start: 1%;
+	padding-inline-end: 1%;
+	text-align: start;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -34,7 +34,7 @@ body
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
-			text-align: left;
+			text-align: start;
 }
 
 .community_home_subtitle
@@ -43,7 +43,7 @@ body
     font-size: 17px;
     color: #9099a1;
     font-family: Arial, Sans-Serif;
-    text-align: left;
+    text-align: start;
     padding-top: 5px;
 }
 
@@ -133,7 +133,7 @@ body
 	margin-top: 15px;
 	width: 66%;
 	background: rgba(0, 0, 0, 0.4);
-	float: left;
+	float: inline-start;
 }
 
 .community_home_shortcut_content {
@@ -148,7 +148,7 @@ body
 
 .community_home_login
 {
-	float: left;
+	float: inline-start;
 	width: 50%;
 	font-size: 12px;
 	line-height: 17px;
@@ -156,7 +156,8 @@ body
 }
 
 .community_home_login_content {
-	padding: 0 10px 0 0;
+	padding-block: 0;
+	padding-inline: 0 10px;
 }
 
 .community_home_join_steam
@@ -184,7 +185,7 @@ body
 
 .community_home_app_shortcuts_list
 {
-	float: left;
+	float: inline-start;
 	width: 50%;
 }
 
@@ -193,7 +194,7 @@ body
 	margin-top: 15px;
 	width: 33%;
 	background: rgba(0, 0, 0, 0.4);
-	float: right;
+	float: inline-end;
 }
 
 html.responsive .responsive_page_menu .community_home_app_shortcuts_list {
@@ -230,7 +231,8 @@ html.responsive .responsive_page_menu .community_home_search_divider {
 	box-shadow: 1px 1px 0 #45556c;
 	color: #ffffff;
 	margin-top: 5px;
-	padding: 5px 6px 4px 5px;
+	padding-block: 5px 4px;
+	padding-inline: 5px 6px;
 }
 
 input.community_home_search_app_input, input.community_home_search_players_input
@@ -248,7 +250,7 @@ input.community_home_search_app_input, input.community_home_search_players_input
 	max-width: 948px;
 	padding: 0 1% 10px;
 	margin: 0 auto;
-	text-align: left;
+	text-align: start;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -256,7 +258,7 @@ input.community_home_search_app_input, input.community_home_search_players_input
 
 .community_home_sort_buttons
 {
-	float: right;
+	float: inline-end;
 }
 
 
@@ -273,16 +275,16 @@ input.community_home_search_app_input, input.community_home_search_players_input
 	}
 
 	html.responsive .community_home_search_ctn {
-		float: left;
+		float: inline-start;
 		width: 50%;
 	}
 
 	html.responsive .community_home_search_ctn.left .community_home_search_content {
-		padding-right: 5%;
+		padding-inline-end: 5%;
 	}
 
 	html.responsive .community_home_search_ctn.right .community_home_search_content {
-		padding-left: 5%;
+		padding-inline-start: 5%;
 	}
 
 	html.responsive .community_home_search_divider {

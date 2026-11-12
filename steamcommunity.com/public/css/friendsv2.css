@@ -32,7 +32,7 @@ body.v6 {
 }
 .friends_header_ctn {
 	display:flex;
-	margin-left: 32px;
+	margin-inline-start: 32px;
 	margin-top: 30px;
     overflow: hidden;
     white-space: nowrap;
@@ -41,7 +41,7 @@ body.v6 {
 .friends_header_avatar {
 	position: relative;
 	display: inline-block;
-	float: left;
+	float: inline-start;
 }
 .friends_header_avatar img {
 	height: 64px;
@@ -65,14 +65,14 @@ body.v6 {
 }
 .friends_header_name {
 	padding-top: 8px;
-	padding-left: 20px;
+	padding-inline-start: 20px;
 	color: #fff;
 	display: inline-block;
-	float: left;
+	float: inline-start;
 }
 
 .friends_header_owner {
-    left: 31px;
+    inset-inline-start: 31px;
     top: 31px;
     font-size: 26px;
 }
@@ -80,7 +80,7 @@ body.v6 {
 .friends_header_link {
     font-size: 13px;
     padding-top: 10px;
-    padding-left: 20px;
+    padding-inline-start: 20px;
 }
 
 /* nav menu */
@@ -99,7 +99,8 @@ body.v6 {
 
 .friends_nav {
     min-width: 250px;
-    margin: 0px 20px 0px 10px;
+    margin-block: 0px;
+    margin-inline: 10px 20px;
     display: block;
 }
 
@@ -118,7 +119,8 @@ body.v6 {
     letter-spacing: 1px;
     font-weight: 600;
 
-    padding: 12px 0 0 8px;
+    padding-block: 12px 0;
+    padding-inline: 8px 0;
     font-size: 11px;
 }
 
@@ -135,7 +137,7 @@ body.v6 {
     background-size: 16px 192px;
     display: inline-block;
     line-height: 16px;
-    padding-left: 35px;
+    padding-inline-start: 35px;
     background-image: url( 'https://community.fastly.steamstatic.com/public/images/iconsheet_friends.png?v=5' );
 }
 
@@ -259,7 +261,7 @@ body.v6 {
 	}
 
 	html.responsive #add_friends_button {
-		margin-left: 10px;
+		margin-inline-start: 10px;
 	}
 
 	html.responsive .profile_friends.title, html.responsive .profile_groups.title {
@@ -291,7 +293,7 @@ body.v6 {
 	}
 
 	html.responsive .invite_row_left .invite_block_icon {
-		padding-left: 0;
+		padding-inline-start: 0;
 	}
 
 	html.responsive .invite_row .invite_row_content {
@@ -306,7 +308,7 @@ body.v6 {
 
 	html.responsive .manage_friends_panel span.row {
 		display: block;
-		margin-left: 0;
+		margin-inline-start: 0;
 	}
 
 	html.responsive .addfriend_column1 {
@@ -332,7 +334,7 @@ body.v6 {
     fill: rgb( 76, 145, 172 );
     width: 24px;
     height: 24px;
-    float: right;
+    float: inline-end;
     visibility: hidden;
 }
 
@@ -382,18 +384,18 @@ body.v6 {
 }
 
 .count {
-    float:right;
+    float:inline-end;
     font-size: 11px;
     color: #7092a5;
 }
 
 .em_count {
-    float: right;
+    float: inline-end;
     font-size: 11px;
     color: #000;
     background-color: #a3cf06;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-inline-start: 3px;
+    padding-inline-end: 3px;
     border-radius: 2px;
 }
 /* content panel */
@@ -472,7 +474,7 @@ body.v6 {
 	margin: 12px 12px 12px 12px;
     font-size: 14px;
     line-height: 15px;
-    padding-right: 18px;
+    padding-inline-end: 18px;
 }
 
 .friend_block_v2.in-game .friend_block_content,
@@ -499,13 +501,13 @@ body.v6 {
 }
 
 .friend_block_v2 .playerAvatar {
-    float: left;
-    margin-right: 7px;
+    float: inline-start;
+    margin-inline-end: 7px;
 }
 
 .friend_block_v2 .indicator {
     position: absolute;
-    right: 0;
+    inset-inline-end: 0;
     top: 0;
     bottom: 0;
     width: 30px;
@@ -539,9 +541,9 @@ body.v6 {
 .selectable_overlay {
     z-index: 2;
     position: absolute;
-    left: 0;
+    inset-inline-start: 0;
     top: 0;
-    right: 0;
+    inset-inline-end: 0;
     bottom: 0;
 }
 
@@ -569,7 +571,7 @@ body.v6 {
 .friends_search_text_box,
 .groups_search_text_box {
     margin: 5px;
-    float: left;
+    float: inline-start;
 
 	background: #274e68 url(https://community.fastly.steamstatic.com/public/images/sharedfiles/searchbox_workshop_submit.gif) no-repeat 1px;
     border-radius: 3px;
@@ -581,7 +583,13 @@ body.v6 {
     height: 28px;
 	font-size: 14px;
     min-width: 250px;
-    padding: 0 0 0 30px;
+    padding-block: 0;
+    padding-inline: 30px 0;
+}
+
+.friends_search_text_box:dir(rtl),
+.groups_search_text_box:dir(rtl) {
+    background-position: right 1px center;
 }
 
 .friends_search_text_box::-webkit-input-placeholder,
@@ -591,9 +599,9 @@ body.v6 {
 }
 
 .profile_friends.manage_link {
-    text-align: right;
-    margin-left: auto;
-    margin-right: 10px;
+    text-align: end;
+    margin-inline-start: auto;
+    margin-inline-end: 10px;
     flex-shrink: 0;
 }
 
@@ -622,7 +630,7 @@ body.v6 {
 
 .manage_friends_panel .row  {
     flex: 1 100%;
-    margin-left: 16px;
+    margin-inline-start: 16px;
     margin-top: 16px;
     font-size: 12px;
     color: #fff;
@@ -656,10 +664,11 @@ body.v6 {
 
 
 .player_avatar {
-    float: left;
+    float: inline-start;
     position: relative;
     border-radius: 0;
-    margin: 0px 8px 6px 2px;
+    margin-block: 0px 6px;
+    margin-inline: 2px 8px;
     padding: 0;
 }
 
@@ -670,7 +679,7 @@ body.v6 {
 }
 
 .friend_block_v2 .player_avatar {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
 /* Add friends page */
@@ -686,7 +695,7 @@ body.v6 {
 
 .addfriend_column1 {
 	flex: 2 0 0;
-	margin-right: 20px;
+	margin-inline-end: 20px;
 }
 
 .addfriend_column2 {
@@ -761,7 +770,7 @@ body.v6 {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 10px;
-    border-right: 1px solid #68828c;
+    border-inline-end: 1px solid #68828c;
     padding: 1px 8px;
     vertical-align: middle;
 }
@@ -769,13 +778,13 @@ body.v6 {
 .invite_section_ctn .table .copy_cell {
     display: table-cell;
     width: 16px;
-    border-right: 1px solid #68828c;
+    border-inline-end: 1px solid #68828c;
     padding: 7px 12px;
 }
 
 .invite_section_ctn .table .url_cell {
     display: table-cell;
-    border-right: 1px solid #68828c;
+    border-inline-end: 1px solid #68828c;
     vertical-align: middle;
     padding: 0px 8px;
 }
@@ -816,9 +825,9 @@ body.v6 {
 }
 
 .invite_token_list {
-    margin-left: 12px;
+    margin-inline-start: 12px;
     margin-top: 12px;
-    padding-left: 6px;
+    padding-inline-start: 6px;
 }
 
 #invite_container {
@@ -838,7 +847,11 @@ body.v6 {
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/friends/icn-fb.svg' );
 	background-position: left;
 	background-repeat: no-repeat;
-	padding-left: 30px;
+	padding-inline-start: 30px;
+}
+
+.facebook_link:dir(rtl) {
+	background-position: right;
 }
 
 .link_fb_btn {
@@ -851,7 +864,7 @@ body.v6 {
 
 
 .fb_invite_ctn .invite_row .invite_block_icon {
-	padding-left: 0;
+	padding-inline-start: 0;
 }
 	/* Invites page */
 
@@ -894,8 +907,8 @@ body.v6 {
 }
 
 .invite_row_left .invite_block_icon {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-inline-start: 12px;
+    padding-inline-end: 12px;
 }
 
 .invite_row .actions {
@@ -908,7 +921,7 @@ body.v6 {
 
 .invite_row .indicator {
     position: absolute;
-    right: 0;
+    inset-inline-end: 0;
     top: 0;
     bottom: 0;
     width: 48px;
@@ -965,7 +978,7 @@ body.v6 {
 
 .friend_block_link_overlay {
     display: block;
-    border-right-style: solid;
+    border-inline-end-style: solid;
     border-width: 4px;
 }
 
@@ -1009,7 +1022,7 @@ body.v6 {
     padding: 8px;
 }
 .group_block_medium {
-    margin-right: 8px;
+    margin-inline-end: 8px;
 }
 .group_block_medium img {
     border-radius: 3px;
@@ -1039,7 +1052,7 @@ body.v6 {
 }
 .groupLeftBlock {
     margin: 0;
-    float: right;
+    float: inline-end;
     padding: 0 8px;
     font-size: 11px;
     line-height: 16px;
@@ -1055,7 +1068,7 @@ img.facebookLogo {
 }
 
 .invite_block_facebook .invite_block_icon {
-	padding-left: 0;
+	padding-inline-start: 0;
 }
 
 .invite_block_facebook {
@@ -1071,7 +1084,7 @@ span.invite_action_txt {
 }
 
 .invite_block_facebook.add_friend {
-	margin-right: 20%;
+	margin-inline-end: 20%;
 	flex-wrap: wrap;
 }
 
@@ -1100,13 +1113,14 @@ span.invite_action_txt {
 }
 
 #add_friends_button {
-	margin: 0 10px 0 0;
+	margin-block: 0;
+	margin-inline: 0 10px;
 }
 
 .add_friend_icon {
 	background-repeat: no-repeat;
 	background-size: 16px 192px;
-	padding-left: 24px;
+	padding-inline-start: 24px;
 	background-image: url('https://community.fastly.steamstatic.com/public/images/iconsheet_friends.png?v=5');
 	background-position: 0 -176px;
 }

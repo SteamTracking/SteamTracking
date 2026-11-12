@@ -7438,6 +7438,8 @@ message StoreItem_ExtraDetails {
 	optional .StoreItem_ExtraDetails_MusicAlbum music_album = 35;
 	repeated .StoreItem_ExtraDetails_SalePage sale_pages = 36;
 	optional bool item_store_show_featured = 37;
+	optional .StoreItem_ExtraDetails_HardwareCompatibility hardware_compatibility = 38;
+	optional .StoreItem_ExtraDetails_DLCForPurchase dlc_for_purchase = 39;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7463,6 +7465,30 @@ message StoreItem_ExtraDetails_CastAndCrew {
 	repeated string writers = 3;
 	repeated string music = 4;
 	repeated string actors = 5;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_DLCForPurchase {
+	repeated .StoreItem_ExtraDetails_DLCForPurchase_DLC dlc = 1;
+	optional uint32 dlc_count = 2;
+	repeated .StoreItem_ExtraDetails_DLCForPurchase_Dependency dependencies = 3;
+	optional uint32 packageid = 4;
+	optional string formatted_total_price = 5;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_DLCForPurchase_Dependency {
+	optional uint32 appid = 1;
+	optional uint32 packageid = 2;
+	optional bool required = 3;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_DLCForPurchase_DLC {
+	optional uint32 appid = 1;
+	optional uint32 packageid = 2;
+	repeated int32 content_descriptorids = 3 [(.description) = "enum"];
+	optional int32 highlight_reason = 4 [(.description) = "enum"];
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7494,6 +7520,27 @@ message StoreItem_ExtraDetails_EventSpotlight {
 	optional uint32 clan_account_id = 1;
 	optional fixed64 event_gid = 2;
 	optional fixed64 announcement_gid = 3;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_HardwareCompatibility {
+	repeated .StoreItem_ExtraDetails_HardwareCompatibility_TestResult steam_deck_tests = 1;
+	repeated .StoreItem_ExtraDetails_HardwareCompatibility_SteamOSTestResult steam_os_tests = 2;
+	repeated .StoreItem_ExtraDetails_HardwareCompatibility_TestResult steam_machine_tests = 3;
+	repeated .StoreItem_ExtraDetails_HardwareCompatibility_TestResult steam_frame_tests = 4;
+	optional string steam_deck_blog_url = 5;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_HardwareCompatibility_SteamOSTestResult {
+	optional int32 display_type = 1 [(.description) = "enum"];
+	optional string loc_token = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_HardwareCompatibility_TestResult {
+	optional int32 display_type = 1 [(.description) = "enum"];
+	optional string loc_token = 2;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7787,6 +7834,7 @@ message StoreItem_Reviews {
 	optional .StoreItem_Reviews_StoreReviewSummary summary_filtered = 1;
 	optional .StoreItem_Reviews_StoreReviewSummary summary_unfiltered = 2;
 	optional .StoreItem_Reviews_StoreReviewSummary summary_language_specific = 3;
+	optional bool counts_all_purchases = 4;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

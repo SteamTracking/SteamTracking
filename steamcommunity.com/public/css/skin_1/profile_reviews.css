@@ -25,7 +25,7 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	height: 100%;
 	position: absolute;
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 	z-index: -1;
 	background-repeat:no-repeat;
 	background-size: cover;
@@ -45,7 +45,7 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 }
 
 .review_box .header .review_award_ctn {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -73,7 +73,7 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	font-size: 13px;
 	vertical-align: middle;
 	font-weight: bold;
-	padding-right: 3px;
+	padding-inline-end: 3px;
 }
 .review_box .header .review_award_count.hidden {
 	display: none;
@@ -82,12 +82,12 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 .review_box .reward_btn_icon {
 	vertical-align: middle;
 	height: 16px;
-	margin-right: 2px;
+	margin-inline-end: 2px;
 }
 
 .review_box .leftcol {
 	width: 184px;
-	float: left;
+	float: inline-start;
 	max-width: 35%;
 	margin: 8px;
 }
@@ -125,8 +125,8 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 }
 
 .review_box .vote_header .thumb {
-	float: left;
-	margin-right: 10px;
+	float: inline-start;
+	margin-inline-end: 10px;
 	width: 44px;
 	height: 44px;
 }
@@ -136,15 +136,15 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 }
 
 .review_box .vote_header .review_source {
-	float: right;
-	margin-right: 5px;
+	float: inline-end;
+	margin-inline-end: 5px;
 	margin-top: 15px;
 	opacity: 0.5;
 }
 
 .review_box .vote_header .majority_deck {
-	float: right;
-	margin-right: 5px;
+	float: inline-end;
+	margin-inline-end: 5px;
 	margin-top: 15px;
 	opacity: 0.5;
 }
@@ -158,7 +158,7 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	color: #c6d4df;
 	overflow-wrap: break-word;
 
-	clear: left;	/* in responsive mode, will drop below the game logo */
+	clear: inline-start;	/* in responsive mode, will drop below the game logo */
 }
 
 .review_box .content.failed_content_check {
@@ -189,18 +189,18 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 
 .review_box .control_block .text {
 	display: inline-block;
-	margin-right: 9px;
+	margin-inline-end: 9px;
 	color: #8f98a0;
 	font-size: 12px;
 }
 
 .review_box .early_access_review {
-	margin-left: 8px;
+	margin-inline-start: 8px;
 }
 
 .review_box .reviewer_hardware_container {
 	margin-top: 10px;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 }
 
 .review_list #leftContents {
@@ -212,7 +212,8 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 #rightContents .box {
 	background: #1b1b1b;
 	background: rgba(27,27,27,.36);
-	padding: 10px 10px 10px 11px;
+	padding-block: 10px;
+	padding-inline: 11px 10px;
 }
 
 .giantNumber {
@@ -249,7 +250,8 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 
 .miniReviewBlock .postedBlock {
 	display: inline-block;
-	margin: 7px 0 0 8px;
+	margin-block: 7px 0;
+	margin-inline: 8px 0;
 	line-height: normal;
 	font-size: 12px;
 
@@ -267,7 +269,7 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 }
 
 .miniReviewBlock .thumb {
-	margin-left: 3px;
+	margin-inline-start: 3px;
 }
 
 .sectionTabsHR {
@@ -285,7 +287,10 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 
 .dselect_container .dropcontainer ul {
 	background-color: #000000;
-	border-radius: 0 3px 3px;
+	border-start-start-radius: 0;
+	border-start-end-radius: 3px;
+	border-end-end-radius: 3px;
+	border-end-start-radius: 3px;
 	box-shadow: 0 5px 5px #000000;
 	list-style-type: none;
 	margin: 0;
@@ -346,7 +351,8 @@ html:not(.GamepadMode) .dselect_container .trigger.activetrigger {
 .dselect_container .trigger::after {
 	background: url(https://community.fastly.steamstatic.com/public/images/skin_1/arrowDn9x5.gif) no-repeat left center;
 	content: '';
-	inset: 0 0 0 auto;
+	inset-block: 0;
+	inset-inline: auto 0;
 	position: absolute;
 	width: 16px;
 }
@@ -370,11 +376,11 @@ html:not(.GamepadMode) .dselect_container .trigger.activetrigger {
 	}
 
 	html.responsive .box .review_stat {
-		float: left;
-		margin-right: 24px;
+		float: inline-start;
+		margin-inline-end: 24px;
 	}
 	html.responsive .box .review_stat:last-child {
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 }
 

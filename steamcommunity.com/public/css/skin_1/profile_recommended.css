@@ -21,7 +21,7 @@
 	height: 92px;
 	background-repeat: no-repeat;
 	padding: 4px;
-	margin-right: 2px;
+	margin-inline-end: 2px;
 }
 
 .friend_status_offline .friend_block_avatar_92 {
@@ -47,7 +47,7 @@
 	background-repeat: repeat-x;
 	background-position: top;
 
-	margin-right: 16px;
+	margin-inline-end: 16px;
 }
 
 .recommendation_detail .quote {
@@ -69,7 +69,7 @@
 .recommendation_area .recommendation_author
 {
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 0px;
 }
 
@@ -80,13 +80,13 @@
 
 .recommendation_detail .recommendation_area_content
 {
-	padding-left: 116px;
+	padding-inline-start: 116px;
 	width: 596px;
 }
 
 .recommendation_detail .recommendation_date
 {
-	padding-left: 13px;
+	padding-inline-start: 13px;
 	color: #626467;
 	font-size: 11px;
 }
@@ -99,7 +99,7 @@
 
 .game_recommendation .recommendation_area_content
 {
-	padding-left: 56px;
+	padding-inline-start: 56px;
 }
 
 .quote
@@ -126,14 +126,14 @@
 
 .recommendation_detail .quote_arrow
 {
-	left: 100px;
+	inset-inline-start: 100px;
 	top: 13px;
 }
 
 
 .recommendation_area .gameLogoHolder_default {
 	position: absolute;
-	right: 0px;
+	inset-inline-end: 0px;
 	top: 0px;
 }
 
@@ -141,9 +141,9 @@
 {
 	position: absolute;
 	width: 187px;
-	right: 0px;
+	inset-inline-end: 0px;
 	top: 84px;
-	text-align: right;
+	text-align: end;
 }
 
 .actiontext
@@ -243,7 +243,8 @@ html:not(.GamepadMode) .dselect_container .trigger.activetrigger {
 .dselect_container .trigger::after {
 	background: url(https://community.fastly.steamstatic.com/public/images/skin_1/arrowDn9x5.gif) no-repeat left center;
 	content: '';
-	inset: 0 0 0 auto;
+	inset-block: 0;
+	inset-inline: auto 0;
 	position: absolute;
 	width: 16px;
 }

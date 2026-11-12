@@ -11991,7 +11991,7 @@
               bIncludeMessageInIdentifier: !0,
             }),
             console.warn(_),
-            console.log(_.stack || _));
+            console.log((_ instanceof Error && _.stack) || _));
         }
       }
       BIsValid() {
@@ -32275,6 +32275,11 @@ Error generating stack: ` +
                 _: 3,
                 _: StoreItem_Reviews_StoreReviewSummary,
               },
+              counts_all_purchases: {
+                _: 4,
+                _: ReaderProto.readBool,
+                _: WriterProto.writeBool,
+              },
             },
           }),
           _.sm_m
@@ -34570,6 +34575,14 @@ Error generating stack: ` +
                 _: ReaderProto.readBool,
                 _: WriterProto.writeBool,
               },
+              hardware_compatibility: {
+                _: 38,
+                _: StoreItem_ExtraDetails_HardwareCompatibility,
+              },
+              dlc_for_purchase: {
+                _: 39,
+                _: StoreItem_ExtraDetails_DLCForPurchase,
+              },
             },
           }),
           _.sm_m
@@ -36227,6 +36240,491 @@ Error generating stack: ` +
       }
       getClassName() {
         return `StoreItem_ExtraDetails_SalePage`;
+      }
+    },
+    StoreItem_ExtraDetails_HardwareCompatibility = class _
+      extends import_google_protobuf.Message
+    {
+      static ImplementsStaticInterface() {}
+      constructor(_ = null) {
+        (super(),
+          _.prototype.steam_deck_tests || AddAccessors(_._()),
+          import_google_protobuf.Message.initialize(
+            this,
+            _,
+            0,
+            -1,
+            [1, 2, 3, 4],
+            null,
+          ));
+      }
+      static sm_m;
+      static sm_mbf;
+      static M() {
+        return (
+          (_.sm_m ||= {
+            proto: _,
+            fields: {
+              steam_deck_tests: {
+                _: 1,
+                _: StoreItem_ExtraDetails_HardwareCompatibility_TestResult,
+                _: !0,
+                _: !0,
+              },
+              steam_os_tests: {
+                _: 2,
+                _: StoreItem_ExtraDetails_HardwareCompatibility_SteamOSTestResult,
+                _: !0,
+                _: !0,
+              },
+              steam_machine_tests: {
+                _: 3,
+                _: StoreItem_ExtraDetails_HardwareCompatibility_TestResult,
+                _: !0,
+                _: !0,
+              },
+              steam_frame_tests: {
+                _: 4,
+                _: StoreItem_ExtraDetails_HardwareCompatibility_TestResult,
+                _: !0,
+                _: !0,
+              },
+              steam_deck_blog_url: {
+                _: 5,
+                _: ReaderProto.readString,
+                _: WriterProto.writeString,
+              },
+            },
+          }),
+          _.sm_m
+        );
+      }
+      static MBF() {
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
+      }
+      toObject(_ = !1) {
+        return _.toObject(_, this);
+      }
+      static toObject(_, _) {
+        return ToObject(_._(), _, _);
+      }
+      static fromObject(_) {
+        return FromObject(_._(), _);
+      }
+      static deserializeBinary(_) {
+        let _ = new import_google_protobuf.BinaryReader(_),
+          _ = new _();
+        return _.deserializeBinaryFromReader(_, _);
+      }
+      static deserializeBinaryFromReader(_, _) {
+        return DeserializeBinary(_.MBF(), _, _);
+      }
+      serializeBinary() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+      }
+      static serializeBinaryToWriter(_, _) {
+        SerializeBinary(_._(), _, _);
+      }
+      serializeBase64String() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+      }
+      getClassName() {
+        return `StoreItem_ExtraDetails_HardwareCompatibility`;
+      }
+    },
+    StoreItem_ExtraDetails_HardwareCompatibility_TestResult = class _
+      extends import_google_protobuf.Message
+    {
+      static ImplementsStaticInterface() {}
+      constructor(_ = null) {
+        (super(),
+          _.prototype.display_type || AddAccessors(_._()),
+          import_google_protobuf.Message.initialize(
+            this,
+            _,
+            0,
+            -1,
+            void 0,
+            null,
+          ));
+      }
+      static sm_m;
+      static sm_mbf;
+      static M() {
+        return (
+          (_.sm_m ||= {
+            proto: _,
+            fields: {
+              display_type: {
+                _: 1,
+                _: ReaderProto.readEnum,
+                _: WriterProto.writeEnum,
+              },
+              loc_token: {
+                _: 2,
+                _: ReaderProto.readString,
+                _: WriterProto.writeString,
+              },
+            },
+          }),
+          _.sm_m
+        );
+      }
+      static MBF() {
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
+      }
+      toObject(_ = !1) {
+        return _.toObject(_, this);
+      }
+      static toObject(_, _) {
+        return ToObject(_._(), _, _);
+      }
+      static fromObject(_) {
+        return FromObject(_._(), _);
+      }
+      static deserializeBinary(_) {
+        let _ = new import_google_protobuf.BinaryReader(_),
+          _ = new _();
+        return _.deserializeBinaryFromReader(_, _);
+      }
+      static deserializeBinaryFromReader(_, _) {
+        return DeserializeBinary(_.MBF(), _, _);
+      }
+      serializeBinary() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+      }
+      static serializeBinaryToWriter(_, _) {
+        SerializeBinary(_._(), _, _);
+      }
+      serializeBase64String() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+      }
+      getClassName() {
+        return `StoreItem_ExtraDetails_HardwareCompatibility_TestResult`;
+      }
+    },
+    StoreItem_ExtraDetails_HardwareCompatibility_SteamOSTestResult = class _
+      extends import_google_protobuf.Message
+    {
+      static ImplementsStaticInterface() {}
+      constructor(_ = null) {
+        (super(),
+          _.prototype.display_type || AddAccessors(_._()),
+          import_google_protobuf.Message.initialize(
+            this,
+            _,
+            0,
+            -1,
+            void 0,
+            null,
+          ));
+      }
+      static sm_m;
+      static sm_mbf;
+      static M() {
+        return (
+          (_.sm_m ||= {
+            proto: _,
+            fields: {
+              display_type: {
+                _: 1,
+                _: ReaderProto.readEnum,
+                _: WriterProto.writeEnum,
+              },
+              loc_token: {
+                _: 2,
+                _: ReaderProto.readString,
+                _: WriterProto.writeString,
+              },
+            },
+          }),
+          _.sm_m
+        );
+      }
+      static MBF() {
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
+      }
+      toObject(_ = !1) {
+        return _.toObject(_, this);
+      }
+      static toObject(_, _) {
+        return ToObject(_._(), _, _);
+      }
+      static fromObject(_) {
+        return FromObject(_._(), _);
+      }
+      static deserializeBinary(_) {
+        let _ = new import_google_protobuf.BinaryReader(_),
+          _ = new _();
+        return _.deserializeBinaryFromReader(_, _);
+      }
+      static deserializeBinaryFromReader(_, _) {
+        return DeserializeBinary(_.MBF(), _, _);
+      }
+      serializeBinary() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+      }
+      static serializeBinaryToWriter(_, _) {
+        SerializeBinary(_._(), _, _);
+      }
+      serializeBase64String() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+      }
+      getClassName() {
+        return `StoreItem_ExtraDetails_HardwareCompatibility_SteamOSTestResult`;
+      }
+    },
+    StoreItem_ExtraDetails_DLCForPurchase = class _
+      extends import_google_protobuf.Message
+    {
+      static ImplementsStaticInterface() {}
+      constructor(_ = null) {
+        (super(),
+          _.prototype.dlc || AddAccessors(_._()),
+          import_google_protobuf.Message.initialize(
+            this,
+            _,
+            0,
+            -1,
+            [1, 3],
+            null,
+          ));
+      }
+      static sm_m;
+      static sm_mbf;
+      static M() {
+        return (
+          (_.sm_m ||= {
+            proto: _,
+            fields: {
+              dlc: {
+                _: 1,
+                _: StoreItem_ExtraDetails_DLCForPurchase_DLC,
+                _: !0,
+                _: !0,
+              },
+              dlc_count: {
+                _: 2,
+                _: ReaderProto.readUint32,
+                _: WriterProto.writeUint32,
+              },
+              dependencies: {
+                _: 3,
+                _: StoreItem_ExtraDetails_DLCForPurchase_Dependency,
+                _: !0,
+                _: !0,
+              },
+              packageid: {
+                _: 4,
+                _: ReaderProto.readUint32,
+                _: WriterProto.writeUint32,
+              },
+              formatted_total_price: {
+                _: 5,
+                _: ReaderProto.readString,
+                _: WriterProto.writeString,
+              },
+            },
+          }),
+          _.sm_m
+        );
+      }
+      static MBF() {
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
+      }
+      toObject(_ = !1) {
+        return _.toObject(_, this);
+      }
+      static toObject(_, _) {
+        return ToObject(_._(), _, _);
+      }
+      static fromObject(_) {
+        return FromObject(_._(), _);
+      }
+      static deserializeBinary(_) {
+        let _ = new import_google_protobuf.BinaryReader(_),
+          _ = new _();
+        return _.deserializeBinaryFromReader(_, _);
+      }
+      static deserializeBinaryFromReader(_, _) {
+        return DeserializeBinary(_.MBF(), _, _);
+      }
+      serializeBinary() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+      }
+      static serializeBinaryToWriter(_, _) {
+        SerializeBinary(_._(), _, _);
+      }
+      serializeBase64String() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+      }
+      getClassName() {
+        return `StoreItem_ExtraDetails_DLCForPurchase`;
+      }
+    },
+    StoreItem_ExtraDetails_DLCForPurchase_DLC = class _
+      extends import_google_protobuf.Message
+    {
+      static ImplementsStaticInterface() {}
+      constructor(_ = null) {
+        (super(),
+          _.prototype.appid || AddAccessors(_._()),
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [3], null));
+      }
+      static sm_m;
+      static sm_mbf;
+      static M() {
+        return (
+          (_.sm_m ||= {
+            proto: _,
+            fields: {
+              appid: {
+                _: 1,
+                _: ReaderProto.readUint32,
+                _: WriterProto.writeUint32,
+              },
+              packageid: {
+                _: 2,
+                _: ReaderProto.readUint32,
+                _: WriterProto.writeUint32,
+              },
+              content_descriptorids: {
+                _: 3,
+                _: !0,
+                _: !0,
+                _: ReaderProto.readEnum,
+                pbr: ReaderProto.readPackedEnum,
+                _: WriterProto.writeRepeatedEnum,
+              },
+              highlight_reason: {
+                _: 4,
+                _: ReaderProto.readEnum,
+                _: WriterProto.writeEnum,
+              },
+            },
+          }),
+          _.sm_m
+        );
+      }
+      static MBF() {
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
+      }
+      toObject(_ = !1) {
+        return _.toObject(_, this);
+      }
+      static toObject(_, _) {
+        return ToObject(_._(), _, _);
+      }
+      static fromObject(_) {
+        return FromObject(_._(), _);
+      }
+      static deserializeBinary(_) {
+        let _ = new import_google_protobuf.BinaryReader(_),
+          _ = new _();
+        return _.deserializeBinaryFromReader(_, _);
+      }
+      static deserializeBinaryFromReader(_, _) {
+        return DeserializeBinary(_.MBF(), _, _);
+      }
+      serializeBinary() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+      }
+      static serializeBinaryToWriter(_, _) {
+        SerializeBinary(_._(), _, _);
+      }
+      serializeBase64String() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+      }
+      getClassName() {
+        return `StoreItem_ExtraDetails_DLCForPurchase_DLC`;
+      }
+    },
+    StoreItem_ExtraDetails_DLCForPurchase_Dependency = class _
+      extends import_google_protobuf.Message
+    {
+      static ImplementsStaticInterface() {}
+      constructor(_ = null) {
+        (super(),
+          _.prototype.appid || AddAccessors(_._()),
+          import_google_protobuf.Message.initialize(
+            this,
+            _,
+            0,
+            -1,
+            void 0,
+            null,
+          ));
+      }
+      static sm_m;
+      static sm_mbf;
+      static M() {
+        return (
+          (_.sm_m ||= {
+            proto: _,
+            fields: {
+              appid: {
+                _: 1,
+                _: ReaderProto.readUint32,
+                _: WriterProto.writeUint32,
+              },
+              packageid: {
+                _: 2,
+                _: ReaderProto.readUint32,
+                _: WriterProto.writeUint32,
+              },
+              required: {
+                _: 3,
+                _: ReaderProto.readBool,
+                _: WriterProto.writeBool,
+              },
+            },
+          }),
+          _.sm_m
+        );
+      }
+      static MBF() {
+        return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
+      }
+      toObject(_ = !1) {
+        return _.toObject(_, this);
+      }
+      static toObject(_, _) {
+        return ToObject(_._(), _, _);
+      }
+      static fromObject(_) {
+        return FromObject(_._(), _);
+      }
+      static deserializeBinary(_) {
+        let _ = new import_google_protobuf.BinaryReader(_),
+          _ = new _();
+        return _.deserializeBinaryFromReader(_, _);
+      }
+      static deserializeBinaryFromReader(_, _) {
+        return DeserializeBinary(_.MBF(), _, _);
+      }
+      serializeBinary() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+      }
+      static serializeBinaryToWriter(_, _) {
+        SerializeBinary(_._(), _, _);
+      }
+      serializeBase64String() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+      }
+      getClassName() {
+        return `StoreItem_ExtraDetails_DLCForPurchase_Dependency`;
       }
     },
     StoreItem_OptInRegistrationTags = class _
@@ -40796,12 +41294,13 @@ Error generating stack: ` +
         let _ = _;
         _ &&
         !(
-          _.BHasNavTargetInDirection(_, !0) ||
+          _.BHasFocusableChildInDirection(_, !0) ||
           (_ != _ &&
             _.Element &&
             _.m_Properties?.scrollRegionToStartOrEnd &&
             PerformScrollToStartOrEnd(_.Element, _, _, _ == _.Tree.Root),
-          _ == _)
+          _.HasMovementHandler(_)) ||
+          _ == _
         );
         _ = _.GetNavParentCrossingTrees()
       );
@@ -41720,8 +42219,7 @@ Error generating stack: ` +
       InternalFocusDescendant(_, _, _) {
         return _ ? (this.m_Tree.TransferFocus(_, _, _, !1), !0) : !1;
       }
-      BHasNavTargetInDirection(_, _) {
-        if (this.HasMovementHandler(_)) return !0;
+      BHasFocusableChildInDirection(_, _) {
         let _ = this.FindNextFocusableChild(_);
         if (_ && _) {
           let _ = _.GetWrappedTree();
@@ -46451,7 +46949,7 @@ Error generating stack: ` +
       AppType_TitleCase_Application: () => AppType_TitleCase_Application$30,
       AppType_TitleCase_Beta: () => AppType_TitleCase_Beta$30,
       AppType_TitleCase_Config: () => AppType_TitleCase_Config$30,
-      AppType_TitleCase_DLC: () => `DLC`,
+      AppType_TitleCase_DLC: () => AppType_TitleCase_DLC$30,
       AppType_TitleCase_DLC_SeasonPass: () =>
         AppType_TitleCase_DLC_SeasonPass$30,
       AppType_TitleCase_Demo: () => AppType_TitleCase_Demo$30,
@@ -46498,7 +46996,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$30,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$30,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$30,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$30,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$30,
@@ -46537,7 +47034,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$30,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$30,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$30,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$30,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$30,
       Header_Nav_OEM: () => Header_Nav_OEM$30,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$30,
@@ -46623,7 +47119,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$30,
     Header_Nav_DocumentationAdmin$30,
     Header_Global_Resources$30,
-    Header_Global_Resources_SteamVR$30,
     Header_Global_Resources_PCCafe$30,
     Header_Global_Resources_Discussions$30,
     Header_Global_Resources_VideoTutorials$30,
@@ -46639,7 +47134,6 @@ Error generating stack: ` +
     global_menu_sign_out$61,
     global_menu_sign_in$30,
     Header_Nav_Dashboard$30,
-    Header_Nav_Lighthouse$30,
     Header_Nav_AppsPackages$30,
     Header_Nav_AppsPackages_All$30,
     Header_Nav_AppsPackages_ViewPackages$30,
@@ -46747,7 +47241,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$30 = `عرض الكل`),
         (Header_Nav_DocumentationAdmin$30 = `الأدوات الإدارية`),
         (Header_Global_Resources$30 = `الموارد`),
-        (Header_Global_Resources_SteamVR$30 = `Steam VR`),
         (Header_Global_Resources_PCCafe$30 = `برنامج تشغيل Steam PC Café`),
         (Header_Global_Resources_Discussions$30 = `مناقشات Steamworks`),
         (Header_Global_Resources_VideoTutorials$30 = `فيديوهات Steamworks التعليمية`),
@@ -46763,7 +47256,6 @@ Error generating stack: ` +
         (global_menu_sign_out$61 = `تسجيل الخروج`),
         (global_menu_sign_in$30 = `تسجيل الدخول`),
         (Header_Nav_Dashboard$30 = `لوحة التحكم`),
-        (Header_Nav_Lighthouse$30 = `نظام التتبع في SteamVR`),
         (Header_Nav_AppsPackages$30 = `التطبيقات والحزم`),
         (Header_Nav_AppsPackages_All$30 = `جميع التطبيقات`),
         (Header_Nav_AppsPackages_ViewPackages$30 = `عرض الحزم`),
@@ -46838,16 +47330,17 @@ Error generating stack: ` +
         (change_partner_dialog_submit$30 = `تبديل`),
         (change_partner_dialog_cancel$30 = `إلغاء`),
         (AppType_TitleCase_Advertising$30 = `العرض الترويجي`),
-        (AppType_TitleCase_Game$30 = `اللعبة`),
-        (AppType_TitleCase_Application$30 = `التطبيق`),
+        (AppType_TitleCase_Game$30 = `لعبة`),
+        (AppType_TitleCase_Application$30 = `تطبيق`),
         (AppType_TitleCase_Tool$30 = `أداة`),
-        (AppType_TitleCase_Demo$30 = `النسخة التجريبية`),
+        (AppType_TitleCase_Demo$30 = `ديمو`),
+        (AppType_TitleCase_DLC$30 = `محتوى إضافي`),
         (AppType_TitleCase_Mod$30 = `التعديل`),
-        (AppType_TitleCase_Guide$30 = `الدليل`),
+        (AppType_TitleCase_Guide$30 = `دليل إرشادي`),
         (AppType_TitleCase_Config$30 = `الإعداد`),
-        (AppType_TitleCase_Music$30 = `الموسيقى`),
+        (AppType_TitleCase_Music$30 = `موسيقى`),
         (AppType_TitleCase_PlugIn$30 = `إضافة`),
-        (AppType_TitleCase_Hardware$30 = `الجهاز`),
+        (AppType_TitleCase_Hardware$30 = `جهاز`),
         (AppType_TitleCase_Video$30 = `فيديو`),
         (AppType_TitleCase_Series$30 = `سلسلة`),
         (AppType_TitleCase_Episode$30 = `حلقة`),
@@ -46878,7 +47371,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$30,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$30,
           Header_Global_Resources: Header_Global_Resources$30,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$30,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$30,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$30,
@@ -46896,7 +47388,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$61,
           global_menu_sign_in: global_menu_sign_in$30,
           Header_Nav_Dashboard: Header_Nav_Dashboard$30,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$30,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$30,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$30,
           Header_Nav_AppsPackages_ViewPackages:
@@ -46996,7 +47487,7 @@ Error generating stack: ` +
           AppType_TitleCase_Application: AppType_TitleCase_Application$30,
           AppType_TitleCase_Tool: AppType_TitleCase_Tool$30,
           AppType_TitleCase_Demo: AppType_TitleCase_Demo$30,
-          AppType_TitleCase_DLC: `DLC`,
+          AppType_TitleCase_DLC: AppType_TitleCase_DLC$30,
           AppType_TitleCase_Mod: AppType_TitleCase_Mod$30,
           AppType_TitleCase_Guide: AppType_TitleCase_Guide$30,
           AppType_TitleCase_Config: AppType_TitleCase_Config$30,
@@ -47064,7 +47555,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$29,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$29,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$29,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$29,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$29,
@@ -47103,7 +47593,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$29,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$29,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$29,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$29,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$29,
       Header_Nav_OEM: () => Header_Nav_OEM$29,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$29,
@@ -47189,7 +47678,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$29,
     Header_Nav_DocumentationAdmin$29,
     Header_Global_Resources$29,
-    Header_Global_Resources_SteamVR$29,
     Header_Global_Resources_PCCafe$29,
     Header_Global_Resources_Discussions$29,
     Header_Global_Resources_VideoTutorials$29,
@@ -47205,7 +47693,6 @@ Error generating stack: ` +
     global_menu_sign_out$60,
     global_menu_sign_in$29,
     Header_Nav_Dashboard$29,
-    Header_Nav_Lighthouse$29,
     Header_Nav_AppsPackages$29,
     Header_Nav_AppsPackages_All$29,
     Header_Nav_AppsPackages_ViewPackages$29,
@@ -47313,7 +47800,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$29 = `Ver tudo`),
         (Header_Nav_DocumentationAdmin$29 = `Ferramentas de administração`),
         (Header_Global_Resources$29 = `Recursos`),
-        (Header_Global_Resources_SteamVR$29 = `SteamVR`),
         (Header_Global_Resources_PCCafe$29 = `Programa de Cyber Cafés Steam`),
         (Header_Global_Resources_Discussions$29 = `Discussões do Steamworks`),
         (Header_Global_Resources_VideoTutorials$29 = `Videotutoriais do Steamworks`),
@@ -47329,7 +47815,6 @@ Error generating stack: ` +
         (global_menu_sign_out$60 = `Finalizar sessão...`),
         (global_menu_sign_in$29 = `Iniciar sessão`),
         (Header_Nav_Dashboard$29 = `Painel`),
-        (Header_Nav_Lighthouse$29 = `Rastreamento do SteamVR`),
         (Header_Nav_AppsPackages$29 = `Aplicativos e pacotes`),
         (Header_Nav_AppsPackages_All$29 = `Todos os aplicativos`),
         (Header_Nav_AppsPackages_ViewPackages$29 = `Ver pacotes`),
@@ -47444,7 +47929,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$29,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$29,
           Header_Global_Resources: Header_Global_Resources$29,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$29,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$29,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$29,
@@ -47462,7 +47946,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$60,
           global_menu_sign_in: global_menu_sign_in$29,
           Header_Nav_Dashboard: Header_Nav_Dashboard$29,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$29,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$29,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$29,
           Header_Nav_AppsPackages_ViewPackages:
@@ -47630,7 +48113,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$28,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$28,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$28,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$28,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$28,
@@ -47669,7 +48151,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$28,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$28,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$28,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$28,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$28,
       Header_Nav_OEM: () => Header_Nav_OEM$28,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$28,
@@ -47755,7 +48236,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$28,
     Header_Nav_DocumentationAdmin$28,
     Header_Global_Resources$28,
-    Header_Global_Resources_SteamVR$28,
     Header_Global_Resources_PCCafe$28,
     Header_Global_Resources_Discussions$28,
     Header_Global_Resources_VideoTutorials$28,
@@ -47771,7 +48251,6 @@ Error generating stack: ` +
     global_menu_sign_out$59,
     global_menu_sign_in$28,
     Header_Nav_Dashboard$28,
-    Header_Nav_Lighthouse$28,
     Header_Nav_AppsPackages$28,
     Header_Nav_AppsPackages_All$28,
     Header_Nav_AppsPackages_ViewPackages$28,
@@ -47879,7 +48358,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$28 = `Вижте всички`),
         (Header_Nav_DocumentationAdmin$28 = `Административни инструменти`),
         (Header_Global_Resources$28 = `Ресурси`),
-        (Header_Global_Resources_SteamVR$28 = `Steam ВР`),
         (Header_Global_Resources_PCCafe$28 = `Steam програмата за компютърни зали`),
         (Header_Global_Resources_Discussions$28 = `Steamworks дискусии`),
         (Header_Global_Resources_VideoTutorials$28 = `Видео упътвания за Steamworks`),
@@ -47895,7 +48373,6 @@ Error generating stack: ` +
         (global_menu_sign_out$59 = `Излизане`),
         (global_menu_sign_in$28 = `Вписване`),
         (Header_Nav_Dashboard$28 = `Табло`),
-        (Header_Nav_Lighthouse$28 = `Проследяваща SteamVR технология`),
         (Header_Nav_AppsPackages$28 = `Приложения и пакети`),
         (Header_Nav_AppsPackages_All$28 = `Всички приложения`),
         (Header_Nav_AppsPackages_ViewPackages$28 = `Преглед на пакетите`),
@@ -48011,7 +48488,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$28,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$28,
           Header_Global_Resources: Header_Global_Resources$28,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$28,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$28,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$28,
@@ -48029,7 +48505,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$59,
           global_menu_sign_in: global_menu_sign_in$28,
           Header_Nav_Dashboard: Header_Nav_Dashboard$28,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$28,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$28,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$28,
           Header_Nav_AppsPackages_ViewPackages:
@@ -48197,7 +48672,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$27,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$27,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$27,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$27,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$27,
@@ -48236,7 +48710,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$27,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$27,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$27,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$27,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$27,
       Header_Nav_OEM: () => Header_Nav_OEM$27,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$27,
@@ -48322,7 +48795,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$27,
     Header_Nav_DocumentationAdmin$27,
     Header_Global_Resources$27,
-    Header_Global_Resources_SteamVR$27,
     Header_Global_Resources_PCCafe$27,
     Header_Global_Resources_Discussions$27,
     Header_Global_Resources_VideoTutorials$27,
@@ -48338,7 +48810,6 @@ Error generating stack: ` +
     global_menu_sign_out$58,
     global_menu_sign_in$27,
     Header_Nav_Dashboard$27,
-    Header_Nav_Lighthouse$27,
     Header_Nav_AppsPackages$27,
     Header_Nav_AppsPackages_All$27,
     Header_Nav_AppsPackages_ViewPackages$27,
@@ -48446,7 +48917,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$27 = `Zobrazit vše`),
         (Header_Nav_DocumentationAdmin$27 = `Nástroje správce`),
         (Header_Global_Resources$27 = `Zdroje`),
-        (Header_Global_Resources_SteamVR$27 = `SteamVR`),
         (Header_Global_Resources_PCCafe$27 = `Program Steam PC Café`),
         (Header_Global_Resources_Discussions$27 = `Diskuze vývojářů`),
         (Header_Global_Resources_VideoTutorials$27 = `Video návody`),
@@ -48462,7 +48932,6 @@ Error generating stack: ` +
         (global_menu_sign_out$58 = `Odhlásit se`),
         (global_menu_sign_in$27 = `Přihlásit se`),
         (Header_Nav_Dashboard$27 = `Hlavní nabídka`),
-        (Header_Nav_Lighthouse$27 = `SteamVR Tracking`),
         (Header_Nav_AppsPackages$27 = `Aplikace a balíky`),
         (Header_Nav_AppsPackages_All$27 = `Všechny aplikace`),
         (Header_Nav_AppsPackages_ViewPackages$27 = `Balíky`),
@@ -48576,7 +49045,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$27,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$27,
           Header_Global_Resources: Header_Global_Resources$27,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$27,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$27,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$27,
@@ -48594,7 +49062,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$58,
           global_menu_sign_in: global_menu_sign_in$27,
           Header_Nav_Dashboard: Header_Nav_Dashboard$27,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$27,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$27,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$27,
           Header_Nav_AppsPackages_ViewPackages:
@@ -48762,7 +49229,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$26,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$26,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$26,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$26,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$26,
@@ -48801,7 +49267,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$26,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$26,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$26,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$26,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$26,
       Header_Nav_OEM: () => Header_Nav_OEM$26,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$26,
@@ -48887,7 +49352,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$26,
     Header_Nav_DocumentationAdmin$26,
     Header_Global_Resources$26,
-    Header_Global_Resources_SteamVR$26,
     Header_Global_Resources_PCCafe$26,
     Header_Global_Resources_Discussions$26,
     Header_Global_Resources_VideoTutorials$26,
@@ -48903,7 +49367,6 @@ Error generating stack: ` +
     global_menu_sign_out$57,
     global_menu_sign_in$26,
     Header_Nav_Dashboard$26,
-    Header_Nav_Lighthouse$26,
     Header_Nav_AppsPackages$26,
     Header_Nav_AppsPackages_All$26,
     Header_Nav_AppsPackages_ViewPackages$26,
@@ -49011,7 +49474,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$26 = `Se alle`),
         (Header_Nav_DocumentationAdmin$26 = `Administratorværktøjer`),
         (Header_Global_Resources$26 = `Resurser`),
-        (Header_Global_Resources_SteamVR$26 = `SteamVR`),
         (Header_Global_Resources_PCCafe$26 = `Steams program til PC-caféer`),
         (Header_Global_Resources_Discussions$26 = `Steamworks-diskussioner`),
         (Header_Global_Resources_VideoTutorials$26 = `Steamworks-videointroduktioner`),
@@ -49027,7 +49489,6 @@ Error generating stack: ` +
         (global_menu_sign_out$57 = `Log af`),
         (global_menu_sign_in$26 = `Log på`),
         (Header_Nav_Dashboard$26 = `Dashboard`),
-        (Header_Nav_Lighthouse$26 = `SteamVR-sporing`),
         (Header_Nav_AppsPackages$26 = `Applikationer og pakker`),
         (Header_Nav_AppsPackages_All$26 = `Alle applikationer`),
         (Header_Nav_AppsPackages_ViewPackages$26 = `Vis pakker`),
@@ -49141,7 +49602,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$26,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$26,
           Header_Global_Resources: Header_Global_Resources$26,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$26,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$26,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$26,
@@ -49159,7 +49619,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$57,
           global_menu_sign_in: global_menu_sign_in$26,
           Header_Nav_Dashboard: Header_Nav_Dashboard$26,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$26,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$26,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$26,
           Header_Nav_AppsPackages_ViewPackages:
@@ -49327,7 +49786,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$25,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$25,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$25,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$25,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$25,
@@ -49366,7 +49824,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$25,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$25,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$25,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$25,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$25,
       Header_Nav_OEM: () => Header_Nav_OEM$25,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$25,
@@ -49452,7 +49909,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$25,
     Header_Nav_DocumentationAdmin$25,
     Header_Global_Resources$25,
-    Header_Global_Resources_SteamVR$25,
     Header_Global_Resources_PCCafe$25,
     Header_Global_Resources_Discussions$25,
     Header_Global_Resources_VideoTutorials$25,
@@ -49468,7 +49924,6 @@ Error generating stack: ` +
     global_menu_sign_out$56,
     global_menu_sign_in$25,
     Header_Nav_Dashboard$25,
-    Header_Nav_Lighthouse$25,
     Header_Nav_AppsPackages$25,
     Header_Nav_AppsPackages_All$25,
     Header_Nav_AppsPackages_ViewPackages$25,
@@ -49576,7 +50031,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$25 = `Alle weergeven`),
         (Header_Nav_DocumentationAdmin$25 = `Beheerderstools`),
         (Header_Global_Resources$25 = `Bronnen`),
-        (Header_Global_Resources_SteamVR$25 = `Steam VR`),
         (Header_Global_Resources_PCCafe$25 = `Steam-internetcaféprogramma`),
         (Header_Global_Resources_Discussions$25 = `Steamworks-discussies`),
         (Header_Global_Resources_VideoTutorials$25 = `Steamworks-videotutorials`),
@@ -49592,7 +50046,6 @@ Error generating stack: ` +
         (global_menu_sign_out$56 = `Uitloggen`),
         (global_menu_sign_in$25 = `Inloggen`),
         (Header_Nav_Dashboard$25 = `Dashboard`),
-        (Header_Nav_Lighthouse$25 = `SteamVR Tracking`),
         (Header_Nav_AppsPackages$25 = `Apps en pakketten`),
         (Header_Nav_AppsPackages_All$25 = `Alle applicaties`),
         (Header_Nav_AppsPackages_ViewPackages$25 = `Pakketten weergeven`),
@@ -49706,7 +50159,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$25,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$25,
           Header_Global_Resources: Header_Global_Resources$25,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$25,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$25,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$25,
@@ -49724,7 +50176,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$56,
           global_menu_sign_in: global_menu_sign_in$25,
           Header_Nav_Dashboard: Header_Nav_Dashboard$25,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$25,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$25,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$25,
           Header_Nav_AppsPackages_ViewPackages:
@@ -49892,7 +50343,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$24,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$24,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$24,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$24,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$24,
@@ -49931,7 +50381,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$24,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$24,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$24,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$24,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$24,
       Header_Nav_OEM: () => Header_Nav_OEM$24,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$24,
@@ -50017,7 +50466,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$24,
     Header_Nav_DocumentationAdmin$24,
     Header_Global_Resources$24,
-    Header_Global_Resources_SteamVR$24,
     Header_Global_Resources_PCCafe$24,
     Header_Global_Resources_Discussions$24,
     Header_Global_Resources_VideoTutorials$24,
@@ -50033,7 +50481,6 @@ Error generating stack: ` +
     global_menu_sign_out$55,
     global_menu_sign_in$24,
     Header_Nav_Dashboard$24,
-    Header_Nav_Lighthouse$24,
     Header_Nav_AppsPackages$24,
     Header_Nav_AppsPackages_All$24,
     Header_Nav_AppsPackages_ViewPackages$24,
@@ -50141,7 +50588,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$24 = `See all`),
         (Header_Nav_DocumentationAdmin$24 = `Admin Tools`),
         (Header_Global_Resources$24 = `Resources`),
-        (Header_Global_Resources_SteamVR$24 = `Steam VR`),
         (Header_Global_Resources_PCCafe$24 = `Steam PC Café Program`),
         (Header_Global_Resources_Discussions$24 = `Steamworks Discussions`),
         (Header_Global_Resources_VideoTutorials$24 = `Steamworks Video Tutorials`),
@@ -50157,7 +50603,6 @@ Error generating stack: ` +
         (global_menu_sign_out$55 = `Logout`),
         (global_menu_sign_in$24 = `Sign in`),
         (Header_Nav_Dashboard$24 = `Dashboard`),
-        (Header_Nav_Lighthouse$24 = `SteamVR Tracking`),
         (Header_Nav_AppsPackages$24 = `Apps & Packages`),
         (Header_Nav_AppsPackages_All$24 = `All Applications`),
         (Header_Nav_AppsPackages_ViewPackages$24 = `View Packages`),
@@ -50271,7 +50716,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$24,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$24,
           Header_Global_Resources: Header_Global_Resources$24,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$24,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$24,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$24,
@@ -50289,7 +50733,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$55,
           global_menu_sign_in: global_menu_sign_in$24,
           Header_Nav_Dashboard: Header_Nav_Dashboard$24,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$24,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$24,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$24,
           Header_Nav_AppsPackages_ViewPackages:
@@ -50457,7 +50900,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$23,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$23,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$23,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$23,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$23,
@@ -50496,7 +50938,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$23,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$23,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$23,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$23,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$23,
       Header_Nav_OEM: () => Header_Nav_OEM$23,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$23,
@@ -50582,7 +51023,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$23,
     Header_Nav_DocumentationAdmin$23,
     Header_Global_Resources$23,
-    Header_Global_Resources_SteamVR$23,
     Header_Global_Resources_PCCafe$23,
     Header_Global_Resources_Discussions$23,
     Header_Global_Resources_VideoTutorials$23,
@@ -50598,7 +51038,6 @@ Error generating stack: ` +
     global_menu_sign_out$54,
     global_menu_sign_in$23,
     Header_Nav_Dashboard$23,
-    Header_Nav_Lighthouse$23,
     Header_Nav_AppsPackages$23,
     Header_Nav_AppsPackages_All$23,
     Header_Nav_AppsPackages_ViewPackages$23,
@@ -50706,7 +51145,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$23 = `Näytä kaikki`),
         (Header_Nav_DocumentationAdmin$23 = `Ylläpitotyökalut`),
         (Header_Global_Resources$23 = `Resurssit`),
-        (Header_Global_Resources_SteamVR$23 = `Steam VR`),
         (Header_Global_Resources_PCCafe$23 = `Steam PC Café -ohjelma`),
         (Header_Global_Resources_Discussions$23 = `Steamworks-keskustelut`),
         (Header_Global_Resources_VideoTutorials$23 = `Steamworksin videotutoriaalit`),
@@ -50722,7 +51160,6 @@ Error generating stack: ` +
         (global_menu_sign_out$54 = `Kirjaudu ulos`),
         (global_menu_sign_in$23 = `Kirjaudu sisään`),
         (Header_Nav_Dashboard$23 = `Työpöytä`),
-        (Header_Nav_Lighthouse$23 = `SteamVR-seuranta`),
         (Header_Nav_AppsPackages$23 = `Sovellukset ja paketit`),
         (Header_Nav_AppsPackages_All$23 = `Kaikki sovellukset`),
         (Header_Nav_AppsPackages_ViewPackages$23 = `Näytä paketit`),
@@ -50838,7 +51275,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$23,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$23,
           Header_Global_Resources: Header_Global_Resources$23,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$23,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$23,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$23,
@@ -50856,7 +51292,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$54,
           global_menu_sign_in: global_menu_sign_in$23,
           Header_Nav_Dashboard: Header_Nav_Dashboard$23,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$23,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$23,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$23,
           Header_Nav_AppsPackages_ViewPackages:
@@ -51024,7 +51459,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$22,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$22,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$22,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$22,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$22,
@@ -51063,7 +51497,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$22,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$22,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$22,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$22,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$22,
       Header_Nav_OEM: () => Header_Nav_OEM$22,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$22,
@@ -51148,7 +51581,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$22,
     Header_Nav_DocumentationAdmin$22,
     Header_Global_Resources$22,
-    Header_Global_Resources_SteamVR$22,
     Header_Global_Resources_PCCafe$22,
     Header_Global_Resources_Discussions$22,
     Header_Global_Resources_VideoTutorials$22,
@@ -51164,7 +51596,6 @@ Error generating stack: ` +
     global_menu_sign_out$53,
     global_menu_sign_in$22,
     Header_Nav_Dashboard$22,
-    Header_Nav_Lighthouse$22,
     Header_Nav_AppsPackages$22,
     Header_Nav_AppsPackages_All$22,
     Header_Nav_AppsPackages_ViewPackages$22,
@@ -51272,7 +51703,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$22 = `Tout afficher`),
         (Header_Nav_DocumentationAdmin$22 = `Outils d'administration`),
         (Header_Global_Resources$22 = `Ressources`),
-        (Header_Global_Resources_SteamVR$22 = `SteamVR`),
         (Header_Global_Resources_PCCafe$22 = `Programme Steam PC Café`),
         (Header_Global_Resources_Discussions$22 = `Discussions Steamworks`),
         (Header_Global_Resources_VideoTutorials$22 = `Tutoriels vidéo Steamworks`),
@@ -51288,7 +51718,6 @@ Error generating stack: ` +
         (global_menu_sign_out$53 = `Déconnexion\xA0`),
         (global_menu_sign_in$22 = `Se connecter`),
         (Header_Nav_Dashboard$22 = `Tableau de bord`),
-        (Header_Nav_Lighthouse$22 = `Système de suivi SteamVR`),
         (Header_Nav_AppsPackages$22 = `Applications et packages`),
         (Header_Nav_AppsPackages_All$22 = `Toutes les applications`),
         (Header_Nav_AppsPackages_ViewPackages$22 = `Voir les packages`),
@@ -51400,7 +51829,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$22,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$22,
           Header_Global_Resources: Header_Global_Resources$22,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$22,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$22,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$22,
@@ -51418,7 +51846,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$53,
           global_menu_sign_in: global_menu_sign_in$22,
           Header_Nav_Dashboard: Header_Nav_Dashboard$22,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$22,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$22,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$22,
           Header_Nav_AppsPackages_ViewPackages:
@@ -51585,7 +52012,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$21,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$21,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$21,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$21,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$21,
@@ -51624,7 +52050,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$21,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$21,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$21,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$21,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$21,
       Header_Nav_OEM: () => Header_Nav_OEM$21,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$21,
@@ -51710,7 +52135,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$21,
     Header_Nav_DocumentationAdmin$21,
     Header_Global_Resources$21,
-    Header_Global_Resources_SteamVR$21,
     Header_Global_Resources_PCCafe$21,
     Header_Global_Resources_Discussions$21,
     Header_Global_Resources_VideoTutorials$21,
@@ -51726,7 +52150,6 @@ Error generating stack: ` +
     global_menu_sign_out$52,
     global_menu_sign_in$21,
     Header_Nav_Dashboard$21,
-    Header_Nav_Lighthouse$21,
     Header_Nav_AppsPackages$21,
     Header_Nav_AppsPackages_All$21,
     Header_Nav_AppsPackages_ViewPackages$21,
@@ -51834,7 +52257,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$21 = `Alle anzeigen`),
         (Header_Nav_DocumentationAdmin$21 = `Admin-Werkzeuge`),
         (Header_Global_Resources$21 = `Ressourcen`),
-        (Header_Global_Resources_SteamVR$21 = `SteamVR`),
         (Header_Global_Resources_PCCafe$21 = `Steam-Café-Programm`),
         (Header_Global_Resources_Discussions$21 = `Steamworks-Diskussionen`),
         (Header_Global_Resources_VideoTutorials$21 = `Steamworks-Videoanleitungen`),
@@ -51850,7 +52272,6 @@ Error generating stack: ` +
         (global_menu_sign_out$52 = `Abmelden`),
         (global_menu_sign_in$21 = `Anmelden`),
         (Header_Nav_Dashboard$21 = `Dashboard`),
-        (Header_Nav_Lighthouse$21 = `SteamVR-Tracking`),
         (Header_Nav_AppsPackages$21 = `Anwendungen und Pakete`),
         (Header_Nav_AppsPackages_All$21 = `Alle Anwendungen`),
         (Header_Nav_AppsPackages_ViewPackages$21 = `Pakete anzeigen`),
@@ -51965,7 +52386,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$21,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$21,
           Header_Global_Resources: Header_Global_Resources$21,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$21,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$21,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$21,
@@ -51983,7 +52403,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$52,
           global_menu_sign_in: global_menu_sign_in$21,
           Header_Nav_Dashboard: Header_Nav_Dashboard$21,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$21,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$21,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$21,
           Header_Nav_AppsPackages_ViewPackages:
@@ -52151,7 +52570,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$20,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$20,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$20,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$20,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$20,
@@ -52190,7 +52608,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$20,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$20,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$20,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$20,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$20,
       Header_Nav_OEM: () => Header_Nav_OEM$20,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$20,
@@ -52276,7 +52693,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$20,
     Header_Nav_DocumentationAdmin$20,
     Header_Global_Resources$20,
-    Header_Global_Resources_SteamVR$20,
     Header_Global_Resources_PCCafe$20,
     Header_Global_Resources_Discussions$20,
     Header_Global_Resources_VideoTutorials$20,
@@ -52292,7 +52708,6 @@ Error generating stack: ` +
     global_menu_sign_out$51,
     global_menu_sign_in$20,
     Header_Nav_Dashboard$20,
-    Header_Nav_Lighthouse$20,
     Header_Nav_AppsPackages$20,
     Header_Nav_AppsPackages_All$20,
     Header_Nav_AppsPackages_ViewPackages$20,
@@ -52400,7 +52815,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$20 = `Εμφάνιση όλων`),
         (Header_Nav_DocumentationAdmin$20 = `Εργαλεία διαχειριστή`),
         (Header_Global_Resources$20 = `Πόροι`),
-        (Header_Global_Resources_SteamVR$20 = `SteamVR`),
         (Header_Global_Resources_PCCafe$20 = `Πρόγραμμα Steam Internet Café`),
         (Header_Global_Resources_Discussions$20 = `Συζητήσεις Steamworks`),
         (Header_Global_Resources_VideoTutorials$20 = `Βίντεο εκμάθησης Steamworks`),
@@ -52416,7 +52830,6 @@ Error generating stack: ` +
         (global_menu_sign_out$51 = `Αποσύνδεση`),
         (global_menu_sign_in$20 = `Σύνδεση`),
         (Header_Nav_Dashboard$20 = `Πίνακας ελέγχου`),
-        (Header_Nav_Lighthouse$20 = `Ανίχνευση SteamVR`),
         (Header_Nav_AppsPackages$20 = `Εφαρμογές και πακέτα`),
         (Header_Nav_AppsPackages_All$20 = `Όλες οι εφαρμογές`),
         (Header_Nav_AppsPackages_ViewPackages$20 = `Προβολή πακέτων`),
@@ -52531,7 +52944,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$20,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$20,
           Header_Global_Resources: Header_Global_Resources$20,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$20,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$20,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$20,
@@ -52549,7 +52961,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$51,
           global_menu_sign_in: global_menu_sign_in$20,
           Header_Nav_Dashboard: Header_Nav_Dashboard$20,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$20,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$20,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$20,
           Header_Nav_AppsPackages_ViewPackages:
@@ -52717,7 +53128,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$19,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$19,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$19,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$19,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$19,
@@ -52756,7 +53166,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$19,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$19,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$19,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$19,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$19,
       Header_Nav_OEM: () => Header_Nav_OEM$19,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$19,
@@ -52842,7 +53251,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$19,
     Header_Nav_DocumentationAdmin$19,
     Header_Global_Resources$19,
-    Header_Global_Resources_SteamVR$19,
     Header_Global_Resources_PCCafe$19,
     Header_Global_Resources_Discussions$19,
     Header_Global_Resources_VideoTutorials$19,
@@ -52858,7 +53266,6 @@ Error generating stack: ` +
     global_menu_sign_out$50,
     global_menu_sign_in$19,
     Header_Nav_Dashboard$19,
-    Header_Nav_Lighthouse$19,
     Header_Nav_AppsPackages$19,
     Header_Nav_AppsPackages_All$19,
     Header_Nav_AppsPackages_ViewPackages$19,
@@ -52966,7 +53373,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$19 = `Összes megnézése`),
         (Header_Nav_DocumentationAdmin$19 = `Admin eszközök`),
         (Header_Global_Resources$19 = `Információforrások`),
-        (Header_Global_Resources_SteamVR$19 = `SteamVR`),
         (Header_Global_Resources_PCCafe$19 = `Steam PC Café program`),
         (Header_Global_Resources_Discussions$19 = `Steamworks témák`),
         (Header_Global_Resources_VideoTutorials$19 = `Steamworks oktatóvideók`),
@@ -52982,7 +53388,6 @@ Error generating stack: ` +
         (global_menu_sign_out$50 = `Kijelentkezés`),
         (global_menu_sign_in$19 = `Bejelentkezés`),
         (Header_Nav_Dashboard$19 = `Műszerfal`),
-        (Header_Nav_Lighthouse$19 = `SteamVR Tracking`),
         (Header_Nav_AppsPackages$19 = `Alkalmazások és csomagok`),
         (Header_Nav_AppsPackages_All$19 = `Összes alkalmazás`),
         (Header_Nav_AppsPackages_ViewPackages$19 = `Csomagok megnézése`),
@@ -53096,7 +53501,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$19,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$19,
           Header_Global_Resources: Header_Global_Resources$19,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$19,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$19,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$19,
@@ -53114,7 +53518,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$50,
           global_menu_sign_in: global_menu_sign_in$19,
           Header_Nav_Dashboard: Header_Nav_Dashboard$19,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$19,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$19,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$19,
           Header_Nav_AppsPackages_ViewPackages:
@@ -53282,7 +53685,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$18,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$18,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$18,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$18,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$18,
@@ -53321,7 +53723,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$18,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$18,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$18,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$18,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$18,
       Header_Nav_OEM: () => Header_Nav_OEM$18,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$18,
@@ -53407,7 +53808,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$18,
     Header_Nav_DocumentationAdmin$18,
     Header_Global_Resources$18,
-    Header_Global_Resources_SteamVR$18,
     Header_Global_Resources_PCCafe$18,
     Header_Global_Resources_Discussions$18,
     Header_Global_Resources_VideoTutorials$18,
@@ -53423,7 +53823,6 @@ Error generating stack: ` +
     global_menu_sign_out$49,
     global_menu_sign_in$18,
     Header_Nav_Dashboard$18,
-    Header_Nav_Lighthouse$18,
     Header_Nav_AppsPackages$18,
     Header_Nav_AppsPackages_All$18,
     Header_Nav_AppsPackages_ViewPackages$18,
@@ -53531,7 +53930,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$18 = `Lihat semua`),
         (Header_Nav_DocumentationAdmin$18 = `Alat Admin`),
         (Header_Global_Resources$18 = `Sumber Daya`),
-        (Header_Global_Resources_SteamVR$18 = `SteamVR`),
         (Header_Global_Resources_PCCafe$18 = `Program Cyber Cafe Steam`),
         (Header_Global_Resources_Discussions$18 = `Diskusi Steamworks`),
         (Header_Global_Resources_VideoTutorials$18 = `Video Tutorial Steamworks`),
@@ -53547,7 +53945,6 @@ Error generating stack: ` +
         (global_menu_sign_out$49 = `Logout`),
         (global_menu_sign_in$18 = `Login`),
         (Header_Nav_Dashboard$18 = `Dasbor`),
-        (Header_Nav_Lighthouse$18 = `Tracking SteamVR`),
         (Header_Nav_AppsPackages$18 = `Aplikasi & Paket`),
         (Header_Nav_AppsPackages_All$18 = `Semua Aplikasi`),
         (Header_Nav_AppsPackages_ViewPackages$18 = `Lihat Paket`),
@@ -53661,7 +54058,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$18,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$18,
           Header_Global_Resources: Header_Global_Resources$18,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$18,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$18,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$18,
@@ -53679,7 +54075,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$49,
           global_menu_sign_in: global_menu_sign_in$18,
           Header_Nav_Dashboard: Header_Nav_Dashboard$18,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$18,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$18,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$18,
           Header_Nav_AppsPackages_ViewPackages:
@@ -53847,7 +54242,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$17,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$17,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$17,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$17,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$17,
@@ -53886,7 +54280,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$17,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$17,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$17,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$17,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$17,
       Header_Nav_OEM: () => Header_Nav_OEM$17,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$17,
@@ -53972,7 +54365,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$17,
     Header_Nav_DocumentationAdmin$17,
     Header_Global_Resources$17,
-    Header_Global_Resources_SteamVR$17,
     Header_Global_Resources_PCCafe$17,
     Header_Global_Resources_Discussions$17,
     Header_Global_Resources_VideoTutorials$17,
@@ -53988,7 +54380,6 @@ Error generating stack: ` +
     global_menu_sign_out$48,
     global_menu_sign_in$17,
     Header_Nav_Dashboard$17,
-    Header_Nav_Lighthouse$17,
     Header_Nav_AppsPackages$17,
     Header_Nav_AppsPackages_All$17,
     Header_Nav_AppsPackages_ViewPackages$17,
@@ -54096,7 +54487,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$17 = `Mostra tutti`),
         (Header_Nav_DocumentationAdmin$17 = `Strumenti di amministrazione`),
         (Header_Global_Resources$17 = `Risorse`),
-        (Header_Global_Resources_SteamVR$17 = `SteamVR`),
         (Header_Global_Resources_PCCafe$17 = `Programma PC Cafe di Steam`),
         (Header_Global_Resources_Discussions$17 = `Discussioni di Steamworks`),
         (Header_Global_Resources_VideoTutorials$17 = `Video tutorial di Steamworks`),
@@ -54112,7 +54502,6 @@ Error generating stack: ` +
         (global_menu_sign_out$48 = `Esci`),
         (global_menu_sign_in$17 = `Accedi`),
         (Header_Nav_Dashboard$17 = `Dashboard`),
-        (Header_Nav_Lighthouse$17 = `SteamVR Tracking`),
         (Header_Nav_AppsPackages$17 = `App e pacchetti`),
         (Header_Nav_AppsPackages_All$17 = `Tutte le applicazioni`),
         (Header_Nav_AppsPackages_ViewPackages$17 = `Mostra i pacchetti`),
@@ -54226,7 +54615,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$17,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$17,
           Header_Global_Resources: Header_Global_Resources$17,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$17,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$17,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$17,
@@ -54244,7 +54632,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$48,
           global_menu_sign_in: global_menu_sign_in$17,
           Header_Nav_Dashboard: Header_Nav_Dashboard$17,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$17,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$17,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$17,
           Header_Nav_AppsPackages_ViewPackages:
@@ -54412,7 +54799,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$16,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$16,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$16,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$16,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$16,
@@ -54451,7 +54837,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$16,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$16,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$16,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$16,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$16,
       Header_Nav_OEM: () => Header_Nav_OEM$16,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$16,
@@ -54537,7 +54922,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$16,
     Header_Nav_DocumentationAdmin$16,
     Header_Global_Resources$16,
-    Header_Global_Resources_SteamVR$16,
     Header_Global_Resources_PCCafe$16,
     Header_Global_Resources_Discussions$16,
     Header_Global_Resources_VideoTutorials$16,
@@ -54553,7 +54937,6 @@ Error generating stack: ` +
     global_menu_sign_out$47,
     global_menu_sign_in$16,
     Header_Nav_Dashboard$16,
-    Header_Nav_Lighthouse$16,
     Header_Nav_AppsPackages$16,
     Header_Nav_AppsPackages_All$16,
     Header_Nav_AppsPackages_ViewPackages$16,
@@ -54661,7 +55044,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$16 = `すべて表示`),
         (Header_Nav_DocumentationAdmin$16 = `管理ツール`),
         (Header_Global_Resources$16 = `リソース`),
-        (Header_Global_Resources_SteamVR$16 = `Steam VR`),
         (Header_Global_Resources_PCCafe$16 = `Steam PCカフェプログラム`),
         (Header_Global_Resources_Discussions$16 = `Steamworks掲示板`),
         (Header_Global_Resources_VideoTutorials$16 = `Steamworksチュートリアル動画`),
@@ -54677,7 +55059,6 @@ Error generating stack: ` +
         (global_menu_sign_out$47 = `ログアウト`),
         (global_menu_sign_in$16 = `サインイン`),
         (Header_Nav_Dashboard$16 = `ダッシュボード`),
-        (Header_Nav_Lighthouse$16 = `SteamVRトラッキング`),
         (Header_Nav_AppsPackages$16 = `アプリとパッケージ`),
         (Header_Nav_AppsPackages_All$16 = `すべてのアプリケーション`),
         (Header_Nav_AppsPackages_ViewPackages$16 = `パッケージを表示`),
@@ -54791,7 +55172,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$16,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$16,
           Header_Global_Resources: Header_Global_Resources$16,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$16,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$16,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$16,
@@ -54809,7 +55189,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$47,
           global_menu_sign_in: global_menu_sign_in$16,
           Header_Nav_Dashboard: Header_Nav_Dashboard$16,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$16,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$16,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$16,
           Header_Nav_AppsPackages_ViewPackages:
@@ -54976,7 +55355,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$15,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$15,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$15,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$15,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$15,
@@ -55015,7 +55393,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$15,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$15,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$15,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$15,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$15,
       Header_Nav_OEM: () => Header_Nav_OEM$15,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$15,
@@ -55101,7 +55478,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$15,
     Header_Nav_DocumentationAdmin$15,
     Header_Global_Resources$15,
-    Header_Global_Resources_SteamVR$15,
     Header_Global_Resources_PCCafe$15,
     Header_Global_Resources_Discussions$15,
     Header_Global_Resources_VideoTutorials$15,
@@ -55117,7 +55493,6 @@ Error generating stack: ` +
     global_menu_sign_out$46,
     global_menu_sign_in$15,
     Header_Nav_Dashboard$15,
-    Header_Nav_Lighthouse$15,
     Header_Nav_AppsPackages$15,
     Header_Nav_AppsPackages_All$15,
     Header_Nav_AppsPackages_ViewPackages$15,
@@ -55224,7 +55599,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$15 = `전체 보기`),
         (Header_Nav_DocumentationAdmin$15 = `관리자 도구`),
         (Header_Global_Resources$15 = `리소스`),
-        (Header_Global_Resources_SteamVR$15 = `Steam VR`),
         (Header_Global_Resources_PCCafe$15 = `Steam PC방 프로그램`),
         (Header_Global_Resources_Discussions$15 = `Steamworks 토론`),
         (Header_Global_Resources_VideoTutorials$15 = `Steamworks 동영상 튜토리얼`),
@@ -55240,7 +55614,6 @@ Error generating stack: ` +
         (global_menu_sign_out$46 = `로그아웃`),
         (global_menu_sign_in$15 = `로그인`),
         (Header_Nav_Dashboard$15 = `대시보드`),
-        (Header_Nav_Lighthouse$15 = `SteamVR 트래킹`),
         (Header_Nav_AppsPackages$15 = `앱 및 패키지`),
         (Header_Nav_AppsPackages_All$15 = `모든 앱`),
         (Header_Nav_AppsPackages_ViewPackages$15 = `패키지 보기`),
@@ -55355,7 +55728,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$15,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$15,
           Header_Global_Resources: Header_Global_Resources$15,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$15,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$15,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$15,
@@ -55373,7 +55745,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$46,
           global_menu_sign_in: global_menu_sign_in$15,
           Header_Nav_Dashboard: Header_Nav_Dashboard$15,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$15,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$15,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$15,
           Header_Nav_AppsPackages_ViewPackages:
@@ -55541,7 +55912,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$14,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$14,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$14,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$14,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$14,
@@ -55580,7 +55950,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$14,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$14,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$14,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$14,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$14,
       Header_Nav_OEM: () => Header_Nav_OEM$14,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$14,
@@ -55666,7 +56035,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$14,
     Header_Nav_DocumentationAdmin$14,
     Header_Global_Resources$14,
-    Header_Global_Resources_SteamVR$14,
     Header_Global_Resources_PCCafe$14,
     Header_Global_Resources_Discussions$14,
     Header_Global_Resources_VideoTutorials$14,
@@ -55682,7 +56050,6 @@ Error generating stack: ` +
     global_menu_sign_out$45,
     global_menu_sign_in$14,
     Header_Nav_Dashboard$14,
-    Header_Nav_Lighthouse$14,
     Header_Nav_AppsPackages$14,
     Header_Nav_AppsPackages_All$14,
     Header_Nav_AppsPackages_ViewPackages$14,
@@ -55790,7 +56157,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$14 = `Ver todos`),
         (Header_Nav_DocumentationAdmin$14 = `Herramientas de administrador`),
         (Header_Global_Resources$14 = `Recursos`),
-        (Header_Global_Resources_SteamVR$14 = `Steam VR`),
         (Header_Global_Resources_PCCafe$14 = `Programa para cibercafés de Steam`),
         (Header_Global_Resources_Discussions$14 = `Discusiones de Steamworks`),
         (Header_Global_Resources_VideoTutorials$14 = `Videotutoriales de Steamworks`),
@@ -55806,7 +56172,6 @@ Error generating stack: ` +
         (global_menu_sign_out$45 = `Cerrar sesión`),
         (global_menu_sign_in$14 = `Iniciar sesión`),
         (Header_Nav_Dashboard$14 = `Menú principal`),
-        (Header_Nav_Lighthouse$14 = `SteamVR Tracking`),
         (Header_Nav_AppsPackages$14 = `Aplicaciones y paquetes`),
         (Header_Nav_AppsPackages_All$14 = `Todas las aplicaciones`),
         (Header_Nav_AppsPackages_ViewPackages$14 = `Ver paquetes`),
@@ -55920,7 +56285,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$14,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$14,
           Header_Global_Resources: Header_Global_Resources$14,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$14,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$14,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$14,
@@ -55938,7 +56302,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$45,
           global_menu_sign_in: global_menu_sign_in$14,
           Header_Nav_Dashboard: Header_Nav_Dashboard$14,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$14,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$14,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$14,
           Header_Nav_AppsPackages_ViewPackages:
@@ -56106,7 +56469,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$13,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$13,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$13,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$13,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$13,
@@ -56145,7 +56507,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$13,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$13,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$13,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$13,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$13,
       Header_Nav_OEM: () => Header_Nav_OEM$13,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$13,
@@ -56231,7 +56592,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$13,
     Header_Nav_DocumentationAdmin$13,
     Header_Global_Resources$13,
-    Header_Global_Resources_SteamVR$13,
     Header_Global_Resources_PCCafe$13,
     Header_Global_Resources_Discussions$13,
     Header_Global_Resources_VideoTutorials$13,
@@ -56247,7 +56607,6 @@ Error generating stack: ` +
     global_menu_sign_out$44,
     global_menu_sign_in$13,
     Header_Nav_Dashboard$13,
-    Header_Nav_Lighthouse$13,
     Header_Nav_AppsPackages$13,
     Header_Nav_AppsPackages_All$13,
     Header_Nav_AppsPackages_ViewPackages$13,
@@ -56355,7 +56714,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$13 = `Lihat semua`),
         (Header_Nav_DocumentationAdmin$13 = `Alat Pentadbir`),
         (Header_Global_Resources$13 = `Sumber`),
-        (Header_Global_Resources_SteamVR$13 = `Steam VR`),
         (Header_Global_Resources_PCCafe$13 = `Program PC Café Steam`),
         (Header_Global_Resources_Discussions$13 = `Perbincangan Steamworks`),
         (Header_Global_Resources_VideoTutorials$13 = `Tutorial Video Steamworks`),
@@ -56371,7 +56729,6 @@ Error generating stack: ` +
         (global_menu_sign_out$44 = `Log Keluar`),
         (global_menu_sign_in$13 = `Daftar masuk`),
         (Header_Nav_Dashboard$13 = `Papan Pemuka`),
-        (Header_Nav_Lighthouse$13 = `SteamVR Tracking`),
         (Header_Nav_AppsPackages$13 = `Aplikasi & Pakej`),
         (Header_Nav_AppsPackages_All$13 = `Semua Aplikasi`),
         (Header_Nav_AppsPackages_ViewPackages$13 = `Lihat Pakej`),
@@ -56485,7 +56842,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$13,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$13,
           Header_Global_Resources: Header_Global_Resources$13,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$13,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$13,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$13,
@@ -56503,7 +56859,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$44,
           global_menu_sign_in: global_menu_sign_in$13,
           Header_Nav_Dashboard: Header_Nav_Dashboard$13,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$13,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$13,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$13,
           Header_Nav_AppsPackages_ViewPackages:
@@ -56671,7 +57026,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$12,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$12,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$12,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$12,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$12,
@@ -56710,7 +57064,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$12,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$12,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$12,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$12,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$12,
       Header_Nav_OEM: () => Header_Nav_OEM$12,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$12,
@@ -56796,7 +57149,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$12,
     Header_Nav_DocumentationAdmin$12,
     Header_Global_Resources$12,
-    Header_Global_Resources_SteamVR$12,
     Header_Global_Resources_PCCafe$12,
     Header_Global_Resources_Discussions$12,
     Header_Global_Resources_VideoTutorials$12,
@@ -56812,7 +57164,6 @@ Error generating stack: ` +
     global_menu_sign_out$43,
     global_menu_sign_in$12,
     Header_Nav_Dashboard$12,
-    Header_Nav_Lighthouse$12,
     Header_Nav_AppsPackages$12,
     Header_Nav_AppsPackages_All$12,
     Header_Nav_AppsPackages_ViewPackages$12,
@@ -56920,7 +57271,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$12 = `Se alle`),
         (Header_Nav_DocumentationAdmin$12 = `Administratorverktøy`),
         (Header_Global_Resources$12 = `Ressurser`),
-        (Header_Global_Resources_SteamVR$12 = `Steam VR`),
         (Header_Global_Resources_PCCafe$12 = `Steams nettkaféprogram`),
         (Header_Global_Resources_Discussions$12 = `Steamworks-diskusjonene`),
         (Header_Global_Resources_VideoTutorials$12 = `Videoveiledninger for Steamworks`),
@@ -56936,7 +57286,6 @@ Error generating stack: ` +
         (global_menu_sign_out$43 = `Logg ut`),
         (global_menu_sign_in$12 = `Logg inn`),
         (Header_Nav_Dashboard$12 = `Dashbord`),
-        (Header_Nav_Lighthouse$12 = `SteamVR-sporing`),
         (Header_Nav_AppsPackages$12 = `Applikasjoner og pakker`),
         (Header_Nav_AppsPackages_All$12 = `Alle applikasjoner`),
         (Header_Nav_AppsPackages_ViewPackages$12 = `Vis pakker`),
@@ -57052,7 +57401,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$12,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$12,
           Header_Global_Resources: Header_Global_Resources$12,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$12,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$12,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$12,
@@ -57070,7 +57418,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$43,
           global_menu_sign_in: global_menu_sign_in$12,
           Header_Nav_Dashboard: Header_Nav_Dashboard$12,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$12,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$12,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$12,
           Header_Nav_AppsPackages_ViewPackages:
@@ -57238,7 +57585,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$11,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$11,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$11,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$11,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$11,
@@ -57277,7 +57623,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$11,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$11,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$11,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$11,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$11,
       Header_Nav_OEM: () => Header_Nav_OEM$11,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$11,
@@ -57363,7 +57708,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$11,
     Header_Nav_DocumentationAdmin$11,
     Header_Global_Resources$11,
-    Header_Global_Resources_SteamVR$11,
     Header_Global_Resources_PCCafe$11,
     Header_Global_Resources_Discussions$11,
     Header_Global_Resources_VideoTutorials$11,
@@ -57379,7 +57723,6 @@ Error generating stack: ` +
     global_menu_sign_out$42,
     global_menu_sign_in$11,
     Header_Nav_Dashboard$11,
-    Header_Nav_Lighthouse$11,
     Header_Nav_AppsPackages$11,
     Header_Nav_AppsPackages_All$11,
     Header_Nav_AppsPackages_ViewPackages$11,
@@ -57487,7 +57830,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$11 = `Zobacz wszystkie`),
         (Header_Nav_DocumentationAdmin$11 = `Narzędzia administratora`),
         (Header_Global_Resources$11 = `Zasoby`),
-        (Header_Global_Resources_SteamVR$11 = `SteamVR`),
         (Header_Global_Resources_PCCafe$11 = `Program kafejek internetowych Steam`),
         (Header_Global_Resources_Discussions$11 = `Dyskusje Steamworks`),
         (Header_Global_Resources_VideoTutorials$11 = `Poradniki wideo dotyczące Steamworks`),
@@ -57503,7 +57845,6 @@ Error generating stack: ` +
         (global_menu_sign_out$42 = `Wyloguj się`),
         (global_menu_sign_in$11 = `Zaloguj się`),
         (Header_Nav_Dashboard$11 = `Panel główny`),
-        (Header_Nav_Lighthouse$11 = `SteamVR Tracking`),
         (Header_Nav_AppsPackages$11 = `Aplikacje i pakiety`),
         (Header_Nav_AppsPackages_All$11 = `Wszystkie aplikacje`),
         (Header_Nav_AppsPackages_ViewPackages$11 = `Przejrzyj pakiety`),
@@ -57617,7 +57958,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$11,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$11,
           Header_Global_Resources: Header_Global_Resources$11,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$11,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$11,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$11,
@@ -57635,7 +57975,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$42,
           global_menu_sign_in: global_menu_sign_in$11,
           Header_Nav_Dashboard: Header_Nav_Dashboard$11,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$11,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$11,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$11,
           Header_Nav_AppsPackages_ViewPackages:
@@ -57803,7 +58142,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$10,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$10,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$10,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$10,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$10,
@@ -57842,7 +58180,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$10,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$10,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$10,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$10,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$10,
       Header_Nav_OEM: () => Header_Nav_OEM$10,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$10,
@@ -57928,7 +58265,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$10,
     Header_Nav_DocumentationAdmin$10,
     Header_Global_Resources$10,
-    Header_Global_Resources_SteamVR$10,
     Header_Global_Resources_PCCafe$10,
     Header_Global_Resources_Discussions$10,
     Header_Global_Resources_VideoTutorials$10,
@@ -57944,7 +58280,6 @@ Error generating stack: ` +
     global_menu_sign_out$41,
     global_menu_sign_in$10,
     Header_Nav_Dashboard$10,
-    Header_Nav_Lighthouse$10,
     Header_Nav_AppsPackages$10,
     Header_Nav_AppsPackages_All$10,
     Header_Nav_AppsPackages_ViewPackages$10,
@@ -58052,7 +58387,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$10 = `Ver tudo`),
         (Header_Nav_DocumentationAdmin$10 = `Ferramentas de admin.`),
         (Header_Global_Resources$10 = `Recursos`),
-        (Header_Global_Resources_SteamVR$10 = `SteamVR`),
         (Header_Global_Resources_PCCafe$10 = `Programa de Cibercafés Steam`),
         (Header_Global_Resources_Discussions$10 = `Discussões do Steamworks`),
         (Header_Global_Resources_VideoTutorials$10 = `Tutoriais em vídeo do Steamworks`),
@@ -58068,7 +58402,6 @@ Error generating stack: ` +
         (global_menu_sign_out$41 = `Terminar sessão`),
         (global_menu_sign_in$10 = `Iniciar sessão`),
         (Header_Nav_Dashboard$10 = `Painel de gestão`),
-        (Header_Nav_Lighthouse$10 = `SteamVR Tracking`),
         (Header_Nav_AppsPackages$10 = `Aplicações e pacotes`),
         (Header_Nav_AppsPackages_All$10 = `Todas as aplicações`),
         (Header_Nav_AppsPackages_ViewPackages$10 = `Ver pacotes`),
@@ -58182,7 +58515,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$10,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$10,
           Header_Global_Resources: Header_Global_Resources$10,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$10,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$10,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$10,
@@ -58200,7 +58532,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$41,
           global_menu_sign_in: global_menu_sign_in$10,
           Header_Nav_Dashboard: Header_Nav_Dashboard$10,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$10,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$10,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$10,
           Header_Nav_AppsPackages_ViewPackages:
@@ -58368,7 +58699,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$9,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$9,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$9,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$9,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$9,
@@ -58407,7 +58737,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$9,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$9,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$9,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$9,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$9,
       Header_Nav_OEM: () => Header_Nav_OEM$9,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$9,
@@ -58493,7 +58822,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$9,
     Header_Nav_DocumentationAdmin$9,
     Header_Global_Resources$9,
-    Header_Global_Resources_SteamVR$9,
     Header_Global_Resources_PCCafe$9,
     Header_Global_Resources_Discussions$9,
     Header_Global_Resources_VideoTutorials$9,
@@ -58509,7 +58837,6 @@ Error generating stack: ` +
     global_menu_sign_out$40,
     global_menu_sign_in$9,
     Header_Nav_Dashboard$9,
-    Header_Nav_Lighthouse$9,
     Header_Nav_AppsPackages$9,
     Header_Nav_AppsPackages_All$9,
     Header_Nav_AppsPackages_ViewPackages$9,
@@ -58617,7 +58944,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$9 = `Vezi tot`),
         (Header_Nav_DocumentationAdmin$9 = `Instrumente de administrare`),
         (Header_Global_Resources$9 = `Resurse`),
-        (Header_Global_Resources_SteamVR$9 = `Steam VR`),
         (Header_Global_Resources_PCCafe$9 = `Programul Steam pentru internet caféuri`),
         (Header_Global_Resources_Discussions$9 = `Discuții Steamworks`),
         (Header_Global_Resources_VideoTutorials$9 = `Tutoriale video pentru Steamworks`),
@@ -58633,7 +58959,6 @@ Error generating stack: ` +
         (global_menu_sign_out$40 = `Deconectează-te`),
         (global_menu_sign_in$9 = `Conectează-te`),
         (Header_Nav_Dashboard$9 = `Panoul de control`),
-        (Header_Nav_Lighthouse$9 = `Sistemul de urmărire SteamVR`),
         (Header_Nav_AppsPackages$9 = `Aplicații și pachete`),
         (Header_Nav_AppsPackages_All$9 = `Toate aplicațiile`),
         (Header_Nav_AppsPackages_ViewPackages$9 = `Vezi pachetele`),
@@ -58747,7 +59072,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$9,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$9,
           Header_Global_Resources: Header_Global_Resources$9,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$9,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$9,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$9,
@@ -58765,7 +59089,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$40,
           global_menu_sign_in: global_menu_sign_in$9,
           Header_Nav_Dashboard: Header_Nav_Dashboard$9,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$9,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$9,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$9,
           Header_Nav_AppsPackages_ViewPackages:
@@ -58933,7 +59256,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$8,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$8,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$8,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$8,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$8,
@@ -58972,7 +59294,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$8,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$8,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$8,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$8,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$8,
       Header_Nav_OEM: () => Header_Nav_OEM$8,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$8,
@@ -59058,7 +59379,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$8,
     Header_Nav_DocumentationAdmin$8,
     Header_Global_Resources$8,
-    Header_Global_Resources_SteamVR$8,
     Header_Global_Resources_PCCafe$8,
     Header_Global_Resources_Discussions$8,
     Header_Global_Resources_VideoTutorials$8,
@@ -59074,7 +59394,6 @@ Error generating stack: ` +
     global_menu_sign_out$39,
     global_menu_sign_in$8,
     Header_Nav_Dashboard$8,
-    Header_Nav_Lighthouse$8,
     Header_Nav_AppsPackages$8,
     Header_Nav_AppsPackages_All$8,
     Header_Nav_AppsPackages_ViewPackages$8,
@@ -59182,7 +59501,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$8 = `Все`),
         (Header_Nav_DocumentationAdmin$8 = `Инструменты администратора`),
         (Header_Global_Resources$8 = `Материалы`),
-        (Header_Global_Resources_SteamVR$8 = `SteamVR`),
         (Header_Global_Resources_PCCafe$8 = `Программа интернет-кафе Steam`),
         (Header_Global_Resources_Discussions$8 = `Обсуждения Steamworks`),
         (Header_Global_Resources_VideoTutorials$8 = `Видеоуроки Steamworks`),
@@ -59198,7 +59516,6 @@ Error generating stack: ` +
         (global_menu_sign_out$39 = `Выйти`),
         (global_menu_sign_in$8 = `Войти`),
         (Header_Nav_Dashboard$8 = `Панель управления`),
-        (Header_Nav_Lighthouse$8 = `Отслеживание SteamVR`),
         (Header_Nav_AppsPackages$8 = `Приложения и комплекты`),
         (Header_Nav_AppsPackages_All$8 = `Все приложения`),
         (Header_Nav_AppsPackages_ViewPackages$8 = `Комплекты`),
@@ -59314,7 +59631,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$8,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$8,
           Header_Global_Resources: Header_Global_Resources$8,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$8,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$8,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$8,
@@ -59332,7 +59648,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$39,
           global_menu_sign_in: global_menu_sign_in$8,
           Header_Nav_Dashboard: Header_Nav_Dashboard$8,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$8,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$8,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$8,
           Header_Nav_AppsPackages_ViewPackages:
@@ -59507,7 +59822,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$7,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$7,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$7,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$7,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$7,
@@ -59546,7 +59860,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$7,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$7,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$7,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$7,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$7,
       Header_Nav_OEM: () => Header_Nav_OEM$7,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$7,
@@ -59632,7 +59945,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$7,
     Header_Nav_DocumentationAdmin$7,
     Header_Global_Resources$7,
-    Header_Global_Resources_SteamVR$7,
     Header_Global_Resources_PCCafe$7,
     Header_Global_Resources_Discussions$7,
     Header_Global_Resources_VideoTutorials$7,
@@ -59648,7 +59960,6 @@ Error generating stack: ` +
     global_menu_sign_out$38,
     global_menu_sign_in$7,
     Header_Nav_Dashboard$7,
-    Header_Nav_Lighthouse$7,
     Header_Nav_AppsPackages$7,
     Header_Nav_AppsPackages_All$7,
     Header_Nav_AppsPackages_ViewPackages$7,
@@ -59756,7 +60067,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$7 = `查看全部`),
         (Header_Nav_DocumentationAdmin$7 = `管理员工具`),
         (Header_Global_Resources$7 = `资源`),
-        (Header_Global_Resources_SteamVR$7 = `Steam VR`),
         (Header_Global_Resources_PCCafe$7 = `Steam 网吧计划`),
         (Header_Global_Resources_Discussions$7 = `Steamworks 讨论区`),
         (Header_Global_Resources_VideoTutorials$7 = `Steamworks 视频教程`),
@@ -59772,7 +60082,6 @@ Error generating stack: ` +
         (global_menu_sign_out$38 = `退出登录`),
         (global_menu_sign_in$7 = `登录`),
         (Header_Nav_Dashboard$7 = `主面板`),
-        (Header_Nav_Lighthouse$7 = `SteamVR 定位`),
         (Header_Nav_AppsPackages$7 = `应用与程序包`),
         (Header_Nav_AppsPackages_All$7 = `所有应用程序`),
         (Header_Nav_AppsPackages_ViewPackages$7 = `查看程序包`),
@@ -59887,7 +60196,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$7,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$7,
           Header_Global_Resources: Header_Global_Resources$7,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$7,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$7,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$7,
@@ -59905,7 +60213,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$38,
           global_menu_sign_in: global_menu_sign_in$7,
           Header_Nav_Dashboard: Header_Nav_Dashboard$7,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$7,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$7,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$7,
           Header_Nav_AppsPackages_ViewPackages:
@@ -60073,7 +60380,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$6,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$6,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$6,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$6,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$6,
@@ -60112,7 +60418,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$6,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$6,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$6,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$6,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$6,
       Header_Nav_OEM: () => Header_Nav_OEM$6,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$6,
@@ -60198,7 +60503,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$6,
     Header_Nav_DocumentationAdmin$6,
     Header_Global_Resources$6,
-    Header_Global_Resources_SteamVR$6,
     Header_Global_Resources_PCCafe$6,
     Header_Global_Resources_Discussions$6,
     Header_Global_Resources_VideoTutorials$6,
@@ -60214,7 +60518,6 @@ Error generating stack: ` +
     global_menu_sign_out$37,
     global_menu_sign_in$6,
     Header_Nav_Dashboard$6,
-    Header_Nav_Lighthouse$6,
     Header_Nav_AppsPackages$6,
     Header_Nav_AppsPackages_All$6,
     Header_Nav_AppsPackages_ViewPackages$6,
@@ -60322,7 +60625,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$6 = `Ver todo`),
         (Header_Nav_DocumentationAdmin$6 = `Herramientas de administrador`),
         (Header_Global_Resources$6 = `Recursos`),
-        (Header_Global_Resources_SteamVR$6 = `SteamVR`),
         (Header_Global_Resources_PCCafe$6 = `Programa para cibercafés de Steam`),
         (Header_Global_Resources_Discussions$6 = `Discusiones de Steamworks`),
         (Header_Global_Resources_VideoTutorials$6 = `Videotutoriales de Steamworks`),
@@ -60338,7 +60640,6 @@ Error generating stack: ` +
         (global_menu_sign_out$37 = `Cerrar sesión`),
         (global_menu_sign_in$6 = `Iniciar sesión`),
         (Header_Nav_Dashboard$6 = `Inicio`),
-        (Header_Nav_Lighthouse$6 = `SteamVR Tracking`),
         (Header_Nav_AppsPackages$6 = `Aplicaciones y paquetes`),
         (Header_Nav_AppsPackages_All$6 = `Todas las aplicaciones`),
         (Header_Nav_AppsPackages_ViewPackages$6 = `Ver paquetes`),
@@ -60452,7 +60753,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$6,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$6,
           Header_Global_Resources: Header_Global_Resources$6,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$6,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$6,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$6,
@@ -60470,7 +60770,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$37,
           global_menu_sign_in: global_menu_sign_in$6,
           Header_Nav_Dashboard: Header_Nav_Dashboard$6,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$6,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$6,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$6,
           Header_Nav_AppsPackages_ViewPackages:
@@ -60638,7 +60937,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$5,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$5,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$5,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$5,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$5,
@@ -60677,7 +60975,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$5,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$5,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$5,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$5,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$5,
       Header_Nav_OEM: () => Header_Nav_OEM$5,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$5,
@@ -60763,7 +61060,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$5,
     Header_Nav_DocumentationAdmin$5,
     Header_Global_Resources$5,
-    Header_Global_Resources_SteamVR$5,
     Header_Global_Resources_PCCafe$5,
     Header_Global_Resources_Discussions$5,
     Header_Global_Resources_VideoTutorials$5,
@@ -60779,7 +61075,6 @@ Error generating stack: ` +
     global_menu_sign_out$36,
     global_menu_sign_in$5,
     Header_Nav_Dashboard$5,
-    Header_Nav_Lighthouse$5,
     Header_Nav_AppsPackages$5,
     Header_Nav_AppsPackages_All$5,
     Header_Nav_AppsPackages_ViewPackages$5,
@@ -60887,7 +61182,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$5 = `Se alla`),
         (Header_Nav_DocumentationAdmin$5 = `Administratörsverktyg`),
         (Header_Global_Resources$5 = `Resurser`),
-        (Header_Global_Resources_SteamVR$5 = `SteamVR`),
         (Header_Global_Resources_PCCafe$5 = `Steams internetkaféprogram`),
         (Header_Global_Resources_Discussions$5 = `Steamworks-diskussioner`),
         (Header_Global_Resources_VideoTutorials$5 = `Steamworks-videohandledningar`),
@@ -60903,7 +61197,6 @@ Error generating stack: ` +
         (global_menu_sign_out$36 = `Logga ut`),
         (global_menu_sign_in$5 = `Logga in`),
         (Header_Nav_Dashboard$5 = `Instrumentpanel`),
-        (Header_Nav_Lighthouse$5 = `SteamVR Tracking`),
         (Header_Nav_AppsPackages$5 = `Appar och paket`),
         (Header_Nav_AppsPackages_All$5 = `Alla applikationer`),
         (Header_Nav_AppsPackages_ViewPackages$5 = `Visa paket`),
@@ -61017,7 +61310,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$5,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$5,
           Header_Global_Resources: Header_Global_Resources$5,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$5,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$5,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$5,
@@ -61035,7 +61327,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$36,
           global_menu_sign_in: global_menu_sign_in$5,
           Header_Nav_Dashboard: Header_Nav_Dashboard$5,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$5,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$5,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$5,
           Header_Nav_AppsPackages_ViewPackages:
@@ -61203,7 +61494,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$4,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$4,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$4,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$4,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$4,
@@ -61242,7 +61532,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$4,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$4,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$4,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$4,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$4,
       Header_Nav_OEM: () => Header_Nav_OEM$4,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$4,
@@ -61328,7 +61617,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$4,
     Header_Nav_DocumentationAdmin$4,
     Header_Global_Resources$4,
-    Header_Global_Resources_SteamVR$4,
     Header_Global_Resources_PCCafe$4,
     Header_Global_Resources_Discussions$4,
     Header_Global_Resources_VideoTutorials$4,
@@ -61344,7 +61632,6 @@ Error generating stack: ` +
     global_menu_sign_out$35,
     global_menu_sign_in$4,
     Header_Nav_Dashboard$4,
-    Header_Nav_Lighthouse$4,
     Header_Nav_AppsPackages$4,
     Header_Nav_AppsPackages_All$4,
     Header_Nav_AppsPackages_ViewPackages$4,
@@ -61452,7 +61739,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$4 = `查看全部`),
         (Header_Nav_DocumentationAdmin$4 = `管理員工具`),
         (Header_Global_Resources$4 = `資源`),
-        (Header_Global_Resources_SteamVR$4 = `Steam VR`),
         (Header_Global_Resources_PCCafe$4 = `Steam 網咖計畫`),
         (Header_Global_Resources_Discussions$4 = `Steamworks 討論區`),
         (Header_Global_Resources_VideoTutorials$4 = `Steamworks 影片教學`),
@@ -61468,7 +61754,6 @@ Error generating stack: ` +
         (global_menu_sign_out$35 = `登出`),
         (global_menu_sign_in$4 = `登入`),
         (Header_Nav_Dashboard$4 = `主控台`),
-        (Header_Nav_Lighthouse$4 = `SteamVR 定位`),
         (Header_Nav_AppsPackages$4 = `應用程式與套件`),
         (Header_Nav_AppsPackages_All$4 = `所有應用程式`),
         (Header_Nav_AppsPackages_ViewPackages$4 = `檢視套件`),
@@ -61584,7 +61869,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$4,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$4,
           Header_Global_Resources: Header_Global_Resources$4,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$4,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$4,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$4,
@@ -61602,7 +61886,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$35,
           global_menu_sign_in: global_menu_sign_in$4,
           Header_Nav_Dashboard: Header_Nav_Dashboard$4,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$4,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$4,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$4,
           Header_Nav_AppsPackages_ViewPackages:
@@ -61770,7 +62053,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$3,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$3,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$3,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$3,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$3,
@@ -61809,7 +62091,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$3,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$3,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$3,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$3,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$3,
       Header_Nav_OEM: () => Header_Nav_OEM$3,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$3,
@@ -61895,7 +62176,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$3,
     Header_Nav_DocumentationAdmin$3,
     Header_Global_Resources$3,
-    Header_Global_Resources_SteamVR$3,
     Header_Global_Resources_PCCafe$3,
     Header_Global_Resources_Discussions$3,
     Header_Global_Resources_VideoTutorials$3,
@@ -61911,7 +62191,6 @@ Error generating stack: ` +
     global_menu_sign_out$34,
     global_menu_sign_in$3,
     Header_Nav_Dashboard$3,
-    Header_Nav_Lighthouse$3,
     Header_Nav_AppsPackages$3,
     Header_Nav_AppsPackages_All$3,
     Header_Nav_AppsPackages_ViewPackages$3,
@@ -62019,7 +62298,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$3 = `ดูทั้งหมด`),
         (Header_Nav_DocumentationAdmin$3 = `เครื่องมือผู้ดูแล`),
         (Header_Global_Resources$3 = `แหล่งข้อมูล`),
-        (Header_Global_Resources_SteamVR$3 = `Steam VR`),
         (Header_Global_Resources_PCCafe$3 = `โครงการคาเฟ่ PC ของ Steam`),
         (Header_Global_Resources_Discussions$3 = `กระดานสนทนา Steamworks`),
         (Header_Global_Resources_VideoTutorials$3 = `วิดีโอฝึกสอน Steamworks`),
@@ -62035,7 +62313,6 @@ Error generating stack: ` +
         (global_menu_sign_out$34 = `ออกจากระบบ`),
         (global_menu_sign_in$3 = `เข้าสู่ระบบ`),
         (Header_Nav_Dashboard$3 = `กระดานรวม`),
-        (Header_Nav_Lighthouse$3 = `การติดตามตำแหน่ง SteamVR`),
         (Header_Nav_AppsPackages$3 = `แอปและแพ็กเกจ`),
         (Header_Nav_AppsPackages_All$3 = `แอปพลิเคชันทั้งหมด`),
         (Header_Nav_AppsPackages_ViewPackages$3 = `ดูแพ็กเกจ`),
@@ -62151,7 +62428,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$3,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$3,
           Header_Global_Resources: Header_Global_Resources$3,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$3,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$3,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$3,
@@ -62169,7 +62445,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$34,
           global_menu_sign_in: global_menu_sign_in$3,
           Header_Nav_Dashboard: Header_Nav_Dashboard$3,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$3,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$3,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$3,
           Header_Nav_AppsPackages_ViewPackages:
@@ -62337,7 +62612,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$2,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$2,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$2,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$2,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$2,
@@ -62376,7 +62650,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$2,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$2,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$2,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$2,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$2,
       Header_Nav_OEM: () => Header_Nav_OEM$2,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$2,
@@ -62462,7 +62735,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$2,
     Header_Nav_DocumentationAdmin$2,
     Header_Global_Resources$2,
-    Header_Global_Resources_SteamVR$2,
     Header_Global_Resources_PCCafe$2,
     Header_Global_Resources_Discussions$2,
     Header_Global_Resources_VideoTutorials$2,
@@ -62478,7 +62750,6 @@ Error generating stack: ` +
     global_menu_sign_out$33,
     global_menu_sign_in$2,
     Header_Nav_Dashboard$2,
-    Header_Nav_Lighthouse$2,
     Header_Nav_AppsPackages$2,
     Header_Nav_AppsPackages_All$2,
     Header_Nav_AppsPackages_ViewPackages$2,
@@ -62586,7 +62857,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$2 = `Tümünü göster`),
         (Header_Nav_DocumentationAdmin$2 = `Yönetici Araçları`),
         (Header_Global_Resources$2 = `Kaynaklar`),
-        (Header_Global_Resources_SteamVR$2 = `Steam VR`),
         (Header_Global_Resources_PCCafe$2 = `Steam PC Café Programı`),
         (Header_Global_Resources_Discussions$2 = `Steamworks Tartışmaları`),
         (Header_Global_Resources_VideoTutorials$2 = `Steamworks Video Eğitimleri`),
@@ -62601,7 +62871,6 @@ Error generating stack: ` +
         (global_menu_sign_out$33 = `Oturumu Kapat`),
         (global_menu_sign_in$2 = `Giriş yap`),
         (Header_Nav_Dashboard$2 = `Pano`),
-        (Header_Nav_Lighthouse$2 = `SteamVR İzleme`),
         (Header_Nav_AppsPackages$2 = `Uygulamalar ve Demetler`),
         (Header_Nav_AppsPackages_All$2 = `Tüm Uygulamalar`),
         (Header_Nav_AppsPackages_ViewPackages$2 = `Paketleri Görüntüle`),
@@ -62716,7 +62985,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$2,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$2,
           Header_Global_Resources: Header_Global_Resources$2,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$2,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$2,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$2,
@@ -62734,7 +63002,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$33,
           global_menu_sign_in: global_menu_sign_in$2,
           Header_Nav_Dashboard: Header_Nav_Dashboard$2,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$2,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$2,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$2,
           Header_Nav_AppsPackages_ViewPackages:
@@ -62902,7 +63169,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions$1,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe$1,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR$1,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials$1,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages$1,
@@ -62941,7 +63207,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin$1,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp$1,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo$1,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse$1,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses$1,
       Header_Nav_OEM: () => Header_Nav_OEM$1,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches$1,
@@ -63027,7 +63292,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall$1,
     Header_Nav_DocumentationAdmin$1,
     Header_Global_Resources$1,
-    Header_Global_Resources_SteamVR$1,
     Header_Global_Resources_PCCafe$1,
     Header_Global_Resources_Discussions$1,
     Header_Global_Resources_VideoTutorials$1,
@@ -63043,7 +63307,6 @@ Error generating stack: ` +
     global_menu_sign_out$32,
     global_menu_sign_in$1,
     Header_Nav_Dashboard$1,
-    Header_Nav_Lighthouse$1,
     Header_Nav_AppsPackages$1,
     Header_Nav_AppsPackages_All$1,
     Header_Nav_AppsPackages_ViewPackages$1,
@@ -63151,7 +63414,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall$1 = `Показати всі`),
         (Header_Nav_DocumentationAdmin$1 = `Інструменти адміністратора`),
         (Header_Global_Resources$1 = `Ресурси`),
-        (Header_Global_Resources_SteamVR$1 = `SteamVR`),
         (Header_Global_Resources_PCCafe$1 = `Програма Інтернет-кафе Steam`),
         (Header_Global_Resources_Discussions$1 = `Обговорення Steamworks`),
         (Header_Global_Resources_VideoTutorials$1 = `Відеоуроки Steamworks`),
@@ -63167,7 +63429,6 @@ Error generating stack: ` +
         (global_menu_sign_out$32 = `Вийти`),
         (global_menu_sign_in$1 = `Увійти`),
         (Header_Nav_Dashboard$1 = `Панель навігації`),
-        (Header_Nav_Lighthouse$1 = `Відстеження SteamVR`),
         (Header_Nav_AppsPackages$1 = `Застосунки і пакунки`),
         (Header_Nav_AppsPackages_All$1 = `Усі продукти`),
         (Header_Nav_AppsPackages_ViewPackages$1 = `Переглянути пакунки`),
@@ -63283,7 +63544,6 @@ Error generating stack: ` +
             Header_Global_Documentation_Seeall$1,
           Header_Nav_DocumentationAdmin: Header_Nav_DocumentationAdmin$1,
           Header_Global_Resources: Header_Global_Resources$1,
-          Header_Global_Resources_SteamVR: Header_Global_Resources_SteamVR$1,
           Header_Global_Resources_PCCafe: Header_Global_Resources_PCCafe$1,
           Header_Global_Resources_Discussions:
             Header_Global_Resources_Discussions$1,
@@ -63301,7 +63561,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$32,
           global_menu_sign_in: global_menu_sign_in$1,
           Header_Nav_Dashboard: Header_Nav_Dashboard$1,
-          Header_Nav_Lighthouse: Header_Nav_Lighthouse$1,
           Header_Nav_AppsPackages: Header_Nav_AppsPackages$1,
           Header_Nav_AppsPackages_All: Header_Nav_AppsPackages_All$1,
           Header_Nav_AppsPackages_ViewPackages:
@@ -63467,7 +63726,6 @@ Error generating stack: ` +
       Header_Global_Resources_Discussions: () =>
         Header_Global_Resources_Discussions,
       Header_Global_Resources_PCCafe: () => Header_Global_Resources_PCCafe,
-      Header_Global_Resources_SteamVR: () => Header_Global_Resources_SteamVR,
       Header_Global_Resources_VideoTutorials: () =>
         Header_Global_Resources_VideoTutorials,
       Header_Nav_AppsPackages: () => Header_Nav_AppsPackages,
@@ -63506,7 +63764,6 @@ Error generating stack: ` +
       Header_Nav_DocumentationAdmin: () => Header_Nav_DocumentationAdmin,
       Header_Nav_DocumentationHelp: () => Header_Nav_DocumentationHelp,
       Header_Nav_FinancialInfo: () => Header_Nav_FinancialInfo,
-      Header_Nav_Lighthouse: () => Header_Nav_Lighthouse,
       Header_Nav_MailingAddresses: () => Header_Nav_MailingAddresses,
       Header_Nav_OEM: () => Header_Nav_OEM,
       Header_Nav_OEM_Ticket_Batches: () => Header_Nav_OEM_Ticket_Batches,
@@ -63587,7 +63844,6 @@ Error generating stack: ` +
     Header_Global_Documentation_Seeall,
     Header_Nav_DocumentationAdmin,
     Header_Global_Resources,
-    Header_Global_Resources_SteamVR,
     Header_Global_Resources_PCCafe,
     Header_Global_Resources_Discussions,
     Header_Global_Resources_VideoTutorials,
@@ -63603,7 +63859,6 @@ Error generating stack: ` +
     global_menu_sign_out$31,
     global_menu_sign_in,
     Header_Nav_Dashboard,
-    Header_Nav_Lighthouse,
     Header_Nav_AppsPackages,
     Header_Nav_AppsPackages_All,
     Header_Nav_AppsPackages_ViewPackages,
@@ -63711,7 +63966,6 @@ Error generating stack: ` +
         (Header_Global_Documentation_Seeall = `Xem tất cả`),
         (Header_Nav_DocumentationAdmin = `Công cụ quản trị`),
         (Header_Global_Resources = `Tài nguyên`),
-        (Header_Global_Resources_SteamVR = `Steam VR`),
         (Header_Global_Resources_PCCafe = `Chương trình phòng máy Steam`),
         (Header_Global_Resources_Discussions = `Thảo luận Steamworks`),
         (Header_Global_Resources_VideoTutorials = `Video hướng dẫn về Steamworks`),
@@ -63727,7 +63981,6 @@ Error generating stack: ` +
         (global_menu_sign_out$31 = `Đăng xuất`),
         (global_menu_sign_in = `Đăng nhập`),
         (Header_Nav_Dashboard = `Trang tổng quan`),
-        (Header_Nav_Lighthouse = `SteamVR Tracking`),
         (Header_Nav_AppsPackages = `Ứng dụng & Gói sản phẩm`),
         (Header_Nav_AppsPackages_All = `Tất cả ứng dụng`),
         (Header_Nav_AppsPackages_ViewPackages = `Xem gói sản phẩm`),
@@ -63832,7 +64085,6 @@ Error generating stack: ` +
           Header_Global_Documentation_Seeall,
           Header_Nav_DocumentationAdmin,
           Header_Global_Resources,
-          Header_Global_Resources_SteamVR,
           Header_Global_Resources_PCCafe,
           Header_Global_Resources_Discussions,
           Header_Global_Resources_VideoTutorials,
@@ -63848,7 +64100,6 @@ Error generating stack: ` +
           global_menu_sign_out: global_menu_sign_out$31,
           global_menu_sign_in,
           Header_Nav_Dashboard,
-          Header_Nav_Lighthouse,
           Header_Nav_AppsPackages,
           Header_Nav_AppsPackages_All,
           Header_Nav_AppsPackages_ViewPackages,
@@ -66454,8 +66705,8 @@ Error generating stack: ` +
         (global_menu_login$17 = `Accedi`),
         (global_menu_login_caps$17 = `Accedi`),
         (global_menu_view_profile$17 = `Mostra il mio profilo`),
-        (global_menu_account_details$17 = `Dettagli sull'account`),
-        (global_menu_account_details_accountname$17 = `Dettagli sull'account: <1>%1$s</1>`),
+        (global_menu_account_details$17 = `Dettagli dell'account`),
+        (global_menu_account_details_accountname$17 = `Dettagli dell'account: <1>%1$s</1>`),
         (global_menu_account_preferences$17 = `Preferenze del Negozio`),
         (global_menu_change_language$17 = `Cambia la lingua`),
         (global_menu_language$17 = `Lingua`),

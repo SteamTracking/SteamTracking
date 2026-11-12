@@ -1,0 +1,133 @@
+.FekZSwYnr1c- {
+  cursor: pointer;
+  aspect-ratio: 16/9;
+  background: #00000027;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.FekZSwYnr1c-._2M3xIxqLmX8- {
+  filter: grayscale();
+}
+.FekZSwYnr1c- img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+}
+.gnz9d4vMotk- {
+  width: auto;
+  height: 100%;
+}
+.x8orf3DM730- {
+  width: 100%;
+  position: relative;
+}
+.x8orf3DM730- .Qi-UgM4WsRo- {
+  z-index: 1;
+  cursor: pointer;
+  background: #000c;
+  width: 40px;
+  height: 90px;
+  display: none;
+}
+.x8orf3DM730- .Qi-UgM4WsRo-:hover svg {
+  fill: #fff;
+  color: #fff;
+}
+.x8orf3DM730- .Qi-UgM4WsRo-._2i9InboilFc- {
+  inset-inline-start: 0;
+  position: absolute;
+  top: 0;
+}
+.x8orf3DM730- .Qi-UgM4WsRo-.qdGGKLZFJX4- {
+  inset-inline-end: 0;
+  position: absolute;
+  top: 0;
+}
+.x8orf3DM730- .Qi-UgM4WsRo-.KTGtVqzbnVU- {
+  display: block;
+}
+.-V6vKn-OSdA- {
+  height: 102px;
+  position: relative;
+  overflow: scroll hidden;
+}
+.-V6vKn-OSdA- ._2rWVHOBfiqk- {
+  aspect-ratio: 16/9;
+  cursor: pointer;
+  background-color: #000;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 90px;
+  scroll-margin-inline: 25px;
+  display: flex;
+  position: relative;
+}
+.-V6vKn-OSdA- ._2rWVHOBfiqk- img {
+  width: 100%;
+  height: auto;
+}
+.-V6vKn-OSdA- ._2rWVHOBfiqk- img.IkG-QGVb-sQ- {
+  width: unset;
+}
+.-V6vKn-OSdA- ._2rWVHOBfiqk-.Lmu0WjZ9ob4-:after,
+.-V6vKn-OSdA- ._2rWVHOBfiqk-:hover:after {
+  content: "";
+  top: 0;
+  inset-inline: 0;
+  z-index: 1;
+  border: 1px solid #fff;
+  position: absolute;
+  bottom: 0;
+}
+.-V6vKn-OSdA- ._2rWVHOBfiqk- .WmyUpASx6iA-,
+.-V6vKn-OSdA- ._2rWVHOBfiqk- .BarCJB1FCA4- {
+  top: 0;
+  fill: #fff;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  display: flex;
+  position: absolute;
+  inset-inline: 0;
+}
+.eXJaoCIQubs- {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.eXJaoCIQubs- .ZfuTb5z2GO0- {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.eXJaoCIQubs- .ZfuTb5z2GO0- ::-webkit-scrollbar {
+  display: none;
+}
+.OpRXBl2jZlk- {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.OpRXBl2jZlk- .BjmsfqrdIWY- {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.gThommZo0i8- {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

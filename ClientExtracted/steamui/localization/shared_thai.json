@@ -178,7 +178,7 @@
     "VoiceShowAdvancedSettings": "แสดงการตั้งค่าขั้นสูง",
     "VoiceHideAdvancedSettings": "ซ่อนการตั้งค่าขั้นสูง",
     "VoiceAdvancedSettingsExplainer": "(นี่เป็นการตั้งค่าไมโครโฟนที่จัดการโดยแพลตฟอร์มหรือเบราว์เซอร์ของคุณ)",
-    "VoiceEchoCancellation": "การแก้ไขเสียงสะท้อน",
+    "VoiceEchoCancellation": "การตัดเสียงสะท้อน",
     "VoiceNoiseCancellation": "การแก้ไขเสียงรบกวน",
     "VoiceAutoGainControl": "การควบคุมระดับเสียงและเกนโดยอัตโนมัติ",
     "DefaultMic": "ค่าเริ่มต้น",
@@ -4186,7 +4186,7 @@
     "GamePerformanceStats_FrameRateHistogram_ThisGame_Device": "ข้อมูลฮิสโตแกรมอ้างอิงจากรายงานอัตราเฟรมโดยลูกค้าสำหรับเกมนี้บน %1$s ที่เลือกให้ข้อมูลอัตราเฟรม",
     "GamePerformanceStats_FrameRateHistogram_Title": "การกระจายอัตราเฟรม",
     "GamePerformanceStats_Framerate": "อัตราเฟรม",
-    "GamePerformanceStats_SessionLabel": "% เซสชัน",
+    "GamePerformanceStats_SessionLabel": "% ของตัวอย่าง",
     "GamePerformanceStats_Chart_NoData": "แผนภูมิจะพร้อมใช้งานเมื่อรวบรวมข้อมูลได้เพียงพอ",
     "NewToolTitleSuffix_Beta": "เบต้า",
     "DynamicLinkType_WorkshopItem": "ผลงานเวิร์กชอปสำหรับ %1$s",
@@ -4213,6 +4213,11 @@
     "GamePerformanceStats_StillGatheringData": "Steam ยังคงรวบรวมข้อมูลอัตราเฟรมสำหรับเกม %1$s บน %2$s อยู่",
     "GamePerformanceStats_StillGatheringData_ThisGame": "Steam ยังคงรวบรวมข้อมูลอัตราเฟรมสำหรับเกมนี้บน %1$s อยู่",
     "GamePerformanceStats_StillGatheringData_NoDevice": "Steam ยังคงรวบรวมข้อมูลอัตราเฟรมสำหรับเกมนี้อยู่",
-    "GamePerformanceStats_FrameRateDistribution": "แผนภูมิอัตราเฟรมนี้อ้างอิงจากข้อมูลการเล่นเกมที่ไม่ระบุตัวตนของลูกค้าที่เลือกให้ข้อมูลซึ่งเล่นเกม %1$s บน %2$s",
-    "GamePerformanceStats_FrameRateDistribution_ThisGame": "แผนภูมิอัตราเฟรมนี้อ้างอิงจากข้อมูลการเล่นเกมที่ไม่ระบุตัวตนของลูกค้าที่เลือกให้ข้อมูลซึ่งเล่นเกมนี้บน %1$s"
+    "GamePerformanceStats_FrameRateDistribution": "แผนภูมินี้แสดงตัวอย่างอัตราเฟรมจากลูกค้าที่เลือกที่จะแบ่งปันข้อมูลแบบไม่ระบุตัวตนขณะเล่นเกม %1$s บน %2$s โดยแต่ละแถบแสดงเปอร์เซ็นต์ของตัวอย่างอัตราเฟรมดังกล่าว",
+    "GamePerformanceStats_FrameRateDistribution_ThisGame": "แผนภูมินี้แสดงตัวอย่างอัตราเฟรมจากลูกค้าที่เลือกที่จะแบ่งปันข้อมูลแบบไม่ระบุตัวตนขณะเล่นเกมนี้บน %1$s โดยแต่ละแถบแสดงเปอร์เซ็นต์ของตัวอย่างอัตราเฟรมดังกล่าว",
+    "SteamMachine_TestResult_GamepadNotEnabledByDefault": "ต้องเปิดใช้งานการรองรับคอนโทรลเลอร์สำหรับเกมนี้ด้วยตนเอง โดยใช้การตั้งค่าในเกม",
+    "GameFrameRateReporting_Details_HowToChange": "หากคุณต้องการเปลี่ยนการตั้งค่านี้ในภายหลัง โปรดไปที่ <1>การตั้งค่าบัญชี Steam > ข้อมูลและการเปิดหา</1>",
+    "GamePerformanceStats_MoreDetailsTitle": "รายละเอียดเพิ่มเติม",
+    "GamePerformanceStats_MoreDetails_Filtering": "รวมเฉพาะข้อมูลที่เก็บรวบรวมที่ขีดจำกัดเฟรมเริ่มต้นของ %1$s ที่ %2$s FPS เท่านั้น ระบบได้กรองช่วงที่ไม่มีการใช้งานและตัวอย่างที่ไม่ถูกต้องออก และเก็บตัวอย่างหลายรายการจากเซสชันการเล่นแต่ละครั้ง",
+    "GamePerformanceStats_MoreDetails_VSync": "ความแตกต่างในแผนภูมิ (เช่น ระหว่าง %1$s และ %2$s FPS) อาจเกิดจาก VSync ที่ทำการซิงโครไนซ์การส่งเฟรมกับอัตรารีเฟรชของจอแสดงผลเพื่อป้องกันภาพฉีกขาด ซึ่งอาจทำให้ตัวอย่างข้อมูลกระจุกตัวอยู่ที่ %1$s และ %2$s FPS แม้ว่าอัตราเฟรมเฉลี่ยของเกมจะอยู่ระหว่างค่าเหล่านั้นก็ตาม นี่เป็นพฤติกรรมปกติของ VSync และอาจส่งผลต่อจังหวะของเฟรม แต่ไม่ได้ทำให้เกิดอาการภาพกระตุกที่สังเกตเห็นได้ชัดเสมอไป"
 }

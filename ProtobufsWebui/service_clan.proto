@@ -87,6 +87,15 @@ message CPartnerEventSummary {
 	optional .CPartnerEventSummary_Image capsule_image = 14;
 	optional string store_path = 15;
 	optional uint32 rtime32_post_time = 20;
+	optional .CPartnerEventSummary_CrossPromo cross_promo = 21;
+	optional bool adult_only_content = 22;
+}
+
+message CPartnerEventSummary_CrossPromo {
+	optional string background_image = 1;
+	optional string scrim_color = 2;
+	optional string desktop_layout = 3;
+	optional .CPartnerEventSummary_Image logo = 4;
 }
 
 message CPartnerEventSummary_Image {

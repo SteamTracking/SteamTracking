@@ -13,8 +13,8 @@
 	min-width:946px;
 	margin:0;
 	padding:0;
-	text-align:left;
-	padding-left:12px;
+	text-align:start;
+	padding-inline-start:12px;
 	padding-top:21px;
 }
 
@@ -43,8 +43,8 @@ h2 {
 }
 
 .pageLinks {
-	float:right;
-	margin-right:8px;
+	float:inline-end;
+	margin-inline-end:8px;
 	padding-top:2px;
 	font-size:10px;
 	color:#959595;
@@ -57,7 +57,7 @@ h2 {
 #memberList {
 	margin:0;
 	padding:0;
-	margin-left:31px;
+	margin-inline-start:31px;
 }
 
 #bottomLinks {
@@ -66,24 +66,24 @@ h2 {
 	margin:0;
 	padding:0;
 	margin-bottom:6px;
-	margin-left:23px;
+	margin-inline-start:23px;
 	border:solid #252525 4px;
 }
 
 .friendBlock_offline,.friendBlock_online,.friendBlock_in-game {
 	position:relative;
-	float:left;
+	float:inline-start;
 	width:286px;
 	height:40px;
 	padding:0;
 	margin:0;
-	padding-left:4px;
+	padding-inline-start:4px;
 	padding-top:4px;
 	padding-bottom:4px;
 	margin-bottom:4px;
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/playerBlockBG.gif');
 	font-size:10px;
-	margin-right:8px;
+	margin-inline-end:8px;
 }
 
 .friendBlock_offline:hover,.friendBlock_online:hover,.friendBlock_in-game:hover {
@@ -103,7 +103,7 @@ h2 {
 
 .officerIcon {
 	position:absolute;
-	left:264px;
+	inset-inline-start:264px;
 	top:15px;
 }
 
@@ -119,21 +119,21 @@ h2 {
 	background-color:#000000;
 	margin:0;
 	padding:0;
-	margin-left:23px;
+	margin-inline-start:23px;
 	border:solid #252525 4px;
 }
 
 .infoBar p {
 	margin:0;
 	padding:0;
-	margin-left:8px;
+	margin-inline-start:8px;
 	padding-top:2px;
 	font-size:10px;
 	color:#959595;
 }
 
 #searchArea {
-	padding-left:27px;
+	padding-inline-start:27px;
 	padding-bottom:10px;
 }
 
@@ -142,15 +142,16 @@ h2 {
 }
 
 #searchAreaField {
-	float:left;
+	float:inline-start;
 }
 
 #searchAreaSubmit {
-	float:left;
-	padding-left:10px;
+	float:inline-start;
+	padding-inline-start:10px;
 }
 
 #searchAreaClear {
-	float:left;
-	padding:7px 0 0 10px;
+	float:inline-start;
+	padding-block: 7px 0;
+	padding-inline: 10px 0;
 }

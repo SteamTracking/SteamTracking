@@ -95,7 +95,7 @@ html.GamepadMode .customBrowseText {
 }
 
 html.GamepadMode .customBrowseDesc {
-	padding-right: 0px;
+	padding-inline-end: 0px;
 }
 
 html.GamepadMode .workshop_browse_menu_area {
@@ -118,8 +118,8 @@ html.GamepadMode .workshop_browse_search {
 }
 
 html.GamepadMode .workshop_browse_search .search_text_submit_img {
-	right: unset;
-	margin-left: 8px;
+	inset-inline-end: unset;
+	margin-inline-start: 8px;
 }
 
 
@@ -155,13 +155,17 @@ html.GamepadMode .workshop_browse_tab a.gpfocus {
 }
 
 html.GamepadMode .workshop_browse_tab a.dropdown {
-	padding-right: 28px;
+	padding-inline-end: 28px;
 	background-position: calc(100% - 8px) calc(50% - 2px);
+}
+
+html.GamepadMode .workshop_browse_tab a.dropdown:dir(rtl) {
+	background-position: left 8px top calc(50% - 2px);
 }
 
 html.GamepadMode .workshop_browse_tab a.dropdown:hover {
 	border-radius: unset;
-	padding-right: 28px;
+	padding-inline-end: 28px;
 	margin: unset;
 	height: unset;
 }
@@ -372,16 +376,16 @@ html.GamepadMode .voting_queue_border {
 
 html.GamepadMode .voting_queue_link {
 	background: unset;
-	left: unset;
+	inset-inline-start: unset;
 	width: unset;
 	top: unset;
 	height: unset;
 
-	right: 0px;
+	inset-inline-end: 0px;
 	margin: 12px;
 	top: 44%;
 	max-width: 44%;
-	text-align: right;
+	text-align: end;
 	transform: translateY(-50%);
 
 	border-radius: var(--gpCorner-Medium);

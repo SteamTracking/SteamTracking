@@ -6,13 +6,13 @@
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
-	text-align: left;
+	text-align: start;
 }
 #BG_bottom {
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
-	text-align:left;
+	text-align:start;
 }
 #BG_top h2 {
 	font-weight:normal;
@@ -36,8 +36,8 @@
 	min-width:936px;
 	margin:0;
 	padding:0;
-	text-align:left;
-	padding-left:17px;
+	text-align:start;
+	padding-inline-start:17px;
 	padding-top:21px;
 }
 
@@ -48,8 +48,8 @@ h2 {
 }
 
 .pageLinks {
-	float:right;
-	margin-right:8px;
+	float:inline-end;
+	margin-inline-end:8px;
 	padding-top:2px;
 	font-size:10px;
 	color:#959595;
@@ -62,7 +62,7 @@ h2 {
 #memberList {
 	margin:0;
 	padding:0;
-	margin-left:26px;
+	margin-inline-start:26px;
 }
 
 #bottomLinks {
@@ -71,32 +71,32 @@ h2 {
 	margin:0;
 	padding:0;
 	margin-bottom:6px;
-	margin-left:23px;
+	margin-inline-start:23px;
 	border:solid #252525 4px;
 }
 
 .listOptions {
 	width:886px;
-	margin-left:27px;
+	margin-inline-start:27px;
 	font-size:11px;
 	color:#898989;
 	margin-bottom:4px;
 }
 
 .listOptionsRight {
-	float:right;
+	float:inline-end;
 }
 
 .listOptionsRightInviteUpper {
 	margin-top:-12px;
 	position: relative;
-	right: 0px;
-	float: right;
+	inset-inline-end: 0px;
+	float: inline-end;
 }
 
 .listOptionsRightInvite {
 	margin-top:-12px;
-	float: right;
+	float: inline-end;
 }
 
 .blockedText {
@@ -106,14 +106,14 @@ h2 {
 }
 
 .friendHolder {
-	float:left;
+	float:inline-start;
 	position:relative;
 	width:290px;
 	height:48px;
 	padding:0;
 	margin:0;
 	margin-bottom:4px;
-	margin-right:8px;
+	margin-inline-end:8px;
 }
 	
 .friendBlock_offline,.friendBlock_online,.friendBlock_in-game {
@@ -122,7 +122,7 @@ h2 {
 	height:40px;
 	padding:0;
 	margin:0;
-	padding-left:4px;
+	padding-inline-start:4px;
 	padding-top:4px;
 	padding-bottom:4px;
 	font-size:10px;
@@ -133,7 +133,7 @@ h2 {
 	margin: 0;
 	padding: 0;
 	top: 2px;
-	left: 261px;
+	inset-inline-start: 261px;
 	width: 27px;
 	height: 44px;
 
@@ -144,7 +144,7 @@ body input.friendCheckbox, .friendCheckbox {
 	border:0;
 	padding:0;
 	background-color:inherit;
-	left:266px;
+	inset-inline-start:266px;
 	top:16px;
 }
 
@@ -153,7 +153,7 @@ body input.friendCheckbox2, .friendCheckbox2 {
 	margin: 0;
 	padding: 0;
 	background-color: inherit;
-	left: 8px;
+	inset-inline-start: 8px;
 	top: 15px;
 }
 
@@ -172,7 +172,7 @@ body input {
 .gameListRow {
     height: 77px;
     margin-bottom: 15px;
-    padding-left: 208px;
+    padding-inline-start: 208px;
     position: relative;
     }
 
@@ -186,7 +186,7 @@ body input {
     }
 
 .gameListRowLogo {
-    left: 0;
+    inset-inline-start: 0;
     position: absolute;
 }
 
@@ -203,7 +203,7 @@ body input {
 #game_logo {
 	position:absolute;
 	width:192px;
-	left:748px;
+	inset-inline-start:748px;
 	top:7px;
 }
 
@@ -240,17 +240,17 @@ body input {
 }
 
 .friends_list_tabs {
-	margin-left:10px;
+	margin-inline-start:10px;
 }
 
 .friends_list_tab, a.friends_list_tab {
 	display: block;
-	float: left;
+	float: inline-start;
 	color: #ffffff;
 	background-color: #3a3a3a;
 	line-height: 25px;
 	padding: 0px 12px;
-	margin-left: 9px;
+	margin-inline-start: 9px;
 }
 
 a.friends_list_tab:hover {
@@ -258,7 +258,7 @@ a.friends_list_tab:hover {
 }
 
 #friends_list_tab_fade {
-	margin-left:10px;
+	margin-inline-start:10px;
 }
 
 .friends_list_tab.active {
@@ -266,7 +266,8 @@ a.friends_list_tab:hover {
 }
 
 #blockConfirmBlock {
-	margin:30px 0px 20px 30px;
+	margin-block: 30px 20px;
+	margin-inline: 30px 0px;
 }
 
 #confirmP {
@@ -281,13 +282,13 @@ a.friends_list_tab:hover {
 }
 
 #tabs {
-    left: 25px;
+    inset-inline-start: 25px;
     margin: 0;
     position: absolute;
     top: 108px;
 }
 .tab {
-    float: left;
+    float: inline-start;
 }
 .tab a, .tab a:hover, .tab a:visited, .tab a:active {
     color: #FFFFFF;
@@ -298,7 +299,7 @@ a.friends_list_tab:hover {
 .tabOff, .tabOn {
     background-color: #4F4F4E;
     color: #FFFFFF;
-    float: left;
+    float: inline-start;
     font-size: 11px;
     font-weight: bold;
     height: 15px;
@@ -309,7 +310,7 @@ a.friends_list_tab:hover {
 }
 .tabOnL, .tabOnR, .tabOffL, .tabOffR {
     background-color: #4F4F4E;
-    float: left;
+    float: inline-start;
     height: 29px;
     width: 2px;
 }
@@ -317,7 +318,7 @@ a.friends_list_tab:hover {
     background-color: #3A3A3A;
 }
 .tabOnR, .tabOffR {
-    margin-right: 6px;
+    margin-inline-end: 6px;
 }
 
 .infoBar {
@@ -327,22 +328,22 @@ a.friends_list_tab:hover {
 	background-color:#000000;
 	margin:0;
 	padding:0;
-	margin-left:23px;
+	margin-inline-start:23px;
 	border:solid #252525 4px;
 }
 
 .infoBar p {
 	margin:0;
 	padding:0;
-	margin-left:8px;
+	margin-inline-start:8px;
 	padding-top:2px;
 	font-size:10px;
 	color:#959595;
 }
 
 .pageLinks {
-	float:right;
-	margin-right:8px;
+	float:inline-end;
+	margin-inline-end:8px;
 	padding-top:2px;
 	font-size:10px;
 	color:#959595;

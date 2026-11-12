@@ -64,7 +64,7 @@ html.GamepadMode .badges_sheet .badge_row .badge_row_inner .badge_title {
 }
 
 html.GamepadMode .badges_sheet .badge_row .badge_row_inner .badge_current {
-	margin-right: 12px;
+	margin-inline-end: 12px;
 }
 
 html.GamepadMode .badges_sheet .badge_row .badge_row_inner .how_to_get_card_drops_ctn {
@@ -145,7 +145,7 @@ html.GamepadMode .badge_title_stats {
 	color: unset;
 	position: absolute;
 	top: 16px;
-	right: 16px;
+	inset-inline-end: 16px;
 }
 
 html.GamepadMode .badge_title_row {
@@ -328,7 +328,7 @@ html.GamepadMode .badge_card_to_collect_links {
 	row-gap: 6px;
 	position: absolute;
 	top: 16px;
-	right: 16px;
+	inset-inline-end: 16px;
 }
 
 html.GamepadMode .badge_card_to_collect_links > a {

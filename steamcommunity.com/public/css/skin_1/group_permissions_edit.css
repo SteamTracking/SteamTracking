@@ -10,7 +10,7 @@
 	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
-	text-align:left;
+	text-align:start;
 	margin: 0 auto;
 }
 
@@ -21,8 +21,8 @@
 	min-width:946px;
 	margin:0 auto;
 	padding:0;
-	text-align:left;
-	padding-left:12px;
+	text-align:start;
+	padding-inline-start:12px;
 	padding-top:21px;
 }
 
@@ -49,7 +49,7 @@
 	width:894px;
 	margin:0;
 	padding:0;
-	margin-left:23px;
+	margin-inline-start:23px;
 	margin-bottom:6px;
 	border:solid #252525 4px;
 }
@@ -100,9 +100,9 @@
 }
 
 .headerTitleText {
-	float:right;
+	float:inline-end;
 	width:355px;
-	text-align:left;
+	text-align:start;
 }
 
 .headerTitleText>p {
@@ -112,15 +112,15 @@
 }
 
 .optionDesc {
-	float:right;
+	float:inline-end;
 	width:355px;
-	text-align:left;
+	text-align:start;
 	color:#969696;
 	padding-top:8px;
 }
 
 .headerTitle, .permissionRadio {
-	float:right;
+	float:inline-end;
 	width:35px;
 	margin:0;
 	padding:0;
@@ -154,14 +154,14 @@
 	margin:0;
 	padding:0;
 	padding-top:6px;
-	margin-left:23px;
+	margin-inline-start:23px;
 }
 
 .actionButton {
-	float:right;
+	float:inline-end;
 	width:104px;
 	height:25px;
-	margin-left:6px;
+	margin-inline-start:6px;
 }
 
 .actionButton input {
@@ -175,7 +175,8 @@
 }
 
 .permissionBlockHeader,.permissionBlockHeader2 {
-	padding: 12px 0px 6px 6px;
+	padding-block: 12px 6px;
+	padding-inline: 6px 0px;
 	font-size:14px;
 	font-weight:normal;
 	color:#66C0F4;
@@ -187,7 +188,7 @@
 
 .settingsBlock {
 	width:944px;
-	text-align:right;
+	text-align:end;
 	color:#8C8C8C;
 }
 
@@ -195,12 +196,12 @@
 	width:708px;
 	margin: 0 auto;
 
-	text-align:left;
+	text-align:start;
 }
 
 .sectionHeader {
 	width:672px;
-	margin-left:17px;
+	margin-inline-start:17px;
 	border-bottom:solid #313431 1px;
 	color:#525252;
 	font-size:15px;
@@ -212,8 +213,8 @@
 	padding:0;
 	margin:0;
 	background:none;
-	float:left;
-	margin-right:5px;
+	float:inline-start;
+	margin-inline-end:5px;
 	margin-top:-5px;
 }
 
@@ -233,7 +234,7 @@ p.settingsTypeDesc {
 #errorText,#successText {
 	padding:0;
 	margin:0;
-	padding-left:150px;
+	padding-inline-start:150px;
 	font-weight:bold;
 	padding-bottom:10px;
 }

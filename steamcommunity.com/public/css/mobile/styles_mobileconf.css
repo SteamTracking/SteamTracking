@@ -50,9 +50,9 @@ html.responsive body .responsive_page_template_content {
 }
 
 .mobileconf_list_entry_icon {
-	float: left;
+	float: inline-start;
 	height: 3.5em;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 .mobileconf_list_entry_icon > div {
@@ -91,7 +91,7 @@ html.responsive body .responsive_page_template_content {
 	background: #324056;
 	background-image: radial-gradient(ellipse farthest-corner at 50% 0px , rgb(74, 107, 152) 0%, transparent 50%);
 	bottom: -3em;
-	left: 0;
+	inset-inline-start: 0;
 	z-index: 10;
 
 	-webkit-transition-property: bottom;
@@ -125,13 +125,13 @@ html.responsive body .responsive_page_template_content {
 
 .mobileconf_offers_summary_header {
 	margin-top: 10px;
-	float: left;
+	float: inline-start;
 	display: inline-block;
 }
 
 .mobileconf_offers_summary_header_text {
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-inline-start: 20px;
+	margin-inline-end: 20px;
 	margin-bottom: 5px;
 	font-size: 20px;
 	text-shadow: none;
@@ -139,8 +139,8 @@ html.responsive body .responsive_page_template_content {
 }
 
 .mobileconf_offers_summary_info {
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-inline-start: 20px;
+	margin-inline-end: 20px;
 	margin-top: 10px;
 	margin-bottom: 15px;
 	font-size: 18px;
@@ -151,8 +151,9 @@ html.responsive body .responsive_page_template_content {
 .mobileconf_offers_summary_chevron {
 	width: 0.8em;
 	overflow: hidden;
-	margin: 13px 0 0 4px;
-	float: right;
+	margin-block: 13px 0;
+	margin-inline: 4px 0;
+	float: inline-end;
 	font-size: 25px;
 	text-shadow: none;
 	color: #ffffff;
@@ -166,7 +167,7 @@ html.responsive body .responsive_page_template_content {
 
 .mobileconf_list_checkbox {
 	overflow: hidden;
-	float: right;
+	float: inline-end;
 	vertical-align: middle;
 	display: inline-block;
 	color: #ffffff;
@@ -189,8 +190,8 @@ html.responsive body .responsive_page_template_content {
 .mobileconf_offer_wrapper {
 	background-color: #1f1f1f;
 	padding-top: 10px;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-inline-start: 20px;
+	margin-inline-end: 20px;
 	margin-bottom: 20px;
 }
 
@@ -199,18 +200,18 @@ html.responsive body .responsive_page_template_content {
 }
 
 .mobileconf_offer_header_persona_icon {
-	float: left;
-	margin-left: 20px;
-	margin-right: 20px;
+	float: inline-start;
+	margin-inline-start: 20px;
+	margin-inline-end: 20px;
 }
 
 .mobileconf_offer_header_persona_text {
-	float: left;
+	float: inline-start;
 }
 
 .mobileconf_offer_item_list {
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-inline-start: 20px;
+	margin-inline-end: 20px;
 }
 
 .mobileconf_offer_item_icon {
@@ -220,8 +221,8 @@ html.responsive body .responsive_page_template_content {
 }
 
 .mobileconf_offer_footer_expiration {
-	float: right;
-	margin-right: 10px;
+	float: inline-end;
+	margin-inline-end: 10px;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	font-size: 18px;
@@ -234,11 +235,11 @@ html.responsive body .responsive_page_template_content {
 
 
 .mobileconf_trade_action_button_cancel {
-	margin-left: 30px;
+	margin-inline-start: 30px;
 }
 
 .mobileconf_trade_action_button_confirm {
-	margin-right: 30px;
+	margin-inline-end: 30px;
 }
 
 .mobileconf_trade_action_buttons {
@@ -308,7 +309,7 @@ html.responsive body .responsive_page_template_content {
 
 #confiteminfo {
 	display: inline-block;
-	text-align: left;
+	text-align: start;
 	border: none;
 }
 
@@ -365,13 +366,13 @@ html.responsive body .responsive_page_template_content {
 	.item_desc_icon
 	{
 		max-width: 48%;
-		float: left;
+		float: inline-start;
 		position: static;
 	}
 
 	.item_desc_description
 	{
-		float: right;
+		float: inline-end;
 		width: 48%;
 	}
 }

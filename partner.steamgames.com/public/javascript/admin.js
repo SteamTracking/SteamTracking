@@ -1704,4 +1704,49 @@ function RetireAppInternal( nAppID, nPubID, bDMCARetire, strNotes, strRetireActi
 	return Promise;
 }
 
+/**
+ * Shows an existing element on the page in a CModal dialog (see ShowDialog in shared_global.js).
+ *
+ * @param strTitle		Title bar text
+ * @param $Content		jQuery element to show in the dialog
+ * @param rgModalParams	See CModal (e.g. bExplicitDismissalOnly)
+ * @returns CModal
+ */
+function ShowPageElementDialog( strTitle, $Content, rgModalParams )
+{
+	var ExistingModal = $Content.data( 'PageElementDialog' );
+	if ( ExistingModal )
+		return ExistingModal;
+
+	var Modal = ShowDialog( strTitle, $Content.show(), rgModalParams );
+	Modal.SetRemoveContentOnDismissal( false );
+
+	$Content.data( 'PageElementDialog', Modal );
+	Modal.always( function() { $Content.removeData( 'PageElementDialog' ); } );
+
+	var $Dialog = Modal.GetContent();
+	if ( rgModalParams && rgModalParams.bExplicitDismissalOnly )
+		$Dialog.on( 'cancel', function( event ) { event.preventDefault(); } );
+
+	// if the browser closes the native <dialog> on its own, make sure CModal cleans up (background, scroll lock, etc)
+	$Dialog.on( 'close', function() { Modal.Dismiss(); } );
+
+	if ( document.body.scrollHeight > window.innerHeight )
+		$Dialog.addClass( 'prevent_scroll' );
+
+	return Modal;
+}
+
+/**
+ * Closes the dialog that ShowPageElementDialog() opened for this element, if it's showing.
+ *
+ * @param $Content		The same jQuery element passed to ShowPageElementDialog
+ */
+function HidePageElementDialog( $Content )
+{
+	var Modal = $Content.data( 'PageElementDialog' );
+	if ( Modal )
+		Modal.Dismiss();
+}
+
 
