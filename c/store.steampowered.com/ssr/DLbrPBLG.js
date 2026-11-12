@@ -1,6 +1,4 @@
-var _ = _(_()),
-  _ = _(_(), 1),
-  _ = `SteamCharts Overview Top Sellers`;
+var _ = _(_());
 function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
@@ -250,7 +248,9 @@ var _ = class extends _.Component {
     strokeWidth: 1,
     position: `middle`,
   }));
-var _ = `eyc4VnVmsCc-`,
+var _ = _(_(), 1),
+  _ = `SteamCharts Overview Top Sellers`,
+  _ = `eyc4VnVmsCc-`,
   _ = `VFwHp-ugDQ4-`,
   _ = `hNg4M-e9yys-`,
   _ = `UzY-DsdkE1I-`,

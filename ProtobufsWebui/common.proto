@@ -3388,6 +3388,16 @@ message CMsgIPAddressBucket {
 	optional fixed64 bucket = 2;
 }
 
+// Used by: common.proto
+message CMsgKeyValuePair {
+	optional string name = 1;
+	optional string value = 2;
+}
+
+message CMsgKeyValueSet {
+	repeated .CMsgKeyValuePair pairs = 1;
+}
+
 message CMsgKubeRPCPacket {
 	optional .CMsgKubeRPCPacket_Hdr hdr = 1;
 	optional bytes payload = 2;
@@ -7319,22 +7329,6 @@ message StoreItem {
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
-message StoreItem_AIGeneratedContentService {
-	optional string name = 1;
-	optional string url = 2;
-}
-
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
-message StoreItem_Anticheat {
-	optional bool kernel_mode = 1;
-	optional bool uninstall_completely = 2;
-	optional bool boot_protection = 3;
-	optional string boot_protection_name = 4;
-	optional string name = 5;
-	optional string name_loc = 6;
-}
-
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
 message StoreItem_Assets {
 	optional string asset_url_format = 1;
 	optional string main_capsule = 2;
@@ -7390,12 +7384,6 @@ message StoreItem_Demo {
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
-message StoreItem_Eula {
-	optional string name = 1;
-	optional string url = 2;
-}
-
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails {
 	repeated .SteamAward steam_award = 1;
 	optional bool vetted = 2;
@@ -7406,20 +7394,15 @@ message StoreItem_ExtraDetails {
 	optional string user_account_third_party = 7;
 	optional bool user_account_third_party_link_to_steam = 8;
 	optional .StoreItem_ExtraDetails_Anticheat anticheat = 9;
-	//optional .StoreItem_Anticheat anticheat = 9;
 	repeated .StoreItem_ExtraDetails_Eula eula = 10;
-	//repeated .StoreItem_Eula eula = 10;
 	optional .StoreItem_ExtraDetails_AIGeneratedContentService ai_generation_service = 11;
-	//optional .StoreItem_AIGeneratedContentService ai_generation_service = 11;
 	optional bool refund_checks_ea_playtime = 12;
 	repeated .StoreItem_ExtraDetails_PageSection section = 13;
-	//repeated .StoreItem_PageSection section = 13;
 	optional string legal_notice_bbcode = 14;
 	repeated int32 interactive_elements = 15 [(.description) = "enum"];
 	optional string content_survey_notes = 16;
 	optional string content_survey_ai_notes = 17;
 	repeated .StoreItem_ExtraDetails_PressReview press_review = 18;
-	//repeated .StoreItem_PressReview press_review = 18;
 	optional string partner_awards_bbcode = 19;
 	optional .StoreItem_ExtraDetails_EarlyAccess early_access = 20;
 	optional .CSeasonPass season_pass = 21;
@@ -7687,13 +7670,6 @@ message StoreItem_PackageGroup {
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
-message StoreItem_PageSection {
-	optional string label = 1;
-	optional string content_bbcode = 2;
-	optional int32 banner = 3 [(.description) = "enum"];
-}
-
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
 message StoreItem_Platforms {
 	optional bool windows = 1;
 	optional bool mac = 2;
@@ -7720,14 +7696,6 @@ message StoreItem_Platforms_VRSupport {
 message StoreItem_Playtest {
 	optional uint32 appid = 1;
 	optional bool is_open = 2;
-}
-
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
-message StoreItem_PressReview {
-	optional string quote = 1;
-	optional string score = 2;
-	optional string site = 3;
-	optional string url = 4;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

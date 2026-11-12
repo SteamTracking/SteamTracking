@@ -1080,7 +1080,7 @@ function _(_) {
     ],
   });
 }
-var _ = new URL(`assets/DfnAe-hE.png`, import.meta.url).href;
+var _ = new URL(`assets/DfnAe-hE2.png`, import.meta.url).href;
 function _() {
   return (0, _.jsx)(`img`, {
     src: _(_(_.EREALM) ? _ : _),

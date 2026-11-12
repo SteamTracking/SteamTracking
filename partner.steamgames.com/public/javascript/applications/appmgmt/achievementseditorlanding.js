@@ -14904,13 +14904,18 @@ async function Mh(e) {
     ((r.onerror = () =>
       n(Error(`failed to decode image for grayscale conversion`))),
       (r.onload = () => {
-        let e = document.createElement(`canvas`);
-        ((e.width = r.width), (e.height = r.height));
-        let n = e.getContext(`2d`);
-        ((n.filter = `grayscale(100%)`),
-          n.drawImage(r, 0, 0, r.width, r.height),
-          t(e.toDataURL(`image/png`)));
+        try {
+          let e = document.createElement(`canvas`);
+          ((e.width = r.width), (e.height = r.height));
+          let n = e.getContext(`2d`);
+          ((n.filter = `grayscale(100%)`),
+            n.drawImage(r, 0, 0, r.width, r.height),
+            t(e.toDataURL(`image/png`)));
+        } catch (e) {
+          n(e);
+        }
       }),
+      e.startsWith(`data:`) || (r.crossOrigin = `anonymous`),
       (r.src = e));
   });
 }

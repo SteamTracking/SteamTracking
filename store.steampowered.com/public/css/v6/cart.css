@@ -2426,6 +2426,28 @@ background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 	width: 250px;
 }
 
+#payment_method_dselect_container button,
+#payment_method_droplist a
+{
+	display: flex;
+	align-items: center;
+}
+
+.payment_method_new_badge
+{
+	flex-shrink: 0;
+	margin-inline-start: 8px;
+	padding: 1px 6px;
+	border-radius: 2px;
+	background: #1a9fff;
+	color: #ffffff;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 14px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
 #bank_name_dselect_container
 {
 	width: 250px;

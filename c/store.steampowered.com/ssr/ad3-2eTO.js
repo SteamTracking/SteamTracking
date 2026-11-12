@@ -384,18 +384,7 @@ function _(_) {
     })
   );
 }
-var _ = [`axis`, `item`],
-  _ = (0, _.forwardRef)((_, _) =>
-    _.createElement(_, {
-      chartName: `BarChart`,
-      defaultTooltipEventType: `axis`,
-      validateTooltipEventTypes: _,
-      tooltipPayloadSearcher: _,
-      categoricalChartProps: _,
-      ref: _,
-    }),
-  ),
-  _ = _(_(), 1),
+var _ = _(_(), 1),
   _ = _(_(), 1),
   _ = `700px`,
   _ = {
@@ -3080,7 +3069,18 @@ function _(_, _ = !0) {
     enabled: _ && !!_.accountid,
   });
 }
-var _ = `_5tKh-7uOS0I-`,
+var _ = [`axis`, `item`],
+  _ = (0, _.forwardRef)((_, _) =>
+    _.createElement(_, {
+      chartName: `BarChart`,
+      defaultTooltipEventType: `axis`,
+      validateTooltipEventTypes: _,
+      tooltipPayloadSearcher: _,
+      categoricalChartProps: _,
+      ref: _,
+    }),
+  ),
+  _ = `_5tKh-7uOS0I-`,
   _ = `m-xRqa0jmsU-`,
   _ = `fB2-08CluaI-`,
   _ = `_6hUeq4Kq5rs-`,

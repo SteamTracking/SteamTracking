@@ -302,7 +302,7 @@ service ClientMetrics {
 	rpc ReportAccessibilitySettings (.CClientMetrics_ReportAccessibilitySettings_Notification) returns (.NoResponse);
 	// ePrivilege=1
 	rpc ReportClientArgs (.CClientMetrics_ReportClientArgs_Notification) returns (.NoResponse);
-	// ePrivilege=2, eWebAPIKeyRequirement=1
+	// ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc ReportClientError (.CClientMetrics_ReportClientError_Notification) returns (.NoResponse);
 	// ePrivilege=1
 	rpc ReportClipRange (.CClientMetrics_ClipRange_Notification) returns (.NoResponse);
@@ -314,7 +314,7 @@ service ClientMetrics {
 	rpc ReportGamePerformance (.CClientMetrics_GamePerformance_Notification) returns (.NoResponse);
 	// ePrivilege=1
 	rpc ReportLinuxStats (.CClientMetrics_ReportLinuxStats_Notification) returns (.NoResponse);
-	// ePrivilege=2, eWebAPIKeyRequirement=1
+	// ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc ReportReactUsage (.CClientMetrics_ReportReactUsage_Notification) returns (.NoResponse);
 	// ePrivilege=1
 	rpc SteamPipeWorkStatsReport (.CClientMetrics_SteamPipeWorkStats_Notification) returns (.NoResponse);

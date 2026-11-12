@@ -366,7 +366,6 @@ enum EWindowBringToFront
 	k_EWindowBringToFrontInvalid = 0;
 	k_EWindowBringToFrontAndForceOS = 1;
 	k_EWindowBringToFrontWithoutForcingOS = 2;
-	k_EWindowBringToFrontUsingExistingOSState = 3;
 }
 
 enum IDerivationState_

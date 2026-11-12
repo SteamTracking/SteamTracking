@@ -143,17 +143,17 @@ message CStoreBrowse_GetStoreCategories_Response_Category {
 }
 
 service StoreBrowse {
-	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetContentHubConfig (.CStoreBrowse_GetContentHubConfig_Request) returns (.CStoreBrowse_GetContentHubConfig_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetDLCForApps (.CStoreBrowse_GetDLCForApps_Request) returns (.CStoreBrowse_GetDLCForApps_Response);
-	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetDLCForAppsSolr (.CStoreBrowse_GetDLCForAppsSolr_Request) returns (.CStoreBrowse_GetDLCForAppsSolr_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetHardwareItems (.CStoreBrowse_GetHardwareItems_Request) returns (.CStoreBrowse_GetHardwareItems_Response);
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetItems (.CStoreBrowse_GetItems_Request) returns (.CStoreBrowse_GetItems_Response);
-	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetPriceStops (.CStoreBrowse_GetPriceStops_Request) returns (.CStoreBrowse_GetPriceStops_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1
 	rpc GetStoreCategories (.CStoreBrowse_GetStoreCategories_Request) returns (.CStoreBrowse_GetStoreCategories_Response);

@@ -17391,13 +17391,18 @@ async function _(_) {
     ((_.onerror = () =>
       _(Error(`failed to decode image for grayscale conversion`))),
       (_.onload = () => {
-        let _ = document.createElement(`canvas`);
-        ((_.width = _.width), (_.height = _.height));
-        let _ = _.getContext(`2d`);
-        ((_.filter = `grayscale(100%)`),
-          _.drawImage(_, 0, 0, _.width, _.height),
-          _(_.toDataURL(`image/png`)));
+        try {
+          let _ = document.createElement(`canvas`);
+          ((_.width = _.width), (_.height = _.height));
+          let _ = _.getContext(`2d`);
+          ((_.filter = `grayscale(100%)`),
+            _.drawImage(_, 0, 0, _.width, _.height),
+            _(_.toDataURL(`image/png`)));
+        } catch (_) {
+          _(_);
+        }
       }),
+      _.startsWith(`data:`) || (_.crossOrigin = `anonymous`),
       (_.src = _));
   });
 }

@@ -126,7 +126,7 @@
     "Login_EnterSteamGuard": "Mã Steam Guard cho %1$s",
     "Login_EnterTwoFactor": "Nhập mã xác thực hai lớp cho %1$s",
     "Login_StartingOffline": "Steam sẽ bắt đầu chế độ ngắt mạng cho tài khoản %1$s",
-    "Login_StayOffline": "Duy trì ngoại tuyến",
+    "Login_StayOffline": "Giữ chế độ ngắt mạng",
     "Login_GoOnline": "Nối mạng",
     "Login_SteamGuardTitle": "Steam Guard - Cần cấp phép cho máy tính",
     "Login_SteamGuardDesc": "Để tăng cường bảo mật, bạn sẽ cần cấp quyền truy cập cho máy tính này bằng cách nhập mã đặc biệt mà chúng tôi mới gửi đến địa chỉ email của bạn.",

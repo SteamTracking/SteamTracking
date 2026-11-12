@@ -1,7 +1,222 @@
+var _ = _(_(), 1);
+function _(_, _, _ = [], _ = !0) {
+  let _ = _.useRef(_);
+  ((_.current = _),
+    _.useEffect(() => {
+      if (!_.current || !_) return;
+      let _ = setInterval(() => {
+        _.current && _.current();
+      }, _);
+      return () => clearInterval(_);
+    }, [_, _, ..._]));
+}
+function _(_) {
+  let { msInterval: _, bEnabled: _ = !0 } = _;
+  _(_(), _, [], _);
+}
+function _() {
+  let [, _] = _.useState(0);
+  return _.useCallback(() => _((_) => _ + 1), []);
+}
+function _(_) {
+  let _ = _.useRef({
+    flLastExecutionTimeMs: 0,
+    fnLatestCallback: null,
+    nTimeoutHandle: 0,
+    fnExecuteLatestCallback() {
+      (this.fnLatestCallback != null &&
+        (this.fnLatestCallback(),
+        (this.fnLatestCallback = null),
+        (this.flLastExecutionTimeMs = performance.now())),
+        window.clearTimeout(this.nTimeoutHandle),
+        (this.nTimeoutHandle = 0));
+    },
+  });
+  return (
+    _.useEffect(() => {
+      let _ = _.current;
+      return () => _.fnExecuteLatestCallback();
+    }, []),
+    _.useCallback(
+      (_) => {
+        let _ = _.current;
+        _.fnLatestCallback = _;
+        let _ = performance.now() - _.flLastExecutionTimeMs,
+          _ = Math.max(_ - _, 0);
+        (window.clearTimeout(_.nTimeoutHandle),
+          (_.nTimeoutHandle = window.setTimeout(
+            () => _.fnExecuteLatestCallback(),
+            _,
+          )));
+      },
+      [_],
+    )
+  );
+}
+function _(_, _) {
+  _.useLayoutEffect(() => {
+    if (!_ || !_) return;
+    let _ = _.Register(_);
+    return () => _.Unregister();
+  }, [_, _]);
+}
+function _(_) {
+  return _;
+}
+function _() {}
+function _(_) {
+  return _.useSyncExternalStore(
+    _ ? _.SyncStore : _,
+    _ ? _.GetValue : _,
+    _ ? _.GetValue : _,
+  );
+}
+function _(_, _) {
+  let [_, _] = _.useState(_);
+  return (
+    _.useEffect(() => {
+      if (_) _(!0);
+      else {
+        let _ = window.setTimeout(() => _(!1), _);
+        return () => window.clearTimeout(_);
+      }
+    }, [_, _]),
+    _
+  );
+}
+function _(_, _) {
+  return _(_, _) || _;
+}
+function _(_ = !1) {
+  let [_, _] = _.useState(_);
+  return [_, _.useCallback(() => _(!0), []), _.useCallback(() => _(!1), [])];
+}
+function _(_) {
+  let _ = _.useRef({
+    value: void 0,
+    bConstructed: !1,
+  });
+  return (
+    _.current.bConstructed ||
+      (_.current = {
+        value: _(),
+        bConstructed: !0,
+      }),
+    _.current.value
+  );
+}
+function _(_, ..._) {
+  let _ = [],
+    _ = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, `gs`),
+    _ = 0,
+    _;
+  for (; (_ = _.exec(_));) {
+    ((_ += _[0].length), _.push(_[1]));
+    let _ = parseInt(_[2]),
+      _ = _[3] || ``,
+      _ = _(_, ..._),
+      _ =
+        _ >= 1 && _ <= _.length && _[_ - 1]
+          ? _.cloneElement(_[_ - 1], {}, _ ? _ : null)
+          : _;
+    _.push(_);
+  }
+  return (_.push(_.slice(_)), _.createElement(_.Fragment, null, ..._));
+}
+function _(_) {
+  let _ = _.useRef(_);
+  return (
+    (_.current.length !== _.length || _.current.some((_, _) => _ !== _[_])) &&
+      (_.current = _),
+    _.current
+  );
+}
 var _ = _(_(), 1),
-  _ = _();
+  _ = (function (_) {
+    return (
+      (_[(_.LaunchGame = 0)] = `LaunchGame`),
+      (_[(_.FriendMessage = 1)] = `FriendMessage`),
+      (_[(_.ChatMention = 2)] = `ChatMention`),
+      (_[(_.ChatMessage = 3)] = `ChatMessage`),
+      (_[(_.ToastMessage = 4)] = `ToastMessage`),
+      (_[(_.ToastAchievement = 5)] = `ToastAchievement`),
+      (_[(_.ToastMisc = 6)] = `ToastMisc`),
+      (_[(_.ToastMiscShort = 7)] = `ToastMiscShort`),
+      (_[(_.FriendOnline = 8)] = `FriendOnline`),
+      (_[(_.FriendInGame = 9)] = `FriendInGame`),
+      (_[(_.VolSound = 10)] = `VolSound`),
+      (_[(_.ShowModal = 11)] = `ShowModal`),
+      (_[(_.HideModal = 12)] = `HideModal`),
+      (_[(_.IntoGameDetail = 13)] = `IntoGameDetail`),
+      (_[(_.OutOfGameDetail = 14)] = `OutOfGameDetail`),
+      (_[(_.PagedNavigation = 15)] = `PagedNavigation`),
+      (_[(_.ToggleOn = 16)] = `ToggleOn`),
+      (_[(_.ToggleOff = 17)] = `ToggleOff`),
+      (_[(_.SliderUp = 18)] = `SliderUp`),
+      (_[(_.SliderDown = 19)] = `SliderDown`),
+      (_[(_.ChangeTabs = 20)] = `ChangeTabs`),
+      (_[(_.DefaultOk = 21)] = `DefaultOk`),
+      (_[(_.OpenSideMenu = 22)] = `OpenSideMenu`),
+      (_[(_.CloseSideMenu = 23)] = `CloseSideMenu`),
+      (_[(_.BasicNav = 24)] = `BasicNav`),
+      (_[(_.FailedNav = 25)] = `FailedNav`),
+      (_[(_.Typing = 26)] = `Typing`),
+      (_[(_.TimerExpired = 27)] = `TimerExpired`),
+      (_[(_.Screenshot = 28)] = `Screenshot`),
+      _
+    );
+  })({}),
+  _ = new (class {
+    m_fnCallbackOnPlaySound = new _();
+    m_fnCallbackOnSuppressSound = new _();
+    RegisterCallbackOnPlaySound(_) {
+      return this.m_fnCallbackOnPlaySound.Register(_);
+    }
+    PlayNavSound(_, _) {
+      this.m_fnCallbackOnPlaySound.Dispatch(_, _);
+    }
+    RegisterCallbackOnSuppressNavImminentSound(_) {
+      return this.m_fnCallbackOnSuppressSound.Register(_);
+    }
+    SuppressImminentNavSound() {
+      this.m_fnCallbackOnSuppressSound.Dispatch();
+    }
+  })();
+function _(_, _) {
+  let _ = _.lastIndexOf(`.`);
+  if (_ == -1) return !1;
+  let _ = _.substring(0, _),
+    _ = _.substring(_ + 1),
+    _ = _(_, _);
+  return _ !== null && typeof _[_] == `function`;
+}
+function _(_) {
+  return _(window, _);
+}
+function _(_, _) {
+  let _ = (_) => _ && typeof _ == `object`,
+    _ = _?.SteamClient;
+  for (let _ of _.split(`.`)) {
+    if (!_(_) || !(_ in _)) return null;
+    _ = _[_];
+  }
+  return _(_) ? _ : null;
+}
 function _(_) {
   return _ != null && _.focus !== void 0;
+}
+function _(_, _) {
+  let _ = _;
+  for (; _;) {
+    if (
+      (_.parentNode?.nodeType == Node.DOCUMENT_FRAGMENT_NODE &&
+        (_ = _.parentNode.host),
+      _ == _)
+    )
+      return !0;
+    _ = _.parentElement;
+  }
+  return !1;
 }
 function _(_, _) {
   let _ = 0,
@@ -16,41 +231,174 @@ function _(_, _) {
     Math.sqrt(_ * _ + _ * _)
   );
 }
+function _(_, _) {
+  return {
+    top: _.screenTop + _.top,
+    bottom: _.screenTop + _.bottom,
+    left: _.screenLeft + _.left,
+    right: _.screenLeft + _.right,
+  };
+}
+function _(_) {
+  let _ = 1,
+    _ = _;
+  for (; _ != null && _.tagName != `HTML`;) {
+    let _ = getComputedStyle(_);
+    if (_.zoom) {
+      let _ = Number.parseFloat(_.zoom);
+      isNaN(_) || (_ *= _);
+    }
+    _ = _.parentElement;
+  }
+  return _;
+}
+function _(_) {
+  let _;
+  return (
+    _ && _(_.currentTarget) && (_ = _.currentTarget.ownerDocument.defaultView),
+    _
+  );
+}
 function _(_) {
   let _;
   return (_ && (_ = _.ownerDocument.defaultView), _);
 }
 function _(_) {
-  let _ = window.document;
-  try {
-    _ = window.top.document;
-  } catch {}
-  let _ = _.createElement(`textarea`);
+  let _ = window.top ?? window,
+    _ = _.document,
+    _ = _.createElement(`textarea`);
   ((_.textContent = _),
     (_.style.position = `fixed`),
     _.body.appendChild(_),
     _.select());
   try {
-    _.execCommand(`copy`);
+    if (
+      (_(_, `Browser.NotifyUserActivation`) &&
+        _.SteamClient.Browser.NotifyUserActivation(),
+      !_.execCommand(`copy`))
+    )
+      throw `document.execCommand false`;
   } catch (_) {
     console.warn(`Copy to clipboard failed.`, _);
   } finally {
     _.body.removeChild(_);
   }
 }
+function _(_) {
+  (_.startsWith(`steam://openurl/`) && (_ = _.slice(16)), _(_));
+}
+function _(_) {
+  let _ = _.ownerDocument;
+  return !!(
+    _.fullscreen ||
+    _.webkitIsFullScreen ||
+    _.mozFullScreen ||
+    _.msFullscreenElement
+  );
+}
+var _;
+function _() {
+  if (_ !== void 0) return _;
+  let _ = document.createElement(`div`);
+  return (
+    (_ = !!(
+      _.requestFullscreen ||
+      _.webkitRequestFullscreen ||
+      _.mozRequestFullScreen ||
+      _.msRequestFullscreen
+    )),
+    _
+  );
+}
+function _(_, _) {
+  let _ = _;
+  return _.requestFullscreen
+    ? (_.requestFullscreen(), !0)
+    : _.webkitRequestFullscreen
+      ? (_.webkitRequestFullscreen(), !0)
+      : _ && _.webkitSetPresentationMode
+        ? (_.webkitSetPresentationMode(`fullscreen`), !0)
+        : _.mozRequestFullScreen
+          ? (_.mozRequestFullScreen(), !0)
+          : _.msRequestFullscreen
+            ? (_.msRequestFullscreen(), !0)
+            : !1;
+}
+function _(_) {
+  let _ = _.ownerDocument;
+  _.exitFullscreen
+    ? _.exitFullscreen()
+    : _.cancelFullscreen
+      ? _.cancelFullscreen()
+      : _.webkitCancelFullScreen
+        ? _.webkitCancelFullScreen()
+        : _.mozCancelFullScreen
+          ? _.mozCancelFullScreen()
+          : _.msExitFullscreen && _.msExitFullscreen();
+}
+function _(_) {
+  return _.nodeName === `INPUT`;
+}
+function _(_, _) {
+  switch (_) {
+    case `TEXTAREA`:
+      return !0;
+    case `INPUT`:
+      switch (_) {
+        case `date`:
+        case `datetime-local`:
+        case `datetime`:
+        case `email`:
+        case `month`:
+        case `number`:
+        case `password`:
+        case `search`:
+        case `tel`:
+        case `text`:
+        case `time`:
+        case `url`:
+        case `week`:
+          return !0;
+        default:
+          return !1;
+      }
+    default:
+      return !1;
+  }
+}
+function _(_, _) {
+  let _ = _;
+  return (
+    (_.lastModifiedDate = new Date()), (_.name = _ || Date.now().toString()), _
+  );
+}
+function _(_, _, _) {
+  let _ = _.parentElement;
+  for (; _ && _ !== _ && !_.hasAttribute(_);) _ = _.parentElement;
+  return _ || _;
+}
 function _(_, _) {
   let _ = _?.parentElement;
   for (; _;) {
     if (_(_)) {
-      let _ = window.getComputedStyle(_);
-      if (
-        _.position == `fixed` ||
-        _.position == `sticky` ||
-        ((!_ || _ == `x`) &&
-          (_.overflowX == `scroll` || _.overflowX == `auto`)) ||
-        ((!_ || _ == `y`) && (_.overflowY == `scroll` || _.overflowY == `auto`))
-      )
-        break;
+      if (!_ || _ == `x`) {
+        let _ = window.getComputedStyle(_);
+        if (
+          _.overflowX == `scroll` ||
+          _.overflowX == `auto` ||
+          _.position == `fixed`
+        )
+          break;
+      }
+      if (!_ || _ == `y`) {
+        let _ = window.getComputedStyle(_);
+        if (
+          _.overflowY == `scroll` ||
+          _.overflowY == `auto` ||
+          _.position == `fixed`
+        )
+          break;
+      }
     }
     _ = _.parentElement;
   }
@@ -69,41 +417,41 @@ function _(_, _) {
     _ = _.parentElement;
   }
 }
-function _(_, _) {
-  if (!(`ownerDocument` in _)) return !0;
-  let _ = _.ownerDocument.defaultView.getComputedStyle(_),
-    _ = _ === `x` ? _.overflowX : _.overflowY;
-  return _ === `auto` || _ === `scroll`;
-}
-var _ = `button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])`;
-function _(_) {
-  return _.querySelector(_);
-}
-function _(_) {
-  return [..._.querySelectorAll(_)];
-}
-var _ = {
-  _: `y`,
-  _: `x`,
-};
 function _() {
-  return {
-    _: 0,
-    _: 0,
-  };
+  return _(document);
+}
+function _(_) {
+  let _ = {};
+  return (
+    _.querySelectorAll(`link[rel="stylesheet"]`).forEach((_) => {
+      _[_.href] = _;
+    }),
+    _
+  );
 }
 function _(_, _) {
-  return _._ * _._ + _._ * _._;
+  _(_.document, _, !0);
 }
-function _(_, _) {
-  return {
-    _: _._ - _._,
-    _: _._ - _._,
-  };
-}
-function _(_, _) {
-  let _ = _(_, _);
-  return Math.sqrt(_(_, _));
+function _(_, _, _) {
+  let _ = Object.assign({}, _),
+    _ = _.getElementsByTagName(`head`)[0],
+    _ = _.getElementsByTagName(`link`),
+    _ = _.length;
+  for (let _ = 0; _ < _; ++_) {
+    let _ = _[_];
+    _[_.href] ? delete _[_.href] : _ && _.parentNode?.removeChild(_);
+  }
+  let _ = [];
+  for (let _ in _) {
+    let _ = _[_],
+      _ = _.createElement(`link`);
+    for (let _ = 0; _ < _.attributes.length; _++) {
+      let _ = _.attributes.item(_);
+      _.setAttribute(_.name, _.value);
+    }
+    _.push(_);
+  }
+  return (_.prepend(..._), _);
 }
 var _ = class {
   m_sName;
@@ -366,16 +714,6 @@ function _(_, _, _, _, _, _, ..._) {
   (window.DebugLogEnabled = (..._) => _.Get().PrintEnabledLogs(..._)),
   (window.EnableSteamConsole = (_ = !0) =>
     _.Get().SetDebugLogEnabled(`SteamClient`, _)));
-function _(_, _, _) {
-  return _ == null || _ == null
-    ? _ === _
-    : typeof _ != `object` ||
-        typeof _ != `object` ||
-        Object.keys(_).length !== Object.keys(_).length
-      ? !1
-      : ((_ ??= (_, _) => _ === _),
-        Object.keys(_).every((_) => _.hasOwnProperty(_) && _(_[_], _[_])));
-}
 var _ = class {
     m_ActiveInputId;
     m_ActiveInputTimeout;
@@ -708,6 +1046,79 @@ function _(_) {
     _
   );
 }
+var _ = _(),
+  _ = new _(`GamepadEvents`).Debug;
+function _(_, _, _) {
+  (_ === void 0 &&
+    (_ = [
+      _.onButtonDown,
+      _.onButtonUp,
+      _.onOKButton,
+      _.onCancelButton,
+      _.onSecondaryButton,
+      _.onOptionsButton,
+      _.onMenuButton,
+      _.onGamepadDirection,
+      _.onGamepadFocus,
+      _.onGamepadBlur,
+    ]),
+    _.useEffect(() => {
+      let _ = _.current,
+        _ = [];
+      return (
+        _ &&
+          (_.onButtonDown && _.push(_(_, _.onButtonDown)),
+          _.onButtonUp && _.push(_(_, _.onButtonUp)),
+          _.onOKButton && _.push(_(_, _.onOKButton)),
+          _.onCancelButton && _.push(_(_, _.onCancelButton)),
+          _.onSecondaryButton && _.push(_(_, _.onSecondaryButton)),
+          _.onOptionsButton && _.push(_(_, _.onOptionsButton)),
+          _.onMenuButton && _.push(_(_, _.onMenuButton)),
+          _.onGamepadDirection && _.push(_(_, _.onGamepadDirection)),
+          _.onGamepadFocus && _.push(_(_, _.onGamepadFocus)),
+          _.onGamepadBlur && _.push(_(_, _.onGamepadBlur))),
+        () => _.forEach((_) => _())
+      );
+    }, _));
+}
+function _(_) {
+  return (_.stopPropagation(), !1);
+}
+function _(_, _, _) {
+  let { onButtonDown: _, ..._ } = _,
+    _ = _.useCallback(
+      (_) => {
+        (_ && _(_),
+          _(
+            `Gamepad Event fired:`,
+            _.detail.button,
+            `, handled:`,
+            _ != null,
+            `, propagation stopped:`,
+            _.cancelBubble,
+          ),
+          !_.cancelBubble && _.OnRootButtonDown(_));
+      },
+      [_, _],
+    );
+  (_(_, _),
+    _(
+      {
+        onButtonDown: _,
+        onButtonUp: _,
+        onOKButton: _,
+        onCancelButton: _,
+        onSecondaryButton: _,
+        onOptionsButton: _,
+        onMenuButton: _,
+        onGamepadDirection: _,
+        onGamepadFocus: _,
+        onGamepadBlur: _,
+      },
+      _,
+      [_],
+    ));
+}
 var _ = new _(`FocusHistory`),
   _ = _.Debug,
   _ = class _ {
@@ -817,41 +1228,8 @@ function _(_) {
   for (let _ = 0; _ < _; _++) _ += `*`;
   return ((_ += ` `), _);
 }
-function _(_, _) {
-  let _ = _.lastIndexOf(`.`);
-  if (_ == -1) return !1;
-  let _ = _.substring(0, _),
-    _ = _.substring(_ + 1),
-    _ = _(_, _);
-  return _ !== null && typeof _[_] == `function`;
-}
-function _(_) {
-  return _(window, _);
-}
-function _(_, _) {
-  let _ = (_) => _ && typeof _ == `object`,
-    _ = _?.SteamClient;
-  for (let _ of _.split(`.`)) {
-    if (!_(_) || !(_ in _)) return null;
-    _ = _[_];
-  }
-  return _(_) ? _ : null;
-}
 function _(_) {
   return _ != null && _.focus !== void 0;
-}
-function _(_, _) {
-  let _ = _;
-  for (; _;) {
-    if (
-      (_.parentNode?.nodeType == Node.DOCUMENT_FRAGMENT_NODE &&
-        (_ = _.parentNode.host),
-      _ == _)
-    )
-      return !0;
-    _ = _.parentElement;
-  }
-  return !1;
 }
 function _(_, _) {
   let _ = 0,
@@ -866,174 +1244,41 @@ function _(_, _) {
     Math.sqrt(_ * _ + _ * _)
   );
 }
-function _(_, _) {
-  return {
-    top: _.screenTop + _.top,
-    bottom: _.screenTop + _.bottom,
-    left: _.screenLeft + _.left,
-    right: _.screenLeft + _.right,
-  };
-}
-function _(_) {
-  let _ = 1,
-    _ = _;
-  for (; _ != null && _.tagName != `HTML`;) {
-    let _ = getComputedStyle(_);
-    if (_.zoom) {
-      let _ = Number.parseFloat(_.zoom);
-      isNaN(_) || (_ *= _);
-    }
-    _ = _.parentElement;
-  }
-  return _;
-}
-function _(_) {
-  let _;
-  return (
-    _ && _(_.currentTarget) && (_ = _.currentTarget.ownerDocument.defaultView),
-    _
-  );
-}
 function _(_) {
   let _;
   return (_ && (_ = _.ownerDocument.defaultView), _);
 }
 function _(_) {
-  let _ = window.top ?? window,
-    _ = _.document,
-    _ = _.createElement(`textarea`);
+  let _ = window.document;
+  try {
+    _ = window.top.document;
+  } catch {}
+  let _ = _.createElement(`textarea`);
   ((_.textContent = _),
     (_.style.position = `fixed`),
     _.body.appendChild(_),
     _.select());
   try {
-    if (
-      (_(_, `Browser.NotifyUserActivation`) &&
-        _.SteamClient.Browser.NotifyUserActivation(),
-      !_.execCommand(`copy`))
-    )
-      throw `document.execCommand false`;
+    _.execCommand(`copy`);
   } catch (_) {
     console.warn(`Copy to clipboard failed.`, _);
   } finally {
     _.body.removeChild(_);
   }
 }
-function _(_) {
-  (_.startsWith(`steam://openurl/`) && (_ = _.slice(16)), _(_));
-}
-function _(_) {
-  let _ = _.ownerDocument;
-  return !!(
-    _.fullscreen ||
-    _.webkitIsFullScreen ||
-    _.mozFullScreen ||
-    _.msFullscreenElement
-  );
-}
-var _;
-function _() {
-  if (_ !== void 0) return _;
-  let _ = document.createElement(`div`);
-  return (
-    (_ = !!(
-      _.requestFullscreen ||
-      _.webkitRequestFullscreen ||
-      _.mozRequestFullScreen ||
-      _.msRequestFullscreen
-    )),
-    _
-  );
-}
-function _(_, _) {
-  let _ = _;
-  return _.requestFullscreen
-    ? (_.requestFullscreen(), !0)
-    : _.webkitRequestFullscreen
-      ? (_.webkitRequestFullscreen(), !0)
-      : _ && _.webkitSetPresentationMode
-        ? (_.webkitSetPresentationMode(`fullscreen`), !0)
-        : _.mozRequestFullScreen
-          ? (_.mozRequestFullScreen(), !0)
-          : _.msRequestFullscreen
-            ? (_.msRequestFullscreen(), !0)
-            : !1;
-}
-function _(_) {
-  let _ = _.ownerDocument;
-  _.exitFullscreen
-    ? _.exitFullscreen()
-    : _.cancelFullscreen
-      ? _.cancelFullscreen()
-      : _.webkitCancelFullScreen
-        ? _.webkitCancelFullScreen()
-        : _.mozCancelFullScreen
-          ? _.mozCancelFullScreen()
-          : _.msExitFullscreen && _.msExitFullscreen();
-}
-function _(_) {
-  return _.nodeName === `INPUT`;
-}
-function _(_, _) {
-  switch (_) {
-    case `TEXTAREA`:
-      return !0;
-    case `INPUT`:
-      switch (_) {
-        case `date`:
-        case `datetime-local`:
-        case `datetime`:
-        case `email`:
-        case `month`:
-        case `number`:
-        case `password`:
-        case `search`:
-        case `tel`:
-        case `text`:
-        case `time`:
-        case `url`:
-        case `week`:
-          return !0;
-        default:
-          return !1;
-      }
-    default:
-      return !1;
-  }
-}
-function _(_, _) {
-  let _ = _;
-  return (
-    (_.lastModifiedDate = new Date()), (_.name = _ || Date.now().toString()), _
-  );
-}
-function _(_, _, _) {
-  let _ = _.parentElement;
-  for (; _ && _ !== _ && !_.hasAttribute(_);) _ = _.parentElement;
-  return _ || _;
-}
 function _(_, _) {
   let _ = _?.parentElement;
   for (; _;) {
     if (_(_)) {
-      if (!_ || _ == `x`) {
-        let _ = window.getComputedStyle(_);
-        if (
-          _.overflowX == `scroll` ||
-          _.overflowX == `auto` ||
-          _.position == `fixed`
-        )
-          break;
-      }
-      if (!_ || _ == `y`) {
-        let _ = window.getComputedStyle(_);
-        if (
-          _.overflowY == `scroll` ||
-          _.overflowY == `auto` ||
-          _.position == `fixed`
-        )
-          break;
-      }
+      let _ = window.getComputedStyle(_);
+      if (
+        _.position == `fixed` ||
+        _.position == `sticky` ||
+        ((!_ || _ == `x`) &&
+          (_.overflowX == `scroll` || _.overflowX == `auto`)) ||
+        ((!_ || _ == `y`) && (_.overflowY == `scroll` || _.overflowY == `auto`))
+      )
+        break;
     }
     _ = _.parentElement;
   }
@@ -1052,186 +1297,51 @@ function _(_, _) {
     _ = _.parentElement;
   }
 }
-function _() {
-  return _(document);
+function _(_, _) {
+  if (!(`ownerDocument` in _)) return !0;
+  let _ = _.ownerDocument.defaultView.getComputedStyle(_),
+    _ = _ === `x` ? _.overflowX : _.overflowY;
+  return _ === `auto` || _ === `scroll`;
+}
+var _ = `button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])`;
+function _(_) {
+  return _.querySelector(_);
 }
 function _(_) {
-  let _ = {};
-  return (
-    _.querySelectorAll(`link[rel="stylesheet"]`).forEach((_) => {
-      _[_.href] = _;
-    }),
-    _
-  );
-}
-function _(_, _) {
-  _(_.document, _, !0);
-}
-function _(_, _, _) {
-  let _ = Object.assign({}, _),
-    _ = _.getElementsByTagName(`head`)[0],
-    _ = _.getElementsByTagName(`link`),
-    _ = _.length;
-  for (let _ = 0; _ < _; ++_) {
-    let _ = _[_];
-    _[_.href] ? delete _[_.href] : _ && _.parentNode?.removeChild(_);
-  }
-  let _ = [];
-  for (let _ in _) {
-    let _ = _[_],
-      _ = _.createElement(`link`);
-    for (let _ = 0; _ < _.attributes.length; _++) {
-      let _ = _.attributes.item(_);
-      _.setAttribute(_.name, _.value);
-    }
-    _.push(_);
-  }
-  return (_.prepend(..._), _);
-}
-var _ = class {
-  m_node;
-  m_History;
-  m_StateHistory;
-  constructor(_) {
-    this.m_node = _;
-  }
-  TakeFocus(_) {
-    return this.m_node.BTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
-  }
-  ParentTakeFocus(_) {
-    this.m_node.Parent?.BTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
-  }
-  ChildTakeFocus(_) {
-    return this.m_node.BChildTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
-  }
-  FocusVisibleChild(_) {
-    return this.m_node.BVisibleChildTakeFocus(_);
-  }
-  BHasFocus() {
-    return this.m_node.BHasFocus();
-  }
-  BFocusWithin() {
-    return this.m_node.BFocusWithin();
-  }
-  get NavKey() {
-    return this.m_node.NavKey;
-  }
-  PushState() {
-    ((this.m_History ||= new _(this.m_node)), this.m_History.PushState());
-  }
-  PopState(_ = 0) {
-    this.m_History && this.m_History.PopState(_);
-  }
-  SaveState(_) {
-    ((this.m_StateHistory ||= new _(this.m_node)),
-      this.m_StateHistory.SaveState(_));
-  }
-  RestoreState(_, _ = 0) {
-    return this.m_StateHistory ? this.m_StateHistory.RestoreState(_, _) : !1;
-  }
-  GetFocusSnapshot() {
-    return _(this.m_node);
-  }
-  RestoreFocusSnapshot(_, _ = 0) {
-    return _(this.m_node, _, _);
-  }
-  NavTree() {
-    return this.m_node.Tree;
-  }
-  Node() {
-    return this.m_node;
-  }
-};
-function _(_, _, _, _ = 0.001) {
-  return _ == `x`
-    ? _.right > _.left + _ && _.left + _ < _.right
-    : _ == `y`
-      ? _.bottom > _.top + _ && _.top + _ < _.bottom
-      : (_(!1, `Invalid axis ${_}`), !1);
-}
-function _(_, _, _) {
-  let _;
-  return (
-    _ == `x`
-      ? (_ = Math.min(_.right, _.right) - Math.max(_.left, _.left))
-      : _ == `y`
-        ? (_ = Math.min(_.bottom, _.bottom) - Math.max(_.top, _.top))
-        : (_(!1, `Invalid axis ${_}`), (_ = 0)),
-    _ < 0 ? 0 : _
-  );
-}
-function _(_, _) {
-  return _ == `x`
-    ? {
-        min: _.left,
-        max: _.right,
-      }
-    : {
-        min: _.top,
-        max: _.bottom,
-      };
-}
-function _(_, _, _) {
-  let _ = _[_],
-    _ = _(_, _);
-  return _ < _.min ? _.min - _ : _ > _.max ? _ - _.max : 0;
-}
-function _(_) {
-  return {
-    _: _.left,
-    _: _.top,
-  };
+  return [..._.querySelectorAll(_)];
 }
 var _ = {
-  OnBlur: () => {},
-  OnFocus: () => {},
-  OnFocusChange: () => {},
-  OnForceMeasureFocusRing: () => {},
+  _: `y`,
+  _: `x`,
 };
-function _(_) {
-  if (!_) return _.NONE;
-  let _ = _.ownerDocument.defaultView,
-    _ = _.getComputedStyle(_);
-  if (_.display == `flex`)
-    switch (_.flexDirection) {
-      case `row`:
-        return _.flexWrap == `wrap` ? _.GRID : _.ROW;
-      case `row-reverse`:
-        return _.ROW_REVERSE;
-      case `column`:
-        return _.COLUMN;
-      case `column-reverse`:
-        return _.COLUMN_REVERSE;
-    }
-  else if (_.display == `grid`)
-    return _.gridTemplateAreas === `none` ? _.GRID : _.GEOMETRIC;
-  else if (_.childElementCount > 0) {
-    let _ = _.getComputedStyle(_.firstElementChild),
-      _ = _.float;
-    if (
-      (_ === `inline-start`
-        ? ((_ = `left`), _.direction === `rtl` && (_ = `right`))
-        : _ === `inline-end` &&
-          ((_ = `right`), _.direction === `rtl` && (_ = `left`)),
-      _ === `left`)
-    )
-      return _.ROW;
-    if (_ === `right`) return _.ROW_REVERSE;
-    if (_.display === `inline` || _.display === `inline-block`) return _.GRID;
-  }
-  return _.COLUMN;
+function _() {
+  return {
+    _: 0,
+    _: 0,
+  };
 }
-function _(_) {
-  switch (_) {
-    case _.DIR_UP:
-    case _.DIR_DOWN:
-      return `y`;
-    case _.DIR_LEFT:
-    case _.DIR_RIGHT:
-      return `x`;
-    default:
-      return;
-  }
+function _(_, _) {
+  return _._ * _._ + _._ * _._;
+}
+function _(_, _) {
+  return {
+    _: _._ - _._,
+    _: _._ - _._,
+  };
+}
+function _(_, _) {
+  let _ = _(_, _);
+  return Math.sqrt(_(_, _));
+}
+function _(_, _, _) {
+  return _ == null || _ == null
+    ? _ === _
+    : typeof _ != `object` ||
+        typeof _ != `object` ||
+        Object.keys(_).length !== Object.keys(_).length
+      ? !1
+      : ((_ ??= (_, _) => _ === _),
+        Object.keys(_).every((_) => _.hasOwnProperty(_) && _(_[_], _[_])));
 }
 function _(_, _, _) {
   let _ = [],
@@ -2867,6 +2977,151 @@ var _ = new _(`FocusNavigationMovement`),
 (_([_], _.prototype, `OnDOMFocus`, null),
   _([_], _.prototype, `OnDOMBlur`, null),
   _([_], _.prototype, `OnNavigationEvent`, null));
+var _ = class {
+  m_node;
+  m_History;
+  m_StateHistory;
+  constructor(_) {
+    this.m_node = _;
+  }
+  TakeFocus(_) {
+    return this.m_node.BTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
+  }
+  ParentTakeFocus(_) {
+    this.m_node.Parent?.BTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
+  }
+  ChildTakeFocus(_) {
+    return this.m_node.BChildTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
+  }
+  FocusVisibleChild(_) {
+    return this.m_node.BVisibleChildTakeFocus(_);
+  }
+  BHasFocus() {
+    return this.m_node.BHasFocus();
+  }
+  BFocusWithin() {
+    return this.m_node.BFocusWithin();
+  }
+  get NavKey() {
+    return this.m_node.NavKey;
+  }
+  PushState() {
+    ((this.m_History ||= new _(this.m_node)), this.m_History.PushState());
+  }
+  PopState(_ = 0) {
+    this.m_History && this.m_History.PopState(_);
+  }
+  SaveState(_) {
+    ((this.m_StateHistory ||= new _(this.m_node)),
+      this.m_StateHistory.SaveState(_));
+  }
+  RestoreState(_, _ = 0) {
+    return this.m_StateHistory ? this.m_StateHistory.RestoreState(_, _) : !1;
+  }
+  GetFocusSnapshot() {
+    return _(this.m_node);
+  }
+  RestoreFocusSnapshot(_, _ = 0) {
+    return _(this.m_node, _, _);
+  }
+  NavTree() {
+    return this.m_node.Tree;
+  }
+  Node() {
+    return this.m_node;
+  }
+};
+function _(_, _, _, _ = 0.001) {
+  return _ == `x`
+    ? _.right > _.left + _ && _.left + _ < _.right
+    : _ == `y`
+      ? _.bottom > _.top + _ && _.top + _ < _.bottom
+      : (_(!1, `Invalid axis ${_}`), !1);
+}
+function _(_, _, _) {
+  let _;
+  return (
+    _ == `x`
+      ? (_ = Math.min(_.right, _.right) - Math.max(_.left, _.left))
+      : _ == `y`
+        ? (_ = Math.min(_.bottom, _.bottom) - Math.max(_.top, _.top))
+        : (_(!1, `Invalid axis ${_}`), (_ = 0)),
+    _ < 0 ? 0 : _
+  );
+}
+function _(_, _) {
+  return _ == `x`
+    ? {
+        min: _.left,
+        max: _.right,
+      }
+    : {
+        min: _.top,
+        max: _.bottom,
+      };
+}
+function _(_, _, _) {
+  let _ = _[_],
+    _ = _(_, _);
+  return _ < _.min ? _.min - _ : _ > _.max ? _ - _.max : 0;
+}
+function _(_) {
+  return {
+    _: _.left,
+    _: _.top,
+  };
+}
+var _ = {
+  OnBlur: () => {},
+  OnFocus: () => {},
+  OnFocusChange: () => {},
+  OnForceMeasureFocusRing: () => {},
+};
+function _(_) {
+  if (!_) return _.NONE;
+  let _ = _.ownerDocument.defaultView,
+    _ = _.getComputedStyle(_);
+  if (_.display == `flex`)
+    switch (_.flexDirection) {
+      case `row`:
+        return _.flexWrap == `wrap` ? _.GRID : _.ROW;
+      case `row-reverse`:
+        return _.ROW_REVERSE;
+      case `column`:
+        return _.COLUMN;
+      case `column-reverse`:
+        return _.COLUMN_REVERSE;
+    }
+  else if (_.display == `grid`)
+    return _.gridTemplateAreas === `none` ? _.GRID : _.GEOMETRIC;
+  else if (_.childElementCount > 0) {
+    let _ = _.getComputedStyle(_.firstElementChild),
+      _ = _.float;
+    if (
+      (_ === `inline-start`
+        ? ((_ = `left`), _.direction === `rtl` && (_ = `right`))
+        : _ === `inline-end` &&
+          ((_ = `right`), _.direction === `rtl` && (_ = `left`)),
+      _ === `left`)
+    )
+      return _.ROW;
+    if (_ === `right`) return _.ROW_REVERSE;
+    if (_.display === `inline` || _.display === `inline-block`) return _.GRID;
+  }
+  return _.COLUMN;
+}
+function _(_) {
+  switch (_) {
+    case _.DIR_UP:
+    case _.DIR_DOWN:
+      return `y`;
+    case _.DIR_LEFT:
+    case _.DIR_RIGHT:
+      return `x`;
+    default:
+      return;
+  }
+}
 function _(_) {
   if (!_) return _.NONE;
   switch (_) {
@@ -2885,261 +3140,6 @@ function _(_) {
     default:
       return (_(_, `Unhandled flow-children: ${_}`), _.NONE);
   }
-}
-function _(_, _, _ = [], _ = !0) {
-  let _ = _.useRef(_);
-  ((_.current = _),
-    _.useEffect(() => {
-      if (!_.current || !_) return;
-      let _ = setInterval(() => {
-        _.current && _.current();
-      }, _);
-      return () => clearInterval(_);
-    }, [_, _, ..._]));
-}
-function _(_) {
-  let { msInterval: _, bEnabled: _ = !0 } = _;
-  _(_(), _, [], _);
-}
-function _() {
-  let [, _] = _.useState(0);
-  return _.useCallback(() => _((_) => _ + 1), []);
-}
-function _(_) {
-  let _ = _.useRef({
-    flLastExecutionTimeMs: 0,
-    fnLatestCallback: null,
-    nTimeoutHandle: 0,
-    fnExecuteLatestCallback() {
-      (this.fnLatestCallback != null &&
-        (this.fnLatestCallback(),
-        (this.fnLatestCallback = null),
-        (this.flLastExecutionTimeMs = performance.now())),
-        window.clearTimeout(this.nTimeoutHandle),
-        (this.nTimeoutHandle = 0));
-    },
-  });
-  return (
-    _.useEffect(() => {
-      let _ = _.current;
-      return () => _.fnExecuteLatestCallback();
-    }, []),
-    _.useCallback(
-      (_) => {
-        let _ = _.current;
-        _.fnLatestCallback = _;
-        let _ = performance.now() - _.flLastExecutionTimeMs,
-          _ = Math.max(_ - _, 0);
-        (window.clearTimeout(_.nTimeoutHandle),
-          (_.nTimeoutHandle = window.setTimeout(
-            () => _.fnExecuteLatestCallback(),
-            _,
-          )));
-      },
-      [_],
-    )
-  );
-}
-function _(_, _) {
-  _.useLayoutEffect(() => {
-    if (!_ || !_) return;
-    let _ = _.Register(_);
-    return () => _.Unregister();
-  }, [_, _]);
-}
-function _(_) {
-  return _;
-}
-function _() {}
-function _(_) {
-  return _.useSyncExternalStore(
-    _ ? _.SyncStore : _,
-    _ ? _.GetValue : _,
-    _ ? _.GetValue : _,
-  );
-}
-function _(_, _) {
-  let [_, _] = _.useState(_);
-  return (
-    _.useEffect(() => {
-      if (_) _(!0);
-      else {
-        let _ = window.setTimeout(() => _(!1), _);
-        return () => window.clearTimeout(_);
-      }
-    }, [_, _]),
-    _
-  );
-}
-function _(_, _) {
-  return _(_, _) || _;
-}
-function _(_ = !1) {
-  let [_, _] = _.useState(_);
-  return [_, _.useCallback(() => _(!0), []), _.useCallback(() => _(!1), [])];
-}
-function _(_) {
-  let _ = _.useRef({
-    value: void 0,
-    bConstructed: !1,
-  });
-  return (
-    _.current.bConstructed ||
-      (_.current = {
-        value: _(),
-        bConstructed: !0,
-      }),
-    _.current.value
-  );
-}
-function _(_, ..._) {
-  let _ = [],
-    _ = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, `gs`),
-    _ = 0,
-    _;
-  for (; (_ = _.exec(_));) {
-    ((_ += _[0].length), _.push(_[1]));
-    let _ = parseInt(_[2]),
-      _ = _[3] || ``,
-      _ = _(_, ..._),
-      _ =
-        _ >= 1 && _ <= _.length && _[_ - 1]
-          ? _.cloneElement(_[_ - 1], {}, _ ? _ : null)
-          : _;
-    _.push(_);
-  }
-  return (_.push(_.slice(_)), _.createElement(_.Fragment, null, ..._));
-}
-function _(_) {
-  let _ = _.useRef(_);
-  return (
-    (_.current.length !== _.length || _.current.some((_, _) => _ !== _[_])) &&
-      (_.current = _),
-    _.current
-  );
-}
-var _ = _(_(), 1),
-  _ = (function (_) {
-    return (
-      (_[(_.LaunchGame = 0)] = `LaunchGame`),
-      (_[(_.FriendMessage = 1)] = `FriendMessage`),
-      (_[(_.ChatMention = 2)] = `ChatMention`),
-      (_[(_.ChatMessage = 3)] = `ChatMessage`),
-      (_[(_.ToastMessage = 4)] = `ToastMessage`),
-      (_[(_.ToastAchievement = 5)] = `ToastAchievement`),
-      (_[(_.ToastMisc = 6)] = `ToastMisc`),
-      (_[(_.ToastMiscShort = 7)] = `ToastMiscShort`),
-      (_[(_.FriendOnline = 8)] = `FriendOnline`),
-      (_[(_.FriendInGame = 9)] = `FriendInGame`),
-      (_[(_.VolSound = 10)] = `VolSound`),
-      (_[(_.ShowModal = 11)] = `ShowModal`),
-      (_[(_.HideModal = 12)] = `HideModal`),
-      (_[(_.IntoGameDetail = 13)] = `IntoGameDetail`),
-      (_[(_.OutOfGameDetail = 14)] = `OutOfGameDetail`),
-      (_[(_.PagedNavigation = 15)] = `PagedNavigation`),
-      (_[(_.ToggleOn = 16)] = `ToggleOn`),
-      (_[(_.ToggleOff = 17)] = `ToggleOff`),
-      (_[(_.SliderUp = 18)] = `SliderUp`),
-      (_[(_.SliderDown = 19)] = `SliderDown`),
-      (_[(_.ChangeTabs = 20)] = `ChangeTabs`),
-      (_[(_.DefaultOk = 21)] = `DefaultOk`),
-      (_[(_.OpenSideMenu = 22)] = `OpenSideMenu`),
-      (_[(_.CloseSideMenu = 23)] = `CloseSideMenu`),
-      (_[(_.BasicNav = 24)] = `BasicNav`),
-      (_[(_.FailedNav = 25)] = `FailedNav`),
-      (_[(_.Typing = 26)] = `Typing`),
-      (_[(_.TimerExpired = 27)] = `TimerExpired`),
-      (_[(_.Screenshot = 28)] = `Screenshot`),
-      _
-    );
-  })({}),
-  _ = new (class {
-    m_fnCallbackOnPlaySound = new _();
-    m_fnCallbackOnSuppressSound = new _();
-    RegisterCallbackOnPlaySound(_) {
-      return this.m_fnCallbackOnPlaySound.Register(_);
-    }
-    PlayNavSound(_, _) {
-      this.m_fnCallbackOnPlaySound.Dispatch(_, _);
-    }
-    RegisterCallbackOnSuppressNavImminentSound(_) {
-      return this.m_fnCallbackOnSuppressSound.Register(_);
-    }
-    SuppressImminentNavSound() {
-      this.m_fnCallbackOnSuppressSound.Dispatch();
-    }
-  })(),
-  _ = new _(`GamepadEvents`).Debug;
-function _(_, _, _) {
-  (_ === void 0 &&
-    (_ = [
-      _.onButtonDown,
-      _.onButtonUp,
-      _.onOKButton,
-      _.onCancelButton,
-      _.onSecondaryButton,
-      _.onOptionsButton,
-      _.onMenuButton,
-      _.onGamepadDirection,
-      _.onGamepadFocus,
-      _.onGamepadBlur,
-    ]),
-    _.useEffect(() => {
-      let _ = _.current,
-        _ = [];
-      return (
-        _ &&
-          (_.onButtonDown && _.push(_(_, _.onButtonDown)),
-          _.onButtonUp && _.push(_(_, _.onButtonUp)),
-          _.onOKButton && _.push(_(_, _.onOKButton)),
-          _.onCancelButton && _.push(_(_, _.onCancelButton)),
-          _.onSecondaryButton && _.push(_(_, _.onSecondaryButton)),
-          _.onOptionsButton && _.push(_(_, _.onOptionsButton)),
-          _.onMenuButton && _.push(_(_, _.onMenuButton)),
-          _.onGamepadDirection && _.push(_(_, _.onGamepadDirection)),
-          _.onGamepadFocus && _.push(_(_, _.onGamepadFocus)),
-          _.onGamepadBlur && _.push(_(_, _.onGamepadBlur))),
-        () => _.forEach((_) => _())
-      );
-    }, _));
-}
-function _(_) {
-  return (_.stopPropagation(), !1);
-}
-function _(_, _, _) {
-  let { onButtonDown: _, ..._ } = _,
-    _ = _.useCallback(
-      (_) => {
-        (_ && _(_),
-          _(
-            `Gamepad Event fired:`,
-            _.detail.button,
-            `, handled:`,
-            _ != null,
-            `, propagation stopped:`,
-            _.cancelBubble,
-          ),
-          !_.cancelBubble && _.OnRootButtonDown(_));
-      },
-      [_, _],
-    );
-  (_(_, _),
-    _(
-      {
-        onButtonDown: _,
-        onButtonUp: _,
-        onOKButton: _,
-        onCancelButton: _,
-        onSecondaryButton: _,
-        onOptionsButton: _,
-        onMenuButton: _,
-        onGamepadDirection: _,
-        onGamepadFocus: _,
-        onGamepadBlur: _,
-      },
-      _,
-      [_],
-    ));
 }
 function _(_) {
   return {

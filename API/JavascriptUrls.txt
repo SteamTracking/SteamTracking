@@ -2254,7 +2254,6 @@ http://www.w3.org/1998/Math/MathML
 http://www.w3.org/1999/xhtml
 http://www.w3.org/1999/xlink
 http://www.w3.org/2000/svg
-http://www.w3.org/2000/svg${namespaceURI}
 http://www.w3.org/XML/1998/namespace
 https://
 https://${strURL}/index.html
