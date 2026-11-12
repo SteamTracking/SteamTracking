@@ -18,6 +18,8 @@ export const state = {
 	etags: {} as Record<string, string[]>,
 	hashes: {} as Record<string, string>,
 	urlsToFetch: [] as UrlToFetch[],
+	viteEnglishChunks: new Set<string>(),
+	notFoundFiles: new Set<string>(),
 	currentSsrFiles: new Set<string>(),
 	ssrRoutes: new Set<string>(),
 	ssrHostsToParse: new Set<string>(),

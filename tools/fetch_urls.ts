@@ -149,6 +149,8 @@ function HandleDownload(file: string, url: string, result: DownloadResult): void
 
 		if (code < 100 || code >= 500) {
 			state.urlsToFetch.push({ url, file });
+		} else if (code === 404) {
+			state.notFoundFiles.add(file);
 		}
 
 		return;

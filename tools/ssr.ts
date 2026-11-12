@@ -229,7 +229,7 @@ export function DeleteOldSsrFiles(): void {
  * The nearest assignment or object key names the language.
  * Returns the language, or null when the import is not a language chunk.
  */
-function GetLanguageChunk(parents: Node[]): string | null {
+export function GetLanguageChunk(parents: Node[]): string | null {
 	for (let i = parents.length - 1; i >= 0; i--) {
 		const parent = parents[i] as Node;
 		const assignment = parent as AssignmentExpression;

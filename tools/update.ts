@@ -8,7 +8,7 @@ import { FetchQueued, ParseUrls } from "./fetch_urls.ts";
 import { Log } from "./log.ts";
 import { DeleteOldSsrFiles, GenerateSsrUrls, ProcessSsrFiles, ssrRequest, WriteSsrRoutes } from "./ssr.ts";
 import { apiKey, rootDir, state, useCache } from "./state.ts";
-import { DeleteOldViteChunks, GenerateViteUrls, ProcessViteChunks, ReadViteUrls } from "./vite.ts";
+import { DeleteOldViteFiles, DiscoverViteFiles, ProcessViteChunks } from "./vite.ts";
 
 const etagsPath = join(rootDir, ".support/etags.json");
 
@@ -41,9 +41,11 @@ async function Update(): Promise<void> {
 	state.urlsToFetch = ParseUrls();
 
 	const knownUrls = new Set<string>();
+	const listedFiles = new Set<string>();
 
 	for (const { url, file } of state.urlsToFetch) {
 		knownUrls.add(url);
+		listedFiles.add(file);
 
 		if (file === ssrRequest) {
 			state.ssrPagesToParse++;
@@ -59,7 +61,7 @@ async function Update(): Promise<void> {
 	}
 
 	if (state.updateViteUrls) {
-		await UpdateViteChunks(knownUrls);
+		await UpdateViteChunks(knownUrls, listedFiles);
 	}
 
 	if (state.updateSsrUrls && state.currentSsrFiles.size > 0) {
@@ -107,32 +109,31 @@ async function FetchListedUrls(): Promise<void> {
 }
 
 /**
- * Fetches the chunks that Vite files reference, until the chunks reference nothing new.
- * Chunks that are no longer referenced are deleted only when that point was reached.
+ * Fetches the chunks that Vite entry files reference, until the chunks reference nothing new.
+ * Files that are no longer reached are deleted only when that point was reached with every file on disk.
  */
-async function UpdateViteChunks(knownUrls: Set<string>): Promise<void> {
+async function UpdateViteChunks(knownUrls: Set<string>, listedFiles: Set<string>): Promise<void> {
 	Log("{lightblue}Updating Vite chunks");
 
-	const previousUrls = ReadViteUrls();
-	let foundEverything = false;
-
 	for (let round = 0; round < maxDiscoveryRounds; round++) {
-		await GenerateViteUrls();
-		state.urlsToFetch.push(...ProcessViteChunks(knownUrls));
+		const discovery = await DiscoverViteFiles(listedFiles);
+		state.urlsToFetch.push(...ProcessViteChunks(discovery.urls, knownUrls));
 
-		if (state.urlsToFetch.length === 0) {
-			foundEverything = true;
-			break;
+		if (state.urlsToFetch.length > 0) {
+			await FetchQueued(5);
+			continue;
 		}
 
-		await FetchQueued(5);
+		if (discovery.missingFiles.length > 0) {
+			Log(`{yellow}Keeping old Vite files because ${discovery.missingFiles.length} reached files are missing`);
+		} else {
+			DeleteOldViteFiles(listedFiles, discovery.reachedFiles);
+		}
+
+		return;
 	}
 
-	if (foundEverything) {
-		DeleteOldViteChunks(previousUrls, knownUrls);
-	} else {
-		Log("{yellow}Keeping old Vite chunks because discovery did not finish");
-	}
+	Log("{yellow}Keeping old Vite files because discovery did not finish");
 }
 
 /**

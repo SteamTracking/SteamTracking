@@ -6,6 +6,7 @@ export const languages = [
 	"danish",
 	"dutch",
 	"english",
+	"filipino",
 	"finnish",
 	"french",
 	"german",

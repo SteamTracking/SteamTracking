@@ -1,12 +1,20 @@
-import { existsSync, unlinkSync } from "node:fs";
-import { readdir, readFile, writeFile } from "node:fs/promises";
-import { extname, join } from "node:path";
-import { languages } from "./languages.ts";
+import { existsSync, readdirSync, unlinkSync } from "node:fs";
+import { readFile } from "node:fs/promises";
+import { join, relative, sep } from "node:path";
+import { Syntax, traverse } from "estraverse";
+import type { ImportExpression } from "estree";
+import { ParseJavascript } from "./dump_javascript_paths.ts"; // also fixes estraverse Syntax and VisitorKeys
+import { GetStringValue } from "./extract_strings.ts";
 import { Log } from "./log.ts";
+import { GetLanguageChunk } from "./ssr.ts";
 import type { UrlToFetch } from "./state.ts";
-import { ReadLines, rootDir, state } from "./state.ts";
+import { rootDir, state } from "./state.ts";
 
-const viteUrlsPath = join(rootDir, ".support/urls_from_vite.txt");
+export type ViteDiscovery = {
+	urls: string[];
+	reachedFiles: Set<string>;
+	missingFiles: string[];
+};
 
 const apps = [
 	{ host: "store.steampowered.com", app: "store" },
@@ -16,18 +24,14 @@ const apps = [
 	{ host: "partner.steampowered.com", app: "stats" },
 ];
 
-const englishChunkPattern = /_english\d*\.js$/;
-const otherLanguages = languages.filter((language) => language !== "english");
-const languagePattern = new RegExp(`_(${otherLanguages.join("|")})\\d*\\.js$`);
-
-// Matches a relative .js or .css path inside any kind of quote.
-const referencePattern = /["'`](\.{1,2}\/[^"'`\s]+?\.(?:js|css))["'`]/g;
+// Matches a relative .js or .css path inside any kind of quote, with an optional query such as `?contenthash=`.
+const referencePattern = /["'`](\.{1,2}\/[^"'`\s?]+?\.(?:js|css))(?:\?[^"'`\s]*)?["'`]/g;
 
 /**
  * Returns true for the English string chunks of the Vite apps, which are saved as json only.
  */
 export function IsEnglishChunk(file: string): boolean {
-	return file.includes("/applications/") && !file.includes("/localization/") && englishChunkPattern.test(file);
+	return state.viteEnglishChunks.has(file);
 }
 
 /**
@@ -46,39 +50,130 @@ export function GetSavedPath(file: string): string {
 	return file;
 }
 
-export function ReadViteUrls(): string[] {
-	if (!existsSync(viteUrlsPath)) {
-		return [];
-	}
-
-	return ReadLines(viteUrlsPath);
+function GetAppFolders(host: string, app: string): string[] {
+	return [`${host}/public/javascript/applications/${app}`, `${host}/public/css/applications/${app}`];
 }
 
-export async function GenerateViteUrls(): Promise<void> {
-	const urls = new Set<string>();
+/**
+ * Resolves a relative reference against the file that contains it, and drops its query.
+ */
+function ResolveReference(reference: string, file: string): string {
+	const url = new URL(reference, `https://${file}`);
+
+	return url.hostname + url.pathname;
+}
+
+/**
+ * Returns the chunks a file references. Language chunks are recognized by how they are imported,
+ * English ones are returned separately and other languages are left out.
+ */
+function FindReferences(file: string, code: string): { chunks: string[]; englishChunks: string[] } {
+	const languageChunks = new Set<string>();
+	const englishChunks: string[] = [];
+	const chunks: string[] = [];
+	const ast = ParseJavascript(code);
+
+	traverse(ast, {
+		enter: function (node) {
+			if (node.type !== Syntax.ImportExpression) {
+				return;
+			}
+
+			const importPath = GetStringValue((node as ImportExpression).source);
+
+			if (importPath === null) {
+				return;
+			}
+
+			const language = GetLanguageChunk(this.parents());
+
+			if (language === null) {
+				return;
+			}
+
+			const chunk = ResolveReference(importPath, file);
+
+			languageChunks.add(chunk);
+
+			if (language === "english") {
+				englishChunks.push(chunk);
+			}
+		},
+	});
+
+	for (const match of code.matchAll(referencePattern)) {
+		const chunk = ResolveReference(match[1], file);
+
+		if (!languageChunks.has(chunk)) {
+			chunks.push(chunk);
+		}
+	}
+
+	return { chunks, englishChunks };
+}
+
+function GetChunkUrl(chunk: string): string {
+	if (chunk.endsWith(".css")) {
+		return `https://${chunk}?__TIME__&__CDN__`;
+	}
+
+	return `https://${chunk}?__TIME__&l=english&__CDN__`;
+}
+
+/**
+ * Walks from the app entry files listed in urls.txt through the chunks they reference.
+ * Files the server no longer has are not reached, so old copies on disk cannot keep their references alive.
+ * Files that are reached but not on disk yet are returned as missing, because their references are unknown.
+ */
+export async function DiscoverViteFiles(listedFiles: Set<string>): Promise<ViteDiscovery> {
+	const urls: string[] = [];
+	const reachedFiles = new Set<string>();
+	const missingFiles: string[] = [];
 
 	for (const { host, app } of apps) {
-		const folder = join(rootDir, host, "public/javascript/applications", app);
-		const base = `https://${host}/public/javascript/applications/${app}/`;
-		const files = (await readdir(folder)).filter((file) => extname(file).toLowerCase() === ".js");
+		const scriptFolder = `${host}/public/javascript/applications/${app}`;
+		const queue: string[] = [];
 		let references = 0;
 
-		for (const file of files) {
-			const code = await readFile(join(folder, file), "utf8");
+		for (const file of listedFiles) {
+			if (file.startsWith(`${scriptFolder}/`) && file.endsWith(".js") && !state.notFoundFiles.has(file)) {
+				reachedFiles.add(file);
+				queue.push(file);
+			}
+		}
 
-			for (const match of code.matchAll(referencePattern)) {
-				const url = new URL(match[1], base);
+		while (queue.length > 0) {
+			const file = queue.pop() as string;
+			const path = join(rootDir, file);
 
-				if (languagePattern.test(url.pathname)) {
+			if (!existsSync(path)) {
+				missingFiles.push(file);
+				continue;
+			}
+
+			const { chunks, englishChunks } = FindReferences(file, await readFile(path, "utf8"));
+
+			references += chunks.length + englishChunks.length;
+
+			for (const chunk of englishChunks) {
+				state.viteEnglishChunks.add(chunk);
+
+				if (!reachedFiles.has(chunk) && !state.notFoundFiles.has(chunk)) {
+					reachedFiles.add(chunk);
+					urls.push(GetChunkUrl(chunk));
+				}
+			}
+
+			for (const chunk of chunks) {
+				if (reachedFiles.has(chunk) || state.notFoundFiles.has(chunk)) {
 					continue;
 				}
 
-				references++;
+				reachedFiles.add(chunk);
+				urls.push(GetChunkUrl(chunk));
 
-				if (url.pathname.endsWith(".css")) {
-					urls.add(`${url.origin}${url.pathname}?__TIME__&__CDN__`);
-				} else {
-					urls.add(`${url.origin}${url.pathname}?__TIME__&l=english&__CDN__`);
+				if (chunk.endsWith(".js")) {
+					queue.push(chunk);
 				}
 			}
 		}
@@ -88,71 +183,95 @@ export async function GenerateViteUrls(): Promise<void> {
 		}
 	}
 
-	Log(`Found ${urls.size} Vite urls`);
+	Log(`Found ${urls.length} Vite urls`);
 
-	const strings = `${[...urls].toSorted().join("\n")}\n`;
-
-	await writeFile(viteUrlsPath, strings);
-}
-
-function GetViteFile(url: string): string {
-	const parsed = new URL(url);
-
-	return parsed.hostname + parsed.pathname;
+	return { urls, reachedFiles, missingFiles };
 }
 
 /**
  * Returns the discovered chunks that have not been seen yet.
  */
-export function ProcessViteChunks(knownUrls: Set<string>): UrlToFetch[] {
-	const urls: UrlToFetch[] = [];
+export function ProcessViteChunks(urls: string[], knownUrls: Set<string>): UrlToFetch[] {
+	const newUrls: UrlToFetch[] = [];
 
-	for (const url of ReadViteUrls()) {
-		if (!url.startsWith("https://")) {
-			throw new Error(`${url} does not start with https://`);
-		}
-
+	for (const url of urls) {
 		if (knownUrls.has(url)) {
 			continue;
 		}
 
+		const parsed = new URL(url);
+
 		knownUrls.add(url);
-		urls.push({ url, file: GetViteFile(url) });
+		newUrls.push({ url, file: parsed.hostname + parsed.pathname });
 	}
 
-	return urls;
+	return newUrls;
 }
 
-export function DeleteOldViteChunks(previousUrls: string[], knownUrls: Set<string>): void {
-	for (const url of previousUrls) {
-		if (knownUrls.has(url) || !url.startsWith("https://")) {
+/**
+ * Deletes every file in the app folders, and its clean copy and cache state, that is not reached.
+ * Files listed in urls.txt are kept unless the server no longer has them.
+ */
+export function DeleteOldViteFiles(listedFiles: Set<string>, reachedFiles: Set<string>): void {
+	const filesToKeep = new Set<string>();
+
+	for (const file of listedFiles) {
+		if (!state.notFoundFiles.has(file)) {
+			filesToKeep.add(file);
+		}
+	}
+
+	for (const file of reachedFiles) {
+		filesToKeep.add(file);
+		filesToKeep.add(GetSavedPath(file));
+	}
+
+	const folders: string[] = [];
+
+	for (const { host, app } of apps) {
+		folders.push(...GetAppFolders(host, app));
+	}
+
+	for (const folder of folders) {
+		DeleteFilesNotKept(rootDir, folder, filesToKeep);
+		DeleteFilesNotKept(join(rootDir, "c"), folder, filesToKeep);
+		DeleteCacheNotKept(state.etags, folder, filesToKeep);
+		DeleteCacheNotKept(state.hashes, folder, filesToKeep);
+	}
+}
+
+/**
+ * Deletes the files under root/folder whose path relative to root is not kept.
+ */
+function DeleteFilesNotKept(root: string, folder: string, filesToKeep: Set<string>): void {
+	const folderPath = join(root, folder);
+
+	if (!existsSync(folderPath)) {
+		return;
+	}
+
+	for (const entry of readdirSync(folderPath, { recursive: true, withFileTypes: true })) {
+		if (!entry.isFile()) {
 			continue;
 		}
 
-		const file = GetViteFile(url);
-		const filePath = join(rootDir, file);
-		const cleanPath = join(rootDir, "c", file);
-		const savedPath = join(rootDir, GetSavedPath(file));
+		const filePath = join(entry.parentPath, entry.name);
+		const file = relative(root, filePath).split(sep).join("/");
 
-		if (existsSync(filePath)) {
-			Log(`Deleting ${filePath}`);
-
-			unlinkSync(filePath);
+		if (filesToKeep.has(file)) {
+			continue;
 		}
 
-		if (existsSync(cleanPath)) {
-			Log(`Deleting ${cleanPath}`);
+		Log(`Deleting ${filePath}`);
 
-			unlinkSync(cleanPath);
+		unlinkSync(filePath);
+	}
+}
+
+function DeleteCacheNotKept(cache: Record<string, unknown>, folder: string, filesToKeep: Set<string>): void {
+	for (const file of Object.keys(cache)) {
+		if (file.startsWith(`${folder}/`) && !filesToKeep.has(file)) {
+			delete cache[file];
 		}
-
-		if (savedPath !== filePath && existsSync(savedPath)) {
-			Log(`Deleting ${savedPath}`);
-
-			unlinkSync(savedPath);
-		}
-
-		delete state.etags[file];
-		delete state.hashes[file];
 	}
 }

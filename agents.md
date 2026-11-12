@@ -10,7 +10,8 @@ Tools are TypeScript run directly by Node, with no build step. Fix lint and form
 
 - `tools/update.ts` runs the steps in order. `urls.txt` lists what `tools/fetch_urls.ts` fetches.
 - `tools/handle_response.ts` validates and saves each response. A rejected response records no ETag, so it is fetched again.
-- `tools/vite.ts` finds chunks referenced by app JS under `applications/`. Fetching repeats until nothing new appears, and chunks no longer referenced are deleted.
+- `tools/vite.ts` walks from the `applications/` entries in `urls.txt` through the chunks they reference. Fetching repeats until nothing new appears, then files in the app folders that were not reached, or that the server no longer has, are deleted.
+- Language chunks are recognized by how they are imported, such as `x.russian = () => import(...)`, not by their file names.
 - `SSR @` pages and `tools/ssr.ts` find SSR bundles, and keep the list of SSR sites. Raw `ssr/` folders are ignored by git, only `c/` copies are tracked. Old SSR files are deleted only when every SSR page was parsed. The route table each SSR page embeds is saved to `Random/SsrRoutes.txt`.
 - `tools/extract_client.ts` unpacks client archives into `ClientExtracted/`.
 - Dump tools write `ProtobufsWebui/`, `Structs/webui_enums.steamd`, `API/JavascriptUrls.txt` and `Random/Images/`. The image dump deletes output it no longer finds.
