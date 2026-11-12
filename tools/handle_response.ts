@@ -2,7 +2,13 @@ import { createHash, hash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { unzipSync } from "fflate";
-import { EmptyObjectToArray, ExtractJsonFromWebpack } from "./extract_client.ts";
+import {
+	archiveNamePattern,
+	EmptyObjectToArray,
+	ExtractJsonFromWebpack,
+	linuxArchiveManifests,
+	linuxArchivesPath,
+} from "./extract_client.ts";
 import { ExtractStrings, FormatStrings } from "./extract_strings.ts";
 import { GenerateCleanJs } from "./generate_clean_js.ts";
 import { ExtractHermesStrings } from "./hermes.ts";
@@ -12,11 +18,6 @@ import { rootDir, state } from "./state.ts";
 import { GetSavedPath, IsEnglishChunk } from "./vite.ts";
 
 const apkFile = ".support/archives/steam-android.apk";
-
-const clientArchiveFolders = new Map([
-	["ClientManifest/steam_client_publicbeta_steamrt64", "linux_archives"],
-	["ClientManifest/steam_cmd_publicbeta_linux", "linux_archives"],
-]);
 
 /**
  * Handles a downloaded file. Contains no await, so concurrent downloads never interleave in here.
@@ -28,7 +29,7 @@ export function HandleResponse(originalFile: string, body: Buffer, url: string):
 
 	if (originalFile === "API/SupportedAPIList.json") {
 		return SaveApiInterfaces(data);
-	} else if (clientArchiveFolders.has(originalFile)) {
+	} else if (linuxArchiveManifests.includes(originalFile)) {
 		QueueClientArchives(originalFile, data);
 	} else if (originalFile === "Random/Jobs.json") {
 		const jobs = FormatJobs(data);
@@ -229,8 +230,7 @@ function SaveApiInterfaces(data: string): boolean {
 }
 
 function QueueClientArchives(file: string, data: string): void {
-	const folder = clientArchiveFolders.get(file);
-	const archives = [...data.matchAll(/"([a-z0-9_]+\.zip)\.([a-f0-9]{40})"/g)];
+	const archives = [...data.matchAll(archiveNamePattern)];
 
 	if (archives.length === 0) {
 		Log(`{yellow}Failed to find any archives in ${file}`);
@@ -238,7 +238,7 @@ function QueueClientArchives(file: string, data: string): void {
 	}
 
 	for (const [, archive, archiveHash] of archives) {
-		const path = `.support/${folder}/${archive}`;
+		const path = `${linuxArchivesPath}/${archive}`;
 
 		if (state.clientArchiveHashes.has(path)) {
 			Log(`Archive ${path} is already queued`);

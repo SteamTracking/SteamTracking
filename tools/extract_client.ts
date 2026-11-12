@@ -10,11 +10,18 @@ import { FormatFiles } from "./format_files.ts";
 import { GenerateCleanJs } from "./generate_clean_js.ts";
 import { Log } from "./log.ts";
 
+export const linuxArchivesPath = ".support/linux_archives";
+export const linuxArchiveManifests = [
+	"ClientManifest/steam_client_publicbeta_steamrt64",
+	"ClientManifest/steam_cmd_publicbeta_steamrt64",
+];
+export const archiveNamePattern = /"([a-z0-9_]+\.zip)\.([a-f0-9]{40})"/g;
+
 const toolsDir = import.meta.dirname;
 const rootDir = join(toolsDir, "..");
 const linuxBinsDir = join(rootDir, ".support", "linux_bins");
 const steamRuntimeDir = join(linuxBinsDir, "steamrt64");
-const linuxArchivesDir = join(rootDir, ".support", "linux_archives");
+const linuxArchivesDir = join(rootDir, linuxArchivesPath);
 const clientExtractedDir = join(rootDir, "ClientExtracted");
 const clientCleanDir = join(rootDir, "c", "ClientExtracted");
 const protobufsDir = join(rootDir, "Protobufs");
@@ -89,7 +96,41 @@ function CleanupExistingFiles(): void {
 	DeleteDirectory(protobufsDir);
 }
 
+function DeleteUnlistedArchives(): void {
+	const listedArchives = new Set<string>();
+
+	for (const manifest of linuxArchiveManifests) {
+		const manifestPath = join(rootDir, manifest);
+
+		if (!existsSync(manifestPath)) {
+			throw new Error(`Manifest not found: ${manifest}`);
+		}
+
+		const data = readFileSync(manifestPath, "utf8");
+		const archives = [...data.matchAll(archiveNamePattern)];
+
+		if (archives.length === 0) {
+			throw new Error(`No archives listed in ${manifest}`);
+		}
+
+		for (const [, archiveName] of archives) {
+			listedArchives.add(archiveName);
+		}
+	}
+
+	for (const archivePath of FindFiles(linuxArchivesDir, [".zip"])) {
+		const archiveName = basename(archivePath);
+
+		if (!listedArchives.has(archiveName)) {
+			Log(`Deleting unlisted archive ${archiveName}`);
+			unlinkSync(archivePath);
+		}
+	}
+}
+
 function ExtractArchives(): void {
+	DeleteUnlistedArchives();
+
 	Log("Extracting archives");
 
 	const listing: ArchiveEntry[] = [];
