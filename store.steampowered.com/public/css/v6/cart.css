@@ -2448,6 +2448,25 @@ background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 	text-transform: uppercase;
 }
 
+.cashapp_continue_img,
+#purchase_button_bottom.cashapp_continue > span
+{
+	display: none;
+}
+
+#purchase_button_bottom.cashapp_continue,
+#purchase_button_bottom.cashapp_continue:hover
+{
+	padding: 0;
+	background: none;
+}
+
+#purchase_button_bottom.cashapp_continue .cashapp_continue_img
+{
+	display: block;
+	height: 32px;
+}
+
 #bank_name_dselect_container
 {
 	width: 250px;

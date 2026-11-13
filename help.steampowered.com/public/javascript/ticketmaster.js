@@ -2838,4 +2838,467 @@ function ShowCompletedProcesses( strReferenceCode )
 	});
 }
 
+// support report side panel on a ticket
+function InitReportPanel( strReferenceCode, bOpen, strAssetBaseURL )
+{
+	ReportPanel.strReferenceCode = strReferenceCode;
+	ReportPanel.strAssetBaseURL = strAssetBaseURL;
+	ReportPanel.elLastFocused = null;
+	ReportPanel.elAnchorTriggerOpen = null;
+	ReportPanel.target = null;
+
+	$J( 'li.reportStep' ).each( function() {
+		var rgTargets = JSON.parse( this.dataset.targets || '[]' );
+		$J( this ).data( 'targets', Array.isArray( rgTargets ) ? rgTargets : [] );
+	});
+
+	$J( '.reportTrainingForm' ).each( function() {
+		HelpRequestPage.InitHelpRequestAttachmentUpload( $J( this ) );
+	});
+
+	$J( '#openReportBtn' ).on( 'click', function() { ReportPanel.SetOpen( true ); } );
+	$J( '#closeReportBtn' ).on( 'click', function() { ReportPanel.SetOpen( false ); } );
+	$J( '#reportSelector' ).on( 'change', ReportPanel.ShowSelectedTemplate );
+
+	// NextPrev swaps tickets in without a page load, so replace the document handler rather than adding another
+	$J( document ).off( 'input.reportPanel' ).on( 'input.reportPanel', '.reportOutcomeCustom', function() {
+		this.style.height = 'auto';
+		this.style.height = this.scrollHeight + 'px';
+	});
+	$J( document ).off( 'change.reportPanel' ).on( 'change.reportPanel', '.reportOutcome', function() { ReportPanel.OnOutcomeChanged( this ); } );
+	$J( document ).off( 'mouseup.reportPanel' ).on( 'mouseup.reportPanel', ReportPanel.OnMouseUp );
+
+	$J( '.reportOutcome' ).each( function() { ReportPanel.RenderOutcomeTargets( this ); } );
+	ReportPanel.UpdateAnchorTriggers();
+
+	if ( bOpen )
+		ReportPanel.SetOpen( true );
+}
+
+var ReportPanel = {
+	strReferenceCode: null,
+	strAssetBaseURL: '',
+	elLastFocused: null,
+	elAnchorTriggerOpen: null,
+
+	// { anchor, item, lang, quote } that outcomes ticked in the open popover are recorded against
+	target: null,
+
+	SetOpen: function( bOpen )
+	{
+		var strOpen = String( bOpen );
+		$J( '#reportPanel' ).attr( 'data_open', strOpen );
+		$J( '#openReportBtn' ).attr( { data_open: strOpen, 'aria-expanded': strOpen } );
+
+		$J( document ).off( 'keydown.reportPanel' );
+		if ( bOpen )
+		{
+			ReportPanel.elLastFocused = document.activeElement;
+			$J( '#closeReportBtn' ).trigger( 'focus' );
+			$J( document ).on( 'keydown.reportPanel', function( event ) {
+				if ( event.key === 'Escape' )
+					ReportPanel.SetOpen( false );
+			});
+		}
+		else if ( ReportPanel.elLastFocused && typeof ReportPanel.elLastFocused.focus === 'function' )
+		{
+			ReportPanel.elLastFocused.focus();
+		}
+	},
+
+	ShowSelectedTemplate: function()
+	{
+		$J( '.renderedReport' ).hide();
+		$J( '#reportTemplate_' + $J( '#reportSelector' ).val() ).show();
+		ReportPanel.UpdateAnchorTriggers();
+	},
+
+	// steps are moved into the popover rather than copied, so the popover and the side panel always share one set of inputs
+	OpenAnchorPopover: function( elTrigger, elAsset, rgAnchors, target )
+	{
+		var bWasOpenForTrigger = ReportPanel.elAnchorTriggerOpen === elTrigger;
+		ReportPanel.CloseAnchorPopover();
+		if ( bWasOpenForTrigger )
+			return;
+
+		ReportPanel.target = target;
+		var $Popover = $J( '#reportAnchorPopover' );
+		var $Target = $Popover.children( '.reportAnchorPopoverTarget' ).empty().toggle( !!target );
+		if ( target )
+			$Target.text( 'Outcomes ticked here are recorded against:' ).append( ReportPanel.CreateTargetChip( target ) );
+
+		var $Steps = ReportPanel.GetStepsForAnchors( rgAnchors );
+		$Steps.each( function() {
+			var $Placeholder = $J( '<li class="reportStepPlaceholder">' ).attr( 'value', this.value ).text( 'Open next to the assistant' );
+			$J( this ).before( $Placeholder ).data( 'placeholder', $Placeholder );
+		});
+		$Popover.children( 'ol' ).append( $Steps );
+		$Steps.find( '.reportOutcome' ).each( function() { ReportPanel.RenderOutcomeTargets( this ); } );
+
+		$Popover.show();
+		var nScrollTop = $J( window ).scrollTop();
+		var nTop = Math.max( nScrollTop + 16, Math.min( $J( elTrigger ).offset().top, nScrollTop + $J( window ).height() - $Popover.outerHeight() - 16 ) );
+		$Popover.offset( { left: Math.max( $J( window ).scrollLeft() + 16, $J( elAsset ).offset().left - $Popover.outerWidth() - 8 ), top: nTop } );
+		ReportPanel.elAnchorTriggerOpen = elTrigger;
+		RegisterPopupDismissal( ReportPanel.CloseAnchorPopover, $Popover );
+	},
+
+	CloseAnchorPopover: function()
+	{
+		var $Popover = $J( '#reportAnchorPopover' );
+		UnregisterPopupDismissal( $Popover );
+		ReportPanel.target = null;
+		var $Steps = $Popover.find( 'li.reportStep' );
+		$Steps.each( function() {
+			$J( this ).data( 'placeholder' ).replaceWith( this );
+		});
+		$Steps.find( '.reportOutcome' ).each( function() { ReportPanel.RenderOutcomeTargets( this ); } );
+		$Popover.hide();
+		ReportPanel.elAnchorTriggerOpen = null;
+	},
+
+	// steps of the selected report template anchored to any of these, including any in the popover right now
+	GetStepsForAnchors: function( rgAnchors )
+	{
+		return $J( '#reportTemplate_' + $J( '#reportSelector' ).val() + ' li.reportStep, #reportAnchorPopover li.reportStep' ).filter( function() {
+			return this.dataset.anchors.split( ',' ).some( function( s ) { return rgAnchors.includes( s.trim() ); } );
+		});
+	},
+
+	// a trigger on each assistant anchor that a step of the selected report template lists. Items (an asset, a screenshot)
+	// also take the steps anchored to the sections they're in, and outcomes ticked from their trigger are recorded against them.
+	UpdateAnchorTriggers: function()
+	{
+		ReportPanel.CloseAnchorPopover();
+		$J( '.reportAnchorTrigger, .reportSelectionTrigger' ).remove();
+
+		$J( '[data-report-anchor], [data-report-item]' ).each( function() {
+			var $Anchors = $J( this ).filter( '[data-report-anchor]' );
+			if ( this.dataset.reportItem )
+				$Anchors = $Anchors.add( $J( this ).parents( '[data-report-anchor]' ) );
+			var rgAnchors = $Anchors.map( function() { return this.dataset.reportAnchor; } ).get();
+
+			var $Steps = ReportPanel.GetStepsForAnchors( rgAnchors );
+			if ( !$Steps.length )
+				return;
+
+			var target = null;
+			if ( this.dataset.reportItem )
+				target = { anchor: $J( this ).closest( '[data-report-anchor]' ).attr( 'data-report-anchor' ), item: this.dataset.reportItem, lang: this.dataset.reportLang };
+
+			var strStepNumbers = $Steps.map( function() { return this.value; } ).get().join( ', ' );
+			var $Trigger = $J( '<button type="button" class="reportAnchorTrigger btn_small btnv6_blue_hoverfade">' )
+				.append( $J( '<span>' ).text( 'Report: Step %1$s'.replace( '%1$s', strStepNumbers ) ) )
+				.on( 'click', function() { ReportPanel.OpenAnchorPopover( this, this.parentNode, rgAnchors, target ); } );
+			$J( this ).prepend( $Trigger );
+		});
+	},
+
+	// offers to record highlighted store page text against an outcome of the steps anchored to where it is
+	OnMouseUp: function( event )
+	{
+		if ( $J( event.target ).closest( '.reportSelectionTrigger, #reportAnchorPopover' ).length )
+			return;
+		$J( '.reportSelectionTrigger' ).remove();
+
+		var selection = window.getSelection();
+		var strQuote = selection.toString().trim();
+		if ( !strQuote )
+			return;
+
+		var fnTextOf = function( node ) { return $J( node.nodeType === Node.ELEMENT_NODE ? node : node.parentNode ).closest( '[data-report-text]' ); };
+		var $Text = fnTextOf( selection.anchorNode );
+		if ( !$Text.length || $Text[0] !== fnTextOf( selection.focusNode )[0] )
+			return;
+
+		var rgAnchors = $Text.parents( '[data-report-anchor]' ).map( function() { return this.dataset.reportAnchor; } ).get();
+		if ( !ReportPanel.GetStepsForAnchors( rgAnchors ).length )
+			return;
+
+		var target = {
+			anchor: rgAnchors[0],
+			item: $Text.attr( 'data-report-text' ),
+			lang: $Text.attr( 'data-report-lang' ),
+			quote: strQuote.substring( 0, 1000 )
+		};
+		// a selection ending at the start of a line also has an empty rect there
+		var rgRects = Array.prototype.filter.call( selection.getRangeAt( 0 ).getClientRects(), function( rect ) { return rect.width > 0; } );
+		var rect = rgRects.length ? rgRects[ rgRects.length - 1 ] : selection.getRangeAt( 0 ).getBoundingClientRect();
+		var $Trigger = $J( '<button type="button" class="reportSelectionTrigger btn_small btnv6_blue_hoverfade">' )
+			.append( $J( '<span>' ).text( 'Add to report' ) )
+			.on( 'click', function() { ReportPanel.OpenAnchorPopover( this, $Text[0], rgAnchors, target ); } )
+			.appendTo( document.body );
+		$Trigger.css( { left: Math.max( 0, rect.right - $Trigger.outerWidth() ) + window.pageXOffset, top: rect.bottom + window.pageYOffset + 4 } );
+	},
+
+	OnOutcomeChanged: function( elOutcome )
+	{
+		var $Step = $J( elOutcome ).closest( 'li.reportStep' );
+		if ( !elOutcome.checked )
+			$Step.data( 'targets', $Step.data( 'targets' ).filter( function( target ) { return target.outcome !== elOutcome.value; } ) );
+		else if ( ReportPanel.target && $J( elOutcome ).closest( '#reportAnchorPopover' ).length )
+			ReportPanel.AddTarget( elOutcome );
+		ReportPanel.RenderOutcomeTargets( elOutcome );
+	},
+
+	BSameTarget: function( a, b )
+	{
+		return a.anchor === b.anchor && a.item === b.item && a.lang === b.lang && a.quote === b.quote;
+	},
+
+	AddTarget: function( elOutcome )
+	{
+		var rgTargets = $J( elOutcome ).closest( 'li.reportStep' ).data( 'targets' );
+		var bAlreadyAdded = rgTargets.some( function( target ) { return target.outcome === elOutcome.value && ReportPanel.BSameTarget( target, ReportPanel.target ); } );
+		if ( !bAlreadyAdded )
+			rgTargets.push( $J.extend( { outcome: elOutcome.value }, ReportPanel.target ) );
+	},
+
+	CreateTargetChip: function( target )
+	{
+		var $Chip = $J( '<span class="reportTarget">' );
+		if ( target.quote )
+		{
+			$Chip.attr( 'title', target.quote ).append( $J( '<q>' ).text( target.quote ) );
+		}
+		else
+		{
+			var strURL = ReportPanel.strAssetBaseURL + target.item;
+			$Chip.attr( 'title', target.item ).append( $J( '<a target="_blank" rel="noreferrer">' ).attr( 'href', strURL ).append( $J( '<img>' ).attr( 'src', strURL ) ) );
+		}
+		return $Chip;
+	},
+
+	// chips for what this outcome is recorded against, under its checkbox
+	RenderOutcomeTargets: function( elOutcome )
+	{
+		var $Label = $J( elOutcome ).closest( 'label' );
+		var $List = $Label.next( '.reportOutcomeTargets' ).empty();
+
+		var $Step = $J( elOutcome ).closest( 'li.reportStep' );
+		var rgTargets = ( $Step.data( 'targets' ) || [] ).filter( function( target ) { return target.outcome === elOutcome.value; } );
+		var bCanAdd = elOutcome.checked && ReportPanel.target && $J( elOutcome ).closest( '#reportAnchorPopover' ).length
+			&& !rgTargets.some( function( target ) { return ReportPanel.BSameTarget( target, ReportPanel.target ); } );
+		if ( !rgTargets.length && !bCanAdd )
+		{
+			$List.remove();
+			return;
+		}
+		if ( !$List.length )
+			$List = $J( '<div class="reportOutcomeTargets">' ).insertAfter( $Label );
+
+		// these buttons are re-rendered away before the click reaches the popover's dismissal handler, which would then see a click outside it
+		rgTargets.forEach( function( target ) {
+			var $Remove = $J( '<button type="button" class="reportTargetRemove">×</button>' )
+				.attr( 'aria-label', 'Remove' )
+				.on( 'click', function( event ) {
+					event.stopPropagation();
+					$Step.data( 'targets', $Step.data( 'targets' ).filter( function( other ) { return other !== target; } ) );
+					ReportPanel.RenderOutcomeTargets( elOutcome );
+				});
+			$List.append( ReportPanel.CreateTargetChip( target ).append( $Remove ) );
+		});
+
+		if ( bCanAdd )
+		{
+			$List.append( $J( '<button type="button" class="reportTargetAdd">' ).text( '+ Record against this too' ).on( 'click', function( event ) {
+				event.stopPropagation();
+				ReportPanel.AddTarget( elOutcome );
+				ReportPanel.RenderOutcomeTargets( elOutcome );
+			}));
+		}
+	},
+
+	CheckParent: function( elInput )
+	{
+		var strParent = $J( elInput ).attr( 'data-parent' );
+		var bAnyChildChecked = $J( '.outcomeChild[data-parent="' + strParent + '"]:checked' ).length > 0;
+		$J( '.outcomeParent[data-outcome="' + strParent + '"]' ).prop( 'checked', bAnyChildChecked );
+	},
+
+	SaveReport: function( elBtn, unReportTemplateID )
+	{
+		ReportPanel.CloseAnchorPopover();
+		var strTemplateSelector = '.renderedReport#reportTemplate_' + unReportTemplateID;
+		var $Form = $J( elBtn ).closest( strTemplateSelector + ' .reportTrainingForm' );
+		var $SaveBtn = $Form.find( '#reportSaveBtn' );
+		var $SaveStatus = $Form.find( '#reportSaveStatus' );
+
+		$SaveStatus.text( 'Saving…' );
+		$SaveBtn.prop( 'disabled', true );
+
+		var mapSelectionsByStep = {};
+		$Form.find( '.reportOutcome:checked' ).each( function() {
+			var strStep = String( $J( this ).attr( 'data-step' ) || '' );
+			var strValue = String( $J( this ).val() || '' );
+			if ( !strStep || !strValue )
+				return;
+			if ( !mapSelectionsByStep[ strStep ] )
+				mapSelectionsByStep[ strStep ] = [];
+			mapSelectionsByStep[ strStep ].push( strValue );
+		});
+
+		// custom outcome text is saved like a normal outcome
+		$Form.find( '.reportOutcomeCustom' ).each( function() {
+			var strStep = String( $J( this ).attr( 'data-step' ) || '' );
+			var strValue = String( $J( this ).val() || '' ).trim();
+			if ( !strStep || !strValue )
+				return;
+			if ( !mapSelectionsByStep[ strStep ] )
+				mapSelectionsByStep[ strStep ] = [];
+			mapSelectionsByStep[ strStep ].push( strValue );
+		});
+
+		var formData = new FormData();
+		formData.append( 'outcomes', JSON.stringify( mapSelectionsByStep ) );
+		formData.append( 'reference_code', ReportPanel.strReferenceCode );
+		formData.append( 'report_template_id', $Form.find( '#report_template_id' ).val() );
+
+		// custom fields can be an input or select
+		$J( strTemplateSelector + ' .customFields input[type="text"], ' + strTemplateSelector + ' .customFields select' ).each( function() {
+			var field = {};
+			field[ this.name ] = this.value;
+			formData.append( 'custom_fields[]', JSON.stringify( field ) );
+		});
+
+		// only for outcomes still ticked; always sent, so removing the last one clears them
+		var mapTargetsByStep = {};
+		$Form.find( 'li.reportStep' ).each( function() {
+			var $Step = $J( this );
+			var rgTargets = ( $Step.data( 'targets' ) || [] ).filter( function( target ) {
+				return $Step.find( '.reportOutcome:checked' ).filter( function() { return this.value === target.outcome; } ).length > 0;
+			});
+			if ( rgTargets.length )
+				mapTargetsByStep[ this.value ] = rgTargets;
+		});
+		formData.append( 'outcome_targets', JSON.stringify( mapTargetsByStep ) );
+
+		$Form.find( 'ul.attached_file_list' ).children().each( function() {
+			formData.append( 'attachments[]', $J( this ).data( 'file' ) );
+		});
+
+		$J.ajax({
+			url: 'https://help.steampowered.com/ticketmaster/AjaxSaveReport/',
+			type: 'POST',
+			data: formData,
+			processData: false,
+			contentType: false,
+			dataType: 'json'
+		})
+		.done( function( result )
+		{
+			if ( result.success != 1 )
+			{
+				alert( 'Error submitting report' );
+			}
+			else
+			{
+				location.reload();
+				$SaveStatus.text( 'Saved.' );
+				$SaveBtn.prop( 'disabled', false );
+			}
+		})
+		.fail( function()
+		{
+			$SaveStatus.text( 'Error submitting report' );
+			$SaveBtn.prop( 'disabled', false );
+		});
+	},
+
+	SubmitCustomFieldUpdate: function( elBtn )
+	{
+		var $DialogContents = $J( '<div style="padding-bottom:10px"><span style="color: orange">Warning:</span> Only use this option if results were already sent to the partner and <b>only</b> a custom field change has been made since.<br><br>' +
+			'The currently saved report will be submitted to the partner site without updating the ticketmaster ticket and without sending the partner an email.<br>' +
+			'<b>Note:</b> To make the edit live immediately you will also need to manually publish the pending results on the partner site.</div>' );
+
+		ShowConfirmDialog( 'Submit Update To Partner Site', $DialogContents, 'Submit Update To Partner Site' ).done( function() {
+			ReportPanel.SubmitTestResultsToPartner( elBtn, true );
+		});
+	},
+
+	SubmitTestResultsToPartner: function( elBtn, bSkipNotifyingPartner )
+	{
+		var $Form = $J( elBtn ).closest( '.reportTrainingForm' );
+		var $SubmitBtns = $Form.find( '#reportSubmitToPartnerBtn, #reportSubmitFieldsToPartnerBtn' );
+		var $SubmitStatus = $Form.find( '#reportSubmitStatus' );
+
+		$SubmitBtns.prop( 'disabled', true );
+		$SubmitStatus.text( 'Submitting…' );
+
+		$J.ajax({
+			type: 'POST',
+			url: 'https://help.steampowered.com/ticketmaster/AjaxSubmitTestResultsToPartner/',
+			data: {
+				reference_code: ReportPanel.strReferenceCode,
+				report_template_id: $Form.find( '#report_template_id' ).val(),
+				skip_notifying_partner: bSkipNotifyingPartner ? 1 : 0
+			}
+		})
+		.fail( function( xhr )
+		{
+			$SubmitBtns.prop( 'disabled', false );
+			$SubmitStatus.text( 'Failed submitting report: ' + ( xhr?.statusText || 'Unknown error' ) );
+		})
+		.done( function()
+		{
+			$SubmitBtns.prop( 'disabled', false );
+			$SubmitStatus.text( 'Submitted' );
+		});
+	},
+
+	// puts the #tags from every checked outcome and custom note into the reply
+	FillResponse: function( elBtn )
+	{
+		ReportPanel.CloseAnchorPopover();
+		var regexHashtag = /(?:^| )#[\w\-]+(?: |$)/gi;
+		var mapTargetsByTag = new Map();
+		$J( elBtn ).closest( '.reportTrainingForm' ).find( 'input:checked, textarea' ).each( function() {
+			var strValue = $J( this ).val();
+			if ( typeof strValue !== 'string' )
+				return;
+
+			var rgMatches = strValue.match( regexHashtag );
+			if ( !rgMatches )
+				return;
+
+			var rgStepTargets = $J( this ).filter( '.reportOutcome' ).closest( 'li.reportStep' ).data( 'targets' ) || [];
+			rgMatches.forEach( function( strTag ) {
+				var rgTargets = mapTargetsByTag.get( strTag.trim() ) || [];
+				rgStepTargets.forEach( function( target ) {
+					if ( target.outcome === strValue && !rgTargets.some( function( other ) { return ReportPanel.BSameTarget( target, other ); } ) )
+						rgTargets.push( target );
+				});
+				mapTargetsByTag.set( strTag.trim(), rgTargets );
+			});
+		});
+
+		var autocomplete = $J( '#reply_text' ).data( 'textautocomplete' );
+		var rgResponses = Array.from( mapTargetsByTag, function( entry ) {
+			var strResponse = autocomplete.ReplacePlaceholders( entry[0] );
+			if ( !entry[1].length )
+				return strResponse;
+
+			var strTargets = entry[1].map( ReportPanel.FormatTargetForReply ).join( '<br>' );
+			return strResponse.replace( /⭈[^⭊]*⭊/u, function() { return strTargets; } );
+		});
+		autocomplete.InsertTextAndFocus( rgResponses.join( '<br><br>' ) );
+	},
+
+	FormatTargetForReply: function( target )
+	{
+		var fnEscape = function( str ) { return $J( '<div>' ).text( str ).html(); };
+		var strLabel;
+		if ( target.quote )
+		{
+			var $Text = $J( '[data-report-text]' ).filter( function() { return this.dataset.reportText === target.item; } ).first();
+			var $Block = $Text.closest( '.storepagereview_localizedtext' );
+			strLabel = ( $Block.length ? $Block : $Text ).prevAll( '.storepagereview_subheader' ).first().text();
+			return '"' + fnEscape( target.quote ) + '"' + ( strLabel ? ' (' + fnEscape( strLabel ) + ')' : '' );
+		}
+
+		strLabel = $J( '[data-report-item]' ).filter( function() { return this.dataset.reportItem === target.item; } ).attr( 'data-report-label' );
+		return ( strLabel ? fnEscape( strLabel ) + ': ' : '' ) + fnEscape( ReportPanel.strAssetBaseURL + target.item );
+	}
+};
+
 

@@ -2903,7 +2903,15 @@ function OnGetFinalPriceSuccess( result )
 			$('purchase_button_bottom_text').innerHTML = 'Purchase';
 		}
 
-				$J('#purchase_button_bottom').show();
+						if ( method.value == 'cashapp' )
+		{
+			$J('#purchase_button_bottom').addClass( 'cashapp_continue' );
+		}
+		else
+		{
+			$J('#purchase_button_bottom').removeClass( 'cashapp_continue' );
+		}
+		$J('#purchase_button_bottom').show();
 		$J('#purchase_button_disabled_bottom').hide();
 		$J('#purchase_button_inprogress_bottom').hide();
 		$J('#change_payment_method_button_bottom').hide();
