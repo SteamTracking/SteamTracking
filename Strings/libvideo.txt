@@ -1042,6 +1042,7 @@ $RepresentationID$
 /proc/self/status
 /run/host/etc/os-release
 /run/host/root
+/run/host/usr
 /steamrt64
 /steamsysinfo
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
@@ -1092,6 +1093,7 @@ $RepresentationID$
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+01:59:05
 1 Mbps
 1.5 Mbps
 1.5.6
@@ -1598,7 +1600,6 @@ $RepresentationID$
 21CUtlCStringConversion
 21UserSystemInformation
 21VideoRepresentation_t
-22:37:53
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -6525,7 +6526,7 @@ Not supported.
 Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-Nov  9 2026
+Nov 13 2026
 November
 NullMetrics()
 NumTickets
@@ -12243,7 +12244,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(T8
+ggen
 givenName
 glibcxx.eh_pool
 global constructors keyed to

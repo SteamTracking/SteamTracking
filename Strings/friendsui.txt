@@ -369,9 +369,7 @@ $ORIGIN
 *pchMsg && *pchMsg == '%'
 *pcubDecodedData
 ++CCUNG
-++CCUNG#~E
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGH
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 , bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars, string font
@@ -546,6 +544,7 @@ $ORIGIN
 /proc/self/fd/%d
 /proc/self/maps
 /run/host/root
+/run/host/usr
 /steamrt64
 /steamsysinfo
 /tmp
@@ -562,6 +561,7 @@ $ORIGIN
 01/01/00
 0123456789
 0123456789ABCDEF
+0123456789ABCDEF0
 0123456789abcdef
 0x%llx
 1 Mbps

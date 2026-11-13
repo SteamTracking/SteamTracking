@@ -181,6 +181,7 @@ $ORIGIN
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGgo\t
 ++CCUNGstd::exception
 ----------------------------------------\n
 -chromeosdiskmanagement
@@ -258,6 +259,7 @@ $ORIGIN
 /proc/self/maps
 /proc/version
 /run/host/root
+/run/host/usr
 /steamrt64
 /steamsysinfo
 /tmp

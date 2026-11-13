@@ -411,6 +411,7 @@ $ORIGIN
 /proc/self/maps
 /proc/self/ns/pid
 /run/host/root
+/run/host/usr
 /steamrt64
 /steamsysinfo
 /tmp

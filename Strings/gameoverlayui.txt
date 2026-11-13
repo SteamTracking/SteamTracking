@@ -434,6 +434,7 @@ $ORIGIN
 *pcubDecodedData
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG8
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 , bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars, string font
@@ -633,6 +634,7 @@ $ORIGIN
 /proc/self/ns/pid
 /proc/stat
 /run/host/root
+/run/host/usr
 /sbin/lsof
 /steamrt64
 /steamsysinfo
@@ -683,6 +685,7 @@ $ORIGIN
 0123456789
 0123456789ABCDEF
 0123456789abcdef
+01:59:57
 0x%llx
 1 Mbps
 1.2.11
@@ -1137,7 +1140,6 @@ $ORIGIN
 21CPurchaseLineItemInfo
 21CUtlCStringConversion
 21CreateDirectoryDialog
-22:38:01
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -4290,7 +4292,7 @@ Not supported.
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 NotificationClickPanel
-Nov  9 2026
+Nov 13 2026
 November
 Num Lock
 Num Lock Toggle

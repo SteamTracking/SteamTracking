@@ -111,10 +111,10 @@ $ORIGIN
 /tmp/.steam-sem-names
 0123456789
 0123456789ABCDEF
+01:59:13
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
-22:37:55
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -348,7 +348,7 @@ Network
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
-Nov  9 2026
+Nov 13 2026
 OUT OF MEMORY
 Object
 Only thread can stop self: Use a higher-level protocol

@@ -786,6 +786,7 @@ $ORIGIN
 /proc/self/maps
 /proc/self/ns/pid
 /run/host/root
+/run/host/usr
 /sbin/lsof
 /steamrt64
 /steamsysinfo
@@ -845,6 +846,7 @@ $ORIGIN
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+02:01:49
 063d37c9aeb7583e891be14276f2627edbcaa5ee
 0x%llx
 0x%p - %s-\n
@@ -1666,7 +1668,6 @@ $ORIGIN
 21CefV8StackFrameCToCpp
 21CefV8StackTraceCToCpp
 21CefWriteHandlerCppToC
-22:38:11
 22CBrowserComposerSystem
 22CFrameEventPerfTracker
 22CMsgAckPIDShuttingDown
@@ -7214,7 +7215,7 @@ NotifyTouchDown
 NotifyTouchMotion
 NotifyTouchUp
 NotifyUserActivation
-Nov  9 2026
+Nov 13 2026
 November
 Num Lock
 Num Lock Toggle
@@ -21574,7 +21575,6 @@ too much nonce requested
 too short
 too small
 tool
-toupper
 towerattack
 tpBasis
 tr_TR

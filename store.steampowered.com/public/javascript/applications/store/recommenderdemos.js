@@ -443,8 +443,15 @@ var fe = (e) => {
               (0, G.jsx)(Z, {
                 nAccountID: n,
                 bExclude: o,
-                strName: `NextFest`,
-                strTitle: d(`#RecommenderDemos_NextFest`),
+                strName: `NextFestPopular`,
+                strTitle: d(`#RecommenderDemos_NextFestPopular`),
+                strSubtitle: d(`#RecommenderDemos_NextFestDesc`),
+              }),
+              (0, G.jsx)(Z, {
+                nAccountID: n,
+                bExclude: o,
+                strName: `NextFestInversePopular`,
+                strTitle: d(`#RecommenderDemos_NextFestInversePopular`),
                 strSubtitle: d(`#RecommenderDemos_NextFestDesc`),
               }),
               (0, G.jsx)(ae, { nAccountID: n, bExclude: o }),

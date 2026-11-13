@@ -1085,6 +1085,7 @@ $ORIGIN
 /proc/version
 /run/host/etc/os-release
 /run/host/root
+/run/host/usr
 /sbin/lsof
 /steamrt64
 /steamsysinfo
@@ -1164,6 +1165,7 @@ $ORIGIN
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+01:59:05
 0x%llX,
 1 Mbps
 1.5 Mbps
@@ -1681,7 +1683,6 @@ $ORIGIN
 21IClientProcessMonitor
 21IWorkThreadPoolSignal
 21UserSystemInformation
-22:37:53
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -6049,7 +6050,7 @@ Not supported.
 Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-Nov  9 2026
+Nov 13 2026
 November
 NullMetrics()
 NumTickets
@@ -11222,7 +11223,6 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(
 givenName
 glibcxx.eh_pool
 global constructors keyed to

@@ -1544,9 +1544,8 @@ ${FILENAME}
 *poutnShell <= m_vecPOPs[ lookup.m_idxPOP ].m_nTotalRelayPorts
 *uYO
 ++CCUNG
+++CCUNG D
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG;;
-++CCUNG`C
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +AVpd
@@ -1973,6 +1972,7 @@ ${FILENAME}
 /reset
 /run/host/etc/os-release
 /run/host/root
+/run/host/usr
 /sbin/lsof
 /secret_key.txt
 /steamid.txt
@@ -2041,6 +2041,8 @@ ${FILENAME}
 0123456789abcdef
 0123456789abcdefABCDEF:.
 0123456789abcdefghijklmnopqrstuvwxyz
+01:59:05
+02:01:38
 0M\<m
 0VB'
 0YE)
@@ -2386,8 +2388,6 @@ ${FILENAME}
 21StoreItem_ReleaseInfo
 21StoreItem_Screenshots
 21UserSystemInformation
-22:37:53
-22:37:57
 22AES_ECB_DecryptContext
 22AES_ECB_EncryptContext
 22AES_GCM_DecryptContext
@@ -8663,7 +8663,7 @@ NotoSansCJKkr-Regular.otf
 NotoSansCJKsc-Regular.otf
 NotoSansCJKtc-Regular.otf
 NotoSansThai-Regular.ttf
-Nov  9 2026
+Nov 13 2026
 November
 Nu s-a putut g
 Nu s-a putut porni transmisiunea pe calculatorul de la distan
@@ -16543,6 +16543,7 @@ gg i de avancerade streaminginst
 gg i streaminginst
 gga till en f
 gga till och d
+ggenX
 ghi h
 gioco
 givenName
@@ -18182,7 +18183,7 @@ lg inputtilstand for %s
 lg maskinen, der skal forbindes til
 lg maskinen, der skal forbindes til:
 lhatod r
-lib Nov  9 2026 22:37:57
+lib Nov 13 2026 02:01:44
 lib(%lu)
 libEGL.so.1
 libGL.so.1

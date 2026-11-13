@@ -920,7 +920,6 @@ $ORIGIN
 *pcubSignature > 0
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG[b~
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +automatic
@@ -1306,6 +1305,7 @@ $ORIGIN
 /proc/version
 /run/host/etc/os-release
 /run/host/root
+/run/host/usr
 /sbin/lsof
 /steamrt64
 /steamsysinfo
@@ -1384,7 +1384,13 @@ $ORIGIN
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEF`wT
 0123456789abcdef
+01:59:05
+02:01:32
+02:01:38
+02:01:39
+02:01:42
 1 Mbps
 1.2.11
 1.5 Mbps
@@ -1931,10 +1937,6 @@ $ORIGIN
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21UserSystemInformation
-22:37:53
-22:38:11
-22:38:12
-22:38:14
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2131,6 +2133,7 @@ $ORIGIN
 :BAD INTEGER
 :BAD OBJECT
 :EXTERNAL TYPE %s\n
+:WD8
 :authorit
 :authority
 :done\n
@@ -6728,7 +6731,7 @@ Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing to do
-Nov  9 2026
+Nov 13 2026
 November
 NullMetrics()
 NumTickets
@@ -8318,7 +8321,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Nov  9 2026 22:38:13
+Startup - updater built Nov 13 2026 02:01:47
 State
 StaticFileWriterThread()
 Steam
@@ -12311,7 +12314,6 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenh
 givenName
 glBegin
 glBindTexture

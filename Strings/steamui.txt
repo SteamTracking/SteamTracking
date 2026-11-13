@@ -2734,8 +2734,8 @@ ${LANGUAGE}
 ../steamUI/steamosmanager.cpp:338
 ../steamUI/steamuiapicallhelpers.h
 ../steamUI/steamuiappcontroller.cpp
-../steamUI/steamuiappcontroller.cpp:2146
-../steamUI/steamuiappcontroller.cpp:2169
+../steamUI/steamuiappcontroller.cpp:2145
+../steamUI/steamuiappcontroller.cpp:2168
 ../steamUI/steamuibetacontroller.cpp
 ../steamUI/steamuicontroller.cpp
 ../steamUI/steamuicurrentusercontroller.cpp
@@ -2972,6 +2972,7 @@ ${LANGUAGE}
 /remoteplay/
 /repairlibrary "%s"
 /run/host/root
+/run/host/usr
 /run/host/usr/share/gamescope/looks
 /sbin/lsof
 /sec
@@ -13077,7 +13078,6 @@ Console.ExecCommand
 Console.GetAutocompleteSuggestions
 Console.RegisterForSpewOutput
 ConstHdr().ip_v6().length() == 16
-Constructed empty appoverview message in BuildCompleteAppOverviewChange
 Contact Support
 Contacting license server
 Container: %container%
@@ -19930,7 +19930,7 @@ NotifyText: %s
 NotifyTouchDown
 NotifyTouchMotion
 NotifyTouchUp
-Nov  9 2026 22:38:03
+Nov 13 2026 02:00:51
 November
 NullMetrics()
 Num Lock
@@ -36240,8 +36240,8 @@ lost rgb to gray
 lost/gained channels
 low-memory-warning
 low-power-mode1
-low-pri yield - ../steamUI/libraryassetcache.cpp:1617
-low-pri yield - ../steamUI/libraryassetcache.cpp:1681
+low-pri yield - ../steamUI/libraryassetcache.cpp:1630
+low-pri yield - ../steamUI/libraryassetcache.cpp:1694
 lower
 lrintf
 lroundf

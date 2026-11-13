@@ -474,6 +474,7 @@ $ORIGIN
 *pcubPlaintextData
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGB
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 ++KEY_PAD_PLUS
@@ -648,6 +649,7 @@ $ORIGIN
 /proc/self/fd/%d
 /proc/self/maps
 /run/host/root
+/run/host/usr
 /sbin/lsof
 /steamrt64
 /steamsysinfo

@@ -93,6 +93,7 @@ $ORIGIN
 /proc/self/fd/%d
 /proc/self/maps
 /run/host/root
+/run/host/usr
 /steamrt64
 /steamsysinfo
 /tmp

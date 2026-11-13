@@ -96,6 +96,7 @@ $ORIGIN
 /proc/self/fd/%d
 /proc/self/maps
 /run/host/root
+/run/host/usr
 /sink/%s/volume-control
 /steamrt64
 /steamsysinfo

@@ -536,8 +536,15 @@ var _ = (_) => {
               (0, _.jsx)(_, {
                 nAccountID: _,
                 bExclude: _,
-                strName: `NextFest`,
-                strTitle: _(`#RecommenderDemos_NextFest`),
+                strName: `NextFestPopular`,
+                strTitle: _(`#RecommenderDemos_NextFestPopular`),
+                strSubtitle: _(`#RecommenderDemos_NextFestDesc`),
+              }),
+              (0, _.jsx)(_, {
+                nAccountID: _,
+                bExclude: _,
+                strName: `NextFestInversePopular`,
+                strTitle: _(`#RecommenderDemos_NextFestInversePopular`),
                 strSubtitle: _(`#RecommenderDemos_NextFestDesc`),
               }),
               (0, _.jsx)(_, {

@@ -2899,13 +2899,13 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 ../clientdll/shadercachemanager/../depotreconstruct.h
 ../clientdll/shadercachemanager/../raterecorder.h
 ../clientdll/shadercachemanager/shadercachemanager.cpp
-../clientdll/shadercachemanager/shadercachemanager.cpp:2186
-../clientdll/shadercachemanager/shadercachemanager.cpp:2284
-../clientdll/shadercachemanager/shadercachemanager.cpp:2354
-../clientdll/shadercachemanager/shadercachemanager.cpp:2408
-../clientdll/shadercachemanager/shadercachemanager.cpp:4055
-../clientdll/shadercachemanager/shadercachemanager.cpp:4190
-../clientdll/shadercachemanager/shadercachemanager.cpp:4477
+../clientdll/shadercachemanager/shadercachemanager.cpp:2194
+../clientdll/shadercachemanager/shadercachemanager.cpp:2292
+../clientdll/shadercachemanager/shadercachemanager.cpp:2362
+../clientdll/shadercachemanager/shadercachemanager.cpp:2416
+../clientdll/shadercachemanager/shadercachemanager.cpp:4063
+../clientdll/shadercachemanager/shadercachemanager.cpp:4198
+../clientdll/shadercachemanager/shadercachemanager.cpp:4485
 ../clientdll/shadercachemanager/shadercompilejob.cpp
 ../clientdll/shadercachemanager/shadercontentupdatejob.cpp
 ../clientdll/sitelicenseclient.cpp
@@ -3405,6 +3405,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 /proc/self/ns/pid
 /proc/sys/kernel/sched_autogroup_enabled
 /run/host/root
+/run/host/usr
 /run/vpower
 /sbin/lsof
 /server-status
@@ -14125,6 +14126,7 @@ CCompatManager::RunCacheOffJob - start job
 CCompatManager::SetAppPlatformOverride
 CCompatManager::SpecifyCompatExperiment
 CCompatManager::UpdateInvalidPlatformTracking
+CCompatManager::UpdateInvalidPlatformTracking: ignoring k_nAppIdAll, use YldRebuildInvalidPlatformTracking instead\n
 CCompatManager::YldCheckIfAppNeedsPlatformCompatibility
 CCompatManager::YldCheckIfAppNeedsPlatformCompatibility - k_nAppIdAll
 CCompatManager::YldProcessAllCompatLists
@@ -14136,6 +14138,7 @@ CCompatManager::YldProcessCompatManifests KV version
 CCompatManager::YldProcessCompatManifests KV version - App compat configs
 CCompatManager::YldProcessCompatManifests KV version - App mapping
 CCompatManager::YldProcessCompatManifests KV version - Compat Tools
+CCompatManager::YldRebuildInvalidPlatformTracking
 CCompatManager::YldRegisterTool
 CCompatManagerStubJob
 CCompletionPortManager::IOCPWorkerThread: got 100 consecutive errors, last error %d (%s), IOCP thread aborting and exiting\n
@@ -14328,6 +14331,7 @@ CGenericAsyncFileIOThread::Run - Write
 CGetCompatDataDiskSizeJob::ThreadedGetShaderCacheDiskSize
 CGetCompatToolBucketJob for %s starting.
 CGetCompatToolBucketJob for %s: not installed or other error, early out.
+CGetCompatToolBucketJob for %s: tool manifest not loaded, early out.
 CGetControllerConnectionState
 CGetControllerInfoWorkItem::RunFunc: Read failure.\n
 CGetControllerInfoWorkItem::RunFunc: timeout\n
@@ -25839,7 +25843,7 @@ Rate
 Rate Limit Exceeded
 Rave
 Raw stream mode only supported for TCP connections
-Re-entering DispatchCallback, this is dangerous.
+Re-entering DispatchCallback, this is dangerous.  New callback %d, still running callback %d listener %s in job %s
 ReOpenFd: failed to reopen: %s: %s\n
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
@@ -31376,6 +31380,7 @@ Writing depot of %u shaders back to original cache type %u, into target director
 Writing manifest to local content server...
 Writing report: %s
 Writing zero-length unknown chunk
+Wrong Body().meta_data_only() response, shouldn't be possible on unmodified client
 Wrong JPEG library version: library is %d, caller expects %d
 Wrong Price
 Wrong SHA %s, %u bytes
@@ -40182,14 +40187,14 @@ low-pri yield - ../clientdll/clientjob.cpp:463
 low-pri yield - ../clientdll/clientjob.cpp:772
 low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1009
 low-pri yield - ../clientdll/clientugc.cpp:7110
-low-pri yield - ../clientdll/compatmanager.cpp:2247
-low-pri yield - ../clientdll/compatmanager.cpp:2505
-low-pri yield - ../clientdll/compatmanager.cpp:2817
-low-pri yield - ../clientdll/compatmanager.cpp:3600
-low-pri yield - ../clientdll/compatmanager.cpp:3640
-low-pri yield - ../clientdll/compatmanager.cpp:3653
-low-pri yield - ../clientdll/compatmanager.cpp:3705
-low-pri yield - ../clientdll/compatmanager.cpp:4337
+low-pri yield - ../clientdll/compatmanager.cpp:2271
+low-pri yield - ../clientdll/compatmanager.cpp:2545
+low-pri yield - ../clientdll/compatmanager.cpp:2857
+low-pri yield - ../clientdll/compatmanager.cpp:3639
+low-pri yield - ../clientdll/compatmanager.cpp:3679
+low-pri yield - ../clientdll/compatmanager.cpp:3692
+low-pri yield - ../clientdll/compatmanager.cpp:3744
+low-pri yield - ../clientdll/compatmanager.cpp:4376
 low-pri yield - ../clientdll/contentupdatecontext.cpp:1384
 low-pri yield - ../clientdll/contentupdatecontext.cpp:1420
 low-pri yield - ../clientdll/csinterface.cpp:224
@@ -42834,7 +42839,6 @@ msgResponse.fake_ip()
 msgResponse.key().length() == k_nSymmetricKeyLen
 msgResponse.result() == k_EResultOK || msgResponse.accounts_in_channel_size() == 0
 msgResponse.servers_size() == nCount
-msgResponseMetaOnly.Body().meta_data_only()
 msgSessionEstablished.connection_id() == ConnectionIDLocal()
 msgSignedCert.has_cert()
 msgStatsIn.has_forward_target_relay_routing_token() == msgStatsIn.has_forward_target_revision()
@@ -46646,7 +46650,7 @@ stderr
 stdin
 stdout
 steam
-steam Nov  9 2026 22:37:59
+steam Nov 13 2026 02:01:26
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
