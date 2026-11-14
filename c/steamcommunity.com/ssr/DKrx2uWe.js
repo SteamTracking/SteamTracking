@@ -1,6 +1,4 @@
-var _ = _(_()),
-  _ = _(),
-  _ = `Q9JJlcQV8xM-`;
+var _ = _(_());
 function _(_, _, _, _) {
   _.useEffect(() => {
     let _ = (_) => {
@@ -16,7 +14,8 @@ var _ = `V7hH-aYCq0M-`,
   _ = `UOSLjnD8h20-`,
   _ = `wu6X8Agjj2Y-`,
   _ = `nn6xftge3XI-`,
-  _ = `_5-Q-ICOrQkc-`;
+  _ = `_5-Q-ICOrQkc-`,
+  _ = _();
 function _() {
   let [_, _] = _.useState(void 0),
     _ = _.useCallback(() => _(void 0), []);
@@ -126,7 +125,8 @@ function _(_) {
     ],
   });
 }
-var _ = `_8MwYeiz1aF4-`,
+var _ = `Q9JJlcQV8xM-`,
+  _ = `_8MwYeiz1aF4-`,
   _ = `eDP3QS5OD9w-`,
   _ = 1.3,
   _ = 3,

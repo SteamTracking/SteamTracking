@@ -4373,6 +4373,21 @@ function _(_) {
   return (_.verification_level ?? 0) >= 20;
 }
 function _(_) {
+  return !_(_) || !!_.kept_as_entered || !!_.shipping_detail;
+}
+var _ = {
+  k_OK: 0,
+  k_NoAPOFPO: 1,
+  k_UnsupportedCharacters: 2,
+  k_FieldLengthTooLong: 3,
+  k_FieldMissing: 4,
+  k_NoPOBox: 5,
+  k_NoUSTerritories: 6,
+  k_UnsupportedPostalCode: 7,
+  k_IncorrectPostalCodeFormat: 8,
+  k_MissingOrUnsupportedState: 9,
+};
+function _(_) {
   return Array.isArray(_?.country_codes) ? _.country_codes : [];
 }
 function _(_) {
@@ -46467,7 +46482,11 @@ function _(_) {
     cDeclined: _,
     cNoAnswer: _.length - _ - _,
     cNobodyToAnswer: _.filter(_).length,
+    cNeedsReview: _.filter(_).length,
   };
+}
+function _(_) {
+  return _.state === 1 && !!_.address && _(_.address);
 }
 function _(_) {
   return _.answerer_count === 0;
@@ -47620,31 +47639,39 @@ function _(_) {
         nValue: _.cNoAnswer,
       },
     ];
-  return (0, _.jsx)(`div`, {
-    className: _,
-    children: (0, _.jsx)(`div`, {
+  return (
+    _.cNeedsReview &&
+      _.push({
+        strLabel: `Needs Review`,
+        nValue: _.cNeedsReview,
+        bHighlight: !0,
+      }),
+    (0, _.jsx)(`div`, {
       className: _,
-      children: _.map((_) =>
-        (0, _.jsxs)(
-          `div`,
-          {
-            className: _,
-            children: [
-              (0, _.jsx)(`div`, {
-                className: _(_, _.bHighlight && `Ns-h1abF2Rg-`),
-                children: _(_.nValue),
-              }),
-              (0, _.jsx)(`div`, {
-                className: void 0,
-                children: _.strLabel,
-              }),
-            ],
-          },
-          _.strLabel,
+      children: (0, _.jsx)(`div`, {
+        className: _,
+        children: _.map((_) =>
+          (0, _.jsxs)(
+            `div`,
+            {
+              className: _,
+              children: [
+                (0, _.jsx)(`div`, {
+                  className: _(_, _.bHighlight && `Ns-h1abF2Rg-`),
+                  children: _(_.nValue),
+                }),
+                (0, _.jsx)(`div`, {
+                  className: void 0,
+                  children: _.strLabel,
+                }),
+              ],
+            },
+            _.strLabel,
+          ),
         ),
-      ),
-    }),
-  });
+      }),
+    })
+  );
 }
 function _(_) {
   let { def: _, stats: _, bActiveOptIn: _ } = _,
@@ -53800,6 +53827,10 @@ var _ = `Oau0Qk1XimI-`,
       data: `submitted`,
     },
     {
+      label: `Address needs review`,
+      data: `needs_review`,
+    },
+    {
       label: `Declined`,
       data: `declined`,
     },
@@ -53835,7 +53866,8 @@ function _() {
       (_) =>
         !_ ||
         String(_.partnerid) === _ ||
-        (_.partner_name || ``).toLowerCase().includes(_),
+        (_.partner_name || ``).toLowerCase().includes(_) ||
+        _(_).strEmail.toLowerCase().includes(_),
     );
   return (0, _.jsxs)(`div`, {
     children: [
@@ -53873,6 +53905,12 @@ function _() {
                   nValue: _,
                   strLabel: `Removed`,
                 }),
+              _.cNeedsReview > 0 &&
+                (0, _.jsx)(_, {
+                  nValue: _.cNeedsReview,
+                  strLabel: `Needs review`,
+                  strClassName: `_8HqeomPXpwA-`,
+                }),
             ],
           }),
           (0, _.jsx)(_, {
@@ -53880,7 +53918,7 @@ function _() {
           }),
           (0, _.jsx)(`div`, {
             className: _,
-            children: `Partners are invited from the Invited Partners section of the Editor tab. The export holds the addresses of invited partners that submitted one; declined and removed partners are left out.`,
+            children: `Partners are invited from the Invited Partners section of the Editor tab. The export holds the addresses and contact emails of invited partners that submitted one; declined and removed partners are left out. An address saved before we asked for an email shows the email of the user who saved it, marked "from account". Check the addresses that need review before shipping: the verifier only partly matched them, the partner kept their own lines, or the partner saved past a warning. The Notes column says which.`,
           }),
           (0, _.jsxs)(`div`, {
             className: _,
@@ -53903,7 +53941,7 @@ function _() {
                 className: _,
                 children: (0, _.jsx)(_, {
                   type: `text`,
-                  label: `Search name or partner id`,
+                  label: `Search name, partner id or email`,
                   value: _,
                   onChange: (_) => _(_.target.value),
                 }),
@@ -53982,6 +54020,8 @@ function _(_, _) {
       return _(_) === 0;
     case `submitted`:
       return _(_) === 1;
+    case `needs_review`:
+      return _(_);
     case `declined`:
       return _(_) === 2;
     case `nobody_to_answer`:
@@ -54057,6 +54097,7 @@ function _(_, _) {
 }
 function _(_) {
   let _ = _.address,
+    _ = _(_),
     _ = [];
   return (
     _.invited && _(_) && _.push(`Nobody to email`),
@@ -54068,6 +54109,7 @@ function _(_) {
           : `Not checked by the verifier`,
       ),
     _?.kept_as_entered && _.push(`Kept as typed`),
+    _?.shipping_detail && _.push(`Flagged: ${_(_.shipping_detail)}`),
     {
       partnerid: _.partnerid,
       partner_name: _.partner_name || `(no name)`,
@@ -54075,6 +54117,8 @@ function _(_) {
       rtime_updated: _.rtime_updated ?? 0,
       accountid_last_mod: _.accountid_last_mod ?? 0,
       address: _ ? _(_) : ``,
+      email: _.strEmail,
+      email_from_account: _.bFromAccount,
       notes: _.join(`, `),
       invited: !!_.invited,
     }
@@ -54112,6 +54156,13 @@ function _(_) {
     _.accessor(`partnerid`, {
       header: `ID`,
       size: 70,
+      cell: (_) =>
+        (0, _.jsx)(`a`, {
+          href: `${_.PARTNER_BASE_URL}optin/address/${_}/${_.getValue()}`,
+          target: `_blank`,
+          title: `Open this partner's address page`,
+          children: _.getValue(),
+        }),
     }),
     _.accessor(`state`, {
       header: `Answer`,
@@ -54167,6 +54218,25 @@ function _(_) {
               className: _,
               children: `None`,
             }),
+    }),
+    _.accessor(`email`, {
+      header: `Email`,
+      size: 240,
+      cell: (_) =>
+        _.getValue()
+          ? (0, _.jsxs)(`span`, {
+              className: _,
+              title: _.getValue(),
+              children: [
+                _.getValue(),
+                _.row.original.email_from_account &&
+                  (0, _.jsx)(`span`, {
+                    className: `_3pDG4v8Wryk-`,
+                    children: ` (from account)`,
+                  }),
+              ],
+            })
+          : null,
     }),
     _.accessor(`notes`, {
       header: `Notes`,
@@ -54233,7 +54303,7 @@ function _(_, _) {
   let _ = _.filter((_) => _.invited && _(_) === 1 && _.address).map((_) => ({
     partnerid: _.partnerid,
     partner_name: _.partner_name || ``,
-    ..._(_.address),
+    ..._(_),
   }));
   _.WriteCSVToFile(_, `${_}_addresses.csv`, !0);
 }
@@ -54248,16 +54318,20 @@ function _(_, _) {
       ? new Date(_.rtime_updated * 1e3).toISOString()
       : ``,
     last_change_accountid: _.accountid_last_mod || ``,
-    ..._(_.address ?? {}),
+    ..._(_),
   }));
   _.WriteCSVToFile(_, `${_}_partners.csv`, !0);
 }
 function _(_) {
+  let _ = _.address ?? {},
+    _ = _(_);
   return {
     company_name: _.company_name || ``,
     first_name: _.first_name || ``,
     last_name: _.last_name || ``,
     phone_number: _.phone_number || ``,
+    email: _.strEmail,
+    email_from_account: _.bFromAccount ? `yes` : `no`,
     address1: _.address1 || ``,
     address2: _.address2 || ``,
     city: _.city || ``,
@@ -54267,7 +54341,46 @@ function _(_) {
     full_match: _.address1 ? (_(_) ? `yes` : `no`) : ``,
     verification_level: _.verification_level || 0,
     kept_as_entered: _.kept_as_entered ? `yes` : `no`,
+    flagged: _.shipping_detail ? _(_.shipping_detail) : ``,
   };
+}
+function _(_) {
+  let _ = _.address;
+  return _?.address1
+    ? !_.email && _.email_last_mod
+      ? {
+          strEmail: _.email_last_mod,
+          bFromAccount: !0,
+        }
+      : {
+          strEmail: _.email || ``,
+          bFromAccount: !1,
+        }
+    : {
+        strEmail: ``,
+        bFromAccount: !1,
+      };
+}
+function _(_) {
+  switch (_) {
+    case _.k_NoAPOFPO:
+      return `APO/FPO address`;
+    case _.k_UnsupportedCharacters:
+      return `non-Latin characters`;
+    case _.k_FieldLengthTooLong:
+      return `field too long`;
+    case _.k_NoPOBox:
+      return `P.O. box`;
+    case _.k_NoUSTerritories:
+      return `US territory`;
+    case _.k_UnsupportedPostalCode:
+      return `special postal region`;
+    case _.k_IncorrectPostalCodeFormat:
+      return `postal code format`;
+    case _.k_MissingOrUnsupportedState:
+      return `state not matched`;
+  }
+  return `detail ${_}`;
 }
 function _() {
   return (0, _.jsxs)(`div`, {

@@ -1137,6 +1137,7 @@ ${PARTNER_BASE_URL}newpartner
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
 ${PARTNER_BASE_URL}optin/address/${opt_in_name}/${partnerid}
+${PARTNER_BASE_URL}optin/address/${}/${}
 ${PARTNER_BASE_URL}optin/address/${}/0
 ${PARTNER_BASE_URL}optin/admin/analysis/${}
 ${PARTNER_BASE_URL}optin/admin/backfilloptindemopageviews
@@ -2160,6 +2161,7 @@ ${sCurrentURL}#buy${sElementPrefix}|${listingid}|${}|${}|${}
 ${sc_url}${}
 ${short_url}/${invite_token}
 ${store_page_asset_url}${}
+${strAssetBaseURL}${item}
 ${strBaseURL}${_ ? '' : '/'}${m_bIsMobile ? 'mobilelogin' : 'login'}/
 ${strBaseURL}${strLocation}
 ${strBaseURL}${}
@@ -2488,12 +2490,14 @@ https://help.steampowered.com/ticketmaster/AjaxMarkHelpRequestAsViewed/
 https://help.steampowered.com/ticketmaster/AjaxPreapproveTxns/
 https://help.steampowered.com/ticketmaster/AjaxPreloadTicket/${strTicketRef}
 https://help.steampowered.com/ticketmaster/AjaxPullQuicktextLocalization/
+https://help.steampowered.com/ticketmaster/AjaxSaveReport/
 https://help.steampowered.com/ticketmaster/AjaxSearchFAQs
 https://help.steampowered.com/ticketmaster/AjaxSearchForAgentByName
 https://help.steampowered.com/ticketmaster/AjaxSearchForAppByName
 https://help.steampowered.com/ticketmaster/AjaxSearchQuicktexts/
 https://help.steampowered.com/ticketmaster/AjaxSetLanguageRule/
 https://help.steampowered.com/ticketmaster/AjaxSetTicketLanguageDialog/
+https://help.steampowered.com/ticketmaster/AjaxSubmitTestResultsToPartner/
 https://help.steampowered.com/ticketmaster/AjaxTranslateHelpRequest
 https://help.steampowered.com/ticketmaster/AjaxWatchHelpRequest/
 https://help.steampowered.com/ticketmaster/ticket/${strNextTicket}

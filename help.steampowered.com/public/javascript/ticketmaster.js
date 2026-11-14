@@ -1325,8 +1325,13 @@ CTextAutoComplete.prototype.ReplacePlaceholders = function( strText )
 
 CTextAutoComplete.prototype.InsertTextAndFocus = function( strText )
 {
+	this.InsertHTMLAndFocus( this.ReplacePlaceholders( strText ) );
+};
+
+// for text whose placeholders were already replaced; replacing again would expand hashtags inside the inserted text, like #screenshot in a link's #screenshots
+CTextAutoComplete.prototype.InsertHTMLAndFocus = function( strText )
+{
 	this.RestoreSelection();
-	strText = this.ReplacePlaceholders( strText );
 
 	if ( window.getSelection )
 	{
@@ -3281,7 +3286,7 @@ var ReportPanel = {
 			var strTargets = entry[1].map( ReportPanel.FormatTargetForReply ).join( '<br>' );
 			return strResponse.replace( /⭈[^⭊]*⭊/u, function() { return strTargets; } );
 		});
-		autocomplete.InsertTextAndFocus( rgResponses.join( '<br><br>' ) );
+		autocomplete.InsertHTMLAndFocus( rgResponses.join( '<br><br>' ) );
 	},
 
 	FormatTargetForReply: function( target )

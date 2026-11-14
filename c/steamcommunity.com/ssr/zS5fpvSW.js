@@ -355,6 +355,45 @@ function _(_) {
     [_],
   );
 }
+var _ = _(_(), 1),
+  _ = _.createContext({
+    AddImpression: () => {
+      console.log(`Impression Tracking not enabled`);
+    },
+    BIsValid: () => !1,
+  });
+function _() {
+  return _.useContext(_);
+}
+function _(_) {
+  let { appID: _, feature: _, depth: _, children: _ } = _,
+    _ = _(_, _),
+    _ = _(),
+    [_, _] = _.useState(void 0),
+    _ = _.useCallback(
+      (_) => {
+        _.isIntersecting &&
+          _((_) =>
+            _?.appID == _ && _?.snr == _
+              ? _
+              : {
+                  appID: _,
+                  snr: _,
+                },
+          );
+      },
+      [_, _],
+    );
+  (0, _.useEffect)(() => {
+    _ && _.appID != null && _.AddImpression(_.appID, _.snr);
+  }, [_, _]);
+  let _ = _(_),
+    _ = _ && (!_ || (_.appID != _ && _.snr != _)),
+    _ = _(_.props.ref, _ ? _ : void 0);
+  return _.cloneElement(_, {
+    ref: _,
+  });
+}
 async function _(_) {
   let _ = {
       get_appids: !0,
@@ -706,7 +745,6 @@ var _ = {
   _ = 39049601,
   _ = 45479024,
   _ = 41316928,
-  _ = _(_(), 1),
   _ = _(_(), 1),
   _ = _(_());
 function _(_, _, _) {
@@ -4824,44 +4862,6 @@ function _(_) {
     default:
       return `#SteamOSCompatibility_Category_Unknown`;
   }
-}
-var _ = _.createContext({
-  AddImpression: () => {
-    console.log(`Impression Tracking not enabled`);
-  },
-  BIsValid: () => !1,
-});
-function _() {
-  return _.useContext(_);
-}
-function _(_) {
-  let { appID: _, feature: _, depth: _, children: _ } = _,
-    _ = _(_, _),
-    _ = _(),
-    [_, _] = _.useState(void 0),
-    _ = _.useCallback(
-      (_) => {
-        _.isIntersecting &&
-          _((_) =>
-            _?.appID == _ && _?.snr == _
-              ? _
-              : {
-                  appID: _,
-                  snr: _,
-                },
-          );
-      },
-      [_, _],
-    );
-  (0, _.useEffect)(() => {
-    _ && _.appID != null && _.AddImpression(_.appID, _.snr);
-  }, [_, _]);
-  let _ = _(_),
-    _ = _ && (!_ || (_.appID != _ && _.snr != _)),
-    _ = _(_.props.ref, _ ? _ : void 0);
-  return _.cloneElement(_, {
-    ref: _,
-  });
 }
 function _(_) {
   return _ == 2 ? `bundle` : _ == 1 ? `sub` : `app`;
