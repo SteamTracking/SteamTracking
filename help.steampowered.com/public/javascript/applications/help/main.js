@@ -72574,9 +72574,9 @@ function GX(e) {
   return (0, Y.jsx)(`svg`, {
     version: `1.1`,
     xmlns: `http://www.w3.org/2000/svg`,
-    className: `SVGIcon_Button SVGIcon_Check`,
     x: `0px`,
     y: `0px`,
+    style: { fill: `#FFFFFF`, width: `100%`, height: `100%` },
     width: `256px`,
     height: `256px`,
     viewBox: `0 0 256 256`,

@@ -460,12 +460,11 @@ function _(_) {
                   _(_);
                 },
               }),
-              _?.length > 0 &&
-                (0, _.jsx)(`input`, {
-                  type: `hidden`,
-                  name: `social_media`,
-                  value: JSON.stringify(_),
-                }),
+              (0, _.jsx)(`input`, {
+                type: `hidden`,
+                name: `social_media`,
+                value: JSON.stringify(_),
+              }),
               (0, _.jsx)(`a`, {
                 className: `btnv6_blue_hoverfade btn_medium`,
                 href: `#`,

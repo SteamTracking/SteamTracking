@@ -443,12 +443,11 @@ function z(e) {
                   c(n);
                 },
               }),
-              s?.length > 0 &&
-                (0, M.jsx)(`input`, {
-                  type: `hidden`,
-                  name: `social_media`,
-                  value: JSON.stringify(s),
-                }),
+              (0, M.jsx)(`input`, {
+                type: `hidden`,
+                name: `social_media`,
+                value: JSON.stringify(s),
+              }),
               (0, M.jsx)(`a`, {
                 className: `btnv6_blue_hoverfade btn_medium`,
                 href: `#`,

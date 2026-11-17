@@ -26376,6 +26376,15 @@ function _(_, _, _, _, _, _) {
     _
   );
 }
+function _(_, _, _, _, _, _) {
+  if (_.trim().length == 0) return `Enter an internal name.`;
+  if (_ == 0) return `Choose a message type.`;
+  if (_.trim().length == 0) return `Choose the template button text.`;
+  if (!_.BHasAssociatedSaleEvent() && !_)
+    return _
+      ? `Still loading the featured store item. If this does not clear, check that the featured item exists.`
+      : `This plan has no featured store item and no sale page. Close this dialog, use "Feature Store Item" on the plan (for example, pick the advertising app) or link a sale page, then try again.`;
+}
 function _(_) {
   let { oEditablePlan: _, index: _, closeModal: _ } = _,
     [_, _] = _(() => [_.GetFeaturedItemID(), _.GetFeaturedItemType()]),
@@ -26400,6 +26409,7 @@ function _(_) {
     [_, _] = (0, _.useState)(_.BHasMarketingMessages(_)),
     [_, _] = (0, _.useState)(`#msg_action_details`),
     { fnCreateMarketingMessage: _ } = _(),
+    _ = _(_, !!_, _, _, _, _),
     _ = _();
   return _.bLoading
     ? (0, _.jsx)(_, {
@@ -26420,12 +26430,7 @@ function _(_) {
           strDescription: `Create and link a Marketing Message from date range and featured item from the existing plan? Any additional customization can be done in the Marketing Message editor directly. NOTE: We did not fill in country restrictions, so need to double check if those are required.`,
           onCancel: _,
           className: _,
-          bOKDisabled:
-            _.trim().length == 0 ||
-            _ == 0 ||
-            (!_.BHasAssociatedSaleEvent() && !_) ||
-            _.trim().length == 0 ||
-            _.bLoading,
+          bOKDisabled: !!_ || _.bLoading,
           bAllowFullSize: !0,
           onOK: () => {
             _.fnSetLoading(!0);
@@ -26476,6 +26481,13 @@ function _(_) {
                 fnSetSelected: _,
               }),
             }),
+            !!_ &&
+              (0, _.jsx)(_, {
+                className: `LfaMpn7Nm80-`,
+                toolTipContent: _,
+                bTopmost: !0,
+                children: `Why is Confirm disabled?`,
+              }),
           ],
         });
 }
