@@ -231,80 +231,6 @@ var _ = class {
     }
   };
 _([_], _.prototype, `Unregister`, null);
-function _(_) {
-  return _ != null && _.focus !== void 0;
-}
-function _(_, _) {
-  let _ = 0,
-    _ = 0;
-  return (
-    _.right < _.left
-      ? (_ = _.left - _.right)
-      : _.left > _.right && (_ = _.left - _.right),
-    _.bottom < _.top
-      ? (_ = _.top - _.bottom)
-      : _.top > _.bottom && (_ = _.top - _.bottom),
-    Math.sqrt(_ * _ + _ * _)
-  );
-}
-function _(_) {
-  let _;
-  return (_ && (_ = _.ownerDocument.defaultView), _);
-}
-function _(_, _) {
-  let _ = _?.parentElement;
-  for (; _;) {
-    if (_(_)) {
-      let _ = window.getComputedStyle(_);
-      if (
-        _.position == `fixed` ||
-        _.position == `sticky` ||
-        ((!_ || _ == `x`) &&
-          (_.overflowX == `scroll` || _.overflowX == `auto`)) ||
-        ((!_ || _ == `y`) && (_.overflowY == `scroll` || _.overflowY == `auto`))
-      )
-        break;
-    }
-    _ = _.parentElement;
-  }
-  return _(_) ? _ : null;
-}
-function _(_, _) {
-  let _ = _;
-  for (; _;) {
-    if (_(_)) return _;
-    _ = _.parentElement;
-  }
-}
-function _(_, _) {
-  if (!(`ownerDocument` in _)) return !0;
-  let _ = _.ownerDocument.defaultView.getComputedStyle(_),
-    _ = _ === `x` ? _.overflowX : _.overflowY;
-  return _ === `auto` || _ === `scroll`;
-}
-var _ = {
-  _: `y`,
-  _: `x`,
-};
-function _() {
-  return {
-    _: 0,
-    _: 0,
-  };
-}
-function _(_, _) {
-  return _._ * _._ + _._ * _._;
-}
-function _(_, _) {
-  return {
-    _: _._ - _._,
-    _: _._ - _._,
-  };
-}
-function _(_, _) {
-  let _ = _(_, _);
-  return Math.sqrt(_(_, _));
-}
 var _ = class {
   m_sName;
   m_fnIdGenerator = void 0;
@@ -566,15 +492,25 @@ function _(_, _, _, _, _, _, ..._) {
   (window.DebugLogEnabled = (..._) => _.Get().PrintEnabledLogs(..._)),
   (window.EnableSteamConsole = (_ = !0) =>
     _.Get().SetDebugLogEnabled(`SteamClient`, _)));
-function _(_, _, _) {
-  return _ == null || _ == null
-    ? _ === _
-    : typeof _ != `object` ||
-        typeof _ != `object` ||
-        Object.keys(_).length !== Object.keys(_).length
-      ? !1
-      : ((_ ??= (_, _) => _ === _),
-        Object.keys(_).every((_) => _.hasOwnProperty(_) && _(_[_], _[_])));
+function _(_, _) {
+  let _ = _.lastIndexOf(`.`);
+  if (_ == -1) return !1;
+  let _ = _.substring(0, _),
+    _ = _.substring(_ + 1),
+    _ = _(_, _);
+  return _ !== null && typeof _[_] == `function`;
+}
+function _(_) {
+  return _(window, _);
+}
+function _(_, _) {
+  let _ = (_) => _ && typeof _ == `object`,
+    _ = _?.SteamClient;
+  for (let _ of _.split(`.`)) {
+    if (!_(_) || !(_ in _)) return null;
+    _ = _[_];
+  }
+  return _(_) ? _ : null;
 }
 var _ = _(_(), 1),
   _ = class {
@@ -791,6 +727,224 @@ var _ = class {
     this.m_NavigationTypeChangeCallbacks.Dispatch(_);
   }
 };
+function _(_) {
+  return _ != null && _.focus !== void 0;
+}
+function _(_, _) {
+  let _ = _;
+  for (; _;) {
+    if (
+      (_.parentNode?.nodeType == Node.DOCUMENT_FRAGMENT_NODE &&
+        (_ = _.parentNode.host),
+      _ == _)
+    )
+      return !0;
+    _ = _.parentElement;
+  }
+  return !1;
+}
+function _(_, _) {
+  let _ = 0,
+    _ = 0;
+  return (
+    _.right < _.left
+      ? (_ = _.left - _.right)
+      : _.left > _.right && (_ = _.left - _.right),
+    _.bottom < _.top
+      ? (_ = _.top - _.bottom)
+      : _.top > _.bottom && (_ = _.top - _.bottom),
+    Math.sqrt(_ * _ + _ * _)
+  );
+}
+function _(_, _) {
+  return {
+    top: _.screenTop + _.top,
+    bottom: _.screenTop + _.bottom,
+    left: _.screenLeft + _.left,
+    right: _.screenLeft + _.right,
+  };
+}
+function _(_) {
+  let _ = 1,
+    _ = _;
+  for (; _ != null && _.tagName != `HTML`;) {
+    let _ = getComputedStyle(_);
+    if (_.zoom) {
+      let _ = Number.parseFloat(_.zoom);
+      isNaN(_) || (_ *= _);
+    }
+    _ = _.parentElement;
+  }
+  return _;
+}
+function _(_) {
+  let _;
+  return (
+    _ && _(_.currentTarget) && (_ = _.currentTarget.ownerDocument.defaultView),
+    _
+  );
+}
+function _(_) {
+  let _;
+  return (_ && (_ = _.ownerDocument.defaultView), _);
+}
+function _(_) {
+  let _ = window.top ?? window,
+    _ = _.document,
+    _ = _.createElement(`textarea`);
+  ((_.textContent = _),
+    (_.style.position = `fixed`),
+    _.body.appendChild(_),
+    _.select());
+  try {
+    if (
+      (_(_, `Browser.NotifyUserActivation`) &&
+        _.SteamClient.Browser.NotifyUserActivation(),
+      !_.execCommand(`copy`))
+    )
+      throw `document.execCommand false`;
+  } catch (_) {
+    console.warn(`Copy to clipboard failed.`, _);
+  } finally {
+    _.body.removeChild(_);
+  }
+}
+function _(_) {
+  (_.startsWith(`steam://openurl/`) && (_ = _.slice(16)), _(_));
+}
+function _(_) {
+  let _ = _.ownerDocument;
+  return !!(
+    _.fullscreen ||
+    _.webkitIsFullScreen ||
+    _.mozFullScreen ||
+    _.msFullscreenElement
+  );
+}
+function _(_, _) {
+  let _ = _;
+  return _.requestFullscreen
+    ? (_.requestFullscreen(), !0)
+    : _.webkitRequestFullscreen
+      ? (_.webkitRequestFullscreen(), !0)
+      : _ && _.webkitSetPresentationMode
+        ? (_.webkitSetPresentationMode(`fullscreen`), !0)
+        : _.mozRequestFullScreen
+          ? (_.mozRequestFullScreen(), !0)
+          : _.msRequestFullscreen
+            ? (_.msRequestFullscreen(), !0)
+            : !1;
+}
+function _(_) {
+  let _ = _.ownerDocument;
+  _.exitFullscreen
+    ? _.exitFullscreen()
+    : _.cancelFullscreen
+      ? _.cancelFullscreen()
+      : _.webkitCancelFullScreen
+        ? _.webkitCancelFullScreen()
+        : _.mozCancelFullScreen
+          ? _.mozCancelFullScreen()
+          : _.msExitFullscreen && _.msExitFullscreen();
+}
+function _(_) {
+  return _.nodeName === `INPUT`;
+}
+function _(_, _) {
+  switch (_) {
+    case `TEXTAREA`:
+      return !0;
+    case `INPUT`:
+      switch (_) {
+        case `date`:
+        case `datetime-local`:
+        case `datetime`:
+        case `email`:
+        case `month`:
+        case `number`:
+        case `password`:
+        case `search`:
+        case `tel`:
+        case `text`:
+        case `time`:
+        case `url`:
+        case `week`:
+          return !0;
+        default:
+          return !1;
+      }
+    default:
+      return !1;
+  }
+}
+function _(_, _, _) {
+  let _ = _.parentElement;
+  for (; _ && _ !== _ && !_.hasAttribute(_);) _ = _.parentElement;
+  return _ || _;
+}
+function _(_, _) {
+  let _ = _?.parentElement;
+  for (; _;) {
+    if (_(_)) {
+      if (!_ || _ == `x`) {
+        let _ = window.getComputedStyle(_);
+        if (
+          _.overflowX == `scroll` ||
+          _.overflowX == `auto` ||
+          _.position == `fixed`
+        )
+          break;
+      }
+      if (!_ || _ == `y`) {
+        let _ = window.getComputedStyle(_);
+        if (
+          _.overflowY == `scroll` ||
+          _.overflowY == `auto` ||
+          _.position == `fixed`
+        )
+          break;
+      }
+    }
+    _ = _.parentElement;
+  }
+  return _(_) ? _ : null;
+}
+function _() {
+  return _(document);
+}
+function _(_) {
+  let _ = {};
+  return (
+    _.querySelectorAll(`link[rel="stylesheet"]`).forEach((_) => {
+      _[_.href] = _;
+    }),
+    _
+  );
+}
+function _(_, _) {
+  _(_.document, _, !0);
+}
+function _(_, _, _) {
+  let _ = Object.assign({}, _),
+    _ = _.getElementsByTagName(`head`)[0],
+    _ = _.getElementsByTagName(`link`),
+    _ = _.length;
+  for (let _ = 0; _ < _; ++_) {
+    let _ = _[_];
+    _[_.href] ? delete _[_.href] : _ && _.parentNode?.removeChild(_);
+  }
+  let _ = [];
+  for (let _ in _) {
+    let _ = _[_],
+      _ = _.createElement(`link`);
+    for (let _ = 0; _ < _.attributes.length; _++) {
+      let _ = _.attributes.item(_);
+      _.setAttribute(_.name, _.value);
+    }
+    _.push(_);
+  }
+  return (_.prepend(..._), _);
+}
 function _(_) {
   return typeof _ == `object` && !!_ && `value` in _;
 }
@@ -1018,41 +1172,8 @@ function _(_) {
   for (let _ = 0; _ < _; _++) _ += `*`;
   return ((_ += ` `), _);
 }
-function _(_, _) {
-  let _ = _.lastIndexOf(`.`);
-  if (_ == -1) return !1;
-  let _ = _.substring(0, _),
-    _ = _.substring(_ + 1),
-    _ = _(_, _);
-  return _ !== null && typeof _[_] == `function`;
-}
-function _(_) {
-  return _(window, _);
-}
-function _(_, _) {
-  let _ = (_) => _ && typeof _ == `object`,
-    _ = _?.SteamClient;
-  for (let _ of _.split(`.`)) {
-    if (!_(_) || !(_ in _)) return null;
-    _ = _[_];
-  }
-  return _(_) ? _ : null;
-}
 function _(_) {
   return _ != null && _.focus !== void 0;
-}
-function _(_, _) {
-  let _ = _;
-  for (; _;) {
-    if (
-      (_.parentNode?.nodeType == Node.DOCUMENT_FRAGMENT_NODE &&
-        (_ = _.parentNode.host),
-      _ == _)
-    )
-      return !0;
-    _ = _.parentElement;
-  }
-  return !1;
 }
 function _(_, _) {
   let _ = 0,
@@ -1067,339 +1188,73 @@ function _(_, _) {
     Math.sqrt(_ * _ + _ * _)
   );
 }
-function _(_, _) {
-  return {
-    top: _.screenTop + _.top,
-    bottom: _.screenTop + _.bottom,
-    left: _.screenLeft + _.left,
-    right: _.screenLeft + _.right,
-  };
-}
-function _(_) {
-  let _ = 1,
-    _ = _;
-  for (; _ != null && _.tagName != `HTML`;) {
-    let _ = getComputedStyle(_);
-    if (_.zoom) {
-      let _ = Number.parseFloat(_.zoom);
-      isNaN(_) || (_ *= _);
-    }
-    _ = _.parentElement;
-  }
-  return _;
-}
-function _(_) {
-  let _;
-  return (
-    _ && _(_.currentTarget) && (_ = _.currentTarget.ownerDocument.defaultView),
-    _
-  );
-}
 function _(_) {
   let _;
   return (_ && (_ = _.ownerDocument.defaultView), _);
-}
-function _(_) {
-  let _ = window.top ?? window,
-    _ = _.document,
-    _ = _.createElement(`textarea`);
-  ((_.textContent = _),
-    (_.style.position = `fixed`),
-    _.body.appendChild(_),
-    _.select());
-  try {
-    if (
-      (_(_, `Browser.NotifyUserActivation`) &&
-        _.SteamClient.Browser.NotifyUserActivation(),
-      !_.execCommand(`copy`))
-    )
-      throw `document.execCommand false`;
-  } catch (_) {
-    console.warn(`Copy to clipboard failed.`, _);
-  } finally {
-    _.body.removeChild(_);
-  }
-}
-function _(_) {
-  (_.startsWith(`steam://openurl/`) && (_ = _.slice(16)), _(_));
-}
-function _(_) {
-  let _ = _.ownerDocument;
-  return !!(
-    _.fullscreen ||
-    _.webkitIsFullScreen ||
-    _.mozFullScreen ||
-    _.msFullscreenElement
-  );
-}
-function _(_, _) {
-  let _ = _;
-  return _.requestFullscreen
-    ? (_.requestFullscreen(), !0)
-    : _.webkitRequestFullscreen
-      ? (_.webkitRequestFullscreen(), !0)
-      : _ && _.webkitSetPresentationMode
-        ? (_.webkitSetPresentationMode(`fullscreen`), !0)
-        : _.mozRequestFullScreen
-          ? (_.mozRequestFullScreen(), !0)
-          : _.msRequestFullscreen
-            ? (_.msRequestFullscreen(), !0)
-            : !1;
-}
-function _(_) {
-  let _ = _.ownerDocument;
-  _.exitFullscreen
-    ? _.exitFullscreen()
-    : _.cancelFullscreen
-      ? _.cancelFullscreen()
-      : _.webkitCancelFullScreen
-        ? _.webkitCancelFullScreen()
-        : _.mozCancelFullScreen
-          ? _.mozCancelFullScreen()
-          : _.msExitFullscreen && _.msExitFullscreen();
-}
-function _(_) {
-  return _.nodeName === `INPUT`;
-}
-function _(_, _) {
-  switch (_) {
-    case `TEXTAREA`:
-      return !0;
-    case `INPUT`:
-      switch (_) {
-        case `date`:
-        case `datetime-local`:
-        case `datetime`:
-        case `email`:
-        case `month`:
-        case `number`:
-        case `password`:
-        case `search`:
-        case `tel`:
-        case `text`:
-        case `time`:
-        case `url`:
-        case `week`:
-          return !0;
-        default:
-          return !1;
-      }
-    default:
-      return !1;
-  }
-}
-function _(_, _, _) {
-  let _ = _.parentElement;
-  for (; _ && _ !== _ && !_.hasAttribute(_);) _ = _.parentElement;
-  return _ || _;
 }
 function _(_, _) {
   let _ = _?.parentElement;
   for (; _;) {
     if (_(_)) {
-      if (!_ || _ == `x`) {
-        let _ = window.getComputedStyle(_);
-        if (
-          _.overflowX == `scroll` ||
-          _.overflowX == `auto` ||
-          _.position == `fixed`
-        )
-          break;
-      }
-      if (!_ || _ == `y`) {
-        let _ = window.getComputedStyle(_);
-        if (
-          _.overflowY == `scroll` ||
-          _.overflowY == `auto` ||
-          _.position == `fixed`
-        )
-          break;
-      }
+      let _ = window.getComputedStyle(_);
+      if (
+        _.position == `fixed` ||
+        _.position == `sticky` ||
+        ((!_ || _ == `x`) &&
+          (_.overflowX == `scroll` || _.overflowX == `auto`)) ||
+        ((!_ || _ == `y`) && (_.overflowY == `scroll` || _.overflowY == `auto`))
+      )
+        break;
     }
     _ = _.parentElement;
   }
   return _(_) ? _ : null;
 }
-function _() {
-  return _(document);
-}
-function _(_) {
-  let _ = {};
-  return (
-    _.querySelectorAll(`link[rel="stylesheet"]`).forEach((_) => {
-      _[_.href] = _;
-    }),
-    _
-  );
+function _(_, _) {
+  let _ = _;
+  for (; _;) {
+    if (_(_)) return _;
+    _ = _.parentElement;
+  }
 }
 function _(_, _) {
-  _(_.document, _, !0);
-}
-function _(_, _, _) {
-  let _ = Object.assign({}, _),
-    _ = _.getElementsByTagName(`head`)[0],
-    _ = _.getElementsByTagName(`link`),
-    _ = _.length;
-  for (let _ = 0; _ < _; ++_) {
-    let _ = _[_];
-    _[_.href] ? delete _[_.href] : _ && _.parentNode?.removeChild(_);
-  }
-  let _ = [];
-  for (let _ in _) {
-    let _ = _[_],
-      _ = _.createElement(`link`);
-    for (let _ = 0; _ < _.attributes.length; _++) {
-      let _ = _.attributes.item(_);
-      _.setAttribute(_.name, _.value);
-    }
-    _.push(_);
-  }
-  return (_.prepend(..._), _);
-}
-var _ = class {
-  m_node;
-  m_History;
-  m_StateHistory;
-  constructor(_) {
-    this.m_node = _;
-  }
-  TakeFocus(_) {
-    return this.m_node.BTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
-  }
-  ParentTakeFocus(_) {
-    this.m_node.Parent?.BTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
-  }
-  ChildTakeFocus(_) {
-    return this.m_node.BChildTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
-  }
-  FocusVisibleChild(_) {
-    return this.m_node.BVisibleChildTakeFocus(_);
-  }
-  BHasFocus() {
-    return this.m_node.BHasFocus();
-  }
-  BFocusWithin() {
-    return this.m_node.BFocusWithin();
-  }
-  get NavKey() {
-    return this.m_node.NavKey;
-  }
-  PushState() {
-    ((this.m_History ||= new _(this.m_node)), this.m_History.PushState());
-  }
-  PopState(_ = 0) {
-    this.m_History && this.m_History.PopState(_);
-  }
-  SaveState(_) {
-    ((this.m_StateHistory ||= new _(this.m_node)),
-      this.m_StateHistory.SaveState(_));
-  }
-  RestoreState(_, _ = 0) {
-    return this.m_StateHistory ? this.m_StateHistory.RestoreState(_, _) : !1;
-  }
-  GetFocusSnapshot() {
-    return _(this.m_node);
-  }
-  RestoreFocusSnapshot(_, _ = 0) {
-    return _(this.m_node, _, _);
-  }
-  NavTree() {
-    return this.m_node.Tree;
-  }
-  Node() {
-    return this.m_node;
-  }
-};
-function _(_, _, _, _ = 0.001) {
-  return _ == `x`
-    ? _.right > _.left + _ && _.left + _ < _.right
-    : _ == `y`
-      ? _.bottom > _.top + _ && _.top + _ < _.bottom
-      : (_(!1, `Invalid axis ${_}`), !1);
-}
-function _(_, _, _) {
-  let _;
-  return (
-    _ == `x`
-      ? (_ = Math.min(_.right, _.right) - Math.max(_.left, _.left))
-      : _ == `y`
-        ? (_ = Math.min(_.bottom, _.bottom) - Math.max(_.top, _.top))
-        : (_(!1, `Invalid axis ${_}`), (_ = 0)),
-    _ < 0 ? 0 : _
-  );
-}
-function _(_, _) {
-  return _ == `x`
-    ? {
-        min: _.left,
-        max: _.right,
-      }
-    : {
-        min: _.top,
-        max: _.bottom,
-      };
-}
-function _(_, _, _) {
-  let _ = _[_],
-    _ = _(_, _);
-  return _ < _.min ? _.min - _ : _ > _.max ? _ - _.max : 0;
-}
-function _(_) {
-  return {
-    _: _.left,
-    _: _.top,
-  };
+  if (!(`ownerDocument` in _)) return !0;
+  let _ = _.ownerDocument.defaultView.getComputedStyle(_),
+    _ = _ === `x` ? _.overflowX : _.overflowY;
+  return _ === `auto` || _ === `scroll`;
 }
 var _ = {
-  OnBlur: () => {},
-  OnFocus: () => {},
-  OnFocusChange: () => {},
-  OnForceMeasureFocusRing: () => {},
+  _: `y`,
+  _: `x`,
 };
-function _(_) {
-  if (!_) return _.NONE;
-  let _ = _.ownerDocument.defaultView,
-    _ = _.getComputedStyle(_);
-  if (_.display == `flex`)
-    switch (_.flexDirection) {
-      case `row`:
-        return _.flexWrap == `wrap` ? _.GRID : _.ROW;
-      case `row-reverse`:
-        return _.ROW_REVERSE;
-      case `column`:
-        return _.COLUMN;
-      case `column-reverse`:
-        return _.COLUMN_REVERSE;
-    }
-  else if (_.display == `grid`)
-    return _.gridTemplateAreas === `none` ? _.GRID : _.GEOMETRIC;
-  else if (_.childElementCount > 0) {
-    let _ = _.getComputedStyle(_.firstElementChild),
-      _ = _.float;
-    if (
-      (_ === `inline-start`
-        ? ((_ = `left`), _.direction === `rtl` && (_ = `right`))
-        : _ === `inline-end` &&
-          ((_ = `right`), _.direction === `rtl` && (_ = `left`)),
-      _ === `left`)
-    )
-      return _.ROW;
-    if (_ === `right`) return _.ROW_REVERSE;
-    if (_.display === `inline` || _.display === `inline-block`) return _.GRID;
-  }
-  return _.COLUMN;
+function _() {
+  return {
+    _: 0,
+    _: 0,
+  };
 }
-function _(_) {
-  switch (_) {
-    case _.DIR_UP:
-    case _.DIR_DOWN:
-      return `y`;
-    case _.DIR_LEFT:
-    case _.DIR_RIGHT:
-      return `x`;
-    default:
-      return;
-  }
+function _(_, _) {
+  return _._ * _._ + _._ * _._;
+}
+function _(_, _) {
+  return {
+    _: _._ - _._,
+    _: _._ - _._,
+  };
+}
+function _(_, _) {
+  let _ = _(_, _);
+  return Math.sqrt(_(_, _));
+}
+function _(_, _, _) {
+  return _ == null || _ == null
+    ? _ === _
+    : typeof _ != `object` ||
+        typeof _ != `object` ||
+        Object.keys(_).length !== Object.keys(_).length
+      ? !1
+      : ((_ ??= (_, _) => _ === _),
+        Object.keys(_).every((_) => _.hasOwnProperty(_) && _(_[_], _[_])));
 }
 function _(_, _, _) {
   let _ = [],
@@ -3035,58 +2890,150 @@ var _ = new _(`FocusNavigationMovement`),
 (_([_], _.prototype, `OnDOMFocus`, null),
   _([_], _.prototype, `OnDOMBlur`, null),
   _([_], _.prototype, `OnNavigationEvent`, null));
-function _(_, _, _ = [], _ = !0) {
-  let _ = _.useRef(_);
-  ((_.current = _),
-    _.useEffect(() => {
-      if (!_.current || !_) return;
-      let _ = setInterval(() => {
-        _.current && _.current();
-      }, _);
-      return () => clearInterval(_);
-    }, [_, _, ..._]));
+var _ = class {
+  m_node;
+  m_History;
+  m_StateHistory;
+  constructor(_) {
+    this.m_node = _;
+  }
+  TakeFocus(_) {
+    return this.m_node.BTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
+  }
+  ParentTakeFocus(_) {
+    this.m_node.Parent?.BTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
+  }
+  ChildTakeFocus(_) {
+    return this.m_node.BChildTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
+  }
+  FocusVisibleChild(_) {
+    return this.m_node.BVisibleChildTakeFocus(_);
+  }
+  BHasFocus() {
+    return this.m_node.BHasFocus();
+  }
+  BFocusWithin() {
+    return this.m_node.BFocusWithin();
+  }
+  get NavKey() {
+    return this.m_node.NavKey;
+  }
+  PushState() {
+    ((this.m_History ||= new _(this.m_node)), this.m_History.PushState());
+  }
+  PopState(_ = 0) {
+    this.m_History && this.m_History.PopState(_);
+  }
+  SaveState(_) {
+    ((this.m_StateHistory ||= new _(this.m_node)),
+      this.m_StateHistory.SaveState(_));
+  }
+  RestoreState(_, _ = 0) {
+    return this.m_StateHistory ? this.m_StateHistory.RestoreState(_, _) : !1;
+  }
+  GetFocusSnapshot() {
+    return _(this.m_node);
+  }
+  RestoreFocusSnapshot(_, _ = 0) {
+    return _(this.m_node, _, _);
+  }
+  NavTree() {
+    return this.m_node.Tree;
+  }
+  Node() {
+    return this.m_node;
+  }
+};
+function _(_, _, _, _ = 0.001) {
+  return _ == `x`
+    ? _.right > _.left + _ && _.left + _ < _.right
+    : _ == `y`
+      ? _.bottom > _.top + _ && _.top + _ < _.bottom
+      : (_(!1, `Invalid axis ${_}`), !1);
 }
-function _() {
-  let [, _] = _.useState(0);
-  return _.useCallback(() => _((_) => _ + 1), []);
-}
-function _(_, _) {
-  _.useLayoutEffect(() => {
-    if (!_ || !_) return;
-    let _ = _.Register(_);
-    return () => _.Unregister();
-  }, [_, _]);
-}
-function _(_) {
-  return _;
-}
-function _() {}
-function _(_) {
-  return _.useSyncExternalStore(
-    _ ? _.SyncStore : _,
-    _ ? _.GetValue : _,
-    _ ? _.GetValue : _,
-  );
-}
-function _(_, _) {
-  let [_, _] = _.useState(_);
+function _(_, _, _) {
+  let _;
   return (
-    _.useEffect(() => {
-      if (_) _(!0);
-      else {
-        let _ = window.setTimeout(() => _(!1), _);
-        return () => window.clearTimeout(_);
-      }
-    }, [_, _]),
-    _
+    _ == `x`
+      ? (_ = Math.min(_.right, _.right) - Math.max(_.left, _.left))
+      : _ == `y`
+        ? (_ = Math.min(_.bottom, _.bottom) - Math.max(_.top, _.top))
+        : (_(!1, `Invalid axis ${_}`), (_ = 0)),
+    _ < 0 ? 0 : _
   );
 }
 function _(_, _) {
-  return _(_, _) || _;
+  return _ == `x`
+    ? {
+        min: _.left,
+        max: _.right,
+      }
+    : {
+        min: _.top,
+        max: _.bottom,
+      };
 }
-function _(_ = !1) {
-  let [_, _] = _.useState(_);
-  return [_, _.useCallback(() => _(!0), []), _.useCallback(() => _(!1), [])];
+function _(_, _, _) {
+  let _ = _[_],
+    _ = _(_, _);
+  return _ < _.min ? _.min - _ : _ > _.max ? _ - _.max : 0;
+}
+function _(_) {
+  return {
+    _: _.left,
+    _: _.top,
+  };
+}
+var _ = {
+  OnBlur: () => {},
+  OnFocus: () => {},
+  OnFocusChange: () => {},
+  OnForceMeasureFocusRing: () => {},
+};
+function _(_) {
+  if (!_) return _.NONE;
+  let _ = _.ownerDocument.defaultView,
+    _ = _.getComputedStyle(_);
+  if (_.display == `flex`)
+    switch (_.flexDirection) {
+      case `row`:
+        return _.flexWrap == `wrap` ? _.GRID : _.ROW;
+      case `row-reverse`:
+        return _.ROW_REVERSE;
+      case `column`:
+        return _.COLUMN;
+      case `column-reverse`:
+        return _.COLUMN_REVERSE;
+    }
+  else if (_.display == `grid`)
+    return _.gridTemplateAreas === `none` ? _.GRID : _.GEOMETRIC;
+  else if (_.childElementCount > 0) {
+    let _ = _.getComputedStyle(_.firstElementChild),
+      _ = _.float;
+    if (
+      (_ === `inline-start`
+        ? ((_ = `left`), _.direction === `rtl` && (_ = `right`))
+        : _ === `inline-end` &&
+          ((_ = `right`), _.direction === `rtl` && (_ = `left`)),
+      _ === `left`)
+    )
+      return _.ROW;
+    if (_ === `right`) return _.ROW_REVERSE;
+    if (_.display === `inline` || _.display === `inline-block`) return _.GRID;
+  }
+  return _.COLUMN;
+}
+function _(_) {
+  switch (_) {
+    case _.DIR_UP:
+    case _.DIR_DOWN:
+      return `y`;
+    case _.DIR_LEFT:
+    case _.DIR_RIGHT:
+      return `x`;
+    default:
+      return;
+  }
 }
 function _(_) {
   return {
@@ -3188,6 +3135,59 @@ function _(_) {
   let _ = _.useRef(void 0),
     _ = _.useContext(_);
   return ((_.current ||= _(_ || {})), _.current);
+}
+function _(_, _, _ = [], _ = !0) {
+  let _ = _.useRef(_);
+  ((_.current = _),
+    _.useEffect(() => {
+      if (!_.current || !_) return;
+      let _ = setInterval(() => {
+        _.current && _.current();
+      }, _);
+      return () => clearInterval(_);
+    }, [_, _, ..._]));
+}
+function _() {
+  let [, _] = _.useState(0);
+  return _.useCallback(() => _((_) => _ + 1), []);
+}
+function _(_, _) {
+  _.useLayoutEffect(() => {
+    if (!_ || !_) return;
+    let _ = _.Register(_);
+    return () => _.Unregister();
+  }, [_, _]);
+}
+function _(_) {
+  return _;
+}
+function _() {}
+function _(_) {
+  return _.useSyncExternalStore(
+    _ ? _.SyncStore : _,
+    _ ? _.GetValue : _,
+    _ ? _.GetValue : _,
+  );
+}
+function _(_, _) {
+  let [_, _] = _.useState(_);
+  return (
+    _.useEffect(() => {
+      if (_) _(!0);
+      else {
+        let _ = window.setTimeout(() => _(!1), _);
+        return () => window.clearTimeout(_);
+      }
+    }, [_, _]),
+    _
+  );
+}
+function _(_, _) {
+  return _(_, _) || _;
+}
+function _(_ = !1) {
+  let [_, _] = _.useState(_);
+  return [_, _.useCallback(() => _(!0), []), _.useCallback(() => _(!1), [])];
 }
 var _ = _(),
   _ = _.createContext(void 0);

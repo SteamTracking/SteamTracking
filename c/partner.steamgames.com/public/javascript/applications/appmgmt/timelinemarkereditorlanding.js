@@ -11386,6 +11386,12 @@ function _(_) {
       children: _.func({}),
     });
   }
+  if (`strImageURL` in _)
+    return (0, _.jsx)(`img`, {
+      src: _.strImageURL,
+      alt: ``,
+      className: _(_, _),
+    });
   let _ = ``;
   return (
     (_ = typeof _ == `string` ? _ : new XMLSerializer().serializeToString(_)),
@@ -18424,12 +18430,14 @@ function _(_, _) {
     }
   );
 }
+var _ = `#dcdedf`;
 function _(_, _) {
   let _ = _.Get().GetGameMarkerSVGById(_, _);
   if (!_) return null;
-  let _ = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">${_}</svg>`;
-  return new DOMParser().parseFromString(_, `image/svg+xml`).documentElement
-    .firstChild;
+  let _ = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36 36" fill="${_}" color="${_}">${_}</svg>`;
+  return {
+    strImageURL: `data:image/svg+xml,${encodeURIComponent(_)}`,
+  };
 }
 var _ = `bW6NnJgeiWk-`,
   _ = `V3BT-3QXPuE-`,

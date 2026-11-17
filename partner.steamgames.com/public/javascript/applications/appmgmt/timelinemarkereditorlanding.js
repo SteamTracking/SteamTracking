@@ -10244,6 +10244,12 @@ function Oa(e) {
     let e = En();
     return (0, W.jsx)(`div`, { className: r, children: e.func({}) });
   }
+  if (`strImageURL` in i)
+    return (0, W.jsx)(`img`, {
+      src: i.strImageURL,
+      alt: ``,
+      className: S(r, ba),
+    });
   let a = ``;
   return (
     (a = typeof i == `string` ? i : new XMLSerializer().serializeToString(i)),
@@ -16620,7 +16626,7 @@ var $ = class e {
     let e = d(`timeline_markers`, `application_config`);
     (this.ValidateStoreDefault(e) &&
       e.forEach((e) => this.m_mapTimelineMarker.set(e.timeline_marker_id, e)),
-      An(Ud));
+      An(Wd));
   }
   ValidateStoreDefault(e) {
     let t = e;
@@ -16690,36 +16696,36 @@ function Hd(e, t) {
     { oPublishedMarker: n, oUnpublishedMarker: i }
   );
 }
-function Ud(e, t) {
+var Ud = `#dcdedf`;
+function Wd(e, t) {
   let n = $.Get().GetGameMarkerSVGById(e, t);
   if (!n) return null;
-  let r = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">${n}</svg>`;
-  return new DOMParser().parseFromString(r, `image/svg+xml`).documentElement
-    .firstChild;
+  let r = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36 36" fill="${Ud}" color="${Ud}">${n}</svg>`;
+  return { strImageURL: `data:image/svg+xml,${encodeURIComponent(r)}` };
 }
-var Wd = `bW6NnJgeiWk-`,
-  Gd = `V3BT-3QXPuE-`,
-  Kd = `GqWICinvGkw-`,
-  qd = `YKpyJp8GNzs-`,
-  Jd = `wlQ9Q4HK0ns-`,
-  Yd = `kWUDsdjYMVg-`,
-  Xd = `_1UUIWhHwrOM-`,
-  Zd = `_3moKm7wLoRg-`,
-  Qd = `I-tbvNM8uSM-`,
-  $d = `-hlxMroQhOg-`,
-  ef = `oHIpesYvxMA-`,
-  tf = `_6Vpi-tE-oEU-`,
-  nf = `pchh-7xTLCE-`,
-  rf = `_5qz-ObFfK-A-`,
-  af = `sGz9odiNvg4-`,
-  of = `LiXShxrPrcE-`,
-  sf = `M8jwQ84cEEk-`,
-  cf = `fKuSgu0G7V8-`,
-  lf = `KftftOl0N4A-`,
-  uf = `XzyRD4VeIU8-`,
-  df = `_0N2azgGGH-w-`,
-  ff = `V6-CWPNS-vM-`;
-function pf(e) {
+var Gd = `bW6NnJgeiWk-`,
+  Kd = `V3BT-3QXPuE-`,
+  qd = `GqWICinvGkw-`,
+  Jd = `YKpyJp8GNzs-`,
+  Yd = `wlQ9Q4HK0ns-`,
+  Xd = `kWUDsdjYMVg-`,
+  Zd = `_1UUIWhHwrOM-`,
+  Qd = `_3moKm7wLoRg-`,
+  $d = `I-tbvNM8uSM-`,
+  ef = `-hlxMroQhOg-`,
+  tf = `oHIpesYvxMA-`,
+  nf = `_6Vpi-tE-oEU-`,
+  rf = `pchh-7xTLCE-`,
+  af = `_5qz-ObFfK-A-`,
+  of = `sGz9odiNvg4-`,
+  sf = `LiXShxrPrcE-`,
+  cf = `M8jwQ84cEEk-`,
+  lf = `fKuSgu0G7V8-`,
+  uf = `KftftOl0N4A-`,
+  df = `XzyRD4VeIU8-`,
+  ff = `_0N2azgGGH-w-`,
+  pf = `V6-CWPNS-vM-`;
+function mf(e) {
   let { imageBase64OrUntrustedSVG: t, imageType: n } = e;
   if (!t) return null;
   let r;
@@ -16728,22 +16734,22 @@ function pf(e) {
       ? (r = `data:image/svg+xml,${encodeURIComponent(t)}`)
       : n == 2 && (r = t),
     (0, W.jsx)(`div`, {
-      className: S(Xd),
+      className: S(Zd),
       children: (0, W.jsxs)(`div`, {
-        className: rf,
+        className: af,
         children: [
           (0, W.jsx)(`img`, {
-            className: Qd,
+            className: $d,
             src: r,
             alt: `SVG Large Preview`,
           }),
           (0, W.jsx)(`img`, {
-            className: $d,
+            className: ef,
             src: r,
             alt: `SVG Medium Preview`,
           }),
           (0, W.jsx)(`img`, {
-            className: ef,
+            className: tf,
             src: r,
             alt: `SVG Small Preview`,
           }),
@@ -16752,13 +16758,13 @@ function pf(e) {
     })
   );
 }
-function mf(e) {
+function hf(e) {
   let { svgXmlUntrusted: t } = e;
   if (!t) return null;
   let n = `data:image/svg+xml,${encodeURIComponent(t)}`;
-  return (0, W.jsx)(`img`, { className: ef, src: n, alt: `SVG Small Preview` });
+  return (0, W.jsx)(`img`, { className: tf, src: n, alt: `SVG Small Preview` });
 }
-function hf(e) {
+function gf(e) {
   let { appid: t, assetSetID: n, markerID: r } = e,
     { oPublishedMarker: i, oUnpublishedMarker: a } = Hd(n, r),
     { publicAssetSetID: o, hiddenAssetSetID: s } = Td(t),
@@ -16768,7 +16774,7 @@ function hf(e) {
     d = !!(a && a.asset_set_id != s),
     f = i?.asset_set_id === o;
   return (0, W.jsxs)(`div`, {
-    className: of,
+    className: sf,
     onMouseEnter: () => l(!0),
     onMouseLeave: () => l(!1),
     children: [
@@ -16777,17 +16783,17 @@ function hf(e) {
           className: `qnCfcbOAK-c-`,
           children: A(`#TimelineMarker_state_pending`),
         }),
-      (0, W.jsx)(pf, {
+      (0, W.jsx)(mf, {
         imageBase64OrUntrustedSVG: u.image,
         imageType: u.image_type,
       }),
-      (0, W.jsx)(`div`, { className: af, children: u.markerid }),
+      (0, W.jsx)(`div`, { className: of, children: u.markerid }),
       c &&
         (0, W.jsx)(Ne, {
           className: `F2avAdiaobg-`,
           onClick: (e) =>
             Re(
-              (0, W.jsx)(Af, {
+              (0, W.jsx)(jf, {
                 appid: t,
                 bDisallowMarkerIDEdit: f,
                 oTimelineMarkerDef: u,
@@ -16799,23 +16805,23 @@ function hf(e) {
     ],
   });
 }
-function gf(e) {
+function _f(e) {
   let { appid: t, assetSetID: n, strMessageOnEmpty: r, bDraggable: i } = e,
     a = Vd(t, n);
   return !a || a.size == 0
-    ? (0, W.jsx)(`div`, { className: ff, children: r })
+    ? (0, W.jsx)(`div`, { className: pf, children: r })
     : (0, W.jsx)(`div`, {
-        className: tf,
-        children: (0, W.jsx)(vf, {
+        className: nf,
+        children: (0, W.jsx)(yf, {
           assetSetID: n,
           children: Array.from(a).map((e, r) =>
             (0, W.jsx)(
-              _f,
+              vf,
               {
                 id: `assetsetid_${n}_markerid_${e}`,
                 index: r,
                 bDraggable: i,
-                children: (0, W.jsx)(hf, {
+                children: (0, W.jsx)(gf, {
                   appid: t,
                   assetSetID: n,
                   markerID: e,
@@ -16827,7 +16833,7 @@ function gf(e) {
         }),
       });
 }
-function _f(e) {
+function vf(e) {
   let { id: t, children: n, index: r, bDraggable: i } = e;
   return (0, W.jsx)(fn, {
     draggableId: t,
@@ -16838,13 +16844,13 @@ function _f(e) {
         ref: e.innerRef,
         ...e.draggableProps,
         ...e.dragHandleProps,
-        className: nf,
+        className: rf,
         style: { ...e.draggableProps.style },
         children: n,
       }),
   });
 }
-function vf(e) {
+function yf(e) {
   let { assetSetID: t, children: n } = e;
   return (0, W.jsx)(pn, {
     droppableId: `undroppable` + t,
@@ -16858,7 +16864,7 @@ function vf(e) {
       }),
   });
 }
-function yf(e) {
+function bf(e) {
   let { assetSetID: t, appid: n, strMessage: r } = e;
   return (0, W.jsx)(pn, {
     droppableId: `droptarget_assetsetid_${t}_appid_${n}`,
@@ -16866,14 +16872,14 @@ function yf(e) {
       (0, W.jsxs)(`div`, {
         ...e.droppableProps,
         ref: e.innerRef,
-        className: sf,
+        className: cf,
         children: [(0, W.jsx)(`span`, { children: r }), e.placeholder],
       }),
   });
 }
-function bf(e) {
+function xf(e) {
   let { appid: t, markerID: n } = e,
-    r = xf(t);
+    r = Sf(t);
   return (
     (0, R.useEffect)(() => {
       let e = r.GetTimelines()[0].metadata.timeline_id;
@@ -16892,7 +16898,7 @@ function bf(e) {
     })
   );
 }
-function xf(e) {
+function Sf(e) {
   let [t] = (0, R.useState)(() => new Qi());
   return (
     (0, R.useEffect)(() => {
@@ -16904,11 +16910,11 @@ function xf(e) {
     t
   );
 }
-var Sf = 31;
-function Cf(e) {
+var Cf = 31;
+function wf(e) {
   return /^[a-z0-9_-]{1,31}$/.test(e);
 }
-function wf(e, t, n, r) {
+function Tf(e, t, n, r) {
   let i = new FileReader();
   ((i.onload = (i) => {
     let a = new Image();
@@ -16928,7 +16934,7 @@ function wf(e, t, n, r) {
   }),
     i.readAsDataURL(e));
 }
-async function Tf(e) {
+async function Ef(e) {
   return new Promise((t, n) => {
     if (e) {
       let n = new FileReader();
@@ -16946,17 +16952,17 @@ async function Tf(e) {
                 ? (console.error(`Image too small`),
                   t(A(`#TimelineMarkers_Error_PNGSize`, 24)))
                 : r.width > 128
-                  ? wf(e, 128, 128, (e) => {
+                  ? Tf(e, 128, 128, (e) => {
                       t({
                         image: e,
                         image_type: 2,
-                        strFilenameWithoutExtension: Ef(i).substring(0, Sf),
+                        strFilenameWithoutExtension: Df(i).substring(0, Cf),
                       });
                     })
                   : t({
                       image: n.result,
                       image_type: 2,
-                      strFilenameWithoutExtension: Ef(i).substring(0, Sf),
+                      strFilenameWithoutExtension: Df(i).substring(0, Cf),
                     })
               : (console.error(`Image wrong width, must be square`),
                 t(A(`#TimelineMarkers_Error_PNGDimensions`)));
@@ -16967,7 +16973,7 @@ async function Tf(e) {
             ? t({
                 image: n.result,
                 image_type: 1,
-                strFilenameWithoutExtension: Ef(i).substring(0, Sf),
+                strFilenameWithoutExtension: Df(i).substring(0, Cf),
               })
             : (console.error(`unknown content types: ` + r),
               t(A(`#TimelineMarkers_Error_UnknownFileType`, r)));
@@ -16978,11 +16984,11 @@ async function Tf(e) {
     } else return t(A(`#TimelineMarkers_Error_NotFound`));
   });
 }
-function Ef(e) {
+function Df(e) {
   let t = e.lastIndexOf(`.`);
   return t !== -1 && t > e.lastIndexOf(`/`) ? e.slice(0, t) : e;
 }
-function Df(e) {
+function Of(e) {
   let { appid: t, closeModal: n } = e,
     [r, i] = (0, R.useState)(() => [
       { markerid: ``, image: null, image_type: null, timeline_marker_id: null },
@@ -16999,7 +17005,7 @@ function Df(e) {
           n = e.length;
         for (let i = 0; i < e.length; ++i) {
           let a = e[i],
-            o = await Tf(a);
+            o = await Ef(a);
           if (typeof o == `string`) {
             f(o);
             break;
@@ -17010,12 +17016,12 @@ function Df(e) {
               (t[0].image_type = o.image_type),
               n > 1 || r[0].markerid.length == 0)
             ) {
-              let e = o.strFilenameWithoutExtension.substring(0, Sf);
+              let e = o.strFilenameWithoutExtension.substring(0, Cf);
               ((t[0].markerid = e),
                 (t[0].timeline_marker_id = `temp_${i}_${e}`));
             }
           } else {
-            let e = o.strFilenameWithoutExtension.substring(0, Sf);
+            let e = o.strFilenameWithoutExtension.substring(0, Cf);
             t.push({
               image: o.image,
               image_type: o.image_type,
@@ -17048,7 +17054,7 @@ function Df(e) {
     : (0, W.jsx)(Be, {
         strTitle: A(`#TimelineMarkers_Dialog_Create`),
         bOKDisabled: r.some(
-          (e) => !Cf(e.markerid) || !e.image || e.image?.length < 10,
+          (e) => !wf(e.markerid) || !e.image || e.image?.length < 10,
         ),
         bDisableBackgroundDismiss: !0,
         onCancel: n,
@@ -17084,10 +17090,10 @@ function Df(e) {
             p.fnSetStrSuccess(A(`#TimelineMarkers_Dialog_CreateSuccess`)));
         },
         children: (0, W.jsxs)(`div`, {
-          className: Wd,
+          className: Gd,
           children: [
             (0, W.jsxs)(`div`, {
-              className: Kd,
+              className: qd,
               children: [
                 (0, W.jsx)(`div`, {
                   children: A(`#TimelineMarkers_Dialog_Create_Description`),
@@ -17141,8 +17147,8 @@ function Df(e) {
               ],
             }),
             (0, W.jsx)(`div`, {
-              className: Jd,
-              children: (0, W.jsx)(Of, { fnHandleFiles: m }),
+              className: Yd,
+              children: (0, W.jsx)(kf, { fnHandleFiles: m }),
             }),
             r?.length > 0 &&
               r[0].image?.length > 0 &&
@@ -17151,7 +17157,7 @@ function Df(e) {
               }),
             r.map((e, n) =>
               (0, W.jsx)(
-                kf,
+                Af,
                 {
                   marker: e,
                   appid: t,
@@ -17165,7 +17171,7 @@ function Df(e) {
             ),
             (0, W.jsx)(`br`, {}),
             (0, W.jsx)(`br`, {}),
-            (0, W.jsx)(Mf, {
+            (0, W.jsx)(Nf, {
               createVisibilityState: a,
               setCreateVisibilityState: o,
             }),
@@ -17173,11 +17179,11 @@ function Df(e) {
         }),
       });
 }
-function Of(e) {
+function kf(e) {
   let { fnHandleFiles: t } = e,
     [n, r] = (0, R.useState)(!1);
   return (0, W.jsx)(`div`, {
-    className: S(Zd, n && `xb2yMHJAW80-`, sf),
+    className: S(Qd, n && `xb2yMHJAW80-`, cf),
     onDragEnter: (e) => {
       (e.preventDefault(), r(!0));
     },
@@ -17197,7 +17203,7 @@ function Of(e) {
     }),
   });
 }
-function kf(e) {
+function Af(e) {
   let { marker: t, appid: n, setMarkerID: r } = e;
   return (
     (0, R.useEffect)(
@@ -17212,21 +17218,21 @@ function kf(e) {
     t?.image
       ? (0, W.jsxs)(W.Fragment, {
           children: [
-            (0, W.jsx)(jf, {
+            (0, W.jsx)(Mf, {
               markerID: t.markerid,
               strErrorMessage: null,
               imageContent: t.image,
               imageType: t.image_type,
             }),
             (0, W.jsxs)(`div`, {
-              className: Yd,
+              className: Xd,
               children: [
                 (0, W.jsxs)(`div`, {
                   children: [
                     (0, W.jsx)(He, {
                       children: A(`#TimelineMarkers_Dialog_Icon_Title`),
                     }),
-                    (0, W.jsx)(pf, {
+                    (0, W.jsx)(mf, {
                       imageBase64OrUntrustedSVG: t.image,
                       imageType: t.image_type,
                     }),
@@ -17245,13 +17251,13 @@ function kf(e) {
             (0, W.jsx)(He, {
               children: A(`#TimelineMarkers_Dialog_Icon_TimelinePreview`),
             }),
-            (0, W.jsx)(bf, { appid: n, markerID: t.timeline_marker_id }),
+            (0, W.jsx)(xf, { appid: n, markerID: t.timeline_marker_id }),
           ],
         })
       : null
   );
 }
-function Af(e) {
+function jf(e) {
   let {
       appid: t,
       closeModal: n,
@@ -17281,7 +17287,7 @@ function Af(e) {
   let ee = (0, R.useCallback)(async (e) => {
       _(null);
       let t = e.currentTarget?.files?.[0],
-        n = await Tf(t);
+        n = await Ef(t);
       typeof n == `string`
         ? _(n)
         : (u(n.image), f(n.image_type), m((e) => e + 1));
@@ -17316,7 +17322,7 @@ function Af(e) {
   }
   return (0, W.jsx)(Be, {
     strTitle: v,
-    bOKDisabled: !Cf(a) || l?.length < 10,
+    bOKDisabled: !wf(a) || l?.length < 10,
     bDisableBackgroundDismiss: !0,
     onCancel: n,
     onMiddleButton: x,
@@ -17331,9 +17337,9 @@ function Af(e) {
             y.fnSetStrError(A(`#OptIn_Appeals_Dialog_Failed`))));
     },
     children: (0, W.jsxs)(`div`, {
-      className: Wd,
+      className: Gd,
       children: [
-        (0, W.jsx)(jf, {
+        (0, W.jsx)(Mf, {
           markerID: a,
           strErrorMessage: g,
           imageContent: l,
@@ -17352,7 +17358,7 @@ function Af(e) {
           value: a,
           disabled: r,
           maxChars: 128,
-          className: Gd,
+          className: Kd,
           placeholder: A(`#TimelineMarkers_Dialog_Name_placeholder`),
           tooltip: A(`#TimelineMarkers_Dialog_Name_ttip`),
           onChange: (e) => o(e.currentTarget.value || ``),
@@ -17362,9 +17368,9 @@ function Af(e) {
         (0, W.jsx)(`h3`, { children: A(`#TimelineMarkers_Dialog_SVG`) }),
         (0, W.jsx)(`p`, { children: A(`#TimelineMarkers_Dialog_SVG_desc`) }),
         (0, W.jsxs)(`div`, {
-          className: Yd,
+          className: Xd,
           children: [
-            (0, W.jsx)(pf, { imageBase64OrUntrustedSVG: l, imageType: d }),
+            (0, W.jsx)(mf, { imageBase64OrUntrustedSVG: l, imageType: d }),
             (0, W.jsx)(`input`, {
               type: `file`,
               accept: `.svg,.png`,
@@ -17384,7 +17390,7 @@ function Af(e) {
             }),
           ],
         }),
-        (0, W.jsx)(bf, {
+        (0, W.jsx)(xf, {
           appid: t,
           markerID: p
             ? `temp_${p}_${i.timeline_marker_id}`
@@ -17394,9 +17400,9 @@ function Af(e) {
     }),
   });
 }
-function jf(e) {
+function Mf(e) {
   let { markerID: t, strErrorMessage: n, imageContent: r, imageType: i } = e,
-    a = Cf(t),
+    a = wf(t),
     o = t?.trimStart().startsWith(`steam_`),
     s;
   if (i == 1) {
@@ -17446,7 +17452,7 @@ function jf(e) {
     ],
   });
 }
-function Mf(e) {
+function Nf(e) {
   let { createVisibilityState: t, setCreateVisibilityState: n } = e,
     r = R.useId();
   return (0, W.jsxs)(W.Fragment, {
@@ -17462,7 +17468,7 @@ function Mf(e) {
           n(e);
         },
         children: (0, W.jsxs)(`div`, {
-          className: qd,
+          className: Jd,
           children: [
             (0, W.jsx)(De, {
               value: `public`,
@@ -17484,25 +17490,25 @@ function Mf(e) {
     ],
   });
 }
-var Nf = `_4yH1m6ufjJg-`,
-  Pf = `LZTIpM8pYh0-`,
-  Ff = `Dspp-lyTkqE-`,
-  If = `a0uMD8KPGBU-`,
-  Lf = `kKRtxlasxms-`,
-  Rf = `ef8y-ZEir4c-`,
-  zf = `z1LwdkaT2-o-`,
-  Bf = `ziYUfdrnr6c-`,
-  Vf = `iGk4KTUY2A8-`;
-function Hf(e) {
+var Pf = `_4yH1m6ufjJg-`,
+  Ff = `LZTIpM8pYh0-`,
+  If = `Dspp-lyTkqE-`,
+  Lf = `a0uMD8KPGBU-`,
+  Rf = `kKRtxlasxms-`,
+  zf = `ef8y-ZEir4c-`,
+  Bf = `z1LwdkaT2-o-`,
+  Vf = `ziYUfdrnr6c-`,
+  Hf = `iGk4KTUY2A8-`;
+function Uf(e) {
   let { appid: t } = e,
     { publicAssetSetID: n } = Td(t),
     r = Bd(t);
   return (0, W.jsx)(`div`, {
     children: (0, W.jsxs)(`div`, {
-      className: Lf,
+      className: Rf,
       children: [
         (0, W.jsxs)(`div`, {
-          className: Rf,
+          className: zf,
           children: [
             (0, W.jsx)(`div`, {
               className: S(Xe),
@@ -17514,12 +17520,12 @@ function Hf(e) {
           ],
         }),
         (0, W.jsx)(`div`, {
-          className: zf,
+          className: Bf,
           children: (0, W.jsxs)(`div`, {
-            className: Nf,
+            className: Pf,
             children: [
               n
-                ? (0, W.jsx)(gf, {
+                ? (0, W.jsx)(_f, {
                     assetSetID: n,
                     appid: t,
                     bDraggable: !1,
@@ -17529,7 +17535,7 @@ function Hf(e) {
                     children: A(`#TimelineMarkers_Public_none`),
                   }),
               r?.length > 0 &&
-                (0, W.jsx)(yf, {
+                (0, W.jsx)(bf, {
                   assetSetID: n || `publicmissing`,
                   appid: t,
                   strMessage: A(`#TimelineMarkers_drag_target_public`),
@@ -17541,19 +17547,19 @@ function Hf(e) {
     }),
   });
 }
-var Uf = /^assetsetid_(.+)_markerid_(.+)$/,
-  Wf = /^droptarget_assetsetid_(.+)_appid_(.+)$/;
-async function Gf(e, t) {
+var Wf = /^assetsetid_(.+)_markerid_(.+)$/,
+  Gf = /^droptarget_assetsetid_(.+)_appid_(.+)$/;
+async function Kf(e, t) {
   if (!e.destination) return;
-  let n = e.draggableId.match(Uf),
-    r = e.destination.droppableId.match(Wf);
+  let n = e.draggableId.match(Wf),
+    r = e.destination.droppableId.match(Gf);
   if (!(n?.length > 2 && r?.length > 2)) return;
   let i = n[1],
     a = n[2],
     o = r[1];
-  Kf(i, a, o, Number.parseInt(r[2]));
+  qf(i, a, o, Number.parseInt(r[2]));
 }
-async function Kf(e, t, n, r) {
+async function qf(e, t, n, r) {
   if (e == n) return n;
   if (n == `publicmissing`) {
     let e = await Dd(r, !0);
@@ -17596,11 +17602,11 @@ async function Kf(e, t, n, r) {
     n
   );
 }
-var qf = `I9Y7hMjQzEw-`,
-  Jf = `NNOIcqpGB9A-`,
-  Yf = `V02fLYzUulQ-`,
-  Xf = `a0Z5rLSQVhQ-`;
-function Zf(e) {
+var Jf = `I9Y7hMjQzEw-`,
+  Yf = `NNOIcqpGB9A-`,
+  Xf = `V02fLYzUulQ-`,
+  Zf = `a0Z5rLSQVhQ-`;
+function Qf(e) {
   let { appid: t } = e,
     n = Bd(t),
     { hiddenAssetSetID: r } = Td(t),
@@ -17613,10 +17619,10 @@ function Zf(e) {
   return i == 0
     ? null
     : (0, W.jsxs)(`div`, {
-        className: Yf,
+        className: Xf,
         children: [
           (0, W.jsx)(`div`, {
-            className: Xf,
+            className: Zf,
             children: ze(`#TimelineMarkers_Publishing_title`, i),
           }),
           (0, W.jsx)(`div`, {
@@ -17631,7 +17637,7 @@ function Zf(e) {
         ],
       });
 }
-function Qf(e) {
+function $f(e) {
   let { appid: t, assetSetID: n, closeModal: r } = e,
     i = Ed(t, n),
     { fnCreateAssetSet: a, fnUpdateAssetSet: o } = xd(),
@@ -17696,44 +17702,44 @@ function Qf(e) {
         ],
       });
 }
-function $f(e) {
+function ep(e) {
   let { appid: t } = e,
     { hiddenAssetSetID: n } = Td(t);
   return (0, W.jsxs)(`div`, {
-    className: S(void 0, zf),
+    className: S(void 0, Bf),
     children: [
       (0, W.jsx)(`div`, {
-        className: Pf,
+        className: Ff,
         children: (0, W.jsxs)(`div`, {
-          className: Bf,
+          className: Vf,
           children: [
             (0, W.jsx)(`div`, {
-              className: Vf,
+              className: Hf,
               children: A(`#TimelineMarkers_Hidden_section_info`),
             }),
-            (0, W.jsx)(ep, { appid: t }),
+            (0, W.jsx)(tp, { appid: t }),
             (0, W.jsx)(Od, { appid: t, assetSetID: n }),
           ],
         }),
       }),
       (0, W.jsx)(`div`, {
         children: n
-          ? (0, W.jsx)(gf, {
+          ? (0, W.jsx)(_f, {
               appid: t,
               assetSetID: n,
               strMessageOnEmpty: A(`#TimelineMarkers_Hidden_none`),
               bDraggable: !0,
             })
           : (0, W.jsx)(`div`, {
-              className: ff,
+              className: pf,
               children: A(`#TimelineMarkers_Hidden_none`),
             }),
       }),
       (0, W.jsxs)(`div`, {
-        className: S(lf, uf),
+        className: S(uf, df),
         children: [
           (0, W.jsx)(`div`, {
-            className: cf,
+            className: lf,
             children: (0, W.jsx)(Ue, { size: `10px` }),
           }),
           ` `,
@@ -17743,17 +17749,17 @@ function $f(e) {
     ],
   });
 }
-function ep(e) {
+function tp(e) {
   let { appid: t } = e,
     { hiddenAssetSetID: n } = Td(t),
     r = Vd(t, n);
   return (0, W.jsxs)(Ne, {
     disabled: !n || !r || r.size == 0,
-    onClick: (e) => Re((0, W.jsx)(tp, { appid: t }), D(e)),
+    onClick: (e) => Re((0, W.jsx)(np, { appid: t }), D(e)),
     children: [`↑`, ` `, A(`#TimelineMarkers_MoveAllHiddenToPublic`)],
   });
 }
-function tp(e) {
+function np(e) {
   let { appid: t, closeModal: n } = e,
     { hiddenAssetSetID: r, publicAssetSetID: i } = Td(t),
     a = Vd(t, r),
@@ -17775,28 +17781,28 @@ function tp(e) {
             n = i;
           for (let i = 0; i < e.length; ++i) {
             let a = e[i];
-            n = await Kf(r, a, n, t);
+            n = await qf(r, a, n, t);
           }
           o.fnSetSuccess(!0);
         },
       });
 }
-function np(e) {
+function rp(e) {
   let { appid: t } = e;
   return (0, W.jsxs)(`div`, {
-    className: df,
+    className: ff,
     children: [
       (0, W.jsx)(`div`, {
         children: A(`#TimelineMarkers_Hidden_new_asset_set_desc`),
       }),
       (0, W.jsx)(Ne, {
-        onClick: (e) => Re((0, W.jsx)(Qf, { appid: t }), D(e)),
+        onClick: (e) => Re((0, W.jsx)($f, { appid: t }), D(e)),
         children: A(`#TimelineMarkers_Hidden_new_asset_set`),
       }),
     ],
   });
 }
-function rp(e) {
+function ip(e) {
   let { oAssetSet: t } = e;
   return t.name == `steam_default_assetset`
     ? (0, W.jsx)(`span`, { children: A(`#TimelineMarkers_Public_title`) })
@@ -17804,7 +17810,7 @@ function rp(e) {
       ? (0, W.jsx)(`span`, { children: A(`#TimelineMarkers_Hidden_title`) })
       : (0, W.jsx)(`span`, { children: t.name });
 }
-var ip = class e {
+var ap = class e {
   m_vecBranches = [];
   m_mapBranchNameToDetails = new Map();
   GetBranchDetails() {
@@ -17838,19 +17844,19 @@ var ip = class e {
     );
   }
 };
-function ap() {
-  return ip.Get().GetBranchDetails();
+function op() {
+  return ap.Get().GetBranchDetails();
 }
-function op(e) {
-  return ip.Get().GetBranchDetailsByName(e);
+function sp(e) {
+  return ap.Get().GetBranchDetailsByName(e);
 }
-var sp = `_1-ANcQyJF-0-`,
-  cp = `WuStn9k5fWs-`,
-  lp = `nhvkFhx29Ps-`;
-function up(e) {
+var cp = `_1-ANcQyJF-0-`,
+  lp = `WuStn9k5fWs-`,
+  up = `nhvkFhx29Ps-`;
+function dp(e) {
   let { oAssetSet: t } = e;
   return (0, W.jsxs)(`div`, {
-    className: cp,
+    className: lp,
     children: [
       (0, W.jsx)(`div`, {
         className: void 0,
@@ -17861,7 +17867,7 @@ function up(e) {
             children: t.branches.map((e) =>
               (0, W.jsx)(
                 `span`,
-                { className: lp, children: (0, W.jsx)(fp, { branchName: e }) },
+                { className: up, children: (0, W.jsx)(pp, { branchName: e }) },
                 e,
               ),
             ),
@@ -17872,7 +17878,7 @@ function up(e) {
       (0, W.jsx)(`br`, {}),
       (0, W.jsx)(Ne, {
         onClick: (e) => {
-          Re((0, W.jsx)(dp, { oAssetSet: t }), D(e));
+          Re((0, W.jsx)(fp, { oAssetSet: t }), D(e));
         },
         children: A(`#TimelineMarkers_Hidden_updatebranches`),
       }),
@@ -17883,9 +17889,9 @@ function up(e) {
     ],
   });
 }
-function dp(e) {
+function fp(e) {
   let { oAssetSet: t, closeModal: n } = e,
-    r = ap(),
+    r = op(),
     [i, a] = (0, R.useState)(new Set(t.branches || [])),
     { fnAddBranchToAssetSet: o, fnRemoveBranchFromAssetSet: s } = xd(),
     c = tn();
@@ -17936,7 +17942,7 @@ function dp(e) {
             (0, W.jsx)(
               Te,
               {
-                label: (0, W.jsx)(fp, { branchName: e.name }),
+                label: (0, W.jsx)(pp, { branchName: e.name }),
                 tooltip: e.description,
                 checked: i.has(e.name),
                 onChange: (t) => {
@@ -17950,11 +17956,11 @@ function dp(e) {
         ],
       });
 }
-function fp(e) {
+function pp(e) {
   let { branchName: t } = e,
-    n = op(t);
+    n = sp(t);
   return (0, W.jsxs)(`span`, {
-    className: sp,
+    className: cp,
     children: [
       n?.password?.length > 0 &&
         (0, W.jsx)(k, {
@@ -17966,7 +17972,7 @@ function fp(e) {
     ],
   });
 }
-function pp(e) {
+function mp(e) {
   let { appid: t, assetSetID: n, closeModal: r } = e,
     i = Ed(t, n),
     a = Cd(t),
@@ -17991,11 +17997,11 @@ function pp(e) {
           .map((e) => ({
             label: (0, W.jsxs)(W.Fragment, {
               children: [
-                (0, W.jsx)(mf, { svgXmlUntrusted: e.image }),
+                (0, W.jsx)(hf, { svgXmlUntrusted: e.image }),
                 e.markerid,
                 ` `,
                 `(`,
-                (0, W.jsx)(rp, { oAssetSet: t.get(e.asset_set_id) }),
+                (0, W.jsx)(ip, { oAssetSet: t.get(e.asset_set_id) }),
                 `)`,
               ],
             }),
@@ -18033,18 +18039,18 @@ function pp(e) {
         ],
       });
 }
-function mp(e) {
+function hp(e) {
   let { appid: t } = e,
     n = wd(t),
     [r] = Ye(`branchset`, !1);
   return (0, W.jsxs)(`div`, {
-    className: If,
+    className: Lf,
     children: [
       (0, W.jsxs)(`div`, {
-        className: Lf,
+        className: Rf,
         children: [
           (0, W.jsxs)(`div`, {
-            className: Rf,
+            className: zf,
             children: [
               (0, W.jsx)(`div`, {
                 className: Xe,
@@ -18055,7 +18061,7 @@ function mp(e) {
               }),
             ],
           }),
-          (0, W.jsx)($f, { appid: t }),
+          (0, W.jsx)(ep, { appid: t }),
         ],
       }),
       r &&
@@ -18069,14 +18075,14 @@ function mp(e) {
                   className: `fk3H7RK1Wg8-`,
                   children: A(`#TimelineMarkers_Hidden_branchsets_title`),
                 }),
-                (0, W.jsx)(np, { appid: t }),
+                (0, W.jsx)(rp, { appid: t }),
               ],
             }),
             (0, W.jsx)(`div`, {
               className: `SWJQfBkJ08E-`,
               children: n?.map((e) =>
                 (0, W.jsx)(
-                  hp,
+                  gp,
                   { appid: t, assetSetID: e.assetset_id },
                   e.assetset_id,
                 ),
@@ -18087,44 +18093,44 @@ function mp(e) {
     ],
   });
 }
-function hp(e) {
+function gp(e) {
   let { appid: t, assetSetID: n } = e,
     r = Ed(t, n);
   return (0, W.jsxs)(`div`, {
-    className: zf,
+    className: Bf,
     children: [
       (0, W.jsxs)(`div`, {
-        className: Pf,
+        className: Ff,
         children: [
           (0, W.jsxs)(`div`, {
-            className: Bf,
+            className: Vf,
             children: [
               (0, W.jsx)(k, {
                 toolTipContent: r.desc,
                 children: (0, W.jsx)(`div`, {
-                  className: Vf,
+                  className: Hf,
                   children: r.name,
                 }),
               }),
               (0, W.jsx)(Od, { appid: r.appid, assetSetID: r.assetset_id }),
             ],
           }),
-          (0, W.jsx)(up, { oAssetSet: r }),
+          (0, W.jsx)(dp, { oAssetSet: r }),
         ],
       }),
       (0, W.jsxs)(`div`, {
-        className: Ff,
+        className: If,
         children: [
           (0, W.jsxs)(`div`, {
-            className: Nf,
+            className: Pf,
             children: [
-              (0, W.jsx)(gf, {
+              (0, W.jsx)(_f, {
                 assetSetID: r.assetset_id,
                 appid: r.appid,
                 strMessageOnEmpty: ``,
                 bDraggable: !0,
               }),
-              (0, W.jsx)(yf, {
+              (0, W.jsx)(bf, {
                 assetSetID: r.assetset_id,
                 appid: r.appid,
                 strMessage: A(`#TimelineMarkers_drag_target`),
@@ -18134,7 +18140,7 @@ function hp(e) {
           (0, W.jsx)(`div`, {
             children: (0, W.jsx)(Ne, {
               onClick: (e) =>
-                Re((0, W.jsx)(pp, { appid: t, assetSetID: n }), D(e)),
+                Re((0, W.jsx)(mp, { appid: t, assetSetID: n }), D(e)),
               children: A(`#TimelineMarker_Clone_title`),
             }),
           }),
@@ -18143,26 +18149,26 @@ function hp(e) {
     ],
   });
 }
-function gp(e) {
+function _p(e) {
   let { appId: t } = e,
     n = Number.parseInt(t);
   return (0, W.jsx)(`div`, {
-    className: qf,
+    className: Jf,
     children: (0, W.jsxs)(dn, {
-      onDragEnd: Gf,
+      onDragEnd: Kf,
       children: [
-        (0, W.jsx)(_p, { appid: n }),
-        (0, W.jsx)(Zf, { appid: n }),
-        (0, W.jsx)(Hf, { appid: n }),
-        (0, W.jsx)(mp, { appid: n }),
+        (0, W.jsx)(vp, { appid: n }),
+        (0, W.jsx)(Qf, { appid: n }),
+        (0, W.jsx)(Uf, { appid: n }),
+        (0, W.jsx)(hp, { appid: n }),
       ],
     }),
   });
 }
-function _p(e) {
+function vp(e) {
   let { appid: t } = e;
   return (0, W.jsx)(`div`, {
-    className: Jf,
+    className: Yf,
     children: (0, W.jsxs)(`div`, {
       className: cn,
       children: [
@@ -18195,7 +18201,7 @@ function _p(e) {
               className: on,
               children: [
                 (0, W.jsx)(Ie, {
-                  onClick: (e) => Re((0, W.jsx)(Df, { appid: t }), D(e)),
+                  onClick: (e) => Re((0, W.jsx)(Of, { appid: t }), D(e)),
                   children: A(`#TimelineMarkers_Editor_createnew`),
                 }),
                 (0, W.jsx)(`div`, {
@@ -18209,4 +18215,4 @@ function _p(e) {
     }),
   });
 }
-export { gp as default };
+export { _p as default };
